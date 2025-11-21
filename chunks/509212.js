@@ -640,8 +640,7 @@ function e2(e) {
             : null;
 }
 function e4(e) {
-    var t, n;
-    return null != (n = null == (t = e.ctaConfig) ? void 0 : t.link) ? n : e.application.link;
+    return e.ctaConfig.link;
 }
 function e5(e, t) {
     let n = e4(e.config),
@@ -1055,23 +1054,8 @@ function tq(e) {
     return null != n && null != r ? n : null != (t = null != r ? r : n) ? t : null;
 }
 function tX(e) {
-    var t, n, r, i;
-    let a = tq(e);
-    return null !=
-        (i =
-            null !=
-            (r =
-                null != (n = null == (t = e.ctaConfig) ? void 0 : t.buttonLabel)
-                    ? n
-                    : null == a
-                      ? void 0
-                      : a.messages.videoEndCtaButtonLabel)
-                ? r
-                : null == a
-                  ? void 0
-                  : a.messages.videoEndCtaTitle)
-        ? i
-        : F.intl.string(F.t.iiTtpJ);
+    var t;
+    return null != (t = e.ctaConfig.buttonLabel) ? t : F.intl.string(F.t.iiTtpJ);
 }
 function tQ(e, t) {
     var n;

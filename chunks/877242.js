@@ -16,48 +16,47 @@ var r = n(54381),
     g = n(388032),
     O = n(273339);
 function h() {
-    var e;
-    let { quest: t, sourceQuestContent: n, isPortrait: l, onClose: h } = o.useContext(v.VideoQuestModalContext),
-        b = (0, m.aM)(),
-        S = (0, p.tP)(t),
-        C = o.useRef(null),
-        { isHoveringOrFocusing: y } = (0, c.Z)(C),
-        _ = (0, E.e)({
-            quest: t,
-            onClose: h,
-            sourceQuestContent: n,
-            impressionId: b,
+    let { quest: e, sourceQuestContent: t, isPortrait: n, onClose: l } = o.useContext(v.VideoQuestModalContext),
+        h = (0, m.aM)(),
+        b = (0, p.tP)(e),
+        S = o.useRef(null),
+        { isHoveringOrFocusing: y } = (0, c.Z)(S),
+        C = (0, E.e)({
+            quest: e,
+            onClose: l,
+            sourceQuestContent: t,
+            impressionId: h,
         }),
-        x = null == (e = t.config.videoMetadata) ? void 0 : e.messages.videoEndCtaSubtitle,
-        j = void 0 !== x && !(0, u.Ew)(x);
+        _ = e.config.ctaConfig.subtitle,
+        x = void 0 !== _ && !(0, u.Ew)(_);
     return (0, r.jsx)(a.u, {
         text: g.intl.string(g.t.EuHF34),
         children: (0, r.jsx)(s.P3F, {
-            onClick: () => _(f.jn.VIDEO_MODAL, d.jZ.OPEN_GAME_LINK),
+            onClick: () => C(f.jn.VIDEO_MODAL, d.jZ.OPEN_GAME_LINK),
             className: O.adInfoClickable,
             children: (0, r.jsxs)("div", {
                 className: i()(O.contentHeaderGameInfo, O.contentHeaderGameInfoHoverable, {
-                    [O.contentHeaderGameInfoHoverableExpired]: S,
+                    [O.contentHeaderGameInfoHoverableExpired]: b,
                 }),
-                ref: C,
+                ref: S,
                 children: [
                     (0, r.jsx)("div", {
                         className: O.contentFooterAdDetailedInfo,
                         children: (0, r.jsx)(s.Heading, {
                             variant: "heading-md/medium",
                             color: "header-primary",
-                            className: i()(O.adDetailsTextSecondary, { [O.adDetailsTextSecondaryPortrait]: l }),
-                            lineClamp: l ? void 0 : 1,
-                            children: g.intl.format(g.t.EQa7os, { questName: t.config.messages.questName }),
+                            className: i()(O.adDetailsTextSecondary, { [O.adDetailsTextSecondaryPortrait]: n }),
+                            lineClamp: n ? void 0 : 1,
+                            children: g.intl.format(g.t.EQa7os, { questName: e.config.messages.questName }),
                         }),
                     }),
                     (0, r.jsxs)("div", {
-                        className: i()(O.contentFooterAdDetailedInfo, { [O.contentFooterAdDetailedInfoPortrait]: l }),
+                        className: i()(O.contentFooterAdDetailedInfo, { [O.contentFooterAdDetailedInfoPortrait]: n }),
                         children: [
                             (0, r.jsx)("div", {
                                 className: i()(O.adDetailsTextPrimary, {
-                                    [O.adDetailsTextPrimaryPortrait]: l,
-                                    [O.addFourPxMarginRight]: l,
+                                    [O.adDetailsTextPrimaryPortrait]: n,
+                                    [O.addFourPxMarginRight]: n,
                                 }),
                                 children: (0, r.jsx)(s.owK, {
                                     size: "xs",
@@ -67,28 +66,28 @@ function h() {
                             (0, r.jsx)(s.Heading, {
                                 variant: "heading-sm/medium",
                                 className: i()(O.adDetailsTextPrimary, {
-                                    [O.adDetailsTextPrimaryPortrait]: l,
-                                    [O.addFourPxMarginRight]: l,
+                                    [O.adDetailsTextPrimaryPortrait]: n,
+                                    [O.addFourPxMarginRight]: n,
                                 }),
                                 color: y ? "text-primary" : "text-secondary",
                                 lineClamp: 1,
-                                children: t.config.messages.gamePublisher,
+                                children: e.config.messages.gamePublisher,
                             }),
-                            j
+                            x
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)("div", {
                                               "aria-hidden": "true",
-                                              className: i()(O.dotSpacer, { [O.dotSpacerPortrait]: l }),
+                                              className: i()(O.dotSpacer, { [O.dotSpacerPortrait]: n }),
                                           }),
                                           (0, r.jsx)(s.Heading, {
                                               className: i()(O.adDetailsTextSecondary, {
-                                                  [O.adDetailsTextSecondaryPortrait]: l,
+                                                  [O.adDetailsTextSecondaryPortrait]: n,
                                               }),
                                               variant: "heading-sm/medium",
-                                              lineClamp: l ? void 0 : 1,
+                                              lineClamp: n ? void 0 : 1,
                                               color: y ? "text-primary" : "text-secondary",
-                                              children: x,
+                                              children: _,
                                           }),
                                       ],
                                   })

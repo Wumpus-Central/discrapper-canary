@@ -1,12 +1,7 @@
 function r(e) {
     if (null != e)
         return {
-            messages: {
-                videoTitle: e.messages.video_title,
-                videoEndCtaTitle: e.messages.video_end_cta_title,
-                videoEndCtaSubtitle: e.messages.video_end_cta_subtitle,
-                videoEndCtaButtonLabel: e.messages.video_end_cta_button_label,
-            },
+            messages: { videoTitle: e.messages.video_title },
             assets: {
                 videoPlayerVideo: e.assets.video_player_video,
                 videoPlayerVideoHls: e.assets.video_player_video_hls,
@@ -39,12 +34,7 @@ function a(e) {
     );
 }
 function o(e) {
-    return {
-        videoTitle: e.video_title,
-        videoEndCtaTitle: e.video_end_cta_title,
-        videoEndCtaSubtitle: e.video_end_cta_subtitle,
-        videoEndCtaButtonLabel: e.video_end_cta_button_label,
-    };
+    return { videoTitle: e.video_title };
 }
 function s(e) {
     let t = { video: i(e.video) };
@@ -55,12 +45,7 @@ function s(e) {
     );
 }
 function l(e) {
-    return {
-        videoTitle: e.video_title,
-        videoEndCtaTitle: e.video_end_cta_title,
-        videoEndCtaSubtitle: e.video_end_cta_subtitle,
-        videoEndCtaButtonLabel: e.video_end_cta_button_label,
-    };
+    return { videoTitle: e.video_title };
 }
 n.d(t, {
     FG: () => r,

@@ -121,7 +121,6 @@ let M = "1193992107035983872",
             startsAt: "2024-01-01T00:00:00+00:00",
             expiresAt: "2030-01-01T00:00:00+00:00",
             application: {
-                link: "https://discord.com/",
                 id: "123",
                 name: "Sky Runners",
             },
@@ -177,6 +176,7 @@ let M = "1193992107035983872",
             },
             features: [],
             sharePolicy: d.X.SHAREABLE_EVERYWHERE,
+            ctaConfig: { link: "https://discord.com/" },
         },
         userStatus: null,
         targetedContent: [],
@@ -274,22 +274,7 @@ function W() {
             );
         }
     }
-    function eo(e, t) {
-        let n = W.config.taskConfigV2.tasks,
-            r = n[l.X.WATCH_VIDEO];
-        if (null == r) return;
-        let s = I(k({}, r.messages), { [e]: t });
-        H(
-            I(k({}, W), {
-                config: I(k({}, W.config), {
-                    taskConfigV2: I(k({}, W.config.taskConfigV2), {
-                        tasks: I(k({}, n), { [l.X.WATCH_VIDEO]: I(k({}, r), { messages: s }) }),
-                    }),
-                }),
-            }),
-        );
-    }
-    function ea(e, t, n) {
+    function eo(e, t, n) {
         if ("name" === e || "nameWithArticle" === e) {
             var r, s;
             H(
@@ -312,10 +297,10 @@ function W() {
             );
         }
     }
-    function ei(e, t) {
+    function ea(e, t) {
         H(I(k({}, W), { config: I(k({}, W.config), { colors: I(k({}, W.config.colors), { [e]: t }) }) }));
     }
-    function el() {
+    function ei() {
         (0, m.Xv)(W.config)
             ? (0, S.openQuestCollectibleRewardModal)(W, g.jn.GIFT_INVENTORY_FOR_YOU, g.jn.INTERNAL_PREVIEW_TOOL, !0)
             : (0, S.openQuestsRewardCodeModal)({
@@ -326,13 +311,13 @@ function W() {
                   sourceQuestContent: g.jn.INTERNAL_PREVIEW_TOOL,
               });
     }
-    let ec = s.useMemo(() => {
+    let el = s.useMemo(() => {
             for (let [e, t] of Object.entries(W.config.taskConfigV2.tasks)) if (null != t.target) return t.target;
             return 10 * A.Z.Seconds.MINUTE;
         }, [W.config.taskConfigV2.tasks]),
-        ed = s.useMemo(() => l.X.WATCH_VIDEO in W.config.taskConfigV2.tasks, [W.config.taskConfigV2.tasks]);
+        ec = s.useMemo(() => l.X.WATCH_VIDEO in W.config.taskConfigV2.tasks, [W.config.taskConfigV2.tasks]);
     a()(!1 !== W.preview && null != W.preview, "Preview config must have property preview: true");
-    let eu = W.config.taskConfigV2.tasks[l.X.WATCH_VIDEO];
+    let ed = W.config.taskConfigV2.tasks[l.X.WATCH_VIDEO];
     return (0, r.jsxs)(p.zJl, {
         className: R.container,
         children: [
@@ -379,7 +364,7 @@ function W() {
             (0, r.jsx)("div", {
                 className: R.fields,
                 children: (0, r.jsx)(y.Z, {
-                    taskDuration: ec,
+                    taskDuration: el,
                     taskConfigV2: W.config.taskConfigV2,
                     onSelect: function (e) {
                         H(I(k({}, W), { config: I(k({}, W.config), { taskConfigV2: e }) }));
@@ -412,28 +397,26 @@ function W() {
                         onMessageChange: es,
                         initialValue: W.config.messages.gamePublisher,
                     }),
-                    ed &&
-                        (0, r.jsxs)(r.Fragment, {
-                            children: [
-                                (0, r.jsx)(v.Z, {
-                                    title: "Video Title",
-                                    assetKey: "videoTitle",
-                                    onMessageChange: eo,
-                                    initialValue: null == eu ? void 0 : eu.messages.videoTitle,
-                                }),
-                                (0, r.jsx)(v.Z, {
-                                    title: "End CTA Title",
-                                    assetKey: "videoEndCtaTitle",
-                                    onMessageChange: eo,
-                                    initialValue: null == eu ? void 0 : eu.messages.videoEndCtaTitle,
-                                }),
-                                (0, r.jsx)(v.Z, {
-                                    title: "End CTA Subtitle",
-                                    assetKey: "videoEndCtaSubtitle",
-                                    onMessageChange: eo,
-                                    initialValue: null == eu ? void 0 : eu.messages.videoEndCtaSubtitle,
-                                }),
-                            ],
+                    ec &&
+                        (0, r.jsx)(v.Z, {
+                            title: "Video Title",
+                            assetKey: "videoTitle",
+                            onMessageChange: function (e, t) {
+                                let n = W.config.taskConfigV2.tasks,
+                                    r = n[l.X.WATCH_VIDEO];
+                                if (null == r) return;
+                                let s = I(k({}, r.messages), { [e]: t });
+                                H(
+                                    I(k({}, W), {
+                                        config: I(k({}, W.config), {
+                                            taskConfigV2: I(k({}, W.config.taskConfigV2), {
+                                                tasks: I(k({}, n), { [l.X.WATCH_VIDEO]: I(k({}, r), { messages: s }) }),
+                                            }),
+                                        }),
+                                    }),
+                                );
+                            },
+                            initialValue: null == ed ? void 0 : ed.messages.videoTitle,
                         }),
                 ],
             }),
@@ -487,7 +470,7 @@ function W() {
                         filters: [...D, "svg"],
                         initialValue: W.config.assets.logotype,
                     }),
-                    ed &&
+                    ec &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(j.Z, {
@@ -495,21 +478,21 @@ function W() {
                                     assetKey: "videoPlayerVideo",
                                     onFileChange: en,
                                     filters: L,
-                                    initialValue: null == eu ? void 0 : eu.assets.video.url,
+                                    initialValue: null == ed ? void 0 : ed.assets.video.url,
                                 }),
                                 (0, r.jsx)(j.Z, {
                                     title: "Quest Video (Low Resolution)",
                                     assetKey: "videoPlayerVideoLowRes",
                                     onFileChange: en,
                                     filters: L,
-                                    initialValue: null == eu || null == (e = eu.assets.videoLowRes) ? void 0 : e.url,
+                                    initialValue: null == ed || null == (e = ed.assets.videoLowRes) ? void 0 : e.url,
                                 }),
                                 (0, r.jsx)(j.Z, {
                                     title: "Video Player Thumbnail (optional)",
                                     assetKey: "videoPlayerThumbnail",
                                     onFileChange: en,
                                     filters: q,
-                                    initialValue: null == eu ? void 0 : eu.assets.video.thumbnail,
+                                    initialValue: null == ed ? void 0 : ed.assets.video.thumbnail,
                                 }),
                                 (0, r.jsx)(j.Z, {
                                     title: "Quest Bar Preview Video (optional)",
@@ -547,13 +530,13 @@ function W() {
                                     (0, r.jsx)(v.Z, {
                                         title: "Name",
                                         assetKey: "name",
-                                        onMessageChange: (e, n) => ea(e, n, t),
+                                        onMessageChange: (e, n) => eo(e, n, t),
                                         initialValue: e.messages.name,
                                     }),
                                     (0, r.jsx)(v.Z, {
                                         title: "Name With Article",
                                         assetKey: "nameWithArticle",
-                                        onMessageChange: (e, n) => ea(e, n, t),
+                                        onMessageChange: (e, n) => eo(e, n, t),
                                         initialValue: e.messages.nameWithArticle,
                                     }),
                                     e.type !== c.w.VIRTUAL_CURRENCY &&
@@ -607,7 +590,7 @@ function W() {
                                             (0, r.jsx)(p.Button, {
                                                 variant: "primary",
                                                 text: "Open Reward Modal",
-                                                onClick: el,
+                                                onClick: ei,
                                             }),
                                         ],
                                     }),
@@ -633,13 +616,13 @@ function W() {
                             (0, r.jsx)(b.Z, {
                                 title: "Primary",
                                 colorKey: "primary",
-                                onChange: ei,
+                                onChange: ea,
                                 value: W.config.colors.primary,
                             }),
                             (0, r.jsx)(b.Z, {
                                 title: "Secondary",
                                 colorKey: "secondary",
-                                onChange: ei,
+                                onChange: ea,
                                 value: W.config.colors.secondary,
                             }),
                         ],
@@ -662,7 +645,7 @@ function W() {
                                         I(k({}, W), {
                                             userStatus: V({
                                                 enrolledAt: new Date().toISOString(),
-                                                streamProgressSeconds: 0.25 * ec,
+                                                streamProgressSeconds: 0.25 * el,
                                             }),
                                         }),
                                     );
@@ -672,7 +655,7 @@ function W() {
                                         I(k({}, W), {
                                             userStatus: V({
                                                 enrolledAt: new Date().toISOString(),
-                                                streamProgressSeconds: 0.5 * ec,
+                                                streamProgressSeconds: 0.5 * el,
                                             }),
                                         }),
                                     );
@@ -682,7 +665,7 @@ function W() {
                                         I(k({}, W), {
                                             userStatus: V({
                                                 enrolledAt: new Date().toISOString(),
-                                                streamProgressSeconds: 0.75 * ec,
+                                                streamProgressSeconds: 0.75 * el,
                                             }),
                                         }),
                                     );
@@ -693,7 +676,7 @@ function W() {
                                             userStatus: V({
                                                 completedAt: new Date().toISOString(),
                                                 enrolledAt: new Date().toISOString(),
-                                                streamProgressSeconds: ec,
+                                                streamProgressSeconds: el,
                                             }),
                                         }),
                                     );
@@ -705,7 +688,7 @@ function W() {
                                                 claimedAt: new Date().toISOString(),
                                                 completedAt: new Date().toISOString(),
                                                 enrolledAt: new Date().toISOString(),
-                                                streamProgressSeconds: ec,
+                                                streamProgressSeconds: el,
                                             }),
                                         }),
                                     );
@@ -844,7 +827,7 @@ function W() {
                             onChange: Y,
                         }),
                     }),
-                    ed &&
+                    ec &&
                         (0, r.jsxs)(_.Z, {
                             withBorder: !0,
                             allowClicks: !0,

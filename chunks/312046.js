@@ -15,7 +15,6 @@ let s = (e) => ({
     application: {
         id: e.application.id,
         name: e.application.name,
-        link: e.application.link,
     },
     assets: {
         hero: e.assets.hero,
