@@ -314,12 +314,13 @@ let $ = l.memo(function (e) {
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 x &&
-                    (0, r.jsx)(C.u, {
-                        shouldShow: !v,
-                        text: z.intl.string(z.t["Se4c7+"]),
-                        children: (0, r.jsx)("td", {
-                            children: (0, r.jsx)("div", {
-                                className: o()(Y.__invalid_checkbox, Y.xsmallCol),
+                    (0, r.jsx)("td", {
+                        children: (0, r.jsx)("div", {
+                            className: Y.xsmallCol,
+                            children: (0, r.jsx)(C.u, {
+                                shouldShow: !v,
+                                ariaHidden: v,
+                                text: z.intl.string(z.t["Se4c7+"]),
                                 children: (0, r.jsx)(m.P3F, {
                                     onClick: O,
                                     children: (0, r.jsx)(m.FZ5, {
