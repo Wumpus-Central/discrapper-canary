@@ -29,8 +29,8 @@ var l = n(54381),
     O = n(939716),
     E = n(181268),
     w = n(582113),
-    L = n(981631),
-    R = n(231338),
+    R = n(981631),
+    L = n(231338),
     A = n(388032),
     B = n(424215);
 function Z(e) {
@@ -39,7 +39,7 @@ function Z(e) {
     if (null == o) return null;
     let m = (0, v.T4)(
         null != (a = null == (t = o.price) ? void 0 : t.amount) ? a : 0,
-        null != (r = null == (n = o.price) ? void 0 : n.currency) ? r : R.pK.USD,
+        null != (r = null == (n = o.price) ? void 0 : n.currency) ? r : L.pK.USD,
     );
     return (0, l.jsxs)("div", {
         className: B.detailsContainer,
@@ -236,12 +236,12 @@ function M(e) {
             isStorefront: y,
             analyticsLocations: T,
             analyticsContext: O,
-            onClose: R,
+            onClose: L,
         } = e,
         { analyticsLocations: M } = (0, g.ZP)(null != T ? T : []),
         H = (0, c.e7)([S.Z], () => S.Z.getStorefrontData(v), [v]),
-        z = (0, c.e7)([b.Z], () => b.Z.isFetchingForSKU(i)),
-        F = (0, u.wjy)((0, m.ZP)()),
+        F = (0, c.e7)([b.Z], () => b.Z.isFetchingForSKU(i)),
+        z = (0, u.wjy)((0, m.ZP)()),
         [Q, Y] = a.useState(!0),
         G = (0, c.e7)([f.Z], () => f.Z.get(i)),
         [V, K] = a.useState(null),
@@ -262,7 +262,7 @@ function M(e) {
         })(p, V);
     (0, C.p2)(),
         (0, d.ZP)(() => {
-            I.default.track(L.rMx.OPEN_MODAL, {
+            I.default.track(R.rMx.OPEN_MODAL, {
                 location_stack: M,
                 type: w.n8,
                 sku_id: i,
@@ -271,8 +271,8 @@ function M(e) {
         });
     let q = a.useCallback(
         (e) => {
-            I.default.track(L.rMx.SLAYER_SHOP_PDP_ELEMENT_CLICKED, {
-                slayer_shop_session_id: null == O ? void 0 : O.sessionId,
+            I.default.track(R.rMx.SLAYER_STOREFRONT_PDP_ELEMENT_CLICKED, {
+                slayer_storefront_session_id: null == O ? void 0 : O.sessionId,
                 sku_id: i,
                 guild_id: null == O ? void 0 : O.guildId,
                 cta_type: e,
@@ -301,7 +301,7 @@ function M(e) {
         null == (null == G || null == (t = G.tenantMetadata) ? void 0 : t.socialLayer) ||
         (null == H ? void 0 : H.storefront) == null
     )
-        return z ? (0, l.jsx)(u.$jN, {}) : null;
+        return F ? (0, l.jsx)(u.$jN, {}) : null;
     let et =
             null != H.storefront.logoAssetId
                 ? (0, P._W)(H.storefront.applicationId, H.storefront.logoAssetId, 75)
@@ -312,7 +312,7 @@ function M(e) {
                 : null,
         el = null;
     return (
-        (el = F ? (null != et ? et : en) : null != en ? en : et),
+        (el = z ? (null != et ? et : en) : null != en ? en : et),
         (0, l.jsx)(u.Y0X, {
             transitionState: n,
             "hide-shadow": !0,
@@ -346,7 +346,7 @@ function M(e) {
                                 sku: G,
                                 guildId: v,
                                 shouldShowShopLink: !y,
-                                onClose: R,
+                                onClose: L,
                                 trackPDPClick: q,
                             }),
                         ],
@@ -395,7 +395,7 @@ function M(e) {
                                               }),
                                     }),
                                     (0, l.jsx)(D, {
-                                        onClick: R,
+                                        onClick: L,
                                         ariaLabel: A.intl.string(A.t.cpT0Cq),
                                         children: (0, l.jsx)(u.Uz9, {
                                             size: "refresh_sm",

@@ -11,17 +11,17 @@ var t = l(54381),
     g = l(171524),
     p = l(822458),
     _ = l(640173),
-    I = l(981631),
-    f = l(329353);
+    f = l(981631),
+    I = l(329353);
 function h(e) {
     var n, l;
     let { applicationId: h, guildId: x, page: m } = e,
         { ref: v, width: C } = (0, o.ZP)(),
-        j = (0, d.oR)(),
-        { analyticsLocations: b } = (0, r.ZP)(),
+        b = (0, d.oR)(),
+        { analyticsLocations: j } = (0, r.ZP)(),
         k = i.useRef(null),
-        { handleScroll: Z } = (0, _.I)(k, j, b),
-        [S, N] = i.useMemo(() => {
+        { handleScroll: S } = (0, _.I)(k, b, j),
+        [Z, N] = i.useMemo(() => {
             if ((null == m ? void 0 : m.skuIds) == null || (null == m ? void 0 : m.skuIds.length) === 0)
                 return [[], []];
             let e = Math.round(null != C ? C : 0);
@@ -30,25 +30,25 @@ function h(e) {
                 : [null == m ? void 0 : m.skuIds.slice(0, 2), null == m ? void 0 : m.skuIds.slice(2)];
         }, [m, C]);
     return (i.useEffect(() => {
-        let { sessionId: e, guildId: n, pageIndex: l, pageTitle: t, isUserGuildMember: i, pageHasLeaderboard: a } = j;
-        s.default.track(I.rMx.SLAYER_SHOP_VIEWED, {
-            slayer_shop_session_id: e,
+        let { sessionId: e, guildId: n, pageIndex: l, pageTitle: t, isUserGuildMember: i, pageHasLeaderboard: a } = b;
+        s.default.track(f.rMx.SLAYER_STOREFRONT_PAGE_VIEWED, {
+            slayer_storefront_session_id: e,
             guild_id: n,
             page_index: l,
             page_title: t,
             is_user_guild_member: i,
             page_has_leaderboard: a,
-            location_stack: b,
+            location_stack: j,
         });
-    }, [j, b]),
+    }, [b, j]),
     null == m)
         ? null
         : (0, t.jsx)(a.h21, {
               ref: k,
-              onScroll: Z,
+              onScroll: S,
               children: (0, t.jsxs)("section", {
                   ref: v,
-                  className: f.container,
+                  className: I.container,
                   children: [
                       (0, t.jsx)(g.n, {
                           applicationId: h,
@@ -59,7 +59,7 @@ function h(e) {
                           analyticsSectionId: "featured-top-section",
                           applicationId: h,
                           guildId: x,
-                          skuIds: S,
+                          skuIds: Z,
                           variant: c.Z.MEDIUM,
                       }),
                       (0, t.jsx)(p.Z, {

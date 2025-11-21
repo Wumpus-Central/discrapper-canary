@@ -21,22 +21,24 @@ function o(e, t, n, o) {
                             guildId: n,
                             pageIndex: r,
                             pageTitle: o,
-                            section: u,
-                            sectionTitle: d,
+                            pageSection: u,
+                            pageSectionTitle: d,
                             isUserGuildMember: f,
+                            pageHasLeaderboard: _,
                         } = l.current,
-                        { positionInSection: _, analyticsLocations: p } = c.current;
-                    i.default.track(a.rMx.SLAYER_SHOP_CARD_HOVERED, {
-                        slayer_shop_session_id: t,
+                        { positionInSection: p, analyticsLocations: h } = c.current;
+                    i.default.track(a.rMx.SLAYER_STOREFRONT_CARD_HOVERED, {
+                        slayer_storefront_session_id: t,
                         sku_id: e,
                         guild_id: n,
                         page_index: r,
                         page_title: o,
-                        section: u,
-                        section_title: d,
-                        position_in_section: _,
+                        page_section: u,
+                        page_section_title: d,
+                        position_in_section: p,
                         is_user_guild_member: f,
-                        location_stack: p,
+                        page_has_leaderboard: _,
+                        location_stack: h,
                     }),
                         (s.current = !0);
                 }

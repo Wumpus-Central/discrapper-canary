@@ -93,16 +93,27 @@ function K(e) {
         ey = i.useCallback(
             (e) => {
                 let { analyticsLocations: t, positionInSection: n } = em.current,
-                    { sessionId: r, guildId: i, pageIndex: a, pageTitle: o, section: s, sectionTitle: l } = ep;
-                I.default.track(U.rMx.SLAYER_SHOP_CARD_ELEMENT_CLICKED, {
-                    slayer_shop_session_id: r,
+                    {
+                        sessionId: r,
+                        guildId: i,
+                        pageIndex: a,
+                        pageTitle: o,
+                        pageSection: s,
+                        pageSectionTitle: l,
+                        isUserGuildMember: c,
+                        pageHasLeaderboard: u,
+                    } = ep;
+                I.default.track(U.rMx.SLAYER_STOREFRONT_CARD_ELEMENT_CLICKED, {
+                    slayer_storefront_session_id: r,
                     sku_id: er,
                     guild_id: i,
                     page_index: a,
                     page_title: o,
-                    section: s,
-                    section_title: l,
+                    page_section: s,
+                    page_section_title: l,
                     position_in_section: n,
+                    is_user_guild_member: c,
+                    page_has_leaderboard: u,
                     cta_type: e,
                     location_stack: t,
                 });

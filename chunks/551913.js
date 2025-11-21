@@ -1,44 +1,41 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => u });
 var r = n(54381),
     i = n(473749),
-    l = n(442837),
-    a = n(907862),
-    s = n(703656),
-    o = n(706454),
-    c = n(981631),
-    u = n(388032),
-    d = n(504707);
-function p(e) {
-    let { onNavigateToQuestHome: t, onRender: n, onRequestClose: p, targetElementRef: f } = e,
-        h = (0, l.e7)([o.default], () => o.default.locale),
-        g = i.useCallback(() => {
-            t(), (0, s.uL)(c.Z5c.QUEST_HOME_V2);
+    l = n(907862),
+    a = n(703656),
+    s = n(981631),
+    o = n(388032),
+    c = n(504707);
+function u(e) {
+    let { onNavigateToQuestHome: t, onRender: n, onRequestClose: u, targetElementRef: d } = e,
+        p = i.useCallback(() => {
+            t(), (0, a.uL)(s.Z5c.QUEST_HOME_V2);
         }, [t]);
     return (
         i.useEffect(() => {
             n();
         }, [n]),
-        (0, r.jsx)(a.J2, {
+        (0, r.jsx)(l.J2, {
             actions: [
                 {
-                    text: u.intl.string(u.t.facYnD),
+                    text: o.intl.string(o.t.facYnD),
                     variant: "primary",
-                    onClick: g,
+                    onClick: p,
                 },
             ],
             align: "top",
-            body: u.intl.string(u.t.o4NGXc),
+            body: o.intl.string(o.t.o4NGXc),
             caretConfig: { align: "start" },
             gradientColor: "purple",
             graphic: {
                 type: "image",
-                src: d.Z,
+                src: c.Z,
             },
-            onRequestClose: p,
+            onRequestClose: u,
             position: "right",
             size: "lg",
-            targetElementRef: f,
-            title: "en-US" === h || "en-GB" === h ? u.intl.string(u.t.EDDchq) : u.intl.string(u.t["2/2YdK"]),
+            targetElementRef: d,
+            title: o.intl.string(o.t.EDDchq),
         })
     );
 }

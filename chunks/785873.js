@@ -19,22 +19,24 @@ function s(e, t, n, s) {
                     guildId: n,
                     pageIndex: r,
                     pageTitle: o,
-                    section: s,
-                    sectionTitle: l,
+                    pageSection: s,
+                    pageSectionTitle: l,
                     isUserGuildMember: d,
+                    pageHasLeaderboard: f,
                 } = c.current,
-                { positionInSection: f, analyticsLocations: _ } = u.current;
-            i.default.track(a.rMx.SLAYER_SHOP_CARD_IMPRESSION, {
-                slayer_shop_session_id: t,
+                { positionInSection: _, analyticsLocations: p } = u.current;
+            i.default.track(a.rMx.SLAYER_STOREFRONT_CARD_IMPRESSION, {
+                slayer_storefront_session_id: t,
                 sku_id: e,
                 guild_id: n,
                 page_index: r,
                 page_title: o,
-                section: s,
-                section_title: l,
-                position_in_section: f,
+                page_section: s,
+                page_section_title: l,
+                position_in_section: _,
                 is_user_guild_member: d,
-                location_stack: _,
+                page_has_leaderboard: f,
+                location_stack: p,
             });
         }, [e]),
         f = r.useCallback(

@@ -3,37 +3,37 @@ var t = l(54381),
     i = l(473749),
     a = l(481060),
     o = l(590961),
-    d = l(840724),
-    r = l(727366),
-    s = l(693965);
+    r = l(840724),
+    s = l(727366),
+    d = l(693965);
 function c(e) {
-    let { analyticsSectionId: n, applicationId: l, guildId: c, sectionTitle: u, skuIds: p, variant: g = d.Z.SMALL } = e,
-        I = i.useMemo(
+    let { analyticsSectionId: n, applicationId: l, guildId: c, sectionTitle: u, skuIds: g, variant: p = r.Z.SMALL } = e,
+        _ = i.useMemo(
             () => ({
-                section: n,
-                sectionTitle: u,
+                pageSection: n,
+                pageSectionTitle: u,
             }),
             [n, u],
         );
-    return null == p || 0 === p.length
+    return null == g || 0 === g.length
         ? null
         : (0, t.jsx)(o.hL, {
-              newValue: I,
+              newValue: _,
               children: (0, t.jsxs)("div", {
-                  className: s.sectionContainer,
+                  className: d.sectionContainer,
                   children: [
                       null != u &&
                           (0, t.jsx)(a.Heading, {
                               variant: "heading-lg/semibold",
                               color: "header-primary",
                               lineClamp: 1,
-                              className: s.sectionTitle,
+                              className: d.sectionTitle,
                               children: u,
                           }),
-                      (0, t.jsx)(r.t, {
+                      (0, t.jsx)(s.t, {
                           applicationId: l,
-                          skuIds: p,
-                          variant: g,
+                          skuIds: g,
+                          variant: p,
                           guildId: c,
                       }),
                   ],
