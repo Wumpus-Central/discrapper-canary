@@ -291,8 +291,10 @@ class I extends a.Z {
     }
     setAsyncClipsSourceDeinit(e) {
         var t, n, r, i;
-        null == (t = (n = (0, d.zS)()).setAsyncClipsSourceDeinitSetting) || t.call(n, e),
-            null == (r = (i = (0, d.zS)()).setAsyncClipsSourceDeinit) || r.call(i, e);
+        try {
+            null == (r = (i = (0, d.zS)()).setAsyncClipsSourceDeinitSetting) || r.call(i, e);
+        } catch (e) {}
+        null == (t = (n = (0, d.zS)()).setAsyncClipsSourceDeinit) || t.call(n, e);
     }
     getSupportedVideoCodecs(e) {
         (0, d.zS)().getSupportedVideoCodecs(e);
