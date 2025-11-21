@@ -406,21 +406,17 @@ function z(e) {
             let [t, n] = i.useState(!1),
                 r = (0, j.M_)({ location: "SearchResults" }),
                 l = (0, O.Gc)({ location: "SearchResults" }),
-                { enabled: a, force: s } = (0, x.f)({ location: "SearchResults" }),
-                o = e.type === D.aib.DMS || e.type === D.aib.CHANNEL,
-                c = a && (r || (o && l));
+                a = (0, x.f)({ location: "SearchResults" }),
+                s = e.type === D.aib.DMS || e.type === D.aib.CHANNEL,
+                o = a && (r || (s && l));
             return (
-                i.useEffect(() => {
-                    c && s && n(!0);
-                }, [s, c, a]),
                 (0, u.ZP)(() => {
-                    c &&
-                        (s ||
-                            h.Z.possiblyShowFeedbackModal(
-                                L.nw.SEARCH_RESULTS,
-                                () => n(!0),
-                                () => n(!1),
-                            ));
+                    o &&
+                        h.Z.possiblyShowFeedbackModal(
+                            L.nw.SEARCH_RESULTS,
+                            () => n(!0),
+                            () => n(!1),
+                        );
                 }),
                 {
                     dismissFeedbackEntrypoint: i.useCallback(() => {
