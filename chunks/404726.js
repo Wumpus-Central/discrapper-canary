@@ -166,7 +166,6 @@ function f(e) {
     let G = i.useRef(0);
     i.useEffect(() => {
         if (null == j) return;
-        j.play();
         let e = (t) => {
             null != t.data &&
                 "number" == typeof t.data &&
@@ -177,11 +176,12 @@ function f(e) {
         };
         return (
             j.on(o.EventType.Advance, e),
+            _ && j.play(),
             () => {
                 j.off(o.EventType.Advance, e);
             }
         );
-    }, [j, D.reducedMotion.enabled, y]);
+    }, [j, D.reducedMotion.enabled, y, _]);
     let B = i.useRef(!1);
     return (
         i.useEffect(() => {
