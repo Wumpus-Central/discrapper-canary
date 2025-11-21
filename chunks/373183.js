@@ -28,7 +28,7 @@ let y = l.memo(function (e) {
         { isHoveringOrFocusing: j } = (0, d.Z)(y),
         { readyToClaim: k, collectibleProductSkuIds: I, collectedSkuIds: T } = (0, _.q)(t, n),
         L = !(i || k),
-        B = (0, s.e7)([m.Z], () => m.Z.isClaiming === n);
+        P = (0, s.e7)([m.Z], () => m.Z.isClaiming === n);
     return L
         ? null
         : (0, r.jsx)("div", {
@@ -88,6 +88,7 @@ let y = l.memo(function (e) {
                                       }),
                                       (0, r.jsx)("div", {
                                           className: v.footerInfoShrinkOnHover,
+                                          "aria-hidden": !0,
                                           children: (0, r.jsxs)("div", {
                                               className: x.progressContainer,
                                               children: [
@@ -176,7 +177,7 @@ let y = l.memo(function (e) {
                                           text: b.intl.string(b.t.VnVTNc),
                                           fullWidth: !0,
                                           disabled: !k,
-                                          loading: B,
+                                          loading: P,
                                       }),
                                   }),
                               }),
