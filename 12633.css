@@ -9662,6 +9662,7 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 
 .hasTags__0f084 .input__0f084 {
     -webkit-padding-start: var(--space-8);
+    height: calc(var(--custom-text-input-height) - 8px);
     padding-inline-start: var(--space-8)
 }
 
