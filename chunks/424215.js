@@ -12,4 +12,6 @@ e.exports = {
     modalHeaderButtonsContainer: "modalHeaderButtonsContainer__38ccf",
     modalHeaderButton: "modalHeaderButton__38ccf",
     wishlistButton: "wishlistButton__38ccf",
+    logoContainer: "logoContainer__38ccf",
+    logo: "logo__38ccf",
 };
