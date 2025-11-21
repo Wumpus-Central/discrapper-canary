@@ -522,6 +522,8 @@ var r = (function (e) {
             "slayer storefront breadcrumb wishlist item card gift button"),
         (e.SOCIAL_LAYER_CLAIM_PURCHASED_ITEM_MODAL = "social layer claim purchased item modal"),
         (e.SOCIAL_LAYER_GIFT_CODE_CLAIM_MODAL = "social layer gift code claim modal"),
+        (e.SOCIAL_LAYER_STOREFRONT = "social layer storefront"),
+        (e.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED = "slayer storefront product details embed"),
         e
     );
 })(r || {});
