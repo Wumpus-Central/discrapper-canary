@@ -69793,6 +69793,38 @@ html .progress__61462 {
     flex-shrink: 0
 }
 
+.systemMessageContainer_c0ec5e {
+    -webkit-border-start: 2px solid #fff;
+    border-inline-start: 2px solid #fff;
+    padding: 12px 16px
+}
+
+.embedContainer_c0ec5e {
+    background: var(--background-mod-subtle);
+    border-radius: 16px;
+    height: 144px;
+    margin-top: 16px;
+    padding: 28px 24px !important;
+    width: 532px
+}
+
+.image_c0ec5e {
+    -webkit-margin-end: 24px;
+    margin-inline-end: 24px
+}
+
+.content_c0ec5e {
+    width: 100%
+}
+
+.title_c0ec5e {
+    margin: 4px 0 !important
+}
+
+.buttonContainer_c0ec5e {
+    margin-top: 24px
+}
+
 .container__0e476 {
     background-color: var(--input-background);
     border: 1px solid var(--input-border);

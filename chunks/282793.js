@@ -1,11 +1,12 @@
 n.d(t, {
-    sO: () => l,
-    v$: () => o,
+    j3: () => l,
+    sO: () => c,
+    v$: () => s,
 });
 var r = n(63063),
     i = n(981631),
     a = n(606097),
-    s = n(388032);
-let o = 5;
-r.Z.getArticleURL(i.BhN.PREMIUM_GROUP_ABOUT);
-let l = () => s.intl.string(a.default.aFBQ3d);
+    o = n(388032);
+let s = 5,
+    l = r.Z.getArticleURL(i.BhN.PREMIUM_GROUP_ABOUT),
+    c = () => o.intl.string(a.default.aFBQ3d);
