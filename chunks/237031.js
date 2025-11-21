@@ -1,11 +1,14 @@
 n.d(t, {
-    T: () => u,
-    v: () => d,
+    T: () => _,
+    v: () => p,
 });
 var r = n(54381);
 n(473749);
-var i = n(481060);
-function a(e, t, n) {
+var i = n(481060),
+    a = n(1870),
+    o = n(724994),
+    s = n(215023);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +21,7 @@ function a(e, t, n) {
         e
     );
 }
-function o(e) {
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,12 +32,12 @@ function o(e) {
                 }),
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                l(e, t, n[t]);
             });
     }
     return e;
 }
-function s(e, t) {
+function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -46,50 +49,59 @@ function s(e, t) {
     }
     return n;
 }
-function l(e, t) {
+function d(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : s(Object(t)).forEach(function (n) {
+            : u(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let c = "collectibles shop product details modal",
-    u = (e) => {
+let f = "collectibles shop product details modal",
+    _ = (e) => {
         let {
             product: t,
-            category: a,
-            shouldCheckoutWithOrbs: s,
-            analyticsSource: u,
-            analyticsLocations: d,
-            returnRef: f,
-            tab: _,
-            rentalDuration: p,
+            category: l,
+            shouldCheckoutWithOrbs: u,
+            analyticsSource: _,
+            analyticsLocations: p,
+            returnRef: h,
+            tab: m,
+            rentalDuration: g,
         } = e;
+        if (
+            s.y8.some((e) => {
+                let { rewardSkuId: n } = e;
+                return n === t.skuId;
+            })
+        ) {
+            let { isPurchased: e } = (0, o.U)(a.Z, t);
+            if (!e) return;
+        }
         (0, i.ZDy)(
             async () => {
                 let { default: e } = await Promise.all([n.e("78825"), n.e("6377")]).then(n.bind(n, 702370));
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        l(o({}, n), {
+                        d(c({}, n), {
                             product: t,
-                            category: a,
-                            shouldCheckoutWithOrbs: s,
-                            analyticsSource: u,
-                            analyticsLocations: d,
-                            returnRef: f,
-                            tab: _,
-                            rentalDuration: p,
+                            category: l,
+                            shouldCheckoutWithOrbs: u,
+                            analyticsSource: _,
+                            analyticsLocations: p,
+                            returnRef: h,
+                            tab: m,
+                            rentalDuration: g,
                         }),
                     );
             },
-            { modalKey: c },
+            { modalKey: f },
         );
     },
-    d = () => {
-        (0, i.Mr3)(c);
+    p = () => {
+        (0, i.Mr3)(f);
     };

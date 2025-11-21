@@ -3,8 +3,8 @@ var r = n(54381),
     l = n(473749),
     i = n(442837),
     a = n(607070),
-    s = n(594174),
-    o = n(960048),
+    o = n(594174),
+    s = n(960048),
     c = n(597688),
     u = n(1870),
     d = n(870289),
@@ -20,8 +20,8 @@ function v(e) {
     let {
             tab: t,
             sortedCategories: n,
-            transitionToTab: s,
-            transitionState: o,
+            transitionToTab: o,
+            transitionState: s,
             updateAnalyticsState: c,
             refreshCategories: u,
         } = e,
@@ -30,7 +30,18 @@ function v(e) {
     let v = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
         [O, S] = l.useState(void 0),
         [y, j] = l.useState(!0),
-        k = l.useCallback(
+        k = l.useMemo(
+            () =>
+                n.filter(
+                    (e) =>
+                        !_.y8.some((t) => {
+                            let { categorySkuId: n } = t;
+                            return n === e.skuId;
+                        }),
+                ),
+            [n],
+        ),
+        I = l.useCallback(
             (e) => {
                 let {
                     sourceButton: t,
@@ -41,14 +52,14 @@ function v(e) {
                 } = e;
                 c(t, n);
                 let a = r && !v,
-                    o = i ? _.AW.ORBS : _.AW.CATALOG;
-                S(n), j(!l), s(o, a);
+                    s = i ? _.AW.ORBS : _.AW.CATALOG;
+                S(n), j(!l), o(s, a);
             },
-            [v, s, c],
+            [v, o, c],
         ),
-        I = (0, d.FF)("CollectiblesContent"),
-        { searchError: T } = (0, f.a)();
-    return I && null != T
+        T = (0, d.FF)("CollectiblesContent"),
+        { searchError: L } = (0, f.a)();
+    return T && null != L
         ? (0, r.jsx)(C.Z, {})
         : null != m
           ? (0, r.jsx)(p.Z, {
@@ -58,13 +69,13 @@ function v(e) {
             })
           : b.includes(t)
             ? (0, r.jsx)(h.Z, {
-                  handleTransition: k,
+                  handleTransition: I,
                   tab: t,
-                  transitionState: o,
+                  transitionState: s,
               })
             : (0, r.jsx)(g.Z, {
                   tab: t,
-                  sortedCategories: n,
+                  sortedCategories: k,
                   initialCategoryId: O,
                   showFilterInitially: y,
                   onUnmount: () => {
@@ -83,12 +94,12 @@ let x = () =>
                     : void 0,
         ),
     E = (e) => {
-        let t = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
+        let t = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
             { noCache: n, includeUnpublished: r } = (0, m.Z)();
         l.useEffect(() => {
             var l, i;
             null != e &&
-                o.Z.captureMessage(e, {
+                s.Z.captureMessage(e, {
                     tags: {
                         isStaff:
                             null != (i = null == t || null == (l = t.isStaff()) ? void 0 : l.toString())

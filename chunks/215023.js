@@ -1,6 +1,6 @@
 n.d(t, {
     AW: () => b,
-    As: () => k,
+    As: () => j,
     Cm: () => T,
     HU: () => P,
     Hi: () => G,
@@ -11,7 +11,7 @@ n.d(t, {
     RE: () => O,
     Vt: () => w,
     aK: () => v,
-    aP: () => j,
+    aP: () => k,
     f7: () => E,
     fH: () => Z,
     gj: () => h,
@@ -21,6 +21,7 @@ n.d(t, {
     o8: () => D,
     sT: () => U,
     xg: () => M,
+    y8: () => F,
     yf: () => g,
     yo: () => S,
 }),
@@ -451,7 +452,7 @@ let w = {
     L = new Set(Object.values(w)),
     x = (e) => L.has(e),
     M = [c.G.AVATAR_DECORATION, c.G.PROFILE_EFFECT, c.G.NAMEPLATE, c.G.BUNDLE],
-    j = [
+    k = [
         {
             sortType: d.E.RELEVANCE,
             sortDirection: u.F.DESC,
@@ -473,7 +474,7 @@ let w = {
             sortDirection: u.F.DESC,
         },
     ],
-    k = 300,
+    j = 300,
     U = {
         amount: 300,
         currency: p.pKx.DISCORD_ORB,
@@ -520,4 +521,10 @@ let w = {
         type: _.z.HERO,
         name: "Try Before You Buy!",
         summary: "Use Orbs to Try Before You Buy!",
-    };
+    },
+    F = [
+        {
+            categorySkuId: "1440063059895779408",
+            rewardSkuId: "1440063059862487193",
+        },
+    ];

@@ -3,8 +3,8 @@ var r = n(54381),
     l = n(473749),
     i = n(979554),
     a = n(399606),
-    s = n(780384),
-    o = n(481060),
+    o = n(780384),
+    s = n(481060),
     c = n(410030),
     u = n(594174),
     d = n(626135),
@@ -27,21 +27,21 @@ var r = n(54381),
     I = n(662128),
     T = n(676790),
     L = n(665195),
-    B = n(42742),
-    P = n(283727),
+    P = n(42742),
+    B = n(283727),
     N = n(266058),
     A = n(719138);
 function R(e) {
     var t;
     let { isFetchingCategories: n, scrollerRef: R, tab: Z } = e,
         w = (0, f.sp)(),
-        H = null != (t = null == w ? void 0 : w.sessionId) ? t : "",
-        { noCache: D, includeUnpublished: M } = (0, E.Z)(),
+        D = null != (t = null == w ? void 0 : w.sessionId) ? t : "",
+        { noCache: H, includeUnpublished: M } = (0, E.Z)(),
         F = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
         W = (0, a.e7)([g.Z], () => g.Z.productsWithVariantsAsGroup),
         [V, U] = l.useState(1),
         z = (0, c.Fg)(),
-        G = (0, s.ap)(z),
+        G = (0, o.ap)(z),
         [K, Y, q] = l.useMemo(() => {
             switch (Z) {
                 case O.AW.AVATAR_DECORATIONS:
@@ -49,7 +49,7 @@ function R(e) {
                 case O.AW.PROFILE_EFFECTS:
                     return [y.intl.string(y.t["1cNjtx"]), G ? A.Z : N.Z, i.Z.PROFILE_EFFECT];
                 case O.AW.NAMEPLATES:
-                    return [y.intl.string(y.t.V68Fqz), G ? P.Z : B.Z, i.Z.NAMEPLATE];
+                    return [y.intl.string(y.t.V68Fqz), G ? B.Z : P.Z, i.Z.NAMEPLATE];
                 case O.AW.BUNDLES:
                     return [y.intl.string(y.t.FYFpps), G ? I.Z : k.Z, i.Z.BUNDLE];
             }
@@ -61,9 +61,13 @@ function R(e) {
                     W.filter((e) => {
                         var t;
                         return (
-                            e.type === q ||
-                            (e.type === i.Z.VARIANTS_GROUP &&
-                                (null == (t = e.variants) ? void 0 : t.some((e) => e.type === q)) === !0)
+                            (e.type === q ||
+                                (e.type === i.Z.VARIANTS_GROUP &&
+                                    (null == (t = e.variants) ? void 0 : t.some((e) => e.type === q)) === !0)) &&
+                            !O.y8.some((t) => {
+                                let { categorySkuId: n } = t;
+                                return n === e.categorySkuId;
+                            })
                         );
                     }),
                 ),
@@ -72,23 +76,23 @@ function R(e) {
         X = (0, h.l)(Q);
     l.useEffect(() => {
         (0, C.n)({
-            sessionId: H,
+            sessionId: D,
             checkpoint: C.a.SHOP_MOUNTED,
             tab: Z,
             unpublishedCategoriesShown: M,
-            cacheDisabled: D,
+            cacheDisabled: H,
         });
     }, []),
         l.useEffect(() => {
             n ||
                 (0, C.n)({
-                    sessionId: H,
+                    sessionId: D,
                     checkpoint: C.a.SHOP_RENDERED,
                     tab: Z,
                     unpublishedCategoriesShown: M,
-                    cacheDisabled: D,
+                    cacheDisabled: H,
                 });
-        }, [H, M, D, n, Z]);
+        }, [D, M, H, n, Z]);
     let $ = p.Z.useConfig({ location: "CollectiblesFilterableShop" }).showCardsV2;
     return n || null == F
         ? (0, r.jsx)(_.Z, {})
@@ -97,7 +101,7 @@ function R(e) {
                   (0, r.jsx)("div", {
                       style: { backgroundImage: "url(".concat(Y, ")") },
                       className: j.bannerContainer,
-                      children: (0, r.jsx)(o.Heading, {
+                      children: (0, r.jsx)(s.Heading, {
                           variant: "heading-xxl/extrabold",
                           children: K,
                       }),
@@ -140,7 +144,7 @@ function R(e) {
                       (0, r.jsx)("div", {
                           className: j.paginationContainer,
                           children: (0, r.jsx)("div", {
-                              children: (0, r.jsx)(o.DsT, {
+                              children: (0, r.jsx)(s.DsT, {
                                   currentPage: V,
                                   totalCount: X.length,
                                   pageSize: 40,
