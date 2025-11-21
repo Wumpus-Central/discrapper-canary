@@ -139,7 +139,7 @@ function S(e) {
                 text: h.intl.string(h.t.nhaI4b),
                 shouldShow: a,
                 delay: 0,
-                "aria-label": !1,
+                ariaHidden: !0,
                 children: (0, r.jsx)(u.zx, {
                     onClick: D,
                     className: m.button,
@@ -156,7 +156,7 @@ function S(e) {
                 text: h.intl.string(h.t.RmDYKK),
                 shouldShow: a,
                 delay: 0,
-                "aria-label": !1,
+                ariaHidden: !0,
                 children: (0, r.jsx)(u.zx, {
                     onClick: w,
                     className: m.button,
@@ -180,7 +180,7 @@ function S(e) {
                           text: h.intl.string(h.t["UKOtz+"]),
                           shouldShow: a,
                           delay: 0,
-                          "aria-label": !1,
+                          ariaHidden: !0,
                           children: (0, r.jsx)(
                               u.zx,
                               y(E({ ref: A }, e), {

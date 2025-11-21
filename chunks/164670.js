@@ -25,7 +25,11 @@ function d() {
     return null != e && e.features.has(c.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ? e.id : l.ON;
 }
 function f(e) {
-    return null != e && e.features.has(c.GuildFeatures.SOCIAL_LAYER_STOREFRONT);
+    var t, n;
+    return (
+        e.id === d() ||
+        (null != (n = null == (t = e.features) ? void 0 : t.has(c.GuildFeatures.SOCIAL_LAYER_STOREFRONT)) && n)
+    );
 }
 function _(e) {
     return {

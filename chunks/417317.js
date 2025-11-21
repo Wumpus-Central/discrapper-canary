@@ -1,21 +1,23 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => u });
 var i = n(473749),
     r = n(442837),
-    l = n(70956),
-    a = n(411935),
-    o = n(210218);
-let s = 30 * l.Z.Millis.MINUTE;
-function c(e) {
+    l = n(430824),
+    a = n(70956),
+    o = n(411935),
+    s = n(210218);
+let c = 30 * a.Z.Millis.MINUTE;
+function u(e) {
     let { guildId: t } = e,
-        n = (0, r.e7)([o.Z], () => (null != t ? o.Z.getStorefrontData(t) : void 0));
+        n = (0, r.e7)([l.Z], () => l.Z.getGuild(null != t ? t : null), [t]),
+        a = (0, r.e7)([s.Z], () => (null != n ? s.Z.getStorefrontData(n.id) : void 0));
     return (
         i.useEffect(() => {
-            if (null == t) return;
-            let e = o.Z.getStorefrontData(t);
+            if ((null == n ? void 0 : n.id) == null) return;
+            let e = s.Z.getStorefrontData(null == n ? void 0 : n.id);
             (null == e ? void 0 : e.loading) ||
-                ((null == e ? void 0 : e.fetchedAt) != null && Date.now() - (null == e ? void 0 : e.fetchedAt) < s) ||
-                (0, a.YL)(t);
-        }, [t]),
-        n
+                ((null == e ? void 0 : e.fetchedAt) != null && Date.now() - (null == e ? void 0 : e.fetchedAt) < c) ||
+                (0, o.YL)(null == n ? void 0 : n.id);
+        }, [null == n ? void 0 : n.id]),
+        a
     );
 }
