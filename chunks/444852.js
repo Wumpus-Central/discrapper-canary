@@ -167,6 +167,9 @@ class V extends c.Z {
     layoutChange(e) {
         this.videoStreamStats.layoutChange(e);
     }
+    autoQualityChange() {
+        this.videoStreamStats.autoQualityChange();
+    }
     getVideoStats() {
         let { ownerId: e } = this.streamContext,
             t = this._videoQuality;

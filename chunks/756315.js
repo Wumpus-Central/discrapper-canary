@@ -73,6 +73,9 @@ class _ {
             (this._streamEnd = (0, r.zO)()),
             this._incrementLayout(this._lastLayout, (this._streamEnd - this._lastLayoutChanged) / 1000);
     }
+    autoQualityChange() {
+        this._automaticQualityChanges += 1;
+    }
     layoutChange(e) {
         if (e === this._lastLayout || null != this._streamEnd) return;
         let t = (0, r.zO)();
@@ -100,6 +103,7 @@ class _ {
                   target_fps: this._targetFPS,
                   target_resolution_height: this._targetResolution,
                   stream_settings_changed: this._streamSettingsChanged,
+                  num_auto_quality_changes: this._automaticQualityChanges,
               })
             : e;
     }
@@ -114,6 +118,7 @@ class _ {
             s(this, "_lastLayoutChanged", 0),
             s(this, "_layoutChanges", 0),
             s(this, "_layoutBuckets", void 0),
+            s(this, "_automaticQualityChanges", 0),
             s(this, "_incrementLayout", (e, t) => {
                 null == this._layoutBuckets[e] && (this._layoutBuckets[e] = 0), (this._layoutBuckets[e] += t);
             }),

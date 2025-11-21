@@ -97,7 +97,7 @@ class S extends o.Z {
                     audioDeviceGuid: b.cameraSource.audioDeviceGuid,
                 };
             }
-            a.Z.setGoLiveSource(x);
+            h.autoQualityChange(), a.Z.setGoLiveSource(x);
         }
     }
     handlePostConnectionOpen() {
