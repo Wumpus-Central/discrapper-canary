@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685), n(415506);
+n.d(t, { Z: () => b }), n(388685), n(415506);
 var r,
     i = n(818710),
     a = n(442837),
@@ -6,9 +6,10 @@ var r,
     s = n(570140),
     l = n(668781),
     c = n(299886),
-    u = n(998502),
-    d = n(981631);
-function f(e, t, n) {
+    u = n(960048),
+    d = n(998502),
+    f = n(981631);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,10 +22,10 @@ function f(e, t, n) {
         e
     );
 }
-let _ = 10,
-    p = { status: "" },
-    h = [],
-    m = [
+let p = 10,
+    h = { status: "" },
+    m = [],
+    g = [
         "discord.com",
         "discordapp.com",
         "discordapp.net",
@@ -33,23 +34,23 @@ let _ = 10,
         "discord.gg",
         "discord.media",
     ];
-class g extends (r = a.ZP.Store) {
+class E extends (r = a.ZP.Store) {
     initialize() {
         this.updateState(), this.addListener();
     }
     logEvent(e) {
-        "status" in e && "string" == typeof e.status && (p = e),
-            (h = [...h.slice(h.length < _ ? 0 : 1, _), e]),
+        "status" in e && "string" == typeof e.status && (h = e),
+            (m = [...m.slice(m.length < p ? 0 : 1, p), e]),
             this.emitChange();
     }
     async updateState() {
         try {
             var e, t, n;
             this.logEvent(
-                await (null === u.ZP ||
-                void 0 === u.ZP ||
-                null == (n = u.ZP.getDiscordUtils) ||
-                null == (t = n.call(u.ZP)) ||
+                await (null === d.ZP ||
+                void 0 === d.ZP ||
+                null == (n = d.ZP.getDiscordUtils) ||
+                null == (t = n.call(d.ZP)) ||
                 null == (e = t.runWarpCommand)
                     ? void 0
                     : e.call(t, "status")),
@@ -59,10 +60,10 @@ class g extends (r = a.ZP.Store) {
     addListener() {
         try {
             var e, t, n;
-            null === u.ZP ||
-                void 0 === u.ZP ||
-                null == (n = u.ZP.getDiscordUtils) ||
-                null == (t = n.call(u.ZP)) ||
+            null === d.ZP ||
+                void 0 === d.ZP ||
+                null == (n = d.ZP.getDiscordUtils) ||
+                null == (t = n.call(d.ZP)) ||
                 null == (e = t.onWarpEvent) ||
                 e.call(t, (e) => this.logEvent(e));
         } catch (e) {}
@@ -70,7 +71,7 @@ class g extends (r = a.ZP.Store) {
     async runCommand(e) {
         for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
         try {
-            return await u.ZP.getDiscordUtils().runWarpCommand(e, ...n);
+            return await d.ZP.getDiscordUtils().runWarpCommand(e, ...n);
         } catch (e) {
             throw (this.logEvent({ commandError: e.message }), e);
         }
@@ -79,7 +80,7 @@ class g extends (r = a.ZP.Store) {
         if (this.clientEnabled)
             try {
                 this.logEvent({ status: "Installing" });
-                let e = await u.ZP.getDiscordUtils().installWarp();
+                let e = await d.ZP.getDiscordUtils().installWarp();
                 this.logEvent({
                     status: "Installed",
                     installLog: e,
@@ -100,27 +101,33 @@ class g extends (r = a.ZP.Store) {
             ? this.install()
             : this.logEvent({ status: "InstallDeclined" });
     }
-    async configureLicense() {
-        let e = await this.runCommand("registration", "show");
-        if ((null == e ? void 0 : e.code) === "MissingRegistration")
+    async configureLicense(e) {
+        let { ignoreAPIError: t } = e,
+            n = await this.runCommand("registration", "show");
+        if ((null == n ? void 0 : n.code) === "MissingRegistration")
             throw Error("MissingRegistration when configuring license");
-        if (c.H.getConfig({ location: "configureLicense" }).enabled) {
-            let e = (
-                await o.tn.post({
-                    url: d.ANM.USER_WARP_LICENSE,
-                    oldFormErrors: !0,
-                    rejectWithError: !0,
-                })
-            ).body.license_key;
-            if (null != e && "" !== e) await this.runCommand("registration", "license", e);
-            else throw Error("No license key returned from API when configuring license");
+        try {
+            if (c.H.getConfig({ location: "configureLicense" }).enabled) {
+                let e = (
+                    await o.tn.post({
+                        url: f.ANM.USER_WARP_LICENSE,
+                        oldFormErrors: !0,
+                        rejectWithError: !0,
+                    })
+                ).body.license_key;
+                if (null != e && "" !== e) await this.runCommand("registration", "license", e);
+                else throw Error("No license key returned from API when configuring license");
+            }
+        } catch (e) {
+            if (t) u.Z.captureException(e, { tags: { source: "PRIVATE_BROWSING_PERK_CONFIGURE_LICENSE" } });
+            else throw e;
         }
     }
     async configureExceptions() {
         try {
             let t = await this.runCommand("tunnel", "host", "list");
             if ((null == t ? void 0 : t.mode) === "exclude")
-                for (let n of m) {
+                for (let n of g) {
                     var e;
                     (null == t || null == (e = t.hosts) ? void 0 : e.indexOf(n)) === -1 &&
                         (await this.runCommand("tunnel", "host", "add", n));
@@ -133,29 +140,32 @@ class g extends (r = a.ZP.Store) {
         } catch (e) {}
     }
     get state() {
-        return p;
+        return h;
     }
     get log() {
-        return h;
+        return m;
     }
     get clientEnabled() {
         return (0, i.nI)() && c.H.getConfig({ location: "WarpClientStore" }).enabled;
     }
     get enabled() {
-        return "Connected" === p.status || this.connecting;
+        return "Connected" === h.status || this.connecting;
     }
     get connecting() {
         return (
-            "Configuring" === p.status ||
-            "Connecting" === p.status ||
-            "ConnectCommandSent" === p.status ||
-            "Installing" === p.status ||
-            "Installed" === p.status
+            "Configuring" === h.status ||
+            "Connecting" === h.status ||
+            "ConnectCommandSent" === h.status ||
+            "Installing" === h.status ||
+            "Installed" === h.status
         );
     }
     async connect() {
         if (this.clientEnabled) {
-            this.logEvent({ status: "Configuring" }), await this.configureExceptions(), await this.configureMode();
+            this.logEvent({ status: "Configuring" }),
+                await this.configureLicense({ ignoreAPIError: !0 }),
+                await this.configureExceptions(),
+                await this.configureMode();
             try {
                 this.logEvent({ status: "ConnectCommandSent" }), await this.runCommand("connect");
             } catch (e) {
@@ -167,13 +177,13 @@ class g extends (r = a.ZP.Store) {
     async disconnect() {
         if (this.clientEnabled) {
             let e = this.runCommand("disconnect");
-            return (p = { status: "DisconnectCommandSent" }), await e;
+            return (h = { status: "DisconnectCommandSent" }), await e;
         }
         return this.clientEnabled;
     }
     async finishSetup() {
         return (
-            await this.configureLicense(),
+            await this.configureLicense({ ignoreAPIError: !1 }),
             await this.configureExceptions(),
             await this.configureMode(),
             await this.updateState(),
@@ -181,5 +191,5 @@ class g extends (r = a.ZP.Store) {
         );
     }
 }
-f(g, "displayName", "WarpClientStore");
-let E = new g(s.Z, {});
+_(E, "displayName", "WarpClientStore");
+let b = new E(s.Z, {});

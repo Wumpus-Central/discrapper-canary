@@ -89521,6 +89521,10 @@ html .invoiceCancelRow__968a4 {
     border-radius: 50%
 }
 
+.user-profile-video-tile-background.background_fb62e2 {
+    background: linear-gradient(color-mix(in oklab, var(--profile-gradient-primary-color) 20%, var(--profile-gradient-modal-background-color)), color-mix(in oklab, var(--profile-gradient-secondary-color) 60%, var(--profile-gradient-modal-background-color)) 100%)
+}
+
 .button_fbcaba {
     line-height: 0
 }
