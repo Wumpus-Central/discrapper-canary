@@ -136,55 +136,57 @@ async function et(e) {
 }
 class en extends i.PureComponent {
     componentDidUpdate(e) {
-        var t, n, r, i, l, a;
+        var t, n, r, i, l, a, o;
         let {
-            voiceChannelId: o,
-            voiceChannelGuildId: u,
-            voiceChannelType: d,
-            voiceChannelBitrate: p,
-            videoEnabled: h,
-            isScreenSharing: m,
-            runningGame: v,
-            runningGamePid: I,
-            selectedChannelId: S,
-            selectedGuildId: T,
-            connected: N,
+            voiceChannelId: u,
+            voiceChannelGuildId: d,
+            voiceChannelType: p,
+            voiceChannelBitrate: h,
+            videoEnabled: m,
+            isScreenSharing: v,
+            runningGame: I,
+            runningGamePid: S,
+            selectedChannelId: T,
+            selectedGuildId: N,
+            connected: P,
         } = this.props;
-        if (e.voiceChannelId !== o && null != e.voiceChannelId) {
-            let t = y.ZP.getCurrentGameForAnalytics(),
-                n = null != t ? t.name : "",
-                r = w.Z.getStageInstanceByChannel(e.voiceChannelId),
-                i = C.ZP.getActiveEventByChannel(e.voiceChannelId);
-            Q.default.track(
-                X.rMx.LEAVE_VOICE_CHANNEL,
-                ee(
-                    {
-                        channel_id: e.voiceChannelId,
-                        channel_type: e.voiceChannelType,
-                        channel_bitrate: e.voiceChannelBitrate,
-                        guild_id: e.voiceChannelGuildId,
-                        rtc_connection_id: B.Z.getRTCConnectionId(),
-                        game_name: n,
-                        duration: B.Z.getDuration(),
-                        game_platform: this.props.gamePlatform,
-                        game_id: this.props.gameId,
-                        media_session_id: B.Z.getMediaSessionId(),
-                        stage_instance_id: null == r ? void 0 : r.id,
-                        guild_scheduled_event_id: null == i ? void 0 : i.id,
-                    },
-                    (0, f.kO)(e.voiceChannelGuildId, e.voiceChannelId, e.videoEnabled),
-                    B.Z.getVoiceStateStats(),
-                    b.Z.getSelectedParticipantStats(e.voiceChannelId),
-                ),
-            );
+        if (e.voiceChannelId !== u && null != e.voiceChannelId) {
+            let n = y.ZP.getCurrentGameForAnalytics(),
+                r = null != n ? n.name : "",
+                i = w.Z.getStageInstanceByChannel(e.voiceChannelId),
+                l = C.ZP.getActiveEventByChannel(e.voiceChannelId),
+                a = B.Z.getLastRTCConnectionState();
+            (null == a ? void 0 : a.channelId) !== e.voiceChannelId && (a = null),
+                Q.default.track(
+                    X.rMx.LEAVE_VOICE_CHANNEL,
+                    ee(
+                        {
+                            channel_id: e.voiceChannelId,
+                            channel_type: e.voiceChannelType,
+                            channel_bitrate: e.voiceChannelBitrate,
+                            guild_id: e.voiceChannelGuildId,
+                            rtc_connection_id: null == a ? void 0 : a.rtcConnectionId,
+                            game_name: r,
+                            duration: null == a ? void 0 : a.duration,
+                            game_platform: this.props.gamePlatform,
+                            game_id: this.props.gameId,
+                            media_session_id: null == a ? void 0 : a.mediaSessionId,
+                            stage_instance_id: null == i ? void 0 : i.id,
+                            guild_scheduled_event_id: null == l ? void 0 : l.id,
+                        },
+                        (0, f.kO)(e.voiceChannelGuildId, e.voiceChannelId, e.videoEnabled),
+                        null == a || null == (t = a.voiceStateAnalytics) ? void 0 : t.getStats(),
+                        b.Z.getSelectedParticipantStats(e.voiceChannelId),
+                    ),
+                );
         }
-        if (e.voiceChannelId !== o && null != o) {
+        if (e.voiceChannelId !== u && null != u) {
             let e = y.ZP.getCurrentGameForAnalytics(),
                 t = null != e ? e.name : "",
-                n = w.Z.getStageInstanceByChannel(o),
-                r = C.ZP.getActiveEventByChannel(o);
-            (0, f.yw)(X.rMx.CHANNEL_OPENED, ee({}, (0, f.$H)(o))),
-                (0, g.a)(X.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: o });
+                n = w.Z.getStageInstanceByChannel(u),
+                r = C.ZP.getActiveEventByChannel(u);
+            (0, f.yw)(X.rMx.CHANNEL_OPENED, ee({}, (0, f.$H)(u))),
+                (0, g.a)(X.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: u });
             let i = null,
                 l = K.default.getFocusedPID();
             null != l &&
@@ -198,10 +200,10 @@ class en extends i.PureComponent {
                     ee(
                         {
                             location: i,
-                            channel_id: o,
-                            channel_type: d,
-                            channel_bitrate: p,
-                            guild_id: u,
+                            channel_id: u,
+                            channel_type: p,
+                            channel_bitrate: h,
+                            guild_id: d,
                             game_name: t,
                             game_platform: this.props.gamePlatform,
                             game_id: this.props.gameId,
@@ -210,67 +212,67 @@ class en extends i.PureComponent {
                             was_moved: B.Z.getWasMoved(),
                             join_voice_id: B.Z.getJoinVoiceId(),
                         },
-                        (0, f.oG)(u, o),
-                        (0, f.kO)(u, o, h),
+                        (0, f.oG)(d, u),
+                        (0, f.kO)(d, u, m),
                     ),
                 );
         }
-        let P =
-                null != v &&
-                null != v.distributor &&
-                null != v.sku &&
+        let A =
+                null != I &&
+                null != I.distributor &&
+                null != I.sku &&
                 null != e.runningGame &&
-                e.runningGame.distributor === v.distributor &&
-                v.sku === e.runningGame.sku &&
-                v.name === e.runningGame.name,
-            A = null != e.runningGame && null != v && e.runningGame.isLauncher !== v.isLauncher;
-        if (e.runningGame !== v && null != v && !v.isLauncher && (!P || A)) {
-            let { gameId: e } = (0, O.G8)(v),
-                a = void 0 !== e ? D.Z.getDetectableGame(e) : null,
-                s = y.ZP.getOverrideForGame(v),
-                f = k.Z.getGuildIds(),
-                h = L.SE.getSetting(),
-                g = f.filter((e) => !h.includes(e)).slice(0, 200),
+                e.runningGame.distributor === I.distributor &&
+                I.sku === e.runningGame.sku &&
+                I.name === e.runningGame.name,
+            Z = null != e.runningGame && null != I && e.runningGame.isLauncher !== I.isLauncher;
+        if (e.runningGame !== I && null != I && !I.isLauncher && (!A || Z)) {
+            let { gameId: e } = (0, O.G8)(I),
+                t = void 0 !== e ? D.Z.getDetectableGame(e) : null,
+                s = y.ZP.getOverrideForGame(I),
+                o = k.Z.getGuildIds(),
+                f = L.SE.getSetting(),
+                g = o.filter((e) => !f.includes(e)).slice(0, 200),
                 m = null;
-            m = null != s ? "custom_override" : null != a ? "verified_game" : "launcher";
-            let _ = x.default.getTrackedGameByPid(v.pid),
-                b = (0, y.b6)(v),
-                C = {
-                    enabledOOP: null != (t = null == _ ? void 0 : _.oopEnabled) ? t : b.enabledOOP,
-                    enabledLegacy: null != (n = null == _ ? void 0 : _.legacyEnabled) ? n : b.enabledLegacy,
-                    overlayMethod: null != (r = null == _ ? void 0 : _.overlayMethod) ? r : b.overlayMethod,
-                    source: null != (i = null == _ ? void 0 : _.source) ? i : b.source,
+            m = null != s ? "custom_override" : null != t ? "verified_game" : "launcher";
+            let _ = x.default.getTrackedGameByPid(I.pid),
+                b = (0, y.b6)(I),
+                v = {
+                    enabledOOP: null != (n = null == _ ? void 0 : _.oopEnabled) ? n : b.enabledOOP,
+                    enabledLegacy: null != (r = null == _ ? void 0 : _.legacyEnabled) ? r : b.enabledLegacy,
+                    overlayMethod: null != (i = null == _ ? void 0 : _.overlayMethod) ? i : b.overlayMethod,
+                    source: null != (l = null == _ ? void 0 : _.source) ? l : b.source,
                     reason: "ChatAutoAnalytics",
                 },
-                S = null != (l = x.default.getOverlayMethod(v.pid)) ? l : C.overlayMethod;
+                C = null != (a = x.default.getOverlayMethod(I.pid)) ? a : v.overlayMethod;
             if (
                 (setTimeout(() => {
-                    (v.distributor === X.GQo.ROBLOX ? this.debouncedRobloxAnalytics : et)({
-                        runningGame: v,
-                        game: a,
+                    (I.distributor === X.GQo.ROBLOX ? this.debouncedRobloxAnalytics : et)({
+                        runningGame: I,
+                        game: t,
                         detectionMethod: m,
-                        overlayStatus: C,
-                        overlayMethod: S,
+                        overlayStatus: v,
+                        overlayMethod: C,
                         sharedGuildIds: g,
-                        voiceChannelId: o,
-                        voiceChannelType: d,
-                        voiceChannelBitrate: p,
-                        voiceChannelGuildId: u,
+                        voiceChannelId: u,
+                        voiceChannelType: p,
+                        voiceChannelBitrate: h,
+                        voiceChannelGuildId: d,
                     });
                 }, 10000),
-                null != v.name && null != I && D.Z.shouldReport(v.name))
+                null != I.name && null != S && D.Z.shouldReport(I.name))
             ) {
-                let e = v.name;
-                c.Z.identifyGame(I, e)
+                let e = I.name;
+                c.Z.identifyGame(S, e)
                     .then((e) => c.Z.reportUnverifiedGame(e))
                     .catch((e) => new E.Z("AutoAnalytics").error("Cannot identify game", e));
             }
         }
-        if ((e.videoEnabled !== h || e.isScreenSharing !== m) && null != o) {
+        if ((e.videoEnabled !== m || e.isScreenSharing !== v) && null != u) {
             let e = "none",
-                t = [m ? "screen" : null, h ? "camera" : null].filter(J.lm),
+                t = [v ? "screen" : null, m ? "camera" : null].filter(J.lm),
                 n = null;
-            m ? ((e = "screen"), (n = (0, _.t)())) : h && (e = "camera"),
+            v ? ((e = "screen"), (n = (0, _.t)())) : m && (e = "camera"),
                 Q.default.track(
                     X.rMx.VIDEO_INPUT_TOGGLED,
                     ee(
@@ -282,11 +284,11 @@ class en extends i.PureComponent {
                         },
                         n,
                         this.getGameMetadata(),
-                        (0, f.AB)(o),
+                        (0, f.AB)(u),
                     ),
                 );
         }
-        if (N && null != S && (!e.connected || S !== e.selectedChannelId || T !== e.selectedGuildId)) {
+        if (P && null != T && (!e.connected || T !== e.selectedChannelId || N !== e.selectedGuildId)) {
             let t = e.selectedChannelId,
                 n = R.Z.getChannel(t),
                 r = k.Z.getGuild(null == n ? void 0 : n.getGuildId());
@@ -308,7 +310,7 @@ class en extends i.PureComponent {
                         {
                             last_message_id: null == i ? void 0 : i.id,
                             last_message_reference_message_id:
-                                null == i || null == (a = i.messageReference) ? void 0 : a.message_id,
+                                null == i || null == (o = i.messageReference) ? void 0 : o.message_id,
                             messages_loaded: e.hasFetched,
                         },
                         (0, f.v_)(n),
