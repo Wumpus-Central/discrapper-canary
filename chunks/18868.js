@@ -55,18 +55,21 @@ let m = () => {
         e.stopPropagation(), e.preventDefault();
     },
     h = (e) => {
-        let { className: t, onDrop: n } = e,
-            [r, h] = l.useState(!1),
-            x = l.useRef(null),
-            g = l.useCallback((e) => {
-                p(e), h(!0), (0, s.Mr3)(c.A);
-            }, []),
+        let { className: t, onDrop: n, children: r } = e,
+            [h, x] = l.useState(!1),
+            g = l.useRef(null),
             f = l.useCallback((e) => {
-                p(e), h(!1);
+                p(e), x(!0), (0, s.Mr3)(c.A);
             }, []),
-            b = l.useCallback(
+            b = l.useCallback((e) => {
+                p(e);
+                let t = g.current,
+                    n = e.relatedTarget;
+                (null != n && (null == t || t.contains(n))) || x(!1);
+            }, []),
+            v = l.useCallback(
                 async (e) => {
-                    p(e), h(!1);
+                    p(e), x(!1);
                     let t = e.dataTransfer;
                     if (null == t) return void m();
                     let a = await Promise.all(
@@ -79,46 +82,50 @@ let m = () => {
                 },
                 [n],
             );
-        return (0, a.jsx)("div", {
-            ref: x,
-            className: i()(t, u.uploadArea),
-            onDragEnter: g,
+        return (0, a.jsxs)("div", {
+            ref: g,
+            className: i()(t, u.wrapper),
+            onDragEnter: f,
             onDragOver: p,
-            onDragLeave: f,
-            onDrop: b,
-            children: (0, a.jsx)("div", {
-                className: i()(u.uploadModal, { [u.droppable]: r }),
-                children: (0, a.jsxs)("div", {
-                    className: u.inner,
-                    children: [
-                        (0, a.jsx)(o.Z, { icons: d.J6 }),
-                        (0, a.jsx)(s.Heading, {
-                            variant: "heading-lg/bold",
-                            children: "Upload Shop Assets",
-                        }),
-                        (0, a.jsxs)("div", {
-                            className: u.instructions,
+            onDragLeave: b,
+            onDrop: v,
+            children: [
+                r,
+                h &&
+                    (0, a.jsx)("div", {
+                        className: u.uploadModal,
+                        children: (0, a.jsxs)("div", {
+                            className: u.inner,
                             children: [
-                                (0, a.jsx)(s.Text, {
-                                    variant: "text-sm/normal",
-                                    children: "Drop file(s) into this panel to preview Shop assets!",
+                                (0, a.jsx)(o.Z, { icons: d.J6 }),
+                                (0, a.jsx)(s.Heading, {
+                                    variant: "heading-lg/bold",
+                                    children: "Upload Shop Assets",
                                 }),
-                                (0, a.jsxs)(s.Text, {
-                                    variant: "text-sm/normal",
+                                (0, a.jsxs)("div", {
+                                    className: u.instructions,
                                     children: [
-                                        "Click",
-                                        (0, a.jsx)(s.idN, {
-                                            className: u.questionIcon,
-                                            size: "xs",
-                                            color: s.TVs.colors.TEXT_DEFAULT,
+                                        (0, a.jsx)(s.Text, {
+                                            variant: "text-sm/normal",
+                                            children: "Drop file(s) into this panel to preview Shop assets!",
                                         }),
-                                        "above for more instructions.",
+                                        (0, a.jsxs)(s.Text, {
+                                            variant: "text-sm/normal",
+                                            children: [
+                                                "Click",
+                                                (0, a.jsx)(s.idN, {
+                                                    className: u.questionIcon,
+                                                    size: "xs",
+                                                    color: s.TVs.colors.TEXT_DEFAULT,
+                                                }),
+                                                "above for more instructions.",
+                                            ],
+                                        }),
                                     ],
                                 }),
                             ],
                         }),
-                    ],
-                }),
-            }),
+                    }),
+            ],
         });
     };

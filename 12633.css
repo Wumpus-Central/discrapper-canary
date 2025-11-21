@@ -42721,16 +42721,10 @@ body .headerAnimation_b54a5b {
     width: 100%
 }
 
-.paymentSourceNoticeCopy__1048e {
-    margin-top: 5px
-}
-
-.divider__1048e {
-    background-color: var(--border-subtle);
-    height: 1px;
-    margin-bottom: 8px;
-    margin-top: 8px;
-    width: 100%
+.legalFinePrint__1048e {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
 }
 
 .paymentSourceLabel_f38e43 {
@@ -44815,7 +44809,8 @@ body .headerAnimation_b54a5b {
 }
 
 .fineprint_b44961 {
-    margin-bottom: 0
+    margin-bottom: 0;
+    margin-top: 16px
 }
 
 .skuHeading_b44961 {
@@ -44829,7 +44824,7 @@ body .headerAnimation_b54a5b {
 }
 
 .socialLayerGameItemDisclaimer_b44961 {
-    margin-top: 8px
+    margin-top: 16px
 }
 
 .back_e125f1 {
@@ -52031,7 +52026,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -59367,9 +59362,9 @@ screen and (max-width:485px) {
 
 .message__9a9f9 {
     color: var(--text-default);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: var(--font-weight-medium);
-    line-height: 20px;
+    line-height: 1.25rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap

@@ -1,4 +1,1 @@
-e.exports = {
-    paymentSourceNoticeCopy: "paymentSourceNoticeCopy__1048e",
-    divider: "divider__1048e",
-};
+e.exports = { legalFinePrint: "legalFinePrint__1048e" };
