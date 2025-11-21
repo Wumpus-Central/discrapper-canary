@@ -1,12 +1,13 @@
 n.d(t, { Z: () => p });
 var r = n(54381),
     i = n(473749),
-    l = n(481060),
-    o = n(110255),
-    a = n(64247),
-    s = n(981631),
-    c = n(388032);
-function u(e) {
+    l = n(681715),
+    o = n(481060),
+    a = n(110255),
+    s = n(64247),
+    c = n(981631),
+    u = n(388032);
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,7 +32,7 @@ function u(e) {
     }
     return e;
 }
-function d(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -52,42 +53,43 @@ function d(e, t) {
 function p(e) {
     let { channel: t } = e,
         n = i.useRef(null);
-    return (0, r.jsx)(l.yRy, {
+    return (0, r.jsx)(o.yRy, {
         targetElementRef: n,
         align: "right",
-        animation: l.yRy.Animation.NONE,
+        animation: o.yRy.Animation.NONE,
         position: "bottom",
         renderPopout: (e) =>
             t.isThread()
                 ? (0, r.jsx)(
-                      a.Z,
-                      d(u({}, e), {
+                      s.Z,
+                      f(d({}, e), {
                           channel: t,
                           navId: "recents-thread-notifications",
-                          label: c.intl.string(c.t.ljs3Oe),
+                          label: u.intl.string(u.t.ljs3Oe),
                       }),
                   )
                 : (0, r.jsx)(
-                      o.Z,
-                      d(u({}, e), {
+                      a.Z,
+                      f(d({}, e), {
                           channel: t,
                           navId: "recents-notifications",
-                          label: c.intl.string(c.t.ljs3Oe),
-                          location: { section: s.jXE.INBOX },
+                          label: u.intl.string(u.t.ljs3Oe),
+                          location: { section: c.jXE.INBOX },
                           includeGuildMute: !0,
                       }),
                   ),
         children: (e) => {
             let { onClick: t } = e;
-            return (0, r.jsx)(l.M0o, {
-                ref: n,
-                tooltip: c.intl.string(c.t.h850Ss),
-                color: l.YX$.TERTIARY,
-                icon: (0, r.jsx)(l.Dkj, {
-                    size: "xs",
-                    color: "currentColor",
+            return (0, r.jsx)(l.u, {
+                text: u.intl.string(u.t.h850Ss),
+                targetElementRef: n,
+                children: (0, r.jsx)(o.hU, {
+                    "aria-label": u.intl.string(u.t.h850Ss),
+                    icon: o.Dkj,
+                    variant: "secondary",
+                    size: "sm",
+                    onClick: t,
                 }),
-                onClick: t,
             });
         },
     });
