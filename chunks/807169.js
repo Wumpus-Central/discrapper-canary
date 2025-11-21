@@ -9,7 +9,7 @@ var r = n(473749),
     a = n(442837),
     o = n(911969),
     s = n(160404),
-    l = n(695346),
+    l = n(519207),
     c = n(131704),
     u = n(314897),
     d = n(592125),
@@ -24,7 +24,7 @@ function m(e, t) {
             null != (_ = e instanceof c.Sf && e.isThread() && null != (i = d.Z.getChannel(e.parent_id)) ? i : e)
                 ? O(_)
                 : void 0,
-        m = l.xM.getSetting(),
+        m = (0, l.GG)(),
         g = u.default.getId(),
         y = null != (a = null == (n = p.default.getCurrentUser()) ? void 0 : n.nsfwAllowed) && a,
         v = null != h && null != (o = null == (r = f.ZP.getMember(h, g)) ? void 0 : r.roles) ? o : [],
@@ -55,7 +55,7 @@ function g(e, t) {
             return e;
         }, [e]),
         i = null != n ? O(n) : void 0,
-        o = l.xM.useSetting(),
+        o = (0, l.Xg)(),
         _ = (0, a.e7)([u.default], () => u.default.getId()),
         h = (0, a.e7)([p.default], () => {
             var e, t;
