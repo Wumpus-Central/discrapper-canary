@@ -5180,6 +5180,7 @@ var nE = (function (e) {
             (e.SLAYER_STOREFRONT_ACCOUNT_LINK_CLICKED = "slayer_storefront_account_link_clicked"),
             (e.SLAYER_STOREFRONT_GIFT_CODE_CLAIM_CLICKED = "slayer_storefront_gift_code_claim_clicked"),
             (e.SLAYER_SHOP_VIEWED = "slayer_shop_viewed"),
+            (e.SLAYER_SHOP_SCROLLED = "slayer_shop_scrolled"),
             (e.SLAYER_SHOP_CARD_ELEMENT_CLICKED = "slayer_shop_card_element_clicked"),
             (e.SLAYER_SHOP_PDP_ELEMENT_CLICKED = "slayer_shop_pdp_element_clicked"),
             (e.COMMERCE_SHOP_VC_GIFT_BUTTON_VIEWED = "commerce_shop_vc_gift_button_viewed"),

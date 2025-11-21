@@ -1,4 +1,4 @@
-l.d(n, { $: () => _ }), l(388685);
+l.d(n, { $: () => h }), l(388685);
 var t = l(54381),
     i = l(473749),
     a = l(793030),
@@ -8,26 +8,29 @@ var t = l(54381),
     d = l(590961),
     c = l(840724),
     u = l(533785),
-    p = l(171524),
-    g = l(822458),
+    g = l(171524),
+    p = l(822458),
+    _ = l(640173),
     I = l(981631),
-    x = l(329353);
-function _(e) {
+    f = l(329353);
+function h(e) {
     var n, l;
-    let { applicationId: _, guildId: f, page: h } = e,
-        { ref: m, width: v } = (0, o.ZP)(),
-        C = (0, d.oR)(),
-        { analyticsLocations: j } = (0, r.ZP)(),
-        [b, k] = i.useMemo(() => {
-            if ((null == h ? void 0 : h.skuIds) == null || (null == h ? void 0 : h.skuIds.length) === 0)
+    let { applicationId: h, guildId: x, page: m } = e,
+        { ref: v, width: C } = (0, o.ZP)(),
+        j = (0, d.oR)(),
+        { analyticsLocations: b } = (0, r.ZP)(),
+        k = i.useRef(null),
+        { handleScroll: Z } = (0, _.I)(k, j, b),
+        [S, N] = i.useMemo(() => {
+            if ((null == m ? void 0 : m.skuIds) == null || (null == m ? void 0 : m.skuIds.length) === 0)
                 return [[], []];
-            let e = Math.round(null != v ? v : 0);
-            return (null == h ? void 0 : h.leaderboard) == null || null == e || e <= 516 || e < 1104
-                ? [[], null == h ? void 0 : h.skuIds]
-                : [null == h ? void 0 : h.skuIds.slice(0, 2), null == h ? void 0 : h.skuIds.slice(2)];
-        }, [h, v]);
+            let e = Math.round(null != C ? C : 0);
+            return (null == m ? void 0 : m.leaderboard) == null || null == e || e <= 516 || e < 1104
+                ? [[], null == m ? void 0 : m.skuIds]
+                : [null == m ? void 0 : m.skuIds.slice(0, 2), null == m ? void 0 : m.skuIds.slice(2)];
+        }, [m, C]);
     return (i.useEffect(() => {
-        let { sessionId: e, guildId: n, pageIndex: l, pageTitle: t, isUserGuildMember: i, pageHasLeaderboard: a } = C;
+        let { sessionId: e, guildId: n, pageIndex: l, pageTitle: t, isUserGuildMember: i, pageHasLeaderboard: a } = j;
         s.default.track(I.rMx.SLAYER_SHOP_VIEWED, {
             slayer_shop_session_id: e,
             guild_id: n,
@@ -35,44 +38,46 @@ function _(e) {
             page_title: t,
             is_user_guild_member: i,
             page_has_leaderboard: a,
-            location_stack: j,
+            location_stack: b,
         });
-    }, [C, j]),
-    null == h)
+    }, [j, b]),
+    null == m)
         ? null
-        : (0, t.jsx)(a.zJl, {
+        : (0, t.jsx)(a.h21, {
+              ref: k,
+              onScroll: Z,
               children: (0, t.jsxs)("section", {
-                  ref: m,
-                  className: x.container,
+                  ref: v,
+                  className: f.container,
                   children: [
-                      (0, t.jsx)(p.n, {
-                          applicationId: _,
-                          backgroundImageAssetId: null == (n = h.leaderboard) ? void 0 : n.backgroundImageAssetId,
+                      (0, t.jsx)(g.n, {
+                          applicationId: h,
+                          backgroundImageAssetId: null == (n = m.leaderboard) ? void 0 : n.backgroundImageAssetId,
                       }),
-                      (0, t.jsx)(u.t, { leaderboard: h.leaderboard }),
-                      (0, t.jsx)(g.Z, {
+                      (0, t.jsx)(u.t, { leaderboard: m.leaderboard }),
+                      (0, t.jsx)(p.Z, {
                           analyticsSectionId: "featured-top-section",
-                          applicationId: _,
-                          guildId: f,
-                          skuIds: b,
+                          applicationId: h,
+                          guildId: x,
+                          skuIds: S,
                           variant: c.Z.MEDIUM,
                       }),
-                      (0, t.jsx)(g.Z, {
+                      (0, t.jsx)(p.Z, {
                           analyticsSectionId: "non-featured-top-section",
-                          applicationId: _,
-                          guildId: f,
-                          skuIds: k,
+                          applicationId: h,
+                          guildId: x,
+                          skuIds: N,
                       }),
-                      null == (l = h.sections)
+                      null == (l = m.sections)
                           ? void 0
                           : l.map((e, n) => {
                                 var l;
                                 return (0, t.jsx)(
-                                    g.Z,
+                                    p.Z,
                                     {
                                         analyticsSectionId: "index:".concat(n),
-                                        guildId: f,
-                                        applicationId: _,
+                                        guildId: x,
+                                        applicationId: h,
                                         sectionTitle: null != (l = e.title) ? l : void 0,
                                         skuIds: e.skuIds,
                                     },
