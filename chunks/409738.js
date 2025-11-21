@@ -8,8 +8,12 @@ e.exports = {
     page: "page_df4c28",
     content: "content_df4c28",
     main: "main_df4c28",
+    mainRightLayout: "mainRightLayout_df4c28",
+    mainBottomLayout: "mainBottomLayout_df4c28",
     canvas: "canvas_df4c28",
     controls: "controls_df4c28",
+    controlsRight: "controlsRight_df4c28",
+    controlsBottom: "controlsBottom_df4c28",
     controlsSection: "controlsSection_df4c28",
     storyContent: "storyContent_df4c28",
 };

@@ -1,9 +1,11 @@
-n.d(t, { b: () => u }), n(388685);
+n.d(t, { b: () => f }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(405283),
-    o = n(409738);
-function s(e, t, n) {
+    a = n(120356),
+    o = n.n(a),
+    s = n(405283),
+    l = n(409738);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,7 +18,7 @@ function s(e, t, n) {
         e
     );
 }
-function l(e) {
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -27,12 +29,12 @@ function l(e) {
                 }),
             )),
             r.forEach(function (t) {
-                s(e, t, n[t]);
+                c(e, t, n[t]);
             });
     }
     return e;
 }
-function c(e) {
+function d(e) {
     let t = e.controls,
         n = {};
     return (
@@ -44,34 +46,42 @@ function c(e) {
         n
     );
 }
-function u(e) {
-    let { story: t } = e,
-        n = i.useMemo(() => c(t), [t]),
-        [s, u] = i.useState(n);
+function f(e) {
+    let { story: t, controlsLayout: n } = e,
+        a = i.useMemo(() => d(t), [t]),
+        [c, f] = i.useState(a);
     i.useEffect(() => {
-        u(c(t));
+        f(d(t));
     }, [t]);
-    let d = () => {
-        let e = t.component;
-        return (0, r.jsx)(e, l({}, s));
-    };
+    let _ = () => {
+            let e = t.component;
+            return (0, r.jsx)(e, u({}, c));
+        },
+        p = "hidden" !== n && null != t.controls;
     return (0, r.jsxs)("div", {
-        className: o.main,
+        className: o()(l.main, {
+            [l.mainBottomLayout]: "bottom" === n,
+            [l.mainRightLayout]: "right" === n,
+        }),
         children: [
             (0, r.jsx)("div", {
-                className: o.canvas,
+                className: l.canvas,
                 children: (0, r.jsx)("div", {
-                    className: o.storyContent,
-                    children: d(),
+                    className: l.storyContent,
+                    children: _(),
                 }),
             }),
-            null != t.controls &&
+            p &&
+                null != t.controls &&
                 (0, r.jsx)("div", {
-                    className: o.controls,
-                    children: (0, r.jsx)(a.a, {
+                    className: o()(l.controls, {
+                        [l.controlsBottom]: "bottom" === n,
+                        [l.controlsRight]: "right" === n,
+                    }),
+                    children: (0, r.jsx)(s.a, {
                         controls: t.controls,
-                        props: s,
-                        onPropsChange: u,
+                        props: c,
+                        onPropsChange: f,
                     }),
                 }),
         ],
