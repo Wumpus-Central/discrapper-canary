@@ -101,7 +101,7 @@ function p(e, t) {
                     (0, o.fw)(),
                     (0, s.p)();
             },
-            modalKey: "slayers-payment-modal",
+            modalKey: "slayer-payment-modal",
         },
     );
 }

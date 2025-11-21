@@ -58,7 +58,15 @@ function l(e, t) {
 }
 let c = "social-layer-storefront-product-details-modal",
     u = (e) => {
-        let { skuId: t, applicationId: a, guildId: s, isStorefront: u, onClose: d } = e;
+        let {
+            skuId: t,
+            applicationId: a,
+            guildId: s,
+            isStorefront: u,
+            analyticsLocations: d,
+            analyticsContext: f,
+            onClose: _,
+        } = e;
         (0, i.ZDy)(
             async () => {
                 let { default: e } = await n.e("84802").then(n.bind(n, 250317));
@@ -70,13 +78,15 @@ let c = "social-layer-storefront-product-details-modal",
                             applicationId: a,
                             guildId: s,
                             isStorefront: u,
+                            analyticsLocations: d,
+                            analyticsContext: f,
                         }),
                     );
             },
             {
                 modalKey: c,
                 onCloseCallback: () => {
-                    null == d || d();
+                    null == _ || _();
                 },
             },
         );

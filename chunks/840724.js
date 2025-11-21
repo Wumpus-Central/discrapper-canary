@@ -149,11 +149,11 @@ function H(e) {
                       .concat(Z + r, "%)");
         }, [ey, et]),
         eI = i.useCallback(() => {
-            ep(x.rZ.WISHLIST_BUTTON);
+            ep(x.r.WISHLIST_BUTTON);
         }, [ep]),
         eT = i.useCallback(
             (e) => {
-                if ((ep(x.rZ.CARD), null != er)) return void er(e);
+                if ((ep(x.r.CARD), null != er)) return void er(e);
                 null != en &&
                     (0, R.Z)({
                         guildId: en,
@@ -272,7 +272,7 @@ function H(e) {
                                               variant: "primary",
                                               onClick: (e) => {
                                                   e.stopPropagation(),
-                                                      ep(x.rZ.BUY_BUTTON),
+                                                      ep(x.r.BUY_BUTTON),
                                                       (0, D.P)(
                                                           es,
                                                           { isGift: !1 },
@@ -296,7 +296,7 @@ function H(e) {
                                           (0, r.jsx)(L.Z, {
                                               onGift: (e) => {
                                                   e.stopPropagation(),
-                                                      ep(x.rZ.GIFT_BUTTON),
+                                                      ep(x.r.GIFT_BUTTON),
                                                       (0, D.P)(
                                                           es,
                                                           { isGift: !0 },

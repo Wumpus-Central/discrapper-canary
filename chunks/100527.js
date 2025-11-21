@@ -518,12 +518,14 @@ var r = (function (e) {
         (e.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_PURCHASE_BUTTON =
             "slayer storefront product details embed purchase button"),
         (e.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_GIFT_BUTTON = "slayer storefront product details embed gift button"),
+        (e.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD = "slayer storefront wishlist item card"),
         (e.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD_GIFT_BUTTON = "slayer storefront wishlist item card gift button"),
         (e.SLAYER_STOREFRONT_BREADCRUMB_WISHLIST_ITEM_CARD_GIFT_BUTTON =
             "slayer storefront breadcrumb wishlist item card gift button"),
         (e.SOCIAL_LAYER_CLAIM_PURCHASED_ITEM_MODAL = "social layer claim purchased item modal"),
         (e.SOCIAL_LAYER_GIFT_CODE_CLAIM_MODAL = "social layer gift code claim modal"),
         (e.SOCIAL_LAYER_STOREFRONT = "social layer storefront"),
+        (e.GIFT_CODE_EMBED = "gift code embed"),
         (e.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED = "slayer storefront product details embed"),
         e
     );

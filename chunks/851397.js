@@ -1,28 +1,29 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => x }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(442837),
     o = n(681715),
     a = n(481060),
     s = n(100527),
-    c = n(835473),
-    u = n(892001),
-    d = n(688192),
+    c = n(906732),
+    u = n(835473),
+    d = n(892001),
+    f = n(688192),
     p = n(89196),
     h = n(937615),
-    f = n(51144),
-    g = n(436585),
-    m = n(594914),
-    b = n(848118),
-    _ = n(474936),
-    y = n(231338),
-    O = n(388032),
-    v = n(63602);
-function j(e) {
+    g = n(51144),
+    m = n(436585),
+    b = n(594914),
+    _ = n(848118),
+    y = n(474936),
+    O = n(231338),
+    v = n(388032),
+    j = n(63602);
+function x(e) {
     var t,
         n,
-        { profileOwner: j, hideButtonIcon: C = !1, showPrice: x = !1, showIcons: E = !1 } = e,
-        S = (function (e, t) {
+        { profileOwner: x, hideButtonIcon: C = !1, showPrice: E = !1, showIcons: S = !1 } = e,
+        I = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -43,96 +44,100 @@ function j(e) {
             }
             return i;
         })(e, ["profileOwner", "hideButtonIcon", "showPrice", "showIcons"]);
-    let { item: I, isOwner: P, giftingOrigin: N = _.Wt.USER_PROFILE_WISHLIST } = S,
-        Z = I.sku,
-        w = Z.applicationId,
-        T = (0, c.q)(w),
-        A = i.useRef(null),
-        R = (0, l.e7)([p.Z], () => null != j && p.Z.hasSentGift(I.skuId, j.id), [I.skuId, j]),
-        D = R || !0 === I.isOwned,
-        L = I.skuName,
+    let { item: P, isOwner: N, giftingOrigin: Z = y.Wt.USER_PROFILE_WISHLIST } = I,
+        w = P.sku,
+        T = w.applicationId,
+        A = (0, u.q)(T),
+        R = i.useRef(null),
+        { analyticsLocations: D } = (0, c.ZP)(s.Z.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD),
+        L = (0, l.e7)([p.Z], () => null != x && p.Z.hasSentGift(P.skuId, x.id), [P.skuId, x]),
+        M = L || !0 === P.isOwned,
+        k = P.skuName,
         {
-            buttonCTALabel: M,
-            buttonIcon: k,
-            handleCardClick: G,
+            buttonCTALabel: G,
+            buttonIcon: U,
+            handleCardClick: B,
         } = i.useMemo(() => {
             var e, t, n, r, i, l, o, c;
-            return P || D
+            return N || M
                 ? {
-                      buttonCTALabel: x
+                      buttonCTALabel: E
                           ? (0, h.T4)(
-                                null != (i = null == (n = Z.price) ? void 0 : n.amount) ? i : 0,
-                                null != (l = null == (r = Z.price) ? void 0 : r.currency) ? l : y.pK.USD,
+                                null != (i = null == (n = w.price) ? void 0 : n.amount) ? i : 0,
+                                null != (l = null == (r = w.price) ? void 0 : r.currency) ? l : O.pK.USD,
                             )
-                          : O.intl.string(O.t.FdGl5A),
+                          : v.intl.string(v.t.FdGl5A),
                       buttonIcon: void 0,
                       handleCardClick: () => {
-                          (null == T ? void 0 : T.guildId) != null &&
-                              ((0, u.closeUserProfileModal)(),
-                              (0, g.g)({
-                                  skuId: Z.id,
-                                  applicationId: T.id,
-                                  guildId: T.guildId,
+                          (null == A ? void 0 : A.guildId) != null &&
+                              ((0, d.closeUserProfileModal)(),
+                              (0, m.g)({
+                                  skuId: w.id,
+                                  applicationId: A.id,
+                                  guildId: A.guildId,
                                   isStorefront: !1,
+                                  analyticsLocations: D,
                               }));
                       },
                   }
                 : {
-                      buttonCTALabel: x
+                      buttonCTALabel: E
                           ? (0, h.T4)(
-                                null != (o = null == (e = Z.price) ? void 0 : e.amount) ? o : 0,
-                                null != (c = null == (t = Z.price) ? void 0 : t.currency) ? c : y.pK.USD,
+                                null != (o = null == (e = w.price) ? void 0 : e.amount) ? o : 0,
+                                null != (c = null == (t = w.price) ? void 0 : t.currency) ? c : O.pK.USD,
                             )
-                          : O.intl.string(O.t.ilhtIa),
+                          : v.intl.string(v.t.ilhtIa),
                       buttonIcon: C ? void 0 : a.OgN,
                       handleCardClick: () => {
-                          R ||
-                              ((0, u.closeUserProfileModal)(),
-                              (0, m.P)(
-                                  Z,
+                          L ||
+                              ((0, d.closeUserProfileModal)(),
+                              (0, b.P)(
+                                  w,
                                   {
                                       isGift: !0,
-                                      giftRecipient: j,
-                                      giftingOrigin: N,
+                                      giftRecipient: x,
+                                      giftingOrigin: Z,
                                   },
-                                  { analyticsLocations: [s.Z.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD_GIFT_BUTTON] },
+                                  {
+                                      analyticsLocations: [...D, s.Z.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD_GIFT_BUTTON],
+                                  },
                               ));
                       },
                   };
-        }, [P, D, x, Z, C, T, R, j, N]),
-        U = i.useCallback(
+        }, [N, M, E, w, C, A, L, x, Z, D]),
+        F = i.useCallback(
             () =>
-                E
+                S
                     ? (0, r.jsx)("div", {
-                          className: v.itemIcon,
+                          className: j.itemIcon,
                           children: (0, r.jsx)(o.u, {
-                              text: O.intl.formatToPlainString(O.t.p3RmJF, { username: f.ZP.getName(j) }),
+                              text: v.intl.formatToPlainString(v.t.p3RmJF, { username: g.ZP.getName(x) }),
                               position: "top",
                               children: (0, r.jsx)(a.h_8, {
                                   size: "custom",
                                   width: 20,
                                   height: 20,
                                   color: "currentColor",
-                                  colorClass: v.itemIconHeart,
+                                  colorClass: j.itemIconHeart,
                               }),
                           }),
                       })
                     : null,
-            [E, j],
+            [S, x],
         ),
-        B = i.useCallback(
+        V = i.useCallback(
             () =>
-                (0, r.jsx)(b.A, {
+                (0, r.jsx)(_.A, {
                     shape: "custom",
-                    containerClassName: v.card,
-                    backgroundImageClassName: v.cardBackgroundImage,
-                    foregroundImageClassName: v.cardImage,
-                    sku: Z,
+                    containerClassName: j.card,
+                    backgroundImageClassName: j.cardBackgroundImage,
+                    foregroundImageClassName: j.cardImage,
+                    sku: w,
                 }),
-            [Z],
+            [w],
         );
     return (0, r.jsx)(
-        d.Z,
+        f.Z,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -157,17 +162,17 @@ function j(e) {
                     });
             }
             return e;
-        })({}, S)),
+        })({}, I)),
         (n = n =
             {
-                cardRef: A,
-                accessibleLabel: L,
-                onCardClick: G,
-                buttonCTALabel: M,
-                buttonIcon: k,
-                isOwned: D,
-                renderItemPreview: B,
-                renderSourceIcon: U,
+                cardRef: R,
+                accessibleLabel: k,
+                onCardClick: B,
+                buttonCTALabel: G,
+                buttonIcon: U,
+                isOwned: M,
+                renderItemPreview: V,
+                renderSourceIcon: F,
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

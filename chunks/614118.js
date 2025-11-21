@@ -45,9 +45,10 @@ function T(e) {
                             applicationId: x.applicationId,
                             guildId: P,
                             isStorefront: !1,
+                            analyticsLocations: k,
                         });
             },
-            [D, null == x ? void 0 : x.applicationId, P],
+            [D, null == x ? void 0 : x.applicationId, P, k],
         ),
         Z = i.useCallback(() => {
             null != x &&
