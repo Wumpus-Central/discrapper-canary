@@ -8,27 +8,32 @@ var r = n(54381),
     s = n(476804);
 let u = l.memo(function (e) {
     let { node: t } = e,
-        { useTitle: n, layout: u, init: d, useBadge: f, useNotice: b } = t,
+        { useTitle: n, useNavigationTitle: u, layout: d, init: f, useBadge: b, useNotice: y } = t,
         p = null == n ? void 0 : n(),
-        y = null == f ? void 0 : f(),
-        j = null == b ? void 0 : b();
+        v = null == b ? void 0 : b(),
+        m = null == y ? void 0 : y();
     return (
         l.useEffect(() => {
-            null == d || d();
-        }, [d]),
+            null == f || f();
+        }, [f]),
         (0, r.jsxs)(i.Kqy, {
             gap: 16,
             children: [
                 (0, r.jsx)(a.Y, {
                     title: p,
-                    badge: y,
+                    badge: v,
                 }),
-                null != j &&
+                (0, r.jsx)("div", {
+                    "data-settings-category-key": null != n || null != u ? t.key : void 0,
+                    "aria-hidden": !0,
+                    style: { height: 1 },
+                }),
+                null != m &&
                     (0, r.jsx)("div", {
                         className: s.notice,
-                        children: (0, r.jsx)(c.Z, { notice: j }),
+                        children: (0, r.jsx)(c.Z, { notice: m }),
                     }),
-                u.map((e) => (0, r.jsx)(o.Z, { node: e }, e.key)),
+                d.map((e) => (0, r.jsx)(o.Z, { node: e }, e.key)),
             ],
         })
     );

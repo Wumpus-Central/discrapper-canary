@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => v });
 var r = n(54381),
     l = n(473749),
     i = n(120356),
@@ -8,16 +8,17 @@ var r = n(54381),
     s = n(790519),
     u = n(91192),
     d = n(481060),
-    f = n(996435),
-    b = n(910557);
+    f = n(493773),
+    b = n(996435),
+    y = n(910557);
 function p(e) {
     var t;
     let { category: n, onClick: l, active: i } = e,
         { useTitle: a, useNavigationTitle: s, key: f } = n,
-        p = null == a ? void 0 : a(),
-        y = null != (t = null == s ? void 0 : s()) ? t : p;
+        b = null == a ? void 0 : a(),
+        p = null != (t = null == s ? void 0 : s()) ? t : b;
     return (
-        c()(null != y, "[SettingsSubnavigationCategory] Category must have a title"),
+        c()(null != p, "[SettingsSubnavigationCategory] Category must have a title"),
         (0, r.jsx)(u.mh, {
             id: f,
             children: (e) => {
@@ -52,11 +53,11 @@ function p(e) {
                         {
                             onClick: l,
                             tag: "li",
-                            className: o()({ [b.active]: i }),
+                            className: o()({ [y.active]: i }),
                         },
                         e,
                     )),
-                    (n = n = { children: y }),
+                    (n = n = { children: p }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                         : (function (e, t) {
@@ -76,10 +77,13 @@ function p(e) {
         })
     );
 }
-function y(e) {
+function v(e) {
     let { categories: t } = e,
-        [n, i] = l.useState(t[0].key),
-        o = l.useMemo(
+        n = b.Z.useField("activeCategoryKey");
+    (0, f.ZP)(() => {
+        b.Z.setState({ activeCategoryKey: t[0].key });
+    });
+    let i = l.useMemo(
             () =>
                 Math.max(
                     t.findIndex((e) => e.key === n),
@@ -87,8 +91,8 @@ function y(e) {
                 ),
             [t, n],
         ),
-        a = (0, d.q_F)({
-            y: 36 * o,
+        o = (0, d.q_F)({
+            y: 36 * i,
             config: {
                 mass: 0.1,
                 friction: 20,
@@ -96,13 +100,13 @@ function y(e) {
             },
         });
     return (0, r.jsxs)("div", {
-        className: b.subnav,
+        className: y.subnav,
         children: [
             (0, r.jsx)("div", {
-                className: b.track,
+                className: y.track,
                 children: (0, r.jsx)(s.animated.div, {
-                    className: b.thumb,
-                    style: a,
+                    className: y.thumb,
+                    style: o,
                 }),
             }),
             (0, r.jsx)("ul", {
@@ -112,11 +116,14 @@ function y(e) {
                         {
                             onClick: () => {
                                 var t;
-                                i((t = e.key)),
-                                    f.Z.setState({
+                                return (
+                                    (t = e.key),
+                                    void b.Z.setState({
+                                        activeCategoryKey: t,
                                         targetKey: t,
                                         showNavigationMobile: !1,
-                                    });
+                                    })
+                                );
                             },
                             active: e.key === n,
                             category: e,
