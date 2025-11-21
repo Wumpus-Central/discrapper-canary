@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eB }), n(388685), n(539854);
+n.d(t, { Z: () => eZ }), n(388685), n(539854);
 var r,
     i = n(512722),
     a = n.n(i),
@@ -404,7 +404,11 @@ function eU(e) {
     var t;
     return !!(null == (t = E.Z.getChannel(e)) ? void 0 : t.isGuildVocalOrThread());
 }
-class eG extends (r = l.ZP.PersistedStore) {
+function eG(e) {
+    var t;
+    return !!(null == (t = E.Z.getChannel(e)) ? void 0 : t.isGuildVocal());
+}
+class eB extends (r = l.ZP.PersistedStore) {
     initialize(e) {
         this.waitFor(h.Z, m.default, g.Z, E.Z, u.ZP, f.default, b.Z, y.Z, O.Z, v.default, I.Z, T.Z),
             this.syncWith([u.ZP], ec),
@@ -488,7 +492,7 @@ class eG extends (r = l.ZP.PersistedStore) {
         var t, n;
         let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : C.IlC.APP;
         if (__OVERLAY__) return C.AEg.NORMAL;
-        let i = eU(e);
+        let i = eG(e);
         return null != (n = null == (t = G[e]) ? void 0 : t[r]) ? n : i ? C.AEg.NO_CHAT : C.AEg.NORMAL;
     }
     getChatOpen(e) {
@@ -517,8 +521,8 @@ class eG extends (r = l.ZP.PersistedStore) {
         return null != n && "isPoppedOut" in n && n.isPoppedOut;
     }
 }
-N(eG, "displayName", "ChannelRTCStore"), N(eG, "persistKey", "ChannelRTCStore");
-let eB = new eG(c.Z, {
+N(eB, "displayName", "ChannelRTCStore"), N(eB, "persistKey", "ChannelRTCStore");
+let eZ = new eB(c.Z, {
     CONNECTION_OPEN: K,
     CONNECTION_OPEN_SUPPLEMENTAL: ea,
     THREAD_LIST_SYNC: ea,
