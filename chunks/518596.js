@@ -196,17 +196,21 @@ function S(e) {
         });
     };
     if ((0, d.yP)("renderUserSettingsRedirector")) {
-        let e = I().get(t.section);
-        null == e
-            ? (v({
-                  section: t.section,
-                  subsection: t.subsection,
-                  urlOrigin: n,
-              }),
-              i())
-            : y(e, {
-                  section: t.section,
-                  subsection: t.subsection,
-              });
+        let e = I(),
+            r = e.get(t.section);
+        if (null == r)
+            v({
+                section: t.section,
+                subsection: t.subsection,
+                urlOrigin: n,
+            }),
+                i();
+        else {
+            let n = null != t.subsection && "" !== t.subsection ? e.get(f.oAB[t.subsection]) : null;
+            y(null != n ? n : r, {
+                section: t.section,
+                subsection: t.subsection,
+            });
+        }
     } else i();
 }

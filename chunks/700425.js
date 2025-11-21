@@ -1,6 +1,6 @@
 n.d(t, {
     i: () => a,
-    y: () => c,
+    l: () => c,
 }),
     n(388685),
     n(539854);
@@ -32,7 +32,7 @@ function a(e, t) {
                                 r = i.get(n);
                             null != r && (t ? l.current.add(r) : l.current.delete(r));
                         }),
-                        o.Z.getField("isProgrammaticScroll"))
+                        o.Z.getField("disableSidebarCategoryAutoSelect"))
                     )
                         return;
                     let t = [];
@@ -68,27 +68,26 @@ function a(e, t) {
         );
     }, [t, e.key, e.layout]);
 }
-function c(e) {
-    return (
-        r.useEffect(() => {
-            let e = document.querySelectorAll("[data-settings-panel-scroller]");
-            if (0 === e.length) return;
-            let t = e[0];
-            if (null == t) return;
-            let n = i().debounce(() => {
-                o.Z.setState({ isProgrammaticScroll: !1 });
-            }, 50);
-            return (
-                t.addEventListener("scroll", n),
-                () => {
-                    t.removeEventListener("scroll", n), null == n || n.cancel();
-                }
-            );
-        }, [e.key]),
-        {
-            onProgrammaticScrollStart: r.useCallback(() => {
-                o.Z.setState({ isProgrammaticScroll: !0 });
-            }, []),
-        }
-    );
+function c() {
+    r.useEffect(() => {
+        let e = document.querySelectorAll("[data-settings-panel-scroller]");
+        if (0 === e.length) return;
+        let t = e[0];
+        if (null == t) return;
+        let n = i().debounce(() => {
+            o.Z.setState({ disableSidebarCategoryAutoSelect: !1 });
+        }, 50);
+        return (
+            t.addEventListener("scroll", n),
+            () => {
+                t.removeEventListener("scroll", n), null == n || n.cancel();
+            }
+        );
+    }, []),
+        r.useEffect(
+            () => () => {
+                o.Z.setState({ disableSidebarCategoryAutoSelect: !1 });
+            },
+            [],
+        );
 }

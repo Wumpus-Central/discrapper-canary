@@ -4,5 +4,5 @@ let r = (0, n(972959).H)(() => ({
     targetKey: void 0,
     showNavigationMobile: !0,
     activeCategoryKey: void 0,
-    isProgrammaticScroll: !1,
+    disableSidebarCategoryAutoSelect: !1,
 }));
