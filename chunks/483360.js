@@ -775,6 +775,16 @@ let te = (0, ee.oH)((e, t, n) => {
                 l = el.ZP.getUserIsStaff(),
                 c = {
                     [d.Ky.SHOP]: [e_.intl.string(e_.t.pWG4ze)],
+                    [d.Ky.SHOP_ORBS_TAB]: [
+                        e_.intl.string(e_.t.ElYQFS),
+                        e_.intl.string(e_.t.pWG4ze),
+                        e_.intl.string(e_.t.EBYkzk),
+                    ],
+                    [d.Ky.QUEST_ORBS]: [
+                        e_.intl.string(e_.t.ElYQFS),
+                        e_.intl.string(e_.t["v/R2aC"]),
+                        e_.intl.string(e_.t.qQR4tn),
+                    ],
                     [d.Ky.NITRO_HOME]: [e_.intl.string(e_.t.Ipxkog)],
                     [d.Ky.QUEST_HOME]: [e_.intl.string(e_.t.JALI2K)],
                     [d.Ky.APPS_HOME]: [e_.intl.string(e_.t.PHjkRE), e_.intl.string(e_.t.AKcFUj)],

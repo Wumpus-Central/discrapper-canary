@@ -549,6 +549,20 @@ class L extends a.Component {
                         color: "currentColor",
                     }));
                 break;
+            case l.Ky.SHOP_ORBS_TAB:
+                (n = v.intl.string(v.t.EBYkzk)),
+                    (r = (0, i.jsx)(o.EOn, {
+                        size: "xs",
+                        color: "currentColor",
+                    }));
+                break;
+            case l.Ky.QUEST_ORBS:
+                (n = "".concat(v.intl.string(v.t.ElYQFS), " ").concat(v.intl.string(v.t.JALI2K))),
+                    (r = (0, i.jsx)(o.qDn, {
+                        size: "xs",
+                        color: "currentColor",
+                    }));
+                break;
             case l.Ky.NITRO_HOME:
                 (n = v.intl.string(v.t.Ipxkog)),
                     (r = (0, i.jsx)(o.SrA, {

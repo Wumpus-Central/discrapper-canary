@@ -1,6 +1,7 @@
 n.d(t, { Z: () => i });
 var r = (function (e) {
     return (
+        (e.QUICK_SWITCHER = "quick switcher"),
         (e.POPOUT_WINDOW = "popout window"),
         (e.OVERLAY = "overlay"),
         (e.NOTICE = "notice"),
