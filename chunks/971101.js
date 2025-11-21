@@ -1,1 +1,1 @@
-p.exports = JSON.parse('{"M6WhAQ":["M6WhAQ"],"00vkCU":["00vkCU"],"Y4q0Nu":["Y4q0Nu"]}');
+p.exports = JSON.parse('{"M6WhAQ":["डाउनलोड करें"],"00vkCU":["कनेक्ट हो रहा है..."],"Y4q0Nu":["इनेबल करें"]}');

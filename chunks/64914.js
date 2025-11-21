@@ -1,6 +1,6 @@
 n.d(t, {
-    ZP: () => D,
-    fD: () => R,
+    ZP: () => P,
+    fD: () => N,
 }),
     n(388685);
 var r = n(54381),
@@ -20,11 +20,10 @@ var r = n(54381),
     g = n(494620),
     E = n(399970),
     b = n(273313),
-    y = n(868802),
-    O = n(726985),
-    v = n(981631),
-    I = n(388032);
-function T(e, t, n) {
+    y = n(726985),
+    O = n(981631),
+    v = n(388032);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +36,7 @@ function T(e, t, n) {
         e
     );
 }
-function S(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,12 +47,12 @@ function S(e) {
                 }),
             )),
             r.forEach(function (t) {
-                T(e, t, n[t]);
+                I(e, t, n[t]);
             });
     }
     return e;
 }
-function A(e, t) {
+function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,32 +64,32 @@ function A(e, t) {
     }
     return n;
 }
-function C(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : A(Object(t)).forEach(function (n) {
+            : S(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let N = "AppHardwareAcceleration";
-function R() {
+let C = "AppHardwareAcceleration";
+function N() {
     if ((0, d.Y)("DesktopNativeUtils")) {
-        let e = o.K.get(N);
+        let e = o.K.get(C);
         if ("boolean" == typeof e) return e;
     }
     return p.ZP.getEnableHardwareAcceleration();
 }
-function P(e) {
+function R(e) {
     (0, d.Y)("DesktopNativeUtils")
-        ? (o.K.set(N, e), p.ZP.setEnableHardwareAcceleration(!0))
+        ? (o.K.set(C, e), p.ZP.setEnableHardwareAcceleration(!0))
         : p.ZP.setEnableHardwareAcceleration(e);
 }
-function D() {
-    let [e] = i.useState(() => R()),
+function P() {
+    let [e] = i.useState(() => N()),
         t = m.bm.useSetting(),
         n = m.Sb.useSetting(),
         o = (0, a.e7)([_.Z], () => _.Z.testModeApplicationId),
@@ -98,24 +97,24 @@ function D() {
         p = i.useCallback((e) => {
             m.bm.updateSetting(!e);
         }, []),
-        T = i.useCallback((e) => {
-            e ? (0, s.h7j)((e) => (0, r.jsx)(E.Z, S({}, e))) : l.mc();
+        I = i.useCallback((e) => {
+            e ? (0, s.h7j)((e) => (0, r.jsx)(E.Z, T({}, e))) : l.mc();
         }, []),
-        A = i.useCallback((e) => {
+        S = i.useCallback((e) => {
             (0, u.BV)(e, c.Z.USER_SETTINGS);
         }, []),
-        N = i.useCallback((e) => {
+        C = i.useCallback((e) => {
             (0, s.h7j)((t) => {
-                let n = e ? I.intl.format(I.t.LYXRxL, {}) : I.intl.format(I.t.uDP3Kz, {});
+                let n = e ? v.intl.format(v.t.LYXRxL, {}) : v.intl.format(v.t.uDP3Kz, {});
                 return (0, r.jsx)(
                     s.ConfirmModal,
-                    C(
-                        S(
+                    A(
+                        T(
                             {
-                                header: I.intl.string(I.t.aqpAvn),
-                                confirmText: I.intl.string(I.t.vT7ckk),
-                                cancelText: I.intl.string(I.t["ETE/oC"]),
-                                onConfirm: () => P(e),
+                                header: v.intl.string(v.t.aqpAvn),
+                                confirmText: v.intl.string(v.t.vT7ckk),
+                                cancelText: v.intl.string(v.t["ETE/oC"]),
+                                onConfirm: () => R(e),
                             },
                             t,
                         ),
@@ -130,16 +129,16 @@ function D() {
             });
         }, []);
     return (0, r.jsx)(b.Z, {
-        title: I.intl.string(I.t["8/udY0"]),
+        title: v.intl.string(v.t["8/udY0"]),
         children: (0, r.jsxs)(s.Kqy, {
             gap: 16,
             children: [
                 (0, r.jsxs)(f.F, {
-                    setting: O.s6.SETTINGS_ADVANCED_DEVELOPER_MODE,
+                    setting: y.s6.SETTINGS_ADVANCED_DEVELOPER_MODE,
                     children: [
                         (0, r.jsx)(s.rsf, {
-                            label: I.intl.string(I.t.ObIb1Q),
-                            description: I.intl.format(I.t["CY6q/Q"], { apiDocsUrl: v.EYA.API_DOCS }),
+                            label: v.intl.string(v.t.ObIb1Q),
+                            description: v.intl.format(v.t["CY6q/Q"], { apiDocsUrl: O.EYA.API_DOCS }),
                             checked: n,
                             onChange: m.Sb.updateSetting,
                         }),
@@ -147,31 +146,31 @@ function D() {
                     ],
                 }),
                 (0, r.jsx)(f.F, {
-                    setting: O.s6.SETTINGS_ADVANCED_HARDWARE_ACCELERATION,
+                    setting: y.s6.SETTINGS_ADVANCED_HARDWARE_ACCELERATION,
                     children: (0, r.jsxs)(s.Kqy, {
                         gap: 16,
                         children: [
                             (0, r.jsx)(s.rsf, {
-                                label: I.intl.string(I.t["eOC/F2"]),
-                                description: I.intl.string(I.t.Afc7l6),
+                                label: v.intl.string(v.t["eOC/F2"]),
+                                description: v.intl.string(v.t.Afc7l6),
                                 checked: e,
-                                onChange: N,
+                                onChange: C,
                             }),
                             !e &&
                                 (0, r.jsx)(g.Z, {
                                     look: g.z.WARNING,
-                                    children: I.intl.string(I.t.j7S6IX),
+                                    children: v.intl.string(v.t.j7S6IX),
                                 }),
                             (0, r.jsx)(s.izJ, {}),
                         ],
                     }),
                 }),
                 (0, r.jsxs)(f.F, {
-                    setting: O.s6.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY,
+                    setting: y.s6.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY,
                     children: [
                         (0, r.jsx)(s.rsf, {
-                            label: I.intl.string(I.t.fi3UQN),
-                            description: I.intl.string(I.t["8mYp37"]),
+                            label: v.intl.string(v.t.fi3UQN),
+                            description: v.intl.string(v.t["8mYp37"]),
                             checked: !t,
                             onChange: p,
                         }),
@@ -179,35 +178,28 @@ function D() {
                     ],
                 }),
                 (0, r.jsxs)(f.F, {
-                    setting: O.s6.SETTINGS_ADVANCED_APPLICATION_TEST_MODE,
+                    setting: y.s6.SETTINGS_ADVANCED_APPLICATION_TEST_MODE,
                     children: [
                         (0, r.jsx)(s.rsf, {
-                            label: I.intl.string(I.t.erOqlh),
-                            description: I.intl.string(I.t["52hMnD"]),
+                            label: v.intl.string(v.t.erOqlh),
+                            description: v.intl.string(v.t["52hMnD"]),
                             checked: null != o,
-                            onChange: T,
+                            onChange: I,
                         }),
                         (0, r.jsx)(s.izJ, {}),
                     ],
                 }),
                 (0, r.jsxs)(f.F, {
-                    setting: O.s6.SETTINGS_ADVANCED_SHOW_PLAY_AGAIN,
+                    setting: y.s6.SETTINGS_ADVANCED_SHOW_PLAY_AGAIN,
                     children: [
                         (0, r.jsx)(s.rsf, {
-                            label: I.intl.string(I.t.qDZryG),
-                            description: I.intl.string(I.t["B/qU4K"]),
+                            label: v.intl.string(v.t.qDZryG),
+                            description: v.intl.string(v.t["B/qU4K"]),
                             checked: d,
-                            onChange: A,
+                            onChange: S,
                         }),
                         (0, r.jsx)(s.izJ, {}),
                     ],
-                }),
-                (0, r.jsx)(f.F, {
-                    setting: O.s6.SETTINGS_ADVANCED_CF_WARP,
-                    children: (0, r.jsx)(s.Kqy, {
-                        gap: 16,
-                        children: (0, r.jsx)(y.M, {}),
-                    }),
                 }),
             ],
         }),

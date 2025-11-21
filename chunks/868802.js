@@ -1,146 +1,133 @@
-n.d(t, { M: () => w });
-var r = n(54381);
+n.d(e, { M: () => v });
+var i = n(54381);
 n(473749);
-var i = n(793030),
-    a = n(952265),
-    o = n(159691),
+var l = n(793030),
+    r = n(952265),
+    u = n(159691),
     s = n(511857),
-    l = n(410030),
-    c = n(740594),
-    u = n(612659),
+    a = n(410030),
+    o = n(740594),
+    c = n(612659),
     d = n(5900),
-    f = n(953865),
-    _ = n(299886),
-    p = n(37279),
-    h = n(969521),
-    m = n(584197),
-    g = n(703656),
-    E = n(589072),
-    b = n(518596),
-    y = n(116282),
-    O = n(614074),
-    v = n(233751),
-    I = n(868087),
-    T = n(981631),
-    S = n(474936),
-    A = n(388032),
-    C = n(845259),
-    N = n(498374),
-    R = n(95213),
-    P = n(882709),
-    D = n(932889);
-let w = () => {
-        let e = (0, u.m)(),
-            {
-                isSupportedPrivateBrowsingPerkPlatform: t,
-                isWeb: n,
-                installationStatus: a,
-                perkAvailableToUser: o,
-            } = (0, f.xf)(),
-            { enabled: c } = _.H.useConfig({ location: "private_browsing_perk_settings_page" }),
-            h = (0, s.a)((0, l.ZP)()),
-            m = !e || o;
-        if ((!t && !n) || !c || !m) return null;
-        let g = [d._n.EXISTING_INSTALLATION, d._n.ZERO_TRUST].includes(a) || !e;
-        return (0, r.jsxs)("div", {
-            className: N.settingsContainer,
+    E = n(953865),
+    T = n(37279),
+    S = n(969521),
+    I = n(584197),
+    O = n(703656),
+    g = n(589072),
+    _ = n(518596),
+    N = n(116282),
+    A = n(614074),
+    f = n(233751),
+    C = n(868087),
+    L = n(981631),
+    Z = n(474936),
+    p = n(388032),
+    b = n(163646),
+    P = n(498374),
+    y = n(93109),
+    D = n(446818),
+    R = n(932889);
+let v = () => {
+        let t = (0, s.a)((0, a.ZP)());
+        return (0, i.jsxs)("div", {
+            className: P.settingsContainer,
             children: [
-                (0, r.jsxs)(i.$1m, {
+                (0, i.jsxs)(l.$1m, {
                     color: "pink",
                     children: [
-                        (0, r.jsx)("div", {
-                            className: N.headerContainer,
-                            children: (0, r.jsxs)("div", {
-                                className: N.header,
+                        (0, i.jsx)("div", {
+                            className: P.headerContainer,
+                            children: (0, i.jsxs)("div", {
+                                className: P.header,
                                 children: [
-                                    (0, r.jsxs)("div", {
-                                        className: N.headerLogos,
+                                    (0, i.jsxs)("div", {
+                                        className: P.headerLogos,
                                         children: [
-                                            (0, r.jsx)(E.Z, { color: h ? "black" : "white" }),
-                                            (0, r.jsx)("div", { className: N.headerDivider }),
-                                            (0, r.jsx)("img", {
-                                                src: h ? P : R,
+                                            (0, i.jsx)(g.Z, { color: t ? "black" : "white" }),
+                                            (0, i.jsx)("div", { className: P.headerDivider }),
+                                            (0, i.jsx)("img", {
+                                                src: t ? D : y,
                                                 alt: "Cloudflare",
                                                 width: 103,
                                                 height: 15,
                                             }),
                                         ],
                                     }),
-                                    (0, r.jsx)(p.v, {}),
+                                    (0, i.jsx)(T.v, {}),
                                 ],
                             }),
                         }),
-                        (0, r.jsxs)("div", {
-                            className: N.contentContainer,
+                        (0, i.jsxs)("div", {
+                            className: P.contentContainer,
                             children: [
-                                g &&
-                                    (0, r.jsx)("img", {
-                                        src: D,
-                                        width: "100",
-                                        alt: "Private browsing perk logo",
-                                    }),
-                                (0, r.jsxs)("div", {
-                                    className: N.content,
-                                    children: [(0, r.jsx)(O.C, {}), (0, r.jsx)(y.R, {})],
+                                (0, i.jsx)("img", {
+                                    src: R,
+                                    width: "100",
+                                    alt: "Private browsing perk logo",
                                 }),
-                                (0, r.jsx)("div", { className: N.contentSpacer }),
-                                (0, r.jsx)("div", {
-                                    className: N.ctaContainer,
-                                    children: (0, r.jsx)(L, {}),
+                                (0, i.jsxs)("div", {
+                                    className: P.content,
+                                    children: [(0, i.jsx)(A.C, {}), (0, i.jsx)(N.R, {})],
+                                }),
+                                (0, i.jsx)("div", { className: P.contentSpacer }),
+                                (0, i.jsx)("div", {
+                                    className: P.ctaContainer,
+                                    children: (0, i.jsx)(m, {}),
                                 }),
                             ],
                         }),
                     ],
                 }),
-                (0, r.jsx)(I.p, {}),
+                (0, i.jsx)(C.p, {}),
             ],
         });
     },
-    L = () => {
-        let { installationStatus: e, isWeb: t, setInstallationStatus: n } = (0, f.xf)(),
-            s = (0, u.m)();
-        if (t) return (0, r.jsx)(h.U, {});
+    m = () => {
+        let { installationStatus: t, isWeb: e, setInstallationStatus: n } = (0, E.xf)(),
+            s = (0, c.m)();
+        if (e) return (0, i.jsx)(S.U, {});
         if (!s)
-            return (0, r.jsxs)("div", {
-                className: N.subscribeBtnContainer,
+            return (0, i.jsxs)("div", {
+                className: P.subscribeBtnContainer,
                 children: [
-                    (0, r.jsx)(c.Z, {
-                        buttonTextOverride: A.intl.string(A.t["8x0jKT"]),
-                        subscriptionTier: S.Si.TIER_2,
+                    (0, i.jsx)(o.Z, {
+                        buttonTextOverride: p.intl.string(p.t["8x0jKT"]),
+                        subscriptionTier: Z.Si.TIER_2,
                         fullWidth: !0,
                         size: "sm",
                     }),
-                    (0, r.jsx)(o.zxk, {
+                    (0, i.jsx)(u.zxk, {
                         variant: "secondary",
-                        text: A.intl.string(A.t.ZnqyZ2),
+                        text: p.intl.string(p.t.ZnqyZ2),
                         size: "sm",
                         onClick: () => {
-                            (0, a.Mr)(b.USER_SETTINGS_MODAL_KEY), (0, g.uL)(T.Z5c.APPLICATION_STORE);
+                            (0, r.Mr)(_.USER_SETTINGS_MODAL_KEY), (0, O.uL)(L.Z5c.APPLICATION_STORE);
                         },
                     }),
                 ],
             });
-        switch (e) {
+        switch (t) {
             case d._n.ERROR:
             case d._n.NOT_INSTALLED:
-                return (0, r.jsx)(v.R, {});
+                return (0, i.jsx)(f.R, {});
             case d._n.INSTALLED:
-                return (0, r.jsx)(m.n, {});
+                return (0, i.jsx)(I.n, {});
             case d._n.ZERO_TRUST:
                 break;
             case d._n.EXISTING_INSTALLATION:
-                return (0, r.jsx)(o.zxk, {
+                return (0, i.jsx)(u.zxk, {
                     variant: "primary",
                     onClick: () => {
                         n(d._n.READY_FOR_LICENSE);
                     },
-                    text: A.intl.string(C.default.J09UWz),
+                    text: p.intl.string(b.default.J09UWz),
                 });
             case d._n.INSTALLING:
             case d._n.READY_FOR_LICENSE:
-                return (0, r.jsx)("div", {
-                    className: N.spinner,
-                    children: (0, r.jsx)(i.$jN, { type: i.RAz.SPINNING_CIRCLE }),
+                return (0, i.jsx)("div", {
+                    className: P.spinner,
+                    children: (0, i.jsx)(l.$jN, { type: l.RAz.SPINNING_CIRCLE }),
                 });
         }
         return null;

@@ -2,10 +2,10 @@ n.d(t, {
     $Z: () => eB,
     OF: () => eF,
     W8: () => eV,
+    _x: () => eH,
     c$: () => eZ,
-    h5: () => eY,
+    ec: () => eY,
     iE: () => eK,
-    kQ: () => eH,
 }),
     n(388685),
     n(539854);
@@ -1645,8 +1645,6 @@ let eB = () => [
                 label: eD.intl.string(eD.t["8/udY0"]),
                 ariaLabel: eD.intl.string(eD.t["8/udY0"]),
                 element: J.ZP,
-                newIndicator: (0, r.jsx)(eY, {}),
-                newIndicatorDismissibleContentTypes: [a.z.NITRO_PRIVACY_PERK_NEW_BADGE],
             },
             [eC.s6.SETTINGS_ADVANCED_DEVELOPER_MODE]: {
                 section: eR.oAB.ADVANCED,
@@ -1677,11 +1675,13 @@ let eB = () => [
                 searchableTitles: [eD.intl.string(eD.t.qDZryG)],
                 parent: eC.s6.SETTINGS_ADVANCED,
             },
-            [eC.s6.SETTINGS_ADVANCED_CF_WARP]: {
-                section: eR.oAB.ADVANCED,
+            [eC.s6.PRIVATE_BROWSING_PERK]: {
+                section: eR.oAB.CF_WARP,
                 searchableTitles: [eD.intl.string(ex.default.SsTtq3)],
-                parent: eC.s6.SETTINGS_ADVANCED,
                 predicate: () => P.H.getConfig({ location: "SettingsRendererConfig" }).enabled,
+                newIndicator: (0, r.jsx)(eY, {}),
+                newIndicatorDismissibleContentTypes: [a.z.NITRO_PRIVACY_PERK_NEW_BADGE],
+                url: eR.Z5c.SETTINGS("private-browsing"),
             },
             [eC.s6.ACTIVITY_PRIVACY]: {
                 section: eR.oAB.ACTIVITY_PRIVACY,

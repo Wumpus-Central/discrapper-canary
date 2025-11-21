@@ -3130,6 +3130,7 @@ var tU = (function (e) {
             (e.ORBS_REWARD_MODAL = "Orbs Reward Modal"),
             (e.ORBS_SHOP_HERO_BLOCK = "Orbs Shop Hero Block"),
             (e.NOTIFICATIONS_INBOX = "Notifications Inbox"),
+            (e.SETTINGS_WARP = "WARP+"),
             e
         );
     })({}),
@@ -3428,6 +3429,7 @@ let tZ = {
         QUEST_PREVIEW_TOOL_2: "Quest Preview Tool 2",
         SECURE_FRAMES: "Secure Frames",
         SECURE_FRAMES_VERIFIED_DEVICES: "Secure Frames Verified Devices",
+        CF_WARP: "WARP+",
     });
 var tV = (function (e) {
         return (

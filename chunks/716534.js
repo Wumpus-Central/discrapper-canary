@@ -82,7 +82,7 @@ function q(e) {
             setInvoicePreview: eT,
             contextMetadata: eS,
             inReverseTrial: eA,
-            setPurchaseError: eC,
+            setPurchasePreviewError: eC,
             hasPaymentSources: eN,
             enablePremiumBrandRefresh: eR,
             premiumBrandRefreshBackgroundClassName: eP,

@@ -223,6 +223,9 @@ var r = (function (e) {
         (e.LEGACY_SETTINGS_SIDEBAR_ITEM = "legacy_settings_sidebar_item"),
         (e.LOGOUT_SECTION = "logout_section"),
         (e.LOGOUT_SIDEBAR_ITEM = "logout_sidebar_item"),
+        (e.PRIVATE_BROWSING_PANE = "private_browsing_pane"),
+        (e.PRIVATE_BROWSING_PANEL = "private_browsing_panel"),
+        (e.PRIVATE_BROWSING_SIDEBAR_ITEM = "private_browsing_sidebar_item"),
         e
     );
 })({});

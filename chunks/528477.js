@@ -1,8 +1,8 @@
 n.d(t, { n: () => j });
 var a = n(54381),
     l = n(473749),
-    i = n(159691),
-    r = n(336197),
+    r = n(159691),
+    i = n(336197),
     s = n(612659),
     o = n(313789),
     c = n(518596),
@@ -12,7 +12,7 @@ var a = n(54381),
     p = n(299886),
     h = n(37279),
     x = n(981631),
-    g = n(845259),
+    g = n(163646),
     f = n(388032),
     b = n(742098),
     v = n(932889);
@@ -28,10 +28,10 @@ let j = (e) => {
         } = (0, m.xf)(),
         { enabled: E } = p.H.useConfig({ location: "private_browsing_perk_settings_page" }),
         N = (0, l.useCallback)(() => {
-            (0, r.Z)(x.Z5c.NITRO_HOME), t();
+            (0, i.Z)(x.Z5c.NITRO_HOME), t();
         }, [t]),
         T = (0, l.useCallback)(() => {
-            (0, c.openUserSettings)(o.n.ADVANCED_PANEL, { section: x.oAB.ADVANCED });
+            (0, c.openUserSettings)(o.n.PRIVATE_BROWSING_PANEL, { section: x.oAB.CF_WARP });
         }, []),
         O = [u.Ij.CONNECTED].includes(S),
         P = y && E && ![u._n.ZERO_TRUST, u._n.ERROR].includes(j) && !C && (!n || _),
@@ -57,7 +57,7 @@ let j = (e) => {
         }, [j, _, I]),
         k = (0, l.useMemo)(() => {
             if (!_)
-                return (0, a.jsx)(i.xvT, {
+                return (0, a.jsx)(r.xvT, {
                     variant: "text-xs/medium",
                     color: "text-secondary",
                     children: f.intl.format(g.default["0UfKTY"], { helpdeskArticle: d.w }),
@@ -65,7 +65,7 @@ let j = (e) => {
             switch (j) {
                 case u._n.INSTALLED:
                 case u._n.EXISTING_INSTALLATION:
-                    return (0, a.jsx)(i.xvT, {
+                    return (0, a.jsx)(r.xvT, {
                         variant: "text-sm/medium",
                         color: "text-secondary",
                         children: O
@@ -81,7 +81,7 @@ let j = (e) => {
                               }),
                     });
                 default:
-                    return (0, a.jsx)(i.xvT, {
+                    return (0, a.jsx)(r.xvT, {
                         variant: "text-sm/medium",
                         color: "text-secondary",
                         children: f.intl.format(g.default.D4hu0v, {
@@ -97,7 +97,7 @@ let j = (e) => {
               className: b.container,
               children: [
                   (0, a.jsx)(h.v, { className: b.betaBadge }),
-                  (0, a.jsx)(i.$1m, {
+                  (0, a.jsx)(r.$1m, {
                       color: "nitro-pink",
                       offsetBottom: -0.5,
                       className: b.gradientBackground,
@@ -112,7 +112,7 @@ let j = (e) => {
                               (0, a.jsxs)("div", {
                                   className: b.details,
                                   children: [
-                                      (0, a.jsx)(i.X6q, {
+                                      (0, a.jsx)(r.X6q, {
                                           variant: "heading-md/semibold",
                                           children: w,
                                       }),

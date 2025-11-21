@@ -1,10 +1,10 @@
 n.d(t, {
     o8: () => g,
     ov: () => b,
-    xf: () => y,
+    xf: () => O,
     xz: () => E,
 }),
-    n(415506);
+    n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(343203),
@@ -104,28 +104,33 @@ let m = {
     E = i.createContext(null),
     b = (e) => {
         let { children: t } = e,
-            n = (0, d.u)(),
-            a = (0, i.useRef)(
+            n = y();
+        return (0, r.jsx)(E.Provider, {
+            value: n,
+            children: t,
+        });
+    },
+    y = () => {
+        let e = (0, d.u)(),
+            [t] = (0, i.useState)(() =>
                 g({
                     install: c.f,
                     connect: async () => await l.Z.connect(),
                     disconnect: async () => await l.Z.disconnect(),
-                    perkAvailableToUser: n,
+                    perkAvailableToUser: e,
                 }),
-            ).current,
-            s = (0, o.o)(a, (e) => e.setPerkAvailableToUser);
+            ),
+            n = (0, o.o)(t, (e) => e.setPerkAvailableToUser);
         return (
             (0, i.useEffect)(() => {
-                s(n);
-            }, [n, s]),
-            (0, r.jsx)(E.Provider, {
-                value: a,
-                children: t,
-            })
+                n(e);
+            }, [e, n]),
+            t
         );
     };
-function y(e) {
-    let t = (0, i.useContext)(E);
-    if (null == t) throw Error("Missing PrivateBrowsingPerkProvider in React tree");
-    return null != e ? (0, o.o)(t, e) : (0, o.o)(t);
+function O(e) {
+    let t = (0, i.useContext)(E),
+        n = y(),
+        r = null != t ? t : n;
+    return null != e ? (0, o.o)(r, e) : (0, o.o)(r);
 }

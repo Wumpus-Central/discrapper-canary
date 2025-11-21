@@ -111,7 +111,7 @@ async function y(e) {
                 ? l.Z.setState({ targetKey: e })
                 : await (0, i.ZDy)(
                       async () => {
-                          let { default: t } = await Promise.all([n.e("9452"), n.e("16985")]).then(n.bind(n, 245286));
+                          let { default: t } = await Promise.all([n.e("9452"), n.e("62191")]).then(n.bind(n, 245286));
                           return (n) => (0, r.jsx)(t, m(p({}, n), { target: e }));
                       },
                       {
@@ -151,6 +151,7 @@ function I() {
         [f.oAB.AUTHORIZED_APPS, u.n.AUTHORIZED_APPS_PANEL],
         [f.oAB.CONNECTIONS, u.n.CONNECTIONS_PANEL],
         [f.oAB.CLIPS, u.n.CLIPS_PANEL],
+        [f.oAB.CF_WARP, u.n.PRIVATE_BROWSING_PANEL],
         [f.oAB.PREMIUM, u.n.NITRO_PANEL],
         [f.oAB.GUILD_BOOSTING, u.n.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL],
         [f.oAB.SUBSCRIPTIONS, u.n.SUBSCRIPTIONS_PANEL],

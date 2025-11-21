@@ -1,27 +1,16 @@
-n.d(t, { U: () => l });
-var r = n(54381),
-    i = n(473749),
-    a = n(818710),
-    o = n(159691);
-let s = "https://discord.com/api/download?platform=",
-    l = () => {
-        let e = (0, a.Ij)(),
-            t = (0, i.useMemo)(() => c(e), [e]),
-            n = () => {
-                window.location.href = s + t;
-            };
-        return (0, r.jsx)(o.zxk, {
+n.d(e, { U: () => s });
+var i = n(54381),
+    l = n(473749),
+    r = n(818710),
+    u = n(159691);
+let s = () => {
+        let t = (0, r.Ij)(),
+            e = (0, l.useMemo)(() => a(t), [t]);
+        return (0, i.jsx)(u.zxk, {
             text: "Get the Discord App",
-            onClick: n,
+            onClick: () => {
+                window.location.href = "https://discord.com/api/download?platform=" + e;
+            },
         });
     },
-    c = (e) => {
-        switch (e) {
-            case "macos":
-                return "osx";
-            case "linux":
-                return "linux";
-            default:
-                return "windows";
-        }
-    };
+    a = (t) => ("macos" === t ? "osx" : "win");
