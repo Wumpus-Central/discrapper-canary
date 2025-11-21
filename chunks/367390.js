@@ -2,6 +2,7 @@ e.exports = {
     container: "container__6b38f",
     textContainer: "textContainer__6b38f",
     caret: "caret__6b38f",
+    dismissButton: "dismissButton__6b38f",
     icon: "icon__6b38f",
     dot: "dot__6b38f",
     inline: "inline__6b38f",

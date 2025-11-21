@@ -1,46 +1,50 @@
-n.d(t, { Z: () => g });
-var i = n(54381);
-n(473749);
-var r = n(442837),
-    l = n(692547),
-    a = n(481060),
-    o = n(357156),
-    s = n(592125),
-    c = n(15274),
-    u = n(924301),
-    d = n(554747),
-    p = n(854698),
-    h = n(688641),
-    f = n(388032),
-    m = n(837815);
-function g(e) {
-    let { channelId: t } = e,
-        g = (0, r.e7)([s.Z], () => s.Z.getChannel(t), [t]),
-        b = (0, d.sz)(t),
-        y = null != (0, d.qY)(t),
-        { canManageGuildEvent: C } = (0, o.XJ)(g),
-        v = (0, r.cj)([u.ZP], () => b.reduce((e, t) => ((e[t.id] = u.ZP.getUserCount(t.id, (0, p.DK)(t))), e), {}));
-    return b.length < 1 || y
+n.d(t, { Z: () => b }), n(388685);
+var i = n(54381),
+    r = n(473749),
+    l = n(442837),
+    a = n(692547),
+    o = n(481060),
+    s = n(357156),
+    c = n(592125),
+    u = n(15274),
+    d = n(924301),
+    p = n(554747),
+    h = n(854698),
+    f = n(688641),
+    m = n(388032),
+    g = n(837815);
+function b(e) {
+    let { channelId: t, showDismiss: b = !0 } = e,
+        y = (0, l.e7)([c.Z], () => c.Z.getChannel(t), [t]),
+        C = (0, p.sz)(t),
+        v = null != (0, p.qY)(t),
+        { canManageGuildEvent: _ } = (0, s.XJ)(y),
+        [x, j] = r.useState(() => new Set()),
+        O = r.useMemo(() => C.filter((e) => !x.has(e.id)), [C, x]),
+        E = (0, l.cj)([d.ZP], () => O.reduce((e, t) => ((e[t.id] = d.ZP.getUserCount(t.id, (0, h.DK)(t))), e), {}), [
+            O,
+        ]);
+    return O.length < 1 || v
         ? null
         : (0, i.jsx)(i.Fragment, {
-              children: b.map((e) =>
+              children: O.map((e) =>
                   (0, i.jsx)(
-                      h.Z,
+                      f.Z,
                       {
-                          icon: (0, i.jsx)(a.Que, {
+                          icon: (0, i.jsx)(o.Que, {
                               size: "custom",
                               color: "currentColor",
                               height: 20,
                               width: 20,
                           }),
-                          color: l.Z.unsafe_rawColors.GREEN_360.css,
-                          title: f.intl.formatToPlainString(C(e) ? f.t["1vGXqM"] : f.t.xMJyla, { eventName: e.name }),
-                          description: f.intl.formatToPlainString(f.t.PTebCR, {
-                              startTime: (0, p.ub)(e.scheduled_start_time).startDateTimeString,
+                          color: a.Z.unsafe_rawColors.GREEN_360.css,
+                          title: m.intl.formatToPlainString(_(e) ? m.t["1vGXqM"] : m.t.xMJyla, { eventName: e.name }),
+                          description: m.intl.formatToPlainString(m.t.PTebCR, {
+                              startTime: (0, h.ub)(e.scheduled_start_time).startDateTimeString,
                           }),
                           onClick: () => {
-                              C(e)
-                                  ? (0, a.ZDy)(async () => {
+                              _(e)
+                                  ? (0, o.ZDy)(async () => {
                                         let { default: t } = await Promise.all([n.e("84722"), n.e("51885")]).then(
                                             n.bind(n, 296864),
                                         );
@@ -95,10 +99,16 @@ function g(e) {
                                             );
                                         };
                                     })
-                                  : (0, c.bO)({ eventId: e.id });
+                                  : (0, u.bO)({ eventId: e.id });
                           },
-                          userCount: v[e.id],
-                          className: m.eventPrompt,
+                          onDismiss: b
+                              ? () => {
+                                    var t;
+                                    return (t = e.id), void j((e) => new Set(e).add(t));
+                                }
+                              : void 0,
+                          userCount: E[e.id],
+                          className: g.eventPrompt,
                       },
                       e.id,
                   ),

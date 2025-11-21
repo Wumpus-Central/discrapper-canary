@@ -103,7 +103,12 @@ function I(e) {
                             }),
                         ],
                     }),
-                    u ? null : (0, r.jsx)(h.Z, { channelId: t.id }),
+                    u
+                        ? null
+                        : (0, r.jsx)(h.Z, {
+                              channelId: t.id,
+                              showDismiss: !1,
+                          }),
                     l
                         ? (0, r.jsx)(f.Z, {
                               className: x.eventPrompt,

@@ -1,69 +1,85 @@
-n.d(t, { Z: () => c }), n(953529);
-var i = n(54381);
-n(473749);
-var r = n(120356),
-    l = n.n(r),
-    a = n(481060),
-    o = n(388032),
-    s = n(367390);
-function c(e) {
+n.d(t, { Z: () => d }), n(953529);
+var i = n(54381),
+    r = n(473749),
+    l = n(120356),
+    a = n.n(l),
+    o = n(159691),
+    s = n(481060),
+    c = n(388032),
+    u = n(367390);
+function d(e) {
     let {
-        className: t,
-        iconContainerClassName: n,
-        icon: r,
-        title: c,
-        description: u,
-        userCount: d,
-        onClick: p,
-        highlight: h,
-    } = e;
-    return (0, i.jsxs)(a.P3F, {
-        className: l()(s.container, t, null != h && { [s.pulse]: h }),
-        onClick: p,
+            className: t,
+            iconContainerClassName: n,
+            icon: l,
+            title: d,
+            description: p,
+            userCount: h,
+            onClick: f,
+            highlight: m,
+            onDismiss: g,
+        } = e,
+        b = r.useCallback(
+            (e) => {
+                e.stopPropagation(), null == g || g();
+            },
+            [g],
+        );
+    return (0, i.jsxs)(s.P3F, {
+        className: a()(u.container, t, null != m && { [u.pulse]: m }),
+        onClick: f,
         children: [
             (0, i.jsx)("div", {
-                className: l()(s.icon, n),
-                children: r,
+                className: a()(u.icon, n),
+                children: l,
             }),
             (0, i.jsxs)("div", {
-                className: s.textContainer,
+                className: u.textContainer,
                 children: [
-                    (0, i.jsx)(a.Heading, {
+                    (0, i.jsx)(s.Heading, {
                         variant: "heading-md/semibold",
                         color: "text-primary",
-                        children: c,
+                        children: d,
                     }),
-                    (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(s.Text, {
                         variant: "text-xs/normal",
                         color: "text-primary",
-                        className: s.inline,
-                        children: u,
+                        className: u.inline,
+                        children: p,
                     }),
-                    null != d && d > 0
+                    null != h && h > 0
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsx)(a.Text, {
+                                  (0, i.jsx)(s.Text, {
                                       variant: "text-xs/normal",
                                       color: "text-primary",
-                                      className: s.dot,
+                                      className: u.dot,
                                       children: "\u2022",
                                   }),
-                                  (0, i.jsx)(a.Text, {
+                                  (0, i.jsx)(s.Text, {
                                       variant: "text-xs/normal",
                                       color: "text-primary",
-                                      className: s.inline,
-                                      children: o.intl.format(o.t.NywdIj, { count: d }),
+                                      className: u.inline,
+                                      children: c.intl.format(c.t.NywdIj, { count: h }),
                                   }),
                               ],
                           })
                         : null,
                 ],
             }),
-            (0, i.jsx)(a.Fbu, {
-                size: "xs",
-                color: "currentColor",
-                className: s.caret,
-            }),
+            null != g
+                ? (0, i.jsx)("div", {
+                      className: u.dismissButton,
+                      children: (0, i.jsx)(o.PZ7, {
+                          size: "xs",
+                          onClick: b,
+                      }),
+                  })
+                : (0, i.jsx)(s.Fbu, {
+                      size: "xs",
+                      color: "currentColor",
+                      className: u.caret,
+                  }),
         ],
     });
 }
