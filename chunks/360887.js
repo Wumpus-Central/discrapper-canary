@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(35282), n(388685), n(415506), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
+n.d(t, { Z: () => I }), n(35282), n(388685), n(415506);
 var r = n(54381),
     i = n(473749),
     s = n(593473),
@@ -11,9 +11,9 @@ var r = n(54381),
     h = n(703656),
     g = n(314897),
     m = n(626135),
-    p = n(361207),
-    f = n(358085),
-    _ = n(954824),
+    p = n(358085),
+    f = n(954824),
+    _ = n(259706),
     x = n(981631),
     E = n(186901),
     v = n(388032);
@@ -61,11 +61,11 @@ function b(e) {
                     b("error");
             }
         }, []),
-        S = i.useCallback((e) => {
+        N = i.useCallback((e) => {
             var t;
             let n = null != (t = g.default.getFingerprint()) ? t : g.default.getId(),
                 r = "discord://login/one-time?token=".concat(encodeURIComponent(e));
-            _.Z.launch(r, (e) => {
+            f.Z.launch(r, (e) => {
                 e
                     ? (m.default.track(x.rMx.DEEP_LINK_CLICKED, {
                           source: "web_page",
@@ -77,7 +77,7 @@ function b(e) {
                     : b("app_launch_not_supported");
             });
         }, []),
-        N = i.useCallback(
+        S = i.useCallback(
             (e) => {
                 var t;
                 let r = null != (t = g.default.getFingerprint()) ? t : g.default.getId();
@@ -101,20 +101,20 @@ function b(e) {
                                           fingerprint: r,
                                       }),
                                       b("app_launched"))
-                                    : S(e);
+                                    : N(e);
                             })
                             .catch(() => {
-                                S(e);
+                                N(e);
                             })
                             .then(() => n.disconnect());
                     });
             },
-            [S],
+            [N],
         );
     if (
         (i.useEffect(() => {
             let e = null != o && "string" == typeof o,
-                t = a.tq ? "mobile" : a.Em ? "tablet" : (0, f.isDesktop)() ? "desktop_app" : "web";
+                t = a.tq ? "mobile" : a.Em ? "tablet" : (0, p.isDesktop)() ? "desktop_app" : "web";
             if (
                 (m.default.track(x.rMx.ONE_TIME_LOGIN_PAGE_VIEWED, {
                     has_token: e,
@@ -124,31 +124,28 @@ function b(e) {
             )
                 return void b("error");
             if (a.tq || a.Em) {
-                var n, r;
-                let e = null == (n = m.default.getSuperProperties()) ? void 0 : n.os,
-                    i = new URL(l.pathname + l.search, window.location.origin),
-                    s = (0, p.Gn)("one_time_login", e, i),
-                    a = null != (r = g.default.getFingerprint()) ? r : g.default.getId();
+                var n;
+                let e = null == (n = m.default.getSuperProperties()) ? void 0 : n.os;
                 m.default.track(x.rMx.ONE_TIME_LOGIN_APP_DETECTION_ATTEMPTED, {
-                    detection_type: "mobile_redirect",
+                    detection_type: "mobile_ui_shown",
                     device_type: t,
                     platform: e,
-                }),
-                    m.default.track(x.rMx.DEEP_LINK_CLICKED, {
-                        source: "web_page",
-                        destination: "mobile_app",
-                        deep_link_provider: "mobile_redirect",
-                        fingerprint: a,
-                    }),
-                    (window.location.href = s);
+                });
                 return;
             }
-            if ((0, f.isDesktop)()) return void y(o);
-            I.current || ((I.current = !0), b("rpc_attempting"), N(o));
-        }, [o, l, y, N]),
-        a.tq || a.Em || (0, h.DB)())
-    )
-        return null;
+            if ((0, p.isDesktop)()) return void y(o);
+            I.current || ((I.current = !0), b("rpc_attempting"), S(o));
+        }, [o, l, y, S]),
+        a.tq || a.Em)
+    ) {
+        let e = null == o || "string" != typeof o ? "missing_token" : "invalid_token";
+        return (0, r.jsx)(_.e, {
+            token: o,
+            hasError: "error" === d,
+            errorReason: e,
+        });
+    }
+    if ((0, h.DB)()) return null;
     if ("app_launched" === d)
         return (0, r.jsx)(j, {
             title: v.intl.string(v.t.RvUUOy),
