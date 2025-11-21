@@ -26,11 +26,11 @@ let R = String(0),
     u = "",
     T = (I.m9.navigator && I.m9.navigator.userAgent) || "",
     d = "",
-    O =
+    f =
         (I.m9.navigator && I.m9.navigator.language) ||
         (I.m9.navigator && I.m9.navigator.languages && I.m9.navigator.languages["0"]) ||
         "",
-    f = I.m9.navigator && I.m9.navigator.userAgentData;
+    O = I.m9.navigator && I.m9.navigator.userAgentData;
 function L(t) {
     return "pageload" === (0, r.XU)(t).op;
 }
@@ -52,11 +52,10 @@ function C(t) {
         e
     );
 }
-"object" == typeof f &&
-    null !== f &&
-    "getHighEntropyValues" in f &&
-    f
-        .getHighEntropyValues(["architecture", "model", "platform", "platformVersion", "fullVersionList"])
+"object" == typeof O &&
+    null !== O &&
+    "getHighEntropyValues" in O &&
+    O.getHighEntropyValues(["architecture", "model", "platform", "platformVersion", "fullVersionList"])
         .then((t) => {
             if (
                 ((N = t.platform || ""),
@@ -147,7 +146,7 @@ function y(t, e, _, r) {
         throw TypeError("Profiling events may only be attached to transactions, this should never occur.");
     if (null == _)
         throw TypeError(`Cannot construct profiling event envelope without a valid profile. Got ${_} instead.`);
-    let f = (function (t) {
+    let O = (function (t) {
             let e = t && t.contexts && t.contexts.trace && t.contexts.trace.trace_id;
             return ("string" == typeof e &&
                 32 !== e.length &&
@@ -230,7 +229,7 @@ function y(t, e, _, r) {
             build_number: T,
         },
         device: {
-            locale: O,
+            locale: f,
             model: d,
             manufacturer: T,
             architecture: u,
@@ -278,7 +277,7 @@ function y(t, e, _, r) {
             {
                 name: r.transaction || "",
                 id: r.event_id || (0, i.DM)(),
-                trace_id: f,
+                trace_id: O,
                 active_thread_id: R,
                 relative_start_ns: "0",
                 relative_end_ns: ((C - p) * 1000000).toFixed(0),
