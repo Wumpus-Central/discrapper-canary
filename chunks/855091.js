@@ -4,4 +4,6 @@ e.exports = {
     collapsablePaneHeader: "collapsablePaneHeader__7ed4d",
     collapsiblePaneList: "collapsiblePaneList__7ed4d",
     error: "error__7ed4d",
+    timeInput: "timeInput__7ed4d",
+    periodText: "periodText__7ed4d",
 };
