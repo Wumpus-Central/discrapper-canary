@@ -7,7 +7,7 @@ var r = n(54381),
     o = n(706454),
     c = n(981631),
     u = n(388032),
-    d = n(11269);
+    d = n(504707);
 function p(e) {
     let { onNavigateToQuestHome: t, onRender: n, onRequestClose: p, targetElementRef: f } = e,
         h = (0, l.e7)([o.default], () => o.default.locale),
