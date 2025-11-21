@@ -4,30 +4,30 @@ var r = n(54381),
     l = n(692547),
     i = n(28664),
     a = n(481060),
-    s = n(509212),
-    c = n(113434),
-    u = n(497505),
+    s = n(313481),
+    c = n(49436),
+    u = n(509212),
     d = n(937797),
     m = n(969227),
-    p = n(215113),
-    f = n(46140),
+    f = n(215113),
+    p = n(324805),
     v = n(388032);
 function E() {
     var e, t, n;
-    let { quest: E, sourceQuestContent: g, onClose: O } = o.useContext(p.VideoQuestModalContext),
-        { enabled: h } = d.EO.useConfig({ location: f.dr.VIDEO_MODAL }),
-        b = (0, c.tP)(E),
-        S = null != (0, s.LM)(E.config),
-        C = (0, m.D)({
+    let { quest: E, sourceQuestContent: g, onClose: O } = o.useContext(f.VideoQuestModalContext),
+        { enabled: h } = d.EO.useConfig({ location: p.dr.VIDEO_MODAL }),
+        b = (0, s.tP)(E),
+        C = null != (0, u.LM)(E.config),
+        S = (0, m.D)({
             quest: E,
-            questContent: u.jn.QUEST_HOME_DESKTOP,
+            questContent: c.jn.QUEST_HOME_DESKTOP,
             sourceQuestContent: g,
             onClick: O,
             shouldShowShopIfAlreadyClaimed: !0,
         }),
         y =
             (null == (e = E.userStatus) ? void 0 : e.claimedAt) != null
-                ? S
+                ? C
                     ? v.intl.string(v.t.WYchde)
                     : v.intl.string(v.t.vTgCWx)
                 : v.intl.string(v.t.cfY4PE),
@@ -57,7 +57,7 @@ function E() {
                             },
                         };
                 })(E, h),
-                onClick: C,
+                onClick: S,
                 text: y,
                 disabled: (null == (n = E.userStatus) ? void 0 : n.completedAt) == null,
             }),

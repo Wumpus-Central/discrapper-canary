@@ -1,9 +1,9 @@
 n.d(t, { Z: () => p });
 var r = n(54381),
     i = n(481060),
-    l = n(210724),
-    a = n(130653),
-    s = n(78826),
+    l = n(455357),
+    a = n(210724),
+    s = n(130653),
     o = n(388032),
     c = n(818923),
     u = n(805832),
@@ -26,11 +26,11 @@ let p = function (e) {
                         className: u.fixedBarWrapper,
                         children: (0, r.jsx)("div", {
                             className: d.panels,
-                            children: (0, r.jsx)(a.Z, {
-                                children: (0, r.jsx)(s.p, {
+                            children: (0, r.jsx)(s.Z, {
+                                children: (0, r.jsx)(l.x8, {
                                     source: "preview",
                                     questId: t.id,
-                                    children: (0, r.jsx)(l.P, { quest: t }),
+                                    children: (0, r.jsx)(a.P, { quest: t }),
                                 }),
                             }),
                         }),

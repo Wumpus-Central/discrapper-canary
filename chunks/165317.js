@@ -1,24 +1,24 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(54381),
     o = n(473749),
     l = n(442837),
     i = n(28664),
     a = n(481060),
     s = n(607070),
-    c = n(509212),
-    u = n(113434),
-    d = n(497505),
+    c = n(313481),
+    u = n(49436),
+    d = n(509212),
     m = n(937797),
-    p = n(472144),
-    f = n(644646),
+    f = n(472144),
+    p = n(644646),
     v = n(969227),
     E = n(215113),
-    g = n(46140),
+    g = n(324805),
     O = n(388032),
     h = n(559072);
 let b = async () => await n.e("67963").then(n.t.bind(n, 145193, 19));
-function S(e) {
-    var t, n, S, C;
+function C(e) {
+    var t, n, C, S;
     let { tooltipPosition: y } = e,
         { quest: _, sourceQuestContent: x, onClose: j } = o.useContext(E.VideoQuestModalContext),
         { enabled: D } = m.EO.useConfig({ location: g.dr.VIDEO_MODAL }),
@@ -26,19 +26,19 @@ function S(e) {
         R = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
         I = o.useRef(null == (t = _.userStatus) ? void 0 : t.completedAt),
         [N, A] = o.useState(!1),
-        w = (0, c.w8)(_.config),
-        { completedRatio: k, completedRatioDisplay: M } = (0, u.I)(_),
+        w = (0, d.w8)(_.config),
+        { completedRatio: k, completedRatioDisplay: M } = (0, c.I)(_),
         L = (null == (n = _.userStatus) ? void 0 : n.completedAt) != null,
-        V = (null == (S = _.userStatus) ? void 0 : S.claimedAt) != null,
+        V = (null == (C = _.userStatus) ? void 0 : C.claimedAt) != null,
         Z = O.intl.formatToPlainString(L && !V && D ? O.t.NRp4K4 : O.t["12IWP2"], { rewardName: w });
     o.useEffect(() => {
         var e, t;
         null == I.current && (null == (e = _.userStatus) ? void 0 : e.completedAt) != null && D && A(!0),
             (I.current = null == (t = _.userStatus) ? void 0 : t.completedAt);
-    }, [null == (C = _.userStatus) ? void 0 : C.completedAt, D]);
+    }, [null == (S = _.userStatus) ? void 0 : S.completedAt, D]);
     let F = (0, v.D)({
             quest: _,
-            questContent: d.jn.QUEST_HOME_DESKTOP,
+            questContent: u.jn.QUEST_HOME_DESKTOP,
             sourceQuestContent: x,
             onClick: j,
             shouldShowShopIfAlreadyClaimed: !1,
@@ -70,16 +70,16 @@ function S(e) {
                     onClick: (e) => {
                         B && F(e);
                     },
-                    children: (0, r.jsx)(p.Z, {
+                    children: (0, r.jsx)(f.Z, {
                         quest: _,
                         size: 48,
                         percentComplete: k,
                         percentCompleteText: P ? M : void 0,
                         percentCompleteTextVariant: "text-sm/medium",
-                        children: (0, r.jsx)(f.Z, {
+                        children: (0, r.jsx)(p.Z, {
                             className: h.questProgressRewardTile,
                             quest: _,
-                            questContent: d.jn.VIDEO_MODAL,
+                            questContent: u.jn.VIDEO_MODAL,
                             autoplay: !1,
                             location: g.dr.VIDEO_MODAL,
                             sourceQuestContent: x,

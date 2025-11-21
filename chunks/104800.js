@@ -8,8 +8,8 @@ var r = n(54381),
     c = n(228488),
     u = n(617136),
     d = n(915750),
-    m = n(509212),
-    f = n(497505),
+    m = n(49436),
+    f = n(509212),
     p = n(184299),
     v = n(720293),
     E = n(602667),
@@ -25,7 +25,7 @@ function S(e) {
         ? null
         : (0, r.jsx)(E.A, {
               questOrQuests: t,
-              questContent: f.jn.VIDEO_MODAL_END_CARD,
+              questContent: m.jn.VIDEO_MODAL_END_CARD,
               sourceQuestContent: n,
               children: (e) =>
                   (0, r.jsx)("img", {
@@ -108,7 +108,7 @@ function _(e) {
             [x, n, l, j, i, P, a],
         ),
         { title: R, subtitle: I } = {
-            title: (0, m.B2)(_),
+            title: (0, f.B2)(_),
             subtitle: null != (t = _.ctaConfig.subtitle) ? t : b.intl.string(b.t.mxaHfx),
         };
     return (0, r.jsxs)(r.Fragment, {
@@ -123,7 +123,7 @@ function _(e) {
                 subtitle: I,
                 icon: s.d4D,
                 className: C.endScreenPanelRight,
-                onClick: () => T(f.jn.VIDEO_MODAL),
+                onClick: () => T(m.jn.VIDEO_MODAL),
             }),
         ],
     });

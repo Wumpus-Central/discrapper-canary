@@ -14,11 +14,11 @@ var r = n(754700),
     h = n(823379),
     m = n(22095),
     g = n(617136),
-    E = n(509212),
-    b = n(569984),
-    y = n(497505),
-    O = n(5881),
-    v = n(46140);
+    E = n(616022),
+    b = n(49436),
+    y = n(509212),
+    O = n(535584),
+    v = n(324805);
 function I(e, t, n) {
     return (
         t in e
@@ -37,26 +37,26 @@ let T = +p.Z.Millis.MINUTE,
     A = +p.Z.Millis.SECOND,
     C = (0, O.T)({ location: v.dr.QUESTS_MANAGER });
 function N(e) {
-    return !(0, E.zi)(e) && null != e.userStatus && null != e.userStatus.enrolledAt && null == e.userStatus.completedAt;
+    return !(0, y.zi)(e) && null != e.userStatus && null != e.userStatus.enrolledAt && null == e.userStatus.completedAt;
 }
 function R(e) {
-    for (let r of b.Z.quests.values()) {
+    for (let r of E.Z.quests.values()) {
         var t, n;
-        let a = (0, E.Mo)(r);
+        let a = (0, y.Mo)(r);
         if (
             null != r &&
-            (0, E.Rt)(r) &&
+            (0, y.Rt)(r) &&
             r.config.features.includes(i.S.ACTIVITY_QUEST_AUTO_ENROLLMENT) &&
-            !(0, E.zi)(r) &&
+            !(0, y.zi)(r) &&
             a === e &&
             a !== v.Ts &&
             (null == (t = r.userStatus) ? void 0 : t.completedAt) == null &&
             (null == (n = r.userStatus) ? void 0 : n.enrolledAt) == null
         )
             return void (0, m.AH)(r.id, {
-                questContent: y.jn.RUNNING_ACTIVITY,
+                questContent: b.jn.RUNNING_ACTIVITY,
                 questContentCTA: g.jZ.ACCEPT_QUEST,
-                sourceQuestContent: y.jn.RUNNING_ACTIVITY,
+                sourceQuestContent: b.jn.RUNNING_ACTIVITY,
             });
     }
 }
@@ -80,7 +80,7 @@ class w extends a.Z {
                 t = this.getActivelyProgressingQuests(r);
             for (let n of new Set(e.keys())) t.has(n) || this.terminateHeartbeat(n, r);
             for (let [i, a] of t.entries())
-                !e.has(i) && (null == n || n(b.Z.quests.get(i))) && this.initiateHeartbeat(i, r, a.applicationId);
+                !e.has(i) && (null == n || n(E.Z.quests.get(i))) && this.initiateHeartbeat(i, r, a.applicationId);
         }
     }
     getActivelyProgressingQuests(e) {
@@ -98,7 +98,7 @@ class w extends a.Z {
     getActivelyProgressingPlayOnDesktopQuests() {
         let e = new Map(),
             t = s.ZP.getRunningGames(),
-            n = b.Z.quests;
+            n = E.Z.quests;
         C.log("~ getActivelyProgressingPlayOnDesktopQuestIds -> Running games: ", t);
         let r = {};
         for (let e of t) {
@@ -118,7 +118,7 @@ class w extends a.Z {
         for (let t of Object.keys(r)) {
             let i = r[t];
             for (let r of n.values()) {
-                let n = (0, E.vj)(r);
+                let n = (0, y.vj)(r);
                 if (!N(r) || null == n) continue;
                 let a = n.find((e) => e === t);
                 null != a ? e.set(r.id, { applicationId: a }) : P(n, i) && e.set(r.id, { applicationId: c.eB });
@@ -141,8 +141,8 @@ class w extends a.Z {
         C.log("~ getActivelyProgressingStreamOnDesktopQuestIds -> Active stream metadata: ", n);
         let r = n.id;
         if (null == r) return e;
-        for (let t of b.Z.quests.values()) {
-            let n = (0, E.DR)(t);
+        for (let t of E.Z.quests.values()) {
+            let n = (0, y.DR)(t);
             N(t) && null != n && n === r && e.set(t.id, { applicationId: r });
         }
         return (
@@ -158,13 +158,13 @@ class w extends a.Z {
             t = o.ZP.getSelfEmbeddedActivities(),
             n = t.size > 0;
         if ((C.log("~ getActivelyProgressingActivityQuestIds -> Embedded activities: ", t), !n)) return e;
-        let r = b.Z.quests;
+        let r = E.Z.quests;
         for (let n of t.keys())
             for (let t of r.values()) {
-                let r = (0, E.Mo)(t);
+                let r = (0, y.Mo)(t);
                 N(t) && null != r && r === n && e.set(t.id, { applicationId: n });
             }
-        for (let t of r.values()) N(t) && (0, E.KM)(t) && n && e.set(t.id, { applicationId: v.Ts });
+        for (let t of r.values()) N(t) && (0, y.KM)(t) && n && e.set(t.id, { applicationId: v.Ts });
         return (
             C.log("~ getActivelyProgressingActivityQuestIds -> Actively progressing questIds: ", Array.from(e.keys())),
             e
@@ -178,9 +178,9 @@ class w extends a.Z {
                 [r.X.PLAY_ACTIVITY]: new Map(),
             }),
             I(this, "calculateHeartbeatDurationMs", (e) => {
-                let t = b.Z.quests.get(e);
+                let t = E.Z.quests.get(e);
                 if (null == t || null == t.config || null == t.userStatus) return T;
-                let { progressSeconds: n, targetSeconds: i } = (0, E.il)(t, r.T.DESKTOP),
+                let { progressSeconds: n, targetSeconds: i } = (0, y.il)(t, r.T.DESKTOP),
                     a = Math.max(0, (i - n) * p.Z.Millis.SECOND);
                 return a <= T ? a + A : T;
             }),
@@ -234,7 +234,7 @@ class w extends a.Z {
             }),
             I(this, "terminateHeartbeat", (e, t) => {
                 let n = this.heartbeats[t],
-                    r = b.Z.quests,
+                    r = E.Z.quests,
                     i = n.get(e);
                 if (null != i) {
                     C.log("~ terminateHeartbeat -> Terminating heartbeat for questId: ".concat(e)),

@@ -30,8 +30,8 @@ var r = n(873546),
     y = n(543842),
     O = n(754688),
     v = n(336197),
-    I = n(36243),
-    T = n(977156),
+    I = n(787695),
+    T = n(36243),
     S = n(110560),
     A = n(703656),
     C = n(540709),
@@ -46,7 +46,7 @@ var R = n(701190),
     M = n(782568),
     k = n(981631);
 n(215023);
-var j = n(46140);
+var j = n(324805);
 async function U(e, t) {
     await a.Z.dispatch({
         type: "INVITE_MODAL_OPEN",
@@ -197,7 +197,7 @@ function Z(e) {
                 !0
             );
         };
-    if (null != R && R.type === m.g.QUESTS_EMBED && (0, T.c)({ location: j.dr.EMBED_MOBILE }))
+    if (null != R && R.type === m.g.QUESTS_EMBED && (0, I.c)({ location: j.dr.EMBED_MOBILE }))
         return (e) => {
             var t, r, a;
             let o, s;
@@ -314,7 +314,7 @@ function Z(e) {
           ? (e) => (null == e || e.preventDefault(), (0, A.uL)(k.Z5c.QUEST_HOME_V2 + (null != F ? F : "")), !0)
           : H && (null == Z ? void 0 : Z.startsWith("/quest-preview"))
             ? (e) => {
-                  if ((null == e || e.preventDefault(), (0, I.T)({ location: j.dr.NAVIGATE_TO_QUEST_HOME_UTIL })))
+                  if ((null == e || e.preventDefault(), (0, T.T)({ location: j.dr.NAVIGATE_TO_QUEST_HOME_UTIL })))
                       return (
                           (0, A.uL)(k.Z5c.QUEST_HOME_V2 + "?tab=preview_tool&quest_id=".concat(Z.split("/").at(-1))), !0
                       );

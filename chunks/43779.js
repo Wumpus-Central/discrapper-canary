@@ -9,14 +9,14 @@ var r = n(54381),
     d = n(393238),
     u = n(607070),
     p = n(960919),
-    m = n(509212),
-    g = n(113434),
+    m = n(313481),
+    g = n(509212),
     f = n(472144),
     h = n(644646),
     x = n(251360),
-    b = n(19148),
-    _ = n(69439),
-    j = n(46140),
+    _ = n(19148),
+    b = n(69439),
+    j = n(324805),
     v = n(642145),
     C = n(388032),
     y = n(289157);
@@ -34,8 +34,8 @@ function O(e) {
             sourceQuestContent: I,
         } = e,
         D = s.useRef(null),
-        q = (0, m.w8)(w.config),
-        L = (0, m.B3)(w.config),
+        q = (0, g.w8)(w.config),
+        L = (0, g.B3)(w.config),
         Q = (null == (t = w.userStatus) ? void 0 : t.enrolledAt) != null,
         { ref: V, scrollHeight: M } = (0, d.kE)(),
         Z = 104 !== M,
@@ -85,10 +85,10 @@ function O(e) {
         }),
         H = (null == (n = w.userStatus) ? void 0 : n.completedAt) != null,
         F = (null == (o = w.userStatus) ? void 0 : o.claimedAt) != null,
-        z = (0, m.xN)(w.config),
-        G = (0, m.LM)(w.config),
-        { completedRatio: K, completedRatioDisplay: X } = (0, g.I)(w),
-        Y = (0, g.Bd)(w, I, D),
+        z = (0, g.xN)(w.config),
+        G = (0, g.LM)(w.config),
+        { completedRatio: K, completedRatioDisplay: X } = (0, m.I)(w),
+        Y = (0, m.Bd)(w, I, D),
         J = s.useMemo(
             () =>
                 F && z
@@ -167,7 +167,7 @@ function O(e) {
                 },
                 className: y.rewardDescriptionContainer,
                 children: [
-                    (0, r.jsx)(b.E, {
+                    (0, r.jsx)(_.E, {
                         showPlaceholder: !B,
                         width: 80,
                         height: 80,
@@ -191,7 +191,7 @@ function O(e) {
                                                   quest: w,
                                                   size: 76,
                                                   percentComplete: K,
-                                                  percentCompleteText: N && !(0, m.zi)(w) ? X : void 0,
+                                                  percentCompleteText: N && !(0, g.zi)(w) ? X : void 0,
                                                   children: (0, r.jsx)("div", {
                                                       className: y.circularRewardTileWrapper,
                                                       children: (0, r.jsx)(h.Z, {
@@ -249,7 +249,7 @@ function O(e) {
                         }),
                 ],
             }),
-            (0, r.jsx)(_.Z, {
+            (0, r.jsx)(b.Z, {
                 quest: w,
                 questContent: P,
                 contentPosition: A,

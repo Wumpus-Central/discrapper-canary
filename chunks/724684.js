@@ -9,7 +9,7 @@ n.d(t, {
     jc: () => l,
     uq: () => i,
 });
-var r = n(497505);
+var r = n(49436);
 function i(e) {
     return [r.jn.GIFT_INVENTORY_FOR_YOU, r.jn.GIFT_INVENTORY_OTHER].includes(e);
 }

@@ -1,170 +1,344 @@
-n.d(t, { Z: () => w }), n(388685);
-var r = n(54381);
-n(473749);
-var i = n(120356),
-    l = n.n(i),
-    s = n(268146),
-    o = n(442837),
-    a = n(481060),
-    c = n(728345),
-    d = n(925329),
-    u = n(72897),
-    f = n(131951),
-    p = n(358085),
-    h = n(672811),
-    m = n(891180),
-    _ = n(556389),
-    g = n(615161),
-    x = n(396678),
-    v = n(37113),
-    j = n(65154),
-    S = n(604415),
-    b = n(388032),
-    y = n(214795);
-function C() {
-    return (0, r.jsx)("span", {
-        className: y.ellipsis,
-        children: "\u2022",
+n.d(t, { Z: () => B }), n(388685);
+var r = n(54381),
+    l = n(473749),
+    s = n(120356),
+    i = n.n(s),
+    a = n(442837),
+    o = n(780384),
+    u = n(481060),
+    c = n(358221),
+    d = n(594190),
+    p = n(687516),
+    f = n(210887),
+    m = n(937995),
+    b = n(158776),
+    E = n(594174),
+    j = n(22095),
+    v = n(617136),
+    T = n(313481),
+    g = n(616022),
+    S = n(49436),
+    h = n(509212),
+    y = n(535584),
+    A = n(373370),
+    O = n(475595),
+    x = n(602667),
+    C = n(698716),
+    _ = n(659302),
+    w = n(340100),
+    Z = n(611855),
+    I = n(644646),
+    P = n(346592),
+    Q = n(110560),
+    L = n(324805),
+    N = n(981631),
+    R = n(354459),
+    U = n(388032),
+    q = n(141538);
+function M(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
+            });
+    }
+    return e;
+}
+function D(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
+                  }
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function V(e) {
+    var t, n, s, m, x;
+    let { channelId: V, quest: k, previewQuest: B, isParticipatingOverride: W } = e,
+        H = (0, v.O5)(),
+        [z, G] = l.useState(!1),
+        F = l.useCallback(() => G(!0), []),
+        K = l.useCallback(() => G(!1), []),
+        X = (0, a.e7)([E.default], () => E.default.getCurrentUser()),
+        Y = (0, a.e7)([f.Z], () => f.Z.getState().theme),
+        $ = (0, o.wj)(Y) ? N.BRd.DARK : N.BRd.LIGHT,
+        J = (0, a.e7)([c.Z], () => c.Z.getParticipants(e.channelId), [e.channelId]),
+        ee = (0, a.e7)(
+            [g.Z],
+            () => (0, h.PM)(g.Z.quests, g.Z.questToDeliverForPlacement, S.Ok.DESKTOP_ACCOUNT_PANEL_AREA),
+            [],
+        ),
+        { isCurrentUserStreamingQuestApplication: et, isQuestInQuestBar: en } = (0, a.cj)([b.Z], () => {
+            var e;
+            return {
+                isCurrentUserStreamingQuestApplication:
+                    null != k &&
+                    null != X &&
+                    ((e = b.Z),
+                    J.some((t) => {
+                        if (t.type !== R.fO.STREAM || t.user.id !== X.id) return !1;
+                        let n = (0, p.Um)(t.stream, e);
+                        return null != n && (0, h._D)(n, k);
+                    })),
+                isQuestInQuestBar: (null == ee ? void 0 : ee.id) === (null == k ? void 0 : k.id),
+            };
+        }, [X, k, J, ee]),
+        er = null == (t = (0, h.vj)(k)) ? void 0 : t[0],
+        el = (0, a.e7)([d.ZP, b.Z], () => {
+            let e = d.ZP.getRunningGames().map((e) => e.id);
+            if ((0, h.$H)(k) && null !== er && e.includes(er)) return !0;
+            let t = null != X ? b.Z.findActivity(X.id, (e) => e.type !== N.IIU.CUSTOM_STATUS) : null;
+            return !!(null != t && (0, h.$J)(k) && (0, h._D)(t, k));
+        }, [k, X, er]),
+        es = !0 === W || et || el,
+        ei = (0, a.e7)([g.Z], () => null != k && g.Z.isEnrolling(k.id), [k]),
+        ea = (0, a.e7)(
+            [c.Z],
+            () => ((null == X ? void 0 : X.id) == null ? null : c.Z.getParticipant(V, X.id)) != null,
+            [V, X],
+        ),
+        { launchInGameActivity: eo } = (0, T.zB)(k),
+        eu = (0, T.B6)(null == k ? void 0 : k.config.expiresAt),
+        ec = (0, T.B6)(null == k ? void 0 : k.config.rewardsConfig.rewardsExpireAt),
+        ed = l.useCallback(() => {
+            (0, j.AH)(k.id, {
+                questContent: S.jn.QUEST_LIVE_STREAM,
+                questContentCTA: v.jZ.ACCEPT_QUEST,
+                sourceQuestContent: S.jn.QUEST_LIVE_STREAM,
+            }),
+                (0, h.Rt)(k) && eo();
+        }, [k, eo]),
+        ep = l.useCallback(() => {
+            H({
+                questId: k.id,
+                questContent: S.jn.QUEST_LIVE_STREAM,
+                questContentCTA: v.jZ.TRACK_PROGRESS,
+                sourceQuestContent: S.jn.QUEST_LIVE_STREAM,
+            }),
+                (0, Q.navigateToQuestHome)({
+                    fromContent: S.jn.QUEST_LIVE_STREAM,
+                    questId: k.id,
+                });
+        }, [k, H]),
+        ef = l.useCallback(() => {
+            H({
+                questId: k.id,
+                questContent: S.jn.QUEST_LIVE_STREAM,
+                questContentCTA: v.jZ.LEARN_MORE,
+                sourceQuestContent: S.jn.QUEST_LIVE_STREAM,
+            }),
+                (0, Q.navigateToQuestHome)({
+                    fromContent: S.jn.QUEST_LIVE_STREAM,
+                    questId: k.id,
+                });
+        }, [k, H]),
+        em = (0, _.hf)({
+            quest: k,
+            questContent: S.jn.QUEST_LIVE_STREAM,
+            sourceQuestContent: S.jn.QUEST_LIVE_STREAM,
+        }),
+        eb = l.useMemo(
+            () =>
+                (0, y.T)({
+                    quest: k,
+                    location: L.dr.QUEST_CHANNEL_CALL_HEADER,
+                }),
+            [k],
+        ),
+        eE = (0, A.CR)({ quest: k }),
+        ej = (0, h.Rt)(k),
+        ev = (0, T.tP)(k),
+        eT = (null == (n = k.userStatus) ? void 0 : n.enrolledAt) != null,
+        eg = (null == (s = k.userStatus) ? void 0 : s.completedAt) != null,
+        eS = null != k.userStatus && (0, h.zE)(k.userStatus, S.jn.QUEST_LIVE_STREAM),
+        eh = null != k.userStatus && (0, h.zE)(k.userStatus, S.jn.QUEST_BAR),
+        ey = en && !eh;
+    eb.info({
+        isQuestCallHeaderDismissed: eS,
+        isQuestExpired: ev,
+        isQuestBarShowing: ey,
+        isCurrentUserCallParticipant: ea,
     });
-}
-function O(e) {
-    let { source: t } = e,
-        { data: n } = (0, c.IX)(null != t && (0, _.T)(t) ? t.id : void 0);
-    return null == t
-        ? (0, r.jsx)(a.hGI, {
-              className: y.screenArrowIcon,
-              size: "md",
-              color: "currentColor",
-          })
-        : (0, _.T)(t)
-          ? (0, r.jsx)(d.Z, {
-                game: n,
-                pid: t.pid,
-            })
-          : null == t.icon || "" === t.icon
-            ? (0, r.jsx)(a.hGI, {
-                  className: y.screenArrowIcon,
-                  size: "md",
-                  color: "currentColor",
-              })
-            : (0, r.jsx)("img", {
-                  src: t.icon,
-                  alt: "",
-                  className: y.sourceIcon,
-              });
-}
-function w() {
-    var e, t, n, i;
-    let [{ preset: c, resolution: d, fps: _, muteStreamAudio: w, selectedSource: P, sourceType: Z, audioSourceId: I }] =
-            (0, g.E_)(),
-        [E, T] = (0, u.Ls)(j.h7.AUDIO_INPUT, { location: "StreamSettingsSummary" }),
-        N = E.concat(T),
-        [A, R] = null != (n = (0, x.Z)(c)) ? n : [d, _],
-        M = (0, h.L)(c),
-        k = (0, m.M)(A),
-        D = Z === s.vA.CAMERA,
-        L = null != P,
-        B = null != P ? (null == P || null == (e = P.id) ? void 0 : e.startsWith(s.vA.CAMERA)) : D,
-        G = c === v.ApplicationStreamPresets.PRESET_AUTO,
-        U = L
-            ? void 0
-            : c === v.ApplicationStreamPresets.PRESET_VIDEO
-              ? b.intl.string(S.default.MuHUFe)
-              : c === v.ApplicationStreamPresets.PRESET_DOCUMENTS
-                ? b.intl.string(S.default.y0JuYR)
-                : c === v.ApplicationStreamPresets.PRESET_AUTO
-                  ? b.intl.string(S.default.m4jtlc)
-                  : void 0,
-        F = (0, o.e7)([f.Z], () => f.Z.getUseSystemScreensharePicker() && (0, p.isLinux)());
+    let eA = null != B && (null == (m = k.userStatus) ? void 0 : m.claimedAt) == null;
+    if ((!eA && (eS || ev || ey)) || (!eA && !ea)) return null;
+    let eO = (0, h.il)(k),
+        ex = (0, r.jsx)(I.Z, {
+            className: q.rewardTile,
+            autoplay: z,
+            quest: k,
+            questContent: S.jn.QUEST_LIVE_STREAM,
+            location: L.dr.QUEST_CHANNEL_CALL_HEADER,
+            sourceQuestContent: S.jn.QUEST_LIVE_STREAM,
+        });
     return (0, r.jsxs)("div", {
-        className: y.root,
+        className: i()(q.wrapper, { [q.wrapperAccepted]: eT }),
+        onFocus: F,
+        onMouseEnter: F,
+        onBlur: K,
+        onMouseLeave: K,
         children: [
-            L && (0, r.jsx)(O, { source: P }),
+            !eT &&
+                (0, r.jsxs)("div", {
+                    className: q.rewardTileWrapper,
+                    children: [
+                        ex,
+                        (0, r.jsx)(Z.Z, {
+                            bgOpacity: 0.32,
+                            className: q.promotedTag,
+                        }),
+                    ],
+                }),
             (0, r.jsxs)("div", {
-                className: y.summary,
+                className: q.content,
                 children: [
-                    (0, r.jsx)(a.Text, {
-                        className: y.sourceOrPresetName,
-                        variant: "text-md/semibold",
-                        color: "header-primary",
-                        children: L
-                            ? null != (i = null == P ? void 0 : P.name)
-                                ? i
-                                : b.intl.string(S.default["hJMA+x"])
-                            : M,
-                    }),
-                    (0, r.jsxs)(a.Text, {
-                        className: y.summaryDetail,
-                        variant: "text-xs/medium",
-                        color: "text-muted",
+                    (0, r.jsxs)("div", {
+                        className: q.heading,
                         children: [
-                            L &&
-                                (0, r.jsxs)(r.Fragment, {
+                            eT && es
+                                ? ex
+                                : (0, r.jsx)("img", {
+                                      className: q.gameTile,
+                                      alt: k.config.messages.gameTitle,
+                                      src: (0, O.fh)(k, O.eC.GAME_TILE, $).url,
+                                  }),
+                            (0, r.jsxs)("div", {
+                                children: [
+                                    (0, r.jsxs)("div", {
+                                        className: q.headingWithSubmenu,
+                                        children: [
+                                            (0, r.jsx)(u.Heading, {
+                                                className: q.questTitle,
+                                                variant: "heading-md/semibold",
+                                                color: "header-primary",
+                                                children: es
+                                                    ? (0, h.AV)({
+                                                          quest: k,
+                                                          taskDetails: eO,
+                                                      })
+                                                    : U.intl.formatToPlainString(U.t.EQa7os, {
+                                                          questName: k.config.messages.questName,
+                                                      }),
+                                            }),
+                                            (0, r.jsx)(C.i, {
+                                                questContent: S.jn.QUEST_LIVE_STREAM,
+                                                sourceQuestContent: S.jn.QUEST_LIVE_STREAM,
+                                                quest: k,
+                                                preventIdle: !0,
+                                                shouldShowDisclosure:
+                                                    (null == (x = k.userStatus) ? void 0 : x.enrolledAt) == null,
+                                                children: (e) =>
+                                                    (0, r.jsx)(
+                                                        u.P3F,
+                                                        D(M({}, e), {
+                                                            className: q.submenuWrapper,
+                                                            "aria-label": U.intl.string(U.t.DEoVWZ),
+                                                            children: (0, r.jsx)(u.xhG, {
+                                                                size: "md",
+                                                                color: "currentColor",
+                                                                className: q.submenuIcon,
+                                                            }),
+                                                        }),
+                                                    ),
+                                            }),
+                                        ],
+                                    }),
+                                    (0, r.jsx)(u.Text, {
+                                        color: "header-secondary",
+                                        variant: "text-xs/medium",
+                                        children: eg
+                                            ? U.intl.formatToPlainString(U.t.APddvF, { expirationDate: ec })
+                                            : U.intl.formatToPlainString(U.t["pX+fmn"], { expirationDate: eu }),
+                                    }),
+                                ],
+                            }),
+                        ],
+                    }),
+                    eT &&
+                        !eg &&
+                        !es &&
+                        (0, r.jsx)(P.Z, {
+                            autoplay: z,
+                            quest: k,
+                            questContent: S.jn.QUEST_LIVE_STREAM,
+                            taskDetails: eO,
+                            location: L.dr.QUEST_CHANNEL_CALL_HEADER,
+                            sourceQuestContent: S.jn.QUEST_LIVE_STREAM,
+                        }),
+                    (0, r.jsxs)("div", {
+                        className: q.ctas,
+                        children: [
+                            !eT &&
+                                (0, r.jsxs)(u.Kqy, {
+                                    direction: "horizontal",
                                     children: [
-                                        (0, r.jsxs)("span", {
-                                            className: y.iconSummaryContainer,
-                                            children: [
-                                                (0, r.jsx)(a.ewm, {
-                                                    className: y.icon,
-                                                    size: "xxs",
-                                                    color: "currentColor",
-                                                }),
-                                                M,
-                                            ],
+                                        (0, r.jsx)(u.Button, {
+                                            size: "sm",
+                                            variant: "secondary",
+                                            text: U.intl.string(U.t.LLLLPD),
+                                            onClick: ef,
+                                            fullWidth: !ej || k.config.features.includes(L.S7.CLOUD_GAMING_ACTIVITY),
                                         }),
-                                        (0, r.jsx)(C, {}),
-                                    ],
-                                }),
-                            null != U && (0, r.jsx)("span", { children: U }),
-                            !G &&
-                                (0, r.jsxs)(r.Fragment, {
-                                    children: [
-                                        (0, r.jsx)(C, {}),
-                                        (0, r.jsx)("span", { children: k }),
-                                        (0, r.jsx)(C, {}),
-                                        (0, r.jsx)("span", { children: "".concat(R, "fps") }),
-                                    ],
-                                }),
-                            w &&
-                                (0, r.jsxs)(r.Fragment, {
-                                    children: [
-                                        (0, r.jsx)(C, {}),
-                                        (0, r.jsxs)("span", {
-                                            className: y.iconSummaryContainer,
-                                            children: [
-                                                (0, r.jsx)(a.OyP, {
-                                                    className: l()(y.icon, y.mutedIcon),
-                                                    size: "xxs",
-                                                    color: "currentColor",
-                                                }),
-                                                b.intl.string(S.default.FzMGWR),
-                                            ],
+                                        (0, r.jsx)(u.Button, {
+                                            size: "sm",
+                                            variant: "primary",
+                                            fullWidth: !0,
+                                            text: eE,
+                                            onClick: ed,
+                                            loading: ei,
                                         }),
                                     ],
                                 }),
-                            !w &&
-                                !B &&
-                                F &&
-                                (0, r.jsxs)(r.Fragment, {
-                                    children: [(0, r.jsx)(C, {}), b.intl.string(S.default["n9/rUq"])],
+                            eT &&
+                                !eg &&
+                                es &&
+                                (0, r.jsx)(w.Z, {
+                                    color: u.TVs.colors.BG_BRAND,
+                                    quest: k,
                                 }),
-                            B
-                                ? (0, r.jsxs)(r.Fragment, {
-                                      children: [
-                                          (0, r.jsx)(C, {}),
-                                          (0, r.jsx)("span", {
-                                              children:
-                                                  null ==
-                                                  (t = N.find((e) => {
-                                                      let { id: t } = e;
-                                                      return I === t;
-                                                  }))
-                                                      ? void 0
-                                                      : t.name,
-                                          }),
-                                      ],
-                                  })
-                                : null,
+                            eT &&
+                                !eg &&
+                                !es &&
+                                (0, r.jsx)(u.Button, {
+                                    variant: "primary",
+                                    size: "sm",
+                                    fullWidth: !0,
+                                    text: U.intl.string(U.t.VN1Ajl),
+                                    onClick: ep,
+                                }),
+                            eg &&
+                                (0, r.jsx)(u.Button, {
+                                    variant: "primary",
+                                    size: "sm",
+                                    fullWidth: !0,
+                                    text: U.intl.string(U.t.cfY4PE),
+                                    onClick: em,
+                                }),
                         ],
                     }),
                 ],
@@ -172,3 +346,56 @@ function w() {
         ],
     });
 }
+function k(e) {
+    let t = l.useContext(m.h9),
+        n = (0, a.e7)([g.Z], () => null != g.Z.questEnrollmentBlockedUntil, []),
+        s = (0, a.e7)([g.Z], () => g.Z.quests),
+        i = (0, T.Fy)(Array.from(s.values())),
+        o = l.useMemo(() => (0, h.NI)(s, L.Lv), [s]),
+        u = (0, a.e7)([c.Z], () => c.Z.getParticipants(e.channelId), [e.channelId]),
+        d = (0, a.e7)(
+            [b.Z],
+            () =>
+                null != e.previewQuest
+                    ? e.previewQuest
+                    : (function (e, t, n) {
+                          for (let i of e) {
+                              var r, l, s;
+                              if (i.type === R.fO.STREAM) {
+                                  let e = null != (l = (0, p.Um)(i.stream, n)) ? l : null,
+                                      s = (0, h.ZZ)(t, e);
+                                  if (null != s && (null == (r = s.userStatus) ? void 0 : r.claimedAt) == null)
+                                      return s;
+                              }
+                              for (let r of e)
+                                  if (!(0, R.I)(r))
+                                      for (let e of n.getActivities(r.user.id)) {
+                                          let n = (0, h.ZZ)(t, e);
+                                          if (null != n && (null == (s = n.userStatus) ? void 0 : s.claimedAt) == null)
+                                              return n;
+                                      }
+                          }
+                          return null;
+                      })(u, o, b.Z),
+            [u, o, i, e.previewQuest],
+        );
+    return null == d || n
+        ? null
+        : (0, r.jsx)(x.A, {
+              questOrQuests: d,
+              overrideVisibility: !t,
+              questContent: S.jn.QUEST_LIVE_STREAM,
+              sourceQuestContent: S.jn.QUEST_LIVE_STREAM,
+              children: () => (0, r.jsx)(V, D(M({}, e), { quest: d })),
+          });
+}
+let B = function (e) {
+    let t = (0, a.e7)([E.default], () => E.default.getCurrentUser());
+    return (0, a.e7)(
+        [c.Z],
+        () => ((null == t ? void 0 : t.id) == null ? null : c.Z.getParticipant(e.channelId, t.id)) != null,
+        [e.channelId, t],
+    ) || null != e.previewQuest
+        ? (0, r.jsx)(k, M({}, e))
+        : null;
+};

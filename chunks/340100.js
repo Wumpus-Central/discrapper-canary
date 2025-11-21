@@ -5,8 +5,8 @@ var l = n(120356),
     s = n.n(l),
     i = n(692547),
     a = n(481060),
-    o = n(113434),
-    u = n(26650),
+    o = n(313481),
+    u = n(141707),
     c = n(905889);
 let d = function (e) {
     let { className: t, color: n = i.Z.colors.WHITE, quest: l, isInventory: d } = e,

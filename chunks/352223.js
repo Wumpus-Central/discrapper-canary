@@ -11,15 +11,15 @@ var r = n(54381),
     f = n(393903),
     _ = n(448986),
     p = n(617136),
-    h = n(113434),
-    m = n(497505),
+    h = n(313481),
+    m = n(49436),
     g = n(477005),
-    E = n(685613),
-    b = n(611855),
-    y = n(644646),
-    O = n(670638),
+    E = n(698716),
+    b = n(685613),
+    y = n(611855),
+    O = n(644646),
     v = n(724684),
-    I = n(46140),
+    I = n(324805),
     T = n(231338),
     S = n(388032),
     A = n(849138);
@@ -120,12 +120,12 @@ let D = (0, s.animated)(u.CJ0),
                     });
             },
             en = () => null != Z && null != V && Z < V,
-            er = (0, r.jsx)(E.ZP, {
+            er = (0, r.jsx)(b.ZP, {
                 className: A.partnerBranding,
                 logotypeClassName: ee ? A.partnerBrandingLogotypes : void 0,
-                gameTileSize: E.fF.MEDIUM,
+                gameTileSize: b.fF.MEDIUM,
                 quest: a,
-                separatorSpacing: E.US.MEDIUM,
+                separatorSpacing: b.US.MEDIUM,
                 theme: T.BR.DARK,
                 withGameTile: !z || null == a.config.cosponsorMetadata,
             });
@@ -181,7 +181,7 @@ let D = (0, s.animated)(u.CJ0),
                                             children: [
                                                 (0, r.jsx)("div", {
                                                     className: A.headerCollapsedContentRewardWrapper,
-                                                    children: (0, r.jsx)(y.Z, {
+                                                    children: (0, r.jsx)(O.Z, {
                                                         quest: a,
                                                         questContent: C,
                                                         className: A.headerCollapsedRewardTile,
@@ -194,7 +194,7 @@ let D = (0, s.animated)(u.CJ0),
                                                     children: [
                                                         (0, r.jsxs)("div", {
                                                             className: A.headerCollapsedContentCopyLogos,
-                                                            children: [er, (0, r.jsx)(b.Z, { color: "always-white" })],
+                                                            children: [er, (0, r.jsx)(y.Z, { color: "always-white" })],
                                                         }),
                                                         (0, r.jsx)(u.Text, {
                                                             variant: "text-xs/medium",
@@ -226,7 +226,7 @@ let D = (0, s.animated)(u.CJ0),
                                         children: [
                                             (0, r.jsxs)("div", {
                                                 className: A.iconLogotypeContainer,
-                                                children: [er, z ? null : (0, r.jsx)(b.Z, { color: "always-white" })],
+                                                children: [er, z ? null : (0, r.jsx)(y.Z, { color: "always-white" })],
                                             }),
                                             (0, r.jsxs)("div", {
                                                 className: A.questInfo,
@@ -282,7 +282,7 @@ let D = (0, s.animated)(u.CJ0),
                                     : v.jc,
                             },
                             children: [
-                                (0, r.jsx)(O.r, {
+                                (0, r.jsx)(E.i, {
                                     questContent: C,
                                     quest: a,
                                     questContentPosition: k,

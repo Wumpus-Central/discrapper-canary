@@ -2,12 +2,12 @@ n.d(t, { Z: () => p });
 var r = n(54381);
 n(473749);
 var s = n(481060),
-    o = n(113434),
-    a = n(497505),
+    o = n(313481),
+    a = n(49436),
     i = n(644646),
     l = n(613087),
     c = n(472144),
-    d = n(46140),
+    d = n(324805),
     u = n(245565);
 let p = (e) => {
     let {
@@ -19,9 +19,9 @@ let p = (e) => {
             activeScreen: f,
             popoutTargetElementRef: h,
             onGameSheetOpened: x,
-            onGameSheetClosed: b,
+            onGameSheetClosed: _,
         } = e,
-        _ = (0, o.eQ)(n),
+        b = (0, o.eQ)(n),
         j = (0, o.vf)({
             quest: n,
             isExpanded: m,
@@ -29,7 +29,7 @@ let p = (e) => {
             sourceQuestContent: a.jn.QUEST_BAR_V2,
             popoutTargetElementRef: h,
             onGameSheetOpened: x,
-            onGameSheetClosed: b,
+            onGameSheetClosed: _,
         });
     return (0, r.jsxs)("div", {
         className: u.questProgressWrapper,
@@ -67,7 +67,7 @@ let p = (e) => {
                                 className: u.questProgressHint,
                                 color: "header-primary",
                                 variant: "text-sm/semibold",
-                                children: _,
+                                children: b,
                             }),
                     }),
                     (0, r.jsx)(l.l7, {

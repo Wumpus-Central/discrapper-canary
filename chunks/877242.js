@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(624138),
     d = n(617136),
     m = n(915750),
-    p = n(113434),
-    f = n(497505),
+    f = n(313481),
+    p = n(49436),
     v = n(215113),
     E = n(684245),
     g = n(388032),
@@ -18,10 +18,10 @@ var r = n(54381),
 function h() {
     let { quest: e, sourceQuestContent: t, isPortrait: n, onClose: l } = o.useContext(v.VideoQuestModalContext),
         h = (0, m.aM)(),
-        b = (0, p.tP)(e),
-        S = o.useRef(null),
-        { isHoveringOrFocusing: y } = (0, c.Z)(S),
-        C = (0, E.e)({
+        b = (0, f.tP)(e),
+        C = o.useRef(null),
+        { isHoveringOrFocusing: S } = (0, c.Z)(C),
+        y = (0, E.e)({
             quest: e,
             onClose: l,
             sourceQuestContent: t,
@@ -32,13 +32,13 @@ function h() {
     return (0, r.jsx)(a.u, {
         text: g.intl.string(g.t.EuHF34),
         children: (0, r.jsx)(s.P3F, {
-            onClick: () => C(f.jn.VIDEO_MODAL, d.jZ.OPEN_GAME_LINK),
+            onClick: () => y(p.jn.VIDEO_MODAL, d.jZ.OPEN_GAME_LINK),
             className: O.adInfoClickable,
             children: (0, r.jsxs)("div", {
                 className: i()(O.contentHeaderGameInfo, O.contentHeaderGameInfoHoverable, {
                     [O.contentHeaderGameInfoHoverableExpired]: b,
                 }),
-                ref: S,
+                ref: C,
                 children: [
                     (0, r.jsx)("div", {
                         className: O.contentFooterAdDetailedInfo,
@@ -60,7 +60,7 @@ function h() {
                                 }),
                                 children: (0, r.jsx)(s.owK, {
                                     size: "xs",
-                                    color: y ? s.TVs.colors.ICON_PRIMARY.css : s.TVs.colors.ICON_TERTIARY.css,
+                                    color: S ? s.TVs.colors.ICON_PRIMARY.css : s.TVs.colors.ICON_TERTIARY.css,
                                 }),
                             }),
                             (0, r.jsx)(s.Heading, {
@@ -69,7 +69,7 @@ function h() {
                                     [O.adDetailsTextPrimaryPortrait]: n,
                                     [O.addFourPxMarginRight]: n,
                                 }),
-                                color: y ? "text-primary" : "text-secondary",
+                                color: S ? "text-primary" : "text-secondary",
                                 lineClamp: 1,
                                 children: e.config.messages.gamePublisher,
                             }),
@@ -86,7 +86,7 @@ function h() {
                                               }),
                                               variant: "heading-sm/medium",
                                               lineClamp: n ? void 0 : 1,
-                                              color: y ? "text-primary" : "text-secondary",
+                                              color: S ? "text-primary" : "text-secondary",
                                               children: _,
                                           }),
                                       ],

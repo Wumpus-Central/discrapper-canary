@@ -24,17 +24,17 @@ var r = n(54381),
     m = n(152708),
     _ = n(594190),
     g = n(751571),
-    x = n(509212),
-    v = n(569984),
-    j = n(977156),
-    S = n(28798),
+    x = n(616022),
+    v = n(509212),
+    j = n(787695),
+    S = n(263463),
     b = n(131951),
     y = n(449224),
     C = n(358085),
     O = n(463727),
     w = n(855403),
-    P = n(299570),
-    Z = n(960861),
+    Z = n(299570),
+    P = n(960861),
     I = n(59468),
     E = n(989941),
     T = n(39540),
@@ -43,7 +43,7 @@ var r = n(54381),
     R = n(133179),
     M = n(70722),
     k = n(761274),
-    D = n(46140),
+    D = n(324805),
     L = n(65154),
     B = n(388032),
     G = n(336606);
@@ -92,7 +92,7 @@ function H(e, t, n) {
             var i, l;
             let n = t.find((e) => (0, w.Z)(r.id, e.windowHandle));
             if ((null == n ? void 0 : n.id) == null) continue;
-            let s = (0, x.lQ)(e, n.id);
+            let s = (0, v.lQ)(e, n.id);
             if (
                 null != s &&
                 (null == (i = s.userStatus) ? void 0 : i.enrolledAt) != null &&
@@ -111,27 +111,27 @@ function W(e) {
         { enableGoLiveCaptureCard: l } = O.Z.useExperiment({ location: "GoLive_Source_Select" }),
         o = b.Z.supports(L.AN.GO_LIVE_HARDWARE),
         [a, p] = i.useState(null),
-        [x, j] = i.useState(null),
+        [v, j] = i.useState(null),
         [y, C] = i.useState(null),
         w = null != y && y.length > 0,
-        [P, Z] = i.useState(c.vA.WINDOW),
+        [Z, P] = i.useState(c.vA.WINDOW),
         [E, T] = i.useState(!1),
         A = i.useRef(null),
         M = i.useRef(new u.Xp()),
         D = (0, d.e7)([_.ZP], () => _.ZP.getRunningGames()),
         U = H(
-            (0, d.e7)([v.Z], () => v.Z.quests),
+            (0, d.e7)([x.Z], () => x.Z.quests),
             D,
-            x,
+            v,
         ),
         W = i.useMemo(
             () =>
-                null == x
+                null == v
                     ? null
-                    : [...x].sort(
+                    : [...v].sort(
                           (e, t) => F(t, null == U ? void 0 : U.source.id) - F(e, null == U ? void 0 : U.source.id),
                       ),
-            [U, x],
+            [U, v],
         );
     i.useEffect(() => {
         let e = M.current;
@@ -159,10 +159,10 @@ function W(e) {
             }
         );
     }, []);
-    let z = i.useCallback((e) => {
+    let V = i.useCallback((e) => {
             null !== e && ((A.current = e), T(!e.isScrolledToTop()));
         }, []),
-        [V, J] = i.useState(void 0);
+        [z, J] = i.useState(void 0);
     i.useEffect(() => {
         g.Z.hasPermission(k.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }).then(J);
     }, []);
@@ -175,9 +175,9 @@ function W(e) {
             case c.vA.CAMERA:
                 return y;
         }
-    })(P);
+    })(Z);
     if (null == X)
-        return !1 === V
+        return !1 === z
             ? (0, r.jsxs)(f.Text, {
                   className: G.errorMessage,
                   variant: "text-md/normal",
@@ -239,10 +239,10 @@ function W(e) {
                                 e
                             );
                         })(),
-                        value: P,
+                        value: Z,
                         onChange: (e) => {
                             let { value: t } = e;
-                            return Z(t);
+                            return P(t);
                         },
                         className: G.segmentControl,
                         optionClassName: G.segmentControlOption,
@@ -250,14 +250,14 @@ function W(e) {
                 ],
             }),
             (0, r.jsxs)(f.Den, {
-                ref: z,
+                ref: V,
                 className: G.sourceScroller,
                 onScroll: function () {
                     let e = A.current;
                     null != e && T(!e.isScrolledToTop());
                 },
                 children: [
-                    P === c.vA.WINDOW && null != U && (0, r.jsx)(S.Z, { quest: U.quest }),
+                    Z === c.vA.WINDOW && null != U && (0, r.jsx)(S.Z, { quest: U.quest }),
                     (0, r.jsx)(m.Z, {
                         layout: m.Z.Layout.WRAP,
                         columns: 2,
@@ -269,7 +269,7 @@ function W(e) {
         ],
     });
 }
-function z(e) {
+function V(e) {
     let { onSelect: t } = e,
         n = i.useCallback(() => {
             t({
@@ -297,7 +297,7 @@ function z(e) {
         }),
     });
 }
-function V(e) {
+function z(e) {
     let { id: t, name: n, text: l, icon: o, onSelect: a } = e,
         c = i.useCallback(() => {
             a({
@@ -392,11 +392,11 @@ function J(e) {
             j(!v);
         }, [v]),
         y = _
-            ? (0, r.jsx)(z, { onSelect: t })
+            ? (0, r.jsx)(V, { onSelect: t })
             : (0, r.jsxs)("div", {
                   className: G.nativePickerTypes,
                   children: [
-                      (0, r.jsx)(V, {
+                      (0, r.jsx)(z, {
                           onSelect: t,
                           id: x ? "gamescope" : "screen",
                           name: B.intl.string(B.t.R4wpLN),
@@ -404,7 +404,7 @@ function J(e) {
                           icon: f.pzj,
                       }),
                       !x &&
-                          (0, r.jsx)(V, {
+                          (0, r.jsx)(z, {
                               onSelect: t,
                               id: "window",
                               name: B.intl.string(B.t["+SLJCh"]),
@@ -412,7 +412,7 @@ function J(e) {
                               icon: f.GON,
                           }),
                       g
-                          ? (0, r.jsx)(V, {
+                          ? (0, r.jsx)(z, {
                                 onSelect: t,
                                 id: "app",
                                 name: B.intl.string(B.t.ct7AKQ),
@@ -482,10 +482,10 @@ function X(e) {
             b.Z.getUseGamescopeCapture() ||
                 ((0, C.isLinux)() ||
                 ((0, C.isMac)() && a().satisfies(null === p.Z || void 0 === p.Z ? void 0 : p.Z.os.release, M.jR))
-                    ? (0, P.T)(l)
-                    : (0, P.t)());
+                    ? (0, Z.T)(l)
+                    : (0, Z.t)());
         }, [l]),
-        s === Z.Uc.Error
+        s === P.Uc.Error
             ? (0, r.jsx)(f.Text, {
                   className: G.errorMessage,
                   variant: "text-md/normal",

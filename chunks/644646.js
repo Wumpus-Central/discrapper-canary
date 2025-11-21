@@ -13,10 +13,10 @@ var r = n(54381),
     p = n(509212),
     h = n(132581),
     m = n(475595),
-    g = n(18578),
-    E = n(352084),
-    b = n(110560),
-    y = n(78826),
+    g = n(455357),
+    E = n(18578),
+    b = n(352084),
+    y = n(110560),
     O = n(388032),
     v = n(858191);
 function I(e) {
@@ -61,7 +61,7 @@ let T = function (e) {
                         questContentCTA: _.jZ.REWARD_LEARN_MORE,
                         sourceQuestContent: A,
                     }),
-                    (0, b.navigateToQuestHome)({
+                    (0, y.navigateToQuestHome)({
                         fromContent: e.questContent,
                         questId: a.id,
                     }),
@@ -86,16 +86,16 @@ let T = function (e) {
             }
         }, [h, x, L]),
         (t = G
-            ? (0, r.jsx)(y.Fl, {
+            ? (0, r.jsx)(g.Fl, {
                   id: "QuestRewardTile_rewardTileNitro",
                   children: (e) =>
-                      (0, r.jsx)(E.Z, {
+                      (0, r.jsx)(b.Z, {
                           ref: e,
                           className: v.questRewardTileAsset,
                       }),
               })
             : C
-              ? (0, r.jsx)(g.K, {
+              ? (0, r.jsx)(E.K, {
                     showVideo: h,
                     imageAsset:
                         null != M
@@ -114,7 +114,7 @@ let T = function (e) {
                     onLoadComplete: e.onLoadComplete,
                 })
               : x.isAnimated
-                ? (0, r.jsx)(y.Fl, {
+                ? (0, r.jsx)(g.Fl, {
                       id: "QuestRewardTile_rewardTileAnimated",
                       children: (t) => {
                           var n;
@@ -136,7 +136,7 @@ let T = function (e) {
                           });
                       },
                   })
-                : (0, r.jsx)(y.Fl, {
+                : (0, r.jsx)(g.Fl, {
                       id: "QuestRewardTile_rewardTileStatic",
                       children: (t) =>
                           (0, r.jsx)("img", {

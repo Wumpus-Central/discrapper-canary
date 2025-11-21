@@ -18,21 +18,21 @@ var r = n(54381),
     f = n(819640),
     h = n(617136),
     x = n(823289),
-    b = n(509212),
-    _ = n(113434),
-    j = n(569984),
-    v = n(497505),
+    _ = n(313481),
+    b = n(616022),
+    j = n(49436),
+    v = n(509212),
     C = n(685138),
-    y = n(977156),
-    E = n(5881),
-    O = n(602667),
-    S = n(110560),
-    T = n(78826),
-    w = n(667105),
+    y = n(787695),
+    E = n(535584),
+    O = n(455357),
+    S = n(602667),
+    T = n(659302),
+    w = n(110560),
     P = n(693900),
     N = n(130653),
     A = n(941348),
-    R = n(46140),
+    R = n(324805),
     B = n(743294),
     k = n(981631),
     I = n(89855);
@@ -41,9 +41,9 @@ function D(e) {
     return (
         (0, _.qI)({
             mode: t ? R.NH.EXPANDED : R.NH.COLLAPSED,
-            questContent: v.jn.QUEST_BAR_V2,
+            questContent: j.jn.QUEST_BAR_V2,
             questId: n,
-            sourceQuestContent: v.jn.QUEST_BAR_V2,
+            sourceQuestContent: j.jn.QUEST_BAR_V2,
         }),
         null
     );
@@ -64,19 +64,19 @@ function L(e) {
             location: R.dr.QUESTS_BAR,
         }),
         _ = (0, y.Z)({ location: R.dr.QUESTS_BAR }),
-        L = (0, c.e7)([j.Z], () => null != j.Z.questEnrollmentBlockedUntil),
-        { isQuestBarVisible: Q, reason: V } = (0, w.qN)({
+        L = (0, c.e7)([b.Z], () => null != b.Z.questEnrollmentBlockedUntil),
+        { isQuestBarVisible: Q, reason: V } = (0, T.qN)({
             quest: o,
             location: R.dr.QUESTS_BAR,
         }),
         M = (0, c.e7)([p.Z], () => p.Z.useReducedMotion),
         Z = (0, c.e7)([f.Z], () => f.Z.hasLayers()),
         W = s.useRef(null),
-        U = s.useMemo(() => (0, b.q8)(o), [o]),
+        U = s.useMemo(() => (0, v.q8)(o), [o]),
         H = (null == (t = o.userStatus) ? void 0 : t.enrolledAt) != null,
         F = (0, u.Z)(H),
         z = (null == (n = o.userStatus) ? void 0 : n.completedAt) != null,
-        { hasError: G, isLoading: K } = (0, T.d7)(),
+        { hasError: G, isLoading: K } = (0, O.kC)(),
         X = s.useContext(N.T) || (_ && Q && !K && !L),
         Y = s.useRef(X),
         J = s.useRef(-1),
@@ -111,7 +111,7 @@ function L(e) {
         ex = s.useCallback(() => {
             er(!1), eu(!1);
         }, [eu]),
-        eb = s.useCallback(
+        e_ = s.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                 if (es) return;
@@ -120,9 +120,9 @@ function L(e) {
             },
             [ep, es],
         ),
-        e_ = s.useCallback(() => {
-            eb();
-        }, [eb]),
+        eb = s.useCallback(() => {
+            e_();
+        }, [e_]),
         ej = s.useCallback(() => {
             window.clearTimeout(J.current), ee || en || $.current || eu(!1);
         }, [ee, en, eu]),
@@ -132,27 +132,27 @@ function L(e) {
                 questId: o.id,
                 event: k.rMx.QUEST_HOVER,
                 properties: {
-                    content_id: v.jn.QUEST_BAR,
-                    content_name: (0, h._b)(v.jn.QUEST_BAR),
+                    content_id: j.jn.QUEST_BAR,
+                    content_name: (0, h._b)(j.jn.QUEST_BAR),
                     impression_id: null == (e = W.current) ? void 0 : e.getId(),
                 },
                 shouldExtendSession: !0,
-                sourceQuestContent: v.jn.QUEST_BAR_V2,
+                sourceQuestContent: j.jn.QUEST_BAR_V2,
             }),
                 ($.current = !0),
-                eb({ withDelay: !0 });
-        }, [eb, o]),
+                e_({ withDelay: !0 });
+        }, [e_, o]),
         eC = s.useCallback(() => {
             var e;
             (0, h.dA)({
                 questId: o.id,
                 event: k.rMx.QUEST_HOVER_OFF,
                 properties: {
-                    content_id: v.jn.QUEST_BAR,
-                    content_name: (0, h._b)(v.jn.QUEST_BAR),
+                    content_id: j.jn.QUEST_BAR,
+                    content_name: (0, h._b)(j.jn.QUEST_BAR),
                     impression_id: null == (e = W.current) ? void 0 : e.getId(),
                 },
-                sourceQuestContent: v.jn.QUEST_BAR_V2,
+                sourceQuestContent: j.jn.QUEST_BAR_V2,
             }),
                 ($.current = !1),
                 ej();
@@ -202,7 +202,7 @@ function L(e) {
         },
     });
     s.useEffect(() => {
-        U && (0, S.loadVideoQuestModal)();
+        U && (0, w.loadVideoQuestModal)();
     }, [U]),
         s.useEffect(() => {
             if (G) {
@@ -211,12 +211,12 @@ function L(e) {
                     questId: o.id,
                     event: k.rMx.QUEST_CONTENT_RENDERING_FAILURE,
                     properties: {
-                        content_id: v.jn.QUEST_BAR,
-                        content_name: (0, h._b)(v.jn.QUEST_BAR),
+                        content_id: j.jn.QUEST_BAR,
+                        content_name: (0, h._b)(j.jn.QUEST_BAR),
                         reason: "asset_loading_error",
                         impression_id: null == (e = W.current) ? void 0 : e.getId(),
                     },
-                    sourceQuestContent: v.jn.QUEST_BAR_V2,
+                    sourceQuestContent: j.jn.QUEST_BAR_V2,
                 }),
                     g.Z.increment({
                         name: l.V.QUEST_CONTENT_RENDERING_FAILURE,
@@ -231,12 +231,12 @@ function L(e) {
                     questId: o.id,
                     event: k.rMx.QUEST_CONTENT_RENDERING_FAILURE,
                     properties: {
-                        content_id: v.jn.QUEST_BAR,
-                        content_name: (0, h._b)(v.jn.QUEST_BAR),
+                        content_id: j.jn.QUEST_BAR,
+                        content_name: (0, h._b)(j.jn.QUEST_BAR),
                         reason: "not_eligible_for_quest",
                         impression_id: null == (e = W.current) ? void 0 : e.getId(),
                     },
-                    sourceQuestContent: v.jn.QUEST_BAR_V2,
+                    sourceQuestContent: j.jn.QUEST_BAR_V2,
                 });
             }
         }, [_, o.id]),
@@ -247,12 +247,12 @@ function L(e) {
                     questId: o.id,
                     event: k.rMx.QUEST_CONTENT_RENDERING_FAILURE,
                     properties: {
-                        content_id: v.jn.QUEST_BAR,
-                        content_name: (0, h._b)(v.jn.QUEST_BAR),
+                        content_id: j.jn.QUEST_BAR,
+                        content_name: (0, h._b)(j.jn.QUEST_BAR),
                         reason: V,
                         impression_id: null == (e = W.current) ? void 0 : e.getId(),
                     },
-                    sourceQuestContent: v.jn.QUEST_BAR_V2,
+                    sourceQuestContent: j.jn.QUEST_BAR_V2,
                 });
             }
         }, [X, el, K, o.id, V]),
@@ -267,11 +267,11 @@ function L(e) {
     if (!_ || (!X && el && !K) || G)
         return G ? m.log("Not rendered due to asset error") : _ || m.log("Not rendered due to ineligibility"), null;
     let eN = eP + 78 * !!z;
-    return (0, r.jsx)(O.A, {
+    return (0, r.jsx)(S.A, {
         questOrQuests: o,
-        questContent: v.jn.QUEST_BAR_V2,
+        questContent: j.jn.QUEST_BAR_V2,
         overrideVisibility: !Z && X,
-        sourceQuestContent: v.jn.QUEST_BAR_V2,
+        sourceQuestContent: j.jn.QUEST_BAR_V2,
         children: (e, t) => (
             (W.current = t.current),
             (0, r.jsxs)("div", {
@@ -291,7 +291,7 @@ function L(e) {
                         "aria-hidden": !X,
                         onMouseLeave: eC,
                         onMouseEnter: ev,
-                        onFocus: e_,
+                        onFocus: eb,
                         onBlur: ej,
                         className: a()(I.wrapper, {
                             [I.wrapperInvisible]: !X,
@@ -343,11 +343,11 @@ function L(e) {
 let Q =
     12633 == n.j
         ? function () {
-              let e = (0, w.DH)();
+              let e = (0, T.DH)();
               return null == e
                   ? null
                   : (0, r.jsx)(
-                        T.p,
+                        O.x8,
                         {
                             source: R.dr.QUESTS_BAR,
                             questId: e.id,

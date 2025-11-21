@@ -1,4 +1,4 @@
-t.d(n, { default: () => E }), t(388685);
+t.d(n, { default: () => P }), t(388685);
 var r = t(54381),
     i = t(473749),
     a = t(979554),
@@ -11,22 +11,22 @@ var r = t(54381),
     m = t(164946),
     p = t(25990),
     f = t(594174),
-    g = t(960048),
-    x = t(22095),
-    C = t(509212),
-    v = t(113434),
-    h = t(497505),
+    x = t(960048),
+    g = t(22095),
+    C = t(313481),
+    h = t(49436),
+    v = t(509212),
     j = t(475595),
     _ = t(515108),
     y = t(291967),
-    N = t(46140),
+    N = t(324805),
     b = t(388032),
     w = t(129034);
 function A(e) {
     var n;
     let { quest: t, avatarDeco: i, onUseNow: a, user: l, mode: s } = e,
         d = (0, j.fh)(t, j.eC.REWARD).url,
-        u = (0, v.Qy)(t.config),
+        u = (0, C.Qy)(t.config),
         m =
             (null == (n = l.avatarDecoration) ? void 0 : n.skuId) != null &&
             l.avatarDecoration.skuId === (null == i ? void 0 : i.skuId);
@@ -71,11 +71,11 @@ function A(e) {
         ],
     });
 }
-function E(e) {
+function P(e) {
     var n, t, o;
-    let { initialQuest: c, onClose: j, transitionState: b, preview: w, location: E, sourceQuestContent: P } = e,
-        D = null != (t = (0, v.B4)(c.id)) ? t : c,
-        T = i.useMemo(() => (0, C.xn)(D.config), [D]),
+    let { initialQuest: c, onClose: j, transitionState: b, preview: w, location: P, sourceQuestContent: D } = e,
+        E = null != (t = (0, C.B4)(c.id)) ? t : c,
+        T = i.useMemo(() => (0, v.xn)(E.config), [E]),
         O = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
         [L, R] = (function (e) {
             let { product: n, isFetching: t } = (0, d.T)(e),
@@ -86,7 +86,7 @@ function E(e) {
                 }, [n, t]),
                 l = async () => {
                     if (null == r)
-                        return g.Z.addBreadcrumb({ message: "Error saving avatar decoration; it is null" }), !1;
+                        return x.Z.addBreadcrumb({ message: "Error saving avatar decoration; it is null" }), !1;
                     (0, u.PO)(r);
                     let e = p.Z.getAllPending(),
                         n = (0, m.ED)(e),
@@ -95,27 +95,27 @@ function E(e) {
                 };
             return [r, l];
         })(null != (o = null == T ? void 0 : T.skuId) ? o : null),
-        I = (null == (n = D.userStatus) ? void 0 : n.claimedAt) != null,
-        S = !w && !I,
-        [k, M] = i.useState(S ? "loading" : "claimed");
+        I = (null == (n = E.userStatus) ? void 0 : n.claimedAt) != null,
+        k = !w && !I,
+        [S, M] = i.useState(k ? "loading" : "claimed");
     i.useEffect(() => {
-        S &&
-            (0, x.QB)(D.id, h.y$.CROSS_PLATFORM, E)
+        k &&
+            (0, g.QB)(E.id, h.y$.CROSS_PLATFORM, P)
                 .then(() => M("claimed"))
                 .catch(() => M("error"));
-    }, [D.id, E, S]);
+    }, [E.id, P, k]);
     let Z = !0 === w && null === L && (null == T ? void 0 : T.skuId) !== "",
         B = null == O,
-        W = B || (null == L && !0 !== w) || Z || "loading" === k,
-        q = "error" === k || null == T,
-        z = async () => {
+        W = B || (null == L && !0 !== w) || Z || "loading" === S,
+        q = "error" === S || null == T,
+        G = async () => {
             M("applying"), M((await R()) ? "applied" : "claimed");
         };
     return (0, r.jsx)(_.Z, {
         onClose: j,
         transitionState: b,
-        quest: D,
-        sourceQuestContent: P,
+        quest: E,
+        sourceQuestContent: D,
         location: N.dr.COLLECTIBLE_REWARD_MODAL,
         isRewardContentLoading: W,
         rewardContentHasError: q,
@@ -125,11 +125,11 @@ function E(e) {
                 : (0, r.jsx)(y.Z, {
                       rewardName: T.messages.name,
                       children: (0, r.jsx)(A, {
-                          quest: D,
+                          quest: E,
                           avatarDeco: L,
                           user: O,
-                          mode: k,
-                          onUseNow: z,
+                          mode: S,
+                          onUseNow: G,
                       }),
                   }),
     });

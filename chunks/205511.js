@@ -10,12 +10,12 @@ var r = n(54381),
     u = n(553795),
     p = n(617136),
     m = n(915750),
-    g = n(111382),
-    f = n(509212),
-    h = n(113434),
-    x = n(497505),
-    b = n(667105),
-    _ = n(585857),
+    g = n(313481),
+    f = n(111382),
+    h = n(49436),
+    x = n(509212),
+    _ = n(659302),
+    b = n(585857),
     j = n(795057),
     v = n(388032),
     C = n(19672);
@@ -29,23 +29,23 @@ function y(e) {
 }
 function E(e) {
     let { quest: t, useReducedMotion: n } = e,
-        o = (0, g.n)(),
-        l = (0, b.k3)(t.id, x.jn.QUEST_BAR_V2, x.jn.QUEST_BAR_V2),
-        d = (0, b.g2)({ useReducedMotion: n }),
-        _ = (0, p.O5)(),
+        o = (0, f.n)(),
+        l = (0, _.k3)(t.id, h.jn.QUEST_BAR_V2, h.jn.QUEST_BAR_V2),
+        d = (0, _.g2)({ useReducedMotion: n }),
+        b = (0, p.O5)(),
         j = (0, m.aM)(),
         {
             errorHints: E,
             startingConsoleQuest: O,
             startConsoleQuest: S,
-        } = (0, h.GI)({
+        } = (0, g.GI)({
             questId: t.id,
             beforeRequest: () => {
-                _({
+                b({
                     questId: t.id,
-                    questContent: x.jn.QUEST_BAR_V2,
+                    questContent: h.jn.QUEST_BAR_V2,
                     questContentCTA: p.jZ.DEFIBRILLATOR,
-                    sourceQuestContent: x.jn.QUEST_BAR_V2,
+                    sourceQuestContent: h.jn.QUEST_BAR_V2,
                 }),
                     d.startAnimation();
             },
@@ -56,10 +56,10 @@ function E(e) {
                 n = t.config.messages.gameTitle;
             return {
                 header: e
-                    ? (0, f.Pb)(t)
+                    ? (0, x.Pb)(t)
                         ? v.intl.string(v.t.N33EuL)
                         : v.intl.formatToPlainString(v.t["28Ql27"], { gameTitle: n })
-                    : (0, f.Pb)(t)
+                    : (0, x.Pb)(t)
                       ? v.intl.string(v.t.YstzGO)
                       : v.intl.formatToPlainString(v.t.gX0Qcx, { gameTitle: n }),
                 renderBody: e
@@ -68,24 +68,24 @@ function E(e) {
                               children: E.map((e, n) => {
                                   if (e.type === i.K.EXPIRED_CREDENTIAL && o) {
                                       let s = u.Z.getAccount(e.connected_account_id, e.connected_account_type),
-                                          o = (0, f.Uy)(e),
-                                          a = (0, f._j)(e);
+                                          o = (0, x.Uy)(e),
+                                          a = (0, x._j)(e);
                                       return (0, r.jsx)(
                                           y,
                                           {
                                               children: v.intl.format(o, {
                                                   account_name: null == s ? void 0 : s.name,
                                                   onClick: () => {
-                                                      (0, f.fY)(
+                                                      (0, x.fY)(
                                                           {
                                                               quest: t,
                                                               platformType: a,
                                                           },
                                                           {
-                                                              content: x.jn.QUEST_BAR,
+                                                              content: h.jn.QUEST_BAR,
                                                               ctaContent: p.jZ.DEFIBRILLATOR_RECONNECT_CONSOLE,
                                                               impressionId: j,
-                                                              sourceQuestContent: x.jn.QUEST_BAR_V2,
+                                                              sourceQuestContent: h.jn.QUEST_BAR_V2,
                                                           },
                                                       );
                                                   },
@@ -102,7 +102,7 @@ function E(e) {
                               className: C.microphoneUnitBodyText,
                               color: "text-muted",
                               variant: "text-xxs/normal",
-                              children: (0, f.Pb)(t)
+                              children: (0, x.Pb)(t)
                                   ? v.intl.string(v.t.bUyEZZ)
                                   : v.intl.format(v.t.GXqvC1, { gameTitle: n }),
                           }),
@@ -142,9 +142,9 @@ function E(e) {
 let O = function (e) {
     let { quest: t, taskDetails: n } = e,
         o = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        a = (0, h.z6)(),
+        a = (0, g.z6)(),
         i = s.useMemo(
-            () => (0, f._4)(t).filter((e) => a.xboxAndPlaystationAccounts.find((t) => t.type === e)),
+            () => (0, x._4)(t).filter((e) => a.xboxAndPlaystationAccounts.find((t) => t.type === e)),
             [a.xboxAndPlaystationAccounts, t],
         ),
         {
@@ -155,7 +155,7 @@ let O = function (e) {
         } = s.useMemo(() => {
             var e;
             let s = i.length > 0,
-                o = s && (0, f.Bz)(t),
+                o = s && (0, x.Bz)(t),
                 l = t.config.messages.gameTitle,
                 c = (null == (e = t.userStatus) ? void 0 : e.completedAt) != null;
             return {
@@ -164,7 +164,7 @@ let O = function (e) {
                         renderContent: () => {
                             var e, n;
                             return (0, r.jsx)(
-                                _.Q,
+                                b.Q,
                                 ((e = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
@@ -193,7 +193,7 @@ let O = function (e) {
                                 (n = n =
                                     {
                                         quest: t,
-                                        sourceQuestContent: x.jn.QUEST_BAR_V2,
+                                        sourceQuestContent: h.jn.QUEST_BAR_V2,
                                     }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
@@ -215,7 +215,7 @@ let O = function (e) {
                     {
                         renderContent: () =>
                             (0, r.jsx)(j.y3, {
-                                children: (0, f.Pb)(t)
+                                children: (0, x.Pb)(t)
                                     ? v.intl.string(v.t["5tXqFe"])
                                     : v.intl.formatToPlainString(v.t["+8JB6Y"], { gameTitle: l }),
                             }),

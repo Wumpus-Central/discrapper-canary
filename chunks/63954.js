@@ -14,23 +14,23 @@ var r = n(54381),
     d = n(820827),
     u = n(458708),
     p = n(481060),
-    m = n(509212),
-    g = n(497505),
-    f = n(210724),
-    h = n(130653),
-    x = n(415104),
-    b = n(478977),
-    _ = n(456799),
-    j = n(210851),
-    v = n(602683),
-    C = n(916028),
-    y = n(749912),
-    E = n(815183),
-    O = n(899457),
-    S = n(110560),
-    T = n(78826),
-    w = n(134483),
-    P = n(683650),
+    m = n(49436),
+    g = n(509212),
+    f = n(455357),
+    h = n(210724),
+    x = n(130653),
+    _ = n(801604),
+    b = n(415104),
+    j = n(478977),
+    v = n(456799),
+    C = n(210851),
+    y = n(602683),
+    E = n(916028),
+    O = n(749912),
+    S = n(815183),
+    T = n(899457),
+    w = n(110560),
+    P = n(429999),
     N = n(752367),
     A = n(70956),
     R = n(188764);
@@ -89,7 +89,7 @@ function Q(e) {
     return {
         code: "PREVIEW-MODE-CODE",
         tier: 0,
-        platform: g.y$.CROSS_PLATFORM,
+        platform: m.y$.CROSS_PLATFORM,
         userId: "123",
         questId: e.id,
         claimedAt: null != (n = null == (t = e.userStatus) ? void 0 : t.claimedAt) ? n : "",
@@ -187,7 +187,7 @@ function W() {
         H = s.useCallback((e) => {
             U(I(k({}, e), { preview: !0 }));
         }, []),
-        [F, z] = s.useState(O.a.UNENROLLED),
+        [F, z] = s.useState(T.a.UNENROLLED),
         [G, K] = s.useState(!1),
         [X, Y] = s.useState(!1),
         [J, $] = s.useState(null),
@@ -301,14 +301,14 @@ function W() {
         H(I(k({}, W), { config: I(k({}, W.config), { colors: I(k({}, W.config.colors), { [e]: t }) }) }));
     }
     function ei() {
-        (0, m.Xv)(W.config)
-            ? (0, S.openQuestCollectibleRewardModal)(W, g.jn.GIFT_INVENTORY_FOR_YOU, g.jn.INTERNAL_PREVIEW_TOOL, !0)
-            : (0, S.openQuestsRewardCodeModal)({
+        (0, g.Xv)(W.config)
+            ? (0, w.openQuestCollectibleRewardModal)(W, m.jn.GIFT_INVENTORY_FOR_YOU, m.jn.INTERNAL_PREVIEW_TOOL, !0)
+            : (0, w.openQuestsRewardCodeModal)({
                   quest: W,
-                  questContent: g.jn.GIFT_INVENTORY_FOR_YOU,
+                  questContent: m.jn.GIFT_INVENTORY_FOR_YOU,
                   preview: !0,
                   previewQuest: W,
-                  sourceQuestContent: g.jn.INTERNAL_PREVIEW_TOOL,
+                  sourceQuestContent: m.jn.INTERNAL_PREVIEW_TOOL,
               });
     }
     let el = s.useMemo(() => {
@@ -328,27 +328,27 @@ function W() {
             }),
             (0, r.jsx)("div", {
                 className: R.fields,
-                children: (0, r.jsx)(C.Z, {
+                children: (0, r.jsx)(E.Z, {
                     onSelect: function (e) {
                         $(e),
                             null != e &&
                                 (z(
                                     (function (e) {
-                                        if (null == e.userStatus) return O.a.UNENROLLED;
-                                        if (null != e.userStatus.claimedAt) return O.a.CLAIMED;
-                                        if (null != e.userStatus.completedAt) return O.a.COMPLETED_100;
-                                        let t = (0, m.il)(e),
+                                        if (null == e.userStatus) return T.a.UNENROLLED;
+                                        if (null != e.userStatus.claimedAt) return T.a.CLAIMED;
+                                        if (null != e.userStatus.completedAt) return T.a.COMPLETED_100;
+                                        let t = (0, g.il)(e),
                                             n = t.progressSeconds,
                                             r = t.targetSeconds;
                                         return n / r >= 1
-                                            ? O.a.COMPLETED_100
+                                            ? T.a.COMPLETED_100
                                             : n / r >= 0.75
-                                              ? O.a.COMPLETED_75
+                                              ? T.a.COMPLETED_75
                                               : n / r >= 0.5
-                                                ? O.a.COMPLETED_50
+                                                ? T.a.COMPLETED_50
                                                 : n / r >= 0.25
-                                                  ? O.a.COMPLETED_25
-                                                  : O.a.ENROLLED;
+                                                  ? T.a.COMPLETED_25
+                                                  : T.a.ENROLLED;
                                     })(e),
                                 ),
                                 H(e));
@@ -363,7 +363,7 @@ function W() {
             }),
             (0, r.jsx)("div", {
                 className: R.fields,
-                children: (0, r.jsx)(y.Z, {
+                children: (0, r.jsx)(O.Z, {
                     taskDuration: el,
                     taskConfigV2: W.config.taskConfigV2,
                     onSelect: function (e) {
@@ -379,26 +379,26 @@ function W() {
             (0, r.jsxs)("div", {
                 className: R.fields,
                 children: [
-                    (0, r.jsx)(v.Z, {
+                    (0, r.jsx)(y.Z, {
                         title: "Quest Name",
                         assetKey: "questName",
                         onMessageChange: es,
                         initialValue: W.config.messages.questName,
                     }),
-                    (0, r.jsx)(v.Z, {
+                    (0, r.jsx)(y.Z, {
                         title: "Game Title",
                         assetKey: "gameTitle",
                         onMessageChange: es,
                         initialValue: W.config.messages.gameTitle,
                     }),
-                    (0, r.jsx)(v.Z, {
+                    (0, r.jsx)(y.Z, {
                         title: "Game Publisher",
                         assetKey: "gamePublisher",
                         onMessageChange: es,
                         initialValue: W.config.messages.gamePublisher,
                     }),
                     ec &&
-                        (0, r.jsx)(v.Z, {
+                        (0, r.jsx)(y.Z, {
                             title: "Video Title",
                             assetKey: "videoTitle",
                             onMessageChange: function (e, t) {
@@ -428,42 +428,42 @@ function W() {
             (0, r.jsxs)("div", {
                 className: R.fields,
                 children: [
-                    (0, r.jsx)(j.Z, {
+                    (0, r.jsx)(C.Z, {
                         title: "Hero",
                         assetKey: "hero",
                         onFileChange: et,
                         filters: L,
                         initialValue: W.config.assets.hero,
                     }),
-                    (0, r.jsx)(j.Z, {
+                    (0, r.jsx)(C.Z, {
                         title: "Hero Video (optional)",
                         assetKey: "heroVideo",
                         onFileChange: et,
                         filters: L,
                         initialValue: null != (B = W.config.assets.heroVideo) ? B : void 0,
                     }),
-                    (0, r.jsx)(j.Z, {
+                    (0, r.jsx)(C.Z, {
                         title: "Quest Bar Hero",
                         assetKey: "questBarHero",
                         onFileChange: et,
                         filters: L,
                         initialValue: W.config.assets.questBarHero,
                     }),
-                    (0, r.jsx)(j.Z, {
+                    (0, r.jsx)(C.Z, {
                         title: "Quest Bar Hero Video (optional)",
                         assetKey: "questBarHeroVideo",
                         onFileChange: et,
                         filters: L,
                         initialValue: null != (Q = W.config.assets.questBarHeroVideo) ? Q : void 0,
                     }),
-                    (0, r.jsx)(j.Z, {
+                    (0, r.jsx)(C.Z, {
                         title: "Game Tile",
                         assetKey: "gameTile",
                         onFileChange: et,
                         filters: [...q, "svg"],
                         initialValue: W.config.assets.gameTile,
                     }),
-                    (0, r.jsx)(j.Z, {
+                    (0, r.jsx)(C.Z, {
                         title: "Logotype",
                         assetKey: "logotype",
                         onFileChange: et,
@@ -473,28 +473,28 @@ function W() {
                     ec &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(j.Z, {
+                                (0, r.jsx)(C.Z, {
                                     title: "Quest Video",
                                     assetKey: "videoPlayerVideo",
                                     onFileChange: en,
                                     filters: L,
                                     initialValue: null == ed ? void 0 : ed.assets.video.url,
                                 }),
-                                (0, r.jsx)(j.Z, {
+                                (0, r.jsx)(C.Z, {
                                     title: "Quest Video (Low Resolution)",
                                     assetKey: "videoPlayerVideoLowRes",
                                     onFileChange: en,
                                     filters: L,
                                     initialValue: null == ed || null == (e = ed.assets.videoLowRes) ? void 0 : e.url,
                                 }),
-                                (0, r.jsx)(j.Z, {
+                                (0, r.jsx)(C.Z, {
                                     title: "Video Player Thumbnail (optional)",
                                     assetKey: "videoPlayerThumbnail",
                                     onFileChange: en,
                                     filters: q,
                                     initialValue: null == ed ? void 0 : ed.assets.video.thumbnail,
                                 }),
-                                (0, r.jsx)(j.Z, {
+                                (0, r.jsx)(C.Z, {
                                     title: "Quest Bar Preview Video (optional)",
                                     assetKey: "questBarPreviewVideo",
                                     onFileChange: er,
@@ -502,7 +502,7 @@ function W() {
                                     initialValue:
                                         null == (t = W.config.videoMetadata) ? void 0 : t.assets.questBarPreviewVideo,
                                 }),
-                                (0, r.jsx)(j.Z, {
+                                (0, r.jsx)(C.Z, {
                                     title: "Quest Home Video (optional)",
                                     assetKey: "questHomeVideo",
                                     onFileChange: er,
@@ -527,20 +527,20 @@ function W() {
                             (0, r.jsxs)("div", {
                                 className: R.fields,
                                 children: [
-                                    (0, r.jsx)(v.Z, {
+                                    (0, r.jsx)(y.Z, {
                                         title: "Name",
                                         assetKey: "name",
                                         onMessageChange: (e, n) => eo(e, n, t),
                                         initialValue: e.messages.name,
                                     }),
-                                    (0, r.jsx)(v.Z, {
+                                    (0, r.jsx)(y.Z, {
                                         title: "Name With Article",
                                         assetKey: "nameWithArticle",
                                         onMessageChange: (e, n) => eo(e, n, t),
                                         initialValue: e.messages.nameWithArticle,
                                     }),
                                     e.type !== c.w.VIRTUAL_CURRENCY &&
-                                        (0, r.jsx)(j.Z, {
+                                        (0, r.jsx)(C.Z, {
                                             title: "Asset",
                                             assetKey: "asset",
                                             onFileChange: (e, n) =>
@@ -613,13 +613,13 @@ function W() {
                         className: R.fields,
                         style: { marginBottom: 0 },
                         children: [
-                            (0, r.jsx)(b.Z, {
+                            (0, r.jsx)(j.Z, {
                                 title: "Primary",
                                 colorKey: "primary",
                                 onChange: ea,
                                 value: W.config.colors.primary,
                             }),
-                            (0, r.jsx)(b.Z, {
+                            (0, r.jsx)(j.Z, {
                                 title: "Secondary",
                                 colorKey: "secondary",
                                 onChange: ea,
@@ -629,18 +629,18 @@ function W() {
                     }),
                     (0, r.jsx)("div", {
                         className: R.fields,
-                        children: (0, r.jsx)(E.Z, {}),
+                        children: (0, r.jsx)(S.Z, {}),
                     }),
-                    (0, r.jsx)(O.Z, {
+                    (0, r.jsx)(T.Z, {
                         onChange: function (e) {
                             switch ((z(e), e)) {
-                                case O.a.UNENROLLED:
+                                case T.a.UNENROLLED:
                                     H(I(k({}, W), { userStatus: null }));
                                     break;
-                                case O.a.ENROLLED:
+                                case T.a.ENROLLED:
                                     H(I(k({}, W), { userStatus: V({ enrolledAt: new Date().toISOString() }) }));
                                     break;
-                                case O.a.COMPLETED_25:
+                                case T.a.COMPLETED_25:
                                     H(
                                         I(k({}, W), {
                                             userStatus: V({
@@ -650,7 +650,7 @@ function W() {
                                         }),
                                     );
                                     break;
-                                case O.a.COMPLETED_50:
+                                case T.a.COMPLETED_50:
                                     H(
                                         I(k({}, W), {
                                             userStatus: V({
@@ -660,7 +660,7 @@ function W() {
                                         }),
                                     );
                                     break;
-                                case O.a.COMPLETED_75:
+                                case T.a.COMPLETED_75:
                                     H(
                                         I(k({}, W), {
                                             userStatus: V({
@@ -670,7 +670,7 @@ function W() {
                                         }),
                                     );
                                     break;
-                                case O.a.COMPLETED_100:
+                                case T.a.COMPLETED_100:
                                     H(
                                         I(k({}, W), {
                                             userStatus: V({
@@ -681,7 +681,7 @@ function W() {
                                         }),
                                     );
                                     break;
-                                case O.a.CLAIMED:
+                                case T.a.CLAIMED:
                                     H(
                                         I(k({}, W), {
                                             userStatus: V({
@@ -706,7 +706,7 @@ function W() {
             (0, r.jsxs)("div", {
                 className: R.componentPreviews,
                 children: [
-                    (0, r.jsxs)(_.Z, {
+                    (0, r.jsxs)(v.Z, {
                         withBorder: !0,
                         children: [
                             (0, r.jsx)(p.Heading, {
@@ -724,40 +724,40 @@ function W() {
                                         }),
                                     (0, r.jsx)("div", {
                                         className: R.questBarPreview,
-                                        children: (0, r.jsx)(T.p, {
+                                        children: (0, r.jsx)(f.x8, {
                                             isPreview: !0,
                                             source: "preview",
                                             questId: "0",
-                                            children: (0, r.jsx)(h.Z, { children: (0, r.jsx)(f.P, { quest: W }) }),
+                                            children: (0, r.jsx)(x.Z, { children: (0, r.jsx)(h.P, { quest: W }) }),
                                         }),
                                     }),
                                 ],
                             }),
                         ],
                     }),
-                    (0, r.jsxs)(_.Z, {
+                    (0, r.jsxs)(v.Z, {
                         withBorder: !0,
                         children: [
                             (0, r.jsx)(p.Heading, {
                                 variant: "heading-sm/semibold",
                                 children: "Quest Home Card",
                             }),
-                            (0, r.jsx)(T.p, {
+                            (0, r.jsx)(f.x8, {
                                 isPreview: !0,
                                 source: "preview",
                                 questId: "0",
-                                children: (0, r.jsx)(x.Z, {
+                                children: (0, r.jsx)(b.Z, {
                                     quest: W,
                                     className: R.questTile,
-                                    questContent: g.jn.QUEST_HOME_DESKTOP,
+                                    questContent: m.jn.QUEST_HOME_DESKTOP,
                                     contentPosition: 0,
                                     rowIndex: 0,
-                                    sourceQuestContent: g.jn.INTERNAL_PREVIEW_TOOL,
+                                    sourceQuestContent: m.jn.INTERNAL_PREVIEW_TOOL,
                                 }),
                             }),
                         ],
                     }),
-                    (0, r.jsxs)(_.Z, {
+                    (0, r.jsxs)(v.Z, {
                         withBorder: !0,
                         children: [
                             (0, r.jsx)(p.Heading, {
@@ -773,13 +773,13 @@ function W() {
                                 }),
                             (0, r.jsx)("div", {
                                 className: R.questBarPreviewWrapper,
-                                children: (0, r.jsx)(T.p, {
+                                children: (0, r.jsx)(f.x8, {
                                     isPreview: !0,
                                     source: "preview",
                                     questId: "0",
                                     children: (0, r.jsx)("div", {
                                         className: R.questChannelCallHeaderPreview,
-                                        children: (0, r.jsx)(w.Z, {
+                                        children: (0, r.jsx)(_.Z, {
                                             channelId: "123",
                                             previewQuest: W,
                                             isParticipatingOverride: G,
@@ -799,7 +799,7 @@ function W() {
                             },
                         }),
                     }),
-                    (0, r.jsxs)(_.Z, {
+                    (0, r.jsxs)(v.Z, {
                         withBorder: !0,
                         children: [
                             (0, r.jsx)(p.Heading, {
@@ -807,13 +807,13 @@ function W() {
                                 children: "Quest Card Embed",
                             }),
                             X
-                                ? (0, r.jsx)(P.o, { questId: W.id })
+                                ? (0, r.jsx)(P.W, { questId: W.id })
                                 : (0, r.jsx)(
                                       N.X,
                                       {
                                           quest: W,
-                                          location: g.jn.QUESTS_EMBED,
-                                          sourceQuestContent: g.jn.INTERNAL_PREVIEW_TOOL,
+                                          location: m.jn.QUESTS_EMBED,
+                                          sourceQuestContent: m.jn.INTERNAL_PREVIEW_TOOL,
                                       },
                                       W.id,
                                   ),
@@ -828,7 +828,7 @@ function W() {
                         }),
                     }),
                     ec &&
-                        (0, r.jsxs)(_.Z, {
+                        (0, r.jsxs)(v.Z, {
                             withBorder: !0,
                             allowClicks: !0,
                             children: [
@@ -856,7 +856,7 @@ function W() {
                                                         questId: null != (n = W.id) ? n : "fake-quest-id",
                                                         overrideQuest: W,
                                                         autoplay: !0,
-                                                        sourceQuestContent: g.jn.INTERNAL_PREVIEW_TOOL,
+                                                        sourceQuestContent: m.jn.INTERNAL_PREVIEW_TOOL,
                                                     }),
                                                 );
                                             };

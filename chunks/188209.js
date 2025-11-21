@@ -15,16 +15,16 @@ var r = n(54381),
     h = n(572004),
     j = n(624138),
     x = n(617136),
-    y = n(509212),
-    g = n(113434),
-    v = n(569984),
-    b = n(497505),
+    y = n(313481),
+    g = n(616022),
+    v = n(49436),
+    b = n(509212),
     _ = n(804127),
     w = n(602667),
     O = n(644646),
     N = n(515108),
     P = n(291967),
-    E = n(46140),
+    E = n(324805),
     T = n(388032),
     A = n(238905);
 function I(e) {
@@ -64,7 +64,7 @@ function D(e) {
         } = e,
         h =
             null !=
-            (t = (0, y.C1)({
+            (t = (0, b.C1)({
                 quest: n,
                 rewardCode: u,
                 selectedPlatformType: d,
@@ -75,7 +75,7 @@ function D(e) {
             var e;
             let t =
                 null ==
-                (e = (0, y.o9)({
+                (e = (0, b.o9)({
                     quest: n,
                     idx: 0,
                 }))
@@ -85,7 +85,7 @@ function D(e) {
             let r = null == u ? void 0 : u.code;
             return (0, j.Ew)(r) ? t : t.replace(E.Dp, encodeURIComponent(r));
         }, [n, null == u ? void 0 : u.code]),
-        g = (0, _.In)({
+        y = (0, _.In)({
             quest: n,
             questContent: o,
             questContentPosition: s,
@@ -102,7 +102,7 @@ function D(e) {
                     ? {
                           variant: "primary",
                           text: T.intl.string(T.t["+zx47d"]),
-                          onClick: g,
+                          onClick: y,
                       }
                     : {
                           variant: "primary",
@@ -189,17 +189,17 @@ function q(e) {
             sourceQuestContent: C,
             questContentPosition: f,
         } = e,
-        h = null != (t = (0, g.B4)(n.id)) ? t : n,
-        j = (0, y.zG)(h.config),
-        x = b.jn.REWARD_MODAL,
+        h = null != (t = (0, y.B4)(n.id)) ? t : n,
+        j = (0, b.zG)(h.config),
+        x = v.jn.REWARD_MODAL,
         {
             questStoreRewardCode: O,
             isFetchingRewardCode: T,
             isClaimingReward: A,
-        } = (0, o.cj)([v.Z], () => ({
-            questStoreRewardCode: v.Z.getRewardCode(h.id),
-            isFetchingRewardCode: v.Z.isFetchingRewardCode(h.id),
-            isClaimingReward: v.Z.isClaimingReward(h.id),
+        } = (0, o.cj)([g.Z], () => ({
+            questStoreRewardCode: g.Z.getRewardCode(h.id),
+            isFetchingRewardCode: g.Z.isFetchingRewardCode(h.id),
+            isClaimingReward: g.Z.isClaimingReward(h.id),
         })),
         I = !0 === c ? (0, p.b)(h) : O,
         { hasError: q, setHasError: Z } = (0, _.uL)({
@@ -236,7 +236,7 @@ function q(e) {
         rewardContent: k
             ? null
             : (0, r.jsx)(P.Z, {
-                  rewardName: (0, y.w8)(h.config),
+                  rewardName: (0, b.w8)(h.config),
                   children: (0, r.jsx)(R, {
                       quest: h,
                       questContent: x,

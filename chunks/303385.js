@@ -5,10 +5,10 @@ var s = n(120356),
     o = n.n(s),
     a = n(790519),
     i = n(481060),
-    l = n(497505),
+    l = n(49436),
     c = n(685138),
     d = n(644646),
-    u = n(46140),
+    u = n(324805),
     p = n(388032),
     m = n(895758);
 let g = (e) => {
@@ -18,12 +18,12 @@ let g = (e) => {
             questConfig: t.config,
         }),
         x = null == h ? void 0 : h.progressBlur,
-        b = (null == h ? void 0 : h.label1) || (null == h ? void 0 : h.label2),
-        _ = null == h ? void 0 : h.shineWipe,
+        _ = (null == h ? void 0 : h.label1) || (null == h ? void 0 : h.label2),
+        b = null == h ? void 0 : h.shineWipe,
         j = x ? 70 : 48,
         v = x ? 12 : 8,
         C = x ? -74 : -48,
-        y = x ? 0 : b ? -4 : 6;
+        y = x ? 0 : _ ? -4 : 6;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(a.animated.div, {
@@ -55,7 +55,7 @@ let g = (e) => {
                     location: u.dr.QUESTS_BAR,
                     autoplay: s && !f,
                     sourceQuestContent: l.jn.QUEST_BAR_V2,
-                    showShine: !_,
+                    showShine: !b,
                     style: {
                         width: j,
                         height: j,
@@ -67,7 +67,7 @@ let g = (e) => {
             (0, r.jsxs)(a.animated.div, {
                 className: o()(m.rewardHighlightLogoCTA, {
                     [m.rewardHighlightLogoCTAHeightBoost]: x,
-                    [m.rewardHighlightLogoCTALabel]: b,
+                    [m.rewardHighlightLogoCTALabel]: _,
                 }),
                 style: {
                     height: x ? j : void 0,
@@ -87,7 +87,7 @@ let g = (e) => {
                 },
                 children: [
                     (0, r.jsx)("div", {
-                        className: o()({ [m.partnerBranding]: !x && !b }),
+                        className: o()({ [m.partnerBranding]: !x && !_ }),
                         children: g,
                     }),
                     x &&
@@ -101,11 +101,11 @@ let g = (e) => {
                             },
                         }),
                     (0, r.jsx)(a.animated.div, {
-                        className: o()(m.rewardHighlightCTA, { [m.rewardHighlightCTALabel]: b }),
+                        className: o()(m.rewardHighlightCTA, { [m.rewardHighlightCTALabel]: _ }),
                         style: {
                             opacity: n.to({
                                 range: [0, 1],
-                                output: [b ? 1 : 0.7, 0],
+                                output: [_ ? 1 : 0.7, 0],
                             }),
                         },
                         children: (0, r.jsx)(i.Text, {

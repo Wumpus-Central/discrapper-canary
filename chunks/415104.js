@@ -4,9 +4,9 @@ var r = n(54381),
     o = n(120356),
     a = n.n(o),
     i = n(617136),
-    l = n(509212),
-    c = n(113434),
-    d = n(497505),
+    l = n(313481),
+    c = n(49436),
+    d = n(509212),
     u = n(602667),
     p = n(110560),
     m = n(672188),
@@ -14,22 +14,22 @@ var r = n(54381),
     f = n(439826),
     h = n(43779),
     x = n(981631),
-    b = n(88036);
-function _(e) {
+    _ = n(88036);
+function b(e) {
     var t, n;
     let {
             quest: o,
-            className: d,
+            className: c,
             questContent: u,
-            contentPosition: _,
+            contentPosition: b,
             rowIndex: j,
             impressionRef: v,
             sourceQuestContent: C,
         } = e,
         [y, E] = s.useState(!1),
         [O, S] = s.useState([]),
-        T = (0, c.qb)(o),
-        w = s.useMemo(() => (0, l.q8)(o), [o]),
+        T = (0, l.qb)(o),
+        w = s.useMemo(() => (0, d.q8)(o), [o]),
         P = (0, i._F)(),
         N = s.useCallback(() => {
             E(!0),
@@ -39,12 +39,12 @@ function _(e) {
                     properties: {
                         content_id: u,
                         content_name: (0, i._b)(u),
-                        content_position: _,
+                        content_position: b,
                     },
                     sourceQuestContent: C,
                 }),
                 w && (0, p.loadVideoQuestModal)();
-        }, [P, o.id, u, w, C, _]),
+        }, [P, o.id, u, w, C, b]),
         A = s.useCallback(() => {
             E(!1),
                 P({
@@ -53,11 +53,11 @@ function _(e) {
                     properties: {
                         content_id: u,
                         content_name: (0, i._b)(u),
-                        content_position: _,
+                        content_position: b,
                     },
                     sourceQuestContent: C,
                 });
-        }, [P, o.id, u, C, _]),
+        }, [P, o.id, u, C, b]),
         R = s.useContext(g.t),
         { visibilityElementRef: B, almostVisibleInViewport: k } = (function (e) {
             let [t, n] = s.useState(!1),
@@ -82,7 +82,7 @@ function _(e) {
         ref: (e) => {
             (v.current = e), (B.current = e);
         },
-        className: a()(b.container, d),
+        className: a()(_.container, c),
         onMouseEnter: N,
         onMouseLeave: A,
         onFocus: N,
@@ -100,7 +100,7 @@ function _(e) {
                 quest: o,
                 questContent: u,
                 isHovering: y,
-                contentPosition: _,
+                contentPosition: b,
                 rowIndex: j,
                 onReceiveErrorHints: S,
                 isVisibleInViewport: k,
@@ -115,12 +115,12 @@ function j(e) {
         questContent: e.questContent,
         questContentPosition: e.contentPosition,
         questContentRowIndex: e.rowIndex,
-        trackGuildAndChannelMetadata: e.questContent === d.jn.QUESTS_EMBED,
+        trackGuildAndChannelMetadata: e.questContent === c.jn.QUESTS_EMBED,
         sourceQuestContent: e.sourceQuestContent,
         children: (t) => {
             var n, s;
             return (0, r.jsx)(
-                _,
+                b,
                 ((n = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},

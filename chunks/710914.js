@@ -6,8 +6,8 @@ var r = n(54381),
     s = n(392711),
     o = n(828700),
     c = n(481060),
-    u = n(509212),
-    d = n(497505),
+    u = n(49436),
+    d = n(509212),
     p = n(415104),
     f = n(388032),
     h = n(334525);
@@ -25,7 +25,7 @@ function g(e) {
         O = i.useMemo(() => {
             if (E.hash.length > 0) {
                 let e = E.hash.slice(1),
-                    r = (0, u._x)(e, t, n);
+                    r = (0, d._x)(e, t, n);
                 if (null != r) return r.id;
             }
             return null;
@@ -84,14 +84,14 @@ function g(e) {
                             p.Z,
                             {
                                 quest: e,
-                                questContent: d.jn.QUEST_HOME_DESKTOP,
+                                questContent: u.jn.QUEST_HOME_DESKTOP,
                                 contentPosition: t,
                                 rowIndex: n,
                                 className: a()(h.questTile, {
                                     [h.selected]: y && e.id === O,
                                     [h.unselected]: y && e.id !== O,
                                 }),
-                                sourceQuestContent: d.jn.QUEST_HOME_DESKTOP,
+                                sourceQuestContent: u.jn.QUEST_HOME_DESKTOP,
                             },
                             e.id,
                         );

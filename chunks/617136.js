@@ -23,12 +23,12 @@ var r = n(473749),
     f = n(626135),
     _ = n(358085),
     p = n(915750),
-    h = n(509212),
-    m = n(569984),
-    g = n(497505),
+    h = n(616022),
+    m = n(49436),
+    g = n(509212),
     E = n(727160),
     b = n(36243),
-    y = n(46140),
+    y = n(324805),
     O = n(981631);
 function v(e, t, n) {
     return (
@@ -82,11 +82,11 @@ function S(e, t) {
         e
     );
 }
-let A = Object.keys(g.jn),
+let A = Object.keys(m.jn),
     C = new Set([O.rMx.QUEST_CONTENT_VIEWED, O.rMx.QUEST_CONTENT_CLICKED]);
 function N(e) {
     var t;
-    return null != (t = A.find((t) => g.jn[t] === e)) ? t : "";
+    return null != (t = A.find((t) => m.jn[t] === e)) ? t : "";
 }
 function R(e) {
     var t, n, r;
@@ -112,14 +112,14 @@ function D(e, t, n) {
     return I(
         {
             quest_id: e.id,
-            quest_type: (0, h.BI)(e.config),
+            quest_type: (0, g.BI)(e.config),
             game_id: e.config.application.id,
             game_name: e.config.application.name,
-            application_ids: null != (r = (0, h.MC)(e)) ? r : [],
+            application_ids: null != (r = (0, g.MC)(e)) ? r : [],
             client_ad_session_id: i,
             billing_session_id: P(i),
         },
-        (0, h.qe)(e.id, t),
+        (0, g.qe)(e.id, t),
     );
 }
 function w(e, t, n) {
@@ -139,7 +139,7 @@ function L(e) {
             shouldExtendSession: a = !1,
             sourceQuestContent: o,
         } = e,
-        s = m.Z.quests.get(t);
+        s = h.Z.quests.get(t);
     if (null == s || ((0, b.X)({ location: y.dr.QUEST_PREVIEW_TOOL }) && d.Z.getLayers().includes(O.S9g.USER_SETTINGS)))
         return;
     let c = I({}, D(s, o, a), r);
@@ -218,9 +218,9 @@ async function M(e) {
             trackGuildAndChannelMetadata: u = !1,
             sourceQuestContent: d,
         } = e,
-        f = m.Z.getQuest(t),
+        f = h.Z.getQuest(t),
         p = await (0, a.S)(N(n)),
-        g = (0, h.jY)(n);
+        m = (0, g.jY)(n);
     L({
         questId: t,
         event: O.rMx.QUEST_CONTENT_CLICKED,
@@ -231,10 +231,10 @@ async function M(e) {
             apple_advertising_id: null != p && (0, _.isIOS)() ? p.advertisingId : null,
             android_advertising_id: null != p && (0, _.isAndroid)() ? p.advertisingId : null,
             click_id: (0, i.Z)(),
-            metadata_raw: null != g ? g : null,
+            metadata_raw: null != m ? m : null,
         }),
         trackGuildAndChannelMetadata: u,
-        shouldExtendSession: (0, h.VB)(n),
+        shouldExtendSession: (0, g.VB)(n),
         sourceQuestContent: d,
     });
 }
@@ -275,8 +275,8 @@ function U() {
                     trackGuildAndChannelMetadata: u = !1,
                     sourceQuestContent: d,
                 } = t,
-                f = m.Z.getQuest(n),
-                p = (0, h.jY)(r);
+                f = h.Z.getQuest(n),
+                p = (0, g.jY)(r);
             (0, a.S)(N(r)).then((t) => {
                 e({
                     questId: n,
@@ -290,7 +290,7 @@ function U() {
                         metadata_raw: null != p ? p : null,
                     }),
                     trackGuildAndChannelMetadata: u,
-                    shouldExtendSession: (0, h.VB)(r),
+                    shouldExtendSession: (0, g.VB)(r),
                     sourceQuestContent: d,
                 });
             });

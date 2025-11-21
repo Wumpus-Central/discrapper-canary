@@ -1,0 +1,16 @@
+e.exports = {
+    rootContainer: "rootContainer__65e57",
+    rootContainerLoading: "rootContainerLoading__65e57",
+    claimedRootContainer: "claimedRootContainer__65e57",
+    headerContainer: "headerContainer__65e57",
+    headerBackground: "headerBackground__65e57",
+    headerForeground: "headerForeground__65e57",
+    previewContainer: "previewContainer__65e57",
+    close: "close__65e57",
+    footerContainer: "footerContainer__65e57",
+    gradient: "gradient__65e57",
+    heading: "heading__65e57",
+    text: "text__65e57",
+    confettiCanvas: "confettiCanvas__65e57",
+    rewardTile: "rewardTile__65e57",
+};

@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(907331),
     u = n(442837),
     d = n(704215),
-    p = n(198168),
-    h = n(907862),
-    f = n(481060),
+    f = n(198168),
+    p = n(907862),
+    h = n(481060),
     g = n(570140),
     m = n(24124),
     b = n(475179),
@@ -19,8 +19,8 @@ var r = n(54381),
     O = n(730749),
     v = n(607070),
     j = n(636449),
-    C = n(566620),
-    x = n(317381),
+    x = n(566620),
+    C = n(317381),
     E = n(889441),
     S = n(736409),
     I = n(906732),
@@ -41,12 +41,12 @@ var r = n(54381),
     F = n(74299),
     V = n(914923),
     H = n(662304),
-    z = n(989941),
-    W = n(690221),
+    W = n(989941),
+    z = n(690221),
     K = n(522474),
     Y = n(231664),
     q = n(759198),
-    X = n(667105),
+    X = n(659302),
     Q = n(131704),
     J = n(199902),
     $ = n(314897),
@@ -62,9 +62,9 @@ var r = n(54381),
     ec = n(449224),
     eu = n(626135),
     ed = n(63063),
-    ep = n(358085),
-    eh = n(381096),
-    ef = n(345243),
+    ef = n(358085),
+    ep = n(381096),
+    eh = n(345243),
     eg = n(115530),
     em = n(339144),
     eb = n(441248),
@@ -72,9 +72,9 @@ var r = n(54381),
     ey = n(918559),
     eO = n(921944),
     ev = n(408491),
-    ej = n(46140),
-    eC = n(388032),
-    ex = n(800339);
+    ej = n(324805),
+    ex = n(388032),
+    eC = n(800339);
 function eE(e, t, n) {
     return (
         t in e
@@ -124,7 +124,7 @@ function eI(e, t) {
 }
 let eP = (0, y.Z)(function (e) {
     let { message: t } = e;
-    return (0, r.jsx)(ef.Z, { children: t });
+    return (0, r.jsx)(eh.Z, { children: t });
 });
 class eN extends i.PureComponent {
     renderSparkles() {
@@ -134,11 +134,11 @@ class eN extends i.PureComponent {
             return e;
         }
         return (0, r.jsx)("div", {
-            className: ex.sparkleContainer,
-            children: (0, r.jsx)(f.Fmz, {
+            className: eC.sparkleContainer,
+            children: (0, r.jsx)(h.Fmz, {
                 importData: t,
                 shouldAnimate: !e,
-                className: ex.sparkles,
+                className: eC.sparkles,
             }),
         });
     }
@@ -156,7 +156,7 @@ class eN extends i.PureComponent {
                 analyticsContext: a,
                 runningGame: c,
                 parentAnalyticsLocation: u,
-                canStartAuthorization: f,
+                canStartAuthorization: h,
                 accountLinkButtonRef: g,
                 startAuthorization: b,
             } = this.props,
@@ -168,7 +168,7 @@ class eN extends i.PureComponent {
                   ? _ && null == o
                       ? y.push(d.z.ACCOUNT_LINK_INVITE_FRIENDS)
                       : y.push(d.z.POST_ACCOUNT_CONNECTION_RTC_POPOVER)
-                  : f && null != i && y.push(d.z.ACCOUNT_LINK_PROMPT),
+                  : h && null != i && y.push(d.z.ACCOUNT_LINK_PROMPT),
               (0, r.jsx)(L.ZP, {
                   contentTypes: y,
                   groupName: eO.R.ACCOUNT_NAME_ZONE,
@@ -176,9 +176,9 @@ class eN extends i.PureComponent {
                   children: (e) => {
                       let { visibleContent: t, markAsDismissed: n } = e;
                       return t === d.z.ACCOUNT_LINK_INVITE_FRIENDS
-                          ? (0, r.jsx)(h.J2, {
-                                title: eC.intl.string(eC.t["0l2pEt"]),
-                                body: eC.intl.string(eC.t["DSZUK/"]),
+                          ? (0, r.jsx)(p.J2, {
+                                title: ex.intl.string(ex.t["0l2pEt"]),
+                                body: ex.intl.string(ex.t["DSZUK/"]),
                                 targetElementRef: this.inviteButtonRef,
                                 align: "right",
                                 shouldShow: !0,
@@ -186,7 +186,7 @@ class eN extends i.PureComponent {
                                 caretConfig: { align: "end" },
                                 actions: [
                                     {
-                                        text: eC.intl.string(eC.t.YdkBCH),
+                                        text: ex.intl.string(ex.t.YdkBCH),
                                         onClick: () => {
                                             var e;
                                             n(eO.L.TAKE_ACTION),
@@ -208,16 +208,16 @@ class eN extends i.PureComponent {
                                 ],
                             })
                           : t === d.z.POST_ACCOUNT_CONNECTION_RTC_POPOVER
-                            ? (0, r.jsx)(h.J2, {
-                                  title: eC.intl.string(eC.t.MxAlrB),
-                                  body: eC.intl.string(eC.t["/UTTEg"]),
+                            ? (0, r.jsx)(p.J2, {
+                                  title: ex.intl.string(ex.t.MxAlrB),
+                                  body: ex.intl.string(ex.t["/UTTEg"]),
                                   targetElementRef: this.accountLinkUpsellTargetRef,
                                   position: "top",
                                   align: "left",
                                   caretConfig: { align: "start" },
                                   actions: [
                                       {
-                                          text: eC.intl.string(eC.t.aRIFWD),
+                                          text: ex.intl.string(ex.t.aRIFWD),
                                           onClick: () => {
                                               n(eO.L.TAKE_ACTION),
                                                   window.open(ed.Z.getArticleURL(e_.BhN.IN_GAME_FEATURES), "_blank");
@@ -228,14 +228,14 @@ class eN extends i.PureComponent {
                                   onRequestClose: () => n(eO.L.USER_DISMISS),
                               })
                             : t === d.z.ACCOUNT_LINK_PROMPT
-                              ? (0, r.jsx)(h.J2, {
+                              ? (0, r.jsx)(p.J2, {
                                     graphic: {
                                         type: "dynamic",
-                                        component: p.DynamicGraphicComponent.ACCOUNT_LINK_DISPLAY,
+                                        component: f.DynamicGraphicComponent.ACCOUNT_LINK_DISPLAY,
                                         props: { application: i },
                                     },
-                                    title: eC.intl.formatToPlainString(eC.t["lo6H6+"], { gameName: i.name }),
-                                    body: eC.intl.string(eC.t.qYAzOp),
+                                    title: ex.intl.formatToPlainString(ex.t["lo6H6+"], { gameName: i.name }),
+                                    body: ex.intl.string(ex.t.qYAzOp),
                                     targetElementRef: g,
                                     align: "right",
                                     shouldShow: !0,
@@ -244,7 +244,7 @@ class eN extends i.PureComponent {
                                     caretConfig: { align: "end" },
                                     actions: [
                                         {
-                                            text: eC.intl.string(eC.t.lw71Nf),
+                                            text: ex.intl.string(ex.t.lw71Nf),
                                             onClick: () => {
                                                 n(eO.L.TAKE_ACTION), b();
                                             },
@@ -278,7 +278,7 @@ class eN extends i.PureComponent {
         let { isStreaming: e, streamMetadata: t, streamQualityIndicator: n } = this.props,
             { title: i, sanitizedTitle: l } = (0, V.Z)(t);
         return (0, r.jsxs)("div", {
-            className: ex.gameWrapper,
+            className: eC.gameWrapper,
             ref: this.accountLinkUpsellTargetRef,
             children: [
                 e
@@ -289,22 +289,22 @@ class eN extends i.PureComponent {
                     : (0, r.jsx)(A.ZP, {
                           look: A.ZP.Looks.GRAY,
                           size: A.ZP.Sizes.SMALL,
-                          className: ex.liveIndicator,
+                          className: eC.liveIndicator,
                       }),
                 (0, r.jsxs)("div", {
-                    className: ex.info,
+                    className: eC.info,
                     children: [
                         (0, r.jsx)(eg.Z, { children: i }),
                         null != n &&
                             (0, r.jsxs)("div", {
-                                className: ex.perksDemoContainer,
+                                className: eC.perksDemoContainer,
                                 children: [
-                                    (0, r.jsx)(f.SrA, {
+                                    (0, r.jsx)(h.SrA, {
                                         size: "xxs",
                                         color: D.JX.PREMIUM_TIER_2,
                                     }),
                                     (0, r.jsx)(q.Z, {
-                                        className: ex.perksDemoText,
+                                        className: eC.perksDemoText,
                                         variant: "text-xxs/semibold",
                                         children: n,
                                     }),
@@ -332,26 +332,26 @@ class eN extends i.PureComponent {
         null != o && null != i
             ? ((e = e_.Z5c.CHANNEL(o.id, i.id)), (u = "".concat(u, " / ").concat(o.name)))
             : null != i && (e = e_.Z5c.CHANNEL(e_.ME, i.id));
-        let d = (0, r.jsx)(W.Z, {
+        let d = (0, r.jsx)(z.Z, {
                 href: e,
                 onClick: this.handleChannelLinkClick,
-                children: (0, r.jsx)(ef.Z, {
-                    className: ex.channel,
+                children: (0, r.jsx)(eh.Z, {
+                    className: eC.channel,
                     children: u,
                 }),
             }),
-            p = (0, r.jsx)(W.Z, {
+            f = (0, r.jsx)(z.Z, {
                 href: e,
                 onClick: this.handleApplicationLinkClick,
                 children: (0, r.jsx)(eg.Z, {
-                    className: ex.underlineOnHover,
+                    className: eC.underlineOnHover,
                     children: t.name,
                 }),
             }),
-            h = (0, r.jsxs)(r.Fragment, {
+            p = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(U.Z, {
-                        className: ex.gameIcon,
+                        className: eC.gameIcon,
                         game: t,
                         size: U.A.SMALL,
                         ref: this.accountLinkUpsellTargetRef,
@@ -361,48 +361,48 @@ class eN extends i.PureComponent {
                         isForceShowSharingPopout: a,
                         setIsForceShowSharingPopout: s,
                         children: (0, r.jsxs)("div", {
-                            className: ex.info,
-                            children: [p, null != i && (0, Q.Qm)(i.type) ? d : (0, r.jsx)(eP, { timestamps: c })],
+                            className: eC.info,
+                            children: [f, null != i && (0, Q.Qm)(i.type) ? d : (0, r.jsx)(eP, { timestamps: c })],
                         }),
                     }),
                 ],
             });
         return (0, r.jsx)("div", {
-            className: ex.gameWrapper,
-            children: h,
+            className: eC.gameWrapper,
+            children: p,
         });
     }
     renderFrame() {
         let { application: e, frame: t } = this.props;
         if (null == t || null == e) return null;
         let n = { start: t.connectedSince },
-            i = (0, r.jsx)(f.P3F, {
+            i = (0, r.jsx)(h.P3F, {
                 onClick: this.handleFrameLinkClick,
                 onMouseDown: (e) => {
                     e.stopPropagation();
                 },
-                className: ex.frameApplicationNameTitleClickable,
+                className: eC.frameApplicationNameTitleClickable,
                 children: (0, r.jsx)(eg.Z, {
-                    className: ex.underlineOnHover,
+                    className: eC.underlineOnHover,
                     children: e.name,
                 }),
             }),
             l = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(U.Z, {
-                        className: ex.gameIcon,
+                        className: eC.gameIcon,
                         game: e,
                         size: U.A.SMALL,
                         ref: this.accountLinkUpsellTargetRef,
                     }),
                     (0, r.jsxs)("div", {
-                        className: ex.info,
+                        className: eC.info,
                         children: [i, (0, r.jsx)(eP, { timestamps: n })],
                     }),
                 ],
             });
         return (0, r.jsx)("div", {
-            className: ex.gameWrapper,
+            className: eC.gameWrapper,
             children: l,
         });
     }
@@ -441,10 +441,10 @@ class eN extends i.PureComponent {
                       : this.renderScreenshare()
                 : this.renderGame();
         return (0, r.jsx)("div", {
-            className: o()(ex.panel, u),
+            className: o()(eC.panel, u),
             ref: this.activityPopoutTargetRef,
             children: (0, r.jsxs)("div", {
-                className: ex.body,
+                className: eC.body,
                 children: [d(), this.renderActions(), this.renderAccountLinkPopover()],
             }),
         });
@@ -473,7 +473,7 @@ class eN extends i.PureComponent {
                                     instanceId: n.compositeInstanceId,
                                 }),
                             ),
-                        (0, Q.Qm)(t.type) && (0, C.tg)(ey.Ez.PANEL));
+                        (0, Q.Qm)(t.type) && (0, x.tg)(ey.Ez.PANEL));
             }),
             eE(this, "handleFrameLinkClick", () => {
                 let { frame: e } = this.props;
@@ -510,14 +510,14 @@ let eZ = (0, O.Z)(function (e) {
             return i;
         })(e, ["guildId"]);
     let o = (0, u.e7)([$.default], () => $.default.getId()),
-        a = (0, u.e7)([G.ZP, ec.Z], () => (0, z.Z)(G.ZP, ec.Z)),
+        a = (0, u.e7)([G.ZP, ec.Z], () => (0, W.Z)(G.ZP, ec.Z)),
         s = (0, u.e7)([ea.Z, ee.Z], () => ee.Z.getChannel(ea.Z.getVoiceChannelId())),
-        d = (0, u.e7)([x.ZP], () => x.ZP.getConnectedActivityChannelId()),
-        p = (0, u.e7)([ee.Z], () => ee.Z.getChannel(d)),
-        h = (0, u.e7)([en.Z], () => en.Z.getGuild(null == p ? void 0 : p.guild_id)),
-        [f, g] = (0, u.Wu)([J.Z], () => [J.Z.getCurrentUserActiveStream(), J.Z.getStreamerActiveStreamMetadata()]),
+        d = (0, u.e7)([C.ZP], () => C.ZP.getConnectedActivityChannelId()),
+        f = (0, u.e7)([ee.Z], () => ee.Z.getChannel(d)),
+        p = (0, u.e7)([en.Z], () => en.Z.getGuild(null == f ? void 0 : f.guild_id)),
+        [h, g] = (0, u.Wu)([J.Z], () => [J.Z.getCurrentUserActiveStream(), J.Z.getStreamerActiveStreamMetadata()]),
         m = (0, u.e7)([v.Z], () => v.Z.useReducedMotion),
-        b = (0, u.e7)([x.ZP], () => x.ZP.getCurrentEmbeddedActivity()),
+        b = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
         _ = (0, u.e7)([k.Z], () => k.Z.getConnectedFrame()),
         y = (0, u.e7)([en.Z, ei.Z, et.ZP], () =>
             null != s ? B.JL(s, en.Z, ei.Z, !1) : null != n && B.h_(et.ZP.getChannels(n), en.Z, ei.Z).length > 0,
@@ -537,26 +537,26 @@ let eZ = (0, O.Z)(function (e) {
                 ? t
                 : "",
         ]),
-        C = (0, u.e7)([R.Z], () => R.Z.getFakeGameData()),
-        S = (0, u.e7)([x.ZP], () => x.ZP.getCurrentEmbeddedActivity()),
+        x = (0, u.e7)([R.Z], () => R.Z.getFakeGameData()),
+        S = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
         Z = (0, E.Z)() && null != S && (0, j.R)(),
-        w = (0, u.e7)([er.Z], () => (0, F.Z)(er.Z) && (0, ep.isWindows)()),
+        w = (0, u.e7)([er.Z], () => (0, F.Z)(er.Z) && (0, ef.isWindows)()),
         A = (0, u.e7)([el.Z], () => (null != o ? el.Z.findActivity(o, (e) => e.type === e_.IIU.PLAYING) : null)),
-        D = null != f && f.ownerId === o && f.state !== e_.jm8.ENDED,
-        L = (0, u.e7)([es.default, eo.Z], () => (null != p ? (0, T.F6)(p, es.default, eo.Z) : void 0)),
+        D = null != h && h.ownerId === o && h.state !== e_.jm8.ENDED,
+        L = (0, u.e7)([es.default, eo.Z], () => (null != f ? (0, T.F6)(f, es.default, eo.Z) : void 0)),
         M = (0, Y.Z)(),
         [U, V] = i.useState(!1),
         H = (0, u.e7)([K.Z], () => K.Z.getWindowOpen(e_.KJ3.ACTIVITY_POPOUT)),
         {
-            hasAlreadyLinked: W,
+            hasAlreadyLinked: z,
             canStartAuthorization: q,
             connectionApp: Q,
             startAuthorization: ed,
         } = (0, P.F)(O, {
             allowedFlows: [P.r.RPC, P.r.WEB],
         }),
-        { isQuestBarEmpty: ef, hasLoadedQuestBar: eg } = (0, X.Ws)({ location: ej.dr.CONFLICT_CHECKS }),
-        em = eh.Z.useConfig({ location: "RunningGameCard" }).enabled,
+        { isQuestBarEmpty: eh, hasLoadedQuestBar: eg } = (0, X.Ws)({ location: ej.dr.CONFLICT_CHECKS }),
+        em = ep.Z.useConfig({ location: "RunningGameCard" }).enabled,
         { parentAnalyticsLocation: eb } = (0, I.ZP)(),
         ey = (0, c.O)((e) => {
             if (e && null != Q) {
@@ -571,27 +571,27 @@ let eZ = (0, O.Z)(function (e) {
         eN,
         eI(eS({}, l), {
             guildId: n,
-            canGoLive: w || Z || void 0 !== C,
+            canGoLive: w || Z || void 0 !== x,
             activity: A,
             embeddedActivity: b,
             frame: _,
             userId: o,
-            runningGame: null != C ? C : a,
+            runningGame: null != x ? x : a,
             application: O,
             useReducedMotion: m,
             isStreaming: D,
-            channel: p,
+            channel: f,
             canStream: y,
-            stream: f,
+            stream: h,
             streamMetadata: g,
             channelName: L,
-            guildForConnectedChannel: h,
+            guildForConnectedChannel: p,
             streamQualityIndicator: M,
             isForceShowSharingPopout: U,
             setIsForceShowSharingPopout: V,
             isActivityPopoutOpen: H,
-            hasAlreadyLinked: W,
-            blockAccountLinkDismissibleContent: !eg || !ef,
+            hasAlreadyLinked: z,
+            blockAccountLinkDismissibleContent: !eg || !eh,
             accountLinkExperimentEnabled: em,
             parentAnalyticsLocation: eb,
             canStartAuthorization: q,

@@ -4,7 +4,7 @@ var r = n(473749),
     l = n(707903),
     i = n(720293),
     a = n(215113),
-    s = n(46140);
+    s = n(324805);
 function c(e) {
     let { videoAssetUrl: t, videoRef: n, hlsRef: c, videoVariant: u } = e,
         { questConfig: d } = r.useContext(a.VideoQuestConfigContext),

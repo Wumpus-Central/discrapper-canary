@@ -3,7 +3,7 @@ var r = n(473749),
     o = n(63063),
     l = n(509212),
     i = n(939389),
-    a = n(46140),
+    a = n(324805),
     s = n(981631);
 function c(e) {
     let { quest: t, onClose: n, sourceQuestContent: c, impressionId: u } = e;

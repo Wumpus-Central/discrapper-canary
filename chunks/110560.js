@@ -33,18 +33,18 @@ var i = n(772848),
     h = n(954824),
     m = n(22095),
     g = n(617136),
-    E = n(509212),
-    b = n(569984),
-    y = n(497505),
+    E = n(616022),
+    b = n(49436),
+    y = n(509212),
     O = n(184299),
-    v = n(66340),
-    I = n(862847),
-    T = n(5881),
-    S = n(323811),
+    v = n(775065),
+    I = n(535584),
+    T = n(230142),
+    S = n(66340),
     A = n(492112),
     C = n(61115),
     N = n(150560),
-    R = n(46140),
+    R = n(324805),
     P = n(981631),
     D = n(49898),
     w = n(388032);
@@ -112,10 +112,10 @@ function G(e) {
         sourceQuestContent: c,
     } = e;
     (0, s.ZDy)(async () => {
-        let e = (0, S.i)("openQuestsRewardCodeModal"),
+        let e = (0, T.i)("openQuestsRewardCodeModal"),
             s = t.config.rewardsConfig.platforms.length > 1;
         if (e && !s) {
-            let { default: e } = await Promise.all([n.e("64838"), n.e("50433"), n.e("96861")]).then(n.bind(n, 188209));
+            let { default: e } = await Promise.all([n.e("35129"), n.e("83615"), n.e("96861")]).then(n.bind(n, 188209));
             return (n) =>
                 (0, r.jsx)(
                     e,
@@ -127,7 +127,7 @@ function G(e) {
                     }),
                 );
         }
-        let { default: u } = await Promise.all([n.e("64838"), n.e("50433"), n.e("61624")]).then(n.bind(n, 985866));
+        let { default: u } = await Promise.all([n.e("35129"), n.e("83615"), n.e("19341")]).then(n.bind(n, 564733));
         return (e) =>
             (0, r.jsx)(
                 u,
@@ -146,7 +146,7 @@ function B(e, t) {
     var i;
     (null == (i = e.userStatus) ? void 0 : i.claimedAt) == null
         ? (0, s.ZDy)(async () => {
-              let { default: i } = await n.e("838").then(n.bind(n, 824393));
+              let { default: i } = await n.e("98835").then(n.bind(n, 821571));
               return (n) =>
                   (0, r.jsx)(
                       i,
@@ -160,7 +160,7 @@ function B(e, t) {
 }
 function Z(e, t, i) {
     (0, s.ZDy)(async () => {
-        if ((0, S.i)("openQuestInGameRewardModal")) {
+        if ((0, T.i)("openQuestInGameRewardModal")) {
             let { default: a } = await n.e("76418").then(n.bind(n, 34251));
             return (n) =>
                 (0, r.jsx)(
@@ -172,7 +172,7 @@ function Z(e, t, i) {
                     }),
                 );
         }
-        let { default: a } = await n.e("88938").then(n.bind(n, 390238));
+        let { default: a } = await n.e("28467").then(n.bind(n, 210667));
         return (n) =>
             (0, r.jsx)(
                 a,
@@ -186,7 +186,7 @@ function Z(e, t, i) {
 }
 function F(e, t, i) {
     (0, s.ZDy)(async () => {
-        if ((0, S.i)("openQuestOrbsRewardModal")) {
+        if ((0, T.i)("openQuestOrbsRewardModal")) {
             let { default: a } = await n.e("74560").then(n.bind(n, 246855));
             return (n) =>
                 (0, r.jsx)(
@@ -198,7 +198,7 @@ function F(e, t, i) {
                     }),
                 );
         }
-        let { default: a } = await n.e("20565").then(n.bind(n, 383294));
+        let { default: a } = await n.e("53159").then(n.bind(n, 896326));
         return (n) =>
             (0, r.jsx)(
                 a,
@@ -211,7 +211,7 @@ function F(e, t, i) {
 }
 function V(e, t, i, a) {
     (0, s.ZDy)(async () => {
-        if ((0, S.i)("openQuestCollectibleRewardModal")) {
+        if ((0, T.i)("openQuestCollectibleRewardModal")) {
             let { default: o } = await n.e("41023").then(n.bind(n, 305815));
             return (n) =>
                 (0, r.jsx)(
@@ -224,7 +224,7 @@ function V(e, t, i, a) {
                     }),
                 );
         }
-        let { default: o } = await Promise.all([n.e("79589"), n.e("83175")]).then(n.bind(n, 920916));
+        let { default: o } = await Promise.all([n.e("79589"), n.e("10349")]).then(n.bind(n, 816248));
         return (n) =>
             (0, r.jsx)(
                 o,
@@ -238,7 +238,7 @@ function V(e, t, i, a) {
 }
 function H(e, t, i) {
     (0, s.ZDy)(async () => {
-        let { default: a } = await n.e("58641").then(n.bind(n, 828664));
+        let { default: a } = await n.e("52040").then(n.bind(n, 636494));
         return (n) =>
             (0, r.jsx)(
                 a,
@@ -260,7 +260,7 @@ function Y(e, t) {
         sourceQuestContent: t.sourceQuestContent,
     }),
         (0, s.ZDy)(async () => {
-            let { default: i } = await n.e("4266").then(n.bind(n, 316210));
+            let { default: i } = await n.e("27333").then(n.bind(n, 404088));
             return (n) =>
                 (0, r.jsx)(
                     i,
@@ -281,7 +281,7 @@ function W() {
         utmSourceCurrent: U,
         utmMediumCurrent: j,
         utmCampaignCurrent: t,
-        utmContentCurrent: Object.keys(y.jn).find((t) => y.jn[t] === e),
+        utmContentCurrent: Object.keys(b.jn).find((t) => b.jn[t] === e),
     });
     let r = null != t ? "#".concat(t) : "";
     n && c.Z.setState({ selectedTab: D.GlobalDiscoveryTab.QUESTS }),
@@ -290,9 +290,9 @@ function W() {
 }
 let K = 0.2;
 function z(e) {
-    let t = (0, T.T)({ quest: e }),
+    let t = (0, I.T)({ quest: e }),
         n = { location: R.dr.QUESTS_BAR };
-    if (!(0, I.j)(n) || Math.random() > K) return;
+    if (!(0, v.j)(n) || Math.random() > K) return;
     let r = (0, A.Z)(e);
     t.log("Showing survey ".concat(r.id)),
         (0, C.C)({
@@ -313,15 +313,15 @@ function X(e) {
         autoplay: c = !0,
         skipEnrollmentCheck: u = !1,
     } = e;
-    if ((0, E.HJ)(n) && n.config.features.includes(R.S7.MOBILE_ONLY_QUEST_PUSH_TO_MOBILE)) return void et(n);
+    if ((0, y.HJ)(n) && n.config.features.includes(R.S7.MOBILE_ONLY_QUEST_PUSH_TO_MOBILE)) return void et(n);
     let d = (0, i.Z)();
     if (
-        (0, v.D)(R.dr.VIDEO_MODAL) &&
+        (0, S.D)(R.dr.VIDEO_MODAL) &&
         !u &&
         (null == (t = n.userStatus) ? void 0 : t.enrolledAt) == null &&
-        !(0, E.zi)(n)
+        !(0, y.zi)(n)
     ) {
-        b.Z.isEnrolling(n.id) ||
+        E.Z.isEnrolling(n.id) ||
             (0, m.AH)(n.id, {
                 questContent: a,
                 questContentCTA: g.jZ.ACCEPT_QUEST,
@@ -354,10 +354,10 @@ function X(e) {
                 );
         },
         {
-            modalKey: (0, E.u7)(n.id),
+            modalKey: (0, y.u7)(n.id),
             backdropStyle: s.fCB.IMMERSIVE,
             onCloseCallback: () =>
-                (0, E.Th)({
+                (0, y.Th)({
                     questId: n.id,
                     sourceQuestContent: o,
                     videoSessionId: d,
@@ -479,5 +479,5 @@ async function en(e, t) {
     }
 }
 function er(e) {
-    if ((0, E.Rt)(e)) return e.config.features.includes(R.S7.CLOUD_GAMING_ACTIVITY) ? s.v3n : s.iWm;
+    if ((0, y.Rt)(e)) return e.config.features.includes(R.S7.CLOUD_GAMING_ACTIVITY) ? s.v3n : s.iWm;
 }

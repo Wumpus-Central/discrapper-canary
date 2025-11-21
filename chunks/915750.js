@@ -27,10 +27,10 @@ var r = n(54381),
     g = n(768581),
     E = n(358085),
     b = n(617136),
-    y = n(509212),
-    O = n(569984),
-    v = n(882198),
-    I = n(5881),
+    y = n(616022),
+    O = n(509212),
+    v = n(198535),
+    I = n(535584),
     T = n(981631);
 function S(e, t, n) {
     return (
@@ -78,8 +78,8 @@ class L {
     }
     getBrandSafetyContext() {
         var e;
-        let t = (0, y.VB)(this.questContent),
-            n = (0, y.uN)(this.questContent),
+        let t = (0, O.VB)(this.questContent),
+            n = (0, O.uN)(this.questContent),
             r = (0, f.z5)(),
             i = (0, f.QW)();
         if (!(null == n ? void 0 : n.is_campaign_ias_enabled) || !t || void 0 === r || void 0 === i) return null;
@@ -189,12 +189,12 @@ class L {
                         { impressionId: this.id },
                     );
                     let t = !1,
-                        n = (0, y.Zp)(this.questContent);
+                        n = (0, O.Zp)(this.questContent);
                     if (null != n) {
                         let r = w(e.id, n);
-                        (t = !D.has(r) && (0, y.VB)(this.questContent)) && D.add(r);
+                        (t = !D.has(r) && (0, O.VB)(this.questContent)) && D.add(r);
                     }
-                    let r = (0, y.jY)(this.questContent);
+                    let r = (0, O.jY)(this.questContent);
                     (0, u.S)((0, b._b)(this.questContent)).then((n) => {
                         (0, b.dA)({
                             questId: e.id,
@@ -283,7 +283,7 @@ class L {
                         this.onMinViewTimeReached,
                         1000 * this.minViewTimeSeconds,
                     ));
-                let e = (0, y.jY)(this.questContent);
+                let e = (0, O.jY)(this.questContent);
                 this.quests.forEach((t) => {
                     (0, I.T)().info(
                         ""
@@ -360,7 +360,7 @@ function G(e) {
     let { visible: t, visibleChanged: n, focused: a, reference: o, focusedChanged: c, sourceQuestContent: u } = e,
         d = M(e.questOrQuests),
         f = i.useRef(null),
-        _ = (0, s.e7)([O.Z], () => null != O.Z.questEnrollmentBlockedUntil, []);
+        _ = (0, s.e7)([y.Z], () => null != y.Z.questEnrollmentBlockedUntil, []);
     return (
         (0, l.ZP)(() => () => {
             null != f.current && f.current.stop();

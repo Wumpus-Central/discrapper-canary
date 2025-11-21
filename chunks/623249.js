@@ -16,12 +16,12 @@ var r = n(54381),
     m = n(210887),
     g = n(617136),
     f = n(915750),
-    h = n(509212),
-    x = n(113434),
-    b = n(497505),
-    _ = n(475595),
+    h = n(313481),
+    x = n(49436),
+    _ = n(509212),
+    b = n(475595),
     j = n(602667),
-    v = n(667105),
+    v = n(659302),
     C = n(981631),
     y = n(388032),
     E = n(301889);
@@ -29,7 +29,7 @@ function O(e) {
     var t;
     let { quest: n, errorHints: o, transitionState: j, onClose: O, sourceQuestContent: T } = e,
         [w, P] = (0, s.useState)(o),
-        N = (0, x.KX)(),
+        N = (0, h.KX)(),
         A = (0, g.O5)(),
         R = null == (t = (0, f.WD)()) ? void 0 : t.getId(),
         B = (0, l.e7)([p.Z], () => p.Z.useReducedMotion),
@@ -38,16 +38,16 @@ function O(e) {
             className: E.colorTransition,
         }),
         I = w.filter((e) => ["xbox", "playstation"].includes(e.connected_account_type)),
-        D = (0, h.Bz)(n),
+        D = (0, _.Bz)(n),
         q = (0, l.e7)([m.Z], () => m.Z.getState().theme),
         L = (0, d.wj)(q) ? C.BRd.DARK : C.BRd.LIGHT,
-        { startConsoleQuest: Q, startingConsoleQuest: V } = (0, x.GI)({
+        { startConsoleQuest: Q, startingConsoleQuest: V } = (0, h.GI)({
             questId: n.id,
             beforeRequest: () => {
                 k.startAnimation(),
                     A({
                         questId: n.id,
-                        questContent: b.jn.CONNECTIONS_MODAL,
+                        questContent: x.jn.CONNECTIONS_MODAL,
                         questContentCTA: g.jZ.DEFIBRILLATOR,
                         sourceQuestContent: T,
                     });
@@ -66,10 +66,10 @@ function O(e) {
                 variant: "secondary",
                 onClick: () =>
                     void (O(),
-                    (0, h.V$)(
+                    (0, _.V$)(
                         { quest: n },
                         {
-                            content: b.jn.CONNECTIONS_MODAL,
+                            content: x.jn.CONNECTIONS_MODAL,
                             ctaContent: g.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
                             impressionId: R,
                             sourceQuestContent: T,
@@ -139,7 +139,7 @@ function O(e) {
                                       children: (0, r.jsx)("img", {
                                           className: E.gameTile,
                                           alt: n.config.messages.gameTitle,
-                                          src: (0, _.fh)(n, _.eC.GAME_TILE, L).url,
+                                          src: (0, b.fh)(n, b.eC.GAME_TILE, L).url,
                                       }),
                                   })
                                 : null,
@@ -221,7 +221,7 @@ function T(e) {
             return (0, r.jsx)(j.A, {
                 overrideVisibility: !0,
                 questOrQuests: e.quest,
-                questContent: b.jn.CONNECTIONS_MODAL,
+                questContent: x.jn.CONNECTIONS_MODAL,
                 sourceQuestContent: e.sourceQuestContent,
                 children: () =>
                     (0, r.jsx)(
