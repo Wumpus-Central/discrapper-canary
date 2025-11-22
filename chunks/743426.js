@@ -842,20 +842,19 @@ class I extends a.Z {
     }
 }
 function T(e) {
-    let t = 900000,
-        n = !1;
-    e.on(s.aB.Destroy, () => (n = !0));
-    let r = async () => {
-        if (n) return;
-        let i = (0, d.zS)(),
-            a = await new Promise((e) => {
+    let t = !1;
+    e.on(s.aB.Destroy, () => (t = !0));
+    let n = async () => {
+        if (t) return;
+        let r = (0, d.zS)(),
+            i = await new Promise((e) => {
                 var t;
-                null == (t = i.pollQueueMetrics) ||
-                    t.call(i, (t) => {
+                null == (t = r.pollQueueMetrics) ||
+                    t.call(r, (t) => {
                         e(t);
                     });
             });
-        (a.periodMs = t), e.emit(s.aB.VoiceQueueMetrics, a), setTimeout(r, t);
+        (i.periodMs = p.rp), e.emit(s.aB.VoiceQueueMetrics, i), setTimeout(n, p.rp);
     };
-    setTimeout(r, t);
+    setTimeout(n, p.rp);
 }

@@ -804,6 +804,10 @@ let q = {
             let { initializeWERHandler: e } = this.getDiscordUtils();
             null != e && e();
         },
+        pollQueueMetrics(e) {
+            let { pollQueueMetrics: t } = this.getDiscordUtils();
+            null != t && t(e);
+        },
         asyncify: (e) =>
             new Promise((t, n) => {
                 e(t);

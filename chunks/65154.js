@@ -2,13 +2,13 @@ n.d(t, {
     $A: () => T,
     $B: () => C,
     $j: () => s,
-    AN: () => W,
-    AS: () => K,
+    AN: () => K,
+    AS: () => z,
     Av: () => g,
-    Dg: () => X,
+    Dg: () => Q,
     Er: () => D,
     Gs: () => R,
-    H3: () => en,
+    H3: () => er,
     JA: () => v,
     Jk: () => I,
     LD: () => L,
@@ -16,11 +16,11 @@ n.d(t, {
     QO: () => O,
     QP: () => l,
     Qx: () => d,
-    R$: () => j,
-    Tr: () => Q,
+    R$: () => k,
+    Tr: () => J,
     UC: () => U,
-    Uc: () => et,
-    V8: () => ee,
+    Uc: () => en,
+    V8: () => et,
     WA: () => y,
     XR: () => Z,
     YE: () => G,
@@ -28,7 +28,7 @@ n.d(t, {
     Yn: () => i,
     Z: () => u,
     Zq: () => b,
-    ad: () => q,
+    ad: () => X,
     dX: () => _,
     ed: () => p,
     ef: () => x,
@@ -36,23 +36,24 @@ n.d(t, {
     fU: () => m,
     fm: () => V,
     h7: () => a,
-    iA: () => z,
+    iA: () => q,
     jg: () => E,
     kS: () => F,
     mC: () => A,
     mN: () => S,
     n4: () => Y,
     pM: () => o,
-    pk: () => k,
+    pk: () => j,
+    rp: () => W,
     ru: () => M,
     u$: () => N,
-    uA: () => J,
+    uA: () => $,
     ux: () => H,
     vA: () => r.vA,
     w5: () => h,
     y7: () => w,
     yf: () => B,
-    ym: () => $,
+    ym: () => ee,
 });
 var r = n(268146),
     i = (function (e) {
@@ -124,8 +125,8 @@ let d = 100,
     L = 50,
     x = 1280,
     M = 720,
-    j = 30,
-    k = 1500000,
+    k = 30,
+    j = 1500000,
     U = 500000,
     G = 3500000,
     B = 9000000,
@@ -161,8 +162,9 @@ let d = 100,
     },
     V = 0.02,
     H = 60000,
-    Y = ">=22.0.0";
-var W = (function (e) {
+    Y = ">=22.0.0",
+    W = 900000;
+var K = (function (e) {
         return (
             (e.AUTO_ENABLE = "AUTO_ENABLE"),
             (e.ATTENUATION = "ATTENUATION"),
@@ -227,10 +229,10 @@ var W = (function (e) {
             e
         );
     })({}),
-    K = (function (e) {
+    z = (function (e) {
         return (e.NATIVE = "NATIVE"), (e.WEBRTC = "WEBRTC"), (e.DUMMY = "DUMMY"), e;
     })({}),
-    z = (function (e) {
+    q = (function (e) {
         return (
             (e.LEGACY = "legacy"),
             (e.STANDARD = "standard"),
@@ -239,7 +241,7 @@ var W = (function (e) {
             e
         );
     })({}),
-    q = (function (e) {
+    X = (function (e) {
         return (
             (e.OPUS = "opus"),
             (e.VP8 = "VP8"),
@@ -251,7 +253,7 @@ var W = (function (e) {
             e
         );
     })({}),
-    X = (function (e) {
+    Q = (function (e) {
         return (
             (e[(e.NONE = 0)] = "NONE"),
             (e[(e.VOICE = 1)] = "VOICE"),
@@ -261,16 +263,16 @@ var W = (function (e) {
             e
         );
     })({}),
-    Q = (function (e) {
+    J = (function (e) {
         return (e.AUDIO = "audio"), (e.VIDEO = "video"), (e.SCREEN = "screen"), (e.TEST = "test"), e;
     })({}),
-    J = (function (e) {
+    $ = (function (e) {
         return (e.FIXED = "fixed"), (e.SOURCE = "source"), e;
     })({}),
-    $ = (function (e) {
+    ee = (function (e) {
         return (e.REMB = "remb"), e;
     })({}),
-    ee = (function (e) {
+    et = (function (e) {
         return (
             (e.VIDEOTOOLBOX_RATE_CONTROL = "videotoolbox_rate_control"),
             (e.SIGNAL_AV1 = "signal_av1"),
@@ -288,10 +290,10 @@ var W = (function (e) {
             e
         );
     })({}),
-    et = (function (e) {
+    en = (function (e) {
         return (e[(e.AUTO = 1)] = "AUTO"), (e[(e.FULL = 2)] = "FULL"), e;
     })({}),
-    en = (function (e) {
+    er = (function (e) {
         return (
             (e[(e.CPU_OVERUSE = 1)] = "CPU_OVERUSE"),
             (e[(e.FAILED = 2)] = "FAILED"),
