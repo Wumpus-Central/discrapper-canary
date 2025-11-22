@@ -1,186 +1,186 @@
-n.d(t, { default: () => B }), n(388685), n(539854);
-var r = n(54381),
-    i = n(473749),
-    a = n(512722),
-    s = n.n(a),
-    o = n(793030),
-    l = n(442837),
-    c = n(481060),
-    u = n(794433),
-    d = n(480466),
-    b = n(313789),
-    h = n(518596),
-    f = n(78839),
-    p = n(51144),
-    m = n(904399),
-    y = n(80721),
-    g = n(172782),
-    v = n(154122),
-    O = n(282793),
-    S = n(981631),
-    j = n(606097),
-    x = n(388032),
-    P = n(781565),
-    w = n(383092);
-function I() {
-    return (I =
+r.d(t, { default: () => k }), r(388685), r(539854);
+var n = r(54381),
+    i = r(473749),
+    s = r(512722),
+    a = r.n(s),
+    o = r(793030),
+    c = r(442837),
+    l = r(481060),
+    u = r(794433),
+    d = r(480466),
+    p = r(313789),
+    f = r(518596),
+    b = r(78839),
+    m = r(51144),
+    y = r(904399),
+    h = r(80721),
+    g = r(172782),
+    v = r(154122),
+    O = r(282793),
+    j = r(981631),
+    S = r(606097),
+    x = r(388032),
+    P = r(781565),
+    w = r(383092);
+function _() {
+    return (_ =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
-                var n = arguments[t];
-                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+                var r = arguments[t];
+                for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n]);
             }
             return e;
         }).apply(this, arguments);
 }
-function N(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                 }),
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: n,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = r);
+                        : (e[t] = n);
             });
     }
     return e;
 }
-function C(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
             : (function (e, t) {
-                  var n = Object.keys(e);
+                  var r = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
                   }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                  return r;
+              })(Object(t)).forEach(function (r) {
+                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
               }),
         e
     );
 }
-function E(e, t) {
+function C(e, t) {
     if (null == e) return {};
-    var n,
-        r,
+    var r,
+        n,
         i = (function (e, t) {
             if (null == e) return {};
-            var n,
-                r,
+            var r,
+                n,
                 i = {},
-                a = Object.keys(e);
-            for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                s = Object.keys(e);
+            for (n = 0; n < s.length; n++) (r = s[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
             return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var s = Object.getOwnPropertySymbols(e);
+        for (n = 0; n < s.length; n++)
+            (r = s[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
     }
     return i;
 }
-let _ = (e) => {
-        var { onInvite: t, onClose: n, subscriptionId: a } = e,
-            s = E(e, ["onInvite", "onClose", "subscriptionId"]);
-        let [l, b] = i.useState([]),
-            [h, f] = i.useState(""),
-            y = (0, d.Z)(h, 400),
+let E = (e) => {
+        var { onInvite: t, onClose: r, subscriptionId: s } = e,
+            a = C(e, ["onInvite", "onClose", "subscriptionId"]);
+        let [c, p] = i.useState([]),
+            [f, b] = i.useState(""),
+            h = (0, d.Z)(f, 400),
             {
                 eligibleUsers: v,
-                fetchUsers: S,
+                fetchUsers: j,
                 hasError: w,
-                isFetching: I,
+                isFetching: _,
             } = (0, g.Z)({
-                subscriptionId: a,
-                searchQuery: y,
+                subscriptionId: s,
+                searchQuery: h,
             }),
-            [_, U] = i.useState(!1);
-        return I
-            ? (0, r.jsx)(c.$jN, {})
+            [E, Z] = i.useState(!1);
+        return _
+            ? (0, n.jsx)(l.$jN, {})
             : w
-              ? (0, r.jsx)(
+              ? (0, n.jsx)(
                     o.Modal,
-                    N(
+                    I(
                         {
                             size: "sm",
                             title: x.intl.string(x.t.lcuio4),
                             subtitle: x.intl.string(x.t["x09+CD"]),
-                            onClose: n,
+                            onClose: r,
                             actions: [],
                         },
-                        s,
+                        a,
                     ),
                 )
-              : (0, r.jsx)(
+              : (0, n.jsx)(
                     o.Modal,
-                    C(
-                        N(
+                    N(
+                        I(
                             {
                                 size: "md",
-                                title: x.intl.string(j.default["Um/7BM"]),
-                                subtitle: x.intl.formatToPlainString(j.default.qSWXaf, {
+                                title: x.intl.string(S.default["Um/7BM"]),
+                                subtitle: x.intl.formatToPlainString(S.default.qSWXaf, {
                                     totalSeats: O.v$,
                                     premiumGroupProductName: (0, O.sO)(),
                                 }),
-                                onClose: n,
-                                input: (0, r.jsx)(u.Z, {
+                                onClose: r,
+                                input: (0, n.jsx)(u.Z, {
                                     className: P.searchbar,
                                     size: u.Z.Sizes.MEDIUM,
-                                    tags: l.map((e) => p.ZP.getName(e)),
-                                    placeholder: 0 === l.length ? x.intl.string(j.default.wRS8vo) : "",
-                                    query: h,
+                                    tags: c.map((e) => m.ZP.getName(e)),
+                                    placeholder: 0 === c.length ? x.intl.string(S.default.wRS8vo) : "",
+                                    query: f,
                                     onRemoveTag: (e) => {
-                                        b((t) => t.filter((t, n) => n !== e));
+                                        p((t) => t.filter((t, r) => r !== e));
                                     },
-                                    onQueryChange: f,
-                                    onClear: () => f(""),
+                                    onQueryChange: b,
+                                    onClear: () => b(""),
                                 }),
                                 actions: [],
                                 actionBarInput: (() => {
-                                    let e = y.length > 0 && 0 === v.length;
-                                    return (0, r.jsx)(c.Button, {
+                                    let e = h.length > 0 && 0 === v.length;
+                                    return (0, n.jsx)(l.Button, {
                                         variant: "primary",
-                                        disabled: (0 === l.length && !e) || _,
-                                        text: x.intl.string(j.default.TEntiZ),
+                                        disabled: (0 === c.length && !e) || E,
+                                        text: x.intl.string(S.default.TEntiZ),
                                         size: "md",
                                         fullWidth: !0,
                                         onClick: async () => {
-                                            if (e) return void n();
-                                            U(!0), await t(l), U(!1);
+                                            if (e) return void r();
+                                            Z(!0), await t(c), Z(!1);
                                         },
                                     });
                                 })(),
                             },
-                            s,
+                            a,
                         ),
                         {
-                            children: (0, r.jsx)(m.Z, {
+                            children: (0, n.jsx)(y.Z, {
                                 users: v,
-                                isUserSelected: (e) => l.some((t) => t.id === e.id),
+                                isUserSelected: (e) => c.some((t) => t.id === e.id),
                                 onSelectionChange: (e, t) => {
-                                    b((n) => (t ? [...n, e] : n.filter((t) => t.id !== e.id)));
+                                    p((r) => (t ? [...r, e] : r.filter((t) => t.id !== e.id)));
                                 },
-                                isUserDisabled: () => l.length >= O.v$,
-                                isFetching: I,
-                                onFetchMore: S,
-                                searchQuery: y,
+                                isUserDisabled: () => c.length >= O.v$,
+                                isFetching: _,
+                                onFetchMore: j,
+                                searchQuery: h,
                                 emptySearchContent: {
                                     header: x.intl.string(x.t["8+ywHD"]),
                                     body: x.intl.string(x.t.CgQmY2),
@@ -191,25 +191,25 @@ let _ = (e) => {
                     ),
                 );
     },
-    U = (e) => {
-        var { onClose: t, inviteUsersResult: n } = e,
-            i = E(e, ["onClose", "inviteUsersResult"]);
-        return (0, r.jsx)(
+    Z = (e) => {
+        var { onClose: t, inviteUsersResult: r } = e,
+            i = C(e, ["onClose", "inviteUsersResult"]);
+        return (0, n.jsx)(
             o.ExpressiveModal,
-            C(
-                N(
+            N(
+                I(
                     {
                         graphic: {
                             type: "image",
                             src: w.Z,
                         },
                         gradientColor: "nitro-pink",
-                        title: x.intl.formatToPlainString(j.default["0yblpx"], {
+                        title: x.intl.formatToPlainString(S.default["0yblpx"], {
                             premiumGroupProductName: (0, O.sO)(),
                         }),
-                        subtitle: x.intl.format(j.default.olkQkj, {
+                        subtitle: x.intl.format(S.default.olkQkj, {
                             onClick: () => {
-                                t(), (0, h.openUserSettings)(b.n.SUBSCRIPTIONS_PANEL, { section: S.oAB.SUBSCRIPTIONS });
+                                t(), (0, f.openUserSettings)(p.n.SUBSCRIPTIONS_PANEL, { section: j.oAB.SUBSCRIPTIONS });
                             },
                         }),
                         onClose: t,
@@ -217,8 +217,8 @@ let _ = (e) => {
                     i,
                 ),
                 {
-                    children: n.map((e) =>
-                        (0, r.jsx)(
+                    children: r.map((e) =>
+                        (0, n.jsx)(
                             v.J,
                             {
                                 recipient: e.user,
@@ -232,37 +232,37 @@ let _ = (e) => {
             ),
         );
     },
-    B = (e) => {
-        var t = I(
+    k = (e) => {
+        var t = _(
             {},
             (function (e) {
                 if (null == e) throw TypeError("Cannot destructure " + e);
                 return e;
             })(e),
         );
-        let n = (0, l.e7)([f.Z], () => f.Z.getPremiumSubscription()),
-            [a, o] = i.useState([]);
-        s()(null != n, "Subscription not found");
-        let [c, u] = i.useState(1),
+        let r = (0, c.e7)([b.Z], () => b.Z.getPremiumSubscription()),
+            [s, o] = i.useState([]);
+        a()(null != r, "Subscription not found");
+        let [l, u] = i.useState(1),
             d = async (e) => {
                 let t = [];
-                for (let r of e)
-                    await (0, y.r1)(n.id, r.id),
+                for (let n of e)
+                    await (0, h.cD)(r.id, [n.id]),
                         t.push({
-                            user: r,
+                            user: n,
                             isSuccess: !0,
                         });
                 o(t), u(2);
             };
-        return 1 === c
-            ? (0, r.jsx)(
-                  _,
-                  C(N({}, t), {
+        return 1 === l
+            ? (0, n.jsx)(
+                  E,
+                  N(I({}, t), {
                       onInvite: d,
-                      subscriptionId: n.id,
+                      subscriptionId: r.id,
                   }),
               )
-            : 2 === c
-              ? (0, r.jsx)(U, C(N({}, t), { inviteUsersResult: a }))
+            : 2 === l
+              ? (0, n.jsx)(Z, N(I({}, t), { inviteUsersResult: s }))
               : void 0;
     };

@@ -1,6 +1,6 @@
 r.d(t, {
     MT: () => s,
-    r1: () => a,
+    cD: () => a,
 });
 var n = r(544891);
 r(504518);
@@ -16,7 +16,8 @@ async function s(e) {
 async function a(e, t) {
     try {
         return await n.tn.post({
-            url: i.ANM.BILLING_SUBSCRIPTION_INVITE(e, t),
+            url: i.ANM.BILLING_SUBSCRIPTION_INVITES(e),
+            body: { user_ids: t },
             rejectWithError: !0,
         });
     } catch (e) {}

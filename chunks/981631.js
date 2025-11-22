@@ -1520,6 +1520,7 @@ let em = "@me",
         Billing_SUBSCRIPTION_REWARD_ELIGIBILITY: (e) =>
             "/users/@me/billing/subscriptions/".concat(e, "/reward-eligibility"),
         BILLING_SUBSCRIPTION_ELIGIBLE_USERS: (e) => "/users/@me/billing/subscriptions/".concat(e, "/eligible-users"),
+        BILLING_SUBSCRIPTION_INVITES: (e) => "/users/@me/billing/subscriptions/".concat(e, "/invites"),
         BILLING_SUBSCRIPTION_INVITE: (e, t) =>
             "/users/@me/billing/subscriptions/".concat(e, "/members/").concat(t, "/invite"),
         BILLING_SUBSCRIPTION_REMOVE_USER: (e, t) =>
