@@ -1,0 +1,19 @@
+n.d(e, { Z: () => g });
+var i = n(509613),
+    r = n(313789),
+    l = n(40727),
+    u = n(836133),
+    s = n(440331),
+    a = n(196561),
+    o = n(301763),
+    c = n(287454),
+    E = n(154869),
+    d = n(987143),
+    S = n(39408),
+    T = n(936890),
+    I = n(518517),
+    O = n(388032);
+let g = (0, i.k4)(r.n.CLIPS_RECORDING_CATEGORY, {
+    useTitle: () => O.intl.string(O.t.iIwmV5),
+    buildLayout: () => [o.Z, u.Z, S.Z, T.Z, I.Z, a.Z, c.Z, l.Z, s.Z, E.Z, d.Z],
+});

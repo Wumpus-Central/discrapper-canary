@@ -1,38 +1,37 @@
 n.d(e, { K: () => C });
 var i = n(657707),
-    l = n(509613),
-    u = n(131951),
-    r = n(313789),
+    r = n(509613),
+    l = n(131951),
+    u = n(313789),
     s = n(526665),
     a = n(604224),
     o = n(901567),
-    c = n(98022),
-    E = n(279362),
-    S = n(264413),
-    T = n(556080),
-    d = n(90794),
-    I = n(756893),
-    O = n(927947),
-    g = n(776570),
-    _ = n(726985),
-    N = n(388032);
-let A = (0, l.x1)(r.n.VOICE_AND_VIDEO_PANE, {
+    c = n(279362),
+    E = n(264413),
+    d = n(556080),
+    S = n(90794),
+    T = n(756893),
+    I = n(927947),
+    O = n(776570),
+    g = n(726985),
+    _ = n(388032);
+let N = (0, r.x1)(u.n.VOICE_AND_VIDEO_PANE, {
         buildLayout: () => [],
         render: a.Z,
         usePredicate: () => !(0, s.BK)("LegacyVoiceAndVideoPane"),
     }),
-    f = (0, l.x1)(r.n.VOICE_AND_VIDEO_PANE, {
-        buildLayout: () => [g.Z, T.Z, S.Z, o.Z, O.Z, I.Z, d.Z, c.Z, E.Z],
+    f = (0, r.x1)(u.n.VOICE_AND_VIDEO_PANE, {
+        buildLayout: () => [O.Z, d.Z, E.Z, o.Z, I.Z, T.Z, S.Z, c.Z],
         usePredicate: () => (0, s.BK)("VoiceAndVideoPane"),
     }),
-    Z = (0, l.wf)(r.n.VOICE_AND_VIDEO_PANEL, {
-        useTitle: () => N.intl.string(N.t.B1fFpf),
-        buildLayout: () => ((0, s.Ml)("VoiceAndVideoPanel") ? [f] : [A]),
+    A = (0, r.wf)(u.n.VOICE_AND_VIDEO_PANEL, {
+        useTitle: () => _.intl.string(_.t.B1fFpf),
+        buildLayout: () => ((0, s.Ml)("VoiceAndVideoPanel") ? [f] : [N]),
     }),
-    C = (0, l.m7)(r.n.VOICE_AND_VIDEO_SIDEBAR_ITEM, {
+    C = (0, r.m7)(u.n.VOICE_AND_VIDEO_SIDEBAR_ITEM, {
         icon: i.S6n,
-        useTitle: () => N.intl.string(N.t.B1fFpf),
-        usePredicate: () => u.Z.isSupported(),
-        getLegacySearchKey: () => ((0, s.Ml)("VoiceAndVideoPanel") ? void 0 : _.s6.VOICE_AND_VIDEO),
-        buildLayout: () => [Z],
+        useTitle: () => _.intl.string(_.t.B1fFpf),
+        usePredicate: () => l.Z.isSupported(),
+        getLegacySearchKey: () => ((0, s.Ml)("VoiceAndVideoPanel") ? void 0 : g.s6.VOICE_AND_VIDEO),
+        buildLayout: () => [A],
     });

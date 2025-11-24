@@ -14,24 +14,28 @@ function a(e) {
             useSubtitle: d,
             useDisabled: f,
             onValueRender: b,
-            asValueChanges: p,
+            asValueChanges: y,
+            markers: p,
+            onMarkerRender: v,
         } = t,
-        [y] = l.useState(() => a()),
-        j = u(),
+        [j] = l.useState(() => a()),
+        g = u(),
         m = null == d ? void 0 : d(),
-        v = null == f ? void 0 : f();
+        h = null == f ? void 0 : f();
     return (0, r.jsx)(o.X, {
         children: (0, r.jsx)(i.iRW, {
-            label: j,
+            label: g,
             description: m,
-            disabled: v,
-            initialValue: y,
+            disabled: h,
+            initialValue: j,
             minValue: c,
             maxValue: s,
             onValueRender: b,
-            asValueChanges: p,
+            asValueChanges: y,
             onValueChange: n,
             orientation: "horizontal",
+            markers: p,
+            onMarkerRender: v,
         }),
     });
 }

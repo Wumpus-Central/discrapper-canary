@@ -1,4 +1,10 @@
-n.d(t, { Z: () => h }), n(388685), n(781311), n(539854);
+n.d(t, {
+    Z: () => m,
+    j: () => h,
+}),
+    n(388685),
+    n(781311),
+    n(539854);
 var r = n(54381),
     i = n(473749),
     a = n(442837),
@@ -60,9 +66,9 @@ function p(e, t) {
     );
 }
 function h() {
-    let { autoClipPhrases: e, maxAutoClips: t, clipSignals: n } = (0, a.cj)([s.Z], () => s.Z.getSettings()),
-        [d, _] = i.useState(""),
-        h = i.useMemo(
+    let e = (0, a.e7)([s.Z], () => s.Z.getSettings().autoClipPhrases),
+        [t, n] = i.useState(""),
+        c = i.useMemo(
             () =>
                 e.map((e) => ({
                     id: e,
@@ -70,46 +76,63 @@ function h() {
                 })),
             [e],
         ),
-        m = i.useCallback((e) => {
-            _(e);
+        d = i.useCallback((e) => {
+            n(e);
         }, []),
-        g = i.useCallback(
-            (t) => {
-                if ("Enter" === t.key || "," === t.key) {
-                    t.preventDefault();
-                    let n = d.trim().toLowerCase();
-                    n.length > 0 && !e.includes(n) && (l.a2([...e, n]), _(""));
-                } else if ("Backspace" === t.key && "" === d && e.length > 0) {
+        f = i.useCallback(
+            (r) => {
+                if ("Enter" === r.key || "," === r.key) {
+                    r.preventDefault();
+                    let i = t.trim().toLowerCase();
+                    i.length > 0 && !e.includes(i) && (l.a2([...e, i]), n(""));
+                } else if ("Backspace" === r.key && "" === t && e.length > 0) {
                     let t = e.slice(0, -1);
                     l.a2(t);
                 }
             },
-            [d, e],
+            [t, e],
         ),
-        E = i.useCallback(
+        _ = i.useCallback(
             (t) => {
                 let n = Array.from(t)[0],
                     r = e.filter((e) => e !== n);
                 l.a2(r);
             },
             [e],
-        ),
-        b = i.useCallback(
+        );
+    return (0, r.jsx)(o.oil, {
+        value: t,
+        onChange: d,
+        onKeyDown: f,
+        placeholder: u.intl.string(u.t.zYUZpt),
+        leading:
+            c.length > 0
+                ? {
+                      type: "tags",
+                      items: c,
+                      onRemove: _,
+                  }
+                : void 0,
+    });
+}
+function m() {
+    let { maxAutoClips: e, clipSignals: t } = (0, a.cj)([s.Z], () => s.Z.getSettings()),
+        n = i.useCallback(
             (e) => {
-                l.Rr(p(f({}, n), { enableGameSignals: e }));
+                l.Rr(p(f({}, t), { enableGameSignals: e }));
             },
-            [n],
+            [t],
         ),
-        y = i.useCallback(
+        d = i.useCallback(
             (e) => {
-                l.Rr(p(f({}, n), { enablePhraseSignals: e }));
+                l.Rr(p(f({}, t), { enablePhraseSignals: e }));
             },
-            [n],
+            [t],
         ),
-        O = i.useCallback((e) => {
+        _ = i.useCallback((e) => {
             l.W6(Math.floor(e));
         }, []),
-        v = i.useMemo(() => {
+        m = i.useMemo(() => {
             let e = [c.qb];
             for (let t = 10; t <= c.b0; t += 10) e.push(t);
             return e[e.length - 1] !== c.b0 && e.push(c.b0), e;
@@ -119,43 +142,29 @@ function h() {
             (0, r.jsx)(o.iRW, {
                 label: u.intl.string(u.t.yfsrDI),
                 description: u.intl.string(u.t.vlDHdC),
-                initialValue: t,
+                initialValue: e,
                 layout: "vertical",
                 onValueRender: (e) => "".concat(Math.floor(e)),
                 minValue: c.qb,
                 maxValue: c.b0,
-                onValueChange: O,
-                markers: v,
+                onValueChange: _,
+                markers: m,
                 onMarkerRender: (e) => "".concat(Math.floor(e)),
             }),
             (0, r.jsx)(o.izJ, {}),
             (0, r.jsx)(o.rsf, {
                 label: u.intl.string(u.t.iV6KcI),
                 description: u.intl.string(u.t["dJ2tX+"]),
-                checked: n.enableGameSignals,
-                onChange: b,
+                checked: t.enableGameSignals,
+                onChange: n,
             }),
             (0, r.jsx)(o.rsf, {
                 label: u.intl.string(u.t.nHsilt),
                 description: u.intl.string(u.t["s6wq+m"]),
-                checked: n.enablePhraseSignals,
-                onChange: y,
+                checked: t.enablePhraseSignals,
+                onChange: d,
             }),
-            n.enablePhraseSignals &&
-                (0, r.jsx)(o.oil, {
-                    value: d,
-                    onChange: m,
-                    onKeyDown: g,
-                    placeholder: u.intl.string(u.t.zYUZpt),
-                    leading:
-                        h.length > 0
-                            ? {
-                                  type: "tags",
-                                  items: h,
-                                  onRemove: E,
-                              }
-                            : void 0,
-                }),
+            t.enablePhraseSignals && (0, r.jsx)(h, {}),
         ],
     });
 }

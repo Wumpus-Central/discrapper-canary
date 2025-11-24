@@ -1,0 +1,18 @@
+n.d(e, { Z: () => E });
+var i = n(54381),
+    r = n(442837),
+    l = n(435064),
+    u = n(894694),
+    s = n(509613),
+    a = n(313789),
+    o = n(494620),
+    c = n(388032);
+let E = (0, s.ON)(a.n.CLIPS_HARDWARE_CLASSIFICATION_WARNING, {
+    useSearchTerms: () => [c.intl.string(c.t.SIxrIF)],
+    usePredicate: () => (0, r.e7)([l.Z], () => l.Z.getHardwareClassification()) === u.xH.BELOW_MINIMUM,
+    render: () =>
+        (0, i.jsx)(o.Z, {
+            look: o.z.WARNING,
+            children: c.intl.string(c.t.SIxrIF),
+        }),
+});
