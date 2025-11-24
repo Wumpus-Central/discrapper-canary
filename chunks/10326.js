@@ -134,13 +134,14 @@ let m = {
                     })[p],
                 [p],
             ),
-            N = (0, c.J)(C),
+            N = null != C ? (0, c.J)(C) : null,
             R = i.useMemo(() => {
+                if (null == C) return "";
                 let e = u.vK[C];
                 return (d.intl.string(d.t.lG6a5x) + " " + d.intl.string(e.nameUnformatted)).toLocaleUpperCase();
             }, [C]),
             P = i.useMemo(() => {
-                if (!a) return;
+                if (!a || null == N) return;
                 let e = g
                     ? {
                           progressCircleText: E,
