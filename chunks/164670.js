@@ -1,37 +1,38 @@
 n.d(t, {
-    Do: () => m,
-    FE: () => h,
-    K$: () => u,
-    Uc: () => _,
-    a7: () => g,
-    ac: () => d,
-    wK: () => f,
-    wQ: () => E,
-    x6: () => p,
+    Do: () => g,
+    FE: () => m,
+    K$: () => d,
+    Uc: () => p,
+    a7: () => E,
+    ac: () => f,
+    wK: () => _,
+    wQ: () => b,
+    x6: () => h,
 }),
     n(953529);
 var r = n(392711),
     i = n.n(r),
-    a = n(430824),
-    o = n(73346),
-    s = n(591759),
-    l = n(582113),
-    c = n(981631);
-function u(e) {
-    return null != e && e.productLine === c.POd.SOCIAL_LAYER_GAME_ITEM;
+    a = n(973616),
+    o = n(430824),
+    s = n(73346),
+    l = n(591759),
+    c = n(582113),
+    u = n(981631);
+function d(e) {
+    return null != e && e.productLine === u.POd.SOCIAL_LAYER_GAME_ITEM;
 }
-function d() {
-    let e = a.Z.getGuild(l.Kz);
-    return null != e && e.features.has(c.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ? e.id : l.ON;
-}
-function f(e) {
-    var t, n;
-    return (
-        e.id === d() ||
-        (null != (n = null == (t = e.features) ? void 0 : t.has(c.GuildFeatures.SOCIAL_LAYER_STOREFRONT)) && n)
-    );
+function f() {
+    let e = o.Z.getGuild(c.Kz);
+    return null != e && e.features.has(u.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ? e.id : c.ON;
 }
 function _(e) {
+    var t, n;
+    return (
+        e.id === f() ||
+        (null != (n = null == (t = e.features) ? void 0 : t.has(u.GuildFeatures.SOCIAL_LAYER_STOREFRONT)) && n)
+    );
+}
+function p(e) {
     return {
         applicationId: e.application_id,
         title: e.title,
@@ -57,9 +58,10 @@ function _(e) {
                     : void 0,
         })),
         assets: i().keyBy(e.assets, "id"),
+        application: null != e.application ? a.ZP.createFromServer(e.application) : void 0,
     };
 }
-function p(e) {
+function h(e) {
     if (null != e)
         return {
             carouselItems: e.carousel_items.map((e) => ({
@@ -76,7 +78,7 @@ function p(e) {
             cardBackgroundImageAssetId: e.card_background_image_asset_id,
         };
 }
-function h(e, t) {
+function m(e, t) {
     var n, r, i;
     if (
         null == t ||
@@ -95,11 +97,11 @@ function h(e, t) {
               primaryIconLabel: void 0,
           }
         : {
-              primaryIconAsset: null != (i = s.Z.toURLSafe((0, o._W)(t, a.labelIconAssetId, 512, "png"))) ? i : void 0,
+              primaryIconAsset: null != (i = l.Z.toURLSafe((0, s._W)(t, a.labelIconAssetId, 512, "png"))) ? i : void 0,
               primaryIconLabel: a.label,
           };
 }
-function m(e) {
+function g(e) {
     var t, n, r;
     let i = null == e ? void 0 : e.applicationId,
         a =
@@ -112,9 +114,9 @@ function m(e) {
                 : null == e
                   ? void 0
                   : e.thumbnailAssetId;
-    if (null != a && null != i) return s.Z.toURLSafe((0, o._W)(i, a, 512, "png"));
+    if (null != a && null != i) return l.Z.toURLSafe((0, s._W)(i, a, 512, "png"));
 }
-function g(e) {
+function E(e) {
     var t, n;
     if (
         (null == e || null == (n = e.tenantMetadata) || null == (t = n.socialLayer)
@@ -122,13 +124,13 @@ function g(e) {
             : t.cardBackgroundImageAssetId) != null &&
         (null == e ? void 0 : e.applicationId) != null
     )
-        return s.Z.toURLSafe(
-            (0, o._W)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, 1024, "png"),
+        return l.Z.toURLSafe(
+            (0, s._W)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, 1024, "png"),
         );
 }
-function E(e, t) {
+function b(e, t) {
     return ""
         .concat(location.protocol)
         .concat(window.GLOBAL_ENV.WEBAPP_ENDPOINT)
-        .concat(c.Z5c.GAME_SHOP(e, t.id, t.slug));
+        .concat(u.Z5c.GAME_SHOP(e, t.id, t.slug));
 }

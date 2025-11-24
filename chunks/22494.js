@@ -1,10 +1,11 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(81825),
-    i = n(523080),
-    a = n(541699),
-    o = n(321947),
-    s = n(981631);
-function l(e, t, n) {
+    i = n(973616),
+    a = n(523080),
+    o = n(541699),
+    s = n(321947),
+    l = n(981631);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,7 +18,7 @@ function l(e, t, n) {
         e
     );
 }
-function c(e) {
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -28,12 +29,12 @@ function c(e) {
                 }),
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                c(e, t, n[t]);
             });
     }
     return e;
 }
-function u(e, t) {
+function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -45,22 +46,22 @@ function u(e, t) {
     }
     return n;
 }
-function d(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
+            : d(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -68,7 +69,7 @@ function f(e, t) {
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -77,24 +78,30 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-class p extends r.Z {
+class h extends r.Z {
     static fromServer(e) {
-        var { user_id: t, wishlist_items: n } = e,
-            r = f(e, ["user_id", "wishlist_items"]);
-        let l = n.map((e) => {
+        var t,
+            n,
+            { user_id: r, wishlist_items: c } = e,
+            d = _(e, ["user_id", "wishlist_items"]);
+        let p = c.map((e) => {
             switch (e.sku_product_line) {
-                case s.POd.COLLECTIBLES:
-                    return a.Z.fromServer(e);
-                case s.POd.SOCIAL_LAYER_GAME_ITEM:
+                case l.POd.COLLECTIBLES:
                     return o.Z.fromServer(e);
+                case l.POd.SOCIAL_LAYER_GAME_ITEM:
+                    return s.Z.fromServer(e);
                 default:
-                    return i.Z.fromServer(e);
+                    return a.Z.fromServer(e);
             }
         });
-        return new p(
-            d(c({}, r), {
-                userId: t,
-                items: l,
+        return new h(
+            f(u({}, d), {
+                userId: r,
+                items: p,
+                applications:
+                    null != (n = null == (t = d.applications) ? void 0 : t.map((e) => i.ZP.createFromServer(e)))
+                        ? n
+                        : void 0,
             }),
         );
     }
@@ -108,12 +115,15 @@ class p extends r.Z {
         return new Set(this.items.map((e) => e.skuProductLine));
     }
     constructor(e) {
+        var t;
         super(),
-            l(this, "id", void 0),
-            l(this, "userId", void 0),
-            l(this, "items", void 0),
+            c(this, "id", void 0),
+            c(this, "userId", void 0),
+            c(this, "items", void 0),
+            c(this, "applications", void 0),
             (this.id = e.id),
             (this.userId = e.userId),
-            (this.items = e.items);
+            (this.items = e.items),
+            (this.applications = null != (t = e.applications) ? t : void 0);
     }
 }
