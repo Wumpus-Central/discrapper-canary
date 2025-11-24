@@ -1,7 +1,7 @@
 n.d(t, { Z: () => a });
 var i = n(54381);
 n(473749);
-var r = n(562129),
+var r = n(749280),
     l = n(871499);
 function a(e) {
     var { isActivityActive: t, onMouseEnter: n, onMouseLeave: a, onClick: o } = e,
@@ -26,7 +26,7 @@ function a(e) {
             }
             return r;
         })(e, ["isActivityActive", "onMouseEnter", "onMouseLeave", "onClick"]);
-    let { Component: c, events: u, play: d } = (0, r.Z)("ActivityButton");
+    let { Component: c, events: u, play: d } = (0, r.w)();
     return (0, i.jsx)(
         l.d,
         (function (e) {

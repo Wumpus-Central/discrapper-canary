@@ -1,109 +1,105 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => S });
 var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
     s = n(636977),
     o = n(481060),
-    c = n(456100),
-    u = n(930446),
-    d = n(31569),
-    p = n(258971),
-    f = n(164991),
-    h = n(859921),
-    g = n(283833),
-    m = n(626135),
-    _ = n(836768),
-    b = n(766219),
-    E = n(749681),
-    O = n(49898),
-    y = n(981631),
-    v = n(324805),
-    I = n(388032),
-    C = n(933767);
-function S(e) {
+    c = n(930446),
+    u = n(31569),
+    d = n(258971),
+    p = n(164991),
+    f = n(859921),
+    h = n(283833),
+    g = n(626135),
+    m = n(836768),
+    _ = n(766219),
+    b = n(749681),
+    E = n(49898),
+    O = n(981631),
+    y = n(324805),
+    v = n(388032),
+    I = n(933767);
+function C(e) {
     let { tab: t } = e,
-        { enabled: n } = c.c.useExperiment({ location: "GlobalDiscoverySidebar" }, { autoTrackExposure: !0 }),
-        l = _.Z.useField("selectedTab"),
-        I = i.useMemo(
+        n = m.Z.useField("selectedTab"),
+        l = i.useMemo(
             () =>
-                (function (e, t) {
+                (function (e) {
                     switch (e) {
-                        case O.GlobalDiscoveryTab.SERVERS:
+                        case E.GlobalDiscoveryTab.SERVERS:
                             return (0, r.jsx)(o.QTo, { color: "currentColor" });
-                        case O.GlobalDiscoveryTab.APPS:
-                            return t
-                                ? (0, r.jsx)(o.iWm, { color: "currentColor" })
-                                : (0, r.jsx)(o.jje, { color: "currentColor" });
-                        case O.GlobalDiscoveryTab.QUESTS:
+                        case E.GlobalDiscoveryTab.APPS:
+                            return (0, r.jsx)(o.jje, { color: "currentColor" });
+                        case E.GlobalDiscoveryTab.QUESTS:
                             return (0, r.jsx)(o.qDn, { color: "currentColor" });
                     }
-                })(t, n),
-            [t, n],
+                })(t),
+            [t],
         ),
-        S = i.useMemo(() => (0, b.s)(t), [t]),
-        T = l === t,
-        N = i.useCallback(() => {
+        v = i.useMemo(() => (0, _.s)(t), [t]),
+        C = n === t,
+        S = i.useCallback(() => {
             switch (t) {
-                case O.GlobalDiscoveryTab.QUESTS:
+                case E.GlobalDiscoveryTab.QUESTS:
                     return (
-                        T && g.Z.resetState(),
-                        m.default.track(y.rMx.DISCOVERY_QUEST_TAB_CLICKED, { client_ad_session_id: (0, u.Gy)().uuid }),
-                        (0, E.transitionToGlobalDiscovery)({
-                            tab: O.GlobalDiscoveryTab.QUESTS,
-                            location: v.dr.DISCOVERY_SIDEBAR,
+                        C && h.Z.resetState(),
+                        g.default.track(O.rMx.DISCOVERY_QUEST_TAB_CLICKED, { client_ad_session_id: (0, c.Gy)().uuid }),
+                        (0, b.transitionToGlobalDiscovery)({
+                            tab: E.GlobalDiscoveryTab.QUESTS,
+                            location: y.dr.DISCOVERY_SIDEBAR,
                             questContent: s.j.DISCOVERY_SIDEBAR,
                         })
                     );
-                case O.GlobalDiscoveryTab.APPS:
-                    if (!T)
-                        return (0, E.transitionToGlobalDiscovery)({
+                case E.GlobalDiscoveryTab.APPS:
+                    if (!C)
+                        return (0, b.transitionToGlobalDiscovery)({
                             tab: t,
                             newSessionState: {
-                                entrypoint: { name: p.xF.GLOBAL_DISCOVERY_SIDEBAR },
+                                entrypoint: { name: d.xF.GLOBAL_DISCOVERY_SIDEBAR },
                                 restorePreviousView: !0,
                             },
                         });
-                    d.Z.resetState(), (0, E.transitionToGlobalDiscovery)({ tab: t });
+                    u.Z.resetState(), (0, b.transitionToGlobalDiscovery)({ tab: t });
                     return;
-                case O.GlobalDiscoveryTab.SERVERS:
-                    if (!T) return (0, E.transitionToGlobalDiscovery)({ tab: t });
-                    f.Z.resetState(), h.Z.resetState();
+                case E.GlobalDiscoveryTab.SERVERS:
+                    if (!C) return (0, b.transitionToGlobalDiscovery)({ tab: t });
+                    p.Z.resetState(), f.Z.resetState();
                     return;
                 default:
-                    return (0, E.transitionToGlobalDiscovery)({ tab: t });
+                    return (0, b.transitionToGlobalDiscovery)({ tab: t });
             }
-        }, [t, T]);
+        }, [t, C]);
     return (0, r.jsxs)(o.P3F, {
-        onClick: N,
-        className: a()(C.navItem, { [C.selected]: T }),
+        onClick: S,
+        className: a()(I.navItem, { [I.selected]: C }),
         children: [
             (0, r.jsx)("div", {
-                className: C.navItemIcon,
-                children: I,
+                className: I.navItemIcon,
+                children: l,
             }),
             (0, r.jsx)(o.Text, {
                 variant: "text-md/medium",
                 color: "none",
-                children: S,
+                children: v,
             }),
         ],
     });
 }
-let T = function () {
+let S = function () {
     return (0, r.jsxs)("div", {
-        className: C.container,
+        className: I.container,
         children: [
             (0, r.jsx)("div", {
-                className: C.header,
+                className: I.header,
                 children: (0, r.jsx)(o.Heading, {
                     variant: "text-lg/semibold",
-                    children: I.intl.string(I.t["1KqYnl"]),
+                    children: v.intl.string(v.t["1KqYnl"]),
                 }),
             }),
             (0, r.jsx)("nav", {
-                className: C.nav,
-                children: O.GLOBAL_DISCOVERY_TABS.map((e) => (0, r.jsx)(S, { tab: e }, e)),
+                className: I.nav,
+                children: E.GLOBAL_DISCOVERY_TABS.map((e) => (0, r.jsx)(C, { tab: e }, e)),
             }),
         ],
     });
