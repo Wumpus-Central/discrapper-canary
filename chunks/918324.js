@@ -3,8 +3,6 @@ e.exports = {
     popoutContent: "popoutContent_cba592",
     footer: "footer_cba592",
     searchBar: "searchBar_cba592",
-    searchBarComponent: "searchBarComponent_cba592",
-    addButton: "addButton_cba592",
     customizationContainer: "customizationContainer_cba592",
     iconSelector: "iconSelector_cba592",
     channelNameLabel: "channelNameLabel_cba592",
