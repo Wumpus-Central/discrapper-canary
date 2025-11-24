@@ -6,6 +6,8 @@ e.exports = {
     heroAssetCont: "heroAssetCont_b5b7aa",
     overlay: "overlay_b5b7aa",
     darkThemeGradient: "darkThemeGradient_b5b7aa",
+    darkerThemeGradient: "darkerThemeGradient_b5b7aa",
+    midnightThemeGradient: "midnightThemeGradient_b5b7aa",
     lightThemeGradient: "lightThemeGradient_b5b7aa",
     topRow: "topRow_b5b7aa",
     pill: "pill_b5b7aa",
