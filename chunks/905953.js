@@ -1,8 +1,8 @@
 n.d(t, { Z: () => y }), n(388685), n(457542);
 var a = n(54381),
     l = n(473749),
-    i = n(296009),
-    r = n(442837),
+    r = n(296009),
+    i = n(442837),
     s = n(704215),
     o = n(907862),
     c = n(535139),
@@ -23,19 +23,18 @@ function y(e) {
     let { targetElementRef: n, onClose: y } = e,
         [C, S] = l.useState(!1),
         { trackUserProfileEditAction: E } = (0, u.KZ)(),
-        N = (0, r.e7)([b.default], () => b.default.getId()),
+        N = (0, i.e7)([b.default], () => b.default.getId()),
         { config: T, application: O } = (0, h.G)(),
         { fetched: P, hasAlreadyLinked: I, canStartAuthorization: w, startAuthorization: k } = (0, c.F)(O),
-        A = (0, x.ZP)(N),
-        R =
-            null == A || null == (t = A.widgets)
+        R = (0, x.ZP)(N),
+        A =
+            null == R || null == (t = R.widgets)
                 ? void 0
                 : t.some((e) => e instanceof m.q && e.applicationId === (null == O ? void 0 : O.id));
     return null != T && null != T.edit_profile_upsell_image && null != O && P
         ? (0, a.jsx)(d.ZP, {
-              bypassAutoDismiss: !0,
               contentTypes: I
-                  ? R
+                  ? A
                       ? []
                       : [s.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_LINKED]
                   : w
@@ -44,7 +43,7 @@ function y(e) {
               children: (e) => {
                   let { visibleContent: t, markAsDismissed: l } = e;
                   if (null == t) return null;
-                  let r = t === s.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_LINKED;
+                  let i = t === s.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_LINKED;
                   return (0, a.jsx)(o.J2, {
                       targetElementRef: n,
                       position: "right",
@@ -54,12 +53,12 @@ function y(e) {
                           src: T.edit_profile_upsell_image,
                       },
                       title: _.intl.format(_.t.TXDztH, { applicationName: O.name }),
-                      body: r ? _.intl.string(_.t["63Kso0"]) : _.intl.string(_.t.HwXoeC),
+                      body: i ? _.intl.string(_.t["63Kso0"]) : _.intl.string(_.t.HwXoeC),
                       onRequestClose: () => {
                           l(v.L.USER_DISMISS);
                       },
                       actions: [
-                          r
+                          i
                               ? {
                                     text: _.intl.string(_.t.VSLDly),
                                     onClick: () => {
@@ -72,15 +71,15 @@ function y(e) {
                                                     l(v.L.TAKE_ACTION),
                                                         y(),
                                                         (0, p.qH)(
-                                                            i.l.APPLICATION,
+                                                            r.l.APPLICATION,
                                                             new m.q({
                                                                 applicationId: O.id,
-                                                                type: i.l.APPLICATION,
+                                                                type: r.l.APPLICATION,
                                                             }),
                                                         ),
                                                         E({
                                                             action: "WIDGET_ADDED",
-                                                            widgetEdited: i.l.APPLICATION,
+                                                            widgetEdited: r.l.APPLICATION,
                                                             applicationId: O.id,
                                                         }),
                                                         (0, f.L$)(j.qb.WIDGET_ADDED);
