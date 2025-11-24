@@ -60,8 +60,7 @@ function f(e) {
     let { guildId: t } = e;
     (d[t] = {
         storefront: null,
-        loading: !0,
-        error: !1,
+        state: "loading",
         fetchedAt: null,
     }),
         (d = s({}, d));
@@ -70,8 +69,7 @@ function _(e) {
     let { guildId: t, storefront: n } = e;
     (d[t] = {
         storefront: n,
-        loading: !1,
-        error: !1,
+        state: "fetched",
         fetchedAt: Date.now(),
     }),
         (d = s({}, d));
@@ -83,8 +81,7 @@ function p(e) {
         ? (d[t] = c(s({}, r), { storefront: c(s({}, r.storefront), { assets: s({}, r.storefront.assets, n.assets) }) }))
         : (d[t] = {
               storefront: n,
-              loading: !1,
-              error: !1,
+              state: "partially-fetched",
               fetchedAt: null,
           }),
         (d = s({}, d));
@@ -93,8 +90,7 @@ function h(e) {
     let { guildId: t } = e;
     (d[t] = {
         storefront: null,
-        loading: !1,
-        error: !0,
+        state: "error",
         fetchedAt: null,
     }),
         (d = s({}, d));

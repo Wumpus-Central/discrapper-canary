@@ -1,6 +1,6 @@
 n.d(t, {
-    C: () => K,
-    Z: () => Y,
+    C: () => z,
+    Z: () => W,
 }),
     n(388685);
 var r = n(54381),
@@ -49,11 +49,12 @@ let F = 80,
         [0, 20],
         [0, 0],
     ],
-    H = 30;
-var Y = (function (e) {
+    H = 30,
+    Y = 3;
+var W = (function (e) {
     return (e[(e.SMALL = 0)] = "SMALL"), (e[(e.MEDIUM = 1)] = "MEDIUM"), (e[(e.EMBEDDED = 2)] = "EMBEDDED"), e;
 })({});
-function W(e) {
+function K(e) {
     let { sku: t, isCardHovered: n, onClick: i } = e;
     return (0, r.jsx)("div", {
         className: Z.wishlistButtonContainer,
@@ -65,34 +66,34 @@ function W(e) {
         }),
     });
 }
-function K(e) {
-    var t, n, a, s, c, b, D, Y, K, z, q, X, Q, J, $, ee;
+function z(e) {
+    var t, n, a, s, c, b, D, W, z, q, X, Q, J, $, ee, et;
     let {
-            positionInSection: et,
-            applicationId: en,
-            skuId: er,
-            variant: ei = 0,
-            guildId: ea,
-            onClick: eo,
-            className: es,
-            analyticsLocations: el,
+            positionInSection: en,
+            applicationId: er,
+            skuId: ei,
+            variant: ea = 0,
+            guildId: eo,
+            onClick: es,
+            className: el,
+            analyticsLocations: ec,
         } = e,
-        ec = i.useRef(null),
-        eu = (0, f.e7)([v.Z], () => v.Z.get(er)),
-        ed = (0, f.e7)([O.Z], () => (0, d.wjy)(O.Z.theme)),
-        ef = (0, f.e7)([h.Z], () => h.Z.useReducedMotion),
-        { isHoveringOrFocusing: e_ } = (0, y.Z)(ec),
-        ep = (0, N.oR)(),
-        { analyticsLocations: eh } = (0, g.ZP)(null != el ? el : []),
-        em = i.useRef({
-            positionInSection: et,
-            analyticsLocations: eh,
+        eu = i.useRef(null),
+        ed = (0, f.e7)([v.Z], () => v.Z.get(ei)),
+        ef = (0, f.e7)([O.Z], () => (0, d.wjy)(O.Z.theme)),
+        e_ = (0, f.e7)([h.Z], () => h.Z.useReducedMotion),
+        { isHoveringOrFocusing: ep } = (0, y.Z)(eu),
+        eh = (0, N.oR)(),
+        { analyticsLocations: em } = (0, g.ZP)(null != ec ? ec : []),
+        eg = i.useRef({
+            positionInSection: en,
+            analyticsLocations: em,
         }),
-        { handleCardHover: eg, handleCardUnhover: eE } = (0, M.A)(er, ep, et, eh),
-        { handleCardVisibilityChange: eb } = (0, k.X)(er, ep, et, eh),
-        ey = i.useCallback(
+        { handleCardHover: eE, handleCardUnhover: eb } = (0, M.A)(ei, eh, en, em),
+        { handleCardVisibilityChange: ey } = (0, k.X)(ei, eh, en, em),
+        eO = i.useCallback(
             (e) => {
-                let { analyticsLocations: t, positionInSection: n } = em.current,
+                let { analyticsLocations: t, positionInSection: n } = eg.current,
                     {
                         sessionId: r,
                         guildId: i,
@@ -102,10 +103,10 @@ function K(e) {
                         pageSectionTitle: l,
                         isUserGuildMember: c,
                         pageHasLeaderboard: u,
-                    } = ep;
+                    } = eh;
                 I.default.track(U.rMx.SLAYER_STOREFRONT_CARD_ELEMENT_CLICKED, {
                     slayer_storefront_session_id: r,
-                    sku_id: er,
+                    sku_id: ei,
                     guild_id: i,
                     page_index: a,
                     page_title: o,
@@ -118,44 +119,44 @@ function K(e) {
                     location_stack: t,
                 });
             },
-            [er, ep],
+            [ei, eh],
         ),
-        { primaryIconAsset: eO, primaryIconLabel: ev } = i.useMemo(() => (0, C.FE)(eu, en), [eu, en]),
-        eI = (0, f.e7)([R.Z], () => {
+        { primaryIconAsset: ev, primaryIconLabel: eI } = i.useMemo(() => (0, C.FE)(ed, er), [ed, er]),
+        eT = (0, f.e7)([R.Z], () => {
             var e, t;
-            return null != ea && null != (t = null == (e = R.Z.getStorefrontState(ea)) ? void 0 : e.activePage) ? t : 0;
+            return null != eo && null != (t = null == (e = R.Z.getStorefrontState(eo)) ? void 0 : e.activePage) ? t : 0;
         }),
-        eT = i.useMemo(() => {
+        eS = i.useMemo(() => {
             var e, t;
             if (
-                (null == eu || null == (t = eu.tenantMetadata) || null == (e = t.socialLayer) ? void 0 : e.expiresAt) ==
+                (null == ed || null == (t = ed.tenantMetadata) || null == (e = t.socialLayer) ? void 0 : e.expiresAt) ==
                 null
             )
                 return null;
             let n = u()(),
-                r = u()(eu.tenantMetadata.socialLayer.expiresAt).diff(n, "days");
-            return r <= 1 ? B.intl.string(B.t.Bc13HF) : B.intl.format(B.t.Io7ozn, { days: r });
-        }, [null == eu || null == (n = eu.tenantMetadata) || null == (t = n.socialLayer) ? void 0 : t.expiresAt]),
-        eS =
-            (null == eu || null == (s = eu.tenantMetadata) || null == (a = s.socialLayer)
+                r = Math.max(u()(ed.tenantMetadata.socialLayer.expiresAt).diff(n, "days"), 1);
+            return r <= Y ? B.intl.format(B.t.PWw4Vp, { days: r }) : null;
+        }, [null == ed || null == (n = ed.tenantMetadata) || null == (t = n.socialLayer) ? void 0 : t.expiresAt]),
+        eA =
+            (null == ed || null == (s = ed.tenantMetadata) || null == (a = s.socialLayer)
                 ? void 0
                 : a.cardBackgroundImageAssetId) != null &&
             null !=
-                (q = A.Z.toURLSafe(
+                (X = A.Z.toURLSafe(
                     (0, S._W)(
-                        en,
-                        null == eu ? void 0 : eu.tenantMetadata.socialLayer.cardBackgroundImageAssetId,
+                        er,
+                        null == ed ? void 0 : ed.tenantMetadata.socialLayer.cardBackgroundImageAssetId,
                         1024,
                         "png",
                     ),
                 ))
-                ? q
+                ? X
                 : void 0,
-        [eA, eC] = (0, E.Cf)(null == eS ? void 0 : eS.toString(), "#000000"),
-        eN = i.useMemo(() => {
-            let e = o()(eA).darken(1.5).alpha(0.9).hex(),
-                t = o()(eA).alpha(0).hex(),
-                [n, r] = V[ei];
+        [eC, eN] = (0, E.Cf)(null == eA ? void 0 : eA.toString(), "#000000"),
+        eR = i.useMemo(() => {
+            let e = o()(eC).darken(1.5).alpha(0.9).hex(),
+                t = o()(eC).alpha(0).hex(),
+                [n, r] = V[ea];
             return 0 === n && 0 === r
                 ? "none"
                 : "linear-gradient(to top, "
@@ -163,73 +164,73 @@ function K(e) {
                       .concat(H + n, "%, ")
                       .concat(t, " ")
                       .concat(H + r, "%)");
-        }, [eA, ei]),
-        eR = i.useCallback(() => {
-            ey(j.r.WISHLIST_BUTTON);
-        }, [ey]),
-        eP = i.useCallback(
+        }, [eC, ea]),
+        eP = i.useCallback(() => {
+            eO(j.rZ.WISHLIST_BUTTON);
+        }, [eO]),
+        eD = i.useCallback(
             (e) => {
-                if ((ey(j.r.CARD), null != eo)) return void eo(e);
-                null != ea &&
+                if ((eO(j.rZ.CARD), null != es)) return void es(e);
+                null != eo &&
                     (0, P.Z)({
-                        guildId: ea,
-                        pageIndex: eI,
-                        skuId: er,
-                        slug: null == eu ? void 0 : eu.slug,
+                        guildId: eo,
+                        pageIndex: eT,
+                        skuId: ei,
+                        slug: null == ed ? void 0 : ed.slug,
                     });
             },
-            [ey, ea, eI, er, null == eu ? void 0 : eu.slug, eo],
+            [eO, eo, eT, ei, null == ed ? void 0 : ed.slug, es],
         );
-    if (null == eu) return null;
-    let eD =
-        (null == (b = eu.tenantMetadata) || null == (c = b.socialLayer) ? void 0 : c.cardImageAssetId) != null &&
-        null != (X = A.Z.toURLSafe((0, S._W)(en, eu.tenantMetadata.socialLayer.cardImageAssetId, 512, "png")))
-            ? X
+    if (null == ed) return null;
+    let ew =
+        (null == (b = ed.tenantMetadata) || null == (c = b.socialLayer) ? void 0 : c.cardImageAssetId) != null &&
+        null != (Q = A.Z.toURLSafe((0, S._W)(er, ed.tenantMetadata.socialLayer.cardImageAssetId, 512, "png")))
+            ? Q
             : void 0;
     return (0, r.jsx)(_.$, {
-        innerRef: ec,
-        onChange: eb,
+        innerRef: eu,
+        onChange: ey,
         threshold: 0,
         children: (0, r.jsx)(d.tEY, {
             children: (0, r.jsxs)(p.kL8, {
-                onClick: eP,
-                onMouseEnter: eg,
-                onMouseLeave: eE,
+                onClick: eD,
+                onMouseEnter: eE,
+                onMouseLeave: eb,
                 className: l()(
                     Z.card,
                     {
-                        [Z.cardAnimation]: !ef && 2 !== ei,
-                        [Z.cardDark]: ed,
-                        [ed ? Z.cardDarkHighlighted : Z.cardHighlighted]: e_,
-                        [Z.cardSmall]: 0 === ei,
-                        [Z.cardMedium]: 1 === ei,
-                        [Z.cardEmbedded]: 2 === ei,
+                        [Z.cardAnimation]: !e_ && 2 !== ea,
+                        [Z.cardDark]: ef,
+                        [ef ? Z.cardDarkHighlighted : Z.cardHighlighted]: ep,
+                        [Z.cardSmall]: 0 === ea,
+                        [Z.cardMedium]: 1 === ea,
+                        [Z.cardEmbedded]: 2 === ea,
                     },
-                    es,
+                    el,
                 ),
-                ref: ec,
-                "aria-label": eu.name,
+                ref: eu,
+                "aria-label": ed.name,
                 children: [
-                    null != eT &&
+                    null != eS &&
                         (0, r.jsx)(p.IGR, {
-                            text: eT,
+                            text: eS,
                             disableColor: !0,
                             className: Z.badge,
                         }),
-                    (0, r.jsx)(W, {
-                        sku: eu,
-                        isCardHovered: e_,
-                        onClick: eR,
+                    (0, r.jsx)(K, {
+                        sku: ed,
+                        isCardHovered: ep,
+                        onClick: eP,
                     }),
-                    null != eD
+                    null != ew
                         ? (0, r.jsx)(L.p, {
                               containerClassName: Z.cardImageContainer,
                               foregroundImageClassName: Z.cardImage,
-                              cardImage: eD,
-                              altText: eu.name,
+                              cardImage: ew,
+                              altText: ed.name,
                               shape: "custom",
                               backgroundImageClassName: Z.cardBackgroundImage,
-                              cardBackgroundImage: eS,
+                              cardBackgroundImage: eA,
                           })
                         : (0, r.jsx)("div", {
                               className: Z.ticketIconContainer,
@@ -241,12 +242,12 @@ function K(e) {
                                   className: Z.ticketIcon,
                               }),
                           }),
-                    2 !== ei
+                    2 !== ea
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsx)("div", {
                                       className: Z.bottomGradient,
-                                      style: { background: eN },
+                                      style: { background: eR },
                                   }),
                                   (0, r.jsxs)("div", {
                                       className: Z.details,
@@ -257,16 +258,16 @@ function K(e) {
                                                   color: "always-white",
                                                   variant: "text-md/medium",
                                                   lineClamp: 1,
-                                                  children: eu.name,
+                                                  children: ed.name,
                                               }),
                                           }),
                                           (0, r.jsxs)("div", {
                                               className: Z.descriptionContainer,
                                               children: [
-                                                  null != eO &&
+                                                  null != ev &&
                                                       (0, r.jsx)("img", {
-                                                          src: eO.toString(),
-                                                          alt: ev,
+                                                          src: ev.toString(),
+                                                          alt: eI,
                                                           className: Z.iconAsset,
                                                       }),
                                                   (0, r.jsx)(p.Text, {
@@ -274,11 +275,11 @@ function K(e) {
                                                       color: "always-white",
                                                       lineClamp: 1,
                                                       children: (0, T.T4)(
-                                                          null != (Q = null == (D = eu.price) ? void 0 : D.amount)
-                                                              ? Q
-                                                              : 0,
-                                                          null != (J = null == (Y = eu.price) ? void 0 : Y.currency)
+                                                          null != (J = null == (D = ed.price) ? void 0 : D.amount)
                                                               ? J
+                                                              : 0,
+                                                          null != ($ = null == (W = ed.price) ? void 0 : W.currency)
+                                                              ? $
                                                               : G.pK.USD,
                                                       ),
                                                   }),
@@ -296,9 +297,9 @@ function K(e) {
                                                   variant: "primary",
                                                   onClick: (e) => {
                                                       e.stopPropagation(),
-                                                          ey(j.r.BUY_BUTTON),
+                                                          eO(j.rZ.BUY_BUTTON),
                                                           (0, w.P)(
-                                                              eu,
+                                                              ed,
                                                               { isGift: !1 },
                                                               {
                                                                   analyticsLocations: [
@@ -309,11 +310,11 @@ function K(e) {
                                                   },
                                                   text: B.intl.format(B.t.Xp5WTn, {
                                                       price: (0, T.T4)(
-                                                          null != ($ = null == (K = eu.price) ? void 0 : K.amount)
-                                                              ? $
-                                                              : 0,
-                                                          null != (ee = null == (z = eu.price) ? void 0 : z.currency)
+                                                          null != (ee = null == (z = ed.price) ? void 0 : z.amount)
                                                               ? ee
+                                                              : 0,
+                                                          null != (et = null == (q = ed.price) ? void 0 : q.currency)
+                                                              ? et
                                                               : G.pK.USD,
                                                       ),
                                                   }),
@@ -322,9 +323,9 @@ function K(e) {
                                               (0, r.jsx)(x.Z, {
                                                   onGift: (e) => {
                                                       e.stopPropagation(),
-                                                          ey(j.r.GIFT_BUTTON),
+                                                          eO(j.rZ.GIFT_BUTTON),
                                                           (0, w.P)(
-                                                              eu,
+                                                              ed,
                                                               { isGift: !0 },
                                                               {
                                                                   analyticsLocations: [

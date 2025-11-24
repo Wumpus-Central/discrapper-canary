@@ -71,7 +71,7 @@ function Z(e) {
                     (0, l.jsx)(u.Button, {
                         variant: "primary",
                         onClick: () => {
-                            d(E.o.BUY_BUTTON),
+                            d(E.o4.BUY_BUTTON),
                                 (0, T.P)(
                                     o,
                                     { isGift: !1 },
@@ -94,7 +94,7 @@ function Z(e) {
                                       icon: u.EOn,
                                       variant: "secondary",
                                       onClick: () => {
-                                          d(E.o.VISIT_SHOP), (0, y.Z)({ guildId: i }), c();
+                                          d(E.o4.VISIT_SHOP), (0, y.Z)({ guildId: i }), c();
                                       },
                                       text: A.intl.string(A.t["2QW9nR"]),
                                       fullWidth: !0,
@@ -104,7 +104,7 @@ function Z(e) {
                                 icon: u.OgN,
                                 variant: "secondary",
                                 onClick: () => {
-                                    d(E.o.GIFT_BUTTON),
+                                    d(E.o4.GIFT_BUTTON),
                                         (0, T.P)(
                                             o,
                                             { isGift: !0 },
@@ -286,16 +286,16 @@ function M(e) {
     }, [v, i]);
     let J = a.useCallback(() => {
             null != G &&
-                (q(E.o.COPY_LINK_BUTTON),
+                (q(E.o4.COPY_LINK_BUTTON),
                 (0, x.JG)((0, k.wQ)(v, G), () =>
                     (0, u.showToast)((0, u.createToast)(A.intl.string(A.t["L/PwZf"]), u.ToastType.SUCCESS)),
                 ));
         }, [v, G, q]),
         $ = a.useCallback(() => {
-            q(E.o.WISHLIST_BUTTON);
+            q(E.o4.WISHLIST_BUTTON);
         }, [q]),
         ee = a.useCallback(() => {
-            Y(!Q), q(E.o.MUTE_BUTTON);
+            Y(!Q), q(E.o4.MUTE_BUTTON);
         }, [Q, q]);
     if (
         null == (null == G || null == (t = G.tenantMetadata) ? void 0 : t.socialLayer) ||

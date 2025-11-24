@@ -5189,6 +5189,7 @@ var nE = (function (e) {
             (e.SLAYER_STOREFRONT_CARD_IMPRESSION = "slayer_storefront_card_impression"),
             (e.SLAYER_STOREFRONT_CARD_ELEMENT_CLICKED = "slayer_storefront_card_element_clicked"),
             (e.SLAYER_STOREFRONT_PDP_ELEMENT_CLICKED = "slayer_storefront_pdp_element_clicked"),
+            (e.SLAYER_STOREFRONT_PAGE_ELEMENT_CLICKED = "slayer_storefront_page_element_clicked"),
             (e.COMMERCE_SHOP_VC_GIFT_BUTTON_VIEWED = "commerce_shop_vc_gift_button_viewed"),
             (e.USER_SERVER_PRIVACY_SETTINGS_ACTION = "user_server_privacy_settings_action"),
             (e.RUNNING_GAME_OVERRIDE_ADDED = "running_game_override_added"),
@@ -6064,6 +6065,7 @@ var nW = (function (e) {
             (e.GAME_SERVER_HOSTING = "35370817986839"),
             (e.RECURRING_PROMOTION = "35479903794199"),
             (e.PREMIUM_GROUP_ABOUT = "36320645875479"),
+            (e.SOCIAL_LAYER_STOREFRONT = "36288452105239"),
             e
         );
     })({}),

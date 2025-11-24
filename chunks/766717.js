@@ -1,66 +1,69 @@
-n.d(t, { Z: () => c }), n(388685);
+n.d(t, { Z: () => d }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(681715),
     a = n(481060),
-    s = n(785717),
-    o = n(239990);
-let c = i.forwardRef(function (e, t) {
+    s = n(602733),
+    o = n(785717),
+    c = n(239990);
+let d = i.forwardRef(function (e, t) {
+    var n, i, d;
     let {
-            onCardClick: n,
-            tooltipTitle: i,
-            tooltipBody: c,
-            shouldScalePreview: d = !0,
-            renderPreview: u,
-            moreCount: p,
-            isSingleCard: h = !1,
-            skuId: f,
-            wishlistId: g,
-            productLine: m,
+            onCardClick: u,
+            tooltipConfig: p,
+            shouldScalePreview: h = !0,
+            renderPreview: f,
+            moreCount: g,
+            isSingleCard: m = !1,
+            wishlistId: b,
+            wishlistItem: _,
         } = e,
-        { trackUserProfileWishlistAction: b } = (0, s.KZ)(),
-        _ = d ? o.cardPreview : o.cardPreviewNoScale,
-        y = h ? o.cardSingle : o.card,
-        O = null != p && p > 0,
-        j = (0, r.jsxs)(a.P3F, {
+        { skuId: y, skuProductLine: O } = _,
+        { trackUserProfileWishlistAction: j } = (0, o.KZ)(),
+        x = h ? c.cardPreview : c.cardPreviewNoScale,
+        v = m ? c.cardSingle : c.card,
+        C = null != g && g > 0,
+        I = (0, r.jsxs)(a.P3F, {
             onClick: () => {
-                n(),
-                    b({
-                        action: O ? "PRESS_WISHLIST_BREADCRUMB_OVERFLOW_CARD" : "PRESS_WISHLIST_BREADCRUMB_CARD",
-                        skuId: O ? null : f,
-                        wishlistId: g,
-                        productLines: new Set([m]),
+                u(),
+                    j({
+                        action: C ? "PRESS_WISHLIST_BREADCRUMB_OVERFLOW_CARD" : "PRESS_WISHLIST_BREADCRUMB_CARD",
+                        skuId: C ? null : y,
+                        wishlistId: b,
+                        productLines: new Set([O]),
                     });
             },
-            className: y,
-            "aria-label": c,
+            className: v,
+            "aria-label": null != (i = p.title) ? i : "",
             innerRef: t,
             children: [
                 (0, r.jsx)("div", {
-                    className: _,
-                    children: u(),
+                    className: x,
+                    children: f(),
                 }),
-                O &&
+                C &&
                     (0, r.jsx)("div", {
-                        className: o.moreOverlay,
+                        className: c.moreOverlay,
                         children: (0, r.jsxs)(a.Text, {
                             variant: "text-xs/medium",
                             color: "always-white",
-                            children: ["+", p],
+                            children: ["+", g],
                         }),
                     }),
             ],
         });
-    return null != i
-        ? (0, r.jsx)(l.i_, {
-              asContainer: !0,
-              title: i,
-              body: c,
-              children: j,
-          })
-        : (0, r.jsx)(l.u, {
-              text: c,
+    return null != p.title && null == p.body && null == p.renderIcon
+        ? (0, r.jsx)(l.u, {
+              text: p.title,
               position: "top",
-              children: j,
+              children: I,
+          })
+        : (0, r.jsx)(l.i_, {
+              asContainer: !0,
+              asset: null == (n = p.renderIcon) ? void 0 : n.call(p, _),
+              assetSize: s.EU,
+              title: p.title,
+              body: null != (d = p.body) ? d : "",
+              children: I,
           });
 });

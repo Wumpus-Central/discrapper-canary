@@ -1,70 +1,74 @@
 n.d(t, {
-    c: () => f,
-    g: () => g,
+    c: () => g,
+    g: () => m,
 });
 var r = n(54381),
     i = n(979554),
     l = n(311570),
     a = n(481060),
-    s = n(333867),
-    o = n(221300),
-    c = n(766717),
-    d = n(474936),
-    u = n(388032),
-    p = n(976218);
-function h(e, t, n) {
-    (0, s.Z)({
+    s = n(525302),
+    o = n(333867),
+    c = n(221300),
+    d = n(766717),
+    u = n(474936),
+    p = n(388032),
+    h = n(976218);
+function f(e, t, n) {
+    (0, o.Z)({
         skuId: e.skuId,
         isGift: !0,
-        giftingOrigin: d.Wt.USER_PROFILE_WISHLIST,
+        giftingOrigin: u.Wt.USER_PROFILE_WISHLIST,
         analyticsLocations: n,
         giftRecipient: t,
         variantsReturnStyle: l.v.VARIANTS_GROUP,
     });
 }
-function f(e, t) {
-    let n,
-        {
-            moreCount: l,
-            profileOwner: a,
-            analyticsLocations: s,
-            onViewWishlist: d,
-            isSingleCard: p = !1,
-            wishlistId: f,
+function g(e, t) {
+    let {
+            moreCount: n,
+            profileOwner: l,
+            analyticsLocations: a,
+            onViewWishlist: o,
+            isSingleCard: u = !1,
+            wishlistId: h,
             showTypeTooltip: g = !1,
         } = t,
-        m = null != l && l > 0,
-        b = m ? u.intl.string(u.t.TxBQzD) : u.intl.string(u.t.ilhtIa);
-    g && !m && (n = u.intl.string(u.t.HFhcqh));
-    let _ = e.collectiblesItem.type === i.Z.PROFILE_EFFECT;
+        m = null != n && n > 0,
+        b = g && !m,
+        _ = m ? p.intl.string(p.t.TxBQzD) : p.intl.string(p.t.pLPjsb),
+        y = {
+            title: b ? p.intl.string(p.t.HFhcqh) : _,
+            body: b ? p.intl.string(p.t.ilhtIa) : void 0,
+            renderIcon: b ? s.Q : void 0,
+            shouldShow: !0,
+        },
+        O = e.collectiblesItem.type === i.Z.PROFILE_EFFECT;
     return (0, r.jsx)(
-        c.Z,
+        d.Z,
         {
             onCardClick: () => {
-                if (m) return void d();
-                h(e, a, s);
+                if (m) return void o();
+                f(e, l, a);
             },
-            tooltipTitle: n,
-            tooltipBody: b,
-            shouldScalePreview: !_,
+            tooltipConfig: y,
+            shouldScalePreview: !O,
             renderPreview: () =>
-                (0, r.jsx)(o.Z, {
+                (0, r.jsx)(c.Z, {
                     item: e,
-                    profileOwner: a,
+                    profileOwner: l,
                     isHighlighted: !1,
                 }),
-            moreCount: l,
-            isSingleCard: p,
-            skuId: e.skuId,
-            wishlistId: f,
-            productLine: e.skuProductLine,
+            moreCount: n,
+            isSingleCard: u,
+            wishlistItem: e,
+            wishlistId: h,
         },
         e.skuId,
     );
 }
-function g(e, t) {
+function m(e, t) {
     let { profileOwner: n, analyticsLocations: l, wishlistId: s, onViewWishlist: o } = t,
-        c = f(e, {
+        c = g(e, {
             profileOwner: n,
             analyticsLocations: l,
             onViewWishlist: o,
@@ -73,18 +77,18 @@ function g(e, t) {
             index: 0,
         });
     return (0, r.jsxs)("div", {
-        className: p.singleItemContainer,
+        className: h.singleItemContainer,
         children: [
             c,
             (0, r.jsxs)("div", {
-                className: p.singleItemInfo,
+                className: h.singleItemInfo,
                 children: [
                     (0, r.jsx)(a.P3F, {
                         onClick: () => {
-                            h(e, n, l);
+                            f(e, n, l);
                         },
-                        className: p.singleItemName,
-                        "aria-label": u.intl.string(u.t.ilhtIa),
+                        className: h.singleItemName,
+                        "aria-label": p.intl.string(p.t.pLPjsb),
                         children: (0, r.jsx)(a.Text, {
                             variant: "text-sm/semibold",
                             color: "text-default",
@@ -98,11 +102,11 @@ function g(e, t) {
                         children: (function (e) {
                             switch (e.collectiblesItem.type) {
                                 case i.Z.AVATAR_DECORATION:
-                                    return u.intl.string(u.t["7v0T9P"]);
+                                    return p.intl.string(p.t["7v0T9P"]);
                                 case i.Z.PROFILE_EFFECT:
-                                    return u.intl.string(u.t.wR5wOo);
+                                    return p.intl.string(p.t.wR5wOo);
                                 case i.Z.NAMEPLATE:
-                                    return u.intl.string(u.t.x5CoXR);
+                                    return p.intl.string(p.t.x5CoXR);
                                 default:
                                     return "";
                             }

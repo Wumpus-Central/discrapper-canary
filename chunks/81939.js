@@ -1,27 +1,40 @@
-n.d(t, { Z: () => c }), n(539854), n(388685);
+n.d(t, {
+    W: () => c,
+    Z: () => u,
+}),
+    n(361932),
+    n(187205),
+    n(388685),
+    n(539854);
 var i = n(473749),
     r = n(442837),
     l = n(321947),
     a = n(55563),
     o = n(417317),
     s = n(981631);
-function c(e) {
-    let { guildId: t } = e,
-        n = (0, o.Z)({ guildId: t }),
-        c = i.useMemo(() => {
-            if (null == n || null == n.storefront || (null == n ? void 0 : n.loading)) return [];
-            let e = [];
-            for (let i of n.storefront.pages) {
-                var t;
-                if ((e.push(...i.skuIds), e.length >= 6)) break;
-                for (let n of null != (t = i.sections) ? t : []) if ((e.push(...n.skuIds), e.length >= 6)) break;
-            }
-            return e.slice(0, 6);
-        }, [n]),
-        u = (0, r.Wu)([a.Z], () => c.map((e) => a.Z.get(e)).filter((e) => null != e), [c]),
-        d = i.useMemo(
+let c = 6;
+function u(e) {
+    let { guildId: t, numWishlistItems: n = c } = e,
+        u = (0, o.Z)({ guildId: t }),
+        d = i.useMemo(() => {
+            if (null == u || null == u.storefront || "loading" === u.state || "partially-fetched" === u.state)
+                return [];
+            let e = u.storefront.pages.flatMap((e) => {
+                    var t, n;
+                    return [
+                        ...e.skuIds,
+                        ...(null != (n = null == (t = e.sections) ? void 0 : t.flatMap((e) => e.skuIds)) ? n : []),
+                    ];
+                }),
+                t = [],
+                i = new Set();
+            for (let r of e) if (!i.has(r) && (t.push(r), i.add(r), t.length >= n)) break;
+            return t;
+        }, [u, n]),
+        p = (0, r.Wu)([a.Z], () => d.map((e) => a.Z.get(e)).filter((e) => null != e), [d]),
+        h = i.useMemo(
             () =>
-                u.map(
+                p.map(
                     (e) =>
                         new l.Z({
                             sku_id: e.id,
@@ -30,11 +43,11 @@ function c(e) {
                             sku: e,
                         }),
                 ),
-            [u],
+            [p],
         );
     return {
-        loading: null == n || (null == n ? void 0 : n.loading),
-        wishlistItems: d,
-        wishlistItemSkuIds: c,
+        loading: (null == u ? void 0 : u.state) === "loading",
+        wishlistItems: h,
+        wishlistItemSkuIds: d,
     };
 }

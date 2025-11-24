@@ -187,7 +187,7 @@ let E = (0, d.Z)((e) => {
         [P, S] = (0, a.useState)(!0),
         [y, N] = (0, a.useState)(!1),
         [E, w] = (0, a.useState)(!1),
-        [L, R] = (0, a.useState)(!1),
+        [R, L] = (0, a.useState)(!1),
         [A, B] = (0, a.useState)(!1),
         Z = (0, a.useCallback)(
             (e, n) => {
@@ -225,23 +225,23 @@ let E = (0, d.Z)((e) => {
             W(C.current + 1, !1);
         }, [W]),
         D = (0, a.useCallback)(() => {
-            null == d || d(I.o.CAROUSEL_NEXT), W(C.current + 1);
+            null == d || d(I.o4.CAROUSEL_NEXT), W(C.current + 1);
         }, [W, d]),
         M = (0, a.useCallback)(() => {
-            null == d || d(I.o.CAROUSEL_PREV), W(C.current - 1);
+            null == d || d(I.o4.CAROUSEL_PREV), W(C.current - 1);
         }, [W, d]),
         H = (0, a.useCallback)((e) => {
             N(!0), w(!e);
         }, []),
-        z = (0, a.useCallback)(() => {
+        F = (0, a.useCallback)(() => {
             E || U();
         }, [E, U]),
-        F = (0, a.useCallback)((e) => {
+        z = (0, a.useCallback)((e) => {
             let t = C.current;
-            e < t ? R(!0) : e > t && B(!0);
+            e < t ? L(!0) : e > t && B(!0);
         }, []),
         Q = (0, a.useCallback)(() => {
-            R(!1), B(!1);
+            L(!1), B(!1);
         }, []),
         Y = (0, a.useCallback)(
             (e, t, n) =>
@@ -250,7 +250,7 @@ let E = (0, d.Z)((e) => {
                     itemIndex: t,
                     isCurrentItem: n,
                     onSetItem: (e) => {
-                        null == d || d(I.o.CAROUSEL_ITEM), W(e);
+                        null == d || d(I.o4.CAROUSEL_ITEM), W(e);
                     },
                     setHasInteracted: w,
                 }),
@@ -262,24 +262,24 @@ let E = (0, d.Z)((e) => {
                 return (0, l.jsx)(c.Z.div, {
                     className: s()(v.item, { [v.currentItem]: r }),
                     style: null != a ? Z(n, a) : null,
-                    onMouseEnter: r ? null : () => F(n),
+                    onMouseEnter: r ? null : () => z(n),
                     onMouseLeave: r ? null : Q,
                     children:
                         "video" === e.type
                             ? (0, l.jsx)(T, {
                                   item: e,
                                   onPlay: H,
-                                  onEnded: z,
+                                  onEnded: F,
                                   playable: r,
                                   isMuted: u,
                                   onClick: () => {
-                                      null == d || d(I.o.CAROUSEL_ITEM), W(n);
+                                      null == d || d(I.o4.CAROUSEL_ITEM), W(n);
                                   },
                               })
                             : Y(e, n, r),
                 });
             },
-            [m, t.length, Z, F, Q, H, z, W, Y, u, d],
+            [m, t.length, Z, z, Q, H, F, W, Y, u, d],
         ),
         V = (0, a.useCallback)(() => {
             let e = (0, l.jsx)(h.ZP, {
@@ -302,7 +302,7 @@ let E = (0, d.Z)((e) => {
                           e,
                           (0, l.jsx)(_.am, {
                               onClick: M,
-                              className: s()(v.arrow, { [v.arrowHovered]: L }),
+                              className: s()(v.arrow, { [v.arrowHovered]: R }),
                           }),
                           (0, l.jsx)(_.Pz, {
                               onClick: D,
@@ -310,7 +310,7 @@ let E = (0, d.Z)((e) => {
                           }),
                       ],
                   });
-        }, [t, G, m, P, M, D, L, A]),
+        }, [t, G, m, P, M, D, R, A]),
         K = (0, a.useCallback)(
             (e, t) => {
                 let n = m === t;
@@ -358,7 +358,7 @@ let E = (0, d.Z)((e) => {
         }, [m, t, i]);
     let X = (0, a.useCallback)(
         (e) => {
-            null == d || d(I.o.CAROUSEL_ITEM), W(e);
+            null == d || d(I.o4.CAROUSEL_ITEM), W(e);
         },
         [W, d],
     );

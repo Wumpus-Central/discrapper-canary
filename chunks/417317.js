@@ -14,8 +14,10 @@ function u(e) {
         i.useEffect(() => {
             if ((null == n ? void 0 : n.id) == null) return;
             let e = s.Z.getStorefrontData(null == n ? void 0 : n.id);
-            (null == e ? void 0 : e.loading) ||
-                ((null == e ? void 0 : e.fetchedAt) != null && Date.now() - (null == e ? void 0 : e.fetchedAt) < c) ||
+            (null == e ? void 0 : e.state) === "loading" ||
+                ((null == e ? void 0 : e.state) === "fetched" &&
+                    (null == e ? void 0 : e.fetchedAt) != null &&
+                    Date.now() - (null == e ? void 0 : e.fetchedAt) < c) ||
                 (0, o.YL)(null == n ? void 0 : n.id);
         }, [null == n ? void 0 : n.id]),
         a

@@ -1,47 +1,44 @@
-n.d(t, { Z: () => p });
-var r = n(54381),
-    i = n(473749),
-    a = n(442837),
-    l = n(454399),
-    o = n(28664),
-    c = n(376521),
-    s = n(602733),
-    u = n(594174),
-    d = n(621853),
-    f = n(796483),
-    g = n(855587);
-function p(e) {
-    let { items: t, profileOwner: n, isOwner: p } = e,
-        m = u.default.getCurrentUser(),
-        { defaultWishlistId: b } = (0, a.cj)([d.Z], () => ({ defaultWishlistId: d.Z.getFirstWishlistId(n.id) })),
-        h = i.useMemo(() => {
-            let e = t.map((e) => e.skuProductLine);
-            return (0, c.l)(e);
-        }, [t]);
-    return null == m || null == b
+n.d(t, { Z: () => g });
+var r = n(54381);
+n(473749);
+var i = n(442837),
+    a = n(454399),
+    l = n(28664),
+    o = n(376521),
+    c = n(602733),
+    s = n(594174),
+    u = n(621853),
+    d = n(796483),
+    f = n(855587);
+function g(e) {
+    let { items: t, profileOwner: n, isOwner: g } = e,
+        p = s.default.getCurrentUser(),
+        { defaultWishlistId: m } = (0, i.cj)([u.Z], () => ({ defaultWishlistId: u.Z.getFirstWishlistId(n.id) })),
+        b = (0, o.c)(t);
+    return null == p || null == m
         ? null
         : (0, r.jsx)("ul", {
-              className: g.grid,
+              className: f.grid,
               children: t.map((e, t) => {
-                  var i;
-                  let a = h[t],
-                      c = (0, r.jsx)(f.Z, {
+                  var i, o;
+                  let s = b[t],
+                      u = (0, r.jsx)(d.Z, {
                           item: e,
                           profileOwner: n,
-                          wishlistId: b,
-                          isOwner: p,
+                          wishlistId: m,
+                          isOwner: g,
                       });
-                  return a.shouldShow
-                      ? null != a.title && null == a.body && null == a.icon
+                  return s.shouldShow
+                      ? null != s.title && null == s.body && null == s.renderIcon
                           ? (0, r.jsx)(
                                 "li",
                                 {
-                                    children: (0, r.jsx)(o.u, {
-                                        text: a.title,
+                                    children: (0, r.jsx)(l.u, {
+                                        text: s.title,
                                         position: "top",
                                         asContainer: !0,
-                                        delay: s.rq,
-                                        children: c,
+                                        delay: c.rq,
+                                        children: u,
                                     }),
                                 },
                                 e.skuId,
@@ -49,20 +46,20 @@ function p(e) {
                           : (0, r.jsx)(
                                 "li",
                                 {
-                                    children: (0, r.jsx)(l.i, {
-                                        title: a.title,
-                                        body: null != (i = a.body) ? i : "",
-                                        asset: a.icon,
-                                        assetSize: 24,
+                                    children: (0, r.jsx)(a.i, {
+                                        title: s.title,
+                                        body: null != (o = s.body) ? o : "",
+                                        asset: null == (i = s.renderIcon) ? void 0 : i.call(s, e),
+                                        assetSize: c.EU,
                                         position: "top",
                                         asContainer: !0,
-                                        delay: s.rq,
-                                        children: c,
+                                        delay: c.rq,
+                                        children: u,
                                     }),
                                 },
                                 e.skuId,
                             )
-                      : (0, r.jsx)("li", { children: c }, e.skuId);
+                      : (0, r.jsx)("li", { children: u }, e.skuId);
               }),
           });
 }

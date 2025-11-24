@@ -9,4 +9,5 @@ e.exports = {
     alignedRightContent: "alignedRightContent__8dd9e",
     iconButton: "iconButton__8dd9e",
     wishlistButton: "wishlistButton__8dd9e",
+    learnMoreButton: "learnMoreButton__8dd9e",
 };
