@@ -977,7 +977,7 @@ function eH() {
         }),
     });
 }
-let eY = (e, t, n) =>
+let eY = (e) =>
     [
         {
             title: em.t.eVE4LX,
@@ -994,17 +994,17 @@ let eY = (e, t, n) =>
             description: em.t.kHjdqc,
             disabledSetting: L.i.GO_LIVE_NUDGE,
         },
-        e && {
+        {
             title: em.t.sop3rn,
             description: em.t.pjgffc,
             disabledSetting: L.i.GAME_ACTIVITY,
         },
-        t && {
+        {
             title: em.t["2QVhbb"],
             description: em.t.wQ4ilB,
             disabledSetting: L.i.NOW_PLAYING,
         },
-        n && {
+        e && {
             title: em.t["5/21FT"],
             description: em.t.EIzwfA,
             disabledSetting: L.i.FRIEND_STREAM_WATCH_NUDGE,
@@ -1013,13 +1013,12 @@ let eY = (e, t, n) =>
         .filter((e) => !1 !== e)
         .filter(Boolean);
 function eW() {
-    let { allowActivityWidget: e, allowNowPlaying: t } = (0, M.o4)("user_settings"),
-        { enabled: n } = (0, M.aq)("OverlayV3StreamWatchNudge"),
-        i = eY(e, t, n),
-        a = (e) => (t) => {
+    let { enabled: e } = (0, M.aq)("OverlayV3StreamWatchNudge"),
+        t = eY(e),
+        n = (e) => (t) => {
             b.Z.setNotificationDisabledSetting(e, !t);
         },
-        o = (0, _.e7)([G.Z], () => G.Z.getDisabledNotifications());
+        i = (0, _.e7)([G.Z], () => G.Z.getDisabledNotifications());
     return (0, r.jsxs)("div", {
         className: eg.notificationSettingsContainer,
         children: [
@@ -1028,7 +1027,7 @@ function eW() {
                 color: "header-primary",
                 children: em.intl.string(em.t.xOE5bA),
             }),
-            i.map((e) =>
+            t.map((e) =>
                 (0, r.jsxs)(
                     "div",
                     {
@@ -1050,8 +1049,8 @@ function eW() {
                                 ],
                             }),
                             (0, r.jsx)(h.rsf, {
-                                checked: !o.has(e.disabledSetting),
-                                onChange: a(e.disabledSetting),
+                                checked: !i.has(e.disabledSetting),
+                                onChange: n(e.disabledSetting),
                             }),
                         ],
                     },
@@ -1403,7 +1402,7 @@ function eJ(e) {
 function e$(e) {
     let { className: t, showHeader: n } = e,
         { runningGame: i, runningGameApplication: a } = (0, N.Z)(),
-        o = (0, M.o4)("user_settings").overlayV3UI,
+        o = !0,
         s = (0, _.e7)([en.default], () => en.default.getCurrentUser());
     return ((0, v.ZP)(() => {
         if (el.isPlatformEmbedded) return (0, R.Ky)(), R.P7;

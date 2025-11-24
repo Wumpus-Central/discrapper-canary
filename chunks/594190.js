@@ -375,7 +375,7 @@ function eN(e) {
                 reason: "Some library application thing?",
             };
     }
-    let o = (0, O.NW)("getRawOverlayGameStatus") && (0, L.supportsOutOfProcess)() && !t,
+    let o = (0, L.supportsOutOfProcess)() && !t,
         s = eC(null != a ? a : i),
         l = b.v.legacyEnabled,
         c = o && !s,
@@ -691,7 +691,7 @@ function e4(e) {
             t = new Set();
         r = {};
         let n = T.Z.games,
-            i = (0, O.NW)("handleGamesDatabaseUpdate") && (0, L.supportsOutOfProcess)();
+            i = (0, L.supportsOutOfProcess)();
         for (let e of n) {
             var a, o, s, l;
             let t = eC(e),

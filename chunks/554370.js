@@ -239,37 +239,35 @@ function er(e) {
                 l = null != t,
                 o = (0, g.Z)(E.Z) && !r && null != e,
                 a = l && null != i && null != t,
-                { allowActivityWidget: s } = (0, w.Rb)("overlay"),
-                c = M.Z.getTargetPID();
-            if (R.default.hasChangedRenderMode(c)) return;
-            let u = L.Z.isNotificationDisabled(B.n0.WelcomeNudge),
-                h = L.Z.isNotificationDisabled(B.n0.GoLiveNudge),
-                p = L.Z.isNotificationDisabled(B.n0.ActivityInvite),
-                f = [];
-            u ||
-                (f.push({ type: B.nc.WELCOME }),
-                !h &&
+                s = M.Z.getTargetPID();
+            if (R.default.hasChangedRenderMode(s)) return;
+            let c = L.Z.isNotificationDisabled(B.n0.WelcomeNudge),
+                u = L.Z.isNotificationDisabled(B.n0.GoLiveNudge),
+                h = L.Z.isNotificationDisabled(B.n0.ActivityInvite),
+                p = [];
+            !c &&
+                (p.push({ type: B.nc.WELCOME }),
+                !u &&
                     (o && a
-                        ? f.push({
+                        ? p.push({
                               type: B.nc.GO_LIVE_VOICE,
                               game: e,
                               voiceChannelId: t,
                               voiceGuild: i,
                           })
                         : o &&
-                          f.push({
+                          p.push({
                               type: B.nc.GO_LIVE_NON_VOICE,
                               game: e,
                           })),
-                s &&
-                    !p &&
-                    f.push({
+                h ||
+                    p.push({
                         type: B.nc.CONTENT_INVENTORY,
                         entries: [],
                     })),
                 null != V.current && clearTimeout(V.current),
                 (V.current = setTimeout(() => {
-                    d.Z.overlayMounted(...f);
+                    d.Z.overlayMounted(...p);
                 }, 1000));
         }),
         (0, h.zq)(() => {

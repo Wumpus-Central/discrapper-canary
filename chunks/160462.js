@@ -100,7 +100,6 @@ let eu = [
         j.Ys,
         y.HZ,
         P.U,
-        E.OV,
         E.dj,
         E.Se,
         E.mB,

@@ -1,27 +1,21 @@
 n.d(t, {
-    F3: () => k,
-    KK: () => w,
-    NW: () => d,
-    OV: () => l,
-    RD: () => y,
-    Rb: () => u,
-    Se: () => m,
-    Sy: () => P,
-    T_: () => M,
-    XE: () => f,
-    YB: () => b,
-    Yo: () => _,
-    ZU: () => A,
-    aq: () => I,
-    dj: () => p,
-    eV: () => C,
-    hS: () => g,
-    hb: () => R,
-    lj: () => v,
-    mB: () => E,
-    o4: () => c,
-    tU: () => S,
-    td: () => h,
+    F3: () => P,
+    KK: () => A,
+    RD: () => p,
+    Se: () => u,
+    Sy: () => T,
+    T_: () => R,
+    YB: () => _,
+    ZU: () => y,
+    aq: () => g,
+    dj: () => l,
+    eV: () => O,
+    hS: () => d,
+    hb: () => I,
+    lj: () => m,
+    mB: () => f,
+    tU: () => b,
+    td: () => c,
 });
 var r = n(348327),
     i = n.n(r),
@@ -29,77 +23,6 @@ var r = n(348327),
     o = n(427164),
     s = n(987338);
 let l = (0, a.B)({
-    kind: "user",
-    id: "2024-10_overlay_v3",
-    label: "Overlay V3 Shared Context OOP",
-    commonTriggerPoint: s.$P.CONNECTION_OPEN,
-    defaultConfig: {
-        overlayV3tech: !1,
-        overlayV3UI: !1,
-        allowActivityWidget: !1,
-        allowNowPlaying: !1,
-    },
-    treatments: [
-        {
-            id: 1,
-            label: "Use Overlay V3, All features included.",
-            config: {
-                overlayV3tech: !0,
-                overlayV3UI: !0,
-                allowActivityWidget: !0,
-                allowNowPlaying: !0,
-            },
-        },
-        {
-            id: 2,
-            label: 'Use Overlay V3, Minus "Now Playing" Notif.',
-            config: {
-                overlayV3tech: !0,
-                overlayV3UI: !0,
-                allowActivityWidget: !0,
-                allowNowPlaying: !1,
-            },
-        },
-        {
-            id: 3,
-            label: "Use Overlay V3 minus any activity",
-            config: {
-                overlayV3tech: !0,
-                overlayV3UI: !0,
-                allowActivityWidget: !1,
-                allowNowPlaying: !1,
-            },
-        },
-        {
-            id: 4,
-            label: "Use Overlay V3 tech with Overlay 2 UI",
-            config: {
-                overlayV3tech: !0,
-                overlayV3UI: !1,
-                allowActivityWidget: !1,
-                allowNowPlaying: !1,
-            },
-        },
-    ],
-});
-function c(e) {
-    return l.useExperiment({ location: e });
-}
-function u(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return l.getCurrentConfig({ location: e }, { autoTrackExposure: t });
-}
-function d(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return u(e, t).overlayV3tech;
-}
-function f(e) {
-    return c(e).overlayV3tech;
-}
-function _(e) {
-    return u(e).allowNowPlaying;
-}
-let p = (0, a.B)({
     kind: "user",
     id: "2025-06_overlay_raf_manager",
     label: "Overlay RAF Manager",
@@ -113,11 +36,11 @@ let p = (0, a.B)({
         },
     ],
 });
-function h(e) {
+function c(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return p.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+    return l.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
-let m = (0, a.B)({
+let u = (0, a.B)({
     kind: "user",
     id: "2025-06_overlay_render_timeout",
     label: "Overlay Render Timeout",
@@ -153,11 +76,11 @@ let m = (0, a.B)({
         },
     ],
 });
-function g(e) {
+function d(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return m.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+    return u.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
-let E = (0, a.B)({
+let f = (0, a.B)({
     kind: "user",
     id: "2025-07_overlay_default_disable",
     label: "Overlay Default Disable",
@@ -171,11 +94,11 @@ let E = (0, a.B)({
         },
     ],
 });
-function b(e) {
+function _(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return E.getCurrentConfig({ location: e }, { autoTrackExposure: t }).enabled;
+    return f.getCurrentConfig({ location: e }, { autoTrackExposure: t }).enabled;
 }
-var y = (function (e) {
+var p = (function (e) {
     return (
         (e[(e.GREEN_BUTTON_WITH_TEXT = 0)] = "GREEN_BUTTON_WITH_TEXT"),
         (e[(e.GRAY_BUTTON_WITH_TEXT = 1)] = "GRAY_BUTTON_WITH_TEXT"),
@@ -183,7 +106,7 @@ var y = (function (e) {
         e
     );
 })({});
-let O = (0, o.le)({
+let h = (0, o.le)({
     name: "2025-08-overlay-stream-watch-nudge",
     kind: "user",
     defaultConfig: {
@@ -205,13 +128,13 @@ let O = (0, o.le)({
         },
     },
 });
-function v(e) {
-    return O.getConfig({ location: e });
+function m(e) {
+    return h.getConfig({ location: e });
 }
-function I(e) {
-    return O.useConfig({ location: e });
+function g(e) {
+    return h.useConfig({ location: e });
 }
-let T = (0, a.B)({
+let E = (0, a.B)({
     kind: "user",
     id: "2025-10_overlay_v3_one_click_go_live",
     label: "Overlay V3 One Click Go Live",
@@ -238,11 +161,11 @@ let T = (0, a.B)({
         },
     ],
 });
-function S(e) {
+function b(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return T.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+    return E.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
-let A = (0, a.B)({
+let y = (0, a.B)({
     id: "2025-10_overlay_default_keybind",
     label: "Overlay Default Keybind",
     kind: "user",
@@ -265,11 +188,11 @@ let A = (0, a.B)({
         },
     ],
 });
-function C(e) {
+function O(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return A.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+    return y.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
-let N = (0, a.B)({
+let v = (0, a.B)({
     kind: "user",
     id: "2025-10_overlay_negative_widget_testing",
     label: "Overlay Negative Widget Testing",
@@ -338,17 +261,17 @@ let N = (0, a.B)({
         },
     ],
 });
-function R(e) {
-    let t = P(e, !1);
-    if (i()(N.definition.defaultConfig, t)) return "control";
-    let n = N.definition.treatments.find((e) => i()(e.config, t));
+function I(e) {
+    let t = T(e, !1);
+    if (i()(v.definition.defaultConfig, t)) return "control";
+    let n = v.definition.treatments.find((e) => i()(e.config, t));
     return null == n ? "control" : "treatment-".concat(n.id);
 }
-function P(e) {
+function T(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return N.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+    return v.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
-let D = (0, a.B)({
+let S = (0, a.B)({
     id: "2025-11_overlay_welcome_notification",
     label: "Overlay Welcome Notification",
     kind: "user",
@@ -361,11 +284,11 @@ let D = (0, a.B)({
         },
     ],
 });
-function w(e) {
+function A(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return D.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+    return S.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
-let L = (0, a.B)({
+let C = (0, a.B)({
     id: "2025-11_overlay_bug_reporter",
     label: "Overlay Bug Reporter",
     kind: "user",
@@ -378,17 +301,17 @@ let L = (0, a.B)({
         },
     ],
 });
-function x(e) {
+function N(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return L.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+    return C.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
-function M(e) {
-    return L.useExperiment({ location: e }).enabled;
+function R(e) {
+    return C.useExperiment({ location: e }).enabled;
 }
-function k() {
-    v("OVERLAY_INITIALIZED"),
-        S("OVERLAY_INITIALIZED"),
-        P("OVERLAY_INITIALIZED"),
-        w("OVERLAY_INITIALIZED"),
-        x("OVERLAY_INITIALIZED");
+function P() {
+    m("OVERLAY_INITIALIZED"),
+        b("OVERLAY_INITIALIZED"),
+        T("OVERLAY_INITIALIZED"),
+        A("OVERLAY_INITIALIZED"),
+        N("OVERLAY_INITIALIZED");
 }

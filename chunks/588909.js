@@ -148,7 +148,7 @@ function A(e, t) {
                                               n.e("38697"),
                                               n.e("4093"),
                                               n.e("47863"),
-                                              n.e("39173"),
+                                              n.e("59416"),
                                           ]).then(n.bind(n, 60594));
                                           return (n) =>
                                               (0, i.jsx)(
@@ -180,26 +180,25 @@ function A(e, t) {
                       }));
                 break;
             }
-            case S.nc.CONTENT_INVENTORY:
-                if ((0, g.Rb)("welcomeNotification").allowActivityWidget) {
-                    C.onNotificationShow = () => {
-                        u.Z.track(x.rMx.OVERLAY_GAME_INVITE_NOTIFICATION_SHOWN, {
-                            user_ids: a.entries.map((e) => e.author_id),
-                            entry_ids: a.entries.map((e) => e.id),
-                        });
-                    };
-                    let t = () =>
-                        (0, i.jsx)(y.lX, {
-                            gamingId: null == e ? void 0 : e.id,
-                            maxUserShowCount: 5,
-                            variant: r ? "subtle" : "default",
-                            className: l()({
-                                [Z.container]: !0,
-                                [Z.containerFaint]: r,
-                            }),
-                        });
-                    r ? A.push(t) : (C.renderFooter = t);
-                }
+            case S.nc.CONTENT_INVENTORY: {
+                C.onNotificationShow = () => {
+                    u.Z.track(x.rMx.OVERLAY_GAME_INVITE_NOTIFICATION_SHOWN, {
+                        user_ids: a.entries.map((e) => e.author_id),
+                        entry_ids: a.entries.map((e) => e.id),
+                    });
+                };
+                let t = () =>
+                    (0, i.jsx)(y.lX, {
+                        gamingId: null == e ? void 0 : e.id,
+                        maxUserShowCount: 5,
+                        variant: r ? "subtle" : "default",
+                        className: l()({
+                            [Z.container]: !0,
+                            [Z.containerFaint]: r,
+                        }),
+                    });
+                r ? A.push(t) : (C.renderFooter = t);
+            }
         }
     k.length > 0 &&
         A.unshift(() =>

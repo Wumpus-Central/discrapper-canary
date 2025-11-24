@@ -194,7 +194,7 @@ function ev(e) {
     return null == i || i.type !== J.IIU.PLAYING ? null : i;
 }
 function eE() {
-    if (!(0, k.Yo)("OverlayNotificationStore") || R.Z.isNotificationDisabled(X.n0.NowPlayingNotification)) return !1;
+    if (R.Z.isNotificationDisabled(X.n0.NowPlayingNotification)) return !1;
     let e = _.Z.usersPlaying,
         t = new Set(),
         n = (function () {
