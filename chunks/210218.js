@@ -1,8 +1,10 @@
-n.d(t, { Z: () => E });
-var r,
-    i = n(442837),
-    a = n(570140);
-function o(e, t, n) {
+let r;
+n.d(t, { Z: () => O });
+var i,
+    a = n(442837),
+    o = n(570140),
+    s = n(706454);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,7 +17,7 @@ function o(e, t, n) {
         e
     );
 }
-function s(e) {
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -26,12 +28,12 @@ function s(e) {
                 }),
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                l(e, t, n[t]);
             });
     }
     return e;
 }
-function l(e, t) {
+function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -43,79 +45,86 @@ function l(e, t) {
     }
     return n;
 }
-function c(e, t) {
+function d(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : l(Object(t)).forEach(function (n) {
+            : u(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let u = {},
-    d = {};
-function f(e) {
+let f = {},
+    _ = {};
+function p(e) {
     let { guildId: t } = e;
-    (d[t] = {
+    (_[t] = {
         storefront: null,
         state: "loading",
         fetchedAt: null,
     }),
-        (d = s({}, d));
+        (_ = c({}, _));
 }
-function _(e) {
+function h(e) {
     let { guildId: t, storefront: n } = e;
-    (d[t] = {
+    (_[t] = {
         storefront: n,
         state: "fetched",
         fetchedAt: Date.now(),
     }),
-        (d = s({}, d));
+        (_ = c({}, _));
 }
-function p(e) {
+function m(e) {
     let { guildId: t, storefront: n } = e,
-        r = d[t];
+        r = _[t];
     (null == r ? void 0 : r.storefront) != null
-        ? (d[t] = c(s({}, r), { storefront: c(s({}, r.storefront), { assets: s({}, r.storefront.assets, n.assets) }) }))
-        : (d[t] = {
+        ? (_[t] = d(c({}, r), { storefront: d(c({}, r.storefront), { assets: c({}, r.storefront.assets, n.assets) }) }))
+        : (_[t] = {
               storefront: n,
               state: "partially-fetched",
               fetchedAt: null,
           }),
-        (d = s({}, d));
+        (_ = c({}, _));
 }
-function h(e) {
+function g(e) {
     let { guildId: t } = e;
-    (d[t] = {
+    (_[t] = {
         storefront: null,
         state: "error",
         fetchedAt: null,
     }),
-        (d = s({}, d));
+        (_ = c({}, _));
 }
-function m(e) {
+function E(e) {
     let { guildId: t, pageIndex: n, skuId: r } = e;
-    (u[t] = {
+    (f[t] = {
         activePage: n,
         activeSkuId: r,
     }),
-        (u = s({}, u));
+        (f = c({}, f));
 }
-class g extends (r = i.ZP.Store) {
+function b() {
+    if (r === s.default.locale) return !1;
+    (r = s.default.locale), (f = {}), (_ = {});
+}
+class y extends (i = a.ZP.Store) {
+    initialize() {
+        this.waitFor(s.default), this.syncWith([s.default], b), (r = s.default.locale);
+    }
     getStorefrontData(e) {
-        return d[e];
+        return _[e];
     }
     getStorefrontState(e) {
-        return u[e];
+        return f[e];
     }
 }
-o(g, "displayName", "SocialLayerStorefrontStore");
-let E = new g(a.Z, {
-    SOCIAL_LAYER_STOREFRONT_LOAD: f,
-    SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS: _,
-    SOCIAL_LAYER_STOREFRONT_PARTIAL_LOAD_SUCCESS: p,
-    SOCIAL_LAYER_STOREFRONT_LOAD_FAILURE: h,
-    SET_SOCIAL_LAYER_STOREFRONT_STATE: m,
+l(y, "displayName", "SocialLayerStorefrontStore");
+let O = new y(o.Z, {
+    SOCIAL_LAYER_STOREFRONT_LOAD: p,
+    SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS: h,
+    SOCIAL_LAYER_STOREFRONT_PARTIAL_LOAD_SUCCESS: m,
+    SOCIAL_LAYER_STOREFRONT_LOAD_FAILURE: g,
+    SET_SOCIAL_LAYER_STOREFRONT_STATE: E,
 });

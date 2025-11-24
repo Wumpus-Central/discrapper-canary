@@ -19,7 +19,7 @@ function u(e) {
                     (null == e ? void 0 : e.fetchedAt) != null &&
                     Date.now() - (null == e ? void 0 : e.fetchedAt) < c) ||
                 (0, o.YL)(null == n ? void 0 : n.id);
-        }, [null == n ? void 0 : n.id]),
+        }, [null == n ? void 0 : n.id, a]),
         a
     );
 }
