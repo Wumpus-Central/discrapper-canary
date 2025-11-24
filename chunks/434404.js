@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(953529), n(539854), n(388685);
+n.d(t, { Z: () => R }), n(953529);
 var r = n(990547),
     i = n(544891),
     a = n(570140),
@@ -127,7 +127,7 @@ let C = new s.Z("GuildSettingsActionCreators"),
                 n.e("93375"),
                 n.e("39206"),
                 n.e("22516"),
-                n.e("18295"),
+                n.e("20598"),
                 n.e("59231"),
             ]).then(n.bind(n, 994763)),
                 (null == (a = g.Z.getGuild(e)) ? void 0 : a.features.has(y.GuildFeatures.COMMUNITY)) &&
@@ -516,9 +516,8 @@ let C = new s.Z("GuildSettingsActionCreators"),
                 );
         },
         async migratePermissions(e, t) {
-            let { migratePin: n, migrateSlowmode: r } = t,
-                i = [];
-            n && i.push(N.migratePinPermission(e)), r && i.push(N.migrateSlowmodePermission(e)), await Promise.all(i);
+            let { migratePin: n, migrateSlowmode: r } = t;
+            n && (await N.migratePinPermission(e)), r && (await N.migrateSlowmodePermission(e));
         },
     },
     R = N;
