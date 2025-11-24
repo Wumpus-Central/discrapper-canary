@@ -656,21 +656,22 @@ function U(e) {
             closeOnSelect: d = !0,
             filter: f,
             matchSorterOptions: _,
-            "aria-required": h,
-            onChange: m,
-            onSearchChange: g,
-            onKeyDown: E,
-            onFocus: y,
-            onBlur: O,
-            debounceTime: v,
-            hidePills: T,
-            renderOptionLabel: S,
-            renderOptionPrefix: A,
-            renderOptionSuffix: N,
+            placeholder: h,
+            "aria-required": m,
+            onChange: g,
+            onSearchChange: E,
+            onKeyDown: y,
+            onFocus: O,
+            onBlur: v,
+            debounceTime: T,
+            hidePills: S,
+            renderOptionLabel: A,
+            renderOptionPrefix: N,
+            renderOptionSuffix: P,
         } = e,
-        { fieldProps: P } = (0, p.XF_)(e),
-        D = null != v || "function" == typeof i || null != S;
-    if (t && !D) {
+        { fieldProps: D } = (0, p.XF_)(e),
+        w = null != T || "function" == typeof i || null != A;
+    if (t && !w) {
         let e = null != f && "function" == typeof f ? f : void 0;
         return (0, r.jsx)(
             b.V,
@@ -679,11 +680,11 @@ function U(e) {
                     {
                         id: n,
                         selectionMode: c ? "multiple" : "single",
-                        required: a || h,
+                        required: a || m,
                         disabled: o || s,
-                        hideTags: T,
+                        hideTags: S,
                     },
-                    P,
+                    D,
                 ),
                 {
                     value: l,
@@ -696,28 +697,29 @@ function U(e) {
                             label: r,
                             disabled: i,
                             leading:
-                                null == A
-                                    ? void 0
-                                    : A(e, {
-                                          inPill: !1,
-                                          inDropdown: !0,
-                                      }),
-                            trailing:
                                 null == N
                                     ? void 0
                                     : N(e, {
                                           inPill: !1,
                                           inDropdown: !0,
                                       }),
+                            trailing:
+                                null == P
+                                    ? void 0
+                                    : P(e, {
+                                          inPill: !1,
+                                          inDropdown: !0,
+                                      }),
                         };
                     },
-                    onSelectionChange: m,
+                    onSelectionChange: g,
                     customMatchSorter: e,
                     matchSorterOptions: _,
-                    onQueryChange: (e) => (null == g ? void 0 : g(e.target.value)),
-                    onKeyDown: E,
-                    onFocus: y,
-                    onBlur: O,
+                    placeholder: h,
+                    onQueryChange: (e) => (null == E ? void 0 : E(e.target.value)),
+                    onKeyDown: y,
+                    onFocus: O,
+                    onBlur: v,
                     clearable: u,
                     closeOnSelect: d,
                 },

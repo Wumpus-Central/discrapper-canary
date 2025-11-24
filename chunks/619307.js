@@ -554,13 +554,14 @@ function M(e) {
             closeOnSelect: O = !0,
             maxVisibleItems: T,
             "aria-label": A,
-            variant: C,
-            renderOptionLabel: N,
+            placeholder: C,
+            variant: N,
+            renderOptionLabel: R,
         } = o,
-        { fieldProps: R } = (0, u.XF_)(o),
-        P = "text-only" === C || null != N;
-    if (s && !P) {
-        let e = null == R.label && null != A;
+        { fieldProps: P } = (0, u.XF_)(o),
+        D = "text-only" === N || null != R;
+    if (s && !D) {
+        let e = null == P.label && null != A;
         return (0, r.jsx)(
             f.P,
             v(
@@ -592,17 +593,18 @@ function M(e) {
                         clearable: b,
                         closeOnSelect: O,
                         maxOptionsVisible: T,
+                        placeholder: C,
                     },
-                    R,
+                    P,
                 ),
                 {
-                    label: e ? A : R.label,
-                    hideLabel: !0 === R.hideLabel || e,
+                    label: e ? A : P.label,
+                    hideLabel: !0 === P.hideLabel || e,
                 },
             ),
         );
     }
-    function D() {
+    function L() {
         if (null != t || null != n)
             return (e) =>
                 (0, r.jsxs)("div", {
@@ -610,7 +612,7 @@ function M(e) {
                     children: [null == t ? void 0 : t(e), e.label, null == n ? void 0 : n(e)],
                 });
     }
-    return (0, r.jsx)(w, v(y({}, o, l), { renderOptionLabel: null != N ? N : D() }));
+    return (0, r.jsx)(w, v(y({}, o, l), { renderOptionLabel: null != R ? R : L() }));
 }
 function k(e) {
     var t,
@@ -630,15 +632,16 @@ function k(e) {
             clearable: O,
             closeOnSelect: T,
             maxVisibleItems: S,
-            "aria-label": A,
-            variant: C,
-            isSelected: N,
-            renderOptionLabel: R,
+            placeholder: A,
+            "aria-label": C,
+            variant: N,
+            isSelected: R,
+            renderOptionLabel: P,
         } = o,
-        { fieldProps: P } = (0, u.XF_)(o),
-        D = "text-only" === C || null != R;
-    if (s && !D) {
-        let e = null == P.label && null != A;
+        { fieldProps: D } = (0, u.XF_)(o),
+        L = "text-only" === N || null != P;
+    if (s && !L) {
+        let e = null == D.label && null != C;
         return (0, r.jsx)(
             f.P,
             v(
@@ -652,7 +655,7 @@ function k(e) {
                         value:
                             null !=
                             (n =
-                                null == d || null == (t = d.find((e) => (null == N ? void 0 : N(e.value))))
+                                null == d || null == (t = d.find((e) => (null == R ? void 0 : R(e.value))))
                                     ? void 0
                                     : t.value)
                                 ? n
@@ -677,17 +680,18 @@ function k(e) {
                         clearable: O,
                         closeOnSelect: T,
                         maxOptionsVisible: S,
+                        placeholder: A,
                     },
-                    P,
+                    D,
                 ),
                 {
-                    label: e ? A : P.label,
-                    hideLabel: !0 === P.hideLabel || e,
+                    label: e ? C : D.label,
+                    hideLabel: !0 === D.hideLabel || e,
                 },
             ),
         );
     }
-    function L() {
+    function x() {
         if (null != i || null != a)
             return (e) =>
                 (0, r.jsxs)("div", {
@@ -695,5 +699,5 @@ function k(e) {
                     children: [null == i ? void 0 : i(e), e.label, null == a ? void 0 : a(e)],
                 });
     }
-    return (0, r.jsx)(w, v(y({}, o), { renderOptionLabel: null != R ? R : L() }));
+    return (0, r.jsx)(w, v(y({}, o), { renderOptionLabel: null != P ? P : x() }));
 }
