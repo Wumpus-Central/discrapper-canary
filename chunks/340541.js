@@ -66,12 +66,13 @@ function o(e) {
             isInCallEntrypointEnabled: r,
             isGuildEntrypointEnabled: i,
             isTextChannelEntrypointEnabled: o,
-        } = a.getCurrentConfig({ location: t });
+        } = a.getCurrentConfig({ location: t }),
+        s = n || r || i || o;
     return {
-        isVoiceChannelEntrypointEnabled: n,
-        isInCallEntrypointEnabled: r,
-        isGuildEntrypointEnabled: i,
-        isTextChannelEntrypointEnabled: o,
+        isVoiceChannelEntrypointEnabled: s,
+        isInCallEntrypointEnabled: s,
+        isGuildEntrypointEnabled: s,
+        isTextChannelEntrypointEnabled: s,
     };
 }
 function s(e) {
