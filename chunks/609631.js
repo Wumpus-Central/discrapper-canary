@@ -12,11 +12,11 @@ var r,
     l = n(512722),
     c = n.n(l),
     u = n(374470),
-    d = n(762328),
-    f = n(793030),
-    _ = n(585483),
-    p = n(872801),
-    h = n(981631),
+    d = n(155127),
+    f = n(70007),
+    _ = n(709048),
+    p = n(762328),
+    h = n(168718),
     m = n(793906);
 function g(e, t, n) {
     return (
@@ -72,8 +72,8 @@ function y(e, t) {
 }
 let O = new WeakMap();
 function v(e) {
-    let t = (0, p.Z)(e, m.layer);
-    return null == t && (t = (0, u.MD)(e, d.TA)), null != t ? t : null;
+    let t = (0, u.sK)(e, m.layer);
+    return null == t && (t = (0, u.MD)(e, p.TA)), null != t ? t : null;
 }
 function I(e, t) {
     if (e.contains(t)) return !0;
@@ -289,7 +289,7 @@ class w extends (r = a.Component) {
         let { position: e, autoInvert: t } = this.props,
             n = this.elementRef.current;
         c()(null != n, "Unexpected null element");
-        let r = (0, f.wLj)(n),
+        let r = (0, h.wL)(n),
             { style: i, nudge: a } = this.calculatePositionStyle(e, n, r),
             o = {
                 position: e,
@@ -341,12 +341,10 @@ class w extends (r = a.Component) {
         let i = this.elementRef.current;
         c()(null != i, "Missing elementRef"),
             null != n.current && O.set(i, n.current),
-            _.S.subscribe(h.CkL.LAYER_POP_START, this.handleLayerPopStart),
-            _.S.subscribe(h.CkL.LAYER_POP_COMPLETE, this.handleLayerPopComplete),
             null == i ||
                 null == (t = i.ownerDocument) ||
                 null == (e = t.defaultView) ||
-                e.addEventListener("resize", this.handleLayerPopComplete),
+                e.addEventListener("resize", this.updatePosition),
             null == r || r();
     }
     componentDidUpdate(e, t) {
@@ -362,43 +360,40 @@ class w extends (r = a.Component) {
         let i = this.elementRef.current;
         c()(null != i, "Missing elementRef"),
             O.delete(i),
-            _.S.unsubscribe(h.CkL.LAYER_POP_START, this.handleLayerPopStart),
-            _.S.unsubscribe(h.CkL.LAYER_POP_COMPLETE, this.handleLayerPopComplete),
             null == i ||
                 null == (t = i.ownerDocument) ||
                 null == (e = t.defaultView) ||
-                e.removeEventListener("resize", this.handleLayerPopComplete),
+                e.removeEventListener("resize", this.updatePosition),
             null == (n = (r = this.props).onUnmount) || n.call(r);
     }
     render() {
         let { id: e, className: t, children: n, fixed: r, disablePointerEvents: a, clickTrap: o = !1 } = this.props,
-            { position: l, isPositioned: c, isSettingsLayerTransitioning: u, nudge: d } = this.state;
+            { position: l, isPositioned: c, nudge: u } = this.state;
         return (0, i.jsx)("div", {
             className: s()({
                 [m.clickTrapContainer]: !0,
                 [m.trapClicks]: o,
             }),
-            children: (0, i.jsx)(f.C1Q, {
+            children: (0, i.jsx)(f.C1, {
                 children: (o) => {
-                    let { disableAdaptiveTheme: _ } = o;
-                    return (0, i.jsx)(f.f6W, {
-                        disableAdaptiveTheme: _,
+                    let { disableAdaptiveTheme: f } = o;
+                    return (0, i.jsx)(_.f, {
+                        disableAdaptiveTheme: f,
                         children: (o) =>
                             (0, i.jsx)("div", {
                                 id: e,
                                 className: s()(t, o, m.layer, {
                                     [m.emptyError]: !1,
-                                    [m.layerHidden]: u,
                                     [m.disabledPointerEvents]: a,
                                 }),
                                 style: E({ position: r ? "fixed" : "absolute" }, this.state.style),
                                 ref: this.elementRef,
-                                children: (0, i.jsx)(f.JcV, {
+                                children: (0, i.jsx)(d.Jc, {
                                     containerRef: this.elementRef,
                                     children: n(
                                         {
                                             position: l,
-                                            nudge: d,
+                                            nudge: u,
                                             isPositioned: c,
                                         },
                                         this.updatePosition,
@@ -418,14 +413,6 @@ class w extends (r = a.Component) {
                 position: this.props.autoInvert ? null : this.props.position,
                 nudge: 0,
                 isPositioned: !1,
-                isSettingsLayerTransitioning: !1,
-            }),
-            g(this, "handleLayerPopStart", () => {
-                this.setState({ isSettingsLayerTransitioning: !0 });
-            }),
-            g(this, "handleLayerPopComplete", () => {
-                let e = this.calculateState();
-                this.setState(y(E({}, e), { isSettingsLayerTransitioning: !1 }));
             }),
             g(this, "updatePosition", () => {
                 this.setState(this.calculateState());

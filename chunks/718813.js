@@ -18,7 +18,7 @@ var r,
     E = n(585483),
     O = n(981631),
     y = n(388032),
-    v = n(892694),
+    v = n(140939),
     I = n(256076);
 function C(e, t, n) {
     return (
@@ -165,10 +165,9 @@ class k extends (r = l.PureComponent) {
     animateOut(e) {
         c.ZP.Emitter.pause(500);
         let { opacity: t, scale: n } = this.state;
-        E.S.dispatch(O.CkL.LAYER_POP_START),
-            o.Z.parallel([o.Z.spring(t, S({ toValue: 0 }, D)), o.Z.spring(n, S({ toValue: 1.1 }, D))]).start(() => {
-                e(), E.S.dispatch(O.CkL.LAYER_POP_COMPLETE);
-            });
+        o.Z.parallel([o.Z.spring(t, S({ toValue: 0 }, D)), o.Z.spring(n, S({ toValue: 1.1 }, D))]).start(() => {
+            e(), E.S.dispatch(O.CkL.LAYER_POP_COMPLETE);
+        });
     }
     animateUnder() {
         c.ZP.Emitter.pause(500);
