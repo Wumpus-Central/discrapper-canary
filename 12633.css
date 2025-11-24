@@ -89280,13 +89280,12 @@ html .invoiceCancelRow__968a4 {
 }
 
 .button_e8d31f {
-    border-radius: var(--radius-sm);
-    max-width: 50%
+    max-width: calc(50% - var(--space-4))
 }
 
 .button_e8d31f+.button_e8d31f {
-    -webkit-margin-start: 5px;
-    margin-inline-start: 5px
+    -webkit-margin-start: var(--space-8);
+    margin-inline-start: var(--space-8)
 }
 
 .avatar_e8d31f {

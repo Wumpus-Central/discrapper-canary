@@ -8,29 +8,29 @@ var r = t(54381),
     c = t(692547),
     d = t(194983),
     u = t(28664),
-    p = t(755721),
-    h = t(481060),
-    m = t(239091),
-    f = t(266454),
-    g = t(66999),
-    _ = t(549631),
-    x = t(473403),
-    C = t(454585),
-    b = t(22082),
-    j = t(703656),
-    O = t(6025),
+    p = t(481060),
+    h = t(239091),
+    m = t(266454),
+    f = t(66999),
+    g = t(549631),
+    _ = t(473403),
+    x = t(454585),
+    C = t(22082),
+    b = t(703656),
+    j = t(6025),
     v = t(922482),
-    y = t(601070),
-    N = t(216306),
-    I = t(163),
-    w = t(753540),
-    Z = t(70297),
-    P = t(981631),
-    S = t(176505),
+    O = t(601070),
+    y = t(216306),
+    N = t(163),
+    I = t(753540),
+    w = t(70297),
+    Z = t(981631),
+    P = t(176505),
+    S = t(295907),
     E = t(388032),
     T = t(444630),
     B = t(430864);
-function A(e) {
+function D(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             r = Object.keys(t);
@@ -73,21 +73,21 @@ function k(e, n) {
         e
     );
 }
-let D = new Set([P.d4z.GUILD_FORUM, P.d4z.GUILD_MEDIA]),
-    L = new Set([P.d4z.GUILD_VOICE, P.d4z.GUILD_STAGE_VOICE]);
-function R(e) {
+let A = new Set([Z.d4z.GUILD_FORUM, Z.d4z.GUILD_MEDIA]),
+    R = new Set([Z.d4z.GUILD_VOICE, Z.d4z.GUILD_STAGE_VOICE]);
+function L(e) {
     let { guild: n, channel: l, onCategoryClick: i } = e,
-        o = (0, w.Mf)(n.id, l.id, l.id),
-        s = (0, w.t4)(n.id, l.id, l.id);
+        o = (0, I.Mf)(n.id, l.id, l.id),
+        s = (0, I.t4)(n.id, l.id, l.id);
     return (0, r.jsxs)("div", {
         className: a()(T.categoryRow, { [T.uncategorized]: "null" === l.id }),
         onContextMenu: (e) => {
-            (0, m.jW)(e, async () => {
+            (0, h.jW)(e, async () => {
                 let { default: e } = await Promise.all([t.e("8965"), t.e("14280")]).then(t.bind(t, 139035));
                 return (t) =>
                     (0, r.jsx)(
                         e,
-                        k(A({}, t), {
+                        k(D({}, t), {
                             channel: l,
                             guild: n,
                         }),
@@ -95,35 +95,21 @@ function R(e) {
             });
         },
         children: [
-            (0, r.jsx)(h.Text, {
+            (0, r.jsx)(p.Text, {
                 className: T.categoryText,
-                color: "text-muted",
-                variant: "text-sm/medium",
+                color: "text-primary",
+                variant: "text-lg/medium",
                 lineClamp: 1,
                 children: l.name,
             }),
             "null" !== l.id &&
                 !s &&
-                (0, r.jsxs)(h.P3F, {
-                    className: T.selectAll,
-                    onClick: () => {
-                        s || i(n.id, l.id, l.id);
-                    },
-                    children: [
-                        (0, r.jsx)(p.$q, {
-                            className: T.selectAllCheckbox,
-                            size: 14,
-                            shape: p.zV.SMALL_BOX,
-                            value: o,
-                            type: p.M0.INVERTED,
-                            displayOnly: !0,
-                        }),
-                        (0, r.jsx)(h.Text, {
-                            color: "text-muted",
-                            variant: "text-xs/medium",
-                            children: E.intl.string(E.t.mSQwnW),
-                        }),
-                    ],
+                (0, r.jsx)("div", {
+                    children: (0, r.jsx)(p.rsf, {
+                        label: E.intl.string(E.t.mSQwnW),
+                        checked: o,
+                        onChange: () => void (!s && i(n.id, l.id, l.id)),
+                    }),
                 }),
         ],
     });
@@ -134,7 +120,7 @@ let H = l.memo(function () {
     M = l.memo(function (e) {
         let { index: n } = e;
         return (0, r.jsx)(
-            h.Text,
+            p.Text,
             {
                 variant: "text-xs/normal",
                 className: T.subtitleSeparator,
@@ -149,24 +135,24 @@ let H = l.memo(function () {
                 category: l,
                 guild: i,
                 isFirstChannel: s,
-                isLastChannel: p,
-                onChannelClick: f,
-                tooltipDirection: I = "right",
+                isLastChannel: m,
+                onChannelClick: N,
+                tooltipDirection: w = "right",
             } = e,
-            { isSubscriptionGated: Z } = (0, g.Z)(n.id),
-            R = (0, w.Mf)(i.id, n.id, l.id),
-            U = (0, w.t4)(i.id, n.id, l.id),
-            G = (0, w.EH)(i.id, l.id),
-            F = (0, o.e7)([y.Z], () => y.Z.getActiveThreadCount(i.id, n.id)),
-            W = (0, o.e7)([b.Z], () => b.Z.shouldIndicateNewChannel(i.id, n.id)),
-            q = (function (e, n) {
+            { isSubscriptionGated: L } = (0, f.Z)(n.id),
+            U = (0, I.Mf)(i.id, n.id, l.id),
+            G = (0, I.t4)(i.id, n.id, l.id),
+            W = (0, I.EH)(i.id, l.id),
+            F = (0, o.e7)([O.Z], () => O.Z.getActiveThreadCount(i.id, n.id)),
+            q = (0, o.e7)([C.Z], () => C.Z.shouldIndicateNewChannel(i.id, n.id)),
+            z = (function (e, n) {
                 let t = [];
                 return (
-                    P.TPd.GUILD_THREADS_ONLY.has(e.type) &&
+                    Z.TPd.GUILD_THREADS_ONLY.has(e.type) &&
                         n >= 1 &&
                         t.push(
                             (0, r.jsx)(
-                                h.Text,
+                                p.Text,
                                 {
                                     variant: "text-xs/normal",
                                     className: T.channelSubtitle,
@@ -175,14 +161,14 @@ let H = l.memo(function () {
                                 "thread-count",
                             ),
                         ),
-                    L.has(e.type) ||
+                    R.has(e.type) ||
                         t.push(
                             (0, r.jsx)(
-                                h.Text,
+                                p.Text,
                                 {
                                     variant: "text-xs/normal",
                                     className: T.channelSubtitle,
-                                    children: (0, N.qw)(e.id),
+                                    children: (0, y.qw)(e.id),
                                 },
                                 "active",
                             ),
@@ -194,10 +180,10 @@ let H = l.memo(function () {
                                 d.Z,
                                 {
                                     className: B.markup,
-                                    children: (0, r.jsx)(h.Text, {
+                                    children: (0, r.jsx)(p.Text, {
                                         className: T.topic,
                                         variant: "text-xs/normal",
-                                        children: C.Z.parseTopic(e.topic, !0, { channelId: e.id }),
+                                        children: x.Z.parseTopic(e.topic, !0, { channelId: e.id }),
                                     }),
                                 },
                                 "topic",
@@ -208,30 +194,42 @@ let H = l.memo(function () {
                         .slice(0, -1)
                 );
             })(n, F),
-            z = E.intl.string(E.t.vetGQs);
+            V = (e) => (
+                (e.stopPropagation(), A.has(n.type) || e.shiftKey)
+                    ? (0, b.XU)(i.id, n.id)
+                    : n.isGuildStageVoice() || n.isGuildVoice()
+                      ? (0, v.Cq)(n)
+                      : j.Z.openChannelAsSidebar({
+                            guildId: n.guild_id,
+                            channelId: n.id,
+                            baseChannelId: P.oC.CHANNEL_BROWSER,
+                        }),
+                !0
+            ),
+            X = E.intl.string(E.t.vetGQs);
         n.isGuildStageVoice() || n.isGuildVoice()
-            ? (z = E.intl.string(E.t.VJlc0S))
-            : n.isForumLikeChannel() && (z = E.intl.string(E.t["3xjX0U"]));
-        let V = U ? "text-muted" : "text-default",
-            X = (0, h.dQu)(U ? c.Z.colors.TEXT_MUTED : c.Z.colors.TEXT_DEFAULT).hex();
+            ? (X = E.intl.string(E.t.VJlc0S))
+            : n.isForumLikeChannel() && (X = E.intl.string(E.t["3xjX0U"]));
+        let Q = G ? "text-muted" : "text-default",
+            Y = (0, p.dQu)(G ? c.Z.colors.TEXT_MUTED : c.Z.colors.TEXT_DEFAULT).hex();
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(u.u, {
-                    text: G,
+                    text: W,
                     delay: 500,
-                    position: I,
-                    children: (0, r.jsxs)(h.P3F, {
+                    position: w,
+                    children: (0, r.jsxs)(p.P3F, {
                         className: a()(T.channelRow, {
                             [T.firstChannel]: s,
-                            [T.lastChannel]: p,
-                            [T.disabled]: U,
+                            [T.lastChannel]: m,
+                            [T.disabled]: G,
                         }),
                         onClick: (e) => {
-                            if (!U) return e.stopPropagation(), f(i.id, n.id, l.id), !0;
+                            if (!G) return e.stopPropagation(), N(i.id, n.id, l.id), !0;
                         },
                         onContextMenu: (e) => {
                             n.isGuildVocal()
-                                ? (0, m.jW)(e, async () => {
+                                ? (0, h.jW)(e, async () => {
                                       let { default: e } = await Promise.all([
                                           t.e("79695"),
                                           t.e("18320"),
@@ -241,13 +239,13 @@ let H = l.memo(function () {
                                       return (t) =>
                                           (0, r.jsx)(
                                               e,
-                                              k(A({}, t), {
+                                              k(D({}, t), {
                                                   channel: n,
                                                   guild: i,
                                               }),
                                           );
                                   })
-                                : (0, m.jW)(e, async () => {
+                                : (0, h.jW)(e, async () => {
                                       let { default: e } = await Promise.all([
                                           t.e("79695"),
                                           t.e("18320"),
@@ -256,7 +254,7 @@ let H = l.memo(function () {
                                       return (t) =>
                                           (0, r.jsx)(
                                               e,
-                                              k(A({}, t), {
+                                              k(D({}, t), {
                                                   channel: n,
                                                   guild: i,
                                               }),
@@ -270,28 +268,28 @@ let H = l.memo(function () {
                                     (0, r.jsxs)("div", {
                                         className: T.channelName,
                                         children: [
-                                            (0, r.jsx)(x._W, {
+                                            (0, r.jsx)(_._W, {
                                                 channel: n,
                                                 guild: i,
                                             }),
                                             (0, r.jsx)(d.Z, {
                                                 className: T.__invalid_name,
-                                                children: (0, r.jsx)(h.Text, {
+                                                children: (0, r.jsx)(p.Text, {
                                                     className: T.channelText,
                                                     variant: "text-md/medium",
                                                     lineClamp: 1,
-                                                    color: V,
+                                                    color: Q,
                                                     children: n.name,
                                                 }),
                                             }),
-                                            Z
-                                                ? (0, r.jsx)(_.Z, {
-                                                      color: X,
+                                            L
+                                                ? (0, r.jsx)(g.Z, {
+                                                      color: Y,
                                                       className: T.premiumIcon,
                                                   })
                                                 : null,
-                                            W
-                                                ? (0, r.jsx)(h.IGR, {
+                                            q
+                                                ? (0, r.jsx)(p.IGR, {
                                                       text: E.intl.string(E.t.y2b7CA),
                                                       color: c.Z.unsafe_rawColors.BRAND_260.css,
                                                       className: T.titleBadge,
@@ -301,7 +299,7 @@ let H = l.memo(function () {
                                     }),
                                     (0, r.jsx)("div", {
                                         className: T.channelSubtitles,
-                                        children: q,
+                                        children: z,
                                     }),
                                 ],
                             }),
@@ -310,48 +308,41 @@ let H = l.memo(function () {
                                 children: [
                                     (0, r.jsx)("div", {
                                         className: T.viewChannelButtonWrapper,
-                                        children: (0, r.jsx)(h.Button, {
+                                        children: (0, r.jsx)(p.Button, {
                                             size: "sm",
                                             variant: "overlay-primary",
-                                            onClick: (e) => (
-                                                (e.stopPropagation(), D.has(n.type) || e.shiftKey)
-                                                    ? (0, j.XU)(i.id, n.id)
-                                                    : n.isGuildStageVoice() || n.isGuildVoice()
-                                                      ? (0, v.Cq)(n)
-                                                      : O.Z.openChannelAsSidebar({
-                                                            guildId: n.guild_id,
-                                                            channelId: n.id,
-                                                            baseChannelId: S.oC.CHANNEL_BROWSER,
-                                                        }),
-                                                !0
-                                            ),
-                                            text: z,
+                                            onClick: V,
+                                            text: X,
+                                            onKeyDown: (e) => {
+                                                (e.key === S.vn.ENTER || e.key === S.vn.SPACE) &&
+                                                    (e.preventDefault(), e.stopPropagation(), V(e));
+                                            },
                                         }),
                                     }),
-                                    (0, r.jsx)(h.FZ5, {
-                                        checked: R,
-                                        disabled: U,
+                                    (0, r.jsx)(p.FZ5, {
+                                        checked: U,
+                                        disabled: G,
                                     }),
                                 ],
                             }),
                         ],
                     }),
                 }),
-                !p && (0, r.jsx)(H, {}),
+                !m && (0, r.jsx)(H, {}),
             ],
         });
     });
 function G(e) {
     let { categories: n, guild: t, className: i, innerClassName: o, hasSidebar: c } = e,
-        { onChannelClick: d } = (0, I.Z)(t.id),
-        u = (0, f.Nj)(s.z.CHANNEL_BROWSER_NUX) ? 0 : -1,
-        p = l.useCallback(
+        { onChannelClick: d } = (0, N.Z)(t.id),
+        u = (0, m.Nj)(s.z.CHANNEL_BROWSER_NUX) ? 0 : -1,
+        h = l.useCallback(
             (e) => {
                 let { section: l } = e;
                 if (0 === l && -1 === u) return null;
                 let i = n._categories[l + u];
                 return (0, r.jsx)(
-                    R,
+                    L,
                     {
                         channel: i.channel,
                         guild: t,
@@ -362,10 +353,10 @@ function G(e) {
             },
             [n, t, u, d],
         ),
-        m = l.useCallback(
+        f = l.useCallback(
             (e) => {
                 let { section: l, row: i } = e;
-                if (0 === l && -1 === u) return (0, r.jsx)(Z.Z, { guild: t });
+                if (0 === l && -1 === u) return (0, r.jsx)(w.Z, { guild: t });
                 let a = n._categories[l + u],
                     o = n[a.channel.id][i];
                 return null == o
@@ -386,17 +377,17 @@ function G(e) {
             },
             [n, t, u, c, d],
         ),
-        g = (0, Z.q)(t.id),
-        _ = (0, N.tn)(t.id, n, 64, g);
+        g = (0, w.q)(t.id),
+        _ = (0, y.tn)(t.id, n, 64, g);
     return (0, r.jsx)(
-        h._2F,
+        p._2F,
         {
             className: i,
             innerClassName: a()(o, T.scrollerInner),
             sectionHeight: 48,
             rowHeight: (e) => _[e].rowHeight,
-            renderSection: p,
-            renderRow: m,
+            renderSection: h,
+            renderRow: f,
             sections: _.map((e) => e.rowCount),
         },
         "channel-browser-list",
