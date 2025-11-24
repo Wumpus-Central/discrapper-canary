@@ -1,15 +1,14 @@
-n.d(e, { Z: () => S });
+n.d(e, { Z: () => E });
 var i = n(323472),
     l = n(509613),
-    u = n(313789),
-    r = n(812766),
+    r = n(313789),
+    u = n(812766),
     s = n(476203),
     a = n(231365),
     o = n(485356),
-    c = n(91981),
-    E = n(388032);
-let S = (0, l.CB)(u.n.STREAMING_ADVANCED_ACCORDION, {
-    useTitle: (t) => (t ? E.intl.string(E.t.qrMyvm) : E.intl.string(E.t.LEtTNl)),
-    useCollapsedSubtitle: () => (0, i.u)(u.n.STREAMING_ADVANCED_ACCORDION),
-    buildLayout: () => [a.Z, o.Z, c.Z, s.Z, r.Z],
+    c = n(388032);
+let E = (0, l.CB)(r.n.STREAMING_ADVANCED_ACCORDION, {
+    useTitle: (t) => (t ? c.intl.string(c.t.qrMyvm) : c.intl.string(c.t.LEtTNl)),
+    useCollapsedSubtitle: () => (0, i.u)(r.n.STREAMING_ADVANCED_ACCORDION),
+    buildLayout: () => [a.Z, o.Z, s.Z, u.Z],
 });

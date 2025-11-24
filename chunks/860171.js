@@ -1,26 +1,29 @@
-n.d(e, { g: () => T });
+n.d(e, { g: () => I });
 var i = n(54381),
     l = n(657707),
-    u = n(509613),
-    r = n(313789),
+    r = n(509613),
+    u = n(313789),
     s = n(526665),
     a = n(889029),
-    o = n(726985),
-    c = n(388032);
-let E = (0, u.x1)(r.n.STREAMER_MODE_PANE, {
+    o = n(290434),
+    c = n(726985),
+    E = n(388032);
+let d = (0, r.x1)(u.n.STREAMER_MODE_PANE, {
+        buildLayout: () => [o.Z],
+        usePredicate: () => (0, s.BK)("StreamerModePane"),
+    }),
+    S = (0, r.x1)(u.n.STREAMER_MODE_PANE, {
         buildLayout: () => [],
         render: () => (0, i.jsx)(a.Z, {}),
+        usePredicate: () => !(0, s.BK)("StreamerModePane"),
     }),
-    S = (0, u.wf)(r.n.STREAMER_MODE_PANEL, {
-        useTitle: () => c.intl.string(c.t.S5GfOW),
-        buildLayout: () => [E],
+    T = (0, r.wf)(u.n.STREAMER_MODE_PANEL, {
+        useTitle: () => E.intl.string(E.t.S5GfOW),
+        buildLayout: () => ((0, s.Ml)("StreamerModePanel") ? [d] : [S]),
     }),
-    T = (0, u.m7)(r.n.STREAMER_MODE_SIDEBAR_ITEM, {
+    I = (0, r.m7)(u.n.STREAMER_MODE_SIDEBAR_ITEM, {
         icon: l.m3e,
-        useTitle: () => c.intl.string(c.t.S5GfOW),
-        getLegacySearchKey: () => o.s6.STREAMER_MODE,
-        usePredicate: function () {
-            return !(0, s.BK)("StreamerModeSidebarItem");
-        },
-        buildLayout: () => [S],
+        useTitle: () => E.intl.string(E.t.S5GfOW),
+        getLegacySearchKey: () => ((0, s.Ml)("StreamerModePanel") ? void 0 : c.s6.STREAMER_MODE),
+        buildLayout: () => [T],
     });
