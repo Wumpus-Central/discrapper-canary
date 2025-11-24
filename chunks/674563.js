@@ -14,6 +14,7 @@ var r = (function (e) {
             (e[(e.TICKETED_EVENTS = 3)] = "TICKETED_EVENTS"),
             (e[(e.GUILD_ROLE_SUBSCRIPTIONS = 4)] = "GUILD_ROLE_SUBSCRIPTIONS"),
             (e[(e.GAME = 5)] = "GAME"),
+            (e[(e.NON_GAME_DETECTABLE = 6)] = "NON_GAME_DETECTABLE"),
             e
         );
     })({}),
