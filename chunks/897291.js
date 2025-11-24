@@ -8,8 +8,8 @@ var r = n(54381),
     c = n(906732),
     u = n(963249),
     d = n(109213),
-    f = n(998030),
-    _ = n(909917),
+    f = n(909917),
+    _ = n(602733),
     p = n(51144),
     h = n(443603),
     m = n(981631),
@@ -73,12 +73,16 @@ function I(e) {
         O = (0, p.Ft)(i),
         { Component: I, events: T, play: S } = (0, a.$)(),
         { enabled: A } = d.G.useExperiment({ location: "gift-button" }, { autoTrackExposure: !1 }),
-        C = (0, f.yc)({ location: "gift-button" }),
-        N = i.type === m.d4z.DM;
+        C = i.type === m.d4z.DM,
+        N = (0, _.ao)({
+            location: "gift-button",
+            isGift: !0,
+            giftRecipient: O,
+        });
     if (t) return null;
     let R = () => {
-        C && N && null != O
-            ? (0, _.Z)({
+        N && C && null != O
+            ? (0, f.Z)({
                   giftRecipient: O,
                   analyticsLocations: b,
                   analyticsObject: {
@@ -88,7 +92,7 @@ function I(e) {
                       objectType: m.AnalyticsObjectTypes.GIFT,
                   },
               })
-            : A && N && null != O
+            : A && C && null != O
               ? (0, s.ZDy)(async () => {
                     let { default: e } = await n.e("59207").then(n.bind(n, 435626));
                     return (t) =>

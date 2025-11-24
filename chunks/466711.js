@@ -13,9 +13,9 @@ var r = n(54381),
     p = n(644916),
     h = n(243778),
     m = n(963249),
-    g = n(998030),
-    E = n(802408),
-    b = n(909917),
+    g = n(802408),
+    E = n(909917),
+    b = n(602733),
     y = n(819640),
     O = n(594174),
     v = n(70956),
@@ -173,12 +173,16 @@ function B(e) {
         B = null != M,
         Z = d || B,
         F = (0, T.Ft)(c),
-        V = (0, g.yc)({ location: "gift-button" }),
-        H = c.type === N.d4z.DM;
+        V = c.type === N.d4z.DM,
+        H = (0, b.ao)({
+            location: "gift-promotion-button",
+            isGift: !0,
+            giftRecipient: F,
+        });
     if (a) return null;
     let Y = () => {
-            V && H && null != F
-                ? (0, b.Z)({
+            H && V && null != F
+                ? (0, E.Z)({
                       giftRecipient: F,
                       analyticsLocations: u,
                       analyticsObject: {
@@ -231,7 +235,7 @@ function B(e) {
         },
         children:
             void 0 !== n.firstTimeNotice && B
-                ? (0, r.jsx)(E.Z, {
+                ? (0, r.jsx)(g.Z, {
                       onComplete: () => v(!1),
                       onCheckItOutClick: Y,
                       markAsDismissed: k,
