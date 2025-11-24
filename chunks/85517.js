@@ -118,11 +118,11 @@ function T(e) {
             h.default.track(
                 E.rMx.QUEST_CONTENT_VIEWED,
                 C(I({}, (0, g.mH)(m.jn.QUEST_HOME_TAKEOVER)), {
-                    quest_id: t.id,
+                    quest_id: t.campaignId,
                     is_targeted: !1,
                 }),
             );
-        }, [t.id]),
+        }, [t.campaignId]),
         (0, r.jsx)("div", {
             className: a()(v.wrapper, {
                 "theme-dark": j === O.BR.LIGHT,
@@ -185,7 +185,7 @@ function T(e) {
                                                             E.rMx.QUEST_CONTENT_CLICKED,
                                                             I(
                                                                 {
-                                                                    quest_id: t.id,
+                                                                    quest_id: t.campaignId,
                                                                     cta_name: g.jZ.OPEN_GAME_LINK,
                                                                     click_id: (0, o.Z)(),
                                                                     is_targeted: !1,
@@ -212,7 +212,7 @@ function T(e) {
                                                                     E.rMx.QUEST_CONTENT_CLICKED,
                                                                     I(
                                                                         {
-                                                                            quest_id: t.id,
+                                                                            quest_id: t.campaignId,
                                                                             cta_name: g.jZ.LEARN_MORE,
                                                                             click_id: (0, o.Z)(),
                                                                             is_targeted: !1,
