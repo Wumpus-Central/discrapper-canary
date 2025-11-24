@@ -1,57 +1,58 @@
-n.d(t, { x: () => s }), n(953529);
+n.d(t, { x: () => c }), n(953529);
 var r = n(54381);
 n(473749);
 var l = n(120356),
     i = n.n(l),
     o = n(793030),
     a = n(481060),
-    c = n(845442);
-function s(e) {
+    s = n(845442);
+function c(e) {
     let {
-        leadingElement: t,
-        primaryTrailingElement: n,
-        secondaryTrailingElement: l,
-        title: s,
-        description: u,
-        onClick: d,
-        ref: f,
+        headingColor: t = "text-primary",
+        leadingElement: n,
+        primaryTrailingElement: l,
+        secondaryTrailingElement: c,
+        title: u,
+        description: d,
+        onClick: f,
+        ref: p,
         style: b,
     } = e;
     return (0, r.jsxs)(a.P3F, {
-        className: i()(c.baseControlItem, { [c.clickable]: null != d }),
-        onClick: d,
-        innerRef: f,
+        className: i()(s.baseControlItem, { [s.clickable]: null != f }),
+        onClick: f,
+        innerRef: p,
         style: b,
         children: [
-            null != t &&
+            null != n &&
                 (0, r.jsx)("div", {
-                    className: c.baseControlItemLeadingElement,
-                    children: t,
+                    className: s.baseControlItemLeadingElement,
+                    children: n,
                 }),
             (0, r.jsxs)("div", {
-                className: c.baseControlItemContent,
+                className: s.baseControlItemContent,
                 children: [
                     (0, r.jsx)("div", {
-                        className: c.baseControlItemTitle,
+                        className: s.baseControlItemTitle,
                         children: (0, r.jsx)(o.X6q, {
                             variant: "heading-md/medium",
-                            color: "text-primary",
-                            children: s,
+                            color: t,
+                            children: u,
                         }),
                     }),
-                    null != u &&
+                    null != d &&
                         (0, r.jsx)(o.xvT, {
                             variant: "text-sm/normal",
                             color: "text-secondary",
-                            className: c.baseControlItemDescription,
-                            children: u,
+                            className: s.baseControlItemDescription,
+                            children: d,
                         }),
                 ],
             }),
-            (null != n || null != l) &&
+            (null != l || null != c) &&
                 (0, r.jsxs)("div", {
-                    className: c.baseControlItemTrailingElements,
-                    children: [n, l],
+                    className: s.baseControlItemTrailingElements,
+                    children: [l, c],
                 }),
         ],
     });
