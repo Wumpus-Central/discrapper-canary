@@ -35,8 +35,9 @@ let b = i.memo(function (e) {
                         isHighlighted: a,
                         skuId: v.skuId,
                         isPurchased: n,
-                        forCollectedModal: y,
                         removeSetHeight: !0,
+                        withScaleAnimation: y,
+                        delayProfileEffectIntro: y,
                     }),
             }),
             (0, r.jsx)("div", {

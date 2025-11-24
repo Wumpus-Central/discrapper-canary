@@ -148,6 +148,7 @@ let eL = (e) => {
                         skuId: t.skuId,
                         removeSetHeight: !0,
                         isHighlighted: !0,
+                        delayProfileEffectIntro: !0,
                     }),
                 })
               : t.type === c.Z.NAMEPLATE

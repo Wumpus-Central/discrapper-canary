@@ -62,7 +62,7 @@ let I = (e) => {
                 urlQueryString: h,
                 profileEffectConfig: E,
                 noBorderRadius: O = !1,
-                introDelay: v = f.lG,
+                delayIntro: v = !0,
             } = e,
             I = i.useRef(null),
             [T, S] = i.useState([]);
@@ -70,20 +70,21 @@ let I = (e) => {
         let [A, C] = i.useState(0),
             [N, R] = i.useState(0),
             { accessibilityLabel: P } = E,
-            [D, w] = i.useState(-v),
+            D = v ? f.JH : 0.1,
+            [w, L] = i.useState(-D),
             {
-                stop: L,
-                reset: x,
-                ticking: M,
+                stop: x,
+                reset: M,
+                ticking: j,
             } = (0, p.Z)((e) => {
-                w((t) => t + e);
+                L((t) => t + e);
             }),
-            k = i.useRef(v);
+            k = i.useRef(D);
         i.useEffect(() => {
-            k.current = v;
+            k.current = D;
         }),
             i.useEffect(() => {
-                w(-k.current), S((0, m.H)(E.effects));
+                L(-k.current), S((0, m.H)(E.effects));
             }, [E]),
             i.useEffect(() => {
                 let e = 0,
@@ -95,17 +96,17 @@ let I = (e) => {
                     C(t),
                     R(e);
             }, [R, T]);
-        let [j, U] = i.useState(!1);
+        let [U, G] = i.useState(!1);
         return (
             i.useEffect(() => {
-                !0 === u || l || (L(), w(0)),
-                    !l && j && M.current && (L(), w(0)),
+                !0 === u || l || (x(), L(0)),
+                    !l && U && j.current && (x(), L(0)),
                     a &&
                         l &&
-                        !M.current &&
-                        (x(),
-                        E.animationType === s.y.ANIMATION_TYPE_PERSISTENT ? w(d === _.Q.FromStart ? 0 : A) : w(0));
-            }, [l, j, A, a, L, x, M, E.animationType, u, d]),
+                        !j.current &&
+                        (M(),
+                        E.animationType === s.y.ANIMATION_TYPE_PERSISTENT ? L(d === _.Q.FromStart ? 0 : A) : L(0));
+            }, [l, U, A, a, x, M, j, E.animationType, u, d]),
             (0, r.jsx)("div", {
                 ref: I,
                 className: o()(y.profileEffects, { [y.hovered]: l && c }),
@@ -115,7 +116,7 @@ let I = (e) => {
                     className: O ? y.innerNoRadius : y.inner,
                     children: T.map((e, i) => {
                         if (
-                            !M.current &&
+                            !j.current &&
                             E.animationType === s.y.ANIMATION_TYPE_PERSISTENT &&
                             null != E.staticFrameSrc &&
                             0 === i &&
@@ -143,10 +144,10 @@ let I = (e) => {
                             {
                                 layerConfig: e,
                                 animationType: E.animationType,
-                                ticking: M.current,
-                                time: D,
-                                hasPlayedThrough: j,
-                                setHasPlayedThrough: U,
+                                ticking: j.current,
+                                time: w,
+                                hasPlayedThrough: U,
+                                setHasPlayedThrough: G,
                                 urlQueryString: h,
                                 maxLoops: n,
                                 loopEnd: N,
