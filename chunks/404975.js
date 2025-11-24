@@ -1,24 +1,25 @@
-n.d(t, { P: () => v }), n(539854), n(388685);
+n.d(t, { P: () => m }), n(539854), n(388685);
 var r = n(54381),
     l = n(473749),
     i = n(120356),
     o = n.n(i),
     a = n(91192),
-    c = n(873546),
-    s = n(481060),
-    u = n(724757),
-    d = n(243778),
-    f = n(984802),
+    s = n(873546),
+    c = n(481060),
+    u = n(607070),
+    d = n(724757),
+    f = n(243778),
+    p = n(984802),
     b = n(28682),
-    p = n(996435),
-    y = n(854014),
-    j = n(388032),
-    m = n(845435);
-function v(e) {
-    let { root: t, header: n, footer: i, onClose: y, emptyState: v } = e,
-        x = p.Z.useField("showNavigationMobile"),
-        h = l.useRef(null),
-        O = l.useMemo(() => {
+    y = n(996435),
+    v = n(854014),
+    g = n(388032),
+    h = n(845435);
+function m(e) {
+    let { root: t, header: n, footer: i, onClose: v, emptyState: m } = e,
+        j = y.Z.useField("showNavigationMobile"),
+        O = l.useRef(null),
+        C = l.useMemo(() => {
             let e = [];
             return (
                 t.layout.forEach((t) => {
@@ -50,183 +51,202 @@ function v(e) {
                 [e, n]
             );
         }, [t.layout]),
-        C = (0, f.Ll)(),
-        _ = (0, u.Z)("settings-sidebar", h);
-    return (0, r.jsx)(s.f6W, {
-        theme: C,
-        children: (e) =>
-            (0, r.jsx)(d.ZP, {
-                contentTypes: O,
-                children: (t) => {
-                    let { visibleContent: l } = t;
-                    return (0, r.jsxs)("div", {
-                        className: o()(m.sidebar, e, {
-                            [m.mobile]: c.tq,
-                            [m.mobileNavigationOpen]: x,
-                        }),
-                        children: [
-                            (0, r.jsxs)("div", {
-                                className: m.fixedContent,
-                                children: [
-                                    c.tq &&
-                                        (0, r.jsx)("div", {
-                                            className: m.mobileCloseButton,
-                                            children: (0, r.jsx)(s.hU, {
-                                                icon: s.Uz9,
-                                                onClick: y,
-                                                variant: "icon-only",
-                                                size: "sm",
-                                                "aria-label": j.intl.string(j.t.cpT0Cq),
-                                            }),
-                                        }),
-                                    (0, r.jsx)("div", {
-                                        children: P.map((e) =>
-                                            (0, r.jsx)(
-                                                g,
-                                                {
-                                                    section: e,
-                                                    visibleContent: l,
-                                                    hoisted: !0,
-                                                },
-                                                e.key,
-                                            ),
-                                        ),
-                                    }),
-                                    null != n && (0, r.jsx)(n, {}),
-                                    null != v && 0 === S.length && (0, r.jsx)(v, {}),
-                                ],
+        _ = (0, p.Ll)(),
+        E = (0, d.Z)("settings-sidebar", O),
+        w = y.Z.useField("currentPanelKey");
+    return (
+        l.useEffect(() => {
+            var e;
+            if (null == O.current || null == w) return;
+            let t =
+                null == (e = O.current.getScrollerNode())
+                    ? void 0
+                    : e.querySelector('[data-settings-sidebar-item="'.concat(w, '"]'));
+            null != t &&
+                O.current.scrollIntoViewNode({
+                    node: t,
+                    padding: 8,
+                    animate: !u.Z.useReducedMotion,
+                });
+        }, [w]),
+        (0, r.jsx)(c.f6W, {
+            theme: _,
+            children: (e) =>
+                (0, r.jsx)(f.ZP, {
+                    contentTypes: C,
+                    children: (t) => {
+                        let { visibleContent: l } = t;
+                        return (0, r.jsxs)("div", {
+                            className: o()(h.sidebar, e, {
+                                [h.mobile]: s.tq,
+                                [h.mobileNavigationOpen]: j,
                             }),
-                            (0, r.jsx)(a.bG, {
-                                navigator: _,
-                                children: (0, r.jsx)(a.SJ, {
-                                    children: (e) => {
-                                        var t,
-                                            n,
-                                            { ref: o } = e,
-                                            a = (function (e, t) {
-                                                if (null == e) return {};
-                                                var n,
-                                                    r,
-                                                    l = (function (e, t) {
-                                                        if (null == e) return {};
-                                                        var n,
-                                                            r,
-                                                            l = {},
-                                                            i = Object.keys(e);
-                                                        for (r = 0; r < i.length; r++)
-                                                            (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
-                                                        return l;
-                                                    })(e, t);
-                                                if (Object.getOwnPropertySymbols) {
-                                                    var i = Object.getOwnPropertySymbols(e);
-                                                    for (r = 0; r < i.length; r++)
-                                                        (n = i[r]),
-                                                            !(t.indexOf(n) >= 0) &&
-                                                                Object.prototype.propertyIsEnumerable.call(e, n) &&
-                                                                (l[n] = e[n]);
-                                                }
-                                                return l;
-                                            })(e, ["ref"]);
-                                        return (0, r.jsxs)(
-                                            s.h21,
-                                            ((t = (function (e) {
-                                                for (var t = 1; t < arguments.length; t++) {
-                                                    var n = null != arguments[t] ? arguments[t] : {},
-                                                        r = Object.keys(n);
-                                                    "function" == typeof Object.getOwnPropertySymbols &&
-                                                        (r = r.concat(
-                                                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                            }),
-                                                        )),
-                                                        r.forEach(function (t) {
-                                                            var r;
-                                                            (r = n[t]),
-                                                                t in e
-                                                                    ? Object.defineProperty(e, t, {
-                                                                          value: r,
-                                                                          enumerable: !0,
-                                                                          configurable: !0,
-                                                                          writable: !0,
-                                                                      })
-                                                                    : (e[t] = r);
-                                                        });
-                                                }
-                                                return e;
-                                            })(
-                                                {
-                                                    ref: (e) => {
-                                                        var t;
-                                                        (h.current = e),
-                                                            (o.current =
-                                                                null != (t = null == e ? void 0 : e.getScrollerNode())
-                                                                    ? t
-                                                                    : null);
-                                                    },
-                                                    className: m.navScroller,
-                                                    fade: !0,
-                                                },
-                                                a,
-                                            )),
-                                            (n = n =
-                                                {
-                                                    children: [
-                                                        (0, r.jsx)("nav", {
-                                                            className: m.nav,
-                                                            children: S.map((e) =>
-                                                                (0, r.jsx)(
-                                                                    g,
-                                                                    {
-                                                                        section: e,
-                                                                        visibleContent: l,
-                                                                    },
-                                                                    e.key,
-                                                                ),
-                                                            ),
-                                                        }),
-                                                        null != i && (0, r.jsx)(i, {}),
-                                                    ],
+                            children: [
+                                (0, r.jsxs)("div", {
+                                    className: h.fixedContent,
+                                    children: [
+                                        s.tq &&
+                                            (0, r.jsx)("div", {
+                                                className: h.mobileCloseButton,
+                                                children: (0, r.jsx)(c.hU, {
+                                                    icon: c.Uz9,
+                                                    onClick: v,
+                                                    variant: "icon-only",
+                                                    size: "sm",
+                                                    "aria-label": g.intl.string(g.t.cpT0Cq),
                                                 }),
-                                            Object.getOwnPropertyDescriptors
-                                                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                                                : (function (e, t) {
-                                                      var n = Object.keys(e);
-                                                      if (Object.getOwnPropertySymbols) {
-                                                          var r = Object.getOwnPropertySymbols(e);
-                                                          n.push.apply(n, r);
-                                                      }
-                                                      return n;
-                                                  })(Object(n)).forEach(function (e) {
-                                                      Object.defineProperty(
-                                                          t,
-                                                          e,
-                                                          Object.getOwnPropertyDescriptor(n, e),
-                                                      );
-                                                  }),
-                                            t),
-                                        );
-                                    },
+                                            }),
+                                        (0, r.jsx)("div", {
+                                            children: P.map((e) =>
+                                                (0, r.jsx)(
+                                                    x,
+                                                    {
+                                                        section: e,
+                                                        visibleContent: l,
+                                                        hoisted: !0,
+                                                    },
+                                                    e.key,
+                                                ),
+                                            ),
+                                        }),
+                                        null != n && (0, r.jsx)(n, {}),
+                                        null != m && 0 === S.length && (0, r.jsx)(m, {}),
+                                    ],
                                 }),
-                            }),
-                        ],
-                    });
-                },
-            }),
-    });
+                                (0, r.jsx)(a.bG, {
+                                    navigator: E,
+                                    children: (0, r.jsx)(a.SJ, {
+                                        children: (e) => {
+                                            var t,
+                                                n,
+                                                { ref: o } = e,
+                                                a = (function (e, t) {
+                                                    if (null == e) return {};
+                                                    var n,
+                                                        r,
+                                                        l = (function (e, t) {
+                                                            if (null == e) return {};
+                                                            var n,
+                                                                r,
+                                                                l = {},
+                                                                i = Object.keys(e);
+                                                            for (r = 0; r < i.length; r++)
+                                                                (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                                                            return l;
+                                                        })(e, t);
+                                                    if (Object.getOwnPropertySymbols) {
+                                                        var i = Object.getOwnPropertySymbols(e);
+                                                        for (r = 0; r < i.length; r++)
+                                                            (n = i[r]),
+                                                                !(t.indexOf(n) >= 0) &&
+                                                                    Object.prototype.propertyIsEnumerable.call(e, n) &&
+                                                                    (l[n] = e[n]);
+                                                    }
+                                                    return l;
+                                                })(e, ["ref"]);
+                                            return (0, r.jsxs)(
+                                                c.h21,
+                                                ((t = (function (e) {
+                                                    for (var t = 1; t < arguments.length; t++) {
+                                                        var n = null != arguments[t] ? arguments[t] : {},
+                                                            r = Object.keys(n);
+                                                        "function" == typeof Object.getOwnPropertySymbols &&
+                                                            (r = r.concat(
+                                                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                                    return Object.getOwnPropertyDescriptor(n, e)
+                                                                        .enumerable;
+                                                                }),
+                                                            )),
+                                                            r.forEach(function (t) {
+                                                                var r;
+                                                                (r = n[t]),
+                                                                    t in e
+                                                                        ? Object.defineProperty(e, t, {
+                                                                              value: r,
+                                                                              enumerable: !0,
+                                                                              configurable: !0,
+                                                                              writable: !0,
+                                                                          })
+                                                                        : (e[t] = r);
+                                                            });
+                                                    }
+                                                    return e;
+                                                })(
+                                                    {
+                                                        ref: (e) => {
+                                                            var t;
+                                                            (O.current = e),
+                                                                (o.current =
+                                                                    null !=
+                                                                    (t = null == e ? void 0 : e.getScrollerNode())
+                                                                        ? t
+                                                                        : null);
+                                                        },
+                                                        className: h.navScroller,
+                                                        fade: !0,
+                                                    },
+                                                    a,
+                                                )),
+                                                (n = n =
+                                                    {
+                                                        children: [
+                                                            (0, r.jsx)("nav", {
+                                                                className: h.nav,
+                                                                children: S.map((e) =>
+                                                                    (0, r.jsx)(
+                                                                        x,
+                                                                        {
+                                                                            section: e,
+                                                                            visibleContent: l,
+                                                                        },
+                                                                        e.key,
+                                                                    ),
+                                                                ),
+                                                            }),
+                                                            null != i && (0, r.jsx)(i, {}),
+                                                        ],
+                                                    }),
+                                                Object.getOwnPropertyDescriptors
+                                                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                                                    : (function (e, t) {
+                                                          var n = Object.keys(e);
+                                                          if (Object.getOwnPropertySymbols) {
+                                                              var r = Object.getOwnPropertySymbols(e);
+                                                              n.push.apply(n, r);
+                                                          }
+                                                          return n;
+                                                      })(Object(n)).forEach(function (e) {
+                                                          Object.defineProperty(
+                                                              t,
+                                                              e,
+                                                              Object.getOwnPropertyDescriptor(n, e),
+                                                          );
+                                                      }),
+                                                t),
+                                            );
+                                        },
+                                    }),
+                                }),
+                            ],
+                        });
+                    },
+                }),
+        })
+    );
 }
-function g(e) {
+function x(e) {
     var t;
     let { section: n, visibleContent: l, hoisted: i = !1 } = e,
         o = null == (t = n.useLabel) ? void 0 : t.call(n);
     return (0, r.jsxs)("ul", {
-        className: m.section,
+        className: h.section,
         "aria-label": o,
         children: [
             null != o &&
                 (0, r.jsx)("div", {
-                    className: m.sectionLabel,
-                    children: (0, r.jsx)(s.Heading, {
-                        className: m.label,
+                    className: h.sectionLabel,
+                    children: (0, r.jsx)(c.Heading, {
+                        className: h.label,
                         variant: "heading-sm/medium",
                         color: "text-tertiary",
                         children: o,
@@ -234,7 +254,7 @@ function g(e) {
                 }),
             n.layout.map((e) =>
                 (0, r.jsx)(
-                    y.y,
+                    v.y,
                     {
                         node: e,
                         visibleContent: l,
