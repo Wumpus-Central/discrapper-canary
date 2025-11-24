@@ -1,39 +1,39 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => c });
 var r = n(54381),
     l = n(473749),
     i = n(481060),
     o = n(36361),
     a = n(598612),
-    c = n(175993),
-    s = n(476804);
-let u = l.memo(function (e) {
+    s = n(175993);
+let c = l.memo(function (e) {
     let { node: t } = e,
-        { useTitle: n, useNavigationTitle: u, layout: d, init: f, useBadge: b, useNotice: y } = t,
-        p = null == n ? void 0 : n(),
-        v = null == b ? void 0 : b(),
-        m = null == y ? void 0 : y();
+        { useTitle: n, useNavigationTitle: c, layout: u, init: d, useBadge: f, useNotice: b } = t,
+        y = null == n ? void 0 : n(),
+        p = null == f ? void 0 : f(),
+        v = null == b ? void 0 : b();
     return (
         l.useEffect(() => {
-            null == f || f();
-        }, [f]),
-        (0, r.jsxs)(i.Kqy, {
-            gap: 16,
+            null == d || d();
+        }, [d]),
+        (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(a.Y, {
-                    title: p,
-                    badge: v,
-                }),
+                null != y &&
+                    (0, r.jsx)(a.Y, {
+                        title: y,
+                        badge: p,
+                    }),
                 (0, r.jsx)("div", {
-                    "data-settings-category-key": null != n || null != u ? t.key : void 0,
+                    "data-settings-category-key": null != n || null != c ? t.key : void 0,
                     "aria-hidden": !0,
                     style: { height: 1 },
                 }),
-                null != m &&
-                    (0, r.jsx)("div", {
-                        className: s.notice,
-                        children: (0, r.jsx)(c.Z, { notice: m }),
-                    }),
-                d.map((e) => (0, r.jsx)(o.Z, { node: e }, e.key)),
+                (0, r.jsxs)(i.Kqy, {
+                    gap: 16,
+                    children: [
+                        null != v && (0, r.jsx)(s.Z, { notice: v }),
+                        u.map((e) => (0, r.jsx)(o.Z, { node: e }, e.key)),
+                    ],
+                }),
             ],
         })
     );

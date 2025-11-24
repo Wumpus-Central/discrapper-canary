@@ -1,4 +1,7 @@
-n.d(t, { Z: () => E });
+n.d(t, {
+    Z: () => b,
+    o: () => E,
+});
 var r = n(54381),
     i = n(120356),
     a = n.n(i),
@@ -48,23 +51,30 @@ function g(e, t) {
           : p.intl.string(p.t["9V4X/c"]);
 }
 function E(e) {
+    let t = (0, o.e7)([u.Z], () => u.Z.getMode()),
+        { runningGame: n, runningGameApplication: r } = (0, l.Z)();
+    null == n || n.elevated || ((n = void 0), (r = void 0));
+    let i = (0, f.hi)(),
+        a = i && null != n && t === _.pM4.PUSH_TO_TALK;
+    return {
+        canPrompt: "voice" === e ? a : i,
+        runningGame: n,
+        runningGameApplication: r,
+    };
+}
+function b(e) {
     let { className: t, sourcePage: n } = e,
-        i = (0, o.e7)([u.Z], () => u.Z.getMode()),
-        { runningGame: c, runningGameApplication: E } = (0, l.Z)();
-    if (
-        (null == c || c.elevated || ((c = void 0), (E = void 0)),
-        !(0, f.hi)() || ("voice" === n && (null == c || i !== _.pM4.PUSH_TO_TALK)))
-    )
-        return null;
-    function b() {
-        (0, f.sU)(n + (null != c ? "-with-game" : "-no-game"));
+        { canPrompt: i, runningGame: o, runningGameApplication: l } = E(n);
+    if (!i) return null;
+    function c() {
+        (0, f.sU)(n + (null != o ? "-with-game" : "-no-game"));
     }
     return (0, r.jsxs)("div", {
         className: a()(h.container, t),
         children: [
             (0, r.jsx)(m, {
-                game: c,
-                application: E,
+                game: o,
+                application: l,
             }),
             (0, r.jsxs)("div", {
                 className: h.textContainer,
@@ -72,7 +82,7 @@ function E(e) {
                     (0, r.jsx)(s.Text, {
                         variant: "text-sm/medium",
                         color: "text-primary",
-                        children: g(n, c),
+                        children: g(n, o),
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: "text-xs/medium",
@@ -87,7 +97,7 @@ function E(e) {
                 variant: "secondary",
                 size: "sm",
                 text: p.intl.string(p.t["1iI46O"]),
-                onClick: b,
+                onClick: c,
             }),
         ],
     });

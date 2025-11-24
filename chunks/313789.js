@@ -162,7 +162,6 @@ var r = (function (e) {
         (e.VOICE_AND_VIDEO_VIEW_DEBUG_LOGS = "voice_and_video_view_debug_logs"),
         (e.VOICE_AND_VIDEO_RESET_ALL_SETTINGS = "voice_and_video_reset_all_settings"),
         (e.SOUNDS_CATEGORY = "sounds_category"),
-        (e.SOUNDS_DISABLED_WARNING = "sounds_disabled_warning"),
         (e.VOICE_AND_VIDEO_SOUNDS_LIST = "voice_and_video_sounds_list"),
         (e.SOUNDS_HOLIDAY_NOTICE = "sounds_holiday_notice"),
         (e.SOUNDBOARD_CATEGORY = "soundboard_category"),
