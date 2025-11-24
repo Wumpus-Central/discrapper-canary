@@ -1,103 +1,108 @@
 e.d(n, {
-    Z: () => g,
-    v: () => u,
+    Z: () => u,
+    v: () => C,
 });
 var i = e(54381);
 e(473749);
-var l = e(755721),
-    a = e(481060),
+var a = e(755721),
+    l = e(481060),
     s = e(600164),
     r = e(626135),
     d = e(109983),
-    c = e(675999),
-    o = e(981631),
-    C = e(388032),
-    m = e(470816);
-let p = 0.5 > Math.random();
-function u(t) {
-    let { onClose: n, onBack: e, onCreationIntentChosen: u, hasFooter: g = !0 } = t,
-        _ = (0, i.jsx)(l.zx, {
-            className: m.backButton,
-            look: l.zx.Looks.BLANK,
-            size: l.zx.Sizes.MIN,
+    o = e(675999),
+    c = e(981631),
+    m = e(388032),
+    p = e(470816);
+let g = 0.5 > Math.random();
+function C(t) {
+    let { onClose: n, onBack: e, onCreationIntentChosen: C, hasFooter: u = !0 } = t,
+        _ = (0, i.jsx)(a.zx, {
+            "data-migration-pending": !0,
+            className: p.backButton,
+            look: a.zx.Looks.BLANK,
+            size: a.zx.Sizes.MIN,
             onClick: e,
-            children: C.intl.string(C.t["13/7kX"]),
+            children: m.intl.string(m.t["13/7kX"]),
         });
     function L(t) {
-        r.default.track(o.rMx.GUILD_CREATION_INTENT_SELECTED, {
+        r.default.track(c.rMx.GUILD_CREATION_INTENT_SELECTED, {
             skipped: null == t,
-            is_community: t === c.lr.COMMUNITY,
+            is_community: t === o.lr.COMMUNITY,
         }),
-            u(t);
+            C(t);
     }
     return {
         content: (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsxs)(a.xBx, {
+                (0, i.jsxs)(l.xBx, {
+                    "data-migration-pending": !0,
                     direction: s.Z.Direction.VERTICAL,
-                    className: m.header,
+                    className: p.header,
                     separator: !1,
                     children: [
-                        (0, i.jsx)(a.Heading, {
-                            className: m.title,
+                        (0, i.jsx)(l.Heading, {
+                            className: p.title,
                             variant: "heading-xl/semibold",
-                            children: C.intl.string(C.t.f3MvGS),
+                            children: m.intl.string(m.t.f3MvGS),
                         }),
-                        (0, i.jsx)(a.Text, {
-                            className: m.subtitle,
+                        (0, i.jsx)(l.Text, {
+                            className: p.subtitle,
                             color: "header-secondary",
                             variant: "text-md/normal",
-                            children: C.intl.string(C.t.nOzc7w),
+                            children: m.intl.string(m.t.nOzc7w),
                         }),
                         null != n &&
-                            (0, i.jsx)(a.olH, {
-                                className: m.closeButton,
+                            (0, i.jsx)(l.olH, {
+                                "data-migration-pending": !0,
+                                className: p.closeButton,
                                 onClick: n,
                             }),
                     ],
                 }),
-                (0, i.jsxs)(a.hzk, {
-                    className: m.optionsList,
+                (0, i.jsxs)(l.hzk, {
+                    "data-migration-pending": !0,
+                    className: p.optionsList,
                     children: [
-                        p
+                        g
                             ? (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       (0, i.jsx)(d.Z, {
-                                          icon: a.Nye,
-                                          message: C.intl.string(C.t.uE7zcu),
-                                          onClick: () => L(c.lr.FRIENDS),
+                                          icon: l.Nye,
+                                          message: m.intl.string(m.t.uE7zcu),
+                                          onClick: () => L(o.lr.FRIENDS),
                                       }),
                                       (0, i.jsx)(d.Z, {
-                                          icon: a.q3d,
-                                          message: C.intl.string(C.t.h9Q1lG),
-                                          onClick: () => L(c.lr.COMMUNITY),
+                                          icon: l.q3d,
+                                          message: m.intl.string(m.t.h9Q1lG),
+                                          onClick: () => L(o.lr.COMMUNITY),
                                       }),
                                   ],
                               })
                             : (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       (0, i.jsx)(d.Z, {
-                                          icon: a.q3d,
-                                          message: C.intl.string(C.t.h9Q1lG),
-                                          onClick: () => L(c.lr.COMMUNITY),
+                                          icon: l.q3d,
+                                          message: m.intl.string(m.t.h9Q1lG),
+                                          onClick: () => L(o.lr.COMMUNITY),
                                       }),
                                       (0, i.jsx)(d.Z, {
-                                          icon: a.Nye,
-                                          message: C.intl.string(C.t.uE7zcu),
-                                          onClick: () => L(c.lr.FRIENDS),
+                                          icon: l.Nye,
+                                          message: m.intl.string(m.t.uE7zcu),
+                                          onClick: () => L(o.lr.FRIENDS),
                                       }),
                                   ],
                               }),
-                        (0, i.jsx)(a.Text, {
-                            className: m.skip,
+                        (0, i.jsx)(l.Text, {
+                            className: p.skip,
                             color: "header-secondary",
                             variant: "text-sm/normal",
-                            children: C.intl.format(C.t["SMc+Gz"], { onSkip: () => L(null) }),
+                            children: m.intl.format(m.t["SMc+Gz"], { onSkip: () => L(null) }),
                         }),
                     ],
                 }),
-                g &&
-                    (0, i.jsx)(a.mzw, {
+                u &&
+                    (0, i.jsx)(l.mzw, {
+                        "data-migration-pending": !0,
                         justify: s.Z.Justify.BETWEEN,
                         children: _,
                     }),
@@ -106,7 +111,7 @@ function u(t) {
         footer: _,
     };
 }
-function g(t) {
-    let { content: n } = u(t);
+function u(t) {
+    let { content: n } = C(t);
     return n;
 }

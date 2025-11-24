@@ -65,6 +65,7 @@ let _ = a().debounce(c.ZP.trackWithMetadata, 500),
             ? (C = v())
             : null != v &&
               (C = (0, r.jsx)(s.zx, {
+                  "data-migration-pending": !0,
                   className: g.btn,
                   size: s.zx.Sizes.SMALL,
                   onClick: () => {

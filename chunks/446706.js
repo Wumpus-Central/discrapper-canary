@@ -1,113 +1,117 @@
-e.d(n, { Z: () => g });
+e.d(n, { Z: () => u });
 var i = e(54381),
-    l = e(473749),
-    a = e(120356),
-    s = e.n(a),
+    a = e(473749),
+    l = e(120356),
+    s = e.n(l),
     r = e(481060),
     d = e(600164),
-    c = e(539379),
-    o = e(109983),
-    C = e(834891),
-    m = e(388032),
-    p = e(797629);
-function u(t) {
-    let { guildTemplate: n, onClick: e, autoFocus: a } = t,
-        s = l.useCallback(() => {
+    o = e(539379),
+    c = e(109983),
+    m = e(834891),
+    p = e(388032),
+    g = e(797629);
+function C(t) {
+    let { guildTemplate: n, onClick: e, autoFocus: l } = t,
+        s = a.useCallback(() => {
             e(n);
         }, [n, e]);
-    return (0, i.jsx)(o.Z, {
-        icon: c.U[n.id],
+    return (0, i.jsx)(c.Z, {
+        icon: o.U[n.id],
         message: n.label,
         onClick: s,
-        autoFocus: a,
+        autoFocus: l,
     });
 }
-function g(t) {
-    let { className: n, isNewUser: e, onClose: l, onChooseTemplate: a, onJoin: c } = t,
-        o = (0, C.E)();
+function u(t) {
+    let { className: n, isNewUser: e, onClose: a, onChooseTemplate: l, onJoin: o } = t,
+        c = (0, m.E)();
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(r.xBx, {
+                "data-migration-pending": !0,
                 direction: d.Z.Direction.VERTICAL,
-                className: p.header,
+                className: g.header,
                 separator: !1,
                 children: [
                     (0, i.jsx)(r.Heading, {
-                        className: p.title,
+                        className: g.title,
                         variant: "heading-xl/semibold",
-                        children: e ? m.intl.string(m.t["9U0b1k"]) : m.intl.string(m.t["5HZu07"]),
+                        children: e ? p.intl.string(p.t["9U0b1k"]) : p.intl.string(p.t["5HZu07"]),
                     }),
                     (0, i.jsx)(r.Text, {
-                        className: p.subtitle,
+                        className: g.subtitle,
                         color: "header-secondary",
                         variant: "text-md/normal",
-                        children: m.intl.string(m.t["wti/H4"]),
+                        children: p.intl.string(p.t["wti/H4"]),
                     }),
-                    null != l &&
+                    null != a &&
                         (0, i.jsx)(r.olH, {
-                            className: p.closeButton,
-                            onClick: l,
+                            "data-migration-pending": !0,
+                            className: g.closeButton,
+                            onClick: a,
                         }),
                 ],
             }),
             (0, i.jsxs)(r.hzk, {
-                className: s()(p.templatesList, n),
+                "data-migration-pending": !0,
+                className: s()(g.templatesList, n),
                 paddingFix: !1,
                 children: [
-                    (0, i.jsx)(u, {
-                        guildTemplate: o[C.l.CREATE],
-                        onClick: a,
+                    (0, i.jsx)(C, {
+                        guildTemplate: c[m.l.CREATE],
+                        onClick: l,
                         autoFocus: !0,
                     }),
                     (0, i.jsx)(r.Text, {
-                        className: p.optionHeader,
+                        className: g.optionHeader,
                         color: "header-secondary",
                         variant: "text-xs/bold",
-                        children: m.intl.string(m.t.JGDkfg),
+                        children: p.intl.string(p.t.JGDkfg),
                     }),
-                    (0, i.jsx)(u, {
-                        guildTemplate: o[C.l.GAMING],
-                        onClick: a,
+                    (0, i.jsx)(C, {
+                        guildTemplate: c[m.l.GAMING],
+                        onClick: l,
                     }),
-                    (0, i.jsx)(u, {
-                        guildTemplate: o[C.l.FRIENDS],
-                        onClick: a,
+                    (0, i.jsx)(C, {
+                        guildTemplate: c[m.l.FRIENDS],
+                        onClick: l,
                     }),
-                    (0, i.jsx)(u, {
-                        guildTemplate: o[C.l.STUDY],
-                        onClick: a,
+                    (0, i.jsx)(C, {
+                        guildTemplate: c[m.l.STUDY],
+                        onClick: l,
                     }),
-                    (0, i.jsx)(u, {
-                        guildTemplate: o[C.l.SCHOOL_CLUB],
-                        onClick: a,
+                    (0, i.jsx)(C, {
+                        guildTemplate: c[m.l.SCHOOL_CLUB],
+                        onClick: l,
                     }),
-                    (0, i.jsx)(u, {
-                        guildTemplate: o[C.l.LOCAL_COMMUNITY],
-                        onClick: a,
+                    (0, i.jsx)(C, {
+                        guildTemplate: c[m.l.LOCAL_COMMUNITY],
+                        onClick: l,
                     }),
-                    (0, i.jsx)(u, {
-                        guildTemplate: o[C.l.CREATORS],
-                        onClick: a,
+                    (0, i.jsx)(C, {
+                        guildTemplate: c[m.l.CREATORS],
+                        onClick: l,
                     }),
                 ],
             }),
-            null != c &&
+            null != o &&
                 (0, i.jsxs)(r.mzw, {
-                    className: p.footer,
+                    "data-migration-pending": !0,
+                    className: g.footer,
                     children: [
                         (0, i.jsx)(r.Heading, {
                             variant: "heading-lg/semibold",
-                            className: p.footerTitle,
-                            children: m.intl.string(m.t["N+Mi/U"]),
+                            className: g.footerTitle,
+                            children: p.intl.string(p.t["N+Mi/U"]),
                         }),
                         (0, i.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
-                            className: p.footerButton,
+                            className: g.footerButton,
                             children: (0, i.jsx)(r.Button, {
                                 variant: "secondary",
                                 fullWidth: !0,
-                                text: m.intl.string(m.t.riOUtB),
-                                onClick: c,
+                                text: p.intl.string(p.t.riOUtB),
+                                onClick: o,
                             }),
                         }),
                     ],

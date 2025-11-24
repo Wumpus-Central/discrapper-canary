@@ -1,7 +1,7 @@
 let r, o;
-n.d(t, { Z: () => C }), n(388685), n(781311), n(35282);
-var l = n(54381),
-    i = n(473749),
+n.d(t, { Z: () => g }), n(388685), n(781311), n(35282);
+var i = n(54381),
+    l = n(473749),
     a = n(755721),
     s = n(481060),
     c = n(447543),
@@ -23,34 +23,34 @@ let O = "hTKzmak",
     E = [O, "".concat(S).concat(O), "".concat(S).concat("wumpus-friends")],
     b = (e) => {
         let { onClick: t } = e;
-        return (0, l.jsxs)(s.P3F, {
+        return (0, i.jsxs)(s.P3F, {
             className: I.rowContainer,
             onClick: () => {
                 t(), (0, d.uL)(m.Z5c.GUILD_DISCOVERY);
             },
             children: [
-                (0, l.jsx)("img", {
+                (0, i.jsx)("img", {
                     width: 40,
                     height: 40,
                     className: I.rowIcon,
                     alt: "",
                     src: T,
                 }),
-                (0, l.jsxs)("div", {
+                (0, i.jsxs)("div", {
                     children: [
-                        (0, l.jsx)(s.Heading, {
+                        (0, i.jsx)(s.Heading, {
                             className: I.rowText,
                             variant: "heading-md/semibold",
                             children: f.intl.string(f.t.DwDxDU),
                         }),
-                        (0, l.jsx)(s.Text, {
+                        (0, i.jsx)(s.Text, {
                             className: I.rowText,
                             variant: "text-xs/normal",
                             children: f.intl.string(f.t["5RL4CD"]),
                         }),
                     ],
                 }),
-                (0, l.jsx)("img", {
+                (0, i.jsx)("img", {
                     className: I.rowArrow,
                     alt: "",
                     src: N,
@@ -58,27 +58,27 @@ let O = "hTKzmak",
             ],
         });
     };
-function C(e) {
+function g(e) {
     let { onBack: t, onClose: n, isSlideReady: r } = e,
-        [o, d] = i.useState(""),
-        [m, N] = i.useState(!1),
-        [T, C] = i.useState(null),
-        h = i.useRef(null);
-    i.useEffect(() => {
+        [o, d] = l.useState(""),
+        [m, N] = l.useState(!1),
+        [T, g] = l.useState(null),
+        C = l.useRef(null);
+    l.useEffect(() => {
         var e;
-        r && (null == (e = h.current) || e.focus());
+        r && (null == (e = C.current) || e.focus());
     }, [r]);
-    let g = (e) => {
+    let h = (e) => {
         e.preventDefault();
         let t = o.trim();
-        if ("" === t) return void C(f.intl.string(f.t.IRq5ah));
-        C(null), N(!0);
+        if ("" === t) return void g(f.intl.string(f.t.IRq5ah));
+        g(null), N(!0);
         let r = t.split("/"),
-            l = r[r.length - 1];
-        c.ZP.resolveInvite(l, "Join Guild", { inputValue: t }).then(
+            i = r[r.length - 1];
+        c.ZP.resolveInvite(i, "Join Guild", { inputValue: t }).then(
             (e) => {
                 let { invite: t } = e;
-                if ((N(!1), null == t)) return void C(f.intl.string(f.t["GEYI+Z"]));
+                if ((N(!1), null == t)) return void g(f.intl.string(f.t["GEYI+Z"]));
                 if (null != t.channel) {
                     let e = c.ZP.getInviteContext("Join Guild", t);
                     c.ZP.acceptInvite({
@@ -90,7 +90,7 @@ function C(e) {
                     }).then(
                         () => {},
                         (e) => {
-                            e instanceof u.yZ || e instanceof u.Hx ? C((0, p.O)(e.code)) : C(f.intl.string(f.t.dDZRdy));
+                            e instanceof u.yZ || e instanceof u.Hx ? g((0, p.O)(e.code)) : g(f.intl.string(f.t.dDZRdy));
                         },
                     );
                 }
@@ -98,58 +98,61 @@ function C(e) {
             (e) => {
                 N(!1);
                 let t = new u.yZ(e);
-                C((0, p.O)(t.code));
+                g((0, p.O)(t.code));
             },
         );
     };
-    return (0, l.jsxs)("div", {
+    return (0, i.jsxs)("div", {
         children: [
-            (0, l.jsxs)(s.xBx, {
+            (0, i.jsxs)(s.xBx, {
+                "data-migration-pending": !0,
                 className: I.header,
                 direction: _.Z.Direction.VERTICAL,
                 separator: !1,
                 children: [
-                    (0, l.jsx)(s.Heading, {
+                    (0, i.jsx)(s.Heading, {
                         className: I.title,
                         variant: "heading-xl/semibold",
                         children: f.intl.string(f.t.riOUtB),
                     }),
-                    (0, l.jsx)(s.Text, {
+                    (0, i.jsx)(s.Text, {
                         color: "header-secondary",
                         variant: "text-sm/normal",
                         children: f.intl.string(f.t["7jub2t"]),
                     }),
-                    (0, l.jsx)(s.olH, {
+                    (0, i.jsx)(s.olH, {
+                        "data-migration-pending": !0,
                         className: I.closeButton,
                         onClick: n,
                     }),
                 ],
             }),
-            (0, l.jsxs)(s.hzk, {
+            (0, i.jsxs)(s.hzk, {
+                "data-migration-pending": !0,
                 className: I.__invalid_content,
                 children: [
-                    (0, l.jsx)("form", {
-                        onSubmit: g,
+                    (0, i.jsx)("form", {
+                        onSubmit: h,
                         className: I.inputForm,
-                        children: (0, l.jsx)(s.oil, {
+                        children: (0, i.jsx)(s.oil, {
                             label: f.intl.string(f.t.qreV25),
                             required: !0,
                             error: T,
                             value: o,
                             onChange: d,
                             placeholder: "".concat(S).concat(O),
-                            inputRef: h,
+                            inputRef: C,
                         }),
                     }),
-                    (0, l.jsx)(s.Text, {
+                    (0, i.jsx)(s.Text, {
                         variant: "text-sm/medium",
                         color: "text-secondary",
                         children: f.intl.string(f.t.Bnq46H),
                     }),
-                    (0, l.jsx)("div", {
+                    (0, i.jsx)("div", {
                         className: I.sampleLinks,
                         children: E.map((e) =>
-                            (0, l.jsx)(
+                            (0, i.jsx)(
                                 s.P3F,
                                 {
                                     className: I.sampleLink,
@@ -160,19 +163,21 @@ function C(e) {
                             ),
                         ),
                     }),
-                    (0, l.jsx)(b, { onClick: n }),
+                    (0, i.jsx)(b, { onClick: n }),
                 ],
             }),
-            (0, l.jsxs)(s.mzw, {
+            (0, i.jsxs)(s.mzw, {
+                "data-migration-pending": !0,
                 className: I.footer,
                 children: [
-                    (0, l.jsx)(s.Button, {
+                    (0, i.jsx)(s.Button, {
                         variant: "primary",
                         text: f.intl.string(f.t["Ts/9Ac"]),
                         loading: m,
-                        onClick: g,
+                        onClick: h,
                     }),
-                    (0, l.jsx)(a.zx, {
+                    (0, i.jsx)(a.zx, {
+                        "data-migration-pending": !0,
                         color: a.zx.Colors.PRIMARY,
                         look: a.zx.Looks.LINK,
                         size: a.zx.Sizes.MIN,
