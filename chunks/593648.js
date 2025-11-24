@@ -32,8 +32,8 @@ var r = n(54381),
     L = n(45640),
     x = n(695346),
     M = n(675478),
-    j = n(273313),
-    k = n(33656),
+    k = n(273313),
+    j = n(33656),
     U = n(726985),
     G = n(981631),
     B = n(468788),
@@ -235,8 +235,9 @@ function q(e) {
                     (0, r.jsx)(u.rsf, {
                         label: F.intl.string(F.t.lF5GGe),
                         description: F.intl.string(F.t["7oXUim"]),
-                        checked: a,
+                        checked: a && !n,
                         onChange: d.default.setNotifyMessagesInSelectedChannel,
+                        disabled: n,
                     }),
                     (0, r.jsx)(u.rsf, {
                         label: F.intl.string(F.t["2ZhCOd"]),
@@ -376,7 +377,7 @@ class Q extends i.PureComponent {
                     label:
                         0 === e ? F.intl.string(F.t["0QN7cZ"]) : F.intl.formatToPlainString(F.t.iXLF9W, { minutes: e }),
                 }));
-        return (0, r.jsx)(j.Z, {
+        return (0, r.jsx)(k.Z, {
             title: F.intl.string(F.t.HcoRu0),
             children: (0, r.jsxs)(u.Kqy, {
                 gap: 16,
@@ -436,7 +437,7 @@ class Q extends i.PureComponent {
                         disableAllSounds: s,
                         notifyMessagesInSelectedChannel: l,
                     }),
-                    (0, r.jsx)(k.Z, {}),
+                    (0, r.jsx)(j.Z, {}),
                 ],
             }),
         });
