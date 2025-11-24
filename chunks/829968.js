@@ -1,30 +1,35 @@
-n.d(t, { Z: () => a }), n(388685);
+n.d(t, { Z: () => l }), n(388685);
 var r = n(473749),
-    i = n(439849);
-function a(e, t) {
-    let [n, a] = r.useState();
+    i = n(31775),
+    a = n.n(i),
+    o = n(439849);
+let s = new (a())({ max: 1000 });
+function l(e, t) {
+    let [n, i] = r.useState();
     return (
         r.useEffect(() => {
-            if (null == e || null != t) return void a(void 0);
-            let n = !1;
+            if (null == e || null != t) return void i(void 0);
+            let n = s.get(e);
+            if (null != n) return void i(n);
+            let r = !1;
             return (
-                (0, i.Z)()
+                (0, o.Z)()
                     .then((t) => {
                         null == t ||
-                            n ||
-                            t.identifyGame(e, (e, t) => {
-                                if (!n) {
-                                    if (0 !== e || null == t.icon || "" === t.icon || null == t.name || "" === t.name)
-                                        return void a(void 0);
-                                    a("data:image/png;base64,".concat(t.icon));
-                                }
+                            r ||
+                            t.identifyGame(e, (t, n) => {
+                                if (r) return;
+                                if (0 !== t || null == n.icon || "" === n.icon || null == n.name || "" === n.name)
+                                    return void i(void 0);
+                                let a = "data:image/png;base64,".concat(n.icon);
+                                s.set(e, a), i(a);
                             });
                     })
                     .catch(() => {
-                        n || a(void 0);
+                        r || i(void 0);
                     }),
                 () => {
-                    n = !0;
+                    r = !0;
                 }
             );
         }, [e, t]),

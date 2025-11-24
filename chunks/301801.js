@@ -1,140 +1,142 @@
-r.d(t, { BO: () => i }), r(190126), r(368063), r(65234), r(111804), r(490233), r(97749), r(388685), r(781311);
-var n = r(473749),
-    a = r(348327),
-    c = r.n(a),
-    l = r(392711),
-    u = r(823379),
-    s = r(886118);
-let o = new Worker(new URL("/assets/" + r.u("56558"), r.b));
-function i(e, t, r, a) {
-    let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
-        d = n.useRef(null),
-        f = n.useRef(null),
-        m = n.useRef(r),
-        { searchStringGenerator: x } = a,
-        h = (function (e) {
+n.d(t, { BO: () => d }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(781311);
+var l = n(473749),
+    r = n(348327),
+    a = n.n(r),
+    i = n(392711),
+    u = n(823379),
+    o = n(886118);
+let s = new Worker(new URL("/assets/" + n.u("56558"), n.b));
+function d(e, t, n, r) {
+    let d = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
+        c = l.useRef(null),
+        m = l.useRef(null),
+        g = l.useRef(n),
+        { searchStringGenerator: f } = r,
+        v = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-                [r, a] = n.useState(e),
-                l = n.useRef(e);
+                [n, r] = l.useState(e),
+                i = l.useRef(e);
             return (
-                n.useEffect(() => {
-                    l.current = e;
+                l.useEffect(() => {
+                    i.current = e;
                 }, [e]),
-                n.useEffect(() => {
-                    a((e) => {
-                        let t = l.current;
-                        return c()(e, t) ? e : t;
+                l.useEffect(() => {
+                    r((e) => {
+                        let t = i.current;
+                        return a()(e, t) ? e : t;
                     });
                 }, t),
-                r
+                n
             );
-        })(t.map(x), [t, x, ...i]),
+        })(t.map(f), [t, f, ...d]),
         p = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-                [r, a] = n.useState(e),
-                l = n.useRef(e);
+                [n, r] = l.useState(e),
+                i = l.useRef(e);
             return (
-                n.useEffect(() => {
-                    l.current = e;
+                l.useEffect(() => {
+                    i.current = e;
                 }, [e]),
-                n.useEffect(() => {
-                    a((e) => {
-                        let t = l.current;
-                        return c()(e, t) ? e : t;
+                l.useEffect(() => {
+                    r((e) => {
+                        let t = i.current;
+                        return a()(e, t) ? e : t;
                     });
                 }, t),
-                r
+                n
             );
         })(t, [t]);
-    n.useEffect(() => {
-        m.current = r;
-    }, [r]);
-    let g = n.useMemo(() => {
-        let { throttleMs: e = 200, throttleLeading: t = !0, throttleTrailing: r = !0 } = a;
+    l.useEffect(() => {
+        g.current = n;
+    }, [n]);
+    let y = l.useMemo(() => {
+        let { throttleMs: e = 200, throttleLeading: t = !0, throttleTrailing: n = !0, maxSearchResults: l = -1 } = r;
         return (
-            (f.current = (0, l.throttle)(
-                async (e, t, r) => {
-                    if ("" === e.trim()) return void m.current(t);
-                    d.current = (0, l.uniqueId)();
-                    let n = await (function (e, t, r, n) {
-                        var a;
-                        let c = null != (a = n.promiseUuid) ? a : (0, l.uniqueId)(),
+            (m.current = (0, i.throttle)(
+                async (e, t, n) => {
+                    if ("" === e.trim()) return void (l > 0 ? g.current(t.slice(0, l)) : g.current(t));
+                    c.current = (0, i.uniqueId)();
+                    let a = await (function (e, t, n, l) {
+                        var r;
+                        let a = null != (r = l.promiseUuid) ? r : (0, i.uniqueId)(),
                             {
-                                searchType: i = s.S.FUZZY,
-                                sortType: d = s.E.NONE,
-                                jaroWinklerSearchThreshold: f = 0.85,
-                            } = n;
-                        return new Promise((n) => {
-                            let a = (t) => {
+                                searchType: d = o.S.FUZZY,
+                                sortType: c = o.E.NONE,
+                                jaroWinklerSearchThreshold: m = 0.85,
+                                maxSearchResults: g = -1,
+                            } = l;
+                        return new Promise((l) => {
+                            let r = (t) => {
                                 let {
-                                    data: { id: r, foundItemIndexes: l },
+                                    data: { id: n, foundItemIndexes: i },
                                 } = t;
-                                c === r &&
-                                    (n(l.map((t) => e[t]).filter(u.lm)),
-                                    null == o || o.removeEventListener("message", a));
+                                a === n &&
+                                    (l(i.map((t) => e[t]).filter(u.lm)),
+                                    null == s || s.removeEventListener("message", r));
                             };
-                            null == o || o.addEventListener("message", a),
-                                null == o ||
-                                    o.postMessage({
-                                        id: c,
+                            null == s || s.addEventListener("message", r),
+                                null == s ||
+                                    s.postMessage({
+                                        id: a,
                                         searchTerm: t,
-                                        searchStrings: r,
-                                        searchType: i,
-                                        sortType: d,
-                                        jaroWinklerSearchThreshold: f,
+                                        searchStrings: n,
+                                        searchType: d,
+                                        sortType: c,
+                                        jaroWinklerSearchThreshold: m,
+                                        maxSearchResults: g,
                                     });
                         });
                     })(
                         t,
                         e,
-                        r,
+                        n,
                         (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
-                                var r = null != arguments[t] ? arguments[t] : {},
-                                    n = Object.keys(r);
+                                var n = null != arguments[t] ? arguments[t] : {},
+                                    l = Object.keys(n);
                                 "function" == typeof Object.getOwnPropertySymbols &&
-                                    (n = n.concat(
-                                        Object.getOwnPropertySymbols(r).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                    (l = l.concat(
+                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                         }),
                                     )),
-                                    n.forEach(function (t) {
-                                        var n;
-                                        (n = r[t]),
+                                    l.forEach(function (t) {
+                                        var l;
+                                        (l = n[t]),
                                             t in e
                                                 ? Object.defineProperty(e, t, {
-                                                      value: n,
+                                                      value: l,
                                                       enumerable: !0,
                                                       configurable: !0,
                                                       writable: !0,
                                                   })
-                                                : (e[t] = n);
+                                                : (e[t] = l);
                                     });
                             }
                             return e;
-                        })({ promiseUuid: d.current }, a),
+                        })({ promiseUuid: c.current }, r),
                     );
-                    null != d.current && m.current(n);
+                    null != c.current && g.current(a);
                 },
                 e,
                 {
                     leading: t,
-                    trailing: r,
+                    trailing: n,
                 },
             )),
-            f.current
+            m.current
         );
-    }, [a]);
+    }, [r]);
     return (
-        n.useEffect(() => {
-            g(e, p, h);
-        }, [g, e, p, h, ...i]),
-        n.useEffect(
+        l.useEffect(() => {
+            y(e, p, v);
+        }, [y, e, p, v, ...d]),
+        l.useEffect(
             () => () => {
-                null != f.current && f.current.cancel(), (f.current = null), (d.current = null);
+                null != m.current && m.current.cancel(), (m.current = null), (c.current = null);
             },
-            [h, r, a],
+            [v, n, r],
         ),
-        g
+        y
     );
 }

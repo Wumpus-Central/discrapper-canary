@@ -44040,6 +44040,19 @@ body .headerAnimation_b54a5b {
     color: var(--header-primary)
 }
 
+.intersectionContainer_b52e4f {
+    position: relative
+}
+
+.intersectionRef_b52e4f {
+    background: transparent;
+    height: 1px;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    width: 1px
+}
+
 .large_b52e4f,
 .medium_b52e4f,
 .small_b52e4f {
@@ -44095,6 +44108,25 @@ body .headerAnimation_b54a5b {
 .xlarge_b52e4f {
     height: 80px;
     width: 80px
+}
+
+@keyframes placeholderPulse_b52e4f {
+    0% {
+        opacity: .8
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    to {
+        opacity: .8
+    }
+}
+
+.gameIconLoading_b52e4f {
+    animation: placeholderPulse_b52e4f 1.3s ease-in-out infinite;
+    background-color: var(--background-secondary-alt)
 }
 
 .muted__20a53 .avatar__20a53 {
@@ -52027,7 +52059,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -59380,9 +59412,9 @@ screen and (max-width:485px) {
 
 .message__9a9f9 {
     color: var(--text-default);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: var(--font-weight-medium);
-    line-height: 20px;
+    line-height: 1.25rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap

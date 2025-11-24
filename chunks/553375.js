@@ -95,7 +95,7 @@ function g(e) {
     if (p || g) {
         let e = () =>
             (0, i.ZDy)(async () => {
-                let { default: e } = await n.e("82077").then(n.bind(n, 953848));
+                let { default: e } = await Promise.all([n.e("82077"), n.e("87087")]).then(n.bind(n, 953848));
                 if (null != s)
                     return (t) =>
                         (0, r.jsx)(

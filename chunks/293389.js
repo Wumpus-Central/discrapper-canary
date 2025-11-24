@@ -80,8 +80,8 @@ function M(e, t) {
         e
     );
 }
-let k = s.ZP.connectStores([I.Z], () => ({ theme: I.Z.theme }))(c.ubH),
-    j = (0, v.isWindows)(),
+let j = s.ZP.connectStores([I.Z], () => ({ theme: I.Z.theme }))(c.ubH),
+    k = (0, v.isWindows)(),
     U = 18,
     G = "https://www.igdb.com/about";
 function B(e) {
@@ -145,7 +145,7 @@ function Z(e) {
         })),
         D = (0, s.e7)([_.ZP], () => _.ZP.getVisibleGame()),
         [w, x] = i.useState(!1),
-        k = i.useMemo(
+        j = i.useMemo(
             () =>
                 (0, g.le)(I)
                     ? O
@@ -154,7 +154,7 @@ function Z(e) {
                     : I.name,
             [I, O],
         ),
-        [G, B] = i.useState(null != k ? k : "???"),
+        [G, B] = i.useState(null != j ? j : "???"),
         F = o()(P.flexCenter, {
             [N.game]: !a,
             [N.activeGame]: a,
@@ -186,8 +186,8 @@ function Z(e) {
                       (0, r.jsx)(
                           e,
                           M(L({}, t), {
-                              title: C.intl.formatToPlainString(C.t.PZ4fKc, { platform: k }),
-                              subtitle: C.intl.formatToPlainString(C.t.ZIQbfb, { platform: k }),
+                              title: C.intl.formatToPlainString(C.t.PZ4fKc, { platform: j }),
+                              subtitle: C.intl.formatToPlainString(C.t.ZIQbfb, { platform: j }),
                               actions: [
                                   {
                                       text: C.intl.string(C.t["ETE/oC"]),
@@ -216,7 +216,7 @@ function Z(e) {
         }),
             x(!0),
             (0, c.ZDy)(async () => {
-                let { default: t } = await n.e("82077").then(n.bind(n, 953848));
+                let { default: t } = await Promise.all([n.e("82077"), n.e("87087")]).then(n.bind(n, 953848));
                 return (n) => {
                     var i, a, o;
                     return (0, r.jsx)(
@@ -241,7 +241,7 @@ function Z(e) {
                   children: [
                       (0, r.jsx)("div", {
                           className: N.gameName,
-                          children: k,
+                          children: j,
                       }),
                       (0, r.jsx)(c.aML, {
                           "data-migration-pending": !0,
@@ -298,7 +298,7 @@ function Z(e) {
         );
     }
     function Q() {
-        if (!j || null != v) return null;
+        if (!k || null != v) return null;
         let { overlay: e, overlayWarn: t } = I,
             n = e
                 ? (0, r.jsx)(c.pzj, {
@@ -475,7 +475,7 @@ function F() {
 }
 function V(e) {
     let { children: t } = e;
-    return (0, r.jsxs)(k, {
+    return (0, r.jsxs)(j, {
         className: D.marginTop40,
         children: [
             (0, r.jsx)(c.oxh, {

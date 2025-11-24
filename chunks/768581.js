@@ -14,7 +14,7 @@ n.d(t, {
     pK: () => b,
     pU: () => en,
     rI: () => K,
-    tp: () => k,
+    tp: () => j,
     xR: () => X,
 }),
     n(35282),
@@ -249,7 +249,7 @@ function M(e) {
         u.toString()
     );
 }
-function k(e) {
+function j(e) {
     let t,
         { id: n, guildId: r, banner: i, canAnimate: a, size: s } = e;
     if (null == i || null == r) return;
@@ -260,7 +260,7 @@ function k(e) {
     let _ = { size: (0, l.oO)(s * (0, l.x_)()) };
     return "webp" === u && a && X(i) && (_.animated = !0), (t += "?".concat(o.stringify(_)));
 }
-function j(e) {
+function k(e) {
     let t,
         { id: n, splash: r, size: i } = e;
     if (null == r) return null;
@@ -273,7 +273,7 @@ function j(e) {
     );
 }
 function U(e) {
-    return ee(j(e));
+    return ee(k(e));
 }
 function G(e) {
     let t,
@@ -374,16 +374,18 @@ function Y(e) {
         if (null != e) return e;
     }
     if (null != n)
-        return A({
-            endpoint: f.ANM.APPLICATION_ICON,
-            path: "app-icons",
-            id: t,
-            hash: n,
-            size: r,
-            canAnimate: !1,
-            canWebP: !1,
-            keepAspectRatio: s,
-        });
+        return en(n)
+            ? n
+            : A({
+                  endpoint: f.ANM.APPLICATION_ICON,
+                  path: "app-icons",
+                  id: t,
+                  hash: n,
+                  size: r,
+                  canAnimate: !1,
+                  canWebP: !1,
+                  keepAspectRatio: s,
+              });
     if (null != i) {
         let e = R(i, !1, r);
         if (null != e) return e;
@@ -470,7 +472,7 @@ let et = {
     getGuildMemberAvatarURL: w,
     getGuildMemberAvatarURLSimple: D,
     getGuildMemberAvatarSource: L,
-    getGuildMemberBannerURL: k,
+    getGuildMemberBannerURL: j,
     getUserBannerURL: x,
     getAvatarDecorationURL: M,
     hasAnimatedGuildIcon: function e(e) {
@@ -479,7 +481,7 @@ let et = {
     isAnimatedIconHash: X,
     getUserAvatarSource: (e, t, n) => ee(P(e, t, n)),
     getGuildIconURL: V,
-    getGuildSplashURL: j,
+    getGuildSplashURL: k,
     getGuildSplashSource: U,
     getGuildDiscoverySplashURL: Z,
     getGuildDiscoverySplashSource: F,
