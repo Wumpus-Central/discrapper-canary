@@ -2,7 +2,7 @@ n.d(t, {
     ZP: () => X,
     jK: () => H,
     mQ: () => B,
-    tS: () => Y,
+    tS: () => W,
     xG: () => K,
 }),
     n(388685),
@@ -147,10 +147,10 @@ var H = (function (e) {
             e
         );
     })({}),
-    Y = (function (e) {
+    W = (function (e) {
         return (e.VIDEO = "VIDEO"), (e.MUTE = "MUTE"), (e.DEAFEN = "DEAFEN"), (e.DISCONNECT = "DISCONNECT"), e;
     })({});
-function W(e) {
+function Y(e) {
     var t, n, r, i, a, o, s, l, c;
     return {
         id: D[null != (t = e.id) ? t : ""],
@@ -258,14 +258,14 @@ let q = {
                             })
                         );
                     }),
-                    (e) => n(e.map(W)),
+                    (e) => n(e.map(Y)),
                 );
             } catch (e) {}
         },
         setGameDetectionCallback(e) {
             var t, n;
             null == (t = (n = this.getDiscordUtils()).setGameDetectionCallback) ||
-                t.call(n, (t, n) => e(t.map(W), n.map(W)));
+                t.call(n, (t, n) => e(t.map(Y), n.map(Y)));
         },
         setGameDetectionErrorCallback(e) {
             var t, n;
@@ -281,7 +281,7 @@ let q = {
         },
         setCandidateGamesCallback(e) {
             this.getDiscordUtils().setCandidateGamesCallback((t) => {
-                e(t.map(W));
+                e(t.map(Y));
             });
         },
         clearCandidateGamesCallback() {
@@ -638,6 +638,10 @@ let q = {
         unpauseFrameEvictor() {
             var e, t;
             null == (e = (t = I.app).unpauseFrameEvictor) || e.call(t);
+        },
+        getPreferredSystemLanguages() {
+            var e, t;
+            return null == (e = (t = I.app).getPreferredSystemLanguages) ? void 0 : e.call(t);
         },
         getPidFromDesktopSource(e) {
             if (!(0, h.isDesktop)() || null == this.getDiscordUtils().getPidFromWindowHandle) return null;
