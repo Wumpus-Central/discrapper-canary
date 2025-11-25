@@ -1,18 +1,20 @@
-t.d(n, { default: () => h });
+t.d(n, { default: () => b });
 var r = t(54381);
 t(473749);
 var i = t(793030),
     l = t(481060),
     a = t(906732),
-    o = t(578756),
-    s = t(899789),
-    d = t(796724),
-    c = t(343312),
-    u = t(619733),
-    g = t(732031),
-    m = t(388032),
-    f = t(871404);
-function x(e) {
+    o = t(494620),
+    s = t(578756),
+    d = t(853944),
+    c = t(899789),
+    u = t(796724),
+    g = t(343312),
+    m = t(619733),
+    f = t(613275),
+    x = t(388032),
+    p = t(871404);
+function v(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             r = Object.keys(t);
@@ -37,7 +39,7 @@ function x(e) {
     }
     return e;
 }
-function p(e, n) {
+function j(e, n) {
     return (
         (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
@@ -55,52 +57,61 @@ function p(e, n) {
         e
     );
 }
-function v(e) {
-    let { step: n, setFooterNode: t } = (0, c.JL)(),
-        { title: a, subtitle: o } = (function (e) {
+function h(e) {
+    let { step: n, setFooterNode: t } = (0, g.JL)(),
+        a = (0, d.V)("GameServerSetupModal"),
+        { title: s, subtitle: h } = (function (e) {
             switch (e) {
-                case u.EK.SELECT_GAME:
+                case m.EK.SELECT_GAME:
                     return {
-                        title: m.intl.string(g.default["3vWDMz"]),
-                        subtitle: m.intl.string(g.default.Az5bjs),
+                        title: x.intl.string(f.default["3vWDMz"]),
+                        subtitle: x.intl.string(f.default.Az5bjs),
                     };
-                case u.EK.SERVER_SETTINGS:
-                    return { title: m.intl.string(g.default.RLGW9z) };
+                case m.EK.SERVER_SETTINGS:
+                    return { title: x.intl.string(f.default.RLGW9z) };
             }
         })(n);
     return (0, r.jsxs)(
         i.IX,
-        p(x({}, e), {
+        j(v({}, e), {
             size: "lg",
             children: [
                 (0, r.jsx)(i.xBx, {
-                    title: a,
-                    subtitle: o,
+                    title: s,
+                    subtitle: h,
                 }),
+                a &&
+                    (0, r.jsx)("div", {
+                        className: p.degradedWarningContainer,
+                        children: (0, r.jsx)(o.Z, {
+                            look: o.z.WARNING,
+                            children: x.intl.format(f.default.XzXjK2, {}),
+                        }),
+                    }),
                 (0, r.jsx)(l.zJl, {
-                    className: f.modalContent,
-                    style: { width: u.AK },
+                    className: p.modalContent,
+                    style: { width: m.AK },
                     children: (0, r.jsx)("div", {
-                        style: { padding: u.TG },
+                        style: { padding: m.TG },
                         children: (0, r.jsxs)(l.MyZ, {
-                            width: u.SY,
+                            width: m.SY,
                             activeSlide: n,
                             children: [
                                 (0, r.jsx)(
                                     l.Mi4,
                                     {
-                                        id: u.EK.SELECT_GAME,
-                                        children: (0, r.jsx)(s.Z, {}),
+                                        id: m.EK.SELECT_GAME,
+                                        children: (0, r.jsx)(c.Z, {}),
                                     },
-                                    u.EK.SELECT_GAME,
+                                    m.EK.SELECT_GAME,
                                 ),
                                 (0, r.jsx)(
                                     l.Mi4,
                                     {
-                                        id: u.EK.SERVER_SETTINGS,
-                                        children: (0, r.jsx)(d.Z, {}),
+                                        id: m.EK.SERVER_SETTINGS,
+                                        children: (0, r.jsx)(u.Z, {}),
                                     },
-                                    u.EK.SERVER_SETTINGS,
+                                    m.EK.SERVER_SETTINGS,
                                 ),
                             ],
                         }),
@@ -111,13 +122,13 @@ function v(e) {
         }),
     );
 }
-function h(e) {
+function b(e) {
     let { analyticsLocations: n } = (0, a.ZP)();
     return (
-        (0, o.lY)(e.guildId, n, e.analyticsLocation),
+        (0, s.lY)(e.guildId, n, e.analyticsLocation),
         (0, r.jsx)(a.Gt, {
             value: n,
-            children: (0, r.jsx)(c.BT, p(x({}, e), { children: (0, r.jsx)(v, x({}, e)) })),
+            children: (0, r.jsx)(g.BT, j(v({}, e), { children: (0, r.jsx)(h, v({}, e)) })),
         })
     );
 }

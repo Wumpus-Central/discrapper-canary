@@ -5,6 +5,7 @@ e.exports = {
     spinnerContainer: "spinnerContainer__70617",
     toolbar: "toolbar__70617",
     contentContainer: "contentContainer__70617",
+    degradedWarningContainer: "degradedWarningContainer__70617",
     gameContainerWrapper: "gameContainerWrapper__70617",
     gameContainer: "gameContainer__70617",
 };
