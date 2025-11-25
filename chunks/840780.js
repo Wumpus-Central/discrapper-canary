@@ -24,7 +24,7 @@ var r = n(54381),
     E = n(889441),
     S = n(736409),
     I = n(906732),
-    P = n(535139),
+    P = n(524995),
     N = n(835473),
     Z = n(413523),
     w = n(522651),
@@ -63,7 +63,7 @@ var r = n(54381),
     eu = n(626135),
     ed = n(63063),
     ef = n(358085),
-    ep = n(381096),
+    ep = n(689678),
     eh = n(345243),
     eg = n(115530),
     em = n(339144),
@@ -147,8 +147,8 @@ class eN extends i.PureComponent {
     }
     renderAccountLinkPopover() {
         let {
-                accountLinkExperimentEnabled: e,
-                hasAlreadyLinked: t,
+                hasAlreadyLinked: e,
+                accountLinkCopyConfig: t,
                 blockAccountLinkDismissibleContent: n,
                 application: i,
                 activity: l,
@@ -162,9 +162,9 @@ class eN extends i.PureComponent {
             } = this.props,
             _ = (0, em.y)(i, l, o),
             y = [];
-        return n || !e
+        return n
             ? null
-            : (t
+            : (e
                   ? _ && null == o
                       ? y.push(d.z.ACCOUNT_LINK_INVITE_FRIENDS)
                       : y.push(d.z.POST_ACCOUNT_CONNECTION_RTC_POPOVER)
@@ -174,22 +174,22 @@ class eN extends i.PureComponent {
                   groupName: eO.R.ACCOUNT_NAME_ZONE,
                   bypassAutoDismiss: !0,
                   children: (e) => {
-                      let { visibleContent: t, markAsDismissed: n } = e;
-                      return t === d.z.ACCOUNT_LINK_INVITE_FRIENDS
+                      let { visibleContent: n, markAsDismissed: o } = e;
+                      return n === d.z.ACCOUNT_LINK_INVITE_FRIENDS
                           ? (0, r.jsx)(p.J2, {
                                 title: ex.intl.string(ex.t["0l2pEt"]),
                                 body: ex.intl.string(ex.t["DSZUK/"]),
                                 targetElementRef: this.inviteButtonRef,
                                 align: "right",
                                 shouldShow: !0,
-                                onRequestClose: () => n(eO.L.USER_DISMISS),
+                                onRequestClose: () => o(eO.L.USER_DISMISS),
                                 caretConfig: { align: "end" },
                                 actions: [
                                     {
                                         text: ex.intl.string(ex.t.YdkBCH),
                                         onClick: () => {
                                             var e;
-                                            n(eO.L.TAKE_ACTION),
+                                            o(eO.L.TAKE_ACTION),
                                                 s()(null != l, "Received null activity"),
                                                 eu.default.track(e_.rMx.ACTIVITY_PANEL_BUTTON_CLICKED, {
                                                     action_type: "invite_to_game",
@@ -207,7 +207,7 @@ class eN extends i.PureComponent {
                                     },
                                 ],
                             })
-                          : t === d.z.POST_ACCOUNT_CONNECTION_RTC_POPOVER
+                          : n === d.z.POST_ACCOUNT_CONNECTION_RTC_POPOVER
                             ? (0, r.jsx)(p.J2, {
                                   title: ex.intl.string(ex.t.MxAlrB),
                                   body: ex.intl.string(ex.t["/UTTEg"]),
@@ -219,34 +219,36 @@ class eN extends i.PureComponent {
                                       {
                                           text: ex.intl.string(ex.t.aRIFWD),
                                           onClick: () => {
-                                              n(eO.L.TAKE_ACTION),
+                                              o(eO.L.TAKE_ACTION),
                                                   window.open(ed.Z.getArticleURL(e_.BhN.IN_GAME_FEATURES), "_blank");
                                           },
                                       },
                                   ],
                                   shouldShow: !0,
-                                  onRequestClose: () => n(eO.L.USER_DISMISS),
+                                  onRequestClose: () => o(eO.L.USER_DISMISS),
                               })
-                            : t === d.z.ACCOUNT_LINK_PROMPT
+                            : n === d.z.ACCOUNT_LINK_PROMPT
                               ? (0, r.jsx)(p.J2, {
                                     graphic: {
                                         type: "dynamic",
                                         component: f.DynamicGraphicComponent.ACCOUNT_LINK_DISPLAY,
                                         props: { application: i },
                                     },
-                                    title: ex.intl.formatToPlainString(ex.t["lo6H6+"], { gameName: i.name }),
-                                    body: ex.intl.string(ex.t.qYAzOp),
+                                    title: ex.intl.formatToPlainString(t.altTitle ? ex.t.hUbQT2 : ex.t["lo6H6+"], {
+                                        gameName: i.name,
+                                    }),
+                                    body: ex.intl.string(t.altBody ? ex.t["JKqu+4"] : ex.t.qYAzOp),
                                     targetElementRef: g,
                                     align: "right",
                                     shouldShow: !0,
                                     gradientColor: "purple",
-                                    onRequestClose: () => n(eO.L.USER_DISMISS),
+                                    onRequestClose: () => o(eO.L.USER_DISMISS),
                                     caretConfig: { align: "end" },
                                     actions: [
                                         {
-                                            text: ex.intl.string(ex.t.lw71Nf),
+                                            text: ex.intl.string(t.altCta ? ex.t.jynBQ5 : ex.t.lw71Nf),
                                             onClick: () => {
-                                                n(eO.L.TAKE_ACTION), b();
+                                                o(eO.L.TAKE_ACTION), b();
                                             },
                                         },
                                     ],
@@ -556,8 +558,8 @@ let eZ = (0, O.Z)(function (e) {
             allowedFlows: [P.r.RPC, P.r.WEB],
         }),
         { isQuestBarEmpty: eh, hasLoadedQuestBar: eg } = (0, X.Ws)({ location: ej.dr.CONFLICT_CHECKS }),
-        em = ep.Z.useConfig({ location: "RunningGameCard" }).enabled,
-        { parentAnalyticsLocation: eb } = (0, I.ZP)(),
+        { parentAnalyticsLocation: em } = (0, I.ZP)(),
+        eb = ep.Z.useConfig({ location: "ActivityPanelGameCard" }),
         ey = (0, c.O)((e) => {
             if (e && null != Q) {
                 var t;
@@ -592,8 +594,8 @@ let eZ = (0, O.Z)(function (e) {
             isActivityPopoutOpen: H,
             hasAlreadyLinked: z,
             blockAccountLinkDismissibleContent: !eg || !eh,
-            accountLinkExperimentEnabled: em,
-            parentAnalyticsLocation: eb,
+            accountLinkCopyConfig: eb,
+            parentAnalyticsLocation: em,
             canStartAuthorization: q,
             accountLinkButtonRef: ey,
             startAuthorization: ed,
