@@ -6,7 +6,7 @@ var r = n(54381),
     i = n(772848);
 n(952265);
 var a = n(481060),
-    o = n(922987),
+    o = n(900617),
     s = n(981631);
 function l(e, t, n) {
     return (
@@ -105,7 +105,7 @@ let p = "orb-checkout-payment-modal-key",
             b = (0, i.Z)();
         return (0, a.ZDy)(
             async () => {
-                let { default: e } = await Promise.resolve().then(n.bind(n, 922987));
+                let { default: e } = await n.e("22002").then(n.bind(n, 922987));
                 return (n) =>
                     (0, r.jsx)(
                         e,
@@ -131,7 +131,7 @@ let p = "orb-checkout-payment-modal-key",
                 onCloseCallback: _,
                 onCloseRequest() {
                     E ||
-                        (0, o._Y)(s.rMx.PAYMENT_FLOW_CANCELED, {
+                        (0, o._)(s.rMx.PAYMENT_FLOW_CANCELED, {
                             loadId: b,
                             skuId: t,
                             analyticsLocations: l,

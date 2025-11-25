@@ -1,43 +1,28 @@
-n.d(t, {
-    _Y: () => w,
-    default: () => G,
-});
+n.d(t, { default: () => A });
 var r = n(54381),
-    i = n(473749),
-    a = n(481060),
+    l = n(473749),
+    i = n(481060),
+    s = n(128069),
     o = n(493773),
-    s = n(89057),
-    l = n(583434),
-    c = n(987209),
-    u = n(563132),
-    d = n(409813),
-    f = n(45572),
-    _ = n(126982),
-    p = n(791785),
-    h = n(51499),
-    m = n(614277),
-    g = n(626135),
-    E = n(152521),
-    b = n(932563),
-    y = n(336079),
-    O = n(748714),
-    v = n(981631),
-    I = n(231338),
-    T = n(388032);
-function S(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function A(e) {
+    a = n(89057),
+    c = n(583434),
+    u = n(445794),
+    d = n(987209),
+    p = n(563132),
+    b = n(409813),
+    x = n(45572),
+    y = n(126982),
+    f = n(791785),
+    m = n(51499),
+    j = n(614277),
+    O = n(152521),
+    g = n(932563),
+    h = n(900617),
+    P = n(336079),
+    v = n(748714),
+    C = n(981631),
+    S = n(388032);
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,289 +33,265 @@ function A(e) {
                 }),
             )),
             r.forEach(function (t) {
-                S(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0,
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function C(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function N(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : C(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function R(e, t) {
+function I(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = P(e, t);
+        l = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                l = {},
+                i = Object.keys(e);
+            for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+            return l;
+        })(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var i = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < i.length; r++)
+            (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
     }
-    return i;
+    return l;
 }
-function P(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-    return i;
-}
-let D = {
-        payment_type: v.Zuq[v.GZQ.ONE_TIME],
-        is_gift: !1,
-        eligible_for_trial: !1,
-        payment_modal_version: p.PaymentModal.CURRENT_VERSION,
-    },
-    w = (e, t) => {
-        let { loadId: n, skuId: r, analyticsLocations: i, analyticsSourceLocation: a } = t;
-        e === v.rMx.PAYMENT_FLOW_CANCELED &&
-            g.default.track(
-                v.rMx.PAYMENT_FLOW_CANCELED,
-                A(
-                    {
-                        load_id: n,
-                        application_id: (0, E.Nb)(r),
-                        location: i,
-                        location_stack: i,
-                        payment_gateway: I.ht.VIRTUAL_CURRENCY,
-                        sku_id: r,
-                        currency: v.pKx.DISCORD_ORB,
-                    },
-                    null != a && { source: a },
-                    D,
-                ),
-            );
-    },
-    L = () => {
-        let { activitySessionId: e, hasPaymentSources: t, contextMetadata: n } = (0, u.JL)(),
-            { loadId: r, startTime: a } = n,
-            { skuId: o, orbProductContext: s, analyticsLocations: l, analyticsSourceLocation: c } = (0, y.C)(),
-            f = (0, i.useMemo)(() => {
-                var t, n;
-                return A(
-                    N(
-                        A(
-                            {
-                                load_id: r,
-                                application_id: (0, E.Nb)(o),
-                                location: l,
-                                location_stack: l,
-                                sku_id: o,
-                                activity_session_id: e,
-                                payment_gateway: I.ht.VIRTUAL_CURRENCY,
-                            },
-                            null != s && {
-                                price: null != (t = s.orbPriceAmount) ? t : void 0,
-                                regular_price: null != (n = s.orbPriceAmount) ? n : void 0,
-                            },
-                        ),
-                        { currency: v.pKx.DISCORD_ORB },
-                    ),
-                    null != c && { source: c },
-                    D,
-                );
-            }, [r, e, o, l, c, s]);
-        return {
-            emitOrbCheckoutPaymentFlowEvent: (0, i.useCallback)(
-                (e, n) => {
-                    let r = Date.now() - a;
-                    e === v.rMx.PAYMENT_FLOW_STARTED
-                        ? g.default.track(
-                              v.rMx.PAYMENT_FLOW_STARTED,
-                              N(A({}, f), {
-                                  has_saved_payment_source: t,
-                                  payment_gateway: I.ht.VIRTUAL_CURRENCY,
-                                  continue_session_initial_step: null,
-                              }),
-                          )
-                        : e === v.rMx.PAYMENT_FLOW_LOADED
-                          ? g.default.track(
-                                v.rMx.PAYMENT_FLOW_LOADED,
-                                N(A({}, f), {
-                                    has_saved_payment_source: t,
-                                    initial_step: d.h8.REVIEW,
-                                    duration_ms: r,
-                                }),
-                            )
-                          : e === v.rMx.PAYMENT_FLOW_CANCELED
-                            ? g.default.track(v.rMx.PAYMENT_FLOW_CANCELED, N(A({}, f), { duration_ms: r }))
-                            : e === v.rMx.PAYMENT_FLOW_COMPLETED
-                              ? g.default.track(v.rMx.PAYMENT_FLOW_COMPLETED, N(A({}, f), { duration_ms: r }))
-                              : e === v.rMx.PAYMENT_FLOW_SUCCEEDED
-                                ? g.default.track(v.rMx.PAYMENT_FLOW_SUCCEEDED, N(A({}, f), { duration_ms: r }))
-                                : e === v.rMx.PAYMENT_FLOW_FAILED &&
-                                  g.default.track(
-                                      v.rMx.PAYMENT_FLOW_FAILED,
-                                      A(
-                                          N(A({}, f), { duration_ms: r }),
-                                          null != n
-                                              ? {
-                                                    payment_error_code: n.code,
-                                                    error_message: n.message,
-                                                }
-                                              : {},
-                                      ),
-                                  );
-                },
-                [a, f, t],
-            ),
-        };
-    },
-    x = (e) => {
+let k = (e) => {
         let { handleClose: t, handleStepChange: n } = e,
-            { blockedPayments: a } = (0, u.JL)();
-        return ((0, i.useEffect)(() => {
-            a || n(d.h8.REVIEW);
-        }, [a, n]),
-        a)
-            ? (0, r.jsx)(s.Vq, { onClose: t })
+            { blockedPayments: i } = (0, p.JL)();
+        return ((0, l.useEffect)(() => {
+            i || n(b.h8.REVIEW);
+        }, [i, n]),
+        i)
+            ? (0, r.jsx)(a.Vq, { onClose: t })
             : null;
     },
-    M = (e) => {
-        var t;
-        let { handleClose: n } = e,
-            { selectedSkuId: s, purchaseState: c, setPurchaseState: d } = (0, u.JL)(),
-            { product: _ } = (0, l.T)(s),
-            { emitOrbCheckoutPaymentFlowEvent: p } = L(),
+    _ = (e) => {
+        let { handleClose: t } = e,
             {
-                skuId: g,
-                onRedeemVirtualCurrency: E,
-                isRedeeming: I,
-                orbRedemptionError: T,
-                orbProductContext: S,
-                isRental: A,
-            } = (0, y.C)(),
-            C = (0, b.cR)(),
-            N = (0, i.useRef)(C);
-        (0, o.ZP)(() => {
-            p(v.rMx.PAYMENT_FLOW_LOADED);
-        }),
-            (0, i.useEffect)(() => {
-                c === f.A.COMPLETED && n();
-            }, [c, n]),
-            (0, i.useEffect)(() => {
-                null != T && null !== N.current && (p(v.rMx.PAYMENT_FLOW_FAILED, T), (N.current = null));
-            }, [T, p]);
-        let R = (0, i.useCallback)(() => {
-            (N.current = C),
-                p(v.rMx.PAYMENT_FLOW_COMPLETED),
-                E(() => {
-                    d(f.A.COMPLETED), p(v.rMx.PAYMENT_FLOW_SUCCEEDED);
+                skuId: n,
+                onRedeemVirtualCurrency: a,
+                isRedeeming: d,
+                orbRedemptionError: b,
+                orbProductContext: y,
+                isRental: f,
+                analyticsLocations: O,
+                analyticsSourceLocation: E,
+            } = (0, P.CH)();
+        ((e) => {
+            let { handleClose: t } = e,
+                { purchaseState: n } = (0, p.JL)();
+            (0, l.useEffect)(() => {
+                n === x.A.COMPLETED && t();
+            }, [n, t]);
+        })({ handleClose: t });
+        let {
+            orbPriceAmount: I,
+            orbBalanceToDisplay: k,
+            onClickCheckout: _,
+            isStepLoading: N,
+            showCollectiblesDiscountWarning: L,
+            errorMessage: T,
+        } = ((e) => {
+            var t;
+            let {
+                    skuId: n,
+                    onRedeemVirtualCurrency: r,
+                    orbRedemptionError: i,
+                    orbProductContext: a,
+                    analyticsLocations: d,
+                    analyticsSourceLocation: b,
+                    isRental: y,
+                } = e,
+                { selectedSkuId: f, setPurchaseState: m } = (0, p.JL)(),
+                { product: j } = (0, c.T)(f),
+                O = (0, g.cR)(),
+                P = (0, l.useRef)(O),
+                { emitOrbCheckoutPaymentFlowEvent: v } = (0, h.S)({
+                    skuId: n,
+                    orbProductContext: a,
+                    analyticsLocations: d,
+                    analyticsSourceLocation: b,
                 });
-        }, [E, d, C, p]);
-        if (null == s || null == _) return (0, r.jsx)(a.$jN, { type: a.$jN.Type.WANDERING_CUBES });
-        let P = null != (t = N.current) ? t : C,
-            D = null != S ? S.orbPriceAmount : null;
-        return (0, r.jsxs)(r.Fragment, {
-            children: [
-                (0, r.jsx)(h.Z, {}),
-                (0, r.jsxs)(m.C3, {
-                    children: [
-                        (0, r.jsxs)(a.Kqy, {
-                            direction: "vertical",
-                            gap: 8,
-                            children: [(0, r.jsx)(O.gY, { error: T }), (0, r.jsx)(O.f4, { skuId: g })],
-                        }),
-                        (0, r.jsx)(O.A3, {
-                            skuId: g,
-                            orbPriceAmount: D,
-                            orbBalance: P,
-                        }),
-                    ],
+            (0, o.ZP)(() => {
+                v(C.rMx.PAYMENT_FLOW_LOADED);
+            }),
+                (0, l.useEffect)(() => {
+                    null != i && null !== P.current && (v(C.rMx.PAYMENT_FLOW_FAILED, i), (P.current = null));
+                }, [i, v]);
+            let E = (0, l.useCallback)(() => {
+                    (P.current = O),
+                        v(C.rMx.PAYMENT_FLOW_COMPLETED),
+                        r(() => {
+                            m(x.A.COMPLETED), v(C.rMx.PAYMENT_FLOW_SUCCEEDED);
+                        });
+                }, [r, m, O, v]),
+                I = null != (t = P.current) ? t : O,
+                k = null != a ? a.orbPriceAmount : null;
+            return {
+                isStepLoading: null == f || null == j,
+                showCollectiblesDiscountWarning: (0, u.N3)({
+                    skuId: n,
+                    isOrbsPurchase: !0,
                 }),
-                (0, r.jsx)(m.O3, {
-                    children: (0, r.jsx)(O.f9, {
-                        orbPriceAmount: D,
-                        orbBalance: P,
-                        isSubmitting: I,
-                        onClickCheckout: R,
-                        isRental: A,
-                    }),
-                }),
-            ],
+                errorMessage: (0, l.useMemo)(
+                    () =>
+                        null == i
+                            ? null
+                            : i.code === s.SM.VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE
+                              ? S.intl.string(S.t.keFvXM)
+                              : i.code === s.SM.ALREADY_PURCHASED
+                                ? S.intl.string(S.t.m371Mx)
+                                : S.intl.string(S.t.fqJZ11),
+                    [i],
+                ),
+                orbPriceAmount: k,
+                orbBalanceToDisplay: I,
+                onClickCheckout: E,
+                selectedSkuId: f,
+                isRental: y,
+                product: j,
+            };
+        })({
+            skuId: n,
+            onRedeemVirtualCurrency: a,
+            orbRedemptionError: b,
+            orbProductContext: y,
+            isRental: f,
+            analyticsLocations: O,
+            analyticsSourceLocation: E,
         });
+        return N
+            ? (0, r.jsx)(i.$jN, { type: i.$jN.Type.WANDERING_CUBES })
+            : (0, r.jsxs)(r.Fragment, {
+                  children: [
+                      (0, r.jsx)(m.Z, {}),
+                      (0, r.jsxs)(j.C3, {
+                          children: [
+                              (0, r.jsxs)(i.Kqy, {
+                                  direction: "vertical",
+                                  gap: 8,
+                                  children: [
+                                      null != T
+                                          ? (0, r.jsx)(i.M14, {
+                                                type: "critical",
+                                                children: T,
+                                            })
+                                          : null,
+                                      L && (0, r.jsx)(v.f4, {}),
+                                  ],
+                              }),
+                              (0, r.jsx)(v.A3, {
+                                  skuId: n,
+                                  orbPriceAmount: I,
+                                  orbBalance: k,
+                              }),
+                          ],
+                      }),
+                      (0, r.jsx)(j.O3, {
+                          children: (0, r.jsx)(v.f9, {
+                              orbPriceAmount: I,
+                              orbBalance: k,
+                              isSubmitting: d,
+                              onClickCheckout: _,
+                              isRental: f,
+                          }),
+                      }),
+                  ],
+              });
     },
-    k = [
+    N = [
         {
             key: null,
-            renderStep: (e) => (0, r.jsx)(x, A({}, e)),
+            renderStep: (e) => (0, r.jsx)(k, E({}, e)),
         },
         {
-            key: d.h8.REVIEW,
-            renderStep: (e) => (0, r.jsx)(M, A({}, e)),
-            options: { useBreadcrumbLabel: () => T.intl.string(T.t.QBnNHq) },
+            key: b.h8.REVIEW,
+            renderStep: (e) => (0, r.jsx)(_, E({}, e)),
+            options: { useBreadcrumbLabel: () => S.intl.string(S.t.QBnNHq) },
         },
     ],
-    j = (e, t, n) =>
-        (0, r.jsx)(_.Z, {
+    L = (e, t, n) =>
+        (0, r.jsx)(y.Z, {
             isOrbCheckout: !0,
             step: n,
             onClose: () => t(!1),
         }),
-    U = (e) => {
+    T = (e) => {
         var { skuId: t, analyticsLocations: n = [] } = e,
-            a = R(e, ["skuId", "analyticsLocations"]);
-        let { orbProductContext: o } = (0, y.C)(),
-            { emitOrbCheckoutPaymentFlowEvent: s } = L(),
-            l = (0, i.useMemo)(() => {
-                var e, t;
-                if (null != o)
-                    return {
-                        price: null != (e = o.orbPriceAmount) ? e : void 0,
-                        regular_price: null != (t = o.orbPriceAmount) ? t : void 0,
-                        currency: v.pKx.DISCORD_ORB,
-                    };
-            }, [o]),
-            c = (0, i.useCallback)(
-                async (e) => {
-                    e || s(v.rMx.PAYMENT_FLOW_CANCELED), await a.onClose();
-                },
-                [a, s],
-            );
-        return (0, r.jsx)(p.PaymentModal, {
-            applicationId: (0, E.Nb)(t),
-            transitionState: a.transitionState,
-            analyticsDataOverride: l,
+            i = I(e, ["skuId", "analyticsLocations"]);
+        let { orbProductContext: s, analyticsSourceLocation: o } = (0, P.CH)(),
+            { analyticsDataOverride: a, onClose: c } = ((e) => {
+                let {
+                        skuId: t,
+                        analyticsLocations: n,
+                        analyticsSourceLocation: r,
+                        orbProductContext: i,
+                        onClose: s,
+                    } = e,
+                    { emitOrbCheckoutPaymentFlowEvent: o } = (0, h.S)({
+                        skuId: t,
+                        orbProductContext: i,
+                        analyticsLocations: n,
+                        analyticsSourceLocation: r,
+                    });
+                return {
+                    analyticsDataOverride: (0, l.useMemo)(() => {
+                        var e, t;
+                        if (null != i)
+                            return {
+                                price: null != (e = i.orbPriceAmount) ? e : void 0,
+                                regular_price: null != (t = i.orbPriceAmount) ? t : void 0,
+                                currency: C.pKx.DISCORD_ORB,
+                            };
+                    }, [i]),
+                    onClose: (0, l.useCallback)(
+                        async (e) => {
+                            e || o(C.rMx.PAYMENT_FLOW_CANCELED), await s();
+                        },
+                        [s, o],
+                    ),
+                };
+            })({
+                skuId: t,
+                analyticsLocations: n,
+                analyticsSourceLocation: o,
+                orbProductContext: s,
+                onClose: i.onClose,
+            });
+        return (0, r.jsx)(f.PaymentModal, {
+            applicationId: (0, O.Nb)(t),
+            transitionState: i.transitionState,
+            analyticsDataOverride: a,
             onClose: c,
             hideShadow: !0,
             skuId: t,
-            renderHeader: j,
+            renderHeader: L,
             initialPlanId: null,
             analyticsLocations: n,
         });
     },
-    G = (e) => {
+    A = (e) => {
         var {
                 skuId: t,
                 loadId: n,
-                onCheckoutSuccess: i,
-                analyticsSourceLocation: a,
-                analyticsLocations: o = [],
-                isRental: s,
+                onCheckoutSuccess: l,
+                analyticsSourceLocation: i,
+                analyticsLocations: s = [],
+                isRental: o,
             } = e,
-            l = R(e, [
+            a = I(e, [
                 "skuId",
                 "loadId",
                 "onCheckoutSuccess",
@@ -338,31 +299,31 @@ let D = {
                 "analyticsLocations",
                 "isRental",
             ]);
-        return (0, r.jsx)(u.PaymentContextProvider, {
-            applicationId: (0, E.Nb)(t),
+        return (0, r.jsx)(p.PaymentContextProvider, {
+            applicationId: (0, O.Nb)(t),
             activeSubscription: null,
             loadId: n,
-            stepConfigs: k,
-            purchaseType: v.GZQ.ONE_TIME,
+            stepConfigs: N,
+            purchaseType: C.GZQ.ONE_TIME,
             skuIDs: [t],
             excludeSubscriptionPlansBySKU: !0,
             excludeSKUPurchasePreviews: !0,
-            children: (0, r.jsx)(y.d, {
+            children: (0, r.jsx)(P.dv, {
                 skuId: t,
                 loadId: n,
-                onCheckoutSuccess: i,
-                analyticsLocations: o,
-                analyticsSourceLocation: a,
-                isRental: s,
-                children: (0, r.jsx)(c.b6, {
+                onCheckoutSuccess: l,
+                analyticsLocations: s,
+                analyticsSourceLocation: i,
+                isRental: o,
+                children: (0, r.jsx)(d.b6, {
                     children: (0, r.jsx)(
-                        U,
-                        A(
+                        T,
+                        E(
                             {
                                 skuId: t,
-                                analyticsLocations: o,
+                                analyticsLocations: s,
                             },
-                            l,
+                            a,
                         ),
                     ),
                 }),

@@ -1,6 +1,6 @@
 n.d(t, {
-    I: () => ee,
-    PaymentModal: () => $,
+    I: () => et,
+    PaymentModal: () => ee,
 }),
     n(388685);
 var r = n(54381),
@@ -43,11 +43,12 @@ var r = n(54381),
     B = n(928886),
     Z = n(456251),
     F = n(614277),
-    V = n(981631),
-    H = n(474936),
-    Y = n(388032),
-    W = n(876414);
-function K(e, t, n) {
+    V = n(545006),
+    H = n(981631),
+    Y = n(474936),
+    W = n(388032),
+    K = n(876414);
+function z(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -60,7 +61,7 @@ function K(e, t, n) {
         e
     );
 }
-function z(e) {
+function q(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -71,12 +72,12 @@ function z(e) {
                 }),
             )),
             r.forEach(function (t) {
-                K(e, t, n[t]);
+                z(e, t, n[t]);
             });
     }
     return e;
 }
-function q(e, t) {
+function X(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -88,36 +89,36 @@ function q(e, t) {
     }
     return n;
 }
-function X(e, t) {
+function Q(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : q(Object(t)).forEach(function (n) {
+            : X(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let Q = 2,
-    J = "billing";
-function $(e) {
+let J = 2,
+    $ = "billing";
+function ee(e) {
     let {
             analyticsDataOverride: t,
             analyticsLocations: n,
             analyticsLocation: a,
             analyticsObject: l,
             analyticsSourceLocation: d,
-            analyticsSubscriptionType: p = V.NYc.PREMIUM,
+            analyticsSubscriptionType: p = H.NYc.PREMIUM,
             onComplete: m,
             transitionState: N,
             initialPlanId: j,
             subscriptionTier: U,
             onClose: Z,
-            trialId: K,
-            trialFooterMessageOverride: q,
-            reviewWarningMessage: J,
-            planGroup: ee = H.Y1,
+            trialId: z,
+            trialFooterMessageOverride: X,
+            reviewWarningMessage: $,
+            planGroup: ee = Y.Y1,
             openInvoiceId: et,
             onSubscriptionConfirmation: en,
             renderPurchaseConfirmation: er,
@@ -176,21 +177,21 @@ function $(e) {
     let eJ = (0, v.N)(),
         e$ = null != U && !eW && (0, I.Wp)(eJ, U),
         [e0, e1] = i.useState(
-            z(
+            q(
                 {
                     load_id: eL.loadId,
-                    payment_type: V.Zuq[eB],
+                    payment_type: H.Zuq[eB],
                     location: null != a ? a : l,
                     source: d,
                     subscription_type: p,
                     subscription_plan_id: null == eS ? void 0 : eS.id,
                     is_gift: eW,
-                    eligible_for_trial: null != K,
+                    eligible_for_trial: null != z,
                     location_stack: n,
                     sku_id: eu,
                     application_id: es,
                     guild_id: el,
-                    payment_modal_version: $.CURRENT_VERSION,
+                    payment_modal_version: V.g,
                     activity_session_id: ey,
                     eligible_for_discount: e$,
                     sku_product_line: null == ew ? void 0 : ew.productLine,
@@ -203,8 +204,8 @@ function $(e) {
     i.useEffect(() => {
         e1((e) => {
             let n = null != eS ? (0, D.aS)(eS.id, !1, eW, ek) : void 0;
-            return z(
-                X(z({}, e), {
+            return q(
+                Q(q({}, e), {
                     subscription_plan_id: null == eS ? void 0 : eS.id,
                     price: null == n ? void 0 : n.amount,
                     regular_price: null == eS ? void 0 : eS.price,
@@ -218,7 +219,7 @@ function $(e) {
     }, [eS, eI, eW, ek, t, null == ew ? void 0 : ew.productLine]),
         (0, h.ZP)(() => {
             (0, g.U)(
-                X(z({}, e0), {
+                Q(q({}, e0), {
                     continue_session_initial_step: eb,
                     custom_checkout_flow: eV,
                     has_saved_payment_source: ej,
@@ -237,9 +238,9 @@ function $(e) {
             let e = (0, P.MY)(eK) === P.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
                 t = Date.now();
             R.default.track(
-                V.rMx.PAYMENT_FLOW_SUCCEEDED,
-                X(z({}, e0), {
-                    is_custom_message_edited: eW && e && null != ez ? ez !== Y.intl.string(Y.t.ZkOo1U) : void 0,
+                H.rMx.PAYMENT_FLOW_SUCCEEDED,
+                Q(q({}, e0), {
+                    is_custom_message_edited: eW && e && null != ez ? ez !== W.intl.string(W.t.ZkOo1U) : void 0,
                     is_custom_emoji_sound_available: eW && e,
                     emoji_name:
                         eW && e && (null == eq ? void 0 : eq.id) == null
@@ -271,16 +272,16 @@ function $(e) {
                 let s = null != n ? n : eD;
                 if (null === s || a)
                     return void R.default.track(
-                        V.rMx.PAYMENT_FLOW_LOADED,
-                        X(z({}, e0), {
+                        H.rMx.PAYMENT_FLOW_LOADED,
+                        Q(q({}, e0), {
                             initial_step: null != s ? s : e,
                             continue_session_initial_step: eb,
                             has_saved_payment_source: ej,
                         }),
                     );
                 R.default.track(
-                    V.rMx.PAYMENT_FLOW_STEP,
-                    X(z({}, e0, r), {
+                    H.rMx.PAYMENT_FLOW_STEP,
+                    Q(q({}, e0, r), {
                         from_step: s,
                         to_step: e === x.h8.ADD_PAYMENT_STEPS ? x.h8.PAYMENT_TYPE : e,
                         step_duration_ms: o - e8,
@@ -303,9 +304,9 @@ function $(e) {
             handleClose: e5,
             analyticsData: e0,
             setAnalyticsData: e1,
-            trialId: K,
-            trialFooterMessageOverride: q,
-            reviewWarningMessage: J,
+            trialId: z,
+            trialFooterMessageOverride: X,
+            reviewWarningMessage: $,
             planGroup: ee,
             openInvoiceId: et,
             analyticsLocation: a,
@@ -323,12 +324,12 @@ function $(e) {
             handleClose: e5,
         });
     return (0, r.jsx)(c.UkV, {
-        className: W.shaker,
+        className: K.shaker,
         isShaking: ef && eO === M.A.PURCHASING,
-        intensity: Q,
+        intensity: J,
         children: (0, r.jsx)(c.Y0X, {
             "data-migration-pending": !0,
-            className: o()(W.root, eF, { [W.withHeader]: null != e9 }),
+            className: o()(K.root, eF, { [K.withHeader]: null != e9 }),
             transitionState: N,
             hideShadow: em,
             returnRef: eg,
@@ -336,7 +337,7 @@ function $(e) {
             parentComponent: "PaymentModal",
             children: (0, r.jsx)(
                 F.ZP,
-                z(
+                q(
                     {
                         header: e9,
                         isLargeModal: e_ || (null == eY ? void 0 : eY.isLargeModal),
@@ -348,7 +349,7 @@ function $(e) {
         }),
     });
 }
-function ee(e) {
+function et(e) {
     let {
             subscriptionTier: t,
             initialPlanId: n,
@@ -376,7 +377,7 @@ function ee(e) {
             referralTrialOfferId: o,
         }),
         [S, A] = i.useState(!0),
-        C = (0, l.e7)([N.Z], () => N.Z.applicationIdsFetched.has(H.CL));
+        C = (0, l.e7)([N.Z], () => N.Z.applicationIdsFetched.has(Y.CL));
     return (i.useEffect(() => {
         A(!_ || !h || g);
     }, [g, h, _]),
@@ -389,10 +390,10 @@ function ee(e) {
             hasFetchedSubscriptionPlans: h,
             currencyLoading: g,
         },
-        { tags: { app_context: J } },
+        { tags: { app_context: $ } },
     ),
     i.useEffect(() => {
-        if ((C || (0, d.yD)(H.CL), S || f)) return;
+        if ((C || (0, d.yD)(Y.CL), S || f)) return;
         let e = (0, j.Kp)({
             isTrial: T,
             isGift: v,
@@ -418,4 +419,4 @@ function ee(e) {
           ? (0, r.jsx)(m.Vq, { onClose: s })
           : null;
 }
-$.CURRENT_VERSION = "v1";
+ee.CURRENT_VERSION = V.g;

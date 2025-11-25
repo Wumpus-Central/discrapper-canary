@@ -1,25 +1,24 @@
 n.d(t, {
-    M: () => d,
-    Z: () => f,
+    M: () => u,
+    Z: () => p,
 });
 var r = n(54381),
-    i = n(120356),
-    a = n.n(i),
-    o = n(780384),
-    s = n(410030),
+    s = n(120356),
+    o = n.n(s),
+    a = n(780384),
+    i = n(410030),
     l = n(633459);
 let c = n(17702),
-    u = n(647894),
-    d = (e) => {
-        let { customSize: t, shouldUseThemeColor: n = !1, loading: i, className: d } = e,
-            f = (0, s.ZP)(),
-            _ = n && (0, o.ap)(f) ? u : c,
-            p = void 0 !== t ? { height: t } : void 0;
+    d = n(647894),
+    u = (e) => {
+        let { customSize: t, shouldUseThemeColor: n = !1, loading: s, className: u } = e,
+            p = (0, i.ZP)(),
+            m = n && (0, a.ap)(p) ? d : c;
         return (0, r.jsx)("img", {
-            className: a()(l.orbIconSVG, d, { [l.loading]: i }),
-            src: _,
+            className: o()(l.orbIconSVG, u, { [l.loading]: s }),
+            src: m,
             alt: "",
-            style: p,
+            style: void 0 !== t ? { height: t } : void 0,
         });
     },
-    f = d;
+    p = u;
