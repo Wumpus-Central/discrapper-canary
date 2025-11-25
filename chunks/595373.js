@@ -1,66 +1,41 @@
 n.d(e, {
-    J: () => N,
-    Z: () => f,
+    J: () => I,
+    Z: () => O,
 });
-var i = n(54381),
-    l = n(473749),
-    u = n(818710),
-    r = n(793030),
-    s = n(442837),
-    a = n(100527),
-    o = n(509613),
-    c = n(131951),
-    E = n(313789),
-    T = n(325808),
-    S = n(962100),
-    d = n(518596),
-    I = n(345655),
-    O = n(981631),
-    g = n(65154),
-    _ = n(388032);
-function N() {
-    return (0, s.e7)([c.Z], () => c.Z.getMode() === g.pM.PUSH_TO_TALK);
+var i = n(473749),
+    l = n(818710),
+    r = n(442837),
+    u = n(100527),
+    s = n(509613),
+    a = n(131951),
+    o = n(313789),
+    c = n(325808),
+    E = n(962100),
+    d = n(345655),
+    S = n(65154),
+    T = n(388032);
+function I() {
+    return (0, r.e7)([a.Z], () => a.Z.getMode() === S.pM.PUSH_TO_TALK);
 }
-function A() {
-    let t = (0, s.e7)([c.Z], () => c.Z.getMode() === g.pM.PUSH_TO_TALK),
-        e = l.useCallback((t) => {
-            (0, T.XH)(t ? g.pM.PUSH_TO_TALK : g.pM.VOICE_ACTIVITY, [a.Z.USER_SETTINGS_VOICE_AND_VIDEO]);
-        }, []),
-        n = u.FB ? _.intl.string(_.t.tG4Np5) : _.intl.string(_.t.JMyQin),
-        o = (0, s.e7)([c.Z], () => c.Z.getMode()),
-        I = l.useMemo(
-            () =>
-                u.FB || o !== g.pM.PUSH_TO_TALK
-                    ? _.intl.format(_.t.HVvn5T, {
-                          onClick: () => (0, d.openUserSettings)(E.n.KEYBINDS_PANEL, { section: O.oAB.KEYBINDS }),
-                      })
-                    : _.intl.format(_.t.zvMPOc, { onDownloadClick: () => (0, S.y)("Help Text PTT") }),
-            [o],
-        );
-    return (0, i.jsxs)(r.Kqy, {
-        gap: 16,
-        children: [
-            (0, i.jsx)(r.M14, {
-                type: "info",
-                children: I,
-            }),
-            (0, i.jsx)(r.rsf, {
-                label: n,
-                description: _.intl.string(_.t.yept4k),
-                checked: t,
-                onChange: (t) => e(t),
-            }),
-        ],
-    });
-}
-let f = (0, o.ON)(E.n.VOICE_PUSH_TO_TALK_SETTING, {
-    usePredicate: function () {
-        return (0, s.e7)([c.Z], () => c.Z.getActiveInputProfile() !== I._.STUDIO);
+let O = (0, s.qs)(o.n.VOICE_PUSH_TO_TALK_SETTING, {
+    useTitle: function () {
+        return l.FB ? T.intl.string(T.t.tG4Np5) : T.intl.string(T.t.JMyQin);
     },
-    render: () => (0, i.jsx)(A, {}),
-    useSearchTerms: () => [
-        u.FB ? _.intl.string(_.t.tG4Np5) : _.intl.string(_.t.JMyQin),
-        _.intl.string(_.t["pS+K2L"]),
-        _.intl.string(_.t.nuFtHH),
-    ],
+    useSubtitle: function () {
+        let t = (0, r.e7)([a.Z], () => a.Z.getMode());
+        return i.useMemo(() => {
+            if (!l.FB && t === S.pM.PUSH_TO_TALK)
+                return T.intl.format(T.t["VHI4+Y"], { onDownloadClick: () => (0, E.y)("Help Text PTT") });
+        }, [t]);
+    },
+    usePredicate: function () {
+        return (0, r.e7)([a.Z], () => a.Z.getActiveInputProfile() !== d._.STUDIO);
+    },
+    useValue: function () {
+        return (0, r.e7)([a.Z], () => a.Z.getMode() === S.pM.PUSH_TO_TALK);
+    },
+    setValue: function (t) {
+        (0, c.XH)(t ? S.pM.PUSH_TO_TALK : S.pM.VOICE_ACTIVITY, [u.Z.USER_SETTINGS_VOICE_AND_VIDEO]);
+    },
+    useSearchTerms: () => [T.intl.string(T.t["pS+K2L"]), T.intl.string(T.t.nuFtHH)],
 });
