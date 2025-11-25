@@ -86,6 +86,9 @@ class s {
             a = n.map((n) => l(e, t, n));
         this.transaction.putAll(a, i);
     }
+    replaceChannel(e, t, n) {
+        this.deleteChannel(e, t), this.putAll(e, t, n);
+    }
     replaceAll(e, t, n) {
         let r = n.map((n) => l(e, t, n));
         this.transaction.replaceAll(r);
