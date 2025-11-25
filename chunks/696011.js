@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var r = n(704215),
     i = n(147913),
     a = n(266454),
@@ -24,8 +24,7 @@ function h(e, t, n) {
         e
     );
 }
-let m = new Set([_.t9, _.h4]);
-class g extends i.Z {
+class m extends i.Z {
     constructor(...e) {
         super(...e),
             h(this, "_didAttemptToOpenModal", !1),
@@ -64,9 +63,9 @@ class g extends i.Z {
                     ((this._didAttemptToOpenModal = !0), !(0, a.zu)(r.z.GAME_SHOP_ANNOUNCEMENT_MODAL))
                 ) {
                     if (null != c.Z.getGuild((0, u.ac)())) return void (0, f.b)();
-                    for (let e of s.ZP.getGamesSeen(!1, !1)) if (null != e.id && m.has(e.id)) return void (0, f.b)();
+                    for (let e of s.ZP.getGamesSeen(!1, !1)) if (null != e.id && _.RI.has(e.id)) return void (0, f.b)();
                 }
             });
     }
 }
-let E = new g();
+let g = new m();
