@@ -1,7 +1,8 @@
 n.d(t, {
-    J8: () => o,
-    ZP: () => s,
-    ls: () => l,
+    J8: () => s,
+    ZP: () => l,
+    ls: () => c,
+    tE: () => o,
 }),
     n(953529);
 var r = n(81825),
@@ -20,9 +21,12 @@ function a(e, t, n) {
     );
 }
 var o = (function (e) {
-    return (e.EROTIC = "Erotic"), e;
-})({});
-class s extends r.Z {
+        return (e[(e.LINKED = 1)] = "LINKED"), (e[(e.OFFICIAL = 2)] = "OFFICIAL"), e;
+    })({}),
+    s = (function (e) {
+        return (e.EROTIC = "Erotic"), e;
+    })({});
+class l extends r.Z {
     getIconURL(e) {
         return null == this.icon
             ? null
@@ -71,6 +75,6 @@ class s extends r.Z {
             (this.linkedApplications = e.linkedApplications);
     }
 }
-var l = (function (e) {
+var c = (function (e) {
     return (e[(e.NONE = 0)] = "NONE"), (e[(e.WINDOWED_ONLY = 1)] = "WINDOWED_ONLY"), (e[(e.ALL = 2)] = "ALL"), e;
 })({});
