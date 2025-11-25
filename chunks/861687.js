@@ -41,8 +41,8 @@ var r = n(654861),
     F = n(12647),
     V = n(931619),
     H = n(358085),
-    Y = n(960048),
-    W = n(591759),
+    W = n(960048),
+    Y = n(591759),
     K = n(579806),
     z = n(859401),
     q = n(437263),
@@ -171,7 +171,7 @@ class eN extends f.Z {
         else {
             var t;
             e = "".concat(ep, "//").concat(e);
-            let { hostname: n, port: r } = null != (t = W.Z.toURLSafe(e)) ? t : {},
+            let { hostname: n, port: r } = null != (t = Y.Z.toURLSafe(e)) ? t : {},
                 i = null != r ? parseInt(r) : NaN;
             null != n && (80 === i || 443 === i) && (e = "".concat(ep, "//").concat(n)),
                 (this._endpoint = e + "/"),
@@ -740,6 +740,7 @@ class eN extends f.Z {
                         vad_use_advanced_voice_activity: i.modeOptions.vadUseKrisp,
                         soundshare_experimental: k.Z.getExperimentalSoundshare(),
                         join_voice_id: this.joinVoiceId,
+                        bypass_system_input_processing: i.bypassSystemInputProcessing,
                     },
                 );
             Promise.all([
@@ -1491,7 +1492,7 @@ class eN extends f.Z {
                           var n;
                           null == (n = this._connection) || n.executeSecureFramesTransition(ev);
                       } catch (e) {
-                          (t = !0), Y.Z.captureException(e);
+                          (t = !0), W.Z.captureException(e);
                       }
                       this._storeSecureFrameTransitionData(ev, {
                           initReceivedTime: r,
@@ -1573,7 +1574,7 @@ class eN extends f.Z {
             var r;
             null == (r = this._connection) || r.executeSecureFramesTransition(e);
         } catch (e) {
-            (n = !0), Y.Z.captureException(e);
+            (n = !0), W.Z.captureException(e);
         }
         this._storeSecureFrameTransitionData(e, {
             executeReceivedTime: t,
@@ -1969,7 +1970,7 @@ class eN extends f.Z {
             (this.context = i),
             this.recordEvent({ c: 0 }),
             (this._fetchAsyncResourcesPromise = k.Z.fetchAsyncResources().catch((e) => {
-                Y.Z.captureException(e);
+                W.Z.captureException(e);
             })),
             (this.userId = e),
             (this.sessionId = t),
