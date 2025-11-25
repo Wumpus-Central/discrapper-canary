@@ -4,17 +4,14 @@ var r = n(54381),
     i = n(120356),
     o = n.n(i),
     a = n(481060),
-    c = n(782568),
-    s = n(163379),
-    u = n(31336),
-    d = n(906467),
-    f = n(63063),
-    b = n(604227),
-    p = n(924983),
-    y = n(981631),
-    j = n(388032),
-    m = n(989281);
-function v(e) {
+    s = n(782568),
+    c = n(163379),
+    u = n(63063),
+    d = n(604227),
+    f = n(981631),
+    p = n(388032),
+    b = n(989281);
+function y(e) {
     let { onClose: t } = e;
     return (0, r.jsx)(a.v2r, {
         navId: "settings-footer-more-menu",
@@ -25,63 +22,56 @@ function v(e) {
             children: [
                 (0, r.jsx)(a.sNh, {
                     id: "changelog",
-                    label: j.intl.string(j.t.LRmNAl),
-                    action: () => (0, s.Z)(!0),
+                    label: p.intl.string(p.t.LRmNAl),
+                    action: () => (0, c.Z)(!0),
                 }),
                 (0, r.jsx)(a.sNh, {
                     id: "acknowledgements",
-                    label: j.intl.string(j.t["0nUKy3"]),
-                    action: () => (0, c.Z)(y.EYA.ACKNOWLEDGEMENTS),
+                    label: p.intl.string(p.t["0nUKy3"]),
+                    action: () => (0, s.Z)(f.EYA.ACKNOWLEDGEMENTS),
                 }),
                 (0, r.jsx)(a.sNh, {
                     id: "support",
-                    label: j.intl.string(j.t["Yl/Riu"]),
-                    action: () => (0, c.Z)(f.w),
+                    label: p.intl.string(p.t["Yl/Riu"]),
+                    action: () => (0, s.Z)(u.w),
                 }),
             ],
         }),
     });
 }
 function g() {
-    let e = l.useRef(null),
-        t = d.Z.isDeveloper;
+    let e = l.useRef(null);
     return (0, r.jsxs)("div", {
         children: [
-            t &&
-                (0, r.jsx)(a.P3F, {
-                    className: m.devToolsEducation,
-                    onClick: () => (0, u.d8)(),
-                    children: (0, r.jsx)(p.$, { legacy: !1 }),
-                }),
-            (0, r.jsx)(b.Z, { compact: !0 }),
+            (0, r.jsx)(d.Z, { compact: !0 }),
             (0, r.jsxs)("div", {
-                className: m.links,
+                className: b.links,
                 children: [
                     (0, r.jsx)(a.Anchor, {
-                        href: y.EYA.PRIVACY,
+                        href: f.EYA.PRIVACY,
                         children: (0, r.jsx)(a.Text, {
                             tag: "span",
                             variant: "text-xxs/normal",
                             color: "currentColor",
-                            children: j.intl.string(j.t["Knf/f/"]),
+                            children: p.intl.string(p.t["Knf/f/"]),
                         }),
                     }),
                     (0, r.jsx)("span", {
-                        className: m.bullet,
+                        className: b.bullet,
                         "aria-hidden": "true",
                         children: "\u2022",
                     }),
                     (0, r.jsx)(a.Anchor, {
-                        href: y.EYA.TERMS,
+                        href: f.EYA.TERMS,
                         children: (0, r.jsx)(a.Text, {
                             tag: "span",
                             variant: "text-xxs/normal",
                             color: "currentColor",
-                            children: j.intl.string(j.t.uFSTGq),
+                            children: p.intl.string(p.t.uFSTGq),
                         }),
                     }),
                     (0, r.jsx)("span", {
-                        className: m.bullet,
+                        className: b.bullet,
                         "aria-hidden": "true",
                         children: "\u2022",
                     }),
@@ -93,7 +83,7 @@ function g() {
                         animation: a.yRy.Animation.NONE,
                         renderPopout: (e) => {
                             let { closePopout: t } = e;
-                            return (0, r.jsx)(v, { onClose: t });
+                            return (0, r.jsx)(y, { onClose: t });
                         },
                         children: (t, n) => {
                             var l, i;
@@ -128,12 +118,12 @@ function g() {
                                     {
                                         ref: e,
                                         useDefaultUnderlineStyles: !1,
-                                        className: o()(m.moreButton, { [m.active]: n.isShown }),
+                                        className: o()(b.moreButton, { [b.active]: n.isShown }),
                                         children: (0, r.jsx)(a.Text, {
                                             tag: "span",
                                             variant: "text-xxs/normal",
                                             color: "currentColor",
-                                            children: j.intl.string(j.t["UKOtz+"]),
+                                            children: p.intl.string(p.t["UKOtz+"]),
                                         }),
                                     }),
                                 Object.getOwnPropertyDescriptors

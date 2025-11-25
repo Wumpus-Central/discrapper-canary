@@ -87480,19 +87480,6 @@ html .invoiceCancelRow__968a4 {
     gap: 12px
 }
 
-.container__138d8 {
-    align-content: center
-}
-
-.container__138d8.legacy__138d8 {
-    color: var(--text-muted);
-    padding: var(--space-6) var(--space-10)
-}
-
-.container__138d8.legacy__138d8:hover {
-    color: var(--text-primary)
-}
-
 .group_bc4a3e {
     margin-top: 20px
 }

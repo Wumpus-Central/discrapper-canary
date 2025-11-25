@@ -1,6 +1,6 @@
 n.d(t, {
     Gj: () => K,
-    Pt: () => W,
+    Pt: () => Y,
     VO: () => Q,
     ji: () => ee,
     q8: () => J,
@@ -169,7 +169,7 @@ function H(e) {
             },
             {
                 divider: !0,
-                settings: [j.s6.SOCIAL_LINKS, j.s6.TEMP_DEVELOPER_EDUCATION_SIDEBAR_ITEM, j.s6.CLIENT_DEBUG_INFO],
+                settings: [j.s6.SOCIAL_LINKS, j.s6.CLIENT_DEBUG_INFO],
             },
         ],
         a = {
@@ -179,7 +179,7 @@ function H(e) {
         };
     return t ? i : i.toSpliced(3, 0, a);
 }
-function Y() {
+function W() {
     let { shouldMergeGameSettings: e } = P.b.useExperiment({ location: "settings" }),
         { showRedesign: t } = D.b.useExperiment({ location: "settings" }),
         n = H({
@@ -204,7 +204,7 @@ function Y() {
         [n],
     );
 }
-function W() {
+function Y() {
     var e, t, n, o;
     let I = (0, m.YO)().length,
         D = (0, h.U)(),
@@ -216,8 +216,8 @@ function W() {
         { shouldMergeGameSettings: F } = P.b.useExperiment({ location: "settings" }),
         V = (0, u.Xo)({ location: "settings" }),
         H = null != (n = null == (e = N.default.getCurrentUser()) ? void 0 : e.isStaff()) && n,
-        Y = (0, O.y0)({ location: "settings" }),
-        W = (0, y.v4)({ location: "settings" }),
+        W = (0, O.y0)({ location: "settings" }),
+        Y = (0, y.v4)({ location: "settings" }),
         K = (0, s.Q)(),
         z = (0, g.Z)({ location: U.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
         q = (0, i.e7)([T.Z], () => T.Z.hasLibraryApplication()),
@@ -255,8 +255,8 @@ function W() {
                 shouldMergeGameSettings: F,
                 isKeywordFilteringEnabled: V,
                 isStaff: H,
-                isInappropriateConversationWarningEnabled: Y,
-                isInapproprateConversationsDefaultOn: W,
+                isInappropriateConversationWarningEnabled: W,
+                isInapproprateConversationsDefaultOn: Y,
                 paymentsBlocked: K,
                 isEligibleForQuests: z,
                 isStricterMessageRequestsEnabled: J,
@@ -275,12 +275,12 @@ function W() {
                 isChatMentionSuggestionsSettingEnabled: el,
                 isCrossDMSearchEnabledSettingVisible: ec,
             }),
-        [Q, Z, et, en, q, ee, X, k, $, z, W, Y, V, G, H, J, j, K, F, D, I, er, ei, ea, eo, es, el, ec],
+        [Q, Z, et, en, q, ee, X, k, $, z, Y, W, V, G, H, J, j, K, F, D, I, er, ei, ea, eo, es, el, ec],
     );
 }
 function K(e) {
     let t = k.R.useField("searchResults"),
-        n = W(),
+        n = Y(),
         r = n[e],
         i = Object.fromEntries(
             Object.entries(n).filter((e) => {
@@ -370,7 +370,7 @@ function X(e, t) {
     );
 }
 function Q() {
-    let e = W(),
+    let e = Y(),
         { shouldMergeGameSettings: t } = P.b.useExperiment({ location: "settings" }),
         { showRedesign: n } = D.b.useExperiment({ location: "settings" }),
         i = r.useMemo(
@@ -384,8 +384,8 @@ function Q() {
     return r.useMemo(() => q(i, e), [i, e]);
 }
 function J(e) {
-    let t = W(),
-        n = Y();
+    let t = Y(),
+        n = W();
     return r.useMemo(() => q(n, t, new Set(e)), [n, t, e]);
 }
 function $(e) {
@@ -393,7 +393,6 @@ function $(e) {
         Object.entries(e).filter((e) => {
             let [t, n] = e;
             return (
-                (n.section !== o.ID.CUSTOM || t === j.s6.TEMP_DEVELOPER_EDUCATION_SIDEBAR_ITEM) &&
                 null != n.searchableTitles &&
                 (null == n.predicate || n.predicate()) &&
                 (null == n.unsearchable || !1 === n.unsearchable)
