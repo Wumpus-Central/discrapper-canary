@@ -3367,7 +3367,7 @@
 .container__5a838 .labelContainer__5a838 {
     display: flex;
     flex-direction: column;
-    gap: 0;
+    gap: var(--space-4);
     grid-area: labels;
     margin-bottom: var(--space-8);
     min-width: 0
@@ -3386,11 +3386,6 @@
 .container__5a838[data-layout=horizontal-responsive] .control__5a838,
 .container__5a838[data-layout=horizontal] .control__5a838 {
     align-items: end
-}
-
-.container__5a838[data-layout=horizontal-responsive] .labelContainer__5a838,
-.container__5a838[data-layout=horizontal] .labelContainer__5a838 {
-    gap: var(--space-4)
 }
 
 .container__5a838[data-layout=horizontal-responsive] .helperTextContainer__5a838,
@@ -3483,7 +3478,6 @@
     }
 
     .container__5a838[data-layout=horizontal-responsive] .labelContainer__5a838 {
-        gap: 0;
         margin-bottom: var(--space-8)
     }
 
