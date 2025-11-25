@@ -240,7 +240,7 @@ let E = (e) => {
                 return e;
             })(e),
         );
-        let r = (0, c.e7)([b.Z], () => b.Z.getPremiumSubscription()),
+        let r = (0, c.e7)([b.Z], () => b.Z.getPremiumGroupSubscription()),
             [s, o] = i.useState([]);
         a()(null != r, "Subscription not found");
         let [l, u] = i.useState(1),
