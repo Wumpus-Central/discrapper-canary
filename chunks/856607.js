@@ -2,15 +2,15 @@ n.d(t, { Z: () => d });
 var r = n(54381);
 n(473749);
 var i = n(481060),
-    a = n(37234),
-    o = n(703656),
+    a = n(703656),
+    o = n(342386),
     s = n(981631),
     l = n(388032),
     c = n(433155),
     u = n(322221);
 function d() {
     let e = () => {
-        (0, o.uL)(s.Z5c.GUILD_DISCOVERY), a.xf();
+        (0, a.uL)(s.Z5c.GUILD_DISCOVERY), (0, o.default)();
     };
     return (0, r.jsxs)("div", {
         className: c.emptyState,
