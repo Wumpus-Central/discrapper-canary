@@ -5394,6 +5394,9 @@ class td extends o.C {
                 case 3:
                     a.animated = s.D5.internalBinaryRead(e, e.uint32(), n, a.animated);
                     break;
+                case 4:
+                    a.disableDoubleTap = s.D5.internalBinaryRead(e, e.uint32(), n, a.disableDoubleTap);
+                    break;
                 default:
                     let o = n.readUnknownField;
                     if ("throw" === o)
@@ -5409,7 +5412,9 @@ class td extends o.C {
     internalBinaryWrite(e, t, n) {
         e.emojiId && s.wA.internalBinaryWrite(e.emojiId, t.tag(1, r.TD.LengthDelimited).fork(), n).join(),
             e.emojiName && s.Gm.internalBinaryWrite(e.emojiName, t.tag(2, r.TD.LengthDelimited).fork(), n).join(),
-            e.animated && s.D5.internalBinaryWrite(e.animated, t.tag(3, r.TD.LengthDelimited).fork(), n).join();
+            e.animated && s.D5.internalBinaryWrite(e.animated, t.tag(3, r.TD.LengthDelimited).fork(), n).join(),
+            e.disableDoubleTap &&
+                s.D5.internalBinaryWrite(e.disableDoubleTap, t.tag(4, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -5430,6 +5435,12 @@ class td extends o.C {
             {
                 no: 3,
                 name: "animated",
+                kind: "message",
+                T: () => s.D5,
+            },
+            {
+                no: 4,
+                name: "disable_double_tap",
                 kind: "message",
                 T: () => s.D5,
             },

@@ -670,19 +670,22 @@ let eg = new Set(Object.values(g.Skl)),
         "textAndImages",
         "defaultReactionEmoji",
         (e) => {
-            let { emojiId: t, emojiName: n, animated: r } = null != e ? e : {};
+            var t, n;
+            let { emojiId: r, emojiName: i, animated: a } = null != e ? e : {};
             return {
-                emojiId: null == t ? void 0 : t.value,
-                emojiName: null == n ? void 0 : n.value,
-                animated: null == r ? void 0 : r.value,
+                emojiId: null == r ? void 0 : r.value,
+                emojiName: null == i ? void 0 : i.value,
+                animated: null == a ? void 0 : a.value,
+                disableDoubleTap: null != (n = null == e || null == (t = e.disableDoubleTap) ? void 0 : t.value) && n,
             };
         },
         (e) => {
-            let { emojiId: t, emojiName: n, animated: r } = e;
+            let { emojiId: t, emojiName: n, animated: r, disableDoubleTap: i } = e;
             return {
                 emojiId: o.wA.create({ value: t }),
                 emojiName: o.Gm.create({ value: n }),
                 animated: o.D5.create({ value: r }),
+                disableDoubleTap: o.D5.create({ value: i }),
             };
         },
         { comparator: s.Z },
