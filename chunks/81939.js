@@ -15,7 +15,10 @@ var i = n(473749),
 let c = 6;
 function u(e) {
     let { guildId: t, numWishlistItems: n = c } = e,
-        u = (0, o.Z)({ guildId: t }),
+        u = (0, o.Z)({
+            guildId: t,
+            location: "Wishlist Items for Social Layer Storefront",
+        }),
         d = i.useMemo(() => {
             if (null == u || null == u.storefront || "loading" === u.state || "partially-fetched" === u.state)
                 return [];

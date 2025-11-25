@@ -72,8 +72,11 @@ function R(e) {
     var n, t, a, p, k;
     let { match: j } = e,
         { guildId: S, gameShopPageIndex: Z, gameShopSkuId: R } = j.params,
-        { analyticsLocations: T } = (0, g.ZP)(u.Z.SOCIAL_LAYER_STOREFRONT),
-        L = (0, b.Z)({ guildId: S }),
+        { analyticsLocations: L } = (0, g.ZP)(u.Z.SOCIAL_LAYER_STOREFRONT),
+        T = (0, b.Z)({
+            guildId: S,
+            location: "Social Layer Storefront",
+        }),
         A = (0, s.e7)([f.default], () => f.default.getSessionId(), []),
         M = (0, s.e7)([x.Z], () => x.Z.get(R), [R]);
     (0, _.p2)();
@@ -82,13 +85,13 @@ function R(e) {
         y = i.useMemo(() => {
             if (null == Z) return 0;
             let e = parseInt(Z, 10);
-            return isNaN(e) || (null != L && null != L.storefront && e >= L.storefront.pages.length) ? 0 : e;
-        }, [Z, L]),
+            return isNaN(e) || (null != T && null != T.storefront && e >= T.storefront.pages.length) ? 0 : e;
+        }, [Z, T]),
         w =
-            null != (k = null == L || null == (t = L.storefront) || null == (n = t.pages[y]) ? void 0 : n.title)
+            null != (k = null == T || null == (t = T.storefront) || null == (n = t.pages[y]) ? void 0 : n.title)
                 ? k
                 : null,
-        G = (null == L || null == (p = L.storefront) || null == (a = p.pages[y]) ? void 0 : a.leaderboard) != null,
+        G = (null == T || null == (p = T.storefront) || null == (a = p.pages[y]) ? void 0 : a.leaderboard) != null,
         B = i.useMemo(
             () => ({
                 sessionId: O,
@@ -106,19 +109,19 @@ function R(e) {
     i.useEffect(() => {
         null != S && null != A && null == h.Z.getGuild(S) && (0, m.Ub)(S, {}, { shouldNavigate: !1 });
     }, [S, A]),
-    ((null == L ? void 0 : L.state) !== "fetched" && (null == L ? void 0 : L.state) !== "error") ||
+    ((null == T ? void 0 : T.state) !== "fetched" && (null == T ? void 0 : T.state) !== "error") ||
         null == S ||
-        (null == L ? void 0 : L.storefront) == null)
+        (null == T ? void 0 : T.storefront) == null)
         ? (0, l.jsx)("div", {
               className: o()(E.spinner, E.container),
               children: (0, l.jsx)(d.$jN, {}),
           })
         : (0, l.jsx)(g.Gt, {
-              value: T,
+              value: L,
               children: (0, l.jsx)(C.hL, {
                   newValue: B,
                   children: (0, l.jsx)(N, {
-                      storefront: L.storefront,
+                      storefront: T.storefront,
                       guildId: S,
                       selectedPageIndex: y,
                       selectedSku: M,

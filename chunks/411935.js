@@ -18,8 +18,8 @@ async function s(e) {
         let n = await r.tn.get({
             url: o.ANM.SOCIAL_LAYER_APPLICATION_STOREFRONT(e),
             rejectWithError: !0,
+            retries: 3,
         });
-        if (null == n.body || !n.ok) throw Error("Failed to fetch social layer storefront");
         i.Z.dispatch({
             type: "SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS",
             guildId: e,
