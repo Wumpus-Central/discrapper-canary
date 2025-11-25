@@ -1,10 +1,11 @@
 n.d(t, {
-    Yd: () => l,
-    o0: () => s,
+    Yd: () => d,
+    o0: () => u,
 });
 var r = n(818083),
-    i = n(128064);
-let a = (0, r.B)({
+    i = n(427164),
+    a = n(128064);
+let o = (0, r.B)({
         kind: "user",
         id: "2025-01_default_activity_status",
         label: "Guild activity status defaults",
@@ -17,7 +18,7 @@ let a = (0, r.B)({
             },
         ],
     }),
-    o = (0, r.B)({
+    s = (0, r.B)({
         kind: "user",
         id: "2025-01_default_activity_status_new_users",
         label: "Guild activity status defaults",
@@ -30,13 +31,24 @@ let a = (0, r.B)({
             },
         ],
     }),
-    s = (e) =>
-        a.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).enabled ||
+    l = (0, i.le)({
+        name: "2025-11-guild-activity-aggregate-carve-out",
+        kind: "user",
+        defaultConfig: { aggregateDefaultEnabled: !0 },
+        variations: {
+            0: { aggregateDefaultEnabled: !0 },
+            1: { aggregateDefaultEnabled: !1 },
+        },
+    }),
+    c = (e) => l.getConfig({ location: e }).aggregateDefaultEnabled && (0, a.c_)("DefaultGuildActivityExperiment"),
+    u = (e) =>
         o.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).enabled ||
-        (0, i.c_)("DefaultGuildActivityExperiment"),
-    l = (e) => {
-        let t = a.useExperiment({ location: e }, { autoTrackExposure: !1 }).enabled,
-            n = o.useExperiment({ location: e }, { autoTrackExposure: !1 }).enabled,
-            r = (0, i.pY)("DefaultGuildActivityExperiment");
-        return t || n || r;
+        s.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).enabled ||
+        c(e),
+    d = (e) => {
+        let t = o.useExperiment({ location: e }, { autoTrackExposure: !1 }).enabled,
+            n = s.useExperiment({ location: e }, { autoTrackExposure: !1 }).enabled,
+            r = l.useConfig({ location: e }).aggregateDefaultEnabled,
+            i = (0, a.pY)("DefaultGuildActivityExperiment");
+        return t || n || (r && i);
     };
