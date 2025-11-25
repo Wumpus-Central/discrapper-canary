@@ -58,12 +58,14 @@ let c = [1, 100, 1000, 10000],
 class d {
     start() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-            t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+            t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
         this.listeningUsers.clear(),
             this.listening.reset(),
             this.speaking.reset(),
             this.participation.reset(),
             this.muted.reset(),
+            this.deafened.reset(),
             this.connected.reset(),
             this.noiseCancellation.reset(),
             this.voiceFilterSpeaking.clear(),
@@ -76,10 +78,14 @@ class d {
                 this.userId === e ? this.onSpeaking(0 !== t) : this.onListening(0 !== t, e);
             }),
             this.onMuted(e),
+            this.onDeafened(t),
             this.connection.on(r.S.Mute, (e) => {
                 this.onMuted(e);
             }),
-            this.onVoiceFilterChanged(t),
+            this.connection.on(r.S.Deafen, (e) => {
+                this.onDeafened(e);
+            }),
+            this.onVoiceFilterChanged(n),
             this.connection.on(r.S.VoiceFilterChanged, (e) => {
                 this.onVoiceFilterChanged(e);
             });
@@ -112,6 +118,9 @@ class d {
     }
     onMuted(e) {
         e ? this.muted.start() : this.muted.stop();
+    }
+    onDeafened(e) {
+        e ? this.deafened.start() : this.deafened.stop();
     }
     onVoiceFilterChanged(e) {
         if ((this.voiceFilterSpeaking.forEach((e) => e.stop()), this.speaking.isRunning())) {
@@ -183,6 +192,7 @@ class d {
                     duration_participation_ms: this.participation.elapsed().asMilliseconds(),
                     duration_connected_ms: this.connected.elapsed().asMilliseconds(),
                     duration_muted_ms: this.muted.elapsed().asMilliseconds(),
+                    duration_deafened_ms: this.deafened.elapsed().asMilliseconds(),
                     duration_speaking_voice_filter_ids: [...this.voiceFilterSpeaking.keys()],
                     duration_noise_cancellation_enabled_ms: this.noiseCancellation.totalDuration(),
                     duration_speaking_voice_filter_ms: [...this.voiceFilterSpeaking.values()].map((e) =>
@@ -224,6 +234,7 @@ class d {
             a(this, "participation", void 0),
             a(this, "connected", void 0),
             a(this, "muted", void 0),
+            a(this, "deafened", void 0),
             a(this, "noiseCancellation", void 0),
             a(this, "voiceFilterSpeaking", void 0),
             a(this, "timesUntilSpeakingDurationMilestonesMs", void 0),
@@ -243,6 +254,7 @@ class d {
             (this.participation = new i.G9(this.timestampProducer)),
             (this.connected = new i.G9(this.timestampProducer)),
             (this.muted = new i.G9(this.timestampProducer)),
+            (this.deafened = new i.G9(this.timestampProducer)),
             (this.noiseCancellation = new i.sX(t.getNoiseCancellation(), this.timestampProducer)),
             (this.voiceFilterSpeaking = new Map());
     }

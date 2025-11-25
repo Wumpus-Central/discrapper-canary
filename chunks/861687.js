@@ -924,7 +924,7 @@ class eN extends f.Z {
                     this._systemResources.setLastBattery(),
                     (this._noiseCancellationError = 0),
                     (this._voiceDuration = new ei.Z(this.userId, f)),
-                    this._voiceDuration.start(f.getSelfMute(), f.getVoiceFilterId()),
+                    this._voiceDuration.start(f.getSelfMute(), f.getSelfDeaf(), f.getVoiceFilterId()),
                     (this.protocol = r),
                     r)
                 ) {

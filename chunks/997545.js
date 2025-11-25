@@ -444,8 +444,11 @@ class L extends _.Z {
     getSelfMute() {
         return this.selfMute;
     }
+    getSelfDeaf() {
+        return this.selfDeaf;
+    }
     setSelfDeaf(e) {
-        (this.selfDeaf = e), this.conn.setSelfDeafen(e);
+        (this.selfDeaf = e), this.conn.setSelfDeafen(e), this.emit(m.Sh.Deafen, e);
     }
     setSoundshareSource(e, t) {
         if ((this.soundshareId === e && this.soundshareSentSpeakingEvent) || this.context !== v.Yn.STREAM) return;

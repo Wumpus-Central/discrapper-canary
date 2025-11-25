@@ -84,6 +84,10 @@ class E extends s.Z {
     }
     setSelfDeaf(e) {
         for (let t of ((this.selfDeaf = e), Object.keys(this.outputs))) this.outputs[t].mute = e || this.localMutes[t];
+        this.emit(l.Sh.Deafen, e);
+    }
+    getSelfDeaf() {
+        return this.selfDeaf;
     }
     setLocalMute(e, t) {
         (this.localMutes[e] = t),
