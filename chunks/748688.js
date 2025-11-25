@@ -7,8 +7,8 @@ _.d(e, {
     db: () => p,
     dz: () => U,
     nm: () => y,
-    ph: () => G,
-    x5: () => L,
+    ph: () => m,
+    x5: () => f,
 });
 var a = _(559508),
     r = _(696486),
@@ -18,20 +18,20 @@ var a = _(559508),
     i = _(394798),
     c = _(617726),
     s = _(899517),
-    l = _(454463),
-    I = _(163162);
+    I = _(454463),
+    l = _(163162);
 let R = String(0),
     N = "",
     A = "",
     u = "",
-    T = (I.m9.navigator && I.m9.navigator.userAgent) || "",
+    T = (l.m9.navigator && l.m9.navigator.userAgent) || "",
     d = "",
     O =
-        (I.m9.navigator && I.m9.navigator.language) ||
-        (I.m9.navigator && I.m9.navigator.languages && I.m9.navigator.languages["0"]) ||
+        (l.m9.navigator && l.m9.navigator.language) ||
+        (l.m9.navigator && l.m9.navigator.languages && l.m9.navigator.languages["0"]) ||
         "",
-    f = I.m9.navigator && I.m9.navigator.userAgentData;
-function L(t) {
+    L = l.m9.navigator && l.m9.navigator.userAgentData;
+function f(t) {
     return "pageload" === (0, r.XU)(t).op;
 }
 function p(t, e) {
@@ -52,11 +52,10 @@ function C(t) {
         e
     );
 }
-"object" == typeof f &&
-    null !== f &&
-    "getHighEntropyValues" in f &&
-    f
-        .getHighEntropyValues(["architecture", "model", "platform", "platformVersion", "fullVersionList"])
+"object" == typeof L &&
+    null !== L &&
+    "getHighEntropyValues" in L &&
+    L.getHighEntropyValues(["architecture", "model", "platform", "platformVersion", "fullVersionList"])
         .then((t) => {
             if (
                 ((N = t.platform || ""),
@@ -74,9 +73,9 @@ let P = new WeakMap(),
     h = !1,
     D = 30000;
 function S() {
-    let t = I.m9.Profiler;
+    let t = l.m9.Profiler;
     if ("function" != typeof t) {
-        l.X &&
+        I.X &&
             o.kg.log(
                 "[Profiling] Profiling is not supported by this browser, Profiler interface missing on window object.",
             );
@@ -89,7 +88,7 @@ function S() {
             maxBufferSize: e,
         });
     } catch (t) {
-        l.X &&
+        I.X &&
             (o.kg.log(
                 "[Profiling] Failed to initialize the Profiling constructor, this is likely due to a missing 'Document-Policy': 'js-profiling' header.",
             ),
@@ -100,17 +99,17 @@ function S() {
 function g(t) {
     if (h)
         return (
-            l.X && o.kg.log("[Profiling] Profiling has been disabled for the duration of the current user session."), !1
+            I.X && o.kg.log("[Profiling] Profiling has been disabled for the duration of the current user session."), !1
         );
     if (!t.isRecording())
-        return l.X && o.kg.log("[Profiling] Discarding profile because transaction was not sampled."), !1;
+        return I.X && o.kg.log("[Profiling] Discarding profile because transaction was not sampled."), !1;
     let e = (0, n.s3)(),
         _ = e && e.getOptions();
-    if (!_) return l.X && o.kg.log("[Profiling] Profiling disabled, no options found."), !1;
+    if (!_) return I.X && o.kg.log("[Profiling] Profiling disabled, no options found."), !1;
     let a = _.profilesSampleRate;
     return (
         ("number" != typeof a && "boolean" != typeof a) || ("number" == typeof a && isNaN(a))
-            ? (l.X &&
+            ? (I.X &&
                   o.kg.warn(
                       `[Profiling] Invalid sample rate. Sample rate must be a boolean or a number between 0 and 1. Got ${JSON.stringify(a)} of type ${JSON.stringify(typeof a)}.`,
                   ),
@@ -118,17 +117,17 @@ function g(t) {
             : !0 !== a &&
               !1 !== a &&
               (a < 0 || a > 1) &&
-              (l.X && o.kg.warn(`[Profiling] Invalid sample rate. Sample rate must be between 0 and 1. Got ${a}.`), 1)
+              (I.X && o.kg.warn(`[Profiling] Invalid sample rate. Sample rate must be between 0 and 1. Got ${a}.`), 1)
     )
-        ? (l.X && o.kg.warn("[Profiling] Discarding profile because of invalid sample rate."), !1)
+        ? (I.X && o.kg.warn("[Profiling] Discarding profile because of invalid sample rate."), !1)
         : a
           ? !!(!0 === a || Math.random() < a) ||
-            (l.X &&
+            (I.X &&
                 o.kg.log(
                     `[Profiling] Discarding profile because it's not included in the random sample (sampling rate = ${Number(a)})`,
                 ),
             !1)
-          : (l.X &&
+          : (I.X &&
                 o.kg.log(
                     "[Profiling] Discarding profile because a negative sampling decision was inherited or profileSampleRate is set to 0",
                 ),
@@ -138,26 +137,26 @@ function y(t, e, _, r) {
     var c;
     if (
         !(_.samples.length < 2
-            ? (l.X && o.kg.log("[Profiling] Discarding profile because it contains less than 2 samples"), !1)
+            ? (I.X && o.kg.log("[Profiling] Discarding profile because it contains less than 2 samples"), !1)
             : !!_.frames.length ||
-              (l.X && o.kg.log("[Profiling] Discarding profile because it contains no frames"), !1))
+              (I.X && o.kg.log("[Profiling] Discarding profile because it contains no frames"), !1))
     )
         return null;
     if ("transaction" !== r.type)
         throw TypeError("Profiling events may only be attached to transactions, this should never occur.");
     if (null == _)
         throw TypeError(`Cannot construct profiling event envelope without a valid profile. Got ${_} instead.`);
-    let f = (function (t) {
+    let L = (function (t) {
             let e = t && t.contexts && t.contexts.trace && t.contexts.trace.trace_id;
             return ("string" == typeof e &&
                 32 !== e.length &&
-                l.X &&
+                I.X &&
                 o.kg.log(`[Profiling] Invalid traceId: ${e} on profiled event`),
             "string" != typeof e)
                 ? ""
                 : e;
         })(r),
-        L =
+        f =
             "thread_metadata" in (c = _)
                 ? c
                 : (function (t) {
@@ -222,7 +221,7 @@ function y(t, e, _, r) {
         environment: r.environment || a.J,
         runtime: {
             name: "javascript",
-            version: I.m9.navigator.userAgent,
+            version: l.m9.navigator.userAgent,
         },
         os: {
             name: N,
@@ -273,12 +272,12 @@ function y(t, e, _, r) {
                 return c;
             })(_.resources),
         },
-        profile: L,
+        profile: f,
         transactions: [
             {
                 name: r.transaction || "",
                 id: r.event_id || (0, i.DM)(),
-                trace_id: f,
+                trace_id: L,
                 active_thread_id: R,
                 relative_start_ns: "0",
                 relative_end_ns: ((C - p) * 1000000).toFixed(0),
@@ -286,17 +285,17 @@ function y(t, e, _, r) {
         ],
     };
 }
-let m = new Map();
-function G() {
-    return m.size;
+let G = new Map();
+function m() {
+    return G.size;
 }
 function v(t) {
-    let e = m.get(t);
-    return e && m.delete(t), e;
+    let e = G.get(t);
+    return e && G.delete(t), e;
 }
 function U(t, e) {
-    if ((m.set(t, e), m.size > 30)) {
-        let t = m.keys().next().value;
-        m.delete(t);
+    if ((G.set(t, e), G.size > 30)) {
+        let t = G.keys().next().value;
+        G.delete(t);
     }
 }
