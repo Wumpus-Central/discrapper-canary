@@ -366,9 +366,21 @@ class w extends (r = a.Component) {
                 e.removeEventListener("resize", this.updatePosition),
             null == (n = (r = this.props).onUnmount) || n.call(r);
     }
+    calculateMaxHeight() {
+        let e = this.elementRef.current;
+        if (null == e) return;
+        let t = (0, h.wL)(e),
+            n = this.state.style;
+        return null != n.top
+            ? Math.max(0, t.offsetHeight - n.top - T)
+            : null != n.bottom
+              ? Math.max(0, t.offsetHeight - n.bottom - T)
+              : Math.max(0, t.offsetHeight - 2 * T);
+    }
     render() {
         let { id: e, className: t, children: n, fixed: r, disablePointerEvents: a, clickTrap: o = !1 } = this.props,
-            { position: l, isPositioned: c, nudge: u } = this.state;
+            { position: l, isPositioned: c, nudge: u } = this.state,
+            p = this.calculateMaxHeight();
         return (0, i.jsx)("div", {
             className: s()({
                 [m.clickTrapContainer]: !0,
@@ -386,7 +398,9 @@ class w extends (r = a.Component) {
                                     [m.emptyError]: !1,
                                     [m.disabledPointerEvents]: a,
                                 }),
-                                style: E({ position: r ? "fixed" : "absolute" }, this.state.style),
+                                style: y(E({ position: r ? "fixed" : "absolute" }, this.state.style), {
+                                    "--reference-position-layer-max-height": null != p ? "".concat(p, "px") : void 0,
+                                }),
                                 ref: this.elementRef,
                                 children: (0, i.jsx)(d.Jc, {
                                     containerRef: this.elementRef,

@@ -52399,7 +52399,7 @@ h2.title_feb59c {
     cursor: default;
     display: flex;
     height: auto;
-    max-height: calc(100vh - var(--custom-menu-viewport-padding)*2);
+    max-height: var(--reference-position-layer-max-height, calc(100vh - var(--custom-menu-viewport-padding)*2));
     z-index: 1
 }
 
