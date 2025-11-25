@@ -1,70 +1,76 @@
-n.d(t, { Z: () => k });
+n.d(t, { Z: () => j });
 var r = n(54381),
     i = n(473749),
     a = n(705512),
-    o = n(267843),
-    s = n(442837),
-    l = n(481060),
-    c = n(278323),
-    u = n(224706),
-    d = n(763472),
-    f = n(758199),
-    _ = n(914498),
-    p = n(371991),
-    h = n(561308),
-    m = n(813370),
-    g = n(567409),
-    E = n(181106),
-    b = n(823379),
-    y = n(758371),
-    O = n(931271),
-    v = n(565201),
-    I = n(150248),
-    T = n(691731),
-    S = n(935153),
-    A = n(620662),
-    C = n(275920),
-    N = n(561766),
-    R = n(404174),
-    P = n(691991),
-    D = n(981631),
-    w = n(967249),
-    L = n(388032),
-    x = n(837262);
-function M(e) {
+    o = n(657707),
+    s = n(267843),
+    l = n(442837),
+    c = n(481060),
+    u = n(278323),
+    d = n(224706),
+    f = n(763472),
+    _ = n(758199),
+    p = n(914498),
+    h = n(371991),
+    m = n(561308),
+    g = n(813370),
+    E = n(567409),
+    b = n(181106),
+    y = n(823379),
+    O = n(758371),
+    v = n(931271),
+    I = n(565201),
+    T = n(150248),
+    S = n(691731),
+    A = n(935153),
+    C = n(620662),
+    N = n(275920),
+    R = n(561766),
+    P = n(404174),
+    D = n(691991),
+    w = n(981631),
+    L = n(967249),
+    x = n(388032),
+    M = n(837262);
+function k(e) {
     let { presenceActivity: t, remoteJoinPlatform: n } = e,
-        a = (0, N.Cx)({
+        a = (0, R.Cx)({
             platforms: null == t ? void 0 : t.supported_platforms,
-            currentPlatform: D.M7m.DESKTOP,
+            currentPlatform: w.M7m.DESKTOP,
         }),
-        s = i.useMemo(
+        l = i.useMemo(
             () =>
                 a
                     .map((e) => {
                         switch (e) {
-                            case N.Ol.MOBILE:
-                                return (0, r.jsx)(l.AtH, {
+                            case R.Ol.MOBILE:
+                                return (0, r.jsx)(c.AtH, {
                                     size: "xxs",
                                     color: "currentColor",
                                 });
-                            case N.Ol.ANDROID:
-                                return (0, r.jsx)(R.j, {
-                                    width: o.Z.xxs,
-                                    height: o.Z.xxs,
+                            case R.Ol.ANDROID:
+                                return (0, r.jsx)(P.j, {
+                                    width: s.Z.xxs,
+                                    height: s.Z.xxs,
                                     color: "currentColor",
                                 });
-                            case N.Ol.IOS:
-                                return (0, r.jsx)(l.gLQ, {
+                            case R.Ol.IOS:
+                                return (0, r.jsx)(c.gLQ, {
                                     size: "xxs",
                                     color: "currentColor",
                                 });
-                            case N.Ol.PLAYSTATION:
-                                return (0, r.jsx)(l.Tsp, {
+                            case R.Ol.PLAYSTATION:
+                                return (0, r.jsx)(c.Tsp, {
                                     size: "xxs",
                                     color: "currentColor",
                                 });
-                            case N.Ol.XBOX:
-                                return (0, r.jsx)(l.Mko, {
+                            case R.Ol.XBOX:
+                                return (0, r.jsx)(c.Mko, {
+                                    size: "xxs",
+                                    color: "currentColor",
+                                });
+                            case R.Ol.VR:
+                                return (0, r.jsx)(o.Pb9, {
                                     size: "xxs",
                                     color: "currentColor",
                                 });
@@ -72,44 +78,44 @@ function M(e) {
                                 return null;
                         }
                     })
-                    .filter(b.lm),
+                    .filter(y.lm),
             [a],
         );
-    if (!(null != n || s.length > 0)) return null;
-    let c = null != n ? (0, S.V)(n) : L.intl.string(L.t["4dGUP0"]);
+    if (!(null != n || l.length > 0)) return null;
+    let u = null != n ? (0, A.V)(n) : x.intl.string(x.t["4dGUP0"]);
     return (0, r.jsxs)("div", {
-        className: x.footer,
+        className: M.footer,
         children: [
             (0, r.jsx)("div", {
-                className: x.footerSupportedPlatformIconsContainer,
-                children: s.map((e, t) =>
+                className: M.footerSupportedPlatformIconsContainer,
+                children: l.map((e, t) =>
                     (0, r.jsx)(
                         "div",
                         {
-                            className: x.footerSupportedPlatformIconContainer,
+                            className: M.footerSupportedPlatformIconContainer,
                             children: e,
                         },
                         t,
                     ),
                 ),
             }),
-            (0, r.jsx)(l.Text, {
+            (0, r.jsx)(c.Text, {
                 variant: "text-sm/medium",
                 color: "currentColor",
-                className: x.footerSupportedPlatformText,
-                children: c,
+                className: M.footerSupportedPlatformText,
+                children: u,
             }),
         ],
     });
 }
-function k(e) {
+function j(e) {
     var t, n, o;
     let {
-            message: b,
-            application: S,
-            applicationName: N,
+            message: s,
+            application: y,
+            applicationName: A,
             channel: R,
-            header: k,
+            header: P,
             currentUserId: j,
             launchableAppId: U,
             isEmbeddedApplication: G,
@@ -118,32 +124,32 @@ function k(e) {
             onClickContent: F,
             iconSrc: V,
             onView: H,
-            presenceActivity: Y,
-            currentUserPresenceActivity: W,
+            presenceActivity: W,
+            currentUserPresenceActivity: Y,
             hideParty: K,
             partyStatusElement: z,
             analyticsLocations: q,
         } = e,
         X =
-            null != (o = null == Y || null == (t = Y.timestamps) ? void 0 : t.start)
+            null != (o = null == W || null == (t = W.timestamps) ? void 0 : t.start)
                 ? o
-                : null == Y
+                : null == W
                   ? void 0
-                  : Y.created_at,
+                  : W.created_at,
         Q = i.useMemo(() => {
             var e;
             return null != X
                 ? (0, r.jsxs)("div", {
-                      className: x.timestampContainer,
+                      className: M.timestampContainer,
                       children: [
-                          (0, r.jsx)(l.iWm, {
+                          (0, r.jsx)(c.iWm, {
                               size: "xxs",
                               color: "currentColor",
                           }),
-                          (0, r.jsx)(p.x3, {
+                          (0, r.jsx)(h.x3, {
                               entry: {
                                   start: X,
-                                  end: null == Y || null == (e = Y.timestamps) ? void 0 : e.end,
+                                  end: null == W || null == (e = W.timestamps) ? void 0 : e.end,
                               },
                               textColor: "currentColor",
                               textTabularNumbers: !1,
@@ -152,19 +158,19 @@ function k(e) {
                       ],
                   })
                 : null;
-        }, [X, null == Y || null == (n = Y.timestamps) ? void 0 : n.end]),
-        J = (0, I.H)(b),
-        $ = (0, g.N)(S.id),
+        }, [X, null == W || null == (n = W.timestamps) ? void 0 : n.end]),
+        J = (0, T.H)(s),
+        $ = (0, E.N)(y.id),
         ee = i.useMemo(
             () =>
-                $.some((e) => (0, h.ig)(e) === a.o.GLOBAL)
+                $.some((e) => (0, m.ig)(e) === a.o.GLOBAL)
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(l.YqE, {
+                              (0, r.jsx)(c.YqE, {
                                   size: "xxs",
                                   color: "currentColor",
                               }),
-                              L.intl.string(L.t.TsWCdW),
+                              x.intl.string(x.t.TsWCdW),
                           ],
                       })
                     : null,
@@ -172,72 +178,72 @@ function k(e) {
         ),
         et = i.useMemo(
             () =>
-                (0, r.jsxs)(l.Text, {
+                (0, r.jsxs)(c.Text, {
                     variant: "text-xs/normal",
-                    className: x.tagline,
+                    className: M.tagline,
                     color: "none",
                     lineClamp: 2,
-                    children: [J ? (0, y.$v)(b, N, R, j, !1) : Q, J ? null : ee],
+                    children: [J ? (0, O.$v)(s, A, R, j, !1) : Q, J ? null : ee],
                 }),
-            [J, b, N, R, j, Q, ee],
+            [J, s, A, R, j, Q, ee],
         ),
         en = i.useMemo(
             () =>
                 (0, r.jsxs)("div", {
-                    className: x.info,
+                    className: M.info,
                     children: [et, K || J ? null : z],
                 }),
             [et, K, J, z],
         ),
         er = !!U,
-        ei = (0, m.A)(S),
-        { canJoin: ea, remoteJoinPlatform: eo } = (0, O.h)({
-            presenceActivity: Y,
-            currentUserPresenceActivity: W,
+        ei = (0, g.A)(y),
+        { canJoin: ea, remoteJoinPlatform: eo } = (0, v.h)({
+            presenceActivity: W,
+            currentUserPresenceActivity: Y,
             currentUserId: j,
-            message: b,
-            application: S,
+            message: s,
+            application: y,
             isEmbeddedApplication: G,
             isFrameApplication: ei,
             isGameLaunchable: er,
         }),
-        es = (0, O.p)(Y, W, b, S),
-        el = (0, v.L)(Y, b, S, j),
-        ec = (0, T.g)(W, Y),
-        eu = (0, s.e7)(
-            [E.Z],
-            () => null != Y && null != Y.application_id && E.Z.getState(Y.application_id, D.mFx.JOIN) === D.OcF.LOADING,
+        es = (0, v.p)(W, Y, s, y),
+        el = (0, I.L)(W, s, y, j),
+        ec = (0, S.g)(Y, W),
+        eu = (0, l.e7)(
+            [b.Z],
+            () => null != W && null != W.application_id && b.Z.getState(W.application_id, w.mFx.JOIN) === w.OcF.LOADING,
         ),
         ed = i.useMemo(
             () =>
                 ea
                     ? [
                           {
-                              label: L.intl.string(L.t.VJlc0S),
-                              trackingArea: _.j_.JOIN,
+                              label: x.intl.string(x.t.VJlc0S),
+                              trackingArea: p.j_.JOIN,
                               submitting: eu,
                               onClick: () => {
                                   var e, t;
-                                  u.Z.join({
-                                      userId: b.author.id,
-                                      sessionId: Y.session_id,
-                                      applicationId: Y.application_id,
+                                  d.Z.join({
+                                      userId: s.author.id,
+                                      sessionId: W.session_id,
+                                      applicationId: W.application_id,
                                       channelId: R.id,
-                                      messageId: b.id,
-                                      source: D.Sbl.MESSAGE_EMBED,
+                                      messageId: s.id,
+                                      source: w.Sbl.MESSAGE_EMBED,
                                       analyticsLocations: q,
-                                      embedded: (0, A.Z)(Y, D.xjy.EMBEDDED),
-                                      remotePartyId: null != eo ? (null == (e = Y.party) ? void 0 : e.id) : void 0,
+                                      embedded: (0, C.Z)(W, w.xjy.EMBEDDED),
+                                      remotePartyId: null != eo ? (null == (e = W.party) ? void 0 : e.id) : void 0,
                                   }),
-                                      (0, C.Z)({
-                                          type: D.q5t.JOIN,
-                                          source: D.Sbl.MESSAGE_EMBED,
-                                          userId: b.author.id,
+                                      (0, N.Z)({
+                                          type: w.q5t.JOIN,
+                                          source: w.Sbl.MESSAGE_EMBED,
+                                          userId: s.author.id,
                                           guildId: R.guild_id,
                                           channelId: R.id,
-                                          applicationId: Y.application_id,
-                                          partyId: null == (t = Y.party) ? void 0 : t.id,
-                                          messageId: b.id,
+                                          applicationId: W.application_id,
+                                          partyId: null == (t = W.party) ? void 0 : t.id,
+                                          messageId: s.id,
                                           analyticsLocations: q,
                                           remoteJoinPlatform: eo,
                                       });
@@ -247,36 +253,36 @@ function k(e) {
                     : es
                       ? [
                             {
-                                label: L.intl.string(L.t.VJlc0S),
-                                trackingArea: _.j_.SYNC,
+                                label: x.intl.string(x.t.VJlc0S),
+                                trackingArea: p.j_.SYNC,
                                 onClick: () => {
-                                    null != Y && d.Z_(Y, b.author.id);
+                                    null != W && f.Z_(W, s.author.id);
                                 },
                             },
                         ]
                       : el
                         ? [
                               {
-                                  label: L.intl.string(L.t["hC/Zey"]),
-                                  trackingArea: _.j_.INVITE,
+                                  label: x.intl.string(x.t["hC/Zey"]),
+                                  trackingArea: p.j_.INVITE,
                                   onClick: () => {
-                                      null != Y &&
-                                          c.Z.sendActivityInvite({
-                                              type: D.mFx.JOIN,
+                                      null != W &&
+                                          u.Z.sendActivityInvite({
+                                              type: w.mFx.JOIN,
                                               channelId: R.id,
-                                              activity: Y,
-                                              location: D.Sbl.MESSAGE_EMBED,
+                                              activity: W,
+                                              location: w.Sbl.MESSAGE_EMBED,
                                           });
                                   },
-                                  disabled: b.author.id === j,
-                                  disabledReason: b.author.id === j ? L.intl.string(L.t.IBl8ID) : void 0,
+                                  disabled: s.author.id === j,
+                                  disabledReason: s.author.id === j ? x.intl.string(x.t.IBl8ID) : void 0,
                               },
                           ]
                         : ec
                           ? [
                                 {
-                                    label: L.intl.string(L.t.KC26NR),
-                                    trackingArea: _.j_.PLAY,
+                                    label: x.intl.string(x.t.KC26NR),
+                                    trackingArea: p.j_.PLAY,
                                     onClick: () => {},
                                     disabled: !0,
                                 },
@@ -284,38 +290,38 @@ function k(e) {
                           : null != B
                             ? [B]
                             : [],
-            [ea, es, el, ec, B, b.author.id, b.id, Y, R.id, R.guild_id, q, eo, j, eu],
+            [ea, es, el, ec, B, s.author.id, s.id, W, R.id, R.guild_id, q, eo, j, eu],
         ),
-        ef = ed.some((e) => e.trackingArea === _.j_.CLOUD_PLAY);
-    (0, P.Z)(ef, q);
+        ef = ed.some((e) => e.trackingArea === p.j_.CLOUD_PLAY);
+    (0, D.Z)(ef, q);
     let e_ = i.useMemo(
         () =>
             ec
                 ? null
-                : (0, r.jsx)(M, {
-                      presenceActivity: Y,
+                : (0, r.jsx)(k, {
+                      presenceActivity: W,
                       remoteJoinPlatform: eo,
                   }),
-        [ec, Y, eo],
+        [ec, W, eo],
     );
-    return (0, r.jsx)(f.W, {
-        header: k,
-        title: N,
+    return (0, r.jsx)(_.W, {
+        header: P,
+        title: A,
         staticBannerSrc: Z,
         onClickBanner: F,
-        bannerAspectRatio: f.u.ACTIVITY,
+        bannerAspectRatio: _.u.ACTIVITY,
         iconSrc: null != V ? V : void 0,
         info: en,
         actions: ed,
         onClickContent: F,
         trackingConfig: {
-            id: S.id,
-            linkType: w.U.RICH_PRESENCE_INVITE,
+            id: y.id,
+            linkType: L.U.RICH_PRESENCE_INVITE,
             onView: H,
-            referrerId: b.author.id,
+            referrerId: s.author.id,
             guildId: R.guild_id,
-            channelId: b.channel_id,
-            messageId: b.id,
+            channelId: s.channel_id,
+            messageId: s.id,
         },
         footer: e_,
     });

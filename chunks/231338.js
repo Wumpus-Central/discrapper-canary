@@ -32,11 +32,11 @@ n.d(t, {
     TC: () => H,
     U6: () => x,
     Uk: () => C,
-    V6: () => W,
+    V6: () => Y,
     Vq: () => Z,
     Vz: () => y,
     X5: () => m,
-    X6: () => Y,
+    X6: () => W,
     X7: () => P,
     XM: () => et,
     Zu: () => j,
@@ -117,7 +117,9 @@ var h = (function (e) {
         );
     })({}),
     m = (function (e) {
-        return (e.DESKTOP = "desktop"), (e.WEB = "web"), (e.MOBILE = "mobile"), (e.UNKNOWN = "unknown"), e;
+        return (
+            (e.DESKTOP = "desktop"), (e.WEB = "web"), (e.MOBILE = "mobile"), (e.VR = "vr"), (e.UNKNOWN = "unknown"), e
+        );
     })({});
 let g = "6Lef5iQTAAAAAKeIvIY-DeexoO3gj7ryl9rLMEnn";
 var E = (function (e) {
@@ -324,8 +326,8 @@ let G = Object.freeze({
         G.MODERATE_MEMBERS,
     ],
     H = i.$e(...V),
-    Y = 1,
-    W = 6463,
+    W = 1,
+    Y = 6463,
     K = 10,
     z = "RpcApplicationLogger";
 var q = (function (e) {

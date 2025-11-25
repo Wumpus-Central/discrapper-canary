@@ -20,7 +20,7 @@ n.d(t, {
     NA: () => eS,
     OW: () => e_,
     Ok: () => eO,
-    Ou: () => W,
+    Ou: () => Y,
     P4: () => ey,
     Pe: () => H,
     QK: () => ew,
@@ -46,7 +46,7 @@ n.d(t, {
     bh: () => es,
     bm: () => ef,
     cC: () => T,
-    cP: () => Y,
+    cP: () => W,
     co: () => eE,
     d$: () => F,
     d4: () => L,
@@ -69,7 +69,7 @@ n.d(t, {
     kJ: () => X,
     kU: () => ei,
     l4: () => e0,
-    lk: () => eW,
+    lk: () => eY,
     mX: () => q,
     nc: () => eA,
     nh: () => eK,
@@ -85,7 +85,7 @@ n.d(t, {
     xM: () => ed,
     xq: () => ee,
     zA: () => z,
-    zY: () => eY,
+    zY: () => eW,
 }),
     n(388685);
 var r = n(392711),
@@ -305,7 +305,7 @@ let C = (0, _.Zc)(
         },
         (e) => o.D5.create({ value: e }),
     ),
-    Y = (0, _.Zc)(
+    W = (0, _.Zc)(
         "privacy",
         "allowActivityPartyPrivacyFriends",
         (e) => {
@@ -314,7 +314,7 @@ let C = (0, _.Zc)(
         },
         (e) => o.D5.create({ value: e }),
     ),
-    W = (0, _.Zc)(
+    Y = (0, _.Zc)(
         "privacy",
         "allowActivityPartyPrivacyVoiceChannel",
         (e) => {
@@ -879,7 +879,7 @@ let eB = (0, _.TG)({
         baseSetting: (0, _.Zc)(
             "privacy",
             "defaultGuildsActivityRestrictedV2",
-            (e) => e,
+            (e) => (e === a.GI.ACTIVITY_STATUS_UNSET ? null : e),
             (e) => (null != e ? e : a.GI.ACTIVITY_STATUS_OFF),
         ),
         isEligible: () => (0, d.o0)("user_settings"),
@@ -917,13 +917,13 @@ let eB = (0, _.TG)({
         (e) => (null != e ? e : a.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET),
         (e) => e,
     ),
-    eY = (0, _.Zc)(
+    eW = (0, _.Zc)(
         "ads",
         "alwaysDeliver",
         (e) => null != e && e,
         (e) => e,
     ),
-    eW = (e) => {
+    eY = (e) => {
         let {
             explicitContentGuilds: t,
             explicitContentFriendDm: n,
@@ -943,7 +943,7 @@ let eB = (0, _.TG)({
             explicitContentNonFriendDm: null != r ? r : void 0,
         };
     },
-    ez = (0, _.Zc)("textAndImages", "explicitContentSettings", eW, eK),
+    ez = (0, _.Zc)("textAndImages", "explicitContentSettings", eY, eK),
     eq = (e) => {
         let { goreContentGuilds: t, goreContentFriendDm: n, goreContentNonFriendDm: r } = null != e ? e : {};
         return {

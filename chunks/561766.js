@@ -14,6 +14,7 @@ var r = n(473749),
             (e.IOS = "ios"),
             (e.PLAYSTATION = "playstation"),
             (e.XBOX = "xbox"),
+            (e.VR = "vr"),
             e
         );
     })({});
@@ -41,7 +42,7 @@ function s(e) {
           (r.has(i.M7m.PS4) || r.has(i.M7m.PS5)) && a.push("playstation"),
           r.has(i.M7m.XBOX) && a.push("xbox"),
           r.has(i.M7m.DESKTOP) && a.push("desktop"),
-          r.has(i.M7m.META_QUEST) && a.push("mobile"),
+          r.has(i.M7m.META_QUEST) && a.push("vr"),
           a);
 }
 function l(e) {
