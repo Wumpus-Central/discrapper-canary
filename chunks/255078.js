@@ -212,6 +212,9 @@ class b extends a.Z {
     get hasAnyPremiumNitro() {
         return this.items.some((e) => _.dJ.has(e.planId));
     }
+    get hasAnyPremiumGroup() {
+        return this.items.some((e) => e.planId === _.Xh.PREMIUM_GROUP_MONTH);
+    }
     hasPremiumAtLeast(e) {
         return (
             !!this.isPremium &&

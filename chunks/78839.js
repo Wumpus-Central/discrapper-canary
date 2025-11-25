@@ -253,6 +253,9 @@ class B extends (r = i.ZP.Store) {
     getLastLazyPerkSync() {
         return A;
     }
+    getPremiumGroupSubscription() {
+        return G(c.NYc.PREMIUM, (e) => e.hasAnyPremiumGroup, !0);
+    }
 }
 d(B, "displayName", "SubscriptionStore");
 let Z = new B(a.Z, {

@@ -24,7 +24,7 @@ n.d(t, {
     IW: () => S,
     Lw: () => eC,
     M_: () => e3,
-    NV: () => Y,
+    NV: () => W,
     Nl: () => eh,
     OT: () => el,
     PremiumTypes: () => l,
@@ -33,13 +33,13 @@ n.d(t, {
     QP: () => eU,
     Qh: () => e5,
     RU: () => eu,
-    Rg: () => W,
+    Rg: () => Y,
     Rr: () => x,
     Rt: () => er,
     Se: () => e7,
     Si: () => p,
     T7: () => eK,
-    TD: () => eY,
+    TD: () => eW,
     TL: () => Q,
     Tp: () => ez,
     UA: () => k,
@@ -57,7 +57,7 @@ n.d(t, {
     Zh: () => u,
     _k: () => eM,
     a$: () => e6,
-    a1: () => eW,
+    a1: () => eY,
     a7: () => $,
     b6: () => d,
     bg: () => eF,
@@ -186,6 +186,7 @@ var b = (function (e) {
         (e.PREMIUM_6_MONTH_GUILD = "944037391444738048"),
         (e.PREMIUM_MONTH_LEGACY = "511651856145973248"),
         (e.PREMIUM_YEAR_LEGACY = "511651860671627264"),
+        (e.PREMIUM_GROUP_MONTH = "1432523012455792640"),
         e
     );
 })({});
@@ -370,6 +371,13 @@ let R = Object.freeze({
             interval: 2,
             intervalCount: 1,
         },
+        "1432523012455792640": {
+            id: "1432523012455792640",
+            name: "Nitro Squad Monthly",
+            skuId: "521847234246082599",
+            interval: 1,
+            intervalCount: 1,
+        },
     }),
     P = new Set(["511651880837840896"]),
     D = 16,
@@ -386,8 +394,8 @@ let R = Object.freeze({
     F = "775514091874680832",
     V = "845031178288889946",
     H = 432000000,
-    Y = 345600000,
-    W = 14,
+    W = 345600000,
+    Y = 14,
     K = "520373071933079552",
     z = "902329034132684800",
     q = "983601860436819968",
@@ -733,12 +741,12 @@ var eV = (function (e) {
             e
         );
     })({});
-let eY = Object.freeze({
+let eW = Object.freeze({
         IS_BLOCKED_IOS: 32,
         IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS: 64,
         SUPPRESS_NOTIFICATION: 128,
     }),
-    eW = Object.freeze({
+    eY = Object.freeze({
         3: { fileSize: eC },
         1: { fileSize: eN },
         2: { fileSize: eR },
