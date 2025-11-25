@@ -208,11 +208,11 @@ function O(e) {
     var t, n, r, s, c, v, O;
     let { subscription: P, onUpdated: I } = e,
         [w, k] = l.useState(!1),
-        [A, R] = l.useState(!1),
+        [R, A] = l.useState(!1),
         [Z, D] = l.useState(!1),
         [L, M] = l.useState(!1),
-        [U, F] = l.useState(null),
-        B = (e) => ((null == e && (e = P.status), e in S) ? S[e] : "Unknown status ".concat(e)),
+        [U, B] = l.useState(null),
+        F = (e) => ((null == e && (e = P.status), e in S) ? S[e] : "Unknown status ".concat(e)),
         G = (e) => {
             let t = new Date(e);
             return h.default.fromTimestamp(t.getTime());
@@ -240,7 +240,7 @@ function O(e) {
                 });
             } catch (t) {
                 var e;
-                F((null == (e = t.body) ? void 0 : e.message) || t.message || "Failed to renew subscription");
+                B((null == (e = t.body) ? void 0 : e.message) || t.message || "Failed to renew subscription");
             }
             I();
         },
@@ -251,10 +251,12 @@ function O(e) {
             {
                 id: "id",
                 label: "ID: ".concat(P.id),
+                isDisabled: !1,
             },
             {
                 id: "status",
-                label: "Status: ".concat(B()),
+                label: "Status: ".concat(F()),
+                isDisabled: !1,
             },
         ],
         Y = P.hasActiveTrial,
@@ -264,11 +266,13 @@ function O(e) {
             q.push({
                 id: "trial",
                 label: "Has Trial",
+                isDisabled: !1,
             }),
         J &&
             q.push({
                 id: "active-discount",
                 label: "Has Active Discount",
+                isDisabled: !1,
             }),
         P.status !== b.O0b.ACTIVE &&
             q.push({
@@ -276,6 +280,7 @@ function O(e) {
                 label: "Dates: "
                     .concat((0, p.vc)(P.createdAt, "LL"), " - ")
                     .concat((0, p.vc)(P.currentPeriodEnd, "LL")),
+                isDisabled: !1,
             }),
         P.status === b.O0b.PAUSED &&
             q.push({
@@ -283,6 +288,7 @@ function O(e) {
                 label: "Pause Reason: ".concat(
                     P.pauseReason in E ? E[P.pauseReason] : "Unknown pause reason ".concat(P.pauseReason),
                 ),
+                isDisabled: !1,
             }),
         (0, a.jsx)("div", {
             className: i()(_.card, V ? _.gradientWrapperTier0 : _.gradientWrapperTier2),
@@ -298,6 +304,9 @@ function O(e) {
                     (0, a.jsx)(u.QSK, {
                         items: q,
                         label: "Tags",
+                        selectionMode: "none",
+                        selectionBehavior: "replace",
+                        disabledKeys: new Set(),
                     }),
                     Y &&
                         (0, a.jsxs)("div", {
@@ -466,7 +475,7 @@ function O(e) {
                         children: [
                             (0, a.jsxs)(u.P3F, {
                                 onClick: () => {
-                                    R(!A);
+                                    A(!R);
                                 },
                                 className: y.collapsablePaneHeader,
                                 children: [
@@ -476,16 +485,16 @@ function O(e) {
                                             children: "Modifications",
                                         }),
                                     }),
-                                    (0, a.jsx)(m.Z, { direction: A ? m.Z.Directions.UP : m.Z.Directions.DOWN }),
+                                    (0, a.jsx)(m.Z, { direction: R ? m.Z.Directions.UP : m.Z.Directions.DOWN }),
                                 ],
                             }),
-                            A &&
+                            R &&
                                 (0, a.jsxs)(u.Kqy, {
                                     gap: 24,
                                     children: [
                                         (0, a.jsx)(u.PhF, {
                                             label: "Status",
-                                            serialize: (e) => B(e),
+                                            serialize: (e) => F(e),
                                             isSelected: (e) => e === P.status,
                                             options: N,
                                             select: (e) => z({ status: e }),
