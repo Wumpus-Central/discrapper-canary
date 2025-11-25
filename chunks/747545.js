@@ -71,17 +71,16 @@ function w(e) {
             onSelectBackgroundOption: l,
             renderCamera: d,
             hidePreviewToggle: y = !1,
-            showSmallBackgroundOptions: A = !1,
-            onCancelPreview: C,
+            onCancelPreview: A,
         } = e,
-        { analyticsLocations: N } = (0, f.ZP)(),
-        { id: D } = (0, p.p6)(I.h7.VIDEO_INPUT),
-        w = (0, s.e7)([E.Z], () => E.Z.isVideoAvailable()),
-        L = m.qF.useSetting();
+        { analyticsLocations: C } = (0, f.ZP)(),
+        { id: N } = (0, p.p6)(I.h7.VIDEO_INPUT),
+        D = (0, s.e7)([E.Z], () => E.Z.isVideoAvailable()),
+        w = m.qF.useSetting();
     return (0, r.jsxs)(c.Kqy, {
         gap: 20,
         children: [
-            d(D),
+            d(N),
             E.Z.isEnabled()
                 ? null
                 : (0, r.jsx)(c.Text, {
@@ -95,7 +94,7 @@ function w(e) {
                 : (0, r.jsx)(c.rsf, {
                       label: T.intl.string(T.t["3Ppr1h"]),
                       description: T.intl.string(T.t.WNbX4O),
-                      checked: L,
+                      checked: w,
                       onChange: (e) => {
                           m.qF.updateSetting(e),
                               b.default.track(O.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
@@ -110,17 +109,17 @@ function w(e) {
                             !i && R()
                                 ? T.intl.format(T.t.aJYgRt, {
                                       onCameraSettingsClick: () => {
-                                          null == C || C(),
-                                              window.open(P(D)),
+                                          null == A || A(),
+                                              window.open(P(N)),
                                               b.default.track(O.rMx.SYSTEM_CAMERA_SETTINGS_OPENED, {
-                                                  location_stack: N,
+                                                  location_stack: C,
                                               });
                                       },
                                   })
                                 : void 0,
                         deviceType: I.h7.VIDEO_INPUT,
                         location: "CameraSettings",
-                        isDisabled: !w,
+                        isDisabled: !D,
                         showAllDevices: !0,
                     }),
                 }),
@@ -131,8 +130,7 @@ function w(e) {
                     onLearnMore: a,
                     selectedBackgroundOption: o,
                     onSelectBackgroundOption: l,
-                    currentDeviceId: D,
-                    smallerBackgroundOptions: A,
+                    currentDeviceId: N,
                 }),
             }),
         ],

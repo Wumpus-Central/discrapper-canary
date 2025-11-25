@@ -1,4 +1,4 @@
-a.d(t, { default: () => O }), a(388685);
+a.d(t, { default: () => _ }), a(388685);
 var r = a(54381),
     n = a(473749),
     i = a(793030),
@@ -17,12 +17,12 @@ var r = a(54381),
     f = a(626135),
     v = a(747545),
     C = a(981631),
-    k = a(388032),
-    E = a(142768);
-function O(e) {
-    let { transitionState: t, videoEnabled: a, onEnable: O, onClose: P } = e,
-        _ = m.Z.getCameraComponent(),
-        y = p.qF.useSetting(),
+    E = a(388032),
+    P = a(142768);
+function _(e) {
+    let { transitionState: t, videoEnabled: a, onEnable: _, onClose: k } = e,
+        y = m.Z.getCameraComponent(),
+        O = p.qF.useSetting(),
         [j, x] = n.useState((0, h.P)(w.default.getCurrentUser())),
         S = (0, s.O)(),
         { analyticsLocations: A } = (0, u.ZP)(d.Z.CAMERA_PREVIEW);
@@ -59,16 +59,16 @@ function O(e) {
                     })({ page: C.ZY5.PREVIEW_CAMERA_MODAL }, S.location),
                 });
             } catch (e) {}
-            await P(), (0, g.Up)(j);
-        }, [j, S.location, P]),
+            await k(), (0, g.Up)(j);
+        }, [j, S.location, k]),
         D = n.useCallback(async () => {
-            await M(), l.Z.setVideoEnabled(!0), null == O || O();
-        }, [M, O]),
+            await M(), l.Z.setVideoEnabled(!0), null == _ || _();
+        }, [M, _]),
         I = n.useMemo(
             () => [
                 {
                     variant: "primary",
-                    text: a ? k.intl.string(k.t.KQENhq) : k.intl.string(k.t.kgIe9a),
+                    text: a ? E.intl.string(E.t.KQENhq) : E.intl.string(E.t.kgIe9a),
                     onClick: a ? M : D,
                 },
             ],
@@ -80,22 +80,21 @@ function O(e) {
             page: C.ZY5.PREVIEW_CAMERA_MODAL,
             children: (0, r.jsx)(i.Modal, {
                 size: "md",
-                title: a ? k.intl.string(k.t.LAwwbQ) : k.intl.string(k.t["/HITVD"]),
+                title: a ? E.intl.string(E.t.LAwwbQ) : E.intl.string(E.t["/HITVD"]),
                 actionBarInput: (0, r.jsx)(c.Checkbox, {
-                    label: k.intl.string(k.t["3Ppr1h"]),
+                    label: E.intl.string(E.t["3Ppr1h"]),
                     labelType: "secondary",
-                    checked: y,
+                    checked: O,
                     onChange: () => {
-                        p.qF.updateSetting(!y),
-                            f.default.track(C.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: !y });
+                        p.qF.updateSetting(!O),
+                            f.default.track(C.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: !O });
                     },
                 }),
                 actions: I,
-                onClose: P,
+                onClose: k,
                 transitionState: t,
                 children: (0, r.jsx)(v.Z, {
                     hidePreviewToggle: !0,
-                    showSmallBackgroundOptions: !0,
                     hideDeviceHeader: !0,
                     hideCameraSettingsLink: !0,
                     selectedBackgroundOption: j,
@@ -103,11 +102,11 @@ function O(e) {
                     hideDeviceSelector: a,
                     renderCamera: (e) =>
                         (0, r.jsxs)("div", {
-                            className: E.cameraPreview,
+                            className: P.cameraPreview,
                             children: [
                                 (0, r.jsx)("div", {
-                                    className: E.camera,
-                                    children: (0, r.jsx)(_, {
+                                    className: P.camera,
+                                    children: (0, r.jsx)(y, {
                                         disabled: !1,
                                         deviceId: e,
                                         width: 430,
@@ -117,7 +116,7 @@ function O(e) {
                                 (0, r.jsx)(v.S, {}),
                             ],
                         }),
-                    onLearnMore: P,
+                    onLearnMore: k,
                 }),
             }),
         }),

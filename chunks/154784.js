@@ -12,28 +12,29 @@ var r = n(54381),
     _ = n(594174),
     p = n(726985),
     h = n(981631);
-function m() {
-    let e = (0, o.O)(),
-        t = i.useRef(!1),
-        n = (0, a.e7)([f.Z], () => f.Z.getVideoDeviceId()),
-        [m, g] = i.useState((0, l.P)(_.default.getCurrentUser())),
-        E = i.useRef(m);
+function m(e) {
+    let { isRedesign: t = !1 } = e,
+        n = (0, o.O)(),
+        m = i.useRef(!1),
+        g = (0, a.e7)([f.Z], () => f.Z.getVideoDeviceId()),
+        [E, b] = i.useState((0, l.P)(_.default.getCurrentUser())),
+        y = i.useRef(E);
     i.useEffect(
         () => () => {
-            t.current && (0, c.Up)(E.current);
+            m.current && (0, c.Up)(y.current);
         },
         [],
     );
-    let b = (n) => {
-        (t.current = !0), (E.current = n), g(n), (0, u.wG)(n, { location: e.location }).catch(h.dG4);
+    let O = (e) => {
+        (m.current = !0), (y.current = e), b(e), (0, u.wG)(e, { location: n.location }).catch(h.dG4);
     };
     return (0, r.jsx)(s.F, {
         setting: p.s6.VOICE_AND_VIDEO_VIDEO_BACKGROUND,
         children: (0, r.jsx)(d.Z, {
-            selectedBackgroundOption: m,
-            onSelectBackgroundOption: b,
-            currentDeviceId: n,
-            smallerBackgroundOptions: !1,
+            selectedBackgroundOption: E,
+            onSelectBackgroundOption: O,
+            currentDeviceId: g,
+            responsiveBackgroundOptions: t,
         }),
     });
 }

@@ -74,7 +74,7 @@ function T(e) {
             selectedBackgroundOption: y,
             onSelectBackgroundOption: v,
             currentDeviceId: T,
-            smallerBackgroundOptions: S,
+            responsiveBackgroundOptions: S,
             className: A,
         } = e,
         C = (0, a.e7)([l.default], () => l.default.getCurrentUser()),
@@ -146,7 +146,7 @@ function T(e) {
                       onSelectOption: U,
                       onUpsellClick: G,
                       onAddBackgroundImage: j,
-                      smallerOptions: S,
+                      responsive: S,
                   }),
               }),
           })

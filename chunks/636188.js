@@ -366,12 +366,12 @@ function H(e) {
             canUseCustomBackgrounds: t,
             customBackgroundOptions: n,
             selectedOption: a,
-            onSelectOption: o,
-            onUpsellClick: s,
-            onAddBackgroundImage: u,
-            smallerOptions: d,
+            onSelectOption: s,
+            onUpsellClick: u,
+            onAddBackgroundImage: d,
+            responsive: f = !0,
         } = e,
-        f = i.useMemo(
+        h = i.useMemo(
             () =>
                 n.sort((e, t) =>
                     null == e.last_used || null == t.last_used
@@ -380,34 +380,34 @@ function H(e) {
                 ),
             [n],
         ),
-        h = f.length >= x,
-        { analyticsLocations: m } = (0, p.ZP)(_.Z.VIDEO_BACKGROUND_OPTIONS),
-        g = Object.values((0, v.Z)()).sort((e, t) => I.E1[e.id] - I.E1[t.id]);
+        m = h.length >= x,
+        { analyticsLocations: g } = (0, p.ZP)(_.Z.VIDEO_BACKGROUND_OPTIONS),
+        E = Object.values((0, v.Z)()).sort((e, t) => I.E1[e.id] - I.E1[t.id]);
     return (0, r.jsx)(p.Gt, {
-        value: m,
+        value: g,
         children: (0, r.jsxs)("div", {
-            className: d ? R.backgroundOptionsSmall : R.backgroundOptionsLarge,
+            className: o()(R.backgroundOptions, !f && R.backgroundOptionsLarge),
             children: [
                 (0, r.jsx)(j, {
                     selected: null == a,
                     icon: c.t6m,
-                    onClick: () => o(null),
+                    onClick: () => s(null),
                     text: N.intl.string(N.t.fUdMeO),
                 }),
                 (0, r.jsx)(j, {
                     selected: a === I.f7,
                     icon: c.yMH,
-                    onClick: () => o(I.f7),
+                    onClick: () => s(I.f7),
                     text: N.intl.string(N.t.LhSyL8),
                     children: (0, r.jsx)("div", { className: R.backgroundOptionBlurBackground }),
                 }),
                 t
                     ? (0, r.jsx)(V, {
-                          onAddBackgroundImage: u,
-                          disabled: h,
+                          onAddBackgroundImage: d,
+                          disabled: m,
                       })
-                    : (0, r.jsx)(F, { onClick: s }),
-                f.map((e) => {
+                    : (0, r.jsx)(F, { onClick: u }),
+                h.map((e) => {
                     let t = (0, b.rI)({
                         userId: e.user_id,
                         assetId: e.id,
@@ -427,7 +427,7 @@ function H(e) {
                                           option: e,
                                           source: t,
                                           selected: (0, O.rD)(a) && a.id === e.id,
-                                          onSelectOption: o,
+                                          onSelectOption: s,
                                           isVideo: (0, b.ay)(e.asset),
                                           isAnimatedImage: (0, b.xR)(e.asset),
                                       },
@@ -437,7 +437,7 @@ function H(e) {
                               e.id,
                           );
                 }),
-                g.map((e) => {
+                E.map((e) => {
                     let t = !0 === e.isVideo;
                     return (0, r.jsx)(
                         l.u,
@@ -450,7 +450,7 @@ function H(e) {
                                     option: e.id,
                                     source: e.source,
                                     selected: a === e.id,
-                                    onSelectOption: o,
+                                    onSelectOption: s,
                                     isVideo: t,
                                     isAnimatedImage: !1,
                                     hotspotLocation: e.hotspotLocation,
