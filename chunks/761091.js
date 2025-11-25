@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(539854);
+n.d(t, { Z: () => j }), n(539854);
 var r = n(399606),
     i = n(897345),
     l = n(697379),
@@ -11,47 +11,49 @@ var r = n(399606),
     f = n(265418),
     p = n(398758),
     h = n(755458),
-    g = n(639777),
-    m = n(164670),
-    b = n(699955),
-    _ = n(330791),
-    y = n(443063),
-    O = n(981631);
-function v(e) {
+    g = n(13439),
+    m = n(639777),
+    b = n(164670),
+    _ = n(699955),
+    y = n(330791),
+    O = n(443063),
+    v = n(981631);
+function j(e) {
     let t = (0, f.Z)(e.id),
         n = (0, l.W)(e.id),
-        v = (0, d.j0)(e.id),
-        j = (0, i.u)(e),
-        x = (0, m.wK)(e),
-        C = (0, b.cZ)({ location: "guild-action-rows" }),
-        E = (0, c.g)(e.id),
-        S = (0, r.e7)([a.Z], () => a.Z.getNewMemberActions(e.id), [e.id]),
-        I = (0, u.Z)(e.id),
-        P = (0, s.PE)(e.id),
-        N = (0, o.n2)(e.id),
-        Z = [],
-        w = e.features.has(O.GuildFeatures.HUB),
-        T = e.features.has(O.GuildFeatures.COMMUNITY),
-        A = (0, _.l)(!(0, p.r1)(e.id)),
-        R = e.features.has(O.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY),
-        D = (0, g.Z)(e.id),
-        L = (0, h.BU)(e.id, "useGuildActionRows"),
-        M = e.features.has(O.GuildFeatures.GAME_SERVERS);
+        j = (0, d.j0)(e.id),
+        x = (0, i.u)(e),
+        C = (0, b.wK)(e),
+        E = (0, _.cZ)({ location: "guild-action-rows" }),
+        S = (0, c.g)(e.id),
+        I = (0, r.e7)([a.Z], () => a.Z.getNewMemberActions(e.id), [e.id]),
+        P = (0, u.Z)(e.id),
+        N = (0, s.PE)(e.id),
+        Z = (0, o.n2)(e.id),
+        w = [],
+        T = e.features.has(v.GuildFeatures.HUB),
+        A = e.features.has(v.GuildFeatures.COMMUNITY),
+        R = (0, y.l)(!(0, p.r1)(e.id)),
+        D = e.features.has(v.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY),
+        L = (0, m.Z)(e.id);
+    (0, g.e)(e.id, "useGuildActionRows", !0);
+    let M = (0, h.BU)(e.id, "useGuildActionRows"),
+        k = e.features.has(v.GuildFeatures.GAME_SERVERS);
     return (
-        w && Z.push(y.z.GUILD_HUB_HEADER_OPTIONS),
-        !P && E && I && null != S && S.length > 0
-            ? Z.push(y.z.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR)
-            : e.premiumProgressBarEnabled && Z.push(y.z.GUILD_PREMIUM_PROGRESS_BAR),
-        !w && E && Z.push(y.z.GUILD_HOME),
-        t && Z.push(y.z.GUILD_SCHEDULED_EVENTS),
-        !w && T && A && Z.push(y.z.CHANNELS_AND_ROLES),
-        v && Z.push(y.z.GUILD_ROLE_SUBSCRIPTIONS),
-        j && Z.push(y.z.GUILD_SHOP),
-        x && C && Z.push(y.z.GUILD_GAME_SHOP),
-        ((N && (T || R)) || (n && e.features.has(O.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL))) &&
-            Z.push(y.z.GUILD_MOD_DASH_MEMBER_SAFETY),
-        D && Z.push(y.z.GUILD_BOOSTS),
-        L && M && Z.push(y.z.GAME_SERVERS),
-        Z
+        T && w.push(O.z.GUILD_HUB_HEADER_OPTIONS),
+        !N && S && P && null != I && I.length > 0
+            ? w.push(O.z.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR)
+            : e.premiumProgressBarEnabled && w.push(O.z.GUILD_PREMIUM_PROGRESS_BAR),
+        !T && S && w.push(O.z.GUILD_HOME),
+        t && w.push(O.z.GUILD_SCHEDULED_EVENTS),
+        !T && A && R && w.push(O.z.CHANNELS_AND_ROLES),
+        j && w.push(O.z.GUILD_ROLE_SUBSCRIPTIONS),
+        x && w.push(O.z.GUILD_SHOP),
+        C && E && w.push(O.z.GUILD_GAME_SHOP),
+        ((Z && (A || D)) || (n && e.features.has(v.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL))) &&
+            w.push(O.z.GUILD_MOD_DASH_MEMBER_SAFETY),
+        L && w.push(O.z.GUILD_BOOSTS),
+        M && k && w.push(O.z.GAME_SERVERS),
+        w
     );
 }

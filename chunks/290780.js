@@ -1,38 +1,38 @@
-var n = r(98405),
-    i = r(527160),
-    s = r(914331),
-    a = r(640883),
-    o = r(992032),
-    u = r(861567);
-n(
+var r = n(98405),
+    i = n(527160),
+    a = n(914331),
+    o = n(640883),
+    s = n(992032),
+    l = n(861567),
+    c = 1 !== [].unshift(0),
+    u = function () {
+        try {
+            Object.defineProperty([], "length", { writable: !1 }).unshift();
+        } catch (e) {
+            return e instanceof TypeError;
+        }
+    };
+r(
     {
         target: "Array",
         proto: !0,
         arity: 1,
-        forced:
-            1 !== [].unshift(0) ||
-            !(function () {
-                try {
-                    Object.defineProperty([], "length", { writable: !1 }).unshift();
-                } catch (t) {
-                    return t instanceof TypeError;
-                }
-            })(),
+        forced: c || !u(),
     },
     {
-        unshift: function (t) {
-            var e = i(this),
-                r = s(e),
-                n = arguments.length;
-            if (n) {
-                u(r + n);
-                for (var h = r; h--; ) {
-                    var c = h + n;
-                    h in e ? (e[c] = e[h]) : o(e, c);
+        unshift: function (e) {
+            var t = i(this),
+                n = a(t),
+                r = arguments.length;
+            if (r) {
+                l(n + r);
+                for (var c = n; c--; ) {
+                    var u = c + r;
+                    c in t ? (t[u] = t[c]) : s(t, u);
                 }
-                for (var f = 0; f < n; f++) e[f] = arguments[f];
+                for (var d = 0; d < r; d++) t[d] = arguments[d];
             }
-            return a(e, r + n);
+            return o(t, n + r);
         },
     },
 );

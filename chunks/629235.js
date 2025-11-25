@@ -1,48 +1,50 @@
-n.d(e, { Z: () => u }), n(953529);
-var i = n(473749),
+n.d(t, { Z: () => u }), n(953529);
+var a = n(473749),
     l = n(442837),
     r = n(480916),
-    a = n(292263),
-    o = n(352138),
-    s = n(81643),
+    i = n(292263),
+    s = n(352138),
+    o = n(81643),
     c = n(469775),
     d = n(388032);
-let u = function (t) {
-    let { onClose: e, onMethodClick: n, classificationId: u } = t,
-        { methods: E, loading: _ } = (0, l.cj)([a.Z], () => ({
-            methods: a.Z.methods,
-            loading: a.Z.loading,
+let u = function (e) {
+    let { onClose: t, onMethodClick: n, classificationId: u } = e,
+        { methods: m, loading: p } = (0, l.cj)([i.Z], () => ({
+            methods: i.Z.methods,
+            loading: i.Z.loading,
         })),
-        { initiateAgeVerification: f } = (0, s.WD)({
-            onComplete: e,
+        { initiateAgeVerification: h } = (0, o.WD)({
+            onComplete: t,
             entryPoint: r.cU.EXPRESSIVE_GET_STARTED,
             shouldShowExpressiveModal: !0,
             classificationId: u,
         });
     return (
-        i.useEffect(() => {
-            null == E && (0, o.Jh)();
-        }, [E]),
+        a.useEffect(() => {
+            null == m && (0, s.Jh)();
+        }, [m]),
         {
             ageVerificationMethods:
-                null == E
+                null == m
                     ? void 0
-                    : E.map((t) => {
-                          let e = c.ed[t];
-                          if (null == e) return null;
-                          let { title: i, description: l } = e;
-                          return {
-                              id: t,
-                              title: d.intl.string(i),
-                              description: d.intl.string(l),
-                              onClick: async (e) => {
-                                  (0, r.x3)(e, r.d_.EXPRESSIVE_PRIMARY, r.sU.METHOD_SELECT, t),
-                                      null == n || n(),
-                                      await f(t);
-                              },
-                          };
-                      }).filter((t) => null != t),
-            loading: _,
+                    : m
+                          .map((e) => {
+                              let t = c.ed[e];
+                              if (null == t) return null;
+                              let { title: a, description: l } = t;
+                              return {
+                                  id: e,
+                                  title: d.intl.string(a),
+                                  description: d.intl.string(l),
+                                  onClick: async (t) => {
+                                      (0, r.x3)(t, r.d_.EXPRESSIVE_PRIMARY, r.sU.METHOD_SELECT, e),
+                                          null == n || n(),
+                                          await h(e);
+                                  },
+                              };
+                          })
+                          .filter((e) => null != e),
+            loading: p,
         }
     );
 };
