@@ -100,7 +100,6 @@ function S(e) {
                                     user: n,
                                     guildId: W,
                                     viewProfileItem: X,
-                                    onCloseProfile: G,
                                 }),
                             }),
                             (0, l.jsxs)("div", {

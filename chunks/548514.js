@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(35282);
+n.d(t, { Z: () => Z }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(35282);
 var r = n(54381),
     a = n(473749),
     i = n(120356),
@@ -9,27 +9,25 @@ var r = n(54381),
     d = n(317381),
     u = n(197386),
     p = n(906732),
-    m = n(279332),
-    h = n(915346),
-    g = n(783097),
-    _ = n(433534),
-    f = n(299206),
-    b = n(276022),
-    x = n(726521),
-    v = n(703656),
-    C = n(973616),
-    j = n(594174),
-    y = n(626135),
-    I = n(572004),
-    S = n(135431),
-    P = n(881294),
-    O = n(258971),
-    E = n(981631),
-    N = n(388032),
-    T = n(219923);
-let A = "start_application_install",
-    L = "launch_activity";
-function R(e) {
+    m = n(915346),
+    h = n(783097),
+    g = n(433534),
+    _ = n(299206),
+    f = n(726521),
+    b = n(703656),
+    x = n(973616),
+    v = n(594174),
+    C = n(626135),
+    j = n(572004),
+    y = n(135431),
+    I = n(881294),
+    S = n(258971),
+    P = n(981631),
+    O = n(388032),
+    E = n(219923);
+let N = "start_application_install",
+    T = "launch_activity";
+function A(e) {
     let { renderDropdown: t, size: n } = e,
         i = a.useRef(null);
     return (0, r.jsx)(c.yRy, {
@@ -74,21 +72,21 @@ function R(e) {
                         variant: "secondary",
                         size: n,
                         icon: c.xhG,
-                        "aria-label": N.intl.string(N.t["UKOtz+"]),
+                        "aria-label": O.intl.string(O.t["UKOtz+"]),
                     },
                     e,
                 ),
             ),
     });
 }
-function Z(e) {
+function L(e) {
     let { application: t, variant: n, size: i, contentWidth: l } = e,
         { onClickInstallApplication: o, canInstall: d } = (function (e) {
-            let t = (0, P.nu)(),
+            let t = (0, I.nu)(),
                 n = a.useCallback(() => {
                     var t;
-                    let n = null != (t = O.z8.getField("guildId")) ? t : void 0;
-                    (0, S.L)({
+                    let n = null != (t = S.z8.getField("guildId")) ? t : void 0;
+                    (0, y.L)({
                         applicationId: e.id,
                         customInstallUrl: e.custom_install_url,
                         installParams: e.install_params,
@@ -100,19 +98,19 @@ function Z(e) {
             return (
                 a.useEffect(() => {
                     let e = new URL(location.href);
-                    if (t && "true" === e.searchParams.get(A)) {
-                        e.searchParams.delete(A);
+                    if (t && "true" === e.searchParams.get(N)) {
+                        e.searchParams.delete(N);
                         let t = e.pathname + e.search;
-                        (0, v.dL)(t), n();
+                        (0, b.dL)(t), n();
                     }
                 }, [t, n]),
                 {
                     onClickInstallApplication: a.useCallback(() => {
                         if (
-                            ((0, P.zZ)(E.rMx.APP_DIRECTORY_INSTALL_CLICKED, { application_id: e.id }),
+                            ((0, I.zZ)(P.rMx.APP_DIRECTORY_INSTALL_CLICKED, { application_id: e.id }),
                             (s.tq || s.Em) && null == e.custom_install_url)
                         ) {
-                            let t = (0, S.E)({
+                            let t = (0, y.E)({
                                 applicationId: e.id,
                                 customInstallUrl: e.custom_install_url,
                                 installParams: e.install_params,
@@ -122,20 +120,20 @@ function Z(e) {
                         }
                         if (t) n();
                         else {
-                            let t = O.z8.getField("guildId");
-                            y.default.track(E.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
+                            let t = S.z8.getField("guildId");
+                            C.default.track(P.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
                                 application_id: e.id,
                                 guild_id: t,
                                 auth_type: null != e.custom_install_url ? "custom_url" : "in_app",
                                 source: "product_page",
                                 device_platform: s.tq ? "mobile_web" : "desktop_web",
                             }),
-                                (0, P.rf)({ [A]: "true" });
+                                (0, I.rf)({ [N]: "true" });
                         }
                     }, [e, n, t]),
                     canInstall: a.useMemo(
                         () =>
-                            (0, _.Eb)({
+                            (0, g.Eb)({
                                 customInstallUrl: e.custom_install_url,
                                 installParams: e.install_params,
                                 integrationTypesConfig: e.integration_types_config,
@@ -151,18 +149,18 @@ function Z(e) {
               icon: c.svS,
               size: i,
               onClick: o,
-              "aria-label": N.intl.string(N.t.NgXl3C),
+              "aria-label": O.intl.string(O.t.NgXl3C),
               disabled: !d,
           })
         : (0, r.jsx)(c.Button, {
               variant: n,
               size: i,
-              text: "small" === l ? N.intl.string(N.t.qRZ35t) : N.intl.string(N.t.NgXl3C),
+              text: "small" === l ? O.intl.string(O.t.qRZ35t) : O.intl.string(O.t.NgXl3C),
               onClick: o,
               disabled: !d,
           });
 }
-function w(e) {
+function R(e) {
     let { size: t, contentWidth: n, onClick: a, isSubmitting: i } = e;
     return "icon" === n
         ? (0, r.jsx)(c.hU, {
@@ -171,65 +169,57 @@ function w(e) {
               size: t,
               onClick: a,
               loading: i,
-              "aria-label": N.intl.string(N.t.QO7rO6),
+              "aria-label": O.intl.string(O.t.QO7rO6),
           })
         : (0, r.jsx)(c.Button, {
               variant: "primary",
               size: t,
-              text: N.intl.string(N.t.QO7rO6),
+              text: O.intl.string(O.t.QO7rO6),
               onClick: a,
               loading: i,
           });
 }
-let D = a.forwardRef(function (e, t) {
+let Z = a.forwardRef(function (e, t) {
     let { application: n, size: i } = e,
-        s = m.J.useExperiment({ location: "UserSettingsAuthedApps" }, { autoTrackExposure: !0 }).enabled,
-        { analyticsLocations: _ } = (0, p.ZP)(),
-        y = a.useCallback(() => {
+        { analyticsLocations: s } = (0, p.ZP)(),
+        g = a.useCallback(() => {
             let e;
-            (0, P.zZ)(E.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id }),
-                (0, I.JG)(
+            (0, I.zZ)(P.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id }),
+                (0, j.JG)(
                     ((e = n.id),
                     ""
                         .concat(location.protocol, "//")
                         .concat(location.host)
-                        .concat(E.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e))),
-                    () => (0, c.showToast)((0, c.createToast)(N.intl.string(N.t["L/PwZf"]), c.ToastType.SUCCESS)),
+                        .concat(P.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e))),
+                    () => (0, c.showToast)((0, c.createToast)(O.intl.string(O.t["L/PwZf"]), c.ToastType.SUCCESS)),
                 );
         }, [n.id]),
-        S = a.useCallback(() => {
-            let e = C.ZP.createFromServer(n);
-            (0, x.uu)({
+        C = a.useCallback(() => {
+            let e = x.ZP.createFromServer(n);
+            (0, f.uu)({
                 application: e,
                 entrypoint: "app_directory",
             });
         }, [n]),
-        O = (0, f.Z)({
+        y = (0, _.Z)({
             id: n.id,
-            label: N.intl.string(N.t["FfCL+6"]),
-            onSuccess: () => (0, c.showToast)((0, c.createToast)(N.intl.string(N.t.eNjAah), c.ToastType.SUCCESS)),
+            label: O.intl.string(O.t["FfCL+6"]),
+            onSuccess: () => (0, c.showToast)((0, c.createToast)(O.intl.string(O.t.eNjAah), c.ToastType.SUCCESS)),
         }),
-        A = (0, b.Z)({
-            application: n,
-            onItemClick: () => {
-                (0, P.zZ)(E.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id });
-            },
-        }),
-        D = a.useCallback(
+        S = a.useCallback(
             (e, t) =>
                 (0, r.jsxs)(c.v2r, {
                     navId: "application-directory-profile",
-                    "aria-label": N.intl.string(N.t["/7I4/C"]),
+                    "aria-label": O.intl.string(O.t["/7I4/C"]),
                     onClose: t,
                     onSelect: void 0,
                     children: [
-                        s && (0, r.jsx)(c.kSQ, { children: A }),
                         e
                             ? (0, r.jsx)(c.kSQ, {
                                   children: (0, r.jsx)(c.sNh, {
                                       id: "copy",
-                                      label: N.intl.string(N.t.z4sP5J),
-                                      action: y,
+                                      label: O.intl.string(O.t.z4sP5J),
+                                      action: g,
                                       icon: c.xPt,
                                   }),
                               })
@@ -237,24 +227,24 @@ let D = a.forwardRef(function (e, t) {
                         (0, r.jsx)(c.kSQ, {
                             children: (0, r.jsx)(c.sNh, {
                                 id: "report",
-                                label: N.intl.string(N.t.NgA5vp),
+                                label: O.intl.string(O.t.NgA5vp),
                                 color: "danger",
-                                action: S,
+                                action: C,
                             }),
                         }),
-                        null != O ? (0, r.jsx)(c.kSQ, { children: O }) : null,
+                        null != y ? (0, r.jsx)(c.kSQ, { children: y }) : null,
                     ],
                 }),
-            [O, S, y, s, A],
+            [y, C, g],
         ),
-        { onClickLaunchActivity: k, isSubmitting: M } = (function (e, t) {
+        { onClickLaunchActivity: N, isSubmitting: Z } = (function (e, t) {
             var n;
             let r = e.id,
                 i = null == e || null == (n = e.bot) ? void 0 : n.id,
-                l = null != i && (0, g.BQ)(e) && (0, g.ye)(e),
+                l = null != i && (0, h.BQ)(e) && (0, h.ye)(e),
                 [s, c] = a.useState(!1),
-                p = (0, P.nu)(),
-                m = (0, o.e7)([j.default], () => j.default.getCurrentUser()),
+                p = (0, I.nu)(),
+                g = (0, o.e7)([v.default], () => v.default.getCurrentUser()),
                 _ = (0, o.e7)([d.ZP], () => d.ZP.getCurrentEmbeddedActivity()),
                 f = a.useCallback(
                     async (t, n, r) => {
@@ -265,7 +255,7 @@ let D = a.forwardRef(function (e, t) {
                         }
                         c(!0);
                         try {
-                            await (0, h.W)({
+                            await (0, m.W)({
                                 appId: n,
                                 botId: t,
                                 analyticsLocations: r,
@@ -277,101 +267,101 @@ let D = a.forwardRef(function (e, t) {
                 );
             a.useEffect(() => {
                 let e = new URL(location.href),
-                    n = "true" === e.searchParams.get(L);
-                if (p && l && n && null != i && null != m) {
-                    e.searchParams.delete(L);
+                    n = "true" === e.searchParams.get(T);
+                if (p && l && n && null != i && null != g) {
+                    e.searchParams.delete(T);
                     let n = e.pathname + e.search;
-                    (0, v.dL)(n), f(i, r, t);
+                    (0, b.dL)(n), f(i, r, t);
                 }
-            }, [p, l, i, r, t, m, f]);
-            let b = a.useCallback(async () => {
+            }, [p, l, i, r, t, g, f]);
+            let x = a.useCallback(async () => {
                 if (null != i) {
-                    if (((0, P.zZ)(E.rMx.APP_DIRECTORY_LAUNCH_CLICKED, { application_id: r }), !p))
-                        return void (0, P.rf)({ [L]: "true" });
+                    if (((0, I.zZ)(P.rMx.APP_DIRECTORY_LAUNCH_CLICKED, { application_id: r }), !p))
+                        return void (0, I.rf)({ [T]: "true" });
                     await f(i, r, t);
                 }
             }, [i, r, t, p, f]);
             return {
-                onClickLaunchActivity: l ? b : void 0,
+                onClickLaunchActivity: l ? x : void 0,
                 isSubmitting: s,
             };
-        })(n, _),
-        G = null != k,
-        B = G ? "secondary" : "primary";
+        })(n, s),
+        w = null != N,
+        D = w ? "secondary" : "primary";
     return (0, r.jsxs)("div", {
         ref: t,
         children: [
             (0, r.jsxs)("div", {
-                className: l()(T.actionContainer, T.wide),
+                className: l()(E.actionContainer, E.wide),
                 children: [
-                    G &&
-                        (0, r.jsx)(w, {
+                    w &&
+                        (0, r.jsx)(R, {
                             size: i,
                             contentWidth: "normal",
-                            onClick: k,
-                            isSubmitting: M,
+                            onClick: N,
+                            isSubmitting: Z,
                         }),
-                    (0, r.jsx)(Z, {
+                    (0, r.jsx)(L, {
                         application: n,
                         size: i,
                         contentWidth: "normal",
-                        variant: B,
+                        variant: D,
                     }),
-                    I.wS
+                    j.wS
                         ? (0, r.jsx)(c.hU, {
                               variant: "secondary",
                               size: i,
                               icon: c.xPt,
-                              onClick: y,
-                              "aria-label": N.intl.string(N.t.z4sP5J),
+                              onClick: g,
+                              "aria-label": O.intl.string(O.t.z4sP5J),
                           })
                         : null,
-                    (0, r.jsx)(R, {
-                        renderDropdown: (e) => D(!1, e),
+                    (0, r.jsx)(A, {
+                        renderDropdown: (e) => S(!1, e),
                         size: i,
                     }),
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: l()(T.actionContainer, T.small),
+                className: l()(E.actionContainer, E.small),
                 children: [
-                    G &&
-                        (0, r.jsx)(w, {
+                    w &&
+                        (0, r.jsx)(R, {
                             size: i,
                             contentWidth: "small",
-                            onClick: k,
-                            isSubmitting: M,
+                            onClick: N,
+                            isSubmitting: Z,
                         }),
-                    (0, r.jsx)(Z, {
+                    (0, r.jsx)(L, {
                         application: n,
                         size: i,
                         contentWidth: "small",
-                        variant: B,
+                        variant: D,
                     }),
-                    (0, r.jsx)(R, {
-                        renderDropdown: (e) => D(I.wS, e),
+                    (0, r.jsx)(A, {
+                        renderDropdown: (e) => S(j.wS, e),
                         size: i,
                     }),
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: l()(T.actionContainer, T.tiny),
+                className: l()(E.actionContainer, E.tiny),
                 children: [
-                    G &&
-                        (0, r.jsx)(w, {
+                    w &&
+                        (0, r.jsx)(R, {
                             size: i,
                             contentWidth: "icon",
-                            onClick: k,
-                            isSubmitting: M,
+                            onClick: N,
+                            isSubmitting: Z,
                         }),
-                    (0, r.jsx)(Z, {
+                    (0, r.jsx)(L, {
                         application: n,
                         size: i,
                         contentWidth: "icon",
-                        variant: B,
+                        variant: D,
                     }),
-                    (0, r.jsx)(R, {
-                        renderDropdown: (e) => D(I.wS, e),
+                    (0, r.jsx)(A, {
+                        renderDropdown: (e) => S(j.wS, e),
                         size: i,
                     }),
                 ],

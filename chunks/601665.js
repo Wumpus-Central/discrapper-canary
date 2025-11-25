@@ -84,7 +84,7 @@ function P(e) {
     i.useEffect(() => {
         null == M || M(null == V ? void 0 : V.current);
     }, [V, M]);
-    let Y = (e) => {
+    let W = (e) => {
             null == x || x(),
                 (0, m.openUserProfileModal)(
                     R(
@@ -97,14 +97,14 @@ function P(e) {
                     ),
                 );
         },
-        W = () =>
+        Y = () =>
             k
                 ? null
                 : (0, r.jsx)(o.sNh, {
                       id: "view-profile",
                       label: A.intl.string(A.t["+Xp3hq"]),
                       action: () => {
-                          Y(),
+                          W(),
                               (0, p.pQ)(
                                   R(
                                       {
@@ -146,8 +146,7 @@ function P(e) {
                                 children: (0, r.jsx)(y.Z, {
                                     user: t,
                                     guildId: N,
-                                    viewProfileItem: W(),
-                                    onCloseProfile: x,
+                                    viewProfileItem: Y(),
                                 }),
                             }),
                             (0, r.jsxs)("div", {
@@ -165,7 +164,7 @@ function P(e) {
                                         guildId: N,
                                         channelId: P,
                                         themeType: S.l.POPOUT,
-                                        onOpenProfile: k ? void 0 : Y,
+                                        onOpenProfile: k ? void 0 : W,
                                     }),
                                     (0, r.jsx)(v.Z, {
                                         user: t,
@@ -181,7 +180,7 @@ function P(e) {
                                 displayProfile: Z,
                                 guild: F,
                                 isHoveringOrFocusing: H,
-                                onOpenProfile: k ? void 0 : Y,
+                                onOpenProfile: k ? void 0 : W,
                                 channelId: P,
                                 onClose: x,
                             }),
