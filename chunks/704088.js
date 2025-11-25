@@ -9,10 +9,10 @@ var a = n(54381),
     d = n(720553),
     u = n(535664),
     m = n(5900),
-    p = n(953865),
-    h = n(299886),
-    x = n(848984),
-    g = n(29594),
+    p = n(299886),
+    h = n(848984),
+    x = n(773275),
+    g = n(261538),
     f = n(868802),
     b = n(594174),
     v = n(246992),
@@ -163,16 +163,16 @@ let y = (e) => {
             [T, O] = l.useState(!1),
             P = l.useRef(null),
             I = (0, i.e7)([b.default], () => b.default.getCurrentUser()),
-            w = (0, x.u)(),
+            w = (0, h.u)(),
             [k] = l.useState(() =>
-                (0, p.o8)({
+                (0, x.o8)({
                     finishSetup: async () => !0,
                     perkAvailableToUser: w,
                 }),
             ),
             {
-                installationStatus: A,
-                setInstallationStatus: R,
+                installationStatus: R,
+                setInstallationStatus: A,
                 connectionStatus: Z,
                 setConnectionStatus: D,
                 setConnect: L,
@@ -212,7 +212,7 @@ let y = (e) => {
             J = l.useCallback(
                 () =>
                     new Promise((e, t) => {
-                        R(m._n.INSTALLING),
+                        A(m._n.INSTALLING),
                             s(
                                 setTimeout(() => {
                                     if (C) return void t(Error("Installation failed"));
@@ -220,11 +220,11 @@ let y = (e) => {
                                 }, E),
                             );
                     }),
-                [C, E, R, s],
+                [C, E, A, s],
             );
         l.useEffect(() => {
-            G && A !== m._n.UNKNOWN && R(m._n.UNKNOWN);
-        }, [G, R, A]),
+            G && R !== m._n.UNKNOWN && A(m._n.UNKNOWN);
+        }, [G, A, R]),
             l.useEffect(() => {
                 M(Y);
             }, [Y, M]),
@@ -232,12 +232,12 @@ let y = (e) => {
                 U(J);
             }, [J, U]),
             l.useEffect(() => {
-                A !== m._n.INSTALLING && clearTimeout(n);
-            }, [n, A]),
+                R !== m._n.INSTALLING && clearTimeout(n);
+            }, [n, R]),
             l.useEffect(() => {
-                if (A !== m._n.INSTALLED && Z !== m.Ij.INITIALIZING) return void D(m.Ij.INITIALIZING);
-            }, [A, Z, D]);
-        let { enabled: X } = h.H.useConfig({ location: "private_browsing_perk_settings_page" });
+                if (R !== m._n.INSTALLED && Z !== m.Ij.INITIALIZING) return void D(m.Ij.INITIALIZING);
+            }, [R, Z, D]);
+        let { enabled: X } = p.H.useConfig({ location: "private_browsing_perk_settings_page" });
         return X
             ? (0, a.jsxs)("div", {
                   children: [
@@ -308,8 +308,8 @@ let y = (e) => {
                                                   children: "Installation Status",
                                               }),
                                               (0, a.jsx)(c.PhF, {
-                                                  select: (e) => R(e),
-                                                  isSelected: (e) => e === A,
+                                                  select: (e) => A(e),
+                                                  isSelected: (e) => e === R,
                                                   serialize: (e) => "".concat(e),
                                                   disabled: G,
                                                   options: [
@@ -346,7 +346,7 @@ let y = (e) => {
                                               }),
                                           ],
                                       }),
-                                      A === m._n.INSTALLED &&
+                                      R === m._n.INSTALLED &&
                                           (0, a.jsxs)(g.BZ, {
                                               children: [
                                                   (0, a.jsx)(o.xvT, {
@@ -381,7 +381,7 @@ let y = (e) => {
                                           }),
                                   ],
                               }),
-                              A === m._n.NOT_INSTALLED &&
+                              R === m._n.NOT_INSTALLED &&
                                   (0, a.jsxs)(g.pg, {
                                       children: [
                                           (0, a.jsxs)(g.BZ, {
@@ -443,7 +443,7 @@ let y = (e) => {
                                   }),
                           ],
                       }),
-                      (0, a.jsxs)(p.xz.Provider, {
+                      (0, a.jsxs)(x.xz.Provider, {
                           value: k,
                           children: [
                               (0, a.jsxs)(g.$0, {

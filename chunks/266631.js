@@ -1,29 +1,70 @@
-e.exports = {
-    flagContainer: "flagContainer__71c22",
-    roleContainer: "roleContainer__71c22",
-    roundedRow: "roundedRow__71c22",
-    shimmer: "shimmer__71c22",
-    memberRowContainer: "memberRowContainer__71c22",
-    loading: "loading__71c22",
-    actionCell: "actionCell__71c22",
-    selected: "selected__71c22",
-    memberSelected: "memberSelected__71c22",
-    addRoleContainer: "addRoleContainer__71c22",
-    compact: "compact__71c22",
-    xsmallCol: "xsmallCol__71c22",
-    smallCol: "smallCol__71c22",
-    mediumCol: "mediumCol__71c22",
-    memberNameContainer: "memberNameContainer__71c22",
-    memberGlobalName: "memberGlobalName__71c22",
-    memberNameText: "memberNameText__71c22",
-    memberName: "memberName__71c22",
-    memberAvatar: "memberAvatar__71c22",
-    communicationDisabledTooltip: "communicationDisabledTooltip__71c22",
-    button: "button__71c22",
-    highestRole: "highestRole__71c22",
-    otherRoles: "otherRoles__71c22",
-    addRoleIcon: "addRoleIcon__71c22",
-    roleTooltipItem: "roleTooltipItem__71c22",
-    nameContainer: "nameContainer__71c22",
-    memberClanTag: "memberClanTag__71c22",
-};
+n.d(t, { X: () => c });
+var r = n(54381),
+    i = n(159691),
+    a = n(275388),
+    o = n(616926);
+let s = (e) => {
+        (0, a.qA)({
+            skuId: e,
+            onCheckoutSuccess: (e) => {
+                let { skuId: t, entitlements: n } = e;
+                console.log("Orb Checkout Success for SKU: ".concat(t, ". Entitlement(s): "), n, Date.now());
+            },
+            onCloseCallback: () => {
+                console.log("Orb Checkout Closed");
+            },
+        });
+    },
+    l = "1271174907081789524",
+    c = {
+        title: "Orb Checkout",
+        stories: [
+            {
+                name: "Orb Checkout Modals",
+                id: "orb-checkout-modal",
+                component: (e) => {
+                    let { skuId: t } = e;
+                    return (0, r.jsx)("div", {
+                        className: o.verticalContainer,
+                        children: (0, r.jsx)(i.zxk, {
+                            onClick: () => {
+                                s(t);
+                            },
+                            text: "Open Orb Checkout for Custom SKU: ".concat(t),
+                        }),
+                    });
+                },
+                controls: {
+                    skuId: {
+                        label: "SKU ID",
+                        type: "select",
+                        options: [
+                            {
+                                skuId: "1342211853484429445",
+                                skuName: "Orb Profile Badge",
+                            },
+                            {
+                                skuId: "1427463138634109026",
+                                skuName: "Magic Mists (Deco)",
+                            },
+                            {
+                                skuId: "1332505467980873728",
+                                skuName: "Pondering Portal (Deco)",
+                            },
+                            {
+                                skuId: l,
+                                skuName: "Oni's Curse (Deco)",
+                            },
+                        ].map((e) => {
+                            let { skuId: t, skuName: n } = e;
+                            return {
+                                label: n,
+                                value: t,
+                            };
+                        }),
+                        defaultValue: l,
+                    },
+                },
+            },
+        ],
+    };

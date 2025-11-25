@@ -66,18 +66,18 @@ function k(e) {
         F = (0, u.Z)([s])[0],
         V = (0, m.Z)(a),
         { parentAnalyticsLocation: H } = (0, c.ZP)(),
-        Y = (e) => {
+        W = (e) => {
             (0, f.v)(H, f.d.CAMERA, e), l.Z.setVideoEnabled(e);
         },
-        W = () => {
-            Z ? Y(!0) : (0, g.Z)();
+        Y = () => {
+            Z ? W(!0) : (0, g.Z)();
         },
         K = () => {
             (0, f.v)(H, f.d.POPOUT, !0),
                 null != a &&
                     (0, R.Z)({
                         onConfirm: async () => {
-                            await (0, C.nJ)(s, a.id), h.hP(a);
+                            await (0, C.nJ)(s, a.id), h.openChannelCallPopout(a);
                         },
                     });
         };
@@ -113,8 +113,8 @@ function k(e) {
                                 enabled: G,
                                 cameraUnavailable: !Z,
                                 hasPermission: V,
-                                onChange: Y,
-                                onCameraUnavailable: W,
+                                onChange: W,
+                                onCameraUnavailable: Y,
                             }),
                             null != a &&
                                 (0, r.jsx)(E.Z, {

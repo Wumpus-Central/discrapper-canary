@@ -88,7 +88,7 @@ async function h() {
         webpackId: 989373,
         name: "AppOverlay",
     });
-    await s.bA(
+    await s.open(
         u.$J,
         (e) =>
             (0, r.jsx)(t, {

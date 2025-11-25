@@ -50,6 +50,6 @@ let p = {
         null != e && a._(e),
             (0, c.ur)()
                 ? this.selectVoiceChannel(null)
-                : (this.selectVoiceChannel(null), s.xv(_.KJ3.CHANNEL_CALL_POPOUT));
+                : (this.selectVoiceChannel(null), s.close(_.KJ3.CHANNEL_CALL_POPOUT));
     },
 };

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => b });
 var r = n(54381),
     i = n(473749),
     a = n(481060),
@@ -9,7 +9,7 @@ var r = n(54381),
     d = n(823748),
     u = n(981631),
     p = n(815523);
-function b(e) {
+function h(e) {
     let { windowKey: t, channel: n } = e;
     return (0, r.jsx)(l.Z, {
         withTitleBar: !0,
@@ -23,13 +23,13 @@ function b(e) {
         }),
     });
 }
-function h(e, t) {
+function b(e, t) {
     let n = (0, c.P)(t),
         o = i.useCallback(() => {
-            s.bA(
+            s.open(
                 "".concat(u.KJ3.CHANNEL_POPOUT, "-").concat(e.id),
                 (t) =>
-                    (0, r.jsx)(b, {
+                    (0, r.jsx)(h, {
                         windowKey: t,
                         channel: e,
                     }),

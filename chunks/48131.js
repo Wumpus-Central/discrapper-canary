@@ -32,7 +32,7 @@ function u(e, t) {
 }
 async function d(e) {
     let t = (0, i.GB)();
-    a.Z.getWindowOpen(l.KJ3.ACTIVITY_POPOUT) && (0, o.xv)(l.KJ3.ACTIVITY_POPOUT),
+    a.Z.getWindowOpen(l.KJ3.ACTIVITY_POPOUT) && (0, o.close)(l.KJ3.ACTIVITY_POPOUT),
         await s.launchFrame(e),
         t === l.IlC.POPOUT && (0, r.Z)();
 }

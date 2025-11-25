@@ -8,9 +8,9 @@ var a = n(54381),
     c = n(518596),
     d = n(323183),
     u = n(5900),
-    m = n(953865),
-    p = n(299886),
-    h = n(37279),
+    m = n(299886),
+    p = n(37279),
+    h = n(773275),
     x = n(981631),
     g = n(163646),
     f = n(388032),
@@ -25,8 +25,8 @@ let j = (e) => {
             isSupportedPrivateBrowsingPerkPlatform: y,
             isWeb: C,
             connectionStatus: S,
-        } = (0, m.xf)(),
-        { enabled: E } = p.H.useConfig({ location: "private_browsing_perk_settings_page" }),
+        } = (0, h.xf)(),
+        { enabled: E } = m.H.useConfig({ location: "private_browsing_perk_settings_page" }),
         N = (0, l.useCallback)(() => {
             (0, i.Z)(x.Z5c.NITRO_HOME), t();
         }, [t]),
@@ -96,7 +96,7 @@ let j = (e) => {
         ? (0, a.jsxs)("div", {
               className: b.container,
               children: [
-                  (0, a.jsx)(h.v, { className: b.betaBadge }),
+                  (0, a.jsx)(p.v, { className: b.betaBadge }),
                   (0, a.jsx)(r.$1m, {
                       color: "nitro-pink",
                       offsetBottom: -0.5,

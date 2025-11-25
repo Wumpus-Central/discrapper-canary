@@ -8,22 +8,22 @@ var l = n(793030),
     a = n(410030),
     o = n(740594),
     c = n(612659),
-    d = n(5900),
-    E = n(953865),
-    T = n(37279),
+    E = n(5900),
+    d = n(37279),
     S = n(969521),
+    T = n(773275),
     I = n(584197),
     O = n(703656),
     g = n(589072),
     _ = n(518596),
     N = n(116282),
-    A = n(614074),
-    f = n(233751),
+    f = n(614074),
+    A = n(233751),
     C = n(868087),
-    L = n(981631),
-    Z = n(474936),
+    b = n(981631),
+    L = n(474936),
     p = n(388032),
-    b = n(163646),
+    Z = n(163646),
     P = n(498374),
     y = n(93109),
     D = n(446818),
@@ -54,7 +54,7 @@ let v = () => {
                                             }),
                                         ],
                                     }),
-                                    (0, i.jsx)(T.v, {}),
+                                    (0, i.jsx)(d.v, {}),
                                 ],
                             }),
                         }),
@@ -68,7 +68,7 @@ let v = () => {
                                 }),
                                 (0, i.jsxs)("div", {
                                     className: P.content,
-                                    children: [(0, i.jsx)(A.C, {}), (0, i.jsx)(N.R, {})],
+                                    children: [(0, i.jsx)(f.C, {}), (0, i.jsx)(N.R, {})],
                                 }),
                                 (0, i.jsx)("div", { className: P.contentSpacer }),
                                 (0, i.jsx)("div", {
@@ -84,7 +84,7 @@ let v = () => {
         });
     },
     m = () => {
-        let { installationStatus: t, isWeb: e, setInstallationStatus: n } = (0, E.xf)(),
+        let { installationStatus: t, isWeb: e, setInstallationStatus: n } = (0, T.xf)(),
             s = (0, c.m)();
         if (e) return (0, i.jsx)(S.U, {});
         if (!s)
@@ -93,7 +93,7 @@ let v = () => {
                 children: [
                     (0, i.jsx)(o.Z, {
                         buttonTextOverride: p.intl.string(p.t["8x0jKT"]),
-                        subscriptionTier: Z.Si.TIER_2,
+                        subscriptionTier: L.Si.TIER_2,
                         fullWidth: !0,
                         size: "sm",
                     }),
@@ -102,29 +102,29 @@ let v = () => {
                         text: p.intl.string(p.t.ZnqyZ2),
                         size: "sm",
                         onClick: () => {
-                            (0, r.Mr)(_.USER_SETTINGS_MODAL_KEY), (0, O.uL)(L.Z5c.APPLICATION_STORE);
+                            (0, r.Mr)(_.USER_SETTINGS_MODAL_KEY), (0, O.uL)(b.Z5c.APPLICATION_STORE);
                         },
                     }),
                 ],
             });
         switch (t) {
-            case d._n.ERROR:
-            case d._n.NOT_INSTALLED:
-                return (0, i.jsx)(f.R, {});
-            case d._n.INSTALLED:
+            case E._n.ERROR:
+            case E._n.NOT_INSTALLED:
+                return (0, i.jsx)(A.R, {});
+            case E._n.INSTALLED:
                 return (0, i.jsx)(I.n, {});
-            case d._n.ZERO_TRUST:
+            case E._n.ZERO_TRUST:
                 break;
-            case d._n.EXISTING_INSTALLATION:
+            case E._n.EXISTING_INSTALLATION:
                 return (0, i.jsx)(u.zxk, {
                     variant: "primary",
                     onClick: () => {
-                        n(d._n.READY_FOR_LICENSE);
+                        n(E._n.READY_FOR_LICENSE);
                     },
-                    text: p.intl.string(b.default.J09UWz),
+                    text: p.intl.string(Z.default.J09UWz),
                 });
-            case d._n.INSTALLING:
-            case d._n.READY_FOR_LICENSE:
+            case E._n.INSTALLING:
+            case E._n.READY_FOR_LICENSE:
                 return (0, i.jsx)("div", {
                     className: P.spinner,
                     children: (0, i.jsx)(l.$jN, { type: l.RAz.SPINNING_CIRCLE }),

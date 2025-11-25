@@ -25,7 +25,7 @@ function g(n) {
                       id: "popout-call",
                       label: E.intl.string(E.t.JzWezz),
                       icon: r.rgF,
-                      action: () => s.hP(n),
+                      action: () => s.openChannelCallPopout(n),
                   });
         })(null != t ? t : void 0),
         O = (function (n) {

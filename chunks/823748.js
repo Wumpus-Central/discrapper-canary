@@ -65,7 +65,7 @@ var r = n(54381),
     ep = n(41776),
     eh = n(370774),
     ef = n(535834),
-    eg = n(134483),
+    eg = n(801604),
     em = n(703656),
     eb = n(359110),
     e_ = n(607802),
@@ -83,7 +83,7 @@ var r = n(54381),
     eT = n(108427),
     eN = n(892001),
     eR = n(402130),
-    ew = n(340501),
+    ew = n(271172),
     eA = n(524329),
     eD = n(995532),
     eL = n(738643),
@@ -108,8 +108,8 @@ var r = n(54381),
     e1 = n(176505),
     e4 = n(981631),
     e3 = n(918559),
-    e8 = n(354459),
-    e7 = n(921944),
+    e7 = n(354459),
+    e8 = n(921944),
     e2 = n(408491),
     e5 = n(440493),
     e9 = n(157925),
@@ -604,7 +604,7 @@ class tl extends i.PureComponent {
             }),
             tt(this, "renderStreamQualityLiveIndicatorToolbarItem", () => {
                 let { selectedParticipant: e, premiumIndicatorEnabled: t } = this.props;
-                return (null == e ? void 0 : e.type) !== e8.fO.STREAM
+                return (null == e ? void 0 : e.type) !== e7.fO.STREAM
                     ? null
                     : (0, r.jsx)(
                           V.Z,
@@ -756,7 +756,7 @@ class tl extends i.PureComponent {
                               text: e6.intl.string(e6.t["3aOv+h"]),
                               onClick: () =>
                                   (0, g.ZDy)(async () => {
-                                      let { default: e } = await n.e("30571").then(n.bind(n, 28180));
+                                      let { default: e } = await n.e("96964").then(n.bind(n, 807007));
                                       return (n) => (0, r.jsx)(e, tn({ channel: t }, n));
                                   }),
                           }),
@@ -965,7 +965,7 @@ let ta = (0, j.Z)(tl),
         i.useEffect(() => {
             let e = eO && !ey,
                 t = eO && ey && (null == c ? void 0 : c.id) !== ej;
-            (e || t) && (0, U.Q3)(h.z.ACTIVITY_GDM_CALL_TOOLTIP, { dismissAction: e7.L.AUTO });
+            (e || t) && (0, U.Q3)(h.z.ACTIVITY_GDM_CALL_TOOLTIP, { dismissAction: e8.L.AUTO });
         }, [null == c ? void 0 : c.id, ej, ey, eO]);
         let ev = (0, f.f9)();
         return (0, r.jsx)(

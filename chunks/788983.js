@@ -1,11 +1,12 @@
-n.d(t, {
-    YS: () => f,
-    bA: () => s,
-    fT: () => c,
-    hP: () => l,
-    hY: () => d,
-    xv: () => u,
-});
+n.r(t),
+    n.d(t, {
+        addStylesheet: () => f,
+        close: () => u,
+        open: () => s,
+        openCallTilePopout: () => c,
+        openChannelCallPopout: () => l,
+        setAlwaysOnTop: () => d,
+    });
 var r = n(570140);
 function i(e, t, n) {
     return (

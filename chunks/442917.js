@@ -41,8 +41,8 @@ var r = n(54381),
     F = n(131951),
     V = n(699516),
     H = n(594174),
-    Y = n(248402),
-    W = n(33039),
+    W = n(248402),
+    Y = n(33039),
     K = n(451478),
     z = n(626135),
     q = n(5192),
@@ -297,7 +297,7 @@ class ef extends i.PureComponent {
             }),
             el(this, "handleOpenPopout", () => {
                 let { channel: e } = this.props;
-                (0, v.v)(g.Z.VIDEO_PIP, v.d.POPOUT, !0), D.hP(e);
+                (0, v.v)(g.Z.VIDEO_PIP, v.d.POPOUT, !0), D.openChannelCallPopout(e);
             }),
             el(this, "renderBottomLeftControls", () => {
                 let { canSeeParticipantName: e } = this.viewProperties;
@@ -378,14 +378,14 @@ class ef extends i.PureComponent {
 }
 function e_(e) {
     let { channel: t, width: n } = e,
-        i = (0, c.e7)([Y.Z], () => Y.Z.getSpeaker(t.id)),
+        i = (0, c.e7)([W.Z], () => W.Z.getSpeaker(t.id)),
         a = (0, c.e7)([b.Z], () => b.Z.getParticipant(t.id, i), [t.id, i]),
         o = (0, c.e7)([F.Z], () => l()(F.Z.getVideoDevices()).values().first()),
         s = (0, c.e7)(
-            [W.Z],
+            [Y.Z],
             () =>
                 null != a && a.type !== ea.fO.ACTIVITY && a.type !== ea.fO.HIDDEN_STREAM
-                    ? W.Z.getStreamId(a.user.id, t.getGuildId(), (0, y.Z)(a.type))
+                    ? Y.Z.getStreamId(a.user.id, t.getGuildId(), (0, y.Z)(a.type))
                     : null,
             [a, t],
         ),

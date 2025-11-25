@@ -4,13 +4,13 @@ var r = n(54381),
     a = n(734610),
     o = n(818710),
     s = n(442837),
-    l = n(956097),
+    l = n(646834),
     c = n(960048),
     u = n(998054),
     d = n(5900),
-    f = n(953865),
-    _ = n(60995),
-    p = n(607726);
+    f = n(60995),
+    _ = n(607726),
+    p = n(773275);
 let h = () => {
         let {
                 installationStatus: e,
@@ -18,10 +18,10 @@ let h = () => {
                 setConnectionStatus: n,
                 finishSetup: r,
                 getWarpInstallationStatus: a,
-            } = (0, f.xf)(),
+            } = (0, p.xf)(),
             { status: o } = (0, s.e7)([l.Z], () => l.Z.state, []),
             [h, m] = (0, i.useState)(0),
-            { installedDiscordPrivateBrowsingPerk: g } = (0, s.e7)([p.Z], () => p.Z.getState(), []),
+            { installedDiscordPrivateBrowsingPerk: g } = (0, s.e7)([_.Z], () => _.Z.getState(), []),
             [E, b] = (0, i.useState)(!1);
         return (
             (0, i.useEffect)(() => {
@@ -37,7 +37,7 @@ let h = () => {
                         ));
             }, [t, g, E, e]),
             (0, i.useEffect)(() => {
-                g && e === d._n.NOT_INSTALLED && (0, _._)(!1),
+                g && e === d._n.NOT_INSTALLED && (0, f._)(!1),
                     g && e === d._n.EXISTING_INSTALLATION && t(d._n.INSTALLED);
             }, [g, e, t]),
             (0, i.useEffect)(() => {

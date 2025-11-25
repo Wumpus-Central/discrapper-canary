@@ -85,7 +85,7 @@ function ei(e) {
 }
 let el = "HasBeenInStageChannel",
     ea = (e) => {
-        (0, x.v)(f.Z.VOICE_CONTROL_TRAY, x.d.STAY_ON_TOP, e), C.hY(ee.KJ3.CHANNEL_CALL_POPOUT, e);
+        (0, x.v)(f.Z.VOICE_CONTROL_TRAY, x.d.STAY_ON_TOP, e), C.setAlwaysOnTop(ee.KJ3.CHANNEL_CALL_POPOUT, e);
     };
 function es(e) {
     let {
@@ -140,11 +140,11 @@ function es(e) {
                           (0, x.v)(d, x.d.POPOUT, !0),
                               (() => {
                                   let e = t.getGuildId();
-                                  null != e && null != h && (0, S.XU)(e, h), C.hP(t);
+                                  null != e && null != h && (0, S.XU)(e, h), C.openChannelCallPopout(t);
                               })();
                       },
                       onClosePopout: () => {
-                          (0, x.v)(d, x.d.POPOUT, !1), u.Z.wait(() => C.xv(ee.KJ3.CHANNEL_CALL_POPOUT));
+                          (0, x.v)(d, x.d.POPOUT, !1), u.Z.wait(() => C.close(ee.KJ3.CHANNEL_CALL_POPOUT));
                       },
                   })
                 : null,

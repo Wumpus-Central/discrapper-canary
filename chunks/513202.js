@@ -116,7 +116,7 @@ class T extends f.Z {
                 showFeedback: r,
             });
         }),
-            (0, u.R)() && i && (0, l.xv)(E.KJ3.ACTIVITY_POPOUT);
+            (0, u.R)() && i && (0, l.close)(E.KJ3.ACTIVITY_POPOUT);
     }
     hidePIPEmbed(e) {
         let { location: t, applicationId: n } = e,
@@ -138,7 +138,7 @@ class T extends f.Z {
                 t === E.KJ3.ACTIVITY_POPOUT && (I = !1);
             }),
             y(this, "popInActivity", () => {
-                (I = !0), l.xv(E.KJ3.ACTIVITY_POPOUT);
+                (I = !0), l.close(E.KJ3.ACTIVITY_POPOUT);
                 let e = _.ZP.getCurrentEmbeddedActivity();
                 if (null != e) {
                     let t = (0, p.p)(e.location);

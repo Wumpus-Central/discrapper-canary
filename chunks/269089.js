@@ -65,7 +65,7 @@ class E extends a.Z {
     }
     handleOpenChannelCallPopout(e) {
         let { channel: t } = e;
-        u.bA(
+        u.open(
             d.KJ3.CHANNEL_CALL_POPOUT,
             (e) =>
                 t.isGuildStageVoice()
@@ -91,7 +91,7 @@ class E extends a.Z {
                         if (e.nodeType === Node.ELEMENT_NODE && "LINK" === e.tagName && "stylesheet" === e.rel) {
                             let t = e.href,
                                 n = e.integrity;
-                            u.YS(t, n);
+                            u.addStylesheet(t, n);
                         }
                 }
         })),
@@ -101,14 +101,14 @@ class E extends a.Z {
         null != this._observer && (this._observer.disconnect(), (this._observer = null));
     }
     handleOpenRTCDebugPopout() {
-        u.bA(d.KJ3.RTC_DEBUG_POPOUT, (e) => (0, r.jsx)(_, { windowKey: e }), {
+        u.open(d.KJ3.RTC_DEBUG_POPOUT, (e) => (0, r.jsx)(_, { windowKey: e }), {
             defaultWidth: 854,
             defaultHeight: 480,
         });
     }
     handleOpenActivityPopout() {
         (0, l.te)(p.$S, c.Z.getDefaultLayout(p.$S, p.HN), p.HN),
-            u.bA(d.KJ3.ACTIVITY_POPOUT, (e) => (0, r.jsx)(b, { windowKey: e }), {
+            u.open(d.KJ3.ACTIVITY_POPOUT, (e) => (0, r.jsx)(b, { windowKey: e }), {
                 defaultWidth: 854,
                 defaultHeight: 480,
             });
@@ -119,7 +119,7 @@ class E extends a.Z {
             f(this, "handleOpenCallTilePopout", (e) => {
                 let { channelId: t, participantId: n } = e,
                     i = (0, s.Z)(t, n);
-                u.bA(
+                u.open(
                     i,
                     (e) =>
                         (0, r.jsx)(g, {
