@@ -15,11 +15,11 @@ function d(e) {
                 checked: !(null == n ? void 0 : n.disableRaidAlertNag),
                 label: o.intl.string(o.t.u6dc5B),
                 description: o.intl.string(o.t.z8Td48),
-                onChange: () =>
+                onChange: (e) =>
                     (0, a.PS)(
                         t,
-                        (e) => {
-                            e.disableRaidAlertNag = !e.disableRaidAlertNag;
+                        (t) => {
+                            t.disableRaidAlertNag = !e;
                         },
                         a.fy.INFREQUENT_USER_ACTION,
                     ),
@@ -28,11 +28,11 @@ function d(e) {
                 checked: !(null == n ? void 0 : n.disableRaidAlertPush),
                 label: o.intl.string(o.t.P8MG6q),
                 description: o.intl.string(o.t.PyxXs8),
-                onChange: () =>
+                onChange: (e) =>
                     (0, a.PS)(
                         t,
-                        (e) => {
-                            e.disableRaidAlertPush = !e.disableRaidAlertPush;
+                        (t) => {
+                            t.disableRaidAlertPush = !e;
                         },
                         a.fy.INFREQUENT_USER_ACTION,
                     ),
