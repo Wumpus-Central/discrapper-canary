@@ -1,40 +1,32 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => f });
 var r = n(54381),
-    i = n(911969),
-    a = n(627861),
-    o = n(100527),
-    s = n(906732),
-    l = n(728345),
-    c = n(973616),
-    u = n(789407),
-    d = n(616922);
-function f(e) {
+    i = n(231429),
+    a = n(100527),
+    o = n(906732),
+    s = n(728345),
+    l = n(973616),
+    c = n(789407),
+    u = n(616922);
+function d(e) {
     return null != e.application
-        ? c.ZP.createFromServer(e.application)
-        : null != e.activity && null != e.activity.party_id && (0, d.Ps)(e.activity.party_id)
-          ? u.r9
+        ? l.ZP.createFromServer(e.application)
+        : null != e.activity && null != e.activity.party_id && (0, u.Ps)(e.activity.party_id)
+          ? c.r9
           : void 0;
 }
-function _(e) {
+let f = (e) => {
     var t;
-    let n = null == e || null == (t = e.linkedGames) ? void 0 : t.find((e) => e.type === i.tE.OFFICIAL);
-    return (0, l.IX)(null == n ? void 0 : n.id);
-}
-let p = (e) => {
-    var t;
-    let { channel: n, message: i, hideParty: c } = e,
-        { analyticsLocations: u } = (0, s.ZP)(o.Z.INVITE_EMBED),
-        d = f(i),
-        { data: p } = (0, l.IX)(null == (t = i.application) ? void 0 : t.id),
-        h = null != p ? p : d,
-        { data: m } = _(h),
-        g = null != m ? m : h;
-    return null == g
+    let { channel: n, message: l, hideParty: c } = e,
+        { analyticsLocations: u } = (0, o.ZP)(a.Z.INVITE_EMBED),
+        f = d(l),
+        { data: _ } = (0, s.IX)(null == (t = l.application) ? void 0 : t.id),
+        p = null != _ ? _ : f;
+    return null == p
         ? null
-        : (0, r.jsx)(a.c, {
-              app: g,
+        : (0, r.jsx)(i.c, {
+              app: p,
               channel: n,
-              message: i,
+              message: l,
               hideParty: c,
               analyticsLocations: u,
           });
