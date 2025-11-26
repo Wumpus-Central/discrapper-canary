@@ -17,8 +17,8 @@ var r = n(54381),
     O = n(874010),
     h = n(684245),
     b = n(388032),
-    C = n(273339);
-function S(e) {
+    S = n(273339);
+function C(e) {
     let { quest: t, sourceQuestContent: n } = e,
         l = o.useMemo(() => (0, v.z0)(t, a.X.WATCH_VIDEO, v.n1.VIDEO, v.O.THUMBNAIL), [t]);
     return null == l
@@ -34,7 +34,7 @@ function S(e) {
                       },
                       src: l.url,
                       alt: "Video thumbnail",
-                      className: C.stillFrameImageCard,
+                      className: S.stillFrameImageCard,
                   }),
           });
 }
@@ -48,26 +48,26 @@ function y(e) {
             d(!1);
         };
     return (0, r.jsx)(s.P3F, {
-        className: i()(C.endScreenPanel, C.accentOnHover, c),
+        className: i()(S.endScreenPanel, S.accentOnHover, c),
         onMouseEnter: m,
         onMouseLeave: f,
         onFocus: m,
         onBlur: f,
         onClick: a,
         children: (0, r.jsxs)("div", {
-            className: C.endScreenPanelInner,
+            className: S.endScreenPanelInner,
             children: [
                 (0, r.jsxs)("div", {
-                    className: C.endScreenPanelTextCont,
+                    className: S.endScreenPanelTextCont,
                     children: [
                         (0, r.jsx)(s.X6q, {
                             variant: "heading-md/semibold",
-                            className: C.endScreenPanelTextTitle,
+                            className: S.endScreenPanelTextTitle,
                             children: t,
                         }),
                         (0, r.jsx)(s.X6q, {
                             variant: "heading-sm/normal",
-                            className: C.endScreenPanelTextSubtitle,
+                            className: S.endScreenPanelTextSubtitle,
                             children: n,
                         }),
                     ],
@@ -76,7 +76,7 @@ function y(e) {
                 (0, r.jsx)(l, {
                     size: "md",
                     color: u ? "#FFFFFF" : "#B5BAC1",
-                    className: C.endScreenIcon,
+                    className: S.endScreenIcon,
                 }),
             ],
         }),
@@ -86,44 +86,43 @@ function _(e) {
     var t;
     let { videoRef: n, onExitFullScreen: l, onTrackQuestVideoFullscreenChanged: i, onTrackQuestContentClick: a } = e,
         { onClose: v, sourceQuestContent: E, quest: O } = o.useContext(g.VideoQuestModalContext),
-        { questConfig: _ } = o.useContext(g.VideoQuestConfigContext),
-        x = (0, p.ZP)((e) => e.fullScreenEnabled),
-        j = (0, p.ZP)((e) => e.setFullScreenEnabled),
-        D = (0, d.aM)(),
-        P = (0, h.e)({
+        _ = (0, p.ZP)((e) => e.fullScreenEnabled),
+        x = (0, p.ZP)((e) => e.setFullScreenEnabled),
+        j = (0, d.aM)(),
+        D = (0, h.e)({
             quest: O,
             onClose: v,
             sourceQuestContent: E,
-            impressionId: D,
+            impressionId: j,
         }),
-        T = o.useCallback(
+        P = o.useCallback(
             (e) => {
-                if (x) {
+                if (_) {
                     var t;
                     let e = (0, c.fn)(null == (t = n.current) ? void 0 : t.parentNode, n.current);
-                    null != e && (e.removeEventListener(c.NO, l), (0, c.Pr)(e), j(!1), i(!1));
+                    null != e && (e.removeEventListener(c.NO, l), (0, c.Pr)(e), x(!1), i(!1));
                 }
-                a(e, u.jZ.LEARN_MORE), P(e, u.jZ.OPEN_GAME_LINK);
+                a(e, u.jZ.LEARN_MORE), D(e, u.jZ.OPEN_GAME_LINK);
             },
-            [x, n, l, j, i, P, a],
+            [_, n, l, x, i, D, a],
         ),
-        { title: R, subtitle: I } = {
-            title: (0, f.B2)(_),
-            subtitle: null != (t = _.ctaConfig.subtitle) ? t : b.intl.string(b.t.mxaHfx),
+        { title: T, subtitle: R } = {
+            title: (0, f.V_)(O),
+            subtitle: null != (t = O.config.ctaConfig.subtitle) ? t : b.intl.string(b.t.mxaHfx),
         };
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(S, {
+            (0, r.jsx)(C, {
                 quest: O,
                 sourceQuestContent: E,
             }),
-            (0, r.jsx)("div", { className: C.videoContOverlay }),
+            (0, r.jsx)("div", { className: S.videoContOverlay }),
             (0, r.jsx)(y, {
-                title: R,
-                subtitle: I,
+                title: T,
+                subtitle: R,
                 icon: s.d4D,
-                className: C.endScreenPanelRight,
-                onClick: () => T(m.jn.VIDEO_MODAL),
+                className: S.endScreenPanelRight,
+                onClick: () => P(m.jn.VIDEO_MODAL),
             }),
         ],
     });

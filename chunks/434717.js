@@ -21,7 +21,7 @@ function v(e) {
     let { quest: t, sourceQuestContent: n, onLoadComplete: v } = e,
         b = (0, l.ZP)(),
         _ = (0, o.wjy)(b) ? x.BR.DARK : x.BR.LIGHT,
-        w = (0, m.V_)(t.config),
+        w = (0, m.V_)(t),
         O = (0, u.aM)(),
         N = (0, m.vB)(t.config),
         P = a.useMemo(() => {

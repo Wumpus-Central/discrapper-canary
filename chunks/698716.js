@@ -103,7 +103,7 @@ function L(e) {
         C = [E.jn.QUEST_BAR_V2, E.jn.QUEST_BAR].includes(e.questContent),
         N = (0, p.O5)(),
         R = (0, h.aM)(),
-        P = (0, b.V_)(e.quest.config),
+        P = (0, b.V_)(e.quest),
         D = !0 === e.showShareLink && (0, b.vB)(e.quest.config),
         {
             handleComplete: w,

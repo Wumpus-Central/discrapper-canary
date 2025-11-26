@@ -1053,7 +1053,11 @@ function tq(e) {
     return null != n && null != r ? n : null != (t = null != r ? r : n) ? t : null;
 }
 function tX(e) {
-    return e.ctaConfig.buttonLabel;
+    return null != e.config.ctaConfig.buttonLabel
+        ? e.config.ctaConfig.buttonLabel
+        : tE(e) || e$(e) || eQ(e) || td(e) || e.config.features.includes(G.S7.NON_GAMING_PLAY_QUEST)
+          ? F.intl.string(F.t.hvVgAZ)
+          : F.intl.string(F.t.lwQdjB);
 }
 function tQ(e, t) {
     var n;

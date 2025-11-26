@@ -16,6 +16,6 @@ function m(e) {
         fullWidth: !0,
         variant: m ? "primary" : "secondary",
         onClick: () => t(a.jn.VIDEO_MODAL_PRIMARY_CTA, i.jZ.OPEN_GAME_LINK),
-        text: (0, s.V_)(n.config),
+        text: (0, s.V_)(n),
     });
 }
