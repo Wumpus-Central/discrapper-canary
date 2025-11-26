@@ -50,7 +50,6 @@ function Z(e) {
                     (0, l.jsx)(u.Heading, {
                         variant: "heading-xl/bold",
                         color: "header-primary",
-                        lineClamp: 2,
                         children: o.name,
                     }),
                     (0, l.jsx)(u.Text, {
