@@ -220,6 +220,7 @@ let eB = () => [
             isDataUsage3PToggleEnabled: tt,
             isChatMentionSuggestionsSettingEnabled: tn,
             isCrossDMSearchEnabledSettingVisible: tr,
+            isRedesignedNotificationsEnabled: ti,
         } = e;
         return Object.freeze({
             [eC.s6.SEARCH_NO_RESULTS]: {
@@ -1006,6 +1007,7 @@ let eB = () => [
                 section: eR.oAB.ACCESSIBILITY,
                 searchableTitles: [eD.intl.string(eD.t.qvTIwX)],
                 parent: eC.s6.ACCESSIBILITY_TEXT_TO_SPEECH,
+                predicate: () => !ti,
             },
             [eC.s6.ACCESSIBILITY_TEXT_TO_SPEECH_RATE]: {
                 section: eR.oAB.ACCESSIBILITY,
