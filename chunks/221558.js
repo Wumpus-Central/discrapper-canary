@@ -1,74 +1,72 @@
-i.d(e, { Z: () => p });
-var r = i(54381),
-    n = i(473749),
-    l = i(793030),
-    a = i(442837),
-    s = i(565138),
-    d = i(430824),
-    c = i(5888),
-    o = i(198358),
-    u = i(892694),
-    x = i(388032);
-function p() {
+i.d(e, { Z: () => x });
+var n = i(54381),
+    r = i(793030),
+    l = i(442837),
+    a = i(565138),
+    s = i(430824),
+    d = i(5888),
+    c = i(198358),
+    o = i(140939),
+    u = i(388032);
+function x() {
     let {
-            guilds: { guilds: t, numGuildsJoined: e },
-        } = (0, a.e7)([c.Z], () => c.Z.getCheckpointData()),
-        i = (0, n.useMemo)(
-            () =>
-                t
-                    .map((t) => {
-                        let { guild: e } = t;
-                        return d.Z.getGuild(e.id);
-                    })
-                    .filter((t) => null != t),
-            [t],
-        );
-    return (0, r.jsxs)(o.Z, {
+            guilds: { guilds: t, numGuildsJoined: e } = {
+                guilds: [],
+                numGuildsJoined: 0,
+            },
+        } = (0, l.e7)([d.Z], () => d.Z.getCheckpointData()),
+        i = t
+            .map((t) => {
+                let { guild: e } = t;
+                return s.Z.getGuild(e.id);
+            })
+            .filter((t) => null != t);
+    return (0, n.jsxs)(c.Z, {
         children: [
-            (0, r.jsx)(l.xvT, {
+            (0, n.jsx)(r.xvT, {
                 variant: "display-sm",
                 color: "text-primary",
-                children: x.intl.format(u.default.mAroeJ, {
+                children: u.intl.format(o.default.mAroeJ, {
                     joinedCount: e,
                     guildCount: i.length,
                 }),
             }),
             i.map((e, i) =>
-                (0, r.jsxs)(
+                (0, n.jsxs)(
                     "div",
                     {
                         children: [
-                            (0, r.jsx)(s.Z, {
+                            (0, n.jsx)(a.Z, {
                                 guild: e,
-                                size: s.Z.Sizes.XLARGE,
+                                size: a.Z.Sizes.XLARGE,
                             }),
-                            (0, r.jsx)(l.xvT, {
+                            (0, n.jsx)(r.xvT, {
                                 variant: "display-md",
                                 color: "text-primary",
                                 children: e.name,
                             }),
                             0 === i &&
-                                (0, r.jsxs)("div", {
+                                (0, n.jsxs)("div", {
                                     children: [
-                                        (0, r.jsx)(l.xvT, {
+                                        (0, n.jsx)(r.xvT, {
                                             variant: "display-md",
                                             color: "text-primary",
                                             children: t[0].numMessagesSent,
                                         }),
-                                        (0, r.jsx)(l.xvT, {
+                                        (0, n.jsx)(r.xvT, {
                                             variant: "display-sm",
                                             color: "text-primary",
-                                            children: x.intl.string(u.default.wWKySP),
+                                            children: u.intl.string(o.default.wWKySP),
                                         }),
-                                        (0, r.jsx)(l.xvT, {
+                                        (0, n.jsx)(r.xvT, {
                                             variant: "display-md",
                                             color: "text-primary",
                                             children: t[0].numVoiceMinutes,
                                         }),
-                                        (0, r.jsx)(l.xvT, {
+                                        (0, n.jsx)(r.xvT, {
                                             variant: "display-sm",
                                             color: "text-primary",
-                                            children: x.intl.string(u.default.lXT6ns),
+                                            children: u.intl.string(o.default.lXT6ns),
                                         }),
                                     ],
                                 }),

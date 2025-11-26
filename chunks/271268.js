@@ -8,7 +8,10 @@ var n = i(54381),
     c = i(388032);
 function o() {
     let {
-        voice: { totalVoiceMinutes: t, totalVoiceMinutesPercentile: e },
+        voice: { totalVoiceMinutes: t, totalVoiceMinutesPercentile: e } = {
+            totalVoiceMinutes: 0,
+            totalVoiceMinutesPercentile: 0,
+        },
     } = (0, l.e7)([a.Z], () => a.Z.getCheckpointData());
     return (0, n.jsxs)(s.Z, {
         children: [
