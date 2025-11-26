@@ -1,13 +1,13 @@
 n.d(e, { default: () => f });
 var r = n(54381),
     i = n(468194),
-    o = n(793030),
-    l = n(63063),
+    l = n(793030),
+    o = n(63063),
     a = n(49012),
     s = n(905551),
     u = n(619733),
     c = n(981631),
-    d = n(732031),
+    d = n(613275),
     p = n(388032);
 function f(t) {
     var { provider: e, onAccept: n } = t,
@@ -20,24 +20,24 @@ function f(t) {
                     var n,
                         r,
                         i = {},
-                        o = Object.keys(t);
-                    for (r = 0; r < o.length; r++) (n = o[r]), e.indexOf(n) >= 0 || (i[n] = t[n]);
+                        l = Object.keys(t);
+                    for (r = 0; r < l.length; r++) (n = l[r]), e.indexOf(n) >= 0 || (i[n] = t[n]);
                     return i;
                 })(t, e);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(t);
-                for (r = 0; r < o.length; r++)
-                    (n = o[r]),
+                var l = Object.getOwnPropertySymbols(t);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
                         !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (i[n] = t[n]);
             }
             return i;
         })(t, ["provider", "onAccept"]);
-    return (0, r.jsx)(o.Modal, {
+    return (0, r.jsx)(l.Modal, {
         title: p.intl.string(d.default.ny8Szd),
         subtitle: p.intl.format(d.default.D3STVx, {
             provider: (0, i.De)(e),
             providerUrl: () => (0, a.q)({ href: u.nd[e] }),
-            helpCenterUrl: l.Z.getArticleURL(c.BhN.GAME_SERVER_HOSTING),
+            helpCenterUrl: o.Z.getEnglishArticleURL(c.BhN.GAME_SERVER_HOSTING),
         }),
         size: "md",
         actions: [

@@ -19,10 +19,10 @@ var r = t(54381),
     b = t(837329),
     _ = t(531508),
     C = t(133091),
-    E = t(669460),
-    N = t(619733),
+    N = t(669460),
+    E = t(619733),
     S = t(981631),
-    O = t(732031),
+    O = t(613275),
     y = t(388032),
     I = t(817121);
 function T(e) {
@@ -97,8 +97,8 @@ function w() {
         name: b,
         setName: w,
         planId: R,
-        setPlanId: Z,
-        planCost: G,
+        setPlanId: G,
+        planCost: Z,
         stepLoading: k,
         error: M,
         gameProvider: B,
@@ -108,19 +108,19 @@ function w() {
             (0, m._k)(e);
         }, [e]);
     let L = (0, o.e7)([x.Z], () => x.Z.getRegions()),
-        D = (0, o.e7)([x.Z], () => x.Z.getRegionState()),
-        H = i.useMemo(() => {
+        z = (0, o.e7)([x.Z], () => x.Z.getRegionState()),
+        D = i.useMemo(() => {
             var e;
             return null !=
-                (e = L.sort((e, n) => (0, C.Z)(e, n, D)).map((e) => ({
+                (e = L.sort((e, n) => (0, C.Z)(e, n, z)).map((e) => ({
                     value: e,
                     label: e.name,
                     disabled: !0 !== e.enabled,
                 })))
                 ? e
                 : [];
-        }, [D, L]),
-        z = i.useMemo(() => L.some((e) => "" !== e.pingUrl), [L]),
+        }, [z, L]),
+        H = i.useMemo(() => L.some((e) => "" !== e.pingUrl), [L]),
         U = i.useMemo(() => {
             var e;
             return null !=
@@ -135,11 +135,11 @@ function w() {
                 : [];
         }, [n]),
         F = (0, j.Z)(),
-        { isValid: V, errors: A } = (0, j.a)(b),
-        K = null != l,
-        W = (0, _.Z)(l),
-        J = (0, E.Z)(B),
-        Y = null != B && null != N.nd[B] ? N.nd[B] : "";
+        { isValid: V, errors: W } = (0, j.a)(b),
+        A = null != l,
+        K = (0, _.Z)(l),
+        J = (0, N.Z)(B),
+        Y = null != B && null != E.nd[B] ? E.nd[B] : "";
     return null == n
         ? (0, r.jsx)("div", {
               className: I.spinnerContainer,
@@ -180,9 +180,9 @@ function w() {
                                               value: b,
                                               onChange: w,
                                               placeholder: y.intl.string(O.default.ElVYr3),
-                                              maxLength: N.Sg,
-                                              disabled: k || !W,
-                                              error: A.name,
+                                              maxLength: E.Sg,
+                                              disabled: k || !K,
+                                              error: W.name,
                                           }),
                                       ],
                                   }),
@@ -208,8 +208,8 @@ function w() {
                                                           size: "xs",
                                                       }),
                                                   }),
-                                                  !K &&
-                                                      z &&
+                                                  !A &&
+                                                      H &&
                                                       (0, r.jsx)("div", {
                                                           className: I.refresh,
                                                           children: (0, r.jsx)(s.u, {
@@ -225,7 +225,7 @@ function w() {
                                                       }),
                                               ],
                                           }),
-                                          K
+                                          A
                                               ? (0, r.jsx)(d.oil, {
                                                     value: null == l ? void 0 : l.regionName,
                                                     disabled: !0,
@@ -234,8 +234,8 @@ function w() {
                                               : (0, r.jsx)(d.PhF, {
                                                     serialize: (e) => e.id,
                                                     isSelected: (e) => e.id === t,
-                                                    isDisabled: k || K || !W,
-                                                    options: H,
+                                                    isDisabled: k || A || !K,
+                                                    options: D,
                                                     optionClassName: I.option,
                                                     select: (e) => a(e.id),
                                                     placeholder: y.intl.string(O.default["k+RTIm"]),
@@ -286,10 +286,10 @@ function w() {
                                           (0, r.jsx)(d.PhF, {
                                               serialize: (e) => e.id,
                                               isSelected: (e) => e.id === R,
-                                              isDisabled: k || !W,
+                                              isDisabled: k || !K,
                                               options: U,
                                               optionClassName: I.option,
-                                              select: (e) => Z(e.id),
+                                              select: (e) => G(e.id),
                                               placeholder: y.intl.string(O.default.JdMW0i),
                                               renderOptionValue: (e) => {
                                                   var n, t, i;
@@ -319,18 +319,18 @@ function w() {
                       ],
                   }),
                   null != l &&
-                      0 !== G &&
+                      0 !== Z &&
                       (0, r.jsx)(c.Z, {
                           className: I.infoBox,
                           children: (0, r.jsx)(d.Text, {
                               variant: "text-xs/medium",
                               children:
-                                  G < 0
-                                      ? y.intl.format(O.default.SorKas, { boostCount: Math.abs(G) })
-                                      : y.intl.format(O.default.n2wpym, { boostCount: G }),
+                                  Z < 0
+                                      ? y.intl.format(O.default.SorKas, { boostCount: Math.abs(Z) })
+                                      : y.intl.format(O.default.n2wpym, { boostCount: Z }),
                           }),
                       }),
-                  !W &&
+                  !K &&
                       (0, r.jsx)(c.Z, {
                           className: I.infoBox,
                           look: c.z.WARNING,
@@ -344,10 +344,10 @@ function w() {
                       color: "text-muted",
                       children:
                           null != B &&
-                          y.intl.format(K ? O.default.num0a6 : O.default.p5KZDr, {
+                          y.intl.format(A ? O.default.num0a6 : O.default.p5KZDr, {
                               provider: J,
                               termsOfServiceUrl: () => (0, g.q)({ href: Y }),
-                              helpCenterUrl: u.Z.getArticleURL(S.BhN.GAME_SERVER_HOSTING),
+                              helpCenterUrl: u.Z.getEnglishArticleURL(S.BhN.GAME_SERVER_HOSTING),
                           }),
                   }),
                   null != M &&
@@ -357,7 +357,7 @@ function w() {
                           children: M,
                       }),
                   (0, r.jsxs)(h.o2, {
-                      step: N.EK.SERVER_SETTINGS,
+                      step: E.EK.SERVER_SETTINGS,
                       className: I.footerContainer,
                       children: [(0, r.jsx)(h.c_, {}), (0, r.jsx)(h.$b, { disabled: !F || !V })],
                   }),

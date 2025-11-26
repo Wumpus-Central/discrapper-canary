@@ -4,8 +4,8 @@ n(473749);
 var i = n(442837),
     a = n(454399),
     l = n(28664),
-    o = n(376521),
-    c = n(602733),
+    o = n(602733),
+    c = n(689201),
     s = n(594174),
     u = n(621853),
     d = n(796483),
@@ -14,13 +14,13 @@ function g(e) {
     let { items: t, profileOwner: n, isOwner: g } = e,
         p = s.default.getCurrentUser(),
         { defaultWishlistId: m } = (0, i.cj)([u.Z], () => ({ defaultWishlistId: u.Z.getFirstWishlistId(n.id) })),
-        b = (0, o.c)(t);
+        b = (0, c.c)(t, g);
     return null == p || null == m
         ? null
         : (0, r.jsx)("ul", {
               className: f.grid,
               children: t.map((e, t) => {
-                  var i, o;
+                  var i, c;
                   let s = b[t],
                       u = (0, r.jsx)(d.Z, {
                           item: e,
@@ -37,7 +37,7 @@ function g(e) {
                                         text: s.title,
                                         position: "top",
                                         asContainer: !0,
-                                        delay: c.rq,
+                                        delay: o.rq,
                                         children: u,
                                     }),
                                 },
@@ -48,12 +48,12 @@ function g(e) {
                                 {
                                     children: (0, r.jsx)(a.i, {
                                         title: s.title,
-                                        body: null != (o = s.body) ? o : "",
+                                        body: null != (c = s.body) ? c : "",
                                         asset: null == (i = s.renderIcon) ? void 0 : i.call(s, e),
-                                        assetSize: c.EU,
+                                        assetSize: o.EU,
                                         position: "top",
                                         asContainer: !0,
-                                        delay: c.rq,
+                                        delay: o.rq,
                                         children: u,
                                     }),
                                 },
