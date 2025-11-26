@@ -261,8 +261,9 @@ let h = {
                         customOffset: m,
                         delay: g,
                         spacing: E,
+                        forceOpen: b,
                     } = e,
-                    b = _(e, [
+                    y = _(e, [
                         "title",
                         "body",
                         "showAsset",
@@ -273,8 +274,9 @@ let h = {
                         "customOffset",
                         "delay",
                         "spacing",
+                        "forceOpen",
                     ]);
-                let y = i.useMemo(() => {
+                let O = i.useMemo(() => {
                         if ("center" !== h && null != h)
                             return "custom" === h
                                 ? {
@@ -283,7 +285,7 @@ let h = {
                                   }
                                 : { align: h };
                     }, [h, m]),
-                    O = i.useMemo(
+                    v = i.useMemo(
                         () =>
                             s
                                 ? {
@@ -305,11 +307,12 @@ let h = {
                                 align: p,
                                 delay: g,
                                 spacing: E,
-                                caretConfig: y,
-                                asset: O,
+                                caretConfig: O,
+                                asset: v,
                                 assetSize: c,
+                                forceOpen: b,
                             },
-                            b,
+                            y,
                         ),
                         {
                             children: (0, r.jsx)(a.Button, {
@@ -331,15 +334,10 @@ let h = {
                     type: "text",
                     defaultValue: "Body copy goes in this section.",
                 },
-                showAsset: {
-                    label: "Show Asset",
-                    type: "boolean",
-                    defaultValue: !0,
-                },
                 assetSize: {
                     label: "Asset Size",
                     type: "select",
-                    defaultValue: 48,
+                    defaultValue: 16,
                     options: [
                         {
                             label: "16px",
@@ -450,6 +448,16 @@ let h = {
                     label: "Spacing (px)",
                     type: "number",
                     defaultValue: 11,
+                },
+                forceOpen: {
+                    label: "Force Open",
+                    type: "boolean",
+                    defaultValue: !1,
+                },
+                showAsset: {
+                    label: "Show Asset",
+                    type: "boolean",
+                    defaultValue: !0,
                 },
             },
         },
