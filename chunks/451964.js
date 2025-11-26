@@ -1,5 +1,6 @@
 e.exports = {
     wrapper: "wrapper__67dba",
+    hasSections: "hasSections__67dba",
     channelIcon: "channelIcon__67dba",
     inviteSectionHeader: "inviteSectionHeader__67dba",
     inviteSectionToggleIcon: "inviteSectionToggleIcon__67dba",
@@ -15,6 +16,5 @@ e.exports = {
     errorMessage: "errorMessage__67dba",
     errorLink: "errorLink__67dba",
     acronym: "acronym__67dba",
-    isFriendsInVCInvitesExperiment: "isFriendsInVCInvitesExperiment__67dba",
     footerWithCheckbox: "footerWithCheckbox__67dba",
 };
