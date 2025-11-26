@@ -7,7 +7,6 @@ e.exports = {
     familyCenterLinkButton: "familyCenterLinkButton_e6b769",
     friendsButtonContainer: "friendsButtonContainer_e6b769",
     friendsBadge: "friendsBadge_e6b769",
-    createDMButtonContainer: "createDMButtonContainer_e6b769",
     confetti: "confetti_e6b769",
     themedHeaderMobile: "themedHeaderMobile_e6b769",
     familyCenterButtonContainer: "familyCenterButtonContainer_e6b769",
