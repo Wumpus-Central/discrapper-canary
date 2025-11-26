@@ -69,7 +69,7 @@ function A() {
                             }),
                             (0, r.jsx)(a.F, {
                                 setting: v.s6.VOICE_AND_VIDEO_SENSITIVITY,
-                                children: (0, r.jsx)(y.Z, {}),
+                                children: (0, r.jsx)(y.ZP, {}),
                             }),
                         ],
                     }),
