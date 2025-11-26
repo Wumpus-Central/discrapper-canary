@@ -1,18 +1,18 @@
 r.d(t, {
-    MT: () => s,
+    MT: () => a,
     cD: () => o,
 });
 var n = r(544891),
     i = r(598077);
 r(504518);
-var a = r(981631);
-async function s(e, t, r, s) {
+var s = r(981631);
+async function a(e, t, r, a) {
     let { users: o, next_index: l } = (
         await n.tn.get({
-            url: a.ANM.BILLING_SUBSCRIPTION_ELIGIBLE_USERS(e),
+            url: s.ANM.BILLING_SUBSCRIPTION_ELIGIBLE_USERS(e),
             query: {
                 index: t,
-                limit: null != s ? s : 10,
+                limit: null != a ? a : 10,
                 search_query: r,
             },
             rejectWithError: !0,
@@ -25,10 +25,16 @@ async function s(e, t, r, s) {
 }
 async function o(e, t) {
     try {
-        return await n.tn.post({
-            url: a.ANM.BILLING_SUBSCRIPTION_INVITES(e),
+        let r = await n.tn.post({
+            url: s.ANM.BILLING_SUBSCRIPTION_INVITES(e),
             body: { user_ids: t },
             rejectWithError: !0,
         });
-    } catch (e) {}
+        return {
+            invitedUsers: r.body.invited_users,
+            ineligibleUsers: r.body.ineligible_users,
+        };
+    } catch (e) {
+        return null;
+    }
 }
