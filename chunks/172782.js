@@ -1,30 +1,33 @@
-n.d(t, { Z: () => a }), n(388685);
-var r = n(473749),
-    i = n(80721);
+r.d(t, { Z: () => a }), r(388685);
+var n = r(473749),
+    i = r(80721);
 let a = (e) => {
-    let { subscriptionId: t, searchQuery: n } = e,
-        [a, s] = r.useState([]),
-        [o, l] = r.useState(!1),
-        [c, u] = r.useState(!1);
-    return (
-        (0, r.useEffect)(() => {
-            (async () => {
+    let { subscriptionId: t, searchQuery: r } = e,
+        [a, s] = n.useState([]),
+        [o, l] = n.useState(0),
+        [c, u] = n.useState(!1),
+        [d, p] = n.useState(!1),
+        f = async (e) => {
+            if (!c && null != e)
                 try {
-                    l(!0);
-                    let e = await (0, i.MT)(t);
-                    s(e);
+                    u(!0), p(!1);
+                    let n = await (0, i.MT)(t, e, r);
+                    s((t) => (0 === e ? n.users : [...t, ...n.users])), l(n.nextIndex);
                 } catch (e) {
-                    u(!0);
+                    p(!0);
                 } finally {
-                    l(!1);
+                    u(!1);
                 }
-            })();
-        }, [t, n]),
+        };
+    return (
+        (0, n.useEffect)(() => {
+            l(0), f(0);
+        }, [t, r]),
         {
             eligibleUsers: a,
-            isFetching: o,
-            hasError: c,
-            fetchUsers: () => {},
+            isFetching: c,
+            hasError: d,
+            getNextRows: () => f(o),
         }
     );
 };

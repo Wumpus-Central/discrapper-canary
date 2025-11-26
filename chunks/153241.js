@@ -1,17 +1,17 @@
 r.d(t, { default: () => k }), r(388685), r(539854);
 var n = r(54381),
     i = r(473749),
-    s = r(512722),
-    a = r.n(s),
+    a = r(512722),
+    s = r.n(a),
     o = r(793030),
-    c = r(442837),
-    l = r(481060),
+    l = r(442837),
+    c = r(481060),
     u = r(794433),
     d = r(480466),
     p = r(313789),
     f = r(518596),
-    b = r(78839),
-    m = r(51144),
+    m = r(78839),
+    b = r(51144),
     y = r(904399),
     h = r(80721),
     g = r(172782),
@@ -20,8 +20,8 @@ var n = r(54381),
     j = r(981631),
     S = r(606097),
     x = r(388032),
-    P = r(781565),
-    w = r(383092);
+    w = r(781565),
+    P = r(383092);
 function _() {
     return (_ =
         Object.assign ||
@@ -85,109 +85,122 @@ function C(e, t) {
             var r,
                 n,
                 i = {},
-                s = Object.keys(e);
-            for (n = 0; n < s.length; n++) (r = s[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+                a = Object.keys(e);
+            for (n = 0; n < a.length; n++) (r = a[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
             return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
-        var s = Object.getOwnPropertySymbols(e);
-        for (n = 0; n < s.length; n++)
-            (r = s[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (n = 0; n < a.length; n++)
+            (r = a[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]);
     }
     return i;
 }
 let E = (e) => {
-        var { onInvite: t, onClose: r, subscriptionId: s } = e,
-            a = C(e, ["onInvite", "onClose", "subscriptionId"]);
-        let [c, p] = i.useState([]),
-            [f, b] = i.useState(""),
+        var { onInvite: t, onClose: r, subscriptionId: a } = e,
+            s = C(e, ["onInvite", "onClose", "subscriptionId"]);
+        let [l, p] = i.useState([]),
+            [f, m] = i.useState(""),
             h = (0, d.Z)(f, 400),
             {
                 eligibleUsers: v,
-                fetchUsers: j,
-                hasError: w,
+                getNextRows: j,
+                hasError: P,
                 isFetching: _,
             } = (0, g.Z)({
-                subscriptionId: s,
+                subscriptionId: a,
                 searchQuery: h,
             }),
             [E, Z] = i.useState(!1);
-        return _
-            ? (0, n.jsx)(l.$jN, {})
-            : w
+        return P
+            ? (0, n.jsx)(
+                  o.Modal,
+                  I(
+                      {
+                          size: "sm",
+                          title: x.intl.string(S.default["54lM5y"]),
+                          subtitle: x.intl.string(S.default.zrtwpV),
+                          onClose: r,
+                          actions: [],
+                      },
+                      s,
+                  ),
+              )
+            : 0 !== v.length || _ || 0 !== h.length
               ? (0, n.jsx)(
-                    o.Modal,
-                    I(
-                        {
-                            size: "sm",
-                            title: x.intl.string(x.t.lcuio4),
-                            subtitle: x.intl.string(x.t["x09+CD"]),
-                            onClose: r,
-                            actions: [],
-                        },
-                        a,
-                    ),
-                )
-              : (0, n.jsx)(
                     o.Modal,
                     N(
                         I(
                             {
                                 size: "md",
                                 title: x.intl.string(S.default["Um/7BM"]),
-                                subtitle: x.intl.formatToPlainString(S.default.qSWXaf, {
+                                subtitle: x.intl.format(S.default.qSWXaf, {
                                     totalSeats: O.v$,
                                     premiumGroupProductName: (0, O.sO)(),
+                                    helpCenterLink: O.j3,
                                 }),
                                 onClose: r,
                                 input: (0, n.jsx)(u.Z, {
-                                    className: P.searchbar,
+                                    className: w.searchbar,
                                     size: u.Z.Sizes.MEDIUM,
-                                    tags: c.map((e) => m.ZP.getName(e)),
-                                    placeholder: 0 === c.length ? x.intl.string(S.default.wRS8vo) : "",
+                                    tags: l.map((e) => b.ZP.getName(e)),
+                                    placeholder: 0 === l.length ? x.intl.string(S.default.wRS8vo) : "",
                                     query: f,
                                     onRemoveTag: (e) => {
                                         p((t) => t.filter((t, r) => r !== e));
                                     },
-                                    onQueryChange: b,
-                                    onClear: () => b(""),
+                                    onQueryChange: m,
+                                    onClear: () => m(""),
                                 }),
                                 actions: [],
                                 actionBarInput: (() => {
                                     let e = h.length > 0 && 0 === v.length;
-                                    return (0, n.jsx)(l.Button, {
+                                    return (0, n.jsx)(c.Button, {
                                         variant: "primary",
-                                        disabled: (0 === c.length && !e) || E,
-                                        text: x.intl.string(S.default.TEntiZ),
+                                        disabled: (0 === l.length && !e) || E,
+                                        text: x.intl.string(S.default["5fZHp3"]),
                                         size: "md",
                                         fullWidth: !0,
                                         onClick: async () => {
                                             if (e) return void r();
-                                            Z(!0), await t(c), Z(!1);
+                                            Z(!0), await t(l), Z(!1);
                                         },
                                     });
                                 })(),
                             },
-                            a,
+                            s,
                         ),
                         {
                             children: (0, n.jsx)(y.Z, {
                                 users: v,
-                                isUserSelected: (e) => c.some((t) => t.id === e.id),
+                                isUserSelected: (e) => l.some((t) => t.id === e.id),
                                 onSelectionChange: (e, t) => {
                                     p((r) => (t ? [...r, e] : r.filter((t) => t.id !== e.id)));
                                 },
-                                isUserDisabled: () => c.length >= O.v$,
+                                isUserDisabled: () => l.length >= O.v$,
                                 isFetching: _,
                                 onFetchMore: j,
                                 searchQuery: h,
                                 emptySearchContent: {
-                                    header: x.intl.string(x.t["8+ywHD"]),
-                                    body: x.intl.string(x.t.CgQmY2),
+                                    header: x.intl.string(S.default.gaamNe),
+                                    body: x.intl.string(S.default.nQcM39),
                                 },
-                                className: P.list,
+                                className: w.list,
                             }),
                         },
+                    ),
+                )
+              : (0, n.jsx)(
+                    o.Modal,
+                    I(
+                        {
+                            size: "sm",
+                            title: x.intl.string(S.default.ONaJLH),
+                            subtitle: x.intl.format(S.default["0LHbPc"], { helpCenterLink: O.j3 }),
+                            onClose: r,
+                            actions: [],
+                        },
+                        s,
                     ),
                 );
     },
@@ -201,7 +214,7 @@ let E = (e) => {
                     {
                         graphic: {
                             type: "image",
-                            src: w.Z,
+                            src: P.Z,
                         },
                         gradientColor: "nitro-pink",
                         title: x.intl.formatToPlainString(S.default["0yblpx"], {
@@ -240,10 +253,10 @@ let E = (e) => {
                 return e;
             })(e),
         );
-        let r = (0, c.e7)([b.Z], () => b.Z.getPremiumGroupSubscription()),
-            [s, o] = i.useState([]);
-        a()(null != r, "Subscription not found");
-        let [l, u] = i.useState(1),
+        let r = (0, l.e7)([m.Z], () => m.Z.getPremiumGroupSubscription()),
+            [a, o] = i.useState([]);
+        s()(null != r, "Subscription not found");
+        let [c, u] = i.useState(1),
             d = async (e) => {
                 let t = [];
                 for (let n of e)
@@ -254,7 +267,7 @@ let E = (e) => {
                         });
                 o(t), u(2);
             };
-        return 1 === l
+        return 1 === c
             ? (0, n.jsx)(
                   E,
                   N(I({}, t), {
@@ -262,7 +275,7 @@ let E = (e) => {
                       subscriptionId: r.id,
                   }),
               )
-            : 2 === l
-              ? (0, n.jsx)(Z, N(I({}, t), { inviteUsersResult: s }))
+            : 2 === c
+              ? (0, n.jsx)(Z, N(I({}, t), { inviteUsersResult: a }))
               : void 0;
     };
