@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => L,
+    Z: () => x,
     u: () => P,
 }),
     n(388685);
@@ -12,18 +12,16 @@ var r = n(54381),
     c = n(704215),
     u = n(681715),
     d = n(481060),
-    f = n(679080),
-    _ = n(607070),
-    p = n(713913),
-    h = n(243778),
-    m = n(255963),
-    g = n(140465),
-    E = n(153066),
-    b = n(921944),
-    y = n(185923),
-    O = n(388032),
-    v = n(345857);
-function I(e, t, n) {
+    f = n(607070),
+    _ = n(243778),
+    p = n(255963),
+    h = n(140465),
+    m = n(153066),
+    g = n(921944),
+    E = n(185923),
+    b = n(388032),
+    y = n(345857);
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +34,7 @@ function I(e, t, n) {
         e
     );
 }
-function T(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,12 +45,12 @@ function T(e) {
                 }),
             )),
             r.forEach(function (t) {
-                I(e, t, n[t]);
+                O(e, t, n[t]);
             });
     }
     return e;
 }
-function S(e, t) {
+function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -64,16 +62,37 @@ function S(e, t) {
     }
     return n;
 }
-function A(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : I(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
+}
+function S(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = A(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++)
+            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function A(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
 }
 let C = 20,
     N = 18,
@@ -83,12 +102,12 @@ let C = 20,
         friction: 24,
     },
     D = () => {
-        let e = (0, l.e7)([_.Z], () => _.Z.useReducedMotion);
+        let e = (0, l.e7)([f.Z], () => f.Z.useReducedMotion);
         return (0, r.jsxs)("div", {
-            className: v.premiumTooltipContainer,
+            className: y.premiumTooltipContainer,
             children: [
                 (0, r.jsx)(d.Fmz, {
-                    className: o()(v.premiumUnlockAnimation, { [v.reducedMotion]: e }),
+                    className: o()(y.premiumUnlockAnimation, { [y.reducedMotion]: e }),
                     loop: !1,
                     shouldAnimate: !e,
                     pauseAtFrame: e ? 149 : void 0,
@@ -96,131 +115,189 @@ let C = 20,
                 }),
                 (0, r.jsx)(d.Text, {
                     variant: "text-sm/medium",
-                    className: v.premiumTooltipText,
-                    children: O.intl.format(O.t["/7R4q4"], {}),
+                    className: y.premiumTooltipText,
+                    children: b.intl.format(b.t["/7R4q4"], {}),
                 }),
             ],
         });
     };
 function w(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : N;
     return {
-        "--custom-emoji-sprite-size": "".concat(N, "px"),
+        "--custom-emoji-sprite-size": "".concat(t, "px"),
         "--custom-emoji-sprite-row": Math.floor(e / C),
         "--custom-emoji-sprite-col": e % C,
     };
 }
-let L = function (e) {
-    let {
-            tabIndex: t,
-            className: n,
-            renderButtonContents: a,
-            active: I,
-            onClick: S,
-            "aria-controls": C,
-            focusProps: N,
-            ref: L,
-            allowKeybindHint: x,
+function L(e) {
+    var {
+            className: t,
+            renderButtonContents: n,
+            active: a,
+            onMouseEnter: c,
+            onMouseLeave: u,
+            onContextMenu: _,
+            onFocus: h,
+            spriteClassName: g,
+            spriteSize: b,
+            ref: O,
         } = e,
-        [M, k] = i.useState(!1),
-        [j, U] = i.useState(50),
-        G = M || I,
-        B = (0, E.l)(v, "emojiButton", G ? "Hovered" : "Normal"),
-        Z = w(j),
-        F = i.useCallback(() => {
-            if (G) return;
+        I = S(e, [
+            "className",
+            "renderButtonContents",
+            "active",
+            "onMouseEnter",
+            "onMouseLeave",
+            "onContextMenu",
+            "onFocus",
+            "spriteClassName",
+            "spriteSize",
+            "ref",
+        ]);
+    let [A, C] = i.useState(!1),
+        [N, D] = i.useState(50),
+        L = A || a,
+        x = (0, m.l)(y, "emojiButton", L ? "Hovered" : "Normal"),
+        M = w(N, b),
+        k = i.useCallback(() => {
+            if (L) return;
             let e = Math.floor(Math.random() * R);
-            k(!0), U(e), (0, m.x)(y.qR.EmojiButtonMouseEntered);
-        }, [G, k, U]),
-        V = i.useCallback(() => {
-            k(!1);
-        }, [k]),
-        H = i.useCallback(() => (0, m.x)(y.qR.EmojiButtonFocused), []),
-        Y = (0, g.B4)(),
-        [W, K] = (0, h.US)(Y ? [c.z.TRIAL_NUX_EMOJI_BUTTON] : [], void 0, !0),
-        z = W === c.z.TRIAL_NUX_EMOJI_BUTTON,
-        q = !I && z,
-        X = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
-        Q = i.useRef(null),
-        J = null != L ? L : Q,
-        $ = (0, p.v)(f.S),
-        { tooltipsWithKeybinds: ee, expressionsCombinedIntoEmojiButton: et } = p.n.useConfig({
-            location: "EmojiButton",
-        }),
-        en = ee ? O.intl.string(et ? O.t.DSBQ6F : O.t.lPHwuQ) : null,
-        er = (e) =>
-            (0, r.jsx)(d.P3F, {
-                innerRef: J,
-                tabIndex: t,
-                className: o()(B, n),
-                onMouseEnter: () => {
-                    var t;
-                    F(), null == (t = e.onMouseEnter) || t.call(e);
+            C(!0), D(e), (0, p.x)(E.qR.EmojiButtonMouseEntered);
+        }, [L, C, D]),
+        j = i.useCallback(() => {
+            C(!1);
+        }, [C]),
+        U = i.useCallback(() => (0, p.x)(E.qR.EmojiButtonFocused), []),
+        G = (0, l.e7)([f.Z], () => f.Z.useReducedMotion);
+    return (0, r.jsx)(
+        d.P3F,
+        T(
+            v(
+                {
+                    innerRef: O,
+                    className: o()(x, t),
+                    "aria-expanded": a,
+                    onMouseEnter: () => {
+                        k(), null == c || c();
+                    },
+                    onMouseOver: k,
+                    onMouseLeave: () => {
+                        j(), null == u || u();
+                    },
+                    onFocus: () => {
+                        U(), null == h || h();
+                    },
+                    onContextMenu: _,
                 },
-                onMouseOver: F,
-                onMouseLeave: () => {
-                    var t;
-                    V(), null == (t = e.onMouseLeave) || t.call(e), z && K(b.L.USER_DISMISS);
-                },
-                onFocus: H,
-                onClick: (t) => {
-                    var n;
-                    null == S || S(t), null == (n = e.onClick) || n.call(e);
-                },
-                "aria-label": O.intl.string(O.t["59QgaD"]),
-                "aria-controls": C,
-                "aria-expanded": I,
-                "aria-haspopup": "dialog",
-                focusProps: N,
-                onContextMenu: e.onContextMenu,
+                I,
+            ),
+            {
                 children:
-                    null != a
-                        ? a()
+                    null != n
+                        ? n()
                         : (0, r.jsx)(d.AMe, {
                               config: P,
-                              to: { value: +!!G },
+                              to: { value: +!!L },
                               children: (e) => {
                                   let { value: t } = e;
                                   return (0, r.jsxs)(s.animated.div, {
-                                      className: v.spriteContainer,
-                                      style: A(T({}, Z), {
+                                      className: y.spriteContainer,
+                                      style: T(v({}, M), {
                                           transform: t.to([0, 1], [1, 1.14]).to((e) => "scale(".concat(e, ")")),
                                       }),
                                       children: [
                                           (0, r.jsx)("div", {
-                                              className: o()(v.sprite, v.spriteColored, G ? v.active : v.inactive),
+                                              className: o()(y.sprite, y.spriteColored, L ? y.active : y.inactive),
                                           }),
                                           (0, r.jsx)("div", {
                                               className: o()(
-                                                  v.sprite,
-                                                  z ? v.spritePremiumColored : v.spriteGreyscale,
-                                                  G ? v.inactive : v.active,
-                                                  { [v.reducedMotion]: X },
+                                                  y.sprite,
+                                                  y.spriteGreyscale,
+                                                  L ? y.inactive : y.active,
+                                                  { [y.reducedMotion]: G },
+                                                  g,
                                               ),
                                           }),
                                       ],
                                   });
                               },
                           }),
-            });
-    return q
-        ? (0, r.jsx)(d.aML, {
-              "data-migration-pending": !0,
-              targetElementRef: J,
-              text: () => (0, r.jsx)(D, {}),
-              "aria-label": O.intl.formatToMarkdownString(O.t["/7R4q4"], {}),
-              position: "top",
-              shouldShow: !0,
-              tooltipClassName: v.premiumTooltip,
-              tooltipContentClassName: v.premiumTooltipContainer,
-              children: (e) => er(e),
-          })
-        : null != en
-          ? (0, r.jsx)(u.u, {
-                targetElementRef: J,
+            },
+        ),
+    );
+}
+function x(e) {
+    var {
+            "aria-label": t = b.intl.string(b.t.lPHwuQ),
+            tooltipText: n,
+            active: a,
+            onClick: o,
+            "aria-controls": s,
+            ref: l,
+            keyboardShortcut: f,
+            canShowNUXPremiumTooltip: p = !1,
+        } = e,
+        m = S(e, [
+            "aria-label",
+            "tooltipText",
+            "active",
+            "onClick",
+            "aria-controls",
+            "ref",
+            "keyboardShortcut",
+            "canShowNUXPremiumTooltip",
+        ]);
+    let E = (0, h.B4)(),
+        [O, I] = (0, _.US)(E ? [c.z.TRIAL_NUX_EMOJI_BUTTON] : [], void 0, !0),
+        T = p && O === c.z.TRIAL_NUX_EMOJI_BUTTON,
+        A = !a && T,
+        C = i.useRef(null),
+        N = null != l ? l : C,
+        R = (e) =>
+            (0, r.jsx)(
+                L,
+                v(
+                    {
+                        ref: N,
+                        onMouseEnter: e.onMouseEnter,
+                        onMouseLeave: () => {
+                            var t;
+                            T && I(g.L.USER_DISMISS), null == (t = e.onMouseLeave) || t.call(e);
+                        },
+                        onFocus: e.onFocus,
+                        onBlur: e.onBlur,
+                        onClick: (t) => {
+                            var n;
+                            null == o || o(t), null == (n = e.onClick) || n.call(e);
+                        },
+                        "aria-label": t,
+                        "aria-controls": s,
+                        active: a,
+                        onContextMenu: e.onContextMenu,
+                        spriteClassName: T ? y.spritePremiumColored : void 0,
+                    },
+                    m,
+                ),
+            );
+    return null == n
+        ? R({})
+        : A
+          ? (0, r.jsx)(d.aML, {
+                "data-migration-pending": !0,
+                targetElementRef: N,
+                text: () => (0, r.jsx)(D, {}),
+                "aria-label": b.intl.formatToMarkdownString(b.t["/7R4q4"], {}),
+                position: "top",
                 shouldShow: !0,
-                text: en,
-                keyboardShortcut: et ? void 0 : x ? $ : void 0,
-                children: er({}),
+                tooltipClassName: y.premiumTooltip,
+                tooltipContentClassName: y.premiumTooltipContainer,
+                children: (e) => R(e),
             })
-          : er({});
-};
+          : (0, r.jsx)(u.u, {
+                targetElementRef: N,
+                shouldShow: !0,
+                text: n,
+                keyboardShortcut: f,
+                children: R({}),
+            });
+}

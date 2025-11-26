@@ -7,7 +7,6 @@ e.exports = {
     emojiButtonContainer: "emojiButtonContainer_dbc4b7",
     emoji: "emoji_dbc4b7",
     input: "input_dbc4b7",
-    clearButtonWrapper: "clearButtonWrapper_dbc4b7",
     clearButton: "clearButton_dbc4b7",
     clearIcon: "clearIcon_dbc4b7",
     clearAfterSelectContainer: "clearAfterSelectContainer_dbc4b7",
