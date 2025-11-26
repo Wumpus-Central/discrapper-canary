@@ -41,6 +41,9 @@ let l = (e, t) => {
                       senderName: n,
                       premiumGroupProductName: r,
                   })
-                : s.intl.formatToPlainString(o.default.MkcdX8, { senderName: n }),
+                : s.intl.formatToPlainString(o.default.MkcdX8, {
+                      senderName: n,
+                      premiumGroupProductName: r,
+                  }),
         };
     };
