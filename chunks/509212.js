@@ -3,7 +3,6 @@ n.d(t, {
     $J: () => tv,
     $V: () => tP,
     AV: () => eD,
-    B2: () => tX,
     B3: () => nt,
     BI: () => ni,
     BM: () => tS,
@@ -45,6 +44,7 @@ n.d(t, {
     Uy: () => tL,
     V$: () => tR,
     VB: () => tH,
+    V_: () => tX,
     Vl: () => td,
     WP: () => eE,
     Xh: () => eA,
@@ -1052,8 +1052,7 @@ function tq(e) {
     return null != n && null != r ? n : null != (t = null != r ? r : n) ? t : null;
 }
 function tX(e) {
-    var t;
-    return null != (t = e.ctaConfig.buttonLabel) ? t : F.intl.string(F.t.iiTtpJ);
+    return e.ctaConfig.buttonLabel;
 }
 function tQ(e, t) {
     var n;

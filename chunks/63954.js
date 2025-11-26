@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => H,
+    Z: () => U,
     b: () => Q,
 }),
     n(388685),
@@ -20,20 +20,20 @@ var r = n(54381),
     h = n(210724),
     x = n(130653),
     _ = n(801604),
-    b = n(415104),
-    j = n(478977),
-    v = n(456799),
-    C = n(210851),
-    y = n(602683),
-    E = n(916028),
-    O = n(749912),
-    S = n(815183),
-    T = n(899457),
-    w = n(110560),
-    P = n(429999),
-    N = n(752367),
-    A = n(70956),
-    R = n(188764);
+    b = n(557843),
+    j = n(686834),
+    v = n(415104),
+    C = n(478977),
+    y = n(456799),
+    E = n(210851),
+    O = n(602683),
+    S = n(916028),
+    T = n(749912),
+    w = n(815183),
+    P = n(899457),
+    N = n(110560),
+    R = n(70956),
+    A = n(188764);
 function B(e, t, n) {
     return (
         t in e
@@ -176,18 +176,21 @@ let M = "1193992107035983872",
             },
             features: [],
             sharePolicy: d.X.SHAREABLE_EVERYWHERE,
-            ctaConfig: { link: "https://discord.com/" },
+            ctaConfig: {
+                link: "https://discord.com/",
+                buttonLabel: "Learn More",
+            },
         },
         userStatus: null,
         targetedContent: [],
     };
 function W() {
     var e, t, o, d, u, B, Q, M;
-    let [W, U] = s.useState(Z),
-        H = s.useCallback((e) => {
-            U(I(k({}, e), { preview: !0 }));
+    let [W, H] = s.useState(Z),
+        U = s.useCallback((e) => {
+            H(I(k({}, e), { preview: !0 }));
         }, []),
-        [F, z] = s.useState(T.a.UNENROLLED),
+        [F, z] = s.useState(P.a.UNENROLLED),
         [G, K] = s.useState(!1),
         [X, Y] = s.useState(!1),
         [J, $] = s.useState(null),
@@ -206,7 +209,7 @@ function W() {
             "questBarHeroVideo" === e
         ) {
             var n, r;
-            H(
+            U(
                 I(k({}, W), {
                     config:
                         ((n = W.config),
@@ -236,7 +239,7 @@ function W() {
             default:
                 return;
         }
-        H(
+        U(
             I(k({}, W), {
                 config: I(k({}, W.config), {
                     taskConfigV2: I(k({}, W.config.taskConfigV2), {
@@ -248,7 +251,7 @@ function W() {
     }
     function er(e, t) {
         var n, r, s;
-        H(
+        U(
             I(k({}, W), {
                 config: I(k({}, W.config), {
                     videoMetadata: I(k({}, W.config.videoMetadata), {
@@ -262,7 +265,7 @@ function W() {
     function es(e, t) {
         if ("questName" === e || "gameTitle" === e || "gamePublisher" === e) {
             var n, r;
-            H(
+            U(
                 I(k({}, W), {
                     config:
                         ((n = W.config),
@@ -277,7 +280,7 @@ function W() {
     function eo(e, t, n) {
         if ("name" === e || "nameWithArticle" === e) {
             var r, s;
-            H(
+            U(
                 I(k({}, W), {
                     config:
                         ((r = W.config),
@@ -298,12 +301,12 @@ function W() {
         }
     }
     function ea(e, t) {
-        H(I(k({}, W), { config: I(k({}, W.config), { colors: I(k({}, W.config.colors), { [e]: t }) }) }));
+        U(I(k({}, W), { config: I(k({}, W.config), { colors: I(k({}, W.config.colors), { [e]: t }) }) }));
     }
     function ei() {
         (0, g.Xv)(W.config)
-            ? (0, w.openQuestCollectibleRewardModal)(W, m.jn.GIFT_INVENTORY_FOR_YOU, m.jn.INTERNAL_PREVIEW_TOOL, !0)
-            : (0, w.openQuestsRewardCodeModal)({
+            ? (0, N.openQuestCollectibleRewardModal)(W, m.jn.GIFT_INVENTORY_FOR_YOU, m.jn.INTERNAL_PREVIEW_TOOL, !0)
+            : (0, N.openQuestsRewardCodeModal)({
                   quest: W,
                   questContent: m.jn.GIFT_INVENTORY_FOR_YOU,
                   preview: !0,
@@ -313,92 +316,92 @@ function W() {
     }
     let el = s.useMemo(() => {
             for (let [e, t] of Object.entries(W.config.taskConfigV2.tasks)) if (null != t.target) return t.target;
-            return 10 * A.Z.Seconds.MINUTE;
+            return 10 * R.Z.Seconds.MINUTE;
         }, [W.config.taskConfigV2.tasks]),
         ec = s.useMemo(() => l.X.WATCH_VIDEO in W.config.taskConfigV2.tasks, [W.config.taskConfigV2.tasks]);
     a()(!1 !== W.preview && null != W.preview, "Preview config must have property preview: true");
     let ed = W.config.taskConfigV2.tasks[l.X.WATCH_VIDEO];
     return (0, r.jsxs)(p.zJl, {
-        className: R.container,
+        className: A.container,
         children: [
             (0, r.jsx)(p.Heading, {
                 variant: "heading-lg/bold",
-                className: R.heading,
+                className: A.heading,
                 children: "Quest Preview Tool",
             }),
             (0, r.jsx)("div", {
-                className: R.fields,
-                children: (0, r.jsx)(E.Z, {
+                className: A.fields,
+                children: (0, r.jsx)(S.Z, {
                     onSelect: function (e) {
                         $(e),
                             null != e &&
                                 (z(
                                     (function (e) {
-                                        if (null == e.userStatus) return T.a.UNENROLLED;
-                                        if (null != e.userStatus.claimedAt) return T.a.CLAIMED;
-                                        if (null != e.userStatus.completedAt) return T.a.COMPLETED_100;
+                                        if (null == e.userStatus) return P.a.UNENROLLED;
+                                        if (null != e.userStatus.claimedAt) return P.a.CLAIMED;
+                                        if (null != e.userStatus.completedAt) return P.a.COMPLETED_100;
                                         let t = (0, g.il)(e),
                                             n = t.progressSeconds,
                                             r = t.targetSeconds;
                                         return n / r >= 1
-                                            ? T.a.COMPLETED_100
+                                            ? P.a.COMPLETED_100
                                             : n / r >= 0.75
-                                              ? T.a.COMPLETED_75
+                                              ? P.a.COMPLETED_75
                                               : n / r >= 0.5
-                                                ? T.a.COMPLETED_50
+                                                ? P.a.COMPLETED_50
                                                 : n / r >= 0.25
-                                                  ? T.a.COMPLETED_25
-                                                  : T.a.ENROLLED;
+                                                  ? P.a.COMPLETED_25
+                                                  : P.a.ENROLLED;
                                     })(e),
                                 ),
-                                H(e));
+                                U(e));
                     },
                     quest: J,
                 }),
             }),
             (0, r.jsx)(p.Heading, {
                 variant: "heading-md/semibold",
-                className: R.subheading,
+                className: A.subheading,
                 children: "Task Config",
             }),
             (0, r.jsx)("div", {
-                className: R.fields,
-                children: (0, r.jsx)(O.Z, {
+                className: A.fields,
+                children: (0, r.jsx)(T.Z, {
                     taskDuration: el,
                     taskConfigV2: W.config.taskConfigV2,
                     onSelect: function (e) {
-                        H(I(k({}, W), { config: I(k({}, W.config), { taskConfigV2: e }) }));
+                        U(I(k({}, W), { config: I(k({}, W.config), { taskConfigV2: e }) }));
                     },
                 }),
             }),
             (0, r.jsx)(p.Heading, {
                 variant: "heading-md/semibold",
-                className: R.subheading,
+                className: A.subheading,
                 children: "Messages",
             }),
             (0, r.jsxs)("div", {
-                className: R.fields,
+                className: A.fields,
                 children: [
-                    (0, r.jsx)(y.Z, {
+                    (0, r.jsx)(O.Z, {
                         title: "Quest Name",
                         assetKey: "questName",
                         onMessageChange: es,
                         initialValue: W.config.messages.questName,
                     }),
-                    (0, r.jsx)(y.Z, {
+                    (0, r.jsx)(O.Z, {
                         title: "Game Title",
                         assetKey: "gameTitle",
                         onMessageChange: es,
                         initialValue: W.config.messages.gameTitle,
                     }),
-                    (0, r.jsx)(y.Z, {
+                    (0, r.jsx)(O.Z, {
                         title: "Game Publisher",
                         assetKey: "gamePublisher",
                         onMessageChange: es,
                         initialValue: W.config.messages.gamePublisher,
                     }),
                     ec &&
-                        (0, r.jsx)(y.Z, {
+                        (0, r.jsx)(O.Z, {
                             title: "Video Title",
                             assetKey: "videoTitle",
                             onMessageChange: function (e, t) {
@@ -406,7 +409,7 @@ function W() {
                                     r = n[l.X.WATCH_VIDEO];
                                 if (null == r) return;
                                 let s = I(k({}, r.messages), { [e]: t });
-                                H(
+                                U(
                                     I(k({}, W), {
                                         config: I(k({}, W.config), {
                                             taskConfigV2: I(k({}, W.config.taskConfigV2), {
@@ -422,48 +425,48 @@ function W() {
             }),
             (0, r.jsx)(p.Heading, {
                 variant: "heading-md/semibold",
-                className: R.subheading,
+                className: A.subheading,
                 children: "Assets",
             }),
             (0, r.jsxs)("div", {
-                className: R.fields,
+                className: A.fields,
                 children: [
-                    (0, r.jsx)(C.Z, {
+                    (0, r.jsx)(E.Z, {
                         title: "Hero",
                         assetKey: "hero",
                         onFileChange: et,
                         filters: L,
                         initialValue: W.config.assets.hero,
                     }),
-                    (0, r.jsx)(C.Z, {
+                    (0, r.jsx)(E.Z, {
                         title: "Hero Video (optional)",
                         assetKey: "heroVideo",
                         onFileChange: et,
                         filters: L,
                         initialValue: null != (B = W.config.assets.heroVideo) ? B : void 0,
                     }),
-                    (0, r.jsx)(C.Z, {
+                    (0, r.jsx)(E.Z, {
                         title: "Quest Bar Hero",
                         assetKey: "questBarHero",
                         onFileChange: et,
                         filters: L,
                         initialValue: W.config.assets.questBarHero,
                     }),
-                    (0, r.jsx)(C.Z, {
+                    (0, r.jsx)(E.Z, {
                         title: "Quest Bar Hero Video (optional)",
                         assetKey: "questBarHeroVideo",
                         onFileChange: et,
                         filters: L,
                         initialValue: null != (Q = W.config.assets.questBarHeroVideo) ? Q : void 0,
                     }),
-                    (0, r.jsx)(C.Z, {
+                    (0, r.jsx)(E.Z, {
                         title: "Game Tile",
                         assetKey: "gameTile",
                         onFileChange: et,
                         filters: [...q, "svg"],
                         initialValue: W.config.assets.gameTile,
                     }),
-                    (0, r.jsx)(C.Z, {
+                    (0, r.jsx)(E.Z, {
                         title: "Logotype",
                         assetKey: "logotype",
                         onFileChange: et,
@@ -473,28 +476,28 @@ function W() {
                     ec &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(C.Z, {
+                                (0, r.jsx)(E.Z, {
                                     title: "Quest Video",
                                     assetKey: "videoPlayerVideo",
                                     onFileChange: en,
                                     filters: L,
                                     initialValue: null == ed ? void 0 : ed.assets.video.url,
                                 }),
-                                (0, r.jsx)(C.Z, {
+                                (0, r.jsx)(E.Z, {
                                     title: "Quest Video (Low Resolution)",
                                     assetKey: "videoPlayerVideoLowRes",
                                     onFileChange: en,
                                     filters: L,
                                     initialValue: null == ed || null == (e = ed.assets.videoLowRes) ? void 0 : e.url,
                                 }),
-                                (0, r.jsx)(C.Z, {
+                                (0, r.jsx)(E.Z, {
                                     title: "Video Player Thumbnail (optional)",
                                     assetKey: "videoPlayerThumbnail",
                                     onFileChange: en,
                                     filters: q,
                                     initialValue: null == ed ? void 0 : ed.assets.video.thumbnail,
                                 }),
-                                (0, r.jsx)(C.Z, {
+                                (0, r.jsx)(E.Z, {
                                     title: "Quest Bar Preview Video (optional)",
                                     assetKey: "questBarPreviewVideo",
                                     onFileChange: er,
@@ -502,7 +505,7 @@ function W() {
                                     initialValue:
                                         null == (t = W.config.videoMetadata) ? void 0 : t.assets.questBarPreviewVideo,
                                 }),
-                                (0, r.jsx)(C.Z, {
+                                (0, r.jsx)(E.Z, {
                                     title: "Quest Home Video (optional)",
                                     assetKey: "questHomeVideo",
                                     onFileChange: er,
@@ -521,33 +524,33 @@ function W() {
                         children: [
                             (0, r.jsxs)(p.Heading, {
                                 variant: "heading-md/semibold",
-                                className: R.subheading,
+                                className: A.subheading,
                                 children: ["Reward #", t + 1],
                             }),
                             (0, r.jsxs)("div", {
-                                className: R.fields,
+                                className: A.fields,
                                 children: [
-                                    (0, r.jsx)(y.Z, {
+                                    (0, r.jsx)(O.Z, {
                                         title: "Name",
                                         assetKey: "name",
                                         onMessageChange: (e, n) => eo(e, n, t),
                                         initialValue: e.messages.name,
                                     }),
-                                    (0, r.jsx)(y.Z, {
+                                    (0, r.jsx)(O.Z, {
                                         title: "Name With Article",
                                         assetKey: "nameWithArticle",
                                         onMessageChange: (e, n) => eo(e, n, t),
                                         initialValue: e.messages.nameWithArticle,
                                     }),
                                     e.type !== c.w.VIRTUAL_CURRENCY &&
-                                        (0, r.jsx)(C.Z, {
+                                        (0, r.jsx)(E.Z, {
                                             title: "Asset",
                                             assetKey: "asset",
                                             onFileChange: (e, n) =>
                                                 (function (e, t, n) {
                                                     if ("asset" === e) {
                                                         var r;
-                                                        H(
+                                                        U(
                                                             I(k({}, W), {
                                                                 config:
                                                                     ((r = W.config),
@@ -603,23 +606,23 @@ function W() {
             ),
             (0, r.jsx)(p.Heading, {
                 variant: "heading-md/semibold",
-                className: R.subheading,
+                className: A.subheading,
                 children: "Colors & Quest States",
             }),
             (0, r.jsxs)("div", {
-                className: R.fields,
+                className: A.fields,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: R.fields,
+                        className: A.fields,
                         style: { marginBottom: 0 },
                         children: [
-                            (0, r.jsx)(j.Z, {
+                            (0, r.jsx)(C.Z, {
                                 title: "Primary",
                                 colorKey: "primary",
                                 onChange: ea,
                                 value: W.config.colors.primary,
                             }),
-                            (0, r.jsx)(j.Z, {
+                            (0, r.jsx)(C.Z, {
                                 title: "Secondary",
                                 colorKey: "secondary",
                                 onChange: ea,
@@ -628,20 +631,20 @@ function W() {
                         ],
                     }),
                     (0, r.jsx)("div", {
-                        className: R.fields,
-                        children: (0, r.jsx)(S.Z, {}),
+                        className: A.fields,
+                        children: (0, r.jsx)(w.Z, {}),
                     }),
-                    (0, r.jsx)(T.Z, {
+                    (0, r.jsx)(P.Z, {
                         onChange: function (e) {
                             switch ((z(e), e)) {
-                                case T.a.UNENROLLED:
-                                    H(I(k({}, W), { userStatus: null }));
+                                case P.a.UNENROLLED:
+                                    U(I(k({}, W), { userStatus: null }));
                                     break;
-                                case T.a.ENROLLED:
-                                    H(I(k({}, W), { userStatus: V({ enrolledAt: new Date().toISOString() }) }));
+                                case P.a.ENROLLED:
+                                    U(I(k({}, W), { userStatus: V({ enrolledAt: new Date().toISOString() }) }));
                                     break;
-                                case T.a.COMPLETED_25:
-                                    H(
+                                case P.a.COMPLETED_25:
+                                    U(
                                         I(k({}, W), {
                                             userStatus: V({
                                                 enrolledAt: new Date().toISOString(),
@@ -650,8 +653,8 @@ function W() {
                                         }),
                                     );
                                     break;
-                                case T.a.COMPLETED_50:
-                                    H(
+                                case P.a.COMPLETED_50:
+                                    U(
                                         I(k({}, W), {
                                             userStatus: V({
                                                 enrolledAt: new Date().toISOString(),
@@ -660,8 +663,8 @@ function W() {
                                         }),
                                     );
                                     break;
-                                case T.a.COMPLETED_75:
-                                    H(
+                                case P.a.COMPLETED_75:
+                                    U(
                                         I(k({}, W), {
                                             userStatus: V({
                                                 enrolledAt: new Date().toISOString(),
@@ -670,8 +673,8 @@ function W() {
                                         }),
                                     );
                                     break;
-                                case T.a.COMPLETED_100:
-                                    H(
+                                case P.a.COMPLETED_100:
+                                    U(
                                         I(k({}, W), {
                                             userStatus: V({
                                                 completedAt: new Date().toISOString(),
@@ -681,8 +684,8 @@ function W() {
                                         }),
                                     );
                                     break;
-                                case T.a.CLAIMED:
-                                    H(
+                                case P.a.CLAIMED:
+                                    U(
                                         I(k({}, W), {
                                             userStatus: V({
                                                 claimedAt: new Date().toISOString(),
@@ -700,13 +703,13 @@ function W() {
             }),
             (0, r.jsx)(p.Heading, {
                 variant: "heading-lg/bold",
-                className: R.heading,
+                className: A.heading,
                 children: "Component Previews",
             }),
             (0, r.jsxs)("div", {
-                className: R.componentPreviews,
+                className: A.componentPreviews,
                 children: [
-                    (0, r.jsxs)(v.Z, {
+                    (0, r.jsxs)(y.Z, {
                         withBorder: !0,
                         children: [
                             (0, r.jsx)(p.Heading, {
@@ -714,7 +717,7 @@ function W() {
                                 children: "Quest Bar",
                             }),
                             (0, r.jsxs)("div", {
-                                className: R.questBarPreviewWrapper,
+                                className: A.questBarPreviewWrapper,
                                 children: [
                                     (null == (d = W.userStatus) ? void 0 : d.claimedAt) != null &&
                                         (0, r.jsx)(p.Text, {
@@ -723,7 +726,7 @@ function W() {
                                             children: "The Quest Bar is hidden when the user has claimed the reward.",
                                         }),
                                     (0, r.jsx)("div", {
-                                        className: R.questBarPreview,
+                                        className: A.questBarPreview,
                                         children: (0, r.jsx)(f.x8, {
                                             isPreview: !0,
                                             source: "preview",
@@ -735,7 +738,7 @@ function W() {
                             }),
                         ],
                     }),
-                    (0, r.jsxs)(v.Z, {
+                    (0, r.jsxs)(y.Z, {
                         withBorder: !0,
                         children: [
                             (0, r.jsx)(p.Heading, {
@@ -746,9 +749,9 @@ function W() {
                                 isPreview: !0,
                                 source: "preview",
                                 questId: "0",
-                                children: (0, r.jsx)(b.Z, {
+                                children: (0, r.jsx)(v.Z, {
                                     quest: W,
-                                    className: R.questTile,
+                                    className: A.questTile,
                                     questContent: m.jn.QUEST_HOME_DESKTOP,
                                     contentPosition: 0,
                                     rowIndex: 0,
@@ -757,7 +760,7 @@ function W() {
                             }),
                         ],
                     }),
-                    (0, r.jsxs)(v.Z, {
+                    (0, r.jsxs)(y.Z, {
                         withBorder: !0,
                         children: [
                             (0, r.jsx)(p.Heading, {
@@ -772,13 +775,13 @@ function W() {
                                         "The Quest Channel Call Header is hidden when the user has claimed the reward.",
                                 }),
                             (0, r.jsx)("div", {
-                                className: R.questBarPreviewWrapper,
+                                className: A.questBarPreviewWrapper,
                                 children: (0, r.jsx)(f.x8, {
                                     isPreview: !0,
                                     source: "preview",
                                     questId: "0",
                                     children: (0, r.jsx)("div", {
-                                        className: R.questChannelCallHeaderPreview,
+                                        className: A.questChannelCallHeaderPreview,
                                         children: (0, r.jsx)(_.Z, {
                                             channelId: "123",
                                             previewQuest: W,
@@ -790,7 +793,7 @@ function W() {
                         ],
                     }),
                     (0, r.jsx)("div", {
-                        className: R.toggleSwitch,
+                        className: A.toggleSwitch,
                         children: (0, r.jsx)(p.rsf, {
                             label: "Is Participating:",
                             checked: G,
@@ -799,7 +802,7 @@ function W() {
                             },
                         }),
                     }),
-                    (0, r.jsxs)(v.Z, {
+                    (0, r.jsxs)(y.Z, {
                         withBorder: !0,
                         children: [
                             (0, r.jsx)(p.Heading, {
@@ -807,9 +810,9 @@ function W() {
                                 children: "Quest Card Embed",
                             }),
                             X
-                                ? (0, r.jsx)(P.W, { questId: W.id })
+                                ? (0, r.jsx)(b.W, { questId: W.id })
                                 : (0, r.jsx)(
-                                      N.X,
+                                      j.X,
                                       {
                                           quest: W,
                                           location: m.jn.QUESTS_EMBED,
@@ -820,7 +823,7 @@ function W() {
                         ],
                     }),
                     (0, r.jsx)("div", {
-                        className: R.toggleSwitch,
+                        className: A.toggleSwitch,
                         children: (0, r.jsx)(p.rsf, {
                             label: "Invalid Quests Embed:",
                             checked: X,
@@ -828,7 +831,7 @@ function W() {
                         }),
                     }),
                     ec &&
-                        (0, r.jsxs)(v.Z, {
+                        (0, r.jsxs)(y.Z, {
                             withBorder: !0,
                             allowClicks: !0,
                             children: [
@@ -870,7 +873,7 @@ function W() {
         ],
     });
 }
-class U extends s.Component {
+class H extends s.Component {
     componentDidCatch(e) {
         this.setState({ error: e });
     }
@@ -878,9 +881,9 @@ class U extends s.Component {
         let { error: e, renderKey: t } = this.state;
         return null != e
             ? (0, r.jsxs)("div", {
-                  className: R.errorBoundary,
+                  className: A.errorBoundary,
                   children: [
-                      (0, r.jsx)(p.Mgn, { className: R.errorBoundaryIcon }),
+                      (0, r.jsx)(p.Mgn, { className: A.errorBoundaryIcon }),
                       (0, r.jsx)(p.Heading, {
                           variant: "heading-lg/semibold",
                           children: "Something broke in the Quest preview tool :(",
@@ -892,9 +895,9 @@ class U extends s.Component {
                       }),
                       null != e.message &&
                           (0, r.jsx)(p.Zbd, {
-                              className: R.errorMessageWrapper,
+                              className: A.errorMessageWrapper,
                               children: (0, r.jsx)("code", {
-                                  className: R.errorMessage,
+                                  className: A.errorMessage,
                                   children: e.message,
                               }),
                           }),
@@ -916,4 +919,4 @@ class U extends s.Component {
             });
     }
 }
-let H = U;
+let U = H;

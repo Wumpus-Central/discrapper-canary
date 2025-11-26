@@ -103,7 +103,7 @@ function L(e) {
         C = [E.jn.QUEST_BAR_V2, E.jn.QUEST_BAR].includes(e.questContent),
         N = (0, p.O5)(),
         R = (0, h.aM)(),
-        P = (0, m.ly)(e.quest),
+        P = (0, b.V_)(e.quest.config),
         D = !0 === e.showShareLink && (0, b.vB)(e.quest.config),
         {
             handleComplete: w,
@@ -175,10 +175,10 @@ function L(e) {
                     ((0, _.gl)(e.quest.id, e.questContent), C && (0, v.maybeShowSurveyForQuest)(e.quest));
         },
         H = (e) => (0, o.showToast)((0, o.createToast)(new l.Z(e, e.status).message, o.ToastType.FAILURE)),
-        Y = () => (0, _.CS)(e.quest.id, !0).catch(H),
-        W = () => (0, _.is)(e.quest.id).catch(H),
+        W = () => (0, _.CS)(e.quest.id, !0).catch(H),
+        Y = () => (0, _.is)(e.quest.id).catch(H),
         K = () => {
-            M(), W();
+            M(), Y();
         },
         z = (0, m.m4)(e.quest),
         q = i.useMemo(
@@ -291,12 +291,12 @@ function L(e) {
                                         (0, r.jsx)(o.sNh, {
                                             id: "start",
                                             label: "Start heartbeat (cheatmode)",
-                                            action: Y,
+                                            action: W,
                                         }),
                                         (0, r.jsx)(o.sNh, {
                                             id: "stop",
                                             label: "Stop heartbeat",
-                                            action: W,
+                                            action: Y,
                                         }),
                                     ],
                                 }),
