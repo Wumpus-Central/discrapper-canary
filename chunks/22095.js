@@ -46,7 +46,7 @@ var r = n(990547),
     y = n(49436),
     O = n(509212),
     v = n(184299),
-    I = n(720293),
+    I = n(475595),
     T = n(324805),
     S = n(981631),
     A = n(388032);
@@ -608,8 +608,9 @@ async function $(e, t) {
         rejectWithError: !1,
     });
 }
-async function ee(e, t) {
-    let n = (0, I.z0)(e, t, I.n1.VIDEO, I.O.TRANSCRIPT);
+async function ee(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        n = (0, I.fh)(e, I.eC.VIDEO_PLAYER_TRANSCRIPT, void 0, t);
     if (null == n)
         return void v.ZP.getState().setTranscriptAsset({
             questId: e.id,

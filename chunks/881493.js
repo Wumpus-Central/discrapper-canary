@@ -41,7 +41,7 @@ let h = () => {
             },
             {
                 text: "".concat(
-                    _.intl.format(_.t.yxFzdO, { planPremiumType: l.ZP.getDisplayPremiumType("".concat(t)) }),
+                    _.intl.format(_.t.yxFzdO, { planPremiumType: l.ZP.getTierDisplayNameByPlanId("".concat(t)) }),
                 ),
                 onClick: I,
                 disabled: b,
@@ -55,7 +55,7 @@ let h = () => {
     return (0, r.jsxs)(s.Modal, {
         size: "md",
         transitionState: e,
-        title: "".concat(_.intl.format(_.t.LZunzZ, { planPremiumType: l.ZP.getDisplayPremiumType("".concat(t)) })),
+        title: "".concat(_.intl.format(_.t.LZunzZ, { planPremiumType: l.ZP.getTierDisplayNameByPlanId("".concat(t)) })),
         subtitle:
             0 !== n.total
                 ? _.intl.format(_.t.ycyeBx, {

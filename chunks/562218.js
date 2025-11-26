@@ -70,7 +70,7 @@ let p = () => {
                 size: "md",
                 transitionState: t,
                 title: "".concat(
-                    _.intl.format(_.t.LZunzZ, { planPremiumType: l.ZP.getDisplayPremiumType("".concat(g)) }),
+                    _.intl.format(_.t.LZunzZ, { planPremiumType: l.ZP.getTierDisplayNameByPlanId("".concat(g)) }),
                 ),
                 subtitle: h(m, s, p),
                 actions: S,

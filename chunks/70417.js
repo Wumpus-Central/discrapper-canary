@@ -3,7 +3,7 @@ var r = n(473749),
     o = n(713447),
     l = n(754700),
     i = n(937058),
-    a = n(720293),
+    a = n(475595),
     s = n(215113),
     c = n(324805),
     u = n(981631);
@@ -20,14 +20,14 @@ function m(e, t, n) {
             () =>
                 null != g
                     ? E && o.ZP.isSupported() && null != g.videoHls
-                        ? a.n1.VIDEO_HLS
+                        ? a.eC.VIDEO_PLAYER_VIDEO_HLS
                         : d.has(t) || null == g.videoLowRes
-                          ? a.n1.VIDEO
-                          : a.n1.VIDEO_LOW_RES
+                          ? a.eC.VIDEO_PLAYER_VIDEO
+                          : a.eC.VIDEO_PLAYER_VIDEO_LOW_RES
                     : null,
             [g, t, E],
         ),
-        h = r.useMemo(() => (null != O ? (0, a.z0)(m, l.X.WATCH_VIDEO, O, a.O.VIDEO) : null), [m, O]),
+        h = r.useMemo(() => (null != O ? (0, a.fh)(m, O, void 0, !1) : null), [m, O]),
         b = () => {
             null != v.current &&
                 800000 !== v.current.config.minAutoBitrate &&
@@ -38,7 +38,7 @@ function m(e, t, n) {
         }, []);
     return (
         r.useEffect(() => {
-            if (O !== a.n1.VIDEO_HLS || null == h || null == e.current || p.current) return;
+            if (O !== a.eC.VIDEO_PLAYER_VIDEO_HLS || null == h || null == e.current || p.current) return;
             (v.current = new o.ZP({
                 backBufferLength: 20,
                 maxBufferLength: 30,
@@ -56,7 +56,7 @@ function m(e, t, n) {
             };
         }, [h, O, e, n]),
         {
-            videoVariant: O,
+            videoAssetType: O,
             videoAsset: h,
             hlsRef: v,
             onFirstChunkLoaded: C,

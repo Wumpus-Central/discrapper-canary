@@ -56,7 +56,7 @@ let O = "premiumRetentionEmojiPickerNotice",
                         (0, r.jsx)(c.Text, {
                             variant: "text-xs/normal",
                             children: b.intl.format(b.t.bTMjiO, {
-                                planName: h.ZP.getDisplayPremiumType(T.planId),
+                                planName: h.ZP.getTierDisplayNameByPlanId(T.planId),
                                 endsAt: A.toDate(),
                             }),
                         }),

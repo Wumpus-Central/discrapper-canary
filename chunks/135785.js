@@ -23,7 +23,7 @@ let m = (e) => {
     if (
         (u.ZP.isBoostOnlySubscription(i)
             ? (t = p.intl.string(p.t.Uj0md3))
-            : null != b && (t = u.ZP.getDisplayPremiumType(b.planId)),
+            : null != b && (t = u.ZP.getTierDisplayNameByPlanId(b.planId)),
         null == t)
     )
         return null;

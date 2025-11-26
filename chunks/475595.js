@@ -1,12 +1,9 @@
 n.d(t, {
-    Dm: () => y,
-    N0: () => _,
-    Q2: () => b,
-    eC: () => p,
-    f0: () => T,
-    fh: () => g,
-    nK: () => v,
-    sN: () => I,
+    eC: () => h,
+    f0: () => A,
+    fh: () => b,
+    nK: () => T,
+    sN: () => S,
 }),
     n(35282),
     n(784620),
@@ -18,18 +15,19 @@ n.d(t, {
     n(490233),
     n(97749),
     n(388685);
-var r = n(887003),
-    i = n(591759),
-    a = n(921948),
-    o = n(509212),
-    s = n(324805),
-    l = n(981631),
-    c = n(380299),
-    u = n(772400);
-let d = 3,
-    f = /\.([a-zA-Z0-9]+)$/,
-    _ = ["video/mp4", "video/webm"];
-var p = (function (e) {
+var r = n(754700),
+    i = n(887003),
+    a = n(591759),
+    o = n(921948),
+    s = n(509212),
+    l = n(324805),
+    c = n(981631),
+    u = n(380299),
+    d = n(772400);
+let f = 3,
+    _ = /\.([a-zA-Z0-9]+)$/,
+    p = ["video/mp4", "video/webm"];
+var h = (function (e) {
     return (
         (e.HERO = "hero"),
         (e.HERO_IMAGE = "hero_image"),
@@ -41,131 +39,179 @@ var p = (function (e) {
         (e.GAME_TILE = "game_tile"),
         (e.LOGO_TYPE = "logo_type"),
         (e.COSPONSOR_LOGO_TYPE = "cosponsor_logo_type"),
+        (e.VIDEO_PLAYER_VIDEO = "video_player_video"),
+        (e.VIDEO_PLAYER_VIDEO_LOW_RES = "video_player_video_low_res"),
+        (e.VIDEO_PLAYER_VIDEO_HLS = "video_player_video_hls"),
+        (e.VIDEO_PLAYER_THUMBNAIL = "video_player_thumbnail"),
+        (e.VIDEO_PLAYER_CAPTION = "video_player_caption"),
+        (e.VIDEO_PLAYER_TRANSCRIPT = "video_player_transcript"),
         e
     );
 })({});
-function h(e, t, n) {
-    let r = b(e, t, n),
-        i = y(t),
-        a = null != i && _.includes(i);
+function m(e, t, n) {
+    let r = O(e, t, n),
+        i = v(t),
+        a = null != i && p.includes(i);
     return {
         url: r,
         mimetype: i,
         isAnimated: a,
     };
 }
-function m(e, t) {
+function g(e, t) {
     return null != e ? e : t;
 }
-function g(e, t, n, i) {
-    var a, s;
-    let l,
-        d = !1;
+let E = {
+    video_player_video: {
+        variant: "video",
+        property: "url",
+    },
+    video_player_video_low_res: {
+        variant: "videoLowRes",
+        property: "url",
+    },
+    video_player_video_hls: {
+        variant: "videoHls",
+        property: "url",
+    },
+    video_player_thumbnail: {
+        variant: "video",
+        property: "thumbnail",
+    },
+    video_player_caption: {
+        variant: "video",
+        property: "caption",
+    },
+    video_player_transcript: {
+        variant: "video",
+        property: "transcript",
+    },
+};
+function b(e, t, n, a) {
+    var o, l, c;
+    let f,
+        _ = !1,
+        p = !1;
     switch (t) {
         case "hero":
-            l = m(e.config.assets.heroVideo, e.config.assets.hero);
+            f = g(e.config.assets.heroVideo, e.config.assets.hero);
             break;
         case "hero_image":
-            l = e.config.assets.hero;
+            f = e.config.assets.hero;
             break;
         case "hero_video": {
             let t = e.config.assets.heroVideo,
                 n =
                     "videoMetadata" in e.config
-                        ? null == (a = e.config.videoMetadata)
+                        ? null == (o = e.config.videoMetadata)
                             ? void 0
-                            : a.assets.questHomeVideo
+                            : o.assets.questHomeVideo
                         : null,
                 r = null != t ? t : n;
             if (null == r) return null;
-            l = r;
+            f = r;
             break;
         }
         case "quest_bar_hero":
-            l = m(e.config.assets.questBarHeroVideo, e.config.assets.questBarHero);
+            f = g(e.config.assets.questBarHeroVideo, e.config.assets.questBarHero);
             break;
         case "quest_bar_hero_video": {
             let t = e.config.assets.questBarHeroVideo,
                 n =
                     "videoMetadata" in e.config
-                        ? null == (s = e.config.videoMetadata)
+                        ? null == (l = e.config.videoMetadata)
                             ? void 0
-                            : s.assets.questBarPreviewVideo
+                            : l.assets.questBarPreviewVideo
                         : null,
                 r = null != t ? t : n;
             if (null == r) return null;
-            l = r;
+            f = r;
             break;
         }
         case "reward": {
-            let t = (0, o.hF)(e);
-            if (t.type === r.w.VIRTUAL_CURRENCY)
-                return i
+            let t = (0, s.hF)(e);
+            if (t.type === i.w.VIRTUAL_CURRENCY)
+                return a
                     ? {
-                          url: u.Z,
+                          url: d.Z,
                           mimetype: "video/mp4",
                           isAnimated: !0,
                       }
                     : {
-                          url: c.Z,
+                          url: u.Z,
                           mimetype: "video/webm",
                           isAnimated: !0,
                       };
-            l = m(t.assetVideo, t.asset);
+            f = g(t.assetVideo, t.asset);
             break;
         }
         case "reward_image": {
-            let t = (0, o.hF)(e);
-            if (t.type === r.w.VIRTUAL_CURRENCY) return null;
-            l = t.asset;
+            let t = (0, s.hF)(e);
+            if (t.type === i.w.VIRTUAL_CURRENCY) return null;
+            f = t.asset;
             break;
         }
         case "game_tile":
             "dark" === n && null != e.config.assets.gameTileDark
-                ? (l = e.config.assets.gameTileDark)
+                ? (f = e.config.assets.gameTileDark)
                 : "light" === n && null != e.config.assets.gameTileLight
-                  ? (l = e.config.assets.gameTileLight)
-                  : ((l = e.config.assets.gameTile), (d = !0));
+                  ? (f = e.config.assets.gameTileLight)
+                  : ((f = e.config.assets.gameTile), (_ = !0));
             break;
         case "logo_type":
             "dark" === n && null != e.config.assets.logotypeDark
-                ? (l = e.config.assets.logotypeDark)
+                ? (f = e.config.assets.logotypeDark)
                 : "light" === n && null != e.config.assets.logotypeLight
-                  ? (l = e.config.assets.logotypeLight)
-                  : ((l = e.config.assets.logotype), (d = !0));
+                  ? (f = e.config.assets.logotypeLight)
+                  : ((f = e.config.assets.logotype), (_ = !0));
             break;
         case "cosponsor_logo_type":
             if (null == e.config.cosponsorMetadata) return null;
             "dark" === n && null != e.config.cosponsorMetadata.logotypeDark
-                ? (l = e.config.cosponsorMetadata.logotypeDark)
+                ? (f = e.config.cosponsorMetadata.logotypeDark)
                 : "light" === n && null != e.config.cosponsorMetadata.logotypeLight
-                  ? (l = e.config.cosponsorMetadata.logotypeLight)
-                  : ((l = e.config.cosponsorMetadata.logotype), (d = !0));
+                  ? (f = e.config.cosponsorMetadata.logotypeLight)
+                  : ((f = e.config.cosponsorMetadata.logotype), (_ = !0));
+            break;
+        case "video_player_video":
+        case "video_player_video_low_res":
+        case "video_player_video_hls":
+        case "video_player_thumbnail":
+        case "video_player_caption":
+        case "video_player_transcript": {
+            if (!("taskConfigV2" in e.config)) return null;
+            let n = e.config.taskConfigV2.tasks[a ? r.X.WATCH_VIDEO_ON_MOBILE : r.X.WATCH_VIDEO],
+                i = E[t],
+                o = null == n || null == (c = n.assets[i.variant]) ? void 0 : c[i.property];
+            if (null == o) return null;
+            (f = o), (p = !0);
+        }
     }
-    return h(e.id, l, { theme: d ? n : void 0 });
+    let h = m(e.id, f, { theme: _ ? n : void 0 });
+    return p && null == h.mimetype ? null : h;
 }
-function E(e) {
+function y(e) {
     var t;
     return null != (t = e.split("?", 1).at(0)) ? t : e;
 }
-function b(e, t, n) {
-    if (t.startsWith("blob:")) return E(t);
-    let r = s.HO;
+function O(e, t, n) {
+    if (t.startsWith("blob:")) return y(t);
+    let r = l.HO;
     return t.includes("/")
-        ? ((r = s.tD), "".concat(r).concat(t))
+        ? ((r = l.tD), "".concat(r).concat(t))
         : ""
               .concat(r)
               .concat(e)
               .concat((null == n ? void 0 : n.theme) != null ? "/".concat(n.theme) : "", "/")
               .concat(t);
 }
-function y(e) {
+function v(e) {
     var t, n, r;
     if (e.startsWith("blob:")) {
         let t = null != (r = new URL(e).searchParams.get("mimetype")) ? r : void 0;
         return null != t ? decodeURIComponent(t) : null;
     }
-    switch (null == (n = f.exec(e)) || null == (t = n[1]) ? void 0 : t.toLowerCase()) {
+    switch (null == (n = _.exec(e)) || null == (t = n[1]) ? void 0 : t.toLowerCase()) {
         case "webm":
             return "video/webm";
         case "mp4":
@@ -193,12 +239,12 @@ function y(e) {
             return null;
     }
 }
-function O(e) {
-    return Math.min(Math.ceil(e), l.hiG);
+function I(e) {
+    return Math.min(Math.ceil(e), c.hiG);
 }
-function v(e, t) {
-    let n = (0, a.Z)();
-    return n < d
+function T(e, t) {
+    let n = (0, o.Z)();
+    return n < f
         ? {
               width: e,
               height: t,
@@ -208,25 +254,25 @@ function v(e, t) {
               height: t * n,
           };
 }
-function I(e) {
+function S(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     if (e.startsWith("blob:")) return e;
-    let n = i.Z.toURLSafe(e);
+    let n = a.Z.toURLSafe(e);
     return null == n
         ? e
         : (null != t.format && n.searchParams.append("format", t.format),
-          null != t.width && n.searchParams.append("width", "".concat(O(t.width))),
-          null != t.height && n.searchParams.append("height", "".concat(O(t.height))),
+          null != t.width && n.searchParams.append("width", "".concat(I(t.width))),
+          null != t.height && n.searchParams.append("height", "".concat(I(t.height))),
           n.toString());
 }
-function T(e, t) {
+function A(e, t) {
     if (e.startsWith("blob:")) return e;
-    let n = i.Z.toURLSafe(e);
+    let n = a.Z.toURLSafe(e);
     return null == n
         ? null
         : (n.searchParams.append("format", "webp"),
           null != t &&
-              (n.searchParams.append("width", "".concat(O(t.width))),
-              n.searchParams.append("height", "".concat(O(t.height)))),
+              (n.searchParams.append("width", "".concat(I(t.width))),
+              n.searchParams.append("height", "".concat(I(t.height)))),
           n.toString());
 }

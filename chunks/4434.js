@@ -47,8 +47,8 @@ var r = n(54381),
     F = n(509545),
     V = n(78839),
     H = n(267642),
-    Y = n(63063),
-    W = n(930153),
+    W = n(63063),
+    Y = n(930153),
     K = n(74538),
     z = n(937615),
     q = n(588797),
@@ -216,10 +216,10 @@ function ed(e) {
             K.ZP.hasBoostDiscount(M) &&
             null != p &&
             K.ZP.isPremiumAtLeast(K.ZP.getPremiumType(p.planId), J.PremiumTypes.TIER_1)
-                ? ee.intl.format(ee.t.hf6YOY, { planName: K.ZP.getDisplayPremiumType(p.planId) })
+                ? ee.intl.format(ee.t.hf6YOY, { planName: K.ZP.getTierDisplayNameByPlanId(p.planId) })
                 : ee.intl.format(eh ? ee.t.ba1L74 : ee.t.fkffDT, {
                       onPremiumSubscriptionClick: m,
-                      discountPercentage: (0, W.T3)(j.default.locale, J.Rr / 100),
+                      discountPercentage: (0, Y.T3)(j.default.locale, J.Rr / 100),
                       freeSubscriptionCount: J.cb,
                   }),
         ev = g.filter((e) => (0, H.tl)(e)).length,
@@ -350,7 +350,7 @@ function ed(e) {
                     }),
                 (0, r.jsx)(h.Z, {
                     message: ee.intl.format(ee.t.Om31w8, {
-                        documentationLink: Y.Z.getArticleURL(X.BhN.LOCALIZED_PRICING),
+                        documentationLink: W.Z.getArticleURL(X.BhN.LOCALIZED_PRICING),
                     }),
                 }),
                 ey
@@ -425,7 +425,7 @@ function ef(e) {
                         ? (0, r.jsx)(R.B1, {
                               label: (0, r.jsx)(M.As, {
                                   label: ee.intl.formatToPlainString(ee.t.ZSVged, {
-                                      planName: (0, K.aq)(m[0].subscriptionPlanId),
+                                      planName: (0, K.MF)(m[0].subscriptionPlanId),
                                   }),
                                   tooltipText: ee.intl.string(ee.t.JmwQJM),
                               }),
@@ -607,7 +607,7 @@ function ep(e) {
                 ? ee.intl.format(ee.t.P52e1r, {})
                 : ee.intl.format(ee.t["4UnIk9"], { guildName: y })
             : d
-              ? ee.intl.format(ee.t.gFaKd1, { helpCenterLink: Y.Z.getArticleURL(X.BhN.FRACTIONAL_PREMIUM_ABOUT) })
+              ? ee.intl.format(ee.t.gFaKd1, { helpCenterLink: W.Z.getArticleURL(X.BhN.FRACTIONAL_PREMIUM_ABOUT) })
               : null == y
                 ? ee.intl.format(ee.t.SZ5ohR, { guildSubscriptionQuantity: s })
                 : ee.intl.format(ee.t.GxK3Mv, {
