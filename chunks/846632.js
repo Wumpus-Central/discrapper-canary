@@ -1,4 +1,4 @@
-n.d(t, { default: () => m });
+n.d(t, { default: () => h });
 var a = n(54381);
 n(473749);
 var r = n(120356),
@@ -13,13 +13,13 @@ var r = n(120356),
     f = n(731722),
     b = n(446094),
     p = n(388032),
-    C = n(766310),
-    h = n(265227);
-function m(e) {
+    C = n(541673),
+    m = n(265227);
+function h(e) {
     var t,
         n,
         r,
-        m,
+        h,
         { guildId: j } = e,
         v = (function (e, t) {
             if (null == e) return {};
@@ -78,7 +78,8 @@ function m(e) {
                 return e;
             })(
                 {
-                    className: h.modal,
+                    "data-migration-pending": !0,
+                    className: m.modal,
                     size: d.CgR.DYNAMIC,
                 },
                 v,
@@ -88,16 +89,16 @@ function m(e) {
                     parentComponent: "GuildTagAdoptModal",
                     children: [
                         (0, a.jsxs)(d.hzk, {
-                            className: h.modalContent,
+                            className: m.modalContent,
                             scrollbarType: "none",
                             children: [
                                 (0, a.jsx)("div", {
-                                    className: h.modalContentChild,
+                                    className: m.modalContentChild,
                                     children: (0, a.jsxs)("div", {
-                                        className: h.left,
+                                        className: m.left,
                                         children: [
                                             (0, a.jsxs)("div", {
-                                                className: h.headerContainer,
+                                                className: m.headerContainer,
                                                 children: [
                                                     (0, a.jsx)(d.Heading, {
                                                         variant: "heading-lg/bold",
@@ -110,7 +111,7 @@ function m(e) {
                                                 ],
                                             }),
                                             (0, a.jsx)(c.Z, {
-                                                className: h.guildRow,
+                                                className: m.guildRow,
                                                 guildId: _.id,
                                                 guildName: _.name,
                                                 guildIcon: _.icon,
@@ -119,7 +120,7 @@ function m(e) {
                                                 guildBadge: null != (r = _.profile.badge) ? r : "",
                                             }),
                                             (0, a.jsxs)("div", {
-                                                className: h.buttonContainer,
+                                                className: m.buttonContainer,
                                                 children: [
                                                     (0, a.jsx)(l.u, {
                                                         text: p.intl.string(C.default.WlENZt),
@@ -145,18 +146,18 @@ function m(e) {
                                     }),
                                 }),
                                 (0, a.jsx)("div", {
-                                    className: i()(h.modalContentChild, h.right),
+                                    className: i()(m.modalContentChild, m.right),
                                     children: (0, a.jsx)(s.Z, {
-                                        className: h.rightContent,
+                                        className: m.rightContent,
                                         guildId: _.id,
                                         tag: _.profile.tag,
-                                        badge: null != (m = _.profile.badge) ? m : "",
+                                        badge: null != (h = _.profile.badge) ? h : "",
                                     }),
                                 }),
                             ],
                         }),
                         (0, a.jsx)(d.olH, {
-                            className: h.close,
+                            className: m.close,
                             onClick: v.onClose,
                         }),
                     ],
