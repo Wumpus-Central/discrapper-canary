@@ -92,6 +92,7 @@ function A(e) {
             applicationId: n.id,
             size: I,
             names: ["embedded_cover"],
+            format: "webp",
         }),
         s = (0, p.yJ)(n),
         u =

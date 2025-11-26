@@ -62,7 +62,7 @@ function H(e, t, n) {
         e
     );
 }
-function Y(e) {
+function W(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -78,7 +78,7 @@ function Y(e) {
     }
     return e;
 }
-function W(e, t) {
+function Y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -95,7 +95,7 @@ function K(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : W(Object(t)).forEach(function (n) {
+            : Y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -195,7 +195,7 @@ function J(e) {
             (e) => {
                 if ((0, w.BQ)(t)) {
                     let n = t instanceof A.ZP ? t : A.ZP.createFromServer(t);
-                    (0, u.vq)(e, (e) => (0, r.jsx)(k.Z, Y({ application: n }, e)));
+                    (0, u.vq)(e, (e) => (0, r.jsx)(k.Z, W({ application: n }, e)));
                 }
             },
             [t],
@@ -439,6 +439,7 @@ function ei(e) {
             applicationId: t.id,
             size: 600,
             names: ["embedded_cover"],
+            format: "webp",
         }),
         l = i.useMemo(() => {
             let e = (0, w.yJ)(t);
@@ -536,7 +537,7 @@ function es(e) {
 }
 function el(e) {
     let { onClickAppCard: t } = es(e);
-    return (0, r.jsx)(Q, K(Y({}, e), { onClick: t }));
+    return (0, r.jsx)(Q, K(W({}, e), { onClick: t }));
 }
 function ec(e) {
     var { context: t, application: n, location: a, sectionName: o, isOneClickCTA: l, fetchesApplication: u = !0 } = e,
@@ -566,7 +567,7 @@ function ec(e) {
         ? l
             ? (0, r.jsx)(
                   Q,
-                  K(Y({}, d), {
+                  K(W({}, d), {
                       sectionName: o,
                       application: n,
                       onClick: b,
@@ -582,7 +583,7 @@ function ec(e) {
               )
             : (0, r.jsx)(
                   el,
-                  K(Y({}, d), {
+                  K(W({}, d), {
                       context: t,
                       sectionName: o,
                       application: n,
@@ -591,7 +592,7 @@ function ec(e) {
               )
         : (0, r.jsx)(
               Q,
-              K(Y({}, d), {
+              K(W({}, d), {
                   sectionName: o,
                   application: n,
                   onClick: (e) => {

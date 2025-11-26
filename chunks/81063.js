@@ -91,6 +91,7 @@ function I(e, t) {
     return n ? "".concat(e, ":").concat(n.toString()) : null;
 }
 function T(e, t, n) {
+    let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "png";
     if (null != t && t.includes(":")) {
         let [e, r] = t.split(":");
         return e === u.ABu.TWITCH
@@ -102,20 +103,22 @@ function T(e, t, n) {
               : void 0;
     }
     if (null == e || null == t) return;
-    let r = Array.isArray(n) ? Math.max(...n) : n,
-        i = "number" == typeof r ? "?size=".concat((0, c.oO)(r)) : "";
+    let i = Array.isArray(n) ? Math.max(...n) : n,
+        o = "number" == typeof i ? "?size=".concat((0, c.oO)(i)) : "";
     return null != window.GLOBAL_ENV.CDN_HOST
         ? ""
               .concat(location.protocol, "//")
               .concat(window.GLOBAL_ENV.CDN_HOST, "/app-assets/")
               .concat(e, "/")
-              .concat(t, ".png")
-              .concat(i)
+              .concat(t, ".")
+              .concat(r)
+              .concat(o)
         : ""
               .concat((0, a.K0)(), "/applications/")
               .concat(e, "/app-assets/")
-              .concat(t, ".png")
-              .concat(i);
+              .concat(t, ".")
+              .concat(r)
+              .concat(o);
 }
 async function S(e) {
     let t = await v(e);

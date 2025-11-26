@@ -57,6 +57,7 @@ function S(e) {
             applicationId: _.id,
             size: l,
             names: s,
+            format: "webp",
         }),
         I = null != h.activity_preview_video_asset_id ? (0, g.Z)(_.id, h.activity_preview_video_asset_id) : null,
         S = (0, p.ZP)("channel" === n.type ? n.channel : void 0).find((e) => {
