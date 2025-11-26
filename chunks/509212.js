@@ -3,8 +3,8 @@ n.d(t, {
     $J: () => tv,
     $V: () => tP,
     AV: () => eD,
-    B3: () => nt,
-    BI: () => ni,
+    B3: () => nn,
+    BI: () => na,
     BM: () => tS,
     Bg: () => ej,
     Bz: () => tT,
@@ -26,19 +26,20 @@ n.d(t, {
     LM: () => eV,
     MC: () => $,
     Mo: () => en,
-    NI: () => t3,
-    NL: () => t8,
+    NI: () => t2,
+    NL: () => t6,
     Nj: () => eq,
-    Nt: () => t6,
+    Nt: () => t7,
     PB: () => tb,
     PM: () => eR,
     Pb: () => e$,
     Qe: () => q,
     Qr: () => eb,
-    Rc: () => t5,
+    R_: () => t$,
+    Rc: () => t8,
     Rt: () => tf,
-    T2: () => t7,
-    Th: () => t2,
+    T2: () => t9,
+    Th: () => t4,
     U3: () => eg,
     UE: () => e_,
     Uy: () => tL,
@@ -63,7 +64,7 @@ n.d(t, {
     f2: () => e8,
     fY: () => tC,
     gI: () => tN,
-    hF: () => t0,
+    hF: () => t1,
     hQ: () => ev,
     iQ: () => ef,
     il: () => ts,
@@ -78,14 +79,14 @@ n.d(t, {
     q8: () => tE,
     qe: () => tQ,
     t2: () => eP,
-    t6: () => nl,
+    t6: () => nc,
     u7: () => tB,
-    uN: () => t$,
-    vB: () => t4,
+    uN: () => t0,
+    vB: () => t5,
     vQ: () => eB,
     vR: () => eH,
     vj: () => ee,
-    w8: () => ne,
+    w8: () => nt,
     wj: () => eZ,
     xN: () => eU,
     xn: () => ex,
@@ -94,7 +95,7 @@ n.d(t, {
     ys: () => eW,
     z1: () => tq,
     zE: () => eL,
-    zG: () => nr,
+    zG: () => ni,
     zi: () => ed,
     zo: () => e4,
 }),
@@ -958,7 +959,7 @@ function tx(e) {
                             : t.claimedTier,
               })
             : null,
-        d = nn(a.config),
+        d = nr(a.config),
         f =
             null != (i = null == u || null == (n = u.messages) ? void 0 : n.redemptionInstructionsByPlatform)
                 ? i
@@ -1066,22 +1067,27 @@ function tJ(e) {
 }
 function t$(e) {
     var t;
-    let { adContext: n } = null != (t = L.Z.questToDeliverForPlacement.get(tV(e))) ? t : {};
+    let { metadataSealed: n } = null != (t = L.Z.questToDeliverForPlacement.get(tV(e))) ? t : {};
     return n;
 }
 function t0(e) {
+    var t;
+    let { adContext: n } = null != (t = L.Z.questToDeliverForPlacement.get(tV(e))) ? t : {};
+    return n;
+}
+function t1(e) {
     var t, n;
     let r = null != (n = null == (t = e.userStatus) ? void 0 : t.claimedTier) ? n : 0;
     return "rewardsConfig" in e.config ? e.config.rewardsConfig.rewards[r] : e.config.rewards[r];
 }
-function t1(e) {
+function t3(e) {
     return new Set(Object.keys(e.config.taskConfigV2.tasks));
 }
-function t3(e, t) {
+function t2(e, t) {
     let n = new Map();
     for (let [r, i] of e)
         if (!(e$(i) || e1(i, G.S7.NON_GAMING_PLAY_QUEST))) {
-            for (let e of t1(i))
+            for (let e of t3(i))
                 if (t.has(e)) {
                     n.set(r, i);
                     break;
@@ -1089,7 +1095,7 @@ function t3(e, t) {
         }
     return n;
 }
-function t2(e) {
+function t4(e) {
     var t, n;
     let { questId: r, sourceQuestContent: i, videoSessionId: a } = e,
         o = M.ZP.getState().getVideoProgress(r);
@@ -1121,13 +1127,13 @@ function t2(e) {
             sourceQuestContent: i,
         });
 }
-function t4(e) {
+function t5(e) {
     return e.sharePolicy !== u.X.NOT_SHAREABLE;
 }
-function t5(e, t) {
+function t8(e, t) {
     return null != e && null != t && (0, E.p9)(t, T.Z, O.Z, I.Z, g.default)[0];
 }
-function t8(e) {
+function t6(e) {
     switch (e) {
         case G.yq.SUGGESTED:
             return F.intl.string(F.t.gBfXPZ);
@@ -1139,7 +1145,7 @@ function t8(e) {
             return F.intl.string(F.t["BB+2tX"]);
     }
 }
-function t6(e) {
+function t7(e) {
     switch (e) {
         case G.UP.VIRTUAL_CURRENCY:
             return F.intl.string(F.t.ElYQFS);
@@ -1153,7 +1159,7 @@ function t6(e) {
             return F.intl.string(F.t["1nJR4p"]);
     }
 }
-function t7(e) {
+function t9(e) {
     switch (e) {
         case "reward":
             return F.intl.string(F.t.vjLqAU);
@@ -1161,39 +1167,32 @@ function t7(e) {
             return F.intl.string(F.t.Hufmss);
     }
 }
-function t9(e, t) {
+function ne(e, t) {
     if (ej(e)) return (0, j.o8)(e);
-    let n = nn(e);
+    let n = nr(e);
     return t ? n.messages.nameWithArticle : n.messages.name;
 }
-function ne(e) {
-    return t9(e, !1);
-}
 function nt(e) {
-    return t9(e, !0);
+    return ne(e, !1);
 }
 function nn(e) {
+    return ne(e, !0);
+}
+function nr(e) {
     if (0 === e.rewardsConfig.rewards.length) throw Error("Quest ".concat(e.id, " has no rewards configured"));
     return e.rewardsConfig.rewards[0];
 }
-function nr(e) {
+function ni(e) {
     let t = e.rewardsConfig.platforms;
     return t.length > 0 ? t[0] : x.y$.CROSS_PLATFORM;
 }
-function ni(e) {
-    return tE({ config: e }) ? d.W.VIDEO : d.W.GAMEPLAY;
-}
 function na(e) {
-    return {
-        altText: e.alt_text,
-        assetType: e.asset_type,
-        url: e.url,
-    };
+    return tE({ config: e }) ? d.W.VIDEO : d.W.GAMEPLAY;
 }
 function no(e) {
     return {
-        ctaType: e.cta_type,
-        title: e.title,
+        altText: e.alt_text,
+        assetType: e.asset_type,
         url: e.url,
     };
 }
@@ -1201,10 +1200,17 @@ function ns(e) {
     return {
         ctaType: e.cta_type,
         title: e.title,
-        questId: e.quest_id,
+        url: e.url,
     };
 }
 function nl(e) {
+    return {
+        ctaType: e.cta_type,
+        title: e.title,
+        questId: e.quest_id,
+    };
+}
+function nc(e) {
     if (1 !== e.version || !(x.rO.QUEST_HOME_BANNER in e.placements)) return null;
     let t = e.placements[x.rO.QUEST_HOME_BANNER];
     return null == t
@@ -1214,10 +1220,10 @@ function nl(e) {
               campaignId: t.campaign_id,
               labelTitle: t.label_title,
               labelSubtitle: t.label_subtitle,
-              assetHeroImage: na(t.asset_hero_image),
-              assetSponsorImage: na(t.asset_sponsor_image),
-              ctaSponsorUrl: no(t.cta_sponsor_url),
-              ctaQuests: t.cta_quests.map(ns),
+              assetHeroImage: no(t.asset_hero_image),
+              assetSponsorImage: no(t.asset_sponsor_image),
+              ctaSponsorUrl: ns(t.cta_sponsor_url),
+              ctaQuests: t.cta_quests.map(nl),
               startsAt: t.starts_at,
               expiresAt: t.expires_at,
           };

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eY }), n(953529), n(415506), n(314940), n(49124), n(388685), n(642613), n(997841);
+n.d(t, { Z: () => eW }), n(953529), n(415506), n(314940), n(49124), n(388685), n(642613), n(997841);
 var r = n(278074),
     i = n(636977),
     a = n(95015),
@@ -41,8 +41,8 @@ var r = n(278074),
     F = n(48854),
     V = n(785359),
     H = n(64078),
-    Y = n(351780),
-    W = n(79390),
+    W = n(351780),
+    Y = n(79390),
     K = n(980463),
     z = n(328908),
     q = n(992970),
@@ -195,11 +195,15 @@ function eU(e) {
         else if (t === v.g.SERVER_SHOP);
         else if (t === v.g.SOCIAL_LAYER_STOREFRONT);
         else if (t === v.g.QUESTS_EMBED) {
-            let e = (0, et.jY)(i.j.QUESTS_EMBED);
+            let e = (0, et.jY)(i.j.QUESTS_EMBED),
+                t = (0, et.R_)(i.j.QUESTS_EMBED);
             (0, ee.dA)({
                 questId: c,
                 event: eT.rMx.QUEST_LINK_SHARED,
-                properties: { metadata_raw: null != e ? e : null },
+                properties: {
+                    metadata_raw: null != e ? e : null,
+                    metadata_sealed: null != t ? t : null,
+                },
                 trackGuildAndChannelMetadata: !0,
                 sourceQuestContent: i.j.QUESTS_EMBED,
             });
@@ -1106,7 +1110,7 @@ let eV = {
                     allowedMentions: x,
                     flags: 0 !== eo ? eo : void 0,
                     nonce: e_,
-                    poll: (0, W.x9)(M),
+                    poll: (0, Y.x9)(M),
                     sharedCustomTheme: j,
                 });
             if (
@@ -1166,7 +1170,7 @@ let eV = {
                 (null != M && (eb.message.poll = M),
                 null != j && (eb.message.shared_client_theme = j),
                 null != N && (eb.message.sticker_ids = N),
-                Y.Z.isEnabled() && (eb.message.has_poggermode_enabled = !0),
+                W.Z.isEnabled() && (eb.message.has_poggermode_enabled = !0),
                 ea && (eb.message.with_checkpoint = !0),
                 null != U && (eb.message.content_inventory_entry = U),
                 null != w && ((eb.message.confetti_potion = (0, X.vY)(w)), w.callback()),
@@ -1552,4 +1556,4 @@ let eV = {
                 }),
         trackInvite: eG,
     },
-    eY = eH;
+    eW = eH;

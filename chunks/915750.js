@@ -194,7 +194,8 @@ class L {
                         let r = w(e.id, n);
                         (t = !D.has(r) && (0, O.VB)(this.questContent)) && D.add(r);
                     }
-                    let r = (0, O.jY)(this.questContent);
+                    let r = (0, O.jY)(this.questContent),
+                        i = (0, O.R_)(this.questContent);
                     (0, u.S)((0, b._b)(this.questContent)).then((n) => {
                         (0, b.dA)({
                             questId: e.id,
@@ -208,6 +209,7 @@ class L {
                                     apple_advertising_id: null != n && (0, E.isIOS)() ? n.advertisingId : null,
                                     android_advertising_id: null != n && (0, E.isAndroid)() ? n.advertisingId : null,
                                     metadata_raw: null != r ? r : null,
+                                    metadata_sealed: null != i ? i : null,
                                 },
                                 (0, d.Z)(),
                                 this.commonProperties(e),
@@ -283,23 +285,25 @@ class L {
                         this.onMinViewTimeReached,
                         1000 * this.minViewTimeSeconds,
                     ));
-                let e = (0, O.jY)(this.questContent);
-                this.quests.forEach((t) => {
+                let e = (0, O.jY)(this.questContent),
+                    t = (0, O.R_)(this.questContent);
+                this.quests.forEach((n) => {
                     (0, I.T)().info(
                         ""
-                            .concat(t.config.messages.questName, " Quest became visible at ")
+                            .concat(n.config.messages.questName, " Quest became visible at ")
                             .concat((0, b._b)(this.questContent)),
                         { impressionId: this.id },
                     ),
                         (0, b.dA)({
-                            questId: t.id,
+                            questId: n.id,
                             event: T.rMx.QUEST_CONTENT_LOADED,
                             properties: A(
                                 {
                                     triggered_by_status_change: this.triggeredByStatusChange,
                                     metadata_raw: null != e ? e : null,
+                                    metadata_sealed: null != t ? t : null,
                                 },
-                                this.commonProperties(t),
+                                this.commonProperties(n),
                             ),
                             trackGuildAndChannelMetadata: this.trackGuildAndChannelMetadata,
                             sourceQuestContent: this.sourceQuestContent,

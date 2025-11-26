@@ -54,7 +54,7 @@ function H(e, t) {
     }
     return n;
 }
-function Y(e, t) {
+function W(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,7 +65,7 @@ function Y(e, t) {
         e
     );
 }
-let W = 6 * M.Z.Millis.HOUR,
+let Y = 6 * M.Z.Millis.HOUR,
     K = new Map(),
     z = null,
     q = null,
@@ -133,7 +133,7 @@ function ea(e, t) {
     ei(e, t);
     let n = l.get(e),
         r = null == n ? void 0 : n.userStatus;
-    null != r && null == r.claimedAt && er(e, { userStatus: Y(V({}, r), { claimedAt: t.claimedAt }) });
+    null != r && null == r.claimedAt && er(e, { userStatus: W(V({}, r), { claimedAt: t.claimedAt }) });
 }
 function eo(e) {
     var t;
@@ -151,7 +151,7 @@ function es(e, t) {
         let n = eo({ entitlements: t });
         null != n && ei(e, n),
             er(e, {
-                userStatus: Y(V({}, i), {
+                userStatus: W(V({}, i), {
                     claimedAt: t.claimedAt,
                     claimedTier: null != (a = null == n ? void 0 : n.tier) ? a : null,
                 }),
@@ -355,18 +355,19 @@ function eH(e) {
         adContext: o,
         responseTtlSeconds: s,
         metadataRaw: l,
-        fetchedAt: c,
+        metadataSealed: c,
+        fetchedAt: u,
     } = e;
     (f = Date.now()), (i = !1), (a = new Map(a)).set(n, !1);
-    let { enableNewRequestBehavior: u } = G.Z.getConfig({ location: "handleFetchQuestToDeliverSuccess" });
-    if (u) {
-        var d, _, p;
+    let { enableNewRequestBehavior: d } = G.Z.getConfig({ location: "handleFetchQuestToDeliverSuccess" });
+    if (d) {
+        var _, p, h;
         let e = {
-            questId: null != (d = null == t ? void 0 : t.id) ? d : null,
-            fetchedAt: c,
-            ttlMillis: eY(s),
-            adSetId: null != (_ = null == r ? void 0 : r.ad_set_id) ? _ : null,
-            adRequestId: null != (p = null == r ? void 0 : r.decision_id) ? p : null,
+            questId: null != (_ = null == t ? void 0 : t.id) ? _ : null,
+            fetchedAt: u,
+            ttlMillis: eW(s),
+            adSetId: null != (p = null == r ? void 0 : r.ad_set_id) ? p : null,
+            adRequestId: null != (h = null == r ? void 0 : r.decision_id) ? h : null,
         };
         (C = new Map(C)).set(n, e);
     } else
@@ -377,14 +378,15 @@ function eH(e) {
                   adDecisionData: r,
                   adContext: o,
                   metadataRaw: l,
+                  metadataSealed: c,
               });
 }
-function eY(e) {
-    if (null == e) return W;
-    let t = 1000 * e;
-    return t < W && t > 0 ? t : W;
-}
 function eW(e) {
+    if (null == e) return Y;
+    let t = 1000 * e;
+    return t < Y && t > 0 ? t : Y;
+}
+function eY(e) {
     let { placement: t } = e;
     T.delete(t), (f = Date.now()), (i = !1), (a = new Map(a)).set(t, !1);
 }
@@ -545,7 +547,7 @@ let e3 = new e1(x.Z, {
         QUESTS_FETCH_CLAIMED_QUESTS_FAILURE: eb,
         QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN: e_,
         QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS: eH,
-        QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE: eW,
+        QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE: eY,
         QUESTS_FETCH_PREVIEW_BEGIN: ep,
         QUESTS_FETCH_PREVIEW_SUCCESS: eh,
         QUESTS_FETCH_PREVIEW_FAILURE: em,

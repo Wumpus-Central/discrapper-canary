@@ -7,10 +7,10 @@ n.d(t, {
     MG: () => en,
     OR: () => z,
     QB: () => B,
-    T0: () => W,
+    T0: () => Y,
     Wf: () => H,
     cT: () => $,
-    eT: () => Y,
+    eT: () => W,
     gU: () => et,
     gl: () => F,
     is: () => L,
@@ -429,7 +429,7 @@ async function H(e) {
         });
     }
 }
-async function Y(e) {
+async function W(e) {
     try {
         let t = await i.tn.del({
             url: S.ANM.QUESTS_PREVIEW_STATUS(e),
@@ -448,7 +448,7 @@ async function Y(e) {
         });
     }
 }
-async function W(e) {
+async function Y(e) {
     try {
         a.Z.dispatch({ type: "QUESTS_DOCK_RESET_SOFT_DISMISSAL" });
         let t = await i.tn.del({
@@ -551,6 +551,7 @@ async function J(e, t) {
                     is_targeted: null != v.ad_identifiers,
                 },
                 metadataRaw: v.metadata_raw,
+                metadataSealed: v.metadata_sealed,
                 adContext: v.ad_context,
                 responseTtlSeconds: v.response_ttl_seconds,
                 placement: e,
