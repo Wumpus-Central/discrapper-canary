@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => f });
 var r = n(54381),
     i = n(473749),
     l = n(442837),
@@ -6,86 +6,90 @@ var r = n(54381),
     s = n(481060),
     o = n(693546),
     c = n(937111),
-    u = n(388032),
-    d = n(394121);
-let p = (e) => {
+    u = n(850493),
+    d = n(388032),
+    p = n(394121);
+let f = (e) => {
     let {
             headerId: t,
             reapplyText: n,
-            onReapply: p,
-            confirmText: f,
-            onWithdrawApplication: h,
-            rejectionReason: g = null,
-            guild: m = null,
+            onReapply: f,
+            confirmText: h,
+            onWithdrawApplication: g,
+            rejectionReason: m = null,
+            guild: _ = null,
         } = e,
-        _ = (0, l.e7)([c.Z], () => {
+        b = (0, l.e7)([c.Z], () => {
             var e;
-            return c.Z.getCooldown(null != (e = null == m ? void 0 : m.id) ? e : "0");
-        });
+            return c.Z.getCooldown(null != (e = null == _ ? void 0 : _.id) ? e : "0");
+        }),
+        { canReapply: E, isLoading: O } = (0, u.o)(null == _ ? void 0 : _.id);
     i.useEffect(() => {
-        null == _ && null != m && o.Z.fetchJoinRequestCooldown(m.id);
-    }, [_, m]);
-    let b = (null != _ ? _ : 0) > 0,
-        E = b && null != _ ? Math.ceil((1000 * _ - Date.now()) / 86400000) : 0;
+        null == b && null != _ && o.Z.fetchJoinRequestCooldown(_.id);
+    }, [b, _]);
+    let y = (null != b ? b : 0) > 0,
+        v = y && null != b ? Math.ceil((1000 * b - Date.now()) / 86400000) : 0;
     return (0, r.jsxs)("div", {
-        className: d.confirmation,
+        className: p.confirmation,
         children: [
             (0, r.jsx)("div", {
-                className: d.iconWrapper,
+                className: p.iconWrapper,
                 children: (0, r.jsx)(s.P$X, {
                     size: "md",
                     color: s.TVs.colors.INTERACTIVE_ACTIVE,
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: d.statusTextContainer,
+                className: p.statusTextContainer,
                 children: [
                     (0, r.jsx)(s.Heading, {
                         id: t,
                         variant: "heading-lg/semibold",
                         color: "header-primary",
                         children:
-                            (null == m ? void 0 : m.name) != null
-                                ? u.intl.formatToPlainString(u.t["P+/gzA"], { guildName: m.name })
-                                : u.intl.string(u.t.gBPcuP),
+                            (null == _ ? void 0 : _.name) != null
+                                ? d.intl.formatToPlainString(d.t["P+/gzA"], { guildName: _.name })
+                                : d.intl.string(d.t.gBPcuP),
                     }),
-                    null != g && "" !== g
+                    null != m && "" !== m
                         ? (0, r.jsxs)(s.Text, {
                               variant: "text-md/medium",
                               color: "header-secondary",
                               children: [
                                   (0, r.jsx)("span", {
-                                      className: d.rejectionReasonLabel,
-                                      children: u.intl.string(u.t.cf1psW),
+                                      className: p.rejectionReasonLabel,
+                                      children: d.intl.string(d.t.cf1psW),
                                   }),
-                                  (0, r.jsx)("span", { children: g }),
+                                  (0, r.jsx)("span", { children: m }),
                               ],
                           })
                         : null,
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: d.confirmationButtonRow,
+                className: p.confirmationButtonRow,
                 children: [
-                    (0, r.jsx)(a.u, {
-                        asContainer: !0,
-                        text: b ? u.intl.formatToPlainString(u.t.A0f0P7, { days: E }) : null,
-                        "aria-label": b ? u.intl.formatToPlainString(u.t.A0f0P7, { days: E }) : void 0,
-                        children: (0, r.jsx)(s.Button, {
-                            onClick: p,
-                            variant: "secondary",
-                            size: "md",
-                            loading: null == _,
-                            disabled: b,
-                            text: n,
-                            fullWidth: !0,
-                        }),
-                    }),
+                    E || O
+                        ? (0, r.jsx)(a.u, {
+                              asContainer: !0,
+                              text: y ? d.intl.formatToPlainString(d.t.A0f0P7, { days: v }) : null,
+                              "aria-label": y ? d.intl.formatToPlainString(d.t.A0f0P7, { days: v }) : void 0,
+                              children: (0, r.jsx)(s.Button, {
+                                  onClick: f,
+                                  variant: "secondary",
+                                  size: "md",
+                                  loading: null == b || O,
+                                  disabled: y || O,
+                                  text: n,
+                                  fullWidth: !0,
+                              }),
+                          })
+                        : null,
                     (0, r.jsx)(s.Button, {
-                        onClick: h,
+                        onClick: () => g(E || O),
                         variant: "critical-primary",
                         size: "md",
-                        text: f,
+                        text: h,
                         fullWidth: !0,
                     }),
                 ],

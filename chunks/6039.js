@@ -144,7 +144,10 @@ let N = (e) => {
         w = async () => {
             await g.Z.resetGuildJoinRequest(t), (0, m.hk)(t);
         },
-        L = Z(C.intl.format(C.t["9ZezpN"], { name: null == x ? void 0 : x.name }), A),
+        L = (e) => {
+            if (!e) return void A();
+            Z(C.intl.format(C.t["9ZezpN"], { name: null == x ? void 0 : x.name }), A)();
+        },
         R = Z(C.intl.format(C.t.fJwWVt, { name: null == x ? void 0 : x.name }), A);
     return (0, r.jsxs)("div", {
         className: S.page,
@@ -162,7 +165,7 @@ let N = (e) => {
                     switch (N.applicationStatus) {
                         case _.wB.SUBMITTED:
                             return (0, r.jsx)(y.Z, {
-                                onWithdrawApplication: L,
+                                onWithdrawApplication: () => L(!0),
                                 guild: x,
                             });
                         case _.wB.REJECTED:
