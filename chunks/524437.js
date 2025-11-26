@@ -329,7 +329,7 @@ class D extends o.C {
                     a.favorites = eB.internalBinaryRead(e, e.uint32(), n, a.favorites);
                     break;
                 case 16:
-                    a.audioContextSettings = eW.internalBinaryRead(e, e.uint32(), n, a.audioContextSettings);
+                    a.audioContextSettings = eY.internalBinaryRead(e, e.uint32(), n, a.audioContextSettings);
                     break;
                 case 17:
                     a.communities = ez.internalBinaryRead(e, e.uint32(), n, a.communities);
@@ -387,7 +387,7 @@ class D extends o.C {
             e.guildFolders && ek.internalBinaryWrite(e.guildFolders, t.tag(14, r.TD.LengthDelimited).fork(), n).join(),
             e.favorites && eB.internalBinaryWrite(e.favorites, t.tag(15, r.TD.LengthDelimited).fork(), n).join(),
             e.audioContextSettings &&
-                eW.internalBinaryWrite(e.audioContextSettings, t.tag(16, r.TD.LengthDelimited).fork(), n).join(),
+                eY.internalBinaryWrite(e.audioContextSettings, t.tag(16, r.TD.LengthDelimited).fork(), n).join(),
             e.communities && ez.internalBinaryWrite(e.communities, t.tag(17, r.TD.LengthDelimited).fork(), n).join(),
             e.broadcast && e0.internalBinaryWrite(e.broadcast, t.tag(18, r.TD.LengthDelimited).fork(), n).join(),
             e.clips && e3.internalBinaryWrite(e.clips, t.tag(19, r.TD.LengthDelimited).fork(), n).join(),
@@ -499,7 +499,7 @@ class D extends o.C {
                 no: 16,
                 name: "audio_context_settings",
                 kind: "message",
-                T: () => eW,
+                T: () => eY,
             },
             {
                 no: 17,
@@ -855,7 +855,7 @@ class G extends o.C {
                     a.disableRaidAlertNag = e.bool();
                     break;
                 case 10:
-                    a.customNotificationSoundConfig = W.internalBinaryRead(
+                    a.customNotificationSoundConfig = Y.internalBinaryRead(
                         e,
                         e.uint32(),
                         n,
@@ -943,7 +943,7 @@ class G extends o.C {
         !1 !== e.disableRaidAlertPush && t.tag(8, r.TD.Varint).bool(e.disableRaidAlertPush),
         !1 !== e.disableRaidAlertNag && t.tag(9, r.TD.Varint).bool(e.disableRaidAlertNag),
         e.customNotificationSoundConfig &&
-            W.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(10, r.TD.LengthDelimited).fork(), n).join(),
+            Y.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(10, r.TD.LengthDelimited).fork(), n).join(),
         !1 !== e.leaderboardsDisabled && t.tag(11, r.TD.Varint).bool(e.leaderboardsDisabled),
         Object.keys(e.guildDismissibleContentStates)))
             t.tag(12, r.TD.LengthDelimited).fork().tag(1, r.TD.Varint).int32(parseInt(i)),
@@ -1017,7 +1017,7 @@ class G extends o.C {
                 no: 10,
                 name: "custom_notification_sound_config",
                 kind: "message",
-                T: () => W,
+                T: () => Y,
             },
             {
                 no: 11,
@@ -1134,7 +1134,7 @@ class V extends o.C {
                     a.iconEmoji = F.internalBinaryRead(e, e.uint32(), n, a.iconEmoji);
                     break;
                 case 3:
-                    a.customNotificationSoundConfig = W.internalBinaryRead(
+                    a.customNotificationSoundConfig = Y.internalBinaryRead(
                         e,
                         e.uint32(),
                         n,
@@ -1157,7 +1157,7 @@ class V extends o.C {
         !1 !== e.collapsedInInbox && t.tag(1, r.TD.Varint).bool(e.collapsedInInbox),
             e.iconEmoji && F.internalBinaryWrite(e.iconEmoji, t.tag(2, r.TD.LengthDelimited).fork(), n).join(),
             e.customNotificationSoundConfig &&
-                W.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(3, r.TD.LengthDelimited).fork(), n).join();
+                Y.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(3, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -1179,13 +1179,13 @@ class V extends o.C {
                 no: 3,
                 name: "custom_notification_sound_config",
                 kind: "message",
-                T: () => W,
+                T: () => Y,
             },
         ]);
     }
 }
 let H = new V();
-class Y extends o.C {
+class W extends o.C {
     create(e) {
         let t = {};
         return (
@@ -1233,7 +1233,7 @@ class Y extends o.C {
         ]);
     }
 }
-let W = new Y();
+let Y = new W();
 class K extends o.C {
     create(e) {
         let t = {
@@ -2628,6 +2628,14 @@ class e_ extends o.C {
                         a.enableUserResurrectionNotifications,
                     );
                     break;
+                case 14:
+                    a.enableFriendAnniversaryNotifications = s.D5.internalBinaryRead(
+                        e,
+                        e.uint32(),
+                        n,
+                        a.enableFriendAnniversaryNotifications,
+                    );
+                    break;
                 default:
                     let o = n.readUnknownField;
                     if ("throw" === o)
@@ -2680,6 +2688,12 @@ class e_ extends o.C {
                 s.D5.internalBinaryWrite(
                     e.enableUserResurrectionNotifications,
                     t.tag(13, r.TD.LengthDelimited).fork(),
+                    n,
+                ).join(),
+            e.enableFriendAnniversaryNotifications &&
+                s.D5.internalBinaryWrite(
+                    e.enableFriendAnniversaryNotifications,
+                    t.tag(14, r.TD.LengthDelimited).fork(),
                     n,
                 ).join();
         let i = n.writeUnknownFields;
@@ -2762,6 +2776,12 @@ class e_ extends o.C {
             {
                 no: 13,
                 name: "enable_user_resurrection_notifications",
+                kind: "message",
+                T: () => s.D5,
+            },
+            {
+                no: 14,
+                name: "enable_friend_anniversary_notifications",
                 kind: "message",
                 T: () => s.D5,
             },
@@ -4440,7 +4460,7 @@ class eV extends o.C {
     }
 }
 let eH = new eV();
-class eY extends o.C {
+class eW extends o.C {
     create(e) {
         let t = {
             user: {},
@@ -4562,7 +4582,7 @@ class eY extends o.C {
         ]);
     }
 }
-let eW = new eY();
+let eY = new eW();
 class eK extends o.C {
     create(e) {
         let t = {};

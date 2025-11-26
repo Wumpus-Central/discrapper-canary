@@ -3,8 +3,8 @@ var r = n(106351),
     i = n(846519),
     a = n(904245),
     o = n(147913),
-    s = n(592125),
-    l = n(271383),
+    s = n(695346),
+    l = n(592125),
     c = n(375954),
     u = n(944486),
     d = n(522558),
@@ -39,7 +39,7 @@ class g extends o.Z {
     maybeSendGiftingPromptSystemMessageDelayed(e, t, n, r) {
         new i.sW(m, () => {
             let i = u.Z.getChannelId();
-            !_.Z.isGiftIntentMessageInCooldown(n) &&
+            !_.ZP.isGiftIntentMessageInCooldown(n) &&
                 e === i &&
                 c.Z.isReady(e) &&
                 (a.Z.sendGiftingPromptSystemMessage(e, {
@@ -50,33 +50,49 @@ class g extends o.Z {
                 (0, f.PV)(n));
         }).delay();
     }
-    handleChannelSelect(e, t) {
-        let { enabled: n } = d.w.getConfig({ location: "PremiumGiftingIntentManager handleChannelSelect" }),
-            r = s.Z.getChannel(t);
-        if (n && null != r && this.isChannelEligible(r)) {
-            let t = new Set(null != e ? l.ZP.getMemberIds(e) : r.recipients),
-                i = _.Z.getFriendAnniversaries().filter((e) => t.has(e));
-            if (n && i.length > 0) {
-                let e = i[0];
-                this.maybeSendGiftingPromptSystemMessageDelayed(
-                    r.id,
-                    p.hX.FRIEND_ANNIVERSARY,
-                    e,
-                    i.length > 1 ? p.X2.VIEW_ALL : p.X2.SEND_MESSAGE,
-                );
+    handleChannelSelect(e) {
+        let { enabled: t } = d.w.getConfig({ location: "PremiumGiftingIntentManager handleChannelSelect" }),
+            n = l.Z.getChannel(e);
+        if (t && null != n && this.isChannelEligible(n)) {
+            let e = new Set(n.recipients),
+                t = _.ZP.getFriendAnniversaries().filter((t) => e.has(t));
+            if (t.length > 0) {
+                let e = t[0];
+                this.maybeSendGiftingPromptSystemMessageDelayed(n.id, p.hX.FRIEND_ANNIVERSARY, e, p.X2.SEND_MESSAGE);
             }
         }
     }
+    handleTopAffinityUnreadNotification() {
+        let { enabled: e } = d.w.getConfig({
+                location: "PremiumGiftingIntentManager handleTopAffinityUnreadNotification",
+            }),
+            t = s.vc.getSetting();
+        e &&
+            t &&
+            _.ZP.getFriendAnniversaries()
+                .filter((e) => _.ZP.isTopAffinityFriendAnniversary({ userId: e }))
+                .forEach((e) => {
+                    let t = l.Z.getDMChannelFromUserId(e);
+                    null != t &&
+                        new i.sW(m, () => {
+                            _.ZP.canShowGiftUnreadNotification() &&
+                                (a.Z.sendGiftingPromptSystemMessage(t.id, {
+                                    giftIntentType: p.hX.FRIEND_ANNIVERSARY,
+                                    recipientUserId: e,
+                                    giftIntentSecondaryAction: p.X2.SEND_MESSAGE,
+                                }),
+                                (0, f.Zm)());
+                        }).delay();
+                });
+    }
     onChannelSelect(e) {
-        let { guildId: t, channelId: n } = e;
-        this.handleChannelSelect(t, n);
+        let { channelId: t } = e;
+        this.handleTopAffinityUnreadNotification(), this.handleChannelSelect(t);
     }
     onPostConnectionOpen() {
+        this.handleTopAffinityUnreadNotification();
         let e = u.Z.getChannelId();
-        if (null != e) {
-            let t = s.Z.getChannel(e);
-            this.handleChannelSelect(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id);
-        }
+        null != e && this.handleChannelSelect(e);
     }
     constructor(...e) {
         super(...e),

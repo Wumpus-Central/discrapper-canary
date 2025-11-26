@@ -101,7 +101,7 @@ class P extends c.Z {
         var e, t, n, r, i;
         return [
             this.type,
-            +(null == this.giftIntentType),
+            +(this.giftIntentType !== v.hX.FRIEND_ANNIVERSARY),
             null !=
             (i =
                 null != (r = null == (e = this.nickname) ? void 0 : e.toLowerCase())
@@ -176,7 +176,7 @@ class x {
                                 spam: E.Z.isSpam(n),
                                 ignoredUser: E.Z.isIgnored(n),
                                 giftIntentType:
-                                    r === y.OGo.FRIEND && h.Z.isTopAffinityFriendAnniversary({ userId: n })
+                                    r === y.OGo.FRIEND && h.ZP.getFriendAnniversaries().includes(n)
                                         ? v.hX.FRIEND_ANNIVERSARY
                                         : void 0,
                                 applicationId: E.Z.getOriginApplicationId(n),
@@ -327,11 +327,11 @@ function G(e) {
 }
 class B extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(d.Z, g.Z, u.Z, p.Z, f.Z, m.ZP, _.Z, h.Z, b.Z, E.Z, O.default),
+        this.waitFor(d.Z, g.Z, u.Z, p.Z, f.Z, m.ZP, _.Z, h.ZP, b.Z, E.Z, O.default),
             this.syncWith([E.Z], U),
             this.syncWith([f.Z], U),
             this.syncWith([p.Z], U),
-            this.syncWith([h.Z], U),
+            this.syncWith([h.ZP], U),
             this.syncWith([O.default], G(T)),
             this.syncWith([b.Z, g.Z], G(N)),
             k();

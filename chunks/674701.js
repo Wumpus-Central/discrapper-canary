@@ -1,231 +1,194 @@
-n.d(t, {
-    U: () => L,
-    Z: () => x,
-});
+n.d(t, { Z: () => C });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
     s = n(990547),
     l = n(442837),
-    c = n(692547),
-    u = n(755721),
-    d = n(481060),
-    f = n(493683),
-    _ = n(529103),
-    p = n(700582),
-    h = n(906732),
-    m = n(213609),
-    g = n(541716),
-    E = n(28546),
-    b = n(963249),
-    y = n(594174),
-    O = n(626135),
-    v = n(51144),
-    I = n(479446),
-    T = n(795448),
-    S = n(441623),
-    A = n(317271),
-    C = n(474936),
-    N = n(981631),
-    R = n(957825),
-    P = n(268685),
-    D = n(388032),
-    w = n(553517),
-    L = (function (e) {
-        return (e.SYSTEM_MESSAGE = "system_message"), (e.COACHMARK = "coachmark"), e;
-    })({});
-function x(e) {
+    c = n(114101),
+    u = n(481060),
+    d = n(700582),
+    f = n(906732),
+    _ = n(213609),
+    p = n(963249),
+    h = n(594174),
+    m = n(51144),
+    g = n(479446),
+    E = n(441623),
+    b = n(317271),
+    y = n(474936),
+    O = n(981631),
+    v = n(268685),
+    I = n(388032),
+    T = n(553517);
+function S(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function A(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                S(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function C(e) {
     let {
             giftIntentType: t,
-            premiumGiftIntentCardType: n,
             recipientUser: a,
-            onMouseEnter: L,
-            onMouseLeave: x,
-            popoutPosition: M,
-            analyticsPage: k,
-            analyticsSection: j,
-            glow: U,
-            giftIntentSecondaryAction: G,
+            onMouseEnter: S,
+            onMouseLeave: C,
+            popoutPosition: N,
+            analyticsPage: R,
+            analyticsSection: P,
+            glow: D,
+            innerRef: w,
         } = e,
-        B = (0, l.e7)([y.default], () => y.default.getCurrentUser()),
-        { analyticsLocations: Z } = (0, h.ZP)(),
-        F = (0, l.e7)([S.Z], () => S.Z.getFriendAnniversaryYears(a.id));
+        L = (0, l.e7)([h.default], () => h.default.getCurrentUser()),
+        { analyticsLocations: x } = (0, f.ZP)(),
+        M = (0, l.e7)([E.ZP], () => E.ZP.getFriendAnniversaryYears(a.id)),
+        { Component: k } = (0, c.V)();
     i.useEffect(() => {
-        (0, m.h)({
+        (0, _.h)({
             name: s.ImpressionNames.GIFT_INTENT_CARD,
             type: s.ImpressionTypes.VIEW,
             properties: {
                 gift_intent_type: t,
-                type: n,
-                num_friend_anniversaries: S.Z.getFriendAnniversaries().length,
+                num_friend_anniversaries: E.ZP.getFriendAnniversaries().length,
             },
         });
-    }, [t, n]);
-    let V = () =>
-            t === C.hX.FRIEND_ANNIVERSARY
-                ? D.intl.formatToPlainString(D.t.rtRr04, { friendUserName: v.ZP.getName(a) })
-                : (0, I.Ou)(t),
-        H = () =>
-            t === C.hX.FRIEND_ANNIVERSARY ? D.intl.formatToPlainString(D.t.PpG27s, { numberOfYears: F }) : (0, I.Ou)(t),
-        Y = () => {
-            switch (G) {
-                case C.X2.VIEW_ALL:
-                    return D.intl.string(D.t.WkxniM);
-                case C.X2.SEND_MESSAGE:
-                    return D.intl.string(D.t.I61IsE);
-                default:
-                    return;
-            }
-        },
-        W = () => (t === C.hX.FRIEND_ANNIVERSARY ? D.intl.string(D.t.OrwKgi) : (0, I.Ou)(t)),
-        K = (e) => {
+    }, [t]);
+    let j = () =>
+            t === y.hX.FRIEND_ANNIVERSARY
+                ? I.intl.formatToPlainString(I.t.rtRr04, { friendUserName: m.ZP.getName(a) })
+                : (0, g.Ou)(t),
+        U = () =>
+            t === y.hX.FRIEND_ANNIVERSARY ? I.intl.formatToPlainString(I.t.PpG27s, { numberOfYears: M }) : (0, g.Ou)(t),
+        G = () =>
+            t === y.hX.FRIEND_ANNIVERSARY
+                ? I.intl.formatToPlainString(I.t.W7AF4C, { friendUserName: m.ZP.getName(a) })
+                : (0, g.Ou)(t),
+        B = () => (t === y.hX.FRIEND_ANNIVERSARY ? I.intl.string(I.t.OrwKgi) : (0, g.Ou)(t)),
+        Z = (e) => {
             e.stopPropagation();
-            let r = (0, A.F)(t);
-            (0, b.Z)({
+            let n = (0, b.F)(t);
+            (0, p.Z)({
                 isGift: !0,
                 initialPlanId: null,
                 giftRecipient: a,
-                analyticsLocation: "system_message" === n ? r.chat : r.actionButtonCoachmark,
-                analyticsLocations: Z,
+                analyticsLocation: n.chat,
+                analyticsLocations: x,
                 analyticsObject: {
-                    page: k,
-                    section: j,
-                    object: N.qAy.BUTTON_CTA,
-                    objectType: N.AnalyticsObjectTypes.GIFT,
+                    page: R,
+                    section: P,
+                    object: O.qAy.BUTTON_CTA,
+                    objectType: O.AnalyticsObjectTypes.GIFT,
                 },
-                giftMessage: W(),
+                giftMessage: B(),
             });
-        },
-        z = (e) => {
-            e.stopPropagation(),
-                O.default.track(N.rMx.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, {
-                    gift_intent_type: t,
-                    cta_type: G,
-                }),
-                G === C.X2.VIEW_ALL
-                    ? _.Z.transitionToSection(N.pJs.ALL, { explicit: !0 })
-                    : G === C.X2.SEND_MESSAGE &&
-                      ((0, T.PV)(a.id),
-                      f.Z.openPrivateChannel({ recipientIds: a.id }).then(() => {
-                          setTimeout(() => {
-                              (0, E.PG)(R.X1.GIF, g.Ie.NORMAL),
-                                  setTimeout(() => {
-                                      (0, E.ql)(D.intl.string(D.t.jrtJi4), !0);
-                                  }, 50);
-                          }, 100);
-                      }));
-        },
-        q = "coachmark" === n,
-        X = q ? w.innerContentCoachmark : w.innerContent,
-        Q = q ? w.recipientUserAvatarCoachmark : w.recipientUserAvatar,
-        J = q ? w.currentUserAvatarCoachmark : w.currentUserAvatar,
-        $ = q ? "header-primary" : "always-white",
-        ee = q ? w.subHeaderTextCoachmark : w.subHeaderText,
-        et = q ? u.zx.Colors.BRAND : u.zx.Colors.WHITE,
-        en = q ? c.Z.colors.WHITE : c.Z.colors.BG_BRAND,
-        er = q ? w.buttonTextPrimaryCoachmark : w.buttonTextPrimary,
-        ei = q ? w.buttonSecondaryCoachmark : w.buttonSecondary,
-        ea = q ? w.buttonTextSecondaryCoachmark : w.buttonTextSecondary;
+        };
     return (0, r.jsx)("div", {
-        className: o()(w.content, {
-            [w.outerGlow]: U,
-            [w.contentCoachmark]: q,
-        }),
-        onMouseEnter: L,
-        onMouseLeave: x,
+        ref: w,
+        className: o()(T.content, { [T.outerGlow]: D }),
+        onMouseEnter: S,
+        onMouseLeave: C,
         children: (0, r.jsxs)("div", {
-            className: o()(X, { [w.innerGlow]: U }),
+            className: o()(T.innerContent, { [T.innerGlow]: D }),
             children: [
                 (0, r.jsxs)("div", {
-                    className: w.subContent,
+                    className: T.subContent,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: w.avatars,
+                            className: T.avatars,
                             children: [
-                                (0, r.jsx)(p.Z, {
-                                    className: Q,
+                                (0, r.jsx)(d.Z, {
+                                    className: T.recipientUserAvatar,
                                     user: a,
                                     "aria-label": a.username,
-                                    size: P.EF.SIZE_56,
+                                    size: v.EF.SIZE_56,
                                 }),
-                                null != B &&
-                                    (0, r.jsx)(p.Z, {
-                                        className: J,
-                                        user: B,
+                                null != L &&
+                                    (0, r.jsx)(d.Z, {
+                                        className: T.currentUserAvatar,
+                                        user: L,
                                         "aria-label": a.username,
-                                        size: P.EF.SIZE_24,
+                                        size: v.EF.SIZE_24,
                                     }),
                             ],
                         }),
                         (0, r.jsxs)("div", {
-                            className: w.textContainer,
+                            className: T.textContainer,
                             children: [
-                                (0, r.jsx)(d.Text, {
+                                (0, r.jsx)(u.Text, {
                                     variant: "text-md/medium",
-                                    color: $,
+                                    color: "text-primary",
                                     lineClamp: 3,
-                                    children: V(),
+                                    children: j(),
                                 }),
-                                (0, r.jsx)(d.Text, {
-                                    className: ee,
-                                    variant: "text-sm/normal",
-                                    children: H(),
+                                (0, r.jsxs)("div", {
+                                    className: T.subHeaderContainer,
+                                    children: [
+                                        (0, r.jsx)(u.iFz, { size: "xs" }),
+                                        (0, r.jsx)(u.Text, {
+                                            className: T.subHeaderText,
+                                            variant: "text-sm/normal",
+                                            color: "text-secondary",
+                                            children: U(),
+                                        }),
+                                    ],
                                 }),
                             ],
                         }),
                     ],
                 }),
                 (0, r.jsxs)("div", {
-                    className: w.buttonContainer,
+                    className: T.buttonContainer,
                     children: [
-                        null != G &&
-                            (0, r.jsx)(u.zx, {
-                                "data-migration-pending": !0,
-                                className: o()(w.button, ei),
-                                onClick: z,
-                                size: u.zx.Sizes.MEDIUM,
-                                color: u.zx.Colors.CUSTOM,
-                                look: u.zx.Looks.OUTLINED,
-                                children: (0, r.jsx)("div", {
-                                    className: w.buttonContentContainer,
-                                    children: (0, r.jsx)(d.Text, {
-                                        variant: "text-sm/medium",
-                                        className: o()(w.buttonText, ea),
-                                        children: Y(),
-                                    }),
-                                }),
-                            }),
-                        (0, r.jsx)(u.zx, {
-                            "data-migration-pending": !0,
-                            className: w.button,
-                            onClick: K,
-                            size: u.zx.Sizes.MEDIUM,
-                            color: et,
-                            children: (0, r.jsxs)("div", {
-                                className: w.buttonContentContainer,
-                                children: [
-                                    (0, r.jsx)(d.OgN, {
-                                        color: en,
-                                        size: "custom",
-                                        width: "14",
-                                        height: "14",
-                                    }),
-                                    (0, r.jsx)(d.Text, {
-                                        variant: "text-sm/medium",
-                                        className: o()(w.buttonText, er),
-                                        children: D.intl.string(D.t["wg/30i"]),
-                                    }),
-                                ],
-                            }),
+                        (0, r.jsx)(u.hU, {
+                            size: "sm",
+                            variant: "secondary",
+                            icon: k,
+                            "aria-label": I.intl.string(I.t.I61IsE),
+                            onClick: () => {
+                                (0, u.ZDy)(async () => {
+                                    let { default: e } = await n.e("5890").then(n.bind(n, 171793));
+                                    return (t) => (0, r.jsx)(e, A({}, t));
+                                });
+                            },
+                        }),
+                        (0, r.jsx)(u.Button, {
+                            size: "sm",
+                            variant: "expressive",
+                            text: G(),
+                            icon: u.OgN,
+                            "aria-label": G(),
+                            onClick: Z,
                         }),
                     ],
                 }),
-                null != M &&
+                null != N &&
                     (0, r.jsx)("div", {
-                        className: o()(w.connector, {
-                            [w.leftPopoutConnector]: "left" === M,
-                            [w.rightPopoutConnector]: "right" === M,
+                        className: o()(T.connector, {
+                            [T.leftPopoutConnector]: "left" === N,
+                            [T.rightPopoutConnector]: "right" === N,
                         }),
                     }),
             ],

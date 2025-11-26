@@ -1,6 +1,7 @@
 n.d(t, {
     Ni: () => o,
     PV: () => a,
+    Zm: () => s,
     d$: () => i,
 });
 var r = n(570140);
@@ -18,4 +19,7 @@ function o(e) {
         type: "GIFT_INTENT_FLOW_PURCHASED_GIFT",
         recipientUserId: e,
     });
+}
+function s() {
+    r.Z.dispatch({ type: "GIFT_UNREAD_NOTIFICATION_DISMISS" });
 }

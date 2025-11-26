@@ -10,27 +10,35 @@ var r = n(54381),
     d = n(981631),
     p = n(983703);
 let f = function (e) {
-    let { rows: t, renderRow: n, renderSection: f, hasSearchQuery: h, sectionFilter: g, footer: m } = e,
-        _ = (0, s.e7)([u.Z], () => u.Z.keyboardModeEnabled),
-        b = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
-        E = (0, l.ZP)({
+    let {
+            rows: t,
+            renderRow: n,
+            renderSection: f,
+            hasSearchQuery: h,
+            sectionFilter: g,
+            footer: m,
+            renderSectionFooter: _,
+        } = e,
+        b = (0, s.e7)([u.Z], () => u.Z.keyboardModeEnabled),
+        E = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
+        O = (0, l.ZP)({
             id: "people",
-            isEnabled: _,
+            isEnabled: b,
             async scrollToStart() {},
             async scrollToEnd() {},
         }),
-        O = g !== d.pJs.ONLINE && g !== d.pJs.ALL,
-        y = b || h || O,
-        v = i.useMemo(
+        y = g !== d.pJs.ONLINE && g !== d.pJs.ALL,
+        v = E || h || y,
+        I = i.useMemo(
             () =>
                 t.map((e, t) =>
                     0 === e.length
                         ? null
-                        : y
+                        : v
                           ? (0, r.jsxs)(
                                 "div",
                                 {
-                                    children: [f(t), e.map(n)],
+                                    children: [f(t), e.map(n), null == _ ? void 0 : _(t)],
                                 },
                                 t,
                             )
@@ -39,15 +47,15 @@ let f = function (e) {
                                 {
                                     transitionAppear: !1,
                                     component: "div",
-                                    children: [f(t), e.map(n)],
+                                    children: [f(t), e.map(n), null == _ ? void 0 : _(t)],
                                 },
                                 t,
                             ),
                 ),
-            [n, f, t, y],
+            [n, f, _, t, v],
         );
     return (0, r.jsx)(a.bG, {
-        navigator: E,
+        navigator: O,
         children: (0, r.jsx)(a.SJ, {
             children: (e) => {
                 var t,
@@ -111,7 +119,7 @@ let f = function (e) {
                     )),
                     (n = n =
                         {
-                            children: [v, m],
+                            children: [I, m],
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

@@ -12,6 +12,7 @@ function a(e) {
         hasSearchQuery: o,
         sectionFilter: c,
         footer: u,
+        renderSectionFooter: d,
     } = e;
     return s
         ? (0, r.jsx)(i.Z, {
@@ -27,5 +28,6 @@ function a(e) {
               sectionFilter: c,
               hasSearchQuery: o,
               footer: u,
+              renderSectionFooter: d,
           });
 }

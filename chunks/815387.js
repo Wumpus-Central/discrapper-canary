@@ -41,8 +41,8 @@ var r = n(54381),
     F = n(158776),
     V = n(944486),
     H = n(594174),
-    Y = n(979651),
-    W = n(585483),
+    W = n(979651),
+    Y = n(585483),
     K = n(5192),
     z = n(960048),
     q = n(709054),
@@ -143,7 +143,7 @@ function ej(e) {
         u = j.default.getId(),
         d = t.getChannelId(),
         f = (0, a.e7)([U.Z], () => U.Z.isCallActive(d, s), [d, s]),
-        _ = (0, a.e7)([Y.Z], () => Y.Z.getVoiceState(eR.ME, u)),
+        _ = (0, a.e7)([W.Z], () => W.Z.getVoiceState(eR.ME, u)),
         p = !f && null != t.call && !t.call.participants.includes(u),
         h = f && (null == _ || _.channelId !== d),
         m = i.useCallback(() => c.default.selectVoiceChannel(d), [d]),
@@ -205,7 +205,7 @@ function eB(e) {
                 let e = G.Z.getChannel(s);
                 null != e && (0, P.XU)(e.guild_id, e.id);
             }
-            setTimeout(() => W.S.dispatch(eR.CkL.TOGGLE_CHANNEL_PINS), 0);
+            setTimeout(() => Y.S.dispatch(eR.CkL.TOGGLE_CHANNEL_PINS), 0);
         }, [s]),
         c = (0, et.l)({
             user: o,
@@ -369,7 +369,7 @@ function eH(e) {
         ],
     });
 }
-function eY(e) {
+function eW(e) {
     let { message: t, channel: n, compact: o } = e,
         { author: s } = t,
         { guild_id: l } = n,
@@ -400,7 +400,7 @@ function eY(e) {
         onClickMessage: d,
     });
 }
-function eW(e) {
+function eY(e) {
     let { message: t, compact: n, channel: i } = e,
         { author: a } = t,
         o = t.getChannelId(),
@@ -676,7 +676,6 @@ function e9(e) {
               giftIntentType: i.giftIntentType,
               recipientUser: o,
               channel: n,
-              giftIntentSecondaryAction: i.giftIntentSecondaryAction,
           });
 }
 function te(e) {
@@ -746,11 +745,11 @@ let to = Object.freeze({
     [eR.uaV.CHANNEL_ICON_CHANGE]: eG,
     [eR.uaV.CHANNEL_PINNED_MESSAGE]: eB,
     [eR.uaV.USER_JOIN]: eH,
-    [eR.uaV.GUILD_BOOST]: eY,
-    [eR.uaV.GUILD_BOOST_TIER_1]: eY,
-    [eR.uaV.GUILD_BOOST_TIER_2]: eY,
-    [eR.uaV.GUILD_BOOST_TIER_3]: eY,
-    [eR.uaV.CHANNEL_FOLLOW_ADD]: eW,
+    [eR.uaV.GUILD_BOOST]: eW,
+    [eR.uaV.GUILD_BOOST_TIER_1]: eW,
+    [eR.uaV.GUILD_BOOST_TIER_2]: eW,
+    [eR.uaV.GUILD_BOOST_TIER_3]: eW,
+    [eR.uaV.CHANNEL_FOLLOW_ADD]: eY,
     [eR.uaV.GUILD_STREAM]: eK,
     [eR.uaV.GUILD_DISCOVERY_DISQUALIFIED]: ez,
     [eR.uaV.GUILD_DISCOVERY_REQUALIFIED]: eu.xe,

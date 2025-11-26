@@ -68,7 +68,7 @@ function H(e) {
     }
     return e;
 }
-function Y(e, t) {
+function W(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -80,12 +80,12 @@ function Y(e, t) {
     }
     return n;
 }
-function W(e, t) {
+function Y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : Y(Object(t)).forEach(function (n) {
+            : W(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -415,6 +415,7 @@ class Q extends i.PureComponent {
                     (0, r.jsx)(eo, {}),
                     (0, r.jsx)(es, {}),
                     (0, r.jsx)(el, {}),
+                    (0, r.jsx)(ec, {}),
                     (0, r.jsx)(ea, {}),
                     (0, r.jsxs)(I.F, {
                         setting: U.s6.NOTIFICATIONS_PUSH_INACTIVE_TIMEOUT,
@@ -550,7 +551,7 @@ async function en(e) {
 }
 function er(e) {
     let t = (0, b.p)();
-    return (0, r.jsx)(Q, W(H({}, e), { focusMode: t }));
+    return (0, r.jsx)(Q, Y(H({}, e), { focusMode: t }));
 }
 function ei() {
     let e = (0, s.cj)([C.Z], () => ({
@@ -562,7 +563,7 @@ function ei() {
         ttsType: C.Z.getTTSType(),
         notifyMessagesInSelectedChannel: C.Z.getNotifyMessagesInSelectedChannel(),
     }));
-    return (0, r.jsx)(er, W(H({}, e), { afkTimeout: x.CM.useSetting() }));
+    return (0, r.jsx)(er, Y(H({}, e), { afkTimeout: x.CM.useSetting() }));
 }
 function ea() {
     let e = x.fz.useSetting(),
@@ -626,6 +627,19 @@ function eo() {
     });
 }
 function es() {
+    let e = x.vc.useSetting();
+    return (0, r.jsx)(I.F, {
+        setting: U.s6.NOTIFICATIONS_FRIEND_ANNIVERSARY,
+        children: (0, r.jsx)(u.rsf, {
+            label: F.intl.string(F.t.hi4dSk),
+            description: F.intl.string(F.t["00TNo7"]),
+            badge: "beta",
+            checked: e,
+            onChange: x.vc.updateSetting,
+        }),
+    });
+}
+function el() {
     let e = x.JY.useSetting();
     return (0, r.jsx)(I.F, {
         setting: U.s6.NOTIFICATIONS_FRIEND_ONLINE,
@@ -637,7 +651,7 @@ function es() {
         }),
     });
 }
-function el() {
+function ec() {
     let e = x.V6.useSetting();
     return (0, r.jsx)(I.F, {
         setting: U.s6.NOTIFICATIONS_USER_RESURRECTION,

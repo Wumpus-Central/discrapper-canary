@@ -1,11 +1,11 @@
 n.d(t, {
-    $Z: () => eG,
-    OF: () => eZ,
-    W8: () => eF,
-    _x: () => eV,
-    c$: () => eB,
-    ec: () => eH,
-    iE: () => eY,
+    $Z: () => eB,
+    OF: () => eF,
+    W8: () => eV,
+    _x: () => eH,
+    c$: () => eZ,
+    ec: () => eW,
+    iE: () => eK,
 }),
     n(388685),
     n(539854);
@@ -34,68 +34,69 @@ var r = n(54381),
     S = n(288047),
     A = n(351780),
     C = n(231765),
-    N = n(125900),
-    R = n(813732),
-    P = n(299886),
-    D = n(398140),
-    w = n(564344),
-    L = n(145158),
-    x = n(172416),
-    M = n(906467),
-    k = n(857192),
-    j = n(131951),
-    U = n(25990),
-    G = n(626135),
-    B = n(572004),
-    Z = n(49012),
-    F = n(358085),
-    V = n(998502),
-    H = n(695346),
-    W = n(604227),
-    Y = n(846071),
-    K = n(748717),
-    z = n(419636),
-    q = n(154022),
-    X = n(736752),
-    Q = n(309739),
-    J = n(64914),
-    $ = n(501348),
-    ee = n(795594),
-    et = n(443702),
-    en = n(327192),
-    er = n(949493),
-    ei = n(675047),
-    ea = n(956699),
-    eo = n(54942),
-    es = n(293389),
-    el = n(387747),
-    ec = n(389650),
-    eu = n(649157),
-    ed = n(593648),
-    ef = n(327885),
-    e_ = n(595242),
-    ep = n(463153),
-    eh = n(36192),
-    em = n(889029),
-    eg = n(400287),
-    eE = n(936982),
-    eb = n(200645),
-    ey = n(287490),
-    eO = n(168308),
-    ev = n(277329),
-    eI = n(273927),
-    eT = n(604224),
-    eS = n(345655),
-    eA = n(726985),
-    eC = n(583139),
-    eN = n(981631),
-    eR = n(65154),
-    eP = n(388032),
-    eD = n(677065),
-    ew = n(744038),
-    eL = n(163646),
-    ex = n(202323);
-function eM(e, t, n) {
+    N = n(522558),
+    R = n(125900),
+    P = n(813732),
+    D = n(299886),
+    w = n(398140),
+    L = n(564344),
+    x = n(145158),
+    M = n(172416),
+    k = n(906467),
+    j = n(857192),
+    U = n(131951),
+    G = n(25990),
+    B = n(626135),
+    Z = n(572004),
+    F = n(49012),
+    V = n(358085),
+    H = n(998502),
+    W = n(695346),
+    Y = n(604227),
+    K = n(846071),
+    z = n(748717),
+    q = n(419636),
+    X = n(154022),
+    Q = n(736752),
+    J = n(309739),
+    $ = n(64914),
+    ee = n(501348),
+    et = n(795594),
+    en = n(443702),
+    er = n(327192),
+    ei = n(949493),
+    ea = n(675047),
+    eo = n(956699),
+    es = n(54942),
+    el = n(293389),
+    ec = n(387747),
+    eu = n(389650),
+    ed = n(649157),
+    ef = n(593648),
+    e_ = n(327885),
+    ep = n(595242),
+    eh = n(463153),
+    em = n(36192),
+    eg = n(889029),
+    eE = n(400287),
+    eb = n(936982),
+    ey = n(200645),
+    eO = n(287490),
+    ev = n(168308),
+    eI = n(277329),
+    eT = n(273927),
+    eS = n(604224),
+    eA = n(345655),
+    eC = n(726985),
+    eN = n(583139),
+    eR = n(981631),
+    eP = n(65154),
+    eD = n(388032),
+    ew = n(677065),
+    eL = n(744038),
+    ex = n(163646),
+    eM = n(202323);
+function ek(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -108,7 +109,7 @@ function eM(e, t, n) {
         e
     );
 }
-function ek(e) {
+function ej(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -119,12 +120,12 @@ function ek(e) {
                 }),
             )),
             r.forEach(function (t) {
-                eM(e, t, n[t]);
+                ek(e, t, n[t]);
             });
     }
     return e;
 }
-function ej(e, t) {
+function eU(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -136,640 +137,640 @@ function ej(e, t) {
     }
     return n;
 }
-function eU(e, t) {
+function eG(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : ej(Object(t)).forEach(function (n) {
+            : eU(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let eG = () => [
+let eB = () => [
         a.z.CLIENT_THEMES_SETTINGS_BADGE,
         a.z.DEKSTOP_CUSTOM_APP_ICON_BADGE,
         a.z.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE,
     ],
-    eB = () => {
-        let e = eG(),
+    eZ = () => {
+        let e = eB(),
             [t] = (0, O.US)(e);
         return t === a.z.CLIENT_THEMES_SETTINGS_BADGE || t === a.z.DEKSTOP_CUSTOM_APP_ICON_BADGE
-            ? (0, r.jsx)(s.lBU, { text: eP.intl.string(eP.t.y2b7CA) })
+            ? (0, r.jsx)(s.lBU, { text: eD.intl.string(eD.t.y2b7CA) })
             : t === a.z.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE
-              ? (0, r.jsx)(s.IGR, { text: eP.intl.string(eP.t.y2b7CA) })
+              ? (0, r.jsx)(s.IGR, { text: eD.intl.string(eD.t.y2b7CA) })
               : null;
     },
-    eZ = () => {
+    eF = () => {
         let e = [];
         return (
-            (0, x.hL)("SettingsRendererConfig") && e.push(a.z.WIDGETS_USER_SETTINGS_NEW_BADGE),
+            (0, M.hL)("SettingsRendererConfig") && e.push(a.z.WIDGETS_USER_SETTINGS_NEW_BADGE),
             v.JH.getCurrentConfig({ location: "SettingsRendererConfig" }).enabled &&
                 e.push(a.z.DISPLAY_NAME_STYLES_NEW_BADGE),
             e
         );
     },
-    eF = () => {
-        let e = eZ(),
+    eV = () => {
+        let e = eF(),
             [t] = (0, O.US)(e);
         return t === a.z.DISPLAY_NAME_STYLES_NEW_BADGE || t === a.z.WIDGETS_USER_SETTINGS_NEW_BADGE
-            ? (0, r.jsx)(s.IGR, { text: eP.intl.string(eP.t.y2b7CA) })
+            ? (0, r.jsx)(s.IGR, { text: eD.intl.string(eD.t.y2b7CA) })
             : null;
     },
-    eV = () => {
+    eH = () => {
         let e = [];
         return (
-            P.H.getConfig({ location: "SettingsRendererConfig" }).enabled && e.push(a.z.NITRO_PRIVACY_PERK_NEW_BADGE), e
+            D.H.getConfig({ location: "SettingsRendererConfig" }).enabled && e.push(a.z.NITRO_PRIVACY_PERK_NEW_BADGE), e
         );
     },
-    eH = () => {
-        let e = eV(),
+    eW = () => {
+        let e = eH(),
             [t] = (0, O.US)(e);
-        return a.z.NITRO_PRIVACY_PERK_NEW_BADGE === t ? (0, r.jsx)(s.IGR, { text: eP.intl.string(eP.t.y2b7CA) }) : null;
+        return a.z.NITRO_PRIVACY_PERK_NEW_BADGE === t ? (0, r.jsx)(s.IGR, { text: eD.intl.string(eD.t.y2b7CA) }) : null;
     },
-    eW = eb.Z,
-    eY = (e) => {
+    eY = ey.Z,
+    eK = (e) => {
         let {
             unseenGiftCount: t,
             showPrepaidPaymentPastDueWarning: O,
             searchParams: v,
-            numOfPendingFamilyRequests: x,
-            isOverlaySupported: eM,
-            isClipsBetaTagShowing: ej = !1,
-            shouldMergeGameSettings: eV,
-            isKeywordFilteringEnabled: eY,
-            isStaff: eK,
-            isInappropriateConversationWarningEnabled: ez,
-            isInapproprateConversationsDefaultOn: eq,
-            paymentsBlocked: eX,
-            isEligibleForQuests: eQ,
-            isStricterMessageRequestsEnabled: eJ,
-            hasLibraryApplication: e$,
-            hasTOTPEnabled: e0,
-            developerMode: e1,
-            isAdultUser: e3,
-            hasSecureFramesVerifiedUserIds: e2,
-            hasIgnoredUsers: e4,
-            hasBlockedUsers: e5,
-            isEligibleForSensitiveContentDefaults: e8,
-            inputMode: e6,
-            activeInputProfile: e7,
-            isInputProfileCustom: e9,
-            isDataUsage3PToggleEnabled: te,
-            isChatMentionSuggestionsSettingEnabled: tt,
-            isCrossDMSearchEnabledSettingVisible: tn,
+            numOfPendingFamilyRequests: M,
+            isOverlaySupported: ek,
+            isClipsBetaTagShowing: eU = !1,
+            shouldMergeGameSettings: eH,
+            isKeywordFilteringEnabled: eK,
+            isStaff: ez,
+            isInappropriateConversationWarningEnabled: eq,
+            isInapproprateConversationsDefaultOn: eX,
+            paymentsBlocked: eQ,
+            isEligibleForQuests: eJ,
+            isStricterMessageRequestsEnabled: e$,
+            hasLibraryApplication: e0,
+            hasTOTPEnabled: e1,
+            developerMode: e3,
+            isAdultUser: e2,
+            hasSecureFramesVerifiedUserIds: e4,
+            hasIgnoredUsers: e5,
+            hasBlockedUsers: e8,
+            isEligibleForSensitiveContentDefaults: e6,
+            inputMode: e7,
+            activeInputProfile: e9,
+            isInputProfileCustom: te,
+            isDataUsage3PToggleEnabled: tt,
+            isChatMentionSuggestionsSettingEnabled: tn,
+            isCrossDMSearchEnabledSettingVisible: tr,
         } = e;
         return Object.freeze({
-            [eA.s6.SEARCH_NO_RESULTS]: {
+            [eC.s6.SEARCH_NO_RESULTS]: {
                 section: f.ID.CUSTOM,
-                element: ep.Z,
+                element: eh.Z,
             },
-            [eA.s6.ACCOUNT_SECURITY_TAB]: {
-                section: eN.oAB.ACCOUNT,
-                searchableTitles: [eP.intl.string(eP.t.Am9YHi)],
-                label: eP.intl.string(eP.t.Am9YHi),
+            [eC.s6.ACCOUNT_SECURITY_TAB]: {
+                section: eR.oAB.ACCOUNT,
+                searchableTitles: [eD.intl.string(eD.t.Am9YHi)],
+                label: eD.intl.string(eD.t.Am9YHi),
             },
-            [eA.s6.ACCOUNT]: {
-                section: eN.oAB.ACCOUNT,
-                searchableTitles: [eP.intl.string(eP.t["JAIM/m"])],
-                label: eP.intl.string(eP.t["JAIM/m"]),
-                ariaLabel: eP.intl.string(eP.t["JAIM/m"]),
-                element: X.Z,
-                url: eN.Z5c.SETTINGS("account"),
+            [eC.s6.ACCOUNT]: {
+                section: eR.oAB.ACCOUNT,
+                searchableTitles: [eD.intl.string(eD.t["JAIM/m"])],
+                label: eD.intl.string(eD.t["JAIM/m"]),
+                ariaLabel: eD.intl.string(eD.t["JAIM/m"]),
+                element: Q.Z,
+                url: eR.Z5c.SETTINGS("account"),
             },
-            [eA.s6.ACCOUNT_PROFILE]: {
-                searchableTitles: [eP.intl.string(eP.t.LYju5J)],
-                parent: eA.s6.ACCOUNT,
-                section: eN.oAB.ACCOUNT,
+            [eC.s6.ACCOUNT_PROFILE]: {
+                searchableTitles: [eD.intl.string(eD.t.LYju5J)],
+                parent: eC.s6.ACCOUNT,
+                section: eR.oAB.ACCOUNT,
             },
-            [eA.s6.ACCOUNT_DISPLAY_NAME]: {
-                searchableTitles: [eP.intl.string(eP.t["9AjdkD"])],
-                section: eN.oAB.ACCOUNT,
-                parent: eA.s6.ACCOUNT_PROFILE,
+            [eC.s6.ACCOUNT_DISPLAY_NAME]: {
+                searchableTitles: [eD.intl.string(eD.t["9AjdkD"])],
+                section: eR.oAB.ACCOUNT,
+                parent: eC.s6.ACCOUNT_PROFILE,
             },
-            [eA.s6.ACCOUNT_PHONE_NUMBER]: {
-                searchableTitles: [eP.intl.string(eP.t.Ulqq6K)],
-                section: eN.oAB.ACCOUNT,
-                parent: eA.s6.ACCOUNT_PROFILE,
+            [eC.s6.ACCOUNT_PHONE_NUMBER]: {
+                searchableTitles: [eD.intl.string(eD.t.Ulqq6K)],
+                section: eR.oAB.ACCOUNT,
+                parent: eC.s6.ACCOUNT_PROFILE,
             },
-            [eA.s6.ACCOUNT_AGE_GROUP]: {
+            [eC.s6.ACCOUNT_AGE_GROUP]: {
                 searchableTitles: [
-                    eP.intl.string(eP.t["/52UYy"]),
-                    eP.intl.string(eP.t.sK0dmH),
-                    eP.intl.string(eP.t.XxRj7f),
-                    eP.intl.string(eP.t.yNGjyK),
-                    eP.intl.string(eP.t.KPGVWl),
+                    eD.intl.string(eD.t["/52UYy"]),
+                    eD.intl.string(eD.t.sK0dmH),
+                    eD.intl.string(eD.t.XxRj7f),
+                    eD.intl.string(eD.t.yNGjyK),
+                    eD.intl.string(eD.t.KPGVWl),
                 ],
-                section: eN.oAB.ACCOUNT,
-                parent: eA.s6.ACCOUNT_PROFILE,
-                predicate: () => e8,
+                section: eR.oAB.ACCOUNT,
+                parent: eC.s6.ACCOUNT_PROFILE,
+                predicate: () => e6,
             },
-            [eA.s6.ACCOUNT_USERNAME]: {
-                searchableTitles: [eP.intl.string(eP.t["+JkHPw"])],
-                section: eN.oAB.ACCOUNT,
-                parent: eA.s6.ACCOUNT_PROFILE,
+            [eC.s6.ACCOUNT_USERNAME]: {
+                searchableTitles: [eD.intl.string(eD.t["+JkHPw"])],
+                section: eR.oAB.ACCOUNT,
+                parent: eC.s6.ACCOUNT_PROFILE,
             },
-            [eA.s6.ACCOUNT_EMAIL]: {
-                searchableTitles: [eP.intl.string(eP.t.oP5zGA)],
-                section: eN.oAB.ACCOUNT,
-                parent: eA.s6.ACCOUNT_PROFILE,
+            [eC.s6.ACCOUNT_EMAIL]: {
+                searchableTitles: [eD.intl.string(eD.t.oP5zGA)],
+                section: eR.oAB.ACCOUNT,
+                parent: eC.s6.ACCOUNT_PROFILE,
             },
-            [eA.s6.ACCOUNT_PASSWORD_AND_AUTHENTICATION]: {
-                searchableTitles: [eP.intl.string(eP.t.pKSjEj)],
-                section: eN.oAB.ACCOUNT,
-                parent: eA.s6.ACCOUNT,
+            [eC.s6.ACCOUNT_PASSWORD_AND_AUTHENTICATION]: {
+                searchableTitles: [eD.intl.string(eD.t.pKSjEj)],
+                section: eR.oAB.ACCOUNT,
+                parent: eC.s6.ACCOUNT,
             },
-            [eA.s6.ACCOUNT_CHANGE_PASSWORD]: {
-                searchableTitles: [eP.intl.string(eP.t["FRep5/"])],
-                section: eN.oAB.ACCOUNT,
-                parent: eA.s6.ACCOUNT_PASSWORD_AND_AUTHENTICATION,
+            [eC.s6.ACCOUNT_CHANGE_PASSWORD]: {
+                searchableTitles: [eD.intl.string(eD.t["FRep5/"])],
+                section: eR.oAB.ACCOUNT,
+                parent: eC.s6.ACCOUNT_PASSWORD_AND_AUTHENTICATION,
             },
-            [eA.s6.ACCOUNT_CONFIRM_PASSWORD]: {
-                searchableTitles: [eP.intl.string(eP.t["7qKDrE"])],
-                section: eN.oAB.ACCOUNT,
-                parent: eA.s6.ACCOUNT_PASSWORD_AND_AUTHENTICATION,
+            [eC.s6.ACCOUNT_CONFIRM_PASSWORD]: {
+                searchableTitles: [eD.intl.string(eD.t["7qKDrE"])],
+                section: eR.oAB.ACCOUNT,
+                parent: eC.s6.ACCOUNT_PASSWORD_AND_AUTHENTICATION,
             },
-            [eA.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION]: {
-                searchableTitles: [eP.intl.string(eP.t.m0FidJ)],
-                section: eN.oAB.ACCOUNT,
-                parent: eA.s6.ACCOUNT_PASSWORD_AND_AUTHENTICATION,
+            [eC.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION]: {
+                searchableTitles: [eD.intl.string(eD.t.m0FidJ)],
+                section: eR.oAB.ACCOUNT,
+                parent: eC.s6.ACCOUNT_PASSWORD_AND_AUTHENTICATION,
             },
-            [eA.s6.ACCOUNT_ENABLE_2FA]: {
-                searchableTitles: [eP.intl.string(eP.t.cDgKte)],
-                section: eN.oAB.ACCOUNT,
-                parent: eA.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
-                predicate: () => !e0,
+            [eC.s6.ACCOUNT_ENABLE_2FA]: {
+                searchableTitles: [eD.intl.string(eD.t.cDgKte)],
+                section: eR.oAB.ACCOUNT,
+                parent: eC.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
+                predicate: () => !e1,
             },
-            [eA.s6.ACCOUNT_REMOVE_2FA]: {
-                searchableTitles: [eP.intl.string(eP.t["D+aE7g"])],
-                section: eN.oAB.ACCOUNT,
-                parent: eA.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
-                predicate: () => e0,
+            [eC.s6.ACCOUNT_REMOVE_2FA]: {
+                searchableTitles: [eD.intl.string(eD.t["D+aE7g"])],
+                section: eR.oAB.ACCOUNT,
+                parent: eC.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
+                predicate: () => e1,
             },
-            [eA.s6.ACCOUNT_VIEW_BACKUP_CODES]: {
-                searchableTitles: [eP.intl.string(eP.t.fZSi1D)],
-                section: eN.oAB.ACCOUNT,
-                parent: eA.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
+            [eC.s6.ACCOUNT_VIEW_BACKUP_CODES]: {
+                searchableTitles: [eD.intl.string(eD.t.fZSi1D)],
+                section: eR.oAB.ACCOUNT,
+                parent: eC.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
             },
-            [eA.s6.ACCOUNT_SMS_BACKUP]: {
-                searchableTitles: [eP.intl.string(eP.t.uHAJ5v)],
-                section: eN.oAB.ACCOUNT,
-                parent: eA.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
+            [eC.s6.ACCOUNT_SMS_BACKUP]: {
+                searchableTitles: [eD.intl.string(eD.t.uHAJ5v)],
+                section: eR.oAB.ACCOUNT,
+                parent: eC.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
             },
-            [eA.s6.ACCOUNT_SECURITY_KEYS]: {
-                searchableTitles: [eP.intl.string(eP.t.vrOCCk)],
-                section: eN.oAB.ACCOUNT,
-                parent: eA.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
+            [eC.s6.ACCOUNT_SECURITY_KEYS]: {
+                searchableTitles: [eD.intl.string(eD.t.vrOCCk)],
+                section: eR.oAB.ACCOUNT,
+                parent: eC.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
             },
-            [eA.s6.ACCOUNT_REMOVAL]: {
-                section: eN.oAB.ACCOUNT,
-                searchableTitles: [eP.intl.string(eP.t.ZKsIks)],
-                parent: eA.s6.ACCOUNT,
+            [eC.s6.ACCOUNT_REMOVAL]: {
+                section: eR.oAB.ACCOUNT,
+                searchableTitles: [eD.intl.string(eD.t.ZKsIks)],
+                parent: eC.s6.ACCOUNT,
             },
-            [eA.s6.ACCOUNT_DISABLE_ACCOUNT]: {
-                section: eN.oAB.ACCOUNT,
-                searchableTitles: [eP.intl.string(eP.t.jf5GGb)],
-                parent: eA.s6.ACCOUNT_REMOVAL,
+            [eC.s6.ACCOUNT_DISABLE_ACCOUNT]: {
+                section: eR.oAB.ACCOUNT,
+                searchableTitles: [eD.intl.string(eD.t.jf5GGb)],
+                parent: eC.s6.ACCOUNT_REMOVAL,
             },
-            [eA.s6.ACCOUNT_DELETE_ACCOUNT]: {
-                section: eN.oAB.ACCOUNT,
-                searchableTitles: [eP.intl.string(eP.t["8lQ2rR"])],
-                parent: eA.s6.ACCOUNT_DISABLE_ACCOUNT,
+            [eC.s6.ACCOUNT_DELETE_ACCOUNT]: {
+                section: eR.oAB.ACCOUNT,
+                searchableTitles: [eD.intl.string(eD.t["8lQ2rR"])],
+                parent: eC.s6.ACCOUNT_DISABLE_ACCOUNT,
             },
-            [eA.s6.GAMES]: {
-                section: eN.oAB.GAMES,
-                searchableTitles: [eP.intl.string(eP.t.URyqtP)],
-                label: eP.intl.string(eP.t.URyqtP),
-                ariaLabel: eP.intl.string(eP.t.URyqtP),
-                element: ev.Z,
-                predicate: () => eV,
+            [eC.s6.GAMES]: {
+                section: eR.oAB.GAMES,
+                searchableTitles: [eD.intl.string(eD.t.URyqtP)],
+                label: eD.intl.string(eD.t.URyqtP),
+                ariaLabel: eD.intl.string(eD.t.URyqtP),
+                element: eI.Z,
+                predicate: () => eH,
             },
-            [eA.s6.GAMES_MY_GAMES]: {
-                section: eN.oAB.GAMES,
-                searchableTitles: [eP.intl.string(eP.t["5DMgp9"])],
-                parent: eA.s6.GAMES,
+            [eC.s6.GAMES_MY_GAMES]: {
+                section: eR.oAB.GAMES,
+                searchableTitles: [eD.intl.string(eD.t["5DMgp9"])],
+                parent: eC.s6.GAMES,
             },
-            [eA.s6.GAMES_CLIPS]: {
-                section: eN.oAB.GAMES,
-                searchableTitles: [eP.intl.string(eP.t.z2jK6X)],
-                parent: eA.s6.GAMES,
+            [eC.s6.GAMES_CLIPS]: {
+                section: eR.oAB.GAMES,
+                searchableTitles: [eD.intl.string(eD.t.z2jK6X)],
+                parent: eC.s6.GAMES,
             },
-            [eA.s6.GAMES_OVERLAY]: {
-                section: eN.oAB.GAMES,
-                searchableTitles: [eP.intl.string(eP.t["9cb1Uz"])],
-                parent: eA.s6.GAMES,
+            [eC.s6.GAMES_OVERLAY]: {
+                section: eR.oAB.GAMES,
+                searchableTitles: [eD.intl.string(eD.t["9cb1Uz"])],
+                parent: eC.s6.GAMES,
             },
-            [eA.s6.GAMES_ACTIVITY_PRIVACY]: {
-                section: eN.oAB.GAMES,
-                searchableTitles: [eP.intl.string(eP.t.Cq98yL)],
-                parent: eA.s6.GAMES,
+            [eC.s6.GAMES_ACTIVITY_PRIVACY]: {
+                section: eR.oAB.GAMES,
+                searchableTitles: [eD.intl.string(eD.t.Cq98yL)],
+                parent: eC.s6.GAMES,
             },
-            [eA.s6.PROFILE_CUSTOMIZATION]: {
-                section: eN.oAB.PROFILE_CUSTOMIZATION,
+            [eC.s6.PROFILE_CUSTOMIZATION]: {
+                section: eR.oAB.PROFILE_CUSTOMIZATION,
                 type: f.bT.WIDE,
-                searchableTitles: [eP.intl.string(eP.t["vi7f+q"])],
-                label: eP.intl.string(eP.t["vi7f+q"]),
-                ariaLabel: eP.intl.string(eP.t["vi7f+q"]),
-                element: w.Z,
-                newIndicator: (0, r.jsx)(eF, {}),
-                newIndicatorDismissibleContentTypes: [...eZ()],
+                searchableTitles: [eD.intl.string(eD.t["vi7f+q"])],
+                label: eD.intl.string(eD.t["vi7f+q"]),
+                ariaLabel: eD.intl.string(eD.t["vi7f+q"]),
+                element: L.Z,
+                newIndicator: (0, r.jsx)(eV, {}),
+                newIndicatorDismissibleContentTypes: [...eF()],
                 notice: {
-                    stores: [U.Z, T.Z],
-                    element: D.Z,
+                    stores: [G.Z, T.Z],
+                    element: w.Z,
                 },
                 onSettingsClose: () => {
                     l.Z.wait(() => {
-                        (0, I.It)(), (0, u.P6)(), d.Z.clearSubsection(eN.oAB.PROFILE_CUSTOMIZATION);
+                        (0, I.It)(), (0, u.P6)(), d.Z.clearSubsection(eR.oAB.PROFILE_CUSTOMIZATION);
                     });
                 },
-                url: eN.Z5c.SETTINGS("profile-customization"),
+                url: eR.Z5c.SETTINGS("profile-customization"),
             },
-            [eA.s6.PROFILE_DISPLAY_NAME]: {
-                section: eN.oAB.PROFILE_CUSTOMIZATION,
-                searchableTitles: [eP.intl.string(eP.t["9AjdkD"])],
-                parent: eA.s6.PROFILE_CUSTOMIZATION,
+            [eC.s6.PROFILE_DISPLAY_NAME]: {
+                section: eR.oAB.PROFILE_CUSTOMIZATION,
+                searchableTitles: [eD.intl.string(eD.t["9AjdkD"])],
+                parent: eC.s6.PROFILE_CUSTOMIZATION,
             },
-            [eA.s6.PROFILE_USER_PROFILE]: {
-                section: eN.oAB.PROFILE_CUSTOMIZATION,
-                searchableTitles: [eP.intl.string(eP.t["2p07FR"]), eP.intl.string(eP.t["7vhiqk"])],
-                parent: eA.s6.PROFILE_CUSTOMIZATION,
+            [eC.s6.PROFILE_USER_PROFILE]: {
+                section: eR.oAB.PROFILE_CUSTOMIZATION,
+                searchableTitles: [eD.intl.string(eD.t["2p07FR"]), eD.intl.string(eD.t["7vhiqk"])],
+                parent: eC.s6.PROFILE_CUSTOMIZATION,
             },
-            [eA.s6.PROFILE_SERVER_PROFILES]: {
-                section: eN.oAB.PROFILE_CUSTOMIZATION,
-                searchableTitles: [eP.intl.string(eP.t.kPHroX)],
-                parent: eA.s6.PROFILE_CUSTOMIZATION,
+            [eC.s6.PROFILE_SERVER_PROFILES]: {
+                section: eR.oAB.PROFILE_CUSTOMIZATION,
+                searchableTitles: [eD.intl.string(eD.t.kPHroX)],
+                parent: eC.s6.PROFILE_CUSTOMIZATION,
             },
-            [eA.s6.CONTENT_SOCIAL]: {
-                section: eN.oAB.CONTENT_AND_SOCIAL,
-                label: eP.intl.string(eP.t["+o1pDZ"]),
-                searchableTitles: [eP.intl.string(eP.t["+o1pDZ"])],
-                ariaLabel: eP.intl.string(eP.t["+o1pDZ"]),
-                element: er.Z,
-                url: eN.Z5c.SETTINGS("content-and-social"),
-            },
-            [eA.s6.CONTENT_SOCIAL_DISCORD_TAB]: {
-                section: eN.oAB.CONTENT_AND_SOCIAL,
-                searchableTitles: [eP.intl.string(eP.t["+o1pDZ"]), eP.intl.string(eP.t["/7xJCF"])],
-                parent: eA.s6.CONTENT_SOCIAL,
-            },
-            [eA.s6.CONTENT_SOCIAL_DISCORD]: {
-                section: eN.oAB.CONTENT_AND_SOCIAL,
-                searchableTitles: [eP.intl.string(eP.t["+o1pDZ"]), eP.intl.string(eP.t["/7xJCF"])],
-                parent: eA.s6.CONTENT_SOCIAL_DISCORD_TAB,
-            },
-            [eA.s6.CONTENT_SOCIAL_CONNECTED_GAMES_TAB]: {
-                section: eN.oAB.CONTENT_AND_SOCIAL,
-                searchableTitles: [eP.intl.string(eP.t.YpCiMt)],
-                parent: eA.s6.CONTENT_SOCIAL,
-            },
-            [eA.s6.CONTENT_SOCIAL_CONNECTED_GAMES]: {
-                section: eN.oAB.CONTENT_AND_SOCIAL,
-                label: eP.intl.string(eP.t.YpCiMt),
-                searchableTitles: [eP.intl.string(eP.t.YpCiMt)],
-                ariaLabel: eP.intl.string(eP.t.YpCiMt),
-                parent: eA.s6.CONTENT_SOCIAL_CONNECTED_GAMES_TAB,
-                url: eN.Z5c.SETTINGS(eN.oAB.CONTENT_AND_SOCIAL, eC.C),
-            },
-            [eA.s6.DATA_PRIVACY]: {
-                section: eN.oAB.DATA_AND_PRIVACY,
-                label: eP.intl.string(eP.t.OAuOHD),
-                searchableTitles: [eP.intl.string(eP.t.OAuOHD)],
-                ariaLabel: eP.intl.string(eP.t.OAuOHD),
+            [eC.s6.CONTENT_SOCIAL]: {
+                section: eR.oAB.CONTENT_AND_SOCIAL,
+                label: eD.intl.string(eD.t["+o1pDZ"]),
+                searchableTitles: [eD.intl.string(eD.t["+o1pDZ"])],
+                ariaLabel: eD.intl.string(eD.t["+o1pDZ"]),
                 element: ei.Z,
-                url: eN.Z5c.SETTINGS("data-and-privacy"),
+                url: eR.Z5c.SETTINGS("content-and-social"),
             },
-            [eA.s6.PRIVACY_AND_SAFETY_STANDING]: {
-                section: eN.oAB.ACCOUNT,
-                searchableTitles: [eP.intl.string(eP.t["Vov/9o"])],
-                parent: eA.s6.ACCOUNT,
+            [eC.s6.CONTENT_SOCIAL_DISCORD_TAB]: {
+                section: eR.oAB.CONTENT_AND_SOCIAL,
+                searchableTitles: [eD.intl.string(eD.t["+o1pDZ"]), eD.intl.string(eD.t["/7xJCF"])],
+                parent: eC.s6.CONTENT_SOCIAL,
             },
-            [eA.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY]: {
-                section: eN.oAB.DATA_AND_PRIVACY,
-                searchableTitles: [eP.intl.string(eP.t.WWaFn5)],
-                parent: eA.s6.DATA_PRIVACY,
-                predicate: () => (0, F.isDesktop)(),
+            [eC.s6.CONTENT_SOCIAL_DISCORD]: {
+                section: eR.oAB.CONTENT_AND_SOCIAL,
+                searchableTitles: [eD.intl.string(eD.t["+o1pDZ"]), eD.intl.string(eD.t["/7xJCF"])],
+                parent: eC.s6.CONTENT_SOCIAL_DISCORD_TAB,
             },
-            [eA.s6.PRIVACY_AND_SAFETY_PERSISTENT_VERIFICATION_CODES]: {
-                section: eN.oAB.DATA_AND_PRIVACY,
-                searchableTitles: [eP.intl.string(eP.t["opi/XK"])],
-                parent: eA.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY,
+            [eC.s6.CONTENT_SOCIAL_CONNECTED_GAMES_TAB]: {
+                section: eR.oAB.CONTENT_AND_SOCIAL,
+                searchableTitles: [eD.intl.string(eD.t.YpCiMt)],
+                parent: eC.s6.CONTENT_SOCIAL,
             },
-            [eA.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY]: {
-                section: eN.oAB.CONTENT_AND_SOCIAL,
-                searchableTitles: [eP.intl.string(eP.t.xVRG4P)],
-                parent: eA.s6.CONTENT_SOCIAL_DISCORD,
+            [eC.s6.CONTENT_SOCIAL_CONNECTED_GAMES]: {
+                section: eR.oAB.CONTENT_AND_SOCIAL,
+                label: eD.intl.string(eD.t.YpCiMt),
+                searchableTitles: [eD.intl.string(eD.t.YpCiMt)],
+                ariaLabel: eD.intl.string(eD.t.YpCiMt),
+                parent: eC.s6.CONTENT_SOCIAL_CONNECTED_GAMES_TAB,
+                url: eR.Z5c.SETTINGS(eR.oAB.CONTENT_AND_SOCIAL, eN.C),
             },
-            [eA.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY]: {
-                section: eN.oAB.CONTENT_AND_SOCIAL,
-                searchableTitles: [eP.intl.string(eP.t.fyA115)],
-                parent: eA.s6.CONTENT_SOCIAL_DISCORD,
+            [eC.s6.DATA_PRIVACY]: {
+                section: eR.oAB.DATA_AND_PRIVACY,
+                label: eD.intl.string(eD.t.OAuOHD),
+                searchableTitles: [eD.intl.string(eD.t.OAuOHD)],
+                ariaLabel: eD.intl.string(eD.t.OAuOHD),
+                element: ea.Z,
+                url: eR.Z5c.SETTINGS("data-and-privacy"),
             },
-            [eA.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS]: {
-                section: eN.oAB.CONTENT_AND_SOCIAL,
-                searchableTitles: [eP.intl.string(eP.t.fyA115)],
-                parent: eA.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY,
+            [eC.s6.PRIVACY_AND_SAFETY_STANDING]: {
+                section: eR.oAB.ACCOUNT,
+                searchableTitles: [eD.intl.string(eD.t["Vov/9o"])],
+                parent: eC.s6.ACCOUNT,
             },
-            [eA.s6.PRIVACY_AND_SAFETY_ALLOW_GAME_FRIEND_DMS]: {
-                section: eN.oAB.CONTENT_AND_SOCIAL,
-                searchableTitles: [eP.intl.string(eP.t["/U8Iwa"])],
-                parent: eA.s6.CONTENT_SOCIAL_CONNECTED_GAMES,
+            [eC.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY]: {
+                section: eR.oAB.DATA_AND_PRIVACY,
+                searchableTitles: [eD.intl.string(eD.t.WWaFn5)],
+                parent: eC.s6.DATA_PRIVACY,
+                predicate: () => (0, V.isDesktop)(),
             },
-            [eA.s6.PRIVACY_AND_SAFETY_IN_GAME_DMS]: {
-                section: eN.oAB.CONTENT_AND_SOCIAL,
-                searchableTitles: [eP.intl.string(eP.t["ms+Tme"])],
-                parent: eA.s6.CONTENT_SOCIAL_CONNECTED_GAMES,
+            [eC.s6.PRIVACY_AND_SAFETY_PERSISTENT_VERIFICATION_CODES]: {
+                section: eR.oAB.DATA_AND_PRIVACY,
+                searchableTitles: [eD.intl.string(eD.t["opi/XK"])],
+                parent: eC.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY,
             },
-            [eA.s6.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_CATEGORY]: {
-                section: eN.oAB.CONTENT_AND_SOCIAL,
-                searchableTitles: [eP.intl.string(eP.t["y62Z/d"])],
-                parent: eA.s6.CONTENT_SOCIAL,
+            [eC.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY]: {
+                section: eR.oAB.CONTENT_AND_SOCIAL,
+                searchableTitles: [eD.intl.string(eD.t.xVRG4P)],
+                parent: eC.s6.CONTENT_SOCIAL_DISCORD,
             },
-            [eA.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY]: {
-                section: eN.oAB.DATA_AND_PRIVACY,
-                searchableTitles: [eP.intl.string(eP.t.SRZyHg)],
-                parent: eA.s6.DATA_PRIVACY,
+            [eC.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY]: {
+                section: eR.oAB.CONTENT_AND_SOCIAL,
+                searchableTitles: [eD.intl.string(eD.t.fyA115)],
+                parent: eC.s6.CONTENT_SOCIAL_DISCORD,
             },
-            [eA.s6.PRIVACY_SENSITIVE_MEDIA_V2]: {
-                section: eN.oAB.CONTENT_AND_SOCIAL,
+            [eC.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS]: {
+                section: eR.oAB.CONTENT_AND_SOCIAL,
+                searchableTitles: [eD.intl.string(eD.t.fyA115)],
+                parent: eC.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY,
+            },
+            [eC.s6.PRIVACY_AND_SAFETY_ALLOW_GAME_FRIEND_DMS]: {
+                section: eR.oAB.CONTENT_AND_SOCIAL,
+                searchableTitles: [eD.intl.string(eD.t["/U8Iwa"])],
+                parent: eC.s6.CONTENT_SOCIAL_CONNECTED_GAMES,
+            },
+            [eC.s6.PRIVACY_AND_SAFETY_IN_GAME_DMS]: {
+                section: eR.oAB.CONTENT_AND_SOCIAL,
+                searchableTitles: [eD.intl.string(eD.t["ms+Tme"])],
+                parent: eC.s6.CONTENT_SOCIAL_CONNECTED_GAMES,
+            },
+            [eC.s6.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_CATEGORY]: {
+                section: eR.oAB.CONTENT_AND_SOCIAL,
+                searchableTitles: [eD.intl.string(eD.t["y62Z/d"])],
+                parent: eC.s6.CONTENT_SOCIAL,
+            },
+            [eC.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY]: {
+                section: eR.oAB.DATA_AND_PRIVACY,
+                searchableTitles: [eD.intl.string(eD.t.SRZyHg)],
+                parent: eC.s6.DATA_PRIVACY,
+            },
+            [eC.s6.PRIVACY_SENSITIVE_MEDIA_V2]: {
+                section: eR.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [
-                    eP.intl.string(eP.t.uEz8JF),
-                    eP.intl.string(eP.t["N/oRI+"]),
-                    eP.intl.string(eP.t.QVdYsK),
-                    eP.intl.string(eP.t["aWD+tu"]),
-                    eP.intl.string(eP.t["5mnTa7"]),
+                    eD.intl.string(eD.t.uEz8JF),
+                    eD.intl.string(eD.t["N/oRI+"]),
+                    eD.intl.string(eD.t.QVdYsK),
+                    eD.intl.string(eD.t["aWD+tu"]),
+                    eD.intl.string(eD.t["5mnTa7"]),
                 ],
-                parent: eA.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
+                parent: eC.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
             },
-            [eA.s6.SENSITIVE_CONTENT_FILTERS]: {
-                section: eN.oAB.CONTENT_AND_SOCIAL,
+            [eC.s6.SENSITIVE_CONTENT_FILTERS]: {
+                section: eR.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [
-                    eP.intl.string(eP.t["Hj/But"]),
-                    eP.intl.string(eP.t["N/oRI+"]),
-                    eP.intl.string(eP.t.QVdYsK),
-                    eP.intl.string(eP.t["aWD+tu"]),
-                    eP.intl.string(eP.t["5mnTa7"]),
-                    eP.intl.string(eP.t["K0OWP+"]),
+                    eD.intl.string(eD.t["Hj/But"]),
+                    eD.intl.string(eD.t["N/oRI+"]),
+                    eD.intl.string(eD.t.QVdYsK),
+                    eD.intl.string(eD.t["aWD+tu"]),
+                    eD.intl.string(eD.t["5mnTa7"]),
+                    eD.intl.string(eD.t["K0OWP+"]),
                 ],
-                parent: eA.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
+                parent: eC.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
             },
-            [eA.s6.SEXUALLY_EXPLICIT_MEDIA_REDACTION]: {
-                section: eN.oAB.CONTENT_AND_SOCIAL,
+            [eC.s6.SEXUALLY_EXPLICIT_MEDIA_REDACTION]: {
+                section: eR.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [
-                    eP.intl.string(eP.t["Hj/But"]),
-                    eP.intl.string(eP.t["N/oRI+"]),
-                    eP.intl.string(eP.t.QVdYsK),
-                    eP.intl.string(eP.t["aWD+tu"]),
-                    eP.intl.string(eP.t["5mnTa7"]),
+                    eD.intl.string(eD.t["Hj/But"]),
+                    eD.intl.string(eD.t["N/oRI+"]),
+                    eD.intl.string(eD.t.QVdYsK),
+                    eD.intl.string(eD.t["aWD+tu"]),
+                    eD.intl.string(eD.t["5mnTa7"]),
                 ],
-                parent: eA.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
+                parent: eC.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
             },
-            [eA.s6.GORE_MEDIA_REDACTION]: {
-                section: eN.oAB.CONTENT_AND_SOCIAL,
+            [eC.s6.GORE_MEDIA_REDACTION]: {
+                section: eR.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [
-                    eP.intl.string(eP.t["Hj/But"]),
-                    eP.intl.string(eP.t["N/oRI+"]),
-                    eP.intl.string(eP.t.QVdYsK),
-                    eP.intl.string(eP.t["aWD+tu"]),
-                    eP.intl.string(eP.t["K0OWP+"]),
+                    eD.intl.string(eD.t["Hj/But"]),
+                    eD.intl.string(eD.t["N/oRI+"]),
+                    eD.intl.string(eD.t.QVdYsK),
+                    eD.intl.string(eD.t["aWD+tu"]),
+                    eD.intl.string(eD.t["K0OWP+"]),
                 ],
-                parent: eA.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
+                parent: eC.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
             },
-            [eA.s6.PARENTAL_CONTROLS_SEXUALLY_EXPLICIT_MEDIA_REDACTION]: {
-                section: eN.oAB.FAMILY_CENTER_PARENTAL_CONTROLS,
-                parent: eA.s6.PRIVACY_FAMILY_CENTER,
+            [eC.s6.PARENTAL_CONTROLS_SEXUALLY_EXPLICIT_MEDIA_REDACTION]: {
+                section: eR.oAB.FAMILY_CENTER_PARENTAL_CONTROLS,
+                parent: eC.s6.PRIVACY_FAMILY_CENTER,
                 predicate: () => !1,
             },
-            [eA.s6.PARENTAL_CONTROLS_GORE_MEDIA_REDACTION]: {
-                section: eN.oAB.FAMILY_CENTER_PARENTAL_CONTROLS,
-                parent: eA.s6.PRIVACY_FAMILY_CENTER,
+            [eC.s6.PARENTAL_CONTROLS_GORE_MEDIA_REDACTION]: {
+                section: eR.oAB.FAMILY_CENTER_PARENTAL_CONTROLS,
+                parent: eC.s6.PRIVACY_FAMILY_CENTER,
                 predicate: () => !1,
             },
-            [eA.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER_V2]: {
-                section: eN.oAB.CONTENT_AND_SOCIAL,
+            [eC.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER_V2]: {
+                section: eR.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [
-                    eP.intl.string(eP.t.JzaP4h),
-                    eP.intl.string(eP.t.H9XOl3),
-                    eP.intl.string(eP.t.k4W40P),
+                    eD.intl.string(eD.t.JzaP4h),
+                    eD.intl.string(eD.t.H9XOl3),
+                    eD.intl.string(eD.t.k4W40P),
                 ],
-                parent: eA.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
+                parent: eC.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
             },
-            [eA.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_IOS_V2]: {
-                section: eN.oAB.CONTENT_AND_SOCIAL,
-                searchableTitles: [eP.intl.string(eP.t["L+yTsa"])],
-                parent: eA.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
+            [eC.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_IOS_V2]: {
+                section: eR.oAB.CONTENT_AND_SOCIAL,
+                searchableTitles: [eD.intl.string(eD.t["L+yTsa"])],
+                parent: eC.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
             },
-            [eA.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_APPS_V2]: {
-                section: eN.oAB.CONTENT_AND_SOCIAL,
-                searchableTitles: [eP.intl.string(eP.t.XahVjj)],
-                parent: eA.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
+            [eC.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS_AGE_RESTRICTED_APPS_V2]: {
+                section: eR.oAB.CONTENT_AND_SOCIAL,
+                searchableTitles: [eD.intl.string(eD.t.XahVjj)],
+                parent: eC.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
             },
-            [eA.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR]: {
-                section: eN.oAB.CONTENT_AND_SOCIAL,
-                parent: eA.s6.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_CATEGORY,
+            [eC.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR]: {
+                section: eR.oAB.CONTENT_AND_SOCIAL,
+                parent: eC.s6.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_CATEGORY,
             },
-            [eA.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_DMS_V2]: {
-                section: eN.oAB.CONTENT_AND_SOCIAL,
-                searchableTitles: [eP.intl.string(eP.t.RAQUSN), eP.intl.string(eP.t.wbYDfT)],
-                parent: eA.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR,
+            [eC.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_DMS_V2]: {
+                section: eR.oAB.CONTENT_AND_SOCIAL,
+                searchableTitles: [eD.intl.string(eD.t.RAQUSN), eD.intl.string(eD.t.wbYDfT)],
+                parent: eC.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR,
             },
-            [eA.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_MESSAGE_REQUESTS_V2]: {
-                section: eN.oAB.CONTENT_AND_SOCIAL,
-                searchableTitles: [eP.intl.string(eP.t["3o2ojh"])],
-                parent: eA.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR,
-                predicate: () => !eJ,
+            [eC.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_MESSAGE_REQUESTS_V2]: {
+                section: eR.oAB.CONTENT_AND_SOCIAL,
+                searchableTitles: [eD.intl.string(eD.t["3o2ojh"])],
+                parent: eC.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR,
+                predicate: () => !e$,
             },
-            [eA.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_STATUS_V2]: {
-                section: eN.oAB.CONTENT_AND_SOCIAL,
-                searchableTitles: [eP.intl.string(eP.t.OLwZDV)],
-                parent: eA.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR,
+            [eC.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_STATUS_V2]: {
+                section: eR.oAB.CONTENT_AND_SOCIAL,
+                searchableTitles: [eD.intl.string(eD.t.OLwZDV)],
+                parent: eC.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR,
             },
-            [eA.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_JOINING_V2]: {
-                section: eN.oAB.CONTENT_AND_SOCIAL,
-                searchableTitles: [eP.intl.string(eP.t.wBkwux)],
-                parent: eA.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR,
+            [eC.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_JOINING_V2]: {
+                section: eR.oAB.CONTENT_AND_SOCIAL,
+                searchableTitles: [eD.intl.string(eD.t.wBkwux)],
+                parent: eC.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR,
             },
-            [eA.s6.PRIVACY_DATA_IMPROVE_DISCORD_V2]: {
-                section: eN.oAB.DATA_AND_PRIVACY,
-                searchableTitles: [eP.intl.string(eP.t.XuADY2)],
-                parent: eA.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
+            [eC.s6.PRIVACY_DATA_IMPROVE_DISCORD_V2]: {
+                section: eR.oAB.DATA_AND_PRIVACY,
+                searchableTitles: [eD.intl.string(eD.t.XuADY2)],
+                parent: eC.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
             },
-            [eA.s6.PRIVACY_DATA_PERSONALIZE_V2]: {
-                section: eN.oAB.DATA_AND_PRIVACY,
-                searchableTitles: [eP.intl.string(eP.t.MNKzyg)],
-                parent: eA.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
+            [eC.s6.PRIVACY_DATA_PERSONALIZE_V2]: {
+                section: eR.oAB.DATA_AND_PRIVACY,
+                searchableTitles: [eD.intl.string(eD.t.MNKzyg)],
+                parent: eC.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
             },
-            [eA.s6.PRIVACY_DATA_QUESTS_V2]: {
-                section: eN.oAB.DATA_AND_PRIVACY,
-                searchableTitles: [eP.intl.string(eP.t.VkS7Yd), eP.intl.string(eP.t.sJYh5t)],
-                parent: eA.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
+            [eC.s6.PRIVACY_DATA_QUESTS_V2]: {
+                section: eR.oAB.DATA_AND_PRIVACY,
+                searchableTitles: [eD.intl.string(eD.t.VkS7Yd), eD.intl.string(eD.t.sJYh5t)],
+                parent: eC.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
             },
-            [eA.s6.PRIVACY_DATA_QUESTS_3P]: {
-                section: eN.oAB.DATA_AND_PRIVACY,
-                searchableTitles: [eP.intl.string(eP.t.CyLYKZ)],
-                parent: eA.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
-                predicate: () => te,
+            [eC.s6.PRIVACY_DATA_QUESTS_3P]: {
+                section: eR.oAB.DATA_AND_PRIVACY,
+                searchableTitles: [eD.intl.string(eD.t.CyLYKZ)],
+                parent: eC.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
+                predicate: () => tt,
             },
-            [eA.s6.PRIVACY_DATA_BASIC_SERVICE_V2]: {
-                section: eN.oAB.DATA_AND_PRIVACY,
-                searchableTitles: [eA.CF],
-                parent: eA.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
+            [eC.s6.PRIVACY_DATA_BASIC_SERVICE_V2]: {
+                section: eR.oAB.DATA_AND_PRIVACY,
+                searchableTitles: [eC.CF],
+                parent: eC.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
             },
-            [eA.s6.PRIVACY_DATA_REQUEST_V2]: {
-                section: eN.oAB.DATA_AND_PRIVACY,
-                searchableTitles: [eP.intl.string(eP.t.dmBSKo)],
-                parent: eA.s6.PRIVACY_AND_SAFETY_RECEIVE_DISCORD_DATA_CATEGORY,
+            [eC.s6.PRIVACY_DATA_REQUEST_V2]: {
+                section: eR.oAB.DATA_AND_PRIVACY,
+                searchableTitles: [eD.intl.string(eD.t.dmBSKo)],
+                parent: eC.s6.PRIVACY_AND_SAFETY_RECEIVE_DISCORD_DATA_CATEGORY,
             },
-            [eA.s6.PRIVACY_KEYWORD_FILTER_V2]: {
-                section: eN.oAB.CONTENT_AND_SOCIAL,
-                searchableTitles: [eP.intl.string(eP.t["1UaUy+"]), eP.intl.string(eP.t["xIk/iF"])],
-                parent: eA.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-                predicate: () => eY,
+            [eC.s6.PRIVACY_KEYWORD_FILTER_V2]: {
+                section: eR.oAB.CONTENT_AND_SOCIAL,
+                searchableTitles: [eD.intl.string(eD.t["1UaUy+"]), eD.intl.string(eD.t["xIk/iF"])],
+                parent: eC.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
+                predicate: () => eK,
             },
-            [eA.s6.PRIVACY_SAFETY_ALERTS_V2]: {
-                section: eN.oAB.CONTENT_AND_SOCIAL,
-                searchableTitles: [eP.intl.string(eP.t.qFsx5q)],
-                parent: eA.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-                predicate: () => ez && !e3 && !eq,
+            [eC.s6.PRIVACY_SAFETY_ALERTS_V2]: {
+                section: eR.oAB.CONTENT_AND_SOCIAL,
+                searchableTitles: [eD.intl.string(eD.t.qFsx5q)],
+                parent: eC.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
+                predicate: () => eq && !e2 && !eX,
             },
-            [eA.s6.PRIVACY_ENCRYPTION_VERIFIED_DEVICES_V2]: {
-                section: eN.oAB.DATA_AND_PRIVACY,
-                searchableTitles: [eP.intl.string(eP.t["5b3FNI"])],
-                parent: eA.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY,
-                predicate: () => e2,
+            [eC.s6.PRIVACY_ENCRYPTION_VERIFIED_DEVICES_V2]: {
+                section: eR.oAB.DATA_AND_PRIVACY,
+                searchableTitles: [eD.intl.string(eD.t["5b3FNI"])],
+                parent: eC.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY,
+                predicate: () => e4,
             },
-            [eA.s6.PRIVACY_FAMILY_CENTER]: {
-                section: eN.oAB.FAMILY_CENTER,
-                searchableTitles: [eP.intl.string(ew.default.gntCQT)],
-                label: eP.intl.string(ew.default.gntCQT),
-                ariaLabel: eP.intl.string(ew.default.gntCQT),
-                element: eo.Z,
-                badgeCount: x,
+            [eC.s6.PRIVACY_FAMILY_CENTER]: {
+                section: eR.oAB.FAMILY_CENTER,
+                searchableTitles: [eD.intl.string(eL.default.gntCQT)],
+                label: eD.intl.string(eL.default.gntCQT),
+                ariaLabel: eD.intl.string(eL.default.gntCQT),
+                element: es.Z,
+                badgeCount: M,
                 newIndicator: (0, r.jsx)(s.IGR, {
-                    text: eP.intl.string(eP.t.y2b7CA),
+                    text: eD.intl.string(eD.t.y2b7CA),
                     color: y.Z.BG_BRAND,
                 }),
                 newIndicatorDismissibleContentTypes: [a.z.FAMILY_CENTER_NEW_BADGE],
-                url: eN.Z5c.SETTINGS("family-center"),
+                url: eR.Z5c.SETTINGS("family-center"),
             },
-            [eA.s6.PRIVACY_AND_SAFETY_RECEIVE_DISCORD_DATA_CATEGORY]: {
-                section: eN.oAB.DATA_AND_PRIVACY,
-                searchableTitles: [eP.intl.string(eP.t.BG7QsQ)],
-                parent: eA.s6.DATA_PRIVACY,
+            [eC.s6.PRIVACY_AND_SAFETY_RECEIVE_DISCORD_DATA_CATEGORY]: {
+                section: eR.oAB.DATA_AND_PRIVACY,
+                searchableTitles: [eD.intl.string(eD.t.BG7QsQ)],
+                parent: eC.s6.DATA_PRIVACY,
             },
-            [eA.s6.AUTHORIZED_APPS]: {
-                section: eN.oAB.AUTHORIZED_APPS,
-                searchableTitles: [eP.intl.string(eP.t["f6kk+r"])],
-                label: eP.intl.string(eP.t["f6kk+r"]),
-                element: ee.Z,
-                url: eN.Z5c.SETTINGS("authorized-apps"),
+            [eC.s6.AUTHORIZED_APPS]: {
+                section: eR.oAB.AUTHORIZED_APPS,
+                searchableTitles: [eD.intl.string(eD.t["f6kk+r"])],
+                label: eD.intl.string(eD.t["f6kk+r"]),
+                element: et.Z,
+                url: eR.Z5c.SETTINGS("authorized-apps"),
             },
-            [eA.s6.SESSIONS]: {
-                section: eN.oAB.SESSIONS,
-                searchableTitles: [eP.intl.string(eP.t["+1h0k/"])],
-                label: eP.intl.string(eP.t["+1h0k/"]),
-                ariaLabel: eP.intl.string(eP.t["+1h0k/"]),
-                element: eh.Z,
+            [eC.s6.SESSIONS]: {
+                section: eR.oAB.SESSIONS,
+                searchableTitles: [eD.intl.string(eD.t["+1h0k/"])],
+                label: eD.intl.string(eD.t["+1h0k/"]),
+                ariaLabel: eD.intl.string(eD.t["+1h0k/"]),
+                element: em.Z,
                 newIndicatorDismissibleContentTypes: [a.z.AUTH_SESSIONS_NEW],
                 impressionName: i.ImpressionNames.USER_SETTINGS_SESSIONS,
                 impressionProperties: { source: null == v ? void 0 : v.source },
             },
-            [eA.s6.CONNECTIONS]: {
-                section: eN.oAB.CONNECTIONS,
-                searchableTitles: [eP.intl.string(eP.t["3fe7U5"])],
-                label: eP.intl.string(eP.t["3fe7U5"]),
-                ariaLabel: eP.intl.string(eP.t["3fe7U5"]),
-                element: en.Z,
+            [eC.s6.CONNECTIONS]: {
+                section: eR.oAB.CONNECTIONS,
+                searchableTitles: [eD.intl.string(eD.t["3fe7U5"])],
+                label: eD.intl.string(eD.t["3fe7U5"]),
+                ariaLabel: eD.intl.string(eD.t["3fe7U5"]),
+                element: er.Z,
                 impressionName: i.ImpressionNames.USER_SETTINGS_CONNECTIONS,
                 impressionProperties: { source: null == v ? void 0 : v.source },
                 newIndicatorDismissibleContentTypes: [a.z.NEW_CRUNCHYROLL_CONNECTION],
-                url: eN.Z5c.SETTINGS("connections"),
+                url: eR.Z5c.SETTINGS("connections"),
             },
-            [eA.s6.THIRD_PARTY_ACCESS]: {
-                section: eN.oAB.CONNECTIONS,
+            [eC.s6.THIRD_PARTY_ACCESS]: {
+                section: eR.oAB.CONNECTIONS,
                 searchableTitles: [
-                    eP.intl.string(eP.t["Ig/XFa"]),
-                    eP.intl.string(eP.t["3fe7U5"]),
-                    eP.intl.string(eP.t["f6kk+r"]),
+                    eD.intl.string(eD.t["Ig/XFa"]),
+                    eD.intl.string(eD.t["3fe7U5"]),
+                    eD.intl.string(eD.t["f6kk+r"]),
                 ],
-                label: eP.intl.string(eP.t["Ig/XFa"]),
-                parent: eA.s6.CONNECTIONS,
-                element: eE.Z,
+                label: eD.intl.string(eD.t["Ig/XFa"]),
+                parent: eC.s6.CONNECTIONS,
+                element: eb.Z,
             },
-            [eA.s6.CONNECTIONS_CONNECTED_ACCOUNTS]: {
-                section: eN.oAB.CONNECTIONS,
-                searchableTitles: [eP.intl.string(eP.t["+/hZM/"])],
-                parent: eA.s6.CONNECTIONS,
-                element: en.Z,
+            [eC.s6.CONNECTIONS_CONNECTED_ACCOUNTS]: {
+                section: eR.oAB.CONNECTIONS,
+                searchableTitles: [eD.intl.string(eD.t["+/hZM/"])],
+                parent: eC.s6.CONNECTIONS,
+                element: er.Z,
             },
-            [eA.s6.CLIPS]: {
-                section: eN.oAB.CLIPS,
-                searchableTitles: [eP.intl.string(eP.t.z2jK6X)],
-                label: eP.intl.string(eP.t.z2jK6X),
-                ariaLabel: eP.intl.string(eP.t.z2jK6X),
-                icon: ej ? (0, r.jsx)(g.Z, {}) : void 0,
+            [eC.s6.CLIPS]: {
+                section: eR.oAB.CLIPS,
+                searchableTitles: [eD.intl.string(eD.t.z2jK6X)],
+                label: eD.intl.string(eD.t.z2jK6X),
+                ariaLabel: eD.intl.string(eD.t.z2jK6X),
+                icon: eU ? (0, r.jsx)(g.Z, {}) : void 0,
                 element: E.Z,
-                predicate: () => !eV,
-                url: eN.Z5c.SETTINGS("clips"),
+                predicate: () => !eH,
+                url: eR.Z5c.SETTINGS("clips"),
             },
-            [eA.s6.CLIPS_RECORDING_TAB]: {
-                section: eN.oAB.CLIPS,
-                searchableTitles: [eP.intl.string(eP.t.iIwmV5)],
-                parent: eA.s6.CLIPS,
+            [eC.s6.CLIPS_RECORDING_TAB]: {
+                section: eR.oAB.CLIPS,
+                searchableTitles: [eD.intl.string(eD.t.iIwmV5)],
+                parent: eC.s6.CLIPS,
             },
-            [eA.s6.CLIPS_AUTOMATIC_TAB]: {
-                section: eN.oAB.CLIPS,
-                searchableTitles: [eP.intl.string(eP.t.sA0WKL)],
-                parent: eA.s6.CLIPS,
+            [eC.s6.CLIPS_AUTOMATIC_TAB]: {
+                section: eR.oAB.CLIPS,
+                searchableTitles: [eD.intl.string(eD.t.sA0WKL)],
+                parent: eC.s6.CLIPS,
             },
-            [eA.s6.CLIPS_PRIVACY_TAB]: {
-                section: eN.oAB.CLIPS,
-                searchableTitles: [eP.intl.string(eP.t.GcIeET)],
-                parent: eA.s6.CLIPS,
+            [eC.s6.CLIPS_PRIVACY_TAB]: {
+                section: eR.oAB.CLIPS,
+                searchableTitles: [eD.intl.string(eD.t.GcIeET)],
+                parent: eC.s6.CLIPS,
             },
-            [eA.s6.RESTRICTED_USERS]: {
-                section: eN.oAB.CONTENT_AND_SOCIAL,
-                parent: eA.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY,
-                label: eP.intl.string(eP.t["3wRort"]),
-                element: eI.ZP,
-                predicate: () => e4 || e5,
+            [eC.s6.RESTRICTED_USERS]: {
+                section: eR.oAB.CONTENT_AND_SOCIAL,
+                parent: eC.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY,
+                label: eD.intl.string(eD.t["3wRort"]),
+                element: eT.ZP,
+                predicate: () => e5 || e8,
             },
-            [eA.s6.BLOCKED_USERS]: {
-                section: eN.oAB.CONTENT_AND_SOCIAL,
-                parent: eA.s6.RESTRICTED_USERS,
-                label: eP.intl.string(eP.t.PFOUKW),
-                searchableTitles: [eP.intl.string(eP.t.PFOUKW)],
-                element: eI.GF,
+            [eC.s6.BLOCKED_USERS]: {
+                section: eR.oAB.CONTENT_AND_SOCIAL,
+                parent: eC.s6.RESTRICTED_USERS,
+                label: eD.intl.string(eD.t.PFOUKW),
+                searchableTitles: [eD.intl.string(eD.t.PFOUKW)],
+                element: eT.GF,
+                predicate: () => e8,
+            },
+            [eC.s6.IGNORED_USERS]: {
+                section: eR.oAB.CONTENT_AND_SOCIAL,
+                parent: eC.s6.RESTRICTED_USERS,
+                searchableTitles: [eD.intl.string(eD.t["93ZDWE"])],
+                label: eD.intl.string(eD.t["93ZDWE"]),
+                element: eT.yo,
                 predicate: () => e5,
             },
-            [eA.s6.IGNORED_USERS]: {
-                section: eN.oAB.CONTENT_AND_SOCIAL,
-                parent: eA.s6.RESTRICTED_USERS,
-                searchableTitles: [eP.intl.string(eP.t["93ZDWE"])],
-                label: eP.intl.string(eP.t["93ZDWE"]),
-                element: eI.yo,
-                predicate: () => e4,
+            [eC.s6.PREMIUM]: {
+                section: eR.oAB.PREMIUM,
+                ariaLabel: eD.intl.string(eD.t.Ipxkog),
+                searchableTitles: [eD.intl.string(eD.t.Ipxkog)],
+                label: eD.intl.string(eD.t.Ipxkog),
+                element: z.Z,
+                className: eM.premiumTab,
             },
-            [eA.s6.PREMIUM]: {
-                section: eN.oAB.PREMIUM,
-                ariaLabel: eP.intl.string(eP.t.Ipxkog),
-                searchableTitles: [eP.intl.string(eP.t.Ipxkog)],
-                label: eP.intl.string(eP.t.Ipxkog),
-                element: K.Z,
-                className: ex.premiumTab,
+            [eC.s6.GUILD_BOOSTING]: {
+                section: eR.oAB.GUILD_BOOSTING,
+                searchableTitles: [eD.intl.string(eD.t["+CbP2v"])],
+                label: eD.intl.string(eD.t["+CbP2v"]),
+                element: ep.Z,
             },
-            [eA.s6.GUILD_BOOSTING]: {
-                section: eN.oAB.GUILD_BOOSTING,
-                searchableTitles: [eP.intl.string(eP.t["+CbP2v"])],
-                label: eP.intl.string(eP.t["+CbP2v"]),
-                element: e_.Z,
-            },
-            [eA.s6.SUBSCRIPTIONS]: {
-                section: eN.oAB.SUBSCRIPTIONS,
-                ariaLabel: eP.intl.string(eP.t.trSpHX),
-                searchableTitles: [eP.intl.string(eP.t.trSpHX)],
-                label: eP.intl.string(eP.t.trSpHX),
-                element: R.Z,
+            [eC.s6.SUBSCRIPTIONS]: {
+                section: eR.oAB.SUBSCRIPTIONS,
+                ariaLabel: eD.intl.string(eD.t.trSpHX),
+                searchableTitles: [eD.intl.string(eD.t.trSpHX)],
+                label: eD.intl.string(eD.t.trSpHX),
+                element: P.Z,
                 icon: O
                     ? (0, r.jsx)(s.Mgn, {
                           size: "xs",
@@ -777,853 +778,859 @@ let eG = () => [
                       })
                     : null,
             },
-            [eA.s6.SUBSCRIPTIONS_CREDITS]: {
-                section: eN.oAB.SUBSCRIPTIONS,
-                searchableTitles: [eP.intl.string(eP.t["2GKrvn"])],
-                parent: eA.s6.SUBSCRIPTIONS,
+            [eC.s6.SUBSCRIPTIONS_CREDITS]: {
+                section: eR.oAB.SUBSCRIPTIONS,
+                searchableTitles: [eD.intl.string(eD.t["2GKrvn"])],
+                parent: eC.s6.SUBSCRIPTIONS,
             },
-            [eA.s6.GIFT_INVENTORY]: {
-                section: eN.oAB.INVENTORY,
-                searchableTitles: [eP.intl.string(eP.t["jcSP+g"])],
-                label: eP.intl.string(eP.t["jcSP+g"]),
-                element: el.Z,
-                ariaLabel: eP.intl.string(eP.t["jcSP+g"]),
+            [eC.s6.GIFT_INVENTORY]: {
+                section: eR.oAB.INVENTORY,
+                searchableTitles: [eD.intl.string(eD.t["jcSP+g"])],
+                label: eD.intl.string(eD.t["jcSP+g"]),
+                element: ec.Z,
+                ariaLabel: eD.intl.string(eD.t["jcSP+g"]),
                 badgeCount: t,
             },
-            [eA.s6.GIFT_CODE_REDEMPTION]: {
-                section: eN.oAB.INVENTORY,
-                searchableTitles: [eP.intl.string(eP.t["il+VCo"])],
-                parent: eA.s6.GIFT_INVENTORY,
-                predicate: () => !eX,
+            [eC.s6.GIFT_CODE_REDEMPTION]: {
+                section: eR.oAB.INVENTORY,
+                searchableTitles: [eD.intl.string(eD.t["il+VCo"])],
+                parent: eC.s6.GIFT_INVENTORY,
+                predicate: () => !eQ,
             },
-            [eA.s6.GIFT_INVENTORY_QUESTS]: {
-                section: eN.oAB.INVENTORY,
-                searchableTitles: [eP.intl.string(eP.t.JALI2K)],
-                parent: eA.s6.GIFT_INVENTORY,
+            [eC.s6.GIFT_INVENTORY_QUESTS]: {
+                section: eR.oAB.INVENTORY,
+                searchableTitles: [eD.intl.string(eD.t.JALI2K)],
+                parent: eC.s6.GIFT_INVENTORY,
+                predicate: () => eJ,
+            },
+            [eC.s6.GIFT_INVENTORY_LIST]: {
+                section: eR.oAB.INVENTORY,
+                searchableTitles: [eD.intl.string(eD.t["9KeUbY"])],
+                parent: eC.s6.GIFT_INVENTORY,
+                predicate: () => !eQ,
+            },
+            [eC.s6.GIFT_BLOCKED_PAYMENTS]: {
+                section: eR.oAB.INVENTORY,
+                searchableTitles: [eD.intl.string(eD.t.vwMEHS)],
+                parent: eC.s6.GIFT_INVENTORY,
                 predicate: () => eQ,
             },
-            [eA.s6.GIFT_INVENTORY_LIST]: {
-                section: eN.oAB.INVENTORY,
-                searchableTitles: [eP.intl.string(eP.t["9KeUbY"])],
-                parent: eA.s6.GIFT_INVENTORY,
-                predicate: () => !eX,
+            [eC.s6.BILLING]: {
+                section: eR.oAB.BILLING,
+                searchableTitles: [eD.intl.string(eD.t.oeUm2s)],
+                label: eD.intl.string(eD.t.oeUm2s),
+                ariaLabel: eD.intl.string(eD.t.oeUm2s),
+                element: en.Z,
             },
-            [eA.s6.GIFT_BLOCKED_PAYMENTS]: {
-                section: eN.oAB.INVENTORY,
-                searchableTitles: [eP.intl.string(eP.t.vwMEHS)],
-                parent: eA.s6.GIFT_INVENTORY,
-                predicate: () => eX,
+            [eC.s6.BILLING_PAYMENT_METHODS]: {
+                section: eR.oAB.BILLING,
+                searchableTitles: [eD.intl.string(eD.t.W26xGQ)],
+                parent: eC.s6.BILLING,
             },
-            [eA.s6.BILLING]: {
-                section: eN.oAB.BILLING,
-                searchableTitles: [eP.intl.string(eP.t.oeUm2s)],
-                label: eP.intl.string(eP.t.oeUm2s),
-                ariaLabel: eP.intl.string(eP.t.oeUm2s),
-                element: et.Z,
+            [eC.s6.BILLING_TRANSACTION_HISTORY]: {
+                section: eR.oAB.BILLING,
+                searchableTitles: [eD.intl.string(eD.t.obLrcK)],
+                parent: eC.s6.BILLING,
             },
-            [eA.s6.BILLING_PAYMENT_METHODS]: {
-                section: eN.oAB.BILLING,
-                searchableTitles: [eP.intl.string(eP.t.W26xGQ)],
-                parent: eA.s6.BILLING,
+            [eC.s6.APPEARANCE]: {
+                section: eR.oAB.APPEARANCE,
+                searchableTitles: [eD.intl.string(eD.t["iHH+ky"])],
+                label: eD.intl.string(eD.t["iHH+ky"]),
+                ariaLabel: eD.intl.string(eD.t["iHH+ky"]),
+                element: ee.Z,
+                newIndicator: (0, r.jsx)(eZ, {}),
+                newIndicatorDismissibleContentTypes: eB(),
+                url: eR.Z5c.SETTINGS("appearance"),
             },
-            [eA.s6.BILLING_TRANSACTION_HISTORY]: {
-                section: eN.oAB.BILLING,
-                searchableTitles: [eP.intl.string(eP.t.obLrcK)],
-                parent: eA.s6.BILLING,
+            [eC.s6.APPEARANCE_THEME]: {
+                section: eR.oAB.APPEARANCE,
+                searchableTitles: [eD.intl.string(eD.t.Ksh3ik)],
+                parent: eC.s6.APPEARANCE,
             },
-            [eA.s6.APPEARANCE]: {
-                section: eN.oAB.APPEARANCE,
-                searchableTitles: [eP.intl.string(eP.t["iHH+ky"])],
-                label: eP.intl.string(eP.t["iHH+ky"]),
-                ariaLabel: eP.intl.string(eP.t["iHH+ky"]),
-                element: $.Z,
-                newIndicator: (0, r.jsx)(eB, {}),
-                newIndicatorDismissibleContentTypes: eG(),
-                url: eN.Z5c.SETTINGS("appearance"),
+            [eC.s6.APPEARANCE_COLOR]: {
+                section: eR.oAB.APPEARANCE,
+                searchableTitles: [eD.intl.string(eD.t.OCOOiI)],
+                parent: eC.s6.APPEARANCE_THEME,
             },
-            [eA.s6.APPEARANCE_THEME]: {
-                section: eN.oAB.APPEARANCE,
-                searchableTitles: [eP.intl.string(eP.t.Ksh3ik)],
-                parent: eA.s6.APPEARANCE,
+            [eC.s6.APPEARANCE_ICON]: {
+                section: eR.oAB.APPEARANCE,
+                searchableTitles: [eD.intl.string(eD.t.RPh2ou)],
+                parent: eC.s6.APPEARANCE_THEME,
             },
-            [eA.s6.APPEARANCE_COLOR]: {
-                section: eN.oAB.APPEARANCE,
-                searchableTitles: [eP.intl.string(eP.t.OCOOiI)],
-                parent: eA.s6.APPEARANCE_THEME,
+            [eC.s6.APPEARANCE_MESSAGE_DISPLAY_COMPACT]: {
+                section: eR.oAB.APPEARANCE,
+                searchableTitles: [eD.intl.string(eD.t.ZEoGMd)],
+                parent: eC.s6.APPEARANCE,
             },
-            [eA.s6.APPEARANCE_ICON]: {
-                section: eN.oAB.APPEARANCE,
-                searchableTitles: [eP.intl.string(eP.t.RPh2ou)],
-                parent: eA.s6.APPEARANCE_THEME,
-            },
-            [eA.s6.APPEARANCE_MESSAGE_DISPLAY_COMPACT]: {
-                section: eN.oAB.APPEARANCE,
-                searchableTitles: [eP.intl.string(eP.t.ZEoGMd)],
-                parent: eA.s6.APPEARANCE,
-            },
-            [eA.s6.APPEARANCE_LIST_SPACING]: {
-                section: eN.oAB.APPEARANCE,
+            [eC.s6.APPEARANCE_LIST_SPACING]: {
+                section: eR.oAB.APPEARANCE,
                 searchableTitles: ["List Spacing"],
-                parent: eA.s6.APPEARANCE,
+                parent: eC.s6.APPEARANCE,
                 newIndicator: (0, r.jsx)(s.IGR, {
-                    text: eP.intl.string(eP.t.y2b7CA),
+                    text: eD.intl.string(eD.t.y2b7CA),
                     color: y.Z.BG_BRAND,
                 }),
             },
-            [eA.s6.APPEARANCE_SCALING_SPACING]: {
-                section: eN.oAB.APPEARANCE,
-                searchableTitles: [eP.intl.string(eP.t.qPOqoK)],
-                parent: eA.s6.APPEARANCE,
+            [eC.s6.APPEARANCE_SCALING_SPACING]: {
+                section: eR.oAB.APPEARANCE,
+                searchableTitles: [eD.intl.string(eD.t.qPOqoK)],
+                parent: eC.s6.APPEARANCE,
             },
-            [eA.s6.APPEARANCE_TIMESTAMP_HOUR_CYCLE]: {
-                section: eN.oAB.APPEARANCE,
+            [eC.s6.APPEARANCE_TIMESTAMP_HOUR_CYCLE]: {
+                section: eR.oAB.APPEARANCE,
                 searchableTitles: [
-                    eP.intl.string(eP.t.dyamEI),
-                    eP.intl.string(eP.t.p8NOwi),
-                    eP.intl.string(eP.t["+o/sOo"]),
+                    eD.intl.string(eD.t.dyamEI),
+                    eD.intl.string(eD.t.p8NOwi),
+                    eD.intl.string(eD.t["+o/sOo"]),
                 ],
-                parent: eA.s6.APPEARANCE,
+                parent: eC.s6.APPEARANCE,
                 predicate: () =>
-                    L.Z.getCurrentConfig({ location: "SettingsRendererConfig" }, { autoTrackExposure: !1 })
+                    x.Z.getCurrentConfig({ location: "SettingsRendererConfig" }, { autoTrackExposure: !1 })
                         .enable24HourPref,
             },
-            [eA.s6.ACCESSIBILITY]: {
-                section: eN.oAB.ACCESSIBILITY,
-                searchableTitles: [eP.intl.string(eP.t.G0neg7)],
-                label: eP.intl.string(eP.t.G0neg7),
-                ariaLabel: eP.intl.string(eP.t.G0neg7),
-                element: q.Z,
-                url: eN.Z5c.SETTINGS("accessibility"),
+            [eC.s6.ACCESSIBILITY]: {
+                section: eR.oAB.ACCESSIBILITY,
+                searchableTitles: [eD.intl.string(eD.t.G0neg7)],
+                label: eD.intl.string(eD.t.G0neg7),
+                ariaLabel: eD.intl.string(eD.t.G0neg7),
+                element: X.Z,
+                url: eR.Z5c.SETTINGS("accessibility"),
             },
-            [eA.s6.ACCESSIBILITY_HIGH_CONTRAST]: {
-                section: eN.oAB.ACCESSIBILITY,
-                searchableTitles: [eP.intl.string(eP.t.aZlePv)],
-                parent: eA.s6.ACCESSIBILITY,
+            [eC.s6.ACCESSIBILITY_HIGH_CONTRAST]: {
+                section: eR.oAB.ACCESSIBILITY,
+                searchableTitles: [eD.intl.string(eD.t.aZlePv)],
+                parent: eC.s6.ACCESSIBILITY,
             },
-            [eA.s6.ACCESSIBILITY_SWITCH_ICON]: {
-                section: eN.oAB.ACCESSIBILITY,
-                searchableTitles: [eP.intl.string(eP.t["S3z+pV"])],
-                parent: eA.s6.ACCESSIBILITY,
+            [eC.s6.ACCESSIBILITY_SWITCH_ICON]: {
+                section: eR.oAB.ACCESSIBILITY,
+                searchableTitles: [eD.intl.string(eD.t["S3z+pV"])],
+                parent: eC.s6.ACCESSIBILITY,
             },
-            [eA.s6.ACCESSIBILITY_SATURATION]: {
-                section: eN.oAB.ACCESSIBILITY,
-                searchableTitles: [eP.intl.string(eP.t["5PWWCY"])],
-                parent: eA.s6.ACCESSIBILITY,
+            [eC.s6.ACCESSIBILITY_SATURATION]: {
+                section: eR.oAB.ACCESSIBILITY,
+                searchableTitles: [eD.intl.string(eD.t["5PWWCY"])],
+                parent: eC.s6.ACCESSIBILITY,
             },
-            [eA.s6.ACCESSIBILITY_SATURATION_CUSTOM_COLOR]: {
-                section: eN.oAB.ACCESSIBILITY,
-                searchableTitles: [eP.intl.string(eP.t.bQCodD)],
-                parent: eA.s6.ACCESSIBILITY_SATURATION,
+            [eC.s6.ACCESSIBILITY_SATURATION_CUSTOM_COLOR]: {
+                section: eR.oAB.ACCESSIBILITY,
+                searchableTitles: [eD.intl.string(eD.t.bQCodD)],
+                parent: eC.s6.ACCESSIBILITY_SATURATION,
             },
-            [eA.s6.ACCESSIBILITY_LINK_DECORATIONS]: {
-                section: eN.oAB.ACCESSIBILITY,
-                searchableTitles: [eP.intl.string(eP.t.OLZFB8)],
-                parent: eA.s6.ACCESSIBILITY,
+            [eC.s6.ACCESSIBILITY_LINK_DECORATIONS]: {
+                section: eR.oAB.ACCESSIBILITY,
+                searchableTitles: [eD.intl.string(eD.t.OLZFB8)],
+                parent: eC.s6.ACCESSIBILITY,
             },
-            [eA.s6.ACCESSIBILITY_CUSTOM_CURSOR]: {
-                section: eN.oAB.ACCESSIBILITY,
-                searchableTitles: [eP.intl.string(eP.t["+Isihb"])],
-                parent: eA.s6.ACCESSIBILITY,
+            [eC.s6.ACCESSIBILITY_CUSTOM_CURSOR]: {
+                section: eR.oAB.ACCESSIBILITY,
+                searchableTitles: [eD.intl.string(eD.t["+Isihb"])],
+                parent: eC.s6.ACCESSIBILITY,
                 predicate: () => (0, b.A)("SettingsRendererConfig"),
             },
-            [eA.s6.ACCESSIBILITY_ROLE_STYLE]: {
-                section: eN.oAB.ACCESSIBILITY,
-                searchableTitles: [eP.intl.string(eP.t.uSOPWm)],
-                parent: eA.s6.ACCESSIBILITY,
+            [eC.s6.ACCESSIBILITY_ROLE_STYLE]: {
+                section: eR.oAB.ACCESSIBILITY,
+                searchableTitles: [eD.intl.string(eD.t.uSOPWm)],
+                parent: eC.s6.ACCESSIBILITY,
             },
-            [eA.s6.ACCESSIBILITY_DISPLAY_NAME_STYLES]: {
-                section: eN.oAB.ACCESSIBILITY,
-                searchableTitles: [eP.intl.string(eD.default["2gFUEw"])],
-                parent: eA.s6.ACCESSIBILITY,
+            [eC.s6.ACCESSIBILITY_DISPLAY_NAME_STYLES]: {
+                section: eR.oAB.ACCESSIBILITY,
+                searchableTitles: [eD.intl.string(ew.default["2gFUEw"])],
+                parent: eC.s6.ACCESSIBILITY,
             },
-            [eA.s6.ACCESSIBILITY_PROFILE_COLORS]: {
-                section: eN.oAB.ACCESSIBILITY,
-                searchableTitles: [eP.intl.string(eP.t.BT8Bmp)],
-                parent: eA.s6.ACCESSIBILITY,
+            [eC.s6.ACCESSIBILITY_PROFILE_COLORS]: {
+                section: eR.oAB.ACCESSIBILITY,
+                searchableTitles: [eD.intl.string(eD.t.BT8Bmp)],
+                parent: eC.s6.ACCESSIBILITY,
             },
-            [eA.s6.ACCESSIBILITY_PROFILE_COLORS_SYNC_THEMES]: {
-                section: eN.oAB.ACCESSIBILITY,
-                searchableTitles: [eP.intl.string(eP.t["sSY+mD"])],
-                parent: eA.s6.ACCESSIBILITY_PROFILE_COLORS,
+            [eC.s6.ACCESSIBILITY_PROFILE_COLORS_SYNC_THEMES]: {
+                section: eR.oAB.ACCESSIBILITY,
+                searchableTitles: [eD.intl.string(eD.t["sSY+mD"])],
+                parent: eC.s6.ACCESSIBILITY_PROFILE_COLORS,
             },
-            [eA.s6.ACCESSIBILITY_CONTRAST]: {
-                section: eN.oAB.ACCESSIBILITY,
-                searchableTitles: [eP.intl.string(eP.t["TYyfO/"])],
-                parent: eA.s6.ACCESSIBILITY,
+            [eC.s6.ACCESSIBILITY_CONTRAST]: {
+                section: eR.oAB.ACCESSIBILITY,
+                searchableTitles: [eD.intl.string(eD.t["TYyfO/"])],
+                parent: eC.s6.ACCESSIBILITY,
             },
-            [eA.s6.ACCESSIBILITY_CONTRAST_SYNC_FORCED_COLORS]: {
-                section: eN.oAB.ACCESSIBILITY,
-                searchableTitles: [eP.intl.string(eP.t.cguiec)],
-                parent: eA.s6.ACCESSIBILITY_CONTRAST,
+            [eC.s6.ACCESSIBILITY_CONTRAST_SYNC_FORCED_COLORS]: {
+                section: eR.oAB.ACCESSIBILITY,
+                searchableTitles: [eD.intl.string(eD.t.cguiec)],
+                parent: eC.s6.ACCESSIBILITY_CONTRAST,
             },
-            [eA.s6.ACCESSIBILITY_REDUCED_MOTION]: {
-                section: eN.oAB.ACCESSIBILITY,
-                searchableTitles: [eP.intl.string(eP.t.e3TR1b)],
-                parent: eA.s6.ACCESSIBILITY,
+            [eC.s6.ACCESSIBILITY_REDUCED_MOTION]: {
+                section: eR.oAB.ACCESSIBILITY,
+                searchableTitles: [eD.intl.string(eD.t.e3TR1b)],
+                parent: eC.s6.ACCESSIBILITY,
             },
-            [eA.s6.ACCESSIBILITY_REDUCED_MOTION_ENABLE]: {
-                section: eN.oAB.ACCESSIBILITY,
-                searchableTitles: [eP.intl.string(eP.t.b3XBzg)],
-                parent: eA.s6.ACCESSIBILITY_REDUCED_MOTION,
+            [eC.s6.ACCESSIBILITY_REDUCED_MOTION_ENABLE]: {
+                section: eR.oAB.ACCESSIBILITY,
+                searchableTitles: [eD.intl.string(eD.t.b3XBzg)],
+                parent: eC.s6.ACCESSIBILITY_REDUCED_MOTION,
             },
-            [eA.s6.ACCESSIBILITY_REDUCED_MOTION_AUTO_PLAY_GIFS]: {
-                section: eN.oAB.ACCESSIBILITY,
-                searchableTitles: [eP.intl.string(eP.t.Iayoh5)],
-                parent: eA.s6.ACCESSIBILITY_REDUCED_MOTION,
+            [eC.s6.ACCESSIBILITY_REDUCED_MOTION_AUTO_PLAY_GIFS]: {
+                section: eR.oAB.ACCESSIBILITY,
+                searchableTitles: [eD.intl.string(eD.t.Iayoh5)],
+                parent: eC.s6.ACCESSIBILITY_REDUCED_MOTION,
             },
-            [eA.s6.ACCESSIBILITY_REDUCED_MOTION_PLAY_ANIMATED_EMOJI]: {
-                section: eN.oAB.ACCESSIBILITY,
-                searchableTitles: [eP.intl.string(eP.t.iIaOlc)],
-                parent: eA.s6.ACCESSIBILITY_REDUCED_MOTION,
+            [eC.s6.ACCESSIBILITY_REDUCED_MOTION_PLAY_ANIMATED_EMOJI]: {
+                section: eR.oAB.ACCESSIBILITY,
+                searchableTitles: [eD.intl.string(eD.t.iIaOlc)],
+                parent: eC.s6.ACCESSIBILITY_REDUCED_MOTION,
             },
-            [eA.s6.ACCESSIBILITY_STICKERS]: {
-                section: eN.oAB.ACCESSIBILITY,
-                searchableTitles: [eP.intl.string(eP.t["6NtAuJ"])],
-                parent: eA.s6.ACCESSIBILITY,
+            [eC.s6.ACCESSIBILITY_STICKERS]: {
+                section: eR.oAB.ACCESSIBILITY,
+                searchableTitles: [eD.intl.string(eD.t["6NtAuJ"])],
+                parent: eC.s6.ACCESSIBILITY,
             },
-            [eA.s6.ACCESSIBILITY_MESSAGES]: {
-                section: eN.oAB.ACCESSIBILITY,
-                searchableTitles: [eP.intl.string(eP.t.onqU6o)],
-                parent: eA.s6.ACCESSIBILITY,
+            [eC.s6.ACCESSIBILITY_MESSAGES]: {
+                section: eR.oAB.ACCESSIBILITY,
+                searchableTitles: [eD.intl.string(eD.t.onqU6o)],
+                parent: eC.s6.ACCESSIBILITY,
             },
-            [eA.s6.ACCESSIBILITY_MESSAGES_SEND_MESSAGE_BUTTON]: {
-                section: eN.oAB.ACCESSIBILITY,
-                searchableTitles: [eP.intl.string(eP.t["3Fztn5"])],
-                parent: eA.s6.ACCESSIBILITY_MESSAGES,
+            [eC.s6.ACCESSIBILITY_MESSAGES_SEND_MESSAGE_BUTTON]: {
+                section: eR.oAB.ACCESSIBILITY,
+                searchableTitles: [eD.intl.string(eD.t["3Fztn5"])],
+                parent: eC.s6.ACCESSIBILITY_MESSAGES,
             },
-            [eA.s6.ACCESSIBILITY_MESSAGES_LEGACY_CHAT_INPUT]: {
-                section: eN.oAB.ACCESSIBILITY,
-                searchableTitles: [eP.intl.string(eP.t.TZ2hZH)],
-                parent: eA.s6.ACCESSIBILITY_MESSAGES,
+            [eC.s6.ACCESSIBILITY_MESSAGES_LEGACY_CHAT_INPUT]: {
+                section: eR.oAB.ACCESSIBILITY,
+                searchableTitles: [eD.intl.string(eD.t.TZ2hZH)],
+                parent: eC.s6.ACCESSIBILITY_MESSAGES,
             },
-            [eA.s6.ACCESSIBILITY_TEXT_TO_SPEECH]: {
-                section: eN.oAB.ACCESSIBILITY,
-                searchableTitles: [eP.intl.string(eP.t.VpSKeO)],
-                parent: eA.s6.ACCESSIBILITY,
+            [eC.s6.ACCESSIBILITY_TEXT_TO_SPEECH]: {
+                section: eR.oAB.ACCESSIBILITY,
+                searchableTitles: [eD.intl.string(eD.t.VpSKeO)],
+                parent: eC.s6.ACCESSIBILITY,
             },
-            [eA.s6.ACCESSIBILITY_TEXT_TO_SPEECH_TTS_COMMAND]: {
-                section: eN.oAB.ACCESSIBILITY,
-                searchableTitles: [eP.intl.string(eP.t.qvTIwX)],
-                parent: eA.s6.ACCESSIBILITY_TEXT_TO_SPEECH,
+            [eC.s6.ACCESSIBILITY_TEXT_TO_SPEECH_TTS_COMMAND]: {
+                section: eR.oAB.ACCESSIBILITY,
+                searchableTitles: [eD.intl.string(eD.t.qvTIwX)],
+                parent: eC.s6.ACCESSIBILITY_TEXT_TO_SPEECH,
             },
-            [eA.s6.ACCESSIBILITY_TEXT_TO_SPEECH_RATE]: {
-                section: eN.oAB.ACCESSIBILITY,
-                searchableTitles: [eP.intl.string(eP.t.lsW5Ev)],
-                parent: eA.s6.ACCESSIBILITY,
+            [eC.s6.ACCESSIBILITY_TEXT_TO_SPEECH_RATE]: {
+                section: eR.oAB.ACCESSIBILITY,
+                searchableTitles: [eD.intl.string(eD.t.lsW5Ev)],
+                parent: eC.s6.ACCESSIBILITY,
             },
-            [eA.s6.ACCESSIBILITY_APPEARANCE_UPSELL]: {
-                section: eN.oAB.ACCESSIBILITY,
-                searchableTitles: [eA.CF],
-                parent: eA.s6.ACCESSIBILITY,
+            [eC.s6.ACCESSIBILITY_APPEARANCE_UPSELL]: {
+                section: eR.oAB.ACCESSIBILITY,
+                searchableTitles: [eC.CF],
+                parent: eC.s6.ACCESSIBILITY,
             },
-            [eA.s6.VOICE_AND_VIDEO]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t.B1fFpf)],
-                label: eP.intl.string(eP.t.B1fFpf),
-                ariaLabel: eP.intl.string(eP.t.B1fFpf),
-                element: eT.Z,
-                predicate: () => j.Z.isSupported(),
-                url: eN.Z5c.SETTINGS("voice"),
+            [eC.s6.VOICE_AND_VIDEO]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t.B1fFpf)],
+                label: eD.intl.string(eD.t.B1fFpf),
+                ariaLabel: eD.intl.string(eD.t.B1fFpf),
+                element: eS.Z,
+                predicate: () => U.Z.isSupported(),
+                url: eR.Z5c.SETTINGS("voice"),
             },
-            [eA.s6.VOICE_AND_VIDEO_VOICE_TAB]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t.K3lovD), eP.intl.string(eP.t.NiTd0e)],
-                parent: eA.s6.VOICE_AND_VIDEO,
+            [eC.s6.VOICE_AND_VIDEO_VOICE_TAB]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t.K3lovD), eD.intl.string(eD.t.NiTd0e)],
+                parent: eC.s6.VOICE_AND_VIDEO,
             },
-            [eA.s6.VOICE_AND_VIDEO_VIDEO_TAB]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t.FlNoSV)],
-                parent: eA.s6.VOICE_AND_VIDEO,
+            [eC.s6.VOICE_AND_VIDEO_VIDEO_TAB]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t.FlNoSV)],
+                parent: eC.s6.VOICE_AND_VIDEO,
             },
-            [eA.s6.VOICE_AND_VIDEO_SOUNDBOARD_TAB]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t.ABjMWI)],
-                parent: eA.s6.VOICE_AND_VIDEO,
+            [eC.s6.VOICE_AND_VIDEO_SOUNDBOARD_TAB]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t.ABjMWI)],
+                parent: eC.s6.VOICE_AND_VIDEO,
             },
-            [eA.s6.VOICE_AND_VIDEO_DEBUG_TAB]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t.OFpL3c)],
-                parent: eA.s6.VOICE_AND_VIDEO,
+            [eC.s6.VOICE_AND_VIDEO_DEBUG_TAB]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t.OFpL3c)],
+                parent: eC.s6.VOICE_AND_VIDEO,
             },
-            [eA.s6.VOICE_AND_VIDEO_VIDEO_STREAMING]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t.KDdjou), eP.intl.string(eP.t.FeUKeA)],
-                parent: eA.s6.VOICE_AND_VIDEO_VIDEO_TAB,
+            [eC.s6.VOICE_AND_VIDEO_VIDEO_STREAMING]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t.KDdjou), eD.intl.string(eD.t.FeUKeA)],
+                parent: eC.s6.VOICE_AND_VIDEO_VIDEO_TAB,
             },
-            [eA.s6.VOICE_AND_VIDEO_VOICE]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t.K3lovD), eP.intl.string(eP.t.NiTd0e)],
-                parent: eA.s6.VOICE_AND_VIDEO_VOICE_TAB,
+            [eC.s6.VOICE_AND_VIDEO_VOICE]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t.K3lovD), eD.intl.string(eD.t.NiTd0e)],
+                parent: eC.s6.VOICE_AND_VIDEO_VOICE_TAB,
             },
-            [eA.s6.VOICE_AND_VIDEO_DEVICES]: {
-                section: eN.oAB.VOICE,
+            [eC.s6.VOICE_AND_VIDEO_DEVICES]: {
+                section: eR.oAB.VOICE,
                 searchableTitles: [
-                    eP.intl.string(eP.t.hHMYbb),
-                    eP.intl.string(eP.t.dl18zb),
-                    eP.intl.string(eP.t.nuFtHH),
-                    eP.intl.string(eP.t["3182VD"]),
-                    eP.intl.string(eP.t["DGq/PR"]),
+                    eD.intl.string(eD.t.hHMYbb),
+                    eD.intl.string(eD.t.dl18zb),
+                    eD.intl.string(eD.t.nuFtHH),
+                    eD.intl.string(eD.t["3182VD"]),
+                    eD.intl.string(eD.t["DGq/PR"]),
                 ],
-                parent: eA.s6.VOICE_AND_VIDEO_VOICE,
+                parent: eC.s6.VOICE_AND_VIDEO_VOICE,
             },
-            [eA.s6.VOICE_AND_VIDEO_VOLUME_CONTROLS]: {
-                section: eN.oAB.VOICE,
+            [eC.s6.VOICE_AND_VIDEO_VOLUME_CONTROLS]: {
+                section: eR.oAB.VOICE,
                 searchableTitles: [
-                    eP.intl.string(eP.t.OX2Bnr),
-                    eP.intl.string(eP.t.eATD2B),
-                    eP.intl.string(eP.t.nuFtHH),
-                    eP.intl.string(eP.t["3182VD"]),
-                    eP.intl.string(eP.t["DGq/PR"]),
+                    eD.intl.string(eD.t.OX2Bnr),
+                    eD.intl.string(eD.t.eATD2B),
+                    eD.intl.string(eD.t.nuFtHH),
+                    eD.intl.string(eD.t["3182VD"]),
+                    eD.intl.string(eD.t["DGq/PR"]),
                 ],
-                parent: eA.s6.VOICE_AND_VIDEO_VOICE,
+                parent: eC.s6.VOICE_AND_VIDEO_VOICE,
             },
-            [eA.s6.VOICE_AND_VIDEO_MIC_TEST]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t.gyljWE), eP.intl.string(eP.t.nuFtHH)],
-                parent: eA.s6.VOICE_AND_VIDEO_VOICE,
+            [eC.s6.VOICE_AND_VIDEO_MIC_TEST]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t.gyljWE), eD.intl.string(eD.t.nuFtHH)],
+                parent: eC.s6.VOICE_AND_VIDEO_VOICE,
             },
-            [eA.s6.VOICE_AND_VIDEO_INPUT_PROFILE]: {
-                section: eN.oAB.VOICE,
+            [eC.s6.VOICE_AND_VIDEO_INPUT_PROFILE]: {
+                section: eR.oAB.VOICE,
                 searchableTitles: [
-                    eP.intl.string(eP.t.LM3U3k),
-                    eP.intl.string(eP.t.nuFtHH),
-                    eP.intl.string(eP.t.VZPR0R),
-                    eP.intl.string(eP.t.cjPbpT),
+                    eD.intl.string(eD.t.LM3U3k),
+                    eD.intl.string(eD.t.nuFtHH),
+                    eD.intl.string(eD.t.VZPR0R),
+                    eD.intl.string(eD.t.cjPbpT),
                 ],
-                parent: eA.s6.VOICE_AND_VIDEO_VOICE,
+                parent: eC.s6.VOICE_AND_VIDEO_VOICE,
                 predicate: () => {
-                    let { enabledInputProfiles: e } = (0, Y.P)({ location: "SettingsRendererConfig" });
+                    let { enabledInputProfiles: e } = (0, K.P)({ location: "SettingsRendererConfig" });
                     return e.length > 0;
                 },
             },
-            [eA.s6.VOICE_AND_VIDEO_INPUT_MODE]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t["pS+K2L"]), eP.intl.string(eP.t.nuFtHH)],
-                parent: eA.s6.VOICE_AND_VIDEO_VOICE,
-                predicate: () => e7 !== eS._.STUDIO,
+            [eC.s6.VOICE_AND_VIDEO_INPUT_MODE]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t["pS+K2L"]), eD.intl.string(eD.t.nuFtHH)],
+                parent: eC.s6.VOICE_AND_VIDEO_VOICE,
+                predicate: () => e9 !== eA._.STUDIO,
             },
-            [eA.s6.VOICE_AND_VIDEO_SENSITIVITY]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t["sqUm+k"]), eP.intl.string(eP.t.nuFtHH)],
-                parent: eA.s6.VOICE_AND_VIDEO_VOICE,
-                predicate: () => e6 === eR.pM.VOICE_ACTIVITY && e9,
+            [eC.s6.VOICE_AND_VIDEO_SENSITIVITY]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t["sqUm+k"]), eD.intl.string(eD.t.nuFtHH)],
+                parent: eC.s6.VOICE_AND_VIDEO_VOICE,
+                predicate: () => e7 === eP.pM.VOICE_ACTIVITY && te,
             },
-            [eA.s6.VOICE_AND_VIDEO_SWITCH_CHANNEL_ALERT]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t.e7LIiY)],
-                parent: eA.s6.VOICE_AND_VIDEO_VOICE_ADVANCED,
+            [eC.s6.VOICE_AND_VIDEO_SWITCH_CHANNEL_ALERT]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t.e7LIiY)],
+                parent: eC.s6.VOICE_AND_VIDEO_VOICE_ADVANCED,
             },
-            [eA.s6.VOICE_AND_VIDEO_SOUNDS]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t.nzUc3B)],
-                parent: eA.s6.VOICE_AND_VIDEO_SOUNDBOARD_TAB,
+            [eC.s6.VOICE_AND_VIDEO_SOUNDS]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t.nzUc3B)],
+                parent: eC.s6.VOICE_AND_VIDEO_SOUNDBOARD_TAB,
             },
-            [eA.s6.VOICE_AND_VIDEO_SOUNDBOARD]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t.ABjMWI)],
-                parent: eA.s6.VOICE_AND_VIDEO_SOUNDS,
+            [eC.s6.VOICE_AND_VIDEO_SOUNDBOARD]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t.ABjMWI)],
+                parent: eC.s6.VOICE_AND_VIDEO_SOUNDS,
             },
-            [eA.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t.nzUc3B)],
-                parent: eA.s6.VOICE_AND_VIDEO_SOUNDS,
+            [eC.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t.nzUc3B)],
+                parent: eC.s6.VOICE_AND_VIDEO_SOUNDS,
             },
-            [eA.s6.VOICE_AND_VIDEO_VIDEO]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t.LKzQSF)],
-                parent: eA.s6.VOICE_AND_VIDEO_VIDEO_TAB,
+            [eC.s6.VOICE_AND_VIDEO_VIDEO]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t.LKzQSF)],
+                parent: eC.s6.VOICE_AND_VIDEO_VIDEO_TAB,
             },
-            [eA.s6.VOICE_AND_VIDEO_VIDEO_CAMERA]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t.F122Gz)],
-                parent: eA.s6.VOICE_AND_VIDEO_VIDEO,
-                predicate: () => j.Z.supports(eR.AN.VIDEO),
+            [eC.s6.VOICE_AND_VIDEO_VIDEO_CAMERA]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t.F122Gz)],
+                parent: eC.s6.VOICE_AND_VIDEO_VIDEO,
+                predicate: () => U.Z.supports(eP.AN.VIDEO),
             },
-            [eA.s6.VOICE_AND_VIDEO_VIDEO_CAMERA_PREVIEW]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t["3Ppr1h"])],
-                parent: eA.s6.VOICE_AND_VIDEO_VIDEO_CAMERA,
+            [eC.s6.VOICE_AND_VIDEO_VIDEO_CAMERA_PREVIEW]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t["3Ppr1h"])],
+                parent: eC.s6.VOICE_AND_VIDEO_VIDEO_CAMERA,
             },
-            [eA.s6.VOICE_AND_VIDEO_VIDEO_BACKGROUND]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t.lZTUPs)],
-                parent: eA.s6.VOICE_AND_VIDEO_VIDEO,
-                predicate: () => j.Z.supports(eR.AN.VIDEO),
+            [eC.s6.VOICE_AND_VIDEO_VIDEO_BACKGROUND]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t.lZTUPs)],
+                parent: eC.s6.VOICE_AND_VIDEO_VIDEO,
+                predicate: () => U.Z.supports(eP.AN.VIDEO),
             },
-            [eA.s6.VOICE_AND_VIDEO_ADVANCED]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t["8/udY0"])],
-                parent: eA.s6.VOICE_AND_VIDEO,
+            [eC.s6.VOICE_AND_VIDEO_ADVANCED]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t["8/udY0"])],
+                parent: eC.s6.VOICE_AND_VIDEO,
             },
-            [eA.s6.VOICE_AND_VIDEO_VOICE_ADVANCED]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t["8/udY0"])],
-                parent: eA.s6.VOICE_AND_VIDEO_VOICE_TAB,
+            [eC.s6.VOICE_AND_VIDEO_VOICE_ADVANCED]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t["8/udY0"])],
+                parent: eC.s6.VOICE_AND_VIDEO_VOICE_TAB,
             },
-            [eA.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t["6I6GUv"])],
-                parent: eA.s6.VOICE_AND_VIDEO_ADVANCED,
-                predicate: () => e9,
+            [eC.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t["6I6GUv"])],
+                parent: eC.s6.VOICE_AND_VIDEO_ADVANCED,
+                predicate: () => te,
             },
-            [eA.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t.iWTwu6)],
-                parent: eA.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
+            [eC.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t.iWTwu6)],
+                parent: eC.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
             },
-            [eA.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_SIDECHAIN_COMPRESSION]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t["/jwMtn"])],
-                parent: eA.s6.VOICE_AND_VIDEO_VIDEO_STREAMING,
+            [eC.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_SIDECHAIN_COMPRESSION]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t["/jwMtn"])],
+                parent: eC.s6.VOICE_AND_VIDEO_VIDEO_STREAMING,
             },
-            [eA.s6.VOICE_AND_VIDEO_STREAM_PREVIEWS]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t.OBwCXF)],
-                parent: eA.s6.VOICE_AND_VIDEO_VIDEO_STREAMING,
+            [eC.s6.VOICE_AND_VIDEO_STREAM_PREVIEWS]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t.OBwCXF)],
+                parent: eC.s6.VOICE_AND_VIDEO_VIDEO_STREAMING,
             },
-            [eA.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_NOISE_SUPPRESSION]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t.t8Qhib), eP.intl.string(eP.t.hmfkCi)],
-                parent: eA.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
-                predicate: () => j.Z.isNoiseSuppressionSupported(),
+            [eC.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_NOISE_SUPPRESSION]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t.t8Qhib), eD.intl.string(eD.t.hmfkCi)],
+                parent: eC.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
+                predicate: () => U.Z.isNoiseSuppressionSupported(),
             },
-            [eA.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ADVANCED_VOICE_ACTIVITY]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t.BbESsg)],
-                parent: eA.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
-                predicate: () => j.Z.isAdvancedVoiceActivitySupported(),
+            [eC.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ADVANCED_VOICE_ACTIVITY]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t.BbESsg)],
+                parent: eC.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
+                predicate: () => U.Z.isAdvancedVoiceActivitySupported(),
             },
-            [eA.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_AUTOMATIC_GAIN_CONTROL]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t.cUMdH0)],
-                parent: eA.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
-                predicate: () => j.Z.isAutomaticGainControlSupported(),
+            [eC.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_AUTOMATIC_GAIN_CONTROL]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t.cUMdH0)],
+                parent: eC.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
+                predicate: () => U.Z.isAutomaticGainControlSupported(),
             },
-            [eA.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_BYPASS_SYSTEM_INPUT_PROCESSING]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t.DFPXIG)],
-                parent: eA.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
-                predicate: () => j.Z.showBypassSystemInputProcessing(),
+            [eC.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_BYPASS_SYSTEM_INPUT_PROCESSING]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t.DFPXIG)],
+                parent: eC.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
+                predicate: () => U.Z.showBypassSystemInputProcessing(),
             },
-            [eA.s6.VOICE_AND_VIDEO_ADVANCED_QOS]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t.uancuJ)],
-                parent: eA.s6.VOICE_AND_VIDEO_VOICE_ADVANCED,
-                predicate: () => j.Z.supports(eR.AN.QOS),
+            [eC.s6.VOICE_AND_VIDEO_ADVANCED_QOS]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t.uancuJ)],
+                parent: eC.s6.VOICE_AND_VIDEO_VOICE_ADVANCED,
+                predicate: () => U.Z.supports(eP.AN.QOS),
             },
-            [eA.s6.VOICE_AND_VIDEO_ADVANCED_ATTENUATION]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t.oSdBvW)],
-                parent: eA.s6.VOICE_AND_VIDEO_VOICE_ADVANCED,
-                predicate: () => j.Z.supports(eR.AN.ATTENUATION),
+            [eC.s6.VOICE_AND_VIDEO_ADVANCED_ATTENUATION]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t.oSdBvW)],
+                parent: eC.s6.VOICE_AND_VIDEO_VOICE_ADVANCED,
+                predicate: () => U.Z.supports(eP.AN.ATTENUATION),
             },
-            [eA.s6.VOICE_AND_VIDEO_ADVANCED_SUBSYSTEM]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t.wVBHr0)],
-                parent: eA.s6.VOICE_AND_VIDEO_VOICE_ADVANCED,
-                predicate: () => j.Z.shouldOfferManualSubsystemSelection(),
+            [eC.s6.VOICE_AND_VIDEO_ADVANCED_SUBSYSTEM]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t.wVBHr0)],
+                parent: eC.s6.VOICE_AND_VIDEO_VOICE_ADVANCED,
+                predicate: () => U.Z.shouldOfferManualSubsystemSelection(),
             },
-            [eA.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE]: {
-                section: eN.oAB.VOICE,
+            [eC.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE]: {
+                section: eR.oAB.VOICE,
                 searchableTitles: [
-                    eP.intl.string(eP.t.KDdjou),
-                    eP.intl.string(eP.t.NMCIf9),
-                    eP.intl.string(eP.t.FeUKeA),
+                    eD.intl.string(eD.t.KDdjou),
+                    eD.intl.string(eD.t.NMCIf9),
+                    eD.intl.string(eD.t.FeUKeA),
                 ],
-                parent: eA.s6.VOICE_AND_VIDEO_VIDEO_STREAMING,
+                parent: eC.s6.VOICE_AND_VIDEO_VIDEO_STREAMING,
                 predicate: () =>
-                    j.Z.supportsVideoHook() ||
-                    j.Z.supportsExperimentalSoundshare() ||
-                    (j.Z.supportsSystemScreensharePicker() && (0, F.isMac)()),
+                    U.Z.supportsVideoHook() ||
+                    U.Z.supportsExperimentalSoundshare() ||
+                    (U.Z.supportsSystemScreensharePicker() && (0, V.isMac)()),
             },
-            [eA.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE_VIDEO_HOOK]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t.GmWk2E), eP.intl.string(eP.t["Fj/xn1"])],
-                parent: eA.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE,
-                predicate: () => j.Z.supportsVideoHook(),
+            [eC.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE_VIDEO_HOOK]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t.GmWk2E), eD.intl.string(eD.t["Fj/xn1"])],
+                parent: eC.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE,
+                predicate: () => U.Z.supportsVideoHook(),
             },
-            [eA.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE_EXPERIMENTAL_SOUNDSHARE]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t["4I0qzZ"])],
-                parent: eA.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE,
-                predicate: () => j.Z.supportsExperimentalSoundshare() && j.Z.supportsHookSoundshare(),
+            [eC.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE_EXPERIMENTAL_SOUNDSHARE]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t["4I0qzZ"])],
+                parent: eC.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE,
+                predicate: () => U.Z.supportsExperimentalSoundshare() && U.Z.supportsHookSoundshare(),
             },
-            [eA.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE_SYSTEM_PICKER]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t.ie1mgY)],
-                parent: eA.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE,
-                predicate: () => j.Z.supportsSystemScreensharePicker() && (0, F.isMac)(),
+            [eC.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE_SYSTEM_PICKER]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t.ie1mgY)],
+                parent: eC.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE,
+                predicate: () => U.Z.supportsSystemScreensharePicker() && (0, V.isMac)(),
             },
-            [eA.s6.VOICE_AND_VIDEO_ADVANCED_SILENCE_WARNING]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t["aP1N/m"])],
-                parent: eA.s6.VOICE_AND_VIDEO_VOICE_ADVANCED,
-                predicate: () => F.isPlatformEmbedded,
+            [eC.s6.VOICE_AND_VIDEO_ADVANCED_SILENCE_WARNING]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t["aP1N/m"])],
+                parent: eC.s6.VOICE_AND_VIDEO_VOICE_ADVANCED,
+                predicate: () => V.isPlatformEmbedded,
             },
-            [eA.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t.OFpL3c)],
-                parent: eA.s6.VOICE_AND_VIDEO_DEBUG_TAB,
+            [eC.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t.OFpL3c)],
+                parent: eC.s6.VOICE_AND_VIDEO_DEBUG_TAB,
             },
-            [eA.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_STREAM_INFO_OVERLAY]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t["0CEP6e"])],
-                parent: eA.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
-                predicate: () => H.Sb.getSetting(),
+            [eC.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_STREAM_INFO_OVERLAY]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t["0CEP6e"])],
+                parent: eC.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
+                predicate: () => W.Sb.getSetting(),
             },
-            [eA.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_AEC_DUMP]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t["r6K+TL"])],
-                parent: eA.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
-                predicate: () => j.Z.isAecDumpSupported(),
+            [eC.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_AEC_DUMP]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t["r6K+TL"])],
+                parent: eC.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
+                predicate: () => U.Z.isAecDumpSupported(),
             },
-            [eA.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_CONNECTION_REPLAY]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t.U4FgFK)],
-                parent: eA.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
+            [eC.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_CONNECTION_REPLAY]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t.U4FgFK)],
+                parent: eC.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
                 predicate: () =>
-                    ("canary" === V.ZP.releaseChannel || "development" === V.ZP.releaseChannel) &&
-                    eK &&
-                    j.Z.supports(eR.AN.CONNECTION_REPLAY),
+                    ("canary" === H.ZP.releaseChannel || "development" === H.ZP.releaseChannel) &&
+                    ez &&
+                    U.Z.supports(eP.AN.CONNECTION_REPLAY),
             },
-            [eA.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_LOGGING]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t["726JHL"])],
-                parent: eA.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
+            [eC.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_LOGGING]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t["726JHL"])],
+                parent: eC.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
                 predicate: () =>
-                    F.isPlatformEmbedded && j.Z.supports(eR.AN.DEBUG_LOGGING) && null != _.Z.fileManager.readLogFiles,
+                    V.isPlatformEmbedded && U.Z.supports(eP.AN.DEBUG_LOGGING) && null != _.Z.fileManager.readLogFiles,
             },
-            [eA.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS]: {
-                section: eN.oAB.VOICE,
-                searchableTitles: [eP.intl.string(eP.t["/RXu67"])],
-                parent: eA.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
+            [eC.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS]: {
+                section: eR.oAB.VOICE,
+                searchableTitles: [eD.intl.string(eD.t["/RXu67"])],
+                parent: eC.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
             },
-            [eA.s6.POGGERMODE]: {
-                section: eN.oAB.POGGERMODE,
-                searchableTitles: [eP.intl.string(eP.t.AtCukI)],
-                label: eP.intl.string(eP.t.AtCukI),
-                ariaLabel: eP.intl.string(eP.t.AtCukI),
+            [eC.s6.POGGERMODE]: {
+                section: eR.oAB.POGGERMODE,
+                searchableTitles: [eD.intl.string(eD.t.AtCukI)],
+                label: eD.intl.string(eD.t.AtCukI),
+                ariaLabel: eD.intl.string(eD.t.AtCukI),
                 element: C.Z,
                 predicate: () => A.Z.settingsVisible,
                 icon: (0, r.jsx)("img", {
                     alt: "",
                     src: n(348621),
-                    className: ex.poggermodeIcon,
+                    className: eM.poggermodeIcon,
                 }),
             },
-            [eA.s6.CHAT]: {
-                section: eN.oAB.TEXT,
-                searchableTitles: [eP.intl.string(eP.t["/VQax8"])],
-                label: eP.intl.string(eP.t["/VQax8"]),
-                ariaLabel: eP.intl.string(eP.t["/VQax8"]),
-                element: eg.Z,
-                url: eN.Z5c.SETTINGS("text"),
+            [eC.s6.CHAT]: {
+                section: eR.oAB.TEXT,
+                searchableTitles: [eD.intl.string(eD.t["/VQax8"])],
+                label: eD.intl.string(eD.t["/VQax8"]),
+                ariaLabel: eD.intl.string(eD.t["/VQax8"]),
+                element: eE.Z,
+                url: eR.Z5c.SETTINGS("text"),
             },
-            [eA.s6.MESSAGE_SEARCH]: {
-                section: eN.oAB.TEXT,
-                searchableTitles: [eP.intl.string(eP.t.VYODPD)],
-                parent: eA.s6.CHAT,
+            [eC.s6.MESSAGE_SEARCH]: {
+                section: eR.oAB.TEXT,
+                searchableTitles: [eD.intl.string(eD.t.VYODPD)],
+                parent: eC.s6.CHAT,
+                predicate: () => tr,
+            },
+            [eC.s6.MESSAGE_SEARCH_ALL_DMS]: {
+                section: eR.oAB.TEXT,
+                searchableTitles: [eD.intl.string(eD.t["t4+fbe"])],
+                parent: eC.s6.MESSAGE_SEARCH,
+                predicate: () => tr,
+            },
+            [eC.s6.CHAT_INLINE_MEDIA]: {
+                section: eR.oAB.TEXT,
+                searchableTitles: [eD.intl.string(eD.t.U68Dgp)],
+                parent: eC.s6.CHAT,
+            },
+            [eC.s6.CHAT_INLINE_MEDIA_LINKS]: {
+                section: eR.oAB.TEXT,
+                searchableTitles: [eD.intl.string(eD.t.U47N1p)],
+                parent: eC.s6.CHAT_INLINE_MEDIA,
+            },
+            [eC.s6.CHAT_INLINE_MEDIA_UPLOADS]: {
+                section: eR.oAB.TEXT,
+                searchableTitles: [eD.intl.string(eD.t.VP11No)],
+                parent: eC.s6.CHAT_INLINE_MEDIA,
+            },
+            [eC.s6.CHAT_INLINE_MEDIA_IMAGE_DESCRIPTIONS]: {
+                section: eR.oAB.TEXT,
+                searchableTitles: [eD.intl.string(eD.t["5S2AK+"])],
+                parent: eC.s6.CHAT_INLINE_MEDIA,
+            },
+            [eC.s6.CHAT_EMBEDS]: {
+                section: eR.oAB.TEXT,
+                searchableTitles: [eD.intl.string(eD.t.PWZOn4)],
+                parent: eC.s6.CHAT,
+            },
+            [eC.s6.CHAT_EMBEDS_LINK_PREVIEWS]: {
+                section: eR.oAB.TEXT,
+                searchableTitles: [eD.intl.string(eD.t.xX0ZTA)],
+                parent: eC.s6.CHAT_EMBEDS,
+            },
+            [eC.s6.CHAT_EMOJI]: {
+                section: eR.oAB.TEXT,
+                searchableTitles: [eD.intl.string(eD.t.sMOuuS)],
+                parent: eC.s6.CHAT,
+            },
+            [eC.s6.CHAT_EMOJI_REACTIONS]: {
+                section: eR.oAB.TEXT,
+                searchableTitles: [eD.intl.string(eD.t.Iv24sm)],
+                parent: eC.s6.CHAT_EMOJI,
+            },
+            [eC.s6.CHAT_EMOJI_EMOTICONS]: {
+                section: eR.oAB.TEXT,
+                searchableTitles: [eD.intl.string(eD.t["79qal8"])],
+                parent: eC.s6.CHAT_EMOJI,
+            },
+            [eC.s6.CHAT_STICKERS]: {
+                section: eR.oAB.TEXT,
+                searchableTitles: [eD.intl.string(eD.t["6NtAuJ"])],
+                parent: eC.s6.CHAT,
+            },
+            [eC.s6.CHAT_STICKERS_AUTOCOMPLETE]: {
+                section: eR.oAB.TEXT,
+                searchableTitles: [eD.intl.string(eD.t["29xPVZ"])],
+                parent: eC.s6.CHAT_STICKERS,
+            },
+            [eC.s6.CHAT_SOUNDMOJI]: {
+                section: eR.oAB.TEXT,
+                searchableTitles: [eD.intl.string(eD.t.EHlAMc)],
+                parent: eC.s6.CHAT,
+                predicate: () => (0, R.dX)({ location: "SettingsRendererConfig" }),
+            },
+            [eC.s6.CHAT_SOUNDMOJI_AUTOCOMPLETE]: {
+                section: eR.oAB.TEXT,
+                searchableTitles: [eD.intl.string(eD.t["CtYr+U"])],
+                parent: eC.s6.CHAT_SOUNDMOJI,
+                predicate: () => (0, R.dX)({ location: "SettingsRendererConfig" }),
+            },
+            [eC.s6.CHAT_TEXT_BOX]: {
+                section: eR.oAB.TEXT,
+                searchableTitles: [eD.intl.string(eD.t.afR0pI)],
+                parent: eC.s6.CHAT,
+            },
+            [eC.s6.CHAT_TEXT_BOX_PREVIEW]: {
+                section: eR.oAB.TEXT,
+                searchableTitles: [eD.intl.string(eD.t.AqGrEI)],
+                parent: eC.s6.CHAT_TEXT_BOX,
+            },
+            [eC.s6.CHAT_THREADS]: {
+                section: eR.oAB.TEXT,
+                searchableTitles: [eD.intl.string(eD.t.B2panI)],
+                parent: eC.s6.CHAT,
+            },
+            [eC.s6.CHAT_THREADS_SPLIT_VIEW]: {
+                section: eR.oAB.TEXT,
+                searchableTitles: [eD.intl.string(eD.t.AInv5m)],
+                parent: eC.s6.CHAT_THREADS,
+            },
+            [eC.s6.CHAT_SPOILERS]: {
+                section: eR.oAB.TEXT,
+                searchableTitles: [eD.intl.string(eD.t.QgwmVz)],
+                parent: eC.s6.CHAT,
+            },
+            [eC.s6.CHAT_MENTION_SUGGESTIONS]: {
+                section: eR.oAB.TEXT,
+                searchableTitles: [eD.intl.string(eD.t.uXQ2xT)],
+                parent: eC.s6.CHAT_TEXT_BOX,
                 predicate: () => tn,
             },
-            [eA.s6.MESSAGE_SEARCH_ALL_DMS]: {
-                section: eN.oAB.TEXT,
-                searchableTitles: [eP.intl.string(eP.t["t4+fbe"])],
-                parent: eA.s6.MESSAGE_SEARCH,
-                predicate: () => tn,
+            [eC.s6.NOTIFICATIONS]: {
+                section: eR.oAB.NOTIFICATIONS,
+                searchableTitles: [eD.intl.string(eD.t.HcoRu0)],
+                label: eD.intl.string(eD.t.HcoRu0),
+                ariaLabel: eD.intl.string(eD.t.HcoRu0),
+                element: ef.Z,
+                url: eR.Z5c.SETTINGS("notifications"),
             },
-            [eA.s6.CHAT_INLINE_MEDIA]: {
-                section: eN.oAB.TEXT,
-                searchableTitles: [eP.intl.string(eP.t.U68Dgp)],
-                parent: eA.s6.CHAT,
+            [eC.s6.NOTIFICATIONS_ENABLE_DESKTOP]: {
+                section: eR.oAB.NOTIFICATIONS,
+                searchableTitles: [eD.intl.string(eD.t["/0WCll"])],
+                parent: eC.s6.NOTIFICATIONS,
             },
-            [eA.s6.CHAT_INLINE_MEDIA_LINKS]: {
-                section: eN.oAB.TEXT,
-                searchableTitles: [eP.intl.string(eP.t.U47N1p)],
-                parent: eA.s6.CHAT_INLINE_MEDIA,
-            },
-            [eA.s6.CHAT_INLINE_MEDIA_UPLOADS]: {
-                section: eN.oAB.TEXT,
-                searchableTitles: [eP.intl.string(eP.t.VP11No)],
-                parent: eA.s6.CHAT_INLINE_MEDIA,
-            },
-            [eA.s6.CHAT_INLINE_MEDIA_IMAGE_DESCRIPTIONS]: {
-                section: eN.oAB.TEXT,
-                searchableTitles: [eP.intl.string(eP.t["5S2AK+"])],
-                parent: eA.s6.CHAT_INLINE_MEDIA,
-            },
-            [eA.s6.CHAT_EMBEDS]: {
-                section: eN.oAB.TEXT,
-                searchableTitles: [eP.intl.string(eP.t.PWZOn4)],
-                parent: eA.s6.CHAT,
-            },
-            [eA.s6.CHAT_EMBEDS_LINK_PREVIEWS]: {
-                section: eN.oAB.TEXT,
-                searchableTitles: [eP.intl.string(eP.t.xX0ZTA)],
-                parent: eA.s6.CHAT_EMBEDS,
-            },
-            [eA.s6.CHAT_EMOJI]: {
-                section: eN.oAB.TEXT,
-                searchableTitles: [eP.intl.string(eP.t.sMOuuS)],
-                parent: eA.s6.CHAT,
-            },
-            [eA.s6.CHAT_EMOJI_REACTIONS]: {
-                section: eN.oAB.TEXT,
-                searchableTitles: [eP.intl.string(eP.t.Iv24sm)],
-                parent: eA.s6.CHAT_EMOJI,
-            },
-            [eA.s6.CHAT_EMOJI_EMOTICONS]: {
-                section: eN.oAB.TEXT,
-                searchableTitles: [eP.intl.string(eP.t["79qal8"])],
-                parent: eA.s6.CHAT_EMOJI,
-            },
-            [eA.s6.CHAT_STICKERS]: {
-                section: eN.oAB.TEXT,
-                searchableTitles: [eP.intl.string(eP.t["6NtAuJ"])],
-                parent: eA.s6.CHAT,
-            },
-            [eA.s6.CHAT_STICKERS_AUTOCOMPLETE]: {
-                section: eN.oAB.TEXT,
-                searchableTitles: [eP.intl.string(eP.t["29xPVZ"])],
-                parent: eA.s6.CHAT_STICKERS,
-            },
-            [eA.s6.CHAT_SOUNDMOJI]: {
-                section: eN.oAB.TEXT,
-                searchableTitles: [eP.intl.string(eP.t.EHlAMc)],
-                parent: eA.s6.CHAT,
-                predicate: () => (0, N.dX)({ location: "SettingsRendererConfig" }),
-            },
-            [eA.s6.CHAT_SOUNDMOJI_AUTOCOMPLETE]: {
-                section: eN.oAB.TEXT,
-                searchableTitles: [eP.intl.string(eP.t["CtYr+U"])],
-                parent: eA.s6.CHAT_SOUNDMOJI,
-                predicate: () => (0, N.dX)({ location: "SettingsRendererConfig" }),
-            },
-            [eA.s6.CHAT_TEXT_BOX]: {
-                section: eN.oAB.TEXT,
-                searchableTitles: [eP.intl.string(eP.t.afR0pI)],
-                parent: eA.s6.CHAT,
-            },
-            [eA.s6.CHAT_TEXT_BOX_PREVIEW]: {
-                section: eN.oAB.TEXT,
-                searchableTitles: [eP.intl.string(eP.t.AqGrEI)],
-                parent: eA.s6.CHAT_TEXT_BOX,
-            },
-            [eA.s6.CHAT_THREADS]: {
-                section: eN.oAB.TEXT,
-                searchableTitles: [eP.intl.string(eP.t.B2panI)],
-                parent: eA.s6.CHAT,
-            },
-            [eA.s6.CHAT_THREADS_SPLIT_VIEW]: {
-                section: eN.oAB.TEXT,
-                searchableTitles: [eP.intl.string(eP.t.AInv5m)],
-                parent: eA.s6.CHAT_THREADS,
-            },
-            [eA.s6.CHAT_SPOILERS]: {
-                section: eN.oAB.TEXT,
-                searchableTitles: [eP.intl.string(eP.t.QgwmVz)],
-                parent: eA.s6.CHAT,
-            },
-            [eA.s6.CHAT_MENTION_SUGGESTIONS]: {
-                section: eN.oAB.TEXT,
-                searchableTitles: [eP.intl.string(eP.t.uXQ2xT)],
-                parent: eA.s6.CHAT_TEXT_BOX,
-                predicate: () => tt,
-            },
-            [eA.s6.NOTIFICATIONS]: {
-                section: eN.oAB.NOTIFICATIONS,
-                searchableTitles: [eP.intl.string(eP.t.HcoRu0)],
-                label: eP.intl.string(eP.t.HcoRu0),
-                ariaLabel: eP.intl.string(eP.t.HcoRu0),
-                element: ed.Z,
-                url: eN.Z5c.SETTINGS("notifications"),
-            },
-            [eA.s6.NOTIFICATIONS_ENABLE_DESKTOP]: {
-                section: eN.oAB.NOTIFICATIONS,
-                searchableTitles: [eP.intl.string(eP.t["/0WCll"])],
-                parent: eA.s6.NOTIFICATIONS,
-            },
-            [eA.s6.NOTIFICATIONS_MENTION_ON_ALL_MESSAGES]: {
-                section: eN.oAB.NOTIFICATIONS,
+            [eC.s6.NOTIFICATIONS_MENTION_ON_ALL_MESSAGES]: {
+                section: eR.oAB.NOTIFICATIONS,
                 searchableTitles: ["Mention on all messages"],
-                parent: eA.s6.NOTIFICATIONS,
+                parent: eC.s6.NOTIFICATIONS,
             },
-            [eA.s6.NOTIFICATIONS_UNREAD_MESSAGE_BADGE]: {
-                section: eN.oAB.NOTIFICATIONS,
-                searchableTitles: [eP.intl.string(eP.t.VH8AIJ)],
-                parent: eA.s6.NOTIFICATIONS,
+            [eC.s6.NOTIFICATIONS_UNREAD_MESSAGE_BADGE]: {
+                section: eR.oAB.NOTIFICATIONS,
+                searchableTitles: [eD.intl.string(eD.t.VH8AIJ)],
+                parent: eC.s6.NOTIFICATIONS,
             },
-            [eA.s6.NOTIFICATIONS_ENABLE_TASKBAR_FLASHING]: {
-                section: eN.oAB.NOTIFICATIONS,
-                searchableTitles: [eP.intl.string(eP.t.xSmFQG)],
-                parent: eA.s6.NOTIFICATIONS,
-                predicate: () => (0, F.isWindows)(),
+            [eC.s6.NOTIFICATIONS_ENABLE_TASKBAR_FLASHING]: {
+                section: eR.oAB.NOTIFICATIONS,
+                searchableTitles: [eD.intl.string(eD.t.xSmFQG)],
+                parent: eC.s6.NOTIFICATIONS,
+                predicate: () => (0, V.isWindows)(),
             },
-            [eA.s6.NOTIFICATIONS_UNREAD_SETTINGS]: {
-                section: eN.oAB.NOTIFICATIONS,
+            [eC.s6.NOTIFICATIONS_UNREAD_SETTINGS]: {
+                section: eR.oAB.NOTIFICATIONS,
                 searchableTitles: ["New Unreads Setting (Experimental)"],
-                parent: eA.s6.NOTIFICATIONS,
+                parent: eC.s6.NOTIFICATIONS,
             },
-            [eA.s6.NOTIFICATIONS_PUSH_INACTIVE_TIMEOUT]: {
-                section: eN.oAB.NOTIFICATIONS,
-                searchableTitles: [eP.intl.string(eP.t.TTvjd9)],
-                parent: eA.s6.NOTIFICATIONS,
+            [eC.s6.NOTIFICATIONS_PUSH_INACTIVE_TIMEOUT]: {
+                section: eR.oAB.NOTIFICATIONS,
+                searchableTitles: [eD.intl.string(eD.t.TTvjd9)],
+                parent: eC.s6.NOTIFICATIONS,
             },
-            [eA.s6.NOTIFICATIONS_TEXT_TO_SPEECH]: {
-                section: eN.oAB.NOTIFICATIONS,
-                searchableTitles: [eP.intl.string(eP.t.VpSKeO)],
-                parent: eA.s6.NOTIFICATIONS,
+            [eC.s6.NOTIFICATIONS_TEXT_TO_SPEECH]: {
+                section: eR.oAB.NOTIFICATIONS,
+                searchableTitles: [eD.intl.string(eD.t.VpSKeO)],
+                parent: eC.s6.NOTIFICATIONS,
             },
-            [eA.s6.NOTIFICATIONS_COMMUNITY_ACTIVITY_ALERTS]: {
-                section: eN.oAB.NOTIFICATIONS,
-                searchableTitles: [eP.intl.string(eP.t.D9yVAH)],
-                parent: eA.s6.NOTIFICATIONS,
+            [eC.s6.NOTIFICATIONS_COMMUNITY_ACTIVITY_ALERTS]: {
+                section: eR.oAB.NOTIFICATIONS,
+                searchableTitles: [eD.intl.string(eD.t.D9yVAH)],
+                parent: eC.s6.NOTIFICATIONS,
             },
-            [eA.s6.NOTIFICATIONS_COMMUNITY_IN_APP_ALERTS]: {
-                section: eN.oAB.NOTIFICATIONS,
-                searchableTitles: [eP.intl.string(eP.t.u6dc5B)],
-                parent: eA.s6.NOTIFICATIONS_COMMUNITY_ACTIVITY_ALERTS,
+            [eC.s6.NOTIFICATIONS_COMMUNITY_IN_APP_ALERTS]: {
+                section: eR.oAB.NOTIFICATIONS,
+                searchableTitles: [eD.intl.string(eD.t.u6dc5B)],
+                parent: eC.s6.NOTIFICATIONS_COMMUNITY_ACTIVITY_ALERTS,
             },
-            [eA.s6.NOTIFICATIONS_COMMUNITY_PUSH_NOTIFICATIONS]: {
-                section: eN.oAB.NOTIFICATIONS,
-                searchableTitles: [eP.intl.string(eP.t.P8MG6q)],
-                parent: eA.s6.NOTIFICATIONS_COMMUNITY_ACTIVITY_ALERTS,
+            [eC.s6.NOTIFICATIONS_COMMUNITY_PUSH_NOTIFICATIONS]: {
+                section: eR.oAB.NOTIFICATIONS,
+                searchableTitles: [eD.intl.string(eD.t.P8MG6q)],
+                parent: eC.s6.NOTIFICATIONS_COMMUNITY_ACTIVITY_ALERTS,
             },
-            [eA.s6.NOTIFICATIONS_SOUNDS]: {
-                section: eN.oAB.NOTIFICATIONS,
-                searchableTitles: [eP.intl.string(eP.t.MKWyKc)],
-                parent: eA.s6.NOTIFICATIONS,
+            [eC.s6.NOTIFICATIONS_SOUNDS]: {
+                section: eR.oAB.NOTIFICATIONS,
+                searchableTitles: [eD.intl.string(eD.t.MKWyKc)],
+                parent: eC.s6.NOTIFICATIONS,
             },
-            [eA.s6.NOTIFICATIONS_EMAILS]: {
-                section: eN.oAB.NOTIFICATIONS,
-                searchableTitles: [eP.intl.string(eP.t.TPchzM)],
-                parent: eA.s6.NOTIFICATIONS,
+            [eC.s6.NOTIFICATIONS_EMAILS]: {
+                section: eR.oAB.NOTIFICATIONS,
+                searchableTitles: [eD.intl.string(eD.t.TPchzM)],
+                parent: eC.s6.NOTIFICATIONS,
             },
-            [eA.s6.NOTIFICATIONS_EMAILS_COMMUNICATION]: {
-                section: eN.oAB.NOTIFICATIONS,
-                searchableTitles: [eP.intl.string(eP.t["B75+xe"])],
-                parent: eA.s6.NOTIFICATIONS_EMAILS,
+            [eC.s6.NOTIFICATIONS_EMAILS_COMMUNICATION]: {
+                section: eR.oAB.NOTIFICATIONS,
+                searchableTitles: [eD.intl.string(eD.t["B75+xe"])],
+                parent: eC.s6.NOTIFICATIONS_EMAILS,
             },
-            [eA.s6.NOTIFICATIONS_EMAILS_SOCIAL]: {
-                section: eN.oAB.NOTIFICATIONS,
-                searchableTitles: [eP.intl.string(eP.t.sxn7lR)],
-                parent: eA.s6.NOTIFICATIONS_EMAILS,
+            [eC.s6.NOTIFICATIONS_EMAILS_SOCIAL]: {
+                section: eR.oAB.NOTIFICATIONS,
+                searchableTitles: [eD.intl.string(eD.t.sxn7lR)],
+                parent: eC.s6.NOTIFICATIONS_EMAILS,
             },
-            [eA.s6.NOTIFICATIONS_EMAILS_ANNOUNCEMENTS_AND_UPDATES]: {
-                section: eN.oAB.NOTIFICATIONS,
-                searchableTitles: [eP.intl.string(eP.t.EkxXhe)],
-                parent: eA.s6.NOTIFICATIONS_EMAILS,
+            [eC.s6.NOTIFICATIONS_EMAILS_ANNOUNCEMENTS_AND_UPDATES]: {
+                section: eR.oAB.NOTIFICATIONS,
+                searchableTitles: [eD.intl.string(eD.t.EkxXhe)],
+                parent: eC.s6.NOTIFICATIONS_EMAILS,
             },
-            [eA.s6.NOTIFICATIONS_EMAILS_TIPS]: {
-                section: eN.oAB.NOTIFICATIONS,
-                searchableTitles: [eP.intl.string(eP.t.jNrkrM)],
-                parent: eA.s6.NOTIFICATIONS_EMAILS,
+            [eC.s6.NOTIFICATIONS_EMAILS_TIPS]: {
+                section: eR.oAB.NOTIFICATIONS,
+                searchableTitles: [eD.intl.string(eD.t.jNrkrM)],
+                parent: eC.s6.NOTIFICATIONS_EMAILS,
             },
-            [eA.s6.NOTIFICATIONS_EMAILS_RECOMMENDATIONS_AND_EVENTS]: {
-                section: eN.oAB.NOTIFICATIONS,
-                searchableTitles: [eP.intl.string(eP.t.E8g1l8)],
-                parent: eA.s6.NOTIFICATIONS_EMAILS,
+            [eC.s6.NOTIFICATIONS_EMAILS_RECOMMENDATIONS_AND_EVENTS]: {
+                section: eR.oAB.NOTIFICATIONS,
+                searchableTitles: [eD.intl.string(eD.t.E8g1l8)],
+                parent: eC.s6.NOTIFICATIONS_EMAILS,
             },
-            [eA.s6.NOTIFICATIONS_EMAILS_UNSUBSCRIBE_FROM_ALL_MARKETING_EMAILS]: {
-                section: eN.oAB.NOTIFICATIONS,
-                searchableTitles: [eP.intl.string(eP.t.Ra9Pwk)],
-                parent: eA.s6.NOTIFICATIONS_EMAILS,
+            [eC.s6.NOTIFICATIONS_EMAILS_UNSUBSCRIBE_FROM_ALL_MARKETING_EMAILS]: {
+                section: eR.oAB.NOTIFICATIONS,
+                searchableTitles: [eD.intl.string(eD.t.Ra9Pwk)],
+                parent: eC.s6.NOTIFICATIONS_EMAILS,
             },
-            [eA.s6.NOTIFICATIONS_REACTIONS]: {
-                section: eN.oAB.NOTIFICATIONS,
-                searchableTitles: [eP.intl.string(eP.t.Rq0NFs)],
-                parent: eA.s6.NOTIFICATIONS,
+            [eC.s6.NOTIFICATIONS_REACTIONS]: {
+                section: eR.oAB.NOTIFICATIONS,
+                searchableTitles: [eD.intl.string(eD.t.Rq0NFs)],
+                parent: eC.s6.NOTIFICATIONS,
             },
-            [eA.s6.NOTIFICATIONS_VOICE_ACTIVITY]: {
-                section: eN.oAB.NOTIFICATIONS,
-                searchableTitles: [eP.intl.string(eP.t.wtk08S)],
-                parent: eA.s6.NOTIFICATIONS,
+            [eC.s6.NOTIFICATIONS_VOICE_ACTIVITY]: {
+                section: eR.oAB.NOTIFICATIONS,
+                searchableTitles: [eD.intl.string(eD.t.wtk08S)],
+                parent: eC.s6.NOTIFICATIONS,
             },
-            [eA.s6.NOTIFICATIONS_FRIEND_ONLINE]: {
-                section: eN.oAB.NOTIFICATIONS,
-                searchableTitles: [eP.intl.string(eP.t["uvIi/4"])],
-                parent: eA.s6.NOTIFICATIONS,
+            [eC.s6.NOTIFICATIONS_FRIEND_ANNIVERSARY]: {
+                section: eR.oAB.NOTIFICATIONS,
+                searchableTitles: [eD.intl.string(eD.t.hi4dSk)],
+                parent: eC.s6.NOTIFICATIONS,
+                predicate: () => (0, N.i)("SettingsRendererConfig"),
+            },
+            [eC.s6.NOTIFICATIONS_FRIEND_ONLINE]: {
+                section: eR.oAB.NOTIFICATIONS,
+                searchableTitles: [eD.intl.string(eD.t["uvIi/4"])],
+                parent: eC.s6.NOTIFICATIONS,
                 predicate: () => (0, S.bH)("SettingsRendererConfig"),
             },
-            [eA.s6.NOTIFICATIONS_USER_RESURRECTION]: {
-                section: eN.oAB.NOTIFICATIONS,
-                searchableTitles: [eP.intl.string(eP.t.Zyn45S)],
-                parent: eA.s6.NOTIFICATIONS,
+            [eC.s6.NOTIFICATIONS_USER_RESURRECTION]: {
+                section: eR.oAB.NOTIFICATIONS,
+                searchableTitles: [eD.intl.string(eD.t.Zyn45S)],
+                parent: eC.s6.NOTIFICATIONS,
             },
-            [eA.s6.NOTIFICATIONS_GO_LIVE]: {
-                section: eN.oAB.NOTIFICATIONS,
-                searchableTitles: [eP.intl.string(eP.t.pW4TMp)],
-                parent: eA.s6.NOTIFICATIONS,
+            [eC.s6.NOTIFICATIONS_GO_LIVE]: {
+                section: eR.oAB.NOTIFICATIONS,
+                searchableTitles: [eD.intl.string(eD.t.pW4TMp)],
+                parent: eC.s6.NOTIFICATIONS,
             },
-            [eA.s6.KEYBINDS]: {
-                section: eN.oAB.KEYBINDS,
-                searchableTitles: [eP.intl.string(eP.t.T9DA2K)],
-                label: eP.intl.string(eP.t.T9DA2K),
-                element: ec.Z,
-                url: eN.Z5c.SETTINGS("keybinds"),
-            },
-            [eA.s6.LANGUAGE]: {
-                section: eN.oAB.LOCALE,
-                searchableTitles: [eP.intl.string(eP.t.IHMsPn)],
-                label: eP.intl.string(eP.t.IHMsPn),
+            [eC.s6.KEYBINDS]: {
+                section: eR.oAB.KEYBINDS,
+                searchableTitles: [eD.intl.string(eD.t.T9DA2K)],
+                label: eD.intl.string(eD.t.T9DA2K),
                 element: eu.Z,
-                url: eN.Z5c.SETTINGS("language"),
+                url: eR.Z5c.SETTINGS("keybinds"),
             },
-            [eA.s6.WINDOW_SETTINGS]: {
-                section: eN.oAB.WINDOWS,
-                searchableTitles: [eP.intl.string(eP.t.ZkDZov)],
-                label: eP.intl.string(eP.t.ZkDZov),
-                element: eb.Z,
-                predicate: () => F.isPlatformEmbedded && (0, F.isWindows)(),
+            [eC.s6.LANGUAGE]: {
+                section: eR.oAB.LOCALE,
+                searchableTitles: [eD.intl.string(eD.t.IHMsPn)],
+                label: eD.intl.string(eD.t.IHMsPn),
+                element: ed.Z,
+                url: eR.Z5c.SETTINGS("language"),
             },
-            [eA.s6.LINUX_SETTINGS]: {
-                section: eN.oAB.LINUX,
-                searchableTitles: [eP.intl.string(eP.t["7pPjTW"])],
-                label: eP.intl.string(eP.t["7pPjTW"]),
-                element: eW,
-                predicate: () => F.isPlatformEmbedded && (0, F.isLinux)(),
+            [eC.s6.WINDOW_SETTINGS]: {
+                section: eR.oAB.WINDOWS,
+                searchableTitles: [eD.intl.string(eD.t.ZkDZov)],
+                label: eD.intl.string(eD.t.ZkDZov),
+                element: ey.Z,
+                predicate: () => V.isPlatformEmbedded && (0, V.isWindows)(),
             },
-            [eA.s6.STREAMER_MODE]: {
-                section: eN.oAB.STREAMER_MODE,
-                searchableTitles: [eP.intl.string(eP.t.S5GfOW)],
-                label: eP.intl.string(eP.t.S5GfOW),
-                ariaLabel: eP.intl.string(eP.t.S5GfOW),
-                element: em.Z,
-                url: eN.Z5c.SETTINGS("streamer-mode"),
+            [eC.s6.LINUX_SETTINGS]: {
+                section: eR.oAB.LINUX,
+                searchableTitles: [eD.intl.string(eD.t["7pPjTW"])],
+                label: eD.intl.string(eD.t["7pPjTW"]),
+                element: eY,
+                predicate: () => V.isPlatformEmbedded && (0, V.isLinux)(),
             },
-            [eA.s6.STREAMER_MODE_INTEGRATIONS]: {
-                section: eN.oAB.STREAMER_MODE,
-                searchableTitles: [eP.intl.string(eP.t.bxGbHL)],
-                parent: eA.s6.STREAMER_MODE,
+            [eC.s6.STREAMER_MODE]: {
+                section: eR.oAB.STREAMER_MODE,
+                searchableTitles: [eD.intl.string(eD.t.S5GfOW)],
+                label: eD.intl.string(eD.t.S5GfOW),
+                ariaLabel: eD.intl.string(eD.t.S5GfOW),
+                element: eg.Z,
+                url: eR.Z5c.SETTINGS("streamer-mode"),
             },
-            [eA.s6.STREAMER_MODE_ENABLE]: {
-                section: eN.oAB.STREAMER_MODE,
-                searchableTitles: [eP.intl.string(eP.t.p9ZAJZ)],
-                parent: eA.s6.STREAMER_MODE,
+            [eC.s6.STREAMER_MODE_INTEGRATIONS]: {
+                section: eR.oAB.STREAMER_MODE,
+                searchableTitles: [eD.intl.string(eD.t.bxGbHL)],
+                parent: eC.s6.STREAMER_MODE,
             },
-            [eA.s6.STREAMER_MODE_HIDE_PERSONAL_INFORMATION]: {
-                section: eN.oAB.STREAMER_MODE,
-                searchableTitles: [eP.intl.string(eP.t.UpQziA)],
-                parent: eA.s6.STREAMER_MODE,
+            [eC.s6.STREAMER_MODE_ENABLE]: {
+                section: eR.oAB.STREAMER_MODE,
+                searchableTitles: [eD.intl.string(eD.t.p9ZAJZ)],
+                parent: eC.s6.STREAMER_MODE,
             },
-            [eA.s6.STREAMER_MODE_HIDE_INVITE_LINKS]: {
-                section: eN.oAB.STREAMER_MODE,
-                searchableTitles: [eP.intl.string(eP.t.q7WNGv)],
-                parent: eA.s6.STREAMER_MODE,
+            [eC.s6.STREAMER_MODE_HIDE_PERSONAL_INFORMATION]: {
+                section: eR.oAB.STREAMER_MODE,
+                searchableTitles: [eD.intl.string(eD.t.UpQziA)],
+                parent: eC.s6.STREAMER_MODE,
             },
-            [eA.s6.STREAMER_MODE_DISABLE_SOUNDS]: {
-                section: eN.oAB.STREAMER_MODE,
-                searchableTitles: [eP.intl.string(eP.t["1CWknJ"])],
-                parent: eA.s6.STREAMER_MODE,
+            [eC.s6.STREAMER_MODE_HIDE_INVITE_LINKS]: {
+                section: eR.oAB.STREAMER_MODE,
+                searchableTitles: [eD.intl.string(eD.t.q7WNGv)],
+                parent: eC.s6.STREAMER_MODE,
             },
-            [eA.s6.STREAMER_MODE_DISABLE_NOTIFICATIONS]: {
-                section: eN.oAB.STREAMER_MODE,
-                searchableTitles: [eP.intl.string(eP.t.qmYiYd)],
-                parent: eA.s6.STREAMER_MODE,
+            [eC.s6.STREAMER_MODE_DISABLE_SOUNDS]: {
+                section: eR.oAB.STREAMER_MODE,
+                searchableTitles: [eD.intl.string(eD.t["1CWknJ"])],
+                parent: eC.s6.STREAMER_MODE,
             },
-            [eA.s6.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE]: {
-                section: eN.oAB.STREAMER_MODE,
-                searchableTitles: [eP.intl.string(eP.t["iA81+a"])],
-                parent: eA.s6.STREAMER_MODE,
+            [eC.s6.STREAMER_MODE_DISABLE_NOTIFICATIONS]: {
+                section: eR.oAB.STREAMER_MODE,
+                searchableTitles: [eD.intl.string(eD.t.qmYiYd)],
+                parent: eC.s6.STREAMER_MODE,
+            },
+            [eC.s6.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE]: {
+                section: eR.oAB.STREAMER_MODE,
+                searchableTitles: [eD.intl.string(eD.t["iA81+a"])],
+                parent: eC.s6.STREAMER_MODE,
                 predicate: () => {
                     var e, t, n;
                     return (
@@ -1638,360 +1645,360 @@ let eG = () => [
                     );
                 },
             },
-            [eA.s6.SETTINGS_ADVANCED]: {
-                section: eN.oAB.ADVANCED,
-                searchableTitles: [eP.intl.string(eP.t["8/udY0"])],
-                label: eP.intl.string(eP.t["8/udY0"]),
-                ariaLabel: eP.intl.string(eP.t["8/udY0"]),
-                element: J.ZP,
+            [eC.s6.SETTINGS_ADVANCED]: {
+                section: eR.oAB.ADVANCED,
+                searchableTitles: [eD.intl.string(eD.t["8/udY0"])],
+                label: eD.intl.string(eD.t["8/udY0"]),
+                ariaLabel: eD.intl.string(eD.t["8/udY0"]),
+                element: $.ZP,
             },
-            [eA.s6.SETTINGS_ADVANCED_DEVELOPER_MODE]: {
-                section: eN.oAB.ADVANCED,
-                searchableTitles: [eP.intl.string(eP.t.ObIb1Q)],
-                parent: eA.s6.SETTINGS_ADVANCED,
-                predicate: () => B.wS,
+            [eC.s6.SETTINGS_ADVANCED_DEVELOPER_MODE]: {
+                section: eR.oAB.ADVANCED,
+                searchableTitles: [eD.intl.string(eD.t.ObIb1Q)],
+                parent: eC.s6.SETTINGS_ADVANCED,
+                predicate: () => Z.wS,
             },
-            [eA.s6.SETTINGS_ADVANCED_HARDWARE_ACCELERATION]: {
-                section: eN.oAB.ADVANCED,
-                searchableTitles: [eP.intl.string(eP.t["eOC/F2"])],
-                parent: eA.s6.SETTINGS_ADVANCED,
-                predicate: () => F.isPlatformEmbedded,
+            [eC.s6.SETTINGS_ADVANCED_HARDWARE_ACCELERATION]: {
+                section: eR.oAB.ADVANCED,
+                searchableTitles: [eD.intl.string(eD.t["eOC/F2"])],
+                parent: eC.s6.SETTINGS_ADVANCED,
+                predicate: () => V.isPlatformEmbedded,
             },
-            [eA.s6.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY]: {
-                section: eN.oAB.ADVANCED,
-                searchableTitles: [eP.intl.string(eP.t.fi3UQN)],
-                parent: eA.s6.SETTINGS_ADVANCED,
-                predicate: () => e$,
+            [eC.s6.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY]: {
+                section: eR.oAB.ADVANCED,
+                searchableTitles: [eD.intl.string(eD.t.fi3UQN)],
+                parent: eC.s6.SETTINGS_ADVANCED,
+                predicate: () => e0,
             },
-            [eA.s6.SETTINGS_ADVANCED_APPLICATION_TEST_MODE]: {
-                section: eN.oAB.ADVANCED,
-                searchableTitles: [eP.intl.string(eP.t.erOqlh)],
-                parent: eA.s6.SETTINGS_ADVANCED,
-                predicate: () => e1,
+            [eC.s6.SETTINGS_ADVANCED_APPLICATION_TEST_MODE]: {
+                section: eR.oAB.ADVANCED,
+                searchableTitles: [eD.intl.string(eD.t.erOqlh)],
+                parent: eC.s6.SETTINGS_ADVANCED,
+                predicate: () => e3,
             },
-            [eA.s6.SETTINGS_ADVANCED_SHOW_PLAY_AGAIN]: {
-                section: eN.oAB.ADVANCED,
-                searchableTitles: [eP.intl.string(eP.t.qDZryG)],
-                parent: eA.s6.SETTINGS_ADVANCED,
+            [eC.s6.SETTINGS_ADVANCED_SHOW_PLAY_AGAIN]: {
+                section: eR.oAB.ADVANCED,
+                searchableTitles: [eD.intl.string(eD.t.qDZryG)],
+                parent: eC.s6.SETTINGS_ADVANCED,
             },
-            [eA.s6.PRIVATE_BROWSING_PERK]: {
-                section: eN.oAB.CF_WARP,
-                searchableTitles: [eP.intl.string(eL.default.SsTtq3)],
-                predicate: () => P.H.getConfig({ location: "SettingsRendererConfig" }).enabled,
-                newIndicator: (0, r.jsx)(eH, {}),
+            [eC.s6.PRIVATE_BROWSING_PERK]: {
+                section: eR.oAB.CF_WARP,
+                searchableTitles: [eD.intl.string(ex.default.SsTtq3)],
+                predicate: () => D.H.getConfig({ location: "SettingsRendererConfig" }).enabled,
+                newIndicator: (0, r.jsx)(eW, {}),
                 newIndicatorDismissibleContentTypes: [a.z.NITRO_PRIVACY_PERK_NEW_BADGE],
-                url: eN.Z5c.SETTINGS("private-browsing"),
+                url: eR.Z5c.SETTINGS("private-browsing"),
             },
-            [eA.s6.ACTIVITY_PRIVACY]: {
-                section: eN.oAB.ACTIVITY_PRIVACY,
-                searchableTitles: [eP.intl.string(eP.t.Cq98yL)],
-                label: eP.intl.string(eP.t.Cq98yL),
-                ariaLabel: eP.intl.string(eP.t.Cq98yL),
-                element: Q.Z,
-                predicate: () => !eV,
-                url: eN.Z5c.SETTINGS("activity-privacy"),
+            [eC.s6.ACTIVITY_PRIVACY]: {
+                section: eR.oAB.ACTIVITY_PRIVACY,
+                searchableTitles: [eD.intl.string(eD.t.Cq98yL)],
+                label: eD.intl.string(eD.t.Cq98yL),
+                ariaLabel: eD.intl.string(eD.t.Cq98yL),
+                element: J.Z,
+                predicate: () => !eH,
+                url: eR.Z5c.SETTINGS("activity-privacy"),
             },
-            [eA.s6.ACTIVITY_PRIVACY_STATUS]: {
-                section: eV ? eN.oAB.GAMES : eN.oAB.ACTIVITY_PRIVACY,
-                searchableTitles: [eP.intl.string(eP.t["8ka8li"])],
-                parent: eV ? eA.s6.GAMES_ACTIVITY_PRIVACY : eA.s6.ACTIVITY_PRIVACY,
+            [eC.s6.ACTIVITY_PRIVACY_STATUS]: {
+                section: eH ? eR.oAB.GAMES : eR.oAB.ACTIVITY_PRIVACY,
+                searchableTitles: [eD.intl.string(eD.t["8ka8li"])],
+                parent: eH ? eC.s6.GAMES_ACTIVITY_PRIVACY : eC.s6.ACTIVITY_PRIVACY,
             },
-            [eA.s6.ACTIVITY_PRIVACY_RICH_PRESENCE]: {
-                section: eV ? eN.oAB.GAMES : eN.oAB.ACTIVITY_PRIVACY,
-                searchableTitles: [eP.intl.string(eP.t.VOszPA)],
-                parent: eV ? eA.s6.GAMES_ACTIVITY_PRIVACY : eA.s6.ACTIVITY_PRIVACY,
+            [eC.s6.ACTIVITY_PRIVACY_RICH_PRESENCE]: {
+                section: eH ? eR.oAB.GAMES : eR.oAB.ACTIVITY_PRIVACY,
+                searchableTitles: [eD.intl.string(eD.t.VOszPA)],
+                parent: eH ? eC.s6.GAMES_ACTIVITY_PRIVACY : eC.s6.ACTIVITY_PRIVACY,
             },
-            [eA.s6.ACTIVITY_PRIVACY_TOS]: {
-                section: eV ? eN.oAB.GAMES : eN.oAB.ACTIVITY_PRIVACY,
-                searchableTitles: [eA.CF],
-                parent: eV ? eA.s6.GAMES_ACTIVITY_PRIVACY : eA.s6.ACTIVITY_PRIVACY,
+            [eC.s6.ACTIVITY_PRIVACY_TOS]: {
+                section: eH ? eR.oAB.GAMES : eR.oAB.ACTIVITY_PRIVACY,
+                searchableTitles: [eC.CF],
+                parent: eH ? eC.s6.GAMES_ACTIVITY_PRIVACY : eC.s6.ACTIVITY_PRIVACY,
             },
-            [eA.s6.ACTIVITY_PRIVACY_STATUS_DISPLAY]: {
-                section: eN.oAB.ACTIVITY_PRIVACY,
-                searchableTitles: [eP.intl.string(eP.t["4F2KoC"])],
-                parent: eA.s6.ACTIVITY_PRIVACY,
+            [eC.s6.ACTIVITY_PRIVACY_STATUS_DISPLAY]: {
+                section: eR.oAB.ACTIVITY_PRIVACY,
+                searchableTitles: [eD.intl.string(eD.t["4F2KoC"])],
+                parent: eC.s6.ACTIVITY_PRIVACY,
             },
-            [eA.s6.REGISTERED_GAMES]: {
-                section: eN.oAB.REGISTERED_GAMES,
-                searchableTitles: [eP.intl.string(eP.t.AVDyEj)],
-                label: eP.intl.string(eP.t.AVDyEj),
-                element: es.Z,
-                predicate: () => !eV && (0, eO.Jw)(),
+            [eC.s6.REGISTERED_GAMES]: {
+                section: eR.oAB.REGISTERED_GAMES,
+                searchableTitles: [eD.intl.string(eD.t.AVDyEj)],
+                label: eD.intl.string(eD.t.AVDyEj),
+                element: el.Z,
+                predicate: () => !eH && (0, ev.Jw)(),
             },
-            [eA.s6.OVERLAY]: {
-                section: eN.oAB.OVERLAY,
-                searchableTitles: [eP.intl.string(eP.t["9cb1Uz"]), eP.intl.string(eP.t.HcoRu0)],
-                label: eP.intl.string(eP.t["9cb1Uz"]),
-                element: ef.Z,
-                predicate: () => !eV && eM,
+            [eC.s6.OVERLAY]: {
+                section: eR.oAB.OVERLAY,
+                searchableTitles: [eD.intl.string(eD.t["9cb1Uz"]), eD.intl.string(eD.t.HcoRu0)],
+                label: eD.intl.string(eD.t["9cb1Uz"]),
+                element: e_.Z,
+                predicate: () => !eH && ek,
             },
-            [eA.s6.CHANGELOG]: {
+            [eC.s6.CHANGELOG]: {
                 section: "changelog",
                 onClick: () => (0, m.Z)(!0),
-                searchableTitles: [eP.intl.string(eP.t.LRmNAl)],
-                label: eP.intl.string(eP.t.LRmNAl),
+                searchableTitles: [eD.intl.string(eD.t.LRmNAl)],
+                label: eD.intl.string(eD.t.LRmNAl),
             },
-            [eA.s6.MERCHANDISE]: {
+            [eC.s6.MERCHANDISE]: {
                 section: "merchandise",
                 onClick: () => {
                     let e = "https://discordmerch.com/Dsktopprm";
-                    G.default.track(eN.rMx.USER_SETTINGS_MERCH_LINK_CLICKED),
-                        (0, Z.q)({
+                    B.default.track(eR.rMx.USER_SETTINGS_MERCH_LINK_CLICKED),
+                        (0, F.q)({
                             href: e,
                             shouldConfirm: !0,
                             onConfirm: () => {
-                                G.default.track(eN.rMx.USER_SETTINGS_MERCH_LINK_CONFIRMED), (0, p.Z)(e);
+                                B.default.track(eR.rMx.USER_SETTINGS_MERCH_LINK_CONFIRMED), (0, p.Z)(e);
                             },
                         });
                 },
-                searchableTitles: [eP.intl.string(eP.t.sMEktT)],
-                label: eP.intl.string(eP.t.sMEktT),
-                ariaLabel: eP.intl.string(eP.t.sMEktT),
+                searchableTitles: [eD.intl.string(eD.t.sMEktT)],
+                label: eD.intl.string(eD.t.sMEktT),
+                ariaLabel: eD.intl.string(eD.t.sMEktT),
             },
-            [eA.s6.EXPERIMENTS]: {
-                section: eN.oAB.EXPERIMENTS,
+            [eC.s6.EXPERIMENTS]: {
+                section: eR.oAB.EXPERIMENTS,
                 searchableTitles: ["Experiments"],
                 label: "Experiments",
-                element: ey.Z,
-                predicate: () => M.Z.isDeveloper,
-                url: eN.Z5c.SETTINGS("experiments"),
+                element: eO.Z,
+                predicate: () => k.Z.isDeveloper,
+                url: eR.Z5c.SETTINGS("experiments"),
             },
-            [eA.s6.DEVELOPER_OPTIONS]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Developer Options"],
                 label: "Developer Options",
                 ariaLabel: "Developer Options",
-                element: ea.Z,
-                predicate: () => M.Z.isDeveloper,
+                element: eo.Z,
+                predicate: () => k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_OVERRIDES_TAB]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_OVERRIDES_TAB]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Overrides"],
-                parent: eA.s6.DEVELOPER_OPTIONS,
-                predicate: () => M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS,
+                predicate: () => k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_FLAGS_TAB]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_FLAGS_TAB]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Developer Options Flags"],
-                parent: eA.s6.DEVELOPER_OPTIONS,
-                predicate: () => M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS,
+                predicate: () => k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_LOGGING_TAB]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_LOGGING_TAB]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Logging"],
-                parent: eA.s6.DEVELOPER_OPTIONS,
-                predicate: () => M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS,
+                predicate: () => k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_MANUAL_TRIGGERS_TAB]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_MANUAL_TRIGGERS_TAB]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Manual Triggers"],
-                parent: eA.s6.DEVELOPER_OPTIONS,
-                predicate: () => M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS,
+                predicate: () => k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_DESIGN_TOOLS_TAB]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_DESIGN_TOOLS_TAB]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Design Tools"],
-                parent: eA.s6.DEVELOPER_OPTIONS,
-                predicate: () => M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS,
+                predicate: () => k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_TRACING_REQUESTS]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_TRACING_REQUESTS]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Tracing Requests"],
-                parent: eA.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
-                predicate: () => M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
+                predicate: () => k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_FORCED_CANARY]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_FORCED_CANARY]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Forced Canary"],
-                parent: eA.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
-                predicate: () => M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
+                predicate: () => k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_LOG_KEYBOARD_MISMATCHES]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_LOG_KEYBOARD_MISMATCHES]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Log Keyboard Mismatches"],
-                parent: eA.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
-                predicate: () => M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
+                predicate: () => k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_GATEWAY_EVENTS_TO_CONSOLE]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_GATEWAY_EVENTS_TO_CONSOLE]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Gateway Events To Console"],
-                parent: eA.s6.DEVELOPER_OPTIONS_LOGGING_TAB,
-                predicate: () => M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS_LOGGING_TAB,
+                predicate: () => k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_OVERLAY_RPC_EVENTS_COMMANDS]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_OVERLAY_RPC_EVENTS_COMMANDS]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Rpc Events Commands"],
-                parent: eA.s6.DEVELOPER_OPTIONS_LOGGING_TAB,
-                predicate: () => M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS_LOGGING_TAB,
+                predicate: () => k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_ANALYTICS_EVENTS_LOGGING]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_ANALYTICS_EVENTS_LOGGING]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Analytics Events Logging"],
-                parent: eA.s6.DEVELOPER_OPTIONS_LOGGING_TAB,
-                predicate: () => M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS_LOGGING_TAB,
+                predicate: () => k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_ALWAYS_DELIVER]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_ALWAYS_DELIVER]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Always deliver ads"],
-                parent: eA.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
-                predicate: () => eK && M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
+                predicate: () => ez && k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_SOURCE_MAPS]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_SOURCE_MAPS]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Source Maps"],
-                parent: eA.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
-                predicate: () => M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
+                predicate: () => k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_ANALYTICS_DEBUGGER_VIEW]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_ANALYTICS_DEBUGGER_VIEW]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Analytics Debugger View"],
-                parent: eA.s6.DEVELOPER_OPTIONS_LOGGING_TAB,
-                predicate: () => M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS_LOGGING_TAB,
+                predicate: () => k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_IDLE_STATUS_INDICATOR]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_IDLE_STATUS_INDICATOR]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Idle Status Indicator"],
-                parent: eA.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
-                predicate: () => eK && M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
+                predicate: () => ez && k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_ACCESSIBILITY_AUDITING]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_ACCESSIBILITY_AUDITING]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Accessibility Auditing"],
-                parent: eA.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
+                parent: eC.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
                 predicate: () => !1,
             },
-            [eA.s6.DEVELOPER_OPTIONS_CSS_DEBUGGING]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_CSS_DEBUGGING]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["CSS Debugging"],
-                parent: eA.s6.DEVELOPER_OPTIONS_DESIGN_TOOLS_TAB,
-                predicate: () => eK && M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS_DESIGN_TOOLS_TAB,
+                predicate: () => ez && k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_HIGHLIGHT_MANA_COMPONENTS]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_HIGHLIGHT_MANA_COMPONENTS]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Highlight Mana Components"],
-                parent: eA.s6.DEVELOPER_OPTIONS_DESIGN_TOOLS_TAB,
-                predicate: () => eK && M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS_DESIGN_TOOLS_TAB,
+                predicate: () => ez && k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_HIGHLIGHT_VOID_TOGGLEABLES]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_HIGHLIGHT_VOID_TOGGLEABLES]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Highlight Void Toggleable Components"],
-                parent: eA.s6.DEVELOPER_OPTIONS_DESIGN_TOOLS_TAB,
-                predicate: () => eK && M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS_DESIGN_TOOLS_TAB,
+                predicate: () => ez && k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Layout Debugging"],
-                parent: eA.s6.DEVELOPER_OPTIONS_DESIGN_TOOLS_TAB,
-                predicate: () => eK && M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS_DESIGN_TOOLS_TAB,
+                predicate: () => ez && k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING_OPTIONS]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING_OPTIONS]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Layout Debugging"],
-                parent: eA.s6.DEVELOPER_OPTIONS_DESIGN_TOOLS_TAB,
-                predicate: () => eK && M.Z.isDeveloper && k.default.layoutDebuggingEnabled,
+                parent: eC.s6.DEVELOPER_OPTIONS_DESIGN_TOOLS_TAB,
+                predicate: () => ez && k.Z.isDeveloper && j.default.layoutDebuggingEnabled,
             },
-            [eA.s6.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Preview Unpublished Collections"],
-                parent: eA.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
-                predicate: () => eK && M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
+                predicate: () => ez && k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_DISABLE_APP_COLLECTIONS_CACHE]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_DISABLE_APP_COLLECTIONS_CACHE]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Disable App Collections Cache"],
-                parent: eA.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
-                predicate: () => eK && M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
+                predicate: () => ez && k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Override Client Side"],
-                parent: eA.s6.DEVELOPER_OPTIONS_OVERRIDES_TAB,
-                predicate: () => M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS_OVERRIDES_TAB,
+                predicate: () => k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE_PREMIUM_TYPE]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE_PREMIUM_TYPE]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Override Client Side Premium Type"],
-                parent: eA.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
-                predicate: () => M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
+                predicate: () => k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE_ACCOUNT_CREATED_DATA]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE_ACCOUNT_CREATED_DATA]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Override Client Side Account Created Data"],
-                parent: eA.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
-                predicate: () => M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
+                predicate: () => k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_OVERRIDE_OPEN_OVERLAY]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_OVERRIDE_OPEN_OVERLAY]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Open Overlay"],
-                parent: eA.s6.DEVELOPER_OPTIONS_MANUAL_TRIGGERS_TAB,
-                predicate: () => M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS_MANUAL_TRIGGERS_TAB,
+                predicate: () => k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_RESET_SOCKET]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_RESET_SOCKET]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Reset Socket"],
-                parent: eA.s6.DEVELOPER_OPTIONS_MANUAL_TRIGGERS_TAB,
-                predicate: () => M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS_MANUAL_TRIGGERS_TAB,
+                predicate: () => k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_CLEAR_CACHES]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_CLEAR_CACHES]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Clear Caches"],
-                parent: eA.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
-                predicate: () => h.q && M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
+                predicate: () => h.q && k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_SHOW_TOTP_SUCCESS]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_SHOW_TOTP_SUCCESS]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Show TOTP Success"],
-                parent: eA.s6.DEVELOPER_OPTIONS_MANUAL_TRIGGERS_TAB,
-                predicate: () => M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS_MANUAL_TRIGGERS_TAB,
+                predicate: () => k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_CRASHES]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_CRASHES]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Crashes"],
-                parent: eA.s6.DEVELOPER_OPTIONS_MANUAL_TRIGGERS_TAB,
-                predicate: () => M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS_MANUAL_TRIGGERS_TAB,
+                predicate: () => k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_SURVEY_OVERRIDE]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_SURVEY_OVERRIDE]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Survey Override"],
-                parent: eA.s6.DEVELOPER_OPTIONS_OVERRIDES_TAB,
-                predicate: () => M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS_OVERRIDES_TAB,
+                predicate: () => k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_CHANGELOG_OVERRIDE]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_CHANGELOG_OVERRIDE]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Changelog Override"],
-                parent: eA.s6.DEVELOPER_OPTIONS_OVERRIDES_TAB,
-                predicate: () => M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS_OVERRIDES_TAB,
+                predicate: () => k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_BUILD_OVERRIDE]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_BUILD_OVERRIDE]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Build Override"],
-                parent: eA.s6.DEVELOPER_OPTIONS_OVERRIDES_TAB,
-                predicate: () => M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS_OVERRIDES_TAB,
+                predicate: () => k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_PREVENT_POPOUT_CLOSE]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_PREVENT_POPOUT_CLOSE]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Prevent Popouts From Closing Automatically"],
-                parent: eA.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
-                predicate: () => M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
+                predicate: () => k.Z.isDeveloper,
             },
-            [eA.s6.DEVELOPER_OPTIONS_DISABLE_ALIGN_CHAT_INPUT]: {
-                section: eN.oAB.DEVELOPER_OPTIONS,
+            [eC.s6.DEVELOPER_OPTIONS_DISABLE_ALIGN_CHAT_INPUT]: {
+                section: eR.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ["Disable Align Chat Input"],
-                parent: eA.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
-                predicate: () => M.Z.isDeveloper,
+                parent: eC.s6.DEVELOPER_OPTIONS_FLAGS_TAB,
+                predicate: () => k.Z.isDeveloper,
             },
-            [eA.s6.LOGOUT]: {
+            [eC.s6.LOGOUT]: {
                 section: "logout",
                 onClick: () => {
                     (0, s.h7j)((e) =>
                         (0, r.jsx)(
                             s.ConfirmModal,
-                            eU(
-                                ek(
+                            eG(
+                                ej(
                                     {
-                                        header: eP.intl.string(eP.t["2jxGer"]),
-                                        confirmText: eP.intl.string(eP.t["2jxGer"]),
-                                        cancelText: eP.intl.string(eP.t["ETE/oC"]),
+                                        header: eD.intl.string(eD.t["2jxGer"]),
+                                        confirmText: eD.intl.string(eD.t["2jxGer"]),
+                                        cancelText: eD.intl.string(eD.t["ETE/oC"]),
                                         onCancel: e.onClose,
                                         onConfirm: () => c.Z.logout("settings"),
                                     },
@@ -2000,28 +2007,28 @@ let eG = () => [
                                 {
                                     children: (0, r.jsx)(s.Text, {
                                         variant: "text-md/normal",
-                                        children: eP.intl.string(eP.t.SUnWBB),
+                                        children: eD.intl.string(eD.t.SUnWBB),
                                     }),
                                 },
                             ),
                         ),
                     );
                 },
-                label: eP.intl.string(eP.t["2jxGer"]),
-                ariaLabel: eP.intl.string(eP.t["2jxGer"]),
+                label: eD.intl.string(eD.t["2jxGer"]),
+                ariaLabel: eD.intl.string(eD.t["2jxGer"]),
                 icon: (0, r.jsx)(s.PBZ, {
                     size: "xs",
                     color: "currentColor",
                 }),
                 variant: "destructive",
             },
-            [eA.s6.SOCIAL_LINKS]: {
+            [eC.s6.SOCIAL_LINKS]: {
                 section: f.ID.CUSTOM,
-                element: z.Z,
+                element: q.Z,
             },
-            [eA.s6.CLIENT_DEBUG_INFO]: {
+            [eC.s6.CLIENT_DEBUG_INFO]: {
                 section: f.ID.CUSTOM,
-                element: W.Z,
+                element: Y.Z,
             },
         });
     };

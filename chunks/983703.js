@@ -5,4 +5,5 @@ e.exports = {
     sectionTitle: "sectionTitle__5ec2f",
     clearButton: "clearButton__5ec2f",
     viewSpamButton: "viewSpamButton__5ec2f",
+    sectionFooter: "sectionFooter__5ec2f",
 };
