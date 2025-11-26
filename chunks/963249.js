@@ -116,8 +116,8 @@ function R(e) {
             openInvoiceId: F,
             applicationId: V,
             referralTrialOfferId: H,
-            giftRecipient: Y,
-            returnRef: W,
+            giftRecipient: W,
+            returnRef: Y,
             subscription: K,
             skipConfirm: z,
         } = null != e ? e : {},
@@ -144,12 +144,12 @@ function R(e) {
                         giftMessage: k,
                         giftStyle: j,
                         giftingOrigin: U,
-                        giftRecipient: Y,
+                        giftRecipient: W,
                         initialPlanId: i,
                         followupSKUInfo: I,
                         onClose: (e, t) => {
                             if (et) return;
-                            (et = !0), g.S.dispatch(O.CkL.PREMIUM_PAYMENT_MODAL_CLOSED);
+                            (et = !0), g.S.dispatch(O.CkL.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED);
                             let r = () => {
                                 n(),
                                     null == S || S(e),
@@ -184,7 +184,7 @@ function R(e) {
                         openInvoiceId: F,
                         applicationId: V,
                         referralTrialOfferId: H,
-                        returnRef: W,
+                        returnRef: Y,
                         subscription: K,
                         skipConfirm: !!z,
                         wasTier2PremiumBeforePurchase: J,
@@ -196,7 +196,7 @@ function R(e) {
             onCloseRequest: () => {
                 et ||
                     ((et = !0),
-                    g.S.dispatch(O.CkL.PREMIUM_PAYMENT_MODAL_CLOSED),
+                    g.S.dispatch(O.CkL.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
                     _.Z.isDisplayingWowMomentConfirmation && _.Z.isAnimated
                         ? setTimeout(() => {
                               (0, s.Mr3)($);

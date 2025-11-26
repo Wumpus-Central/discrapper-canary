@@ -1290,6 +1290,18 @@ let j = {
         let { default: e } = await n.e("86948").then(n.bind(n, 153241));
         return (t) => (0, a.jsx)(e, b({}, t));
     },
+    PremiumGroupAcceptInviteModal: async () => {
+        let { default: e } = await n.e("26450").then(n.bind(n, 382927));
+        return (t) =>
+            (0, a.jsx)(
+                e,
+                v(b({}, t), {
+                    premiumGroupSubscriptionId: "1234567890",
+                    isExistingSub: !1,
+                    premiumGroupPrimaryName: "Test User",
+                }),
+            );
+    },
 };
 function _() {
     let e = l.useMemo(

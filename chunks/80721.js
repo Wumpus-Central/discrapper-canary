@@ -1,6 +1,7 @@
 r.d(t, {
     MT: () => a,
     cD: () => o,
+    r7: () => l,
 });
 var n = r(544891),
     i = r(598077);
@@ -37,4 +38,10 @@ async function o(e, t) {
     } catch (e) {
         return null;
     }
+}
+async function l(e, t) {
+    await n.tn.patch({
+        url: s.ANM.BILLING_SUBSCRIPTION_INVITE(e, t),
+        rejectWithError: !0,
+    });
 }

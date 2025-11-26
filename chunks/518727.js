@@ -46,7 +46,7 @@ let b = 1000,
             D = (0, i.useRef)(null),
             [w, L] = (0, i.useState)(!1),
             [x, M] = (0, i.useState)(!1),
-            [j, k] = (0, i.useState)("none"),
+            [k, j] = (0, i.useState)("none"),
             [U, G] = (0, i.useState)(!1);
         if (
             ((0, i.useEffect)(() => {
@@ -54,16 +54,16 @@ let b = 1000,
                 a &&
                     n &&
                     !U &&
-                    "none" === j &&
+                    "none" === k &&
                     (y || !P
-                        ? (k("static"),
+                        ? (j("static"),
                           y ||
                               (G(!0),
                               f.default.track(
                                   h.rMx.PREMIUM_BRAND_REFRESH_WOW_MOMENT_ASSETS_NOT_LOADED_ON_CONFIRMATION,
                               )),
                           (e = !1))
-                        : (k("animated"), M(!0), (e = !0)),
+                        : (j("animated"), M(!0), (e = !0)),
                     c.Z.dispatch({
                         type: "WOW_MOMENT_CONFIRMATION_SET_IS_DISPLAYING_WOW_MOMENT_CONFIRMATION",
                         value: !0,
@@ -72,15 +72,15 @@ let b = 1000,
                     f.default.track(h.rMx.PREMIUM_BRAND_REFRESH_WOW_MOMENT_VIEWED, {
                         wow_moment_type: e ? "animated" : "static",
                     }));
-            }, [y, a, n, P, U, j]),
+            }, [y, a, n, P, U, k]),
             (0, i.useEffect)(() => {
                 function e() {
                     L(!0), A();
                 }
                 return (
-                    _.S.subscribe(h.CkL.PREMIUM_PAYMENT_MODAL_CLOSED, e),
+                    _.S.subscribe(h.CkL.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e),
                     () => {
-                        _.S.unsubscribe(h.CkL.PREMIUM_PAYMENT_MODAL_CLOSED, e);
+                        _.S.unsubscribe(h.CkL.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e);
                     }
                 );
             }, [A]),
@@ -94,7 +94,7 @@ let b = 1000,
                 },
                 [],
             ),
-            "animated" === j)
+            "animated" === k)
         )
             return (0, r.jsxs)("div", {
                 children: [
@@ -148,7 +148,7 @@ let b = 1000,
                 ],
             });
         let B = !w;
-        return "static" === j
+        return "static" === k
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
                       B &&
