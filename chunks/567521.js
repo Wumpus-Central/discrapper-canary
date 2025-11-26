@@ -1,75 +1,27 @@
-n.d(t, { Z: () => u });
-var i = n(54381);
-n(473749);
-var r = n(442837),
-    l = n(481060),
-    a = n(471253),
-    o = n(146085),
-    c = n(496675),
-    s = n(388032);
-function u(e, t) {
-    let n = (0, r.e7)([c.Z], () => c.Z.can(o.yP, e), [e]);
-    return null != t && n
-        ? (0, i.jsx)(l.sNh, {
+e.d(t, { Z: () => u });
+var i = e(54381);
+e(473749);
+var l = e(442837),
+    r = e(248514),
+    a = e(481060),
+    c = e(471253),
+    s = e(146085),
+    o = e(496675),
+    d = e(388032);
+function u(n, t) {
+    let e = (0, l.e7)([o.Z], () => o.Z.can(s.yP, n), [n]);
+    return null != t && e
+        ? (0, i.jsx)(a.sNh, {
               id: "end-stage",
-              label: s.intl.string(s.t.saZaRb),
+              label: d.intl.string(d.t.saZaRb),
               color: "danger",
               action: function () {
-                  (0, l.h7j)((t) => {
-                      var n, r;
-                      return (0, i.jsx)(
-                          l.ConfirmModal,
-                          ((n = (function (e) {
-                              for (var t = 1; t < arguments.length; t++) {
-                                  var n = null != arguments[t] ? arguments[t] : {},
-                                      i = Object.keys(n);
-                                  "function" == typeof Object.getOwnPropertySymbols &&
-                                      (i = i.concat(
-                                          Object.getOwnPropertySymbols(n).filter(function (e) {
-                                              return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                          }),
-                                      )),
-                                      i.forEach(function (t) {
-                                          var i;
-                                          (i = n[t]),
-                                              t in e
-                                                  ? Object.defineProperty(e, t, {
-                                                        value: i,
-                                                        enumerable: !0,
-                                                        configurable: !0,
-                                                        writable: !0,
-                                                    })
-                                                  : (e[t] = i);
-                                      });
-                              }
-                              return e;
-                          })({}, t)),
-                          (r = r =
-                              {
-                                  header: s.intl.string(s.t.gW9je1),
-                                  confirmText: s.intl.string(s.t.saZaRb),
-                                  cancelText: s.intl.string(s.t["ETE/oC"]),
-                                  onConfirm: () => (0, a.NZ)(e),
-                                  children: (0, i.jsx)(l.Text, {
-                                      variant: "text-md/normal",
-                                      color: "header-secondary",
-                                      children: s.intl.string(s.t.mT7jwN),
-                                  }),
-                              }),
-                          Object.getOwnPropertyDescriptors
-                              ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
-                              : (function (e, t) {
-                                    var n = Object.keys(e);
-                                    if (Object.getOwnPropertySymbols) {
-                                        var i = Object.getOwnPropertySymbols(e);
-                                        n.push.apply(n, i);
-                                    }
-                                    return n;
-                                })(Object(r)).forEach(function (e) {
-                                    Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
-                                }),
-                          n),
-                      );
+                  (0, r.Z)({
+                      title: d.intl.string(d.t.gW9je1),
+                      subtitle: d.intl.string(d.t.mT7jwN),
+                      confirmText: d.intl.string(d.t.saZaRb),
+                      onConfirm: () => (0, c.NZ)(n),
+                      variant: "critical",
                   });
               },
           })

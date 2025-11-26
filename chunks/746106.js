@@ -1,7 +1,7 @@
 n.d(t, { w: () => D }), n(388685), n(539854);
 var r = n(54381),
     i = n(473749),
-    a = n(963225),
+    a = n(502922),
     o = n(120356),
     s = n.n(o),
     l = n(442837),
@@ -24,13 +24,14 @@ var r = n(54381),
     S = n(998502),
     A = n(264783),
     C = n(892071),
-    N = n(681287),
+    N = n(298200),
     R = n(388032);
 function P(e, t, n, r, o) {
     let s = i.useContext(_.Z),
         l = i.useCallback(
             () => ({
                 i18n: {
+                    CANCEL: R.intl.string(R.t["ETE/oC"]),
                     SPINNER_LOADING_LABEL: R.intl.string(R.t.ZTNur7),
                     BUTTON_LOADING_STARTED_LABEL: R.intl.string(R.t.pfChQr),
                     BUTTON_LOADING_FINISHED_LABEL: R.intl.string(R.t.SVParY),
@@ -135,8 +136,8 @@ function D(e) {
         V = (0, h.Z)(R, __OVERLAY__ || N),
         H = 0;
     1 !== x && (H = (0, u.OdO)(H, u.bgu.REDUCE_SATURATION_ENABLED));
-    let Y = (0, A.A)(),
-        W = (0, m.Ml)("RootThemeContextProvider"),
+    let W = (0, A.A)(),
+        Y = (0, m.Ml)("RootThemeContextProvider"),
         K = (0, m.CL)("RootThemeContextProvider"),
         z = (0, m.VM)("RootThemeContextProvider"),
         q = (0, g.U)("RootThemeContextProvider"),
@@ -148,14 +149,14 @@ function D(e) {
             i.useMemo(() => {
                 let e = [];
                 return (
-                    W && e.push("refresh-fast-follow-avatars"),
+                    Y && e.push("refresh-fast-follow-avatars"),
                     K && e.push("refresh-fast-follow-guild-bg"),
                     z && e.push("refresh-fast-follow-distinct-borders"),
                     q && e.push("mana-text-inputs"),
                     X && e.push("mana-toggle-inputs"),
                     e
                 );
-            }, [W, K, z, q, X]),
+            }, [Y, K, z, q, X]),
             N,
             _,
         );
@@ -165,11 +166,11 @@ function D(e) {
             theme: b,
             flags: H,
             saturation: x,
-            density: Y,
+            density: W,
             children: (0, r.jsx)(C.cE, {
                 lang: _,
                 theme: b,
-                density: Y,
+                density: W,
                 focused: N,
                 fontScale: D,
                 fontScaleClass: w,
@@ -186,7 +187,7 @@ function D(e) {
                 isPopoutWindow: o,
                 rootClassName: s()(Q, {
                     "confetti-mode": B,
-                    "refresh-fast-follow-avatars": W,
+                    "refresh-fast-follow-avatars": Y,
                     "refresh-fast-follow-guild-bg": K,
                     "refresh-fast-follow-distinct-borders": z,
                 }),

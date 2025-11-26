@@ -9,6 +9,7 @@ var r = n(54381),
     a = n(227399);
 let o = {
         i18n: {
+            CANCEL: "Cancel",
             SPINNER_LOADING_LABEL: "Loading",
             BUTTON_LOADING_STARTED_LABEL: "Loading",
             BUTTON_LOADING_FINISHED_LABEL: "Loading",

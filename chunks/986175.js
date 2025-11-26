@@ -1,4 +1,4 @@
-n.d(t, { I: () => O });
+n.d(t, { I: () => v });
 var r = n(54381),
     i = n(473749),
     a = n(164617),
@@ -7,9 +7,10 @@ var r = n(54381),
     l = n(333200),
     c = n(352065),
     u = n(481060),
-    d = n(177475),
-    f = n(691739);
-function _(e, t, n) {
+    d = n(248514),
+    f = n(177475),
+    _ = n(691739);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,8 +23,8 @@ function _(e, t, n) {
         e
     );
 }
-function p() {
-    return (p =
+function h() {
+    return (h =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -33,11 +34,11 @@ function p() {
             return e;
         }).apply(this, arguments);
 }
-function h(e) {
+function m(e) {
     if (null == e) throw TypeError("Cannot destructure " + e);
     return e;
 }
-function m(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,12 +49,12 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function g(e, t) {
+function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,22 +66,22 @@ function g(e, t) {
     }
     return n;
 }
-function E(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : g(Object(t)).forEach(function (n) {
+            : E(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function b(e, t) {
+function y(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = y(e, t);
+        i = O(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -88,7 +89,7 @@ function b(e, t) {
     }
     return i;
 }
-function y(e, t) {
+function O(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -97,7 +98,7 @@ function y(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let O = {
+let v = {
     title: "Modal",
     stories: [
         {
@@ -107,7 +108,7 @@ let O = {
             component: function (e) {
                 var t,
                     { showPreview: n, showInput: i, subtitleIcon: a } = e,
-                    s = b(e, ["showPreview", "showInput", "subtitleIcon"]);
+                    s = y(e, ["showPreview", "showInput", "subtitleIcon"]);
                 let c = a
                     ? {
                           text: null != (t = s.subtitle) ? t : "Default subtitle",
@@ -130,7 +131,7 @@ let O = {
                                     (e) =>
                                         (0, r.jsx)(
                                             o.Modal,
-                                            E(m({}, e, s), {
+                                            b(g({}, e, s), {
                                                 title: s.title,
                                                 subtitle: c,
                                                 input: i
@@ -288,25 +289,85 @@ let O = {
             },
         },
         {
+            name: "ConfirmModal",
+            id: "confirm-modal",
+            component: function (e) {
+                var { cancelText: t } = e,
+                    n = y(e, ["cancelText"]);
+                return (0, r.jsxs)(u.Kqy, {
+                    gap: 16,
+                    align: "center",
+                    children: [
+                        (0, r.jsx)(u.Text, {
+                            variant: "text-md/normal",
+                            children: "Click the button below to open the confirm modal",
+                        }),
+                        (0, r.jsx)(u.Button, {
+                            variant: "primary",
+                            text: "Open Confirm Modal",
+                            onClick: () => (0, d.Z)(b(g({}, n), { cancelText: "" === t ? void 0 : t })),
+                        }),
+                    ],
+                });
+            },
+            controls: {
+                title: {
+                    label: "Title",
+                    type: "text",
+                    defaultValue: "Confirm Action",
+                },
+                subtitle: {
+                    label: "Subtitle",
+                    type: "text",
+                    defaultValue: "Are you sure you want to do the thing?",
+                },
+                confirmText: {
+                    label: "Confirm Text",
+                    type: "text",
+                    defaultValue: "I sure do",
+                },
+                cancelText: {
+                    label: "Cancel Text",
+                    type: "text",
+                    defaultValue: "",
+                },
+                variant: {
+                    label: "Variant",
+                    type: "select",
+                    defaultValue: "primary",
+                    options: [
+                        {
+                            label: "Primary",
+                            value: "primary",
+                        },
+                        {
+                            label: "Critical",
+                            value: "critical",
+                        },
+                    ],
+                },
+            },
+        },
+        {
             name: "ExpressiveModal",
             id: "expressive-modal",
             docs: "https://design.discord.tools/components/web/modals/expressive-modal",
             component: function (e) {
                 var t,
                     { graphic: l, subtitleIcon: c } = e,
-                    _ = b(e, ["graphic", "subtitleIcon"]);
+                    d = y(e, ["graphic", "subtitleIcon"]);
                 let p = c
                         ? {
-                              text: null != (t = _.subtitle) ? t : "Default subtitle",
+                              text: null != (t = d.subtitle) ? t : "Default subtitle",
                               leadingIcon: o.VL1,
                           }
-                        : _.subtitle,
+                        : d.subtitle,
                     h = i.useMemo(
                         () =>
                             0 === l
                                 ? {
                                       type: "image",
-                                      src: d,
+                                      src: f,
                                   }
                                 : 1 === l
                                   ? {
@@ -322,8 +383,8 @@ let O = {
                                     : 3 === l
                                       ? {
                                             type: "video",
-                                            src: f.Z,
-                                            fallbackImageSrc: d,
+                                            src: _.Z,
+                                            fallbackImageSrc: f,
                                             loop: !0,
                                             loopAt: 2.5,
                                         }
@@ -353,8 +414,8 @@ let O = {
                                     (e) =>
                                         (0, r.jsx)(
                                             o.ExpressiveModal,
-                                            E(m({}, e, _), {
-                                                title: _.title,
+                                            b(g({}, e, d), {
+                                                title: d.title,
                                                 subtitle: p,
                                                 graphic: h,
                                                 actions: [
@@ -379,7 +440,7 @@ let O = {
                                                 }),
                                             }),
                                         ),
-                                    { dismissable: _.dismissable },
+                                    { dismissable: d.dismissable },
                                 ),
                         }),
                     ],
@@ -482,7 +543,7 @@ let O = {
             id: "dynamic-graphic-modal",
             component: function (e) {
                 var { dynamicText: t } = e,
-                    i = b(e, ["dynamicText"]);
+                    i = y(e, ["dynamicText"]);
                 let a = {
                     type: "dynamic",
                     component: s.DynamicGraphicComponent.DEMO,
@@ -508,7 +569,7 @@ let O = {
                                         return (t) =>
                                             (0, r.jsx)(
                                                 e,
-                                                E(m({}, t, i), {
+                                                b(g({}, t, i), {
                                                     title: i.title,
                                                     subtitle: i.subtitle,
                                                     graphic: a,
@@ -610,7 +671,7 @@ let O = {
             name: "LayerModal",
             id: "layer-modal",
             component: function (e) {
-                var t = p({}, h(e));
+                var t = h({}, m(e));
                 return (0, r.jsxs)(u.Kqy, {
                     gap: 16,
                     align: "center",
@@ -626,7 +687,7 @@ let O = {
                                 (0, u.h7j)((e) =>
                                     (0, r.jsx)(
                                         c.A,
-                                        E(m({}, e, t), {
+                                        b(g({}, e, t), {
                                             children: (0, r.jsx)(u.Kqy, {
                                                 gap: 16,
                                                 children: (0, r.jsx)(u.Text, {
