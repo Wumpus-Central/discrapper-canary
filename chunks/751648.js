@@ -1,7 +1,6 @@
 n.d(t, {
     ZO: () => u,
     df: () => d,
-    qD: () => f,
 }),
     n(415506);
 var r = n(544891),
@@ -90,10 +89,4 @@ async function d(e) {
             _ && u(),
             null == f || f(e);
     }
-}
-function f(e) {
-    return i.Z.dispatch({
-        type: "VIRTUAL_CURRENCY_SET_BALANCE_PILL_OVERLAY",
-        balancePillOverlay: e,
-    });
 }

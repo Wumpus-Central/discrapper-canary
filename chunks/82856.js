@@ -1,16 +1,12 @@
-n.d(t, {
-    o: () => g,
-    y: () => E,
-});
-var r = n(54381),
-    i = n(473749),
-    a = n(442837),
-    o = n(481060),
-    s = n(493773),
-    l = n(751648),
-    c = n(479766),
-    u = n(970815);
-function d(e, t, n) {
+n.d(t, { y: () => p });
+var r = n(54381);
+n(473749);
+var i = n(442837),
+    a = n(481060);
+n(493773), n(751648);
+var o = n(479766),
+    s = n(970815);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +19,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,12 +30,12 @@ function f(e) {
                 }),
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                l(e, t, n[t]);
             });
     }
     return e;
 }
-function _(e, t) {
+function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -51,22 +47,22 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function d(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : u(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -74,7 +70,7 @@ function h(e, t) {
     }
     return i;
 }
-function m(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -83,47 +79,30 @@ function m(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function g() {
-    let e = (0, a.e7)([c.Z], () => c.Z.balancePillOverlay);
-    return (
-        (0, s.ZP)(() => {
-            setTimeout(() => {
-                e || (0, l.qD)(!0);
-            }, 300);
-        }),
-        (0, i.useEffect)(
-            () => () => {
-                !(0, o.$sL)() && e && (0, l.qD)(!1);
-            },
-            [e],
-        ),
-        null
-    );
-}
-function E(e) {
+function p(e) {
     var { pillRef: t } = e,
-        n = h(e, ["pillRef"]);
-    let { balancePillOverlay: i } = (0, a.cj)([c.Z], () => ({ balancePillOverlay: c.Z.balancePillOverlay })),
-        s = (0, r.jsx)(u.A4, f({ ref: t }, n)),
-        l = (0, r.jsx)(
-            u.A4,
-            p(f({}, n), {
+        n = f(e, ["pillRef"]);
+    let { balancePillOverlay: l } = (0, i.cj)([o.Z], () => ({ balancePillOverlay: o.Z.balancePillOverlay })),
+        u = (0, r.jsx)(s.A4, c({ ref: t }, n)),
+        _ = (0, r.jsx)(
+            s.A4,
+            d(c({}, n), {
                 isInModalOverlay: !0,
                 disabled: !0,
             }),
         ),
-        d = null != t.current ? t.current.offsetHeight : 36;
-    return (0, r.jsx)(o.yRy, {
+        p = null != t.current ? t.current.offsetHeight : 36;
+    return (0, r.jsx)(a.yRy, {
         fixed: !0,
         autoInvert: !1,
-        renderPopout: () => l,
+        renderPopout: () => _,
         position: "bottom",
         align: "right",
-        shouldShow: i,
-        spacing: -d,
-        animation: o.yRy.Animation.NONE,
+        shouldShow: l,
+        spacing: -p,
+        animation: a.yRy.Animation.NONE,
         targetElementRef: t,
-        positionKey: "".concat(n.balance, "-").concat(i),
-        children: () => s,
+        positionKey: "".concat(n.balance, "-").concat(l),
+        children: () => u,
     });
 }

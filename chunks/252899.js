@@ -18,10 +18,16 @@ function d(e, t) {
             if ("" === n.trim()) return e;
             let t = n.toLowerCase().trim();
             return e.filter((e) => {
-                var n, a;
-                let l = (null != (n = (0, i.q)(e.name)) ? n : "").toLowerCase(),
-                    r = (null != (a = e.group) ? a : "").toLowerCase();
-                return l.includes(t) || e.id.toLowerCase().includes(t) || r.includes(t);
+                var n, a, l;
+                let r = (null != (n = (0, i.q)(e.name)) ? n : "").toLowerCase(),
+                    s = (null != (a = e.group) ? a : "").toLowerCase(),
+                    o = null != (l = e.tags) ? l : [];
+                return (
+                    r.includes(t) ||
+                    e.id.toLowerCase().includes(t) ||
+                    s.includes(t) ||
+                    o.some((e) => e.toLowerCase().includes(t))
+                );
             });
         }, [e, n]);
     return [

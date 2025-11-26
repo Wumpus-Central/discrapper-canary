@@ -1,8 +1,25 @@
-e.exports = {
-    headerImage: "headerImage__88fd6",
-    header: "header__88fd6",
-    title: "title__88fd6",
-    modalCloseButton: "modalCloseButton__88fd6",
-    content: "content__88fd6",
-    modalFooter: "modalFooter__88fd6",
-};
+t.d(n, { Z: () => i });
+var r = t(54381),
+    a = t(8561);
+function i(e) {
+    let { children: n, actions: t } = e;
+    return (0, r.jsx)("div", {
+        className: a.card,
+        children: (0, r.jsxs)("div", {
+            className: a.contentWrapper,
+            children: [
+                n,
+                null != t &&
+                    (0, r.jsxs)(r.Fragment, {
+                        children: [
+                            (0, r.jsx)("div", { className: a.divider }),
+                            (0, r.jsx)("div", {
+                                className: a.serverActions,
+                                children: t,
+                            }),
+                        ],
+                    }),
+            ],
+        }),
+    });
+}

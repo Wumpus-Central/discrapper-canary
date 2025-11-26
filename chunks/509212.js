@@ -20,12 +20,11 @@ n.d(t, {
     Gd: () => tZ,
     Gs: () => et,
     HJ: () => tO,
-    Jg: () => eW,
+    Jg: () => eY,
     K: () => eF,
     KM: () => e0,
     Kr: () => ek,
     LM: () => eV,
-    M1: () => nn,
     MC: () => $,
     Mo: () => en,
     NI: () => t3,
@@ -50,7 +49,7 @@ n.d(t, {
     WP: () => eE,
     Xh: () => eA,
     Xv: () => eG,
-    ZS: () => tW,
+    ZS: () => tY,
     ZZ: () => es,
     Zp: () => tV,
     _4: () => tG,
@@ -92,11 +91,10 @@ n.d(t, {
     xn: () => ex,
     yH: () => tk,
     yI: () => eI,
-    ys: () => eY,
+    ys: () => eW,
     z1: () => tq,
     zE: () => eL,
     zG: () => nr,
-    zK: () => e1,
     zi: () => ed,
     zo: () => e4,
 }),
@@ -178,7 +176,7 @@ function H(e) {
     }
     return e;
 }
-function Y(e, t) {
+function W(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -190,12 +188,12 @@ function Y(e, t) {
     }
     return n;
 }
-function W(e, t) {
+function Y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : Y(Object(t)).forEach(function (n) {
+            : W(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -573,10 +571,10 @@ function eV(e) {
 function eH(e, t) {
     return e.targetedContent.includes(t);
 }
-function eY(e, t) {
-    P.Z.captureException(e, W(H({}, t), { tags: W(H({}, null == t ? void 0 : t.tags), { app_context: "quests" }) }));
-}
 function eW(e, t) {
+    P.Z.captureException(e, Y(H({}, t), { tags: Y(H({}, null == t ? void 0 : t.tags), { app_context: "quests" }) }));
+}
+function eY(e, t) {
     if (null == t || null == e) return null;
     for (let n of t) {
         let t = es(e, n);
@@ -1035,10 +1033,10 @@ function tH(e) {
     let t = tV(e);
     return null != t && G.v6.has(t);
 }
-let tY = "landscape";
-function tW(e) {
+let tW = "landscape";
+function tY(e) {
     let t = e.assets.video;
-    return null == t || null == t.width || null == t.height ? tY : t.width > t.height ? "landscape" : "portrait";
+    return null == t || null == t.width || null == t.height ? tW : t.width > t.height ? "landscape" : "portrait";
 }
 let tK = (e) =>
     e.percentComplete > 0
