@@ -202,58 +202,88 @@ let { Themes: r } = n(15202).V,
             BACKGROUND_BASE_LOW: {
                 category: "background",
                 [r.DARK]: {
-                    raw: "NEUTRAL_66",
+                    raw: "PRIMARY_600",
                     opacity: 1,
                 },
                 [r.LIGHT]: {
-                    raw: "NEUTRAL_2",
+                    raw: "WHITE",
                     opacity: 1,
                 },
                 [r.MIDNIGHT]: {
-                    raw: "NEUTRAL_95",
+                    raw: "BLACK",
                     opacity: 1,
                 },
                 [r.DARKER]: {
-                    raw: "NEUTRAL_82",
+                    raw: "PLUM_20",
                     opacity: 1,
+                },
+                gradient: {
+                    light: {
+                        color: "WHITE_500",
+                        opacity: 0.8,
+                    },
+                    dark: {
+                        color: "BLACK_500",
+                        opacity: 0.7,
+                    },
                 },
             },
             BACKGROUND_BASE_LOWER: {
                 category: "background",
                 [r.DARK]: {
-                    raw: "NEUTRAL_69",
+                    raw: "PRIMARY_630",
                     opacity: 1,
                 },
                 [r.LIGHT]: {
-                    raw: "NEUTRAL_2",
+                    raw: "PRIMARY_130",
                     opacity: 1,
                 },
                 [r.MIDNIGHT]: {
-                    raw: "NEUTRAL_97",
+                    raw: "BLACK",
                     opacity: 1,
                 },
                 [r.DARKER]: {
-                    raw: "NEUTRAL_86",
+                    raw: "PLUM_20",
                     opacity: 1,
+                },
+                gradient: {
+                    light: {
+                        color: "WHITE_500",
+                        opacity: 0.8,
+                    },
+                    dark: {
+                        color: "BLACK_500",
+                        opacity: 0.7,
+                    },
                 },
             },
             BACKGROUND_BASE_LOWEST: {
                 category: "background",
                 [r.DARK]: {
-                    raw: "NEUTRAL_73",
+                    raw: "PRIMARY_660",
                     opacity: 1,
                 },
                 [r.LIGHT]: {
-                    raw: "NEUTRAL_4",
+                    raw: "PRIMARY_160",
                     opacity: 1,
                 },
                 [r.MIDNIGHT]: {
-                    raw: "NEUTRAL_100",
+                    raw: "BLACK",
                     opacity: 1,
                 },
                 [r.DARKER]: {
-                    raw: "NEUTRAL_92",
+                    raw: "PLUM_23",
                     opacity: 1,
+                },
+                gradient: {
+                    light: {
+                        color: "WHITE_500",
+                        opacity: 0.8,
+                    },
+                    dark: {
+                        color: "BLACK_500",
+                        opacity: 0.7,
+                    },
                 },
             },
             BACKGROUND_FEEDBACK_CRITICAL: {
@@ -637,54 +667,6 @@ let { Themes: r } = n(15202).V,
                     },
                 },
             },
-            BACKGROUND_PRIMARY: {
-                category: "background",
-                [r.DARK]: {
-                    raw: "PRIMARY_600",
-                    opacity: 1,
-                },
-                [r.LIGHT]: {
-                    raw: "WHITE",
-                    opacity: 1,
-                },
-                [r.MIDNIGHT]: {
-                    raw: "BLACK",
-                    opacity: 1,
-                },
-                [r.DARKER]: {
-                    raw: "PLUM_20",
-                    opacity: 1,
-                },
-                gradient: {
-                    light: {
-                        color: "WHITE_500",
-                        opacity: 0.5,
-                    },
-                    dark: {
-                        color: "BLACK_500",
-                        opacity: 0.5,
-                    },
-                },
-            },
-            BACKGROUND_SECONDARY: {
-                category: "background",
-                [r.DARK]: {
-                    raw: "PRIMARY_630",
-                    opacity: 1,
-                },
-                [r.LIGHT]: {
-                    raw: "PRIMARY_130",
-                    opacity: 1,
-                },
-                [r.MIDNIGHT]: {
-                    raw: "PLUM_23",
-                    opacity: 1,
-                },
-                [r.DARKER]: {
-                    raw: "PLUM_18",
-                    opacity: 1,
-                },
-            },
             BACKGROUND_SECONDARY_ALT: {
                 category: "background",
                 [r.DARK]: {
@@ -712,25 +694,6 @@ let { Themes: r } = n(15202).V,
                         color: "BLACK_500",
                         opacity: 0.5,
                     },
-                },
-            },
-            BACKGROUND_TERTIARY: {
-                category: "background",
-                [r.DARK]: {
-                    raw: "PRIMARY_700",
-                    opacity: 1,
-                },
-                [r.LIGHT]: {
-                    raw: "PRIMARY_200",
-                    opacity: 1,
-                },
-                [r.MIDNIGHT]: {
-                    raw: "PLUM_19",
-                    opacity: 1,
-                },
-                [r.DARKER]: {
-                    raw: "PLUM_16",
-                    opacity: 1,
                 },
             },
             BACKGROUND_TILE_GRADIENT_PINK_END: {
@@ -878,93 +841,6 @@ let { Themes: r } = n(15202).V,
                 [r.DARKER]: {
                     raw: "BLACK",
                     opacity: 1,
-                },
-            },
-            BG_BASE_PRIMARY: {
-                category: "background",
-                [r.DARK]: {
-                    raw: "PRIMARY_600",
-                    opacity: 1,
-                },
-                [r.LIGHT]: {
-                    raw: "WHITE",
-                    opacity: 1,
-                },
-                [r.MIDNIGHT]: {
-                    raw: "BLACK",
-                    opacity: 1,
-                },
-                [r.DARKER]: {
-                    raw: "PLUM_20",
-                    opacity: 1,
-                },
-                gradient: {
-                    light: {
-                        color: "WHITE_500",
-                        opacity: 0.8,
-                    },
-                    dark: {
-                        color: "BLACK_500",
-                        opacity: 0.7,
-                    },
-                },
-            },
-            BG_BASE_SECONDARY: {
-                category: "background",
-                [r.DARK]: {
-                    raw: "PRIMARY_630",
-                    opacity: 1,
-                },
-                [r.LIGHT]: {
-                    raw: "PRIMARY_130",
-                    opacity: 1,
-                },
-                [r.MIDNIGHT]: {
-                    raw: "BLACK",
-                    opacity: 1,
-                },
-                [r.DARKER]: {
-                    raw: "PLUM_20",
-                    opacity: 1,
-                },
-                gradient: {
-                    light: {
-                        color: "WHITE_500",
-                        opacity: 0.8,
-                    },
-                    dark: {
-                        color: "BLACK_500",
-                        opacity: 0.7,
-                    },
-                },
-            },
-            BG_BASE_TERTIARY: {
-                category: "background",
-                [r.DARK]: {
-                    raw: "PRIMARY_660",
-                    opacity: 1,
-                },
-                [r.LIGHT]: {
-                    raw: "PRIMARY_160",
-                    opacity: 1,
-                },
-                [r.MIDNIGHT]: {
-                    raw: "BLACK",
-                    opacity: 1,
-                },
-                [r.DARKER]: {
-                    raw: "PLUM_23",
-                    opacity: 1,
-                },
-                gradient: {
-                    light: {
-                        color: "WHITE_500",
-                        opacity: 0.8,
-                    },
-                    dark: {
-                        color: "BLACK_500",
-                        opacity: 0.7,
-                    },
                 },
             },
             BG_BRAND: {
@@ -4869,19 +4745,19 @@ let { Themes: r } = n(15202).V,
             GRADIENT_PROGRESS_PILL_BACKGROUND: {
                 category: "generic",
                 [r.DARK]: {
-                    raw: "NEUTRAL_45",
+                    raw: "NEUTRAL_46",
                     opacity: 1,
                 },
                 [r.LIGHT]: {
-                    raw: "NEUTRAL_18",
+                    raw: "NEUTRAL_17",
                     opacity: 1,
                 },
                 [r.MIDNIGHT]: {
-                    raw: "NEUTRAL_63",
+                    raw: "NEUTRAL_66",
                     opacity: 1,
                 },
                 [r.DARKER]: {
-                    raw: "NEUTRAL_56",
+                    raw: "NEUTRAL_57",
                     opacity: 1,
                 },
             },
@@ -5335,7 +5211,7 @@ let { Themes: r } = n(15202).V,
             INPUT_BORDER_CRITICAL_HOVER: {
                 category: "background",
                 [r.DARK]: {
-                    raw: "RED_NEW_22",
+                    raw: "RED_NEW_24",
                     opacity: 1,
                 },
                 [r.LIGHT]: {
@@ -5343,7 +5219,7 @@ let { Themes: r } = n(15202).V,
                     opacity: 1,
                 },
                 [r.MIDNIGHT]: {
-                    raw: "RED_NEW_37",
+                    raw: "RED_NEW_40",
                     opacity: 1,
                 },
                 [r.DARKER]: {
@@ -5449,15 +5325,15 @@ let { Themes: r } = n(15202).V,
             INPUT_FOREGROUND_DEFAULT: {
                 category: "background",
                 [r.DARK]: {
-                    raw: "NEUTRAL_9",
+                    raw: "NEUTRAL_12",
                     opacity: 1,
                 },
                 [r.LIGHT]: {
-                    raw: "NEUTRAL_69",
+                    raw: "NEUTRAL_72",
                     opacity: 1,
                 },
                 [r.MIDNIGHT]: {
-                    raw: "NEUTRAL_10",
+                    raw: "NEUTRAL_12",
                     opacity: 1,
                 },
                 [r.DARKER]: {
@@ -5830,7 +5706,7 @@ let { Themes: r } = n(15202).V,
             NOTICE_BACKGROUND_POSITIVE: {
                 category: "generic",
                 [r.DARK]: {
-                    raw: "GREEN_NEW_76",
+                    raw: "GREEN_NEW_78",
                     opacity: 1,
                 },
                 [r.LIGHT]: {
@@ -5838,11 +5714,11 @@ let { Themes: r } = n(15202).V,
                     opacity: 1,
                 },
                 [r.MIDNIGHT]: {
-                    raw: "GREEN_NEW_96",
+                    raw: "GREEN_NEW_99",
                     opacity: 1,
                 },
                 [r.DARKER]: {
-                    raw: "GREEN_NEW_87",
+                    raw: "GREEN_NEW_88",
                     opacity: 1,
                 },
             },

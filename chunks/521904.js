@@ -167,6 +167,16 @@ let { Themes: r } = n(15202).V,
                     raw: "NEUTRAL_82",
                     opacity: 1,
                 },
+                gradient: {
+                    light: {
+                        color: "WHITE_500",
+                        opacity: 0.8,
+                    },
+                    dark: {
+                        color: "BLACK_500",
+                        opacity: 0.7,
+                    },
+                },
             },
             BACKGROUND_BASE_LOWER: {
                 category: "background",
@@ -186,6 +196,16 @@ let { Themes: r } = n(15202).V,
                     raw: "NEUTRAL_86",
                     opacity: 1,
                 },
+                gradient: {
+                    light: {
+                        color: "WHITE_500",
+                        opacity: 0.8,
+                    },
+                    dark: {
+                        color: "BLACK_500",
+                        opacity: 0.7,
+                    },
+                },
             },
             BACKGROUND_BASE_LOWEST: {
                 category: "background",
@@ -204,6 +224,16 @@ let { Themes: r } = n(15202).V,
                 [r.DARKER]: {
                     raw: "NEUTRAL_92",
                     opacity: 1,
+                },
+                gradient: {
+                    light: {
+                        color: "WHITE_500",
+                        opacity: 0.8,
+                    },
+                    dark: {
+                        color: "BLACK_500",
+                        opacity: 0.7,
+                    },
                 },
             },
             BACKGROUND_CODE: {
