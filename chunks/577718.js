@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(704215),
@@ -8,11 +8,10 @@ var r = n(54381),
     c = n(34131),
     u = n(567458),
     d = n(782959),
-    p = n(511342),
-    f = n(933104),
-    h = n(337721),
-    g = n(921944);
-function m(e) {
+    p = n(933104),
+    f = n(337721),
+    h = n(921944);
+function g(e) {
     let { renderPopout: t, renderGuildHeaderDropdownButton: n } = e,
         l = i.useRef(null);
     return (0, r.jsx)(a.yRy, {
@@ -33,65 +32,59 @@ function m(e) {
             }),
     });
 }
-let _ = i.memo(function (e) {
+let m = i.memo(function (e) {
     let { contentTypes: t, guild: n, renderGuildHeaderDropdownButton: i } = e,
-        [a, _] = (0, s.US)(t, g.R.GUILD_HEADER_TOOLTIPS);
+        [a, m] = (0, s.US)(t, h.R.GUILD_HEADER_TOOLTIPS);
     return (0, r.jsx)(r.Fragment, {
         children: (() => {
             switch (a) {
                 case l.z.GUILD_POWERUP_PERKS_COACHMARK:
-                    return (0, r.jsx)(m, {
+                    return (0, r.jsx)(g, {
                         renderPopout: (e) =>
-                            (0, r.jsx)(f.$h, {
+                            (0, r.jsx)(p.$h, {
                                 guildId: n.id,
-                                markAsDismissed: _,
+                                markAsDismissed: m,
                                 channelRowRef: e,
                             }),
                         renderGuildHeaderDropdownButton: i,
                     });
-                case l.z.GUILD_HEADER_BOOST_PROGRESS_BAR_UPSELL:
-                    return (0, r.jsx)(p.Z, {
-                        guild: n,
-                        markAsDismissed: _,
-                        renderTargetElement: i,
-                    });
                 case l.z.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL:
-                    return (0, r.jsx)(m, {
+                    return (0, r.jsx)(g, {
                         renderPopout: (e) =>
                             (0, r.jsx)(o.Z, {
                                 guildId: n.id,
-                                markAsDismissed: _,
+                                markAsDismissed: m,
                                 targetElementRef: e,
                             }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case l.z.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL:
-                    return (0, r.jsx)(m, {
+                    return (0, r.jsx)(g, {
                         renderPopout: (e) =>
-                            (0, r.jsx)(h.Z, {
+                            (0, r.jsx)(f.Z, {
                                 guild: n,
-                                markAsDismissed: _,
+                                markAsDismissed: m,
                                 targetElementRef: e,
                             }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case l.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP:
-                    return (0, r.jsx)(m, {
-                        renderPopout: (0, r.jsx)(u.Z, { markAsDismissed: _ }),
+                    return (0, r.jsx)(g, {
+                        renderPopout: (0, r.jsx)(u.Z, { markAsDismissed: m }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case l.z.MEDIA_CHANNEL_UPSELL:
                     return (0, r.jsx)(d.Z, {
                         guildId: n.id,
-                        markAsDismissed: _,
+                        markAsDismissed: m,
                         renderTargetElement: i,
                     });
                 case l.z.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL:
-                    return (0, r.jsx)(m, {
+                    return (0, r.jsx)(g, {
                         renderPopout: (e) =>
                             (0, r.jsx)(c.Z, {
                                 guildId: n.id,
-                                markAsDismissed: _,
+                                markAsDismissed: m,
                                 targetElementRef: e,
                             }),
                         renderGuildHeaderDropdownButton: i,
