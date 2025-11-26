@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => j });
 var i = n(54381),
     r = n(473749),
     l = n(772848),
@@ -16,77 +16,78 @@ var i = n(54381),
     b = n(582113),
     y = n(981631),
     C = n(701488),
-    v = n(388032),
-    _ = n(842350);
-let x = "vc-gifting-".concat((0, l.Z)());
-function O(e) {
+    v = n(474936),
+    _ = n(388032),
+    x = n(842350);
+let O = "vc-gifting-".concat((0, l.Z)());
+function j(e) {
     var t;
-    let { isHovered: n, closePopout: l, onMouseEnter: O, onMouseLeave: j, channel: E } = e;
+    let { isHovered: n, closePopout: l, onMouseEnter: j, onMouseLeave: E, channel: S } = e;
     r.useEffect(() => {
         n || l();
     }, [l, n]);
-    let S = (0, o.e7)([c.Z], () => c.Z.getApplication(b.t9)),
-        P = r.useMemo(() => {
-            let e = null != S ? S.getIconURL(C.Si.SMALL) : void 0;
-            return null != e && null != S
+    let P = (0, o.e7)([c.Z], () => c.Z.getApplication(b.t9)),
+        I = r.useMemo(() => {
+            let e = null != P ? P.getIconURL(C.Si.SMALL) : void 0;
+            return null != e && null != P
                 ? (0, i.jsx)("img", {
                       src: e,
-                      alt: S.name,
+                      alt: P.name,
                   })
                 : null;
-        }, [S]),
+        }, [P]),
         {
-            loading: I,
-            wishlistItems: Z,
-            wishlistItemSkuIds: T,
+            loading: Z,
+            wishlistItems: T,
+            wishlistItemSkuIds: N,
         } = (0, m.Z)({
             guildId: (0, f.ac)(),
             numWishlistItems: m.W,
         });
     return (
         r.useEffect(() => {
-            0 !== T.length &&
+            0 !== N.length &&
                 h.default.track(y.rMx.COMMERCE_SHOP_VC_GIFT_BUTTON_VIEWED, {
-                    guild_id: E.guild_id,
-                    channel_id: E.id,
-                    sku_ids: T,
+                    guild_id: S.guild_id,
+                    channel_id: S.id,
+                    sku_ids: N,
                 });
-        }, [E.id, E.guild_id, T]),
+        }, [S.id, S.guild_id, N]),
         (0, i.jsx)(d.Z, {
             children: (0, i.jsx)(a.VqE, {
-                "aria-labelledby": x,
+                "aria-labelledby": O,
                 modal: !1,
                 children: (0, i.jsxs)("div", {
-                    className: _.container,
-                    onMouseEnter: O,
-                    onMouseLeave: j,
+                    className: x.container,
+                    onMouseEnter: j,
+                    onMouseLeave: E,
                     children: [
                         (0, i.jsx)(a.X6q, {
-                            className: _.title,
+                            className: x.title,
                             variant: "text-lg/bold",
                             color: "text-primary",
-                            children: v.intl.string(v.t.xLP3bi),
+                            children: _.intl.string(_.t.xLP3bi),
                         }),
                         (0, i.jsx)(a.xvT, {
-                            className: _.subtitle,
+                            className: x.subtitle,
                             variant: "text-sm/medium",
                             color: "text-secondary",
-                            children: v.intl.format(v.t["+SqhBF"], {
+                            children: _.intl.format(_.t["+SqhBF"], {
                                 applicationName:
-                                    null != (t = null == S ? void 0 : S.name) ? t : v.intl.string(v.t["/1hhto"]),
+                                    null != (t = null == P ? void 0 : P.name) ? t : _.intl.string(_.t["/1hhto"]),
                             }),
                         }),
                         (0, i.jsx)("div", {
-                            className: _.wishlistItemsContainer,
+                            className: x.wishlistItemsContainer,
                             children:
-                                I || 0 === Z.length
-                                    ? (0, i.jsx)(a.$jN, { className: _.loading })
-                                    : Z.map((e) =>
+                                Z || 0 === T.length
+                                    ? (0, i.jsx)(a.$jN, { className: x.loading })
+                                    : T.map((e) =>
                                           (0, i.jsx)(
                                               s.i_,
                                               {
-                                                  body: v.intl.string(v.t["4yiU7x"]),
-                                                  asset: P,
+                                                  body: _.intl.string(_.t["4yiU7x"]),
+                                                  asset: I,
                                                   assetSize: p.EU,
                                                   position: "top",
                                                   asContainer: !0,
@@ -100,6 +101,7 @@ function O(e) {
                                                       hideButtonIcon: !0,
                                                       showPrice: !0,
                                                       showIcons: !1,
+                                                      giftingOrigin: v.Wt.SHOP_PAGE,
                                                   }),
                                               },
                                               e.skuId,
