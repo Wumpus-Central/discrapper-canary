@@ -9,7 +9,6 @@ e.exports = {
     clanTag: "clanTag__972a0",
     clanTagMuted: "clanTagMuted__972a0",
     interactiveSelected: "interactiveSelected__972a0",
-    interactiveSystemDM: "interactiveSystemDM__972a0",
     avatarWithText: "avatarWithText__972a0",
     link: "link__972a0",
     linkButton: "linkButton__972a0",
