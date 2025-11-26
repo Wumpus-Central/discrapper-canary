@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => O }), n(388685), n(642613), n(539854);
+n.d(t, { ZP: () => j }), n(388685), n(642613), n(539854);
 var i = n(473749),
     r = n(392711),
     l = n.n(r),
@@ -54,7 +54,7 @@ let x = {
     scrollHeight: 0,
     offsetHeight: 0,
 };
-class j {
+class O {
     isReady() {
         return this.props.messages.ready;
     }
@@ -499,7 +499,7 @@ class j {
             (this.jumping = !0);
         let r = () => {
             (this.jumping = !1),
-                (0, a.kK)(i) && u.Z.keyboardModeEnabled && i.focus({ preventScroll: !0 }),
+                (0, a.kK)(i) && ((i.tabIndex = -1), i.focus({ preventScroll: !0 })),
                 (this.scrollCounter = 0),
                 this.handleScroll(),
                 this._scrollCompleteCallbacks.forEach((e) => e());
@@ -690,7 +690,7 @@ class j {
         }
     }
 }
-function O(e) {
+function j(e) {
     let {
             messages: t,
             channel: n,
@@ -706,7 +706,7 @@ function O(e) {
         { windowId: h } = i.useContext(d.ZP),
         [f] = i.useState(
             () =>
-                new j({
+                new O({
                     messages: t,
                     channel: n,
                     compact: r,
