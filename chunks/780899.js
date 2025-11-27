@@ -1,7 +1,7 @@
 n.d(t, {
-    Y9: () => p,
-    e_: () => b,
-    yW: () => m,
+    Y9: () => m,
+    e_: () => h,
+    yW: () => b,
 }),
     n(388685);
 var r = n(54381),
@@ -11,9 +11,10 @@ var r = n(54381),
     o = n(891371),
     c = n(692992),
     s = n(665379),
-    u = n(481060),
-    d = n(388032);
-function f(e) {
+    u = n(681715),
+    d = n(481060),
+    f = n(388032);
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +39,7 @@ function f(e) {
     }
     return e;
 }
-function g(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -58,7 +59,7 @@ function g(e, t) {
     }
     return i;
 }
-function p(e) {
+function m(e) {
     let {
             dragRef: t,
             dropRef: n,
@@ -87,15 +88,15 @@ function p(e) {
             }),
             [l, r, u, d],
         ),
-        [{ isDragging: y }, O, v] = (0, o.c)({
+        [{ isDragging: y }, v, O] = (0, o.c)({
             type: m,
             item: h,
             collect: (e) => ({ isDragging: e.isDragging() }),
             end: g,
         });
     i.useEffect(() => {
-        p && v((0, s.r)(), { captureDraggingState: !0 });
-    }, [v, p]);
+        p && O((0, s.r)(), { captureDraggingState: !0 });
+    }, [O, p]);
     let [{ dragSourcePosition: j }, x] = (0, c.L)({
         accept: m,
         drop: (e) => {
@@ -111,13 +112,13 @@ function p(e) {
     return (
         i.useLayoutEffect(
             () => (
-                O(t),
+                v(t),
                 x(n),
                 () => {
-                    x(null), O(null);
+                    x(null), v(null);
                 }
             ),
-            [O, t, x, n],
+            [v, t, x, n],
         ),
         {
             isDragging: y,
@@ -125,7 +126,7 @@ function p(e) {
         }
     );
 }
-let m = i.memo(function (e) {
+let b = i.memo(function (e) {
     var {
             index: t,
             className: n,
@@ -135,7 +136,7 @@ let m = i.memo(function (e) {
             "aria-label": s,
             children: u,
         } = e,
-        d = g(e, [
+        d = p(e, [
             "index",
             "className",
             "draggingClassName",
@@ -144,60 +145,65 @@ let m = i.memo(function (e) {
             "aria-label",
             "children",
         ]);
-    let m = i.useRef(null),
-        { isDragging: b, dragSourcePosition: h } = p(
-            f(
+    let f = i.useRef(null),
+        { isDragging: b, dragSourcePosition: h } = m(
+            g(
                 {
-                    dragRef: m,
-                    dropRef: m,
+                    dragRef: f,
+                    dropRef: f,
                     index: t,
                 },
                 d,
             ),
         ),
         y = null != h,
-        O = y && t < h,
-        v = y && t > h;
+        v = y && t < h,
+        O = y && t > h;
     return (0, r.jsx)("div", {
-        ref: m,
-        className: l()(n, b && a, O && o, v && c),
+        ref: f,
+        className: l()(n, b && a, v && o, O && c),
         "aria-label": s,
         children: u,
     });
 });
-function b(e) {
+function h(e) {
     var t,
         n,
         { buttonRef: i, "aria-label": a, iconSize: l = "sm" } = e,
-        o = g(e, ["buttonRef", "aria-label", "iconSize"]);
-    return (0, r.jsx)(
-        u.P3F,
-        ((t = f(
-            {
-                innerRef: i,
-                "aria-label": null != a ? a : d.intl.string(d.t.Zc1neM),
-            },
-            o,
-        )),
-        (n = n =
-            {
-                children: (0, r.jsx)(u.Vni, {
-                    size: l,
-                    color: "currentColor",
+        o = p(e, ["buttonRef", "aria-label", "iconSize"]);
+    return (0, r.jsx)(u.i_, {
+        body: f.intl.format(f.t["zvln/l"], { emphasizeHook: (e) => (0, r.jsx)("strong", { children: e }) }),
+        ariaHidden: !0,
+        children: (0, r.jsx)(
+            d.P3F,
+            ((t = g(
+                {
+                    innerRef: i,
+                    "aria-label": null != a ? a : f.intl.string(f.t.Zc1neM),
+                    "aria-keyshortcuts": "Control+D, Meta+D",
+                },
+                o,
+            )),
+            (n = n =
+                {
+                    children: (0, r.jsx)(d.Vni, {
+                        size: l,
+                        color: "currentColor",
+                    }),
                 }),
-            }),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(n)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-              }),
-        t),
-    );
+            Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                : (function (e, t) {
+                      var n = Object.keys(e);
+                      if (Object.getOwnPropertySymbols) {
+                          var r = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, r);
+                      }
+                      return n;
+                  })(Object(n)).forEach(function (e) {
+                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                  }),
+            t),
+        ),
+    });
 }

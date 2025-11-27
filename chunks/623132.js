@@ -15,8 +15,8 @@ var r = n(54381),
     b = n(780899),
     h = n(733231),
     y = n(817053),
-    O = n(248554),
-    v = n(879877),
+    v = n(248554),
+    O = n(879877),
     j = n(533815),
     x = n(919498),
     _ = n(394606),
@@ -176,8 +176,8 @@ function A(e) {
         g = (0, s.Dt)(),
         b = (0, s.Dt)(),
         { trackUserProfileEditAction: h } = (0, p.KZ)(),
-        [y, O] = i.useState("idle"),
-        [v, j] = i.useState(null != t ? t : ""),
+        [y, v] = i.useState("idle"),
+        [O, j] = i.useState(null != t ? t : ""),
         x = i.useRef(null),
         _ = i.useRef(null),
         I = P.intl.string(P.t.xKSfBT),
@@ -187,20 +187,20 @@ function A(e) {
                 action: "PRESS_ADD_COMMENTARY",
                 widgetEdited: d,
             }),
-                O("editing");
+                v("editing");
         }, [d, h]),
         T = i.useCallback(() => {
-            let e = v.trim(),
+            let e = O.trim(),
                 n = e !== (null != t ? t : "").trim();
             (0, m.Bu)(d, f, "" !== e ? e : void 0),
-                O("completed"),
+                v("completed"),
                 n &&
                     h({
                         action: "COMMENTARY_EDITED",
                         widgetEdited: d,
                         gameId: f,
                     });
-        }, [d, f, v, t, h]),
+        }, [d, f, O, t, h]),
         C = i.useCallback((e) => {
             j(e);
         }, []);
@@ -225,7 +225,7 @@ function A(e) {
                       }),
                       (0, r.jsx)(c.Kx8, {
                           id: g,
-                          value: v,
+                          value: O,
                           placeholder: I,
                           onChange: C,
                           onBlur: T,
@@ -286,8 +286,8 @@ function Z(e) {
             className: P,
         } = e,
         { applicationId: D, comment: k, tags: Z } = o,
-        { coverImageUrl: R, gameName: L, isLoading: M } = (0, _.Z)(D),
-        G = {
+        { coverImageUrl: R, gameName: G, isLoading: L } = (0, _.Z)(D),
+        M = {
             variant: "heading-sm/medium",
             color: "text-default",
         },
@@ -298,14 +298,14 @@ function Z(e) {
         H = W && (0, m.vI)(s),
         z = W && !U,
         { registerDragHandleRef: K } = (0, h.C)(),
-        V = i.useRef(null);
-    if (M) return (0, r.jsx)(O.i, {});
-    let q = () =>
+        q = i.useRef(null);
+    if (L) return (0, r.jsx)(v.i, {});
+    let V = () =>
             (0, r.jsx)(y.Z, {
                 coverRef: p,
                 className: null == R || u ? void 0 : I.hoverActiveEffect,
                 imageSrc: R,
-                gameName: L,
+                gameName: G,
                 applicationId: D,
                 userId: t.id,
                 disableInteraction: u,
@@ -317,32 +317,31 @@ function Z(e) {
                 children: [
                     z
                         ? (0, r.jsxs)("div", {
-                              ref: V,
+                              ref: q,
                               className: w.dragHandleContainer,
                               children: [
-                                  q(),
+                                  V(),
                                   (0, r.jsx)(b.e_, {
                                       buttonRef: K(o.applicationId),
                                       className: w.dragHandle,
-                                      focusProps: { ringTarget: V },
                                   }),
                               ],
                           })
-                        : q(),
+                        : V(),
                     (0, r.jsxs)("div", {
                         className: w.details,
                         children: [
                             u
-                                ? (0, r.jsx)(c.Heading, E(S({}, G), { children: L }))
+                                ? (0, r.jsx)(c.Heading, E(S({}, M), { children: G }))
                                 : (0, r.jsx)(
                                       C,
                                       S(
                                           {
                                               applicationId: D,
                                               userId: t.id,
-                                              gameName: L,
+                                              gameName: G,
                                           },
-                                          G,
+                                          M,
                                       ),
                                   ),
                             H
@@ -360,7 +359,7 @@ function Z(e) {
                                       guildId: n,
                                       channelId: a,
                                   }),
-                            (0, r.jsx)(v.Z, {
+                            (0, r.jsx)(O.Z, {
                                 tags: Z,
                                 isCurrentUser: F,
                                 widgetType: s,

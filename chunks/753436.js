@@ -15,8 +15,8 @@ var r = n(54381),
     b = n(853072),
     h = n(388032),
     y = n(932366),
-    O = n(133458);
-function v(e) {
+    v = n(133458);
+function O(e) {
     let { index: t, widgetType: n, game: a, coverImageUrl: l, gameName: o, children: c } = e,
         { registerDragHandleRef: f, manageFocusOnReorder: g } = (0, d.C)(),
         p = i.useRef(null);
@@ -32,19 +32,18 @@ function v(e) {
         "aria-label": h.intl.formatToPlainString(h.t["0dR3gw"], { positionNumber: t + 1 }),
         onReorder: (e, t) => (0, s.Eq)(n, e, t),
         onEnd: () => g(a.applicationId),
-        className: O.container,
-        dropBeforeClassName: O.dropIndicatorBefore,
-        dropAfterClassName: O.dropIndicatorAfter,
-        draggingClassName: O.isDragging,
+        className: v.container,
+        dropBeforeClassName: v.dropIndicatorBefore,
+        dropAfterClassName: v.dropIndicatorAfter,
+        draggingClassName: v.isDragging,
         children: (0, r.jsxs)("div", {
             ref: p,
-            className: O.dragHandleContainer,
+            className: v.dragHandleContainer,
             children: [
                 c,
                 (0, r.jsx)(u.e_, {
                     buttonRef: f(a.applicationId),
-                    className: O.dragHandle,
-                    focusProps: { ringTarget: p },
+                    className: v.dragHandle,
                 }),
             ],
         }),
@@ -78,7 +77,7 @@ function j(e) {
                         userId: n,
                         disableInteraction: u,
                         className: l()(
-                            I ? O.socialProofBackdrop : void 0,
+                            I ? v.socialProofBackdrop : void 0,
                             null == x || u ? void 0 : y.hoverActiveEffect,
                         ),
                         hideTooltip: T,
@@ -88,13 +87,13 @@ function j(e) {
                         (0, r.jsx)(g.Z, {
                             game: t,
                             widgetType: i,
-                            className: O.removeGameButton,
+                            className: v.removeGameButton,
                             iconSize: "xs",
                             onRemove: () => (null == h ? void 0 : h(t.applicationId)),
                         }),
                     !u &&
                         (0, r.jsx)(p.Z, {
-                            className: O.socialProof,
+                            className: v.socialProof,
                             applicationId: t.applicationId,
                             guildId: a,
                             channelId: s,
@@ -105,7 +104,7 @@ function j(e) {
     return P
         ? (0, r.jsx)("div", { className: y.loadingCover })
         : E
-          ? (0, r.jsx)(v, {
+          ? (0, r.jsx)(O, {
                 widgetType: i,
                 index: null != d ? d : 0,
                 game: t,
@@ -114,7 +113,7 @@ function j(e) {
                 children: C(),
             })
           : (0, r.jsx)("div", {
-                className: O.container,
+                className: v.container,
                 children: C(),
             });
 }
