@@ -679,6 +679,7 @@ class eN extends f.Z {
                             reason: r,
                             duration: this.getDuration(),
                         }),
+                        j.Z.getUserVoiceSettingsStats(this.context),
                         null == (d = this._voiceQuality) ? void 0 : d.getMosStats(),
                         null == (f = this._voiceQuality) ? void 0 : f.getPacketStats(),
                         null == (_ = this._voiceQuality) ? void 0 : _.getBytesStats(),

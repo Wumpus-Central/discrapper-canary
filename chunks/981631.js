@@ -4736,6 +4736,7 @@ var nb = (function (e) {
             (e.VOICE_AND_VIDEO_SETTINGS_UPDATED = "voice_and_video_settings_updated"),
             (e.CALL_BUTTON_CLICKED = "call_button_clicked"),
             (e.CALL_MENU_ITEM_INTERACTED = "call_menu_item_interacted"),
+            (e.USER_VOLUME_SETTING_UPDATED = "user_volume_setting_updated"),
             (e.CLIP_SAVE_KEYBIND_PRESSED = "clip_save_keybind_pressed"),
             (e.CLIP_SAVED = "clip_saved"),
             (e.CLIP_SAVE_FAILURE = "clip_save_failure"),

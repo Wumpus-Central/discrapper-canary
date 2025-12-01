@@ -258,12 +258,12 @@ function x() {
 function M() {
     O = null;
 }
-function j(e) {
+function k(e) {
     let { guild: t } = e;
     if (null == r || r.guildId !== t.id) return !1;
     R();
 }
-function k(e) {
+function j(e) {
     let { channelId: t } = e;
     if (null == r || r.channelId !== t) return !1;
     R();
@@ -301,10 +301,10 @@ function H(e) {
         return !1;
     S = performance.now();
 }
-function Y(e) {
+function W(e) {
     return e.connection === r;
 }
-function W(e) {
+function Y(e) {
     let { userId: t, context: n, quality: i } = e;
     null == r || r.setSimulcastDebugOverride(t, n, i);
 }
@@ -383,6 +383,9 @@ class z extends (a = o.ZP.Store) {
     getVoiceStateStats() {
         return null == v ? void 0 : v.getStats();
     }
+    getUserVoiceSettingsStats(e) {
+        return null == v ? void 0 : v.getUserVoiceSettingsStats(e);
+    }
     getWasEverMultiParticipant() {
         return I;
     }
@@ -423,7 +426,7 @@ let q = new z(
               RTC_CONNECTION_STATE: Z,
               RTC_CONNECTION_PING: V,
               RTC_CONNECTION_LOSS_RATE: V,
-              RTC_CONNECTION_UPDATE_ID: Y,
+              RTC_CONNECTION_UPDATE_ID: W,
               RTC_CONNECTION_SECURE_FRAMES_UPDATE: V,
               RTC_CONNECTION_CLIENT_CONNECT: V,
               RTC_CONNECTION_CLIENT_DISCONNECT: V,
@@ -436,12 +439,12 @@ let q = new z(
               CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID: x,
               REMOTE_SESSION_CONNECT: x,
               CLEAR_LAST_SESSION_VOICE_CHANNEL_ID: M,
-              GUILD_DELETE: j,
+              GUILD_DELETE: k,
               CHANNEL_DELETE: U,
               THREAD_DELETE: U,
-              CALL_DELETE: k,
+              CALL_DELETE: j,
               APP_STATE_UPDATE: B,
-              RTC_DEBUG_SET_SIMULCAST_OVERRIDE: W,
+              RTC_DEBUG_SET_SIMULCAST_OVERRIDE: Y,
           },
 );
 Promise.resolve()
