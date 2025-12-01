@@ -63,7 +63,7 @@ let O = (e) => {
                     if (null != t) {
                         let e = t[1],
                             n = parseInt(t[2], 10);
-                        (0, f.Z)({
+                        (0, f.default)({
                             guildId: e,
                             pageIndex: n,
                         });

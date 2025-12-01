@@ -13,8 +13,8 @@ var r = n(54381),
     u = n(481060),
     d = n(24124),
     f = n(636449),
-    p = n(620662),
-    h = n(513202),
+    h = n(620662),
+    p = n(513202),
     g = n(906732),
     m = n(524995),
     b = n(522651),
@@ -43,7 +43,7 @@ function R(e, t, n) {
             (t.application_id === e.id ||
                 (null == (r = e.linkedGames) ? void 0 : r.some((e) => e.id === t.application_id))) &&
             t.type === Z.IIU.PLAYING &&
-            (0, p.Z)(t, Z.xjy.JOIN)
+            (0, h.Z)(t, Z.xjy.JOIN)
         );
     }
     return !1;
@@ -52,7 +52,7 @@ let D = i.memo(function (e) {
         var t, l;
         let a,
             s,
-            p,
+            h,
             y,
             {
                 stream: C,
@@ -69,15 +69,19 @@ let D = i.memo(function (e) {
                 analyticsContext: W,
                 inviteButtonRef: z,
                 accountLinkButtonRef: K,
+                startAuthorization: Y,
+                canStartAuthorization: q,
+                hasAlreadyLinked: Q,
+                connectionApp: X,
             } = e,
-            { showRefreshedGoLiveModal: Y } = (0, v.a)({
+            { showRefreshedGoLiveModal: J } = (0, v.a)({
                 location: "Activity Panel",
                 autoTrackExposure: !1,
             }),
-            { parentAnalyticsLocation: q } = (0, g.ZP)(),
-            X = (0, x.Z)(H, "rtc-activity-panel"),
-            Q = R(H, V, B),
-            J = i.useCallback(() => {
+            { parentAnalyticsLocation: $ } = (0, g.ZP)(),
+            ee = (0, x.Z)(H, "rtc-activity-panel"),
+            et = R(H, V, B),
+            en = i.useCallback(() => {
                 var e;
                 o()(null != V, "Received null activity"),
                     P.default.track(Z.rMx.ACTIVITY_PANEL_BUTTON_CLICKED, {
@@ -85,35 +89,35 @@ let D = i.memo(function (e) {
                         game_id: null != (e = null == U ? void 0 : U.id) ? e : null,
                         application_id: V.application_id,
                     }),
-                    (0, b.v)(q, b.d.INVITE),
+                    (0, b.v)($, b.d.INVITE),
                     P.default.track(Z.rMx.OPEN_MODAL, {
                         type: "Send Join Invite",
                         application_id: V.application_id,
                         location: W.location,
                     }),
                     (0, d.h7)(V, !1);
-            }, [V, W, q, U]),
-            $ = i.useCallback(
+            }, [V, W, $, U]),
+            er = i.useCallback(
                 (e, t) => () => {
-                    (0, b.v)(q, b.d.LEAVE_ACTIVITY),
-                        h.Z.leaveActivity({
+                    (0, b.v)($, b.d.LEAVE_ACTIVITY),
+                        p.Z.leaveActivity({
                             location: t,
                             applicationId: e,
                             showFeedback: !0,
                         });
                 },
-                [q],
+                [$],
             ),
-            ee = i.useCallback(
+            ei = i.useCallback(
                 (e) => () => {
-                    (0, b.v)(q, b.d.LEAVE_ACTIVITY), O.Z.stopFrame({ applicationId: e });
+                    (0, b.v)($, b.d.LEAVE_ACTIVITY), O.Z.stopFrame({ applicationId: e });
                 },
-                [q],
+                [$],
             ),
-            et = i.useCallback(() => {
+            el = i.useCallback(() => {
                 (0, j.Z)(C);
             }, [C]),
-            en = i.useCallback(() => {
+            eo = i.useCallback(() => {
                 let e = null != k && (0, S.vd)(k.type) ? k : null,
                     t = null != e ? e.getGuildId() : w;
                 (0, u.ZDy)(async () => {
@@ -152,7 +156,7 @@ let D = i.memo(function (e) {
                             (l = l =
                                 {
                                     sourcePID: null == U ? void 0 : U.pid,
-                                    selectSource: !!Y && null != I.Z.getVoiceChannelId(),
+                                    selectSource: !!J && null != I.Z.getVoiceChannelId(),
                                     guildId: t,
                                     analyticsLocation: Z.Sbl.ACTIVITY_PANEL,
                                 }),
@@ -172,56 +176,47 @@ let D = i.memo(function (e) {
                         );
                     };
                 });
-            }, [k, w, U, Y]),
-            {
-                canStartAuthorization: er,
-                startAuthorization: ei,
-                hasAlreadyLinked: el,
-                connectionApp: eo,
-                preferredFlow: ea,
-            } = (0, m.F)(H, {
-                allowedFlows: [m.r.RPC, m.r.WEB],
-            }),
-            es = i.useRef(null),
-            [ec, eu] = i.useState(!1);
+            }, [k, w, U, J]),
+            ea = i.useRef(null),
+            [es, ec] = i.useState(!1);
         i.useEffect(
             () => () => {
-                null != es.current && clearTimeout(es.current);
+                null != ea.current && clearTimeout(ea.current);
             },
             [],
         ),
             i.useEffect(() => {
-                el && (eu(!1), null != es.current && (clearTimeout(es.current), (es.current = null)));
-            }, [el]);
-        let ed =
-                null == X || null == H
+                Q && (ec(!1), null != ea.current && (clearTimeout(ea.current), (ea.current = null)));
+            }, [Q]);
+        let eu =
+                null == ee || null == H
                     ? null
                     : (0, r.jsx)(M, {
-                          guildId: X,
+                          guildId: ee,
                           applicationId: H.id,
                       }),
-            ef =
+            ed =
                 (null != U || null == B || (0, f.R)()) && (D || E)
                     ? (D
                           ? ((a = !1),
                             (s = () => {
-                                et(), (0, b.v)(q, b.d.STREAM, !1);
+                                el(), (0, b.v)($, b.d.STREAM, !1);
                             }),
-                            (p = u.g5r),
+                            (h = u.g5r),
                             (y = T.intl.string(T.t.S5anIc)))
                           : G
                             ? ((a = !1),
                               (s = () => {
-                                  en(), (0, b.v)(q, b.d.STREAM, !0);
+                                  eo(), (0, b.v)($, b.d.STREAM, !0);
                               }),
-                              (p = u.hGI),
+                              (h = u.hGI),
                               (y =
                                   null != U
                                       ? T.intl.formatToPlainString(T.t.AB5gTy, { game: U.name })
                                       : T.intl.string(T.t.FeUKeA)))
                             : ((a = !0),
                               (s = null),
-                              (p = u.hGI),
+                              (h = u.hGI),
                               (y =
                                   null != k && (0, S.vd)(k.type)
                                       ? T.intl.string(T.t.uQn9B8)
@@ -234,16 +229,16 @@ let D = i.memo(function (e) {
                               tooltipText: y,
                               disabled: a,
                               onClick: s,
-                              icon: p,
+                              icon: h,
                           }),
                       }))
                     : null,
-            ep =
-                Q && null == B
+            ef =
+                et && null == B
                     ? (0, r.jsx)(N.Z, {
                           ref: z,
                           tooltipText: T.intl.string(T.t["hC/Zey"]),
-                          onClick: J,
+                          onClick: en,
                           icon: u.ejJ,
                       })
                     : null,
@@ -252,37 +247,36 @@ let D = i.memo(function (e) {
                     ? null
                     : (0, r.jsx)(N.Z, {
                           tooltipText: T.intl.string(T.t["R/FK4A"]),
-                          onClick: $(B.applicationId, B.location),
+                          onClick: er(B.applicationId, B.location),
                           icon: u.PBZ,
                       }),
-            eg =
+            ep =
                 null == F
                     ? null
                     : (0, r.jsx)(N.Z, {
                           tooltipText: T.intl.string(T.t["R/FK4A"]),
-                          onClick: ee(F.applicationId),
+                          onClick: ei(F.applicationId),
                           icon: u.PBZ,
                       }),
-            em = null == C ? null : (0, r.jsx)(_.Z, {}),
-            eb =
-                !er || el
+            eg = null == C ? null : (0, r.jsx)(_.Z, {}),
+            em =
+                !q || Q
                     ? null
                     : (0, r.jsx)(L, {
                           runningGame: U,
                           startAuthorization: () => {
-                              ea !== m.r.WEB &&
-                                  (eu(!0),
-                                  null != es.current && clearTimeout(es.current),
-                                  (es.current = setTimeout(() => {
-                                      eu(!1);
-                                  }, 90000))),
-                                  ei();
+                              Y() === m.r.RPC &&
+                                  (ec(!0),
+                                  null != ea.current && clearTimeout(ea.current),
+                                  (ea.current = setTimeout(() => {
+                                      ec(!1);
+                                  }, 90000)));
                           },
-                          connectionApp: eo,
+                          connectionApp: X,
                           ref: K,
                       }),
-            e_ =
-                !er || el
+            eb =
+                !q || Q
                     ? null
                     : (0, r.jsx)(c.J2, {
                           title: T.intl.string(T.t.ULvRFd),
@@ -291,20 +285,20 @@ let D = i.memo(function (e) {
                           position: "top",
                           align: "center",
                           caretConfig: { align: "center" },
-                          shouldShow: ec,
+                          shouldShow: es,
                           onRequestClose: () => {
-                              eu(!1), null != es.current && (clearTimeout(es.current), (es.current = null));
+                              ec(!1), null != ea.current && (clearTimeout(ea.current), (ea.current = null));
                           },
                       });
-        return null == ef && null == ep && null == eh && null == eg && null == eb && null == ed
+        return null == ed && null == ef && null == eh && null == ep && null == em && null == eu
             ? null
             : (0, r.jsxs)("div", {
                   className: A.actions,
                   children: [
-                      null != (t = null != ed ? ed : eb) ? t : ep,
-                      ef,
-                      null != (l = null != eh ? eh : eg) ? l : em,
-                      e_,
+                      null != (t = null != eu ? eu : em) ? t : ef,
+                      ed,
+                      null != (l = null != eh ? eh : ep) ? l : eg,
+                      eb,
                   ],
               });
     }),
@@ -333,7 +327,7 @@ function M(e) {
     }, [t]);
     let [o, a] = (0, y.US)([s.z.GAME_SHOP_RTC_POPOVER], w.R.ACCOUNT_NAME_ZONE, !0),
         c = i.useCallback(() => {
-            (0, C.Z)({ guildId: n }), a(w.L.USER_DISMISS);
+            (0, C.default)({ guildId: n }), a(w.L.USER_DISMISS);
         }, [n, a]),
         d = i.useCallback(() => {
             P.default.track(Z.rMx.RTC_GAME_SHOP_BUTTON_CLICKED, { application_id: t }), c();

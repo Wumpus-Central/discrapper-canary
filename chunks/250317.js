@@ -93,7 +93,7 @@ function Z(e) {
                                       icon: u.EOn,
                                       variant: "secondary",
                                       onClick: () => {
-                                          d(E.o4.VISIT_SHOP), (0, y.Z)({ guildId: i }), c();
+                                          d(E.o4.VISIT_SHOP), (0, y.default)({ guildId: i }), c();
                                       },
                                       text: A.intl.string(A.t["2QW9nR"]),
                                       fullWidth: !0,
