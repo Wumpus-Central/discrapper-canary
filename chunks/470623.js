@@ -187,8 +187,8 @@ class m {
         (this.name = null != (i = s.name) ? i : ""),
             (l = new Set(s.appliedTags)),
             (this.appliedTags = void 0 !== l ? l : new Set()),
-            (this.formOpen = this.name.length > 0 && _.textValue.length > 0),
-            (this.textAreaState = _);
+            (this.textAreaState = _),
+            (this.formOpen = _.textValue !== m);
     }
 }
 let b = i.createContext(null);
