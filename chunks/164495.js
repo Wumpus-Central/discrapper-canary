@@ -1,4 +1,4 @@
-n.d(t, { y: () => A });
+n.d(t, { y: () => k });
 var r = n(54381),
     s = n(473749),
     o = n(159691),
@@ -13,13 +13,15 @@ var r = n(54381),
     g = n(509212),
     f = n(979232),
     h = n(373370),
-    x = n(659302),
-    _ = n(110560),
-    b = n(35215),
-    j = n(215023),
-    v = n(388032),
-    C = n(165016);
-function y(e) {
+    x = n(115179),
+    _ = n(542347),
+    b = n(659302),
+    j = n(110560),
+    v = n(35215),
+    C = n(215023),
+    y = n(388032),
+    E = n(165016);
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +46,7 @@ function y(e) {
     }
     return e;
 }
-function E(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -62,7 +64,7 @@ function E(e, t) {
         e
     );
 }
-function O(e) {
+function T(e) {
     let { quest: t, sourceQuestContent: n, taskDetails: s } = e;
     return (0, r.jsx)(o.zxk, {
         variant: "primary",
@@ -70,7 +72,7 @@ function O(e) {
         onClick: () => {
             var e;
             let r = (null == (e = t.userStatus) ? void 0 : e.enrolledAt) == null ? d.jZ.ACCEPT_QUEST : d.jZ.WATCH_VIDEO;
-            (0, _.openVideoQuestModal)({
+            (0, j.openVideoQuestModal)({
                 quest: t,
                 questContent: m.jn.QUEST_BAR_V2,
                 sourceQuestContent: n,
@@ -78,10 +80,10 @@ function O(e) {
             });
         },
         size: "sm",
-        text: (0, g.F9)(s),
+        text: (0, _.F9)(s),
     });
 }
-let S = (e) => {
+let w = (e) => {
         let { quest: t, sourceQuestContent: n } = e,
             s = (0, u.aM)(),
             a = (0, g.V_)(t);
@@ -98,7 +100,7 @@ let S = (e) => {
             text: a,
         });
     },
-    T = (e) => {
+    P = (e) => {
         var t;
         let { quest: n, sourceQuestContent: s } = e,
             a = null == (t = (0, u.WD)()) ? void 0 : t.getId();
@@ -115,10 +117,10 @@ let S = (e) => {
                     },
                 ),
             size: "sm",
-            text: v.intl.string(v.t.csptqV),
+            text: y.intl.string(y.t.csptqV),
         });
     },
-    w = (e) => {
+    N = (e) => {
         let { quest: t } = e,
             n = (0, h.CR)({ quest: t }),
             { launchInGameActivity: s } = (0, p.zB)(t);
@@ -126,14 +128,14 @@ let S = (e) => {
             ? (0, r.jsx)(o.zxk, {
                   fullWidth: !0,
                   variant: "primary",
-                  icon: (0, _.getPrimaryCtaIcon)(t),
+                  icon: (0, j.getPrimaryCtaIcon)(t),
                   onClick: s,
                   size: "sm",
                   text: n,
               })
             : null;
     },
-    P = (e) => {
+    R = (e) => {
         let {
                 quest: t,
                 sourceQuestContent: n,
@@ -143,7 +145,7 @@ let S = (e) => {
                 onGameSheetClosed: l,
             } = e,
             { applications: c } = s;
-        return (0, r.jsx)(b.Z, {
+        return (0, r.jsx)(v.Z, {
             quest: t,
             sourceQuestContent: n,
             applications: null != c ? c : [],
@@ -153,29 +155,29 @@ let S = (e) => {
             children: (e) =>
                 (0, r.jsx)(
                     o.zxk,
-                    y(
+                    O(
                         {
                             variant: "secondary",
                             fullWidth: !0,
                             size: "sm",
-                            text: v.intl.string(v.t["93PTEs"]),
+                            text: y.intl.string(y.t["93PTEs"]),
                         },
                         e,
                     ),
                 ),
         });
     },
-    N = (e) => {
+    A = (e) => {
         var t,
             n,
             {
                 quest: u,
                 useReducedMotion: p,
-                isExpanded: h,
-                className: _,
-                ctaLabel: b,
-                onClick: O,
-                questContent: S = m.jn.QUEST_BAR_V2,
+                isExpanded: g,
+                className: h,
+                ctaLabel: _,
+                onClick: j,
+                questContent: v = m.jn.QUEST_BAR_V2,
                 sourceQuestContent: T,
             } = e,
             w = (function (e, t) {
@@ -209,53 +211,53 @@ let S = (e) => {
                 "sourceQuestContent",
             ]);
         let P = (null == (t = u.userStatus) ? void 0 : t.completedAt) != null,
-            N = (0, x.hf)({
+            N = (0, b.hf)({
                 quest: u,
-                questContent: S,
+                questContent: v,
                 sourceQuestContent: T,
             }),
             R = s.useCallback(
                 (e) => {
                     var t;
-                    null == O || O(e),
-                        (0, g.xN)(u.config) && (null == (t = u.userStatus) ? void 0 : t.claimedAt) != null
+                    null == j || j(e),
+                        (0, x.xN)(u.config) && (null == (t = u.userStatus) ? void 0 : t.claimedAt) != null
                             ? (0, c.mK)({
-                                  tab: j.AW.ORBS,
+                                  tab: C.AW.ORBS,
                                   analyticsLocations: [],
                                   analyticsSource: l.Z.QUEST_HOME_PAGE,
                               })
                             : N();
                 },
-                [O, u.config, null == (n = u.userStatus) ? void 0 : n.claimedAt, N],
+                [j, u.config, null == (n = u.userStatus) ? void 0 : n.claimedAt, N],
             ),
             { shouldUseShinyButton: A } = f.Z.useConfig({ location: (0, d._b)(T) + "- CtaButton" });
         return A
             ? (0, r.jsx)(
                   i.gtL,
-                  E(
-                      y(
+                  S(
+                      O(
                           {
                               fullWidth: !0,
                               size: a.zx.Sizes.SMALL,
                               onClick: R,
-                              pauseAnimation: p || (!h && !P),
-                              className: _,
-                              buttonShineClassName: C.shine,
+                              pauseAnimation: p || (!g && !P),
+                              className: h,
+                              buttonShineClassName: E.shine,
                               "data-migration-pending": !0,
                           },
                           w,
                       ),
-                      { children: null != b ? b : v.intl.string(v.t.cfY4PE) },
+                      { children: null != _ ? _ : y.intl.string(y.t.cfY4PE) },
                   ),
               )
             : (0, r.jsx)(
                   o.zxk,
-                  E(
-                      y(
+                  S(
+                      O(
                           {
                               fullWidth: !0,
                               onClick: R,
-                              text: null != b ? b : v.intl.string(v.t.cfY4PE),
+                              text: null != _ ? _ : y.intl.string(y.t.cfY4PE),
                           },
                           w,
                       ),
@@ -263,7 +265,7 @@ let S = (e) => {
                   ),
               );
     },
-    R = (e) => {
+    B = (e) => {
         var t;
         let {
                 quest: n,
@@ -285,27 +287,27 @@ let S = (e) => {
             j = null;
         return (
             x
-                ? (j = (0, r.jsx)(N, {
+                ? (j = (0, r.jsx)(A, {
                       quest: n,
                       sourceQuestContent: s,
                       useReducedMotion: o,
                       isExpanded: a,
                   }))
                 : _
-                  ? (j = (0, r.jsx)(O, {
+                  ? (j = (0, r.jsx)(T, {
                         quest: n,
                         sourceQuestContent: s,
                         taskDetails: u,
                     }))
                   : (0, g.Rt)(n)
-                    ? (j = (0, r.jsx)(w, { quest: n }))
+                    ? (j = (0, r.jsx)(N, { quest: n }))
                     : d === m.LI.CONSOLE && i
-                      ? (j = (0, r.jsx)(T, {
+                      ? (j = (0, r.jsx)(P, {
                             quest: n,
                             sourceQuestContent: s,
                         }))
                       : b && (0, g.Pb)(n)
-                        ? (j = (0, r.jsx)(P, {
+                        ? (j = (0, r.jsx)(R, {
                               quest: n,
                               sourceQuestContent: s,
                               taskDetails: u,
@@ -314,35 +316,35 @@ let S = (e) => {
                               onGameSheetClosed: h,
                           }))
                         : b &&
-                          (j = (0, r.jsx)(S, {
+                          (j = (0, r.jsx)(w, {
                               quest: n,
                               sourceQuestContent: s,
                           })),
             null == j
                 ? null
                 : (0, r.jsx)("div", {
-                      className: C.cta,
+                      className: E.cta,
                       children: j,
                   })
         );
     };
-function A(e) {
+function k(e) {
     let t = s.useRef(null);
     return (0, r.jsxs)("div", {
-        className: C.ctaButtons,
+        className: E.ctaButtons,
         ref: t,
         children: [
             e.showBackButton &&
                 (0, r.jsx)(o.hU, {
                     size: "sm",
-                    "aria-label": v.intl.string(v.t["13/7kX"]),
+                    "aria-label": y.intl.string(y.t["13/7kX"]),
                     onClick: e.onBack,
                     icon: i.V7D,
                     variant: "secondary",
                 }),
             (0, r.jsx)(
-                R,
-                E(y({}, e), {
+                B,
+                S(O({}, e), {
                     popoutTargetElementRef: t,
                     onGameSheetOpened: e.onGameSheetOpened,
                     onGameSheetClosed: e.onGameSheetClosed,

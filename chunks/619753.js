@@ -191,12 +191,14 @@ let k = l.memo(function (e) {
         { offset: L, totalResults: b, isSearching: y, showBlockedResults: k } = s,
         F = l.useCallback(
             (e, t) => {
-                if ((null == h || h(e, t), (0, g.Z)(e))) {
+                null == h || h(e, t);
+                let n = () => {
                     let t = S.Z.getChannel(e.channel_id),
                         n = null != t ? t.getGuildId() : null;
                     c.Z.trackJump(e.channel_id, e.id, "Search Results", { search_id: p }),
                         (0, N.uL)(v.Z5c.CHANNEL(n, e.channel_id, e.id));
-                }
+                };
+                (0, g.Z)(e, n) && n();
             },
             [h, p],
         ),
