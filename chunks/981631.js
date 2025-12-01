@@ -6062,6 +6062,7 @@ var nF = (function (e) {
             (e.RECURRING_PROMOTION = "35479903794199"),
             (e.PREMIUM_GROUP_ABOUT = "36320645875479"),
             (e.SOCIAL_LAYER_STOREFRONT = "36288452105239"),
+            (e.CHECKPOINT = "36415877391511"),
             e
         );
     })({}),
