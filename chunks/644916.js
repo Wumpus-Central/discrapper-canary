@@ -1,4 +1,4 @@
-n.d(t, { t: () => f });
+n.d(t, { t: () => _ });
 var r = n(115434),
     i = n(704215),
     a = n(283693),
@@ -7,8 +7,9 @@ var r = n(115434),
     l = n(416587),
     c = n(874703),
     u = n(65679),
-    d = n(885472);
-function f(e) {
+    d = n(885472),
+    f = n(582113);
+function _(e) {
     switch (e) {
         case i.z.COLLECTIBLES_SHOP_ENTRY_MARKETING:
             var t, n;
@@ -29,6 +30,8 @@ function f(e) {
             return 0;
         case i.z.COLLECTIBLES_SHOP_WIDE_BANNER:
             return (0, u.k)();
+        case i.z.GAME_SHOP_ANNOUNCEMENT_MODAL:
+            return f.dQ;
         default:
             return (0, a.UT)(e, { andFail: !1 }), 0;
     }
