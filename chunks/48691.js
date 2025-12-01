@@ -1,46 +1,44 @@
 n.d(t, {
-    b: () => f,
-    t: () => d,
+    b: () => u,
+    t: () => c,
 });
 var r = n(54381);
 n(473749);
-var i = n(481060),
-    a = n(44315),
-    o = n(377171),
-    s = n(981631),
-    l = n(388032),
-    c = n(803635);
-function u(e) {
-    let { label: t, backgroundColor: n = o.Z.BUTTON_SECONDARY_BACKGROUND, icon: a, iconColor: s } = e;
+var i = n(692547),
+    a = n(481060),
+    o = n(388032),
+    s = n(803635);
+function l(e) {
+    let { label: t, backgroundColor: n = i.Z.colors.BUTTON_SECONDARY_BACKGROUND.css, icon: o, iconColor: l } = e;
     return (0, r.jsxs)("div", {
-        className: c.badge,
+        className: s.badge,
         style: { backgroundColor: n },
         children: [
-            (0, r.jsx)(i.Text, {
+            (0, r.jsx)(a.Text, {
                 variant: "text-sm/normal",
                 color: "always-white",
-                className: c.__invalid_badgeText,
+                className: s.__invalid_badgeText,
                 children: t,
             }),
-            (0, r.jsx)(a, {
-                className: c.badgeIcon,
-                color: null != s ? s : "currentColor",
+            (0, r.jsx)(o, {
+                className: s.badgeIcon,
+                color: null != l ? l : "currentColor",
                 "aria-hidden": !0,
             }),
         ],
     });
 }
-function d() {
-    return (0, r.jsx)(u, {
-        label: l.intl.string(l.t["I+02Gs"]),
+function c() {
+    return (0, r.jsx)(l, {
+        label: o.intl.string(o.t["I+02Gs"]),
         backgroundColor: "#207B8D",
-        icon: i.T$Z,
+        icon: a.T$Z,
     });
 }
-function f() {
-    return (0, r.jsx)(u, {
-        label: l.intl.string(l.t.TgsPaP),
-        icon: i.vdY,
-        iconColor: (0, a.Lq)(s.Ilk.PRIMARY_330),
+function u() {
+    return (0, r.jsx)(l, {
+        label: o.intl.string(o.t.TgsPaP),
+        icon: a.vdY,
+        iconColor: i.Z.unsafe_rawColors.PRIMARY_330.css,
     });
 }

@@ -5,10 +5,10 @@ var r = n(54381),
     o = n.n(l),
     a = n(442837),
     s = n(704215),
-    c = n(952265),
-    u = n(481060),
-    d = n(239091),
-    f = n(377171),
+    c = n(692547),
+    u = n(952265),
+    d = n(481060),
+    f = n(239091),
     p = n(243778),
     h = n(703656),
     g = n(164670),
@@ -25,7 +25,7 @@ let E = i.memo(function (e) {
     let { guild: t, selected: l } = e,
         E = i.useRef(null),
         S = i.useRef(null),
-        I = (0, c.f9)(),
+        I = (0, u.f9)(),
         P = (0, a.e7)([y.Z], () => y.Z.hasLayers()),
         [N, Z] = (0, p.ZT)([s.z.GAME_SHOP_NEW_BADGE], t.id);
     i.useEffect(() => {
@@ -43,7 +43,7 @@ let E = i.memo(function (e) {
         A = i.useCallback(
             (e) => {
                 null != t &&
-                    (0, d.jW)(e, async () => {
+                    (0, f.jW)(e, async () => {
                         let { default: e } = await n.e("73848").then(n.bind(n, 98409));
                         return (n) => {
                             var i, l;
@@ -105,14 +105,14 @@ let E = i.memo(function (e) {
                     ref: S,
                     id: "game-shop-".concat(t.id),
                     renderIcon: (e) =>
-                        (0, r.jsx)(u.EOn, {
+                        (0, r.jsx)(d.EOn, {
                             size: "custom",
                             color: "currentColor",
                             width: 20,
                             height: 20,
                             className: o()(e, i),
                         }),
-                    text: (0, r.jsx)(u.Text, {
+                    text: (0, r.jsx)(d.Text, {
                         variant: "text-md/medium",
                         className: o()(C.name, n),
                         children:
@@ -125,9 +125,9 @@ let E = i.memo(function (e) {
                     onContextMenu: A,
                     trailing: (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)(u.IGR, {
+                            (0, r.jsx)(d.IGR, {
                                 text: x.intl.string(x.t.y2b7CA),
-                                color: f.Z.BG_BRAND,
+                                color: c.Z.colors.BG_BRAND.css,
                             }),
                             a,
                         ],

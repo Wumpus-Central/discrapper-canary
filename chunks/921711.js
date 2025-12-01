@@ -6,7 +6,7 @@ var r = n(54381);
 n(473749);
 var i = n(120356),
     l = n.n(i),
-    o = n(377171),
+    o = n(692547),
     a = n(549631),
     s = n(373887),
     c = n(55940);
@@ -19,7 +19,7 @@ function d(e) {
         className: l()(c.iconItem, s.premiumChannelIcon),
         children: (0, r.jsx)(a.Z, {
             className: c.actionIcon,
-            color: t ? o.Z.CREATOR_REVENUE_LOCKED_CHANNEL_ICON : void 0,
+            color: t ? o.Z.colors.CREATOR_REVENUE_LOCKED_CHANNEL_ICON.css : void 0,
         }),
     });
 }

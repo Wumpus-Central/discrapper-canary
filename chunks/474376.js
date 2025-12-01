@@ -1,10 +1,10 @@
 n.d(t, { g: () => _ }), n(539854);
 var a = n(54381);
 n(473749);
-var l = n(442837),
+var r = n(442837),
+    l = n(692547),
     i = n(780384),
-    r = n(481060),
-    s = n(44315),
+    s = n(481060),
     o = n(210887),
     c = n(598077),
     d = n(246946),
@@ -19,17 +19,17 @@ var l = n(442837),
     v = n(388032),
     j = n(681285);
 function _(e) {
-    let t = (0, l.e7)([u.default], () => u.default.getCurrentUser()),
-        n = (0, l.e7)([d.Z], () => d.Z.hidePersonalInformation),
-        _ = (0, l.e7)([o.Z], () => (0, i.wj)(o.Z.theme)),
+    let t = (0, r.e7)([u.default], () => u.default.getCurrentUser()),
+        n = (0, r.e7)([d.Z], () => d.Z.hidePersonalInformation),
+        _ = (0, r.e7)([o.Z], () => (0, i.wj)(o.Z.theme)),
         { multiAccountUsers: y } = (0, g.L)(),
-        C = y.map((l) => {
-            let i = new c.Z(l),
+        C = y.map((r) => {
+            let i = new c.Z(r),
                 o = i.id === (null == t ? void 0 : t.id),
-                d = l.tokenStatus === x.q.INVALID,
+                d = r.tokenStatus === x.q.INVALID,
                 u = n ? null : "#".concat(i.discriminator);
             return (0, a.jsx)(
-                r.sNh,
+                s.sNh,
                 {
                     id: i.id,
                     focusedClassName: j.focused,
@@ -38,15 +38,15 @@ function _(e) {
                         return (0, a.jsxs)("div", {
                             className: j.userMenuItem,
                             children: [
-                                (0, a.jsx)(r.qEK, {
+                                (0, a.jsx)(s.qEK, {
                                     src: i.getAvatarURL(void 0, 40),
-                                    size: r.EFr.SIZE_24,
-                                    "aria-label": l.username,
+                                    size: s.EFr.SIZE_24,
+                                    "aria-label": r.username,
                                 }),
                                 (0, a.jsxs)("div", {
                                     className: j.userMenuUsername,
                                     children: [
-                                        (0, a.jsx)(r.Text, {
+                                        (0, a.jsx)(s.Text, {
                                             className: j.userMenuText,
                                             variant: "text-sm/normal",
                                             children: p.ZP.getUserTag(i, {
@@ -55,7 +55,7 @@ function _(e) {
                                             }),
                                         }),
                                         !i.hasUniqueUsername() &&
-                                            (0, a.jsx)(r.Text, {
+                                            (0, a.jsx)(s.Text, {
                                                 className: j.userMenuDiscriminator,
                                                 variant: "text-sm/normal",
                                                 children: u,
@@ -63,20 +63,24 @@ function _(e) {
                                     ],
                                 }),
                                 o &&
-                                    (0, a.jsx)(r.owK, {
+                                    (0, a.jsx)(s.owK, {
                                         size: "sm",
-                                        color: (0, s.Lq)(t ? b.Ilk.WHITE_500 : b.Ilk.BRAND_500),
-                                        secondaryColor: (0, s.Lq)(
-                                            (t && _) || (t && !_) ? b.Ilk.BRAND_500 : b.Ilk.WHITE_500,
-                                        ),
+                                        color: t
+                                            ? l.Z.unsafe_rawColors.WHITE_500.css
+                                            : l.Z.unsafe_rawColors.BRAND_500.css,
+                                        secondaryColor:
+                                            (t && _) || (t && !_)
+                                                ? l.Z.unsafe_rawColors.BRAND_500.css
+                                                : l.Z.unsafe_rawColors.WHITE_500.css,
                                         className: j.activeIcon,
                                     }),
                                 d &&
-                                    (0, a.jsx)(r.Mgn, {
-                                        color: (0, s.Lq)(b.Ilk.RED_400),
-                                        secondaryColor: (0, s.Lq)(
-                                            (t && _) || (t && !_) ? b.Ilk.BRAND_500 : b.Ilk.WHITE_500,
-                                        ),
+                                    (0, a.jsx)(s.Mgn, {
+                                        color: l.Z.unsafe_rawColors.RED_400.css,
+                                        secondaryColor:
+                                            (t && _) || (t && !_)
+                                                ? l.Z.unsafe_rawColors.BRAND_500.css
+                                                : l.Z.unsafe_rawColors.WHITE_500.css,
                                         size: "xs",
                                         className: j.activeIcon,
                                     }),
@@ -102,8 +106,8 @@ function _(e) {
         C.push(
             (0, a.jsxs)(a.Fragment, {
                 children: [
-                    (0, a.jsx)(r.Clw, {}),
-                    (0, a.jsx)(r.sNh, {
+                    (0, a.jsx)(s.Clw, {}),
+                    (0, a.jsx)(s.sNh, {
                         id: "manage-accounts",
                         label: v.intl.string(v.t.WbFpq4),
                         action: () => {

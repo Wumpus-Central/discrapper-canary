@@ -5,11 +5,11 @@ var r = n(54381),
     l = n.n(a),
     s = n(913527),
     o = n.n(s),
-    c = n(790519),
+    c = n(666917),
     d = n(55160),
-    u = n(831209),
-    m = n(149765),
-    h = n(442837),
+    u = n(149765),
+    m = n(442837),
+    h = n(692547),
     g = n(481060),
     f = n(787014),
     x = n(412899),
@@ -178,7 +178,7 @@ let Y = (e) => {
                 return { onboardingExpanded: t };
             }, d.X),
             { tagFilter: ee } = (0, M.H)(x.id),
-            et = (0, h.e7)([w.Z], () => w.Z.getGuild(x.getGuildId())),
+            et = (0, m.e7)([w.Z], () => w.Z.getGuild(x.getGuildId())),
             en = (0, Z.r_)(x),
             { transitions: er, setVisible: ei } = (() => {
                 let [e, t] = i.useState(!0);
@@ -213,11 +213,11 @@ let Y = (e) => {
             } = ((e) => {
                 let { guild: t, channel: a, hasAnyThread: l, handleHide: s } = e,
                     [c, d] = i.useState(!1),
-                    u = (0, A.c)(a.id),
-                    x = (0, h.e7)([I.Z], () => I.Z.hasHidden(a.id)),
+                    h = (0, A.c)(a.id),
+                    x = (0, m.e7)([I.Z], () => I.Z.hasHidden(a.id)),
                     p = (function (e, t, a, l) {
                         let s = null == e ? void 0 : e.id,
-                            o = (0, h.e7)([T.Z], () => (null != s ? T.Z.getSortedRoles(s) : void 0));
+                            o = (0, m.e7)([T.Z], () => (null != s ? T.Z.getSortedRoles(s) : void 0));
                         return i.useMemo(() => {
                             let i,
                                 s = new X(),
@@ -230,7 +230,7 @@ let Y = (e) => {
                                     s.addStep(
                                         (function (e, t, i, a) {
                                             let l = (0, b.Z)(i)
-                                                    ? m.$e(H.Plq.VIEW_CHANNEL, H.Plq.SEND_MESSAGES)
+                                                    ? u.$e(H.Plq.VIEW_CHANNEL, H.Plq.SEND_MESSAGES)
                                                     : H.Plq.SEND_MESSAGES,
                                                 s =
                                                     null != e
@@ -372,7 +372,7 @@ let Y = (e) => {
                     })(t, a, l, d),
                     j = p.isAllDone(),
                     v =
-                        u ||
+                        h ||
                         x ||
                         !((e) => {
                             let t = P.default.extractTimestamp(e);
@@ -394,7 +394,7 @@ let Y = (e) => {
                     {
                         onboardingSteps: p,
                         isHidden: x,
-                        isDismissed: u,
+                        isDismissed: h,
                         isAllDone: j,
                     }
                 );
@@ -413,7 +413,7 @@ let Y = (e) => {
         }),
         ((e) => {
             let { isAllDone: t, isVisible: n, canManageChannel: r, guildId: a, channel: l } = e,
-                s = (0, h.e7)([T.Z], () => (null != a ? T.Z.partitionVersion(a) : void 0)),
+                s = (0, m.e7)([T.Z], () => (null != a ? T.Z.partitionVersion(a) : void 0)),
                 o = i.useCallback(() => {
                     N.S.dispatch(H.CkL.REMEASURE_TARGET);
                 }, []);
@@ -516,13 +516,15 @@ let Y = (e) => {
                                                                                             size: "custom",
                                                                                             width: 20,
                                                                                             height: 20,
-                                                                                            color: u.Z.STATUS_DANGER,
+                                                                                            color: h.Z.colors
+                                                                                                .STATUS_DANGER.css,
                                                                                             className: B.stepStatus,
                                                                                         })
                                                                                       : e.isDone
                                                                                         ? (0, r.jsx)(g.G2e, {
-                                                                                              color: u.Z
-                                                                                                  .STATUS_POSITIVE_BACKGROUND,
+                                                                                              color: h.Z.colors
+                                                                                                  .STATUS_POSITIVE_BACKGROUND
+                                                                                                  .css,
                                                                                               icon: g.dz2,
                                                                                               style: q,
                                                                                               className: B.stepStatus,

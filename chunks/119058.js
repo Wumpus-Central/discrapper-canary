@@ -9,35 +9,35 @@ var r = n(310644),
     u = n(217224),
     d = n(951516),
     f = n(633605),
-    _ = n(393655),
-    p = /[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g,
-    h = /P+p+|P+|p+|''|'(''|[^'])+('|$)|./g,
-    m = /^'([^]*?)'?$/,
+    p = n(393655),
+    _ = /[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g,
+    m = /P+p+|P+|p+|''|'(''|[^'])+('|$)|./g,
+    h = /^'([^]*?)'?$/,
     g = /''/g,
     E = /[a-zA-Z]/;
 function b(e, t, n) {
     (0, d.Z)(2, arguments);
-    var m,
+    var h,
         g,
         b,
         O,
         v,
+        S,
         I,
         T,
-        S,
         A,
         C,
         N,
-        R,
         P,
-        D,
+        R,
         w,
-        L,
+        D,
         x,
-        M,
-        k = String(t),
-        j = (0, f.j)(),
-        U = null != (m = null != (g = null == n ? void 0 : n.locale) ? g : j.locale) ? m : _.Z,
+        L,
+        j,
+        M = String(t),
+        k = (0, f.j)(),
+        U = null != (h = null != (g = null == n ? void 0 : n.locale) ? g : k.locale) ? h : p.Z,
         G = (0, u.Z)(
             null !=
                 (b =
@@ -45,63 +45,62 @@ function b(e, t, n) {
                     (O =
                         null !=
                         (v =
-                            null != (I = null == n ? void 0 : n.firstWeekContainsDate)
-                                ? I
-                                : null == n || null == (T = n.locale) || null == (S = T.options)
+                            null != (S = null == n ? void 0 : n.firstWeekContainsDate)
+                                ? S
+                                : null == n || null == (I = n.locale) || null == (T = I.options)
                                   ? void 0
-                                  : S.firstWeekContainsDate)
+                                  : T.firstWeekContainsDate)
                             ? v
-                            : j.firstWeekContainsDate)
+                            : k.firstWeekContainsDate)
                         ? O
-                        : null == (A = j.locale) || null == (C = A.options)
+                        : null == (A = k.locale) || null == (C = A.options)
                           ? void 0
                           : C.firstWeekContainsDate)
                 ? b
                 : 1,
         );
     if (!(G >= 1 && G <= 7)) throw RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
-    var B = (0, u.Z)(
+    var Z = (0, u.Z)(
         null !=
             (N =
                 null !=
-                (R =
+                (P =
                     null !=
-                    (P =
-                        null != (D = null == n ? void 0 : n.weekStartsOn)
-                            ? D
-                            : null == n || null == (w = n.locale) || null == (L = w.options)
+                    (R =
+                        null != (w = null == n ? void 0 : n.weekStartsOn)
+                            ? w
+                            : null == n || null == (D = n.locale) || null == (x = D.options)
                               ? void 0
-                              : L.weekStartsOn)
-                        ? P
-                        : j.weekStartsOn)
-                    ? R
-                    : null == (x = j.locale) || null == (M = x.options)
+                              : x.weekStartsOn)
+                        ? R
+                        : k.weekStartsOn)
+                    ? P
+                    : null == (L = k.locale) || null == (j = L.options)
                       ? void 0
-                      : M.weekStartsOn)
+                      : j.weekStartsOn)
             ? N
             : 0,
     );
-    if (!(B >= 0 && B <= 6)) throw RangeError("weekStartsOn must be between 0 and 6 inclusively");
+    if (!(Z >= 0 && Z <= 6)) throw RangeError("weekStartsOn must be between 0 and 6 inclusively");
     if (!U.localize) throw RangeError("locale must contain localize property");
     if (!U.formatLong) throw RangeError("locale must contain formatLong property");
-    var Z = (0, a.default)(e);
-    if (!(0, r.default)(Z)) throw RangeError("Invalid time value");
-    var F = (0, l.Z)(Z),
-        V = (0, i.Z)(Z, F),
+    var B = (0, a.default)(e);
+    if (!(0, r.default)(B)) throw RangeError("Invalid time value");
+    var F = (0, l.Z)(B),
+        V = (0, i.Z)(B, F),
         H = {
             firstWeekContainsDate: G,
-            weekStartsOn: B,
+            weekStartsOn: Z,
             locale: U,
-            _originalDate: Z,
+            _originalDate: B,
         };
-    return k
-        .match(h)
+    return M.match(m)
         .map(function (e) {
             var t = e[0];
             return "p" === t || "P" === t ? (0, s.Z[t])(e, U.formatLong) : e;
         })
         .join("")
-        .match(p)
+        .match(_)
         .map(function (r) {
             if ("''" === r) return "'";
             var i = r[0];
@@ -120,6 +119,6 @@ function b(e, t, n) {
         .join("");
 }
 function y(e) {
-    var t = e.match(m);
+    var t = e.match(h);
     return t ? t[1].replace(g, "'") : e;
 }

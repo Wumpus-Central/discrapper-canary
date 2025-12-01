@@ -1,4 +1,4 @@
-r.d(t, { default: () => g }), r(388685);
+r.d(t, { default: () => m }), r(388685);
 var n = r(54381),
     o = r(473749),
     s = r(159691),
@@ -7,9 +7,10 @@ var n = r(54381),
     a = r(663993),
     c = r(771845),
     h = r(981631),
-    p = r(388032),
-    u = r(542560);
-function d(e, t, r) {
+    p = r(126134),
+    u = r(388032),
+    d = r(542560);
+function b(e, t, r) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,22 +23,22 @@ function d(e, t, r) {
         e
     );
 }
-let b = (0, a.Un)({
+let f = (0, a.Un)({
     createPromise: () => r.e("4848").then(r.bind(r, 797967)),
     webpackId: 797967,
 });
-class f extends o.PureComponent {
+class g extends o.PureComponent {
     render() {
         let { transitionState: e, onClose: t } = this.props,
             { name: r, color: o } = this.state;
         return (0, n.jsx)("form", {
             onSubmit: this.handleSubmit,
             children: (0, n.jsx)(s.u_l, {
-                title: p.intl.string(p.t.Dx7im5),
+                title: u.intl.string(u.t.Dx7im5),
                 actions: [
                     {
                         variant: "primary",
-                        text: p.intl.string(p.t.i4jeWR),
+                        text: u.intl.string(u.t.i4jeWR),
                         type: "submit",
                     },
                 ],
@@ -47,20 +48,20 @@ class f extends o.PureComponent {
                     gap: 16,
                     children: [
                         (0, n.jsx)(i.oil, {
-                            label: p.intl.string(p.t.tGRbjA),
+                            label: u.intl.string(u.t.tGRbjA),
                             maxLength: h.dYL,
                             value: r,
                             onChange: this.handleNameChange,
-                            placeholder: p.intl.string(p.t.xV9hVh),
+                            placeholder: u.intl.string(u.t.xV9hVh),
                             autoFocus: !0,
                         }),
                         (0, n.jsx)(i.gNt, {
-                            label: p.intl.string(p.t.xpurRF),
-                            children: (0, n.jsx)(b, {
-                                className: u.colorPicker,
-                                defaultColor: h.Wyy,
+                            label: u.intl.string(u.t.xpurRF),
+                            children: (0, n.jsx)(f, {
+                                className: d.colorPicker,
+                                defaultColor: p.Wy,
                                 colors: h.pmI,
-                                value: null != o ? o : h.Wyy,
+                                value: null != o ? o : p.Wy,
                                 onChange: this.handleColorChange,
                             }),
                         }),
@@ -72,20 +73,20 @@ class f extends o.PureComponent {
     constructor(...e) {
         var t;
         super(...e),
-            d(this, "state", {
+            b(this, "state", {
                 name: null != (t = this.props.folderName) ? t : "",
                 color: this.props.folderColor,
             }),
-            d(this, "close", () => {
+            b(this, "close", () => {
                 this.props.onClose();
             }),
-            d(this, "handleNameChange", (e) => {
+            b(this, "handleNameChange", (e) => {
                 this.setState({ name: e });
             }),
-            d(this, "handleColorChange", (e) => {
+            b(this, "handleColorChange", (e) => {
                 this.setState({ color: e });
             }),
-            d(this, "handleSubmit", (e) => {
+            b(this, "handleSubmit", (e) => {
                 e.preventDefault();
                 let { folderId: t } = this.props,
                     { name: r, color: n } = this.state,
@@ -120,7 +121,7 @@ class f extends o.PureComponent {
                                                   }),
                                               )),
                                               n.forEach(function (t) {
-                                                  d(e, t, r[t]);
+                                                  b(e, t, r[t]);
                                               });
                                       }
                                       return e;
@@ -136,4 +137,4 @@ class f extends o.PureComponent {
             });
     }
 }
-let g = f;
+let m = g;

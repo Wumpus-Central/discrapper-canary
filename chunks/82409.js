@@ -3,16 +3,16 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     o = n.n(l),
-    a = n(790519),
-    s = n(442837);
+    a = n(666917),
+    s = n(442837),
+    c = n(692547);
 n(28664);
-var c = n(481060),
-    u = n(570140),
-    d = n(45114),
+var u = n(481060),
+    d = n(570140),
+    f = n(45114),
     p = n(493773);
 n(100527), n(906732);
-var h = n(377171),
-    f = n(315174),
+var h = n(315174),
     g = n(340541),
     m = n(768943),
     b = n(592125),
@@ -21,8 +21,8 @@ var h = n(377171),
     O = n(306680),
     v = n(709054),
     j = n(821020),
-    C = n(948154),
-    x = n(804932),
+    x = n(948154),
+    C = n(804932),
     E = n(725739),
     S = n(787879),
     I = n(370774),
@@ -77,8 +77,8 @@ let k = [],
 function U(e) {
     var t, n;
     let { includePanelSpacing: l } = e,
-        a = (0, x.fJ)(),
-        { selectedFilter: h } = (0, E.Z)(),
+        a = (0, C.fJ)(),
+        { selectedFilter: c } = (0, E.Z)(),
         P = (0, s.e7)([S.Z], () => S.Z.oldestDisplayedMessageId),
         N = (0, s.Wu)([S.Z], () => S.Z.getInboxMessages()),
         Z = (0, s.Wu)([O.ZP, _.Z, S.Z], () =>
@@ -107,21 +107,21 @@ function U(e) {
         ),
         U = i.useCallback(
             (e) => {
-                h !== A.V5.BOOKMARKS &&
-                    C.Z.loadMoreInbox({
+                c !== A.V5.BOOKMARKS &&
+                    x.Z.loadMoreInbox({
                         viewId: a,
                         loadingTrigger: e,
                     });
             },
-            [h, a],
+            [c, a],
         ),
-        { hasLoadedEver: B, canLoadMore: W } = (0, s.cj)([S.Z], () => ({
+        { hasLoadedEver: B, canLoadMore: z } = (0, s.cj)([S.Z], () => ({
             hasLoadedEver: S.Z.hasLoadedEver,
             canLoadMore: S.Z.canLoadMore({}),
         }));
     i.useEffect(() => {
-        W && !B && U(A.X.ON_OPEN);
-    }, [W, B, U]),
+        z && !B && U(A.X.ON_OPEN);
+    }, [z, B, U]),
         (function (e) {
             let { unreadChannelIds: t } = (0, I.O4)();
             i.useEffect(() => {
@@ -136,7 +136,7 @@ function U(e) {
                             null != i &&
                             l &&
                             v.default.compare(i, r) >= 0 &&
-                            d.ack(
+                            f.ack(
                                 e,
                                 {
                                     section: R.jXE.NOTIFICATIONS_INBOX,
@@ -168,11 +168,11 @@ function U(e) {
                 }),
             [K],
         ),
-        q = F(Z, h, P),
-        X = F(D, h, null);
+        q = F(Z, c, P),
+        Q = F(D, c, null);
     (0, p.ZP)(() => {
         var e;
-        u.Z.dispatch({ type: "NOTIFICATIONS_INBOX_OPEN" });
+        d.Z.dispatch({ type: "NOTIFICATIONS_INBOX_OPEN" });
         let t = (0, j.Ag)({ location: "NotificationsInboxSidebar" }).notificationCenterVariant,
             n = null == (e = S.Z.getDevOverrides().navOnClick) || e;
         if (t !== j.jP.SIDEBAR || !1 === n) return;
@@ -206,9 +206,9 @@ function U(e) {
                       },
                       isUnread: null != (i = O.ZP.hasUnread(c)) && i,
                   };
-        })(q, X);
+        })(q, Q);
         null != r &&
-            C.Z.inboxItemClick({
+            x.Z.inboxItemClick({
                 message: r,
                 channel: { id: r.channel_id },
                 isUnread: i,
@@ -218,18 +218,18 @@ function U(e) {
             });
     }),
         (0, p.zq)(() => {
-            u.Z.dispatch({ type: "NOTIFICATIONS_INBOX_CLOSE" });
+            d.Z.dispatch({ type: "NOTIFICATIONS_INBOX_CLOSE" });
         });
-    let { filterStyle: Q } = (0, j.pN)({ location: "NotificationsInboxSidebar" }),
+    let { filterStyle: X } = (0, j.pN)({ location: "NotificationsInboxSidebar" }),
         J = (0, g._k)({ location: "NotificationsInboxSidebar" }),
-        $ = Q === j.v8.DROPDOWN && h !== A.V5.ALL,
-        ee = (0, A.H_)(h);
+        $ = X === j.v8.DROPDOWN && c !== A.V5.ALL,
+        ee = (0, A.H_)(c);
     return (0, r.jsx)("nav", {
         className: o()(L.container, { [L.panelSpacing]: l }),
-        children: (0, r.jsxs)(c.y5t, {
+        children: (0, r.jsxs)(u.y5t, {
             forceLevel: 1,
             component: (0, r.jsx)(
-                f.ZP,
+                h.ZP,
                 ((t = M(
                     {
                         hasSubheader: !0,
@@ -239,11 +239,11 @@ function U(e) {
                 )),
                 (n = n =
                     {
-                        children: (0, r.jsx)(c.Kqy, {
+                        children: (0, r.jsx)(u.Kqy, {
                             direction: "horizontal",
                             gap: 4,
                             style: { marginRight: -4 },
-                            children: Q === j.v8.DROPDOWN && !J.isGuildEntrypointEnabled && (0, r.jsx)(w.p, {}),
+                            children: X === j.v8.DROPDOWN && !J.isGuildEntrypointEnabled && (0, r.jsx)(w.p, {}),
                         }),
                     }),
                 Object.getOwnPropertyDescriptors
@@ -261,16 +261,16 @@ function U(e) {
                 t),
             ),
             children: [
-                h === A.V5.ALL && (0, r.jsx)(z, { hideBanner: !B || h !== A.V5.ALL }),
-                $ && (0, r.jsx)(c.LZC, { size: 8 }),
+                c === A.V5.ALL && (0, r.jsx)(W, { hideBanner: !B || c !== A.V5.ALL }),
+                $ && (0, r.jsx)(u.LZC, { size: 8 }),
                 (0, r.jsx)(T.Z, {
                     className: L.messageList,
                     renderMessageGroup: H,
-                    messages: h === A.V5.BOOKMARKS ? Y : q,
-                    unreadMessages: h === A.V5.BOOKMARKS ? [] : X,
+                    messages: c === A.V5.BOOKMARKS ? Y : q,
+                    unreadMessages: c === A.V5.BOOKMARKS ? [] : Q,
                     listName: "notifications-inbox",
                     renderLoadingState: V,
-                    ignoreGrouping: h === A.V5.BOOKMARKS,
+                    ignoreGrouping: c === A.V5.BOOKMARKS,
                     loadMore: U,
                 }),
             ],
@@ -278,7 +278,7 @@ function U(e) {
     });
 }
 function B(e) {
-    return (0, r.jsx)(x.HP, { children: (0, r.jsx)(U, M({}, e)) });
+    return (0, r.jsx)(C.HP, { children: (0, r.jsx)(U, M({}, e)) });
 }
 function F(e, t, n) {
     return i.useMemo(
@@ -308,7 +308,7 @@ function H(e, t) {
         e[0].id,
     );
 }
-function z(e) {
+function W(e) {
     let { hideBanner: t } = e,
         n = (0, P.d)((e) => e.shouldHide());
     return (0, r.jsx)("div", {
@@ -316,15 +316,15 @@ function z(e) {
         children: (0, r.jsxs)("div", {
             className: L.caughtUpContent,
             children: [
-                (0, r.jsx)(c.Text, {
+                (0, r.jsx)(u.Text, {
                     variant: "text-sm/medium",
                     color: "text-feedback-positive",
                     className: L.caughtUpText,
                     children: D.intl.string(D.t["6XMM+D"]),
                 }),
-                (0, r.jsx)(c.W6s, {
+                (0, r.jsx)(u.W6s, {
                     size: "sm",
-                    color: h.Z.TEXT_FEEDBACK_POSITIVE,
+                    color: c.Z.colors.TEXT_FEEDBACK_POSITIVE.css,
                 }),
             ],
         }),

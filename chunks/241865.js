@@ -15,9 +15,9 @@ var i = n(54381),
     o = n.n(a),
     c = n(392711),
     u = n.n(c),
-    d = n(831209),
-    h = n(793030),
-    p = n(442837),
+    d = n(793030),
+    h = n(442837),
+    p = n(692547),
     g = n(481060),
     m = n(333848),
     C = n(749210),
@@ -111,7 +111,7 @@ function et(e) {
             ? (r = (0, i.jsx)(g.IGR, {
                   text: Q.intl.string(Q.t.psHMa6),
                   className: K.newBadge,
-                  color: d.Z.BUTTON_OUTLINE_BRAND_BACKGROUND_HOVER,
+                  color: p.Z.colors.BUTTON_OUTLINE_BRAND_BACKGROUND_HOVER.css,
               }))
             : !0 === n && (r = (0, i.jsx)(T.Z, { className: K.newBadge })),
         r
@@ -127,7 +127,7 @@ function en(e) {
             error: o,
             name: c,
             guildId: u,
-            onBack: d,
+            onBack: p,
             canSubmit: m,
             onMembersChange: C,
             pendingPermissionOverwrites: f,
@@ -135,7 +135,7 @@ function en(e) {
         [O, b] = r.useState(""),
         [E, I] = r.useState({}),
         v = r.useRef(null),
-        S = (0, p.e7)([R.Z], () => R.Z.getGuild(u)),
+        S = (0, h.e7)([R.Z], () => R.Z.getGuild(u)),
         j = s === Y.d4z.GUILD_STAGE_VOICE,
         { roles: x, members: P, getRichTag: T } = (0, N.Q)(S, null, j ? G.yP : (0, L.CG)(s), O, j),
         A = y.Z.useSections({
@@ -162,7 +162,7 @@ function en(e) {
               roles: x,
               members: P,
               getRichTag: T,
-              children: (0, i.jsx)(h.Modal, {
+              children: (0, i.jsx)(d.Modal, {
                   transitionState: n,
                   onClose: l,
                   title: j ? Q.intl.string(Q.t["S/6zHM"]) : Q.intl.string(Q.t.dMJ3Y6),
@@ -202,7 +202,7 @@ function en(e) {
                       {
                           variant: "secondary",
                           text: Q.intl.string(Q.t["13/7kX"]),
-                          onClick: d,
+                          onClick: p,
                       },
                       {
                           variant: "primary",
@@ -401,7 +401,7 @@ class er extends r.PureComponent {
             { channelType: a, isPrivate: o } = this.state;
         if (null != e || a === Y.d4z.GUILD_CATEGORY) return;
         let c = null != t && t.length > 0;
-        return (0, i.jsx)(h.Eep, {
+        return (0, i.jsx)(d.Eep, {
             label: Q.intl.string(Q.t["7ZcXG2"]),
             options: (function (e) {
                 let {
@@ -575,7 +575,7 @@ class er extends r.PureComponent {
         let t,
             n,
             { channelType: r, isPrivate: l } = this.state,
-            { guildId: s, transitionState: a, cloneChannel: o, categoryId: c, onClose: u, channelType: d } = this.props,
+            { guildId: s, transitionState: a, cloneChannel: o, categoryId: c, onClose: u, channelType: h } = this.props,
             p =
                 null != o
                     ? Q.intl.string(Q.t.dEaPc4)
@@ -586,11 +586,11 @@ class er extends r.PureComponent {
             let n = D.Z.getChannel(c);
             t = Q.intl.format(Q.t.L1zJgb, { categoryName: null != (e = null == n ? void 0 : n.name) ? e : "" });
         }
-        n = d === Y.d4z.GUILD_CATEGORY ? Q.intl.string(Q.t["ISN+NM"]) : Q.intl.string(Q.t["fUYU+j"]);
+        n = h === Y.d4z.GUILD_CATEGORY ? Q.intl.string(Q.t["ISN+NM"]) : Q.intl.string(Q.t["fUYU+j"]);
         let g = l || r === Y.d4z.GUILD_STAGE_VOICE;
         return (0, i.jsx)("form", {
             onSubmit: this.handleSubmit,
-            children: (0, i.jsx)(h.Modal, {
+            children: (0, i.jsx)(d.Modal, {
                 transitionState: a,
                 onClose: u,
                 title: p,
@@ -626,7 +626,7 @@ class er extends r.PureComponent {
                     children: [
                         this.renderType(),
                         this.renderName(),
-                        d === Y.d4z.GUILD_STORE ? this.renderStoreOptions() : null,
+                        h === Y.d4z.GUILD_STORE ? this.renderStoreOptions() : null,
                         (0, i.jsx)(F.Z, {
                             guildId: s,
                             channelType: r,
@@ -821,7 +821,7 @@ class er extends r.PureComponent {
 }
 let el = r.forwardRef(function (e, t) {
     let { channelType: n, guildId: r, cloneChannelId: l } = e,
-        s = (0, p.cj)([R.Z, B.default, M.Z, D.Z, Z.ZP], () => {
+        s = (0, h.cj)([R.Z, B.default, M.Z, D.Z, Z.ZP], () => {
             var e, t, i;
             let s = R.Z.getGuild(r),
                 a = B.default.getCurrentUser();
@@ -845,21 +845,21 @@ let el = r.forwardRef(function (e, t) {
                 canManageChannels: M.Z.can(Y.Plq.MANAGE_CHANNELS, s),
             };
         }),
-        a = (0, p.Wu)([I.Z], () =>
+        a = (0, h.Wu)([I.Z], () =>
             I.Z.getGuildApplicationIds(r)
                 .map((e) => I.Z.getApplication(e))
                 .filter(k.lm),
         ),
         c = new Set(s.memberRoles),
         { canManageRoles: u, canManageChannels: d } = s,
-        h = (0, U.m)(r) && u && d,
+        p = (0, U.m)(r) && u && d,
         g = (0, A.Ui)(null == s ? void 0 : s.guild);
     return (0, i.jsx)(
         er,
         ee($({}, e, s), {
             memberRoleIds: c,
             applications: a,
-            canCreateStageChannel: h,
+            canCreateStageChannel: p,
             canCreateMediaChannel: g,
             ref: t,
             width: 496,

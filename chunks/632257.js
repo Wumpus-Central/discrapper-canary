@@ -1,48 +1,47 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => y });
 var r = n(54381);
 n(473749);
 var i = n(120356),
     a = n.n(i),
-    o = n(674746),
-    s = n(442837),
-    l = n(780384),
-    c = n(481060),
-    u = n(410575),
-    d = n(666743),
-    f = n(410030),
-    _ = n(984370),
+    o = n(442837),
+    s = n(780384),
+    l = n(481060),
+    c = n(410575),
+    u = n(666743),
+    d = n(410030),
+    f = n(984370),
     p = n(594174),
-    h = n(74538),
+    _ = n(74538),
     m = n(981631),
-    g = n(474936),
-    E = n(388032),
-    b = n(125321);
-let y = (e) => {
+    h = n(474936),
+    g = n(388032),
+    E = n(125321);
+let b = (e) => {
         let { isAuthenticated: t, user: n } = e,
-            i = (0, h.I5)(n, g.PremiumTypes.TIER_2),
-            s = (0, f.ZP)();
-        return (0, r.jsx)(u.Z, {
+            i = (0, _.I5)(n, h.PremiumTypes.TIER_2),
+            o = (0, d.ZP)();
+        return (0, r.jsx)(c.Z, {
             section: m.jXE.NAVIGATION,
-            children: (0, r.jsx)(c.f6W, {
-                theme: s,
+            children: (0, r.jsx)(l.f6W, {
+                theme: o,
                 children: (e) =>
-                    (0, r.jsxs)(_.Z, {
+                    (0, r.jsxs)(f.Z, {
                         isAuthenticated: t,
                         className: a()(e, {
-                            [b.headerBarV2LightBackground]: !i && !(0, l.wj)(s),
-                            [b.headerBarV2DarkBackground]: !i && (0, l.wj)(s),
+                            [E.headerBarV2LightBackground]: !i && !(0, s.wj)(o),
+                            [E.headerBarV2DarkBackground]: !i && (0, s.wj)(o),
                         }),
                         role: "navigation",
                         children: [
-                            (0, r.jsx)(_.Z.Icon, {
-                                icon: c.SrA,
+                            (0, r.jsx)(f.Z.Icon, {
+                                icon: l.SrA,
                                 "aria-hidden": !0,
-                                color: i ? void 0 : o.Z.PREMIUM_TIER_2_PINK,
+                                color: i ? void 0 : l.TVs.unsafe_rawColors.PREMIUM_TIER_2_PINK.css,
                             }),
-                            (0, r.jsx)(_.Z.Title, { children: E.intl.string(E.t.Ipxkog) }),
+                            (0, r.jsx)(f.Z.Title, { children: g.intl.string(g.t.Ipxkog) }),
                         ],
                     }),
             }),
         });
     },
-    O = s.ZP.connectStores([p.default], () => ({ user: p.default.getCurrentUser() }))((0, d.Z)(y));
+    y = o.ZP.connectStores([p.default], () => ({ user: p.default.getCurrentUser() }))((0, u.Z)(b));

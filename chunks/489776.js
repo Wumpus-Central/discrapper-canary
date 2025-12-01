@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h }), n(388685);
 var r = n(54381),
     i = n(473749),
-    l = n(790519),
-    a = n(722770),
+    l = n(666917),
+    a = n(692547),
     s = n(481060),
     o = n(236413),
     c = n(85960),
@@ -104,7 +104,7 @@ function h(e) {
                                   size: "custom",
                                   width: 20,
                                   height: 20,
-                                  color: a.Z.BLUE_345,
+                                  color: a.Z.unsafe_rawColors.BLUE_345.css,
                                   className: m.plusIcon,
                               }),
                               (0, r.jsx)(s.Text, {

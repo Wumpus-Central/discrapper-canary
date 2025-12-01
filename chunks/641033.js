@@ -4,8 +4,8 @@ n.d(t, {
     yz: () => l,
 }),
     n(388685);
-var r = n(524484),
-    i = n(981631);
+var r = n(900089),
+    i = n(524484);
 let a = function (e, t) {
         let { multiplier: n, value: r } = e,
             [i, a] = t,
@@ -29,8 +29,8 @@ let a = function (e, t) {
               );
     },
     o = function (e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.qi.LEVEL_3;
-        return a(e, [r.JR[t], r.u4[t]], 100000);
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.qi.LEVEL_3;
+        return a(e, [i.JR[t], i.u4[t]], 100000);
     },
     s = [
         [1, 0.001],
@@ -52,21 +52,21 @@ let a = function (e, t) {
         }),
         (e) =>
             1 === e
-                ? { color: i.Ilk.BRAND_500 }
+                ? { color: (0, r.Fw)("BRAND_500") }
                 : 2 === e || 3 === e
-                  ? { color: i.Ilk.GREEN_360 }
+                  ? { color: (0, r.Fw)("GREEN_360") }
                   : 4 === e || 5 === e
                     ? {
-                          color: i.Ilk.YELLOW_300,
+                          color: (0, r.Fw)("YELLOW_300"),
                           square: !0,
                       }
                     : 6 === e
                       ? {
-                            color: i.Ilk.RED_400,
+                            color: (0, r.Fw)("RED_400"),
                             square: !0,
                         }
                       : {
-                            color: i.Ilk.ORANGE_345,
+                            color: (0, r.Fw)("ORANGE_345"),
                             flair: !0,
                         });
 function c(e) {

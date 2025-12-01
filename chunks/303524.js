@@ -1,21 +1,18 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => u });
 var r = n(54381),
     i = n(120356),
     a = n.n(i),
     o = n(657707),
-    s = n(44315),
-    l = n(231338),
-    c = n(80568);
-let u = 14,
-    d = l.Il.BRAND_345;
-function f(e) {
-    let { className: t } = e,
-        n = (0, s.Sl)(d).hex;
+    s = n(692547),
+    l = n(80568);
+let c = 14;
+function u(e) {
+    let { className: t } = e;
     return (0, r.jsx)(o.qDn, {
-        className: a()(c.questsIcon, t),
+        className: a()(l.questsIcon, t),
         size: "custom",
-        height: u,
-        width: u,
-        color: n,
+        height: c,
+        width: c,
+        color: s.Z.unsafe_rawColors.BRAND_345.css,
     });
 }

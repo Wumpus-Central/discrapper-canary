@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -8,12 +8,11 @@ var r = n(54381),
     c = n(692547),
     u = n(481060),
     d = n(699682),
-    f = n(44315),
-    _ = n(654904),
+    f = n(654904),
     p = n(981631),
-    h = n(388032),
+    _ = n(388032),
     m = n(707892);
-function g(e, t, n) {
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +25,7 @@ function g(e, t, n) {
         e
     );
 }
-function E(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,12 +36,12 @@ function E(e) {
                 }),
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
 }
-function b(e, t) {
+function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,22 +53,22 @@ function b(e, t) {
     }
     return n;
 }
-function y(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : E(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function O(e, t) {
+function y(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = v(e, t);
+        i = O(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -77,7 +76,7 @@ function O(e, t) {
     }
     return i;
 }
-function v(e, t) {
+function O(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -86,67 +85,67 @@ function v(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function I(e) {
+function v(e) {
     let {
             onChange: t,
             onClose: n,
             color: a,
-            suggestedColors: g,
-            disabled: b,
-            label: v,
-            colorPickerMiddle: I,
-            colorPickerFooter: T,
-            showEyeDropper: S,
+            suggestedColors: h,
+            disabled: E,
+            label: O,
+            colorPickerMiddle: v,
+            colorPickerFooter: S,
+            showEyeDropper: I,
         } = e,
-        A = i.useRef(null),
-        C = (0, u.dQu)(c.Z.colors.BACKGROUND_BASE_LOW).hex(),
-        N = c.Z.colors.BACKGROUND_ACCENT.css,
-        R = (0, _.DP)(a),
+        T = i.useRef(null),
+        A = (0, u.dQu)(c.Z.colors.BACKGROUND_BASE_LOW).hex(),
+        C = c.Z.colors.BACKGROUND_ACCENT.css,
+        N = (0, f.DP)(a),
         P = (0, l.Rf)(a),
-        D = P === C ? N : P,
-        w = (0, f.Lq)(R ? p.Ilk.WHITE_500 : p.Ilk.PRIMARY_530),
-        L = (0, d.Z)(I),
-        x = (0, d.Z)(T),
-        [M, k] = i.useState((0, s.Z)());
+        R = P === A ? C : P,
+        w = N ? c.Z.unsafe_rawColors.WHITE_500.css : c.Z.unsafe_rawColors.PRIMARY_530.css,
+        D = (0, d.Z)(v),
+        x = (0, d.Z)(S),
+        [L, j] = i.useState((0, s.Z)());
     return (
         i.useEffect(() => {
-            (L !== I || x !== T) && k((0, s.Z)());
-        }, [T, I, x, L]),
+            (D !== v || x !== S) && j((0, s.Z)());
+        }, [S, v, x, D]),
         (0, r.jsx)(u.yRy, {
-            targetElementRef: A,
-            positionKey: M,
+            targetElementRef: T,
+            positionKey: L,
             renderPopout: (e) =>
                 (0, r.jsx)(
                     u.Z$W,
-                    y(E({}, e), {
+                    b(g({}, e), {
                         value: a,
                         onChange: t,
-                        suggestedColors: g,
-                        middle: I,
-                        footer: T,
-                        showEyeDropper: S,
+                        suggestedColors: h,
+                        middle: v,
+                        footer: S,
+                        showEyeDropper: I,
                     }),
                 ),
             onRequestClose: n,
             children: (e) => {
                 var { onClick: t } = e,
-                    n = O(e, ["onClick"]);
+                    n = y(e, ["onClick"]);
                 return (0, r.jsxs)("div", {
-                    ref: A,
-                    className: o()(m.colorSwatch, { [m.disabled]: b }),
+                    ref: T,
+                    className: o()(m.colorSwatch, { [m.disabled]: E }),
                     children: [
                         (0, r.jsx)(
                             u.P3F,
-                            y(E({}, n), {
-                                tabIndex: b ? -1 : 0,
-                                onClick: b ? p.dG4 : t,
+                            b(g({}, n), {
+                                tabIndex: E ? -1 : 0,
+                                onClick: E ? p.dG4 : t,
                                 style: {
                                     backgroundColor: P,
-                                    borderColor: D,
+                                    borderColor: R,
                                 },
                                 className: m.swatch,
-                                "aria-label": h.intl.string(h.t.Qp04hK),
-                                focusProps: { ringTarget: A },
+                                "aria-label": _.intl.string(_.t.Qp04hK),
+                                focusProps: { ringTarget: T },
                                 children: (0, r.jsx)(u.vdY, {
                                     size: "custom",
                                     className: m.editPencilIcon,
@@ -156,7 +155,7 @@ function I(e) {
                                 }),
                             }),
                         ),
-                        v,
+                        O,
                     ],
                 });
             },

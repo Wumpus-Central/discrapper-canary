@@ -1,15 +1,14 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => s });
 var r = n(54381);
 n(473749);
-var i = n(481060),
-    l = n(44315),
-    a = n(981631),
-    s = n(388032);
-function o(e) {
+var i = n(692547),
+    l = n(481060),
+    a = n(388032);
+function s(e) {
     var t,
         n,
-        { className: o, color: c = (0, l.Lq)(a.Ilk.BRAND_500) } = e,
-        d = (function (e, t) {
+        { className: s, color: o = i.Z.unsafe_rawColors.BRAND_500.css } = e,
+        c = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -31,7 +30,7 @@ function o(e) {
             return i;
         })(e, ["className", "color"]);
     return (0, r.jsx)(
-        i.IGR,
+        l.IGR,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -56,12 +55,12 @@ function o(e) {
                     });
             }
             return e;
-        })({}, d)),
+        })({}, c)),
         (n = n =
             {
-                text: s.intl.string(s.t.G6GWZ4),
-                color: c,
-                className: o,
+                text: a.intl.string(a.t.G6GWZ4),
+                color: o,
+                className: s,
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

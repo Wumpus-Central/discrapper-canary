@@ -1,13 +1,12 @@
-n.d(t, { a: () => O }), n(415506), n(388685);
+n.d(t, { a: () => y }), n(415506), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(722770),
-    l = n(481060),
-    c = n(591146),
-    u = n(546557);
-function d(e, t, n) {
+    s = n(481060),
+    l = n(591146),
+    c = n(546557);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +19,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,12 +30,12 @@ function f(e) {
                 }),
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                u(e, t, n[t]);
             });
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,13 +52,13 @@ function p(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -80,9 +79,9 @@ function m(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let g = 16,
-    E = 2,
-    b = (e) => {
+let h = 16,
+    g = 2,
+    E = (e) => {
         switch (e) {
             case 52:
                 return "M0 25.6C0 16.6392 0 12.1587 1.7439 8.73615C3.27787 5.72556 5.72556 3.27787 8.73615 1.7439C12.1587 0 16.6392 0 25.6 0H26.4C35.3608 0 39.8413 0 43.2638 1.7439C46.2744 3.27787 48.7221 5.72556 50.2561 8.73615C52 12.1587 52 16.6392 52 25.6V26.4C52 35.3608 52 39.8413 50.2561 43.2638C48.7221 46.2744 46.2744 48.7221 43.2638 50.2561C39.8413 52 35.3608 52 26.4 52H25.6C16.6392 52 12.1587 52 8.73615 50.2561C5.72556 48.7221 3.27787 46.2744 1.7439 43.2638C0 39.8413 0 35.3608 0 26.4V25.6Z";
@@ -96,7 +95,7 @@ let g = 16,
                 throw Error("Unsupported BlobMask squicle size: ".concat(e));
         }
     },
-    y = (e) => {
+    b = (e) => {
         switch (e) {
             case 48:
                 return "M48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24Z";
@@ -108,33 +107,33 @@ let g = 16,
                 throw Error("Unsupported BlobMask circle size: ".concat(e));
         }
     };
-function O(e) {
+function y(e) {
     var {
             selected: t = !1,
             lowerBadgeSize: n = {
-                width: g,
-                height: g,
+                width: h,
+                height: h,
             },
             highlight: i = !1,
             rounded: a = !1,
         } = e,
-        o = h(e, ["selected", "lowerBadgeSize", "highlight", "rounded"]);
-    let s = !!o.isFolder,
-        u = (0, c.Ml)("BlobMask"),
-        d = (0, l.dQu)(l.TVs.modules.guildbar.AVATAR_SIZE),
-        _ = (0, l.dQu)(l.TVs.modules.guildbar.FOLDER_SIZE),
-        m = !u && s ? _ : d,
-        E = m / 2;
+        o = _(e, ["selected", "lowerBadgeSize", "highlight", "rounded"]);
+    let c = !!o.isFolder,
+        u = (0, l.Ml)("BlobMask"),
+        f = (0, s.dQu)(s.TVs.modules.guildbar.AVATAR_SIZE),
+        m = (0, s.dQu)(s.TVs.modules.guildbar.FOLDER_SIZE),
+        g = !u && c ? m : f,
+        E = g / 2;
     return (0, r.jsx)(
-        v,
-        p(f({}, o), {
+        O,
+        p(d({}, o), {
             selected: t,
             rounded: a,
-            baseViewBoxSize: m,
-            viewBoxSize: m,
+            baseViewBoxSize: g,
+            viewBoxSize: g,
             style: {
-                width: m,
-                height: m,
+                width: g,
+                height: g,
             },
             badgeMaskSize: E,
             badgeMaskStroke: 2,
@@ -143,56 +142,56 @@ function O(e) {
         }),
     );
 }
-function v(e) {
+function O(e) {
     let {
             children: t,
             viewBoxSize: n,
             className: a,
             style: l,
-            innerClassName: c,
+            innerClassName: u,
             isFolder: d,
             lowerBadgeSize: f,
-            highlight: _,
-            badgeMaskStroke: p,
-            badgeMaskSize: h,
-            upperBadge: m,
+            highlight: p,
+            badgeMaskStroke: _,
+            badgeMaskSize: m,
+            upperBadge: y,
             lowerBadge: O,
             rounded: v = !1,
-            "aria-hidden": I,
+            "aria-hidden": S,
         } = e,
-        [T, S] = i.useState(!1),
+        [I, T] = i.useState(!1),
         A = () => {
-            S(!0);
+            T(!0);
         },
         C = () => {
-            S(!1);
+            T(!1);
         },
-        N = null != m,
-        R = null != O,
-        P = i.useId(),
-        D = "".concat(P, "-upper_badge_masks"),
-        w = "".concat(P, "-lower_badge_masks"),
-        L = "".concat(P, "-blob_mask"),
-        x = "".concat(P, "-stroke_mask"),
-        M = "".concat(P, "-highlight_mask"),
-        k = (null == f ? void 0 : f.width) != null ? f.width : g,
-        j = (null == f ? void 0 : f.height) != null ? f.height : g,
+        N = null != y,
+        P = null != O,
+        R = i.useId(),
+        w = "".concat(R, "-upper_badge_masks"),
+        D = "".concat(R, "-lower_badge_masks"),
+        x = "".concat(R, "-blob_mask"),
+        L = "".concat(R, "-stroke_mask"),
+        j = "".concat(R, "-highlight_mask"),
+        M = (null == f ? void 0 : f.width) != null ? f.width : h,
+        k = (null == f ? void 0 : f.height) != null ? f.height : h,
         U = {
             width: d ? n : n + 8,
             height: d ? n : n + 8,
             x: d ? 0 : -4,
             y: d ? 0 : -4,
         },
-        G = d ? 20 : h,
-        B = v ? y(n) : b(n);
+        G = d ? 20 : m,
+        Z = v ? b(n) : E(n);
     return (0, r.jsxs)(
         "div",
         {
-            className: o()(a, u.wrapper),
+            className: o()(a, c.wrapper),
             style: l,
             onFocus: A,
             onBlur: C,
-            "aria-hidden": I,
+            "aria-hidden": S,
             children: [
                 (0, r.jsxs)(
                     "svg",
@@ -200,29 +199,29 @@ function v(e) {
                         width: U.width,
                         height: U.height,
                         viewBox: "".concat(U.x, " ").concat(U.y, " ").concat(U.width, " ").concat(U.height),
-                        className: o()(u.svg, {
-                            [u.noContain]: _,
-                            [u.shiftSVG]: !d,
+                        className: o()(c.svg, {
+                            [c.noContain]: p,
+                            [c.shiftSVG]: !d,
                         }),
                         overflow: "visible",
                         role: "none",
                         children: [
                             (0, r.jsxs)("defs", {
                                 children: [
-                                    _ &&
+                                    p &&
                                         (0, r.jsx)("path", {
-                                            d: B,
-                                            id: M,
+                                            d: Z,
+                                            id: j,
                                         }),
                                     (0, r.jsx)("path", {
-                                        d: B,
-                                        id: L,
+                                        d: Z,
+                                        id: x,
                                     }),
-                                    null != m
+                                    null != y
                                         ? (0, r.jsx)("rect", {
-                                              id: D,
-                                              x: n - G + p,
-                                              y: -p,
+                                              id: w,
+                                              x: n - G + _,
+                                              y: -_,
                                               width: G,
                                               height: G,
                                               rx: G / 2,
@@ -231,52 +230,52 @@ function v(e) {
                                         : null,
                                     null != O
                                         ? (0, r.jsx)("rect", {
-                                              id: w,
-                                              x: n - (k + 2 * p) + p,
-                                              y: n - (j + 2 * p) + p,
-                                              width: k + 2 * p,
-                                              height: j + 2 * p,
-                                              rx: h / 2,
-                                              ry: h / 2,
+                                              id: D,
+                                              x: n - (M + 2 * _) + _,
+                                              y: n - (k + 2 * _) + _,
+                                              width: M + 2 * _,
+                                              height: k + 2 * _,
+                                              rx: m / 2,
+                                              ry: m / 2,
                                           })
                                         : null,
                                 ],
                             }),
                             (0, r.jsxs)("mask", {
-                                id: P,
+                                id: R,
                                 fill: "black",
                                 x: 0,
                                 y: 0,
                                 width: n,
                                 height: n,
                                 children: [
-                                    _ &&
+                                    p &&
                                         (0, r.jsx)("use", {
-                                            href: "#".concat(M),
+                                            href: "#".concat(j),
                                             fill: "black",
                                         }),
                                     (0, r.jsx)("use", {
-                                        href: "#".concat(L),
+                                        href: "#".concat(x),
                                         fill: "white",
-                                        className: o()({ [u.isHighlighted]: _ }),
+                                        className: o()({ [c.isHighlighted]: p }),
                                     }),
                                     N
-                                        ? (0, r.jsx)("use", {
-                                              href: "#".concat(D),
-                                              fill: "black",
-                                          })
-                                        : null,
-                                    R
                                         ? (0, r.jsx)("use", {
                                               href: "#".concat(w),
                                               fill: "black",
                                           })
                                         : null,
+                                    P
+                                        ? (0, r.jsx)("use", {
+                                              href: "#".concat(D),
+                                              fill: "black",
+                                          })
+                                        : null,
                                 ],
                             }),
-                            N || R
+                            N || P
                                 ? (0, r.jsxs)("mask", {
-                                      id: x,
+                                      id: L,
                                       children: [
                                           (0, r.jsx)("rect", {
                                               width: "150%",
@@ -287,52 +286,52 @@ function v(e) {
                                           }),
                                           N
                                               ? (0, r.jsx)("use", {
-                                                    href: "#".concat(D),
+                                                    href: "#".concat(w),
                                                     fill: "black",
                                                 })
                                               : null,
-                                          R
+                                          P
                                               ? (0, r.jsx)("use", {
-                                                    href: "#".concat(w),
+                                                    href: "#".concat(D),
                                                     fill: "black",
                                                 })
                                               : null,
                                       ],
                                   })
                                 : null,
-                            T
+                            I
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)("g", {
-                                              className: u.focusStroke,
-                                              mask: "url(#".concat(x, ")"),
-                                              children: (0, r.jsx)("use", { href: "#".concat(L) }),
+                                              className: c.focusStroke,
+                                              mask: "url(#".concat(L, ")"),
+                                              children: (0, r.jsx)("use", { href: "#".concat(x) }),
                                           }),
                                           (0, r.jsxs)("g", {
-                                              className: u.focusFill,
+                                              className: c.focusFill,
                                               children: [
-                                                  null != m ? (0, r.jsx)("use", { href: "#".concat(D) }) : null,
-                                                  null != O ? (0, r.jsx)("use", { href: "#".concat(w) }) : null,
+                                                  null != y ? (0, r.jsx)("use", { href: "#".concat(w) }) : null,
+                                                  null != O ? (0, r.jsx)("use", { href: "#".concat(D) }) : null,
                                               ],
                                           }),
                                       ],
                                   })
                                 : null,
-                            _ &&
+                            p &&
                                 (0, r.jsx)("path", {
-                                    d: B,
-                                    stroke: s.Z.BRAND_500,
-                                    strokeWidth: E,
-                                    className: u.highlight,
-                                    mask: "url(#".concat(x, ")"),
+                                    d: Z,
+                                    stroke: s.TVs.unsafe_rawColors.BRAND_500.css,
+                                    strokeWidth: g,
+                                    className: c.highlight,
+                                    mask: "url(#".concat(L, ")"),
                                 }),
                             (0, r.jsx)(
                                 "foreignObject",
                                 {
-                                    mask: "url(#".concat(P, ")"),
+                                    mask: "url(#".concat(R, ")"),
                                     x: 0,
                                     y: 0,
-                                    className: c,
+                                    className: u,
                                     width: n,
                                     height: n,
                                     children: t,
@@ -345,18 +344,18 @@ function v(e) {
                 ),
                 null != O
                     ? (0, r.jsx)("div", {
-                          className: u.lowerBadge,
+                          className: c.lowerBadge,
                           children: O,
                       })
                     : null,
-                null != m
+                null != y
                     ? (0, r.jsx)("div", {
-                          className: u.upperBadge,
-                          children: m,
+                          className: c.upperBadge,
+                          children: y,
                       })
                     : null,
             ],
         },
-        "".concat(R, "-").concat(N),
+        "".concat(P, "-").concat(N),
     );
 }

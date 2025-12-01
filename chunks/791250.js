@@ -15,21 +15,21 @@ var r = n(54381),
     d = n(873546),
     p = n(442837),
     f = n(704215),
-    h = n(970683),
-    g = n(952265),
-    m = n(194983),
-    _ = n(681715),
-    b = n(481060),
-    E = n(493683),
-    O = n(529103),
-    y = n(515753),
-    v = n(831218),
-    I = n(339149),
-    C = n(607070),
-    S = n(557968),
-    T = n(213609),
-    N = n(463119),
-    j = n(377171),
+    h = n(692547),
+    g = n(970683),
+    m = n(952265),
+    _ = n(194983),
+    b = n(681715),
+    E = n(481060),
+    O = n(493683),
+    y = n(529103),
+    v = n(515753),
+    I = n(831218),
+    C = n(339149),
+    S = n(607070),
+    T = n(557968),
+    N = n(213609),
+    j = n(463119),
     P = n(211644),
     x = n(243778),
     A = n(702456),
@@ -142,12 +142,12 @@ let eb = (e) => {
             ? (0, r.jsx)("div", {
                   className: eh.friendsButtonContainer,
                   children: (0, r.jsx)(
-                      y.Qj,
+                      v.Qj,
                       eg(
                           {
                               selected: t,
                               route: eo.Z5c.ICYMI,
-                              icon: b.qOE,
+                              icon: E.qOE,
                               text: (0, r.jsxs)(r.Fragment, {
                                   children: [
                                       ep.intl.string(ep.t["jnXV/V"]),
@@ -171,48 +171,48 @@ let eb = (e) => {
         let l = (0, u.JA)("friends"),
             a = (0, G.If)(),
             s = (0, p.e7)([H.ZP], () => H.ZP.canShowFriendsTabBadge()),
-            o = (0, p.e7)([C.Z], () => C.Z.useReducedMotion),
+            o = (0, p.e7)([S.Z], () => S.Z.useReducedMotion),
             { enabled: d } = B.w.useConfig({ location: "Friends Tab" }),
-            [g, m] = (0, x.bf)(s && d ? f.z.GIFTING_INTENT_FRIENDS_TAB_BADGE : null, { cooldownDurationMs: H.n3 }),
-            E = g === f.z.GIFTING_INTENT_FRIENDS_TAB_BADGE;
+            [h, m] = (0, x.bf)(s && d ? f.z.GIFTING_INTENT_FRIENDS_TAB_BADGE : null, { cooldownDurationMs: H.n3 }),
+            _ = h === f.z.GIFTING_INTENT_FRIENDS_TAB_BADGE;
         i.useEffect(() => {
-            E &&
-                (0, T.h)({
+            _ &&
+                (0, N.h)({
                     name: c.ImpressionNames.GIFT_INTENT_BADGE,
                     type: c.ImpressionTypes.VIEW,
                     properties: { gift_intent_type: ed.hX.FRIEND_ANNIVERSARY },
                 });
-        }, [E]);
-        let v = () => {
+        }, [_]);
+        let O = () => {
                 let e;
-                E
+                _
                     ? (ea.default.track(eo.rMx.GIFT_INTENT_BADGE_CLICKED, {
                           gift_intent_type: ed.hX.FRIEND_ANNIVERSARY,
                       }),
                       (e = eo.pJs.ALL),
-                      O.Z.setSection(eo.pJs.ALL),
+                      y.Z.setSection(eo.pJs.ALL),
                       m(eu.L.TAKE_ACTION))
                     : (e = el.ZP.getState().section),
-                    (0, S.Z)({ tab_opened: e });
+                    (0, T.Z)({ tab_opened: e });
             },
-            [I, N] = i.useState(!1),
+            [I, C] = i.useState(!1),
             j = () => {
-                N(!1);
+                C(!1);
             },
             P = () => {
-                N(!0);
+                C(!0);
             },
             A = () =>
                 (0, r.jsx)(
-                    y.Qj,
+                    v.Qj,
                     em(
                         eg(
                             {
-                                onClick: v,
-                                interactiveClassName: E ? eh.friendsBadge : void 0,
+                                onClick: O,
+                                interactiveClassName: _ ? eh.friendsBadge : void 0,
                                 selected: t,
                                 route: eo.Z5c.FRIENDS,
-                                icon: b.iFz,
+                                icon: E.iFz,
                                 text: ep.intl.string(ep.t.TdEu5X),
                                 onMouseEnter: P,
                                 onMouseLeave: j,
@@ -220,19 +220,19 @@ let eb = (e) => {
                             n,
                             l,
                         ),
-                        { children: a > 0 ? (0, r.jsx)(b.mAB, { count: a }) : null },
+                        { children: a > 0 ? (0, r.jsx)(E.mAB, { count: a }) : null },
                     ),
                 );
         return (0, r.jsx)("div", {
             className: eh.friendsButtonContainer,
-            children: E
+            children: _
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)(_.i_, {
+                          (0, r.jsx)(b.i_, {
                               title: ep.intl.string(ep.t.Thb5MO),
                               body: ep.intl.string(ep.t.kGvgwS),
                               position: "left",
-                              asset: (0, r.jsx)(h._N, {
+                              asset: (0, r.jsx)(g._N, {
                                   size: 32,
                                   alt: ep.intl.string(ep.t["4LohBA"]),
                               }),
@@ -271,12 +271,12 @@ let eb = (e) => {
         return (0, r.jsx)("div", {
             className: eh.friendsButtonContainer,
             children: (0, r.jsx)(
-                y.Qj,
+                v.Qj,
                 eg(
                     {
                         selected: t,
                         route: eo.Z5c.ME_ACTIVITY,
-                        icon: b.g8d,
+                        icon: E.g8d,
                         text: ep.intl.string(ep.t.IC5Ann),
                     },
                     n,
@@ -290,20 +290,20 @@ let eb = (e) => {
             i = e_(e, ["selected", "hideGameUpdateProgressIndicator"]);
         let l = (0, u.JA)("library");
         return (0, r.jsx)(
-            y.Qj,
+            v.Qj,
             em(
                 eg(
                     {
                         selected: t,
                         route: eo.Z5c.APPLICATION_LIBRARY,
-                        icon: b.vqy,
+                        icon: E.vqy,
                         text: ep.intl.string(ep.t.cw57ar),
                     },
                     i,
                     l,
                 ),
                 {
-                    children: (0, r.jsx)(I.Z, {
+                    children: (0, r.jsx)(C.Z, {
                         className: a()(eh.downloadProgressCircle, { [eh.hideGameUpdateProgressIndicator]: n }),
                     }),
                 },
@@ -312,22 +312,22 @@ let eb = (e) => {
     },
     ev = () => {
         let e = (0, R.q)();
-        return e > 0 ? (0, r.jsx)(b.mAB, { count: e }) : null;
+        return e > 0 ? (0, r.jsx)(E.mAB, { count: e }) : null;
     },
     eI = (e) => {
         let { selected: t } = e,
             n = (0, u.JA)("messageRequests"),
             { channelId: i } = (0, L._)();
         if (!(0, D.a)()) return null;
-        let l = null == i ? void 0 : () => E.Z.preload(eo.ME, i);
+        let l = null == i ? void 0 : () => O.Z.preload(eo.ME, i);
         return (0, r.jsx)(
-            y.Qj,
+            v.Qj,
             em(
                 eg(
                     {
                         selected: t,
                         route: eo.Z5c.MESSAGE_REQUESTS,
-                        icon: b._XJ,
+                        icon: E._XJ,
                         text: ep.intl.string(ep.t.e7GWjQ),
                         onClick: l,
                     },
@@ -343,13 +343,13 @@ let eb = (e) => {
             l = (0, u.JA)("family-center"),
             [a, s] = i.useState(!0);
         return (0, r.jsx)(
-            y.Qj,
+            v.Qj,
             em(
                 eg(
                     {
                         selected: t,
                         route: eo.Z5c.FAMILY_CENTER,
-                        icon: b.BFJ,
+                        icon: E.BFJ,
                         text: n,
                         onMouseEnter: () => {
                             s(!0);
@@ -371,21 +371,21 @@ let eb = (e) => {
         return t
             ? (0, r.jsx)("div", {
                   className: eh.familyCenterButtonContainer,
-                  children: (0, r.jsx)(y.bU, {
+                  children: (0, r.jsx)(v.bU, {
                       onClick: () => {
-                          (0, g.ZD)(async () => {
+                          (0, m.ZD)(async () => {
                               let { default: e } = await n.e("44153").then(n.bind(n, 760949));
                               return (t) => (0, r.jsx)(e, eg({}, t));
                           });
                       },
                       "aria-label": ep.intl.string(ep.t.cpT0Cq),
-                      icon: b.Dio,
+                      icon: E.Dio,
                   }),
               })
             : i > 0
               ? (0, r.jsx)("div", {
                     className: a()(eh.familyCenterButtonContainer, eh.withPadding),
-                    children: (0, r.jsx)(b.mAB, { count: i }),
+                    children: (0, r.jsx)(E.mAB, { count: i }),
                 })
               : (0, r.jsx)("div", {
                     className: eh.familyCenterButtonContainer,
@@ -394,9 +394,9 @@ let eb = (e) => {
                         children: (e) => {
                             let { visibleContent: t } = e;
                             return t === f.z.FAMILY_CENTER_NEW_BADGE
-                                ? (0, r.jsx)(b.IGR, {
+                                ? (0, r.jsx)(E.IGR, {
                                       text: ep.intl.string(ep.t.y2b7CA),
-                                      color: j.Z.BG_BRAND,
+                                      color: h.Z.colors.BG_BRAND.css,
                                   })
                                 : null;
                         },
@@ -407,7 +407,7 @@ let eb = (e) => {
         (0, r.jsxs)("div", {
             className: eh.directMessagesHeader,
             children: [
-                (0, r.jsx)(b.Text, {
+                (0, r.jsx)(E.Text, {
                     variant: "text-md/semibold",
                     children: ep.intl.string(ep.t.YUU0RF),
                 }),
@@ -451,23 +451,23 @@ let eP = i.memo(function (e) {
             shouldShowFamilyCenterRow: f,
             selectedChannelId: h,
             path: g,
-            onlyShowDMs: _,
-            hideAllDMs: E,
+            onlyShowDMs: m,
+            hideAllDMs: b,
         } = e,
         O = i.useRef(null),
         y = i.useRef(null),
-        I = i.useRef(null),
+        v = i.useRef(null),
         C = i.useRef(null),
         S = U.o.useConfig({ location: "privatechannels" }).friendsTab,
         T = (0, w.b5)("PrivateChannels"),
-        j = null;
+        N = null;
     return (
-        c ? (j = (0, r.jsx)(Y.F, { targetElementRef: C })) : u && (j = (0, r.jsx)(V.d, { targetElementRef: C })),
+        c ? (N = (0, r.jsx)(Y.F, { targetElementRef: C })) : u && (N = (0, r.jsx)(V.d, { targetElementRef: C })),
         (0, r.jsxs)("nav", {
             className: eh.privateChannels,
             "aria-label": ep.intl.string(ep.t.ZH9aP4),
             children: [
-                _
+                m
                     ? (0, r.jsx)(eT, {})
                     : (0, r.jsx)(X.Z, {
                           childRef: O,
@@ -477,48 +477,48 @@ let eP = i.memo(function (e) {
                           children: (0, r.jsx)("div", {
                               ref: O,
                               className: a()(eh.searchBar, { [eh.themedHeaderMobile]: d.tq }),
-                              children: (0, r.jsx)(b.Button, {
+                              children: (0, r.jsx)(E.Button, {
                                   fullWidth: !0,
                                   variant: "secondary",
                                   size: "sm",
                                   onClick: eN,
                                   text: ep.intl.format(ep.t.fH9FBy, {
-                                      tooltipHook: (e, t) => (0, r.jsx)(m.Z, { children: e }, t),
+                                      tooltipHook: (e, t) => (0, r.jsx)(_.Z, { children: e }, t),
                                   }),
                               }),
                           }),
                       }),
                 (0, r.jsxs)(
-                    v.Z,
+                    I.Z,
                     em(eg({}, e), {
                         version: g,
                         selectedChannelId: h,
-                        showDMHeader: !E && !_,
-                        hideAllDMs: E,
-                        listScrollerRef: I,
+                        showDMHeader: !b && !m,
+                        hideAllDMs: b,
+                        listScrollerRef: v,
                         children: [
-                            S && !_
+                            S && !m
                                 ? (0, r.jsx)(
                                       eO,
                                       { selected: null != g ? g === eo.Z5c.ME_ACTIVITY : l === eo.Z5c.ME_ACTIVITY },
                                       "activity_experimental",
                                   )
                                 : null,
-                            _
+                            m
                                 ? null
                                 : (0, r.jsx)(
                                       eE,
                                       { selected: null != g ? g === eo.Z5c.FRIENDS : l === eo.Z5c.FRIENDS },
                                       "friends",
                                   ),
-                            !_ && T
+                            !m && T
                                 ? (0, r.jsx)(
                                       eb,
                                       { selected: null != g ? g === eo.Z5c.ICYMI : l === eo.Z5c.ICYMI },
                                       "icymi",
                                   )
                                 : null,
-                            n && t && !_
+                            n && t && !m
                                 ? (0, r.jsx)(
                                       ey,
                                       {
@@ -531,7 +531,7 @@ let eP = i.memo(function (e) {
                                       "library",
                                   )
                                 : null,
-                            p && !_
+                            p && !m
                                 ? (0, r.jsx)(
                                       eI,
                                       {
@@ -543,7 +543,7 @@ let eP = i.memo(function (e) {
                                       "message-requests",
                                   )
                                 : null,
-                            o && !_
+                            o && !m
                                 ? (0, r.jsxs)(
                                       "div",
                                       {
@@ -560,16 +560,16 @@ let eP = i.memo(function (e) {
                                                       },
                                                   },
                                               }),
-                                              j,
+                                              N,
                                           ],
                                       },
                                       "nitro-tab-group",
                                   )
                                 : null,
-                            _
+                            m
                                 ? null
                                 : (0, r.jsx)(
-                                      N.i,
+                                      j.i,
                                       {
                                           selected:
                                               g === eo.Z5c.COLLECTIBLES_SHOP ||
@@ -585,7 +585,7 @@ let eP = i.memo(function (e) {
                                       },
                                       "discord-shop",
                                   ),
-                            f && !_
+                            f && !m
                                 ? (0, r.jsx)(
                                       eC,
                                       {
@@ -596,7 +596,7 @@ let eP = i.memo(function (e) {
                                       "family-center",
                                   )
                                 : null,
-                            _
+                            m
                                 ? null
                                 : (0, r.jsx)(
                                       K.Z,
@@ -608,8 +608,8 @@ let eP = i.memo(function (e) {
                                       },
                                       "quests",
                                   ),
-                            _ || E ? null : (0, r.jsx)(ex, {}, "section-divider-top"),
-                            E ? null : (0, r.jsx)(A.Z, {}, "frequent-friends"),
+                            m || b ? null : (0, r.jsx)(ex, {}, "section-divider-top"),
+                            b ? null : (0, r.jsx)(A.Z, {}, "frequent-friends"),
                         ],
                     }),
                 ),

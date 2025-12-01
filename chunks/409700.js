@@ -1,7 +1,7 @@
 n.d(t, {
     Dp: () => N,
-    Hh: () => R,
-    ZP: () => P,
+    Hh: () => P,
+    ZP: () => R,
     hq: () => A,
 }),
     n(388685);
@@ -9,16 +9,16 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(831209),
-    l = n(442837),
+    s = n(442837),
+    l = n(692547),
     c = n(28664),
     u = n(481060),
     d = n(914010),
     f = n(594174),
-    _ = n(36703),
-    p = n(74538),
-    h = n(125900),
-    m = n(824690),
+    p = n(36703),
+    _ = n(74538),
+    m = n(125900),
+    h = n(824690),
     g = n(240479),
     E = n(710111),
     b = n(388032),
@@ -37,7 +37,7 @@ function v(e, t, n) {
         e
     );
 }
-function I(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,7 +53,7 @@ function I(e) {
     }
     return e;
 }
-function T(e, t) {
+function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,19 +65,19 @@ function T(e, t) {
     }
     return n;
 }
-function S(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : T(Object(t)).forEach(function (n) {
+            : I(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 function A() {
-    let { volume: e, onVolumeChange: t } = (0, m.Z)();
+    let { volume: e, onVolumeChange: t } = (0, h.Z)();
     return (0, r.jsxs)(u.P3F, {
         className: y.sliderContainer,
         onClick: (e) => e.stopPropagation(),
@@ -89,7 +89,7 @@ function A() {
             (0, r.jsx)(u.iRW, {
                 onValueChange: t,
                 className: y.slider,
-                initialValue: (0, _.P)(e),
+                initialValue: (0, p.P)(e),
                 maxValue: 100,
             }),
         ],
@@ -97,13 +97,13 @@ function A() {
 }
 function C(e) {
     let { sound: t, forceShowBetaLabel: n = !1 } = e,
-        i = (0, h.V2)({ location: "SoundmojiBanner" }),
-        a = (0, l.e7)([f.default], () => p.ZP.canUseSoundboardEverywhere(f.default.getCurrentUser())),
-        o = (0, l.e7)([d.Z], () => d.Z.getGuildId());
+        i = (0, m.V2)({ location: "SoundmojiBanner" }),
+        a = (0, s.e7)([f.default], () => _.ZP.canUseSoundboardEverywhere(f.default.getCurrentUser())),
+        o = (0, s.e7)([d.Z], () => d.Z.getGuildId());
     return n || a || t.guildId === E.X8 || t.guildId === o || !i
         ? (0, r.jsx)(u.IGR, {
               text: "BETA",
-              color: s.Z.BG_BRAND,
+              color: l.Z.colors.BG_BRAND.css,
               className: y.betaBadge,
           })
         : (0, r.jsxs)("div", {
@@ -126,7 +126,7 @@ function C(e) {
                           }),
                           (0, r.jsx)(u.IGR, {
                               text: "BETA",
-                              color: s.Z.BG_BRAND,
+                              color: l.Z.colors.BG_BRAND.css,
                               className: y.infoNitroBadge,
                           }),
                       ],
@@ -169,18 +169,18 @@ function N(e) {
         ],
     });
 }
-function R(e) {
+function P(e) {
     let { renderPopout: t, position: n, tooltipText: a, children: o, setTooltipShowing: s, clickableClassName: l } = e,
         [d, f] = i.useState(!1),
-        [_, p] = i.useState(String(Date.now())),
-        h = i.useCallback(
+        [p, _] = i.useState(String(Date.now())),
+        m = i.useCallback(
             (e) => {
                 e.stopPropagation(), f(!d);
             },
             [d],
         ),
-        m = i.useCallback(() => {
-            p(String(Date.now()));
+        h = i.useCallback(() => {
+            _(String(Date.now()));
         }, []),
         g = i.useRef(null);
     i.useEffect(() => {
@@ -194,7 +194,7 @@ function R(e) {
             (0, r.jsx)(u.P3F, {
                 onClick: (e) => e.stopPropagation(),
                 onMouseOver: (e) => e.stopPropagation(),
-                children: t(S(I({}, e), { refreshPosition: m })),
+                children: t(T(S({}, e), { refreshPosition: h })),
             }),
         align: "center",
         nudgeAlignIntoViewport: !0,
@@ -202,7 +202,7 @@ function R(e) {
         shouldShow: d,
         onRequestClose: () => f(!1),
         animationPosition: "bottom",
-        positionKey: _,
+        positionKey: p,
         scrollBehavior: "close",
         children: (e) =>
             (0, r.jsxs)(c.u, {
@@ -219,10 +219,10 @@ function R(e) {
                     "(",
                     (0, r.jsx)(
                         u.P3F,
-                        S(I({}, e), {
+                        T(S({}, e), {
                             innerRef: g,
                             "aria-label": a,
-                            onClick: h,
+                            onClick: m,
                             className: l,
                             children: o,
                         }),
@@ -231,11 +231,11 @@ function R(e) {
             }),
     });
 }
-function P(e) {
+function R(e) {
     let { sound: t, channel: n, setTooltipShowing: i } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(R, {
+            (0, r.jsx)(P, {
                 setTooltipShowing: i,
                 renderPopout: () => (0, r.jsx)(A, {}),
                 tooltipText: b.intl.string(b.t["19lt24"]),
@@ -246,12 +246,12 @@ function P(e) {
                     className: O.secondaryIcon,
                 }),
             }),
-            (0, r.jsx)(R, {
+            (0, r.jsx)(P, {
                 setTooltipShowing: i,
                 renderPopout: (e) =>
                     (0, r.jsx)(
                         g.Z,
-                        I(
+                        S(
                             {
                                 sound: t,
                                 channel: n,

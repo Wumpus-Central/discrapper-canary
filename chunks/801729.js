@@ -1,9 +1,9 @@
 n.d(t, {
-    Dv: () => p,
+    Dv: () => _,
     G2: () => y,
     IG: () => E,
-    NG: () => m,
-    OV: () => h,
+    NG: () => h,
+    OV: () => m,
     fW: () => O,
     lB: () => b,
     mA: () => g,
@@ -12,7 +12,7 @@ var r = n(54381);
 n(473749);
 var i = n(120356),
     a = n.n(i),
-    o = n(377171),
+    o = n(692547),
     s = n(785114);
 function l(e, t, n) {
     return (
@@ -70,7 +70,7 @@ function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -78,7 +78,7 @@ function f(e, t) {
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -87,27 +87,27 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let p = {
+let _ = {
     ROUND: s.baseShapeRound,
     ROUND_LEFT: s.baseShapeRoundLeft,
     ROUND_RIGHT: s.baseShapeRoundRight,
     SQUARE: "",
 };
-function h(e) {
+function m(e) {
     return e < 10 ? 16 : e < 100 ? 22 : 30;
 }
-function m(e) {
+function h(e) {
     return e < 1000 ? "".concat(e) : "".concat(Math.min(Math.floor(e / 1000), 9), "k+");
 }
 let g = (e) => {
         var {
                 count: t,
-                color: n = o.Z.STATUS_DANGER,
+                color: n = o.Z.colors.STATUS_DANGER.css,
                 disableColor: i = !1,
-                shape: l = p.ROUND,
+                shape: l = _.ROUND,
                 className: u,
-                style: _,
-                renderBadgeCount: g = m,
+                style: p,
+                renderBadgeCount: g = h,
             } = e,
             E = f(e, ["count", "color", "disableColor", "shape", "className", "style", "renderBadgeCount"]);
         return (0, r.jsx)(
@@ -119,9 +119,9 @@ let g = (e) => {
                         style: c(
                             {
                                 backgroundColor: i ? void 0 : n,
-                                width: h(t),
+                                width: m(t),
                             },
-                            _,
+                            p,
                         ),
                     },
                     E,
@@ -134,21 +134,21 @@ let g = (e) => {
         var {
                 text: t,
                 className: n,
-                color: i = o.Z.STATUS_DANGER,
-                shape: l = p.ROUND,
+                color: i = o.Z.colors.STATUS_DANGER.css,
+                shape: l = _.ROUND,
                 disableColor: u = !1,
-                style: _,
+                style: p,
             } = e,
-            h = f(e, ["text", "className", "color", "shape", "disableColor", "style"]);
+            m = f(e, ["text", "className", "color", "shape", "disableColor", "style"]);
         return (0, r.jsx)(
             "div",
             d(
                 c(
                     {
                         className: a()(n, s.textBadge, l),
-                        style: c({ backgroundColor: u ? void 0 : i }, _),
+                        style: c({ backgroundColor: u ? void 0 : i }, p),
                     },
-                    h,
+                    m,
                 ),
                 { children: t },
             ),
@@ -172,8 +172,8 @@ let g = (e) => {
         let {
             icon: t,
             className: n,
-            color: i = o.Z.STATUS_DANGER,
-            shape: l = p.ROUND,
+            color: i = o.Z.colors.STATUS_DANGER.css,
+            shape: l = _.ROUND,
             disableColor: u = !1,
             style: d,
         } = e;
@@ -187,7 +187,13 @@ let g = (e) => {
         });
     },
     O = (e) => {
-        var { className: t, color: n = o.Z.INTERACTIVE_ACTIVE, shape: i = p.ROUND, disableColor: l = !1, style: u } = e,
+        var {
+                className: t,
+                color: n = o.Z.colors.INTERACTIVE_ACTIVE.css,
+                shape: i = _.ROUND,
+                disableColor: l = !1,
+                style: u,
+            } = e,
             d = f(e, ["className", "color", "shape", "disableColor", "style"]);
         return (0, r.jsx)(
             "div",

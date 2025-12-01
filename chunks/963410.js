@@ -1,28 +1,27 @@
-r.r(t), r.d(t, { default: () => C }), r(388685);
+r.r(t), r.d(t, { default: () => v }), r(388685);
 var n = r(54381),
     l = r(473749),
     u = r(793030),
     i = r(442837),
     c = r(481060),
-    a = r(377171),
     o = r(592125),
     s = r(594174),
-    f = r(5192),
-    d = r(571826),
-    E = r(630759),
-    g = r(539067),
-    y = r(802063),
-    p = r(210975),
-    b = r(301107),
-    m = r(65692),
-    O = r(540247),
-    S = r(785792),
-    _ = r(190054),
-    N = r(760373),
-    h = r(981631),
-    j = r(388032),
-    T = r(547990);
-function v(e) {
+    a = r(5192),
+    f = r(571826),
+    d = r(630759),
+    E = r(539067),
+    g = r(802063),
+    y = r(210975),
+    p = r(301107),
+    b = r(65692),
+    m = r(540247),
+    O = r(785792),
+    S = r(190054),
+    _ = r(760373),
+    T = r(981631),
+    N = r(388032),
+    h = r(547990);
+function j(e) {
     let { badgeText: t, badgeColor: r } = e,
         u = l.useRef(t),
         i = l.useRef(r);
@@ -31,136 +30,139 @@ function v(e) {
         color: i.current,
     });
 }
-function C(e) {
+function v(e) {
     var t, r;
-    let { transitionState: C, userId: R, channelId: Z, onClose: I } = e,
-        w = (0, i.e7)([s.default], () => s.default.getUser(R)),
-        A = (0, i.e7)([o.Z], () => {
+    let { transitionState: v, userId: C, channelId: R, onClose: Z } = e,
+        I = (0, i.e7)([s.default], () => s.default.getUser(C)),
+        w = (0, i.e7)([o.Z], () => {
             var e;
-            return null == (e = o.Z.getChannel(Z)) ? void 0 : e.getGuildId();
+            return null == (e = o.Z.getChannel(R)) ? void 0 : e.getGuildId();
         }),
-        x = f.ZP.useName(A, null, w),
-        { fingerprint: P, userKey: k } = (0, m.q)({ userId: R }),
-        M = (0, b.W)({
-            fingerprintBase64: P,
-            chunkSize: N.iQ,
-            desiredLength: N.KN,
+        A = a.ZP.useName(w, null, I),
+        { fingerprint: x, userKey: P } = (0, b.q)({ userId: C }),
+        k = (0, p.W)({
+            fingerprintBase64: x,
+            chunkSize: _.iQ,
+            desiredLength: _.KN,
         }),
-        U = l.useCallback(() => {
-            (0, d.s$)({
-                userId: R,
-                channelId: Z,
+        M = l.useCallback(() => {
+            (0, f.s$)({
+                userId: C,
+                channelId: R,
             });
-        }, [Z, R]),
-        F = (0, p.wV)({
-            userId: R,
-            channelId: Z,
+        }, [R, C]),
+        U = (0, y.wV)({
+            userId: C,
+            channelId: R,
         });
-    (0, y.i)({
-        channelId: Z,
-        userId: R,
-        nickname: x,
-        onAlertOpen: I,
+    (0, g.i)({
+        channelId: R,
+        userId: C,
+        nickname: A,
+        onAlertOpen: Z,
     });
-    let { isCurrentUserKeyPersistent: V, isOtherUserKeyPersistent: D, loading: K } = (0, g.y)({ userId: R }),
+    let { isCurrentUserKeyPersistent: F, isOtherUserKeyPersistent: V, loading: D } = (0, E.y)({ userId: C }),
+        K = l.useCallback(() => {
+            null != P && ((0, d.TQ)(C, P, V, R, T.Sbl.E2EE_USER_VERIFY_MODAL), Z());
+        }, [P, C, V, R, Z]),
         L = l.useCallback(() => {
-            null != k && ((0, E.TQ)(R, k, D, Z, h.Sbl.E2EE_USER_VERIFY_MODAL), I());
-        }, [k, R, D, Z, I]),
-        G = l.useCallback(() => {
-            null != k && ((0, E.LO)(R, k, D), I());
-        }, [k, R, D, I]),
-        [Y, B] = l.useMemo(
-            () => (F ? [j.intl.string(j.t.UNUuem), a.Z.BG_BRAND] : [j.intl.string(j.t.y2b7CA), a.Z.STATUS_DANGER]),
-            [F],
-        ),
-        z = l.useMemo(
+            null != P && ((0, d.LO)(C, P, V), Z());
+        }, [P, C, V, Z]),
+        [G, Y] = l.useMemo(
             () =>
-                (0, E.kK)({
-                    isCurrentUserKeyPersistent: V,
-                    isOtherUserKeyPersistent: D,
-                    otherUserNickname: x,
-                }),
-            [V, D, x],
+                U
+                    ? [N.intl.string(N.t.UNUuem), c.TVs.colors.BG_BRAND.css]
+                    : [N.intl.string(N.t.y2b7CA), c.TVs.colors.STATUS_DANGER.css],
+            [U],
         ),
-        J = (0, O.P)({
-            userId: R,
-            keyToOmit: k,
+        B = l.useMemo(
+            () =>
+                (0, d.kK)({
+                    isCurrentUserKeyPersistent: F,
+                    isOtherUserKeyPersistent: V,
+                    otherUserNickname: A,
+                }),
+            [F, V, A],
+        ),
+        z = (0, m.P)({
+            userId: C,
+            keyToOmit: P,
         });
     l.useEffect(() => {
-        (0, d.Rq)({
-            userId: R,
-            channelId: Z,
+        (0, f.Rq)({
+            userId: C,
+            channelId: R,
         });
-    }, [Z, R]);
-    let W = {
-            transitionState: C,
-            title: j.intl.string(j.t["/WPGnF"]),
-            subtitle: j.intl.format(j.t.oc2kce, { username: x }),
+    }, [R, C]);
+    let J = {
+            transitionState: v,
+            title: N.intl.string(N.t["/WPGnF"]),
+            subtitle: N.intl.format(N.t.oc2kce, { username: A }),
         },
-        q = (0, n.jsxs)(n.Fragment, {
+        W = (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsxs)("div", {
-                    className: T.verification,
+                    className: h.verification,
                     children: [
-                        J > 0 &&
+                        z > 0 &&
                             (0, n.jsx)(c.Wn, {
                                 messageType: c.QYI.INFO,
-                                className: T.helpMessage,
-                                children: j.intl.format(j.t.uZDkz0, { count: J }),
+                                className: h.helpMessage,
+                                children: N.intl.format(N.t.uZDkz0, { count: z }),
                             }),
                         (0, n.jsxs)("div", {
-                            className: T.header,
+                            className: h.header,
                             children: [
                                 (0, n.jsx)(c.Heading, {
                                     variant: "text-sm/bold",
                                     color: "header-primary",
-                                    children: j.intl.string(j.t["/WPGnF"]),
+                                    children: N.intl.string(N.t["/WPGnF"]),
                                 }),
-                                null != M &&
-                                    (0, n.jsx)(_.H, {
-                                        className: T.copyIcon,
-                                        chunks: M,
+                                null != k &&
+                                    (0, n.jsx)(S.H, {
+                                        className: h.copyIcon,
+                                        chunks: k,
                                         color: c.TVs.colors.INTERACTIVE_NORMAL,
-                                        onCopy: U,
+                                        onCopy: M,
                                     }),
                                 (0, n.jsx)("div", {
-                                    className: T.codeStatus,
+                                    className: h.codeStatus,
                                     children:
-                                        null == M
+                                        null == k
                                             ? (0, n.jsx)(c.$jN, {
-                                                  className: T.spinner,
+                                                  className: h.spinner,
                                                   type: c.RAz.SPINNING_CIRCLE,
                                               })
-                                            : (0, n.jsx)(v, {
-                                                  badgeText: Y,
-                                                  badgeColor: B,
+                                            : (0, n.jsx)(j, {
+                                                  badgeText: G,
+                                                  badgeColor: Y,
                                               }),
                                 }),
                             ],
                         }),
-                        (0, n.jsx)(S.b, {
-                            className: T.code,
-                            chunks: M,
-                            columns: N.ak,
+                        (0, n.jsx)(O.b, {
+                            className: h.code,
+                            chunks: k,
+                            columns: _.ak,
                         }),
                     ],
                 }),
                 (0, n.jsx)(c.Text, {
-                    className: T.footer,
+                    className: h.footer,
                     variant: "text-sm/normal",
                     color: "text-muted",
-                    children: z,
+                    children: B,
                 }),
             ],
         }),
-        H = {
-            text: F ? j.intl.string(j.t["Osb+/n"]) : j.intl.string(j.t["0tvNAn"]),
-            disabled: null == M || K,
-            onClick: F ? G : L,
+        q = {
+            text: U ? N.intl.string(N.t["Osb+/n"]) : N.intl.string(N.t["0tvNAn"]),
+            disabled: null == k || D,
+            onClick: U ? L : K,
         },
-        X = {
-            text: j.intl.string(j.t["ETE/oC"]),
-            onClick: I,
+        H = {
+            text: N.intl.string(N.t["ETE/oC"]),
+            onClick: Z,
             variant: "secondary",
         };
     return (0, n.jsx)(
@@ -189,11 +191,11 @@ function C(e) {
                     });
             }
             return e;
-        })({ onClose: I }, W)),
+        })({ onClose: Z }, J)),
         (r = r =
             {
-                actions: [X, H],
-                children: q,
+                actions: [H, q],
+                children: W,
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))

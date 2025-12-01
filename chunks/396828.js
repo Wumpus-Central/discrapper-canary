@@ -1,7 +1,7 @@
 n.d(t, { Z: () => o });
 var r = n(54381);
 n(473749);
-var i = n(377171),
+var i = n(692547),
     l = n(325767);
 function o(e) {
     var t,
@@ -78,10 +78,10 @@ function o(e) {
                             y2: "1.98749",
                             gradientUnits: "userSpaceOnUse",
                             children: [
-                                (0, r.jsx)("stop", { stopColor: i.Z.CREATOR_REVENUE_ICON_GRADIENT_START }),
+                                (0, r.jsx)("stop", { stopColor: i.Z.colors.CREATOR_REVENUE_ICON_GRADIENT_START.css }),
                                 (0, r.jsx)("stop", {
                                     offset: "1",
-                                    stopColor: i.Z.CREATOR_REVENUE_ICON_GRADIENT_END,
+                                    stopColor: i.Z.colors.CREATOR_REVENUE_ICON_GRADIENT_END.css,
                                 }),
                             ],
                         }),

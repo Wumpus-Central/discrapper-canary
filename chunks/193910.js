@@ -1,9 +1,9 @@
 n.d(t, { Z: () => L }), n(413496), n(433524), n(35282), n(539854), n(388685);
 var i = n(54381),
     r = n(473749),
-    l = n(831209),
-    a = n(442837),
-    o = n(704215),
+    l = n(442837),
+    a = n(704215),
+    o = n(692547),
     s = n(481060),
     c = n(278323),
     u = n(566620),
@@ -18,9 +18,9 @@ var i = n(54381),
     C = n(346479),
     v = n(286934),
     _ = n(488131),
-    x = n(375954),
-    j = n(626135),
-    O = n(585483),
+    O = n(375954),
+    x = n(626135),
+    j = n(585483),
     E = n(403182),
     S = n(127654),
     P = n(752305),
@@ -32,15 +32,15 @@ var i = n(54381),
     w = n(749723);
 let M = RegExp("(.*)```(\\w+)\\n(.*)```(.*)", "s");
 function R() {
-    let e = (0, a.e7)([x.Z], () => x.Z.hasCurrentUserSentMessageSinceAppStart()),
+    let e = (0, l.e7)([O.Z], () => O.Z.hasCurrentUserSentMessageSinceAppStart()),
         t = [];
-    e && t.push(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE);
+    e && t.push(a.z.ACTIVITIES_CHAT_MENU_NEW_BADGE);
     let [n] = (0, g.cv)(t);
     return (
         r.useEffect(
             () => () => {
-                n === o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE &&
-                    (0, m.Q3)(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: T.L.TAKE_ACTION });
+                n === a.z.ACTIVITIES_CHAT_MENU_NEW_BADGE &&
+                    (0, m.Q3)(a.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: T.L.TAKE_ACTION });
             },
             [n],
         ),
@@ -48,10 +48,10 @@ function R() {
             contentTypes: t,
             children: (e) => {
                 let { visibleContent: t } = e;
-                return t === o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE
+                return t === a.z.ACTIVITIES_CHAT_MENU_NEW_BADGE
                     ? (0, i.jsx)(s.IGR, {
                           text: A.intl.string(A.t.y2b7CA),
-                          color: l.Z.BUTTON_DANGER_BACKGROUND,
+                          color: o.Z.colors.BUTTON_DANGER_BACKGROUND.css,
                       })
                     : null;
             },
@@ -63,28 +63,28 @@ function L(e) {
             channel: t,
             chatInputType: g,
             options: b,
-            onFileUpload: x,
+            onFileUpload: O,
             onClose: L,
-            onSelect: k,
-            draftType: D,
+            onSelect: D,
+            draftType: k,
             editorTextContent: U,
-            setValue: B,
-            openClips: H,
+            setValue: F,
+            openClips: B,
         } = e,
-        { analyticsLocations: F, newestAnalyticsLocation: V } = (0, d.ZP)(),
+        { analyticsLocations: H, newestAnalyticsLocation: V } = (0, d.ZP)(),
         G = (0, y.Dt)({ channel: t }),
-        z = (0, a.e7)([v.Z], () => v.Z.isInProgress());
+        z = (0, l.e7)([v.Z], () => v.Z.isInProgress());
     function W() {
         (0, _.R6)(t, void 0, "Plus Button");
     }
     function q() {
-        j.default.track(Z.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), B("/", (0, P.JM)("/"));
+        x.default.track(Z.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), F("/", (0, P.JM)("/"));
     }
     function K() {
-        H();
+        B();
     }
     function Y() {
-        (0, m.Q3)(o.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: T.L.TAKE_ACTION }),
+        (0, m.Q3)(a.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: T.L.TAKE_ACTION }),
             (0, s.ZDy)(
                 async () => {
                     let { default: e } = await n.e("68784").then(n.bind(n, 611611));
@@ -138,7 +138,7 @@ function L(e) {
             );
     }
     function X() {
-        j.default.track(Z.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
+        x.default.track(Z.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
             channel_type: t.type,
             channel_id: t.id,
             guild_id: t.guild_id,
@@ -162,20 +162,20 @@ function L(e) {
             i = "",
             r = U.match(M);
         null != r && ((i = r[1]), (n = r[2]), (e = r[3]), (i += r[4])),
-            (0, S.d)([(0, E.dp)(new Blob([e], { type: "text/plain" }), "message.".concat(n), "text/plain")], t, D),
-            O.S.dispatchToLastSubscribed(Z.CkL.CLEAR_TEXT),
-            "" !== i && O.S.dispatchToLastSubscribed(Z.CkL.INSERT_TEXT, { plainText: i });
+            (0, S.d)([(0, E.dp)(new Blob([e], { type: "text/plain" }), "message.".concat(n), "text/plain")], t, k),
+            j.S.dispatchToLastSubscribed(Z.CkL.CLEAR_TEXT),
+            "" !== i && j.S.dispatchToLastSubscribed(Z.CkL.INSERT_TEXT, { plainText: i });
     }
     return (
         r.useEffect(() => {
-            j.default.track(Z.rMx.OPEN_POPOUT, {
+            x.default.track(Z.rMx.OPEN_POPOUT, {
                 type: "Send Attachment",
                 channel_id: t.id,
                 guild_id: t.guild_id,
             });
         }, [t.guild_id, t.id]),
         (0, i.jsx)(s.v2r, {
-            onSelect: k,
+            onSelect: D,
             navId: "channel-attach",
             onClose: L,
             "aria-label": A.intl.string(A.t.Xm41aV),
@@ -197,7 +197,7 @@ function L(e) {
                             e.badgeVal > 0 &&
                             (0, i.jsx)(s.mAB, {
                                 className: w.badge,
-                                color: null != (n = e.badgeColor) ? n : l.Z.STATUS_DANGER,
+                                color: null != (n = e.badgeColor) ? n : o.Z.colors.STATUS_DANGER.css,
                                 count: e.badgeVal,
                             }),
                     ],
@@ -209,7 +209,7 @@ function L(e) {
                             {
                                 id: "upload-file",
                                 label: r,
-                                action: x,
+                                action: O,
                             },
                             "upload-file",
                         );
@@ -258,7 +258,7 @@ function L(e) {
                                             channelId: t.id,
                                             type: Z.mFx.JOIN,
                                             activity: n,
-                                            location: F[F.length - 1],
+                                            location: H[H.length - 1],
                                         })
                                     );
                                 },
@@ -279,7 +279,7 @@ function L(e) {
                                             channelId: t.id,
                                             type: Z.mFx.LISTEN,
                                             activity: n,
-                                            location: F[F.length - 1],
+                                            location: H[H.length - 1],
                                         })
                                     );
                                 },
@@ -300,7 +300,7 @@ function L(e) {
                                             channelId: t.id,
                                             type: Z.mFx.WATCH,
                                             activity: n,
-                                            location: F[F.length - 1],
+                                            location: H[H.length - 1],
                                         })
                                     );
                                 },

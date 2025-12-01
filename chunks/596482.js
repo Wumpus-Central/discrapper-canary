@@ -1,7 +1,7 @@
 n.d(t, { Z: () => x });
 var r = n(54381),
     l = n(473749),
-    i = n(722770),
+    i = n(692547),
     o = n(755721),
     a = n(481060),
     s = n(100527),
@@ -41,7 +41,7 @@ function h(e) {
                     (0, r.jsx)(a.b7C, {
                         size: "md",
                         className: p.shieldIcon,
-                        color: i.Z.RED_345,
+                        color: i.Z.unsafe_rawColors.RED_345.css,
                     }),
                     (0, r.jsxs)("div", {
                         className: p.subHeaderText,
@@ -94,7 +94,7 @@ function g(e) {
                     (0, r.jsx)(a.b7C, {
                         size: "md",
                         className: p.shieldIcon,
-                        color: i.Z.BRAND_360,
+                        color: i.Z.unsafe_rawColors.BRAND_360.css,
                     }),
                     (0, r.jsxs)("div", {
                         className: p.subHeaderText,
@@ -134,7 +134,7 @@ function j(e) {
                     (0, r.jsx)(a.b7C, {
                         size: "md",
                         className: p.shieldIcon,
-                        color: i.Z.BRAND_360,
+                        color: i.Z.unsafe_rawColors.BRAND_360.css,
                     }),
                     (0, r.jsxs)("div", {
                         className: p.subHeaderText,

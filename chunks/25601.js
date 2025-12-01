@@ -1,7 +1,7 @@
 n.d(t, { Z: () => a });
 var r = n(54381);
 n(473749);
-var i = n(831209),
+var i = n(692547),
     l = n(481060),
     o = n(655645);
 function a(e) {
@@ -11,7 +11,7 @@ function a(e) {
         "aria-hidden": !0,
         children: (0, r.jsx)(l.mAB, {
             count: t,
-            color: n ? i.Z.BACKGROUND_ACCENT : i.Z.STATUS_DANGER,
+            color: n ? i.Z.colors.BACKGROUND_ACCENT.css : i.Z.colors.STATUS_DANGER.css,
         }),
     });
 }
