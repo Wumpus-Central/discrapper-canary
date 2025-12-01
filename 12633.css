@@ -101513,6 +101513,13 @@ html.disable-forced-colors * {
 }
 
 @font-face {
+    font-family: Munro;
+    font-style: normal;
+    font-weight: 400;
+    src: url(/assets/b4099c935ba38494.woff2) format("woff2")
+}
+
+@font-face {
     font-family: Cherry Bomb One;
     font-style: normal;
     font-weight: 400;

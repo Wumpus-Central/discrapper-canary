@@ -1,15 +1,16 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => c });
 var r = n(54381),
     l = n(473749),
     i = n(55160),
     o = n(607070),
-    a = n(996435);
-function s(e) {
+    a = n(996435),
+    s = n(135443);
+function c(e) {
     let { node: t, children: n } = e,
-        s = l.useRef(null),
         c = l.useRef(null),
-        u = l.useCallback(() => {
-            null != c.current && (cancelAnimationFrame(c.current), (c.current = null));
+        u = l.useRef(null),
+        d = l.useCallback(() => {
+            null != u.current && (cancelAnimationFrame(u.current), (u.current = null));
         }, []);
     return (
         l.useEffect(() => {
@@ -19,16 +20,18 @@ function s(e) {
                     return t;
                 },
                 (e) => {
-                    u(),
+                    d(),
                         null != e &&
                             e.targetKey === t.key &&
                             null == e.targetAccordionKey &&
-                            (c.current = requestAnimationFrame(() => {
-                                var t;
-                                null == (t = s.current) ||
+                            (u.current = requestAnimationFrame(() => {
+                                var t, n;
+                                let r = e.animateScroll && !o.Z.useReducedMotion,
+                                    l = null != (n = e.scrollBlock) ? n : "nearest";
+                                null == (t = c.current) ||
                                     t.scrollIntoView({
-                                        behavior: e.animateScroll && !o.Z.useReducedMotion ? "smooth" : "auto",
-                                        block: "start",
+                                        behavior: r ? "smooth" : "auto",
+                                        block: l,
                                     }),
                                     a.Z.setState({ navTransition: void 0 });
                             }));
@@ -39,12 +42,13 @@ function s(e) {
                 },
             );
             return () => {
-                e(), u();
+                e(), d();
             };
-        }, [u, t.key]),
+        }, [d, t.key]),
         (0, r.jsx)("div", {
-            ref: s,
+            ref: c,
             "data-debug-key": t.key,
+            className: s.container,
             children: n,
         })
     );

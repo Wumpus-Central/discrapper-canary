@@ -1,31 +1,29 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381);
 n(473749);
 var i = n(915009),
     a = n(63063),
     o = n(695346),
-    s = n(695463),
-    l = n(838436),
-    c = n(51331),
-    u = n(726985),
-    d = n(981631),
-    f = n(388032),
-    _ = n(597754);
-function p() {
+    s = n(838436),
+    l = n(51331),
+    c = n(726985),
+    u = n(981631),
+    d = n(388032),
+    f = n(744038);
+function _() {
     let e = o.bh.useSetting(),
-        t = (0, s.W)("DataUsageQuestsSetting"),
-        n = (0, i.LN)(),
-        p = t ? f.t.sJYh5t : f.t.VkS7Yd,
-        h = t ? f.t.cf9mvV : f.t["7Q2yX9"];
-    return (0, r.jsx)(l.U, {
-        setting: u.s6.PRIVACY_DATA_QUESTS_V2,
-        children: (0, r.jsx)(c.ZP, {
-            title: f.intl.string(p),
-            note: f.intl.format(h, { helpdeskArticle: a.Z.getArticleURL(d.BhN.QUESTS_PRIVACY_CONTROLS) }),
+        t = (0, i.LN)(),
+        n = d.t.sJYh5t,
+        _ = d.t.cf9mvV;
+    return (0, r.jsx)(s.U, {
+        setting: c.s6.PRIVACY_DATA_QUESTS_V2,
+        children: (0, r.jsx)(l.ZP, {
+            title: d.intl.string(n),
+            note: d.intl.format(_, { helpdeskArticle: a.Z.getArticleURL(u.BhN.QUESTS_PRIVACY_CONTROLS) }),
             value: !e,
             onChange: (e) => o.bh.updateSetting(!e),
-            disabled: n,
-            tooltipText: n ? f.intl.string(_.default["6Af/cw"]) : void 0,
+            disabled: t,
+            tooltipText: t ? d.intl.string(f.default["6Af/cw"]) : void 0,
         }),
     });
 }

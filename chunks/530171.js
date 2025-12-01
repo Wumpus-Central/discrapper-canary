@@ -1,52 +1,75 @@
-n.d(t, { I: () => b }), n(388685);
+n.d(t, { I: () => v }), n(388685);
 var r = n(54381),
     l = n(473749),
     i = n(120356),
     o = n.n(i),
-    a = n(913793),
-    s = n(23893),
-    c = n(657707),
-    u = n(692547),
-    d = n(481060),
-    f = n(206403),
-    p = n(481446);
-function b(e) {
-    let { title: t, collapsedSubtitle: n, isOpen: i, setIsOpen: b, children: y, animate: g = !0 } = e,
-        v = l.useRef(null),
-        [m, h] = l.useState(null),
-        x = i && null != m;
+    a = n(392711),
+    s = n(913793),
+    c = n(23893),
+    u = n(657707),
+    d = n(692547),
+    f = n(481060),
+    p = n(393903),
+    b = n(206403),
+    y = n(231338),
+    g = n(481446);
+function v(e) {
+    let {
+            title: t,
+            collapsedSubtitle: n,
+            isExpanded: i,
+            onExpandedChange: v,
+            onExpandedChangeComplete: m,
+            children: h,
+            animate: x = !0,
+        } = e,
+        j = l.useRef(null),
+        [O, C] = l.useState(null),
+        P = l.useRef(null),
+        S = l.useMemo(
+            () =>
+                null == m
+                    ? y.dG
+                    : (0, a.debounce)((e) => {
+                          null != e.target && m(i);
+                      }),
+            [i, m],
+        );
+    (0, p.s)(P, S, [], { enabled: null != m });
+    let _ = i && null != O;
     return (
         l.useLayoutEffect(() => {
-            null != v.current && null == m && h(v.current.clientHeight);
-        }, [m]),
-        (0, r.jsxs)(a.pJ, {
+            null != j.current && null == O && C(j.current.clientHeight);
+        }, [O]),
+        (0, r.jsxs)(s.pJ, {
+            ref: P,
             isExpanded: i,
-            onExpandedChange: b,
+            onExpandedChange: v,
             children: [
-                (0, r.jsx)(f.x, {
-                    ref: v,
-                    style: null != m ? { minHeight: m } : void 0,
+                (0, r.jsx)(b.x, {
+                    ref: j,
+                    style: null != O ? { minHeight: O } : void 0,
                     title: t,
-                    description: x ? void 0 : n,
-                    secondaryTrailingElement: (0, r.jsx)(d.tEY, {
-                        children: (0, r.jsx)(s.z, {
+                    description: _ ? void 0 : n,
+                    secondaryTrailingElement: (0, r.jsx)(f.tEY, {
+                        children: (0, r.jsx)(c.z, {
                             slot: "trigger",
-                            className: p.triggerButton,
-                            children: (0, r.jsx)(c.sXD, {
-                                className: o()(p.icon, { [p.iconClosed]: !i }),
-                                color: u.Z.colors.ICON_LINK,
+                            className: g.triggerButton,
+                            children: (0, r.jsx)(u.sXD, {
+                                className: o()(g.icon, { [g.iconClosed]: !i }),
+                                color: d.Z.colors.ICON_LINK,
                             }),
                         }),
                     }),
-                    onClick: () => b(!i),
+                    onClick: () => v(!i),
                     headingColor: "text-link",
                 }),
-                (0, r.jsx)(a.V2, {
-                    className: o()(p.panel, { [p.disablePanelAnimation]: !g }),
-                    children: (0, r.jsx)(d.Kqy, {
+                (0, r.jsx)(s.V2, {
+                    className: o()(g.panel, { [g.disablePanelAnimation]: !x }),
+                    children: (0, r.jsx)(f.Kqy, {
                         gap: 16,
                         padding: { top: 16 },
-                        children: y,
+                        children: h,
                     }),
                 }),
             ],

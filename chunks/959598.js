@@ -9,6 +9,7 @@ var r = {
     "./source-code-pro/sourcecodepro-600-semibold.woff2": ["626025", "49678"],
     "./fraunces/fraunces-vf.woff2": ["894757"],
     "./abc-ginto-normal/abcgintonormal-700-bolditalic.woff2": ["805987"],
+    "./munro/munro-400-normal.woff2": ["371107"],
     "./gg-sans/ggsans-800-extrabolditalic.woff2": ["69891"],
     "./noto-sans/notosans-800-extrabold.woff2": ["514320"],
     "./gg-sans/ggsans-400-normal.woff2": ["776764"],

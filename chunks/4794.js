@@ -80,14 +80,29 @@ let p = l.memo(function (e) {
     );
     let h = null == n ? void 0 : n(y),
         x = null == p ? void 0 : p(),
-        j = null == b ? void 0 : b();
+        j = null == b ? void 0 : b(),
+        O = l.useCallback(
+            (e) => {
+                e &&
+                    s.Z.setState({
+                        navTransition: {
+                            targetKey: t.key,
+                            targetAccordionKey: t.key,
+                            animateScroll: !0,
+                            scrollBlock: "nearest",
+                        },
+                    });
+            },
+            [t.key],
+        );
     return (0, r.jsx)("div", {
         className: o()({ [f.open]: y }),
         children: (0, r.jsxs)(u.I, {
             title: h,
             collapsedSubtitle: x,
-            isOpen: y,
-            setIsOpen: g,
+            isExpanded: y,
+            onExpandedChange: g,
+            onExpandedChangeComplete: O,
             animate: v,
             children: [null != j && (0, r.jsx)(d.Z, { notice: j }), i.map((e) => (0, r.jsx)(c.Z, { node: e }, e.key))],
         }),

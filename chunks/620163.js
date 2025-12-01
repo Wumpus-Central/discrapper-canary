@@ -217,10 +217,9 @@ let eB = () => [
             inputMode: e7,
             activeInputProfile: e9,
             isInputProfileCustom: te,
-            isDataUsage3PToggleEnabled: tt,
-            isChatMentionSuggestionsSettingEnabled: tn,
-            isCrossDMSearchEnabledSettingVisible: tr,
-            isRedesignedNotificationsEnabled: ti,
+            isChatMentionSuggestionsSettingEnabled: tt,
+            isCrossDMSearchEnabledSettingVisible: tn,
+            isRedesignedNotificationsEnabled: tr,
         } = e;
         return Object.freeze({
             [eC.s6.SEARCH_NO_RESULTS]: {
@@ -610,7 +609,6 @@ let eB = () => [
                 section: eR.oAB.DATA_AND_PRIVACY,
                 searchableTitles: [eD.intl.string(eD.t.CyLYKZ)],
                 parent: eC.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
-                predicate: () => tt,
             },
             [eC.s6.PRIVACY_DATA_BASIC_SERVICE_V2]: {
                 section: eR.oAB.DATA_AND_PRIVACY,
@@ -1007,7 +1005,7 @@ let eB = () => [
                 section: eR.oAB.ACCESSIBILITY,
                 searchableTitles: [eD.intl.string(eD.t.qvTIwX)],
                 parent: eC.s6.ACCESSIBILITY_TEXT_TO_SPEECH,
-                predicate: () => !ti,
+                predicate: () => !tr,
             },
             [eC.s6.ACCESSIBILITY_TEXT_TO_SPEECH_RATE]: {
                 section: eR.oAB.ACCESSIBILITY,
@@ -1326,13 +1324,13 @@ let eB = () => [
                 section: eR.oAB.TEXT,
                 searchableTitles: [eD.intl.string(eD.t.VYODPD)],
                 parent: eC.s6.CHAT,
-                predicate: () => tr,
+                predicate: () => tn,
             },
             [eC.s6.MESSAGE_SEARCH_ALL_DMS]: {
                 section: eR.oAB.TEXT,
                 searchableTitles: [eD.intl.string(eD.t["t4+fbe"])],
                 parent: eC.s6.MESSAGE_SEARCH,
-                predicate: () => tr,
+                predicate: () => tn,
             },
             [eC.s6.CHAT_INLINE_MEDIA]: {
                 section: eR.oAB.TEXT,
@@ -1430,7 +1428,7 @@ let eB = () => [
                 section: eR.oAB.TEXT,
                 searchableTitles: [eD.intl.string(eD.t.uXQ2xT)],
                 parent: eC.s6.CHAT_TEXT_BOX,
-                predicate: () => tn,
+                predicate: () => tt,
             },
             [eC.s6.NOTIFICATIONS]: {
                 section: eR.oAB.NOTIFICATIONS,
