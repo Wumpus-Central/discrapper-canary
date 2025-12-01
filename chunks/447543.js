@@ -16,35 +16,35 @@ var r = n(525654),
     u = n(756647),
     d = n(544891),
     f = n(46973),
-    _ = n(570140),
-    p = n(479531),
-    h = n(34756),
-    m = n(595519),
+    p = n(570140),
+    _ = n(479531),
+    m = n(34756),
+    h = n(595519),
     g = n(839426),
     E = n(758119),
     b = n(622822),
     y = n(895924),
     O = n(625128),
     v = n(972830),
-    I = n(305325),
-    T = n(281956),
-    S = n(931261),
+    S = n(305325),
+    I = n(281956),
+    T = n(931261),
     A = n(15274),
     C = n(924301),
     N = n(461014),
-    R = n(82085),
-    P = n(264229),
-    D = n(652898),
-    w = n(895886),
-    L = n(143816),
-    x = n(703656),
-    M = n(922482),
-    k = n(131704),
-    j = n(314897),
+    P = n(82085),
+    R = n(264229),
+    w = n(652898),
+    D = n(895886),
+    x = n(143816),
+    L = n(703656),
+    j = n(922482),
+    M = n(131704),
+    k = n(314897),
     U = n(592125),
     G = n(984933),
-    B = n(271383),
-    Z = n(430824),
+    Z = n(271383),
+    B = n(430824),
     F = n(341165),
     V = n(496675),
     H = n(914010),
@@ -53,8 +53,8 @@ var r = n(525654),
     K = n(70956),
     z = n(573261),
     q = n(954824),
-    X = n(846027),
-    Q = n(749210),
+    Q = n(846027),
+    X = n(749210),
     J = n(872810),
     $ = n(981631),
     ee = n(723359),
@@ -131,9 +131,9 @@ function ed(e) {
             c.targetType = e.target_type;
     }
     return (
-        (null == Z.Z.getGuild(null == (t = e.guild) ? void 0 : t.id) || e.new_member) &&
+        (null == B.Z.getGuild(null == (t = e.guild) ? void 0 : t.id) || e.new_member) &&
             null != e.channel &&
-            (0, k.zi)(e.channel.type) &&
+            (0, M.zi)(e.channel.type) &&
             (c.welcomeModalChannelId = e.channel.id),
         null != e.guild_scheduled_event && (c.guildScheduledEvent = e.guild_scheduled_event),
         (c.isGuestInvite = (0, s.yE)(null != (a = e.flags) ? a : 0, o.$.IS_GUEST_INVITE)),
@@ -145,10 +145,10 @@ function ed(e) {
 function ef(e, t) {
     return el(eo({}, e), { invite_guild_scheduled_event_id: t.guildScheduledEventId });
 }
-function e_(e, t, n) {
+function ep(e, t, n) {
     var r, i;
     if ((null == n ? void 0 : n.targetType) === er.Iq.ROLE_SUBSCRIPTIONS_PURCHASE) return et.oC.ROLE_SUBSCRIPTIONS;
-    if ((null == n ? void 0 : n.targetType) == null && !k.tx.has(t.type) && (0, S.s)(e)) return et.oC.GUILD_HOME;
+    if ((null == n ? void 0 : n.targetType) == null && !M.tx.has(t.type) && (0, T.s)(e)) return et.oC.GUILD_HOME;
     let a = U.Z.getChannel(t.id);
     return V.Z.can($.Plq.VIEW_CHANNEL, a)
         ? t.id
@@ -156,39 +156,39 @@ function e_(e, t, n) {
           ? i
           : t.id;
 }
-function ep(e, t) {
+function e_(e, t) {
     let { type: n } = e,
         { transitionTo: r, welcomeModalChannelId: i, guildScheduledEvent: a } = null != t ? t : {},
         o = n === $.d4z.GUILD_STAGE_VOICE,
         s = {
-            source: L.Z.INVITE_ACCEPT,
+            source: x.Z.INVITE_ACCEPT,
             navigationReplace: !0,
         };
     return (
         null != i && (s.welcomeModalChannelId = i),
         o && (s.state = ei.Df),
         null != a && (s.guildScheduledEventId = a.id),
-        (e) => (null != r ? r(e, s) : (0, x.uL)(e, s))
+        (e) => (null != r ? r(e, s) : (0, L.uL)(e, s))
     );
 }
-function eh(e) {
+function em(e) {
     let { guildId: t, channel: r, options: i, analyticsLocations: a = [] } = e,
-        o = Z.Z.getGuild(t),
+        o = B.Z.getGuild(t),
         s = null == o ? void 0 : o.features.has($.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL),
         {
             targetUserId: l,
             targetType: c,
             targetApplicationId: u,
             isGuestInvite: d,
-            isApplicationBypassInvite: _,
+            isApplicationBypassInvite: p,
         } = null != i ? i : {};
-    if (!d && !_ && !(null == i ? void 0 : i.forceTransition) && s && H.Z.getGuildId() !== t) return;
-    let { type: p } = r,
-        h = U.Z.getChannel(r.id),
-        E = e_(t, r, i),
-        b = p === $.d4z.GUILD_STAGE_VOICE,
+    if (!d && !p && !(null == i ? void 0 : i.forceTransition) && s && H.Z.getGuildId() !== t) return;
+    let { type: _ } = r,
+        m = U.Z.getChannel(r.id),
+        E = ep(t, r, i),
+        b = _ === $.d4z.GUILD_STAGE_VOICE,
         O = $.Z5c.CHANNEL(t, E);
-    k.tx.has(p)
+    M.tx.has(_)
         ? (0, v.h)(() => {
               Promise.resolve()
                   .then(n.bind(n, 287734))
@@ -196,10 +196,10 @@ function eh(e) {
                       let { default: n } = e,
                           o = () => {
                               if (b) {
-                                  (0, M.Cq)(r instanceof k.Sf ? r : (0, k.createChannelRecord)(r)), (0, x.uL)(O);
+                                  (0, j.Cq)(r instanceof M.Sf ? r : (0, M.createChannelRecord)(r)), (0, L.uL)(O);
                                   return;
                               }
-                              (null == i ? void 0 : i.muteOnJoinVoiceChannel) && X.Z.setSelfMute(f.Yn.DEFAULT, !0),
+                              (null == i ? void 0 : i.muteOnJoinVoiceChannel) && Q.Z.setSelfMute(f.Yn.DEFAULT, !0),
                                   n.selectVoiceChannel(E),
                                   c === er.Iq.STREAM &&
                                       null != l &&
@@ -211,7 +211,7 @@ function eh(e) {
                                       }),
                                   c === er.Iq.EMBEDDED_APPLICATION &&
                                       null != u &&
-                                      ((0, x.uL)($.Z5c.CHANNEL(null != t ? t : $.ME, E)),
+                                      ((0, L.uL)($.Z5c.CHANNEL(null != t ? t : $.ME, E)),
                                       (0, g.Z)({
                                           channelId: E,
                                           applicationId: u,
@@ -221,13 +221,13 @@ function eh(e) {
                                           commandOrigin: y.bB.CHAT,
                                       }));
                           };
-                      !d && (0, T.n)(t, [Z.Z, Y.default, B.ZP]) ? (0, I.hk)(t, o) : o();
+                      !d && (0, I.n)(t, [B.Z, Y.default, Z.ZP]) ? (0, S.hk)(t, o) : o();
                   });
           })
-        : (0, m.l5)(h) &&
+        : (0, h.l5)(m) &&
           c === er.Iq.EMBEDDED_APPLICATION &&
           null != u &&
-          ((0, x.uL)($.Z5c.CHANNEL(null != t ? t : $.ME, E)),
+          ((0, L.uL)($.Z5c.CHANNEL(null != t ? t : $.ME, E)),
           (0, g.Z)({
               channelId: E,
               applicationId: u,
@@ -236,9 +236,9 @@ function eh(e) {
               analyticsLocations: a,
               commandOrigin: y.bB.CHAT,
           })),
-        ep(r, i)(O);
+        e_(r, i)(O);
 }
-function em(e) {
+function eh(e) {
     let { guildScheduledEvent: t, welcomeModalChannelId: n } = e;
     null != t &&
         (0, v.h)(() => {
@@ -247,22 +247,22 @@ function em(e) {
         });
 }
 function eg(e, t, n) {
-    return _.Z.isDispatching()
+    return p.Z.isDispatching()
         ? Promise.resolve().then(() => eg(e, t, n))
-        : (_.Z.dispatch({
+        : (p.Z.dispatch({
               type: "INVITE_RESOLVE",
               code: e,
           }),
-          (0, D.Z)(e, t, n).then((e) => {
+          (0, w.Z)(e, t, n).then((e) => {
               let { invite: t, code: n, banned: r } = e;
               return (
                   null != t
-                      ? _.Z.dispatch({
+                      ? p.Z.dispatch({
                             type: "INVITE_RESOLVE_SUCCESS",
                             invite: t,
                             code: n,
                         })
-                      : _.Z.dispatch({
+                      : p.Z.dispatch({
                             type: "INVITE_RESOLVE_FAILURE",
                             code: n,
                             banned: r,
@@ -285,8 +285,8 @@ let eE = function (e, t) {
                 null == a ||
                 (!((i.nsfw && !a.nsfwAllowed) || (i.isGuildVocal() && (0, b.RW)(e))) &&
                     ((null == t ? void 0 : t.guildScheduledEvent) != null
-                        ? em(t)
-                        : eh({
+                        ? eh(t)
+                        : em({
                               guildId: null != (r = i.getGuildId()) ? r : $.ME,
                               channel: i,
                               options: t,
@@ -298,7 +298,7 @@ let eE = function (e, t) {
     },
     eb = async (e) => {
         let { guild_id: t, channel_id: n } = e;
-        (0, C.xt)(e) && null != n ? eE(n) : await Q.Z.transitionToGuildSync(t);
+        (0, C.xt)(e) && null != n ? eE(n) : await X.Z.transitionToGuildSync(t);
     };
 function ey(e, t) {
     var n;
@@ -338,7 +338,7 @@ let ev = {
                 rejectWithError: !0,
             });
             return (
-                _.Z.dispatch({
+                p.Z.dispatch({
                     type: "INSTANT_INVITE_CREATE_SUCCESS",
                     channelId: e,
                     invite: r,
@@ -347,11 +347,11 @@ let ev = {
             );
         } catch (t) {
             throw (
-                (_.Z.dispatch({
+                (p.Z.dispatch({
                     type: "INSTANT_INVITE_CREATE_FAILURE",
                     channelId: e,
                 }),
-                new p.Z(t))
+                new _.Z(t))
             );
         }
     },
@@ -360,26 +360,26 @@ let ev = {
         if (null != n && !n.isExpired()) return n.code;
         let r = { max_age: K.Z.Seconds.DAY },
             i = await this.createInvite(e.id, r, t).catch(() =>
-                _.Z.dispatch({ type: "NATIVE_APP_INSTANT_INVITE_GDM_SHARE_FAILED" }),
+                p.Z.dispatch({ type: "NATIVE_APP_INSTANT_INVITE_GDM_SHARE_FAILED" }),
             );
         return null == i ? void 0 : i.code;
     },
     async getAllFriendInvites(e) {
-        if ((await new Promise((e) => _.Z.wait(() => e(null))), F.Z.getFriendInvitesFetching()))
+        if ((await new Promise((e) => p.Z.wait(() => e(null))), F.Z.getFriendInvitesFetching()))
             return null != eu ? eu.then((e) => e.body) : Promise.reject(Error("Invalid friend invite fetch request"));
         (eu = d.tn.get({
             url: $.ANM.FRIEND_INVITES,
             context: { location: e },
             rejectWithError: !1,
         })),
-            _.Z.dispatch({
+            p.Z.dispatch({
                 type: "FRIEND_INVITES_FETCH_REQUEST",
                 requestedAt: new Date(),
             });
         let { body: t } = await eu;
         return (
             (eu = null),
-            _.Z.dispatch({
+            p.Z.dispatch({
                 type: "FRIEND_INVITES_FETCH_RESPONSE",
                 receivedAt: new Date(),
                 invites: t,
@@ -388,7 +388,7 @@ let ev = {
         );
     },
     createFriendInvite: (e, t) => (
-        _.Z.dispatch({ type: "FRIEND_INVITE_CREATE_REQUEST" }),
+        p.Z.dispatch({ type: "FRIEND_INVITE_CREATE_REQUEST" }),
         d.tn
             .post({
                 url: $.ANM.FRIEND_INVITES,
@@ -400,7 +400,7 @@ let ev = {
                 (e) => {
                     let { body: t } = e;
                     return (
-                        _.Z.dispatch({
+                        p.Z.dispatch({
                             type: "FRIEND_INVITE_CREATE_SUCCESS",
                             invite: t,
                         }),
@@ -409,7 +409,7 @@ let ev = {
                 },
                 (e) => {
                     throw (
-                        (_.Z.dispatch({
+                        (p.Z.dispatch({
                             type: "FRIEND_INVITE_CREATE_FAILURE",
                             error: e,
                         }),
@@ -419,7 +419,7 @@ let ev = {
             )
     ),
     revokeFriendInvites: () => (
-        _.Z.dispatch({ type: "FRIEND_INVITE_REVOKE_REQUEST" }),
+        p.Z.dispatch({ type: "FRIEND_INVITE_REVOKE_REQUEST" }),
         d.tn
             .del({
                 url: $.ANM.FRIEND_INVITES,
@@ -428,7 +428,7 @@ let ev = {
             })
             .then((e) => {
                 let { body: t } = e;
-                _.Z.dispatch({
+                p.Z.dispatch({
                     type: "FRIEND_INVITE_REVOKE_SUCCESS",
                     invites: t,
                 });
@@ -439,8 +439,26 @@ let ev = {
             url: $.ANM.INVITE(e),
             rejectWithError: !1,
         }),
+    async fetchFriendMembers(e) {
+        try {
+            let { body: t } = await d.tn.get({
+                url: $.ANM.INVITE_FRIEND_MEMBERS(e),
+                rejectWithError: !0,
+            });
+            p.Z.dispatch({
+                type: "INVITE_FRIEND_MEMBERS_FETCH_SUCCESS",
+                code: e,
+                friendMemberIds: t.friend_member_ids,
+            });
+        } catch (t) {
+            p.Z.dispatch({
+                type: "INVITE_FRIEND_MEMBERS_FETCH_FAILURE",
+                code: e,
+            });
+        }
+    },
     clearInviteFromStore(e) {
-        _.Z.dispatch({
+        p.Z.dispatch({
             type: "INSTANT_INVITE_CLEAR",
             channelId: e,
         });
@@ -461,7 +479,7 @@ let ev = {
             },
             rejectWithError: !1,
         }).then(() => {
-            _.Z.dispatch({
+            p.Z.dispatch({
                 type: "INSTANT_INVITE_REVOKE_SUCCESS",
                 code: t,
                 channelId: n.id,
@@ -471,16 +489,16 @@ let ev = {
     acceptInvite(e) {
         var t;
         let { inviteKey: r, context: i, callback: a, skipOnboarding: o } = e,
-            s = (0, P.fU)(r),
+            s = (0, R.fU)(r),
             l = s.baseCode,
-            c = j.default.getSessionId(),
+            c = k.default.getSessionId(),
             u = ef(i, s),
             f = Y.default.getCurrentUser();
         return null != (t = null == f ? void 0 : f.hasFlag($.xW$.QUARANTINED)) && t
-            ? ((0, w.default)(), new Promise((e, t) => t(Error())))
+            ? ((0, D.default)(), new Promise((e, t) => t(Error())))
             : (0, b.hO)(i.location_guild_id)
               ? ((0, E.mN)(ee.L0.JOIN_LARGE_GUILD_UNDERAGE), new Promise((e, t) => t(Error())))
-              : (_.Z.dispatch({
+              : (p.Z.dispatch({
                     type: "INVITE_ACCEPT",
                     code: l,
                 }),
@@ -495,7 +513,7 @@ let ev = {
                     .then(
                         async (e) => {
                             var t, r;
-                            _.Z.dispatch({
+                            p.Z.dispatch({
                                 type: "INVITE_ACCEPT_SUCCESS",
                                 invite: e.body,
                                 code: l,
@@ -520,7 +538,7 @@ let ev = {
                                 ((null == (t = e.body) ? void 0 : t.code) ===
                                     $.evJ.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED &&
                                     (0, E.mN)(ee.L0.JOIN_LARGE_GUILD_UNDERAGE),
-                                _.Z.dispatch({
+                                p.Z.dispatch({
                                     type: "INVITE_ACCEPT_FAILURE",
                                     code: l,
                                     error: {
@@ -528,7 +546,7 @@ let ev = {
                                         code: null == (r = e.body) ? void 0 : r.code,
                                     },
                                 }),
-                                new h.Z(e))
+                                new m.Z(e))
                             );
                         },
                     ));
@@ -552,14 +570,14 @@ let ev = {
         var r, i;
         let { channel: a, guild: l } = e;
         if (null != l && (null == (r = l.features) ? void 0 : r.includes($.GuildFeatures.HUB)))
-            return void R.Z.onOpenHubInvite(e);
+            return void P.Z.onOpenHubInvite(e);
         let c = (0, s.yE)(null != (i = e.flags) ? i : 0, o.$.IS_APPLICATION_BYPASS);
         if (null != l && !c && (0, N.u)(l)) return void (0, N._)(l.id);
         if (null == a) return;
         let u = ed(e);
         null != t && (u.transitionTo = t),
             null != n && (u.muteOnJoinVoiceChannel = n),
-            eh({
+            em({
                 guildId: null != l ? l.id : $.ME,
                 channel: a,
                 options: u,
@@ -584,16 +602,16 @@ let ev = {
     openApp(e, t, n, r, a) {
         var o, s;
         let d,
-            f = null != e ? (0, P.fU)(e) : null,
-            p = null == f ? void 0 : f.baseCode;
+            f = null != e ? (0, R.fU)(e) : null,
+            _ = null == f ? void 0 : f.baseCode;
         if (
-            (_.Z.dispatch({
+            (p.Z.dispatch({
                 type: "INVITE_APP_OPENING",
                 code: e,
             }),
             null != i().ua && i().ua.toLowerCase().indexOf("googlebot") > -1)
         )
-            return void _.Z.dispatch({
+            return void p.Z.dispatch({
                 type: "INVITE_APP_NOT_OPENED",
                 code: e,
             });
@@ -601,7 +619,7 @@ let ev = {
             (null == (o = i().os) ? void 0 : o.family) === "Android" ||
             (null == (s = i().os) ? void 0 : s.family) === "iOS"
         ) {
-            let e = null != p ? (0, l.z0)(p) : (0, l.Gk)(),
+            let e = null != _ ? (0, l.z0)(_) : (0, l.Gk)(),
                 t = (0, c.WS)();
             (d = (0, c.ZP)(e, {
                 utmSource: 2 === a ? "friend_invite" : ec,
@@ -609,18 +627,18 @@ let ev = {
                 username: r,
                 attemptId: t,
                 event: null == f ? void 0 : f.guildScheduledEventId,
-                iosFallbackLink: "https://discord.com/api/download/mobile?invite_code=".concat(p),
+                iosFallbackLink: "https://discord.com/api/download/mobile?invite_code=".concat(_),
             })),
                 W.default.track($.rMx.DEEP_LINK_CLICKED, {
                     fingerprint: (0, u.K)(n),
                     attempt_id: t,
                     source: ec,
-                    invite_code: p,
+                    invite_code: _,
                 });
         } else
             "#" === (d = null != t ? $.Z5c.INVITE_PROXY(t) : "")[0] && (d = d.slice(1)), (d = "discord://".concat(d));
         q.Z.launch(d, (t) => {
-            _.Z.dispatch(
+            p.Z.dispatch(
                 t
                     ? {
                           type: "INVITE_APP_OPENED",

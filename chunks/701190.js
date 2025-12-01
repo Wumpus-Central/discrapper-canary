@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685), n(997841);
+n.d(t, { Z: () => D }), n(388685), n(997841);
 var r,
     i = n(442837),
     a = n(570140),
@@ -57,8 +57,9 @@ function d(e, t) {
     );
 }
 let f = new Map(),
-    _ = new Map(),
-    p = {};
+    p = new Map(),
+    _ = {},
+    m = new Map();
 function h(e, t) {
     var n;
     e = null != e ? e : "";
@@ -73,9 +74,9 @@ function h(e, t) {
                   };
     t(a),
         (f = new Map(f)).set(e, a),
-        (null == (n = a.guild) ? void 0 : n.id) != null && (p = d(c({}, p), { [a.guild.id]: e }));
+        (null == (n = a.guild) ? void 0 : n.id) != null && (_ = d(c({}, _), { [a.guild.id]: e }));
 }
-function m(e) {
+function g(e) {
     let { code: t } = e,
         n = (0, o.fU)(t);
     (f = new Map(f)).set(t, {
@@ -83,7 +84,7 @@ function m(e) {
         state: s.r2o.RESOLVING,
     });
 }
-function g(e) {
+function E(e) {
     return h(e.code, (t) => {
         var n, r;
         (t.state = s.r2o.RESOLVED),
@@ -106,7 +107,7 @@ function g(e) {
             (t.roles = e.invite.roles);
     });
 }
-function E(e) {
+function b(e) {
     return h(e.invite.code, (t) => {
         var n, r;
         (t.state = s.r2o.RESOLVED),
@@ -125,24 +126,24 @@ function E(e) {
             (t.roles = e.invite.roles);
     });
 }
-function b(e) {
+function y(e) {
     return h(e.invite.code, (t) => {
         (t.state = s.r2o.RESOLVED), (t.inviter = e.invite.inviter);
     });
 }
-function y(e) {
+function O(e) {
     e.invites.forEach((e) =>
         h(e.code, (e) => {
             e.state = s.r2o.EXPIRED;
         }),
     );
 }
-function O(e) {
+function v(e) {
     return h(e.code, (t) => {
         t.state = "banned" in e && e.banned ? s.r2o.BANNED : s.r2o.EXPIRED;
     });
 }
-function v(e) {
+function S(e) {
     return h(e.code, (e) => {
         e.state = s.r2o.ACCEPTING;
     });
@@ -157,54 +158,66 @@ function I(e) {
 }
 function T(e) {
     return (
-        _.set(e.code, e.error),
+        p.set(e.code, e.error),
         h(e.code, (e) => {
             e.state = s.r2o.ERROR;
         })
     );
 }
-function S(e) {
+function A(e) {
     return h(e.code, (e) => {
         e.state = s.r2o.APP_OPENING;
     });
 }
-function A(e) {
+function C(e) {
     return h(e.code, (e) => {
         e.state = s.r2o.APP_OPENED;
     });
 }
-function C(e) {
+function N(e) {
     return h(e.code, (e) => {
         e.state = s.r2o.APP_NOT_OPENED;
     });
 }
-class N extends (r = i.ZP.Store) {
+function P(e) {
+    (m = new Map(m)).set(e.code, e.friendMemberIds);
+}
+function R(e) {
+    if (!m.has(e.code)) return !1;
+    (m = new Map(m)).delete(e.code);
+}
+class w extends (r = i.ZP.Store) {
     getInvite(e) {
         return f.get(e);
     }
     getInviteError(e) {
-        return _.get(e);
+        return p.get(e);
     }
     getInvites() {
         return f;
     }
     getInviteKeyForGuildId(e) {
-        return p[e];
+        return _[e];
+    }
+    getFriendMemberIds(e) {
+        return m.get(e);
     }
 }
-l(N, "displayName", "InviteStore");
-let R = new N(a.Z, {
-    INVITE_RESOLVE: m,
-    INVITE_RESOLVE_SUCCESS: g,
-    INVITE_RESOLVE_FAILURE: O,
-    INSTANT_INVITE_REVOKE_SUCCESS: O,
-    FRIEND_INVITE_CREATE_SUCCESS: b,
-    FRIEND_INVITE_REVOKE_SUCCESS: y,
-    INSTANT_INVITE_CREATE_SUCCESS: E,
-    INVITE_ACCEPT: v,
+l(w, "displayName", "InviteStore");
+let D = new w(a.Z, {
+    INVITE_RESOLVE: g,
+    INVITE_RESOLVE_SUCCESS: E,
+    INVITE_RESOLVE_FAILURE: v,
+    INSTANT_INVITE_REVOKE_SUCCESS: v,
+    FRIEND_INVITE_CREATE_SUCCESS: y,
+    FRIEND_INVITE_REVOKE_SUCCESS: O,
+    INSTANT_INVITE_CREATE_SUCCESS: b,
+    INVITE_ACCEPT: S,
     INVITE_ACCEPT_SUCCESS: I,
     INVITE_ACCEPT_FAILURE: T,
-    INVITE_APP_OPENING: S,
-    INVITE_APP_OPENED: A,
-    INVITE_APP_NOT_OPENED: C,
+    INVITE_APP_OPENING: A,
+    INVITE_APP_OPENED: C,
+    INVITE_APP_NOT_OPENED: N,
+    INVITE_FRIEND_MEMBERS_FETCH_SUCCESS: P,
+    INVITE_FRIEND_MEMBERS_FETCH_FAILURE: R,
 });
