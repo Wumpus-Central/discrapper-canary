@@ -22,13 +22,7 @@ let p = function (e) {
             (0, r.jsx)(s.Z, {
                 children: (0, r.jsxs)("div", {
                     className: u.contentContainer,
-                    children: [
-                        (0, r.jsx)(c.Z, { onSelectApplication: n }),
-                        (0, r.jsx)(a.Z, {
-                            showImage: !1,
-                            padding: !0,
-                        }),
-                    ],
+                    children: [(0, r.jsx)(c.Z, { onSelectApplication: n }), (0, r.jsx)(a.Z, { padding: !0 })],
                 }),
             }),
         ],

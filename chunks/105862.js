@@ -1,68 +1,55 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => _ });
 var r = n(54381),
     i = n(473749),
-    a = n(780384),
-    o = n(481060),
-    s = n(410030),
-    l = n(782568),
-    c = n(63063),
-    u = n(827498),
-    d = n(888617),
-    f = n(981631),
-    _ = n(388032),
-    p = n(431048),
-    h = n(983008),
-    m = n(478408);
-function g(e) {
-    let { showImage: t = !0, padding: n = !1 } = e,
-        g = (0, s.ZP)(),
-        E = (0, a.ap)(g) ? m : h,
-        b = i.useCallback(() => {
-            (0, l.Z)(c.Z.getAppsSupportURL(f.BhN.APPS_LEARN_MORE));
+    a = n(481060),
+    o = n(782568),
+    s = n(63063),
+    l = n(827498),
+    c = n(888617),
+    u = n(981631),
+    d = n(388032),
+    f = n(431048);
+function _(e) {
+    let { padding: t = !1 } = e,
+        n = i.useCallback(() => {
+            (0, o.Z)(s.Z.getAppsSupportURL(u.BhN.APPS_LEARN_MORE));
         }, []),
-        { trackSectionImpressionRef: y } = (0, d.Z)({
-            sectionName: u.L3.NEW_TO_APPS,
+        { trackSectionImpressionRef: _ } = (0, c.Z)({
+            sectionName: l.L3.NEW_TO_APPS,
             numItems: 1,
             numVisibleItems: 1,
         });
     return (0, r.jsx)("div", {
-        className: n ? p.containerPadding : void 0,
+        className: t ? f.containerPadding : void 0,
         children: (0, r.jsxs)("div", {
             ref: (e) => {
-                y.current = e;
+                _.current = e;
             },
-            className: p.container,
+            className: f.container,
             children: [
-                t &&
-                    (0, r.jsx)("img", {
-                        className: p.image,
-                        src: E,
-                        alt: "",
-                        "aria-hidden": !0,
-                    }),
                 (0, r.jsxs)("div", {
-                    className: p.body,
+                    className: f.body,
                     children: [
-                        (0, r.jsx)(o.Heading, {
+                        (0, r.jsx)(a.Heading, {
                             variant: "heading-lg/bold",
                             color: "header-primary",
-                            children: _.intl.string(_.t["kw8/Ec"]),
+                            children: d.intl.string(d.t["kw8/Ec"]),
                         }),
-                        (0, r.jsx)(o.Text, {
+                        (0, r.jsx)(a.Text, {
                             variant: "text-xs/normal",
                             color: "text-default",
-                            children: _.intl.string(_.t.GZoV1O),
+                            children: d.intl.string(d.t.GZoV1O),
                         }),
                     ],
                 }),
-                (0, r.jsx)(o.Button, {
+                (0, r.jsx)(a.Button, {
                     variant: "primary",
-                    text: _.intl.string(_.t.Ye51oT),
-                    "aria-label": _.intl.formatToPlainString(_.t.xx5Sug, {
-                        sectionTitle: _.intl.string(_.t["kw8/Ec"]),
-                        sectionBody: _.intl.string(_.t.GZoV1O),
+                    text: d.intl.string(d.t.Ye51oT),
+                    "aria-label": d.intl.formatToPlainString(d.t.xx5Sug, {
+                        sectionTitle: d.intl.string(d.t["kw8/Ec"]),
+                        sectionBody: d.intl.string(d.t.GZoV1O),
                     }),
-                    onClick: b,
+                    onClick: n,
                 }),
             ],
         }),
