@@ -280,6 +280,7 @@ var r = (function (e) {
             (e.LOGIN_REQUEST_SMS_TOKEN = "network_action_login_request_sms_token"),
             (e.NCMEC_REPORT_CLOSE = "network_action_ncmec_report_close"),
             (e.NCMEC_REPORTABLE_CONTENT_CREATE = "network_action_ncmec_reportable_content_create"),
+            (e.NITRO_WARP_CREATE_LICENSE = "network_action_nitro_warp_create_license"),
             (e.NOTIFICATION_CENTER_ITEM_DELETE = "network_action_notification_center_item_delete"),
             (e.NOTIFICATION_CENTER_PAGE_FETCH = "network_action_notification_center_page_fetch"),
             (e.PASSWORD_VALIDATE = "network_action_password_validate"),

@@ -527,6 +527,7 @@ var r = (function (e) {
         (e.SOCIAL_LAYER_STOREFRONT = "social layer storefront"),
         (e.GIFT_CODE_EMBED = "gift code embed"),
         (e.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED = "slayer storefront product details embed"),
+        (e.CF_WARP_SETTINGS = "cloudflare warp settings"),
         e
     );
 })(r || {});
