@@ -3,7 +3,9 @@ n.d(t, {
     pi: () => p,
     te: () => _,
 }),
-    n(388685);
+    n(388685),
+    n(704826),
+    n(35282);
 var r = n(54381),
     i = n(473749),
     a = n(442837),
@@ -50,7 +52,7 @@ function h(e) {
                               channelId: n.id,
                               guildId: n.guild_id,
                           }),
-                          (0, r.jsx)(d.ll, { children: l }),
+                          (0, r.jsx)(d.ll, { children: l.replace(/; /g, ", ") }),
                           (0, r.jsx)(u.Gk, {
                               location: u.Gt.CARD,
                               children: _.map((e, n) =>

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => ey }), n(388685), n(472816), n(794429);
+n.d(t, { Z: () => ey }), n(704826), n(35282), n(388685), n(472816), n(794429);
 var r,
     i = n(54381),
     l = n(473749),
@@ -617,7 +617,7 @@ let eO = (e) => {
                           })
                         : (0, i.jsx)("div", {}),
                     (0, i.jsxs)("div", {
-                        children: [null != r ? eo(r) : null, null != l ? ec(l) : null],
+                        children: [null != r ? eo(r) : null, null != l ? ec(l.replace(/; /g, ", ")) : null],
                     }),
                     (0, i.jsx)(er.Z, {
                         minAvatarsShown: u ? 2 : 1,
