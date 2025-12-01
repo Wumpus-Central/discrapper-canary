@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -45,9 +45,9 @@ class f extends i.PureComponent {
                         separatorClassName: d,
                     } = this.props,
                     f = e.id === n,
-                    _ = () => this.handleClick(e),
-                    p = t === a.length - 1,
-                    h =
+                    p = () => this.handleClick(e),
+                    _ = t === a.length - 1,
+                    m =
                         null != l
                             ? l(e, f)
                             : (0, r.jsx)("span", {
@@ -60,17 +60,17 @@ class f extends i.PureComponent {
                 return (0, r.jsxs)(
                     "div",
                     {
-                        className: o()(u.breadcrumbWrapper, { [u.breadcrumbFinalWrapper]: p }),
+                        className: o()(u.breadcrumbWrapper, { [u.breadcrumbFinalWrapper]: _ }),
                         children: [
                             null != i
                                 ? (0, r.jsx)(s.P3F, {
                                       tag: "span",
-                                      onClick: _,
+                                      onClick: p,
                                       className: u.breadcrumbClickWrapper,
-                                      children: h,
+                                      children: m,
                                   })
-                                : h,
-                            p
+                                : m,
+                            _
                                 ? null
                                 : (0, r.jsx)(c.Z, {
                                       className: o()(u.breadcrumbArrow, d),
@@ -83,4 +83,4 @@ class f extends i.PureComponent {
             });
     }
 }
-let _ = f;
+let p = f;

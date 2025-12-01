@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => m,
-    j: () => p,
+    Z: () => h,
+    j: () => _,
 }),
     n(35282);
 var r = n(54381);
@@ -14,9 +14,9 @@ let c = ["sessionshare.sp-int.playstation.com", "session-share.playstation.com"]
     u = (e, t, n) => "https://".concat(e, "/embed/").concat(t, "?locale=").concat(n),
     d = 400,
     f = 300,
-    _ = 6,
-    p = ["PlayStation"],
-    h = (e, t) => {
+    p = 6,
+    _ = ["PlayStation"],
+    m = (e, t) => {
         let { host: n, pathname: r } = t,
             i = [];
         if ((null != r && (i = r.split("/")), "PlayStation" === e)) {
@@ -27,13 +27,13 @@ let c = ["sessionshare.sp-int.playstation.com", "session-share.playstation.com"]
                 style: {
                     width: d,
                     height: f,
-                    borderRadius: _,
+                    borderRadius: p,
                 },
             };
         }
         return null;
     };
-function m(e) {
+function h(e) {
     var t;
     let n = e.embed.url,
         i = null == (t = e.embed.provider) ? void 0 : t.name;
@@ -44,7 +44,7 @@ function m(e) {
     } catch (e) {
         return null;
     }
-    let c = h(i, s);
+    let c = m(i, s);
     return null == c
         ? null
         : (0, r.jsx)("iframe", {

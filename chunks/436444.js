@@ -1,5 +1,5 @@
 n.d(t, {
-    P: () => S,
+    P: () => T,
     Z: () => A,
 }),
     n(415506);
@@ -7,17 +7,17 @@ var r = n(54381);
 n(473749);
 var i = n(120356),
     a = n.n(i),
-    o = n(790519),
+    o = n(666917),
     s = n(681715),
     l = n(481060),
     c = n(906732),
     u = n(975298),
     d = n(471885),
     f = n(267642),
-    _ = n(879892),
-    p = n(198466),
-    h = n(981631),
-    m = n(474936),
+    p = n(879892),
+    _ = n(198466),
+    m = n(981631),
+    h = n(474936),
     g = n(388032),
     E = n(130231),
     b = n(724437);
@@ -62,7 +62,7 @@ function v(e, t) {
     }
     return n;
 }
-function I(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -73,23 +73,23 @@ function I(e, t) {
         e
     );
 }
-function T(e) {
+function I(e) {
     switch (e) {
-        case h.Eu4.TIER_3:
-            return h.AnalyticsObjectTypes.TIER_3;
-        case h.Eu4.TIER_2:
-            return h.AnalyticsObjectTypes.TIER_2;
-        case h.Eu4.TIER_1:
-            return h.AnalyticsObjectTypes.TIER_1;
+        case m.Eu4.TIER_3:
+            return m.AnalyticsObjectTypes.TIER_3;
+        case m.Eu4.TIER_2:
+            return m.AnalyticsObjectTypes.TIER_2;
+        case m.Eu4.TIER_1:
+            return m.AnalyticsObjectTypes.TIER_1;
         default:
             throw Error("Unsupported Boosting tier: ".concat(e));
     }
 }
-let S = {
-        [h.Eu4.NONE]: 0,
-        [h.Eu4.TIER_1]: 1 / 3,
-        [h.Eu4.TIER_2]: 2 / 3,
-        [h.Eu4.TIER_3]: 1,
+let T = {
+        [m.Eu4.NONE]: 0,
+        [m.Eu4.TIER_1]: 1 / 3,
+        [m.Eu4.TIER_2]: 2 / 3,
+        [m.Eu4.TIER_3]: 1,
     },
     A = function (e) {
         let {
@@ -101,32 +101,32 @@ let S = {
                 setShouldFireConfetti: A,
                 tier: C,
                 tierMarkerAnimationPosition: N,
-                totalAvailableBoostsCount: R,
+                totalAvailableBoostsCount: P,
             } = e,
-            { analyticsLocations: P } = (0, c.ZP)(),
-            D = (0, u.Z)(),
-            w = h.oCV[C],
-            L = w - R,
-            x = C <= N || y,
-            M = x && C <= i.premiumTier,
-            k = x && C < i.premiumTier,
-            j = x && C === i.premiumTier,
-            U = i.premiumTier < C && R >= w,
+            { analyticsLocations: R } = (0, c.ZP)(),
+            w = (0, u.Z)(),
+            D = m.oCV[C],
+            x = D - P,
+            L = C <= N || y,
+            j = L && C <= i.premiumTier,
+            M = L && C < i.premiumTier,
+            k = L && C === i.premiumTier,
+            U = i.premiumTier < C && P >= D,
             { scaleFactor: G } = (0, l.q_F)({
                 from: { scaleFactor: 0 },
-                to: { scaleFactor: N >= C || (y && N + 1 === C) || (y && -1 === N && C === h.Eu4.NONE) ? 1 : 0 },
+                to: { scaleFactor: N >= C || (y && N + 1 === C) || (y && -1 === N && C === m.Eu4.NONE) ? 1 : 0 },
                 config: {
                     tension: 360,
                     friction: 12,
                 },
             }),
-            B = (0, r.jsxs)(r.Fragment, {
+            Z = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(o.animated.div, {
                         className: b.progressBarMarkerIndicator,
                         style: { transform: G.to((e) => "translate(-50%, -50%) scale(".concat(e, ")")) },
                     }),
-                    C !== h.Eu4.NONE
+                    C !== m.Eu4.NONE
                         ? U
                             ? (0, r.jsx)(l.zkc, {
                                   className: a()(b.boostedTierIcon, b.disabledIndicator),
@@ -141,64 +141,64 @@ let S = {
                         : void 0,
                 ],
             });
-        function Z() {
-            x &&
+        function B() {
+            L &&
                 (U ||
-                    (0, _.u)({
-                        analyticsLocations: P,
+                    (0, p.u)({
+                        analyticsLocations: R,
                         analyticsLocation: {
-                            page: h.ZY5.PREMIUM_GUILD_USER_MODAL,
-                            section: h.jXE.PREMIUM_GUILD_USER_MODAL_PROGRESS_BAR,
-                            object: h.qAy.SUBSCRIBE_TO_TIER_BUTTON,
-                            objectType: T(C),
+                            page: m.ZY5.PREMIUM_GUILD_USER_MODAL,
+                            section: m.jXE.PREMIUM_GUILD_USER_MODAL_PROGRESS_BAR,
+                            object: m.qAy.SUBSCRIBE_TO_TIER_BUTTON,
+                            objectType: I(C),
                         },
-                        numberOfBoostsToAdd: L,
+                        numberOfBoostsToAdd: x,
                         guild: i,
                     }));
         }
-        let F = !M && D.fractionalState === m.a$.NONE,
+        let F = !j && w.fractionalState === h.a$.NONE,
             V = F ? l.P3F : "div",
-            H = F ? { onClick: Z } : {},
-            Y = M
+            H = F ? { onClick: B } : {},
+            Y = j
                 ? g.intl.formatToPlainString(g.t["1o48ki"], { tierName: (0, f.nW)(C, { useLevels: !1 }) })
                 : U
                   ? g.intl.formatToPlainString(E.default["9CtPjt"], { perk: (0, f.nW)(C, { useLevels: !1 }) })
                   : g.intl.formatToPlainString(g.t.r6NN6Q, {
-                        numBoostsRequired: L,
+                        numBoostsRequired: x,
                         tierName: (0, f.nW)(C, { useLevels: !1 }),
                     }),
             W = (0, r.jsxs)(
                 V,
-                I(
+                S(
                     O(
                         {
                             className: a()(b.progressBarMarker, {
-                                [b.progressBarMarkerUnlocked]: M,
+                                [b.progressBarMarkerUnlocked]: j,
                                 [b.progressBarMarkerLocked]: F,
-                                [b.progressBarMarkerLower]: k,
-                                [b.progressBarMarkerCurrent]: j,
+                                [b.progressBarMarkerLower]: M,
+                                [b.progressBarMarkerCurrent]: k,
                             }),
-                            style: { left: "".concat(100 * S[C], "%") },
+                            style: { left: "".concat(100 * T[C], "%") },
                         },
                         H,
                     ),
                     {
                         children: [
-                            !M && (0, r.jsx)("div", { className: b.boostedTierIconBackground }),
-                            M && C === h.Eu4.TIER_3
-                                ? (0, r.jsx)(p.m, {
+                            !j && (0, r.jsx)("div", { className: b.boostedTierIconBackground }),
+                            j && C === m.Eu4.TIER_3
+                                ? (0, r.jsx)(_.m, {
                                       confettiTriggerRef: n,
                                       setConfettiCount: v,
                                       setShouldFireConfetti: A,
-                                      children: B,
+                                      children: Z,
                                   })
-                                : B,
+                                : Z,
                             (0, r.jsxs)(l.Text, {
                                 className: b.progressBarMarkerLabel,
                                 variant: "text-md/normal",
                                 children: [
-                                    M &&
-                                        C !== h.Eu4.NONE &&
+                                    j &&
+                                        C !== m.Eu4.NONE &&
                                         (0, r.jsx)(l.dz2, {
                                             size: "md",
                                             color: "currentColor",
@@ -211,7 +211,7 @@ let S = {
                     },
                 ),
             );
-        return C !== h.Eu4.NONE
+        return C !== m.Eu4.NONE
             ? (0, r.jsx)(s.u, {
                   text: Y,
                   children: W,

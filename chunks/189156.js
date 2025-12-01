@@ -1,5 +1,5 @@
 n.d(t, {
-    n: () => m,
+    n: () => h,
     q: () => g,
 });
 var r = n(54381);
@@ -61,11 +61,11 @@ function f(e, t) {
         e
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -73,7 +73,7 @@ function _(e, t) {
     }
     return i;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -82,15 +82,15 @@ function p(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function h(e) {
+function m(e) {
     return (0, r.jsx)(a.Z, { application: e }, e.id);
 }
-function m(e) {
+function h(e) {
     var { userId: t, variant: n = "text-xs/normal", color: a = "text-default" } = e,
-        s = _(e, ["userId", "variant", "color"]);
+        s = p(e, ["userId", "variant", "color"]);
     let l = (0, o.e)({
         userId: t,
-        renderApplicationName: h,
+        renderApplicationName: m,
     });
     return (0, r.jsx)(
         i.Text,
@@ -125,7 +125,7 @@ function g(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(m, {
+            (0, r.jsx)(h, {
                 userId: t,
                 variant: "text-md/normal",
             }),

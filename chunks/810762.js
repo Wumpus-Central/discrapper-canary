@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(54381),
     i = n(873546),
     a = n(159691),
@@ -9,11 +9,11 @@ var r = n(54381),
     u = n(949914),
     d = n(388032),
     f = n(343447);
-let _ = (e) => {
+let p = (e) => {
     let { onGoBack: t } = e,
         n = (0, c.Z)(),
-        { loading: _ } = (0, l.sp)(n);
-    return ((0, s.Z)(i.tq ? "role-subscriptions-user-setting" : void 0), _)
+        { loading: p } = (0, l.sp)(n);
+    return ((0, s.Z)(i.tq ? "role-subscriptions-user-setting" : void 0), p)
         ? (0, r.jsx)(o.$jN, {})
         : 0 === n.length
           ? null

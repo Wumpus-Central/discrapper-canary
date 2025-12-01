@@ -9,13 +9,13 @@ var r = n(54381),
     u = n(893718),
     d = n(993413),
     f = n(131704),
-    _ = n(474936),
-    p = n(981631),
-    h = n(388032),
-    m = n(12033);
+    p = n(474936),
+    _ = n(981631),
+    m = n(388032),
+    h = n(12033);
 let g = (0, f.createChannelRecord)({
     id: "1",
-    type: p.d4z.DM,
+    type: _.d4z.DM,
 });
 function E(e) {
     let {
@@ -23,20 +23,20 @@ function E(e) {
             errors: n,
             onTextChange: a,
             pendingText: f,
-            placeholder: p,
+            placeholder: _,
             currentText: E,
             className: b,
             innerClassName: y,
             disabled: O = !1,
             disableThemedBackground: v = !1,
         } = e,
-        [I, T] = i.useState(null != f ? f : E),
-        [S, A] = i.useState((0, c.JM)(I)),
+        [S, I] = i.useState(null != f ? f : E),
+        [T, A] = i.useState((0, c.JM)(S)),
         C = i.useRef(!1);
     function N(e, t, n) {
-        t !== I && (T(t), A(n), a(t));
+        t !== S && (I(t), A(n), a(t));
     }
-    function R() {
+    function P() {
         return new Promise((e) => {
             e({
                 shouldClear: !1,
@@ -51,25 +51,25 @@ function E(e) {
         i.useEffect(() => {
             if (void 0 === f) {
                 let e = (0, c.JM)(E);
-                T(E), A(e);
+                I(E), A(e);
             }
         }, [f, E]),
         (0, r.jsx)("div", {
-            className: o()(m.body, b),
+            className: o()(h.body, b),
             children: (0, r.jsxs)(d.Z, {
                 title: t,
                 errors: n,
                 disabled: O,
                 children: [
                     (0, r.jsx)(u.ZP, {
-                        innerClassName: o()(m.textArea, y),
-                        editorClassName: m.editorTextArea,
-                        maxCharacterCount: _.$n,
+                        innerClassName: o()(h.textArea, y),
+                        editorClassName: h.editorTextArea,
+                        maxCharacterCount: p.$n,
                         onChange: N,
-                        placeholder: p,
+                        placeholder: _,
                         channel: g,
-                        textValue: I,
-                        richValue: S,
+                        textValue: S,
+                        richValue: T,
                         type: l.Ie.CUSTOM_GIFT,
                         onBlur: () => {
                             C.current = !1;
@@ -78,10 +78,10 @@ function E(e) {
                             C.current = !0;
                         },
                         focused: C.current,
-                        onSubmit: R,
+                        onSubmit: P,
                         disableThemedBackground: v,
                     }),
-                    (0, r.jsx)(s.nn4, { children: h.intl.format(h.t["+DFxLc"], { maxLength: _.$n }) }),
+                    (0, r.jsx)(s.nn4, { children: m.intl.format(m.t["+DFxLc"], { maxLength: p.$n }) }),
                 ],
             }),
         })

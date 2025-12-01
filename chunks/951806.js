@@ -1,6 +1,6 @@
 n.d(t, {
-    F0: () => h,
-    bk: () => _,
+    F0: () => m,
+    bk: () => p,
 }),
     n(539854);
 var r,
@@ -25,24 +25,24 @@ function u(e, t, n) {
 }
 let d = new a.Yd("LegacyOverlayClient"),
     f = 1000,
-    _ = 10000,
-    p = 20000,
-    h = "Heartbeat",
-    m = new s.Z(f),
+    p = 10000,
+    _ = 20000,
+    m = "Heartbeat",
+    h = new s.Z(f),
     g = null,
     E = null;
 function b(e) {
     let { level: t, message: n, timestamp: r, context: i } = e;
     if (!c.Z.hasRenderDebugMode(l.GO.LegacyOverlayLogging) || __OVERLAY__) return !1;
     if (
-        (m.push({
+        (h.push({
             level: t,
             message: n,
             timestamp: r,
             context: i,
         }),
-        n === h && (g = Date.now()),
-        n !== h)
+        n === m && (g = Date.now()),
+        n !== m)
     )
         switch (t) {
             case "error":
@@ -65,11 +65,11 @@ function y() {
         (E = setInterval(() => {
             if (null != g) {
                 let e = Date.now() - g;
-                e > p &&
+                e > _ &&
                     (d.warn("No heartbeat for ".concat(Math.round(e / 1000), "s - overlay may be unresponsive")),
                     (g = null));
             }
-        }, _));
+        }, p));
 }
 function O() {
     null != E && (clearInterval(E), (E = null));
@@ -78,26 +78,26 @@ function v(e) {
     let { enabled: t, mode: n } = e;
     return n === l.GO.LegacyOverlayLogging && (t ? y() : O()), !1;
 }
-function I(e) {
+function S(e) {
     let { logs: t } = e;
     return t.forEach((e) => b(e)), !0;
 }
-class T extends (r = i.ZP.Store) {
+class I extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(c.Z), c.Z.hasRenderDebugMode(l.GO.LegacyOverlayLogging) && y();
     }
     getAllLogs() {
-        return m;
+        return h;
     }
     getLogsByLevel(e) {
-        return m.filter((t) => t.level === e);
+        return h.filter((t) => t.level === e);
     }
     getErrorLogs() {
-        return m.filter((e) => "error" === e.level || "crash" === e.level);
+        return h.filter((e) => "error" === e.level || "crash" === e.level);
     }
 }
-u(T, "displayName", "OverlayRPCLogStore"),
-    new T(o.Z, {
+u(I, "displayName", "OverlayRPCLogStore"),
+    new I(o.Z, {
         OVERLAY_RENDER_DEBUG_MODE: v,
-        OVERLAY_ADD_LOGS_BATCH: I,
+        OVERLAY_ADD_LOGS_BATCH: S,
     });

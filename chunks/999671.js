@@ -8,14 +8,14 @@ var r = n(54381),
     c = n(592125),
     u = n(944486),
     d = n(455199),
-    p = n(981631),
+    f = n(981631),
     h = n(388032);
-function f(e) {
+function p(e) {
     let { closePopout: t, onSelect: n } = e,
         i = (0, l.e7)([c.Z, u.Z], () => c.Z.getChannel(u.Z.getChannelId())),
         {
             everyoneFilter: o,
-            roleFilter: f,
+            roleFilter: p,
             guildFilter: g,
         } = (0, l.cj)([d.ZP], () => {
             let { everyoneFilter: e, roleFilter: t, guildFilter: n } = d.ZP;
@@ -43,9 +43,9 @@ function f(e) {
                 id: "Roles",
                 label: h.intl.string(h.t.lZejCq),
                 action: function () {
-                    s.Z.setGuildFilter({ roleFilter: !f });
+                    s.Z.setGuildFilter({ roleFilter: !p });
                 },
-                checked: f,
+                checked: p,
             }),
             null == i || i.isPrivate()
                 ? null
@@ -54,10 +54,10 @@ function f(e) {
                       label: h.intl.string(h.t.GWMA6s),
                       action: function () {
                           s.Z.setGuildFilter({
-                              guildFilter: g === p.NgX.THIS_SERVER ? p.NgX.ALL_SERVERS : p.NgX.THIS_SERVER,
+                              guildFilter: g === f.NgX.THIS_SERVER ? f.NgX.ALL_SERVERS : f.NgX.THIS_SERVER,
                           });
                       },
-                      checked: g === p.NgX.ALL_SERVERS,
+                      checked: g === f.NgX.ALL_SERVERS,
                   }),
         ],
     });
@@ -71,7 +71,7 @@ function g() {
         position: "bottom",
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, r.jsx)(f, { closePopout: t });
+            return (0, r.jsx)(p, { closePopout: t });
         },
         children: (t) => {
             let { onClick: n } = t;

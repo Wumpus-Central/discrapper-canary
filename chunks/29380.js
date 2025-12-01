@@ -9,76 +9,76 @@ var r = n(54381),
     u = n(626135),
     d = n(499254),
     f = n(541099),
-    _ = n(827498),
-    p = n(160973),
-    h = n(783097),
-    m = n(890280),
+    p = n(827498),
+    _ = n(160973),
+    m = n(783097),
+    h = n(890280),
     g = n(176412),
     E = n(981631),
     b = n(388032);
 function y(e) {
     let { context: t, application: n, sectionName: y, primaryEntryPointCommand: O } = e,
         v = i.useId(),
-        I = i.useCallback(() => {
-            d.y(_.ti.ACTIVITY);
+        S = i.useCallback(() => {
+            d.y(p.ti.ACTIVITY);
         }, []),
-        T = i.useCallback(() => {
-            f.Z.shouldShowModal() && I();
-        }, [I]),
-        { submitting: S, wasSubmitting: A } = (0, m.Z)({
+        I = i.useCallback(() => {
+            f.Z.shouldShowModal() && S();
+        }, [S]),
+        { submitting: T, wasSubmitting: A } = (0, h.Z)({
             applicationId: n.id,
             context: t,
             launchingComponentId: v,
-            onSubmissionComplete: I,
+            onSubmissionComplete: S,
         }),
         [C, N] = i.useState(!1),
-        R = (0, s.Qv)({
+        P = (0, s.Qv)({
             applicationId: n.id,
             context: t,
         }),
-        P = i.useMemo(() => (0, h.XZ)(O.displayName), [O.displayName]),
+        R = i.useMemo(() => (0, m.XZ)(O.displayName), [O.displayName]),
         {
-            onActivityItemSelected: D,
-            buttonVariant: w,
-            buttonText: L,
+            onActivityItemSelected: w,
+            buttonVariant: D,
+            buttonText: x,
         } = (0, g.P7)({
             context: t,
             application: n,
             location: l.Vh.APP_LAUNCHER_APPLICATION_VIEW,
             sectionName: y,
-            commandName: P,
-            autoDismissOnClick: R === s.JS.LEAVE || (0, c.g)(n),
+            commandName: R,
+            autoDismissOnClick: P === s.JS.LEAVE || (0, c.g)(n),
             launchingComponentId: v,
-            submitting: null != A ? A : S,
-            onConfirmActivityLaunchChecksAlertOpen: T,
+            submitting: null != A ? A : T,
+            onConfirmActivityLaunchChecksAlertOpen: I,
         }),
-        { disabled: x, reason: M } = (0, p.Z)({
+        { disabled: L, reason: j } = (0, _.Z)({
             context: t,
             application: n,
-            activityAction: R,
+            activityAction: P,
         });
     return (0, r.jsx)(a.u, {
-        shouldShow: null != M,
-        __unsupportedReactNodeAsText: M,
+        shouldShow: null != j,
+        __unsupportedReactNodeAsText: j,
         children: (0, r.jsx)(o.Button, {
             type: "submit",
             size: "md",
-            variant: w,
-            disabled: x,
+            variant: D,
+            disabled: L,
             loading: C,
             onClick: () => {
                 N(!0),
-                    D(),
+                    w(),
                     u.default.track(E.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
                         application_id: n.id,
-                        button_action: _._y.USE_APP_COMMAND,
+                        button_action: p._y.USE_APP_COMMAND,
                     });
             },
             "aria-label": b.intl.formatToPlainString(b.t["XjP/R+"], {
-                buttonText: L,
+                buttonText: x,
                 applicationName: n.name,
             }),
-            text: L,
+            text: x,
         }),
     });
 }

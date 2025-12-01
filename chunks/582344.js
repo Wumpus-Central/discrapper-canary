@@ -21,7 +21,7 @@ function h() {
             newUserMinAgeRequiredOverridden: c.Z.newUserMinAgeRequiredOverridden,
         })),
         [h, x] = l.useState(""),
-        [g, f] = l.useState(20),
+        [f, g] = l.useState(20),
         b = l.useMemo(
             () =>
                 Object.keys(r.z)
@@ -32,9 +32,9 @@ function h() {
         v = l.useCallback(
             (e) => {
                 let t = e.currentTarget;
-                t.scrollHeight - t.scrollTop <= t.clientHeight + 100 && g < b.length && f((e) => e + 100);
+                t.scrollHeight - t.scrollTop <= t.clientHeight + 100 && f < b.length && g((e) => e + 100);
             },
-            [g, b.length],
+            [f, b.length],
         );
     return (0, a.jsx)(s.h21, {
         onScroll: v,
@@ -82,7 +82,7 @@ function h() {
                             onChange: x,
                             onClear: () => x(""),
                         }),
-                        (0, a.jsx)(d.Z, { items: b.slice(0, g) }),
+                        (0, a.jsx)(d.Z, { items: b.slice(0, f) }),
                     ],
                 }),
             ],

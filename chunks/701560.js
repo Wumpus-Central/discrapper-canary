@@ -9,17 +9,17 @@ var r,
     u = n(755721),
     d = n(481060),
     f = n(239091),
-    _ = n(2052),
-    p = n(594190),
-    h = n(592745),
-    m = n(757266),
+    p = n(2052),
+    _ = n(594190),
+    m = n(592745),
+    h = n(757266),
     g = n(417363),
     E = n(358085),
     b = n(346329),
     y = n(981631),
     O = n(388032),
     v = n(701306);
-function I(e, t, n) {
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +32,7 @@ function I(e, t, n) {
         e
     );
 }
-function T(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,12 +43,12 @@ function T(e) {
                 }),
             )),
             r.forEach(function (t) {
-                I(e, t, n[t]);
+                S(e, t, n[t]);
             });
     }
     return e;
 }
-function S(e, t) {
+function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,7 +65,7 @@ function A(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : T(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -73,7 +73,7 @@ function A(e, t) {
 }
 class C extends (r = a.PureComponent) {
     get analyticsLocation() {
-        return A(T({}, this.props.analyticsContext.location), { object: y.qAy.BUTTON_CTA });
+        return A(I({}, this.props.analyticsContext.location), { object: y.qAy.BUTTON_CTA });
     }
     renderDropdown() {
         let { dispatchState: e } = this.props;
@@ -134,8 +134,8 @@ class C extends (r = a.PureComponent) {
                       E.isPlatformEmbedded ? O.intl.string(O.t.NASLa3) : O.intl.string(O.t.o1bhkD),
                   );
         if (l) return this.renderDisabledButton(O.intl.string(O.t["3elwAB"]));
-        let _ = c ? d.gtL : u.zx;
-        return (0, i.jsxs)(_, {
+        let p = c ? d.gtL : u.zx;
+        return (0, i.jsxs)(p, {
             className: s()(v.playButton, e),
             innerClassName: v.playButtonContents,
             fullWidth: t,
@@ -154,7 +154,7 @@ class C extends (r = a.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            I(this, "handleDropdownClick", (e) => {
+            S(this, "handleDropdownClick", (e) => {
                 e.stopPropagation();
                 let { libraryApplication: t, onDropdownOpen: r, onDropdownClose: a } = this.props;
                 if ((null == r || r(e), null == t)) throw Error("Unexpected missing libraryApplication");
@@ -165,7 +165,7 @@ class C extends (r = a.PureComponent) {
                         return (n) =>
                             (0, i.jsx)(
                                 e,
-                                A(T({}, n), {
+                                A(I({}, n), {
                                     libraryApplication: t,
                                     onPlay: this.handleClick,
                                 }),
@@ -174,7 +174,7 @@ class C extends (r = a.PureComponent) {
                     { onClose: a },
                 );
             }),
-            I(this, "handleClick", () => {
+            S(this, "handleClick", () => {
                 let {
                     applicationId: e,
                     libraryApplication: t,
@@ -193,20 +193,20 @@ class C extends (r = a.PureComponent) {
 }
 function N(e) {
     let { applicationId: t, libraryApplication: n } = e,
-        r = (0, _.O)(),
+        r = (0, p.O)(),
         [a, o] = (0, l.Wu)(
-            [m.Z, h.Z, g.Z],
+            [h.Z, m.Z, g.Z],
             () => [
-                m.Z.isConnected(t) || h.Z.isLaunchable(t) || (null != n && g.Z.isLaunchable(n.id, n.branchId)),
-                h.Z.launchingGames.has(t),
+                h.Z.isConnected(t) || m.Z.isLaunchable(t) || (null != n && g.Z.isLaunchable(n.id, n.branchId)),
+                m.Z.launchingGames.has(t),
             ],
             [t, n],
         ),
-        s = (0, l.e7)([p.ZP], () => new Set(p.ZP.getRunningVerifiedApplicationIds()).has(t), [t]),
+        s = (0, l.e7)([_.ZP], () => new Set(_.ZP.getRunningVerifiedApplicationIds()).has(t), [t]),
         c = (0, l.e7)([g.Z], () => (null != n ? g.Z.getState(n.id, n.branchId) : null), [n]);
     return (0, i.jsx)(
         C,
-        A(T({}, e), {
+        A(I({}, e), {
             analyticsContext: r,
             isLaunchable: a,
             isLaunching: o,
@@ -215,7 +215,7 @@ function N(e) {
         }),
     );
 }
-I(C, "defaultProps", {
+S(C, "defaultProps", {
     fullWidth: !1,
     size: u.zx.Sizes.LARGE,
     tooltipPosition: "top",

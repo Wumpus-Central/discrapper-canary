@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => I });
 var r = n(54381),
     i = n(473749),
     a = n(996146),
@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(963249),
     d = n(109213),
     f = n(909917),
-    _ = n(602733),
-    p = n(51144),
-    h = n(443603),
-    m = n(981631),
+    p = n(602733),
+    _ = n(51144),
+    m = n(443603),
+    h = n(981631),
     g = n(388032),
     E = n(564355);
 function b(e, t, n) {
@@ -67,29 +67,29 @@ function v(e, t) {
         e
     );
 }
-function I(e) {
+function S(e) {
     let { disabled: t, channel: i } = e,
         { analyticsLocations: b } = (0, c.ZP)(l.Z.GIFT_BUTTON),
-        O = (0, p.Ft)(i),
-        { Component: I, events: T, play: S } = (0, a.$)(),
+        O = (0, _.Ft)(i),
+        { Component: S, events: I, play: T } = (0, a.$)(),
         { enabled: A } = d.G.useExperiment({ location: "gift-button" }, { autoTrackExposure: !1 }),
-        C = i.type === m.d4z.DM,
-        N = (0, _.ao)({
+        C = i.type === h.d4z.DM,
+        N = (0, p.ao)({
             location: "gift-button",
             isGift: !0,
             giftRecipient: O,
         });
     if (t) return null;
-    let R = () => {
+    let P = () => {
         N && C && null != O
             ? (0, f.Z)({
                   giftRecipient: O,
                   analyticsLocations: b,
                   analyticsObject: {
-                      page: i.isPrivate() ? m.ZY5.DM_CHANNEL : m.ZY5.GUILD_CHANNEL,
-                      section: m.jXE.CHANNEL_TEXT_AREA,
-                      object: m.qAy.BUTTON_ICON,
-                      objectType: m.AnalyticsObjectTypes.GIFT,
+                      page: i.isPrivate() ? h.ZY5.DM_CHANNEL : h.ZY5.GUILD_CHANNEL,
+                      section: h.jXE.CHANNEL_TEXT_AREA,
+                      object: h.qAy.BUTTON_ICON,
+                      objectType: h.AnalyticsObjectTypes.GIFT,
                   },
               })
             : A && C && null != O
@@ -101,10 +101,10 @@ function I(e) {
                             y(
                                 {
                                     analyticsObject: {
-                                        page: m.ZY5.DM_CHANNEL,
-                                        section: m.jXE.CHANNEL_TEXT_AREA,
-                                        object: m.qAy.BUTTON_ICON,
-                                        objectType: m.AnalyticsObjectTypes.GIFT,
+                                        page: h.ZY5.DM_CHANNEL,
+                                        section: h.jXE.CHANNEL_TEXT_AREA,
+                                        object: h.qAy.BUTTON_ICON,
+                                        objectType: h.AnalyticsObjectTypes.GIFT,
                                     },
                                     analyticsLocations: b,
                                     giftRecipient: O,
@@ -119,17 +119,17 @@ function I(e) {
                     initialPlanId: null,
                     analyticsLocations: b,
                     analyticsObject: {
-                        page: i.isPrivate() ? m.ZY5.DM_CHANNEL : m.ZY5.GUILD_CHANNEL,
-                        section: m.jXE.CHANNEL_TEXT_AREA,
-                        object: m.qAy.BUTTON_ICON,
-                        objectType: m.AnalyticsObjectTypes.GIFT,
+                        page: i.isPrivate() ? h.ZY5.DM_CHANNEL : h.ZY5.GUILD_CHANNEL,
+                        section: h.jXE.CHANNEL_TEXT_AREA,
+                        object: h.qAy.BUTTON_ICON,
+                        objectType: h.AnalyticsObjectTypes.GIFT,
                     },
                 });
     };
     return (0, r.jsx)(o.u, {
         text: g.intl.string(g.t.sWtWDX),
         children: (0, r.jsx)(
-            h.Z,
+            m.Z,
             v(
                 y(
                     {
@@ -138,13 +138,13 @@ function I(e) {
                         "aria-label": g.intl.string(g.t.Z1RnTk),
                         "aria-haspopup": "dialog",
                         onClick: () => {
-                            R(), S();
+                            P(), T();
                         },
                     },
-                    T,
+                    I,
                 ),
                 {
-                    children: (0, r.jsx)(I, {
+                    children: (0, r.jsx)(S, {
                         size: "refresh_sm",
                         color: "currentColor",
                     }),
@@ -153,4 +153,4 @@ function I(e) {
         ),
     });
 }
-let T = i.memo(I);
+let I = i.memo(S);

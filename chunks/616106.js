@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r,
     i = n(913527),
     a = n.n(i),
@@ -21,7 +21,7 @@ function d(e, t, n) {
     );
 }
 let f = !1;
-function _(e) {
+function p(e) {
     let { subscription: t } = e;
     if (null != t) {
         var n;
@@ -31,7 +31,7 @@ function _(e) {
         a()().isBetween(r.clone().add(4, "days"), r.clone().add(11, "days")) && (f = !0);
     }
 }
-class p extends (r = o.ZP.Store) {
+class _ extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(c.default);
     }
@@ -40,5 +40,5 @@ class p extends (r = o.ZP.Store) {
         return !(0, u.I5)(e) && f;
     }
 }
-d(p, "displayName", "SubscriptionRemindersStore");
-let h = new p(s.Z, { BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: _ });
+d(_, "displayName", "SubscriptionRemindersStore");
+let m = new _(s.Z, { BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: p });

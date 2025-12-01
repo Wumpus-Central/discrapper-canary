@@ -10,12 +10,12 @@ var i = n(120356),
     u = n(944486),
     d = n(471253),
     f = n(623633),
-    _ = n(930180),
-    p = n(430104),
-    h = n(388032),
-    m = n(250043);
+    p = n(930180),
+    _ = n(430104),
+    m = n(388032),
+    h = n(250043);
 function g(e) {
-    if (!e && (0, p.u1)())
+    if (!e && (0, _.u1)())
         return void s.Z.showAgeVerificationGetStartedModal({ entryPoint: l.cU.STAGE_CHANNEL_RAISE_HAND });
     let t = u.Z.getVoiceChannelId();
     if (null == t) return;
@@ -25,30 +25,30 @@ function g(e) {
 function E(e) {
     var t, n;
     let { channelId: i } = e,
-        o = null != (t = (0, _._d)(i)) ? t : 0,
-        s = null != (n = (0, _.K3)(i)) ? n : 0;
+        o = null != (t = (0, p._d)(i)) ? t : 0,
+        s = null != (n = (0, p.K3)(i)) ? n : 0;
     return o > 0 && s > 0
         ? (0, r.jsx)("div", {
-              className: m.blocked,
+              className: h.blocked,
               children: (0, r.jsx)("div", {
-                  className: a()(m.blockedText, m.noIcon),
-                  children: h.intl.string(h.t.xlJRfv),
+                  className: a()(h.blockedText, h.noIcon),
+                  children: m.intl.string(m.t.xlJRfv),
               }),
           })
         : o > 0
           ? (0, r.jsx)("div", {
-                className: m.blocked,
+                className: h.blocked,
                 children: (0, r.jsx)("div", {
-                    className: a()(m.blockedText, m.noIcon),
-                    children: h.intl.string(h.t.WYad9Z),
+                    className: a()(h.blockedText, h.noIcon),
+                    children: m.intl.string(m.t.WYad9Z),
                 }),
             })
           : s > 0
             ? (0, r.jsx)("div", {
-                  className: m.blocked,
+                  className: h.blocked,
                   children: (0, r.jsx)("div", {
-                      className: a()(m.blockedText, m.noIcon),
-                      children: h.intl.string(h.t.eHq2OF),
+                      className: a()(h.blockedText, h.noIcon),
+                      children: m.intl.string(m.t.eHq2OF),
                   }),
               })
             : null;
@@ -58,24 +58,24 @@ function b() {
     return null == e
         ? null
         : (0, r.jsxs)(o.qXd, {
-              className: m.container,
+              className: h.container,
               color: o.DM8.DEFAULT,
               children: [
-                  h.intl.string(h.t.Ul1RJQ),
+                  m.intl.string(m.t.Ul1RJQ),
                   (0, r.jsx)(E, { channelId: e.id }),
                   (0, r.jsxs)(o.ButtonGroup, {
                       size: "sm",
-                      className: m.buttonGroup,
+                      className: h.buttonGroup,
                       children: [
                           (0, r.jsx)(o.Button, {
                               variant: "overlay-primary",
-                              text: h.intl.string(h.t.MpO0px),
+                              text: m.intl.string(m.t.MpO0px),
                               onClick: () => g(!1),
                           }),
                           (0, r.jsx)(o.Button, {
                               variant: "secondary",
                               onClick: () => g(!0),
-                              text: h.intl.string(h.t["1YDv7a"]),
+                              text: m.intl.string(m.t["1YDv7a"]),
                           }),
                       ],
                   }),

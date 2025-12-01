@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,22 +48,22 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -71,7 +71,7 @@ function h(e, t) {
     }
     return i;
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -171,14 +171,14 @@ let g = [
                 name: "Select",
                 component: function (e) {
                     var { selectionMode: t, withLeadingAndTrailing: n } = e,
-                        a = h(e, ["selectionMode", "withLeadingAndTrailing"]);
+                        a = m(e, ["selectionMode", "withLeadingAndTrailing"]);
                     let [o, s] = i.useState(null),
                         [l, u] = i.useState([]),
                         d = y(n, a.asyncOptions);
                     return "single" === t
                         ? (0, r.jsx)(
                               c.P,
-                              p(f({}, a), {
+                              _(f({}, a), {
                                   selectionMode: t,
                                   options: d,
                                   onSelectionChange: s,
@@ -187,7 +187,7 @@ let g = [
                           )
                         : (0, r.jsx)(
                               c.P,
-                              p(f({}, a), {
+                              _(f({}, a), {
                                   selectionMode: t,
                                   options: d,
                                   onSelectionChange: u,
@@ -322,27 +322,27 @@ let g = [
                 name: "SearchableSelect",
                 component: function (e) {
                     var { selectionMode: t, withLeadingAndTrailing: n, asyncOptions: a } = e,
-                        o = h(e, ["selectionMode", "withLeadingAndTrailing", "asyncOptions"]);
+                        o = m(e, ["selectionMode", "withLeadingAndTrailing", "asyncOptions"]);
                     let [s, c] = i.useState(null),
                         [u, d] = i.useState([]),
-                        _ = y(n, a);
+                        p = y(n, a);
                     return "single" === t
                         ? (0, r.jsx)(
                               l.V,
-                              p(f({}, o), {
+                              _(f({}, o), {
                                   selectionMode: t,
                                   onSelectionChange: c,
                                   value: s,
-                                  options: _,
+                                  options: p,
                               }),
                           )
                         : (0, r.jsx)(
                               l.V,
-                              p(f({}, o), {
+                              _(f({}, o), {
                                   selectionMode: t,
                                   onSelectionChange: d,
                                   value: u,
-                                  options: _,
+                                  options: p,
                               }),
                           );
                 },
@@ -458,10 +458,10 @@ let g = [
                             errorMessage: c,
                             successMessage: u,
                             wrapTags: d,
-                            withLeadingAndTrailing: _,
-                            placeholder: m,
+                            withLeadingAndTrailing: p,
+                            placeholder: h,
                         } = e,
-                        g = h(e, [
+                        g = m(e, [
                             "selectionMode",
                             "label",
                             "hideLabel",
@@ -474,15 +474,15 @@ let g = [
                             "placeholder",
                         ]);
                     let { required: E, disabled: b } = g,
-                        O = y(_, g.asyncOptions),
-                        [v, I] = i.useState(null);
+                        O = y(p, g.asyncOptions),
+                        [v, S] = i.useState(null);
                     return (0, r.jsxs)(
                         s.uz,
-                        p(
+                        _(
                             f(
                                 {
                                     selectionMode: t,
-                                    onSelectionChange: I,
+                                    onSelectionChange: S,
                                     options: O,
                                     value: v,
                                 },
@@ -493,7 +493,7 @@ let g = [
                                     (0, r.jsx)(s.Ct, {
                                         label: n,
                                         hideLabel: a,
-                                        placeholder: m,
+                                        placeholder: h,
                                         required: E,
                                         disabled: b,
                                         description: o,

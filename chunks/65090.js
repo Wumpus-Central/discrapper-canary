@@ -1,7 +1,7 @@
 n.d(t, {
-    BL: () => _,
+    BL: () => p,
     ZP: () => E,
-    m1: () => p,
+    m1: () => _,
 }),
     n(953529);
 var r = n(54381),
@@ -14,18 +14,18 @@ var r = n(54381),
     u = n(590921),
     d = n(761652),
     f = n(388032);
-function _(e, t, n) {
+function p(e, t, n) {
     return s.ZP.hasSameRoleAsUsername(t, e)
         ? "".concat(d.ME).concat(e.tag)
         : "".concat(d.ME).concat(l.ZP.getUserTag(e, { identifiable: n ? "never" : "always" }));
 }
-function p(e) {
+function _(e) {
     return "<@".concat(e.id, ">");
 }
-function h(e) {
+function m(e) {
     return e.text;
 }
-function m(e) {
+function h(e) {
     return "".concat(d.ME).concat(e.name);
 }
 function g(e) {
@@ -63,10 +63,10 @@ let E = {
             n,
             {
                 results: { users: o, globals: s, roles: l },
-                selectedIndex: _,
-                channel: p,
-                query: h,
-                options: m,
+                selectedIndex: p,
+                channel: _,
+                query: m,
+                options: h,
                 onHover: g,
                 onClick: E,
             } = e,
@@ -74,15 +74,15 @@ let E = {
                 (0, r.jsx)(
                     a.ZP.User,
                     {
-                        guildId: p.guild_id,
+                        guildId: _.guild_id,
                         onClick: E,
                         onHover: g,
-                        selected: _ === t,
+                        selected: p === t,
                         index: t,
                         user: e.user,
                         nick: e.nick,
                         status: e.status,
-                        hidePersonalInformation: m.hidePersonalInformation,
+                        hidePersonalInformation: h.hidePersonalInformation,
                     },
                     e.user.id,
                 ),
@@ -93,10 +93,10 @@ let E = {
                     {
                         onClick: E,
                         onHover: g,
-                        selected: _ === t + o.length,
+                        selected: p === t + o.length,
                         index: o.length + t,
                         text: e.text,
-                        description: m.hideMentionDescription ? null : e.description,
+                        description: h.hideMentionDescription ? null : e.description,
                         "aria-label": e.text,
                         badge: "@game" === e.text ? "new" : void 0,
                     },
@@ -109,17 +109,17 @@ let E = {
                     {
                         onClick: E,
                         onHover: g,
-                        selected: _ === t + o.length + s.length,
+                        selected: p === t + o.length + s.length,
                         index: o.length + s.length + t,
                         role: e,
-                        hideDescription: m.hideMentionDescription,
-                        guildId: p.guild_id,
+                        hideDescription: h.hideMentionDescription,
+                        guildId: _.guild_id,
                     },
                     e.id,
                 ),
             );
         return (
-            m.mentions.user === u.h3.DENY
+            h.mentions.user === u.h3.DENY
                 ? ((t = f.t.MLiD1e), (n = f.intl.string(f.t["LPJmL/"])))
                 : ((t = f.t.rPNimn), (n = f.intl.string(f.t["9Oq93m"]))),
             (0, r.jsxs)(
@@ -129,7 +129,7 @@ let E = {
                         (0, c.gm)({
                             titleWithQuery: t,
                             titleWithoutQuery: n,
-                            query: h,
+                            query: m,
                             getQuery: (e) => "".concat(d.ME).concat(e),
                         }),
                         b,
@@ -158,12 +158,12 @@ let E = {
             d = !1;
         return (
             null != s
-                ? a.insertText(_(s.user, o, a.hidePersonalInformation), p(s.user))
+                ? a.insertText(p(s.user, o, a.hidePersonalInformation), _(s.user))
                 : null != l
                   ? null != l.inlineAutocompleteType
                       ? (a.insertAutocompleteInput(l.inlineAutocompleteType), (d = !0))
-                      : a.insertText(h(l))
-                  : null != c && a.insertText(m(c), g(c)),
+                      : a.insertText(m(l))
+                  : null != c && a.insertText(h(c), g(c)),
             { type: d ? u.z2.GAME_MENTION : u.z2.MENTION }
         );
     },

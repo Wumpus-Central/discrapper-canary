@@ -35,7 +35,7 @@ function f(e) {
                 title: p.intl.string(p.t["dAfGb+"]),
                 buttonText: p.intl.string(p.t["uJWIj/"]),
                 onButtonClick: v,
-                image: (0, r.jsx)(l.Om, { alt: p.intl.string(p.t["dAfGb+"]) }),
+                image: (0, r.jsx)(l.dQ, { alt: p.intl.string(p.t["dAfGb+"]) }),
             })
           : null != x
             ? (0, r.jsx)(c.Z, {

@@ -21,38 +21,38 @@ function c(e, t, n) {
 let u = 50,
     d = {},
     f = {},
-    _ = {};
-function p() {
+    p = {};
+function _() {
     let e = s.Z.getChannelId();
     if (null == e) return;
     let t = o.Z.getChannel(e);
     if (null == t || null == t.guild_id) return;
     let n = t.guild_id;
     if (
-        (null == _[e] && (_[e] = 0),
+        (null == p[e] && (p[e] = 0),
         t.isThread() || (l.ZP.isOptInEnabled(n) && !l.ZP.isChannelOrParentOptedIn(n, t.id)))
     ) {
-        delete _[e], null != d[n] && d[n].delete(e);
+        delete p[e], null != d[n] && d[n].delete(e);
         return;
     }
-    return (_[e]++, null == d[n] && (d[n] = new Set()), l.ZP.isFavorite(n, e))
+    return (p[e]++, null == d[n] && (d[n] = new Set()), l.ZP.isFavorite(n, e))
         ? void d[n].delete(e)
-        : (null == f[n] || !f[n].has(e)) && _[e] > u
+        : (null == f[n] || !f[n].has(e)) && p[e] > u
           ? (d[n].add(e), !0)
           : void 0;
 }
-function h(e) {
+function m(e) {
     let { guildId: t, channelId: n } = e;
     return null == f[t] && (f[t] = new Set()), f[t].add(n), d[t].delete(n), !0;
 }
-class m extends (r = i.ZP.PersistedStore) {
+class h extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         var t, n;
-        if ((this.waitFor(o.Z, s.Z, l.ZP), this.syncWith([s.Z], p), null == e)) return;
+        if ((this.waitFor(o.Z, s.Z, l.ZP), this.syncWith([s.Z], _), null == e)) return;
         let { suggestedChannels: r, dismissedSuggestions: i, channelOpensByChannelId: a } = e;
         if (null != r) for (let e in r) (t = new Set(r[e])), (d[e] = void 0 !== t ? t : new Set());
         if (null != i) for (let e in i) (n = new Set(i[e])), (f[e] = void 0 !== n ? n : new Set());
-        _ = null != a ? a : {};
+        p = null != a ? a : {};
     }
     getSuggestedChannelId(e) {
         return null;
@@ -65,5 +65,5 @@ class m extends (r = i.ZP.PersistedStore) {
         };
     }
 }
-c(m, "displayName", "FavoritesSuggestionStore"), c(m, "persistKey", "FavoritesSuggestionStore");
-let g = new m(a.Z, { DISMISS_FAVORITE_SUGGESTION: h });
+c(h, "displayName", "FavoritesSuggestionStore"), c(h, "persistKey", "FavoritesSuggestionStore");
+let g = new h(a.Z, { DISMISS_FAVORITE_SUGGESTION: m });

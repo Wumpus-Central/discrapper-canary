@@ -51,34 +51,34 @@ function u() {
         u = (0, i.e7)([s.ZP], () => s.ZP.getFlattenedGuildIds()),
         d = (0, i.e7)([o.Z], () => o.Z.getGuilds()),
         f = u.map((e) => d[e]),
-        _ = a.CW.useSetting(),
-        [p, h] = (0, r.useState)(_),
-        m = async (e) => {
-            h(e);
+        p = a.CW.useSetting(),
+        [_, m] = (0, r.useState)(p),
+        h = async (e) => {
+            m(e);
             try {
                 await a.CW.updateSetting(e);
             } catch (e) {
-                h(_);
+                m(p);
             }
         },
         g = (e) => {
             let { checked: t, guildId: n } = e,
-                r = new Set(p);
-            t ? r.delete(n) : r.add(n), m([...r]);
+                r = new Set(_);
+            t ? r.delete(n) : r.add(n), h([...r]);
         },
-        E = (e) => p.includes(e),
-        b = 0 !== p.length,
+        E = (e) => _.includes(e),
+        b = 0 !== _.length,
         y = () => {
-            b ? m([]) : m(u);
+            b ? h([]) : h(u);
         },
-        [O, v] = (0, r.useState)(() => c[n](f, _)),
-        I = O.map((e) => d[e.id]).filter(Boolean);
+        [O, v] = (0, r.useState)(() => c[n](f, p)),
+        S = O.map((e) => d[e.id]).filter(Boolean);
     return {
-        guilds: "" === e ? I : I.filter((t) => t.name.toLowerCase().includes(e.toLowerCase())),
+        guilds: "" === e ? S : S.filter((t) => t.name.toLowerCase().includes(e.toLowerCase())),
         sortOrder: n,
         searchQuery: e,
         setSortOrder: (e) => {
-            v(c[e](f, _)), l(e);
+            v(c[e](f, p)), l(e);
         },
         setSearchQuery: t,
         onToggleActivityRestrictedGuild: g,
@@ -86,6 +86,6 @@ function u() {
         hasActivityRestrictedGuilds: b,
         onToggleAllActivityRestrictedGuilds: y,
         numTotalGuilds: u.length,
-        numActivityRestrictedGuilds: p.length,
+        numActivityRestrictedGuilds: _.length,
     };
 }

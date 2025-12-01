@@ -3,8 +3,8 @@ var r = n(54381),
     l = n(473749),
     i = n(120356),
     a = n.n(i),
-    s = n(497598),
-    o = n(792091),
+    o = n(497598),
+    s = n(792091),
     c = n(481060),
     u = n(626135),
     d = n(381585),
@@ -20,16 +20,16 @@ let b = () => {
         i = (0, d.sp)(),
         b = (0, g.B)("CollectiblesSortSelect"),
         v = n(),
-        x = l.useMemo(() => p.aP.filter((e) => e.sortType !== o.E.RELEVANCE || v), [v]),
+        x = l.useMemo(() => p.aP.filter((e) => e.sortType !== s.E.RELEVANCE || v), [v]),
         E = l.useCallback((e) => {
             let { sortType: t, sortDirection: n } = e;
-            return t === o.E.RECENCY
+            return t === s.E.RECENCY
                 ? {
                       label: h.intl.string(h.t["51Bhiz"]),
                       value: "recent",
                   }
-                : t === o.E.PRICE
-                  ? n === s.F.ASC
+                : t === s.E.PRICE
+                  ? n === o.F.ASC
                       ? {
                             label: h.intl.string(h.t.m8RVU2),
                             value: "price-asc",
@@ -38,7 +38,7 @@ let b = () => {
                             label: h.intl.string(h.t.zBwQJO),
                             value: "price-desc",
                         }
-                  : t === o.E.RELEVANCE
+                  : t === s.E.RELEVANCE
                     ? {
                           label: h.intl.string(h.t["XoeT/z"]),
                           value: "relevance",
@@ -52,24 +52,24 @@ let b = () => {
             (e) =>
                 ({
                     recent: {
-                        sortType: o.E.RECENCY,
-                        sortDirection: s.F.DESC,
+                        sortType: s.E.RECENCY,
+                        sortDirection: o.F.DESC,
                     },
                     "price-asc": {
-                        sortType: o.E.PRICE,
-                        sortDirection: s.F.ASC,
+                        sortType: s.E.PRICE,
+                        sortDirection: o.F.ASC,
                     },
                     "price-desc": {
-                        sortType: o.E.PRICE,
-                        sortDirection: s.F.DESC,
+                        sortType: s.E.PRICE,
+                        sortDirection: o.F.DESC,
                     },
                     popularity: {
-                        sortType: o.E.POPULARITY,
-                        sortDirection: s.F.DESC,
+                        sortType: s.E.POPULARITY,
+                        sortDirection: o.F.DESC,
                     },
                     relevance: {
-                        sortType: o.E.RELEVANCE,
-                        sortDirection: s.F.DESC,
+                        sortType: s.E.RELEVANCE,
+                        sortDirection: o.F.DESC,
                     },
                 })[e],
             [],

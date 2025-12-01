@@ -1,8 +1,8 @@
 n.d(t, {
-    L9: () => D,
-    ZK: () => P,
-    d4: () => R,
-    dS: () => S,
+    L9: () => w,
+    ZK: () => R,
+    d4: () => P,
+    dS: () => T,
     jY: () => N,
     q7: () => C,
     vZ: () => A,
@@ -19,10 +19,10 @@ var r = n(54381),
     u = n(543651),
     d = n(177751),
     f = n(519320),
-    _ = n(592125),
-    p = n(52824),
-    h = n(591759),
-    m = n(850908),
+    p = n(592125),
+    _ = n(52824),
+    m = n(591759),
+    h = n(850908),
     g = n(524444),
     E = n(981631),
     b = n(388032),
@@ -56,7 +56,7 @@ function v(e) {
     }
     return e;
 }
-function I(e, t) {
+function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -68,24 +68,24 @@ function I(e, t) {
     }
     return n;
 }
-function T(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : I(Object(t)).forEach(function (n) {
+            : S(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function S(e) {
+function T(e) {
     var t;
     let n = e.item.originalItem;
     return (0, g.Yi)(
-        T(v({}, e), {
+        I(v({}, e), {
             alt: n.description,
-            src: (0, p.q)({
+            src: (0, _.q)({
                 proxyURL: n.proxy_url,
                 url: n.url,
             }),
@@ -134,16 +134,16 @@ function A(e) {
                   })
                 : null;
         }, [n]),
-        u = h.Z.toURLSafe(n.proxy_url);
+        u = m.Z.toURLSafe(n.proxy_url);
     return null == u
         ? null
         : (u.searchParams.append("format", "webp"),
           (0, g.lV)(
-              T(v({}, e), {
+              I(v({}, e), {
                   alt: n.description,
                   poster: u.toString(),
                   fileSize: n.size,
-                  fileName: (0, m.Z)(n),
+                  fileName: (0, h.Z)(n),
                   src: n.url,
                   placeholder: n.placeholder,
                   placeholderVersion: n.placeholder_version,
@@ -164,9 +164,9 @@ function A(e) {
 function C(e) {
     let t = e.item.originalItem;
     return (0, g.hX)(
-        T(v({}, e), {
+        I(v({}, e), {
             fileSize: t.size,
-            fileName: (0, m.Z)(t),
+            fileName: (0, h.Z)(t),
             src: t.url,
         }),
     );
@@ -197,9 +197,9 @@ function N(e) {
             [t],
         );
     return (0, g.wj)(
-        T(v({}, e), {
+        I(v({}, e), {
             fileSize: r.size,
-            fileName: (0, m.Z)(r),
+            fileName: (0, h.Z)(r),
             src: r.url,
             durationSecs: r.duration_secs,
             waveform: r.waveform,
@@ -210,42 +210,42 @@ function N(e) {
         }),
     );
 }
-function R(e) {
+function P(e) {
     let t = e.item.originalItem;
     return (0, g.xi)(
-        T(v({}, e), {
+        I(v({}, e), {
             url: t.url,
-            fileName: (0, m.Z)(t),
+            fileName: (0, h.Z)(t),
             fileSize: t.size,
             contentType: t.content_type,
         }),
     );
 }
-function P(e) {
+function R(e) {
     let t = e.item.originalItem;
     return (0, g.ur)(
-        T(v({}, e), {
+        I(v({}, e), {
             url: t.url,
-            fileName: (0, m.Z)(t),
+            fileName: (0, h.Z)(t),
             fileSize: t.size,
         }),
     );
 }
-function D(e) {
+function w(e) {
     return "CLIP" === e.item.type
-        ? (0, r.jsx)(w, {
+        ? (0, r.jsx)(D, {
               attachment: e.item.originalItem,
               message: e.message,
           })
         : null;
 }
-function w(e) {
+function D(e) {
     var t;
     let { attachment: n, message: i } = e,
         a = i.channel_id,
-        s = (0, o.e7)([_.Z], () => {
+        s = (0, o.e7)([p.Z], () => {
             var e;
-            return null == (e = _.Z.getBasicChannel(a)) ? void 0 : e.guild_id;
+            return null == (e = p.Z.getBasicChannel(a)) ? void 0 : e.guild_id;
         }),
         { clip_created_at: l, clip_participants: c, title: d, application: f } = n;
     return (0, r.jsx)(u.Z, {

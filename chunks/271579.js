@@ -1,7 +1,7 @@
 n.d(t, {
     WS: () => f,
-    ZP: () => p,
-    zS: () => _,
+    ZP: () => _,
+    zS: () => p,
 }),
     n(413496),
     n(433524),
@@ -51,7 +51,7 @@ function d() {
 function f() {
     return (0, a.Z)();
 }
-function _(e) {
+function p(e) {
     if (!e.startsWith(c)) return null;
     try {
         let t = new URL(e).searchParams,
@@ -67,7 +67,7 @@ function _(e) {
         return null;
     }
 }
-function p(e, t) {
+function _(e, t) {
     let { utmSource: n, androidFallbackLink: r, iosFallbackLink: i } = t,
         a = s(t, ["utmSource", "androidFallbackLink", "iosFallbackLink"]),
         l = new URL(e);
@@ -76,18 +76,18 @@ function p(e, t) {
         null != t && l.searchParams.set(e, t);
     }
     let f = encodeURIComponent(l.toString()),
-        _ = encodeURIComponent("discord://app/open#".concat(l.toString())),
-        p = encodeURIComponent((0, o.Z)()),
-        h = d() ? "true" : "false",
-        m = null != r ? encodeURIComponent(r) : null,
+        p = encodeURIComponent("discord://app/open#".concat(l.toString())),
+        _ = encodeURIComponent((0, o.Z)()),
+        m = d() ? "true" : "false",
+        h = null != r ? encodeURIComponent(r) : null,
         g = null != i ? encodeURIComponent(i) : null,
         E = ""
             .concat(c, "/")
             .concat(u, "/?deep_link_value=")
             .concat(f, "&pid=")
             .concat(n, "&af_force_deeplink=")
-            .concat(h, "&af_og_description=")
-            .concat(p, "&af_dp=")
-            .concat(_);
-    return null != m && (E += "&af_android_url=".concat(m)), null != g && (E += "&af_ios_url=".concat(g)), E;
+            .concat(m, "&af_og_description=")
+            .concat(_, "&af_dp=")
+            .concat(p);
+    return null != h && (E += "&af_android_url=".concat(h)), null != g && (E += "&af_ios_url=".concat(g)), E;
 }

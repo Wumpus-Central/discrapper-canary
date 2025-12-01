@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381);
 n(473749);
 var i = n(159691),
@@ -61,7 +61,7 @@ function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -69,7 +69,7 @@ function f(e, t) {
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,16 +78,16 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let p = (e) => {
+let _ = (e) => {
     var {
             subscriptionTier: t,
             premiumModalAnalyticsLocation: n,
             giftMessage: l,
             onClick: u,
-            buttonTextOverride: _,
+            buttonTextOverride: p,
         } = e,
-        p = f(e, ["subscriptionTier", "premiumModalAnalyticsLocation", "giftMessage", "onClick", "buttonTextOverride"]);
-    let h = {
+        _ = f(e, ["subscriptionTier", "premiumModalAnalyticsLocation", "giftMessage", "onClick", "buttonTextOverride"]);
+    let m = {
         subscriptionTier: t,
         premiumModalAnalyticsLocation: n,
         giftMessage: l,
@@ -95,10 +95,10 @@ let p = (e) => {
     };
     return (0, r.jsx)(
         s.Z,
-        d(c({ isGift: !0 }, h), {
+        d(c({ isGift: !0 }, m), {
             children: (e) => {
                 let { onClick: n } = e,
-                    s = null != _ ? _ : (0, o.L)(t);
+                    s = null != p ? p : (0, o.L)(t);
                 return (0, r.jsx)(
                     i.zxk,
                     d(
@@ -107,7 +107,7 @@ let p = (e) => {
                                 onClick: n,
                                 icon: a.OgN,
                             },
-                            p,
+                            _,
                         ),
                         { text: s },
                     ),

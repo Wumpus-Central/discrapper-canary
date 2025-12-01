@@ -21,15 +21,15 @@ let c = 75000,
     u = 10,
     d = 5000,
     f = 2,
-    _ = 2000,
-    p = 10000;
-function h(e) {
+    p = 2000,
+    _ = 10000;
+function m(e) {
     var t;
     return (null != (t = a.Z.getMemberCount(e)) ? t : 0) >= c ? u : f;
 }
-function m(e) {
+function h(e) {
     var t;
-    return (null != (t = a.Z.getMemberCount(e)) ? t : 0) >= c ? d : _;
+    return (null != (t = a.Z.getMemberCount(e)) ? t : 0) >= c ? d : p;
 }
 let g = {},
     E = {},
@@ -38,12 +38,12 @@ function y() {
     null == b &&
         (b = setInterval(() => {
             o.default.forEachKey(g, (e) => {
-                I(e) && v(e);
+                S(e) && v(e);
             });
-        }, p));
+        }, _));
 }
 async function O(e, t) {
-    null == g[e] && (g[e] = new Set()), g[e].add(t), null == E[e] && (E[e] = Date.now()), I(e) && (await v(e));
+    null == g[e] && (g[e] = new Set()), g[e].add(t), null == E[e] && (E[e] = Date.now()), S(e) && (await v(e));
 }
 function v(e) {
     if (null == g[e]) return;
@@ -58,20 +58,20 @@ function v(e) {
             });
         });
 }
-function I(e) {
+function S(e) {
     let t = g[e];
     if (null == t) return !1;
-    let n = t.size >= h(e),
+    let n = t.size >= m(e),
         r = E[e];
     if (n) return !0;
     if (null == r) return !1;
     let i = Date.now() - r;
-    return null != r && i >= m(e);
+    return null != r && i >= h(e);
 }
-function T(e) {
+function I(e) {
     (g[e] = new Set()), (E[e] = null);
 }
-class S extends i.Z {
+class T extends i.Z {
     handleInitialize() {
         null == b && y();
     }
@@ -83,11 +83,11 @@ class S extends i.Z {
     }
     handleGuildDelete(e) {
         let t = e.guild.id;
-        s.Z.isInitialized(t) && T(t);
+        s.Z.isInitialized(t) && I(t);
     }
     handleGuildMemberSearchSuccess(e) {
         let { guildId: t } = e;
-        s.Z.isInitialized(t) && T(t);
+        s.Z.isInitialized(t) && I(t);
     }
     constructor(...e) {
         super(...e),
@@ -100,4 +100,4 @@ class S extends i.Z {
             });
     }
 }
-let A = new S();
+let A = new T();

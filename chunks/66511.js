@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(54381);
 n(473749);
 var i = n(952265),
@@ -48,7 +48,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,19 +59,19 @@ function _(e, t) {
         e
     );
 }
-let p = () => {
+let _ = () => {
         a.default.track(c.rMx.MODAL_DISMISSED, { type: l.N4 });
     },
-    h = (e) => {
+    m = (e) => {
         a.default.track(c.rMx.OPEN_MODAL, {
             type: l.N4,
             guild_id: e,
         });
     },
-    m = {
+    h = {
         openMemberVerificationModal(e, t, a) {
             if (__OVERLAY__) return;
-            h(e);
+            m(e);
             let c = async (t) => {
                 await o.ZP.submitVerificationForm(e, t);
             };
@@ -81,7 +81,7 @@ let p = () => {
                     return (n) =>
                         (0, r.jsx)(
                             t,
-                            _(d({}, n), {
+                            p(d({}, n), {
                                 guildId: e,
                                 inviteKey: a,
                                 onComplete: c,
@@ -89,7 +89,7 @@ let p = () => {
                                     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                                     if (!e)
                                         if (s.rb.getState().hasUnsubmittedChanges) return void (0, s.PE)(!0);
-                                        else p();
+                                        else _();
                                     await n.onClose();
                                 },
                             }),
@@ -98,7 +98,7 @@ let p = () => {
                 {
                     modalKey: l.Pn,
                     onCloseRequest: () => {
-                        p(), s.rb.getState().hasUnsubmittedChanges ? (0, s.PE)(!0) : (0, i.Mr)(l.Pn);
+                        _(), s.rb.getState().hasUnsubmittedChanges ? (0, s.PE)(!0) : (0, i.Mr)(l.Pn);
                     },
                     onCloseCallback: t,
                 },
@@ -106,7 +106,7 @@ let p = () => {
         },
         closeMemberVerificationModal() {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-            e || p(), (0, i.Mr)(l.Pn);
+            e || _(), (0, i.Mr)(l.Pn);
         },
         openMemberVerificationPreviewModal(e) {
             (0, i.ZD)(async () => {
@@ -114,7 +114,7 @@ let p = () => {
                 return (n) =>
                     (0, r.jsx)(
                         t,
-                        _(d({}, n), {
+                        p(d({}, n), {
                             guildId: e,
                             isPreview: !0,
                         }),

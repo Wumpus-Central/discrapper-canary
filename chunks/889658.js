@@ -49,21 +49,21 @@ class i {
         return this.range;
     }
     parseRange(e) {
-        let t = ((this.options.includePrerelease && h) | (this.options.loose && m)) + ":" + e,
+        let t = ((this.options.includePrerelease && m) | (this.options.loose && h)) + ":" + e,
             n = a.get(t);
         if (n) return n;
         let r = this.options.loose,
             i = r ? u[d.HYPHENRANGELOOSE] : u[d.HYPHENRANGE];
-        l("hyphen replace", (e = e.replace(i, P(this.options.includePrerelease)))),
+        l("hyphen replace", (e = e.replace(i, R(this.options.includePrerelease)))),
             l("comparator trim", (e = e.replace(u[d.COMPARATORTRIM], f))),
-            l("tilde trim", (e = e.replace(u[d.TILDETRIM], _))),
-            l("caret trim", (e = e.replace(u[d.CARETTRIM], p)));
+            l("tilde trim", (e = e.replace(u[d.TILDETRIM], p))),
+            l("caret trim", (e = e.replace(u[d.CARETTRIM], _)));
         let o = e
             .split(" ")
             .map((e) => y(e, this.options))
             .join(" ")
             .split(/\s+/)
-            .map((e) => R(e, this.options));
+            .map((e) => P(e, this.options));
         r && (o = o.filter((e) => (l("loose invalid filter", e, this.options), !!e.match(u[d.COMPARATORLOOSE])))),
             l("range list", o);
         let c = new Map();
@@ -89,7 +89,7 @@ class i {
             } catch (e) {
                 return !1;
             }
-        for (let t = 0; t < this.set.length; t++) if (D(this.set[t], e, this.options)) return !0;
+        for (let t = 0; t < this.set.length; t++) if (w(this.set[t], e, this.options)) return !0;
         return !1;
     }
 }
@@ -99,8 +99,8 @@ let a = new (n(147567))(),
     s = n(721919),
     l = n(13556),
     c = n(40231),
-    { safeRe: u, t: d, comparatorTrimReplace: f, tildeTrimReplace: _, caretTrimReplace: p } = n(646664),
-    { FLAG_INCLUDE_PRERELEASE: h, FLAG_LOOSE: m } = n(942177),
+    { safeRe: u, t: d, comparatorTrimReplace: f, tildeTrimReplace: p, caretTrimReplace: _ } = n(646664),
+    { FLAG_INCLUDE_PRERELEASE: m, FLAG_LOOSE: h } = n(942177),
     g = (e) => "<0.0.0-0" === e.value,
     E = (e) => "" === e.value,
     b = (e, t) => {
@@ -112,7 +112,7 @@ let a = new (n(147567))(),
     },
     y = (e, t) => (
         l("comp", e, t),
-        l("caret", (e = T(e, t))),
+        l("caret", (e = I(e, t))),
         l("tildes", (e = v(e, t))),
         l("xrange", (e = A(e, t))),
         l("stars", (e = N(e, t))),
@@ -123,9 +123,9 @@ let a = new (n(147567))(),
         e
             .trim()
             .split(/\s+/)
-            .map((e) => I(e, t))
+            .map((e) => S(e, t))
             .join(" "),
-    I = (e, t) => {
+    S = (e, t) => {
         let n = t.loose ? u[d.TILDELOOSE] : u[d.TILDE];
         return e.replace(n, (t, n, r, i, a) => {
             let o;
@@ -145,13 +145,13 @@ let a = new (n(147567))(),
             );
         });
     },
-    T = (e, t) =>
+    I = (e, t) =>
         e
             .trim()
             .split(/\s+/)
-            .map((e) => S(e, t))
+            .map((e) => T(e, t))
             .join(" "),
-    S = (e, t) => {
+    T = (e, t) => {
         l("caret", e, t);
         let n = t.loose ? u[d.CARETLOOSE] : u[d.CARET],
             r = t.includePrerelease ? "-0" : "";
@@ -226,8 +226,8 @@ let a = new (n(147567))(),
         });
     },
     N = (e, t) => (l("replaceStars", e, t), e.trim().replace(u[d.STAR], "")),
-    R = (e, t) => (l("replaceGTE0", e, t), e.trim().replace(u[t.includePrerelease ? d.GTE0PRE : d.GTE0], "")),
-    P = (e) => (t, n, r, i, a, o, s, l, c, u, d, f) => (
+    P = (e, t) => (l("replaceGTE0", e, t), e.trim().replace(u[t.includePrerelease ? d.GTE0PRE : d.GTE0], "")),
+    R = (e) => (t, n, r, i, a, o, s, l, c, u, d, f) => (
         (n = O(r)
             ? ""
             : O(i)
@@ -250,7 +250,7 @@ let a = new (n(147567))(),
                     : `<=${l}`),
         `${n} ${l}`.trim()
     ),
-    D = (e, t, n) => {
+    w = (e, t, n) => {
         for (let n = 0; n < e.length; n++) if (!e[n].test(t)) return !1;
         if (t.prerelease.length && !n.includePrerelease) {
             for (let n = 0; n < e.length; n++)

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => D });
 var r = n(54381),
     i = n(473749),
     a = n(442837),
@@ -9,19 +9,19 @@ var r = n(54381),
     u = n(231428),
     d = n(390954),
     f = n(89057),
-    _ = n(921801),
-    p = n(246946),
-    h = n(594174),
-    m = n(351402),
+    p = n(921801),
+    _ = n(246946),
+    m = n(594174),
+    h = n(351402),
     g = n(853872),
     E = n(78839),
     b = n(706454),
     y = n(313789),
     O = n(518596),
     v = n(726985),
-    I = n(981631),
-    T = n(388032),
-    S = n(61365);
+    S = n(981631),
+    I = n(388032),
+    T = n(61365);
 function A(e, t, n) {
     return (
         t in e
@@ -55,7 +55,7 @@ function N(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = R(e, t);
+        i = P(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -63,7 +63,7 @@ function N(e, t) {
     }
     return i;
 }
-function R(e, t) {
+function P(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -72,19 +72,19 @@ function R(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let P = () =>
+let R = () =>
     (0, r.jsx)("div", {
-        className: S.syncing,
+        className: T.syncing,
         children: (0, r.jsx)(o.$jN, {}),
     });
-class D extends i.PureComponent {
+class w extends i.PureComponent {
     componentDidMount() {
         s.Z.wait(() => {
             l.tZ(), l.jg();
         });
     }
     handleRedemptionRedirect() {
-        (0, O.openUserSettings)(y.n.GIFT_PANEL, { section: I.oAB.INVENTORY });
+        (0, O.openUserSettings)(y.n.GIFT_PANEL, { section: S.oAB.INVENTORY });
     }
     render() {
         let {
@@ -95,36 +95,36 @@ class D extends i.PureComponent {
             locale: a,
             premiumSubscription: s,
             isRemovingPaymentSource: l,
-            isUpdatingPaymentSource: p,
+            isUpdatingPaymentSource: _,
         } = this.props;
         return t
             ? (0, r.jsx)(c.Z, {})
             : (0, r.jsxs)("div", {
                   children: [
                       e && 0 === Object.keys(n).length
-                          ? (0, r.jsx)(P, {})
-                          : (0, r.jsx)(_.F, {
+                          ? (0, r.jsx)(R, {})
+                          : (0, r.jsx)(p.F, {
                                 setting: v.s6.BILLING_PAYMENT_METHODS,
                                 children: (0, r.jsx)(d.Z, {
                                     paymentSources: n,
                                     defaultPaymentSourceId: i,
                                     premiumSubscriptionPaymentSourceId:
-                                        null != s && s.status !== I.O0b.CANCELED ? s.paymentSourceId : null,
+                                        null != s && s.status !== S.O0b.CANCELED ? s.paymentSourceId : null,
                                     locale: a,
                                     removing: l,
-                                    submitting: p,
+                                    submitting: _,
                                 }),
                             }),
-                      (0, r.jsx)(_.F, {
+                      (0, r.jsx)(p.F, {
                           setting: v.s6.BILLING_TRANSACTION_HISTORY,
                           children: (0, r.jsx)("div", {
-                              className: S.paymentHistory,
+                              className: T.paymentHistory,
                               children: (0, r.jsxs)(o.Kqy, {
                                   gap: 16,
                                   children: [
                                       (0, r.jsx)(o.Heading, {
                                           variant: "heading-lg/semibold",
-                                          children: T.intl.string(T.t.obLrcK),
+                                          children: I.intl.string(I.t.obLrcK),
                                       }),
                                       (0, r.jsx)(f.oQ, {}),
                                       (0, r.jsx)(u.Z, { locale: a }),
@@ -134,35 +134,35 @@ class D extends i.PureComponent {
                       }),
                       (0, r.jsx)(o.Wn, {
                           messageType: o.QYI.INFO,
-                          className: S.codeRedemptionRedirect,
-                          children: T.intl.format(T.t["8b+FXG"], { onClick: () => this.handleRedemptionRedirect() }),
+                          className: T.codeRedemptionRedirect,
+                          children: I.intl.format(I.t["8b+FXG"], { onClick: () => this.handleRedemptionRedirect() }),
                       }),
                   ],
               });
     }
 }
-function w() {
-    let e = (0, a.cj)([b.default, m.Z, g.Z, h.default, p.Z, E.Z], () => {
+function D() {
+    let e = (0, a.cj)([b.default, h.Z, g.Z, m.default, _.Z, E.Z], () => {
         let e = E.Z.getPremiumTypeSubscription(),
-            t = h.default.getCurrentUser();
+            t = m.default.getCurrentUser();
         return null == t
             ? { shouldRenderBillingSettings: !1 }
             : {
                   shouldRenderBillingSettings: !0,
                   locale: b.default.locale,
-                  hide: p.Z.enabled,
+                  hide: _.Z.enabled,
                   isClaimed: t.isClaimed(),
                   isVerified: t.verified,
                   premiumSubscription: e,
                   defaultPaymentSourceId: g.Z.defaultPaymentSourceId,
                   paymentSources: g.Z.paymentSources,
-                  syncing: m.Z.isSyncing,
-                  isRemovingPaymentSource: m.Z.isRemovingPaymentSource,
-                  isUpdatingPaymentSource: m.Z.isUpdatingPaymentSource,
+                  syncing: h.Z.isSyncing,
+                  isRemovingPaymentSource: h.Z.isRemovingPaymentSource,
+                  isUpdatingPaymentSource: h.Z.isUpdatingPaymentSource,
               };
     });
-    if (!e.shouldRenderBillingSettings) return (0, r.jsx)(P, {});
+    if (!e.shouldRenderBillingSettings) return (0, r.jsx)(R, {});
     let { shouldRenderBillingSettings: t } = e,
         n = N(e, ["shouldRenderBillingSettings"]);
-    return (0, r.jsx)(D, C({}, n));
+    return (0, r.jsx)(w, C({}, n));
 }

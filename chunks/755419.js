@@ -1,6 +1,6 @@
 n.d(t, {
     K: () => f,
-    X: () => _,
+    X: () => p,
 });
 var r = n(54381),
     i = n(120356),
@@ -33,7 +33,7 @@ let f = {
             },
         },
     },
-    _ = () => ({
+    p = () => ({
         id: o.l.ORB_PROFILE_BADGE,
         icon: o.l.ORB_PROFILE_BADGE,
         iconSrc: d.Z,

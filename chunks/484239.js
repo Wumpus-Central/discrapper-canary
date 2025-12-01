@@ -13,48 +13,48 @@ let d = (e) => {
     let {
             title: d,
             titleClassName: f,
-            buttonClassName: _,
-            perkImage: p,
-            isCarousel: h,
-            onCtaClick: m,
+            buttonClassName: p,
+            perkImage: _,
+            isCarousel: m,
+            onCtaClick: h,
             perkComponent: g,
             subtitle: E = "",
             descriptionCta: b = "",
             customContent: y,
             cardVariant: O,
             subtitleClassName: v,
-            imageOverlayText: I,
+            imageOverlayText: S,
         } = e,
-        T = (e) => (null == e ? void 0 : e.onlyShowOnHover) !== !0,
-        S = (0, l._)(O),
-        A = null != I;
+        I = (e) => (null == e ? void 0 : e.onlyShowOnHover) !== !0,
+        T = (0, l._)(O),
+        A = null != S;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", { className: a()(u.cover, u.below) }),
             (0, r.jsx)(c.Z, {
                 title: d,
-                shouldShowElement: T,
-                cardVariantStyleInfo: S,
+                shouldShowElement: I,
+                cardVariantStyleInfo: T,
                 titleClassName: f,
                 subtitle: E,
                 subtitleClassName: v,
             }),
-            null != p &&
+            null != _ &&
                 (0, r.jsxs)("div", {
                     className: a()(
                         u.relative,
                         {
-                            [u.cardImage]: !h,
+                            [u.cardImage]: !m,
                             [u.hoverCardImage]:
-                                !h && !(null == S || null == (t = S.perkImage) ? void 0 : t.disableHoverAnimation),
+                                !m && !(null == T || null == (t = T.perkImage) ? void 0 : t.disableHoverAnimation),
                         },
-                        null == S || null == (n = S.perkImage) ? void 0 : n.className,
+                        null == T || null == (n = T.perkImage) ? void 0 : n.className,
                     ),
                     children: [
                         (0, r.jsx)("img", {
-                            src: p,
+                            src: _,
                             alt: "",
-                            className: h ? (A ? u.carouselCardImageGrayscale : u.carouselCardImage) : "",
+                            className: m ? (A ? u.carouselCardImageGrayscale : u.carouselCardImage) : "",
                         }),
                         A
                             ? (0, r.jsx)("div", {
@@ -62,7 +62,7 @@ let d = (e) => {
                                   children: (0, r.jsx)(s.Text, {
                                       className: u.imageOverlayText,
                                       variant: "text-md/bold",
-                                      children: I,
+                                      children: S,
                                   }),
                               })
                             : null,
@@ -74,14 +74,14 @@ let d = (e) => {
                     children: [
                         g,
                         0 !== b.length &&
-                            null != m &&
+                            null != h &&
                             (0, r.jsx)(o.zx, {
                                 "data-migration-pending": !0,
-                                className: _,
+                                className: p,
                                 fullWidth: !0,
-                                onClick: m,
+                                onClick: h,
                                 children: (0, r.jsx)("div", {
-                                    className: null == S || null == (i = S.descriptionCta) ? void 0 : i.className,
+                                    className: null == T || null == (i = T.descriptionCta) ? void 0 : i.className,
                                     children: b,
                                 }),
                             }),

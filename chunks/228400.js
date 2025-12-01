@@ -9,27 +9,27 @@ function l(e) {
     let l = (0, a.useMemo)(() => e.name || `radio-group-${o}-${++s}`, [e.name]),
         [c, u] = (0, i.z)(e.value, null != (t = e.defaultValue) ? t : null, e.onChange),
         [d] = (0, a.useState)(c),
-        [f, _] = (0, a.useState)(null),
-        p = (0, r.Q3)({
+        [f, p] = (0, a.useState)(null),
+        _ = (0, r.Q3)({
             ...e,
             value: c,
         }),
-        h = (t) => {
-            e.isReadOnly || e.isDisabled || (u(t), p.commitValidation());
+        m = (t) => {
+            e.isReadOnly || e.isDisabled || (u(t), _.commitValidation());
         },
-        m = p.displayValidation.isInvalid;
+        h = _.displayValidation.isInvalid;
     return {
-        ...p,
+        ..._,
         name: l,
         selectedValue: c,
         defaultSelectedValue: void 0 !== e.value ? d : null != (n = e.defaultValue) ? n : null,
-        setSelectedValue: h,
+        setSelectedValue: m,
         lastFocusedValue: f,
-        setLastFocusedValue: _,
+        setLastFocusedValue: p,
         isDisabled: e.isDisabled || !1,
         isReadOnly: e.isReadOnly || !1,
         isRequired: e.isRequired || !1,
-        validationState: e.validationState || (m ? "invalid" : null),
-        isInvalid: m,
+        validationState: e.validationState || (h ? "invalid" : null),
+        isInvalid: h,
     };
 }

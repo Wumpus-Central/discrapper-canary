@@ -1,8 +1,8 @@
 n.d(t, {
-    $r: () => h,
+    $r: () => m,
     DP: () => E,
     Ly: () => g,
-    SG: () => m,
+    SG: () => h,
 }),
     n(704826),
     n(35282);
@@ -19,7 +19,7 @@ var l = n(51144),
     u = n(200299),
     d = n(486324),
     f = n(388032);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +32,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,19 +43,19 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e) {
-    let { uploadType: t, guildId: i, analyticsSource: s, filters: l, isTryItOut: _ = !1 } = e;
+function m(e) {
+    let { uploadType: t, guildId: i, analyticsSource: s, filters: l, isTryItOut: p = !1 } = e;
     (0, a.ZDy)(async () => {
         let { default: e } = await Promise.all([n.e("91689"), n.e("89289"), n.e("53488")]).then(n.bind(n, 28130));
         return (n) =>
             (0, r.jsx)(
                 e,
-                p(
+                _(
                     {
                         filters: l,
                         maxFileSizeBytes: u.B,
@@ -79,7 +79,7 @@ function h(e) {
                                 uploadType: t,
                                 guildId: i,
                                 analyticsSource: s,
-                                isTryItOut: _,
+                                isTryItOut: p,
                             });
                         },
                         uploadType: t,
@@ -90,7 +90,7 @@ function h(e) {
             );
     });
 }
-function m(e, t, n) {
+function h(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if (null != e) return e;
     let { size: i = 80, canAnimate: a = !0 } = r,

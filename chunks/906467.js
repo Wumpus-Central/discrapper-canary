@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -21,10 +21,10 @@ function d(e, t, n) {
     );
 }
 let f = "production" === u.C.DEVELOPMENT || window.GLOBAL_ENV.RELEASE_CHANNEL === u.C.STAGING;
-function _() {
+function p() {
     f = (0, o.QI)(l.default.getCurrentUser());
 }
-class p extends (r = i.ZP.Store) {
+class _ extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(l.default, s.Z),
             Object.defineProperties(this, {
@@ -34,7 +34,7 @@ class p extends (r = i.ZP.Store) {
                     set: () => {},
                 },
             }),
-            _(),
+            p(),
             setTimeout(() => Object.freeze(this));
     }
     getExperimentDescriptor() {
@@ -52,9 +52,9 @@ class p extends (r = i.ZP.Store) {
         super(...e), d(this, "isDeveloper", !1);
     }
 }
-d(p, "displayName", "DeveloperExperimentStore");
-let h = new p(a.Z, {
-    CONNECTION_OPEN: _,
-    OVERLAY_INITIALIZE: _,
-    CURRENT_USER_UPDATE: _,
+d(_, "displayName", "DeveloperExperimentStore");
+let m = new _(a.Z, {
+    CONNECTION_OPEN: p,
+    OVERLAY_INITIALIZE: p,
+    CURRENT_USER_UPDATE: p,
 });

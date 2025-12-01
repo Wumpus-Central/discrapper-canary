@@ -9,7 +9,7 @@ var r = t(442837),
 function u(e) {
     var n, t, u;
     let d = (0, r.e7)([s.Z], () => s.Z.can(l.Plq.ADMINISTRATOR, e)),
-        h = (0, r.e7)([c.Z], () => null != e && c.Z.getNumRoles(e.id) > 0),
+        h = (0, r.e7)([c.Z], () => null != e && c.Z.getNumRoles(e.id) > 1),
         { enabled: g } = a.Z.useExperiment({
             guildId: null == e ? void 0 : e.id,
             location: "useIsPermissionMigrationNotificationAvailable",

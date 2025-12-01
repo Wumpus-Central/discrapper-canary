@@ -1,6 +1,6 @@
 n.d(t, {
-    M: () => p,
-    a: () => _,
+    M: () => _,
+    a: () => p,
 });
 var r = n(392711),
     i = n.n(r),
@@ -20,12 +20,12 @@ let f = () => {
             ? (0, a.K)(n.guild_id, t)
             : (0, a.z)(d.Z5c.CHANNEL(d.STv, null != t ? t : void 0));
     },
-    _ = {
+    p = {
         binds: ["mod+i"],
         comboKeysBindGlobal: !0,
         action: () => !(l.Z.getLayers().length > 0) && (f(), u.S.dispatch(d.CkL.TOGGLE_INBOX), !1),
     },
-    p = {
+    _ = {
         binds: ["mod+shift+e"],
         comboKeysBindGlobal: !0,
         action: i().debounce(

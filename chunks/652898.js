@@ -9,7 +9,7 @@ var r = n(990547),
     u = n(264229),
     d = n(245335),
     f = n(981631);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,12 +33,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,12 +50,12 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -82,38 +82,38 @@ let E = new Map();
 function b(e, t, n) {
     if ((l.default.track(f.rMx.INVITE_OPENED, { invite_code: e }), E.has(e))) return E.get(e);
     let a = (0, u.fU)(e),
-        d = m(p({}, n), {
+        d = h(_({}, n), {
             with_counts: !0,
             with_expiration: !0,
             guild_scheduled_event_id: a.guildScheduledEventId,
             with_permissions: !0,
         }),
-        _ = c.Z.get({
+        p = c.Z.get({
             url: f.ANM.INVITE(a.baseCode),
             query: d,
             oldFormErrors: !0,
             trackedActionData: {
                 event: r.NetworkActionNames.INVITE_RESOLVE,
                 properties: (e) => {
-                    var r, l, c, u, d, _, p;
-                    let h = e.body,
-                        m = (null == (r = e.body) ? void 0 : r.code) === f.evJ.USER_BANNED;
+                    var r, l, c, u, d, p, _;
+                    let m = e.body,
+                        h = (null == (r = e.body) ? void 0 : r.code) === f.evJ.USER_BANNED;
                     return (0, i.iG)({
                         resolved: e.ok,
-                        guild_id: null == h || null == (l = h.guild) ? void 0 : l.id,
-                        channel_id: null == h || null == (c = h.channel) ? void 0 : c.id,
-                        channel_type: null == h || null == (u = h.channel) ? void 0 : u.type,
-                        inviter_id: null == h || null == (d = h.inviter) ? void 0 : d.id,
+                        guild_id: null == m || null == (l = m.guild) ? void 0 : l.id,
+                        channel_id: null == m || null == (c = m.channel) ? void 0 : c.id,
+                        channel_type: null == m || null == (u = m.channel) ? void 0 : u.type,
+                        inviter_id: null == m || null == (d = m.inviter) ? void 0 : d.id,
                         code: a.baseCode,
                         input_value: null == n ? void 0 : n.inputValue,
                         location: t,
                         authenticated: o.default.isAuthenticated(),
-                        size_total: null == h ? void 0 : h.approximate_member_count,
-                        size_online: null == h ? void 0 : h.approximate_presence_count,
-                        destination_user_id: null == h || null == (_ = h.target_user) ? void 0 : _.id,
-                        invite_type: g(h),
-                        user_banned: m,
-                        user_is_member: null != s.Z.getGuild(null == h || null == (p = h.guild) ? void 0 : p.id),
+                        size_total: null == m ? void 0 : m.approximate_member_count,
+                        size_online: null == m ? void 0 : m.approximate_presence_count,
+                        destination_user_id: null == m || null == (p = m.target_user) ? void 0 : p.id,
+                        invite_type: g(m),
+                        user_banned: h,
+                        user_is_member: null != s.Z.getGuild(null == m || null == (_ = m.guild) ? void 0 : _.id),
                     });
                 },
             },
@@ -180,5 +180,5 @@ function b(e, t, n) {
             .finally(() => {
                 E.delete(e);
             });
-    return E.set(e, _), _;
+    return E.set(e, p), p;
 }

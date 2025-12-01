@@ -4,7 +4,7 @@ n.d(t, {
     lD: () => y,
     mm: () => b,
     nX: () => E,
-    vV: () => m,
+    vV: () => h,
 }),
     n(997841),
     n(388685);
@@ -18,7 +18,7 @@ var r = n(95015),
     u = n(372897),
     d = n(981631);
 let f = 86400000;
-function _(e, t, n) {
+function p(e, t, n) {
     let { maxDaysOld: r, minDaysOld: i = 0 } = t,
         s = o.Z.getGuild(e),
         l = null == s ? void 0 : s.joinedAt;
@@ -32,15 +32,15 @@ function _(e, t, n) {
         d = c >= f * i;
     return u && d;
 }
-function p(e, t, n) {
-    return (0, i.e7)([], () => _(e, t, n), [t, e, n]);
+function _(e, t, n) {
+    return (0, i.e7)([], () => p(e, t, n), [t, e, n]);
 }
-function h(e) {
+function m(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 7,
         n = c.default.extractTimestamp(e.id);
     return Date.now() - n < 86400000 * t;
 }
-let m = (e, t) => {
+let h = (e, t) => {
     let n = (0, i.e7)([a.ZP], () => {
             var n, i;
             return (0, r.yE)(
@@ -50,13 +50,13 @@ let m = (e, t) => {
         }),
         s = (0, i.e7)([o.Z], () => {
             let t = o.Z.getGuild(e);
-            return null != t && h(t);
+            return null != t && m(t);
         }),
         c = (0, i.e7)([l.default], () => {
             var e;
             return null == (e = l.default.getUser(t)) ? void 0 : e.bot;
         });
-    return p(e, { maxDaysOld: 7 }, t) && !s && !c && !n;
+    return _(e, { maxDaysOld: 7 }, t) && !s && !c && !n;
 };
 function g(e, t) {
     let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [s.Z];

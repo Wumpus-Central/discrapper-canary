@@ -15,10 +15,10 @@ var r = n(54381),
     u = n(37234),
     d = n(454585),
     f = n(703656),
-    _ = n(313789),
-    p = n(518596),
-    h = n(626135),
-    m = n(981631),
+    p = n(313789),
+    _ = n(518596),
+    m = n(626135),
+    h = n(981631),
     g = n(596401);
 function E(e, t, n) {
     return (
@@ -73,11 +73,11 @@ function O(e, t) {
     );
 }
 let v = l().defaultRules.link,
-    I = { section: m.jXE.SETTINGS_CHANGELOG };
-function T() {
-    h.default.track(m.rMx.PREMIUM_PROMOTION_OPENED, { location: I });
+    S = { section: h.jXE.SETTINGS_CHANGELOG };
+function I() {
+    m.default.track(h.rMx.PREMIUM_PROMOTION_OPENED, { location: S });
 }
-function S(e, t) {
+function T(e, t) {
     return null == t ? [] : t.split(" ").map((t) => e[t]);
 }
 let A = (e) => {
@@ -85,7 +85,7 @@ let A = (e) => {
             s = (0, c.xSt)(),
             l = parseInt(t, 10),
             u = s + (isNaN(l) ? 1 : l) - 1;
-        return i.createElement("h".concat(u), { className: o()(...S(a, r)) }, n);
+        return i.createElement("h".concat(u), { className: o()(...T(a, r)) }, n);
     },
     C = null != d.Z ? d.Z.defaultRules : null,
     N = {
@@ -98,9 +98,9 @@ let A = (e) => {
                 return (
                     (r = a
                         ? (e) => {
-                              T(),
-                                  (0, p.openUserSettings)(_.n.NITRO_PANEL, { section: m.oAB.PREMIUM }),
-                                  n.changeLog.track(m.rMx.CHANGE_LOG_CTA_CLICKED, { cta_type: "nitro" }),
+                              I(),
+                                  (0, _.openUserSettings)(p.n.NITRO_PANEL, { section: h.oAB.PREMIUM }),
+                                  n.changeLog.track(h.rMx.CHANGE_LOG_CTA_CLICKED, { cta_type: "nitro" }),
                                   (0, c.Mr3)(g.Xd),
                                   e.preventDefault();
                           }
@@ -108,8 +108,8 @@ let A = (e) => {
                           ? (e) => {
                                 (0, f.uL)(i),
                                     n.changeLog.track(
-                                        m.rMx.CHANGE_LOG_CTA_CLICKED,
-                                        b({}, h.default.getCampaignParams(i)),
+                                        h.rMx.CHANGE_LOG_CTA_CLICKED,
+                                        b({}, m.default.getCampaignParams(i)),
                                     ),
                                     (0, u.Ou)(),
                                     (0, c.Mr3)(g.Xd),
@@ -118,13 +118,13 @@ let A = (e) => {
                           : () => {
                                 n && "function" == typeof n.onLinkClick && n.onLinkClick(i),
                                     n.changeLog.track(
-                                        m.rMx.CHANGE_LOG_CTA_CLICKED,
+                                        h.rMx.CHANGE_LOG_CTA_CLICKED,
                                         b(
                                             {
                                                 target: i,
                                                 cta_type: "inline_link",
                                             },
-                                            h.default.getCampaignParams(i),
+                                            m.default.getCampaignParams(i),
                                         ),
                                     );
                             }),

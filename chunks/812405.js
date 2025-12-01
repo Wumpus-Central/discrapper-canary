@@ -8,10 +8,10 @@ var r = n(720218),
     u = n(868149),
     d = n(558094),
     f = n(76443),
-    _ = n(246766),
-    p = n(633868),
-    h = n(277816),
-    m = n(257834),
+    p = n(246766),
+    _ = n(633868),
+    m = n(277816),
+    h = n(257834),
     g = n(259303),
     E = n(269166),
     b = n(694443),
@@ -26,19 +26,19 @@ function v(e, t, n) {
         case "delete-word":
             return f(t);
         case "backspace":
-            return m(t);
+            return h(t);
         case "backspace-word":
             return d(t);
         case "backspace-to-start-of-line":
             return u(t, n);
         case "split-block":
-            return _(t);
+            return p(t);
         case "transpose-characters":
             return E(t);
         case "move-selection-to-start-of-block":
-            return h(t);
+            return m(t);
         case "move-selection-to-end-of-block":
-            return p(t);
+            return _(t);
         case "secondary-cut":
             return s.cut(t);
         case "secondary-paste":

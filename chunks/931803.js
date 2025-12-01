@@ -69,20 +69,20 @@ let f = {
                         autoFlip: l,
                         autoShift: u,
                         strategy: f,
-                        portal: _,
-                        blockPointerEvents: p,
+                        portal: p,
+                        blockPointerEvents: _,
                     } = e,
-                    [h, m] = i.useState(!1);
+                    [m, h] = i.useState(!1);
                 return (0, r.jsx)(a.pS, {
-                    open: h,
-                    onOpenChange: m,
+                    open: m,
+                    onOpenChange: h,
                     placement: t,
                     spacing: n,
                     autoFlip: l,
                     autoShift: u,
                     strategy: f,
-                    portal: _,
-                    blockPointerEvents: p,
+                    portal: p,
+                    blockPointerEvents: _,
                     renderLayer: () =>
                         (0, r.jsx)("div", {
                             className: s.layer,
@@ -100,7 +100,7 @@ let f = {
                                     {
                                         variant: "primary",
                                         text: "Target Element",
-                                        onClick: () => m(!h),
+                                        onClick: () => h(!m),
                                     },
                                     n,
                                 ),

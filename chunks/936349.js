@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(35282);
+n.d(t, { Z: () => m }), n(35282);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -25,12 +25,12 @@ let u = {
     },
     d = u,
     f = +l.Z.Millis.HOUR;
-function _(e) {
+function p(e) {
     e.latencyRankedRegions.length > 0 &&
         ((d.lastGeoRankedOrder = e.geoRankedRegions), (d.preferredRegions = e.latencyRankedRegions)),
         (d.lastTestTimestamp = Date.now());
 }
-class p extends (r = o.ZP.DeviceSettingsStore) {
+class _ extends (r = o.ZP.DeviceSettingsStore) {
     initialize(e) {
         d = null != e ? e : u;
     }
@@ -59,13 +59,13 @@ class p extends (r = o.ZP.DeviceSettingsStore) {
         );
     }
 }
-c(p, "displayName", "RTCRegionStore"),
-    c(p, "persistKey", "RTCRegionStore"),
-    c(p, "migrations", [
+c(_, "displayName", "RTCRegionStore"),
+    c(_, "persistKey", "RTCRegionStore"),
+    c(_, "migrations", [
         (e) => (
             e.preferredRegion ? (e.preferredRegions = [e.preferredRegion]) : (e.preferredRegions = null),
             delete e.preferredRegion,
             e
         ),
     ]);
-let h = new p(s.Z, { RTC_LATENCY_TEST_COMPLETE: _ });
+let m = new _(s.Z, { RTC_LATENCY_TEST_COMPLETE: p });

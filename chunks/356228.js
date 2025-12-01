@@ -1,5 +1,5 @@
 n.d(t, {
-    I: () => h,
+    I: () => m,
     O: () => a,
 });
 var r = n(139232),
@@ -86,7 +86,7 @@ function f(e) {
             return { signDisplay: "never" };
     }
 }
-function _(e) {
+function p(e) {
     var t;
     if (
         ("E" === e[0] && "E" === e[1]
@@ -106,12 +106,12 @@ function _(e) {
     }
     return t;
 }
-function p(e) {
+function _(e) {
     var t = {},
         n = f(e);
     return n || t;
 }
-function h(e) {
+function m(e) {
     for (var t = {}, n = 0, i = e; n < i.length; n++) {
         var a = i[n];
         switch (a.stem) {
@@ -149,7 +149,7 @@ function h(e) {
                 t = (0, r.pi)(
                     (0, r.pi)((0, r.pi)({}, t), { notation: "scientific" }),
                     a.options.reduce(function (e, t) {
-                        return (0, r.pi)((0, r.pi)({}, e), p(t));
+                        return (0, r.pi)((0, r.pi)({}, e), _(t));
                     }, {}),
                 );
                 continue;
@@ -157,7 +157,7 @@ function h(e) {
                 t = (0, r.pi)(
                     (0, r.pi)((0, r.pi)({}, t), { notation: "engineering" }),
                     a.options.reduce(function (e, t) {
-                        return (0, r.pi)((0, r.pi)({}, e), p(t));
+                        return (0, r.pi)((0, r.pi)({}, e), _(t));
                     }, {}),
                 );
                 continue;
@@ -228,19 +228,19 @@ function h(e) {
                     ""
                 );
             });
-            var h = a.options[0];
-            "w" === h
+            var m = a.options[0];
+            "w" === m
                 ? (t = (0, r.pi)((0, r.pi)({}, t), { trailingZeroDisplay: "stripIfInteger" }))
-                : h && (t = (0, r.pi)((0, r.pi)({}, t), d(h)));
+                : m && (t = (0, r.pi)((0, r.pi)({}, t), d(m)));
             continue;
         }
         if (l.test(a.stem)) {
             t = (0, r.pi)((0, r.pi)({}, t), d(a.stem));
             continue;
         }
-        var m = f(a.stem);
-        m && (t = (0, r.pi)((0, r.pi)({}, t), m));
-        var g = _(a.stem);
+        var h = f(a.stem);
+        h && (t = (0, r.pi)((0, r.pi)({}, t), h));
+        var g = p(a.stem);
         g && (t = (0, r.pi)((0, r.pi)({}, t), g));
     }
     return t;

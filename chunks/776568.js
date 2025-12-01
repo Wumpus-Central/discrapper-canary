@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => b,
+    ZP: () => _,
     k: () => Z,
     u9: () => h,
 }),
@@ -12,8 +12,8 @@ var r = n(913527),
     a = n(481060),
     o = n(211739),
     c = n(87051),
-    s = n(496729),
-    d = n(777861),
+    d = n(496729),
+    s = n(777861),
     f = n(9156),
     E = n(621600),
     g = n(933557),
@@ -56,15 +56,15 @@ let Z = () => [
             },
         };
     };
-function b(e, t) {
+function _(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         [r, l] = (0, u.Wu)([f.ZP], () => [
             f.ZP.isChannelMuted(e.guild_id, e.id),
             f.ZP.getChannelMuteConfig(e.guild_id, e.id),
         ]),
-        p = (0, d.U)(l),
-        b = (0, g.ZP)(e, !0);
-    function _(t) {
+        p = (0, s.U)(l),
+        _ = (0, g.ZP)(e, !0);
+    function b(t) {
         t && e.type === O.d4z.GUILD_CATEGORY && (0, o.c4)(e.id),
             c.Z.updateChannelOverrideSettings(e.guild_id, e.id, { muted: t }, E.UE.muted(t));
     }
@@ -78,8 +78,8 @@ function b(e, t) {
             (y = v.intl.string(v.t.LO3kaK)), (N = v.intl.string(v.t["s5/5fm"]));
             break;
         case O.d4z.DM:
-            (y = n ? v.intl.format(v.t.byjuJm, { name: b }) : v.intl.string(v.t.LO3kaK)),
-                (N = n ? v.intl.format(v.t["eC+9rj"], { name: b }) : v.intl.string(v.t["s5/5fm"]));
+            (y = n ? v.intl.format(v.t.byjuJm, { name: _ }) : v.intl.string(v.t.LO3kaK)),
+                (N = n ? v.intl.format(v.t["eC+9rj"], { name: _ }) : v.intl.string(v.t["s5/5fm"]));
             break;
         default:
             (y = v.intl.string(v.t.tbeRRJ)), (N = v.intl.string(v.t.OYefme));
@@ -89,14 +89,14 @@ function b(e, t) {
               id: "unmute-channel",
               label: N,
               subtext: p,
-              action: () => _(!1),
+              action: () => b(!1),
           })
         : (0, i.jsx)(a.sNh, {
               id: "mute-channel",
               label: y,
               action: () => {
-                  _(!0),
-                      (0, s.sT)({
+                  b(!0),
+                      (0, d.sT)({
                           channelId: e.id,
                           location: "channel_context_menu",
                       });

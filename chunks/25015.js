@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(761910),
     d = n(488968),
     f = n(479398),
-    _ = n(981631),
-    p = n(388032),
-    h = n(491068);
-let m = i.lazy(() => Promise.all([n.e("30385"), n.e("85831")]).then(n.bind(n, 120314)));
+    p = n(981631),
+    _ = n(388032),
+    m = n(491068);
+let h = i.lazy(() => Promise.all([n.e("30385"), n.e("85831")]).then(n.bind(n, 120314)));
 function g(e, t) {
     let {
             hideSimpleEmbedContent: g,
@@ -21,39 +21,39 @@ function g(e, t) {
             isInteracting: y = !1,
             allowHeading: O = !1,
             allowList: v = !1,
-            allowLinks: I = !1,
-            allowDevLinks: T = !1,
-            previewLinkTarget: S = !1,
+            allowLinks: S = !1,
+            allowDevLinks: I = !1,
+            previewLinkTarget: T = !1,
             viewingChannelId: A,
         } = t,
         C = (0, o.p)(),
         N = a.d.useExperiment({ location: "useMessageRenderedContent" }).enabled,
-        R = (0, f.o)({ location: "useMessageRenderedContent" }),
-        [P, D] = i.useState(!1),
-        w = i.useCallback((e) => {
-            e && D(!0);
+        P = (0, f.o)({ location: "useMessageRenderedContent" }),
+        [R, w] = i.useState(!1),
+        D = i.useCallback((e) => {
+            e && w(!0);
         }, []);
     return (
         i.useEffect(() => {
-            D(!1);
+            w(!1);
         }, [e.content]),
         i.useMemo(() => {
             if (null != e.customRenderedContent) return e.customRenderedContent;
             if (e.isUnsupported)
                 return {
-                    content: p.intl.string(p.t.sWi5EU),
+                    content: _.intl.string(_.t.sWi5EU),
                     hasSpoilerEmbeds: !1,
                 };
-            if ((e.isCommandType() && 0 === e.content.length) || e.hasFlag(_.iLy.LOADING)) return (0, u.Z)(e);
-            if (e.type === _.uaV.CHANGELOG) {
+            if ((e.isCommandType() && 0 === e.content.length) || e.hasFlag(p.iLy.LOADING)) return (0, u.Z)(e);
+            if (e.type === p.uaV.CHANGELOG) {
                 let { renderChangelogMessageMarkup: t } = n(55406);
-                return t(e, h, {
+                return t(e, m, {
                     track: (e, t) => {
                         s.default.track(e, t);
                     },
                 });
             }
-            return R.enabled
+            return P.enabled
                 ? {
                       content: (0, r.jsx)(i.Suspense, {
                           children: (0, r.jsx)(d.v.Provider, {
@@ -62,12 +62,12 @@ function g(e, t) {
                                   channelId: e.channel_id,
                                   viewingChannelId: A,
                                   guildId: (0, l.k)(e),
-                                  setHasSpoilerEmbeds: w,
+                                  setHasSpoilerEmbeds: D,
                               },
-                              children: (0, r.jsx)(m, { content: e.content }),
+                              children: (0, r.jsx)(h, { content: e.content }),
                           }),
                       }),
-                      hasSpoilerEmbeds: P,
+                      hasSpoilerEmbeds: R,
                   }
                 : (0, c.ZP)(e, {
                       hideSimpleEmbedContent: g,
@@ -76,9 +76,9 @@ function g(e, t) {
                       isInteracting: y,
                       allowHeading: O,
                       allowList: v,
-                      allowLinks: I,
-                      allowDevLinks: T,
-                      previewLinkTarget: S,
+                      allowLinks: S,
+                      allowDevLinks: I,
+                      previewLinkTarget: T,
                       shouldFilterKeywords: C,
                       viewingChannelId: A,
                       allowGameMentions: N,
@@ -96,14 +96,14 @@ function g(e, t) {
             y,
             O,
             v,
-            I,
             S,
-            C,
             T,
+            C,
+            I,
             A,
-            R.enabled,
+            P.enabled,
             N,
-            P,
+            R,
         ])
     );
 }

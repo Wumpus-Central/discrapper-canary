@@ -21,10 +21,10 @@ function l(e, t) {
     "second" === t.granularity ? (u = 1) : "hour" === t.granularity && (u = 3600);
     let d = null == t.value ? "" : t.value.toString(),
         f = "day" === t.granularity ? "date" : "datetime-local",
-        _ = ["hour", "minute", "second"],
-        p = 0;
+        p = ["hour", "minute", "second"],
+        _ = 0;
     return (
-        _.includes(t.granularity) && ((p = s[t.granularity]), (_ = _.slice(0, p))),
+        p.includes(t.granularity) && ((_ = s[t.granularity]), (p = p.slice(0, _))),
         {
             containerProps: {
                 ...c,
@@ -48,7 +48,7 @@ function l(e, t) {
                             let e = (0, r.wG)(n);
                             if (("day" === t.granularity && (e = (0, r.sG)(n)), "setSegment" in t))
                                 for (let n in e)
-                                    o.includes(n) && t.setSegment(n, e[n]), _.includes(n) && t.setSegment(n, e[n]);
+                                    o.includes(n) && t.setSegment(n, e[n]), p.includes(n) && t.setSegment(n, e[n]);
                             t.setValue(e);
                         } catch {}
                 },

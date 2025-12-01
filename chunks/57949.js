@@ -1,4 +1,4 @@
-n.d(t, { z: () => p });
+n.d(t, { z: () => _ });
 var r = n(54381);
 n(473749);
 var i = n(772848),
@@ -48,7 +48,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,13 +59,13 @@ function _(e, t) {
         e
     );
 }
-function p(e) {
+function _(e) {
     let { guildProductListing: t, guildId: u, sourceAnalyticsLocations: f } = e,
-        p = !1,
-        h = (0, i.Z)(),
-        m = t.id,
+        _ = !1,
+        m = (0, i.Z)(),
+        h = t.id,
         g = () => {
-            p = !0;
+            _ = !0;
         };
     (0, a.ZDy)(
         async () => {
@@ -73,27 +73,27 @@ function p(e) {
             return (n) =>
                 (0, r.jsx)(
                     e,
-                    _(d({}, n), {
+                    p(d({}, n), {
                         applicationId: t.application_id,
-                        skuId: m,
+                        skuId: h,
                         sourceAnalyticsLocations: f,
                         guildProductContext: {
                             guildProductListingId: t.id,
                             guildId: u,
                         },
-                        loadId: h,
+                        loadId: m,
                         onComplete: g,
                     }),
                 );
         },
         {
             onCloseCallback: () => {
-                p ||
+                _ ||
                     l.default.track(c.rMx.PAYMENT_FLOW_CANCELED, {
-                        load_id: h,
+                        load_id: m,
                         payment_type: c.Zuq[c.GZQ.ONE_TIME],
                         is_gift: !1,
-                        sku_id: m,
+                        sku_id: h,
                         location_stack: Array.isArray(f) ? f : [f],
                     }),
                     (0, o.fw)(),

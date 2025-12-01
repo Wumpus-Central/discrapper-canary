@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(539854), n(388685);
+n.d(t, { Z: () => p }), n(539854), n(388685);
 var r,
     i = n(348327),
     a = n.n(i),
@@ -36,4 +36,4 @@ class f extends (r = o.ZP.Store) {
     }
 }
 l(f, "displayName", "FirstPartyRichPresenceStore");
-let _ = new f(s.Z);
+let p = new f(s.Z);

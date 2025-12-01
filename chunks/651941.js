@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }),
+n.d(t, { Z: () => m }),
     n(410992),
     n(227481),
     n(730884),
@@ -50,11 +50,11 @@ function f(e) {
         a = !1;
     return 0 === Object.keys(r).length && (delete c[t], (a = !0)), i || a;
 }
-function _(e) {
+function p(e) {
     let { userId: t } = e;
     return null != c[t] && delete c[t];
 }
-class p extends (r = i.ZP.PersistedStore) {
+class _ extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         var t;
         c = null != (t = null == e ? void 0 : e.users) ? t : {};
@@ -77,9 +77,9 @@ class p extends (r = i.ZP.PersistedStore) {
         return c[e];
     }
 }
-l(p, "displayName", "VerifiedKeyStore"), l(p, "persistKey", "VerifiedKeyStore");
-let h = new p(o.Z, {
+l(_, "displayName", "VerifiedKeyStore"), l(_, "persistKey", "VerifiedKeyStore");
+let m = new _(o.Z, {
     SECURE_FRAMES_VERIFIED_KEY_CREATE: d,
     SECURE_FRAMES_VERIFIED_KEY_DELETE: f,
-    SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE: _,
+    SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE: p,
 });

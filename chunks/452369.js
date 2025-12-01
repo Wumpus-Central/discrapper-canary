@@ -15,15 +15,15 @@ function f() {
     let e = o.Z.getAllVoiceStates(),
         t = !1;
     for (let n of Object.values(e))
-        for (let e of Object.values(n)) null != e.channelId && (t = h(e.channelId, e.userId) || t);
+        for (let e of Object.values(n)) null != e.channelId && (t = m(e.channelId, e.userId) || t);
     return t;
 }
-function _(e) {
+function p(e) {
     let { relationship: t } = e,
         n = o.Z.getVoiceStateForUser(t.id);
-    return null != n && null != n.channelId && h(n.channelId, t.id);
+    return null != n && null != n.channelId && m(n.channelId, t.id);
 }
-function p(e) {
+function _(e) {
     let { voiceStates: t } = e,
         n = !1;
     return (
@@ -33,12 +33,12 @@ function p(e) {
                 null != l[e.oldChannelId] && (null == (t = l[e.oldChannelId]) || t.delete(e.userId), (n = !0)),
                     null != c[e.oldChannelId] && (null == (r = c[e.oldChannelId]) || r.delete(e.userId), (n = !0));
             }
-            null != e.channelId && (n = h(e.channelId, e.userId) || n);
+            null != e.channelId && (n = m(e.channelId, e.userId) || n);
         }),
         n
     );
 }
-function h(e, t) {
+function m(e, t) {
     let n = !1,
         r = !1,
         i = new Set(l[e]),
@@ -54,7 +54,7 @@ function h(e, t) {
         n
     );
 }
-class m extends r.ZP.Store {
+class h extends r.ZP.Store {
     initialize() {
         this.waitFor(a.Z, o.Z);
     }
@@ -67,12 +67,12 @@ class m extends r.ZP.Store {
         return null != (t = c[e]) ? t : u;
     }
 }
-let g = new m(i.Z, {
+let g = new h(i.Z, {
     CONNECTION_OPEN: d,
     LOGOUT: d,
     OVERLAY_INITIALIZE: f,
-    VOICE_STATE_UPDATES: p,
-    RELATIONSHIP_ADD: _,
-    RELATIONSHIP_REMOVE: _,
-    RELATIONSHIP_UPDATE: _,
+    VOICE_STATE_UPDATES: _,
+    RELATIONSHIP_ADD: p,
+    RELATIONSHIP_REMOVE: p,
+    RELATIONSHIP_UPDATE: p,
 });

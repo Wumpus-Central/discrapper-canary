@@ -1,5 +1,5 @@
 n.d(t, {
-    Dn: () => p,
+    Dn: () => f,
     if: () => d,
     ig: () => a,
 }),
@@ -57,14 +57,14 @@ function u(e) {
     };
 }
 function d(e, t, n, r, l) {
-    var d, p, h, f, g;
+    var d, f, h, p, g;
     if (null == e || null == n) return null;
     let { GUILD_CATEGORY: m } = o.d4z;
     if (e.type === m) {
         if (r === t || (r < t && e.type === n.type)) return u(n);
         if (r > t) {
             let { GUILD_CATEGORY: t } = o.d4z,
-                r = l[(null != (p = c(n, l, !0)) ? p : 0) + 1],
+                r = l[(null != (f = c(n, l, !0)) ? f : 0) + 1],
                 i = s(-1, n.id, e.type, l);
             return null == i || i.channel.id === e.id
                 ? null
@@ -80,7 +80,7 @@ function d(e, t, n, r, l) {
     if (a(e.type, n.type)) return u(n);
     if (r < t) {
         if (n.type === m) {
-            let t = l[(null != (f = c(n, l, !0)) ? f : 0) - 1],
+            let t = l[(null != (p = c(n, l, !0)) ? p : 0) - 1],
                 r = s(1, n.id, e.type, l);
             if (null == t)
                 return {
@@ -159,12 +159,12 @@ function d(e, t, n, r, l) {
           }
         : null;
 }
-function p(e, t, n, o) {
+function f(e, t, n, o) {
     let a,
         s,
         u = [],
         d = [],
-        p = o._categories,
+        f = o._categories,
         h = (t) => {
             var n, r;
             let i;
@@ -193,11 +193,11 @@ function p(e, t, n, o) {
             );
         };
     if (e.isCategory()) {
-        let n = [...p].slice(1);
-        (a = c(e, n)), (s = c(t, n)), (d = h(n)).unshift(p[0]);
+        let n = [...f].slice(1);
+        (a = c(e, n)), (s = c(t, n)), (d = h(n)).unshift(f[0]);
     }
     if ((0, i.r8)(e.type) || e.isCategory()) {
-        let n = (0, r.Z)(d.length > 0 ? d : p, o, (e) => {
+        let n = (0, r.Z)(d.length > 0 ? d : f, o, (e) => {
             let {
                 channel: { type: t },
             } = e;
@@ -206,7 +206,7 @@ function p(e, t, n, o) {
         (a = c(e, n)), (s = c(t, n)), h(n);
     }
     if (e.isGuildVocal() || e.isCategory()) {
-        let n = (0, r.Z)(d.length > 0 ? d : p, o, (e) => {
+        let n = (0, r.Z)(d.length > 0 ? d : f, o, (e) => {
             let { channel: t } = e;
             return t.isGuildVocal();
         });

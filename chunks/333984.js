@@ -41,30 +41,30 @@ function f(e) {
     let { channelId: t } = e;
     s.add(t);
 }
-function _(e) {
+function p(e) {
     let { channel: t } = e;
     return u(t);
 }
-function p(e) {
+function _(e) {
     let { channels: t } = e;
     for (let e of t) u(e);
 }
-function h(e) {
+function m(e) {
     let { channel: t } = e,
         n = !1;
     return o.has(t.id) && (o.delete(t.id), (n = !0)), n;
 }
-class m extends i.Z {
+class h extends i.Z {
     initialize() {
         this.waitFor(r.Z);
     }
     loadCache() {
-        let e = this.readSnapshot(m.LATEST_SNAPSHOT_VERSION);
+        let e = this.readSnapshot(h.LATEST_SNAPSHOT_VERSION);
         null != e && (o = new Set(e));
     }
     takeSnapshot() {
         return {
-            version: m.LATEST_SNAPSHOT_VERSION,
+            version: h.LATEST_SNAPSHOT_VERSION,
             data: Array.from(o),
         };
     }
@@ -88,12 +88,12 @@ class m extends i.Z {
             CONNECTION_OPEN: d,
             CONNECTION_OPEN_SUPPLEMENTAL: d,
             CACHE_LOADED_LAZY: () => this.loadCache(),
-            CHANNEL_CREATE: _,
-            CHANNEL_UPDATES: p,
-            CHANNEL_DELETE: h,
+            CHANNEL_CREATE: p,
+            CHANNEL_UPDATES: _,
+            CHANNEL_DELETE: m,
             MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: f,
         });
     }
 }
-a(m, "displayName", "SpamMessageRequestStore"), a(m, "LATEST_SNAPSHOT_VERSION", 1);
-let g = new m();
+a(h, "displayName", "SpamMessageRequestStore"), a(h, "LATEST_SNAPSHOT_VERSION", 1);
+let g = new h();

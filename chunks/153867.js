@@ -1,5 +1,5 @@
 n.d(t, {
-    V1: () => h,
+    V1: () => m,
     ZI: () => E,
     ZP: () => b,
 });
@@ -13,9 +13,9 @@ var r = n(524437),
     u = n(210887),
     d = n(695346),
     f = n(675478),
-    _ = n(981631),
-    p = n(874893);
-function h(e) {
+    p = n(981631),
+    _ = n(874893);
+function m(e) {
     return f.hW.updateAsync(
         "guildFolders",
         (t) => {
@@ -34,15 +34,15 @@ function h(e) {
         f.fy.FREQUENT_USER_ACTION,
     );
 }
-function m(e) {
+function h(e) {
     switch (e) {
-        case _.BRd.DARK:
+        case p.BRd.DARK:
             return r.Q2.DARK;
-        case _.BRd.LIGHT:
+        case p.BRd.LIGHT:
             return r.Q2.LIGHT;
-        case _.BRd.DARKER:
+        case p.BRd.DARKER:
             return r.Q2.DARKER;
-        case _.BRd.MIDNIGHT:
+        case p.BRd.MIDNIGHT:
             return r.Q2.MIDNIGHT;
         default:
             return r.Q2.DARK;
@@ -66,14 +66,14 @@ function g(e) {
 function E(e) {
     let { backgroundGradientPresetId: t, customUserThemeSettings: n, theme: r, useSystemTheme: i } = e,
         s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f.fy.INFREQUENT_USER_ACTION,
-        u = "system" === r ? p.KW.ON : p.KW.OFF,
+        u = "system" === r ? _.KW.ON : _.KW.OFF,
         d = null != i ? i : u;
     if (
         (o.Z.dispatch({
             type: "UNSYNCED_USER_SETTINGS_UPDATE",
             settings: { useSystemTheme: d },
         }),
-        null == t && "system" !== r && (0, a.wj)(r) && (0, c.Ag)({ [p.zd.DARK]: r }),
+        null == t && "system" !== r && (0, a.wj)(r) && (0, c.Ag)({ [_.zd.DARK]: r }),
         o.Z.dispatch({
             type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
             changes: {
@@ -93,7 +93,7 @@ function E(e) {
         return f.hW.updateAsync(
             "appearance",
             (e) => {
-                (e.theme = m(r)),
+                (e.theme = h(r)),
                     (e.clientThemeSettings = g({
                         backgroundGradientPresetId: t,
                         customUserThemeSettings: n,
@@ -186,7 +186,7 @@ let b = {
                 f.hW.updateAsync(
                     "appearance",
                     (t) => {
-                        t.theme = m(e);
+                        t.theme = h(e);
                     },
                     f.fy.INFREQUENT_USER_ACTION,
                 );

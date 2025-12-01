@@ -1,6 +1,6 @@
 n.d(t, {
-    eC: () => p,
-    gX: () => _,
+    eC: () => _,
+    gX: () => p,
     uP: () => f,
 });
 var r = n(473749),
@@ -49,7 +49,7 @@ let d = (e) => {
             restrictionsLoading: a,
         };
     },
-    _ = (e) => {
+    p = (e) => {
         var t;
         let n = (0, i.e7)([l.Z], () => l.Z.getGuild(e), [e]),
             { restrictions: r, restrictionsLoading: a } = d(n),
@@ -65,7 +65,7 @@ let d = (e) => {
             restrictionsLoading: a,
         };
     },
-    p = (e) => {
+    _ = (e) => {
         let { restrictions: t, restrictionsLoading: n } = d((0, i.e7)([l.Z], () => l.Z.getGuild(e), [e]));
         return {
             isMonetizationReapplicationDisabled: (0, c.m8)(t),

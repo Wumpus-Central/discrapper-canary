@@ -51,7 +51,7 @@ e.exports = function (e) {
         f = e.COMMENT(null, /$/, {
             variants: [{ begin: /'/ }, { begin: /([\t ]|^)REM(?=\s)/ }],
         }),
-        _ = {
+        p = {
             className: "meta",
             begin: /[\t ]*#(const|disable|else|elseif|enable|end|externalsource|if|region)\b/,
             end: /$/,
@@ -72,6 +72,6 @@ e.exports = function (e) {
             literal: "true false nothing",
         },
         illegal: "//|\\{|\\}|endif|gosub|variant|wend|^\\$ ",
-        contains: [n, r, l, c, u, d, f, _],
+        contains: [n, r, l, c, u, d, f, p],
     };
 };

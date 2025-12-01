@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(54381);
 n(473749);
 var i = n(481060),
@@ -10,7 +10,7 @@ var i = n(481060),
     u = n(981631),
     d = n(526761),
     f = n(388032);
-function _(e) {
+function p(e) {
     let { analyticsLocations: t } = (0, a.ZP)();
     return (0, r.jsx)(i.sNh, {
         id: "video-settings",

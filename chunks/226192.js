@@ -1,7 +1,7 @@
 n.d(t, {
-    UV: () => p,
+    UV: () => _,
     _s: () => f,
-    kW: () => _,
+    kW: () => p,
     km: () => d,
 });
 var r = n(54381);
@@ -160,7 +160,7 @@ function f(e, t, a, o) {
             );
     });
 }
-function _(e, t) {
+function p(e, t) {
     (0, i.ZDy)(async () => {
         let { default: i } = await n.e("28382").then(n.bind(n, 537623));
         return (n) =>
@@ -173,7 +173,7 @@ function _(e, t) {
             );
     });
 }
-function p(e) {
+function _(e) {
     (0, i.h7j)((t) =>
         (0, r.jsx)(
             i.ConfirmModal,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => O });
 var i = n(54381);
 n(473749);
 var r = n(120356),
@@ -19,7 +19,7 @@ var r = n(120356),
     C = n(354459),
     v = n(388032),
     _ = n(115858);
-function x(e) {
+function O(e) {
     let { recipientUser: t, voiceChannel: n } = e,
         r = (0, y.ZP)(n),
         s = (0, h.s)(t, "RingToVoiceBanner", n.id),
@@ -33,8 +33,8 @@ function x(e) {
                 }
             );
         }),
-        x = (0, o.e7)([b.Z], () => b.Z.getGuild(n.guild_id)),
-        O = null != x ? (0, g.EB)(x, 32, !0) : null,
+        O = (0, o.e7)([b.Z], () => b.Z.getGuild(n.guild_id)),
+        j = null != O ? (0, g.EB)(O, 32, !0) : null,
         E = !s || (u && !m);
     return ((0, d.Z)(
         {
@@ -62,17 +62,17 @@ function x(e) {
                               width: 24,
                               height: 24,
                               children:
-                                  null == O
+                                  null == j
                                       ? (0, i.jsx)("div", {
                                             className: l()(_.guildIcon, _.guildIconWithoutImage),
                                             children: (0, i.jsx)("div", {
                                                 className: _.guildAcronym,
-                                                children: null != x ? (0, g.gM)(x) : null,
+                                                children: null != O ? (0, g.gM)(O) : null,
                                             }),
                                         })
                                       : (0, i.jsx)("img", {
-                                            alt: null == x ? void 0 : x.name,
-                                            src: O,
+                                            alt: null == O ? void 0 : O.name,
+                                            src: j,
                                             className: _.guildIcon,
                                         }),
                           }),
@@ -95,7 +95,7 @@ function x(e) {
                           }),
                       ],
                   }),
-                  (0, i.jsx)(j, {
+                  (0, i.jsx)(x, {
                       channelId: n.id,
                       recipientUserId: t.id,
                       isUserRinging: m,
@@ -103,7 +103,7 @@ function x(e) {
               ],
           });
 }
-function j(e) {
+function x(e) {
     let { channelId: t, recipientUserId: n, isUserRinging: r } = e,
         l = r ? v.intl.string(v.t.ygslb0) : v.intl.string(v.t["3Hv9qQ"]),
         a = r

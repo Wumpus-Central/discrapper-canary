@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(235820),
     u = n(493773),
     d = n(110924),
-    p = n(622822),
+    f = n(622822),
     h = n(198620),
-    f = n(294218),
+    p = n(294218),
     g = n(598999),
     m = n(216789),
     b = n(695346),
@@ -19,8 +19,8 @@ var r = n(54381),
     O = n(944486),
     v = n(455199),
     j = n(655354),
-    C = n(324081),
-    x = n(240126),
+    x = n(324081),
+    C = n(240126),
     E = n(981631),
     S = n(388032),
     I = n(889833);
@@ -50,8 +50,8 @@ function Z(e) {
         {
             messages: l,
             hasMore: s,
-            loading: p,
-            guildFilter: f,
+            loading: f,
+            guildFilter: p,
             roleFilter: b,
             everyoneFilter: y,
         } = (0, a.cj)([v.ZP], () => ({
@@ -63,13 +63,13 @@ function Z(e) {
             everyoneFilter: v.ZP.everyoneFilter,
         })),
         j = (0, m.Us)({ location: "RecentMentions" }),
-        C = (0, d.Z)(f),
-        x = (0, d.Z)(b),
+        x = (0, d.Z)(p),
+        C = (0, d.Z)(b),
         P = (0, d.Z)(y);
     i.useEffect(() => {
         if (!v.ZP.hasLoadedEver) return void N(n, !0);
-        ((null != C && f !== C) || (null != x && b !== x) || (null != P && y !== P)) && N(n, !0);
-    }, [C, f, x, b, P, y, n, !0]),
+        ((null != x && p !== x) || (null != C && b !== C) || (null != P && y !== P)) && N(n, !0);
+    }, [x, p, C, b, P, y, n, !0]),
         (0, u.ZP)(() => {
             (null == l ? void 0 : l.some(h.k5)) && (c.Z.clearMentions(), N(n, !0));
         }),
@@ -90,7 +90,7 @@ function Z(e) {
         },
         channel: n,
         messages: l,
-        loading: p,
+        loading: f,
         hasMore: s,
         analyticsName: "Recent Mentions",
         loadMore: function () {
@@ -121,13 +121,13 @@ function T(e) {
     let { message: t, gotoMessage: n, dismissible: i } = e;
     if (null == t) return null;
     let l = _.Z.getChannel(t.channel_id);
-    if (null == l || (0, p._t)(l) || (0, p.ft)(l)) return null;
+    if (null == l || (0, f._t)(l) || (0, f.ft)(l)) return null;
     let o = y.Z.didAgree(l.getGuildId()),
-        a = !!(0, p.qF)(l) && !o;
+        a = !!(0, f.qF)(l) && !o;
     return (0, r.jsxs)("div", {
         className: I.container,
         children: [
-            (0, r.jsx)(C.Z, {
+            (0, r.jsx)(x.Z, {
                 channel: l,
                 gotoChannel: n,
                 children:
@@ -146,7 +146,7 @@ function T(e) {
                         onJump: n,
                     }),
                     (0, r.jsx)(
-                        f.Z,
+                        p.Z,
                         {
                             message: t,
                             channel: l,
@@ -165,7 +165,7 @@ function T(e) {
     });
 }
 function A() {
-    return (0, r.jsx)(x.Z, {
+    return (0, r.jsx)(C.Z, {
         Icon: s.lOy,
         header: S.intl.string(S.t.bgDz74),
         tip: S.intl.string(S.t.NS15vk),

@@ -9,7 +9,7 @@ n.r(t),
         casual: () => g,
         createCasualConfiguration: () => O,
         createConfiguration: () => v,
-        hant: () => m,
+        hant: () => h,
         parse: () => b,
         parseDate: () => y,
         strict: () => E,
@@ -24,10 +24,10 @@ var r = n(766403),
     u = n(62927),
     d = n(461190),
     f = n(961308),
-    _ = n(908092),
-    p = n(628475),
-    h = n(29451);
-let m = new a.k(O()),
+    p = n(908092),
+    _ = n(628475),
+    m = n(29451);
+let h = new a.k(O()),
     g = new a.k(O()),
     E = new a.k(v());
 function b(e, t, n) {
@@ -42,8 +42,8 @@ function O() {
 }
 function v() {
     let e = (0, i.l)({
-        parsers: [new c.Z(), new d.Z(), new _.Z(), new f.Z(), new u.Z()],
-        refiners: [new p.Z(), new h.Z()],
+        parsers: [new c.Z(), new d.Z(), new p.Z(), new f.Z(), new u.Z()],
+        refiners: [new _.Z(), new m.Z()],
     });
     return (e.refiners = e.refiners.filter((e) => !(e instanceof r.Z))), e;
 }

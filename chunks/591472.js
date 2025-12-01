@@ -57,16 +57,16 @@ function d(e, t) {
     );
 }
 let f = null,
-    _ = new Map();
-function p(e) {
+    p = new Map();
+function _(e) {
     let { applicationId: t } = e;
-    _.set(t, !0);
+    p.set(t, !0);
 }
-function h(e) {
+function m(e) {
     let { applicationId: t, proxyTicket: n } = e,
         r = (0, o.ZP)(t);
-    if (null == r) return void _.delete(t);
-    _.delete(t),
+    if (null == r) return void p.delete(t);
+    p.delete(t),
         null != f && (f = null),
         (f = {
             applicationId: t,
@@ -76,9 +76,9 @@ function h(e) {
             proxyTicket: n,
         });
 }
-function m(e) {
+function h(e) {
     let { applicationId: t } = e;
-    _.delete(t);
+    p.delete(t);
 }
 function g(e) {
     let { applicationId: t } = e;
@@ -100,14 +100,14 @@ class b extends (r = i.ZP.Store) {
     }
     isLaunchingFrame(e) {
         var t;
-        return null != e ? null != (t = _.get(e)) && t : _.size > 0;
+        return null != e ? null != (t = p.get(e)) && t : p.size > 0;
     }
 }
 l(b, "displayName", "FramesStore");
 let y = new b(a.Z, {
-    FRAME_LAUNCH_START: p,
-    FRAME_LAUNCH: h,
-    FRAME_LAUNCH_FAIL: m,
+    FRAME_LAUNCH_START: _,
+    FRAME_LAUNCH: m,
+    FRAME_LAUNCH_FAIL: h,
     FRAME_STOP: g,
     FRAME_UPDATE_LAYOUT_MODE: E,
 });

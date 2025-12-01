@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(539854);
+n.d(t, { Z: () => m }), n(539854);
 var r = n(54381),
     i = n(473749),
     a = n(481060),
@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(276852),
     d = n(691731),
     f = n(967249),
-    _ = n(388032),
-    p = n(837262);
-function h(e) {
-    var t, n, h, m;
+    p = n(388032),
+    _ = n(837262);
+function m(e) {
+    var t, n, m, h;
     let {
             application: g,
             message: E,
@@ -20,19 +20,19 @@ function h(e) {
             presenceActivity: y,
             hideParty: O,
             partyStatusElement: v,
-            currentUserPresenceActivity: I,
-            onClickContent: T,
-            onView: S,
+            currentUserPresenceActivity: S,
+            onClickContent: I,
+            onView: T,
             guildId: A,
         } = e,
-        C = (0, d.g)(I, y),
+        C = (0, d.g)(S, y),
         N = (0, c.Lz)(y, E.author, "Invite Embed"),
-        R = i.useMemo(() => {
+        P = i.useMemo(() => {
             let e = [];
             if (!C) {
                 var t;
                 e.push({
-                    label: null != (t = N.label) ? t : _.intl.string(_.t.VJlc0S),
+                    label: null != (t = N.label) ? t : p.intl.string(p.t.VJlc0S),
                     trackingArea: s.j_.SYNC,
                     onClick: () => {
                         N.onClick();
@@ -43,24 +43,24 @@ function h(e) {
             }
             return e;
         }, [C, N]),
-        P =
+        R =
             null != y && null != y.details && null != y.state
-                ? _.intl.formatToPlainString(_.t.JCvHtx, {
+                ? p.intl.formatToPlainString(p.t.JCvHtx, {
                       track: y.details,
                       artist: y.state,
                   })
                 : g.name,
-        D =
-            null != (h = null == y || null == (t = y.timestamps) ? void 0 : t.start)
-                ? h
+        w =
+            null != (m = null == y || null == (t = y.timestamps) ? void 0 : t.start)
+                ? m
                 : null == y
                   ? void 0
                   : y.created_at,
-        w = i.useMemo(() => {
+        D = i.useMemo(() => {
             var e;
-            return null != D
+            return null != w
                 ? (0, r.jsxs)("div", {
-                      className: p.timestampContainer,
+                      className: _.timestampContainer,
                       children: [
                           (0, r.jsx)(a.RZG, {
                               size: "xxs",
@@ -68,7 +68,7 @@ function h(e) {
                           }),
                           (0, r.jsx)(l.x3, {
                               entry: {
-                                  start: D,
+                                  start: w,
                                   end: null == y || null == (e = y.timestamps) ? void 0 : e.end,
                               },
                               textColor: "currentColor",
@@ -78,35 +78,35 @@ function h(e) {
                       ],
                   })
                 : null;
-        }, [D, null == y || null == (n = y.timestamps) ? void 0 : n.end]),
-        L = i.useMemo(
+        }, [w, null == y || null == (n = y.timestamps) ? void 0 : n.end]),
+        x = i.useMemo(
             () =>
                 (0, r.jsxs)("div", {
-                    className: p.info,
+                    className: _.info,
                     children: [
                         (0, r.jsx)(a.Text, {
                             variant: "text-xs/normal",
-                            className: p.tagline,
+                            className: _.tagline,
                             color: "none",
                             lineClamp: 1,
-                            children: w,
+                            children: D,
                         }),
                         O ? null : v,
                     ],
                 }),
-            [w, O, v],
+            [D, O, v],
         );
     return (0, r.jsx)(o.W, {
         header: b,
-        title: P,
-        iconSrc: null != (m = (0, u.Z)(y, g.id)) ? m : void 0,
-        info: L,
-        actions: R,
-        onClickContent: T,
+        title: R,
+        iconSrc: null != (h = (0, u.Z)(y, g.id)) ? h : void 0,
+        info: x,
+        actions: P,
+        onClickContent: I,
         trackingConfig: {
             id: g.id,
             linkType: f.U.RICH_PRESENCE_INVITE,
-            onView: S,
+            onView: T,
             referrerId: E.author.id,
             guildId: A,
             channelId: E.channel_id,

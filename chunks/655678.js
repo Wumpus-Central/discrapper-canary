@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,23 +9,23 @@ var r = n(54381),
     u = n(443603),
     d = n(957825),
     f = n(388032),
-    _ = n(564355);
-function p(e, t) {
+    p = n(564355);
+function _(e, t) {
     let { disabled: n, channel: a } = e,
-        p = (0, l.LN)(a.id),
-        h = i.useCallback(() => {
+        _ = (0, l.LN)(a.id),
+        m = i.useCallback(() => {
             (0, l.Rg)(a.id, c.MG.MessageComposerButtons);
         }, [a.id]);
     return n
         ? null
         : (0, r.jsx)("div", {
-              className: o()(d.CT, _.buttonContainer),
+              className: o()(d.CT, p.buttonContainer),
               ref: t,
               children: (0, r.jsx)(u.Z, {
-                  className: o()(_.button, _.messageConfettiButton),
-                  childClassName: o()(_.messageConfettiIcon, { [_.active]: p }),
-                  onClick: h,
-                  isActive: p,
+                  className: o()(p.button, p.messageConfettiButton),
+                  childClassName: o()(p.messageConfettiIcon, { [p.active]: _ }),
+                  onClick: m,
+                  isActive: _,
                   "aria-label": f.intl.string(f.t.yvN8bE),
                   "aria-haspopup": "false",
                   children: (0, r.jsx)(s.l22, {
@@ -35,4 +35,4 @@ function p(e, t) {
               }),
           });
 }
-let h = i.memo(i.forwardRef(p));
+let m = i.memo(i.forwardRef(_));

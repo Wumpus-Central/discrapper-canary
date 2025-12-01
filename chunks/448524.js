@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(54381);
 n(473749);
 var i = n(399606),
@@ -10,34 +10,34 @@ var i = n(399606),
     u = n(792258),
     d = n(657825),
     f = n(872608),
-    _ = n(597754),
-    p = n(388032),
-    h = n(336888);
-let m = () => {
+    p = n(744038),
+    _ = n(388032),
+    m = n(336888);
+let h = () => {
     let e = (0, i.e7)([s.Z], () => s.Z.getTopUserActivities()),
         t = (0, i.e7)([s.Z], () => s.Z.getTopGuildActivities());
     return 0 === e.length && 0 === t.length
         ? null
         : (0, r.jsxs)("div", {
-              className: h.container,
+              className: m.container,
               children: [
                   e.length > 0 &&
                       (0, r.jsxs)("div", {
-                          className: h.actionSection,
+                          className: m.actionSection,
                           children: [
                               (0, r.jsx)(o.Heading, {
                                   variant: "text-md/medium",
-                                  className: h.sectionHeader,
-                                  children: p.intl.string(_.default.BxbvS7),
+                                  className: m.sectionHeader,
+                                  children: _.intl.string(p.default.BxbvS7),
                               }),
                               (0, r.jsx)("div", {
-                                  className: h.avatarList,
+                                  className: m.avatarList,
                                   children:
                                       1 === e.length
                                           ? (0, r.jsx)(d.Z, {
                                                 userId: e[0].user_id,
                                                 subText: (0, l.Kp)(e[0].dms_sent, e[0].call_count),
-                                                className: h.userRow,
+                                                className: m.userRow,
                                             })
                                           : e.map((e) =>
                                                 (0, r.jsx)(
@@ -55,21 +55,21 @@ let m = () => {
                       }),
                   t.length > 0 &&
                       (0, r.jsxs)("div", {
-                          className: h.actionSection,
+                          className: m.actionSection,
                           children: [
                               (0, r.jsx)(o.Heading, {
                                   variant: "text-md/medium",
-                                  className: h.sectionHeader,
-                                  children: p.intl.string(_.default.Lq9Set),
+                                  className: m.sectionHeader,
+                                  children: _.intl.string(p.default.Lq9Set),
                               }),
                               1 === t.length
                                   ? (0, r.jsx)(u.Z, {
                                         guildId: t[0].guild_id,
                                         customSubtext: (0, l.Kp)(t[0].messages_sent, t[0].call_count),
-                                        className: h.guildRow,
+                                        className: m.guildRow,
                                     })
                                   : (0, r.jsx)("div", {
-                                        className: h.avatarList,
+                                        className: m.avatarList,
                                         children: t.map((e) => {
                                             var t, n;
                                             let i = s.Z.getGuild(e.guild_id),

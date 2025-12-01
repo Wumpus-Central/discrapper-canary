@@ -1,13 +1,13 @@
-_.d(e, { y: () => n });
-var a = _(617726),
-    r = _(101284);
-function n(t, e, _) {
-    let n = [
+r.d(t, { y: () => i });
+var n = r(617726),
+    a = r(101284);
+function i(e, t, r) {
+    let i = [
         { type: "client_report" },
         {
-            timestamp: _ || (0, r.yW)(),
-            discarded_events: t,
+            timestamp: r || (0, a.yW)(),
+            discarded_events: e,
         },
     ];
-    return (0, a.Jd)(e ? { dsn: e } : {}, [n]);
+    return (0, n.Jd)(t ? { dsn: t } : {}, [i]);
 }

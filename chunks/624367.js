@@ -10,32 +10,32 @@ var i = n(100527),
     u = n(50523),
     d = n(967249);
 function f(e) {
-    let { applicationId: t, customId: n, referrerId: f, linkId: _, message: p } = e,
-        { analyticsLocations: h } = (0, a.ZP)(i.Z.ACTIVITY_BOOKMARK),
-        [m] = (0, l.Z)([t]),
-        g = null != m && (0, o.ye)(m),
-        { data: E, error: b } = (0, c.h)(null == m ? void 0 : m.id, _);
-    return null == m || !1 === g
+    let { applicationId: t, customId: n, referrerId: f, linkId: p, message: _ } = e,
+        { analyticsLocations: m } = (0, a.ZP)(i.Z.ACTIVITY_BOOKMARK),
+        [h] = (0, l.Z)([t]),
+        g = null != h && (0, o.ye)(h),
+        { data: E, error: b } = (0, c.h)(null == h ? void 0 : h.id, p);
+    return null == h || !1 === g
         ? null
-        : null != _ && null == b && null != E
+        : null != p && null == b && null != E
           ? (0, r.jsx)(a.Gt, {
-                value: h,
+                value: m,
                 children: (0, r.jsx)(u.b, {
-                    application: m,
+                    application: h,
                     customId: n,
                     customLink: E,
                     referrerId: f,
-                    message: p,
+                    message: _,
                 }),
             })
           : (0, r.jsx)(a.Gt, {
-                value: h,
+                value: m,
                 children: (0, r.jsx)(s.O, {
-                    app: m,
+                    app: h,
                     linkType: d.U.ACTIVITY,
                     activityCustomId: n,
                     activityReferrerId: f,
-                    message: p,
+                    message: _,
                 }),
             });
 }

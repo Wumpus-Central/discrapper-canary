@@ -21,18 +21,18 @@ function h(e) {
         } = (0, c.JL)(),
         { isGift: g } = (0, d.wD)(),
         v = null != l ? (0, s.Af)(l) : null,
-        x = null != v ? (0, s.gq)(v.planId) : null,
-        y = null != v ? (0, s.Rd)(v.planId) : null,
-        P = (0, p.Kp)({
+        x = null != v ? (0, s.MF)(v.planId) : null,
+        P = null != v ? (0, s.Rd)(v.planId) : null,
+        y = (0, p.Kp)({
             isTrial: !1,
             isGift: g,
             selectedSkuId: h,
             startedPaymentFlowWithPaymentSources: b.current,
         });
     return (
-        a()(null != y, "Expected premium type"),
+        a()(null != P, "Expected premium type"),
         (0, r.jsx)(o.Z, {
-            premiumType: y,
+            premiumType: P,
             titleText: m.intl.string(m.t["7VcWW0"]),
             subtitleText: m.intl.format(m.t.Qk34Ik, { subscriptionName: x }),
             footer: (0, r.jsxs)(i.ButtonGroup, {
@@ -43,7 +43,7 @@ function h(e) {
                         variant: "primary",
                         text: m.intl.string(m.t["3PatSz"]),
                         onClick: () => {
-                            P ? (f((0, p.nA)(h, l)), t(u.h8.REVIEW)) : t(u.h8.PLAN_SELECT);
+                            y ? (f((0, p.nA)(h, l)), t(u.h8.REVIEW)) : t(u.h8.PLAN_SELECT);
                         },
                     }),
                     (0, r.jsx)(i.Button, {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eR }), n(388685), n(583741), n(539854), n(49124), n(35282), n(781311);
+n.d(t, { Z: () => eA }), n(388685), n(583741), n(539854), n(49124), n(35282), n(781311);
 var a = n(54381),
     l = n(473749),
     i = n(120356),
@@ -12,32 +12,32 @@ var a = n(54381),
     p = n(570140),
     h = n(765250),
     x = n(13245),
-    g = n(593472),
-    f = n(393238),
+    f = n(593472),
+    g = n(393238),
     b = n(600164),
     v = n(594190),
     j = n(984370),
-    _ = n(427860),
-    y = n(837268),
+    _ = n(837268),
+    y = n(307149),
     C = n(991186),
     S = n(371651),
     E = n(829907),
-    N = n(610394),
-    T = n(338949),
+    T = n(610394),
+    N = n(338949),
     O = n(556809),
     P = n(886118),
     I = n(301801),
     w = n(352527),
     k = n(355863),
-    A = n(449224),
-    R = n(556296),
+    R = n(449224),
+    A = n(556296),
     Z = n(808506),
     D = n(572004),
     L = n(55935),
     M = n(70956),
     U = n(136015),
-    B = n(13140),
-    F = n(145597),
+    F = n(13140),
+    B = n(145597),
     G = n(246992),
     z = n(257785),
     H = n(484036),
@@ -166,7 +166,7 @@ function en(e) {
 let ea = l.memo(function (e) {
         let { trackedGame: t } = e,
             n = (0, d.e7)([v.ZP], () => v.ZP.getGameOrTransformedSubgameForPID(t.pid)),
-            l = (0, d.e7)([A.Z], () => A.Z.getGameForPID(t.pid)),
+            l = (0, d.e7)([R.Z], () => R.Z.getGameForPID(t.pid)),
             i = (0, d.e7)([v.ZP], () => (null == n ? null : v.ZP.getGameOverlayStatus(n)));
         return (0, a.jsxs)("div", {
             className: J.panelGroup,
@@ -448,7 +448,7 @@ let es = l.memo(function (e) {
     );
 });
 function eo() {
-    let e = (0, d.e7)([T.Z], () => T.Z.hasRenderDebugMode(y.GO.TrackFocusPIDs)),
+    let e = (0, d.e7)([N.Z], () => N.Z.hasRenderDebugMode(_.GO.TrackFocusPIDs)),
         t = (0, d.Wu)([S.default], () => S.default.getDevToolsFocusedPidsWithTimestamp());
     return (0, a.jsxs)("div", {
         className: J.panelGroup,
@@ -460,8 +460,8 @@ function eo() {
                         checked: e,
                         onChange: () =>
                             void x.Z.setRenderDebugMode(
-                                !T.Z.hasRenderDebugMode(y.GO.TrackFocusPIDs),
-                                y.GO.TrackFocusPIDs,
+                                !N.Z.hasRenderDebugMode(_.GO.TrackFocusPIDs),
+                                _.GO.TrackFocusPIDs,
                             ),
                         label: "Track Focus Pids",
                     }),
@@ -492,7 +492,7 @@ function eo() {
                                 children: (0, a.jsx)(m.aML, {
                                     "data-migration-pending": !0,
                                     position: "left",
-                                    text: i === y.d5.TRACK_FOCUS ? "Tracked Focus Event" : "Clear Focus Event",
+                                    text: i === _.d5.TRACK_FOCUS ? "Tracked Focus Event" : "Clear Focus Event",
                                     children: (e) => {
                                         var l;
                                         return (0, a.jsx)(
@@ -500,7 +500,7 @@ function eo() {
                                             $(Q({}, e), {
                                                 children: (0, a.jsxs)(m.Text, {
                                                     variant: "text-sm/medium",
-                                                    color: i === y.d5.TRACK_FOCUS ? "text-default" : "text-danger",
+                                                    color: i === _.d5.TRACK_FOCUS ? "text-default" : "text-danger",
                                                     children: [
                                                         (0, a.jsx)(es, {
                                                             pid: n,
@@ -533,7 +533,7 @@ let ec = l.memo(function (e) {
                 let a = null == (e = S.default.getTrackedGameByPid(t)) ? void 0 : e.fullscreenType;
                 if (null != a) return a;
                 let l = v.ZP.getGameOrTransformedSubgameForPID(t);
-                return null != (n = null == l ? void 0 : l.fullscreenType) ? n : g.Jx.UNKNOWN;
+                return null != (n = null == l ? void 0 : l.fullscreenType) ? n : f.Jx.UNKNOWN;
             }, [t]);
         return (0, a.jsxs)(m.Text, {
             variant: "text-sm/normal",
@@ -642,7 +642,7 @@ let ec = l.memo(function (e) {
     eu = l.memo(function () {
         var e, t;
         let n = (0, d.cj)([S.default], () => S.default.getTrackedGames()),
-            l = (0, F.getPID)(),
+            l = (0, B.getPID)(),
             i = (0, d.e7)([S.default], () => S.default.isOverlayOOPEnabledForPid(l), [l]),
             [r, s] = (0, d.Wu)([w.Z], () => [w.Z.enabled, w.Z.keepOpen]),
             o = (0, d.e7)([Z.default], () => Z.default.getFocusedPID()),
@@ -696,38 +696,38 @@ let ec = l.memo(function (e) {
     }),
     em = [
         {
-            mode: y.GO.ClickZones,
+            mode: _.GO.ClickZones,
             label: "Click Zone Debug Mode",
             tooltip: "Enables a red border around click zones to help with debugging.",
         },
         {
-            mode: y.GO.WidgetAreas,
+            mode: _.GO.WidgetAreas,
             label: "Render Debug Mode",
             tooltip:
                 "Enables a border around any widgets that are rendered on screen that are pinned (even if they are hidden). Blue = pinned widgets, Gray = unpinned widgets",
         },
         {
-            mode: y.GO.WindowContainer,
+            mode: _.GO.WindowContainer,
             label: "Window Container Debug Mode",
             tooltip: "Enables a border the overlay window",
         },
         {
-            mode: y.GO.DisabledGPUBoost,
+            mode: _.GO.DisabledGPUBoost,
             label: "Disable GPU Boost",
             tooltip: "Disables GPU Boost, which can help with performance when games compete for GPU resources.",
         },
         {
-            mode: y.GO.ForceGPUBoost,
+            mode: _.GO.ForceGPUBoost,
             label: "Force GPU Boost",
             tooltip: "Forces GPU Boost, which can help with performance when games compete for GPU resources.",
         },
         {
-            mode: y.GO.OverlayRafManagerForceEnabled,
+            mode: _.GO.OverlayRafManagerForceEnabled,
             label: "Overlay SmartRAF",
             tooltip: "Creates a widget that has a clickzone inside of it, which will show/hide every few seconds.",
         },
         {
-            mode: y.GO.LegacyOverlayLogging,
+            mode: _.GO.LegacyOverlayLogging,
             label: "Legacy Overlay Logging",
             tooltip: "Enables legacy overlay logging, which will forward all legacy logging to the main apps console.",
         },
@@ -735,7 +735,7 @@ let ec = l.memo(function (e) {
     ep = l.memo(function () {
         let [e, t] = ei(K.Odu.CLICK_ZONE_DEBUG),
             [n, i] = ei(K.Odu.PERFORMANCE_DEBUG),
-            r = (0, d.e7)([T.Z], () => T.Z.getRenderDebugModes()),
+            r = (0, d.e7)([N.Z], () => N.Z.getRenderDebugModes()),
             [s, o] = l.useState({});
         return (
             l.useEffect(() => {
@@ -748,13 +748,13 @@ let ec = l.memo(function (e) {
                 className: J.panelGroup,
                 children: em.map((s) => {
                     let o =
-                            s.mode === y.GO.OverlayRafManagerForceEnabled
+                            s.mode === _.GO.OverlayRafManagerForceEnabled
                                 ? "".concat(s.label, " (").concat(O.Z.getLastRAFCallbackReason(), ")")
                                 : s.label,
                         c = () =>
-                            s.mode === y.GO.ClickZones
+                            s.mode === _.GO.ClickZones
                                 ? null != e
-                                : s.mode === y.GO.WidgetAreas
+                                : s.mode === _.GO.WidgetAreas
                                   ? null != n
                                   : r.has(s.mode);
                     return (0, a.jsx)(
@@ -765,8 +765,8 @@ let ec = l.memo(function (e) {
                                 onChange: () => {
                                     var e;
                                     let n = c();
-                                    s.mode === y.GO.ClickZones && t(),
-                                        s.mode === y.GO.WidgetAreas && i(),
+                                    s.mode === _.GO.ClickZones && t(),
+                                        s.mode === _.GO.WidgetAreas && i(),
                                         (e = s.mode),
                                         x.Z.setRenderDebugMode(!n, e);
                                 },
@@ -860,20 +860,20 @@ let ec = l.memo(function (e) {
             },
             r = [
                 {
-                    label: y.R5.UNSET,
-                    value: y.R5.UNSET,
+                    label: _.R5.UNSET,
+                    value: _.R5.UNSET,
                 },
                 {
-                    label: y.R5.IN_PROCESS_V2,
-                    value: y.R5.IN_PROCESS_V2,
+                    label: _.R5.IN_PROCESS_V2,
+                    value: _.R5.IN_PROCESS_V2,
                 },
                 {
-                    label: y.R5.OUT_OF_PROCESS_V3,
-                    value: y.R5.OUT_OF_PROCESS_V3,
+                    label: _.R5.OUT_OF_PROCESS_V3,
+                    value: _.R5.OUT_OF_PROCESS_V3,
                 },
                 {
-                    label: y.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
-                    value: y.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
+                    label: _.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
+                    value: _.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
                 },
             ].map((t) => $(Q({}, t), { label: "".concat(t.label, " ").concat(e === t.value ? "(current)" : "") }));
         return (0, a.jsx)(m.aML, {
@@ -896,7 +896,7 @@ let ec = l.memo(function (e) {
                 ),
         });
     });
-function eg(e) {
+function ef(e) {
     let { modalProps: t, onClose: n } = e,
         [i, r] = l.useState(null);
     function s() {
@@ -963,39 +963,39 @@ function eg(e) {
         ),
     );
 }
-let ef = {
+let eg = {
     native: {
         label: "Native",
-        filter: (e) => e.type === _.C7.NativeLegacy || e.type === _.C7.NativeOOP,
+        filter: (e) => e.type === y.C7.NativeLegacy || e.type === y.C7.NativeOOP,
     },
     render: {
         label: "Render",
-        filter: (e) => e.type === _.C7.Renderer,
+        filter: (e) => e.type === y.C7.Renderer,
     },
     flux: {
         label: "Flux",
-        filter: (e) => e.type === _.C7.Flux,
+        filter: (e) => e.type === y.C7.Flux,
     },
     client: {
         label: "Client",
-        filter: (e) => e.type === _.C7.OOPModule || e.type === _.C7.LegacyModule,
+        filter: (e) => e.type === y.C7.OOPModule || e.type === y.C7.LegacyModule,
     },
 };
 function eb(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.l6.Info;
-    if (t === _.l6.Error) return "var(--text-danger)";
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : y.l6.Info;
+    if (t === y.l6.Error) return "var(--text-danger)";
     switch (e) {
-        case _.C7.NativeLegacy:
+        case y.C7.NativeLegacy:
             return "var(--yellow-500)";
-        case _.C7.NativeOOP:
+        case y.C7.NativeOOP:
             return "var(--green-500)";
-        case _.C7.Flux:
+        case y.C7.Flux:
             return "var(--brand-400)";
-        case _.C7.Renderer:
+        case y.C7.Renderer:
             return "var(--brand-500)";
-        case _.C7.LegacyModule:
+        case y.C7.LegacyModule:
             return "var(--yellow-300)";
-        case _.C7.OOPModule:
+        case y.C7.OOPModule:
             return "var(--green-300)";
         default:
             return "var(--gray-400)";
@@ -1030,11 +1030,11 @@ let ev = [
                         variant: "text-md/normal",
                         color: (function (e) {
                             switch (e) {
-                                case _.l6.Info:
+                                case y.l6.Info:
                                     return "text-primary";
-                                case _.l6.Warning:
+                                case y.l6.Warning:
                                     return "text-feedback-warning";
-                                case _.l6.Error:
+                                case y.l6.Error:
                                     return "text-danger";
                                 default:
                                     return "text-secondary";
@@ -1062,16 +1062,16 @@ let ev = [
 ];
 function ej(e) {
     switch (e) {
-        case _.C7.NativeLegacy:
+        case y.C7.NativeLegacy:
             return m.GON;
-        case _.C7.NativeOOP:
+        case y.C7.NativeOOP:
             return m.ljO;
-        case _.C7.Renderer:
-        case _.C7.Flux:
+        case y.C7.Renderer:
+        case y.C7.Flux:
             return m.n6r;
-        case _.C7.LegacyModule:
+        case y.C7.LegacyModule:
             return m.pzj;
-        case _.C7.OOPModule:
+        case y.C7.OOPModule:
             return m.m3e;
         default:
             return m.pzj;
@@ -1090,8 +1090,8 @@ let ey = ["__webpack_require__", "fn"],
             render: (e) => {
                 var t, n, l, i;
                 let { breadcrumb: s, onClose: c } = e,
-                    { name: d, type: u, logType: p, nativeId: h, stack: x, data: g, timestamp: f, pid: b } = s,
-                    v = o()(f),
+                    { name: d, type: u, logType: p, nativeId: h, stack: x, data: f, timestamp: g, pid: b } = s,
+                    v = o()(g),
                     _ = ej(u);
                 return (0, a.jsxs)(m.w0Z, {
                     className: J.subPanelScroller,
@@ -1172,8 +1172,8 @@ let ey = ["__webpack_require__", "fn"],
                                 }),
                                 (0, a.jsx)(z.Z9, {
                                     name: "Data",
-                                    copyValue: e_(g),
-                                    children: (0, a.jsx)("code", { children: e_(g) }),
+                                    copyValue: e_(f),
+                                    children: (0, a.jsx)("code", { children: e_(f) }),
                                 }),
                                 null != x &&
                                     (0, a.jsx)(z.Z9, {
@@ -1232,14 +1232,14 @@ let ey = ["__webpack_require__", "fn"],
         },
         throttleMs: 100,
     };
-function eN() {
-    let { ref: e, height: t } = (0, f.ZP)(),
-        n = (0, d.e7)([T.Z], () => T.Z.isModuleLoggingEnabled()),
+function eT() {
+    let { ref: e, height: t } = (0, g.ZP)(),
+        n = (0, d.e7)([N.Z], () => N.Z.isModuleLoggingEnabled()),
         [i, s] = l.useState(n),
         [o, c] = l.useState(!1),
         [u, p] = l.useState(null),
-        [h, g] = l.useState(Object.keys(ef)),
-        [b, v] = (0, d.e7)([T.Z], () => T.Z.getOverlayLoggingBreadcrumbs(), [], U.Q),
+        [h, f] = l.useState(Object.keys(eg)),
+        [b, v] = (0, d.e7)([N.Z], () => N.Z.getOverlayLoggingBreadcrumbs(), [], U.Q),
         [j, _] = l.useState(null),
         y = null != j ? j : b,
         C = null != j ? -1 : v;
@@ -1250,44 +1250,44 @@ function eN() {
                 : p(null));
     }, [o, y, C]);
     let [S, E] = l.useState(""),
-        N = l.useMemo(
+        T = l.useMemo(
             () =>
                 0 === C
                     ? []
                     : y.filter((e) => {
                           if (o && null != u && e.timestamp < u) return !1;
                           for (let t of h) {
-                              let { filter: n } = ef[t];
+                              let { filter: n } = eg[t];
                               if (n(e)) return !0;
                           }
                           return !1;
                       }),
             [y, h, u, o, C],
         ),
-        [O, P] = l.useState(N),
+        [O, P] = l.useState(T),
         [w, k] = l.useState(null),
-        A = l.useMemo(() => y.find((e) => e.key === w), [y, w]),
-        R = l.useCallback((e) => {
+        R = l.useMemo(() => y.find((e) => e.key === w), [y, w]),
+        A = l.useCallback((e) => {
             P(e);
         }, []),
         { renderSelectedTab: Z } = (0, W.ZP)({ tabs: eS }, []);
-    (0, I.BO)(S, N, R, eE, [y]);
+    (0, I.BO)(S, T, A, eE, [y]);
     let L = l.useCallback((e) => {
             s(e), x.Z.setModuleLogging(e);
         }, []),
-        [M, B] = l.useState(!1),
-        F = l.useRef(null),
+        [M, F] = l.useState(!1),
+        B = l.useRef(null),
         G = l.useCallback(() => {
-            (0, D.JG)(JSON.stringify(N)), B(!0);
-        }, [N]);
+            (0, D.JG)(JSON.stringify(T)), F(!0);
+        }, [T]);
     l.useEffect(() => {
         if (M)
             return (
-                (F.current = setTimeout(() => {
-                    B(!1);
+                (B.current = setTimeout(() => {
+                    F(!1);
                 }, 4000)),
                 () => {
-                    null != F.current && clearTimeout(F.current);
+                    null != B.current && clearTimeout(B.current);
                 }
             );
     }, [M]);
@@ -1299,7 +1299,7 @@ function eN() {
                 if (e) return _(null);
                 (0, m.h7j)(
                     (e) =>
-                        (0, a.jsx)(eg, {
+                        (0, a.jsx)(ef, {
                             modalProps: e,
                             onClose: (t) => {
                                 z(t), e.onClose();
@@ -1372,14 +1372,14 @@ function eN() {
                     }),
                     (0, a.jsx)("div", {
                         className: r()(J.toolbar, J.filtersToolbar),
-                        children: Object.entries(ef).map((e) => {
+                        children: Object.entries(eg).map((e) => {
                             let [t, n] = e;
                             return (0, a.jsx)(
                                 m.P3F,
                                 {
                                     className: r()(J.filter, h.includes(t) && J.activeFilter),
                                     onClick: () => {
-                                        g((e) => (e.includes(t) ? e.filter((e) => e !== t) : [...e, t]));
+                                        f((e) => (e.includes(t) ? e.filter((e) => e !== t) : [...e, t]));
                                     },
                                     children: (0, a.jsx)(m.Text, {
                                         variant: "text-sm/normal",
@@ -1411,21 +1411,21 @@ function eN() {
                     onClickRow: (e) => k(e.key),
                 }),
             }),
-            null != A &&
+            null != R &&
                 (0, a.jsx)(H.Z, {
                     className: r()(J.panelGroup, J.subPanel),
                     minHeight: 100,
                     initialHeight: null != t ? t / 3 : 300,
                     children: Z({
-                        breadcrumb: A,
+                        breadcrumb: R,
                         onClose: () => k(null),
                     }),
                 }),
         ],
     });
 }
-let eT = l.memo(function () {
-        let e = (0, d.e7)([N.Z], () => N.Z.getPopoutInitializationStages());
+let eN = l.memo(function () {
+        let e = (0, d.e7)([T.Z], () => T.Z.getPopoutInitializationStages());
         return (0, a.jsxs)("div", {
             className: J.panelGroup,
             children: [
@@ -1446,8 +1446,8 @@ let eT = l.memo(function () {
         });
     }),
     eO = l.memo(function () {
-        let e = (0, d.e7)([T.Z], () => T.Z.isStateDebuggingEnabled()),
-            t = (0, d.e7)([T.Z], () => T.Z.getDebuggingState());
+        let e = (0, d.e7)([N.Z], () => N.Z.isStateDebuggingEnabled()),
+            t = (0, d.e7)([N.Z], () => N.Z.getDebuggingState());
         return (
             l.useEffect(
                 () => (
@@ -1489,7 +1489,7 @@ function eP() {
                 (0, a.jsx)(eu, {}),
                 (0, a.jsx)(eo, {}),
                 (0, a.jsx)(ed, {}),
-                (0, a.jsx)(eT, {}),
+                (0, a.jsx)(eN, {}),
                 (0, a.jsx)(eO, {}),
             ],
         }),
@@ -1508,7 +1508,7 @@ let eI = (e) => {
     ew = (e) => (null == e ? "Disabled" : e ? "True" : "False"),
     ek = l.memo(function () {
         let e = (0, C.xj)(),
-            t = (0, d.e7)([R.ZP], () => R.ZP.getOverlayKeybind());
+            t = (0, d.e7)([A.ZP], () => A.ZP.getOverlayKeybind());
         return (0, a.jsxs)("div", {
             className: J.panelGroup,
             children: [
@@ -1524,7 +1524,7 @@ let eI = (e) => {
                     variant: "text-sm/normal",
                     color: "text-secondary",
                     children: (0, a.jsx)("pre", {
-                        children: JSON.stringify($(Q({}, e), { overlayKeybind: (0, B.BB)(t.shortcut) }), void 0, 2),
+                        children: JSON.stringify($(Q({}, e), { overlayKeybind: (0, F.BB)(t.shortcut) }), void 0, 2),
                     }),
                 }),
                 (0, a.jsx)(m.Heading, {
@@ -1596,7 +1596,7 @@ let eI = (e) => {
             ],
         });
     });
-function eA() {
+function eR() {
     return (0, a.jsx)(m.w0Z, {
         children: (0, a.jsx)("div", {
             className: r()(X.panel, J.subPanel),
@@ -1604,7 +1604,7 @@ function eA() {
         }),
     });
 }
-function eR() {
+function eA() {
     let [e, t] = l.useState("state");
     return (
         l.useEffect(
@@ -1658,8 +1658,8 @@ function eR() {
                     ],
                 }),
                 "state" === e && (0, a.jsx)(eP, {}),
-                "logging" === e && (0, a.jsx)(eN, {}),
-                "experiments" === e && (0, a.jsx)(eA, {}),
+                "logging" === e && (0, a.jsx)(eT, {}),
+                "experiments" === e && (0, a.jsx)(eR, {}),
             ],
         })
     );

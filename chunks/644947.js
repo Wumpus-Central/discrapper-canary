@@ -1,7 +1,7 @@
 n.d(t, {
-    Zq: () => p,
+    Zq: () => _,
     _8: () => f,
-    s$: () => _,
+    s$: () => p,
 }),
     n(388685);
 var r = n(663042),
@@ -64,7 +64,7 @@ let d = (0, r.U)((e) => ({ captchaServeVolume: {} }));
 function f() {
     return 0 === Object.keys(d.getState().captchaServeVolume).length;
 }
-function _(e) {
+function p(e) {
     (0, a.j)(() => {
         d.setState((t) =>
             null == e
@@ -75,7 +75,7 @@ function _(e) {
         );
     });
 }
-function p() {
+function _() {
     let e = !0;
     for (let [t, n] of Object.entries(d.getState().captchaServeVolume))
         o.Z.distribution(

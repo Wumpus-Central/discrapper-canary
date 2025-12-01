@@ -1,4 +1,4 @@
-n.d(t, { G: () => T }), n(388685);
+n.d(t, { G: () => I }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(442837),
@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(153867),
     d = n(514361),
     f = n(266454),
-    _ = n(243778),
-    p = n(210887),
-    h = n(314897),
-    m = n(70956),
+    p = n(243778),
+    _ = n(210887),
+    m = n(314897),
+    h = n(70956),
     g = n(709054),
     E = n(596401),
     b = n(921944),
@@ -46,21 +46,21 @@ function v(e) {
     }
     return e;
 }
-let I = 1000;
-function T() {
+let S = 1000;
+function I() {
     let [e, t] = i.useState(!1),
         O = (0, l.VXO)(E.Xd),
-        T = i.useMemo(() => [o.z.DESKTOP_REFRESH_ONBOARDING_MODAL], []),
-        [S, A] = (0, _.US)(T),
-        C = S === o.z.DESKTOP_REFRESH_ONBOARDING_MODAL,
-        N = (0, a.e7)([h.default], () => h.default.getId());
+        I = i.useMemo(() => [o.z.DESKTOP_REFRESH_ONBOARDING_MODAL], []),
+        [T, A] = (0, p.US)(I),
+        C = T === o.z.DESKTOP_REFRESH_ONBOARDING_MODAL,
+        N = (0, a.e7)([m.default], () => m.default.getId());
     i.useLayoutEffect(() => {
-        null != N && g.default.age(N) < m.Z.Millis.DAY && (0, f.Q3)(o.z.DESKTOP_REFRESH_ONBOARDING_MODAL);
+        null != N && g.default.age(N) < h.Z.Millis.DAY && (0, f.Q3)(o.z.DESKTOP_REFRESH_ONBOARDING_MODAL);
         let e = "desktop_refresh_theme_migration_key",
             t = "true" === s.K.get(e);
         !C ||
             t ||
-            p.Z.theme !== y.BR.DARK ||
+            _.Z.theme !== y.BR.DARK ||
             null != d.Z.gradientPreset ||
             t ||
             (s.K.set(e, "true"), (0, u.ZI)({ theme: y.BR.DARKER }));
@@ -76,7 +76,7 @@ function T() {
                 }
             );
         }, []);
-    let R = i.useCallback(() => {
+    let P = i.useCallback(() => {
         (0, l.ZDy)(
             async () => {
                 let { DesktopRefreshOnboardingModal: e } = await n.e("49910").then(n.bind(n, 239191));
@@ -93,9 +93,9 @@ function T() {
     i.useEffect(() => {
         if (C && !O && e) {
             let e = setTimeout(() => {
-                R();
-            }, I);
+                P();
+            }, S);
             return () => clearTimeout(e);
         }
-    }, [e, O, C, R]);
+    }, [e, O, C, P]);
 }

@@ -81,24 +81,24 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function _(e, t) {
-    if ("object" !== h(e) || null === e) return e;
+function p(e, t) {
+    if ("object" !== m(e) || null === e) return e;
     var n = e[Symbol.toPrimitive];
     if (void 0 !== n) {
         var r = n.call(e, t || "default");
-        if ("object" !== h(r)) return r;
+        if ("object" !== m(r)) return r;
         throw TypeError("@@toPrimitive must return a primitive value.");
     }
     return ("string" === t ? String : Number)(e);
 }
-function p(e) {
-    var t = _(e, "string");
-    return "symbol" === h(t) ? t : String(t);
+function _(e) {
+    var t = p(e, "string");
+    return "symbol" === m(t) ? t : String(t);
 }
-function h(e) {
+function m(e) {
     return e && "undefined" != typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e;
 }
-let m = 0.3;
+let h = 0.3;
 var g = (function (e) {
         return (
             (e.UNKNOWN = "UNKNOWN"),
@@ -114,7 +114,7 @@ var g = (function (e) {
 let b = (0, i.F)()(
         (0, r.tJ)(
             (e, t) => ({
-                volume: m,
+                volume: h,
                 muted: !1,
                 transcriptEnabled: !1,
                 captionEnabled: !1,
@@ -169,7 +169,7 @@ let b = (0, i.F)()(
                     (0, a.j)(() => {
                         let r = t().videoProgress,
                             { [n]: i } = r;
-                        e({ videoProgress: d(r, [n].map(p)) });
+                        e({ videoProgress: d(r, [n].map(_)) });
                     });
                 },
                 setTranscriptAsset: (t) => {

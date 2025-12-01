@@ -14,47 +14,47 @@ function u(e) {
         u = e.strategy,
         d = void 0 === u ? "absolute" : u,
         f = e.modifiers,
-        _ = void 0 === f ? c : f,
-        p = e.referenceElement,
-        h = e.onFirstUpdate,
-        m = e.innerRef,
+        p = void 0 === f ? c : f,
+        _ = e.referenceElement,
+        m = e.onFirstUpdate,
+        h = e.innerRef,
         g = e.children,
         E = r.useContext(i.C8),
         b = r.useState(null),
         y = b[0],
         O = b[1],
         v = r.useState(null),
-        I = v[0],
-        T = v[1];
+        S = v[0],
+        I = v[1];
     r.useEffect(
         function () {
-            (0, a.k$)(m, y);
+            (0, a.k$)(h, y);
         },
-        [m, y],
+        [h, y],
     );
-    var S = r.useMemo(
+    var T = r.useMemo(
             function () {
                 return {
                     placement: n,
                     strategy: d,
-                    onFirstUpdate: h,
-                    modifiers: [].concat(_, [
+                    onFirstUpdate: m,
+                    modifiers: [].concat(p, [
                         {
                             name: "arrow",
-                            enabled: null != I,
-                            options: { element: I },
+                            enabled: null != S,
+                            options: { element: S },
                         },
                     ]),
                 };
             },
-            [n, d, h, _, I],
+            [n, d, m, p, S],
         ),
-        A = (0, o.D)(p || E, y, S),
+        A = (0, o.D)(_ || E, y, T),
         C = A.state,
         N = A.styles,
-        R = A.forceUpdate,
-        P = A.update,
-        D = r.useMemo(
+        P = A.forceUpdate,
+        R = A.update,
+        w = r.useMemo(
             function () {
                 return {
                     ref: O,
@@ -64,13 +64,13 @@ function u(e) {
                     isReferenceHidden: C && C.modifiersData.hide ? C.modifiersData.hide.isReferenceHidden : null,
                     arrowProps: {
                         style: N.arrow,
-                        ref: T,
+                        ref: I,
                     },
-                    forceUpdate: R || s,
-                    update: P || l,
+                    forceUpdate: P || s,
+                    update: R || l,
                 };
             },
-            [O, T, n, C, N, P, R],
+            [O, I, n, C, N, R, P],
         );
-    return (0, a.$p)(g)(D);
+    return (0, a.$p)(g)(w);
 }

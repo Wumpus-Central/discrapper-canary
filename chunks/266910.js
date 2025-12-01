@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(420596),
     d = n(880563),
     f = n(168631),
-    _ = n(687158),
-    p = n(213053),
-    h = n(484459),
-    m = n(695346),
+    p = n(687158),
+    _ = n(213053),
+    m = n(484459),
+    h = n(695346),
     g = n(775610),
     E = n(981631),
     b = n(671955),
@@ -46,7 +46,7 @@ function v(e) {
     }
     return e;
 }
-function I(e, t) {
+function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -58,18 +58,18 @@ function I(e, t) {
     }
     return n;
 }
-function T(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : I(Object(t)).forEach(function (n) {
+            : S(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function S(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -95,27 +95,27 @@ let C = function (e) {
         n,
         a,
         O,
-        I,
+        S,
         A,
         {
             style: C,
             src: N,
-            backgroundSrc: R,
-            userId: P,
-            guildId: D,
-            pulseSpeakingIndicator: w = !1,
-            speaking: L = !1,
+            backgroundSrc: P,
+            userId: R,
+            guildId: w,
+            pulseSpeakingIndicator: D = !1,
+            speaking: x = !1,
         } = e,
-        x = S(e, ["style", "src", "backgroundSrc", "userId", "guildId", "pulseSpeakingIndicator", "speaking"]);
-    let M = null != R ? R : N,
-        k = (0, c.ZP)(M, s.Z.unsafe_rawColors.PRIMARY_800.css),
-        j = (0, u.c)(!0, "VideoBackground-web").enabled,
-        U = (0, _.ZP)(null != P ? P : E.lds, D),
+        L = T(e, ["style", "src", "backgroundSrc", "userId", "guildId", "pulseSpeakingIndicator", "speaking"]);
+    let j = null != P ? P : N,
+        M = (0, c.ZP)(j, s.Z.unsafe_rawColors.PRIMARY_800.css),
+        k = (0, u.c)(!0, "VideoBackground-web").enabled,
+        U = (0, p.ZP)(null != R ? R : E.lds, w),
         G = null != (O = (0, f.V3)(null == U || null == (t = U.themeColors) ? void 0 : t[0])) ? O : E.BRd.DARK,
-        { profileThemeStyle: B, profileThemeClassName: Z } = (0, p.Z)({
+        { profileThemeStyle: Z, profileThemeClassName: B } = (0, _.Z)({
             theme: G,
             themeType: b.l.VIDEO_TILE_BACKGROUND,
-            primaryColor: null != (I = null == U || null == (n = U.themeColors) ? void 0 : n[0]) ? I : null,
+            primaryColor: null != (S = null == U || null == (n = U.themeColors) ? void 0 : n[0]) ? S : null,
             secondaryColor: null != (A = null == U || null == (a = U.themeColors) ? void 0 : a[1]) ? A : null,
         }),
         F =
@@ -123,19 +123,19 @@ let C = function (e) {
                 ? void 0
                 : U.getBannerURL({
                       size: 1024,
-                      canAnimate: m.QK.getSetting(),
+                      canAnimate: h.QK.getSetting(),
                   }),
         { useProfileColors: V } = (0, g.$i)("VideoBackground-web"),
-        H = V || j;
+        H = V || k;
     if (
         (i.useEffect(() => {
-            null != P &&
+            null != R &&
                 H &&
-                (0, h.Z)(P, void 0, {
-                    guildId: D,
+                (0, m.Z)(R, void 0, {
+                    guildId: w,
                     dispatchWait: !0,
                 });
-        }, [H, P, D]),
+        }, [H, R, w]),
         null == N)
     )
         return null;
@@ -146,18 +146,18 @@ let C = function (e) {
                     className: y.avatarWrapper,
                     src: N,
                 },
-                x,
+                L,
             ),
         ),
-        W = T(v({}, C), { backgroundColor: k });
+        W = I(v({}, C), { backgroundColor: M });
     return (
-        null != F && L && j && ((W.backgroundImage = "url(".concat(F, ")")), (W.backgroundSize = "cover")),
+        null != F && x && k && ((W.backgroundImage = "url(".concat(F, ")")), (W.backgroundSize = "cover")),
         (0, r.jsx)("div", {
-            style: V ? v({}, C, B) : v({}, W),
-            className: o()(y.background, { [Z]: V }),
-            children: w
+            style: V ? v({}, C, Z) : v({}, W),
+            className: o()(y.background, { [B]: V }),
+            children: D
                 ? (0, r.jsx)(d.Z, {
-                      shouldAnimate: L,
+                      shouldAnimate: x,
                       children: Y,
                   })
                 : Y,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(392711),
@@ -15,17 +15,17 @@ var i = n(54381),
     g = n(607361),
     b = n(463421),
     y = n(981631),
-    C = n(621844),
+    C = n(404789),
     v = n(388032),
     _ = n(405143);
-function x(e) {
+function O(e) {
     let t,
         { activity: n, channel: l, userId: a } = e,
         u = (0, d.IX)(n.application_id).data,
         [p, h] = r.useState(!1),
         [m, g] = r.useState(0),
         b = (0, o.e7)([f.Z], () => f.Z.getChannelId() !== l.id);
-    async function x() {
+    async function O() {
         g(1);
         try {
             await c.Z.sendActivityInvite({
@@ -82,7 +82,7 @@ function x(e) {
                     fullWidth: !0,
                     size: "sm",
                     text: 2 === m ? v.intl.string(C.default["8HU1M2"]) : v.intl.string(C.default.DKHhec),
-                    onClick: x,
+                    onClick: O,
                 }),
                 null != t &&
                     (0, i.jsx)(s.Text, {
@@ -95,7 +95,7 @@ function x(e) {
         });
     }
 }
-function j(e) {
+function x(e) {
     let { userId: t, channel: n } = e,
         s = (0, o.e7)([m.default], () => m.default.getUser(t)),
         c = (0, b.Z)(t, n.guild_id),
@@ -129,7 +129,7 @@ function j(e) {
                       className: _.activityList,
                       children: f.map((e) =>
                           (0, i.jsx)(
-                              x,
+                              O,
                               {
                                   activity: e,
                                   channel: n,

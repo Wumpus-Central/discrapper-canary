@@ -1,4 +1,4 @@
-n.d(t, { v: () => p });
+n.d(t, { v: () => _ });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -61,7 +61,7 @@ function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -69,7 +69,7 @@ function f(e, t) {
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,10 +78,10 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function p(e) {
+function _(e) {
     let t;
-    var { tag: n = "h5", children: i, className: l, disabled: u, required: _ = !1, error: p, errorId: h } = e,
-        m = f(e, ["tag", "children", "className", "disabled", "required", "error", "errorId"]);
+    var { tag: n = "h5", children: i, className: l, disabled: u, required: p = !1, error: _, errorId: m } = e,
+        h = f(e, ["tag", "children", "className", "disabled", "required", "error", "errorId"]);
     return (
         (t = "legend" === n ? n : o.H),
         (0, r.jsxs)(
@@ -92,23 +92,23 @@ function p(e) {
                         className: a()(s[n], "h5" !== n ? s.defaultColor : null, l, {
                             [s["defaultMargin".concat(n)]]: null == l,
                             [s.disabled]: u,
-                            [s.error]: null != p,
+                            [s.error]: null != _,
                         }),
                     },
-                    m,
+                    h,
                 ),
                 {
                     children: [
                         i,
-                        _ && null == p
+                        p && null == _
                             ? (0, r.jsx)("span", {
                                   className: s.required,
                                   children: "*",
                               })
                             : null,
-                        null != p
+                        null != _
                             ? (0, r.jsxs)("span", {
-                                  id: h,
+                                  id: m,
                                   className: s.errorMessage,
                                   children: [
                                       null != i
@@ -117,7 +117,7 @@ function p(e) {
                                                 children: "-",
                                             })
                                           : null,
-                                      p,
+                                      _,
                                   ],
                               })
                             : null,

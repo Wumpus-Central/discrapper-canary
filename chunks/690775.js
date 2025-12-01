@@ -90,26 +90,26 @@ let o = (e) => (t) => {
                 r,
                 i,
             );
-        let _ = () => {
+        let p = () => {
                 let e = l.partialize({ ...r() });
                 return f.setItem(l.name, {
                     state: e,
                     version: l.version,
                 });
             },
-            p = i.setState;
-        i.setState = (e, t) => (p(e, t), _());
-        let h = e((...e) => (n(...e), _()), r, i);
-        i.getInitialState = () => h;
-        let m = () => {
+            _ = i.setState;
+        i.setState = (e, t) => (_(e, t), p());
+        let m = e((...e) => (n(...e), p()), r, i);
+        i.getInitialState = () => m;
+        let h = () => {
             var e, t;
             if (!f) return;
             (c = !1),
                 u.forEach((e) => {
                     var t;
-                    return e(null != (t = r()) ? t : h);
+                    return e(null != (t = r()) ? t : m);
                 });
-            let i = (null == (t = l.onRehydrateStorage) ? void 0 : t.call(l, null != (e = r()) ? e : h)) || void 0;
+            let i = (null == (t = l.onRehydrateStorage) ? void 0 : t.call(l, null != (e = r()) ? e : m)) || void 0;
             return o(f.getItem.bind(f))(l.name)
                 .then((e) => {
                     if (e)
@@ -128,7 +128,7 @@ let o = (e) => (t) => {
                 .then((e) => {
                     var t;
                     let [i, a] = e;
-                    if ((n((s = l.merge(a, null != (t = r()) ? t : h)), !0), i)) return _();
+                    if ((n((s = l.merge(a, null != (t = r()) ? t : m)), !0), i)) return p();
                 })
                 .then(() => {
                     null == i || i(s, void 0), (s = r()), (c = !0), d.forEach((e) => e(s));
@@ -150,7 +150,7 @@ let o = (e) => (t) => {
                     null == f || f.removeItem(l.name);
                 },
                 getOptions: () => l,
-                rehydrate: () => m(),
+                rehydrate: () => h(),
                 hasHydrated: () => c,
                 onHydrate: (e) => (
                     u.add(e),
@@ -165,7 +165,7 @@ let o = (e) => (t) => {
                     }
                 ),
             }),
-            l.skipHydration || m(),
-            s || h
+            l.skipHydration || h(),
+            s || m
         );
     };

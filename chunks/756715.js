@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,22 +48,22 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -71,7 +71,7 @@ function h(e, t) {
     }
     return i;
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -86,15 +86,15 @@ function g(e) {
             onClick: n,
             className: a,
             children: d,
-            rel: _,
-            target: m,
+            rel: p,
+            target: h,
             useDefaultUnderlineStyles: g = !0,
             title: E,
             style: b,
             focusProps: y,
             ref: O,
         } = e,
-        v = h(e, [
+        v = m(e, [
             "href",
             "onClick",
             "className",
@@ -108,22 +108,22 @@ function g(e) {
             "ref",
         ]);
     null != t && null == n && (n = c.X.getDefaultLinkInterceptor(t));
-    let I = i.useContext(l.g$b),
-        T = {
+    let S = i.useContext(l.g$b),
+        I = {
             className: o()(u.anchor, { [u.anchorUnderlineOnHover]: g }, a),
             href: t,
             onClick: n,
-            rel: null != _ ? _ : void 0,
-            target: null != m ? m : void 0,
+            rel: null != p ? p : void 0,
+            target: null != h ? h : void 0,
             title: null != E ? E : void 0,
             style: null != b ? b : void 0,
         };
-    return (null == t || (0, s.B)(t) || ((T.rel = "noreferrer noopener"), (T.target = "_blank")),
-    I && delete T.href,
+    return (null == t || (0, s.B)(t) || ((I.rel = "noreferrer noopener"), (I.target = "_blank")),
+    S && delete I.href,
     null != n)
         ? (0, r.jsx)(
               l.P3F,
-              p(f({ tag: "a" }, v, T), {
+              _(f({ tag: "a" }, v, I), {
                   onClick: n,
                   focusProps: y,
                   innerRef: O,
@@ -132,10 +132,10 @@ function g(e) {
           )
         : (0, r.jsx)(
               l.tEY,
-              p(f({}, y), {
+              _(f({}, y), {
                   children: (0, r.jsx)(
                       "a",
-                      p(f({}, v, T), {
+                      _(f({}, v, I), {
                           ref: O,
                           children: d,
                       }),

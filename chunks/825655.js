@@ -12,21 +12,21 @@ var r = n(54381),
     u = n(131951),
     d = n(63063),
     f = n(865066),
-    _ = n(981631),
-    p = n(388032),
-    h = n(685383);
-function m(e) {
+    p = n(981631),
+    _ = n(388032),
+    m = n(685383);
+function h(e) {
     let { game: t, application: n } = e;
     return null == t || null == n
         ? (0, r.jsx)("div", {
-              className: h.iconContainer,
+              className: m.iconContainer,
               children: (0, r.jsx)(s.Mgn, {
                   size: "sm",
                   color: s.TVs.colors.TEXT_FEEDBACK_WARNING,
               }),
           })
         : (0, r.jsxs)("div", {
-              className: h.gameIconContainer,
+              className: m.gameIconContainer,
               children: [
                   (0, r.jsx)(c.Z, {
                       game: n,
@@ -34,7 +34,7 @@ function m(e) {
                       size: c.A.MEDIUM,
                   }),
                   (0, r.jsx)("div", {
-                      className: h.warningCorner,
+                      className: m.warningCorner,
                       children: (0, r.jsx)(s.Mgn, {
                           size: "sm",
                           color: s.TVs.colors.TEXT_FEEDBACK_WARNING,
@@ -45,17 +45,17 @@ function m(e) {
 }
 function g(e, t) {
     return "voice" === e
-        ? p.intl.string(p.t.vxfv7v)
+        ? _.intl.string(_.t.vxfv7v)
         : null != t
-          ? p.intl.string(p.t.fAYU2G)
-          : p.intl.string(p.t["9V4X/c"]);
+          ? _.intl.string(_.t.fAYU2G)
+          : _.intl.string(_.t["9V4X/c"]);
 }
 function E(e) {
     let t = (0, o.e7)([u.Z], () => u.Z.getMode()),
         { runningGame: n, runningGameApplication: r } = (0, l.Z)();
     null == n || n.elevated || ((n = void 0), (r = void 0));
     let i = (0, f.hi)(),
-        a = i && null != n && t === _.pM4.PUSH_TO_TALK;
+        a = i && null != n && t === p.pM4.PUSH_TO_TALK;
     return {
         canPrompt: "voice" === e ? a : i,
         runningGame: n,
@@ -70,14 +70,14 @@ function b(e) {
         (0, f.sU)(n + (null != o ? "-with-game" : "-no-game"));
     }
     return (0, r.jsxs)("div", {
-        className: a()(h.container, t),
+        className: a()(m.container, t),
         children: [
-            (0, r.jsx)(m, {
+            (0, r.jsx)(h, {
                 game: o,
                 application: l,
             }),
             (0, r.jsxs)("div", {
-                className: h.textContainer,
+                className: m.textContainer,
                 children: [
                     (0, r.jsx)(s.Text, {
                         variant: "text-sm/medium",
@@ -87,8 +87,8 @@ function b(e) {
                     (0, r.jsx)(s.Text, {
                         variant: "text-xs/medium",
                         color: "text-muted",
-                        children: p.intl.format(p.t["/y6htt"], {
-                            helpCenterLink: d.Z.getArticleURL(_.BhN.SYSTEM_SERVICE),
+                        children: _.intl.format(_.t["/y6htt"], {
+                            helpCenterLink: d.Z.getArticleURL(p.BhN.SYSTEM_SERVICE),
                         }),
                     }),
                 ],
@@ -96,7 +96,7 @@ function b(e) {
             (0, r.jsx)(s.Button, {
                 variant: "secondary",
                 size: "sm",
-                text: p.intl.string(p.t["1iI46O"]),
+                text: _.intl.string(_.t["1iI46O"]),
                 onClick: c,
             }),
         ],

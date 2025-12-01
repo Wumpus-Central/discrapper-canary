@@ -50,6 +50,6 @@ if (
     ),
     !i && l(a))
 ) {
-    var _ = s("Promise").prototype.finally;
-    f.finally !== _ && d(f, "finally", _, { unsafe: !0 });
+    var p = s("Promise").prototype.finally;
+    f.finally !== p && d(f, "finally", p, { unsafe: !0 });
 }

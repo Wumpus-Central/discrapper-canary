@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -10,15 +10,15 @@ var i = n(120356),
     u = n(993413),
     d = n(486324),
     f = n(388032),
-    _ = n(808639);
-function p(e) {
+    p = n(808639);
+function _(e) {
     let {
             showRemoveBannerButton: t,
             errors: n,
             onBannerChange: i,
-            guildId: p,
-            className: h,
-            disabled: m = !1,
+            guildId: _,
+            className: m,
+            disabled: h = !1,
             showPremiumIcon: g = !0,
             isTryItOut: E = !1,
             forcedDivider: b,
@@ -27,23 +27,23 @@ function p(e) {
         { newestAnalyticsLocation: O } = (0, l.ZP)(),
         v = y ? s.gtL : o.zx;
     return (0, r.jsx)(u.Z, {
-        className: h,
+        className: m,
         title: f.intl.string(f.t.Vgdusv),
         showPremiumIcon: g,
         errors: n,
-        disabled: m,
+        disabled: h,
         forcedDivider: b,
         children: (0, r.jsxs)("div", {
-            className: _.buttonsContainer,
+            className: p.buttonsContainer,
             children: [
                 (0, r.jsx)(v, {
-                    className: a()({ [_.buttonHighlighted]: y }),
+                    className: a()({ [p.buttonHighlighted]: y }),
                     size: o.zx.Sizes.SMALL,
                     onClick: () =>
                         (0, c.$r)({
                             uploadType: d.pC.BANNER,
                             analyticsSource: O,
-                            guildId: p,
+                            guildId: _,
                             isTryItOut: E,
                         }),
                     children: f.intl.string(f.t.N0bC3P),
@@ -51,11 +51,11 @@ function p(e) {
                 t &&
                     (0, r.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
-                        className: _.removeButton,
+                        className: p.removeButton,
                         children: (0, r.jsx)(s.Button, {
                             variant: "secondary",
                             size: "sm",
-                            text: null != p ? f.intl.string(f.t.jHlJNS) : f.intl.string(f.t.tT9n7D),
+                            text: null != _ ? f.intl.string(f.t.jHlJNS) : f.intl.string(f.t.tT9n7D),
                             onClick: () => i(null),
                         }),
                     }),

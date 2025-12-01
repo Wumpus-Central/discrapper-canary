@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(740078),
     i = n(126387),
     a = n(205208),
@@ -9,27 +9,27 @@ var r = n(740078),
     u = n(510104),
     d = n(632471),
     f = n(607033),
-    _ = n(894417);
-let p = {
+    p = n(894417);
+let _ = {
     name: "preventOverflow",
     enabled: !0,
     phase: "main",
     fn: function (e) {
         var t = e.state,
             n = e.options,
-            p = e.name,
-            h = n.mainAxis,
-            m = void 0 === h || h,
+            _ = e.name,
+            m = n.mainAxis,
+            h = void 0 === m || m,
             g = n.altAxis,
             E = void 0 !== g && g,
             b = n.boundary,
             y = n.rootBoundary,
             O = n.altBoundary,
             v = n.padding,
-            I = n.tether,
-            T = void 0 === I || I,
-            S = n.tetherOffset,
-            A = void 0 === S ? 0 : S,
+            S = n.tether,
+            I = void 0 === S || S,
+            T = n.tetherOffset,
+            A = void 0 === T ? 0 : T,
             C = (0, u.Z)(t, {
                 boundary: b,
                 rootBoundary: y,
@@ -37,82 +37,82 @@ let p = {
                 altBoundary: O,
             }),
             N = (0, i.Z)(t.placement),
-            R = (0, d.Z)(t.placement),
-            P = !R,
-            D = (0, a.Z)(N),
-            w = (0, o.Z)(D),
-            L = t.modifiersData.popperOffsets,
-            x = t.rects.reference,
-            M = t.rects.popper,
-            k = "function" == typeof A ? A(Object.assign({}, t.rects, { placement: t.placement })) : A,
-            j =
-                "number" == typeof k
+            P = (0, d.Z)(t.placement),
+            R = !P,
+            w = (0, a.Z)(N),
+            D = (0, o.Z)(w),
+            x = t.modifiersData.popperOffsets,
+            L = t.rects.reference,
+            j = t.rects.popper,
+            M = "function" == typeof A ? A(Object.assign({}, t.rects, { placement: t.placement })) : A,
+            k =
+                "number" == typeof M
                     ? {
-                          mainAxis: k,
-                          altAxis: k,
+                          mainAxis: M,
+                          altAxis: M,
                       }
                     : Object.assign(
                           {
                               mainAxis: 0,
                               altAxis: 0,
                           },
-                          k,
+                          M,
                       ),
             U = t.modifiersData.offset ? t.modifiersData.offset[t.placement] : null,
             G = {
                 x: 0,
                 y: 0,
             };
-        if (L) {
-            if (m) {
-                var B,
-                    Z = "y" === D ? r.we : r.t$,
-                    F = "y" === D ? r.I : r.F2,
-                    V = "y" === D ? "height" : "width",
-                    H = L[D],
-                    Y = H + C[Z],
+        if (x) {
+            if (h) {
+                var Z,
+                    B = "y" === w ? r.we : r.t$,
+                    F = "y" === w ? r.I : r.F2,
+                    V = "y" === w ? "height" : "width",
+                    H = x[w],
+                    Y = H + C[B],
                     W = H - C[F],
-                    K = T ? -M[V] / 2 : 0,
-                    z = R === r.BL ? x[V] : M[V],
-                    q = R === r.BL ? -M[V] : -x[V],
-                    X = t.elements.arrow,
-                    Q =
-                        T && X
-                            ? (0, l.Z)(X)
+                    K = I ? -j[V] / 2 : 0,
+                    z = P === r.BL ? L[V] : j[V],
+                    q = P === r.BL ? -j[V] : -L[V],
+                    Q = t.elements.arrow,
+                    X =
+                        I && Q
+                            ? (0, l.Z)(Q)
                             : {
                                   width: 0,
                                   height: 0,
                               },
                     J = t.modifiersData["arrow#persistent"] ? t.modifiersData["arrow#persistent"].padding : (0, f.Z)(),
-                    $ = J[Z],
+                    $ = J[B],
                     ee = J[F],
-                    et = (0, s.u)(0, x[V], Q[V]),
-                    en = P ? x[V] / 2 - K - et - $ - j.mainAxis : z - et - $ - j.mainAxis,
-                    er = P ? -x[V] / 2 + K + et + ee + j.mainAxis : q + et + ee + j.mainAxis,
+                    et = (0, s.u)(0, L[V], X[V]),
+                    en = R ? L[V] / 2 - K - et - $ - k.mainAxis : z - et - $ - k.mainAxis,
+                    er = R ? -L[V] / 2 + K + et + ee + k.mainAxis : q + et + ee + k.mainAxis,
                     ei = t.elements.arrow && (0, c.Z)(t.elements.arrow),
-                    ea = ei ? ("y" === D ? ei.clientTop || 0 : ei.clientLeft || 0) : 0,
-                    eo = null != (B = null == U ? void 0 : U[D]) ? B : 0,
+                    ea = ei ? ("y" === w ? ei.clientTop || 0 : ei.clientLeft || 0) : 0,
+                    eo = null != (Z = null == U ? void 0 : U[w]) ? Z : 0,
                     es = H + en - eo - ea,
                     el = H + er - eo,
-                    ec = (0, s.u)(T ? (0, _.VV)(Y, es) : Y, H, T ? (0, _.Fp)(W, el) : W);
-                (L[D] = ec), (G[D] = ec - H);
+                    ec = (0, s.u)(I ? (0, p.VV)(Y, es) : Y, H, I ? (0, p.Fp)(W, el) : W);
+                (x[w] = ec), (G[w] = ec - H);
             }
             if (E) {
                 var eu,
-                    ed = "x" === D ? r.we : r.t$,
-                    ef = "x" === D ? r.I : r.F2,
-                    e_ = L[w],
-                    ep = "y" === w ? "height" : "width",
-                    eh = e_ + C[ed],
-                    em = e_ - C[ef],
+                    ed = "x" === w ? r.we : r.t$,
+                    ef = "x" === w ? r.I : r.F2,
+                    ep = x[D],
+                    e_ = "y" === D ? "height" : "width",
+                    em = ep + C[ed],
+                    eh = ep - C[ef],
                     eg = -1 !== [r.we, r.t$].indexOf(N),
-                    eE = null != (eu = null == U ? void 0 : U[w]) ? eu : 0,
-                    eb = eg ? eh : e_ - x[ep] - M[ep] - eE + j.altAxis,
-                    ey = eg ? e_ + x[ep] + M[ep] - eE - j.altAxis : em,
-                    eO = T && eg ? (0, s.q)(eb, e_, ey) : (0, s.u)(T ? eb : eh, e_, T ? ey : em);
-                (L[w] = eO), (G[w] = eO - e_);
+                    eE = null != (eu = null == U ? void 0 : U[D]) ? eu : 0,
+                    eb = eg ? em : ep - L[e_] - j[e_] - eE + k.altAxis,
+                    ey = eg ? ep + L[e_] + j[e_] - eE - k.altAxis : eh,
+                    eO = I && eg ? (0, s.q)(eb, ep, ey) : (0, s.u)(I ? eb : em, ep, I ? ey : eh);
+                (x[D] = eO), (G[D] = eO - ep);
             }
-            t.modifiersData[p] = G;
+            t.modifiersData[_] = G;
         }
     },
     requiresIfExists: ["offset"],

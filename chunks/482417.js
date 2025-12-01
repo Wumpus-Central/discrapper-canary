@@ -61,22 +61,22 @@ function f(e) {
         { entry: n, baseEntryData: l } = e,
         u = n.extra.entries[0].media,
         f = u.artists[0],
-        { title: _, provider: p, image_url: h } = u,
-        m = f.name,
+        { title: p, provider: _, image_url: m } = u,
+        h = f.name,
         g = {
             onClick: () => (0, i.o)(o.Hw.TRACK, u.external_id),
-            ariaDescription: s.intl.formatToPlainString(s.t.xTsar2, { itemName: _ }),
+            ariaDescription: s.intl.formatToPlainString(s.t.xTsar2, { itemName: p }),
         },
         E = {
             onClick: () => (0, i.o)(o.Hw.ARTIST, f.external_id),
-            ariaDescription: s.intl.formatToPlainString(s.t.xTsar2, { itemName: m }),
+            ariaDescription: s.intl.formatToPlainString(s.t.xTsar2, { itemName: h }),
         };
     return (
-        p === r.p.SPOTIFY && (t = { type: a.kG.SPOTIFY }),
+        _ === r.p.SPOTIFY && (t = { type: a.kG.SPOTIFY }),
         d(c({}, l), {
-            title: _,
-            subtitle: m,
-            thumbnailUrl: h,
+            title: p,
+            subtitle: h,
+            thumbnailUrl: m,
             titleClickable: g,
             subtitleClickable: E,
             thumbnailClickable: g,

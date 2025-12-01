@@ -1,7 +1,7 @@
 let r, i;
 n.d(t, {
-    $0: () => p,
-    CF: () => h,
+    $0: () => _,
+    CF: () => m,
     lw: () => O,
 });
 var a = n(720479);
@@ -19,10 +19,10 @@ function f(e, t, n) {
         o = n - d(t, r, i, 1) + 1;
     return new (0, a.aw)(e, r, i, o);
 }
-function _(e) {
+function p(e) {
     return (14 + 11 * e) % 30 < 11;
 }
-class p {
+class _ {
     fromJulianDay(e) {
         return f(this, o, e);
     }
@@ -31,13 +31,13 @@ class p {
     }
     getDaysInMonth(e) {
         let t = 29 + (e.month % 2);
-        return 12 === e.month && _(e.year) && t++, t;
+        return 12 === e.month && p(e.year) && t++, t;
     }
     getMonthsInYear() {
         return 12;
     }
     getDaysInYear(e) {
-        return _(e.year) ? 355 : 354;
+        return p(e.year) ? 355 : 354;
     }
     getYearsInEra() {
         return 9665;
@@ -49,7 +49,7 @@ class p {
         this.identifier = "islamic-civil";
     }
 }
-class h extends p {
+class m extends _ {
     fromJulianDay(e) {
         return f(this, s, e);
     }
@@ -60,7 +60,7 @@ class h extends p {
         super(...e), (this.identifier = "islamic-tbla");
     }
 }
-let m =
+let h =
     "qgpUDckO1AbqBmwDrQpVBakGkgepC9QF2gpcBS0NlQZKB1QLagutBa4ETwoXBYsGpQbVCtYCWwmdBE0KJg2VDawFtgm6AlsKKwWVCsoG6Qr0AnYJtgJWCcoKpAvSC9kF3AJtCU0FpQpSC6ULtAW2CVcFlwJLBaMGUgdlC2oFqworBZUMSg2lDcoF1gpXCasESwmlClILagt1BXYCtwhbBFUFqQW0BdoJ3QRuAjYJqgpUDbIN1QXaAlsJqwRVCkkLZAtxC7QFtQpVCiUNkg7JDtQG6QprCasEkwpJDaQNsg25CroEWworBZUKKgtVC1wFvQQ9Ah0JlQpKC1oLbQW2AjsJmwRVBqkGVAdqC2wFrQpVBSkLkgupC9QF2gpaBasKlQVJB2QHqgu1BbYCVgpNDiULUgtqC60FrgIvCZcESwalBqwG1gpdBZ0ETQoWDZUNqgW1BdoCWwmtBJUFygbkBuoK9QS2AlYJqgpUC9IL2QXqAm0JrQSVCkoLpQuyBbUJ1gSXCkcFkwZJB1ULagVrCisFiwpGDaMNygXWCtsEawJLCaUKUgtpC3UFdgG3CFsCKwVlBbQF2gntBG0BtgimClINqQ3UBdoKWwmrBFMGKQdiB6kLsgW1ClUFJQuSDckO0gbpCmsFqwRVCikNVA2qDbUJugQ7CpsETQqqCtUK2gJdCV4ELgqaDFUNsga5BroEXQotBZUKUguoC7QLuQXaAloJSgukDdEO6AZqC20FNQWVBkoNqA3UDdoGWwWdAisGFQtKC5ULqgWuCi4JjwwnBZUGqgbWCl0FnQI=";
 function g(e) {
     return u + i[e - l];
@@ -77,7 +77,7 @@ function b(e, t) {
 function y(e) {
     return i[e + 1 - l] - i[e - l];
 }
-class O extends p {
+class O extends _ {
     fromJulianDay(e) {
         let t = e - o,
             n = g(l),
@@ -116,7 +116,7 @@ class O extends p {
         if (
             (super(),
             (this.identifier = "islamic-umalqura"),
-            r || (r = new Uint16Array(Uint8Array.from(atob(m), (e) => e.charCodeAt(0)).buffer)),
+            r || (r = new Uint16Array(Uint8Array.from(atob(h), (e) => e.charCodeAt(0)).buffer)),
             !i)
         ) {
             i = new Uint32Array(c - l + 1);

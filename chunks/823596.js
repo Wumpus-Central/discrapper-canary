@@ -1,9 +1,9 @@
 n.d(t, {
-    IF: () => _,
+    IF: () => p,
     LU: () => c,
-    Rt: () => h,
+    Rt: () => m,
     hW: () => u,
-    t3: () => p,
+    t3: () => _,
 }),
     n(539854),
     n(388685);
@@ -65,7 +65,7 @@ let c = [12, 25, 50, 100],
     u = 7,
     d = 5,
     f = 250;
-function _() {
+function p() {
     return {
         pageSize: c[0],
         currentPage: 1,
@@ -74,12 +74,12 @@ function _() {
         elasticSearchCursor: null,
     };
 }
-function p(e) {
+function _(e) {
     return Math.max(e.pageSize * d, f);
 }
-class h {
+class m {
     reset() {
-        (this._paginationState = _()),
+        (this._paginationState = p()),
             (this._sortedMemberIds = []),
             (this._cachedPaginationChunks = {}),
             (this._version += 1);
@@ -176,7 +176,7 @@ class h {
                 return null == e[r] && (e[r] = []), e[r].push(t), e;
             }),
             (this.guildId = e),
-            (this._paginationState = _()),
+            (this._paginationState = p()),
             (this._version = 0);
         let [n, r] = this._initPaginationFromRawMembers(t);
         (this._sortedMemberIds = n), (this._cachedPaginationChunks = r), (this._version += 1);

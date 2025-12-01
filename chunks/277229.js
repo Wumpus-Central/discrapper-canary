@@ -36,49 +36,49 @@ function d(e) {
     return e;
 }
 let f = 5 * o.Z.Millis.MINUTE;
-function _() {
+function p() {
     return s.isPlatformEmbedded;
 }
-async function p() {
-    var e, t, n, r, a, o, s, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S, A, C, N, R, P, D, w, L, x, M, k, j;
+async function _() {
+    var e, t, n, r, a, o, s, c, u, d, f, p, _, m, h, g, E, b, y, O, v, S, I, T, A, C, N, P, R, w, D, x, L, j, M, k;
     let U = l.Z.getMemoryUsageElectronProcessTypeDetails();
     if (null == U) return null;
     let G = [
             null != (y = null == (e = U.unknown) ? void 0 : e.wss_priv_kb) ? y : -1,
             null != (O = null == (t = U.main) ? void 0 : t.wss_priv_kb) ? O : -1,
             null != (v = null == (n = U.renderer) ? void 0 : n.wss_priv_kb) ? v : -1,
-            null != (I = null == (r = U.gpu) ? void 0 : r.wss_priv_kb) ? I : -1,
-            null != (T = null == (a = U.crashpad) ? void 0 : a.wss_priv_kb) ? T : -1,
-            null != (S = null == (o = U.utility) ? void 0 : o.wss_priv_kb) ? S : -1,
+            null != (S = null == (r = U.gpu) ? void 0 : r.wss_priv_kb) ? S : -1,
+            null != (I = null == (a = U.crashpad) ? void 0 : a.wss_priv_kb) ? I : -1,
+            null != (T = null == (o = U.utility) ? void 0 : o.wss_priv_kb) ? T : -1,
         ],
-        B = {
+        Z = {
             electron_process_memory_private: G,
             electron_process_memory_private_and_shared: [
                 null != (A = null == (s = U.unknown) ? void 0 : s.wss_kb) ? A : -1,
                 null != (C = null == (c = U.main) ? void 0 : c.wss_kb) ? C : -1,
                 null != (N = null == (u = U.renderer) ? void 0 : u.wss_kb) ? N : -1,
-                null != (R = null == (d = U.gpu) ? void 0 : d.wss_kb) ? R : -1,
-                null != (P = null == (f = U.crashpad) ? void 0 : f.wss_kb) ? P : -1,
-                null != (D = null == (_ = U.utility) ? void 0 : _.wss_kb) ? D : -1,
+                null != (P = null == (d = U.gpu) ? void 0 : d.wss_kb) ? P : -1,
+                null != (R = null == (f = U.crashpad) ? void 0 : f.wss_kb) ? R : -1,
+                null != (w = null == (p = U.utility) ? void 0 : p.wss_kb) ? w : -1,
             ],
             electron_process_type_count: [
-                null != (w = null == (p = U.unknown) ? void 0 : p.proc_count) ? w : 0,
-                null != (L = null == (h = U.main) ? void 0 : h.proc_count) ? L : 0,
-                null != (x = null == (m = U.renderer) ? void 0 : m.proc_count) ? x : 0,
-                null != (M = null == (g = U.gpu) ? void 0 : g.proc_count) ? M : 0,
-                null != (k = null == (E = U.crashpad) ? void 0 : E.proc_count) ? k : 0,
-                null != (j = null == (b = U.utility) ? void 0 : b.proc_count) ? j : 0,
+                null != (D = null == (_ = U.unknown) ? void 0 : _.proc_count) ? D : 0,
+                null != (x = null == (m = U.main) ? void 0 : m.proc_count) ? x : 0,
+                null != (L = null == (h = U.renderer) ? void 0 : h.proc_count) ? L : 0,
+                null != (j = null == (g = U.gpu) ? void 0 : g.proc_count) ? j : 0,
+                null != (M = null == (E = U.crashpad) ? void 0 : E.proc_count) ? M : 0,
+                null != (k = null == (b = U.utility) ? void 0 : b.proc_count) ? k : 0,
             ],
         },
-        Z = await (0, i.q)();
+        B = await (0, i.q)();
     return (
-        null != Z &&
-            (null != Z.cpu_memory && (B.system_memory_total = Z.cpu_memory / 1024),
-            null != Z.cpu_memory_avail && (B.system_memory_available = Z.cpu_memory_avail / 1024)),
-        B
+        null != B &&
+            (null != B.cpu_memory && (Z.system_memory_total = B.cpu_memory / 1024),
+            null != B.cpu_memory_avail && (Z.system_memory_available = B.cpu_memory_avail / 1024)),
+        Z
     );
 }
-function h() {
+function m() {
     let e = l.Z.getMemoryHeapStats(),
         t = l.Z.getBlinkMemoryInfo(),
         n = null;
@@ -102,22 +102,22 @@ function h() {
         }
     );
 }
-class m extends r.Z {
+class h extends r.Z {
     _initialize() {}
     _terminate() {
-        _() && (clearInterval(this._heartbeatAnalyticsInterval), (this._heartbeatAnalyticsInterval = null));
+        p() && (clearInterval(this._heartbeatAnalyticsInterval), (this._heartbeatAnalyticsInterval = null));
     }
     handlePostConnectionOpen() {
-        _() &&
+        p() &&
             (clearInterval(this._heartbeatAnalyticsInterval),
             (this._heartbeatAnalyticsInterval = setInterval(async () => {
                 await this.trackPerfAnalytics();
             }, f)));
     }
     async trackPerfAnalytics() {
-        let e = await p();
+        let e = await _();
         if (null == e) return;
-        let t = d({}, e, h());
+        let t = d({}, e, m());
         a.default.track(c.rMx.DESKTOP_PERF_HEARTBEAT, t);
     }
     constructor(...e) {
@@ -126,4 +126,4 @@ class m extends r.Z {
             u(this, "actions", { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() });
     }
 }
-let g = new m();
+let g = new h();

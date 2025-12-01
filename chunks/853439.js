@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r,
     i = n(442837),
     a = n(570140),
@@ -37,7 +37,7 @@ function f(e) {
         });
     });
 }
-class _ extends (r = i.ZP.Store) {
+class p extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(s.Z);
     }
@@ -52,8 +52,8 @@ class _ extends (r = i.ZP.Store) {
         return u[e];
     }
 }
-l(_, "displayName", "GuildRoleSubscriptionTierTemplatesStore");
-let p = new _(a.Z, {
+l(p, "displayName", "GuildRoleSubscriptionTierTemplatesStore");
+let _ = new p(a.Z, {
     GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS: f,
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_TEMPLATES: d,
 });

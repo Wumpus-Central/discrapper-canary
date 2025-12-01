@@ -68,8 +68,8 @@ function t(e) {
             begin: t.optional(i) + e.IDENT_RE,
             relevance: 0,
         },
-        _ = t.optional(i) + e.IDENT_RE + "\\s*\\(",
-        p = {
+        p = t.optional(i) + e.IDENT_RE + "\\s*\\(",
+        _ = {
             type: [
                 "bool",
                 "char",
@@ -239,7 +239,7 @@ function t(e) {
                 "wstring_view",
             ],
         },
-        h = {
+        m = {
             className: "function.dispatch",
             relevance: 0,
             keywords: {
@@ -357,7 +357,7 @@ function t(e) {
                 t.lookahead(/(<[^<>]+>|)\s*\(/),
             ),
         },
-        m = [h, d, s, n, e.C_BLOCK_COMMENT_MODE, u, c],
+        h = [m, d, s, n, e.C_BLOCK_COMMENT_MODE, u, c],
         g = {
             variants: [
                 {
@@ -373,13 +373,13 @@ function t(e) {
                     end: /;/,
                 },
             ],
-            keywords: p,
-            contains: m.concat([
+            keywords: _,
+            contains: h.concat([
                 {
                     begin: /\(/,
                     end: /\)/,
-                    keywords: p,
-                    contains: m.concat(["self"]),
+                    keywords: _,
+                    contains: h.concat(["self"]),
                     relevance: 0,
                 },
             ]),
@@ -387,20 +387,20 @@ function t(e) {
         },
         E = {
             className: "function",
-            begin: "(" + o + "[\\*&\\s]+)+" + _,
+            begin: "(" + o + "[\\*&\\s]+)+" + p,
             returnBegin: !0,
             end: /[{;=]/,
             excludeEnd: !0,
-            keywords: p,
+            keywords: _,
             illegal: /[^\w\s\*&:<>.]/,
             contains: [
                 {
                     begin: r,
-                    keywords: p,
+                    keywords: _,
                     relevance: 0,
                 },
                 {
-                    begin: _,
+                    begin: p,
                     returnBegin: !0,
                     contains: [f],
                     relevance: 0,
@@ -422,7 +422,7 @@ function t(e) {
                     className: "params",
                     begin: /\(/,
                     end: /\)/,
-                    keywords: p,
+                    keywords: _,
                     relevance: 0,
                     contains: [
                         n,
@@ -433,7 +433,7 @@ function t(e) {
                         {
                             begin: /\(/,
                             end: /\)/,
-                            keywords: p,
+                            keywords: _,
                             relevance: 0,
                             contains: ["self", n, e.C_BLOCK_COMMENT_MODE, c, u, s],
                         },
@@ -448,20 +448,20 @@ function t(e) {
     return {
         name: "C++",
         aliases: ["cc", "c++", "h++", "hpp", "hh", "hxx", "cxx"],
-        keywords: p,
+        keywords: _,
         illegal: "</",
         classNameAliases: { "function.dispatch": "built_in" },
-        contains: [].concat(g, E, h, m, [
+        contains: [].concat(g, E, m, h, [
             d,
             {
                 begin: "\\b(deque|list|queue|priority_queue|pair|stack|vector|map|set|bitset|multiset|multimap|unordered_map|unordered_set|unordered_multiset|unordered_multimap|array|tuple|optional|variant|function|flat_map|flat_set)\\s*<(?!<)",
                 end: ">",
-                keywords: p,
+                keywords: _,
                 contains: ["self", s],
             },
             {
                 begin: e.IDENT_RE + "::",
-                keywords: p,
+                keywords: _,
             },
             {
                 match: [/\b(?:enum(?:\s+(?:class|struct))?|class|struct|union)/, /\s+/, /\w+/],

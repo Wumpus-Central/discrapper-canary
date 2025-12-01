@@ -1,6 +1,6 @@
 n.d(t, {
-    Y: () => h,
-    Z: () => m,
+    Y: () => m,
+    Z: () => h,
 });
 var r = n(54381),
     i = n(473749),
@@ -12,23 +12,23 @@ var r = n(54381),
     u = n(699516),
     d = n(823379),
     f = n(785717),
-    _ = n(981631),
-    p = n(388032);
-function h(e) {
+    p = n(981631),
+    _ = n(388032);
+function m(e) {
     let { user: t, analyticsLocation: n } = e,
-        r = (0, a.e7)([u.Z], () => u.Z.getRelationshipType(t.id) === _.OGo.PENDING_OUTGOING),
+        r = (0, a.e7)([u.Z], () => u.Z.getRelationshipType(t.id) === p.OGo.PENDING_OUTGOING),
         { trackUserProfileAction: o } = (0, f.KZ)(),
-        p = (0, s.Z)({
+        _ = (0, s.Z)({
             user: t,
             location: n,
             onFriendRemove: () => o({ action: "REMOVE_FRIEND" }),
             onFriendRequestSent: () => o({ action: "SEND_FRIEND_REQUEST" }),
         }),
-        h = (0, l.Z)({ user: t }),
-        m = (0, c.Z)({ user: t });
-    return i.useMemo(() => [r ? null : p, h, m].filter(d.lm), [h, p, r, m]);
+        m = (0, l.Z)({ user: t }),
+        h = (0, c.Z)({ user: t });
+    return i.useMemo(() => [r ? null : _, m, h].filter(d.lm), [m, _, r, h]);
 }
-function m(e) {
+function h(e) {
     let { menuItems: t, children: n, targetElementRef: i } = e;
     return (0, r.jsx)(o.yRy, {
         targetElementRef: i,
@@ -38,7 +38,7 @@ function m(e) {
                 navId: "user-profile-friend-request-buttons",
                 onSelect: void 0,
                 onClose: n,
-                "aria-label": p.intl.string(p.t.Jszi3G),
+                "aria-label": _.intl.string(_.t.Jszi3G),
                 children: t,
             });
         },

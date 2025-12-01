@@ -19,7 +19,7 @@ function f(e) {
         r = (0, a.Wu)([s.ZP], () => s.ZP.getMembers(e), [e]),
         f = (0, a.cj)([p.default], () => p.default.getUsers()),
         j = (0, a.e7)([c.Z], () => c.Z.getSortedRoles(e), [e]),
-        v = i.useMemo(() => {
+        O = i.useMemo(() => {
             let e = [];
             for (let n of r) {
                 let i = f[n.userId];
@@ -41,14 +41,14 @@ function f(e) {
             }
             return e;
         }, [t, r, f]),
-        O = (e) => {
+        v = (e) => {
             var t;
             return e.managed && (null == (t = e.tags) ? void 0 : t.bot_id) != null;
         },
         y = i.useMemo(() => {
             let e = [];
             for (let i of j) {
-                if (O(i)) continue;
+                if (v(i)) continue;
                 let r = !(0, o.Fs)(i, g.Plq.ADMINISTRATOR) && u.Z.isRoleHigher(t, n, i),
                     l = {
                         id: i.id,
@@ -65,10 +65,10 @@ function f(e) {
             let n = (t = _).startsWith("@") ? t.substr(1) : t,
                 i = _.startsWith("@") ? y.filter((t) => t.id === e) : y;
             return {
-                members: (0, b.B)(v, h, n),
+                members: (0, b.B)(O, h, n),
                 roles: (0, b.B)(i, x, n),
             };
-        }, [e, v, _, y]);
+        }, [e, O, _, y]);
     return {
         query: _,
         results: N,

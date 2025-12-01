@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => I });
 var r,
     i = n(442837),
     a = n(570140),
@@ -9,8 +9,8 @@ var r,
     u = n(496675),
     d = n(19780),
     f = n(979651),
-    _ = n(981631);
-function p(e, t, n) {
+    p = n(981631);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,8 +23,8 @@ function p(e, t, n) {
         e
     );
 }
-let h = !0,
-    m = !0,
+let m = !0,
+    h = !0,
     g = !0;
 function E(e) {
     return null == e || !!e.suppress || null != e.requestToSpeakTimestamp;
@@ -37,24 +37,24 @@ function b() {
     else {
         let r = l.Z.getChannel(t),
             i = f.Z.getVoiceState(null == r ? void 0 : r.getGuildId(), s.default.getId());
-        n = c.Z.getMode() === _.pM4.VOICE_ACTIVITY;
+        n = c.Z.getMode() === p.pM4.VOICE_ACTIVITY;
         let a =
             (0, o.f)({
                 location: "doPTT",
                 autoTrackExposure: !1,
             }).enableLatching && c.Z.getModeOptions().pttLatchingEnabled;
-        e = !(n || a) || null == r || r.isPrivate() || r.isGuildStageVoice() || u.Z.can(_.Plq.USE_VAD, r) || E(i);
+        e = !(n || a) || null == r || r.isPrivate() || r.isGuildStageVoice() || u.Z.can(p.Plq.USE_VAD, r) || E(i);
     }
     let r = e || !n,
         i = e || n;
-    if (h === e && m === i) return !1;
+    if (m === e && h === i) return !1;
     (g = r),
-        (h = r),
-        (m = i),
+        (m = r),
+        (h = i),
         a.Z.dispatch({
             type: "SET_VAD_PERMISSION",
-            hasPermission: h,
-            hasLatchPermission: m,
+            hasPermission: m,
+            hasLatchPermission: h,
         });
 }
 function y(e) {
@@ -68,9 +68,9 @@ function O() {
     g = !0;
 }
 function v() {
-    g = h;
+    g = m;
 }
-class I extends (r = i.ZP.Store) {
+class S extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(s.default, l.Z, c.Z, u.Z, d.Z, f.Z);
     }
@@ -78,14 +78,14 @@ class I extends (r = i.ZP.Store) {
         return !g;
     }
     canUseVoiceActivity() {
-        return h;
-    }
-    canUseLatching() {
         return m;
     }
+    canUseLatching() {
+        return h;
+    }
 }
-p(I, "displayName", "PermissionVADStore");
-let T = new I(a.Z, {
+_(S, "displayName", "PermissionVADStore");
+let I = new S(a.Z, {
     RTC_CONNECTION_STATE: b,
     MEDIA_ENGINE_SET_AUDIO_ENABLED: b,
     AUDIO_SET_MODE: b,

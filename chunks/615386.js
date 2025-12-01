@@ -15,9 +15,9 @@ e.exports = {
         }
         var d = r + n.length,
             f = l === r,
-            _ = c === d;
+            p = c === d;
         return (
-            ((!f && _) || (f && !_)) && ("forward" === i ? c !== d && c++ : l !== r && l--),
+            ((!f && p) || (f && !p)) && ("forward" === i ? c !== d && c++ : l !== r && l--),
             {
                 start: l,
                 end: c,

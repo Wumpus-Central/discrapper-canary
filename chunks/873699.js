@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(442837),
@@ -12,11 +12,11 @@ var r = n(54381),
     g = n(176354),
     b = n(981631),
     p = n(388032);
-function y(e, t) {
+function m(e, t) {
     let { reducedMotion: n } = i.useContext(a.Sfi),
         f = (0, u.$R)(t),
         g = (0, l.e7)([d.Z], () => d.Z.can(b.Plq.MANAGE_MESSAGES, t) && f, [t, f]),
-        y = e.reactions.reduce((e, t) => {
+        m = e.reactions.reduce((e, t) => {
             var n;
             return (null == (n = t.count_details) ? void 0 : n.vote) != null ||
                 null != e.find((e) => (null != e.id && e.id === t.emoji.id) || e.name === t.emoji.name)
@@ -29,7 +29,7 @@ function y(e, t) {
               id: "remove-emoji-reactions",
               label: p.intl.string(p.t["zx/e4P"]),
               color: "danger",
-              children: y.map((i) => {
+              children: m.map((i) => {
                   var l, s;
                   return (0, r.jsx)(
                       a.sNh,
@@ -53,7 +53,7 @@ function y(e, t) {
                           icon: (e) => {
                               var t, l;
                               return (0, r.jsx)(
-                                  O,
+                                  y,
                                   ((t = (function (e) {
                                       for (var t = 1; t < arguments.length; t++) {
                                           var n = null != arguments[t] ? arguments[t] : {},
@@ -106,7 +106,7 @@ function y(e, t) {
               }),
           });
 }
-function O(e) {
+function y(e) {
     var t;
     let { emoji: n, reducedMotionEnabled: i, className: l = "", isFocused: a = !1 } = e;
     return (0, r.jsx)("img", {

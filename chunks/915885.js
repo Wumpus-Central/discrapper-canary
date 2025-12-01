@@ -8,15 +8,15 @@ var r = n(54381),
     c = n(693546),
     u = n(826581),
     d = n(246364),
-    p = n(98493),
+    f = n(98493),
     h = n(434479),
-    f = n(496675),
+    p = n(496675),
     g = n(527379),
     m = n(981631),
     b = n(388032);
 function _(e) {
     let { guild: t, selected: n } = e,
-        _ = (0, l.e7)([f.Z], () => f.Z.can(m.Plq.KICK_MEMBERS, t)),
+        _ = (0, l.e7)([p.Z], () => p.Z.can(m.Plq.KICK_MEMBERS, t)),
         y = (0, l.e7)([u.Z], () => u.Z.getSubmittedGuildJoinRequestTotal(t.id)),
         O = _ && null != y ? y : 0;
     i.useEffect(() => {
@@ -26,7 +26,7 @@ function _(e) {
             c.Z.fetchGuildJoinRequests({
                 guildId: t.id,
                 status: d.wB.SUBMITTED,
-                limit: p.p,
+                limit: f.p,
             });
     }, [_, t]);
     let v = i.useCallback(() => {

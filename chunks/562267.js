@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(442837),
@@ -9,28 +9,28 @@ var r = n(54381),
     u = n(419922),
     d = n(388032),
     f = n(135867);
-function _(e) {
+function p(e) {
     var t;
-    let { channelId: n, chatInputType: _ } = e,
-        [p, h] = i.useState(null),
-        m = (0, a.e7)([l.Z], () => l.Z.getStickerPreview(n, _.drafts.type));
-    return (null == (t = _.stickers) ? void 0 : t.allowSending) && null != m && 0 !== m.length
+    let { channelId: n, chatInputType: p } = e,
+        [_, m] = i.useState(null),
+        h = (0, a.e7)([l.Z], () => l.Z.getStickerPreview(n, p.drafts.type));
+    return (null == (t = p.stickers) ? void 0 : t.allowSending) && null != h && 0 !== h.length
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)("div", {
                       className: f.stickerPreviews,
-                      children: m.map((e) =>
+                      children: h.map((e) =>
                           (0, r.jsxs)(
                               "div",
                               {
                                   className: f.stickerPreviewContainer,
                                   children: [
                                       (0, r.jsx)(o.P3F, {
-                                          onFocus: () => h(e.id),
-                                          onBlur: () => h(null),
+                                          onFocus: () => m(e.id),
+                                          onBlur: () => m(null),
                                           className: f.closeButton,
                                           "aria-label": d.intl.formatToPlainString(d.t.BGAQRd, { name: e.name }),
-                                          onClick: () => (0, c.qB)(n, _.drafts.type),
+                                          onClick: () => (0, c.qB)(n, p.drafts.type),
                                           children: (0, r.jsx)("div", {
                                               className: f.closeIconContainer,
                                               children: (0, r.jsx)(o.k$p, {
@@ -41,7 +41,7 @@ function _(e) {
                                           }),
                                       }),
                                       (0, r.jsx)(u.Z, {
-                                          isInteracting: p === e.id,
+                                          isInteracting: _ === e.id,
                                           className: f.stickerPreview,
                                           size: 48,
                                           sticker: e,
@@ -57,4 +57,4 @@ function _(e) {
           })
         : null;
 }
-let p = i.memo(_);
+let _ = i.memo(p);

@@ -1,8 +1,8 @@
 n.d(t, {
     Ae: () => u,
-    Qe: () => h,
-    U0: () => m,
-    bV: () => p,
+    Qe: () => m,
+    U0: () => h,
+    bV: () => _,
     uZ: () => c,
 }),
     n(410992),
@@ -32,7 +32,7 @@ let s = null != (a = null == (r = window) ? void 0 : r.crypto) ? a : null == (i 
 function f(e) {
     return s.getRandomValues(new Uint8Array(e));
 }
-function _(e) {
+function p(e) {
     return o
         .encode(e)
         .toString("utf8")
@@ -41,17 +41,17 @@ function _(e) {
         .replace(/(\w{4})/g, "$1 ")
         .trim();
 }
-function p() {
-    return _(f(d));
+function _() {
+    return p(f(d));
 }
-function h(e) {
+function m(e) {
     return e.replace(/[\s._-]+/g, "").toUpperCase();
 }
-function m(e, t) {
+function h(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "Discord";
     return "otpauth://totp/"
         .concat(encodeURI(n), ":")
         .concat(encodeURI(e), "?secret=")
-        .concat(h(t), "&issuer=")
+        .concat(m(t), "&issuer=")
         .concat(encodeURIComponent(n));
 }

@@ -1,4 +1,4 @@
-n.d(t, { H: () => _ });
+n.d(t, { H: () => p });
 var r = n(498607),
     i = n.n(r),
     a = n(442837),
@@ -16,10 +16,10 @@ function f(e) {
     } = e;
     return t ? (null != r ? r : n) : !!t;
 }
-function _(e) {
+function p(e) {
     let { guildId: t, channelId: n } = e,
         r = (0, u.xy)({ location: "useDesktopSearchContext" }),
-        _ = f({
+        p = f({
             isSearchDesktopXDMExperimentEnabled: (0, u.UX)({ location: "useDesktopSearchContext" }),
             crossDMSearchSettingUnsetValue: r,
             isCrossDMSearchEnabledSetting: o.rR.useSetting(),
@@ -37,7 +37,7 @@ function _(e) {
                         guildId: t,
                     }
                   : null != n && null != r && r.isPrivate()
-                    ? _
+                    ? p
                         ? { type: d.aib.DMS }
                         : {
                               type: d.aib.CHANNEL,
@@ -45,7 +45,7 @@ function _(e) {
                           }
                     : null;
         },
-        [n, t, _],
+        [n, t, p],
         i(),
     );
 }

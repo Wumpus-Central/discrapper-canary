@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(472816), n(794429);
+n.d(t, { Z: () => m }), n(472816), n(794429);
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -10,25 +10,25 @@ var i = n(120356),
     u = n(211266),
     d = n(713938),
     f = n(388032),
-    _ = n(282320);
-function p(e) {
+    p = n(282320);
+function _(e) {
     let { text: t, error: n, isFake: i } = e;
     return (0, r.jsxs)("div", {
-        className: _.scope,
+        className: p.scope,
         children: [
             i
                 ? (0, r.jsx)(c.k$p, {
                       size: "md",
                       color: "currentColor",
-                      className: a()(_.icon, _.fakeScopeIcon),
+                      className: a()(p.icon, p.fakeScopeIcon),
                   })
                 : (0, r.jsx)(c.owK, {
                       size: "md",
                       color: "currentColor",
-                      className: a()(_.icon, _.scopeIcon),
+                      className: a()(p.icon, p.scopeIcon),
                   }),
             (0, r.jsxs)("div", {
-                className: _.scopeInner,
+                className: p.scopeInner,
                 children: [
                     (0, r.jsx)(l.x, {
                         variant: "text-md/normal",
@@ -47,14 +47,14 @@ function p(e) {
         ],
     });
 }
-function h(e) {
+function m(e) {
     var t;
     let {
             application: n,
             accountScopes: i,
             requestedScopes: l,
-            integrationType: h,
-            errors: m,
+            integrationType: m,
+            errors: h,
             isTrustedName: g = !1,
             noDivider: E = !1,
         } = e,
@@ -62,13 +62,13 @@ function h(e) {
     if (0 === i.length) return null;
     let y = b(),
         O = g ? f.t.PZpY9c : f.t["1Hz+Sl"],
-        v = h === o.Y.USER_INSTALL && l.includes(s.x.APPLICATIONS_COMMANDS);
+        v = m === o.Y.USER_INSTALL && l.includes(s.x.APPLICATIONS_COMMANDS);
     return (0, r.jsxs)("div", {
-        className: a()(_.scopes, E ? _.noDivider : void 0),
+        className: a()(p.scopes, E ? p.noDivider : void 0),
         children: [
             (0, r.jsx)(c.Heading, {
                 variant: "heading-sm/normal",
-                className: _.sectionLabel,
+                className: p.sectionLabel,
                 children: f.intl.format(O, { application: null != (t = null == n ? void 0 : n.name) ? t : "" }),
             }),
             i
@@ -76,18 +76,18 @@ function h(e) {
                     (0, d.CI)(e, i).map((t, n) => {
                         var i;
                         return (0, r.jsx)(
-                            p,
+                            _,
                             {
                                 text: t,
-                                error: 0 === n ? (null == m || null == (i = m[e]) ? void 0 : i[0]) : void 0,
+                                error: 0 === n ? (null == h || null == (i = h[e]) ? void 0 : i[0]) : void 0,
                             },
                             "".concat(e, "-").concat(n),
                         );
                     }),
                 )
                 .flat(),
-            v && (0, r.jsx)(p, { text: f.intl.string(f.t.Ls2XRq) }),
-            (0, r.jsx)(p, {
+            v && (0, r.jsx)(_, { text: f.intl.string(f.t.Ls2XRq) }),
+            (0, r.jsx)(_, {
                 text: y,
                 isFake: !0,
             }),

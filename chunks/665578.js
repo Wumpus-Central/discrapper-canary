@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(392711),
@@ -16,15 +16,15 @@ var i = n(54381),
     h = n(821864),
     x = n(905753),
     j = n(937427),
-    v = n(643886),
-    O = n(869157),
+    O = n(643886),
+    v = n(869157),
     y = n(454092),
     _ = n(289465),
     C = n(981631),
     N = n(689079),
     S = n(388032),
-    E = n(591086);
-function I(e) {
+    P = n(591086);
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -49,7 +49,7 @@ function I(e) {
     }
     return e;
 }
-function P(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -67,13 +67,13 @@ function P(e, t) {
         e
     );
 }
-function w(e) {
+function I(e) {
     let {
             applicationId: t,
             commandId: l,
             guildId: j,
-            inModal: v,
-            editedTargetPermissions: w,
+            inModal: O,
+            editedTargetPermissions: I,
             originalApplicationPermissions: k,
             originalCommandPermissions: A,
             selectedPermissionCount: D,
@@ -100,9 +100,9 @@ function w(e) {
         [B, W] = r.useMemo(() => {
             let e = {},
                 t = {};
-            for (let [n, i] of Object.entries(w)) i.type === d.Kw.CHANNEL ? (e[n] = i) : (t[n] = i);
+            for (let [n, i] of Object.entries(I)) i.type === d.Kw.CHANNEL ? (e[n] = i) : (t[n] = i);
             return [e, t];
-        }, [w]),
+        }, [I]),
         H = r.useCallback(
             (e) => {
                 let t = g.Z.getGuild(j),
@@ -134,7 +134,7 @@ function w(e) {
                 let n,
                     i = null;
                 if (0 !== t.length) {
-                    let e = w[t[0]];
+                    let e = I[t[0]];
                     if (e.type === d.Kw.USER) n = y.s.REMOVE_SELF;
                     else {
                         let t = e.id;
@@ -154,12 +154,12 @@ function w(e) {
                 }
                 (0, y._)(n, i);
             },
-            [j, w],
+            [j, I],
         ),
         F = r.useCallback(
             (e, n) => {
                 let i = {};
-                for (let [e, t] of Object.entries(w))
+                for (let [e, t] of Object.entries(I))
                     i[e] = {
                         id: t.id,
                         permission: t.permission,
@@ -168,7 +168,7 @@ function w(e) {
                 if (((i = Object.assign(i, e)), n.length > 0 && (i = a().omit(i, n)), !H(i))) return void G(e, n);
                 h.W4(t, U, i);
             },
-            [t, w, U, H, G],
+            [t, I, U, H, G],
         ),
         K = r.useCallback(() => {
             let e = Object.keys(B);
@@ -177,7 +177,7 @@ function w(e) {
                 return (n) =>
                     (0, i.jsx)(
                         t,
-                        I(
+                        w(
                             {
                                 editPermissions: F,
                                 guildId: j,
@@ -200,7 +200,7 @@ function w(e) {
                 return (n) =>
                     (0, i.jsx)(
                         t,
-                        I(
+                        w(
                             {
                                 editPermissions: F,
                                 guildId: j,
@@ -216,20 +216,20 @@ function w(e) {
                     );
             });
         }, [F, j, W, D]),
-        V = r.useCallback(
+        q = r.useCallback(
             () =>
                 (0, c.ZDy)(async () => {
                     let { default: e } = await n.e("21897").then(n.bind(n, 303313)),
                         t = R.defaultMemberPermissions;
                     return (
                         o.fS(t, u.BO) && (t = C.Plq.ADMINISTRATOR),
-                        (n) => (0, i.jsx)(e, P(I({}, n), { defaultMemberPermissions: t }))
+                        (n) => (0, i.jsx)(e, E(w({}, n), { defaultMemberPermissions: t }))
                     );
                 }),
             [R],
         ),
-        q = D - N._n,
-        Y = q >= 0,
+        V = D - N._n,
+        Y = V >= 0,
         J = [
             {
                 buttonClick: z,
@@ -248,29 +248,29 @@ function w(e) {
         ];
     return (0, i.jsxs)(r.Fragment, {
         children: [
-            q > 0
+            V > 0
                 ? (0, i.jsx)(c.Wn, {
                       messageType: c.QYI.WARNING,
-                      children: S.intl.format(S.t["B/dFBH"], { removeCount: q }),
+                      children: S.intl.format(S.t["B/dFBH"], { removeCount: V }),
                   })
                 : null,
             L
                 ? (0, i.jsxs)("div", {
-                      className: E.requiredPermissionsBanner,
+                      className: P.requiredPermissionsBanner,
                       children: [
                           (0, i.jsx)(c.d3s, {
                               size: "sm",
                               color: "currentColor",
-                              className: E.icon,
+                              className: P.icon,
                           }),
                           (0, i.jsx)("span", {
-                              className: E.message,
+                              className: P.message,
                               children: S.intl.format(S.t["2889Gq"], {}),
                           }),
                           (0, i.jsx)(c.Button, {
                               variant: "secondary",
                               size: "sm",
-                              onClick: V,
+                              onClick: q,
                               text: S.intl.string(S.t["HO/oXl"]),
                           }),
                       ],
@@ -286,13 +286,13 @@ function w(e) {
                         _.Z,
                         {
                             bar: (0, i.jsx)(c.aML, {
-                                tooltipClassName: E.tooltip,
+                                tooltipClassName: P.tooltip,
                                 text: n,
                                 shouldShow: null != n,
                                 children: (t) =>
                                     (0, i.jsx)(
                                         c.Button,
-                                        P(I({}, t), {
+                                        E(w({}, t), {
                                             variant: "secondary",
                                             disabled: Y || !M,
                                             onClick: e.buttonClick,
@@ -301,11 +301,11 @@ function w(e) {
                                         }),
                                     ),
                             }),
-                            inModal: v,
+                            inModal: O,
                             title: e.title,
                             children: (0, i.jsx)("div", {
-                                className: v ? void 0 : E.listContainer,
-                                children: (0, i.jsx)(O.Z, {
+                                className: O ? void 0 : P.listContainer,
+                                children: (0, i.jsx)(v.Z, {
                                     guildId: j,
                                     commandId: l,
                                     noneSelectedText: e.noneSelectedText,
@@ -324,13 +324,13 @@ function w(e) {
 }
 function T(e) {
     let t = (0, j.w)(e);
-    return P(I({}, t), { results: t.results.map((e) => P(I({}, e), { type: d.Kw.CHANNEL })) });
+    return E(w({}, t), { results: t.results.map((e) => E(w({}, e), { type: d.Kw.CHANNEL })) });
 }
 function Z(e) {
-    let t = (0, v.U)(e);
-    return P(I({}, t), {
+    let t = (0, O.U)(e);
+    return E(w({}, t), {
         results: t.results.roles
-            .map((e) => P(I({}, e), { type: d.Kw.ROLE }))
-            .concat(t.results.members.map((e) => P(I({}, e), { type: d.Kw.USER }))),
+            .map((e) => E(w({}, e), { type: d.Kw.ROLE }))
+            .concat(t.results.members.map((e) => E(w({}, e), { type: d.Kw.USER }))),
     });
 }

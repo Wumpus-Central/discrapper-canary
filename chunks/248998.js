@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(953529);
+n.d(t, { Z: () => p }), n(953529);
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -10,22 +10,22 @@ var i = n(120356),
     u = n(955204),
     d = n(674680),
     f = n(655219);
-function _(e) {
+function p(e) {
     let { achievementId: t, dateUnlocked: n } = e,
         i = (0, u.oX)(t);
     if (null == i) return null;
     let o = null != n,
-        { name: _, description: p, hideDescriptionUntilUnlock: h, onAction: m } = i,
-        g = h && !o,
+        { name: p, description: _, hideDescriptionUntilUnlock: m, onAction: h } = i,
+        g = m && !o,
         E = o ? "header-primary" : "text-muted",
         b = o ? "header-secondary" : "text-muted",
         y = s()(n),
-        O = null != m && o,
+        O = null != h && o,
         v = () => {
-            O && m();
+            O && h();
         },
-        I = O ? l.P3F : "div";
-    return (0, r.jsxs)(I, {
+        S = O ? l.P3F : "div";
+    return (0, r.jsxs)(S, {
         className: a()(f.container, O && f.actionable),
         onClick: v,
         children: [
@@ -50,12 +50,12 @@ function _(e) {
                     (0, r.jsx)(l.Text, {
                         variant: "text-md/medium",
                         color: E,
-                        children: _(),
+                        children: p(),
                     }),
                     (0, r.jsx)(l.Text, {
                         variant: "text-xs/normal",
                         color: b,
-                        children: g ? "?????" : p(),
+                        children: g ? "?????" : _(),
                     }),
                 ],
             }),

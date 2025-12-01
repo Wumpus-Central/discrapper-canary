@@ -18,9 +18,9 @@ var r = n(54381),
     y = n(313481),
     g = n(616022),
     v = n(49436),
-    b = n(509212),
-    _ = n(373370),
-    w = n(804127),
+    b = n(373370),
+    _ = n(804127),
+    w = n(115179),
     O = n(602667),
     N = n(644646),
     P = n(515108),
@@ -65,7 +65,7 @@ function R(e) {
         } = e,
         h =
             null !=
-            (t = (0, _.C1)({
+            (t = (0, b.C1)({
                 quest: n,
                 rewardCode: u,
                 selectedPlatformType: d,
@@ -76,7 +76,7 @@ function R(e) {
             var e;
             let t =
                 null ==
-                (e = (0, b.o9)({
+                (e = (0, w.o9)({
                     quest: n,
                     idx: 0,
                 }))
@@ -86,7 +86,7 @@ function R(e) {
             let r = null == u ? void 0 : u.code;
             return (0, j.Ew)(r) ? t : t.replace(T.Dp, encodeURIComponent(r));
         }, [n, null == u ? void 0 : u.code]),
-        y = (0, w.In)({
+        y = (0, _.In)({
             quest: n,
             questContent: o,
             questContentPosition: s,
@@ -191,10 +191,10 @@ function Z(e) {
             questContentPosition: f,
         } = e,
         h = null != (t = (0, y.B4)(n.id)) ? t : n,
-        j = (0, b.zG)(h.config),
+        j = (0, w.zG)(h.config),
         x = v.jn.REWARD_MODAL,
         {
-            questStoreRewardCode: _,
+            questStoreRewardCode: b,
             isFetchingRewardCode: N,
             isClaimingReward: A,
         } = (0, o.cj)([g.Z], () => ({
@@ -202,8 +202,8 @@ function Z(e) {
             isFetchingRewardCode: g.Z.isFetchingRewardCode(h.id),
             isClaimingReward: g.Z.isClaimingReward(h.id),
         })),
-        I = !0 === c ? (0, p.b)(h) : _,
-        { hasError: D, setHasError: Z } = (0, w.uL)({
+        I = !0 === c ? (0, p.b)(h) : b,
+        { hasError: D, setHasError: Z } = (0, _.uL)({
             isClaimingReward: A,
             isFetchingRewardCode: N,
             quest: h,
@@ -237,7 +237,7 @@ function Z(e) {
         rewardContent: k
             ? null
             : (0, r.jsx)(E.Z, {
-                  rewardName: (0, b.w8)(h.config),
+                  rewardName: (0, w.w8)(h.config),
                   children: (0, r.jsx)(q, {
                       quest: h,
                       questContent: x,

@@ -212,10 +212,10 @@
                     (n.shimOnTrack = u),
                     (n.shimGetSendersWithDtmf = d),
                     (n.shimGetStats = f),
-                    (n.shimSenderReceiverGetStats = _),
-                    (n.shimAddTrackRemoveTrackWithNative = p),
-                    (n.shimAddTrackRemoveTrack = h),
-                    (n.shimPeerConnection = m),
+                    (n.shimSenderReceiverGetStats = p),
+                    (n.shimAddTrackRemoveTrackWithNative = _),
+                    (n.shimAddTrackRemoveTrack = m),
+                    (n.shimPeerConnection = h),
                     (n.fixNegotiationNeeded = g);
                 var o = s(e("../utils.js"));
                 function s(e) {
@@ -454,7 +454,7 @@
                         };
                     }
                 }
-                function _(e) {
+                function p(e) {
                     if (
                         (void 0 === e ? "undefined" : r(e)) === "object" &&
                         e.RTCPeerConnection &&
@@ -547,7 +547,7 @@
                         }
                     }
                 }
-                function p(e) {
+                function _(e) {
                     e.RTCPeerConnection.prototype.getLocalStreams = function () {
                         var e = this;
                         return (
@@ -612,9 +612,9 @@
                         );
                     };
                 }
-                function h(e, t) {
+                function m(e, t) {
                     if (e.RTCPeerConnection) {
-                        if (e.RTCPeerConnection.prototype.addTrack && t.version >= 65) return p(e);
+                        if (e.RTCPeerConnection.prototype.addTrack && t.version >= 65) return _(e);
                         var n = e.RTCPeerConnection.prototype.getLocalStreams;
                         e.RTCPeerConnection.prototype.getLocalStreams = function () {
                             var e = this,
@@ -792,7 +792,7 @@
                         );
                     }
                 }
-                function m(e, t) {
+                function h(e, t) {
                     !e.RTCPeerConnection &&
                         e.webkitRTCPeerConnection &&
                         (e.RTCPeerConnection = e.webkitRTCPeerConnection),
@@ -1075,7 +1075,7 @@
                     (n.shimSendThrowTypeError = u),
                     (n.shimConnectionState = d),
                     (n.removeExtmapAllowMixed = f),
-                    (n.shimAddIceCandidateNullOrEmpty = _);
+                    (n.shimAddIceCandidateNullOrEmpty = p);
                 var i = s(e("sdp")),
                     a = o(e("./utils"));
                 function o(e) {
@@ -1321,7 +1321,7 @@
                         };
                     }
                 }
-                function _(e, t) {
+                function p(e, t) {
                     if (e.RTCPeerConnection && e.RTCPeerConnection.prototype) {
                         var n = e.RTCPeerConnection.prototype.addIceCandidate;
                         n &&
@@ -1380,10 +1380,10 @@
                     (n.shimPeerConnection = u),
                     (n.shimSenderGetStats = d),
                     (n.shimReceiverGetStats = f),
-                    (n.shimRemoveStream = _),
-                    (n.shimRTCDataChannel = p),
-                    (n.shimAddTransceiver = h),
-                    (n.shimGetParameters = m),
+                    (n.shimRemoveStream = p),
+                    (n.shimRTCDataChannel = _),
+                    (n.shimAddTransceiver = m),
+                    (n.shimGetParameters = h),
                     (n.shimCreateOffer = g),
                     (n.shimCreateAnswer = E);
                 var o = s(e("../utils"));
@@ -1532,7 +1532,7 @@
                             });
                     }
                 }
-                function _(e) {
+                function p(e) {
                     !e.RTCPeerConnection ||
                         "removeStream" in e.RTCPeerConnection.prototype ||
                         (e.RTCPeerConnection.prototype.removeStream = function (e) {
@@ -1543,10 +1543,10 @@
                                 });
                         });
                 }
-                function p(e) {
+                function _(e) {
                     e.DataChannel && !e.RTCDataChannel && (e.RTCDataChannel = e.DataChannel);
                 }
-                function h(e) {
+                function m(e) {
                     if ((void 0 === e ? "undefined" : r(e)) === "object" && e.RTCPeerConnection) {
                         var t = e.RTCPeerConnection.prototype.addTransceiver;
                         t &&
@@ -1586,7 +1586,7 @@
                             });
                     }
                 }
-                function m(e) {
+                function h(e) {
                     if ((void 0 === e ? "undefined" : r(e)) === "object" && e.RTCRtpSender) {
                         var t = e.RTCRtpSender.prototype.getParameters;
                         t &&
@@ -1767,8 +1767,8 @@
                     (n.shimConstraints = u),
                     (n.shimRTCIceServerUrls = d),
                     (n.shimTrackEventTransceiver = f),
-                    (n.shimCreateOfferLegacy = _),
-                    (n.shimAudioContext = p);
+                    (n.shimCreateOfferLegacy = p),
+                    (n.shimAudioContext = _);
                 var i = a(e("../utils"));
                 function a(e) {
                     if (e && e.__esModule) return e;
@@ -1984,7 +1984,7 @@
                             },
                         });
                 }
-                function _(e) {
+                function p(e) {
                     var t = e.RTCPeerConnection.prototype.createOffer;
                     e.RTCPeerConnection.prototype.createOffer = function (e) {
                         if (e) {
@@ -2016,7 +2016,7 @@
                         return t.apply(this, arguments);
                     };
                 }
-                function p(e) {
+                function _(e) {
                     (void 0 === e ? "undefined" : r(e)) !== "object" ||
                         e.AudioContext ||
                         (e.AudioContext = e.webkitAudioContext);
@@ -2059,9 +2059,9 @@
                     (n.disableWarnings = u),
                     (n.log = d),
                     (n.deprecated = f),
-                    (n.detectBrowser = _),
-                    (n.compactObject = h),
-                    (n.walkStats = m),
+                    (n.detectBrowser = p),
+                    (n.compactObject = m),
+                    (n.walkStats = h),
                     (n.filterStats = g);
                 var a = !0,
                     o = !0;
@@ -2132,7 +2132,7 @@
                 function f(e, t) {
                     o && console.warn(e + " is deprecated, please use " + t + " instead.");
                 }
-                function _(e) {
+                function p(e) {
                     var t = {
                         browser: null,
                         version: null,
@@ -2156,29 +2156,29 @@
                         t
                     );
                 }
-                function p(e) {
+                function _(e) {
                     return "[object Object]" === Object.prototype.toString.call(e);
                 }
-                function h(e) {
-                    return p(e)
+                function m(e) {
+                    return _(e)
                         ? Object.keys(e).reduce(function (t, n) {
-                              var r = p(e[n]),
-                                  a = r ? h(e[n]) : e[n],
+                              var r = _(e[n]),
+                                  a = r ? m(e[n]) : e[n],
                                   o = r && !Object.keys(a).length;
                               return void 0 === a || o ? t : Object.assign(t, i({}, n, a));
                           }, {})
                         : e;
                 }
-                function m(e, t, n) {
+                function h(e, t, n) {
                     !t ||
                         n.has(t.id) ||
                         (n.set(t.id, t),
                         Object.keys(t).forEach(function (r) {
                             r.endsWith("Id")
-                                ? m(e, e.get(t[r]), n)
+                                ? h(e, e.get(t[r]), n)
                                 : r.endsWith("Ids") &&
                                   t[r].forEach(function (t) {
-                                      m(e, e.get(t), n);
+                                      h(e, e.get(t), n);
                                   });
                         }));
                 }
@@ -2193,7 +2193,7 @@
                         }),
                         a.forEach(function (t) {
                             e.forEach(function (n) {
-                                n.type === r && n.trackId === t.id && m(e, n, i);
+                                n.type === r && n.trackId === t.id && h(e, n, i);
                             });
                         }),
                         i

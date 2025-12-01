@@ -1,4 +1,4 @@
-n.d(t, { B: () => x }), n(388685);
+n.d(t, { B: () => O }), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(120356),
@@ -42,7 +42,7 @@ function _(e) {
     }
     return e;
 }
-function x(e) {
+function O(e) {
     let { channel: t, inviteKey: l, onHoverOrFocus: o, setPopoutRef: c, closePopout: d } = e,
         p = r.useRef(null),
         h = (0, g.Tu)(p),
@@ -53,7 +53,7 @@ function x(e) {
         r.useEffect(() => {
             null == o || o(h.isHoveringOrFocusing);
         }, [o, h]);
-    let x = r.useCallback(() => {
+    let O = r.useCallback(() => {
         let e = f.Z.getGuild(t.guild_id);
         s()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
             (0, u.ZDy)(async () => {
@@ -100,7 +100,7 @@ function x(e) {
                 children: [
                     m.map((e) =>
                         (0, i.jsx)(
-                            j,
+                            x,
                             {
                                 channel: t,
                                 user: e,
@@ -111,7 +111,7 @@ function x(e) {
                     ),
                     (0, i.jsxs)(u.P3F, {
                         tag: "li",
-                        onClick: x,
+                        onClick: O,
                         className: a()(C.row, C.clickable),
                         children: [
                             (0, i.jsx)("div", {
@@ -134,15 +134,15 @@ function x(e) {
         }),
     });
 }
-function j(e) {
+function x(e) {
     let { channel: t, user: n, inviteKey: l } = e,
         o = r.useRef(null),
         s = (0, c.e7)([h.ZP], () => h.ZP.getMember(t.guild_id, n.id), [t.guild_id, n.id]),
         { isHoveringOrFocusing: f } = (0, g.Tu)(o),
         [b, v] = r.useState(null),
-        x = "success" === b || "sending" === b || null == l,
-        j = r.useCallback(() => {
-            x ||
+        O = "success" === b || "sending" === b || null == l,
+        x = r.useCallback(() => {
+            O ||
                 (null != l &&
                     (v("sending"),
                     d.Z.enqueue(
@@ -157,9 +157,9 @@ function j(e) {
                             v(e ? "success" : null);
                         },
                     )));
-        }, [x, l, n]),
+        }, [O, l, n]),
         {
-            avatarDecorationSrc: O,
+            avatarDecorationSrc: j,
             avatarSrc: E,
             eventHandlers: S,
         } = (0, p.Z)({
@@ -174,9 +174,9 @@ function j(e) {
     return (0, i.jsxs)(u.P3F, {
         innerRef: o,
         tag: "li",
-        className: a()(C.row, { [C.clickable]: !x }),
-        "aria-disabled": x,
-        onClick: j,
+        className: a()(C.row, { [C.clickable]: !O }),
+        "aria-disabled": O,
+        onClick: x,
         "aria-label": I,
         children: [
             (0, i.jsx)(
@@ -187,7 +187,7 @@ function j(e) {
                         "aria-label": P,
                         size: u.EFr.SIZE_24,
                         src: E,
-                        avatarDecoration: O,
+                        avatarDecoration: j,
                     },
                     S,
                 ),

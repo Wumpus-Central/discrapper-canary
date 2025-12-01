@@ -229,17 +229,17 @@ e.exports = function (e) {
                 },
             ],
         },
-        _ = {
+        p = {
             scope: "subst",
             begin: /\$\{/,
             end: /\}/,
             keywords: n,
         },
-        p = {
+        _ = {
             scope: "char.escape",
             match: /\\(?!\$)./,
         },
-        h = {
+        m = {
             scope: "string",
             variants: [
                 {
@@ -250,12 +250,12 @@ e.exports = function (e) {
                             scope: "char.escape",
                             match: /''\$/,
                         },
-                        _,
+                        p,
                         {
                             scope: "char.escape",
                             match: /'''/,
                         },
-                        p,
+                        _,
                     ],
                 },
                 {
@@ -266,13 +266,13 @@ e.exports = function (e) {
                             scope: "char.escape",
                             match: /\\\$/,
                         },
-                        _,
                         p,
+                        _,
                     ],
                 },
             ],
         },
-        m = {
+        h = {
             scope: "params",
             match: RegExp(`${i}\\s*:(?=\\s)`),
         },
@@ -285,16 +285,16 @@ e.exports = function (e) {
                 relevance: 0,
             }),
             r,
-            h,
+            m,
             a,
             s,
-            m,
+            h,
             f,
             d,
             c,
         ];
     return (
-        (_.contains = g),
+        (p.contains = g),
         {
             name: "Nix",
             aliases: ["nixos"],

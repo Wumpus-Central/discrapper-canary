@@ -1,5 +1,5 @@
 n.d(t, {
-    F: () => S,
+    F: () => T,
     H: () => C,
 }),
     n(953529),
@@ -15,10 +15,10 @@ var r,
     u = n(24156),
     d = n(374470),
     f = n(793030),
-    _ = n(846519),
-    p = n(952265),
-    h = n(314910),
-    m = n(728285),
+    p = n(846519),
+    _ = n(952265),
+    m = n(314910),
+    h = n(728285),
     g = n(574254),
     E = n(960048),
     b = n(920676),
@@ -52,7 +52,7 @@ function v(e) {
     }
     return e;
 }
-function I(e, t) {
+function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -64,18 +64,18 @@ function I(e, t) {
     }
     return n;
 }
-function T(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : I(Object(t)).forEach(function (n) {
+            : S(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let S = Symbol("POPOUT_PREVENT_CLOSE"),
+let T = Symbol("POPOUT_PREVENT_CLOSE"),
     A = new Set(["Spacebar", " ", "Enter"]);
 class C extends (r = a.Component) {
     shouldShowPopout(e, t) {
@@ -156,7 +156,7 @@ class C extends (r = a.Component) {
         return (0, i.jsxs)(a.Fragment, {
             children: [
                 e(
-                    T(v({ onMouseDown: this.handlePreload }, t ? { onMouseEnter: this.handleMouseEnter } : {}), {
+                    I(v({ onMouseDown: this.handlePreload }, t ? { onMouseEnter: this.handleMouseEnter } : {}), {
                         onKeyDown: this.handleKeyboardPreload,
                         onClick: this.handleClick,
                         "aria-controls": n ? this.popoutId : void 0,
@@ -188,13 +188,13 @@ class C extends (r = a.Component) {
                 positionKey: c,
                 disablePointerEvents: u,
                 layerContext: d,
-                clickTrap: _ = !1,
+                clickTrap: p = !1,
             } = this.props,
-            { resizeKey: p, isLoading: m, shouldShowLoadingState: g } = this.state;
-        return m && !g
+            { resizeKey: _, isLoading: h, shouldShowLoadingState: g } = this.state;
+        return h && !g
             ? null
             : (0, i.jsx)(f.mh4, {
-                  layerContext: null != d ? d : h.nz,
+                  layerContext: null != d ? d : m.nz,
                   children: (0, i.jsx)(f.jRF, {
                       ref: this.layerRef,
                       onMount: this.handlePopoutShow,
@@ -209,10 +209,10 @@ class C extends (r = a.Component) {
                       offset: o,
                       autoInvert: s,
                       fixed: l,
-                      positionKey: null != c ? c : String(p),
+                      positionKey: null != c ? c : String(_),
                       disablePointerEvents: u,
                       onPositionChange: this.handlePopoutPositionChange,
-                      clickTrap: _,
+                      clickTrap: p,
                       children: this.renderPopout,
                   }),
               });
@@ -227,8 +227,8 @@ class C extends (r = a.Component) {
             O(this, "popoutRef", a.createRef()),
             O(this, "resizeObserver", void 0),
             O(this, "popoutId", "popout_".concat(c()())),
-            O(this, "loadingTimeout", new _.V7()),
-            O(this, "validClickTimeout", new _.V7()),
+            O(this, "loadingTimeout", new p.V7()),
+            O(this, "validClickTimeout", new p.V7()),
             O(this, "isValidClickStart", !1),
             O(this, "state", {
                 renderedPosition: this.props.position,
@@ -262,7 +262,7 @@ class C extends (r = a.Component) {
                 return this.state.isLoading
                     ? this.props.loadingComponent
                     : n(
-                          T(v({}, e), {
+                          I(v({}, e), {
                               updatePosition: t,
                               closePopout: this.close,
                               setPopoutRef: this.handleSetPopoutRef,
@@ -271,7 +271,7 @@ class C extends (r = a.Component) {
             }),
             O(this, "close", (e, t) => {
                 let { onRequestClose: n, shouldShow: r } = this.props;
-                (null == n ? void 0 : n(e, t)) !== S && null == r && this.toggleShow(!1);
+                (null == n ? void 0 : n(e, t)) !== T && null == r && this.toggleShow(!1);
             }),
             O(this, "handleClick", (e) => {
                 let { onShiftClick: t, shouldShow: n, onRequestOpen: r, onRequestClose: i } = this.props;
@@ -311,7 +311,7 @@ class C extends (r = a.Component) {
                 let r = e.target,
                     i = this.domElementRef.current;
                 if (null != i) {
-                    if ((0, f.ty$)(i, r) || g.Z.isOpen() || (t && (0, p.$s)())) return;
+                    if ((0, f.ty$)(i, r) || g.Z.isOpen() || (t && (0, _.$s)())) return;
                     this.isValidClickStart = !0;
                 }
             }),
@@ -351,7 +351,7 @@ O(C, "defaultProps", {
     loadingComponent: (0, i.jsx)(b.x, {}),
     closeOnClickOutside: !0,
 }),
-    O(C, "contextType", m.ZP);
+    O(C, "contextType", h.ZP);
 let N = (e) => {
     var t, n, r, i, a, o;
     let s = e.getBoundingClientRect(),

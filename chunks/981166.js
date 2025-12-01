@@ -1,9 +1,9 @@
 n.d(t, {
-    E: () => S,
+    E: () => T,
     Jz: () => A,
     Kf: () => N,
     _w: () => C,
-    mG: () => D,
+    mG: () => w,
 });
 var r = n(990415),
     i = n(21814),
@@ -15,15 +15,15 @@ let c = null,
     u = new Set(),
     d = new Map(),
     f = !1,
-    _ = !1,
-    p = {
+    p = !1,
+    _ = {
         Tab: !0,
         Escape: !0,
     };
-function h(e, t) {
+function m(e, t) {
     for (let n of u) n(e, t);
 }
-function m(e) {
+function h(e) {
     return !(
         e.metaKey ||
         (!(0, i.V5)() && e.altKey) ||
@@ -34,10 +34,10 @@ function m(e) {
     );
 }
 function g(e) {
-    (f = !0), m(e) && ((c = "keyboard"), h("keyboard", e));
+    (f = !0), h(e) && ((c = "keyboard"), m("keyboard", e));
 }
 function E(e) {
-    (c = "pointer"), ("mousedown" === e.type || "pointerdown" === e.type) && ((f = !0), h("pointer", e));
+    (c = "pointer"), ("mousedown" === e.type || "pointerdown" === e.type) && ((f = !0), m("pointer", e));
 }
 function b(e) {
     (0, a.Z)(e) && ((f = !0), (c = "virtual"));
@@ -47,10 +47,10 @@ function y(e) {
         e.target !== document &&
         !r.uR &&
         e.isTrusted &&
-        (f || _ || ((c = "virtual"), h("virtual", e)), (f = !1), (_ = !1));
+        (f || p || ((c = "virtual"), m("virtual", e)), (f = !1), (p = !1));
 }
 function O() {
-    r.uR || ((f = !1), (_ = !0));
+    r.uR || ((f = !1), (p = !0));
 }
 function v(e) {
     if ("undefined" == typeof window || "undefined" == typeof document || d.get((0, o.kR)(e))) return;
@@ -72,13 +72,13 @@ function v(e) {
         t.addEventListener(
             "beforeunload",
             () => {
-                I(e);
+                S(e);
             },
             { once: !0 },
         ),
         d.set(t, { focus: r });
 }
-let I = (e, t) => {
+let S = (e, t) => {
     let n = (0, o.kR)(e),
         r = (0, o.r3)(e);
     t && r.removeEventListener("DOMContentLoaded", t),
@@ -95,7 +95,7 @@ let I = (e, t) => {
                 r.removeEventListener("pointerup", E, !0)),
             d.delete(n));
 };
-function T(e) {
+function I(e) {
     let t,
         n = (0, o.r3)(e);
     return (
@@ -105,17 +105,17 @@ function T(e) {
                   v(e);
               }),
               n.addEventListener("DOMContentLoaded", t)),
-        () => I(e, t)
+        () => S(e, t)
     );
 }
-function S() {
+function T() {
     return "pointer" !== c;
 }
 function A() {
     return c;
 }
 function C(e) {
-    (c = e), h(e, null);
+    (c = e), m(e, null);
 }
 function N() {
     v();
@@ -135,9 +135,9 @@ function N() {
         (0, l.Av)() ? null : e
     );
 }
-"undefined" != typeof document && T();
-let R = new Set(["checkbox", "radio", "range", "color", "file", "image", "button", "submit", "reset"]);
-function P(e, t, n) {
+"undefined" != typeof document && I();
+let P = new Set(["checkbox", "radio", "range", "color", "file", "image", "button", "submit", "reset"]);
+function R(e, t, n) {
     let r = (0, o.r3)(null == n ? void 0 : n.target),
         i = "undefined" != typeof window ? (0, o.kR)(null == n ? void 0 : n.target).HTMLInputElement : HTMLInputElement,
         a =
@@ -149,19 +149,19 @@ function P(e, t, n) {
     return !(
         (e =
             e ||
-            (r.activeElement instanceof i && !R.has(r.activeElement.type)) ||
+            (r.activeElement instanceof i && !P.has(r.activeElement.type)) ||
             r.activeElement instanceof a ||
             (r.activeElement instanceof s && r.activeElement.isContentEditable)) &&
         "keyboard" === t &&
         n instanceof l &&
-        !p[n.key]
+        !_[n.key]
     );
 }
-function D(e, t, n) {
+function w(e, t, n) {
     v(),
         (0, s.useEffect)(() => {
             let t = (t, r) => {
-                P(!!(null == n ? void 0 : n.isTextInput), t, r) && e(S());
+                R(!!(null == n ? void 0 : n.isTextInput), t, r) && e(T());
             };
             return (
                 u.add(t),

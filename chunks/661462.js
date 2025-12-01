@@ -1,6 +1,6 @@
 n.d(t, {
     F: () => y,
-    Z: () => v,
+    Z: () => O,
 }),
     n(388685);
 var r = n(54381),
@@ -97,7 +97,7 @@ function y(e) {
         ),
     );
 }
-function O(e) {
+function v(e) {
     let {
         user: t,
         currentUser: n,
@@ -140,7 +140,7 @@ function O(e) {
                 ? (0, r.jsx)(g.Z, { profileOwner: t })
                 : null;
 }
-function v(e) {
+function O(e) {
     var t;
     let {
             user: n,
@@ -154,7 +154,7 @@ function v(e) {
             onClose: p,
         } = e,
         { trackUserProfileAction: y } = (0, c.KZ)(),
-        [{ section: v, subsection: j, text: x }, _] = i.useState(
+        [{ section: O, subsection: j, text: x }, _] = i.useState(
             h(
                 b(
                     {},
@@ -180,7 +180,7 @@ function v(e) {
                 children: (0, r.jsx)(o.njP, {
                     type: "top",
                     look: "custom",
-                    selectedItem: v,
+                    selectedItem: O,
                     onItemSelect: (e) => {
                         y({
                             action: "PRESS_SECTION",
@@ -206,18 +206,18 @@ function v(e) {
                 }),
             }),
             (0, r.jsx)(o.njP.Panel, {
-                id: v,
+                id: O,
                 "aria-label": x,
                 className: m.tabBarPanel,
                 children: (0, r.jsx)(o.y5t, {
                     component: (0, r.jsx)(o.nn4, { children: (0, r.jsx)(o.H, { children: x }) }),
-                    children: (0, r.jsx)(O, {
+                    children: (0, r.jsx)(v, {
                         user: n,
                         currentUser: a,
                         displayProfile: l,
                         guildId: s,
                         channelId: u,
-                        section: v,
+                        section: O,
                         subsection: j,
                         onClose: p,
                     }),

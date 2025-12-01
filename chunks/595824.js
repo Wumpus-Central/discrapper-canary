@@ -1,6 +1,6 @@
 n.d(t, {
-    X: () => _,
-    h: () => p,
+    X: () => p,
+    h: () => _,
 }),
     n(953529);
 var r = n(54381),
@@ -61,7 +61,7 @@ function f(e, t) {
         e
     );
 }
-function _(e) {
+function p(e) {
     var t, n;
     let o = i.useContext(a.KJ);
     return (
@@ -70,11 +70,11 @@ function _(e) {
             : t.includes("mana-toggle-inputs")
     )
         ? (0, r.jsx)(s.C, u({}, e))
-        : (0, r.jsx)(p, u({}, e));
+        : (0, r.jsx)(_, u({}, e));
 }
-function p(e) {
+function _(e) {
     let { label: t, checked: n, onChange: a, labelType: s = "primary", description: c, leadingIcon: d } = e,
-        _ =
+        p =
             null != t && "" !== t
                 ? (0, r.jsxs)("div", {
                       children: [
@@ -115,7 +115,7 @@ function p(e) {
         f(u({}, e), {
             value: n,
             onChange: (e, t) => (null == a ? void 0 : a(t)),
-            children: _,
+            children: p,
         }),
     );
 }

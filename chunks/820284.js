@@ -1,38 +1,38 @@
-_.d(e, { G: () => o });
-var a = _(572299),
-    r = _(263449),
-    n = _(233517);
+r.d(t, { G: () => o });
+var n = r(572299),
+    a = r(263449),
+    i = r(233517);
 let o = function () {
     return {
-        bindClient(t) {
-            (0, r.nZ)().setClient(t);
+        bindClient(e) {
+            (0, a.nZ)().setClient(e);
         },
-        withScope: r.$e,
-        getClient: () => (0, r.s3)(),
-        getScope: r.nZ,
-        getIsolationScope: r.aF,
-        captureException: (t, e) => (0, r.nZ)().captureException(t, e),
-        captureMessage: (t, e, _) => (0, r.nZ)().captureMessage(t, e, _),
-        captureEvent: n.eN,
-        addBreadcrumb: a.n,
-        setUser: n.av,
-        setTags: n.mG,
-        setTag: n.YA,
-        setExtra: n.sU,
-        setExtras: n.rJ,
-        setContext: n.v,
-        getIntegration(t) {
-            let e = (0, r.s3)();
-            return (e && e.getIntegrationByName(t.id)) || null;
+        withScope: a.$e,
+        getClient: () => (0, a.s3)(),
+        getScope: a.nZ,
+        getIsolationScope: a.aF,
+        captureException: (e, t) => (0, a.nZ)().captureException(e, t),
+        captureMessage: (e, t, r) => (0, a.nZ)().captureMessage(e, t, r),
+        captureEvent: i.eN,
+        addBreadcrumb: n.n,
+        setUser: i.av,
+        setTags: i.mG,
+        setTag: i.YA,
+        setExtra: i.sU,
+        setExtras: i.rJ,
+        setContext: i.v,
+        getIntegration(e) {
+            let t = (0, a.s3)();
+            return (t && t.getIntegrationByName(e.id)) || null;
         },
-        startSession: n.yj,
-        endSession: n.TM,
-        captureSession(t) {
-            if (t) return (0, n.TM)();
-            let e = (0, r.nZ)(),
-                _ = (0, r.s3)(),
-                a = e.getSession();
-            _ && a && _.captureSession(a);
+        startSession: i.yj,
+        endSession: i.TM,
+        captureSession(e) {
+            if (e) return (0, i.TM)();
+            let t = (0, a.nZ)(),
+                r = (0, a.s3)(),
+                n = t.getSession();
+            r && n && r.captureSession(n);
         },
     };
 };

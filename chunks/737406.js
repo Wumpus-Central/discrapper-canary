@@ -21,7 +21,7 @@ let l = new Map(),
     u = !1,
     d = null,
     f = a.Z.Millis.HOUR;
-function _(e) {
+function p(e) {
     return {
         id: e.id,
         tags: e.tags,
@@ -33,12 +33,12 @@ function _(e) {
         [r.O]: "PackSticker",
     };
 }
-function p(e) {
+function _(e) {
     let t = {};
-    for (let n of e) t[n.id] = _(n);
+    for (let n of e) t[n.id] = p(n);
     return t;
 }
-function h(e, t) {
+function m(e, t) {
     let n = [];
     return (
         n.push({
@@ -53,7 +53,7 @@ function h(e, t) {
         n
     );
 }
-class m extends i.d {
+class h extends i.d {
     get isFetchingStickerPacks() {
         return u;
     }
@@ -85,7 +85,7 @@ class m extends i.d {
                     for (let n in e)
                         for (let [r, i] of Object.entries(e[n].root)) {
                             let e = l.get(n);
-                            t.set(r, h(i, e));
+                            t.set(r, m(i, e));
                         }
                     return t;
                 }),
@@ -99,10 +99,10 @@ class m extends i.d {
     }
 }
 function g(e, t, n) {
-    l.set(e.id, e), n && c.set(e.id, e), t.setPartition(e.id, p(e.stickers));
+    l.set(e.id, e), n && c.set(e.id, e), t.setPartition(e.id, _(e.stickers));
 }
-s(m, "displayName", "StickersPackStore");
-let E = new m(
+s(h, "displayName", "StickersPackStore");
+let E = new h(
     {
         LOGOUT: (e, t) => {
             l.clear(), c.clear(), t.reset();
@@ -120,7 +120,7 @@ let E = new m(
         },
         PACK_STICKER_FETCH_SUCCESS: (e, t) => {
             let { sticker: n } = e;
-            t.set(n.pack_id, n.id, _(n));
+            t.set(n.pack_id, n.id, p(n));
         },
     },
     "typescript",

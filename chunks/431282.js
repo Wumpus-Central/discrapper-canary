@@ -71,7 +71,7 @@ function m(e) {
     });
 }
 function p(e) {
-    let { action: t, onClick: n, icon: m, label: p, sublabel: h, trailing: x, renderSubmenu: g, ref: f } = e,
+    let { action: t, onClick: n, icon: m, label: p, sublabel: h, trailing: x, renderSubmenu: f, ref: g } = e,
         b = null != n,
         v = (0, s.Q1)({
             action: t,
@@ -79,10 +79,10 @@ function p(e) {
         }),
         [j, _] = l.useState(!1),
         y = l.useRef(null),
-        C = null != f ? f : y,
-        S = null != g,
+        C = null != g ? g : y,
+        S = null != f,
         E = S && b,
-        N = {
+        T = {
             offset: {
                 top: -8,
                 left: -8,
@@ -90,7 +90,7 @@ function p(e) {
                 bottom: -8,
             },
         },
-        T = l.useCallback(() => {
+        N = l.useCallback(() => {
             _(!0);
         }, []),
         O = l.useCallback(() => {
@@ -138,7 +138,7 @@ function p(e) {
                               (0, a.jsx)(r.P3F, {
                                   className: c.menuItemContent,
                                   onClick: v,
-                                  focusProps: { offset: u(d({}, N.offset), { right: 0 }) },
+                                  focusProps: { offset: u(d({}, T.offset), { right: 0 }) },
                                   children: P(),
                               }),
                               (0, a.jsx)(
@@ -152,8 +152,8 @@ function p(e) {
                                           e,
                                       ),
                                       {
-                                          onClick: T,
-                                          focusProps: N,
+                                          onClick: N,
+                                          focusProps: T,
                                           children: (0, a.jsx)(i.Fbu, {
                                               size: "xs",
                                               color: "currentColor",
@@ -167,8 +167,8 @@ function p(e) {
                       ? (0, a.jsxs)(
                             r.P3F,
                             u(d({ className: c.menuItemContent }, e), {
-                                onClick: T,
-                                focusProps: N,
+                                onClick: N,
+                                focusProps: T,
                                 children: [
                                     P(),
                                     (0, a.jsx)("div", {
@@ -184,7 +184,7 @@ function p(e) {
                       : (0, a.jsx)(r.P3F, {
                             className: c.menuItemContent,
                             onClick: v,
-                            focusProps: N,
+                            focusProps: T,
                             children: P(),
                         })),
                 (0, a.jsx)("div", {
@@ -197,12 +197,12 @@ function p(e) {
     return S
         ? (0, a.jsx)("li", {
               className: c.menuItem,
-              onMouseEnter: T,
+              onMouseEnter: N,
               onMouseLeave: O,
               children: (0, a.jsx)(r.yRy, {
                   targetElementRef: C,
                   spacing: 0,
-                  renderPopout: g,
+                  renderPopout: f,
                   shouldShow: j,
                   onRequestClose: O,
                   children: I,

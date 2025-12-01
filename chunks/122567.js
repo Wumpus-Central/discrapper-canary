@@ -16,15 +16,15 @@ function r(e) {
     let u = s,
         d = s + c,
         f = !1,
-        _ = !1;
+        p = !1;
     return (
         o.forEach((e, t) => {
             let n = l[t];
-            n.offset.top < d && n.offset.bottom > u && (e.isNitroLocked ? (f = !0) : (_ = !0));
+            n.offset.top < d && n.offset.bottom > u && (e.isNitroLocked ? (f = !0) : (p = !0));
         }),
         {
             isNitroLockedSectionVisible: f,
-            areOnlyNitroLockedSectionsVisible: f && !_,
+            areOnlyNitroLockedSectionsVisible: f && !p,
         }
     );
 }

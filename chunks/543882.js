@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -21,39 +21,39 @@ function u(e, t, n) {
 }
 let d = 120000,
     f = 10000,
-    _ = 5,
-    p = {},
-    h = {},
-    m = new Set();
+    p = 5,
+    _ = {},
+    m = {},
+    h = new Set();
 function g() {
-    (p = {}), (h = {});
+    (_ = {}), (m = {});
 }
 function E(e) {
     let { streamKey: t, previewURL: n } = e;
-    (p[t] = {
+    (_[t] = {
         url: n,
         expires: Date.now() + d,
     }),
-        (h[t] = 0),
-        m.delete(t);
+        (m[t] = 0),
+        h.delete(t);
 }
 function b(e) {
     let { streamKey: t, retryAfter: n } = e;
-    (p[t] = {
+    (_[t] = {
         url: null,
-        expires: Date.now() + (null != n ? n : f * h[t]),
+        expires: Date.now() + (null != n ? n : f * m[t]),
     }),
-        m.delete(t);
+        h.delete(t);
 }
 function y(e) {
     var t;
     let { streamKey: n } = e;
-    (h[n] = (null != (t = h[n]) ? t : 0) + 1), m.add(n);
+    (m[n] = (null != (t = m[n]) ? t : 0) + 1), h.add(n);
 }
 function O(e) {
     let { voiceStates: t } = e;
     return (
-        !(a().isEmpty(p) && a().isEmpty(h)) &&
+        !(a().isEmpty(_) && a().isEmpty(m)) &&
         t.reduce((e, t) => {
             let { userId: n, guildId: r, channelId: i, selfStream: a } = t;
             if (a) return e;
@@ -63,14 +63,14 @@ function O(e) {
                 channelId: i,
                 ownerId: n,
             });
-            return delete p[o], delete h[o], !0;
+            return delete _[o], delete m[o], !0;
         }, !1)
     );
 }
 class v extends (r = o.ZP.Store) {
     getPreviewURL(e, t, n) {
         let r =
-            p[
+            _[
                 (0, l.V9)({
                     streamType: null != e ? c.lo.GUILD : c.lo.CALL,
                     guildId: e,
@@ -88,10 +88,10 @@ class v extends (r = o.ZP.Store) {
                 channelId: t,
                 ownerId: n,
             }),
-            a = p[i],
-            o = null != (r = h[i]) ? r : 0,
+            a = _[i],
+            o = null != (r = m[i]) ? r : 0,
             s = null != a && Date.now() > a.expires;
-        return ((null == a && o < _) || s) && !m.has(i);
+        return ((null == a && o < p) || s) && !h.has(i);
     }
     getPreviewURLForStreamKey(e) {
         let { guildId: t, channelId: n, ownerId: r } = (0, l.my)(e);
@@ -104,11 +104,11 @@ class v extends (r = o.ZP.Store) {
             channelId: t,
             ownerId: n,
         });
-        return m.has(r);
+        return h.has(r);
     }
 }
 u(v, "displayName", "ApplicationStreamPreviewStore");
-let I = new v(s.Z, {
+let S = new v(s.Z, {
     CONNECTION_OPEN: g,
     LOGOUT: g,
     STREAM_PREVIEW_FETCH_START: y,

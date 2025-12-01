@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(979372),
     d = n(870456),
     f = n(709136),
-    _ = n(430864);
-function p(e) {
+    p = n(430864);
+function _(e) {
     let t = (0, c.CJ)();
     return (0, i.useMemo)(() => {
         let n;
@@ -26,12 +26,12 @@ function p(e) {
               s.Z.parse(e, !0, n));
     }, [e, t]);
 }
-function h(e) {
+function m(e) {
     let { content: t, className: n } = e,
-        i = p(t),
+        i = _(t),
         a = (0, u._)();
     return (0, r.jsx)("div", {
-        className: o()(n, _.markup, f.markdownContainer, a.className),
+        className: o()(n, p.markup, f.markdownContainer, a.className),
         children: i,
     });
 }

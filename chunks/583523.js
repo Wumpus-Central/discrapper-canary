@@ -32,7 +32,7 @@ function f() {
             bitrate: n.bitrate,
         });
 }
-function _() {
+function p() {
     var e;
     let t = l.Z.getVoiceChannelId(),
         n = c.Z.mode;
@@ -46,25 +46,25 @@ function _() {
             mode: a,
         });
 }
-function p() {
-    f(), _();
-}
-function h(e) {
-    let { channels: t } = e;
-    for (let e of t) l.Z.getVoiceChannelId() === e.id && p();
+function _() {
+    f(), p();
 }
 function m(e) {
+    let { channels: t } = e;
+    for (let e of t) l.Z.getVoiceChannelId() === e.id && _();
+}
+function h(e) {
     let { voiceStates: t } = e;
     t.forEach((e) => {
-        a.default.getSessionId() === e.sessionId && p();
+        a.default.getSessionId() === e.sessionId && _();
     });
 }
 class g extends i.Z {
     constructor(...e) {
         super(...e),
             d(this, "actions", {
-                CHANNEL_UPDATES: h,
-                VOICE_STATE_UPDATES: m,
+                CHANNEL_UPDATES: m,
+                VOICE_STATE_UPDATES: h,
             });
     }
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685), n(997841);
+n.d(t, { Z: () => I }), n(388685), n(997841);
 var r = n(54381);
 n(473749);
 var i = n(95015),
@@ -10,10 +10,10 @@ var i = n(95015),
     u = n(271383),
     d = n(914010),
     f = n(526120),
-    _ = n(563534),
-    p = n(734893),
-    h = n(846121),
-    m = n(931261),
+    p = n(563534),
+    _ = n(734893),
+    m = n(846121),
+    h = n(931261),
     g = n(460347),
     E = n(372897);
 function b(e, t, n) {
@@ -68,7 +68,7 @@ function v(e, t) {
         e
     );
 }
-class I extends o.Z {
+class S extends o.Z {
     constructor(...e) {
         super(...e),
             b(this, "onboardingCompleteGuilds", new Set()),
@@ -93,7 +93,7 @@ class I extends o.Z {
                 ) {
                     var c, u;
                     this.onboardingCompleteGuilds.add(s);
-                    let e = null != (u = null == (c = _.Z.getNewMemberActions(s)) ? void 0 : c.length) ? u : 0;
+                    let e = null != (u = null == (c = p.Z.getNewMemberActions(s)) ? void 0 : c.length) ? u : 0;
                     if (0 === e) return;
                     (0, a.ZDy)(async () => {
                         let { default: t } = await n.e("92339").then(n.bind(n, 184100));
@@ -119,7 +119,7 @@ class I extends o.Z {
                     a = null == r ? void 0 : r.find((e) => e.channelId === n);
                 (null == i ? void 0 : i[n]) !== !0 &&
                     null != a &&
-                    a.actionType === p.NewMemberActionTypes.VIEW &&
+                    a.actionType === _.NewMemberActionTypes.VIEW &&
                     (0, f.Oh)(t, n);
             }),
             b(this, "handleMessageSend", (e) => {
@@ -146,11 +146,11 @@ class I extends o.Z {
                     i = null == n ? void 0 : n.find((e) => e.channelId === t);
                 (null == r ? void 0 : r[t]) !== !0 &&
                     null != i &&
-                    i.actionType === p.NewMemberActionTypes.CHAT &&
+                    i.actionType === _.NewMemberActionTypes.CHAT &&
                     (0, f.Oh)(e, t);
             }),
             b(this, "_getOrLoadOnboardingMemberActions", async (e) => {
-                let t = (0, m.s)(e),
+                let t = (0, h.s)(e),
                     n = s.Z.isFullServerPreview(e);
                 if (!t && !n) return {};
                 let r = u.ZP.getSelfMember(e);
@@ -165,8 +165,8 @@ class I extends o.Z {
                 };
             }),
             b(this, "_getOrLoadOnboardingHomeSettings", async (e) => {
-                let t = _.Z.getNewMemberActions(e),
-                    n = _.Z.getIsLoading(e);
+                let t = p.Z.getNewMemberActions(e),
+                    n = p.Z.getIsLoading(e);
                 if (!(null == t && !n && (0, g.m)(e))) return t;
                 {
                     let t = await (0, f.cP)(e);
@@ -175,11 +175,11 @@ class I extends o.Z {
             }),
             b(this, "_getOrLoadMemberActions", async (e, t) => {
                 var n;
-                let { completedActions: r, loading: a } = h.Z.getState(e);
+                let { completedActions: r, loading: a } = m.Z.getState(e);
                 return null == r && !a && (0, i.yE)(null != (n = t.flags) ? n : 0, E.q.STARTED_HOME_ACTIONS)
                     ? await (0, f.Fg)(e)
                     : r;
             });
     }
 }
-let T = new I();
+let I = new S();

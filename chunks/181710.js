@@ -19,31 +19,31 @@ let c = (0, l.createContext)({}),
             {
                 isFocused: d,
                 isFocusVisible: f,
-                focusProps: _,
+                focusProps: p,
             } = (0, o.F)({
                 isTextInput: !0,
                 autoFocus: e.autoFocus,
             }),
-            p = !!e["aria-invalid"] && "false" !== e["aria-invalid"],
-            h = (0, r.aX)({
+            _ = !!e["aria-invalid"] && "false" !== e["aria-invalid"],
+            m = (0, r.aX)({
                 ...e,
                 values: {
                     isHovered: i,
                     isFocused: d,
                     isFocusVisible: f,
                     isDisabled: e.disabled || !1,
-                    isInvalid: p,
+                    isInvalid: _,
                 },
                 defaultClassName: "react-aria-Input",
             });
         return l.createElement("input", {
-            ...(0, s.d)(u(e), _, n),
-            ...h,
+            ...(0, s.d)(u(e), p, n),
+            ...m,
             ref: t,
             "data-focused": d || void 0,
             "data-disabled": e.disabled || void 0,
             "data-hovered": i || void 0,
             "data-focus-visible": f || void 0,
-            "data-invalid": p || void 0,
+            "data-invalid": _ || void 0,
         });
     });

@@ -8,19 +8,19 @@ var r = n(636881),
     u = n(655152),
     d = n(77826),
     f = n(554148),
-    _ = n(382698),
-    p = n(497464),
-    h = n(857168),
-    m = n(3831),
+    p = n(382698),
+    _ = n(497464),
+    m = n(857168),
+    h = n(3831),
     g = n(814559),
     E = n(820616),
     b = n(751736)("replace"),
     y = Math.max,
     O = Math.min,
     v = a([].concat),
-    I = a([].push),
-    T = a("".indexOf),
-    S = a("".slice),
+    S = a([].push),
+    I = a("".indexOf),
+    T = a("".slice),
     A = function (e) {
         return void 0 === e ? e : String(e);
     },
@@ -36,39 +36,39 @@ o(
         var a = N ? "$" : "$0";
         return [
             function (e, n) {
-                var r = p(this),
-                    a = u(e) ? void 0 : m(e, b);
-                return a ? i(a, e, r, n) : i(t, _(r), e, n);
+                var r = _(this),
+                    a = u(e) ? void 0 : h(e, b);
+                return a ? i(a, e, r, n) : i(t, p(r), e, n);
             },
             function (e, i) {
                 var o = l(this),
-                    s = _(e);
-                if ("string" == typeof i && -1 === T(i, a) && -1 === T(i, "$<")) {
+                    s = p(e);
+                if ("string" == typeof i && -1 === I(i, a) && -1 === I(i, "$<")) {
                     var u = n(t, o, s, i);
                     if (u.done) return u.value;
                 }
-                var p = c(i);
-                p || (i = _(i));
-                var m = o.global;
-                m && ((P = o.unicode), (o.lastIndex = 0));
-                for (var b = []; null !== (w = E(o, s)) && (I(b, w), m); ) {
-                    "" === _(w[0]) && (o.lastIndex = h(s, f(o.lastIndex), P));
+                var _ = c(i);
+                _ || (i = p(i));
+                var h = o.global;
+                h && ((R = o.unicode), (o.lastIndex = 0));
+                for (var b = []; null !== (D = E(o, s)) && (S(b, D), h); ) {
+                    "" === p(D[0]) && (o.lastIndex = m(s, f(o.lastIndex), R));
                 }
-                for (var C = "", N = 0, R = 0; R < b.length; R++) {
+                for (var C = "", N = 0, P = 0; P < b.length; P++) {
                     for (
-                        var P, D, w = b[R], L = _(w[0]), x = y(O(d(w.index), s.length), 0), M = [], k = 1;
-                        k < w.length;
-                        k++
+                        var R, w, D = b[P], x = p(D[0]), L = y(O(d(D.index), s.length), 0), j = [], M = 1;
+                        M < D.length;
+                        M++
                     )
-                        I(M, A(w[k]));
-                    var j = w.groups;
-                    if (p) {
-                        var U = v([L], M, x, s);
-                        void 0 !== j && I(U, j), (D = _(r(i, void 0, U)));
-                    } else D = g(L, s, x, M, j, i);
-                    x >= N && ((C += S(s, N, x) + D), (N = x + L.length));
+                        S(j, A(D[M]));
+                    var k = D.groups;
+                    if (_) {
+                        var U = v([x], j, L, s);
+                        void 0 !== k && S(U, k), (w = p(r(i, void 0, U)));
+                    } else w = g(x, s, L, j, k, i);
+                    L >= N && ((C += T(s, N, L) + w), (N = L + x.length));
                 }
-                return C + S(s, N);
+                return C + T(s, N);
             },
         ];
     },

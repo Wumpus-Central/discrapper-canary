@@ -12,8 +12,8 @@ var a = n(54381),
     p = n(210825),
     h = n(535188),
     x = n(856597),
-    g = n(231338),
-    f = n(641689),
+    f = n(231338),
+    g = n(211231),
     b = n(388032),
     v = n(104940);
 let j = n(575703);
@@ -49,7 +49,7 @@ let y = function (e) {
         [h, x] = l.useState(!0),
         [y, C] = l.useState(null),
         [S, E] = l.useState(!1),
-        N = l.useCallback(async () => {
+        T = l.useCallback(async () => {
             x(!0), C(null);
             try {
                 var e;
@@ -74,12 +74,12 @@ let y = function (e) {
                           },
                       });
             } catch (e) {
-                C(b.intl.string(f.default["/f++3g"]));
+                C(b.intl.string(g.default["/f++3g"]));
             } finally {
                 x(!1);
             }
         }, [t]),
-        T = l.useCallback(
+        N = l.useCallback(
             async (e) => {
                 if (null !== n) {
                     E(!0);
@@ -89,18 +89,18 @@ let y = function (e) {
                             flow_id: n.flow_context.flow_id,
                             data: e,
                         };
-                        await (0, d.Wl)(t), N();
+                        await (0, d.Wl)(t), T();
                     } catch (e) {
-                        C(b.intl.string(f.default["+QRSxc"]));
+                        C(b.intl.string(g.default["+QRSxc"]));
                     } finally {
                         E(!1);
                     }
                 }
             },
-            [n, N],
+            [n, T],
         );
     (0, r.ZP)(() => {
-        N();
+        T();
     });
     let O = l.useMemo(() => (null == n ? void 0 : n.task_type) === m.UA.AGE_VERIFICATION, [n]);
     return (0, a.jsxs)("div", {
@@ -115,9 +115,9 @@ let y = function (e) {
                 ? (0, a.jsx)(o.default, {
                       transitionState: i.Dvm.ENTERED,
                       entryPoint: s.cU.SAFETY_FLOWS,
-                      onClose: g.dG,
+                      onClose: f.dG,
                       onComplete: async () => {
-                          await T({ type: m.rY.Empty });
+                          await N({ type: m.rY.Empty });
                       },
                       dismissable: !1,
                   })
@@ -172,7 +172,7 @@ let y = function (e) {
                                                                 fullWidth: !0,
                                                                 text: b.intl.string(b.t["7NqTJn"]),
                                                                 onClick: () => {
-                                                                    N();
+                                                                    T();
                                                                 },
                                                             }),
                                                         ],
@@ -183,7 +183,7 @@ let y = function (e) {
                                             null != n &&
                                             (0, a.jsx)(_, {
                                                 task: n,
-                                                handleSubmit: T,
+                                                handleSubmit: N,
                                                 disabled: S,
                                             }),
                                     ],

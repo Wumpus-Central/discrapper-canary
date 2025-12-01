@@ -1,7 +1,7 @@
 n.d(t, {
-    QN: () => h,
-    ZP: () => m,
-    c7: () => p,
+    QN: () => m,
+    ZP: () => h,
+    c7: () => _,
     mw: () => g,
 }),
     n(388685);
@@ -63,8 +63,8 @@ function f(e, t) {
         e
     );
 }
-let _ = i.v.VARIANTS_GROUP;
-function p() {
+let p = i.v.VARIANTS_GROUP;
+function _() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         [t, n, i, l, c, u] = (0, a.Wu)([s.Z], () => [
             s.Z.isFetching,
@@ -82,13 +82,13 @@ function p() {
     (0, r.useEffect)(() => {
         f.current = i;
     }, [i]);
-    let p = (0, r.useRef)(s.Z.isFetching);
+    let _ = (0, r.useRef)(s.Z.isFetching);
     return (
         (0, r.useEffect)(() => {
-            p.current = t;
+            _.current = t;
         }, [t]),
         (0, r.useEffect)(() => {
-            p.current || (!0 === e && d.current && null == f.current) || (0, o.qg)({ variantsReturnStyle: _ });
+            _.current || (!0 === e && d.current && null == f.current) || (0, o.qg)({ variantsReturnStyle: p });
         }, [e]),
         {
             isClaiming: n,
@@ -100,8 +100,8 @@ function p() {
         }
     );
 }
-let h = () => p(!0);
-function m(e, t) {
+let m = () => _(!0);
+function h(e, t) {
     let n = null == e ? void 0 : e.paymentGateway,
         {
             isFetching: r,
@@ -123,8 +123,8 @@ function m(e, t) {
             claimError: u,
             isFetching: d,
             purchases: f,
-            hasPreviouslyFetched: _,
-        } = p(null == e ? void 0 : e.stalePurchasesOK);
+            hasPreviouslyFetched: p,
+        } = _(null == e ? void 0 : e.stalePurchasesOK);
     return {
         isFetching: r || d,
         isFetchingCategories: r,
@@ -136,7 +136,7 @@ function m(e, t) {
         fetchPurchasesError: c,
         claimError: u,
         refreshCategories: o,
-        hasPreviouslyFetched: _,
+        hasPreviouslyFetched: p,
     };
 }
-let g = (e) => m(f(u({}, null != e ? e : {}), { stalePurchasesOK: !0 }));
+let g = (e) => h(f(u({}, null != e ? e : {}), { stalePurchasesOK: !0 }));

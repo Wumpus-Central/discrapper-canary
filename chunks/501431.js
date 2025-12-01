@@ -10,8 +10,8 @@ var r = n(473749),
     l = n(663042),
     i = n(690775),
     a = n(497598),
-    s = n(792091),
-    o = n(653654),
+    o = n(792091),
+    s = n(653654),
     c = n(870289),
     u = n(149705);
 function d(e) {
@@ -62,15 +62,15 @@ function g(e, t) {
     return n.has(t) ? n.delete(t) : n.add(t), n;
 }
 let p = {
-        sortType: s.E.RECENCY,
+        sortType: o.E.RECENCY,
         sortDirection: a.F.DESC,
     },
     m = {
-        sortType: s.E.POPULARITY,
+        sortType: o.E.POPULARITY,
         sortDirection: a.F.DESC,
     },
     h = {
-        sortType: s.E.RELEVANCE,
+        sortType: o.E.RELEVANCE,
         sortDirection: a.F.DESC,
     },
     C = {
@@ -216,16 +216,16 @@ let p = {
             orbEligible: l,
             sort: i,
             searchQuery: a,
-            queryPageSize: s,
-            queryPageOffset: o,
+            queryPageSize: o,
+            queryPageOffset: s,
         } = e;
         return {
             item_types: Array.from(t),
             colors: Array.from(n),
             themes: Array.from(r),
             orbs_eligible: !!l || void 0,
-            offset: o,
-            limit: s,
+            offset: s,
+            limit: o,
             sort_type: i.sortType,
             sort_direction: i.sortDirection,
             search: "" !== a ? a : void 0,
@@ -239,7 +239,7 @@ let p = {
                 let i = async () => {
                     n(!0);
                     try {
-                        let t = await (0, o.y)(r);
+                        let t = await (0, s.y)(r);
                         e(
                             ((e) => {
                                 let t = e.skus,

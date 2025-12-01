@@ -1,14 +1,14 @@
 n.d(t, {
-    Uc: () => p,
+    Uc: () => _,
     ac: () => E,
     cv: () => b,
     d5: () => g,
-    i7: () => T,
-    kI: () => m,
+    i7: () => I,
+    kI: () => h,
     re: () => O,
     tU: () => C,
-    u0: () => I,
-    uL: () => S,
+    u0: () => S,
+    uL: () => T,
     xU: () => y,
     xt: () => A,
 }),
@@ -38,7 +38,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -54,19 +54,19 @@ function _(e) {
     }
     return e;
 }
-let p = { readerFactory: (e) => new r.o(e, new TextDecoder("utf-8")) },
-    h = {
+let _ = { readerFactory: (e) => new r.o(e, new TextDecoder("utf-8")) },
+    m = {
         [u.yP.PRELOADED_USER_SETTINGS]: l.o8,
         [u.yP.FRECENCY_AND_FAVORITES_SETTINGS]: s.ji,
     };
-function m(e, t) {
-    return null != t && e in h ? g(h[e], t) : null;
+function h(e, t) {
+    return null != t && e in m ? g(m[e], t) : null;
 }
 function g(e, t) {
     if (null == t) return null;
     let n = (0, i.c)(t);
     try {
-        return e.fromBinary(n, p);
+        return e.fromBinary(n, _);
     } catch (e) {
         throw Error("Settings proto failed to deserialize (potentially corrupt): ".concat(e));
     }
@@ -75,25 +75,25 @@ function E(e) {
     return g(l.o8, e);
 }
 function b(e, t) {
-    return y(h[e], t);
+    return y(m[e], t);
 }
 function y(e, t) {
     return (0, i.m)(e.toBinary(t));
 }
 function O(e, t, n) {
-    for (let e in ((t = _({}, t)), n)) delete t[e];
+    for (let e in ((t = p({}, t)), n)) delete t[e];
     return e.mergePartial(t, n), t;
 }
 function v(e, t, n) {
-    return null == e.guilds && (e.guilds = l.os.create()), I(e.guilds, t, n);
-}
-function I(e, t, n) {
-    return (null == t || "null" === t) && (t = d.aIL), t in e.guilds || (e.guilds[t] = l.C4.create()), n(e.guilds[t]);
-}
-function T(e, t, n, r) {
-    return v(e, t, (e) => S(e, n, r));
+    return null == e.guilds && (e.guilds = l.os.create()), S(e.guilds, t, n);
 }
 function S(e, t, n) {
+    return (null == t || "null" === t) && (t = d.aIL), t in e.guilds || (e.guilds[t] = l.C4.create()), n(e.guilds[t]);
+}
+function I(e, t, n, r) {
+    return v(e, t, (e) => T(e, n, r));
+}
+function T(e, t, n) {
     return t in e.channels || (e.channels[t] = l.p5.create()), n(e.channels[t]);
 }
 function A(e, t) {

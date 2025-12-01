@@ -3,16 +3,16 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(790519),
+    s = n(666917),
     l = n(442837),
     c = n(704215),
     u = n(481060),
     d = n(607070),
     f = n(243778),
-    _ = n(594174),
-    p = n(74538),
-    h = n(921944),
-    m = n(388032),
+    p = n(594174),
+    _ = n(74538),
+    m = n(921944),
+    h = n(388032),
     g = n(975377);
 let E = {
         tension: 750,
@@ -52,19 +52,19 @@ function y(e) {
     });
 }
 function O(e) {
-    return e ? m.intl.string(m.t["5cRA/b"]) : m.intl.string(m.t.buV4av);
+    return e ? h.intl.string(h.t["5cRA/b"]) : h.intl.string(h.t.buV4av);
 }
 function v(e) {
     let { checked: t, onClick: n, id: a = "burst-reaction-toggle-button" } = e,
         v = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        I = _.default.getCurrentUser(),
-        T = null == I || (0, p.I5)(I) ? [c.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
-        [S, A] = (0, f.US)(T),
+        S = p.default.getCurrentUser(),
+        I = null == S || (0, _.I5)(S) ? [c.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
+        [T, A] = (0, f.US)(I),
         [C, N] = i.useState(!1),
-        [R, P] = (0, u.q_F)(() => ({})),
-        D = (0, s.animated)(u.Pt5);
-    function w() {
-        P({
+        [P, R] = (0, u.q_F)(() => ({})),
+        w = (0, s.animated)(u.Pt5);
+    function D() {
+        R({
             from: { rotate: t ? "360deg" : "0deg" },
             to: { rotate: t ? "0deg" : "360deg" },
             config: E,
@@ -73,27 +73,27 @@ function v(e) {
             N(!1);
     }
     i.useEffect(() => {
-        let e = S === c.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
-        e && (A(h.L.DISMISS), setTimeout(() => N(e), 200));
-    }, [S, A]);
-    let L = C ? m.intl.string(m.t["Osi/uy"]) : O(t),
-        x = C ? m.intl.string(m.t.ORK94p) : void 0;
+        let e = T === c.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
+        e && (A(m.L.DISMISS), setTimeout(() => N(e), 200));
+    }, [T, A]);
+    let x = C ? h.intl.string(h.t["Osi/uy"]) : O(t),
+        L = C ? h.intl.string(h.t.ORK94p) : void 0;
     return (0, r.jsxs)(u.jSM, {
         position: "top",
         text: (0, r.jsx)(y, {
             textColor: "always-white",
-            tooltipText: L,
-            headingText: x,
+            tooltipText: x,
+            headingText: L,
         }),
         color: u.aML.Colors.BRAND,
         forceOpen: C,
-        "aria-label": L,
+        "aria-label": x,
         tooltipClassName: g.tooltip,
         children: [
             (0, r.jsx)("input", {
                 className: g.visuallyHidden,
                 checked: t,
-                onChange: w,
+                onChange: D,
                 id: a,
                 type: "checkbox",
             }),
@@ -101,8 +101,8 @@ function v(e) {
                 htmlFor: a,
                 className: o()(g.label, { [g.labelChecked]: t }),
                 children: [
-                    (0, r.jsx)(D, {
-                        style: v ? void 0 : R,
+                    (0, r.jsx)(w, {
+                        style: v ? void 0 : P,
                         size: "custom",
                         width: b,
                         height: b,
@@ -113,7 +113,7 @@ function v(e) {
                         children: (0, r.jsx)(u.Text, {
                             className: g.visuallyHidden,
                             variant: "text-sm/semibold",
-                            children: m.intl.string(m.t.buV4av),
+                            children: h.intl.string(h.t.buV4av),
                         }),
                     }),
                 ],

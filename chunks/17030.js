@@ -23,7 +23,7 @@ function b(e) {
         } = e,
         v = r.useRef(null),
         _ = (0, l.e7)([p.Z, d.Z], () => d.Z.getChannel(p.Z.getVoiceChannelId())),
-        x = r.useCallback(
+        O = r.useCallback(
             () =>
                 null != t
                     ? (0, i.jsx)(o.Z, {
@@ -118,7 +118,7 @@ function b(e) {
                         ref: v,
                         active: a,
                         tabIndex: 0,
-                        renderButtonContents: null == t && null == b ? null : x,
+                        renderButtonContents: null == t && null == b ? null : O,
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))

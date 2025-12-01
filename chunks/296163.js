@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(54381),
     i = n(473749),
     a = n(442837),
@@ -9,7 +9,7 @@ var r = n(54381),
     u = n(269647),
     d = n(981631),
     f = n(388032);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,15 +33,15 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e) {
+function m(e) {
     return (0, r.jsx)(
         o.u_l,
-        p(
+        _(
             {
                 size: "md",
                 title: f.intl.string(f.t.NYklhr),
@@ -67,7 +67,7 @@ function h(e) {
         ),
     );
 }
-function m() {
+function h() {
     let e = (0, a.e7)([u.Z], () => u.Z.shouldShowWarning(), []),
         t = i.useRef(null);
     function n() {
@@ -76,7 +76,7 @@ function m() {
     return (
         i.useEffect(
             () => (
-                e ? (t.current = (0, s.h7j)((e) => (0, r.jsx)(h, p({}, e)))) : n(),
+                e ? (t.current = (0, s.h7j)((e) => (0, r.jsx)(m, _({}, e)))) : n(),
                 () => {
                     n();
                 }

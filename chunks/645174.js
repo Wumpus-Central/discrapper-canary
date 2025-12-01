@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,41 +58,41 @@ function _(e, t) {
         e
     );
 }
-function p(e, t) {
+function _(e, t) {
     let { attributes: n, children: i, element: a } = t;
     return "gameMentionInput" === a.type
-        ? (0, r.jsx)(h, {
+        ? (0, r.jsx)(m, {
               attributes: n,
               element: a,
               children: i,
           })
         : null;
 }
-let h = (e) => {
+let m = (e) => {
     let { element: t, attributes: n, children: a } = e,
         u = (0, s.vt)(),
         f = (0, s.UE)(),
-        p = (0, s._7)(),
-        h = o()(c.inlineElement, c.optionPill, c.gameMention, {
+        _ = (0, s._7)(),
+        m = o()(c.inlineElement, c.optionPill, c.gameMention, {
             [c.selectedPill]: f && u,
             [c.erroredPill]: t.error,
         }),
-        m = i.useCallback(() => {
-            l.bN.isVoid(p, t);
-        }, [p, t]),
+        h = i.useCallback(() => {
+            l.bN.isVoid(_, t);
+        }, [_, t]),
         g = (0, r.jsx)("span", {
             className: c.optionPillValue,
             children: a,
         });
     return (0, r.jsxs)(
         "span",
-        _(d({}, n), {
-            className: h,
+        p(d({}, n), {
+            className: m,
             children: [
                 (0, r.jsxs)("span", {
                     className: c.optionPillKey,
                     contentEditable: !1,
-                    onClick: m,
+                    onClick: h,
                     children: ["@game", "\u200B"],
                 }),
                 g,

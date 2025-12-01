@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(321051),
     d = n(669079),
     f = n(479446),
-    _ = n(283066),
-    p = n(543995),
-    h = n(981632),
-    m = n(96848),
+    p = n(283066),
+    _ = n(543995),
+    m = n(981632),
+    h = n(96848),
     g = n(703926),
     E = n(388032),
     b = n(611344);
@@ -57,7 +57,7 @@ function v(e, t) {
     }
     return n;
 }
-function I(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -68,11 +68,11 @@ function I(e, t) {
         e
     );
 }
-function T(e, t) {
+function I(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = S(e, t);
+        i = T(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -80,7 +80,7 @@ function T(e, t) {
     }
     return i;
 }
-function S(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -94,24 +94,24 @@ let A = (e) => {
         {
             giftRecipient: y,
             selectedGiftStyle: v,
-            setSelectedGiftStyle: S,
+            setSelectedGiftStyle: T,
             emojiConfetti: A,
             soundEffect: C,
             setEmojiConfetti: N,
-            setSoundEffect: R,
+            setSoundEffect: P,
         } = (0, c.wD)(),
-        [P, D] = i.useState(!1),
-        w = i.useRef(null),
-        L = (0, s.Jb)({ orientation: "horizontal" }),
-        { ref: x } = L,
-        M = T(L, ["ref"]),
-        k = (0, d.MY)(y, t),
-        j = k === d.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-        U = k !== d.xr.DEFAULT,
-        G = (0, p.m)(),
-        B = (0, _.Z)({ location: "GiftAnimationOptions" }),
-        Z = (e) => {
-            null != R && R(null == e ? void 0 : e);
+        [R, w] = i.useState(!1),
+        D = i.useRef(null),
+        x = (0, s.Jb)({ orientation: "horizontal" }),
+        { ref: L } = x,
+        j = I(x, ["ref"]),
+        M = (0, d.MY)(y, t),
+        k = M === d.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+        U = M !== d.xr.DEFAULT,
+        G = (0, _.m)(),
+        Z = (0, p.Z)({ location: "GiftAnimationOptions" }),
+        B = (e) => {
+            null != P && P(null == e ? void 0 : e);
         };
     return (0, r.jsxs)("div", {
         children: [
@@ -120,7 +120,7 @@ let A = (e) => {
                     className: o()(b.giftMainAnimation, n),
                     children: [
                         null != v
-                            ? (0, r.jsx)(h.Z, {
+                            ? (0, r.jsx)(m.Z, {
                                   giftStyle: v,
                                   defaultAnimationState: f.SR.ACTION,
                                   idleAnimationState: f.SR.LOOP,
@@ -128,15 +128,15 @@ let A = (e) => {
                                   className: b.animation,
                               })
                             : (0, r.jsx)(l.$jN, { className: b.spinner }),
-                        j &&
+                        k &&
                             (0, r.jsxs)("div", {
-                                className: o()(b.soundEmojiContainer, B && b.refresh),
+                                className: o()(b.soundEmojiContainer, Z && b.refresh),
                                 children: [
                                     (0, r.jsx)(u.Z, {
                                         sound: C,
-                                        onSelect: Z,
+                                        onSelect: B,
                                     }),
-                                    (0, r.jsx)(m.Z, {
+                                    (0, r.jsx)(h.Z, {
                                         setEmojiConfetti: N,
                                         emojiConfetti: null == A ? void 0 : A,
                                     }),
@@ -146,34 +146,34 @@ let A = (e) => {
                 }),
             (0, r.jsx)(
                 "div",
-                I(
+                S(
                     O(
                         {
-                            tabIndex: null != v || P ? void 0 : 0,
+                            tabIndex: null != v || R ? void 0 : 0,
                             onFocus: (e) => {
                                 var t;
-                                e.target === e.currentTarget && (null == (t = w.current) || t.focus());
+                                e.target === e.currentTarget && (null == (t = D.current) || t.focus());
                             },
                             className: o()(b.giftBoxOptionContainer, a),
                             "aria-label": E.intl.string(E.t.v54NrN),
-                            ref: x,
+                            ref: L,
                         },
-                        M,
+                        j,
                     ),
                     {
                         children:
                             null != G &&
-                            !B &&
+                            !Z &&
                             G.map((e, t) =>
                                 (0, r.jsx)(
                                     g.m,
                                     {
                                         isSelected: v === e,
                                         giftStyle: e,
-                                        setSelectedGiftStyle: S,
-                                        ref: 0 === t ? w : null,
-                                        onFocus: () => D(!0),
-                                        onBlur: () => D(!1),
+                                        setSelectedGiftStyle: T,
+                                        ref: 0 === t ? D : null,
+                                        onFocus: () => w(!0),
+                                        onBlur: () => w(!1),
                                     },
                                     e,
                                 ),

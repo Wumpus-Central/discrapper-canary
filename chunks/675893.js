@@ -9,9 +9,9 @@ var r = n(54381),
     u = n(278857),
     d = n(890307),
     f = n(350207),
-    _ = n(228168),
-    p = n(388032);
-function h(e, t, n) {
+    p = n(228168),
+    _ = n(388032);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,20 +35,20 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
 }
 function g(e) {
-    let { user: t, widgets: n = [], onOpenUserProfileModal: h } = e,
+    let { user: t, widgets: n = [], onOpenUserProfileModal: m } = e,
         g = i.useMemo(() => n.filter((e) => e instanceof s.q), [n]),
         { analyticsLocations: E } = (0, a.ZP)(),
         { trackUserProfileAction: b } = (0, o.KZ)(),
         y = (0, c.d)(t.id, g),
         O = i.useCallback(() => {
-            null == h || h({ section: _.oh.WIDGETS });
-        }, [h]),
+            null == m || m({ section: p.oh.WIDGETS });
+        }, [m]),
         v = i.useCallback(
             (e) => {
                 let t = !1,
@@ -59,7 +59,7 @@ function g(e) {
                           i.push(
                               (0, r.jsx)(
                                   d.Z,
-                                  m(
+                                  h(
                                       {
                                           previewData: y[a.applicationId],
                                           onClick: O,
@@ -74,7 +74,7 @@ function g(e) {
                           (i.push(
                               (0, r.jsx)(
                                   f.Z,
-                                  m(
+                                  h(
                                       {
                                           widgets: n,
                                           onClick: O,
@@ -93,7 +93,7 @@ function g(e) {
         ? null
         : (0, r.jsx)(u.Z, {
               renderCards: v,
-              heading: p.intl.string(p.t.Y55Tua),
+              heading: _.intl.string(_.t.Y55Tua),
               onExpand: () => {
                   b({
                       action: "PRESS_SHOW_MORE_WIDGETS",

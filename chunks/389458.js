@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => L }), n(388685), n(704826), n(35282), n(642613), n(368063);
+n.d(t, { Z: () => x }), n(388685), n(704826), n(35282), n(642613), n(368063);
 var i,
     a = n(442837),
     o = n(570140),
@@ -21,10 +21,10 @@ function d(e, t, n) {
     );
 }
 let f = 5,
-    _ = 250,
-    p = 0.001,
-    h = 0.01,
-    m = 10,
+    p = 250,
+    _ = 0.001,
+    m = 0.01,
+    h = 10,
     g = new Map(),
     E = 0;
 function b(e) {
@@ -50,26 +50,26 @@ function v(e, t) {
         e.set(t, i);
     }
 }
-function I() {
+function S() {
     let e = 1000,
         t = 5000,
         n = 0.05;
     return E < 1000 || Math.random() < (1 - n) * Math.max(0, 1 - (E - e) / (t - e)) + n;
 }
-function T(e) {
-    null == r && (r = l.t.createEstimate(p, h));
+function I(e) {
+    null == r && (r = l.t.createEstimate(_, m));
     let t = !1;
     for (let n of e)
-        if (I())
+        if (S())
             for (let e of y(n.content.toLowerCase())) {
                 if (0 === e.length || e.length > f) continue;
                 r.update(e);
                 let n = r.query(e);
                 g.set(e, n), n > E && (E = n), (t = !0);
             }
-    v(g, _), t && w.emitChange();
+    v(g, p), t && D.emitChange();
 }
-function S() {
+function T() {
     let e = u.V.getCurrentConfig({ location: "WordFrequencyStore" }, { autoTrackExposure: !0 }).enabled,
         t = (0, c.kB)("WordFrequencyStore", { autoTrackExposure: !1 }).enabled;
     return e || t;
@@ -84,22 +84,22 @@ let C = () => {
     (r = void 0), g.clear(), (E = 0);
 };
 function N(e) {
-    return S()
+    return T()
         ? (requestIdleCallback(() => {
-              T(e);
+              I(e);
           }),
           !1)
         : !!A() && g.size > 0 && (C(), !0);
 }
-let R = (e) => {
+let P = (e) => {
         let { messages: t } = e;
         return N(t);
     },
-    P = (e) => {
+    R = (e) => {
         let { message: t } = e;
         return N([t]);
     };
-class D extends (i = a.ZP.PersistedStore) {
+class w extends (i = a.ZP.PersistedStore) {
     initialize(e) {
         if ((this.waitFor(s.Z), null != e)) {
             var t;
@@ -131,13 +131,13 @@ class D extends (i = a.ZP.PersistedStore) {
     }
     isFrequentlyUsedWord(e) {
         let t = g.get(e.toLowerCase());
-        return null != t && t > m;
+        return null != t && t > h;
     }
 }
-d(D, "displayName", "WordFrequencyStore"), d(D, "persistKey", "WordFrequencyStore");
-let w = new D(o.Z, {
-        LOAD_MESSAGES_SUCCESS: R,
-        MESSAGE_CREATE: P,
+d(w, "displayName", "WordFrequencyStore"), d(w, "persistKey", "WordFrequencyStore");
+let D = new w(o.Z, {
+        LOAD_MESSAGES_SUCCESS: P,
+        MESSAGE_CREATE: R,
         DEV_TOOLS_WORD_FREQUENCY_RESET: C,
     }),
-    L = w;
+    x = D;

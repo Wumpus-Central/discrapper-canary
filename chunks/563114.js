@@ -1,6 +1,6 @@
 n.d(t, {
     T: () => l,
-    Z: () => p,
+    Z: () => _,
 }),
     n(388685),
     n(704826),
@@ -46,13 +46,13 @@ async function f(e) {
               return (0, a.vq)(t, n, r);
           });
 }
-function _(e) {
+function p(e) {
     let { channelId: t, messageId: n, emoji: r } = e;
 }
-let p = {
+let _ = {
     getURL: s.Z.makeMemoizer(c),
     filterUnsupportedEmojis: u,
     applyPlatformToThemedEmojiColorPalette: d,
     getEmojiColors: f,
-    triggerFullscreenAnimation: _,
+    triggerFullscreenAnimation: p,
 };

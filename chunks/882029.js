@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,13 +58,13 @@ function _(e, t) {
         e
     );
 }
-let p = 2000,
-    h = { unlockedAchievements: {} },
-    m = d({}, h);
+let _ = 2000,
+    m = { unlockedAchievements: {} },
+    h = d({}, m);
 function g(e) {
     return (
-        null == m.unlockedAchievements[e] &&
-        ((m.unlockedAchievements = _(d({}, m.unlockedAchievements), {
+        null == h.unlockedAchievements[e] &&
+        ((h.unlockedAchievements = p(d({}, h.unlockedAchievements), {
             [e]: {
                 achievementId: e,
                 dateUnlocked: Date.now(),
@@ -72,7 +72,7 @@ function g(e) {
         })),
         setTimeout(() => {
             (0, s.D)(e, !0);
-        }, p),
+        }, _),
         !0)
     );
 }
@@ -84,18 +84,18 @@ function E(e) {
 class b extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         this.waitFor(o.default, l.Z, c.ZP);
-        let t = null != e ? e : d({}, h);
-        for (let e in t) m[e] = t[e];
+        let t = null != e ? e : d({}, m);
+        for (let e in t) h[e] = t[e];
     }
     getState() {
-        return m;
+        return h;
     }
     getAllUnlockedAchievements() {
-        return m.unlockedAchievements;
+        return h.unlockedAchievements;
     }
     getUnlocked(e) {
         var t;
-        return null != (t = m.unlockedAchievements[e]) ? t : null;
+        return null != (t = h.unlockedAchievements[e]) ? t : null;
     }
 }
 u(b, "displayName", "PoggermodeAchievementStore"), u(b, "persistKey", "PoggermodeAchievementStore");

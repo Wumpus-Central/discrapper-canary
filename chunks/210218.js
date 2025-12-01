@@ -57,45 +57,45 @@ function d(e, t) {
     );
 }
 let f = {},
-    _ = {};
-function p(e) {
+    p = {};
+function _(e) {
     let { guildId: t } = e;
-    (_[t] = {
+    (p[t] = {
         storefront: null,
         state: "loading",
         fetchedAt: null,
     }),
-        (_ = c({}, _));
+        (p = c({}, p));
 }
-function h(e) {
+function m(e) {
     let { guildId: t, storefront: n } = e;
-    (_[t] = {
+    (p[t] = {
         storefront: n,
         state: "fetched",
         fetchedAt: Date.now(),
     }),
-        (_ = c({}, _));
+        (p = c({}, p));
 }
-function m(e) {
+function h(e) {
     let { guildId: t, storefront: n } = e,
-        r = _[t];
+        r = p[t];
     (null == r ? void 0 : r.storefront) != null
-        ? (_[t] = d(c({}, r), { storefront: d(c({}, r.storefront), { assets: c({}, r.storefront.assets, n.assets) }) }))
-        : (_[t] = {
+        ? (p[t] = d(c({}, r), { storefront: d(c({}, r.storefront), { assets: c({}, r.storefront.assets, n.assets) }) }))
+        : (p[t] = {
               storefront: n,
               state: "partially-fetched",
               fetchedAt: null,
           }),
-        (_ = c({}, _));
+        (p = c({}, p));
 }
 function g(e) {
     let { guildId: t } = e;
-    (_[t] = {
+    (p[t] = {
         storefront: null,
         state: "error",
         fetchedAt: null,
     }),
-        (_ = c({}, _));
+        (p = c({}, p));
 }
 function E(e) {
     let { guildId: t, pageIndex: n, skuId: r } = e;
@@ -107,14 +107,14 @@ function E(e) {
 }
 function b() {
     if (r === s.default.locale) return !1;
-    (r = s.default.locale), (f = {}), (_ = {});
+    (r = s.default.locale), (f = {}), (p = {});
 }
 class y extends (i = a.ZP.Store) {
     initialize() {
         this.waitFor(s.default), this.syncWith([s.default], b), (r = s.default.locale);
     }
     getStorefrontData(e) {
-        return _[e];
+        return p[e];
     }
     getStorefrontState(e) {
         return f[e];
@@ -122,9 +122,9 @@ class y extends (i = a.ZP.Store) {
 }
 l(y, "displayName", "SocialLayerStorefrontStore");
 let O = new y(o.Z, {
-    SOCIAL_LAYER_STOREFRONT_LOAD: p,
-    SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS: h,
-    SOCIAL_LAYER_STOREFRONT_PARTIAL_LOAD_SUCCESS: m,
+    SOCIAL_LAYER_STOREFRONT_LOAD: _,
+    SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS: m,
+    SOCIAL_LAYER_STOREFRONT_PARTIAL_LOAD_SUCCESS: h,
     SOCIAL_LAYER_STOREFRONT_LOAD_FAILURE: g,
     SET_SOCIAL_LAYER_STOREFRONT_STATE: E,
 });

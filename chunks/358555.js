@@ -10,10 +10,10 @@ var i = n(120356),
     u = n(523751),
     d = n(623624),
     f = n(290034),
-    _ = n(340541),
-    p = n(271383),
-    h = n(594174),
-    m = n(267642),
+    p = n(340541),
+    _ = n(271383),
+    m = n(594174),
+    h = n(267642),
     g = n(981631),
     E = n(388032),
     b = n(566588);
@@ -58,7 +58,7 @@ function v(e, t) {
     }
     return n;
 }
-function I(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -69,11 +69,11 @@ function I(e, t) {
         e
     );
 }
-function T(e) {
+function I(e) {
     let { guild: t, isBannerVisible: n, disableBoostClick: i } = e,
-        a = (0, o.e7)([h.default, p.ZP], () => {
-            let e = h.default.getCurrentUser();
-            return p.ZP.isMember(t.id, null == e ? void 0 : e.id);
+        a = (0, o.e7)([m.default, _.ZP], () => {
+            let e = m.default.getCurrentUser();
+            return _.ZP.isMember(t.id, null == e ? void 0 : e.id);
         }),
         { premiumTier: l, premiumSubscriberCount: c } = t;
     if (0 === c && l === g.Eu4.NONE) return null;
@@ -90,12 +90,12 @@ function T(e) {
                         },
                     });
         },
-        _ = l === g.Eu4.NONE ? E.intl.string(E.t.c2wsn6) : m.nW(l),
+        p = l === g.Eu4.NONE ? E.intl.string(E.t.c2wsn6) : h.nW(l),
         y = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)("div", {
                     className: b.tierTooltipTitle,
-                    children: _,
+                    children: p,
                 }),
                 (0, r.jsx)("div", { children: E.intl.format(E.t.If4iTS, { subscriberCount: c }) }),
             ],
@@ -106,11 +106,11 @@ function T(e) {
             "data-migration-pending": !0,
             text: y,
             position: "bottom",
-            "aria-label": null != _ ? _ : "",
+            "aria-label": null != p ? p : "",
             children: (e) =>
                 (0, r.jsx)(
                     s.P3F,
-                    I(O({}, e), {
+                    S(O({}, e), {
                         className: b.__invalid_premiumGuildIcon,
                         onClick: u,
                         children: (0, r.jsx)(f.Z, {
@@ -125,10 +125,10 @@ function T(e) {
         }),
     });
 }
-function S(e) {
+function T(e) {
     let { guild: t, disableColor: n, disableBoostClick: i } = e,
         o = (0, l.Z)(t),
-        d = (0, _._k)({ location: "guild_status_badge" });
+        d = (0, p._k)({ location: "guild_status_badge" });
     return o
         ? (0, r.jsx)("div", {
               className: a()(b.guildIconV2Container, { [b.invitesRefresh]: d.isGuildEntrypointEnabled }),
@@ -156,17 +156,17 @@ function A(e) {
     let { guild: t, disableBoostClick: n } = e,
         i = !1;
     return (0, l.Z)(t)
-        ? (0, r.jsx)(S, {
+        ? (0, r.jsx)(T, {
               guild: t,
               disableColor: !1,
               disableBoostClick: n,
           })
         : t.features.has(g.GuildFeatures.VERIFIED) || t.features.has(g.GuildFeatures.PARTNERED)
-          ? (0, r.jsx)(S, {
+          ? (0, r.jsx)(T, {
                 guild: t,
                 disableColor: !i,
             })
-          : (0, r.jsx)(T, {
+          : (0, r.jsx)(I, {
                 guild: t,
                 isBannerVisible: i,
                 disableBoostClick: n,

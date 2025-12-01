@@ -1,6 +1,6 @@
 n.d(t, {
     D: () => s,
-    Z: () => m,
+    Z: () => h,
 }),
     n(539854);
 var r,
@@ -47,29 +47,29 @@ let l = !0,
             dismissibleContent: n,
         });
     },
-    _ = (e) => {
+    p = (e) => {
         let { dismissibleContent: t } = e;
         d({
             eventType: 2,
             dismissibleContent: t,
         });
     },
-    p = (e) => {
+    _ = (e) => {
         let { dismissibleContent: t } = e;
         d({
             eventType: 0,
             dismissibleContent: t,
         });
     };
-class h extends (r = i.ZP.Store) {
+class m extends (r = i.ZP.Store) {
     getDCFEvents() {
         return c;
     }
 }
-o(h, "displayName", "DCFEventStore");
-let m = new h(a.Z, {
+o(m, "displayName", "DCFEventStore");
+let h = new m(a.Z, {
     LOGOUT: u,
     DCF_EVENT_LOGGED: f,
-    DCF_HANDLE_DC_DISMISSED: _,
-    DCF_HANDLE_DC_SHOWN: p,
+    DCF_HANDLE_DC_DISMISSED: p,
+    DCF_HANDLE_DC_SHOWN: _,
 });

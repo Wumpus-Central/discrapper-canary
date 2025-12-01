@@ -15,7 +15,7 @@ var r = n(54381),
     u = n(155127),
     d = n(966044),
     f = n(464239);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,12 +39,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -56,12 +56,12 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -74,37 +74,37 @@ function b(e) {
     let n,
         {
             open: l,
-            onOpenChange: _,
-            id: h,
+            onOpenChange: p,
+            id: m,
             className: b,
             overrideTargetRect: y,
             placement: O = "bottom",
             spacing: v = 8,
-            autoFlip: I = !0,
-            autoShift: T = !0,
-            strategy: S = "fixed",
+            autoFlip: S = !0,
+            autoShift: I = !0,
+            strategy: T = "fixed",
             portal: A = !0,
             blockPointerEvents: C = !1,
             children: N,
-            renderLayer: R,
-            viewportPadding: P = g,
-            trigger: D = "click",
+            renderLayer: P,
+            viewportPadding: R = g,
+            trigger: w = "click",
         } = e,
-        w = i.useRef(null),
-        L = i.useMemo(() => {
+        D = i.useRef(null),
+        x = i.useMemo(() => {
             let e = [(0, a.cv)(v)];
             return (
-                I &&
+                S &&
                     e.push(
                         (0, a.RR)({
-                            padding: P,
+                            padding: R,
                             boundary: window.document.body,
                         }),
                     ),
-                T &&
+                I &&
                     e.push(
                         (0, a.uY)({
-                            padding: P,
+                            padding: R,
                             limiter: (0, a.dr)(),
                             boundary: window.document.body,
                         }),
@@ -112,36 +112,36 @@ function b(e) {
                 e.push((0, a.Cp)({ strategy: "referenceHidden" })),
                 e
             );
-        }, [v, I, T, P]);
+        }, [v, S, I, R]);
     null != y && (n = { reference: { getBoundingClientRect: () => y } });
     let {
-            refs: x,
-            floatingStyles: M,
-            placement: k,
-            middlewareData: j,
+            refs: L,
+            floatingStyles: j,
+            placement: M,
+            middlewareData: k,
             update: U,
             context: G,
         } = (0, o.YF)({
             placement: O,
             open: l,
-            onOpenChange: _,
-            strategy: S,
-            middleware: L,
+            onOpenChange: p,
+            strategy: T,
+            middleware: x,
             whileElementsMounted: s.Me,
             elements: n,
         }),
-        B = (0, o.bQ)(G),
-        Z = (0, o.XI)(G, {
-            enabled: "hover" === D,
+        Z = (0, o.bQ)(G),
+        B = (0, o.XI)(G, {
+            enabled: "hover" === w,
             handleClose: (0, o.xp)({ blockPointerEvents: !0 }),
         }),
-        { getReferenceProps: F, getFloatingProps: V } = (0, o.NI)([B, Z]),
-        H = (null == (t = j.hide) ? void 0 : t.referenceHidden) ? "hidden" : "visible",
+        { getReferenceProps: F, getFloatingProps: V } = (0, o.NI)([Z, B]),
+        H = (null == (t = k.hide) ? void 0 : t.referenceHidden) ? "hidden" : "visible",
         Y = A ? d.UU : i.Fragment;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             N({
-                ref: x.setReference,
+                ref: L.setReference,
                 props: F(),
             }),
             l &&
@@ -150,22 +150,22 @@ function b(e) {
                         C ? (0, r.jsx)(o.y0, {}) : null,
                         (0, r.jsx)(
                             "div",
-                            m(
-                                p(
+                            h(
+                                _(
                                     {
-                                        id: h,
+                                        id: m,
                                         className: c()(b, f.layer),
                                         [E]: !0,
-                                        style: m(p({}, M), { visibility: H }),
-                                        ref: x.setFloating,
+                                        style: h(_({}, j), { visibility: H }),
+                                        ref: L.setFloating,
                                     },
                                     V(),
                                 ),
                                 {
                                     children: (0, r.jsx)(u.Jc, {
-                                        containerRef: w,
-                                        children: R({
-                                            placement: k,
+                                        containerRef: D,
+                                        children: P({
+                                            placement: M,
                                             update: U,
                                             hidden: "hidden" === H,
                                         }),

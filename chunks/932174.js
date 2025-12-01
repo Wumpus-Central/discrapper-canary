@@ -1,12 +1,12 @@
-t.d(n, { Z: () => a });
-var r = t(473749),
-    o = t(442837),
-    i = t(522474),
-    l = t(981631);
-function a() {
-    let e = (0, o.e7)([i.Z], () => i.Z.getWindow(l.KJ3.ACTIVITY_POPOUT)),
-        n = r.useMemo(() => (null == e ? void 0 : e.window.document), [e]),
-        t = r.useMemo(() => (null == n ? void 0 : n.getElementById("app-mount")), [n]);
+t.d(n, { Z: () => c });
+var o = t(473749),
+    r = t(442837),
+    a = t(522474),
+    i = t(981631);
+function c() {
+    let e = (0, r.e7)([a.Z], () => a.Z.getWindow(i.KJ3.ACTIVITY_POPOUT)),
+        n = o.useMemo(() => (null == e ? void 0 : e.window.document), [e]),
+        t = o.useMemo(() => (null == n ? void 0 : n.getElementById("app-mount")), [n]);
     return {
         popoutWindow: e,
         currentDocument: n,

@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(393238),
     u = n(428967),
     d = n(266454),
-    p = n(605236),
+    f = n(605236),
     h = n(279745),
-    f = n(921944),
+    p = n(921944),
     g = n(388032),
     m = n(882482);
 let b = i.forwardRef(function (e, t) {
@@ -23,8 +23,8 @@ let b = i.forwardRef(function (e, t) {
             tryItText: O,
             dismissText: v,
             onTryFeature: j,
-            onClose: C,
-            className: x,
+            onClose: x,
+            className: C,
             inlineArt: E = !1,
             isPremiumFeature: S = !1,
             shouldUseHorizontalButtons: I = !1,
@@ -44,8 +44,8 @@ let b = i.forwardRef(function (e, t) {
         U = I ? a.zx.Sizes.LARGE : a.zx.Sizes.MAX,
         [B, F] = i.useState(!1),
         { ref: V, width: H } = (0, c.ZP)();
-    function z(e) {
-        if ((0, u.lg)(N)) return void (0, p.bj)(N, { dismissAction: e });
+    function W(e) {
+        if ((0, u.lg)(N)) return void (0, f.bj)(N, { dismissAction: e });
         (0, d.Q3)(N, { dismissAction: e });
     }
     return (
@@ -55,10 +55,10 @@ let b = i.forwardRef(function (e, t) {
             !B && n > A && F(!0);
         }, [B, H, V, A]),
         i.useEffect(() => {
-            (0, p.kk)(N);
+            (0, f.kk)(N);
         }, [N]),
         (0, r.jsx)("div", {
-            className: x,
+            className: C,
             ref: t,
             children: (0, r.jsxs)("div", {
                 className: o()(m.content, y, {
@@ -116,7 +116,7 @@ let b = i.forwardRef(function (e, t) {
                                               className: m.button,
                                               size: U,
                                               onClick: (e) => {
-                                                  null == C || C(e), j(e), z(f.L.PRIMARY);
+                                                  null == x || x(e), j(e), W(p.L.PRIMARY);
                                               },
                                               color: null != G ? G : S ? a.zx.Colors.BRAND_INVERTED : a.zx.Colors.WHITE,
                                               children: null != O ? O : g.intl.string(g.t.IHf1RN),
@@ -126,7 +126,7 @@ let b = i.forwardRef(function (e, t) {
                                                   className: m.button,
                                                   size: U,
                                                   onClick: (e) => {
-                                                      null == C || C(e), z(f.L.DISMISS);
+                                                      null == x || x(e), W(p.L.DISMISS);
                                                   },
                                                   color: S ? a.zx.Colors.WHITE : a.zx.Colors.BRAND,
                                                   look: S ? a.zx.Looks.LINK : a.zx.Looks.FILLED,
@@ -138,7 +138,7 @@ let b = i.forwardRef(function (e, t) {
                                       className: m.button,
                                       size: a.zx.Sizes.MAX,
                                       onClick: (e) => {
-                                          null == C || C(e), z(f.L.PRIMARY);
+                                          null == x || x(e), W(p.L.PRIMARY);
                                       },
                                       color: a.zx.Colors.WHITE,
                                       children: g.intl.string(g.t.HU2IR5),

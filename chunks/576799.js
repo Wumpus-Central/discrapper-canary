@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381),
     i = n(473749),
     a = n(442837),
@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(123145),
     d = n(699516),
     f = n(217702),
-    _ = n(724913);
-function p(e) {
+    p = n(724913);
+function _(e) {
     let { message: t, channel: n } = e,
         { isBlocked: c, isIgnored: f } = (0, a.cj)(
             [d.Z],
@@ -20,26 +20,26 @@ function p(e) {
             }),
             [t],
         ),
-        p = (0, s.p)(),
-        m = i.useMemo(() => ({ [n.guild_id]: [t.author.id] }), [n.guild_id, t.author.id]);
-    (0, o.$)(m, "ThreadMessageAccessoryMessage");
+        _ = (0, s.p)(),
+        h = i.useMemo(() => ({ [n.guild_id]: [t.author.id] }), [n.guild_id, t.author.id]);
+    (0, o.$)(h, "ThreadMessageAccessoryMessage");
     let g = i.useMemo(
         () =>
             null != t.content && "" !== t.content
                 ? (0, l.ZP)(t, {
                       formatInline: !0,
-                      shouldFilterKeywords: p,
+                      shouldFilterKeywords: _,
                   }).content
                 : null,
-        [t, p],
+        [t, _],
     );
     return (0, r.jsxs)("div", {
-        className: _.threadMessageAccessory,
+        className: p.threadMessageAccessory,
         children: [
             (0, r.jsx)("img", {
                 alt: "",
                 src: t.author.getAvatarURL(n.guild_id, 16),
-                className: _.threadMessageAccessoryAvatar,
+                className: p.threadMessageAccessoryAvatar,
             }),
             (0, r.jsx)(u.Z, {
                 message: t,
@@ -47,21 +47,21 @@ function p(e) {
                 compact: !0,
             }),
             (0, r.jsx)("div", {
-                className: _.threadMessageAccessoryPreview,
-                children: h(t, g, c, f),
+                className: p.threadMessageAccessoryPreview,
+                children: m(t, g, c, f),
             }),
         ],
     });
 }
-function h(e, t, n, i) {
+function m(e, t, n, i) {
     let {
         contentPlaceholder: a,
         renderedContent: o,
         leadingIcon: s,
         trailingIcon: l,
-    } = (0, c.f)(e, t, n, i, _.threadMessageAccessoryContent, {
-        trailingIconClass: _.threadMessageAccessoryContentTrailingIcon,
-        leadingIconClass: _.threadMessageAccessoryContentLeadingIcon,
+    } = (0, c.f)(e, t, n, i, p.threadMessageAccessoryContent, {
+        trailingIconClass: p.threadMessageAccessoryContentTrailingIcon,
+        leadingIconClass: p.threadMessageAccessoryContentLeadingIcon,
         iconSize: f.WW,
     });
     return (0, r.jsxs)(r.Fragment, {
@@ -70,7 +70,7 @@ function h(e, t, n, i) {
             null != o
                 ? o
                 : (0, r.jsx)("span", {
-                      className: _.threadMessageAccessoryPlaceholder,
+                      className: p.threadMessageAccessoryPlaceholder,
                       children: a,
                   }),
             l,

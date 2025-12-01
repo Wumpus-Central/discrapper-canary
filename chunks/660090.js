@@ -59,18 +59,18 @@ function l(e) {
         r.useLayoutEffect(() => {
             f && c(o.bS.POPULAR);
         }, [f]);
-    let _ = u;
+    let p = u;
     switch (l) {
         case o.bS.POPULAR:
-            _ = d;
+            p = d;
             break;
         case o.bS.ALPHABETICAL:
-            _ = u;
+            p = u;
     }
     return {
         sortOrder: l,
         setSortOrder: c,
-        commands: _,
+        commands: p,
         canSort: f,
     };
 }

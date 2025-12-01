@@ -44,29 +44,29 @@ let c = {
                             },
                         ];
                     }, [u]),
-                    [f, _] = i.useState(d),
-                    p = i.useCallback(
+                    [f, p] = i.useState(d),
+                    _ = i.useCallback(
                         (e) => {
-                            _(f.filter((t) => !e.has(t.id)));
+                            p(f.filter((t) => !e.has(t.id)));
                         },
                         [f],
                     ),
-                    h = i.useCallback(() => {
-                        _(d);
+                    m = i.useCallback(() => {
+                        p(d);
                     }, [d]),
-                    m = (0, r.jsx)(a.QSK, {
+                    h = (0, r.jsx)(a.QSK, {
                         label: "Categories",
                         selectionMode: t,
                         layout: c,
                         items: f,
-                        onRemove: n ? p : void 0,
+                        onRemove: n ? _ : void 0,
                     }),
                     g =
                         n &&
                         (0, r.jsx)(s.Button, {
                             disabled: f.length === d.length,
                             text: "Reset",
-                            onClick: h,
+                            onClick: m,
                         });
                 return "inline" === c
                     ? (0, r.jsxs)(s.Kqy, {
@@ -77,14 +77,14 @@ let c = {
                                       display: "flex",
                                       gap: 4,
                                   },
-                                  children: m,
+                                  children: h,
                               }),
                               g,
                           ],
                       })
                     : (0, r.jsxs)(s.Kqy, {
                           gap: 24,
-                          children: [m, g],
+                          children: [h, g],
                       });
             },
             controls: {

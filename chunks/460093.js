@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(481060),
     i = n(147913),
     a = n(626135),
@@ -39,7 +39,7 @@ function f(e) {
         i = "".concat(c.intl.formatToPlainString(c.t.hbiAO6, { code: t }), ": ").concat(n);
     (0, r.showToast)((0, r.createToast)(i, r.ToastType.FAILURE));
 }
-class _ extends i.Z {
+class p extends i.Z {
     constructor(...e) {
         super(...e),
             u(this, "actions", {
@@ -49,5 +49,5 @@ class _ extends i.Z {
             });
     }
 }
-u(_, "displayName", "FramesManager");
-let p = new _();
+u(p, "displayName", "FramesManager");
+let _ = new p();

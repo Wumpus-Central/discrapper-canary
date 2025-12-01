@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(823379),
     d = n(981631),
     f = n(388032),
-    _ = n(598840);
-function p(e, t, n) {
+    p = n(598840);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,12 +34,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -56,7 +56,7 @@ function g(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -91,8 +91,8 @@ class b extends i.PureComponent {
                 tooltipPosition: u,
                 tooltipDelay: d,
                 size: f = 16,
-                badgeColor: p,
-                iconClassName: m,
+                badgeColor: _,
+                iconClassName: h,
                 flowerStarClassName: b,
             } = this.props,
             y = E(e);
@@ -105,15 +105,15 @@ class b extends i.PureComponent {
                 if (5 !== e && 4 !== e)
                     return (0, r.jsx)(
                         l.Z,
-                        g(h({}, s), {
+                        g(m({}, s), {
                             className: o()(n, i),
                             flowerStarClassName: b,
-                            color: p,
+                            color: _,
                             stroke: a,
                             size: f,
                             children: (0, r.jsx)(t, {
                                 size: "xxs",
-                                className: o()(_.icon, m),
+                                className: o()(p.icon, h),
                                 color: "currentColor",
                             }),
                         }),
@@ -125,11 +125,11 @@ class b extends i.PureComponent {
                     };
                     return (0, r.jsx)(
                         "div",
-                        g(h({}, s), {
+                        g(m({}, s), {
                             className: o()(n, i),
                             style: e,
                             children: (0, r.jsx)(t, {
-                                className: o()(_.icon, m),
+                                className: o()(p.icon, h),
                                 color: "currentColor",
                             }),
                         }),
@@ -142,17 +142,17 @@ class b extends i.PureComponent {
         let { guild: e } = this.props,
             t = new Set(e.features);
         return t.has(d.GuildFeatures.INTERNAL_EMPLOYEE_ONLY)
-            ? this.renderBadge(1, s.Ymb, _.staff)
+            ? this.renderBadge(1, s.Ymb, p.staff)
             : t.has(d.GuildFeatures.VERIFIED) && t.has(d.GuildFeatures.HUB)
-              ? this.renderBadge(4, s.aVH, _.verifiedHub)
+              ? this.renderBadge(4, s.aVH, p.verifiedHub)
               : t.has(d.GuildFeatures.HUB)
-                ? this.renderBadge(5, s.aVH, _.hub)
+                ? this.renderBadge(5, s.aVH, p.hub)
                 : t.has(d.GuildFeatures.VERIFIED) && t.has(d.GuildFeatures.PARTNERED)
-                  ? this.renderBadge(3, s.kmB, _.verified)
+                  ? this.renderBadge(3, s.kmB, p.verified)
                   : t.has(d.GuildFeatures.VERIFIED)
-                    ? this.renderBadge(2, s.kmB, _.verified)
+                    ? this.renderBadge(2, s.kmB, p.verified)
                     : t.has(d.GuildFeatures.PARTNERED)
-                      ? this.renderBadge(0, (0, s.GSL)(c.Z), _.partnered)
+                      ? this.renderBadge(0, (0, s.GSL)(c.Z), p.partnered)
                       : null;
     }
 }

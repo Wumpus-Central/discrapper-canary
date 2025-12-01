@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(415506), n(388685), n(35282);
+n.d(t, { Z: () => h }), n(415506), n(388685), n(35282);
 var r = n(512722),
     i = n.n(r),
     a = n(129508),
@@ -57,9 +57,9 @@ function d(e, t) {
     );
 }
 let f = "undefined" != typeof OffscreenCanvas,
-    _ = 4,
-    p = 2176;
-class h {
+    p = 4,
+    _ = 2176;
+class m {
     reset() {
         this.context.clearRect(0, 0, this.MAX_ROW_WIDTH, this.MAX_HEIGHT),
             this.imageMap.clear(),
@@ -71,7 +71,7 @@ class h {
     breakToNewRow() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         (this.nextX = 0),
-            (this.nextY += this.tallestImageHeight + _),
+            (this.nextY += this.tallestImageHeight + p),
             (this.tallestImageHeight = 0),
             this.nextY > this.MAX_HEIGHT && (e ? this.reset() : (this.needsReset = !0));
     }
@@ -87,7 +87,7 @@ class h {
                     .concat(t.width, " x ")
                     .concat(t.height),
             );
-        (this.nextX + t.width + _ > this.MAX_ROW_WIDTH || this.nextY + t.height + _ > this.MAX_HEIGHT) &&
+        (this.nextX + t.width + p > this.MAX_ROW_WIDTH || this.nextY + t.height + p > this.MAX_HEIGHT) &&
             this.breakToNewRow(!0),
             this.context.save(),
             null != n && (this.context.filter = n),
@@ -103,14 +103,14 @@ class h {
         return (
             this.imageMap.set(e, d(c({}, o), { [i]: s })),
             t.height > this.tallestImageHeight && (this.tallestImageHeight = t.height),
-            (this.nextX += t.width + _),
+            (this.nextX += t.width + p),
             this.nextX > this.MAX_ROW_WIDTH && this.breakToNewRow(),
             s
         );
     }
     constructor() {
-        l(this, "MAX_ROW_WIDTH", p),
-            l(this, "MAX_HEIGHT", p),
+        l(this, "MAX_ROW_WIDTH", _),
+            l(this, "MAX_HEIGHT", _),
             l(this, "nextX", 0),
             l(this, "nextY", 0),
             l(this, "tallestImageHeight", 0),
@@ -132,10 +132,10 @@ class h {
         this.context = e;
     }
 }
-class m extends a.Z {
+class h extends a.Z {
     setupOffscreenCanvas() {
         try {
-            this.offscreenCanvasCache = new h();
+            this.offscreenCanvasCache = new m();
         } catch (e) {
             this.offscreenCanvasCache = void 0;
         }
@@ -207,7 +207,7 @@ class m extends a.Z {
             f = (e, t) => {
                 null != this.context && (n ? this.context.fillText(e, t.x, t.y) : this.context.strokeText(e, t.x, t.y));
             },
-            _ = (e) => {
+            p = (e) => {
                 if (null == this.context || c.width <= o.F) return "";
                 let t = "".concat(e);
                 for (; c.width + o.F > l; ) (t = t.slice(0, -4)), (c = this.context.measureText(t)), (u = !0);
@@ -215,7 +215,7 @@ class m extends a.Z {
             };
         if (
             (this.font.truncate === s.GX.None && f(e, t),
-            this.font.truncate === s.GX.Truncate && f((e = _(e)), t),
+            this.font.truncate === s.GX.Truncate && f((e = p(e)), t),
             this.font.truncate === s.GX.Wrap)
         ) {
             let n = e.split(" "),
@@ -238,12 +238,12 @@ class m extends a.Z {
                     if (
                         (s + 1 >= r && n.length > 0 && (e = !0),
                         "" !== o
-                            ? (f(e ? _(o + "...") : o, {
+                            ? (f(e ? p(o + "...") : o, {
                                   x: t.x,
                                   y: t.y + d * s,
                               }),
                               (o = ""))
-                            : f(_(null != (a = n.shift()) ? a : ""), {
+                            : f(p(null != (a = n.shift()) ? a : ""), {
                                   x: t.x,
                                   y: t.y + d * s,
                               }),
@@ -362,16 +362,16 @@ class m extends a.Z {
                 );
             }
             if (a === s.JU.Cover) {
-                var l, u, f, _;
+                var l, u, f, p;
                 let i,
                     a = {
                         w: o.width,
                         h: o.height,
                     },
-                    p = +(a.w / a.h).toFixed(1),
-                    h = +(n.w / n.h).toFixed(1);
-                if (h > p) {
-                    let e = a.w / h;
+                    _ = +(a.w / a.h).toFixed(1),
+                    m = +(n.w / n.h).toFixed(1);
+                if (m > _) {
+                    let e = a.w / m;
                     i = d(
                         c(
                             {},
@@ -388,14 +388,14 @@ class m extends a.Z {
                         },
                     );
                 } else {
-                    let e = a.h * h;
+                    let e = a.h * m;
                     i = d(
                         c(
                             {},
                             {
                                 x:
                                     (o.width - e) *
-                                    (null != (_ = null == r || null == (f = r.focus) ? void 0 : f.x) ? _ : 0.5),
+                                    (null != (p = null == r || null == (f = r.focus) ? void 0 : f.x) ? p : 0.5),
                                 y: 0,
                             },
                         ),
@@ -491,9 +491,9 @@ class m extends a.Z {
         let a = this.offscreenCanvasCache.getImage(e.toString(), r, this.getFilterString());
         if (null == a) return s.vP.Failure;
         let { x: o, y: l, w: c, h: u } = t,
-            { x: d, y: f, w: _, h: p } = n;
+            { x: d, y: f, w: p, h: _ } = n;
         return (
-            this.context.drawImage(this.offscreenCanvasCache.canvas, a.x + o, a.y + l, c, u, d, f, _, p), s.vP.Success
+            this.context.drawImage(this.offscreenCanvasCache.canvas, a.x + o, a.y + l, c, u, d, f, p, _), s.vP.Success
         );
     }
     drawPath(e, t) {

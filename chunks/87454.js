@@ -11,10 +11,10 @@ let d = l.memo(function (e) {
         u = i.z[n],
         { isDismissed: m, handleToggleDismissState: p } = (0, c.Z)(u),
         [h, x] = l.useState(!1),
-        g = l.useCallback(() => {
+        f = l.useCallback(() => {
             null == d || d(n), p();
         }, [d, p, n]),
-        f = l.useCallback(
+        g = l.useCallback(
             (e) => {
                 e.preventDefault(), x(!0), navigator.clipboard.writeText(n.toLowerCase());
             },
@@ -31,7 +31,7 @@ let d = l.memo(function (e) {
                         size: "sm",
                         variant: "icon-only",
                         icon: h ? r.C2q : r.zTD,
-                        onClick: f,
+                        onClick: g,
                         "aria-label": h ? "Copied" : "Copy",
                     }),
                     (0, a.jsx)(r.rsf, {
@@ -62,7 +62,7 @@ let d = l.memo(function (e) {
                               })(u)
                             : null,
                         checked: m,
-                        onChange: g,
+                        onChange: f,
                     }),
                 ],
             }),

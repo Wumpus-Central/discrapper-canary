@@ -9,26 +9,26 @@ var r = n(54381),
     u = n(224706),
     d = n(225433),
     f = n(570928),
-    _ = n(594190),
-    p = n(320724),
-    h = n(297700),
-    m = n(817788),
+    p = n(594190),
+    _ = n(320724),
+    m = n(297700),
+    h = n(817788),
     g = n(509003),
     E = n(77498),
     b = n(283595),
     y = n(626135),
     O = n(251625),
     v = n(358085),
-    I = n(210887),
-    T = n(273313),
-    S = n(981631),
+    S = n(210887),
+    I = n(273313),
+    T = n(981631),
     A = n(295907),
     C = n(388032),
     N = n(740508),
-    R = n(315091),
-    P = n(149715),
-    D = n(197571);
-function w(e, t, n) {
+    P = n(315091),
+    R = n(149715),
+    w = n(197571);
+function D(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +41,7 @@ function w(e, t, n) {
         e
     );
 }
-function L(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,12 +52,12 @@ function L(e) {
                 }),
             )),
             r.forEach(function (t) {
-                w(e, t, n[t]);
+                D(e, t, n[t]);
             });
     }
     return e;
 }
-function x(e, t) {
+function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -69,24 +69,24 @@ function x(e, t) {
     }
     return n;
 }
-function M(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : x(Object(t)).forEach(function (n) {
+            : L(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let j = s.ZP.connectStores([I.Z], () => ({ theme: I.Z.theme }))(c.ubH),
+let M = s.ZP.connectStores([S.Z], () => ({ theme: S.Z.theme }))(c.ubH),
     k = (0, v.isWindows)(),
     U = 18,
     G = "https://www.igdb.com/about";
-function B(e) {
+function Z(e) {
     let { onClose: t } = e,
-        n = (0, s.e7)([_.ZP], () => _.ZP.getCandidateGames()),
+        n = (0, s.e7)([p.ZP], () => p.ZP.getCandidateGames()),
         [a, l] = i.useState(null);
     function d(e) {
         l(e);
@@ -94,19 +94,19 @@ function B(e) {
     function f() {
         null != a && (u.Z.addGame(a.pid, a.name), t());
     }
-    let p = n.map((e) => ({
+    let _ = n.map((e) => ({
         key: e.pid,
         value: e,
         label: null != e.name ? e.name : "",
     }));
     return (0, r.jsxs)(c.VqE, {
-        className: o()(N.addGamePopout, R.elevationBorderHigh),
+        className: o()(N.addGamePopout, P.elevationBorderHigh),
         "aria-label": C.intl.string(C.t.GTCx0p),
         children: [
             (0, r.jsx)(c.VcW, {
                 placeholder: C.intl.string(C.t.XqMe3N),
                 value: a,
-                options: p,
+                options: _,
                 onChange: d,
                 renderOptionLabel: (e) =>
                     (0, r.jsx)(c.Text, {
@@ -116,9 +116,9 @@ function B(e) {
                         children: e.label,
                     }),
             }),
-            (0, r.jsx)(c.izJ, { className: o()(D.marginTop8, D.marginBottom8) }),
+            (0, r.jsx)(c.izJ, { className: o()(w.marginTop8, w.marginBottom8) }),
             (0, r.jsxs)("div", {
-                className: o()(N.actions, P.horizontal),
+                className: o()(N.actions, R.horizontal),
                 children: [
                     (0, r.jsx)(c.Avr, {
                         variant: "secondary",
@@ -136,58 +136,58 @@ function B(e) {
         ],
     });
 }
-function Z(e) {
-    let { rawGame: t, nowPlaying: a = !1, isOverride: p, subgames: m, isSubgame: O = !1, parentGame: v } = e,
-        I = (0, s.cj)([_.ZP, E.Z, b.Z], () => (0, _.FZ)(t, _.ZP, E.Z, b.Z)),
-        { canToggleDetection: T, isCurrentGameDetectionEnabled: R } = (0, s.cj)([_.ZP], () => ({
-            canToggleDetection: null == v || _.ZP.isDetectionEnabled(v),
-            isCurrentGameDetectionEnabled: _.ZP.isDetectionEnabled(I),
+function B(e) {
+    let { rawGame: t, nowPlaying: a = !1, isOverride: _, subgames: h, isSubgame: O = !1, parentGame: v } = e,
+        S = (0, s.cj)([p.ZP, E.Z, b.Z], () => (0, p.FZ)(t, p.ZP, E.Z, b.Z)),
+        { canToggleDetection: I, isCurrentGameDetectionEnabled: P } = (0, s.cj)([p.ZP], () => ({
+            canToggleDetection: null == v || p.ZP.isDetectionEnabled(v),
+            isCurrentGameDetectionEnabled: p.ZP.isDetectionEnabled(S),
         })),
-        D = (0, s.e7)([_.ZP], () => _.ZP.getVisibleGame()),
-        [w, x] = i.useState(!1),
-        j = i.useMemo(
+        w = (0, s.e7)([p.ZP], () => p.ZP.getVisibleGame()),
+        [D, L] = i.useState(!1),
+        M = i.useMemo(
             () =>
-                (0, g.le)(I)
+                (0, g.le)(S)
                     ? O
-                        ? I.gameName
-                        : C.intl.formatToPlainString(C.t.G6BGdx, { subgameName: I.gameName })
-                    : I.name,
-            [I, O],
+                        ? S.gameName
+                        : C.intl.formatToPlainString(C.t.G6BGdx, { subgameName: S.gameName })
+                    : S.name,
+            [S, O],
         ),
-        [G, B] = i.useState(null != j ? j : "???"),
-        F = o()(P.flexCenter, {
+        [G, Z] = i.useState(null != M ? M : "???"),
+        F = o()(R.flexCenter, {
             [N.game]: !a,
             [N.activeGame]: a,
-            [N.nowPlaying]: null != I && a,
+            [N.nowPlaying]: null != S && a,
             [N.subgame]: O,
-            [N.gameHasSubgame]: null != m && m.length > 0,
+            [N.gameHasSubgame]: null != h && h.length > 0,
         });
     function V() {
-        u.Z.deleteEntry(I),
-            null == m ||
-                m.forEach((e) => {
+        u.Z.deleteEntry(S),
+            null == h ||
+                h.forEach((e) => {
                     u.Z.deleteEntry(e);
                 });
     }
     function H() {
-        I.name !== G && u.Z.editName(I, G);
+        S.name !== G && u.Z.editName(S, G);
     }
     function Y(e) {
         e.key === A.vn.ENTER && (e.currentTarget.blur(), e.preventDefault());
     }
     function W(e) {
-        u.Z.toggleOverlay(I, e, e);
+        u.Z.toggleOverlay(S, e, e);
     }
     function K() {
-        null != m && m.length > 0 && R
+        null != h && h.length > 0 && P
             ? (0, c.ZDy)(async () => {
                   let { Modal: e } = await Promise.resolve().then(n.bind(n, 793030));
                   return (t) =>
                       (0, r.jsx)(
                           e,
-                          M(L({}, t), {
-                              title: C.intl.formatToPlainString(C.t.PZ4fKc, { platform: j }),
-                              subtitle: C.intl.formatToPlainString(C.t.ZIQbfb, { platform: j }),
+                          j(x({}, t), {
+                              title: C.intl.formatToPlainString(C.t.PZ4fKc, { platform: M }),
+                              subtitle: C.intl.formatToPlainString(C.t.ZIQbfb, { platform: M }),
                               actions: [
                                   {
                                       text: C.intl.string(C.t["ETE/oC"]),
@@ -197,7 +197,7 @@ function Z(e) {
                                   {
                                       text: C.intl.string(C.t.Fmjztz),
                                       onClick: () => {
-                                          u.Z.toggleDetection(I), t.onClose();
+                                          u.Z.toggleDetection(S), t.onClose();
                                       },
                                       variant: "primary",
                                   },
@@ -205,28 +205,28 @@ function Z(e) {
                           }),
                       );
               })
-            : u.Z.toggleDetection(I);
+            : u.Z.toggleDetection(S);
     }
     function z() {
-        if (w) return;
-        let e = null != I.id ? E.Z.getDetectableGame(I.id) : null;
-        y.default.track(S.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
+        if (D) return;
+        let e = null != S.id ? E.Z.getDetectableGame(S.id) : null;
+        y.default.track(T.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
             application_id: null == e ? void 0 : e.id,
-            game_name: (0, g.le)(I) ? I.gameName : I.name,
+            game_name: (0, g.le)(S) ? S.gameName : S.name,
         }),
-            x(!0),
+            L(!0),
             (0, c.ZDy)(async () => {
                 let { default: t } = await Promise.all([n.e("82077"), n.e("87087")]).then(n.bind(n, 953848));
                 return (n) => {
                     var i, a, o;
                     return (0, r.jsx)(
                         t,
-                        M(L({}, n), {
+                        j(x({}, n), {
                             detectedActivity: {
-                                name: null != (i = I.name) ? i : "",
+                                name: null != (i = S.name) ? i : "",
                                 application_id:
-                                    null != (o = null != (a = null == e ? void 0 : e.id) ? a : I.id) ? o : void 0,
-                                type: S.IIU.PLAYING,
+                                    null != (o = null != (a = null == e ? void 0 : e.id) ? a : S.id) ? o : void 0,
+                                type: T.IIU.PLAYING,
                             },
                             onSubmitted: () => {},
                         }),
@@ -235,22 +235,22 @@ function Z(e) {
             });
     }
     function q() {
-        return I.verified && !p
+        return S.verified && !_
             ? (0, r.jsxs)("div", {
                   className: N.detectedApplication,
                   children: [
                       (0, r.jsx)("div", {
                           className: N.gameName,
-                          children: j,
+                          children: M,
                       }),
                       (0, r.jsx)(c.aML, {
                           "data-migration-pending": !0,
                           text: C.intl.string(C.t["4PJP5p"]),
                           children: (e) =>
                               (0, r.jsx)(
-                                  h.Z,
-                                  M(
-                                      L(
+                                  m.Z,
+                                  j(
+                                      x(
                                           {
                                               className: N.gameVerifiedIcon,
                                               size: U,
@@ -278,12 +278,12 @@ function Z(e) {
                   value: G,
                   onBlur: H,
                   onKeyDown: Y,
-                  onChange: (e) => B(e.target.value),
+                  onChange: (e) => Z(e.target.value),
               });
     }
-    function X() {
+    function Q() {
         let e,
-            { played: t, exePath: n } = I;
+            { played: t, exePath: n } = S;
         return (
             a || et
                 ? (e = C.intl.string(C.t.VbV5dv))
@@ -297,9 +297,9 @@ function Z(e) {
             })
         );
     }
-    function Q() {
+    function X() {
         if (!k || null != v) return null;
-        let { overlay: e, overlayWarn: t } = I,
+        let { overlay: e, overlayWarn: t } = S,
             n = e
                 ? (0, r.jsx)(c.pzj, {
                       size: "md",
@@ -317,11 +317,11 @@ function Z(e) {
                 ? (0, r.jsx)(c.aML, {
                       "data-migration-pending": !0,
                       text: C.intl.string(C.t.Vfw2L5),
-                      children: (e) => (0, r.jsx)("i", L({ className: N.overlayWarningIcon }, e)),
+                      children: (e) => (0, r.jsx)("i", x({ className: N.overlayWarningIcon }, e)),
                   })
                 : null;
         return (0, r.jsxs)("div", {
-            className: o()(P.flexCenter, P.noWrap, P.justifyBetween, N.toggleContainer),
+            className: o()(R.flexCenter, R.noWrap, R.justifyBetween, N.toggleContainer),
             children: [
                 i,
                 (0, r.jsx)(c.aML, {
@@ -330,7 +330,7 @@ function Z(e) {
                     children: (t) =>
                         (0, r.jsx)(
                             c.P3F,
-                            M(L({}, t), {
+                            j(x({}, t), {
                                 "aria-label": C.intl.string(C.t["1+O+Tu"]),
                                 className: N.toggleIcon,
                                 onClick: () => W(!e),
@@ -342,9 +342,9 @@ function Z(e) {
         });
     }
     function J() {
-        let { detectable: e } = I,
+        let { detectable: e } = S,
             t =
-                e && T
+                e && I
                     ? (0, r.jsx)(c.tEF, {
                           size: "md",
                           color: "currentColor",
@@ -354,19 +354,19 @@ function Z(e) {
                     : (0, r.jsx)(c.kZF, {
                           size: "md",
                           color: "currentColor",
-                          className: T ? N.toggleIconOff : N.toggleIconInactive,
+                          className: I ? N.toggleIconOff : N.toggleIconInactive,
                           colorClass: N.fill,
                       });
         return (0, r.jsx)("div", {
-            className: o()(P.flexCenter, P.noWrap, P.justifyBetween, N.toggleContainer),
+            className: o()(R.flexCenter, R.noWrap, R.justifyBetween, N.toggleContainer),
             children: (0, r.jsx)(c.aML, {
                 "data-migration-pending": !0,
                 text: C.intl.string(C.t.QmitzM),
                 children: (e) =>
-                    T
+                    I
                         ? (0, r.jsx)(
                               c.P3F,
-                              M(L({}, e), {
+                              j(x({}, e), {
                                   "aria-label": C.intl.string(C.t.QmitzM),
                                   className: N.toggleIcon,
                                   onClick: K,
@@ -378,17 +378,17 @@ function Z(e) {
         });
     }
     function $() {
-        return w
+        return D
             ? null
             : (0, r.jsx)("div", {
-                  className: o()(P.flexCenter, P.noWrap, P.justifyBetween, N.toggleContainer),
+                  className: o()(R.flexCenter, R.noWrap, R.justifyBetween, N.toggleContainer),
                   children: (0, r.jsx)(c.aML, {
                       "data-migration-pending": !0,
                       text: C.intl.string(C.t["y0B+lo"]),
                       children: (e) =>
                           (0, r.jsx)(
                               c.P3F,
-                              M(L({}, e), {
+                              j(x({}, e), {
                                   "aria-label": C.intl.string(C.t["y0B+lo"]),
                                   className: N.toggleIcon,
                                   onClick: z,
@@ -409,46 +409,46 @@ function Z(e) {
             onClick: V,
         });
     }
-    let et = null != D && (0, _.rH)(I) === (0, _.rH)(D),
+    let et = null != w && (0, p.rH)(S) === (0, p.rH)(w),
         en =
-            (null != v && v.id === (null == D ? void 0 : D.id)) ||
+            (null != v && v.id === (null == w ? void 0 : w.id)) ||
             et ||
-            (null != m && m.some((e) => e.id === (null == D ? void 0 : D.id)));
+            (null != h && h.some((e) => e.id === (null == w ? void 0 : w.id)));
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
                 className: F,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: o()(N.gameNameLastPlayed, P.vertical),
-                        children: [q(), X()],
+                        className: o()(N.gameNameLastPlayed, R.vertical),
+                        children: [q(), Q()],
                     }),
-                    p ? null : $(),
+                    _ ? null : $(),
                     J(),
-                    Q(),
-                    (a && !p) || en ? null : ee(),
+                    X(),
+                    (a && !_) || en ? null : ee(),
                 ],
             }),
-            null != m &&
-                m.length > 0 &&
+            null != h &&
+                h.length > 0 &&
                 !a &&
                 (0, r.jsx)("div", {
                     className: N.subgameContainer,
-                    children: m.map((e, t) =>
+                    children: h.map((e, t) =>
                         (0, r.jsxs)(
                             i.Fragment,
                             {
                                 children: [
-                                    (0, r.jsx)(Z, {
+                                    (0, r.jsx)(B, {
                                         rawGame: e,
                                         isOverride: !1,
                                         isSubgame: !0,
-                                        parentGame: I,
+                                        parentGame: S,
                                     }),
-                                    t !== m.length - 1 && (0, r.jsx)("div", { className: N.border }),
+                                    t !== h.length - 1 && (0, r.jsx)("div", { className: N.border }),
                                 ],
                             },
-                            (0, _.rH)(e),
+                            (0, p.rH)(e),
                         ),
                     ),
                 }),
@@ -457,9 +457,9 @@ function Z(e) {
 }
 function F() {
     return (0, r.jsx)("div", {
-        className: o()(P.flexCenter, N.notDetected, N.activeGame),
+        className: o()(R.flexCenter, N.notDetected, N.activeGame),
         children: (0, r.jsxs)("div", {
-            className: o()(N.gameNameLastPlayed, P.vertical),
+            className: o()(N.gameNameLastPlayed, R.vertical),
             children: [
                 (0, r.jsx)("div", {
                     className: N.gameName,
@@ -475,8 +475,8 @@ function F() {
 }
 function V(e) {
     let { children: t } = e;
-    return (0, r.jsxs)(j, {
-        className: D.marginTop40,
+    return (0, r.jsxs)(M, {
+        className: w.marginTop40,
         children: [
             (0, r.jsx)(c.oxh, {
                 darkSrc: n(879601),
@@ -494,10 +494,10 @@ let H = (0, O.oH)(function () {
     }),
     Y = function (e) {
         let { className: t, showHeader: n = !0 } = e,
-            a = (0, s.Wu)([_.ZP], () => _.ZP.getGamesSeen(!1)),
-            { runningGame: l, overrideExePaths: u } = (0, s.cj)([_.ZP], () => ({
-                runningGame: _.ZP.getVisibleGame(),
-                overrideExePaths: H(..._.ZP.getOverrides()),
+            a = (0, s.Wu)([p.ZP], () => p.ZP.getGamesSeen(!1)),
+            { runningGame: l, overrideExePaths: u } = (0, s.cj)([p.ZP], () => ({
+                runningGame: p.ZP.getVisibleGame(),
+                overrideExePaths: H(...p.ZP.getOverrides()),
             })),
             { gameHistory: d, robloxSubgameHistory: f } = i.useMemo(
                 () =>
@@ -507,62 +507,62 @@ let H = (0, O.oH)(function () {
                     }),
                 [a],
             ),
-            h = i.useRef(null);
+            m = i.useRef(null);
         function E() {
             return 0 === d.length
                 ? (0, r.jsx)(V, { children: (0, r.jsx)(c.OZU, { children: C.intl.string(C.t["1yiJwn"]) }) })
                 : (0, r.jsx)(c.C3N, {
-                      className: D.marginTop40,
+                      className: w.marginTop40,
                       label: C.intl.string(C.t.jCOdvx),
                       description: C.intl.format(C.t.KPA3m9, { igdbLink: G }),
                       children: d.map((e) =>
                           (0, r.jsx)(
-                              Z,
+                              B,
                               {
                                   rawGame: e,
                                   isOverride: u.has(e.exePath),
-                                  subgames: e.id === m.eB ? f : void 0,
+                                  subgames: e.id === h.eB ? f : void 0,
                               },
-                              (0, _.rH)(e),
+                              (0, p.rH)(e),
                           ),
                       ),
                   });
         }
         return (
-            i.useEffect(() => ((0, p.Ky)(), p.P7), []),
-            (0, r.jsxs)(T.Z, {
+            i.useEffect(() => ((0, _.Ky)(), _.P7), []),
+            (0, r.jsxs)(I.Z, {
                 title: n ? C.intl.string(C.t.AVDyEj) : null,
                 className: t,
                 children: [
                     null != l
                         ? (0, r.jsx)(
-                              Z,
+                              B,
                               {
                                   rawGame: l,
                                   isOverride: u.has(l.exePath),
                                   nowPlaying: !0,
-                                  subgames: l.id === m.eB ? f : void 0,
+                                  subgames: l.id === h.eB ? f : void 0,
                               },
-                              (0, _.rH)(l),
+                              (0, p.rH)(l),
                           )
                         : (0, r.jsx)(F, {}),
                     (0, r.jsxs)("div", {
-                        className: o()(N.nowPlayingAdd, D.marginReset, D.marginTop8, D.marginBottom20),
+                        className: o()(N.nowPlayingAdd, w.marginReset, w.marginTop8, w.marginBottom20),
                         children: [
                             (0, r.jsx)("span", { children: C.intl.string(C.t.xwhoqM) }),
                             (0, r.jsx)(c.yRy, {
-                                targetElementRef: h,
+                                targetElementRef: m,
                                 renderPopout: (e) => {
                                     let { closePopout: t } = e;
-                                    return (0, r.jsx)(B, { onClose: t });
+                                    return (0, r.jsx)(Z, { onClose: t });
                                 },
                                 align: "center",
                                 position: "bottom",
                                 children: (e) =>
                                     (0, r.jsx)(
                                         c.Avr,
-                                        M(L({}, e), {
-                                            buttonRef: h,
+                                        j(x({}, e), {
+                                            buttonRef: m,
                                             variant: "primary",
                                             textVariant: "text-sm/medium",
                                             text: C.intl.string(C.t.GjgdXe),

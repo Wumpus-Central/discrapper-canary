@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => h,
+    Z: () => m,
     n: () => f,
 });
 var r = n(54381),
@@ -41,12 +41,12 @@ function d(e) {
 var f = (function (e) {
     return (e[(e.RIGHT = -1)] = "RIGHT"), (e[(e.LEFT = 1)] = "LEFT"), e;
 })({});
-let _ = {
+let p = {
     friction: 7,
     tension: 40,
     clamp: !0,
 };
-class p extends i.PureComponent {
+class _ extends i.PureComponent {
     componentWillEnter(e) {
         this._animated.setValue(-this.props.direction),
             s.Z.spring(this._animated, d({ toValue: 0 }, this.props.springSettings)).start(e);
@@ -88,13 +88,13 @@ class p extends i.PureComponent {
         super(e), u(this, "_animated", void 0), (this._animated = new s.Z.Value(-1 * e.direction));
     }
 }
-let h = (e) => {
-    let { children: t, step: n, direction: i, className: a, springSettings: s = _, fadeInOut: u = !1 } = e;
+let m = (e) => {
+    let { children: t, step: n, direction: i, className: a, springSettings: s = p, fadeInOut: u = !1 } = e;
     return (0, r.jsx)(l.W, {
         component: "div",
         className: o()(c.animator, a),
         children: (0, r.jsx)(
-            p,
+            _,
             {
                 direction: i,
                 springSettings: s,

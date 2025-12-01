@@ -9,21 +9,21 @@ var r = n(54381),
     u = n(367907),
     d = n(906732),
     f = n(28546),
-    _ = n(26323),
-    p = n(434404),
-    h = n(357156),
-    m = n(430824),
+    p = n(26323),
+    _ = n(434404),
+    m = n(357156),
+    h = n(430824),
     g = n(267642),
     E = n(981631),
     b = n(30513),
     y = n(388032),
     O = n(349085);
 let v = (e) => {
-    let { className: t, guildId: n, channel: a, shouldTrackUpsellViewed: v, setTrackedUpsellViewed: I } = e,
-        { location: T } = (0, c.O)(),
-        { analyticsLocations: S } = (0, d.ZP)(),
-        A = (0, s.e7)([m.Z], () => m.Z.getGuild(n)),
-        { canManageAllExpressions: C } = (0, h.XJ)(A),
+    let { className: t, guildId: n, channel: a, shouldTrackUpsellViewed: v, setTrackedUpsellViewed: S } = e,
+        { location: I } = (0, c.O)(),
+        { analyticsLocations: T } = (0, d.ZP)(),
+        A = (0, s.e7)([h.Z], () => h.Z.getGuild(n)),
+        { canManageAllExpressions: C } = (0, m.XJ)(A),
         N = null != A && 0 === (0, g.A3)(A.premiumTier) && !A.features.has(E.GuildFeatures.MORE_STICKERS);
     if (
         (i.useEffect(() => {
@@ -31,22 +31,22 @@ let v = (e) => {
                 N &&
                 v &&
                 ((0, u.yw)(E.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
-                    location: T,
+                    location: I,
                     guild_id: null == A ? void 0 : A.id,
                     channel_id: null == a ? void 0 : a.id,
                     type: "Expression Picker Inline Sticker Upsell",
-                    location_stack: S,
+                    location_stack: T,
                 }),
-                I(!0));
-        }, [N, A, a, T, v, I, S, C]),
+                S(!0));
+        }, [N, A, a, I, v, S, T, C]),
         null == A || !C)
     )
         return null;
     if (N) {
         let e = () => {
-            (0, _.Z)({
-                analyticsLocations: S,
-                analyticsSourceLocation: T,
+            (0, p.Z)({
+                analyticsLocations: T,
+                analyticsSourceLocation: I,
                 guild: A,
                 perks: (0, b.hC)(),
             });
@@ -75,7 +75,7 @@ let v = (e) => {
     }
     {
         let e = () => {
-            (0, f._Q)(), p.Z.open(n, E.pNK.STICKERS, T);
+            (0, f._Q)(), _.Z.open(n, E.pNK.STICKERS, I);
         };
         return (0, r.jsxs)("div", {
             className: o()(O.upsell, t),

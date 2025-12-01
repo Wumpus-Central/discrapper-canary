@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(933970),
     d = n(340453),
     f = n(292352),
-    _ = n(597754),
-    p = n(388032),
-    h = n(823074);
-function m(e, t, n) {
+    p = n(744038),
+    _ = n(388032),
+    m = n(823074);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
@@ -67,7 +67,7 @@ function b(e, t) {
 function y(e) {
     let { user: t } = e,
         a = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
-        m = i.useCallback(() => {
+        h = i.useCallback(() => {
             o()(void 0 !== a, "User must be logged in to accept a link request"),
                 (0, l.ZDy)(async () => {
                     let { default: e } = await n.e("50872").then(n.bind(n, 442673));
@@ -82,21 +82,21 @@ function y(e) {
                 });
         }, [a, t]);
     return (0, r.jsxs)("div", {
-        className: h.container,
+        className: m.container,
         children: [
             (0, r.jsx)("div", {
-                className: h.details,
+                className: m.details,
                 children: (0, r.jsx)(d.Z, {
                     otherUser: t,
                     status: f.ne.ACTIVE,
                 }),
             }),
             (0, r.jsx)("div", {
-                className: h.actions,
+                className: m.actions,
                 children: (0, r.jsx)(u.Z, {
                     icon: l.Dio,
-                    tooltip: p.intl.string(_.default.l20ZZp),
-                    onClick: m,
+                    tooltip: _.intl.string(p.default.l20ZZp),
+                    onClick: h,
                 }),
             }),
         ],

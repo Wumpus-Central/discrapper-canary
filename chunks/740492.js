@@ -10,8 +10,8 @@ var c = n(36645),
     u = n(874893),
     d = n(981631),
     f = n(957825),
-    _ = n(969943);
-function p(e, t, n) {
+    p = n(969943);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,12 +35,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-let m = (window.innerWidth - d.PrS) / 2,
+let h = (window.innerWidth - d.PrS) / 2,
     g = "standard",
     E = null;
 function b() {
@@ -48,7 +48,7 @@ function b() {
 }
 let y = {};
 function O(e) {
-    y = h({}, y, e.settings);
+    y = m({}, y, e.settings);
 }
 function v() {
     y = {
@@ -56,11 +56,11 @@ function v() {
         darkSidebar: y.darkSidebar,
     };
 }
-function I() {
+function S() {
     null == y && (y = {});
 }
-function T() {}
-function S() {
+function I() {}
+function T() {
     return (y.darkSidebar = !y.darkSidebar), !0;
 }
 function A() {
@@ -106,7 +106,7 @@ class C extends (r = o.ZP.DeviceSettingsStore) {
     }
     get postSidebarWidth() {
         var e;
-        return null != (e = y.postSidebarWidth) ? e : m;
+        return null != (e = y.postSidebarWidth) ? e : h;
     }
     get callChatSidebarWidth() {
         var e;
@@ -184,12 +184,12 @@ class C extends (r = o.ZP.DeviceSettingsStore) {
     }
     get listDensity() {
         var e;
-        return null != (e = y.listDensity) ? e : _.fx.COZY;
+        return null != (e = y.listDensity) ? e : p.fx.COZY;
     }
 }
-p(C, "displayName", "UnsyncedUserSettingsStore"),
-    p(C, "persistKey", "UnsyncedUserSettingsStore"),
-    p(C, "migrations", [
+_(C, "displayName", "UnsyncedUserSettingsStore"),
+    _(C, "persistKey", "UnsyncedUserSettingsStore"),
+    _(C, "migrations", [
         () => {
             let e = s.K.get("UserSettingsStore");
             return (
@@ -222,7 +222,7 @@ p(C, "displayName", "UnsyncedUserSettingsStore"),
 let N = new C(l.Z, {
     UNSYNCED_USER_SETTINGS_UPDATE: O,
     LOGOUT: v,
-    LOGIN_SUCCESS: I,
-    REGISTER_SUCCESS: T,
-    ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: S,
+    LOGIN_SUCCESS: S,
+    REGISTER_SUCCESS: I,
+    ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: T,
 });

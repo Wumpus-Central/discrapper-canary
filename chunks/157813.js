@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -26,7 +26,7 @@ function f(e) {
         ],
     });
 }
-function _(e) {
+function p(e) {
     let { className: t, isVertical: n } = e;
     return (0, r.jsxs)("div", {
         className: d.iconContainer,
@@ -45,16 +45,16 @@ function _(e) {
         ],
     });
 }
-function p(e) {
-    let { channelId: t, className: n, isParticipantsOpen: a, isVertical: s = !1, hideTooltip: p = !1 } = e;
-    function h() {
+function _(e) {
+    let { channelId: t, className: n, isParticipantsOpen: a, isVertical: s = !1, hideTooltip: _ = !1 } = e;
+    function m() {
         l.Z.toggleParticipants(t, !a);
     }
-    let m = i.useCallback(
+    let h = i.useCallback(
         (e) => {
             let { className: t } = e;
             return a
-                ? (0, r.jsx)(_, {
+                ? (0, r.jsx)(p, {
                       className: t,
                       isVertical: s,
                   })
@@ -68,8 +68,8 @@ function p(e) {
     return (0, r.jsx)(c.Z, {
         label: a ? u.intl.string(u.t.QJMRUB) : u.intl.string(u.t.vZiwmG),
         className: o()(d.participantsButton, n),
-        onClick: h,
-        iconComponent: m,
-        shouldShowTooltip: !p,
+        onClick: m,
+        iconComponent: h,
+        shouldShowTooltip: !_,
     });
 }

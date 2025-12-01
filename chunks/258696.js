@@ -9,33 +9,33 @@ var r = n(54381),
     u = n(911969),
     d = n(607070),
     f = n(533379),
-    _ = n(998698),
-    p = n(211242),
-    h = n(775685),
-    m = n(28546),
+    p = n(998698),
+    _ = n(211242),
+    m = n(775685),
+    h = n(28546),
     g = n(576645),
     E = n(347896),
     b = n(913663),
     y = n(117530),
     O = n(594174),
     v = n(74538),
-    I = n(713913),
-    T = n(541716),
-    S = n(94161),
+    S = n(713913),
+    I = n(541716),
+    T = n(94161),
     A = n(9277),
     C = n(655678),
     N = n(897291),
-    R = n(466711),
-    P = n(319417),
-    D = n(728386),
-    w = n(763679),
-    L = n(957825),
-    x = n(564355);
-function M(e) {
+    P = n(466711),
+    R = n(319417),
+    w = n(728386),
+    D = n(763679),
+    x = n(957825),
+    L = n(564355);
+function j(e) {
     let { disabled: t, channel: n } = e,
         i = (0, E.Z)();
     return null != i
-        ? (0, r.jsx)(R.Z, {
+        ? (0, r.jsx)(P.Z, {
               giftingPromotionConfig: i,
               disabled: t,
               channel: n,
@@ -45,49 +45,49 @@ function M(e) {
               channel: n,
           });
 }
-function k(e) {
-    var t, n, i, a, E, b, y, N, R;
-    let { type: k, disabled: U, channel: G, handleSubmit: B, isEmpty: Z, showAllButtons: F } = e,
+function M(e) {
+    var t, n, i, a, E, b, y, N, P;
+    let { type: M, disabled: U, channel: G, handleSubmit: Z, isEmpty: B, showAllButtons: F } = e,
         V = (0, c.e7)([d.Z], () => d.Z.isSubmitButtonEnabled),
-        H = j(G.id, k, Z),
-        { activeCommand: Y, activeCommandOption: W } = (0, c.cj)([_.Z], () => ({
-            activeCommand: _.Z.getActiveCommand(G.id),
-            activeCommandOption: _.Z.getActiveOption(G.id),
+        H = k(G.id, M, B),
+        { activeCommand: Y, activeCommandOption: W } = (0, c.cj)([p.Z], () => ({
+            activeCommand: p.Z.getActiveCommand(G.id),
+            activeCommandOption: p.Z.getActiveOption(G.id),
         })),
-        { paymentsBlocked: K } = p.Z.useExperiment({ location: "dc120b_3" }, { autoTrackExposure: !1 }),
+        { paymentsBlocked: K } = _.Z.useExperiment({ location: "dc120b_3" }, { autoTrackExposure: !1 }),
         {
             iconOrder: z,
             expressionsCombinedIntoEmojiButton: q,
-            reducedGap: X,
-        } = I.n.useConfig({ location: "ChannelTextAreaButtons" }),
-        Q = (0, m.Iu)((e) => e.lastActiveView),
+            reducedGap: Q,
+        } = S.n.useConfig({ location: "ChannelTextAreaButtons" }),
+        X = (0, h.Iu)((e) => e.lastActiveView),
         J =
-            (null == (t = k.gifs) ? void 0 : t.button) != null &&
-            (null == (n = k.stickers) ? void 0 : n.button) != null &&
-            null != Q
-                ? Q
-                : L.X1.EMOJI,
+            (null == (t = M.gifs) ? void 0 : t.button) != null &&
+            (null == (n = M.stickers) ? void 0 : n.button) != null &&
+            null != X
+                ? X
+                : x.X1.EMOJI,
         $ = [],
         ee = !G.isDM() || void 0 === G.recipients || G.recipients.length > 1,
         et = (0, c.e7)([O.default], () => (ee ? null : O.default.getUser(G.recipients[0]))),
         en = (0, f.R)({
             channel: G,
-            chatInputType: k,
+            chatInputType: M,
         }),
-        er = (0, g.Nt)() && (null == (i = k.confetti) ? void 0 : i.button) != null,
+        er = (0, g.Nt)() && (null == (i = M.confetti) ? void 0 : i.button) != null,
         ei =
-            (null == (a = k.submit) ? void 0 : a.button) != null &&
-            ((null == (E = k.submit) ? void 0 : E.ignorePreference) || V);
+            (null == (a = M.submit) ? void 0 : a.button) != null &&
+            ((null == (E = M.submit) ? void 0 : E.ignorePreference) || V);
     if (
         (!l.tq &&
-            ((null == (y = k.gifts) ? void 0 : y.button) != null &&
+            ((null == (y = M.gifts) ? void 0 : y.button) != null &&
                 null == Y &&
                 !K &&
                 (null == et || v.ZP.isPremiumEligible(et)) &&
                 $.push({
                     key: "gift",
                     node: (0, r.jsx)(
-                        M,
+                        j,
                         {
                             disabled: U,
                             channel: G,
@@ -95,7 +95,7 @@ function k(e) {
                         "gift",
                     ),
                 }),
-            (null == (N = k.gifs) ? void 0 : N.button) != null &&
+            (null == (N = M.gifs) ? void 0 : N.button) != null &&
                 null == Y &&
                 F &&
                 $.push({
@@ -104,7 +104,7 @@ function k(e) {
                         A.Z,
                         {
                             disabled: U,
-                            type: k,
+                            type: M,
                         },
                         "gif",
                     ),
@@ -123,16 +123,16 @@ function k(e) {
                     ),
                 }),
             !er &&
-                (null == (R = k.stickers) ? void 0 : R.button) != null &&
+                (null == (P = M.stickers) ? void 0 : P.button) != null &&
                 null == Y &&
                 F &&
                 $.push({
                     key: "sticker",
                     node: (0, r.jsx)(
-                        D.Z,
+                        w.Z,
                         {
                             disabled: U,
-                            type: k,
+                            type: M,
                         },
                         "sticker",
                     ),
@@ -140,32 +140,32 @@ function k(e) {
             $.push({
                 key: "upload",
                 node: (0, r.jsx)(
-                    w.z,
+                    D.z,
                     {
                         disabled: U,
-                        inputType: k,
+                        inputType: M,
                         channel: G,
                     },
                     "upload",
                 ),
             }),
-            k !== T.Ie.NORMAL ||
+            M !== I.Ie.NORMAL ||
                 ei ||
                 $.push({
                     key: "spacer",
-                    node: (0, r.jsx)("div", { className: x.spacer }, "spacer"),
+                    node: (0, r.jsx)("div", { className: L.spacer }, "spacer"),
                 })),
-        (null == (b = k.emojis) ? void 0 : b.button) != null &&
+        (null == (b = M.emojis) ? void 0 : b.button) != null &&
             (null == Y || (null != W && W.type !== u.jw.ATTACHMENT)))
     ) {
-        let e = q ? J : L.X1.EMOJI;
+        let e = q ? J : x.X1.EMOJI;
         $.push({
             key: "emoji",
             node: (0, r.jsx)(
-                S.Z,
+                T.Z,
                 {
                     disabled: U,
-                    type: k,
+                    type: M,
                     pickerView: e,
                 },
                 "emoji",
@@ -176,10 +176,10 @@ function k(e) {
         $.push({
             key: "appLauncher",
             node: (0, r.jsx)(
-                h.Z,
+                m.Z,
                 {
                     channel: G,
-                    type: k,
+                    type: M,
                 },
                 "appLauncher",
             ),
@@ -188,9 +188,9 @@ function k(e) {
             $.push({
                 key: "submit",
                 node: (0, r.jsx)(
-                    P.Z,
+                    R.Z,
                     {
-                        onClick: B,
+                        onClick: Z,
                         disabled: U || H,
                     },
                     "submit",
@@ -204,15 +204,15 @@ function k(e) {
     return 0 === ea.length
         ? null
         : (0, r.jsx)("div", {
-              className: o()(x.buttons, { [x.reducedGap]: X }),
+              className: o()(L.buttons, { [L.reducedGap]: Q }),
               children: ea,
           });
 }
-function j(e, t, n) {
+function k(e, t, n) {
     return (0, c.e7)([b.Z, y.Z], () => {
         let r = b.Z.getStickerPreview(e, t.drafts.type),
             i = null != r && r.length > 0;
         return 0 === y.Z.getUploads(e, t.drafts.type).length && n && !i;
     });
 }
-let U = i.memo(k);
+let U = i.memo(M);

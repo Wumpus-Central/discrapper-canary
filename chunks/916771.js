@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(54381);
 n(473749);
 var i = n(46973),
@@ -18,16 +18,16 @@ function f(e) {
             return d.intl.string(d.t.rSlOep);
     }
 }
-function _(e) {
+function p(e) {
     var t;
-    let { stream: n, width: _, avError: p, avErrorContext: h, selected: m = !1, noArt: g = !1 } = e,
-        E = f(h),
-        b = null == (t = (0, o.hp)(null != p ? p : o.u.STREAM_FAILED_TO_START)) ? void 0 : t.errorCode;
+    let { stream: n, width: p, avError: _, avErrorContext: m, selected: h = !1, noArt: g = !1 } = e,
+        E = f(m),
+        b = null == (t = (0, o.hp)(null != _ ? _ : o.u.STREAM_FAILED_TO_START)) ? void 0 : t.errorCode;
     return (0, r.jsx)(c.Z, {
         header: E,
-        size: (0, c.L)(_),
+        size: (0, c.L)(p),
         noArt: g,
-        selected: m,
+        selected: h,
         description: d.intl.format(d.t.sXsgsP, { helpUrl: l.Z.getArticleURL(u.BhN.STREAM_FAILED) }),
         errorCodeMessage: d.intl.formatToPlainString(d.t.ejOT95, { errorCode: b }),
         onCTAClick: () => {

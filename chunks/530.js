@@ -10,10 +10,10 @@ var i = n(120356),
     u = n(385499),
     d = n(386725),
     f = n(821795),
-    _ = n(892567),
-    p = n(172751),
-    h = n(228168),
-    m = n(388032),
+    p = n(892567),
+    _ = n(172751),
+    m = n(228168),
+    h = n(388032),
     g = n(954677);
 function E(e) {
     let {
@@ -25,43 +25,43 @@ function E(e) {
             nicknameIcons: y,
             pendingDisplayNameStyles: O,
             pronouns: v,
-            className: I,
-            tagClassName: T,
-            isTryItOut: S,
+            className: S,
+            tagClassName: I,
+            isTryItOut: T,
             onOpenProfile: A,
             onClose: C,
             nicknameVariant: N = "heading-lg/bold",
         } = e,
-        R = (e) =>
+        P = (e) =>
             null == A
                 ? e
                 : (0, r.jsx)(s.kL8, {
                       onClick: A,
                       className: g.clickableUsername,
-                      "aria-label": m.intl.string(m.t["+Xp3hq"]),
+                      "aria-label": h.intl.string(h.t["+Xp3hq"]),
                       children: e,
                   }),
-        P = null != v && v.length > 0,
-        D = (0, c.D)(t),
-        w = (0, d.Z)({
+        R = null != v && v.length > 0,
+        w = (0, c.D)(t),
+        D = (0, d.Z)({
             userId: t.id,
             guildId: n,
             pendingDisplayNameStyles: O,
         }),
-        L = null != w;
+        x = null != D;
     return (0, r.jsxs)("div", {
-        className: a()(g.container, { [g.bot]: null != D }, I),
+        className: a()(g.container, { [g.bot]: null != w }, S),
         children: [
             (0, r.jsxs)("div", {
                 className: g.usernameRow,
                 children: [
-                    R(
-                        L
+                    P(
+                        x
                             ? (0, r.jsx)(s.Text, {
                                   variant: N,
-                                  children: (0, r.jsx)(_.Z, {
+                                  children: (0, r.jsx)(p.Z, {
                                       userName: b,
-                                      displayNameStyles: w,
+                                      displayNameStyles: D,
                                       effectDisplayType: f.F.ANIMATED,
                                       textClassName: g.nicknameWithDisplayNameStyles,
                                       shouldWrap: !0,
@@ -76,9 +76,9 @@ function E(e) {
                                   children: b,
                               }),
                     ),
-                    null != D &&
+                    null != w &&
                         (0, r.jsx)(u.Z, {
-                            type: D,
+                            type: w,
                             verified: t.isVerifiedBot(),
                         }),
                     null != y &&
@@ -90,24 +90,24 @@ function E(e) {
             }),
             (0, r.jsxs)("div", {
                 className: a()(g.tags, {
-                    [g.pronouns]: P,
-                    [g.bot]: null != D,
+                    [g.pronouns]: R,
+                    [g.bot]: null != w,
                 }),
                 children: [
                     !t.isProvisional &&
-                        R(
+                        P(
                             (0, r.jsx)(l.Z, {
                                 user: t,
                                 usernameIcon: i,
                                 forceUsername: !0,
-                                forcePomelo: S,
-                                className: a()(g.userTag, T),
+                                forcePomelo: T,
+                                className: a()(g.userTag, I),
                                 usernameClass: g.userTagUsername,
                                 discriminatorClass: g.userTagDiscriminator,
                                 hideBotTag: !0,
                             }),
                         ),
-                    P &&
+                    R &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)("div", {
@@ -116,10 +116,10 @@ function E(e) {
                                 }),
                                 (0, r.jsx)(o.u, {
                                     asContainer: !0,
-                                    text: m.intl.string(m.t.GI2A8C),
-                                    delay: h.vB,
+                                    text: h.intl.string(h.t.GI2A8C),
+                                    delay: m.vB,
                                     children: (0, r.jsx)(s.Text, {
-                                        className: a()(g.pronounsText, T),
+                                        className: a()(g.pronounsText, I),
                                         variant: "text-sm/medium",
                                         color: "header-primary",
                                         children: v,
@@ -127,7 +127,7 @@ function E(e) {
                                 }),
                             ],
                         }),
-                    (0, r.jsx)(p.ZP, {
+                    (0, r.jsx)(_.ZP, {
                         userId: t.id,
                         onClose: C,
                         containerClassName: g.guildTagContainer,

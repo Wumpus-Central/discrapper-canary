@@ -15,21 +15,21 @@ function c(e) {
             maxAgeOptions: c,
             maxAge: g,
             maxUses: h,
-            temporary: v,
-            onGenerateNewLink: p,
+            temporary: p,
+            onGenerateNewLink: v,
             onToggleTemporary: I,
             onSelectMaxAge: m,
-            onSelectMaxUses: x,
-            isGuestInviteCreationToggleEnabled: S,
+            onSelectMaxUses: S,
+            isGuestInviteCreationToggleEnabled: x,
             inviteFlags: f,
             onSetInviteFlags: y,
         } = e,
         E = a.ZP.getMaxAgeOptionByValue(g),
-        C = d.find((e) => e.value === h);
+        _ = d.find((e) => e.value === h);
     return (0, i.jsx)("div", {
         className: u.settingsContent,
         children: (0, i.jsxs)("form", {
-            onSubmit: p,
+            onSubmit: v,
             className: u.settingsForm,
             children: [
                 (0, i.jsx)(r.VcW, {
@@ -41,17 +41,17 @@ function c(e) {
                 (0, i.jsx)(r.VcW, {
                     label: o.intl.string(o.t.jDqWHW),
                     options: d,
-                    value: null == C ? void 0 : C.value,
-                    onChange: x,
+                    value: null == _ ? void 0 : _.value,
+                    onChange: S,
                 }),
                 !n &&
                     (0, i.jsx)(r.rsf, {
-                        checked: v,
+                        checked: p,
                         onChange: (e) => I(e),
                         description: o.intl.string(o.t.UN5IRX),
                         label: o.intl.string(o.t["wE+9dr"]),
                     }),
-                S &&
+                x &&
                     (0, i.jsx)(r.rsf, {
                         checked: (0, s.yE)(f, l.$.IS_GUEST_INVITE),
                         onChange: (e) => y((0, s.mB)(f, l.$.IS_GUEST_INVITE, e)),

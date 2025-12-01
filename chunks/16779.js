@@ -1,6 +1,6 @@
 n.d(t, {
-    Rg: () => p,
-    Xh: () => _,
+    Rg: () => _,
+    Xh: () => p,
     ho: () => f,
 });
 var r = n(54381);
@@ -47,7 +47,7 @@ function f(e) {
         ],
     });
 }
-function _(e) {
+function p(e) {
     let { activity: t } = e;
     if ((0, a.Z)(t) || null == t.party) return null;
     let n = (0, l.bT)(t.state, t.party);
@@ -58,7 +58,7 @@ function _(e) {
               text: n,
           });
 }
-function p(e) {
+function _(e) {
     var t;
     let { activity: n } = e,
         a = (0, l.ap)(null == (t = n.assets) ? void 0 : t.large_text);

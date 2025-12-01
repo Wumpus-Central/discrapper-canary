@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r,
     i = n(442837),
     a = n(570140),
@@ -21,7 +21,7 @@ let c = o.ApplicationStreamPresets.PRESET_VIDEO,
     u = o.ApplicationStreamResolutions.RESOLUTION_720,
     d = o.ApplicationStreamFPS.FPS_30,
     f = !0;
-function _(e) {
+function p(e) {
     let { settings: t } = e;
     if ((null == t ? void 0 : t.context) !== s.Yn.STREAM || (null == t ? void 0 : t.qualityOptions) == null) return !1;
     let n = !1;
@@ -32,7 +32,7 @@ function _(e) {
         n
     );
 }
-function p(e) {
+function _(e) {
     let { preset: t, resolution: n, frameRate: r, soundshareEnabled: i } = e,
         a = !1;
     return (
@@ -43,7 +43,7 @@ function p(e) {
         a
     );
 }
-class h extends (r = i.ZP.PersistedStore) {
+class m extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
             var t, n;
@@ -62,8 +62,8 @@ class h extends (r = i.ZP.PersistedStore) {
         };
     }
 }
-l(h, "displayName", "ApplicationStreamingSettingsStore"), l(h, "persistKey", "ApplicationStreamingSettingStore");
-let m = new h(a.Z, {
-    MEDIA_ENGINE_SET_GO_LIVE_SOURCE: _,
-    STREAM_UPDATE_SETTINGS: p,
+l(m, "displayName", "ApplicationStreamingSettingsStore"), l(m, "persistKey", "ApplicationStreamingSettingStore");
+let h = new m(a.Z, {
+    MEDIA_ENGINE_SET_GO_LIVE_SOURCE: p,
+    STREAM_UPDATE_SETTINGS: _,
 });

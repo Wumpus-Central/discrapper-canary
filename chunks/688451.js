@@ -32,7 +32,7 @@ function a(e) {
             !!e[Y] ||
             !!(null == (t = e.constructor) ? void 0 : t[Y]) ||
             f(e) ||
-            _(e))
+            p(e))
     );
 }
 function o(e, t, n) {
@@ -47,7 +47,7 @@ function o(e, t, n) {
 }
 function s(e) {
     var t = e[W];
-    return t ? (t.i > 3 ? t.i - 4 : t.i) : Array.isArray(e) ? 1 : f(e) ? 2 : 3 * !!_(e);
+    return t ? (t.i > 3 ? t.i - 4 : t.i) : Array.isArray(e) ? 1 : f(e) ? 2 : 3 * !!p(e);
 }
 function l(e, t) {
     return 2 === s(e) ? e.has(t) : Object.prototype.hasOwnProperty.call(e, t);
@@ -63,17 +63,17 @@ function d(e, t) {
     return e === t ? 0 !== e || 1 / e == 1 / t : e != e && t != t;
 }
 function f(e) {
-    return Z && e instanceof Map;
-}
-function _(e) {
-    return F && e instanceof Set;
+    return B && e instanceof Map;
 }
 function p(e) {
+    return F && e instanceof Set;
+}
+function _(e) {
     return e.o || e.t;
 }
-function h(e) {
+function m(e) {
     if (Array.isArray(e)) return Array.prototype.slice.call(e);
-    var t = X(e);
+    var t = Q(e);
     delete t[W];
     for (var n = q(t), r = 0; r < n.length; r++) {
         var i = n[r],
@@ -89,7 +89,7 @@ function h(e) {
     }
     return Object.create(Object.getPrototypeOf(e), t);
 }
-function m(e, t) {
+function h(e, t) {
     return (
         void 0 === t && (t = !1),
         E(e) ||
@@ -101,7 +101,7 @@ function m(e, t) {
                 o(
                     e,
                     function (e, t) {
-                        return m(t, !0);
+                        return h(t, !0);
                     },
                     !0,
                 )),
@@ -115,11 +115,11 @@ function E(e) {
     return null == e || "object" != typeof e || Object.isFrozen(e);
 }
 function b(e) {
-    var t = Q[e];
+    var t = X[e];
     return t || r(18, e), t;
 }
 function y(e, t) {
-    Q[e] || (Q[e] = t);
+    X[e] || (X[e] = t);
 }
 function O() {
     return G;
@@ -127,13 +127,13 @@ function O() {
 function v(e, t) {
     t && (b("Patches"), (e.u = []), (e.s = []), (e.v = t));
 }
-function I(e) {
-    T(e), e.p.forEach(A), (e.p = null);
+function S(e) {
+    I(e), e.p.forEach(A), (e.p = null);
 }
-function T(e) {
+function I(e) {
     e === G && (G = e.l);
 }
-function S(e) {
+function T(e) {
     return (G = {
         p: [],
         l: G,
@@ -153,11 +153,11 @@ function C(e, t) {
     return (
         t.h.O || b("ES5").S(t, e, i),
         i
-            ? (n[W].P && (I(t), r(4)),
-              a(e) && ((e = N(t, e)), t.l || P(t, e)),
+            ? (n[W].P && (S(t), r(4)),
+              a(e) && ((e = N(t, e)), t.l || R(t, e)),
               t.u && b("Patches").M(n[W].t, e, t.u, t.s))
             : (e = N(t, n, [])),
-        I(t),
+        S(t),
         t.u && t.v(t.u, t.s),
         e !== H ? e : void 0
     );
@@ -170,29 +170,29 @@ function N(e, t, n) {
             o(
                 t,
                 function (i, a) {
-                    return R(e, r, t, i, a, n);
+                    return P(e, r, t, i, a, n);
                 },
                 !0,
             ),
             t
         );
     if (r.A !== e) return t;
-    if (!r.P) return P(e, r.t, !0), r.t;
+    if (!r.P) return R(e, r.t, !0), r.t;
     if (!r.I) {
         (r.I = !0), r.A._--;
-        var i = 4 === r.i || 5 === r.i ? (r.o = h(r.k)) : r.o,
+        var i = 4 === r.i || 5 === r.i ? (r.o = m(r.k)) : r.o,
             a = i,
             s = !1;
         3 === r.i && ((a = new Set(i)), i.clear(), (s = !0)),
             o(a, function (t, a) {
-                return R(e, r, i, t, a, n, s);
+                return P(e, r, i, t, a, n, s);
             }),
-            P(e, i, !1),
+            R(e, i, !1),
             n && e.u && b("Patches").N(r, n, e.u, e.s);
     }
     return r.o;
 }
-function R(e, t, n, r, o, s, c) {
+function P(e, t, n, r, o, s, c) {
     if (i(o)) {
         var d = N(e, o, s && t && 3 !== t.i && !l(t.R, r) ? s.concat(r) : void 0);
         if ((u(n, r, d), !i(d))) return;
@@ -200,17 +200,17 @@ function R(e, t, n, r, o, s, c) {
     } else c && n.add(o);
     if (a(o) && !E(o)) {
         if (!e.h.D && e._ < 1) return;
-        N(e, o), (t && t.A.l) || P(e, o);
+        N(e, o), (t && t.A.l) || R(e, o);
     }
 }
-function P(e, t, n) {
-    void 0 === n && (n = !1), !e.l && e.h.D && e.m && m(t, n);
-}
-function D(e, t) {
-    var n = e[W];
-    return (n ? p(n) : e)[t];
+function R(e, t, n) {
+    void 0 === n && (n = !1), !e.l && e.h.D && e.m && h(t, n);
 }
 function w(e, t) {
+    var n = e[W];
+    return (n ? _(n) : e)[t];
+}
+function D(e, t) {
     if (t in e)
         for (var n = Object.getPrototypeOf(e); n; ) {
             var r = Object.getOwnPropertyDescriptor(n, t);
@@ -218,16 +218,16 @@ function w(e, t) {
             n = Object.getPrototypeOf(n);
         }
 }
-function L(e) {
-    e.P || ((e.P = !0), e.l && L(e.l));
-}
 function x(e) {
-    e.o || (e.o = h(e.t));
+    e.P || ((e.P = !0), e.l && x(e.l));
 }
-function M(e, t, n) {
+function L(e) {
+    e.o || (e.o = m(e.t));
+}
+function j(e, t, n) {
     var r = f(t)
         ? b("MapSet").F(t, n)
-        : _(t)
+        : p(t)
           ? b("MapSet").T(t, n)
           : e.O
             ? (function (e, t) {
@@ -256,7 +256,7 @@ function M(e, t, n) {
             : b("ES5").J(t, n);
     return (n ? n.A : O()).p.push(r), r;
 }
-function k(e) {
+function M(e) {
     return (
         i(e) || r(22, e),
         (function e(t) {
@@ -266,8 +266,8 @@ function k(e) {
                 i = s(t);
             if (r) {
                 if (!r.P && (r.i < 4 || !b("ES5").K(r))) return r.t;
-                (r.I = !0), (n = j(t, i)), (r.I = !1);
-            } else n = j(t, i);
+                (r.I = !0), (n = k(t, i)), (r.I = !1);
+            } else n = k(t, i);
             return (
                 o(n, function (t, i) {
                     (r && c(r.t, t) === i) || u(n, t, e(i));
@@ -277,14 +277,14 @@ function k(e) {
         })(e)
     );
 }
-function j(e, t) {
+function k(e, t) {
     switch (t) {
         case 2:
             return new Map(e);
         case 3:
             return Array.from(e);
     }
-    return h(e);
+    return m(e);
 }
 n.d(t, {
     P2: () => en,
@@ -294,13 +294,13 @@ n.d(t, {
 });
 var U,
     G,
-    B = "undefined" != typeof Symbol && "symbol" == typeof Symbol("x"),
-    Z = "undefined" != typeof Map,
+    Z = "undefined" != typeof Symbol && "symbol" == typeof Symbol("x"),
+    B = "undefined" != typeof Map,
     F = "undefined" != typeof Set,
     V = "undefined" != typeof Proxy && void 0 !== Proxy.revocable && "undefined" != typeof Reflect,
-    H = B ? Symbol.for("immer-nothing") : (((U = {})["immer-nothing"] = !0), U),
-    Y = B ? Symbol.for("immer-draftable") : "__$immer_draftable",
-    W = B ? Symbol.for("immer-state") : "__$immer_state",
+    H = Z ? Symbol.for("immer-nothing") : (((U = {})["immer-nothing"] = !0), U),
+    Y = Z ? Symbol.for("immer-draftable") : "__$immer_draftable",
+    W = Z ? Symbol.for("immer-state") : "__$immer_state",
     K = ("undefined" != typeof Symbol && Symbol.iterator) || "@@iterator",
     z = "" + Object.prototype.constructor,
     q =
@@ -311,7 +311,7 @@ var U,
                     return Object.getOwnPropertyNames(e).concat(Object.getOwnPropertySymbols(e));
                 }
               : Object.getOwnPropertyNames,
-    X =
+    Q =
         Object.getOwnPropertyDescriptors ||
         function (e) {
             var t = {};
@@ -322,35 +322,35 @@ var U,
                 t
             );
         },
-    Q = {},
+    X = {},
     J = {
         get: function (e, t) {
             if (t === W) return e;
-            var n = p(e);
+            var n = _(e);
             if (!l(n, t))
                 return (function (e, t, n) {
                     var r,
-                        i = w(t, n);
+                        i = D(t, n);
                     return i ? ("value" in i ? i.value : null == (r = i.get) ? void 0 : r.call(e.k)) : void 0;
                 })(e, n, t);
             var r = n[t];
-            return e.I || !a(r) ? r : r === D(e.t, t) ? (x(e), (e.o[t] = M(e.A.h, r, e))) : r;
+            return e.I || !a(r) ? r : r === w(e.t, t) ? (L(e), (e.o[t] = j(e.A.h, r, e))) : r;
         },
         has: function (e, t) {
-            return t in p(e);
+            return t in _(e);
         },
         ownKeys: function (e) {
-            return Reflect.ownKeys(p(e));
+            return Reflect.ownKeys(_(e));
         },
         set: function (e, t, n) {
-            var r = w(p(e), t);
+            var r = D(_(e), t);
             if (null == r ? void 0 : r.set) return r.set.call(e.k, n), !0;
             if (!e.P) {
-                var i = D(p(e), t),
+                var i = w(_(e), t),
                     a = null == i ? void 0 : i[W];
                 if (a && a.t === n) return (e.o[t] = n), (e.R[t] = !1), !0;
                 if (d(n, i) && (void 0 !== n || l(e.t, t))) return !0;
-                x(e), L(e);
+                L(e), x(e);
             }
             return (
                 (e.o[t] === n && (void 0 !== n || t in e.o)) ||
@@ -361,11 +361,11 @@ var U,
         },
         deleteProperty: function (e, t) {
             return (
-                void 0 !== D(e.t, t) || t in e.t ? ((e.R[t] = !1), x(e), L(e)) : delete e.R[t], e.o && delete e.o[t], !0
+                void 0 !== w(e.t, t) || t in e.t ? ((e.R[t] = !1), L(e), x(e)) : delete e.R[t], e.o && delete e.o[t], !0
             );
         },
         getOwnPropertyDescriptor: function (e, t) {
-            var n = p(e),
+            var n = _(e),
                 r = Reflect.getOwnPropertyDescriptor(n, t);
             return r
                 ? {
@@ -421,13 +421,13 @@ var ee = new ((function () {
                         };
                     }
                     if (("function" != typeof n && r(6), void 0 !== i && "function" != typeof i && r(7), a(e))) {
-                        var c = S(t),
-                            u = M(t, e, void 0),
+                        var c = T(t),
+                            u = j(t, e, void 0),
                             d = !0;
                         try {
                             (o = n(u)), (d = !1);
                         } finally {
-                            d ? I(c) : T(c);
+                            d ? S(c) : I(c);
                         }
                         return "undefined" != typeof Promise && o instanceof Promise
                             ? o.then(
@@ -435,16 +435,16 @@ var ee = new ((function () {
                                       return v(c, i), C(e, c);
                                   },
                                   function (e) {
-                                      throw (I(c), e);
+                                      throw (S(c), e);
                                   },
                               )
                             : (v(c, i), C(o, c));
                     }
                     if (!e || "object" != typeof e) {
-                        if ((void 0 === (o = n(e)) && (o = e), o === H && (o = void 0), t.D && m(o, !0), i)) {
+                        if ((void 0 === (o = n(e)) && (o = e), o === H && (o = void 0), t.D && h(o, !0), i)) {
                             var f = [],
-                                _ = [];
-                            b("Patches").M(e, o, f, _), i(f, _);
+                                p = [];
+                            b("Patches").M(e, o, f, p), i(f, p);
                         }
                         return o;
                     }
@@ -476,10 +476,10 @@ var ee = new ((function () {
         var t = e.prototype;
         return (
             (t.createDraft = function (e) {
-                a(e) || r(8), i(e) && (e = k(e));
-                var t = S(this),
-                    n = M(this, e, void 0);
-                return (n[W].C = !0), T(t), n;
+                a(e) || r(8), i(e) && (e = M(e));
+                var t = T(this),
+                    n = j(this, e, void 0);
+                return (n[W].C = !0), I(t), n;
             }),
             (t.finishDraft = function (e, t) {
                 var n = (e && e[W]).A;

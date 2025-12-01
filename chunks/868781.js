@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => S });
 var r = n(54381),
     i = n(473749),
     a = n(657707),
@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(209698),
     d = n(802529),
     f = n(11133),
-    _ = n(814454),
-    p = n(473919),
-    h = n(170187),
-    m = n(532657),
+    p = n(814454),
+    _ = n(473919),
+    m = n(170187),
+    h = n(532657),
     g = n(981631);
 function E(e, t, n) {
     return (
@@ -69,40 +69,40 @@ function O(e) {
             iconClassName: o,
             hideIcon: c = !1,
             hideText: u = !1,
-            hideTooltip: m = !1,
+            hideTooltip: h = !1,
             canTruncate: g = !0,
         } = e,
         { descriptiveTextEnabled: E } = (0, d.f)({ location: "PresenceActivityStatus" }),
         { enableTopNavButton: b } = (0, l.Cq)({ location: "PresenceActivityStatus" }),
         { analyticsLocations: O } = (0, s.ZP)(),
         v = i.useCallback(() => {
-            (0, _.A)({
+            (0, p.A)({
                 analyticsLocations: O,
                 activityType: t.type,
                 applicationId: t.application_id,
             });
         }, [O, t.application_id, t.type]);
     if (c && u) return null;
-    let { text: I, tooltip: T } = (0, f.Z)(t, E || b),
-        S = y(t),
-        A = u && !m && null != T;
+    let { text: S, tooltip: I } = (0, f.Z)(t, E || b),
+        T = y(t),
+        A = u && !h && null != I;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             !c &&
-                null != S &&
-                (0, r.jsx)(p.Z, {
-                    icon: S,
-                    tooltipText: A ? T : void 0,
+                null != T &&
+                (0, r.jsx)(_.Z, {
+                    icon: T,
+                    tooltipText: A ? I : void 0,
                     className: o,
                     onTooltipShow: A ? v : void 0,
                 }),
             !u &&
-                (0, r.jsx)(h.Z, {
+                (0, r.jsx)(m.Z, {
                     variant: n,
                     className: a,
                     canTruncate: g,
-                    hideTooltip: m,
-                    children: I,
+                    hideTooltip: h,
+                    children: S,
                 }),
         ],
     });
@@ -118,14 +118,14 @@ function v(e) {
             hideTooltip: c = !1,
             canTruncate: u = !0,
         } = e,
-        { descriptiveTextEnabled: _ } = (0, d.f)({ location: "PresenceActivityStatusWithCombinedTooltip" }),
-        { enableTopNavButton: h } = (0, l.Cq)({ location: "PresenceActivityStatusWithCombinedTooltip" }),
-        { text: g, tooltip: E } = (0, f.Z)(t, _ || h),
+        { descriptiveTextEnabled: p } = (0, d.f)({ location: "PresenceActivityStatusWithCombinedTooltip" }),
+        { enableTopNavButton: m } = (0, l.Cq)({ location: "PresenceActivityStatusWithCombinedTooltip" }),
+        { text: g, tooltip: E } = (0, f.Z)(t, p || m),
         b = y(t),
         O = null != b && !o;
-    return (0, r.jsx)(m.Z, {
+    return (0, r.jsx)(h.Z, {
         icon: O
-            ? (0, r.jsx)(p.Z, {
+            ? (0, r.jsx)(_.Z, {
                   icon: b,
                   className: a,
               })
@@ -139,7 +139,7 @@ function v(e) {
         hideText: s,
     });
 }
-function I(e) {
+function S(e) {
     return (0, u.b)({ location: "VoiceActivityStatusExperimentWrapper" })
         ? (0, r.jsx)(v, b({}, e))
         : (0, r.jsx)(O, b({}, e));

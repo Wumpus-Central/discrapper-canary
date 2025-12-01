@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685);
+n.d(t, { Z: () => R }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -21,27 +21,27 @@ function f(e, t, n) {
         e
     );
 }
-let _ = new s.Z("OverlayV3NativeGPUBoostManager"),
-    p = new Set(),
-    h = !1,
-    m = !1;
+let p = new s.Z("OverlayV3NativeGPUBoostManager"),
+    _ = new Set(),
+    m = !1,
+    h = !1;
 function g(e, t) {
-    t ? p.add(e) : p.delete(e), O();
+    t ? _.add(e) : _.delete(e), O();
 }
 function E(e) {
-    (m = e), O();
+    (h = e), O();
 }
 function b() {
-    p.clear(), O();
+    _.clear(), O();
 }
 function y() {
-    return !m && p.size > 0;
+    return !h && _.size > 0;
 }
 async function O() {
     var e, t, n;
     try {
         let n = y();
-        if (h === n || !d.iP) return;
+        if (m === n || !d.iP) return;
         let r = await (null === o.Z ||
         void 0 === o.Z ||
         null == (t = o.Z.processUtils) ||
@@ -49,23 +49,23 @@ async function O() {
             ? void 0
             : e.call(t));
         if (null == r) return;
-        l.ZP.SetGPUBoostEnabledByPid(r, n) && (h = n), R.emitChange();
+        l.ZP.SetGPUBoostEnabledByPid(r, n) && (m = n), P.emitChange();
     } catch (e) {
         (null == (n = e.message) ? void 0 : n.includes("IPC method called after context was released")) && b(),
-            _.error("Error during GPU boost request flush:", e);
+            p.error("Error during GPU boost request flush:", e);
     }
 }
 function v(e) {
     g(e.reason, e.enabled);
 }
-function I(e) {
+function S(e) {
     let { enabled: t, mode: n } = e;
     n === c.GO.DisabledGPUBoost && E(t), n === c.GO.ForceGPUBoost && g(c.zS.DEV_FORCED_GPU_BOOST, t);
 }
-function T() {
+function I() {
     b();
 }
-function S(e) {
+function T(e) {
     g(c.zS.OVERLAY_UNLOCKED, !e.locked);
 }
 function A() {
@@ -80,27 +80,27 @@ class N extends (r = i.ZP.Store) {
         this.waitFor(u.Z);
     }
     getGPUBoostRequests() {
-        return p;
+        return _;
     }
     isGPUBoosted() {
-        return h;
+        return m;
     }
     getIsDisabledGPUBoost() {
-        return m;
+        return h;
     }
 }
 f(N, "displayName", "Overlay-v3-Native-GPU-Boost-Store");
-let R = new N(
+let P = new N(
         a.Z,
         __OVERLAY__ || !d.iP
             ? {}
             : {
                   OVERLAY_SET_GPU_BOOST_REQUESTED: v,
-                  OVERLAY_RENDER_DEBUG_MODE: I,
-                  OVERLAY_CRASHED: T,
+                  OVERLAY_RENDER_DEBUG_MODE: S,
+                  OVERLAY_CRASHED: I,
                   OVERLAY_V3_CREATE_WINDOW_HANDLE_SUCCESS: A,
                   OVERLAY_V3_NATIVE_DESTROY_HOST_WINDOW: C,
-                  OVERLAY_SET_INPUT_LOCKED: S,
+                  OVERLAY_SET_INPUT_LOCKED: T,
               },
     ),
-    P = R;
+    R = P;

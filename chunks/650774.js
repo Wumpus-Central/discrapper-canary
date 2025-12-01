@@ -47,23 +47,23 @@ function f(e) {
     let { guild: t } = e;
     l[t.id] = t.member_count;
 }
-function _(e) {
+function p(e) {
     let { guild: t } = e;
     if (null == l[t.id] && null == c[t.id]) return !1;
     delete l[t.id], delete c[t.id];
 }
-function p(e) {
+function _(e) {
     let { guildId: t, memberCount: n, onlineCount: r } = e,
         i = !1;
     return l[t] !== n && ((l[t] = n), (i = !0)), c[t] !== r && ((c[t] = r), (i = !0)), i;
 }
-function h(e) {
+function m(e) {
     let { invite: t } = e,
         { guild: n, approximate_presence_count: r } = t;
     if ((null == n ? void 0 : n.id) == null || null == r) return !1;
     c[n.id] = r;
 }
-function m(e) {
+function h(e) {
     let { guildId: t, count: n } = e;
     if (null == t || null == n) return !1;
     c[t] = n;
@@ -84,9 +84,9 @@ let E = new g(a.Z, {
     CONNECTION_OPEN: u,
     OVERLAY_INITIALIZE: d,
     GUILD_CREATE: f,
-    GUILD_DELETE: _,
-    GUILD_MEMBER_LIST_UPDATE: p,
-    INVITE_ACCEPT_SUCCESS: h,
-    INVITE_RESOLVE_SUCCESS: h,
-    ONLINE_GUILD_MEMBER_COUNT_UPDATE: m,
+    GUILD_DELETE: p,
+    GUILD_MEMBER_LIST_UPDATE: _,
+    INVITE_ACCEPT_SUCCESS: m,
+    INVITE_RESOLVE_SUCCESS: m,
+    ONLINE_GUILD_MEMBER_COUNT_UPDATE: h,
 });

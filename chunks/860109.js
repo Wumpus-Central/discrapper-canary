@@ -26,10 +26,10 @@ function s(e) {
             dynamicDataBinding: d,
             onDataBindingChange: f,
         } = e,
-        _ = null != d ? d : u,
-        p = (0, i.useViewModel)(t);
-    (0, i.useViewModelInstance)(p);
-    let { theme: h, saturation: m } = (0, o.ZF)(),
+        p = null != d ? d : u,
+        _ = (0, i.useViewModel)(t);
+    (0, i.useViewModelInstance)(_);
+    let { theme: m, saturation: h } = (0, o.ZF)(),
         { highContrastModeEnabled: g } = r.useContext(a.S),
         E = r.useRef(null),
         b = l(),
@@ -49,16 +49,16 @@ function s(e) {
             let e = new AbortController();
             return (
                 (async function () {
-                    if (null == t || null == t.viewModelInstance || null == _) return;
+                    if (null == t || null == t.viewModelInstance || null == p) return;
                     let r = s[null != n ? n : ""];
-                    for (let n of Object.entries(_)) {
-                        var i, a, o, l, c, u, d, f, p, O, v, I, T;
+                    for (let n of Object.entries(p)) {
+                        var i, a, o, l, c, u, d, f, _, O, v, S, I;
                         if (e.signal.aborted) return;
                         let s = n[0],
-                            _ = n[1],
-                            S = null != _ && "object" == typeof _ && "type" in _,
-                            A = S ? _.type : r[s],
-                            C = S ? _.value : _;
+                            p = n[1],
+                            T = null != p && "object" == typeof p && "type" in p,
+                            A = T ? p.type : r[s],
+                            C = T ? p.value : p;
                         switch (A) {
                             case "color":
                                 if ("number" == typeof C) {
@@ -69,8 +69,8 @@ function s(e) {
                                     if ("resolve" in e) {
                                         let [n, r, i, l] = e
                                             .resolve({
-                                                theme: h,
-                                                saturation: m,
+                                                theme: m,
+                                                saturation: h,
                                                 highContrastModeEnabled: g,
                                             })
                                             .rgba();
@@ -88,32 +88,32 @@ function s(e) {
                                 null != N && (N.value = C);
                                 break;
                             case "boolean":
-                                let R = null == (f = t.viewModelInstance) ? void 0 : f.boolean(s);
-                                null != R && (R.value = C);
+                                let P = null == (f = t.viewModelInstance) ? void 0 : f.boolean(s);
+                                null != P && (P.value = C);
                                 break;
                             case "trigger":
-                                let P = null != C && ("boolean" == typeof C ? C : 0 !== C),
-                                    D = y(E.current, s);
-                                P &&
-                                    D !== C &&
-                                    (null == (O = t.viewModelInstance) || null == (p = O.trigger(s)) || p.trigger());
+                                let R = null != C && ("boolean" == typeof C ? C : 0 !== C),
+                                    w = y(E.current, s);
+                                R &&
+                                    w !== C &&
+                                    (null == (O = t.viewModelInstance) || null == (_ = O.trigger(s)) || _.trigger());
                                 break;
                             case "string":
-                                let w = null == (v = t.viewModelInstance) ? void 0 : v.string(s);
-                                null != w && (w.value = C);
+                                let D = null == (v = t.viewModelInstance) ? void 0 : v.string(s);
+                                null != D && (D.value = C);
                                 break;
                             case "image":
                                 if (null != C) {
                                     let n = await b(C, e.signal);
                                     if (e.signal.aborted) return;
-                                    let r = null == (I = t.viewModelInstance) ? void 0 : I.image(s);
+                                    let r = null == (S = t.viewModelInstance) ? void 0 : S.image(s);
                                     null != r && (r.value = n);
                                 }
                                 break;
                             case "artboard":
-                                let L = null == (T = t.viewModelInstance) ? void 0 : T.artboard(s),
-                                    x = t.getBindableArtboard(C);
-                                null != L && null != x && (L.value = x);
+                                let x = null == (I = t.viewModelInstance) ? void 0 : I.artboard(s),
+                                    L = t.getBindableArtboard(C);
+                                null != x && null != L && (x.value = L);
                                 break;
                             default:
                                 console.warn("Unknown property type: ".concat(A));
@@ -121,10 +121,10 @@ function s(e) {
                     }
                 })(),
                 () => {
-                    e.abort(), (E.current = _);
+                    e.abort(), (E.current = p);
                 }
             );
-        }, [y, _, t, n, s, h, null == t ? void 0 : t.viewModelInstance, m, g, b]);
+        }, [y, p, t, n, s, m, null == t ? void 0 : t.viewModelInstance, h, g, b]);
 }
 function l() {
     let e = r.useRef({});

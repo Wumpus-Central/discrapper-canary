@@ -12,7 +12,7 @@ var r = n(54381),
     u = n(388032),
     d = n(642650),
     f = n(595475);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +25,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,12 +36,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,12 +53,12 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -71,8 +71,8 @@ function g(e) {
             title: i,
             shouldLoadVideo: a,
             isReducedMotion: u,
-            includeSideGradient: _ = !1,
-            startLeftAligned: h = !1,
+            includeSideGradient: p = !1,
+            startLeftAligned: m = !1,
             enablePremiumBrandRefreshDesign: g,
         } = e,
         E = g ? f : d;
@@ -103,7 +103,7 @@ function g(e) {
                         children: e.map((e) =>
                             (0, r.jsx)(
                                 c.Z,
-                                m(p({ index: t + +!!h }, e), {
+                                h(_({ index: t + +!!m }, e), {
                                     size: n,
                                     shouldLoadVideo: a,
                                     isReducedMotion: u,
@@ -115,7 +115,7 @@ function g(e) {
                     });
                 }),
             }),
-            _ && (0, r.jsx)("div", { className: d.bentoSideGradient }),
+            p && (0, r.jsx)("div", { className: d.bentoSideGradient }),
         ],
     });
 }
@@ -123,7 +123,7 @@ let E = i.memo(function (e) {
         let { whatsNewBoxes: t } = (0, l.ZP)();
         return (0, r.jsx)(
             g,
-            p(
+            _(
                 {
                     boxLayout: t,
                     title: u.intl.string(u.t.LRmNAl),
@@ -137,7 +137,7 @@ let E = i.memo(function (e) {
         let { bestOfBoxes: t } = (0, l.ZP)();
         return (0, r.jsx)(
             g,
-            p(
+            _(
                 {
                     boxLayout: t,
                     title: u.intl.string(u.t.EnzW2H),

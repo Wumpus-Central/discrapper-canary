@@ -9,31 +9,31 @@ var r = n(54381),
     u = n(475179),
     d = n(925549),
     f = n(37234),
-    _ = n(100527),
-    p = n(906732),
-    h = n(835473),
-    m = n(413523),
+    p = n(100527),
+    _ = n(906732),
+    m = n(835473),
+    h = n(413523),
     g = n(358221),
     E = n(703656),
     b = n(607187),
     y = n(937995),
     O = n(366050),
     v = n(944486),
-    I = n(594174),
-    T = n(566620),
-    S = n(317381),
+    S = n(594174),
+    I = n(566620),
+    T = n(317381),
     A = n(531826),
     C = n(175894),
     N = n(963614),
-    R = n(917107),
-    P = n(208156),
-    D = n(748492),
-    w = n(701488),
-    L = n(918559),
-    x = n(981631),
-    M = n(354459),
-    k = n(505386),
-    j = n(186880),
+    P = n(917107),
+    R = n(208156),
+    w = n(748492),
+    D = n(701488),
+    x = n(918559),
+    L = n(981631),
+    j = n(354459),
+    M = n(505386),
+    k = n(186880),
     U = n(315091);
 function G(e, t, n) {
     return (
@@ -48,7 +48,7 @@ function G(e, t, n) {
         e
     );
 }
-function B(e) {
+function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -64,7 +64,7 @@ function B(e) {
     }
     return e;
 }
-function Z(e, t) {
+function B(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -87,15 +87,15 @@ function F(e, t) {
 }
 function V(e) {
     var t, n, a;
-    let { channel: _, isLoading: p } = e,
+    let { channel: p, isLoading: _ } = e,
         [C, G] = i.useState(!1),
-        B = (0, s.e7)([S.ZP], () => S.ZP.getCurrentEmbeddedActivity()),
-        Z = null == B ? void 0 : B.applicationId,
-        F = (0, s.e7)([S.ZP], () => null != Z && S.ZP.isProxyTicketRefreshing(Z), [Z]),
-        V = (0, s.e7)([S.ZP], () => S.ZP.getActivityPanelMode()),
-        H = (0, h.q)(Z),
-        Y = null == B ? void 0 : B.launchId,
-        W = (0, s.e7)([v.Z], () => v.Z.getChannelId() === (null == _ ? void 0 : _.id)),
+        Z = (0, s.e7)([T.ZP], () => T.ZP.getCurrentEmbeddedActivity()),
+        B = null == Z ? void 0 : Z.applicationId,
+        F = (0, s.e7)([T.ZP], () => null != B && T.ZP.isProxyTicketRefreshing(B), [B]),
+        V = (0, s.e7)([T.ZP], () => T.ZP.getActivityPanelMode()),
+        H = (0, m.q)(B),
+        Y = null == Z ? void 0 : Z.launchId,
+        W = (0, s.e7)([v.Z], () => v.Z.getChannelId() === (null == p ? void 0 : p.id)),
         { dockedRect: K, isHidden: z } = (0, s.cj)([O.Z], () => {
             let e = O.Z.pipWindow;
             return {
@@ -103,45 +103,45 @@ function V(e) {
                 isHidden: O.Z.isEmbeddedActivityHidden(),
             };
         }),
-        q = (0, A.sU)({ channelId: null == _ ? void 0 : _.id }),
+        q = (0, A.sU)({ channelId: null == p ? void 0 : p.id }),
         {
-            activityParticipant: X,
-            selectedParticipant: Q,
+            activityParticipant: Q,
+            selectedParticipant: X,
             participantsOpen: J,
         } = (0, s.cj)([g.Z], () => ({
             activityParticipant:
-                null != B && null != _
+                null != Z && null != p
                     ? g.Z.getParticipant(
-                          _.id,
-                          (0, m.gN)({
-                              applicationId: B.applicationId,
-                              instanceId: B.compositeInstanceId,
+                          p.id,
+                          (0, h.gN)({
+                              applicationId: Z.applicationId,
+                              instanceId: Z.compositeInstanceId,
                           }),
                       )
                     : null,
-            selectedParticipant: null != _ ? g.Z.getSelectedParticipant(_.id) : null,
-            participantsOpen: null != _ && g.Z.getParticipantsOpen(_.id),
+            selectedParticipant: null != p ? g.Z.getSelectedParticipant(p.id) : null,
+            participantsOpen: null != p && g.Z.getParticipantsOpen(p.id),
         })),
         $ = W || null != q,
-        ee = (0, R.Z)(null == _ ? void 0 : _.id),
-        et = ee && (null == Q ? void 0 : Q.type) !== M.fO.ACTIVITY,
-        en = !ee && V === L.Ez.PIP,
+        ee = (0, P.Z)(null == p ? void 0 : p.id),
+        et = ee && (null == X ? void 0 : X.type) !== j.fO.ACTIVITY,
+        en = !ee && V === x.Ez.PIP,
         er = $ && (et || en) && null == K,
         ei = (!$ || er) && !z,
         ea = ei && null != O.Z.pipVideoWindow && null != O.Z.pipActivityWindow;
     function eo() {
-        if (null != _) {
+        if (null != p) {
             var e;
-            null != B &&
+            null != Z &&
                 u.Z.selectParticipant(
-                    _.id,
-                    (0, m.gN)({
-                        applicationId: B.applicationId,
-                        instanceId: B.compositeInstanceId,
+                    p.id,
+                    (0, h.gN)({
+                        applicationId: Z.applicationId,
+                        instanceId: Z.compositeInstanceId,
                     }),
                 );
-            let t = null != (e = _.getGuildId()) ? e : x.ME;
-            d.Z.channelListScrollTo(t, _.id), (0, E.XU)(t, _.id);
+            let t = null != (e = p.getGuildId()) ? e : L.ME;
+            d.Z.channelListScrollTo(t, p.id), (0, E.XU)(t, p.id);
         }
         null == q && (0, f.Ou)();
     }
@@ -151,12 +151,12 @@ function V(e) {
     function el(e) {
         var t;
         let { onActive: n, onForceIdle: i, idle: a, isActivityInTextChannel: o, users: s } = e;
-        return ei && null != B && ((null == X ? void 0 : X.type) === M.fO.ACTIVITY || o)
-            ? (null == (t = B.config) ? void 0 : t.useInteractivePIP)
-                ? (0, r.jsx)(D.of, {
+        return ei && null != Z && ((null == Q ? void 0 : Q.type) === j.fO.ACTIVITY || o)
+            ? (null == (t = Z.config) ? void 0 : t.useInteractivePIP)
+                ? (0, r.jsx)(w.of, {
                       onJumpToChannel: eo,
-                      applicationId: B.applicationId,
-                      channel: _,
+                      applicationId: Z.applicationId,
+                      channel: p,
                       showControls: !a,
                       onMouseDown: n,
                       onMouseMove: n,
@@ -164,23 +164,23 @@ function V(e) {
                       onToggleHeight: es,
                       isExpanded: C,
                       hideExpandedButton: o,
-                      embeddedActivity: B,
+                      embeddedActivity: Z,
                   })
                 : o
-                  ? (0, r.jsx)(D.q5, {
+                  ? (0, r.jsx)(w.q5, {
                         idle: a,
                         onMouseMove: n,
                         onMouseDown: n,
                         onMouseLeave: i,
                         onJumpToChannel: () => {
-                            eo(), (0, T.tg)(L.Ez.PANEL);
+                            eo(), (0, I.tg)(x.Ez.PANEL);
                         },
-                        channel: _,
-                        applicationId: B.applicationId,
+                        channel: p,
+                        applicationId: Z.applicationId,
                         users: s,
-                        embeddedActivity: B,
+                        embeddedActivity: Z,
                     })
-                  : null == X
+                  : null == Q
                     ? null
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
@@ -188,19 +188,19 @@ function V(e) {
                                   onMouseMove: n,
                                   onMouseDown: n,
                                   onMouseLeave: i,
-                                  className: k.clickShield,
+                                  className: M.clickShield,
                                   onDoubleClick: eo,
                               }),
-                              (0, r.jsx)(D.YB, {
+                              (0, r.jsx)(w.YB, {
                                   idle: a,
                                   onMouseMove: n,
                                   onMouseDown: n,
                                   onMouseLeave: i,
                                   onJumpToChannel: eo,
-                                  channel: _,
-                                  applicationId: B.applicationId,
-                                  selectedParticipant: X,
-                                  embeddedActivity: B,
+                                  channel: p,
+                                  applicationId: Z.applicationId,
+                                  selectedParticipant: Q,
+                                  embeddedActivity: Z,
                               }),
                           ],
                       })
@@ -208,48 +208,48 @@ function V(e) {
     }
     if (
         (i.useEffect(() => {
-            if (null != Z) {
-                let e = ei ? w.cE.PIP : w.cE.FOCUSED;
+            if (null != B) {
+                let e = ei ? D.cE.PIP : D.cE.FOCUSED;
                 c.Z.dispatch({
                     type: "ACTIVITY_LAYOUT_MODE_UPDATE",
                     layoutMode: e,
-                    applicationId: Z,
+                    applicationId: B,
                 });
             }
-        }, [Z, ei]),
-        null == B || null == Y || ((0, R.Z)(null == _ ? void 0 : _.id) && null == X) || null == H)
+        }, [B, ei]),
+        null == Z || null == Y || ((0, P.Z)(null == p ? void 0 : p.id) && null == Q) || null == H)
     )
         return null;
-    let ec = Array.from(B.userIds)
-            .map((e) => I.default.getUser(e))
+    let ec = Array.from(Z.userIds)
+            .map((e) => S.default.getUser(e))
             .filter((e) => null != e),
         eu = {
-            instance_id: null != (a = null != (n = B.compositeInstanceId) ? n : B.launchId) ? a : "",
-            location_id: null == (t = B.location) ? void 0 : t.id,
-            launch_id: B.launchId,
-            referrer_id: B.referrerId,
-            custom_id: B.customId,
+            instance_id: null != (a = null != (n = Z.compositeInstanceId) ? n : Z.launchId) ? a : "",
+            location_id: null == (t = Z.location) ? void 0 : t.id,
+            launch_id: Z.launchId,
+            referrer_id: Z.referrerId,
+            custom_id: Z.customId,
         };
     return (
-        null != B.proxyTicket && (eu.discord_proxy_ticket = B.proxyTicket),
-        (null == _ ? void 0 : _.guild_id) != null &&
-            (null == _ ? void 0 : _.guild_id) !== "" &&
-            (eu.guild_id = _.guild_id),
-        (null == _ ? void 0 : _.id) != null && (null == _ ? void 0 : _.id) !== "" && (eu.channel_id = _.id),
+        null != Z.proxyTicket && (eu.discord_proxy_ticket = Z.proxyTicket),
+        (null == p ? void 0 : p.guild_id) != null &&
+            (null == p ? void 0 : p.guild_id) !== "" &&
+            (eu.guild_id = p.guild_id),
+        (null == p ? void 0 : p.id) != null && (null == p ? void 0 : p.id) !== "" && (eu.channel_id = p.id),
         (0, r.jsx)(y.ZP, {
             timeout: 2000,
             children: (e) => {
                 var t, n;
                 let { idle: i, onActive: a, onForceIdle: s } = e;
                 return (0, r.jsxs)(b.Z, {
-                    className: o()(k.root, {
-                        [k.pipMode]: ei,
+                    className: o()(M.root, {
+                        [M.pipMode]: ei,
                         [U.elevationHigh]: ei,
-                        [j.idle]: i && !(null == (t = B.config) ? void 0 : t.useInteractivePIP),
-                        [k.pipModeShort]: ei && !C,
-                        [k.pipModeTall]: ei && C,
-                        [k.hidden]: z,
-                        [k.multiPIPMode]: ea,
+                        [k.idle]: i && !(null == (t = Z.config) ? void 0 : t.useInteractivePIP),
+                        [M.pipModeShort]: ei && !C,
+                        [M.pipModeTall]: ei && C,
+                        [M.hidden]: z,
+                        [M.multiPIPMode]: ea,
                     }),
                     noBorder: !ei,
                     children: [
@@ -263,32 +263,32 @@ function V(e) {
                                 users: ec,
                             }),
                         }),
-                        p || F
+                        _ || F
                             ? (0, r.jsx)(l.$jN, {
-                                  className: o()(k.iframe, {
-                                      [k.pipModeShort]: ei && !C,
-                                      [k.pipModeTall]: ei && C,
+                                  className: o()(M.iframe, {
+                                      [M.pipModeShort]: ei && !C,
+                                      [M.pipModeTall]: ei && C,
                                   }),
                               })
-                            : (0, r.jsx)(P.J, {
+                            : (0, r.jsx)(R.J, {
                                   allowPopups: (0, N.h)(H),
-                                  referrerPolicy: w.um.has(B.applicationId) ? "no-referrer" : "origin",
-                                  url: B.url,
+                                  referrerPolicy: D.um.has(Z.applicationId) ? "no-referrer" : "origin",
+                                  url: Z.url,
                                   queryParams: eu,
-                                  className: o()(k.iframe, {
-                                      [k.pipModeShort]: ei && !C,
-                                      [k.pipModeTall]: ei && C,
-                                      [k.pipNonInteractive]:
-                                          ei && !(null == (n = B.config) ? void 0 : n.useInteractivePIP),
+                                  className: o()(M.iframe, {
+                                      [M.pipModeShort]: ei && !C,
+                                      [M.pipModeTall]: ei && C,
+                                      [M.pipNonInteractive]:
+                                          ei && !(null == (n = Z.config) ? void 0 : n.useInteractivePIP),
                                   }),
                                   shouldRefocus: !ei && W,
                               }),
                         !ei &&
-                            null != _ &&
-                            (0, r.jsx)(D.Ds, {
+                            null != p &&
+                            (0, r.jsx)(w.Ds, {
                                 participantsOpen: J,
                                 showToggleParticipants: !1,
-                                channelId: _.id,
+                                channelId: p.id,
                             }),
                     ],
                 });
@@ -298,16 +298,16 @@ function V(e) {
 }
 let H = (e) => {
     var { channel: t } = e,
-        n = Z(e, ["channel"]);
-    let i = S.ZP.getCurrentEmbeddedActivity();
+        n = B(e, ["channel"]);
+    let i = T.ZP.getCurrentEmbeddedActivity();
     (0, C.Z)({ connectedEmbeddedActivity: i });
-    let { analyticsLocations: a } = (0, p.ZP)(_.Z.ACTIVITY_PIP),
+    let { analyticsLocations: a } = (0, _.ZP)(p.Z.ACTIVITY_PIP),
         o = null == i;
-    return (0, r.jsx)(p.Gt, {
+    return (0, r.jsx)(_.Gt, {
         value: a,
         children: (0, r.jsx)(
             V,
-            B(
+            Z(
                 {
                     channel: t,
                     isLoading: o,

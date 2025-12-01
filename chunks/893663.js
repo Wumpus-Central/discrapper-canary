@@ -64,14 +64,14 @@ var u = (function (e) {
 function d(e) {
     return (0, r.e7)([i.Z], () => {
         var t, n;
-        return _(e, null != (n = null == (t = i.Z.settings.guilds) ? void 0 : t.guilds) ? n : {});
+        return p(e, null != (n = null == (t = i.Z.settings.guilds) ? void 0 : t.guilds) ? n : {});
     });
 }
 function f(e) {
     var t, n;
-    return _(e, null != (n = null == (t = i.Z.settings.guilds) ? void 0 : t.guilds) ? n : {});
+    return p(e, null != (n = null == (t = i.Z.settings.guilds) ? void 0 : t.guilds) ? n : {});
 }
-function _(e, t) {
+function p(e, t) {
     var n, r;
     let i = null == (n = t[e]) ? void 0 : n.joinSound,
         o = null == (r = t[a.hY]) ? void 0 : r.joinSound,

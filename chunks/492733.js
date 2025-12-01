@@ -1,15 +1,15 @@
 n.d(t, {
     GL: () => a,
     Jq: () => i,
-    O0: () => h,
+    O0: () => m,
     U5: () => E,
     XG: () => s,
     hE: () => b,
     iA: () => l,
-    kb: () => m,
+    kb: () => h,
     l1: () => u,
     np: () => o,
-    oY: () => _,
+    oY: () => p,
 });
 var r = n(134994);
 let i = (e) => new Uint32Array(e.buffer, e.byteOffset, Math.floor(e.byteLength / 4)),
@@ -23,7 +23,7 @@ function u(e) {
 }
 let d = null,
     f = async () => {};
-async function _(e, t, n) {
+async function p(e, t, n) {
     let r = Date.now();
     for (let i = 0; i < e; i++) {
         n(i);
@@ -31,14 +31,14 @@ async function _(e, t, n) {
         (e >= 0 && e < t) || (await f(), (r += e));
     }
 }
-function p(e) {
+function _(e) {
     if ("string" != typeof e) throw Error(`utf8ToBytes expected string, got ${typeof e}`);
     return new Uint8Array(new TextEncoder().encode(e));
 }
-function h(e) {
-    return "string" == typeof e && (e = p(e)), (0, r.aI)(e), e;
+function m(e) {
+    return "string" == typeof e && (e = _(e)), (0, r.aI)(e), e;
 }
-class m {
+class h {
     clone() {
         return this._cloneInto();
     }
@@ -49,7 +49,7 @@ function E(e, t) {
     return Object.assign(e, t);
 }
 function b(e) {
-    let t = (t) => e().update(h(t)).digest(),
+    let t = (t) => e().update(m(t)).digest(),
         n = e();
     return (t.outputLen = n.outputLen), (t.blockLen = n.blockLen), (t.create = () => e()), t;
 }

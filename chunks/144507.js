@@ -1,8 +1,8 @@
 n.d(t, {
-    $D: () => m,
+    $D: () => h,
     H2: () => g,
-    MO: () => h,
-    X$: () => p,
+    MO: () => m,
+    X$: () => _,
     d5: () => d,
 });
 var r = n(442837),
@@ -42,7 +42,7 @@ function f(e) {
             (!!t.features.has(u.GuildFeatures.COMMUNITY) && (!!i || !!a) && n && o))
     );
 }
-function _(e) {
+function p(e) {
     if (e.guild.features.has(u.GuildFeatures.CREATOR_MONETIZABLE_DISABLED)) return 0;
     if (f(e)) return 3;
     let {
@@ -55,23 +55,23 @@ function _(e) {
     } = e;
     return n && !r && i ? 1 : n && i && (a || o) && !t.features.has(u.GuildFeatures.COMMUNITY) ? 2 : 0;
 }
-function p(e) {
-    return 0 !== _(e);
+function _(e) {
+    return 0 !== p(e);
 }
-function h(e) {
+function m(e) {
     let t = (0, c.Bt)(null == e ? void 0 : e.id),
         n = (0, i.Ob)(e),
         s = (0, i.gS)(null == e ? void 0 : e.id),
-        u = m(e),
+        u = h(e),
         d = (0, r.e7)([l.default], () => {
             let t = l.default.getCurrentUser();
             return null != e && (0, o.eM)(e, t);
         }),
         f = (0, i.Sd)(),
-        { shouldRestrictUpdatingCreatorMonetizationSettings: p } = (0, a.gX)(null == e ? void 0 : e.id);
+        { shouldRestrictUpdatingCreatorMonetizationSettings: _ } = (0, a.gX)(null == e ? void 0 : e.id);
     return null == e
         ? 0
-        : _({
+        : p({
               guild: e,
               isOwner: d,
               canManageGuildRoleSubscriptions: u,
@@ -79,10 +79,10 @@ function h(e) {
               isMonetizationWaitlistEnabledForGuild: s,
               isExpeditedMonetizationOnboardingGuild: n,
               isUserInCreatorMonetizationEligibleCountry: f,
-              shouldRestrictUpdatingRoleSubscriptionSettings: p,
+              shouldRestrictUpdatingRoleSubscriptionSettings: _,
           });
 }
-function m(e) {
+function h(e) {
     return (0, r.e7)([s.Z], () => g(e), [e]);
 }
 function g(e) {

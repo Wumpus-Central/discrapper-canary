@@ -42,8 +42,8 @@ async function d(e) {
         onRedeemStart: o,
         onRedeemSucceed: d,
         onRedeemFail: f,
-        shouldRefetchBalance: _ = !0,
-        isRental: p = !1,
+        shouldRefetchBalance: p = !0,
+        isRental: _ = !1,
     } = e;
     i.Z.wait(() => {
         i.Z.dispatch({
@@ -55,7 +55,7 @@ async function d(e) {
     try {
         let e = {
                 checkout_session_id: n,
-                is_rental: p,
+                is_rental: _,
             },
             a = (
                 await r.tn.post({
@@ -75,7 +75,7 @@ async function d(e) {
                 skuId: t,
                 entitlements: a,
             }),
-            _ && u(),
+            p && u(),
             null == d || d(a),
             a
         );
@@ -86,7 +86,7 @@ async function d(e) {
             skuId: t,
             error: e,
         }),
-            _ && u(),
+            p && u(),
             null == f || f(e);
     }
 }

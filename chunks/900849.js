@@ -2,12 +2,12 @@ n.d(t, {
     Az: () => E,
     IZ: () => b,
     PP: () => g,
-    Ub: () => m,
-    c6: () => T,
+    Ub: () => h,
+    c6: () => I,
     m9: () => v,
-    mT: () => S,
+    mT: () => T,
     qn: () => O,
-    rC: () => I,
+    rC: () => S,
     tI: () => y,
 }),
     n(35282),
@@ -37,7 +37,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,7 +53,7 @@ function _(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,30 +65,30 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-async function m(e, t) {
+async function h(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        { channelId: a, onSuccess: l, joinSource: u, loadId: f, shouldNavigate: p = !0 } = n,
-        m = (0, o.s1)(),
+        { channelId: a, onSuccess: l, joinSource: u, loadId: f, shouldNavigate: _ = !0 } = n,
+        h = (0, o.s1)(),
         g = c.Z.getGuild(e),
         E = { state: { analyticsSource: t } };
     null != g && null != g.joinedAt
-        ? p &&
+        ? _ &&
           (null == a
               ? (0, s.X)(e, E)
               : (0, i.Z)(
                     d.Z5c.CHANNEL(e, a, n.messageId),
-                    h(_({}, E), {
+                    m(p({}, E), {
                         navigationReplace: !0,
                         openChannel: !0,
                     }),
@@ -99,14 +99,14 @@ async function m(e, t) {
               loadId: f,
               lurkLocation: null == t ? void 0 : t.page,
           }),
-          p &&
+          _ &&
               (await r.Z.transitionToGuildSync(
                   e,
-                  h(_({}, E), {
+                  m(p({}, E), {
                       welcomeModalChannelId: a,
                       navigationReplace: null != a,
                       openChannel: null != a,
-                      search: m.location.search,
+                      search: h.location.search,
                   }),
                   a,
                   n.messageId,
@@ -171,11 +171,11 @@ function v(e) {
         is_request_retry: i,
     });
 }
-function I(e) {
+function S(e) {
     let { categoryId: t } = e;
     u.default.track(d.rMx.GUILD_DISCOVERY_GET_FEATURED_GUILDS_FAILED, { category_id: t });
 }
-function T(e) {
+function I(e) {
     let { loadId: t, searchId: n, query: r, guildResults: i, analyticsContext: a, categoryId: o, isTagSearch: s } = e;
     u.default.track(d.rMx.SEARCH_RESULT_VIEWED, {
         search_type: s ? d.aib.GUILD_DISCOVERY_TAG : d.aib.GUILD_DISCOVERY,
@@ -188,7 +188,7 @@ function T(e) {
         category_id: o,
     });
 }
-function S(e) {
+function T(e) {
     let t = a.Z.getLoadId(e);
     u.default.track(d.rMx.GUILD_DISCOVERY_GUILD_JOIN_CLICKED, {
         guild_id: e,

@@ -61,8 +61,8 @@ function l(e) {
             debouncedQuery: "",
             loading: !1,
         }),
-        { options: u, loading: d, query: f, debouncedQuery: _ } = l,
-        p = r.useCallback(
+        { options: u, loading: d, query: f, debouncedQuery: p } = l,
+        _ = r.useCallback(
             (e) =>
                 c((t) =>
                     s(a({}, t), {
@@ -75,8 +75,8 @@ function l(e) {
         );
     return (
         r.useEffect(() => {
-            t && p("");
-        }, [t, p]),
+            t && _("");
+        }, [t, _]),
         r.useEffect(() => {
             let e;
             return (
@@ -88,21 +88,21 @@ function l(e) {
                           }),
                       ),
                       (e = setTimeout(() => {
-                          p(f);
+                          _(f);
                       }, 500)))
-                    : p(f),
+                    : _(f),
                 () => {
                     clearTimeout(e);
                 }
             );
-        }, [o, f, p]),
+        }, [o, f, _]),
         r.useEffect(() => {
             let e = !1;
             function r() {
-                return "function" == typeof n ? n(_) : Promise.resolve(n);
+                return "function" == typeof n ? n(p) : Promise.resolve(n);
             }
             return (
-                ((t && null !== _ && o) || !o) &&
+                ((t && null !== p && o) || !o) &&
                     r().then((t) => {
                         e ||
                             (null != i && (t = t.map(i)),
@@ -117,7 +117,7 @@ function l(e) {
                     e = !0;
                 }
             );
-        }, [t, n, _, i, o]),
+        }, [t, n, p, i, o]),
         {
             options: u,
             loading: d,

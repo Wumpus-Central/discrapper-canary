@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var r = n(348327),
     i = n.n(r),
     a = n(392711),
@@ -9,10 +9,10 @@ var r = n(348327),
     u = n(317770),
     d = n(829750),
     f = n(189771),
-    _ = n(67844),
-    p = n(173507),
-    h = n(592125),
-    m = n(131951),
+    p = n(67844),
+    _ = n(173507),
+    m = n(592125),
+    h = n(131951),
     g = n(944486),
     E = n(358085),
     b = n(998502),
@@ -31,7 +31,7 @@ function v(e, t, n) {
         e
     );
 }
-class I extends u.Z {
+class S extends u.Z {
     _initialize() {
         this.isSupported &&
             (s.Z.subscribe("AUDIO_SET_MODE", this.handleViewUpdate),
@@ -74,7 +74,7 @@ class I extends u.Z {
         super(...e),
             v(this, "callbackActions", {
                 [b.tS.VIDEO]: () => {
-                    m.Z.isVideoEnabled() ? l.Z.setVideoEnabled(!1) : (0, p.Z)(() => l.Z.setVideoEnabled(!0), y.IlC.APP);
+                    h.Z.isVideoEnabled() ? l.Z.setVideoEnabled(!1) : (0, _.Z)(() => l.Z.setVideoEnabled(!0), y.IlC.APP);
                 },
                 [b.tS.MUTE]: () => l.Z.toggleSelfMute({ location: "Thumbar" }),
                 [b.tS.DEAFEN]: () => l.Z.toggleSelfDeaf({ location: "Thumbar" }),
@@ -96,11 +96,11 @@ class I extends u.Z {
                 o().debounce(() => {
                     let e = g.Z.getVoiceChannelId();
                     if (null == e) return void this.setThumbarButtons([]);
-                    let t = m.Z.isSelfMute(),
-                        n = m.Z.isSelfDeaf(),
-                        r = m.Z.isVideoEnabled(),
-                        i = m.Z.isVideoAvailable(),
-                        a = h.Z.getChannel(e),
+                    let t = h.Z.isSelfMute(),
+                        n = h.Z.isSelfDeaf(),
+                        r = h.Z.isVideoEnabled(),
+                        i = h.Z.isVideoAvailable(),
+                        a = m.Z.getChannel(e),
                         o = null == a || (0, f.y)(a),
                         { reachedLimit: s, limit: l } =
                             null != a
@@ -109,7 +109,7 @@ class I extends u.Z {
                                       reachedLimit: void 0,
                                       limit: void 0,
                                   },
-                        c = (0, _.X)({
+                        c = (0, p.X)({
                             enabled: r,
                             join: !1,
                             channel: a,
@@ -145,4 +145,4 @@ class I extends u.Z {
             );
     }
 }
-let T = new I();
+let I = new S();

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(54381);
 n(473749);
 var i = n(793030),
@@ -48,7 +48,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,11 +59,11 @@ function _(e, t) {
         e
     );
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -71,7 +71,7 @@ function p(e, t) {
     }
     return i;
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -80,9 +80,9 @@ function h(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let m = (e) => {
-    var { gradientColor: t, title: n, subtitle: u, onClose: f, onSecondaryClick: h, videoSrc: m, loopAt: g } = e,
-        E = p(e, ["gradientColor", "title", "subtitle", "onClose", "onSecondaryClick", "videoSrc", "loopAt"]);
+let h = (e) => {
+    var { gradientColor: t, title: n, subtitle: u, onClose: f, onSecondaryClick: m, videoSrc: h, loopAt: g } = e,
+        E = _(e, ["gradientColor", "title", "subtitle", "onClose", "onSecondaryClick", "videoSrc", "loopAt"]);
     let { subscribeButtonProps: b, subscriptionTier: y } = (0, o.G)({
             subscriptionTier: l.Si.TIER_2,
             defaultTextOverride: c.intl.string(c.t.pj0XBN),
@@ -103,7 +103,7 @@ let m = (e) => {
                         gradientColor: t,
                         graphic: {
                             type: "video",
-                            src: m,
+                            src: h,
                             loop: !0,
                             loopAt: g,
                         },
@@ -113,9 +113,9 @@ let m = (e) => {
                             {
                                 variant: "secondary",
                                 text: c.intl.string(c.t.ZnqyZ2),
-                                onClick: h,
+                                onClick: m,
                             },
-                            _(d({}, b), { onClick: a }),
+                            p(d({}, b), { onClick: a }),
                         ],
                     },
                     null != O && { badge: { text: O } },

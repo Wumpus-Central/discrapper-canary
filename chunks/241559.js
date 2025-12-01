@@ -2,10 +2,10 @@ n.d(t, {
     cD: () => d,
     hB: () => g,
     lv: () => f,
-    n2: () => p,
-    nX: () => m,
+    n2: () => _,
+    nX: () => h,
     rX: () => E,
-    xC: () => h,
+    xC: () => m,
 }),
     n(388685);
 var r = n(149765),
@@ -40,20 +40,20 @@ let d = function (e) {
             )
         );
     },
-    _ = function (e) {
+    p = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [a.Z, s.default],
             n = d(e, t);
         return null != n && o.Z.can(u.Plq.MANAGE_GUILD, n.guild) && o.Z.can(u.Plq.BAN_MEMBERS, n.guild);
     };
-function p(e) {
+function _(e) {
     return (0, i.e7)([a.Z, s.default], () => f(e, [a.Z, s.default]), [e]);
 }
-function h(e) {
-    let t = p(e),
-        n = (0, i.e7)([a.Z, s.default], () => _(e, [a.Z, s.default]), [e]);
+function m(e) {
+    let t = _(e),
+        n = (0, i.e7)([a.Z, s.default], () => p(e, [a.Z, s.default]), [e]);
     return t && n;
 }
-function m(e) {
+function h(e) {
     return (0, i.e7)([a.Z, o.Z], () => {
         let t = a.Z.getGuild(e);
         return null != t && o.Z.can(u.Plq.MANAGE_GUILD, t);

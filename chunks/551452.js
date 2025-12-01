@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => S });
 var r = n(54381);
 n(473749);
 var i = n(481060),
@@ -10,10 +10,10 @@ var i = n(481060),
     u = n(124072),
     d = n(891984),
     f = n(131704),
-    _ = n(592125),
-    p = n(430824),
-    h = n(900849),
-    m = n(746878),
+    p = n(592125),
+    _ = n(430824),
+    m = n(900849),
+    h = n(746878),
     g = n(981631);
 function E(e, t, n) {
     return (
@@ -77,10 +77,10 @@ async function v(e, t, n) {
         }),
         null != e)
     ) {
-        let r = p.Z.getGuild(e);
+        let r = _.Z.getGuild(e);
         if ((null == r ? void 0 : r.joinedAt) == null)
             try {
-                await h.Ub(
+                await m.Ub(
                     e,
                     {},
                     {
@@ -91,14 +91,14 @@ async function v(e, t, n) {
                 return;
             } catch (e) {}
     }
-    let r = _.Z.getChannel(t);
+    let r = p.Z.getChannel(t);
     if (null != r && null == n && (0, f.bw)(r.type) && (0, l.YO)(r)) return void o.default.selectVoiceChannel(r.id);
     (0, c.Z)(g.Z5c.CHANNEL(e, t, n));
 }
-function I(e) {
+function S(e) {
     return {
         react(t, o, s) {
-            let l = _.Z.getChannel(t.channelId),
+            let l = p.Z.getChannel(t.channelId),
                 c = s.noStyleAndInteraction
                     ? void 0
                     : (n) => {
@@ -136,7 +136,7 @@ function I(e) {
                     children: [
                         null != t.inContent ? o(t.inContent, s) : null,
                         null != t.inContent ? (0, r.jsx)(d.Z, {}) : null,
-                        (0, m.S)(t, o, s),
+                        (0, h.S)(t, o, s),
                     ],
                 },
                 s.key,

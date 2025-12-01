@@ -32,20 +32,20 @@ let a = !1;
             if (o) return null;
             throw Error("Cannot resolve a Slate range from DOM range");
         }
-        let _ = r.F3.toSlatePoint(e, [l, c], {
+        let p = r.F3.toSlatePoint(e, [l, c], {
                 exactMatch: a,
                 suppressThrow: o,
             }),
-            p = f
-                ? _
+            _ = f
+                ? p
                 : r.F3.toSlatePoint(e, [u, d], {
                       exactMatch: a,
                       suppressThrow: o,
                   });
-        return null != _ && null != p
+        return null != p && null != _
             ? {
-                  anchor: _,
-                  focus: p,
+                  anchor: p,
+                  focus: _,
               }
             : null;
     };
@@ -118,19 +118,19 @@ function c(e, t, n) {
     return [i, t];
 }
 function u(e) {
-    return _(e) && 8 === e.nodeType;
+    return p(e) && 8 === e.nodeType;
 }
 function d(e) {
-    return _(e) && 1 === e.nodeType;
+    return p(e) && 1 === e.nodeType;
 }
 function f(e) {
-    let t = e && e.anchorNode && p(e.anchorNode);
+    let t = e && e.anchorNode && _(e.anchorNode);
     return null != t && e instanceof t.Selection;
 }
-function _(e) {
-    let t = p(e);
+function p(e) {
+    let t = _(e);
     return null != t && e instanceof t.Node;
 }
-function p(e) {
+function _(e) {
     return (e && e.ownerDocument && e.ownerDocument.defaultView) || null;
 }

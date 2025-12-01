@@ -1,19 +1,19 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381);
 n(473749);
 var i = n(120356),
     a = n.n(i),
-    o = n(790519),
+    o = n(666917),
     s = n(755721),
     l = n(481060),
     c = n(410030),
     u = n(736519),
     d = n(784238),
     f = n(981631),
-    _ = n(679865);
-let p = function (e) {
-    let { isVisible: t, subscriptionTier: n, isApplicationHome: i, isEligibleForBogoPromotion: p } = e,
-        h = (0, l.q_F)({
+    p = n(679865);
+let _ = function (e) {
+    let { isVisible: t, subscriptionTier: n, isApplicationHome: i, isEligibleForBogoPromotion: _ } = e,
+        m = (0, l.q_F)({
             transform: t ? "translateY(-100%)" : "translateY(0%)",
             opacity: +!!t,
             config: {
@@ -21,30 +21,30 @@ let p = function (e) {
                 friction: 12,
             },
         }),
-        m = { section: f.jXE.MARKETING_FLOATING_CTA },
+        h = { section: f.jXE.MARKETING_FLOATING_CTA },
         g = (0, c.ZP)(),
         E = (0, l.wjy)(g);
     return (0, r.jsx)(o.animated.div, {
-        className: a()(_.wrapper, {
-            [_.fullscreenWrapper]: i,
-            [_.invisible]: !t,
+        className: a()(p.wrapper, {
+            [p.fullscreenWrapper]: i,
+            [p.invisible]: !t,
         }),
-        style: h,
+        style: m,
         children: (0, r.jsxs)("div", {
-            className: i ? _.innerWrapperApplicationHome : _.innerWrapper,
+            className: i ? p.innerWrapperApplicationHome : p.innerWrapper,
             children: [
                 (0, r.jsx)(d.Z, {
                     color: E ? s.Tt.BRAND_INVERTED : void 0,
-                    className: a()(_.button, { [_.subButton]: E }),
+                    className: a()(p.button, { [p.subButton]: E }),
                     subscriptionTier: n,
-                    premiumModalAnalyticsLocation: m,
+                    premiumModalAnalyticsLocation: h,
                     isPersistentCTA: !0,
-                    hasActivePromotion: p,
-                    shinyButtonClassName: E ? void 0 : _.tier2Gradient,
+                    hasActivePromotion: _,
+                    shinyButtonClassName: E ? void 0 : p.tier2Gradient,
                 }),
                 (0, r.jsx)(u.Z, {
-                    className: _.button,
-                    premiumModalAnalyticsLocation: m,
+                    className: p.button,
+                    premiumModalAnalyticsLocation: h,
                 }),
             ],
         }),

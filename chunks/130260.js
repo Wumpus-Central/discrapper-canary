@@ -1,42 +1,42 @@
-_.d(e, { x: () => c });
-var a = _(696486),
-    r = _(151122),
-    n = _(622916),
-    o = _(454463),
-    E = _(243309),
-    i = _(748688);
-let c = (0, r._I)(() => ({
+r.d(t, { x: () => c });
+var n = r(696486),
+    a = r(151122),
+    i = r(622916),
+    o = r(454463),
+    _ = r(243309),
+    s = r(748688);
+let c = (0, a._I)(() => ({
     name: "BrowserProfiling",
-    setup(t) {
-        let e = (0, a.HN)(),
-            _ = e && (0, a.Gx)(e);
-        _ && (0, i.x5)(_) && (0, i.$X)(_) && (0, E.v)(_),
-            t.on("spanStart", (t) => {
-                t === (0, a.Gx)(t) && (0, i.$X)(t) && (0, E.v)(t);
+    setup(e) {
+        let t = (0, n.HN)(),
+            r = t && (0, n.Gx)(t);
+        r && (0, s.x5)(r) && (0, s.$X)(r) && (0, _.v)(r),
+            e.on("spanStart", (e) => {
+                e === (0, n.Gx)(e) && (0, s.$X)(e) && (0, _.v)(e);
             }),
-            t.on("beforeEnvelope", (t) => {
-                if (!(0, i.ph)()) return;
-                let e = (0, i.AJ)(t);
-                if (!e.length) return;
-                let _ = [];
-                for (let t of e) {
-                    let e = t && t.contexts,
-                        a = e && e.profile && e.profile.profile_id,
-                        r = e && e.profile && e.profile.start_timestamp;
-                    if ("string" != typeof a || !a) {
-                        o.X && n.kg.log("[Profiling] cannot find profile for a span without a profile context");
+            e.on("beforeEnvelope", (e) => {
+                if (!(0, s.ph)()) return;
+                let t = (0, s.AJ)(e);
+                if (!t.length) return;
+                let r = [];
+                for (let e of t) {
+                    let t = e && e.contexts,
+                        n = t && t.profile && t.profile.profile_id,
+                        a = t && t.profile && t.profile.start_timestamp;
+                    if ("string" != typeof n || !n) {
+                        o.X && i.kg.log("[Profiling] cannot find profile for a span without a profile context");
                         continue;
                     }
-                    e && e.profile && delete e.profile;
-                    let E = (0, i.GC)(a);
-                    if (!E) {
-                        o.X && n.kg.log(`[Profiling] Could not retrieve profile for span: ${a}`);
+                    t && t.profile && delete t.profile;
+                    let _ = (0, s.GC)(n);
+                    if (!_) {
+                        o.X && i.kg.log(`[Profiling] Could not retrieve profile for span: ${n}`);
                         continue;
                     }
-                    let c = (0, i.nm)(a, r, E, t);
-                    c && _.push(c);
+                    let c = (0, s.nm)(n, a, _, e);
+                    c && r.push(c);
                 }
-                (0, i.db)(t, _);
+                (0, s.db)(e, r);
             });
     },
 }));

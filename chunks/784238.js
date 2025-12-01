@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(54381);
 n(473749);
 var i = n(780384),
@@ -37,11 +37,11 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -49,7 +49,7 @@ function _(e, t) {
     }
     return i;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -58,18 +58,18 @@ function p(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let h = (e) => {
+let m = (e) => {
     var {
             textOptions: t,
             subscriptionTier: n,
             hasActivePromotion: d = !1,
-            isPersistentCTA: p = !1,
-            useShorterCTA: h = !1,
-            showGradient: m,
+            isPersistentCTA: _ = !1,
+            useShorterCTA: m = !1,
+            showGradient: h,
             confirmationFooter: g,
             color: E,
         } = e,
-        b = _(e, [
+        b = p(e, [
             "textOptions",
             "subscriptionTier",
             "hasActivePromotion",
@@ -83,12 +83,12 @@ let h = (e) => {
         { buttonText: O, marketingSubscriptionTierSkuId: v } = (0, c.G)({
             hasActivePromotion: d,
             subscriptionTier: n,
-            useShorterCTA: h,
-            isPersistentCTA: p,
+            useShorterCTA: m,
+            isPersistentCTA: _,
         }),
-        I = (0, s.N)(),
-        T = null == I ? void 0 : I.subscription_trial,
-        S = null != T && v === T.sku_id,
+        S = (0, s.N)(),
+        I = null == S ? void 0 : S.subscription_trial,
+        T = null != I && v === I.sku_id,
         A = null != E ? E : (0, i.wj)(y) ? a.Tt.BRAND_INVERTED : a.Tt.BRAND;
     return (0, r.jsx)(
         l.Z,
@@ -98,13 +98,13 @@ let h = (e) => {
                 textOptions: f(
                     {
                         textOverride: O,
-                        textClassName: S ? u.freeTrialText : void 0,
+                        textClassName: T ? u.freeTrialText : void 0,
                     },
                     t,
                 ),
                 onlyShineOnHover: !0,
                 subscriptionTier: v,
-                showGradient: m,
+                showGradient: h,
                 confirmationFooter: g,
             },
             b,

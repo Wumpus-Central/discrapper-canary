@@ -50,7 +50,7 @@ e.exports = function (e) {
             return t.concat(t.concat("(?:", e, ")"), r, /(?:\\.|[^\\\/])*?/, a, /(?:\\.|[^\\\/])*?/, i, n);
         },
         f = (e, r, i) => t.concat(t.concat("(?:", e, ")"), r, /(?:\\.|[^\\\/])*?/, i, n),
-        _ = [
+        p = [
             s,
             e.HASH_COMMENT_MODE,
             e.COMMENT(/^=\w/, /=cut/, { endsWithParent: !0 }),
@@ -180,13 +180,13 @@ e.exports = function (e) {
             },
         ];
     return (
-        (i.contains = _),
-        (a.contains = _),
+        (i.contains = p),
+        (a.contains = p),
         {
             name: "Perl",
             aliases: ["pl", "pm"],
             keywords: r,
-            contains: _,
+            contains: p,
         }
     );
 };

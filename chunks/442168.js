@@ -1,7 +1,7 @@
 n.d(t, { Z: () => y });
 var r = n(54381),
     i = n(473749),
-    l = n(790519),
+    l = n(666917),
     a = n(442837),
     o = n(780384),
     c = n(481060),
@@ -42,13 +42,13 @@ let b = { visibility: "hidden" },
         precision: 0.0001,
         duration: 300,
     },
-    E = {
+    h = {
         tension: 150,
         friction: 20,
         precision: 0.0001,
         bounce: 0,
     },
-    h = { duration: 1000 };
+    E = { duration: 1000 };
 function y(e) {
     let { stream: t, popoutType: n } = e,
         { reducedMotion: y } = i.useContext(o.Sf),
@@ -143,7 +143,7 @@ function y(e) {
                             })(),
                         ),
                 ),
-                config: y.enabled ? h : E,
+                config: y.enabled ? E : h,
                 onRest: (e, t) => {
                     null != t.item &&
                         null != I.find((e) => e.timestamp === t.item.timestamp) &&

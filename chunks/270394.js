@@ -1,4 +1,4 @@
-n.d(t, { Z: () => q }), n(997841), n(388685);
+n.d(t, { Z: () => V }), n(997841), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(120356),
@@ -16,17 +16,17 @@ var i = n(54381),
     h = n(447543),
     x = n(240872),
     j = n(225433),
-    v = n(129861),
-    O = n(493544),
+    O = n(129861),
+    v = n(493544),
     y = n(700582),
     _ = n(410030),
     C = n(835473),
     N = n(933557),
     S = n(346486),
-    E = n(600164),
-    I = n(925329),
-    P = n(666657),
-    w = n(664452),
+    P = n(600164),
+    w = n(925329),
+    E = n(666657),
+    I = n(664452),
     T = n(560114),
     Z = n(685929),
     k = n(592125),
@@ -94,13 +94,13 @@ function K(e) {
         expiresAt: d,
         onRevokeInvite: u,
     } = e;
-    return (0, i.jsxs)(E.Z, {
+    return (0, i.jsxs)(P.Z, {
         className: a()(B.inviteSettingsInviteRow, W.card, { [B.inviteDisabledRow]: t }),
         children: [
-            (0, i.jsxs)(E.Z, {
+            (0, i.jsxs)(P.Z, {
                 grow: 3,
                 basis: 0,
-                align: E.Z.Align.CENTER,
+                align: P.Z.Align.CENTER,
                 className: B.text,
                 children: [
                     null != n &&
@@ -112,7 +112,7 @@ function K(e) {
                     (0, i.jsxs)("div", {
                         children: [
                             null != n &&
-                                (0, i.jsx)(v.Z, {
+                                (0, i.jsx)(O.Z, {
                                     discriminatorClass: B.discriminator,
                                     user: n,
                                 }),
@@ -127,21 +127,21 @@ function K(e) {
                     }),
                 ],
             }),
-            (0, i.jsx)(E.Z, {
+            (0, i.jsx)(P.Z, {
                 grow: 3,
                 shrink: 1,
                 basis: 0,
-                align: E.Z.Align.CENTER,
+                align: P.Z.Align.CENTER,
                 className: B.text,
                 children: (0, i.jsxs)("div", {
                     className: B.inviteSourceContainer,
                     children: [o, s],
                 }),
             }),
-            (0, i.jsx)(E.Z, {
+            (0, i.jsx)(P.Z, {
                 grow: 1,
                 basis: 0,
-                align: E.Z.Align.CENTER,
+                align: P.Z.Align.CENTER,
                 className: B.text,
                 children: (0, i.jsx)(f.Text, {
                     className: B.uses,
@@ -149,10 +149,10 @@ function K(e) {
                     children: c,
                 }),
             }),
-            (0, i.jsx)(E.Z, {
+            (0, i.jsx)(P.Z, {
                 grow: 2,
                 basis: 0,
-                align: E.Z.Align.CENTER,
+                align: P.Z.Align.CENTER,
                 className: a()(B.text, B.countdownColumn),
                 children: (0, i.jsx)(f.Text, {
                     className: B.countdown,
@@ -213,7 +213,7 @@ function z(e) {
         })
     );
 }
-function V(e) {
+function q(e) {
     let { applicationId: t, channel: r, showChannel: l = !1, inviteDisabled: a = !1 } = e,
         o = (0, C.q)(t),
         s = (0, m.e7)([D.default], () => {
@@ -229,9 +229,9 @@ function V(e) {
         inviteSource: (0, i.jsxs)("div", {
             className: B.linkedChannelJoinSource,
             children: [
-                (0, i.jsx)(I.Z, {
+                (0, i.jsx)(w.Z, {
                     game: o,
-                    size: I.A.XXSMALL,
+                    size: w.A.XXSMALL,
                 }),
                 (0, i.jsx)(f.Text, {
                     className: B.linkedChannelJoinSourceText,
@@ -262,7 +262,7 @@ function V(e) {
         },
     });
 }
-function q(e) {
+function V(e) {
     let {
         invites: t,
         guild: l,
@@ -277,7 +277,7 @@ function q(e) {
     let h = (0, _.ZP)(),
         x = (0, R.MQ)(l),
         j = (0, R.O4)(l),
-        v = r.useMemo(
+        O = r.useMemo(
             () =>
                 null == t || g
                     ? []
@@ -297,7 +297,7 @@ function q(e) {
                 g
                     ? []
                     : [
-                          ...v.map((e) => ({
+                          ...O.map((e) => ({
                               type: "invite",
                               data: e,
                           })),
@@ -306,7 +306,7 @@ function q(e) {
                               data: e,
                           })),
                       ],
-            [v, y, g],
+            [O, y, g],
         ),
         N = () => {
             (0, f.ZDy)(
@@ -321,13 +321,13 @@ function q(e) {
                     ),
             );
         },
-        [S, I] = r.useState(62),
+        [S, w] = r.useState(62),
         Z = () => {
-            let e = { source: P.Zu.GUILD_SETTINGS };
+            let e = { source: E.Zu.GUILD_SETTINGS };
             (0, f.ZDy)(
                 async () => (t) =>
                     (0, i.jsx)(
-                        w.default,
+                        I.default,
                         F(G({}, t), {
                             guildId: l.id,
                             analyticsData: e,
@@ -335,7 +335,7 @@ function q(e) {
                     ),
             );
         };
-    return (0, i.jsx)(O.Xi, {
+    return (0, i.jsx)(v.Xi, {
         sections: [1, +!c, +!!c, Math.max(1, C.length)],
         renderSection: (e) => {
             let { section: t } = e;
@@ -364,10 +364,10 @@ function q(e) {
                     );
                 else
                     return (0, i.jsxs)(
-                        E.Z,
+                        P.Z,
                         {
                             children: [
-                                (0, i.jsx)(E.Z.Child, {
+                                (0, i.jsx)(P.Z.Child, {
                                     grow: 3,
                                     basis: 0,
                                     className: H.marginReset,
@@ -376,7 +376,7 @@ function q(e) {
                                         children: U.intl.string(U.t.EgHyKy),
                                     }),
                                 }),
-                                (0, i.jsx)(E.Z.Child, {
+                                (0, i.jsx)(P.Z.Child, {
                                     basis: 0,
                                     grow: 3,
                                     className: H.marginReset,
@@ -385,7 +385,7 @@ function q(e) {
                                         children: y.length > 0 ? U.intl.string(U.t.l7VISQ) : U.intl.string(U.t.LBlFEN),
                                     }),
                                 }),
-                                (0, i.jsx)(E.Z.Child, {
+                                (0, i.jsx)(P.Z.Child, {
                                     grow: 1,
                                     basis: 0,
                                     children: (0, i.jsx)(f.Text, {
@@ -393,7 +393,7 @@ function q(e) {
                                         children: U.intl.string(U.t.erWrmA),
                                     }),
                                 }),
-                                (0, i.jsx)(E.Z.Child, {
+                                (0, i.jsx)(P.Z.Child, {
                                     grow: 2,
                                     basis: 0,
                                     children: (0, i.jsx)(f.Text, {
@@ -464,8 +464,8 @@ function q(e) {
                 return (0, i.jsx)(
                     L.Y,
                     {
-                        hasInvites: v.length > 0,
-                        setHeight: I,
+                        hasInvites: O.length > 0,
+                        setHeight: w,
                         onShowDisableInvites: Z,
                         onShowInviteModal: N,
                         hasInviteDisabledPermission: x,
@@ -500,7 +500,7 @@ function q(e) {
                     case "channel":
                         var r;
                         return (0, i.jsx)(
-                            V,
+                            q,
                             {
                                 applicationId: null == (r = e.data.linkedLobby) ? void 0 : r.application_id,
                                 channel: e.data,

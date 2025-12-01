@@ -1,6 +1,6 @@
 n.d(t, {
     Vz: () => c,
-    Zn: () => _,
+    Zn: () => p,
     aB: () => f,
 }),
     n(49124),
@@ -43,7 +43,7 @@ let c = 7.5,
                     });
             }),
     );
-function _(e, t, n, r) {
+function p(e, t, n, r) {
     let { emojiSize: a, key: s, messageId: l } = null != r ? r : {},
         c = null != a ? 2 * a : void 0,
         u = (0, o._r)(e, c);

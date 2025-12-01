@@ -1,4 +1,4 @@
-n.d(t, { y: () => m }), n(388685);
+n.d(t, { y: () => h }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(481060),
@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,11 +58,11 @@ function _(e, t) {
         e
     );
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -70,7 +70,7 @@ function p(e, t) {
     }
     return i;
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -79,7 +79,7 @@ function h(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let m = {
+let h = {
     title: "Popover",
     stories: [
         {
@@ -93,11 +93,11 @@ let m = {
                         showTextLink: c,
                         caretAlign: u,
                         alignmentStrategy: f,
-                        align: h,
-                        size: m,
+                        align: m,
+                        size: h,
                         position: g,
                     } = e,
-                    E = p(e, [
+                    E = _(e, [
                         "showAsset",
                         "showActions",
                         "showTextLink",
@@ -119,10 +119,10 @@ let m = {
                     children: [
                         (0, r.jsx)(
                             o.J2,
-                            _(d({}, E), {
+                            p(d({}, E), {
                                 position: g,
-                                size: m,
-                                align: h,
+                                size: h,
+                                align: m,
                                 alignmentStrategy: f,
                                 targetElementRef: O,
                                 shouldShow: b,
@@ -130,7 +130,7 @@ let m = {
                                 graphic: t
                                     ? {
                                           type: "image",
-                                          src: "sm" === m ? l.Z : s.Z,
+                                          src: "sm" === h ? l.Z : s.Z,
                                       }
                                     : void 0,
                                 caretConfig: { align: u },
@@ -344,14 +344,14 @@ let m = {
             docs: "https://design.discord.tools/components/web/popover",
             component: function (e) {
                 var { showActions: t } = e,
-                    n = p(e, ["showActions"]);
+                    n = _(e, ["showActions"]);
                 let [s, l] = i.useState(!1),
                     c = i.useRef(null);
                 return (0, r.jsxs)("div", {
                     children: [
                         (0, r.jsx)(
                             o.Mb,
-                            _(d({}, n), {
+                            p(d({}, n), {
                                 targetElementRef: c,
                                 shouldShow: s,
                                 onRequestClose: () => l(!1),
@@ -392,10 +392,10 @@ let m = {
             docs: "https://design.discord.tools/components/web/popover",
             component: function (e) {
                 var { showExpressive: t } = e,
-                    n = p(e, ["showExpressive"]);
+                    n = _(e, ["showExpressive"]);
                 let [l, u] = i.useState(!1),
                     f = i.useRef(null),
-                    h = [
+                    m = [
                         {
                             title: "Welcome to the Feature!",
                             body: "This is the first step of our multi-step introduction.",
@@ -440,11 +440,11 @@ let m = {
                     children: [
                         (0, r.jsx)(
                             o.e4,
-                            _(d({}, n), {
+                            p(d({}, n), {
                                 targetElementRef: f,
                                 shouldShow: l,
                                 onRequestClose: () => u(!1),
-                                steps: h,
+                                steps: m,
                                 caretConfig: { align: "center" },
                                 onStepChange: () => {},
                             }),

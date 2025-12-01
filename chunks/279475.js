@@ -1,11 +1,11 @@
 n.d(t, {
     d: () => i,
-    u: () => l,
+    u: () => o,
 });
 var r = n(692547);
 function i(e) {
     return e ? "text-default" : "text-muted";
 }
-function l(e) {
+function o(e) {
     return e ? r.Z.colors.TEXT_DEFAULT : r.Z.colors.TEXT_MUTED;
 }

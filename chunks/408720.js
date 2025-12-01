@@ -1,124 +1,124 @@
-_.d(e, { f: () => f });
-var a = _(469359),
-    r = _(157079),
-    n = _(393523),
-    o = _(151122),
-    E = _(263449),
-    i = _(572299),
-    c = _(910731),
-    s = _(64685),
-    l = _(394798),
-    I = _(622916),
-    R = _(467510),
-    N = _(954211),
-    A = _(886115),
-    u = _(873567),
-    T = _(454463),
-    d = _(163162);
-let f = (0, o._I)((t = {}) => {
-    let e = {
+r.d(t, { f: () => N });
+var n = r(469359),
+    a = r(157079),
+    i = r(393523),
+    o = r(151122),
+    _ = r(263449),
+    s = r(572299),
+    c = r(910731),
+    E = r(64685),
+    l = r(394798),
+    u = r(622916),
+    d = r(467510),
+    I = r(954211),
+    p = r(886115),
+    R = r(873567),
+    T = r(454463),
+    A = r(163162);
+let N = (0, o._I)((e = {}) => {
+    let t = {
         console: !0,
         dom: !0,
         fetch: !0,
         history: !0,
         sentry: !0,
         xhr: !0,
-        ...t,
+        ...e,
     };
     return {
         name: "Breadcrumbs",
-        setup(t) {
-            var _, o, f, O, L, p, C;
-            e.console &&
+        setup(e) {
+            var r, o, N, f, O, h, D;
+            t.console &&
                 (0, c.e)(
-                    ((_ = t),
-                    function (t) {
-                        if ((0, E.s3)() !== _) return;
-                        let e = {
+                    ((r = e),
+                    function (e) {
+                        if ((0, _.s3)() !== r) return;
+                        let t = {
                             category: "console",
                             data: {
-                                arguments: t.args,
+                                arguments: e.args,
                                 logger: "console",
                             },
-                            level: (0, N.V)(t.level),
-                            message: (0, A.nK)(t.args, " "),
+                            level: (0, I.V)(e.level),
+                            message: (0, p.nK)(e.args, " "),
                         };
-                        if ("assert" === t.level)
-                            if (!1 !== t.args[0]) return;
+                        if ("assert" === e.level)
+                            if (!1 !== e.args[0]) return;
                             else
-                                (e.message = `Assertion failed: ${((0, A.nK))(t.args.slice(1), " ") || "console.assert"}`),
-                                    (e.data.arguments = t.args.slice(1));
-                        (0, i.n)(e, {
-                            input: t.args,
-                            level: t.level,
+                                (t.message = `Assertion failed: ${((0, p.nK))(e.args.slice(1), " ") || "console.assert"}`),
+                                    (t.data.arguments = e.args.slice(1));
+                        (0, s.n)(t, {
+                            input: e.args,
+                            level: e.level,
                         });
                     }),
                 ),
-                e.dom &&
-                    (0, a.O)(
-                        ((o = t),
-                        (f = e.dom),
-                        function (t) {
-                            let e, _;
-                            if ((0, E.s3)() !== o) return;
-                            let a = "object" == typeof f ? f.serializeAttribute : void 0,
-                                r =
-                                    "object" == typeof f && "number" == typeof f.maxStringLength
-                                        ? f.maxStringLength
+                t.dom &&
+                    (0, n.O)(
+                        ((o = e),
+                        (N = t.dom),
+                        function (e) {
+                            let t, r;
+                            if ((0, _.s3)() !== o) return;
+                            let n = "object" == typeof N ? N.serializeAttribute : void 0,
+                                a =
+                                    "object" == typeof N && "number" == typeof N.maxStringLength
+                                        ? N.maxStringLength
                                         : void 0;
-                            r &&
-                                r > 1024 &&
+                            a &&
+                                a > 1024 &&
                                 (T.X &&
-                                    I.kg.warn(
-                                        `\`dom.maxStringLength\` cannot exceed 1024, but a value of ${r} was configured. Sentry will use 1024 instead.`,
+                                    u.kg.warn(
+                                        `\`dom.maxStringLength\` cannot exceed 1024, but a value of ${a} was configured. Sentry will use 1024 instead.`,
                                     ),
-                                (r = 1024)),
-                                "string" == typeof a && (a = [a]);
+                                (a = 1024)),
+                                "string" == typeof n && (n = [n]);
                             try {
-                                var n;
-                                let o = t.event,
-                                    E = (n = o) && n.target ? o.target : o;
-                                (e = (0, R.Rt)(E, {
-                                    keyAttrs: a,
-                                    maxStringLength: r,
+                                var i;
+                                let o = e.event,
+                                    _ = (i = o) && i.target ? o.target : o;
+                                (t = (0, d.Rt)(_, {
+                                    keyAttrs: n,
+                                    maxStringLength: a,
                                 })),
-                                    (_ = (0, R.iY)(E));
-                            } catch (t) {
-                                e = "<unknown>";
+                                    (r = (0, d.iY)(_));
+                            } catch (e) {
+                                t = "<unknown>";
                             }
-                            if (0 === e.length) return;
+                            if (0 === t.length) return;
                             let c = {
-                                category: `ui.${t.name}`,
-                                message: e,
+                                category: `ui.${e.name}`,
+                                message: t,
                             };
-                            _ && (c.data = { "ui.component_name": _ }),
-                                (0, i.n)(c, {
-                                    event: t.event,
-                                    name: t.name,
-                                    global: t.global,
+                            r && (c.data = { "ui.component_name": r }),
+                                (0, s.n)(c, {
+                                    event: e.event,
+                                    name: e.name,
+                                    global: e.global,
                                 });
                         }),
                     ),
-                e.xhr &&
-                    (0, r.UK)(
-                        ((O = t),
-                        function (t) {
-                            if ((0, E.s3)() !== O) return;
-                            let { startTimestamp: e, endTimestamp: _ } = t,
-                                a = t.xhr[r.xU];
-                            if (!e || !_ || !a) return;
-                            let { method: n, url: o, status_code: c, body: s } = a,
+                t.xhr &&
+                    (0, a.UK)(
+                        ((f = e),
+                        function (e) {
+                            if ((0, _.s3)() !== f) return;
+                            let { startTimestamp: t, endTimestamp: r } = e,
+                                n = e.xhr[a.xU];
+                            if (!t || !r || !n) return;
+                            let { method: i, url: o, status_code: c, body: E } = n,
                                 l = {
-                                    xhr: t.xhr,
-                                    input: s,
-                                    startTimestamp: e,
-                                    endTimestamp: _,
+                                    xhr: e.xhr,
+                                    input: E,
+                                    startTimestamp: t,
+                                    endTimestamp: r,
                                 };
-                            (0, i.n)(
+                            (0, s.n)(
                                 {
                                     category: "xhr",
                                     data: {
-                                        method: n,
+                                        method: i,
                                         url: o,
                                         status_code: c,
                                     },
@@ -128,89 +128,89 @@ let f = (0, o._I)((t = {}) => {
                             );
                         }),
                     ),
-                e.fetch &&
-                    (0, s.Uf)(
-                        ((L = t),
-                        function (t) {
-                            if ((0, E.s3)() !== L) return;
-                            let { startTimestamp: e, endTimestamp: _ } = t;
-                            if (_ && (!t.fetchData.url.match(/sentry_key/) || "POST" !== t.fetchData.method))
-                                if (t.error) {
-                                    let a = t.fetchData,
-                                        r = {
-                                            data: t.error,
-                                            input: t.args,
-                                            startTimestamp: e,
-                                            endTimestamp: _,
+                t.fetch &&
+                    (0, E.Uf)(
+                        ((O = e),
+                        function (e) {
+                            if ((0, _.s3)() !== O) return;
+                            let { startTimestamp: t, endTimestamp: r } = e;
+                            if (r && (!e.fetchData.url.match(/sentry_key/) || "POST" !== e.fetchData.method))
+                                if (e.error) {
+                                    let n = e.fetchData,
+                                        a = {
+                                            data: e.error,
+                                            input: e.args,
+                                            startTimestamp: t,
+                                            endTimestamp: r,
                                         };
-                                    (0, i.n)(
+                                    (0, s.n)(
                                         {
                                             category: "fetch",
-                                            data: a,
+                                            data: n,
                                             level: "error",
                                             type: "http",
                                         },
-                                        r,
+                                        a,
                                     );
                                 } else {
-                                    let a = t.response,
-                                        r = {
-                                            ...t.fetchData,
-                                            status_code: a && a.status,
+                                    let n = e.response,
+                                        a = {
+                                            ...e.fetchData,
+                                            status_code: n && n.status,
                                         },
-                                        n = {
-                                            input: t.args,
-                                            response: a,
-                                            startTimestamp: e,
-                                            endTimestamp: _,
+                                        i = {
+                                            input: e.args,
+                                            response: n,
+                                            startTimestamp: t,
+                                            endTimestamp: r,
                                         };
-                                    (0, i.n)(
+                                    (0, s.n)(
                                         {
                                             category: "fetch",
-                                            data: r,
+                                            data: a,
                                             type: "http",
                                         },
-                                        n,
+                                        i,
                                     );
                                 }
                         }),
                     ),
-                e.history &&
-                    (0, n.a)(
-                        ((p = t),
-                        function (t) {
-                            if ((0, E.s3)() !== p) return;
-                            let e = t.from,
-                                _ = t.to,
-                                a = (0, u.en)(d.m9.location.href),
-                                r = e ? (0, u.en)(e) : void 0,
-                                n = (0, u.en)(_);
-                            (r && r.path) || (r = a),
-                                a.protocol === n.protocol && a.host === n.host && (_ = n.relative),
-                                a.protocol === r.protocol && a.host === r.host && (e = r.relative),
-                                (0, i.n)({
+                t.history &&
+                    (0, i.a)(
+                        ((h = e),
+                        function (e) {
+                            if ((0, _.s3)() !== h) return;
+                            let t = e.from,
+                                r = e.to,
+                                n = (0, R.en)(A.m9.location.href),
+                                a = t ? (0, R.en)(t) : void 0,
+                                i = (0, R.en)(r);
+                            (a && a.path) || (a = n),
+                                n.protocol === i.protocol && n.host === i.host && (r = i.relative),
+                                n.protocol === a.protocol && n.host === a.host && (t = a.relative),
+                                (0, s.n)({
                                     category: "navigation",
                                     data: {
-                                        from: e,
-                                        to: _,
+                                        from: t,
+                                        to: r,
                                     },
                                 });
                         }),
                     ),
-                e.sentry &&
-                    t.on(
+                t.sentry &&
+                    e.on(
                         "beforeSendEvent",
-                        ((C = t),
-                        function (t) {
-                            (0, E.s3)() === C &&
-                                (0, i.n)(
+                        ((D = e),
+                        function (e) {
+                            (0, _.s3)() === D &&
+                                (0, s.n)(
                                     {
-                                        category: `sentry.${"transaction" === t.type ? "transaction" : "event"}`,
-                                        event_id: t.event_id,
-                                        level: t.level,
-                                        message: (0, l.jH)(t),
+                                        category: `sentry.${"transaction" === e.type ? "transaction" : "event"}`,
+                                        event_id: e.event_id,
+                                        level: e.level,
+                                        message: (0, l.jH)(e),
                                     },
-                                    { event: t },
+                                    { event: e },
                                 );
                         }),
                     );

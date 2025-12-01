@@ -31,30 +31,30 @@ function O(e) {
             analyticsLocations: O,
             onClose: w,
             guildId: N,
-            initialSelectedNameplate: Z,
+            initialSelectedNameplate: I,
         } = e,
-        I = (0, i.e7)([x.ZP], () => (null != N && null != v ? x.ZP.getMember(N, v.id) : null)),
-        A =
-            null != I
-                ? null == (t = I.collectibles)
+        Z = (0, i.e7)([x.ZP], () => (null != N && null != v ? x.ZP.getMember(N, v.id) : null)),
+        k =
+            null != Z
+                ? null == (t = Z.collectibles)
                     ? void 0
                     : t.nameplate
                 : null == (n = v.collectibles)
                   ? void 0
                   : n.nameplate,
-        { pendingNameplate: k } = (0, g.Zx)(v, N),
+        { pendingNameplate: A } = (0, g.Zx)(v, N),
         [S, T] = (0, r.useState)(() => {
             var e;
-            return null != Z
-                ? Z
-                : void 0 !== k
-                  ? k
-                  : null == A
+            return null != I
+                ? I
+                : void 0 !== A
+                  ? A
+                  : null == k
                     ? null
                     : null !=
                         (e = (0, u.Y)(b, _).find((e) => {
                             let { skuId: t } = e;
-                            return t === A.skuId;
+                            return t === k.skuId;
                         }))
                       ? e
                       : null;
@@ -62,15 +62,15 @@ function O(e) {
         U = (0, g.Ys)({
             pendingValue: S,
             userValue: null == v || null == (o = v.collectibles) ? void 0 : o.nameplate,
-            guildValue: null == I || null == (p = I.collectibles) ? void 0 : p.nameplate,
+            guildValue: null == Z || null == (p = Z.collectibles) ? void 0 : p.nameplate,
             guildId: N,
         }),
         { product: B, purchase: L } = (0, d.Z)(null == S ? void 0 : S.skuId),
         R = j.ZP.canUseCollectibles(v),
         M =
-            void 0 === k
-                ? (null == S ? void 0 : S.skuId) === (null == A ? void 0 : A.skuId)
-                : (null == S ? void 0 : S.skuId) === (null == k ? void 0 : k.skuId),
+            void 0 === A
+                ? (null == S ? void 0 : S.skuId) === (null == k ? void 0 : k.skuId)
+                : (null == S ? void 0 : S.skuId) === (null == A ? void 0 : A.skuId),
         D = (0, r.useCallback)(
             (e) => {
                 w(),

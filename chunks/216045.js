@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Q }), n(388685);
+n.d(t, { Z: () => X }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(512722),
@@ -9,35 +9,35 @@ var r = n(54381),
     u = n(481060),
     d = n(570140),
     f = n(809206),
-    _ = n(497321),
-    p = n(100527),
-    h = n(906732),
-    m = n(475977),
+    p = n(497321),
+    _ = n(100527),
+    m = n(906732),
+    h = n(475977),
     g = n(266454),
     E = n(243778),
     b = n(957730),
     y = n(566697),
     O = n(53691),
     v = n(267717),
-    I = n(150039),
-    T = n(296810),
-    S = n(678135),
+    S = n(150039),
+    I = n(296810),
+    T = n(678135),
     A = n(610794),
     C = n(935147),
     N = n(643879),
-    R = n(373230),
-    P = n(246946),
-    D = n(25990),
-    w = n(594174),
-    L = n(626135),
-    x = n(74538),
-    M = n(413182),
-    k = n(695346),
-    j = n(265159),
+    P = n(373230),
+    R = n(246946),
+    w = n(25990),
+    D = n(594174),
+    x = n(626135),
+    L = n(74538),
+    j = n(413182),
+    M = n(695346),
+    k = n(265159),
     U = n(532495),
     G = n(981631),
-    B = n(921944),
-    Z = n(388032),
+    Z = n(921944),
+    B = n(388032),
     F = n(391371);
 function V(e, t, n) {
     return (
@@ -113,67 +113,67 @@ function z(e, t) {
     return i;
 }
 function q() {
-    let e = (0, R.T)({ location: "UserSettingsProfileCustomization" }),
+    let e = (0, P.T)({ location: "UserSettingsProfileCustomization" }),
         t = (0, g.Nj)(l.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE),
         n = e && !t;
     i.useEffect(() => {
         n && (0, g.Q3)(l.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE, { forceTrack: !0 });
     }, [n]);
 }
-function X() {
+function Q() {
     let [e, t] = (0, E.US)([l.z.DISPLAY_NAME_STYLES_NEW_BADGE]),
         n = e === l.z.DISPLAY_NAME_STYLES_NEW_BADGE;
     i.useEffect(() => {
-        n && t(B.L.TAKE_ACTION);
+        n && t(Z.L.TAKE_ACTION);
     }, [n, t]);
 }
-function Q() {
+function X() {
     var e;
-    let t = (0, s.e7)([w.default], () => {
-            let e = w.default.getCurrentUser();
+    let t = (0, s.e7)([D.default], () => {
+            let e = D.default.getCurrentUser();
             return o()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e;
         }),
-        n = (0, s.e7)([P.Z], () => P.Z.hidePersonalInformation),
-        a = (0, s.cj)([D.Z], () => D.Z.getAllPending()),
+        n = (0, s.e7)([R.Z], () => R.Z.hidePersonalInformation),
+        a = (0, s.cj)([w.Z], () => w.Z.getAllPending()),
         { pendingBio: l, pendingAvatar: g, pendingNameplate: E } = a,
-        R = K(a, ["pendingBio", "pendingAvatar", "pendingNameplate"]),
-        B = (0, N.SD)({
+        P = K(a, ["pendingBio", "pendingAvatar", "pendingNameplate"]),
+        Z = (0, N.SD)({
             userId: t.id,
             image: g,
         }),
-        V = (0, I.Ys)({
+        V = (0, S.Ys)({
             pendingValue: E,
             userValue: null == t || null == (e = t.collectibles) ? void 0 : e.nameplate,
         }),
-        Y = (0, s.e7)([D.Z], () => D.Z.showNotice()),
-        z = k.dN.useSetting() && null != l ? b.ZP.parse(void 0, l).content : l,
-        Q = x.ZP.canUsePremiumProfileCustomization(t),
-        { analyticsLocations: J, newestAnalyticsLocation: $ } = (0, h.ZP)(p.Z.USER_SETTINGS_USER_PROFILE);
-    q(), X(), i.useEffect(() => () => d.Z.wait(f.W3), []);
+        Y = (0, s.e7)([w.Z], () => w.Z.showNotice()),
+        z = M.dN.useSetting() && null != l ? b.ZP.parse(void 0, l).content : l,
+        X = L.ZP.canUsePremiumProfileCustomization(t),
+        { analyticsLocations: J, newestAnalyticsLocation: $ } = (0, m.ZP)(_.Z.USER_SETTINGS_USER_PROFILE);
+    q(), Q(), i.useEffect(() => () => d.Z.wait(f.W3), []);
     let [ee, et] = i.useState(!1),
-        { showRedesign: en } = M.b.useExperiment({ location: "profile customization" }),
-        er = !Q,
+        { showRedesign: en } = j.b.useExperiment({ location: "profile customization" }),
+        er = !X,
         ei = i.useRef(null);
     return n
-        ? (0, r.jsx)(_.Z, {})
-        : (0, r.jsxs)(h.Gt, {
+        ? (0, r.jsx)(p.Z, {})
+        : (0, r.jsxs)(m.Gt, {
               value: J,
               children: [
-                  (0, r.jsx)(m.Z, {}),
-                  (0, r.jsx)(T.Z, {
+                  (0, r.jsx)(h.Z, {}),
+                  (0, r.jsx)(I.Z, {
                       profilePreview: (0, r.jsx)(
-                          S.Z,
+                          T.Z,
                           W(
                               H(
                                   {
                                       user: t,
-                                      canUsePremiumCustomization: Q,
-                                      onUpsellClick: j.Z,
+                                      canUsePremiumCustomization: X,
+                                      onUpsellClick: k.Z,
                                       pendingBio: z,
                                   },
-                                  R,
+                                  P,
                               ),
-                              { pendingAvatar: B },
+                              { pendingAvatar: Z },
                           ),
                       ),
                       nameplatePreview: (0, r.jsx)(
@@ -184,7 +184,7 @@ function Q() {
                                       user: t,
                                       nameplate: V,
                                   },
-                                  R,
+                                  P,
                               ),
                               {
                                   className: null == V ? F.nameplatePreviewPlaceholder : void 0,
@@ -214,20 +214,20 @@ function Q() {
                       (0, r.jsx)(O.p, {
                           className: F.floatingNitroUpsell,
                           showUpsell: er && !ee,
-                          text: Z.intl.format(Z.t.TmfgI2, { onClick: () => (0, v.y)({ analyticsSource: $ }) }),
+                          text: B.intl.format(B.t.TmfgI2, { onClick: () => (0, v.y)({ analyticsSource: $ }) }),
                           textVariant: "heading-md/medium",
                           button: (0, r.jsx)(u.Button, {
                               variant: "expressive",
                               onClick: () => {
                                   var e;
-                                  L.default.track(G.rMx.TRY_IT_OUT_PRESET_CLICKED, {
+                                  x.default.track(G.rMx.TRY_IT_OUT_PRESET_CLICKED, {
                                       cta_variant: "floating_action_button",
                                   }),
                                       null == ei ||
                                           null == (e = ei.current) ||
                                           e.scrollIntoView({ behavior: "smooth" });
                               },
-                              text: Z.intl.string(Z.t.uw9zI7),
+                              text: B.intl.string(B.t.uw9zI7),
                               icon: u.SrA,
                           }),
                       }),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685), n(642613), n(539854);
+n.d(t, { Z: () => M }), n(388685), n(642613), n(539854);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -9,10 +9,10 @@ var r,
     u = n(797316),
     d = n(158776),
     f = n(885110),
-    _ = n(594174),
-    p = n(823379),
-    h = n(700785),
-    m = n(709054),
+    p = n(594174),
+    _ = n(823379),
+    m = n(700785),
+    h = n(709054),
     g = n(51144),
     E = n(981631);
 function b(e, t, n) {
@@ -43,7 +43,7 @@ class O {
                     canViewChannel: i,
                 };
             })
-            .sort((e, t) => m.default.compare(e.userId, t.userId))
+            .sort((e, t) => h.default.compare(e.userId, t.userId))
             .sortBy((e) => e.displayName)
             .forEach((e) => {
                 this.addUser(e.userId, e.sectionId, e.displayName, e.canViewChannel, !0);
@@ -73,7 +73,7 @@ class O {
     }
     addUser(e, t, n, r, i) {
         this.allUserIds.add(e);
-        let a = _.default.getUser(e);
+        let a = p.default.getUser(e);
         if (null == a || "" === a.username) return;
         t in this.sections ||
             (this.sections[t] = {
@@ -131,8 +131,8 @@ class O {
     calculateNewState(e, t) {
         var n, r;
         let i = c.ZP.getMember(this.guildId, e),
-            a = _.default.getUser(e),
-            o = _.default.getCurrentUser(),
+            a = p.default.getUser(e),
+            o = p.default.getCurrentUser(),
             s =
                 (null == a ? void 0 : a.id) === (null == o ? void 0 : o.id)
                     ? f.Z.getStatus()
@@ -140,7 +140,7 @@ class O {
             l =
                 null != a &&
                 null != t &&
-                h.BT({
+                m.BT({
                     permission: E.Plq.VIEW_CHANNEL,
                     user: a,
                     context: t,
@@ -151,8 +151,8 @@ class O {
                         ? n
                         : "online"
                     : "offline",
-            p = null != (r = null == i ? void 0 : i.nick) ? r : g.ZP.getName(a);
-        return [u, null == p ? void 0 : p.toLowerCase(), l];
+            _ = null != (r = null == i ? void 0 : i.nick) ? r : g.ZP.getName(a);
+        return [u, null == _ ? void 0 : _.toLowerCase(), l];
     }
     constructor(e, t, n) {
         b(this, "guildId", void 0),
@@ -172,7 +172,7 @@ class O {
 function v() {
     y = {};
 }
-function I(e) {
+function S(e) {
     var t, n;
     if (!(e.id in y)) return !1;
     null == (t = e.addedMembers) ||
@@ -182,13 +182,13 @@ function I(e) {
         }),
         null == (n = e.removedMemberIds) || n.forEach((t) => y[e.id].removeUserId(t));
 }
-function T(e) {
+function I(e) {
     let { threadId: t, guildId: n, members: r } = e,
         i = l.Z.getChannel(t),
         a = null == i ? void 0 : i.parent_id;
     null != a && ((y[t] = new O(n, a, t)), y[t].rebuild(r.map((e) => e.user_id)));
 }
-function S(e) {
+function T(e) {
     return N(e.user.id);
 }
 function A(e) {
@@ -209,21 +209,21 @@ function N(e) {
     for (let n in y) y[n].updateUserId(e) && (t = !0);
     return t;
 }
-function R(e) {
+function P(e) {
     let { presences: t } = e,
         n = a()(t)
             .map((e) => {
                 var t;
                 return null == (t = e.user) ? void 0 : t.id;
             })
-            .filter(p.lm)
+            .filter(_.lm)
             .uniq()
             .value(),
         r = !1;
     for (let e in y) y[e].updateMultipleUserIds(n) && (r = !0);
     return r;
 }
-function P(e) {
+function R(e) {
     let { chunks: t } = e,
         n = !1;
     for (let { guildId: e, members: r } of t) {
@@ -232,33 +232,33 @@ function P(e) {
     }
     return n;
 }
-function D(e) {
+function w(e) {
     var t;
     let { channel: n } = e;
     if (!(n.id in y) || (null == (t = n.threadMetadata) ? void 0 : t.archived) !== !0) return !1;
     delete y[n.id];
 }
-function w(e) {
+function D(e) {
     let { channel: t } = e;
     if (!(t.id in y)) return !1;
     delete y[t.id];
 }
-function L(e) {
+function x(e) {
     let { guildId: t } = e,
         n = !1;
     for (let e in y) y[e].guildId === t && (y[e].rebuild(), (n = !0));
     return n;
 }
-function x(e) {
+function L(e) {
     let { channels: t } = e,
         n = new Set(t.map((e) => e.id)),
         r = !1;
     for (let e in y) n.has(y[e].parentId) && (y[e].rebuild(), (r = !0));
     return r;
 }
-class M extends (r = o.ZP.Store) {
+class j extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(l.Z, c.ZP, u.Z, d.Z, f.Z, _.default),
+        this.waitFor(l.Z, c.ZP, u.Z, d.Z, f.Z, p.default),
             this.syncWith([u.Z], () => {
                 let e = u.Z.getSubscribedThreadIds(),
                     t = !1;
@@ -267,7 +267,7 @@ class M extends (r = o.ZP.Store) {
             }),
             this.syncWith([f.Z], () => {
                 var e;
-                return N(null == (e = _.default.getCurrentUser()) ? void 0 : e.id);
+                return N(null == (e = p.default.getCurrentUser()) ? void 0 : e.id);
             });
     }
     getMemberListVersion(e) {
@@ -286,22 +286,22 @@ class M extends (r = o.ZP.Store) {
         return null != (i = null == o ? void 0 : o.canViewChannel) && i;
     }
 }
-b(M, "displayName", "ThreadMemberListStore");
-let k = new M(s.Z, {
+b(j, "displayName", "ThreadMemberListStore");
+let M = new j(s.Z, {
     CONNECTION_OPEN: v,
-    THREAD_MEMBERS_UPDATE: I,
-    THREAD_UPDATE: D,
-    THREAD_DELETE: w,
-    CHANNEL_UPDATES: x,
-    THREAD_MEMBER_LIST_UPDATE: T,
-    USER_UPDATE: S,
+    THREAD_MEMBERS_UPDATE: S,
+    THREAD_UPDATE: w,
+    THREAD_DELETE: D,
+    CHANNEL_UPDATES: L,
+    THREAD_MEMBER_LIST_UPDATE: I,
+    USER_UPDATE: T,
     PRESENCE_UPDATES: A,
-    GUILD_MEMBER_ADD: S,
-    GUILD_MEMBER_UPDATE: S,
-    GUILD_MEMBER_REMOVE: S,
-    PRESENCES_REPLACE: R,
-    GUILD_MEMBERS_CHUNK_BATCH: P,
-    GUILD_ROLE_UPDATE: L,
-    GUILD_ROLE_DELETE: L,
+    GUILD_MEMBER_ADD: T,
+    GUILD_MEMBER_UPDATE: T,
+    GUILD_MEMBER_REMOVE: T,
+    PRESENCES_REPLACE: P,
+    GUILD_MEMBERS_CHUNK_BATCH: R,
+    GUILD_ROLE_UPDATE: x,
+    GUILD_ROLE_DELETE: x,
     PASSIVE_UPDATE_V2: C,
 });

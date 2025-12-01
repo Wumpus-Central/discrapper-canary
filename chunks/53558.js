@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(54381);
 n(473749);
 var i = n(442837),
@@ -37,11 +37,11 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -49,7 +49,7 @@ function _(e, t) {
     }
     return i;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -58,9 +58,9 @@ function p(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function h(e) {
+function m(e) {
     var { user: t, onClick: n } = e,
-        i = _(e, ["user", "onClick"]);
+        i = p(e, ["user", "onClick"]);
     return (
         (0, s.q)(t.id),
         (0, r.jsx)(
@@ -78,17 +78,17 @@ function h(e) {
         )
     );
 }
-function m(e) {
+function h(e) {
     var t,
         { user: s, guildId: c } = e,
-        u = _(e, ["user", "guildId"]);
+        u = p(e, ["user", "guildId"]);
     let d = (0, i.e7)([l.Z], () => {
             var e;
             return null == (e = l.Z.getUserProfile(s.id)) ? void 0 : e.application;
         }),
-        p = (0, o.R)(null != (t = null == d ? void 0 : d.id) ? t : "");
-    if (null == d || !p) return null;
-    let m = () => {
+        _ = (0, o.R)(null != (t = null == d ? void 0 : d.id) ? t : "");
+    if (null == d || !_) return null;
+    let h = () => {
         (0, a.ZDy)(async () => {
             let { default: e } = await Promise.all([n.e("77803"), n.e("42124")]).then(n.bind(n, 7225));
             return (t) =>
@@ -105,12 +105,12 @@ function m(e) {
         });
     };
     return (0, r.jsx)(
-        h,
+        m,
         f(
             {
                 user: s,
                 guildId: c,
-                onClick: m,
+                onClick: h,
             },
             u,
         ),

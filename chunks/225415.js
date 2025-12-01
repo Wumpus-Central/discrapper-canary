@@ -9,10 +9,10 @@ var r = n(470167),
     u = n(681678),
     d = n(128064),
     f = n(312870),
-    _ = n(592125),
-    p = n(375954),
-    h = n(944486),
-    m = n(594174),
+    p = n(592125),
+    _ = n(375954),
+    m = n(944486),
+    h = n(594174),
     g = n(480916),
     E = n(81643),
     b = n(981631),
@@ -31,10 +31,10 @@ function O(e, t, n) {
     );
 }
 let v = new l.Z("AgeVerificationManager");
-function I(e) {
+function S(e) {
     var t, n, i;
     let { channelId: a, message: o } = e,
-        s = p.Z.getMessage(a, o.id);
+        s = _.Z.getMessage(a, o.id);
     if (
         (null == s || null == (n = s.embeds) || null == (t = n[0]) ? void 0 : t.type) ===
         r.h.AGE_VERIFICATION_SYSTEM_NOTIFICATION
@@ -48,14 +48,14 @@ function I(e) {
                 (u.Z.showSuccessToast(y.wQ.TIGGER_PAWTECT_VERIFIED), (0, g.zi)(g.o6.VERIFIED_TEEN));
     }
 }
-function T(e) {
+function I(e) {
     i.Z.fetchMessages({
         channelId: e,
         limit: b.AQB,
     });
 }
-function S(e) {
-    let t = _.Z.getChannel(e);
+function T(e) {
+    let t = p.Z.getChannel(e);
     ((null == t ? void 0 : t.type) === b.d4z.GUILD_FORUM || (null == t ? void 0 : t.type) === b.d4z.GUILD_MEDIA) &&
         (0, c.EB)(t);
 }
@@ -66,27 +66,27 @@ class A extends o.Z {
             O(this, "handlePostConnectionOpen", () => {
                 var e, t;
                 this._previousAgeVerificationStatus =
-                    null != (t = null == (e = m.default.getCurrentUser()) ? void 0 : e.ageVerificationStatus)
+                    null != (t = null == (e = h.default.getCurrentUser()) ? void 0 : e.ageVerificationStatus)
                         ? t
                         : null;
             }),
             O(this, "handleCurrentUserUpdate", (e) => {
                 var t;
                 let { user: n } = e,
-                    r = null != (t = (0, m.transformUser)(n).ageVerificationStatus) ? t : null,
+                    r = null != (t = (0, h.transformUser)(n).ageVerificationStatus) ? t : null,
                     i = this._previousAgeVerificationStatus !== r && r === a.F$.VERIFIED_ADULT,
                     o = (0, f.U)("age-verification-manager"),
                     l = i && ((0, d.c_)("age-verification-manager") || o);
                 try {
                     if (l) {
-                        let e = h.Z.getChannelId(),
+                        let e = m.Z.getChannelId(),
                             t = !1;
                         s.Z.forEach((n) => {
                             let { channelId: r } = n,
-                                i = _.Z.getChannel(r);
+                                i = p.Z.getChannel(r);
                             (null == i ? void 0 : i.nsfw) && (s.Z.clear(r), r === e && (t = !0));
                         }),
-                            t && null != e && (T(e), S(e));
+                            t && null != e && (I(e), T(e));
                     }
                 } catch (e) {
                     v.warn("Error clearing cache and refetching messages", e);
@@ -97,7 +97,7 @@ class A extends o.Z {
             O(this, "actions", {
                 POST_CONNECTION_OPEN: this.handlePostConnectionOpen,
                 CURRENT_USER_UPDATE: this.handleCurrentUserUpdate,
-                MESSAGE_CREATE: I,
+                MESSAGE_CREATE: S,
             });
     }
 }

@@ -48,22 +48,22 @@ function f(e, t) {
             return (e.__proto__ = t), e;
         })(e, t);
 }
-function _(e) {
-    var t = m();
+function p(e) {
+    var t = h();
     return function () {
         var n,
             r = g(e);
-        return (n = t ? Reflect.construct(r, arguments, g(this).constructor) : r.apply(this, arguments)), p(this, n);
+        return (n = t ? Reflect.construct(r, arguments, g(this).constructor) : r.apply(this, arguments)), _(this, n);
     };
 }
-function p(e, t) {
-    return t && ("object" === s(t) || "function" == typeof t) ? t : h(e);
+function _(e, t) {
+    return t && ("object" === s(t) || "function" == typeof t) ? t : m(e);
 }
-function h(e) {
+function m(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return e;
 }
-function m() {
+function h() {
     if ("undefined" == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
     if ("function" == typeof Proxy) return !0;
     try {
@@ -94,14 +94,14 @@ function E(e, t, n) {
 }
 var b = (function (e) {
     d(n, e);
-    var t = _(n);
+    var t = p(n);
     function n() {
         var e;
         l(this, n);
         for (var r = arguments.length, i = Array(r), a = 0; a < r; a++) i[a] = arguments[a];
         return (
-            E(h((e = t.call.apply(t, [this].concat(i)))), "priority", 130),
-            E(h(e), "incompatibleTokens", ["y", "R", "u", "Q", "q", "M", "L", "I", "d", "D", "i", "t", "T"]),
+            E(m((e = t.call.apply(t, [this].concat(i)))), "priority", 130),
+            E(m(e), "incompatibleTokens", ["y", "R", "u", "Q", "q", "M", "L", "I", "d", "D", "i", "t", "T"]),
             e
         );
     }

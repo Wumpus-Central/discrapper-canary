@@ -23,11 +23,11 @@ class f extends a.Z {
         l = (l = l || "").toLowerCase();
         let f = null;
         "last" == l || "past" == l ? (f = "last") : "next" == l ? (f = "next") : "this" == l && (f = "this");
-        let _ = t[u].toLowerCase();
-        if (void 0 !== r.LN[_]) n = r.LN[_];
-        else if ("weekend" == _) n = "last" == f ? s.OG.SUNDAY : s.OG.SATURDAY;
+        let p = t[u].toLowerCase();
+        if (void 0 !== r.LN[p]) n = r.LN[p];
+        else if ("weekend" == p) n = "last" == f ? s.OG.SUNDAY : s.OG.SATURDAY;
         else {
-            if ("weekday" != _) return null;
+            if ("weekday" != p) return null;
             let t = e.reference.getDateWithAdjustedTimezone().getDay();
             t == s.OG.SUNDAY || t == s.OG.SATURDAY
                 ? (n = "last" == f ? s.OG.FRIDAY : s.OG.MONDAY)

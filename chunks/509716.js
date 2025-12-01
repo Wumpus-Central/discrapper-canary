@@ -7,19 +7,19 @@ var r = n(456007),
 function l(e) {
     let { option: t, content: n, guildId: l, channelId: c, allowEmptyValues: u, commandOrigin: d = i.bB.CHAT } = e,
         f = null != n ? (0, r.KF)({ content: n }, "content").trim() : "",
-        _ = t.required,
-        p = "" === f;
+        p = t.required,
+        _ = "" === f;
     if (null == n)
-        return _
+        return p
             ? {
                   success: !1,
                   error: s.intl.string(s.t.JZJQL2),
               }
             : { success: !0 };
-    if (p)
+    if (_)
         return u
             ? { success: !0 }
-            : _
+            : p
               ? {
                     success: !1,
                     error: s.intl.string(s.t.JZJQL2),
@@ -28,13 +28,13 @@ function l(e) {
                     success: !1,
                     error: (0, o.al)(t),
                 };
-    let h =
+    let m =
             n.length > 1
                 ? {
                       type: "text",
                       text: f,
                   }
                 : n[0],
-        m = a.Z[t.type](h, t, c, l, d);
-    return m.success || null != m.error || (m.error = (0, o.al)(t)), m;
+        h = a.Z[t.type](m, t, c, l, d);
+    return h.success || null != h.error || (h.error = (0, o.al)(t)), h;
 }

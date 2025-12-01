@@ -2,8 +2,8 @@ n.d(t, { z: () => c }), n(35282);
 var r = n(473749),
     i = n(828700),
     l = n(823379),
-    a = n(113434),
-    s = n(220068),
+    a = n(313481),
+    s = n(283833),
     o = n(388032);
 function c(e) {
     let { withClaimedQuestsTab: t = !0 } = e,

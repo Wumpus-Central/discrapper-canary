@@ -1,6 +1,6 @@
 n.d(t, {
-    I: () => x,
-    NK: () => C,
+    I: () => C,
+    NK: () => x,
 }),
     n(388685);
 var r,
@@ -12,9 +12,9 @@ var r,
     c = n(246133),
     u = n(695346),
     d = n(885110),
-    p = n(223730),
-    h = n(361742),
-    f = n(388032),
+    f = n(223730),
+    h = n(779334),
+    p = n(388032),
     g = n(87587),
     m = n(354810);
 function b(e) {
@@ -25,7 +25,7 @@ function b(e) {
         children: (0, i.jsx)(s.Button, {
             variant: "primary",
             size: "sm",
-            text: f.intl.string(h.default.Poezn1),
+            text: p.intl.string(h.default.Poezn1),
             onClick: () => {
                 t(), (0, c.Z)({ nextStatus: s.Skl.ONLINE });
             },
@@ -45,7 +45,7 @@ function _(e) {
                     (0, i.jsx)(s.Text, {
                         variant: "text-sm/medium",
                         color: "header-primary",
-                        children: f.intl.string(h.default.WhdCGP),
+                        children: p.intl.string(h.default.WhdCGP),
                     }),
                     n &&
                         (0, i.jsxs)("div", {
@@ -60,8 +60,8 @@ function _(e) {
                                     color: "text-secondary",
                                     children:
                                         r === s.Skl.INVISIBLE
-                                            ? f.intl.string(h.default.a3AofS)
-                                            : f.intl.string(f.t.WbGtnH),
+                                            ? p.intl.string(h.default.a3AofS)
+                                            : p.intl.string(p.t.WbGtnH),
                                 }),
                             ],
                         }),
@@ -100,10 +100,10 @@ function O(e) {
             (0, i.jsx)(s.Text, {
                 variant: "text-sm/normal",
                 color: "text-secondary",
-                children: f.intl.string(h.default["7cfFob"]),
+                children: p.intl.string(h.default["7cfFob"]),
             }),
             (0, i.jsx)(s.izJ, { className: g.divider }),
-            (0, i.jsx)(p.yj, { onClosePopout: t }),
+            (0, i.jsx)(f.yj, { onClosePopout: t }),
         ],
     });
 }
@@ -120,7 +120,7 @@ function v(e) {
                         variant: "heading-sm/semibold",
                         color: "header-primary",
                         className: g.controlTitle,
-                        children: f.intl.string(h.default["5YsmGI"]),
+                        children: p.intl.string(h.default["5YsmGI"]),
                     }),
                     (0, i.jsxs)("div", {
                         className: g.toggleContainerOnlineRow,
@@ -132,7 +132,7 @@ function v(e) {
                             (0, i.jsx)(s.Text, {
                                 variant: "text-xs/normal",
                                 color: "text-secondary",
-                                children: f.intl.string(h.default.U8MFdR),
+                                children: p.intl.string(h.default.U8MFdR),
                             }),
                         ],
                     }),
@@ -141,7 +141,7 @@ function v(e) {
             (0, i.jsx)(s.Text, {
                 variant: "text-sm/normal",
                 color: "text-secondary",
-                children: f.intl.string(h.default.Yl0mh4),
+                children: p.intl.string(h.default.Yl0mh4),
             }),
             (0, i.jsx)(b, { closePopout: t }),
         ],
@@ -159,14 +159,14 @@ function j(e) {
             (0, i.jsx)(s.Text, {
                 variant: "text-sm/normal",
                 color: "text-secondary",
-                children: f.intl.string(h.default["7cfFob"]),
+                children: p.intl.string(h.default["7cfFob"]),
             }),
             (0, i.jsx)(s.izJ, { className: g.divider }),
-            (0, i.jsx)(p.yj, { onClosePopout: t }),
+            (0, i.jsx)(f.yj, { onClosePopout: t }),
         ],
     });
 }
-var C =
+var x =
     (((r = {})[(r.ActivityNux = 0)] = "ActivityNux"),
     (r[(r.StatusNux = 1)] = "StatusNux"),
     (r[(r.ActivityAndStatusNux = 2)] = "ActivityAndStatusNux"),
@@ -174,7 +174,7 @@ var C =
     (r[(r.Status = 4)] = "Status"),
     (r[(r.ActivityAndStatus = 5)] = "ActivityAndStatus"),
     r);
-function x(e) {
+function C(e) {
     let { showPopout: t, popoutState: n, handleClose: r, popoutTargetRef: o, children: d } = e,
         [g, b] = (0, l.useState)(n),
         _ = (0, l.useRef)(null),
@@ -184,26 +184,26 @@ function x(e) {
                 case 0:
                     return {
                         type: "popover",
-                        title: f.intl.string(h.default.vxVbGP),
-                        body: [f.intl.string(h.default["7cfFob"])],
+                        title: p.intl.string(h.default.vxVbGP),
+                        body: [p.intl.string(h.default["7cfFob"])],
                         action: {
-                            text: f.intl.string(h.default.k4tCg2),
+                            text: p.intl.string(h.default.k4tCg2),
                             onClick: () => {
                                 u.G6.updateSetting(!0);
                             },
                         },
                         textLink: {
-                            text: f.intl.string(f.t["ZrN+DT"]),
-                            onClick: p.S$,
+                            text: p.intl.string(p.t["ZrN+DT"]),
+                            onClick: f.S$,
                         },
                     };
                 case 1:
                     return {
                         type: "popover",
-                        title: f.intl.string(h.default.qKDqet),
-                        body: [f.intl.string(h.default.Yl0mh4)],
+                        title: p.intl.string(h.default.qKDqet),
+                        body: [p.intl.string(h.default.Yl0mh4)],
                         action: {
-                            text: f.intl.string(h.default.Poezn1),
+                            text: p.intl.string(h.default.Poezn1),
                             onClick: () => {
                                 (0, c.Z)({ nextStatus: s.Skl.ONLINE });
                             },
@@ -212,17 +212,17 @@ function x(e) {
                 case 2:
                     return {
                         type: "popover",
-                        title: f.intl.string(h.default["6cA8HZ"]),
-                        body: [f.intl.string(h.default["7cfFob"])],
+                        title: p.intl.string(h.default["6cA8HZ"]),
+                        body: [p.intl.string(h.default["7cfFob"])],
                         action: {
-                            text: f.intl.string(h.default.k4tCg2),
+                            text: p.intl.string(h.default.k4tCg2),
                             onClick: () => {
                                 u.G6.updateSetting(!0), (0, c.Z)({ nextStatus: s.Skl.ONLINE });
                             },
                         },
                         textLink: {
-                            text: f.intl.string(f.t["ZrN+DT"]),
-                            onClick: p.S$,
+                            text: p.intl.string(p.t["ZrN+DT"]),
+                            onClick: f.S$,
                         },
                     };
                 case 3:
@@ -244,16 +244,16 @@ function x(e) {
                     return null;
             }
         })(g),
-        C = (0, l.useRef)(t);
+        x = (0, l.useRef)(t);
     if (
         ((0, l.useEffect)(() => {
-            t && !C.current && b(n), t !== C.current && (C.current = t);
+            t && !x.current && b(n), t !== x.current && (x.current = t);
         }, [n, t]),
         null == y || !t)
     )
         return d;
     if ("popover" === y.type) {
-        var x, E;
+        var C, E;
         let { action: e, title: t, body: n, textLink: l } = y;
         return (0, i.jsxs)(i.Fragment, {
             children: [
@@ -272,7 +272,7 @@ function x(e) {
                         src: m.Z,
                     },
                     actions: [
-                        ((x = (function (e) {
+                        ((C = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
@@ -305,7 +305,7 @@ function x(e) {
                                 },
                             }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(x, Object.getOwnPropertyDescriptors(E))
+                            ? Object.defineProperties(C, Object.getOwnPropertyDescriptors(E))
                             : (function (e, t) {
                                   var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -314,9 +314,9 @@ function x(e) {
                                   }
                                   return n;
                               })(Object(E)).forEach(function (e) {
-                                  Object.defineProperty(x, e, Object.getOwnPropertyDescriptor(E, e));
+                                  Object.defineProperty(C, e, Object.getOwnPropertyDescriptor(E, e));
                               }),
-                        x),
+                        C),
                     ],
                 }),
                 d,

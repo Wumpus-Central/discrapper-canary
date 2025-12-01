@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(623292),
     d = n(926491),
     f = n(419922),
-    _ = n(626135),
-    p = n(585483),
-    h = n(115610),
-    m = n(981631),
+    p = n(626135),
+    _ = n(585483),
+    m = n(115610),
+    h = n(981631),
     g = n(388032),
     E = n(38297);
 function b(e) {
@@ -48,13 +48,13 @@ function b(e) {
                               text: g.intl.string(g.t.ASZTf3),
                               icon: l.FmF,
                               onClick: () => {
-                                  _.default.track(m.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
+                                  p.default.track(h.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
                                       message_id: t.id,
                                       channel_id: a.id,
                                       guild_id: a.guild_id,
                                       action_type: "upload_file",
                                   }),
-                                      p.S.dispatch(m.CkL.UPLOAD_FILE, { channelId: a.id }),
+                                      _.S.dispatch(h.CkL.UPLOAD_FILE, { channelId: a.id }),
                                       (0, u.fE)({
                                           message: t,
                                           channel: a,
@@ -74,13 +74,13 @@ function b(e) {
                                         }
                                       : l.EO4,
                               onClick: () => {
-                                  _.default.track(m.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
+                                  p.default.track(h.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
                                       message_id: t.id,
                                       channel_id: a.id,
                                       guild_id: a.guild_id,
                                       action_type: "sticker",
                                   }),
-                                      (0, h.O)(t.id, a);
+                                      (0, m.O)(t.id, a);
                               },
                           }),
                       ],

@@ -8,10 +8,10 @@ var a = n(570140),
     u = n(626135),
     d = n(358085),
     f = n(998502),
-    _ = n(981631),
-    p = n(186901);
-let h = new s.Z("NativeDispatchUtils");
-function m() {
+    p = n(981631),
+    _ = n(186901);
+let m = new s.Z("NativeDispatchUtils");
+function h() {
     return null != r
         ? Promise.resolve(r)
         : (0, d.isDesktop)()
@@ -23,11 +23,11 @@ function m() {
           : Promise.reject(Error("not desktop client"));
 }
 function g() {
-    return null == i && h.warn("Tried getting Dispatch instance before instantiated"), i;
+    return null == i && m.warn("Tried getting Dispatch instance before instantiated"), i;
 }
 function E(e) {
     let t = JSON.parse(e);
-    return h.log("Native Dispatch error", t), new o.Z(t);
+    return m.log("Native Dispatch error", t), new o.Z(t);
 }
 function b(e, t) {
     "" !== e && E(e);
@@ -35,13 +35,13 @@ function b(e, t) {
 function y(e) {
     let { properties: t } = e;
     switch ((null != t.stage && null != t.stage.type && (t.stage = t.stage.type), e.event_name)) {
-        case _.rMx.DISPATCH_PATCH_STARTED:
-        case _.rMx.DISPATCH_PATCH_PAUSED:
-        case _.rMx.DISPATCH_PATCH_FAILED:
-        case _.rMx.DISPATCH_PATCH_VERIFICATION_FAILED:
-        case _.rMx.DISPATCH_PATCH_COMPLETE:
-        case _.rMx.DISPATCH_PATCH_CANCELLED:
-        case _.rMx.DISPATCH_APPLICATION_UNINSTALLED:
+        case p.rMx.DISPATCH_PATCH_STARTED:
+        case p.rMx.DISPATCH_PATCH_PAUSED:
+        case p.rMx.DISPATCH_PATCH_FAILED:
+        case p.rMx.DISPATCH_PATCH_VERIFICATION_FAILED:
+        case p.rMx.DISPATCH_PATCH_COMPLETE:
+        case p.rMx.DISPATCH_PATCH_CANCELLED:
+        case p.rMx.DISPATCH_APPLICATION_UNINSTALLED:
             u.default.track(e.event_name, t);
     }
 }
@@ -49,10 +49,10 @@ let O = {
     init(e) {
         let { userToken: t, userId: n, installPaths: r, platform: a, stateCallback: o, errorCallback: s } = e;
         null == i &&
-            m().then((e) => {
+            h().then((e) => {
                 let c = {
                         environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                        build_number: "470193",
+                        build_number: "473983",
                     },
                     u = l.default.getCurrentUser();
                 null != u && ((c.user_id = u.id), (c.user_name = u.tag), null != u.email && (c.email = u.email));
@@ -234,7 +234,7 @@ let O = {
                                   type: "DISPATCH_APPLICATION_ERROR",
                                   error: t,
                               }),
-                                  null != t.code && t.code === p.ff.POST_INSTALL_CANCELLED ? r(t) : n();
+                                  null != t.code && t.code === _.ff.POST_INSTALL_CANCELLED ? r(t) : n();
                               return;
                           }
                           if ("" !== t) {

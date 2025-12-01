@@ -20,11 +20,11 @@ let a = function (e, t) {
         n = "." === u || ".." === u || "" === u;
     } else n = !1;
     for (var d = 0, f = o.length; f >= 0; f--) {
-        var _ = o[f];
-        "." === _ ? i(o, f) : ".." === _ ? (i(o, f), d++) : d && (i(o, f), d--);
+        var p = o[f];
+        "." === p ? i(o, f) : ".." === p ? (i(o, f), d++) : d && (i(o, f), d--);
     }
     if (!c) for (; d--; ) o.unshift("..");
     !c || "" === o[0] || (o[0] && r(o[0])) || o.unshift("");
-    var p = o.join("/");
-    return n && "/" !== p.substr(-1) && (p += "/"), p;
+    var _ = o.join("/");
+    return n && "/" !== _.substr(-1) && (_ += "/"), _;
 };

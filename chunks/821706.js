@@ -14,8 +14,8 @@ var r = n(54381),
     u = n(690501),
     d = n(228168),
     f = n(981631),
-    _ = n(388032);
-function p(e, t, n) {
+    p = n(388032);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,12 +39,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,7 +61,7 @@ function g(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -99,7 +99,7 @@ function y(e) {
     return {
         action: d.yM.SEND_FRIEND_REQUEST,
         icon: a.oLu,
-        text: _.intl.string(_.t.w5uwoI),
+        text: p.intl.string(p.t.w5uwoI),
         onClick: r,
     };
 }
@@ -110,7 +110,7 @@ function O(e) {
         userId: t,
         analyticsLocation: n,
     });
-    return (0, r.jsx)(l.O1, h({}, a, i));
+    return (0, r.jsx)(l.O1, m({}, a, i));
 }
 function v(e) {
     let { userId: t, analyticsLocation: n } = e,
@@ -120,9 +120,9 @@ function v(e) {
         }),
         { text: a } = i,
         o = E(i, ["text"]);
-    return (0, r.jsx)(l.f6, h({ tooltipText: a }, o));
+    return (0, r.jsx)(l.f6, m({ tooltipText: a }, o));
 }
-function I(e) {
+function S(e) {
     var { type: t, user: n, analyticsLocation: a } = e,
         o = E(e, ["type", "user", "analyticsLocation"]);
     let l = (0, c.Y)({
@@ -132,31 +132,31 @@ function I(e) {
         u = i.useRef(null),
         d = t === s.j8.ICON ? s.ef : s.oY;
     return 0 === l.length
-        ? (0, r.jsx)(d, g(h({}, o), { disabled: !0 }))
+        ? (0, r.jsx)(d, g(m({}, o), { disabled: !0 }))
         : (0, r.jsx)(c.Z, {
               targetElementRef: u,
               menuItems: l,
-              children: (e) => (0, r.jsx)("div", g(h({ ref: u }, e), { children: (0, r.jsx)(d, h({}, o)) })),
+              children: (e) => (0, r.jsx)("div", g(m({ ref: u }, e), { children: (0, r.jsx)(d, m({}, o)) })),
           });
 }
-let T = {
+let I = {
         [f.OGo.FRIEND]: a._uN,
         [f.OGo.PENDING_OUTGOING]: a.iHX,
         [f.OGo.PENDING_INCOMING]: a.iHX,
     },
-    S = {
-        [f.OGo.FRIEND]: () => _.intl.string(_.t.G7jMpU),
-        [f.OGo.PENDING_OUTGOING]: () => _.intl.string(_.t["s/+byI"]),
-        [f.OGo.PENDING_INCOMING]: () => _.intl.string(_.t["6QQCQ+"]),
+    T = {
+        [f.OGo.FRIEND]: () => p.intl.string(p.t.G7jMpU),
+        [f.OGo.PENDING_OUTGOING]: () => p.intl.string(p.t["s/+byI"]),
+        [f.OGo.PENDING_INCOMING]: () => p.intl.string(p.t["6QQCQ+"]),
     };
 function A(e) {
     var { type: t, user: n, relationshipType: i, analyticsLocation: a, shouldShowTooltip: o } = e,
         s = E(e, ["type", "user", "relationshipType", "analyticsLocation", "shouldShowTooltip"]);
-    let l = T[i],
-        c = S[i]();
+    let l = I[i],
+        c = T[i]();
     return (0, r.jsx)(
-        I,
-        h(
+        S,
+        m(
             {
                 type: t,
                 user: n,
@@ -191,24 +191,24 @@ function C(e) {
     let {
         tooltipText: d,
         onMouseEnter: f,
-        ariaLabel: _,
-        icon: p,
+        ariaLabel: p,
+        icon: _,
     } = (0, u.N)({
         gameFriends: i,
         hasOutgoingPendingGameFriends: a,
         hasIncomingPendingGameFriends: o,
     });
     return (0, r.jsx)(
-        I,
-        h(
+        S,
+        m(
             {
                 type: t,
                 tooltipText: d,
                 tooltipPosition: "left",
                 tooltipAlign: "top",
-                ariaLabel: _,
+                ariaLabel: p,
                 shouldShowTooltip: l,
-                icon: p,
+                icon: _,
                 onMouseEnter: f,
                 user: n,
                 analyticsLocation: s,

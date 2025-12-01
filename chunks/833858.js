@@ -51,7 +51,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -62,7 +62,7 @@ function _(e, t) {
         e
     );
 }
-let p = () => ({
+let _ = () => ({
         [a.tN.BRB]: {
             title: s.intl.string(s.t.fFTJTI),
             icon: c,
@@ -81,10 +81,10 @@ let p = () => ({
         },
         [a.tN.FOCUSING]: {
             title: s.intl.string(s.t.D5eCTx),
-            icon: r.Nl,
+            icon: r.FG,
         },
     }),
-    h = () => ({
+    m = () => ({
         [a.tN.BRB]: {
             title: s.intl.string(s.t.fFTJTI),
             emoji: {
@@ -121,8 +121,8 @@ let p = () => ({
             },
         },
     }),
-    m = () =>
-        _(d({}, h()), {
+    h = () =>
+        p(d({}, m()), {
             [a.tN.CHILLING]: {
                 title: s.intl.string(s.t.IeolFa),
                 emoji: {
@@ -134,12 +134,12 @@ let p = () => ({
     g = (e) => {
         switch (e) {
             case "illocons":
-                return p();
+                return _();
             case "twemoji":
             default:
-                return h();
-            case "twemojimild":
                 return m();
+            case "twemojimild":
+                return h();
         }
     },
     E = function (e, t) {

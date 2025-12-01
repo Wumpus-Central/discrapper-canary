@@ -22,7 +22,7 @@ function f(e) {
             [t],
         );
     if (t.length <= 1) return null;
-    let _ = t.map((e, n) =>
+    let p = t.map((e, n) =>
         (0, r.jsx)(
             l.O,
             {
@@ -38,7 +38,7 @@ function f(e) {
         children: [
             (0, r.jsx)("div", {
                 className: d.iconContainer,
-                children: _,
+                children: p,
             }),
             (0, r.jsx)("div", {
                 className: d.textContainer,

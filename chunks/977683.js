@@ -11,16 +11,16 @@ function u(e, t) {
     let u = (0, s.v)(e),
         d = (0, o.cE)(u.getChannelId())[u.id],
         f = (0, c.Z)(null == (n = u.poll) ? void 0 : n.expiry),
-        _ = a.Yk.useSetting(),
-        p = (0, i.ZP)(),
-        h = null != t ? t : p;
+        p = a.Yk.useSetting(),
+        _ = (0, i.ZP)(),
+        m = null != t ? t : _;
     return r.useMemo(
         () =>
             (0, l.ZP)(u, d, {
-                animateEmoji: _,
-                theme: h,
+                animateEmoji: p,
+                theme: m,
                 formattedExpirationLabel: f,
             }),
-        [_, u, d, f, h],
+        [p, u, d, f, m],
     );
 }

@@ -8,10 +8,10 @@ var a,
     u = n(433517),
     d = n(570140),
     f = n(131792),
-    _ = n(252982),
-    p = n(434529),
-    h = n(647711),
-    m = n(981631),
+    p = n(252982),
+    _ = n(434529),
+    m = n(647711),
+    h = n(981631),
     g = n(757744);
 function E(e, t, n) {
     return (
@@ -66,14 +66,14 @@ function O(e, t) {
     );
 }
 let v = "migrated",
-    I = 0.02,
-    T = 0.01,
-    S = {
-        [m.Odu.GUILDS]: {
+    S = 0.02,
+    I = 0.01,
+    T = {
+        [h.Odu.GUILDS]: {
             resizeX: !1,
             resizeY: !0,
             dragAnywhere: !1,
-            layoutPolicy: h.W.OPTIONAL,
+            layoutPolicy: m.W.OPTIONAL,
             defaultSettings: {
                 anchor: {
                     left: 0.175,
@@ -93,11 +93,11 @@ let v = "migrated",
             },
             version: g.bv,
         },
-        [m.Odu.TEXT]: {
+        [h.Odu.TEXT]: {
             resizeX: !0,
             resizeY: !0,
             dragAnywhere: !1,
-            layoutPolicy: h.W.OPTIONAL,
+            layoutPolicy: m.W.OPTIONAL,
             defaultSettings: {
                 anchor: {
                     left: 0.26,
@@ -117,11 +117,11 @@ let v = "migrated",
             },
             version: g.bv,
         },
-        [m.Odu.VOICE]: {
+        [h.Odu.VOICE]: {
             resizeX: !1,
             resizeY: !1,
             dragAnywhere: !0,
-            layoutPolicy: h.W.REQUIRED,
+            layoutPolicy: m.W.REQUIRED,
             defaultSettings: {
                 anchor: {
                     left: 0.011,
@@ -141,11 +141,11 @@ let v = "migrated",
             },
             version: g.bv,
         },
-        [m.Odu.GUILDS_TEXT]: {
+        [h.Odu.GUILDS_TEXT]: {
             resizeX: !0,
             resizeY: !0,
             dragAnywhere: !1,
-            layoutPolicy: h.W.OPTIONAL_DEFAULT,
+            layoutPolicy: m.W.OPTIONAL_DEFAULT,
             defaultSettings: {
                 anchor: {
                     left: void 0,
@@ -165,14 +165,14 @@ let v = "migrated",
             },
             version: g.bv,
         },
-        [m.Odu.VOICE_V3]: {
+        [h.Odu.VOICE_V3]: {
             resizeX: !1,
             resizeY: !1,
             dragAnywhere: !0,
-            layoutPolicy: h.W.REQUIRED,
+            layoutPolicy: m.W.REQUIRED,
             defaultSettings: {
                 anchor: {
-                    left: T,
+                    left: I,
                     top: 0.35,
                     bottom: void 0,
                     right: void 0,
@@ -189,16 +189,16 @@ let v = "migrated",
             },
             version: g.HN,
         },
-        [m.Odu.VIDEO]: {
+        [h.Odu.VIDEO]: {
             resizeX: !0,
             resizeY: !0,
             dragAnywhere: !0,
-            layoutPolicy: h.W.OPTIONAL_DEFAULT,
+            layoutPolicy: m.W.OPTIONAL_DEFAULT,
             defaultSettings: {
                 anchor: {
-                    left: T,
+                    left: I,
                     top: void 0,
-                    bottom: I,
+                    bottom: S,
                     right: void 0,
                 },
                 size: {
@@ -214,17 +214,17 @@ let v = "migrated",
             },
             version: g.HN,
         },
-        [m.Odu.GO_LIVE]: {
+        [h.Odu.GO_LIVE]: {
             resizeX: !0,
             resizeY: !0,
             dragAnywhere: !0,
-            layoutPolicy: h.W.OPTIONAL_DEFAULT,
+            layoutPolicy: m.W.OPTIONAL_DEFAULT,
             defaultSettings: {
                 anchor: {
                     left: void 0,
                     top: void 0,
-                    bottom: I,
-                    right: T,
+                    bottom: S,
+                    right: I,
                 },
                 size: {
                     fixed: !0,
@@ -239,15 +239,15 @@ let v = "migrated",
             },
             version: g.HN,
         },
-        [m.Odu.QUICK_ACTIONS]: {
+        [h.Odu.QUICK_ACTIONS]: {
             resizeX: !1,
             resizeY: !1,
             dragAnywhere: !0,
-            layoutPolicy: h.W.REQUIRED,
+            layoutPolicy: m.W.REQUIRED,
             defaultSettings: {
                 anchor: {
                     left: 0.34,
-                    top: I,
+                    top: S,
                     bottom: void 0,
                     right: void 0,
                 },
@@ -263,15 +263,15 @@ let v = "migrated",
             },
             version: g.HN,
         },
-        [m.Odu.NOTIFICATIONS]: {
+        [h.Odu.NOTIFICATIONS]: {
             resizeX: !1,
             resizeY: !1,
             dragAnywhere: !0,
-            layoutPolicy: h.W.REQUIRED,
+            layoutPolicy: m.W.REQUIRED,
             defaultSettings: {
                 anchor: {
-                    left: T,
-                    top: I,
+                    left: I,
+                    top: S,
                     bottom: void 0,
                     right: void 0,
                 },
@@ -287,17 +287,17 @@ let v = "migrated",
             },
             version: g.HN,
         },
-        [m.Odu.ACTIVITY]: {
+        [h.Odu.ACTIVITY]: {
             resizeX: !1,
             resizeY: !1,
             dragAnywhere: !0,
-            layoutPolicy: h.W.REQUIRED,
+            layoutPolicy: m.W.REQUIRED,
             defaultSettings: {
                 anchor: {
                     left: void 0,
                     top: 0.35,
                     bottom: void 0,
-                    right: T,
+                    right: I,
                 },
                 size: {
                     height: "auto",
@@ -311,17 +311,17 @@ let v = "migrated",
             },
             version: g.HN,
         },
-        [m.Odu.FRIENDS]: {
+        [h.Odu.FRIENDS]: {
             resizeX: !1,
             resizeY: !0,
             dragAnywhere: !0,
-            layoutPolicy: h.W.OPTIONAL_DEFAULT,
+            layoutPolicy: m.W.OPTIONAL_DEFAULT,
             defaultSettings: {
                 anchor: {
                     left: void 0,
-                    top: 6 * I,
+                    top: 6 * S,
                     bottom: void 0,
-                    right: T,
+                    right: I,
                 },
                 size: {
                     fixed: !0,
@@ -336,11 +336,11 @@ let v = "migrated",
             },
             version: g.HN,
         },
-        [m.Odu.CLICK_ZONE_DEBUG]: {
+        [h.Odu.CLICK_ZONE_DEBUG]: {
             resizeX: !0,
             resizeY: !0,
             dragAnywhere: !0,
-            layoutPolicy: h.W.DEBUG,
+            layoutPolicy: m.W.DEBUG,
             defaultSettings: {
                 anchor: {
                     left: void 0,
@@ -360,11 +360,11 @@ let v = "migrated",
             },
             version: g.HN,
         },
-        [m.Odu.PERFORMANCE_DEBUG]: {
+        [h.Odu.PERFORMANCE_DEBUG]: {
             resizeX: !1,
             resizeY: !1,
             dragAnywhere: !0,
-            layoutPolicy: h.W.DEBUG,
+            layoutPolicy: m.W.DEBUG,
             defaultSettings: {
                 anchor: {
                     left: void 0,
@@ -395,9 +395,9 @@ function A(e) {
         "" === r.id && (r.id = (0, l.Z)()),
             null != n &&
                 ((r.pinned = n.pinned),
-                -1 !== n.anchor.left && (r.anchor = (0, p.jL)(n.anchor, o)),
-                -1 !== n.size.width && (r.size = (0, p.Ox)(n.size, o))),
-            (i = O(b({}, i), { [r.id]: new _.Z(r) })),
+                -1 !== n.anchor.left && (r.anchor = (0, _.jL)(n.anchor, o)),
+                -1 !== n.size.width && (r.size = (0, _.Ox)(n.size, o))),
+            (i = O(b({}, i), { [r.id]: new p.Z(r) })),
             s.push(r.id);
     }),
         (r = O(b({}, r), {
@@ -423,10 +423,10 @@ function N(e, t) {
     let a = r[n.layoutId];
     return null != a && t(n, a);
 }
-function R(e) {
+function P(e) {
     let { widgetId: t, anchor: n, size: r, opacity: i, minSize: a, defaultSize: o } = e;
     return N(t, (e, t) =>
-        M({
+        j({
             widget: e,
             anchor: n,
             size: r,
@@ -436,11 +436,11 @@ function R(e) {
         }),
     );
 }
-function P(e) {
+function R(e) {
     let { widgetId: t } = e;
-    return N(t, (e, t) => D(t, e.id));
+    return N(t, (e, t) => w(t, e.id));
 }
-function D(e, t) {
+function w(e, t) {
     let n = H(e);
     n.sort((e, t) => e.zIndex - t.zIndex);
     let r = n.findIndex((e) => e.id === t);
@@ -449,23 +449,23 @@ function D(e, t) {
     for (let e = 0; e < n.length; e++) F(n[e], e);
     return !0;
 }
-function w(e) {
+function D(e) {
     let { widgetId: t, meta: n } = e;
     return N(t, (e, t) => {
-        L(e, n);
+        x(e, n);
     });
 }
-function L(e, t) {
+function x(e, t) {
     var n;
     i = O(b({}, i), { [e.id]: e.merge({ meta: b({}, null != (n = e.meta) ? n : {}, t) }) });
 }
-function x(e) {
+function L(e) {
     let { widgetId: t, pinned: n } = e;
     return N(t, (e, t) => {
         V(e, n);
     });
 }
-function M(e) {
+function j(e) {
     let { widget: t, anchor: n, size: r, opacity: a, minSize: o, defaultSize: s } = e;
     if (
         ((i = O(b({}, i), {
@@ -478,17 +478,17 @@ function M(e) {
         })),
         null != s)
     ) {
-        let e = S[t.type];
+        let e = T[t.type];
         null != e && (e.defaultSettings.size = b({ fixed: e.defaultSettings.size.fixed }, s));
     }
 }
-function k(e) {
+function M(e) {
     i = O(b({}, i), { [e.id]: e.merge({ showExtrasHintTimestamp: Date.now() }) });
 }
-function j(e) {
+function k(e) {
     let { widgetId: t } = e;
     return N(t, (e, t) => {
-        k(e);
+        M(e);
     });
 }
 function U(e) {
@@ -513,10 +513,10 @@ function G(e) {
     }),
         (r = O(b({}, r), { [n.id]: n.set("widgets", []) }));
 }
-function B(e) {
+function Z(e) {
     let { widgetConfigs: t } = e;
     t.forEach((e) => {
-        let t = new _.Z(e),
+        let t = new p.Z(e),
             n = r[t.layoutId];
         if (null == n) throw Error("LayoutStore - handleAddWidget: Invalid layoutId");
         (t = t.set("zIndex", n.widgets.length)), (i = O(b({}, i), { [t.id]: t }));
@@ -524,9 +524,9 @@ function B(e) {
         r = O(b({}, r), { [n.id]: n.set("widgets", a) });
     });
 }
-function Z(e) {
+function B(e) {
     let { widgetType: t, defaultConfig: n } = e;
-    S[t] = b({}, S[t], n);
+    T[t] = b({}, T[t], n);
 }
 function F(e, t) {
     i = O(b({}, i), { [e.id]: e.set("zIndex", t) });
@@ -557,13 +557,13 @@ function W(e) {
     let t = {};
     return (
         s().forEach(e, (e, n) => {
-            t[n] = new _.Z(e);
+            t[n] = new p.Z(e);
         }),
         t
     );
 }
 function K(e) {
-    let t = S[e];
+    let t = T[e];
     if (null != t) return t.defaultSettings;
 }
 class z extends (a = c.ZP.PersistedStore) {
@@ -573,20 +573,20 @@ class z extends (a = c.ZP.PersistedStore) {
             : ((r = {}), (i = {}));
         let t = !1,
             n = [];
-        s().forEach(S, (e, t) => {
-            e.layoutPolicy === h.W.REQUIRED && n.push(t);
+        s().forEach(T, (e, t) => {
+            e.layoutPolicy === m.W.REQUIRED && n.push(t);
         }),
             s().forEach(r, (e, a) => {
                 let o = this.getWidgetsForLayout(a),
                     s = !1;
                 for (let r of n) {
                     let n = o.find((e) => e.type === r);
-                    if (null != n || S[r].version !== e.version) continue;
+                    if (null != n || T[r].version !== e.version) continue;
                     s = t = !0;
                     let c = (0, l.Z)(),
                         u = K(r);
                     if (null == u) return;
-                    (n = new _.Z(
+                    (n = new p.Z(
                         O(b({}, u), {
                             type: r,
                             id: c,
@@ -650,13 +650,13 @@ class z extends (a = c.ZP.PersistedStore) {
                     e.pinned || n.push(e.type);
                     return;
                 }
-                t.layoutPolicy === h.W.REQUIRED || e.pinned || n.push(e.type);
+                t.layoutPolicy === m.W.REQUIRED || e.pinned || n.push(e.type);
             }),
             n
         );
     }
     getWidgetConfig(e) {
-        return S[e];
+        return T[e];
     }
     getWidgetDefaultSettings(e) {
         return K(e);
@@ -672,7 +672,7 @@ class z extends (a = c.ZP.PersistedStore) {
         return Object.values(i).filter((n) => n.type === e && n.layoutId === t);
     }
     getRegisteredWidgets() {
-        return S;
+        return T;
     }
     getDefaultLayout(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
@@ -680,8 +680,8 @@ class z extends (a = c.ZP.PersistedStore) {
         return (
             s().forEach(this.getRegisteredWidgets(), (r, i) => {
                 switch (r.layoutPolicy) {
-                    case h.W.REQUIRED:
-                    case h.W.OPTIONAL_DEFAULT:
+                    case m.W.REQUIRED:
+                    case m.W.OPTIONAL_DEFAULT:
                         var a;
                         if ((null != (a = r.version) ? a : 0) === t) {
                             let t = K(i);
@@ -746,7 +746,7 @@ E(z, "displayName", "LayoutStore"),
         },
         (e) => {
             let { layouts: t, widgets: n } = e,
-                r = new Set(Object.keys(m.Odu)),
+                r = new Set(Object.keys(h.Odu)),
                 i = Array.from(n).filter((e) => {
                     let [t] = e;
                     return !r.has(t);
@@ -768,8 +768,8 @@ E(z, "displayName", "LayoutStore"),
                             });
                             return (
                                 null != n &&
-                                (null == a && n[1].type === m.Odu.VOICE && (a = n[0]),
-                                null == r && n[1].type === m.Odu.TEXT && (r = n[1].pinned),
+                                (null == a && n[1].type === h.Odu.VOICE && (a = n[0]),
+                                null == r && n[1].type === h.Odu.TEXT && (r = n[1].pinned),
                                 (null != r && null != a) || void 0)
                             );
                         }),
@@ -778,12 +778,12 @@ E(z, "displayName", "LayoutStore"),
                         return;
                     let o = (0, l.Z)();
                     n.widgets = [a, o];
-                    let s = K(m.Odu.GUILDS_TEXT);
+                    let s = K(h.Odu.GUILDS_TEXT);
                     null != s &&
                         i.push([
                             o,
                             O(b({}, s), {
-                                type: m.Odu.GUILDS_TEXT,
+                                type: h.Odu.GUILDS_TEXT,
                                 id: o,
                                 layoutId: t,
                                 zIndex: 2,
@@ -824,13 +824,13 @@ E(z, "displayName", "LayoutStore"),
     ]);
 let q = new z(d.Z, {
     LAYOUT_CREATE: A,
-    LAYOUT_SET_PINNED: x,
-    LAYOUT_UPDATE_WIDGET: R,
-    LAYOUT_SET_TOP_WIDGET: P,
+    LAYOUT_SET_PINNED: L,
+    LAYOUT_UPDATE_WIDGET: P,
+    LAYOUT_SET_TOP_WIDGET: R,
     LAYOUT_DELETE_WIDGET: U,
     LAYOUT_DELETE_ALL_WIDGETS: G,
-    LAYOUT_CREATE_WIDGETS: B,
-    LAYOUT_SET_WIDGET_META: w,
-    LAYOUT_SHOW_OVERLAY_EXTRAS_HINT: j,
-    LAYOUT_SET_DEFAULT_CONFIG: Z,
+    LAYOUT_CREATE_WIDGETS: Z,
+    LAYOUT_SET_WIDGET_META: D,
+    LAYOUT_SHOW_OVERLAY_EXTRAS_HINT: k,
+    LAYOUT_SET_DEFAULT_CONFIG: B,
 });

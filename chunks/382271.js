@@ -9,17 +9,17 @@ var r = n(54381),
     u = n(481060),
     d = n(493683),
     f = n(518950),
-    _ = n(342386),
-    p = n(626135),
-    h = n(63063),
-    m = n(51144),
+    p = n(342386),
+    _ = n(626135),
+    m = n(63063),
+    h = n(51144),
     g = n(281494),
     E = n(276444),
     b = n(981631),
     y = n(388032),
     O = n(734501),
     v = n(690813);
-function I(e, t, n) {
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +32,7 @@ function I(e, t, n) {
         e
     );
 }
-function T(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,13 +43,13 @@ function T(e) {
                 }),
             )),
             r.forEach(function (t) {
-                I(e, t, n[t]);
+                S(e, t, n[t]);
             });
     }
     return e;
 }
-let S = (e, t) => {
-        (0, _.default)(), d.Z.openPrivateChannel({ recipientIds: e }), t();
+let T = (e, t) => {
+        (0, p.default)(), d.Z.openPrivateChannel({ recipientIds: e }), t();
     },
     A = (e) => {
         let { recipient: t, status: n, onClose: i } = e,
@@ -57,14 +57,14 @@ let S = (e, t) => {
                 userId: null == t ? void 0 : t.id,
                 size: u.EFr.SIZE_56,
             }),
-            l = m.ZP.getName(t),
+            l = h.ZP.getName(t),
             c = n === g.Fz.FAIL;
         return (0, r.jsxs)("div", {
             className: O.trialRecipientRow,
             children: [
                 (0, r.jsx)(
                     u.qEK,
-                    T(
+                    I(
                         {
                             imageClassName: o()({ [O.erroredAvatar]: c }),
                             src: a,
@@ -102,7 +102,7 @@ let S = (e, t) => {
                     size: "sm",
                     text: y.intl.string(y.t["g33r/P"]),
                     icon: u.kBi,
-                    onClick: () => S(t.id, i),
+                    onClick: () => T(t.id, i),
                 }),
             ],
         });
@@ -110,7 +110,7 @@ let S = (e, t) => {
     C = (e) => {
         let { results: t, onClose: n, isReminderConfirmation: a } = e,
             o = (0, l.e7)([E.Z], () => E.Z.getReferralsRemaining());
-        p.default.track(b.rMx.REFERRAL_PROGRAM_SHARE_CTA_CLICKED);
+        _.default.track(b.rMx.REFERRAL_PROGRAM_SHARE_CTA_CLICKED);
         let { reducedMotion: d } = i.useContext(c.Sf);
         if (null === o) return (0, r.jsx)(u.$jN, {});
         let f = () =>
@@ -123,17 +123,17 @@ let S = (e, t) => {
                           rive: u.p8m,
                           type: "rive",
                       },
-            _ = () =>
+            p = () =>
                 0 === t.filter((e) => e.status === g.Fz.SUCCESS).length
                     ? y.intl.string(y.t["7VBEue"])
                     : !0 === a
                       ? y.intl.string(y.t.GP5lbq)
                       : y.intl.string(y.t.tKCltd),
-            m = () =>
+            h = () =>
                 !0 === a
-                    ? y.intl.format(y.t["4gJJfD"], { helpdeskArticle: h.Z.getArticleURL(b.BhN.REFERRAL_PROGRAM) })
-                    : y.intl.format(y.t.AwGSWl, { helpdeskArticle: h.Z.getArticleURL(b.BhN.REFERRAL_PROGRAM) }),
-            I = () =>
+                    ? y.intl.format(y.t["4gJJfD"], { helpdeskArticle: m.Z.getArticleURL(b.BhN.REFERRAL_PROGRAM) })
+                    : y.intl.format(y.t.AwGSWl, { helpdeskArticle: m.Z.getArticleURL(b.BhN.REFERRAL_PROGRAM) }),
+            S = () =>
                 (0, r.jsx)("div", {
                     className: O.trialRecipientContainer,
                     children: t.map((e) =>
@@ -151,10 +151,10 @@ let S = (e, t) => {
         return (0, r.jsx)(s.ExpressiveModal, {
             graphic: f(),
             gradientColor: "nitro-pink",
-            title: _(),
-            subtitle: m(),
+            title: p(),
+            subtitle: h(),
             onClose: n,
             transitionState: s.Dvm.ENTERED,
-            children: I(),
+            children: S(),
         });
     };

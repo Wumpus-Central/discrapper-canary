@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => h });
 var r = n(54381),
     i = n(473749),
     l = n(681715),
@@ -50,7 +50,7 @@ function f(e, t) {
         e
     );
 }
-function p(e) {
+function h(e) {
     let { channel: t } = e,
         n = i.useRef(null);
     return (0, r.jsx)(o.yRy, {

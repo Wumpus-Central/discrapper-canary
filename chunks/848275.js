@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(35282), n(388685), n(539854);
+n.d(t, { Z: () => _ }), n(35282), n(388685), n(539854);
 var r = n(54381);
 n(473749);
 var i = n(481060),
@@ -119,7 +119,7 @@ function f(e) {
               }),
           });
 }
-function _(e) {
+function p(e) {
     let { question: t, questionId: n, value: o, onValueChange: l } = e,
         { selectedChoices: u, textInputs: f } = ((e) => {
             if (null == e || "" === e)
@@ -142,20 +142,20 @@ function _(e) {
                 }
             );
         })(o),
-        _ = (e, t) =>
+        p = (e, t) =>
             e
                 .map((e) => {
                     let n = t[e];
                     return null != n && "" !== n ? "".concat(e, ":TEXT:").concat(n) : e;
                 })
                 .join(","),
-        p = (e) => {
+        _ = (e) => {
             let t = u.includes(e) ? u.filter((t) => t !== e) : [...u, e],
                 r = c({}, f);
-            t.includes(e) || delete r[e], l(n, _(t, r));
+            t.includes(e) || delete r[e], l(n, p(t, r));
         },
-        h = (e, t) => {
-            l(n, _(u, d(c({}, f), { [e]: t })));
+        m = (e, t) => {
+            l(n, p(u, d(c({}, f), { [e]: t })));
         };
     return null == t.Choices || 0 === Object.keys(t.Choices).length
         ? (0, r.jsx)("div", {
@@ -178,10 +178,10 @@ function _(e) {
                               choiceId: t,
                               choice: n,
                               isSelected: u.includes(t),
-                              onSelectionChange: p,
+                              onSelectionChange: _,
                               inputType: "checkbox",
                               textInputValue: f[t],
-                              onTextInputChange: h,
+                              onTextInputChange: m,
                           },
                           t,
                       );
@@ -189,7 +189,7 @@ function _(e) {
               }),
           });
 }
-function p(e) {
+function _(e) {
     let { question: t, questionId: n, value: i, onValueChange: a } = e;
     return t.Selector === o.E_.SINGLE_ANSWER
         ? (0, r.jsx)(f, {
@@ -198,7 +198,7 @@ function p(e) {
               value: i,
               onValueChange: a,
           })
-        : (0, r.jsx)(_, {
+        : (0, r.jsx)(p, {
               question: t,
               questionId: n,
               value: i,

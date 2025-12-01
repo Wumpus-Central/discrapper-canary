@@ -1,11 +1,11 @@
 n.d(t, {
     S1: () => u,
     ZP: () => g,
-    pW: () => p,
-    wk: () => h,
+    pW: () => _,
+    wk: () => m,
     xv: () => f,
-    zc: () => _,
-    zz: () => m,
+    zc: () => p,
+    zz: () => h,
 }),
     n(997841);
 var r = n(544891),
@@ -31,13 +31,13 @@ function d(e, t, n) {
 function f() {
     i.Z.dispatch({ type: "CHANNEL_SETTINGS_CLOSE" });
 }
-function _(e) {
+function p(e) {
     i.Z.dispatch({
         type: "CHANNEL_SETTINGS_SET_SECTION",
         section: e,
     });
 }
-function p(e) {
+function _(e) {
     let {
         name: t,
         type: n,
@@ -50,18 +50,18 @@ function p(e) {
         defaultThreadRateLimitPerUser: u,
         defaultAutoArchiveDuration: d,
         template: f,
-        defaultReactionEmoji: _,
-        rtcRegion: p,
-        videoQualityMode: h,
-        autoArchiveDuration: m,
+        defaultReactionEmoji: p,
+        rtcRegion: _,
+        videoQualityMode: m,
+        autoArchiveDuration: h,
         locked: g,
         invitable: E,
         availableTags: b,
         defaultSortOrder: y,
         defaultForumLayout: O,
         defaultTagSetting: v,
-        iconEmoji: I,
-        themeColor: T,
+        iconEmoji: S,
+        themeColor: I,
     } = e;
     i.Z.dispatch({
         type: "CHANNEL_SETTINGS_UPDATE",
@@ -76,49 +76,49 @@ function p(e) {
         defaultThreadRateLimitPerUser: u,
         defaultAutoArchiveDuration: d,
         template: f,
-        defaultReactionEmoji: _,
-        rtcRegion: p,
-        videoQualityMode: h,
-        autoArchiveDuration: m,
+        defaultReactionEmoji: p,
+        rtcRegion: _,
+        videoQualityMode: m,
+        autoArchiveDuration: h,
         locked: g,
         invitable: E,
         availableTags: b,
         defaultSortOrder: y,
         defaultForumLayout: O,
         defaultTagSetting: v,
-        iconEmoji: I,
-        themeColor: T,
+        iconEmoji: S,
+        themeColor: I,
     });
 }
-async function h(e, t) {
+async function m(e, t) {
     let {
             name: n,
             type: l,
             position: u,
             topic: d,
             bitrate: f,
-            userLimit: _,
-            nsfw: p,
-            flags: h,
-            permissionOverwrites: m,
+            userLimit: p,
+            nsfw: _,
+            flags: m,
+            permissionOverwrites: h,
             rateLimitPerUser: g,
             defaultThreadRateLimitPerUser: E,
             defaultAutoArchiveDuration: b,
             template: y,
             defaultReactionEmoji: O,
             rtcRegion: v,
-            videoQualityMode: I,
-            autoArchiveDuration: T,
-            locked: S,
+            videoQualityMode: S,
+            autoArchiveDuration: I,
+            locked: T,
             invitable: A,
             availableTags: C,
             defaultSortOrder: N,
-            defaultForumLayout: R,
-            defaultTagSetting: P,
-            iconEmoji: D,
-            themeColor: w,
+            defaultForumLayout: P,
+            defaultTagSetting: R,
+            iconEmoji: w,
+            themeColor: D,
         } = t,
-        L = s.Z.getChannel(e);
+        x = s.Z.getChannel(e);
     return (
         i.Z.dispatch({ type: "CHANNEL_SETTINGS_SUBMIT" }),
         await o.Z.unarchiveThreadIfNecessary(e),
@@ -131,18 +131,18 @@ async function h(e, t) {
                     position: u,
                     topic: d,
                     bitrate: f,
-                    user_limit: _,
-                    nsfw: p,
-                    flags: h,
-                    permission_overwrites: m,
+                    user_limit: p,
+                    nsfw: _,
+                    flags: m,
+                    permission_overwrites: h,
                     rate_limit_per_user: g,
                     default_thread_rate_limit_per_user: E,
                     default_auto_archive_duration: b,
                     template: y,
                     rtc_region: v,
-                    video_quality_mode: I,
-                    auto_archive_duration: T,
-                    locked: S,
+                    video_quality_mode: S,
+                    auto_archive_duration: I,
+                    locked: T,
                     invitable: A,
                     default_reaction_emoji:
                         null != O
@@ -164,18 +164,18 @@ async function h(e, t) {
                                   moderated: e.moderated,
                               })),
                     default_sort_order: N,
-                    default_forum_layout: R,
-                    default_tag_setting: P,
+                    default_forum_layout: P,
+                    default_tag_setting: R,
                     icon_emoji:
-                        null != D
+                        null != w
                             ? {
-                                  id: D.id,
-                                  name: D.name,
+                                  id: w.id,
+                                  name: w.name,
                               }
-                            : null === D
+                            : null === w
                               ? null
                               : void 0,
-                    theme_color: w,
+                    theme_color: D,
                 },
                 oldFormErrors: !0,
                 rejectWithError: !1,
@@ -186,8 +186,8 @@ async function h(e, t) {
                         type: "CHANNEL_SETTINGS_SUBMIT_SUCCESS",
                         channelId: e,
                     });
-                    let n = null == L ? void 0 : L.getGuildId();
-                    return null == n || (null == L ? void 0 : L.isThread()) || a.Z.checkGuildTemplateDirty(n), t;
+                    let n = null == x ? void 0 : x.getGuildId();
+                    return null == n || (null == x ? void 0 : x.isThread()) || a.Z.checkGuildTemplateDirty(n), t;
                 },
                 (e) => (
                     i.Z.dispatch({
@@ -199,7 +199,7 @@ async function h(e, t) {
             )
     );
 }
-async function m(e) {
+async function h(e) {
     let t = s.Z.getChannel(e);
     await r.tn.del({
         url: c.ANM.CHANNEL(e),
@@ -213,16 +213,16 @@ let g = {
     init: u,
     open: d,
     close: f,
-    setSection: _,
+    setSection: p,
     selectPermissionOverwrite: function (e) {
         i.Z.dispatch({
             type: "CHANNEL_SETTINGS_OVERWRITE_SELECT",
             overwriteId: e,
         });
     },
-    updateChannel: p,
-    saveChannel: h,
-    deleteChannel: m,
+    updateChannel: _,
+    saveChannel: m,
+    deleteChannel: h,
     updateVoiceChannelStatus: function (e, t) {
         return r.tn.put({
             url: c.ANM.UPDATE_VOICE_CHANNEL_STATUS(e),

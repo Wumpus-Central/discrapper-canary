@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(54381);
 n(473749);
 var i = n(512722),
@@ -10,7 +10,7 @@ var i = n(512722),
     u = n(197344),
     d = n(871465),
     f = n(388032);
-function _() {
+function p() {
     let e = (0, o.e7)([c.Z], () => c.Z.getSoundpack()),
         t = u.Z.useHolidaySoundpack();
     a()(null != t, "should not render this without a holiday soundpack");

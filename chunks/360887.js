@@ -61,7 +61,7 @@ function b(e) {
                     b("error");
             }
         }, []),
-        N = i.useCallback((e) => {
+        S = i.useCallback((e) => {
             var t;
             let n = null != (t = g.default.getFingerprint()) ? t : g.default.getId(),
                 r = "discord://login/one-time?token=".concat(encodeURIComponent(e));
@@ -77,7 +77,7 @@ function b(e) {
                     : b("app_launch_not_supported");
             });
         }, []),
-        S = i.useCallback(
+        N = i.useCallback(
             (e) => {
                 var t;
                 let r = null != (t = g.default.getFingerprint()) ? t : g.default.getId();
@@ -101,15 +101,15 @@ function b(e) {
                                           fingerprint: r,
                                       }),
                                       b("app_launched"))
-                                    : N(e);
+                                    : S(e);
                             })
                             .catch(() => {
-                                N(e);
+                                S(e);
                             })
                             .then(() => n.disconnect());
                     });
             },
-            [N],
+            [S],
         );
     if (
         (i.useEffect(() => {
@@ -134,8 +134,8 @@ function b(e) {
                 return;
             }
             if ((0, p.isDesktop)()) return void y(o);
-            I.current || ((I.current = !0), b("rpc_attempting"), S(o));
-        }, [o, l, y, S]),
+            I.current || ((I.current = !0), b("rpc_attempting"), N(o));
+        }, [o, l, y, N]),
         a.tq || a.Em)
     ) {
         let e = null == o || "string" != typeof o ? "missing_token" : "invalid_token";

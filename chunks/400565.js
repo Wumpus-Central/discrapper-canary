@@ -1,4 +1,4 @@
-n.d(t, { U: () => p });
+n.d(t, { U: () => f });
 var r = n(54381),
     i = n(473749),
     l = n(442837),
@@ -21,31 +21,31 @@ let d = (e) => {
                   }),
               });
     },
-    p = i.memo(function (e) {
+    f = i.memo(function (e) {
         var t, n;
         let { item: i } = e,
-            p = null,
+            f = null,
             h = !1,
-            f = (0, l.e7)([s.Z], () => s.Z.getGuild(i.guild_id));
+            p = (0, l.e7)([s.Z], () => s.Z.getGuild(i.guild_id));
         if (null != i.icon_name)
-            p = (0, r.jsx)("img", {
+            f = (0, r.jsx)("img", {
                 alt: "",
                 src: c.VH[(0, c.RB)(i.icon_name)],
             });
         else if (null != i.other_user) {
             let e = i.other_user instanceof a.Z ? i.other_user : new a.Z(i.other_user),
                 n = null != (t = e.globalName) ? t : e.username;
-            (p = (0, r.jsx)("img", {
+            (f = (0, r.jsx)("img", {
                 alt: n,
                 className: u.image,
                 src: e.getAvatarURL(void 0, 40),
             })),
                 (h = !0);
         } else
-            p =
+            f =
                 null != i.icon_url
                     ? (0, r.jsx)("img", {
-                          alt: null != (n = null == f ? void 0 : f.name) ? n : "",
+                          alt: null != (n = null == p ? void 0 : p.name) ? n : "",
                           className: u.image,
                           src: i.icon_url,
                       })
@@ -67,7 +67,7 @@ let d = (e) => {
                     children: (0, r.jsx)("div", {
                         className: u.imageContainer,
                         style: h ? void 0 : { backgroundColor: (0, c.Vu)(i) },
-                        children: p,
+                        children: f,
                     }),
                 }),
                 (0, r.jsx)(d, { mask: g }),

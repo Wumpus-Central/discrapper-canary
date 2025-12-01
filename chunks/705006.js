@@ -3,7 +3,7 @@ var r = n(186102),
     i = n(873741),
     a = n(866960),
     o = n(626135),
-    s = n(569984),
+    s = n(616022),
     l = n(704161),
     c = n(981631);
 function u(e, t, n) {
@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,8 +58,8 @@ function _(e, t) {
         e
     );
 }
-let p = 0.1;
-function h(e, t) {
+let _ = 0.1;
+function m(e, t) {
     let n = (e) => (null == e ? "null" : null == e.questId ? "no_serve" : "quest"),
         r = n(e),
         i = n(t);
@@ -69,22 +69,22 @@ function h(e, t) {
           ? "same_quest"
           : "different_quest";
 }
-function m(e, t, n) {
+function h(e, t, n) {
     var s, l, u, f;
-    if (Math.random() > p) return;
-    let h = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
-        m = (0, i.d)();
+    if (Math.random() > _) return;
+    let m = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
+        h = (0, i.d)();
     o.default.track(
         c.rMx.QUEST_DECISION_ROUNDTRIP,
-        _(
+        p(
             d(
-                _(d({}, (0, r.Z)()), {
+                p(d({}, (0, r.Z)()), {
                     endpoint: e.endpoint,
                     was_successful: e.wasSuccessful,
-                    api_latency_ms: h,
+                    api_latency_ms: m,
                     mobile_network_type: a.Z.getType(),
                 }),
-                null != m && { mobile_signal_strength_level: m },
+                null != h && { mobile_signal_strength_level: h },
             ),
             {
                 caller_source: e.callerSource,
@@ -117,7 +117,7 @@ class g {
         this.pendingRequests.set(e, o),
             setTimeout(() => {
                 let t = this.pendingRequests.get(e);
-                null != t && (m(t, "timeout", null), this.pendingRequests.delete(e));
+                null != t && (h(t, "timeout", null), this.pendingRequests.delete(e));
             }, 30000);
     }
     recordQuestRequestApiResponse(e, t) {
@@ -138,10 +138,10 @@ class g {
                               adRequestId: r,
                           }
                         : null;
-                (t = h(o.previousAdDecision, e)), (s = a);
+                (t = m(o.previousAdDecision, e)), (s = a);
             } else (t = "legacy"), (s = null);
-            m(
-                _(d({}, o), {
+            h(
+                p(d({}, o), {
                     apiResponseTimestamp: Date.now(),
                     wasSuccessful: n,
                     adRequestId: r,

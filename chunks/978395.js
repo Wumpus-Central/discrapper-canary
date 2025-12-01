@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => L });
 var r = n(54381),
     i = n(442837),
     a = n(481060),
@@ -9,40 +9,40 @@ var r = n(54381),
     u = n(5192),
     d = n(74538),
     f = n(209698),
-    _ = n(612600),
-    p = n(648052),
-    h = n(537006),
-    m = n(483424),
+    p = n(612600),
+    _ = n(648052),
+    m = n(537006),
+    h = n(483424),
     g = n(681837),
     E = n(91433),
     b = n(944043),
     y = n(678738),
     O = n(638970),
     v = n(675893),
-    I = n(502762),
-    T = n(530),
-    S = n(827313),
+    S = n(502762),
+    I = n(530),
+    T = n(827313),
     A = n(420654),
     C = n(116854),
     N = n(166584),
-    R = n(915014),
-    P = n(981631),
-    D = n(671955),
-    w = n(388032),
-    L = n(116649);
-function x(e) {
+    P = n(915014),
+    R = n(981631),
+    w = n(671955),
+    D = n(388032),
+    x = n(116649);
+function L(e) {
     let {
             user: t,
             currentUser: n,
-            displayProfile: x,
-            guild: M,
-            isHoveringOrFocusing: j,
+            displayProfile: L,
+            guild: j,
+            isHoveringOrFocusing: M,
             onOpenProfile: k,
             channelId: U,
             onClose: G,
         } = e,
-        B = u.ZP.useName(null == M ? void 0 : M.id, U, t),
-        { relationshipType: Z, originApplicationId: F } = (0, i.cj)([l.Z], () => ({
+        Z = u.ZP.useName(null == j ? void 0 : j.id, U, t),
+        { relationshipType: B, originApplicationId: F } = (0, i.cj)([l.Z], () => ({
             relationshipType: l.Z.getRelationshipType(t.id),
             originApplicationId: l.Z.getOriginApplicationId(t.id),
         })),
@@ -50,56 +50,56 @@ function x(e) {
         H = (0, i.e7)([c.Z], () => c.Z.hidePersonalInformation),
         Y = (0, f.b)({ location: "UserProfilePopoutBody" }),
         W = t.id === n.id,
-        K = (0, _.Z)({ location: "UserProfilePopoutBody" }),
-        z = (null == x ? void 0 : x.widgets) != null && x.widgets.length > 0,
+        K = (0, p.Z)({ location: "UserProfilePopoutBody" }),
+        z = (null == L ? void 0 : L.widgets) != null && L.widgets.length > 0,
         q = K && z,
-        X = (0, d.I5)(n);
+        Q = (0, d.I5)(n);
     return (0, r.jsxs)(a.Ttm, {
         fade: !0,
-        className: L.body,
+        className: x.body,
         children: [
-            (0, r.jsx)(T.Z, {
+            (0, r.jsx)(I.Z, {
                 user: t,
-                guildId: null == M ? void 0 : M.id,
+                guildId: null == j ? void 0 : j.id,
                 onOpenProfile: k,
                 onClose: G,
                 usernameIcon:
-                    t.hasAvatarForGuild(null == M ? void 0 : M.id) &&
+                    t.hasAvatarForGuild(null == j ? void 0 : j.id) &&
                     (0, r.jsx)(C.Z, {
                         user: t,
-                        nickname: B,
+                        nickname: Z,
                     }),
-                nickname: B,
-                pronouns: null == x ? void 0 : x.pronouns,
-                tags: (0, r.jsx)(p.Z, {
-                    displayProfile: x,
-                    themeType: D.l.POPOUT,
+                nickname: Z,
+                pronouns: null == L ? void 0 : L.pronouns,
+                tags: (0, r.jsx)(_.Z, {
+                    displayProfile: L,
+                    themeType: w.l.POPOUT,
                     onClose: G,
                 }),
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(g.Z, { userId: t.id }),
                         !H &&
-                            (0, r.jsx)(S.Z, {
+                            (0, r.jsx)(T.Z, {
                                 userId: t.id,
-                                isVisible: j,
+                                isVisible: M,
                                 onOpenProfile: k,
                             }),
                     ],
                 }),
             }),
-            Z === P.OGo.PENDING_INCOMING &&
-                (0, r.jsx)(I.Z.Overlay, {
+            B === R.OGo.PENDING_INCOMING &&
+                (0, r.jsx)(S.Z.Overlay, {
                     children: (0, r.jsx)(E.Z, {
                         user: t,
-                        guildId: null == M ? void 0 : M.id,
+                        guildId: null == j ? void 0 : j.id,
                         channelId: U,
                         applicationId: F,
                     }),
                 }),
             V.map((e) =>
                 (0, r.jsx)(
-                    I.Z.Overlay,
+                    S.Z.Overlay,
                     {
                         children: (0, r.jsx)(E.Z, {
                             user: t,
@@ -113,15 +113,15 @@ function x(e) {
             ),
             (0, r.jsx)(b.Z, { user: t }),
             !W &&
-                (0, r.jsx)(R.Z, {
+                (0, r.jsx)(P.Z, {
                     user: t,
                     onOpenProfile: (e) => (null == k ? void 0 : k({ section: e })),
                 }),
             t.isProvisional
-                ? (0, r.jsx)(I.Z.Overlay, {
-                      className: L.card,
+                ? (0, r.jsx)(S.Z.Overlay, {
+                      className: x.card,
                       children: (0, r.jsx)(y.Z, {
-                          heading: w.intl.string(w.t.Iyka0U),
+                          heading: D.intl.string(D.t.Iyka0U),
                           headingIcon: (0, r.jsx)(a.Mgn, {
                               size: "xxs",
                               color: a.TVs.colors.HEADER_PRIMARY,
@@ -132,40 +132,40 @@ function x(e) {
                   })
                 : (0, r.jsx)(A.Z, {
                       user: t,
-                      bio: null == x ? void 0 : x.bio,
+                      bio: null == L ? void 0 : L.bio,
                       hidePersonalInformation: H,
                       onClose: G,
                   }),
             q &&
                 (0, r.jsx)(v.Z, {
                     user: t,
-                    widgets: null == x ? void 0 : x.widgets,
+                    widgets: null == L ? void 0 : L.widgets,
                     onOpenUserProfileModal: k,
                 }),
             W &&
-                (0, r.jsx)(h.Z, {
-                    isPremiumUser: X,
+                (0, r.jsx)(m.Z, {
+                    isPremiumUser: Q,
                     onInteraction: G,
                 }),
             Y
                 ? (0, r.jsx)(O.Z, {
                       user: t,
                       currentUser: n,
-                      guildId: null == M ? void 0 : M.id,
+                      guildId: null == j ? void 0 : j.id,
                       onOpenUserProfileModal: k,
                       onClose: G,
                   })
-                : (0, r.jsx)(m.Z, {
+                : (0, r.jsx)(h.Z, {
                       user: t,
                       currentUser: n,
-                      guildId: null == M ? void 0 : M.id,
+                      guildId: null == j ? void 0 : j.id,
                       onClose: G,
                   }),
-            null != M &&
+            null != j &&
                 (0, r.jsx)(N.Z, {
                     user: t,
                     currentUser: n,
-                    guild: M,
+                    guild: j,
                 }),
         ],
     });

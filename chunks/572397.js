@@ -1,6 +1,6 @@
 n.d(t, {
-    J: () => h,
-    q: () => m,
+    J: () => m,
+    q: () => h,
 }),
     n(388685);
 var r = n(473749),
@@ -13,24 +13,24 @@ var r = n(473749),
     u = n(238302),
     d = n(514361),
     f = n(981631),
-    _ = n(474936),
-    p = n(874893);
-let h = () => {
+    p = n(474936),
+    _ = n(874893);
+let m = () => {
         let e = (0, i.e7)([d.Z], () => d.Z.gradientPreset),
-            t = (0, i.e7)([s.ZP], () => s.ZP.useSystemTheme === p.KW.ON),
+            t = (0, i.e7)([s.ZP], () => s.ZP.useSystemTheme === _.KW.ON),
             [n, a] = (0, r.useState)(t);
         return (
             (0, r.useEffect)(() => {
                 null == e && a(t);
             }, [e, t]),
             (0, r.useCallback)(() => {
-                null != e && ((0, u.kj)(), n && (0, o.hi)(p.KW.ON));
+                null != e && ((0, u.kj)(), n && (0, o.hi)(_.KW.ON));
             }, [e, n])
         );
     },
-    m = () => {
+    h = () => {
         let { previewPaneVariant: e } = (0, i.cj)([d.Z], () => ({
-                previewPaneVariant: d.Z.isPreview ? _.h1.FREE : _.h1.PREMIUM_STANDARD,
+                previewPaneVariant: d.Z.isPreview ? p.h1.FREE : p.h1.PREMIUM_STANDARD,
             })),
             t = (0, i.e7)([l.Z], () => {
                 var e;

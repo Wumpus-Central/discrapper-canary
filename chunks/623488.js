@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(953529);
+n.d(t, { Z: () => m }), n(953529);
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -10,7 +10,7 @@ var i = n(120356),
     u = n(916001),
     d = n(388032),
     f = n(833398);
-function _(e) {
+function p(e) {
     let { hidePurchaseToUnlockBadge: t, showDraftBadge: n, className: i, children: s } = e;
     return (0, r.jsxs)("div", {
         className: a()(f.productThumbnailContainer, i),
@@ -42,7 +42,7 @@ function _(e) {
         ],
     });
 }
-function p(e) {
+function _(e) {
     let { onShowFullDescription: t, variant: n } = e,
         i = (0, r.jsxs)(r.Fragment, {
             children: [
@@ -72,36 +72,36 @@ function p(e) {
               children: i,
           });
 }
-function h(e) {
+function m(e) {
     let {
             imageUrl: t,
             name: n,
             description: i,
             formattedPrice: c,
-            role: h,
-            ctaComponent: m,
+            role: m,
+            ctaComponent: h,
             shouldShowFullDescriptionButton: g = !0,
             onShowFullDescription: E,
             productType: b,
             onTapCard: y,
             actionMenu: O,
             showOpaqueBackground: v = !1,
-            hideRoleTag: I = !1,
-            lineClamp: T = 1,
-            cardWidth: S = 332,
+            hideRoleTag: S = !1,
+            lineClamp: I = 1,
+            cardWidth: T = 332,
             cardHeight: A,
             thumbnailHeight: C = 187,
             descriptionTextVariant: N = "text-sm/normal",
-            isDraft: R = !1,
+            isDraft: P = !1,
         } = e,
-        P = (0, s.hQ)(),
-        D = (e) => {
+        R = (0, s.hQ)(),
+        w = (e) => {
             e.stopPropagation();
         },
-        w = (0, r.jsxs)(r.Fragment, {
+        D = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(_, {
-                    showDraftBadge: R,
+                (0, r.jsx)(p, {
+                    showDraftBadge: P,
                     hidePurchaseToUnlockBadge: !0,
                     children: (0, r.jsx)("img", {
                         alt: "",
@@ -120,26 +120,26 @@ function h(e) {
                                     variant: "text-md/medium",
                                     color: "header-primary",
                                     className: f.productName,
-                                    id: P,
+                                    id: R,
                                     children: n,
                                 }),
                                 (0, r.jsx)(o.Rny, {
                                     children: (0, r.jsx)(l.Z, {
                                         variant: N,
                                         color: "text-muted",
-                                        lineClamp: T,
+                                        lineClamp: I,
                                         text: i,
                                     }),
                                 }),
                                 g &&
-                                    (0, r.jsx)(p, {
+                                    (0, r.jsx)(_, {
                                         onShowFullDescription: E,
                                         variant: N,
                                     }),
-                                I || null == h || "" === h.name
+                                S || null == m || "" === m.name
                                     ? null
                                     : (0, r.jsxs)(r.Fragment, {
-                                          children: [(0, r.jsx)(o.LZC, { size: 16 }), (0, r.jsx)(u.Z, { role: h })],
+                                          children: [(0, r.jsx)(o.LZC, { size: 16 }), (0, r.jsx)(u.Z, { role: m })],
                                       }),
                             ],
                         }),
@@ -163,8 +163,8 @@ function h(e) {
                         }),
                         (0, r.jsx)("div", {
                             className: f.productActionButton,
-                            onClick: D,
-                            children: m,
+                            onClick: w,
+                            children: h,
                         }),
                     ],
                 }),
@@ -173,12 +173,12 @@ function h(e) {
     return null == y
         ? (0, r.jsx)("article", {
               className: a()(f.productCard, v ? f.opaqueBackground : f.solidBackground),
-              "aria-labelledby": P,
-              children: w,
+              "aria-labelledby": R,
+              children: D,
           })
         : (0, r.jsx)("div", {
               style: {
-                  width: S,
+                  width: T,
                   height: A,
               },
               children: (0, r.jsx)(o.kL8, {
@@ -186,7 +186,7 @@ function h(e) {
                   "aria-label": d.intl.formatToPlainString(d.t["e+TmJa"], { productName: n }),
                   className: a()(f.productCard, v ? f.opaqueBackground : f.solidBackground, f.cardClickableContainer),
                   onClick: y,
-                  children: w,
+                  children: D,
               }),
           });
 }

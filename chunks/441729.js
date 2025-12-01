@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r,
     i = n(442837),
     a = n(570140);
@@ -68,13 +68,13 @@ function f(e) {
         },
     });
 }
-function _() {
+function p() {
     d = c(s({}, d), { currentMessage: null });
 }
-function p(e) {
+function _(e) {
     d = c(s({}, d), { speechRate: e.speechRate });
 }
-class h extends (r = i.ZP.DeviceSettingsStore) {
+class m extends (r = i.ZP.DeviceSettingsStore) {
     initialize(e) {
         d = s({}, u, null != e ? e : null);
     }
@@ -92,14 +92,14 @@ class h extends (r = i.ZP.DeviceSettingsStore) {
         return d;
     }
 }
-o(h, "displayName", "TTSStore"), o(h, "persistKey", "TTSStore"), o(h, "migrations", []);
-let m = new h(
+o(m, "displayName", "TTSStore"), o(m, "persistKey", "TTSStore"), o(m, "migrations", []);
+let h = new m(
     a.Z,
     __OVERLAY__
         ? {}
         : {
               SPEAKING_MESSAGE: f,
-              STOP_SPEAKING: _,
-              SET_TTS_SPEECH_RATE: p,
+              STOP_SPEAKING: p,
+              SET_TTS_SPEECH_RATE: _,
           },
 );

@@ -298,9 +298,9 @@ function Z(e) {
         H = W && (0, m.vI)(s),
         z = W && !U,
         { registerDragHandleRef: K } = (0, h.C)(),
-        q = i.useRef(null);
+        V = i.useRef(null);
     if (L) return (0, r.jsx)(v.i, {});
-    let V = () =>
+    let q = () =>
             (0, r.jsx)(y.Z, {
                 coverRef: p,
                 className: null == R || u ? void 0 : I.hoverActiveEffect,
@@ -317,17 +317,17 @@ function Z(e) {
                 children: [
                     z
                         ? (0, r.jsxs)("div", {
-                              ref: q,
+                              ref: V,
                               className: w.dragHandleContainer,
                               children: [
-                                  V(),
+                                  q(),
                                   (0, r.jsx)(b.e_, {
                                       buttonRef: K(o.applicationId),
                                       className: w.dragHandle,
                                   }),
                               ],
                           })
-                        : V(),
+                        : q(),
                     (0, r.jsxs)("div", {
                         className: w.details,
                         children: [

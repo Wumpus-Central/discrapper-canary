@@ -18,9 +18,9 @@ var i = n(54381),
     C = n(981631),
     v = n(388032),
     _ = n(177119),
-    x = n(724913),
-    j = n(430864);
-let O = r.memo(function (e) {
+    O = n(724913),
+    x = n(430864);
+let j = r.memo(function (e) {
         let { message: t, notice: n, compact: r = !1, onDismiss: l } = e;
         return (0, i.jsxs)(i.Fragment, {
             children: [
@@ -79,9 +79,9 @@ let O = r.memo(function (e) {
             }, [C, u.content, m, E, f]),
             (0, i.jsxs)("div", {
                 id: (0, g.ut)(u),
-                className: a()(l, j.markup, {
-                    [x.messageContent]: !0,
-                    [x.markupRtl]: "rtl" === s()(u.content),
+                className: a()(l, x.markup, {
+                    [O.messageContent]: !0,
+                    [O.markupRtl]: "rtl" === s()(u.content),
                     [_.blockedEdit]: null == P ? void 0 : P.isBlockedEdit,
                     [_.blockedSend]: !(null == P ? void 0 : P.isBlockedEdit),
                 }),
@@ -97,13 +97,13 @@ let O = r.memo(function (e) {
                                     isEdited: !0,
                                     isInline: !1,
                                     children: (0, i.jsxs)("span", {
-                                        className: x.edited,
+                                        className: O.edited,
                                         children: ["(", v.intl.string(v.t.Z7eEx9), ")"],
                                     }),
                                 }),
                             ],
                         }),
-                    (0, i.jsx)(O, {
+                    (0, i.jsx)(j, {
                         notice: null != (n = null == P ? void 0 : P.errorMessage) ? n : v.intl.string(v.t.zQ69pv),
                         message: u,
                         compact: o,

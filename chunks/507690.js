@@ -1,15 +1,15 @@
-function a(t) {
-    let e,
-        _ = t[0],
-        a = 1;
-    for (; a < t.length; ) {
-        let r = t[a],
-            n = t[a + 1];
-        if (((a += 2), ("optionalAccess" === r || "optionalCall" === r) && null == _)) return;
-        "access" === r || "optionalAccess" === r
-            ? ((e = _), (_ = n(_)))
-            : ("call" === r || "optionalCall" === r) && ((_ = n((...t) => _.call(e, ...t))), (e = void 0));
+function n(e) {
+    let t,
+        r = e[0],
+        n = 1;
+    for (; n < e.length; ) {
+        let a = e[n],
+            i = e[n + 1];
+        if (((n += 2), ("optionalAccess" === a || "optionalCall" === a) && null == r)) return;
+        "access" === a || "optionalAccess" === a
+            ? ((t = r), (r = i(r)))
+            : ("call" === a || "optionalCall" === a) && ((r = i((...e) => r.call(t, ...e))), (t = void 0));
     }
-    return _;
+    return r;
 }
-_.d(e, { x: () => a });
+r.d(t, { x: () => n });

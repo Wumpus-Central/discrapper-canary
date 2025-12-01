@@ -24,21 +24,21 @@ function y(e) {
             guildId: y,
             error: E,
             validationErrorMessage: N,
-            onChange: P,
-            canSetFocus: C = !1,
+            onChange: C,
+            canSetFocus: P = !1,
         } = e,
         {
             entityType: S,
             channelId: I,
-            description: T,
-            name: Z,
+            description: Z,
+            name: T,
             image: w,
             scheduledEndTime: D,
             scheduledStartTime: k,
             recurrenceRule: R,
         } = t,
-        A = (0, u._d)(I),
-        _ = (0, u.K3)(I),
+        _ = (0, u._d)(I),
+        A = (0, u.K3)(I),
         G = null != t && (0, g.xt)(t),
         U = l.useMemo(() => {
             let e = (0, x.v1)(t);
@@ -47,13 +47,13 @@ function y(e) {
         [L, z] = l.useState(() => (0, x.zi)(a()(k), R)),
         F = l.useRef(null);
     l.useEffect(() => {
-        if (C) {
+        if (P) {
             var e;
             null == (e = F.current) || e.focus();
         }
-    }, [C]);
+    }, [P]);
     let M = (e) => {
-            P({ image: e });
+            C({ image: e });
         },
         V = (e, t) => {
             if (null == e || void 0 === t) return void M(null);
@@ -110,7 +110,7 @@ function y(e) {
         children: [
             (0, r.jsx)("div", {
                 className: b.blockedUsersContainer,
-                children: null != I && !G && (A > 0 || _ > 0) && (0, r.jsx)(d.mv, { channelId: I }),
+                children: null != I && !G && (_ > 0 || A > 0) && (0, r.jsx)(d.mv, { channelId: I }),
             }),
             (0, r.jsx)("div", {
                 className: b.form,
@@ -122,11 +122,11 @@ function y(e) {
                             required: !0,
                             error: null != B ? B : W,
                             onChange: (e) => {
-                                P({ name: e });
+                                C({ name: e });
                             },
                             placeholder: f.intl.string(f.t["6/yars"]),
                             maxLength: p.p,
-                            value: Z,
+                            value: T,
                             autoComplete: "off",
                             inputRef: F,
                         }),
@@ -143,11 +143,11 @@ function y(e) {
                                     (null == n ? void 0 : n.isBefore(t)) &&
                                     (r.scheduledEndTime = t.add(1, "hour").toISOString()),
                                     null != t && null != L && (r.recurrenceRule = (0, x.mF)(L, t)),
-                                    P(r);
+                                    C(r);
                             },
                             onRecurrenceChange: (e) => {
                                 let t = U.startDate;
-                                null != t && (P({ recurrenceRule: (0, x.mF)(e, t) }), z(e));
+                                null != t && (C({ recurrenceRule: (0, x.mF)(e, t) }), z(e));
                             },
                             schedule: U,
                             recurrenceRule: R,
@@ -161,9 +161,9 @@ function y(e) {
                             label: f.intl.string(f.t["+gRCC7"]),
                             error: X,
                             placeholder: f.intl.string(f.t["kWO/E8"]),
-                            value: T,
+                            value: Z,
                             onChange: (e) => {
-                                P({ description: e });
+                                C({ description: e });
                             },
                             maxLength: p.wm,
                             autosize: !0,

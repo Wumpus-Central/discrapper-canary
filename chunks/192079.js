@@ -1,7 +1,7 @@
 n.d(t, {
     ER: () => d,
     kk: () => f,
-    s$: () => _,
+    s$: () => p,
 }),
     n(388685),
     n(392711);
@@ -39,7 +39,7 @@ function f(e, t) {
     }
     return null;
 }
-function _(e) {
+function p(e) {
     let t = o.Z.getStageInstanceByChannel(e.id);
     return {
         channel_id: e.id,

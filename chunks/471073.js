@@ -8,10 +8,10 @@ var l,
     u = n.n(c),
     d = n(442837),
     f = n(570140),
-    _ = n(904245),
-    p = n(911969),
-    h = n(603721),
-    m = n(70956);
+    p = n(904245),
+    _ = n(911969),
+    m = n(603721),
+    h = n(70956);
 function g(e, t, n) {
     return (
         t in e
@@ -36,19 +36,19 @@ function b() {
 function y(e) {
     let { messageId: t, nonce: n, data: l, preflight: c } = e;
     switch (l.interactionType) {
-        case p.B8.APPLICATION_COMMAND:
+        case _.B8.APPLICATION_COMMAND:
             return (a = t), (o = l.channelId), (s = n), !1;
-        case p.B8.MODAL_SUBMIT:
+        case _.B8.MODAL_SUBMIT:
             u()(null == r || 1 === i || 2 === i, "cannot submit multiple modals at once"), (r = n), (i = 0);
             let d = (e) => {
                 setTimeout(() => {
-                    r === n && 0 === i && (0, h.yr)(n);
+                    r === n && 0 === i && (0, m.yr)(n);
                 }, e);
             };
             return (
                 null != c
-                    ? (d(2 * m.Z.Millis.MINUTE), c.then(() => d(10 * m.Z.Millis.SECOND)).catch(() => (0, h.yr)(n)))
-                    : d(10 * m.Z.Millis.SECOND),
+                    ? (d(2 * h.Z.Millis.MINUTE), c.then(() => d(10 * h.Z.Millis.SECOND)).catch(() => (0, m.yr)(n)))
+                    : d(10 * h.Z.Millis.SECOND),
                 !0
             );
         default:
@@ -57,31 +57,31 @@ function y(e) {
 }
 function O(e) {
     let { nonce: t } = e;
-    return t === s && (_.Z.deleteMessage(o, a, !0), (a = null), (o = null), (s = null)), !1;
+    return t === s && (p.Z.deleteMessage(o, a, !0), (a = null), (o = null), (s = null)), !1;
 }
 function v(e) {
     let { nonce: t } = e;
-    return t === s && (_.Z.deleteMessage(o, a, !0), (a = null), (o = null), (s = null)), !1;
+    return t === s && (p.Z.deleteMessage(o, a, !0), (a = null), (o = null), (s = null)), !1;
 }
-function I(e) {
+function S(e) {
     let { nonce: t } = e;
     return null != t && t === r && ((i = 2), !0);
 }
-function T(e) {
+function I(e) {
     let { nonce: t } = e;
     return null != t && t === r && ((i = 1), !0);
 }
-class S extends (l = d.ZP.Store) {
+class T extends (l = d.ZP.Store) {
     getModalState(e) {
         return e !== r ? null : i;
     }
 }
-g(S, "displayName", "InteractionModalStore");
-let A = new S(f.Z, {
+g(T, "displayName", "InteractionModalStore");
+let A = new T(f.Z, {
     LOGOUT: b,
     INTERACTION_MODAL_CREATE: O,
     INTERACTION_IFRAME_MODAL_CREATE: v,
     INTERACTION_QUEUE: y,
-    INTERACTION_SUCCESS: I,
-    INTERACTION_FAILURE: T,
+    INTERACTION_SUCCESS: S,
+    INTERACTION_FAILURE: I,
 });

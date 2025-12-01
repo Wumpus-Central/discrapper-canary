@@ -22,13 +22,13 @@ let _ = function (e) {
     r.useEffect(() => {
         (0, p.Q3)(l.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: y.L.AUTO });
     }, []);
-    let x = r.useCallback(() => {
+    let O = r.useCallback(() => {
             o.Z.updateChatOpen(t.id, !1), m.S.safeDispatch(b.CkL.FOCUS_CHAT_BUTTON);
         }, [t.id]),
-        j = (0, i.jsx)(h.ZP.Icon, {
+        x = (0, i.jsx)(h.ZP.Icon, {
             icon: a.Dio,
             tooltip: C.intl.string(C.t.cpT0Cq),
-            onClick: x,
+            onClick: O,
         });
     return (0, i.jsxs)(u.Z, {
         sidebarType: u.y.CallChatSidebar,
@@ -40,7 +40,7 @@ let _ = function (e) {
                 draftType: f.d.ChannelMessage,
             }),
             (0, i.jsxs)(h.ZP, {
-                toolbar: j,
+                toolbar: x,
                 "aria-label": C.intl.string(C.t.BIYAqa),
                 children: [
                     (0, i.jsx)(h.ZP.ChannelIcon, {

@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(313789),
     d = n(273313),
     f = n(518596),
-    _ = n(981631),
-    p = n(388032),
-    h = n(558731),
-    m = n(444675);
+    p = n(981631),
+    _ = n(388032),
+    m = n(558731),
+    h = n(444675);
 function g(e, t, n) {
     return (
         t in e
@@ -69,7 +69,7 @@ function O() {
     let e = (0, a.e7)([c.default], () => c.default.locale),
         [t, g] = i.useState(e),
         [b] = i.useState(() =>
-            (0, p.getAvailableLocales)().map((e) => {
+            (0, _.getAvailableLocales)().map((e) => {
                 let t;
                 try {
                     t = n(621287)("./".concat(e.value, ".png"));
@@ -78,23 +78,23 @@ function O() {
                 }
                 return y(E({}, e), {
                     name: (0, r.jsxs)("div", {
-                        className: h.option,
+                        className: m.option,
                         children: [
                             (0, r.jsx)("span", {
-                                className: h.localeName,
+                                className: m.localeName,
                                 children: e.name,
                             }),
                             (0, r.jsx)("span", {
-                                className: h.localizedName,
-                                children: p.intl.string(e.localizedName),
+                                className: m.localizedName,
+                                children: _.intl.string(e.localizedName),
                             }),
                             (0, r.jsx)("div", {
-                                className: h.flag,
+                                className: m.flag,
                                 "aria-hidden": !0,
                                 children: (0, r.jsx)("img", {
                                     alt: "",
                                     src: t,
-                                    className: h.flagImage,
+                                    className: m.flagImage,
                                 }),
                             }),
                         ],
@@ -105,16 +105,16 @@ function O() {
         O = i.useCallback((e) => {
             let { value: t } = e;
             g(t),
-                m.nextTick(() => {
+                h.nextTick(() => {
                     l.ZP.updateLocale(t),
                         (0, s.Mr3)(f.USER_SETTINGS_MODAL_KEY) &&
-                            (0, f.openUserSettings)(u.n.LOCALE_PANEL, { section: _.oAB.LOCALE });
+                            (0, f.openUserSettings)(u.n.LOCALE_PANEL, { section: p.oAB.LOCALE });
                 });
         }, []);
     return (0, r.jsx)(d.Z, {
-        title: p.intl.string(p.t.IHMsPn),
+        title: _.intl.string(_.t.IHMsPn),
         children: (0, r.jsx)(o.Gu, {
-            label: p.intl.string(p.t["mx+sp7"]),
+            label: _.intl.string(_.t["mx+sp7"]),
             onChange: O,
             options: b,
             value: t,

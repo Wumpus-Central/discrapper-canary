@@ -1,6 +1,6 @@
 n.d(t, {
-    A6: () => _,
-    Ll: () => p,
+    A6: () => p,
+    Ll: () => _,
     Zp: () => f,
 });
 var r = n(442837),
@@ -25,11 +25,11 @@ function f() {
         t = a.Ig.getState().isEditorActive();
     return d(s.Z, l.ZP, o.Z, e, t);
 }
-function _() {
+function p() {
     let e = c.L1.useSetting(),
         t = (0, a.Ig)((e) => e.isEditorActive());
     return (0, r.e7)([s.Z, l.ZP, o.Z], () => d(s.Z, l.ZP, o.Z, e, t));
 }
-function p() {
-    return _() ? u.BRd.DARK : void 0;
+function _() {
+    return p() ? u.BRd.DARK : void 0;
 }

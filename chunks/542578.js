@@ -21,7 +21,7 @@ function d(e, t, n) {
     );
 }
 let f = {};
-class _ {
+class p {
     static ensure(e, t, n) {
         var r, i;
         let a = ""
@@ -29,26 +29,26 @@ class _ {
             .concat(t.name, ":")
             .concat(null != (r = t.id) ? r : "", ":")
             .concat(n);
-        return (f[a] = null != (i = f[a]) ? i : new _());
+        return (f[a] = null != (i = f[a]) ? i : new p());
     }
     constructor() {
         d(this, "users", void 0), d(this, "fetched", void 0), (this.fetched = !1), (this.users = new Map());
     }
 }
-function p() {
+function _() {
     f = {};
 }
-function h(e) {
+function m(e) {
     let { type: t, messageId: n, userId: r, emoji: i, reactionType: a } = e,
-        o = _.ensure(n, i, a);
+        o = p.ensure(n, i, a);
     if ("MESSAGE_REACTION_ADD" === t) {
         let e = u.default.getUser(r);
         null != e && o.users.set(r, e);
     } else o.users.delete(r);
 }
-function m(e) {
+function h(e) {
     let { messageId: t, users: n, emoji: r, reactionType: i } = e,
-        a = _.ensure(t, r, i);
+        a = p.ensure(t, r, i);
     n.forEach((e) => a.users.set(e.id, new l.Z(e)));
 }
 class g extends (r = i.ZP.Store) {
@@ -56,7 +56,7 @@ class g extends (r = i.ZP.Store) {
         this.waitFor(c.Z, o.Z, u.default);
     }
     getReactions(e, t, n, r, i) {
-        let a = _.ensure(t, n, i);
+        let a = p.ensure(t, n, i);
         if (!a.fetched) {
             let l = c.Z.getChannel(e),
                 u = null != l ? l.getGuildId() : null;
@@ -75,8 +75,8 @@ class g extends (r = i.ZP.Store) {
 }
 d(g, "displayName", "MessageReactionsStore");
 let E = new g(a.Z, {
-    CONNECTION_OPEN: p,
-    MESSAGE_REACTION_ADD: h,
-    MESSAGE_REACTION_REMOVE: h,
-    MESSAGE_REACTION_ADD_USERS: m,
+    CONNECTION_OPEN: _,
+    MESSAGE_REACTION_ADD: m,
+    MESSAGE_REACTION_REMOVE: m,
+    MESSAGE_REACTION_ADD_USERS: h,
 });

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M });
+n.d(t, { Z: () => j });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,19 +9,19 @@ var r = n(54381),
     u = n(628238),
     d = n(869765),
     f = n(592125),
-    _ = n(709054),
-    p = n(786761),
-    h = n(739566),
-    m = n(492593),
+    p = n(709054),
+    _ = n(786761),
+    m = n(739566),
+    h = n(492593),
     g = n(453687),
     E = n(25015),
     b = n(689674),
     y = n(438075),
     O = n(963550),
     v = n(845080),
-    I = n(295790),
-    T = n(145807),
-    S = n(56744),
+    S = n(295790),
+    I = n(145807),
+    T = n(56744),
     A = n(981631),
     C = n(360514);
 function N(e, t, n) {
@@ -37,7 +37,7 @@ function N(e, t, n) {
         e
     );
 }
-function R(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,7 +53,7 @@ function R(e) {
     }
     return e;
 }
-function P(e, t) {
+function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,22 +65,22 @@ function P(e, t) {
     }
     return n;
 }
-function D(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : P(Object(t)).forEach(function (n) {
+            : R(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function w(e, t) {
+function D(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = L(e, t);
+        i = x(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -88,7 +88,7 @@ function w(e, t) {
     }
     return i;
 }
-function L(e, t) {
+function x(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -97,23 +97,23 @@ function L(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function x(e) {
+function L(e) {
     var t, n;
     let {
             message: i,
             compact: a = !1,
             className: N,
-            onContextMenu: P,
-            onClick: L,
-            hideSimpleEmbedContent: x = !0,
-            channel: M,
-            isGroupStart: k,
-            animateAvatar: j,
+            onContextMenu: R,
+            onClick: x,
+            hideSimpleEmbedContent: L = !0,
+            channel: j,
+            isGroupStart: M,
+            animateAvatar: k,
             subscribeToComponentDispatch: U,
             renderThreadAccessory: G,
-            trackAnnouncementViews: B = !1,
+            trackAnnouncementViews: Z = !1,
         } = e,
-        Z = w(e, [
+        B = D(e, [
             "message",
             "compact",
             "className",
@@ -128,10 +128,10 @@ function x(e) {
             "trackAnnouncementViews",
         ]),
         F = i.type === A.uaV.POLL_RESULT || (null != (t = e.disableInteraction) && t),
-        V = i.isFirstMessageInForumPost(M),
+        V = i.isFirstMessageInForumPost(j),
         H = (0, u.A)((null != (n = i.editedTimestamp) ? n : i.timestamp).valueOf()),
         { content: Y, hasSpoilerEmbeds: W } = (0, E.Z)(i, {
-            hideSimpleEmbedContent: x,
+            hideSimpleEmbedContent: L,
             allowList: V || H,
             allowHeading: V || H,
             allowLinks: !0,
@@ -140,56 +140,56 @@ function x(e) {
         K = i.type === A.uaV.REPLY ? i.messageReference : void 0,
         z = (0, l.e7)([d.Z], () => d.Z.getMessageByReference(K)),
         q = (0, s.JA)(i.id),
-        X = (0, h.ZP)(i),
-        Q = (0, l.e7)(
+        Q = (0, m.ZP)(i),
+        X = (0, l.e7)(
             [f.Z],
-            () => i.hasFlag(A.iLy.HAS_THREAD) && f.Z.getChannel(_.default.castMessageIdAsChannelId(i.id)),
+            () => i.hasFlag(A.iLy.HAS_THREAD) && f.Z.getChannel(p.default.castMessageIdAsChannelId(i.id)),
         ),
         J = (0, c.p9)({
-            guildId: M.guild_id,
-            roleId: X.iconRoleId,
+            guildId: j.guild_id,
+            roleId: Q.iconRoleId,
         }),
         $ = (0, b.Z)({
             message: i,
-            channel: M,
-            enabled: B,
+            channel: j,
+            enabled: Z,
         }),
         ee = (0, g.iG)(i),
         et = (0, g.Gx)(i);
     return (0, r.jsx)(
-        m.Z,
-        R(
+        h.Z,
+        P(
             {
                 compact: a,
                 className: o()(N, {
-                    [C.ephemeral]: (0, p.Pv)(i),
+                    [C.ephemeral]: (0, _.Pv)(i),
                     [C.disableInteraction]: F,
                 }),
                 disableInteraction: F,
-                childrenRepliedMessage: (0, S.Z)(i, M, K, z, a),
-                childrenExecutedCommand: (0, T.Z)(i, M, a),
+                childrenRepliedMessage: (0, T.Z)(i, j, K, z, a),
+                childrenExecutedCommand: (0, I.Z)(i, j, a),
                 childrenHeader: (0, v.Z)(
-                    D(R({}, e), {
-                        guildId: M.guild_id,
-                        author: X,
+                    w(P({}, e), {
+                        guildId: j.guild_id,
+                        author: Q,
                         roleIcon: J,
                     }),
                 ),
                 childrenAccessories: e.hideAccessories ? void 0 : (0, y.Q)(e, W),
                 childrenMessageContent: (0, O.Z)(e, Y),
-                childrenSystemMessage: (0, I.Z)(D(R({}, e), { disableInteraction: F })),
-                onContextMenu: P,
-                onClick: L,
-                hasThread: G && null != Q && i.hasFlag(A.iLy.HAS_THREAD),
+                childrenSystemMessage: (0, S.Z)(w(P({}, e), { disableInteraction: F })),
+                onContextMenu: R,
+                onClick: x,
+                hasThread: G && null != X && i.hasFlag(A.iLy.HAS_THREAD),
                 hasReply: i.type === A.uaV.REPLY,
                 "aria-labelledby": ee,
                 "aria-describedby": et,
                 messageRef: $,
-                author: X,
+                author: Q,
             },
             q,
-            Z,
+            B,
         ),
     );
 }
-let M = i.memo(x);
+let j = i.memo(L);

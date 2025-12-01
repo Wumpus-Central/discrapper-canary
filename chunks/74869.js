@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(667344),
     d = n(493075),
     f = n(438159),
-    _ = n(572004),
-    p = n(878209),
-    h = n(388032);
-function m(e, t, n) {
+    p = n(572004),
+    _ = n(878209),
+    m = n(388032);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
@@ -88,13 +88,13 @@ function y(e) {
                 ),
                 (0, r.jsxs)(s.kSQ, {
                     children: [
-                        _.wS &&
+                        p.wS &&
                             (0, r.jsx)(s.sNh, {
                                 id: "copy-link",
                                 label: "Copy Link",
                                 action: () => {
                                     let e = (0, l.sZ)(t);
-                                    (0, _.JG)(e, () => {
+                                    (0, p.JG)(e, () => {
                                         (0, s.showToast)({
                                             id: "experiment-link-copied",
                                             message: "Copied experiment link",
@@ -124,7 +124,7 @@ function O() {
         l = i.useMemo(() => {
             let r = g({}, e, n),
                 i = g({}, t, a);
-            return (0, p.Tc)((0, p.Cg)(r), i).map((e) => {
+            return (0, _.Tc)((0, _.Cg)(r), i).map((e) => {
                 let { id: t, experiment: n } = e;
                 return {
                     id: t,
@@ -135,10 +135,10 @@ function O() {
             });
         }, [e, t, n, a]),
         [c, f] = i.useState(""),
-        [_, m] = i.useState([]);
+        [p, h] = i.useState([]);
     i.useEffect(() => {
-        if (0 === c.trim().length) return void m(l);
-        m(l.filter((e) => o()(c, e.experiment.title.toLowerCase())));
+        if (0 === c.trim().length) return void h(l);
+        h(l.filter((e) => o()(c, e.experiment.title.toLowerCase())));
     }, [l, c]);
     let E = i.useMemo(
             () =>
@@ -150,15 +150,15 @@ function O() {
         ),
         O = i.useMemo(
             () =>
-                _.filter((e) => {
+                p.filter((e) => {
                     let { currentBucket: t } = e;
                     return null == t;
                 }),
-            [_],
+            [p],
         ),
         v = i.useMemo(() => E.map(y), [E]),
-        I = i.useMemo(() => O.map(y), [O]),
-        T = (0, r.jsx)(
+        S = i.useMemo(() => O.map(y), [O]),
+        I = (0, r.jsx)(
             s.II_,
             {
                 id: "experiments-search",
@@ -169,7 +169,7 @@ function O() {
                             query: c,
                             onChange: f,
                             ref: t,
-                            placeholder: h.intl.string(h.t["5h0QOP"]),
+                            placeholder: m.intl.string(m.t["5h0QOP"]),
                         }),
                     ),
             },
@@ -191,10 +191,10 @@ function O() {
                   {
                       id: "other-experiments",
                       label: "Other Experiments",
-                      children: [T, I],
+                      children: [I, S],
                   },
                   "other-experiments",
               ),
           ]
-        : [T, ...I];
+        : [I, ...S];
 }

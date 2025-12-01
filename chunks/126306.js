@@ -1,4 +1,4 @@
-n.d(t, { l: () => p }), n(388685);
+n.d(t, { l: () => _ }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -15,7 +15,7 @@ let f = Object.freeze({
         2: c.scale,
         3: c.fade,
     }),
-    _ = Object.freeze({
+    p = Object.freeze({
         top: c.animatorTop,
         bottom: c.animatorBottom,
         left: c.animatorLeft,
@@ -23,11 +23,11 @@ let f = Object.freeze({
         center: c.animatorCenter,
         window_center: c.animatorCenter,
     });
-function p(e) {
+function _(e) {
     let { position: t, type: n, children: a } = e,
         { reducedMotion: d } = i.useContext(s.Sfi),
-        p = d.enabled ? 3 : n,
-        [h, m] = i.useState(null != t),
+        _ = d.enabled ? 3 : n,
+        [m, h] = i.useState(null != t),
         [g] = i.useState(() => new l.V7()),
         [E, b] = i.useState(!0),
         y = i.useRef(null);
@@ -44,16 +44,16 @@ function p(e) {
         }, []),
         i.useEffect(() => () => g.stop(), [g]),
         i.useEffect(() => {
-            null != t && g.start(10, () => m(!0));
+            null != t && g.start(10, () => h(!0));
         }, [t, g]),
         (0, r.jsx)("div", {
             "data-popout-animating": E,
-            className: o()(null != t ? _[t] : null, {
-                [f[p]]: null != t,
-                [c.didRender]: h,
+            className: o()(null != t ? p[t] : null, {
+                [f[_]]: null != t,
+                [c.didRender]: m,
             }),
             children: a,
         })
     );
 }
-p.Types = d;
+_.Types = d;

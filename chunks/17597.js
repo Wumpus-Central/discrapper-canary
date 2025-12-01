@@ -1,4 +1,4 @@
-n.d(t, { default: () => N }), n(388685), n(953529);
+n.d(t, { default: () => T }), n(388685), n(953529);
 var a = n(54381),
     l = n(473749),
     i = n(772848),
@@ -12,12 +12,12 @@ var a = n(54381),
     p = n(420846),
     h = n(63063),
     x = n(168107),
-    g = n(480916),
-    f = n(352138),
+    f = n(480916),
+    g = n(352138),
     b = n(629235),
     v = n(981631),
     j = n(800530),
-    _ = n(760902),
+    _ = n(282354),
     y = n(388032),
     C = n(70402),
     S = n(736056);
@@ -29,28 +29,28 @@ function E(e) {
               children: y.intl.format(_.default.htWh1G, {
                   handleOnHelpUrlHook: () => {
                       x.Z.openUrl(j.sQ.LEARN_MORE_UU_APPEAL_LINK),
-                          (0, g.x3)(t, g.d_.EXPRESSIVE_PRIMARY, g.sU.LEARN_MORE);
+                          (0, f.x3)(t, f.d_.EXPRESSIVE_PRIMARY, f.sU.LEARN_MORE);
                   },
               }),
           })
-        : n === g.cU.SAFETY_FLOWS
+        : n === f.cU.SAFETY_FLOWS
           ? (0, a.jsx)(o.Avr, {
                 size: "sm",
                 textVariant: "text-sm/medium",
                 text: y.intl.string(y.t["2jxGer"]),
                 onClick: () => {
-                    (0, g.x3)(t, g.d_.EXPRESSIVE_PRIMARY, g.sU.LOG_OUT), (0, u.R)("age_verification_get_started_modal");
+                    (0, f.x3)(t, f.d_.EXPRESSIVE_PRIMARY, f.sU.LOG_OUT), (0, u.R)("age_verification_get_started_modal");
                 },
             })
           : null;
 }
-let N = function (e) {
-    let { transitionState: t, entryPoint: n, onClose: u, onComplete: j, dismissable: N, classificationId: T } = e,
+let T = function (e) {
+    let { transitionState: t, entryPoint: n, onClose: u, onComplete: j, dismissable: T, classificationId: N } = e,
         [O, P] = l.useState(s.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
         I = l.useRef(O),
         [w, k] = (0, c.US)([O], void 0, !0),
-        A = l.useMemo(() => (0, i.Z)(), []),
-        R = l.useRef(!1),
+        R = l.useMemo(() => (0, i.Z)(), []),
+        A = l.useRef(!1),
         Z = (0, m.GE)();
     l.useEffect(() => {
         I.current = w;
@@ -62,15 +62,15 @@ let N = function (e) {
         onMethodClick: () => {
             P(s.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE);
         },
-        classificationId: T,
+        classificationId: N,
     });
     return (
         l.useLayoutEffect(
             () => () => {
-                if (R.current) return;
+                if (A.current) return;
                 let e = I.current;
                 null != e &&
-                    ((R.current = !0),
+                    ((A.current = !0),
                     p.Z.maybeOpenAgeVerificationUserFeedback({
                         location: "age_verification_get_started_modal",
                         visibleContent: e,
@@ -79,13 +79,13 @@ let N = function (e) {
             [],
         ),
         l.useEffect(() => {
-            (0, g.lA)(A, g.d_.EXPRESSIVE_PRIMARY, n);
-        }, [A, n]),
+            (0, f.lA)(R, f.d_.EXPRESSIVE_PRIMARY, n);
+        }, [R, n]),
         (0, a.jsx)(r.ExpressiveModal, {
             transitionState: t,
             onClose: u,
             gradientColor: "blue",
-            dismissable: N,
+            dismissable: T,
             graphic: {
                 type: "image",
                 src: S.Z,
@@ -96,11 +96,11 @@ let N = function (e) {
                 : y.intl.format(_.default.RpMIT0, {
                       handleOnHelpUrlHook: () => {
                           x.Z.openUrl(h.Z.getArticleURL(v.BhN.TIGGER_PAWTECT_LEARN_MORE)),
-                              (0, g.x3)(A, g.d_.EXPRESSIVE_PRIMARY, g.sU.LEARN_MORE);
+                              (0, f.x3)(R, f.d_.EXPRESSIVE_PRIMARY, f.sU.LEARN_MORE);
                       },
                   }),
             actionBarInput: (0, a.jsx)(E, {
-                modalSessionId: A,
+                modalSessionId: R,
                 entryPoint: n,
             }),
             children: (0, a.jsxs)(o.Kqy, {
@@ -147,7 +147,7 @@ let N = function (e) {
                                       size: "sm",
                                       text: y.intl.string(_.default.hDvmYP),
                                       onClick: () => {
-                                          (0, f.Jh)();
+                                          (0, g.Jh)();
                                       },
                                   }),
                               ],
@@ -164,7 +164,7 @@ let N = function (e) {
                                           title: t,
                                           description: n,
                                           buttonDisabled: D,
-                                          onButtonPress: () => l(A),
+                                          onButtonPress: () => l(R),
                                       },
                                       t,
                                   );

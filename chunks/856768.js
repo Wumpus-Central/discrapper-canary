@@ -13,15 +13,15 @@ var r = n(54381),
     u = n(993413),
     d = n(430824),
     f = n(771845),
-    _ = n(823379),
-    p = n(778825),
-    h = n(388032),
-    m = n(216601);
+    p = n(823379),
+    _ = n(778825),
+    m = n(388032),
+    h = n(216601);
 function g(e) {
     let { guildId: t, className: n, globalOption: i, hideDivider: a = !1, onChange: s, renderOptionSuffix: l } = e;
     return (0, r.jsx)(u.Z, {
-        className: o()(m.section, n),
-        title: h.intl.string(h.t.ref7Ki),
+        className: o()(h.section, n),
+        title: m.intl.string(m.t.ref7Ki),
         hideDivider: a,
         forcedDivider: !0,
         children: (0, r.jsx)(E, {
@@ -34,7 +34,7 @@ function g(e) {
 }
 function E(e) {
     let { guildId: t, globalOption: n, onChange: a, renderOptionSuffix: o } = e,
-        u = (0, s.e7)([p.Z], () => p.Z.showNotice()),
+        u = (0, s.e7)([_.Z], () => _.Z.showNotice()),
         g = (0, s.e7)([f.ZP], () => f.ZP.getFlattenedGuildIds()),
         E = (0, s.e7)([d.Z], () => d.Z.getGuilds()),
         b = i.useMemo(() => {
@@ -48,7 +48,7 @@ function E(e) {
                               value: t.id,
                           };
                 })
-                .filter(_.lm);
+                .filter(p.lm);
             return null != n && e.unshift(n), e;
         }, [g, E, n]),
         y = i.useCallback(
@@ -59,7 +59,7 @@ function E(e) {
                 return null == e || "" === e.value || t
                     ? null
                     : (0, r.jsx)(c.Z, {
-                          className: m.guildSelectOptionIcon,
+                          className: h.guildSelectOptionIcon,
                           guild: E[e.value],
                           size: c.Z.Sizes.SMOL,
                           active: !0,
@@ -79,6 +79,6 @@ function E(e) {
         options: b,
         renderOptionPrefix: y,
         renderOptionSuffix: o,
-        placeholder: h.intl.string(h.t["kMgj+e"]),
+        placeholder: m.intl.string(m.t["kMgj+e"]),
     });
 }

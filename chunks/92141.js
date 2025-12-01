@@ -7,31 +7,31 @@ e.exports = function (e, t, n, o, s, l) {
         d = u.length;
     if (d != r(t).length && !c) return !1;
     for (var f = d; f--; ) {
-        var _ = u[f];
-        if (!(c ? _ in t : a.call(t, _))) return !1;
+        var p = u[f];
+        if (!(c ? p in t : a.call(t, p))) return !1;
     }
-    var p = l.get(e);
-    if (p && l.get(t)) return p == t;
-    var h = !0;
+    var _ = l.get(e);
+    if (_ && l.get(t)) return _ == t;
+    var m = !0;
     l.set(e, t), l.set(t, e);
-    for (var m = c; ++f < d; ) {
-        var g = e[(_ = u[f])],
-            E = t[_];
-        if (o) var b = c ? o(E, g, _, t, e, l) : o(g, E, _, e, t, l);
+    for (var h = c; ++f < d; ) {
+        var g = e[(p = u[f])],
+            E = t[p];
+        if (o) var b = c ? o(E, g, p, t, e, l) : o(g, E, p, e, t, l);
         if (!(void 0 === b ? g === E || s(g, E, n, o, l) : b)) {
-            h = !1;
+            m = !1;
             break;
         }
-        m || (m = "constructor" == _);
+        h || (h = "constructor" == p);
     }
-    if (h && !m) {
+    if (m && !h) {
         var y = e.constructor,
             O = t.constructor;
         y != O &&
             "constructor" in e &&
             "constructor" in t &&
             !("function" == typeof y && y instanceof y && "function" == typeof O && O instanceof O) &&
-            (h = !1);
+            (m = !1);
     }
-    return l.delete(e), l.delete(t), h;
+    return l.delete(e), l.delete(t), m;
 };

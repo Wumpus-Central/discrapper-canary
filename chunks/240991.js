@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         getOrParseBioAST: () => g,
-        parseBioReact: () => h,
+        parseBioReact: () => m,
         parseBioReactWithCachedAST: () => E,
         parseBioReactWithoutScrolling: () => y,
     }),
@@ -17,24 +17,24 @@ var r = n(392711),
     d = n(428595);
 n(454585);
 var f = n(364458);
-let _ = (0, f.Z)([
+let p = (0, f.Z)([
         d.Z.PROFILE_BIO_RULES,
         (0, u.Z)({
             enableBuildOverrides: !1,
             mustConfirmExternalLink: !0,
         }),
     ]),
-    p = new (o())({ max: 2000 }),
-    h = c.w4(_),
-    m = void 0;
+    _ = new (o())({ max: 2000 }),
+    m = c.w4(p),
+    h = void 0;
 function g(e) {
-    let t = p.get(e);
-    return null != t || ((t = m(e, !0)), p.set(e, t)), t;
+    let t = _.get(e);
+    return null != t || ((t = h(e, !0)), _.set(e, t)), t;
 }
 function E(e) {
     if (0 === e.trim().length) return null;
     let t = g(e);
-    return l().reactFor(l().ruleOutput(_, "react"))(t);
+    return l().reactFor(l().ruleOutput(p, "react"))(t);
 }
 let b = ["link", "url", "autolink", "customEmoji", "emoji", "commandMention"],
-    y = c.w4((0, f.Z)([i().omit(_, b), { emoji: { react: () => null } }]));
+    y = c.w4((0, f.Z)([i().omit(p, b), { emoji: { react: () => null } }]));

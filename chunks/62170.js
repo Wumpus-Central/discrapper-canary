@@ -55,7 +55,7 @@ function c(e, t) {
 let u = i.forwardRef(function (e, t) {
     var { muted: n, volume: o, playing: c, playbackRate: u } = e,
         d = l(e, ["muted", "volume", "playing", "playbackRate"]);
-    let [f, _] = (0, a.Z)(t);
+    let [f, p] = (0, a.Z)(t);
     return (
         i.useEffect(() => {
             let e = f.current;
@@ -73,6 +73,6 @@ let u = i.forwardRef(function (e, t) {
             let e = f.current;
             null != e && void 0 !== c && (c ? e.play() : e.pause());
         }, [f, c]),
-        (0, r.jsx)("audio", s({ ref: _ }, d))
+        (0, r.jsx)("audio", s({ ref: p }, d))
     );
 });

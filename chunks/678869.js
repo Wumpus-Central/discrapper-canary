@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(804061), n(704826), n(35282), n(539854);
+n.d(t, { Z: () => L }), n(804061), n(704826), n(35282), n(539854);
 var r = n(54381),
     i = n(473749),
     a = n(423875),
@@ -9,34 +9,34 @@ var r = n(54381),
     u = n(768419),
     d = n(424678),
     f = n(239470),
-    _ = n(894344),
-    p = n(314897),
-    h = n(908841),
-    m = n(5192),
+    p = n(894344),
+    _ = n(314897),
+    m = n(908841),
+    h = n(5192),
     g = n(379357),
     E = n(561308),
     b = n(319604),
     y = n(31074),
     O = n(206295),
     v = n(551228),
-    I = n(591853),
-    T = n(371991),
-    S = n(410441),
+    S = n(591853),
+    I = n(371991),
+    T = n(410441),
     A = n(981631),
     C = n(616922),
     N = n(388032),
-    R = n(119835),
-    P = n(951948);
-function D(e, t) {
+    P = n(119835),
+    R = n(951948);
+function w(e, t) {
     return N.intl.formatToPlainString(N.t.h2yWWX, {
         username: t.username,
         activity: e,
     });
 }
-let w = (e, t, n) => {
+let D = (e, t, n) => {
     let { artist: r, media: i } = e,
         a = N.t["6iNxrl"],
-        o = m.ZP.getName(t.guild_id, t.id, n);
+        o = h.ZP.getName(t.guild_id, t.id, n);
     return N.intl
         .formatToMarkdownString(a, {
             artist: r,
@@ -45,10 +45,10 @@ let w = (e, t, n) => {
         })
         .replaceAll("*", "");
 };
-function L(e) {
+function x(e) {
     let { activity: t } = e,
         n = t.timestamps,
-        { now: a } = (0, T.tS)(),
+        { now: a } = (0, I.tS)(),
         { durationTimestamp: o, seekBarStyles: s } = i.useMemo(() => {
             var e;
             let { start: n, end: r } = null != (e = t.timestamps) ? e : {};
@@ -64,18 +64,18 @@ function L(e) {
     return null == s
         ? null
         : (0, r.jsxs)("div", {
-              className: R.listeningTimeline,
+              className: P.listeningTimeline,
               children: [
-                  (0, r.jsx)(T.x3, { entry: n }),
+                  (0, r.jsx)(I.x3, { entry: n }),
                   (0, r.jsx)("div", {
-                      className: R.seekBarContainer,
+                      className: P.seekBarContainer,
                       children: (0, r.jsx)("div", {
-                          className: R.seekBarFill,
+                          className: P.seekBarFill,
                           style: s,
                       }),
                   }),
                   (0, r.jsx)(l.Text, {
-                      className: R.timestamp,
+                      className: P.timestamp,
                       variant: "text-xs/normal",
                       tabularNumbers: !0,
                       color: void 0,
@@ -84,55 +84,55 @@ function L(e) {
               ],
           });
 }
-function x(e) {
+function L(e) {
     var t;
     let n,
-        m,
-        T,
-        { channel: R, entry: x, closePopout: M, onReaction: k, onVoiceChannelPreview: j } = e,
-        { largeImage: U } = (0, g.rv)({ entry: x }),
-        { activity: G, currentEntry: B, artist: Z, title: F, user: V } = (0, v.pi)(x),
+        h,
+        I,
+        { channel: P, entry: L, closePopout: j, onReaction: M, onVoiceChannelPreview: k } = e,
+        { largeImage: U } = (0, g.rv)({ entry: L }),
+        { activity: G, currentEntry: Z, artist: B, title: F, user: V } = (0, v.pi)(L),
         { primaryColor: H, secondaryColor: Y } = (0, O.Z)(null == U ? void 0 : U.src),
         W = (0, y.Z)(A.ABu.SPOTIFY),
         K = (0, o.e7)(
-            [u.Z, p.default],
+            [u.Z, _.default],
             () =>
                 (null == G ? void 0 : G.type) === A.IIU.LISTENING && null != V
-                    ? (0, f.Z)(u.Z, p.default, V, G)
+                    ? (0, f.Z)(u.Z, _.default, V, G)
                     : void 0,
             [G, V],
             s.Z,
         ),
         z = i.useCallback(() => {
             var e;
-            if (null == R || null == V) return;
+            if (null == P || null == V) return;
             let t = null == (e = G.timestamps) ? void 0 : e.start,
-                n = (0, E.T_)(null != t ? { start: t } : x, Date.now());
+                n = (0, E.T_)(null != t ? { start: t } : L, Date.now());
             return (0, b.CR)({
                 user: V,
-                channel: R,
+                channel: P,
                 mediaImageSrc: null == U ? void 0 : U.src,
-                artist: Z,
-                description: w(
+                artist: B,
+                description: D(
                     {
-                        artist: Z,
+                        artist: B,
                         media: F,
                     },
-                    R,
+                    P,
                     V,
                 ),
                 colors: [H, Y],
                 badges: (0, b.jE)({ timestamp: n }),
             });
-        }, [G, Z, R, x, null == U ? void 0 : U.src, H, Y, F, V]);
-    if (null == G || null == B) return null;
-    let q = Z,
-        X = [];
-    if (B.media.provider === a.p.SPOTIFY) {
-        (m = () => {
+        }, [G, B, P, L, null == U ? void 0 : U.src, H, Y, F, V]);
+    if (null == G || null == Z) return null;
+    let q = B,
+        Q = [];
+    if (Z.media.provider === a.p.SPOTIFY) {
+        (h = () => {
             (0, c.aG)(G);
         }),
-            (T = () => {
+            (I = () => {
                 (0, c.Z5)(G, V.id);
             }),
             (n = () => {
@@ -144,17 +144,17 @@ function x(e) {
         };
         if (
             ((q = (0, r.jsx)(d.Z, {
-                artists: Z,
+                artists: B,
                 canOpen: null != G.sync_id,
-                linkClassName: P.popoutTextSecondary,
+                linkClassName: R.popoutTextSecondary,
                 onOpenSpotifyArtist: e,
             })),
             (null == K ? void 0 : K.syncDisabled) === !1)
         ) {
             let e = () => {
-                (0, _.Z)(K, C.kG.USER_ACTIVITY_SYNC), M();
+                (0, p.Z)(K, C.kG.USER_ACTIVITY_SYNC), j();
             };
-            X.push(
+            Q.push(
                 (0, r.jsx)(
                     l.Button,
                     {
@@ -170,38 +170,38 @@ function x(e) {
             );
         }
     }
-    let Q = (0, r.jsx)(I.wG, {
-        onClickThumbnail: T,
-        channel: R,
-        entry: x,
+    let X = (0, r.jsx)(S.wG, {
+        onClickThumbnail: I,
+        channel: P,
+        entry: L,
         headerIcons:
-            B.media.provider === a.p.SPOTIFY
-                ? (0, r.jsx)(S.Z, {
+            Z.media.provider === a.p.SPOTIFY
+                ? (0, r.jsx)(T.Z, {
                       onClick: n,
                       "aria-label": N.intl.string(N.t.rRffNz),
-                      Icon: h.Z,
+                      Icon: m.Z,
                   })
                 : null,
-        userDescription: (0, E.kr)(x) ? N.t.Tzx5D2 : N.t.CcVI1T,
+        userDescription: (0, E.kr)(L) ? N.t.Tzx5D2 : N.t.CcVI1T,
         title: F,
-        onClickTitle: m,
+        onClickTitle: h,
         subtitle: q,
         badges: null,
-        children: (null == (t = G.timestamps) ? void 0 : t.start) != null && (0, r.jsx)(L, { activity: G }),
+        children: (null == (t = G.timestamps) ? void 0 : t.start) != null && (0, r.jsx)(x, { activity: G }),
     });
-    return (0, r.jsxs)(I.yR, {
+    return (0, r.jsxs)(S.yR, {
         children: [
-            Q,
-            (0, r.jsx)(I.St, {
-                children: (0, r.jsx)(I.WT, {
-                    onReaction: k,
-                    onVoiceChannelPreview: j,
+            X,
+            (0, r.jsx)(S.St, {
+                children: (0, r.jsx)(S.WT, {
+                    onReaction: M,
+                    onVoiceChannelPreview: k,
                     user: V,
-                    channel: R,
+                    channel: P,
                     generateReactionImage: z,
-                    reactionImageAltText: D(Z, V),
-                    entry: x,
-                    buttons: X,
+                    reactionImageAltText: w(B, V),
+                    entry: L,
+                    buttons: Q,
                 }),
             }),
         ],

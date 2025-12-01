@@ -1,5 +1,5 @@
 n.d(t, {
-    F: () => _,
+    F: () => p,
     Y: () => f,
 });
 var r = n(54381),
@@ -84,7 +84,7 @@ function f(e, t) {
         },
     };
 }
-let _ = i.memo(function (e) {
+let p = i.memo(function (e) {
     let { message: t, type: n, id: i, options: { component: a = c.si.component } = c.si } = e;
     return null != a
         ? a

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => g,
-    y: () => m,
+    y: () => h,
 });
 var r,
     i = n(54381),
@@ -50,7 +50,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,17 +61,17 @@ function _(e, t) {
         e
     );
 }
-var p = (function (e) {
+var _ = (function (e) {
     return (e[(e.ABOVE = 0)] = "ABOVE"), (e[(e.VISIBLE = 1)] = "VISIBLE"), (e[(e.BELOW = 2)] = "BELOW"), e;
-})(p || {});
-function h(e, t) {
+})(_ || {});
+function m(e, t) {
     return {
         toValue: e,
         duration: null != t ? t : 300,
         easing: l.Z.Easing.inOut(l.Z.Easing.back()),
     };
 }
-function m(e, t, n) {
+function h(e, t, n) {
     if (null != t) {
         let r = Math.ceil(Math.log10(e + 1));
         return null != n && n > 0 ? Math.min(r, n) * t : r * t;
@@ -104,7 +104,7 @@ class g extends (r = a.PureComponent) {
                 : e > t
                   ? (this.currAnimate.setValue(0), (n = 2))
                   : (this.currAnimate.setValue(2), (n = 0)),
-            l.Z.parallel([l.Z.timing(this.prevAnimate, h(n, i)), l.Z.timing(this.currAnimate, h(1, i))]).start(
+            l.Z.parallel([l.Z.timing(this.prevAnimate, m(n, i)), l.Z.timing(this.currAnimate, m(1, i))]).start(
                 this.animateNext,
             );
     }
@@ -131,7 +131,7 @@ class g extends (r = a.PureComponent) {
     }
     getMinWidth(e) {
         let { digitWidth: t, padStartLength: n } = this.props;
-        return m(e, t, n);
+        return h(e, t, n);
     }
     padValue(e) {
         let { padStartLength: t } = this.props;
@@ -144,7 +144,7 @@ class g extends (r = a.PureComponent) {
         if (null == e)
             return (0, i.jsx)(
                 "div",
-                _(d({}, a), {
+                p(d({}, a), {
                     style: {
                         color: n,
                         minWidth: this.getMinWidth(t),
@@ -155,7 +155,7 @@ class g extends (r = a.PureComponent) {
         let o = Math.max(e, t);
         return (0, i.jsxs)(
             "div",
-            _(d({}, a), {
+            p(d({}, a), {
                 style: {
                     color: n,
                     position: "relative",
@@ -204,4 +204,4 @@ class g extends (r = a.PureComponent) {
             (this.currAnimate = new l.Z.Value(1));
     }
 }
-u(g, "Positions", p);
+u(g, "Positions", _);

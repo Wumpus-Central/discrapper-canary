@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(415506);
+n.d(t, { Z: () => p }), n(415506);
 var r = n(990547),
     i = n(283693),
     a = n(570140),
@@ -9,15 +9,15 @@ var r = n(990547),
     u = n(87051),
     d = n(981631),
     f = n(526761);
-let _ = {
+let p = {
     createChannel(e) {
         let {
             guildId: t,
             type: n,
-            name: _,
-            permissionOverwrites: p = [],
-            bitrate: h,
-            userLimit: m,
+            name: p,
+            permissionOverwrites: _ = [],
+            bitrate: m,
+            userLimit: h,
             parentId: g,
             skuId: E,
             branchId: b,
@@ -29,12 +29,12 @@ let _ = {
         });
         let y = {
             type: n,
-            name: _,
-            permission_overwrites: p,
+            name: p,
+            permission_overwrites: _,
         };
         if (
-            (null != h && h !== d.epw && (y.bitrate = h),
-            null != m && m > 0 && (y.user_limit = m),
+            (null != m && m !== d.epw && (y.bitrate = m),
+            null != h && h > 0 && (y.user_limit = h),
             null != g && (y.parent_id = g),
             n === d.d4z.GUILD_STORE)
         ) {
@@ -50,7 +50,7 @@ let _ = {
                 properties: (e) => {
                     var t, n;
                     return (0, i.iG)({
-                        is_private: p.length > 0,
+                        is_private: _.length > 0,
                         channel_id: null == e || null == (t = e.body) ? void 0 : t.id,
                         channel_type: null == e || null == (n = e.body) ? void 0 : n.type,
                     });

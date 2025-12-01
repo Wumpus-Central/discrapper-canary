@@ -1,92 +1,92 @@
-let a, r, n;
-_.d(e, { O: () => s });
-var o = _(578346),
-    E = _(370336),
-    i = _(394798),
-    c = _(395848);
-function s(t) {
-    (0, o.Hj)("dom", t), (0, o.D2)("dom", l);
+let n, a, i;
+r.d(t, { O: () => E });
+var o = r(578346),
+    _ = r(370336),
+    s = r(394798),
+    c = r(395848);
+function E(e) {
+    (0, o.Hj)("dom", e), (0, o.D2)("dom", l);
 }
 function l() {
     if (!c.m.document) return;
-    let t = o.rK.bind(null, "dom"),
-        e = I(t, !0);
-    c.m.document.addEventListener("click", e, !1),
-        c.m.document.addEventListener("keypress", e, !1),
-        ["EventTarget", "Node"].forEach((e) => {
-            let _ = c.m[e] && c.m[e].prototype;
-            _ &&
-                _.hasOwnProperty &&
-                _.hasOwnProperty("addEventListener") &&
-                ((0, E.hl)(_, "addEventListener", function (e) {
-                    return function (_, a, r) {
-                        if ("click" === _ || "keypress" == _)
+    let e = o.rK.bind(null, "dom"),
+        t = u(e, !0);
+    c.m.document.addEventListener("click", t, !1),
+        c.m.document.addEventListener("keypress", t, !1),
+        ["EventTarget", "Node"].forEach((t) => {
+            let r = c.m[t] && c.m[t].prototype;
+            r &&
+                r.hasOwnProperty &&
+                r.hasOwnProperty("addEventListener") &&
+                ((0, _.hl)(r, "addEventListener", function (t) {
+                    return function (r, n, a) {
+                        if ("click" === r || "keypress" == r)
                             try {
-                                let a = (this.__sentry_instrumentation_handlers__ =
+                                let n = (this.__sentry_instrumentation_handlers__ =
                                         this.__sentry_instrumentation_handlers__ || {}),
-                                    n = (a[_] = a[_] || { refCount: 0 });
-                                if (!n.handler) {
-                                    let a = I(t);
-                                    (n.handler = a), e.call(this, _, a, r);
+                                    i = (n[r] = n[r] || { refCount: 0 });
+                                if (!i.handler) {
+                                    let n = u(e);
+                                    (i.handler = n), t.call(this, r, n, a);
                                 }
-                                n.refCount++;
-                            } catch (t) {}
-                        return e.call(this, _, a, r);
+                                i.refCount++;
+                            } catch (e) {}
+                        return t.call(this, r, n, a);
                     };
                 }),
-                (0, E.hl)(_, "removeEventListener", function (t) {
-                    return function (e, _, a) {
-                        if ("click" === e || "keypress" == e)
+                (0, _.hl)(r, "removeEventListener", function (e) {
+                    return function (t, r, n) {
+                        if ("click" === t || "keypress" == t)
                             try {
-                                let _ = this.__sentry_instrumentation_handlers__ || {},
-                                    r = _[e];
-                                r &&
-                                    (r.refCount--,
-                                    r.refCount <= 0 &&
-                                        (t.call(this, e, r.handler, a), (r.handler = void 0), delete _[e]),
-                                    0 === Object.keys(_).length && delete this.__sentry_instrumentation_handlers__);
-                            } catch (t) {}
-                        return t.call(this, e, _, a);
+                                let r = this.__sentry_instrumentation_handlers__ || {},
+                                    a = r[t];
+                                a &&
+                                    (a.refCount--,
+                                    a.refCount <= 0 &&
+                                        (e.call(this, t, a.handler, n), (a.handler = void 0), delete r[t]),
+                                    0 === Object.keys(r).length && delete this.__sentry_instrumentation_handlers__);
+                            } catch (e) {}
+                        return e.call(this, t, r, n);
                     };
                 }));
         });
 }
-function I(t, e = !1) {
-    return (_) => {
+function u(e, t = !1) {
+    return (r) => {
         var o;
-        if (!_ || _._sentryCaptured) return;
-        let s = (function (t) {
+        if (!r || r._sentryCaptured) return;
+        let E = (function (e) {
             try {
-                return t.target;
-            } catch (t) {
+                return e.target;
+            } catch (e) {
                 return null;
             }
-        })(_);
+        })(r);
         if (
-            ((o = _.type),
+            ((o = r.type),
             "keypress" === o &&
-                (!s || !s.tagName || ("INPUT" !== s.tagName && "TEXTAREA" !== s.tagName && !s.isContentEditable && 1)))
+                (!E || !E.tagName || ("INPUT" !== E.tagName && "TEXTAREA" !== E.tagName && !E.isContentEditable && 1)))
         )
             return;
-        (0, E.xp)(_, "_sentryCaptured", !0), s && !s._sentryId && (0, E.xp)(s, "_sentryId", (0, i.DM)());
-        let l = "keypress" === _.type ? "input" : _.type;
-        !(function (t) {
-            if (t.type !== r) return !1;
+        (0, _.xp)(r, "_sentryCaptured", !0), E && !E._sentryId && (0, _.xp)(E, "_sentryId", (0, s.DM)());
+        let l = "keypress" === r.type ? "input" : r.type;
+        !(function (e) {
+            if (e.type !== a) return !1;
             try {
-                if (!t.target || t.target._sentryId !== n) return !1;
-            } catch (t) {}
+                if (!e.target || e.target._sentryId !== i) return !1;
+            } catch (e) {}
             return !0;
-        })(_) &&
-            (t({
-                event: _,
+        })(r) &&
+            (e({
+                event: r,
                 name: l,
-                global: e,
+                global: t,
             }),
-            (r = _.type),
-            (n = s ? s._sentryId : void 0)),
-            clearTimeout(a),
-            (a = c.m.setTimeout(() => {
-                (n = void 0), (r = void 0);
+            (a = r.type),
+            (i = E ? E._sentryId : void 0)),
+            clearTimeout(n),
+            (n = c.m.setTimeout(() => {
+                (i = void 0), (a = void 0);
             }, 1000));
     };
 }

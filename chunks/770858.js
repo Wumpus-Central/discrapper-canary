@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(682662),
     d = n(178088),
     f = n(306680),
-    p = n(944486),
-    h = n(594174),
+    h = n(944486),
+    p = n(594174),
     g = n(821020),
     m = n(370774),
     b = n(128008),
@@ -21,7 +21,7 @@ var r = n(54381),
     j = n(490897),
     x = n(888158);
 function C() {
-    let e = (0, o.e7)([h.default], () => h.default.getCurrentUser());
+    let e = (0, o.e7)([p.default], () => p.default.getCurrentUser());
     return (0, o.e7)(
         [f.ZP],
         () => (null == e ? void 0 : e.id) != null && f.ZP.getMentionCount(e.id, j.W.NOTIFICATION_CENTER) > 0,
@@ -29,7 +29,7 @@ function C() {
 }
 function E(e) {
     var t, n;
-    let { onClick: d, selectedOverride: f = !1, popoutProps: h, ref: _ } = e,
+    let { onClick: d, selectedOverride: f = !1, popoutProps: p, ref: _ } = e,
         j = (0, l.Ie)("notifications-inbox"),
         [E, S] = i.useState(!1),
         I = (0, m.D)(),
@@ -69,7 +69,7 @@ function E(e) {
                   };
         })(P),
         A = N === g.jP.LEGACY ? s.xx7 : s.Dkj,
-        R = (0, o.e7)([p.Z], () => p.Z.getChannelId()),
+        R = (0, o.e7)([h.Z], () => h.Z.getChannelId()),
         D = i.useMemo(() => {
             if (N === g.jP.SIDEBAR) return v.Z5c.CHANNEL(v.STv, R);
         }, [N, R]);
@@ -114,7 +114,7 @@ function E(e) {
                                     });
                             }
                             return e;
-                        })({}, j, h)),
+                        })({}, j, p)),
                         (n = n =
                             {
                                 onClick: d,

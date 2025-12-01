@@ -1,27 +1,27 @@
 n.d(t, {
-    A3: () => S,
-    FZ: () => T,
-    Hl: () => Q,
+    A3: () => T,
+    FZ: () => I,
+    Hl: () => X,
     Je: () => N,
-    Jh: () => x,
+    Jh: () => L,
     KK: () => W,
-    Oe: () => I,
+    Oe: () => S,
     Qi: () => F,
     Ro: () => O,
     _k: () => G,
-    _p: () => w,
-    aq: () => j,
-    cP: () => R,
-    e9: () => D,
+    _p: () => D,
+    aq: () => k,
+    cP: () => P,
+    e9: () => w,
     ee: () => z,
-    gZ: () => Z,
-    ge: () => L,
+    gZ: () => B,
+    ge: () => x,
     ig: () => A,
     nL: () => H,
-    nW: () => P,
-    tb: () => M,
+    nW: () => R,
+    tb: () => j,
     tl: () => K,
-    vx: () => k,
+    vx: () => M,
     y4: () => Y,
     yw: () => V,
 }),
@@ -40,10 +40,10 @@ var a = n(274136),
     u = n(314884),
     d = n(78839),
     f = n(424218),
-    _ = n(823379),
-    p = n(63063),
-    h = n(74538),
-    m = n(960048),
+    p = n(823379),
+    _ = n(63063),
+    m = n(74538),
+    h = n(960048),
     g = n(981631),
     E = n(185923),
     b = n(474936),
@@ -76,12 +76,12 @@ var O = (function (e) {
     );
 })({});
 let v = [g.Eu4.NONE, g.Eu4.TIER_1, g.Eu4.TIER_2, g.Eu4.TIER_3],
-    I = v.slice().reverse(),
-    T = (e) => {
+    S = v.slice().reverse(),
+    I = (e) => {
         var t;
-        return e === g.Eu4.NONE ? g.Eu4.TIER_1 : null == (t = B.find((t) => t.tier === e)) ? void 0 : t.nextTier;
+        return e === g.Eu4.NONE ? g.Eu4.TIER_1 : null == (t = Z.find((t) => t.tier === e)) ? void 0 : t.nextTier;
     },
-    S = (e, t) =>
+    T = (e, t) =>
         null != t && t.features.has(g.GuildFeatures.MORE_STICKERS) && e === g.Eu4.TIER_3
             ? a.D.MAX_STICKER_SLOTS
             : b.$8[e],
@@ -92,7 +92,7 @@ let v = [g.Eu4.NONE, g.Eu4.TIER_1, g.Eu4.TIER_2, g.Eu4.TIER_3],
         let t = v[v.indexOf(e) - 1];
         return b._k[e] - b._k[t];
     },
-    R = (e) => [
+    P = (e) => [
         {
             tier: g.Eu4.TIER_1,
             title: y.intl.string(y.t["lK+WOT"]),
@@ -108,7 +108,7 @@ let v = [g.Eu4.NONE, g.Eu4.TIER_1, g.Eu4.TIER_2, g.Eu4.TIER_3],
                 {
                     title: y.intl.formatToPlainString(y.t["/9p2/g"], {
                         adding: A(g.Eu4.TIER_1),
-                        total: S(g.Eu4.TIER_1),
+                        total: T(g.Eu4.TIER_1),
                     }),
                     description: y.intl.string(y.t.JfsnDQ),
                     icon: 8,
@@ -143,7 +143,7 @@ let v = [g.Eu4.NONE, g.Eu4.TIER_1, g.Eu4.TIER_2, g.Eu4.TIER_3],
                     description: y.intl.string(y.t["puH/9R"]),
                     icon: 7,
                 },
-            ].filter(_.lm),
+            ].filter(p.lm),
         },
         {
             tier: g.Eu4.TIER_2,
@@ -160,7 +160,7 @@ let v = [g.Eu4.NONE, g.Eu4.TIER_1, g.Eu4.TIER_2, g.Eu4.TIER_3],
                 {
                     title: y.intl.formatToPlainString(y.t["/9p2/g"], {
                         adding: A(g.Eu4.TIER_2),
-                        total: S(g.Eu4.TIER_2),
+                        total: T(g.Eu4.TIER_2),
                     }),
                     description: y.intl.string(y.t.t4TM28),
                     icon: 8,
@@ -209,7 +209,7 @@ let v = [g.Eu4.NONE, g.Eu4.TIER_1, g.Eu4.TIER_2, g.Eu4.TIER_3],
                           icon: 12,
                       }
                     : null,
-            ].filter(_.lm),
+            ].filter(p.lm),
         },
         {
             tier: g.Eu4.TIER_3,
@@ -226,7 +226,7 @@ let v = [g.Eu4.NONE, g.Eu4.TIER_1, g.Eu4.TIER_2, g.Eu4.TIER_3],
                 {
                     title: y.intl.formatToPlainString(y.t["/9p2/g"], {
                         adding: A(g.Eu4.TIER_3),
-                        total: S(g.Eu4.TIER_3),
+                        total: T(g.Eu4.TIER_3),
                     }),
                     description: y.intl.string(y.t["+ZI4QZ"]),
                     icon: 8,
@@ -249,7 +249,7 @@ let v = [g.Eu4.NONE, g.Eu4.TIER_1, g.Eu4.TIER_2, g.Eu4.TIER_3],
                 {
                     title: y.intl.string(y.t.C2w2cM),
                     description: y.intl.format(y.t["3Reosx"], {
-                        helpdeskArticle: p.Z.getArticleURL(g.BhN.GUILD_VANITY_URL),
+                        helpdeskArticle: _.Z.getArticleURL(g.BhN.GUILD_VANITY_URL),
                     }),
                     icon: 6,
                 },
@@ -272,10 +272,10 @@ let v = [g.Eu4.NONE, g.Eu4.TIER_1, g.Eu4.TIER_2, g.Eu4.TIER_3],
                           icon: 12,
                       }
                     : null,
-            ].filter(_.lm),
+            ].filter(p.lm),
         },
     ];
-function P(e) {
+function R(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { useLevels: n = !0 } = t;
     switch (e) {
@@ -291,7 +291,7 @@ function P(e) {
             throw Error("Not a valid tier type");
     }
 }
-function D(e) {
+function w(e) {
     switch (e) {
         case g.Eu4.NONE:
             return y.intl.string(y.t.LcKgJd);
@@ -305,7 +305,7 @@ function D(e) {
             throw Error("Not a valid tier type");
     }
 }
-let w = i().memoize((e) =>
+let D = i().memoize((e) =>
         b.HO[g.Eu4.TIER_1].features.includes(e)
             ? g.Eu4.TIER_1
             : b.HO[g.Eu4.TIER_2].features.includes(e)
@@ -314,7 +314,7 @@ let w = i().memoize((e) =>
                 ? g.Eu4.TIER_3
                 : null,
     ),
-    L = (e) =>
+    x = (e) =>
         e === g.Eu4.NONE
             ? g.AnalyticsObjectTypes.NONE
             : e === g.Eu4.TIER_1
@@ -324,24 +324,24 @@ let w = i().memoize((e) =>
                 : e === g.Eu4.TIER_3
                   ? g.AnalyticsObjectTypes.TIER_3
                   : null;
-function x(e) {
+function L(e) {
     var t;
     let n = null == (t = c.Z.getGuild(e)) ? void 0 : t.premiumTier;
     return null != n ? n : g.Eu4.NONE;
 }
-function M(e, t) {
+function j(e, t) {
     return null == t || (null != e && e >= t);
 }
-function k(e) {
+function M(e) {
     return i()
         .values(e)
         .filter((e) => e.isAvailable());
 }
-function j(e) {
+function k(e) {
     let { fractionalState: t } = e,
         n = d.Z.getPremiumTypeSubscription();
     u.Z.hasFetched || u.Z.isFetching || (0, o.X8)();
-    let r = k(u.Z.boostSlots),
+    let r = M(u.Z.boostSlots),
         i = null == n ? void 0 : n.isPausedOrPausePending,
         a = r.length > 0;
     if (i && t === b.a$.NONE && !a) return y.intl.string(y.t.mOWsF1);
@@ -357,8 +357,8 @@ function j(e) {
     if (n.status === g.O0b.ACCOUNT_HOLD) return y.intl.string(y.t.JakNQ8);
     if (l > 0) return y.intl.string(y.t.x25mZR);
     if (null == n.renewalMutations) return null;
-    let c = h.uV(n.renewalMutations.additionalPlans);
-    return h.uV(n.additionalPlans) > c ? y.intl.string(y.t.x25mZR) : y.intl.string(y.t["W/bb8f"]);
+    let c = m.uV(n.renewalMutations.additionalPlans);
+    return m.uV(n.additionalPlans) > c ? y.intl.string(y.t.x25mZR) : y.intl.string(y.t["W/bb8f"]);
 }
 function U(e) {
     return e.sort((e, t) => (null != e.endsAt && null != t.endsAt ? e.endsAt.getTime() - t.endsAt.getTime() : -1));
@@ -367,12 +367,12 @@ function G(e, t) {
     var n;
     if ((null == (n = c.Z.getGuild(t)) ? void 0 : n.features.has(g.GuildFeatures.PREMIUM_TIER_3_OVERRIDE)) === !0)
         return 0;
-    let r = x(t),
+    let r = L(t),
         i = g.oCV[r],
         a = e.filter((e) => null != e.endsAt);
     return i - (e.length - a.length);
 }
-let B = [
+let Z = [
     {
         tier: g.Eu4.TIER_3,
         amount: g.oCV[g.Eu4.TIER_3],
@@ -389,18 +389,18 @@ let B = [
         nextTier: g.Eu4.TIER_2,
     },
 ];
-function Z(e, t) {
+function B(e, t) {
     let n = G(e, t);
     if (n > 0) {
         let r = U(e).filter((e) => null != e.endsAt),
             i = r.length - n;
         i < 0 &&
-            m.Z.addBreadcrumb({
+            h.Z.addBreadcrumb({
                 category: "premium",
                 message: "Negative index while checking grace period ending date.",
                 data: {
                     subscriptionLength: e.length,
-                    subscriptionsNeededForPremiumTier: g.oCV[x(t)],
+                    subscriptionsNeededForPremiumTier: g.oCV[L(t)],
                     endingSubscriptionLength: r.length,
                 },
             });
@@ -414,8 +414,8 @@ function F(e, t) {
         r = v.indexOf(t);
     if (-1 === r) return 0;
     let i = v[r - 1],
-        a = null != i ? S(i) : 0,
-        o = S(t);
+        a = null != i ? T(i) : 0,
+        o = T(t);
     return Math.max(0, n - e.slice(a, o).length);
 }
 function V(e, t, n) {
@@ -441,26 +441,26 @@ function K(e) {
 }
 function z(e) {
     var t;
-    return null != (t = I.find((t) => e >= g.oCV[t])) ? t : g.Eu4.NONE;
+    return null != (t = S.find((t) => e >= g.oCV[t])) ? t : g.Eu4.NONE;
 }
 function q(e) {
     var t;
     return null != (t = v.find((t) => e < g.oCV[t])) ? t : g.Eu4.TIER_3;
 }
-let X = {
+let Q = {
     [g.Eu4.NONE]: 0,
     [g.Eu4.TIER_1]: 1 / 3,
     [g.Eu4.TIER_2]: 2 / 3,
     [g.Eu4.TIER_3]: 1,
 };
-function Q(e) {
+function X(e) {
     let t = (0, l.I)(e.id),
         n = z(t),
         r = q(t),
         i = g.oCV[n],
         a = (t - i) / (g.oCV[r] - i),
-        o = X[n],
-        s = X[r];
+        o = Q[n],
+        s = Q[r];
     return {
         fillFactor: n === g.Eu4.TIER_3 ? 1 : a * (s - o) + o,
         totalAvailableBoostsCount: t,

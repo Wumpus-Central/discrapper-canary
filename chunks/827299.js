@@ -51,14 +51,14 @@ function d(e) {
 function f(e, t) {
     return Array.isArray(e) && Array.isArray(t) ? (0, o.E)(e, t) : Object.is(e, t);
 }
-function _(e) {
+function p(e) {
     return e instanceof c && (e.status >= 500 || 429 === e.status);
 }
-let p = 5;
-function h() {
+let _ = 5;
+function m() {
     return new a.Z();
 }
-let m = (0, i.U)(() => ({
+let h = (0, i.U)(() => ({
     isLoading: !1,
     error: null,
     backoff: new a.Z(),
@@ -70,11 +70,11 @@ function g(e, t) {
             load: o,
             getIsLoading: l,
             getError: c,
-            retryConfig: { maxRetries: g = p, backoff: E = h, retryableErrors: b = _ } = {},
+            retryConfig: { maxRetries: g = _, backoff: E = m, retryableErrors: b = p } = {},
         } = t,
         y = new Map();
     function O(e) {
-        if (null == e) return m;
+        if (null == e) return h;
         let t = y.get(e);
         return (
             null == t &&
@@ -121,44 +121,44 @@ function g(e, t) {
                         }));
             }
     }
-    function I() {
+    function S() {
         for (var t = arguments.length, i = Array(t), o = 0; o < t; o++) i[o] = arguments[o];
         let u = d(i),
-            _ = Array.isArray(e) ? e : [e],
-            p = n(...u),
-            h = O(p),
-            m = (0, s.e7)(_, () => (null == l ? void 0 : l(...u)), [u]),
-            g = h((e) => null == l && e.isLoading),
-            E = null != m ? m : g,
-            b = (0, s.e7)(_, () => (null == c ? void 0 : c(...u)), [u]),
-            y = h((e) => (null == c ? e.error : null)),
-            I = null != b ? b : y,
-            T = (0, s.e7)(_, () => a(...u), [u], f);
+            p = Array.isArray(e) ? e : [e],
+            _ = n(...u),
+            m = O(_),
+            h = (0, s.e7)(p, () => (null == l ? void 0 : l(...u)), [u]),
+            g = m((e) => null == l && e.isLoading),
+            E = null != h ? h : g,
+            b = (0, s.e7)(p, () => (null == c ? void 0 : c(...u)), [u]),
+            y = m((e) => (null == c ? e.error : null)),
+            S = null != b ? b : y,
+            I = (0, s.e7)(p, () => a(...u), [u], f);
         return (
             (0, r.useEffect)(() => {
                 v({
-                    queryId: p,
+                    queryId: _,
                     args: u,
-                    useStoreState: h,
+                    useStoreState: m,
                 });
-            }, [p, u, h]),
+            }, [_, u, m]),
             {
-                data: T,
-                error: I,
+                data: I,
+                error: S,
                 isLoading: E,
                 refetch: (0, r.useCallback)(() => {
                     v({
-                        queryId: p,
+                        queryId: _,
                         args: u,
-                        useStoreState: h,
+                        useStoreState: m,
                         refetch: !0,
                     });
-                }, [p, u, h]),
+                }, [_, u, m]),
             }
         );
     }
     return (
-        (I.refetch = async function () {
+        (S.refetch = async function () {
             for (var e = arguments.length, t = Array(e), r = 0; r < e; r++) t[r] = arguments[r];
             let i = n(...t);
             O(i).getState().backoff.succeed(),
@@ -168,6 +168,6 @@ function g(e, t) {
                     refetch: !0,
                 });
         }),
-        I
+        S
     );
 }

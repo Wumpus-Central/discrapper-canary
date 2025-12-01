@@ -9,9 +9,9 @@ var r = n(179360),
     u = n(905128),
     d = n(158638),
     f = n(639777),
-    _ = n(981631),
-    p = n(647086);
-function h(e, t, n) {
+    p = n(981631),
+    _ = n(647086);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,10 +24,10 @@ function h(e, t, n) {
         e
     );
 }
-class m extends i.Z {
+class h extends i.Z {
     handleSelectedGuildChange() {
         let e = s.Z.getGuildId();
-        if (null == e || e === p._ || e === _.I_8) return;
+        if (null == e || e === _._ || e === p.I_8) return;
         let t = a.Z.getGuild(e);
         null != t &&
             (d.sT.trackExposure({
@@ -55,12 +55,12 @@ class m extends i.Z {
     }
     constructor(...e) {
         super(...e),
-            h(this, "stores", new Map().set(s.Z, this.handleSelectedGuildChange)),
-            h(this, "actions", {
+            m(this, "stores", new Map().set(s.Z, this.handleSelectedGuildChange)),
+            m(this, "actions", {
                 GUILD_POWERUP_ENTITLEMENTS_CREATE: this.handleEntitlementUpdate.bind(this),
                 GUILD_POWERUP_ENTITLEMENTS_DELETE: this.handleEntitlementUpdate.bind(this),
                 GUILD_APPLIED_BOOSTS_UPDATE: this.handleAppliedBoostUpdate.bind(this),
             });
     }
 }
-let g = new m();
+let g = new h();

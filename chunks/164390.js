@@ -42,8 +42,8 @@ function l(e, r, i, a, o, c, u) {
             var d,
                 f = Object.keys(e);
             for (d = 0; d < f.length; d++) {
-                var _ = f[d];
-                l(e[_], _, d, a, e, c, u);
+                var p = f[d];
+                l(e[p], p, d, a, e, c, u);
             }
         }
         a.pop();
@@ -70,7 +70,7 @@ function u(e, t, n, o) {
 }
 function d(e, i, a, o, l, u, f) {
     if (((u += 1), "object" == typeof e && null !== e)) {
-        for (_ = 0; _ < o.length; _++) if (o[_] === e) return void s(n, e, i, l);
+        for (p = 0; p < o.length; p++) if (o[p] === e) return void s(n, e, i, l);
         try {
             if ("function" == typeof e.toJSON) return;
         } catch (e) {
@@ -78,17 +78,17 @@ function d(e, i, a, o, l, u, f) {
         }
         if ((void 0 !== f.depthLimit && u > f.depthLimit) || (void 0 !== f.edgesLimit && a + 1 > f.edgesLimit))
             return void s(t, e, i, l);
-        if ((o.push(e), Array.isArray(e))) for (_ = 0; _ < e.length; _++) d(e[_], _, _, o, e, u, f);
+        if ((o.push(e), Array.isArray(e))) for (p = 0; p < e.length; p++) d(e[p], p, p, o, e, u, f);
         else {
-            var _,
-                p = {},
-                h = Object.keys(e).sort(c);
-            for (_ = 0; _ < h.length; _++) {
-                var m = h[_];
-                d(e[m], m, _, o, e, u, f), (p[m] = e[m]);
+            var p,
+                _ = {},
+                m = Object.keys(e).sort(c);
+            for (p = 0; p < m.length; p++) {
+                var h = m[p];
+                d(e[h], h, p, o, e, u, f), (_[h] = e[h]);
             }
-            if (void 0 === l) return p;
-            r.push([l, i, e]), (l[i] = p);
+            if (void 0 === l) return _;
+            r.push([l, i, e]), (l[i] = _);
         }
         o.pop();
     }

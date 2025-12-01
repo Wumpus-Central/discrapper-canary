@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => E,
-    y: () => m,
+    y: () => h,
 }),
     n(388685);
 var r = n(392711),
@@ -25,10 +25,10 @@ function f(e, t, n) {
         e
     );
 }
-let _ = 10 * c.Z.Millis.SECOND,
-    p = 10 * c.Z.Millis.SECOND,
-    h = 500;
-var m = (function (e) {
+let p = 10 * c.Z.Millis.SECOND,
+    _ = 10 * c.Z.Millis.SECOND,
+    m = 500;
+var h = (function (e) {
     return (
         (e.RequestedSSRCsUpdate = "requested-ssrcs-update"), (e.RequestedStreamsUpdate = "requested-streams-update"), e
     );
@@ -238,7 +238,7 @@ class E extends a.Z {
         return (
             !this.throttleDowngradeChanges ||
             void 0 === this.lastDowngradeChangeTime ||
-            (e ? Date.now() - this.lastDowngradeChangeTime >= p : Date.now() - this.lastDowngradeChangeTime >= _)
+            (e ? Date.now() - this.lastDowngradeChangeTime >= _ : Date.now() - this.lastDowngradeChangeTime >= p)
         );
     }
     shouldSeamlessTransition(e) {
@@ -419,7 +419,7 @@ class E extends a.Z {
                 this.delayedCall.delay();
             }),
             (this.logger = new s.Z("GoLiveQualityManager")),
-            (this.delayedCall = new o.sW(h, () => {
+            (this.delayedCall = new o.sW(m, () => {
                 this.update();
             }));
     }

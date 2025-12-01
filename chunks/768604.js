@@ -10,11 +10,11 @@ var i = n(524437),
     u = n(666515),
     d = n(915009),
     f = n(880257),
-    _ = n(400313),
-    p = n(947707),
-    h = n(726985),
-    m = n(388032),
-    g = n(597754);
+    p = n(400313),
+    _ = n(947707),
+    m = n(726985),
+    h = n(388032),
+    g = n(744038);
 function E(e, t, n) {
     return (
         t in e
@@ -50,7 +50,7 @@ function y() {
         n = (0, d.LN)(),
         E = (0, u.r)(),
         { goreContentGuilds: y, goreContentFriendDm: O, goreContentNonFriendDm: v } = (0, c.K)(),
-        I = (e) => {
+        S = (e) => {
             let t = Object.values(e);
             if ((0, s.Ks)() && t.includes(i.Q4.SHOW))
                 return void a.Z.showAgeVerificationGetStartedModal({
@@ -58,66 +58,66 @@ function y() {
                 });
             (0, l.Jr)(e);
         },
-        T = [
+        I = [
             {
                 value: i.Q4.BLUR,
-                label: m.intl.string(m.t.S49Uad),
+                label: h.intl.string(h.t.S49Uad),
             },
             {
                 value: i.Q4.BLOCK,
-                label: m.intl.string(m.t["D/157Y"]),
+                label: h.intl.string(h.t["D/157Y"]),
             },
         ],
-        S = [
+        T = [
             {
                 value: i.Q4.BLUR,
-                label: m.intl.string(m.t.S49Uad),
+                label: h.intl.string(h.t.S49Uad),
             },
         ],
         A = {
             value: i.Q4.SHOW,
-            label: m.intl.string(m.t["5k5OFp"]),
+            label: h.intl.string(h.t["5k5OFp"]),
         };
-    t && (T.unshift(A), S.unshift(A));
+    t && (I.unshift(A), T.unshift(A));
     let C = {
         isDisabled: E,
-        tooltipText: n ? m.intl.string(g.default["6Af/cw"]) : void 0,
+        tooltipText: n ? h.intl.string(g.default["6Af/cw"]) : void 0,
     };
-    return (0, r.jsxs)(_.n, {
-        setting: h.s6.GORE_MEDIA_REDACTION,
-        description: m.intl.string(m.t.XgH9eh),
+    return (0, r.jsxs)(p.n, {
+        setting: m.s6.GORE_MEDIA_REDACTION,
+        description: h.intl.string(h.t.XgH9eh),
         children: [
             (0, r.jsx)(
-                p.Z,
+                _.Z,
                 b(
                     {
-                        title: m.intl.string(m.t["+uI23H"]),
+                        title: h.intl.string(h.t["+uI23H"]),
                         value: O,
-                        onChange: (e) => I({ goreContentFriendDm: e }),
-                        options: T,
+                        onChange: (e) => S({ goreContentFriendDm: e }),
+                        options: I,
                     },
                     C,
                 ),
             ),
             (0, r.jsx)(
-                p.Z,
+                _.Z,
                 b(
                     {
-                        title: m.intl.string(m.t["Yh+HX1"]),
+                        title: h.intl.string(h.t["Yh+HX1"]),
                         value: v,
-                        onChange: (e) => I({ goreContentNonFriendDm: e }),
-                        options: T,
+                        onChange: (e) => S({ goreContentNonFriendDm: e }),
+                        options: I,
                     },
                     C,
                 ),
             ),
-            (0, r.jsx)(p.Z, {
-                title: m.intl.string(m.t["FP+a42"]),
+            (0, r.jsx)(_.Z, {
+                title: h.intl.string(h.t["FP+a42"]),
                 value: y,
-                onChange: (e) => I({ goreContentGuilds: e }),
+                onChange: (e) => S({ goreContentGuilds: e }),
                 isDisabled: !t || E,
-                options: S,
-                tooltipText: n ? m.intl.string(g.default["6Af/cw"]) : void 0,
+                options: T,
+                tooltipText: n ? h.intl.string(g.default["6Af/cw"]) : void 0,
             }),
         ],
     });

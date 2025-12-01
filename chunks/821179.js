@@ -10,8 +10,8 @@ var i = n(692547),
     u = n(5192),
     d = n(652853),
     f = n(228168),
-    p = n(671955),
-    h = n(323759);
+    h = n(671955),
+    p = n(323759);
 let g = (0, a.pxk)(a.EFr.SIZE_16);
 function m(e) {
     let { user: t, guild: m, nick: b, onSelect: _ } = e,
@@ -19,7 +19,7 @@ function m(e) {
         v = t.hasAvatarForGuild(m.id);
     return (0, r.jsxs)(a.P3F, {
         focusProps:
-            O === p.l.MODAL_V2
+            O === h.l.MODAL_V2
                 ? {
                       offset: {
                           top: 4,
@@ -28,7 +28,7 @@ function m(e) {
                       },
                   }
                 : { offset: { right: 8 } },
-        className: h.row,
+        className: p.row,
         onClick: _,
         onContextMenu: (e) => {
             (0, s.jW)(e, async () => {
@@ -113,7 +113,7 @@ function m(e) {
                 tabIndex: -1,
                 guild: m,
                 showBadge: !0,
-                className: null != m.icon ? h.icon : h.noIcon,
+                className: null != m.icon ? p.icon : p.noIcon,
                 badgeStrokeColor: (0, o.wj)(y)
                     ? i.Z.unsafe_rawColors.PRIMARY_600.css
                     : i.Z.unsafe_rawColors.WHITE_500.css,
@@ -123,20 +123,20 @@ function m(e) {
                 active: !0,
             }),
             (0, r.jsxs)("div", {
-                className: h.details,
+                className: p.details,
                 children: [
                     (0, r.jsx)("div", {
-                        className: h.name,
+                        className: p.name,
                         children: m.name,
                     }),
                     v &&
                         (0, r.jsxs)("div", {
-                            className: h.nick,
+                            className: p.nick,
                             children: [
                                 (0, r.jsx)(a.qEK, {
                                     src: t.getAvatarURL(m.id, g),
                                     size: a.EFr.SIZE_16,
-                                    className: h.avatar,
+                                    className: p.avatar,
                                     "aria-hidden": !0,
                                 }),
                                 (0, r.jsx)(a.Text, {

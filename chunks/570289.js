@@ -9,10 +9,10 @@ var r = n(682404),
     u = "midnight",
     d = "noon",
     f = "morning",
-    _ = "afternoon",
-    p = "evening",
-    h = "night";
-function m(e, t) {
+    p = "afternoon",
+    _ = "evening",
+    m = "night";
+function h(e, t) {
     var n = e > 0 ? "-" : "+",
         r = Math.abs(e),
         i = Math.floor(r / 60),
@@ -370,7 +370,7 @@ let b = {
     B: function (e, t, n) {
         var r,
             i = e.getUTCHours();
-        switch (((r = i >= 17 ? p : i >= 12 ? _ : i >= 4 ? f : h), t)) {
+        switch (((r = i >= 17 ? _ : i >= 12 ? p : i >= 4 ? f : m), t)) {
             case "B":
             case "BB":
             case "BBB":
@@ -448,7 +448,7 @@ let b = {
             case "O":
             case "OO":
             case "OOO":
-                return "GMT" + m(i, ":");
+                return "GMT" + h(i, ":");
             default:
                 return "GMT" + E(i, ":");
         }
@@ -459,7 +459,7 @@ let b = {
             case "z":
             case "zz":
             case "zzz":
-                return "GMT" + m(i, ":");
+                return "GMT" + h(i, ":");
             default:
                 return "GMT" + E(i, ":");
         }

@@ -11,7 +11,7 @@ function d(e) {
     let { renderCards: t, heading: n, onExpand: a } = e,
         d = i.useId(),
         f = i.useMemo(() => t({ className: u.card }), [t]),
-        [_] = f;
+        [p] = f;
     return 0 === f.length
         ? null
         : (0, r.jsxs)("section", {
@@ -32,7 +32,7 @@ function d(e) {
                       children: [
                           (0, r.jsx)("li", {
                               className: u.firstCardContainer,
-                              children: _,
+                              children: p,
                           }),
                           f.length > 1 &&
                               (0, r.jsx)(s.P3F, {

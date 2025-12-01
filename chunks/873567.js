@@ -1,22 +1,22 @@
-function a(t) {
-    if (!t) return {};
-    let e = t.match(/^(([^:/?#]+):)?(\/\/([^/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?$/);
+function n(e) {
     if (!e) return {};
-    let _ = e[6] || "",
-        a = e[8] || "";
+    let t = e.match(/^(([^:/?#]+):)?(\/\/([^/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?$/);
+    if (!t) return {};
+    let r = t[6] || "",
+        n = t[8] || "";
     return {
-        host: e[4],
-        path: e[5],
-        protocol: e[2],
-        search: _,
-        hash: a,
-        relative: e[5] + _ + a,
+        host: t[4],
+        path: t[5],
+        protocol: t[2],
+        search: r,
+        hash: n,
+        relative: t[5] + r + n,
     };
 }
-function r(t) {
-    return t.split(/[?#]/, 1)[0];
+function a(e) {
+    return e.split(/[?#]/, 1)[0];
 }
-_.d(e, {
-    en: () => a,
-    rt: () => r,
+r.d(t, {
+    en: () => n,
+    rt: () => a,
 });

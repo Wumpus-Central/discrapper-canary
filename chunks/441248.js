@@ -9,13 +9,13 @@ var i = n(120356),
     c = n(12694),
     u = n(925329),
     d = n(810568),
-    p = n(168524),
+    f = n(168524),
     h = n(115530),
-    f = n(388032),
+    p = n(388032),
     g = n(48733);
 function m(e) {
     let { name: t, applicationId: n } = e,
-        i = (0, p.Z)({
+        i = (0, f.Z)({
             location: "ActivityPanelGameCard",
             applicationId: n,
             source: d.m1.RtcPanel,
@@ -37,11 +37,11 @@ function b(e) {
             game: i,
             onClickNotSharing: l,
             isForceShowSharingPopout: d,
-            setIsForceShowSharingPopout: p,
+            setIsForceShowSharingPopout: f,
             ref: h,
             popoutTargetRef: b,
         } = e,
-        _ = null != n ? n.name : null != i ? i.name : f.intl.string(f.t["UQMV/E"]);
+        _ = null != n ? n.name : null != i ? i.name : p.intl.string(p.t["UQMV/E"]);
     return (
         (0, c.V)(),
         (0, r.jsxs)("div", {
@@ -68,7 +68,7 @@ function b(e) {
                 (0, r.jsx)(s.j, {
                     popoutTargetRef: b,
                     isForceShowSharingPopout: d,
-                    setIsForceShowSharingPopout: p,
+                    setIsForceShowSharingPopout: f,
                     children: (0, r.jsxs)("div", {
                         className: g.info,
                         children: [

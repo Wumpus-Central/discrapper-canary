@@ -16,13 +16,13 @@ var i = n(524437),
     a = n(709054),
     o = n(853856),
     c = n(231338);
-function s() {
+function d() {
     let e = o.Z.getFavoriteChannels(),
         t = 1;
     for (let n in e) t = Math.max(t, e[n].order);
     return t + 1;
 }
-function d(e) {
+function s(e) {
     for (let t in e) {
         let n = e[t];
         if (null == n) {
@@ -45,10 +45,10 @@ function f(e, t) {
                 (n.favoriteChannels[e] = i.aV.create({
                     nickname: "",
                     type: i.Dd.REFERENCE_ORIGINAL,
-                    position: s(),
+                    position: d(),
                     parentId: null != t ? t : "0",
                 })),
-                    d(n.favoriteChannels);
+                    s(n.favoriteChannels);
             },
             r.fy.FREQUENT_USER_ACTION,
         );
@@ -62,7 +62,7 @@ function E(e) {
                 if ((delete n.favoriteChannels[e], t.type === i.Dd.CATEGORY))
                     for (let t in n.favoriteChannels)
                         n.favoriteChannels[t].parentId === e && (n.favoriteChannels[t].parentId = "0");
-                d(n.favoriteChannels);
+                s(n.favoriteChannels);
             },
             r.fy.INFREQUENT_USER_ACTION,
         );
@@ -85,7 +85,7 @@ function O(e) {
             n.favoriteChannels[t] = i.aV.create({
                 nickname: e,
                 type: i.Dd.CATEGORY,
-                position: s(),
+                position: d(),
                 parentId: "0",
             });
         },

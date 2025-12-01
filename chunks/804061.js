@@ -8,10 +8,10 @@ var r = n(98405),
     u = n(382698),
     d = n(3831),
     f = n(817282),
-    _ = n(814559),
-    p = n(751736),
-    h = n(511696),
-    m = p("replace"),
+    p = n(814559),
+    _ = n(751736),
+    m = n(511696),
+    h = _("replace"),
     g = TypeError,
     E = a("".indexOf),
     b = a("".replace),
@@ -27,26 +27,26 @@ r(
             var n,
                 r,
                 a,
-                p,
+                _,
                 v,
+                S,
                 I,
                 T,
-                S,
                 A,
                 C = o(this),
                 N = 0,
-                R = "";
+                P = "";
             if (!l(e)) {
                 if ((n = c(e)) && !~E(u(o(f(e))), "g")) throw new g("`.replaceAll` does not allow non-global regexes");
-                if ((r = d(e, m))) return i(r, e, C, t);
-                if (h && n) return b(u(C), e, t);
+                if ((r = d(e, h))) return i(r, e, C, t);
+                if (m && n) return b(u(C), e, t);
             }
-            for (a = u(C), p = u(e), (v = s(t)) || (t = u(t)), T = O(1, (I = p.length)), S = E(a, p); -1 !== S; )
-                (A = v ? u(t(p, S, a)) : _(p, a, S, [], void 0, t)),
-                    (R += y(a, N, S) + A),
-                    (N = S + I),
-                    (S = S + T > a.length ? -1 : E(a, p, S + T));
-            return N < a.length && (R += y(a, N)), R;
+            for (a = u(C), _ = u(e), (v = s(t)) || (t = u(t)), I = O(1, (S = _.length)), T = E(a, _); -1 !== T; )
+                (A = v ? u(t(_, T, a)) : p(_, a, T, [], void 0, t)),
+                    (P += y(a, N, T) + A),
+                    (N = T + S),
+                    (T = T + I > a.length ? -1 : E(a, _, T + I));
+            return N < a.length && (P += y(a, N)), P;
         },
     },
 );

@@ -10,14 +10,14 @@ var i = n(95015),
     u = n(499376),
     d = n(611170),
     f = n(128854),
-    _ = n(884182),
-    p = n(592125),
-    h = n(52824),
-    m = n(970184),
+    p = n(884182),
+    _ = n(592125),
+    m = n(52824),
+    h = n(970184),
     g = n(981631);
 function E(e) {
-    let { message: t } = (0, m.CJ)(),
-        n = (0, a.e7)([p.Z], () => p.Z.getChannel(null == t ? void 0 : t.channel_id)),
+    let { message: t } = (0, h.CJ)(),
+        n = (0, a.e7)([_.Z], () => _.Z.getChannel(null == t ? void 0 : t.channel_id)),
         {
             shouldHideMediaOptions: E,
             enabledContentHarmTypeFlags: b,
@@ -26,11 +26,11 @@ function E(e) {
             getOnMediaItemContextMenu: v,
         } = (0, f.c)();
     if (null == t || null == n) return null;
-    let I = e.items.map((e) => (0, s.ze)(e.media, t)).filter((e) => "INVALID" !== e.type),
-        { srcToOnClickOverride: T, srcToHandlePreloadImage: S } =
-            I.length > 1
+    let S = e.items.map((e) => (0, s.ze)(e.media, t)).filter((e) => "INVALID" !== e.type),
+        { srcToOnClickOverride: I, srcToHandlePreloadImage: T } =
+            S.length > 1
                 ? (0, l.G)(
-                      I,
+                      S,
                       {
                           shouldHideMediaOptions: E,
                           enabledContentHarmTypeFlags: b,
@@ -78,14 +78,14 @@ function E(e) {
                 canRemoveItem: !1,
                 onRemoveItem: g.dG4,
             },
-            c = (0, h.q)({
+            c = (0, m.q)({
                 proxyURL: r.proxyUrl,
                 url: r.url,
             });
-        return c in T && ((l.onClick = T[c]), (l.handlePreloadImage = S[c])), l;
+        return c in I && ((l.onClick = I[c]), (l.handlePreloadImage = T[c])), l;
     });
     return (0, r.jsx)("div", {
-        children: (0, r.jsx)(_.Z, {
+        children: (0, r.jsx)(p.Z, {
             items: C,
             isInAppComponentsV2: !0,
         }),

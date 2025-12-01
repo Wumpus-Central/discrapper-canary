@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(846121),
     d = n(703656),
     f = n(259580),
-    p = n(981631),
-    h = n(176505),
+    h = n(981631),
+    p = n(176505),
     g = n(388032),
     m = n(46674);
 function b(e, t) {
@@ -76,7 +76,7 @@ let _ = i.memo(function (e) {
                         focusProps: { offset: { right: 4 } },
                         className: m.progressBarContainer,
                         onClick: function () {
-                            (0, d.uL)(p.Z5c.CHANNEL(_.id, h.oC.GUILD_HOME));
+                            (0, d.uL)(h.Z5c.CHANNEL(_.id, p.oC.GUILD_HOME));
                         },
                         children: [
                             (0, r.jsxs)("div", {

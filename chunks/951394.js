@@ -1,7 +1,7 @@
 n.d(t, {
-    Z0: () => h,
+    Z0: () => m,
     ZP: () => g,
-    zx: () => m,
+    zx: () => h,
 });
 var r = n(54381),
     i = n(473749),
@@ -61,11 +61,11 @@ function f(e, t) {
         e
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -73,7 +73,7 @@ function _(e, t) {
     }
     return i;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -82,37 +82,37 @@ function p(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function h(e) {
+function m(e) {
     let { className: t } = e;
     return (0, r.jsx)("div", { className: o()(t, l.separator) });
 }
-let m = i.forwardRef(function (e, t) {
+let h = i.forwardRef(function (e, t) {
         var {
                 onClick: n,
                 onContextMenu: i,
                 className: a,
                 selected: c = !1,
                 children: d,
-                disabled: p = !1,
-                dangerous: h,
+                disabled: _ = !1,
+                dangerous: m,
             } = e,
-            m = _(e, ["onClick", "onContextMenu", "className", "selected", "children", "disabled", "dangerous"]);
+            h = p(e, ["onClick", "onContextMenu", "className", "selected", "children", "disabled", "dangerous"]);
         return (0, r.jsx)(
             s.P3F,
             f(
                 u(
                     {
                         innerRef: t,
-                        onClick: p ? void 0 : n,
-                        onContextMenu: p ? void 0 : i,
+                        onClick: _ ? void 0 : n,
+                        onContextMenu: _ ? void 0 : i,
                         className: o()(a, {
                             [l.button]: !0,
                             [l.selected]: c,
-                            [l.disabled]: p,
-                            [l.dangerous]: h,
+                            [l.disabled]: _,
+                            [l.dangerous]: m,
                         }),
                     },
-                    m,
+                    h,
                 ),
                 { children: d },
             ),
@@ -120,6 +120,6 @@ let m = i.forwardRef(function (e, t) {
     }),
     g = function (e) {
         var { className: t, children: n } = e,
-            i = _(e, ["className", "children"]);
+            i = p(e, ["className", "children"]);
         return (0, r.jsx)("div", f(u({ className: o()(t, l.wrapper) }, i), { children: n }));
     };

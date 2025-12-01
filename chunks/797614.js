@@ -57,19 +57,19 @@ function f(e, t) {
         e
     );
 }
-let _ = new Set(["darwin", "linux", "win32", "ios", "android"]);
-function p() {
+let p = new Set(["darwin", "linux", "win32", "ios", "android"]);
+function _() {
     if ((0, a.isWeb)()) return "web";
     {
         let e = (0, a.getPlatformName)();
-        return _.has(e) ? e : null;
+        return p.has(e) ? e : null;
     }
 }
-function h() {
+function m() {
     let e = o.Z;
     return null != e && r.e.ALL.has(e) ? e : null;
 }
-let m = 120000,
+let h = 120000,
     g = 100;
 class E {
     _getMetricWithDefaults(e, t) {
@@ -83,9 +83,9 @@ class E {
             r.forEach((e) => {
                 i.tags.push(e);
             });
-        let a = p();
+        let a = _();
         null != a && i.tags.push("platform:".concat(a));
-        let o = h();
+        let o = m();
         return null != o && i.tags.push("release_channel:".concat(o)), i;
     }
     increment(e) {
@@ -107,8 +107,8 @@ class E {
                     body: {
                         metrics: e,
                         client_info: {
-                            built_at: "1763574093635",
-                            build_number: "470193",
+                            built_at: "1764630948400",
+                            build_number: "473983",
                         },
                     },
                     retries: 1,
@@ -126,7 +126,7 @@ class E {
             (this._metrics = []),
             (this._intervalId = setInterval(() => {
                 this._flush();
-            }, m));
+            }, h));
     }
 }
 let b = new E();

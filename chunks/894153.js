@@ -43,7 +43,7 @@ class u {
     parse(e) {
         let t = this.sanitize(e);
         if (
-            (this.symbols.group && (t = p(t, this.symbols.group, "")),
+            (this.symbols.group && (t = _(t, this.symbols.group, "")),
             this.symbols.decimal && (t = t.replace(this.symbols.decimal, ".")),
             this.symbols.minusSign && (t = t.replace(this.symbols.minusSign, "-")),
             (t = t.replace(this.symbols.numeral, this.symbols.index)),
@@ -87,11 +87,11 @@ class u {
                         String.fromCharCode(1548),
                         this.symbols.decimal,
                     )),
-                this.symbols.group && (e = p(e, ".", this.symbols.group))),
-            "\u2019" === this.symbols.group && e.includes("'") && (e = p(e, "'", this.symbols.group)),
+                this.symbols.group && (e = _(e, ".", this.symbols.group))),
+            "\u2019" === this.symbols.group && e.includes("'") && (e = _(e, "'", this.symbols.group)),
             "fr-FR" === this.options.locale &&
                 this.symbols.group &&
-                ((e = p(e, " ", this.symbols.group)), (e = p(e, /\u00A0/g, this.symbols.group))),
+                ((e = _(e, " ", this.symbols.group)), (e = _(e, /\u00A0/g, this.symbols.group))),
             e
         );
     }
@@ -110,7 +110,7 @@ class u {
                     e.indexOf(this.symbols.decimal) > -1 &&
                     0 === this.options.maximumFractionDigits)
             ) &&
-                (this.symbols.group && (e = p(e, this.symbols.group, "")),
+                (this.symbols.group && (e = _(e, this.symbols.group, "")),
                 (e = e.replace(this.symbols.numeral, "")),
                 this.symbols.decimal && (e = e.replace(this.symbols.decimal, "")),
                 0 === e.length)
@@ -128,7 +128,7 @@ class u {
                       : null == t.minimumFractionDigits && (t.minimumFractionDigits = t.maximumFractionDigits)),
             (this.formatter = new Intl.NumberFormat(e, t)),
             (this.options = this.formatter.resolvedOptions()),
-            (this.symbols = _(e, this.formatter, this.options, t)),
+            (this.symbols = p(e, this.formatter, this.options, t)),
             "percent" === this.options.style &&
                 ((null != (n = this.options.minimumFractionDigits) ? n : 0) > 18 ||
                     (null != (r = this.options.maximumFractionDigits) ? r : 0) > 18) &&
@@ -139,7 +139,7 @@ class u {
 }
 let d = new Set(["decimal", "fraction", "integer", "minusSign", "plusSign", "group"]),
     f = [0, 4, 2, 1, 11, 20, 3, 7, 100, 21, 0.1, 1.1];
-function _(e, t, n, r) {
+function p(e, t, n, r) {
     var i, a, o, s, l;
     let c = new Intl.NumberFormat(e, {
             ...n,
@@ -150,10 +150,10 @@ function _(e, t, n, r) {
             roundingMode: "halfExpand",
         }),
         u = c.formatToParts(-10000.111),
-        _ = c.formatToParts(10000.111),
-        p = f.map((e) => c.formatToParts(e)),
-        m = null != (l = null == (i = u.find((e) => "minusSign" === e.type)) ? void 0 : i.value) ? l : "-",
-        g = null == (a = _.find((e) => "plusSign" === e.type)) ? void 0 : a.value;
+        p = c.formatToParts(10000.111),
+        _ = f.map((e) => c.formatToParts(e)),
+        h = null != (l = null == (i = u.find((e) => "minusSign" === e.type)) ? void 0 : i.value) ? l : "-",
+        g = null == (a = p.find((e) => "plusSign" === e.type)) ? void 0 : a.value;
     g ||
         ((null == r ? void 0 : r.signDisplay) !== "exceptZero" && (null == r ? void 0 : r.signDisplay) !== "always") ||
         (g = "+");
@@ -171,26 +171,26 @@ function _(e, t, n, r) {
         b = null == (s = u.find((e) => "group" === e.type)) ? void 0 : s.value,
         y = [
             ...new Set([
-                ...u.filter((e) => !d.has(e.type)).map((e) => h(e.value)),
-                ...p.flatMap((e) => e.filter((e) => !d.has(e.type)).map((e) => h(e.value))),
+                ...u.filter((e) => !d.has(e.type)).map((e) => m(e.value)),
+                ..._.flatMap((e) => e.filter((e) => !d.has(e.type)).map((e) => m(e.value))),
             ]),
         ].sort((e, t) => t.length - e.length),
         O = 0 === y.length ? RegExp("[\\p{White_Space}]", "gu") : RegExp(`${y.join("|")}|[\\p{White_Space}]`, "gu"),
         v = [...new Intl.NumberFormat(n.locale, { useGrouping: !1 }).format(9876543210)].reverse(),
-        I = new Map(v.map((e, t) => [e, t]));
+        S = new Map(v.map((e, t) => [e, t]));
     return {
-        minusSign: m,
+        minusSign: h,
         plusSign: g,
         decimal: E,
         group: b,
         literals: O,
         numeral: RegExp(`[${v.join("")}]`, "g"),
-        index: (e) => String(I.get(e)),
+        index: (e) => String(S.get(e)),
     };
 }
-function p(e, t, n) {
+function _(e, t, n) {
     return e.replaceAll ? e.replaceAll(t, n) : e.split(t).join(n);
 }
-function h(e) {
+function m(e) {
     return e.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }

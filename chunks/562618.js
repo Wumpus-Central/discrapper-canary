@@ -44,7 +44,7 @@ function f(e) {
         children: [
             (0, r.jsxs)("div", {
                 children: [
-                    (0, r.jsx)(_, { badge: o }),
+                    (0, r.jsx)(p, { badge: o }),
                     (0, r.jsx)(l.Heading, {
                         variant: "heading-md/semibold",
                         className: c.title,
@@ -52,7 +52,7 @@ function f(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(p, { body: i }),
+            (0, r.jsx)(_, { body: i }),
             null != d &&
                 (0, r.jsx)(s.Anchor, {
                     onClick: d.onClick,
@@ -68,7 +68,7 @@ function f(e) {
         ],
     });
 }
-function _(e) {
+function p(e) {
     let { badge: t } = e;
     if (null == t) return null;
     let n = (0, o.R)(t);
@@ -77,7 +77,7 @@ function _(e) {
         children: (0, r.jsx)(o.C, d({}, n)),
     });
 }
-function p(e) {
+function _(e) {
     let { body: t } = e;
     if (null == t) return null;
     let n = Array.isArray(t) ? t : [t];

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => f,
-    r: () => _,
+    r: () => p,
 }),
     n(415506),
     n(388685);
@@ -73,10 +73,10 @@ function f(e) {
             rowHeight: s,
             footerHeight: c,
             sidebarHeight: f,
-            listHeaderHeight: _,
-            chunkSize: p = 256,
-            paddingTop: h = 0,
-            paddingBottom: m = 0,
+            listHeaderHeight: p,
+            chunkSize: _ = 256,
+            paddingTop: m = 0,
+            paddingBottom: h = 0,
             getScrollerState: g,
             getAnchorId: E,
         } = e,
@@ -85,11 +85,11 @@ function f(e) {
         [O] = (0, r.useState)(() => new i.Z()),
         {
             dirty: v,
-            chunkStart: I,
-            chunkEnd: T,
-            forceUpdateOnChunkChange: S,
+            chunkStart: S,
+            chunkEnd: I,
+            forceUpdateOnChunkChange: T,
         } = (0, o.Z)({
-            chunkSize: p,
+            chunkSize: _,
             getScrollerState: g,
             forceUpdate: b,
         }),
@@ -110,11 +110,11 @@ function f(e) {
             break;
         }
     }
-    let R = (0, r.useMemo)(() => {
-            let e = Math.max(0, I * p);
+    let P = (0, r.useMemo)(() => {
+            let e = Math.max(0, S * _);
             return null != f && e < f;
-        }, [p, I, f]),
-        P = (0, r.useMemo)(
+        }, [_, S, f]),
+        R = (0, r.useMemo)(
             () =>
                 v > 0
                     ? y.current
@@ -122,26 +122,26 @@ function f(e) {
                           sectionHeight: n,
                           rowHeight: s,
                           footerHeight: c,
-                          listHeaderHeight: _,
-                          paddingBottom: m,
-                          paddingTop: h,
+                          listHeaderHeight: p,
+                          paddingBottom: h,
+                          paddingTop: m,
                           sections: t,
                           getAnchorId: E,
                       }),
-                      O.compute(Math.max(0, I * p), T * p)),
-            [v, I, T, n, s, c, _, m, h, t, O, p, E],
+                      O.compute(Math.max(0, S * _), I * _)),
+            [v, S, I, n, s, c, p, h, m, t, O, _, E],
         );
     return (
-        (0, r.useLayoutEffect)(() => void (y.current = P)),
-        u(l({}, P), {
+        (0, r.useLayoutEffect)(() => void (y.current = R)),
+        u(l({}, R), {
             listComputer: O,
-            forceUpdateOnChunkChange: S,
+            forceUpdateOnChunkChange: T,
             anchor: C,
-            isSidebarVisible: R,
+            isSidebarVisible: P,
         })
     );
 }
-function _(e) {
+function p(e) {
     let { scrollerRef: t, anchor: n, getScrollerState: i, listComputer: a, getAnchorId: o, totalHeight: s } = e;
     (0, r.useLayoutEffect)(() => {
         let { current: e } = t,

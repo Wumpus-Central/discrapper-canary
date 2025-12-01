@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -56,7 +56,7 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let _ = (e) => {
+let p = (e) => {
     switch (e.id) {
         case s.bi.BUILT_IN:
             return o.SsZ;
@@ -66,10 +66,10 @@ let _ = (e) => {
             return;
     }
 };
-function p(e) {
+function _(e) {
     var { section: t, className: n, width: i, height: o, padding: s, isSelected: c, selectable: f = !1 } = e,
-        p = d(e, ["section", "className", "width", "height", "padding", "isSelected", "selectable"]);
-    let h = _(t);
+        _ = d(e, ["section", "className", "width", "height", "padding", "isSelected", "selectable"]);
+    let m = p(t);
     return (0, r.jsx)("div", {
         className: a()(l.wrapper, n, {
             [l.selectable]: f,
@@ -81,9 +81,9 @@ function p(e) {
             padding: null != s ? s : 0,
         },
         children:
-            null != h
+            null != m
                 ? (0, r.jsx)(
-                      h,
+                      m,
                       u(
                           {
                               className: l.icon,
@@ -92,7 +92,7 @@ function p(e) {
                               width: i,
                               height: o,
                           },
-                          p,
+                          _,
                       ),
                   )
                 : null,

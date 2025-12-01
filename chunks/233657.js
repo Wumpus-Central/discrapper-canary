@@ -9,9 +9,9 @@ var i = n(442837),
     c = n(554747),
     u = n(306680),
     d = n(9156),
-    p = n(434479),
+    f = n(434479),
     h = n(490897),
-    f = n(388032),
+    p = n(388032),
     g = n(509612);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -74,9 +74,9 @@ function _(e) {
         }),
             (0, s.Q3)(l.z.GUILD_HEADER_EVENT_UPSELL);
     }
-    let C = (0, c.ZP)(t.id),
-        x = C.length > 0 ? f.intl.formatToPlainString(f.t.IBdqSu, { number: C.length }) : f.intl.string(f.t.tlopTM);
-    return (0, r.jsx)(p.m, {
+    let x = (0, c.ZP)(t.id),
+        C = x.length > 0 ? p.intl.formatToPlainString(p.t.IBdqSu, { number: x.length }) : p.intl.string(p.t.tlopTM);
+    return (0, r.jsx)(f.m, {
         id: "upcoming-events-".concat(t.id),
         renderIcon: (e) =>
             (0, r.jsx)(o.Que, {
@@ -84,7 +84,7 @@ function _(e) {
                 color: "currentColor",
                 className: e,
             }),
-        text: x,
+        text: C,
         selected: _,
         onClick: j,
         onContextMenu: (e) => {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685), n(997841), n(953529);
+n.d(t, { Z: () => p }), n(388685), n(997841), n(953529);
 var r = n(913527),
     i = n.n(r),
     a = n(95015),
@@ -23,11 +23,11 @@ let d = ["500428425362931713", "451550535720501248", "471376328319303681", "4666
 function f(e) {
     if (null != e && null != e.social_layer) return { socialLayer: (0, s.x6)(e.social_layer) };
 }
-class _ extends o.Z {
+class p extends o.Z {
     static createFromServer(e) {
         var t, n, r, a, o, s, c;
         let { price: u } = e;
-        return new _({
+        return new p({
             id: e.id,
             type: e.type,
             applicationId: e.application_id,

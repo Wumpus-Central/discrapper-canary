@@ -14,7 +14,7 @@ function d(e) {
 function f(e) {
     return !o && e.shiftKey ? null : u(e) ? "delete-word" : "delete";
 }
-function _(e) {
+function p(e) {
     return l(e) && o ? "backspace-to-start-of-line" : u(e) ? "backspace-word" : "backspace";
 }
 e.exports = function (e) {
@@ -50,7 +50,7 @@ e.exports = function (e) {
         case i.DELETE:
             return f(e);
         case i.BACKSPACE:
-            return _(e);
+            return p(e);
         case i.LEFT:
             return s && l(e) ? "move-selection-to-start-of-block" : null;
         case i.RIGHT:

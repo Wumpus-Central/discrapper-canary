@@ -1,6 +1,6 @@
 n.d(t, {
-    TS: () => H,
-    ud: () => k,
+    TS: () => B,
+    ud: () => D,
     v0: () => U,
 }),
     n(388685);
@@ -23,9 +23,9 @@ var i = n(54381),
     C = n(621853),
     v = n(484459),
     _ = n(699516),
-    x = n(914010),
-    j = n(594174),
-    O = n(768581),
+    O = n(914010),
+    x = n(594174),
+    j = n(768581),
     E = n(63063),
     S = n(374386),
     P = n(946734),
@@ -43,7 +43,7 @@ function L(e) {
         l = (0, d.q)(null == (t = n.linkedLobby) ? void 0 : t.application_id),
         [a, o] = (0, m.US)([s.z.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP], void 0, !0);
     if (null == l) return null;
-    let p = O.ZP.getApplicationIconURL({
+    let p = j.ZP.getApplicationIconURL({
             id: l.id,
             icon: l.icon,
             size: 14,
@@ -115,7 +115,7 @@ function L(e) {
         a,
     );
 }
-function k(e) {
+function D(e) {
     let {
             channel: t,
             channelName: n,
@@ -206,7 +206,7 @@ function k(e) {
                 ? (0, i.jsxs)(L, {
                       channel: t,
                       children: [
-                          B(
+                          F(
                               b,
                               t.type === A.d4z.GUILD_ANNOUNCEMENT
                                   ? M.intl.string(M.t.l1dkSD)
@@ -222,7 +222,7 @@ function k(e) {
                   })
                 : (0, i.jsxs)(r.Fragment, {
                       children: [
-                          B(
+                          F(
                               b,
                               t.type === A.d4z.GUILD_ANNOUNCEMENT
                                   ? M.intl.string(M.t.l1dkSD)
@@ -240,7 +240,7 @@ function k(e) {
         case A.d4z.GUILD_VOICE:
             return (0, i.jsxs)(r.Fragment, {
                 children: [
-                    B(b, M.intl.string(M.t.BVZqJl)),
+                    F(b, M.intl.string(M.t.BVZqJl)),
                     (0, i.jsx)(T.Z.Title, {
                         level: C,
                         onContextMenu: d,
@@ -252,7 +252,7 @@ function k(e) {
         case A.d4z.GUILD_STAGE_VOICE:
             return (0, i.jsxs)(r.Fragment, {
                 children: [
-                    B(b, M.intl.string(M.t.EErMzA)),
+                    F(b, M.intl.string(M.t.EErMzA)),
                     (0, i.jsx)(T.Z.Title, {
                         level: C,
                         onContextMenu: d,
@@ -264,36 +264,36 @@ function k(e) {
         case A.d4z.ANNOUNCEMENT_THREAD:
         case A.d4z.PUBLIC_THREAD:
         case A.d4z.PRIVATE_THREAD:
-            let x = null;
+            let O = null;
             if (!s && null != l) {
                 let e = (0, f.KS)(l, o);
-                x = (0, i.jsxs)(r.Fragment, {
+                O = (0, i.jsxs)(r.Fragment, {
                     children: [
-                        B(e, M.intl.string(M.t.Pnajj0)),
+                        F(e, M.intl.string(M.t.Pnajj0)),
                         (0, i.jsx)(T.Z.Title, {
                             level: C,
                             onContextMenu: m,
                             onClick: p,
                             className: a()(R.parentChannelName, R.cursorPointer),
-                            children: (0, h.F6)(l, j.default, _.Z),
+                            children: (0, h.F6)(l, x.default, _.Z),
                         }),
                         (0, i.jsx)(T.Z.Caret, {}),
                     ],
                 });
             }
-            let O = (null == l ? void 0 : l.type) != null && A.TPd.GUILD_THREADS_ONLY.has(l.type);
+            let j = (null == l ? void 0 : l.type) != null && A.TPd.GUILD_THREADS_ONLY.has(l.type);
             return (0, i.jsxs)(r.Fragment, {
                 children: [
-                    x,
-                    B(O ? null : b, M.intl.string(M.t["7Xm5QI"])),
+                    O,
+                    F(j ? null : b, M.intl.string(M.t["7Xm5QI"])),
                     (0, i.jsx)(T.Z.Title, {
                         level: C,
                         onContextMenu: d,
                         onClick: c,
                         className: a()({
                             [R.cursorPointer]: s,
-                            [R.forumPostTitle]: O,
-                            [R.forumPostSidebarTitle]: s && O,
+                            [R.forumPostTitle]: j,
+                            [R.forumPostSidebarTitle]: s && j,
                         }),
                         children: v,
                     }),
@@ -331,11 +331,11 @@ function k(e) {
             return null;
     }
 }
-let D = (e) => {
+let k = (e) => {
     var t, n, l;
     let { channel: a } = e,
-        s = (0, o.e7)([j.default], () => j.default.getCurrentUser()),
-        c = (0, o.e7)([j.default], () => j.default.getUser(a.getRecipientId())),
+        s = (0, o.e7)([x.default], () => x.default.getCurrentUser()),
+        c = (0, o.e7)([x.default], () => x.default.getUser(a.getRecipientId())),
         u = (0, S.G)(),
         d = (0, o.e7)([C.Z], () => (null != c ? C.Z.getUserProfile(c.id) : null)),
         h = null != d && (null != (t = null == d ? void 0 : d.fetchEndedAt) ? t : 0) > 0;
@@ -361,7 +361,7 @@ function U(e, t) {
     switch (e.type) {
         case A.d4z.DM:
             return (0, i.jsxs)(i.Fragment, {
-                children: [(0, i.jsx)(D, { channel: e }), (0, i.jsx)(P.Z, { channel: e }, e.id)],
+                children: [(0, i.jsx)(k, { channel: e }), (0, i.jsx)(P.Z, { channel: e }, e.id)],
             });
         case A.d4z.GUILD_ANNOUNCEMENT:
         case A.d4z.GUILD_TEXT:
@@ -382,7 +382,7 @@ function U(e, t) {
             return null;
     }
 }
-function B(e, t) {
+function F(e, t) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             null !== e &&
@@ -394,9 +394,9 @@ function B(e, t) {
         ],
     });
 }
-function H(e) {
+function B(e) {
     let { guild: t, channel: n, caretPosition: l = "left" } = e,
-        a = (0, o.e7)([x.Z], () => x.Z.getGuildId()),
+        a = (0, o.e7)([O.Z], () => O.Z.getGuildId()),
         s = (0, b.D)(),
         d = r.useRef(null);
     return (a === A.I_8 || s) && null != t

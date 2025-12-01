@@ -1,10 +1,10 @@
-function a() {
+function n() {
     return "undefined" != typeof __SENTRY_BROWSER_BUNDLE__ && !!__SENTRY_BROWSER_BUNDLE__;
 }
-function r() {
+function a() {
     return "npm";
 }
-_.d(e, {
-    S: () => r,
-    n: () => a,
+r.d(t, {
+    S: () => a,
+    n: () => n,
 });

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381),
     i = n(473749),
     a = n(481060),
@@ -60,7 +60,7 @@ function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -68,7 +68,7 @@ function f(e, t) {
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -77,12 +77,12 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let p = i.forwardRef(function (e, t) {
-    var { currentPageIndex: n, numPages: i, onChangePage: l, children: u, showPageCount: _ = !0 } = e,
-        p = f(e, ["currentPageIndex", "numPages", "onChangePage", "children", "showPageCount"]);
-    let h = n <= 0,
-        m = n >= i - 1,
-        g = _
+let _ = i.forwardRef(function (e, t) {
+    var { currentPageIndex: n, numPages: i, onChangePage: l, children: u, showPageCount: p = !0 } = e,
+        _ = f(e, ["currentPageIndex", "numPages", "onChangePage", "children", "showPageCount"]);
+    let m = n <= 0,
+        h = n >= i - 1,
+        g = p
             ? o.intl.format(o.t.MtpIwg, {
                   currentPage: n + 1,
                   numPages: i,
@@ -90,7 +90,7 @@ let p = i.forwardRef(function (e, t) {
             : o.intl.format(o.t.bKI77c, { currentPage: n + 1 });
     return (0, r.jsxs)(
         "div",
-        d(c({ ref: t }, p), {
+        d(c({ ref: t }, _), {
             children: [
                 u,
                 (0, r.jsx)("div", {
@@ -101,7 +101,7 @@ let p = i.forwardRef(function (e, t) {
                             (0, r.jsx)(a.hU, {
                                 variant: "icon-only",
                                 icon: a.V7D,
-                                disabled: h,
+                                disabled: m,
                                 onClick: () => l(n - 1),
                                 "aria-label": o.intl.string(o.t.vgfxaA),
                             }),
@@ -112,7 +112,7 @@ let p = i.forwardRef(function (e, t) {
                             (0, r.jsx)(a.hU, {
                                 variant: "icon-only",
                                 icon: a.Fbu,
-                                disabled: m,
+                                disabled: h,
                                 onClick: () => l(n + 1),
                                 "aria-label": o.intl.string(o.t.XiOHRX),
                             }),

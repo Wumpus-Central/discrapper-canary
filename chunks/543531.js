@@ -1,4 +1,4 @@
-n.d(t, { E: () => _ });
+n.d(t, { E: () => p });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -38,43 +38,43 @@ var d = (function (e) {
     return (e.XXSMALL = "xxsmall"), (e.XSMALL = "xsmall"), (e.SMALL = "small"), (e.LARGE = "large"), e;
 })(d || {});
 let f = "indeterminate";
-function _(e) {
+function p(e) {
     let t,
         {
             className: n,
             percent: a,
             size: c = "small",
             foregroundColor: d = s.Z.unsafe_rawColors.BRAND_500.css,
-            backgroundColor: _ = "var(--background-modifier-active)",
-            foregroundGradientColor: p,
-            animate: h = !0,
+            backgroundColor: p = "var(--background-modifier-active)",
+            foregroundGradientColor: _,
+            animate: m = !0,
         } = e,
-        m = null != a ? a : 0;
+        h = null != a ? a : 0;
     return (
         (t =
-            null != p
-                ? { background: "linear-gradient(to right, ".concat(p[0], ", ").concat(p[1], ")") }
+            null != _
+                ? { background: "linear-gradient(to right, ".concat(_[0], ", ").concat(_[1], ")") }
                 : { backgroundColor: d }),
         (0, r.jsx)("div", {
             className: o()(n, l.progress, l[c]),
-            style: { backgroundColor: _ },
+            style: { backgroundColor: p },
             children:
-                m !== f && "number" == typeof m
+                h !== f && "number" == typeof h
                     ? (0, r.jsx)("div", {
-                          className: o()(l.progressBar, l[c], { [l.animating]: h }),
+                          className: o()(l.progressBar, l[c], { [l.animating]: m }),
                           style: u(
-                              { transform: "translate3d(".concat(Math.min(Math.max(0, m), 100) - 100, "%, 0, 0)") },
+                              { transform: "translate3d(".concat(Math.min(Math.max(0, h), 100) - 100, "%, 0, 0)") },
                               t,
                           ),
                       })
                     : (0, r.jsxs)(i.Fragment, {
                           children: [
                               (0, r.jsx)("div", {
-                                  className: o()(l.indeterminateBar1, l[c], { [l.animating]: h }),
+                                  className: o()(l.indeterminateBar1, l[c], { [l.animating]: m }),
                                   style: t,
                               }),
                               (0, r.jsx)("div", {
-                                  className: o()(l.indeterminateBar2, l[c], { [l.animating]: h }),
+                                  className: o()(l.indeterminateBar2, l[c], { [l.animating]: m }),
                                   style: t,
                               }),
                           ],
@@ -82,4 +82,4 @@ function _(e) {
         })
     );
 }
-(_.Sizes = d), (_.INDETERMINATE = f);
+(p.Sizes = d), (p.INDETERMINATE = f);

@@ -1,4 +1,4 @@
-n.d(t, { q: () => p });
+n.d(t, { q: () => _ });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,31 +58,31 @@ function _(e, t) {
         e
     );
 }
-function p(e) {
+function _(e) {
     let {
             color: t = "default",
             disabled: n,
             isFocused: a,
             showDefaultFocus: u = !1,
             menuItemProps: f,
-            children: p,
+            children: _,
         } = e,
-        h = i.useRef(null);
+        m = i.useRef(null);
     return (
         i.useLayoutEffect(() => {
             if (!a) return;
-            let e = h.current;
+            let e = m.current;
             if (null == e) return;
-            (0, s.F)(h);
+            (0, s.F)(m);
             let t = e.querySelector('[tabindex="0"]');
             null == t || t.focus();
         }, [a]),
         (0, r.jsx)(
             "div",
-            _(
+            p(
                 d(
                     {
-                        ref: h,
+                        ref: m,
                         className: o()(c.item, l._e[t], {
                             [c.disabled]: n,
                             [c.focused]: u && a,
@@ -92,7 +92,7 @@ function p(e) {
                     },
                     f,
                 ),
-                { children: p },
+                { children: _ },
             ),
         )
     );

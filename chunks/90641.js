@@ -9,18 +9,18 @@ var r = n(570140),
     u = n(352954),
     d = n(630759),
     f = n(760373),
-    _ = n(981631),
-    p = n(388032);
-function h() {
+    p = n(981631),
+    _ = n(388032);
+function m() {
     let e = c.Z.getVoiceStateForUser(s.default.getId()),
         t = l.Z.getChannel(null == e ? void 0 : e.channelId);
     return s.default.getSessionId() === (null == e ? void 0 : e.sessionId) &&
         null != t &&
-        t.type !== _.d4z.GUILD_STAGE_VOICE
+        t.type !== p.d4z.GUILD_STAGE_VOICE
         ? t.id
         : null;
 }
-async function m(e, t) {
+async function h(e, t) {
     if (e) {
         r.Z.dispatch({
             type: "SECURE_FRAMES_SETTINGS_UPDATE",
@@ -36,8 +36,8 @@ async function m(e, t) {
                 persistentCodesEnabled: !1,
             }),
                 i.Z.show({
-                    title: p.intl.string(p.t.R0RpRX),
-                    body: null != (n = e.getAnyErrorMessage()) ? n : p.intl.string(p.t.eAn6z2),
+                    title: _.intl.string(_.t.R0RpRX),
+                    body: null != (n = e.getAnyErrorMessage()) ? n : _.intl.string(_.t.eAn6z2),
                 });
         }
     } else
@@ -52,19 +52,19 @@ let g = {
         r.Z.dispatch({ type: "SECURE_FRAMES_UPLOADED_KEY_VERSION_CLEAR" });
     },
     updatePersistentCodesEnabled: async function (e) {
-        let t = h();
+        let t = m();
         null != t
             ? u.Z.openSecureFramesUpdateConfirmation({
-                  title: e ? p.intl.string(p.t.DRFN1B) : p.intl.string(p.t.q29xJz),
-                  subtitle: e ? p.intl.string(p.t.y015ZY) : p.intl.string(p.t.E66FQn),
-                  confirmText: p.intl.string(p.t.aTuFYT),
+                  title: e ? _.intl.string(_.t.DRFN1B) : _.intl.string(_.t.q29xJz),
+                  subtitle: e ? _.intl.string(_.t.y015ZY) : _.intl.string(_.t.E66FQn),
+                  confirmText: _.intl.string(_.t.aTuFYT),
                   onConfirm: async () => {
-                      await m(e, () => {
+                      await h(e, () => {
                           a.default.disconnect(), a.default.selectVoiceChannel(t);
                       });
                   },
               })
-            : await m(e);
+            : await h(e);
     },
     addUploadedKeyVersion: function (e) {
         r.Z.dispatch({

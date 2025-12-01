@@ -1,22 +1,22 @@
 n.d(t, {
     FD: () => f,
     I5: () => E,
-    Mn: () => m,
-    NI: () => I,
-    OU: () => R,
+    Mn: () => h,
+    NI: () => S,
+    OU: () => P,
     P6: () => C,
-    S2: () => h,
+    S2: () => m,
     V3: () => g,
     W0: () => b,
     W3: () => A,
     ZB: () => O,
-    Zy: () => _,
-    b9: () => T,
+    Zy: () => p,
+    b9: () => I,
     e1: () => y,
     iR: () => N,
     s4: () => v,
-    si: () => S,
-    ss: () => p,
+    si: () => T,
+    ss: () => _,
 });
 var r = n(544891),
     i = n(433517),
@@ -30,10 +30,10 @@ var r = n(544891),
 function f() {
     o.Z.dispatch({ type: "USER_SETTINGS_ACCOUNT_INIT" });
 }
-function _() {
+function p() {
     o.Z.dispatch({ type: "USER_SETTINGS_ACCOUNT_CLOSE" });
 }
-function p(e, t) {
+function _(e, t) {
     let n = t ? c.ANM.DELETE_ACCOUNT : c.ANM.DISABLE_ACCOUNT;
     return r.tn
         .post({
@@ -46,7 +46,7 @@ function p(e, t) {
             l.Z.logoutInternal(), (0, s.uL)(c.Z5c.DEFAULT_LOGGED_OUT);
         });
 }
-async function h(e) {
+async function m(e) {
     let t = await r.tn.patch({
             url: c.ANM.ME,
             oldFormErrors: !0,
@@ -77,7 +77,7 @@ async function h(e) {
         t
     );
 }
-function m(e) {
+function h(e) {
     var t, n;
     let {
         username: r,
@@ -86,9 +86,9 @@ function m(e) {
         emailToken: l,
         password: d,
         avatar: f,
-        avatarDescription: _,
-        avatarId: p,
-        avatarDecoration: m,
+        avatarDescription: p,
+        avatarId: _,
+        avatarDecoration: h,
         newPassword: g,
         globalName: E,
         legacyUsername: b,
@@ -97,38 +97,38 @@ function m(e) {
         displayNameStyles: v,
     } = e;
     o.Z.dispatch({ type: "USER_SETTINGS_ACCOUNT_SUBMIT" });
-    let I = {
+    let S = {
         username: r,
         email: s,
         email_token: l,
         password: d,
         avatar: f,
-        avatar_description: _,
-        avatar_id: p,
+        avatar_description: p,
+        avatar_id: _,
         discriminator: a,
         global_name: E,
         legacy_username: b,
         new_password: g,
     };
-    void 0 !== m && (I.avatar_decoration_sku_id = null != (t = null == m ? void 0 : m.skuId) ? t : null),
-        void 0 !== y && (I.nameplate_sku_id = null != (n = null == y ? void 0 : y.skuId) ? n : null),
-        void 0 !== O && (I.primary_guild_id = O),
+    void 0 !== h && (S.avatar_decoration_sku_id = null != (t = null == h ? void 0 : h.skuId) ? t : null),
+        void 0 !== y && (S.nameplate_sku_id = null != (n = null == y ? void 0 : y.skuId) ? n : null),
+        void 0 !== O && (S.primary_guild_id = O),
         null != v
-            ? ((I.display_name_font_id = v.fontId),
-              (I.display_name_effect_id = v.effectId),
-              (I.display_name_colors = v.colors))
+            ? ((S.display_name_font_id = v.fontId),
+              (S.display_name_effect_id = v.effectId),
+              (S.display_name_colors = v.colors))
             : null === v &&
-              ((I.display_name_font_id = null), (I.display_name_effect_id = null), (I.display_name_colors = null));
-    let T = i.K.get(c.JkL),
-        S = (0, u.xJ)();
-    null != S && null != T && ((I.push_provider = S), (I.push_token = T));
+              ((S.display_name_font_id = null), (S.display_name_effect_id = null), (S.display_name_colors = null));
+    let I = i.K.get(c.JkL),
+        T = (0, u.xJ)();
+    null != T && null != I && ((S.push_provider = T), (S.push_token = I));
     let A = i.K.get(c.scU);
     return (
-        null != u.mv && null != A && ((I.push_voip_provider = u.mv), (I.push_voip_token = A)),
-        h(I).then(
+        null != u.mv && null != A && ((S.push_voip_provider = u.mv), (S.push_voip_token = A)),
+        m(S).then(
             (e) => (
                 o.Z.dispatch({ type: "USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS" }),
-                (null != f || null != p) && o.Z.dispatch({ type: "RECENT_AVATARS_UPDATE" }),
+                (null != f || null != _) && o.Z.dispatch({ type: "RECENT_AVATARS_UPDATE" }),
                 e
             ),
             (e) => (
@@ -180,16 +180,16 @@ function v(e) {
         primaryGuildId: e,
     });
 }
-function I(e) {
+function S(e) {
     o.Z.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SET_PENDING_DISPLAY_NAME_STYLES",
         displayNameStyles: e,
     });
 }
-function T() {
+function I() {
     o.Z.dispatch({ type: "USER_SETTINGS_CLEAR_ERRORS" });
 }
-function S() {
+function T() {
     o.Z.dispatch({ type: "USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES" });
 }
 function A() {
@@ -201,6 +201,6 @@ function C() {
 function N() {
     o.Z.dispatch({ type: "USER_SETTINGS_ACCOUNT_RESET_PENDING_LEGACY_USERNAME_DISABLED" });
 }
-function R() {
+function P() {
     o.Z.dispatch({ type: "USER_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES" });
 }

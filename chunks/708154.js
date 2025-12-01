@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(54381);
 n(473749);
 var i = n(990547),
@@ -8,11 +8,11 @@ var i = n(990547),
     l = n(213609),
     c = n(550385),
     u = n(771934),
-    d = n(422129),
+    d = n(896591),
     f = n(388032),
-    _ = n(574876),
-    p = n(758335);
-function h() {
+    p = n(574876),
+    _ = n(758335);
+function m() {
     let { analyticsLocations: e } = (0, s.ZP)();
     (0, l.Z)({
         name: i.ImpressionNames.CUSTOM_THEMES_PREVIEW_THEMES_BANNER,
@@ -23,18 +23,18 @@ function h() {
         (0, u.DI)(u.Ln.PREVIEW_THEMES), (0, c.XO)(c.wh.CUSTOM_THEME, { from: c.tE.CLIENT_THEMES_EDITOR });
     };
     return (0, r.jsxs)("div", {
-        className: _.container,
+        className: p.container,
         children: [
             (0, r.jsxs)("div", {
-                className: _.topContent,
+                className: p.topContent,
                 children: [
                     (0, r.jsx)("img", {
-                        src: p.Z,
-                        className: _.bannerImage,
+                        src: _.Z,
+                        className: p.bannerImage,
                         alt: "",
                     }),
                     (0, r.jsxs)("div", {
-                        className: _.textContent,
+                        className: p.textContent,
                         children: [
                             (0, r.jsx)(o.Text, {
                                 variant: "text-md/semibold",

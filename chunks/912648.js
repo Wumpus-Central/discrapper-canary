@@ -11,9 +11,9 @@ function d(e) {
     let { channel: t } = e,
         n = i.useRef(null),
         d = i.useRef(0),
-        [f, _] = i.useState(!1),
-        [p, h] = i.useState(!1),
-        m = p || f,
+        [f, p] = i.useState(!1),
+        [_, m] = i.useState(!1),
+        h = _ || f,
         g = () => {
             var e;
             null == (e = n.current) || e.activateUploadDialogue();
@@ -21,7 +21,7 @@ function d(e) {
         E = i.useCallback(
             async (e, n, r) => {
                 var i;
-                h(!0),
+                m(!0),
                     await (0, o.i)({
                         userImage: {
                             data: e,
@@ -35,7 +35,7 @@ function d(e) {
                         },
                     }),
                     (d.current += 1),
-                    h(!1);
+                    m(!1);
             },
             [t],
         );
@@ -45,7 +45,7 @@ function d(e) {
                 text: c.intl.string(c.t.iMJO37),
                 variant: "secondary",
                 onClick: g,
-                disabled: m,
+                disabled: h,
             }),
             (0, r.jsx)("div", {
                 className: u.fileInput,
@@ -54,8 +54,8 @@ function d(e) {
                     {
                         ref: n,
                         onChange: E,
-                        setLoading: _,
-                        disabled: m,
+                        setLoading: p,
+                        disabled: h,
                     },
                     d.current,
                 ),

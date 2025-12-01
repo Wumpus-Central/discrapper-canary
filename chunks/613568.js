@@ -22,7 +22,7 @@ function f(e, t, n) {
         e
     );
 }
-let _ = new Set([
+let p = new Set([
         "APP_STATE_UPDATE",
         "CLEAR_CACHES",
         "CONNECTION_CLOSED",
@@ -38,9 +38,9 @@ let _ = new Set([
         "UPLOAD_FAIL",
         "WRITE_CACHES",
     ]),
-    p = new l.Yd("Flux"),
-    h = 100,
-    m = 10,
+    _ = new l.Yd("Flux"),
+    m = 100,
+    h = 10,
     g = "__subscriptions";
 class E {
     isDispatching() {
@@ -80,7 +80,7 @@ class E {
                         var e;
                         let t = u.qC();
                         throw (
-                            (p.error("LastFewActions", t),
+                            (_.error("LastFewActions", t),
                             null == (e = this._sentryUtils) ||
                                 e.addBreadcrumb({
                                     message: "Dispatcher: Dispatch loop detected",
@@ -107,7 +107,7 @@ class E {
                 .concat(this._currentDispatchActionType),
         ),
             a()(e.type, "Dispatch.dispatch(...) called without an action type"),
-            _.has(e.type) && p.log("Dispatching ".concat(e.type)),
+            p.has(e.type) && _.log("Dispatching ".concat(e.type)),
             (0, s.B1)(e.type),
             u.IH(e.type);
         let t = this.actionLogger.log(e, (t) => {
@@ -117,7 +117,7 @@ class E {
                 this._currentDispatchActionType = null;
             }
         });
-        t.totalTime > h && p.verbose("Slow dispatch on ".concat(e.type, ": ").concat(t.totalTime, "ms"));
+        t.totalTime > m && _.verbose("Slow dispatch on ".concat(e.type, ": ").concat(t.totalTime, "ms"));
         try {
             (0, s.L8)("DISPATCH[".concat(e.type, "]"), e.type);
         } catch (e) {}
@@ -175,7 +175,7 @@ class E {
             ? (this.actionLogger = t)
             : ("undefined" == typeof window || 1, (this.actionLogger = new d.Z())),
             this.actionLogger.on("trace", (e, t, n) => {
-                o.Z.isTracing && n >= m && o.Z.mark("\uD83E\uDDA5", t, n);
+                o.Z.isTracing && n >= h && o.Z.mark("\uD83E\uDDA5", t, n);
             });
     }
 }

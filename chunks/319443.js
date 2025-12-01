@@ -125,7 +125,7 @@ let U = function () {
         L = (0, E.Xh)(),
         U = (0, S.nu)(),
         F = (null == L ? void 0 : L.type) === E.m_.CATEGORY ? L.categoryId : void 0,
-        { applicationId: z, section: H } = (null == L ? void 0 : L.type) === E.m_.APPLICATION ? L : {},
+        { applicationId: H, section: z } = (null == L ? void 0 : L.type) === E.m_.APPLICATION ? L : {},
         { query: V, categoryId: Y } = (null == L ? void 0 : L.type) === E.m_.SEARCH ? L : {},
         W = (0, o.e7)([y.Z], () => y.Z.getCategories()),
         X = a.useMemo(() => [(0, I.KQ)(), ...W], [W]),
@@ -158,7 +158,7 @@ let U = function () {
             U && v.g5();
         }, [U]),
         a.useEffect(() => E.aQ.setState({ lastItem: L }), [L]);
-    let ea = null != z,
+    let ea = null != H,
         ei = (null == L ? void 0 : L.type) === E.m_.SEARCH,
         {
             searchQuery: el,
@@ -225,7 +225,7 @@ let U = function () {
                             !e_ && (0, r.jsx)(p.z6, { scrollPosition: i }),
                             ea
                                 ? (0, r.jsx)(G, {
-                                      applicationId: z,
+                                      applicationId: H,
                                       hideDetailHeaderButtons: $,
                                       onClickBack: ef,
                                   })
@@ -276,8 +276,8 @@ let U = function () {
                         ? (0, r.jsx)(A.Z, {
                               onScroll: (e) => ex(e, E.m_.APPLICATION),
                               onSelectApplication: eg,
-                              applicationId: z,
-                              initialTab: H,
+                              applicationId: H,
+                              initialTab: z,
                               onButtonsVisibilityChange: ee,
                           })
                         : ei

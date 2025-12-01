@@ -1,20 +1,20 @@
 n.d(t, {
     $L: () => d,
     AB: () => r,
-    Dt: () => h,
+    Dt: () => m,
     ED: () => s,
     FB: () => a,
     IJ: () => c,
-    Ij: () => I,
+    Ij: () => S,
     Qd: () => b,
     V5: () => l,
     Xf: () => y,
-    eL: () => _,
-    gn: () => m,
+    eL: () => p,
+    gn: () => h,
     jI: () => f,
     l5: () => g,
     nI: () => u,
-    ox: () => p,
+    ox: () => _,
     qU: () => E,
     qq: () => v,
     y8: () => O,
@@ -47,18 +47,18 @@ function f() {
         null != navigator.userAgent.toLowerCase().match("(android ).+chrome/[.0-9]* mobile")
     );
 }
-function _() {
+function p() {
     var e;
     return (null == (e = navigator.userAgent) ? void 0 : e.match(/android/i)) != null;
 }
-function p() {
+function _() {
     var e;
     return (null == (e = navigator.userAgent) ? void 0 : e.match(/Macintosh/i)) != null;
 }
-function h() {
+function m() {
     return "android" === o;
 }
-function m() {
+function h() {
     return "ios" === o;
 }
 function g() {
@@ -86,7 +86,7 @@ function v() {
             return "web";
     }
 }
-function I() {
+function S() {
     let { userAgent: e } = window.navigator;
     if (/Windows/i.test(e)) return /Phone/.test(e) ? "windows mobile" : "windows";
     if (/(iPhone|iPad|iPod)/.test(e)) return "ios";

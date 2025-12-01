@@ -2,17 +2,17 @@ n.d(t, {
     D4: () => u,
     Eo: () => d,
     R4: () => f,
-    Y1: () => m,
-    _j: () => p,
+    Y1: () => h,
+    _j: () => _,
     c8: () => s,
     d$: () => l,
     dy: () => E,
     fP: () => a,
     hs: () => g,
-    j1: () => _,
+    j1: () => p,
     kQ: () => c,
     pq: () => o,
-    xi: () => h,
+    xi: () => m,
 });
 var r = n(261470),
     i = n(70956);
@@ -37,9 +37,9 @@ let a = [0, 4, 8, 16, 24],
     u = 16,
     d = 32,
     f = 64,
-    _ = "---new-messages-bar",
-    p = "SPOILER_";
-var h = (function (e) {
+    p = "---new-messages-bar",
+    _ = "SPOILER_";
+var m = (function (e) {
     return (
         (e.ERROR_SOURCE_UNKNOWN = "ERROR_SOURCE_UNKNOWN"),
         (e.PRECOMPRESSION_SUM_TOO_LARGE = "PRECOMPRESSION_SUM_TOO_LARGE"),
@@ -51,7 +51,7 @@ var h = (function (e) {
         e
     );
 })({});
-let m = 209715200,
+let h = 209715200,
     g = {
         timeout: 60 * i.Z.Millis.SECOND,
         retries: 3,

@@ -1,7 +1,7 @@
-t.d(n, { default: () => p }), t(388685);
-var l = t(54381);
+t.d(n, { default: () => g }), t(388685);
+var i = t(54381);
 t(473749);
-var i = t(100527),
+var l = t(100527),
     a = t(906732),
     r = t(987209),
     s = t(563132),
@@ -10,11 +10,11 @@ var i = t(100527),
     u = t(961830),
     d = t(382263),
     f = t(231338);
-function g(e) {
-    let { onClose: n, onComplete: t, transitionState: i, applicationId: r, analyticsLocationObject: o, skuId: u } = e,
+function p(e) {
+    let { onClose: n, onComplete: t, transitionState: l, applicationId: r, analyticsLocationObject: o, skuId: u } = e,
         {} = (0, s.JL)(),
         { analyticsLocations: d } = (0, a.ZP)();
-    return (0, l.jsx)(c.PaymentModal, {
+    return (0, i.jsx)(c.PaymentModal, {
         onClose: n,
         onComplete: t,
         applicationId: r,
@@ -22,15 +22,15 @@ function g(e) {
         initialPlanId: null,
         analyticsObject: o,
         analyticsLocations: d,
-        transitionState: i,
+        transitionState: l,
     });
 }
-function p(e) {
-    let { loadId: n, applicationId: t, skuId: c, analyticsLocations: p, isGift: m = !1 } = e,
-        { analyticsLocations: b } = (0, a.ZP)(p, i.Z.PREMIUM_PAYMENT_MODAL);
-    return (0, l.jsx)(a.Gt, {
+function g(e) {
+    let { loadId: n, applicationId: t, skuId: c, analyticsLocations: g, isGift: m = !1 } = e,
+        { analyticsLocations: b } = (0, a.ZP)(g, l.Z.PREMIUM_PAYMENT_MODAL);
+    return (0, i.jsx)(a.Gt, {
         value: b,
-        children: (0, l.jsx)(s.PaymentContextProvider, {
+        children: (0, i.jsx)(s.PaymentContextProvider, {
             loadId: n,
             stepConfigs: (function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -41,32 +41,32 @@ function p(e) {
             activeSubscription: null,
             purchaseType: f.GZ.ONE_TIME,
             isGift: m,
-            children: (0, l.jsx)(o.c1, {
-                children: (0, l.jsx)(r.KB, {
+            children: (0, i.jsx)(o.c1, {
+                children: (0, i.jsx)(r.KB, {
                     isGift: m,
-                    children: (0, l.jsx)(
-                        g,
+                    children: (0, i.jsx)(
+                        p,
                         (function (e) {
                             for (var n = 1; n < arguments.length; n++) {
                                 var t = null != arguments[n] ? arguments[n] : {},
-                                    l = Object.keys(t);
+                                    i = Object.keys(t);
                                 "function" == typeof Object.getOwnPropertySymbols &&
-                                    (l = l.concat(
+                                    (i = i.concat(
                                         Object.getOwnPropertySymbols(t).filter(function (e) {
                                             return Object.getOwnPropertyDescriptor(t, e).enumerable;
                                         }),
                                     )),
-                                    l.forEach(function (n) {
-                                        var l;
-                                        (l = t[n]),
+                                    i.forEach(function (n) {
+                                        var i;
+                                        (i = t[n]),
                                             n in e
                                                 ? Object.defineProperty(e, n, {
-                                                      value: l,
+                                                      value: i,
                                                       enumerable: !0,
                                                       configurable: !0,
                                                       writable: !0,
                                                   })
-                                                : (e[n] = l);
+                                                : (e[n] = i);
                                     });
                             }
                             return e;

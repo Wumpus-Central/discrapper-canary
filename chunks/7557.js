@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685), n(539854);
+n.d(t, { Z: () => _ }), n(388685), n(539854);
 var r,
     i,
     a = n(54381),
@@ -61,7 +61,7 @@ class f extends (r = o.PureComponent) {
     }
 }
 d(f, "defaultProps", { autoFocus: !1 });
-class _ extends (i = o.PureComponent) {
+class p extends (i = o.PureComponent) {
     render() {
         let { className: e, inputClassName: t } = this.props,
             { codes: n } = this.state,
@@ -127,5 +127,5 @@ class _ extends (i = o.PureComponent) {
         super(e), d(this, "_codeBlockRefs", Array(this.props.count)), (this.state = { codes: Array(e.count) });
     }
 }
-d(_, "defaultProps", { count: 6 });
-let p = _;
+d(p, "defaultProps", { count: 6 });
+let _ = p;

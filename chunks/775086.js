@@ -1,4 +1,4 @@
-n.d(t, { Modal: () => h });
+n.d(t, { Modal: () => m });
 var r = n(54381);
 n(473749);
 var i = n(987153),
@@ -58,11 +58,11 @@ function f(e, t) {
         e
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -70,7 +70,7 @@ function _(e, t) {
     }
     return i;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -79,20 +79,20 @@ function p(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function h(e) {
+function m(e) {
     var {
             size: t,
             title: n,
             subtitle: c,
             input: d,
-            preview: p,
-            actions: h,
-            actionBarInput: m,
+            preview: _,
+            actions: m,
+            actionBarInput: h,
             actionBarInputLayout: g = "default",
             listProps: E,
             children: b,
         } = e,
-        y = _(e, [
+        y = p(e, [
             "size",
             "title",
             "subtitle",
@@ -119,12 +119,12 @@ function h(e) {
                     listProps: E,
                     children: b,
                 }),
-                (0, r.jsx)(s.m, { children: p }),
+                (0, r.jsx)(s.m, { children: _ }),
                 (0, r.jsx)(a.G, {
-                    leading: m,
+                    leading: h,
                     leadingLayout: g,
-                    actions: h,
-                    actionsFullWidth: null == m,
+                    actions: m,
+                    actionsFullWidth: null == h,
                 }),
             ],
         }),

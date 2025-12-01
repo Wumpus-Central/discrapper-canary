@@ -1,6 +1,6 @@
 n.d(t, {
     K: () => d,
-    y: () => _,
+    y: () => p,
 }),
     n(539854),
     n(704826),
@@ -20,16 +20,16 @@ function d(e) {
 function f(e) {
     if (![u.ME, u.I_8, u.o_z].includes(e)) return null != e ? e : void 0;
 }
-function _(e) {
+function p(e) {
     var t, n, i, c, u;
     let d = (0, r.parse)(e, { arrayFormat: "bracket" }),
-        _ = l.Hn;
+        p = l.Hn;
     try {
-        _ = a.vB(null != d.permissions && "" !== d.permissions ? d.permissions : "0");
+        p = a.vB(null != d.permissions && "" !== d.permissions ? d.permissions : "0");
     } catch (e) {}
-    let p = d.channel_id,
-        h = f(
-            null != (i = null != (n = d.guild_id) ? n : null == (t = o.Z.getChannel(p)) ? void 0 : t.guild_id)
+    let _ = d.channel_id,
+        m = f(
+            null != (i = null != (n = d.guild_id) ? n : null == (t = o.Z.getChannel(_)) ? void 0 : t.guild_id)
                 ? i
                 : s.Z.getGuildId(),
         );
@@ -44,9 +44,9 @@ function _(e) {
         codeChallenge: d.code_challenge,
         codeChallengeMethod: d.code_challenge_method,
         state: d.state,
-        permissions: _,
-        channelId: p,
-        guildId: h,
+        permissions: p,
+        channelId: _,
+        guildId: m,
         prompt: d.prompt,
         disableGuildSelect: "true" === d.disable_guild_select,
         integrationType: null == d.integration_type ? void 0 : Number(d.integration_type),

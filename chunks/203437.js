@@ -81,7 +81,7 @@ function C(e) {
                       }),
             [S],
         ),
-        M = a.useCallback(
+        E = a.useCallback(
             (e) => {
                 let n = null == e ? void 0 : e.value;
                 return null == n || "" === n
@@ -93,7 +93,7 @@ function C(e) {
             },
             [O],
         ),
-        E = a.useCallback(
+        M = a.useCallback(
             (e) =>
                 (0, l.jsx)("div", {
                     className: r()({ [N.disabledOption]: e.disabled }),
@@ -119,8 +119,8 @@ function C(e) {
         multi: !1,
         options: Z,
         renderOptionPrefix: P,
-        renderOptionSuffix: M,
-        renderOptionLabel: E,
+        renderOptionSuffix: E,
+        renderOptionLabel: M,
         placeholder: 0 === Z.length ? x.intl.string(x.t.O3i2gV) : x.intl.string(x.t.CunCMN),
     });
 }

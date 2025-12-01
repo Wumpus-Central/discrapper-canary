@@ -1,4 +1,4 @@
-n.d(t, { k: () => _ });
+n.d(t, { k: () => p });
 var r = n(54381);
 n(473749);
 var i = n(692547),
@@ -77,17 +77,17 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let _ = (e) => {
+let p = (e) => {
     var t,
         n,
-        { size: s = "md", width: c, height: f, color: _ = i.Z.colors.INTERACTIVE_NORMAL, colorClass: p = "" } = e,
-        h = d(e, ["size", "width", "height", "color", "colorClass"]);
-    let m = (0, o.m)(s),
-        g = null != (t = null == m ? void 0 : m.width) ? t : c,
-        E = null != (n = null == m ? void 0 : m.height) ? n : f;
+        { size: s = "md", width: c, height: f, color: p = i.Z.colors.INTERACTIVE_NORMAL, colorClass: _ = "" } = e,
+        m = d(e, ["size", "width", "height", "color", "colorClass"]);
+    let h = (0, o.m)(s),
+        g = null != (t = null == h ? void 0 : h.width) ? t : c,
+        E = null != (n = null == h ? void 0 : h.height) ? n : f;
     return (0, r.jsxs)(
         "svg",
-        u(l({}, (0, a.Z)(h)), {
+        u(l({}, (0, a.Z)(m)), {
             xmlns: "http://www.w3.org/2000/svg",
             width: g,
             height: E,
@@ -95,16 +95,16 @@ let _ = (e) => {
             viewBox: "0 0 24 24",
             children: [
                 (0, r.jsx)("path", {
-                    fill: "string" == typeof _ ? _ : _.css,
+                    fill: "string" == typeof p ? p : p.css,
                     d: "M8.18 14.82c.5-.11 1.07.45 1.29 1.27.21.81-.02 1.57-.52 1.68-.5.12-1.08-.45-1.29-1.26-.21-.82.02-1.57.52-1.69ZM5.57 9.37c.5-.12 1.07.45 1.29 1.26.21.82-.02 1.57-.52 1.69-.5.11-1.08-.45-1.29-1.27-.21-.8.02-1.56.52-1.68Z",
-                    className: p,
+                    className: _,
                 }),
                 (0, r.jsx)("path", {
-                    fill: "string" == typeof _ ? _ : _.css,
+                    fill: "string" == typeof p ? p : p.css,
                     fillRule: "evenodd",
                     d: "M12 2a3 3 0 0 1 .91.14l7 2.24c.55.18 1.01.5 1.36.91l.02.02c.1.12.2.25.28.39l.02.05c.08.13.14.26.2.4l.02.06c.06.16.1.33.14.5a3 3 0 0 1 .05.53v9.62a3 3 0 0 1-2.12 2.86L13 21.84l-.12.03a3 3 0 0 1-1.76 0l-.12-.04-6.88-2.11A3 3 0 0 1 2 16.85V7.24A3.02 3.02 0 0 1 2.2 6.2l.02-.05a2.92 2.92 0 0 1 .5-.85l.02-.02c.35-.41.81-.73 1.35-.9l7-2.25c.3-.1.61-.14.92-.14ZM4.86 7.57a.67.67 0 0 0-.86.64v8.64a1 1 0 0 0 .7.96l5.47 1.68c.41.12.83-.18.83-.62V10.1a.88.88 0 0 0-.62-.84L4.86 7.57Zm10.47 8.25c-.5-.11-1.07.45-1.29 1.27-.21.8.02 1.56.52 1.68.5.12 1.08-.45 1.29-1.26.21-.82-.02-1.57-.52-1.69Zm2.3-3.78c-.5-.11-1.08.45-1.3 1.27-.21.81.02 1.56.52 1.68.5.12 1.08-.45 1.29-1.26.21-.82-.02-1.57-.52-1.69Zm2.31-3.67c-.5-.11-1.07.45-1.29 1.26-.21.82.02 1.57.52 1.69.5.11 1.08-.45 1.29-1.27.21-.8-.02-1.56-.52-1.68ZM12.2 4.93c-.98 0-1.77.4-1.77.88 0 .49.8.88 1.77.88s1.76-.4 1.76-.88-.79-.88-1.76-.88Z",
                     clipRule: "evenodd",
-                    className: p,
+                    className: _,
                 }),
             ],
         }),

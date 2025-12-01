@@ -18,9 +18,9 @@ var i = n(54381),
     C = n(868643),
     v = n(245216),
     _ = n(223606),
-    x = n(188597),
-    j = n(41776),
-    O = n(980463),
+    O = n(188597),
+    x = n(41776),
+    j = n(980463),
     E = n(328908),
     S = n(992970),
     P = n(135793),
@@ -33,12 +33,12 @@ var i = n(54381),
     M = n(2818),
     R = n(768943),
     L = n(665906),
-    k = n(695346),
-    D = n(314897),
+    D = n(695346),
+    k = n(314897),
     U = n(323873),
-    B = n(271383),
-    H = n(430824),
-    F = n(607744),
+    F = n(271383),
+    B = n(430824),
+    H = n(607744),
     V = n(496675),
     G = n(626135),
     z = n(572004),
@@ -185,7 +185,7 @@ function ep(e) {
             canReact: g,
             canConfigureJoin: b,
             canReply: _,
-            canStartThread: x,
+            canStartThread: O,
             canViewThread: T,
             canForward: N,
             isExpanded: A,
@@ -208,27 +208,27 @@ function ep(e) {
                     isFocused: s,
                 } = e,
                 { author: d } = n,
-                p = (0, u.e7)([H.Z], () => H.Z.getGuild(t.guild_id), [t.guild_id]),
-                m = (0, u.e7)([D.default], () => D.default.getId()),
+                p = (0, u.e7)([B.Z], () => B.Z.getGuild(t.guild_id), [t.guild_id]),
+                m = (0, u.e7)([k.default], () => k.default.getId()),
                 g = (0, L.$R)(t),
                 b = (0, L.Gu)(t),
                 { firstMessage: v } = (0, u.e7)([y.Z], () => y.Z.getMessage(t.id), [t.id]),
-                _ = k.nc.useSetting(),
-                x = k.Sb.useSetting(),
-                O = (0, u.e7)([F.Z], () => null == t.guild_id || F.Z.canChatInGuild(t.guild_id), [t]),
+                _ = D.nc.useSetting(),
+                O = D.Sb.useSetting(),
+                j = (0, u.e7)([H.Z], () => null == t.guild_id || H.Z.canChatInGuild(t.guild_id), [t]),
                 { canManageMessages: E, canAddNewReactions: S } = (0, u.cj)(
                     [V.Z],
                     () => ({
-                        canAddNewReactions: O && V.Z.can(ei.Plq.ADD_REACTIONS, t),
+                        canAddNewReactions: j && V.Z.can(ei.Plq.ADD_REACTIONS, t),
                         canManageMessages: V.Z.can(ei.Plq.MANAGE_MESSAGES, t),
                     }),
-                    [t, O],
+                    [t, j],
                 ),
                 P = (0, w.U)(t, n),
                 I = (0, L.NE)(t, n),
                 Z = (0, L.Ek)(n),
-                T = (0, u.e7)([j.Z], () => null != t.guild_id && j.Z.isLurking(t.guild_id), [t]),
-                N = (0, u.e7)([B.ZP], () => null != t.guild_id && B.ZP.isCurrentUserGuest(t.guild_id), [t]),
+                T = (0, u.e7)([x.Z], () => null != t.guild_id && x.Z.isLurking(t.guild_id), [t]),
+                N = (0, u.e7)([F.ZP], () => null != t.guild_id && F.ZP.isCurrentUserGuest(t.guild_id), [t]),
                 A = d.id === m,
                 U = (E || n.canDeleteOwnMessage(m)) && g && !ei.V$x.UNDELETABLE.has(n.type);
             n.type === ei.uaV.AUTO_MODERATION_ACTION && (U = U && E),
@@ -238,7 +238,7 @@ function ep(e) {
                 q = !t.isSystemDM() && (0, Y.Z)(n, m) && g && !b,
                 { disableReactionCreates: $ } = (0, Q.Z)({
                     channel: t,
-                    canChat: O,
+                    canChat: j,
                     renderReactions: _,
                     canAddNewReactions: S,
                     isLurking: T,
@@ -273,7 +273,7 @@ function ep(e) {
                 canViewThread: Z,
                 canForward: er,
                 canCopy: z.wS,
-                hasDeveloperMode: x,
+                hasDeveloperMode: O,
                 canReact: !$ && _,
                 canPublish: ee,
                 canConfigureJoin: en,
@@ -307,7 +307,7 @@ function ep(e) {
         ev = r.useCallback(
             (e) => {
                 try {
-                    (0, O.qc)(t.id, n.id, e);
+                    (0, j.qc)(t.id, n.id, e);
                 } catch (e) {
                     (0, d.showToast)((0, d.createToast)(el.intl.string(el.t.xsfC2S), d.ToastType.FAILURE));
                 }
@@ -385,7 +385,7 @@ function ep(e) {
                                     "pin",
                                 )
                               : null,
-                          x && N
+                          O && N
                               ? (0, i.jsx)(
                                     $.sF,
                                     {
@@ -490,7 +490,7 @@ function ep(e) {
                       "forward",
                   )
                 : null,
-            x && !N
+            O && !N
                 ? (0, i.jsx)(
                       $.sF,
                       {
@@ -501,7 +501,7 @@ function ep(e) {
                       "thread",
                   )
                 : null,
-            !x && T
+            !O && T
                 ? (0, i.jsx)(
                       $.sF,
                       {
@@ -604,7 +604,7 @@ function ep(e) {
 function eh(e) {
     let { channel: t, message: n } = e,
         r = (0, u.e7)([_.Z], () => null != _.Z.getMessage(n.id), [n.id]),
-        l = null == n.interaction || (null != n.interactionData && (0, x.$s)(n.interactionData));
+        l = null == n.interaction || (null != n.interactionData && (0, O.$s)(n.interactionData));
     return (0, i.jsxs)(i.Fragment, {
         children: [
             !r &&

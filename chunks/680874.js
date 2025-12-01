@@ -60,7 +60,7 @@ function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -68,7 +68,7 @@ function f(e, t) {
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -77,9 +77,9 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let p = 1,
-    h = 15,
-    m = "\n  visibility:hidden;\n  overflow:hidden;\n  position:absolute;\n  z-index:-1000;\n  top:0;\n  right:0;\n",
+let _ = 1,
+    m = 15,
+    h = "\n  visibility:hidden;\n  overflow:hidden;\n  position:absolute;\n  z-index:-1000;\n  top:0;\n  right:0;\n",
     g = [
         "letter-spacing",
         "line-height",
@@ -98,21 +98,21 @@ let p = 1,
     E = a.forwardRef(function (e, t) {
         var { style: n, autoFocus: r = !1, disabled: o = !1, autoCorrect: l = "off" } = e,
             u = f(e, ["style", "autoFocus", "disabled", "autoCorrect"]);
-        let _ = a.useRef(null),
-            p = (e) => {
-                (_.current = e), "function" == typeof t ? t(_.current) : null != t && (t.current = e);
+        let p = a.useRef(null),
+            _ = (e) => {
+                (p.current = e), "function" == typeof t ? t(p.current) : null != t && (t.current = e);
             },
-            [h, m] = a.useState(() => b(_.current, u.rows, u.value));
+            [m, h] = a.useState(() => b(p.current, u.rows, u.value));
         return (
             a.useLayoutEffect(() => {
-                m(b(_.current, u.rows, u.value));
+                h(b(p.current, u.rows, u.value));
             }, [u.rows, u.value]),
             (0, i.jsx)(s.tEY, {
                 children: (0, i.jsx)(
                     "textarea",
                     d(c({}, u), {
-                        ref: p,
-                        style: d(c({}, n), { height: h }),
+                        ref: _,
+                        style: d(c({}, n), { height: m }),
                         autoFocus: r,
                         disabled: o,
                         autoCorrect: l,
@@ -127,7 +127,7 @@ function b(e, t, n) {
         null == r && null != document.body && ((r = document.createElement("textarea")), document.body.appendChild(r));
     let { paddingSize: i, borderSize: a, boxSizing: o, sizingStyle: s } = O(e),
         { minHeight: l, maxHeight: c } = y(s, i, a, o);
-    r.setAttribute("style", s + ";" + m),
+    r.setAttribute("style", s + ";" + h),
         (r.value = n),
         null != t ? r.setAttribute("rows", "".concat(t)) : r.removeAttribute("rows");
     let u = r.scrollHeight;
@@ -135,11 +135,11 @@ function b(e, t, n) {
 }
 function y(e, t, n, i) {
     null == r && null != document.body && ((r = document.createElement("textarea")), document.body.appendChild(r)),
-        r.setAttribute("style", e + ";" + m),
-        r.setAttribute("rows", "".concat(p)),
+        r.setAttribute("style", e + ";" + h),
+        r.setAttribute("rows", "".concat(_)),
         (r.value = "");
     let a = r.scrollHeight;
-    r.setAttribute("rows", "".concat(h)), (r.value = "");
+    r.setAttribute("rows", "".concat(m)), (r.value = "");
     let o = r.scrollHeight;
     return (
         "border-box" === i ? ((a += n), (o += n)) : "content-box" === i && ((a -= t), (o -= t)),

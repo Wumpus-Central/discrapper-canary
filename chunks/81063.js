@@ -1,8 +1,8 @@
 n.d(t, {
-    Vh: () => S,
-    f: () => I,
-    hR: () => R,
-    xF: () => T,
+    Vh: () => T,
+    f: () => S,
+    hR: () => P,
+    xF: () => I,
 }),
     n(35282),
     n(190126),
@@ -22,26 +22,26 @@ var r = n(512722),
     u = n(981631);
 let d = "mp",
     f = 3600000,
-    _ = "https://i.scdn.co/image/",
-    p = (e, t, n) =>
+    p = "https://i.scdn.co/image/",
+    _ = (e, t, n) =>
         "https://static-cdn.jtvnw.net/previews-ttv/live_user_".concat(e, "-").concat(t, "x").concat(n, ".jpg"),
-    h = /https:\/\/static-cdn\.jtvnw\.net\/previews-ttv\/live_user_(.+)-\{width\}x\{height\}.jpg/,
-    m = (e) => "https://i.ytimg.com/vi/".concat(e, "/hqdefault_live.jpg"),
+    m = /https:\/\/static-cdn\.jtvnw\.net\/previews-ttv\/live_user_(.+)-\{width\}x\{height\}.jpg/,
+    h = (e) => "https://i.ytimg.com/vi/".concat(e, "/hqdefault_live.jpg"),
     g = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault_live\.jpg/,
     E = {
         [u.ABu.SPOTIFY]: {
-            deserialize: (e) => "".concat(_).concat(encodeURIComponent(e)),
-            serialize: (e) => e.split(_)[1],
+            deserialize: (e) => "".concat(p).concat(encodeURIComponent(e)),
+            serialize: (e) => e.split(p)[1],
         },
         [u.ABu.TWITCH]: {
-            deserialize: (e, t) => p(encodeURIComponent(e), t[0], t[1]),
+            deserialize: (e, t) => _(encodeURIComponent(e), t[0], t[1]),
             serialize: (e) => {
-                let t = e.match(h);
+                let t = e.match(m);
                 return null != t ? t[1] : null;
             },
         },
         [u.ABu.YOUTUBE]: {
-            deserialize: (e) => m(encodeURIComponent(e)),
+            deserialize: (e) => h(encodeURIComponent(e)),
             serialize: (e) => {
                 let t = e.match(g);
                 return null != t ? t[1] : null;
@@ -86,11 +86,11 @@ function v(e) {
     let t = s.Z.getApplicationAssets(e);
     return null == t || y(t.lastUpdated) ? O(e) : Promise.resolve(t);
 }
-function I(e, t) {
+function S(e, t) {
     let n = E[e].serialize(t);
     return n ? "".concat(e, ":").concat(n.toString()) : null;
 }
-function T(e, t, n) {
+function I(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "png";
     if (null != t && t.includes(":")) {
         let [e, r] = t.split(":");
@@ -120,7 +120,7 @@ function T(e, t, n) {
               .concat(r)
               .concat(o);
 }
-async function S(e) {
+async function T(e) {
     let t = await v(e);
     return null == t ? void 0 : t.assets;
 }
@@ -145,7 +145,7 @@ function C(e, t) {
             let i = e[r];
             if (null == i) continue;
             let a = Object.prototype.hasOwnProperty.call(b, i) ? b[i] : void 0;
-            null != a && ((t[r] = I(d, a)), n++);
+            null != a && ((t[r] = S(d, a)), n++);
         }
     return n === e.length;
 }
@@ -166,7 +166,7 @@ function N(e, t, n, r) {
     }
     return i;
 }
-async function R(e, t) {
+async function P(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
     o.Z.dispatch({
         type: "APPLICATION_ASSETS_FETCH",
@@ -184,14 +184,14 @@ async function R(e, t) {
             }),
             r
         );
-    let a = await S(e);
+    let a = await T(e);
     return (o.Z.dispatch({
         type: "APPLICATION_ASSETS_UPDATE",
         applicationId: e,
         assets: a,
     }),
     N(t, r, a, n))
-        ? O(e).then(() => R(e, t, n - 1))
+        ? O(e).then(() => P(e, t, n - 1))
         : (o.Z.dispatch({
               type: "APPLICATION_ASSETS_FETCH_SUCCESS",
               applicationId: e,

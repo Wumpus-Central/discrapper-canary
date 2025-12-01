@@ -14,7 +14,7 @@ var r = n(54381),
     u = n(55563),
     d = n(73346),
     f = n(388032);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,12 +38,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -55,12 +55,12 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -100,8 +100,8 @@ class y extends i.PureComponent {
             s = g(e, ["skus", "children", "applicationId", "primarySKU", "onSKUSelect"]);
         return (0, r.jsx)(
             l.Z,
-            m(
-                p(
+            h(
+                _(
                     {
                         onClick: this.handleClick,
                         onDropdownClick: t.length > 0 ? this.handleContextMenu : null,
@@ -115,7 +115,7 @@ class y extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            _(this, "renderContextMenu", () => {
+            p(this, "renderContextMenu", () => {
                 let { skus: e, onSKUSelect: t, onMenuSelect: n } = this.props;
                 return (0, r.jsx)(o.v2r, {
                     onSelect: n,
@@ -137,10 +137,10 @@ class y extends i.PureComponent {
                     ),
                 });
             }),
-            _(this, "handleContextMenu", (e) => {
+            p(this, "handleContextMenu", (e) => {
                 e.stopPropagation(), s.vq(e, this.renderContextMenu);
             }),
-            _(this, "handleClick", () => {
+            p(this, "handleClick", () => {
                 let { onSKUSelect: e, primarySKU: t } = this.props;
                 null != t && (null == e || e(t));
             });

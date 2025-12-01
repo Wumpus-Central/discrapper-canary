@@ -1,32 +1,32 @@
 n.d(e, { Z: () => c });
 var i = n(442837),
-    l = n(846027),
-    u = n(509613),
-    r = n(131951),
+    r = n(846027),
+    l = n(509613),
+    u = n(131951),
     s = n(313789),
     a = n(981631),
     o = n(388032);
-let c = (0, u.qs)(s.n.ADVANCED_VOICE_ACTIVITY_PROCESSING_SETTING, {
+let c = (0, l.qs)(s.n.ADVANCED_VOICE_ACTIVITY_PROCESSING_SETTING, {
     useTitle: () => o.intl.string(o.t.BbESsg),
     useSubtitle: () => o.intl.string(o.t.LoOB1F),
     usePredicate: function () {
-        return (0, i.e7)([r.Z], () => r.Z.isAdvancedVoiceActivitySupported() && r.Z.isInputProfileCustom());
+        return (0, i.e7)([u.Z], () => u.Z.isAdvancedVoiceActivitySupported() && u.Z.isInputProfileCustom());
     },
     useDisabled: function () {
-        return (0, i.e7)([r.Z], () => {
-            let t = r.Z.getMode(),
-                e = r.Z.getModeOptions().autoThreshold;
+        return (0, i.e7)([u.Z], () => {
+            let t = u.Z.getMode(),
+                e = u.Z.getModeOptions().autoThreshold;
             return t === a.pM4.VOICE_ACTIVITY && e;
         });
     },
     useValue: function () {
-        return (0, i.e7)([r.Z], () => {
-            let { vadUseKrisp: t } = r.Z.getModeOptions();
+        return (0, i.e7)([u.Z], () => {
+            let { vadUseKrisp: t } = u.Z.getModeOptions();
             return t;
         });
     },
     setValue: function (t) {
-        let e = r.Z.getMode();
-        l.Z.setMode(e, { vadUseKrisp: t });
+        let e = u.Z.getMode();
+        r.Z.setMode(e, { vadUseKrisp: t });
     },
 });

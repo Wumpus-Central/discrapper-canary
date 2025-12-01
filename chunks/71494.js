@@ -1,4 +1,4 @@
-n.d(t, { t: () => _ });
+n.d(t, { t: () => p });
 var r = n(54381);
 n(473749);
 var i = n(692547),
@@ -77,26 +77,26 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let _ = (e) => {
+let p = (e) => {
     var t,
         n,
-        { size: s = "md", width: c, height: f, color: _ = i.Z.colors.INTERACTIVE_NORMAL, colorClass: p = "" } = e,
-        h = d(e, ["size", "width", "height", "color", "colorClass"]);
-    let m = (0, o.m)(s),
-        g = null != (t = null == m ? void 0 : m.width) ? t : c,
-        E = null != (n = null == m ? void 0 : m.height) ? n : f;
+        { size: s = "md", width: c, height: f, color: p = i.Z.colors.INTERACTIVE_NORMAL, colorClass: _ = "" } = e,
+        m = d(e, ["size", "width", "height", "color", "colorClass"]);
+    let h = (0, o.m)(s),
+        g = null != (t = null == h ? void 0 : h.width) ? t : c,
+        E = null != (n = null == h ? void 0 : h.height) ? n : f;
     return (0, r.jsx)(
         "svg",
-        u(l({}, (0, a.Z)(h)), {
+        u(l({}, (0, a.Z)(m)), {
             xmlns: "http://www.w3.org/2000/svg",
             width: g,
             height: E,
             fill: "none",
             viewBox: "0 0 24 24",
             children: (0, r.jsx)("path", {
-                fill: "string" == typeof _ ? _ : _.css,
+                fill: "string" == typeof p ? p : p.css,
                 d: "M20.3 5.41h-.39c-.84 0-1.52-.65-1.52-1.46v-.3c0-.9-.77-1.65-1.71-1.65H7.31c-.94 0-1.71.74-1.71 1.65v.3c0 .81-.68 1.46-1.52 1.46H3.7c-.94 0-1.7.73-1.7 1.64v3.52l.01.49c.05 3.11.94 4.69 2.92 6.63C6.72 19.46 11.58 22 11.99 22c.41 0 5.27-2.54 7.06-4.31 1.98-1.95 2.92-3.53 2.92-6.63L22 7.05c0-.9-.76-1.64-1.7-1.64Zm-7.48 5.03c-.18.07-.29.25-.23.44l.6 4.65a.46.46 0 0 1-.45.51h-1.45a.46.46 0 0 1-.45-.51l.6-4.65c.05-.17-.02-.37-.19-.44a2.08 2.08 0 1 1 1.57 0Z",
-                className: p,
+                className: _,
             }),
         }),
     );

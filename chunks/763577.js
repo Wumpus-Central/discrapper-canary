@@ -62,8 +62,8 @@ function m() {
         [s, o] = l.useState(null),
         [c, u] = l.useState([]),
         m = l.useRef(null),
-        [x, g] = l.useState(400),
-        [f, b] = l.useState(400),
+        [x, f] = l.useState(400),
+        [g, b] = l.useState(400),
         v = l.useCallback(() => {
             setTimeout(() => {
                 var e, t, n, a;
@@ -142,7 +142,7 @@ function m() {
                 (0, a.jsx)("div", {
                     style: {
                         width: x,
-                        height: f,
+                        height: g,
                     },
                     children: (0, a.jsx)(d.BmE, {
                         src: e,
@@ -166,12 +166,12 @@ function m() {
                                     type: "number",
                                     label: "width",
                                     value: x.toString(),
-                                    onChange: (e) => g(parseInt(e)),
+                                    onChange: (e) => f(parseInt(e)),
                                 }),
                                 (0, a.jsx)(d.oil, {
                                     type: "number",
                                     label: "height",
-                                    value: f.toString(),
+                                    value: g.toString(),
                                     onChange: (e) => b(parseInt(e)),
                                 }),
                             ],

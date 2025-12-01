@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
-        closeUserProfileModal: () => m,
-        openUserProfileModal: () => h,
+        closeUserProfileModal: () => h,
+        openUserProfileModal: () => m,
     });
 var r = n(481060),
     i = n(570140),
@@ -13,18 +13,18 @@ var r = n(481060),
     u = n(9161),
     d = n(484459);
 let f = (0, r.pxk)(r.EFr.SIZE_120),
-    _ = new s.Z("UserProfileModalActionCreators"),
-    p = async (e) => {
+    p = new s.Z("UserProfileModalActionCreators"),
+    _ = async (e) => {
         let t = l.default.getId() === e,
             { recentActivityTabEnabled: n } = (0, u.x)({ location: "UserProfileModalActionCreators" });
         if (n || t)
             try {
                 await (0, o.Z)(e);
             } catch (t) {
-                _.log("Failed to fetch content inventory outbox for ".concat(e, ":"), t);
+                p.log("Failed to fetch content inventory outbox for ".concat(e, ":"), t);
             }
     };
-async function h(e) {
+async function m(e) {
     let {
             userId: t,
             guildId: n,
@@ -33,9 +33,9 @@ async function h(e) {
             roleId: s,
             sessionId: l,
             joinRequestId: u,
-            section: _,
-            subsection: h,
-            showGuildProfile: m,
+            section: p,
+            subsection: m,
+            showGuildProfile: h,
             hideRestrictedProfile: g,
             sourceAnalyticsLocations: E,
             appContext: b,
@@ -43,11 +43,11 @@ async function h(e) {
             disableActionsForPreview: O = !1,
         } = e,
         v = c.default.getUser(t);
-    p(t),
+    _(t),
         null == v
             ? await (0, a.In)(t, {
                   type: "modal",
-                  guildId: m && null != n ? n : void 0,
+                  guildId: h && null != n ? n : void 0,
                   withMutualFriendsCount: !0,
                   withMutualFriends: !1,
                   withMutualGuilds: !0,
@@ -55,7 +55,7 @@ async function h(e) {
               })
             : (0, d.Z)(v.id, v.getAvatarURL(void 0, f), {
                   type: "modal",
-                  guildId: m && null != n ? n : void 0,
+                  guildId: h && null != n ? n : void 0,
                   withMutualFriendsCount: !v.bot,
                   withMutualFriends: !1,
                   withMutualGuilds: !0,
@@ -71,15 +71,15 @@ async function h(e) {
             sessionId: null != l ? l : void 0,
             openedAt: Date.now(),
             customStatusPrompt: y,
-            section: _,
-            subsection: h,
-            showGuildProfile: m,
+            section: p,
+            subsection: m,
+            showGuildProfile: h,
             hideRestrictedProfile: g,
             sourceAnalyticsLocations: E,
             appContext: b,
             disableActionsForPreview: O,
         });
 }
-function m() {
+function h() {
     i.Z.dispatch({ type: "USER_PROFILE_MODAL_CLOSE" });
 }

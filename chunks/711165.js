@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(91192),
     u = n(793030),
     d = n(442837),
-    p = n(481060),
+    f = n(481060),
     h = n(724757),
-    f = n(294218),
+    p = n(294218),
     g = n(703656),
     m = n(45251),
     b = n(156012),
@@ -19,8 +19,8 @@ var r = n(54381),
     O = n(695346),
     v = n(23750),
     j = n(592125),
-    C = n(594174),
-    x = n(823379),
+    x = n(594174),
+    C = n(823379),
     E = n(324081),
     S = n(240126),
     I = n(981631),
@@ -50,10 +50,10 @@ function T() {
         l = i.useRef(null),
         o = (0, h.Z)("scheduled-messages", l);
     return n
-        ? (0, r.jsx)(p.$jN, { className: N.loadingPlaceholder })
+        ? (0, r.jsx)(f.$jN, { className: N.loadingPlaceholder })
         : 0 === t.length
           ? (0, r.jsx)(S.Z, {
-                Icon: p.T39,
+                Icon: f.T39,
                 header: P.intl.string(P.t.aJQZfZ),
                 tip: P.intl.string(P.t.rCN4pN),
             })
@@ -88,7 +88,7 @@ function T() {
                                 return i;
                             })(e, ["ref"]);
                         return (0, r.jsx)(
-                            p.Den,
+                            f.Den,
                             ((n = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
@@ -202,7 +202,7 @@ let R = i.memo(function (e) {
         a = new v.ZP({
             id: t.scheduledMessageId,
             content: t.scheduledMessage.content,
-            author: C.default.getUser(t.userId),
+            author: x.default.getUser(t.userId),
             timestamp: s()(t.sendAtTimestamp).toDate(),
             channel_id: t.scheduledMessage.channelId,
         }),
@@ -239,7 +239,7 @@ let R = i.memo(function (e) {
                         stateMessage: P.intl.string(P.t.j8uIfG),
                     };
                 default:
-                    (0, x.vE)(e);
+                    (0, C.vE)(e);
             }
         })(t.state),
         h = i.useCallback(() => {
@@ -262,10 +262,10 @@ let R = i.memo(function (e) {
                 [N.messageSendScheduled]: !c,
             }),
             children: l
-                ? (0, r.jsx)(p.$jN, { className: N.messageSpinner })
+                ? (0, r.jsx)(f.$jN, { className: N.messageSpinner })
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)(p.Text, {
+                          (0, r.jsx)(f.Text, {
                               variant: "text-xs/semibold",
                               color: c ? "text-danger" : "text-feedback-positive",
                               className: N.messageState,
@@ -275,7 +275,7 @@ let R = i.memo(function (e) {
                               className: N.channelMessageAndButtons,
                               children: [
                                   (0, r.jsx)(
-                                      f.Z,
+                                      p.Z,
                                       {
                                           message: a,
                                           channel: n,
@@ -290,13 +290,13 @@ let R = i.memo(function (e) {
                                       size: "sm",
                                       children: [
                                           (0, r.jsx)(u.hU, {
-                                              icon: p.T39,
+                                              icon: f.T39,
                                               onClick: g,
                                               variant: "icon-only",
                                               "aria-label": P.intl.string(P.t.SBcdAN),
                                           }),
                                           (0, r.jsx)(u.hU, {
-                                              icon: p.k$p,
+                                              icon: f.k$p,
                                               onClick: h,
                                               "aria-label": P.intl.string(P.t.O3sL8F),
                                               variant: "icon-only",

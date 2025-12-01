@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(54381);
 n(473749);
 var i = n(442837),
@@ -37,7 +37,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,25 +49,25 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e) {
+function m(e) {
     let {
             application: t,
             fullWidth: n = !1,
             size: d = a.zx.Sizes.LARGE,
-            color: _,
-            customDisabledColor: h,
-            hideNotLaunchable: m,
+            color: p,
+            customDisabledColor: m,
+            hideNotLaunchable: h,
             tooltipPosition: g,
             onClick: E,
             className: b,
@@ -75,26 +75,26 @@ function h(e) {
             hover: O,
             innerClassName: v,
         } = e,
-        I = {
+        S = {
             fullWidth: n,
             size: d,
-            color: _,
-            customDisabledColor: h,
+            color: p,
+            customDisabledColor: m,
             tooltipPosition: g,
             onClick: E,
             className: b,
             hover: O,
             innerClassName: v,
         },
-        T = (0, i.e7)([o.Z], () => o.Z.getActiveLibraryApplication(t.id)),
-        S = null != T ? T.sku.id : null,
-        A = null != S ? S : t.primarySkuId,
+        I = (0, i.e7)([o.Z], () => o.Z.getActiveLibraryApplication(t.id)),
+        T = null != I ? I.sku.id : null,
+        A = null != T ? T : t.primarySkuId,
         C = (0, i.e7)([s.Z], () => null != A && !s.Z.didFetchingSkuFail(A));
-    return null != T && (0, l.Je)(T)
+    return null != I && (0, l.Je)(I)
         ? (0, r.jsx)(
               u.Z,
-              p(f({}, I), {
-                  libraryApplication: T,
+              _(f({}, S), {
+                  libraryApplication: I,
                   source: y,
               }),
           )
@@ -102,8 +102,8 @@ function h(e) {
           ? (0, r.jsx)("div", { children: "deprecated!" })
           : (0, r.jsx)(
                 c.Z,
-                p(f({}, I), {
-                    hideNotLaunchable: m,
+                _(f({}, S), {
+                    hideNotLaunchable: h,
                     applicationId: t.id,
                 }),
             );

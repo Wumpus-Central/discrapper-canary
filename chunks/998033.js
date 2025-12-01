@@ -16,11 +16,11 @@ var r = n(13245),
     m = n(987650),
     y = n(388032);
 function b(e, t, n, b) {
-    var v;
-    let { icon: _, title: O, body: E } = (0, s.Xi)(e, t, n),
+    var _;
+    let { icon: v, title: O, body: E } = (0, s.Xi)(e, t, n),
         { trackView: x, trackClick: S } = (0, f.R)(m.n0.TextChat, {
             notif_type: m.n0.TextChat,
-            notif_user_id: null == (v = t.author) ? void 0 : v.id,
+            notif_user_id: null == (_ = t.author) ? void 0 : _.id,
             message_id: t.id,
             message_type: t.type,
             guild_id: e.guild_id,
@@ -28,7 +28,7 @@ function b(e, t, n, b) {
             channel_type: e.type,
         });
     return {
-        icon: _,
+        icon: v,
         title: O,
         body: E,
         renderFooter: (e) =>

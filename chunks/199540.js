@@ -9,14 +9,14 @@ var r = n(54381),
     u = n(430824),
     d = n(674552),
     f = n(388032),
-    p = n(106663);
-function h(e) {
+    h = n(106663);
+function p(e) {
     let { guildId: t, animate: n } = e,
         i = (0, a.e7)([u.Z], () => u.Z.getGuild(t), [t]),
         l = (0, s.dQu)(s.TVs.modules.guildbar.AVATAR_SIZE);
     return null == i
         ? (0, r.jsx)("div", {
-              className: o()(p.folderPreviewGuildIcon, p.folderPreviewGuildIconError),
+              className: o()(h.folderPreviewGuildIcon, h.folderPreviewGuildIconError),
               children: (0, r.jsx)(s.Mgn, { color: "currentColor" }),
           })
         : (0, r.jsx)(c.Z, {
@@ -25,7 +25,7 @@ function h(e) {
               size: c.Z.Sizes.MINI,
               iconSize: l,
               lossless: !0,
-              className: p.folderPreviewGuildIcon,
+              className: h.folderPreviewGuildIcon,
               tabIndex: -1,
           });
 }
@@ -34,9 +34,9 @@ function g(e) {
         { children: l } = t,
         a = n && i,
         c = (0, r.jsx)("div", {
-            className: p.folderIconWrapper,
+            className: h.folderIconWrapper,
             children: (0, r.jsx)("div", {
-                className: p.folderIcon,
+                className: h.folderIcon,
                 children: (0, r.jsx)(s.ROc, {
                     size: "sm",
                     color: "currentColor",
@@ -44,12 +44,12 @@ function g(e) {
             }),
         }),
         u = (0, r.jsx)("div", {
-            className: p.folderPreviewWrapper,
+            className: h.folderPreviewWrapper,
             children: (0, r.jsx)("div", {
-                className: p.folderPreview,
+                className: h.folderPreview,
                 children: l.slice(0, 4).map((e) =>
                     (0, r.jsx)(
-                        h,
+                        p,
                         {
                             guildId: e.id,
                             animate: n,
@@ -62,8 +62,8 @@ function g(e) {
     return (0, r.jsxs)("div", {
         "aria-hidden": !0,
         className: o()({
-            [p.folderDragPreview]: a,
-            [p.folderButtonContent]: !a,
+            [h.folderDragPreview]: a,
+            [h.folderButtonContent]: !a,
         }),
         children: [!a && c, u],
     });
@@ -76,7 +76,7 @@ function m(e) {
             sorting: a,
             mediaState: c,
             mentionCount: u = 0,
-            isMentionLowImportance: h,
+            isMentionLowImportance: p,
             tooltipName: m,
             folderGroupId: b,
             folderButtonContent: _,
@@ -117,7 +117,7 @@ function m(e) {
             a || P(!1), null == v || v(!1);
         }, [a, v]),
         w = o || null == c ? null : (0, d.Or)(c),
-        T = !o && u > 0 ? (0, d.Ne)(u, h ? s.TVs.colors.BACKGROUND_ACCENT.css : s.TVs.colors.STATUS_DANGER.css) : null;
+        T = !o && u > 0 ? (0, d.Ne)(u, p ? s.TVs.colors.BACKGROUND_ACCENT.css : s.TVs.colors.STATUS_DANGER.css) : null;
     return (0, r.jsx)(s.tEY, {
         children: (0, r.jsxs)(
             s.P3F,
@@ -147,7 +147,7 @@ function m(e) {
                 return e;
             })(
                 {
-                    className: p.folderButton,
+                    className: h.folderButton,
                     onClick: y,
                     onContextMenu: O,
                     onMouseEnter: N,
@@ -179,11 +179,11 @@ function m(e) {
                             lowerBadge: T,
                             lowerBadgeSize: { width: (0, s.OVM)(u) },
                             children: (0, r.jsx)("div", {
-                                className: p.folderButtonInner,
+                                className: h.folderButtonInner,
                                 children:
                                     null != _
                                         ? (0, r.jsx)("div", {
-                                              className: p.folderIconWrapper,
+                                              className: h.folderIconWrapper,
                                               children: _,
                                           })
                                         : (0, r.jsx)(g, {

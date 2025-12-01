@@ -9,7 +9,7 @@ var r = n(46973),
     u = n(894694),
     d = n(341569),
     f = n(39604);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,9 +22,9 @@ function _(e, t, n) {
         e
     );
 }
-let p = 10000,
-    h = 10000;
-class m extends i.Z {
+let _ = 10000,
+    m = 10000;
+class h extends i.Z {
     handleClipsSignalCreated(e, t) {
         this.isSignalEnabled(e.type) && this.process(e, t);
     }
@@ -98,13 +98,13 @@ class m extends i.Z {
                 this.scheduleClip(e);
                 break;
             case u.Bs.GAME_EVENT:
-                1 === e.importance && this.scheduleClip(e, p);
+                1 === e.importance && this.scheduleClip(e, _);
                 break;
             case u.Bs.PHRASE:
                 var n;
                 if (
                     (null == (n = this.scheduledClipSignal) ? void 0 : n.type) === u.Bs.GAME_EVENT ||
-                    performance.now() - this.lastClipTimestamp < h
+                    performance.now() - this.lastClipTimestamp < m
                 )
                     return;
                 this.scheduleClip(e);
@@ -114,7 +114,7 @@ class m extends i.Z {
         return {
             timeline: this.timeline.read(),
             scheduledClipSignal: this.scheduledClipSignal,
-            phraseCooldown: Math.max(0, h - (performance.now() - this.lastClipTimestamp)),
+            phraseCooldown: Math.max(0, m - (performance.now() - this.lastClipTimestamp)),
         };
     }
     clear() {
@@ -144,11 +144,11 @@ class m extends i.Z {
     }
     constructor() {
         super(),
-            _(this, "timeline", void 0),
-            _(this, "scheduledClipTimeout", null),
-            _(this, "scheduledClipSignal", null),
-            _(this, "lastClipTimestamp", 0),
-            _(this, "actions", {
+            p(this, "timeline", void 0),
+            p(this, "scheduledClipTimeout", null),
+            p(this, "scheduledClipSignal", null),
+            p(this, "lastClipTimestamp", 0),
+            p(this, "actions", {
                 CLIPS_SIGNAL_CREATED: (e) => this.handleClipsSignalCreated(e.signal, e.timestamp),
                 SPEAKING: (e) => this.handleSpeaking(e),
                 GUILD_SOUNDBOARD_SOUND_PLAY_START: (e) => this.handleSoundboardPlayStart(e),
@@ -159,4 +159,4 @@ class m extends i.Z {
             (this.timeline = new c.m(l.Z.getSettings().clipsLength));
     }
 }
-let g = new m();
+let g = new h();

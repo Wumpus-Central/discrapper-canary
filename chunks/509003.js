@@ -1,7 +1,7 @@
 n.d(t, {
-    FT: () => h,
-    Jc: () => m,
-    LK: () => _,
+    FT: () => m,
+    Jc: () => h,
+    LK: () => p,
     bP: () => E,
     le: () => g,
     sD: () => f,
@@ -82,7 +82,7 @@ function f(e) {
         ? JSON.stringify({ placeId: e.gameMetadata[i.wF.PLACE_ID] })
         : null;
 }
-function _(e) {
+function p(e) {
     return e.distributor !== a.GQo.ROBLOX ||
         null == e.gameMetadata ||
         null == e.gameMetadata[i.wF.ROBLOX_TIME_STARTED] ||
@@ -94,17 +94,17 @@ function _(e) {
               sync_id: e.gameMetadata[i.wF.ROBLOX_TIME_STARTED],
           };
 }
-function p(e) {
+function _(e) {
     var t;
     return (null == (t = e.metadata) ? void 0 : t.distributor) === a.GQo.ROBLOX && e.application_id !== i.eB;
 }
-function h(e) {
-    if (!p(e)) return e;
+function m(e) {
+    if (!_(e)) return e;
     let t = r.m.getConfig({ location: "transformRobloxSubgameNames" }).alternativeTitle ? o.t.HjVwG3 : o.t.G6BGdx;
     return u(l({}, e), { name: o.intl.formatToPlainString(t, { subgameName: e.name }) });
 }
-function m(e) {
-    if (e.type !== a.IIU.PLAYING || !p(e)) return e;
+function h(e) {
+    if (e.type !== a.IIU.PLAYING || !_(e)) return e;
     let t = Number(e.sync_id),
         n = l({}, e);
     return (n.application_id = i.eB), (n.name = a.EOG[a.GQo.ROBLOX]), isNaN(t) || (n.timestamps = { start: t }), n;

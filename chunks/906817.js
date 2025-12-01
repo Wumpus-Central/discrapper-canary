@@ -12,23 +12,23 @@ var r = n(54381),
     c = n(350707),
     u = n(540126),
     d = n(301342),
-    p = n(327530),
+    f = n(327530),
     h = n(981631),
-    f = n(388032),
+    p = n(388032),
     g = n(776677);
 function m(e, t, n, r) {
-    let i = "compact" === r ? 8 : p.$k;
+    let i = "compact" === r ? 8 : f.$k;
     if (e === u.wZ) return i;
     if (e === u.wd) return t.features.has(h.GuildFeatures.HUB) ? 0 : i;
     if (e === n.voiceChannelsSectionNumber) {
         var l;
         let t = n.getCategoryFromSection(e);
         if (null == t || t.isEmpty()) return 0;
-        if (t.isCollapsed) return p.Pw + 9;
+        if (t.isCollapsed) return f.Pw + 9;
         let r = null == (l = n.getChannelFromSectionRow(e, 0)) ? void 0 : l.channel;
         return null == r || r.record.type === h.d4z.GUILD_CATEGORY ? 9 : 25;
     }
-    return "compact" === r ? 32 : p.Pw;
+    return "compact" === r ? 32 : f.Pw;
 }
 function b(e, t) {
     switch (e) {
@@ -67,25 +67,25 @@ let _ = i.memo(function (e) {
             null != _ && r.includes(_) && (t = (0, a.KY)(m)), (0, a.Uo)(n.id, r, t);
         }, [n.id, _, m, b]),
         { density: j } = (0, l.TCT)(),
-        C = "compact" === j ? 8 : p.$k;
+        x = "compact" === j ? 8 : f.$k;
     switch (t) {
         case u.wZ:
-            return (0, r.jsx)("div", { style: { height: C } });
+            return (0, r.jsx)("div", { style: { height: x } });
         case u.wd:
             if (n.features.has(h.GuildFeatures.HUB)) return null;
-            return (0, r.jsx)("div", { style: { height: C } });
+            return (0, r.jsx)("div", { style: { height: x } });
         case u.p2:
-            return (0, r.jsx)(d.P, { name: O ? f.intl.string(f.t.mlPMCy) : f.intl.string(f.t.k8fFjp) });
+            return (0, r.jsx)(d.P, { name: O ? p.intl.string(p.t.mlPMCy) : p.intl.string(p.t.k8fFjp) });
         case m.recentsSectionNumber:
             return (0, r.jsx)(d.P, {
-                name: f.intl.string(f.t.gKcrqM),
+                name: p.intl.string(p.t.gKcrqM),
                 onDismiss: v,
             });
         case m.voiceChannelsSectionNumber: {
-            var x;
+            var C;
             let e = m.getCategoryFromSection(m.voiceChannelsSectionNumber);
             if (null == e || e.isEmpty()) return null;
-            let n = null == (x = m.getChannelFromSectionRow(t, 0)) ? void 0 : x.channel;
+            let n = null == (C = m.getChannelFromSectionRow(t, 0)) ? void 0 : C.channel;
             return (0, r.jsxs)(i.Fragment, {
                 children: [
                     (0, r.jsx)("div", { className: g.sectionDivider }),
@@ -104,7 +104,7 @@ let _ = i.memo(function (e) {
                 position: e.position,
                 disableManageChannels: y,
                 children: (0, r.jsx)(s.Z, {
-                    inlineSpecs: p.MF,
+                    inlineSpecs: f.MF,
                     arrowAlignment: c.cy.TOP,
                     tutorialId: "organize-by-topic",
                     position: "right",

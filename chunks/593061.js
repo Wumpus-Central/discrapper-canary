@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(544891),
@@ -22,25 +22,25 @@ async function f(e) {
         throw e;
     }
 }
-function _(e) {
+function p(e) {
     let { payment: t } = e,
         [n, a] = i.useState(null),
-        [l, _] = i.useState(null),
-        p = async (e) => {
+        [l, p] = i.useState(null),
+        _ = async (e) => {
             try {
                 let n = await f(t.id);
                 a(n);
                 let r = e ? n.refundInvoiceLinks[0] : n.invoiceLink;
-                window.open(r, "_blank"), _(null);
+                window.open(r, "_blank"), p(null);
             } catch (e) {
                 var n;
-                _(null == (n = e.body) ? void 0 : n.message);
+                p(null == (n = e.body) ? void 0 : n.message);
             }
         };
-    function h(e, t) {
+    function m(e, t) {
         s.Z.open(e, t);
     }
-    let m = null != t.paymentSource && t.status === c.Py.COMPLETED,
+    let h = null != t.paymentSource && t.status === c.Py.COMPLETED,
         g = null == n ? void 0 : n.invoiceLink,
         E = null == n ? void 0 : n.refundInvoiceLinks;
     return t.hasInvoiceURL && null == n
@@ -48,13 +48,13 @@ function _(e) {
               className: d.downloadInvoice,
               children: [
                   (0, r.jsx)(o.Anchor, {
-                      onClick: () => p(!1),
+                      onClick: () => _(!1),
                       children: u.intl.formatToPlainString(u.t.R0xzCN, {}),
                   }),
                   t.hasRefundInvoiceURLs
                       ? (0, r.jsx)(o.Anchor, {
                             className: d.downloadRefundInvoice,
-                            onClick: () => p(!0),
+                            onClick: () => _(!0),
                             children: u.intl.formatToPlainString(u.t["3x6NGw"], {}),
                         })
                       : null,
@@ -95,12 +95,12 @@ function _(e) {
                         }),
                 ],
             })
-          : m
+          : h
             ? (0, r.jsx)("div", {
                   className: d.downloadInvoice,
                   children: (0, r.jsx)(o.Anchor, {
                       onClick: () => {
-                          h(t, t.paymentSource);
+                          m(t, t.paymentSource);
                       },
                       children: u.intl.formatToPlainString(u.t.onRIxS, {}),
                   }),

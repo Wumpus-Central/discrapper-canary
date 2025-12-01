@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B });
+n.d(t, { Z: () => Z });
 var r = n(54381),
     i = n(473749),
     a = n(512722),
@@ -9,27 +9,27 @@ var r = n(54381),
     u = n(497321),
     d = n(100527),
     f = n(367907),
-    _ = n(906732),
-    p = n(566697),
-    h = n(150039),
-    m = n(296810),
+    p = n(906732),
+    _ = n(566697),
+    m = n(150039),
+    h = n(296810),
     g = n(678135),
     E = n(643879),
     b = n(621853),
     y = n(271383),
     O = n(246946),
     v = n(594174),
-    I = n(63063),
-    T = n(74538),
-    S = n(18438),
+    S = n(63063),
+    I = n(74538),
+    T = n(18438),
     A = n(778825),
     C = n(856607),
     N = n(594496),
-    R = n(856768),
-    P = n(981631),
-    D = n(388032),
-    w = n(813709);
-function L(e, t, n) {
+    P = n(856768),
+    R = n(981631),
+    w = n(388032),
+    D = n(813709);
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ function L(e, t, n) {
         e
     );
 }
-function x(e) {
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,12 +53,12 @@ function x(e) {
                 }),
             )),
             r.forEach(function (t) {
-                L(e, t, n[t]);
+                x(e, t, n[t]);
             });
     }
     return e;
 }
-function M(e, t) {
+function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -70,18 +70,18 @@ function M(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : M(Object(t)).forEach(function (n) {
+            : j(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function j(e, t) {
+function k(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -105,91 +105,91 @@ function U(e, t) {
 function G(e) {
     (0, l.ZDy)(async () => {
         let { default: t } = await n.e("84509").then(n.bind(n, 933696));
-        return (n) => (0, r.jsx)(t, x({ source: k(x({}, e), { page: P.ZY5.GUILD_MEMBER_PROFILE_SETTINGS }) }, n));
+        return (n) => (0, r.jsx)(t, L({ source: M(L({}, e), { page: R.ZY5.GUILD_MEMBER_PROFILE_SETTINGS }) }, n));
     });
 }
-function B(e) {
+function Z(e) {
     var t, n;
     let { selectedGuild: a } = e,
-        { analyticsLocations: L } = (0, _.ZP)(d.Z.USER_SETTINGS_GUILD_PROFILE),
-        M = (0, s.e7)([v.default], () => {
+        { analyticsLocations: x } = (0, p.ZP)(d.Z.USER_SETTINGS_GUILD_PROFILE),
+        j = (0, s.e7)([v.default], () => {
             let e = v.default.getCurrentUser();
             return o()(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e;
         }),
-        U = (0, s.e7)([y.ZP], () => (null != a ? y.ZP.getMember(a.id, M.id) : null)),
-        B = (0, s.e7)([b.Z], () => !b.Z.isFetchingProfile(M.id, null == a ? void 0 : a.id)),
-        Z = (0, s.e7)([O.Z], () => O.Z.hidePersonalInformation),
-        F = (0, s.cj)([A.Z], () => k(x({}, A.Z.getAllPending()), { source: A.Z.getSource() })),
+        U = (0, s.e7)([y.ZP], () => (null != a ? y.ZP.getMember(a.id, j.id) : null)),
+        Z = (0, s.e7)([b.Z], () => !b.Z.isFetchingProfile(j.id, null == a ? void 0 : a.id)),
+        B = (0, s.e7)([O.Z], () => O.Z.hidePersonalInformation),
+        F = (0, s.cj)([A.Z], () => M(L({}, A.Z.getAllPending()), { source: A.Z.getSource() })),
         { source: V, pendingAvatar: H, pendingNameplate: Y } = F,
-        W = j(F, ["source", "pendingAvatar", "pendingNameplate"]),
+        W = k(F, ["source", "pendingAvatar", "pendingNameplate"]),
         K = (0, E.SD)({
-            userId: M.id,
+            userId: j.id,
             image: H,
         }),
-        z = (0, h.Ys)({
+        z = (0, m.Ys)({
             pendingValue: Y,
-            userValue: null == M || null == (t = M.collectibles) ? void 0 : t.nameplate,
+            userValue: null == j || null == (t = j.collectibles) ? void 0 : t.nameplate,
             guildValue: null == U || null == (n = U.collectibles) ? void 0 : n.nameplate,
             guildId: null == a ? void 0 : a.id,
         }),
-        { pendingDisplayNameStyles: q } = (0, h.mD)(M, null == a ? void 0 : a.id);
-    return (i.useEffect(() => () => c.Z.wait(S.W3), []),
+        { pendingDisplayNameStyles: q } = (0, m.mD)(j, null == a ? void 0 : a.id);
+    return (i.useEffect(() => () => c.Z.wait(T.W3), []),
     i.useEffect(() => {
         null != V &&
-            f.ZP.trackWithMetadata(P.rMx.SETTINGS_PANE_VIEWED, {
+            f.ZP.trackWithMetadata(R.rMx.SETTINGS_PANE_VIEWED, {
                 settings_type: "guild",
-                destination_pane: P.jXE.SETTINGS_CUSTOMIZE_PROFILE,
+                destination_pane: R.jXE.SETTINGS_CUSTOMIZE_PROFILE,
                 source: V,
             });
     }, [V]),
-    Z)
+    B)
         ? (0, r.jsx)(u.Z, {})
-        : B
-          ? (0, r.jsxs)(_.Gt, {
-                value: L,
+        : Z
+          ? (0, r.jsxs)(p.Gt, {
+                value: x,
                 children: [
                     (0, r.jsx)(l.Text, {
                         variant: "text-sm/normal",
-                        children: D.intl.format(D.t["/PTB2E"], {
-                            helpCenterLink: I.Z.getArticleURL(P.BhN.GUILD_PROFILES),
+                        children: w.intl.format(w.t["/PTB2E"], {
+                            helpCenterLink: S.Z.getArticleURL(R.BhN.GUILD_PROFILES),
                         }),
                     }),
                     null != a
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)(R.Z, {
+                                  (0, r.jsx)(P.Z, {
                                       guildId: a.id,
                                       onChange: (e) => {
-                                          null != e && (0, S.HP)(e);
+                                          null != e && (0, T.HP)(e);
                                       },
                                   }),
-                                  (0, r.jsx)(m.Z, {
+                                  (0, r.jsx)(h.Z, {
                                       profilePreviewTitle: (0, r.jsx)(l.Heading, {
                                           variant: "heading-md/medium",
-                                          className: w.profilePreviewTitle,
-                                          children: D.intl.formatToPlainString(D.t.Tc0slG, {
+                                          className: D.profilePreviewTitle,
+                                          children: w.intl.formatToPlainString(w.t.Tc0slG, {
                                               guildName: null == a ? void 0 : a.name,
                                           }),
                                       }),
                                       profilePreview: (0, r.jsx)(
                                           g.Z,
-                                          k(x({}, W), {
+                                          M(L({}, W), {
                                               pendingAvatar: K,
                                               pendingDisplayNameStyles: q,
-                                              user: M,
+                                              user: j,
                                               guild: a,
-                                              canUsePremiumCustomization: T.ZP.canUsePremiumProfileCustomization(M),
+                                              canUsePremiumCustomization: I.ZP.canUsePremiumProfileCustomization(j),
                                               onUpsellClick: G,
                                           }),
                                       ),
                                       nameplatePreview: (0, r.jsx)(
-                                          p.Z,
-                                          k(x({}, W), {
+                                          _.Z,
+                                          M(L({}, W), {
                                               pendingDisplayNameStyles: q,
-                                              user: M,
+                                              user: j,
                                               guildId: null == a ? void 0 : a.id,
                                               nameplate: z,
-                                              className: null == z ? w.nameplatePreviewPlaceholder : void 0,
+                                              className: null == z ? D.nameplatePreviewPlaceholder : void 0,
                                               isHighlighted: !0,
                                           }),
                                       ),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -57,11 +57,11 @@ function f(e, t) {
         e
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -69,7 +69,7 @@ function _(e, t) {
     }
     return i;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,14 +78,14 @@ function p(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function h(e) {
+function m(e) {
     var { children: t, gradientClassName: n } = e,
-        a = _(e, ["children", "gradientClassName"]);
+        a = p(e, ["children", "gradientClassName"]);
     let c = i.useRef(null),
-        [d, p] = i.useState(!0),
-        h = () => {
+        [d, _] = i.useState(!0),
+        m = () => {
             var e;
-            (null == (e = c.current) ? void 0 : e.isScrolledToBottom()) === !0 ? p(!1) : p(!0);
+            (null == (e = c.current) ? void 0 : e.isScrolledToBottom()) === !0 ? _(!1) : _(!0);
         };
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -93,9 +93,9 @@ function h(e) {
                 s.h21,
                 f(u({ fade: !0 }, a), {
                     ref: (e) => {
-                        null != e && ((c.current = e), h());
+                        null != e && ((c.current = e), m());
                     },
-                    onScroll: h,
+                    onScroll: m,
                     children: t,
                 }),
             ),

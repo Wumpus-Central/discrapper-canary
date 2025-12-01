@@ -12,9 +12,9 @@ function c(e) {
     return l(t) ? t : null;
 }
 function u(e, t) {
-    var n, r, i, a, o, s, l, u, d, f, _, p;
-    let h = e.getIconURL(16),
-        m = null == t || null == (i = t.profile) || null == (r = i.data) || null == (n = r.primary) ? void 0 : n.season,
+    var n, r, i, a, o, s, l, u, d, f, p, _;
+    let m = e.getIconURL(16),
+        h = null == t || null == (i = t.profile) || null == (r = i.data) || null == (n = r.primary) ? void 0 : n.season,
         g =
             null == t || null == (s = t.profile) || null == (o = s.data) || null == (a = o.primary)
                 ? void 0
@@ -25,19 +25,19 @@ function u(e, t) {
                 : l.rank_image,
         ),
         b = c(
-            null == t || null == (p = t.profile) || null == (_ = p.data) || null == (f = _.primary)
+            null == t || null == (_ = t.profile) || null == (p = _.data) || null == (f = p.primary)
                 ? void 0
                 : f.featured_played_character_image,
         );
-    return null == e || null == h || null == m || null == g || null == b
+    return null == e || null == m || null == h || null == g || null == b
         ? null
         : {
               application: {
                   id: e.id,
                   name: e.name,
-                  icon: h,
+                  icon: m,
               },
-              season: m,
+              season: h,
               currentRankName: g,
               currentRankImage: E,
               featuredCharacterImage: b,

@@ -10,10 +10,10 @@ var i = n(442837),
     u = n(19780),
     d = n(979651),
     f = n(626135),
-    _ = n(732380),
-    p = n(981631),
-    h = n(388032);
-function m(e, t, n) {
+    p = n(732380),
+    _ = n(981631),
+    m = n(388032);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
@@ -66,25 +66,25 @@ function b(e, t) {
     );
 }
 function y(e) {
-    let { user: t, activity: n, onAction: m, onClose: E } = e,
+    let { user: t, activity: n, onAction: h, onClose: E } = e,
         { newestAnalyticsLocation: y } = (0, o.ZP)(),
         O = (0, i.e7)([d.Z, c.Z], () => {
             var e;
             return c.Z.getChannel(null == (e = d.Z.getVoiceStateForUser(t.id)) ? void 0 : e.channelId);
         }),
         v = (0, i.e7)([u.Z], () => u.Z.getChannelId() === (null == O ? void 0 : O.id));
-    return (null == n ? void 0 : n.type) !== p.IIU.HANG_STATUS || null == O
+    return (null == n ? void 0 : n.type) !== _.IIU.HANG_STATUS || null == O
         ? null
-        : (0, r.jsx)(_.O1, {
-              text: v ? h.intl.string(h.t.BXxdl7) : h.intl.string(h.t["9C444m"]),
+        : (0, r.jsx)(p.O1, {
+              text: v ? m.intl.string(m.t.BXxdl7) : m.intl.string(m.t["9C444m"]),
               fullWidth: !0,
               onClick: (e) => {
                   e.stopPropagation(),
-                      null == m || m({ action: "PRESS_HANG_STATUS_BUTTON" }),
+                      null == h || h({ action: "PRESS_HANG_STATUS_BUTTON" }),
                       a.default.selectVoiceChannel(O.id),
                       (0, l.Kh)(O.id),
                       f.default.track(
-                          p.rMx.HANG_STATUS_CTA_CLICKED,
+                          _.rMx.HANG_STATUS_CTA_CLICKED,
                           b(g({}, (0, s.Z)(O.id)), {
                               source: y,
                               other_user_id: t.id,

@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(981631),
     d = n(388032),
     f = n(152599),
-    _ = n(860978);
-function p(e, t, n) {
+    p = n(860978);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,12 +34,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -63,18 +63,18 @@ function g(e, t) {
 let E = 2.1,
     b = (e) => {
         var { handleLearnMore: t } = e,
-            n = m(e, ["handleLearnMore"]);
-        let p = (0, i.e7)([a.Z], () => a.Z.getGuildId()),
+            n = h(e, ["handleLearnMore"]);
+        let _ = (0, i.e7)([a.Z], () => a.Z.getGuildId()),
             g = (0, s.iL)({
-                guildId: p,
+                guildId: _,
                 onClick: () => {
                     window.open(l.Z.getArticleURL(u.BhN.NITRO_FAQ), "_blank");
                 },
             }),
-            b = (0, o.rO)() ? f.Z : _.Z;
+            b = (0, o.rO)() ? f.Z : p.Z;
         return (0, r.jsx)(
             c.Z,
-            h(
+            m(
                 {
                     gradientColor: "nitro-pink",
                     title: d.intl.string(d.t["9C+41g"]),

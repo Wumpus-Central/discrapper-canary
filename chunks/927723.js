@@ -1,6 +1,6 @@
 n.d(t, {
-    V: () => h,
-    k: () => p,
+    V: () => m,
+    k: () => _,
 });
 var r = n(54381);
 n(473749);
@@ -51,7 +51,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -62,20 +62,20 @@ function _(e, t) {
         e
     );
 }
-function p(e) {
+function _(e) {
     let { kind: t } = e;
     (0, a.ZDy)(async () => {
         let { default: e } = await n.e("7285").then(n.bind(n, 951269));
-        return (n) => (0, r.jsx)(e, _(d({}, n), { kind: t }));
+        return (n) => (0, r.jsx)(e, p(d({}, n), { kind: t }));
     });
 }
-function h() {
+function m() {
     (0, a.ZDy)(async () => {
         let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 878678));
         return (t) =>
             (0, r.jsx)(
                 e,
-                _(d({}, t), {
+                p(d({}, t), {
                     header: l.intl.string(c.default.odgSTk),
                     confirmText: l.intl.string(l.t.BddRzS),
                     confirmButtonColor: i.zx.Colors.BRAND,

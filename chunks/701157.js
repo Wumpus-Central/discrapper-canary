@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(539854);
+n.d(t, { Z: () => _ }), n(539854);
 var r = n(54381),
     i = n(473749),
     a = n(442837),
@@ -9,20 +9,20 @@ var r = n(54381),
     u = n(300037),
     d = n(388032),
     f = n(567897);
-let _ = 3,
-    p = function (e) {
+let p = 3,
+    _ = function (e) {
         let { canAddBoosts: t, canApplyBoosts: n } = e,
-            p = (0, a.e7)([s.Z], () => s.Z.affinities),
-            h = (0, a.e7)([l.ZP], () => l.ZP.getFlattenedGuildIds()),
-            m = i.useMemo(() => {
-                let e = p.slice(0, _).map((e) => e.guildId);
-                for (let t = 0; t < h.length && !(e.length >= 3); t++) {
-                    let n = h[t];
+            _ = (0, a.e7)([s.Z], () => s.Z.affinities),
+            m = (0, a.e7)([l.ZP], () => l.ZP.getFlattenedGuildIds()),
+            h = i.useMemo(() => {
+                let e = _.slice(0, p).map((e) => e.guildId);
+                for (let t = 0; t < m.length && !(e.length >= 3); t++) {
+                    let n = m[t];
                     e.includes(n) || e.push(n);
                 }
                 return e;
-            }, [p, h]);
-        return 0 === m.length
+            }, [_, m]);
+        return 0 === h.length
             ? null
             : (0, r.jsxs)("div", {
                   className: f.wrapper,
@@ -33,7 +33,7 @@ let _ = 3,
                               className: f.header,
                               children: d.intl.string(d.t.r90Wgo),
                           }),
-                      m.map((e) =>
+                      h.map((e) =>
                           (0, r.jsx)(
                               u.Z,
                               {
@@ -44,7 +44,7 @@ let _ = 3,
                               e,
                           ),
                       ),
-                      h.length > _ && n && (0, r.jsx)(c.Z, {}),
+                      m.length > p && n && (0, r.jsx)(c.Z, {}),
                   ],
               });
     };

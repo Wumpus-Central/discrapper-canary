@@ -1,16 +1,16 @@
 n.d(t, {
-    R: () => z,
-    Z: () => V,
+    R: () => V,
+    Z: () => z,
 }),
     n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(120356),
-    o = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    o = n(442837),
     s = n(481060),
-    c = n(239091),
-    u = n(765250),
+    u = n(239091),
+    c = n(765250),
     d = n(393238),
     h = n(358221),
     p = n(598006),
@@ -19,22 +19,22 @@ var i = n(54381),
     g = n(27457),
     y = n(796638),
     O = n(592125),
-    v = n(131951),
-    E = n(944486),
-    b = n(237997),
-    _ = n(136015),
-    S = n(444295),
-    x = n(906037),
+    E = n(131951),
+    v = n(944486),
+    S = n(237997),
+    b = n(136015),
+    x = n(444295),
+    j = n(906037),
     I = n(353038),
     C = n(804570),
-    j = n(461393),
+    Z = n(461393),
     N = n(340101),
-    Z = n(501787),
-    w = n(981631),
-    T = n(65154),
+    w = n(501787),
+    T = n(981631),
+    _ = n(65154),
     P = n(388032),
     A = n(59122);
-function k(e) {
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -59,7 +59,7 @@ function k(e) {
     }
     return e;
 }
-function D(e, t) {
+function R(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -77,49 +77,49 @@ function D(e, t) {
         e
     );
 }
-let R = r.memo(function (e) {
+let k = r.memo(function (e) {
         var t;
         let { participant: n, channel: r, context: l } = e,
-            o = null == (t = n.user) ? void 0 : t.id;
-        return (0, a.e7)([v.Z], () => null != n.user && null != l && null != r && v.Z.isLocalVideoDisabled(o, l), [
-            o,
+            a = null == (t = n.user) ? void 0 : t.id;
+        return (0, o.e7)([E.Z], () => null != n.user && null != l && null != r && E.Z.isLocalVideoDisabled(a, l), [
+            a,
             n.user,
             l,
             r,
         ])
             ? null
-            : (0, i.jsx)(g.ZP, k({}, e));
+            : (0, i.jsx)(g.ZP, D({}, e));
     }),
     L = r.memo(function (e) {
         let {
-                context: t = T.Yn.DEFAULT,
+                context: t = _.Yn.DEFAULT,
                 participants: l,
-                locked: o,
-                channel: a,
+                locked: a,
+                channel: o,
                 width: s,
-                height: u,
+                height: c,
                 shouldDisplay: d,
             } = e,
             h = r.useCallback(
                 (e, r) => {
                     let l = e.user;
-                    (0, S.Ws)(w.Odu.VIDEO, {
-                        type: S.Qu.CAMERA,
-                        value: S.bk.SETTINGS_OPENED,
+                    (0, x.Ws)(T.Odu.VIDEO, {
+                        type: x.Qu.CAMERA,
+                        value: x.bk.SETTINGS_OPENED,
                         userId: null == l ? void 0 : l.id,
                     }),
-                        (0, c.jW)(r, async () => {
+                        (0, u.jW)(r, async () => {
                             let { default: e } = await Promise.all([n.e("79695"), n.e("6524")]).then(n.bind(n, 27900));
                             return (n) =>
                                 (0, i.jsx)(
                                     e,
-                                    D(k({}, n), {
+                                    R(D({}, n), {
                                         user: l,
                                         mediaEngineContext: t,
                                         onWatchStream: () => {
-                                            (0, S.Ws)(w.Odu.VIDEO, {
-                                                type: S.Qu.GO_LIVE,
-                                                value: S.bk.ENABLED,
+                                            (0, x.Ws)(T.Odu.VIDEO, {
+                                                type: x.Qu.GO_LIVE,
+                                                value: x.bk.ENABLED,
                                                 userId: null == l ? void 0 : l.id,
                                             });
                                         },
@@ -129,7 +129,7 @@ let R = r.memo(function (e) {
                 },
                 [t],
             ),
-            m = (0, S.ee)(
+            m = (0, x.ee)(
                 () =>
                     new Set(
                         l.map((e) => {
@@ -141,8 +141,8 @@ let R = r.memo(function (e) {
             );
         r.useEffect(() => {
             d &&
-                (0, S.zi)(w.Odu.VIDEO, {
-                    locked: b.default.isInstanceLocked(),
+                (0, x.zi)(T.Odu.VIDEO, {
+                    locked: S.default.isInstanceLocked(),
                     shownUserIds: Array.from(m),
                     liveUserIds: Array.from(m),
                     contentInventoryIds: [],
@@ -151,26 +151,26 @@ let R = r.memo(function (e) {
         let g = r.useMemo(
             () => ({
                 width: s,
-                height: u,
+                height: c,
             }),
-            [s, u],
+            [s, c],
         );
         return (0, i.jsx)(i.Fragment, {
             children: l.map((e) =>
                 (0, i.jsx)(
-                    R,
+                    k,
                     {
                         participant: e,
                         width: s,
                         className: A.tile,
                         containerStyle: g,
                         fit: f.L.COVER,
-                        channel: a,
+                        channel: o,
                         popoutType: p.P.OVERLAY,
                         inCall: !0,
                         noBorder: !0,
-                        onContextMenu: o ? void 0 : h,
-                        forceIdle: o,
+                        onContextMenu: a ? void 0 : h,
+                        forceIdle: a,
                         paused: !d,
                         context: t,
                     },
@@ -181,42 +181,42 @@ let R = r.memo(function (e) {
     }),
     M = r.memo(function (e) {
         let {
-                context: t = T.Yn.DEFAULT,
+                context: t = _.Yn.DEFAULT,
                 participants: n,
                 participantsVersion: l,
-                locked: a,
-                widget: c,
-                channel: u,
+                locked: o,
+                widget: u,
+                channel: c,
                 width: d,
                 height: h,
                 showEmpty: p = !0,
                 containerRef: f,
             } = e,
-            m = "boolean" != typeof c.meta.horizontal || c.meta.horizontal,
-            g = n.length > 0 && null != t && null != u && (!a || c.pinned);
+            m = "boolean" != typeof u.meta.horizontal || u.meta.horizontal,
+            g = n.length > 0 && null != t && null != c && (!o || u.pinned);
         r.useEffect(() => {
-            (0, x.m3)(
+            (0, j.m3)(
                 {
-                    locked: a,
-                    pinned: c.pinned,
-                    widget: c.type,
+                    locked: o,
+                    pinned: u.pinned,
+                    widget: u.type,
                     isPreviewingInGame: !1,
                 },
                 g,
             );
-        }, [a, c, g]);
-        let y = r.useMemo(() => ({ opacity: c.opacity }), [c.opacity]),
+        }, [o, u, g]);
+        let y = r.useMemo(() => ({ opacity: u.opacity }), [u.opacity]),
             O = r.useMemo(
                 () =>
-                    o()({
+                    a()({
                         [A.videoList]: !0,
                         [A.vertical]: !m,
-                        [A.hidden]: !g && a,
+                        [A.hidden]: !g && o,
                     }),
-                [m, g, a],
+                [m, g, o],
             );
-        return 0 !== n.length || a
-            ? null == u
+        return 0 !== n.length || o
+            ? null == c
                 ? null
                 : (0, i.jsx)("div", {
                       ref: f,
@@ -225,8 +225,8 @@ let R = r.memo(function (e) {
                       children: (0, i.jsx)(L, {
                           context: t,
                           participants: n,
-                          locked: a,
-                          channel: u,
+                          locked: o,
+                          channel: c,
                           width: d,
                           height: h,
                           shouldDisplay: g,
@@ -244,60 +244,60 @@ let R = r.memo(function (e) {
                 })
               : null;
     }),
-    z = (e) => {
+    V = (e) => {
         let { widget: t, computedSize: n, borderWidth: i, padding: r, containerSpecs: l } = e;
         if (!(0, N.js)(t)) return n;
-        let o = "boolean" != typeof t.meta.horizontal || t.meta.horizontal,
-            a = 2 * i + 2 * r,
-            s = o
+        let a = "boolean" != typeof t.meta.horizontal || t.meta.horizontal,
+            o = 2 * i + 2 * r,
+            s = a
                 ? {
-                      width: Math.max(n.width, Z.vZ),
-                      height: Math.min(n.height, 2 * Z.mo + a),
+                      width: Math.max(n.width, w.vZ),
+                      height: Math.min(n.height, 2 * w.mo + o),
                   }
                 : {
-                      height: Math.max(n.height, Z.vZ),
-                      width: Math.min(n.width, 2 * Z.mo + a),
+                      height: Math.max(n.height, w.vZ),
+                      width: Math.min(n.width, 2 * w.mo + o),
                   },
-            c = {
+            u = {
                 maxWidth: 0.75 * l.maxX,
                 maxHeight: 0.75 * l.maxY,
             };
-        return (0, j.hJ)(s, c);
+        return (0, Z.hJ)(s, u);
     };
-function V(e) {
-    var t, n, l, o;
-    let s = (0, a.e7)([E.Z, O.Z], () => O.Z.getChannel(E.Z.getVoiceChannelId())),
-        c = 2 * e.padding + 2 * e.borderWidth,
+function z(e) {
+    var t, n, l, a;
+    let s = (0, o.e7)([v.Z, O.Z], () => O.Z.getChannel(v.Z.getVoiceChannelId())),
+        u = 2 * e.padding + 2 * e.borderWidth,
         p = null == s ? void 0 : s.id,
-        [f, g] = (0, a.e7)(
+        [f, g] = (0, o.e7)(
             [h.Z],
             () => (null == p ? [[], 0] : [h.Z.getVideoParticipants(p), h.Z.getParticipantsVersion(p)]),
             [p],
-            _.Q,
+            b.Q,
         ),
-        v = "boolean" != typeof e.widget.meta.horizontal || e.widget.meta.horizontal,
-        { width: b = e.width - c, height: S = e.height - c, ref: x } = (0, d.ZP)(e.locked, e.widget.pinned),
-        { participantTileWidth: C, visibleParticipants: j } = (0, y.ZB)(v ? b : S, f, {
-            tileWidth: Z.vZ,
-            tileMinWidth: Z.mo,
-            tileMargin: Z.F$,
+        E = "boolean" != typeof e.widget.meta.horizontal || e.widget.meta.horizontal,
+        { width: S = e.width - u, height: x = e.height - u, ref: j } = (0, d.ZP)(e.locked, e.widget.pinned),
+        { participantTileWidth: C, visibleParticipants: Z } = (0, y.ZB)(E ? S : x, f, {
+            tileWidth: w.vZ,
+            tileMinWidth: w.mo,
+            tileMargin: w.F$,
             limit: 8,
             cropSelfVideo: !0,
             version: g,
         }),
-        N = (0, a.e7)([m.Z], () => m.Z.getWindowState(Z.$J)),
-        w = {
+        N = (0, o.e7)([m.Z], () => m.Z.getWindowState(w.$J)),
+        T = {
             id: e.widget.id,
             containerSize: {
-                containerHeight: S,
-                containerWidth: b,
+                containerHeight: x,
+                containerWidth: S,
             },
-            sizeOffset: c,
+            sizeOffset: u,
             padding: e.padding,
             borderWidth: e.borderWidth,
             containerSpecs: {
-                maxX: null != (t = null == N ? void 0 : N.width) ? t : e.width - c,
-                maxY: null != (n = null == N ? void 0 : N.height) ? n : e.height - c,
+                maxX: null != (t = null == N ? void 0 : N.width) ? t : e.width - u,
+                maxY: null != (n = null == N ? void 0 : N.height) ? n : e.height - u,
                 minX: 0,
                 minY: 0,
             },
@@ -306,7 +306,7 @@ function V(e) {
                 top: 0,
                 left: 0,
                 bottom: null != (l = null == N ? void 0 : N.height) ? l : e.height,
-                right: null != (o = null == N ? void 0 : N.width) ? o : e.width,
+                right: null != (a = null == N ? void 0 : N.width) ? a : e.width,
             },
         };
     return (
@@ -320,8 +320,8 @@ function V(e) {
                     widget: n,
                     widgetLayoutSpecs: i,
                 },
-                o = r.useRef(l);
-            r.useLayoutEffect(() => void (o.current = l)),
+                a = r.useRef(l);
+            r.useLayoutEffect(() => void (a.current = l)),
                 r.useLayoutEffect(() => {
                     let {
                         size: e,
@@ -329,11 +329,11 @@ function V(e) {
                         containerWidth: i,
                         containerHeight: r,
                         widget: l,
-                        widgetLayoutSpecs: a,
-                    } = o.current;
+                        widgetLayoutSpecs: o,
+                    } = a.current;
                     if (!((t && e.height > e.width) || (!t && e.width > e.height))) return;
-                    let { width: s, height: c } = z(
-                        D(k({}, a), {
+                    let { width: s, height: u } = V(
+                        R(D({}, o), {
                             widget: l,
                             operation: I.B.RESIZE_NORTH,
                             computedSize: {
@@ -346,29 +346,29 @@ function V(e) {
                             },
                         }),
                     );
-                    (0, u.nv)({
+                    (0, c.nv)({
                         widgetId: n,
                         size: {
                             fixed: !0,
                             width: s,
-                            height: c,
+                            height: u,
                         },
                     });
                 }, [t]);
         })({
-            horizontal: v,
+            horizontal: E,
             widget: e.widget,
-            widgetLayoutSpecs: w,
+            widgetLayoutSpecs: T,
         }),
         (0, i.jsx)(
             M,
-            D(k({}, e), {
+            R(D({}, e), {
                 channel: s,
-                participants: j,
+                participants: Z,
                 participantsVersion: g,
-                width: v ? C : null != b ? b : e.width,
-                height: v ? (null != S ? S : e.height) : C,
-                containerRef: x,
+                width: E ? C : null != S ? S : e.width,
+                height: E ? (null != x ? x : e.height) : C,
+                containerRef: j,
             }),
         )
     );

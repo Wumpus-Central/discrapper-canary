@@ -1,7 +1,7 @@
 n.d(t, {
     JO: () => v,
     ZP: () => C,
-    iz: () => T,
+    iz: () => I,
 });
 var r = n(54381),
     i = n(473749),
@@ -13,8 +13,8 @@ var r = n(54381),
     u = n(290297),
     d = n(686546),
     f = n(79712),
-    _ = n(191984);
-function p(e, t, n) {
+    p = n(191984);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,12 +38,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -60,7 +60,7 @@ function g(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -99,33 +99,33 @@ let y = 24,
                 id: u,
                 muted: d = !1,
                 level: f = 1,
-                ref: p,
+                ref: _,
             } = e,
-            h = (0, r.jsx)(c.y5t, {
+            m = (0, r.jsx)(c.y5t, {
                 forceLevel: f,
                 children: (0, r.jsx)(c.Heading, {
                     variant: "text-md/medium",
                     color: d ? "header-secondary" : void 0,
-                    className: o()(t, _.title, { [_.titleClickable]: null != s }),
+                    className: o()(t, p.title, { [p.titleClickable]: null != s }),
                     id: u,
                     children: i,
                 }),
             });
         return null != s
             ? (0, r.jsx)(c.P3F, {
-                  innerRef: p,
+                  innerRef: _,
                   onClick: s,
                   onContextMenu: a,
                   onKeyDown: l,
-                  className: o()(n, _.titleWrapper),
-                  children: h,
+                  className: o()(n, p.titleWrapper),
+                  children: m,
               })
             : (0, r.jsx)("div", {
-                  ref: p,
-                  className: o()(n, _.titleWrapper),
+                  ref: _,
+                  className: o()(n, p.titleWrapper),
                   onContextMenu: a,
                   onKeyDown: l,
-                  children: h,
+                  children: m,
               });
     },
     v = i.forwardRef(function (e, t) {
@@ -137,82 +137,82 @@ let y = 24,
                 disabled: l = !1,
                 showBadge: u = !1,
                 badgePosition: f = "bottom",
-                color: p,
-                foreground: m,
+                color: _,
+                foreground: h,
                 background: g,
                 icon: E,
                 iconSize: b = y,
                 onClick: O,
                 onContextMenu: v,
-                tooltip: I = null,
-                tooltipColor: T,
-                tooltipPosition: S = "bottom",
+                tooltip: S = null,
+                tooltipColor: I,
+                tooltipPosition: T = "bottom",
                 tooltipAlign: A,
                 tooltipDisabled: C,
                 tooltipSpacing: N,
-                hideOnClick: R = !0,
-                role: P,
-                "aria-label": D,
-                "aria-hidden": w,
-                "aria-checked": L,
-                "aria-expanded": x,
-                "aria-haspopup": M,
-                "data-jump-section": k,
+                hideOnClick: P = !0,
+                role: R,
+                "aria-label": w,
+                "aria-hidden": D,
+                "aria-checked": x,
+                "aria-expanded": L,
+                "aria-haspopup": j,
+                "data-jump-section": M,
             } = e,
-            j = null != g ? { secondaryColorClass: g } : {},
+            k = null != g ? { secondaryColorClass: g } : {},
             U = (0, r.jsx)(
                 E,
-                h(
+                m(
                     {
                         x: 0,
                         y: 0,
                         width: b,
                         height: b,
                         size: "custom",
-                        className: o()(i, _.icon),
-                        colorClass: null != m ? m : void 0,
-                        color: null != p ? p : "currentColor",
+                        className: o()(i, p.icon),
+                        colorClass: null != h ? h : void 0,
+                        color: null != _ ? _ : "currentColor",
                     },
-                    j,
+                    k,
                 ),
             ),
-            G = D;
+            G = w;
         return (
-            null == G && "string" == typeof I && (G = I),
+            null == G && "string" == typeof S && (G = S),
             (0, r.jsx)(c.aML, {
                 "data-migration-pending": !0,
-                text: I,
-                color: T,
-                position: S,
+                text: S,
+                color: I,
+                position: T,
                 align: A,
-                hideOnClick: R,
+                hideOnClick: P,
                 shouldShow: !C,
                 spacing: N,
                 children: (e) => {
-                    let { onMouseEnter: g, onMouseLeave: y, onFocus: I, onBlur: T } = e;
+                    let { onMouseEnter: g, onMouseLeave: y, onFocus: S, onBlur: I } = e;
                     return null == O
                         ? (0, r.jsx)("div", {
                               ref: t,
-                              className: o()(n, _.iconWrapper, { [_.iconDisabled]: l }),
+                              className: o()(n, p.iconWrapper, { [p.iconDisabled]: l }),
                               children: (0, r.jsx)(
                                   E,
-                                  h(
+                                  m(
                                       {
                                           x: 0,
                                           y: 0,
                                           width: b,
                                           height: b,
                                           size: "custom",
-                                          className: o()(i, _.icon),
-                                          colorClass: null != m ? m : void 0,
-                                          color: null != p ? p : "currentColor",
-                                          "aria-hidden": w,
+                                          className: o()(i, p.icon),
+                                          colorClass: null != h ? h : void 0,
+                                          color: null != _ ? _ : "currentColor",
+                                          "aria-hidden": D,
                                           onMouseEnter: g,
                                           onMouseLeave: y,
-                                          onFocus: I,
-                                          onBlur: T,
+                                          onFocus: S,
+                                          onBlur: I,
                                       },
-                                      j,
+                                      k,
                                   ),
                               ),
                           })
@@ -223,22 +223,22 @@ let y = 24,
                               onContextMenu: l ? void 0 : v,
                               onMouseEnter: g,
                               onMouseLeave: y,
-                              onFocus: I,
-                              onBlur: T,
+                              onFocus: S,
+                              onBlur: I,
                               className: o()(n, {
-                                  [_.iconWrapper]: !0,
-                                  [_.clickable]: !l && null != O,
-                                  [_.selected]: s,
-                                  [_.iconDisabled]: l,
+                                  [p.iconWrapper]: !0,
+                                  [p.clickable]: !l && null != O,
+                                  [p.selected]: s,
+                                  [p.iconDisabled]: l,
                               }),
-                              role: P,
+                              role: R,
                               "aria-label": G,
-                              "aria-hidden": w,
-                              "aria-checked": L,
-                              "aria-haspopup": M,
-                              "aria-expanded": x,
+                              "aria-hidden": D,
+                              "aria-checked": x,
+                              "aria-haspopup": j,
+                              "aria-expanded": L,
                               tabIndex: l || null == O ? -1 : 0,
-                              "data-jump-section": k,
+                              "data-jump-section": M,
                               children: [
                                   u
                                       ? (0, r.jsx)(d.ZP, {
@@ -254,8 +254,8 @@ let y = 24,
                                   u
                                       ? (0, r.jsx)("span", {
                                             className: o()(
-                                                _.iconBadge,
-                                                "top" === f ? _.iconBadgeTop : _.iconBadgeBottom,
+                                                p.iconBadge,
+                                                "top" === f ? p.iconBadgeTop : p.iconBadgeBottom,
                                             ),
                                         })
                                       : null,
@@ -266,33 +266,33 @@ let y = 24,
             })
         );
     }),
-    I = i.forwardRef(function (e, t) {
+    S = i.forwardRef(function (e, t) {
         var { className: n } = e,
             i = E(e, ["className"]);
         return (0, r.jsx)(
             v,
-            g(h({}, i), {
-                className: o()(_.channelIcon, n),
+            g(m({}, i), {
+                className: o()(p.channelIcon, n),
                 ref: t,
             }),
         );
     }),
-    T = (e) => {
+    I = (e) => {
         let { className: t } = e;
-        return (0, r.jsx)(f.Z, { className: o()(_.dot, t) });
+        return (0, r.jsx)(f.Z, { className: o()(p.dot, t) });
     };
-function S(e) {
+function T(e) {
     let { direction: t = "right", className: n } = e;
     return "right" === t
         ? (0, r.jsx)(c.Fbu, {
               size: "md",
               color: "currentColor",
-              className: o()(_.caret, n),
+              className: o()(p.caret, n),
           })
         : (0, r.jsx)(c.V7D, {
               size: "md",
               color: "currentColor",
-              className: o()(_.caret, n),
+              className: o()(p.caret, n),
           });
 }
 let A = (e) => {
@@ -302,9 +302,9 @@ let A = (e) => {
             toolbarClassName: a,
             children: d,
             childrenBottom: f,
-            toolbar: p,
-            onDoubleClick: h,
-            "aria-label": m,
+            toolbar: _,
+            onDoubleClick: m,
+            "aria-label": h,
             "aria-labelledby": g,
             role: E,
             scrollable: b,
@@ -312,15 +312,15 @@ let A = (e) => {
             hidden: O = !1,
         } = e,
         v = i.useRef(null),
-        I = i.useContext(u.Z);
+        S = i.useContext(u.Z);
     return (0, r.jsx)("section", {
-        className: o()(t, _.container, {
-            [_.themed]: !y,
-            [_.transparent]: y,
-            [_.themedMobile]: l.tq,
-            [_.hidden]: O,
+        className: o()(t, p.container, {
+            [p.themed]: !y,
+            [p.transparent]: y,
+            [p.themedMobile]: l.tq,
+            [p.hidden]: O,
         }),
-        "aria-label": m,
+        "aria-label": h,
         "aria-labelledby": g,
         role: E,
         ref: v,
@@ -328,25 +328,25 @@ let A = (e) => {
             containerRef: v,
             children: [
                 (0, r.jsxs)("div", {
-                    className: _.upperContainer,
+                    className: p.upperContainer,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: o()(_.children, n, { [_.scrollable]: b }),
-                            onDoubleClick: h,
+                            className: o()(p.children, n, { [p.scrollable]: b }),
+                            onDoubleClick: m,
                             children: [
-                                l.tq && null != I
+                                l.tq && null != S
                                     ? (0, r.jsx)(s.r, {
-                                          onClick: I,
-                                          className: _.hamburger,
+                                          onClick: S,
+                                          className: p.hamburger,
                                       })
                                     : null,
                                 d,
                             ],
                         }),
-                        null != p
+                        null != _
                             ? (0, r.jsx)("div", {
-                                  className: o()(_.toolbar, a),
-                                  children: p,
+                                  className: o()(p.toolbar, a),
+                                  children: _,
                               })
                             : null,
                     ],
@@ -356,5 +356,5 @@ let A = (e) => {
         }),
     });
 };
-(A.Icon = v), (A.ChannelIcon = I), (A.Title = O), (A.Divider = T), (A.Caret = S);
+(A.Icon = v), (A.ChannelIcon = S), (A.Title = O), (A.Divider = I), (A.Caret = T);
 let C = A;

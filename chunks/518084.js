@@ -34,7 +34,7 @@ let g = h.t_t.DEFAULT,
         opacity: m,
     }),
     b = s.createContext(void 0),
-    v = (e) => {
+    _ = (e) => {
         var { children: t, className: n } = e,
             i = (function (e, t) {
                 if (null == e) return {};
@@ -107,7 +107,7 @@ let g = h.t_t.DEFAULT,
             },
         });
     };
-class _ extends (i = s.PureComponent) {
+class v extends (i = s.PureComponent) {
     render() {
         let { disableScroll: e, children: t, className: n } = this.props;
         return (0, r.jsx)(b.Consumer, {
@@ -131,7 +131,7 @@ class _ extends (i = s.PureComponent) {
         });
     }
 }
-f(_, "defaultProps", { disableScroll: !1 });
+f(v, "defaultProps", { disableScroll: !1 });
 let O = (e) => {
         let { type: t = g, width: n, height: i, children: s, className: o, opacity: a = m, onClick: d } = e;
         return (0, r.jsx)(y.Provider, {
@@ -164,7 +164,7 @@ let O = (e) => {
 (O.Background = (e) => {
     let { children: t, opacityOverride: n } = e;
     if (null == t) return null;
-    let i = [v, _, E];
+    let i = [_, v, E];
     return (0, r.jsx)(y.Consumer, {
         children: (e) => {
             let { opacity: o } = e,
@@ -186,7 +186,7 @@ let O = (e) => {
         },
     });
 }),
-    (O.Body = _),
+    (O.Body = v),
     (O.Content = E),
     (O.Icon = (e) => {
         let {
@@ -224,5 +224,5 @@ let O = (e) => {
             }),
         });
     }),
-    (O.Bar = v);
+    (O.Bar = _);
 let x = O;

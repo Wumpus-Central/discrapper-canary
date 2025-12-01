@@ -1,4 +1,4 @@
-(t.byteLength = c), (t.toByteArray = d), (t.fromByteArray = p);
+(t.byteLength = c), (t.toByteArray = d), (t.fromByteArray = _);
 for (
     var n = [],
         r = [],
@@ -57,14 +57,14 @@ function d(e) {
 function f(e) {
     return n[(e >> 18) & 63] + n[(e >> 12) & 63] + n[(e >> 6) & 63] + n[63 & e];
 }
-function _(e, t, n) {
+function p(e, t, n) {
     for (var r = [], i = t; i < n; i += 3)
         r.push(f(((e[i] << 16) & 16711680) + ((e[i + 1] << 8) & 65280) + (255 & e[i + 2])));
     return r.join("");
 }
-function p(e) {
+function _(e) {
     for (var t, r = e.length, i = r % 3, a = [], o = 16383, s = 0, l = r - i; s < l; s += o)
-        a.push(_(e, s, s + o > l ? l : s + o));
+        a.push(p(e, s, s + o > l ? l : s + o));
     return (
         1 === i
             ? a.push(n[(t = e[r - 1]) >> 2] + n[(t << 4) & 63] + "==")

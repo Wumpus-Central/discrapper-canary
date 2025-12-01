@@ -1,6 +1,6 @@
 n.d(t, {
     LU: () => E,
-    ZP: () => T,
+    ZP: () => I,
 }),
     n(388685),
     n(35282),
@@ -28,7 +28,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function _(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -56,18 +56,18 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let m = { pendingUsages: [] },
+let h = { pendingUsages: [] },
     g = new l.Z({
         computeBonus: () => 1,
         lookupKey: (e) => e,
@@ -97,12 +97,12 @@ function y(e) {
         wasSaved: n,
     } = e;
     if (t !== d.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
-    m.pendingUsages = [];
+    h.pendingUsages = [];
 }
 function O(e) {
     let { command: t, context: n } = e,
         r = b(n, t);
-    m.pendingUsages.push({
+    h.pendingUsages.push({
         key: r,
         timestamp: Date.now(),
     }),
@@ -118,19 +118,19 @@ function v() {
             ? t
             : {};
     g.overwriteHistory(
-        a().mapValues(n, (e) => h(_({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
-        m.pendingUsages,
+        a().mapValues(n, (e) => m(p({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
+        h.pendingUsages,
     );
 }
-class I extends (r = o.ZP.PersistedStore) {
+class S extends (r = o.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (m = e), this.syncWith([c.Z], v);
+        null != e && (h = e), this.syncWith([c.Z], v);
     }
     getState() {
-        return m;
+        return h;
     }
     hasPendingUsage() {
-        return m.pendingUsages.length > 0;
+        return h.pendingUsages.length > 0;
     }
     getCommandFrecencyWithoutLoadingLatest() {
         return g;
@@ -143,8 +143,8 @@ class I extends (r = o.ZP.PersistedStore) {
         return g.frequently;
     }
 }
-f(I, "displayName", "ApplicationCommandFrecencyStore"), f(I, "persistKey", "ApplicationCommandFrecencyV2");
-let T = new I(s.Z, {
+f(S, "displayName", "ApplicationCommandFrecencyStore"), f(S, "persistKey", "ApplicationCommandFrecencyV2");
+let I = new S(s.Z, {
     APPLICATION_COMMAND_USED: O,
     USER_SETTINGS_PROTO_UPDATE: y,
 });

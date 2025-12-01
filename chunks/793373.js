@@ -1,88 +1,88 @@
-_.d(e, {
-    OP: () => r,
-    Q0: () => E,
+r.d(t, {
+    OP: () => a,
+    Q0: () => _,
     ix: () => o,
-    jt: () => n,
-    pq: () => a,
+    jt: () => i,
+    pq: () => n,
 });
-let a = 0,
-    r = 1,
-    n = 2;
-function o(t) {
-    if (t < 400 && t >= 100) return { code: r };
-    if (t >= 400 && t < 500)
-        switch (t) {
+let n = 0,
+    a = 1,
+    i = 2;
+function o(e) {
+    if (e < 400 && e >= 100) return { code: a };
+    if (e >= 400 && e < 500)
+        switch (e) {
             case 401:
                 return {
-                    code: n,
+                    code: i,
                     message: "unauthenticated",
                 };
             case 403:
                 return {
-                    code: n,
+                    code: i,
                     message: "permission_denied",
                 };
             case 404:
                 return {
-                    code: n,
+                    code: i,
                     message: "not_found",
                 };
             case 409:
                 return {
-                    code: n,
+                    code: i,
                     message: "already_exists",
                 };
             case 413:
                 return {
-                    code: n,
+                    code: i,
                     message: "failed_precondition",
                 };
             case 429:
                 return {
-                    code: n,
+                    code: i,
                     message: "resource_exhausted",
                 };
             case 499:
                 return {
-                    code: n,
+                    code: i,
                     message: "cancelled",
                 };
             default:
                 return {
-                    code: n,
+                    code: i,
                     message: "invalid_argument",
                 };
         }
-    if (t >= 500 && t < 600)
-        switch (t) {
+    if (e >= 500 && e < 600)
+        switch (e) {
             case 501:
                 return {
-                    code: n,
+                    code: i,
                     message: "unimplemented",
                 };
             case 503:
                 return {
-                    code: n,
+                    code: i,
                     message: "unavailable",
                 };
             case 504:
                 return {
-                    code: n,
+                    code: i,
                     message: "deadline_exceeded",
                 };
             default:
                 return {
-                    code: n,
+                    code: i,
                     message: "internal_error",
                 };
         }
     return {
-        code: n,
+        code: i,
         message: "unknown_error",
     };
 }
-function E(t, e) {
-    t.setAttribute("http.response.status_code", e);
-    let _ = o(e);
-    "unknown_error" !== _.message && t.setStatus(_);
+function _(e, t) {
+    e.setAttribute("http.response.status_code", t);
+    let r = o(t);
+    "unknown_error" !== r.message && e.setStatus(r);
 }

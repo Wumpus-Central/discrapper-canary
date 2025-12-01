@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685), n(49124), n(467055);
+n.d(t, { Z: () => m }), n(388685), n(49124), n(467055);
 var r = n(668757),
     i = n(902704),
     a = n(147913),
@@ -38,18 +38,18 @@ function f(e) {
         ),
     });
 }
-function _() {
+function p() {
     l.Re.forEach((e) => {
         e.setExperiment(f(e));
     });
 }
-class p extends a.Z {
+class _ extends a.Z {
     _initialize() {
-        _();
+        p();
     }
     _terminate() {}
     constructor(...e) {
         super(...e), c(this, "actions", {}), c(this, "stores", new Map().set(s.Z, d));
     }
 }
-let h = new p();
+let m = new _();

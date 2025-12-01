@@ -4,7 +4,7 @@ var i,
     l = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(790519),
+    s = n(666917),
     c = n(481060),
     u = n(542094),
     d = n(182906),
@@ -26,9 +26,9 @@ function v(e) {
     var t;
     let { context: n, activityItem: i, onClick: a, aspectRatio: C = 0, animatedDivClass: v, commandOrigin: _ } = e,
         {
-            onActivityItemSelected: x,
-            imageBackground: j,
-            activityAction: O,
+            onActivityItemSelected: O,
+            imageBackground: x,
+            activityAction: j,
             labelType: E,
         } = (0, u.ZP)({
             context: n,
@@ -59,7 +59,7 @@ function v(e) {
             [E],
         ),
         N = l.useMemo(() => {
-            switch (O) {
+            switch (j) {
                 case u.JS.JOIN:
                     return (0, r.jsx)("div", {
                         className: g.activityAction,
@@ -88,9 +88,9 @@ function v(e) {
                 default:
                     return null;
             }
-        }, [O]);
+        }, [j]);
     return (0, r.jsx)(c.P3F, {
-        onClick: x,
+        onClick: O,
         onFocus: I,
         onBlur: Z,
         onMouseEnter: I,
@@ -115,7 +115,7 @@ function v(e) {
                             },
                             children: [
                                 (0, r.jsx)(d.Z, {
-                                    imageBackground: j,
+                                    imageBackground: x,
                                     applicationName: i.application.name,
                                     imageClassName: g.activitySuggestionImage,
                                     imageNotFoundClassName: g.brokenImageIconWrapper,

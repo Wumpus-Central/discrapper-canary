@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685), n(539854), n(642613);
+n.d(t, { Z: () => M }), n(388685), n(539854), n(642613);
 var r = n(54381),
     i = n(473749),
     a = n(772848),
@@ -9,19 +9,19 @@ var r = n(54381),
     u = n(481060),
     d = n(749210),
     f = n(434404),
-    _ = n(271383),
-    p = n(485386),
-    h = n(496675),
-    m = n(259580),
+    p = n(271383),
+    _ = n(485386),
+    m = n(496675),
+    h = n(259580),
     g = n(700785),
     E = n(785717),
     b = n(635042),
     y = n(256226),
     O = n(314172),
     v = n(981631),
-    I = n(388032),
-    T = n(641984);
-function S(e, t, n) {
+    S = n(388032),
+    I = n(641984);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function A(e) {
                 }),
             )),
             r.forEach(function (t) {
-                S(e, t, n[t]);
+                T(e, t, n[t]);
             });
     }
     return e;
@@ -73,11 +73,11 @@ function N(e, t) {
         e
     );
 }
-function R(e, t) {
+function P(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = P(e, t);
+        i = R(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -85,7 +85,7 @@ function R(e, t) {
     }
     return i;
 }
-function P(e, t) {
+function R(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -94,61 +94,61 @@ function P(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let D = 4,
-    w = 268,
-    L = 2,
-    x = (e) => {
+let w = 4,
+    D = 268,
+    x = 2,
+    L = (e) => {
         if (null == e) return 0;
         let { width: t } = e.getBoundingClientRect();
-        return t > 0 ? t + D : 0;
+        return t > 0 ? t + w : 0;
     };
-function M(e) {
+function j(e) {
     let {
             user: t,
             currentUser: n,
             guild: l,
             guildMember: d,
             roles: f,
-            highestRole: _,
-            canManageRoles: p,
-            onAddRole: h,
+            highestRole: p,
+            canManageRoles: _,
+            onAddRole: m,
             onRemoveRole: b,
         } = e,
-        S = i.useRef({}),
+        T = i.useRef({}),
         C = (e, t) => {
-            null != t ? (S.current[e] = t) : delete S.current[e];
+            null != t ? (T.current[e] = t) : delete T.current[e];
         },
-        [P, M] = i.useState(f),
-        [k, j] = i.useState(w),
+        [R, j] = i.useState(f),
+        [M, k] = i.useState(D),
         [U, G] = i.useState(!1),
-        B = i.useRef(null),
         Z = i.useRef(null),
+        B = i.useRef(null),
         F = i.useRef(0);
     i.useLayoutEffect(() => {
         F.current = 0;
     }, [f]),
         i.useLayoutEffect(() => {
             if (U) return;
-            let e = x(B.current),
-                t = x(Z.current),
+            let e = L(Z.current),
+                t = L(B.current),
                 n = [],
-                r = w - e - t;
-            for (let e = 0; e < L; e++) {
-                let t = e === L - 1 ? r : w;
+                r = D - e - t;
+            for (let e = 0; e < x; e++) {
+                let t = e === x - 1 ? r : D;
                 for (let e = 0, r = n.length; r < f.length; r++) {
                     let i = f[r],
-                        a = S.current[i.id];
+                        a = T.current[i.id];
                     if (null == a) {
                         0 === F.current && n.push(i);
                         continue;
                     }
                     let o = Math.min(a.getBoundingClientRect().width, t);
                     if (e + o > t) break;
-                    (e += o + D), n.push(i);
+                    (e += o + w), n.push(i);
                 }
             }
-            M(n.length === P.length ? P : n), j(r), F.current++;
-        }, [f, P, U]);
+            j(n.length === R.length ? R : n), k(r), F.current++;
+        }, [f, R, U]);
     let V = i.useMemo(() => "roles-".concat((0, a.Z)()), []),
         H = (0, o.ZP)({
             id: V,
@@ -158,22 +158,22 @@ function M(e) {
             wrap: !0,
         }),
         Y = f.length,
-        W = 0 === Y ? I.intl.string(I.t["vR7M+y"]) : I.intl.formatToPlainString(I.t.PCs0oo, { numRoles: Y }),
-        K = (U ? f : P).map((e, i) => {
+        W = 0 === Y ? S.intl.string(S.t["vR7M+y"]) : S.intl.formatToPlainString(S.t.PCs0oo, { numRoles: Y }),
+        K = (U ? f : R).map((e, i) => {
             var a;
             return (0, r.jsx)(
                 y.Z,
                 {
                     role: e,
                     guildId: l.id,
-                    style: { maxWidth: U || i !== P.length - 1 ? w : k },
+                    style: { maxWidth: U || i !== R.length - 1 ? D : M },
                     disableBorderColor: !0,
                     ref: (t) => C(e.id, t),
                     onRemove: () => b(e),
                     canRemove:
                         (null == (a = e.tags) ? void 0 : a.guild_connections) === null
                             ? t.id === n.id
-                            : p && g.r6(l, n.id, _, e),
+                            : _ && g.r6(l, n.id, p, e),
                 },
                 e.id,
             );
@@ -182,7 +182,7 @@ function M(e) {
         q = i.useCallback(() => {
             G(!0), z({ action: "EXPAND_ROLES" });
         }, [z]),
-        X = i.useCallback(() => {
+        Q = i.useCallback(() => {
             G(!1), z({ action: "COLLAPSE_ROLES" });
         }, [z]);
     return (0, r.jsx)(s.bG, {
@@ -190,13 +190,13 @@ function M(e) {
         children: (0, r.jsx)(s.SJ, {
             children: (e) => {
                 var { ref: t } = e,
-                    n = R(e, ["ref"]);
+                    n = P(e, ["ref"]);
                 return (0, r.jsxs)(
                     "div",
                     N(
                         A(
                             {
-                                className: T.root,
+                                className: I.root,
                                 "aria-label": W,
                                 ref: t,
                             },
@@ -205,16 +205,16 @@ function M(e) {
                         {
                             children: [
                                 K,
-                                P.length < f.length
+                                R.length < f.length
                                     ? U
                                         ? (0, r.jsx)(c.u, {
                                               asContainer: !0,
-                                              text: I.intl.string(I.t.XnXtCt),
+                                              text: S.intl.string(S.t.XnXtCt),
                                               children: (0, r.jsx)(u.P3F, {
-                                                  onClick: X,
-                                                  className: T.collapseButton,
-                                                  children: (0, r.jsx)(m.Z, {
-                                                      direction: m.Z.Directions.LEFT,
+                                                  onClick: Q,
+                                                  className: I.collapseButton,
+                                                  children: (0, r.jsx)(h.Z, {
+                                                      direction: h.Z.Directions.LEFT,
                                                       width: 12,
                                                       height: 12,
                                                   }),
@@ -222,26 +222,26 @@ function M(e) {
                                           })
                                         : (0, r.jsx)(c.u, {
                                               asContainer: !0,
-                                              text: I.intl.string(I.t.DY6n4q),
+                                              text: S.intl.string(S.t.DY6n4q),
                                               children: (0, r.jsx)(u.P3F, {
-                                                  innerRef: B,
+                                                  innerRef: Z,
                                                   onClick: q,
-                                                  className: T.expandButton,
+                                                  className: I.expandButton,
                                                   children: (0, r.jsx)(u.Text, {
                                                       variant: "text-xs/medium",
-                                                      children: "+".concat(f.length - P.length),
+                                                      children: "+".concat(f.length - R.length),
                                                   }),
                                               }),
                                           })
                                     : null,
-                                p && null != d
+                                _ && null != d
                                     ? (0, r.jsx)(O.Z, {
-                                          buttonRef: Z,
+                                          buttonRef: B,
                                           guild: l,
                                           guildMember: d,
                                           numRoles: Y,
-                                          highestRole: _,
-                                          onAddRole: h,
+                                          highestRole: p,
+                                          onAddRole: m,
                                       })
                                     : null,
                             ],
@@ -252,14 +252,14 @@ function M(e) {
         }),
     });
 }
-function k(e) {
+function M(e) {
     let { user: t, currentUser: n, guild: a } = e,
         { trackUserProfileAction: o } = (0, E.KZ)(),
-        s = (0, l.e7)([_.ZP], () => _.ZP.getMember(a.id, t.id)),
+        s = (0, l.e7)([p.ZP], () => p.ZP.getMember(a.id, t.id)),
         c = null == s ? void 0 : s.roles,
-        u = (0, l.Wu)([p.Z], () => p.Z.getManyRoles(a.id, null != c ? c : []).sort(b.Z), [c, a.id]),
-        m = g.e9(a, n.id),
-        [y] = (0, l.Wu)([h.Z], () => [h.Z.can(v.Plq.MANAGE_ROLES, a), null != a ? h.Z.getGuildVersion(a.id) : null]),
+        u = (0, l.Wu)([_.Z], () => _.Z.getManyRoles(a.id, null != c ? c : []).sort(b.Z), [c, a.id]),
+        h = g.e9(a, n.id),
+        [y] = (0, l.Wu)([m.Z], () => [m.Z.can(v.Plq.MANAGE_ROLES, a), null != a ? m.Z.getGuildVersion(a.id) : null]),
         O = i.useCallback(
             (e) => {
                 var n, r;
@@ -271,7 +271,7 @@ function k(e) {
             },
             [c, a.id, t.id, o],
         ),
-        I = i.useCallback(
+        S = i.useCallback(
             (e) => {
                 o({ action: "ADD_ROLE" });
                 let n = null != c ? c : [];
@@ -279,17 +279,17 @@ function k(e) {
             },
             [c, a.id, t.id, o],
         ),
-        T = y && null != s;
-    return 0 !== u.length || T
-        ? (0, r.jsx)(M, {
+        I = y && null != s;
+    return 0 !== u.length || I
+        ? (0, r.jsx)(j, {
               user: t,
               currentUser: n,
               guild: a,
               guildMember: s,
               roles: u,
-              highestRole: m,
+              highestRole: h,
               canManageRoles: y,
-              onAddRole: I,
+              onAddRole: S,
               onRemoveRole: O,
           })
         : null;

@@ -6,7 +6,7 @@ var r = n(473749),
     a = n(797614),
     s = n(866960),
     c = n(617136),
-    u = n(509212),
+    u = n(542347),
     d = n(325916),
     m = n(981631);
 function f(e) {
@@ -60,8 +60,8 @@ function v(e) {
         } = e,
         C = (0, c._F)(),
         S = (0, c.O5)(),
-        y = (0, i.e7)([s.Z], () => s.Z.getEffectiveConnectionSpeed()),
-        _ = (0, r.useRef)(-1),
+        _ = (0, i.e7)([s.Z], () => s.Z.getEffectiveConnectionSpeed()),
+        y = (0, r.useRef)(-1),
         x = r.useCallback(
             (e) => {
                 null != t.current &&
@@ -92,7 +92,7 @@ function v(e) {
                         properties: f(
                             {
                                 video_asset_id: E,
-                                network_connection_speed: y,
+                                network_connection_speed: _,
                                 duration: e,
                                 video_session_id: v,
                             },
@@ -101,9 +101,9 @@ function v(e) {
                         sourceQuestContent: g,
                     });
             },
-            [h, t, E, v, n, C, g, y],
+            [h, t, E, v, n, C, g, _],
         ),
-        D = r.useCallback(
+        P = r.useCallback(
             (e) => {
                 null != t.current &&
                     C({
@@ -122,7 +122,7 @@ function v(e) {
             },
             [h, t, E, v, n, C, g],
         ),
-        P = r.useCallback(() => {
+        D = r.useCallback(() => {
             null != t.current &&
                 C({
                     questId: h,
@@ -139,7 +139,7 @@ function v(e) {
                     sourceQuestContent: g,
                 });
         }, [h, t, v, n, C, E, g]),
-        T = r.useCallback(
+        R = r.useCallback(
             (e) => {
                 null != t.current &&
                     C({
@@ -159,7 +159,7 @@ function v(e) {
             },
             [h, t, v, n, C, E, g],
         ),
-        R = r.useCallback(
+        T = r.useCallback(
             (e) => {
                 null != t.current &&
                     null != e &&
@@ -199,35 +199,35 @@ function v(e) {
         ),
         N = r.useCallback(() => {
             null != t.current &&
-                ((_.current += 1),
+                ((y.current += 1),
                 C({
                     questId: h,
                     event: m.rMx.QUEST_VIDEO_BUFFERING_STARTED,
                     properties: f(
                         {
                             video_asset_id: E,
-                            network_connection_speed: y,
-                            buffer_index: _.current,
+                            network_connection_speed: _,
+                            buffer_index: y.current,
                             video_session_id: v,
                         },
                         p(n),
                     ),
                     sourceQuestContent: g,
                 }));
-        }, [h, t, E, v, n, C, g, y]),
+        }, [h, t, E, v, n, C, g, _]),
         A = r.useCallback(
             (e) => {
                 null != t.current &&
-                    ((_.current += 1),
+                    ((y.current += 1),
                     C({
                         questId: h,
                         event: m.rMx.QUEST_VIDEO_BUFFERING_ENDED,
                         properties: f(
                             {
                                 video_asset_id: E,
-                                network_connection_speed: y,
+                                network_connection_speed: _,
                                 duration: e,
-                                buffer_index: _.current,
+                                buffer_index: y.current,
                                 video_session_id: v,
                             },
                             p(n),
@@ -235,7 +235,7 @@ function v(e) {
                         sourceQuestContent: g,
                     }));
             },
-            [h, t, E, v, n, C, g, y],
+            [h, t, E, v, n, C, g, _],
         ),
         w = r.useCallback(
             (e, t) => {
@@ -286,7 +286,7 @@ function v(e) {
             },
             [C, h, E, b, v, n, t, g],
         ),
-        M = r.useCallback(
+        L = r.useCallback(
             (e, r) => {
                 var o, i;
                 if (null == t.current) return;
@@ -308,7 +308,7 @@ function v(e) {
                             video_progress: O,
                             video_error_type: e,
                             video_asset_id: E,
-                            network_connection_speed: y,
+                            network_connection_speed: _,
                             video_session_id: v,
                             video_error_code: null == s ? void 0 : s.code,
                             video_error_message: null == s ? void 0 : s.message,
@@ -325,9 +325,9 @@ function v(e) {
                             tags: ["quest_id:".concat(h), "error_type:".concat(e)],
                         });
             },
-            [h, t, E, v, n, C, g, y],
+            [h, t, E, v, n, C, g, _],
         ),
-        L = r.useCallback(
+        M = r.useCallback(
             (e, t) => {
                 let n;
                 switch (
@@ -354,23 +354,23 @@ function v(e) {
                     default:
                         n = d.CY.HLS_OTHER_ERROR;
                 }
-                M(n, {
+                L(n, {
                     errorDetails: t.details,
                     fatal: t.fatal,
                 });
             },
-            [O, M],
+            [O, L],
         );
     r.useEffect(() => {
         if (null == n.current) return;
         let e = n.current;
         return (
-            e.on(o.ZP.Events.ERROR, L),
+            e.on(o.ZP.Events.ERROR, M),
             () => {
-                e.off(o.ZP.Events.ERROR, L);
+                e.off(o.ZP.Events.ERROR, M);
             }
         );
-    }, [n, L]);
+    }, [n, M]);
     let V = r.useCallback(
             (e) => {
                 null != t.current &&
@@ -411,17 +411,17 @@ function v(e) {
     return {
         trackQuestVideoLoadingStarted: x,
         trackQuestVideoLoadingEnded: j,
-        trackQuestVideoTimeToFirstFrame: D,
-        trackQuestVideoProgressed: P,
-        trackQuestVideoResumed: T,
-        trackQuestVideoPaused: R,
+        trackQuestVideoTimeToFirstFrame: P,
+        trackQuestVideoProgressed: D,
+        trackQuestVideoResumed: R,
+        trackQuestVideoPaused: T,
         trackQuestVideoFocusChange: I,
         trackQuestContentClick: w,
         trackQuestVideoBufferingStarted: N,
         trackQuestVideoBufferingEnded: A,
         trackWatchTimeAnalytics: k,
         trackQuestVideoFullscreenChanged: V,
-        trackQuestVideoError: M,
+        trackQuestVideoError: L,
         trackQuestVideoVolumeChanged: Z,
     };
 }

@@ -1,4 +1,4 @@
-n.d(t, { z: () => p });
+n.d(t, { z: () => _ });
 var r = n(54381),
     i = n(473749),
     a = n(239091),
@@ -57,7 +57,7 @@ function f(e, t) {
         e
     );
 }
-function _(e, t, i, o) {
+function p(e, t, i, o) {
     let c = s.default.getCurrentUser();
     (null != t || l.ZP.canUseCustomCallSounds(c)) &&
         (0, a.jW)(e, async () => {
@@ -73,13 +73,13 @@ function _(e, t, i, o) {
                 );
         });
 }
-function p(e, t) {
+function _(e, t) {
     return i.useCallback(
         (n) => {
             n.stopPropagation();
             let r = o.Z.getGuild(e.guildId),
                 i = s.default.getCurrentUser();
-            (null != r || l.ZP.canUseCustomCallSounds(i)) && _(n, r, e, t);
+            (null != r || l.ZP.canUseCustomCallSounds(i)) && p(n, r, e, t);
         },
         [e, t],
     );

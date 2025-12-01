@@ -2,8 +2,8 @@ n.d(t, {
     T3: () => f,
     T4: () => u,
     og: () => d,
-    qr: () => h,
-    xg: () => _,
+    qr: () => m,
+    xg: () => p,
 }),
     n(415506),
     n(704826),
@@ -40,14 +40,14 @@ function f(e, t) {
         minimumFractionDigits: 0,
     }).format(t);
 }
-function _(e) {
+function p(e) {
     let t = "interval_count" in e ? e.interval_count : e.intervalCount,
         n = (0, o.aS)(e.id);
     return d(u(n.amount, n.currency), e.interval, t);
 }
-function p(e) {
+function _(e) {
     return e.length > 5 ? e.replace(/\.00$/, "") : e;
 }
-function h(e, t, n) {
-    return p(u(e, t, n));
+function m(e, t, n) {
+    return _(u(e, t, n));
 }

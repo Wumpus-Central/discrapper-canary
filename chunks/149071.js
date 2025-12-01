@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(544891),
     i = n(147913),
     a = n(680089),
@@ -57,14 +57,14 @@ function f(e, t) {
         e
     );
 }
-let _ = {},
-    p = 0,
-    h = 15 * s.Z.Millis.SECOND;
-function m() {
-    _ = u({}, a.Z.getCollapsedCategories());
+let p = {},
+    _ = 0,
+    m = 15 * s.Z.Millis.SECOND;
+function h() {
+    p = u({}, a.Z.getCollapsedCategories());
 }
 function g() {
-    __OVERLAY__ || (clearTimeout(p), (p = setTimeout(() => b({}), h)));
+    __OVERLAY__ || (clearTimeout(_), (_ = setTimeout(() => b({}), m)));
 }
 async function E(e, t) {
     null == e || e === l.ME
@@ -76,7 +76,7 @@ async function E(e, t) {
         : await b(null != t ? { [null != e ? e : l.ME]: t } : {});
 }
 async function b(e) {
-    clearTimeout(p);
+    clearTimeout(_);
     let t = 0 !== Object.keys(e).length,
         n = a.Z.getCollapsedCategories(),
         i = y();
@@ -92,7 +92,7 @@ async function b(e) {
             (t = !0));
     }
     return t
-        ? ((_ = u({}, n)),
+        ? ((p = u({}, n)),
           delete e[l.I_8],
           (
               await r.tn.patch({
@@ -106,12 +106,12 @@ async function b(e) {
 function y() {
     let e = {},
         t = a.Z.getCollapsedCategories();
-    for (let n in t) t[n] !== _[n] && (e[n] = !0);
-    for (let n in _) t[n] !== _[n] && (e[n] = !0);
+    for (let n in t) t[n] !== p[n] && (e[n] = !0);
+    for (let n in p) t[n] !== p[n] && (e[n] = !0);
     return e;
 }
 function O() {
-    _ = u({}, a.Z.getCollapsedCategories());
+    p = u({}, a.Z.getCollapsedCategories());
 }
 class v extends i.Z {
     constructor(...e) {
@@ -121,11 +121,11 @@ class v extends i.Z {
                 CATEGORY_EXPAND: g,
                 CATEGORY_COLLAPSE_ALL: g,
                 CATEGORY_EXPAND_ALL: g,
-                POST_CONNECTION_OPEN: m,
+                POST_CONNECTION_OPEN: h,
                 USER_GUILD_SETTINGS_FULL_UPDATE: O,
             }),
             c(this, "saveUserGuildSettings", E),
             c(this, "saveUserGuildSettingsBulk", b);
     }
 }
-let I = new v();
+let S = new v();

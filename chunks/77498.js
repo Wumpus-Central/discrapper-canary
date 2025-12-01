@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => M }), n(388685), n(35282);
+n.d(t, { Z: () => j }), n(388685), n(35282);
 var i,
     a,
     o = n(442837),
@@ -9,10 +9,10 @@ var i,
     u = n(642047),
     d = n(189451),
     f = n(695346),
-    _ = n(973616),
-    p = n(70956),
-    h = n(358085),
-    m = n(709054);
+    p = n(973616),
+    _ = n(70956),
+    m = n(358085),
+    h = n(709054);
 function g(e, t, n) {
     return (
         t in e
@@ -28,25 +28,25 @@ function g(e, t, n) {
 }
 let E = "GameStoreReportedGames",
     b = 2147483648,
-    y = p.Z.Millis.DAY,
+    y = _.Z.Millis.DAY,
     O = new u.Z(),
     v = {},
-    I = {},
-    T = null != (i = s.K.get(E)) ? i : {},
-    S = "",
+    S = {},
+    I = null != (i = s.K.get(E)) ? i : {},
+    T = "",
     A = null;
 function C(e) {
     var t, n, r, i, a, o, s, l, c, u;
     return {
         id: e.id,
         name: e.name,
-        executables: (null != (t = e.executables) ? t : []).map(_.BA),
+        executables: (null != (t = e.executables) ? t : []).map(p.BA),
         overlay: null != (n = e.overlay) && n,
         overlayWarn: null != (r = e.overlay_warn) && r,
         overlayCompatibilityHook: null != (i = e.overlay_compatibility_hook) && i,
         hook: null == (a = e.hook) || a,
         aliases: null != (o = e.aliases) ? o : [],
-        supportsOutOfProcessOverlay: _.ZP.supportsOutOfProcessOverlay(e.overlay_methods),
+        supportsOutOfProcessOverlay: p.ZP.supportsOutOfProcessOverlay(e.overlay_methods),
         themes: null != (s = e.themes) ? s : [],
         icon: null != (l = e.icon_hash) ? l : void 0,
         thirdPartySkus: null != (c = e.third_party_skus) ? c : [],
@@ -71,37 +71,37 @@ function N(e) {
         cover_image_hash: null != (r = e.cover_image_hash) ? r : void 0,
     };
 }
-function R(e) {
+function P(e) {
     let t = e instanceof d.ZP ? N(e) : e;
     for (let n of (O.set(e.id, t), (v[e.name.toLowerCase()] = t), e.aliases)) v[n.toLowerCase()] = t;
-    if ((0, h.isDesktop)()) for (let n of e.executables) I[n.name] = t;
+    if ((0, m.isDesktop)()) for (let n of e.executables) S[n.name] = t;
 }
-function P(e) {
+function R(e) {
     let { detectableApplications: t } = e;
-    for (let e of (O.clear(), (v = {}), (I = {}), t)) R(e);
-}
-function D() {
-    r = !0;
+    for (let e of (O.clear(), (v = {}), (S = {}), t)) P(e);
 }
 function w() {
+    r = !0;
+}
+function D() {
     r = !1;
 }
-function L(e) {
+function x(e) {
     let { games: t, etag: n } = e;
-    for (let e of (null != n && S !== n && (O.clear(), (v = {}), (I = {}), (S = n)), t)) R(C(e));
+    for (let e of (null != n && T !== n && (O.clear(), (v = {}), (S = {}), (T = n)), t)) P(C(e));
     (r = void 0), (A = Date.now());
 }
-class x extends (a = o.ZP.PersistedStore) {
+class L extends (a = o.ZP.PersistedStore) {
     initialize(e) {
         var t;
         null != e &&
-            (null != e.detectableGamesEtag && (S = e.detectableGamesEtag),
-            null == (t = e.detectableGames) || t.forEach((e) => R(e)));
+            (null != e.detectableGamesEtag && (T = e.detectableGamesEtag),
+            null == (t = e.detectableGames) || t.forEach((e) => P(e)));
     }
     getState() {
-        return (0, h.isDesktop)()
+        return (0, m.isDesktop)()
             ? {
-                  detectableGamesEtag: S,
+                  detectableGamesEtag: T,
                   detectableGames: O.values(),
               }
             : {
@@ -113,7 +113,7 @@ class x extends (a = o.ZP.PersistedStore) {
         return O.values();
     }
     getDetectableGame(e) {
-        return O.get(m.default.cast(e));
+        return O.get(h.default.cast(e));
     }
     getGameByName(e) {
         if (null == e) return null;
@@ -143,7 +143,7 @@ class x extends (a = o.ZP.PersistedStore) {
         return !0 === r;
     }
     get detectableGamesEtag() {
-        return S;
+        return T;
     }
     get lastFetched() {
         return A;
@@ -155,7 +155,7 @@ class x extends (a = o.ZP.PersistedStore) {
         return !0 !== r && (null == A || Date.now() >= A + y);
     }
     getGameByExecutable(e) {
-        return I[e];
+        return S[e];
     }
     getGameByGameData(e) {
         var t, n;
@@ -173,16 +173,16 @@ class x extends (a = o.ZP.PersistedStore) {
     }
     shouldReport(e) {
         let t = null != this.getGameByName(e),
-            n = null != T[e];
+            n = null != I[e];
         return f.G6.getSetting() && !r && !(t || n);
     }
     markGameReported(e) {
-        (T[e] = !0), s.K.set(E, T);
+        (I[e] = !0), s.K.set(E, I);
     }
 }
-g(x, "displayName", "GameStore"),
-    g(x, "persistKey", "GameStore"),
-    g(x, "migrations", [
+g(L, "displayName", "GameStore"),
+    g(L, "persistKey", "GameStore"),
+    g(L, "migrations", [
         (e) => {
             var t, n;
             return null == e
@@ -199,7 +199,7 @@ g(x, "displayName", "GameStore"),
                   };
         },
         (e) =>
-            (0, h.isDesktop)()
+            (0, m.isDesktop)()
                 ? e
                 : {
                       detectableGamesEtag: "",
@@ -210,9 +210,9 @@ g(x, "displayName", "GameStore"),
             detectableGames: [],
         }),
     ]);
-let M = new x(l.Z, {
-    OVERLAY_INITIALIZE: P,
-    GAMES_DATABASE_FETCH: D,
-    GAMES_DATABASE_FETCH_FAIL: w,
-    GAMES_DATABASE_UPDATE: L,
+let j = new L(l.Z, {
+    OVERLAY_INITIALIZE: R,
+    GAMES_DATABASE_FETCH: w,
+    GAMES_DATABASE_FETCH_FAIL: D,
+    GAMES_DATABASE_UPDATE: x,
 });

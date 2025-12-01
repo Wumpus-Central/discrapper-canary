@@ -62,14 +62,14 @@ function f(e) {
             channelId: l,
             guildId: d,
             source: f,
-            size: _ = "sm",
-            variant: p = "secondary",
-            onAction: h,
+            size: p = "sm",
+            variant: _ = "secondary",
+            onAction: m,
         } = e,
-        m = u(e, ["activity", "user", "channelId", "guildId", "source", "size", "variant", "onAction"]);
+        h = u(e, ["activity", "user", "channelId", "guildId", "source", "size", "variant", "onAction"]);
     let { tooltip: g, loading: E, disabled: b, onClick: y } = (0, s.Fe)(t, n, f, o.ZP.getNickname(d, l, n)),
         O = () => {
-            null == h || h(), y();
+            null == m || m(), y();
         };
     return (0, r.jsx)(i.u, {
         text: g,
@@ -78,14 +78,14 @@ function f(e) {
             c(
                 {
                     icon: a.iOO,
-                    size: _,
-                    variant: p,
+                    size: p,
+                    variant: _,
                     onClick: O,
                     disabled: b,
                     loading: E,
                     "aria-label": null != g ? g : t.name,
                 },
-                m,
+                h,
             ),
         ),
     });

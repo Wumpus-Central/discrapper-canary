@@ -1,9 +1,9 @@
-n.d(t, { S: () => j }), n(388685);
+n.d(t, { S: () => x }), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(120356),
     a = n.n(l),
-    o = n(790519),
+    o = n(666917),
     s = n(442837),
     c = n(681715),
     u = n(481060),
@@ -42,11 +42,11 @@ function _(e) {
     }
     return e;
 }
-let x = (e) => 1 - Math.pow(1 - e, 4);
-function j(e) {
+let O = (e) => 1 - Math.pow(1 - e, 4);
+function x(e) {
     let { channel: t, onClose: n } = e,
         l = r.useRef(null),
-        [j, O] = r.useState(!1),
+        [x, j] = r.useState(!1),
         E = r.useRef(null),
         S = r.useRef(null),
         [P, I] = r.useState(0),
@@ -55,43 +55,43 @@ function j(e) {
         [A, w] = r.useState(!1),
         M = r.useRef(null),
         { isHoveringOrFocusing: R } = (0, g.Tu)(null == T ? M : l),
-        [L, k] = r.useState(!1),
-        D = R || L,
+        [L, D] = r.useState(!1),
+        k = R || L,
         U = r.useCallback(() => {
-            O(!1), null == n || n();
+            j(!1), null == n || n();
         }, [n]),
-        B = (0, u.q_F)({
+        F = (0, u.q_F)({
             from: { height: "0px" },
             to: { height: "".concat(32, "px") },
             reverse: A,
             config: {
                 duration: 200,
-                easing: x,
+                easing: O,
                 clamp: !0,
             },
             onRest: () => {
                 A && U();
             },
         }),
-        H = r.useCallback(() => {
+        B = r.useCallback(() => {
             w(!0);
         }, []),
-        F = r.useCallback(
+        H = r.useCallback(
             () => (
                 null != E.current && clearTimeout(E.current),
-                (E.current = setTimeout(H, 10000)),
+                (E.current = setTimeout(B, 10000)),
                 I((e) => e + 1),
                 () => {
                     null != E.current && clearTimeout(E.current);
                 }
             ),
-            [H],
+            [B],
         ),
         V = r.useCallback(
             () => (
                 null != S.current && clearTimeout(S.current),
                 (S.current = setTimeout(() => {
-                    O(!1);
+                    j(!1);
                 }, 150)),
                 () => {
                     null != S.current && clearTimeout(S.current);
@@ -99,14 +99,14 @@ function j(e) {
             ),
             [],
         );
-    (0, p.ZP)(F),
+    (0, p.ZP)(H),
         r.useEffect(() => {
-            if (!D) {
-                F(), V();
+            if (!k) {
+                H(), V();
                 return;
             }
-            null != E.current && clearTimeout(E.current), null != S.current && clearTimeout(S.current), O(!0);
-        }, [D, F, V]),
+            null != E.current && clearTimeout(E.current), null != S.current && clearTimeout(S.current), j(!0);
+        }, [k, H, V]),
         r.useEffect(() => {
             !(async function () {
                 var e, n, i;
@@ -124,16 +124,16 @@ function j(e) {
             })();
         }, [Z, t.id]);
     let G = r.useCallback(() => {
-            O(!0);
+            j(!0);
         }, []),
         z = r.useCallback(() => {
-            O(!1), k(!1);
+            j(!1), D(!1);
         }, []);
     return null == T
         ? null
         : (0, i.jsx)(u.yRy, {
               targetElementRef: l,
-              shouldShow: j,
+              shouldShow: x,
               position: "right",
               align: "top",
               spacing: 8,
@@ -145,7 +145,7 @@ function j(e) {
                           {
                               channel: t,
                               inviteKey: T,
-                              onHoverOrFocus: k,
+                              onHoverOrFocus: D,
                           },
                           e,
                       ),
@@ -156,7 +156,7 @@ function j(e) {
                   var t, n;
                   return (0, i.jsx)(o.animated.div, {
                       className: C.animation,
-                      style: B,
+                      style: F,
                       children: (0, i.jsx)(
                           u.P3F,
                           ((t = _(
@@ -180,7 +180,7 @@ function j(e) {
                                                   (0, i.jsxs)(
                                                       "svg",
                                                       {
-                                                          className: a()(C.timer, { [C.paused]: D }),
+                                                          className: a()(C.timer, { [C.paused]: k }),
                                                           viewBox: "0 0 ".concat(24, " ").concat(24),
                                                           style: {
                                                               "--custom-voice-invite-suggestions-timer-duration": 10000,
@@ -214,7 +214,7 @@ function j(e) {
                                           R
                                               ? (0, i.jsx)(u.P3F, {
                                                     className: C.close,
-                                                    onClick: H,
+                                                    onClick: B,
                                                     "aria-label": y.intl.string(y.t.cpT0Cq),
                                                     children: (0, i.jsx)(u.Dio, {
                                                         size: "xs",

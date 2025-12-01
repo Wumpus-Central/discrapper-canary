@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(442837),
     i = n(570140),
     a = n(710845),
@@ -9,7 +9,7 @@ var r = n(442837),
     u = n(866960),
     d = n(626135),
     f = n(981631);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,12 +33,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,12 +50,12 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -77,8 +77,8 @@ function b(e) {
         i = (0, s.d)();
     d.default.track(
         f.rMx.SEND_MESSAGE_ROUNDTRIP,
-        p(
-            m(p({}, (0, o.Z)()), {
+        _(
+            h(_({}, (0, o.Z)()), {
                 api_latency_ms: n,
                 gateway_latency_ms: r,
                 channel_id: t.id,
@@ -123,20 +123,20 @@ class O extends r.ZP.Store {
     recordMessageSendApiResponse(e) {
         let t = this.pendingMessages.get(e);
         if (null != t) {
-            let n = m(p({}, t), { apiResponseTimestamp: Date.now() });
+            let n = h(_({}, t), { apiResponseTimestamp: Date.now() });
             E(n) ? (b(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n);
         }
     }
     recordGatewayResponse(e) {
         let t = this.pendingMessages.get(e);
         if (null != t) {
-            let n = m(p({}, t), { gatewaySeenTimestamp: Date.now() });
+            let n = h(_({}, t), { gatewaySeenTimestamp: Date.now() });
             E(n) ? (b(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n);
         }
     }
     constructor(...e) {
-        super(...e), _(this, "pendingMessages", new Map());
+        super(...e), p(this, "pendingMessages", new Map());
     }
 }
 let v = new O(i.Z, { MESSAGE_CREATE: y }),
-    I = v;
+    S = v;

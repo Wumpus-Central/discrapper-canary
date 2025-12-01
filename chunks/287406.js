@@ -8,20 +8,20 @@ var r = n(288537),
     u = 4,
     d = 0,
     f = 1,
-    _ = 2,
-    p = -1,
-    h = 0,
-    m = 8;
+    p = 2,
+    _ = -1,
+    m = 0,
+    h = 8;
 function g(e) {
     if (!(this instanceof g)) return new g(e);
     this.options = i.assign(
         {
-            level: p,
-            method: m,
+            level: _,
+            method: h,
             chunkSize: 16384,
             windowBits: 15,
             memLevel: 8,
-            strategy: h,
+            strategy: m,
             to: "",
         },
         e || {},
@@ -68,7 +68,7 @@ function y(e, t) {
     var n,
         o,
         s = this.strm,
-        p = this.options.chunkSize;
+        _ = this.options.chunkSize;
     if (this.ended) return !1;
     (o = t === ~~t ? t : !0 === t ? u : c),
         "string" == typeof e
@@ -80,18 +80,18 @@ function y(e, t) {
         (s.avail_in = s.input.length);
     do {
         if (
-            (0 === s.avail_out && ((s.output = new i.Buf8(p)), (s.next_out = 0), (s.avail_out = p)),
+            (0 === s.avail_out && ((s.output = new i.Buf8(_)), (s.next_out = 0), (s.avail_out = _)),
             (n = r.deflate(s, o)) !== f && n !== d)
         )
             return this.onEnd(n), (this.ended = !0), !1;
-        (0 === s.avail_out || (0 === s.avail_in && (o === u || o === _))) &&
+        (0 === s.avail_out || (0 === s.avail_in && (o === u || o === p))) &&
             ("string" === this.options.to
                 ? this.onData(a.buf2binstring(i.shrinkBuf(s.output, s.next_out)))
                 : this.onData(i.shrinkBuf(s.output, s.next_out)));
     } while ((s.avail_in > 0 || 0 === s.avail_out) && n !== f);
     return o === u
         ? ((n = r.deflateEnd(this.strm)), this.onEnd(n), (this.ended = !0), n === d)
-        : (o === _ && (this.onEnd(d), (s.avail_out = 0)), !0);
+        : (o === p && (this.onEnd(d), (s.avail_out = 0)), !0);
 }),
     (g.prototype.onData = function (e) {
         this.chunks.push(e);

@@ -63,22 +63,22 @@ var d = (function (e) {
     return (e[(e.FETCHING = 0)] = "FETCHING"), (e[(e.FETCHED = 1)] = "FETCHED"), (e[(e.ERROR = 2)] = "ERROR"), e;
 })({});
 let f = {},
-    _ = {},
-    p = new Set(),
-    h = {};
-function m(e) {
+    p = {},
+    _ = new Set(),
+    m = {};
+function h(e) {
     let { applicationId: t } = e;
-    _ = u(l({}, _), { [t]: 0 });
+    p = u(l({}, p), { [t]: 0 });
 }
 function g(e) {
     let { application: t } = e;
-    (f = u(l({}, f), { [t.id]: t })), (_ = u(l({}, _), { [t.id]: 1 }));
+    (f = u(l({}, f), { [t.id]: t })), (p = u(l({}, p), { [t.id]: 1 }));
     let n = Date.now();
-    (h = u(l({}, h), { [t.id]: n })), p.has(t.id) && (p.delete(t.id), (p = new Set(p)));
+    (m = u(l({}, m), { [t.id]: n })), _.has(t.id) && (_.delete(t.id), (_ = new Set(_)));
 }
 function E(e) {
     let { applicationId: t, isInvalidApplication: n } = e;
-    (_ = u(l({}, _), { [t]: 2 })), n && (p.add(t), (p = new Set(p)));
+    (p = u(l({}, p), { [t]: 2 })), n && (_.add(t), (_ = new Set(_)));
 }
 class b extends (r = i.ZP.Store) {
     getApplication(e) {
@@ -93,27 +93,27 @@ class b extends (r = i.ZP.Store) {
         return f;
     }
     getApplicationFetchState(e) {
-        if (null != e) return _[e];
+        if (null != e) return p[e];
     }
     getApplicationFetchStates() {
-        return _;
+        return p;
     }
     isInvalidApplication(e) {
-        return null != e && p.has(e);
+        return null != e && _.has(e);
     }
     getInvalidApplicationIds() {
-        return p;
+        return _;
     }
     isFetching(e) {
         return 0 === this.getApplicationFetchState(e);
     }
     getApplicationLastFetchTime(e) {
-        if (null != e) return h[e];
+        if (null != e) return m[e];
     }
 }
 s(b, "displayName", "ApplicationDirectoryApplicationsStore");
 let y = new b(a.Z, {
-    APPLICATION_DIRECTORY_FETCH_APPLICATION: m,
+    APPLICATION_DIRECTORY_FETCH_APPLICATION: h,
     APPLICATION_DIRECTORY_FETCH_APPLICATION_SUCCESS: g,
     APPLICATION_DIRECTORY_FETCH_APPLICATION_FAILURE: E,
 });

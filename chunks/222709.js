@@ -5,19 +5,19 @@ var r = n(54381),
     o = n(481060),
     s = n(528963),
     l = n(212342),
-    c = n(887715),
+    c = n(742828),
     u = n(388032),
     d = n(785188);
 let f = (e) => {
     let { channelId: t, messageId: n } = e,
         f = (0, a.e7)([l.Z], () => l.Z.shouldShowBump(n), [n]),
-        _ = i.useCallback(() => {
+        p = i.useCallback(() => {
             s.Z.dismissPublishBump(n), (0, c.Z)(t, n);
         }, [t, n]),
-        p = i.useCallback(() => {
+        _ = i.useCallback(() => {
             s.Z.dismissPublishBump(n);
         }, [n]),
-        h = i.useCallback(() => {
+        m = i.useCallback(() => {
             s.Z.permanentlyHidePublishBump(t);
         }, [t]);
     return f
@@ -42,12 +42,12 @@ let f = (e) => {
                               className: d.publish,
                               variant: "text-sm/normal",
                               children: (0, r.jsx)(o.P3F, {
-                                  onClick: _,
+                                  onClick: p,
                                   children: u.intl.string(u.t.MFGE51),
                               }),
                           }),
                           (0, r.jsx)(o.P3F, {
-                              onClick: p,
+                              onClick: _,
                               children: (0, r.jsx)(o.k$p, {
                                   size: "xs",
                                   color: "currentColor",
@@ -61,7 +61,7 @@ let f = (e) => {
                       className: d.hidePermanently,
                       variant: "text-sm/normal",
                       children: (0, r.jsx)(o.P3F, {
-                          onClick: h,
+                          onClick: m,
                           children: u.intl.string(u.t.efSkDm),
                       }),
                   }),

@@ -1,4 +1,4 @@
-n.d(t, { h: () => p }), n(388685), n(539854), n(642613);
+n.d(t, { h: () => _ }), n(388685), n(539854), n(642613);
 var r = n(473749),
     i = n(442837),
     a = n(581364),
@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,7 +58,7 @@ function _(e, t) {
         e
     );
 }
-function p(e, t) {
+function _(e, t) {
     r.useEffect(() => {
         o.DZ.loadIfUncached(c.yP.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
@@ -69,7 +69,7 @@ function p(e, t) {
                     ? e
                     : e.map((e) => {
                           var n;
-                          return _(d({}, e), {
+                          return p(d({}, e), {
                               isUserApp:
                                   null != (n = null == t ? void 0 : t.some((t) => t.application.id === e.id)) && n,
                           });
@@ -77,7 +77,7 @@ function p(e, t) {
             [e, t],
         ),
         f = r.useMemo(() => (null == t ? void 0 : t.filter((t) => !e.some((e) => e.id === t.application.id))), [e, t]),
-        p = r.useMemo(() => {
+        _ = r.useMemo(() => {
             var e;
             null == f ||
                 f.forEach((e) => {
@@ -111,6 +111,6 @@ function p(e, t) {
                 (null == a || o > a) && ((i = e), (a = o));
             });
         let o = null != (r = null == i || null == (e = i.application) ? void 0 : e.id) ? r : "";
-        return [...p.filter((e) => e.id === o), ...p.filter((e) => e.id !== o)];
-    }, [p, u, n, t]);
+        return [..._.filter((e) => e.id === o), ..._.filter((e) => e.id !== o)];
+    }, [_, u, n, t]);
 }

@@ -1,15 +1,15 @@
 n.d(t, {
-    $B: () => j,
-    AW: () => R,
-    EN: () => w,
-    F0: () => m,
+    $B: () => k,
+    AW: () => P,
+    EN: () => D,
+    F0: () => h,
     LX: () => N,
-    TH: () => M,
-    UO: () => k,
-    k6: () => x,
-    l_: () => I,
-    rs: () => D,
-    s6: () => h,
+    TH: () => j,
+    UO: () => M,
+    k6: () => L,
+    l_: () => S,
+    rs: () => w,
+    s6: () => m,
 });
 var r = n(282253),
     i = n(473749);
@@ -23,16 +23,16 @@ var a = n(539528),
 n(165566);
 var d = n(791819),
     f = n(26095),
-    _ = n.n(f),
-    p = (function (e) {
+    p = n.n(f),
+    _ = (function (e) {
         var t = (0, o.Z)();
         return (t.displayName = e), t;
     })("Router-History"),
-    h = (function (e) {
+    m = (function (e) {
         var t = (0, o.Z)();
         return (t.displayName = e), t;
     })("Router"),
-    m = (function (e) {
+    h = (function (e) {
         function t(t) {
             var n;
             return (
@@ -65,7 +65,7 @@ var d = n(791819),
             }),
             (n.render = function () {
                 return i.createElement(
-                    h.Provider,
+                    m.Provider,
                     {
                         value: {
                             history: this.props.history,
@@ -74,7 +74,7 @@ var d = n(791819),
                             staticContext: this.props.staticContext,
                         },
                     },
-                    i.createElement(p.Provider, {
+                    i.createElement(_.Provider, {
                         children: this.props.children || null,
                         value: this.props.history,
                     }),
@@ -117,12 +117,12 @@ function O(e) {
 function v(e, t) {
     return void 0 === e && (e = "/"), void 0 === t && (t = {}), "/" === e ? e : O(e)(t, { pretty: !0 });
 }
-function I(e) {
+function S(e) {
     var t = e.computedMatch,
         n = e.to,
         r = e.push,
         o = void 0 !== r && r;
-    return i.createElement(h.Consumer, null, function (e) {
+    return i.createElement(m.Consumer, null, function (e) {
         e || (0, s.Z)(!1);
         var r = e.history,
             c = e.staticContext,
@@ -148,19 +148,19 @@ function I(e) {
               });
     });
 }
-var T = {},
-    S = 10000,
+var I = {},
+    T = 10000,
     A = 0;
 function C(e, t) {
     var n = "" + t.end + t.strict + t.sensitive,
-        r = T[n] || (T[n] = {});
+        r = I[n] || (I[n] = {});
     if (r[e]) return r[e];
     var i = [],
         a = {
             regexp: u()(e, i, t),
             keys: i,
         };
-    return A < S && ((r[e] = a), A++), a;
+    return A < T && ((r[e] = a), A++), a;
 }
 function N(e, t) {
     void 0 === t && (t = {}), ("string" == typeof t || Array.isArray(t)) && (t = { path: t });
@@ -199,7 +199,7 @@ function N(e, t) {
               };
     }, null);
 }
-var R = (function (e) {
+var P = (function (e) {
     function t() {
         return e.apply(this, arguments) || this;
     }
@@ -207,7 +207,7 @@ var R = (function (e) {
         (0, r.Z)(t, e),
         (t.prototype.render = function () {
             var e = this;
-            return i.createElement(h.Consumer, null, function (t) {
+            return i.createElement(m.Consumer, null, function (t) {
                 t || (0, s.Z)(!1);
                 var n = e.props.location || t.location,
                     r = e.props.computedMatch ? e.props.computedMatch : e.props.path ? N(n.pathname, e.props) : t.match,
@@ -222,7 +222,7 @@ var R = (function (e) {
                 return (
                     Array.isArray(c) && 0 === c.length && (c = null),
                     i.createElement(
-                        h.Provider,
+                        m.Provider,
                         { value: a },
                         a.match
                             ? c
@@ -244,11 +244,11 @@ var R = (function (e) {
         t
     );
 })(i.Component);
-function P(e) {
+function R(e) {
     return "/" === e.charAt(0) ? e : "/" + e;
 }
 i.Component;
-var D = (function (e) {
+var w = (function (e) {
     function t() {
         return e.apply(this, arguments) || this;
     }
@@ -256,7 +256,7 @@ var D = (function (e) {
         (0, r.Z)(t, e),
         (t.prototype.render = function () {
             var e = this;
-            return i.createElement(h.Consumer, null, function (t) {
+            return i.createElement(m.Consumer, null, function (t) {
                 t || (0, s.Z)(!1);
                 var n,
                     r,
@@ -281,30 +281,30 @@ var D = (function (e) {
         t
     );
 })(i.Component);
-function w(e) {
+function D(e) {
     var t = "withRouter(" + (e.displayName || e.name) + ")",
         n = function (t) {
             var n = t.wrappedComponentRef,
                 r = (0, d.Z)(t, ["wrappedComponentRef"]);
-            return i.createElement(h.Consumer, null, function (t) {
+            return i.createElement(m.Consumer, null, function (t) {
                 return t || (0, s.Z)(!1), i.createElement(e, (0, l.Z)({}, r, t, { ref: n }));
             });
         };
-    return (n.displayName = t), (n.WrappedComponent = e), _()(n, e);
+    return (n.displayName = t), (n.WrappedComponent = e), p()(n, e);
 }
-var L = i.useContext;
-function x() {
-    return L(p);
+var x = i.useContext;
+function L() {
+    return x(_);
+}
+function j() {
+    return x(m).location;
 }
 function M() {
-    return L(h).location;
-}
-function k() {
-    var e = L(h).match;
+    var e = x(m).match;
     return e ? e.params : {};
 }
-function j(e) {
-    var t = M(),
-        n = L(h).match;
+function k(e) {
+    var t = j(),
+        n = x(m).match;
     return e ? N(t.pathname, e) : n;
 }

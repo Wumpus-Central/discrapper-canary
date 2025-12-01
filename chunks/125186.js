@@ -1,6 +1,6 @@
 n.d(t, {
     S8: () => l,
-    t3: () => _,
+    t3: () => p,
 }),
     n(415506),
     n(410992),
@@ -118,35 +118,35 @@ async function f(e) {
         URL.revokeObjectURL(u);
     }
     let f = await n.getImageData(0, 0, t.width, t.height),
-        _ = d(l),
-        p = d(f),
-        h = _ === p,
-        m = performance.now() - o;
+        p = d(l),
+        _ = d(f),
+        m = p === _,
+        h = performance.now() - o;
     return (s.verbose(
         "[WebP] Pixel hash results: " +
             "fileName=".concat(e.name, " ") +
             "fileLength={".concat(e.size, "} ") +
             "width=".concat(c.width, " ") +
             "height=".concat(c.height, " ") +
-            "pixelHash=".concat(_, " ") +
+            "pixelHash=".concat(p, " ") +
             "mezzanineFileLength={".concat(a.size, "} ") +
-            "mezzaninePixelHash=".concat(p, " ") +
-            "match=".concat(h, " ") +
-            "elapsed_ms=".concat(Math.round(m)),
+            "mezzaninePixelHash=".concat(_, " ") +
+            "match=".concat(m, " ") +
+            "elapsed_ms=".concat(Math.round(h)),
     ),
-    h)
+    m)
         ? {
               success: !0,
               webpBlob: a,
-              pixelHashTimeMs: m,
+              pixelHashTimeMs: h,
           }
         : {
               success: !1,
               reason: "pixel_hash_mismatch",
-              pixelHashTimeMs: m,
+              pixelHashTimeMs: h,
           };
 }
-async function _(e) {
+async function p(e) {
     let t;
     if (null == e) throw Error("file is null or undefined");
     s.verbose("[WebP] Starting conversion for: ".concat(e.name));
@@ -173,12 +173,12 @@ async function _(e) {
         }
         let l = o.webpBlob,
             d = e.size > 0 ? l.size / e.size : 1,
-            _ = 1 - d;
-        if (_ < c)
+            p = 1 - d;
+        if (p < c)
             return (
                 s.verbose(
                     "[WebP] Insufficient savings: "
-                        .concat(Math.round(100 * _), "% < ")
+                        .concat(Math.round(100 * p), "% < ")
                         .concat(100 * c, "% (")
                         .concat(e.size, " -> ")
                         .concat(l.size, " bytes)"),

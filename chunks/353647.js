@@ -57,10 +57,10 @@ function u(e, t) {
 }
 let d = new Map(),
     f = new Set(),
-    _ = null,
-    p = !1,
-    h = !1;
-function m(e) {
+    p = null,
+    _ = !1,
+    m = !1;
+function h(e) {
     let { userId: t } = e;
     f.add(t);
 }
@@ -73,31 +73,31 @@ function E(e) {
     f.delete(t);
 }
 function b() {
-    (_ = null), (p = !0);
+    (p = null), (_ = !0);
 }
 function y(e) {
     let { entry: t, userId: n } = e;
-    _ = null;
+    p = null;
     let r = d.get(n);
     if (null == r) return !1;
     let i = r.entries.filter((e) => e.id !== t.id);
-    d.set(n, u(l({}, r), { entries: i })), (p = !1);
+    d.set(n, u(l({}, r), { entries: i })), (_ = !1);
 }
 function O(e) {
     let { error: t } = e;
-    (_ = t), (p = !1);
+    (p = t), (_ = !1);
 }
 function v() {
-    (_ = null), (p = !1);
-}
-function I() {
-    (d = new Map()), (f = new Set()), (_ = null), (p = !1);
-}
-function T() {
-    I(), (h = !0);
+    (p = null), (_ = !1);
 }
 function S() {
-    I();
+    (d = new Map()), (f = new Set()), (p = null), (_ = !1);
+}
+function I() {
+    S(), (m = !0);
+}
+function T() {
+    S();
 }
 class A extends (r = i.ZP.Store) {
     getMatchingOutboxEntry(e) {
@@ -112,20 +112,20 @@ class A extends (r = i.ZP.Store) {
         return f.has(e);
     }
     get deleteOutboxEntryError() {
-        return _;
-    }
-    get isDeletingEntryHistory() {
         return p;
     }
+    get isDeletingEntryHistory() {
+        return _;
+    }
     get hasInitialized() {
-        return h;
+        return m;
     }
 }
 s(A, "displayName", "ContentInventoryOutboxStore");
 let C = new A(a.Z, {
-    CONNECTION_OPEN: T,
-    LOGOUT: S,
-    CONTENT_INVENTORY_FETCH_OUTBOX_START: m,
+    CONNECTION_OPEN: I,
+    LOGOUT: T,
+    CONTENT_INVENTORY_FETCH_OUTBOX_START: h,
     CONTENT_INVENTORY_FETCH_OUTBOX_SUCCESS: g,
     CONTENT_INVENTORY_FETCH_OUTBOX_FAILURE: E,
     CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_START: b,

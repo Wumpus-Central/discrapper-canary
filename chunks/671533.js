@@ -61,7 +61,7 @@ function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -69,7 +69,7 @@ function f(e, t) {
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,7 +78,7 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-var p = (function (e) {
+var _ = (function (e) {
     return (
         (e.LEFT = "LEFT"),
         (e.RIGHT = "RIGHT"),
@@ -89,7 +89,7 @@ var p = (function (e) {
         e
     );
 })({});
-function h(e) {
+function m(e) {
     switch (e) {
         case "LEFT":
             return s.left;
@@ -107,7 +107,7 @@ function h(e) {
             throw Error("Invalid Direction ".concat(e));
     }
 }
-let m = (e) => {
+let h = (e) => {
     var {
             width: t = 24,
             height: n = 24,
@@ -115,18 +115,18 @@ let m = (e) => {
             direction: s,
             foreground: l,
             className: u,
-            title: _,
+            title: p,
         } = e,
-        p = f(e, ["width", "height", "color", "direction", "foreground", "className", "title"]);
+        _ = f(e, ["width", "height", "color", "direction", "foreground", "className", "title"]);
     return (0, r.jsxs)(
         "svg",
-        d(c({}, (0, o.Z)(p)), {
+        d(c({}, (0, o.Z)(_)), {
             width: t,
             height: n,
-            className: a()(u, h(s)),
+            className: a()(u, m(s)),
             viewBox: "0 0 24 24",
             children: [
-                null != _ ? (0, r.jsx)("title", { children: _ }) : null,
+                null != p ? (0, r.jsx)("title", { children: p }) : null,
                 (0, r.jsx)("polygon", {
                     className: l,
                     fill: i,
@@ -137,5 +137,5 @@ let m = (e) => {
         }),
     );
 };
-m.Directions = p;
-let g = m;
+h.Directions = _;
+let g = h;

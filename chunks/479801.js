@@ -1,4 +1,4 @@
-n.d(t, { e: () => m }), n(388685);
+n.d(t, { e: () => h }), n(388685);
 var r = n(473749),
     i = n(311570),
     a = n(442837),
@@ -57,13 +57,13 @@ function f(e, t) {
         e
     );
 }
-let _ = 600000,
-    p = 600000,
-    h = i.v.VARIANTS_GROUP;
-function m(e, t, n) {
+let p = 600000,
+    _ = 600000,
+    m = i.v.VARIANTS_GROUP;
+function h(e, t, n) {
     let i = (0, a.e7)([o.Z], () => o.Z.hasLoadedExperiments),
         c = null == e ? void 0 : e.includeBundles,
-        [d, m, g, E, b, y, O] = (0, a.Wu)([l.Z], () => {
+        [d, h, g, E, b, y, O] = (0, a.Wu)([l.Z], () => {
             var e, t;
             return [
                 l.Z.isFetchingCategories,
@@ -78,24 +78,24 @@ function m(e, t, n) {
     return (
         (0, r.useEffect)(() => {
             if (!i || d) return;
-            let r = Date.now() - E < p;
+            let r = Date.now() - E < _;
             if (g && r) return;
             let a = f(u({}, e), {
-                    variantsReturnStyle: h,
+                    variantsReturnStyle: m,
                     includeBundles: c,
                     skipNumCategories: O,
                 }),
-                o = !(0, s.oc)(m, a),
-                l = Date.now() - b < _;
+                o = !(0, s.oc)(h, a),
+                l = Date.now() - b < p;
             (o || !l) && (0, s.F$)(a, t, n);
-        }, [i, d, m, b, e, g, c, E, t, n, O]),
+        }, [i, d, h, b, e, g, c, E, t, n, O]),
         {
             isFetching: d,
             categories: y,
             fetchCategoriesError: g,
             refreshCategories: (0, r.useCallback)(() => {
                 let t = f(u({}, e), {
-                    variantsReturnStyle: h,
+                    variantsReturnStyle: m,
                     includeBundles: c,
                     skipNumCategories: O,
                 });

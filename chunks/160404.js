@@ -9,8 +9,8 @@ var r,
     u = n(709054),
     d = n(225675),
     f = n(981631),
-    _ = n(526761);
-function p(e, t, n) {
+    p = n(526761);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,12 +34,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -56,7 +56,7 @@ function g(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -65,7 +65,7 @@ function g(e, t) {
 let E = {};
 function b(e) {
     let { guildId: t, data: n } = e;
-    delete n.roles[u.default.castGuildIdAsEveryoneGuildRoleId(t)], (E[t] = g(h({}, n), { timestamp: Date.now() }));
+    delete n.roles[u.default.castGuildIdAsEveryoneGuildRoleId(t)], (E[t] = g(m({}, n), { timestamp: Date.now() }));
 }
 function y(e) {
     let { guildId: t } = e;
@@ -88,13 +88,13 @@ function v(e) {
         u.default.keys(r).forEach((e) => {
             var t;
             let n = r[e];
-            i.yE(null != (t = n.flags) ? t : 0, _.ic.OPT_IN_ENABLED) ? o.add(e) : o.delete(e);
+            i.yE(null != (t = n.flags) ? t : 0, p.ic.OPT_IN_ENABLED) ? o.add(e) : o.delete(e);
         }),
         (a.optInChannels = o),
         !0
     );
 }
-function I(e) {
+function S(e) {
     var t;
     let { guildId: n, optionId: r, selected: i, removedOptionIds: a } = e;
     if (null == n || null == E[n]) return !1;
@@ -108,7 +108,7 @@ function I(e) {
         !0
     );
 }
-function T(e) {
+function I(e) {
     let { guildId: t, roles: n, flags: r } = e;
     if (null == t) return !1;
     let i = E[t];
@@ -123,7 +123,7 @@ function T(e) {
         !0)
     );
 }
-class S extends (r = a.ZP.Store) {
+class T extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(l.Z, s.Z);
     }
@@ -196,12 +196,12 @@ class S extends (r = a.ZP.Store) {
         }
     }
 }
-p(S, "displayName", "ImpersonateStore");
-let A = new S(o.Z, {
+_(T, "displayName", "ImpersonateStore");
+let A = new T(o.Z, {
     IMPERSONATE_UPDATE: b,
     IMPERSONATE_STOP: y,
     GUILD_ROLE_DELETE: O,
     USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: v,
-    GUILD_ONBOARDING_SELECT_OPTION: I,
-    GUILD_MEMBER_UPDATE_LOCAL: T,
+    GUILD_ONBOARDING_SELECT_OPTION: S,
+    GUILD_MEMBER_UPDATE_LOCAL: I,
 });

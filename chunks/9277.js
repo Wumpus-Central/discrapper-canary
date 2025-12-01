@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(28664),
     d = n(777019),
     f = n(28546),
-    _ = n(581883),
-    p = n(459273),
-    h = n(713913),
-    m = n(541716),
+    p = n(581883),
+    _ = n(459273),
+    m = n(713913),
+    h = n(541716),
     g = n(443603),
     E = n(981631),
     b = n(957825),
@@ -20,61 +20,61 @@ var r = n(54381),
     O = n(564355);
 function v(e, t) {
     let { disabled: n, type: a } = e,
-        [v, I] = i.useState(!1),
-        T = (0, l.e7)([_.Z], () => {
+        [v, S] = i.useState(!1),
+        I = (0, l.e7)([p.Z], () => {
             var e, t;
             return (
                 v &&
                 Object.values(
-                    null != (t = null == (e = _.Z.frecencyWithoutFetchingLatest.favoriteGifs) ? void 0 : e.gifs)
+                    null != (t = null == (e = p.Z.frecencyWithoutFetchingLatest.favoriteGifs) ? void 0 : e.gifs)
                         ? t
                         : {},
                 ).length <= 2
             );
         }),
-        [S, A, C] = (0, f.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], s.X),
+        [T, A, C] = (0, f.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], s.X),
         N = i.useRef(0),
-        R = i.useCallback(() => {
-            I(!0),
+        P = i.useCallback(() => {
+            S(!0),
                 clearTimeout(N.current),
                 (N.current = setTimeout(() => {
-                    I(!1), (N.current = 0);
+                    S(!1), (N.current = 0);
                 }, 2000));
         }, []);
-    (0, p.yp)({
+    (0, _.yp)({
         event: E.CkL.FAVORITE_GIF,
-        handler: R,
+        handler: P,
     });
-    let P = i.useCallback(() => {
+    let R = i.useCallback(() => {
             (0, f.RO)(b.X1.GIF, a);
         }, [a]),
-        { Component: D, events: w, play: L } = (0, c.V)(),
-        x = (0, h.v)(d.O),
-        M = a === m.Ie.NORMAL ? x : void 0;
+        { Component: w, events: D, play: x } = (0, c.V)(),
+        L = (0, m.v)(d.O),
+        j = a === h.Ie.NORMAL ? L : void 0;
     if (n) return null;
-    let k = S === b.X1.GIF && A === a;
+    let M = T === b.X1.GIF && A === a;
     return (0, r.jsx)(u.u, {
-        keyboardShortcut: T ? void 0 : M,
-        text: y.intl.string(T ? y.t.mE2e8A : y.t.nffuyb),
-        shouldShow: T || null != M,
-        forceOpen: T,
+        keyboardShortcut: I ? void 0 : j,
+        text: y.intl.string(I ? y.t.mE2e8A : y.t.nffuyb),
+        shouldShow: I || null != j,
+        forceOpen: I,
         children: (0, r.jsx)("div", {
             ref: t,
             className: o()(b.CT, O.buttonContainer),
             children: (0, r.jsx)(g.Z, {
                 className: O.button,
-                onMouseEnter: w.onMouseEnter,
-                onMouseLeave: w.onMouseLeave,
+                onMouseEnter: D.onMouseEnter,
+                onMouseLeave: D.onMouseLeave,
                 onClick: () => {
-                    P(), L();
+                    R(), x();
                 },
-                isActive: k,
+                isActive: M,
                 pulse: v,
                 "aria-label": y.intl.string(y.t.PtVpk2),
-                "aria-expanded": k,
+                "aria-expanded": M,
                 "aria-haspopup": "dialog",
                 "aria-controls": C,
-                children: (0, r.jsx)(D, {
+                children: (0, r.jsx)(w, {
                     size: "refresh_sm",
                     color: "currentColor",
                 }),
@@ -82,4 +82,4 @@ function v(e, t) {
         }),
     });
 }
-let I = i.memo(i.forwardRef(v));
+let S = i.memo(i.forwardRef(v));

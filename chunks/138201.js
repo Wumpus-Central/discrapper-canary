@@ -1,6 +1,6 @@
 n.d(t, {
-    JZ: () => p,
-    rT: () => _,
+    JZ: () => _,
+    rT: () => p,
 }),
     n(953529);
 var r = n(54381);
@@ -67,7 +67,7 @@ function f(e) {
         children: t,
     });
 }
-function _(e) {
+function p(e) {
     let { children: t, title: n, description: i, accessibilityRole: a = "none", accessibilityLabel: l } = e;
     return (0, r.jsxs)("div", {
         className: s.tableRowGroup,
@@ -88,12 +88,12 @@ function _(e) {
         ],
     });
 }
-function p(e) {
+function _(e) {
     var { variant: t } = e,
         n = u(e, ["variant"]);
-    return "clickable" === t ? (0, r.jsx)(m, c({}, n)) : (0, r.jsx)(h, c({}, n));
+    return "clickable" === t ? (0, r.jsx)(h, c({}, n)) : (0, r.jsx)(m, c({}, n));
 }
-function h(e) {
+function m(e) {
     let {
             icon: t,
             title: n,
@@ -103,53 +103,53 @@ function h(e) {
             descriptionVariant: u = "text-xs/medium",
             descriptionColor: d = "text-secondary",
             iconClassName: f,
-            color: _,
-            buttonText: p,
-            buttonVariant: h = "secondary",
-            buttonSize: m = "sm",
+            color: p,
+            buttonText: _,
+            buttonVariant: m = "secondary",
+            buttonSize: h = "sm",
             buttonDisabled: g,
             buttonIcon: E,
             buttonIconPosition: b = "start",
             buttonLoading: y,
             onButtonPress: O,
             listType: v = "icon",
-            index: I,
-            noInset: T = !1,
+            index: S,
+            noInset: I = !1,
         } = e,
-        S =
-            null != p
+        T =
+            null != _
                 ? (0, r.jsx)(o.Button, {
-                      variant: h,
-                      size: m,
-                      text: p,
+                      variant: m,
+                      size: h,
+                      text: _,
                       icon: E,
                       iconPosition: b,
                       disabled: g,
                       loading: y,
                       onClick: O,
-                      "aria-label": p,
+                      "aria-label": _,
                   })
                 : void 0;
     return (0, r.jsxs)("div", {
-        className: a()(s.row, { [s.noInset]: T }),
+        className: a()(s.row, { [s.noInset]: I }),
         children: [
             (0, r.jsxs)(o.Kqy, {
                 direction: "horizontal",
                 gap: 16,
                 align: "center",
                 children: [
-                    "numbered" === v && null != I
+                    "numbered" === v && null != S
                         ? (0, r.jsx)(o.Heading, {
                               variant: "heading-md/semibold",
                               color: "text-brand",
                               className: s.number,
-                              children: I + 1,
+                              children: S + 1,
                           })
                         : null != t &&
                           (0, r.jsx)("div", {
                               className: s.iconContainer,
                               children: (0, r.jsx)(t, {
-                                  color: null != _ ? _ : "currentColor",
+                                  color: null != p ? p : "currentColor",
                                   className: a()(s.icon, f),
                               }),
                           }),
@@ -171,11 +171,11 @@ function h(e) {
                     }),
                 ],
             }),
-            S,
+            T,
         ],
     });
 }
-function m(e) {
+function h(e) {
     let {
         icon: t,
         title: n,
@@ -185,16 +185,16 @@ function m(e) {
         descriptionVariant: u = "text-md/medium",
         descriptionColor: d = "text-secondary",
         buttonDisabled: f,
-        iconClassName: _,
-        color: p,
-        buttonIcon: h,
-        onButtonPress: m,
+        iconClassName: p,
+        color: _,
+        buttonIcon: m,
+        onButtonPress: h,
         listType: g = "icon",
         index: E,
         noInset: b = !1,
     } = e;
     return (0, r.jsxs)(o.P3F, {
-        onClick: m,
+        onClick: h,
         className: a()(s.row, s.clickable, {
             [s.noInset]: b,
             [s.disabled]: f,
@@ -216,8 +216,8 @@ function m(e) {
                           (0, r.jsx)("div", {
                               className: s.iconContainer,
                               children: (0, r.jsx)(t, {
-                                  color: null != p ? p : "currentColor",
-                                  className: a()(s.icon, _),
+                                  color: null != _ ? _ : "currentColor",
+                                  className: a()(s.icon, p),
                               }),
                           }),
                     (0, r.jsxs)(o.Kqy, {
@@ -239,7 +239,7 @@ function m(e) {
                     }),
                 ],
             }),
-            null != h ? (0, r.jsx)(h, {}) : (0, r.jsx)(o.Fbu, {}),
+            null != m ? (0, r.jsx)(m, {}) : (0, r.jsx)(o.Fbu, {}),
         ],
     });
 }

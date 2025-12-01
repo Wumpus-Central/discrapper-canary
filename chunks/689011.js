@@ -1,6 +1,6 @@
 n.d(t, {
-    Oc: () => m,
-    t: () => h,
+    Oc: () => h,
+    t: () => m,
     xe: () => g,
 }),
     n(953529);
@@ -15,9 +15,9 @@ var i = n(481060),
     u = n(750143),
     d = n(388032),
     f = n(848902),
-    _ = n(365627),
-    p = n(753260);
-let h = (e) => {
+    p = n(365627),
+    _ = n(753260);
+let m = (e) => {
         let { step: t, onClose: n } = e,
             s = (0, a.Z)(u.X);
         return t === o.h8.CONFIRM || t === o.h8.BENEFITS
@@ -30,7 +30,7 @@ let h = (e) => {
                               className: f.headerImageContainer,
                               "aria-hidden": "true",
                               children: (0, r.jsx)("img", {
-                                  src: p,
+                                  src: _,
                                   alt: "",
                                   className: f.headerImage,
                               }),
@@ -48,7 +48,7 @@ let h = (e) => {
                   ],
               });
     },
-    m = (e) => {
+    h = (e) => {
         let {
             icon: t,
             storeListingBenefits: n,
@@ -89,7 +89,7 @@ function g(e) {
         className: f.purchaseConfirmation,
         children: [
             (0, r.jsx)("img", {
-                src: _,
+                src: p,
                 alt: "",
                 width: 300,
                 height: 126,

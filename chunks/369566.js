@@ -9,29 +9,29 @@ var r = n(473749),
     u = n(561308),
     d = n(741570),
     f = n(314897),
-    _ = n(592125),
-    p = n(158776),
-    h = n(979651),
-    m = n(9161),
+    p = n(592125),
+    _ = n(158776),
+    m = n(979651),
+    h = n(9161),
     g = n(981631);
 let E = [],
     b = [];
 function y(e) {
-    let { recentActivityTabEnabled: t } = (0, m.O)({ location: "useUserProfileActivity" }),
+    let { recentActivityTabEnabled: t } = (0, h.O)({ location: "useUserProfileActivity" }),
         n = (0, a.e7)([f.default], () => f.default.getId() === e),
         y = (0, o.Z)(e),
-        O = (0, a.e7)([p.Z], () => p.Z.getActivities(e)),
+        O = (0, a.e7)([_.Z], () => _.Z.getActivities(e)),
         v = (0, a.e7)([s.Z], () => (n || t ? s.Z.getUserOutbox(e) : void 0)),
-        I = (0, a.e7)([h.Z], () => h.Z.getVoiceStateForUser(e)),
-        T = (0, a.e7)([_.Z], () => _.Z.getChannel(null == I ? void 0 : I.channelId)),
-        S = (0, d.E)("UserProfileActivity", T),
+        S = (0, a.e7)([m.Z], () => m.Z.getVoiceStateForUser(e)),
+        I = (0, a.e7)([p.Z], () => p.Z.getChannel(null == S ? void 0 : S.channelId)),
+        T = (0, d.E)("UserProfileActivity", I),
         A = (0, r.useMemo)(
             () =>
                 O.filter((e) => {
                     let { type: t } = e;
-                    return t === g.IIU.HANG_STATUS ? S : t !== g.IIU.CUSTOM_STATUS;
+                    return t === g.IIU.HANG_STATUS ? T : t !== g.IIU.CUSTOM_STATUS;
                 }),
-            [O, S],
+            [O, T],
         ),
         { live: C, recent: N } = (0, r.useMemo)(() => {
             let e = (0, i.uniqWith)(

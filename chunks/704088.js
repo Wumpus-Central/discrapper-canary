@@ -1,8 +1,8 @@
 n.d(t, { U: () => C }), n(388685), n(49124), n(415506);
 var a = n(54381),
     l = n(473749),
-    r = n(663042),
-    i = n(442837),
+    i = n(663042),
+    r = n(442837),
     s = n(544891),
     o = n(159691),
     c = n(481060),
@@ -12,23 +12,23 @@ var a = n(54381),
     p = n(299886),
     h = n(848984),
     x = n(773275),
-    g = n(261538),
-    f = n(868802),
+    f = n(261538),
+    g = n(868802),
     b = n(594174),
     v = n(246992),
     j = n(474936);
 let _ = l.forwardRef((e, t) => {
-    let [n, r] = l.useState(null),
-        [i, c] = l.useState(null),
+    let [n, i] = l.useState(null),
+        [r, c] = l.useState(null),
         [d, u] = l.useState(!1),
         m = l.useCallback(async () => {
-            u(!0), c(null), r(null);
+            u(!0), c(null), i(null);
             try {
                 let e = await s.tn.get({
                     url: "/users/@me/debug/warp/license",
                     rejectWithError: !0,
                 });
-                r(e.body);
+                i(e.body);
             } catch (l) {
                 var e, t;
                 let n =
@@ -55,7 +55,7 @@ let _ = l.forwardRef((e, t) => {
                     onClick: m,
                     disabled: d,
                 }),
-                null != i &&
+                null != r &&
                     (0, a.jsx)("div", {
                         style: {
                             padding: "12px",
@@ -65,7 +65,7 @@ let _ = l.forwardRef((e, t) => {
                             fontFamily: "monospace",
                             fontSize: "12px",
                         },
-                        children: i,
+                        children: r,
                     }),
                 null != n &&
                     (0, a.jsx)("pre", {
@@ -93,19 +93,19 @@ let _ = l.forwardRef((e, t) => {
 _.displayName = "DebugWarpLicenseInfo";
 let y = (e) => {
         let { onSuccess: t } = e,
-            [n, r] = l.useState(!1),
-            [i, c] = l.useState(0),
+            [n, i] = l.useState(!1),
+            [r, c] = l.useState(0),
             [d, u] = l.useState(null);
         l.useEffect(() => {
-            if (i > 0) {
+            if (r > 0) {
                 let e = setTimeout(() => {
-                    c(i - 1), 1 === i && t();
+                    c(r - 1), 1 === r && t();
                 }, 1000);
                 return () => clearTimeout(e);
             }
-        }, [i, t]);
+        }, [r, t]);
         let m = async () => {
-            r(!0), u(null);
+            i(!0), u(null);
             try {
                 await s.tn.post({
                     url: "/users/@me/debug/warp/license/extension-task",
@@ -121,7 +121,7 @@ let y = (e) => {
                     a = (null == l ? void 0 : l.status) || (null == l || null == (t = l.body) ? void 0 : t.code);
                 u("Error ".concat(a ? "(".concat(a, ")") : "", ": ").concat(n));
             } finally {
-                r(!1);
+                i(!1);
             }
         };
         return (0, a.jsxs)("div", {
@@ -134,11 +134,11 @@ let y = (e) => {
                 (0, a.jsx)(o.zxk, {
                     text: n
                         ? "Triggering Task..."
-                        : i > 0
-                          ? "Refreshing in ".concat(i, "s...")
+                        : r > 0
+                          ? "Refreshing in ".concat(r, "s...")
                           : "Trigger License Extension Task",
                     onClick: m,
-                    disabled: n || i > 0,
+                    disabled: n || r > 0,
                 }),
                 null != d &&
                     (0, a.jsx)("div", {
@@ -159,10 +159,10 @@ let y = (e) => {
         let [e, t] = l.useState(-1),
             [n, s] = l.useState(-1),
             [C, S] = l.useState(!1),
-            [E, N] = l.useState(5000),
-            [T, O] = l.useState(!1),
+            [E, T] = l.useState(5000),
+            [N, O] = l.useState(!1),
             P = l.useRef(null),
-            I = (0, i.e7)([b.default], () => b.default.getCurrentUser()),
+            I = (0, r.e7)([b.default], () => b.default.getCurrentUser()),
             w = (0, h.u)(),
             [k] = l.useState(() =>
                 (0, x.o8)({
@@ -178,14 +178,14 @@ let y = (e) => {
                 setConnect: L,
                 setDisconnect: M,
                 setInstall: U,
-                setIsWeb: B,
-                setIsSupportedPrivateBrowsingPerkPlatform: F,
+                setIsWeb: F,
+                setIsSupportedPrivateBrowsingPerkPlatform: B,
                 isWeb: G,
                 isSupportedPrivateBrowsingPerkPlatform: z,
                 setGetWarpInstallationStatus: H,
                 perkAvailableToUser: V,
                 setPerkAvailableToUser: W,
-            } = (0, r.o)(k),
+            } = (0, i.o)(k),
             K = l.useCallback(
                 async () => (
                     D(m.Ij.INITIALIZING),
@@ -246,15 +246,15 @@ let y = (e) => {
                           style: { marginTop: "16px" },
                           children: "Private Browsing Perk Components",
                       }),
-                      (0, a.jsxs)(g.$0, {
+                      (0, a.jsxs)(f.$0, {
                           children: [
                               (0, a.jsx)(o.X6q, {
                                   variant: "heading-lg/semibold",
                                   children: "Configure Private Browsing Perk State",
                               }),
-                              (0, a.jsxs)(g.pg, {
+                              (0, a.jsxs)(f.pg, {
                                   children: [
-                                      (0, a.jsxs)(g.BZ, {
+                                      (0, a.jsxs)(f.BZ, {
                                           children: [
                                               (0, a.jsx)(o.xvT, {
                                                   variant: "text-md/semibold",
@@ -271,7 +271,7 @@ let y = (e) => {
                                               }),
                                           ],
                                       }),
-                                      (0, a.jsxs)(g.BZ, {
+                                      (0, a.jsxs)(f.BZ, {
                                           children: [
                                               (0, a.jsx)(o.xvT, {
                                                   variant: "text-md/semibold",
@@ -280,13 +280,13 @@ let y = (e) => {
                                               (0, a.jsx)("div", {
                                                   style: { width: "45px" },
                                                   children: (0, a.jsx)(o.rsf, {
-                                                      onChange: () => B(!G),
+                                                      onChange: () => F(!G),
                                                       checked: G,
                                                   }),
                                               }),
                                           ],
                                       }),
-                                      (0, a.jsxs)(g.BZ, {
+                                      (0, a.jsxs)(f.BZ, {
                                           children: [
                                               (0, a.jsx)(o.xvT, {
                                                   variant: "text-md/semibold",
@@ -295,13 +295,13 @@ let y = (e) => {
                                               (0, a.jsx)("div", {
                                                   style: { width: "45px" },
                                                   children: (0, a.jsx)(o.rsf, {
-                                                      onChange: () => F(!z),
+                                                      onChange: () => B(!z),
                                                       checked: z,
                                                   }),
                                               }),
                                           ],
                                       }),
-                                      (0, a.jsxs)(g.BZ, {
+                                      (0, a.jsxs)(f.BZ, {
                                           children: [
                                               (0, a.jsx)(o.xvT, {
                                                   variant: "text-md/semibold",
@@ -347,7 +347,7 @@ let y = (e) => {
                                           ],
                                       }),
                                       R === m._n.INSTALLED &&
-                                          (0, a.jsxs)(g.BZ, {
+                                          (0, a.jsxs)(f.BZ, {
                                               children: [
                                                   (0, a.jsx)(o.xvT, {
                                                       variant: "text-md/semibold",
@@ -382,9 +382,9 @@ let y = (e) => {
                                   ],
                               }),
                               R === m._n.NOT_INSTALLED &&
-                                  (0, a.jsxs)(g.pg, {
+                                  (0, a.jsxs)(f.pg, {
                                       children: [
-                                          (0, a.jsxs)(g.BZ, {
+                                          (0, a.jsxs)(f.BZ, {
                                               children: [
                                                   (0, a.jsx)(o.xvT, {
                                                       variant: "text-md/semibold",
@@ -399,14 +399,14 @@ let y = (e) => {
                                                   }),
                                               ],
                                           }),
-                                          (0, a.jsxs)(g.BZ, {
+                                          (0, a.jsxs)(f.BZ, {
                                               children: [
                                                   (0, a.jsx)(o.xvT, {
                                                       variant: "text-md/semibold",
                                                       children: "Install time",
                                                   }),
                                                   (0, a.jsx)(c.PhF, {
-                                                      select: (e) => N(e),
+                                                      select: (e) => T(e),
                                                       isSelected: (e) => e === E,
                                                       serialize: (e) => "".concat(e),
                                                       options: [
@@ -446,16 +446,16 @@ let y = (e) => {
                       (0, a.jsxs)(x.xz.Provider, {
                           value: k,
                           children: [
-                              (0, a.jsxs)(g.$0, {
+                              (0, a.jsxs)(f.$0, {
                                   children: [
                                       (0, a.jsx)(o.X6q, {
                                           variant: "heading-lg/medium",
                                           children: "Private Browsing Perk Settings Component",
                                       }),
-                                      (0, a.jsx)(f.M, {}),
+                                      (0, a.jsx)(g.M, {}),
                                   ],
                               }),
-                              (0, a.jsxs)(g.$0, {
+                              (0, a.jsxs)(f.$0, {
                                   children: [
                                       (0, a.jsx)(o.X6q, {
                                           variant: "heading-lg/medium",
@@ -467,7 +467,7 @@ let y = (e) => {
                                               O(!0);
                                           },
                                       }),
-                                      T &&
+                                      N &&
                                           (0, a.jsx)(d.default, {
                                               url: "https://www.discord.com",
                                               trustUrl: () => !1,
@@ -481,7 +481,7 @@ let y = (e) => {
                                           }),
                                   ],
                               }),
-                              (0, a.jsxs)(g.$0, {
+                              (0, a.jsxs)(f.$0, {
                                   children: [
                                       (0, a.jsx)(o.X6q, {
                                           variant: "heading-lg/medium",
@@ -495,7 +495,7 @@ let y = (e) => {
                                       }),
                                   ],
                               }),
-                              (0, a.jsxs)(g.$0, {
+                              (0, a.jsxs)(f.$0, {
                                   children: [
                                       (0, a.jsx)(o.X6q, {
                                           variant: "heading-lg/medium",

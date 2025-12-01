@@ -1,7 +1,7 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(54381),
     i = n(473749),
-    a = n(963225),
+    a = n(502922),
     o = n(374470),
     s = n(442837),
     l = n(481060),
@@ -9,11 +9,11 @@ var r = n(54381),
     u = n(607070),
     d = n(446108),
     f = n(981631),
-    _ = n(295907),
-    p = n(388032);
-function h(e) {
+    p = n(295907),
+    _ = n(388032);
+function m(e) {
     var t;
-    if (e.ctrlKey || e.altKey || e.metaKey || e.key !== _.vn.TAB || null == e.target) return;
+    if (e.ctrlKey || e.altKey || e.metaKey || e.key !== p.vn.TAB || null == e.target) return;
     let { target: n } = e,
         r = null == (t = (0, o.uB)(e)) ? void 0 : t.activeElement;
     (0, o.kK)(n) &&
@@ -23,7 +23,7 @@ function h(e) {
             location_object: n.tagName,
         });
 }
-function m(e) {
+function h(e) {
     let { children: t } = e,
         n = (0, s.cj)([u.Z], () => ({
             enabled: u.Z.useReducedMotion,
@@ -35,8 +35,8 @@ function m(e) {
         })),
         c = (0, s.e7)([u.Z], () => u.Z.isHighContrastModeEnabled),
         f = (0, s.e7)([u.Z], () => u.Z.alwaysShowLinkDecorations),
-        _ = (0, s.e7)([u.Z], () => u.Z.keyboardModeEnabled),
-        m = (0, s.e7)([u.Z], () => u.Z.isSwitchIconsEnabled),
+        p = (0, s.e7)([u.Z], () => u.Z.keyboardModeEnabled),
+        h = (0, s.e7)([u.Z], () => u.Z.isSwitchIconsEnabled),
         g = i.useMemo(
             () => ({
                 reducedMotion: n,
@@ -44,18 +44,18 @@ function m(e) {
                 forcedColors: o,
                 alwaysShowLinkDecorations: f,
                 highContrastModeEnabled: c,
-                keyboardModeEnabled: _,
-                switchIconsEnabled: m,
+                keyboardModeEnabled: p,
+                switchIconsEnabled: h,
             }),
-            [n, o, f, c, _, m],
+            [n, o, f, c, p, h],
         );
     return (
         i.useEffect(
             () => (
                 (0, a.waitForAllDefaultIntlMessagesLoaded)().then(() => (0, d.d1)()),
-                p.intl.onLocaleChange(() => (0, d.d1)()),
-                window.addEventListener("keydown", h),
-                () => window.removeEventListener("keydown", h)
+                _.intl.onLocaleChange(() => (0, d.d1)()),
+                window.addEventListener("keydown", m),
+                () => window.removeEventListener("keydown", m)
             ),
             [],
         ),

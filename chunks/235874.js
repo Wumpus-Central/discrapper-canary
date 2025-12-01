@@ -42,7 +42,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,22 +54,22 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -77,7 +77,7 @@ function h(e, t) {
     }
     return i;
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -122,17 +122,17 @@ class y extends (r = a.Component) {
             positionKey: u,
             popoutKey: d,
             preload: f,
-            disablePointerEvents: _,
-            ignoreModalClicks: p,
-            scrollBehavior: h,
-            useMouseEnter: m,
+            disablePointerEvents: p,
+            ignoreModalClicks: _,
+            scrollBehavior: m,
+            useMouseEnter: h,
             renderPopout: g,
             layerContext: E,
             position: y = "right",
             autoInvert: O = !0,
             nudgeAlignIntoViewport: v = !0,
-            spacing: I = 8,
-            clickTrap: T = !1,
+            spacing: S = 8,
+            clickTrap: I = !1,
         } = this.props;
         return (0, i.jsx)(l.H, {
             ref: this.ref,
@@ -145,19 +145,19 @@ class y extends (r = a.Component) {
             nudgeAlignIntoViewport: v,
             useRawTargetDimensions: s,
             renderPopout: this.renderPopout,
-            spacing: I,
+            spacing: S,
             shouldShow: null != g && t,
             onRequestOpen: n,
             onRequestClose: r,
             onShiftClick: c,
             positionKey: u,
             popoutKey: d,
-            disablePointerEvents: _,
-            ignoreModalClicks: p,
-            scrollBehavior: h,
-            useMouseEnter: m,
+            disablePointerEvents: p,
+            ignoreModalClicks: _,
+            scrollBehavior: m,
+            useMouseEnter: h,
             layerContext: E,
-            clickTrap: T,
+            clickTrap: I,
             children: e,
         });
     }
@@ -184,11 +184,11 @@ class y extends (r = a.Component) {
 }
 function O(e) {
     var { renderPopout: t } = e,
-        n = h(e, ["renderPopout"]);
+        n = m(e, ["renderPopout"]);
     let r = a.useRef(null),
         [l, c] = a.useState(0);
     function d() {
-        return m(), (0, i.jsx)(i.Fragment, {});
+        return h(), (0, i.jsx)(i.Fragment, {});
     }
     a.useLayoutEffect(() => {
         if (l > 0) {
@@ -205,10 +205,10 @@ function O(e) {
             let e = setTimeout(t, 20 + 20 * Math.random());
             return () => clearTimeout(e);
         });
-    let _ = a.useRef(!1);
-    async function m() {
-        if (!_.current) {
-            _.current = !0;
+    let p = a.useRef(!1);
+    async function h() {
+        if (!p.current) {
+            p.current = !0;
             let e = setTimeout(() => {
                     b(() => g), c((e) => e + 1);
                 }, 300),
@@ -239,13 +239,13 @@ function O(e) {
             O.current = d;
         }),
         a.useEffect(() => {
-            _.current
+            p.current
                 ? t().then((e) => {
                       b(() => e), c((e) => e + 1);
                   })
                 : b(() => O.current);
         }, [t]),
-        (0, i.jsx)(y, p(f({ ref: r }, n), { renderPopout: E }))
+        (0, i.jsx)(y, _(f({ ref: r }, n), { renderPopout: E }))
     );
 }
 d(y, "Animation", g), (O.Animation = g);

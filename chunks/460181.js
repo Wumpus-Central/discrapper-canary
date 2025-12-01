@@ -31,13 +31,13 @@ function f(e) {
     if (s.Z.disableSounds) return;
     let f = (0, o.Z)(null != i ? i : a.Z.getSoundpack());
     null == f && c.log("Unable to find sound for pack name: ".concat(i));
-    let _ = d(null != (t = f[e]) ? t : e, e, n, u);
+    let p = d(null != (t = f[e]) ? t : e, e, n, u);
     return (
         null != r
-            ? _.playWithListener().then((e) => {
+            ? p.playWithListener().then((e) => {
                   e && r();
               })
-            : _.play(),
-        _
+            : p.play(),
+        p
     );
 }

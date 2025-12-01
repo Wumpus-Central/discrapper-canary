@@ -1,6 +1,6 @@
 n.r(t),
     n.d(t, {
-        assign: () => p,
+        assign: () => _,
         batchedUpdates: () => f,
         colorNames: () => c,
         createStringInterpolator: () => r,
@@ -9,7 +9,7 @@ n.r(t),
         requestAnimationFrame: () => d,
         skipAnimation: () => u,
         to: () => i,
-        willAdvance: () => _,
+        willAdvance: () => p,
     });
 var r,
     i,
@@ -30,8 +30,8 @@ var r,
     f = function (e) {
         return e();
     },
-    _ = o.ZT,
-    p = function (e) {
+    p = o.ZT,
+    _ = function (e) {
         var t;
         return (
             (i = (t = Object.assign(
@@ -44,9 +44,9 @@ var r,
                     createStringInterpolator: r,
                     requestAnimationFrame: d,
                     batchedUpdates: f,
-                    willAdvance: _,
+                    willAdvance: p,
                 },
-                h(e),
+                m(e),
             )).to),
             (l = t.now),
             (s = t.frameLoop),
@@ -55,11 +55,11 @@ var r,
             (r = t.createStringInterpolator),
             (d = t.requestAnimationFrame),
             (f = t.batchedUpdates),
-            (_ = t.willAdvance),
+            (p = t.willAdvance),
             t
         );
     };
-function h(e) {
+function m(e) {
     var t = {};
     for (var n in e) void 0 !== e[n] && (t[n] = e[n]);
     return t;

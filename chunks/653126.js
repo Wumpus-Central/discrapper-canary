@@ -3,8 +3,8 @@ var r = n(54381),
     l = n(473749),
     i = n(120356),
     a = n.n(i),
-    s = n(979554),
-    o = n(622535),
+    o = n(979554),
+    s = n(622535),
     c = n(481060),
     u = n(100527),
     d = n(104505),
@@ -32,8 +32,8 @@ let k = l.memo(function (e) {
                 hidePrice: I,
                 hidePrimaryCTA: T,
                 hideSecondaryCTA: L,
-                badgeOverride: B,
-                skipLimitedTimeCheck: P,
+                badgeOverride: P,
+                skipLimitedTimeCheck: B,
                 onClickCard: N,
                 onClickPrimaryCTA: A,
                 onClickSecondaryCTA: R,
@@ -58,12 +58,12 @@ let k = l.memo(function (e) {
             { isHoveringOrFocusing: et } = (0, d.Z)(ee),
             { handleCardVisibilityChange: en } = (0, g.E)(t.skuId, X === y.AW.CATALOG ? "full" : X),
             er = (0, b.J7)(t, u.Z.COLLECTIBLES_SHOP_CARD, G, J),
-            el = t.type === s.Z.VARIANTS_GROUP && !k,
+            el = t.type === o.Z.VARIANTS_GROUP && !k,
             ei = !T || !L,
             ea = !(I && i) || el,
-            es = ea || ei,
-            eo = ei || el;
-        return (0, r.jsx)(o.$, {
+            eo = ea || ei,
+            es = ei || el;
+        return (0, r.jsx)(s.$, {
             innerRef: ee,
             onChange: en,
             threshold: 0,
@@ -80,7 +80,7 @@ let k = l.memo(function (e) {
                     className: j.productCardContentContainer,
                     children: [
                         (0, r.jsx)("div", {
-                            className: a()(j.productPreviewContainer, { [j.hasBottomContent]: !i || ea || eo }),
+                            className: a()(j.productPreviewContainer, { [j.hasBottomContent]: !i || ea || es }),
                             children: (0, r.jsx)(v.Z, {
                                 skuId: t.skuId,
                                 isCardHovered: et,
@@ -92,10 +92,10 @@ let k = l.memo(function (e) {
                             children: [
                                 (0, r.jsx)(p.Z, {
                                     skuId: t.skuId,
-                                    badgeOverride: B,
+                                    badgeOverride: P,
                                     className: V,
                                     prioritizedCurrency: z,
-                                    skipLimitedTimeCheck: P,
+                                    skipLimitedTimeCheck: B,
                                 }),
                                 !n &&
                                     (0, r.jsx)(E.Z, {
@@ -104,7 +104,7 @@ let k = l.memo(function (e) {
                                     }),
                             ],
                         }),
-                        es &&
+                        eo &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)("div", { className: j.footerGradient }),

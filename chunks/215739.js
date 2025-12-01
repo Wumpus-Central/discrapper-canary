@@ -9,7 +9,7 @@ var r = n(704215),
     u = n(675478),
     d = n(885110),
     f = n(981631);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,51 +22,51 @@ function _(e, t, n) {
         e
     );
 }
-let p = new a.V7(),
-    h = new a.V7(),
-    m = new a.V7();
+let _ = new a.V7(),
+    m = new a.V7(),
+    h = new a.V7();
 class g extends o.Z {
     constructor(...e) {
         super(...e),
-            _(this, "previousStatus", null),
-            _(this, "actions", {
+            p(this, "previousStatus", null),
+            p(this, "actions", {
                 POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
                 USER_SETTINGS_PROTO_UPDATE: () => this.handleUserSettingsProtoUpdate(),
             }),
-            _(this, "handlePostConnectionOpen", () => {
+            p(this, "handlePostConnectionOpen", () => {
                 (this.previousStatus = d.Z.getStatus()), this.handleCommonUpdates();
             }),
-            _(this, "handleUserSettingsProtoUpdate", () => {
+            p(this, "handleUserSettingsProtoUpdate", () => {
                 this.handleCommonUpdates(), this.manageDoNotDisturbReminderPopover();
             }),
-            _(this, "handleCommonUpdates", () => {
+            p(this, "handleCommonUpdates", () => {
                 this.manageExpiringCustomStatus(),
                     this.manageExpiringStatus(),
                     this.lazilyMigrateStatusCreatedAt(),
                     this.manageExpiringFocusMode();
             }),
-            _(this, "manageExpiringCustomStatus", () => {
+            p(this, "manageExpiringCustomStatus", () => {
                 let e = c.Ok.getSetting();
-                if (null == e) m.stop();
+                if (null == e) h.stop();
                 else if (null != e.expiresAtMs && "0" !== e.expiresAtMs) {
                     let t = new Date(Number(e.expiresAtMs)).getTime() - new Date().getTime();
                     t > 0
-                        ? m.start(
+                        ? h.start(
                               t,
                               () => {
                                   c.Ok.updateSetting(void 0);
                               },
                               !0,
                           )
-                        : (c.Ok.updateSetting(void 0), m.stop());
-                } else null != m && m.stop();
+                        : (c.Ok.updateSetting(void 0), h.stop());
+                } else null != h && h.stop();
             }),
-            _(this, "manageExpiringStatus", () => {
+            p(this, "manageExpiringStatus", () => {
                 let e = c.Cr.getSetting();
                 if (null != e && "0" !== e && d.Z.getStatus() !== f.Skl.ONLINE) {
                     let t = new Date(Number(e)).getTime() - new Date().getTime();
                     t > 0
-                        ? p.start(
+                        ? _.start(
                               t,
                               () => {
                                   (0, s.Z)({
@@ -80,10 +80,10 @@ class g extends o.Z {
                               nextStatus: f.Skl.ONLINE,
                               analyticsContext: { location: { object: f.qAy.CUSTOM_STATUS_MANAGER } },
                           }),
-                          p.stop());
-                } else null != p && p.stop();
+                          _.stop());
+                } else null != _ && _.stop();
             }),
-            _(this, "lazilyMigrateStatusCreatedAt", () => {
+            p(this, "lazilyMigrateStatusCreatedAt", () => {
                 d.Z.getStatus() !== f.Skl.ONLINE &&
                     null == c.P4.getSetting() &&
                     u.hW.updateAsync(
@@ -94,22 +94,22 @@ class g extends o.Z {
                         u.fy.INFREQUENT_USER_ACTION,
                     );
             }),
-            _(this, "manageExpiringFocusMode", () => {
+            p(this, "manageExpiringFocusMode", () => {
                 let e = c.fv.getSetting();
                 if (null != e && "0" !== e) {
                     let t = new Date(Number(e)).getTime() - new Date().getTime();
                     t > 0
-                        ? h.start(
+                        ? m.start(
                               t,
                               () => {
                                   (0, l.oW)(!1);
                               },
                               !0,
                           )
-                        : ((0, l.oW)(!1), h.stop());
-                } else null != h && h.stop();
+                        : ((0, l.oW)(!1), m.stop());
+                } else null != m && m.stop();
             }),
-            _(this, "manageDoNotDisturbReminderPopover", () => {
+            p(this, "manageDoNotDisturbReminderPopover", () => {
                 if (null == this.previousStatus) {
                     this.previousStatus = d.Z.getStatus();
                     return;

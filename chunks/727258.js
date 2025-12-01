@@ -1,8 +1,8 @@
 n.d(t, {
-    Mg: () => _,
+    Mg: () => p,
     eD: () => u,
     g8: () => f,
-    qQ: () => p,
+    qQ: () => _,
 }),
     n(388685),
     n(472816),
@@ -224,7 +224,7 @@ class f {
             (this.version = 0);
     }
 }
-function _(e, t) {
+function p(e, t) {
     return {
         type: "guild",
         id: e,
@@ -233,7 +233,7 @@ function _(e, t) {
         unavailable: !1,
     };
 }
-function p(e, t, n) {
+function _(e, t, n) {
     var r, i, a;
     return {
         type: "folder",

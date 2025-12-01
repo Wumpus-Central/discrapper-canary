@@ -12,10 +12,10 @@ let c = null,
         suggestedGamesIds: [],
         suggestedWishlistGamesIds: [],
     },
-    _ = !1,
     p = !1,
-    h = !1;
-function m(e) {
+    _ = !1,
+    m = !1;
+function h(e) {
     let { widgets: t } = e;
     if (((c = t), null === u)) {
         let e = s.default.getCurrentUser();
@@ -31,13 +31,13 @@ function g() {
 }
 function E(e) {
     let { suggestedGamesIds: t, suggestedWishlistGamesIds: n } = e;
-    (f.suggestedGamesIds = t), (f.suggestedWishlistGamesIds = n), (p = !1), (_ = !1);
+    (f.suggestedGamesIds = t), (f.suggestedWishlistGamesIds = n), (_ = !1), (p = !1);
 }
 function b() {
-    (_ = !0), (p = !1);
+    (p = !0), (_ = !1);
 }
 function y() {
-    (p = !0), (_ = !1), (h = !0);
+    (_ = !0), (p = !1), (m = !0);
 }
 function O(e) {
     d = !0;
@@ -45,15 +45,15 @@ function O(e) {
 function v(e) {
     (d = !1), null !== c && ((u = null), (c = null));
 }
-function I(e) {
+function S(e) {
     d = !1;
 }
-function T(e) {
+function I(e) {
     let { applicationId: t } = e;
     (f.suggestedGamesIds = f.suggestedGamesIds.filter((e) => e !== t)),
         (f.suggestedWishlistGamesIds = f.suggestedWishlistGamesIds.filter((e) => e !== t));
 }
-class S extends a.ZP.Store {
+class T extends a.ZP.Store {
     initialize() {
         this.waitFor(s.default);
     }
@@ -113,26 +113,26 @@ class S extends a.ZP.Store {
         return d;
     }
     get suggestedFetchError() {
-        return _;
-    }
-    get suggestedFetchIsLoading() {
         return p;
     }
+    get suggestedFetchIsLoading() {
+        return _;
+    }
     get suggestedFetchAttempted() {
-        return h;
+        return m;
     }
     get suggestedGameIds() {
         return f;
     }
 }
-let A = new S(o.Z, {
-    WIDGET_PENDING_SET: m,
+let A = new T(o.Z, {
+    WIDGET_PENDING_SET: h,
     WIDGET_PENDING_SAVE_START: O,
     WIDGET_PENDING_SAVE_SUCCESS: v,
-    WIDGET_PENDING_SAVE_FAILURE: I,
+    WIDGET_PENDING_SAVE_FAILURE: S,
     WIDGET_SUGGESTED_FETCH_SUCCESS: E,
     WIDGET_SUGGESTED_FETCH_FAILURE: b,
     WIDGET_SUGGESTED_FETCH_START: y,
     WIDGET_PENDING_CLEAR: g,
-    WIDGET_SUGGESTED_REMOVE_GAME: T,
+    WIDGET_SUGGESTED_REMOVE_GAME: I,
 });

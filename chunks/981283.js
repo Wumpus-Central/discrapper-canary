@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381);
 n(473749);
 var i = n(481060),
@@ -37,7 +37,7 @@ function f(e) {
     }
     return e;
 }
-class _ extends l.Z {
+class p extends l.Z {
     _initialize() {
         super._initialize(), c.ZP.initializeIfNeeded();
     }
@@ -58,4 +58,4 @@ class _ extends l.Z {
         });
     }
 }
-let p = new _();
+let _ = new p();

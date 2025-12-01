@@ -24,7 +24,7 @@ function p(e) {
         }),
     });
 }
-function v(e) {
+function j(e) {
     return (0, i.jsx)("div", {
         className: x.sectionDescription,
         children: (0, i.jsx)(a.Text, {
@@ -34,7 +34,7 @@ function v(e) {
         }),
     });
 }
-function j(e) {
+function v(e) {
     return (0, i.jsxs)("div", {
         children: [
             null != e.title && (0, i.jsx)(p, { title: e.title }),
@@ -111,17 +111,17 @@ function f(e) {
                     },
                 ],
                 children: [
-                    (0, i.jsx)(j, {
+                    (0, i.jsx)(v, {
                         noPadding: !0,
                         noContainer: !0,
                         children: (0, i.jsx)(h.Z, { guildId: s }),
                     }),
-                    (0, i.jsx)(j, {
+                    (0, i.jsx)(v, {
                         title: m.intl.string(m.t.R9Ej96),
                         noPadding: !0,
                         children: (0, i.jsx)(g.Z, { guildId: s }),
                     }),
-                    (0, i.jsx)(j, {
+                    (0, i.jsx)(v, {
                         title: m.intl.string(m.t["31DySj"]),
                         children: (0, i.jsx)(d.Z, { guildId: s }),
                     }),
@@ -129,8 +129,8 @@ function f(e) {
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(p, { title: m.intl.string(m.t.D9yVAH) }),
-                                (0, i.jsx)(v, { description: m.intl.string(m.t["0PhAOH"]) }),
-                                (0, i.jsx)(j, { children: (0, i.jsx)(u.Z, { guildId: s }) }),
+                                (0, i.jsx)(j, { description: m.intl.string(m.t["0PhAOH"]) }),
+                                (0, i.jsx)(v, { children: (0, i.jsx)(u.Z, { guildId: s }) }),
                             ],
                         }),
                     (0, i.jsx)(p, { title: m.intl.string(m.t.JrySi3) }),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(544891),
     i = n(570140),
     a = n(232567),
@@ -9,7 +9,7 @@ var r = n(544891),
     u = n(960048),
     d = n(22494),
     f = n(981631);
-let _ = {
+let p = {
     async fetchWishlist(e, t) {
         i.Z.dispatch({
             type: "WISHLIST_FETCH_START",

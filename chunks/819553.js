@@ -37,20 +37,20 @@ let u = {},
 function f() {
     (u = {}), (d = {});
 }
-function _(e) {
+function p(e) {
     let { guildId: t } = e;
     u[t] = "started";
 }
-function p(e) {
+function _(e) {
     let { guildId: t, enabled: n } = e;
     if ("started" !== u[t]) return !1;
     n ? (u[t] = "ready") : (u[t] = "not_applicable");
 }
-function h(e) {
+function m(e) {
     let { guildId: t } = e;
     u[t] = "not_applicable";
 }
-function m(e) {
+function h(e) {
     let { guildId: t } = e;
     u[t] = "completed";
 }
@@ -84,10 +84,10 @@ s(y, "displayName", "GuildOnboardingStore");
 let O = new y(a.Z, {
     LOGOUT: f,
     GUILD_DELETE: g,
-    GUILD_ONBOARDING_START: _,
-    GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: p,
-    GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE: h,
-    GUILD_ONBOARDING_COMPLETE: m,
+    GUILD_ONBOARDING_START: p,
+    GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: _,
+    GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE: m,
+    GUILD_ONBOARDING_COMPLETE: h,
     GUILD_ONBOARDING_SET_STEP: E,
     CONNECTION_OPEN: b,
 });

@@ -1,9 +1,9 @@
 n.d(t, {
     $w: () => E,
-    Bh: () => m,
+    Bh: () => h,
     Gx: () => y,
-    TA: () => _,
-    V$: () => h,
+    TA: () => p,
+    V$: () => m,
     g5: () => g,
     i7: () => b,
     rD: () => u,
@@ -25,10 +25,10 @@ function d(e) {
 function f(e) {
     return d(e) ? l.X7.includes(e) : !!u(e) && ((0, s.xR)(e.asset) || (0, s.ay)(e.asset));
 }
-function _(e) {
+function p(e) {
     return null != e ? "Video Background" : "None";
 }
-function p(e) {
+function _(e) {
     switch (e) {
         case l.dp.OPTION_1:
             return "Cybercity";
@@ -48,18 +48,18 @@ function p(e) {
             return "Wumpice";
     }
 }
-function h(e) {
-    return null == e ? "None" : u(e) ? "Custom" : "blur" === e ? "Blur" : "Preset - ".concat(p(e));
+function m(e) {
+    return null == e ? "None" : u(e) ? "Custom" : "blur" === e ? "Blur" : "Preset - ".concat(_(e));
 }
-function m(e, t, n) {
+function h(e, t, n) {
     let s = a.Z.getGuildId(),
         l = a.Z.getChannelId(),
         u = i.Z.getChannel(l),
         d = (0, r.kO)(s, l, !0);
     o.default.track(c.rMx.VIDEO_EFFECT_UPDATED, {
         location: t,
-        effect_type: _(e),
-        effect_detail: h(e),
+        effect_type: p(e),
+        effect_detail: m(e),
         effect_state: n,
         channel_id: l,
         channel_type: null == u ? void 0 : u.type,

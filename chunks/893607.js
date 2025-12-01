@@ -1,6 +1,6 @@
 n.d(t, {
     DH: () => c,
-    Hw: () => _,
+    Hw: () => p,
     Ss: () => u,
     cq: () => d,
 }),
@@ -30,7 +30,7 @@ function f(e, t) {
             .concat(n ? "?" : ""),
     );
 }
-let _ = {
+let p = {
     guildId() {
         let { name: e = "guildId", optional: t = !1 } =
                 arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},

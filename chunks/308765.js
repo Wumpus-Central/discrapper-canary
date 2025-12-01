@@ -628,11 +628,11 @@ let i = {
             "GUILD_SOUNDBOARD_SOUND_PLAY_END",
             "VOICE_CHANNEL_SELECT",
         ],
-        inlineRequire: () => n(460779).Z,
+        inlineRequire: () => n(600349).Z,
     },
     ClipsSignalManager: {
         actions: ["RUNNING_GAMES_CHANGE", "CLIPS_SETTINGS_UPDATE", "VOICE_CHANNEL_SELECT", "VOICE_STATE_UPDATES"],
-        inlineRequire: () => n(269278).Z,
+        inlineRequire: () => n(291706).Z,
     },
     CustomCallSoundsManager: {
         actions: ["RTC_CONNECTION_STATE", "SOUNDBOARD_MUTE_JOIN_SOUND", "VOICE_STATE_UPDATES"],

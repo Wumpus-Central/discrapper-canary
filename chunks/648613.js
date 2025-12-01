@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => S });
 var r = n(54381);
 n(473749);
 var i = n(442837),
@@ -10,10 +10,10 @@ var i = n(442837),
     u = n(313789),
     d = n(518596),
     f = n(594174),
-    _ = n(78839),
-    p = n(639119),
-    h = n(474936),
-    m = n(981631);
+    p = n(78839),
+    _ = n(639119),
+    m = n(474936),
+    h = n(981631);
 function g(e, t, n) {
     return (
         t in e
@@ -87,34 +87,34 @@ function v(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function I(e) {
+function S(e) {
     let {
             onClick: t,
             subscriptionTier: g,
             postSuccessGuild: b,
             onSubscribeModalClose: v,
-            premiumModalAnalyticsLocation: I,
-            applicationId: T,
-            giftMessage: S,
+            premiumModalAnalyticsLocation: S,
+            applicationId: I,
+            giftMessage: T,
             confirmationFooter: A,
             isGift: C,
             children: N,
         } = e,
-        R = (0, i.e7)([f.default], () => f.default.getCurrentUser()),
-        P = (0, i.e7)([_.Z], () => _.Z.getPremiumTypeSubscription()),
-        { analyticsLocations: D } = (0, o.ZP)(),
-        w = (0, p.N)(),
-        L = !C && null != w && null != g && h.nG[w.trial_id].skus.includes(g);
+        P = (0, i.e7)([f.default], () => f.default.getCurrentUser()),
+        R = (0, i.e7)([p.Z], () => p.Z.getPremiumTypeSubscription()),
+        { analyticsLocations: w } = (0, o.ZP)(),
+        D = (0, _.N)(),
+        x = !C && null != D && null != g && m.nG[D.trial_id].skus.includes(g);
     return N({
         onClick: (e) => {
             var i;
-            if ((e.preventDefault(), null == R))
-                return void (0, c.uL)(m.Z5c.LOGIN, { source: "premium_subscribe_button" });
-            if ((null == t || t(e), (null == P ? void 0 : P.status) === m.O0b.ACCOUNT_HOLD)) {
-                (0, s.A3)(), (0, d.openUserSettings)(u.n.NITRO_PANEL, { section: m.oAB.PREMIUM }), null == v || v(!1);
+            if ((e.preventDefault(), null == P))
+                return void (0, c.uL)(h.Z5c.LOGIN, { source: "premium_subscribe_button" });
+            if ((null == t || t(e), (null == R ? void 0 : R.status) === h.O0b.ACCOUNT_HOLD)) {
+                (0, s.A3)(), (0, d.openUserSettings)(u.n.NITRO_PANEL, { section: h.oAB.PREMIUM }), null == v || v(!1);
                 return;
             }
-            if (!R.isClaimed())
+            if (!P.isClaimed())
                 return void (0, a.ZDy)(async () => {
                     let { default: e } = await Promise.all([n.e("88470"), n.e("77927"), n.e("69417")]).then(
                         n.bind(n, 918995),
@@ -125,7 +125,7 @@ function I(e) {
                         return (0, r.jsx)(e, y(E({}, i), { onClose: n }));
                     };
                 });
-            if (!R.verified)
+            if (!P.verified)
                 return void (0, a.ZDy)(async () => {
                     let { default: e } = await Promise.all([n.e("88470"), n.e("20102")]).then(n.bind(n, 444688));
                     return (t) => {
@@ -134,26 +134,26 @@ function I(e) {
                         return (0, r.jsx)(e, y(E({}, i), { onClose: n }));
                     };
                 });
-            let o = L ? (null == (i = w.subscription_trial) ? void 0 : i.id) : null,
-                f = m.AnalyticsObjectTypes.BUY;
-            null != o ? (f = m.AnalyticsObjectTypes.TRIAL) : C && (f = m.AnalyticsObjectTypes.GIFT),
+            let o = x ? (null == (i = D.subscription_trial) ? void 0 : i.id) : null,
+                f = h.AnalyticsObjectTypes.BUY;
+            null != o ? (f = h.AnalyticsObjectTypes.TRIAL) : C && (f = h.AnalyticsObjectTypes.GIFT),
                 (0, l.Z)({
                     isGift: C,
                     initialPlanId: null,
                     subscriptionTier: g,
-                    analyticsLocations: D,
+                    analyticsLocations: w,
                     analyticsObject: E(
                         {
-                            object: m.qAy.BUTTON_CTA,
+                            object: h.qAy.BUTTON_CTA,
                             objectType: f,
                         },
-                        I,
+                        S,
                     ),
                     trialId: o,
                     postSuccessGuild: b,
                     onClose: v,
-                    applicationId: T,
-                    giftMessage: S,
+                    applicationId: I,
+                    giftMessage: T,
                     confirmationFooter: A,
                 });
         },

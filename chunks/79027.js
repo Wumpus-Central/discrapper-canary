@@ -1,4 +1,4 @@
-n.d(t, { o: () => m }), n(388685);
+n.d(t, { o: () => h }), n(388685);
 var r,
     i = n(54381),
     a = n(473749),
@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,22 +48,22 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let h = {
+let m = {
     friction: 7,
     tension: 60,
 };
-class m extends (r = a.Component) {
+class h extends (r = a.Component) {
     componentWillAppear(e) {
         this.animateTo(1).start(e);
     }
@@ -75,7 +75,7 @@ class m extends (r = a.Component) {
         t.enabled ? this.animateTo(0).start(e) : l.Z.stagger(250, [this.animateTo(1.3), this.animateTo(0)]).start(e);
     }
     animateTo(e) {
-        return l.Z.spring(this.animation, p(f({}, h), { toValue: e }));
+        return l.Z.spring(this.animation, _(f({}, m), { toValue: e }));
     }
     getAnimatedStyle() {
         let { reducedMotion: e } = this.context;
@@ -105,4 +105,4 @@ class m extends (r = a.Component) {
         super(...e), d(this, "animation", new l.Z.Value(0));
     }
 }
-d(m, "contextType", c.Sfi);
+d(h, "contextType", c.Sfi);

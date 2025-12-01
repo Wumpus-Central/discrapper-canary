@@ -1,16 +1,16 @@
-n.d(t, { T: () => b }), n(415506);
+n.d(t, { T: () => p }), n(415506);
 var r = n(54381),
     l = n(473749),
     i = n(442837),
     o = n(215569),
     a = n(481060),
-    c = n(924052),
-    s = n(700425),
+    s = n(924052),
+    c = n(700425),
     u = n(670304),
     d = n(764516);
 function f(e) {
     let { notice: t, children: n } = e,
-        { showNotice: s, handleStoreUpdate: u } = (0, c.Cu)(),
+        { showNotice: c, handleStoreUpdate: u } = (0, s.Cu)(),
         f = null == t ? void 0 : t.stores;
     l.useEffect(() => {
         if (null != f) {
@@ -26,31 +26,31 @@ function f(e) {
             );
         }
     }, [f, u]);
-    let b = l.useMemo(() => {
-        if (null == t || !s) return null;
+    let p = l.useMemo(() => {
+        if (null == t || !c) return null;
         let { element: e } = t;
         return (0, r.jsx)(a.oXn, {
             className: d.notice,
             children: (0, r.jsx)(e, {}),
         });
-    }, [t, s]);
+    }, [t, c]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             n,
             (0, r.jsx)(o.W, {
                 component: "div",
-                children: b,
+                children: p,
             }),
         ],
     });
 }
-function b(e) {
+function p(e) {
     let { node: t } = e,
         n = l.useRef(null),
         i = l.useRef(null);
     if (1 !== t.layout.length) throw Error("Panels do not currently support multiple panes");
     return (
-        (0, s.i)(t, i),
+        (0, c.i)(t, i),
         (0, r.jsx)(f, {
             notice: t.notice,
             children: (0, r.jsx)(

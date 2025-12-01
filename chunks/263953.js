@@ -9,7 +9,7 @@ var r,
     u = n(793030),
     d = n(215569),
     f = n(466842);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,12 +33,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,12 +50,12 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -157,8 +157,8 @@ class g extends (r = o.PureComponent) {
             l = null != (t = this.props.verticalMargin) ? t : 0,
             u = 1 === i,
             d = 0 === i;
-        return m(
-            p(
+        return h(
+            _(
                 {},
                 {
                     overflow: d || u ? "hidden" : "visible",
@@ -215,17 +215,17 @@ class g extends (r = o.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            _(this, "state", {
+            p(this, "state", {
                 animationProgress: new c.Z.Value(0),
                 targetHeight: 0,
                 baseHeight: 0,
                 animationState: null,
             }),
-            _(this, "direction", this.props.getDirection()),
-            _(this, "_measureRef", o.createRef());
+            p(this, "direction", this.props.getDirection()),
+            p(this, "_measureRef", o.createRef());
     }
 }
-_(g, "contextType", u.Sfi), _(g, "defaultProps", { duration: 300 });
+p(g, "contextType", u.Sfi), p(g, "defaultProps", { duration: 300 });
 class E extends (i = o.Component) {
     componentDidMount() {
         this.setPrevSteps();
@@ -248,8 +248,8 @@ class E extends (i = o.Component) {
             sideMargin: s,
             verticalMargin: c,
             children: u,
-            fillParent: _,
-            animationMotionType: p,
+            fillParent: p,
+            animationMotionType: _,
         } = this.props;
         return (0, a.jsx)(d.W, {
             component: "div",
@@ -257,9 +257,9 @@ class E extends (i = o.Component) {
             children: (0, a.jsx)(
                 g,
                 {
-                    fillParent: _,
+                    fillParent: p,
                     sideMargin: s,
-                    animationMotionType: null != p ? p : "slide",
+                    animationMotionType: null != _ ? _ : "slide",
                     verticalMargin: c,
                     getDirection: this.getDirection,
                     getBaseHeight: this.getBaseHeight,
@@ -275,25 +275,25 @@ class E extends (i = o.Component) {
     }
     constructor(...e) {
         super(...e),
-            _(this, "stepHeights", {}),
-            _(this, "prevStep", null),
-            _(this, "prevSteps", []),
-            _(this, "getBaseHeight", () =>
+            p(this, "stepHeights", {}),
+            p(this, "prevStep", null),
+            p(this, "prevSteps", []),
+            p(this, "getBaseHeight", () =>
                 null != this.prevStep && null != this.stepHeights[this.prevStep] ? this.stepHeights[this.prevStep] : 0,
             ),
-            _(this, "getDirection", () => {
+            p(this, "getDirection", () => {
                 let { steps: e, step: t } = this.props,
                     n = null != this.prevStep ? e.indexOf(this.prevStep) : -1,
                     r = -1 === n && null != this.prevStep ? this.prevSteps.indexOf(this.prevStep) : -1;
                 return Math.max(n, r) > e.indexOf(t) ? -1 : 1;
             }),
-            _(this, "setHeight", (e) => {
+            p(this, "setHeight", (e) => {
                 let { step: t } = this.props;
                 this.stepHeights[t] = e;
             });
     }
 }
-_(E, "defaultProps", {
+p(E, "defaultProps", {
     fillParent: !1,
     animationMotionType: "slide",
 });

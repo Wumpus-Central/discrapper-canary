@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(678916),
     i = n(190378),
     a = n(388032),
@@ -9,8 +9,8 @@ var r = n(678916),
     u = n(221226),
     d = n(979954),
     f = n(197231),
-    _ = n(48539);
-let p = () => ({
+    p = n(48539);
+let _ = () => ({
     [r.dp.OPTION_1]: {
         id: r.dp.OPTION_1,
         source: l.Z,
@@ -54,7 +54,7 @@ let p = () => ({
     },
     [r.dp.OPTION_10]: {
         id: r.dp.OPTION_10,
-        source: _.Z,
+        source: p.Z,
         name: a.intl.string(a.t.TSTgyL),
         isVideo: !0,
         hotspotLocation: i.v.ANIMATED_VIDEO_BG_WUMPICE_NEW,

@@ -31,7 +31,7 @@ function c(e) {
             }
             return i;
         })(e, ["channel", "category"]);
-    let p = (0, o.ZP)(c, !0),
+    let f = (0, o.ZP)(c, !0),
         h = (0, o.ZP)(u);
     return (0, r.jsx)(
         l.ConfirmModal,
@@ -75,7 +75,7 @@ function c(e) {
                     className: s.message,
                     selectable: !1,
                     children: a.intl.format(a.t["iKW+jY"], {
-                        channelName: p,
+                        channelName: f,
                         categoryName: h,
                     }),
                 }),

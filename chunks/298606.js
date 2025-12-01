@@ -28,22 +28,22 @@ function d(e, t, n) {
             n > 0 && (n = a.childNodes.length)),
         0 === n)
     ) {
-        var _ = null;
+        var p = null;
         return {
-            key: (_ = null != d ? d : l(i(c(a)))),
+            key: (p = null != d ? d : l(i(c(a)))),
             offset: 0,
         };
     }
-    var p = a.childNodes[n - 1],
-        h = null,
-        m = null;
-    if (i(p)) {
-        var g = u(p);
-        (h = l(i(g))), (m = f(g));
-    } else (h = l(d)), (m = f(p));
+    var _ = a.childNodes[n - 1],
+        m = null,
+        h = null;
+    if (i(_)) {
+        var g = u(_);
+        (m = l(i(g))), (h = f(g));
+    } else (m = l(d)), (h = f(_));
     return {
-        key: h,
-        offset: m,
+        key: m,
+        offset: h,
     };
 }
 function f(e) {
@@ -59,27 +59,27 @@ e.exports = function (e, t, n, i, o, s) {
             needsRecovery: !1,
         };
     var f = null,
-        _ = null,
-        p = !0;
+        p = null,
+        _ = !0;
     return (
         c
             ? ((f = {
                   key: l(r(n)),
                   offset: i,
               }),
-              (_ = d(t, o, s)))
+              (p = d(t, o, s)))
             : u
-              ? ((_ = {
+              ? ((p = {
                     key: l(r(o)),
                     offset: s,
                 }),
                 (f = d(t, n, i)))
               : ((f = d(t, n, i)),
-                (_ = d(t, o, s)),
-                n === o && i === s && (p = !!n.firstChild && "BR" !== n.firstChild.nodeName)),
+                (p = d(t, o, s)),
+                n === o && i === s && (_ = !!n.firstChild && "BR" !== n.firstChild.nodeName)),
         {
-            selectionState: a(e, f.key, f.offset, _.key, _.offset),
-            needsRecovery: p,
+            selectionState: a(e, f.key, f.offset, p.key, p.offset),
+            needsRecovery: _,
         }
     );
 };

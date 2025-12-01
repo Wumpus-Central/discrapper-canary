@@ -1,4 +1,4 @@
-n.d(t, { L: () => I }), n(539854);
+n.d(t, { L: () => S }), n(539854);
 var r,
     i = n(54381),
     a = n(473749),
@@ -9,10 +9,10 @@ var r,
     u = n(15127),
     d = n(993365),
     f = n(639317),
-    _ = n(388032),
-    p = n(8542),
-    h = n(979712),
-    m = n(154257);
+    p = n(388032),
+    _ = n(8542),
+    m = n(979712),
+    h = n(154257);
 function g(e, t, n) {
     return (
         t in e
@@ -31,7 +31,7 @@ let E = (0, l.Z)(),
     y = (0, l.Z)(),
     O = 10,
     v = 7.23;
-class I extends (r = a.Component) {
+class S extends (r = a.Component) {
     getPaddingRight() {
         let { maxLength: e, showCharacterCountFullPadding: t } = this.props;
         if (null == e) return O;
@@ -55,7 +55,7 @@ class I extends (r = a.Component) {
             var e;
             let { value: t, maxLength: n } = this.props;
             return (0, i.jsxs)("div", {
-                className: s()(p.maxLength, { [p.errorOverflow]: this.hasError() }),
+                className: s()(_.maxLength, { [_.errorOverflow]: this.hasError() }),
                 "aria-hidden": "true",
                 children: [null != (e = null == t ? void 0 : t.length) ? e : 0, " ", null != n && "/ ".concat(n)],
             });
@@ -68,7 +68,7 @@ class I extends (r = a.Component) {
         return null == e
             ? null
             : (0, i.jsx)("div", {
-                  className: s()(p.maxLength, { [p.errorOverflow]: e < 0 }),
+                  className: s()(_.maxLength, { [_.errorOverflow]: e < 0 }),
                   "aria-hidden": "true",
                   children: e,
               });
@@ -82,8 +82,8 @@ class I extends (r = a.Component) {
     }
     getErrorMessage() {
         let { error: e, maxLength: t, minLength: n } = this.props,
-            r = this.getIsOverflowing() ? _.intl.formatToPlainString(_.t.ICT5S6, { maxLength: t }) : null,
-            i = this.getIsUnderflowing() ? _.intl.formatToPlainString(_.t["62rk1K"], { minLength: n }) : null;
+            r = this.getIsOverflowing() ? p.intl.formatToPlainString(p.t.ICT5S6, { maxLength: t }) : null,
+            i = this.getIsUnderflowing() ? p.intl.formatToPlainString(p.t["62rk1K"], { minLength: n }) : null;
         return (null != e && "" === e) || null === e
             ? null
             : void 0 !== e
@@ -102,7 +102,7 @@ class I extends (r = a.Component) {
                   id: E,
                   variant: "text-xs/normal",
                   color: "text-danger",
-                  className: p.errorMessage,
+                  className: _.errorMessage,
                   children: e,
               });
     }
@@ -120,34 +120,34 @@ class I extends (r = a.Component) {
                 resizeable: E,
                 className: O,
                 id: v,
-                rows: I,
-                flex: T,
-                autosize: S,
+                rows: S,
+                flex: I,
+                autosize: T,
                 required: A,
                 onInvalid: C,
                 inputRef: N,
             } = this.props,
-            R = S ? f.g : "textarea",
-            P = this.hasError(),
-            D = null != (t = this.props["aria-labelledby"]) ? t : null == (e = this.context) ? void 0 : e.titleId,
-            w = this.getAriaDescribedBy();
+            P = T ? f.g : "textarea",
+            R = this.hasError(),
+            w = null != (t = this.props["aria-labelledby"]) ? t : null == (e = this.context) ? void 0 : e.titleId,
+            D = this.getAriaDescribedBy();
         return (0, i.jsxs)("div", {
-            className: s()(h.inputWrapper, { [p.flex]: T }),
+            className: s()(m.inputWrapper, { [_.flex]: I }),
             children: [
                 (0, i.jsxs)("div", {
-                    className: s()(p.inputMaxLength, { [p.flex]: T }),
+                    className: s()(_.inputMaxLength, { [_.flex]: I }),
                     children: [
                         (0, i.jsx)(c.tEY, {
-                            children: (0, i.jsx)(R, {
+                            children: (0, i.jsx)(P, {
                                 type: "text",
-                                className: s()(h.input, p.textArea, m.scrollbarDefault, O, {
-                                    [h.error]: P,
-                                    [h.disabled]: n,
-                                    [p.resizeable]: E,
+                                className: s()(m.input, _.textArea, h.scrollbarDefault, O, {
+                                    [m.error]: R,
+                                    [m.disabled]: n,
+                                    [_.resizeable]: E,
                                 }),
-                                "aria-labelledby": D,
-                                "aria-describedby": w,
-                                "aria-invalid": P,
+                                "aria-labelledby": w,
+                                "aria-describedby": D,
+                                "aria-invalid": R,
                                 style: { paddingRight: this.getPaddingRight() },
                                 id: v,
                                 disabled: n,
@@ -163,19 +163,19 @@ class I extends (r = a.Component) {
                                 onFocus: this.onFocus,
                                 onKeyDown: this.onKeyDown,
                                 onInvalid: C,
-                                rows: I,
+                                rows: S,
                                 ref: N,
                             }),
                         }),
                         null != l &&
                             (0, i.jsx)(c.nn4, {
                                 id: b,
-                                children: _.intl.format(_.t["bmQU//"], { minLength: l }),
+                                children: p.intl.format(p.t["bmQU//"], { minLength: l }),
                             }),
                         null != u &&
                             (0, i.jsx)(c.nn4, {
                                 id: y,
-                                children: _.intl.format(_.t["+DFxLc"], { maxLength: u }),
+                                children: p.intl.format(p.t["+DFxLc"], { maxLength: u }),
                             }),
                         this.renderCharacterCount(),
                         this.renderMaxLength(),
@@ -218,8 +218,8 @@ class I extends (r = a.Component) {
             (this.state = { dirty: null != (t = e.defaultDirty) && t });
     }
 }
-g(I, "contextType", u.q3),
-    g(I, "defaultProps", {
+g(S, "contextType", u.q3),
+    g(S, "defaultProps", {
         name: "",
         disabled: !1,
         placeholder: "",

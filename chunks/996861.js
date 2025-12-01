@@ -1,18 +1,18 @@
 n.d(t, {
     $Z: () => _,
-    B8: () => I,
+    B8: () => T,
     F4: () => P,
     HH: () => x,
-    Hd: () => T,
+    Hd: () => I,
     Xl: () => w,
     dF: () => C,
-    eM: () => R,
+    eM: () => L,
     fB: () => Z,
-    gK: () => M,
-    mG: () => A,
+    gK: () => A,
+    mG: () => M,
     qe: () => D,
     rY: () => N,
-    ts: () => L,
+    ts: () => R,
     zW: () => E,
 }),
     n(54381),
@@ -20,7 +20,7 @@ n.d(t, {
     n(481060);
 var r = n(332148),
     i = n(904245),
-    l = n(887715),
+    l = n(742828),
     a = n(912332),
     o = n(434404);
 n(726521);
@@ -32,10 +32,10 @@ var s = n(623292),
     g = n(626135),
     b = n(934415),
     p = n(572004),
-    y = n(585483),
-    O = n(709054),
-    h = n(111618),
-    m = n(50284),
+    m = n(585483),
+    y = n(709054),
+    O = n(111618),
+    h = n(50284),
     v = n(730954),
     j = n(819514),
     S = n(981631);
@@ -58,11 +58,11 @@ function _(e, t, n) {
         ? i.Z.deleteMessage(e.id, t.id, t.state === S.yb.SEND_FAILED)
         : j.Z.confirmDelete(e, t);
 }
-function T(e, t) {
+function I(e, t) {
     i.Z.startEditMessageRecord(e.id, t);
 }
-function I(e, t) {
-    (0, m.Z)(e.id, t.id);
+function T(e, t) {
+    (0, h.Z)(e.id, t.id);
 }
 function N(e, t, n) {
     if (!1 === t.pinned) return void (n.shiftKey ? r.Z.pinMessage(e, t.id) : j.Z.confirmPin(e, t));
@@ -71,8 +71,8 @@ function N(e, t, n) {
 function w(e, t) {
     (0, l.Z)(e.id, t.id);
 }
-function A(e, t) {
-    (0, v.Z)(e, t, void 0, h.Z.getOptions(t.id));
+function M(e, t) {
+    (0, v.Z)(e, t, void 0, O.Z.getOptions(t.id));
 }
 function x(e, t, n) {
     let r = e.isPrivate(),
@@ -83,13 +83,13 @@ function x(e, t, n) {
         shouldMention: !n.shiftKey && !i,
         showMentionToggle: !r && !i,
     }),
-        y.S.dispatch(S.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id });
+        m.S.dispatch(S.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id });
 }
-function M(e, t) {
+function A(e, t) {
     (0, u.R6)(e, t, "Message");
 }
 function D(e, t) {
-    let n = f.Z.getChannel(O.default.castMessageIdAsChannelId(t.id));
+    let n = f.Z.getChannel(y.default.castMessageIdAsChannelId(t.id));
     null != n && (0, u.ok)(n);
 }
 function C(e, t) {
@@ -98,13 +98,13 @@ function C(e, t) {
         messageId: t.id,
     });
 }
-function R(e, t) {
+function L(e, t) {
     (0, c.x)({
         channelId: e.id,
         messageId: t.id,
     });
 }
-function L(e, t) {
+function R(e, t) {
     (0, a.l8)({
         message: t,
         source: "message-actions",

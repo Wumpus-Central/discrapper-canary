@@ -9,31 +9,31 @@ var r = n(54381),
     u = n(481060),
     d = n(410030),
     f = n(100527),
-    _ = n(906732),
-    p = n(975298),
-    h = n(15640),
-    m = n(594174),
+    p = n(906732),
+    _ = n(975298),
+    m = n(15640),
+    h = n(594174),
     g = n(78839),
     E = n(74538),
     b = n(367074),
     y = n(775412),
     O = n(46062),
     v = n(622909),
-    I = n(639119),
-    T = n(736519),
-    S = n(784238),
+    S = n(639119),
+    I = n(736519),
+    T = n(784238),
     A = n(230916),
     C = n(346497),
     N = n(382791),
-    R = n(21023),
-    P = n(474936),
-    D = n(388032),
-    w = n(17355),
-    L = n(102655),
-    x = n(768236),
-    M = n(314907),
-    k = n(826701);
-function j(e, t, n) {
+    P = n(21023),
+    R = n(474936),
+    w = n(388032),
+    D = n(17355),
+    x = n(102655),
+    L = n(768236),
+    j = n(314907),
+    M = n(826701);
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -57,7 +57,7 @@ function U(e) {
                 }),
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
@@ -74,7 +74,7 @@ function G(e, t) {
     }
     return n;
 }
-function B(e, t) {
+function Z(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -85,53 +85,53 @@ function B(e, t) {
         e
     );
 }
-let Z = () => {
+let B = () => {
         let e = (0, C.W)();
         return (0, r.jsx)(N.Cy, {
             text: e,
-            className: w.bogoPillWithSparkles,
+            className: D.bogoPillWithSparkles,
             colorOptions: N.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL,
         });
     },
     F = () =>
         (0, r.jsx)("div", {
-            className: w.mostPopularPill,
+            className: D.mostPopularPill,
             children: (0, r.jsx)(u.Heading, {
-                className: w.mostPopularText,
+                className: D.mostPopularText,
                 variant: "heading-deprecated-12/extrabold",
-                children: D.intl.string(D.t["o/oRJB"]),
+                children: w.intl.string(w.t["o/oRJB"]),
             }),
         }),
     V = (e) => {
         let t,
             { premiumType: n } = e,
             i = (0, d.ZP)();
-        t = n === P.PremiumTypes.TIER_0 ? ((0, l.wj)(i) ? L : x) : (0, l.wj)(i) ? M : k;
+        t = n === R.PremiumTypes.TIER_0 ? ((0, l.wj)(i) ? x : L) : (0, l.wj)(i) ? j : M;
         let a = (0, E.Px)(n);
         return (0, r.jsx)("img", {
             src: t,
-            className: w.logo,
+            className: D.logo,
             alt: a,
         });
     },
     H = (e) => {
         let { label: t, column1: n, column2: i } = e;
         return (0, r.jsxs)("tr", {
-            className: o()(w.headerRow, w.rowBottomBorder, w.topBorderRadius),
+            className: o()(D.headerRow, D.rowBottomBorder, D.topBorderRadius),
             children: [
                 (0, r.jsx)("th", {
                     scope: "col",
-                    className: w.headerLabelCell,
+                    className: D.headerLabelCell,
                     children: t,
                 }),
                 (0, r.jsx)("th", {
                     scope: "col",
-                    className: w.headerCell,
+                    className: D.headerCell,
                     children: n,
                 }),
                 (0, r.jsx)("th", {
                     scope: "col",
-                    className: o()(w.headerCell, w.topBorderRadius),
+                    className: o()(D.headerCell, D.topBorderRadius),
                     children: i,
                 }),
             ],
@@ -149,28 +149,28 @@ let Z = () => {
             shortRow: u = !1,
         } = e;
         return (0, r.jsxs)("tr", {
-            className: o()(w.row, {
-                [w.wideRow]: c,
-                [w.topBorderRadius]: s,
-                [w.bottomBorderRadius]: l,
-                [w.rowBottomBorder]: a,
-                [w.shortRow]: u,
+            className: o()(D.row, {
+                [D.wideRow]: c,
+                [D.topBorderRadius]: s,
+                [D.bottomBorderRadius]: l,
+                [D.rowBottomBorder]: a,
+                [D.shortRow]: u,
             }),
             children: [
                 (0, r.jsx)("th", {
                     scope: "row",
-                    className: w.labelCell,
+                    className: D.labelCell,
                     children: t,
                 }),
                 (0, r.jsx)("td", {
-                    className: o()(w.cell, { [w.buttonsCell]: c }),
+                    className: o()(D.cell, { [D.buttonsCell]: c }),
                     children: n,
                 }),
                 (0, r.jsx)("td", {
-                    className: o()(w.cell, {
-                        [w.topBorderRadius]: s,
-                        [w.bottomBorderRadius]: l,
-                        [w.buttonsCell]: c,
+                    className: o()(D.cell, {
+                        [D.topBorderRadius]: s,
+                        [D.bottomBorderRadius]: l,
+                        [D.buttonsCell]: c,
                     }),
                     children: i,
                 }),
@@ -183,41 +183,41 @@ let Z = () => {
             {
                 className: a,
                 hideCTAs: C = !1,
-                headingOverride: L,
-                hidePill: x = !1,
-                selectedPlanColumnClassName: M,
-                selectedPlanTier: k = P.PremiumTypes.TIER_2,
+                headingOverride: x,
+                hidePill: L = !1,
+                selectedPlanColumnClassName: j,
+                selectedPlanTier: M = R.PremiumTypes.TIER_2,
             } = e,
-            { analyticsLocations: j } = (0, _.ZP)(f.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
+            { analyticsLocations: k } = (0, p.ZP)(f.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
             G = (0, s.e7)([g.Z], () => g.Z.hasFetchedSubscriptions()),
-            W = (0, h.V)(P.nS),
+            W = (0, m.V)(R.nS),
             K = (0, d.ZP)(),
             z = (0, l.ap)(K),
-            q = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
-            X = (0, E.M5)(q, P.PremiumTypes.TIER_2),
-            Q = (0, I.N)(),
-            J = null == Q || null == (t = Q.subscription_trial) ? void 0 : t.sku_id,
+            q = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
+            Q = (0, E.M5)(q, R.PremiumTypes.TIER_2),
+            X = (0, S.N)(),
+            J = null == X || null == (t = X.subscription_trial) ? void 0 : t.sku_id,
             $ = (0, y.rT)(),
             ee = (0, v.N)(),
-            et = null != ee && (0, A.Wp)(ee, P.Si.TIER_2),
-            en = (0, A.Aq)(P.Xh.PREMIUM_MONTH_TIER_2),
-            er = "".concat(en, "/").concat((0, E.eP)(P.rV.MONTH)),
-            ei = (0, E.CY)(P.Xh.PREMIUM_MONTH_TIER_0),
-            ea = (0, E.CY)(P.Xh.PREMIUM_MONTH_TIER_2),
-            eo = (0, p.Z)(),
-            es = (0, R.n)(ei, ea, et, er, eo.fractionalState),
+            et = null != ee && (0, A.Wp)(ee, R.Si.TIER_2),
+            en = (0, A.Aq)(R.Xh.PREMIUM_MONTH_TIER_2),
+            er = "".concat(en, "/").concat((0, E.eP)(R.rV.MONTH)),
+            ei = (0, E.CY)(R.Xh.PREMIUM_MONTH_TIER_0),
+            ea = (0, E.CY)(R.Xh.PREMIUM_MONTH_TIER_2),
+            eo = (0, _.Z)(),
+            es = (0, P.n)(ei, ea, et, er, eo.fractionalState),
             el = (0, b.Vi)(),
             { enabled: ec } = O.T.useExperiment({ location: "PlanComparisonTable" });
         if (!G || !W) return null;
-        let eu = ec ? D.intl.string(D.t.XXENra) : D.intl.string(D.t.ED4UVD),
+        let eu = ec ? w.intl.string(w.t.XXENra) : w.intl.string(w.t.ED4UVD),
             ed = {
                 label: (0, r.jsx)(u.Heading, {
-                    className: w.__invalid_textColor,
+                    className: D.__invalid_textColor,
                     variant: "heading-lg/extrabold",
                     children: eu,
                 }),
-                column1: (0, r.jsx)(V, { premiumType: P.PremiumTypes.TIER_0 }),
-                column2: (0, r.jsx)(V, { premiumType: P.PremiumTypes.TIER_2 }),
+                column1: (0, r.jsx)(V, { premiumType: R.PremiumTypes.TIER_0 }),
+                column2: (0, r.jsx)(V, { premiumType: R.PremiumTypes.TIER_2 }),
             };
         C
             ? es.push({
@@ -233,48 +233,48 @@ let Z = () => {
                   label: null,
                   column1: (0, r.jsxs)(r.Fragment, {
                       children: [
-                          J === P.Si.TIER_2 || el
-                              ? (0, r.jsx)(S.Z, {
-                                    className: w.button,
-                                    subscriptionTier: P.Si.TIER_0,
+                          J === R.Si.TIER_2 || el
+                              ? (0, r.jsx)(T.Z, {
+                                    className: D.button,
+                                    subscriptionTier: R.Si.TIER_0,
                                     showIcon: !1,
                                     look: c.iL.OUTLINED,
                                     color: z ? c.Tt.BRAND : c.Tt.WHITE,
                                 })
-                              : (0, r.jsx)(S.Z, {
-                                    className: w.button,
-                                    subscriptionTier: P.Si.TIER_0,
+                              : (0, r.jsx)(T.Z, {
+                                    className: D.button,
+                                    subscriptionTier: R.Si.TIER_0,
                                     showIcon: !1,
                                 }),
-                          $ === P.PremiumTypes.TIER_2 || null != J
+                          $ === R.PremiumTypes.TIER_2 || null != J
                               ? null
-                              : (0, r.jsx)(T.Z, {
-                                    className: w.button,
-                                    subscriptionTier: P.Si.TIER_0,
+                              : (0, r.jsx)(I.Z, {
+                                    className: D.button,
+                                    subscriptionTier: R.Si.TIER_0,
                                 }),
                       ],
                   }),
                   column2: (0, r.jsxs)(r.Fragment, {
                       children: [
-                          J === P.Si.TIER_0
-                              ? (0, r.jsx)(S.Z, {
-                                    className: w.button,
-                                    subscriptionTier: P.Si.TIER_2,
+                          J === R.Si.TIER_0
+                              ? (0, r.jsx)(T.Z, {
+                                    className: D.button,
+                                    subscriptionTier: R.Si.TIER_2,
                                     showIcon: !1,
                                     look: c.iL.OUTLINED,
                                     color: z ? c.Tt.BRAND : c.Tt.WHITE,
                                 })
-                              : (0, r.jsx)(S.Z, {
-                                    className: w.button,
-                                    subscriptionTier: P.Si.TIER_2,
+                              : (0, r.jsx)(T.Z, {
+                                    className: D.button,
+                                    subscriptionTier: R.Si.TIER_2,
                                     showIcon: !1,
                                     hasActivePromotion: el,
                                 }),
-                          $ === P.PremiumTypes.TIER_0 || null != J
+                          $ === R.PremiumTypes.TIER_0 || null != J
                               ? null
-                              : (0, r.jsx)(T.Z, {
-                                    className: w.button,
-                                    subscriptionTier: P.Si.TIER_2,
+                              : (0, r.jsx)(I.Z, {
+                                    className: D.button,
+                                    subscriptionTier: R.Si.TIER_2,
                                 }),
                       ],
                   }),
@@ -282,54 +282,54 @@ let Z = () => {
                   withBottomBorderRadius: !0,
                   buttonsRow: null == J,
               }),
-            (n = x
+            (n = L
                 ? null
                 : null != J || null != $
                   ? (0, r.jsx)(N.Cy, {
-                        text: null != J ? D.intl.string(D.t.IBYG5U) : D.intl.string(D.t.ce1v3V),
-                        className: w.freeTrialPillWithSparkles,
+                        text: null != J ? w.intl.string(w.t.IBYG5U) : w.intl.string(w.t.ce1v3V),
+                        className: D.freeTrialPillWithSparkles,
                         colorOptions:
-                            J === P.Si.TIER_0
+                            J === R.Si.TIER_0
                                 ? z
                                     ? N.VE.PREMIUM_TIER_0_GRADIENT_FILL
                                     : N.VE.PREMIUM_TIER_0_WHITE_FILL
                                 : z
-                                  ? X
+                                  ? Q
                                       ? N.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
                                       : N.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
                                   : N.VE.PREMIUM_TIER_2_WHITE_FILL,
                     })
                   : el
-                    ? (0, r.jsx)(Z, {})
+                    ? (0, r.jsx)(B, {})
                     : (0, r.jsx)(F, {}));
-        let ef = J === P.Si.TIER_0 || $ === P.PremiumTypes.TIER_0 || k === P.PremiumTypes.TIER_0;
-        return (0, r.jsx)(_.Gt, {
-            value: j,
+        let ef = J === R.Si.TIER_0 || $ === R.PremiumTypes.TIER_0 || M === R.PremiumTypes.TIER_0;
+        return (0, r.jsx)(p.Gt, {
+            value: k,
             children: (0, r.jsxs)("div", {
-                className: o()(w.root, a),
+                className: o()(D.root, a),
                 "data-testid": "v2-marketing-page-comparison-table",
                 children: [
                     (0, r.jsx)(u.Heading, {
-                        className: o()(w.titleText, w.__invalid_textColor),
+                        className: o()(D.titleText, D.__invalid_textColor),
                         variant: "heading-xxl/extrabold",
-                        children: null != L ? L : D.intl.string(D.t.FIbMh9),
+                        children: null != x ? x : w.intl.string(w.t.FIbMh9),
                     }),
                     (0, r.jsxs)("div", {
-                        className: w.tableWrapper,
+                        className: D.tableWrapper,
                         children: [
                             (0, r.jsx)("div", {
-                                className: o()(M, {
-                                    [w.tier0ColumnOuter]: ef,
-                                    [w.tier2ColumnOuter]: !ef,
+                                className: o()(j, {
+                                    [D.tier0ColumnOuter]: ef,
+                                    [D.tier2ColumnOuter]: !ef,
                                 }),
                                 children: !ef && n,
                             }),
                             (0, r.jsxs)("table", {
-                                className: w.table,
+                                className: D.table,
                                 children: [
                                     (0, r.jsx)("thead", { children: (0, r.jsx)(H, U({}, ed)) }),
                                     (0, r.jsx)("tbody", {
-                                        children: es.map((e, t) => (0, i.createElement)(Y, B(U({}, e), { key: t }))),
+                                        children: es.map((e, t) => (0, i.createElement)(Y, Z(U({}, e), { key: t }))),
                                     }),
                                 ],
                             }),

@@ -20,20 +20,20 @@ let u = new Set([i.GsA.name, i.iWm.name, i.FLu.name, i.Xbz.name]),
                 className: i,
                 hangStatusActivity: a,
                 size: f,
-                animate: _ = !0,
-                fallbackVariant: p = "twemoji",
-                userId: h,
+                animate: p = !0,
+                fallbackVariant: _ = "twemoji",
+                userId: m,
             } = e,
-            m = (0, l.F)(h, null == a ? void 0 : a.state),
-            g = (0, s.tV)(h, a, p);
-        if ((m[0] === c.tN.CUSTOM || (null == g ? void 0 : g.emoji) != null) && null != a) {
+            h = (0, l.F)(m, null == a ? void 0 : a.state),
+            g = (0, s.tV)(m, a, _);
+        if ((h[0] === c.tN.CUSTOM || (null == g ? void 0 : g.emoji) != null) && null != a) {
             let e = null != (t = null == g ? void 0 : g.emoji) ? t : a.emoji;
             return null != e
                 ? (0, r.jsx)(o.Z, {
                       emoji: e,
                       className: i,
                       hideTooltip: !0,
-                      animate: _,
+                      animate: p,
                   })
                 : null;
         }

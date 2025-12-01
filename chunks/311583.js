@@ -4,8 +4,8 @@ n(473749);
 var l = n(481060),
     i = n(100527),
     a = n(381585),
-    s = n(994587),
-    o = n(429368),
+    o = n(994587),
+    s = n(429368),
     c = n(680942),
     u = n(786040),
     d = n(58201),
@@ -16,13 +16,13 @@ let m = (e) => {
         let {
                 product: t,
                 selectedVariantIndex: n,
-                cardRef: o,
+                cardRef: s,
                 onClick: d,
                 icon: m,
                 prioritizedCurrency: h,
                 onClickAnalytics: C,
             } = e,
-            _ = (0, s.Nd)(),
+            _ = (0, o.Nd)(),
             b = null == _ ? void 0 : _.tab,
             v = (0, a.sp)(),
             x = (0, f.J)(t, h),
@@ -43,16 +43,16 @@ let m = (e) => {
                         primary: !0,
                         product: t,
                         selectedVariantIndex: n,
-                        returnRef: o,
+                        returnRef: s,
                         tooltipDelay: 250,
                     }),
                 })
               : null;
     },
     h = (e) => {
-        let { skuId: t, cardRef: n, onClick: l, icon: i, prioritizedCurrency: a, onClickAnalytics: s } = e,
+        let { skuId: t, cardRef: n, onClick: l, icon: i, prioritizedCurrency: a, onClickAnalytics: o } = e,
             c = (0, u.LJ)(t),
-            f = (0, o.o)(c);
+            f = (0, s.o)(c);
         if (null == c) return null;
         let g = (0, d.W)(c, f);
         return (0, r.jsx)(m, {
@@ -62,6 +62,6 @@ let m = (e) => {
             onClick: l,
             icon: i,
             prioritizedCurrency: a,
-            onClickAnalytics: s,
+            onClickAnalytics: o,
         });
     };

@@ -13,8 +13,8 @@ var i = n(54381),
     b = n(388032),
     g = n(941678);
 function f(e) {
-    let { webhook: t, editedWebhook: f, channelOptions: h, isExpanded: x, errors: j, onToggleExpand: v } = e,
-        O = r.useMemo(() => {
+    let { webhook: t, editedWebhook: f, channelOptions: h, isExpanded: x, errors: j, onToggleExpand: O } = e,
+        v = r.useMemo(() => {
             var e;
             return null != (e = t.avatar) && /^data:/.test(e)
                 ? e
@@ -171,7 +171,7 @@ function f(e) {
                     (0, i.jsx)(a.P3F, {
                         className: g.header,
                         "aria-expanded": x,
-                        onClick: v,
+                        onClick: O,
                         children: (0, i.jsxs)(a.Kqy, {
                             direction: "horizontal",
                             justify: "space-between",
@@ -179,7 +179,7 @@ function f(e) {
                             children: [
                                 (0, i.jsx)(p.Z, {
                                     name: t.name,
-                                    imageSrc: O,
+                                    imageSrc: v,
                                     details: _,
                                 }),
                                 (0, i.jsx)(d.Z, {

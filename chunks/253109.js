@@ -1,10 +1,10 @@
 n.d(e, { F: () => s });
 var i = n(509613),
-    l = n(695346),
-    u = n(313789),
-    r = n(388032);
-let s = (0, i.qs)(u.n.USER_RESURRECTION_NOTIFICATIONS, {
-    useTitle: () => r.intl.string(r.t.KQIv2h),
-    useValue: l.V6.useSetting,
-    setValue: l.V6.updateSetting,
+    r = n(695346),
+    l = n(313789),
+    u = n(388032);
+let s = (0, i.qs)(l.n.USER_RESURRECTION_NOTIFICATIONS, {
+    useTitle: () => u.intl.string(u.t.KQIv2h),
+    useValue: r.V6.useSetting,
+    setValue: r.V6.updateSetting,
 });

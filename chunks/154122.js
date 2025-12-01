@@ -1,91 +1,91 @@
-n.d(t, { J: () => f });
-var r = n(54381);
-n(473749);
-var i = n(120356),
-    a = n.n(i),
-    s = n(481060),
-    o = n(493683),
-    l = n(518950),
-    c = n(342386),
-    u = n(51144),
-    d = n(606097),
-    b = n(388032),
-    h = n(456577);
-let f = (e) => {
-    let { recipient: t, isSuccess: n, onClose: i } = e,
-        { avatarSrc: f, eventHandlers: p } = (0, l.Z)({
+r.d(t, { J: () => m });
+var n = r(54381);
+r(473749);
+var i = r(120356),
+    s = r.n(i),
+    a = r(481060),
+    o = r(493683),
+    l = r(518950),
+    c = r(342386),
+    u = r(51144),
+    d = r(606097),
+    p = r(388032),
+    f = r(456577);
+let m = (e) => {
+    let { recipient: t, isSuccess: r, onClose: i } = e,
+        { avatarSrc: m, eventHandlers: b } = (0, l.Z)({
             userId: null == t ? void 0 : t.id,
-            size: s.EFr.SIZE_56,
+            size: a.EFr.SIZE_56,
         }),
-        m = u.ZP.getName(t),
-        y = !n;
-    return (0, r.jsxs)("div", {
-        className: h.row,
+        y = u.ZP.getName(t),
+        h = !r;
+    return (0, n.jsxs)("div", {
+        className: f.row,
         children: [
-            (0, r.jsx)(
-                s.qEK,
+            (0, n.jsx)(
+                a.qEK,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
+                        var r = null != arguments[t] ? arguments[t] : {},
+                            n = Object.keys(r);
                         "function" == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            (n = n.concat(
+                                Object.getOwnPropertySymbols(r).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                                 }),
                             )),
-                            r.forEach(function (t) {
-                                var r;
-                                (r = n[t]),
+                            n.forEach(function (t) {
+                                var n;
+                                (n = r[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: r,
+                                              value: n,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0,
                                           })
-                                        : (e[t] = r);
+                                        : (e[t] = n);
                             });
                     }
                     return e;
                 })(
                     {
-                        imageClassName: a()({ [h.erroredAvatar]: y }),
-                        src: f,
-                        "aria-label": m,
-                        size: s.EFr.SIZE_32,
+                        imageClassName: s()({ [f.erroredAvatar]: h }),
+                        src: m,
+                        "aria-label": y,
+                        size: a.EFr.SIZE_32,
                     },
-                    p,
+                    b,
                 ),
             ),
-            y
-                ? (0, r.jsxs)(r.Fragment, {
+            h
+                ? (0, n.jsxs)(n.Fragment, {
                       children: [
-                          (0, r.jsx)(s.Text, {
-                              className: h.error,
+                          (0, n.jsx)(a.Text, {
+                              className: f.error,
                               variant: "text-md/medium",
                               color: "text-primary",
-                              children: m,
+                              children: y,
                           }),
-                          (0, r.jsx)(s.Text, {
+                          (0, n.jsx)(a.Text, {
                               variant: "text-md/medium",
-                              className: h.error,
+                              className: f.error,
                               color: "text-primary",
-                              children: b.intl.format(d.default["Y/oMwY"], { userName: m }),
+                              children: p.intl.format(d.default["Y/oMwY"], { userName: y }),
                           }),
                       ],
                   })
-                : (0, r.jsx)(s.Text, {
+                : (0, n.jsx)(a.Text, {
                       variant: "text-md/medium",
-                      className: h.displayName,
+                      className: f.displayName,
                       color: "text-primary",
-                      children: m,
+                      children: y,
                   }),
-            (0, r.jsx)(s.Button, {
+            (0, n.jsx)(a.Button, {
                 variant: "secondary",
                 size: "sm",
-                text: b.intl.string(b.t["g33r/P"]),
-                icon: s.kBi,
+                text: p.intl.string(p.t["g33r/P"]),
+                icon: a.kBi,
                 onClick: () => {
                     var e;
                     return (e = t.id), void ((0, c.default)(), o.Z.openPrivateChannel({ recipientIds: e }), i());

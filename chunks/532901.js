@@ -13,10 +13,10 @@ function f(e) {
         react(t, n, f) {
             if (e.enableBuildOverrides && (0, s._G)(t.target))
                 return (0, r.jsx)(i.Fragment, { children: (0, r.jsx)(l.Z, { url: t.target }, t.target) }, f.key);
-            let _ = n(t.content, f),
-                p = "string" == typeof t.title && 0 !== t.title.length ? t.title : (0, a.Rp)(t.content),
-                h = () => (0, u.r)(t),
-                m = (null == e ? void 0 : e.mustConfirmExternalLink)
+            let p = n(t.content, f),
+                _ = "string" == typeof t.title && 0 !== t.title.length ? t.title : (0, a.Rp)(t.content),
+                m = () => (0, u.r)(t),
+                h = (null == e ? void 0 : e.mustConfirmExternalLink)
                     ? (e) => (
                           null == e || e.stopPropagation(),
                           null == e || e.preventDefault(),
@@ -31,27 +31,27 @@ function f(e) {
                     : void 0;
             if (f.previewLinkTarget && !(0, u.r)(t)) {
                 let e = "\n\n(".concat(t.target, ")");
-                p.length + e.length > d && ((e = "..." + e), (p = (p = p.substr(0, d - e.length)).trimEnd())), (p += e);
+                _.length + e.length > d && ((e = "..." + e), (_ = (_ = _.substr(0, d - e.length)).trimEnd())), (_ += e);
             }
             return f.noStyleAndInteraction
                 ? (0, r.jsx)(
                       "span",
                       {
-                          title: p,
-                          children: _,
+                          title: _,
+                          children: p,
                       },
                       f.key,
                   )
                 : (0, r.jsx)(
                       o.Z,
                       {
-                          title: p,
+                          title: _,
                           href: t.target,
-                          trusted: h,
-                          onClick: m,
+                          trusted: m,
+                          onClick: h,
                           messageId: f.messageId,
                           channelId: f.channelId,
-                          children: _,
+                          children: p,
                       },
                       f.key,
                   );

@@ -1,35 +1,35 @@
-n.d(e, { F: () => O });
+n.d(e, { F: () => g });
 var i = n(54381),
-    l = n(657707),
-    u = n(793030),
-    r = n(692547),
+    r = n(657707),
+    l = n(793030),
+    u = n(692547),
     s = n(160913),
     a = n(813732),
     o = n(509613),
     c = n(28682),
-    E = n(313789),
-    S = n(726985),
-    T = n(388032);
-let d = (0, o.x1)(E.n.SUBSCRIPTIONS_PANE, {
+    d = n(313789),
+    E = n(726985),
+    S = n(388032);
+let T = (0, o.x1)(d.n.SUBSCRIPTIONS_PANE, {
         buildLayout: () => [],
         render: a.Z,
     }),
-    I = (0, o.wf)(E.n.SUBSCRIPTIONS_PANEL, {
-        useTitle: () => T.intl.string(T.t.trSpHX),
-        buildLayout: () => [d],
+    I = (0, o.wf)(d.n.SUBSCRIPTIONS_PANEL, {
+        useTitle: () => S.intl.string(S.t.trSpHX),
+        buildLayout: () => [T],
     }),
-    O = (0, o.m7)(E.n.SUBSCRIPTIONS_SIDEBAR_ITEM, {
-        icon: l.XOf,
-        useTitle: () => T.intl.string(T.t.trSpHX),
-        getLegacySearchKey: () => S.s6.SUBSCRIPTIONS,
+    g = (0, o.m7)(d.n.SUBSCRIPTIONS_SIDEBAR_ITEM, {
+        icon: r.XOf,
+        useTitle: () => S.intl.string(S.t.trSpHX),
+        getLegacySearchKey: () => E.s6.SUBSCRIPTIONS,
         buildLayout: () => [I],
         trailing: {
             type: c.PU.STRONGLY_DISCOURAGED_CUSTOM,
             useDecoration: () =>
                 (0, s.U)()
-                    ? (0, i.jsx)(u.Mgn, {
+                    ? (0, i.jsx)(l.Mgn, {
                           size: "xs",
-                          color: r.Z.unsafe_rawColors.YELLOW_300,
+                          color: u.Z.unsafe_rawColors.YELLOW_300,
                       })
                     : null,
         },

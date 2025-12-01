@@ -1,15 +1,15 @@
 let r, i, a;
 n.d(t, {
-    At: () => T,
+    At: () => I,
     DB: () => N,
-    DR: () => S,
+    DR: () => T,
     Wf: () => C,
     XU: () => y,
     dL: () => v,
-    eH: () => P,
+    eH: () => R,
     m1: () => A,
-    op: () => R,
-    s1: () => I,
+    op: () => P,
+    s1: () => S,
     uL: () => b,
     uv: () => O,
     x3: () => g,
@@ -59,20 +59,20 @@ function f(e) {
     }
     return e;
 }
-let _ = new s.Z("Routing/Utils"),
-    p = [u.E07.DEVELOPER_PORTAL];
+let p = new s.Z("Routing/Utils"),
+    _ = [u.E07.DEVELOPER_PORTAL];
 r = __OVERLAY__ ? (0, o.PP)() : (0, o.lX)();
-let h = !1,
-    m = r.listen((e, t) => {
-        "REPLACE" !== t && ((h = !0), m());
+let m = !1,
+    h = r.listen((e, t) => {
+        "REPLACE" !== t && ((m = !0), h());
     });
 function g() {
     return !l.S.hasSubscribers(u.CkL.MODAL_CLOSE) && (n(574254).Z.close(), !0);
 }
 function E(e, t) {
     return (
-        !!("string" == typeof e && p.some((t) => e.startsWith(t))) &&
-        (_.log("".concat(t, " - route to external path ").concat(e)),
+        !!("string" == typeof e && _.some((t) => e.startsWith(t))) &&
+        (p.log("".concat(t, " - route to external path ").concat(e)),
         window.dispatchEvent(new Event("beforeunload")),
         window.location[t](e),
         !0)
@@ -80,7 +80,7 @@ function E(e, t) {
 }
 function b(e, t) {
     if (E(e, "assign")) return;
-    _.log("transitionTo - Transitioning to ".concat(e));
+    p.log("transitionTo - Transitioning to ".concat(e));
     let n = null == t ? void 0 : t.source;
     null == t || delete t.source;
     let o = null == t ? void 0 : t.sourceLocationStack;
@@ -101,7 +101,7 @@ function b(e, t) {
     (i = n), (a = o);
 }
 function y(e, t, n, r) {
-    _.log(
+    p.log(
         "transitionToGuild - Transitioning to ".concat(
             JSON.stringify({
                 guildId: e,
@@ -117,15 +117,15 @@ function O() {
 }
 function v(e, t, n) {
     E(e, "replace") ||
-        (_.log("Replacing route with ".concat(e)), "string" == typeof e ? r.replace(e, t) : r.replace(e), (i = n));
-}
-function I() {
-    return r;
-}
-function T() {
-    return i;
+        (p.log("Replacing route with ".concat(e)), "string" == typeof e ? r.replace(e, t) : r.replace(e), (i = n));
 }
 function S() {
+    return r;
+}
+function I() {
+    return i;
+}
+function T() {
     return a;
 }
 function A(e) {
@@ -158,11 +158,11 @@ function C(e) {
     return e;
 }
 function N() {
-    return h;
-}
-function R() {
-    g() && ((i = null), r.goBack());
+    return m;
 }
 function P() {
+    g() && ((i = null), r.goBack());
+}
+function R() {
     g() && ((i = null), r.goForward());
 }

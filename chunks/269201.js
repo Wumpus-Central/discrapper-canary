@@ -13,11 +13,11 @@ function s(e) {
             flags: u = 0,
             contrast: d = 1,
             saturation: f = 1,
-            density: _ = "compact",
-            disableAdaptiveTheme: p = !1,
-            reduceAdaptiveTheme: h = !1,
+            density: p = "compact",
+            disableAdaptiveTheme: _ = !1,
+            reduceAdaptiveTheme: m = !1,
         } = e,
-        m = i.useMemo(
+        h = i.useMemo(
             () =>
                 (0, a.TT)({
                     theme: n,
@@ -27,14 +27,14 @@ function s(e) {
                     flags: u,
                     contrast: d,
                     saturation: f,
-                    density: _,
-                    disableAdaptiveTheme: p,
-                    reduceAdaptiveTheme: h,
+                    density: p,
+                    disableAdaptiveTheme: _,
+                    reduceAdaptiveTheme: m,
                 }),
-            [n, s, l, c, u, d, f, _, p, h],
+            [n, s, l, c, u, d, f, p, _, m],
         );
     return (0, r.jsx)(a.Ni.Provider, {
-        value: m,
+        value: h,
         children: t,
     });
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(35282), n(388685);
+n.d(t, { Z: () => I }), n(35282), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(525654),
@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(481060),
     d = n(596454),
     f = n(151851),
-    _ = n(451478),
-    p = n(176354),
-    h = n(63063),
-    m = n(358085),
+    p = n(451478),
+    _ = n(176354),
+    m = n(63063),
+    h = n(358085),
     g = n(998502),
     E = n(406128),
     b = n(981631),
@@ -38,16 +38,16 @@ function v() {
         }),
         (g.ZP.close = () => e.close());
 }
-let I = l.ZP.connectStores([_.Z], () => ({ focused: _.Z.isFocused() }))(f.Z);
-class T extends i.PureComponent {
+let S = l.ZP.connectStores([p.Z], () => ({ focused: p.Z.isFocused() }))(f.Z);
+class I extends i.PureComponent {
     getPlatform() {
         var e;
         let t = null == (e = o().os) ? void 0 : e.family;
         return null != t && /^win/i.test(t)
-            ? m.PlatformTypes.WINDOWS
+            ? h.PlatformTypes.WINDOWS
             : null != t && /darwin|os x/i.test(t)
-              ? m.PlatformTypes.OSX
-              : m.PlatformTypes.LINUX;
+              ? h.PlatformTypes.OSX
+              : h.PlatformTypes.LINUX;
     }
     componentDidMount() {
         v();
@@ -59,7 +59,7 @@ class T extends i.PureComponent {
                     y.intl.string(y.t["4tRjHC"]),
                     " ",
                     (0, r.jsx)(d.Z, {
-                        src: p.ZP.getURL(c.Z.convert.fromCodePoint("1f44c")),
+                        src: _.ZP.getURL(c.Z.convert.fromCodePoint("1f44c")),
                         emojiName: ":ok_hand:",
                         animated: !1,
                     }),
@@ -69,7 +69,7 @@ class T extends i.PureComponent {
         return (0, r.jsxs)(i.Fragment, {
             children: [
                 (0, r.jsx)(s.ql, { children: (0, r.jsx)("html", { className: (0, u.QeD)(b.BRd.DARK) }) }),
-                (0, r.jsx)(I, { type: this.getPlatform() }),
+                (0, r.jsx)(S, { type: this.getPlatform() }),
                 (0, r.jsx)(E.Z, {
                     title: y.intl.string(y.t["3h+n+8"]),
                     note: e,
@@ -87,8 +87,8 @@ class T extends i.PureComponent {
         super(...e),
             O(this, "handleDownload", () => {
                 window.open(
-                    this.getPlatform() === m.PlatformTypes.WINDOWS
-                        ? h.Z.getArticleURL(b.BhN.CORRUPT_INSTALLATION)
+                    this.getPlatform() === h.PlatformTypes.WINDOWS
+                        ? m.Z.getArticleURL(b.BhN.CORRUPT_INSTALLATION)
                         : b.EYA.DOWNLOAD,
                 );
             });

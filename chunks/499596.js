@@ -1,4 +1,4 @@
-t.d(n, { Z: () => g });
+t.d(n, { Z: () => x });
 var l = t(54381);
 t(473749);
 var r = t(120356),
@@ -10,13 +10,13 @@ var r = t(120356),
     u = t(5192),
     d = t(388032),
     m = t(339762);
-function g(e) {
+function x(e) {
     let { channel: n, users: t, selected: r = !1 } = e,
-        g = (0, c.ZP)(n),
-        x = null;
+        x = (0, c.ZP)(n),
+        g = null;
     null != t &&
         t.length > 0 &&
-        (x = (0, l.jsx)(a.ZP, {
+        (g = (0, l.jsx)(a.ZP, {
             guildId: n.guild_id,
             className: m.voiceUserList,
             users: t,
@@ -79,9 +79,9 @@ function g(e) {
             (0, l.jsx)(h, { className: m.channelIcon }),
             (0, l.jsx)("div", {
                 className: m.channelName,
-                children: g,
+                children: x,
             }),
-            x,
+            g,
         ],
     });
 }

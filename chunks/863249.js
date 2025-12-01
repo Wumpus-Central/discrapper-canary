@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => S }), n(953529);
+n.d(t, { ZP: () => T }), n(953529);
 var r = n(544891),
     i = n(570140),
     a = n(668781),
@@ -9,10 +9,10 @@ var r = n(544891),
     u = n(160404),
     d = n(264229),
     f = n(271383),
-    _ = n(701190),
-    p = n(594174),
-    h = n(626135),
-    m = n(246364),
+    p = n(701190),
+    _ = n(594174),
+    m = n(626135),
+    h = n(246364),
     g = n(981631),
     E = n(388032);
 function b(e, t, n) {
@@ -67,17 +67,17 @@ function v(e, t) {
         e
     );
 }
-let I = -1;
-function T(e) {
+let S = -1;
+function I(e) {
     i.Z.dispatch({
         type: "USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW",
         guildId: e,
     });
 }
-let S = {
+let T = {
     fetchVerificationForm: async (e, t) => {
-        let n = null != t ? t : _.Z.getInviteKeyForGuildId(e),
-            a = p.default.getCurrentUser(),
+        let n = null != t ? t : p.Z.getInviteKeyForGuildId(e),
+            a = _.default.getCurrentUser(),
             o = !f.ZP.isMember(e, null == a ? void 0 : a.id);
         try {
             let t = await r.tn.get({
@@ -192,7 +192,7 @@ let S = {
                     guildId: e,
                     request: a,
                 }),
-                (0, m.YG)(t.formFields) && n !== I && setTimeout(() => T(e), n),
+                (0, h.YG)(t.formFields) && n !== S && setTimeout(() => I(e), n),
                 a
             );
         } catch (t) {
@@ -224,7 +224,7 @@ let S = {
     },
     reportApplication: function (e) {
         let { guild: t, guildJoinRequest: n, guildJoinRequestUser: r, reason: i, reasonOther: a, responses: o } = e;
-        h.default.track(g.rMx.GUILD_MEMBER_APPLICATION_REPORTED, {
+        m.default.track(g.rMx.GUILD_MEMBER_APPLICATION_REPORTED, {
             application_id: n.joinRequestId,
             applicant_id: r.id,
             guild_id: t.id,

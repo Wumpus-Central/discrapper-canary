@@ -1,7 +1,7 @@
 n.d(t, {
     $H: () => O,
     GN: () => v,
-    _y: () => I,
+    _y: () => S,
 });
 var r = n(54381),
     i = n(473749),
@@ -13,10 +13,10 @@ var r = n(54381),
     u = n(774078),
     d = n(266454),
     f = n(55935),
-    _ = n(74538),
-    p = n(931118),
-    h = n(639119),
-    m = n(533246),
+    p = n(74538),
+    _ = n(931118),
+    m = n(639119),
+    h = n(533246),
     g = n(388032),
     E = n(788963);
 let b = 60000;
@@ -25,32 +25,32 @@ function y(e) {
             isTabSelected: t,
             expiresAt: n,
             badgeCopy: a,
-            className: _,
-            tooltipTextOverride: p,
-            tooltipPosition: h,
-            shouldShowOfferReminder: m,
+            className: p,
+            tooltipTextOverride: _,
+            tooltipPosition: m,
+            shouldShowOfferReminder: h,
         } = e,
         y = i.useMemo(() => Date.parse(n), [n]),
         O = (0, u.Z)(y, b),
         v = (0, d.zu)(s.z.NITRO_TAB_BADGE_OFFER_REMINDER),
-        I = m && !v;
+        S = h && !v;
     return Object.values(O).every((e) => 0 === e)
         ? null
         : (0, r.jsx)(l.u, {
               text:
-                  null != p
-                      ? p
+                  null != _
+                      ? _
                       : (0, f.QX)(O, {
                             days: g.t.qVGNkU,
                             hours: g.t.wyg9a9,
                             minutes: g.t.IzmIlV,
                         }),
-              position: null != h ? h : "top",
+              position: null != m ? m : "top",
               children: (0, r.jsxs)("div", {
                   className: o()(
                       E.premiumTrialBadge,
-                      I ? E.premiumOfferUnackedBadge : E.premiumOfferWithTimerAcknowledgedBadge,
-                      _,
+                      S ? E.premiumOfferUnackedBadge : E.premiumOfferWithTimerAcknowledgedBadge,
+                      p,
                       { [E.premiumTrialBadgeSelected]: t },
                   ),
                   children: [
@@ -58,12 +58,12 @@ function y(e) {
                           size: "custom",
                           width: 20,
                           height: 20,
-                          color: I ? "white" : "currentColor",
+                          color: S ? "white" : "currentColor",
                           className: E.premiumTrialBadgeIcon,
                       }),
                       (0, r.jsx)(c.Text, {
                           variant: "eyebrow",
-                          color: I ? "always-white" : "text-primary",
+                          color: S ? "always-white" : "text-primary",
                           children: a,
                       }),
                   ],
@@ -73,14 +73,14 @@ function y(e) {
 function O(e) {
     var t;
     let { isTabSelected: n, trialOffer: i, shouldShowOfferReminder: a } = e,
-        o = null == (t = (0, h.N)()) ? void 0 : t.subscription_trial,
-        s = (0, _.a5)({
+        o = null == (t = (0, m.N)()) ? void 0 : t.subscription_trial,
+        s = (0, p.a5)({
             intervalType: null == o ? void 0 : o.interval,
             intervalCount: null == o ? void 0 : o.interval_count,
         }),
-        l = (0, m.YF)(i),
-        { hasExperimentalTooltip: c } = (0, p.ZP)("PremiumOfferTabBadge");
-    return (0, r.jsx)(I, {
+        l = (0, h.YF)(i),
+        { hasExperimentalTooltip: c } = (0, _.ZP)("PremiumOfferTabBadge");
+    return (0, r.jsx)(S, {
         isTabSelected: n,
         badgeCopy: s,
         offerExpiresAt: i.expires_at,
@@ -92,9 +92,9 @@ function O(e) {
 function v(e) {
     let { isTabSelected: t, userDiscount: n, includesAmountOff: i, shouldShowOfferReminder: a } = e,
         o = g.intl.formatToPlainString(g.t.iiLbvu, { percent: n.discount.amount }),
-        s = (0, m.h$)(n),
-        { hasExperimentalTooltip: l } = (0, p.ZP)("PremiumOfferTabBadge");
-    return (0, r.jsx)(I, {
+        s = (0, h.h$)(n),
+        { hasExperimentalTooltip: l } = (0, _.ZP)("PremiumOfferTabBadge");
+    return (0, r.jsx)(S, {
         isTabSelected: t,
         badgeCopy: i ? o : g.intl.string(g.t["/DTtr6"]),
         offerExpiresAt: n.expires_at,
@@ -103,7 +103,7 @@ function v(e) {
         shouldShowOfferReminder: a,
     });
 }
-function I(e) {
+function S(e) {
     let {
         isTabSelected: t,
         badgeCopy: n,

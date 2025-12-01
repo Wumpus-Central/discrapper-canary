@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(54381),
     i = n(473749),
     a = n(481060),
@@ -57,7 +57,7 @@ function f(e, t) {
         e
     );
 }
-function _(e) {
+function p(e) {
     let t,
         { sortOrder: n, onSortOptionClick: c } = e,
         d = i.useRef(null);

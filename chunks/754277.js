@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r,
     i = n(442837),
     a = n(570140);
@@ -43,7 +43,7 @@ class f extends (r = i.ZP.DeviceSettingsStore) {
     }
 }
 o(f, "displayName", "StageMusicStore"), o(f, "persistKey", "StageMusicStore");
-let _ = new f(a.Z, {
+let p = new f(a.Z, {
     STAGE_MUSIC_MUTE: c,
     STAGE_MUSIC_PLAY: u,
     VOICE_CHANNEL_SELECT: d,

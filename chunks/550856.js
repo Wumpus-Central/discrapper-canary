@@ -21,20 +21,20 @@ function f(e, t, n) {
         e
     );
 }
-let _ = "c6_BVC",
-    p = new o.Z("KrispBVCDeviceManager"),
-    h = [],
+let p = "c6_BVC",
+    _ = new o.Z("KrispBVCDeviceManager"),
     m = [],
+    h = [],
     g = {
         block_list: [],
         allow_list: [],
     };
 for (let e of ((0, c.isMac)() ? (g = n(598473)) : (0, c.isWindows)() && (g = n(689437)), g.block_list))
-    "name" in e && m.push(e.name.toLowerCase());
-for (let e of g.allow_list) "name" in e && h.push(e.name.toLowerCase());
+    "name" in e && h.push(e.name.toLowerCase());
+for (let e of g.allow_list) "name" in e && m.push(e.name.toLowerCase());
 function E() {
     var e;
-    if ((!(0, c.isMac)() && !(0, c.isWindows)()) || !s.Z.getKrispModels().includes(_)) return;
+    if ((!(0, c.isMac)() && !(0, c.isWindows)()) || !s.Z.getKrispModels().includes(p)) return;
     let t = s.Z.getInputDeviceId(),
         n = s.Z.getInputDevices()[t],
         r = null != l.Z.getChannelId();
@@ -43,24 +43,24 @@ function E() {
         o = u.F.getCurrentConfig({ location: "KrispBVCDeviceManager" }, { autoTrackExposure: !1 }).allowBVC;
     if (null != a && a < 16000) {
         s.Z.getKrispModelOverride() &&
-            (p.info("BVC model doesn't support <16kHz sample rate, disabling BVC."), i.Z.setKrispModelOverride(""));
+            (_.info("BVC model doesn't support <16kHz sample rate, disabling BVC."), i.Z.setKrispModelOverride(""));
         return;
     }
     let d = n.name.toLowerCase();
-    if (m.some((e) => d.includes(e))) {
+    if (h.some((e) => d.includes(e))) {
         s.Z.getKrispModelOverride() &&
-            (p.info("BVC not compatible with device, disabling BVC."), i.Z.setKrispModelOverride(""));
+            (_.info("BVC not compatible with device, disabling BVC."), i.Z.setKrispModelOverride(""));
         return;
     }
-    if (h.some((e) => d.includes(e)))
+    if (m.some((e) => d.includes(e)))
         return (r && u.F.trackExposure({ location: "KrispBVCDeviceManager" }), o)
             ? void (
-                  s.Z.getKrispModelOverride() !== _ &&
-                  (p.info("BVC compatible with device, enabling BVC."), i.Z.setKrispModelOverride(_))
+                  s.Z.getKrispModelOverride() !== p &&
+                  (_.info("BVC compatible with device, enabling BVC."), i.Z.setKrispModelOverride(p))
               )
             : void i.Z.setKrispModelOverride("");
     s.Z.getKrispModelOverride() &&
-        (p.info("Unknown BVC compatibility with device, disabling BVC."), i.Z.setKrispModelOverride(""));
+        (_.info("Unknown BVC compatibility with device, disabling BVC."), i.Z.setKrispModelOverride(""));
 }
 class b extends a.Z {
     constructor(...e) {

@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => Q,
+    Z: () => X,
     x: () => F,
 }),
     n(388685);
@@ -13,30 +13,30 @@ var r = n(54381),
     u = n(420660),
     d = n(468363),
     f = n(326255),
-    _ = n(956221),
-    p = n(771173),
-    h = n(385499),
-    m = n(693728),
+    p = n(956221),
+    _ = n(771173),
+    m = n(385499),
+    h = n(693728),
     g = n(554300),
     E = n(558602),
     b = n(386725),
     y = n(821795),
     O = n(892567),
     v = n(7284),
-    I = n(172751),
-    T = n(736144),
-    S = n(884902),
-    A = n(113434),
-    C = n(553393),
+    S = n(172751),
+    I = n(736144),
+    T = n(884902),
+    A = n(313481),
+    C = n(664385),
     N = n(518950),
-    R = n(624138),
-    P = n(51144),
-    D = n(981631),
-    w = n(674563),
-    L = n(524484),
-    x = n(388032),
-    M = n(894723);
-function k(e, t, n) {
+    P = n(624138),
+    R = n(51144),
+    w = n(981631),
+    D = n(674563),
+    x = n(524484),
+    L = n(388032),
+    j = n(894723);
+function M(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -49,7 +49,7 @@ function k(e, t, n) {
         e
     );
 }
-function j(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,7 +60,7 @@ function j(e) {
                 }),
             )),
             r.forEach(function (t) {
-                k(e, t, n[t]);
+                M(e, t, n[t]);
             });
     }
     return e;
@@ -88,11 +88,11 @@ function G(e, t) {
         e
     );
 }
-function B(e, t) {
+function Z(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = Z(e, t);
+        i = B(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -100,7 +100,7 @@ function B(e, t) {
     }
     return i;
 }
-function Z(e, t) {
+function B(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -109,17 +109,17 @@ function Z(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
+let F = (0, P.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
     V = 3,
     H = i.memo(function (e) {
         let { isOwner: t, lostPermissionTooltipText: n, ownerTooltipText: i } = e;
         return null != t && t && null == n
             ? (0, r.jsx)(s.u, {
-                  __unsupportedReactNodeAsText: null != i ? i : x.intl.string(x.t.pclUFJ),
+                  __unsupportedReactNodeAsText: null != i ? i : L.intl.string(L.t.pclUFJ),
                   children: (0, r.jsx)(c.CEn, {
                       size: "md",
                       color: "currentColor",
-                      className: M.ownerIcon,
+                      className: j.ownerIcon,
                   }),
               })
             : null;
@@ -129,14 +129,14 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
         return null == t
             ? null
             : (0, r.jsx)(s.u, {
-                  text: x.intl.formatToPlainString(x.t.IWkAq7, { date: t }),
+                  text: L.intl.formatToPlainString(L.t.IWkAq7, { date: t }),
                   asContainer: !0,
                   children: (0, r.jsx)(c.P3F, {
                       onClick: n,
                       tabIndex: -1,
                       children: (0, r.jsx)(c.Ucv, {
                           color: c.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
-                          className: M.premiumIcon,
+                          className: j.premiumIcon,
                       }),
                   }),
               });
@@ -144,9 +144,9 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
     W = i.memo(function (e) {
         let { user: t } = e;
         if (null == t || !t.bot) return null;
-        let n = w.Hb.BOT;
-        return (0, r.jsx)(h.Z, {
-            className: M.botTag,
+        let n = D.Hb.BOT;
+        return (0, r.jsx)(m.Z, {
+            className: j.botTag,
             type: n,
             verified: t.isVerifiedBot(),
         });
@@ -191,10 +191,10 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                 guildId: l,
             }),
             f = (0, v.j)({ displayNameStyles: d }),
-            _ = null == l && null != d;
+            p = null == l && null != d;
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                _
+                p
                     ? (0, r.jsx)(O.Z, {
                           userName: null != a ? a : "",
                           displayNameStyles: d,
@@ -206,17 +206,17 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                           colorString: n,
                           colorStrings: i,
                           name: a,
-                          className: M.name,
+                          className: j.name,
                           displayNameStylesFont: f,
                           animateRoleGradient: u,
                       }),
                 !o &&
-                    (0, r.jsx)(I.ZP, {
+                    (0, r.jsx)(S.ZP, {
                         primaryGuild: null == s ? void 0 : s.primaryGuild,
                         userId: null == s ? void 0 : s.id,
                         contextGuildId: l,
                         disableGuildProfile: !0,
-                        className: M.clanTag,
+                        className: j.clanTag,
                     }),
             ],
         });
@@ -232,20 +232,20 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                 isMobile: l,
                 isTyping: d,
                 avatarDecorationSrc: f,
-                handleSetTypingRef: _,
-                typingRef: p,
-                currentUser: h,
+                handleSetTypingRef: p,
+                typingRef: _,
+                currentUser: m,
             } = e,
-            m = a === D.Skl.OFFLINE,
+            h = a === w.Skl.OFFLINE,
             g = n ? c.Xo$ : c.qEK,
-            E = (0, u.Z)(i) ? D.Skl.STREAMING : a;
+            E = (0, u.Z)(i) ? w.Skl.STREAMING : a;
         return (
-            (E = m ? void 0 : E),
+            (E = h ? void 0 : E),
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(
                         g,
-                        G(j({}, o), {
+                        G(k({}, o), {
                             size: c.EFr.SIZE_32,
                             src: s,
                             isMobile: l,
@@ -254,19 +254,19 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                             "aria-label": t.username,
                             statusTooltip: !0,
                             avatarDecoration: f,
-                            typingIndicatorRef: _,
+                            typingIndicatorRef: p,
                         }),
                     ),
-                    (0, r.jsx)(T.Z, {
-                        confettiSpawnRef: p,
-                        shouldFire: d && null != h && t.id !== h.id,
-                        confettiLocation: L.Hn.MEMBER_USER,
+                    (0, r.jsx)(I.Z, {
+                        confettiSpawnRef: _,
+                        shouldFire: d && null != m && t.id !== m.id,
+                        confettiLocation: x.Hn.MEMBER_USER,
                     }),
                 ],
             })
         );
     }),
-    X = i.memo(function (e) {
+    Q = i.memo(function (e) {
         let {
                 hideSubtext: t,
                 hideTooltip: n = !1,
@@ -277,9 +277,9 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                 user: c,
                 channel: u,
                 isHoveringOrFocusing: d,
-                quest: _,
+                quest: p,
             } = e,
-            h = i.useMemo(
+            m = i.useMemo(
                 () =>
                     (0, f.Z)({
                         activities: a,
@@ -289,7 +289,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                     }),
                 [a, o, s, l],
             ),
-            m = i.useMemo(
+            h = i.useMemo(
                 () =>
                     !(0, E.Z)({
                         activity:
@@ -297,28 +297,28 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                 ? void 0
                                 : a.find((e) => {
                                       let { type: t } = e;
-                                      return t === D.IIU.CUSTOM_STATUS;
+                                      return t === w.IIU.CUSTOM_STATUS;
                                   }),
                         user: c,
                         channel: u,
                     }),
                 [a, c, u],
             );
-        return t || !h
+        return t || !m
             ? null
-            : (0, r.jsx)(p.Z, {
+            : (0, r.jsx)(_.Z, {
                   location: "MemberListSubtext",
                   user: c,
                   activities: a,
                   applicationStream: s,
                   voiceChannel: l,
                   animateEmoji: d,
-                  hideEmoji: m,
-                  hasQuest: null != _,
+                  hideEmoji: h,
+                  hasQuest: null != p,
                   hideTooltip: n,
               });
     }),
-    Q = i.memo(function (e) {
+    X = i.memo(function (e) {
         let {
                 selected: t = !1,
                 colorString: n,
@@ -326,27 +326,27 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                 colorRoleName: l,
                 isOwner: u,
                 ownerTooltipText: f,
-                lostPermissionTooltipText: p,
-                isTyping: h = !1,
+                lostPermissionTooltipText: _,
+                isTyping: m = !1,
                 nick: E,
                 user: b,
                 currentUser: y,
                 activities: O,
                 applicationStream: v,
-                status: I,
-                shouldAnimateStatus: T = !1,
-                isMobile: R,
-                premiumSince: w,
-                channel: L,
-                guildId: x,
-                className: k,
+                status: S,
+                shouldAnimateStatus: I = !1,
+                isMobile: P,
+                premiumSince: D,
+                channel: x,
+                guildId: L,
+                className: M,
                 nameplate: U,
-                hideClanTag: Z = !1,
+                hideClanTag: B = !1,
                 hideSubtext: F = !1,
                 hideTooltip: H = !1,
                 onMouseDown: Y,
                 onKeyDown: W,
-                onClick: Q,
+                onClick: X,
                 onContextMenu: J,
                 onClickPremiumGuildIcon: $,
                 "aria-controls": ee,
@@ -359,84 +359,84 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                 ref: es,
             } = e,
             el = null == b ? void 0 : b.id,
-            ec = P.ZP.useName(b),
+            ec = R.ZP.useName(b),
             eu = i.useRef(null),
             ed = null != es ? es : eu,
-            [ef, e_] = i.useState(!1),
-            [ep, eh] = i.useState(!1),
-            [em, eg] = i.useState(null),
-            { voiceChannel: eE } = (0, _.Z)({
+            [ef, ep] = i.useState(!1),
+            [e_, em] = i.useState(!1),
+            [eh, eg] = i.useState(null),
+            { voiceChannel: eE } = (0, p.Z)({
                 userId: el,
-                guildId: x,
+                guildId: L,
             }),
             { voiceActivityStatusEnabled: eb } = (0, d.U)({ location: "MemberListItem" }),
             ey = eb ? eE : void 0,
             {
                 avatarDecorationSrc: eO,
                 avatarSrc: ev,
-                eventHandlers: eI,
+                eventHandlers: eS,
             } = (0, N.Z)({
                 userId: el,
                 size: c.EFr.SIZE_32,
                 animateOnHover: !(t || ef),
-                guildId: x,
+                guildId: L,
             }),
-            eT = null != eo ? eo : {},
-            { onFocus: eS } = eT,
-            eA = B(eT, ["onFocus"]),
-            eC = (0, S.X7)(x, el, null != a ? a : null),
-            [eN, eR] = i.useState(!1);
+            eI = null != eo ? eo : {},
+            { onFocus: eT } = eI,
+            eA = Z(eI, ["onFocus"]),
+            eC = (0, T.X7)(L, el, null != a ? a : null),
+            [eN, eP] = i.useState(!1);
         i.useEffect(() => {
-            t && eR(!1);
+            t && eP(!1);
         }, [t]);
-        let eP = (0, A.fN)(O),
-            eD = (0, A.Wi)(eP, v, el) && t && !eN,
-            ew = i.useCallback(() => {
-                e_(!0);
-            }, []),
-            eL = i.useCallback(() => {
-                e_(!1);
+        let eR = (0, A.fN)(O),
+            ew = (0, A.Wi)(eR, v, el) && t && !eN,
+            eD = i.useCallback(() => {
+                ep(!0);
             }, []),
             ex = i.useCallback(() => {
-                eh(!0), null == eS || eS();
-            }, [eS]),
-            eM = i.useCallback(() => {
-                eh(!1);
+                ep(!1);
             }, []),
-            ek = i.useCallback((e) => {
+            eL = i.useCallback(() => {
+                em(!0), null == eT || eT();
+            }, [eT]),
+            ej = i.useCallback(() => {
+                em(!1);
+            }, []),
+            eM = i.useCallback((e) => {
                 eg(e);
             }, []),
-            ej = i.useCallback(
+            ek = i.useCallback(
                 (e) =>
-                    null == eP
+                    null == eR
                         ? null
                         : (0, r.jsx)(
                               C.Z,
                               G(
-                                  j(
+                                  k(
                                       {
                                           name: null != E ? E : ec,
-                                          quest: eP,
+                                          quest: eR,
                                           memberListItemRef: ed,
                                           applicationStream: v,
                                       },
                                       e,
                                   ),
-                                  { closePopout: () => eR(!0) },
+                                  { closePopout: () => eP(!0) },
                               ),
                           ),
-                [eP, ed, v, E, ec],
+                [eR, ed, v, E, ec],
             );
         return null == b
-            ? (0, r.jsx)(m.Z, {
+            ? (0, r.jsx)(h.Z, {
                   avatarSize: c.EFr.SIZE_32,
-                  className: M.placeholder,
+                  className: j.placeholder,
               })
             : (0, r.jsx)(c.yRy, {
                   targetElementRef: ed,
-                  renderPopout: ej,
+                  renderPopout: ek,
                   position: "bottom",
-                  shouldShow: eD,
+                  shouldShow: ew,
                   nudgeAlignIntoViewport: !1,
                   useRawTargetDimensions: !0,
                   animation: c.yRy.Animation.NONE,
@@ -444,87 +444,87 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                   children: () =>
                       (0, r.jsx)(
                           g.Z,
-                          j(
+                          k(
                               {
                                   ref: ed,
                                   selected: t,
-                                  className: o()(M.member, k, {
-                                      [M.offline]: I === D.Skl.OFFLINE && !t,
-                                      [M.flatBottom]: eD,
+                                  className: o()(j.member, M, {
+                                      [j.offline]: S === w.Skl.OFFLINE && !t,
+                                      [j.flatBottom]: ew,
                                   }),
-                                  innerClassName: M.memberInner,
-                                  onClick: Q,
+                                  innerClassName: j.memberInner,
+                                  onClick: X,
                                   onKeyDown: W,
                                   onMouseDown: Y,
                                   onContextMenu: J,
-                                  onMouseEnter: ew,
-                                  onMouseLeave: eL,
-                                  onBlur: eM,
+                                  onMouseEnter: eD,
+                                  onMouseLeave: ex,
+                                  onBlur: ej,
                                   hovered: ef,
                                   name:
-                                      null == p
+                                      null == _
                                           ? (0, r.jsx)("span", {
-                                                className: M.username,
+                                                className: j.username,
                                                 children: (0, r.jsx)(z, {
                                                     colorRoleName: l,
                                                     colorString: null != n ? n : null,
                                                     name: null != E ? E : ec,
                                                     colorStrings: eC,
-                                                    hideClanTag: Z,
+                                                    hideClanTag: B,
                                                     user: b,
-                                                    guildId: x,
+                                                    guildId: L,
                                                     isHovering: ef,
                                                 }),
                                             })
                                           : (0, r.jsx)(s.u, {
-                                                text: p,
+                                                text: _,
                                                 children: (0, r.jsx)("span", {
-                                                    className: o()(M.username, M.lostPermission),
+                                                    className: o()(j.username, j.lostPermission),
                                                     children: (0, r.jsx)(z, {
                                                         colorRoleName: l,
                                                         colorString: null != n ? n : null,
                                                         name: null != E ? E : ec,
                                                         colorStrings: eC,
-                                                        hideClanTag: Z,
+                                                        hideClanTag: B,
                                                         user: b,
-                                                        guildId: x,
+                                                        guildId: L,
                                                         isHovering: ef,
                                                     }),
                                                 }),
                                             }),
                                   avatar: (0, r.jsx)(q, {
                                       user: b,
-                                      shouldAnimateStatus: T,
+                                      shouldAnimateStatus: I,
                                       activities: O,
-                                      status: I,
-                                      eventHandlers: eI,
+                                      status: S,
+                                      eventHandlers: eS,
                                       avatarSrc: ev,
-                                      isMobile: R,
-                                      isTyping: h,
+                                      isMobile: P,
+                                      isTyping: m,
                                       avatarDecorationSrc: eO,
-                                      handleSetTypingRef: ek,
-                                      typingRef: em,
+                                      handleSetTypingRef: eM,
+                                      typingRef: eh,
                                       currentUser: y,
                                   }),
                                   nameplate: U,
-                                  subText: (0, r.jsx)(X, {
+                                  subText: (0, r.jsx)(Q, {
                                       hideSubtext: F,
                                       activities: O,
-                                      status: I,
+                                      status: S,
                                       applicationStream: v,
                                       voiceStatusChannel: ey,
                                       user: b,
-                                      channel: L,
-                                      isHoveringOrFocusing: ef || ep,
-                                      quest: eP,
+                                      channel: x,
+                                      isHoveringOrFocusing: ef || e_,
+                                      quest: eR,
                                       hideTooltip: H,
                                   }),
                                   decorators: (0, r.jsx)(K, {
                                       user: b,
                                       isOwner: u,
-                                      lostPermissionTooltipText: p,
+                                      lostPermissionTooltipText: _,
                                       ownerTooltipText: f,
-                                      premiumSince: w,
+                                      premiumSince: D,
                                       onClickPremiumGuildIcon: $,
                                   }),
                                   "aria-controls": ee,
@@ -533,7 +533,7 @@ let F = (0, R.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                   "aria-posinset": en,
                                   id: ei,
                                   tabIndex: ea,
-                                  onFocus: ex,
+                                  onFocus: eL,
                                   focusProps: {
                                       offset: {
                                           top: 4,

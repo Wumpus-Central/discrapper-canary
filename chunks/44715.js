@@ -12,21 +12,21 @@ function o(e, t) {
     let n = a(e);
     return (
         t.forEach((e) => {
-            var t, i, a, o, s, l, c, u, d, f, _, p;
-            let h = n[e.userId],
-                m = null != (i = null != (t = e.joinSourceType) ? t : null == h ? void 0 : h.joinSourceType) ? i : null;
-            (null == m || m === r.gq.UNSPECIFIED) && null != e.sourceInviteCode && (m = r.gq.INVITE),
+            var t, i, a, o, s, l, c, u, d, f, p, _;
+            let m = n[e.userId],
+                h = null != (i = null != (t = e.joinSourceType) ? t : null == m ? void 0 : m.joinSourceType) ? i : null;
+            (null == h || h === r.gq.UNSPECIFIED) && null != e.sourceInviteCode && (h = r.gq.INVITE),
                 (n[e.userId] = {
                     userId: e.userId,
                     sourceInviteCode:
-                        null != (o = null != (a = e.sourceInviteCode) ? a : null == h ? void 0 : h.sourceInviteCode)
+                        null != (o = null != (a = e.sourceInviteCode) ? a : null == m ? void 0 : m.sourceInviteCode)
                             ? o
                             : null,
-                    joinSourceType: m,
+                    joinSourceType: h,
                     inviterId:
-                        null != (l = null != (s = e.inviterId) ? s : null == h ? void 0 : h.inviterId) ? l : null,
+                        null != (l = null != (s = e.inviterId) ? s : null == m ? void 0 : m.inviterId) ? l : null,
                     integrationType:
-                        null != (u = null != (c = e.integrationType) ? c : null == h ? void 0 : h.integrationType)
+                        null != (u = null != (c = e.integrationType) ? c : null == m ? void 0 : m.integrationType)
                             ? u
                             : null,
                     joinSourceApplicationId:
@@ -34,15 +34,15 @@ function o(e, t) {
                         (f =
                             null != (d = e.joinSourceApplicationId)
                                 ? d
-                                : null == h
+                                : null == m
                                   ? void 0
-                                  : h.joinSourceApplicationId)
+                                  : m.joinSourceApplicationId)
                             ? f
                             : null,
                     joinSourceChannelId:
                         null !=
-                        (p = null != (_ = e.joinSourceChannelId) ? _ : null == h ? void 0 : h.joinSourceChannelId)
-                            ? p
+                        (_ = null != (p = e.joinSourceChannelId) ? p : null == m ? void 0 : m.joinSourceChannelId)
+                            ? _
                             : null,
                 });
         }),

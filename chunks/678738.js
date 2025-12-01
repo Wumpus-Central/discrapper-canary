@@ -14,10 +14,10 @@ function f(e) {
             heading: n,
             headingIcon: a,
             introText: f,
-            className: _,
-            scrollIntoView: p = !1,
-            headingClassName: h,
-            headingVariant: m = "text-xs/semibold",
+            className: p,
+            scrollIntoView: _ = !1,
+            headingClassName: m,
+            headingVariant: h = "text-xs/semibold",
             headingColor: g = "header-secondary",
         } = e,
         E = (0, u.Dt)(),
@@ -33,8 +33,8 @@ function f(e) {
             return () => cancelAnimationFrame(t);
         }, [b]),
         (0, r.jsxs)("section", {
-            ref: p ? y : void 0,
-            className: o()(d.section, _),
+            ref: _ ? y : void 0,
+            className: o()(d.section, p),
             "aria-labelledby": null != n ? E : void 0,
             children: [
                 null != n &&
@@ -45,9 +45,9 @@ function f(e) {
                                 className: d.header,
                                 children: [
                                     (0, r.jsx)(l.Heading, {
-                                        variant: m,
+                                        variant: h,
                                         color: g,
-                                        className: h,
+                                        className: m,
                                         id: E,
                                         children: n,
                                     }),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r,
     i = n(442837),
     a = n(570140);
@@ -35,7 +35,7 @@ class f extends (r = i.ZP.Store) {
     }
 }
 o(f, "displayName", "CollectiblesMarketingsStore");
-let _ = new f(a.Z, {
+let p = new f(a.Z, {
     COLLECTIBLES_MARKETING_FETCH: c,
     COLLECTIBLES_MARKETING_FETCH_SUCCESS: u,
     LOGOUT: d,

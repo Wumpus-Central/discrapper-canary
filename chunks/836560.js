@@ -87,13 +87,13 @@ function f(e, t, n) {
         i = d.bind(r);
     return (i.listener = n), (r.wrapFn = i), i;
 }
-function _(e, t, n) {
+function p(e, t, n) {
     var r = e._events;
     if (void 0 === r) return [];
     var i = r[t];
-    return void 0 === i ? [] : "function" == typeof i ? (n ? [i.listener || i] : [i]) : n ? g(i) : h(i, i.length);
+    return void 0 === i ? [] : "function" == typeof i ? (n ? [i.listener || i] : [i]) : n ? g(i) : m(i, i.length);
 }
-function p(e) {
+function _(e) {
     var t = this._events;
     if (void 0 !== t) {
         var n = t[e];
@@ -102,11 +102,11 @@ function p(e) {
     }
     return 0;
 }
-function h(e, t) {
+function m(e, t) {
     for (var n = Array(t), r = 0; r < t; ++r) n[r] = e[r];
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     for (; t + 1 < e.length; t++) e[t] = e[t + 1];
     e.pop();
 }
@@ -179,7 +179,7 @@ Object.defineProperty(o, "defaultMaxListeners", {
         var l = a[e];
         if (void 0 === l) return !1;
         if ("function" == typeof l) r(l, this, t);
-        else for (var c = l.length, u = h(l, c), n = 0; n < c; ++n) r(u[n], this, t);
+        else for (var c = l.length, u = m(l, c), n = 0; n < c; ++n) r(u[n], this, t);
         return !0;
     }),
     (o.prototype.addListener = function (e, t) {
@@ -209,7 +209,7 @@ Object.defineProperty(o, "defaultMaxListeners", {
                     break;
                 }
             if (i < 0) return this;
-            0 === i ? n.shift() : m(n, i),
+            0 === i ? n.shift() : h(n, i),
                 1 === n.length && (r[e] = n[0]),
                 void 0 !== r.removeListener && this.emit("removeListener", e, o || t);
         }
@@ -243,15 +243,15 @@ Object.defineProperty(o, "defaultMaxListeners", {
         return this;
     }),
     (o.prototype.listeners = function (e) {
-        return _(this, e, !0);
+        return p(this, e, !0);
     }),
     (o.prototype.rawListeners = function (e) {
-        return _(this, e, !1);
+        return p(this, e, !1);
     }),
     (o.listenerCount = function (e, t) {
-        return "function" == typeof e.listenerCount ? e.listenerCount(t) : p.call(e, t);
+        return "function" == typeof e.listenerCount ? e.listenerCount(t) : _.call(e, t);
     }),
-    (o.prototype.listenerCount = p),
+    (o.prototype.listenerCount = _),
     (o.prototype.eventNames = function () {
         return this._eventsCount > 0 ? t(this._events) : [];
     });

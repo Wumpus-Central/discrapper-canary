@@ -14,7 +14,7 @@ async function d() {
             let e = (0, r.rs)(6, 7);
             c.info("The answer for life the universe and everything is:", e), f();
         } catch (e) {
-            p(e);
+            _(e);
         }
         u = !0;
     }
@@ -30,7 +30,7 @@ function f() {
             experimental_features: e,
         });
 }
-function _(e) {
+function p(e) {
     let t = "",
         n = null;
     return (e instanceof Error ? ((t = e.message), (n = e.name)) : (t = null != e ? String(e) : "Unknown error"),
@@ -39,9 +39,9 @@ function _(e) {
         ? "".concat(n, ": ").concat(t)
         : t;
 }
-function p(e) {
+function _(e) {
     c.error("Failed to execute smoke test:", e);
-    let t = _(e);
+    let t = p(e);
     o.default.track(l.rMx.LIBDISCORE_LOADED, {
         success: !1,
         error: t,

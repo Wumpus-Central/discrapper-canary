@@ -1,4 +1,4 @@
-n.d(t, { K: () => _ });
+n.d(t, { K: () => p });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,16 +9,16 @@ var r = n(54381),
     u = n(475595),
     d = n(388032),
     f = n(819838);
-function _(e) {
+function p(e) {
     var t, n, a;
-    let { showVideo: _, imageAsset: p, videoAsset: h, imageSize: m, onLoadComplete: g, assetRef: E } = e,
+    let { showVideo: p, imageAsset: _, videoAsset: m, imageSize: h, onLoadComplete: g, assetRef: E } = e,
         b = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
-        y = null == p || p.asset.isAnimated ? null : p.asset.url,
-        O = null != h && h.asset.isAnimated ? h.asset.url : null,
-        v = null == m ? void 0 : m.width,
-        I = null == m ? void 0 : m.height,
-        T = i.useMemo(() => {
-            let e = null != v && null != I ? (0, u.nK)(v, I) : null;
+        y = null == _ || _.asset.isAnimated ? null : _.asset.url,
+        O = null != m && m.asset.isAnimated ? m.asset.url : null,
+        v = null == h ? void 0 : h.width,
+        S = null == h ? void 0 : h.height,
+        I = i.useMemo(() => {
+            let e = null != v && null != S ? (0, u.nK)(v, S) : null;
             return null != y
                 ? (0, u.sN)(y, {
                       format: "webp",
@@ -28,34 +28,34 @@ function _(e) {
                 : null != O
                   ? (0, u.f0)(O, null != e ? e : void 0)
                   : null;
-        }, [y, O, v, I]);
-    if (null == T) return null;
-    let S = !b && null != h && null != O && _;
+        }, [y, O, v, S]);
+    if (null == I) return null;
+    let T = !b && null != m && null != O && p;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("img", {
-                alt: null != (t = null == p ? void 0 : p.alt) ? t : d.intl.string(d.t.P84bAD),
-                className: null != (n = null == p ? void 0 : p.className) ? n : f.image,
-                src: T,
+                alt: null != (t = null == _ ? void 0 : _.alt) ? t : d.intl.string(d.t.P84bAD),
+                className: null != (n = null == _ ? void 0 : _.className) ? n : f.image,
+                src: I,
                 onLoad: g,
-                ref: S ? void 0 : E,
+                ref: T ? void 0 : E,
             }),
-            S &&
-                _ &&
+            T &&
+                p &&
                 (0, r.jsx)(c.Z, {
                     autoPlay: !0,
                     loop: !0,
                     muted: !0,
                     preload: "auto",
-                    poster: T,
+                    poster: I,
                     playsInline: !0,
-                    className: o()(h.className, f.video, { [f.hidden]: !_ }),
+                    className: o()(m.className, f.video, { [f.hidden]: !p }),
                     controls: !1,
                     onProgress: g,
                     ref: E,
                     children: (0, r.jsx)("source", {
-                        src: h.asset.url,
-                        type: null != (a = h.asset.mimetype) ? a : void 0,
+                        src: m.asset.url,
+                        type: null != (a = m.asset.mimetype) ? a : void 0,
                     }),
                 }),
         ],

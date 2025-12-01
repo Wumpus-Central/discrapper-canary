@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(100527),
     u = n(434479),
     d = n(819640),
-    p = n(713081),
+    f = n(713081),
     h = n(326660),
-    f = n(441536),
+    p = n(441536),
     g = n(933104),
     m = n(332538),
     b = n(921944),
@@ -52,23 +52,23 @@ let j = {
             END: 376,
         },
     },
-    C = i.memo(function (e) {
+    x = i.memo(function (e) {
         let { guildId: t, selected: l } = e,
-            C = (0, m.ZP)(t),
-            x = i.useCallback(() => {
+            x = (0, m.ZP)(t),
+            C = i.useCallback(() => {
                 var e;
-                (0, p.jd)(t),
-                    (0, f.Z)(t, c.Z.GUILD_POWERUPS_CHANNEL_LIST_ROW),
-                    null == C || null == (e = C.popout) || e.markAsDismissed(b.L.INDIRECT_ACTION);
-            }, [t, C]),
+                (0, f.jd)(t),
+                    (0, p.Z)(t, c.Z.GUILD_POWERUPS_CHANNEL_LIST_ROW),
+                    null == x || null == (e = x.popout) || e.markAsDismissed(b.L.INDIRECT_ACTION);
+            }, [t, x]),
             E = i.useRef(null),
             S = (0, s.s9z)(s.JQI),
             I = (0, a.e7)([d.Z], () => d.Z.hasLayers()),
             P = S || I,
             N = i.useCallback(() => {
                 var e;
-                if ((null == C ? void 0 : C.popout) == null || P) return null;
-                switch (null == C || null == (e = C.popout) ? void 0 : e.type) {
+                if ((null == x ? void 0 : x.popout) == null || P) return null;
+                switch (null == x || null == (e = x.popout) ? void 0 : e.type) {
                     case h.J.LEVEL_REACHED:
                         return (0, r.jsx)(
                             g.jG,
@@ -77,7 +77,7 @@ let j = {
                                     guildId: t,
                                     channelRowRef: E,
                                 },
-                                C.popout,
+                                x.popout,
                             ),
                         );
                     case h.J.PERKS_AVAILABLE:
@@ -88,7 +88,7 @@ let j = {
                                     guildId: t,
                                     channelRowRef: E,
                                 },
-                                C.popout,
+                                x.popout,
                             ),
                         );
                     case h.J.PERKS_PURCHASABLE:
@@ -99,7 +99,7 @@ let j = {
                                     guildId: t,
                                     channelRowRef: E,
                                 },
-                                C.popout,
+                                x.popout,
                             ),
                         );
                     case h.J.NEW_PERK_AVAILABLE:
@@ -110,7 +110,7 @@ let j = {
                                     guildId: t,
                                     channelRowRef: E,
                                 },
-                                C.popout,
+                                x.popout,
                             ),
                         );
                     case h.J.GAME_SERVER_HOSTING_AVAILABLE:
@@ -122,17 +122,17 @@ let j = {
                                     guildId: t,
                                     channelRowRef: E,
                                 },
-                                C.popout,
+                                x.popout,
                             ),
                         );
                     default:
                         return (0, r.jsx)("div", {});
                 }
-            }, [t, null == C ? void 0 : C.popout, E, P]),
+            }, [t, null == x ? void 0 : x.popout, E, P]),
             [Z, w] = i.useState(null);
         i.useEffect(() => {
-            (null == C ? void 0 : C.popout) == null && w(null);
-        }, [null == C ? void 0 : C.popout]);
+            (null == x ? void 0 : x.popout) == null && w(null);
+        }, [null == x ? void 0 : x.popout]);
         let T = i.useCallback((e) => {
             w(e);
         }, []);
@@ -149,7 +149,7 @@ let j = {
                             color: "currentColor",
                         }),
                     background:
-                        (null == C ? void 0 : C.popout) != null &&
+                        (null == x ? void 0 : x.popout) != null &&
                         (0, r.jsx)("div", {
                             className: O.lottieContainer,
                             children: (0, r.jsx)(s.kci, {
@@ -162,13 +162,13 @@ let j = {
                             }),
                         }),
                     text: (0, r.jsx)("span", {
-                        className: o()({ [O.textImportant]: (null == C ? void 0 : C.showUnread) === !0 }),
+                        className: o()({ [O.textImportant]: (null == x ? void 0 : x.showUnread) === !0 }),
                         children: y.intl.string(_.default.yv3DJJ),
                     }),
                     selected: l,
-                    onClick: x,
-                    showUnread: (null == C ? void 0 : C.showUnread) === !0,
-                    trailing: null == C ? void 0 : C.trailing,
+                    onClick: C,
+                    showUnread: (null == x ? void 0 : x.showUnread) === !0,
+                    trailing: null == x ? void 0 : x.trailing,
                 }),
                 N(),
             ],

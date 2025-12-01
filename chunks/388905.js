@@ -4,15 +4,15 @@ n.d(t, {
     EJ: () => N,
     Ee: () => y,
     Hh: () => C,
-    II: () => T,
-    MC: () => I,
+    II: () => I,
+    MC: () => S,
     Vj: () => v,
-    ZP: () => D,
-    gO: () => S,
+    ZP: () => w,
+    gO: () => T,
     i_: () => A,
-    jQ: () => R,
+    jQ: () => P,
     qE: () => O,
-    v6: () => P,
+    v6: () => R,
 }),
     n(953529),
     n(472816),
@@ -28,10 +28,10 @@ var i = n(120356),
     u = n(313201),
     d = n(565138),
     f = n(361207),
-    _ = n(63063),
-    p = n(981631),
-    h = n(388032),
-    m = n(28731);
+    p = n(63063),
+    _ = n(981631),
+    m = n(388032),
+    h = n(28731);
 let g = o.qEK;
 null == g && (g = () => null);
 let E = (e) => {
@@ -39,7 +39,7 @@ let E = (e) => {
         return (0, r.jsx)(o.Heading, {
             variant: s,
             color: "header-primary",
-            className: a()(m.title, t),
+            className: a()(h.title, t),
             id: n,
             children: i,
         });
@@ -58,7 +58,7 @@ let E = (e) => {
         return (0, r.jsx)("img", {
             alt: "",
             src: n,
-            className: a()(m.image, t),
+            className: a()(h.image, t),
         });
     },
     O = (e) => {
@@ -66,7 +66,7 @@ let E = (e) => {
         return (0, r.jsx)(g, {
             src: n,
             size: i,
-            className: a()(m.inviteLargeIcon, t),
+            className: a()(h.inviteLargeIcon, t),
             "aria-hidden": !0,
         });
     },
@@ -81,17 +81,17 @@ let E = (e) => {
         });
     };
 v.Sizes = d.Z.Sizes;
-let I = (e) => {
+let S = (e) => {
     let { className: t, channel: n, size: i } = e;
     return (0, r.jsx)(g, {
         src: (0, s.x)(n),
         size: i,
-        className: a()(m.inviteIcon, t),
+        className: a()(h.inviteIcon, t),
         "aria-hidden": !0,
     });
 };
-I.Sizes = o.EFr;
-let T = (e) => {
+S.Sizes = o.EFr;
+let I = (e) => {
         let {
                 label: t,
                 error: n,
@@ -102,10 +102,10 @@ let T = (e) => {
                 type: c = "text",
                 onChange: d,
                 autoComplete: f,
-                autoFocus: _,
-                maxLength: p,
-                spellCheck: h,
-                name: m,
+                autoFocus: p,
+                maxLength: _,
+                spellCheck: m,
+                name: h,
                 description: g,
                 required: E,
                 onFocus: b,
@@ -113,7 +113,7 @@ let T = (e) => {
             } = e,
             O = (0, u.Dt)(),
             v = (0, r.jsx)(o.oil, {
-                name: m,
+                name: h,
                 type: c,
                 value: a,
                 inputRef: l,
@@ -121,9 +121,9 @@ let T = (e) => {
                 "aria-label": t,
                 onChange: d,
                 autoComplete: f,
-                autoFocus: _,
-                maxLength: p,
-                spellCheck: h,
+                autoFocus: p,
+                maxLength: _,
+                spellCheck: m,
                 id: O,
                 onFocus: b,
                 onBlur: y,
@@ -139,10 +139,10 @@ let T = (e) => {
               })
             : v;
     },
-    S = (e) => {
+    T = (e) => {
         let { className: t, children: n } = e;
         return (0, r.jsx)("div", {
-            className: a()(m.block, t),
+            className: a()(h.block, t),
             children: n,
         });
     },
@@ -150,7 +150,7 @@ let T = (e) => {
         let { className: t, children: n } = e;
         return (0, r.jsx)(o.Text, {
             variant: "text-xs/normal",
-            className: a()(m.subText, t),
+            className: a()(h.subText, t),
             children: n,
         });
     },
@@ -160,7 +160,7 @@ let T = (e) => {
             direction: c.Z.Direction.VERTICAL,
             align: c.Z.Align.CENTER,
             className: t,
-            children: (0, r.jsx)(l.Z, { className: m.spinnerVideo }),
+            children: (0, r.jsx)(l.Z, { className: h.spinnerVideo }),
         });
     },
     N = (e) => {
@@ -171,15 +171,15 @@ let T = (e) => {
             : (null != n &&
                   n > 0 &&
                   (t = (0, r.jsxs)("div", {
-                      className: a()(m.pill, m.pillOnline, l && m.pillFlat),
+                      className: a()(h.pill, h.pillOnline, l && h.pillFlat),
                       children: [
-                          (0, r.jsx)("i", { className: m.pillIconOnline }),
+                          (0, r.jsx)("i", { className: h.pillIconOnline }),
                           (0, r.jsx)(o.Text, {
                               tag: "span",
                               className: u,
                               variant: "text-sm/normal",
                               color: "header-secondary",
-                              children: h.intl.format(h.t["LC+S+m"], { membersOnline: n }),
+                              children: m.intl.format(m.t["LC+S+m"], { membersOnline: n }),
                           }),
                       ],
                   })),
@@ -189,42 +189,42 @@ let T = (e) => {
                   children: [
                       t,
                       (0, r.jsxs)("div", {
-                          className: a()(m.pill, l && m.pillFlat),
+                          className: a()(h.pill, l && h.pillFlat),
                           children: [
-                              (0, r.jsx)("i", { className: m.pillIconTotal }),
+                              (0, r.jsx)("i", { className: h.pillIconTotal }),
                               (0, r.jsx)(o.Text, {
                                   tag: "span",
                                   className: u,
                                   variant: "text-sm/normal",
                                   color: "header-secondary",
-                                  children: h.intl.format(h.t.zRl6XR, { count: i }),
+                                  children: m.intl.format(m.t.zRl6XR, { count: i }),
                               }),
                           ],
                       }),
                   ],
               }));
     },
-    R = (e) => {
+    P = (e) => {
         let { user: t } = e;
         return null == t
             ? null
             : (0, r.jsxs)("div", {
-                  className: m.joiningAs,
+                  className: h.joiningAs,
                   children: [
                       (0, r.jsx)(o.Text, {
                           tag: "span",
                           variant: "text-md/normal",
                           color: "header-secondary",
-                          children: h.intl.string(h.t["/8WWvE"]),
+                          children: m.intl.string(m.t["/8WWvE"]),
                       }),
                       (0, r.jsx)(O, {
-                          className: m.joiningAsAvatar,
+                          className: h.joiningAsAvatar,
                           src: t.getAvatarURL(void 0, 24),
                           size: o.EFr.SIZE_24,
                           "aria-label": t.username,
                       }),
                       (0, r.jsx)(o.Text, {
-                          className: m.joiningAsUsername,
+                          className: h.joiningAsUsername,
                           tag: "span",
                           variant: "text-md/semibold",
                           color: "header-primary",
@@ -233,27 +233,27 @@ let T = (e) => {
                   ],
               });
     },
-    P = (e) => {
+    R = (e) => {
         let { className: t } = e;
-        return (0, r.jsxs)(S, {
+        return (0, r.jsxs)(T, {
             className: t,
             children: [
                 (0, r.jsx)(o.Button, {
-                    text: h.intl.format(h.t.JoS1i3, { platform: (0, f.DW)() }),
+                    text: m.intl.format(m.t.JoS1i3, { platform: (0, f.DW)() }),
                     variant: "secondary",
                     fullWidth: !0,
                     onClick: () => window.open((0, f.t3)()),
                 }),
                 (0, r.jsx)(A, {
-                    className: m.downloadButtonSubtext,
-                    children: h.intl.format(h.t.wO1VBk, {
-                        supportedBrowserURL: _.Z.getArticleURL(p.BhN.SUPPORTED_BROWSERS),
+                    className: h.downloadButtonSubtext,
+                    children: m.intl.format(m.t.wO1VBk, {
+                        supportedBrowserURL: p.Z.getArticleURL(_.BhN.SUPPORTED_BROWSERS),
                     }),
                 }),
             ],
         });
     },
-    D = (e) => {
+    w = (e) => {
         let {
             className: t,
             contentClassName: n,
@@ -261,7 +261,7 @@ let T = (e) => {
             onSubmit: s,
             children: l,
             expanded: c = !1,
-            theme: u = p.BRd.DARK,
+            theme: u = _.BRd.DARK,
             style: d,
         } = e;
         return (0, r.jsx)(o.f6W, {
@@ -272,11 +272,11 @@ let T = (e) => {
                     "data-theme": u,
                     onSubmit: s,
                     style: d,
-                    className: a()(c ? m.authBoxExpanded : m.authBox, e, t),
+                    className: a()(c ? h.authBoxExpanded : h.authBox, e, t),
                     children: [
-                        (0, r.jsx)("div", { className: m.discordLogo }),
+                        (0, r.jsx)("div", { className: h.discordLogo }),
                         (0, r.jsx)("div", {
-                            className: a()(m.centeringWrapper, n),
+                            className: a()(h.centeringWrapper, n),
                             children: l,
                         }),
                     ],

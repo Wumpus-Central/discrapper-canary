@@ -1,13 +1,13 @@
 n.d(t, {
-    Dz: () => m,
+    Dz: () => h,
     Nj: () => y,
     RS: () => O,
     by: () => E,
-    eI: () => p,
+    eI: () => _,
     f6: () => g,
     i0: () => v,
-    ib: () => h,
-    og: () => I,
+    ib: () => m,
+    og: () => S,
 }),
     n(415506),
     n(388685);
@@ -21,11 +21,11 @@ var r = n(544891),
     u = n(981631);
 let d = "https://www.paypal.com",
     f = "https://sandbox.paypal.com";
-function _(e) {
+function p(e) {
     let t = u.Ai1.BRAINTREE.KEY.startsWith("production_") ? d : f;
     return "".concat(t, "/agreements/approve?nolegacy=1&ba_token=").concat(e);
 }
-function p() {
+function _() {
     (0, s.S)().then((e) => {
         e.client
             .create({ authorization: u.Ai1.BRAINTREE.KEY })
@@ -34,13 +34,13 @@ function p() {
                     type: "BRAINTREE_CREATE_CLIENT_SUCCESS",
                     client: e,
                 }),
-                    m(),
-                    h();
+                    h(),
+                    m();
             })
             .catch(() => i.Z.dispatch({ type: "BRAINTREE_CREATE_CLIENT_FAIL" }));
     });
 }
-function h() {
+function m() {
     let e = a.Z.getClient();
     if (null == e) throw Error("Braintree client must be initialized before creating Venmo client.");
     (0, s.S)().then((t) => {
@@ -61,7 +61,7 @@ function h() {
             });
     });
 }
-function m() {
+function h() {
     let e = a.Z.getClient();
     if (null == e) throw Error("braintree client must be initialized before calling this");
     (0, s.S)().then((t) => {
@@ -88,7 +88,7 @@ function m() {
                             let {
                                 body: { token: t },
                             } = e;
-                            this._frameService.redirect(_(t));
+                            this._frameService.redirect(p(t));
                         })
                         .catch(
                             (e) => (
@@ -188,6 +188,6 @@ function v() {
     let e = a.Z.getLastURL();
     null == e ? g() : (i.Z.dispatch({ type: "BRAINTREE_TOKENIZE_PAYPAL_START" }), window.open(e));
 }
-function I() {
+function S() {
     E();
 }

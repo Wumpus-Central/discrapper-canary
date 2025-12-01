@@ -1,8 +1,8 @@
 n.r(t),
     n.d(t, {
         enable: () => C,
-        isNotSupported: () => S,
-        trackToggleSelfDeaf: () => R,
+        isNotSupported: () => T,
+        trackToggleSelfDeaf: () => P,
         trackToggleSelfMute: () => N,
     });
 var r = n(54381);
@@ -16,10 +16,10 @@ var i = n(755721),
     u = n(944486),
     d = n(556296),
     f = n(451478),
-    _ = n(626135),
-    p = n(13140),
-    h = n(554174),
-    m = n(981631),
+    p = n(626135),
+    _ = n(13140),
+    m = n(554174),
+    h = n(981631),
     g = n(761274),
     E = n(388032);
 function b(e, t, n) {
@@ -74,14 +74,14 @@ function v(e, t) {
         e
     );
 }
-let I = new s.Z("AudioActionCreators");
-function T() {
+let S = new s.Z("AudioActionCreators");
+function I() {
     (0, a.ZDy)(async () => {
         let { default: e } = await Promise.all([n.e("32996"), n.e("74023")]).then(n.bind(n, 431583));
         return (t) => (0, r.jsx)(e, y({ source: "Unsupported Browser" }, t));
     });
 }
-function S() {
+function T() {
     return (
         !c.Z.isSupported() &&
         ((0, a.h7j)((e) =>
@@ -93,7 +93,7 @@ function S() {
                             header: E.intl.string(E.t.ilMTy0),
                             confirmText: E.intl.string(E.t["BK8LK+"]),
                             cancelText: E.intl.string(E.t["ETE/oC"]),
-                            onConfirm: T,
+                            onConfirm: I,
                             confirmButtonColor: i.zx.Colors.BRAND,
                         },
                         e,
@@ -111,16 +111,16 @@ function S() {
     );
 }
 function A(e) {
-    _.default.track(m.rMx.PERMISSIONS_ACKED, {
+    p.default.track(h.rMx.PERMISSIONS_ACKED, {
         type: "audio",
         action: e,
     });
 }
 function C() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return S()
+    return T()
         ? Promise.resolve(!1)
-        : (_.default.track(m.rMx.PERMISSIONS_REQUESTED, { type: "audio" }),
+        : (p.default.track(h.rMx.PERMISSIONS_REQUESTED, { type: "audio" }),
           c.Z.getMediaEngine()
               .enable()
               .then(
@@ -134,17 +134,17 @@ function C() {
                   },
                   (e) => {
                       switch (e) {
-                          case m.ETv.NO_DEVICES_FOUND:
+                          case h.ETv.NO_DEVICES_FOUND:
                               A(g.PQ.NO_DEVICES);
                               break;
-                          case m.ETv.PERMISSION_DENIED:
+                          case h.ETv.PERMISSION_DENIED:
                               A(g.PQ.DENIED);
                               break;
-                          case m.ETv.PERMISSION_DISMISSED:
+                          case h.ETv.PERMISSION_DISMISSED:
                               A(g.PQ.DISMISSED);
                               break;
                           default:
-                              A(g.PQ.ERROR), I.warn("unknown getUserMedia error: ".concat(e));
+                              A(g.PQ.ERROR), S.warn("unknown getUserMedia error: ".concat(e));
                       }
                   },
               )
@@ -152,30 +152,30 @@ function C() {
 }
 function N(e) {
     let { usedKeybind: t = !1, location: n } = e,
-        r = d.ZP.getKeybindForAction(m.kg4.TOGGLE_MUTE, !1, !0),
+        r = d.ZP.getKeybindForAction(h.kg4.TOGGLE_MUTE, !1, !0),
         i = u.Z.getVoiceChannelId(),
         a = null != i ? l.Z.getChannel(i) : null;
-    _.default.track(m.rMx.INPUT_MUTE_TOGGLED, {
+    p.default.track(h.rMx.INPUT_MUTE_TOGGLED, {
         enabled: !c.Z.isSelfMute(),
         custom_keybind_assigned: null != r && r.id !== d.Ek.id,
         used_keybind: t,
         app_in_focus: f.Z.isAppFocused(),
-        overlay_activated: null != (0, h.Z)(),
+        overlay_activated: null != (0, m.Z)(),
         voice_channel_type: null != a ? a.type : null,
         location: n,
     });
 }
-function R(e) {
+function P(e) {
     let { usedKeybind: t = !1, location: n } = e,
-        r = d.ZP.getKeybindForAction(m.kg4.TOGGLE_DEAFEN, !1, !0),
+        r = d.ZP.getKeybindForAction(h.kg4.TOGGLE_DEAFEN, !1, !0),
         i = u.Z.getVoiceChannelId(),
         a = null != i ? l.Z.getChannel(i) : null;
-    _.default.track(m.rMx.SELF_DEAFEN_TOGGLED, {
+    p.default.track(h.rMx.SELF_DEAFEN_TOGGLED, {
         enabled: !c.Z.isSelfDeaf(),
-        keybind_assigned: null != r ? (0, p.BB)(r.shortcut) : void 0,
+        keybind_assigned: null != r ? (0, _.BB)(r.shortcut) : void 0,
         used_keybind: t,
         app_in_focus: f.Z.isAppFocused(),
-        overlay_activated: null != (0, h.Z)(),
+        overlay_activated: null != (0, m.Z)(),
         voice_channel_type: null != a ? a.type : null,
         location: n,
     });

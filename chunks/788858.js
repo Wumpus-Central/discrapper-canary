@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(54381);
 n(473749);
 var i = n(442837),
@@ -56,20 +56,20 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function _(e) {
+function p(e) {
     var { channel: t } = e,
         n = d(e, ["channel"]);
     let c = (0, i.e7)([s.Z], () => t.isPrivate() || s.Z.can(l.Pl.CONNECT, t));
     if (t.isDM() || t.isGroupDM()) return (0, r.jsx)(a.Csw, u({}, n));
     let f = t.isGuildStageVoice(),
-        _ = !c || (0, o.Z)(t);
-    return f && _
+        p = !c || (0, o.Z)(t);
+    return f && p
         ? (0, r.jsx)(a.pki, u({}, n))
         : f
           ? (0, r.jsx)(a.ewx, u({}, n))
           : t.isNSFW()
             ? (0, r.jsx)(a.BVY, u({}, n))
-            : _
+            : p
               ? (0, r.jsx)(a.gjC, u({}, n))
               : (0, r.jsx)(a.gj8, u({}, n));
 }

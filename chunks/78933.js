@@ -12,8 +12,8 @@ var a = n(54381),
     p = n(104505),
     h = n(368326),
     x = n(429467),
-    g = n(243778),
-    f = n(734934),
+    f = n(243778),
+    g = n(734934),
     b = n(480173),
     v = n(300284),
     j = n(680295),
@@ -22,22 +22,22 @@ var a = n(54381),
     C = n(209698),
     S = n(687158),
     E = n(612600),
-    N = n(892001),
-    T = n(899007),
+    T = n(892001),
+    N = n(899007),
     O = n(648052),
     P = n(867176),
     I = n(537006),
     w = n(483424),
     k = n(681837),
-    A = n(638970),
-    R = n(675893),
+    R = n(638970),
+    A = n(675893),
     Z = n(502762),
     D = n(530),
     L = n(309494),
     M = n(4517),
     U = n(420654),
-    B = n(695346),
-    F = n(158776),
+    F = n(695346),
+    B = n(158776),
     G = n(246946),
     z = n(572004),
     H = n(5192),
@@ -95,31 +95,31 @@ function eo(e) {
         ep = __OVERLAY__,
         eh = (0, S.ZP)(t.id, eu),
         { analyticsLocations: ex } = (0, m.ZP)(u.Z.USER_PROFILE_ACCOUNT_POPOUT),
-        eg = (0, _.ZB)({
+        ef = (0, _.ZB)({
             layout: "ACCOUNT_POPOUT",
             userId: t.id,
             guildId: eu,
         }),
-        { ref: ef, height: eb } = (0, d.ZP)(),
-        { isHoveringOrFocusing: ev, isHovering: ej } = (0, p.Z)(ef);
+        { ref: eg, height: eb } = (0, d.ZP)(),
+        { isHoveringOrFocusing: ev, isHovering: ej } = (0, p.Z)(eg);
     l.useEffect(() => {
-        null == eo || eo(ef.current);
-    }, [ef, eo]),
+        null == eo || eo(eg.current);
+    }, [eg, eo]),
         l.useEffect(() => (W.Z.setState({ isOpen: !0 }), () => W.Z.setState({ isOpen: !1 })), []);
-    let e_ = (0, s.e7)([F.Z], () => F.Z.getStatus(t.id)),
-        ey = B.Cr.useSetting(),
+    let e_ = (0, s.e7)([B.Z], () => B.Z.getStatus(t.id)),
+        ey = F.Cr.useSetting(),
         eC = (0, $.F)(ey),
         eS = (0, s.e7)([G.Z], () => G.Z.hidePersonalInformation),
-        eE = (0, f.p)(),
-        eN = B.Sb.useSetting(),
-        eT = (0, $.I)(e_),
+        eE = (0, g.p)(),
+        eT = F.Sb.useSetting(),
+        eN = (0, $.I)(e_),
         eO = (0, q.g)(n),
         eP = (0, v.Z)({ analyticsLocations: ex }),
         eI = (0, V.I5)(t),
         ew = (0, h.p)({ location: "UserProfileAccountPopout" }),
         ek = (0, C.b)({ location: "UserProfileAccountPopout" }),
-        eA = l.useRef(null),
         eR = l.useRef(null),
+        eA = l.useRef(null),
         eZ = l.useRef((0, W.Z)((e) => e.shouldRenderTenureLevelUp)),
         eD = l.useMemo(() => (0, x.Z)(), []),
         [eL, eM] = l.useState(!0);
@@ -130,21 +130,21 @@ function eo(e) {
     }, []);
     let eU = (e) => {
             null == n || n(),
-                (0, N.openUserProfileModal)(
+                (0, T.openUserProfileModal)(
                     es(
                         {
                             customStatusPrompt: eD,
                             sourceAnalyticsLocations: ex,
                         },
-                        eg,
+                        ef,
                         e,
                     ),
                 );
         },
-        eB = (0, E.Z)({ location: "UserProfileAccountPopout" }),
-        eF = (null == eh ? void 0 : eh.widgets) != null && eh.widgets.length > 0,
-        eG = eF ? [] : [o.z.WIDGETS_USER_PROFILE_ACCOUNT_POPOUT_NEW_BADGE],
-        [ez, eH] = (0, g.US)(eG),
+        eF = (0, E.Z)({ location: "UserProfileAccountPopout" }),
+        eB = (null == eh ? void 0 : eh.widgets) != null && eh.widgets.length > 0,
+        eG = eB ? [] : [o.z.WIDGETS_USER_PROFILE_ACCOUNT_POPOUT_NEW_BADGE],
+        [ez, eH] = (0, f.US)(eG),
         eV = ez === o.z.WIDGETS_USER_PROFILE_ACCOUNT_POPOUT_NEW_BADGE,
         eW = l.useCallback(() => {
             eH(en.L.USER_DISMISS), n();
@@ -158,13 +158,13 @@ function eo(e) {
     return (0, a.jsx)(m.Gt, {
         value: ex,
         children: (0, a.jsx)(_.Mt, {
-            value: eg,
+            value: ef,
             openedAt: ed,
             fetchStartedAt: null == eh ? void 0 : eh.fetchStartedAt,
             fetchEndedAt: null == eh ? void 0 : eh.fetchEndedAt,
             isLoaded: null == eh ? void 0 : eh.isLoaded,
             children: (0, a.jsxs)(c.VqE, {
-                ref: ef,
+                ref: eg,
                 "aria-label": t.username,
                 className: ei.popoutContainer,
                 "data-layer": "base",
@@ -188,14 +188,14 @@ function eo(e) {
                                         displayProfile: eh,
                                         themeType: ea.l.POPOUT,
                                     }),
-                                    (0, a.jsx)(T.Z, {
+                                    (0, a.jsx)(N.Z, {
                                         user: t,
                                         displayProfile: eh,
                                         themeType: ea.l.POPOUT,
                                         onOpenProfile: ep ? void 0 : eU,
                                     }),
                                     (0, a.jsx)(M.Z, {
-                                        ref: eA,
+                                        ref: eR,
                                         user: t,
                                         themeType: ea.l.POPOUT,
                                         onCloseProfile: n,
@@ -236,9 +236,9 @@ function eo(e) {
                                         hidePersonalInformation: eS,
                                         onClose: n,
                                     }),
-                                    eB &&
-                                        eF &&
-                                        (0, a.jsx)(R.Z, {
+                                    eF &&
+                                        eB &&
+                                        (0, a.jsx)(A.Z, {
                                             user: t,
                                             widgets: null == eh ? void 0 : eh.widgets,
                                             onOpenUserProfileModal: eU,
@@ -248,7 +248,7 @@ function eo(e) {
                                         onInteraction: n,
                                     }),
                                     ek
-                                        ? (0, a.jsx)(A.Z, {
+                                        ? (0, a.jsx)(R.Z, {
                                               user: t,
                                               currentUser: t,
                                               onOpenUserProfileModal: eU,
@@ -289,7 +289,7 @@ function eo(e) {
                                                                       text: el.intl.string(el.t.y2b7CA),
                                                                   })
                                                                 : void 0,
-                                                            ref: eR,
+                                                            ref: eA,
                                                         }),
                                                         (0, a.jsx)(J.V4, {
                                                             action: "PRESS_SET_STATUS",
@@ -312,7 +312,7 @@ function eo(e) {
                                                                           className: ei.statusPickerModalMenu,
                                                                           "aria-label": el.intl.string(el.t.E13trI),
                                                                           onClose: t,
-                                                                          children: eT,
+                                                                          children: eN,
                                                                       });
                                                                   },
                                                             onClick: i.tq
@@ -426,7 +426,7 @@ function eo(e) {
                                                                                                           onClose: l,
                                                                                                           onSelect:
                                                                                                               void 0,
-                                                                                                          children: eT,
+                                                                                                          children: eN,
                                                                                                       }),
                                                                                                   }),
                                                                                               Object.getOwnPropertyDescriptors
@@ -502,7 +502,7 @@ function eo(e) {
                                                         }),
                                                         !__OVERLAY__ &&
                                                             z.wS &&
-                                                            eN &&
+                                                            eT &&
                                                             (0, a.jsx)(J.V4, {
                                                                 action: "COPY_USER_ID",
                                                                 icon: c.VuL,
@@ -528,7 +528,7 @@ function eo(e) {
                     }),
                     !eq && eJ
                         ? (0, a.jsx)(Y.Z, {
-                              targetElementRef: eR,
+                              targetElementRef: eA,
                               onClose: n,
                           })
                         : null,

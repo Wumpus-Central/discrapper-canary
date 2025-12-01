@@ -1,4 +1,4 @@
-n.d(t, { K: () => m }), n(388685);
+n.d(t, { K: () => h }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,11 +58,11 @@ function _(e, t) {
         e
     );
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -70,7 +70,7 @@ function p(e, t) {
     }
     return i;
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -79,7 +79,7 @@ function h(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let m = i.forwardRef(function (e, t) {
+let h = i.forwardRef(function (e, t) {
         var {
                 as: n = "div",
                 gap: i = 8,
@@ -88,12 +88,12 @@ let m = i.forwardRef(function (e, t) {
                 justify: l = "start",
                 wrap: u = !1,
                 padding: f = 0,
-                fullWidth: h = !0,
-                style: m,
+                fullWidth: m = !0,
+                style: h,
                 className: b,
                 children: y,
             } = e,
-            O = p(e, [
+            O = _(e, [
                 "as",
                 "gap",
                 "direction",
@@ -108,7 +108,7 @@ let m = i.forwardRef(function (e, t) {
             ]);
         return (0, r.jsx)(
             n,
-            _(
+            p(
                 d(
                     {
                         ref: t,
@@ -116,9 +116,9 @@ let m = i.forwardRef(function (e, t) {
                         "data-justify": l,
                         "data-direction": a,
                         "data-wrap": u,
-                        "data-full-width": h,
+                        "data-full-width": m,
                         className: o()(c.stack, b),
-                        style: d(_(d({}, m), { gap: g(i) }), E(f)),
+                        style: d(p(d({}, h), { gap: g(i) }), E(f)),
                     },
                     O,
                 ),

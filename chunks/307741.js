@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(481060),
     d = n(26732),
     f = n(406763),
-    _ = n(893642),
-    p = n(768581),
-    h = n(814225),
-    m = n(810568),
+    p = n(893642),
+    _ = n(768581),
+    m = n(814225),
+    h = n(810568),
     g = n(168524),
     E = n(715318),
     b = n(388032),
@@ -42,7 +42,7 @@ function O(e) {
 }
 function v(e) {
     let { application: t } = e,
-        n = null == t ? void 0 : t.getIconURL(160, p.$k ? "webp" : "png");
+        n = null == t ? void 0 : t.getIconURL(160, _.$k ? "webp" : "png");
     return (0, r.jsx)("div", {
         className: y.iconContainer,
         children:
@@ -61,10 +61,10 @@ function v(e) {
                   }),
     });
 }
-function I(e) {
+function S(e) {
     var t;
     let { application: n, detectedGame: a } = e,
-        o = i.useMemo(() => (null == a ? void 0 : a.genres.map(h.P3).join(", ")), [a]),
+        o = i.useMemo(() => (null == a ? void 0 : a.genres.map(m.P3).join(", ")), [a]),
         l = null != (t = a.name) ? t : null == n ? void 0 : n.name;
     return (0, r.jsxs)("div", {
         className: y.headingContainer,
@@ -82,7 +82,7 @@ function I(e) {
         ],
     });
 }
-function T(e) {
+function I(e) {
     var t;
     let { detectedGame: n, openFullGameProfile: i } = e;
     return (0, r.jsxs)("div", {
@@ -118,9 +118,9 @@ function T(e) {
         ],
     });
 }
-function S(e) {
+function T(e) {
     let { application: t } = e,
-        n = (0, l.e7)([_.Z], () => _.Z.getMute(t.id)),
+        n = (0, l.e7)([p.Z], () => p.Z.getMute(t.id)),
         a = i.useMemo(() => (n ? b.intl.string(b.t.tpvw4T) : b.intl.string(b.t["6EwEwp"])), [n]);
     return (0, r.jsxs)("div", {
         className: y.actionButtonsContainer,
@@ -167,7 +167,7 @@ function A(e) {
             {
                 location: "MiniGameProfile",
                 applicationId: t.id,
-                source: m.m1.MiniGameProfile,
+                source: h.m1.MiniGameProfile,
                 trackEntryPointImpression: !0,
                 sourceUserId: void 0,
             },
@@ -183,13 +183,13 @@ function A(e) {
         className: o()(y.container, a),
         children: [
             (0, r.jsx)(O, { detectedGame: n }),
-            (0, r.jsx)(S, { application: t }),
+            (0, r.jsx)(T, { application: t }),
             (0, r.jsx)(v, { application: t }),
-            (0, r.jsx)(I, {
+            (0, r.jsx)(S, {
                 application: t,
                 detectedGame: n,
             }),
-            (0, r.jsx)(T, {
+            (0, r.jsx)(I, {
                 application: t,
                 detectedGame: n,
                 openFullGameProfile: c,

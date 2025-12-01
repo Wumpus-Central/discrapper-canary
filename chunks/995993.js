@@ -1,4 +1,4 @@
-n.d(t, { m: () => x });
+n.d(t, { m: () => C });
 var r = n(54381),
     i = n(473749),
     l = n(399606),
@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(239091),
     u = n(266454),
     d = n(45966),
-    p = n(31445),
+    f = n(31445),
     h = n(22082),
-    f = n(703656),
+    p = n(703656),
     g = n(306680),
     m = n(709054),
     b = n(540126),
@@ -19,10 +19,10 @@ var r = n(54381),
     O = n(176505),
     v = n(490897),
     j = n(388032),
-    C = n(885525);
-function x(e) {
-    let { guild: t, selected: x } = e,
-        E = (0, p.Z)(t),
+    x = n(885525);
+function C(e) {
+    let { guild: t, selected: C } = e,
+        E = (0, f.Z)(t),
         S = (0, u.Nj)(o.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
         I = (0, l.Wu)([h.Z], () =>
             Array.from(h.Z.getNewChannelIds(t.id)).filter((e) => h.Z.shouldIndicateNewChannel(t.id, e)),
@@ -37,7 +37,7 @@ function x(e) {
             return null != e && e > r;
         }),
         w = i.useCallback(() => {
-            (0, f.uL)(y.Z5c.CHANNEL(t.id, E ? O.oC.CUSTOMIZE_COMMUNITY : O.oC.CHANNEL_BROWSER));
+            (0, p.uL)(y.Z5c.CHANNEL(t.id, E ? O.oC.CUSTOMIZE_COMMUNITY : O.oC.CHANNEL_BROWSER));
         }, [t.id, E]),
         T = i.useCallback(
             (e) => {
@@ -95,12 +95,12 @@ function x(e) {
         A = null;
     return (
         (S && !P && !N) ||
-            x ||
+            C ||
             Z ||
             (A = (0, r.jsx)(s.IGR, {
                 color: a.Z.colors.BADGE_BRAND_BG.css,
                 text: j.intl.string(j.t.y2b7CA),
-                className: C.newChannel,
+                className: x.newChannel,
             })),
         (0, r.jsx)(_.m, {
             id: "channels-".concat(t.id),
@@ -111,7 +111,7 @@ function x(e) {
                     className: e,
                 }),
             text: E ? j.intl.string(j.t.h9mGOP) : j.intl.string(j.t.et6wav),
-            selected: x,
+            selected: C,
             onClick: w,
             onContextMenu: T,
             trailing: A,

@@ -1,8 +1,8 @@
 n.d(t, {
-    ZM: () => p,
+    ZM: () => _,
     gx: () => d,
-    mN: () => m,
-    re: () => h,
+    mN: () => h,
+    re: () => m,
 }),
     n(539854),
     n(388685);
@@ -16,7 +16,7 @@ var r = n(442837),
     u = n(388032);
 let d = (e, t, n) => ((0, i.wj)(e) ? t : n),
     f = 3,
-    _ = (e) => {
+    p = (e) => {
         let {
                 cards: t,
                 perksCards: n,
@@ -41,7 +41,7 @@ let d = (e, t, n) => ((0, i.wj)(e) ? t : n),
             t
         );
     },
-    p = (e) => {
+    _ = (e) => {
         let {
                 perksCards: t,
                 variant: n,
@@ -64,7 +64,7 @@ let d = (e, t, n) => ((0, i.wj)(e) ? t : n),
                           : [t.profiles, t.clientThemes, t.serverBoosts];
                 break;
             case l.gM.WHATS_NEW:
-                f = _({
+                f = p({
                     cards: f,
                     perksCards: t,
                     showProfileWidgets: s,
@@ -117,7 +117,7 @@ let d = (e, t, n) => ((0, i.wj)(e) ? t : n),
         }
         return r && (f = f.filter((e) => !e.hideOnNarrowScreen)), f;
     },
-    h = (e) => {
+    m = (e) => {
         let t = (0, r.e7)([o.Z], () => o.Z.getPremiumTypeSubscription()),
             n = null != t ? s.ZP.getPremiumPlanItem(t) : null,
             i = (null != n ? s.ZP.getSkuIdForPlan(n.planId) : null) === c.Si.TIER_2;
@@ -136,7 +136,7 @@ let d = (e, t, n) => ((0, i.wj)(e) ? t : n),
                   subtitle: u.intl.string(u.t["5TFEXv"]),
               };
     },
-    m = () => {
+    h = () => {
         let e = (0, r.e7)([a.default], () => a.default.getCurrentUser());
         return (0, s.I5)(e);
     };

@@ -28,21 +28,21 @@ var r = n(475637),
         narrow: [/^j/i, /^f/i, /^m/i, /^a/i, /^m/i, /^j/i, /^j/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i],
         any: [/^ja/i, /^f/i, /^mar/i, /^ap/i, /^may/i, /^jun/i, /^jul/i, /^au/i, /^s/i, /^o/i, /^n/i, /^d/i],
     },
-    _ = {
+    p = {
         narrow: /^[smtwf]/i,
         short: /^(su|mo|tu|we|th|fr|sa)/i,
         abbreviated: /^(sun|mon|tue|wed|thu|fri|sat)/i,
         wide: /^(sunday|monday|tuesday|wednesday|thursday|friday|saturday)/i,
     },
-    p = {
+    _ = {
         narrow: [/^s/i, /^m/i, /^t/i, /^w/i, /^t/i, /^f/i, /^s/i],
         any: [/^su/i, /^m/i, /^tu/i, /^w/i, /^th/i, /^f/i, /^sa/i],
     },
-    h = {
+    m = {
         narrow: /^(a|p|mi|n|(in the|at) (morning|afternoon|evening|night))/i,
         any: /^([ap]\.?\s?m\.?|midnight|noon|(in the|at) (morning|afternoon|evening|night))/i,
     },
-    m = {
+    h = {
         any: {
             am: /^a/i,
             pm: /^p/i,
@@ -84,15 +84,15 @@ let g = {
         defaultParseWidth: "any",
     }),
     day: (0, r.Z)({
-        matchPatterns: _,
+        matchPatterns: p,
         defaultMatchWidth: "wide",
-        parsePatterns: p,
+        parsePatterns: _,
         defaultParseWidth: "any",
     }),
     dayPeriod: (0, r.Z)({
-        matchPatterns: h,
+        matchPatterns: m,
         defaultMatchWidth: "any",
-        parsePatterns: m,
+        parsePatterns: h,
         defaultParseWidth: "any",
     }),
 };

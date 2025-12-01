@@ -196,7 +196,7 @@ e.exports = function (e) {
         }),
         d = /[a-z_]+/,
         f = u(i, { relevance: 2 }),
-        _ = u([d], { relevance: 1 });
+        p = u([d], { relevance: 1 });
     return {
         name: "Twig",
         aliases: ["craftcms"],
@@ -205,7 +205,7 @@ e.exports = function (e) {
         contains: [
             e.COMMENT(/\{#/, /#\}/),
             f,
-            _,
+            p,
             {
                 className: "template-variable",
                 begin: /\{\{/,

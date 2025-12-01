@@ -13,37 +13,37 @@ function u(e) {
             size: u,
             showPending: d = !1,
             animateOnHover: f = !1,
-            avatarDecorationOverride: _,
-            avatarOverride: p,
+            avatarDecorationOverride: p,
+            avatarOverride: _,
         } = e,
-        h = (0, i.e7)([l.default], () => l.default.getUser(t)),
+        m = (0, i.e7)([l.default], () => l.default.getUser(t)),
         {
-            avatarSrc: m,
+            avatarSrc: h,
             isAvatarAnimating: g,
             eventHandlers: E,
         } = (0, c.Z)({
-            user: h,
+            user: m,
             guildId: n,
             size: (0, a.pxk)(u),
             showPending: d,
             animateOnHover: f,
-            avatarOverride: p,
+            avatarOverride: _,
         }),
         {
             avatarPlaceholderSrc: b,
             avatarDecorationSrc: y,
             eventHandlers: O,
         } = (0, s.Z)({
-            user: h,
+            user: m,
             guildId: n,
-            avatarDecorationOverride: _,
+            avatarDecorationOverride: p,
             size: (0, o.y9)(u),
             onlyAnimateOnHoverOrFocus: f,
         });
     return {
         avatarPlaceholderSrc: b,
         avatarDecorationSrc: y,
-        avatarSrc: m,
+        avatarSrc: h,
         isAnimating: g,
         eventHandlers: {
             onMouseEnter: r.useCallback(() => {

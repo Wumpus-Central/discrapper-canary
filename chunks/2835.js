@@ -1,11 +1,11 @@
 i.d(e, { Z: () => l });
-var r = i(54381),
-    n = i(481060);
+var n = i(54381),
+    r = i(481060);
 function l(t) {
     let { activeSlide: e, totalSlides: i, className: l } = t;
-    return (0, r.jsx)("div", {
+    return (0, n.jsx)("div", {
         className: l,
-        children: (0, r.jsxs)(n.Text, {
+        children: (0, n.jsxs)(r.Text, {
             variant: "display-sm",
             color: "text-primary",
             children: [Number.parseInt(e, 10) + 1, "/", i],

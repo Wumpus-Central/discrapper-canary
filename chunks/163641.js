@@ -8,43 +8,43 @@ var r = n(154028),
     u = n(176682),
     d = n(759319),
     f = n(179351),
-    _ = n(903225),
-    p = n(507604),
-    h = n(511696);
-e.exports = function (e, t, n, m) {
+    p = n(903225),
+    _ = n(507604),
+    m = n(511696);
+e.exports = function (e, t, n, h) {
     var g = "stackTraceLimit",
-        E = m ? 2 : 1,
+        E = h ? 2 : 1,
         b = e.split("."),
         y = b[b.length - 1],
         O = r.apply(null, b);
     if (O) {
         var v = O.prototype;
-        if ((!h && i(v, "cause") && delete v.cause, !n)) return O;
-        var I = r("Error"),
-            T = t(function (e, t) {
-                var n = d(m ? t : e, void 0),
-                    r = m ? new O(e) : new O();
+        if ((!m && i(v, "cause") && delete v.cause, !n)) return O;
+        var S = r("Error"),
+            I = t(function (e, t) {
+                var n = d(h ? t : e, void 0),
+                    r = h ? new O(e) : new O();
                 return (
                     void 0 !== n && a(r, "message", n),
-                    _(r, T, r.stack, 2),
-                    this && o(v, this) && u(r, this, T),
+                    p(r, I, r.stack, 2),
+                    this && o(v, this) && u(r, this, I),
                     arguments.length > E && f(r, arguments[E]),
                     r
                 );
             });
         if (
-            ((T.prototype = v),
+            ((I.prototype = v),
             "Error" !== y
                 ? s
-                    ? s(T, I)
-                    : l(T, I, { name: !0 })
-                : p && g in O && (c(T, O, g), c(T, O, "prepareStackTrace")),
-            l(T, O),
-            !h)
+                    ? s(I, S)
+                    : l(I, S, { name: !0 })
+                : _ && g in O && (c(I, O, g), c(I, O, "prepareStackTrace")),
+            l(I, O),
+            !m)
         )
             try {
-                v.name !== y && a(v, "name", y), (v.constructor = T);
+                v.name !== y && a(v, "name", y), (v.constructor = I);
             } catch (e) {}
-        return T;
+        return I;
     }
 };

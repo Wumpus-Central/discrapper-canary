@@ -12,7 +12,7 @@ function o(e = {}) {
             ...e,
             value: s,
         }),
-        _ = f.displayValidation.isInvalid;
+        p = f.displayValidation.isInvalid;
     return {
         ...f,
         value: s,
@@ -36,8 +36,8 @@ function o(e = {}) {
             let n = new Map(d.current);
             t.isInvalid ? n.set(e, t) : n.delete(e), (d.current = n), f.updateValidation((0, r.W0)(...n.values()));
         },
-        validationState: null != (n = e.validationState) ? n : _ ? "invalid" : null,
-        isInvalid: _,
+        validationState: null != (n = e.validationState) ? n : p ? "invalid" : null,
+        isInvalid: p,
         isRequired: u,
     };
 }

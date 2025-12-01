@@ -22,9 +22,9 @@ var r = t(54381),
     O = t(601070),
     y = t(216306),
     N = t(163),
-    I = t(753540),
-    w = t(70297),
-    Z = t(981631),
+    w = t(753540),
+    Z = t(70297),
+    I = t(981631),
     P = t(176505),
     S = t(295907),
     E = t(388032),
@@ -55,7 +55,7 @@ function D(e) {
     }
     return e;
 }
-function k(e, n) {
+function A(e, n) {
     return (
         (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
@@ -73,12 +73,12 @@ function k(e, n) {
         e
     );
 }
-let A = new Set([Z.d4z.GUILD_FORUM, Z.d4z.GUILD_MEDIA]),
-    R = new Set([Z.d4z.GUILD_VOICE, Z.d4z.GUILD_STAGE_VOICE]);
+let R = new Set([I.d4z.GUILD_FORUM, I.d4z.GUILD_MEDIA]),
+    k = new Set([I.d4z.GUILD_VOICE, I.d4z.GUILD_STAGE_VOICE]);
 function L(e) {
     let { guild: n, channel: l, onCategoryClick: i } = e,
-        o = (0, I.Mf)(n.id, l.id, l.id),
-        s = (0, I.t4)(n.id, l.id, l.id);
+        o = (0, w.Mf)(n.id, l.id, l.id),
+        s = (0, w.t4)(n.id, l.id, l.id);
     return (0, r.jsxs)("div", {
         className: a()(T.categoryRow, { [T.uncategorized]: "null" === l.id }),
         onContextMenu: (e) => {
@@ -87,7 +87,7 @@ function L(e) {
                 return (t) =>
                     (0, r.jsx)(
                         e,
-                        k(D({}, t), {
+                        A(D({}, t), {
                             channel: l,
                             guild: n,
                         }),
@@ -137,18 +137,18 @@ let H = l.memo(function () {
                 isFirstChannel: s,
                 isLastChannel: m,
                 onChannelClick: N,
-                tooltipDirection: w = "right",
+                tooltipDirection: Z = "right",
             } = e,
             { isSubscriptionGated: L } = (0, f.Z)(n.id),
-            U = (0, I.Mf)(i.id, n.id, l.id),
-            G = (0, I.t4)(i.id, n.id, l.id),
-            W = (0, I.EH)(i.id, l.id),
+            U = (0, w.Mf)(i.id, n.id, l.id),
+            G = (0, w.t4)(i.id, n.id, l.id),
+            W = (0, w.EH)(i.id, l.id),
             F = (0, o.e7)([O.Z], () => O.Z.getActiveThreadCount(i.id, n.id)),
             q = (0, o.e7)([C.Z], () => C.Z.shouldIndicateNewChannel(i.id, n.id)),
             z = (function (e, n) {
                 let t = [];
                 return (
-                    Z.TPd.GUILD_THREADS_ONLY.has(e.type) &&
+                    I.TPd.GUILD_THREADS_ONLY.has(e.type) &&
                         n >= 1 &&
                         t.push(
                             (0, r.jsx)(
@@ -161,7 +161,7 @@ let H = l.memo(function () {
                                 "thread-count",
                             ),
                         ),
-                    R.has(e.type) ||
+                    k.has(e.type) ||
                         t.push(
                             (0, r.jsx)(
                                 p.Text,
@@ -195,7 +195,7 @@ let H = l.memo(function () {
                 );
             })(n, F),
             V = (e) => (
-                (e.stopPropagation(), A.has(n.type) || e.shiftKey)
+                (e.stopPropagation(), R.has(n.type) || e.shiftKey)
                     ? (0, b.XU)(i.id, n.id)
                     : n.isGuildStageVoice() || n.isGuildVoice()
                       ? (0, v.Cq)(n)
@@ -217,7 +217,7 @@ let H = l.memo(function () {
                 (0, r.jsx)(u.u, {
                     text: W,
                     delay: 500,
-                    position: w,
+                    position: Z,
                     children: (0, r.jsxs)(p.P3F, {
                         className: a()(T.channelRow, {
                             [T.firstChannel]: s,
@@ -239,7 +239,7 @@ let H = l.memo(function () {
                                       return (t) =>
                                           (0, r.jsx)(
                                               e,
-                                              k(D({}, t), {
+                                              A(D({}, t), {
                                                   channel: n,
                                                   guild: i,
                                               }),
@@ -254,7 +254,7 @@ let H = l.memo(function () {
                                       return (t) =>
                                           (0, r.jsx)(
                                               e,
-                                              k(D({}, t), {
+                                              A(D({}, t), {
                                                   channel: n,
                                                   guild: i,
                                               }),
@@ -356,7 +356,7 @@ function G(e) {
         f = l.useCallback(
             (e) => {
                 let { section: l, row: i } = e;
-                if (0 === l && -1 === u) return (0, r.jsx)(w.Z, { guild: t });
+                if (0 === l && -1 === u) return (0, r.jsx)(Z.Z, { guild: t });
                 let a = n._categories[l + u],
                     o = n[a.channel.id][i];
                 return null == o
@@ -377,7 +377,7 @@ function G(e) {
             },
             [n, t, u, c, d],
         ),
-        g = (0, w.q)(t.id),
+        g = (0, Z.q)(t.id),
         _ = (0, y.tn)(t.id, n, 64, g);
     return (0, r.jsx)(
         p._2F,

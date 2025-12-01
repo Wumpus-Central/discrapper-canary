@@ -4,8 +4,8 @@ var r = n(913527),
     l = n(695346),
     a = n(626135),
     o = n(337953),
-    s = n(875425),
-    u = n(981631);
+    u = n(875425),
+    s = n(981631);
 function c(e) {
     let {
             text: t,
@@ -22,7 +22,7 @@ function c(e) {
         let e = l.Ok.updateSetting({
             text: p.length > 0 ? p : "",
             expiresAtMs:
-                null != r && r !== s.FO.DONT_CLEAR
+                null != r && r !== u.FO.DONT_CLEAR
                     ? String(
                           i()()
                               .add((0, o.Z)(r), "ms")
@@ -35,7 +35,7 @@ function c(e) {
             createdAtMs: String(null != d ? d : i()().toDate().getTime()),
         });
         return (
-            a.default.track(u.rMx.CUSTOM_STATUS_UPDATED, {
+            a.default.track(s.rMx.CUSTOM_STATUS_UPDATED, {
                 location: null != c ? c.location : null,
                 emoji_type: null == n ? null : null != n.id ? "custom" : "unicode",
                 text_len: p.length,

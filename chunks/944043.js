@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -10,36 +10,36 @@ var i = n(120356),
     u = n(699516),
     d = n(502762),
     f = n(981631),
-    _ = n(388032),
-    p = n(649059);
-function h(e) {
+    p = n(388032),
+    _ = n(649059);
+function m(e) {
     let { user: t, className: n } = e,
         {
             isPendingIncoming: i,
-            isBlocked: h,
-            isIgnored: m,
+            isBlocked: m,
+            isIgnored: h,
         } = (0, s.cj)([u.Z], () => ({
             isPendingIncoming: u.Z.getRelationshipType(t.id) === f.OGo.PENDING_INCOMING,
             isBlocked: u.Z.isBlocked(t.id),
             isIgnored: u.Z.isIgnored(t.id),
         }));
-    return h || (m && !i)
+    return m || (h && !i)
         ? (0, r.jsxs)(d.Z.Overlay, {
-              className: a()(p.container, n),
+              className: a()(_.container, n),
               children: [
-                  h &&
+                  m &&
                       (0, r.jsx)(o.xvT, {
                           variant: "text-sm/semibold",
                           color: "header-secondary",
-                          children: _.intl.string(_.t["oC/fU6"]),
+                          children: p.intl.string(p.t["oC/fU6"]),
                       }),
-                  m &&
+                  h &&
                       (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(o.xvT, {
                                   variant: "text-sm/semibold",
                                   color: "header-secondary",
-                                  children: _.intl.string(_.t.HXz5An),
+                                  children: p.intl.string(p.t.HXz5An),
                               }),
                               (0, r.jsxs)(r.Fragment, {
                                   children: [
@@ -51,7 +51,7 @@ function h(e) {
                                       (0, r.jsx)(o.xvT, {
                                           variant: "text-sm/semibold",
                                           color: "header-secondary",
-                                          children: _.intl.format(_.t.PrtAqy, {
+                                          children: p.intl.format(p.t.PrtAqy, {
                                               unignoreHook: (e, n) =>
                                                   (0, r.jsx)(
                                                       l.Anchor,

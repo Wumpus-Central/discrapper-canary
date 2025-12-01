@@ -10,45 +10,45 @@ var i = n(120356),
     u = n(906732),
     d = n(849522),
     f = n(639119),
-    _ = n(594174),
-    p = n(74538),
-    h = n(694320),
-    m = n(981631),
+    p = n(594174),
+    _ = n(74538),
+    m = n(694320),
+    h = n(981631),
     g = n(474936),
     E = n(388032),
     b = n(781990);
 function y(e) {
     var t, n, i, y;
-    let { type: O, textValue: v, maxCharacterCount: I, showRemainingCharsAfterCount: T, className: S } = e,
-        A = (0, o.e7)([_.default], () => p.ZP.canUseIncreasedMessageLength(_.default.getCurrentUser())),
+    let { type: O, textValue: v, maxCharacterCount: S, showRemainingCharsAfterCount: I, className: T } = e,
+        A = (0, o.e7)([p.default], () => _.ZP.canUseIncreasedMessageLength(p.default.getCurrentUser())),
         C = (0, d.Z)(),
-        N = null != I ? I : C,
-        R = null != (y = null != T ? T : I) ? y : C / 10,
-        P = v.length,
-        D = null != O.upsellLongMessages && (null != P ? P : 0) > m.J6R && A,
-        w = null != O.upsellLongMessages && !A,
-        L = (null == (n = (0, f.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === g.Si.TIER_2,
-        x = N - P,
-        M = x > R,
-        k = x < 0 && L,
-        j =
-            0 === x
+        N = null != S ? S : C,
+        P = null != (y = null != I ? I : S) ? y : C / 10,
+        R = v.length,
+        w = null != O.upsellLongMessages && (null != R ? R : 0) > h.J6R && A,
+        D = null != O.upsellLongMessages && !A,
+        x = (null == (n = (0, f.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === g.Si.TIER_2,
+        L = N - R,
+        j = L > P,
+        M = L < 0 && x,
+        k =
+            0 === L
                 ? E.intl.string(E.t.tU6YQ7)
-                : x > 0
-                  ? E.intl.formatToPlainString(E.t.qH8uFW, { count: x })
+                : L > 0
+                  ? E.intl.formatToPlainString(E.t.qH8uFW, { count: L })
                   : E.intl.string(E.t.YSRIqa),
         { analyticsLocations: U } = (0, u.ZP)(c.Z.CHARACTER_COUNT);
-    if (!((D && x >= 0) || !M || (w && !M))) return null;
-    let G = x >= 0;
+    if (!((w && L >= 0) || !j || (D && !j))) return null;
+    let G = L >= 0;
     return (0, r.jsx)(u.Gt, {
         value: U,
         children: (0, r.jsxs)("div", {
-            className: a()(S, b.characterCount),
+            className: a()(T, b.characterCount),
             children: [
                 (0, r.jsxs)("div", {
                     className: b.flairContainer,
                     children: [
-                        D && G
+                        w && G
                             ? (0, r.jsx)(s.u, {
                                   text: E.intl.formatToPlainString(E.t.vcvHa0, { maxLength: N }),
                                   position: "top",
@@ -59,27 +59,27 @@ function y(e) {
                                   }),
                               })
                             : null,
-                        M || k
+                        j || M
                             ? null
                             : (0, r.jsx)(s.u, {
-                                  text: j,
+                                  text: k,
                                   position: "top",
                                   children: (0, r.jsx)(l.Text, {
                                       variant: "text-sm/semibold",
                                       tabularNumbers: !0,
                                       "aria-hidden": !0,
                                       color: G ? "text-default" : "text-danger",
-                                      children: x,
+                                      children: L,
                                   }),
                               }),
                     ],
                 }),
-                (0, r.jsx)(l.nn4, { children: E.intl.format(E.t.qH8uFW, { count: x }) }),
-                w && !M
-                    ? (0, r.jsx)(h.Z, {
+                (0, r.jsx)(l.nn4, { children: E.intl.format(E.t.qH8uFW, { count: L }) }),
+                D && !j
+                    ? (0, r.jsx)(m.Z, {
                           className: b.upsell,
                           iconOnly: (null == (i = O.upsellLongMessages) ? void 0 : i.iconOnly) || !1,
-                          remaining: x,
+                          remaining: L,
                       })
                     : null,
             ],

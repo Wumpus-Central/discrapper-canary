@@ -1,10 +1,10 @@
 i.d(e, { Z: () => l });
-var r = i(54381),
-    n = i(84773);
+var n = i(54381),
+    r = i(84773);
 function l(t) {
     let { children: e } = t;
-    return (0, r.jsx)("div", {
-        className: n.container,
+    return (0, n.jsx)("div", {
+        className: r.container,
         children: e,
     });
 }

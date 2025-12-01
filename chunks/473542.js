@@ -1,4 +1,4 @@
-n.d(t, { R: () => _ });
+n.d(t, { R: () => p });
 var r = n(54381);
 n(473749);
 var i = n(481060),
@@ -15,14 +15,14 @@ let d = (e) => {
                 loadId: c,
                 handleClose: d,
                 handleComplete: f,
-                isFetching: _,
-                sku: p,
+                isFetching: p,
+                sku: _,
             } = (0, l.a0)({
                 skuId: t,
                 isGift: n,
                 applicationId: u.XAJ,
             });
-        return _ || null == p
+        return p || null == _
             ? (0, r.jsx)("div", { children: (0, r.jsx)(i.$jN, { type: i.RAz.SPINNING_CIRCLE }) })
             : (0, r.jsx)(a.Gt, {
                   value: s,
@@ -42,7 +42,7 @@ let d = (e) => {
               });
     },
     f = (0, c.F)(),
-    _ = {
+    p = {
         title: "Collectibles Checkout",
         stories: [
             {

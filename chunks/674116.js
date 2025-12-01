@@ -10,20 +10,20 @@ var i = n(481060),
     u = n(429789),
     d = n(208113),
     f = n(625205),
-    _ = n(325808),
-    p = n(235144),
-    h = n(823087),
-    m = n(232388),
+    p = n(325808),
+    _ = n(235144),
+    m = n(823087),
+    h = n(232388),
     g = n(716210),
     E = n(459674),
     b = n(803567),
     y = n(269876),
     O = n(976758),
     v = n(726985),
-    I = n(981631),
-    T = n(388032);
-let S = "".concat(
-    s.Z.getArticleURL(I.BhN.VOICE_VIDEO_TROUBLESHOOTING),
+    S = n(981631),
+    I = n(388032);
+let T = "".concat(
+    s.Z.getArticleURL(S.BhN.VOICE_VIDEO_TROUBLESHOOTING),
     "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm",
 );
 function A() {
@@ -46,10 +46,10 @@ function A() {
                             (0, r.jsxs)(a.F, {
                                 setting: v.s6.VOICE_AND_VIDEO_MIC_TEST,
                                 children: [
-                                    (0, r.jsx)(h.Z, {}),
+                                    (0, r.jsx)(m.Z, {}),
                                     (0, r.jsx)(i.Text, {
                                         variant: "text-sm/normal",
-                                        children: T.intl.format(T.t["V+B3FH"], { guideURL: S }),
+                                        children: I.intl.format(I.t["V+B3FH"], { guideURL: T }),
                                     }),
                                 ],
                             }),
@@ -58,14 +58,14 @@ function A() {
                     (0, r.jsx)(c.Z, {
                         children: (0, r.jsx)(a.F, {
                             setting: v.s6.VOICE_AND_VIDEO_INPUT_PROFILE,
-                            children: (0, r.jsx)(p.Z, {}),
+                            children: (0, r.jsx)(_.Z, {}),
                         }),
                     }),
                     (0, r.jsxs)(c.Z, {
                         children: [
                             (0, r.jsx)(a.F, {
                                 setting: v.s6.VOICE_AND_VIDEO_INPUT_MODE,
-                                children: (0, r.jsx)(_.ZP, {}),
+                                children: (0, r.jsx)(p.ZP, {}),
                             }),
                             (0, r.jsx)(a.F, {
                                 setting: v.s6.VOICE_AND_VIDEO_SENSITIVITY,
@@ -77,11 +77,11 @@ function A() {
             }),
             (0, r.jsx)(l.Z, {
                 webSetting: v.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
-                title: T.intl.string(T.t["6I6GUv"]),
+                title: I.intl.string(I.t["6I6GUv"]),
                 children: (0, r.jsx)(b.ZP, {}),
             }),
             (0, r.jsx)(l.Z, {
-                title: T.intl.string(T.t["8/udY0"]),
+                title: I.intl.string(I.t["8/udY0"]),
                 webSetting: v.s6.VOICE_AND_VIDEO_VOICE_ADVANCED,
                 children: (0, r.jsxs)(c.Z, {
                     children: [
@@ -89,7 +89,7 @@ function A() {
                         (0, r.jsx)(E.Z, {}),
                         (0, r.jsx)(u.Z, {}),
                         (0, r.jsx)(d.Z, {}),
-                        (0, r.jsx)(m.Z, {}),
+                        (0, r.jsx)(h.Z, {}),
                     ],
                 }),
             }),

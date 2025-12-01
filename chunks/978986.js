@@ -3,11 +3,11 @@ n.d(t, {
     U1: () => O,
     XW: () => d,
     _J: () => m,
-    aP: () => f,
+    aP: () => p,
     e7: () => g,
     h6: () => _,
     oE: () => h,
-    pB: () => p,
+    pB: () => f,
     y: () => y,
     yr: () => v,
 }),
@@ -131,13 +131,13 @@ let d = (0, r.U)((e) => ({
                 touched: !1,
             })),
     })),
-    p = (e, t, n) => {
+    f = (e, t, n) => {
         d.getState().initialize(e, t, n);
     },
     h = () => {
         d.getState().reset();
     },
-    f = () => {
+    p = () => {
         let e = d.getState();
         return e.nickname !== c.nickname || e.dmsAllowed !== c.dmsAllowed || e.showActivity !== u(e.guildSize);
     },

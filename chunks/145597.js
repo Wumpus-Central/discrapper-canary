@@ -1,20 +1,20 @@
 let r;
 n.r(t),
     n.d(t, {
-        DEV_PID: () => p,
+        DEV_PID: () => _,
         OVERLAY_DEFAULT_RESOLUTION: () => d,
-        OVERLAY_LAYOUT_ID: () => _,
+        OVERLAY_LAYOUT_ID: () => p,
         OVERLAY_MIN_RESOLUTION: () => f,
         OVERLAY_VERSION: () => u,
-        UNSET_PID: () => h,
+        UNSET_PID: () => m,
         getPID: () => g,
         getRPCAuthToken: () => y,
         isValidGamePID: () => b,
         log: () => O,
-        setOutOfProcessSupport: () => I,
+        setOutOfProcessSupport: () => S,
         setPID: () => E,
-        supportsLegacy: () => S,
-        supportsOutOfProcess: () => T,
+        supportsLegacy: () => T,
+        supportsOutOfProcess: () => I,
         validResolution: () => v,
     }),
     n(65234),
@@ -38,21 +38,21 @@ let u = 2,
         width: 768,
         height: 432,
     },
-    _ = "overlay_default",
-    p = -2,
-    h = -1,
-    m = !1;
+    p = "overlay_default",
+    _ = -2,
+    m = -1,
+    h = !1;
 function g() {
     var e;
-    if (void 0 !== r && r !== h) return r;
+    if (void 0 !== r && r !== m) return r;
     let t = parseInt(null != (e = new URLSearchParams(window.location.search).get("pid")) ? e : "", 10);
-    return isNaN(t) && (t = h), (r = t);
+    return isNaN(t) && (t = m), (r = t);
 }
 function E(e) {
     r = e;
 }
 function b(e) {
-    return null != e && 0 !== e && e !== h;
+    return null != e && 0 !== e && e !== m;
 }
 function y() {
     return new URLSearchParams(window.location.search).get("rpc_auth_token");
@@ -68,13 +68,13 @@ function O(e) {
 function v(e) {
     return !o.isPlatformEmbedded || (e.width >= f.width && e.height >= f.height);
 }
-function I(e) {
-    m = e;
+function S(e) {
+    h = e;
+}
+function I() {
+    return h;
 }
 function T() {
-    return m;
-}
-function S() {
     let e = (0, o.isWindows)() && "arm64" === s.ZP.architecture;
     return c.iP && !e && !(0, i.$1)();
 }

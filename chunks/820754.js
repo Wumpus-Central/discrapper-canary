@@ -1,15 +1,15 @@
-_.d(e, { o: () => n });
-var a = _(622916),
-    r = _(255768);
-function n(t) {
-    if ("boolean" == typeof t) return Number(t);
-    let e = "string" == typeof t ? parseFloat(t) : t;
-    if ("number" != typeof e || isNaN(e) || e < 0 || e > 1) {
-        r.X &&
-            a.kg.warn(
-                `[Tracing] Given sample rate is invalid. Sample rate must be a boolean or a number between 0 and 1. Got ${JSON.stringify(t)} of type ${JSON.stringify(typeof t)}.`,
+r.d(t, { o: () => i });
+var n = r(622916),
+    a = r(255768);
+function i(e) {
+    if ("boolean" == typeof e) return Number(e);
+    let t = "string" == typeof e ? parseFloat(e) : e;
+    if ("number" != typeof t || isNaN(t) || t < 0 || t > 1) {
+        a.X &&
+            n.kg.warn(
+                `[Tracing] Given sample rate is invalid. Sample rate must be a boolean or a number between 0 and 1. Got ${JSON.stringify(e)} of type ${JSON.stringify(typeof e)}.`,
             );
         return;
     }
-    return e;
+    return t;
 }

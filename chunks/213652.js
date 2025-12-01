@@ -21,18 +21,18 @@ function v(e) {
         { parentAnalyticsLocation: n } = (0, o.ZP)(),
         v = (0, l.e7)([m.Z], () => m.Z.getSelectedParticipant(t.id)),
         _ = (null == v ? void 0 : v.type) === b.fO.STREAM,
-        x = (0, l.e7)([h.Z], () => (_ ? h.Z.getActiveStreamForStreamKey(v.id) : null)),
-        { ignoreSenderPreference: j } = d.Z.useExperiment(
+        O = (0, l.e7)([h.Z], () => (_ ? h.Z.getActiveStreamForStreamKey(v.id) : null)),
+        { ignoreSenderPreference: x } = d.Z.useExperiment(
             { location: "ActionBarClipsButton" },
             { autoTrackExposure: !1 },
         ),
-        { viewerClippingAllowed: O, isAtMaxSavingClipOperations: E } = (0, l.cj)([s.Z], () => ({
-            viewerClippingAllowed: null != x && (s.Z.isViewerClippingAllowedForUser(x.ownerId) || j),
+        { viewerClippingAllowed: j, isAtMaxSavingClipOperations: E } = (0, l.cj)([s.Z], () => ({
+            viewerClippingAllowed: null != O && (s.Z.isViewerClippingAllowedForUser(O.ownerId) || x),
             isAtMaxSavingClipOperations: s.Z.getIsAtMaxSaveClipOperations(),
         })),
         S = (0, c.z8)(),
-        P = (null == x ? void 0 : x.ownerId) === f.default.getId(),
-        I = !S || !(P || O) || E || null == v,
+        P = (null == O ? void 0 : O.ownerId) === f.default.getId(),
+        I = !S || !(P || j) || E || null == v,
         Z = r.useCallback((e) => {
             var t, n;
             return (0, i.jsx)(
@@ -86,9 +86,9 @@ function v(e) {
         disabled: I,
         iconComponent: Z,
         label:
-            null == x
+            null == O
                 ? y.intl.string(y.t.eg5qtV)
-                : P || O
+                : P || j
                   ? S
                       ? E
                           ? void 0

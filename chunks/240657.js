@@ -9,17 +9,17 @@ var r = n(54381),
     u = n(430864);
 function d(e) {
     let { color: t, className: n, variant: a, text: d, lineClamp: f } = e,
-        _ = (0, s.xSt)(),
-        p = i.useMemo(
+        p = (0, s.xSt)(),
+        _ = i.useMemo(
             () =>
                 null == d
                     ? null
                     : (0, l.Z)(d, !0, {
                           allowHeading: null == f,
                           allowList: null == f,
-                          initialHeaderLevel: _,
+                          initialHeaderLevel: p,
                       }),
-            [d, f, _],
+            [d, f, p],
         );
     return (0, r.jsx)(s.Text, {
         className: o()(n, u.markup, {
@@ -29,6 +29,6 @@ function d(e) {
         color: t,
         variant: a,
         lineClamp: f,
-        children: p,
+        children: _,
     });
 }

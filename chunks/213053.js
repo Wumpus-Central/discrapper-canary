@@ -7,11 +7,11 @@ var r = n(473749),
     l = n(481060),
     c = n(607070),
     u = n(629935),
-    d = n(168551),
+    d = n(999203),
     f = n(168631),
-    _ = n(579132),
-    p = n(671955);
-function h(e, t, n) {
+    p = n(579132),
+    _ = n(671955);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,17 +35,17 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
 }
 let g = {
-        [p.l.POPOUT]: "user-profile-popout",
-        [p.l.MODAL]: "user-profile-modal",
-        [p.l.MODAL_V2]: "user-profile-modal-v2",
-        [p.l.SIDEBAR]: "user-profile-sidebar",
-        [p.l.VIDEO_TILE_BACKGROUND]: "user-profile-video-tile-background",
+        [_.l.POPOUT]: "user-profile-popout",
+        [_.l.MODAL]: "user-profile-modal",
+        [_.l.MODAL_V2]: "user-profile-modal-v2",
+        [_.l.SIDEBAR]: "user-profile-sidebar",
+        [_.l.VIDEO_TILE_BACKGROUND]: "user-profile-video-tile-background",
     },
     E = "custom-user-profile-theme",
     b = Object.freeze({
@@ -56,31 +56,31 @@ let g = {
         "--profile-gradient-modal-background-color": "var(--background-base-lower)",
     });
 function y(e) {
-    let { theme: t, themeType: n, primaryColor: i, secondaryColor: p, forceUserTheme: h = !1 } = e,
+    let { theme: t, themeType: n, primaryColor: i, secondaryColor: _, forceUserTheme: m = !1 } = e,
         [y, O] = (0, s.Wu)([c.Z], () => [c.Z.desaturateUserColors, c.Z.syncProfileThemeWithUserTheme]),
-        v = (0, _.f)(t),
-        I = O || h ? (null == v ? void 0 : v.overlaySyncedWithUserTheme) : null == v ? void 0 : v.overlay;
+        v = (0, p.f)(t),
+        S = O || m ? (null == v ? void 0 : v.overlaySyncedWithUserTheme) : null == v ? void 0 : v.overlay;
     return {
         profileThemeStyle: (0, r.useMemo)(() => {
-            if (null == i || null == p || null == v || null == I) return b;
+            if (null == i || null == _ || null == v || null == S) return b;
             let e = (e, t) => (0, o.ho)(e, y, null, t);
-            return m(
+            return h(
                 {
                     "--profile-gradient-primary-color": e(i),
-                    "--profile-gradient-secondary-color": e(p),
-                    "--profile-gradient-overlay-color": I,
+                    "--profile-gradient-secondary-color": e(_),
+                    "--profile-gradient-overlay-color": S,
                     "--profile-gradient-button-color": e((0, f.ZB)(i)),
-                    "--profile-gradient-modal-background-color": e((0, f.oU)(i, p, O || h ? t : void 0)),
+                    "--profile-gradient-modal-background-color": e((0, f.oU)(i, _, O || m ? t : void 0)),
                 },
                 (0, u.W4)({
                     enabled: !0,
                     primaryColor: i,
-                    secondaryColor: p,
+                    secondaryColor: _,
                     isDarkTheme: (0, l.wjy)(t),
                     textMixAmount: 25,
                 }),
             );
-        }, [i, p, v, I, O, h, t, y]),
+        }, [i, _, v, S, O, m, t, y]),
         profileThemeClassName: a()((0, l.QeD)(t), null != n ? { [g[n]]: !0 } : void 0, {
             [d.e3]: null != i,
             [E]: null != i,

@@ -1,4 +1,4 @@
-n.d(t, { L: () => _ });
+n.d(t, { L: () => p });
 var r = n(54381);
 n(473749);
 var i = n(692547),
@@ -77,17 +77,17 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let _ = (e) => {
+let p = (e) => {
     var t,
         n,
-        { size: s = "md", width: c, height: f, color: _ = i.Z.colors.INTERACTIVE_NORMAL, colorClass: p = "" } = e,
-        h = d(e, ["size", "width", "height", "color", "colorClass"]);
-    let m = (0, o.m)(s),
-        g = null != (t = null == m ? void 0 : m.width) ? t : c,
-        E = null != (n = null == m ? void 0 : m.height) ? n : f;
+        { size: s = "md", width: c, height: f, color: p = i.Z.colors.INTERACTIVE_NORMAL, colorClass: _ = "" } = e,
+        m = d(e, ["size", "width", "height", "color", "colorClass"]);
+    let h = (0, o.m)(s),
+        g = null != (t = null == h ? void 0 : h.width) ? t : c,
+        E = null != (n = null == h ? void 0 : h.height) ? n : f;
     return (0, r.jsxs)(
         "svg",
-        u(l({}, (0, a.Z)(h)), {
+        u(l({}, (0, a.Z)(m)), {
             xmlns: "http://www.w3.org/2000/svg",
             width: g,
             height: E,
@@ -95,21 +95,21 @@ let _ = (e) => {
             viewBox: "0 0 24 24",
             children: [
                 (0, r.jsx)("path", {
-                    fill: "string" == typeof _ ? _ : _.css,
+                    fill: "string" == typeof p ? p : p.css,
                     d: "M21.27 12.38c.35.11.73-.13.73-.5V10.5a.5.5 0 0 0-.5-.5H19a5 5 0 0 1-5-5V2.5a.5.5 0 0 0-.5-.5H6a4 4 0 0 0-4 4v12a4 4 0 0 0 4 4h5.88c.37 0 .61-.38.5-.73a7 7 0 0 1 8.89-8.9Z",
-                    className: p,
+                    className: _,
                 }),
                 (0, r.jsx)("path", {
-                    fill: "string" == typeof _ ? _ : _.css,
+                    fill: "string" == typeof p ? p : p.css,
                     d: "M21.7 7.94c.01.03 0 .06-.04.06H19a3 3 0 0 1-3-3V2.34c0-.03.03-.05.06-.04a3 3 0 0 1 .82.58l4.24 4.24a3 3 0 0 1 .58.82Z",
-                    className: p,
+                    className: _,
                 }),
                 (0, r.jsx)("path", {
-                    fill: "string" == typeof _ ? _ : _.css,
+                    fill: "string" == typeof p ? p : p.css,
                     fillRule: "evenodd",
                     d: "M21.76 14.83a5.02 5.02 0 0 1 .78 7.7 5 5 0 0 1-7.07 0 5.02 5.02 0 0 1 0-7.07 5 5 0 0 1 6.29-.63Zm-4.88 2.05a3 3 0 0 1 3.41-.59l-4 4a3 3 0 0 1 .59-3.41Zm4.83.83-4 4a3 3 0 0 0 4-4Z",
                     clipRule: "evenodd",
-                    className: p,
+                    className: _,
                 }),
             ],
         }),

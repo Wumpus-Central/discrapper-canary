@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r,
     i = n(392711),
     a = n(442837),
@@ -59,14 +59,14 @@ let u = !1,
         warningSeen: !1,
     },
     f = (0, i.cloneDeep)(d);
-function _(e) {
+function p(e) {
     let { settings: t } = e;
     f = c({}, f, t);
 }
-function p() {
+function _() {
     u = !0;
 }
-class h extends (r = a.ZP.DeviceSettingsStore) {
+class m extends (r = a.ZP.DeviceSettingsStore) {
     initialize(e) {
         f = c({}, f, e);
     }
@@ -102,8 +102,8 @@ class h extends (r = a.ZP.DeviceSettingsStore) {
         return f.comboSoundsEnabled;
     }
 }
-l(h, "displayName", "PoggermodeSettingsStore"), l(h, "persistKey", "PoggermodeSettingsStore");
-let m = new h(o.Z, {
-    POGGERMODE_SETTINGS_UPDATE: _,
-    POGGERMODE_TEMPORARILY_DISABLED: p,
+l(m, "displayName", "PoggermodeSettingsStore"), l(m, "persistKey", "PoggermodeSettingsStore");
+let h = new m(o.Z, {
+    POGGERMODE_SETTINGS_UPDATE: p,
+    POGGERMODE_TEMPORARILY_DISABLED: _,
 });

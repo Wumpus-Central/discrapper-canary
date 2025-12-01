@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(467055), n(388685), n(472816), n(794429);
+n.d(t, { Z: () => I }), n(467055), n(388685), n(472816), n(794429);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,22 +9,22 @@ var r = n(54381),
     u = n(835473),
     d = n(77498),
     f = n(768581),
-    _ = n(823379),
-    p = n(785717),
-    h = n(931847),
-    m = n(836197),
+    p = n(823379),
+    _ = n(785717),
+    m = n(931847),
+    h = n(836197),
     g = n(502762),
     E = n(652853),
     b = n(671955),
     y = n(388032),
     O = n(350917);
 let v = 4;
-function I(e) {
+function S(e) {
     let t = (0, u.Z)(e.map((e) => e.applicationId));
     return (0, s.cj)([d.Z], () =>
         Object.fromEntries(
             t
-                .filter(_.lm)
+                .filter(p.lm)
                 .map((e) => [e.id, d.Z.getGameByApplication(e)])
                 .filter((e) => {
                     let [t, n] = e;
@@ -33,36 +33,36 @@ function I(e) {
         ),
     );
 }
-function T(e) {
+function I(e) {
     let { widgets: t = [], onClick: n, className: a } = e,
-        { trackUserProfileAction: u } = (0, p.KZ)(),
-        T = I(t.filter((e) => e instanceof h.q)),
+        { trackUserProfileAction: u } = (0, _.KZ)(),
+        I = S(t.filter((e) => e instanceof m.q)),
         A = (0, i.useMemo)(
             () => [
                 ...new Set(
                     t
                         .map((e) => {
-                            if (e instanceof m.zy) return e.games.map((e) => e.applicationId);
-                            if (e instanceof h.q) {
+                            if (e instanceof h.zy) return e.games.map((e) => e.applicationId);
+                            if (e instanceof m.q) {
                                 var t;
-                                return null == (t = T[e.applicationId]) ? void 0 : t.id;
+                                return null == (t = I[e.applicationId]) ? void 0 : t.id;
                             }
                         })
-                        .filter(_.lm)
+                        .filter(p.lm)
                         .flat(),
                 ),
             ],
-            [t, T],
+            [t, I],
         ),
         C = (0, s.e7)([d.Z], () => d.Z.canFetchDetectableGames()),
-        [N, R] = (0, i.useState)([]),
-        { themeType: P } = (0, E.z)(),
-        D = P === b.l.SIDEBAR,
-        w = (0, i.useRef)(!1);
+        [N, P] = (0, i.useState)([]),
+        { themeType: R } = (0, E.z)(),
+        w = R === b.l.SIDEBAR,
+        D = (0, i.useRef)(!1);
     return (
         (0, i.useEffect)(() => {
             if (C) return void c.Z.getDetectableGames();
-            R(
+            P(
                 A.map((e) => d.Z.getDetectableGame(e))
                     .filter((e) => null != e)
                     .map((e) => {
@@ -84,7 +84,7 @@ function T(e) {
             );
         }, [A, C]),
         (0, i.useEffect)(() => {
-            0 !== N.length && (w.current || (u({ action: "VIEW_GAME_WIDGET_BREADCRUMB" }), (w.current = !0)));
+            0 !== N.length && (D.current || (u({ action: "VIEW_GAME_WIDGET_BREADCRUMB" }), (D.current = !0)));
         }, [u, N.length]),
         (0, r.jsx)(l.P3F, {
             "aria-label": y.intl.string(y.t.JjiwFx),
@@ -96,14 +96,14 @@ function T(e) {
                 className: o()(O.innerContainer, a),
                 children: [
                     (0, r.jsx)(l.Text, {
-                        variant: D ? "text-sm/medium" : "text-xs/medium",
+                        variant: w ? "text-sm/medium" : "text-xs/medium",
                         children: y.intl.string(y.t.JjiwFx),
                     }),
                     (0, r.jsx)("div", {
                         className: O.icons,
                         children: N.map((e, t) =>
                             (0, r.jsx)(
-                                S,
+                                T,
                                 {
                                     iconUrl: e.image,
                                     name: e.name,
@@ -119,7 +119,7 @@ function T(e) {
         })
     );
 }
-function S(e) {
+function T(e) {
     let { iconUrl: t, name: n, displayCount: i, gameCount: a } = e;
     return (0, r.jsxs)("div", {
         className: O.icon,

@@ -1,40 +1,40 @@
 n.d(t, {
     S: () => a,
-    z: () => l,
+    z: () => o,
 }),
     n(388685),
     n(539854);
 var r = n(494497),
     i = n(535396);
-let l = {
+let o = {
         guildTagsBadgePacks: [r.MB, r.Vk],
     },
-    o = Object.entries(l).reduce((e, t) => {
+    l = Object.entries(o).reduce((e, t) => {
         let [n, r] = t;
         for (let t of r) e[t] = n;
         return e;
     }, {});
 function a(e, t, n) {
-    let l = [];
-    n && e === i.Us.PERK && l.push({ type: "gameServer" });
+    let o = [];
+    n && e === i.Us.PERK && o.push({ type: "gameServer" });
     let a = t.reduce((e, t) => {
         if (t.type !== i.Us.PERK) return e;
-        let n = o[t.skuId];
+        let n = l[t.skuId];
         return null == n || (null != e[n] || (e[n] = []), e[n].push(t)), e;
     }, {});
     for (let e of t) {
         if (e.type === i.Us.LEVEL) {
-            l.push({
+            o.push({
                 type: "singleLevel",
                 powerup: e,
             });
             continue;
         }
-        let t = o[e.skuId];
+        let t = l[e.skuId];
         if (null != t) {
             let e = a[t];
             void 0 !== e &&
-                (l.push({
+                (o.push({
                     type: "multiPerk",
                     group: t,
                     powerups: e,
@@ -42,7 +42,7 @@ function a(e, t, n) {
                 (a[t] = void 0));
             continue;
         }
-        l.push({
+        o.push({
             type: "singlePerk",
             powerup: e,
         });
@@ -53,9 +53,9 @@ function a(e, t, n) {
         if (-1 !== t && -1 !== n && n !== t + 1) {
             let t = [...e],
                 [i] = t.splice(n, 1),
-                l = t.findIndex((e) => "singlePerk" === e.type && e.powerup.skuId === r.IN);
-            return t.splice(l + 1, 0, i), t;
+                o = t.findIndex((e) => "singlePerk" === e.type && e.powerup.skuId === r.IN);
+            return t.splice(o + 1, 0, i), t;
         }
         return e;
-    })(l);
+    })(o);
 }

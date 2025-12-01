@@ -18,22 +18,22 @@ r(
             var n,
                 r,
                 i,
-                _,
-                p = l(this),
-                h = o(p),
-                m = s(e, h),
+                p,
+                _ = l(this),
+                m = o(_),
+                h = s(e, m),
                 g = arguments.length,
                 E = 0;
             for (
-                0 === g ? (n = r = 0) : 1 === g ? ((n = 0), (r = h - m)) : ((n = g - 2), (r = f(d(c(t), 0), h - m))),
-                    _ = u((i = a(h + n - r)));
-                E < m;
+                0 === g ? (n = r = 0) : 1 === g ? ((n = 0), (r = m - h)) : ((n = g - 2), (r = f(d(c(t), 0), m - h))),
+                    p = u((i = a(m + n - r)));
+                E < h;
                 E++
             )
-                _[E] = p[E];
-            for (; E < m + n; E++) _[E] = arguments[E - m + 2];
-            for (; E < i; E++) _[E] = p[E + r - n];
-            return _;
+                p[E] = _[E];
+            for (; E < h + n; E++) p[E] = arguments[E - h + 2];
+            for (; E < i; E++) p[E] = _[E + r - n];
+            return p;
         },
     },
 ),

@@ -20,7 +20,7 @@ function o(e) {
     } = e;
     if (null == t) return null;
     let { emoji: x } = t,
-        g = null != t.state && "" !== t.state ? t.state : c;
+        f = null != t.state && "" !== t.state ? t.state : c;
     return (0, a.jsxs)("div", {
         className: i()(s.__invalid_container, n),
         children: [
@@ -28,14 +28,14 @@ function o(e) {
                 ? null
                 : (0, a.jsx)(r.Z, {
                       emoji: x,
-                      className: i()(s.emoji, l, null != d ? { [d]: null == g || "" === g } : null),
+                      className: i()(s.emoji, l, null != d ? { [d]: null == f || "" === f } : null),
                       animate: u,
                       hideTooltip: m,
                   }),
-            null != g && g.length > 0
+            null != f && f.length > 0
                 ? (0, a.jsx)("span", {
                       className: o,
-                      children: g,
+                      children: f,
                   })
                 : null,
             h,

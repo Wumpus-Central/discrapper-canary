@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(54381);
 n(473749);
 var i = n(915009),
@@ -10,16 +10,16 @@ var i = n(915009),
     u = n(981631),
     d = n(388032),
     f = n(744038);
-function _() {
+function p() {
     let e = o.bh.useSetting(),
         t = (0, i.LN)(),
         n = d.t.sJYh5t,
-        _ = d.t.cf9mvV;
+        p = d.t.cf9mvV;
     return (0, r.jsx)(s.U, {
         setting: c.s6.PRIVACY_DATA_QUESTS_V2,
         children: (0, r.jsx)(l.ZP, {
             title: d.intl.string(n),
-            note: d.intl.format(_, { helpdeskArticle: a.Z.getArticleURL(u.BhN.QUESTS_PRIVACY_CONTROLS) }),
+            note: d.intl.format(p, { helpdeskArticle: a.Z.getArticleURL(u.BhN.QUESTS_PRIVACY_CONTROLS) }),
             value: !e,
             onChange: (e) => o.bh.updateSetting(!e),
             disabled: t,

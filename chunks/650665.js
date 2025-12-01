@@ -1,327 +1,327 @@
-let a, r;
-_.d(e, {
-    Fv: () => p,
-    Jk: () => C,
-    PR: () => L,
-    f7: () => h,
-    sn: () => P,
+let n, a;
+r.d(t, {
+    Fv: () => h,
+    Jk: () => D,
+    PR: () => O,
+    f7: () => L,
+    sn: () => S,
 });
-var n = _(696486),
-    o = _(152228),
-    E = _(988097),
-    i = _(241225),
-    c = _(101284),
-    s = _(467510),
-    l = _(622916),
-    I = _(873567),
-    R = _(665909),
-    N = _(395848),
-    A = _(501684),
-    u = _(108185),
-    T = _(896247),
-    d = _(416987);
-let f = 0,
-    O = {};
-function L() {
-    let t = (0, u.QV)();
-    if (t && c.Z1) {
-        t.mark && N.m.performance.mark("sentry-tracing-init");
-        let e = (0, A.to)(({ metric: t }) => {
-                let e = t.entries[t.entries.length - 1];
-                if (!e) return;
-                let _ = (0, u.XL)(c.Z1),
-                    a = (0, u.XL)(e.startTime);
-                R.X && l.kg.log("[Measurements] Adding FID"),
-                    (O.fid = {
-                        value: t.value,
+var i = r(696486),
+    o = r(152228),
+    _ = r(988097),
+    s = r(241225),
+    c = r(101284),
+    E = r(467510),
+    l = r(622916),
+    u = r(873567),
+    d = r(665909),
+    I = r(395848),
+    p = r(501684),
+    R = r(108185),
+    T = r(896247),
+    A = r(416987);
+let N = 0,
+    f = {};
+function O() {
+    let e = (0, R.QV)();
+    if (e && c.Z1) {
+        e.mark && I.m.performance.mark("sentry-tracing-init");
+        let t = (0, p.to)(({ metric: e }) => {
+                let t = e.entries[e.entries.length - 1];
+                if (!t) return;
+                let r = (0, R.XL)(c.Z1),
+                    n = (0, R.XL)(t.startTime);
+                d.X && l.kg.log("[Measurements] Adding FID"),
+                    (f.fid = {
+                        value: e.value,
                         unit: "millisecond",
                     }),
-                    (O["mark.fid"] = {
-                        value: _ + a,
+                    (f["mark.fid"] = {
+                        value: r + n,
                         unit: "second",
                     });
             }),
-            _ = (0, A.PR)(({ metric: t }) => {
-                let e = t.entries[t.entries.length - 1];
-                e &&
-                    (R.X && l.kg.log("[Measurements] Adding CLS"),
-                    (O.cls = {
-                        value: t.value,
+            r = (0, p.PR)(({ metric: e }) => {
+                let t = e.entries[e.entries.length - 1];
+                t &&
+                    (d.X && l.kg.log("[Measurements] Adding CLS"),
+                    (f.cls = {
+                        value: e.value,
                         unit: "",
                     }),
-                    (r = e));
+                    (a = t));
             }, !0),
-            n = (0, A.$A)(({ metric: t }) => {
-                let e = t.entries[t.entries.length - 1];
-                e &&
-                    (R.X && l.kg.log("[Measurements] Adding LCP"),
-                    (O.lcp = {
-                        value: t.value,
+            i = (0, p.$A)(({ metric: e }) => {
+                let t = e.entries[e.entries.length - 1];
+                t &&
+                    (d.X && l.kg.log("[Measurements] Adding LCP"),
+                    (f.lcp = {
+                        value: e.value,
                         unit: "millisecond",
                     }),
-                    (a = e));
+                    (n = t));
             }, !0),
-            o = (0, A._4)(({ metric: t }) => {
-                t.entries[t.entries.length - 1] &&
-                    (R.X && l.kg.log("[Measurements] Adding TTFB"),
-                    (O.ttfb = {
-                        value: t.value,
+            o = (0, p._4)(({ metric: e }) => {
+                e.entries[e.entries.length - 1] &&
+                    (d.X && l.kg.log("[Measurements] Adding TTFB"),
+                    (f.ttfb = {
+                        value: e.value,
                         unit: "millisecond",
                     }));
             });
         return () => {
-            e(), _(), n(), o();
+            t(), r(), i(), o();
         };
     }
     return () => void 0;
 }
-function p() {
-    (0, A._j)("longtask", ({ entries: t }) => {
-        for (let e of t) {
-            if (!(0, n.HN)()) return;
-            let t = (0, u.XL)(c.Z1 + e.startTime),
-                _ = (0, u.XL)(e.duration),
-                a = (0, o.qp)({
+function h() {
+    (0, p._j)("longtask", ({ entries: e }) => {
+        for (let t of e) {
+            if (!(0, i.HN)()) return;
+            let e = (0, R.XL)(c.Z1 + t.startTime),
+                r = (0, R.XL)(t.duration),
+                n = (0, o.qp)({
                     name: "Main UI thread blocked",
                     op: "ui.long-task",
-                    startTime: t,
-                    attributes: { [E.S3]: "auto.ui.browser.metrics" },
+                    startTime: e,
+                    attributes: { [_.S3]: "auto.ui.browser.metrics" },
                 });
-            a && a.end(t + _);
+            n && n.end(e + r);
         }
     });
 }
-function C() {
-    new PerformanceObserver((t) => {
-        for (let e of t.getEntries()) {
-            if (!(0, n.HN)() || !e.scripts[0]) return;
-            let t = (0, u.XL)(c.Z1 + e.startTime),
-                _ = (0, u.XL)(e.duration),
-                a = { [E.S3]: "auto.ui.browser.metrics" },
-                r = e.scripts[0];
-            if (r) {
-                let { invoker: t, invokerType: e, sourceURL: _, sourceFunctionName: n, sourceCharPosition: o } = r;
-                (a["browser.script.invoker"] = t),
-                    (a["browser.script.invoker_type"] = e),
-                    _ && (a["code.filepath"] = _),
-                    n && (a["code.function"] = n),
-                    -1 !== o && (a["browser.script.source_char_position"] = o);
+function D() {
+    new PerformanceObserver((e) => {
+        for (let t of e.getEntries()) {
+            if (!(0, i.HN)() || !t.scripts[0]) return;
+            let e = (0, R.XL)(c.Z1 + t.startTime),
+                r = (0, R.XL)(t.duration),
+                n = { [_.S3]: "auto.ui.browser.metrics" },
+                a = t.scripts[0];
+            if (a) {
+                let { invoker: e, invokerType: t, sourceURL: r, sourceFunctionName: i, sourceCharPosition: o } = a;
+                (n["browser.script.invoker"] = e),
+                    (n["browser.script.invoker_type"] = t),
+                    r && (n["code.filepath"] = r),
+                    i && (n["code.function"] = i),
+                    -1 !== o && (n["browser.script.source_char_position"] = o);
             }
-            let i = (0, o.qp)({
+            let s = (0, o.qp)({
                 name: "Main UI thread blocked",
                 op: "ui.long-animation-frame",
-                startTime: t,
-                attributes: a,
+                startTime: e,
+                attributes: n,
             });
-            i && i.end(t + _);
+            s && s.end(e + r);
         }
     }).observe({
         type: "long-animation-frame",
         buffered: !0,
     });
 }
-function P() {
-    (0, A._j)("event", ({ entries: t }) => {
-        for (let e of t) {
-            if (!(0, n.HN)()) return;
-            if ("click" === e.name) {
-                let t = (0, u.XL)(c.Z1 + e.startTime),
-                    _ = (0, u.XL)(e.duration),
-                    a = {
-                        name: (0, s.Rt)(e.target),
-                        op: `ui.interaction.${e.name}`,
-                        startTime: t,
-                        attributes: { [E.S3]: "auto.ui.browser.metrics" },
+function S() {
+    (0, p._j)("event", ({ entries: e }) => {
+        for (let t of e) {
+            if (!(0, i.HN)()) return;
+            if ("click" === t.name) {
+                let e = (0, R.XL)(c.Z1 + t.startTime),
+                    r = (0, R.XL)(t.duration),
+                    n = {
+                        name: (0, E.Rt)(t.target),
+                        op: `ui.interaction.${t.name}`,
+                        startTime: e,
+                        attributes: { [_.S3]: "auto.ui.browser.metrics" },
                     },
-                    r = (0, s.iY)(e.target);
-                r && (a.attributes["ui.component_name"] = r);
-                let n = (0, o.qp)(a);
-                n && n.end(t + _);
+                    a = (0, E.iY)(t.target);
+                a && (n.attributes["ui.component_name"] = a);
+                let i = (0, o.qp)(n);
+                i && i.end(e + r);
             }
         }
     });
 }
-function h(t) {
-    let e = (0, u.QV)();
-    if (!e || !N.m.performance.getEntries || !c.Z1) return;
-    R.X && l.kg.log("[Tracing] Adding & adjusting spans using Performance API");
-    let _ = (0, u.XL)(c.Z1),
-        o = e.getEntries(),
-        { op: A, start_timestamp: L } = (0, n.XU)(t);
+function L(e) {
+    let t = (0, R.QV)();
+    if (!t || !I.m.performance.getEntries || !c.Z1) return;
+    d.X && l.kg.log("[Tracing] Adding & adjusting spans using Performance API");
+    let r = (0, R.XL)(c.Z1),
+        o = t.getEntries(),
+        { op: p, start_timestamp: O } = (0, i.XU)(e);
     if (
-        (o.slice(f).forEach((e) => {
-            let a = (0, u.XL)(e.startTime),
-                r = (0, u.XL)(Math.max(0, e.duration));
-            if ("navigation" !== A || !L || !(_ + a < L))
-                switch (e.entryType) {
+        (o.slice(N).forEach((t) => {
+            let n = (0, R.XL)(t.startTime),
+                a = (0, R.XL)(Math.max(0, t.duration));
+            if ("navigation" !== p || !O || !(r + n < O))
+                switch (t.entryType) {
                     case "navigation":
-                        var n, o, i;
-                        (n = t),
-                            (o = e),
-                            (i = _),
+                        var i, o, s;
+                        (i = e),
+                            (o = t),
+                            (s = r),
                             ["unloadEvent", "redirect", "domContentLoadedEvent", "loadEvent", "connect"].forEach(
-                                (t) => {
-                                    D(n, o, t, i);
+                                (e) => {
+                                    C(i, o, e, s);
                                 },
                             ),
-                            D(n, o, "secureConnection", i, "TLS/SSL", "connectEnd"),
-                            D(n, o, "fetch", i, "cache", "domainLookupStart"),
-                            D(n, o, "domainLookup", i, "DNS"),
-                            (function (t, e, _) {
-                                let a = _ + (0, u.XL)(e.requestStart),
-                                    r = _ + (0, u.XL)(e.responseEnd),
-                                    n = _ + (0, u.XL)(e.responseStart);
-                                e.responseEnd &&
-                                    ((0, u.Y)(t, a, r, {
+                            C(i, o, "secureConnection", s, "TLS/SSL", "connectEnd"),
+                            C(i, o, "fetch", s, "cache", "domainLookupStart"),
+                            C(i, o, "domainLookup", s, "DNS"),
+                            (function (e, t, r) {
+                                let n = r + (0, R.XL)(t.requestStart),
+                                    a = r + (0, R.XL)(t.responseEnd),
+                                    i = r + (0, R.XL)(t.responseStart);
+                                t.responseEnd &&
+                                    ((0, R.Y)(e, n, a, {
                                         op: "browser",
                                         name: "request",
-                                        attributes: { [E.S3]: "auto.ui.browser.metrics" },
+                                        attributes: { [_.S3]: "auto.ui.browser.metrics" },
                                     }),
-                                    (0, u.Y)(t, n, r, {
+                                    (0, R.Y)(e, i, a, {
                                         op: "browser",
                                         name: "response",
-                                        attributes: { [E.S3]: "auto.ui.browser.metrics" },
+                                        attributes: { [_.S3]: "auto.ui.browser.metrics" },
                                     }));
-                            })(n, o, i);
+                            })(i, o, s);
                         break;
                     case "mark":
                     case "paint":
                     case "measure": {
-                        var c = t,
-                            s = e,
-                            f = a,
-                            p = r,
-                            C = _;
-                        let n = (0, T.W)(),
-                            o = C + Math.max(f, (0, u.XL)(n ? n.requestStart : 0)),
-                            i = C + f,
-                            I = { [E.S3]: "auto.resource.browser.metrics" };
-                        o !== i &&
-                            ((I["sentry.browser.measure_happened_before_request"] = !0),
-                            (I["sentry.browser.measure_start_time"] = o)),
-                            (0, u.Y)(c, o, i + p, {
-                                name: s.name,
-                                op: s.entryType,
-                                attributes: I,
+                        var c = e,
+                            E = t,
+                            N = n,
+                            h = a,
+                            D = r;
+                        let i = (0, T.W)(),
+                            o = D + Math.max(N, (0, R.XL)(i ? i.requestStart : 0)),
+                            s = D + N,
+                            u = { [_.S3]: "auto.resource.browser.metrics" };
+                        o !== s &&
+                            ((u["sentry.browser.measure_happened_before_request"] = !0),
+                            (u["sentry.browser.measure_start_time"] = o)),
+                            (0, R.Y)(c, o, s + h, {
+                                name: E.name,
+                                op: E.entryType,
+                                attributes: u,
                             });
-                        let N = (0, d.Y)(),
-                            A = e.startTime < N.firstHiddenTime;
-                        "first-paint" === e.name &&
-                            A &&
-                            (R.X && l.kg.log("[Measurements] Adding FP"),
-                            (O.fp = {
-                                value: e.startTime,
+                        let I = (0, A.Y)(),
+                            p = t.startTime < I.firstHiddenTime;
+                        "first-paint" === t.name &&
+                            p &&
+                            (d.X && l.kg.log("[Measurements] Adding FP"),
+                            (f.fp = {
+                                value: t.startTime,
                                 unit: "millisecond",
                             })),
-                            "first-contentful-paint" === e.name &&
-                                A &&
-                                (R.X && l.kg.log("[Measurements] Adding FCP"),
-                                (O.fcp = {
-                                    value: e.startTime,
+                            "first-contentful-paint" === t.name &&
+                                p &&
+                                (d.X && l.kg.log("[Measurements] Adding FCP"),
+                                (f.fcp = {
+                                    value: t.startTime,
                                     unit: "millisecond",
                                 }));
                         break;
                     }
                     case "resource":
-                        !(function (t, e, _, a, r, n) {
-                            if ("xmlhttprequest" === e.initiatorType || "fetch" === e.initiatorType) return;
-                            let o = (0, I.en)(_),
-                                i = { [E.S3]: "auto.resource.browser.metrics" };
-                            S(i, e, "transferSize", "http.response_transfer_size"),
-                                S(i, e, "encodedBodySize", "http.response_content_length"),
-                                S(i, e, "decodedBodySize", "http.decoded_response_content_length"),
-                                "renderBlockingStatus" in e &&
-                                    (i["resource.render_blocking_status"] = e.renderBlockingStatus),
-                                o.protocol && (i["url.scheme"] = o.protocol.split(":").pop()),
-                                o.host && (i["server.address"] = o.host),
-                                (i["url.same_origin"] = _.includes(N.m.location.origin));
-                            let c = n + a;
-                            (0, u.Y)(t, c, c + r, {
-                                name: _.replace(N.m.location.origin, ""),
-                                op: e.initiatorType ? `resource.${e.initiatorType}` : "resource.other",
-                                attributes: i,
+                        !(function (e, t, r, n, a, i) {
+                            if ("xmlhttprequest" === t.initiatorType || "fetch" === t.initiatorType) return;
+                            let o = (0, u.en)(r),
+                                s = { [_.S3]: "auto.resource.browser.metrics" };
+                            g(s, t, "transferSize", "http.response_transfer_size"),
+                                g(s, t, "encodedBodySize", "http.response_content_length"),
+                                g(s, t, "decodedBodySize", "http.decoded_response_content_length"),
+                                "renderBlockingStatus" in t &&
+                                    (s["resource.render_blocking_status"] = t.renderBlockingStatus),
+                                o.protocol && (s["url.scheme"] = o.protocol.split(":").pop()),
+                                o.host && (s["server.address"] = o.host),
+                                (s["url.same_origin"] = r.includes(I.m.location.origin));
+                            let c = i + n;
+                            (0, R.Y)(e, c, c + a, {
+                                name: r.replace(I.m.location.origin, ""),
+                                op: t.initiatorType ? `resource.${t.initiatorType}` : "resource.other",
+                                attributes: s,
                             });
-                        })(t, e, e.name, a, r, _);
+                        })(e, t, t.name, n, a, r);
                 }
         }),
-        (f = Math.max(o.length - 1, 0)),
-        (function (t) {
-            let e = N.m.navigator;
-            if (!e) return;
-            let _ = e.connection;
-            _ &&
-                (_.effectiveType && t.setAttribute("effectiveConnectionType", _.effectiveType),
-                _.type && t.setAttribute("connectionType", _.type),
-                (0, u.nl)(_.rtt) &&
-                    (O["connection.rtt"] = {
-                        value: _.rtt,
+        (N = Math.max(o.length - 1, 0)),
+        (function (e) {
+            let t = I.m.navigator;
+            if (!t) return;
+            let r = t.connection;
+            r &&
+                (r.effectiveType && e.setAttribute("effectiveConnectionType", r.effectiveType),
+                r.type && e.setAttribute("connectionType", r.type),
+                (0, R.nl)(r.rtt) &&
+                    (f["connection.rtt"] = {
+                        value: r.rtt,
                         unit: "millisecond",
                     })),
-                (0, u.nl)(e.deviceMemory) && t.setAttribute("deviceMemory", `${e.deviceMemory} GB`),
-                (0, u.nl)(e.hardwareConcurrency) &&
-                    t.setAttribute("hardwareConcurrency", String(e.hardwareConcurrency));
-        })(t),
-        "pageload" === A)
+                (0, R.nl)(t.deviceMemory) && e.setAttribute("deviceMemory", `${t.deviceMemory} GB`),
+                (0, R.nl)(t.hardwareConcurrency) &&
+                    e.setAttribute("hardwareConcurrency", String(t.hardwareConcurrency));
+        })(e),
+        "pageload" === p)
     ) {
-        var p;
-        (function (t) {
-            let e = (0, T.W)();
-            if (!e) return;
-            let { responseStart: _, requestStart: a } = e;
-            a <= _ &&
-                (R.X && l.kg.log("[Measurements] Adding TTFB Request Time"),
-                (t["ttfb.requestTime"] = {
-                    value: _ - a,
+        var h;
+        (function (e) {
+            let t = (0, T.W)();
+            if (!t) return;
+            let { responseStart: r, requestStart: n } = t;
+            n <= r &&
+                (d.X && l.kg.log("[Measurements] Adding TTFB Request Time"),
+                (e["ttfb.requestTime"] = {
+                    value: r - n,
                     unit: "millisecond",
                 }));
-        })(O),
-            ["fcp", "fp", "lcp"].forEach((t) => {
-                let e = O[t];
-                if (!e || !L || _ >= L) return;
-                let a = e.value,
-                    r = Math.abs((_ + (0, u.XL)(a) - L) * 1000),
-                    n = r - a;
-                R.X && l.kg.log(`[Measurements] Normalized ${t} from ${a} to ${r} (${n})`), (e.value = r);
+        })(f),
+            ["fcp", "fp", "lcp"].forEach((e) => {
+                let t = f[e];
+                if (!t || !O || r >= O) return;
+                let n = t.value,
+                    a = Math.abs((r + (0, R.XL)(n) - O) * 1000),
+                    i = a - n;
+                d.X && l.kg.log(`[Measurements] Normalized ${e} from ${n} to ${a} (${i})`), (t.value = a);
             });
-        let e = O["mark.fid"];
-        e &&
-            O.fid &&
-            ((0, u.Y)(t, e.value, e.value + (0, u.XL)(O.fid.value), {
+        let t = f["mark.fid"];
+        t &&
+            f.fid &&
+            ((0, R.Y)(e, t.value, t.value + (0, R.XL)(f.fid.value), {
                 name: "first input delay",
                 op: "ui.action",
-                attributes: { [E.S3]: "auto.ui.browser.metrics" },
+                attributes: { [_.S3]: "auto.ui.browser.metrics" },
             }),
-            delete O["mark.fid"]),
-            "fcp" in O || delete O.cls,
-            Object.entries(O).forEach(([t, e]) => {
-                (0, i.o)(t, e.value, e.unit);
+            delete f["mark.fid"]),
+            "fcp" in f || delete f.cls,
+            Object.entries(f).forEach(([e, t]) => {
+                (0, s.o)(e, t.value, t.unit);
             }),
-            (p = t),
+            (h = e),
+            n &&
+                (d.X && l.kg.log("[Measurements] Adding LCP Data"),
+                n.element && h.setAttribute("lcp.element", (0, E.Rt)(n.element)),
+                n.id && h.setAttribute("lcp.id", n.id),
+                n.url && h.setAttribute("lcp.url", n.url.trim().slice(0, 200)),
+                h.setAttribute("lcp.size", n.size)),
             a &&
-                (R.X && l.kg.log("[Measurements] Adding LCP Data"),
-                a.element && p.setAttribute("lcp.element", (0, s.Rt)(a.element)),
-                a.id && p.setAttribute("lcp.id", a.id),
-                a.url && p.setAttribute("lcp.url", a.url.trim().slice(0, 200)),
-                p.setAttribute("lcp.size", a.size)),
-            r &&
-                r.sources &&
-                (R.X && l.kg.log("[Measurements] Adding CLS Data"),
-                r.sources.forEach((t, e) => p.setAttribute(`cls.source.${e + 1}`, (0, s.Rt)(t.node))));
+                a.sources &&
+                (d.X && l.kg.log("[Measurements] Adding CLS Data"),
+                a.sources.forEach((e, t) => h.setAttribute(`cls.source.${t + 1}`, (0, E.Rt)(e.node))));
     }
-    (a = void 0), (r = void 0), (O = {});
+    (n = void 0), (a = void 0), (f = {});
 }
-function D(t, e, _, a, r, n) {
-    let o = n ? e[n] : e[`${_}End`],
-        i = e[`${_}Start`];
-    i &&
+function C(e, t, r, n, a, i) {
+    let o = i ? t[i] : t[`${r}End`],
+        s = t[`${r}Start`];
+    s &&
         o &&
-        (0, u.Y)(t, a + (0, u.XL)(i), a + (0, u.XL)(o), {
+        (0, R.Y)(e, n + (0, R.XL)(s), n + (0, R.XL)(o), {
             op: "browser",
-            name: r || _,
-            attributes: { [E.S3]: "auto.ui.browser.metrics" },
+            name: a || r,
+            attributes: { [_.S3]: "auto.ui.browser.metrics" },
         });
 }
-function S(t, e, _, a) {
-    let r = e[_];
-    null != r && r < 2147483647 && (t[a] = r);
+function g(e, t, r, n) {
+    let a = t[r];
+    null != a && a < 2147483647 && (e[n] = a);
 }

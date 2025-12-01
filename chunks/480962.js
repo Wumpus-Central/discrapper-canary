@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(743236),
     d = n(481060),
     f = n(939350),
-    _ = n(334405);
-function p(e, t, n) {
+    p = n(334405);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,12 +34,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -56,7 +56,7 @@ function g(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -84,40 +84,40 @@ function b(e, t) {
     return i;
 }
 function y(e) {
-    let { subMenuClassName: t, parentItem: n, isFocused: a, menuSubmenuProps: p, renderSubmenu: m } = e,
-        { focusIndex: b, isUsingKeyboardNavigation: y } = p,
-        O = E(p, ["focusIndex", "isUsingKeyboardNavigation"]),
+    let { subMenuClassName: t, parentItem: n, isFocused: a, menuSubmenuProps: _, renderSubmenu: h } = e,
+        { focusIndex: b, isUsingKeyboardNavigation: y } = _,
+        O = E(_, ["focusIndex", "isUsingKeyboardNavigation"]),
         v = i.useRef(null),
+        S = i.useRef(null),
         I = i.useRef(null),
-        T = i.useRef(null),
-        [S, A] = i.useState(!1);
+        [T, A] = i.useState(!1);
     i.useLayoutEffect(() => {
         A(!0);
     }, []),
         i.useLayoutEffect(() => {
             var e;
-            a && ((0, u.F)(v), null == (e = T.current) || e.focus());
+            a && ((0, u.F)(v), null == (e = I.current) || e.focus());
         }, [a]);
     let C = (0, r.jsx)("div", {
-            className: _.submenuPaddingContainer,
+            className: p.submenuPaddingContainer,
             children: (0, r.jsx)(
                 "div",
-                g(h({ className: o()(_.submenu, t) }, O), {
-                    ref: T,
+                g(m({ className: o()(p.submenu, t) }, O), {
+                    ref: I,
                     children: (0, r.jsx)(l.zJl, {
-                        className: _.scroller,
-                        children: m(),
+                        className: p.scroller,
+                        children: h(),
                     }),
                 }),
             ),
         }),
         N = (0, c.E)("MenuSubmenuItem"),
-        [R, P] = i.useState(!1);
+        [P, R] = i.useState(!1);
     if (N)
         return (0, r.jsx)(s.pS, {
-            open: R,
+            open: P,
             viewportPadding: f.sb,
-            onOpenChange: P,
+            onOpenChange: R,
             spacing: 4,
             placement: "right-start",
             portal: !1,
@@ -125,11 +125,11 @@ function y(e) {
             renderLayer: () => C,
             children: (e) => {
                 let { ref: t, props: i } = e;
-                return (0, r.jsx)("div", g(h({ ref: t }, i), { children: n }));
+                return (0, r.jsx)("div", g(m({ ref: t }, i), { children: n }));
             },
         });
-    let D = (0, r.jsx)(d.jRF, {
-        targetRef: I,
+    let w = (0, r.jsx)(d.jRF, {
+        targetRef: S,
         autoInvert: !0,
         nudgeAlignIntoViewport: !0,
         fixed: !0,
@@ -140,6 +140,6 @@ function y(e) {
     });
     return (0, r.jsxs)("div", {
         ref: v,
-        children: [(0, r.jsx)("div", { ref: I }), n, a && S ? D : null],
+        children: [(0, r.jsx)("div", { ref: S }), n, a && T ? w : null],
     });
 }

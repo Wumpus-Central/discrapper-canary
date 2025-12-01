@@ -1,8 +1,8 @@
 n.d(e, { u: () => T }), n(539854), n(388685);
 var i = n(54381),
-    l = n(473749),
-    r = n(512722),
-    u = n.n(r),
+    r = n(473749),
+    l = n(512722),
+    u = n.n(l),
     s = n(59662),
     a = n(28682),
     o = n(388032);
@@ -10,27 +10,27 @@ function c(t) {
     let { title: e } = t;
     return e;
 }
-function E(t) {
-    let { useTitle: e, settingKey: n, formatter: i, index: l } = t,
-        r = e();
-    return "string" == typeof r
+function d(t) {
+    let { useTitle: e, settingKey: n, formatter: i, index: r } = t,
+        l = e();
+    return "string" == typeof l
         ? i({
-              title: r,
-              index: l,
+              title: l,
+              index: r,
               key: n,
           })
-        : r;
+        : l;
 }
-function d(t) {
-    let { setting: e, formatter: n, index: l } = t;
+function E(t) {
+    let { setting: e, formatter: n, index: r } = t;
     return () =>
         (0, i.jsx)(
-            E,
+            d,
             {
                 useTitle: e.useTitle,
                 settingKey: e.key,
                 formatter: n,
-                index: l,
+                index: r,
             },
             e.key,
         );
@@ -40,18 +40,18 @@ function S(t) {
 }
 function T(t, e) {
     var n, i;
-    let { limit: r = 2, formatter: E = c } = null != e ? e : {};
-    u()(r > 0, "[useSettingCollapsibleSubtitle] Limit must be greater than 0");
+    let { limit: l = 2, formatter: d = c } = null != e ? e : {};
+    u()(l > 0, "[useSettingCollapsibleSubtitle] Limit must be greater than 0");
     let { directory: T, fallbackDirectory: I } = (0, s.t)(),
-        O = null != (n = T.get(t)) ? n : I.get(t);
+        g = null != (n = T.get(t)) ? n : I.get(t);
     u()(
-        null != O && (O.type === a.Jq.ACCORDION || S(O)),
+        null != g && (g.type === a.Jq.ACCORDION || S(g)),
         "[useSettingCollapsibleSubtitle] Node is not a collapsible settings node",
     );
-    let g = S(O) && null != (i = O.collapseAfter) ? i : 0,
-        _ = O.layout;
-    return l.useMemo(() => {
-        let t = g,
+    let O = S(g) && null != (i = g.collapseAfter) ? i : 0,
+        _ = g.layout;
+    return r.useMemo(() => {
+        let t = O,
             e = [];
         for (let n of _)
             if ("useTitle" in n && null != n.useTitle) {
@@ -65,84 +65,84 @@ function T(t, e) {
                 });
             }
         if (0 === e.length) return "";
-        let n = Math.min(r, 3);
+        let n = Math.min(l, 3);
         if (e.length <= n)
             if (1 === e.length)
                 return o.intl.format(o.t["3H9tCW"], {
-                    settingOneHook: d({
+                    settingOneHook: E({
                         setting: e[0],
-                        formatter: E,
+                        formatter: d,
                         index: 0,
                     }),
                 });
             else if (2 === e.length)
                 return o.intl.format(o.t.MWryo6, {
-                    settingOneHook: d({
+                    settingOneHook: E({
                         setting: e[0],
-                        formatter: E,
+                        formatter: d,
                         index: 0,
                     }),
-                    settingTwoHook: d({
+                    settingTwoHook: E({
                         setting: e[1],
-                        formatter: E,
+                        formatter: d,
                         index: 1,
                     }),
                 });
             else
                 return o.intl.format(o.t.a00b5G, {
-                    settingOneHook: d({
+                    settingOneHook: E({
                         setting: e[0],
-                        formatter: E,
+                        formatter: d,
                         index: 0,
                     }),
-                    settingTwoHook: d({
+                    settingTwoHook: E({
                         setting: e[1],
-                        formatter: E,
+                        formatter: d,
                         index: 1,
                     }),
-                    settingThreeHook: d({
+                    settingThreeHook: E({
                         setting: e[2],
-                        formatter: E,
+                        formatter: d,
                         index: 2,
                     }),
                 });
         return 1 === n
             ? o.intl.format(o.t.O8vNbS, {
-                  settingOneHook: d({
+                  settingOneHook: E({
                       setting: e[0],
-                      formatter: E,
+                      formatter: d,
                       index: 0,
                   }),
               })
             : 2 === n
               ? o.intl.format(o.t["acXG/W"], {
-                    settingOneHook: d({
+                    settingOneHook: E({
                         setting: e[0],
-                        formatter: E,
+                        formatter: d,
                         index: 0,
                     }),
-                    settingTwoHook: d({
+                    settingTwoHook: E({
                         setting: e[1],
-                        formatter: E,
+                        formatter: d,
                         index: 1,
                     }),
                 })
               : o.intl.format(o.t["5+ldWc"], {
-                    settingOneHook: d({
+                    settingOneHook: E({
                         setting: e[0],
-                        formatter: E,
+                        formatter: d,
                         index: 0,
                     }),
-                    settingTwoHook: d({
+                    settingTwoHook: E({
                         setting: e[1],
-                        formatter: E,
+                        formatter: d,
                         index: 1,
                     }),
-                    settingThreeHook: d({
+                    settingThreeHook: E({
                         setting: e[2],
-                        formatter: E,
+                        formatter: d,
                         index: 2,
                     }),
                 });
-    }, [r, g, _, E]);
+    }, [l, O, _, d]);
 }

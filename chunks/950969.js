@@ -8,14 +8,14 @@ var r = n(54381),
     c = n(569471),
     u = n(592125),
     d = n(306680),
-    p = n(9156),
+    f = n(9156),
     h = n(451478);
-function f(e) {
+function p(e) {
     let t = u.Z.getChannel(e);
     return (
         null != t &&
         null != t.getGuildId() &&
-        !(t.isThread() ? c.Z.isMuted(t.id) : p.ZP.isChannelMuted(t.getGuildId(), t.id)) &&
+        !(t.isThread() ? c.Z.isMuted(t.id) : f.ZP.isChannelMuted(t.getGuildId(), t.id)) &&
         (0, s.d)(t)
     );
 }
@@ -24,8 +24,8 @@ function g(e) {
     if (null == t) return !1;
     let n = t.getGuildId();
     if (null == n) return !1;
-    let r = p.ZP.isGuildCollapsed(n),
-        i = p.ZP.isChannelMuted(n, t.id);
+    let r = f.ZP.isGuildCollapsed(n),
+        i = f.ZP.isChannelMuted(n, t.id);
     return (!r || !i) && d.ZP.getMentionCount(e) > 0;
 }
 let m = i.forwardRef(function (e, t) {
@@ -53,7 +53,7 @@ let m = i.forwardRef(function (e, t) {
             }
             return i;
         })(e, ["guildId", "guildChannels", "guildChannelsVersion"]);
-    let p = (0, o.T)(s, c, u, { withVoiceChannels: !1 }, { ignoreRecents: !0 }),
+    let f = (0, o.T)(s, c, u, { withVoiceChannels: !1 }, { ignoreRecents: !0 }),
         m = (0, l.e7)([h.Z], () => h.Z.isFocused());
     return (0, r.jsx)(
         a.Z,
@@ -84,9 +84,9 @@ let m = i.forwardRef(function (e, t) {
         })({ ref: t }, d)),
         (i = i =
             {
-                isUnread: f,
+                isUnread: p,
                 isMentioned: g,
-                items: p,
+                items: f,
                 animate: m,
             }),
         Object.getOwnPropertyDescriptors

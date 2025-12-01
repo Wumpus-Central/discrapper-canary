@@ -1,4 +1,4 @@
-n.d(t, { E: () => p }), n(953529);
+n.d(t, { E: () => _ }), n(953529);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,19 +37,19 @@ function _(e) {
     }
     return e;
 }
-function p(e) {
+function _(e) {
     let { profile: t, className: n } = e,
-        { gamesToDisplay: a, lastGameToDisplay: f, remainingGames: p } = (0, l.Z)(t),
-        h = i.useMemo(
-            () => t.traits.map((e, t) => _({ key: "trait-".concat(t) }, e)).filter((e) => e.label.length > 0),
+        { gamesToDisplay: a, lastGameToDisplay: f, remainingGames: _ } = (0, l.Z)(t),
+        m = i.useMemo(
+            () => t.traits.map((e, t) => p({ key: "trait-".concat(t) }, e)).filter((e) => e.label.length > 0),
             [t],
         ),
-        m = t.description.length > 0;
-    return m || a.length > 0 || h.length > 0
+        h = t.description.length > 0;
+    return h || a.length > 0 || m.length > 0
         ? (0, r.jsxs)("div", {
               className: o()(d.body, n),
               children: [
-                  m
+                  h
                       ? (0, r.jsx)(s.Text, {
                             variant: "text-sm/normal",
                             color: "text-secondary",
@@ -59,10 +59,10 @@ function p(e) {
                   (0, r.jsx)(c.Z, {
                       gamesToDisplay: a,
                       lastGameToDisplay: f,
-                      remainingGames: p,
+                      remainingGames: _,
                       activity: t.gameActivity,
                   }),
-                  (0, r.jsx)(u.F, { items: h }),
+                  (0, r.jsx)(u.F, { items: m }),
               ],
           })
         : (0, r.jsx)("div", { className: d.emptyBody });

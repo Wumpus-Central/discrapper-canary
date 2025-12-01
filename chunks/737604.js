@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => I });
 var r,
     i = n(442837),
     a = n(570140),
@@ -9,8 +9,8 @@ var r,
     u = n(997945),
     d = n(981631),
     f = n(921944),
-    _ = n(474936);
-function p(e, t, n) {
+    p = n(474936);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,8 +23,8 @@ function p(e, t, n) {
         e
     );
 }
-let h = 2,
-    m = {
+let m = 2,
+    h = {
         client: {
             desktop: u.aH.DEFAULT,
             coachmarkImpressions: 0,
@@ -35,12 +35,12 @@ let h = 2,
         (g = !c.ZP.canUsePremiumAppIcons(s.default.getCurrentUser())) && b(u.aH.DEFAULT);
     },
     b = (e) => {
-        if (((m.client.desktop = e), !g)) {
+        if (((h.client.desktop = e), !g)) {
             var t;
             l.default.track(d.rMx.APP_ICON_UPDATED, {
                 icon_id: e,
                 user_premium_tier: null == (t = s.default.getCurrentUser()) ? void 0 : t.premiumType,
-                icon_premium_tier: e !== u.aH.DEFAULT ? _.PremiumTypes.TIER_2 : null,
+                icon_premium_tier: e !== u.aH.DEFAULT ? p.PremiumTypes.TIER_2 : null,
             });
         }
     };
@@ -50,33 +50,33 @@ function y(e) {
 }
 function O() {
     g &&
-        (m.client = {
+        (h.client = {
             desktop: u.aH.DEFAULT,
-            coachmarkImpressions: h,
+            coachmarkImpressions: m,
         });
 }
 function v(e) {
     let { markAsDismissed: t } = e;
-    (m.client.coachmarkImpressions += 1),
-        m.client.coachmarkImpressions >= h && (null == t || t(f.L.UNKNOWN), O(), (0, o.Ll)());
+    (h.client.coachmarkImpressions += 1),
+        h.client.coachmarkImpressions >= m && (null == t || t(f.L.UNKNOWN), O(), (0, o.Ll)());
 }
-class I extends (r = i.ZP.PersistedStore) {
+class S extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (m = e), this.waitFor(s.default), this.syncWith([s.default], E);
+        null != e && (h = e), this.waitFor(s.default), this.syncWith([s.default], E);
     }
     get isUpsellPreview() {
         return g;
     }
     getState() {
-        return m;
+        return h;
     }
     getCurrentDesktopIcon() {
         var e;
-        return null == m || null == (e = m.client) ? void 0 : e.desktop;
+        return null == h || null == (e = h.client) ? void 0 : e.desktop;
     }
 }
-p(I, "displayName", "AppIconPersistedStoreState"), p(I, "persistKey", "AppIconPersistedStoreState");
-let T = new I(a.Z, {
+_(S, "displayName", "AppIconPersistedStoreState"), _(S, "persistKey", "AppIconPersistedStoreState");
+let I = new S(a.Z, {
     APP_ICON_UPDATED: y,
     APP_ICON_EDITOR_RESET: O,
     APP_ICON_TRACK_IMPRESSION: v,

@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,37 +58,37 @@ function _(e, t) {
         e
     );
 }
-let p = { hashes: {} };
-async function h() {
+let _ = { hashes: {} };
+async function m() {
     if (!l.isPlatformEmbedded || !(0, l.isWindows)()) return [];
     await c.ZP.ensureModule("discord_media");
     let e = c.ZP.requireModule("discord_media");
     return (await e.getSystemAnalyticsBlob()) || [];
 }
-async function m() {
+async function h() {
     try {
-        let t = (await h()).filter((e) => p.hashes[e.name] !== e.hash);
+        let t = (await m()).filter((e) => _.hashes[e.name] !== e.hash);
         for (let { name: n, hash: r, data: i } of t) {
             var e;
-            let t = _(d({}, i), { gpus: null == (e = i.gpus) ? void 0 : e.map((e) => JSON.stringify(e)) });
-            s.default.track(n, t), ((p = { hashes: d({}, p.hashes) }).hashes[n] = r);
+            let t = p(d({}, i), { gpus: null == (e = i.gpus) ? void 0 : e.map((e) => JSON.stringify(e)) });
+            s.default.track(n, t), ((_ = { hashes: d({}, _.hashes) }).hashes[n] = r);
         }
         t.length > 0 && b.emitChange();
     } catch (e) {}
 }
 function g() {
-    return m(), !1;
+    return h(), !1;
 }
 class E extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        (p = null != e && "object" == typeof e.hashes ? e : { hashes: {} }), this.waitFor(o.Z);
+        (_ = null != e && "object" == typeof e.hashes ? e : { hashes: {} }), this.waitFor(o.Z);
     }
     getState() {
-        return p;
+        return _;
     }
     async info() {
         try {
-            let e = (await h()).find((e) => "hardware_detected" === e.name);
+            let e = (await m()).find((e) => "hardware_detected" === e.name);
             if (null == e) return null;
             return e.data;
         } catch (e) {}

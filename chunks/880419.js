@@ -8,15 +8,15 @@ var r = n(54381),
     c = n(481060),
     u = n(762762),
     d = n(973772),
-    p = n(279604),
+    f = n(279604),
     h = n(535396),
-    f = n(130231),
+    p = n(130231),
     g = n(388032),
     m = n(362320);
 function b(e) {
     var t, n;
-    let { guildId: l, powerup: b, compact: _, iconSize: y, size: O, grow: v, className: j, onError: C } = e,
-        { onActivate: x, isLoading: E, error: S, onShowDeactivate: I } = (0, p.ZP)(l, b),
+    let { guildId: l, powerup: b, compact: _, iconSize: y, size: O, grow: v, className: j, onError: x } = e,
+        { onActivate: C, isLoading: E, error: S, onShowDeactivate: I } = (0, f.ZP)(l, b),
         P = (0, d.ZP)(l, b),
         N = P.type !== h.A3.INACTIVE,
         { disabled: Z, reason: w } = (0, u.Z)(l, b, N),
@@ -30,8 +30,8 @@ function b(e) {
                       if (e.type === h.A3.LEVEL_ACTIVATED) {
                           var n, r;
                           return {
-                              title: g.intl.string(f.default["9oYuvb"]),
-                              body: g.intl.formatToPlainString(f.default.WRRYUT, {
+                              title: g.intl.string(p.default["9oYuvb"]),
+                              body: g.intl.formatToPlainString(p.default.WRRYUT, {
                                   perkName:
                                       null != (r = null == (n = e.sourcePowerup) ? void 0 : n.title)
                                           ? r
@@ -41,21 +41,21 @@ function b(e) {
                       }
                       return e.type === h.A3.POWERUP_ACTIVATED
                           ? {
-                                title: g.intl.string(f.default.TZsu1U),
-                                body: g.intl.formatToPlainString(f.default["5HQUzD"], { boostCount: t.cost }),
+                                title: g.intl.string(p.default.TZsu1U),
+                                body: g.intl.formatToPlainString(p.default["5HQUzD"], { boostCount: t.cost }),
                             }
                           : null;
                   })(P, b);
     return (
         i.useEffect(() => {
-            null == C || C(S);
-        }, [S, C]),
+            null == x || x(S);
+        }, [S, x]),
         (0, r.jsx)(a.i_, {
             body: null != (t = null == T ? void 0 : T.body) ? t : "",
             title: null != (n = null == T ? void 0 : T.title) ? n : void 0,
             shouldShow: null != T,
             delay: 100,
-            "aria-label": null != w ? w : N ? g.intl.string(f.default.TZsu1U) : void 0,
+            "aria-label": null != w ? w : N ? g.intl.string(p.default.TZsu1U) : void 0,
             children: (0, r.jsx)("div", {
                 className: o()(
                     m.secondaryButton,
@@ -76,7 +76,7 @@ function b(e) {
                                   icon: a,
                               }
                             : {
-                                  text: g.intl.format(n ? f.default.uzQpQd : f.default.ad2Mfj, {
+                                  text: g.intl.format(n ? p.default.uzQpQd : p.default.ad2Mfj, {
                                       boostCount: t,
                                       dotHook: () =>
                                           (0, r.jsx)("span", {
@@ -126,9 +126,9 @@ function b(e) {
                         })(
                             {
                                 variant: N ? "secondary" : "primary",
-                                "aria-label": g.intl.string(N ? f.default.TZsu1U : f.default.gSxlHf),
+                                "aria-label": g.intl.string(N ? p.default.TZsu1U : p.default.gSxlHf),
                                 disabled: Z,
-                                onClick: N ? I : x,
+                                onClick: N ? I : C,
                                 loading: E,
                                 fullWidth: v,
                                 size: null != O ? O : _ ? "md" : void 0,

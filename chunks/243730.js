@@ -35,23 +35,23 @@ function f(e) {
     let a = Object.keys(r).length;
     i[n] += a;
 }
-function _(e) {
+function p(e) {
     let { guildId: t, roleId: n } = e,
         r = l[t];
     if (null == r || null == r[n]) return !1;
     r[n] = r[n] + 1;
 }
-function p(e) {
+function _(e) {
     let { guildId: t, roleId: n } = e,
         r = l[t];
     if (null == r || null == r[n]) return !1;
     r[n] = Math.max(r[n] - 1, 0);
 }
-function h(e) {
+function m(e) {
     let { guildId: t, role: n } = e;
     null == l[t] && (l[t] = {}), (l[t][n.id] = 0);
 }
-function m(e) {
+function h(e) {
     let { guild: t } = e;
     delete l[t.id], delete c[t.id];
 }
@@ -70,8 +70,8 @@ let E = new g(a.Z, {
     GUILD_ROLE_MEMBER_COUNT_FETCH_SUCCESS: u,
     GUILD_ROLE_MEMBER_COUNT_UPDATE: d,
     GUILD_ROLE_MEMBER_BULK_ADD: f,
-    GUILD_ROLE_MEMBER_ADD: _,
-    GUILD_ROLE_MEMBER_REMOVE: p,
-    GUILD_ROLE_CREATE: h,
-    GUILD_DELETE: m,
+    GUILD_ROLE_MEMBER_ADD: p,
+    GUILD_ROLE_MEMBER_REMOVE: _,
+    GUILD_ROLE_CREATE: m,
+    GUILD_DELETE: h,
 });

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(539854), n(388685);
+n.d(t, { Z: () => S }), n(539854), n(388685);
 var r = n(442837),
     i = n(570140),
     a = n(960048),
@@ -25,22 +25,22 @@ function f(e) {
         n = d(t);
     (n.status = "fetching"), (n.error = void 0);
 }
-function _(e) {
+function p(e) {
     let { wishlistId: t, wishlistData: n, updatedAt: r } = e,
         i = d(t);
     (i.data = c(n)), (i.status = "success"), (i.error = void 0), (i.updatedAt = r);
 }
-function p(e) {
+function _(e) {
     let { wishlistId: t, error: n } = e,
         r = d(t);
     (r.status = "error"), (r.error = n);
 }
-function h(e) {
+function m(e) {
     let { wishlistId: t, wishlistData: n } = e,
         r = d(t);
     (r.data = c(n)), (r.status = "success"), (r.error = void 0);
 }
-function m(e) {
+function h(e) {
     let { error: t } = e;
     a.Z.captureException(t);
 }
@@ -100,12 +100,12 @@ class v extends r.ZP.Store {
         return this.get(e).updatedAt;
     }
 }
-let I = new v(i.Z, {
+let S = new v(i.Z, {
     WISHLIST_FETCH_START: f,
-    WISHLIST_FETCH_SUCCESS: _,
-    WISHLIST_FETCH_FAILURE: p,
-    WISHLIST_ADD_SKU_SUCCESS: h,
-    WISHLIST_ADD_SKU_FAILURE: m,
+    WISHLIST_FETCH_SUCCESS: p,
+    WISHLIST_FETCH_FAILURE: _,
+    WISHLIST_ADD_SKU_SUCCESS: m,
+    WISHLIST_ADD_SKU_FAILURE: h,
     WISHLIST_REMOVE_SKU_SUCCESS: g,
     WISHLIST_REMOVE_SKU_FAILURE: E,
     WISHLIST_UPDATE_VISIBILITY_SUCCESS: b,

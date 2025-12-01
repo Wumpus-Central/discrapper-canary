@@ -11,10 +11,10 @@ function s(e, t, n) {
         u,
         d,
         f,
-        _,
         p,
-        h = (0, o.j)(),
-        m = (0, a.Z)(
+        _,
+        m = (0, o.j)(),
+        h = (0, a.Z)(
             null !=
                 (s =
                     null !=
@@ -27,17 +27,17 @@ function s(e, t, n) {
                                   ? void 0
                                   : f.weekStartsOn)
                             ? c
-                            : h.weekStartsOn)
+                            : m.weekStartsOn)
                         ? l
-                        : null == (_ = h.locale) || null == (p = _.options)
+                        : null == (p = m.locale) || null == (_ = p.options)
                           ? void 0
-                          : p.weekStartsOn)
+                          : _.weekStartsOn)
                 ? s
                 : 0,
         );
-    if (!(m >= 0 && m <= 6)) throw RangeError("weekStartsOn must be between 0 and 6 inclusively");
+    if (!(h >= 0 && h <= 6)) throw RangeError("weekStartsOn must be between 0 and 6 inclusively");
     var g = (0, r.default)(e),
         E = (0, a.Z)(t),
-        b = 7 * (((E % 7) + 7) % 7 < m) + E - g.getUTCDay();
+        b = 7 * (((E % 7) + 7) % 7 < h) + E - g.getUTCDay();
     return g.setUTCDate(g.getUTCDate() + b), g;
 }

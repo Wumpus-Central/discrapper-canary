@@ -11,12 +11,12 @@ function u(e, t) {
     let u = (0, l.yV)(t),
         d = (0, a.Nj)(i.z.SERVER_SHOP_PHANTOM_PREVIEW),
         f = (0, r.e7)([s.Z], () => null != e && s.Z.can(c.Plq.ADMINISTRATOR, e)),
-        _ = null != (n = null == e ? void 0 : e.features.has(c.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)) && n,
-        p = (0, o.y)(null == e ? void 0 : e.id, "useGuildShopPreviewVisible"),
-        h = [
+        p = null != (n = null == e ? void 0 : e.features.has(c.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)) && n,
+        _ = (0, o.y)(null == e ? void 0 : e.id, "useGuildShopPreviewVisible"),
+        m = [
             c.GuildFeatures.CREATOR_MONETIZABLE,
             c.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL,
             c.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED,
         ].some((t) => (null == e ? void 0 : e.features.has(t)));
-    return null != e && f && !_ && h && u && p && !d;
+    return null != e && f && !p && m && u && _ && !d;
 }

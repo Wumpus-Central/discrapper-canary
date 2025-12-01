@@ -8,7 +8,7 @@ function l(e) {
     let { isDisabled: t, onBlurWithin: n, onFocusWithin: l, onFocusWithinChange: c } = e,
         u = (0, i.useRef)({ isFocusWithin: !1 }),
         { addGlobalListener: d, removeAllGlobalListeners: f } = (0, a.x)(),
-        _ = (0, i.useCallback)(
+        p = (0, i.useCallback)(
             (e) => {
                 e.currentTarget.contains(e.target) &&
                     u.current.isFocusWithin &&
@@ -17,14 +17,14 @@ function l(e) {
             },
             [n, c, u, f],
         ),
-        p = (0, r.d0)(_),
-        h = (0, i.useCallback)(
+        _ = (0, r.d0)(p),
+        m = (0, i.useCallback)(
             (e) => {
                 if (!e.currentTarget.contains(e.target)) return;
                 let t = (0, o.r3)(e.target),
                     n = (0, s.vY)(t);
                 if (!u.current.isFocusWithin && n === (0, s.NI)(e.nativeEvent)) {
-                    l && l(e), c && c(!0), (u.current.isFocusWithin = !0), p(e);
+                    l && l(e), c && c(!0), (u.current.isFocusWithin = !0), _(e);
                     let n = e.currentTarget;
                     d(
                         t,
@@ -32,14 +32,14 @@ function l(e) {
                         (e) => {
                             if (u.current.isFocusWithin && !(0, s.bE)(n, e.target)) {
                                 let i = new t.defaultView.FocusEvent("blur", { relatedTarget: e.target });
-                                (0, r.nh)(i, n), _((0, r.yA)(i));
+                                (0, r.nh)(i, n), p((0, r.yA)(i));
                             }
                         },
                         { capture: !0 },
                     );
                 }
             },
-            [l, c, p, d, _],
+            [l, c, _, d, p],
         );
     return t
         ? {
@@ -50,8 +50,8 @@ function l(e) {
           }
         : {
               focusWithinProps: {
-                  onFocus: h,
-                  onBlur: _,
+                  onFocus: m,
+                  onBlur: p,
               },
           };
 }

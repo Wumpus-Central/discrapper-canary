@@ -18,24 +18,24 @@ function s(e) {
             details: void 0,
             party: void 0,
         };
-    let _ =
+    let p =
             (null == (t = d.assets) ? void 0 : t.large_image) != null ||
             (null == (n = d.assets) ? void 0 : n.small_image) != null,
-        p =
+        _ =
             (null == (s = d.assets) ? void 0 : s.large_text) != null ||
             (null == (l = d.assets) ? void 0 : l.small_text) != null,
-        h = null != (c = d.name) ? c : "game_name" in e.extra ? e.extra.game_name : void 0,
-        m = d.details,
+        m = null != (c = d.name) ? c : "game_name" in e.extra ? e.extra.game_name : void 0,
+        h = d.details,
         g = d.state,
         E = d.party;
     return {
-        isRich: _ || p || null != m || null != g || null != E,
+        isRich: p || _ || null != h || null != g || null != E,
         user: u,
         activity: d,
         state: g,
-        details: m,
+        details: h,
         party: E,
-        appName: h,
+        appName: m,
         embeddedActivity: f,
     };
 }

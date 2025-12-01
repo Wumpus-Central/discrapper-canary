@@ -1,4 +1,4 @@
-n.d(t, { D: () => _ }), n(388685);
+n.d(t, { D: () => p }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -11,15 +11,15 @@ var r = n(54381),
 function f(e) {
     let { page: t, totalPageCount: n, disabled: a, onPageChange: s } = e,
         [c, u] = i.useState(!1),
-        [f, _] = i.useState(null),
-        p = null != f && f >= 1 && f <= n,
-        h = (e) => {
-            let t = parseInt(e);
-            if ("" === e || isNaN(t)) return void _(null);
-            _(t);
-        },
+        [f, p] = i.useState(null),
+        _ = null != f && f >= 1 && f <= n,
         m = (e) => {
-            "Enter" === e.key && null != f && p && (s(f), u(!1), _(null));
+            let t = parseInt(e);
+            if ("" === e || isNaN(t)) return void p(null);
+            p(t);
+        },
+        h = (e) => {
+            "Enter" === e.key && null != f && _ && (s(f), u(!1), p(null));
         };
     return a
         ? (0, r.jsx)(
@@ -41,11 +41,11 @@ function f(e) {
                         type: "number",
                         autoFocus: !0,
                         value: null == f ? "" : "".concat(f),
-                        onChange: h,
+                        onChange: m,
                         onBlur: () => {
-                            u(!1), _(null);
+                            u(!1), p(null);
                         },
-                        onKeyUp: m,
+                        onKeyUp: h,
                         disabled: a,
                     },
                     t.key,
@@ -65,21 +65,21 @@ function f(e) {
                 t.key,
             );
 }
-function _(e) {
+function p(e) {
     let {
             currentPage: t,
             totalCount: n,
             pageSize: i,
             maxVisiblePages: a,
-            disablePaginationGap: _,
-            onPageChange: p,
-            hideMaxPage: h = !1,
-            className: m,
+            disablePaginationGap: p,
+            onPageChange: _,
+            hideMaxPage: m = !1,
+            className: h,
             renderPageWrapper: g,
         } = e,
         E = Math.ceil(n / i);
     function b(e) {
-        null != p && p(e);
+        null != _ && _(e);
     }
     function y(e) {
         let { key: t, disabled: n, navigateToPage: i } = e;
@@ -144,27 +144,27 @@ function _(e) {
             e.key,
         );
     }
-    function I(e) {
+    function S(e) {
         let t = v(e);
         return null != g ? g(e, t) : t;
     }
-    function T(e) {
+    function I(e) {
         return (0, r.jsx)(
             f,
             {
                 page: e,
                 totalPageCount: E,
-                disabled: !!_,
-                onPageChange: p,
+                disabled: !!p,
+                onPageChange: _,
             },
             e.key,
         );
     }
-    function S(e) {
+    function T(e) {
         let { pages: t, hasMultiplePages: n } = e;
         return n
             ? (0, r.jsx)("div", {
-                  className: o()(d.pageControlContainer, m),
+                  className: o()(d.pageControlContainer, h),
                   children: (0, r.jsx)("nav", {
                       className: d.pageControl,
                       children: t.map((e) => {
@@ -172,9 +172,9 @@ function _(e) {
                               case c.s.BACK:
                                   return y(e);
                               case c.s.PAGE:
-                                  return I(e);
+                                  return S(e);
                               case c.s.GAP:
-                                  return T(e);
+                                  return I(e);
                               case c.s.NEXT:
                                   return O(e);
                               default:
@@ -189,8 +189,8 @@ function _(e) {
         totalPageCount: E,
         selectedPage: t,
         maxVisiblePages: a,
-        hideMaxPage: h,
+        hideMaxPage: m,
         onPageChange: b,
-        children: S,
+        children: T,
     });
 }

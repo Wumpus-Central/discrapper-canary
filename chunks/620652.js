@@ -1,5 +1,5 @@
 n.d(t, {
-    M: () => h,
+    M: () => m,
     Z: () => g,
 });
 var r = n(54381),
@@ -12,15 +12,15 @@ var r = n(54381),
     u = n(960020),
     d = n(831244),
     f = n(815605),
-    _ = n(981631),
-    p = n(994428),
-    h = (function (e) {
+    p = n(981631),
+    _ = n(994428),
+    m = (function (e) {
         return (e[(e.NORMAL = 20)] = "NORMAL"), (e[(e.LARGE = 32)] = "LARGE"), e;
     })({});
-let m = async (e) => {
+let h = async (e) => {
     var t;
     let { effect: n } = e,
-        r = await (0, d.T)(n.channelId, null != (t = n.messageId) ? t : _.lds, n.emoji.name),
+        r = await (0, d.T)(n.channelId, null != (t = n.messageId) ? t : p.lds, n.emoji.name),
         i = await (0, f.aB)(
             "".concat(n.channelId, ":").concat(n.messageId, ":").concat(n.emoji.name),
             n.url,
@@ -32,9 +32,9 @@ let m = async (e) => {
 function g(e) {
     let { className: t, effect: n, onComplete: a, emojiSize: s = 20 } = e,
         d = i.useRef(null),
-        _ = s * f.Vz,
-        h = (_ + s) / 2,
-        g = "translateY(".concat(h, "px)");
+        p = s * f.Vz,
+        m = (p + s) / 2,
+        g = "translateY(".concat(m, "px)");
     return (
         i.useEffect(() => {
             let e;
@@ -42,7 +42,7 @@ function g(e) {
                 return (
                     !(async function () {
                         if (null != d.current) {
-                            let t = await m({ effect: n });
+                            let t = await h({ effect: n });
                             (e = l().loadAnimation({
                                 container: d.current,
                                 renderer: "svg",
@@ -71,13 +71,13 @@ function g(e) {
                 );
         }, [a, n, s]),
         (0, r.jsx)("div", {
-            className: p.effectsWrapper,
+            className: _.effectsWrapper,
             children: (0, r.jsx)("div", {
-                className: o()(p.effect, t),
+                className: o()(_.effect, t),
                 style: {
                     transform: g,
-                    height: _,
-                    width: _,
+                    height: p,
+                    width: p,
                 },
                 ref: d,
             }),

@@ -9,35 +9,35 @@ var r = n(54381),
     u = n(419363),
     d = n(857595),
     f = n(607070),
-    _ = n(299363),
-    p = n(627845),
-    h = n(906732),
-    m = n(296812),
+    p = n(299363),
+    _ = n(627845),
+    m = n(906732),
+    h = n(296812),
     g = n(313201),
     E = n(877371),
     b = n(243778),
     y = n(272157),
     O = n(829716),
     v = n(786761),
-    I = n(3148),
-    T = n(739566),
-    S = n(753206),
+    S = n(3148),
+    I = n(739566),
+    T = n(753206),
     A = n(440849),
     C = n(921801),
     N = n(196051),
-    R = n(441729),
-    P = n(626135),
-    D = n(63063),
-    w = n(695346),
-    L = n(313789),
-    x = n(263937),
-    M = n(996073),
-    k = n(273313),
-    j = n(518596),
+    P = n(441729),
+    R = n(626135),
+    w = n(63063),
+    D = n(695346),
+    x = n(313789),
+    L = n(263937),
+    j = n(996073),
+    M = n(273313),
+    k = n(518596),
     U = n(526761),
     G = n(726985),
-    B = n(981631),
-    Z = n(611480),
+    Z = n(981631),
+    B = n(611480),
     F = n(653477),
     V = n(388032),
     H = n(677065),
@@ -84,7 +84,7 @@ function q(e, t) {
     }
     return n;
 }
-function X(e, t) {
+function Q(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -95,7 +95,7 @@ function X(e, t) {
         e
     );
 }
-let Q = (0, g.hQ)(),
+let X = (0, g.hQ)(),
     J = (0, g.hQ)(),
     $ = (0, g.hQ)(),
     ee = o().debounce((e) => {
@@ -105,11 +105,11 @@ let Q = (0, g.hQ)(),
         (0, N.Ct)(e);
     }, 250);
 function en(e) {
-    _.U.useExperiment({ location: "useAccessibilityItems" }, { autoTrackExposure: !0 }).enabled;
-    let t = (0, m.A)("UserSettingsAccessibility"),
+    p.U.useExperiment({ location: "useAccessibilityItems" }, { autoTrackExposure: !0 }).enabled;
+    let t = (0, h.A)("UserSettingsAccessibility"),
         n = (0, y.i)({ location: "UserSettingsAccessibility" }),
         i = (0, E.A)("UserSettingsAccessibility");
-    return (0, r.jsx)(k.Z, {
+    return (0, r.jsx)(M.Z, {
         title: V.intl.string(V.t.G0neg7),
         children: (0, r.jsxs)(c.Kqy, {
             gap: 16,
@@ -153,29 +153,29 @@ function en(e) {
                 }),
                 (0, r.jsxs)(C.F, {
                     setting: G.s6.ACCESSIBILITY_STICKERS,
-                    children: [(0, r.jsx)(ep, {}), (0, r.jsx)(c.izJ, { gap: 4 })],
-                }),
-                (0, r.jsxs)(C.F, {
-                    setting: G.s6.ACCESSIBILITY_REDUCED_MOTION,
                     children: [(0, r.jsx)(e_, {}), (0, r.jsx)(c.izJ, { gap: 4 })],
                 }),
                 (0, r.jsxs)(C.F, {
+                    setting: G.s6.ACCESSIBILITY_REDUCED_MOTION,
+                    children: [(0, r.jsx)(ep, {}), (0, r.jsx)(c.izJ, { gap: 4 })],
+                }),
+                (0, r.jsxs)(C.F, {
                     setting: G.s6.ACCESSIBILITY_MESSAGES,
-                    children: [(0, r.jsx)(eh, {}), (0, r.jsx)(c.izJ, { gap: 4 })],
+                    children: [(0, r.jsx)(em, {}), (0, r.jsx)(c.izJ, { gap: 4 })],
                 }),
                 i &&
                     (0, r.jsxs)(C.F, {
                         setting: G.s6.ACCESSIBILITY_SWITCH_ICON,
                         children: [(0, r.jsx)(ea, {}), (0, r.jsx)(c.izJ, { gap: 4 })],
                     }),
-                (0, r.jsx)(em, {}),
+                (0, r.jsx)(eh, {}),
                 (0, r.jsx)(C.F, {
                     setting: G.s6.ACCESSIBILITY_APPEARANCE_UPSELL,
                     children: (0, r.jsx)(c.Text, {
                         variant: "text-md/normal",
                         children: V.intl.format(V.t.DHpTjT, {
                             onAppearanceClick() {
-                                (0, j.openUserSettings)(L.n.APPEARANCE_PANEL, { section: B.oAB.APPEARANCE });
+                                (0, k.openUserSettings)(x.n.APPEARANCE_PANEL, { section: Z.oAB.APPEARANCE });
                             },
                         }),
                     }),
@@ -185,14 +185,14 @@ function en(e) {
     });
 }
 function er() {
-    let e = w.jU.useSetting(),
+    let e = D.jU.useSetting(),
         [t] = i.useState(() => {
             let e = "1337",
                 t = (0, v.e5)(
-                    X(
+                    Q(
                         z(
                             {},
-                            (0, I.ZP)({
+                            (0, S.ZP)({
                                 channelId: e,
                                 content: V.intl.formatToPlainString(V.t.bB80LC, {
                                     previewLink: "https://discord.com/accessibility",
@@ -200,7 +200,7 @@ function er() {
                             }),
                         ),
                         {
-                            state: B.yb.SENT,
+                            state: Z.yb.SENT,
                             id: "".concat(0),
                         },
                     ),
@@ -222,7 +222,7 @@ function er() {
                         }),
                         (0, r.jsx)("div", {
                             className: Y.previewAvatars,
-                            children: [B.Skl.ONLINE, B.Skl.DND, B.Skl.IDLE].map((e) =>
+                            children: [Z.Skl.ONLINE, Z.Skl.DND, Z.Skl.IDLE].map((e) =>
                                 (0, r.jsx)(
                                     c.Xo$,
                                     {
@@ -239,9 +239,9 @@ function er() {
                 }),
                 (0, r.jsx)("div", {
                     className: Y.previewMessage,
-                    children: (0, r.jsx)(S.Z, {
+                    children: (0, r.jsx)(T.Z, {
                         compact: e,
-                        author: X(z({}, (0, T.ZH)(t)), { colorString: "#DD80F4" }),
+                        author: Q(z({}, (0, I.ZH)(t)), { colorString: "#DD80F4" }),
                         message: t,
                     }),
                 }),
@@ -289,9 +289,9 @@ function eo() {
             (0, r.jsx)(c.iRW, {
                 label: V.intl.string(V.t["5PWWCY"]),
                 description: V.intl.string(V.t["0PbE/H"]),
-                "aria-labelledby": Q,
+                "aria-labelledby": X,
                 "aria-describedby": J,
-                markers: B.yqN.SATURATION_INCREMENTS,
+                markers: Z.yqN.SATURATION_INCREMENTS,
                 equidistant: !0,
                 stickToMarkers: !0,
                 maxValue: 1,
@@ -364,9 +364,9 @@ function ec() {
 }
 function eu() {
     let e = (0, s.e7)([f.Z], () => f.Z.displayNameStylesEnabled),
-        { analyticsLocations: t } = (0, h.ZP)();
+        { analyticsLocations: t } = (0, m.ZP)();
     function n(e) {
-        (0, d.X2)(e), P.default.track(B.rMx.DISPLAY_NAME_STYLES_ACCESSIBILITY_TOGGLE, { enabled: e });
+        (0, d.X2)(e), R.default.track(Z.rMx.DISPLAY_NAME_STYLES_ACCESSIBILITY_TOGGLE, { enabled: e });
     }
     return (0, r.jsx)(c.rsf, {
         label: V.intl.string(H.default["2gFUEw"]),
@@ -383,7 +383,7 @@ function ed() {
     let e = (0, s.e7)([f.Z], () => f.Z.syncProfileThemeWithUserTheme),
         t = i.useRef(null);
     return (
-        (0, M.Z)(t, U.rP.SYNC_PROFILE_THEME_WITH_USER_THEME),
+        (0, j.Z)(t, U.rP.SYNC_PROFILE_THEME_WITH_USER_THEME),
         (0, r.jsx)("div", {
             ref: t,
             children: (0, r.jsx)(c.C3N, {
@@ -394,7 +394,7 @@ function ed() {
                         label: V.intl.string(V.t["sSY+mD"]),
                         description: V.intl.format(V.t.u6UjrL, {
                             onThemeClick() {
-                                (0, j.openUserSettings)(L.n.APPEARANCE_PANEL, { section: B.oAB.APPEARANCE });
+                                (0, k.openUserSettings)(x.n.APPEARANCE_PANEL, { section: Z.oAB.APPEARANCE });
                             },
                         }),
                         checked: e,
@@ -416,7 +416,7 @@ function ef() {
         null != a.current && (clearTimeout(a.current), (a.current = null)),
             t !== e && (a.current = setTimeout(() => (0, d.qz)(t), 150));
     }, [t, e]);
-    let o = V.intl.format(V.t.GwEVE2, { learnMoreLink: D.Z.getArticleURL(B.BhN.FORCED_COLORS) });
+    let o = V.intl.format(V.t.GwEVE2, { learnMoreLink: w.Z.getArticleURL(Z.BhN.FORCED_COLORS) });
     return (0, r.jsxs)(c.C3N, {
         label: V.intl.string(V.t["TYyfO/"]),
         children: [
@@ -424,7 +424,7 @@ function ef() {
                 setting: G.s6.ACCESSIBILITY_HIGH_CONTRAST,
                 children: (0, r.jsx)(ei, {}),
             }),
-            (0, p.b)()
+            (0, _.b)()
                 ? (0, r.jsx)(C.F, {
                       setting: G.s6.ACCESSIBILITY_CONTRAST_SYNC_FORCED_COLORS,
                       children: (0, r.jsx)(c.rsf, {
@@ -438,45 +438,45 @@ function ef() {
         ],
     });
 }
-function e_() {
-    let e = w.QK.useSetting(),
-        t = w.Yk.useSetting(),
+function ep() {
+    let e = D.QK.useSetting(),
+        t = D.Yk.useSetting(),
         {
             useReducedMotion: n,
             rawPrefersReducedMotion: a,
             systemPrefersReducedMotion: o,
             gifAutoPlayOverrideReason: l,
             animateEmojiOverrideReason: u,
-        } = (0, s.cj)([f.Z, x.Z], () => ({
+        } = (0, s.cj)([f.Z, L.Z], () => ({
             systemPrefersReducedMotion: f.Z.systemPrefersReducedMotion,
             rawPrefersReducedMotion: f.Z.rawPrefersReducedMotion,
             useReducedMotion: f.Z.useReducedMotion,
-            gifAutoPlayOverrideReason: x.Z.getAppliedOverrideReasonKey("gifAutoPlay"),
-            animateEmojiOverrideReason: x.Z.getAppliedOverrideReasonKey("animateEmoji"),
+            gifAutoPlayOverrideReason: L.Z.getAppliedOverrideReasonKey("gifAutoPlay"),
+            animateEmojiOverrideReason: L.Z.getAppliedOverrideReasonKey("animateEmoji"),
         })),
-        _ = "auto" === a,
-        p = i.useRef(null);
-    (0, M.Z)(p, U.rP.REDUCED_MOTION);
-    let h = i.useCallback(
+        p = "auto" === a,
+        _ = i.useRef(null);
+    (0, j.Z)(_, U.rP.REDUCED_MOTION);
+    let m = i.useCallback(
             (e) => {
                 (0, d.Zt)(e ? "auto" : o);
             },
             [o],
         ),
-        m = i.useCallback((e) => {
+        h = i.useCallback((e) => {
             (0, d.Zt)(e ? "reduce" : "no-preference");
         }, []);
     return (0, r.jsx)("div", {
-        ref: p,
+        ref: _,
         title: V.intl.string(V.t.e3TR1b),
         className: Y.reducedMotion,
         children: (0, r.jsxs)(c.C3N, {
             label: V.intl.string(V.t.e3TR1b),
-            description: V.intl.format(V.t["2l9U2j"], { helpdeskArticle: D.Z.getArticleURL(B.BhN.REDUCED_MOTION) }),
+            description: V.intl.format(V.t["2l9U2j"], { helpdeskArticle: w.Z.getArticleURL(Z.BhN.REDUCED_MOTION) }),
             children: [
                 (0, r.jsx)(c.Checkbox, {
-                    checked: _,
-                    onChange: h,
+                    checked: p,
+                    onChange: m,
                     label: V.intl.string(V.t["+Dx+HD"]),
                 }),
                 (0, r.jsx)(C.F, {
@@ -484,7 +484,7 @@ function e_() {
                     children: (0, r.jsx)(c.rsf, {
                         label: V.intl.string(V.t.b3XBzg),
                         checked: n,
-                        onChange: m,
+                        onChange: h,
                     }),
                 }),
                 (0, r.jsx)(C.F, {
@@ -493,7 +493,7 @@ function e_() {
                         label: V.intl.string(V.t.Iayoh5),
                         description: null != l ? (0, A.Z)(l) : void 0,
                         checked: e,
-                        onChange: w.QK.updateSetting,
+                        onChange: D.QK.updateSetting,
                     }),
                 }),
                 (0, r.jsx)(C.F, {
@@ -502,18 +502,18 @@ function e_() {
                         label: V.intl.string(V.t.iIaOlc),
                         description: null != u ? (0, A.Z)(u) : void 0,
                         checked: t,
-                        onChange: w.Yk.updateSetting,
+                        onChange: D.Yk.updateSetting,
                     }),
                 }),
             ],
         }),
     });
 }
-function ep() {
-    let e = w.Wp.useSetting(),
-        t = (0, s.e7)([x.Z], () => x.Z.getAppliedOverrideReasonKey("animateStickers")),
+function e_() {
+    let e = D.Wp.useSetting(),
+        t = (0, s.e7)([L.Z], () => L.Z.getAppliedOverrideReasonKey("animateStickers")),
         n = i.useCallback((e) => {
-            w.Wp.updateSetting(e);
+            D.Wp.updateSetting(e);
         }, []);
     return (0, r.jsx)(c.FXm, {
         label: V.intl.string(V.t["6NtAuJ"]),
@@ -521,28 +521,28 @@ function ep() {
         options: [
             {
                 name: V.intl.string(V.t["Xp+X2U"]),
-                value: Z.yr.ALWAYS_ANIMATE,
+                value: B.yr.ALWAYS_ANIMATE,
             },
             {
                 name: V.intl.string(V.t.IlLT7e),
                 desc: V.intl.string(V.t.bIW9Tl),
-                value: Z.yr.ANIMATE_ON_INTERACTION,
+                value: B.yr.ANIMATE_ON_INTERACTION,
             },
             {
                 name: V.intl.string(V.t.IGu8x3),
-                value: Z.yr.NEVER_ANIMATE,
+                value: B.yr.NEVER_ANIMATE,
             },
         ],
         onChange: (e) => n(e),
         value: e,
     });
 }
-function eh() {
+function em() {
     let e = (0, s.e7)([f.Z], () => f.Z.isSubmitButtonEnabled),
-        t = w.dN.useSetting(),
+        t = D.dN.useSetting(),
         n = i.useRef(null);
     return (
-        (0, M.Z)(n, U.rP.LEGACY_CHAT_INPUT),
+        (0, j.Z)(n, U.rP.LEGACY_CHAT_INPUT),
         (0, r.jsx)("div", {
             ref: n,
             children: (0, r.jsxs)(c.C3N, {
@@ -563,11 +563,11 @@ function eh() {
                             description: V.intl.string(V.t.Q7wgHc),
                             checked: t,
                             onChange: (e) => {
-                                P.default.track(B.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
+                                R.default.track(Z.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
                                     enabled: e,
-                                    location: { section: B.jXE.SETTINGS_ACCESSIBILITY },
+                                    location: { section: Z.jXE.SETTINGS_ACCESSIBILITY },
                                 }),
-                                    w.dN.updateSetting(e);
+                                    D.dN.updateSetting(e);
                             },
                         }),
                     }),
@@ -576,9 +576,9 @@ function eh() {
         })
     );
 }
-function em() {
-    let e = w.OW.useSetting(),
-        t = (0, s.e7)([R.Z], () => R.Z.speechRate),
+function eh() {
+    let e = D.OW.useSetting(),
+        t = (0, s.e7)([P.Z], () => P.Z.speechRate),
         [n, a] = i.useState(!1);
     if (!u.Zh) return null;
     let o = () => {
@@ -600,7 +600,7 @@ function em() {
                     children: (0, r.jsx)(c.rsf, {
                         label: V.intl.string(V.t.qvTIwX),
                         checked: e,
-                        onChange: w.OW.updateSetting,
+                        onChange: D.OW.updateSetting,
                     }),
                 }),
                 (0, r.jsx)(C.F, {

@@ -1,4 +1,4 @@
-n.d(t, { x: () => p });
+n.d(t, { x: () => _ });
 var r = n(54381);
 n(473749);
 var i = n(71930),
@@ -77,8 +77,8 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let _ = { "Surprise Me": { fill: "color" } };
-function p(e) {
+let p = { "Surprise Me": { fill: "color" } };
+function _(e) {
     let { artboard: t = "Surprise Me" } = e,
         n = d(e, ["artboard"]),
         { status: s, buffer: c } = (0, o.VG)(i.Z),
@@ -91,10 +91,10 @@ function p(e) {
                   u(l({}, f ? { key: "override" } : {}), {
                       buffer: c,
                       artboard: t,
-                      artboardProperties: _,
+                      artboardProperties: p,
                   }),
                   n,
               ),
           );
 }
-p.riveSrc = i.Z;
+_.riveSrc = i.Z;

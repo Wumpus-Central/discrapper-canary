@@ -1,4 +1,4 @@
-n.d(t, { default: () => W });
+n.d(t, { default: () => J });
 var i = n(54381),
     r = n(473749),
     a = n(512722),
@@ -16,11 +16,11 @@ var i = n(54381),
     j = n(976192),
     y = n(887904),
     O = n(429824),
-    I = n(466330),
-    P = n(191471),
-    m = n(162157),
+    P = n(466330),
+    I = n(191471),
+    v = n(162157),
     x = n(623624),
-    v = n(894059),
+    m = n(894059),
     S = n(434404),
     N = n(978946),
     D = n(731722),
@@ -38,7 +38,7 @@ var i = n(54381),
     L = n(981631),
     R = n(647086),
     F = n(388032),
-    B = n(766310),
+    B = n(541673),
     H = n(617575);
 function Q(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -83,14 +83,14 @@ function Y(e, t) {
         e
     );
 }
-let W = r.memo(function (e) {
-    let { guild: t, onClose: a, onSelect: W } = e,
-        J = (0, o.e7)([M.default], () => M.default.getCurrentUser());
-    l()(null != J, "GuildHeaderPopout: user cannot be undefined"),
+let J = r.memo(function (e) {
+    let { guild: t, onClose: a, onSelect: J } = e,
+        V = (0, o.e7)([M.default], () => M.default.getCurrentUser());
+    l()(null != V, "GuildHeaderPopout: user cannot be undefined"),
         r.useEffect(() => {
             U.default.track(L.rMx.GUILD_DROPDOWN_MENU_VIEWED, { guild_id: t.id });
         });
-    let V = (0, o.e7)([C.ZP], () => C.ZP.isGuildCollapsed(t.id), [t.id]),
+    let W = (0, o.e7)([C.ZP], () => C.ZP.isGuildCollapsed(t.id), [t.id]),
         {
             canAccessSettings: z,
             canManageChannels: X,
@@ -104,19 +104,19 @@ let W = r.memo(function (e) {
             }),
             [t],
         ),
-        K = (0, m.N8)(t),
-        $ = (0, k.eM)(t, J),
+        K = (0, v.N8)(t),
+        $ = (0, k.eM)(t, V),
         ee = (0, o.e7)([_.Z], () => _.Z.isLurking(t.id), [t.id]),
         et = (0, o.e7)([T.ZP], () => T.ZP.isCurrentUserGuest(t.id)),
-        en = (0, v.Z)(t.id, !0),
+        en = (0, m.Z)(t.id, !0),
         ei = (0, b.ZP)(t),
-        er = (0, I.Z)({
+        er = (0, P.Z)({
             source: L.t4x.GUILD_HEADER,
             guild: t,
         }),
         ea = (0, j.Z)({
             guildId: t.id,
-            userId: J.id,
+            userId: V.id,
             analyticsLocation: {
                 page: L.ZY5.GUILD_CHANNEL,
                 section: L.jXE.GUILD_DROPDOWN_MENU,
@@ -155,7 +155,7 @@ let W = r.memo(function (e) {
         }, [t]);
     return ee || et
         ? (0, i.jsx)(c.v2r, {
-              onSelect: W,
+              onSelect: J,
               navId: "guild-header-popout",
               variant: "fixed",
               onClose: a,
@@ -171,7 +171,7 @@ let W = r.memo(function (e) {
           })
         : eo
           ? (0, i.jsxs)(c.v2r, {
-                onSelect: W,
+                onSelect: J,
                 navId: "favorites-header-popout",
                 variant: "fixed",
                 onClose: a,
@@ -207,7 +207,7 @@ let W = r.memo(function (e) {
                         children: (0, i.jsx)(c.S89, {
                             id: "hide-muted-channels",
                             label: F.intl.string(F.t.UwOLJO),
-                            checked: V,
+                            checked: W,
                             action: () => s.Z.toggleCollapseGuild(t.id),
                         }),
                     }),
@@ -215,7 +215,7 @@ let W = r.memo(function (e) {
             })
           : el
             ? (0, i.jsxs)(c.v2r, {
-                  onSelect: W,
+                  onSelect: J,
                   navId: "guild-header-popout",
                   variant: "fixed",
                   onClose: a,
@@ -263,7 +263,7 @@ let W = r.memo(function (e) {
             : ec
               ? null
               : (0, i.jsxs)(c.v2r, {
-                    onSelect: W,
+                    onSelect: J,
                     navId: "guild-header-popout",
                     variant: "fixed",
                     onClose: a,
@@ -299,7 +299,7 @@ let W = r.memo(function (e) {
                         }),
                         (0, i.jsxs)(c.kSQ, {
                             children: [
-                                $ && J.isStaff() && eh
+                                $ && V.isStaff() && eh
                                     ? (0, i.jsx)(c.sNh, {
                                           id: "create-deadchat",
                                           label: "Deadchat Ping",
@@ -309,7 +309,7 @@ let W = r.memo(function (e) {
                                           },
                                       })
                                     : null,
-                                $ && J.isStaff() && ej
+                                $ && V.isStaff() && ej
                                     ? (0, i.jsx)(c.sNh, {
                                           id: "create-gaming-ping",
                                           label: "Gaming Stats Ping",
@@ -427,7 +427,7 @@ let W = r.memo(function (e) {
                                 (0, i.jsx)(c.S89, {
                                     id: "hide-muted-channels",
                                     label: F.intl.string(F.t.UwOLJO),
-                                    checked: V,
+                                    checked: W,
                                     action: () => s.Z.toggleCollapseGuild(t.id),
                                 }),
                             ],
@@ -441,7 +441,7 @@ let W = r.memo(function (e) {
                                           label: F.intl.string(F.t.cswId3),
                                           icon: c.b7C,
                                           color: "danger",
-                                          action: () => (0, P.J)(t.id),
+                                          action: () => (0, I.J)(t.id),
                                       })
                                     : null,
                                 $

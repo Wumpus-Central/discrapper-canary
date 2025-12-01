@@ -1,7 +1,7 @@
 n.d(t, { Z: () => b }), n(388685);
 var r = n(54381),
     i = n(473749),
-    l = n(790519),
+    l = n(666917),
     a = n(442837),
     o = n(481060),
     c = n(596454),
@@ -16,10 +16,10 @@ let p = 6 * u.Z.Millis.SECOND,
 function b(e) {
     let { userId: t, voiceChannelEffect: n, onComplete: u } = e,
         { emoji: b, sentAt: v } = n,
-        E = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
-        [h, y] = i.useState(!0),
-        S = !E,
-        O = (0, o.Yzy)(h, {
+        h = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
+        [E, y] = i.useState(!0),
+        S = !h,
+        O = (0, o.Yzy)(E, {
             from: { rotate: -120 },
             enter: { rotate: 0 },
             leave: { rotate: -120 },

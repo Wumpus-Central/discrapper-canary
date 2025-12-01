@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => T });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -10,10 +10,10 @@ var i = n(120356),
     u = n(596454),
     d = n(911969),
     f = n(744969),
-    _ = n(572004),
-    p = n(49012),
-    h = n(970184),
-    m = n(280501),
+    p = n(572004),
+    _ = n(49012),
+    m = n(970184),
+    h = n(280501),
     g = n(388032),
     E = n(392061);
 function b(e, t, n) {
@@ -68,7 +68,7 @@ function v(e, t) {
         e
     );
 }
-function I(e) {
+function S(e) {
     switch (e) {
         case d.ZJ.PRIMARY:
         case d.ZJ.PREMIUM:
@@ -81,9 +81,9 @@ function I(e) {
             return s.zx.Colors.PRIMARY;
     }
 }
-function T(e) {
+function I(e) {
     let { url: t, onSelect: n } = e;
-    return _.wS && null != t
+    return p.wS && null != t
         ? (0, r.jsx)(l.v2r, {
               navId: "component-button",
               onClose: c.Zy,
@@ -93,56 +93,56 @@ function T(e) {
                   children: (0, r.jsx)(l.sNh, {
                       id: "copy",
                       label: g.intl.string(g.t.uHhnfa),
-                      action: () => (0, _.JG)(t),
+                      action: () => (0, p.JG)(t),
                   }),
               }),
           })
         : null;
 }
-function S(e) {
+function T(e) {
     let t,
-        { label: n, style: i, disabled: _, emoji: g, url: b, skuId: O } = e,
-        { executeStateUpdate: S, visualState: A, isDisabled: C } = (0, h.Ee)(e),
+        { label: n, style: i, disabled: p, emoji: g, url: b, skuId: O } = e,
+        { executeStateUpdate: T, visualState: A, isDisabled: C } = (0, m.Ee)(e),
         N = (0, f.s)(O),
-        R = null != O && i === d.ZJ.PREMIUM,
-        P = R && (null == N ? void 0 : N.disabled),
-        D = R ? (null == N ? void 0 : N.label) : n,
-        w = null != g,
-        L = null != D && D.length > 0,
-        x = i === d.ZJ.LINK && null != b && b.length > 0,
-        M = A === m.gH.LOADING || (R && null == N);
+        P = null != O && i === d.ZJ.PREMIUM,
+        R = P && (null == N ? void 0 : N.disabled),
+        w = P ? (null == N ? void 0 : N.label) : n,
+        D = null != g,
+        x = null != w && w.length > 0,
+        L = i === d.ZJ.LINK && null != b && b.length > 0,
+        j = A === h.gH.LOADING || (P && null == N);
     return (
-        (t = x
+        (t = L
             ? () => {
-                  (0, p.q)({
+                  (0, _.q)({
                       href: null != b ? b : "",
                       shouldConfirm: !0,
                   });
               }
-            : R
+            : P
               ? null != N && !1 === N.disabled
                   ? N.onClick
                   : o.noop
-              : () => S()),
+              : () => T()),
         (0, r.jsxs)(s.zx, {
             "data-migration-pending": !0,
-            color: I(i),
+            color: S(i),
             size: s.zx.Sizes.SMALL,
-            disabled: _ || A === m.gH.DISABLED || C || P,
+            disabled: p || A === h.gH.DISABLED || C || R,
             onClick: t,
             onContextMenu: (e) => {
-                x && (0, c.vq)(e, (e) => (0, r.jsx)(T, v(y({}, e), { url: b })));
+                L && (0, c.vq)(e, (e) => (0, r.jsx)(I, v(y({}, e), { url: b })));
             },
-            role: x ? "link" : "button",
+            role: L ? "link" : "button",
             children: [
                 (0, r.jsxs)("div", {
                     className: a()(E.content, {
-                        [E.hidden]: M,
-                        [E.premium]: R,
+                        [E.hidden]: j,
+                        [E.premium]: P,
                     }),
-                    "aria-hidden": M,
+                    "aria-hidden": j,
                     children: [
-                        R
+                        P
                             ? (0, r.jsx)("div", {
                                   className: E.shopIcon,
                                   children: (0, r.jsx)(l.EOn, {
@@ -151,22 +151,22 @@ function S(e) {
                                   }),
                               })
                             : null,
-                        w
+                        D
                             ? (0, r.jsx)(u.Z, {
-                                  className: a()({ [E.textEmoji]: L }),
+                                  className: a()({ [E.textEmoji]: x }),
                                   src: g.src,
                                   emojiId: g.id,
                                   emojiName: g.name,
                                   animated: g.animated,
                               })
                             : null,
-                        L
+                        x
                             ? (0, r.jsx)("div", {
                                   className: E.label,
-                                  children: D,
+                                  children: w,
                               })
                             : null,
-                        x
+                        L
                             ? (0, r.jsx)(l.rgF, {
                                   size: "xs",
                                   color: "currentColor",
@@ -175,7 +175,7 @@ function S(e) {
                             : null,
                     ],
                 }),
-                M
+                j
                     ? (0, r.jsx)("div", {
                           className: E.loading,
                           children: (0, r.jsx)(l.bbz, {

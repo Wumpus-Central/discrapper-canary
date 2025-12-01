@@ -1,5 +1,5 @@
-_.d(e, { V: () => r });
-let a = ["fatal", "error", "warning", "log", "info", "debug"];
-function r(t) {
-    return "warn" === t ? "warning" : a.includes(t) ? t : "log";
+r.d(t, { V: () => a });
+let n = ["fatal", "error", "warning", "log", "info", "debug"];
+function a(e) {
+    return "warn" === e ? "warning" : n.includes(e) ? e : "log";
 }

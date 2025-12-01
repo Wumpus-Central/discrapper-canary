@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(725739),
     d = n(370774),
     f = n(334426),
-    p = n(982183),
-    h = n(388032),
+    h = n(982183),
+    p = n(388032),
     g = n(567843);
 function m(e) {
     let { className: t } = e,
@@ -19,17 +19,17 @@ function m(e) {
         { selectedFilter: m, setSelectedFilter: b } = (0, u.Z)(),
         _ = (0, f.d)((e) => e.setInboxReadState);
     if (!i) return null;
-    let y = m === p.V5.ALL ? h.intl.string(h.t["2pAkDA"]) : h.intl.string(h.t.HcoRu0);
+    let y = m === h.V5.ALL ? p.intl.string(p.t["2pAkDA"]) : p.intl.string(p.t.HcoRu0);
     return (0, r.jsx)(a.u, {
         position: "bottom",
         text: y,
         children: (0, r.jsx)(s.P3F, {
-            className: l()(t, g.headerButton, { [g.enabled]: m === p.V5.BOOKMARKS }),
+            className: l()(t, g.headerButton, { [g.enabled]: m === h.V5.BOOKMARKS }),
             "aria-label": y,
             onClick: () => {
-                let e = m === p.V5.ALL ? p.V5.BOOKMARKS : p.V5.ALL;
+                let e = m === h.V5.ALL ? h.V5.BOOKMARKS : h.V5.ALL;
                 b(e),
-                    e === p.V5.ALL && _(!1),
+                    e === h.V5.ALL && _(!1),
                     (0, c.RZ)({
                         section: e,
                         enabled: !0,
@@ -37,7 +37,7 @@ function m(e) {
                     });
             },
             children:
-                m === p.V5.BOOKMARKS
+                m === h.V5.BOOKMARKS
                     ? (0, r.jsx)(s.plf, {
                           size: "xs",
                           color: o.Z.colors.ICON_DEFAULT.css,

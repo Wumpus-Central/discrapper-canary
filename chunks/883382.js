@@ -9,40 +9,40 @@ var r = n(54381),
     u = n(838436),
     d = n(51331),
     f = n(922628),
-    _ = n(726985),
-    p = n(981631),
-    h = n(388032),
-    m = n(597754);
+    p = n(726985),
+    _ = n(981631),
+    m = n(388032),
+    h = n(744038);
 function g() {
-    let e = (0, a.cj)([l.Z], () => l.Z.hasConsented(p.pjP.PERSONALIZATION)),
+    let e = (0, a.cj)([l.Z], () => l.Z.hasConsented(_.pjP.PERSONALIZATION)),
         [t, n] = i.useState(e),
         g = (0, s.LN)(),
         E = (e) => {
             e
-                ? (0, o.g)([p.pjP.PERSONALIZATION], [])
+                ? (0, o.g)([_.pjP.PERSONALIZATION], [])
                       .catch(f.S)
                       .then(() => n(!0))
                 : (0, f.V)({
-                      header: h.intl.string(h.t["9SNpzv"]),
-                      confirmText: h.intl.string(h.t["9g5UGw"]),
-                      cancelText: h.intl.string(h.t["+ZLPw9"]),
+                      header: m.intl.string(m.t["9SNpzv"]),
+                      confirmText: m.intl.string(m.t["9g5UGw"]),
+                      cancelText: m.intl.string(m.t["+ZLPw9"]),
                       onConfirm: () => {
-                          (0, o.g)([], [p.pjP.PERSONALIZATION])
+                          (0, o.g)([], [_.pjP.PERSONALIZATION])
                               .catch(f.S)
                               .then(() => n(!1));
                       },
-                      body: h.intl.string(h.t.gJvDDh),
+                      body: m.intl.string(m.t.gJvDDh),
                   });
         };
     return (0, r.jsx)(u.U, {
-        setting: _.s6.PRIVACY_DATA_PERSONALIZE_V2,
+        setting: p.s6.PRIVACY_DATA_PERSONALIZE_V2,
         children: (0, r.jsx)(d.ZP, {
-            title: h.intl.string(h.t.MNKzyg),
-            note: h.intl.format(h.t["eQL/Mr"], { helpdeskArticle: c.Z.getArticleURL(p.BhN.DATA_USED_FOR_RECOMMENDED) }),
+            title: m.intl.string(m.t.MNKzyg),
+            note: m.intl.format(m.t["eQL/Mr"], { helpdeskArticle: c.Z.getArticleURL(_.BhN.DATA_USED_FOR_RECOMMENDED) }),
             value: t,
             onChange: E,
             disabled: g,
-            tooltipText: g ? h.intl.string(m.default["6Af/cw"]) : void 0,
+            tooltipText: g ? m.intl.string(h.default["6Af/cw"]) : void 0,
         }),
     });
 }

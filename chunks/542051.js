@@ -15,7 +15,7 @@ var r,
     u = n(579612),
     d = n(388032),
     f = n(575209);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,12 +39,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -56,12 +56,12 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -134,8 +134,8 @@ class y extends (r = a.PureComponent) {
             onSelectSearchEverywhere: o,
             onHighlightQuery: c,
             hideQuery: u,
-            searchFavorites: _,
-            showDMQueryText: h,
+            searchFavorites: p,
+            showDMQueryText: m,
         } = this.props;
         if (e || u) return null;
         let E = -1 === r;
@@ -143,14 +143,14 @@ class y extends (r = a.PureComponent) {
             children: [
                 (0, i.jsxs)(
                     l.P3F,
-                    m(p({ className: s()(f.queryContainer, { [f.focused]: E }) }, b(n, -1, E)), {
+                    h(_({ className: s()(f.queryContainer, { [f.focused]: E }) }, b(n, -1, E)), {
                         onMouseEnter: c,
                         onClick: a,
                         children: [
                             (0, i.jsx)(g, {
                                 query: t,
-                                searchFavorites: _,
-                                showDMQueryText: h,
+                                searchFavorites: p,
+                                showDMQueryText: m,
                             }),
                             (0, i.jsx)("div", {
                                 className: f.queryShortcut,
@@ -164,10 +164,10 @@ class y extends (r = a.PureComponent) {
                         ],
                     }),
                 ),
-                _ &&
+                p &&
                     (0, i.jsxs)(
                         l.P3F,
-                        m(p({ className: s()(f.queryContainer, { [f.focused]: E }) }, b(n, -1, E)), {
+                        h(_({ className: s()(f.queryContainer, { [f.focused]: E }) }, b(n, -1, E)), {
                             onMouseEnter: c,
                             onClick: o,
                             children: [
@@ -219,7 +219,7 @@ class y extends (r = a.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            _(this, "renderSearchInSelectedChannelAutocomplete", () => {
+            p(this, "renderSearchInSelectedChannelAutocomplete", () => {
                 let {
                     navId: e,
                     channel: t,
@@ -230,7 +230,7 @@ class y extends (r = a.PureComponent) {
                 if (!n || null == t) return null;
                 let o = -1 === r,
                     s = (0, c.X3)(t),
-                    _ = (0, i.jsx)(u.ZP, {
+                    p = (0, i.jsx)(u.ZP, {
                         channel: t,
                         text: d.intl.formatToPlainString(d.t.LDpotA, { guildName: s }),
                         channelContainerClassName: f.channelContainer,
@@ -238,21 +238,21 @@ class y extends (r = a.PureComponent) {
                     });
                 return (0, i.jsx)(
                     l.P3F,
-                    m(p({}, b(e, -1, o)), {
+                    h(_({}, b(e, -1, o)), {
                         className: f.inChannelOptionContainer,
                         onClick: a,
                         children: (0, i.jsx)(l.Text, {
                             variant: "text-md/normal",
                             color: "interactive-normal",
                             className: f.inChannelOption,
-                            children: d.intl.format(d.t.LDpotA, { guildName: _ }),
+                            children: d.intl.format(d.t.LDpotA, { guildName: p }),
                         }),
                     }),
                 );
             });
     }
 }
-_(y, "defaultProps", {
+p(y, "defaultProps", {
     renderInitialState: () => null,
     hideQuery: !1,
 });

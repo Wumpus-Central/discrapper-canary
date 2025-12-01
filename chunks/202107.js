@@ -57,46 +57,46 @@ function d(e, t) {
     );
 }
 let f = 10000,
-    _ = null,
-    p = () => {
+    p = null,
+    _ = () => {
         let e = a.ZP.getCommunicationDisabledUserMap();
         Object.keys(e).forEach((t) => {
             let n = t,
                 r = (0, a.O5)(n),
                 i = (0, a.V6)(n),
                 o = e[n];
-            (0, s.J)(o) || h(r, i);
+            (0, s.J)(o) || m(r, i);
         });
     },
-    h = (e, t) => {
-        var n, i, l, u, f, _;
-        let p = a.ZP.getMember(e, t),
-            h = o.default.getUser(t);
-        if (null == p || null == h || (0, s.b)(p)) return;
-        let m = d(c({}, p), {
+    m = (e, t) => {
+        var n, i, l, u, f, p;
+        let _ = a.ZP.getMember(e, t),
+            m = o.default.getUser(t);
+        if (null == _ || null == m || (0, s.b)(_)) return;
+        let h = d(c({}, _), {
             guildId: e,
-            nick: null != (n = p.nick) ? n : h.username,
-            avatar: null != (i = p.avatar) ? i : void 0,
-            avatarDecoration: null != p.avatarDecoration ? c({}, p.avatarDecoration) : void 0,
-            premiumSince: null != (l = p.premiumSince) ? l : void 0,
-            isPending: null != (u = p.isPending) && u,
-            user: d(c({}, h), {
-                email: null != (f = h.email) ? f : void 0,
-                phone: null != (_ = h.phone) ? _ : void 0,
+            nick: null != (n = _.nick) ? n : m.username,
+            avatar: null != (i = _.avatar) ? i : void 0,
+            avatarDecoration: null != _.avatarDecoration ? c({}, _.avatarDecoration) : void 0,
+            premiumSince: null != (l = _.premiumSince) ? l : void 0,
+            isPending: null != (u = _.isPending) && u,
+            user: d(c({}, m), {
+                email: null != (f = m.email) ? f : void 0,
+                phone: null != (p = m.phone) ? p : void 0,
             }),
             communicationDisabledUntil: null,
         });
-        r.Z.dispatch(c({ type: "GUILD_MEMBER_UPDATE" }, m));
+        r.Z.dispatch(c({ type: "GUILD_MEMBER_UPDATE" }, h));
     };
-class m extends i.Z {
+class h extends i.Z {
     _initialize() {
-        _ = setInterval(() => p(), f);
+        p = setInterval(() => _(), f);
     }
     _terminate() {
-        clearInterval(_);
+        clearInterval(p);
     }
     constructor(...e) {
-        super(...e), l(this, "clearGuildMemberTimeout", h);
+        super(...e), l(this, "clearGuildMemberTimeout", m);
     }
 }
-let g = new m();
+let g = new h();

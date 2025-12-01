@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(539854), n(388685);
+n.d(t, { Z: () => _ }), n(539854), n(388685);
 var r = n(147913),
     i = n(579806);
 n(987170);
@@ -44,7 +44,7 @@ function f() {
     for (let t of c) u(t.gpus) && (e = s({}, e, t.experiment.getCurrentConfig({ location: "updateFlags" })));
     a.ZP.setChromiumSwitches(e);
 }
-class _ extends r.Z {
+class p extends r.Z {
     constructor(...e) {
         super(...e),
             o(this, "actions", {
@@ -74,4 +74,4 @@ class _ extends r.Z {
             });
     }
 }
-let p = new _();
+let _ = new p();

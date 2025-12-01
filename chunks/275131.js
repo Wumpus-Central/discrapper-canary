@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(664751),
     i = n(975641),
     a = n(544891),
@@ -9,7 +9,7 @@ var r = n(664751),
     u = n(726115),
     d = n(128449),
     f = n(981631);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,19 +22,19 @@ function _(e, t, n) {
         e
     );
 }
-class p extends s.Z {
+class _ extends s.Z {
     constructor(...e) {
         super(...e),
-            _(this, "actions", { POST_CONNECTION_OPEN: () => this.handleConnectionOpen() }),
-            _(this, "queue", new Set()),
-            _(this, "isFetchEnabled", !1),
-            _(this, "handleConnectionOpen", () => {
+            p(this, "actions", { POST_CONNECTION_OPEN: () => this.handleConnectionOpen() }),
+            p(this, "queue", new Set()),
+            p(this, "isFetchEnabled", !1),
+            p(this, "handleConnectionOpen", () => {
                 (this.isFetchEnabled = !0),
                     this.queue.forEach((e) => {
                         e === d.Hk ? this.fetchFeaturedGuilds() : this.fetchCategoryFeaturedGuilds({ categoryId: e });
                     });
             }),
-            _(this, "fetchFeaturedGuilds", async (e) => {
+            p(this, "fetchFeaturedGuilds", async (e) => {
                 var t;
                 if (!this.isFetchEnabled) return void this.queue.add(d.Hk);
                 let n = null != (t = null == e ? void 0 : e.forceRefresh) && t,
@@ -73,7 +73,7 @@ class p extends s.Z {
                     }
                 }
             }),
-            _(this, "fetchCategoryFeaturedGuilds", async (e) => {
+            p(this, "fetchCategoryFeaturedGuilds", async (e) => {
                 let { categoryId: t, forceRefresh: n = !1 } = e;
                 if (!this.isFetchEnabled) return void this.queue.add(t);
                 let i = c.Z.getLastFetchTimestamp({ categoryId: t });
@@ -110,4 +110,4 @@ class p extends s.Z {
             });
     }
 }
-let h = new p();
+let m = new _();

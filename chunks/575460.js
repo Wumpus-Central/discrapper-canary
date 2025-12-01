@@ -13,7 +13,7 @@ function u(e) {
         f = () => {
             null == d || d.navigateToChannel(), u();
         },
-        _ = (0, r.jsx)(o.Z, {
+        p = (0, r.jsx)(o.Z, {
             guildId: n,
             emojiId: t.emoji_id,
             emojiName: t.emoji_name,
@@ -26,7 +26,7 @@ function u(e) {
         children: [
             (0, r.jsx)("div", {
                 className: c.emojiContainer,
-                children: _,
+                children: p,
             }),
             (0, r.jsxs)("div", {
                 className: c.infoContainer,

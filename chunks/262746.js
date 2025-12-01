@@ -10,27 +10,27 @@ var i = n(54381),
     d = n(496675),
     p = n(993706),
     h = n(796263),
-    f = n(797013),
+    f = n(342153),
     m = n(388032);
 function g(e) {
     let { channel: t, user: g, guild: b } = e,
         y = (0, l.e7)([p.Z], () => null != g && p.Z.isUserBanned(g.id)),
         C = null != g && null == y,
         [v, _] = r.useState(C),
-        x = (0, l.e7)([d.Z], () => null != g && null != b && (0, u.lD)(g, b, [d.Z]));
+        O = (0, l.e7)([d.Z], () => null != g && null != b && (0, u.lD)(g, b, [d.Z]));
     if (
         ((0, c.ZP)(() => {
             C && s.Z.searchGuildBans(t.guild_id, void 0, [null == g ? void 0 : g.id]).finally(() => _(!1));
         }),
-        !x)
+        !O)
     )
         return null;
-    let j = !0 === y ? m.intl.string(f.default.dpfwQ1) : m.intl.string(f.default.ASv23S),
-        O = "ban-user-".concat(null == g ? void 0 : g.id);
+    let x = !0 === y ? m.intl.string(f.default.dpfwQ1) : m.intl.string(f.default.ASv23S),
+        j = "ban-user-".concat(null == g ? void 0 : g.id);
     return (0, i.jsx)(
         h.Z,
         {
-            text: j,
+            text: x,
             icon: o.pgN,
             onClick: () => {
                 null != g &&
@@ -92,6 +92,6 @@ function g(e) {
             submitting: v,
             color: a.zx.Colors.RED,
         },
-        O,
+        j,
     );
 }

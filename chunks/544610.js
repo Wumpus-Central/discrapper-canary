@@ -18,16 +18,16 @@ var r,
     C = n(981631);
 let v = !1,
     _ = "",
-    x = 0,
-    j = [],
-    O = !1,
+    O = 0,
+    x = [],
+    j = !1,
     E = new Set(),
     S = null;
 function P() {
-    (_ = ""), (x = 0), (j = []), (E = new Set()), (v = !1), (S = null);
+    (_ = ""), (O = 0), (x = []), (E = new Set()), (v = !1), (S = null);
 }
 function I(e) {
-    (_ = e), (x = 0), Z();
+    (_ = e), (O = 0), Z();
 }
 function Z() {
     if (!v) return !1;
@@ -35,7 +35,7 @@ function Z() {
     if (0 === _.trim().length)
         return (
             null != i && i.clearQuery(),
-            (j = (function (e) {
+            (x = (function (e) {
                 let t = b.Z.getFriendIDs(),
                     n = y.default.getCurrentUser();
                 return (
@@ -104,8 +104,8 @@ function Z() {
 }
 function T() {
     if (!v) return !1;
-    let e = O;
-    return (O = b.Z.getFriendCount() > 0) !== e;
+    let e = j;
+    return (j = b.Z.getFriendCount() > 0) !== e;
 }
 function N(e, t) {
     if (m.Z.hasConsented(C.pjP.PERSONALIZATION)) {
@@ -136,7 +136,7 @@ function A(e) {
                 comparator: i,
             });
     }
-    (j = n), D.emitChange();
+    (x = n), k.emitChange();
 }
 function w() {
     return null != i && (i.destroy(), (i = null)), s.Z.getUserSearchContext(A, 1000);
@@ -152,17 +152,17 @@ function R(e) {
 function L() {
     null != i && (i.destroy(), (i = null)), P();
 }
-class k extends (r = a.ZP.Store) {
+class D extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(f.Z, m.Z, c.Z, g.Z, b.Z, u.Z, y.default),
             this.syncWith([y.default, f.Z], Z),
             this.syncWith([b.Z], T);
     }
     getResults() {
-        return j;
+        return x;
     }
     hasFriends() {
-        return O;
+        return j;
     }
     getSelectedUsers() {
         return E;
@@ -173,22 +173,22 @@ class k extends (r = a.ZP.Store) {
     getState() {
         return {
             query: _,
-            selectedRow: x,
+            selectedRow: O,
             selectedUsers: E,
-            results: j,
-            hasFriends: O,
+            results: x,
+            hasFriends: j,
         };
     }
 }
-(l = "displayName") in k
-    ? Object.defineProperty(k, l, {
+(l = "displayName") in D
+    ? Object.defineProperty(D, l, {
           value: "PrivateChannelRecipientsInviteStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (k[l] = "PrivateChannelRecipientsInviteStore");
-let D = new k(o.Z, {
+    : (D[l] = "PrivateChannelRecipientsInviteStore");
+let k = new D(o.Z, {
         CONNECTION_OPEN: function () {
             P();
         },
@@ -210,7 +210,7 @@ let D = new k(o.Z, {
             (S = e.channelId), I(e.query);
         },
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_SELECT: function (e) {
-            x = e.row;
+            O = e.row;
         },
         PRIVATE_CHANNEL_RECIPIENTS_ADD_USER: function (e) {
             let { userId: t } = e;
@@ -221,4 +221,4 @@ let D = new k(o.Z, {
             E.delete(t), (E = new Set(E));
         },
     }),
-    U = D;
+    U = k;

@@ -13,8 +13,8 @@ var l = n(481060),
     p = n(197344),
     h = n(226625),
     x = n(981631),
-    g = n(921944),
-    f = n(388032),
+    f = n(921944),
+    g = n(388032),
     b = n(972663);
 function v(e) {
     let { dismissibleContent: t } = e,
@@ -30,7 +30,7 @@ function v(e) {
                 section: x.oAB.NOTIFICATIONS,
                 analyticsLocations: v,
             }),
-                j(g.L.TAKE_ACTION);
+                j(f.L.TAKE_ACTION);
         };
     return n && !m
         ? (0, a.jsx)(o.ZP, {
@@ -57,12 +57,12 @@ function v(e) {
                                           variant: "heading-md/bold",
                                           color: void 0,
                                           className: b.specialText,
-                                          children: f.intl.string(f.t.zUhr3D),
+                                          children: g.intl.string(g.t.zUhr3D),
                                       }),
                                       (0, a.jsx)(l.Text, {
                                           variant: "text-xs/normal",
                                           color: "always-white",
-                                          children: f.intl.format(f.t.Xw2XUT, {
+                                          children: g.intl.format(g.t.Xw2XUT, {
                                               settingsHook: (e, t) =>
                                                   (0, a.jsx)(
                                                       l.P3F,
@@ -80,7 +80,7 @@ function v(e) {
                               }),
                               (0, a.jsx)(l.P3F, {
                                   className: b.closeClickable,
-                                  onClick: () => j(g.L.USER_DISMISS),
+                                  onClick: () => j(f.L.USER_DISMISS),
                                   children: (0, a.jsx)(l.Dio, {
                                       color: "currentColor",
                                       size: "xs",

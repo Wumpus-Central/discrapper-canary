@@ -1,4 +1,4 @@
-n.d(t, { l: () => p });
+n.d(t, { l: () => _ });
 var r = n(54381);
 n(473749);
 var i = n(396754),
@@ -77,7 +77,7 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let _ = {
+let p = {
     Artboard: {
         reducedMotion: "boolean",
         TextColor: "color",
@@ -85,7 +85,7 @@ let _ = {
         DisplayValue: "number",
     },
 };
-function p(e) {
+function _(e) {
     let { artboard: t = "Artboard" } = e,
         n = d(e, ["artboard"]),
         { status: s, buffer: c } = (0, o.VG)(i.Z),
@@ -98,10 +98,10 @@ function p(e) {
                   u(l({}, f ? { key: "override" } : {}), {
                       buffer: c,
                       artboard: t,
-                      artboardProperties: _,
+                      artboardProperties: p,
                   }),
                   n,
               ),
           );
 }
-p.riveSrc = i.Z;
+_.riveSrc = i.Z;

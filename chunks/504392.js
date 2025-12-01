@@ -13,8 +13,8 @@ n.d(t, { Z: () => L }),
     n(953529);
 var r = n(54381),
     i = n(473749),
-    l = n(120356),
-    o = n.n(l),
+    o = n(120356),
+    l = n.n(o),
     a = n(442837),
     s = n(704215),
     c = n(481060),
@@ -45,7 +45,7 @@ var r = n(54381),
     k = n(823441);
 let R = [N.Us.LEVEL, N.Us.PERK];
 function L(e) {
-    let { guildId: t, powerupListingId: l } = e,
+    let { guildId: t, powerupListingId: o } = e,
         L = (0, m.BU)(t, "GuildPowerupsOverview");
     i.useEffect(() => {
         L && (0, f.ce)(t);
@@ -57,10 +57,10 @@ function L(e) {
     let U = (0, a.e7)([x.Z], () => x.Z.getStateForGuild(t)),
         D = (0, _.Z)(t),
         M = i.useRef(!1),
-        { shouldShow: G, modalConfig: V } = (0, P.K)(t, "GuildPowerupsOverview"),
-        B = null == l && null != V,
+        { shouldShow: V, modalConfig: G } = (0, P.K)(t, "GuildPowerupsOverview"),
+        B = null == o && null != G,
         W = [];
-    G && B && W.push(s.z.VANITY_URL_POWERUP_ROLLBACK_MODAL);
+    V && B && W.push(s.z.VANITY_URL_POWERUP_ROLLBACK_MODAL);
     let [z, F] = (0, u.US)(W),
         K = i.useMemo(
             () =>
@@ -83,14 +83,14 @@ function L(e) {
             .map((e) => e.group),
         H = (0, y.f)(X, t);
     return (i.useEffect(() => {
-        if (null != l && !M.current)
+        if (null != o && !M.current)
             for (let e of K)
                 for (let n of e.listings) {
-                    if (("singleLevel" === n.type || "singlePerk" === n.type) && n.powerup.skuId === l) {
+                    if (("singleLevel" === n.type || "singlePerk" === n.type) && n.powerup.skuId === o) {
                         (0, Z.KE)(t, n.powerup), (M.current = !0);
                         return;
                     }
-                    if ("multiPerk" === n.type && (n.group === l || n.powerups.some((e) => e.skuId === l))) {
+                    if ("multiPerk" === n.type && (n.group === o || n.powerups.some((e) => e.skuId === o))) {
                         M.current = !0;
                         let e = H[n.group];
                         if (null == e) return;
@@ -105,10 +105,10 @@ function L(e) {
                         return;
                     }
                 }
-    }, [t, l, K, H]),
+    }, [t, o, K, H]),
     i.useEffect(() => {
         null != z &&
-            null != V &&
+            null != G &&
             (0, c.ZDy)(
                 async () => {
                     let { default: e } = await n.e("61879").then(n.bind(n, 802426));
@@ -141,7 +141,7 @@ function L(e) {
                                 return e;
                             })(
                                 {
-                                    modalConfig: V,
+                                    modalConfig: G,
                                     markAsDismissed: F,
                                 },
                                 t,
@@ -155,7 +155,7 @@ function L(e) {
                     modalKey: "dismissible_content_".concat(z),
                 },
             );
-    }, [t, z, F, V]),
+    }, [t, z, F, G]),
     (null == U ? void 0 : U.powerupCatalog) == null)
         ? null
         : (0, r.jsxs)("div", {
@@ -180,7 +180,7 @@ function L(e) {
                               className: k.powerupsContainer,
                               children: K.map((e) => {
                                   let { type: n, listings: i } = e,
-                                      { title: l, description: a } = (function (e) {
+                                      { title: o, description: a } = (function (e) {
                                           switch (e) {
                                               case N.Us.LEVEL:
                                                   return {
@@ -206,7 +206,7 @@ function L(e) {
                                                       (0, r.jsx)(c.Heading, {
                                                           color: "header-primary",
                                                           variant: "heading-lg/semibold",
-                                                          children: l,
+                                                          children: o,
                                                       }),
                                                       (0, r.jsx)(c.Text, {
                                                           color: "text-muted",
@@ -217,14 +217,14 @@ function L(e) {
                                               }),
                                               (0, r.jsx)(s, {
                                                   orientation: "horizontal",
-                                                  className: o()(k.powerupContainer, k.powerupHorizontalPadding, {
+                                                  className: l()(k.powerupContainer, k.powerupHorizontalPadding, {
                                                       [k.powerupsLevelContainer]: n === N.Us.LEVEL,
                                                   }),
                                                   fade: !0,
                                                   children: i.map((e, n) => {
                                                       switch (e.type) {
                                                           case "singleLevel":
-                                                              var l;
+                                                              var o;
                                                               return (0, r.jsx)(
                                                                   h.ZP,
                                                                   {
@@ -232,7 +232,7 @@ function L(e) {
                                                                       index: n,
                                                                       powerup: e.powerup,
                                                                       nextPowerup:
-                                                                          null == (l = i[n + 1]) ? void 0 : l.powerup,
+                                                                          null == (o = i[n + 1]) ? void 0 : o.powerup,
                                                                   },
                                                                   "powerup-".concat(e.powerup.skuId),
                                                               );

@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(681715),
     d = n(566620),
     f = n(499254),
-    _ = n(541099),
-    p = n(827498),
-    h = n(713913),
-    m = n(570220),
+    p = n(541099),
+    _ = n(827498),
+    m = n(713913),
+    h = n(570220),
     g = n(314734),
     E = n(388032),
     b = n(124886);
@@ -57,7 +57,7 @@ function v(e, t) {
     }
     return n;
 }
-function I(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -68,15 +68,15 @@ function I(e, t) {
         e
     );
 }
-let T = i.forwardRef(function (e, t) {
+let I = i.forwardRef(function (e, t) {
     let { type: n } = e,
-        { tooltipsWithKeybinds: a } = h.n.useConfig({ location: "ChannelAppLauncherButton" }),
-        y = (0, l.e7)([_.Z], () => _.Z.shouldShowPopup() && _.Z.activeViewType() === n),
-        { Component: v, events: T, play: S } = (0, c.w)(),
-        A = i.useContext(m.ZP);
+        { tooltipsWithKeybinds: a } = m.n.useConfig({ location: "ChannelAppLauncherButton" }),
+        y = (0, l.e7)([p.Z], () => p.Z.shouldShowPopup() && p.Z.activeViewType() === n),
+        { Component: v, events: I, play: T } = (0, c.w)(),
+        A = i.useContext(h.ZP);
     i.useEffect(() => {
         let e = () => {
-            T.onMouseEnter();
+            I.onMouseEnter();
         };
         return (
             A.on("command-sentinel-typed", e),
@@ -84,10 +84,10 @@ let T = i.forwardRef(function (e, t) {
                 A.off("command-sentinel-typed", e);
             }
         );
-    }, [A, T]);
+    }, [A, I]);
     let C = i.useCallback(() => {
-            y ? f.y(p.ti.DISMISSED) : (f._(p._b.TEXT, n), d.ux()), S();
-        }, [y, n, S]),
+            y ? f.y(_.ti.DISMISSED) : (f._(_._b.TEXT, n), d.ux()), T();
+        }, [y, n, T]),
         N = (0, r.jsx)(v, {
             size: "refresh_sm",
             color: "currentColor",
@@ -100,7 +100,7 @@ let T = i.forwardRef(function (e, t) {
             shouldShow: a,
             children: (0, r.jsx)(
                 s.P3F,
-                I(
+                S(
                     O(
                         {
                             tabIndex: 0,
@@ -118,7 +118,7 @@ let T = i.forwardRef(function (e, t) {
                                 },
                             },
                         },
-                        T,
+                        I,
                     ),
                     { children: N },
                 ),
@@ -126,8 +126,8 @@ let T = i.forwardRef(function (e, t) {
         }),
     });
 });
-function S(e) {
+function T(e) {
     let { type: t } = e;
-    return (0, r.jsx)(T, { type: t });
+    return (0, r.jsx)(I, { type: t });
 }
-let A = i.memo(S);
+let A = i.memo(T);

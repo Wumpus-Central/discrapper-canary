@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(525654),
     i = n.n(r),
     a = n(39612),
@@ -9,9 +9,9 @@ var r = n(525654),
     u = n(314897),
     d = n(896797),
     f = n(626135),
-    _ = n(954824),
-    p = n(981631);
-async function h(e) {
+    p = n(954824),
+    _ = n(981631);
+async function m(e) {
     var t, n;
     let r = null == (t = i().os) ? void 0 : t.family;
     if ("Android" === r || "iOS" === r) {
@@ -29,16 +29,16 @@ async function h(e) {
     }
     return "discord://";
 }
-async function m(e) {
-    let t = await h(e),
+async function h(e) {
+    let t = await m(e),
         n = (0, o.zS)(t);
     null != n &&
-        f.default.track(p.rMx.DEEP_LINK_CLICKED, {
+        f.default.track(_.rMx.DEEP_LINK_CLICKED, {
             fingerprint: (0, s.K)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource,
         }),
-        _.Z.launch(t, (e) => {
+        p.Z.launch(t, (e) => {
             e || (0, c.dL)(d.Z.fallbackRoute);
         });
 }

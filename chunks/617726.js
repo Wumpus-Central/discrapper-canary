@@ -1,121 +1,121 @@
-_.d(e, {
-    BO: () => i,
-    Cd: () => f,
-    HY: () => d,
-    Jd: () => E,
-    KQ: () => N,
-    R: () => s,
-    V$: () => I,
-    f4: () => R,
+r.d(t, {
+    BO: () => s,
+    Cd: () => N,
+    HY: () => A,
+    Jd: () => _,
+    KQ: () => I,
+    R: () => E,
+    V$: () => u,
+    f4: () => d,
     gv: () => c,
     mL: () => T,
-    zQ: () => A,
+    zQ: () => p,
 });
-var a = _(967752),
-    r = _(202811),
-    n = _(370336),
-    o = _(899517);
-function E(t, e = []) {
-    return [t, e];
+var n = r(967752),
+    a = r(202811),
+    i = r(370336),
+    o = r(899517);
+function _(e, t = []) {
+    return [e, t];
 }
-function i(t, e) {
-    let [_, a] = t;
-    return [_, [...a, e]];
+function s(e, t) {
+    let [r, n] = e;
+    return [r, [...n, t]];
 }
-function c(t, e) {
-    for (let _ of t[1]) {
-        let t = _[0].type;
-        if (e(_, t)) return !0;
+function c(e, t) {
+    for (let r of e[1]) {
+        let e = r[0].type;
+        if (t(r, e)) return !0;
     }
     return !1;
 }
-function s(t, e) {
-    return c(t, (t, _) => e.includes(_));
+function E(e, t) {
+    return c(e, (e, r) => t.includes(r));
 }
-function l(t) {
+function l(e) {
     return o.n.__SENTRY__ && o.n.__SENTRY__.encodePolyfill
-        ? o.n.__SENTRY__.encodePolyfill(t)
-        : new TextEncoder().encode(t);
+        ? o.n.__SENTRY__.encodePolyfill(e)
+        : new TextEncoder().encode(e);
 }
-function I(t) {
-    let [e, _] = t,
-        a = JSON.stringify(e);
-    function n(t) {
-        "string" == typeof a ? (a = "string" == typeof t ? a + t : [l(a), t]) : a.push("string" == typeof t ? l(t) : t);
+function u(e) {
+    let [t, r] = e,
+        n = JSON.stringify(t);
+    function i(e) {
+        "string" == typeof n ? (n = "string" == typeof e ? n + e : [l(n), e]) : n.push("string" == typeof e ? l(e) : e);
     }
-    for (let t of _) {
-        let [e, _] = t;
+    for (let e of r) {
+        let [t, r] = e;
         if (
-            (n(`
-${JSON.stringify(e)}
+            (i(`
+${JSON.stringify(t)}
 `),
-            "string" == typeof _ || _ instanceof Uint8Array)
+            "string" == typeof r || r instanceof Uint8Array)
         )
-            n(_);
+            i(r);
         else {
-            let t;
+            let e;
             try {
-                t = JSON.stringify(_);
-            } catch (e) {
-                t = JSON.stringify((0, r.Fv)(_));
+                e = JSON.stringify(r);
+            } catch (t) {
+                e = JSON.stringify((0, a.Fv)(r));
             }
-            n(t);
+            i(e);
         }
     }
-    return "string" == typeof a
-        ? a
-        : (function (t) {
-              let e = new Uint8Array(t.reduce((t, e) => t + e.length, 0)),
-                  _ = 0;
-              for (let a of t) e.set(a, _), (_ += a.length);
-              return e;
-          })(a);
+    return "string" == typeof n
+        ? n
+        : (function (e) {
+              let t = new Uint8Array(e.reduce((e, t) => e + t.length, 0)),
+                  r = 0;
+              for (let n of e) t.set(n, r), (r += n.length);
+              return t;
+          })(n);
 }
-function R(t) {
-    let e = "string" == typeof t ? l(t) : t;
-    function _(t) {
-        let _ = e.subarray(0, t);
-        return (e = e.subarray(t + 1)), _;
+function d(e) {
+    let t = "string" == typeof e ? l(e) : e;
+    function r(e) {
+        let r = t.subarray(0, e);
+        return (t = t.subarray(e + 1)), r;
     }
-    function a() {
-        var t;
-        let a = e.indexOf(10);
+    function n() {
+        var e;
+        let n = t.indexOf(10);
         return (
-            a < 0 && (a = e.length),
+            n < 0 && (n = t.length),
             JSON.parse(
-                ((t = _(a)),
+                ((e = r(n)),
                 o.n.__SENTRY__ && o.n.__SENTRY__.decodePolyfill
-                    ? o.n.__SENTRY__.decodePolyfill(t)
-                    : new TextDecoder().decode(t)),
+                    ? o.n.__SENTRY__.decodePolyfill(e)
+                    : new TextDecoder().decode(e)),
             )
         );
     }
-    let r = a(),
-        n = [];
-    for (; e.length; ) {
-        let t = a(),
-            e = "number" == typeof t.length ? t.length : void 0;
-        n.push([t, e ? _(e) : a()]);
+    let a = n(),
+        i = [];
+    for (; t.length; ) {
+        let e = n(),
+            t = "number" == typeof e.length ? e.length : void 0;
+        i.push([e, t ? r(t) : n()]);
     }
-    return [r, n];
+    return [a, i];
 }
-function N(t) {
-    return [{ type: "span" }, t];
+function I(e) {
+    return [{ type: "span" }, e];
 }
-function A(t) {
-    let e = "string" == typeof t.data ? l(t.data) : t.data;
+function p(e) {
+    let t = "string" == typeof e.data ? l(e.data) : e.data;
     return [
-        (0, n.Jr)({
+        (0, i.Jr)({
             type: "attachment",
-            length: e.length,
-            filename: t.filename,
-            content_type: t.contentType,
-            attachment_type: t.attachmentType,
+            length: t.length,
+            filename: e.filename,
+            content_type: e.contentType,
+            attachment_type: e.attachmentType,
         }),
-        e,
+        t,
     ];
 }
-let u = {
+let R = {
     session: "session",
     sessions: "session",
     attachment: "attachment",
@@ -132,24 +132,24 @@ let u = {
     span: "span",
     statsd: "metric_bucket",
 };
-function T(t) {
-    return u[t];
+function T(e) {
+    return R[e];
 }
-function d(t) {
-    if (!t || !t.sdk) return;
-    let { name: e, version: _ } = t.sdk;
+function A(e) {
+    if (!e || !e.sdk) return;
+    let { name: t, version: r } = e.sdk;
     return {
-        name: e,
-        version: _,
+        name: t,
+        version: r,
     };
 }
-function f(t, e, _, r) {
-    let o = t.sdkProcessingMetadata && t.sdkProcessingMetadata.dynamicSamplingContext;
+function N(e, t, r, a) {
+    let o = e.sdkProcessingMetadata && e.sdkProcessingMetadata.dynamicSamplingContext;
     return {
-        event_id: t.event_id,
+        event_id: e.event_id,
         sent_at: new Date().toISOString(),
-        ...(e && { sdk: e }),
-        ...(!!_ && r && { dsn: (0, a.RA)(r) }),
-        ...(o && { trace: (0, n.Jr)({ ...o }) }),
+        ...(t && { sdk: t }),
+        ...(!!r && a && { dsn: (0, n.RA)(a) }),
+        ...(o && { trace: (0, i.Jr)({ ...o }) }),
     };
 }

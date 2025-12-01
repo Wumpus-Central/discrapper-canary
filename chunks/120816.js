@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(539854), n(388685);
+n.d(t, { Z: () => g }), n(539854), n(388685);
 var a,
     l,
     i = n(772848),
@@ -12,7 +12,7 @@ let u = 0,
     p = 0,
     h = [],
     x = !1;
-class g extends (a = s.ZP.Store) {
+class f extends (a = s.ZP.Store) {
     initialize() {
         this.waitFor(c.default, d.Z);
     }
@@ -29,15 +29,15 @@ class g extends (a = s.ZP.Store) {
         return x;
     }
 }
-(l = "displayName") in g
-    ? Object.defineProperty(g, l, {
+(l = "displayName") in f
+    ? Object.defineProperty(f, l, {
           value: "AnalyticsLogStore",
           enumerable: !0,
           configurable: !0,
           writable: !0,
       })
-    : (g[l] = "AnalyticsLogStore");
-let f = new g(o.Z, {
+    : (f[l] = "AnalyticsLogStore");
+let g = new f(o.Z, {
     TRACK: function (e) {
         let { event: t, properties: n, fingerprint: a } = e;
         d.Z.isDeveloper &&

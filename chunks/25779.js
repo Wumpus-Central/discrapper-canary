@@ -1,47 +1,47 @@
-_.d(e, { j: () => I }), _(388685);
-var a = _(509068),
-    r = _(804410),
-    n = _(408720),
-    o = _(233517),
-    E = _(931327),
-    i = _(903772),
-    c = _(97145);
-let s = ["oppobrowser", "realmebrowser", "heytapbrowser"],
+r.d(t, { j: () => u }), r(388685);
+var n = r(509068),
+    a = r(804410),
+    i = r(408720),
+    o = r(233517),
+    _ = r(931327),
+    s = r(903772),
+    c = r(97145);
+let E = ["oppobrowser", "realmebrowser", "heytapbrowser"],
     l = (0, c.f)({
         maxBudgetMinute: 1,
         maxBudgetHour: 3,
     });
-function I() {
-    a.S1({
+function u() {
+    n.S1({
         tunnel: "/error-reporting-proxy/web",
         dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
         autoSessionTracking: !1,
         environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-        release: "discord_web-b9237c513b1b65a94f4a20064aadcc393225b7cc",
-        beforeSend: function (t, e) {
+        release: "discord_web-9d2c854e9b7fa7a2a3a3ffa3e833de461a587ee1",
+        beforeSend: function (e, t) {
             return !(
-                (null != t.exception &&
-                    null != t.exception.values &&
-                    t.exception.values.every(
-                        (t) =>
-                            null == t.stacktrace || (null != t.stacktrace.frames && 1 === t.stacktrace.frames.length),
+                (null != e.exception &&
+                    null != e.exception.values &&
+                    e.exception.values.every(
+                        (e) =>
+                            null == e.stacktrace || (null != e.stacktrace.frames && 1 === e.stacktrace.frames.length),
                     ) &&
                     "canary" !== window.GLOBAL_ENV.RELEASE_CHANNEL) ||
-                s.some((t) => window.navigator.appVersion.toLowerCase().indexOf(t) >= 0)
+                E.some((e) => window.navigator.appVersion.toLowerCase().indexOf(e) >= 0)
             ) &&
-                !(0, i.e)() &&
-                "Aborted" !== t.message &&
-                "cancel captcha" !== t.message &&
+                !(0, s.e)() &&
+                "Aborted" !== e.message &&
+                "cancel captcha" !== e.message &&
                 l()
-                ? t
+                ? e
                 : null;
         },
         integrations: [
-            r.k({
+            a.k({
                 onerror: !0,
                 onunhandledrejection: !0,
             }),
-            n.f({
+            i.f({
                 console: !0,
                 dom: !0,
                 fetch: !0,
@@ -81,9 +81,9 @@ function I() {
         ],
         denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
     }),
-        o.YA("buildNumber", "470193"),
-        o.YA("builtAt", String("1763574093635"));
-    let t = window.GLOBAL_ENV.SENTRY_TAGS;
-    if (null != t && "object" == typeof t) for (let e in t) o.YA(e, t[e]);
-    return E;
+        o.YA("buildNumber", "473983"),
+        o.YA("builtAt", String("1764630948400"));
+    let e = window.GLOBAL_ENV.SENTRY_TAGS;
+    if (null != e && "object" == typeof e) for (let t in e) o.YA(t, e[t]);
+    return _;
 }

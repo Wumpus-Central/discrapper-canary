@@ -1,4 +1,4 @@
-n.d(t, { H: () => _ });
+n.d(t, { H: () => p });
 var r = n(54381);
 n(473749);
 var i = n(692547),
@@ -77,26 +77,26 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let _ = (e) => {
+let p = (e) => {
     var t,
         n,
-        { size: s = "md", width: c, height: f, color: _ = i.Z.colors.INTERACTIVE_NORMAL, colorClass: p = "" } = e,
-        h = d(e, ["size", "width", "height", "color", "colorClass"]);
-    let m = (0, o.m)(s),
-        g = null != (t = null == m ? void 0 : m.width) ? t : c,
-        E = null != (n = null == m ? void 0 : m.height) ? n : f;
+        { size: s = "md", width: c, height: f, color: p = i.Z.colors.INTERACTIVE_NORMAL, colorClass: _ = "" } = e,
+        m = d(e, ["size", "width", "height", "color", "colorClass"]);
+    let h = (0, o.m)(s),
+        g = null != (t = null == h ? void 0 : h.width) ? t : c,
+        E = null != (n = null == h ? void 0 : h.height) ? n : f;
     return (0, r.jsx)(
         "svg",
-        u(l({}, (0, a.Z)(h)), {
+        u(l({}, (0, a.Z)(m)), {
             xmlns: "http://www.w3.org/2000/svg",
             width: g,
             height: E,
             fill: "none",
             viewBox: "0 0 24 24",
             children: (0, r.jsx)("path", {
-                fill: "string" == typeof _ ? _ : _.css,
+                fill: "string" == typeof p ? p : p.css,
                 d: "M10.93 15.17a5.95 5.95 0 0 1 5.92 3.4l.21.45a1.43 1.43 0 1 1-2.58 1.24l-.22-.45a3.07 3.07 0 0 0-2.39-1.8 3.4 3.4 0 0 0-.67 0 3.07 3.07 0 0 0-2.39 1.8l-.21.45a1.43 1.43 0 1 1-2.58-1.24l.21-.45a5.95 5.95 0 0 1 4.7-3.4ZM2.96 5.95c.36-.12.75-.1 1.1.06l.44.22a5.95 5.95 0 0 1 3.4 5.92 5.95 5.95 0 0 1-3.4 4.7l-.45.21c-.2.1-.4.14-.62.13a1.43 1.43 0 0 1-.62-2.72l.45-.21a3.07 3.07 0 0 0 1.8-2.4c.02-.22.02-.44 0-.66a3.07 3.07 0 0 0-1.8-2.4l-.45-.2a1.43 1.43 0 0 1 .15-2.65Zm16.6-.08a1.43 1.43 0 0 1 .7 2.72l-.45.21a3.07 3.07 0 0 0-1.8 2.4v.66a3.08 3.08 0 0 0 1.8 2.4l.45.2a1.43 1.43 0 0 1 .14 2.51 1.43 1.43 0 0 1-1.38.08l-.45-.21a5.94 5.94 0 0 1-3.4-5.92 5.95 5.95 0 0 1 3.4-4.7l.45-.21c.17-.08.35-.13.54-.14ZM15.3 2.08a1.43 1.43 0 0 1 1.77 1.97l-.22.45a5.95 5.95 0 0 1-5.91 3.4 5.95 5.95 0 0 1-4.7-3.4l-.21-.44A1.43 1.43 0 0 1 8.6 2.82l.21.44a3.07 3.07 0 0 0 2.4 1.8c.22.02.44.02.66 0a3.07 3.07 0 0 0 2.4-1.8l.2-.45c.17-.34.46-.6.82-.73Z",
-                className: p,
+                className: _,
             }),
         }),
     );

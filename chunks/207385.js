@@ -11,8 +11,8 @@ var i = n(120356),
     d = n(430864);
 function f(e) {
     var t;
-    let { question: n, questionId: i, responses: f, onResponseChange: _ } = e,
-        p = (() => {
+    let { question: n, questionId: i, responses: f, onResponseChange: p } = e,
+        _ = (() => {
             var e, t;
             switch (n.QuestionType) {
                 case c.S.TEXT_ENTRY:
@@ -20,14 +20,14 @@ function f(e) {
                         question: n,
                         questionId: i,
                         value: null != (e = f[i]) ? e : "",
-                        onValueChange: _,
+                        onValueChange: p,
                     });
                 case c.S.MULTIPLE_CHOICE:
                     return (0, r.jsx)(s.Z, {
                         question: n,
                         questionId: i,
                         value: null != (t = f[i]) ? t : "",
-                        onValueChange: _,
+                        onValueChange: p,
                     });
                 case c.S.DESCRIPTIVE_BLOCK:
                     return (0, r.jsx)("div", {});
@@ -35,7 +35,7 @@ function f(e) {
                     return null;
             }
         })();
-    return null == p
+    return null == _
         ? null
         : (0, r.jsxs)("div", {
               className: a()(d.markup, u.container),
@@ -47,7 +47,7 @@ function f(e) {
                           dangerouslySetInnerHTML: { __html: null != (t = n.QuestionText_Unsafe) ? t : "" },
                       }),
                   }),
-                  p,
+                  _,
               ],
           });
 }

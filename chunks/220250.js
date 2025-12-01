@@ -1,7 +1,7 @@
 n.d(t, {
-    TK: () => p,
-    dG: () => h,
-    nv: () => _,
+    TK: () => _,
+    dG: () => m,
+    nv: () => p,
     qw: () => g,
 }),
     n(35282);
@@ -15,13 +15,13 @@ var r = n(473749),
     u = n(921948),
     d = n(981631);
 let f = 512;
-function _() {
+function p() {
     let e = (0, s.ZP)(),
         t = (0, a.dQu)(a.TVs.colors.BACKGROUND_BASE_LOWEST),
         n = (0, a.dQu)(a.TVs.colors.BACKGROUND_ACCENT);
     return (0, a.wjy)(e) ? t : n;
 }
-function p(e) {
+function _(e) {
     var t;
     let n = e.customBanner;
     if (null != n && (null == (t = e.features) ? void 0 : t.includes(d.GuildFeatures.DISCOVERABLE))) {
@@ -35,11 +35,11 @@ function p(e) {
     }
     return null;
 }
-function h(e) {
+function m(e) {
     let t = (0, i.DT)(e, 1.75);
     return "radial-gradient(105.43% 127.05% at 50.1% 127.05%, ".concat(t, " 20.65%, ").concat(e, " 85.16%)");
 }
-function m(e) {
+function h(e) {
     return null == e.icon
         ? null
         : c.ff.test(e.icon)
@@ -52,7 +52,7 @@ function m(e) {
 }
 function g(e) {
     let { profile: t, defaultColor: n, forceDefaultColor: i } = e,
-        a = i ? null : m(t),
+        a = i ? null : h(t),
         s = r.useRef(n),
         c = (0, o.Z)(s),
         u = (0, l.ZP)(a, c);

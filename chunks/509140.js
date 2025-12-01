@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(415506);
+n.d(t, { Z: () => R }), n(415506);
 var r,
     i = n(442837),
     a = n(579092),
@@ -9,7 +9,7 @@ var r,
     u = n(932404),
     d = n(242297),
     f = n(987650);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,39 +22,39 @@ function _(e, t, n) {
         e
     );
 }
-let p = new a.Yd("OverlayV3NativeModuleStore"),
-    h = !1,
+let _ = new a.Yd("OverlayV3NativeModuleStore"),
     m = !1,
+    h = !1,
     g = null,
     E = !1,
     b = null,
     y = null,
     O = (() => {
         async function e() {
-            I(), (g = d._.getInstance());
+            S(), (g = d._.getInstance());
             try {
-                await g.initialize(), (h = !0);
+                await g.initialize(), (m = !0);
             } catch (e) {
                 (0, u.bs)(null, "module_initialization_failed", { error: e }),
-                    (h = !1),
+                    (m = !1),
                     (0, u.PV)(l.UNSET_PID, e, { crashType: "native" });
             } finally {
-                R.emitChange();
+                P.emitChange();
             }
         }
         return () => (null == y && (y = e()), y);
     })();
 function v(e) {
-    !__OVERLAY__ && f.iP && m !== e && ((m = e), e && (0, l.setOutOfProcessSupport)(!0));
+    !__OVERLAY__ && f.iP && h !== e && ((h = e), e && (0, l.setOutOfProcessSupport)(!0));
 }
-function I() {
-    !__OVERLAY__ && f.iP && ((b = null), (E = !1), p.verbose("Maybe Enable Overlay"), v(c.v.oopEnabled));
+function S() {
+    !__OVERLAY__ && f.iP && ((b = null), (E = !1), _.verbose("Maybe Enable Overlay"), v(c.v.oopEnabled));
 }
-function T(e) {
+function I(e) {
     let { oopEnabled: t } = e;
     (b = null), v(t);
 }
-function S() {
+function T() {
     return (b = null), O(), !1;
 }
 function A(e) {
@@ -72,13 +72,13 @@ class N extends (r = i.ZP.Store) {
         return null != y;
     }
     get isOverlayEnabled() {
-        return m;
+        return h;
     }
     get isSupported() {
         return f.iP;
     }
     get isModuleLoaded() {
-        return h;
+        return m;
     }
     get isCrashedDisabled() {
         return E;
@@ -90,17 +90,17 @@ class N extends (r = i.ZP.Store) {
         return g;
     }
 }
-_(N, "displayName", "Overlay-v3-Native-Module-Store");
-let R = new N(
+p(N, "displayName", "Overlay-v3-Native-Module-Store");
+let P = new N(
         o.Z,
         __OVERLAY__ || !f.iP
             ? {}
             : {
                   CONNECTION_OPEN: C,
-                  EXPERIMENT_OVERRIDE_BUCKET: I,
-                  OVERLAY_SET_ENABLED: T,
-                  OVERLAY_V3_LOAD_NATIVE_MODULE: S,
+                  EXPERIMENT_OVERRIDE_BUCKET: S,
+                  OVERLAY_SET_ENABLED: I,
+                  OVERLAY_V3_LOAD_NATIVE_MODULE: T,
                   OVERLAY_CRASHED: A,
               },
     ),
-    P = R;
+    R = P;

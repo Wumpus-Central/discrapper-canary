@@ -1,4 +1,4 @@
-n.d(t, { t: () => p });
+n.d(t, { t: () => _ });
 var r = n(54381);
 n(473749);
 var i = n(614405),
@@ -77,7 +77,7 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let _ = {
+let p = {
     "box-wumpus": {},
     "+++1_BOX_nested_comp_0": {},
     "+++1_BOX_nested_comp_4": {},
@@ -85,7 +85,7 @@ let _ = {
     "+++1_BOX_nested_comp_2": {},
     "+++1_BOX_nested_comp_3": {},
 };
-function p(e) {
+function _(e) {
     let { artboard: t = "box-wumpus" } = e,
         n = d(e, ["artboard"]),
         { status: s, buffer: c } = (0, o.VG)(i.Z),
@@ -98,10 +98,10 @@ function p(e) {
                   u(l({}, f ? { key: "override" } : {}), {
                       buffer: c,
                       artboard: t,
-                      artboardProperties: _,
+                      artboardProperties: p,
                   }),
                   n,
               ),
           );
 }
-p.riveSrc = i.Z;
+_.riveSrc = i.Z;

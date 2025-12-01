@@ -30,7 +30,7 @@ function u(e) {
             ),
                 (n.current = a.$x);
         }, []),
-        _ = i.useCallback(
+        p = i.useCallback(
             (e) => {
                 if (u) {
                     (0, s.Aj)({
@@ -45,16 +45,16 @@ function u(e) {
             },
             [u],
         ),
-        p = i.useMemo(
+        _ = i.useMemo(
             () => ({
-                navigateWithValidation: _,
+                navigateWithValidation: p,
                 showNotice: u,
                 handleStoreUpdate: f,
             }),
-            [_, u, f],
+            [p, u, f],
         );
     return (0, r.jsx)(c.Provider, {
-        value: p,
+        value: _,
         children: t,
     });
 }

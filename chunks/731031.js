@@ -1,4 +1,4 @@
-n.d(t, { E: () => m });
+n.d(t, { E: () => h });
 var r = n(358221),
     i = n(569545),
     a = n(199902),
@@ -9,7 +9,7 @@ var r = n(358221),
     u = n(442741),
     d = n(150457),
     f = n(981631);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,13 +33,13 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-let h = 20 * s.Z.Millis.SECOND,
-    m = {
+let m = 20 * s.Z.Millis.SECOND,
+    h = {
         getActiveErrors: () => {
             let e = a.Z.getCurrentUserActiveStream();
             if (null == e || e.state === f.jm8.PAUSED || 0 === a.Z.getViewerIds(e).length) return null;
@@ -48,17 +48,17 @@ let h = 20 * s.Z.Millis.SECOND,
             if (null == n) return null;
             let s = n.getMediaEngineConnectionId();
             if (null == s) return null;
-            let _ = o.Z.getLastNonZeroRemoteVideoSinkWantsTime(t);
-            if ((null != _ && performance.now() - _ < h) || !n.hasActiveRemoteWants()) return null;
-            let m = r.Z.getParticipant(e.channelId, (0, i.V9)(e));
-            if (null == m) return null;
+            let p = o.Z.getLastNonZeroRemoteVideoSinkWantsTime(t);
+            if ((null != p && performance.now() - p < m) || !n.hasActiveRemoteWants()) return null;
+            let h = r.Z.getParticipant(e.channelId, (0, i.V9)(e));
+            if (null == h) return null;
             let g = (0, d.hj)(s, e.ownerId);
             if (null == g) return null;
-            let E = (0, l.Wc)(m);
+            let E = (0, l.Wc)(h);
             return null == E
                 ? null
                 : g.short.frameRate < (0, d.dj)(E.maxFrameRate) || g.long.frameRate < (0, d.dj)(E.maxFrameRate)
-                  ? [p({ type: c.u.STREAM_SEND_LOW_FPS }, (0, u.rT)((0, i.V9)(e)))]
+                  ? [_({ type: c.u.STREAM_SEND_LOW_FPS }, (0, u.rT)((0, i.V9)(e)))]
                   : null;
         },
         makeErrorContextKey: (e) => "".concat(e.streamKey, ":").concat(e.mediaSessionId),

@@ -55,18 +55,18 @@ function f(e) {
             className: o,
             textColor: c = "text-default",
             textVariant: f = "text-sm/medium",
-            icon: _,
+            icon: p,
         } = e,
-        p = u(n, _),
-        h = d(n);
+        _ = u(n, p),
+        m = d(n);
     return (0, r.jsxs)("div", {
-        className: a()(l.container, h, o),
+        className: a()(l.container, m, o),
         children: [
             (0, r.jsx)("div", {
                 className: l.iconDiv,
                 children:
-                    null != p
-                        ? (0, r.jsx)(p, {
+                    null != _
+                        ? (0, r.jsx)(_, {
                               className: l.icon,
                               color: "currentColor",
                           })

@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var i,
     a = n(442837),
     o = n(570140),
@@ -38,7 +38,7 @@ class f extends (i = a.ZP.Store) {
     }
 }
 c(f, "displayName", "OverlayRunningGameStore");
-let _ = new f(o.Z, {
+let p = new f(o.Z, {
     OVERLAY_INITIALIZE: u,
     OVERLAY_SET_ASSOCIATED_GAME: d,
 });

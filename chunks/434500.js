@@ -4,8 +4,8 @@ var l = n(54381),
     r = n(442837),
     a = n(481060),
     o = n(475179),
-    u = n(872810),
-    s = n(788983),
+    s = n(872810),
+    u = n(788983),
     d = n(629049),
     c = n(358221),
     g = n(354459),
@@ -16,9 +16,9 @@ function b(e, t) {
         Z = (0, r.e7)([c.Z], () => c.Z.isParticipantPoppedOut(e, t)),
         p = i.useCallback(() => {
             null != b &&
-                ((0, g._5)(b) && (0, u.rn)(b.stream, { forceMultiple: !0 }),
+                ((0, g._5)(b) && (0, s.rn)(b.stream, { forceMultiple: !0 }),
                 o.Z.popoutParticipant(e, b.id),
-                s.openCallTilePopout(e, b.id));
+                u.openCallTilePopout(e, b.id));
         }, [b, e]);
     return Z || null == b || !n || b.type === g.fO.ACTIVITY
         ? null

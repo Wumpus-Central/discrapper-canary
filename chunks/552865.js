@@ -4,7 +4,7 @@ let i = { read: a };
 function a(e, t) {
     let n = o(e, t),
         r = f(e, t, n),
-        i = _(e, t, n),
+        i = p(e, t, n),
         a = {
             "JFIF Version": s(e, t, n),
             "Resolution Unit": l(e, t, n),
@@ -14,7 +14,7 @@ function a(e, t) {
             "JFIF Thumbnail Height": i,
         };
     if (void 0 !== r && void 0 !== i) {
-        let o = p(e, t, 3 * r.value * i.value, n);
+        let o = _(e, t, 3 * r.value * i.value, n);
         o && (a["JFIF Thumbnail"] = o);
     }
     for (let e in a) void 0 === a[e] && delete a[e];
@@ -72,7 +72,7 @@ function f(e, t, n) {
         description: `${a}px`,
     };
 }
-function _(e, t, n) {
+function p(e, t, n) {
     let i = 15;
     if (16 > n) return;
     let a = r.Z.getByteAt(e, t + i);
@@ -81,7 +81,7 @@ function _(e, t, n) {
         description: `${a}px`,
     };
 }
-function p(e, t, n, r) {
+function _(e, t, n, r) {
     let i = 16;
     if (0 !== n && !(i + n > r))
         return {

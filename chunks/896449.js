@@ -12,10 +12,10 @@ var r = n(54381),
     u = n(168524),
     d = n(37258),
     f = n(26033),
-    _ = n(178762),
-    p = n(388032),
-    h = n(709516);
-function m(e, t, n) {
+    p = n(178762),
+    _ = n(388032),
+    m = n(709516);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,7 +39,7 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
@@ -70,34 +70,34 @@ function b(e, t) {
 let y = "content-inventory-context";
 function O(e) {
     var t;
-    let { user: n, guildId: m, channel: E, entry: O, onSelect: v, disableGameProfileLinks: I } = e,
-        T = i.useRef(null),
-        S = i.useContext(_.Ir),
+    let { user: n, guildId: h, channel: E, entry: O, onSelect: v, disableGameProfileLinks: S } = e,
+        I = i.useRef(null),
+        T = i.useContext(p.Ir),
         A = (0, d.Z)({
             userId: n.id,
-            guildId: m,
+            guildId: h,
             channelId: null == E ? void 0 : E.id,
-            onAction: S,
+            onAction: T,
         }),
         C = (0, l.Z)({
             id: n.id,
-            label: p.intl.string(p.t["/AXYnE"]),
+            label: _.intl.string(_.t["/AXYnE"]),
         }),
         N = "application_id" in O.extra ? O.extra.application_id : null,
-        R = (0, l.Z)({
+        P = (0, l.Z)({
             id: N,
-            label: p.intl.string(p.t["FfCL+6"]),
+            label: _.intl.string(_.t["FfCL+6"]),
         }),
-        P = (0, f.dX)(O),
-        D = (0, u.Z)({
+        R = (0, f.dX)(O),
+        w = (0, u.Z)({
             location: "ContentPopoutContextMenu",
-            applicationId: P && !0 !== I ? (null == (t = O.extra) ? void 0 : t.application_id) : void 0,
+            applicationId: R && !0 !== S ? (null == (t = O.extra) ? void 0 : t.application_id) : void 0,
             source: c.m1.ActivityCardContextMenu,
             trackEntryPointImpression: !0,
             sourceUserId: O.author_id,
         });
     return (0, r.jsx)(o.yRy, {
-        targetElementRef: T,
+        targetElementRef: I,
         align: "top",
         position: "right",
         disablePointerEvents: !1,
@@ -108,25 +108,25 @@ function O(e) {
                 onClose: () => {
                     (0, s.Zy)(), t();
                 },
-                "aria-label": p.intl.string(p.t.liqwPJ),
+                "aria-label": _.intl.string(_.t.liqwPJ),
                 onSelect: v,
                 children: (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsxs)(o.kSQ, {
                             children: [
                                 A,
-                                null != D &&
+                                null != w &&
                                     (0, r.jsx)(o.sNh, {
                                         id: "game-profile",
-                                        label: p.intl.string(p.t.f7aVGn),
+                                        label: _.intl.string(_.t.f7aVGn),
                                         action: (e) => {
-                                            D(e), null == S || S();
+                                            w(e), null == T || T();
                                         },
                                     }),
                             ],
                         }),
                         (0, r.jsxs)(o.kSQ, {
-                            children: [C, R],
+                            children: [C, P],
                         }),
                     ],
                 }),
@@ -135,14 +135,14 @@ function O(e) {
         children: (e) =>
             (0, r.jsx)(a.u, {
                 asContainer: !0,
-                text: p.intl.string(p.t["UKOtz+"]),
+                text: _.intl.string(_.t["UKOtz+"]),
                 children: (0, r.jsx)(
                     o.P3F,
                     b(
                         g(
                             {
-                                innerRef: T,
-                                className: h.menuIcon,
+                                innerRef: I,
+                                className: m.menuIcon,
                             },
                             e,
                         ),

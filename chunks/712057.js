@@ -14,7 +14,7 @@ let l = "#ffffff",
             d = a.Z.parseString(u);
         if (null == d) return null;
         let f = (0, o.AZ)(d.red, d.blue, d.green),
-            _ =
+            p =
                 null !=
                 (t = (0, o.wh)({
                     foreground: i()((0, o.j)(d, 0.6, !0).toHexString()),
@@ -24,7 +24,7 @@ let l = "#ffffff",
                 }))
                     ? t
                     : d,
-            p =
+            _ =
                 null !=
                 (n = (0, o.wh)({
                     foreground: i()((0, o.j)(d, 0.6, !1).toHexString()),
@@ -34,13 +34,13 @@ let l = "#ffffff",
                 }))
                     ? n
                     : d,
-            h = (0, o.wh)({
+            m = (0, o.wh)({
                 foreground: i()(u),
                 background: i()(l),
                 ratio: 7,
                 saturationFactor: s,
             }),
-            m = (0, o.wh)({
+            h = (0, o.wh)({
                 foreground: i()(u),
                 background: i()(c),
                 ratio: 7,
@@ -48,18 +48,18 @@ let l = "#ffffff",
             });
         return {
             LIGHT: {
-                accentColor: null == h ? void 0 : h.hex(),
+                accentColor: null == m ? void 0 : m.hex(),
                 backgroundColor: (0, o.xj)({
-                    colorRGB: _,
+                    colorRGB: p,
                     saturationFactor: s,
                 }),
                 highlightColor: null == d ? void 0 : d.toHexString(),
                 opacity: (null == f ? void 0 : f.saturation) < 0.1 ? 0.35 : 0.1,
             },
             DARK: {
-                accentColor: null == m ? void 0 : m.hex(),
+                accentColor: null == h ? void 0 : h.hex(),
                 backgroundColor: (0, o.xj)({
-                    colorRGB: p,
+                    colorRGB: _,
                     saturationFactor: s,
                 }),
                 highlightColor: null == d ? void 0 : d.toHexString(),

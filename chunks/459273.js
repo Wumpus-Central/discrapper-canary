@@ -1,8 +1,8 @@
 n.d(t, {
     I3: () => f,
-    d9: () => p,
+    d9: () => _,
     oo: () => d,
-    yp: () => _,
+    yp: () => p,
 }),
     n(388685),
     n(415506);
@@ -59,7 +59,7 @@ let d = i.createContext(new u()),
             })
         );
     });
-function _(e) {
+function p(e) {
     let { event: t, handler: n } = e,
         r = i.useContext(d),
         a = i.useRef(n);
@@ -84,6 +84,6 @@ function _(e) {
         null
     );
 }
-function p(e) {
-    return _(e), null;
+function _(e) {
+    return p(e), null;
 }

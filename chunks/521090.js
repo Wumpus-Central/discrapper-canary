@@ -9,9 +9,9 @@ var r = n(106351),
     u = n(877565),
     d = n(590921),
     f = n(761652),
-    _ = n(176505),
-    p = n(388032);
-function h(e) {
+    p = n(176505),
+    _ = n(388032);
+function m(e) {
     switch (e.type) {
         case r.d.PUBLIC_THREAD:
         case r.d.PRIVATE_THREAD:
@@ -25,8 +25,8 @@ function h(e) {
             return "#".concat(null != t ? t.name : e.name);
     }
 }
-function m(e) {
-    return _.EC.has(e.id) ? "<id:".concat(e.id, ">") : "<#".concat(e.id, ">");
+function h(e) {
+    return p.EC.has(e.id) ? "<id:".concat(e.id, ">") : "<#".concat(e.id, ">");
 }
 let g = {
     sentinel: f.zy,
@@ -69,21 +69,21 @@ let g = {
                 query: l,
                 options: c,
                 onHover: d,
-                onClick: _,
+                onClick: p,
             } = e,
-            h = l.charAt(0) === i.xQ.VOICE_CHANNEL;
+            m = l.charAt(0) === i.xQ.VOICE_CHANNEL;
         return (
-            h
-                ? ((t = p.t["rMUL3+"]), (n = p.intl.string(p.t.CYnO4s)), (l = l.substring(1)))
+            m
+                ? ((t = _.t["rMUL3+"]), (n = _.intl.string(_.t.CYnO4s)), (l = l.substring(1)))
                 : c.forNonStringCommandOption
-                  ? ((t = p.t.upNFT5), (n = p.intl.string(p.t.OGiMXJ)))
-                  : ((t = p.t.UhnmJD), (n = p.intl.string(p.t.nIfr0Y))),
+                  ? ((t = _.t.upNFT5), (n = _.intl.string(_.t.OGiMXJ)))
+                  : ((t = _.t.UhnmJD), (n = _.intl.string(_.t.nIfr0Y))),
             (0, u.HI)({
                 query: l,
                 selectedIndex: o,
                 autocompletes: r,
                 onHover: d,
-                onClick: _,
+                onClick: p,
                 titleWithQuery: t,
                 titleWithoutQuery: n,
                 Component: a.ZP.Channel,
@@ -92,7 +92,7 @@ let g = {
                     key: e.id,
                     category: s.Z.getChannel(e.parent_id),
                 }),
-                getQuery: (e) => (h ? "".concat(f.zy).concat(i.xQ.VOICE_CHANNEL).concat(e) : "".concat(f.zy).concat(e)),
+                getQuery: (e) => (m ? "".concat(f.zy).concat(i.xQ.VOICE_CHANNEL).concat(e) : "".concat(f.zy).concat(e)),
                 key: "channels",
             })
         );
@@ -104,6 +104,6 @@ let g = {
                 options: r,
             } = e,
             i = t[n];
-        return r.insertText(h(i), m(i)), { type: d.z2.CHANNEL };
+        return r.insertText(m(i), h(i)), { type: d.z2.CHANNEL };
     },
 };

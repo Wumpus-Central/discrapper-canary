@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(539854);
+n.d(t, { Z: () => I }), n(539854);
 var r = n(54381),
     i = n(473749),
     a = n(442837),
@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(785717),
     d = n(369566),
     f = n(29899),
-    _ = n(278857),
-    p = n(151545),
-    h = n(769140),
-    m = n(864141),
+    p = n(278857),
+    _ = n(151545),
+    m = n(769140),
+    h = n(864141),
     g = n(228168),
     E = n(231338),
     b = n(388032);
@@ -57,7 +57,7 @@ function v(e, t) {
     }
     return n;
 }
-function I(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -68,50 +68,50 @@ function I(e, t) {
         e
     );
 }
-function T(e) {
-    let { user: t, currentUser: n, guildId: y, onOpenUserProfileModal: v, onClose: T } = e,
-        { analyticsLocations: S } = (0, s.ZP)(),
+function I(e) {
+    let { user: t, currentUser: n, guildId: y, onOpenUserProfileModal: v, onClose: I } = e,
+        { analyticsLocations: T } = (0, s.ZP)(),
         { trackUserProfileAction: A } = (0, u.KZ)(),
         { live: C, stream: N } = (0, d.Z)(t.id),
-        { voiceChannel: R, voiceActivity: P } = (0, f.Z)({
+        { voiceChannel: P, voiceActivity: R } = (0, f.Z)({
             userId: t.id,
             guildId: y,
         }),
-        D = t.id === n.id,
-        w = (0, a.e7)([c.Z, l.Z], () => {
-            let e = D ? c.Z.getStatus() : l.Z.getStatus(t.id, y);
+        w = t.id === n.id,
+        D = (0, a.e7)([c.Z, l.Z], () => {
+            let e = w ? c.Z.getStatus() : l.Z.getStatus(t.id, y);
             return e === E.Sk.OFFLINE || e === E.Sk.INVISIBLE;
         }),
-        { voiceActivityStatusEnabled: L } = (0, o.U)({ location: "UserProfileStackedActivity" }),
-        x = L && null == N && null == P && null != R,
-        M = i.useCallback(
+        { voiceActivityStatusEnabled: x } = (0, o.U)({ location: "UserProfileStackedActivity" }),
+        L = x && null == N && null == R && null != P,
+        j = i.useCallback(
             (e) => {
                 let i = [],
-                    a = I(O({}, e), {
+                    a = S(O({}, e), {
                         user: t,
                         currentUser: n,
-                        onClose: T,
+                        onClose: I,
                     });
                 return (
-                    null != N && i.push((0, r.jsx)(h.Z, O({ stream: N }, a), "stream")),
+                    null != N && i.push((0, r.jsx)(m.Z, O({ stream: N }, a), "stream")),
                     C.forEach((e, t) => {
-                        i.push((0, r.jsx)(p.Z, O({ activity: e }, a), "live-".concat(t)));
+                        i.push((0, r.jsx)(_.Z, O({ activity: e }, a), "live-".concat(t)));
                     }),
-                    x && i.push((0, r.jsx)(m.Z, O({ voiceChannel: R }, a), "voice")),
+                    L && i.push((0, r.jsx)(h.Z, O({ voiceChannel: P }, a), "voice")),
                     i
                 );
             },
-            [n, x, C, T, N, t, R],
+            [n, L, C, I, N, t, P],
         );
-    return w
+    return D
         ? null
-        : (0, r.jsx)(_.Z, {
-              renderCards: M,
+        : (0, r.jsx)(p.Z, {
+              renderCards: j,
               heading: b.intl.string(b.t.J6STd9),
               onExpand: () => {
                   A({
                       action: "PRESS_SHOW_MORE_ACTIVITY",
-                      analyticsLocations: S,
+                      analyticsLocations: T,
                   }),
                       null == v || v({ section: g.oh.ACTIVITY });
               },

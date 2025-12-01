@@ -138,13 +138,13 @@ let p = i.memo(function (e) {
         k = i.useCallback(() => {
             (v.current = null), y(null);
         }, [y]),
-        M = i.useCallback(
+        U = i.useCallback(
             (e) => {
                 k(), (b.current = e);
             },
             [k],
         ),
-        U = i.useCallback((e, t, n) => {
+        M = i.useCallback((e, t, n) => {
             if (b.current)
                 return void A({
                     x: 0,
@@ -189,7 +189,7 @@ let p = i.memo(function (e) {
                             x: e.clientX,
                             y: e.clientY,
                         };
-                    if ((U(r, i, Math.max(t, n)), b.current)) {
+                    if ((M(r, i, Math.max(t, n)), b.current)) {
                         null != O && k();
                         return;
                     }
@@ -202,7 +202,7 @@ let p = i.memo(function (e) {
                     }
                     k();
                 }, 16),
-            [O, U, k, w, x, n, t],
+            [O, M, k, w, x, n, t],
         ),
         V = i.useCallback(
             (e) => {
@@ -303,8 +303,8 @@ let p = i.memo(function (e) {
                                 N &&
                                     (0, l.jsx)("circle", {
                                         className: c.chatWheelDeadZone,
-                                        onMouseEnter: () => M(!0),
-                                        onMouseLeave: () => M(!1),
+                                        onMouseEnter: () => U(!0),
+                                        onMouseLeave: () => U(!1),
                                         cx: 144,
                                         cy: 144,
                                         r: 28.8,
@@ -321,8 +321,8 @@ let p = i.memo(function (e) {
                         N &&
                             (0, l.jsx)("circle", {
                                 className: c.chatWheelDeadZone,
-                                onMouseEnter: () => M(!0),
-                                onMouseLeave: () => M(!1),
+                                onMouseEnter: () => U(!0),
+                                onMouseLeave: () => U(!1),
                                 cx: 144,
                                 cy: 144,
                                 r: 28.8,

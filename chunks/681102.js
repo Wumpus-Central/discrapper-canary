@@ -9,14 +9,14 @@ var r = n(54381),
     u = n(686546),
     d = n(810568),
     f = n(168524),
-    _ = n(214288),
-    p = n(638912);
-let h = 10,
-    m = 2;
+    p = n(214288),
+    _ = n(638912);
+let m = 10,
+    h = 2;
 function g(e) {
     let { game: t, activityLevel: n, hideTooltip: i } = e,
         a = t.getIconURL(24),
-        o = (0, _.B)(),
+        o = (0, p.B)(),
         g = (0, f.Z)({
             location: "GuildProfile",
             source: d.m1.GuildProfile,
@@ -37,25 +37,25 @@ function g(e) {
             "aria-label": t.name,
             shouldShow: E,
             children: (0, r.jsxs)("div", {
-                className: p.gameIcon,
+                className: _.gameIcon,
                 children: [
                     (0, r.jsx)("img", {
-                        className: p.gameIconImage,
+                        className: _.gameIconImage,
                         src: a,
                         alt: t.name,
                     }),
                     b &&
                         (0, r.jsx)(u.ZP, {
                             mask: u.QS.GAMEPLAY_HIGH_ACTIVITY_ICON,
-                            width: h + 2 * m,
-                            height: h + 2 * m,
-                            className: p.gameActivityLevel,
+                            width: m + 2 * h,
+                            height: m + 2 * h,
+                            className: _.gameActivityLevel,
                             children: (0, r.jsx)("div", {
-                                className: p.gameActivityLevelInner,
+                                className: _.gameActivityLevelInner,
                                 children: (0, r.jsx)(c.YqE, {
                                     color: c.TVs.unsafe_rawColors.ORANGE_330.css,
-                                    width: h,
-                                    height: h,
+                                    width: m,
+                                    height: m,
                                     size: "custom",
                                 }),
                             }),
@@ -66,7 +66,7 @@ function g(e) {
     return o
         ? (0, r.jsx)(c.P3F, {
               onClick: g,
-              className: p.gameIconWrapper,
+              className: _.gameIconWrapper,
               children: O,
           })
         : O;
@@ -74,12 +74,12 @@ function g(e) {
 function E(e) {
     let { games: t, activity: n } = e;
     return (0, r.jsx)("div", {
-        className: p.extraGamesContainer,
+        className: _.extraGamesContainer,
         children: t.map((e) =>
             (0, r.jsxs)(
                 "div",
                 {
-                    className: p.extraGameRow,
+                    className: _.extraGameRow,
                     children: [
                         (0, r.jsx)(g, {
                             game: e,
@@ -100,7 +100,7 @@ function E(e) {
 function b(e) {
     let { game: t, activityLevel: n } = e;
     return (0, r.jsxs)("div", {
-        className: p.favoriteGameContainer,
+        className: _.favoriteGameContainer,
         children: [
             (0, r.jsx)(g, {
                 game: t,
@@ -135,16 +135,16 @@ function y(e) {
                     activity: s,
                 }),
                 children: (0, r.jsxs)("div", {
-                    className: o()(p.gameIcon, p.extraGameItem),
+                    className: o()(_.gameIcon, _.extraGameItem),
                     children: [
                         (0, r.jsx)("img", {
-                            className: o()(p.gameIconImage, p.extraGameIconImage),
+                            className: o()(_.gameIconImage, _.extraGameIconImage),
                             src: e,
                             alt: n.name,
                         }),
-                        (0, r.jsx)("div", { className: p.extraGameOverlay }),
+                        (0, r.jsx)("div", { className: _.extraGameOverlay }),
                         (0, r.jsx)("div", {
-                            className: p.extraGameText,
+                            className: _.extraGameText,
                             children: (0, r.jsx)(c.Text, {
                                 variant: "text-xs/normal",
                                 color: "always-white",
@@ -159,14 +159,14 @@ function y(e) {
         ? null
         : 1 === t.length
           ? (0, r.jsx)("div", {
-                className: p.container,
+                className: _.container,
                 children: (0, r.jsx)(b, {
                     game: t[0],
                     activityLevel: s[t[0].id],
                 }),
             })
           : (0, r.jsxs)("div", {
-                className: p.container,
+                className: _.container,
                 children: [
                     t.map((e) =>
                         (0, r.jsx)(

@@ -12,7 +12,7 @@ function s(e, t = 100, n = Infinity) {
 }
 function l(e, t = 3, n = 102400) {
     let r = s(e, t);
-    return _(r) > n ? l(e, t - 1, n) : r;
+    return p(r) > n ? l(e, t - 1, n) : r;
 }
 function c(e, t, n = Infinity, r = Infinity, o = (0, i.i)()) {
     let [s, l] = o;
@@ -24,25 +24,25 @@ function c(e, t, n = Infinity, r = Infinity, o = (0, i.i)()) {
         "number" == typeof t.__sentry_override_normalization_depth__ ? t.__sentry_override_normalization_depth__ : n;
     if (0 === f) return d.replace("object ", "");
     if (s(t)) return "[Circular ~]";
-    let _ = t;
-    if (_ && "function" == typeof _.toJSON)
+    let p = t;
+    if (p && "function" == typeof p.toJSON)
         try {
-            let e = _.toJSON();
+            let e = p.toJSON();
             return c("", e, f - 1, r, o);
         } catch (e) {}
-    let p = Array.isArray(t) ? [] : {},
-        h = 0,
-        m = (0, a.Sh)(t);
-    for (let e in m) {
-        if (!Object.prototype.hasOwnProperty.call(m, e)) continue;
-        if (h >= r) {
-            p[e] = "[MaxProperties ~]";
+    let _ = Array.isArray(t) ? [] : {},
+        m = 0,
+        h = (0, a.Sh)(t);
+    for (let e in h) {
+        if (!Object.prototype.hasOwnProperty.call(h, e)) continue;
+        if (m >= r) {
+            _[e] = "[MaxProperties ~]";
             break;
         }
-        let t = m[e];
-        (p[e] = c(e, t, f - 1, r, o)), h++;
+        let t = h[e];
+        (_[e] = c(e, t, f - 1, r, o)), m++;
     }
-    return l(t), p;
+    return l(t), _;
 }
 function u(e, t) {
     try {
@@ -71,6 +71,6 @@ function d(e) {
 function f(e) {
     return ~-encodeURI(e).split(/%..|./).length;
 }
-function _(e) {
+function p(e) {
     return f(JSON.stringify(e));
 }

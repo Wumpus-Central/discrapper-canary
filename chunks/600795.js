@@ -1,6 +1,6 @@
 n.d(t, {
     Tm: () => d,
-    ZP: () => p,
+    ZP: () => _,
 }),
     n(415506),
     n(388685);
@@ -54,18 +54,18 @@ function f(e) {
         y: n,
     };
 }
-class _ {
+class p {
     setup() {
         var e;
-        if (_.isSetUp) throw Error("Cannot have two Keyboard backends at the same time.");
-        (_.isSetUp = !0),
+        if (p.isSetUp) throw Error("Cannot have two Keyboard backends at the same time.");
+        (p.isSetUp = !0),
             (this._handlingFirstEvent = !0),
             null == (e = this.context.window) ||
                 e.addEventListener("keydown", this.handleGlobalKeyDown, { capture: !0 });
     }
     teardown() {
         var e;
-        (_.isSetUp = !1),
+        (p.isSetUp = !1),
             null == (e = this.context.window) ||
                 e.removeEventListener("keydown", this.handleGlobalKeyDown, { capture: !0 }),
             this.endDrag();
@@ -174,5 +174,5 @@ class _ {
             (this._announcer = new r.Z(null == n ? void 0 : n.announcer));
     }
 }
-o(_, "isSetUp", void 0);
-let p = (e, t, n) => new _(e, t, n);
+o(p, "isSetUp", void 0);
+let _ = (e, t, n) => new p(e, t, n);

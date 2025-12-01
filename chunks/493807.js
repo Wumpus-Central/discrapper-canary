@@ -8,7 +8,7 @@ var r = n(198392),
     u = n(131513),
     d = n(262279),
     f = n(467159);
-function _(e, t) {
+function p(e, t) {
     var n = null,
         r = null,
         i = s(e.currentTarget);
@@ -23,7 +23,7 @@ function _(e, t) {
     var l = f(o(n));
     return c(t, l, r, l, r);
 }
-function p(e) {
+function _(e) {
     e._internalDrag = !1;
     var t = e.editorContainer;
     if (t) {
@@ -35,35 +35,35 @@ function p(e) {
         t.dispatchEvent(n);
     }
 }
-function h(e, t) {
+function m(e, t) {
     var n = i.moveText(e.getCurrentContent(), e.getSelection(), t);
     return a.push(e, n, "insert-fragment");
 }
-function m(e, t, n) {
+function h(e, t, n) {
     var r = i.insertText(e.getCurrentContent(), t, n, e.getCurrentInlineStyle());
     return a.push(e, r, "insert-fragment");
 }
 e.exports = {
     onDragEnd: function (e) {
-        e.exitCurrentMode(), p(e);
+        e.exitCurrentMode(), _(e);
     },
     onDrop: function (e, t) {
         var n = new r(t.nativeEvent.dataTransfer),
             i = e._latestEditorState,
-            a = _(t.nativeEvent, i);
+            a = p(t.nativeEvent, i);
         if ((t.preventDefault(), (e._dragCount = 0), e.exitCurrentMode(), null != a)) {
             var o = n.getFiles();
             if (o.length > 0) {
                 if (e.props.handleDroppedFiles && d(e.props.handleDroppedFiles(a, o))) return;
                 l(o, function (t) {
-                    t && e.update(m(i, a, t));
+                    t && e.update(h(i, a, t));
                 });
                 return;
             }
             var s = e._internalDrag ? "internal" : "external";
             (e.props.handleDrop && d(e.props.handleDrop(a, n, s))) ||
-                (e._internalDrag ? e.update(h(i, a)) : e.update(m(i, a, n.getText()))),
-                p(e);
+                (e._internalDrag ? e.update(m(i, a)) : e.update(h(i, a, n.getText()))),
+                _(e);
         }
     },
 };

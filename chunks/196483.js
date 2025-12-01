@@ -12,7 +12,7 @@ function o(e, t) {
         insertText: d,
         onChange: f,
     } = e;
-    function _(n) {
+    function p(n) {
         let i = r.T.currentEntry(e);
         if ((null != i && (i.mergeable = !1), n >= e.history.stack.length)) return;
         e.history.index = n;
@@ -30,28 +30,28 @@ function o(e, t) {
             let { history: t } = e;
             0 === t.stack.length && ((t.stack = [c(e)]), (t.index = 0)),
                 null != e.selection && (r.T.currentEntry(e).selection = e.selection),
-                (h = null),
+                (m = null),
                 f();
         }),
         (e.undo = () => {
-            e.history.index > 0 && _(e.history.index - 1);
+            e.history.index > 0 && p(e.history.index - 1);
         }),
         (e.redo = () => {
-            e.history.index < e.history.stack.length - 1 && _(e.history.index + 1);
+            e.history.index < e.history.stack.length - 1 && p(e.history.index + 1);
         });
-    let p = null,
-        h = null,
-        m = null;
+    let _ = null,
+        m = null,
+        h = null;
     return (
         (e.apply = (t) => {
             let { history: a } = e;
             n(t);
             let o = i.bN.richValue(e);
-            o !== m &&
+            o !== h &&
                 (0 === a.stack.length && ((a.stack = [c(e)]), (a.index = 0)),
-                r.T.isSaving(e) && (s(e, t, p), (p = t)),
-                (h = t),
-                (m = o));
+                r.T.isSaving(e) && (s(e, t, _), (_ = t)),
+                (m = t),
+                (h = o));
         }),
         (e.deleteBackward = (t) => {
             r.T.withSingleEntry(e, () => a(t));
@@ -63,14 +63,14 @@ function o(e, t) {
             r.T.withSingleEntry(e, () => l(t));
         }),
         (e.insertText = (t) => {
-            1 === t.length && (null == h ? void 0 : h.type) === "remove_text"
+            1 === t.length && (null == m ? void 0 : m.type) === "remove_text"
                 ? r.T.withMergedEntry(e, () => d(t))
                 : null != e.selection && i.M8.isExpanded(e.selection)
                   ? r.T.withSingleEntry(e, () => d(t))
                   : d(t);
         }),
         (e.insertData = (t) => {
-            (null == h ? void 0 : h.type) === "remove_text"
+            (null == m ? void 0 : m.type) === "remove_text"
                 ? r.T.withMergedEntry(e, () => u(t))
                 : r.T.withSingleEntry(e, () => u(t));
         }),

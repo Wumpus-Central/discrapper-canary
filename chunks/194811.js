@@ -10,7 +10,7 @@ var i = n(120356),
     u = n(704543);
 function d(e) {
     let { text: t, textId: n, tags: i, platformIcon: d, contextMenu: f } = e,
-        { themeType: _ } = (0, l.z)();
+        { themeType: p } = (0, l.z)();
     return (null == t || "" === t) && null == f
         ? null
         : null == t || "" === t
@@ -23,7 +23,7 @@ function d(e) {
                 children: [
                     (0, r.jsxs)(s.Text, {
                         className: u.headerText,
-                        variant: _ === c.l.SIDEBAR ? "text-xs/semibold" : "text-xs/medium",
+                        variant: p === c.l.SIDEBAR ? "text-xs/semibold" : "text-xs/medium",
                         color: "header-primary",
                         id: n,
                         children: [

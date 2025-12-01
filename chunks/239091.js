@@ -1,6 +1,6 @@
 n.d(t, {
     Zy: () => d,
-    jW: () => _,
+    jW: () => p,
     vq: () => f,
 }),
     n(457542);
@@ -57,27 +57,27 @@ function d(e) {
 function f(e, t, n, r) {
     var l, d, f;
     if ((e.stopPropagation(), null != e.currentTarget.contains && !e.currentTarget.contains(e.target))) return;
-    let _ = 0,
-        p = 0;
-    if (("pageX" in e && ((_ = e.pageX), (p = e.pageY)), 0 === _ && 0 === p)) {
+    let p = 0,
+        _ = 0;
+    if (("pageX" in e && ((p = e.pageX), (_ = e.pageY)), 0 === p && 0 === _)) {
         let t = null == (l = e.target) ? void 0 : l.getBoundingClientRect(),
             { left: n = 0, top: r = 0, width: i = 0, height: a = 0 } = null != t ? t : {};
-        (_ = n + i / 2), (p = r + a / 2);
+        (p = n + i / 2), (_ = r + a / 2);
     }
-    let h = {
+    let m = {
         render: t,
         renderLazy: r,
         target: null != (d = e.target) ? d : e.currentTarget,
-        rect: new DOMRect(_, p, 0, 0),
+        rect: new DOMRect(p, _, 0, 0),
         config: c({ context: __OVERLAY__ ? s.IlC.OVERLAY : null != (f = (0, i.GB)()) ? f : s.IlC.APP }, n),
     };
     if ((null == n ? void 0 : n.enableSpellCheck) && (0, a.isDesktop)()) {
         let e = () => {
-                t(), u(h);
+                t(), u(m);
             },
             t = (0, o.RD)(e);
-    } else e.preventDefault(), u(h);
+    } else e.preventDefault(), u(m);
 }
-function _(e, t, n) {
+function p(e, t, n) {
     f(e, void 0, n, t);
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -47,25 +47,25 @@ function f(e, t) {
                   };
     t(r), (u = new Map(u)).set(e, r);
 }
-function _(e) {
+function p(e) {
     let { code: t } = e;
     (u = new Map(u)).set(t, {
         code: t,
         state: s.Rj.RESOLVING,
     });
 }
-function p(e) {
-    h(e.guildTemplate);
+function _(e) {
+    m(e.guildTemplate);
 }
-function h(e) {
+function m(e) {
     return f(e.code, (t) => {
         let n = (0, o.Z)(e);
         for (let e in n) t[e] = n[e];
     });
 }
-function m(e) {
+function h(e) {
     let { guildTemplates: t } = e;
-    t.forEach((e) => h(e));
+    t.forEach((e) => m(e));
 }
 function g(e) {
     return f(e.code, (e) => {
@@ -94,7 +94,7 @@ function O(e) {
 function v(e) {
     d = null;
 }
-class I extends (r = i.ZP.Store) {
+class S extends (r = i.ZP.Store) {
     getGuildTemplate(e) {
         if (null != e) return u.get(e);
     }
@@ -111,13 +111,13 @@ class I extends (r = i.ZP.Store) {
         return d;
     }
 }
-l(I, "displayName", "GuildTemplateStore");
-let T = new I(a.Z, {
-    GUILD_TEMPLATE_RESOLVE: _,
-    GUILD_TEMPLATE_CREATE_SUCCESS: p,
-    GUILD_TEMPLATE_SYNC_SUCCESS: p,
-    GUILD_TEMPLATE_RESOLVE_SUCCESS: p,
-    GUILD_TEMPLATE_LOAD_FOR_GUILD_SUCCESS: m,
+l(S, "displayName", "GuildTemplateStore");
+let I = new S(a.Z, {
+    GUILD_TEMPLATE_RESOLVE: p,
+    GUILD_TEMPLATE_CREATE_SUCCESS: _,
+    GUILD_TEMPLATE_SYNC_SUCCESS: _,
+    GUILD_TEMPLATE_RESOLVE_SUCCESS: _,
+    GUILD_TEMPLATE_LOAD_FOR_GUILD_SUCCESS: h,
     GUILD_TEMPLATE_RESOLVE_FAILURE: g,
     GUILD_TEMPLATE_DELETE_SUCCESS: g,
     GUILD_TEMPLATE_ACCEPT: E,

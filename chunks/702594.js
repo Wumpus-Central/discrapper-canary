@@ -1,10 +1,10 @@
 n.d(t, {
-    Hl: () => h,
+    Hl: () => m,
     gj: () => y,
 }),
     n(388685);
 var r = n(473749),
-    i = n(561448),
+    i = n(637286),
     a = n(409813),
     o = n(231338);
 let s = [a.h8.PAYMENT_TYPE],
@@ -13,19 +13,19 @@ let s = [a.h8.PAYMENT_TYPE],
     u = [a.h8.PAYMENT_TYPE, a.h8.VENMO_INFORMATION, a.h8.ADDRESS],
     d = [a.h8.PAYMENT_TYPE, a.h8.CASH_APP_INFORMATION, a.h8.ADDRESS],
     f = [a.h8.PAYMENT_TYPE, a.h8.PRZELEWY24_INFORMATION, a.h8.ADDRESS],
-    _ = [a.h8.PAYMENT_TYPE, a.h8.EPS_INFORMATION, a.h8.ADDRESS],
-    p = [a.h8.PAYMENT_TYPE, a.h8.IDEAL_INFORMATION, a.h8.ADDRESS],
-    h = [a.h8.PAYMENT_TYPE, a.h8.ADDRESS],
-    m = {
+    p = [a.h8.PAYMENT_TYPE, a.h8.EPS_INFORMATION, a.h8.ADDRESS],
+    _ = [a.h8.PAYMENT_TYPE, a.h8.IDEAL_INFORMATION, a.h8.ADDRESS],
+    m = [a.h8.PAYMENT_TYPE, a.h8.ADDRESS],
+    h = {
         SHARED_ADD_PAYMENT_STEPS: s,
         SHARED_CREDIT_CARD_STEPS: l,
         SHARED_PAYPAL_STEPS: c,
         SHARED_VENMO_STEPS: u,
         SHARED_PRZELEWY24_STEPS: f,
-        SHARED_EPS_STEPS: _,
-        SHARED_IDEAL_STEPS: p,
+        SHARED_EPS_STEPS: p,
+        SHARED_IDEAL_STEPS: _,
         SHARED_CASH_APP_STEPS: d,
-        SHARED_TYPE_AND_ADDRESS_STEPS: h,
+        SHARED_TYPE_AND_ADDRESS_STEPS: m,
     },
     g = {
         SHARED_ADD_PAYMENT_STEPS: [a.h8.PAYMENT_ELEMENT],
@@ -44,14 +44,14 @@ let s = [a.h8.PAYMENT_TYPE],
         return e.map((e) => {
             let { sharedStepsKey: t, methodType: a } = e;
             return {
-                steps: [...n, ...(i && E(a) ? g[t] : m[t]), ...r],
+                steps: [...n, ...(i && E(a) ? g[t] : h[t]), ...r],
                 methodType: a,
             };
         });
     },
     y = (e) => {
         let { prependSteps: t, appendSteps: n, paymentElementsEnabled: i } = e,
-            [a, s, l, c, u, d, f, _, p, h] = (0, r.useMemo)(
+            [a, s, l, c, u, d, f, p, _, m] = (0, r.useMemo)(
                 () =>
                     b(
                         [
@@ -101,16 +101,16 @@ let s = [a.h8.PAYMENT_TYPE],
                     ),
                 [t, n, i],
             ),
-            m = (0, r.useMemo)(
+            h = (0, r.useMemo)(
                 () => ({
                     [o.He.CARD]: c,
                     [o.He.PAYPAL]: u,
                     [o.He.PAYMENT_REQUEST]: s,
                     [o.He.VENMO]: f,
-                    [o.He.CASH_APP]: h,
+                    [o.He.CASH_APP]: m,
                     [o.He.IDEAL]: d,
-                    [o.He.PRZELEWY24]: _,
-                    [o.He.EPS]: p,
+                    [o.He.PRZELEWY24]: p,
+                    [o.He.EPS]: _,
                     [o.He.GOPAY_WALLET]: a,
                     [o.He.KAKAOPAY]: a,
                     [o.He.GCASH]: a,
@@ -118,7 +118,7 @@ let s = [a.h8.PAYMENT_TYPE],
                     [o.He.GRABPAY_MY]: a,
                     [o.He.MOMO_WALLET]: a,
                 }),
-                [a, c, u, f, s, d, h, _, p],
+                [a, c, u, f, s, d, m, p, _],
             );
         return {
             DEFAULT_PAYMENT_ELEMENT_STEPS: a,
@@ -128,9 +128,9 @@ let s = [a.h8.PAYMENT_TYPE],
             PAYMENT_REQUEST_STEPS: s,
             VENMO_STEPS: f,
             ADD_PAYMENT_STEPS: l,
-            PRZELEWY24_STEPS: _,
-            EPS_STEPS: p,
-            CASH_APP_STEPS: h,
-            PAYMENT_ELEMENT_STEPS_BY_PAYMENT_SOURCE_MAP: m,
+            PRZELEWY24_STEPS: p,
+            EPS_STEPS: _,
+            CASH_APP_STEPS: m,
+            PAYMENT_ELEMENT_STEPS_BY_PAYMENT_SOURCE_MAP: h,
         };
     };

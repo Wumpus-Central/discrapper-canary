@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(258971),
     d = n(603592),
     f = n(49898),
-    p = n(128449),
-    h = n(324805),
+    h = n(128449),
+    p = n(324805),
     g = n(388032);
 let m = i.forwardRef(function (e, t) {
     let { selected: n, onClick: m, questId: b, className: _ } = e,
@@ -21,14 +21,14 @@ let m = i.forwardRef(function (e, t) {
                 case f.GlobalDiscoveryTab.QUESTS:
                     return (0, c.transitionToGlobalDiscovery)({
                         tab: f.GlobalDiscoveryTab.QUESTS,
-                        location: h.dr.DISCOVERY_COMPASS,
+                        location: p.dr.DISCOVERY_COMPASS,
                         questContent: l.j.DISCOVERY_COMPASS,
                         questId: b,
                     });
                 case f.GlobalDiscoveryTab.SERVERS:
                     return (0, c.transitionToGlobalDiscovery)({
                         tab: f.GlobalDiscoveryTab.SERVERS,
-                        entrypoint: p.Qq.GUILDS_BAR,
+                        entrypoint: h.Qq.GUILDS_BAR,
                     });
                 case f.GlobalDiscoveryTab.APPS:
                     return (0, c.transitionToGlobalDiscovery)({

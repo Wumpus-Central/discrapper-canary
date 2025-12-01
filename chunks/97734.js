@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(35282), n(388685), n(413496), n(433524);
+n.d(t, { Z: () => p }), n(35282), n(388685), n(413496), n(433524);
 var r = n(159635),
     i = n.n(r),
     a = n(339085),
@@ -57,7 +57,7 @@ function f(e, t) {
         e
     );
 }
-let _ = {
+let p = {
     s: {
         requiredFirstCharacters: ["~"],
         match: i().inlineRegex(/^~~([\s\S]+?)~~(?!_)/),

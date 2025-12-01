@@ -9,8 +9,8 @@ var i = n(149765),
     c = n(990199);
 let u = 5;
 function d(e) {
-    let { error: t, selectedGuildId: n, onGuildChange: d, guilds: f, disabled: _ = !1 } = e,
-        p = f
+    let { error: t, selectedGuildId: n, onGuildChange: d, guilds: f, disabled: p = !1 } = e,
+        _ = f
             .filter((e) => i.e$(e.permissions, s.Plq.MANAGE_GUILD))
             .map((e) => ({
                 value: e.id,
@@ -35,9 +35,9 @@ function d(e) {
                 wrapperClassName: c.select,
                 maxVisibleItems: u,
                 placeholder: l.intl.string(l.t.oM4E1A),
-                options: p,
+                options: _,
                 onChange: d,
-                isDisabled: _,
+                isDisabled: p,
                 value: n,
             }),
             (0, r.jsx)(a.x, {

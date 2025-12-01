@@ -174,12 +174,12 @@ e.exports = function (e) {
             end: /``/,
         },
         f = /\B('|\^)/,
-        _ = {
+        p = {
             scope: "symbol",
             variants: [{ match: i(f, /``.*?``/) }, { match: i(f, e.UNDERSCORE_IDENT_RE) }],
             relevance: 0,
         },
-        p = function ({ includeEqual: e }) {
+        _ = function ({ includeEqual: e }) {
             let n,
                 a = i("[", ...Array.from((n = e ? "!%&*+-/<=>@^|~?" : "!%&*+-/<>@^|~?")).map(t), "]"),
                 s = o(a, /\./),
@@ -191,8 +191,8 @@ e.exports = function (e) {
                 relevance: 0,
             };
         },
-        h = p({ includeEqual: !0 }),
-        m = p({ includeEqual: !1 }),
+        m = _({ includeEqual: !0 }),
+        h = _({ includeEqual: !1 }),
         g = function (t, n) {
             return {
                 begin: i(t, r(i(/\s*/, o(/\w/, /'/, /\^/, /#/, /``/, /\(/, /{\|/)))),
@@ -200,7 +200,7 @@ e.exports = function (e) {
                 end: r(o(/\n/, /=/)),
                 relevance: 0,
                 keywords: e.inherit(l, { type: s }),
-                contains: [c, _, e.inherit(d, { scope: null }), m],
+                contains: [c, p, e.inherit(d, { scope: null }), h],
             };
         },
         E = g(/:/, "operator"),
@@ -216,7 +216,7 @@ e.exports = function (e) {
             contains: [
                 c,
                 e.inherit(d, { scope: null }),
-                _,
+                p,
                 {
                     scope: "operator",
                     match: /<|>/,
@@ -233,16 +233,16 @@ e.exports = function (e) {
             beginScope: { 2: "meta" },
             end: r(/\s|$/),
         },
-        I = {
+        S = {
             variants: [e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE],
         },
-        T = {
+        I = {
             scope: "string",
             begin: /"/,
             end: /"/,
             contains: [e.BACKSLASH_ESCAPE],
         },
-        S = {
+        T = {
             scope: "string",
             begin: /@"/,
             end: /"/,
@@ -266,25 +266,25 @@ e.exports = function (e) {
             end: /"/,
             contains: [{ match: /\{\{/ }, { match: /\}\}/ }, e.BACKSLASH_ESCAPE, C],
         },
-        R = {
+        P = {
             scope: "string",
             begin: /(\$@|@\$)"/,
             end: /"/,
             contains: [{ match: /\{\{/ }, { match: /\}\}/ }, { match: /""/ }, e.BACKSLASH_ESCAPE, C],
         },
-        P = {
+        R = {
             scope: "string",
             begin: /\$"""/,
             end: /"""/,
             contains: [{ match: /\{\{/ }, { match: /\}\}/ }, C],
             relevance: 2,
         },
-        D = {
+        w = {
             scope: "string",
             match: i(/'/, o(/[^\\']/, /\\(?:.|\d{3}|x[a-fA-F\d]{2}|u[a-fA-F\d]{4}|U[a-fA-F\d]{8})/), /'/),
         };
     return (
-        (C.contains = [R, N, S, T, D, n, c, d, E, O, v, I, _, h]),
+        (C.contains = [P, N, T, I, w, n, c, d, E, O, v, S, p, m]),
         {
             name: "F#",
             aliases: ["fs", "f#"],
@@ -294,7 +294,7 @@ e.exports = function (e) {
             contains: [
                 n,
                 {
-                    variants: [P, R, N, A, S, T, D],
+                    variants: [R, P, N, A, T, I, w],
                 },
                 c,
                 d,
@@ -304,15 +304,15 @@ e.exports = function (e) {
                     begin: /\[</,
                     end: />\]/,
                     relevance: 2,
-                    contains: [d, A, S, T, D, I],
+                    contains: [d, A, T, I, w, S],
                 },
                 b,
                 E,
                 O,
                 v,
-                I,
-                _,
-                h,
+                S,
+                p,
+                m,
             ],
         }
     );

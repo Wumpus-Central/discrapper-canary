@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(388685), n(539854);
+n.d(t, { Z: () => x }), n(388685), n(539854);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,18 +9,18 @@ var r = n(54381),
     u = n(570140),
     d = n(166459),
     f = n(911969),
-    _ = n(607070),
-    p = n(209613),
-    h = n(998698),
-    m = n(117530),
+    p = n(607070),
+    _ = n(209613),
+    m = n(998698),
+    h = n(117530),
     g = n(459273),
     E = n(859235),
     b = n(444282),
     y = n(898463),
     O = n(981631),
     v = n(83120),
-    I = n(154257);
-function T(e, t, n) {
+    S = n(154257);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function T(e, t, n) {
         e
     );
 }
-function S(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function S(e) {
                 }),
             )),
             r.forEach(function (t) {
-                T(e, t, n[t]);
+                I(e, t, n[t]);
             });
     }
     return e;
@@ -76,7 +76,7 @@ function N(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = R(e, t);
+        i = P(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -84,7 +84,7 @@ function N(e, t) {
     }
     return i;
 }
-function R(e, t) {
+function P(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -93,48 +93,48 @@ function R(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let P = [];
-function D(e) {
-    let { channelId: t, type: n, ignoreFile: a, smallAttachments: T = !1 } = e,
-        A = (0, c.e7)([_.Z], () => _.Z.keyboardModeEnabled),
-        R = (0, p.Z)("attachments", l.hy.HORIZONTAL),
-        D = (0, c.e7)([m.Z], () => m.Z.getUploads(t, n.drafts.type)),
+let R = [];
+function w(e) {
+    let { channelId: t, type: n, ignoreFile: a, smallAttachments: I = !1 } = e,
+        A = (0, c.e7)([p.Z], () => p.Z.keyboardModeEnabled),
+        P = (0, _.Z)("attachments", l.hy.HORIZONTAL),
+        w = (0, c.e7)([h.Z], () => h.Z.getUploads(t, n.drafts.type)),
         {
-            isApplicationCommand: w,
-            commandOptions: L,
-            commandOptionStates: x,
-        } = (0, c.cj)([h.Z], () => {
-            let e = h.Z.getActiveCommand(t);
+            isApplicationCommand: D,
+            commandOptions: x,
+            commandOptionStates: L,
+        } = (0, c.cj)([m.Z], () => {
+            let e = m.Z.getActiveCommand(t);
             if (null == e)
                 return {
                     isApplicationCommand: !1,
-                    commandOptions: P,
+                    commandOptions: R,
                     commandOptionStates: null,
                 };
-            let n = h.Z.getOptionStates(t);
+            let n = m.Z.getOptionStates(t);
             return {
                 isApplicationCommand: !0,
                 commandOptions: e.options,
                 commandOptionStates: n,
             };
         }),
-        M = i.useMemo(() => {
+        j = i.useMemo(() => {
             var e;
             return null !=
                 (e =
-                    null == L
+                    null == x
                         ? void 0
-                        : L.filter((e) => {
+                        : x.filter((e) => {
                               var t;
                               return (
                                   e.type === f.jw.ATTACHMENT &&
-                                  (null == x || null == (t = x[e.name]) ? void 0 : t.hasValue)
+                                  (null == L || null == (t = L[e.name]) ? void 0 : t.hasValue)
                               );
                           }))
                 ? e
                 : [];
-        }, [L, x]),
-        [k, j] = i.useState([]);
+        }, [x, L]),
+        [M, k] = i.useState([]);
     i.useEffect(() => {
         let e = () => {
             d.Z.clearAll(t, n.drafts.type);
@@ -145,23 +145,23 @@ function D(e) {
         );
     }, [t, n]);
     let U = i.useCallback(() => {
-        R.focusFirstVisibleItem();
-    }, [R]);
+        P.focusFirstVisibleItem();
+    }, [P]);
     (0, g.yp)({
         event: O.CkL.FOCUS_ATTACHMENT_AREA,
         handler: U,
     });
     let G = {
-            isApplicationCommand: w,
-            previousUploadOptions: k,
-            uploadOptions: M,
+            isApplicationCommand: D,
+            previousUploadOptions: M,
+            uploadOptions: j,
         },
-        B = i.useRef(G);
+        Z = i.useRef(G);
     i.useEffect(() => {
-        B.current = G;
+        Z.current = G;
     }),
         i.useEffect(() => {
-            let { isApplicationCommand: e, previousUploadOptions: r, uploadOptions: i } = B.current;
+            let { isApplicationCommand: e, previousUploadOptions: r, uploadOptions: i } = Z.current;
             if (e) {
                 let e = [];
                 r.forEach((t) => {
@@ -170,24 +170,24 @@ function D(e) {
                     e.forEach((e) => {
                         d.Z.remove(t, e.name, n.drafts.type);
                     }),
-                    j(i);
+                    k(i);
             }
-        }, [t, M.length, n]);
-    let Z = D.filter((e) => e.filename !== a);
-    return (!w && 0 === Z.length) || (w && 0 === M.length)
+        }, [t, j.length, n]);
+    let B = w.filter((e) => e.filename !== a);
+    return (!D && 0 === B.length) || (D && 0 === j.length)
         ? null
         : (0, r.jsx)(s.bG, {
-              navigator: R,
+              navigator: P,
               children: (0, r.jsx)(s.SJ, {
                   children: (e) => {
                       var { ref: i } = e,
                           a = N(e, ["ref"]);
                       return (0, r.jsx)(
                           "ul",
-                          C(S({ ref: i }, a), {
-                              className: o()(v.channelAttachmentArea, I.scrollbarGhost),
-                              children: w
-                                  ? M.map((e) =>
+                          C(T({ ref: i }, a), {
+                              className: o()(v.channelAttachmentArea, S.scrollbarGhost),
+                              children: D
+                                  ? j.map((e) =>
                                         (0, r.jsx)(
                                             b.Z,
                                             {
@@ -198,7 +198,7 @@ function D(e) {
                                             e.name,
                                         ),
                                     )
-                                  : Z.map((e) =>
+                                  : B.map((e) =>
                                         (0, r.jsx)(
                                             y.Z,
                                             {
@@ -207,7 +207,7 @@ function D(e) {
                                                 upload: e,
                                                 keyboardModeEnabled: A,
                                                 clip: e.clip,
-                                                size: T ? E.q.SMALL : E.q.MEDIUM,
+                                                size: I ? E.q.SMALL : E.q.MEDIUM,
                                             },
                                             e.id,
                                         ),
@@ -218,10 +218,10 @@ function D(e) {
               }),
           });
 }
-function w(e) {
+function D(e) {
     let { channelId: t, type: n, canAttachFiles: i, ignoreFile: a, smallAttachments: o = !1 } = e;
     return i
-        ? (0, r.jsx)(D, {
+        ? (0, r.jsx)(w, {
               channelId: t,
               type: n,
               ignoreFile: a,
@@ -229,4 +229,4 @@ function w(e) {
           })
         : null;
 }
-let L = i.memo(w);
+let x = i.memo(D);

@@ -12,9 +12,9 @@ var i = n(120356),
     c = n(973772),
     u = n(880419),
     d = n(827397),
-    p = n(279604),
+    f = n(279604),
     h = n(535396),
-    f = n(130231),
+    p = n(130231),
     g = n(388032),
     m = n(292609);
 function b() {
@@ -56,14 +56,14 @@ function _(e) {
 function y(e) {
     let { className: t, guildId: n, powerup: i, onClick: a } = e,
         s = (0, d.Z)(n, i),
-        { onShowMore: c } = (0, p.ZP)(n, i),
+        { onShowMore: c } = (0, f.ZP)(n, i),
         u = h.uc.has(i.skuId);
     return (0, r.jsx)("div", {
         className: l()(m.primaryButton, t),
         children: (0, r.jsx)(o.zxk, {
             variant: "primary",
             fullWidth: !0,
-            text: u ? g.intl.string(f.default.g5Ds69) : g.intl.string(g.t["0Q61kF"]),
+            text: u ? g.intl.string(p.default.g5Ds69) : g.intl.string(g.t["0Q61kF"]),
             onClick: (e) => {
                 null == a || a(e), u ? null == s || s(e) : null == c || c();
             },
@@ -72,7 +72,7 @@ function y(e) {
 }
 function O(e) {
     let { className: t, guildId: n, powerup: i } = e,
-        { onShowMore: a } = (0, p.ZP)(n, i);
+        { onShowMore: a } = (0, f.ZP)(n, i);
     return (0, r.jsx)("div", {
         className: l()(m.container, t),
         children: (0, r.jsx)("div", {
@@ -90,18 +90,18 @@ function v(e) {
     let { className: t, guildId: n, powerup: i, onError: o } = e,
         s = (0, c.ZP)(n, i).type !== h.A3.INACTIVE,
         d = (0, a.Z)(n, i, "GuildPowerupCardFooterAdmin"),
-        p = s || !d,
-        f = !s;
+        f = s || !d,
+        p = !s;
     return (0, r.jsxs)("div", {
         className: l()(m.container, t),
         children: [
-            p &&
+            f &&
                 (0, r.jsx)(u.Z, {
                     guildId: n,
                     powerup: i,
                     onError: o,
-                    grow: f,
-                    compact: !f,
+                    grow: p,
+                    compact: !p,
                 }),
             s &&
                 (0, r.jsx)(y, {

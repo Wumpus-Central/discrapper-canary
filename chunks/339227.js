@@ -1,4 +1,4 @@
-n.d(t, { Q: () => B }), n(388685), n(415506), n(35282), n(704826), n(539854), n(49124);
+n.d(t, { Q: () => Z }), n(388685), n(415506), n(35282), n(704826), n(539854), n(49124);
 var r = n(512722),
     i = n.n(r),
     a = n(31775),
@@ -9,10 +9,10 @@ var r = n(512722),
     u = n(772096),
     d = n(428595),
     f = n(594199),
-    _ = n(364458),
-    p = n(70956),
-    h = n(364964),
-    m = n(510255),
+    p = n(364458),
+    _ = n(70956),
+    m = n(364964),
+    h = n(510255),
     g = n(40786),
     E = n(362092);
 function b(e, t, n) {
@@ -67,8 +67,8 @@ function v(e, t) {
         e
     );
 }
-let I = new c.Z("MarkdownToSlate"),
-    T = {
+let S = new c.Z("MarkdownToSlate"),
+    I = {
         link: { type: "skip" },
         highlight: { type: "skip" },
         blockQuote: { type: "skip" },
@@ -189,16 +189,16 @@ let I = new c.Z("MarkdownToSlate"),
             after: "",
         },
     },
-    S = new Set(["*", "_", "\\"]),
+    T = new Set(["*", "_", "\\"]),
     A = {},
     C = {};
 for (let e in d.Z.RULES) {
-    if (!(e in T))
+    if (!(e in I))
         throw Error(
             "Slate: Unknown markdown rule: ".concat(e, ".  If you have just added a new markdown rule ") +
                 "then you probably need to add it to this file so that the rich chat box understands it.",
         );
-    let t = T[e];
+    let t = I[e];
     "skip" !== t.type && (A[e] = N(d.Z.RULES[e])),
         "skip" !== t.type && "inlineObject" !== t.type && (C[e] = N("text" === e ? f.ZP : d.Z.RULES[e]));
 }
@@ -212,14 +212,14 @@ function N(e) {
         },
     });
 }
-function R(e) {
+function P(e) {
     return {
         type: "autolink",
         content: e[1],
         originalMatch: e,
     };
 }
-let P = {
+let R = {
         url: {
             parse: (e) =>
                 null == (0, u.yw)(e[1])
@@ -242,15 +242,15 @@ let P = {
                           content: e[0],
                           originalMatch: e,
                       }
-                    : R(e),
+                    : P(e),
         },
-        mailto: { parse: R },
-        tel: { parse: R },
+        mailto: { parse: P },
+        tel: { parse: P },
         codeBlockSyntax: {
             order: s.defaultRules.inlineCode.order - 0.1,
             match: (e) => /^(```)([a-z0-9_+\-.#]+$)?/.exec(e),
             parse: (e) =>
-                null != e[2] && "" !== e[2] && h.default.isKnownLanguage(e[2])
+                null != e[2] && "" !== e[2] && m.default.isKnownLanguage(e[2])
                     ? [
                           {
                               type: "codeBlockSyntax",
@@ -270,18 +270,18 @@ let P = {
                       },
         },
     },
-    D = /(-# +)/,
-    w = (0, _.Z)([A, P]),
-    L = (0, _.Z)([C, P]),
-    x = l._p(w),
-    M = l._p(L),
-    k = {
+    w = /(-# +)/,
+    D = (0, p.Z)([A, R]),
+    x = (0, p.Z)([C, R]),
+    L = l._p(D),
+    j = l._p(x),
+    M = {
         max: 1 / 0,
-        maxAge: +p.Z.Millis.MINUTE,
+        maxAge: +_.Z.Millis.MINUTE,
         updateAgeOnGet: !0,
     },
-    j = new (o())(k),
-    U = new (o())(k);
+    k = new (o())(M),
+    U = new (o())(M);
 function G(e, t, n) {
     let r = [],
         i = {
@@ -292,8 +292,8 @@ function G(e, t, n) {
             allowGameMentions: !0,
             allowTimeMentionInput: !0,
         },
-        a = n ? M : x,
-        o = n ? U : j,
+        a = n ? j : L,
+        o = n ? U : k,
         s = o.get(e);
     if (null != s) return s;
     let l =
@@ -310,10 +310,10 @@ function G(e, t, n) {
             content: a(l, !0, i),
         };
     F(r, l, c, 0, []);
-    let u = Z(r);
+    let u = B(r);
     return o.set(e, u), u;
 }
-function B(e, t) {
+function Z(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         i = E.r(e);
@@ -342,7 +342,7 @@ function B(e, t) {
     }
     return s;
 }
-function Z(e) {
+function B(e) {
     if (0 === (e = e.filter((e) => e.text.length > 0)).length) return e;
     let t = [e[0]];
     for (let n = 1; n < e.length; n++) {
@@ -443,7 +443,7 @@ function F(e, t, n, r, a) {
                 },
             });
         case "timestamp":
-            let d = m.Z.getConfig({ location: "flattenMarkdown" }).enabled;
+            let d = h.Z.getConfig({ location: "flattenMarkdown" }).enabled;
             if (g.Z.getCurrentConfig({ location: "c70cbb_1" }, { autoTrackExposure: !1 }).enabled || d)
                 return W({
                     result: e,
@@ -455,7 +455,7 @@ function F(e, t, n, r, a) {
                 });
             return H(e, t, l[0], r, a);
         case "timestampMentionInput":
-            if (m.Z.getConfig({ location: "flattenMarkdown-input" }).enabled)
+            if (h.Z.getConfig({ location: "flattenMarkdown-input" }).enabled)
                 return W({
                     result: e,
                     sourceText: t,
@@ -508,10 +508,10 @@ function V(e, t, n, r) {
         };
     if ("subtext" === t)
         return {
-            before: D.exec(r.input)[1],
+            before: w.exec(r.input)[1],
             after: "",
         };
-    let i = T["link" === t ? "url" : t];
+    let i = I["link" === t ? "url" : t];
     if ("inlineStyle" === i.type) return i;
     throw Error("Slate: rule must be an inlineStyle");
 }
@@ -578,12 +578,12 @@ function K(e, t) {
     return t;
 }
 function z(e, t, n) {
-    if (t.split("").some((e) => S.has(e))) return I.error(e), n;
+    if (t.split("").some((e) => T.has(e))) return S.error(e), n;
     throw Error(e);
 }
 function q(e, t, n, r) {
     for (; n < r; )
-        if (S.has(t[n])) (n = Y(e, t, t[n], n, "syntaxBefore")), (n = K(t, n));
+        if (T.has(t[n])) (n = Y(e, t, t[n], n, "syntaxBefore")), (n = K(t, n));
         else break;
     return n;
 }

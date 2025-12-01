@@ -13,8 +13,8 @@ var r = n(512722),
     u = n(146528),
     d = n(981631),
     f = n(362786),
-    _ = n(474936);
-function p(e, t, n) {
+    p = n(474936);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,12 +38,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -60,7 +60,7 @@ function g(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -78,7 +78,7 @@ class b extends a.Z {
         var t;
         return new b(
             g(
-                h(
+                m(
                     {
                         id: e.id,
                         type: e.type,
@@ -137,10 +137,10 @@ class b extends a.Z {
         );
     }
     get planIdFromItems() {
-        return this.getCurrentSubscriptionPlanIdForGroup(Object.values(_.Xh));
+        return this.getCurrentSubscriptionPlanIdForGroup(Object.values(p.Xh));
     }
     get premiumPlanIdFromItems() {
-        return this.getCurrentSubscriptionPlanIdForGroup([..._.dJ]);
+        return this.getCurrentSubscriptionPlanIdForGroup([...p.dJ]);
     }
     get isPurchasedViaApple() {
         return this.paymentGateway === d.gg$.APPLE;
@@ -162,10 +162,10 @@ class b extends a.Z {
         );
     }
     get hasPremiumNitroMonthly() {
-        return null != this.items.find((e) => e.planId === _.Xh.PREMIUM_MONTH_TIER_2);
+        return null != this.items.find((e) => e.planId === p.Xh.PREMIUM_MONTH_TIER_2);
     }
     get isBoostOnly() {
-        return this.items.every((e) => [_.Xh.PREMIUM_MONTH_GUILD, _.Xh.PREMIUM_YEAR_GUILD].includes(e.planId));
+        return this.items.every((e) => [p.Xh.PREMIUM_MONTH_GUILD, p.Xh.PREMIUM_YEAR_GUILD].includes(e.planId));
     }
     get isPausedOrPausePending() {
         return d.JwP.ALL_PAUSE.has(this.status);
@@ -203,57 +203,57 @@ class b extends a.Z {
         return null != this.trialId && null != this.trialEndsAt && new Date() < this.trialEndsAt;
     }
     get inReverseTrial() {
-        return null != this.trialId && _.h8.includes(this.trialId) && null == this.paymentSourceId;
+        return null != this.trialId && p.h8.includes(this.trialId) && null == this.paymentSourceId;
     }
     get premiumSince() {
         var e;
         return null != (e = this.streakStartedAt) ? e : this.createdAt;
     }
     get hasAnyPremiumNitro() {
-        return this.items.some((e) => _.dJ.has(e.planId));
+        return this.items.some((e) => p.dJ.has(e.planId));
     }
     get hasAnyPremiumGroup() {
-        return this.items.some((e) => e.planId === _.Xh.PREMIUM_GROUP_MONTH);
+        return this.items.some((e) => e.planId === p.Xh.PREMIUM_GROUP_MONTH);
     }
     hasPremiumAtLeast(e) {
         return (
             !!this.isPremium &&
             this.items.some((t) => {
-                let n = _.GP[t.planId];
+                let n = p.GP[t.planId];
                 return (0, c.yd)(n.premiumType, e);
             })
         );
     }
     constructor(e) {
         super(),
-            p(this, "id", void 0),
-            p(this, "type", void 0),
-            p(this, "items", void 0),
-            p(this, "createdAt", void 0),
-            p(this, "canceledAt", void 0),
-            p(this, "currentPeriodStart", void 0),
-            p(this, "currentPeriodEnd", void 0),
-            p(this, "status", void 0),
-            p(this, "paymentSourceId", void 0),
-            p(this, "paymentGateway", void 0),
-            p(this, "paymentGatewayPlanId", void 0),
-            p(this, "paymentGatewaySubscriptionId", void 0),
-            p(this, "trialId", void 0),
-            p(this, "trialEndsAt", void 0),
-            p(this, "renewalMutations", void 0),
-            p(this, "streakStartedAt", void 0),
-            p(this, "currency", void 0),
-            p(this, "pauseEndsAt", void 0),
-            p(this, "pauseReason", void 0),
-            p(this, "planId", void 0),
-            p(this, "additionalPlans", void 0),
-            p(this, "metadata", void 0),
-            p(this, "latestInvoice", void 0),
-            p(this, "useStorekitResubscribe", void 0),
-            p(this, "price", void 0),
-            p(this, "userId", void 0),
-            p(this, "eligiblePaymentGateways", void 0),
-            p(this, "priceChange", void 0),
+            _(this, "id", void 0),
+            _(this, "type", void 0),
+            _(this, "items", void 0),
+            _(this, "createdAt", void 0),
+            _(this, "canceledAt", void 0),
+            _(this, "currentPeriodStart", void 0),
+            _(this, "currentPeriodEnd", void 0),
+            _(this, "status", void 0),
+            _(this, "paymentSourceId", void 0),
+            _(this, "paymentGateway", void 0),
+            _(this, "paymentGatewayPlanId", void 0),
+            _(this, "paymentGatewaySubscriptionId", void 0),
+            _(this, "trialId", void 0),
+            _(this, "trialEndsAt", void 0),
+            _(this, "renewalMutations", void 0),
+            _(this, "streakStartedAt", void 0),
+            _(this, "currency", void 0),
+            _(this, "pauseEndsAt", void 0),
+            _(this, "pauseReason", void 0),
+            _(this, "planId", void 0),
+            _(this, "additionalPlans", void 0),
+            _(this, "metadata", void 0),
+            _(this, "latestInvoice", void 0),
+            _(this, "useStorekitResubscribe", void 0),
+            _(this, "price", void 0),
+            _(this, "userId", void 0),
+            _(this, "eligiblePaymentGateways", void 0),
+            _(this, "priceChange", void 0),
             (this.id = e.id),
             (this.type = e.type),
             (this.items = e.items),
@@ -284,7 +284,7 @@ class b extends a.Z {
             n = e.items[0].planId,
             r = null;
         if (e.type === d.NYc.PREMIUM) {
-            let i = _.GP[e.items[0].planId],
+            let i = p.GP[e.items[0].planId],
                 a = i.interval,
                 s = i.intervalCount;
             (n = (0, o.Xr)(e.items, a, s)), null != t && (r = (0, o.Xr)(t.items, a, s));

@@ -35,15 +35,15 @@ function u(e) {
     return e;
 }
 function d(e) {
-    let { user: t, display: n, activity: c, entry: d, stream: f, voiceChannelId: _, analyticsLocations: p } = e,
-        { context: h, trackUserProfileAction: m } = (0, s.KZ)(),
+    let { user: t, display: n, activity: c, entry: d, stream: f, voiceChannelId: p, analyticsLocations: _ } = e,
+        { context: m, trackUserProfileAction: h } = (0, s.KZ)(),
         { analyticsLocations: g } = (0, a.ZP)(),
-        E = null != p ? p : g,
+        E = null != _ ? _ : g,
         b = (0, i.e7)([o.Z], () => o.Z.getUserOutbox(t.id));
     return (0, r.useCallback)(
         (e) => {
             let { action: t } = e;
-            m({
+            h({
                 action: t,
                 analyticsLocations: E,
             }),
@@ -56,13 +56,13 @@ function d(e) {
                             entry: d,
                             stream: f,
                             outbox: b,
-                            voiceChannelId: _,
+                            voiceChannelId: p,
                             analyticsLocations: E,
                         },
-                        h,
+                        m,
                     ),
                 );
         },
-        [m, h, n, c, f, d, b, _, E],
+        [h, m, n, c, f, d, b, p, E],
     );
 }

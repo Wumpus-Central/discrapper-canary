@@ -39,18 +39,18 @@ function f(e) {
     let { consents: t } = e;
     null != t && ((u = s({}, u, t)), (c = !0));
 }
-function _(e) {
-    let { consents: t } = e;
-    (u = s({}, t)), (l = !0);
-}
 function p(e) {
     let { consents: t } = e;
     (u = s({}, t)), (l = !0);
 }
-function h(e) {
+function _(e) {
+    let { consents: t } = e;
+    (u = s({}, t)), (l = !0);
+}
+function m(e) {
     d = e.consentRequired;
 }
-function m() {
+function h() {
     d = null;
 }
 class g extends (r = i.ZP.Store) {
@@ -73,8 +73,8 @@ class g extends (r = i.ZP.Store) {
 o(g, "displayName", "ConsentStore");
 let E = new g(a.Z, {
     CONNECTION_OPEN: f,
-    OVERLAY_INITIALIZE: _,
-    UPDATE_CONSENTS: p,
-    SET_CONSENT_REQUIRED: h,
-    LOGOUT: m,
+    OVERLAY_INITIALIZE: p,
+    UPDATE_CONSENTS: _,
+    SET_CONSENT_REQUIRED: m,
+    LOGOUT: h,
 });

@@ -12,8 +12,8 @@ var r = n(54381),
     u = n(966902),
     d = n(237872),
     f = n(562618),
-    _ = n(254477);
-function p(e, t, n) {
+    p = n(254477);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,12 +37,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -59,7 +59,7 @@ function g(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -91,15 +91,15 @@ function y(e) {
         {
             title: n,
             body: a,
-            badge: p,
-            graphic: m,
+            badge: _,
+            graphic: h,
             size: b = "md",
             actions: y,
             textLink: O,
             gradientColor: v,
-            onRequestClose: I,
-            popoverRef: T,
-            position: S,
+            onRequestClose: S,
+            popoverRef: I,
+            position: T,
             caretConfig: A,
             scrollBehavior: C,
         } = e,
@@ -118,23 +118,23 @@ function y(e) {
             "caretConfig",
             "scrollBehavior",
         ]);
-    let R = i.useCallback(
+    let P = i.useCallback(
             (e, t) => {
-                null == I || I(t);
+                null == S || S(t);
             },
-            [I],
+            [S],
         ),
-        P = i.useCallback(() => {
-            null == I || I("user:explicit");
-        }, [I]),
-        D = h(
+        R = i.useCallback(() => {
+            null == S || S("user:explicit");
+        }, [S]),
+        w = m(
             {
                 targetElementRef: N.targetElementRef,
                 shouldShow: N.shouldShow,
                 hasVideo: N.hasVideo,
-                position: S,
+                position: T,
                 caretConfig: A,
-                onRequestClose: R,
+                onRequestClose: P,
                 gradientColor: v,
                 scrollBehavior: C,
             },
@@ -147,29 +147,29 @@ function y(e) {
         );
     return (0, r.jsx)(
         l.m,
-        g(h({}, D), {
+        g(m({}, w), {
             children: (0, r.jsxs)("div", {
-                ref: T,
+                ref: I,
                 "data-mana-component": "popover",
                 children: [
                     (0, r.jsx)(d.u, {
-                        onClick: P,
+                        onClick: R,
                         variant: null != v ? "color-mix" : void 0,
                     }),
-                    null != m &&
+                    null != h &&
                         (0, r.jsx)("div", {
-                            className: o()(_.graphic, { [_["graphic--".concat(b)]]: null != b }),
+                            className: o()(p.graphic, { [p["graphic--".concat(b)]]: null != b }),
                             children: (0, r.jsx)(
                                 s.zsu,
-                                g(h({}, m), {
-                                    aspectRatio: null != (t = m.aspectRatio) ? t : "sm" === b ? "2/1" : "16/9",
+                                g(m({}, h), {
+                                    aspectRatio: null != (t = h.aspectRatio) ? t : "sm" === b ? "2/1" : "16/9",
                                 }),
                             ),
                         }),
                     (0, r.jsx)(f.Y, {
                         title: n,
                         body: a,
-                        badge: p,
+                        badge: _,
                         textLink: O,
                     }),
                     null != y && y.length > 0 ? (0, r.jsx)(c.k, { actions: y }) : null,

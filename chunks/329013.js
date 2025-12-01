@@ -1,6 +1,6 @@
 n.d(t, {
-    g: () => k,
-    i: () => x,
+    g: () => M,
+    i: () => L,
 });
 var r = n(54381),
     i = n(473749),
@@ -12,56 +12,56 @@ var r = n(54381),
     u = n(607070),
     d = n(100527),
     f = n(906732),
-    _ = n(514361),
-    p = n(607270),
-    h = n(705262),
-    m = n(550385),
+    p = n(514361),
+    _ = n(607270),
+    m = n(705262),
+    h = n(550385),
     g = n(266454),
     E = n(622909),
     b = n(639119),
     y = n(638212),
     O = n(230916),
     v = n(165583),
-    I = n(984802),
-    T = n(626135),
-    S = n(210887),
+    S = n(984802),
+    I = n(626135),
+    T = n(210887),
     A = n(695346),
     C = n(342386),
     N = n(981631),
-    R = n(921944),
-    P = n(474936),
-    D = n(388032),
-    w = n(505575);
-let L = () => {
+    P = n(921944),
+    R = n(474936),
+    w = n(388032),
+    D = n(505575);
+let x = () => {
         (0, g.Q3)(o.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
-            dismissAction: R.L.PRIMARY,
+            dismissAction: P.L.PRIMARY,
             forceTrack: !0,
         }),
-            (0, m.XO)(m.wh.CLIENT_THEMES),
+            (0, h.XO)(h.wh.CLIENT_THEMES),
             (0, C.default)();
     },
-    x = () => {
+    L = () => {
         var e, t;
         let { analyticsLocations: n } = (0, f.ZP)(d.Z.USER_SETTINGS),
-            o = (0, a.e7)([_.Z], () => _.Z.isPreview),
-            s = (null == (t = (0, b.N)()) || null == (e = t.subscription_trial) ? void 0 : e.sku_id) === P.Si.TIER_2,
+            o = (0, a.e7)([p.Z], () => p.Z.isPreview),
+            s = (null == (t = (0, b.N)()) || null == (e = t.subscription_trial) ? void 0 : e.sku_id) === R.Si.TIER_2,
             c = (0, E.N)(),
-            u = (0, O.Wp)(c, P.Si.TIER_2),
-            m = () => {
+            u = (0, O.Wp)(c, R.Si.TIER_2),
+            h = () => {
                 if (!o || s) return null;
                 let e = u
-                    ? D.intl.formatToPlainString(D.t.bkQ4bH, { percent: null == c ? void 0 : c.discount.amount })
-                    : D.intl.string(D.t.mr4K7D);
+                    ? w.intl.formatToPlainString(w.t.bkQ4bH, { percent: null == c ? void 0 : c.discount.amount })
+                    : w.intl.string(w.t.mr4K7D);
                 return (0, r.jsxs)("div", {
-                    className: w.tryItOutButtons,
+                    className: D.tryItOutButtons,
                     children: [
                         (0, r.jsx)(l.Button, {
                             variant: "secondary",
-                            text: D.intl.string(D.t["E+COuA"]),
-                            onClick: () => L(),
+                            text: w.intl.string(w.t["E+COuA"]),
+                            onClick: () => x(),
                         }),
                         (0, r.jsx)(y.Z, {
-                            subscriptionTier: P.Si.TIER_2,
+                            subscriptionTier: R.Si.TIER_2,
                             defaultTextOverride: e,
                             premiumModalAnalyticsLocation: {
                                 object: N.qAy.BUTTON_CTA,
@@ -74,8 +74,8 @@ let L = () => {
             };
         i.useEffect(() => {
             o &&
-                T.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
-                    type: P.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
+                I.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
+                    type: R.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                     location_stack: n,
                 });
         }, [o, n]);
@@ -85,27 +85,27 @@ let L = () => {
                 (0, r.jsxs)("div", {
                     children: [
                         (0, r.jsx)("div", {
-                            className: w.previewThemeButton,
+                            className: D.previewThemeButton,
                             children: (0, r.jsx)(l.Button, {
                                 variant: "secondary",
                                 fullWidth: !0,
-                                text: D.intl.string(D.t["E+COuA"]),
-                                onClick: () => L(),
+                                text: w.intl.string(w.t["E+COuA"]),
+                                onClick: () => x(),
                             }),
                         }),
-                        (0, r.jsx)("div", { className: w.premiumTier2Divider }),
+                        (0, r.jsx)("div", { className: D.premiumTier2Divider }),
                         (0, r.jsx)(v.ZP, {
-                            type: P.cd.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL,
-                            subscriptionTier: P.Si.TIER_2,
+                            type: R.cd.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL,
+                            subscriptionTier: R.Si.TIER_2,
                         }),
                     ],
                 }),
-            I = (() => {
+            S = (() => {
                 let e = (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(h.ZP.Gradient, {
+                        (0, r.jsx)(m.ZP.Gradient, {
                             disabled: !1,
-                            renderCTAButtons: m,
+                            renderCTAButtons: h,
                         }),
                         g,
                     ],
@@ -113,7 +113,7 @@ let L = () => {
                 return (
                     o &&
                         (e = (0, r.jsx)("div", {
-                            className: w.colorThemesBackground,
+                            className: D.colorThemesBackground,
                             children: e,
                         })),
                     e
@@ -121,29 +121,29 @@ let L = () => {
             })();
         return (0, r.jsxs)("div", {
             children: [
-                (0, r.jsxs)(h.ZP, {
-                    type: h.yH.SETTINGS,
+                (0, r.jsxs)(m.ZP, {
+                    type: m.yH.SETTINGS,
                     children: [
-                        (0, r.jsx)(h.ZP.Basic, { className: w.basicThemeSelectors }),
-                        (0, r.jsx)(M, {}),
-                        (0, r.jsx)(p.Z, {}),
-                        I,
+                        (0, r.jsx)(m.ZP.Basic, { className: D.basicThemeSelectors }),
+                        (0, r.jsx)(j, {}),
+                        (0, r.jsx)(_.Z, {}),
+                        S,
                     ],
                 }),
-                (0, r.jsx)(l.izJ, { className: w.divider }),
+                (0, r.jsx)(l.izJ, { className: D.divider }),
             ],
         });
     };
-function M() {
-    let e = (0, I.A6)(),
+function j() {
+    let e = (0, S.A6)(),
         {
             theme: t,
             useForcedColors: n,
             gradientPreset: i,
-        } = (0, a.cj)([S.Z, u.Z, _.Z], () => ({
-            theme: S.Z.theme,
+        } = (0, a.cj)([T.Z, u.Z, p.Z], () => ({
+            theme: T.Z.theme,
             useForcedColors: u.Z.useForcedColors,
-            gradientPreset: _.Z.gradientPreset,
+            gradientPreset: p.Z.gradientPreset,
         })),
         o = null != A.L1.useSetting().customUserThemeSettings;
     return t !== N.BRd.LIGHT
@@ -152,7 +152,7 @@ function M() {
               children: [
                   (0, r.jsx)(l.izJ, { gap: 24 }),
                   (0, r.jsx)(l.rsf, {
-                      label: D.intl.string(D.t.yF54Ks),
+                      label: w.intl.string(w.t.yF54Ks),
                       checked: e && (0, s.ap)(t) && !n,
                       disabled: t !== N.BRd.LIGHT || n || null != i || o,
                       onChange: c.lq,
@@ -161,11 +161,11 @@ function M() {
               ],
           });
 }
-let k = () =>
-    (0, a.e7)([_.Z], () => _.Z.isPreview)
+let M = () =>
+    (0, a.e7)([p.Z], () => p.Z.isPreview)
         ? null
         : (0, r.jsx)(l.Button, {
               variant: "primary",
-              text: D.intl.string(D.t.qYXrkX),
-              onClick: L,
+              text: w.intl.string(w.t.qYXrkX),
+              onClick: x,
           });

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(791819),
     i = n(44837),
     a = n(455412),
@@ -75,4 +75,4 @@ var s = n(473749),
         );
     })(s.Component);
 (f.propTypes = {}), (f.defaultProps = d);
-let _ = f;
+let p = f;

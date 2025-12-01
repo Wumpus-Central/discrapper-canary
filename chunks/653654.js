@@ -1,9 +1,9 @@
-n.d(t, { y: () => s });
+n.d(t, { y: () => o });
 var r = n(544891),
     l = n(343817),
     i = n(411700),
     a = n(981631);
-let s = async (e) => {
+let o = async (e) => {
     try {
         return (
             await r.tn.get({

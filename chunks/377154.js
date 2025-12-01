@@ -55,7 +55,7 @@ function c(e, t) {
     );
 }
 function u(e, t) {
-    var n, o, l, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S;
+    var n, o, l, u, d, f, p, _, m, h, g, E, b, y, O, v, S, I, T;
     let A = null == (n = t.powerup_metadata) ? void 0 : n.category_type;
     if (null == A) return;
     let C = null == (o = t.sku) ? void 0 : o.powerup_metadata;
@@ -83,34 +83,34 @@ function u(e, t) {
                     null !=
                     (v =
                         null == t ||
-                        null == (h = t.sku) ||
-                        null == (p = h.powerup_metadata) ||
-                        null == (_ = p.guild_features)
+                        null == (m = t.sku) ||
+                        null == (_ = m.powerup_metadata) ||
+                        null == (p = _.guild_features)
                             ? void 0
-                            : _.additional_emoji_slots)
+                            : p.additional_emoji_slots)
                         ? v
                         : 0),
                     (l +=
                         null !=
-                        (I =
+                        (S =
                             null == t ||
                             null == (E = t.sku) ||
                             null == (g = E.powerup_metadata) ||
-                            null == (m = g.guild_features)
+                            null == (h = g.guild_features)
                                 ? void 0
-                                : m.additional_sound_slots)
-                            ? I
+                                : h.additional_sound_slots)
+                            ? S
                             : 0),
                     (u +=
                         null !=
-                        (T =
+                        (I =
                             null == t ||
                             null == (O = t.sku) ||
                             null == (y = O.powerup_metadata) ||
                             null == (b = y.guild_features)
                                 ? void 0
                                 : b.additional_sticker_slots)
-                            ? T
+                            ? I
                             : 0),
                     (d = null == t ? void 0 : t.sku.dependent_sku_id);
             }
@@ -130,7 +130,7 @@ function u(e, t) {
             return s(
                 {
                     type: i.Us.PERK,
-                    description: null != (S = t.description) ? S : "",
+                    description: null != (T = t.description) ? T : "",
                 },
                 N,
             );

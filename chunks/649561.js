@@ -15,8 +15,8 @@ var i = n(54381),
     m = n(797614),
     y = n(593481),
     b = n(703656),
-    v = n(254761),
-    _ = n(70956),
+    _ = n(254761),
+    v = n(70956),
     O = n(145597),
     E = n(41534),
     x = n(837268),
@@ -39,7 +39,7 @@ function w(e, t, n) {
         e
     );
 }
-let T = 10 * _.Z.Millis.SECOND,
+let T = 10 * v.Z.Millis.SECOND,
     N = new h.Yd("LegacyOverlayErrorBoundary");
 function D() {
     let e = (0, O.getPID)(),
@@ -85,7 +85,7 @@ class k extends r.PureComponent {
                               children: [
                                   (0, i.jsx)(y.ZP, {
                                       expand: !0,
-                                      icon: (0, i.jsx)(v.Z, {
+                                      icon: (0, i.jsx)(_.Z, {
                                           width: 40,
                                           height: 40,
                                           className: P.notificationIcon,

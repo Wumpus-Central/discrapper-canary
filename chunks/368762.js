@@ -47,8 +47,8 @@ function c(e) {
     var t = f();
     return function () {
         var n,
-            r = _(e);
-        return (n = t ? Reflect.construct(r, arguments, _(this).constructor) : r.apply(this, arguments)), u(this, n);
+            r = p(e);
+        return (n = t ? Reflect.construct(r, arguments, p(this).constructor) : r.apply(this, arguments)), u(this, n);
     };
 }
 function u(e, t) {
@@ -67,14 +67,14 @@ function f() {
         return !1;
     }
 }
-function _(e) {
-    return (_ = Object.setPrototypeOf
+function p(e) {
+    return (p = Object.setPrototypeOf
         ? Object.getPrototypeOf
         : function (e) {
               return e.__proto__ || Object.getPrototypeOf(e);
           })(e);
 }
-function p(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -87,8 +87,8 @@ function p(e, t, n) {
         e
     );
 }
-n.d(t, { z: () => h });
-var h = (function (e) {
+n.d(t, { z: () => m });
+var m = (function (e) {
     s(n, e);
     var t = c(n);
     function n() {
@@ -96,8 +96,8 @@ var h = (function (e) {
         i(this, n);
         for (var r = arguments.length, a = Array(r), o = 0; o < r; o++) a[o] = arguments[o];
         return (
-            p(d((e = t.call.apply(t, [this].concat(a)))), "priority", 140),
-            p(d(e), "incompatibleTokens", ["R", "u", "t", "T"]),
+            _(d((e = t.call.apply(t, [this].concat(a)))), "priority", 140),
+            _(d(e), "incompatibleTokens", ["R", "u", "t", "T"]),
             e
         );
     }

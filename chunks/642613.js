@@ -8,10 +8,10 @@ var r = n(98405),
     u = n(621523),
     d = n(992914),
     f = n(72570),
-    _ = n(358932),
-    p = n(635464),
-    h = n(287353),
-    m = n(920542),
+    p = n(358932),
+    _ = n(635464),
+    m = n(287353),
+    h = n(920542),
     g = [],
     E = i(g.sort),
     b = i(g.push),
@@ -22,11 +22,11 @@ var r = n(98405),
         g.sort(null);
     }),
     v = f("sort"),
-    I = !u(function () {
-        if (h) return h < 70;
-        if (!_ || !(_ > 3)) {
-            if (p) return !0;
-            if (m) return m < 603;
+    S = !u(function () {
+        if (m) return m < 70;
+        if (!p || !(p > 3)) {
+            if (_) return !0;
+            if (h) return h < 603;
             var e,
                 t,
                 n,
@@ -65,7 +65,7 @@ var r = n(98405),
             return "DGBEFHACIJK" !== i;
         }
     }),
-    T = function (e) {
+    I = function (e) {
         return function (t, n) {
             return void 0 === n ? -1 : void 0 === t ? 1 : void 0 !== e ? +e(t, n) || 0 : c(t) > c(n) ? 1 : -1;
         };
@@ -74,7 +74,7 @@ r(
     {
         target: "Array",
         proto: !0,
-        forced: y || !O || !v || !I,
+        forced: y || !O || !v || !S,
     },
     {
         sort: function (e) {
@@ -82,11 +82,11 @@ r(
             var t,
                 n,
                 r = o(this);
-            if (I) return void 0 === e ? E(r) : E(r, e);
+            if (S) return void 0 === e ? E(r) : E(r, e);
             var i = [],
                 c = s(r);
             for (n = 0; n < c; n++) n in r && b(i, r[n]);
-            for (d(i, T(e)), t = s(i), n = 0; n < t; ) r[n] = i[n++];
+            for (d(i, I(e)), t = s(i), n = 0; n < t; ) r[n] = i[n++];
             for (; n < c; ) l(r, n++);
             return r;
         },

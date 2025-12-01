@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685), n(35282);
+n.d(t, { Z: () => N }), n(388685), n(35282);
 var a = n(54381),
     l = n(473749),
     i = n(120356),
@@ -12,8 +12,8 @@ var a = n(54381),
     p = n(933557),
     h = n(258732),
     x = n(592125),
-    g = n(699516),
-    f = n(594174),
+    f = n(699516),
+    g = n(594174),
     b = n(55589),
     v = n(98357),
     j = n(432877),
@@ -25,13 +25,13 @@ function E() {
     var e;
     let t = (0, c.Wu)([b.Z], () => b.Z.getSortedChannels()[1]),
         [n, i] = l.useState(t.length > 0 ? t[0].channelId : void 0),
-        { selectedChannel: r, options: u } = (0, c.cj)([x.Z, f.default, g.Z], () => ({
+        { selectedChannel: r, options: u } = (0, c.cj)([x.Z, g.default, f.Z], () => ({
             selectedChannel: x.Z.getChannel(n),
             options: t.map((e) => {
                 let t = x.Z.getChannel(e.channelId);
                 return {
                     value: e.channelId,
-                    label: null != t ? (0, p.F6)(t, f.default, g.Z) : e.channelId,
+                    label: null != t ? (0, p.F6)(t, g.default, f.Z) : e.channelId,
                 };
             }),
         })),
@@ -85,7 +85,7 @@ function E() {
         ],
     });
 }
-function N() {
+function T() {
     let e = l.useCallback(() => {
         u.Z.openPrivateChannel({ recipientIds: [y.I] });
     }, []);
@@ -96,7 +96,7 @@ function N() {
         onClick: e,
     });
 }
-function T() {
+function N() {
     let e = (0, c.e7)([j.ZP], () => j.ZP.allByCategory(j.zU.MESSAGING), [], c.pF).map((e) => {
         let [t, n, { label: l }] = e;
         return (0, a.jsx)(
@@ -117,7 +117,7 @@ function T() {
             (0, a.jsx)("div", { className: C.divider }),
             (0, a.jsx)(E, {}),
             (0, a.jsx)("div", { className: C.divider }),
-            (0, a.jsx)(N, {}),
+            (0, a.jsx)(T, {}),
         ],
     });
 }

@@ -1,4 +1,4 @@
-n.d(t, { e: () => h }), n(388685), n(35282);
+n.d(t, { e: () => m }), n(388685), n(35282);
 var r = n(772848),
     i = n(579806),
     a = n(626135),
@@ -59,13 +59,13 @@ function d(e, t) {
 function f() {
     return window.GLOBAL_ENV.HTML_TIMESTAMP;
 }
-class _ {
+class p {
     trackEvent(e) {
         let t = Date.now();
         requestIdleCallback(() => {
             a.default.track(
                 s.rMx.APP_UI_VIEWED,
-                d(c({}, m(), g()), {
+                d(c({}, h(), g()), {
                     load_id: this.loadId,
                     screen_name: e,
                     duration_ms_since_app_opened: t - f(),
@@ -87,11 +87,11 @@ class _ {
         l(this, "loadId", (0, r.Z)()), l(this, "appUIViewed", !1);
     }
 }
-let p = new _();
-function h(e) {
-    p.trackAppUIViewed(e);
+let _ = new p();
+function m(e) {
+    _.trackAppUIViewed(e);
 }
-function m() {
+function h() {
     var e, t, n;
     let r = "--campaign-id=";
     for (let a of null !=

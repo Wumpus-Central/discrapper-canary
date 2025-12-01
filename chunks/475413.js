@@ -40,7 +40,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -52,22 +52,22 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -75,7 +75,7 @@ function h(e, t) {
     }
     return i;
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -100,19 +100,19 @@ let b = (e) => {
                 className: a,
                 innerClassName: l,
                 onClick: d,
-                ref: _,
+                ref: p,
             } = e,
-            m = h(e, ["action", "color", "themeColor", "className", "innerClassName", "onClick", "ref"]);
+            h = m(e, ["action", "color", "themeColor", "className", "innerClassName", "onClick", "ref"]);
         let { trackUserProfileAction: E } = (0, c.KZ)(),
             b = (e) => {
                 null != t && E({ action: t }), null == d || d(e);
             };
         return (0, r.jsx)(
             s.Button,
-            p(
+            _(
                 f(
                     {
-                        buttonRef: _,
+                        buttonRef: p,
                         className: o()(u.button, a),
                         innerClassName: o()(u.buttonInner, l),
                         color: o()(n, g[i]),
@@ -120,7 +120,7 @@ let b = (e) => {
                         size: s.Button.Sizes.SMALL,
                         onClick: b,
                     },
-                    m,
+                    h,
                 ),
                 { "data-migration-pending": !0 },
             ),
@@ -133,14 +133,14 @@ let b = (e) => {
                 tooltipPosition: a,
                 tooltipAlign: c,
                 tooltipDelay: d,
-                tooltipClassName: _,
-                tooltipContainerClassName: m,
+                tooltipClassName: p,
+                tooltipContainerClassName: h,
                 ariaLabel: g,
                 className: E,
                 innerClassName: y,
                 shouldShowTooltip: O = !0,
             } = e,
-            v = h(e, [
+            v = m(e, [
                 "icon",
                 "tooltipText",
                 "tooltipPosition",
@@ -160,11 +160,11 @@ let b = (e) => {
             "aria-label": !1,
             delay: d,
             shouldShow: O,
-            className: m,
-            tooltipClassName: _,
+            className: h,
+            tooltipClassName: p,
             children: (0, r.jsx)(
                 b,
-                p(
+                _(
                     f(
                         {
                             buttonRef: t,
@@ -189,7 +189,7 @@ let b = (e) => {
     }),
     O = i.forwardRef(function (e, t) {
         var { className: n, innerClassName: i } = e,
-            a = h(e, ["className", "innerClassName"]);
+            a = m(e, ["className", "innerClassName"]);
         return (0, r.jsx)(
             y,
             f(

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => T });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -10,10 +10,10 @@ var i = n(120356),
     u = n(206295),
     d = n(297781),
     f = n(313201),
-    _ = n(231338),
-    p = n(388032),
-    h = n(382150),
-    m = n(46999);
+    p = n(231338),
+    _ = n(388032),
+    m = n(382150),
+    h = n(46999);
 function g(e, t, n) {
     return (
         t in e
@@ -87,7 +87,7 @@ function v(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function I(e) {
+function S(e) {
     let { className: t, clickableClassName: n, clickable: i, children: s } = e,
         l = (0, f.Dt)();
     if (null != i && "href" in i) {
@@ -126,47 +126,47 @@ function I(e) {
         ],
     });
 }
-function T(e) {
+function I(e) {
     var { clickable: t } = e,
         n = O(e, ["clickable"]);
     return (0, r.jsx)(
-        I,
+        S,
         y(E({}, n), {
             clickable: y(E({}, t), { ariaDescription: "" }),
-            clickableClassName: m.clickable,
+            clickableClassName: h.clickable,
         }),
     );
 }
-function S(e) {
+function T(e) {
     let {
             entry: t,
             channel: n,
             title: i,
-            subtitle: m,
+            subtitle: h,
             thumbnailUrl: g,
             titleClickable: b,
             subtitleClickable: y,
             thumbnailClickable: O,
             providerIconProps: v,
-            style: S = {},
+            style: T = {},
         } = e,
         A = (0, f.Dt)(),
         { primaryColor: C, secondaryColor: N } = (0, u.Z)(g);
     return (
-        null != g && (S.background = "linear-gradient(45deg, ".concat(C, ", ").concat(N, ")")),
+        null != g && (T.background = "linear-gradient(45deg, ".concat(C, ", ").concat(N, ")")),
         (0, r.jsx)(o.f6W, {
-            theme: _.BR.DARK,
+            theme: p.BR.DARK,
             disableAdaptiveTheme: !0,
             children: (e) =>
                 (0, r.jsxs)("figure", {
-                    "aria-roledescription": p.intl.string(p.t.zFfUhF),
+                    "aria-roledescription": _.intl.string(_.t.zFfUhF),
                     "aria-labelledby": A,
-                    className: a()(h.container, e),
-                    style: S,
+                    className: a()(m.container, e),
+                    style: T,
                     children: [
-                        (0, r.jsx)(I, {
-                            className: h.thumbnailContainer,
-                            clickableClassName: h.clickable,
+                        (0, r.jsx)(S, {
+                            className: m.thumbnailContainer,
+                            clickableClassName: m.clickable,
                             clickable: O,
                             children: (0, r.jsx)(l.f, {
                                 src: g,
@@ -176,53 +176,53 @@ function S(e) {
                             }),
                         }),
                         (0, r.jsxs)("div", {
-                            className: h.infoContainer,
+                            className: m.infoContainer,
                             children: [
                                 (0, r.jsx)(s.Z, {
                                     channel: n,
                                     entry: t,
-                                    className: h.users,
+                                    className: m.users,
                                 }),
                                 (0, r.jsx)(o.LZC, { size: 2 }),
-                                (0, r.jsx)(T, {
+                                (0, r.jsx)(I, {
                                     clickable: b,
-                                    className: h.clickableText,
+                                    className: m.clickableText,
                                     children: (0, r.jsx)(o.Heading, {
                                         id: A,
                                         variant: "heading-md/medium",
                                         lineClamp: 1,
-                                        className: a()(h.textPrimary, h.truncatedText),
+                                        className: a()(m.textPrimary, m.truncatedText),
                                         scaleFontToUserSetting: !0,
                                         children: i,
                                     }),
                                 }),
-                                null != m
+                                null != h
                                     ? (0, r.jsxs)(r.Fragment, {
                                           children: [
                                               (0, r.jsx)(o.LZC, { size: 2 }),
-                                              (0, r.jsx)(T, {
+                                              (0, r.jsx)(I, {
                                                   clickable: y,
-                                                  className: h.clickableText,
+                                                  className: m.clickableText,
                                                   children: (0, r.jsx)(o.Text, {
                                                       variant: "text-sm/normal",
-                                                      className: a()(h.textSecondary, h.truncatedText),
+                                                      className: a()(m.textSecondary, m.truncatedText),
                                                       lineClamp: 1,
                                                       scaleFontToUserSetting: !0,
-                                                      children: m,
+                                                      children: h,
                                                   }),
                                               }),
                                           ],
                                       })
                                     : null,
                                 (0, r.jsx)(d.PZ, {
-                                    className: h.badges,
+                                    className: m.badges,
                                     entry: t,
                                     location: d.Gt.EMBED,
                                 }),
                             ],
                         }),
                         (0, r.jsx)("div", {
-                            className: h.headerIcons,
+                            className: m.headerIcons,
                             children: null != v ? (0, r.jsx)(c.Z, E({}, v)) : null,
                         }),
                     ],

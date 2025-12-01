@@ -47,12 +47,12 @@ e.exports = function (e) {
         u = t.concat(t.optional(/\.|\.\/|\//), c, t.anyNumberOfTimes(t.concat(l, c))),
         d = t.concat("(", o, "|", s, ")(?==)"),
         f = { begin: u },
-        _ = e.inherit(f, { keywords: r }),
-        p = {
+        p = e.inherit(f, { keywords: r }),
+        _ = {
             begin: /\(/,
             end: /\)/,
         },
-        h = {
+        m = {
             className: "attr",
             begin: d,
             relevance: 0,
@@ -60,21 +60,21 @@ e.exports = function (e) {
                 begin: /=/,
                 end: /=/,
                 starts: {
-                    contains: [e.NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, _, p],
+                    contains: [e.NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, p, _],
                 },
             },
         },
-        m = {
+        h = {
             begin: /as\s+\|/,
             keywords: { keyword: "as" },
             end: /\|/,
             contains: [{ begin: /\w+/ }],
         },
         g = {
-            contains: [e.NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, m, h, _, p],
+            contains: [e.NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, h, m, p, _],
             returnEnd: !0,
         };
-    p.contains = [
+    _.contains = [
         e.inherit(f, {
             className: "name",
             keywords: n,

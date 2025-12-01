@@ -1,6 +1,6 @@
 n.d(t, {
     C: () => O,
-    Z: () => I,
+    Z: () => S,
 });
 var r = n(54381);
 n(473749);
@@ -13,13 +13,13 @@ var i = n(442837),
     u = n(579630),
     d = n(26033),
     f = n(887413),
-    _ = n(313789),
-    p = n(518596),
-    h = n(594174),
-    m = n(324745),
+    p = n(313789),
+    _ = n(518596),
+    m = n(594174),
+    h = n(324745),
     g = n(981631),
     E = n(388032);
-let b = () => (0, p.openUserSettings)(_.n.CONNECTIONS_PANEL, { section: g.oAB.CONNECTIONS });
+let b = () => (0, _.openUserSettings)(p.n.CONNECTIONS_PANEL, { section: g.oAB.CONNECTIONS });
 function y(e) {
     let { activity: t, onOpenGameSettings: n } = e;
     return (0, u.Z)(t) || (0, c.Z)(t) || (0, o.Z)(t) ? b : (0, l.Z)(t) && !(0, s.Z)(t) ? n : null;
@@ -42,13 +42,13 @@ function v(e) {
             })
           : null;
 }
-function I(e) {
+function S(e) {
     let { user: t, activity: n, entry: o, onAction: s, onClose: l, appContext: c } = e,
-        u = (0, m.Z)();
+        u = (0, h.Z)();
     if (
-        !(0, i.e7)([h.default], () => {
+        !(0, i.e7)([m.default], () => {
             var e;
-            return (null == (e = h.default.getCurrentUser()) ? void 0 : e.id) === t.id;
+            return (null == (e = m.default.getCurrentUser()) ? void 0 : e.id) === t.id;
         })
     )
         return null;

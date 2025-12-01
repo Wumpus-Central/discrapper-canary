@@ -1,7 +1,7 @@
 n.d(t, {
-    PA: () => m,
+    PA: () => h,
     ZP: () => g,
-    un: () => h,
+    un: () => m,
 }),
     n(388685);
 var r = n(836560),
@@ -41,7 +41,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,19 +53,19 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let h = ["gameMentionInput", "timestampMentionInput"];
-function m() {
+let m = ["gameMentionInput", "timestampMentionInput"];
+function h() {
     return {
         query: null,
         selectedIndex: null,
@@ -90,7 +90,7 @@ class g extends r.EventEmitter {
             i = this.props.isEditorIdle !== e.isEditorIdle;
         if (((this.props = e), n || r || i))
             this.updateResultsDebounced(r, n),
-                this.state.didInitialQuery || (this.state = p(f({}, this.state), { didInitialQuery: !0 }));
+                this.state.didInitialQuery || (this.state = _(f({}, this.state), { didInitialQuery: !0 }));
         else if (t) {
             let e = this.state.query;
             this.setState({ isVisible: null != e && this.shouldShow(e.resultCount, e.isLoading, e.typeInfo) });
@@ -171,13 +171,13 @@ class g extends r.EventEmitter {
             d = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (null == this.props.editorRef.current) return;
         let f = (0, u.FW)(this.props, this.state),
-            _ = this.props.editorRef.current.getSlateEditor();
-        null != _ &&
+            p = this.props.editorRef.current.getSlateEditor();
+        null != p &&
             (r =
-                null != (n = o.bN.getSelectedParentOfType(_, h))
-                    ? o.bN.getTextFromRange(_, o.bN.range(_, n[1]))
+                null != (n = o.bN.getSelectedParentOfType(p, m))
+                    ? o.bN.getTextFromRange(p, o.bN.range(p, n[1]))
                     : null);
-        let p = (0, u.fZ)({
+        let _ = (0, u.fZ)({
                 channel: this.props.channel,
                 guild: this.props.guild,
                 options: f,
@@ -188,10 +188,10 @@ class g extends r.EventEmitter {
                 parentAutocompleteInputType: null == n ? void 0 : n[0].type,
                 parentAutocompleteInputValue: r,
             }),
-            m = f.commands !== c.L8.DISABLED ? (0, u.py)(this.props.activeCommandOption, this.props.currentWord) : null;
-        if (null == p && null != m) p = m;
-        else if (null == p || (null != m && p.type !== m.type)) return void this.clearQuery();
-        let { type: g, typeInfo: E, query: b } = p,
+            h = f.commands !== c.L8.DISABLED ? (0, u.py)(this.props.activeCommandOption, this.props.currentWord) : null;
+        if (null == _ && null != h) _ = h;
+        else if (null == _ || (null != h && _.type !== h.type)) return void this.clearQuery();
+        let { type: g, typeInfo: E, query: b } = _,
             y =
                 d ||
                 (i &&
@@ -201,14 +201,14 @@ class g extends r.EventEmitter {
         f.allowStickers = f.allowStickers ? O : f.allowStickers;
         let v = l.eR.getSetting();
         f.allowSoundmoji = f.allowSoundmoji ? v : f.allowSoundmoji;
-        let { results: I, metadata: T } = E.queryResults(this.props.channel, this.props.guild, b, f, y),
-            S = 0;
-        for (let e of Object.values(I)) Array.isArray(e) && (S += e.length);
-        let A = !0 === I.isLoading,
-            C = this.shouldShow(S, A, E),
+        let { results: S, metadata: I } = E.queryResults(this.props.channel, this.props.guild, b, f, y),
+            T = 0;
+        for (let e of Object.values(S)) Array.isArray(e) && (T += e.length);
+        let A = !0 === S.isLoading,
+            C = this.shouldShow(T, A, E),
             N = this.state.selectedIndex;
-        !C || A ? (N = null) : null != N && N >= S && (N = S - 1);
-        let R =
+        !C || A ? (N = null) : null != N && N >= T && (N = T - 1);
+        let P =
             null != this.props.guild &&
             s.N.getCurrentConfig(
                 {
@@ -217,14 +217,14 @@ class g extends r.EventEmitter {
                 },
                 { autoTrackExposure: !0 },
             ).enabled;
-        C && !this.state.isVisible && (0, a.a7)(g, this.props.channel, T, R),
+        C && !this.state.isVisible && (0, a.a7)(g, this.props.channel, I, P),
             this.setState({
                 query: {
                     type: g,
                     typeInfo: E,
                     queryText: b,
-                    results: I,
-                    resultCount: S,
+                    results: S,
+                    resultCount: T,
                     options: f,
                     isLoading: A,
                 },
@@ -240,7 +240,7 @@ class g extends r.EventEmitter {
         if (!this.state.isVisible) return !1;
         let { type: s, typeInfo: l, results: u, resultCount: d, options: f } = this.state.query;
         if (e >= d) return !1;
-        let _ =
+        let p =
             null == (i = l.onSelect)
                 ? void 0
                 : i.call(l, {
@@ -253,7 +253,7 @@ class g extends r.EventEmitter {
                       tabOrEnter: n,
                       queryText: null == (r = this.state.query) ? void 0 : r.queryText,
                   });
-        return null != _ && (0, a.Qt)(s, null != (o = _.type) ? o : null, this.props.channel, _.metadata), !0;
+        return null != p && (0, a.Qt)(s, null != (o = p.type) ? o : null, this.props.channel, p.metadata), !0;
     }
     setState(e) {
         for (let t in e)
@@ -270,6 +270,6 @@ class g extends r.EventEmitter {
             d(this, "nextUpdateContextChanged", !1),
             d(this, "updateTimeout", void 0),
             (this.props = e),
-            (this.state = m());
+            (this.state = h());
     }
 }

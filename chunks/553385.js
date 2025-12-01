@@ -1,7 +1,7 @@
 n.d(t, {
-    XP: () => _,
+    XP: () => p,
     j8: () => f,
-    z$: () => p,
+    z$: () => _,
 });
 var r = n(544891),
     i = n(430742),
@@ -20,7 +20,7 @@ function f(e) {
         rejectWithError: !0,
     });
 }
-async function _(e, t, n) {
+async function p(e, t, n) {
     await r.tn.post({
         url: d.ANM.SEND_GAMING_STATS(t),
         body: {
@@ -32,9 +32,9 @@ async function _(e, t, n) {
         },
         rejectWithError: !1,
     }),
-        h(t);
+        m(t);
 }
-async function p(e) {
+async function _(e) {
     let t = await r.tn.patch({
         url: d.ANM.UPDATE_GAMING_STATS(e.channel_id, e.id),
         rejectWithError: !1,
@@ -48,10 +48,10 @@ async function p(e) {
                 shouldMention: !1,
                 showMentionToggle: !1,
             }),
-            h(n.id)),
+            m(n.id)),
             i.Z.saveDraft(e.channel_id, t.text, l.d.ChannelMessage);
     }
 }
-function h(e) {
+function m(e) {
     c.Z.getMessages(e).hasMoreAfter ? a.Z.jumpToPresent(e, d.AQB) : u.S.dispatch(d.CkL.SCROLLTO_PRESENT);
 }

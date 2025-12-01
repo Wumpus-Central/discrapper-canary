@@ -10,7 +10,7 @@ var i = n(442837),
     u = n(626135),
     d = n(981631),
     f = n(388032);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,12 +34,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -51,12 +51,12 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -84,16 +84,16 @@ function E(e, t) {
     return i;
 }
 function b(e) {
-    var { variant: t = "active", size: n = "sm", hangStatusChannel: _, onAction: h, userId: E } = e,
+    var { variant: t = "active", size: n = "sm", hangStatusChannel: p, onAction: m, userId: E } = e,
         b = g(e, ["variant", "size", "hangStatusChannel", "onAction", "userId"]);
-    let y = (0, i.e7)([c.Z], () => c.Z.getChannelId() === _.id),
+    let y = (0, i.e7)([c.Z], () => c.Z.getChannelId() === p.id),
         O = () => {
-            null == h || h(),
-                o.default.selectVoiceChannel(_.id),
-                (0, l.Kh)(_.id),
+            null == m || m(),
+                o.default.selectVoiceChannel(p.id),
+                (0, l.Kh)(p.id),
                 u.default.track(
                     d.rMx.HANG_STATUS_CTA_CLICKED,
-                    m(p({ source: "UserProfilePopout" }, (0, s.Z)(_.id)), {
+                    h(_({ source: "UserProfilePopout" }, (0, s.Z)(p.id)), {
                         other_user_id: E,
                         cta_type: y ? "open" : "join",
                     }),
@@ -101,7 +101,7 @@ function b(e) {
         };
     return (0, r.jsx)(
         a.Button,
-        p(
+        _(
             {
                 text: y ? f.intl.string(f.t.BXxdl7) : f.intl.string(f.t["9C444m"]),
                 onClick: O,

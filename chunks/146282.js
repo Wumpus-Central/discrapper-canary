@@ -21,24 +21,24 @@ let c = new Map(),
     u = new Map(),
     d = new Map(),
     f = !1;
-function _(e) {
+function p(e) {
     e(c), (c = new Map(c));
 }
-function p(e) {
+function _(e) {
     let { feedId: t, feed: n } = e;
-    _((e) => e.set(t, n)), d.set(t, new Date());
+    p((e) => e.set(t, n)), d.set(t, new Date());
 }
-function h(e) {
+function m(e) {
     let { feedId: t, state: n } = e;
     u.set(t, n);
 }
-function m() {
+function h() {
     c = new Map();
 }
 function g(e) {
     let { feedId: t } = e;
     if (!c.has(t)) return !1;
-    _((e) => e.delete(t));
+    p((e) => e.delete(t));
 }
 function E(e) {
     let { filters: t } = e;
@@ -80,9 +80,9 @@ class y extends (i = a.ZP.Store) {
 }
 l(y, "displayName", "ContentInventoryStore");
 let O = new y(o.Z, {
-    CONNECTION_OPEN: m,
-    CONTENT_INVENTORY_SET_FEED: p,
-    CONTENT_INVENTORY_SET_FEED_STATE: h,
+    CONNECTION_OPEN: h,
+    CONTENT_INVENTORY_SET_FEED: _,
+    CONTENT_INVENTORY_SET_FEED_STATE: m,
     CONTENT_INVENTORY_SET_FILTERS: E,
     CONTENT_INVENTORY_CLEAR_FEED: g,
     CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING: b,

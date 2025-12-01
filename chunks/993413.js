@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(704826), n(35282), n(953529);
+n.d(t, { Z: () => _ }), n(704826), n(35282), n(953529);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -14,7 +14,7 @@ function f(e) {
         return isNaN(t) ? e : (0, l.Ng)(t);
     });
 }
-function _(e) {
+function p(e) {
     let { errors: t } = e;
     return (0, r.jsx)(r.Fragment, {
         children: t.map((e, t) =>
@@ -31,16 +31,16 @@ function _(e) {
         ),
     });
 }
-let p = i.forwardRef(function (e, t) {
+let _ = i.forwardRef(function (e, t) {
     let {
         title: n,
         titleIcon: i,
         titleId: a,
         description: l,
         children: f,
-        className: p,
-        errors: h,
-        disabled: m = !1,
+        className: _,
+        errors: m,
+        disabled: h = !1,
         hideDivider: g = !1,
         showBorder: E = !1,
         borderType: b,
@@ -49,8 +49,8 @@ let p = i.forwardRef(function (e, t) {
         showPremiumIcon: v = !1,
     } = e;
     return (0, r.jsx)("div", {
-        className: o()(d.customizationSection, p, {
-            [d.disabled]: m,
+        className: o()(d.customizationSection, _, {
+            [d.disabled]: h,
             [d.hideDivider]: g,
             [d.showBorder]: E,
             [d.withDivider]: O,
@@ -76,7 +76,7 @@ let p = i.forwardRef(function (e, t) {
                       })
                     : null,
                 f,
-                null != h && (0, r.jsx)(_, { errors: h }),
+                null != m && (0, r.jsx)(p, { errors: m }),
             ],
         }),
     });

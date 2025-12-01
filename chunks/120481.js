@@ -60,14 +60,14 @@ function d(e, t) {
 function f(e, t) {
     let { attributes: n, children: i, element: a } = t;
     return "timestampMentionInput" === a.type
-        ? (0, r.jsx)(_, {
+        ? (0, r.jsx)(p, {
               attributes: n,
               element: a,
               children: i,
           })
         : null;
 }
-let _ = (e) => {
+let p = (e) => {
     let { element: t, attributes: n, children: i } = e,
         l = (0, o.vt)(),
         u = (0, o.UE)(),
@@ -75,7 +75,7 @@ let _ = (e) => {
             [s.selectedPill]: u && l,
             [s.erroredPill]: t.error,
         }),
-        _ = (0, r.jsx)("span", {
+        p = (0, r.jsx)("span", {
             className: s.optionPillValue,
             children: i,
         });
@@ -89,7 +89,7 @@ let _ = (e) => {
                     contentEditable: !1,
                     children: ["@time", "\u200B"],
                 }),
-                _,
+                p,
                 (0, r.jsx)("span", {
                     contentEditable: !1,
                     children: "\u200B",

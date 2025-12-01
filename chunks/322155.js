@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -9,7 +9,7 @@ var r,
     u = n(509140),
     d = n(987650),
     f = n(981631);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,15 +22,15 @@ function _(e, t, n) {
         e
     );
 }
-let p = new Set(),
-    h = null,
+let _ = new Set(),
     m = null,
+    h = null,
     g = null;
 function E(e) {
     var t;
     if (d.y3) return !0;
-    if (null == m) return !1;
-    let n = null != (t = null == m ? void 0 : m.isCrashedDisabled) && t;
+    if (null == h) return !1;
+    let n = null != (t = null == h ? void 0 : h.isCrashedDisabled) && t;
     return !!e || !n;
 }
 function b(e) {
@@ -40,34 +40,34 @@ function b(e) {
     } else e || null != g || ((g = Date.now()), o.Z.track(f.rMx.OVERLAY_UNLOCKED));
 }
 function y(e, t) {
-    b(e), e ? p.delete(t) : p.add(t), (p = new Set(p));
+    b(e), e ? _.delete(t) : _.add(t), (_ = new Set(_));
 }
 function O(e, t) {
-    return !!E(e) && (y(e, t), null == m || m.setInteractionEnabled(!e), x.emitChange(), !0);
+    return !!E(e) && (y(e, t), null == h || h.setInteractionEnabled(!e), L.emitChange(), !0);
 }
 function v(e, t) {
     return (
         !!E(e) &&
-        (y(e, t), null == h || (clearTimeout(h), (h = null), !e)) &&
+        (y(e, t), null == m || (clearTimeout(m), (m = null), !e)) &&
         (e
             ? O(e, t)
-            : (h = setTimeout(() => {
-                  O(e, t), I();
+            : (m = setTimeout(() => {
+                  O(e, t), S();
               }, 100)),
         !0)
     );
 }
+function S() {
+    null != m && (clearTimeout(m), (m = null));
+}
 function I() {
-    null != h && (clearTimeout(h), (h = null));
+    S(), _.clear(), (_ = new Set()), (g = null);
 }
 function T() {
-    I(), p.clear(), (p = new Set()), (g = null);
-}
-function S() {
-    return (m = u.Z.getNativeModule()), T(), !0;
+    return (h = u.Z.getNativeModule()), I(), !0;
 }
 function A() {
-    return (m = null), T(), !0;
+    return (h = null), I(), !0;
 }
 function C(e) {
     let { locked: t, pid: n } = e;
@@ -78,42 +78,42 @@ function N(e) {
         n = l.Z.getFocusedPID();
     return (0, c.PY)(null != n ? n : null, "activate_region", { region: t }), null != n && v(!1, n), !0;
 }
-function R() {
+function P() {
     let e = l.Z.getFocusedPID();
     return (0, c.PY)(null != e ? e : null, "deactivate_all_regions"), null != e && O(!0, e), !0;
 }
-function P() {
-    return T(), !0;
+function R() {
+    return I(), !0;
 }
-function D(e) {
+function w(e) {
     let { lastAssociatedPID: t } = e;
     return null != t && O(!0, t), !0;
 }
-function w() {
-    T(), null == m || m.setInteractionEnabled(!1);
+function D() {
+    I(), null == h || h.setInteractionEnabled(!1);
 }
-class L extends (r = i.ZP.Store) {
+class x extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(u.Z);
     }
     isInputLocked(e) {
-        return null == e || e === s.UNSET_PID || !1 === p.has(e);
+        return null == e || e === s.UNSET_PID || !1 === _.has(e);
     }
 }
-_(L, "displayName", "Overlay-v3-Native-Input-Lock-Store");
-let x = new L(
+p(x, "displayName", "Overlay-v3-Native-Input-Lock-Store");
+let L = new x(
         a.Z,
         __OVERLAY__ || !d.iP
             ? { OVERLAY_SET_INPUT_LOCKED: C }
             : {
-                  OVERLAY_V3_LOAD_NATIVE_MODULE_SUCCESS: S,
+                  OVERLAY_V3_LOAD_NATIVE_MODULE_SUCCESS: T,
                   OVERLAY_V3_LOAD_NATIVE_MODULE_FAILED: A,
                   OVERLAY_SET_INPUT_LOCKED: C,
                   OVERLAY_ACTIVATE_REGION: N,
-                  OVERLAY_DEACTIVATE_ALL_REGIONS: R,
-                  OVERLAY_V3_CREATE_WINDOW_HANDLE_SUCCESS: w,
-                  OVERLAY_V3_NATIVE_DESTROY_HOST_WINDOW: P,
-                  OVERLAY_V3_NATIVE_REFRESH_HOST_WINDOW: D,
+                  OVERLAY_DEACTIVATE_ALL_REGIONS: P,
+                  OVERLAY_V3_CREATE_WINDOW_HANDLE_SUCCESS: D,
+                  OVERLAY_V3_NATIVE_DESTROY_HOST_WINDOW: R,
+                  OVERLAY_V3_NATIVE_REFRESH_HOST_WINDOW: w,
               },
     ),
-    M = x;
+    j = L;

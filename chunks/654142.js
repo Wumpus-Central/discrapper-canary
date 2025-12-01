@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(664915),
     u = n(888369),
     d = n(430824),
-    p = n(823379),
+    f = n(823379),
     h = n(179809),
-    f = n(652376),
+    p = n(652376),
     g = n(981631);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -79,8 +79,8 @@ let _ = i.memo(function (e) {
             return i;
         })(e, ["folderNode"]);
     let { id: y, name: O, color: v, children: j } = t,
-        C = j.map((e) => e.id),
-        x = (0, s.Z)((e) => e.guildId),
+        x = j.map((e) => e.id),
+        C = (0, s.Z)((e) => e.guildId),
         E = (0, l.e7)([c.Z], () => c.Z.isFolderExpanded(y)),
         S = (function (e) {
             let t = e.children
@@ -89,21 +89,21 @@ let _ = i.memo(function (e) {
                             n = d.Z.getGuild(t);
                         return null != n ? n.name : null;
                     })
-                    .filter(p.lm),
+                    .filter(f.lm),
                 n = 2 * g.dYL,
                 r = [];
             for (let e of t) (e.length < n || 0 === r.length) && (r.push(e), (n -= e.length));
             return "".concat(r.join(", ")).concat(r.length < t.length ? ", ..." : "");
         })(t),
-        I = (0, f.Z)(t),
+        I = (0, p.Z)(t),
         {
             mentionCount: P,
             isMentionLowImportance: N,
             unread: Z,
         } = (0, l.cj)([u.default], () => ({
-            mentionCount: C.map((e) => u.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
-            isMentionLowImportance: C.every((e) => u.default.getIsMentionLowImportance(e)),
-            unread: C.some((e) => u.default.hasUnread(e)),
+            mentionCount: x.map((e) => u.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
+            isMentionLowImportance: x.every((e) => u.default.getIsMentionLowImportance(e)),
+            unread: x.some((e) => u.default.hasUnread(e)),
         })),
         w = i.useCallback(() => {
             a.Z.toggleGuildFolderExpand(y);
@@ -131,7 +131,7 @@ let _ = i.memo(function (e) {
         b(m({}, _), {
             folderNode: t,
             expanded: E,
-            selected: null != x && C.includes(x),
+            selected: null != C && x.includes(C),
             mentionCount: P,
             isMentionLowImportance: N,
             unread: Z,

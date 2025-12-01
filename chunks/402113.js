@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(54381);
 n(473749);
 var i = n(481060),
@@ -48,7 +48,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,11 +59,11 @@ function _(e, t) {
         e
     );
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -71,7 +71,7 @@ function p(e, t) {
     }
     return i;
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -80,13 +80,13 @@ function h(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function m(e) {
+function h(e) {
     var { location: t, applicationId: n, centerButton: u = !1 } = e,
-        f = p(e, ["location", "applicationId", "centerButton"]);
-    let { parentAnalyticsLocation: h } = (0, o.ZP)(),
-        m = u ? l.d : l.Z,
+        f = _(e, ["location", "applicationId", "centerButton"]);
+    let { parentAnalyticsLocation: m } = (0, o.ZP)(),
+        h = u ? l.d : l.Z,
         g = () => {
-            (0, s.v)(h, s.d.LEAVE_ACTIVITY),
+            (0, s.v)(m, s.d.LEAVE_ACTIVITY),
                 a.Z.leaveActivity({
                     location: t,
                     applicationId: n,
@@ -94,8 +94,8 @@ function m(e) {
                 });
         };
     return (0, r.jsx)(
-        m,
-        _(d({}, f), {
+        h,
+        p(d({}, f), {
             isTrayButton: !1,
             onClick: g,
             iconComponent: i.PBZ,

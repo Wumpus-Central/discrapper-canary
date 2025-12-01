@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,11 +58,11 @@ function _(e, t) {
         e
     );
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -70,7 +70,7 @@ function p(e, t) {
     }
     return i;
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -79,34 +79,34 @@ function h(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function m(e) {
+function h(e) {
     var { onConfirm: t, onCancel: n } = e,
-        l = p(e, ["onConfirm", "onCancel"]);
+        l = _(e, ["onConfirm", "onCancel"]);
     let [u, f] = i.useState(!1);
     i.useEffect(() => {
         s.ZP.updatedUnsyncedSettings({ disableEmbeddedActivityPopOutAlert: u });
     }, [u]);
-    let h = () => {
+    let m = () => {
             null == n || n(), l.onClose();
         },
-        m = () => {
+        h = () => {
             t(), l.onClose();
         };
     return (0, r.jsx)(
         a.Modal,
-        _(d({}, l), {
+        p(d({}, l), {
             size: "md",
             title: c.intl.string(c.t.ye21jI),
             subtitle: c.intl.string(c.t.hbagWD),
             actions: [
                 {
                     text: c.intl.string(c.t.B8pz37),
-                    onClick: h,
+                    onClick: m,
                     variant: "secondary",
                 },
                 {
                     text: c.intl.string(c.t.makWn9),
-                    onClick: m,
+                    onClick: h,
                     variant: "primary",
                 },
             ],
@@ -125,8 +125,8 @@ function g(e) {
         : (0, o.h7j)(
               (e) =>
                   (0, r.jsx)(
-                      m,
-                      _(d({}, e), {
+                      h,
+                      p(d({}, e), {
                           onConfirm: t,
                           onCancel: n,
                       }),

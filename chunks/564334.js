@@ -61,19 +61,19 @@ function o(e) {
             lightness: d,
             alpha: i,
         };
-    let _ = 0;
+    let p = 0;
     switch (l) {
         case a:
-            _ = ((o - s) / u) % 6;
+            p = ((o - s) / u) % 6;
             break;
         case o:
-            _ = (s - a) / u + 2;
+            p = (s - a) / u + 2;
             break;
         case s:
-            _ = (o - s) / u + 4;
+            p = (o - s) / u + 4;
     }
     return {
-        hue: 60 * _,
+        hue: 60 * p,
         saturation: f,
         lightness: d,
         alpha: i,

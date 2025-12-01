@@ -17,15 +17,15 @@ var n = r(473749),
     u = r(512722),
     i = r.n(u),
     c = r(442837),
-    a = r(974167),
-    o = r(314897),
-    s = r(131951),
+    o = r(974167),
+    s = r(314897),
+    a = r(131951),
     f = r(19780),
     d = r(760373),
     E = r(65154);
 function g(e) {
     let { userId: t } = e,
-        r = (0, c.e7)([o.default], () => o.default.getId());
+        r = (0, c.e7)([s.default], () => s.default.getId());
     i()(r !== t, "[useSecureFramesPairwiseFingerprint] Should not pass current user id.");
     let [u, g] = n.useState(null),
         [y, p] = n.useState(!1),
@@ -36,13 +36,13 @@ function g(e) {
         }, []),
         S = n.useCallback(
             async (e, t, r, n) => {
-                if (s.Z.supports(E.AN.MLS_PAIRWISE_FINGERPRINTS)) {
+                if (a.Z.supports(E.AN.MLS_PAIRWISE_FINGERPRINTS)) {
                     var l;
                     null == (l = f.Z.getRTCConnection()) ||
                         l.getMLSPairwiseFingerprint(d.Xj, r, (e) => {
                             O(new Uint8Array(e));
                         });
-                } else O(await (0, a.Il)(d.Xj, new Uint8Array(t), e, new Uint8Array(n), r));
+                } else O(await (0, o.Il)(d.Xj, new Uint8Array(t), e, new Uint8Array(n), r));
             },
             [O],
         ),

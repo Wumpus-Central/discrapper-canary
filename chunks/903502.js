@@ -30,8 +30,8 @@ let p = [
 function h() {
     let [e, t] = l.useState(null),
         [n, h] = l.useState(0),
-        [x, g] = l.useState(1000),
-        [f, b] = l.useState(0),
+        [x, f] = l.useState(1000),
+        [g, b] = l.useState(0),
         v = (0, i.e7)([c.Z], () => {
             var t;
             return null === e ? null : null != (t = c.Z.getFeedbackConfig(u.nw[e])) ? t : o.R[u.nw[e]];
@@ -44,7 +44,7 @@ function h() {
                 value: t,
             };
         }),
-        y = l.useMemo(() => null != e && f >= 0 && f <= 100 && n >= 0, [e, f, n]);
+        y = l.useMemo(() => null != e && g >= 0 && g <= 100 && n >= 0, [e, g, n]);
     return (0, a.jsx)("div", {
         className: m.container,
         children: (0, a.jsxs)(r.Kqy, {
@@ -104,7 +104,7 @@ function h() {
                                     options: p,
                                     value: x,
                                     onChange: (e) => {
-                                        g(e);
+                                        f(e);
                                     },
                                     popoutLayerContext: d.O$,
                                 }),
@@ -121,7 +121,7 @@ function h() {
                         helperText: "As a percentage",
                         min: 0,
                         max: 100,
-                        value: f.toString(),
+                        value: g.toString(),
                         type: "number",
                         onChange: (e) => b(parseFloat(e)),
                     }),
@@ -151,7 +151,7 @@ function h() {
                                         type: "FEEDBACK_OVERRIDE_SET",
                                         feedbackType: v.feedbackType,
                                         cooldown: n * x,
-                                        chance: f / 100,
+                                        chance: g / 100,
                                     })
                                 ),
                             disabled: !y,
@@ -170,7 +170,7 @@ function h() {
                         color: "text-danger",
                         children: "Error: cooldown needs to be a number greater than 0",
                     }),
-                !(f >= 0 && f <= 100) &&
+                !(g >= 0 && g <= 100) &&
                     (0, a.jsx)(r.Text, {
                         variant: "text-sm/normal",
                         color: "text-danger",

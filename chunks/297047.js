@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => h,
-    q: () => p,
+    Z: () => m,
+    q: () => _,
 }),
     n(388685);
 var r = n(54381);
@@ -14,8 +14,8 @@ var i = n(442837),
     u = n(585483),
     d = n(51144),
     f = n(981631),
-    _ = n(388032);
-function p(e, t) {
+    p = n(388032);
+function _(e, t) {
     let { id: n } = e,
         r = "@".concat(d.ZP.getUserTag(e, { decoration: "never" })),
         i = "<@".concat(n, ">");
@@ -25,7 +25,7 @@ function p(e, t) {
     }),
         null != t && o.Z.startTyping(t);
 }
-function h(e, t, n) {
+function m(e, t, n) {
     let [o, u] = (0, i.Wu)([c.Z, s.Z, l.Z], () => {
             let e = c.Z.getChannelId(t),
                 n = s.Z.getChannel(e);
@@ -33,12 +33,12 @@ function h(e, t, n) {
         }, [t]),
         d = n === f.IlC.POPOUT;
     if (!u || d) return null;
-    function h() {
-        p(e, o);
+    function m() {
+        _(e, o);
     }
     return (0, r.jsx)(a.sNh, {
         id: "mention",
-        label: _.intl.string(_.t.P8tvKG),
-        action: h,
+        label: p.intl.string(p.t.P8tvKG),
+        action: m,
     });
 }

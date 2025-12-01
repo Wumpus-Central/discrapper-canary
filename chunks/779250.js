@@ -21,17 +21,17 @@ var r,
     O = n(236373),
     E = n(230900),
     N = n(854698),
-    P = n(334877),
-    C = n(785468),
+    C = n(334877),
+    P = n(785468),
     S = n(377329),
     I = n(311166),
-    T = n(744782),
-    Z = n(129526),
+    Z = n(744782),
+    T = n(129526),
     w = n(765305),
     D = n(981631),
     k = n(388032),
     R = n(869939);
-function A(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +56,7 @@ function A(e) {
     }
     return e;
 }
-let { INVITE_OPTIONS_7_DAYS: _, INVITE_OPTIONS_UNLIMITED: G } = v.ZP;
+let { INVITE_OPTIONS_7_DAYS: A, INVITE_OPTIONS_UNLIMITED: G } = v.ZP;
 var U =
     (((r = U || {})[(r.ENTITY = 0)] = "ENTITY"),
     (r[(r.SETTINGS = 1)] = "SETTINGS"),
@@ -147,7 +147,7 @@ function z(e) {
         O = (0, m.Dt)(),
         E = i.useRef(n),
         N = !(0, a.isEqual)(E.current, n),
-        Z = i.useMemo(
+        T = i.useMemo(
             () => [
                 {
                     slideId: 0,
@@ -171,23 +171,23 @@ function z(e) {
         ),
         w = Object.keys(U).length,
         D = (0, j.xt)(n),
-        A = (e) => Math.max(0, Math.min(e, w - 1)),
-        [_, G] = i.useState(+!!D),
+        _ = (e) => Math.max(0, Math.min(e, w - 1)),
+        [A, G] = i.useState(+!!D),
         [z, F] = i.useState(!1),
         M = i.useMemo(
             () =>
-                Z.slice(0, _ + 1)
+                T.slice(0, A + 1)
                     .map((e) => e.valid)
                     .every(Boolean),
-            [Z, _],
+            [T, A],
         ),
-        V = _ >= Z.length ? 3 : Z[A(_)].slideId,
+        V = A >= T.length ? 3 : T[_(A)].slideId,
         B = 3 === V;
-    (0, P.l)((e) => e.onUpdateCanCloseModal)(B);
+    (0, C.l)((e) => e.onUpdateCanCloseModal)(B);
     let X = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         W = i.useRef(null),
         q = (e) => {
-            F(!1), G(A(e));
+            F(!1), G(_(e));
         },
         H = i.useRef(q);
     i.useEffect(() => {
@@ -197,10 +197,10 @@ function z(e) {
             (null == y ? void 0 : y.id) != null && H.current(3);
         }, [null == y ? void 0 : y.id]);
     let Y = () => {
-            M && (2 === V ? f() : B ? b() : q(_ + 1));
+            M && (2 === V ? f() : B ? b() : q(A + 1));
         },
         K = () => {
-            q(_ - 1);
+            q(A - 1);
         },
         J = k.intl.string(k.t.PDTjLN);
     return (
@@ -220,10 +220,10 @@ function z(e) {
                     children: [
                         !B &&
                             (0, l.jsx)(g.Z, {
-                                steps: Z.map((e) => e.label),
-                                stepIndex: _,
+                                steps: T.map((e) => e.label),
+                                stepIndex: A,
                                 onClick: (e) => {
-                                    e < _ ? K() : e > _ && Y();
+                                    e < A ? K() : e > A && Y();
                                 },
                             }),
                         (0, l.jsxs)(o.MyZ, {
@@ -235,7 +235,7 @@ function z(e) {
                             children: [
                                 (0, l.jsx)(o.Mi4, {
                                     id: 0,
-                                    children: (0, l.jsx)(C.Z, {
+                                    children: (0, l.jsx)(P.Z, {
                                         guildId: t,
                                         guildEvent: n,
                                         validationErrorMessage: d.entity,
@@ -266,7 +266,7 @@ function z(e) {
                                 }),
                                 (0, l.jsx)(o.Mi4, {
                                     id: 3,
-                                    children: (0, l.jsx)(T.Z, {
+                                    children: (0, l.jsx)(Z.Z, {
                                         onClose: b,
                                         event: y,
                                     }),
@@ -323,12 +323,12 @@ function F(e) {
     let d = (0, s.e7)([j.ZP], () => j.ZP.getGuildScheduledEvent(r), [r]),
         g = (0, s.e7)([x.ZP], () => x.ZP.getDefaultChannel(t), [t]),
         m = (0, O.j$)(d, g),
-        [v, P] = i.useState(m),
-        [C] = i.useState((0, O.Ql)(d)),
+        [v, C] = i.useState(m),
+        [P] = i.useState((0, O.Ql)(d)),
         [S, I] = i.useState(null),
-        [T, { loading: R, error: U }] = (0, p.Z)(async () => {
+        [Z, { loading: R, error: U }] = (0, p.Z)(async () => {
             if (null != S) return;
-            if (C && null != r) return await f.Z.saveEvent(r, v, t), u();
+            if (P && null != r) return await f.Z.saveEvent(r, v, t), u();
             let e = await f.Z.createGuildEvent(v, t);
             return (
                 ((e) => {
@@ -339,7 +339,7 @@ function F(e) {
                         c.ZP.createInvite(
                             r,
                             {
-                                max_age: _.value,
+                                max_age: A.value,
                                 max_uses: G.value,
                             },
                             D.t4x.GUILD_EVENTS,
@@ -349,12 +349,12 @@ function F(e) {
                 e
             );
         }),
-        L = i.useMemo(() => (0, Z.Z)(v, C), [v, C]);
+        L = i.useMemo(() => (0, T.Z)(v, P), [v, P]);
     return (0, l.jsx)(z, {
         guildId: t,
         guildEvent: v,
         guildEventId: r,
-        isEdit: C,
+        isEdit: P,
         formErrors: L,
         transitionState: a,
         loading: R,
@@ -367,23 +367,23 @@ function F(e) {
                 (e.channelId = null != (n = null == l ? void 0 : l.id) ? n : null),
                     e.entityType !== w.WX.EXTERNAL && v.entityType === w.WX.EXTERNAL && (e.entityMetadata = null);
             }
-            P((t) => A({}, t, e));
+            C((t) => _({}, t, e));
         },
         onSave: () => {
-            null != v.recurrenceRule && C && (0, N.BP)(d, v)
+            null != v.recurrenceRule && P && (0, N.BP)(d, v)
                 ? (0, o.ZDy)(async () => {
                       let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 481060));
                       return (t) => {
                           var n, r;
                           return (0, l.jsxs)(
                               e,
-                              ((n = A({}, t)),
+                              ((n = _({}, t)),
                               (r = r =
                                   {
                                       header: k.intl.string(k.t.BW1Qoh),
                                       confirmText: k.intl.string(k.t.e5VEcE),
                                       cancelText: k.intl.string(k.t.oEAioF),
-                                      onConfirm: T,
+                                      onConfirm: Z,
                                       children: [
                                           (0, l.jsx)(o.Text, {
                                               variant: "text-md/normal",
@@ -412,7 +412,7 @@ function F(e) {
                           );
                       };
                   })
-                : T();
+                : Z();
         },
         onClose: u,
         createdEvent: S,

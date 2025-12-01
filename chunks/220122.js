@@ -9,17 +9,17 @@ var r = n(481060),
     u = n(779618),
     d = n(341569),
     f = n(39604);
-n(460779);
-var _ = n(356659),
-    p = n(388032);
-let h = "CLIPS_IN_CALL_WARNING";
-class m extends l.Z {
+n(600349);
+var p = n(356659),
+    _ = n(388032);
+let m = "CLIPS_IN_CALL_WARNING";
+class h extends l.Z {
     showClipsToast() {
         (0, r.showToast)({
-            id: h,
-            message: p.intl.string(p.t["d+41qJ"]),
+            id: m,
+            message: _.intl.string(_.t["d+41qJ"]),
             type: r.ToastType.CLIP,
-            options: { duration: _.G$ },
+            options: { duration: p.G$ },
         });
     }
     applyNativeClipsSettings(e) {
@@ -46,7 +46,7 @@ class m extends l.Z {
         let t = a.ZP.getVisibleGame();
         null != t &&
             (e.added.find((e) => e.pid === t.pid)
-                ? setTimeout(() => this.fireClipsInitEvent(), _.jp)
+                ? setTimeout(() => this.fireClipsInitEvent(), p.jp)
                 : this.fireClipsInitEvent());
     }
     fireClipsInitEvent() {
@@ -71,8 +71,8 @@ class m extends l.Z {
         let e = c.Z.getSettings().storageLocation;
         "" !== e &&
             f.jv(e).catch((e) => {
-                _.jF.error("Failed to load clips directory on connection open", e);
+                p.jF.error("Failed to load clips directory on connection open", e);
             });
     }
 }
-let g = new m();
+let g = new h();

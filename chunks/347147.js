@@ -4,7 +4,7 @@ var r = n(54381),
     l = n(120356),
     a = n.n(l),
     o = n(392711),
-    c = n(790519),
+    c = n(666917),
     s = n(846519),
     u = n(681715),
     d = n(481060),
@@ -15,8 +15,8 @@ var r = n(54381),
     g = n(937995),
     b = n(158776),
     v = n(626135),
-    E = n(823789),
-    h = n(352978),
+    h = n(823789),
+    E = n(352978),
     y = n(981631),
     S = n(388032),
     O = n(412418),
@@ -141,8 +141,8 @@ let Z = i.memo(function (e) {
             },
             "animate-always",
         ),
-        eE = $ > n,
-        eh = i.useCallback(
+        eh = $ > n,
+        eE = i.useCallback(
             (e) => {
                 e.width > 0 && e.height > 0 && ea(e.width / e.height), null == y || y(e);
             },
@@ -196,16 +196,16 @@ let Z = i.memo(function (e) {
         ),
         eC = i.useCallback(
             (e) => {
-                if (!eE) return;
+                if (!eh) return;
                 e.preventDefault(), e.stopPropagation();
                 let t = ey(e);
                 L(!0), z(t), V(t), H(Date.now()), Q(t), K(B);
             },
-            [ey, eE, B],
+            [ey, eh, B],
         ),
         ew = i.useCallback(
             (e) => {
-                if (((t || eE) && N(), !k || !eE || null == G || null == Y)) return;
+                if (((t || eh) && N(), !k || !eh || null == G || null == Y)) return;
                 e.preventDefault(), e.stopPropagation();
                 let n = ey(e),
                     r = n.x - G.x,
@@ -218,21 +218,21 @@ let Z = i.memo(function (e) {
                 ),
                     V(n);
             },
-            [eS, G, Y, t, ey, k, eE, N],
+            [eS, G, Y, t, ey, k, eh, N],
         ),
         eI = i.useCallback((e) => {
             e.preventDefault(), e.stopPropagation(), L(!1), Q(null), K(null);
         }, []),
         eP = i.useCallback(
             (e) => {
-                if (eE && null != U && null != F) {
+                if (eh && null != U && null != F) {
                     let { x: t, y: n } = U,
                         { x: r, y: i } = F;
                     (Math.sqrt((r - t) ** 2 + (i - n) ** 2) > 0.01 || Date.now() - W >= 500) &&
                         (e.preventDefault(), e.stopPropagation());
                 }
             },
-            [eE, U, W, F],
+            [eh, U, W, F],
         ),
         ej = i.useCallback(() => {
             L(!1), Q(null), K(null);
@@ -334,7 +334,7 @@ let Z = i.memo(function (e) {
         i.useCallback(
             (e) => {
                 let { width: t, height: n } = e;
-                if (!eE || null == t || null == n) return;
+                if (!eh || null == t || null == n) return;
                 let r = eb.current;
                 if (null == r) {
                     eb.current = {
@@ -365,16 +365,16 @@ let Z = i.memo(function (e) {
                         ec(!1);
                     }));
             },
-            [eS, eE, $],
+            [eS, eh, $],
         ),
-        [eE, $],
+        [eh, $],
     ),
         (0, p.zq)(() => {
             ed.current.stop(), ef.current.stop(), ep.current.stop(), em.current.stop();
         }),
         i.useEffect(() => {
-            null != b && (0, E.N)(b, t && eE ? $ : 1);
-        }, [t, eE, b, $]);
+            null != b && (0, h.N)(b, t && eh ? $ : 1);
+        }, [t, eh, b, $]);
     let eU = i.useMemo(() => {
             let e = eS(B);
             return {
@@ -412,7 +412,7 @@ let Z = i.memo(function (e) {
     return (0, r.jsxs)("div", {
         ref: e_,
         className: a()(C.wrapper, Z, {
-            [C.zoomEnabled]: t && eE,
+            [C.zoomEnabled]: t && eh,
             [C.zoomDragging]: k,
         }),
         onMouseDown: eC,
@@ -429,9 +429,9 @@ let Z = i.memo(function (e) {
                         className: a()(C.videoContainer, C.zoomed),
                         style: eU,
                         children: (0, r.jsx)(
-                            h.Z,
+                            E.Z,
                             I(w({}, _), {
-                                onResize: eh,
+                                onResize: eE,
                                 wrapperClassName: void 0,
                             }),
                         ),
@@ -448,7 +448,7 @@ let Z = i.memo(function (e) {
                         onMouseLeave: eN,
                         onClick: eD,
                         children: [
-                            (es || eE) &&
+                            (es || eh) &&
                                 (0, r.jsx)(d.P3F, {
                                     onClick: eV,
                                     onMouseEnter: eA,
@@ -477,7 +477,7 @@ let Z = i.memo(function (e) {
                             (0, r.jsxs)("div", {
                                 className: C.zoomControlsRow,
                                 children: [
-                                    (es || eE) &&
+                                    (es || eh) &&
                                         (0, r.jsxs)(r.Fragment, {
                                             children: [
                                                 (0, r.jsx)(u.u, {

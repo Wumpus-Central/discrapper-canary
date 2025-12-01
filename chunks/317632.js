@@ -35,9 +35,9 @@ function c(e) {
 }
 let u = [],
     d = {},
-    p = null,
+    f = null,
     h = 0;
-function f(e) {
+function p(e) {
     let t = null;
     try {
         t = JSON.parse(e.launch_parameters);
@@ -90,7 +90,7 @@ class g extends (r = i.ZP.Store) {
         return null == (t = d[e.invite_id]) ? void 0 : t.joinable;
     }
     getLastUnseenInvite() {
-        return p;
+        return f;
     }
     getUnseenInviteCount() {
         return h;
@@ -100,12 +100,12 @@ s(g, "displayName", "GameInviteStore");
 let m = new g(l.Z, {
     CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
         let { gameInvites: t } = e;
-        u = t.map(f).filter(o.lm);
+        u = t.map(p).filter(o.lm);
     },
     GAME_INVITE_CREATE: function (e) {
         let { gameInvite: t } = e,
-            n = f(t);
-        null != n && ((u = [n, ...u]), (p = t), (h += 1));
+            n = p(t);
+        null != n && ((u = [n, ...u]), (f = t), (h += 1));
     },
     GAME_INVITE_DELETE: function (e) {
         let { inviteId: t } = e;
@@ -122,6 +122,6 @@ let m = new g(l.Z, {
         };
     },
     GAME_INVITE_CLEAR_UNSEEN: function (e) {
-        (p = null), (h = 0);
+        (f = null), (h = 0);
     },
 });

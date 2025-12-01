@@ -18,11 +18,11 @@ var i = n(54381),
     C = n(388032);
 function v(e) {
     let { channelId: t, warningId: v, senderId: _ } = e,
-        x = (0, b.E4)(),
-        j = r.useCallback(() => {
+        O = (0, b.E4)(),
+        x = r.useCallback(() => {
             (0, p.T)(t, [v]);
         }, [t, v]),
-        O = (e) => {
+        j = (e) => {
             o.Z.updateChannelOverrideSettings(null, t, { muted: !0 }, g.ZB.Muted),
                 c.Z.showMuteSuccessToast(_, t),
                 (0, f.qc)({
@@ -32,7 +32,7 @@ function v(e) {
                     warningType: h.pj.LIKELY_ATO,
                     cta: e,
                 }),
-                j();
+                x();
         };
     return (
         r.useEffect(() => {
@@ -51,7 +51,7 @@ function v(e) {
             warningType: h.pj.LIKELY_ATO,
             header: C.intl.string(C.t.R8UsiI),
             description: C.intl.string(C.t.lI8nQl),
-            onDismiss: j,
+            onDismiss: x,
             buttons: [
                 {
                     text: C.intl.string(C.t.tC1pvL),
@@ -68,7 +68,7 @@ function v(e) {
                                     warningId: v,
                                     senderId: _,
                                     description: C.intl.string(C.t["/uid3p"]),
-                                    safetyTipRows: x.map((e, t) =>
+                                    safetyTipRows: O.map((e, t) =>
                                         (0, i.jsx)(
                                             u.q,
                                             {
@@ -88,7 +88,7 @@ function v(e) {
                                                 description: C.intl.string(C.t.w2ve0t),
                                                 buttonText: C.intl.string(C.t.ftIK2A),
                                                 onButtonPress: () => {
-                                                    O(f.NM.USER_MODAL_MUTE), l();
+                                                    j(f.NM.USER_MODAL_MUTE), l();
                                                 },
                                             },
                                             "likely-ato-mute",
@@ -123,7 +123,7 @@ function v(e) {
                 },
                 {
                     text: C.intl.string(C.t.ftIK2A),
-                    onClick: () => O(f.NM.USER_BANNER_MUTE),
+                    onClick: () => j(f.NM.USER_BANNER_MUTE),
                 },
             ],
         })

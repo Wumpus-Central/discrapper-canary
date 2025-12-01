@@ -1,8 +1,8 @@
 n.d(t, { Z: () => y });
 var r = n(54381),
     i = n(120356),
-    l = n.n(i),
-    o = n(793030),
+    o = n.n(i),
+    l = n(793030),
     a = n(442837),
     s = n(755721),
     c = n(481060),
@@ -63,11 +63,11 @@ function y(e) {
                   (0, r.jsxs)("div", {
                       className: Z.textContainer,
                       children: [
-                          (0, r.jsx)(o.xvT, {
+                          (0, r.jsx)(l.xvT, {
                               variant: "text-md/semibold",
                               children: E.intl.string(S ? I.default.KSWK1U : I.default.XXXX5l),
                           }),
-                          (0, r.jsx)(o.xvT, {
+                          (0, r.jsx)(l.xvT, {
                               variant: "text-sm/medium",
                               children: E.intl.format(S ? I.default["7fWTg4"] : I.default["7PXeeQ"], {
                                   onClick: () => {
@@ -142,7 +142,7 @@ function y(e) {
                               colorString: C.colorString,
                               colorStrings: C.colorStrings,
                           }),
-                          className: l()(Z.content, Z.exampleMessage),
+                          className: o()(Z.content, Z.exampleMessage),
                           message: E.intl.string(E.t["6OSasb"]),
                           decorations: (0, r.jsx)(c.Ucv, {
                               color: c.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,

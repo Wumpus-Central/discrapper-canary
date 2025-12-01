@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(54381),
     i = n(473749),
     a = n(846519),
@@ -76,11 +76,11 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let _ = 13;
-function p(e) {
-    return "".concat(e).length < _ ? 1000 * e : e;
+let p = 13;
+function _(e) {
+    return "".concat(e).length < p ? 1000 * e : e;
 }
-function h(e) {
+function m(e) {
     return class extends i.PureComponent {
         componentDidMount() {
             this._interval.start(1000, () => this.setState(this.getUpdatedTime()));
@@ -96,9 +96,9 @@ function h(e) {
             let { timestamps: e } = this.props,
                 t = Date.now() / 1000;
             return null != e.end
-                ? this.getDiff(t, p(e.end) / 1000)
+                ? this.getDiff(t, _(e.end) / 1000)
                 : null != e.start
-                  ? this.getDiff(p(e.start) / 1000, t)
+                  ? this.getDiff(_(e.start) / 1000, t)
                   : {
                         hours: 0,
                         minutes: 0,

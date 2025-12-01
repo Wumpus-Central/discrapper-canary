@@ -20,7 +20,7 @@ function c(e, t, n, i) {
         d = () => (0, r.e7)([s.Z], u, void 0, c);
     return {
         getSetting: u,
-        updateSetting: _(u, (n) =>
+        updateSetting: p(u, (n) =>
             o.hW.updateAsync(
                 e,
                 (e) => {
@@ -48,7 +48,7 @@ function u(e, t, n) {
                 });
             return null != o ? o : i;
         },
-        updateSetting: _(o, (r) =>
+        updateSetting: p(o, (r) =>
             a.Z.shouldSync(t)
                 ? e.updateSetting(r)
                 : (i.Z.dispatch({
@@ -71,7 +71,7 @@ function d(e, t, n, r) {
                 n = r();
             return null != n ? n : t;
         },
-        updateSetting: _(
+        updateSetting: p(
             a,
             (n) => (
                 i.Z.dispatch({
@@ -105,7 +105,7 @@ function f(e) {
         updateSetting: (e) => t.updateSetting(e),
     };
 }
-function _(e, t) {
+function p(e, t) {
     return function (n) {
         return "function" == typeof n ? t(n(e())) : t(n);
     };

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(825670), n(539854), n(642613), n(388685);
+n.d(t, { Z: () => h }), n(825670), n(539854), n(642613), n(388685);
 var r = n(392711),
     i = n.n(r),
     a = n(913527),
@@ -57,14 +57,14 @@ function u(e, t) {
 }
 let d = 10,
     f = 32,
-    _ = (e, t, n) => Math.ceil(e * (t / n.numOfRecentUses)),
-    p = (e) => {
+    p = (e, t, n) => Math.ceil(e * (t / n.numOfRecentUses)),
+    _ = (e) => {
         let t = 1;
         return (
             e <= 3 ? (t = 100) : e <= 15 ? (t = 70) : e <= 30 ? (t = 50) : e <= 45 ? (t = 30) : e <= 80 && (t = 10), t
         );
     };
-class h {
+class m {
     overwriteHistory(e, t) {
         (this.usageHistory = i().mapValues(null != e ? e : {}, (e) => u(l({}, e), { frecency: -1 }))),
             null == t ||
@@ -165,8 +165,8 @@ class h {
     }
     constructor({
         computeBonus: e,
-        computeWeight: t = p,
-        computeFrecency: n = _,
+        computeWeight: t = _,
+        computeFrecency: n = p,
         calculateMaxTotalUse: r = !1,
         lookupKey: i,
         afterCompute: a,
@@ -197,4 +197,4 @@ class h {
             (this.dirty = !1);
     }
 }
-let m = h;
+let h = m;

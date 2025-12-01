@@ -3,14 +3,14 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(790519),
+    s = n(666917),
     l = n(990547),
     c = n(793030),
     u = n(481060),
     d = n(984802),
     f = n(163838),
-    _ = n(325380);
-function p(e, t, n) {
+    p = n(325380);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,12 +34,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -56,7 +56,7 @@ function g(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -67,8 +67,8 @@ function E(e) {
     let {
             transitionState: n,
             animationVariant: a = "default",
-            returnRef: p,
-            "aria-label": m,
+            returnRef: _,
+            "aria-label": h,
             onClose: E,
             trackingProps: b,
             children: y,
@@ -83,21 +83,21 @@ function E(e) {
             }),
             [O, E],
         ),
-        I = (0, d.Ll)(),
-        { theme: T } = (0, u.TCT)(),
-        S = (0, c.hvB)(n, a);
+        S = (0, d.Ll)(),
+        { theme: I } = (0, u.TCT)(),
+        T = (0, c.hvB)(n, a);
     return (0, r.jsx)(c.tCf.Provider, {
         value: v,
         children: (0, r.jsx)(
             u.VqE,
             g(
-                h(
+                m(
                     {
                         id: O,
                         role: "dialog",
-                        "aria-label": m,
-                        "aria-labelledby": null != m ? void 0 : v.headingId,
-                        returnRef: p,
+                        "aria-label": h,
+                        "aria-labelledby": null != h ? void 0 : v.headingId,
+                        returnRef: _,
                     },
                     b,
                 ),
@@ -108,16 +108,16 @@ function E(e) {
                         children: (0, r.jsx)("div", {
                             className: f.outerContainer,
                             children: (0, r.jsx)(u.f6W, {
-                                theme: I,
+                                theme: S,
                                 children: (e) =>
                                     (0, r.jsx)(s.animated.div, {
                                         "data-mana-component": "layer-modal",
-                                        className: o()(_.container, f.modal, e),
-                                        style: S,
+                                        className: o()(p.container, f.modal, e),
+                                        style: T,
                                         children: (0, r.jsx)("div", {
                                             className: f.modalContent,
                                             children: (0, r.jsx)(u.f6W, {
-                                                theme: T,
+                                                theme: I,
                                                 children: (e) =>
                                                     (0, r.jsx)("div", {
                                                         className: o()(e, f.modalContentInner),

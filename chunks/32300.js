@@ -1,18 +1,18 @@
 n.d(t, {
-    F3: () => P,
+    F3: () => R,
     KK: () => A,
-    RD: () => p,
+    RD: () => _,
     Se: () => u,
-    Sy: () => T,
-    T_: () => R,
-    YB: () => _,
+    Sy: () => I,
+    T_: () => P,
+    YB: () => p,
     ZU: () => y,
     aq: () => g,
     dj: () => l,
     eV: () => O,
     hS: () => d,
-    hb: () => I,
-    lj: () => m,
+    hb: () => S,
+    lj: () => h,
     mB: () => f,
     tU: () => b,
     td: () => c,
@@ -94,11 +94,11 @@ let f = (0, a.B)({
         },
     ],
 });
-function _(e) {
+function p(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return f.getCurrentConfig({ location: e }, { autoTrackExposure: t }).enabled;
 }
-var p = (function (e) {
+var _ = (function (e) {
     return (
         (e[(e.GREEN_BUTTON_WITH_TEXT = 0)] = "GREEN_BUTTON_WITH_TEXT"),
         (e[(e.GRAY_BUTTON_WITH_TEXT = 1)] = "GRAY_BUTTON_WITH_TEXT"),
@@ -106,7 +106,7 @@ var p = (function (e) {
         e
     );
 })({});
-let h = (0, o.le)({
+let m = (0, o.le)({
     name: "2025-08-overlay-stream-watch-nudge",
     kind: "user",
     defaultConfig: {
@@ -128,11 +128,11 @@ let h = (0, o.le)({
         },
     },
 });
-function m(e) {
-    return h.getConfig({ location: e });
+function h(e) {
+    return m.getConfig({ location: e });
 }
 function g(e) {
-    return h.useConfig({ location: e });
+    return m.useConfig({ location: e });
 }
 let E = (0, a.B)({
     kind: "user",
@@ -261,17 +261,17 @@ let v = (0, a.B)({
         },
     ],
 });
-function I(e) {
-    let t = T(e, !1);
+function S(e) {
+    let t = I(e, !1);
     if (i()(v.definition.defaultConfig, t)) return "control";
     let n = v.definition.treatments.find((e) => i()(e.config, t));
     return null == n ? "control" : "treatment-".concat(n.id);
 }
-function T(e) {
+function I(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return v.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
-let S = (0, a.B)({
+let T = (0, a.B)({
     id: "2025-11_overlay_welcome_notification",
     label: "Overlay Welcome Notification",
     kind: "user",
@@ -286,7 +286,7 @@ let S = (0, a.B)({
 });
 function A(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return S.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+    return T.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
 let C = (0, a.B)({
     id: "2025-11_overlay_bug_reporter",
@@ -305,13 +305,13 @@ function N(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return C.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
-function R(e) {
+function P(e) {
     return C.useExperiment({ location: e }).enabled;
 }
-function P() {
-    m("OVERLAY_INITIALIZED"),
+function R() {
+    h("OVERLAY_INITIALIZED"),
         b("OVERLAY_INITIALIZED"),
-        T("OVERLAY_INITIALIZED"),
+        I("OVERLAY_INITIALIZED"),
         A("OVERLAY_INITIALIZED"),
         N("OVERLAY_INITIALIZED");
 }

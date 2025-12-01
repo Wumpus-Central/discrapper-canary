@@ -1,82 +1,82 @@
-_.d(e, {
+r.d(t, {
     UK: () => c,
-    xU: () => i,
+    xU: () => s,
 });
-var a = _(578346),
-    r = _(370336),
-    n = _(101284),
-    o = _(573736),
-    E = _(395848);
-let i = "__sentry_xhr_v3__";
-function c(t) {
-    (0, a.Hj)("xhr", t), (0, a.D2)("xhr", s);
+var n = r(578346),
+    a = r(370336),
+    i = r(101284),
+    o = r(573736),
+    _ = r(395848);
+let s = "__sentry_xhr_v3__";
+function c(e) {
+    (0, n.Hj)("xhr", e), (0, n.D2)("xhr", E);
 }
-function s() {
-    if (!E.m.XMLHttpRequest) return;
-    let t = XMLHttpRequest.prototype;
-    (0, r.hl)(t, "open", function (t) {
-        return function (...e) {
-            let _ = 1000 * (0, n.ph)(),
-                E = (0, o.HD)(e[0]) ? e[0].toUpperCase() : void 0,
-                c = (function (t) {
-                    if ((0, o.HD)(t)) return t;
+function E() {
+    if (!_.m.XMLHttpRequest) return;
+    let e = XMLHttpRequest.prototype;
+    (0, a.hl)(e, "open", function (e) {
+        return function (...t) {
+            let r = 1000 * (0, i.ph)(),
+                _ = (0, o.HD)(t[0]) ? t[0].toUpperCase() : void 0,
+                c = (function (e) {
+                    if ((0, o.HD)(e)) return e;
                     try {
-                        return t.toString();
-                    } catch (t) {}
-                })(e[1]);
-            if (!E || !c) return t.apply(this, e);
-            (this[i] = {
-                method: E,
+                        return e.toString();
+                    } catch (e) {}
+                })(t[1]);
+            if (!_ || !c) return e.apply(this, t);
+            (this[s] = {
+                method: _,
                 url: c,
                 request_headers: {},
             }),
-                "POST" === E && c.match(/sentry_key/) && (this.__sentry_own_request__ = !0);
-            let s = () => {
-                let t = this[i];
-                if (t && 4 === this.readyState) {
+                "POST" === _ && c.match(/sentry_key/) && (this.__sentry_own_request__ = !0);
+            let E = () => {
+                let e = this[s];
+                if (e && 4 === this.readyState) {
                     try {
-                        t.status_code = this.status;
-                    } catch (t) {}
-                    let e = {
-                        endTimestamp: 1000 * (0, n.ph)(),
-                        startTimestamp: _,
+                        e.status_code = this.status;
+                    } catch (e) {}
+                    let t = {
+                        endTimestamp: 1000 * (0, i.ph)(),
+                        startTimestamp: r,
                         xhr: this,
                     };
-                    (0, a.rK)("xhr", e);
+                    (0, n.rK)("xhr", t);
                 }
             };
             return (
                 "onreadystatechange" in this && "function" == typeof this.onreadystatechange
-                    ? (0, r.hl)(this, "onreadystatechange", function (t) {
-                          return function (...e) {
-                              return s(), t.apply(this, e);
+                    ? (0, a.hl)(this, "onreadystatechange", function (e) {
+                          return function (...t) {
+                              return E(), e.apply(this, t);
                           };
                       })
-                    : this.addEventListener("readystatechange", s),
-                (0, r.hl)(this, "setRequestHeader", function (t) {
-                    return function (...e) {
-                        let [_, a] = e,
-                            r = this[i];
+                    : this.addEventListener("readystatechange", E),
+                (0, a.hl)(this, "setRequestHeader", function (e) {
+                    return function (...t) {
+                        let [r, n] = t,
+                            a = this[s];
                         return (
-                            r && (0, o.HD)(_) && (0, o.HD)(a) && (r.request_headers[_.toLowerCase()] = a),
-                            t.apply(this, e)
+                            a && (0, o.HD)(r) && (0, o.HD)(n) && (a.request_headers[r.toLowerCase()] = n),
+                            e.apply(this, t)
                         );
                     };
                 }),
-                t.apply(this, e)
+                e.apply(this, t)
             );
         };
     }),
-        (0, r.hl)(t, "send", function (t) {
-            return function (...e) {
-                let _ = this[i];
-                if (!_) return t.apply(this, e);
-                void 0 !== e[0] && (_.body = e[0]);
-                let r = {
-                    startTimestamp: 1000 * (0, n.ph)(),
+        (0, a.hl)(e, "send", function (e) {
+            return function (...t) {
+                let r = this[s];
+                if (!r) return e.apply(this, t);
+                void 0 !== t[0] && (r.body = t[0]);
+                let a = {
+                    startTimestamp: 1000 * (0, i.ph)(),
                     xhr: this,
                 };
-                return (0, a.rK)("xhr", r), t.apply(this, e);
+                return (0, n.rK)("xhr", a), e.apply(this, t);
             };
         });
 }

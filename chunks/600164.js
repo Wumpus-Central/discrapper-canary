@@ -57,11 +57,11 @@ function f(e, t) {
         e
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -69,7 +69,7 @@ function _(e, t) {
     }
     return i;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,12 +78,12 @@ function p(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let h = {
+let m = {
         VERTICAL: l.vertical,
         HORIZONTAL: s.horizontal,
         HORIZONTAL_REVERSE: s.horizontalReverse,
     },
-    m = {
+    h = {
         START: l.justifyStart,
         END: l.justifyEnd,
         CENTER: l.justifyCenter,
@@ -106,16 +106,16 @@ let h = {
         var {
                 children: t,
                 className: n,
-                direction: i = h.HORIZONTAL,
-                justify: a = m.START,
+                direction: i = m.HORIZONTAL,
+                justify: a = h.START,
                 align: l = g.STRETCH,
                 wrap: c = E.NO_WRAP,
                 shrink: d = 1,
-                grow: p = 1,
+                grow: _ = 1,
                 basis: b = "auto",
                 style: y,
             } = e,
-            O = _(e, [
+            O = p(e, [
                 "children",
                 "className",
                 "direction",
@@ -135,7 +135,7 @@ let h = {
                         style: u(
                             {
                                 flexShrink: d,
-                                flexGrow: p,
+                                flexGrow: _,
                                 flexBasis: b,
                             },
                             y,
@@ -149,9 +149,9 @@ let h = {
         );
     };
 (b.Child = (e) => {
-    var { children: t, className: n, shrink: a = 1, grow: l = 1, basis: c = "auto", style: d, wrap: p = !1 } = e,
-        h = _(e, ["children", "className", "shrink", "grow", "basis", "style", "wrap"]);
-    let m = u(
+    var { children: t, className: n, shrink: a = 1, grow: l = 1, basis: c = "auto", style: d, wrap: _ = !1 } = e,
+        m = p(e, ["children", "className", "shrink", "grow", "basis", "style", "wrap"]);
+    let h = u(
         {
             className: (n = null != n ? n : s.flexChild),
             style: u(
@@ -163,18 +163,18 @@ let h = {
                 d,
             ),
         },
-        h,
+        m,
     );
-    if (!p && "string" != typeof t && 1 === i.Children.count(t)) {
+    if (!_ && "string" != typeof t && 1 === i.Children.count(t)) {
         let e = i.Children.only(t);
         return (
-            (m.style = u({}, m.style, e.props.style)), (m.className = o()(e.props.className, n)), i.cloneElement(e, m)
+            (h.style = u({}, h.style, e.props.style)), (h.className = o()(e.props.className, n)), i.cloneElement(e, h)
         );
     }
-    return (0, r.jsx)("div", f(u({}, m), { children: t }));
+    return (0, r.jsx)("div", f(u({}, h), { children: t }));
 }),
-    (b.Direction = h),
+    (b.Direction = m),
     (b.Align = g),
-    (b.Justify = m),
+    (b.Justify = h),
     (b.Wrap = E);
 let y = b;

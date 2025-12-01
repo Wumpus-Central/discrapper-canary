@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(54381);
 n(473749);
 var i = n(442837),
@@ -37,7 +37,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,30 +49,30 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e, t) {
+function m(e, t) {
     let d = (0, a.vRw)(),
-        { videoEnabled: _, hasVideoDevice: h } = (0, i.cj)([l.Z], () => ({
+        { videoEnabled: p, hasVideoDevice: m } = (0, i.cj)([l.Z], () => ({
             videoEnabled: l.Z.isVideoEnabled(),
             hasVideoDevice: l.Z.isVideoAvailable(),
         })),
-        m = (0, i.e7)([s.default], () => s.default.getId() === e),
+        h = (0, i.e7)([s.default], () => s.default.getId() === e),
         g = (0, o.Z)();
     function E() {
         (0, a.ZDy)(
             async () => {
                 let { default: e } = await n.e("91018").then(n.bind(n, 601572));
-                return (t) => (0, r.jsx)(e, p(f({}, t), { videoEnabled: _ }));
+                return (t) => (0, r.jsx)(e, _(f({}, t), { videoEnabled: p }));
             },
             {
                 modalKey: "camera-preview",
@@ -80,15 +80,15 @@ function h(e, t) {
             },
         );
     }
-    return (!_ || g) && m && h
+    return (!p || g) && h && m
         ? (0, r.jsx)(a.sNh, {
               id: "change-video-background",
               label: (0, r.jsx)("div", {
                   className: u.item,
-                  children: _ ? c.intl.string(c.t.mZKxHb) : c.intl.string(c.t["vkV93/"]),
+                  children: p ? c.intl.string(c.t.mZKxHb) : c.intl.string(c.t["vkV93/"]),
               }),
               action: E,
-              icon: _ ? a.yMH : a.tEF,
+              icon: p ? a.yMH : a.tEF,
           })
         : null;
 }

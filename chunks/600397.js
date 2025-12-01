@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381);
 n(473749);
 var i = n(657707),
@@ -10,12 +10,12 @@ var i = n(657707),
     u = n(834129),
     d = n(981631),
     f = n(388032),
-    _ = n(372563);
-function p(e) {
-    let { message: t, channel: n, author: p, compact: h } = e,
-        { nick: m } = (0, l.Sw)(p, n),
+    p = n(372563);
+function _(e) {
+    let { message: t, channel: n, author: _, compact: m } = e,
+        { nick: h } = (0, l.Sw)(_, n),
         g = (0, c.l)({
-            user: p,
+            user: _,
             channelId: n.id,
             guildId: void 0,
             messageId: void 0,
@@ -23,17 +23,17 @@ function p(e) {
         E = (0, a.q)(t.applicationId);
     if (null == E) return null;
     let b = f.intl.format(f.t.m7Lwas, {
-        username: m,
+        username: h,
         usernameHook: g,
         gameName: E.name,
         gameIconHook: (e) =>
             (0, r.jsxs)("span", {
-                className: _.gameContainer,
+                className: p.gameContainer,
                 children: [
                     (0, r.jsx)(o.Z, {
                         game: E,
                         size: o.A.XXSMALL,
-                        className: _.inlineIcon,
+                        className: p.inlineIcon,
                     }),
                     " ",
                     e,
@@ -43,8 +43,8 @@ function p(e) {
     });
     return (0, r.jsx)(u.Z, {
         iconNode: (0, r.jsx)(i.iWm, { size: "sm" }),
-        compact: h,
-        contentClassName: _.content,
+        compact: m,
+        contentClassName: p.content,
         children: (0, r.jsx)("div", { children: b }),
     });
 }

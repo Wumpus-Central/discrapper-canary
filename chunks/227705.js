@@ -39,7 +39,7 @@ var s = n(427556),
 n(830884);
 var d = n(637804),
     f = n.g.Set || n(820410);
-function _(e) {
+function p(e) {
     var t = new f();
     function n(e) {
         "function" == typeof e.update ? t.add(e) : e.__getChildren().forEach(n);
@@ -158,7 +158,7 @@ e.exports = (function (e) {
             {
                 key: "_updateValue",
                 value: function (e) {
-                    for (var t in ((this._value = e), _(this), this._listeners))
+                    for (var t in ((this._value = e), p(this), this._listeners))
                         this._listeners[t]({ value: this.__getValue() });
                 },
             },

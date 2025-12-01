@@ -1,16 +1,16 @@
 n.d(t, {
-    N: () => _,
-    P: () => b,
+    N: () => b,
+    P: () => S,
 }),
     n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(442837),
-    o = n(481060),
-    a = n(580991),
+    a = n(481060),
+    o = n(580991),
     s = n(102172),
-    c = n(74299),
-    u = n(562224),
+    u = n(74299),
+    c = n(562224),
     d = n(361291),
     h = n(592125),
     p = n(430824),
@@ -19,75 +19,75 @@ var i = n(54381),
     g = n(944486),
     y = n(594174),
     O = n(981631),
-    v = n(37113),
-    E = n(388032);
-function b(e) {
+    E = n(37113),
+    v = n(388032);
+function S(e) {
     let {
             pid: t,
             analyticsLocation: n,
             allowOneClickGoLive: i = !1,
-            onBeforeShowModal: o,
-            onOneClickGoLive: a,
-            appContext: u,
+            onBeforeShowModal: a,
+            onOneClickGoLive: o,
+            appContext: c,
         } = e,
         d = (0, l.e7)([g.Z], () => g.Z.getVoiceChannelId()),
         O = (0, l.e7)([h.Z], () => h.Z.getChannel(d), [d]),
-        v = (0, l.e7)([y.default], () => y.default.getCurrentUser()),
-        E = null == O ? void 0 : O.getGuildId(),
-        b = (0, l.e7)([f.Z], () => (0, c.Z)(f.Z)),
-        _ = (0, l.e7)([p.Z, m.Z], () => null != O && (0, s.JL)(O, p.Z, m.Z));
+        E = (0, l.e7)([y.default], () => y.default.getCurrentUser()),
+        v = null == O ? void 0 : O.getGuildId(),
+        S = (0, l.e7)([f.Z], () => (0, u.Z)(f.Z)),
+        b = (0, l.e7)([p.Z, m.Z], () => null != O && (0, s.JL)(O, p.Z, m.Z));
     return r.useCallback(async () => {
-        await S({
+        await x({
             pid: t,
             voiceChannelId: d,
-            user: v,
-            targetGuildId: E,
-            canGoLive: b,
-            canStream: _,
+            user: E,
+            targetGuildId: v,
+            canGoLive: S,
+            canStream: b,
             analyticsLocation: n,
             allowOneClickGoLive: i,
-            onBeforeShowModal: o,
-            onOneClickGoLive: a,
-            appContext: u,
+            onBeforeShowModal: a,
+            onOneClickGoLive: o,
+            appContext: c,
         });
-    }, [t, d, v, E, b, _, n, i, o, a, u]);
+    }, [t, d, E, v, S, b, n, i, a, o, c]);
 }
-async function _(e) {
+async function b(e) {
     let {
             pid: t,
             analyticsLocation: n,
             allowOneClickGoLive: i = !1,
             onBeforeShowModal: r,
             onOneClickGoLive: l,
-            appContext: o,
+            appContext: a,
         } = e,
-        a = g.Z.getVoiceChannelId(),
-        u = h.Z.getChannel(a),
+        o = g.Z.getVoiceChannelId(),
+        c = h.Z.getChannel(o),
         d = y.default.getCurrentUser(),
-        O = null == u ? void 0 : u.getGuildId(),
-        v = null != u && (0, s.JL)(u, p.Z, m.Z),
-        E = (0, c.Z)(f.Z);
-    await S({
+        O = null == c ? void 0 : c.getGuildId(),
+        E = null != c && (0, s.JL)(c, p.Z, m.Z),
+        v = (0, u.Z)(f.Z);
+    await x({
         pid: t,
-        voiceChannelId: a,
+        voiceChannelId: o,
         user: d,
         targetGuildId: O,
-        canGoLive: E,
-        canStream: v,
+        canGoLive: v,
+        canStream: E,
         analyticsLocation: n,
         allowOneClickGoLive: i,
         onBeforeShowModal: r,
         onOneClickGoLive: l,
-        appContext: o,
+        appContext: a,
     });
 }
-async function S(e) {
+async function x(e) {
     let {
         pid: t,
         voiceChannelId: r,
         user: l,
         targetGuildId: s,
-        canGoLive: c,
+        canGoLive: u,
         canStream: h,
         analyticsLocation: p,
         allowOneClickGoLive: f,
@@ -95,31 +95,31 @@ async function S(e) {
         onOneClickGoLive: g,
         appContext: y,
     } = e;
-    if (c && h) {
+    if (u && h) {
         if (f && null !== r) {
             let e = d.Z.getState().preset;
-            if (e === v.ApplicationStreamPresets.PRESET_DOCUMENTS) {
-                let { allowAutoQuality: t } = (0, a.IK)({ location: "overlay _goLive" });
-                e = t ? v.ApplicationStreamPresets.PRESET_AUTO : v.ApplicationStreamPresets.PRESET_VIDEO;
+            if (e === E.ApplicationStreamPresets.PRESET_DOCUMENTS) {
+                let { allowAutoQuality: t } = (0, o.IK)({ location: "overlay _goLive" });
+                e = t ? E.ApplicationStreamPresets.PRESET_AUTO : E.ApplicationStreamPresets.PRESET_VIDEO;
             }
-            let [n] = await (0, u.Z)(t, { preset: e });
+            let [n] = await (0, c.Z)(t, { preset: e });
             if (n) {
                 null == g || g();
                 return;
             }
         }
         if (null == l)
-            return void (0, o.showToast)(
-                (0, o.createToast)(E.intl.string(E.t.OKnWyb), o.ToastType.FAILURE, { appContext: O.IlC.OVERLAY }),
+            return void (0, a.showToast)(
+                (0, a.createToast)(v.intl.string(v.t.OKnWyb), a.ToastType.FAILURE, { appContext: O.IlC.OVERLAY }),
             );
         null == m || m(),
-            (0, o.ZDy)(
+            (0, a.ZDy)(
                 async () => {
                     let { default: e } = await Promise.all([
                         n.e("38697"),
                         n.e("4093"),
                         n.e("47863"),
-                        n.e("39173"),
+                        n.e("59416"),
                     ]).then(n.bind(n, 60594));
                     return (n) => {
                         var r, l;
@@ -174,7 +174,7 @@ async function S(e) {
                         );
                     };
                 },
-                { contextKey: null != y ? (0, o.VnL)(y) : void 0 },
+                { contextKey: null != y ? (0, a.VnL)(y) : void 0 },
             );
     }
 }

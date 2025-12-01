@@ -1,4 +1,4 @@
-n.d(t, { Q: () => _ }), n(388685);
+n.d(t, { Q: () => p }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(536799),
@@ -57,16 +57,16 @@ function f(e, t) {
         e
     );
 }
-function _(e) {
+function p(e) {
     let {
             listRef: t,
             label: n,
             disabledKeys: c,
             selectionMode: d = "none",
-            layout: _ = "default",
-            items: p,
-            onRemove: h,
-            children: m,
+            layout: p = "default",
+            items: _,
+            onRemove: m,
+            children: h,
         } = e,
         [g, E] = i.useState(() => new Set()),
         b = i.useContext(o.z);
@@ -74,29 +74,29 @@ function _(e) {
         "aria-label": n,
         id: null == b ? void 0 : b.controlId,
         "aria-describedby": null == b ? void 0 : b.describedById,
-        "data-layout": _,
+        "data-layout": p,
         className: l.tagGroup,
         selectionMode: d,
         selectedKeys: g,
         onSelectionChange: E,
         disabledKeys: c,
-        onRemove: h,
+        onRemove: m,
         children: [
             (0, r.jsx)(a.PS, {
                 ref: t,
                 className: l.tagList,
-                children: p.map((e) =>
+                children: _.map((e) =>
                     (0, i.createElement)(
                         s.V,
                         f(u({}, e), {
                             key: e.id,
-                            layout: _,
+                            layout: p,
                             accessibilityHint: e.accessibilityHint,
                         }),
                     ),
                 ),
             }),
-            m,
+            h,
         ],
     });
 }

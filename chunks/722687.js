@@ -1,13 +1,13 @@
 n.d(t, {
     IU: () => f,
     J7: () => g,
-    O8: () => m,
-    Ov: () => _,
+    O8: () => h,
+    Ov: () => p,
     eD: () => u,
     sx: () => c,
     up: () => d,
-    vB: () => h,
-    vV: () => p,
+    vB: () => m,
+    vV: () => _,
 });
 var r = n(381499),
     i = n(902704),
@@ -32,19 +32,19 @@ let c = (0, a.c)("textAndImages", "explicitContentSettings", o.lk, o.nh, { compa
         (e) => (null == e ? void 0 : e.value),
         (e) => r.D5.create({ value: e }),
     ),
-    _ = (0, a.c)(
+    p = (0, a.c)(
         "privacy",
         "defaultGuildsRestricted",
         (e) => null != e && e,
         (e) => e,
     ),
-    p = (0, a.c)(
+    _ = (0, a.c)(
         "privacy",
         "defaultGuildsRestrictedV2",
         (e) => (null == e ? void 0 : e.value),
         (e) => r.D5.create({ value: e }),
     ),
-    h = (0, a.c)(
+    m = (0, a.c)(
         "privacy",
         "friendSourceFlags",
         (e) => {
@@ -53,7 +53,7 @@ let c = (0, a.c)("textAndImages", "explicitContentSettings", o.lk, o.nh, { compa
         },
         (e) => r.yC.create({ value: e }),
     ),
-    m = (0, a.c)(
+    h = (0, a.c)(
         "privacy",
         "dropsOptedOut",
         (e) => {

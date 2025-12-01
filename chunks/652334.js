@@ -1,4 +1,4 @@
-n.d(t, { v: () => p });
+n.d(t, { v: () => _ });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -61,7 +61,7 @@ function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -69,7 +69,7 @@ function f(e, t) {
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,12 +78,12 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function p(e) {
+function _(e) {
     var { as: t, muted: n = !1, selected: i = !1, className: l } = e,
         u = f(e, ["as", "muted", "selected", "className"]);
-    let _ = null != t ? t : o.P3F;
+    let p = null != t ? t : o.P3F;
     return (0, r.jsx)(
-        _,
+        p,
         d(c({}, u), {
             className: a()(s.interactive, l, {
                 [s.muted]: n,

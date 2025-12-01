@@ -9,7 +9,7 @@ var r = n(54381),
     u = n(743236),
     d = n(939350),
     f = n(334405);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,12 +33,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,12 +50,12 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -66,8 +66,8 @@ function g(e) {
             color: t = "default",
             label: n,
             checked: a,
-            subtext: _,
-            disabled: h,
+            subtext: p,
+            disabled: m,
             isFocused: g,
             menuItemProps: E,
             action: b,
@@ -75,11 +75,11 @@ function g(e) {
             focusedClassName: O,
         } = e,
         { onInteraction: v } = i.useContext(c.p),
-        I = i.useRef(null);
+        S = i.useRef(null);
     i.useEffect(() => {
-        g && (0, u.F)(I);
+        g && (0, u.F)(S);
     }, [g]);
-    let T = i.useCallback(
+    let I = i.useCallback(
         (e) => {
             b(e), null == v || v({ type: c.U.CHECKBOX });
         },
@@ -87,31 +87,31 @@ function g(e) {
     );
     return (0, r.jsxs)(
         s.P3F,
-        m(
-            p(
+        h(
+            _(
                 {
-                    innerRef: I,
+                    innerRef: S,
                     className: o()(f.item, f.checkboxContainer, f.labelContainer, d._e[t], y, {
-                        [f.disabled]: h,
+                        [f.disabled]: m,
                         [f.focused]: g,
                         [null != O ? O : ""]: g,
                     }),
-                    onClick: h ? void 0 : T,
+                    onClick: m ? void 0 : I,
                 },
                 E,
             ),
             {
                 "aria-checked": a,
-                "aria-disabled": h,
+                "aria-disabled": m,
                 children: [
                     (0, r.jsxs)("div", {
                         className: f.label,
                         children: [
                             (0, l.I)(n, e),
-                            null != _ &&
+                            null != p &&
                                 (0, r.jsx)("div", {
                                     className: f.subtext,
-                                    children: _,
+                                    children: p,
                                 }),
                         ],
                     }),
@@ -119,7 +119,7 @@ function g(e) {
                         className: f.iconContainer,
                         children: (0, r.jsx)(s.FZ5, {
                             checked: a,
-                            disabled: h,
+                            disabled: m,
                             size: 20,
                         }),
                     }),

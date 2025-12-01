@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(147913),
     i = n(318885),
     a = n(624864),
@@ -48,28 +48,28 @@ class f extends r.Z {
                 let o = Date.now(),
                     l = null != c ? o - c : null,
                     f = null,
-                    _ = null;
+                    p = null;
                 for (let [e, t] of u.entries()) {
                     let r = a.Z.getDisabledSettingByNotificationType(e);
                     if (null != r && r === n) {
                         let n = o - t;
                         (null == f || n < f) &&
                             ((f = n),
-                            (_ = {
+                            (p = {
                                 notificationType: e,
                                 timestamp: t,
                             }));
                     }
                 }
-                let p =
-                    null != d && null != _ && d.notificationType === _.notificationType && d.timestamp === _.timestamp;
+                let _ =
+                    null != d && null != p && d.notificationType === p.notificationType && d.timestamp === p.timestamp;
                 (0, i.Q)(s.rMx.OVERLAY_NOTIFICATION_SETTING_UPDATED, {
                     setting: n,
                     disabled: r,
                     time_since_last_seen_overlay: l,
                     time_since_last_seen_notification: f,
-                    is_most_recent_notification: p,
-                    most_recent_notification_type: null == _ ? void 0 : _.notificationType,
+                    is_most_recent_notification: _,
+                    most_recent_notification_type: null == p ? void 0 : p.notificationType,
                 });
             }),
             l(this, "actions", {
@@ -79,4 +79,4 @@ class f extends r.Z {
             });
     }
 }
-let _ = new f();
+let p = new f();

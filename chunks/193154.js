@@ -8,7 +8,7 @@ var r = n(54381),
     c = n(682662),
     u = n(662146),
     d = n(961699);
-function p(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,7 +35,7 @@ function p(e) {
 }
 function h(e) {
     let [t, h] = i.useState(!1),
-        f = (0, l.Ie)("guild-".concat(e.id));
+        p = (0, l.Ie)("guild-".concat(e.id));
     return (0, r.jsx)(c.H, {
         children: (0, r.jsx)(u.Z, {
             text: e.name,
@@ -49,7 +49,7 @@ function h(e) {
                 }),
                 children: (0, r.jsx)(
                     o.LYs,
-                    p(
+                    f(
                         {
                             name: e.name,
                             onMouseEnter: () => {
@@ -64,7 +64,7 @@ function h(e) {
                                     return (n) =>
                                         (0, r.jsx)(
                                             t,
-                                            p(
+                                            f(
                                                 {
                                                     name: e.name,
                                                     guildId: e.id,
@@ -84,7 +84,7 @@ function h(e) {
                                       })
                                     : null,
                         },
-                        f,
+                        p,
                     ),
                 ),
             }),

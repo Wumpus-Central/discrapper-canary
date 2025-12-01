@@ -9,9 +9,9 @@ let c = () => {
     let [e, t] = i.useState(0),
         [n, c] = i.useState(4),
         [u, d] = i.useState(2),
-        [f, _] = i.useState(s.y.BLUE),
-        [p, h] = i.useState("darkslategray"),
-        [m, g] = i.useState("blanchedalmond"),
+        [f, p] = i.useState(s.y.BLUE),
+        [_, m] = i.useState("darkslategray"),
+        [h, g] = i.useState("blanchedalmond"),
         [E, b] = i.useState("pink"),
         y = i.useMemo(
             () =>
@@ -33,8 +33,8 @@ let c = () => {
                 variant: f,
                 override: {
                     default: {
-                        background: p,
-                        gradientStart: m,
+                        background: _,
+                        gradientStart: h,
                         gradientEnd: E,
                     },
                 },
@@ -74,7 +74,7 @@ let c = () => {
                 children: (0, r.jsx)(o.PhF, {
                     placeholder: "Variant",
                     select: (e) => {
-                        _(e);
+                        p(e);
                     },
                     isSelected: (e) => f === e,
                     serialize: (e) => e,
@@ -95,16 +95,16 @@ let c = () => {
             }),
             (0, r.jsx)(l.BZ, {
                 children: (0, r.jsx)(o.oil, {
-                    value: p,
+                    value: _,
                     onChange: (e) => {
-                        h(e);
+                        m(e);
                     },
                     label: "Background",
                 }),
             }),
             (0, r.jsx)(l.BZ, {
                 children: (0, r.jsx)(o.oil, {
-                    value: m,
+                    value: h,
                     onChange: (e) => {
                         g(e);
                     },

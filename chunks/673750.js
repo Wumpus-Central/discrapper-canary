@@ -1,8 +1,8 @@
 n.d(t, {
     $V: () => C,
-    Bz: () => R,
-    ZP: () => L,
-    hc: () => P,
+    Bz: () => P,
+    ZP: () => x,
+    hc: () => R,
 }),
     n(539854),
     n(388685);
@@ -16,10 +16,10 @@ var r = n(512722),
     u = n(873741),
     d = n(931301),
     f = n(314897),
-    _ = n(866960),
-    p = n(70956),
-    h = n(403182),
-    m = n(651655),
+    p = n(866960),
+    _ = n(70956),
+    m = n(403182),
+    h = n(651655),
     g = n(861990),
     E = n(141795),
     b = n(981631),
@@ -53,7 +53,7 @@ function v(e) {
     }
     return e;
 }
-function I(e, t) {
+function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,18 +65,18 @@ function I(e, t) {
     }
     return n;
 }
-function T(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : I(Object(t)).forEach(function (n) {
+            : S(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function S(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -107,10 +107,10 @@ var C = (function (e) {
     );
 })({});
 let N = (e) => 0 === e.type || 3 === e.type,
-    R = (e) => 1 === e.type,
-    P = (e) => (N(e) ? e.message.nonce : R(e) ? e.message.messageId : e.message.data.id),
-    D = [+p.Z.Millis.MINUTE, 5 * p.Z.Millis.MINUTE];
-class w extends m.Z {
+    P = (e) => 1 === e.type,
+    R = (e) => (N(e) ? e.message.nonce : P(e) ? e.message.messageId : e.message.data.id),
+    w = [+_.Z.Millis.MINUTE, 5 * _.Z.Millis.MINUTE];
+class D extends h.Z {
     isFull() {
         return this.queue.length >= this.maxSize;
     }
@@ -147,7 +147,7 @@ class w extends m.Z {
         return this.queue.push(...n), this.logger.log("Cancel pending send requests", t.length), t;
     }
     startQueueMetricTimers(e) {
-        let t = D.map((e) =>
+        let t = w.map((e) =>
             setTimeout(() => {
                 (0, s.yw)(b.rMx.SEND_MESSAGE_QUEUED, { queued_duration_ms: e });
             }, e),
@@ -169,18 +169,18 @@ class w extends m.Z {
                 t(null, n);
             else if (429 === n.status) {
                 let e = parseInt(n.headers["retry-after"]);
-                isNaN(e) ? t(null, n) : t({ retryAfter: e * p.Z.Millis.SECOND });
+                isNaN(e) ? t(null, n) : t({ retryAfter: e * _.Z.Millis.SECOND });
             } else t(null, n);
         };
     }
     handleSend(e, t) {
         var n;
         let { channelId: r, analyticsLocation: i } = e,
-            o = S(e, ["channelId", "analyticsLocation"]),
+            o = T(e, ["channelId", "analyticsLocation"]),
             s = null != (n = (0, d.Z)()) ? n : i,
             l = null != s ? { location: s } : void 0,
             f = (0, u.d)(),
-            p = v({ mobile_network_type: _.Z.getType() }, o, null != f && { signal_strength: f });
+            _ = v({ mobile_network_type: p.Z.getType() }, o, null != f && { signal_strength: f });
         if (c.ZP.get("send_fail_100")) {
             this.logger.log("Skipping message send because send_fail_100 is enabled"),
                 t(null, {
@@ -193,39 +193,39 @@ class w extends m.Z {
                 });
             return;
         }
-        let h = this.createResponseHandler(e.nonce, t),
-            m = new AbortController();
+        let m = this.createResponseHandler(e.nonce, t),
+            h = new AbortController();
         this.startQueueMetricTimers(e.nonce),
             a.tn.post(
-                T(
+                I(
                     v(
                         {
                             url: b.ANM.MESSAGES(r),
-                            body: p,
+                            body: _,
                             context: l,
                             oldFormErrors: !0,
                         },
                         y.hs,
                     ),
                     {
-                        signal: m.signal,
+                        signal: h.signal,
                         rejectWithError: !0,
                         onRequestCreated: () => {
-                            null != e.nonce && this.requests.set(e.nonce, m);
+                            null != e.nonce && this.requests.set(e.nonce, h);
                         },
                     },
                 ),
-                h,
+                m,
             );
     }
     handleSendAnnouncement(e, t) {
         var n;
         let { channelId: r, analyticsLocation: i } = e,
-            o = S(e, ["channelId", "analyticsLocation"]),
+            o = T(e, ["channelId", "analyticsLocation"]),
             s = null != (n = (0, d.Z)()) ? n : i,
             l = null != s ? { location: s } : void 0,
             f = (0, u.d)(),
-            p = v({ mobile_network_type: _.Z.getType() }, o, null != f && { signal_strength: f });
+            _ = v({ mobile_network_type: p.Z.getType() }, o, null != f && { signal_strength: f });
         if (c.ZP.get("send_fail_100")) {
             this.logger.log("Skipping message send because send_fail_100 is enabled"),
                 t(null, {
@@ -238,29 +238,29 @@ class w extends m.Z {
                 });
             return;
         }
-        let h = this.createResponseHandler(e.nonce, t),
-            m = new AbortController();
+        let m = this.createResponseHandler(e.nonce, t),
+            h = new AbortController();
         this.startQueueMetricTimers(e.nonce),
             a.tn.post(
-                T(
+                I(
                     v(
                         {
                             url: b.ANM.MESSAGES_ANNOUNCEMENT(r),
-                            body: p,
+                            body: _,
                             context: l,
                             oldFormErrors: !0,
                         },
                         y.hs,
                     ),
                     {
-                        signal: m.signal,
+                        signal: h.signal,
                         rejectWithError: !0,
                         onRequestCreated: () => {
-                            null != e.nonce && this.requests.set(e.nonce, m);
+                            null != e.nonce && this.requests.set(e.nonce, h);
                         },
                     },
                 ),
-                h,
+                m,
             );
     }
     handleCommand(e, t) {
@@ -272,9 +272,9 @@ class w extends m.Z {
                 nonce: c,
                 attachments: u,
                 maxSizeCallback: d,
-                analytics_location: _,
-                sectionName: p,
-                source: m,
+                analytics_location: p,
+                sectionName: _,
+                source: h,
             } = e,
             y = {
                 type: o.B8.APPLICATION_COMMAND,
@@ -284,9 +284,9 @@ class w extends m.Z {
                 session_id: f.default.getSessionId(),
                 data: l,
                 nonce: c,
-                analytics_location: _,
-                section_name: p,
-                source: m,
+                analytics_location: p,
+                section_name: _,
+                source: h,
             };
         null != u &&
             (y.data.attachments = u.map(
@@ -306,7 +306,7 @@ class w extends m.Z {
                     this.requests.set(c, O),
                         e.on("progress", (e) => {
                             let { total: t } = e,
-                                n = (0, h.dg)(r);
+                                n = (0, m.dg)(r);
                             null != t && t > n && (this.cancelRequest(c), null == d || d(n));
                         });
                 },
@@ -325,7 +325,7 @@ class w extends m.Z {
             (this.analyticsTimeouts = new Map()),
             (this.handleEdit = (e, t) => {
                 var { channelId: n, messageId: r, isCrossposted: i } = e,
-                    o = S(e, ["channelId", "messageId", "isCrossposted"]);
+                    o = T(e, ["channelId", "messageId", "isCrossposted"]);
                 let s = new AbortController(),
                     l = this.createResponseHandler(r, t),
                     c = {
@@ -343,4 +343,4 @@ class w extends m.Z {
             });
     }
 }
-let L = new w();
+let x = new D();

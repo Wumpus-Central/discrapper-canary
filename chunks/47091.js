@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(54381),
     i = n(473749),
     a = n(481060),
@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,22 +48,22 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e) {
+function m(e) {
     let { user: t } = e,
         d = (0, o.ML)(t.id),
-        _ = l.ZP.useName(t),
-        h = i.useCallback(
+        p = l.ZP.useName(t),
+        m = i.useCallback(
             (e) => {
                 let { id: i, name: o } = e;
                 (0, a.ZDy)(async () => {
@@ -71,10 +71,10 @@ function h(e) {
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            p(
+                            _(
                                 f(
                                     {
-                                        header: u.intl.formatToPlainString(u.t["GOFk9+"], { name: _ }),
+                                        header: u.intl.formatToPlainString(u.t["GOFk9+"], { name: p }),
                                         confirmText: u.intl.string(u.t["cY+Oob"]),
                                         cancelText: u.intl.string(u.t["ETE/oC"]),
                                         onConfirm: () =>
@@ -90,7 +90,7 @@ function h(e) {
                                     children: (0, r.jsx)(a.Text, {
                                         variant: "text-md/normal",
                                         children: u.intl.format(u.t.dsU5bl, {
-                                            name: _,
+                                            name: p,
                                             gameName: o,
                                         }),
                                     }),
@@ -99,14 +99,14 @@ function h(e) {
                         );
                 });
             },
-            [_, t],
+            [p, t],
         );
     return (0, c.Z)({
         user: t,
         gameRelationships: d,
         menuItemId: "remove-game-friend",
         label: u.intl.string(u.t.RLcE6x),
-        onClick: h,
+        onClick: m,
         color: "danger",
     });
 }

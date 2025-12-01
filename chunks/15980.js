@@ -26,21 +26,21 @@ function f() {
     if (u) return !1;
     u = !0;
 }
-function _() {
+function p() {
     if (!u) return !1;
     u = !1;
 }
-function p(e) {
+function _(e) {
     let { credentials: t } = e,
         n = !1;
     return c !== t && ((c = t), (n = !0)), l || ((l = !0), (n = !0)), n;
 }
-function h(e) {
+function m(e) {
     let { credential: t } = e;
     if (t.type !== o.Pi.WEBAUTHN || void 0 !== c.find((e) => e.id === t.id)) return !1;
     c = [...c, t];
 }
-function m(e) {
+function h(e) {
     let { credential: t } = e;
     if (t.type !== o.Pi.WEBAUTHN) return !1;
     c = c.map((e) => (e.id === t.id ? t : e));
@@ -67,10 +67,10 @@ class E extends (r = i.ZP.Store) {
 s(E, "displayName", "WebAuthnStore");
 let b = new E(a.Z, {
     LOGOUT: d,
-    MFA_WEBAUTHN_CREDENTIALS_LOADED: p,
-    AUTHENTICATOR_CREATE: h,
-    AUTHENTICATOR_UPDATE: m,
+    MFA_WEBAUTHN_CREDENTIALS_LOADED: _,
+    AUTHENTICATOR_CREATE: m,
+    AUTHENTICATOR_UPDATE: h,
     AUTHENTICATOR_DELETE: g,
     WEBAUTHN_TRIGGER_REGISTER: f,
-    WEBAUTHN_CLEAR_REGISTER_TRIGGER: _,
+    WEBAUTHN_CLEAR_REGISTER_TRIGGER: p,
 });

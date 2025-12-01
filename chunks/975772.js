@@ -1,4 +1,4 @@
-n.d(t, { x: () => _ });
+n.d(t, { x: () => p });
 var r = n(913527),
     i = n.n(r),
     a = n(442837),
@@ -9,7 +9,7 @@ var r = n(913527),
     u = n(921944);
 let d = 1209600000,
     f = i()("2025-11-10 10:00:00-08:00").toDate(),
-    _ = () => {
+    p = () => {
         let { enabled: e, forceNotice: t } = c.j.useExperiment({ location: "useShouldShowPriceDecreaseNotice" }),
             n = (0, a.e7)([l.Z], () => l.Z.getPremiumTypeSubscription());
         if (
@@ -21,8 +21,8 @@ let d = 1209600000,
             return !1;
         let r = n.currentPeriodStart,
             i = n.currentPeriodEnd,
-            _ = i <= new Date(Date.now() + d) && i > new Date();
+            p = i <= new Date(Date.now() + d) && i > new Date();
         return r > f
             ? ((0, s.Q3)(o.z.PREMIUM_SETTINGS_SUBSCRIPTION_INFO_NOTICE, { dismissAction: u.L.AUTO_DISMISS }), !1)
-            : !!_ && e;
+            : !!p && e;
     };

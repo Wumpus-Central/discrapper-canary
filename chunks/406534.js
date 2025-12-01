@@ -18,9 +18,9 @@ var i = n(54381),
     C = n(359110),
     v = n(359119),
     _ = n(13279),
-    x = n(248789),
-    j = n(88101),
-    O = n(576954),
+    O = n(248789),
+    x = n(88101),
+    j = n(576954),
     E = n(765104),
     S = n(122707),
     P = n(779836),
@@ -33,12 +33,12 @@ var i = n(54381),
     M = n(709054),
     R = n(534091),
     L = n(554838),
-    k = n(481369),
-    D = n(186877),
+    D = n(481369),
+    k = n(186877),
     U = n(294218),
-    B = n(534469),
-    H = n(993397),
-    F = n(511010),
+    F = n(534469),
+    B = n(993397),
+    H = n(511010),
     V = n(524444),
     G = n(977391),
     z = n(921235),
@@ -119,18 +119,18 @@ function et(e) {
         } = e,
         eh = N.default.getCurrentUser(),
         ef = () => eo.isInitialized() || et.ready,
-        em = (0, D.$)(U),
+        em = (0, k.$)(U),
         eg = et.length > 0 && (null == (t = et.first()) ? void 0 : t.isFirstMessageInForumPost(U)),
         eb = (0, s.ts)(U),
         ey = (0, l.e7)([E.Z], () => E.Z.shouldShowTopicsBar() && !ed),
-        eC = (0, j.P)(U.id),
+        eC = (0, x.P)(U.id),
         ev = (0, _.z)(U.id, X.zr),
         e_ = (0, d.k)(U.id),
-        ex = (0, k.Z)(),
-        ej = (function (e, t) {
+        eO = (0, D.Z)(),
+        ex = (function (e, t) {
             if (e.isDM() && null != t)
                 if (t.type === v.pj.STRANGER_DANGER)
-                    return (0, i.jsx)(O.M, {
+                    return (0, i.jsx)(j.M, {
                         channelId: e.id,
                         warningId: t.id,
                         senderId: e.getRecipientId(),
@@ -142,14 +142,14 @@ function et(e) {
                         senderId: e.getRecipientId(),
                     });
                 else
-                    return (0, i.jsx)(x.Y, {
+                    return (0, i.jsx)(O.Y, {
                         channelId: e.id,
                         warningId: t.id,
                         senderId: e.getRecipientId(),
                     });
             return null;
         })(U, null != (n = null != eC ? eC : ev) ? n : e_),
-        eO = U.isForumPost() && !eg ? (0, i.jsx)(m.Z, { postId: U.id }) : null,
+        ej = U.isForumPost() && !eg ? (0, i.jsx)(m.Z, { postId: U.id }) : null,
         eE = (0, b.Z)(U.id),
         eS = (0, y.nw)(U);
     (0, W.Z)();
@@ -169,7 +169,7 @@ function et(e) {
                             isBeforeGroup: null == e.content && $(el[t + 1]),
                         })
                       : (0, i.jsx)(
-                            F.Z,
+                            H.Z,
                             {
                                 isUnread: l,
                                 isBeforeGroup: null == e.content && $(el[t + 1]),
@@ -204,7 +204,7 @@ function et(e) {
                               ? J.t["VFWjc+"]
                               : J.t.xfkfTK),
                     (0, i.jsx)(
-                        H.Z,
+                        B.Z,
                         {
                             unreadId: K.j1,
                             messages: e,
@@ -220,7 +220,7 @@ function et(e) {
             e.type === Y.ys_.MESSAGE && null == eP && (eP = e);
             let l = e.groupId === (null == eP ? void 0 : eP.groupId) ? eP.content.id : e.groupId,
                 a = eS && e.content.isFirstMessageInForumPost(U),
-                o = e.type === Y.ys_.THREAD_STARTER_MESSAGE ? B.Ru : B.ZP;
+                o = e.type === Y.ys_.THREAD_STARTER_MESSAGE ? F.Ru : F.ZP;
             return (0, i.jsx)(
                 o,
                 {
@@ -308,7 +308,7 @@ function et(e) {
             (Z.ZP.isEstimated(U.id)
                 ? ((e = o ? J.t.wvtbbG : J.t.tHqbtg), (t = J.t.vaPWFe))
                 : ((e = o ? J.t["BctFH/"] : J.t["3wXb9P"]), (t = J.t["4H8ldG"])),
-            eb && (0, s.tW)(U) && ex.includes(q.E.SUMMARIES))
+            eb && (0, s.tW)(U) && eO.includes(q.E.SUMMARIES))
         ) {
             let n = Z.ZP.ackMessageId(U.id),
                 o = (0, S.q)(U.id, Z.ZP.getOldestUnreadMessageId(U.id));
@@ -407,7 +407,7 @@ function et(e) {
                 }
             }
         } else
-            ex.includes(q.E.NEW_MESSAGES) &&
+            eO.includes(q.E.NEW_MESSAGES) &&
                 (r = (0, i.jsx)(V.LE, {
                     content: J.intl.format(e, {
                         count: en,
@@ -420,7 +420,7 @@ function et(e) {
         (null == r &&
             (0, s.Lp)(U) &&
             ey &&
-            ex.includes(q.E.SUMMARIES) &&
+            eO.includes(q.E.SUMMARIES) &&
             (r = (0, i.jsx)(V.BO, {
                 channel: U,
                 scrollManager: eo,
@@ -473,7 +473,7 @@ function et(e) {
         channelStreamMarkup: eI,
         newMessagesBar: r,
         jumpToPresentBar: h,
-        forumPostActionBar: eO,
-        safetyWarningBanner: ej,
+        forumPostActionBar: ej,
+        safetyWarningBanner: ex,
     };
 }

@@ -9,27 +9,27 @@ var r = n(54381),
     u = n(607070),
     d = n(70097),
     f = n(63063),
-    _ = n(507808),
-    p = n(981631),
-    h = n(388032),
-    m = n(97127),
+    p = n(507808),
+    _ = n(981631),
+    m = n(388032),
+    h = n(97127),
     g = n(665923),
     E = n(477154),
     b = n(387888);
 let y = () => {
         let e = (0, s.e7)([u.Z], () => u.Z.useReducedMotion);
         return (0, r.jsx)("div", {
-            className: m.assetContainer,
+            className: h.assetContainer,
             children: e
                 ? (0, r.jsx)("img", {
                       src: E.Z,
-                      className: m.orbAsset,
+                      className: h.orbAsset,
                       alt: "Orb",
                   })
                 : (0, r.jsxs)(d.Z, {
                       autoPlay: !0,
                       loop: !0,
-                      className: m.orbAsset,
+                      className: h.orbAsset,
                       children: [
                           (0, r.jsx)("source", {
                               src: b.Z,
@@ -37,7 +37,7 @@ let y = () => {
                           }),
                           (0, r.jsx)("img", {
                               src: E.Z,
-                              className: m.orbAsset,
+                              className: h.orbAsset,
                               alt: "Orb",
                           }),
                       ],
@@ -49,19 +49,19 @@ let y = () => {
                 ctaText: t,
                 ctaOnClick: n,
                 analyticsPage: a,
-                linkPreText: s = h.intl.string(h.t["5qZv9E"]),
-                linkText: u = h.intl.string(h.t.XRdyjz),
+                linkPreText: s = m.intl.string(m.t["5qZv9E"]),
+                linkText: u = m.intl.string(m.t.XRdyjz),
             } = e,
             d = i.useCallback(() => {
                 null != a &&
-                    (0, _.Y)({
+                    (0, p.Y)({
                         pageType: a,
-                        sectionType: p.jXE.ORBS_BALANCE_MENU,
-                        ctaObject: p.qAy.ORBS_LEARN_MORE_LINK,
+                        sectionType: _.jXE.ORBS_BALANCE_MENU,
+                        ctaObject: _.qAy.ORBS_LEARN_MORE_LINK,
                     });
             }, [a]);
         return (0, r.jsxs)("div", {
-            className: o()(m.container, g.baseCardOutline),
+            className: o()(h.container, g.baseCardOutline),
             children: [
                 (0, r.jsx)(y, {}),
                 (0, r.jsx)(l.zxk, {
@@ -72,19 +72,19 @@ let y = () => {
                     fullWidth: !0,
                 }),
                 (0, r.jsxs)("div", {
-                    className: m.linkContainer,
+                    className: h.linkContainer,
                     children: [
                         void 0 !== s &&
                             (0, r.jsxs)(c.Text, {
                                 variant: "text-xs/normal",
-                                className: m.linkPreText,
+                                className: h.linkPreText,
                                 children: [s, "\xA0"],
                             }),
                         (0, r.jsx)(c.Anchor, {
                             target: "_blank",
                             rel: "author",
-                            href: f.Z.getArticleURL(p.BhN.ORBS_FAQ),
-                            className: m.learnMoreLink,
+                            href: f.Z.getArticleURL(_.BhN.ORBS_FAQ),
+                            className: h.learnMoreLink,
                             onClick: d,
                             children: u,
                         }),

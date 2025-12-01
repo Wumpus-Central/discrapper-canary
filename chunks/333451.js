@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => D });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,19 +9,19 @@ var r = n(54381),
     u = n(481060),
     d = n(100527),
     f = n(906732),
-    _ = n(600164),
-    p = n(963249),
-    h = n(639119),
-    m = n(165583),
+    p = n(600164),
+    _ = n(963249),
+    m = n(639119),
+    h = n(165583),
     g = n(263954),
     E = n(706454),
     b = n(626135),
     y = n(930153),
     O = n(74538),
     v = n(937615),
-    I = n(981631),
-    T = n(474936),
-    S = n(388032),
+    S = n(981631),
+    I = n(474936),
+    T = n(388032),
     A = n(22706);
 function C(e, t, n) {
     return (
@@ -52,7 +52,7 @@ function N(e) {
     }
     return e;
 }
-function R(e, t) {
+function P(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -64,18 +64,18 @@ function R(e, t) {
     }
     return n;
 }
-function P(e, t) {
+function R(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : R(Object(t)).forEach(function (n) {
+            : P(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function D(e) {
+function w(e) {
     let { shouldUpsellFromNoneTier: t } = e,
         n = (0, s.e7)([E.default], () => E.default.locale);
     return (0, r.jsxs)("div", {
@@ -84,36 +84,36 @@ function D(e) {
             (0, r.jsx)(g.Z, {
                 icon: u.Ucv,
                 iconClassName: A.perkIconGuild,
-                description: S.intl.formatToPlainString(S.t.sQBgs2, { numFreeGuildSubscriptions: T.cb }),
+                description: T.intl.formatToPlainString(T.t.sQBgs2, { numFreeGuildSubscriptions: I.cb }),
                 color: u.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK.css,
             }),
             (0, r.jsx)(g.Z, {
                 icon: u.Ucv,
                 iconClassName: A.perkIconGuild,
-                description: S.intl.formatToPlainString(S.t["1A6vXi"], { percent: (0, y.T3)(n, T.Rr / 100) }),
+                description: T.intl.formatToPlainString(T.t["1A6vXi"], { percent: (0, y.T3)(n, I.Rr / 100) }),
                 color: u.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK.css,
             }),
             t
                 ? (0, r.jsx)(g.Z, {
                       icon: u.EO4,
                       iconClassName: A.perkIconChatPerks,
-                      description: S.intl.string(S.t.Z9b2x2),
+                      description: T.intl.string(T.t.Z9b2x2),
                   })
                 : null,
             (0, r.jsx)(g.Z, {
                 icon: u.hGI,
                 iconClassName: A.perkIconStream,
-                description: S.intl.string(S.t["8dqG5E"]),
+                description: T.intl.string(T.t["8dqG5E"]),
             }),
             (0, r.jsx)(g.Z, {
                 icon: u.rG2,
                 iconClassName: A.perkIconUpload,
-                description: S.intl.string(S.t.cBorIy),
+                description: T.intl.string(T.t.cBorIy),
             }),
         ],
     });
 }
-function w(e) {
+function D(e) {
     var t;
     let {
             premiumSubscriptionPlan: n,
@@ -123,24 +123,24 @@ function w(e) {
             onSubscriptionConfirmation: E,
             analyticsLocation: y,
             analyticsSourceLocation: C,
-            priceOptions: R,
+            priceOptions: P,
         } = e,
-        { analyticsLocations: w, sourceAnalyticsLocations: L } = (0, f.ZP)(d.Z.GUILD_BOOSTING_PREMIUM_UPSELL),
-        { theme: x } = (0, u.TCT)(),
-        M = (0, l.ap)(x) ? c.zx.Colors.PRIMARY : c.zx.Colors.WHITE,
-        k = null == n || null == n.premiumSubscriptionType,
-        j = O.ZP.getPrice(T.Xh.PREMIUM_MONTH_TIER_2, !1, !1, R),
-        U = (0, v.T4)(j.amount, j.currency),
-        G = (0, h.N)(),
-        B = null == G ? void 0 : G.trial_id,
-        Z = (null == G || null == (t = G.subscription_trial) ? void 0 : t.sku_id) === T.Si.TIER_2;
+        { analyticsLocations: D, sourceAnalyticsLocations: x } = (0, f.ZP)(d.Z.GUILD_BOOSTING_PREMIUM_UPSELL),
+        { theme: L } = (0, u.TCT)(),
+        j = (0, l.ap)(L) ? c.zx.Colors.PRIMARY : c.zx.Colors.WHITE,
+        M = null == n || null == n.premiumSubscriptionType,
+        k = O.ZP.getPrice(I.Xh.PREMIUM_MONTH_TIER_2, !1, !1, P),
+        U = (0, v.T4)(k.amount, k.currency),
+        G = (0, m.N)(),
+        Z = null == G ? void 0 : G.trial_id,
+        B = (null == G || null == (t = G.subscription_trial) ? void 0 : t.sku_id) === I.Si.TIER_2;
     return (
         i.useEffect(() => {
-            b.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: T.cd.GUILD_PREMIUM_UPSELL_MODAL,
-                location_stack: L,
+            b.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: I.cd.GUILD_PREMIUM_UPSELL_MODAL,
+                location_stack: x,
             });
-        }, [L]),
+        }, [x]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)(u.hzk, {
@@ -152,22 +152,22 @@ function w(e) {
                             onClick: a,
                             className: A.closeButton,
                         }),
-                        Z && (0, r.jsx)(m.dz, { className: A.premiumTrialBadge }),
-                        (0, r.jsx)("div", { className: o()(A.upsellImage, { [A.upsellImageWithTrialOffer]: Z }) }),
+                        B && (0, r.jsx)(h.dz, { className: A.premiumTrialBadge }),
+                        (0, r.jsx)("div", { className: o()(A.upsellImage, { [A.upsellImageWithTrialOffer]: B }) }),
                         (0, r.jsx)("div", {
                             className: A.bodyText,
                             children:
-                                null != B
-                                    ? S.intl.string(S.t.AoSzEr)
-                                    : S.intl.format(S.t["7vePZb"], { monthlyPrice: U }),
+                                null != Z
+                                    ? T.intl.string(T.t.AoSzEr)
+                                    : T.intl.format(T.t["7vePZb"], { monthlyPrice: U }),
                         }),
-                        (0, r.jsx)(D, { shouldUpsellFromNoneTier: k }),
+                        (0, r.jsx)(w, { shouldUpsellFromNoneTier: M }),
                     ],
                 }),
                 (0, r.jsxs)(u.mzw, {
                     "data-migration-pending": !0,
-                    align: _.Z.Align.CENTER,
-                    justify: _.Z.Justify.END,
+                    align: p.Z.Align.CENTER,
+                    justify: p.Z.Justify.END,
                     children: [
                         (0, r.jsxs)("div", {
                             className: A.footerRight,
@@ -175,26 +175,26 @@ function w(e) {
                                 (0, r.jsx)(c.zx, {
                                     "data-migration-pending": !0,
                                     look: c.zx.Looks.LINK,
-                                    color: M,
+                                    color: j,
                                     onClick: g,
-                                    children: S.intl.string(S.t["SI/adm"]),
+                                    children: T.intl.string(T.t["SI/adm"]),
                                 }),
                                 (0, r.jsx)(u.Button, {
                                     variant: "active",
-                                    text: null != B ? S.intl.string(S.t["Gd/XHF"]) : S.intl.string(S.t.p2moip),
+                                    text: null != Z ? T.intl.string(T.t["Gd/XHF"]) : T.intl.string(T.t.p2moip),
                                     type: "submit",
                                     onClick: () => {
                                         a(),
-                                            (0, p.Z)({
+                                            (0, _.Z)({
                                                 initialPlanId: null,
-                                                subscriptionTier: T.Si.TIER_2,
-                                                analyticsLocations: w,
-                                                analyticsObject: P(N({}, y), {
-                                                    section: I.jXE.PREMIUM_GUILD_PURCHASE_MODAL,
+                                                subscriptionTier: I.Si.TIER_2,
+                                                analyticsLocations: D,
+                                                analyticsObject: R(N({}, y), {
+                                                    section: S.jXE.PREMIUM_GUILD_PURCHASE_MODAL,
                                                 }),
                                                 analyticsSourceLocation: C,
                                                 onSubscriptionConfirmation: E,
-                                                trialId: B,
+                                                trialId: Z,
                                             });
                                     },
                                 }),
@@ -204,11 +204,11 @@ function w(e) {
                             className: A.backStep,
                             children: (0, r.jsx)(c.zx, {
                                 "data-migration-pending": !0,
-                                color: M,
+                                color: j,
                                 look: c.zx.Looks.LINK,
                                 size: c.zx.Sizes.NONE,
                                 onClick: () => s(),
-                                children: S.intl.string(S.t["13/7kX"]),
+                                children: T.intl.string(T.t["13/7kX"]),
                             }),
                         }),
                     ],

@@ -1,4 +1,4 @@
-n.d(t, { z: () => p });
+n.d(t, { z: () => _ });
 var r = n(54381);
 n(473749);
 var i = n(646903),
@@ -77,7 +77,7 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let _ = {
+let p = {
     Base: {
         EntryTrigger: "trigger",
         ExitTrigger: "trigger",
@@ -93,7 +93,7 @@ let _ = {
     "Nitro Illustration \u2014 Key": {},
     "Nitro Illustration \u2014 Star": {},
 };
-function p(e) {
+function _(e) {
     let { artboard: t = "Base" } = e,
         n = d(e, ["artboard"]),
         { status: s, buffer: c } = (0, o.VG)(i.Z),
@@ -106,10 +106,10 @@ function p(e) {
                   u(l({}, f ? { key: "override" } : {}), {
                       buffer: c,
                       artboard: t,
-                      artboardProperties: _,
+                      artboardProperties: p,
                   }),
                   n,
               ),
           );
 }
-p.riveSrc = i.Z;
+_.riveSrc = i.Z;

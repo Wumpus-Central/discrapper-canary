@@ -13,31 +13,31 @@ var l = n(442837),
     p = n(695346),
     h = n(594174),
     x = n(176038),
-    g = n(469115),
-    f = n(685960);
+    f = n(469115),
+    g = n(685960);
 function b() {
     var e, t, n, b, v, j, _, y;
     (0, u.mw)();
     let C = (0, l.e7)([h.default], () => h.default.getCurrentUser()),
         S = p.L1.useSetting(),
         E = (0, l.e7)([m.Z], () => m.Z.theme),
-        N = S.backgroundGradientPresetId,
-        T = (0, l.e7)([c.Z], () => c.Z.purchases),
-        O = (0, d.Ad)(T),
-        P = (0, d.jT)(T),
+        T = S.backgroundGradientPresetId,
+        N = (0, l.e7)([c.Z], () => c.Z.purchases),
+        O = (0, d.Ad)(N),
+        P = (0, d.jT)(N),
         I = null == C || null == (e = C.avatarDecoration) ? void 0 : e.skuId,
         w = null == C || null == (n = C.collectibles) || null == (t = n.nameplate) ? void 0 : t.skuId,
         k = null != I && null != (v = O.find((e) => e.skuId === I)) ? v : null,
-        A = null != w && null != (j = P.find((e) => e.skuId === w)) ? j : null,
-        R = (0, l.e7)([o.Z], () => o.Z.getProduct(null == k ? void 0 : k.skuId)),
-        Z = (0, l.e7)([o.Z], () => o.Z.getProduct(null == A ? void 0 : A.skuId)),
+        R = null != w && null != (j = P.find((e) => e.skuId === w)) ? j : null,
+        A = (0, l.e7)([o.Z], () => o.Z.getProduct(null == k ? void 0 : k.skuId)),
+        Z = (0, l.e7)([o.Z], () => o.Z.getProduct(null == R ? void 0 : R.skuId)),
         D = (0, l.e7)([s.Z], () => s.Z.fontSize),
         L = (0, l.e7)([s.Z], () => s.Z.messageGroupSpacing),
         M = p.YC.useSetting();
     return (
         (0, x.ub)(),
         (0, a.jsxs)("div", {
-            className: f.container,
+            className: g.container,
             children: [
                 (0, a.jsxs)("div", {
                     children: [
@@ -85,12 +85,12 @@ function b() {
                             children: [
                                 "Client Theme ID:",
                                 " ",
-                                null != N ? (null == (b = g.qt[N]) ? void 0 : b.getName()) : "None",
+                                null != T ? (null == (b = f.qt[T]) ? void 0 : b.getName()) : "None",
                             ],
                         }),
                         (0, a.jsxs)(r.Text, {
                             variant: "text-md/normal",
-                            children: ["Avatar Decoration: ", null != (_ = null == R ? void 0 : R.name) ? _ : "None"],
+                            children: ["Avatar Decoration: ", null != (_ = null == A ? void 0 : A.name) ? _ : "None"],
                         }),
                         (0, a.jsxs)(r.Text, {
                             variant: "text-md/normal",

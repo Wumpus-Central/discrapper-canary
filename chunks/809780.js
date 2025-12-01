@@ -1,6 +1,6 @@
 n.d(t, {
     As: () => F,
-    ZP: () => Q,
+    ZP: () => X,
     hC: () => H,
     jd: () => V,
 }),
@@ -15,9 +15,9 @@ var r,
     c = n(392711),
     u = n.n(c),
     d = n(570140),
-    p = n(904245),
+    f = n(904245),
     h = n(45114),
-    f = n(607070),
+    p = n(607070),
     g = n(622822),
     m = n(853856),
     b = n(181945),
@@ -26,8 +26,8 @@ var r,
     O = n(344185),
     v = n(569471),
     j = n(723170),
-    C = n(675478),
-    x = n(581883),
+    x = n(675478),
+    C = n(581883),
     E = n(131704),
     S = n(592125),
     I = n(984933),
@@ -102,7 +102,7 @@ var F =
         r),
     V = (((i = {}).Loading = "loading"), (i.Loaded = "loaded"), (i.Done = "done"), i);
 let H = 25;
-class z extends o.EventEmitter {
+class W extends o.EventEmitter {
     loadMore() {
         let { loadState: e, channels: t } = this.state;
         if ("loaded" !== e) return;
@@ -126,7 +126,7 @@ class z extends o.EventEmitter {
             });
     }
     populateInitialStateFromStore(e) {
-        if ("messages" === e.type) return W(e, !1);
+        if ("messages" === e.type) return z(e, !1);
         if ("nsfw" === e.type)
             return B(U({}, e), {
                 isFullyLoaded: !0,
@@ -145,8 +145,8 @@ class z extends o.EventEmitter {
         this.setState({ scrollToChannelIndex: null });
     }
     loadChannelMessages(e) {
-        p.Z.clearChannel(e.channelId);
-        let t = p.Z.fetchMessages({
+        f.Z.clearChannel(e.channelId);
+        let t = f.Z.fetchMessages({
             channelId: e.channelId,
             limit: M.AQB,
             jump: {
@@ -164,7 +164,7 @@ class z extends o.EventEmitter {
                         loadState: "loaded",
                         channels: this.updateChannel(e.channelId, (e) => {
                             s()("messages" === e.type, "channel cannot change type");
-                            let n = W(e, !0);
+                            let n = z(e, !0);
                             return (
                                 (0 === n.messages.length || n.messages.length === e.messages.length) &&
                                     (n = B(U({}, n), {
@@ -184,7 +184,7 @@ class z extends o.EventEmitter {
                             var t;
                             return (
                                 s()("messages" === e.type, "channel cannot change type"),
-                                B(U({}, W(e, !0)), {
+                                B(U({}, z(e, !0)), {
                                     isFullyLoaded: !0,
                                     hasError: !0,
                                     hasLoadedAnything: !0,
@@ -237,7 +237,7 @@ class z extends o.EventEmitter {
             (this.reloadMessages = () => {
                 this.setState({
                     channels: this.state.channels.map((e) =>
-                        "messages" === e.type && e.hasLoadedAnything ? W(e, !1, !0) : e,
+                        "messages" === e.type && e.hasLoadedAnything ? z(e, !1, !0) : e,
                     ),
                 });
             }),
@@ -261,7 +261,7 @@ class z extends o.EventEmitter {
                 if ((null != r && this.undoStack.push(r), 1 === this.state.channels.length))
                     return void this.deleteChannel(t);
                 this.setState({ channels: this.updateChannel(t, (e) => B(U({}, e), { deleted: !0 })) }),
-                    f.Z.useReducedMotion && this.deleteChannel(t),
+                    p.Z.useReducedMotion && this.deleteChannel(t),
                     this.maybeLoadMore();
             }),
             (this.undoMarkChannelRead = () => {
@@ -315,13 +315,13 @@ class z extends o.EventEmitter {
                     a = r[o],
                     s = !a.collapsed;
                 (i[t] = s),
-                    (0, C.BU)(
+                    (0, x.BU)(
                         n,
                         t,
                         (e) => {
                             e.collapsedInInbox = s;
                         },
-                        C.fy.FREQUENT_USER_ACTION,
+                        x.fy.FREQUENT_USER_ACTION,
                     ),
                     this.setState({
                         scrollToChannelIndex: o,
@@ -358,7 +358,7 @@ class z extends o.EventEmitter {
         for (let t = 0; t < e.channels.length; t++) e.channels[t].order = t;
     }
 }
-function W(e, t) {
+function z(e, t) {
     var n;
     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = N.Z.getMessages(e.channelId),
@@ -386,7 +386,7 @@ function K() {
     let e = (function () {
             var e, t;
             let n = {},
-                r = null != (t = null == (e = x.Z.settings.guilds) ? void 0 : e.guilds) ? t : {};
+                r = null != (t = null == (e = C.Z.settings.guilds) ? void 0 : e.guilds) ? t : {};
             for (let e in r)
                 for (let t in r[e].channels) {
                     let i = S.Z.getChannel(t);
@@ -467,7 +467,7 @@ function Y(e, t, n, r) {
             if (w.ZP.getMentionCount(t) > 0) return w.ZP.getIsMentionLowImportance(t) ? 3 : 2;
             if (null != n) {
                 let e = L.default.extractTimestamp(n);
-                if (Date.now() - e > X) return 8;
+                if (Date.now() - e > Q) return 8;
                 if (Date.now() - e > q) return 6;
             }
             if (r.isThread()) {
@@ -494,9 +494,9 @@ function Y(e, t, n, r) {
             );
 }
 let q = 2 * R.Z.Millis.DAY,
-    X = 10 * R.Z.Millis.DAY;
-function Q(e) {
-    let [t, n] = l.useState(() => new z(K(), e)),
+    Q = 10 * R.Z.Millis.DAY;
+function X(e) {
+    let [t, n] = l.useState(() => new W(K(), e)),
         [r, i] = l.useState(!1),
         o = l.useRef(Date.now()),
         [a, s] = l.useState(() => K());
@@ -516,7 +516,7 @@ function Q(e) {
                 l = K();
             0 === l.channels.length || t - o.current < 10 * R.Z.Millis.SECOND
                 ? i(!0)
-                : ((o.current = Date.now()), n(new z(l, e)));
+                : ((o.current = Date.now()), n(new W(l, e)));
         }, [a, r, e]);
     let c = l.useRef(t);
     return (

@@ -1,8 +1,8 @@
 n.d(t, {
-    Q4: () => R,
-    Vv: () => T,
+    Q4: () => P,
+    Vv: () => I,
     oO: () => A,
-    po: () => S,
+    po: () => T,
     x_: () => f.Z,
 }),
     n(388685),
@@ -17,8 +17,8 @@ var r = n(392711),
     u = n(931619),
     d = n(591759),
     f = n(921948),
-    _ = n(981631);
-function p(e, t, n) {
+    p = n(981631);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -43,7 +43,7 @@ function h(e, t) {
     }
     return n;
 }
-let m = 5,
+let h = 5,
     g = /\.webp($|\?|#)/i,
     E = /\.avif($|\?|#)/i,
     b = [
@@ -56,11 +56,11 @@ function O(e, t) {
     let { backoff: n } = e;
     return async () => {
         await u.Z.isOnline(),
-            n.fails < m
+            n.fails < h
                 ? n.fail(() => {
                       v(e);
                   })
-                : I(!0, e, t);
+                : S(!0, e, t);
     };
 }
 function v(e) {
@@ -68,11 +68,11 @@ function v(e) {
     (t.onerror = O(e, t)),
         (t.onload = () => {
             let { backoff: n } = e;
-            null != n && n.succeed(), I(!1, e, t);
+            null != n && n.succeed(), S(!1, e, t);
         }),
         (t.src = e.url);
 }
-function I(e, t, n) {
+function S(e, t, n) {
     let { callbacks: r, url: i } = t;
     if (e) y.del(i);
     else {
@@ -87,11 +87,11 @@ function I(e, t, n) {
     }
     null != r && r.forEach((n) => n(e, t));
 }
-function T(e) {
+function I(e) {
     let t = y.get(e);
     return null != t && t.loaded;
 }
-function S(e, t) {
+function T(e, t) {
     let n = y.get(e);
     if (null != n && n.loaded)
         return (
@@ -108,7 +108,7 @@ function S(e, t) {
                                   });
                         });
                 }),
-            _.dG4
+            p.dG4
         );
     {
         let r;
@@ -152,29 +152,29 @@ function N(e) {
         format: l = null,
         quality: u = null,
         animated: f = !1,
-        srcIsAnimated: p = !1,
+        srcIsAnimated: _ = !1,
     } = e;
     if (t.startsWith("data:image") || d.Z.isDiscordCdnUrl(t)) return t;
-    let [h, m] = C(t);
-    null != l && (m.format = l),
-        null != u && (m.quality = u),
-        f && p && (g.test(t) || E.test(t)) && (m.animated = !0),
-        E.test(t) && (m.format = "webp");
+    let [m, h] = C(t);
+    null != l && (h.format = l),
+        null != u && (h.quality = u),
+        f && _ && (g.test(t) || E.test(t)) && (h.animated = !0),
+        E.test(t) && (h.format = "webp");
     let b = (0, c.Tj)({
         width: a,
         height: o,
-        maxWidth: _.hiG,
-        maxHeight: _.hiG,
+        maxWidth: p.hiG,
+        maxHeight: p.hiG,
     });
     return (
         (a = b.width),
         (o = b.height),
-        (a !== n || o !== r) && ((m.width = 0 | a), (m.height = 0 | o)),
-        i().isEmpty(m) || (h += "?" + s.stringify(m)),
-        h
+        (a !== n || o !== r) && ((h.width = 0 | a), (h.height = 0 | o)),
+        i().isEmpty(h) || (m += "?" + s.stringify(h)),
+        m
     );
 }
-function R(e) {
+function P(e) {
     let {
             src: t,
             width: n,
@@ -188,17 +188,17 @@ function R(e) {
             srcIsAnimated: u = !1,
         } = e,
         d = n,
-        _ = r;
-    o < 1 && ((d = Math.round(n * o)), (_ = Math.round(r * o))),
+        p = r;
+    o < 1 && ((d = Math.round(n * o)), (p = Math.round(r * o))),
         null != i && (d = Math.min(d, i)),
-        null != a && (_ = Math.min(_, a));
-    let p = (0, f.Z)();
+        null != a && (p = Math.min(p, a));
+    let _ = (0, f.Z)();
     return N({
         src: t,
         sourceWidth: n,
         sourceHeight: r,
-        targetWidth: (d *= p),
-        targetHeight: (_ *= p),
+        targetWidth: (d *= _),
+        targetHeight: (p *= _),
         format: s,
         quality: l,
         animated: c,

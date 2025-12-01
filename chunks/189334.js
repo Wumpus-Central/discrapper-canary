@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(147913),
     i = n(282397),
     a = n(626135),
@@ -34,13 +34,13 @@ function f(e) {
             application_id: e.application.id,
         });
 }
-function _(e) {
+function p(e) {
     let { application: t } = e,
         n = i.ZP.getIFrameModalApplicationId(),
         r = i.ZP.getIFrameModalKey();
     t.id === n && null != n && (0, o.Z)(n, r);
 }
-function p(e, t) {
+function _(e, t) {
     let n = null != t ? Date.now() - t : void 0;
     a.default.track(l.rMx.MODAL_DISMISSED, {
         type: u,
@@ -48,7 +48,7 @@ function p(e, t) {
         duration_open_ms: n,
     });
 }
-class h extends r.Z {
+class m extends r.Z {
     constructor(...e) {
         super(...e),
             c(this, "iframeModalOpenTimeMs", void 0),
@@ -60,12 +60,12 @@ class h extends r.Z {
                     (this.iframeModalOpenTimeMs = Date.now()), f(e);
                 },
                 INTERACTION_IFRAME_MODAL_CLOSE: (e) => {
-                    p(e, this.iframeModalOpenTimeMs), (this.iframeModalOpenTimeMs = void 0);
+                    _(e, this.iframeModalOpenTimeMs), (this.iframeModalOpenTimeMs = void 0);
                 },
                 RPC_APP_DISCONNECTED: (e) => {
-                    _(e);
+                    p(e);
                 },
             });
     }
 }
-let m = new h();
+let h = new m();

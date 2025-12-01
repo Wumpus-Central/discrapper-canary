@@ -9,10 +9,10 @@ var r = n(925521),
     u = n(158821),
     d = n(134915),
     f = n(426902),
-    _ = n(921448),
-    p = n(218769),
-    h = n(227399),
-    m = n(473749);
+    p = n(921448),
+    _ = n(218769),
+    m = n(227399),
+    h = n(473749);
 function g(e) {
     return e && e.__esModule ? e.default : e;
 }
@@ -20,10 +20,10 @@ function E(e, t, n) {
     let E = (0, s.Me)(),
         b = (0, s.Me)(),
         y = (0, s.Me)(),
-        O = (0, p.q)(g(r.Z), "@react-aria/datepicker"),
-        { isInvalid: v, validationErrors: I, validationDetails: T } = t.displayValidation,
+        O = (0, _.q)(g(r.Z), "@react-aria/datepicker"),
+        { isInvalid: v, validationErrors: S, validationDetails: I } = t.displayValidation,
         {
-            labelProps: S,
+            labelProps: T,
             fieldProps: A,
             descriptionProps: C,
             errorMessageProps: N,
@@ -31,19 +31,19 @@ function E(e, t, n) {
             ...e,
             labelElementType: "span",
             isInvalid: v,
-            errorMessage: e.errorMessage || I,
+            errorMessage: e.errorMessage || S,
         }),
-        R = (0, a.H)(t, n),
-        P = A["aria-labelledby"] || A.id,
-        { locale: D } = (0, h.j)(),
-        w = t.formatValue(D, { month: "long" }),
-        L = w ? O.format("selectedDateDescription", { date: w }) : "",
-        x = (0, l.P)(L),
-        M = [x["aria-describedby"], A["aria-describedby"]].filter(Boolean).join(" ") || void 0,
-        k = (0, c.z)(e),
-        j = (0, m.useMemo)(() => (0, o.E7)(n), [n]),
-        U = (0, m.useRef)(!1),
-        { focusWithinProps: G } = (0, _.L)({
+        P = (0, a.H)(t, n),
+        R = A["aria-labelledby"] || A.id,
+        { locale: w } = (0, m.j)(),
+        D = t.formatValue(w, { month: "long" }),
+        x = D ? O.format("selectedDateDescription", { date: D }) : "",
+        L = (0, l.P)(x),
+        j = [L["aria-describedby"], A["aria-describedby"]].filter(Boolean).join(" ") || void 0,
+        M = (0, c.z)(e),
+        k = (0, h.useMemo)(() => (0, o.E7)(n), [n]),
+        U = (0, h.useRef)(!1),
+        { focusWithinProps: G } = (0, p.L)({
             ...e,
             isDisabled: t.isOpen,
             onBlurWithin: (t) => {
@@ -65,11 +65,11 @@ function E(e, t, n) {
             },
         });
     return {
-        groupProps: (0, u.d)(k, R, A, x, G, {
+        groupProps: (0, u.d)(M, P, A, L, G, {
             role: "group",
             "aria-disabled": e.isDisabled || null,
-            "aria-labelledby": P,
-            "aria-describedby": M,
+            "aria-labelledby": R,
+            "aria-describedby": j,
             onKeyDown(n) {
                 !t.isOpen && e.onKeyDown && e.onKeyDown(n);
             },
@@ -78,16 +78,16 @@ function E(e, t, n) {
             },
         }),
         labelProps: {
-            ...S,
+            ...T,
             onClick: () => {
-                j.focusFirst();
+                k.focusFirst();
             },
         },
         fieldProps: {
             ...A,
             id: y,
             [i.KX]: "presentation",
-            "aria-describedby": M,
+            "aria-describedby": j,
             value: t.value,
             defaultValue: t.defaultValue,
             onChange: t.setValue,
@@ -108,19 +108,19 @@ function E(e, t, n) {
         descriptionProps: C,
         errorMessageProps: N,
         buttonProps: {
-            ...x,
+            ...L,
             id: E,
             "aria-haspopup": "dialog",
             "aria-label": O.format("calendar"),
-            "aria-labelledby": `${E} ${P}`,
-            "aria-describedby": M,
+            "aria-labelledby": `${E} ${R}`,
+            "aria-describedby": j,
             "aria-expanded": t.isOpen,
             isDisabled: e.isDisabled || e.isReadOnly,
             onPress: () => t.setOpen(!0),
         },
         dialogProps: {
             id: b,
-            "aria-labelledby": `${E} ${P}`,
+            "aria-labelledby": `${E} ${R}`,
         },
         calendarProps: {
             autoFocus: !0,
@@ -141,7 +141,7 @@ function E(e, t, n) {
             pageBehavior: e.pageBehavior,
         },
         isInvalid: v,
-        validationErrors: I,
-        validationDetails: T,
+        validationErrors: S,
+        validationDetails: I,
     };
 }

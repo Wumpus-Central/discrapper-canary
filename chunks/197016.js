@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381);
 n(473749);
 var i = n(685072),
@@ -61,7 +61,7 @@ function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -69,7 +69,7 @@ function f(e, t) {
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,20 +78,20 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function p(e) {
+function _(e) {
     var { centerButton: t = !1, onClick: n, onMouseEnter: l, onMouseLeave: u } = e,
-        _ = f(e, ["centerButton", "onClick", "onMouseEnter", "onMouseLeave"]);
-    let p = t ? o.d : o.Z,
-        h = () => {
+        p = f(e, ["centerButton", "onClick", "onMouseEnter", "onMouseLeave"]);
+    let _ = t ? o.d : o.Z,
+        m = () => {
             null == n || n(), a.default.disconnect();
         },
-        m = () => s.intl.string(s.t["6vrfgt"]),
+        h = () => s.intl.string(s.t["6vrfgt"]),
         { Component: g, events: E } = (0, i.K)();
     return (0, r.jsx)(
-        p,
-        d(c({}, _), {
+        _,
+        d(c({}, p), {
             isTrayButton: !1,
-            onClick: h,
+            onClick: m,
             iconComponent: g,
             onMouseEnter: (e) => {
                 null == l || l(e), E.onMouseEnter();
@@ -99,7 +99,7 @@ function p(e) {
             onMouseLeave: (e) => {
                 null == u || u(e), E.onMouseLeave();
             },
-            label: m(),
+            label: h(),
         }),
     );
 }

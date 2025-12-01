@@ -1,6 +1,6 @@
 n.d(t, {
-    S: () => p,
-    m: () => _,
+    S: () => _,
+    m: () => p,
 }),
     n(388685);
 var r = n(54381),
@@ -13,7 +13,7 @@ var r = n(54381),
     u = n(388032),
     d = n(545869);
 let f = c.ZP.getEnableHardwareAcceleration() ? o.Xo$ : o.qEK;
-function _() {
+function p() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         [t, n] = i.useState(!1),
         r = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
@@ -29,7 +29,7 @@ function _() {
         },
     };
 }
-function p(e) {
+function _(e) {
     let { src: t } = e;
     return (0, r.jsx)("div", {
         className: d.avatarContainer,

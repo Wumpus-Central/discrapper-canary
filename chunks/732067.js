@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(953529);
+n.d(t, { Z: () => T }), n(953529);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,27 +9,27 @@ var r = n(54381),
     u = n(758199),
     d = n(914498),
     f = n(925329),
-    _ = n(739566),
-    p = n(942951),
-    h = n(834129),
-    m = n(375954),
+    p = n(739566),
+    _ = n(942951),
+    m = n(834129),
+    h = n(375954),
     g = n(758371),
     E = n(810008),
     b = n(691991),
     y = n(967249),
     O = n(388032),
     v = n(837262),
-    I = n(520816);
-function T(e) {
+    S = n(520816);
+function I(e) {
     let { message: t, applicationName: n, iconSrc: i, channel: a, currentUserId: s, viewAction: c } = e,
-        u = (0, _.ZP)(t),
-        d = (0, p.l)({
+        u = (0, p.ZP)(t),
+        d = (0, _.l)({
             user: t.author,
             channelId: a.id,
             guildId: a.guild_id,
             messageId: t.id,
         })(u);
-    return (0, r.jsx)(h.Z, {
+    return (0, r.jsx)(m.Z, {
         compact: !1,
         children: O.intl.format(s === t.author.id ? O.t.anvg2q : O.t.AxVbYF, {
             username: u.nick,
@@ -43,7 +43,7 @@ function T(e) {
                         (0, r.jsx)("img", {
                             alt: O.intl.string(O.t["2B/phM"]),
                             src: i,
-                            className: o()(I.gameIcon, f.A.XSMALL),
+                            className: o()(S.gameIcon, f.A.XSMALL),
                         }),
                         (0, r.jsx)(l.Text, {
                             variant: "text-sm/semibold",
@@ -56,28 +56,28 @@ function T(e) {
         }),
     });
 }
-function S(e) {
+function T(e) {
     let {
             message: t,
             application: n,
             applicationName: a,
             channel: o,
             header: f,
-            currentUserId: _,
-            launchableAppId: p,
-            isEmbeddedApplication: h,
-            tryWithGdnAction: I,
-            staticBannerSrc: S,
+            currentUserId: p,
+            launchableAppId: _,
+            isEmbeddedApplication: m,
+            tryWithGdnAction: S,
+            staticBannerSrc: T,
             onClickContent: A,
             iconSrc: C,
             onView: N,
-            presenceActivity: R,
-            analyticsLocations: P,
+            presenceActivity: P,
+            analyticsLocations: R,
         } = e,
-        D = (0, s.e7)([m.Z], () => m.Z.getMessages(o.id)),
-        w = i.useMemo(() => {
+        w = (0, s.e7)([h.Z], () => h.Z.getMessages(o.id)),
+        D = i.useMemo(() => {
             let e = [];
-            return (null != p
+            return (null != _
                 ? (e = [
                       {
                           label: O.intl.string(O.t["s+J8Dl"]),
@@ -85,49 +85,49 @@ function S(e) {
                           isDeadEnd: !0,
                           onClick: () => {
                               c.Z.launch({
-                                  applicationId: p,
-                                  embedded: h,
+                                  applicationId: _,
+                                  embedded: m,
                               });
                           },
                       },
                   ])
-                : null != I && (e = [I]),
-            e.length > 0 && !(0, E.b)(t.id, D, n.id, R))
+                : null != S && (e = [S]),
+            e.length > 0 && !(0, E.b)(t.id, w, n.id, P))
                 ? []
                 : e;
-        }, [h, p, I, D, R, n.id, t.id]),
-        L = w.some((e) => e.trackingArea === d.j_.CLOUD_PLAY);
-    (0, b.Z)(L, P);
-    let x = w.length > 0,
-        M = i.useMemo(
+        }, [m, _, S, w, P, n.id, t.id]),
+        x = D.some((e) => e.trackingArea === d.j_.CLOUD_PLAY);
+    (0, b.Z)(x, R);
+    let L = D.length > 0,
+        j = i.useMemo(
             () =>
                 (0, r.jsx)(l.Text, {
                     variant: "text-xs/medium",
                     className: v.description,
                     color: "none",
                     lineClamp: 3,
-                    children: (0, g.wR)(t, a, o, _, x),
+                    children: (0, g.wR)(t, a, o, p, L),
                 }),
-            [t, a, o, _, x],
+            [t, a, o, p, L],
         );
-    return 0 === w.length
-        ? (0, r.jsx)(T, {
+    return 0 === D.length
+        ? (0, r.jsx)(I, {
               message: t,
               applicationName: a,
               iconSrc: C,
               channel: o,
-              currentUserId: _,
+              currentUserId: p,
               viewAction: A,
           })
         : (0, r.jsx)(u.W, {
               header: f,
               title: a,
-              staticBannerSrc: S,
+              staticBannerSrc: T,
               onClickBanner: A,
               bannerAspectRatio: u.u.ACTIVITY,
               iconSrc: null != C ? C : void 0,
-              info: M,
-              actions: w,
+              info: j,
+              actions: D,
               onClickContent: A,
               trackingConfig: {
                   id: n.id,

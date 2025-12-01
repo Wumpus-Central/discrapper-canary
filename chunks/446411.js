@@ -16,35 +16,35 @@ var r,
     u = n(635477),
     d = n(715697),
     f = n(936141),
-    _ = n(947849),
-    p = n(768494),
-    h = n(624195),
-    m = n(44824),
+    p = n(947849),
+    _ = n(768494),
+    m = n(624195),
+    h = n(44824),
     g = n(124347),
     E = n(283756),
     b = n(120324),
     y = n(566898),
     O = n(963206),
     v = n(411405),
-    I = n(785992),
-    T = n(400266),
-    S = n(592125),
+    S = n(785992),
+    I = n(400266),
+    T = n(592125),
     A = n(52824),
     C = n(626135),
     N = n(585483),
-    R = n(55935),
-    P = n(408433),
-    D = n(956664),
-    w = n(624138),
-    L = n(591759),
-    x = n(468846),
-    M = n(401419),
-    k = n(249458),
-    j = n(981631),
+    P = n(55935),
+    R = n(408433),
+    w = n(956664),
+    D = n(624138),
+    x = n(591759),
+    L = n(468846),
+    j = n(401419),
+    M = n(249458),
+    k = n(981631),
     U = n(217702),
     G = n(388032),
-    B = n(781452),
-    Z = n(430864);
+    Z = n(781452),
+    B = n(430864);
 function F(e, t, n) {
     return (
         t in e
@@ -101,8 +101,8 @@ let W = 32,
     K = 12,
     z = 150,
     q = 144,
-    X = 520,
-    Q = 5,
+    Q = 520,
+    X = 5,
     J = 150;
 function $(e, t) {
     let n = K / t,
@@ -110,7 +110,7 @@ function $(e, t) {
     return "".concat(r + 1, " / ").concat(r + n + 1);
 }
 function ee(e) {
-    let t = L.Z.toURLSafe(e);
+    let t = x.Z.toURLSafe(e);
     return null == t ? e : (t.searchParams.set("format", "png"), t.toString());
 }
 function et(e) {
@@ -123,79 +123,79 @@ function et(e) {
             thumbnail: u,
             video: d,
             provider: f,
-            allowFullScreen: _ = !0,
-            responsive: p = !1,
-            renderImageComponent: h,
-            renderVideoComponent: m,
+            allowFullScreen: p = !0,
+            responsive: _ = !1,
+            renderImageComponent: m,
+            renderVideoComponent: h,
             renderLinkComponent: g,
             playable: b = !0,
             autoPlay: y = !1,
             autoMute: O,
             volume: v,
-            onPlay: I,
-            onPause: T,
-            onEnded: S,
+            onPlay: S,
+            onPause: I,
+            onEnded: T,
             onControlsHide: C,
-            onControlsShow: R,
-            onVolumeChange: P,
-            onMute: w,
-            href: L,
-            placeholder: M,
-            placeholderVersion: k,
+            onControlsShow: P,
+            onVolumeChange: R,
+            onMute: D,
+            href: x,
+            placeholder: j,
+            placeholderVersion: M,
             sourceMetadata: U,
         } = e,
-        [G, Z] = a.useState(y),
+        [G, B] = a.useState(y),
         F = null != d && null == d.proxyURL,
-        V = a.useCallback(() => Z(!1), [Z]),
+        V = a.useCallback(() => B(!1), [B]),
         H = (e) => {
             e.preventDefault(),
                 e.stopPropagation(),
-                null == I || I(!1),
-                Z(!0),
+                null == S || S(!1),
+                B(!0),
                 F &&
-                    (N.S.dispatch(j.CkL.VIDEO_EMBED_PLAYBACK_STARTED),
-                    N.S.subscribeOnce(j.CkL.VIDEO_EMBED_PLAYBACK_STARTED, V));
+                    (N.S.dispatch(k.CkL.VIDEO_EMBED_PLAYBACK_STARTED),
+                    N.S.subscribeOnce(k.CkL.VIDEO_EMBED_PLAYBACK_STARTED, V));
         };
     a.useEffect(
         () => () => {
-            F && N.S.unsubscribe(j.CkL.VIDEO_EMBED_PLAYBACK_STARTED, V);
+            F && N.S.unsubscribe(k.CkL.VIDEO_EMBED_PLAYBACK_STARTED, V);
         },
         [F, V],
     );
     let { width: Y, height: W } = u;
     null != d && ((Y = d.width), (W = d.height));
-    let K = (0, D.Tj)({
+    let K = (0, w.Tj)({
         width: Y,
         height: W,
         maxWidth: l,
         maxHeight: c,
     });
     (Y = Math.max(K.width, z)), (W = Math.max(K.height, q));
-    let X = (0, A.q)(u);
+    let Q = (0, A.q)(u);
     if (null != d && null != d.proxyURL)
         return (0, i.jsx)("div", {
-            className: s()(B.embedVideo, r),
-            children: m({
-                poster: X,
+            className: s()(Z.embedVideo, r),
+            children: h({
+                poster: Q,
                 src: d.proxyURL,
-                placeholder: M,
-                placeholderVersion: k,
+                placeholder: j,
+                placeholderVersion: M,
                 width: Y,
                 height: W,
-                responsive: p,
+                responsive: _,
                 autoPlay: y,
-                onEnded: S,
+                onEnded: T,
                 naturalWidth: d.width,
                 naturalHeight: d.height,
-                onVolumeChange: P,
+                onVolumeChange: R,
                 playable: b,
                 autoMute: O,
                 volume: v,
-                onPlay: I,
-                onPause: T,
-                onMute: w,
+                onPlay: S,
+                onPause: I,
+                onMute: D,
                 onControlsHide: C,
-                onControlsShow: R,
+                onControlsShow: P,
                 sourceMetadata: U,
             }),
         });
@@ -210,7 +210,7 @@ function et(e) {
                 width: Y,
                 height: W,
             };
-        if (p) {
+        if (_) {
             let t = 0 !== Y ? W / Y : 1;
             (n = {
                 maxWidth: l,
@@ -234,52 +234,52 @@ function et(e) {
             className: r,
             style: n,
             children: (0, i.jsx)("div", {
-                className: s()(B.embedVideo, o),
+                className: s()(Z.embedVideo, o),
                 style: a,
-                children: (0, i.jsx)(x.ZP, {
+                children: (0, i.jsx)(L.ZP, {
                     provider: f,
                     src: d.url,
                     style: e,
                     width: Y,
                     height: W,
-                    allowFullScreen: _,
+                    allowFullScreen: p,
                     autoMute: t,
                 }),
             }),
         });
     }
     return (0, i.jsxs)("div", {
-        className: s()(B.embedVideo, r),
-        style: p
+        className: s()(Z.embedVideo, r),
+        style: _
             ? { maxWidth: Y }
             : {
                   width: Y,
                   height: W,
               },
         children: [
-            h({
-                src: X,
+            m({
+                src: Q,
                 width: Y,
                 height: W,
                 maxWidth: Y,
                 maxHeight: W,
-                responsive: p,
-                containerClassName: B.embedVideoImageComponent,
-                imageClassName: B.embedVideoImageComponentInner,
-                placeholder: M,
-                placeholderVersion: k,
+                responsive: _,
+                containerClassName: Z.embedVideoImageComponent,
+                imageClassName: Z.embedVideoImageComponentInner,
+                placeholder: j,
+                placeholderVersion: M,
                 onClick: b && null != d ? H : null,
                 sourceMetadata: U,
                 analyticsSource: "EmbedVideo",
             }),
             (0, i.jsx)("div", {
-                className: B.embedVideoActions,
+                className: Z.embedVideoActions,
                 children: (0, i.jsx)("div", {
-                    className: B.centerContent,
+                    className: Z.centerContent,
                     children: b
                         ? (0, i.jsx)(E.Z, {
                               onPlay: null != d ? H : null,
-                              externalURL: L,
+                              externalURL: x,
                               renderLinkComponent: g,
                               messageId: null == U || null == (t = U.message) ? void 0 : t.id,
                               channelId: null == U || null == (n = U.message) ? void 0 : n.channel_id,
@@ -302,15 +302,15 @@ function en(e) {
         renderImageComponent: u,
         responsive: d,
         alt: f,
-        disableAltTextDisplay: _ = !1,
-        playable: p = !0,
-        hiddenSpoilers: h,
+        disableAltTextDisplay: p = !1,
+        playable: _ = !0,
+        hiddenSpoilers: m,
         placeholder: g,
         placeholderVersion: E,
         sourceMetadata: b,
     } = e;
-    return (0, i.jsx)(m.Z, {
-        className: s()(B.embedVideo, t),
+    return (0, i.jsx)(h.Z, {
+        className: s()(Z.embedVideo, t),
         original: n,
         poster: (0, A.q)(l),
         src: (0, A.q)(c),
@@ -323,10 +323,10 @@ function en(e) {
         maxHeight: o,
         responsive: d,
         autoPlay: r,
-        playable: p,
+        playable: _,
         renderImageComponent: u,
-        hiddenSpoilers: h,
-        disableAltTextDisplay: _,
+        hiddenSpoilers: m,
+        disableAltTextDisplay: p,
         placeholder: g,
         placeholderVersion: E,
         sourceMetadata: b,
@@ -344,18 +344,18 @@ class er extends (r = a.PureComponent) {
             ? null
             : this.shouldShowStaticPlaceholder
               ? (0, i.jsx)("div", {
-                    className: s()(B.embedProvider, B.embedMargin),
+                    className: s()(Z.embedProvider, Z.embedMargin),
                     children: this.renderContentPlaceholder({
                         width: 80,
                         height: 18,
                     }),
                 })
               : (0, i.jsx)("div", {
-                    className: s()(B.embedProvider, B.embedMargin),
+                    className: s()(Z.embedProvider, Z.embedMargin),
                     children:
                         null != t.url
                             ? n({
-                                  className: B.embedLink,
+                                  className: Z.embedLink,
                                   href: t.url,
                                   tabIndex: e ? 0 : -1,
                                   children: t.name,
@@ -379,28 +379,28 @@ class er extends (r = a.PureComponent) {
             ? null
             : this.shouldShowStaticPlaceholder
               ? (0, i.jsx)("div", {
-                    className: s()(B.embedAuthor, B.embedMargin),
+                    className: s()(Z.embedAuthor, Z.embedMargin),
                     children: this.renderContentPlaceholder({
                         width: 150,
                         height: 18,
                     }),
                 })
-              : (0, i.jsx)(k.G.Consumer, {
+              : (0, i.jsx)(M.G.Consumer, {
                     children: (o) => {
                         let { disableAnimations: l } = o;
                         return (0, i.jsxs)("div", {
-                            className: s()(B.embedAuthor, B.embedMargin),
+                            className: s()(Z.embedAuthor, Z.embedMargin),
                             children: [
                                 null != t.iconProxyURL
                                     ? (0, i.jsx)("img", {
                                           alt: "",
-                                          className: B.embedAuthorIcon,
+                                          className: Z.embedAuthorIcon,
                                           src: a && !l ? t.iconProxyURL : ee(t.iconProxyURL),
                                       })
                                     : null,
                                 null != t.url
                                     ? n({
-                                          className: B.embedAuthorNameLink,
+                                          className: Z.embedAuthorNameLink,
                                           href: t.url,
                                           tabIndex: e ? 0 : -1,
                                           children: t.name,
@@ -410,7 +410,7 @@ class er extends (r = a.PureComponent) {
                                           channelId: null == r ? void 0 : r.channel_id,
                                       })
                                     : (0, i.jsx)("span", {
-                                          className: B.embedAuthorName,
+                                          className: Z.embedAuthorName,
                                           children: t.name,
                                       }),
                             ],
@@ -421,7 +421,7 @@ class er extends (r = a.PureComponent) {
     renderContentPlaceholder(e) {
         let { width: t, height: n } = e;
         return (0, i.jsx)(y.ZT, {
-            className: B.contentPlaceholder,
+            className: Z.contentPlaceholder,
             width: t,
             height: n,
             opacity: 0.3,
@@ -435,18 +435,18 @@ class er extends (r = a.PureComponent) {
             ? null
             : this.shouldShowStaticPlaceholder
               ? (0, i.jsx)("div", {
-                    className: s()(B.embedTitle, B.embedMargin),
+                    className: s()(Z.embedTitle, Z.embedMargin),
                     children: this.renderContentPlaceholder({
                         width: 400,
                         height: 30,
                     }),
                 })
               : (0, i.jsx)("div", {
-                    className: s()(B.embedTitle, B.embedMargin),
+                    className: s()(Z.embedTitle, Z.embedMargin),
                     children:
                         null != l
                             ? n({
-                                  className: B.embedTitleLink,
+                                  className: Z.embedTitleLink,
                                   href: l,
                                   tabIndex: e ? 0 : -1,
                                   children: r(t, o),
@@ -464,7 +464,7 @@ class er extends (r = a.PureComponent) {
         return null == n
             ? null
             : (0, i.jsx)("div", {
-                  className: s()(B.embedDescription, B.embedMargin),
+                  className: s()(Z.embedDescription, Z.embedMargin),
                   children: this.shouldShowStaticPlaceholder
                       ? this.renderContentPlaceholder({
                             width: 400,
@@ -485,11 +485,11 @@ class er extends (r = a.PureComponent) {
             { sourceMetadata: s } = this.state;
         return null == t
             ? null
-            : (0, i.jsx)(k.G.Consumer, {
+            : (0, i.jsx)(M.G.Consumer, {
                   children: (i) => {
                       let { disableAnimations: l } = i;
                       return a({
-                          containerClassName: B.embedThumbnail,
+                          containerClassName: Z.embedThumbnail,
                           src: (0, A.q)(t),
                           original: t.url,
                           width: t.width,
@@ -523,7 +523,7 @@ class er extends (r = a.PureComponent) {
             }),
             null != r && n.push(r),
             (0, i.jsx)("div", {
-                className: B.embedFields,
+                className: Z.embedFields,
                 children: n.map((e, t) => {
                     let { length: n } = e;
                     return e.map((e, r) => {
@@ -531,15 +531,15 @@ class er extends (r = a.PureComponent) {
                         return (0, i.jsxs)(
                             "div",
                             {
-                                className: B.embedField,
+                                className: Z.embedField,
                                 style: { gridColumn: $(r, n) },
                                 children: [
                                     (0, i.jsx)("div", {
-                                        className: B.embedFieldName,
+                                        className: Z.embedFieldName,
                                         children: a,
                                     }),
                                     (0, i.jsx)("div", {
-                                        className: B.embedFieldValue,
+                                        className: Z.embedFieldValue,
                                         children: o,
                                     }),
                                 ],
@@ -570,14 +570,14 @@ class er extends (r = a.PureComponent) {
         return null == c && null == u && null == d && null == f
             ? null
             : (0, i.jsxs)("div", {
-                  className: B.embedGalleryImagesWrapper,
+                  className: Z.embedGalleryImagesWrapper,
                   style: { height: l },
                   children: [
                       (0, i.jsxs)("div", {
-                          className: B.embedGallerySide,
+                          className: Z.embedGallerySide,
                           children: [
                               (0, i.jsx)(
-                                  _.h.Provider,
+                                  p.h.Provider,
                                   {
                                       value: (0, O.P)(s.images[0].url, s.images[0]),
                                       children: c,
@@ -586,7 +586,7 @@ class er extends (r = a.PureComponent) {
                               ),
                               null != f &&
                                   (0, i.jsx)(
-                                      _.h.Provider,
+                                      p.h.Provider,
                                       {
                                           value: (0, O.P)(null == (e = s.images[2]) ? void 0 : e.url, s.images[2]),
                                           children: d,
@@ -596,10 +596,10 @@ class er extends (r = a.PureComponent) {
                           ],
                       }),
                       (0, i.jsxs)("div", {
-                          className: B.embedGallerySide,
+                          className: Z.embedGallerySide,
                           children: [
                               (0, i.jsx)(
-                                  _.h.Provider,
+                                  p.h.Provider,
                                   {
                                       value: (0, O.P)(null == (t = s.images[1]) ? void 0 : t.url, s.images[1]),
                                       children: u,
@@ -609,7 +609,7 @@ class er extends (r = a.PureComponent) {
                               null == f &&
                                   null != d &&
                                   (0, i.jsx)(
-                                      _.h.Provider,
+                                      p.h.Provider,
                                       {
                                           value: (0, O.P)(null == (n = s.images[2]) ? void 0 : n.url, s.images[2]),
                                           children: d,
@@ -618,7 +618,7 @@ class er extends (r = a.PureComponent) {
                                   ),
                               null != f &&
                                   (0, i.jsx)(
-                                      _.h.Provider,
+                                      p.h.Provider,
                                       {
                                           value: (0, O.P)(null == (r = s.images[3]) ? void 0 : r.url, s.images[3]),
                                           children: f,
@@ -632,8 +632,8 @@ class er extends (r = a.PureComponent) {
     }
     handleImageHover() {
         var e;
-        let t = S.Z.getChannel(null == (e = this.props.message) ? void 0 : e.channel_id);
-        C.default.track(j.rMx.IMAGE_HOVERED, {
+        let t = T.Z.getChannel(null == (e = this.props.message) ? void 0 : e.channel_id);
+        C.default.track(k.rMx.IMAGE_HOVERED, {
             guild_id: null == t ? void 0 : t.guild_id,
             channel_id: null == t ? void 0 : t.id,
             image_recommendations_shown: !1,
@@ -650,7 +650,7 @@ class er extends (r = a.PureComponent) {
                 allImages: c = null,
             } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
             { renderImageComponent: u, className: d, autoPlayGif: f } = this.props,
-            { maxMediaWidth: h, maxMediaHeight: m, sourceMetadata: E } = this.state;
+            { maxMediaWidth: m, maxMediaHeight: h, sourceMetadata: E } = this.state;
         if (null == a) return null;
         let y = (0, A.q)(a),
             { srcToOnClickOverride: O, srcToHandlePreloadImage: v } =
@@ -661,7 +661,7 @@ class er extends (r = a.PureComponent) {
                       }
                     : (0, b.G)(
                           c.map((e) =>
-                              Y(V({}, (0, p.Hv)(e, E, "IMAGE")), {
+                              Y(V({}, (0, _.Hv)(e, E, "IMAGE")), {
                                   original: e.url,
                                   srcIsAnimated: e.srcIsAnimated,
                               }),
@@ -669,28 +669,28 @@ class er extends (r = a.PureComponent) {
                           {},
                           "Embed",
                       ),
-            I = g.ZP.isAnimated({
+            S = g.ZP.isAnimated({
                 src: (0, A.q)(a),
                 original: a.url,
                 animated: !1,
                 srcIsAnimated: a.srcIsAnimated,
             }),
-            T = {
+            I = {
                 containerClassName: s()(d, {
-                    [B.embedMedia]: !o,
-                    [B.embedImage]: !o,
-                    [B.galleryImage]: o,
+                    [Z.embedMedia]: !o,
+                    [Z.embedImage]: !o,
+                    [Z.galleryImage]: o,
                 }),
-                imageContainerClassName: o ? B.galleryImageContainer : void 0,
-                imageClassName: o ? B.embedGalleryImageElement : void 0,
+                imageContainerClassName: o ? Z.galleryImageContainer : void 0,
+                imageClassName: o ? Z.embedGalleryImageElement : void 0,
                 src: (0, A.q)(a),
                 alt: null == a.description || "" === a.description ? l : a.description,
                 responsive: !0,
                 limitResponsiveWidth: !o,
                 width: a.width,
                 height: a.height,
-                maxWidth: h,
-                maxHeight: m,
+                maxWidth: m,
+                maxHeight: h,
                 original: a.url,
                 shouldLink: r,
                 disableAltTextDisplay: null == a.description || "" === a.description,
@@ -700,20 +700,20 @@ class er extends (r = a.PureComponent) {
                 srcIsAnimated: a.srcIsAnimated,
                 mosaicStyleAlt: !0,
             },
-            S = null != (t = null == (e = a.url.split(".").pop()) ? void 0 : e.split("?")[0]) ? t : "";
+            T = null != (t = null == (e = a.url.split(".").pop()) ? void 0 : e.split("?")[0]) ? t : "";
         return (
-            "jpg" === S && (S = "jpeg"),
-            (0, i.jsx)(_.h.Consumer, {
+            "jpg" === T && (T = "jpeg"),
+            (0, i.jsx)(p.h.Consumer, {
                 children: (e) =>
                     (0, i.jsx)(
-                        k.G.Consumer,
+                        M.G.Consumer,
                         {
                             children: (t) => {
                                 let { disableAnimations: r } = t;
                                 return u(
-                                    Y(V({}, T), {
+                                    Y(V({}, I), {
                                         autoPlay: f && !r && !n,
-                                        renderAccessory: I ? e : null,
+                                        renderAccessory: S ? e : null,
                                         handlePreloadImage: v[y],
                                         onClick: O[y],
                                         onMouseEnter: () => this.handleImageHover(),
@@ -741,32 +741,32 @@ class er extends (r = a.PureComponent) {
                 renderLinkComponent: u,
                 allowFullScreen: d,
                 autoPlayGif: f,
-                obscureReason: _,
+                obscureReason: p,
             } = this.props,
-            { maxMediaWidth: p, maxMediaHeight: h, sourceMetadata: m } = this.state;
+            { maxMediaWidth: _, maxMediaHeight: m, sourceMetadata: h } = this.state;
         if (null == r || null == a) return null;
         if (e)
             return null == o
                 ? null
-                : (0, i.jsx)(k.G.Consumer, {
+                : (0, i.jsx)(M.G.Consumer, {
                       children: (e) => {
                           let { disableAnimations: s } = e;
                           return (0, i.jsx)(en, {
-                              className: B.embedMedia,
+                              className: Z.embedMedia,
                               href: r,
                               thumbnail: a,
                               video: o,
-                              maxWidth: p,
-                              maxHeight: h,
+                              maxWidth: _,
+                              maxHeight: m,
                               responsive: !0,
                               autoPlay: !n && f && !s && t,
                               renderImageComponent: c,
                               playable: t,
                               hiddenSpoilers: n,
-                              disableAltTextDisplay: null != _,
+                              disableAltTextDisplay: null != p,
                               placeholder: o.placeholder,
                               placeholderVersion: o.placeholderVersion,
-                              sourceMetadata: m,
+                              sourceMetadata: h,
                           });
                       },
                   });
@@ -777,14 +777,14 @@ class er extends (r = a.PureComponent) {
                 this.setState({ videoControlsShown: !1 });
             };
         return (0, i.jsx)(et, {
-            className: B.embedMedia,
+            className: Z.embedMedia,
             href: r,
             allowFullScreen: d,
             thumbnail: a,
             video: o,
             provider: null == s ? void 0 : s.name,
-            maxWidth: p,
-            maxHeight: h,
+            maxWidth: _,
+            maxHeight: m,
             responsive: !0,
             renderImageComponent: c,
             renderVideoComponent: l,
@@ -794,37 +794,37 @@ class er extends (r = a.PureComponent) {
             playable: t && !n,
             placeholder: null == o ? void 0 : o.placeholder,
             placeholderVersion: null == o ? void 0 : o.placeholderVersion,
-            sourceMetadata: m,
+            sourceMetadata: h,
         });
     }
     renderFooter() {
         let { autoPlayGif: e } = this.props,
             { footer: t, timestamp: n } = this.props.embed;
         return null != t
-            ? (0, i.jsx)(k.G.Consumer, {
+            ? (0, i.jsx)(M.G.Consumer, {
                   children: (r) => {
                       let { disableAnimations: a } = r;
                       return (0, i.jsxs)("div", {
-                          className: s()(B.embedFooter, B.embedMargin),
+                          className: s()(Z.embedFooter, Z.embedMargin),
                           children: [
                               null != t.iconProxyURL && "" !== t.iconProxyURL
                                   ? (0, i.jsx)("img", {
                                         alt: "",
-                                        className: B.embedFooterIcon,
+                                        className: Z.embedFooterIcon,
                                         src: e && !a ? t.iconProxyURL : ee(t.iconProxyURL),
                                     })
                                   : null,
                               (0, i.jsxs)("span", {
-                                  className: B.embedFooterText,
+                                  className: Z.embedFooterText,
                                   children: [
                                       t.text,
                                       null != t.text && null != n
                                           ? (0, i.jsx)("span", {
-                                                className: B.embedFooterSeparator,
+                                                className: Z.embedFooterSeparator,
                                                 children: "\u2022",
                                             })
                                           : null,
-                                      null != n ? (0, R.Y4)(n) : null,
+                                      null != n ? (0, P.Y4)(n) : null,
                                   ],
                               }),
                           ],
@@ -833,10 +833,10 @@ class er extends (r = a.PureComponent) {
               })
             : null != n
               ? (0, i.jsx)("div", {
-                    className: s()(B.embedFooter, B.embedMargin),
+                    className: s()(Z.embedFooter, Z.embedMargin),
                     children: (0, i.jsx)("span", {
-                        className: B.embedFooterText,
-                        children: (0, R.Y4)(n),
+                        className: Z.embedFooterText,
+                        children: (0, P.Y4)(n),
                     }),
                 })
               : void 0;
@@ -847,7 +847,7 @@ class er extends (r = a.PureComponent) {
             { maxMediaWidth: r, maxMediaHeight: a } = this.state,
             o = null != (e = n.image) ? e : n.video;
         if (null == o) return null;
-        let { width: s, height: c } = (0, D.Tj)({
+        let { width: s, height: c } = (0, w.Tj)({
             width: o.width,
             height: o.height,
             maxWidth: r,
@@ -855,7 +855,7 @@ class er extends (r = a.PureComponent) {
         });
         return (0, i.jsx)(l.Eep, {
             className: t,
-            readyState: j.zo9.READY,
+            readyState: k.zo9.READY,
             src: "",
             width: s,
             height: c,
@@ -872,13 +872,13 @@ class er extends (r = a.PureComponent) {
             { isVisible: n } = this.state;
         if (this.shouldShowStaticPlaceholder) return this.renderStaticPlaceholderMedia();
         switch (t.type) {
-            case j.hBH.GIFV:
+            case k.hBH.GIFV:
                 return this.renderVideo({
                     gifv: !0,
                     hiddenSpoiler: e,
                     isVisible: n,
                 });
-            case j.hBH.VIDEO:
+            case k.hBH.VIDEO:
             default:
                 if (null != t.video)
                     return this.renderVideo({
@@ -908,9 +908,9 @@ class er extends (r = a.PureComponent) {
             o = this.renderAuthor(i),
             s = this.renderTitle(i);
         switch (n.type) {
-            case j.hBH.IMAGE:
-            case j.hBH.VIDEO:
-            case j.hBH.GIFV:
+            case k.hBH.IMAGE:
+            case k.hBH.VIDEO:
+            case k.hBH.GIFV:
                 break;
             default:
                 e = this.renderDescription();
@@ -920,7 +920,7 @@ class er extends (r = a.PureComponent) {
         let c = this.renderFooter(),
             u = null == t;
         return (
-            n.type === j.hBH.RICH && (u = null == n.video),
+            n.type === k.hBH.RICH && (u = null == n.video),
             {
                 provider: a,
                 author: o,
@@ -940,22 +940,22 @@ class er extends (r = a.PureComponent) {
             { maxMediaWidth: o, maxMediaHeight: s } = this.state,
             l = null != t ? t : r;
         if (null == l) return;
-        let { width: c } = (0, D.Tj)({
+        let { width: c } = (0, w.Tj)({
             width: l.width,
             height: l.height,
             maxWidth: o,
             maxHeight: s,
         });
-        if (!e && (i === j.hBH.VIDEO || c >= 300)) return c + W;
-        if (i === j.hBH.RICH && void 0 !== n) return X;
-        if (i === j.hBH.GIFV) {
-            var u, d, f, _;
-            let { width: e } = (0, D.Tj)({
+        if (!e && (i === k.hBH.VIDEO || c >= 300)) return c + W;
+        if (i === k.hBH.RICH && void 0 !== n) return Q;
+        if (i === k.hBH.GIFV) {
+            var u, d, f, p;
+            let { width: e } = (0, w.Tj)({
                 width:
                     null != (d = null != (u = null == r ? void 0 : r.width) ? u : null == a ? void 0 : a.width) ? d : 0,
                 height:
-                    null != (_ = null != (f = null == r ? void 0 : r.height) ? f : null == a ? void 0 : a.height)
-                        ? _
+                    null != (p = null != (f = null == r ? void 0 : r.height) ? f : null == a ? void 0 : a.height)
+                        ? p
                         : 0,
                 maxWidth: o,
                 maxHeight: s,
@@ -974,12 +974,12 @@ class er extends (r = a.PureComponent) {
     }
     isInline() {
         let { hideMedia: e, embed: t } = this.props;
-        return !e && (0, P.dY)(t);
+        return !e && (0, R.dY)(t);
     }
     renderSuppressButton(e) {
         return (0, i.jsx)(l.P3F, {
             focusProps: { offset: { bottom: 4 } },
-            className: B.embedSuppressButton,
+            className: Z.embedSuppressButton,
             onClick: e,
             "aria-label": G.intl.string(G.t.GT3fNz),
             children: (0, i.jsx)(l.Dio, {
@@ -991,10 +991,10 @@ class er extends (r = a.PureComponent) {
     usesJustifiedAutoStyle() {
         let { embed: e } = this.props;
         return (
-            e.type === j.hBH.IMAGE ||
-            e.type === j.hBH.VIDEO ||
-            e.type === j.hBH.GIFV ||
-            ((e.type === j.hBH.RICH || e.type === j.hBH.ARTICLE) && (null != e.video || null != e.image))
+            e.type === k.hBH.IMAGE ||
+            e.type === k.hBH.VIDEO ||
+            e.type === k.hBH.GIFV ||
+            ((e.type === k.hBH.RICH || e.type === k.hBH.ARTICLE) && (null != e.video || null != e.image))
         );
     }
     getEmbedColor(e) {
@@ -1009,11 +1009,11 @@ class er extends (r = a.PureComponent) {
             { maxMediaWidth: l, maxMediaHeight: u } = this.state;
         if (!this.usesJustifiedAutoStyle()) return;
         let d = e ? void 0 : this.getMaxWidth(!1);
-        if (void 0 === d && void 0 === i && o !== j.hBH.RICH) {
+        if (void 0 === d && void 0 === i && o !== k.hBH.RICH) {
             let e = null != r ? r : a;
             if (void 0 !== e) {
                 let { minWidth: n, minHeight: r } = null != (t = this.getMinSize()) ? t : {},
-                    { width: i } = (0, D.Tj)({
+                    { width: i } = (0, w.Tj)({
                         width: e.width,
                         height: e.height,
                         maxWidth: l,
@@ -1025,11 +1025,11 @@ class er extends (r = a.PureComponent) {
             }
         }
         let f = J / (c.Z.fontScale / 100),
-            _ = (null != s ? (0, w.TZ)(s) : 0) >= f,
-            p = (null != (n = null == s ? void 0 : s.split("\n").length) ? n : 0) >= Q,
-            h = _ || p;
+            p = (null != s ? (0, D.TZ)(s) : 0) >= f,
+            _ = (null != (n = null == s ? void 0 : s.split("\n").length) ? n : 0) >= X,
+            m = p || _;
         return {
-            maxWidth: void 0 === d || h ? "max-content" : d,
+            maxWidth: void 0 === d || m ? "max-content" : d,
             justifySelf: "auto",
         };
     }
@@ -1044,18 +1044,18 @@ class er extends (r = a.PureComponent) {
     render() {
         var e;
         let { embed: t, obscureReason: n, className: r } = this.props;
-        return null != t.provider && M.j.includes(t.provider.name)
-            ? (0, i.jsx)(M.Z, {
+        return null != t.provider && j.j.includes(t.provider.name)
+            ? (0, i.jsx)(j.Z, {
                   embed: t,
                   className: r,
               })
-            : (0, I.Z)(t)
-              ? (0, i.jsx)(T.Z, {
+            : (0, S.Z)(t)
+              ? (0, i.jsx)(I.Z, {
                     embed: t,
                     className: r,
                 })
-              : (null == (e = t.provider) ? void 0 : e.name) === "Amazon Music" && t.type === j.hBH.RICH
-                ? (0, i.jsx)(h.Z, {
+              : (null == (e = t.provider) ? void 0 : e.name) === "Amazon Music" && t.type === k.hBH.RICH
+                ? (0, i.jsx)(m.Z, {
                       embed: t,
                       className: r,
                   })
@@ -1074,7 +1074,7 @@ class er extends (r = a.PureComponent) {
                               isSingleMosaicItem: !0,
                               containerStyles: this.getSpoilerStyles(!0),
                               obscurityControlClassName: s()({
-                                  [B.obscureVideoSpacing]: this.state.isVisible && this.state.videoControlsShown,
+                                  [Z.obscureVideoSpacing]: this.state.isVisible && this.state.videoControlsShown,
                               }),
                               children: this.renderInlineMediaEmbed,
                           })
@@ -1110,7 +1110,7 @@ class er extends (r = a.PureComponent) {
                             },
                         },
                     },
-                    (0, P.vP)(this.props.embed),
+                    (0, R.vP)(this.props.embed),
                 ),
             ),
             F(this, "onReveal", () => {
@@ -1125,11 +1125,11 @@ class er extends (r = a.PureComponent) {
                     a = t.getMaxWidth(!0);
                 return (0, i.jsx)("div", {
                     "aria-hidden": e,
-                    className: s()(B.inlineMediaEmbed, r, {
-                        [B.spoilerAttachment]: n === f.wk.SPOILER,
-                        [B.hiddenExplicitAttachment]: t.shouldObscure,
-                        [B.isHidden]: e,
-                        [B.justifyAuto]: t.usesJustifiedAutoStyle(),
+                    className: s()(Z.inlineMediaEmbed, r, {
+                        [Z.spoilerAttachment]: n === f.wk.SPOILER,
+                        [Z.hiddenExplicitAttachment]: t.shouldObscure,
+                        [Z.isHidden]: e,
+                        [Z.justifyAuto]: t.usesJustifiedAutoStyle(),
                     }),
                     style: { maxWidth: a },
                     children: t.renderMedia(e),
@@ -1144,16 +1144,16 @@ class er extends (r = a.PureComponent) {
                         title: c,
                         description: u,
                         fields: d,
-                        thumbnail: _,
-                        media: p,
-                        footer: h,
+                        thumbnail: p,
+                        media: _,
+                        footer: m,
                     } = t.renderAll();
                 return (0, i.jsx)("article", {
-                    className: s()(n, B.embedFull, Z.markup, {
-                        [B.isHidden]: e,
-                        [B.spoilerEmbed]: a === f.wk.SPOILER,
-                        [B.hiddenExplicitEmbed]: t.shouldObscure,
-                        [B.justifyAuto]: t.usesJustifiedAutoStyle(),
+                    className: s()(n, Z.embedFull, B.markup, {
+                        [Z.isHidden]: e,
+                        [Z.spoilerEmbed]: a === f.wk.SPOILER,
+                        [Z.hiddenExplicitEmbed]: t.shouldObscure,
+                        [Z.justifyAuto]: t.usesJustifiedAutoStyle(),
                     }),
                     "aria-hidden": e,
                     style: {
@@ -1161,13 +1161,13 @@ class er extends (r = a.PureComponent) {
                         maxWidth: t.getMaxWidth(!1),
                     },
                     children: (0, i.jsx)("div", {
-                        className: B.gridContainer,
+                        className: Z.gridContainer,
                         children: (0, i.jsxs)("div", {
                             className: s()({
-                                [B.grid]: !0,
-                                [B.hasThumbnail]: null != _,
+                                [Z.grid]: !0,
+                                [Z.hasThumbnail]: null != p,
                             }),
-                            children: [null != r ? t.renderSuppressButton(r) : null, o, l, c, u, d, p, _, h],
+                            children: [null != r ? t.renderSuppressButton(r) : null, o, l, c, u, d, _, p, m],
                         }),
                     }),
                 });

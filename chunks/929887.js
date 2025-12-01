@@ -15,31 +15,31 @@ let u = (0, c.createContext)(null),
     f = (0, c.forwardRef)(function (e, t) {
         let n = e["aria-labelledby"];
         [e, t] = (0, i.pE)(e, t, u);
-        let { dialogProps: f, titleProps: _ } = (0, o.R)(
+        let { dialogProps: f, titleProps: p } = (0, o.R)(
                 {
                     ...e,
                     "aria-labelledby": n,
                 },
                 t,
             ),
-            p = (0, c.useContext)(d);
+            _ = (0, c.useContext)(d);
         f["aria-label"] ||
             f["aria-labelledby"] ||
             (e["aria-labelledby"] && (f["aria-labelledby"] = e["aria-labelledby"]));
-        let h = (0, i.aX)({
+        let m = (0, i.aX)({
                 defaultClassName: "react-aria-Dialog",
                 className: e.className,
                 style: e.style,
                 children: e.children,
                 values: {
-                    close: (null == p ? void 0 : p.close) || (() => {}),
+                    close: (null == _ ? void 0 : _.close) || (() => {}),
                 },
             }),
-            m = (0, s.z)(e, { global: !0 });
+            h = (0, s.z)(e, { global: !0 });
         return c.createElement(
             "section",
             {
-                ...(0, l.d)(m, h, f),
+                ...(0, l.d)(h, m, f),
                 ref: t,
                 slot: e.slot || void 0,
             },
@@ -53,7 +53,7 @@ let u = (0, c.createContext)(null),
                                 slots: {
                                     [i.hO]: {},
                                     title: {
-                                        ..._,
+                                        ...p,
                                         level: 2,
                                     },
                                 },
@@ -64,13 +64,13 @@ let u = (0, c.createContext)(null),
                             {
                                 slots: {
                                     [i.hO]: {},
-                                    close: { onPress: () => (null == p ? void 0 : p.close()) },
+                                    close: { onPress: () => (null == _ ? void 0 : _.close()) },
                                 },
                             },
                         ],
                     ],
                 },
-                h.children,
+                m.children,
             ),
         );
     });

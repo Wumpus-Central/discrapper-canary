@@ -1,18 +1,18 @@
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(921254),
-    o = n(790519),
+    o = n(666917),
     s = n(748780),
     l = n(481060),
     c = n(596454),
     u = n(745510),
     d = n(314910),
     f = n(912893),
-    _ = n(768581),
-    p = n(176354),
-    h = n(675654),
-    m = n(42868);
+    p = n(768581),
+    _ = n(176354),
+    m = n(675654),
+    h = n(42868);
 function g(e, t, n) {
     return (
         t in e
@@ -67,21 +67,21 @@ function y(e, t) {
 }
 let O = 450,
     v = 0.5,
-    I = [];
-function T(e) {
+    S = [];
+function I(e) {
     let { messageId: t, emoji: n, startPosition: g, targetPosition: b } = e,
-        [T, S] = i.useState(0),
+        [I, T] = i.useState(0),
         [A, C] = i.useState(0),
-        [N, R] = i.useState(null),
-        { confettiCanvas: P } = i.useContext(u.h),
-        D = (0, a.uR)(P, N),
-        w = i.useMemo(
+        [N, P] = i.useState(null),
+        { confettiCanvas: R } = i.useContext(u.h),
+        w = (0, a.uR)(R, N),
+        D = i.useMemo(
             () => [
                 {
                     src:
                         null == n.id
-                            ? p.ZP.getURL(n.name)
-                            : _.ZP.getEmojiURL({
+                            ? _.ZP.getURL(n.name)
+                            : p.ZP.getEmojiURL({
                                   id: n.id,
                                   animated: !1,
                                   size: 22,
@@ -91,11 +91,11 @@ function T(e) {
             ],
             [n.name, n.id],
         ),
-        L = b.x - (b.width / 2) * v,
-        x = b.y - (b.height / 2) * v,
-        M = (0, l.q_F)({
+        x = b.x - (b.width / 2) * v,
+        L = b.y - (b.height / 2) * v,
+        j = (0, l.q_F)({
             from: { y: g.y },
-            to: { y: x },
+            to: { y: L },
             config: {
                 duration: O,
                 easing: s.Z.Easing.in(s.Z.Easing.exp),
@@ -105,14 +105,14 @@ function T(e) {
                 C(t);
             },
         }),
-        k = (0, l.q_F)({
+        M = (0, l.q_F)({
             from: {
                 x: g.x,
                 scale: 1,
                 opacity: 1,
             },
             to: {
-                x: L,
+                x: x,
                 scale: v,
                 opacity: 0.4,
             },
@@ -125,42 +125,42 @@ function T(e) {
             },
             onChange: (e) => {
                 let { x: t } = e;
-                S(t);
+                T(t);
             },
         });
     return (
         i.useEffect(() => {
-            T > 0 &&
+            I > 0 &&
                 A > 0 &&
-                D.createConfetti(
-                    y(E({}, h.We), {
+                w.createConfetti(
+                    y(E({}, m.We), {
                         position: {
                             type: "static",
                             value: {
-                                x: T,
+                                x: I,
                                 y: A,
                             },
                         },
                     }),
                 );
-        }, [D, T, A]),
+        }, [w, I, A]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(a.Ji, {
-                    ref: R,
-                    sprites: w,
-                    colors: I,
-                    spriteWidth: h.Ko,
-                    spriteHeight: h.Ko,
+                    ref: P,
+                    sprites: D,
+                    colors: S,
+                    spriteWidth: m.Ko,
+                    spriteHeight: m.Ko,
                 }),
                 (0, r.jsx)(d.ZP, {
                     children: (0, r.jsx)(o.animated.div, {
-                        style: E({}, M),
-                        className: m.emojiContainer,
+                        style: E({}, j),
+                        className: h.emojiContainer,
                         children: (0, r.jsx)(o.animated.div, {
-                            style: y(E({}, k), { opacity: k.opacity }),
+                            style: y(E({}, M), { opacity: M.opacity }),
                             children: (0, r.jsx)(c.Z, {
-                                className: m.emoji,
+                                className: h.emoji,
                                 emojiId: n.id,
                                 emojiName: n.name,
                                 animated: n.animated,

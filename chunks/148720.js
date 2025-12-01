@@ -9,47 +9,47 @@ var r = n(668781),
     u = n(594174),
     d = n(979651),
     f = n(317381),
-    _ = n(638880),
-    p = n(790920),
-    h = n(527805),
-    m = n(388032);
+    p = n(638880),
+    _ = n(790920),
+    m = n(527805),
+    h = n(388032);
 function g(e) {
     let { embeddedActivityJoinability: t, handleCanJoin: n } = e;
     switch (t) {
-        case h.Fw.CAN_JOIN:
+        case m.Fw.CAN_JOIN:
             null == n || n();
             break;
-        case h.Fw.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
+        case m.Fw.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
             (0, a.w)();
             break;
-        case h.Fw.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
+        case m.Fw.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
             r.Z.show({
-                title: m.intl.string(m.t.PtobXW),
-                body: m.intl.string(m.t.UXoQTp),
+                title: h.intl.string(h.t.PtobXW),
+                body: h.intl.string(h.t.UXoQTp),
                 hideActionSheet: !1,
             });
             break;
-        case h.Fw.ACTIVITY_NOT_SUPPORTED_ON_OS:
+        case m.Fw.ACTIVITY_NOT_SUPPORTED_ON_OS:
             r.Z.show({
-                title: m.intl.string(m.t.PtobXW),
-                body: m.intl.string(m.t.uGDCcw),
+                title: h.intl.string(h.t.PtobXW),
+                body: h.intl.string(h.t.uGDCcw),
                 hideActionSheet: !1,
             });
             break;
-        case h.Fw.ACTIVITY_AGE_GATED:
+        case m.Fw.ACTIVITY_AGE_GATED:
             r.Z.show({
-                title: m.intl.string(m.t.PtobXW),
-                body: m.intl.string(m.t["4WuFRE"]),
+                title: h.intl.string(h.t.PtobXW),
+                body: h.intl.string(h.t["4WuFRE"]),
                 hideActionSheet: !1,
             });
             break;
-        case h.Fw.NO_CHANNEL_CONNECT_PERMISSION:
-        case h.Fw.CHANNEL_FULL:
-        case h.Fw.NO_CHANNEL:
-        case h.Fw.NO_USER:
+        case m.Fw.NO_CHANNEL_CONNECT_PERMISSION:
+        case m.Fw.CHANNEL_FULL:
+        case m.Fw.NO_CHANNEL:
+        case m.Fw.NO_USER:
             r.Z.show({
-                title: m.intl.string(m.t.PtobXW),
-                body: m.intl.string(m.t.FUCQco),
+                title: h.intl.string(h.t.PtobXW),
+                body: h.intl.string(h.t.FUCQco),
                 hideActionSheet: !1,
             });
     }
@@ -60,7 +60,7 @@ async function E(e) {
             applicationId: n,
             launchId: r,
             inputApplication: a,
-            analyticsLocations: m,
+            analyticsLocations: h,
             launchingComponentId: E,
             sectionName: b,
             inviterUserId: y,
@@ -74,31 +74,31 @@ async function E(e) {
         v = o.ZP.createFromServer(e);
     }
     if (null == O || null == v) return;
-    let I = u.default.getCurrentUser();
-    async function T() {
+    let S = u.default.getCurrentUser();
+    async function I() {
         null != O &&
-            (await (0, _.Z)({
+            (await (0, p.Z)({
                 applicationId: O.applicationId,
                 activityChannelId: t,
                 locationObject: {},
-                analyticsLocations: m,
+                analyticsLocations: h,
                 componentId: E,
                 sectionName: b,
                 inviterUserId: y,
             }));
     }
     g({
-        embeddedActivityJoinability: (0, h.ZP)({
-            userId: null == I ? void 0 : I.id,
+        embeddedActivityJoinability: (0, m.ZP)({
+            userId: null == S ? void 0 : S.id,
             application: v,
             channelId: t,
-            currentUser: I,
-            isActivitiesEnabledForCurrentPlatform: (0, p.a)(),
+            currentUser: S,
+            isActivitiesEnabledForCurrentPlatform: (0, _.a)(),
             ChannelStore: s.Z,
             VoiceStateStore: d.Z,
             PermissionStore: c.Z,
             GuildStore: l.Z,
         }),
-        handleCanJoin: T,
+        handleCanJoin: I,
     });
 }

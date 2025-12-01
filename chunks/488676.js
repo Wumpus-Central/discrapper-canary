@@ -20,8 +20,8 @@ let l = {
                         showIcons: d,
                         withMixedDisabledOptions: f,
                     } = e,
-                    [_, p] = i.useState("option1"),
-                    h = i.useMemo(
+                    [p, _] = i.useState("option1"),
+                    m = i.useMemo(
                         () =>
                             [
                                 {
@@ -62,32 +62,32 @@ let l = {
                             ].slice(0, Math.max(1, Math.min(5, n))),
                         [n, c, u, d, f],
                     ),
-                    m = i.useCallback((e) => {
-                        p(e);
+                    h = i.useCallback((e) => {
+                        _(e);
                     }, []),
                     g = i.useCallback(() => {
-                        h.length > 0 && p(h[0].value);
-                    }, [h]),
+                        m.length > 0 && _(m[0].value);
+                    }, [m]),
                     E = i.useCallback(() => {
-                        h.length > 0 && p(h[h.length - 1].value);
-                    }, [h]),
+                        m.length > 0 && _(m[m.length - 1].value);
+                    }, [m]),
                     b = i.useCallback(() => {
-                        p(void 0);
+                        _(void 0);
                     }, []);
                 return (0, r.jsxs)(o.Kqy, {
                     direction: "vertical",
                     gap: "md",
                     children: [
                         (0, r.jsx)(s.Eep, {
-                            value: _,
+                            value: p,
                             label: l,
-                            onChange: m,
-                            options: h,
+                            onChange: h,
+                            options: m,
                             disabled: t,
                         }),
                         (0, r.jsxs)(o.xvT, {
                             variant: "text-sm/normal",
-                            children: ["Current selection: ", "string" == typeof _ && "" !== _ ? _ : "None"],
+                            children: ["Current selection: ", "string" == typeof p && "" !== p ? p : "None"],
                         }),
                         (0, r.jsxs)(o.Kqy, {
                             direction: "horizontal",
@@ -98,14 +98,14 @@ let l = {
                                     size: "sm",
                                     text: "Select First",
                                     onClick: g,
-                                    disabled: t || 0 === h.length,
+                                    disabled: t || 0 === m.length,
                                 }),
                                 (0, r.jsx)(s.zxk, {
                                     variant: "secondary",
                                     size: "sm",
                                     text: "Select Last",
                                     onClick: E,
-                                    disabled: t || 0 === h.length,
+                                    disabled: t || 0 === m.length,
                                 }),
                                 (0, r.jsx)(s.zxk, {
                                     variant: "primary",

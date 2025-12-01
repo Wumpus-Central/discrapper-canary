@@ -9,22 +9,22 @@ var r = n(54381),
     u = n(752305),
     d = n(893718),
     f = n(131704),
-    _ = n(823379),
-    p = n(5192),
-    h = n(51144),
-    m = n(698305),
+    p = n(823379),
+    _ = n(5192),
+    m = n(51144),
+    h = n(698305),
     g = n(510659),
     E = n(810097),
     b = n(652853),
     y = n(228168),
     O = n(295907),
     v = n(388032),
-    I = n(36190);
-let T = (0, f.createChannelRecord)({
+    S = n(36190);
+let I = (0, f.createChannelRecord)({
         id: "1",
         type: s.d.DM,
     }),
-    S = (e) => {
+    T = (e) => {
         let { input: t, username: n, sourceType: r, sourceDetails: i } = e;
         switch (r) {
             case y.n_.ACTIVITY:
@@ -43,7 +43,7 @@ let T = (0, f.createChannelRecord)({
                     ? "".concat(E.jd).concat(l, "*").concat(c, "\n").concat(t)
                     : "".concat(E.jd).concat(l, "*\n").concat(t);
             default:
-                (0, _.vE)(r);
+                (0, p.vE)(r);
         }
     },
     A = (e) => {
@@ -55,7 +55,7 @@ let T = (0, f.createChannelRecord)({
             case y.n_.STATUS:
                 return v.t.g9BTCM;
             default:
-                (0, _.vE)(e);
+                (0, p.vE)(e);
         }
     };
 function C(e) {
@@ -65,80 +65,80 @@ function C(e) {
             channelId: a,
             sourceType: s,
             sourceDetails: f,
-            setPopoutRef: _,
+            setPopoutRef: p,
             modalKey: E,
             onAction: C,
             onClose: N,
-            entry: R,
+            entry: P,
         } = e,
-        { resetInteraction: P, setInteractionToast: D } = (0, g.Xo)(),
-        { primaryColor: w } = (0, b.z)(),
-        [L, x] = i.useState(""),
-        [M, k] = i.useState((0, u.JM)(L)),
-        j = i.useRef(!1),
+        { resetInteraction: R, setInteractionToast: w } = (0, g.Xo)(),
+        { primaryColor: D } = (0, b.z)(),
+        [x, L] = i.useState(""),
+        [j, M] = i.useState((0, u.JM)(x)),
+        k = i.useRef(!1),
         U = i.useRef(null),
         G = i.useCallback(
             (e) => {
-                e.key === O.vn.ESCAPE && (e.stopPropagation(), P());
+                e.key === O.vn.ESCAPE && (e.stopPropagation(), R());
             },
-            [P],
+            [R],
         );
     i.useEffect(() => {
-        null == _ || _(null == U ? void 0 : U.current);
-    }, [U, _]);
-    let B = async (e) => {
+        null == p || p(null == U ? void 0 : U.current);
+    }, [U, p]);
+    let Z = async (e) => {
             if (null == e) return;
             s === y.n_.AVATAR
                 ? C({ action: "SEND_REPLY_AVATAR" })
                 : s === y.n_.STATUS
                   ? C({ action: "SEND_REPLY_CUSTOM_STATUS" })
                   : C({ action: "SEND_REPLY_ACTIVITY" });
-            let n = S({
+            let n = T({
                 input: e,
-                username: h.ZP.getName(t),
+                username: m.ZP.getName(t),
                 sourceType: s,
                 sourceDetails: f,
             });
-            D(null);
+            w(null);
             try {
-                await (0, m.Z)({
+                await (0, h.Z)({
                     userId: t.id,
                     content: n,
                     location: "UserProfileReplyPopout",
                     openChannel: !1,
                     whenReady: !1,
-                    entry: R,
+                    entry: P,
                 });
             } catch (e) {}
-            D(y.P.REPLY);
+            w(y.P.REPLY);
         },
-        Z = {
-            [I.status]: s === y.n_.STATUS,
-            [I.avatar]: s === y.n_.AVATAR,
-            [I.activity]: s === y.n_.ACTIVITY,
+        B = {
+            [S.status]: s === y.n_.STATUS,
+            [S.avatar]: s === y.n_.AVATAR,
+            [S.activity]: s === y.n_.ACTIVITY,
         };
     return (0, r.jsx)(l.V, {
         ref: U,
         onKeyDown: G,
         children: (0, r.jsx)("div", {
-            className: o()(I.container, Z, { [I.customProfileTheme]: null != w }),
+            className: o()(S.container, B, { [S.customProfileTheme]: null != D }),
             children: (0, r.jsx)(d.ZP, {
                 parentModalKey: E,
                 emojiPickerCloseOnModalOuterClick: !0,
-                className: I.input,
-                innerClassName: I.inputInner,
-                editorClassName: I.editor,
+                className: S.input,
+                innerClassName: S.inputInner,
+                editorClassName: S.editor,
                 type: c.Ie.USER_PROFILE_REPLY,
-                placeholder: v.intl.formatToPlainString(A(s), { username: p.ZP.getName(n, a, t) }),
-                channel: T,
-                textValue: L,
-                richValue: M,
+                placeholder: v.intl.formatToPlainString(A(s), { username: _.ZP.getName(n, a, t) }),
+                channel: I,
+                textValue: x,
+                richValue: j,
                 onChange: (e, t, n) => {
-                    t !== L && (x(t), k(n));
+                    t !== x && (L(t), M(n));
                 },
-                focused: j.current,
+                focused: k.current,
                 onFocus: () => {
-                    j.current = !0;
+                    k.current = !0;
                 },
                 onSubmit: async (e) => {
                     let { value: t } = e,
@@ -150,8 +150,8 @@ function C(e) {
                         };
                     try {
                         return (
-                            await B(n),
-                            P(),
+                            await Z(n),
+                            R(),
                             null == N || N(),
                             {
                                 shouldClear: !0,

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m }), n(388685), n(539854);
 var i = n(473749),
     l = n(442837),
-    s = n(493773),
-    r = n(430824),
+    r = n(493773),
+    s = n(430824),
     a = n(496675),
     o = n(771845),
     c = n(99325),
@@ -11,31 +11,31 @@ var i = n(473749),
 let m = (e, t) => {
     let [n, m] = i.useState(!1),
         x = (0, l.e7)([d.Z], () => d.Z.getAdminGuildEntryIds(t)),
-        C = (0, l.Wu)([o.ZP, r.Z, a.Z], () => {
+        g = (0, l.Wu)([o.ZP, s.Z, a.Z], () => {
             let t = o.ZP.getFlattenedGuildIds(),
                 n = [];
             return (
                 t.forEach((t) => {
-                    let i = r.Z.getGuild(t);
+                    let i = s.Z.getGuild(t);
                     null != i && a.Z.can(u.Plq.ADMINISTRATOR, i) && i.id !== e && n.push(i);
                 }),
                 n
             );
         }, [e]);
     return (
-        (0, s.ZP)(() => {
+        (0, r.ZP)(() => {
             (async () => {
                 m(!0),
                     await c._Q(
                         t,
-                        C.map((e) => e.id),
+                        g.map((e) => e.id),
                     ),
                     m(!1);
             })();
         }),
         {
-            availableGuilds: i.useMemo(() => C.filter((e) => !(null == x ? void 0 : x.has(e.id))), [C, x]),
-            addedGuilds: i.useMemo(() => C.filter((e) => (null == x ? void 0 : x.has(e.id))), [C, x]),
+            availableGuilds: i.useMemo(() => g.filter((e) => !(null == x ? void 0 : x.has(e.id))), [g, x]),
+            addedGuilds: i.useMemo(() => g.filter((e) => (null == x ? void 0 : x.has(e.id))), [g, x]),
             loading: n,
         }
     );

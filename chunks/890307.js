@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,22 +9,22 @@ var r = n(54381),
     u = n(502762),
     d = n(388032),
     f = n(419173);
-function _(e) {
+function p(e) {
     let { previewData: t, className: n, onClick: a } = e,
-        { trackUserProfileAction: _ } = (0, c.KZ)(),
-        p = i.useRef(!1);
+        { trackUserProfileAction: p } = (0, c.KZ)(),
+        _ = i.useRef(!1);
     return (
         i.useEffect(() => {
-            p.current ||
-                (_({
+            _.current ||
+                (p({
                     action: "VIEW_APPLICATION_WIDGET_PREVIEW",
                     applicationId: t.application.id,
                 }),
-                (p.current = !0));
-        }, [_, t.application.id]),
+                (_.current = !0));
+        }, [p, t.application.id]),
         (0, r.jsx)(s.kL8, {
             onClick: () => {
-                _({
+                p({
                     action: "PRESS_APPLICATION_WIDGET_PREVIEW",
                     applicationId: t.application.id,
                 }),

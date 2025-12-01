@@ -10,9 +10,9 @@ n(28664);
 var u = n(481060),
     d = n(570140),
     f = n(45114),
-    p = n(493773);
+    h = n(493773);
 n(100527), n(906732);
-var h = n(315174),
+var p = n(315174),
     g = n(340541),
     m = n(768943),
     b = n(592125),
@@ -170,7 +170,7 @@ function U(e) {
         ),
         q = F(Z, c, P),
         Q = F(D, c, null);
-    (0, p.ZP)(() => {
+    (0, h.ZP)(() => {
         var e;
         d.Z.dispatch({ type: "NOTIFICATIONS_INBOX_OPEN" });
         let t = (0, j.Ag)({ location: "NotificationsInboxSidebar" }).notificationCenterVariant,
@@ -217,7 +217,7 @@ function U(e) {
                 viewId: a,
             });
     }),
-        (0, p.zq)(() => {
+        (0, h.zq)(() => {
             d.Z.dispatch({ type: "NOTIFICATIONS_INBOX_CLOSE" });
         });
     let { filterStyle: X } = (0, j.pN)({ location: "NotificationsInboxSidebar" }),
@@ -229,7 +229,7 @@ function U(e) {
         children: (0, r.jsxs)(u.y5t, {
             forceLevel: 1,
             component: (0, r.jsx)(
-                h.ZP,
+                p.ZP,
                 ((t = M(
                     {
                         hasSubheader: !0,

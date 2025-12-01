@@ -1,5 +1,5 @@
 n.d(t, {
-    A7: () => S,
+    A7: () => T,
     dE: () => C,
 }),
     n(388685);
@@ -13,10 +13,10 @@ var r = n(54381),
     u = n(541716),
     d = n(752305),
     f = n(893718),
-    _ = n(318766),
-    p = n(931651),
-    h = n(131704),
-    m = n(142550),
+    p = n(318766),
+    _ = n(931651),
+    m = n(131704),
+    h = n(142550),
     g = n(981631),
     E = n(388032),
     b = n(608476);
@@ -61,7 +61,7 @@ function v(e, t) {
     }
     return n;
 }
-function I(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -72,11 +72,11 @@ function I(e, t) {
         e
     );
 }
-let T = (0, h.createChannelRecord)({
+let I = (0, m.createChannelRecord)({
     id: "1",
     type: g.d4z.DM,
 });
-function S(e) {
+function T(e) {
     let {
             placeholder: t,
             onEnter: n,
@@ -84,13 +84,13 @@ function S(e) {
             showEmojiButton: s = !1,
             renderAttachButton: l,
             autoFocus: c = !0,
-            onFocus: _,
-            channel: p,
-            className: h,
+            onFocus: p,
+            channel: _,
+            className: m,
         } = e,
         [g, E] = i.useState(""),
         [y, v] = i.useState((0, d.JM)("")),
-        S = () => {
+        T = () => {
             E(""), v((0, d.JM)(""));
         },
         A = u.Ie.ATOMIC_REACTOR_REPLY_INPUT,
@@ -104,27 +104,27 @@ function S(e) {
     return (0, r.jsx)(f.ZP, {
         ref: C,
         placeholder: t,
-        editorClassName: h,
-        className: o()(b.replyInput, h),
+        editorClassName: m,
+        className: o()(b.replyInput, m),
         showRemainingCharsAfterCount: -1,
         allowNewLines: !1,
-        maxCharacterCount: m.z,
-        channel: null != p ? p : T,
+        maxCharacterCount: h.z,
+        channel: null != _ ? _ : I,
         onChange: (e, t, n) => {
             E(t), v(n);
         },
-        type: s ? I(O({}, A), { emojis: { button: !0 } }) : A,
+        type: s ? S(O({}, A), { emojis: { button: !0 } }) : A,
         textValue: g,
         richValue: y,
         onSubmit: (e) => {
             let { value: t } = e;
-            return t.length > m.z
+            return t.length > h.z
                 ? Promise.resolve({
                       shouldClear: !1,
                       shouldRefocus: !0,
                   })
                 : (n(t),
-                  S(),
+                  T(),
                   Promise.resolve({
                       shouldClear: !0,
                       shouldRefocus: !1,
@@ -132,7 +132,7 @@ function S(e) {
         },
         setEditorRef: a,
         focused: c,
-        onFocus: _,
+        onFocus: p,
         disableThemedBackground: !0,
         emojiPickerCloseOnModalOuterClick: !0,
         disabled: !1,
@@ -181,9 +181,9 @@ let A = (e, t) => {
                             (0, r.jsx)("div", {
                                 className: e,
                                 ref: d,
-                                children: (0, r.jsx)(p.$, {
+                                children: (0, r.jsx)(_.$, {
                                     messageId: g.lds,
-                                    channel: T,
+                                    channel: I,
                                     closePopout: () => {
                                         u(!1);
                                     },
@@ -206,7 +206,7 @@ let A = (e, t) => {
                         children: (0, r.jsx)("div", {
                             ref: f,
                             className: b.reaction,
-                            children: (0, r.jsx)(_.Z, {
+                            children: (0, r.jsx)(p.Z, {
                                 active: !1,
                                 tabIndex: 0,
                                 onClick: () => {

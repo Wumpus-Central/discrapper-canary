@@ -31,7 +31,7 @@ function b(e) {
     null == s || s(),
         (0, c.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("49049"), n.e("7654"), n.e("68971")]).then(
+                let { default: e } = await Promise.all([n.e("49049"), n.e("7654"), n.e("89772")]).then(
                     n.bind(n, 560114),
                 );
                 return (n) => {
@@ -106,11 +106,11 @@ function y(e) {
             className: v,
             size: _ = "sm",
         } = e,
-        x = null == r ? void 0 : r.getGuildId(),
-        j = null == r ? void 0 : r.id,
-        O = (0, s.e7)([p.Z], () => (null != x ? p.Z.getGuild(x) : null), [x]),
-        E = (0, s.e7)([u.ZP], () => u.ZP.getActiveEventByChannel(j), [j]);
-    if (!(null != O && null != r && h.Z.can(f.Plq.CREATE_INSTANT_INVITE, r))) return null;
+        O = null == r ? void 0 : r.getGuildId(),
+        x = null == r ? void 0 : r.id,
+        j = (0, s.e7)([p.Z], () => (null != O ? p.Z.getGuild(O) : null), [O]),
+        E = (0, s.e7)([u.ZP], () => u.ZP.getActiveEventByChannel(x), [x]);
+    if (!(null != j && null != r && h.Z.can(f.Plq.CREATE_INSTANT_INVITE, r))) return null;
     let S = m.intl.string(m.t.VINpSK);
     return (
         null != t ? (S = m.intl.string(m.t["6VQaqd"])) : null != n && (S = m.intl.string(m.t["OzOM/q"])),
@@ -123,10 +123,10 @@ function y(e) {
                         variant: "secondary",
                         text: S,
                         onClick: () => {
-                            o()(null != O, "guild cannot be null"),
+                            o()(null != j, "guild cannot be null"),
                                 o()(null != r, "channel cannot be null"),
                                 b({
-                                    guild: O,
+                                    guild: j,
                                     channel: r,
                                     streamUserId: null == t ? void 0 : t.ownerId,
                                     applicationId: n,

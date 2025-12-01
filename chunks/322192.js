@@ -14,20 +14,20 @@ let d = (e) => {
     if (void 0 === n) return null;
     let { name: d } = n,
         f = (0, s.EB)(n, 40, !0),
-        _ = null,
-        p = 10;
+        p = null,
+        _ = 10;
     return (
-        null == n.icon && null != d && ((_ = (0, i.Zg)(d)), (p = (0, c.o)(_))),
+        null == n.icon && null != d && ((p = (0, i.Zg)(d)), (_ = (0, c.o)(p))),
         (0, r.jsx)("div", {
             className: u.container,
             children: (0, r.jsxs)("div", {
-                style: { fontSize: p },
+                style: { fontSize: _ },
                 children: [
-                    null != _
+                    null != p
                         ? (0, r.jsx)("div", {
                               className: u.guildAvatar,
                               "aria-hidden": !0,
-                              children: _,
+                              children: p,
                           })
                         : null,
                     null != f

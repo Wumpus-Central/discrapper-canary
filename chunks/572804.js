@@ -45,11 +45,11 @@ function d(e) {
         mentionUsers: u,
         mentionRoles: d,
         mentionGames: f,
-        suppressEveryone: _ = !1,
-        suppressRoles: p = !1,
+        suppressEveryone: p = !1,
+        suppressRoles: _ = !1,
     } = e;
     if (
-        (c && !_) ||
+        (c && !p) ||
         u.includes(t) ||
         f.some((e) => {
             var t;
@@ -57,11 +57,11 @@ function d(e) {
         })
     )
         return !0;
-    if (p || null == d || 0 === d.length) return !1;
-    let h = i.Z.getChannel(n);
-    if (null == h) return !1;
-    let m = h.getGuildId();
-    if (null == m || null == o.Z.getGuild(m)) return !1;
-    let g = a.ZP.getMember(m, t);
+    if (_ || null == d || 0 === d.length) return !1;
+    let m = i.Z.getChannel(n);
+    if (null == m) return !1;
+    let h = m.getGuildId();
+    if (null == h || null == o.Z.getGuild(h)) return !1;
+    let g = a.ZP.getMember(h, t);
     return null != g && d.some((e) => g.roles.includes(e));
 }

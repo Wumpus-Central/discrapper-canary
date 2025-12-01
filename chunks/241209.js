@@ -9,10 +9,10 @@ var r,
     u = n.n(c),
     d = n(663993),
     f = n(770146),
-    _ = n(772096),
-    p = n(428595),
-    h = n(532901),
-    m = n(963071),
+    p = n(772096),
+    _ = n(428595),
+    m = n(532901),
+    h = n(963071),
     g = n(154257);
 function E(e, t, n) {
     return (
@@ -67,10 +67,10 @@ function O(e, t) {
     );
 }
 let v = new RegExp("https?://".concat(null != (r = window.GLOBAL_ENV.CDN_HOST) ? r : ""));
-function I(e) {
+function S(e) {
     return "string" == typeof e.content ? e.content : A(e.content);
 }
-let T = O(b({}, u().defaultRules), {
+let I = O(b({}, u().defaultRules), {
         heading: O(b({}, u().defaultRules.heading), {
             react(e, t, n) {
                 let r = "h".concat(e.level);
@@ -89,7 +89,7 @@ let T = O(b({}, u().defaultRules), {
                 (0, a.jsx)(
                     "div",
                     {
-                        className: m.paragraph,
+                        className: h.paragraph,
                         children: t(e.content, n),
                     },
                     n.key,
@@ -99,14 +99,14 @@ let T = O(b({}, u().defaultRules), {
         em: O(b({}, u().defaultRules.em), { order: 6 }),
         u: O(b({}, u().defaultRules.u), { order: 5 }),
         del: O(b({}, u().defaultRules.del), { order: 6 }),
-        link: O(b({}, _.ZP, (0, h.Z)({ enableBuildOverrides: !1 })), { order: 6 }),
+        link: O(b({}, p.ZP, (0, m.Z)({ enableBuildOverrides: !1 })), { order: 6 }),
         blockQuote: O(b({}, u().defaultRules.blockQuote), {
             react: (e, t, n) =>
                 (0, a.jsx)(
                     "blockquote",
                     {
-                        className: m.blockquote,
-                        children: I(e),
+                        className: h.blockquote,
+                        children: S(e),
                     },
                     n.key,
                 ),
@@ -124,14 +124,14 @@ let T = O(b({}, u().defaultRules), {
                 return !1;
             },
         }),
-        inlineCode: O(b({}, p.Z.RULES.inlineCode), {
+        inlineCode: O(b({}, _.Z.RULES.inlineCode), {
             order: 6,
             react: (e, t, n) =>
                 (0, a.jsx)(
                     "code",
                     {
-                        className: m.codeInline,
-                        children: I(e),
+                        className: h.codeInline,
+                        children: S(e),
                     },
                     n.key,
                 ),
@@ -144,7 +144,7 @@ let T = O(b({}, u().defaultRules), {
                         {
                             children: (0, a.jsx)("code", {
                                 className: l()(g.scrollbarGhostHairline, "hljs"),
-                                children: I(e),
+                                children: S(e),
                             }),
                         },
                         r.key,
@@ -179,21 +179,21 @@ let T = O(b({}, u().defaultRules), {
             },
         }),
     }),
-    S = u().parserFor(T),
-    A = u().reactFor(u().ruleOutput(T, "react"));
+    T = u().parserFor(I),
+    A = u().reactFor(u().ruleOutput(I, "react"));
 class C extends (i = o.PureComponent) {
     render() {
         let { className: e, children: t, state: n, parser: r, output: i } = this.props,
             o = i(r("".concat(t, "\n\n"), b({ inline: !1 }, n)));
         return (0, a.jsx)("div", {
-            className: l()(m.markdown, e),
+            className: l()(h.markdown, e),
             children: o,
         });
     }
 }
-E(C, "rules", T),
+E(C, "rules", I),
     E(C, "defaultProps", {
-        parser: S,
+        parser: T,
         output: A,
     });
 let N = C;

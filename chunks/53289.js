@@ -17,18 +17,18 @@ function f(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : window,
         i = (0, a.e7)([s.Z], () => s.Z.keyboardModeEnabled),
         f = (0, o.Z)(),
-        [_, p] = r.useState(!1),
-        h = (0, l.Aq)();
+        [p, _] = r.useState(!1),
+        m = (0, l.Aq)();
     return (
         r.useEffect(() => {
             if (t) return n.addEventListener("blur", e), () => n.removeEventListener("blur", e);
             function e() {
-                f && (h.dispatch(u.CkL.POPOUT_CLOSE), c.S.dispatch(u.CkL.CONTEXT_MENU_CLOSE));
+                f && (m.dispatch(u.CkL.POPOUT_CLOSE), c.S.dispatch(u.CkL.CONTEXT_MENU_CLOSE));
             }
-        }, [n, f, t, h]),
+        }, [n, f, t, m]),
         r.useEffect(() => {
             var r;
-            if (i || !_ || !t) return;
+            if (i || !p || !t) return;
             let { current: a } = e,
                 o = f;
             function s(t) {
@@ -47,7 +47,7 @@ function f(e, t) {
                     null == a || a.removeEventListener("focusout", s), (o = !0);
                 }
             );
-        }, [t, _, i, e, n, f]),
-        p
+        }, [t, p, i, e, n, f]),
+        _
     );
 }

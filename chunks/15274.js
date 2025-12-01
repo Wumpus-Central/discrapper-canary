@@ -1,7 +1,7 @@
 n.d(t, {
-    P3: () => _,
+    P3: () => p,
     bO: () => f,
-    lC: () => p,
+    lC: () => _,
 });
 var r = n(54381);
 n(473749);
@@ -78,7 +78,7 @@ function f(e) {
             );
     });
 }
-async function _(e, t) {
+async function p(e, t) {
     let { guild_id: n } = e;
     await a.Z.transitionToGuildSync(n, t),
         f({
@@ -86,7 +86,7 @@ async function _(e, t) {
             event: e,
         });
 }
-function p(e, t) {
+function _(e, t) {
     (0, i.ZD)(
         async () => {
             let { default: t } = await n.e("21395").then(n.bind(n, 312757));

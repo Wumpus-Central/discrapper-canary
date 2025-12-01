@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685), n(539854), n(953529);
+n.d(t, { Z: () => R }), n(388685), n(539854), n(953529);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -9,8 +9,8 @@ var r,
     u = n(596956),
     d = n(703558),
     f = n(981631),
-    _ = n(388032);
-function p(e, t, n) {
+    p = n(388032);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,19 +23,19 @@ function p(e, t, n) {
         e
     );
 }
-let h = new Map(),
-    m = [];
+let m = new Map(),
+    h = [];
 function g(e, t) {
     var n, r;
-    return null != (r = null == (n = E(e)) ? void 0 : n.get(t)) ? r : m;
+    return null != (r = null == (n = E(e)) ? void 0 : n.get(t)) ? r : h;
 }
 function E(e) {
     var t;
-    return null != (t = h.get(e)) ? t : new Map();
+    return null != (t = m.get(e)) ? t : new Map();
 }
 function b(e, t, n) {
     let r = E(e);
-    r.set(t, n), h.set(e, r);
+    r.set(t, n), m.set(e, r);
 }
 function y(e) {
     let { channelId: t } = e,
@@ -47,8 +47,8 @@ let O = (e) => {
         s = [...g(n, i)];
     if (s.length + t.length > f.dN1 && i !== d.d.SlashCommand && i !== d.d.ApplicationLauncherCommand)
         return void l.Z.show({
-            title: _.intl.string(_.t.wOr6hB),
-            body: _.intl.formatToPlainString(_.t["qqyp/e"], { limit: f.dN1 }),
+            title: p.intl.string(p.t.wOr6hB),
+            body: p.intl.formatToPlainString(p.t["qqyp/e"], { limit: f.dN1 }),
         });
     a().forEach(t, (e) => {
         let t = new c.nH(e, n, r, s.length, o);
@@ -70,7 +70,7 @@ function v(e) {
         );
     a > -1 && (i.splice(a, 1)[0].removeFromMsgDraft(), b(t, r, i));
 }
-function I(e) {
+function S(e) {
     let { channelId: t, attachmentIds: n, draftType: r } = e,
         i = [...g(t, r)];
     n.forEach((e) => {
@@ -79,7 +79,7 @@ function I(e) {
     }),
         b(t, r, i);
 }
-function T(e) {
+function I(e) {
     let { channelId: t, id: n, filename: r, description: i, spoiler: a, thumbnail: o, draftType: s } = e,
         l = [...g(t, s)].map(
             (e) => (
@@ -93,7 +93,7 @@ function T(e) {
         );
     b(t, s, l);
 }
-function S(e) {
+function T(e) {
     let { channelId: t, id: n, file: r, draftType: i, allowOptimization: a } = e,
         o = [...g(t, i)].filter((e) => e.id !== n),
         s = new c.nH(r, t, void 0, void 0, a);
@@ -111,7 +111,7 @@ function N(e) {
     let { baseChannelId: t } = e;
     b(t, d.d.FirstThreadMessage, []);
 }
-class R extends (r = o.ZP.Store) {
+class P extends (r = o.ZP.Store) {
     getFirstUpload(e, t) {
         let n = g(e, t);
         return n.length > 0 ? n[0] : null;
@@ -134,15 +134,15 @@ class R extends (r = o.ZP.Store) {
         return g(e, t).find(n);
     }
 }
-p(R, "displayName", "UploadAttachmentStore");
-let P = new R(s.Z, {
+_(P, "displayName", "UploadAttachmentStore");
+let R = new P(s.Z, {
     UPLOAD_ATTACHMENT_POP_FILE: y,
     UPLOAD_ATTACHMENT_ADD_FILES: O,
-    UPLOAD_ATTACHMENT_UPDATE_FILE: T,
+    UPLOAD_ATTACHMENT_UPDATE_FILE: I,
     UPLOAD_ATTACHMENT_REMOVE_FILE: v,
-    UPLOAD_ATTACHMENT_REMOVE_FILES: I,
+    UPLOAD_ATTACHMENT_REMOVE_FILES: S,
     UPLOAD_ATTACHMENT_CLEAR_ALL_FILES: C,
     UPLOAD_ATTACHMENT_SET_UPLOADS: A,
-    UPLOAD_ATTACHMENT_SET_FILE: S,
+    UPLOAD_ATTACHMENT_SET_FILE: T,
     SIDEBAR_CLOSE: N,
 });

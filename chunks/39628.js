@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r,
     i = n(54381),
     a = n(473749),
@@ -33,23 +33,23 @@ function f(e) {
         }),
     });
 }
-function _(e) {
+function p(e) {
     return String(e).padStart(2, "0");
 }
-function p(e) {
+function _(e) {
     let { time: t, padLargestUnit: n } = e,
         r = Math.floor(t) % 60,
         i = Math.floor(t / 60) % 60,
         a = Math.floor(t / 3600);
     return 0 === a
         ? n
-            ? "".concat(_(i), ":").concat(_(r))
-            : "".concat(i, ":").concat(_(r))
+            ? "".concat(p(i), ":").concat(p(r))
+            : "".concat(i, ":").concat(p(r))
         : n
-          ? "".concat(_(a), ":").concat(_(i), ":").concat(_(r))
-          : "".concat(a, ":").concat(_(i), ":").concat(_(r));
+          ? "".concat(p(a), ":").concat(p(i), ":").concat(p(r))
+          : "".concat(a, ":").concat(p(i), ":").concat(p(r));
 }
-class h extends (r = a.PureComponent) {
+class m extends (r = a.PureComponent) {
     componentDidMount() {
         this.timer.start(500, () => {
             this.setState({ now: Date.now() });
@@ -69,7 +69,7 @@ class h extends (r = a.PureComponent) {
                   children: [
                       (0, i.jsx)("div", {
                           className: u.textLeftInSingleLine,
-                          children: p({
+                          children: _({
                               time: d,
                               padLargestUnit: !0,
                           }),
@@ -83,7 +83,7 @@ class h extends (r = a.PureComponent) {
                       }),
                       (0, i.jsx)("div", {
                           className: u.textRight,
-                          children: p({
+                          children: _({
                               time: l,
                               padLargestUnit: !0,
                           }),
@@ -102,7 +102,7 @@ class h extends (r = a.PureComponent) {
                               (0, i.jsx)(c.Z.Child, {
                                   grow: 1,
                                   className: u.textLeft,
-                                  children: p({
+                                  children: _({
                                       time: d,
                                       padLargestUnit: !1,
                                   }),
@@ -110,7 +110,7 @@ class h extends (r = a.PureComponent) {
                               (0, i.jsx)(c.Z.Child, {
                                   grow: 0,
                                   className: u.textRight,
-                                  children: p({
+                                  children: _({
                                       time: l,
                                       padLargestUnit: !1,
                                   }),
@@ -124,5 +124,5 @@ class h extends (r = a.PureComponent) {
         super(...e), d(this, "timer", new l.Xp()), d(this, "state", { now: Date.now() });
     }
 }
-d(h, "defaultProps", { themed: !1 });
-let m = h;
+d(m, "defaultProps", { themed: !1 });
+let h = m;

@@ -3,16 +3,16 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(790519),
+    s = n(666917),
     l = n(793030),
     c = n(481060),
     u = n(337363),
     d = n(725027),
     f = n(464281),
-    _ = n(495511);
-let p = 11,
-    h = ["left", "center", "right"],
-    m = ["top", "center", "bottom"];
+    p = n(495511);
+let _ = 11,
+    m = ["left", "center", "right"],
+    h = ["top", "center", "bottom"];
 function g(e) {
     let {
             isVisible: t,
@@ -23,20 +23,20 @@ function g(e) {
             content: b,
             position: y = "top",
             align: O = "center",
-            spacing: v = p,
-            caretConfig: I,
-            layerContext: T,
-            animationStyle: S,
+            spacing: v = _,
+            caretConfig: S,
+            layerContext: I,
+            animationStyle: T,
             positionKey: A,
         } = e,
         C = i.useRef(null),
         { isRichTooltip: N } = (0, d.nr)(),
-        R = i.useMemo(() => (("left" === y || "right" === y ? m : h).includes(O) ? O : "center"), [y, O]);
+        P = i.useMemo(() => (("left" === y || "right" === y ? h : m).includes(O) ? O : "center"), [y, O]);
     if (!n) return null;
-    let P = (0, r.jsx)(c.jRF, {
+    let R = (0, r.jsx)(c.jRF, {
         targetRef: null != g ? g : a,
         position: y,
-        align: R,
+        align: P,
         spacing: v,
         positionKey: A,
         autoInvert: !0,
@@ -44,25 +44,25 @@ function g(e) {
         children: (e) => {
             var t, n, i, a;
             let { position: l, nudge: d } = e,
-                p = null != l ? l : y,
-                h = null != (t = null == I ? void 0 : I.align) ? t : null != d && 0 !== d ? "custom" : "center",
-                m = null != (i = null != (n = null == I ? void 0 : I.customOffset) ? n : d) ? i : 0,
+                _ = null != l ? l : y,
+                m = null != (t = null == S ? void 0 : S.align) ? t : null != d && 0 !== d ? "custom" : "center",
+                h = null != (i = null != (n = null == S ? void 0 : S.customOffset) ? n : d) ? i : 0,
                 g = {
-                    position: null != (a = null == I ? void 0 : I.position) ? a : (0, f.Av)(p),
-                    align: h,
-                    customOffset: "custom" === h ? m : void 0,
+                    position: null != (a = null == S ? void 0 : S.position) ? a : (0, f.Av)(_),
+                    align: m,
+                    customOffset: "custom" === m ? h : void 0,
                 },
                 O = (0, r.jsxs)("div", {
                     ref: C,
                     id: E,
-                    className: o()(_.tooltip, { [_.richTooltip]: N }),
+                    className: o()(p.tooltip, { [p.richTooltip]: N }),
                     role: "tooltip",
-                    "data-position": p,
+                    "data-position": _,
                     "data-mana-component": "tooltip",
                     children: [
                         (0, r.jsx)(u._, { caretConfig: g }),
                         (0, r.jsx)("div", {
-                            className: _.tooltipContent,
+                            className: p.tooltipContent,
                             children:
                                 "string" == typeof b
                                     ? (0, r.jsx)(c.Text, {
@@ -73,18 +73,18 @@ function g(e) {
                         }),
                     ],
                 });
-            return S
+            return T
                 ? (0, r.jsx)(s.animated.div, {
-                      style: S,
+                      style: T,
                       children: O,
                   })
                 : O;
         },
     });
-    return null != T
+    return null != I
         ? (0, r.jsx)(l.mh4, {
-              layerContext: T,
-              children: P,
+              layerContext: I,
+              children: R,
           })
-        : P;
+        : R;
 }

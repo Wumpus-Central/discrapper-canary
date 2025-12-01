@@ -150,7 +150,7 @@ e.exports = function (e) {
                 u(l, n),
             );
         },
-        _ = (t = "string") =>
+        p = (t = "string") =>
             e.END_SAME_AS_BEGIN({
                 className: t,
                 begin: /(.|\r?\n)/,
@@ -159,13 +159,13 @@ e.exports = function (e) {
                 excludeEnd: !0,
                 endsParent: !0,
             }),
-        p = function (e) {
+        _ = function (e) {
             return {
                 className: "string",
                 end: "(?=\\\\end\\{" + e + "\\})",
             };
         },
-        h = (e = "string") => ({
+        m = (e = "string") => ({
             relevance: 0,
             begin: /\{/,
             starts: {
@@ -191,27 +191,27 @@ e.exports = function (e) {
         name: "LaTeX",
         aliases: ["tex"],
         contains: [
-            ...["verb", "lstinline"].map((e) => d(e, { contains: [_()] })),
-            d("mint", u(l, { contains: [_()] })),
+            ...["verb", "lstinline"].map((e) => d(e, { contains: [p()] })),
+            d("mint", u(l, { contains: [p()] })),
             d(
                 "mintinline",
                 u(l, {
-                    contains: [h(), _()],
+                    contains: [m(), p()],
                 }),
             ),
             d("url", {
-                contains: [h("link"), h("link")],
+                contains: [m("link"), m("link")],
             }),
-            d("hyperref", { contains: [h("link")] }),
-            d("href", u(c, { contains: [h("link")] })),
+            d("hyperref", { contains: [m("link")] }),
+            d("href", u(c, { contains: [m("link")] })),
             ...[].concat(
                 ...["", "\\*"].map((e) => [
-                    f("verbatim" + e, p("verbatim" + e)),
-                    f("filecontents" + e, u(l, p("filecontents" + e))),
-                    ...["", "B", "L"].map((t) => f(t + "Verbatim" + e, u(c, p(t + "Verbatim" + e)))),
+                    f("verbatim" + e, _("verbatim" + e)),
+                    f("filecontents" + e, u(l, _("filecontents" + e))),
+                    ...["", "B", "L"].map((t) => f(t + "Verbatim" + e, u(c, _(t + "Verbatim" + e)))),
                 ]),
             ),
-            f("minted", u(c, u(l, p("minted")))),
+            f("minted", u(c, u(l, _("minted")))),
             ...i,
         ],
     };

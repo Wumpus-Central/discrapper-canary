@@ -1,4 +1,4 @@
-n.d(t, { P: () => h }), n(388685);
+n.d(t, { P: () => m }), n(388685);
 var r,
     i = n(54381),
     a = n(473749),
@@ -57,11 +57,11 @@ function f(e, t) {
         e
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -69,7 +69,7 @@ function _(e, t) {
     }
     return i;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,17 +78,17 @@ function p(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-class h extends (r = a.Component) {
+class m extends (r = a.Component) {
     renderNonInteractive() {
         let e = this.props,
             { tag: t, focusProps: n, innerRef: r, onClick: i, role: o, tabIndex: s, ignoreKeyPress: l } = e,
-            c = _(e, ["tag", "focusProps", "innerRef", "onClick", "role", "tabIndex", "ignoreKeyPress"]);
+            c = p(e, ["tag", "focusProps", "innerRef", "onClick", "role", "tabIndex", "ignoreKeyPress"]);
         return a.createElement(t, u({ ref: this.setRef }, c));
     }
     renderInner() {
         let e = this.props,
             { tag: t, onClick: n, className: r, children: i, focusProps: o, innerRef: s, ignoreKeyPress: l } = e,
-            c = _(e, ["tag", "onClick", "className", "children", "focusProps", "innerRef", "ignoreKeyPress"]);
+            c = p(e, ["tag", "onClick", "className", "children", "focusProps", "innerRef", "ignoreKeyPress"]);
         return null == n
             ? a.createElement(
                   t,
@@ -140,8 +140,8 @@ class h extends (r = a.Component) {
             });
     }
 }
-c(h, "contextType", o.g),
-    c(h, "defaultProps", {
+c(m, "contextType", o.g),
+    c(m, "defaultProps", {
         tag: "div",
         role: "button",
         tabIndex: 0,

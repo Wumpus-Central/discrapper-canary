@@ -1,6 +1,6 @@
 n.d(t, {
     LN: () => s,
-    dj: () => _,
+    dj: () => p,
     hj: () => l,
 });
 var r = n(798681),
@@ -25,7 +25,7 @@ let c = 30,
     u = 15,
     d = 8,
     f = 3;
-function _() {
+function p() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 30;
     return e <= 5 ? f : e <= 15 ? d : e <= 30 ? u : c;
 }

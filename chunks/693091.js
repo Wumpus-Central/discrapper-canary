@@ -1,6 +1,6 @@
 n.d(t, {
-    AS: () => _,
-    S4: () => p,
+    AS: () => p,
+    S4: () => _,
     X4: () => y,
 }),
     n(388685);
@@ -26,7 +26,7 @@ function d(e, t, n) {
     );
 }
 let f = new a.Z("NotificationLayoutManager");
-class _ {
+class p {
     updateState(e, t) {
         this.items = e;
         let n = this.locked !== t;
@@ -116,11 +116,11 @@ class _ {
             (this.locked = e);
     }
 }
-let p = r.createContext(new _(!0));
-function h(e, t) {
+let _ = r.createContext(new p(!0));
+function m(e, t) {
     return t && e > 4 ? 0 : t ? Math.min(1 - e / 4, 1) : 1;
 }
-function m(e, t) {
+function h(e, t) {
     return t ? Math.min(1 - e / 4, 1) : 1;
 }
 function g(e, t, n) {
@@ -148,8 +148,8 @@ function y(e, t, n) {
             void 0,
             [],
         ),
-        _ = r.useRef(d),
-        y = r.useContext(p),
+        p = r.useRef(d),
+        y = r.useContext(_),
         O = r.useMemo(() => {
             let t = !1;
             return (n) => {
@@ -157,7 +157,7 @@ function y(e, t, n) {
                     ? y.unsubscribe(e)
                     : y.subscribe(e, n, (n) => {
                           var r;
-                          let { locked: i, matchHeight: a, height: d, top: p, index: y } = n;
+                          let { locked: i, matchHeight: a, height: d, top: _, index: y } = n;
                           if (null == (r = s.default.getCurrentUser()) ? void 0 : r.isStaff()) {
                               let t = o.Z.getWindow(u.$J),
                                   n = null != t ? l.Z.windowSize((0, c.ZY)(t)) : void 0;
@@ -168,17 +168,17 @@ function y(e, t, n) {
                                       locked: i,
                                       matchHeight: a,
                                       height: d,
-                                      top: p,
+                                      top: _,
                                       index: y,
                                   },
                                   n,
                               );
                           }
-                          let { current: O } = _,
+                          let { current: O } = p,
                               v = {
-                                  opacity: h(y, i),
-                                  scale: m(y, i),
-                                  transform: g(y, i, p),
+                                  opacity: m(y, i),
+                                  scale: h(y, i),
+                                  transform: g(y, i, _),
                                   contentOpacity: E(y, i),
                                   height: i ? a : d,
                               };
@@ -204,7 +204,7 @@ function y(e, t, n) {
             if (t === i.pJH.YEETED) {
                 let t = y.getLayoutSpecs(e);
                 if (null == t) return void n();
-                _.current({
+                p.current({
                     to: {
                         scale: 0.8,
                         opacity: 0,

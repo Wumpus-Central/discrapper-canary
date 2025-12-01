@@ -10,38 +10,38 @@ var i = n(442837),
     u = n(595816),
     d = n(102172),
     f = n(728285),
-    _ = n(199902),
-    p = n(592125),
-    h = n(585483),
-    m = n(981631),
+    p = n(199902),
+    _ = n(592125),
+    m = n(585483),
+    h = n(981631),
     g = n(388032);
 function E(e) {
     let { isCurrentUser: t, applicationStream: n, onAction: E } = e,
         { defaultWatchMultipleStreams: b } = (0, u.P)({ location: "WatchStreamButton" }),
-        { activeStream: y, watchingOtherStream: O } = (0, i.cj)([_.Z], () => ({
-            activeStream: _.Z.getActiveStreamForApplicationStream(n),
+        { activeStream: y, watchingOtherStream: O } = (0, i.cj)([p.Z], () => ({
+            activeStream: p.Z.getActiveStreamForApplicationStream(n),
             watchingOtherStream:
                 null != n &&
-                _.Z.getAllActiveStreamsForChannel(n.channelId).filter((e) => {
+                p.Z.getAllActiveStreamsForChannel(n.channelId).filter((e) => {
                     let { ownerId: t } = e;
                     return t !== n.ownerId;
                 }).length > 0,
         })),
-        v = (0, i.e7)([p.Z], () => p.Z.getChannel(null == n ? void 0 : n.channelId)),
-        [I, T] = (0, d.wq)(v),
-        S = (0, f.Aq)(),
-        A = null != y && null != n && y.state !== m.jm8.ENDED && y.ownerId === n.ownerId,
+        v = (0, i.e7)([_.Z], () => _.Z.getChannel(null == n ? void 0 : n.channelId)),
+        [S, I] = (0, d.wq)(v),
+        T = (0, f.Aq)(),
+        A = null != y && null != n && y.state !== h.jm8.ENDED && y.ownerId === n.ownerId,
         C = (e) => {
             null != n &&
                 (null == E || E(),
                 l.default.selectVoiceChannel(n.channelId),
                 A || (0, c.iV)(n, { forceMultiple: e }),
-                S.dispatch(m.CkL.POPOUT_CLOSE),
-                h.S.dispatch(m.CkL.MODAL_CLOSE),
+                T.dispatch(h.CkL.POPOUT_CLOSE),
+                m.S.dispatch(h.CkL.MODAL_CLOSE),
                 s.Z.popAll());
         };
     if (null == n) return null;
-    let N = (0, d.P9)(T);
+    let N = (0, d.P9)(I);
     return (
         t ? (N = g.intl.string(g.t.XvBdeT)) : A && (N = g.intl.string(g.t["JH1SJ+"])),
         (0, r.jsxs)(r.Fragment, {
@@ -51,7 +51,7 @@ function E(e) {
                     variant: A ? "secondary" : "active",
                     icon: o.hGI,
                     text: N,
-                    disabled: t || A || !I,
+                    disabled: t || A || !S,
                     onClick: () => C(!1),
                     fullWidth: !0,
                 }),

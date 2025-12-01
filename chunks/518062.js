@@ -10,7 +10,7 @@ var i = n(442837),
     u = n(197081);
 function d(e) {
     let { purchaseState: t, currentStep: n, onClose: d } = e,
-        [f, _] = (0, l.z)({
+        [f, p] = (0, l.z)({
             purchaseState: t,
             currentStep: n,
             initialScene: c.fe.Scenes.ENTRY,
@@ -18,7 +18,7 @@ function d(e) {
             errorScene: c.fe.Scenes.ERROR,
             successScene: c.fe.Scenes.SUCCESS,
         }),
-        p = (0, i.e7)([o.Z], () => o.Z.useReducedMotion);
+        _ = (0, i.e7)([o.Z], () => o.Z.useReducedMotion);
     return (0, r.jsxs)(a.xBx, {
         "data-migration-pending": !0,
         align: s.Z.Align.START,
@@ -28,9 +28,9 @@ function d(e) {
             (0, r.jsx)(c.fe, {
                 className: u.animation,
                 nextScene: f,
-                onScenePlay: (e) => _(c.fe.getNextScene(e)),
+                onScenePlay: (e) => p(c.fe.getNextScene(e)),
                 pauseWhileUnfocused: !1,
-                pause: p,
+                pause: _,
             }),
             (0, r.jsx)("div", { className: u.headerTitle }),
             (0, r.jsx)(a.olH, {

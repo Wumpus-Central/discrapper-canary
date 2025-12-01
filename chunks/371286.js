@@ -1,7 +1,7 @@
 n.d(t, { Z: () => u });
 var a = n(54381),
     l = n(473749),
-    i = n(790519),
+    i = n(666917),
     r = n(481060),
     s = n(313201),
     o = n(921944),
@@ -11,7 +11,7 @@ function u(e) {
     let { markAsDismissed: t, heading: n, subheading: u, children: m, height: p } = e,
         h = (0, s.Dt)(),
         x = l.useRef(null),
-        g = (0, r.q_F)({
+        f = (0, r.q_F)({
             from: {
                 transform: "translate3d(-110%, 0, 0)",
                 height: p,
@@ -31,7 +31,7 @@ function u(e) {
         });
     return (0, a.jsx)(i.animated.div, {
         className: d.container,
-        style: g,
+        style: f,
         children: (0, a.jsxs)("aside", {
             "aria-labelledby": h,
             className: d.content,

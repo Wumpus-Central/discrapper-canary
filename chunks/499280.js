@@ -13,13 +13,13 @@ function u() {
         var t = "function" == typeof e && e.constructor;
         return !!t && (t === d || "GeneratorFunction" === (t.displayName || t.name));
     }
-    var _ = {
+    var p = {
         throw: 1,
         return: 2,
         break: 3,
         continue: 3,
     };
-    function p(e) {
+    function _(e) {
         var t, n;
         return function (r) {
             t ||
@@ -31,7 +31,7 @@ function u() {
                         return r.v;
                     },
                     abrupt: function (e, t) {
-                        return n(r.a, _[e], t);
+                        return n(r.a, p[e], t);
                     },
                     delegateYield: function (e, i, a) {
                         return (t.resultName = i), n(r.d, c(e), a);
@@ -62,7 +62,7 @@ function u() {
         function () {
             return {
                 wrap: function (e, n, r, i) {
-                    return t.w(p(e), n, r, i && i.reverse());
+                    return t.w(_(e), n, r, i && i.reverse());
                 },
                 isGeneratorFunction: f,
                 mark: t.m,
@@ -71,7 +71,7 @@ function u() {
                 },
                 AsyncIterator: s,
                 async: function (e, t, n, r, i) {
-                    return (f(t) ? o : a)(p(e), t, n, r, i);
+                    return (f(t) ? o : a)(_(e), t, n, r, i);
                 },
                 keys: l,
                 values: c,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,19 +9,19 @@ var r = n(54381),
     u = n(616780),
     d = n(850827),
     f = n(576855),
-    _ = n(258609),
-    p = n(199902),
-    h = n(314897),
-    m = n(430824),
+    p = n(258609),
+    _ = n(199902),
+    m = n(314897),
+    h = n(430824),
     g = n(496675),
     E = n(158776),
     b = n(979651),
     y = n(626135),
     O = n(102172),
     v = n(687516),
-    I = n(718805),
-    T = n(871118),
-    S = n(981631),
+    S = n(718805),
+    I = n(871118),
+    T = n(981631),
     A = n(388032),
     C = n(839021);
 function N(e, t, n) {
@@ -37,7 +37,7 @@ function N(e, t, n) {
         e
     );
 }
-function R(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,7 +53,7 @@ function R(e) {
     }
     return e;
 }
-function P(e, t) {
+function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,22 +65,22 @@ function P(e, t) {
     }
     return n;
 }
-function D(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : P(Object(t)).forEach(function (n) {
+            : R(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function w(e, t) {
+function D(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = L(e, t);
+        i = x(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -88,7 +88,7 @@ function w(e, t) {
     }
     return i;
 }
-function L(e, t) {
+function x(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -97,10 +97,10 @@ function L(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-class x extends i.PureComponent {
+class L extends i.PureComponent {
     componentDidMount() {
         let { user: e, streamApplication: t } = this.props;
-        y.default.track(S.rMx.OPEN_POPOUT, {
+        y.default.track(T.rMx.OPEN_POPOUT, {
             type: "Stream Preview",
             other_user_id: e.id,
             application_id: null != t ? t.id : null,
@@ -115,7 +115,7 @@ class x extends i.PureComponent {
             onClick: t,
             className: C.previewContainer,
             children: [
-                (0, r.jsx)(T.Z, {
+                (0, r.jsx)(I.Z, {
                     className: C.previewImage,
                     stream: e,
                 }),
@@ -126,7 +126,7 @@ class x extends i.PureComponent {
                               variant: "text-sm/normal",
                               color: "none",
                               className: C.white,
-                              children: (0, I.Z)(e, n, i, o),
+                              children: (0, S.Z)(e, n, i, o),
                           }),
                       })
                     : null,
@@ -156,8 +156,8 @@ class x extends i.PureComponent {
                                             channelId: n.channelId,
                                             analyticsParams: {
                                                 location: {
-                                                    page: S.ZY5.GO_LIVE_MODAL,
-                                                    section: S.jXE.STREAM_VIEWER_POPOUT,
+                                                    page: T.ZY5.GO_LIVE_MODAL,
+                                                    section: T.jXE.STREAM_VIEWER_POPOUT,
                                                 },
                                             },
                                             onAction: a,
@@ -184,21 +184,21 @@ class x extends i.PureComponent {
               });
     }
 }
-function M(e) {
+function j(e) {
     var { user: t, channel: n } = e,
-        a = w(e, ["user", "channel"]);
-    let [o, l] = (0, s.Wu)([b.Z, m.Z, g.Z, _.default], () => (0, O.p9)(n, b.Z, m.Z, g.Z, _.default)),
-        c = (0, s.e7)([p.Z], () => p.Z.getStreamForUser(t.id, n.getGuildId())),
-        d = (0, s.e7)([p.Z], () => p.Z.getActiveStreamForApplicationStream(c)),
-        f = (0, s.e7)([h.default], () => h.default.getId()),
+        a = D(e, ["user", "channel"]);
+    let [o, l] = (0, s.Wu)([b.Z, h.Z, g.Z, p.default], () => (0, O.p9)(n, b.Z, h.Z, g.Z, p.default)),
+        c = (0, s.e7)([_.Z], () => _.Z.getStreamForUser(t.id, n.getGuildId())),
+        d = (0, s.e7)([_.Z], () => _.Z.getActiveStreamForApplicationStream(c)),
+        f = (0, s.e7)([m.default], () => m.default.getId()),
         y = (0, v.Cf)(c),
-        I = (0, s.e7)([E.Z], () => (0, v.Um)(c, E.Z)),
-        T = i.useMemo(() => ({ [n.guild_id]: [t.id] }), [n.guild_id, t.id]);
+        S = (0, s.e7)([E.Z], () => (0, v.Um)(c, E.Z)),
+        I = i.useMemo(() => ({ [n.guild_id]: [t.id] }), [n.guild_id, t.id]);
     return (
-        (0, u.$)(T, "StreamPreviewPopout"),
+        (0, u.$)(I, "StreamPreviewPopout"),
         (0, r.jsx)(
-            x,
-            D(R({}, a), {
+            L,
+            w(P({}, a), {
                 canWatch: o,
                 unavailableReason: l,
                 user: t,
@@ -206,7 +206,7 @@ function M(e) {
                 stream: c,
                 activeStream: d,
                 currentUserId: f,
-                activity: I,
+                activity: S,
             }),
         )
     );

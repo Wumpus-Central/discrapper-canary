@@ -96,7 +96,7 @@ let u = {
                 let n = "enable" === e ? "hover_disabled" : "hover_enabled";
                 t.current.stopIfPlaying(n);
             }, [e]),
-            _ = i.useCallback(
+            p = i.useCallback(
                 (e) =>
                     (0, r.jsx)(
                         a.L,
@@ -124,6 +124,6 @@ let u = {
                 var e, n;
                 return null != (n = null == (e = t.current) ? void 0 : e.getCurrentFrame()) ? n : null;
             }, []),
-            Component: _,
+            Component: p,
         };
     };

@@ -70,15 +70,15 @@ let c = (function (e, t) {
             }
             let [d, f] = a.M8.isRange(n) ? a.M8.edges(n) : a.bN.edges(e, n);
             if (null != i || null != o) {
-                var _, p, h;
+                var p, _, m;
                 if (s) {
                     let t =
                         null !=
-                        (_ = a.bN.before(e, d, {
+                        (p = a.bN.before(e, d, {
                             distance: i,
                             unit: o,
                         }))
-                            ? _
+                            ? p
                             : a.bN.start(e, []);
                     if ("character" === o && (null != i ? i : 1) === 1 && a.C0.equals(d.path, f.path)) {
                         let n = a.bN.leaf(e, d.path),
@@ -87,22 +87,22 @@ let c = (function (e, t) {
                             null != r[r.length - 1].match(/[\u0E00-\u0E7F]/) &&
                             (t =
                                 null !=
-                                (p = a.bN.before(e, d, {
+                                (_ = a.bN.before(e, d, {
                                     distance: i,
                                     unit: "offset",
                                 }))
-                                    ? p
+                                    ? _
                                     : a.bN.start(e, []));
                     }
                     d = t;
                 } else
                     f =
                         null !=
-                        (h = a.bN.after(e, f, {
+                        (m = a.bN.after(e, f, {
                             distance: i,
                             unit: o,
                         }))
-                            ? h
+                            ? m
                             : a.bN.end(e, []);
             }
             if (null != c) {

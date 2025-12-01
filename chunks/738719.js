@@ -7,21 +7,21 @@ e.exports = function (e, t, n, a, o) {
         u = e.getBlockTree(c),
         d = u && u.getIn([l.decoratorKey, "leaves", l.leafKey]),
         f = r.decode(a),
-        _ = f.blockKey,
-        p = e.getBlockTree(_),
-        h = p && p.getIn([f.decoratorKey, "leaves", f.leafKey]);
-    if (!d || !h) return s;
-    var m = d.get("start"),
-        g = h.get("start"),
-        E = d ? m + n : null,
-        b = h ? g + o : null;
-    if (s.getAnchorKey() === c && s.getAnchorOffset() === E && s.getFocusKey() === _ && s.getFocusOffset() === b)
+        p = f.blockKey,
+        _ = e.getBlockTree(p),
+        m = _ && _.getIn([f.decoratorKey, "leaves", f.leafKey]);
+    if (!d || !m) return s;
+    var h = d.get("start"),
+        g = m.get("start"),
+        E = d ? h + n : null,
+        b = m ? g + o : null;
+    if (s.getAnchorKey() === c && s.getAnchorOffset() === E && s.getFocusKey() === p && s.getFocusOffset() === b)
         return s;
     var y = !1;
-    if (c === _) {
+    if (c === p) {
         var O = d.get("end"),
-            v = h.get("end");
-        y = g === m && v === O ? o < n : g < m;
+            v = m.get("end");
+        y = g === h && v === O ? o < n : g < h;
     } else
         y =
             e
@@ -29,13 +29,13 @@ e.exports = function (e, t, n, a, o) {
                 .getBlockMap()
                 .keySeq()
                 .skipUntil(function (e) {
-                    return e === c || e === _;
+                    return e === c || e === p;
                 })
-                .first() === _;
+                .first() === p;
     return s.merge({
         anchorKey: c,
         anchorOffset: E,
-        focusKey: _,
+        focusKey: p,
         focusOffset: b,
         isBackward: y,
     });

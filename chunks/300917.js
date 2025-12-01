@@ -1,6 +1,6 @@
 n.d(t, {
     B: () => g,
-    QuestRewardModalUnverified: () => m,
+    QuestRewardModalUnverified: () => h,
 }),
     n(388685);
 var r = n(54381),
@@ -13,8 +13,8 @@ var r = n(54381),
     u = n(509212),
     d = n(388032),
     f = n(654071),
-    _ = n(800010);
-function p(e, t, n) {
+    p = n(800010);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,50 +38,50 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e) {
+function h(e) {
     let { transitionState: t, onClose: n } = e,
-        p = (0, o.e7)([c.default], () => {
+        _ = (0, o.e7)([c.default], () => {
             var e;
             return null == (e = c.default.getCurrentUser()) ? void 0 : e.email;
         }),
-        [h, m] = i.useState({ status: "unknown" });
+        [m, h] = i.useState({ status: "unknown" });
     i.useEffect(() => {
-        m({ status: "loading" }),
+        h({ status: "loading" }),
             l.Z.verifyResend().then(
-                () => m({ status: "success" }),
+                () => h({ status: "success" }),
                 (e) => {
-                    m({ status: "error" }), (0, u.ys)(e, { tags: { location: "QuestsRewardModalUnverified" } });
+                    h({ status: "error" }), (0, u.ys)(e, { tags: { location: "QuestsRewardModalUnverified" } });
                 },
             );
     }, []);
     let g =
-        "error" === h.status
+        "error" === m.status
             ? d.intl.string(d.t.vjying)
-            : "success" === h.status
+            : "success" === m.status
               ? d.intl.format(d.t.qP5xYc, {
-                    emailAddress: p,
-                    emailAddressLink: "mailto:".concat(p),
+                    emailAddress: _,
+                    emailAddressLink: "mailto:".concat(_),
                 })
               : void 0;
     return (0, r.jsxs)(a.ExpressiveModal, {
         transitionState: t,
         onClose: n,
         graphic:
-            "loading" === h.status
+            "loading" === m.status
                 ? void 0
                 : {
                       type: "image",
-                      src: _,
+                      src: p,
                   },
-        title: "loading" === h.status ? void 0 : d.intl.string(d.t.c8eASM),
+        title: "loading" === m.status ? void 0 : d.intl.string(d.t.c8eASM),
         subtitle: g,
         actions:
-            "loading" === h.status
+            "loading" === m.status
                 ? void 0
                 : [
                       {
@@ -91,8 +91,8 @@ function m(e) {
                       },
                   ],
         children: [
-            "loading" === h.status && (0, r.jsx)(s.$jN, {}),
-            "success" === h.status &&
+            "loading" === m.status && (0, r.jsx)(s.$jN, {}),
+            "success" === m.status &&
                 (0, r.jsxs)("div", {
                     className: f.helper,
                     children: [
@@ -114,6 +114,6 @@ function m(e) {
 function g() {
     (0, s.ZDy)(async () => {
         let { QuestRewardModalUnverified: e } = await Promise.resolve().then(n.bind(n, 300917));
-        return (t) => (0, r.jsx)(e, h({}, t));
+        return (t) => (0, r.jsx)(e, m({}, t));
     });
 }

@@ -11,26 +11,26 @@ let s = {
             name: "Checkbox",
             component: function (e) {
                 let { disabled: t, readOnly: n, displayOnly: s, type: l, size: c, align: u, shape: d, label: f } = e,
-                    [_, p] = i.useState(!1),
-                    h = i.useCallback((e, t) => {
-                        p(t);
+                    [p, _] = i.useState(!1),
+                    m = i.useCallback((e, t) => {
+                        _(t);
                     }, []),
-                    m = i.useCallback(() => {
-                        p(!0);
+                    h = i.useCallback(() => {
+                        _(!0);
                     }, []),
                     g = i.useCallback(() => {
-                        p(!1);
+                        _(!1);
                     }, []),
                     E = i.useCallback(() => {
-                        p((e) => !e);
+                        _((e) => !e);
                     }, []);
                 return (0, r.jsxs)(o.Kqy, {
                     direction: "vertical",
                     gap: "md",
                     children: [
                         (0, r.jsx)(a.$q, {
-                            value: _,
-                            onChange: h,
+                            value: p,
+                            onChange: m,
                             disabled: t,
                             readOnly: n,
                             displayOnly: s,
@@ -45,7 +45,7 @@ let s = {
                         }),
                         (0, r.jsxs)(o.Text, {
                             variant: "text-sm/normal",
-                            children: ["Current state: ", _ ? "Checked" : "Unchecked"],
+                            children: ["Current state: ", p ? "Checked" : "Unchecked"],
                         }),
                         (0, r.jsxs)(o.Kqy, {
                             direction: "horizontal",
@@ -55,7 +55,7 @@ let s = {
                                     variant: "secondary",
                                     size: "sm",
                                     text: "Check",
-                                    onClick: m,
+                                    onClick: h,
                                     disabled: t || n,
                                 }),
                                 (0, r.jsx)(o.Button, {

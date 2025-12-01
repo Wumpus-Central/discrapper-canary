@@ -2,8 +2,8 @@ n.d(t, { Z: () => f });
 var r = n(54381);
 n(473749);
 var i = n(793030),
-    l = n(681715),
-    o = n(481060),
+    o = n(681715),
+    l = n(481060),
     a = n(318713),
     s = n(665957),
     c = n(884902),
@@ -17,7 +17,7 @@ function f(e) {
     return (0, r.jsxs)("div", {
         className: p.systemMessageContainer,
         children: [
-            (0, r.jsx)(o.Ucv, {
+            (0, r.jsx)(l.Ucv, {
                 className: p.icon,
                 color: "currentColor",
                 size: "sm",
@@ -29,12 +29,12 @@ function f(e) {
                     variant: "text-md/medium",
                     lineClamp: 1,
                     children: [
-                        (0, r.jsx)(l.u, {
+                        (0, r.jsx)(o.u, {
                             text: f,
                             shouldShow: !0,
                             asContainer: !0,
                             delay: 1000,
-                            children: (0, r.jsx)(o.PUh, {
+                            children: (0, r.jsx)(l.PUh, {
                                 className: p.boostMessageUser,
                                 variant: "text-md/semibold",
                                 name: f,

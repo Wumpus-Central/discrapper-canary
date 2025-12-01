@@ -9,11 +9,11 @@ var r = n(54381),
     u = n(51331),
     d = n(703115),
     f = n(526761),
-    _ = n(726985),
-    p = n(736530),
-    h = n(981631),
-    m = n(388032),
-    g = n(361742);
+    p = n(726985),
+    _ = n(736530),
+    m = n(981631),
+    h = n(388032),
+    g = n(779334);
 function E(e) {
     let { ingress: t, guildId: n } = e,
         l = s.SE.useSetting().includes(n),
@@ -22,7 +22,7 @@ function E(e) {
                 let r = (0, o._o)();
                 e ? r.delete(n) : r.add(n),
                     s.SE.updateSetting([...r]),
-                    a.default.track(h.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
+                    a.default.track(m.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
                         action: d.Y.RESTRICT_GUILD_ACTIVITY_STATUS_TOGGLE,
                         ingress: t,
                         guild_id: n,
@@ -30,15 +30,15 @@ function E(e) {
             },
             [t, n],
         );
-    return n === p.T
+    return n === _.T
         ? null
         : (0, r.jsx)(c.U, {
-              setting: _.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_STATUS_V2,
+              setting: p.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_STATUS_V2,
               children: (0, r.jsx)(u.ZP, {
-                  title: m.intl.string(g.default.WhdCGP),
+                  title: h.intl.string(g.default.WhdCGP),
                   value: !l,
                   onChange: f,
-                  note: m.intl.string(g.default.UQ9RHJ),
+                  note: h.intl.string(g.default.UQ9RHJ),
               }),
           });
 }

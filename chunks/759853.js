@@ -1,11 +1,11 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r = n(54381),
     s = n(473749),
     o = n(120356),
     a = n.n(o),
     i = n(921254),
     l = n(24156),
-    c = n(790519),
+    c = n(666917),
     d = n(442837),
     u = n(110924),
     p = n(607070),
@@ -14,18 +14,18 @@ var r = n(54381),
     f = n(675654),
     h = n(674386),
     x = n(197857);
-let b = ["#51BC9D"],
-    _ = (e) => {
+let _ = ["#51BC9D"],
+    b = (e) => {
         var t;
-        let { expansionSpring: n, overlayRef: o, quest: _, progressBarRef: j, isExpanded: v, isHovered: C } = e,
+        let { expansionSpring: n, overlayRef: o, quest: b, progressBarRef: j, isExpanded: v, isHovered: C } = e,
             { completionSpring: y, startCompletionAnimation: E } = (0, g.G)(),
-            O = (null == (t = _.userStatus) ? void 0 : t.completedAt) != null,
+            O = (null == (t = b.userStatus) ? void 0 : t.completedAt) != null,
             S = s.useRef(!1),
             T = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
             w = s.useRef(null),
             P = (0, d.e7)([m.Z], () => m.Z.hasLayers()),
             N = (0, u.Z)(P),
-            [A, R] = s.useState(null),
+            [R, A] = s.useState(null),
             [B, k] = s.useState(null),
             I = s.useRef(
                 new i.qA({
@@ -33,7 +33,7 @@ let b = ["#51BC9D"],
                     wind: 0,
                 }),
             ),
-            D = (0, i.uR)(A, B),
+            D = (0, i.uR)(R, B),
             q = s.useCallback(() => {
                 if (T) return;
                 let e = j.current,
@@ -173,14 +173,14 @@ let b = ["#51BC9D"],
                           },
                           children: [
                               (0, r.jsx)(i.O_, {
-                                  ref: R,
+                                  ref: A,
                                   className: h.confetti,
                                   environment: I.current,
                               }),
                               (0, r.jsx)(i.Ji, {
                                   ref: k,
                                   sprites: [x],
-                                  colors: b,
+                                  colors: _,
                                   spriteWidth: f.Ko,
                                   spriteHeight: f.Ko,
                               }),

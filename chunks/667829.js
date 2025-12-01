@@ -9,26 +9,26 @@ var r = n(54381),
     u = n(873546),
     d = n(430742),
     f = n(166459),
-    _ = n(531643),
-    p = n(911969),
-    h = n(476326),
-    m = n(998698),
+    p = n(531643),
+    _ = n(911969),
+    m = n(476326),
+    h = n(998698),
     g = n(710845),
     E = n(117530),
     b = n(459273),
     y = n(403182),
     O = n(137058),
     v = n(541716),
-    I = n(752305),
-    T = n(30465),
-    S = n(330122),
+    S = n(752305),
+    I = n(30465),
+    T = n(330122),
     A = n(140963),
     C = n(4484),
     N = n(925994),
-    R = n(981631),
-    P = n(388032),
-    D = n(564355);
-function w(e, t, n) {
+    P = n(981631),
+    R = n(388032),
+    w = n(564355);
+function D(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +41,7 @@ function w(e, t, n) {
         e
     );
 }
-function L(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,12 +52,12 @@ function L(e) {
                 }),
             )),
             r.forEach(function (t) {
-                w(e, t, n[t]);
+                D(e, t, n[t]);
             });
     }
     return e;
 }
-function x(e, t) {
+function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -69,22 +69,22 @@ function x(e, t) {
     }
     return n;
 }
-function M(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : x(Object(t)).forEach(function (n) {
+            : L(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 new g.Z("ChannelEditor.tsx");
-let k = function () {
+let M = function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     },
-    j = 1000;
+    k = 1000;
 class U extends i.Component {
     _getEditorWindow() {
         var e, t, n, r, i;
@@ -106,14 +106,14 @@ class U extends i.Component {
         this.props.focused && requestAnimationFrame(() => this.focus()),
             document.addEventListener("selectionchange", this.handleSelectionChange),
             window.addEventListener("beforeunload", this.handleBeforeUnload),
-            (this._initTimeoutId = setTimeout(() => void this._getEditorWindow(), j));
+            (this._initTimeoutId = setTimeout(() => void this._getEditorWindow(), k));
     }
     componentDidUpdate(e) {
         if ((this.fixFocus(e), this.props.useSlate !== e.useSlate)) {
             var t, n;
             let e;
             (e = this.props.useSlate ? this.props.textValue : (0, N.sk)(this.props.richValue, { mode: "plain" })),
-                null == (t = (n = this.props).onChange) || t.call(n, null, e, (0, I.JM)(e));
+                null == (t = (n = this.props).onChange) || t.call(n, null, e, (0, S.JM)(e));
         } else this.props.textValue !== e.textValue && this.saveCurrentTextThrottled();
     }
     componentWillUnmount() {
@@ -227,7 +227,7 @@ class U extends i.Component {
     }
     getPlaceholder() {
         let { disabled: e, placeholder: t, isPreviewing: n, showValueWhenDisabled: r } = this.props;
-        return e && !n ? (r ? "" : P.intl.string(P.t.IYKTTc)) : t;
+        return e && !n ? (r ? "" : R.intl.string(R.t.IYKTTc)) : t;
     }
     render() {
         var e, t, n, i, a, s;
@@ -236,38 +236,38 @@ class U extends i.Component {
                 richValue: c,
                 disabled: d,
                 onChange: f,
-                onKeyDown: _,
-                onResize: p,
-                onSubmit: h,
-                channel: m,
+                onKeyDown: p,
+                onResize: _,
+                onSubmit: m,
+                channel: h,
                 type: g,
                 useSlate: E,
                 spellcheckEnabled: y,
                 useNewSlashCommands: O,
-                canOnlyUseTextCommands: T,
-                className: S,
+                canOnlyUseTextCommands: I,
+                className: T,
                 id: N,
-                required: P,
-                maxCharacterCount: w,
-                allowNewLines: x,
-                isEditorIdle: k,
-                currentAutocompleteType: j,
+                required: R,
+                maxCharacterCount: D,
+                allowNewLines: L,
+                isEditorIdle: M,
+                currentAutocompleteType: k,
                 "aria-describedby": U,
                 "aria-labelledby": G,
-                accessibilityLabel: B,
-                showValueWhenDisabled: Z,
+                accessibilityLabel: Z,
+                showValueWhenDisabled: B,
             } = this.props,
             { submitting: F, popup: V } = this.state,
             H = {
-                channel: m,
-                className: o()(S, D.textArea, {
-                    [D.textAreaSlate]: E,
-                    [D.textAreaDisabled]: d || F,
+                channel: h,
+                className: o()(T, w.textArea, {
+                    [w.textAreaSlate]: E,
+                    [w.textAreaDisabled]: d || F,
                 }),
                 id: N,
                 placeholder: this.getPlaceholder(),
-                required: P,
-                accessibilityLabel: B,
+                required: R,
+                accessibilityLabel: Z,
                 disabled: d || !1,
                 submitting: F,
                 isEdit: g === v.Ie.EDIT,
@@ -279,28 +279,28 @@ class U extends i.Component {
                 moveSelection: this.handleMoveSelection,
                 maybeShowAutocomplete: this.maybeShowAutocomplete,
                 hideAutocomplete: this.hideAutocomplete,
-                allowNewLines: x,
+                allowNewLines: L,
                 onChange: f,
-                onResize: p,
-                onKeyDown: _,
-                onSubmit: h,
+                onResize: _,
+                onKeyDown: p,
+                onSubmit: m,
                 textAreaPaddingClassName: o()({
-                    [D.textAreaForPostCreation]: g === v.Ie.CREATE_FORUM_POST,
-                    [D.textAreaCustomGift]: g === v.Ie.CUSTOM_GIFT,
-                    [D.textAreaForUserProfile]: g === v.Ie.USER_PROFILE,
-                    [D.textAreaForOverlayInlineReply]: g === v.Ie.OVERLAY_INLINE_REPLY,
+                    [w.textAreaForPostCreation]: g === v.Ie.CREATE_FORUM_POST,
+                    [w.textAreaCustomGift]: g === v.Ie.CUSTOM_GIFT,
+                    [w.textAreaForUserProfile]: g === v.Ie.USER_PROFILE,
+                    [w.textAreaForOverlayInlineReply]: g === v.Ie.OVERLAY_INLINE_REPLY,
                 }),
                 spellcheckEnabled: y,
                 useNewSlashCommands: O,
-                isEditorIdle: k,
-                currentAutocompleteType: j,
+                isEditorIdle: M,
+                currentAutocompleteType: k,
                 disableAutoFocus: u.tq || (null != (n = g.disableAutoFocus) && n),
                 disableEnterToSubmit: null != (i = null == (e = g.submit) ? void 0 : e.disableEnterToSubmit) && i,
                 "aria-controls": null != (a = V.id) ? a : void 0,
                 "aria-haspopup": "listbox",
                 "aria-expanded": null !== V.id || void 0,
                 "aria-activedescendant": null != (s = V.activeDescendant) ? s : void 0,
-                "aria-invalid": l.length > w,
+                "aria-invalid": l.length > D,
                 "aria-describedby": U,
                 "aria-labelledby": G,
                 "aria-autocomplete": "list",
@@ -308,22 +308,22 @@ class U extends i.Component {
             Y = E
                 ? (0, r.jsx)(
                       C.Z,
-                      M(L({ ref: this.ref }, H), {
+                      j(x({ ref: this.ref }, H), {
                           type: g,
-                          value: d && !Z ? (0, I.JM)("") : c,
+                          value: d && !B ? (0, S.JM)("") : c,
                           canUseCommands: null == (t = g.commands) ? void 0 : t.enabled,
-                          canOnlyUseTextCommands: T,
+                          canOnlyUseTextCommands: I,
                       }),
                   )
-                : (0, r.jsx)(A.Z, M(L({ ref: this.ref }, H), { value: d && !Z ? "" : l }));
+                : (0, r.jsx)(A.Z, j(x({ ref: this.ref }, H), { value: d && !B ? "" : l }));
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(b.d9, {
-                    event: R.CkL.INSERT_TEXT,
+                    event: P.CkL.INSERT_TEXT,
                     handler: this.handleInsertText,
                 }),
                 (0, r.jsx)(b.d9, {
-                    event: R.CkL.CLEAR_TEXT,
+                    event: P.CkL.CLEAR_TEXT,
                     handler: this.handleClearText,
                 }),
                 Y,
@@ -334,12 +334,12 @@ class U extends i.Component {
         var t;
         super(e),
             (t = this),
-            w(this, "ref", i.createRef()),
-            w(this, "_focusBlurQueue", Promise.resolve()),
-            w(this, "_unsubscribe", void 0),
-            w(this, "_initTimeoutId", null),
-            w(this, "_cachedEditorWindow", null),
-            w(this, "handleSelectionChange", () => {
+            D(this, "ref", i.createRef()),
+            D(this, "_focusBlurQueue", Promise.resolve()),
+            D(this, "_unsubscribe", void 0),
+            D(this, "_initTimeoutId", null),
+            D(this, "_cachedEditorWindow", null),
+            D(this, "handleSelectionChange", () => {
                 if (this.props.focused) {
                     var e, t, n;
                     this.props.onSelectionChanged(
@@ -347,7 +347,7 @@ class U extends i.Component {
                     );
                 }
             }),
-            w(this, "focus", () => {
+            D(this, "focus", () => {
                 var e;
                 null == (e = this._focusBlurQueue) ||
                     e.then(() => {
@@ -357,55 +357,55 @@ class U extends i.Component {
                         });
                     });
             }),
-            w(this, "saveCurrentText", function () {
+            D(this, "saveCurrentText", function () {
                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                     { type: n, channel: r } = t.props;
                 n.drafts.autoSave && (e && t.saveCurrentTextThrottled.cancel(), t.handleSaveCurrentText(r.id));
             }),
-            w(this, "handleBeforeUnload", () => this.saveCurrentText()),
-            w(this, "saveCurrentTextThrottled", l().throttle(this.saveCurrentText.bind(this, !1), 500)),
-            w(this, "handleEnter", (e) => {
+            D(this, "handleBeforeUnload", () => this.saveCurrentText()),
+            D(this, "saveCurrentTextThrottled", l().throttle(this.saveCurrentText.bind(this, !1), 500)),
+            D(this, "handleEnter", (e) => {
                 var t, n;
                 return null == (t = (n = this.props).onEnter) ? void 0 : t.call(n, e);
             }),
-            w(this, "handleTab", () => {
+            D(this, "handleTab", () => {
                 var e, t;
                 return null == (e = (t = this.props).onTab) ? void 0 : e.call(t);
             }),
-            w(this, "handleMoveSelection", (e) => {
+            D(this, "handleMoveSelection", (e) => {
                 var t, n;
                 return null == (t = (n = this.props).onMoveSelection) ? void 0 : t.call(n, e);
             }),
-            w(this, "maybeShowAutocomplete", () => {
+            D(this, "maybeShowAutocomplete", () => {
                 var e, t;
                 return null == (e = (t = this.props).onMaybeShowAutocomplete) ? void 0 : e.call(t);
             }),
-            w(this, "hideAutocomplete", () => {
+            D(this, "hideAutocomplete", () => {
                 var e, t;
                 return null == (e = (t = this.props).onHideAutocomplete) ? void 0 : e.call(t);
             }),
-            w(this, "handleSaveCurrentText", (e) => {
+            D(this, "handleSaveCurrentText", (e) => {
                 d.Z.saveDraft(e, this.props.textValue, this.props.type.drafts.type);
             }),
-            w(this, "handleClearText", () => {
+            D(this, "handleClearText", () => {
                 var e, t;
-                null == (e = (t = this.props).onChange) || e.call(t, null, "", (0, I.JM)(""));
+                null == (e = (t = this.props).onChange) || e.call(t, null, "", (0, S.JM)(""));
             }),
-            w(this, "handleInsertText", (e) => {
+            D(this, "handleInsertText", (e) => {
                 let { plainText: t, rawText: n, addSpace: r = !1 } = e;
                 this.props.disabled || (this.appendText(t, n, r), this.focus());
             }),
-            w(this, "handleFocus", (e) => {
+            D(this, "handleFocus", (e) => {
                 let { onFocus: t } = this.props,
                     { focused: n } = this.state;
                 null == t || t(e), n || this.setState({ focused: !0 });
             }),
-            w(this, "handleBlur", (e) => {
+            D(this, "handleBlur", (e) => {
                 let { onBlur: t } = this.props,
                     { focused: n } = this.state;
                 null == t || t(e), n && this.setState({ focused: !1 });
             }),
-            w(this, "handlePaste", (e) => {
+            D(this, "handlePaste", (e) => {
                 var t, n, r;
                 let i = null == (n = e.target) || null == (t = n.ownerDocument) ? void 0 : t.defaultView,
                     {
@@ -416,14 +416,14 @@ class U extends i.Component {
                         maxCharacterCount: c,
                         type: u,
                     } = this.props,
-                    d = null != i ? (0, S.im)(i) : null,
-                    g = (0, S.Mo)(),
+                    d = null != i ? (0, T.im)(i) : null,
+                    g = (0, T.Mo)(),
                     b = null != (r = null != d ? d : g) ? r : a,
-                    y = (0, S._K)(i, this._getEditorWindow()) ? a : b;
+                    y = (0, T._K)(i, this._getEditorWindow()) ? a : b;
                 if (null == l || (!y.isPrivate() && !o) || (y.isPrivate() && y.isManaged())) return !1;
                 let O = (e, t) => {
                         var n, r;
-                        let i = m.Z.getActiveCommand(y.id);
+                        let i = h.Z.getActiveCommand(y.id);
                         if (null == i)
                             return l(e, y, u.drafts.type, {
                                 requireConfirm: !0,
@@ -432,15 +432,15 @@ class U extends i.Component {
                             });
                         let a = null != (n = u.drafts.commandType) ? n : u.drafts.type,
                             o = null,
-                            s = m.Z.getActiveOption(y.id);
+                            s = h.Z.getActiveOption(y.id);
                         null !=
                             (o =
-                                (null == s ? void 0 : s.type) === p.jw.ATTACHMENT
+                                (null == s ? void 0 : s.type) === _.jw.ATTACHMENT
                                     ? s
                                     : null == (r = i.options)
                                       ? void 0
                                       : r.find((e) => {
-                                            if (e.type === p.jw.ATTACHMENT)
+                                            if (e.type === _.jw.ATTACHMENT)
                                                 return null == E.Z.getUpload(y.id, e.name, a);
                                         })) &&
                             f.Z.setFile({
@@ -449,14 +449,14 @@ class U extends i.Component {
                                 draftType: a,
                                 file: {
                                     id: o.name,
-                                    platform: h.ow.WEB,
+                                    platform: m.ow.WEB,
                                     file: e[0],
                                 },
                             });
                     },
                     v = null != s ? s : c,
-                    { files: I, errors: T } = G(e.clipboardData, u.uploadLongMessages ? v : null);
-                return (k(
+                    { files: S, errors: I } = G(e.clipboardData, u.uploadLongMessages ? v : null);
+                return (M(
                     "onPaste",
                     [...e.clipboardData.items].map((e) => {
                         if ("file" !== e.kind)
@@ -475,21 +475,21 @@ class U extends i.Component {
                         }
                     }),
                 ),
-                0 === I.length)
-                    ? ((null == T
+                0 === S.length)
+                    ? ((null == I
                           ? void 0
-                          : T.some((e) => {
+                          : I.some((e) => {
                                 let { error: t } = e;
                                 return "is_directory" === t;
                             })) &&
-                          (0, _.openUploadError)({
-                              title: P.intl.string(P.t.azO1Pe),
-                              help: P.intl.string(P.t["Koklr/"]),
+                          (0, p.openUploadError)({
+                              title: R.intl.string(R.t.azO1Pe),
+                              help: R.intl.string(R.t["Koklr/"]),
                           }),
                       !1)
-                    : (e.preventDefault(), e.stopPropagation(), this.saveCurrentText(), O(I), this.focus(), !0);
+                    : (e.preventDefault(), e.stopPropagation(), this.saveCurrentText(), O(S), this.focus(), !0);
             }),
-            (this._unsubscribe = T.p8.subscribe((e) => {
+            (this._unsubscribe = I.p8.subscribe((e) => {
                 requestAnimationFrame(() => {
                     this.setState({ popup: e });
                 });
@@ -497,7 +497,7 @@ class U extends i.Component {
             (this.state = {
                 focused: !1,
                 submitting: !1,
-                popup: T.p8.getState(),
+                popup: I.p8.getState(),
             });
     }
 }
@@ -541,7 +541,7 @@ function G(e, t) {
     if (l.length > 0) {
         if (1 === l.length && "image/png" === l[0].type && null != u) {
             let t = l[0],
-                n = null != (o = B(e.getData(u.type))) ? o : t.name;
+                n = null != (o = Z(e.getData(u.type))) ? o : t.name;
             return {
                 files: [(0, y.dp)(t, n, t.type)],
                 errors: d,
@@ -568,7 +568,7 @@ function G(e, t) {
         errors: d,
     };
 }
-function B(e) {
+function Z(e) {
     let t = new DOMParser().parseFromString(e, "text/html").querySelector("img");
     if (null != t) {
         let e;

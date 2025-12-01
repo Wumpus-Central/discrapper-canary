@@ -40,8 +40,8 @@ function b(e) {
         emojiHose: a,
         context: b,
         canvasWidth: v,
-        canvasHeight: E,
-        fallbackColor: h,
+        canvasHeight: h,
+        fallbackColor: E,
         outlineColorDark: y,
         outlineColorLight: S,
         streamerId: O,
@@ -50,8 +50,8 @@ function b(e) {
     b.save();
     let w = s.Z.getEmojiImage(null != (n = null != (t = a.emojiId) ? t : a.emojiName) ? n : ""),
         I = (0, d.np)(a.x, v),
-        P = (0, d.np)(a.y, E),
-        { outlineColor: j } = (0, d.bg)(a.userId, y, S, h);
+        P = (0, d.np)(a.y, h),
+        { outlineColor: j } = (0, d.bg)(a.userId, y, S, E);
     g(a, (e) => {
         (e.x += e.xSpeed * window.devicePixelRatio),
             (e.y += e.ySpeed * window.devicePixelRatio),

@@ -1,6 +1,6 @@
 n.d(t, {
     C: () => v,
-    Z: () => D,
+    Z: () => w,
 }),
     n(35282),
     n(539854);
@@ -14,10 +14,10 @@ var r,
     u = n(592125),
     d = n(430824),
     f = n(944486),
-    _ = n(914010),
-    p = n(981631),
-    h = n(526761);
-function m(e, t, n) {
+    p = n(914010),
+    _ = n(981631),
+    m = n(526761);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +41,7 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
@@ -72,7 +72,7 @@ function b(e, t) {
 let y = 10,
     O = 100,
     v = 100,
-    I = new l.Z({
+    S = new l.Z({
         computeBonus: () => O,
         computeWeight: (e) => {
             let t = 1;
@@ -99,29 +99,29 @@ let y = 10,
         numFrequentlyItems: v,
         maxSamples: y,
     }),
-    T = null,
-    S = null;
+    I = null,
+    T = null;
 function A(e) {
     let { guildId: t, channelId: n } = e,
         r = !1;
     return (
-        n !== T &&
-            ((T = null != n ? n : null),
+        n !== I &&
+            ((I = null != n ? n : null),
             null != n &&
-                p.Xyh.test(n) &&
+                _.Xyh.test(n) &&
                 ((r = !0),
-                I.track(n),
-                R.pendingUsages.push({
+                S.track(n),
+                P.pendingUsages.push({
                     key: n,
                     timestamp: Date.now(),
                 }))),
-        t !== S &&
-            ((S = null != t ? t : null),
+        t !== T &&
+            ((T = null != t ? t : null),
             null != t &&
-                p.Xyh.test(t) &&
+                _.Xyh.test(t) &&
                 ((r = !0),
-                I.track(t),
-                R.pendingUsages.push({
+                S.track(t),
+                P.pendingUsages.push({
                     key: t,
                     timestamp: Date.now(),
                 }))),
@@ -133,39 +133,39 @@ function C(e) {
         settings: { type: t },
         wasSaved: n,
     } = e;
-    return t === h.yP.FRECENCY_AND_FAVORITES_SETTINGS && !!n && ((R.pendingUsages = []), !0);
+    return t === m.yP.FRECENCY_AND_FAVORITES_SETTINGS && !!n && ((P.pendingUsages = []), !0);
 }
 function N() {
     var e;
     let t = null == (e = c.Z.frecencyWithoutFetchingLatest.guildAndChannelFrecency) ? void 0 : e.guildAndChannels;
     if (null == t) return !1;
-    I.overwriteHistory(
+    S.overwriteHistory(
         a().mapValues(t, (e) => b(g({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
-        R.pendingUsages,
+        P.pendingUsages,
     );
 }
-let R = { pendingUsages: [] };
-class P extends (r = o.ZP.PersistedStore) {
+let P = { pendingUsages: [] };
+class R extends (r = o.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(u.Z, d.Z, f.Z, _.Z, c.Z),
-            null != e && ((e.pendingUsages = e.pendingUsages.filter((e) => null != e && p.Xyh.test(e.key))), (R = e)),
+        this.waitFor(u.Z, d.Z, f.Z, p.Z, c.Z),
+            null != e && ((e.pendingUsages = e.pendingUsages.filter((e) => null != e && _.Xyh.test(e.key))), (P = e)),
             this.syncWith([c.Z], N);
     }
     getState() {
-        return R;
+        return P;
     }
     hasPendingUsage() {
-        return R.pendingUsages.length > 0;
+        return P.pendingUsages.length > 0;
     }
     get frecencyWithoutFetchingLatest() {
-        return I;
+        return S;
     }
     getFrequentlyWithoutFetchingLatest() {
-        return I.frequently;
+        return S.frequently;
     }
     getScoreWithoutFetchingLatest(e) {
         var t;
-        return null != (t = I.getFrecency(e)) ? t : 0;
+        return null != (t = S.getFrecency(e)) ? t : 0;
     }
     getScoreForDMWithoutFetchingLatest(e) {
         let t = u.Z.getDMFromUserId(e);
@@ -178,8 +178,8 @@ class P extends (r = o.ZP.PersistedStore) {
         return O;
     }
 }
-m(P, "displayName", "FrecencyStore"), m(P, "persistKey", "FrecencyStore");
-let D = new P(s.Z, {
+h(R, "displayName", "FrecencyStore"), h(R, "persistKey", "FrecencyStore");
+let w = new R(s.Z, {
     CHANNEL_SELECT: A,
     VOICE_CHANNEL_SELECT: A,
     USER_SETTINGS_PROTO_UPDATE: C,

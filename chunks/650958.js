@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function _(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,18 +49,18 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function m(e) {
+function h(e) {
     return {
         [u.h7.AUDIO_INPUT]: {
             setDevice: o.Z.setInputDevice,
@@ -86,19 +86,19 @@ function g(e) {
             asSubmenu: o = !1,
             onDeviceSelect: u,
             showAllDevices: f = !1,
-            selectedDeviceId: p,
+            selectedDeviceId: _,
             menuGroupOverrideProps: g,
             menuItemOverrideProps: E,
             computeMenuRadioItemOverrideProps: b,
         } = e,
-        { setDevice: y, getLabel: O, getLocation: v } = m(t),
-        [I, T] = i.useState(f),
-        S = v(n[n.length - 1]),
-        [A, C] = (0, l.Ls)(t, { location: S }),
-        N = I ? A.concat(C) : A,
-        { id: R, name: P } = (0, l.p6)(t),
-        D = null != p ? p : R,
-        w = N.map((e) => {
+        { setDevice: y, getLabel: O, getLocation: v } = h(t),
+        [S, I] = i.useState(f),
+        T = v(n[n.length - 1]),
+        [A, C] = (0, l.Ls)(t, { location: T }),
+        N = S ? A.concat(C) : A,
+        { id: P, name: R } = (0, l.p6)(t),
+        w = null != _ ? _ : P,
+        D = N.map((e) => {
             let i,
                 { id: o, disabled: s, name: c } = e,
                 d = c,
@@ -107,7 +107,7 @@ function g(e) {
                 null != f && ((d = f.prefix), (i = f.subName)),
                 (0, r.jsx)(
                     a.k5B,
-                    _(
+                    p(
                         {
                             id: "".concat(t, "-").concat(o),
                             group: "".concat(t, "-devices"),
@@ -119,7 +119,7 @@ function g(e) {
                                     variant: "text-xs/normal",
                                     children: i,
                                 }),
-                            checked: o === D,
+                            checked: o === w,
                             action: () => {
                                 var e;
                                 (null == (e = null == u ? void 0 : u(o)) || e) && y(o, { analyticsLocations: n });
@@ -131,43 +131,43 @@ function g(e) {
                 )
             );
         }),
-        L = (0, r.jsx)(a.sNh, {
+        x = (0, r.jsx)(a.sNh, {
             id: "SHOW_MORE",
             label: d.intl.string(d.t.E99UMh),
             dontCloseOnAction: !0,
             action: () => {
-                T(!0),
+                I(!0),
                     s.default.track(c.rMx.DEVICES_LIST_SHOW_MORE_CLICKED, {
                         device_type: t,
-                        location: S,
+                        location: T,
                         shown_device_count: A.length,
                         hidden_device_count: C.length,
                         location_stack: n,
                     });
             },
         }),
-        x = !I && (null == C ? void 0 : C.length) > 0;
+        L = !S && (null == C ? void 0 : C.length) > 0;
     return o
         ? (0, r.jsxs)(
               a.sNh,
-              h(
-                  _(
+              m(
+                  p(
                       {
                           id: "".concat(t, "-devices"),
                           label: O(),
-                          subtext: P,
+                          subtext: R,
                       },
                       E,
                   ),
                   {
-                      children: [w, x && L],
+                      children: [D, L && x],
                   },
               ),
           )
         : (0, r.jsxs)(
               a.kSQ,
-              h(_({ label: O() }, g), {
-                  children: [w, x && L],
+              m(p({ label: O() }, g), {
+                  children: [D, L && x],
               }),
           );
 }

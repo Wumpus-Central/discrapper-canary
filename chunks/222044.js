@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(539854);
+n.d(t, { Z: () => m }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(539854);
 var r = n(147913),
     i = n(339085),
     a = n(592125),
@@ -31,7 +31,7 @@ function f(e) {
         null == d || d.addEventListener("message", n), null == d || d.postMessage({ url: e });
     });
 }
-function _(e) {
+function p(e) {
     let t = [],
         n = e.defaultReactionEmoji;
     if ((null == n ? void 0 : n.emojiId) != null) {
@@ -60,14 +60,14 @@ function _(e) {
         t
     );
 }
-class p extends r.Z {
+class _ extends r.Z {
     handleChannelPreload(e) {
         let { channelId: t } = e;
         if ((0, l.AB)(t)) return;
         let n = a.Z.getChannel(t);
         null != n &&
             n.isForumLikeChannel() &&
-            _(n).forEach((e) => {
+            p(n).forEach((e) => {
                 null != e && 0 !== e.length && f(e);
             });
     }
@@ -75,4 +75,4 @@ class p extends r.Z {
         super(...e), u(this, "actions", { CHANNEL_PRELOAD: this.handleChannelPreload });
     }
 }
-let h = new p();
+let m = new _();

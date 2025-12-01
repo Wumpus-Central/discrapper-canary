@@ -47,7 +47,7 @@ function d() {
             rtcConnectionId: o.Z.getRTCConnectionId(),
             mediaContext: r.Yn.DEFAULT,
         },
-        _(),
+        p(),
     );
 }
 function f(e) {
@@ -63,10 +63,10 @@ function f(e) {
             streamKey: e,
             userId: a,
         },
-        _(),
+        p(),
     );
 }
-function _() {
+function p() {
     var e, t, n;
     return {
         videoDeviceName: null == (e = a.Z.getVideoDevices()[a.Z.getVideoDeviceId()]) ? void 0 : e.name,

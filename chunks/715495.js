@@ -12,8 +12,8 @@ var a = n(54381),
     p = n(4242),
     h = n(996746),
     x = n(711325),
-    g = n(852630),
-    f = n(731994),
+    f = n(852630),
+    g = n(731994),
     b = n(30827);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -62,20 +62,20 @@ function _() {
     var e, t;
     let [n, i] = (0, l.useState)(!1),
         [s, d] = (0, l.useState)(!1),
-        [h, g] = (0, l.useState)(null),
+        [h, f] = (0, l.useState)(null),
         _ = (0, u.ZP)((e) => e.toolsCache),
-        { setToolsCache: N, removeToolsCache: T } = (0, u.L3)(),
+        { setToolsCache: T, removeToolsCache: N } = (0, u.L3)(),
         { setImgCache: O } = (0, u.W_)(),
         P = (0, l.useCallback)(
             (e) => {
                 let t = _[e];
                 null != t &&
-                    g({
+                    f({
                         src: t.url,
                         palette: t.palette,
                         preview: !0,
                     }),
-                    g((t) =>
+                    f((t) =>
                         null == t
                             ? {
                                   src: e,
@@ -91,7 +91,7 @@ function _() {
             [_],
         ),
         I = (0, l.useCallback)((e) => {
-            g((t) =>
+            f((t) =>
                 null == t
                     ? null
                     : j(v({}, t), {
@@ -102,9 +102,9 @@ function _() {
         }, []),
         w = (0, l.useCallback)(
             (e) => {
-                T(e);
+                N(e);
             },
-            [T],
+            [N],
         );
     return (0, a.jsxs)(a.Fragment, {
         children: [
@@ -140,7 +140,7 @@ function _() {
                                 (0, a.jsx)(x.Z, {
                                     selected: null == h || null == (e = h.palette) ? void 0 : e.name,
                                     onSelect: (e) => {
-                                        (null == h ? void 0 : h.src) != null && N(h.src, h.src, e), I(e);
+                                        (null == h ? void 0 : h.src) != null && T(h.src, h.src, e), I(e);
                                     },
                                 }),
                         ],
@@ -161,12 +161,12 @@ function _() {
                             (0, a.jsx)(o.Z, {
                                 title: "upload image",
                                 description: "upload the background",
-                                icons: f.pA,
+                                icons: g.pA,
                                 onDrop: async (e) => {
                                     let t = URL.createObjectURL(e[0]),
                                         n = e[0],
                                         a = await n.arrayBuffer();
-                                    O(t, t, (0, p.xh)(a)), N(t, t, m.jD);
+                                    O(t, t, (0, p.xh)(a)), T(t, t, m.jD);
                                 },
                             }),
                             (0, a.jsx)("div", {
@@ -253,12 +253,12 @@ function y(e) {
                         variant: "text-sm/semibold",
                         children: "Memberlist",
                     }),
-                    (0, a.jsx)(N, { nameplate: t }),
+                    (0, a.jsx)(T, { nameplate: t }),
                     (0, a.jsx)(r.Text, {
                         variant: "text-sm/semibold",
                         children: "DMs",
                     }),
-                    (0, a.jsx)(T, { nameplate: t }),
+                    (0, a.jsx)(N, { nameplate: t }),
                     (0, a.jsx)(r.Text, {
                         variant: "text-sm/semibold",
                         children: "RTC",
@@ -343,7 +343,7 @@ function E(e) {
         ],
     });
 }
-function N(e) {
+function T(e) {
     let { nameplate: t } = e,
         n = (0, i.e7)([d.default], () => d.default.getCurrentUser());
     return (0, a.jsx)("div", {
@@ -385,7 +385,7 @@ function N(e) {
         }),
     });
 }
-function T(e) {
+function N(e) {
     let { nameplate: t } = e;
     return (0, a.jsx)("div", {
         className: b.preview,
@@ -397,7 +397,7 @@ function T(e) {
                     variant: "text-sm/semibold",
                     children: "DEFAULT",
                 }),
-                (0, a.jsx)(g.Z, { nameplate: t }),
+                (0, a.jsx)(f.Z, { nameplate: t }),
                 (0, a.jsx)(r.Text, {
                     className: b.label,
                     variant: "text-sm/semibold",
@@ -405,11 +405,11 @@ function T(e) {
                 }),
                 (0, a.jsxs)("div", {
                     children: [
-                        (0, a.jsx)(g.Z, {
+                        (0, a.jsx)(f.Z, {
                             selected: !0,
                             nameplate: t,
                         }),
-                        (0, a.jsx)(g.Z, { selected: !0 }),
+                        (0, a.jsx)(f.Z, { selected: !0 }),
                     ],
                 }),
             ],

@@ -12,9 +12,9 @@ function l(e) {
             autocompleterBeforeCreateSearchContext: c,
         } = e,
         [u, d] = r.useState(s),
-        [f, _] = r.useState(o),
-        p = r.useCallback((e, t) => {
-            "" === (t = t.trim()).trim() ? _(o) : _(e);
+        [f, p] = r.useState(o),
+        _ = r.useCallback((e, t) => {
+            "" === (t = t.trim()).trim() ? p(o) : p(e);
         }, []);
     r.useEffect(
         () =>
@@ -23,19 +23,19 @@ function l(e) {
             }),
         [],
     );
-    let [h] = r.useState(() => new a.Z(p, n, void 0, l));
+    let [m] = r.useState(() => new a.Z(_, n, void 0, l));
     return (
         r.useEffect(() => {
-            t ? (null == c || c(h), h.createSearchContext()) : (h.clean(), d(s));
-        }, [t, h, c]),
+            t ? (null == c || c(m), m.createSearchContext()) : (m.clean(), d(s));
+        }, [t, m, c]),
         {
             queryResults: f,
             query: u,
             updateQuery: r.useCallback(
                 (e) => {
-                    d(e), h.search(e);
+                    d(e), m.search(e);
                 },
-                [h],
+                [m],
             ),
         }
     );

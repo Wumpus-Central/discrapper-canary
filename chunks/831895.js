@@ -13,9 +13,9 @@ function m(e) {
     var t, n, a, m;
     let { defaultCategory: h, onCategoryChange: f, className: b } = e,
         [g, v] = l.useState(h),
-        [x, y] = l.useState(null),
-        P = (0, s.Z)(),
-        S = l.useMemo(
+        [x, P] = l.useState(null),
+        y = (0, s.Z)(),
+        j = l.useMemo(
             () => [
                 {
                     name: u.intl.string(u.t["6Zuivx"]),
@@ -25,8 +25,8 @@ function m(e) {
                         size: "sm",
                         color: "currentColor",
                     }),
-                    onMouseEnter: () => y(d.KN.Trick),
-                    onMouseLeave: () => y(null),
+                    onMouseEnter: () => P(d.KN.Trick),
+                    onMouseLeave: () => P(null),
                 },
                 {
                     name: u.intl.string(u.t["2UeOlY"]),
@@ -36,33 +36,33 @@ function m(e) {
                         size: "sm",
                         color: "currentColor",
                     }),
-                    onMouseEnter: () => y(d.KN.Treat),
-                    onMouseLeave: () => y(null),
+                    onMouseEnter: () => P(d.KN.Treat),
+                    onMouseLeave: () => P(null),
                 },
             ],
             [],
         ),
-        j = l.useCallback(
+        S = l.useCallback(
             (e) => {
                 v(e.value), f(e.value);
             },
             [f],
         ),
         _ =
-            null == P || null == (n = P.segmentedControlAnimations) || null == (t = n.trick)
+            null == y || null == (n = y.segmentedControlAnimations) || null == (t = n.trick)
                 ? void 0
                 : t.getAnimationData,
         w =
-            null == P || null == (m = P.segmentedControlAnimations) || null == (a = m.treat)
+            null == y || null == (m = y.segmentedControlAnimations) || null == (a = m.treat)
                 ? void 0
                 : a.getAnimationData;
     return (0, r.jsxs)("div", {
         className: i()(p.container, b),
         children: [
             (0, r.jsx)(c.w, {
-                options: S,
+                options: j,
                 value: g,
-                onChange: j,
+                onChange: S,
             }),
             x === d.KN.Trick &&
                 null != _ &&

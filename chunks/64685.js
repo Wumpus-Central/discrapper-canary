@@ -1,78 +1,78 @@
-_.d(e, {
+r.d(t, {
     Uf: () => c,
-    cf: () => s,
+    cf: () => E,
 });
-var a = _(573736),
-    r = _(370336),
-    n = _(694043),
-    o = _(101284),
-    E = _(899517),
-    i = _(578346);
-function c(t, e) {
-    let _ = "fetch";
-    (0, i.Hj)(_, t), (0, i.D2)(_, () => l(void 0, e));
+var n = r(573736),
+    a = r(370336),
+    i = r(694043),
+    o = r(101284),
+    _ = r(899517),
+    s = r(578346);
+function c(e, t) {
+    let r = "fetch";
+    (0, s.Hj)(r, e), (0, s.D2)(r, () => l(void 0, t));
 }
-function s(t) {
-    let e = "fetch-body-resolved";
-    (0, i.Hj)(e, t), (0, i.D2)(e, () => l(I));
+function E(e) {
+    let t = "fetch-body-resolved";
+    (0, s.Hj)(t, e), (0, s.D2)(t, () => l(u));
 }
-function l(t, e = !1) {
-    (!e || (0, n.t$)()) &&
-        (0, r.hl)(E.n, "fetch", function (e) {
-            return function (..._) {
-                let { method: n, url: c } = (function (t) {
-                        if (0 === t.length)
+function l(e, t = !1) {
+    (!t || (0, i.t$)()) &&
+        (0, a.hl)(_.n, "fetch", function (t) {
+            return function (...r) {
+                let { method: i, url: c } = (function (e) {
+                        if (0 === e.length)
                             return {
                                 method: "GET",
                                 url: "",
                             };
-                        if (2 === t.length) {
-                            let [e, _] = t;
+                        if (2 === e.length) {
+                            let [t, r] = e;
                             return {
-                                url: N(e),
-                                method: R(_, "method") ? String(_.method).toUpperCase() : "GET",
+                                url: I(t),
+                                method: d(r, "method") ? String(r.method).toUpperCase() : "GET",
                             };
                         }
-                        let e = t[0];
+                        let t = e[0];
                         return {
-                            url: N(e),
-                            method: R(e, "method") ? String(e.method).toUpperCase() : "GET",
+                            url: I(t),
+                            method: d(t, "method") ? String(t.method).toUpperCase() : "GET",
                         };
-                    })(_),
-                    s = {
-                        args: _,
+                    })(r),
+                    E = {
+                        args: r,
                         fetchData: {
-                            method: n,
+                            method: i,
                             url: c,
                         },
                         startTimestamp: 1000 * (0, o.ph)(),
                     };
-                t || (0, i.rK)("fetch", { ...s });
+                e || (0, s.rK)("fetch", { ...E });
                 let l = Error().stack;
-                return e.apply(E.n, _).then(
-                    async (e) => {
-                        if (t) t(e);
+                return t.apply(_.n, r).then(
+                    async (t) => {
+                        if (e) e(t);
                         else {
-                            let t = {
-                                ...s,
+                            let e = {
+                                ...E,
                                 endTimestamp: 1000 * (0, o.ph)(),
-                                response: e,
+                                response: t,
                             };
-                            (0, i.rK)("fetch", t);
+                            (0, s.rK)("fetch", e);
                         }
-                        return e;
+                        return t;
                     },
-                    (e) => {
-                        if (!t) {
-                            let t = {
-                                ...s,
+                    (t) => {
+                        if (!e) {
+                            let e = {
+                                ...E,
                                 endTimestamp: 1000 * (0, o.ph)(),
-                                error: e,
+                                error: t,
                             };
                             throw (
-                                ((0, i.rK)("fetch", t),
-                                (0, a.VZ)(e) && void 0 === e.stack && ((e.stack = l), (0, r.xp)(e, "framesToPop", 1)),
-                                e)
+                                ((0, s.rK)("fetch", e),
+                                (0, n.VZ)(t) && void 0 === t.stack && ((t.stack = l), (0, a.xp)(t, "framesToPop", 1)),
+                                t)
                             );
                         }
                     },
@@ -80,45 +80,45 @@ function l(t, e = !1) {
             };
         });
 }
-async function I(t) {
-    let e;
+async function u(e) {
+    let t;
     try {
-        e = t.clone();
-    } catch (t) {}
-    await (function (t, e) {
-        if (t && t.body) {
-            let a = t.body.getReader();
-            async function _({ done: t }) {
-                if (t) return Promise.resolve();
+        t = e.clone();
+    } catch (e) {}
+    await (function (e, t) {
+        if (e && e.body) {
+            let n = e.body.getReader();
+            async function r({ done: e }) {
+                if (e) return Promise.resolve();
                 try {
-                    let t = await Promise.race([
-                        a.read(),
-                        new Promise((t) => {
+                    let e = await Promise.race([
+                        n.read(),
+                        new Promise((e) => {
                             setTimeout(() => {
-                                t({ done: !0 });
+                                e({ done: !0 });
                             }, 5000);
                         }),
                     ]);
-                    await _(t);
-                } catch (t) {}
+                    await r(e);
+                } catch (e) {}
             }
-            a.read()
-                .then(_)
+            n.read()
+                .then(r)
                 .then(() => {
-                    e();
+                    t();
                 })
                 .catch(() => {});
         }
-    })(e, () => {
-        (0, i.rK)("fetch-body-resolved", {
+    })(t, () => {
+        (0, s.rK)("fetch-body-resolved", {
             endTimestamp: 1000 * (0, o.ph)(),
-            response: t,
+            response: e,
         });
     });
 }
-function R(t, e) {
-    return !!t && "object" == typeof t && !!t[e];
+function d(e, t) {
+    return !!e && "object" == typeof e && !!e[t];
 }
-function N(t) {
-    return "string" == typeof t ? t : t ? (R(t, "url") ? t.url : t.toString ? t.toString() : "") : "";
+function I(e) {
+    return "string" == typeof e ? e : e ? (d(e, "url") ? e.url : e.toString ? e.toString() : "") : "";
 }

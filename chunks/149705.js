@@ -1,4 +1,4 @@
-n.d(t, { a: () => s });
+n.d(t, { a: () => o });
 var r = n(663042);
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -51,7 +51,7 @@ let a = {
         searchError: null,
         isFetchingResults: !1,
     },
-    s = (0, r.U)((e) =>
+    o = (0, r.U)((e) =>
         i(l({}, a), {
             onSetResponse: (t) => {
                 let n = Math.floor(t.pageOffset / t.pageLimit) + 1;

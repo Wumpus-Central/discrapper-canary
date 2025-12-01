@@ -1,7 +1,7 @@
 n.d(t, {
     Dv: () => c,
     Gq: () => s,
-    Gx: () => _,
+    Gx: () => p,
     XX: () => l,
     bX: () => d,
     bY: () => u,
@@ -34,21 +34,21 @@ function d(e) {
 function f(e, t, n) {
     let u = e.type === a.uaV.REPLY && null != e.messageReference,
         f = e.embeds.length > 0,
-        _ = e.attachments.length > 0,
-        p = e.stickerItems.length > 0,
-        h = e.codedLinks.length > 0,
-        m = e.components.length > 0,
+        p = e.attachments.length > 0,
+        _ = e.stickerItems.length > 0,
+        m = e.codedLinks.length > 0,
+        h = e.components.length > 0,
         g = e.hasFlag(a.iLy.HAS_THREAD),
-        E = f || _ || p || h || g || m || e.type === a.uaV.THREAD_CREATED,
+        E = f || p || _ || m || g || h || e.type === a.uaV.THREAD_CREATED,
         b = f && e.content === e.embeds[0].url && e.embeds[0].type === a.hBH.GIFV,
         y = e.type !== a.uaV.DEFAULT || (!b && "" !== e.content),
         O = (0, i.Z)(e),
         v = !O && (null == n ? void 0 : n.hasTimestamp) !== !1,
-        I = !O,
-        T = l(e, t),
-        S = s(e),
-        A = u ? S : T,
-        C = I ? "".concat(A, " ").concat(r.Z0) : "";
+        S = !O,
+        I = l(e, t),
+        T = s(e),
+        A = u ? T : I,
+        C = S ? "".concat(A, " ").concat(r.Z0) : "";
     if (y) {
         let t = o(e);
         C += " ".concat(t);
@@ -63,7 +63,7 @@ function f(e, t, n) {
     }
     return C.trim();
 }
-function _(e) {
+function p(e) {
     if (0 === e.reactions.length) return;
     let t = u(e);
     return "".concat(r.Mb, " ").concat(t);

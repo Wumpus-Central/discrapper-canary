@@ -47,9 +47,9 @@ let f = i().throttle((e) => {
         shakeIntensity: o,
         screenshakeEnabledLocations: l,
         confettiEnabled: f,
-        confettiSize: _,
-        confettiCount: p,
-        confettiEnabledLocations: h,
+        confettiSize: p,
+        confettiCount: _,
+        confettiEnabledLocations: m,
     } = e;
     a.default.track(s.rMx.POGGERMODE_SETTINGS_UPDATED, {
         enabled: t,
@@ -59,8 +59,8 @@ let f = i().throttle((e) => {
         shake_intensity: o,
         screenshake_enabled_locations: d(l, c),
         confetti_enabled: f,
-        confetti_size: _,
-        confetti_count: p,
-        confetti_enabled_locations: d(h, u),
+        confetti_size: p,
+        confetti_count: _,
+        confetti_enabled_locations: d(m, u),
     });
 }, l);

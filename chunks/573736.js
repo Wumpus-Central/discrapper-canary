@@ -7,7 +7,7 @@ n.d(t, {
     VZ: () => i,
     cO: () => l,
     kK: () => c,
-    y1: () => _,
+    y1: () => p,
 });
 let r = Object.prototype.toString;
 function i(e) {
@@ -48,6 +48,6 @@ function f(e, t) {
         return !1;
     }
 }
-function _(e) {
+function p(e) {
     return !!("object" == typeof e && null !== e && (e.__isVue || e._isVue));
 }

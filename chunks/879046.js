@@ -12,7 +12,7 @@ function u(e) {
         u = null == n ? void 0 : n.getIconURL(l.Si.LARGE),
         d = t.extra.activity_name,
         f = (0, s.Jg)(t) ? c.t.vPg1JT : c.t.rPqqts,
-        _ = {
+        p = {
             onClick: () => {
                 r._(i._b.TEXT, o.Ie.NORMAL, { applicationId: t.extra.application_id });
             },
@@ -21,8 +21,8 @@ function u(e) {
     return {
         thumbnailUrl: u,
         title: d,
-        titleClickable: _,
-        thumbnailClickable: _,
+        titleClickable: p,
+        thumbnailClickable: p,
         userDescription: f,
     };
 }

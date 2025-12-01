@@ -9,10 +9,10 @@ var r = n(524437),
     u = n(94752);
 let d = u.E.NONE,
     f = window.matchMedia("(prefers-color-scheme: dark)"),
-    _ = window.matchMedia("(prefers-color-scheme: light)"),
-    p = window.matchMedia("(inverted-colors: inverted)"),
-    h = window.matchMedia("(prefers-contrast: more)"),
-    m = window.matchMedia("(forced-colors: active)");
+    p = window.matchMedia("(prefers-color-scheme: light)"),
+    _ = window.matchMedia("(inverted-colors: inverted)"),
+    m = window.matchMedia("(prefers-contrast: more)"),
+    h = window.matchMedia("(forced-colors: active)");
 function g(e, t) {
     t ? (d |= e) : (d &= ~e);
 }
@@ -23,14 +23,14 @@ let E = {
             s.Z.addChangeListener(this.handleUiDensityChanged),
             f.addListener(this.handlePrefersColorSchemeDarkChanged),
             this.handlePrefersColorSchemeDarkChanged(f),
-            _.addListener(this.handlePrefersColorSchemeLightChanged),
-            this.handlePrefersColorSchemeLightChanged(_),
-            h.addListener(this.handlePrefersMoreContrastChanged),
-            this.handlePrefersMoreContrastChanged(h),
-            m.addListener(this.handlePrefersForcedColorsChanged),
-            this.handlePrefersForcedColorsChanged(m),
-            p.addListener(this.handleInvertColorsChanged),
-            this.handleInvertColorsChanged(p),
+            p.addListener(this.handlePrefersColorSchemeLightChanged),
+            this.handlePrefersColorSchemeLightChanged(p),
+            m.addListener(this.handlePrefersMoreContrastChanged),
+            this.handlePrefersMoreContrastChanged(m),
+            h.addListener(this.handlePrefersForcedColorsChanged),
+            this.handlePrefersForcedColorsChanged(h),
+            _.addListener(this.handleInvertColorsChanged),
+            this.handleInvertColorsChanged(_),
             l.default.setSystemAccessibilityFeatures(this.getActiveFeatures);
     },
     getActiveFeatures: () => d,

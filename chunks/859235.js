@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => S,
+    Z: () => T,
     q: () => v,
 });
 var r = n(54381),
@@ -12,10 +12,10 @@ var r = n(54381),
     u = n(951394),
     d = n(585483),
     f = n(43085),
-    _ = n(981631),
-    p = n(388032),
-    h = n(132045);
-function m(e, t, n) {
+    p = n(981631),
+    _ = n(388032),
+    m = n(132045);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,7 +39,7 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
@@ -98,72 +98,72 @@ var v = (function (e) {
         e
     );
 })({});
-function I(e) {
+function S(e) {
     e.stopPropagation();
 }
-function T(e, t) {
+function I(e, t) {
     let {
             id: n,
             channelId: i,
             className: a,
-            children: m,
+            children: h,
             actions: E,
             handleEditModal: O,
             keyboardModeEnabled: v,
-            onKeyDown: T,
-            draftType: S,
+            onKeyDown: I,
+            draftType: T,
             size: A = 1,
         } = e,
         C = (0, s.JA)(n),
         { onFocus: N } = C,
-        R = y(C, ["onFocus"]),
-        { handleFocus: P, handleBlur: D } = (0, f.b)(N),
-        w = 0 === A,
-        L = null != E,
-        x = (e) => {
+        P = y(C, ["onFocus"]),
+        { handleFocus: R, handleBlur: w } = (0, f.b)(N),
+        D = 0 === A,
+        x = null != E,
+        L = (e) => {
             if (v) {
                 switch (e.which) {
-                    case _.yXg.D:
-                        e.preventDefault(), c.Z.remove(i, n, S);
+                    case p.yXg.D:
+                        e.preventDefault(), c.Z.remove(i, n, T);
                         return;
-                    case _.yXg.E:
+                    case p.yXg.E:
                         null != O && (e.preventDefault(), O(e));
                         return;
-                    case _.yXg.BACKSPACE:
+                    case p.yXg.BACKSPACE:
                         e.ctrlKey
-                            ? (e.preventDefault(), c.Z.clearAll(i, S))
-                            : (e.preventDefault(), c.Z.remove(i, n, S));
+                            ? (e.preventDefault(), c.Z.clearAll(i, T))
+                            : (e.preventDefault(), c.Z.remove(i, n, T));
                         return;
-                    case _.yXg.ARROW_UP:
+                    case p.yXg.ARROW_UP:
                         let t = e.shiftKey || e.altKey || e.ctrlKey || e.metaKey;
                         if (t) return;
-                        e.preventDefault(), d.S.dispatchToLastSubscribed(_.CkL.FOCUS_MESSAGES, { atEnd: !0 });
+                        e.preventDefault(), d.S.dispatchToLastSubscribed(p.CkL.FOCUS_MESSAGES, { atEnd: !0 });
                 }
-                null == T || T(e);
+                null == I || I(e);
             }
         };
     return (0, r.jsx)(l.tEY, {
         children: (0, r.jsx)(
             "li",
-            b(g({}, R), {
-                onFocus: P,
-                onBlur: D,
-                onKeyDown: x,
-                className: o()(h.upload, a, { [h.sizeClip]: 2 === A }),
+            b(g({}, P), {
+                onFocus: R,
+                onBlur: w,
+                onKeyDown: L,
+                className: o()(m.upload, a, { [m.sizeClip]: 2 === A }),
                 ref: t,
                 children: (0, r.jsxs)("div", {
-                    className: h.uploadContainer,
+                    className: m.uploadContainer,
                     children: [
-                        m,
-                        L
+                        h,
+                        x
                             ? (0, r.jsx)("div", {
-                                  className: h.actionBarContainer,
+                                  className: m.actionBarContainer,
                                   children: (0, r.jsx)("div", {
-                                      className: o()(h.actionBar, { [h.smallActionBar]: w }),
-                                      onContextMenu: I,
-                                      "aria-label": p.intl.string(p.t["8Lu3Du"]),
+                                      className: o()(m.actionBar, { [m.smallActionBar]: D }),
+                                      onContextMenu: S,
+                                      "aria-label": _.intl.string(_.t["8Lu3Du"]),
                                       children: (0, r.jsx)(u.ZP, {
-                                          className: o()({ [h.miniPopover]: w }),
+                                          className: o()({ [m.miniPopover]: D }),
                                           children: E,
                                       }),
                                   }),
@@ -175,4 +175,4 @@ function T(e, t) {
         ),
     });
 }
-let S = i.forwardRef(T);
+let T = i.forwardRef(I);

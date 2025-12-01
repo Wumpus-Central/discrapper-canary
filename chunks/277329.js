@@ -10,32 +10,32 @@ var i = n(442837),
     u = n(293389),
     d = n(327885),
     f = n(326528),
-    _ = n(332325),
-    p = n(981631),
-    h = n(388032),
-    m = n(830260);
+    p = n(332325),
+    _ = n(981631),
+    m = n(388032),
+    h = n(830260);
 function g() {
     let e = (0, f.b)(),
         t = (0, i.e7)([l.Z], () => l.Z.getSubsection()),
         n = null != t && e.some((e) => e.id === t) ? t : e[0].id,
         g = (e) => {
-            o.Z.setSection(p.oAB.GAMES, e);
+            o.Z.setSection(_.oAB.GAMES, e);
         },
         E = () => {
             switch (n) {
-                case _.Z.CLIPS:
+                case p.Z.CLIPS:
                     return (0, r.jsx)(s.Z, {});
-                case _.Z.OVERLAY:
+                case p.Z.OVERLAY:
                     return (0, r.jsx)(d.Z, {
-                        className: m.body,
+                        className: h.body,
                         showHeader: !1,
                     });
-                case _.Z.ACTIVITY_PRIVACY:
+                case p.Z.ACTIVITY_PRIVACY:
                     return (0, r.jsx)(c.Z, {});
-                case _.Z.MY_GAMES:
+                case p.Z.MY_GAMES:
                 default:
                     return (0, r.jsx)(u.Z, {
-                        className: m.body,
+                        className: h.body,
                         showHeader: !1,
                     });
             }
@@ -43,12 +43,12 @@ function g() {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(a.Heading, {
-                className: m.heading,
+                className: h.heading,
                 variant: "heading-xl/semibold",
-                children: h.intl.string(h.t.URyqtP),
+                children: m.intl.string(m.t.URyqtP),
             }),
             (0, r.jsx)(a.njP, {
-                className: m.tabBar,
+                className: h.tabBar,
                 selectedItem: n,
                 onItemSelect: g,
                 orientation: "horizontal",
@@ -58,16 +58,16 @@ function g() {
                     (0, r.jsxs)(
                         a.njP.Item,
                         {
-                            className: m.tab,
+                            className: h.tab,
                             id: e.id,
                             "aria-label": e.title,
                             children: [
                                 (0, r.jsx)(e.icon, {
-                                    className: m.tabIcon,
+                                    className: h.tabIcon,
                                     color: "currentColor",
                                 }),
                                 (0, r.jsx)("div", {
-                                    className: m.iconTitle,
+                                    className: h.iconTitle,
                                     children: e.title,
                                 }),
                             ],

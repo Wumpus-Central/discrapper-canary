@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r,
     i = n(442837),
     a = n(570140),
@@ -21,17 +21,17 @@ function u(e, t, n) {
 }
 let d = 10,
     f = 180 * o.Z.Millis.DAY,
-    _ = !1;
-function p() {
-    return _ !== (_ = c.Z.getFriendIDs().length >= d && s.default.extractTimestamp(l.default.getId()) < Date.now() - f);
+    p = !1;
+function _() {
+    return p !== (p = c.Z.getFriendIDs().length >= d && s.default.extractTimestamp(l.default.getId()) < Date.now() - f);
 }
-class h extends (r = i.ZP.Store) {
+class m extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(c.Z, l.default);
     }
     isEligible() {
-        return _;
+        return p;
     }
 }
-u(h, "displayName", "PremiumPromoStore");
-let m = new h(a.Z, { CONNECTION_OPEN: p });
+u(m, "displayName", "PremiumPromoStore");
+let h = new m(a.Z, { CONNECTION_OPEN: _ });

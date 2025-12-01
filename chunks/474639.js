@@ -9,19 +9,19 @@ var r = n(46973),
     u = n(314897),
     d = n(131951),
     f = n(19780),
-    _ = n(959457),
-    p = n(704806),
-    h = n(626135),
-    m = n(358085),
+    p = n(959457),
+    _ = n(704806),
+    m = n(626135),
+    h = n(358085),
     g = n(924557),
     E = n(435064),
     b = n(894694),
     y = n(779618),
     O = n(341569),
     v = n(356659),
-    I = n(981631),
-    T = n(70722);
-function S(e, t, n) {
+    S = n(981631),
+    I = n(70722);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ function S(e, t, n) {
 class A extends a.Z {
     handleRTCConnectionState(e) {
         let { context: t, state: n, streamKey: i } = e;
-        if (!(0, g.w2)() || n !== I.hes.RTC_CONNECTED) return;
+        if (!(0, g.w2)() || n !== S.hes.RTC_CONNECTED) return;
         let a = u.default.getId();
         if (t === r.Yn.DEFAULT) {
             this.applyUserVoiceRecording(a), this.applyUserSoundboardRecording(a);
@@ -46,7 +46,7 @@ class A extends a.Z {
         if (t === r.Yn.STREAM && null != i) {
             let { ownerId: e } = (0, s.my)(i);
             if (e !== a) return;
-            let t = _.Z.getRTCConnection(i);
+            let t = p.Z.getRTCConnection(i);
             if (null == t) return;
             this.applyStreamRecording(a, t);
         }
@@ -61,9 +61,9 @@ class A extends a.Z {
     handleRTCConnectionFlags(e) {
         let { userId: t, channelId: n, guildId: r } = e;
         this.maybeShowClipsWarning(t), this.applyUserVoiceRecording(t), this.applyUserSoundboardRecording(t);
-        let i = _.Z.getRTCConnection(
+        let i = p.Z.getRTCConnection(
             s.V9({
-                streamType: null != r ? T.lo.GUILD : T.lo.CALL,
+                streamType: null != r ? I.lo.GUILD : I.lo.CALL,
                 ownerId: t,
                 channelId: n,
                 guildId: r,
@@ -73,7 +73,7 @@ class A extends a.Z {
     }
     handleClipsInitFailure(e) {
         let { applicationName: t, errMsg: n } = e;
-        h.default.track(I.rMx.CLIPS_INIT_FAILURE, {
+        m.default.track(S.rMx.CLIPS_INIT_FAILURE, {
             application_name: t,
             error_message: n,
         });
@@ -113,9 +113,9 @@ class A extends a.Z {
     handleRTCConnectionVideo(e) {
         let { userId: t, context: n, channelId: i, guildId: a } = e;
         if (n !== r.Yn.STREAM || !(0, y.Z)(d.Z)) return;
-        let o = _.Z.getRTCConnection(
+        let o = p.Z.getRTCConnection(
             s.V9({
-                streamType: null != a ? T.lo.GUILD : T.lo.CALL,
+                streamType: null != a ? I.lo.GUILD : I.lo.CALL,
                 ownerId: t,
                 channelId: i,
                 guildId: a,
@@ -126,7 +126,7 @@ class A extends a.Z {
     async classifyHardwareAndTrack() {
         try {
             let { gpuModels: e, classification: t } = await (async () => {
-                let e = await (0, p.q)();
+                let e = await (0, _.q)();
                 if ((null == e ? void 0 : e.gpus) != null) {
                     let t = e.gpus.map((e) => e.brand),
                         n = this.classifyHardware(t);
@@ -148,7 +148,7 @@ class A extends a.Z {
                 }
             })();
             return (
-                h.default.track(I.rMx.CLIPS_HARDWARE_CLASSIFICATION, {
+                m.default.track(S.rMx.CLIPS_HARDWARE_CLASSIFICATION, {
                     classification: t,
                     version: v.WM,
                     gpu_models: e,
@@ -160,12 +160,12 @@ class A extends a.Z {
         }
     }
     classifyHardware(e) {
-        if ((0, m.isWindows)()) {
+        if ((0, h.isWindows)()) {
             let t = e.some((e) => v.rI.test(e)),
                 n = e.some((e) => v.nU.test(e));
             return t ? b.xH.MEETS_AUTO_ENABLE : n ? b.xH.MEETS_MINIMUM : b.xH.BELOW_MINIMUM;
         }
-        return (0, m.isMac)()
+        return (0, h.isMac)()
             ? "arm64" === o.Z.remoteApp.getAppArch()
                 ? b.xH.MEETS_AUTO_ENABLE
                 : b.xH.MEETS_MINIMUM
@@ -202,7 +202,7 @@ class A extends a.Z {
     handleRemoteClipTrigger(e) {}
     constructor(...e) {
         super(...e),
-            S(this, "actions", {
+            T(this, "actions", {
                 POST_CONNECTION_OPEN: (e) => this.handlePostConnectionOpen(),
                 RTC_CONNECTION_FLAGS: (e) => this.handleRTCConnectionFlags(e),
                 RTC_CONNECTION_USERS_MERGED: (e) => this.handleRTCUsersUpdate(e),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(54381),
     i = n(473749),
     a = n(403182),
@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,11 +58,11 @@ function _(e, t) {
         e
     );
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -70,7 +70,7 @@ function p(e, t) {
     }
     return i;
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -79,7 +79,7 @@ function h(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-class m extends i.Component {
+class h extends i.Component {
     render() {
         let e = this.props,
             {
@@ -88,31 +88,31 @@ class m extends i.Component {
                 className: i,
                 mediaPlayerClassName: u,
                 poster: f,
-                fileName: h,
-                naturalWidth: m,
+                fileName: m,
+                naturalWidth: h,
                 naturalHeight: g,
                 playable: E,
                 downloadable: b = !0,
                 volume: y,
                 autoPlay: O,
                 autoMute: v,
-                responsive: I,
-                mediaLayoutType: T,
-                mimeType: S,
+                responsive: S,
+                mediaLayoutType: I,
+                mimeType: T,
                 renderOverlayContent: A,
                 renderLinkComponent: C,
                 onClick: N,
-                onPlay: R,
-                onPause: P,
-                onEnded: D,
-                onControlsShow: w,
-                onControlsHide: L,
-                onVolumeChange: x,
-                onMute: M,
-                disableArrowKeySeek: k,
-                alt: j = c.intl.string(c.t.FlNoSV),
+                onPlay: P,
+                onPause: R,
+                onEnded: w,
+                onControlsShow: D,
+                onControlsHide: x,
+                onVolumeChange: L,
+                onMute: j,
+                disableArrowKeySeek: M,
+                alt: k = c.intl.string(c.t.FlNoSV),
             } = e,
-            U = p(e, [
+            U = _(e, [
                 "src",
                 "fileSize",
                 "className",
@@ -144,10 +144,10 @@ class m extends i.Component {
             ]);
         return (0, r.jsx)(
             o.ZP,
-            _(
+            p(
                 d(
                     {
-                        alt: j,
+                        alt: k,
                         className: i,
                         src: f,
                     },
@@ -158,45 +158,45 @@ class m extends i.Component {
                     minHeight: s.ZP.minHeight,
                     shouldLink: !1,
                     shouldAnimate: !1,
-                    mediaLayoutType: T,
-                    responsive: I,
+                    mediaLayoutType: I,
+                    responsive: S,
                     children: (e) => {
                         let {
                                 src: i,
                                 size: { width: o, height: c },
                             } = e,
-                            d = !((m <= l.N_j && g <= l.XKF) || (m <= l.XKF && g <= l.N_j));
+                            d = !((h <= l.N_j && g <= l.XKF) || (h <= l.XKF && g <= l.N_j));
                         return (0, r.jsx)(s.ZP, {
-                            alt: j,
+                            alt: k,
                             className: u,
                             forceExternal: d,
                             src: t,
                             poster: i,
                             width: o,
                             height: c,
-                            responsive: I,
+                            responsive: S,
                             volume: y,
                             autoPlay: null != O && O,
                             autoMute: null != v && v,
                             type: s.ZP.Types.VIDEO,
-                            mediaLayoutType: T,
-                            fileName: h,
+                            mediaLayoutType: I,
+                            fileName: m,
                             fileSize: null == n ? void 0 : (0, a.Ng)(n),
                             fileSizeBytes: null == n ? void 0 : n,
                             playable: E,
                             renderLinkComponent: C,
                             renderOverlayContent: A,
                             onClick: N,
-                            onPlay: R,
-                            onPause: P,
-                            onEnded: D,
-                            onVolumeChange: x,
-                            onMute: M,
-                            onControlsShow: w,
-                            onControlsHide: L,
-                            mimeType: S,
+                            onPlay: P,
+                            onPause: R,
+                            onEnded: w,
+                            onVolumeChange: L,
+                            onMute: j,
+                            onControlsShow: D,
+                            onControlsHide: x,
+                            mimeType: T,
                             downloadable: b,
-                            disableArrowKeySeek: k,
+                            disableArrowKeySeek: M,
                         });
                     },
                 },

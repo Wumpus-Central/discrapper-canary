@@ -7,8 +7,8 @@ var r = n(442837),
     a = n(904245),
     o = n(787263),
     c = n(660189),
-    s = n(216572),
-    d = n(144140),
+    d = n(216572),
+    s = n(144140),
     f = n(314897),
     E = n(496675),
     g = n(709054),
@@ -17,7 +17,7 @@ var r = n(442837),
 function v(e) {
     let t = e.isForumPost(),
         n = (0, r.e7)([f.default], () => e.isOwner(f.default.getId()), [e]),
-        v = (0, s.HL)(e),
+        v = (0, d.HL)(e),
         { canManageChannel: Z, canAccessChannel: h } = (0, r.cj)(
             [E.Z],
             () => ({
@@ -26,15 +26,15 @@ function v(e) {
             }),
             [e],
         ),
-        b = (0, r.e7)([d.Z], () => {
+        _ = (0, r.e7)([s.Z], () => {
             var t;
-            return null != (t = d.Z.getCount(e.id)) ? t : 0;
+            return null != (t = s.Z.getCount(e.id)) ? t : 0;
         }, [e.id]),
-        { firstMessage: _ } = (0, r.e7)([c.Z], () => c.Z.getMessage(e.id), [e.id]),
-        y = v && Z && null == _,
-        N = t && (Z || (n && b < 1) || y),
-        P = t && n && !Z && b > 0 && null != _;
-    return h && (!v || y) && (Z || N || P)
+        { firstMessage: b } = (0, r.e7)([c.Z], () => c.Z.getMessage(e.id), [e.id]),
+        y = v && Z && null == b,
+        N = t && (Z || (n && _ < 1) || y),
+        m = t && n && !Z && _ > 0 && null != b;
+    return h && (!v || y) && (Z || N || m)
         ? (0, i.jsx)(l.sNh, {
               id: "delete-channel",
               label:
@@ -50,7 +50,7 @@ function v(e) {
               color: "danger",
               action: () => {
                   (0, o.w)(e, function () {
-                      P ? a.Z.deleteMessage(e.id, g.default.castChannelIdAsMessageId(e.id)) : u.ZP.deleteChannel(e.id);
+                      m ? a.Z.deleteMessage(e.id, g.default.castChannelIdAsMessageId(e.id)) : u.ZP.deleteChannel(e.id);
                   });
               },
           })

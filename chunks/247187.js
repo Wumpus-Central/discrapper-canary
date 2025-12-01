@@ -100,12 +100,12 @@ function d(e, t) {
         u = void 0;
     try {
         for (var d, f = a[Symbol.iterator](); !(l = (d = f.next()).done); l = !0) {
-            var h = d.value,
-                m = h.endsWith("?") && h.length > 1;
-            m && (h = h.slice(0, -1));
-            var g = p(h),
+            var m = d.value,
+                h = m.endsWith("?") && m.length > 1;
+            h && (m = m.slice(0, -1));
+            var g = _(m),
                 E = i[g];
-            (1 !== o && E) || (n ? (r.key = g) : (r.which = _(h))), E && (r[E] = !m || null);
+            (1 !== o && E) || (n ? (r.key = g) : (r.which = p(m))), E && (r[E] = !h || null);
         }
     } catch (e) {
         (c = !0), (u = e);
@@ -140,10 +140,10 @@ function f(e, t) {
     }
     return !0;
 }
-function _(e) {
-    return o[(e = p(e))] || e.toUpperCase().charCodeAt(0);
-}
 function p(e) {
+    return o[(e = _(e))] || e.toUpperCase().charCodeAt(0);
+}
+function _(e) {
     return (e = a[(e = e.toLowerCase())] || e);
 }
 (n = l), (n = l), (n = c), (t.isKeyHotkey = u);

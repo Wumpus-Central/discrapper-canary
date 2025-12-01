@@ -3,7 +3,7 @@ var r = n(54381);
 n(473749);
 var i = n(120356),
     a = n.n(i),
-    o = n(790519),
+    o = n(666917),
     s = n(481060),
     l = n(82364);
 let c = Object.freeze({
@@ -18,28 +18,28 @@ let c = Object.freeze({
 function d(e) {
     let { selected: t = !1, hovered: n = !1, unread: i = !1, disabled: d = !1, className: f } = e;
     (t = !d && t), (n = !d && n), (i = !d && i);
-    let _ = {
+    let p = {
             opacity: 1,
             height: t ? 40 : n ? 20 : 8,
             transform: "translateX(0) translateZ(0)",
         },
-        p = (0, s.Yzy)(
+        _ = (0, s.Yzy)(
             t || n || i,
             {
                 config: c,
                 keys: (e) => (e ? "pill" : "empty"),
-                initial: t || n || i ? _ : null,
+                initial: t || n || i ? p : null,
                 from: u,
                 leave: u,
-                enter: _,
-                update: _,
+                enter: p,
+                update: p,
             },
             n || document.hasFocus() ? "animate-always" : "animate-never",
         );
     return (0, r.jsx)("div", {
         className: a()(f, l.wrapper),
         "aria-hidden": !0,
-        children: p(
+        children: _(
             (e, t) =>
                 t &&
                 (0, r.jsx)(o.animated.span, {

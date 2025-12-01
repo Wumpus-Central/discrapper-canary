@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(35282), n(388685);
+n.d(t, { Z: () => p }), n(35282), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,25 +9,25 @@ var r = n(54381),
     u = n(411405),
     d = n(388032),
     f = n(382985);
-function _(e) {
-    let { file: t, name: n, size: a, spoiler: _ } = e,
-        p = i.useMemo(
+function p(e) {
+    let { file: t, name: n, size: a, spoiler: p } = e,
+        _ = i.useMemo(
             () =>
                 null != t.contentType && -1 !== t.contentType.indexOf("/")
                     ? t.contentType.split("/")
                     : ["unknown", "unknown"],
             [t.contentType],
         ),
-        [h, m] = i.useState(_),
+        [m, h] = i.useState(p),
         g = i.useMemo(
             () => () =>
                 (0, r.jsx)(c.mz, {
-                    mimeType: p,
+                    mimeType: _,
                     downloadURL: t.url,
                     showDownload: !0,
                     isVisualMediaType: !1,
                 }),
-            [t, p],
+            [t, _],
         ),
         E = (e) =>
             (0, r.jsx)(s.Z, {
@@ -39,12 +39,12 @@ function _(e) {
             });
     return (0, r.jsx)("div", {
         className: f.fileDisplayContainer,
-        children: _
+        children: p
             ? (0, r.jsx)(u.ZP, {
                   type: u.ZP.Types.ATTACHMENT,
                   reason: l.wk.SPOILER,
-                  obscured: h,
-                  onToggleObscurity: () => m((e) => !e),
+                  obscured: m,
+                  onToggleObscurity: () => h((e) => !e),
                   children: (e) => E(e),
               })
             : E(!1),

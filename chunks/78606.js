@@ -2,8 +2,8 @@ n.d(t, { Z: () => u });
 var r = n(54381),
     i = n(473749),
     l = n(481060),
-    a = n(509212),
-    s = n(113434),
+    a = n(313481),
+    s = n(509212),
     o = n(670362),
     c = n(388032);
 let u = function (e) {
@@ -14,7 +14,7 @@ let u = function (e) {
             },
             [t],
         ),
-        p = (0, s.$I)(),
+        p = (0, a.$I)(),
         f = i.useMemo(
             () =>
                 p.map((e) => ({
@@ -76,7 +76,7 @@ let u = function (e) {
                     {
                         buttonRef: t,
                         size: "sm",
-                        text: (0, a.NL)(u),
+                        text: (0, s.NL)(u),
                         icon: l.hic,
                         iconPosition: "end",
                         variant: "secondary",

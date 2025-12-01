@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r,
     i = n(54381),
     a = n(473749),
@@ -40,7 +40,7 @@ let d = (e) => {
             children: t,
         });
     };
-class _ extends (r = a.PureComponent) {
+class p extends (r = a.PureComponent) {
     render() {
         let { children: e, className: t, onMouseEnter: n, onMouseLeave: r } = this.props;
         return (0, i.jsx)("div", {
@@ -51,5 +51,5 @@ class _ extends (r = a.PureComponent) {
         });
     }
 }
-u(_, "Header", d), u(_, "Body", f);
-let p = _;
+u(p, "Header", d), u(p, "Body", f);
+let _ = p;

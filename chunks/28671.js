@@ -23,7 +23,7 @@ function b(e) {
                 }),
             [n.id],
         ),
-        O = i.useCallback(() => {
+        v = i.useCallback(() => {
             null != y &&
                 ((0, u.qH)(y.type, y, !0),
                 h({
@@ -63,7 +63,7 @@ function b(e) {
                             icon: o.kmB,
                             "aria-label": m.intl.formatToPlainString(m.t.KfGahB, { applicationName: n.name }),
                             onClick: () => {
-                                b(p.L.TAKE_ACTION), O();
+                                b(p.L.TAKE_ACTION), v();
                             },
                         }),
                     }),

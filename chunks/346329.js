@@ -1,10 +1,10 @@
 n.r(t),
     n.d(t, {
         installApplication: () => f,
-        performDefaultLibraryApplicationAction: () => h,
+        performDefaultLibraryApplicationAction: () => m,
         playApplication: () => i.a,
-        repairApplication: () => p,
-        updateApplication: () => _,
+        repairApplication: () => _,
+        updateApplication: () => p,
     });
 var r = n(51025),
     i = n(696748),
@@ -22,15 +22,15 @@ function f(e, t, n) {
         s = o.Z.getTargetManifests(r.id, t);
     null != i && null != s && null != u.L && (0, u.L)(r, t, i, s, n);
 }
-function _(e, t) {
+function p(e, t) {
     let n = a.Z.getApplication(e);
     if (null != n) return r.li(n, t, o.Z.getTargetBuildId(n.id, t), o.Z.getTargetManifests(n.id, t));
 }
-function p(e, t, n) {
+function _(e, t, n) {
     let i = a.Z.getApplication(e);
     if (null != i) return r.cG(i, t, n);
 }
-function h(e, t) {
+function m(e, t) {
     let n = (0, s.i)(e, l.Z, c.Z),
         { analyticsParams: r } = t;
     switch (n) {
@@ -39,6 +39,6 @@ function h(e, t) {
         case d.apO.INSTALL:
             return f(e.id, e.branchId, r.source);
         case d.apO.UPDATE:
-            return _(e.id, e.branchId);
+            return p(e.id, e.branchId);
     }
 }

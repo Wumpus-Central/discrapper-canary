@@ -8,13 +8,13 @@ var r = n(146063),
     u = n(511696),
     d = n(507604),
     f = "Array Iterator",
-    _ = o.set,
-    p = o.getterFor(f);
+    p = o.set,
+    _ = o.getterFor(f);
 e.exports = l(
     Array,
     "Array",
     function (e, t) {
-        _(this, {
+        p(this, {
             type: f,
             target: r(e),
             index: 0,
@@ -22,7 +22,7 @@ e.exports = l(
         });
     },
     function () {
-        var e = p(this),
+        var e = _(this),
             t = e.target,
             n = e.index++;
         if (!t || n >= t.length) return (e.target = null), c(void 0, !0);
@@ -36,8 +36,8 @@ e.exports = l(
     },
     "values",
 );
-var h = (a.Arguments = a.Array);
-if ((i("keys"), i("values"), i("entries"), !u && d && "values" !== h.name))
+var m = (a.Arguments = a.Array);
+if ((i("keys"), i("values"), i("entries"), !u && d && "values" !== m.name))
     try {
-        s(h, "name", { value: "values" });
+        s(m, "name", { value: "values" });
     } catch (e) {}

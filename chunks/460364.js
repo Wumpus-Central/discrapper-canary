@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,22 +48,22 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -71,7 +71,7 @@ function h(e, t) {
     }
     return i;
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -81,32 +81,32 @@ function m(e, t) {
     return i;
 }
 function g(e) {
-    let { parentItem: t, isFocused: n, menuSubmenuProps: d, rows: _, rowHeight: m, onScroll: g, listClassName: E } = e,
+    let { parentItem: t, isFocused: n, menuSubmenuProps: d, rows: p, rowHeight: h, onScroll: g, listClassName: E } = e,
         b = i.useRef(null),
         y = i.useRef(null),
         O = i.useRef(null),
         v = i.useRef(null),
-        { isUsingKeyboardNavigation: I, focusIndex: T } = d,
-        S = h(d, ["isUsingKeyboardNavigation", "focusIndex"]);
+        { isUsingKeyboardNavigation: S, focusIndex: I } = d,
+        T = m(d, ["isUsingKeyboardNavigation", "focusIndex"]);
     i.useLayoutEffect(() => {
         var e;
         n && ((0, s.F)(b), null == (e = O.current) || e.focus());
     }, [n]),
         i.useEffect(() => {
-            if (n && T >= 0 && I) {
+            if (n && I >= 0 && S) {
                 var e;
-                null == (e = v.current) || e.scrollRowIntoView(T);
+                null == (e = v.current) || e.scrollRowIntoView(I);
             }
-        }, [n, I, T]);
-    let A = i.useCallback((e) => _[e], [_]),
+        }, [n, S, I]);
+    let A = i.useCallback((e) => p[e], [p]),
         C = (0, o.E)("MenuSubmenuListItem"),
         N = () =>
-            _.length > 0 &&
+            p.length > 0 &&
             (0, r.jsx)("div", {
                 className: u.submenuPaddingContainer,
                 children: (0, r.jsx)(
                     "div",
-                    p(f({ className: u.submenu }, S), {
+                    _(f({ className: u.submenu }, T), {
                         ref: O,
                         children: (0, r.jsx)(c.Z, {
                             ref: v,
@@ -114,8 +114,8 @@ function g(e) {
                             listPadding: [6, 0, 6, 8],
                             onScroll: g,
                             renderRow: A,
-                            rowCount: _.length,
-                            rowHeight: m,
+                            rowCount: p.length,
+                            rowHeight: h,
                         }),
                     }),
                 ),
@@ -129,10 +129,10 @@ function g(e) {
             renderLayer: N,
             children: (e) => {
                 let { ref: n, props: i } = e;
-                return (0, r.jsx)("div", p(f({ ref: n }, i), { children: t }));
+                return (0, r.jsx)("div", _(f({ ref: n }, i), { children: t }));
             },
         });
-    let R = (0, r.jsx)(l.jRF, {
+    let P = (0, r.jsx)(l.jRF, {
         targetRef: y,
         autoInvert: !0,
         nudgeAlignIntoViewport: !0,
@@ -144,6 +144,6 @@ function g(e) {
     });
     return (0, r.jsxs)("div", {
         ref: b,
-        children: [(0, r.jsx)("div", { ref: y }), t, n ? R : null],
+        children: [(0, r.jsx)("div", { ref: y }), t, n ? P : null],
     });
 }

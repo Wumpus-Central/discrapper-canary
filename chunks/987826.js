@@ -15,17 +15,17 @@ function l(e) {
         : (null == l || null == (t = l.lastValidationResult) ? void 0 : t.success) === !1
           ? (f = s.error)
           : (null == l ? void 0 : l.hasValue) && !c && (f = s.set);
-    let _ = (0, r.jsx)(o.Text, {
+    let p = (0, r.jsx)(o.Text, {
         variant: c ? "text-md/normal" : "text-sm/normal",
         color: "text-primary",
         className: a()(s.option, { [s.inline]: c }, f, i),
         children: d,
     });
     return null == u
-        ? _
+        ? p
         : (0, r.jsx)(o.P3F, {
               className: s.clickable,
               onClick: () => u(n),
-              children: _,
+              children: p,
           });
 }

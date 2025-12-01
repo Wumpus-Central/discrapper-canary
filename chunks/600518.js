@@ -59,12 +59,12 @@ e.exports = function (e) {
         1 !== i.nodeType || "inline" === getComputedStyle(i).display);
     );
     for (var d = i, f = u - 1; ; ) {
-        for (var _ = d.nodeValue, p = f; p >= 0; p--)
-            if (!(null != _ && p > 0 && r.isSurrogatePair(_, p - 1)))
-                if ((e.setStart(d, p), l(a(e), n))) (i = d), (u = p);
+        for (var p = d.nodeValue, _ = f; _ >= 0; _--)
+            if (!(null != p && _ > 0 && r.isSurrogatePair(p, _ - 1)))
+                if ((e.setStart(d, _), l(a(e), n))) (i = d), (u = _);
                 else break;
-        if (-1 === p || 0 === d.childNodes.length) break;
-        f = c((d = d.childNodes[p]));
+        if (-1 === _ || 0 === d.childNodes.length) break;
+        f = c((d = d.childNodes[_]));
     }
     return e.setStart(i, u), e;
 };

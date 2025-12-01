@@ -12,10 +12,10 @@ function l(e, t) {
         u,
         d,
         f,
-        _,
         p,
-        h = (0, s.j)(),
-        m = (0, o.Z)(
+        _,
+        m = (0, s.j)(),
+        h = (0, o.Z)(
             null !=
                 (n =
                     null !=
@@ -28,15 +28,15 @@ function l(e, t) {
                                   ? void 0
                                   : f.firstWeekContainsDate)
                             ? c
-                            : h.firstWeekContainsDate)
+                            : m.firstWeekContainsDate)
                         ? l
-                        : null == (_ = h.locale) || null == (p = _.options)
+                        : null == (p = m.locale) || null == (_ = p.options)
                           ? void 0
-                          : p.firstWeekContainsDate)
+                          : _.firstWeekContainsDate)
                 ? n
                 : 1,
         ),
         g = (0, r.Z)(e, t),
         E = new Date(0);
-    return E.setUTCFullYear(g, 0, m), E.setUTCHours(0, 0, 0, 0), (0, a.Z)(E, t);
+    return E.setUTCFullYear(g, 0, h), E.setUTCHours(0, 0, 0, 0), (0, a.Z)(E, t);
 }

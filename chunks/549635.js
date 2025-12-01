@@ -1,7 +1,7 @@
 n.d(t, {
-    Dt: () => T,
+    Dt: () => I,
     ZP: () => A,
-    ze: () => I,
+    ze: () => S,
 }),
     n(997841);
 var r = n(54381),
@@ -14,10 +14,10 @@ var r = n(54381),
     u = n(524444),
     d = n(52824),
     f = n(589530),
-    _ = n(591759),
-    p = n(212459),
-    h = n(116475),
-    m = n(899359);
+    p = n(591759),
+    _ = n(212459),
+    m = n(116475),
+    h = n(899359);
 function g(e, t, n) {
     return (
         t in e
@@ -91,7 +91,7 @@ function v(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function I(e, t) {
+function S(e, t) {
     return y(E({}, e), {
         type: (0, o.hg)(e),
         original: e.url,
@@ -99,34 +99,34 @@ function I(e, t) {
         sourceMetadata: { message: t },
     });
 }
-function T(e) {
-    let t = _.Z.toURLSafe(e);
+function I(e) {
+    let t = p.Z.toURLSafe(e);
     return null == t ? null : (t.searchParams.append("format", "webp"), t.toString());
 }
-function S(e) {
+function T(e) {
     let t,
         { media: n, obscured: i = !1, maxWidth: a, maxHeight: o, onContextMenu: c } = e,
-        { width: d, height: _, url: g, proxyUrl: b, alt: v, type: I, maxWidth: S, maxHeight: A } = n,
+        { width: d, height: p, url: g, proxyUrl: b, alt: v, type: S, maxWidth: T, maxHeight: A } = n,
         N = O(n, ["width", "height", "url", "proxyUrl", "alt", "type", "maxWidth", "maxHeight"]),
-        { zoomed: R } = (0, p.Y)(),
-        P = C(R, g, b, n.contentType, n.originalContentType),
-        D = null != d && 0 !== d && null != _ && 0 !== _;
-    if ("VIDEO" === I && D && null != b) {
-        var w;
-        let e = T(b);
+        { zoomed: P } = (0, _.Y)(),
+        R = C(P, g, b, n.contentType, n.originalContentType),
+        w = null != d && 0 !== d && null != p && 0 !== p;
+    if ("VIDEO" === S && w && null != b) {
+        var D;
+        let e = I(b);
         if (null == e) return null;
-        let t = null != (w = n.renderLinkComponent) ? w : u.iT;
+        let t = null != (D = n.renderLinkComponent) ? D : u.iT;
         return (0, r.jsx)(
             l.Z,
             y(E({}, N), {
-                src: P,
+                src: R,
                 width: d,
-                height: _,
+                height: p,
                 maxWidth: a,
                 maxHeight: o,
                 poster: e,
                 naturalWidth: d,
-                naturalHeight: _,
+                naturalHeight: p,
                 volume: f.FC,
                 autoMute: f.rs,
                 onVolumeChange: f.jA,
@@ -140,19 +140,19 @@ function S(e) {
         );
     }
     return (
-        "IMAGE" === I &&
-            (t = D
+        "IMAGE" === S &&
+            (t = w
                 ? (0, r.jsx)(
                       s.ZP,
                       y(E({}, N), {
-                          src: P,
+                          src: R,
                           width: d,
-                          height: _,
+                          height: p,
                           maxWidth: a,
                           maxHeight: o,
                           useFullWidth: !0,
                           shouldLink: !1,
-                          className: m.media,
+                          className: h.media,
                           animated: !i && n.animated,
                           autoPlay: !i,
                           alt: v,
@@ -160,21 +160,21 @@ function S(e) {
                       }),
                   )
                 : (0, r.jsx)("img", {
-                      src: P,
+                      src: R,
                       alt: v,
                       onContextMenu: c,
-                      className: m.dimensionlessImage,
+                      className: h.dimensionlessImage,
                       style: {
                           maxWidth: a,
                           maxHeight: o,
                       },
                   })),
-        null != t ? (0, r.jsx)(h.Z, { children: t }) : null
+        null != t ? (0, r.jsx)(m.Z, { children: t }) : null
     );
 }
-let A = i.memo(S);
+let A = i.memo(T);
 function C(e, t, n, r, i) {
-    return e && _.Z.isDiscordAssetUrl(t, r, i)
+    return e && p.Z.isDiscordAssetUrl(t, r, i)
         ? (0, c.s$)(t, r, i)
         : (0, d.q)({
               proxyURL: n,

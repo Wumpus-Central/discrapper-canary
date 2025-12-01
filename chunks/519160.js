@@ -41,7 +41,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,23 +53,23 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let h = {
+let m = {
         tension: 7,
         friction: 5,
         overshootClamping: !0,
     },
-    m = 100,
+    h = 100,
     g = "center",
     E = "right";
 function b(e, t) {
@@ -90,7 +90,7 @@ class y extends (r = a.Component) {
                   (t !== e.align || o !== s) &&
                   l.Z.spring(
                       this.animatedAlignmentOffset,
-                      p(f({}, h), { toValue: this.getAlignmentOffset(t) }),
+                      _(f({}, m), { toValue: this.getAlignmentOffset(t) }),
                   ).start();
     }
     getAlignmentOffset(e) {
@@ -109,7 +109,7 @@ class y extends (r = a.Component) {
             (0 === e && t === r.length - 1
                 ? n.setValue(-1)
                 : 0 === t && e === r.length - 1 && r.length > 2 && n.setValue(r.length)),
-            l.Z.spring(n, p(f({}, h), { toValue: e })).start();
+            l.Z.spring(n, _(f({}, m), { toValue: e })).start();
     }
     updateAnimatedIndex(e, t) {
         let { animatedIndex: n, animatedOpacity: r } = this,
@@ -119,13 +119,13 @@ class y extends (r = a.Component) {
             : l.Z.timing(r, {
                   fromValue: 1,
                   toValue: 0,
-                  duration: m,
+                  duration: h,
               }).start(() => {
                   n.setValue(e),
                       l.Z.timing(r, {
                           fromValue: 0,
                           toValue: 1,
-                          duration: m,
+                          duration: h,
                       }).start();
               });
     }
@@ -147,14 +147,14 @@ class y extends (r = a.Component) {
         let e,
             { animatedIndex: t, animatedAlignmentOffset: n, animatedOpacity: r } = this,
             { renderItem: a, items: o, itemSize: s, edgeItems: c, gutter: d } = this.props,
-            { margin: f, width: _ } = s,
-            p = this.getCarouselTranslate(),
-            h = this.getItemStyle(),
-            m = (e = c > 0 ? [...o.slice(-c), ...o, ...o.slice(0, c)] : o).map((e, t) =>
+            { margin: f, width: p } = s,
+            _ = this.getCarouselTranslate(),
+            m = this.getItemStyle(),
+            h = (e = c > 0 ? [...o.slice(-c), ...o, ...o.slice(0, c)] : o).map((e, t) =>
                 (0, i.jsx)(
                     "div",
                     {
-                        style: h,
+                        style: m,
                         className: u.item,
                         children: a(e, t - c, this.interpolateValueForItem(t - c)),
                     },
@@ -168,12 +168,12 @@ class y extends (r = a.Component) {
                 left: l.Z.add(
                     t.interpolate({
                         inputRange: [0, 1],
-                        outputRange: [-p, -f - _ - p - d * (o.length - 1)],
+                        outputRange: [-_, -f - p - _ - d * (o.length - 1)],
                     }),
                     n,
                 ),
             },
-            children: m,
+            children: h,
         });
     }
     render() {

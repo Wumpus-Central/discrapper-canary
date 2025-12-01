@@ -1,10 +1,10 @@
-_.d(e, { b: () => a });
-class a extends Error {
-    constructor(t, e = "warn") {
-        super(t),
-            (this.message = t),
+r.d(t, { b: () => n });
+class n extends Error {
+    constructor(e, t = "warn") {
+        super(e),
+            (this.message = e),
             (this.name = new.target.prototype.constructor.name),
             Object.setPrototypeOf(this, new.target.prototype),
-            (this.logLevel = e);
+            (this.logLevel = t);
     }
 }

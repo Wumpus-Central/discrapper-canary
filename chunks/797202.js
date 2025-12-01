@@ -1,4 +1,4 @@
-n.d(t, { $: () => _ });
+n.d(t, { $: () => p });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -77,7 +77,7 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function _(e) {
+function p(e) {
     var { color: t = "purple", offsetBottom: n = 0, children: i } = e,
         s = d(e, ["color", "offsetBottom", "children"]);
     let c = "object" == typeof t && null != t;

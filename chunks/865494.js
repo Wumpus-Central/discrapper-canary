@@ -8,13 +8,13 @@ var r = n(48657),
     u = n(480296),
     d = n(533610),
     f = n(800054),
-    _ = Array;
+    p = Array;
 e.exports = function (e) {
     var t,
         n,
-        p,
-        h,
+        _,
         m,
+        h,
         g,
         E = a(e),
         b = l(this),
@@ -22,11 +22,11 @@ e.exports = function (e) {
         O = y > 1 ? arguments[1] : void 0,
         v = void 0 !== O;
     v && (O = r(O, y > 2 ? arguments[2] : void 0));
-    var I = f(E),
-        T = 0;
-    if (I && !(this === _ && s(I)))
-        for (n = b ? new this() : [], m = (h = d(E, I)).next; !(p = i(m, h)).done; T++)
-            (g = v ? o(h, O, [p.value, T], !0) : p.value), u(n, T, g);
-    else for (t = c(E), n = b ? new this(t) : _(t); t > T; T++) (g = v ? O(E[T], T) : E[T]), u(n, T, g);
-    return (n.length = T), n;
+    var S = f(E),
+        I = 0;
+    if (S && !(this === p && s(S)))
+        for (n = b ? new this() : [], h = (m = d(E, S)).next; !(_ = i(h, m)).done; I++)
+            (g = v ? o(m, O, [_.value, I], !0) : _.value), u(n, I, g);
+    else for (t = c(E), n = b ? new this(t) : p(t); t > I; I++) (g = v ? O(E[I], I) : E[I]), u(n, I, g);
+    return (n.length = I), n;
 };

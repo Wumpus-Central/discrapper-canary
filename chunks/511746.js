@@ -12,10 +12,10 @@ function c(e, t, n) {
         }),
         { isInvalid: u, validationErrors: d, validationDetails: f } = c.displayValidation,
         {
-            labelProps: _,
-            inputProps: p,
-            isSelected: h,
-            isPressed: m,
+            labelProps: p,
+            inputProps: _,
+            isSelected: m,
+            isPressed: h,
             isDisabled: g,
             isReadOnly: E,
         } = (0, l.O)(
@@ -41,18 +41,18 @@ function c(e, t, n) {
     });
     return {
         labelProps: (0, i.d)(
-            _,
+            p,
             v,
             (0, r.useMemo)(() => ({ onMouseDown: (e) => e.preventDefault() }), []),
         ),
         inputProps: {
-            ...p,
-            checked: h,
+            ..._,
+            checked: m,
             "aria-required": (y && "aria" === O) || void 0,
             required: y && "native" === O,
         },
-        isSelected: h,
-        isPressed: m,
+        isSelected: m,
+        isPressed: h,
         isDisabled: g,
         isReadOnly: E,
         isInvalid: u,

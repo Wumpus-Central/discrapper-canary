@@ -16,7 +16,7 @@ function c() {
         d = (0, i.e7)([s.default], () => (null != t ? s.default.getUser(t) : s.default.getCurrentUser())),
         f = (0, r.useContext)(a.Z);
     null == n && (n = f);
-    let _ = (0, i.e7)([o.ZP], () => (null != n && null != d ? o.ZP.getMember(n, d.id) : null));
+    let p = (0, i.e7)([o.ZP], () => (null != n && null != d ? o.ZP.getMember(n, d.id) : null));
     return u
         ? void 0 !== c
             ? null === c && null != n
@@ -24,7 +24,7 @@ function c() {
                     ? void 0
                     : d.displayNameStyles
                 : c
-            : null != (e = null == _ ? void 0 : _.displayNameStyles)
+            : null != (e = null == p ? void 0 : p.displayNameStyles)
               ? e
               : null == d
                 ? void 0

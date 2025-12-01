@@ -41,9 +41,9 @@ function u(e) {
             onPaymentRequestFailure: u,
             onValidPaymentRequest: d,
             paymentRequestRef: f,
-            paymentRequestWallet: _,
+            paymentRequestWallet: p,
         } = e,
-        p = {
+        _ = {
             paymentLabel: o.intl.string(o.t.ZURqX0),
             paymentRequestRef: f,
             renderConnectorView: !0,
@@ -57,7 +57,7 @@ function u(e) {
             }),
         };
     return (
-        (t = "applePay" === _ ? (0, r.jsx)(a.Ch, c({}, p)) : (0, r.jsx)(a.Tr, c({}, p))),
+        (t = "applePay" === p ? (0, r.jsx)(a.Ch, c({}, _)) : (0, r.jsx)(a.Tr, c({}, _))),
         (0, r.jsx)("div", {
             className: s.body,
             children: (0, r.jsx)(i.gNt, {

@@ -10,18 +10,18 @@ function l(e, t) {
         u = (0, r.e7)([a.Z], () => a.Z.isHighContrastModeEnabled),
         d = (0, o.Ml)("useToken"),
         f = (0, o.CL)("useToken"),
-        _ = (0, o.VM)("useToken"),
-        p = (0, s.U)("useToken"),
-        h = [];
+        p = (0, o.VM)("useToken"),
+        _ = (0, s.U)("useToken"),
+        m = [];
     return (
-        d && h.push("refresh-fast-follow-avatars"),
-        f && h.push("refresh-fast-follow-guild-bg"),
-        _ && h.push("refresh-fast-follow-distinct-borders"),
-        p && h.push("mana-text-inputs"),
+        d && m.push("refresh-fast-follow-avatars"),
+        f && m.push("refresh-fast-follow-guild-bg"),
+        p && m.push("refresh-fast-follow-distinct-borders"),
+        _ && m.push("mana-text-inputs"),
         e.resolve({
             theme: null != t ? t : n,
             saturation: c,
-            enabledExperiments: h,
+            enabledExperiments: m,
             density: l,
             highContrastModeEnabled: u,
         })

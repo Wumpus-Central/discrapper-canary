@@ -2,16 +2,16 @@ n.d(t, { Z: () => g });
 var i = n(13245),
     r = n(45114),
     l = n(580991),
-    o = n(562224),
-    a = n(361291),
+    a = n(562224),
+    o = n(361291),
     s = n(624864),
-    c = n(610394),
-    u = n(620954),
+    u = n(610394),
+    c = n(620954),
     d = n(987650),
     h = n(981631),
     p = n(37113),
     f = n(388032),
-    m = n(621844);
+    m = n(404789);
 function g(e, t, n, g) {
     if (s.Z.isNotificationDisabled(d.n0.RequestToStream)) return null;
     let y = t.username,
@@ -19,29 +19,29 @@ function g(e, t, n, g) {
             username: "",
             game: n.name,
         }),
-        v = t.getAvatarURL(e.guild_id, 80),
-        { trackView: E, trackClick: b } = (0, u.Rg)(d.n0.RequestToStream, {
+        E = t.getAvatarURL(e.guild_id, 80),
+        { trackView: v, trackClick: S } = (0, c.Rg)(d.n0.RequestToStream, {
             notif_type: d.n0.RequestToStream,
             notif_user_id: t.id,
             activity_type: h.mFx.STREAM_REQUEST,
             activity_name: g.name,
         });
     return {
-        icon: v,
+        icon: E,
         title: y,
         body: O,
         confirmText: f.intl.string(m.default.UGbmBp),
         cancelText: f.intl.string(f.t["tpXzJ+"]),
         onNotificationShow: () => {
-            E();
+            v();
         },
         onConfirmClick: (e, t) => {
-            let n = a.Z.getState().preset;
+            let n = o.Z.getState().preset;
             if (n === p.ApplicationStreamPresets.PRESET_DOCUMENTS) {
                 let { allowAutoQuality: e } = (0, l.IK)({ location: "requestToStreamNotification" });
                 n = e ? p.ApplicationStreamPresets.PRESET_AUTO : p.ApplicationStreamPresets.PRESET_VIDEO;
             }
-            (0, o.Z)(c.Z.getTargetPID(), { preset: n }), b("request-to-stream"), i.Z.updateNotificationStatus(t);
+            (0, a.Z)(u.Z.getTargetPID(), { preset: n }), S("request-to-stream"), i.Z.updateNotificationStatus(t);
         },
         onCancelClick: (t, n) => {
             (0, r.ack)(
@@ -55,10 +55,10 @@ function g(e, t, n, g) {
                 !0,
             ),
                 i.Z.updateNotificationStatus(n),
-                b("decline");
+                S("decline");
         },
         onDismissClick: () => {
-            b("dismiss");
+            S("dismiss");
         },
     };
 }

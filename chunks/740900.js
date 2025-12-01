@@ -27,7 +27,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,7 +43,7 @@ function _(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -55,18 +55,18 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let m = Date.now();
+let h = Date.now();
 var g = (function (e) {
     return (
         (e.NEW_GUILD_MEMBER = "NEW_GUILD_MEMBER"),
@@ -86,7 +86,7 @@ function y() {
     return new a.h(E, b);
 }
 function O(e) {
-    return null != e && new Date(e).getTime() >= m - c.rL;
+    return null != e && new Date(e).getTime() >= h - c.rL;
 }
 class v {
     reset() {
@@ -104,22 +104,22 @@ class v {
                 hasUnusualAccountActivity: o,
                 sourceInviteCode: u,
                 joinSourceType: f,
-                inviterId: p,
-                integrationType: m,
+                inviterId: _,
+                integrationType: h,
                 joinSourceApplicationId: g,
                 joinSourceChannelId: E,
             } = this._computeMemberSupplementals(e.userId, e.unusualDMActivityUntil),
             b = s.default.getUser(e.userId);
-        return _(
-            h(
-                _(
+        return p(
+            m(
+                p(
                     {
                         hasUnusualDmActivity: a,
                         hasUnusualAccountActivity: o,
                         sourceInviteCode: u,
                         joinSourceType: f,
-                        inviterId: p,
-                        integrationType: m,
+                        inviterId: _,
+                        integrationType: h,
                         joinSourceApplicationId: g,
                         joinSourceChannelId: E,
                     },
@@ -163,8 +163,8 @@ class v {
     updateMember(e, t) {
         var n;
         if (null == t) return this._membersMap.set(e.userId, e);
-        let r = _({}, e),
-            a = _({}, t),
+        let r = p({}, e),
+            a = p({}, t),
             o = !1,
             {
                 sourceInviteCode: s,
@@ -173,8 +173,8 @@ class v {
                 joinSourceType: u,
                 inviterId: d,
                 integrationType: f,
-                joinSourceApplicationId: p,
-                joinSourceChannelId: h,
+                joinSourceApplicationId: _,
+                joinSourceChannelId: m,
             } = this._computeMemberSupplementals(
                 r.userId,
                 null != (n = a.unusualDMActivityUntil) ? n : r.unusualDMActivityUntil,
@@ -183,8 +183,8 @@ class v {
         r.hasUnusualDmActivity !== l && (a.hasUnusualDmActivity = l),
         r.hasUnusualAccountActivity !== c && (a.hasUnusualAccountActivity = c),
         r.joinSourceType !== u && (a.joinSourceType = u),
-        r.joinSourceApplicationId !== p && (a.joinSourceApplicationId = p),
-        r.joinSourceChannelId !== h && (a.joinSourceChannelId = h),
+        r.joinSourceApplicationId !== _ && (a.joinSourceApplicationId = _),
+        r.joinSourceChannelId !== m && (a.joinSourceChannelId = m),
         r.inviterId !== d && (a.inviterId = d),
         r.integrationType !== f && (a.integrationType = f),
         a)) {

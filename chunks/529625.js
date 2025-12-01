@@ -22,14 +22,14 @@ function h() {
         s = p.useField("errorMessage"),
         h = l.useRef([]),
         x = l.useRef(""),
-        g = l.useCallback(() => {
+        f = l.useCallback(() => {
             let { results: e, query: t } = c.Z.getProps();
             (h.current !== e || x.current !== t) && ((h.current = e), (x.current = t), (0, d.OC)());
         }, []);
     l.useEffect(() => {
-        if (e) return c.Z.addChangeListener(g), () => c.Z.removeChangeListener(g);
-    }, [g, e]);
-    let f = l.useCallback(async () => {
+        if (e) return c.Z.addChangeListener(f), () => c.Z.removeChangeListener(f);
+    }, [f, e]);
+    let g = l.useCallback(async () => {
         let { isUploading: e } = p.getState();
         if (!e)
             try {
@@ -71,7 +71,7 @@ function h() {
                         isUploading: t,
                         isSuccess: n,
                         errorMessage: s,
-                        onClick: f,
+                        onClick: g,
                         title: "Upload Session Logs",
                     }),
                 ],

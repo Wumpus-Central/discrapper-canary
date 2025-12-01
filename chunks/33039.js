@@ -57,35 +57,35 @@ function d(e, t) {
     );
 }
 let f = null,
-    _ = null,
-    p = {},
-    h = {};
-function m(e, t) {
+    p = null,
+    _ = {},
+    m = {};
+function h(e, t) {
     return "".concat(e, ":").concat(t);
 }
 function g(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-        r = p[e];
+        r = _[e];
     if (null == r) return;
     let i = r[null != t ? t : o.kod];
     if (null != i) {
-        for (let t of Object.values(s.Yn)) (n === t || null == n) && (delete i[t], delete h[m(null != n ? n : t, e)]);
-        p[e][null != t ? t : o.kod] = i;
+        for (let t of Object.values(s.Yn)) (n === t || null == n) && (delete i[t], delete m[h(null != n ? n : t, e)]);
+        _[e][null != t ? t : o.kod] = i;
     }
 }
 function E(e, t, n, r) {
     var i;
-    e in p || (p[e] = {});
-    let a = null != (i = p[e][null != t ? t : o.kod]) ? i : {};
-    (p[e][null != t ? t : o.kod] = d(c({}, a), { [r]: { streamId: n } })), delete h[m(r, e)];
+    e in _ || (_[e] = {});
+    let a = null != (i = _[e][null != t ? t : o.kod]) ? i : {};
+    (_[e][null != t ? t : o.kod] = d(c({}, a), { [r]: { streamId: n } })), delete m[h(r, e)];
 }
 function b(e) {
     let { user: t, sessionId: n } = e;
-    (f = t.id), (_ = n);
+    (f = t.id), (p = n);
 }
 function y(e) {
     let { user: t, sessionId: n } = e;
-    (f = t.id), (_ = n);
+    (f = t.id), (p = n);
 }
 function O(e) {
     let { userId: t, guildId: n, streamId: r, context: i } = e;
@@ -97,54 +97,54 @@ function v(e) {
         var n;
         let { userId: r, sessionId: i, channelId: a, guildId: s } = t;
         if (null == a && r === f)
-            if (i !== _) return e;
-            else (p = {}), (h = {});
+            if (i !== p) return e;
+            else (_ = {}), (m = {});
         else {
-            if (null != a || (null == (n = p[r]) ? void 0 : n[null != s ? s : o.kod]) == null) return e;
+            if (null != a || (null == (n = _[r]) ? void 0 : n[null != s ? s : o.kod]) == null) return e;
             g(r, s);
         }
         return !0;
     }, !1);
 }
-function I(e) {
+function S(e) {
     let { videoStreamId: t, userId: n, streamKey: r, mediaContext: i } = e;
-    h[m(i, n)] = {
+    m[h(i, n)] = {
         videoStreamId: t,
         userId: n,
         streamKey: r,
         mediaContext: i,
     };
 }
-function T(e) {
+function I(e) {
     let { mediaContext: t, userId: n } = e,
-        r = m(t, n);
-    if (null == h[r]) return !1;
-    delete h[r];
+        r = h(t, n);
+    if (null == m[r]) return !1;
+    delete m[r];
 }
-class S extends (r = i.ZP.Store) {
+class T extends (r = i.ZP.Store) {
     getStreamId(e, t) {
         var n, r, i;
         let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.Yn.DEFAULT;
-        return null == (i = p[e]) || null == (r = i[null != t ? t : o.kod]) || null == (n = r[a]) ? void 0 : n.streamId;
+        return null == (i = _[e]) || null == (r = i[null != t ? t : o.kod]) || null == (n = r[a]) ? void 0 : n.streamId;
     }
     getUserStreamData(e, t) {
         var n, r;
         let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.Yn.DEFAULT;
-        return null == (r = p[e]) || null == (n = r[null != t ? t : o.kod]) ? void 0 : n[i];
+        return null == (r = _[e]) || null == (n = r[null != t ? t : o.kod]) ? void 0 : n[i];
     }
     getTimedoutVideos() {
-        return h;
+        return m;
     }
     getTimedoutVideo(e, t) {
-        return h[m(e, t)];
+        return m[h(e, t)];
     }
 }
-l(S, "displayName", "VideoStreamStore");
-let A = new S(a.Z, {
+l(T, "displayName", "VideoStreamStore");
+let A = new T(a.Z, {
     CONNECTION_OPEN: b,
     OVERLAY_INITIALIZE: y,
     RTC_CONNECTION_VIDEO: O,
     VOICE_STATE_UPDATES: v,
-    VIDEO_STREAM_READY_TIMEOUT: I,
-    CLEAR_VIDEO_STREAM_READY_TIMEOUT: T,
+    VIDEO_STREAM_READY_TIMEOUT: S,
+    CLEAR_VIDEO_STREAM_READY_TIMEOUT: I,
 });

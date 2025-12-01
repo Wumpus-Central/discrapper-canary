@@ -8,48 +8,48 @@ var r = n(48657),
     u = n(533610),
     d = n(800054),
     f = n(709369),
-    _ = TypeError,
-    p = function (e, t) {
+    p = TypeError,
+    _ = function (e, t) {
         (this.stopped = e), (this.result = t);
     },
-    h = p.prototype;
+    m = _.prototype;
 e.exports = function (e, t, n) {
-    var m,
+    var h,
         g,
         E,
         b,
         y,
         O,
         v,
-        I = n && n.that,
-        T = !!(n && n.AS_ENTRIES),
-        S = !!(n && n.IS_RECORD),
+        S = n && n.that,
+        I = !!(n && n.AS_ENTRIES),
+        T = !!(n && n.IS_RECORD),
         A = !!(n && n.IS_ITERATOR),
         C = !!(n && n.INTERRUPTED),
-        N = r(t, I),
-        R = function (e) {
-            return m && f(m, "normal", e), new p(!0, e);
-        },
+        N = r(t, S),
         P = function (e) {
-            return T ? (a(e), C ? N(e[0], e[1], R) : N(e[0], e[1])) : C ? N(e, R) : N(e);
+            return h && f(h, "normal", e), new _(!0, e);
+        },
+        R = function (e) {
+            return I ? (a(e), C ? N(e[0], e[1], P) : N(e[0], e[1])) : C ? N(e, P) : N(e);
         };
-    if (S) m = e.iterator;
-    else if (A) m = e;
+    if (T) h = e.iterator;
+    else if (A) h = e;
     else {
-        if (!(g = d(e))) throw new _(o(e) + " is not iterable");
+        if (!(g = d(e))) throw new p(o(e) + " is not iterable");
         if (s(g)) {
-            for (E = 0, b = l(e); b > E; E++) if ((y = P(e[E])) && c(h, y)) return y;
-            return new p(!1);
+            for (E = 0, b = l(e); b > E; E++) if ((y = R(e[E])) && c(m, y)) return y;
+            return new _(!1);
         }
-        m = u(e, g);
+        h = u(e, g);
     }
-    for (O = S ? e.next : m.next; !(v = i(O, m)).done; ) {
+    for (O = T ? e.next : h.next; !(v = i(O, h)).done; ) {
         try {
-            y = P(v.value);
+            y = R(v.value);
         } catch (e) {
-            f(m, "throw", e);
+            f(h, "throw", e);
         }
-        if ("object" == typeof y && y && c(h, y)) return y;
+        if ("object" == typeof y && y && c(m, y)) return y;
     }
-    return new p(!1);
+    return new _(!1);
 };

@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,22 +48,22 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -71,7 +71,7 @@ function h(e, t) {
     }
     return i;
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -97,16 +97,16 @@ let y = (e) => {
     var {
             backgroundStyle: a = "always",
             children: d,
-            icon: _,
-            name: m,
+            icon: p,
+            name: h,
             ariaLabel: g,
             className: y,
             style: O,
             to: v,
-            onClick: I,
-            selected: T = !1,
+            onClick: S,
+            selected: I = !1,
         } = e,
-        S = h(e, [
+        T = m(e, [
             "backgroundStyle",
             "children",
             "icon",
@@ -119,7 +119,7 @@ let y = (e) => {
             "selected",
         ]);
     let A = (0, s.k6)();
-    null == _ && null != m && (n = E((t = (0, c.Zg)(m))));
+    null == p && null != h && (n = E((t = (0, c.Zg)(h))));
     let C = i.useCallback(
             (e) => {
                 if (null == v);
@@ -128,20 +128,20 @@ let y = (e) => {
                     let { pathname: e = "", state: t } = v;
                     A.push(e, t);
                 }
-                null != I && I(e);
+                null != S && S(e);
             },
-            [A, v, I],
+            [A, v, S],
         ),
         N = (0, l.dQu)(l.TVs.modules.guildbar.AVATAR_SIZE);
     return (0, r.jsxs)(
         l.P3F,
-        p(f({}, S), {
+        _(f({}, T), {
             onClick: C,
-            className: o()(y, u.wrapper, { [u.selected]: T }),
-            style: p(f({}, O), { fontSize: n }),
+            className: o()(y, u.wrapper, { [u.selected]: I }),
+            style: _(f({}, O), { fontSize: n }),
             focusProps: { enabled: !1 },
             children: [
-                (0, r.jsx)(l.nn4, { children: null != g && "" !== g ? g : null != m ? m : "" }),
+                (0, r.jsx)(l.nn4, { children: null != g && "" !== g ? g : null != h ? h : "" }),
                 null != t
                     ? (0, r.jsx)("div", {
                           className: o()(b(a, !1), u.acronym),
@@ -149,10 +149,10 @@ let y = (e) => {
                           children: t,
                       })
                     : null,
-                null != _
+                null != p
                     ? (0, r.jsx)("img", {
                           className: u.icon,
-                          src: _,
+                          src: p,
                           alt: " ",
                           width: N,
                           height: N,

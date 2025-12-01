@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r,
     i = n(392711),
     a = n.n(i),
@@ -26,7 +26,7 @@ function f(e) {
             d[e.sessionId] = e;
         });
 }
-class _ extends (r = o.ZP.Store) {
+class p extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(l.default);
     }
@@ -66,8 +66,8 @@ class _ extends (r = o.ZP.Store) {
         return null != i ? i : null == (t = r.hiddenActivities) ? void 0 : t.find((t) => t.application_id === e);
     }
 }
-c(_, "displayName", "SessionsStore");
-let p = new _(s.Z, {
+c(p, "displayName", "SessionsStore");
+let _ = new p(s.Z, {
     CONNECTION_OPEN: f,
     SESSIONS_REPLACE: f,
 });

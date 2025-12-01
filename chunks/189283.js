@@ -57,7 +57,7 @@ function f(e, t) {
         e
     );
 }
-function _(e) {
+function p(e) {
     switch (e) {
         case "tab":
         default:
@@ -66,7 +66,7 @@ function _(e) {
             return l.pillContainer;
     }
 }
-function p(e) {
+function _(e) {
     switch (e) {
         case "tab":
         default:
@@ -75,7 +75,7 @@ function p(e) {
             return l.pillItem;
     }
 }
-function h(e) {
+function m(e) {
     switch (e) {
         case "tab":
         default:
@@ -84,7 +84,7 @@ function h(e) {
             return l.pillItemSelected;
     }
 }
-function m(e) {
+function h(e) {
     return "pill" === e ? l.pillItemText : void 0;
 }
 function g(e) {
@@ -94,7 +94,7 @@ function g(e) {
             onClick: a,
             look: c,
             className: d,
-            disabled: _ = !1,
+            disabled: p = !1,
             tooltip: g,
             tooltipAriaLabel: E,
         } = e,
@@ -105,18 +105,18 @@ function g(e) {
                 f(
                     u(
                         {
-                            className: o()(p(c), d, {
-                                [h(c)]: n,
-                                [l.disabled]: _,
+                            className: o()(_(c), d, {
+                                [m(c)]: n,
+                                [l.disabled]: p,
                             }),
-                            "aria-disabled": _,
+                            "aria-disabled": p,
                         },
                         e,
                     ),
                     {
-                        onClick: _ ? void 0 : b,
+                        onClick: p ? void 0 : b,
                         children: (0, r.jsxs)(s.Text, {
-                            className: o()(l.controlText, m(c)),
+                            className: o()(l.controlText, h(c)),
                             variant: "text-sm/medium",
                             color: "none",
                             children: [null != t.icon ? (0, r.jsx)(t.icon, { className: l.icon }) : null, t.name],
@@ -128,7 +128,7 @@ function g(e) {
         ? y()
         : (0, r.jsx)(s.aML, {
               "data-migration-pending": !0,
-              shouldShow: !_,
+              shouldShow: !p,
               "aria-label": E,
               text: g,
               children: (e) => y(e),
@@ -158,7 +158,7 @@ function E(e) {
             [n, s, a, u, d],
         );
     return (0, r.jsx)("div", {
-        className: o()(_(s), c, { [l.disabledContainer]: d }),
+        className: o()(p(s), c, { [l.disabledContainer]: d }),
         children: t.map(f),
     });
 }

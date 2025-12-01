@@ -35,10 +35,10 @@ var a = n(117242),
     u = n(40375),
     d = n(65183),
     f = n(799995),
-    _ = d.List,
-    p = d.Repeat,
-    h = u("draft_tree_data_support"),
-    m = h ? o : a;
+    p = d.List,
+    _ = d.Repeat,
+    m = u("draft_tree_data_support"),
+    h = m ? o : a;
 e.exports = {
     processHTML: function (e, t) {
         return s(e, c, t);
@@ -51,13 +51,13 @@ e.exports = {
                     key: o,
                     type: n,
                     text: i,
-                    characterList: _(p(t, i.length)),
+                    characterList: p(_(t, i.length)),
                 };
-            if (h && 0 !== a) {
+            if (m && 0 !== a) {
                 var c = a - 1;
                 s = r({}, s, { prevSibling: (e[c] = e[c].merge({ nextSibling: o })).getKey() });
             }
-            return e.push(new m(s)), e;
+            return e.push(new h(s)), e;
         }, []);
     },
 };

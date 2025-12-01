@@ -1,4 +1,4 @@
-n.d(t, { x: () => h }), n(388685);
+n.d(t, { x: () => m }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(100527),
@@ -9,9 +9,9 @@ var r = n(54381),
     u = n(45474),
     d = n(594135),
     f = n(881493),
-    _ = n(407965),
-    p = n(981631);
-let h = (e) => {
+    p = n(407965),
+    _ = n(981631);
+let m = (e) => {
         let {
                 transitionState: t,
                 onClose: n,
@@ -20,17 +20,17 @@ let h = (e) => {
                 churnDiscount: c,
                 planId: u,
                 renewalInvoice: f,
-                renewalInvoiceDetails: _,
-                errorOnCancel: h,
+                renewalInvoiceDetails: p,
+                errorOnCancel: m,
                 errorOnRedeem: g,
                 setActiveStep: E,
                 activeStep: b,
             } = e,
             { analyticsLocations: y } = (0, o.ZP)(a.Z.USER_SETTINGS),
-            [O, v] = i.useState(m(b));
+            [O, v] = i.useState(h(b));
         return (
             (0, i.useEffect)(() => {
-                v(m(b));
+                v(h(b));
             }, [b]),
             (0, r.jsx)(d.CancellationContext.Provider, {
                 value: {
@@ -40,7 +40,7 @@ let h = (e) => {
                     transitionState: t,
                     premiumSubscription: s,
                     analyticsLocations: y,
-                    analyticsLocation: p.Sbl.USER_SETTINGS,
+                    analyticsLocation: _.Sbl.USER_SETTINGS,
                     confettiCanvas: null,
                     churnUserDiscountOffer: c,
                     isFetchingChurnDiscountOffer: !1,
@@ -49,11 +49,11 @@ let h = (e) => {
                     planId: u,
                     paymentsBlocked: !1,
                     renewalInvoice: f,
-                    renewalInvoiceDetails: _,
+                    renewalInvoiceDetails: p,
                     handleCancellation: () =>
                         new Promise((e, t) => {
                             setTimeout(() => {
-                                if (h) return void t();
+                                if (m) return void t();
                                 e();
                             }, 1000);
                         }),
@@ -71,7 +71,7 @@ let h = (e) => {
             })
         );
     },
-    m = (e) => {
+    h = (e) => {
         switch (e) {
             case u.R.DISCOUNT_APPLIED:
                 return (0, r.jsx)(c.i, {});
@@ -83,6 +83,6 @@ let h = (e) => {
                 return (0, r.jsx)(f.w, {});
             case u.R.WHAT_YOU_LOSE:
             default:
-                return (0, r.jsx)(_.n, {});
+                return (0, r.jsx)(p.n, {});
         }
     };

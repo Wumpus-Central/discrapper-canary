@@ -1,4 +1,4 @@
-n.d(t, { a: () => _ }), n(388685);
+n.d(t, { a: () => p }), n(388685);
 var r = n(54381),
     i = n(793030),
     a = n(619307),
@@ -57,19 +57,19 @@ function f(e, t) {
         e
     );
 }
-function _(e) {
+function p(e) {
     let { controls: t, props: n, onPropsChange: c } = e,
         d = (e, t) => {
             c(f(u({}, n), { [e]: t }));
         },
-        _ = Object.entries(t);
-    return 0 === _.length
+        p = Object.entries(t);
+    return 0 === p.length
         ? null
         : (0, r.jsx)("div", {
               className: l.controlsSection,
               children: (0, r.jsx)(i.Kqy, {
                   gap: 16,
-                  children: _.map((e) => {
+                  children: p.map((e) => {
                       var t;
                       let [l, c] = e,
                           u = null != (t = n[l]) ? t : c.defaultValue;

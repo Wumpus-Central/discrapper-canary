@@ -1,4 +1,4 @@
-n.d(t, { v: () => h }), n(388685), n(473749);
+n.d(t, { v: () => m }), n(388685), n(473749);
 var r = n(570140),
     i = n(668781),
     a = n(673750),
@@ -9,7 +9,7 @@ var r = n(570140),
     u = n(74538),
     d = n(981631),
     f = n(388032);
-function _(e, t) {
+function p(e, t) {
     i.Z.show({
         title: f.intl.string(f.t.l8rYLt),
         body: f.intl.formatToPlainString(f.t.FfjF15, {
@@ -23,16 +23,16 @@ function _(e, t) {
             message_content_length: e,
         });
 }
-function p(e) {
+function _(e) {
     var t;
     let {
         openWarningPopout: n,
         type: s,
         content: l,
         stickers: u,
-        uploads: p,
-        channel: h,
-        restrictMentions: m,
+        uploads: _,
+        channel: m,
+        restrictMentions: h,
         respectCooldown: g,
         userCanUsePremiumMessageLength: E,
         resolve: b,
@@ -41,7 +41,7 @@ function p(e) {
         0 === l.length &&
         !(null == (t = s.submit) ? void 0 : t.allowEmptyMessage) &&
         (null == u || 0 === u.length) &&
-        (null == p || 0 === p.length)
+        (null == _ || 0 === _.length)
     )
         return void b({
             valid: !1,
@@ -50,32 +50,32 @@ function p(e) {
     let y = E ? d.en1 : d.J6R,
         O = !E;
     if (l.length > y) {
-        O && null != h
+        O && null != m
             ? r.Z.dispatch({
                   type: "MESSAGE_LENGTH_UPSELL",
-                  channel: h,
+                  channel: m,
                   content: l,
               })
-            : _(l.length, y),
+            : p(l.length, y),
             b({
                 valid: !1,
                 failureReason: d.zYc.MESSAGE_TOO_LONG,
             });
         return;
     }
-    if (null != h) {
-        if (null != h.getGuildId() && g && o.Z.getSlowmodeCooldownGuess(h.id) > 0)
+    if (null != m) {
+        if (null != m.getGuildId() && g && o.Z.getSlowmodeCooldownGuess(m.id) > 0)
             return void b({
                 valid: !1,
                 failureReason: d.zYc.SLOWMODE_COOLDOWN,
             });
         if (null != n)
             for (let { check: e, analyticsType: t, animation: r } of c.$) {
-                let i = e(l, h, m);
+                let i = e(l, m, h);
                 if (!1 !== i)
                     return void n({
                         analyticsType: t,
-                        channel: h,
+                        channel: m,
                         onCancel: () =>
                             b({
                                 valid: !1,
@@ -101,7 +101,7 @@ function p(e) {
     }
     b({ valid: !0 });
 }
-function h(e) {
+function m(e) {
     let {
             openWarningPopout: t,
             type: n,
@@ -114,7 +114,7 @@ function h(e) {
         } = e,
         d = u.ZP.canUseIncreasedMessageLength(s.default.getCurrentUser());
     return new Promise((e) =>
-        p({
+        _({
             openWarningPopout: t,
             type: n,
             content: r,

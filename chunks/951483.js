@@ -1,6 +1,6 @@
 n.d(t, {
-    Sr: () => C,
-    Xq: () => x,
+    Sr: () => x,
+    Xq: () => C,
     Zg: () => E,
 }),
     n(415506);
@@ -13,9 +13,9 @@ var r = n(186070),
     c = n(167042),
     u = n(239748),
     d = n(337482),
-    p = n(679080),
+    f = n(679080),
     h = n(510761),
-    f = n(189509),
+    p = n(189509),
     g = n(886077),
     m = n(280492),
     b = n(746887),
@@ -26,12 +26,12 @@ var r = n(186070),
 function j() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     return t.map((e) => {
-        let t = C[e];
+        let t = x[e];
         if (null == t) throw Error("getBindsFor(...): No bind for ".concat(t));
         return t.binds[0];
     });
 }
-let C = {
+let x = {
         [O.EkH.SERVER_NEXT]: h.nq,
         [O.EkH.SERVER_PREV]: h.X3,
         [O.EkH.CHANNEL_NEXT]: i.tQ,
@@ -44,7 +44,7 @@ let C = {
         [O.EkH.MENTION_CHANNEL_PREV]: y.uX,
         [O.EkH.TOGGLE_PREVIOUS_GUILD]: i.$c,
         [O.EkH.JUMP_TO_GUILD]: l.u,
-        [O.EkH.SUBMIT]: f.z,
+        [O.EkH.SUBMIT]: p.z,
         [O.EkH.TEXTAREA_FOCUS]: g.U,
         [O.EkH.MARK_CHANNEL_READ]: o.f,
         [O.EkH.MARK_SERVER_READ]: a.l,
@@ -53,7 +53,7 @@ let C = {
         [O.EkH.TOGGLE_CATEGORY_COLLAPSED]: b.u,
         [O.EkH.SCROLL_UP]: d.B2,
         [O.EkH.SCROLL_DOWN]: d.gN,
-        [O.EkH.SEARCH_EMOJIS]: p.S,
+        [O.EkH.SEARCH_EMOJIS]: f.S,
         [O.EkH.TOGGLE_HOTKEYS]: _._,
         [O.EkH.JUMP_TO_FIRST_UNREAD]: s.O,
         [O.EkH.RETURN_TO_AUDIO_CHANNEL]: u.F,
@@ -61,7 +61,7 @@ let C = {
         [O.EkH.CALL_START]: r.FI,
         [O.EkH.QUICKSWITCHER_SHOW]: c.$,
     },
-    x = { [O.EkH.QUICKSWITCHER_SHOW]: c.$ };
+    C = { [O.EkH.QUICKSWITCHER_SHOW]: c.$ };
 function E() {
     return [
         {

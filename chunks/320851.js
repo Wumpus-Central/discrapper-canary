@@ -1,8 +1,8 @@
 n.d(e, { Z: () => c });
 var i = n(323472),
-    l = n(509613),
-    u = n(313789),
-    r = n(299426),
+    r = n(509613),
+    l = n(313789),
+    u = n(299426),
     s = n(407458),
     a = n(388032);
 let o = [
@@ -95,13 +95,13 @@ let o = [
             sound: "reconnect",
         },
     ],
-    c = (0, l.$l)(u.n.VOICE_AND_VIDEO_SOUNDS_LIST, {
+    c = (0, r.$l)(l.n.VOICE_AND_VIDEO_SOUNDS_LIST, {
         collapseAfter: 4,
         useCollapsibleTitle: (t, e) =>
             t
                 ? a.intl.formatToPlainString(a.t["0JYT98"], { count: e })
                 : a.intl.formatToPlainString(a.t.ji1uNt, { count: e }),
-        useCollapsedSubtitle: () => (0, i.u)(u.n.VOICE_AND_VIDEO_SOUNDS_LIST, { limit: 3 }),
-        ContextProvider: r.u,
+        useCollapsedSubtitle: () => (0, i.u)(l.n.VOICE_AND_VIDEO_SOUNDS_LIST, { limit: 3 }),
+        ContextProvider: u.u,
         buildLayout: () => o.map((t) => (0, s.j)(t)),
     });

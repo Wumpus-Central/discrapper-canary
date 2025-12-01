@@ -1,4 +1,4 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => m });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -58,11 +58,11 @@ function f(e, t) {
         e
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -70,7 +70,7 @@ function _(e, t) {
     }
     return i;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -79,20 +79,20 @@ function p(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function h(e) {
+function m(e) {
     var {
             focusProps: t,
             lineClamp: n = 1,
             role: i = "button",
             text: c,
             textVariant: d = "text-md/medium",
-            type: p = "button",
-            variant: h = "primary",
-            buttonRef: m,
+            type: _ = "button",
+            variant: m = "primary",
+            buttonRef: h,
             className: g,
             style: E,
         } = e,
-        b = _(e, [
+        b = p(e, [
             "focusProps",
             "lineClamp",
             "role",
@@ -112,11 +112,11 @@ function h(e) {
                 f(
                     u(
                         {
-                            className: a()(l.textButton, l[h]),
+                            className: a()(l.textButton, l[m]),
                             "data-mana-component": "text-button",
                             role: i,
-                            type: p,
-                            ref: m,
+                            type: _,
+                            ref: h,
                         },
                         b,
                     ),

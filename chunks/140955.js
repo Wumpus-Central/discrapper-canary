@@ -1,14 +1,14 @@
-_.d(e, { _: () => a });
-let a = (t, e, _, a) => {
-    let r, n;
+r.d(t, { _: () => n });
+let n = (e, t, r, n) => {
+    let a, i;
     return (o) => {
-        if (e.value >= 0 && (o || a) && ((n = e.value - (r || 0)) || void 0 === r)) {
-            var E;
-            (r = e.value),
-                (e.delta = n),
-                (E = e.value),
-                (e.rating = E > _[1] ? "poor" : E > _[0] ? "needs-improvement" : "good"),
-                t(e);
+        if (t.value >= 0 && (o || n) && ((i = t.value - (a || 0)) || void 0 === a)) {
+            var _;
+            (a = t.value),
+                (t.delta = i),
+                (_ = t.value),
+                (t.rating = _ > r[1] ? "poor" : _ > r[0] ? "needs-improvement" : "good"),
+                e(t);
         }
     };
 };

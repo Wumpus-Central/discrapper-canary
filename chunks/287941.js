@@ -1,6 +1,6 @@
 n.d(t, {
     I: () => f,
-    Z: () => h,
+    Z: () => m,
 });
 var r = n(570140),
     i = n(607070),
@@ -28,7 +28,7 @@ let d = () => {
             i = arguments.length > 3 ? arguments[3] : void 0;
         if (!d()) return;
         let o = null == e.id,
-            { shouldPlay: l, failureReason: c } = p(n);
+            { shouldPlay: l, failureReason: c } = _(n);
         a.default.track(u.rMx.CONFETTI_POTION_TRIGGERED, {
             emoji_type: o ? s.aK.Unicode : s.aK.UserCreated,
             will_play: l,
@@ -42,7 +42,7 @@ let d = () => {
                     boundingRect: t,
                 });
     },
-    _ = (e, t) => {
+    p = (e, t) => {
         let n = l.HZ.getCurrentConfig({ location: "TriggerConfetti" }, { autoTrackExposure: !1 }).canSeeConfetti;
         return o.Z.confettiMode || t
             ? n
@@ -69,7 +69,7 @@ let d = () => {
                   failureReason: s.U0.NotInConfettiMode,
               };
     },
-    p = (e) => {
+    _ = (e) => {
         let t = l.HZ.getCurrentConfig({ location: "TriggerConfetti" }, { autoTrackExposure: !1 }).canSeeConfetti;
         return o.Z.confettiMode || e
             ? t
@@ -91,7 +91,7 @@ let d = () => {
                   failureReason: s.U0.NotInConfettiMode,
               };
     },
-    h = function (e) {
+    m = function (e) {
         var t;
         let n =
                 arguments.length > 1 && void 0 !== arguments[1]
@@ -107,14 +107,14 @@ let d = () => {
         if (!d()) return;
         let l = (0, c.Eq)(e),
             f = (null == l || null == (t = l.emoji) ? void 0 : t[0].id) == null,
-            { shouldPlay: p, failureReason: h } = _(e, i);
+            { shouldPlay: _, failureReason: m } = p(e, i);
         a.default.track(u.rMx.CONFETTI_POTION_TRIGGERED, {
             emoji_type: f ? s.aK.Unicode : s.aK.UserCreated,
-            will_play: p,
-            failure_reason: h,
+            will_play: _,
+            failure_reason: m,
             location: o,
         }),
-            p &&
+            _ &&
                 null != l &&
                 l.emoji.forEach((e) => {
                     r.Z.dispatch({

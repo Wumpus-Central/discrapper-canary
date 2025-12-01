@@ -1,39 +1,39 @@
-_.d(e, {
-    CC: () => E,
+r.d(t, {
+    CC: () => _,
     GY: () => o,
 });
-var a = _(899517);
-let r = new Map(),
-    n = new Set();
-function o(t, e) {
+var n = r(899517);
+let a = new Map(),
+    i = new Set();
+function o(e, t) {
     try {
-        e.exception.values.forEach((e) => {
-            if (e.stacktrace)
-                for (let _ of e.stacktrace.frames || []) {
-                    if (!_.filename || _.module_metadata) continue;
-                    let e = (function (t, e) {
-                        if (a.n._sentryModuleMetadata)
-                            for (let e of Object.keys(a.n._sentryModuleMetadata)) {
-                                let _ = a.n._sentryModuleMetadata[e];
-                                if (!n.has(e)) {
-                                    for (let a of (n.add(e), t(e).reverse()))
-                                        if (a.filename) {
-                                            r.set(a.filename, _);
+        t.exception.values.forEach((t) => {
+            if (t.stacktrace)
+                for (let r of t.stacktrace.frames || []) {
+                    if (!r.filename || r.module_metadata) continue;
+                    let t = (function (e, t) {
+                        if (n.n._sentryModuleMetadata)
+                            for (let t of Object.keys(n.n._sentryModuleMetadata)) {
+                                let r = n.n._sentryModuleMetadata[t];
+                                if (!i.has(t)) {
+                                    for (let n of (i.add(t), e(t).reverse()))
+                                        if (n.filename) {
+                                            a.set(n.filename, r);
                                             break;
                                         }
                                 }
                             }
-                        return r.get(e);
-                    })(t, _.filename);
-                    e && (_.module_metadata = e);
+                        return a.get(t);
+                    })(e, r.filename);
+                    t && (r.module_metadata = t);
                 }
         });
-    } catch (t) {}
+    } catch (e) {}
 }
-function E(t) {
+function _(e) {
     try {
-        t.exception.values.forEach((t) => {
-            if (t.stacktrace) for (let e of t.stacktrace.frames || []) delete e.module_metadata;
+        e.exception.values.forEach((e) => {
+            if (e.stacktrace) for (let t of e.stacktrace.frames || []) delete t.module_metadata;
         });
-    } catch (t) {}
+    } catch (e) {}
 }

@@ -30,7 +30,7 @@ async function f(e, t) {
             extraInfo: t,
             mediaEngineState: o.Z.getState(),
         },
-        _ = [
+        p = [
             ...a.map((e) => ({
                 name: e.name,
                 file: e,
@@ -42,13 +42,13 @@ async function f(e, t) {
                 file: new Blob([JSON.stringify(f, void 0, 2)]),
             },
         ],
-        p = new Set();
+        _ = new Set();
     try {
         n = await r.tn.post({
             url: c.ANM.DEBUG_LOGS(c.GU0.RTC),
             attachments: [
-                ..._.map((e) => {
-                    let t = d(p, e.name);
+                ...p.map((e) => {
+                    let t = d(_, e.name);
                     return {
                         name: t,
                         file: e.file,
@@ -65,9 +65,9 @@ async function f(e, t) {
             new i.n0(i.cz.UPLOAD))
         );
     }
-    if ("success_count" in n.body && n.body.success_count !== _.length)
+    if ("success_count" in n.body && n.body.success_count !== p.length)
         throw (
-            (u.error("Debug log upload: stored files ".concat(n.body.success_count, " !== ").concat(_.length)),
+            (u.error("Debug log upload: stored files ".concat(n.body.success_count, " !== ").concat(p.length)),
             new i.n0(i.cz.GENERAL))
         );
     if (

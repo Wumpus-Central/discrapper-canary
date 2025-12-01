@@ -23,20 +23,20 @@ let c = !1,
 function f() {
     c = !0;
 }
-function _(e) {
+function p(e) {
     let { userId: t, settings: n, consents: r } = e;
     null != n && (u[t] = (0, s.ac)(n)), null != r && (d[t] = r), (c = !1);
 }
-function p(e) {
+function _(e) {
     let { userId: t, consents: n } = e;
     d[t] = n;
 }
-function h(e) {
+function m(e) {
     let { userId: t, settings: n } = e,
         r = (0, s.ac)(n);
     u[t] = (0, s.re)(a.o8, u[t], r);
 }
-function m() {
+function h() {
     (u = {}), (d = {}), (c = !1);
 }
 class g extends (r = i.ZP.Store) {
@@ -64,8 +64,8 @@ class g extends (r = i.ZP.Store) {
 l(g, "displayName", "FamilyCenterControlledSettingsStore");
 let E = new g(o.Z, {
     FAMILY_CENTER_TEEN_SETTINGS_FETCH_START: f,
-    FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS_FETCH_SUCCESS: _,
-    FAMILY_CENTER_TEEN_CONSENTS_UPDATE_SUCCESS: p,
-    FAMILY_CENTER_TEEN_UPDATE_SETTINGS_SUCCESS: h,
-    LOGOUT: m,
+    FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS_FETCH_SUCCESS: p,
+    FAMILY_CENTER_TEEN_CONSENTS_UPDATE_SUCCESS: _,
+    FAMILY_CENTER_TEEN_UPDATE_SETTINGS_SUCCESS: m,
+    LOGOUT: h,
 });

@@ -21,14 +21,14 @@ function c(e, t, n) {
 let u = {},
     d = null,
     f = 86400000,
-    _ = 3600000;
-function p() {
+    p = 3600000;
+function _() {
     s.d.getCurrentConfig({ location: "LibraryApplicationStatisticsStore.handleConnectionOpen" }).enabled && (0, o.N)();
 }
-function h() {
+function m() {
     (u = {}), (d = null);
 }
-function m(e) {
+function h(e) {
     let { statistics: t } = e;
     t.forEach((e) => {
         u[e.application_id] = e;
@@ -80,7 +80,7 @@ class E extends (r = i.ZP.Store) {
             n = 0;
         if (null != t) {
             let e = Math.floor((Date.now() - new Date(t.last_played_at).getTime()) / f),
-                r = Math.floor((1000 * t.total_duration) / _);
+                r = Math.floor((1000 * t.total_duration) / p);
             0 === e
                 ? (n += 50)
                 : e >= 1 && e < 2
@@ -105,8 +105,8 @@ class E extends (r = i.ZP.Store) {
 }
 c(E, "displayName", "LibraryApplicationStatisticsStore");
 let b = new E(a.Z, {
-    USER_ACTIVITY_STATISTICS_FETCH_SUCCESS: m,
+    USER_ACTIVITY_STATISTICS_FETCH_SUCCESS: h,
     ACTIVITY_UPDATE_START: g,
-    LOGOUT: h,
-    CONNECTION_OPEN: p,
+    LOGOUT: m,
+    CONNECTION_OPEN: _,
 });

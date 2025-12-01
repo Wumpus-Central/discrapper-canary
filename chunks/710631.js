@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(159300),
     d = n(592125),
     f = n(984933),
-    _ = n(430824),
-    p = n(496675),
-    h = n(699516),
-    m = n(771845),
+    p = n(430824),
+    _ = n(496675),
+    m = n(699516),
+    h = n(771845),
     g = n(594174),
     E = n(981631),
     b = n(388032);
@@ -57,7 +57,7 @@ function v(e, t) {
     }
     return n;
 }
-function I(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -68,8 +68,8 @@ function I(e, t) {
         e
     );
 }
-let T = "max_uses",
-    S = "User Invite Context Menu",
+let I = "max_uses",
+    T = "User Invite Context Menu",
     A = "context_menu";
 function C(e, t) {
     s.Z.ensurePrivateChannel(e).then((e) => {
@@ -79,13 +79,13 @@ function C(e, t) {
 function N(e) {
     let { user: t, guildId: n, onAction: s } = e,
         c = (0, a.e7)([g.default], () => g.default.getCurrentUser(), []),
-        d = (0, a.Wu)([m.ZP, _.Z, p.Z], () => {
-            let e = m.ZP.getFlattenedGuildIds(),
+        d = (0, a.Wu)([h.ZP, p.Z, _.Z], () => {
+            let e = h.ZP.getFlattenedGuildIds(),
                 t = [];
             return (
                 e.forEach((e) => {
-                    let r = _.Z.getGuild(e);
-                    null != r && (0, u.b)(p.Z, r) && r.id !== n && t.push(r);
+                    let r = p.Z.getGuild(e);
+                    null != r && (0, u.b)(_.Z, r) && r.id !== n && t.push(r);
                 }),
                 t
             );
@@ -94,19 +94,19 @@ function N(e) {
     function A(e, t) {
         let n = f.ZP.getDefaultChannel(e.id, !0, E.Plq.CREATE_INSTANT_INVITE);
         if (null != n) {
-            if ((v(I(O({}, y), { [e.id]: !0 })), !p.Z.can(E.Plq.CREATE_INSTANT_INVITE, e) && null != e.vanityURLCode))
+            if ((v(S(O({}, y), { [e.id]: !0 })), !_.Z.can(E.Plq.CREATE_INSTANT_INVITE, e) && null != e.vanityURLCode))
                 return void C(t, e.vanityURLCode);
             l.ZP.createInvite(
                 n.id,
                 {
-                    [T]: 1,
+                    [I]: 1,
                     unique: !0,
                 },
-                S,
+                T,
             ).then((e) => C(t, e.code));
         }
     }
-    return (null == c ? void 0 : c.id) === t.id || t.bot || 0 === d.length || h.Z.isBlockedOrIgnored(t.id)
+    return (null == c ? void 0 : c.id) === t.id || t.bot || 0 === d.length || m.Z.isBlockedOrIgnored(t.id)
         ? null
         : (0, r.jsx)(o.sNh, {
               id: "invite-to-server",

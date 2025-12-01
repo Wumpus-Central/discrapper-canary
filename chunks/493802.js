@@ -1,19 +1,19 @@
-n.d(t, { Z: () => s });
-var i = n(54381);
-n(473749);
-var r = n(442837),
-    l = n(481060),
-    a = n(5036),
-    o = n(58468),
-    c = n(388032);
-function s(e) {
-    let t = (0, r.e7)([o.Z], () => o.Z.isCollapsed(e.id), [e.id]);
+e.d(t, { Z: () => o });
+var i = e(54381);
+e(473749);
+var l = e(442837),
+    r = e(481060),
+    a = e(5036),
+    c = e(58468),
+    s = e(388032);
+function o(n) {
+    let t = (0, l.e7)([c.Z], () => c.Z.isCollapsed(n.id), [n.id]);
     return __OVERLAY__
         ? null
-        : (0, i.jsx)(l.S89, {
+        : (0, i.jsx)(r.S89, {
               id: "hide-voice-names",
-              label: c.intl.string(c.t.LxzNiu),
-              action: () => a.Z.update(e.id),
+              label: s.intl.string(s.t.LxzNiu),
+              action: () => a.Z.update(n.id),
               checked: t,
           });
 }

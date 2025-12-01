@@ -1,5 +1,5 @@
 n.d(t, {
-    m$: () => p,
+    m$: () => f,
     wV: () => u,
     zU: () => d,
 });
@@ -30,7 +30,7 @@ function d(e) {
         return n !== e && a.Z.isStreamVerified(t);
     }, [u, o, t]);
 }
-function p(e) {
+function f(e) {
     let { channelId: t } = e,
         n = (0, c.J)({ channelId: t }),
         i = (0, s.r)();

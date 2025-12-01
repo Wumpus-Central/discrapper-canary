@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(990169),
     d = n(476326),
     f = n(752305),
-    _ = n(703558),
-    p = n(358085),
-    h = n(998502),
-    m = n(981631),
+    p = n(703558),
+    _ = n(358085),
+    m = n(998502),
+    h = n(981631),
     g = n(388032),
     E = n(374450);
 function b(e, t, n) {
@@ -67,17 +67,17 @@ function v(e, t) {
         e
     );
 }
-let I = 104,
-    T = 16;
-function S(e) {
+let S = 104,
+    I = 16;
+function T(e) {
     var t, n, a;
     let { file: s } = e,
         [l, c] = i.useState(),
         [d, f] = i.useState(!1),
-        [_, p] = i.useState({}),
-        h = i.useRef(null);
+        [p, _] = i.useState({}),
+        m = i.useRef(null);
     i.useEffect(() => {
-        if ((null != h.current && f(!1), null == s)) return;
+        if ((null != m.current && f(!1), null == s)) return;
         let e = URL.createObjectURL(s);
         return (
             c(e),
@@ -87,38 +87,38 @@ function S(e) {
         );
     }, [s]),
         i.useLayoutEffect(() => {
-            let e = h.current;
+            let e = m.current;
             null != e &&
                 (e.onload = () => {
                     let t = Math.max(0.66, Math.min(e.naturalWidth / e.naturalHeight, 4));
                     1 === t
-                        ? p({
-                              width: I,
-                              height: I,
+                        ? _({
+                              width: S,
+                              height: S,
                           })
                         : t > 1
-                          ? p({
-                                width: I * t,
+                          ? _({
+                                width: S * t,
                                 height: void 0,
                             })
-                          : p({
+                          : _({
                                 width: void 0,
-                                height: I / t,
+                                height: S / t,
                             }),
                         f(!0);
                 });
         }, []);
-    let m = (0, u.Z)(h),
-        g = Math.max(16, (T + I - (null != (t = null == m ? void 0 : m.width) ? t : 0)) / 2);
+    let h = (0, u.Z)(m),
+        g = Math.max(16, (I + S - (null != (t = null == h ? void 0 : h.width) ? t : 0)) / 2);
     return (0, r.jsx)("img", {
-        ref: h,
+        ref: m,
         src: l,
         className: o()(E.fileIcon, { [E.image]: !d }),
         "aria-hidden": !0,
         alt: "",
         style: {
-            width: null != (n = _.width) ? n : "initial",
-            maxHeight: null != (a = _.height) ? a : I,
+            width: null != (n = p.width) ? n : "initial",
+            maxHeight: null != (a = p.height) ? a : S,
             height: "unset",
             marginLeft: g,
             marginRight: g,
@@ -132,7 +132,7 @@ class A extends i.Component {
         return this.props.upload.item.platform !== d.ow.WEB
             ? null
             : this.props.upload.isImage
-              ? (0, r.jsx)(S, { file: this.props.upload.item.file })
+              ? (0, r.jsx)(T, { file: this.props.upload.item.file })
               : (0, r.jsx)("div", {
                     className: o()(E.fileIcon, { [E[null != (e = this.props.upload.classification) ? e : ""]]: !0 }),
                 });
@@ -140,7 +140,7 @@ class A extends i.Component {
 }
 class C extends i.Component {
     componentDidMount() {
-        p.isPlatformEmbedded && h.ZP.focus();
+        _.isPlatformEmbedded && m.ZP.focus();
     }
     shouldComponentUpdate(e) {
         return null != e.upload;
@@ -182,7 +182,7 @@ class C extends i.Component {
                                     value: this.state.filename,
                                     onChange: (e) => this.setState({ filename: e }),
                                     onKeyDown: (e) => {
-                                        if (e.which === m.yXg.ENTER) return this.handleSubmit();
+                                        if (e.which === h.yXg.ENTER) return this.handleSubmit();
                                     },
                                 }),
                                 e.isImage
@@ -192,7 +192,7 @@ class C extends i.Component {
                                           value: this.state.description,
                                           onChange: (e) => this.setState({ description: e }),
                                           onKeyDown: (e) => {
-                                              if (e.which === m.yXg.ENTER) return this.handleSubmit();
+                                              if (e.which === h.yXg.ENTER) return this.handleSubmit();
                                           },
                                       })
                                     : null,
@@ -235,7 +235,7 @@ class C extends i.Component {
                 }),
                     t();
             });
-        let s = e.ignoreDraft ? "" : _.Z.getDraft(this.props.channelId, e.draftType);
+        let s = e.ignoreDraft ? "" : p.Z.getDraft(this.props.channelId, e.draftType);
         this.state = v(y({}, (0, f.eK)(s)), {
             textFocused: !0,
             hasSpoiler: null != (i = null == (t = e.upload) ? void 0 : t.spoiler) && i,

@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(692547),
     d = n(571155),
     f = n(652728),
-    _ = n(715644),
-    p = n(131573),
-    h = n(777207),
-    m = n(194255),
+    p = n(715644),
+    _ = n(131573),
+    m = n(777207),
+    h = n(194255),
     g = n(199197),
     E = n(95632);
 function b(e, t, n) {
@@ -67,11 +67,11 @@ function v(e, t) {
         e
     );
 }
-function I(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = T(e, t);
+        i = I(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -79,7 +79,7 @@ function I(e, t) {
     }
     return i;
 }
-function T(e, t) {
+function I(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -88,7 +88,7 @@ function T(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let S = u.Z.modules.select.OPTION_HEIGHT.resolve();
+let T = u.Z.modules.select.OPTION_HEIGHT.resolve();
 function A(e) {
     let t,
         {
@@ -99,52 +99,52 @@ function A(e) {
             items: f,
             defaultSelectedItems: b,
             selectedItems: O,
-            onSelectionChange: T,
+            onSelectionChange: I,
             activeDescendantIndex: A,
-            shouldFocusWrap: R = !1,
-            renderListItem: P,
-            renderEmptyState: D,
-            maxVisibleItems: w = 5,
-            loading: L = !1,
-            onBlur: x,
-            onFocus: M,
-            typeahead: k = !1,
+            shouldFocusWrap: P = !1,
+            renderListItem: R,
+            renderEmptyState: w,
+            maxVisibleItems: D = 5,
+            loading: x = !1,
+            onBlur: L,
+            onFocus: j,
+            typeahead: M = !1,
         } = e,
-        j = i.useId(),
-        U = null != n ? n : j,
+        k = i.useId(),
+        U = null != n ? n : k,
         G = i.useMemo(() => f.map((e, t) => v(y({}, e), { index: t })), [f]),
-        [B, Z] = i.useState(null != b ? b : []),
+        [Z, B] = i.useState(null != b ? b : []),
         F = null != O,
-        V = F ? O : B,
+        V = F ? O : Z,
         H = (0, s.ZP)({
             id: U,
             async scrollToEnd() {},
             async scrollToStart() {},
             isEnabled: !u,
-            wrap: R,
+            wrap: P,
             preserveFocusPosition: !0,
         }),
-        { activeIndex: Y, handleKeyDown: W } = N(k, G);
+        { activeIndex: Y, handleKeyDown: W } = N(M, G);
     i.useEffect(() => {
-        if (null != Y && k) {
+        if (null != Y && M) {
             let e = (0, l.jb)(U, (0, g.cA)(U, Y)),
                 t = document.querySelector((0, l.P1)(e));
             null == t || t.focus();
         }
-    }, [Y, G, k, U]);
+    }, [Y, G, M, U]);
     let K = i.useCallback(
             (e) => {
                 if (!0 === a && 1 === V.length && V.includes(e)) return;
                 let t = (0, g.cq)(d, V, e);
-                F || Z(t), null == T || T(t);
+                F || B(t), null == I || I(t);
             },
-            [a, V, T, F, d],
+            [a, V, I, F, d],
         ),
         z = i.useCallback(
             (e) =>
                 (0, r.jsx)("div", {
                     className: E.listBoxItemContent,
-                    children: (0, r.jsx)(h.x, {
+                    children: (0, r.jsx)(m.x, {
                         variant: "text-md/medium",
                         color: "currentColor",
                         className: E.listBoxItemLabel,
@@ -153,21 +153,21 @@ function A(e) {
                 }),
             [],
         );
-    if (L)
+    if (x)
         t = (0, r.jsx)("div", {
             className: E.loadingSpinnerWrapper,
             "aria-busy": !0,
-            children: (0, r.jsx)(p.$, {
-                type: p.R.PULSING_ELLIPSIS,
+            children: (0, r.jsx)(_.$, {
+                type: _.R.PULSING_ELLIPSIS,
                 className: E.loadingSpinner,
                 itemClassName: E.loadingSpinnerInner,
             }),
         });
     else if (G.length > 0)
-        t = (0, r.jsx)(_._2, {
-            style: { height: null != w ? "".concat(Math.min(G.length, w) * S, "px") : "100%" },
+        t = (0, r.jsx)(p._2, {
+            style: { height: null != D ? "".concat(Math.min(G.length, D) * T, "px") : "100%" },
             role: void 0,
-            rowHeight: S,
+            rowHeight: T,
             sections: [G.length],
             sectionHeight: 0,
             renderSection: () => null,
@@ -188,7 +188,7 @@ function A(e) {
                         onClick: () => {
                             u || i.disabled || K(i);
                         },
-                        children: null != (t = null == P ? void 0 : P(i)) ? t : z(i),
+                        children: null != (t = null == R ? void 0 : R(i)) ? t : z(i),
                     }),
                     i.index,
                 );
@@ -196,22 +196,22 @@ function A(e) {
         });
     else {
         var q;
-        t = null != (q = null == D ? void 0 : D()) ? q : (0, r.jsx)(m.z, {});
+        t = null != (q = null == w ? void 0 : w()) ? q : (0, r.jsx)(h.z, {});
     }
     return (0, r.jsx)(c.bG, {
         navigator: H,
         children: (0, r.jsx)(c.SJ, {
             children: (e) => {
                 var { ref: n, onKeyDown: i } = e,
-                    a = I(e, ["ref", "onKeyDown"]);
+                    a = S(e, ["ref", "onKeyDown"]);
                 return (0, r.jsx)(
                     "div",
                     v(
                         y(
                             {
-                                onBlur: x,
-                                onFocus: M,
-                                "aria-busy": L,
+                                onBlur: L,
+                                onFocus: j,
+                                "aria-busy": x,
                                 ref: n,
                                 onKeyDown: (e) => {
                                     null == i || i(e), W(e);
@@ -222,7 +222,7 @@ function A(e) {
                         {
                             role: "listbox",
                             "aria-multiselectable": "multiple" === d,
-                            className: o()(E.listBox, { [E.scrollable]: G.length > w }),
+                            className: o()(E.listBox, { [E.scrollable]: G.length > D }),
                             "data-mana-component": "listbox",
                             children: t,
                         },
@@ -235,7 +235,7 @@ function A(e) {
 function C(e) {
     let { children: t, id: n, selected: i, disabled: a, focused: o, selectionMode: s, onClick: l } = e,
         u = (0, c.JA)(n);
-    function _() {
+    function p() {
         return "multiple" === s
             ? (0, r.jsx)(d.F, { checked: i })
             : i
@@ -261,7 +261,7 @@ function C(e) {
                 (0, r.jsx)("div", {
                     className: E.selectedIcon,
                     "aria-hidden": !0,
-                    children: _(),
+                    children: p(),
                 }),
             ],
         }),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685), n(583741);
+n.d(t, { Z: () => x }), n(388685), n(583741);
 var i = n(54381),
     r = n(473749),
     l = n(392711),
@@ -18,15 +18,15 @@ var i = n(54381),
     C = n(981631),
     v = n(388032),
     _ = n(315146);
-let x = "749054660769218631";
-function j(e) {
+let O = "749054660769218631";
+function x(e) {
     var t;
     let { channel: n } = e,
-        [l, j] = r.useState("");
+        [l, x] = r.useState("");
     r.useEffect(() => {
         (0, u.FQ)("847199849233514549", !0);
     }, []);
-    let O = (0, o.e7)(
+    let j = (0, o.e7)(
             [f.Z, h.default],
             () =>
                 !!a()(f.Z.getMessages(n.id).toArray())
@@ -35,11 +35,11 @@ function j(e) {
         ),
         E = (0, o.e7)([m.default], () => m.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
         S = null != (t = b.ZP.useName(E)) ? t : v.intl.string(v.t.y1Wu2f),
-        P = (0, o.e7)([d.Z], () => d.Z.getStickerById(x)),
+        P = (0, o.e7)([d.Z], () => d.Z.getStickerById(O)),
         I = r.useCallback(async () => {
             if (null == l || "" === l)
                 try {
-                    await c.Z.sendGreetMessage(n.id, x),
+                    await c.Z.sendGreetMessage(n.id, O),
                         g.default.track(C.rMx.DM_EMPTY_ACTION, {
                             channel_id: n.id,
                             channel_type: n.type,
@@ -47,7 +47,7 @@ function j(e) {
                             type: "Send wave",
                         });
                 } catch (e) {
-                    e.ok || 429 !== e.status || j(v.intl.string(v.t.Whhv4w));
+                    e.ok || 429 !== e.status || x(v.intl.string(v.t.Whhv4w));
                 }
         }, [n.id, n.type, l]),
         Z = v.intl.formatToPlainString(v.t.m0zYbV, { username: S }),
@@ -60,7 +60,7 @@ function j(e) {
                       children: l,
                   })
                 : null;
-    return O
+    return j
         ? (0, i.jsxs)("div", {
               className: _.containerCompact,
               children: [

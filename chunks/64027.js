@@ -13,15 +13,15 @@ function s(e) {
             className: u,
             children: d,
             wrap: f = !0,
-            fullWidth: _ = !1,
-            fullWidthContainer: p = !1,
+            fullWidth: p = !1,
+            fullWidthContainer: _ = !1,
         } = e,
-        h = i.useMemo(
+        m = i.useMemo(
             () => ({
                 size: t,
-                fullWidth: _,
+                fullWidth: p,
             }),
-            [t, _],
+            [t, p],
         );
     return (0, r.jsx)(a.K, {
         direction: n,
@@ -31,9 +31,9 @@ function s(e) {
         wrap: f,
         padding: c,
         className: u,
-        fullWidth: !!p || _,
+        fullWidth: !!_ || p,
         children: (0, r.jsx)(o.u.Provider, {
-            value: h,
+            value: m,
             children: d,
         }),
     });

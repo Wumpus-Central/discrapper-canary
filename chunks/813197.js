@@ -1,6 +1,6 @@
 n.d(t, {
     Fq: () => f,
-    ZP: () => p,
+    ZP: () => _,
     Zj: () => u,
 }),
     n(388685);
@@ -54,7 +54,7 @@ function f(e, t, n) {
             });
     });
 }
-class _ extends (r = a.PureComponent) {
+class p extends (r = a.PureComponent) {
     componentDidMount() {
         this._isMounted = !0;
     }
@@ -105,9 +105,9 @@ class _ extends (r = a.PureComponent) {
             });
     }
 }
-c(_, "defaultProps", {
+c(p, "defaultProps", {
     multiple: !0,
     tabIndex: -1,
     maxFileSizeBytes: 1 / 0,
 });
-let p = _;
+let _ = p;

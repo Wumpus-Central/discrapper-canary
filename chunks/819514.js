@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(481060),
     u = n(332148),
     d = n(904245),
-    p = n(933557),
+    f = n(933557),
     h = n(576855),
-    f = n(372900),
+    p = n(372900),
     g = n(726521),
     m = n(501517),
     b = n(699516),
@@ -19,8 +19,8 @@ var r = n(54381),
     O = n(294218),
     v = n(981631),
     j = n(388032),
-    C = n(342153),
-    x = n(625221);
+    x = n(342153),
+    C = n(625221);
 function E(e, t, n) {
     return (
         t in e
@@ -74,7 +74,7 @@ class P extends i.PureComponent {
             t,
             { report: n, resolveFlag: i } = this.state,
             l = this.props,
-            { channel: o, message: u, showContextMenuHint: d, moderatorReportData: p } = l,
+            { channel: o, message: u, showContextMenuHint: d, moderatorReportData: f } = l,
             g = (function (e, t) {
                 if (null == e) return {};
                 var n,
@@ -99,12 +99,12 @@ class P extends i.PureComponent {
             m = o.type === v.d4z.GUILD_ANNOUNCEMENT && (0, a.yE)(u.flags, v.iLy.CROSSPOSTED);
         d &&
             (e = (0, r.jsx)(h.Z, {
-                className: x.spacingTop,
+                className: C.spacingTop,
                 children: j.intl.format(j.t.IxY7E6, {}),
             })),
             (0, y.vc)(u) &&
                 (t = (0, r.jsx)("div", {
-                    className: x.spacingTop,
+                    className: C.spacingTop,
                     children: (0, r.jsx)(c.rsf, {
                         label: j.intl.string(j.t.x0jzo9),
                         checked: n,
@@ -115,7 +115,7 @@ class P extends i.PureComponent {
             _ = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)("div", {
-                        className: x.message,
+                        className: C.message,
                         children: (0, r.jsx)(O.Z, {
                             channel: o,
                             message: u,
@@ -126,9 +126,9 @@ class P extends i.PureComponent {
                     e,
                 ],
             });
-        if ((null == p ? void 0 : p.moderatorReportChannelId) != null) {
-            let { isFlagResolved: e } = p;
-            return (0, r.jsx)(f.Z.Provider, {
+        if ((null == f ? void 0 : f.moderatorReportChannelId) != null) {
+            let { isFlagResolved: e } = f;
+            return (0, r.jsx)(p.Z.Provider, {
                 value: o.guild_id,
                 children: (0, r.jsx)(
                     s.Modal,
@@ -148,7 +148,7 @@ class P extends i.PureComponent {
                                     ? void 0
                                     : (0, r.jsx)(c.Checkbox, {
                                           checked: i,
-                                          label: j.intl.string(C.default["8yIKem"]),
+                                          label: j.intl.string(x.default["8yIKem"]),
                                           onChange: (e) => this.handleToggleResolveFlag(e),
                                       }),
                             },
@@ -159,7 +159,7 @@ class P extends i.PureComponent {
                 ),
             });
         }
-        return (0, r.jsx)(f.Z.Provider, {
+        return (0, r.jsx)(p.Z.Provider, {
             value: o.guild_id,
             children: (0, r.jsx)(s.Modal, {
                 title: m ? j.intl.string(j.t.aIz1oV) : j.intl.string(j.t.MWMcg7),
@@ -224,12 +224,12 @@ let N = {
     confirmPin: function (e, t) {
         (0, c.h7j)((n) => {
             let i,
-                l = (0, p.F6)(e, _.default, b.Z);
+                l = (0, f.F6)(e, _.default, b.Z);
             return (
                 (i = e.isPrivate()
                     ? j.intl.string(j.t.hMRngA)
                     : j.intl.formatToPlainString(j.t["3IRluI"], { channelName: l })),
-                (0, r.jsx)(f.Z.Provider, {
+                (0, r.jsx)(p.Z.Provider, {
                     value: e.guild_id,
                     children: (0, r.jsx)(
                         s.Modal,
@@ -257,7 +257,7 @@ let N = {
                             ),
                             {
                                 children: (0, r.jsx)("div", {
-                                    className: x.message,
+                                    className: C.message,
                                     children: (0, r.jsx)(O.Z, {
                                         channel: e,
                                         message: t,
@@ -274,7 +274,7 @@ let N = {
     },
     confirmUnpin: function (e, t) {
         (0, c.h7j)((n) =>
-            (0, r.jsx)(f.Z.Provider, {
+            (0, r.jsx)(p.Z.Provider, {
                 value: e.guild_id,
                 children: (0, r.jsxs)(
                     s.Modal,
@@ -303,7 +303,7 @@ let N = {
                         {
                             children: [
                                 (0, r.jsx)("div", {
-                                    className: o()(x.message, x.spacing),
+                                    className: o()(C.message, C.spacing),
                                     children: (0, r.jsx)(O.Z, {
                                         channel: e,
                                         message: t,
@@ -364,7 +364,7 @@ let N = {
                     {
                         children: (0, r.jsx)(c.Text, {
                             variant: "text-md/normal",
-                            className: x.spacing,
+                            className: C.spacing,
                             children: j.intl.string(j.t.grBcM8),
                         }),
                     },

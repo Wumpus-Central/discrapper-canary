@@ -7,16 +7,16 @@ var r = n(473749),
 function l(e) {
     var t, n, l;
     let { navId: c, scrollerRef: u, state: d, onFocus: f } = e,
-        { renderWindow: _ } = r.useContext(o.ZP),
-        p = (e, t) => {
-            let n = _.document.querySelector(e);
+        { renderWindow: p } = r.useContext(o.ZP),
+        _ = (e, t) => {
+            let n = p.document.querySelector(e);
             if (null != n) {
                 var r;
                 null == (r = u.current) || r.scrollIntoViewNode({ node: n });
             }
             null == f || f(+t);
         },
-        h = (e, t) => {
+        m = (e, t) => {
             var n;
             if ((null == (n = u.current) || n.scrollToTop(), e && null != d.query)) {
                 let e = d.query.typeInfo.focusMode,
@@ -26,7 +26,7 @@ function l(e) {
                     : (g.setFocus(null), null == f || f(null));
             }
         },
-        m = (e) => {
+        h = (e) => {
             var t;
             if ((null == (t = u.current) || t.scrollToBottom(), e && null != d.query && d.query.resultCount > 0)) {
                 let e = d.query.resultCount - 1;
@@ -38,16 +38,16 @@ function l(e) {
             isEnabled: d.isVisible,
             orientation: a.hy.VERTICAL,
             useVirtualFocus: !0,
-            setFocus: p,
-            onNavigateNextAtEnd: () => h(!0),
-            onNavigatePreviousAtStart: () => m(!0),
-            scrollToStart: () => (h(!1, !1), Promise.resolve()),
-            scrollToEnd: () => (m(!1), Promise.resolve()),
+            setFocus: _,
+            onNavigateNextAtEnd: () => m(!0),
+            onNavigatePreviousAtStart: () => h(!0),
+            scrollToStart: () => (m(!1, !1), Promise.resolve()),
+            scrollToEnd: () => (h(!1), Promise.resolve()),
         }),
-        E = r.useRef(h);
+        E = r.useRef(m);
     return (
         r.useEffect(() => {
-            E.current = h;
+            E.current = m;
         }),
         r.useEffect(() => {
             E.current(!0, !0);

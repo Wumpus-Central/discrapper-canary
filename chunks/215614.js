@@ -11,10 +11,10 @@ function d(e, t, n) {
     let {
         isVirtualized: d,
         keyboardDelegate: f,
-        layoutDelegate: _,
-        onAction: p,
-        disallowTypeAhead: h,
-        linkBehavior: m = "action",
+        layoutDelegate: p,
+        onAction: _,
+        disallowTypeAhead: m,
+        linkBehavior: h = "action",
         keyboardNavigationBehavior: g = "arrow",
         escapeKeyBehavior: E = "clearSelection",
         shouldSelectOnPressUp: b,
@@ -28,38 +28,38 @@ function d(e, t, n) {
             disabledKeys: t.disabledKeys,
             ref: n,
             keyboardDelegate: f,
-            layoutDelegate: _,
+            layoutDelegate: p,
             isVirtualized: d,
             selectOnFocus: "replace" === t.selectionManager.selectionBehavior,
             shouldFocusWrap: e.shouldFocusWrap,
-            linkBehavior: m,
-            disallowTypeAhead: h,
+            linkBehavior: h,
+            disallowTypeAhead: m,
             autoFocus: e.autoFocus,
             escapeKeyBehavior: E,
         }),
         O = (0, i.Me)(e.id);
     r.Co.set(t, {
         id: O,
-        onAction: p,
-        linkBehavior: m,
+        onAction: _,
+        linkBehavior: h,
         keyboardNavigationBehavior: g,
         shouldSelectOnPressUp: b,
     });
     let v = (0, s.j)({
             selectionManager: t.selectionManager,
-            hasItemActions: !!p,
+            hasItemActions: !!_,
         }),
-        I = (0, c.p)(n, { isDisabled: 0 !== t.collection.size }),
-        T = (0, a.z)(e, { labelable: !0 }),
-        S = (0, o.d)(
-            T,
+        S = (0, c.p)(n, { isDisabled: 0 !== t.collection.size }),
+        I = (0, a.z)(e, { labelable: !0 }),
+        T = (0, o.d)(
+            I,
             {
                 role: "grid",
                 id: O,
                 "aria-multiselectable": "multiple" === t.selectionManager.selectionMode ? "true" : void 0,
             },
-            0 === t.collection.size ? { tabIndex: I ? -1 : 0 } : y,
+            0 === t.collection.size ? { tabIndex: S ? -1 : 0 } : y,
             v,
         );
-    return d && ((S["aria-rowcount"] = t.collection.size), (S["aria-colcount"] = 1)), (0, l.B)({}, t), { gridProps: S };
+    return d && ((T["aria-rowcount"] = t.collection.size), (T["aria-colcount"] = 1)), (0, l.B)({}, t), { gridProps: T };
 }

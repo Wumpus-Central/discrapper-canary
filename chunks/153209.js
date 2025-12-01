@@ -13,9 +13,9 @@ var r = n(54381),
     c = n(497089),
     u = n(178480),
     d = n(11799),
-    p = n(616032),
+    f = n(616032),
     h = n(695346),
-    f = n(626135),
+    p = n(626135),
     g = n(709054),
     m = n(981631),
     b = n(388032);
@@ -25,7 +25,7 @@ function _() {
             t,
             (0, l.e7)([s.Z], () => s.Z.localItems),
         );
-    return (0, r.jsx)(p.Z, {
+    return (0, r.jsx)(f.Z, {
         initialized: e,
         items: o,
         loading: n,
@@ -42,15 +42,15 @@ function O() {
             e,
             (0, l.e7)([s.Z], () => s.Z.localItems),
         ),
-        p = h.d$.useSetting();
+        f = h.d$.useSetting();
     return i.useMemo(() => {
-        if (null != t && 0 >= g.default.compare(t.id, p)) return !1;
+        if (null != t && 0 >= g.default.compare(t.id, f)) return !1;
         for (let e of n) {
-            if (0 >= g.default.compare(e.id, p)) break;
-            if (!(0, u.r)(e, p)) return !0;
+            if (0 >= g.default.compare(e.id, f)) break;
+            if (!(0, u.r)(e, f)) return !0;
         }
         return !1;
-    }, [t, p, n])
+    }, [t, f, n])
         ? (0, r.jsx)(o.u, {
               text: b.intl.string(b.t["8k+6QY"]),
               children: (0, r.jsx)(a.hU, {
@@ -61,7 +61,7 @@ function O() {
                   onClick: () => {
                       null != t &&
                           (h.d$.updateSetting(t.id),
-                          f.default.track(m.rMx.NOTIFICATION_CENTER_ACTION, { action_type: c.ud.MARK_ALL_READ }));
+                          p.default.track(m.rMx.NOTIFICATION_CENTER_ACTION, { action_type: c.ud.MARK_ALL_READ }));
                   },
               }),
           })

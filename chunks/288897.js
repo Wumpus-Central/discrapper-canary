@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685), n(704826), n(35282);
+n.d(t, { Z: () => P }), n(388685), n(704826), n(35282);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(358085),
     d = n(960048),
     f = n(752305),
-    _ = n(53529),
-    p = n(789952),
-    h = n(436660),
-    m = n(887490),
+    p = n(53529),
+    _ = n(789952),
+    m = n(436660),
+    h = n(887490),
     g = n(704875),
     E = n(653309),
     b = n(981631),
@@ -31,7 +31,7 @@ function v(e, t, n) {
         e
     );
 }
-function I(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,7 +47,7 @@ function I(e) {
     }
     return e;
 }
-function T(e, t) {
+function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -59,12 +59,12 @@ function T(e, t) {
     }
     return n;
 }
-function S(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : T(Object(t)).forEach(function (n) {
+            : I(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -110,24 +110,24 @@ class N extends i.PureComponent {
         var t;
         let { guildId: n, channelId: i, renderExtraElement: a } = this.props,
             { attributes: o, children: s } = e;
-        "rtl" === o.dir && (o.style = S(I({}, o.style), { textAlign: "right" }));
+        "rtl" === o.dir && (o.style = T(S({}, o.style), { textAlign: "right" }));
         let l = null != (t = null == a ? void 0 : a(e)) ? t : (0, g.Z)(e, n, i);
-        return null != l ? l : (0, r.jsx)("div", S(I({}, o), { children: s }));
+        return null != l ? l : (0, r.jsx)("div", T(S({}, o), { children: s }));
     }
     renderLeaf(e) {
         var t;
         let { editor: n, renderExtraLeaf: i } = this.props,
             { attributes: a, children: o } = e,
             s = null != (t = null == i ? void 0 : i(e)) ? t : (0, E.Z)(n, e);
-        return null != s ? s : (0, r.jsx)("span", S(I({}, a), { children: o }));
+        return null != s ? s : (0, r.jsx)("span", T(S({}, a), { children: o }));
     }
     handleOnChange() {
         var e, t;
         let { editor: n } = this.props,
-            r = m.bN.isEditorEmpty(n) && null == n.composition;
+            r = h.bN.isEditorEmpty(n) && null == n.composition;
         if (
             (r !== this.state.showPlaceholder && this.setState({ showPlaceholder: r }),
-            null == (e = (t = this.props).onChange) || e.call(t, m.bN.richValue(n)),
+            null == (e = (t = this.props).onChange) || e.call(t, h.bN.richValue(n)),
             !1 === this.props.canFocus)
         ) {
             let e = s.F3.findDocumentOrShadowRoot(n).getSelection();
@@ -161,25 +161,25 @@ class N extends i.PureComponent {
                 ("insertText" === e.inputType || "insertReplacementText" === e.inputType) &&
                 (null == a && (a = i), null != a)
             ) {
-                let t = m.bN.toSlateRange(n, a, {
+                let t = h.bN.toSlateRange(n, a, {
                     exactMatch: !1,
                     suppressThrow: !0,
                 });
                 null != t &&
                     null != e.data &&
-                    (m.M8.isExpanded(t)
-                        ? _.T.withSingleEntry(n, () => {
+                    (h.M8.isExpanded(t)
+                        ? p.T.withSingleEntry(n, () => {
                               (n.selection = t), n.deleteFragment(), n.insertText(e.data), e.preventDefault();
                           })
                         : (n.insertText(e.data), e.preventDefault()));
             }
             if (e.inputType.startsWith("deleteContent") && null != i && !i.collapsed) {
-                let t = m.bN.toSlateRange(n, i, {
+                let t = h.bN.toSlateRange(n, i, {
                     exactMatch: !0,
                     suppressThrow: !0,
                 });
                 null != t &&
-                    m.M8.isExpanded(t) &&
+                    h.M8.isExpanded(t) &&
                     ((n.selection = t),
                     n.deleteFragment(e.inputType.endsWith("Backward") ? "backward" : "forward"),
                     e.preventDefault());
@@ -194,23 +194,23 @@ class N extends i.PureComponent {
                 startedInsideInline: !1,
             };
         this.state.showPlaceholder && this.setState({ showPlaceholder: !1 });
-        let i = null != n.selection && m.M8.isCollapsed(n.selection) ? m.bN.leaf(n, n.selection.anchor.path) : null;
+        let i = null != n.selection && h.M8.isCollapsed(n.selection) ? h.bN.leaf(n, n.selection.anchor.path) : null;
         if (null == i) {
             n.composition = r;
             return;
         }
         if (
             (null !=
-                (null != n.selection && m.M8.isCollapsed(n.selection)
-                    ? m.bN.above(n, {
+                (null != n.selection && h.M8.isCollapsed(n.selection)
+                    ? h.bN.above(n, {
                           at: i[1],
-                          match: (e) => m.bN.isInline(n, e),
+                          match: (e) => h.bN.isInline(n, e),
                           mode: "lowest",
                       })
                     : null) && (r.startedInsideInline = !0),
-            m.bN.isEditorEmpty(n))
+            h.bN.isEditorEmpty(n))
         ) {
-            h.Q.insertNodes(n, { text: "\uFEFF" }, { select: !0 }), (r.insertedPrefix = !0), (n.composition = r);
+            m.Q.insertNodes(n, { text: "\uFEFF" }, { select: !0 }), (r.insertedPrefix = !0), (n.composition = r);
             return;
         }
         let a = s.F3.findDocumentOrShadowRoot(this.props.editor).getSelection(),
@@ -223,19 +223,19 @@ class N extends i.PureComponent {
         if (
             null ==
                 (null != o
-                    ? m.bN.toSlateRange(n, o, {
+                    ? h.bN.toSlateRange(n, o, {
                           exactMatch: !0,
                           suppressThrow: !0,
                       })
                     : null) &&
             null != o
         ) {
-            let e = m.bN.toSlateRange(n, o, {
+            let e = h.bN.toSlateRange(n, o, {
                 exactMatch: !1,
                 suppressThrow: !0,
             });
             (n.selection = null),
-                null != e ? h.Q.select(n, e) : h.Q.select(n, null != (t = n.selection) ? t : m.bN.end(n, []));
+                null != e ? m.Q.select(n, e) : m.Q.select(n, null != (t = n.selection) ? t : h.bN.end(n, []));
         }
         n.composition = r;
     }
@@ -243,17 +243,17 @@ class N extends i.PureComponent {
         let { editor: t } = this.props;
         if (null == t.composition) return;
         let { insertedPrefix: n } = t.composition;
-        if (n && null != t.selection && m.M8.isCollapsed(t.selection)) {
+        if (n && null != t.selection && h.M8.isCollapsed(t.selection)) {
             let e = t.selection.anchor.path,
-                n = m.aj.leaf(t, e);
-            m.bN.withoutNormalizing(t, () => {
+                n = h.aj.leaf(t, e);
+            h.bN.withoutNormalizing(t, () => {
                 let e = n.text.replace(/^\uFEFF/, "");
-                h.Q.delete(t, {
+                m.Q.delete(t, {
                     unit: "offset",
                     distance: n.text.length,
                     reverse: !0,
                 }),
-                    m.bN.insertText(t, e);
+                    h.bN.insertText(t, e);
             });
         }
         t.composition = null;
@@ -268,7 +268,7 @@ class N extends i.PureComponent {
             i = s.F3.findDocumentOrShadowRoot(this.props.editor),
             a = i.getElementById("textarea-context"),
             o = i.getElementById("slate-toolbar");
-        if (null != r && !(0, p.hasDomParent)(r, a) && !(0, p.hasDomParent)(r, o)) {
+        if (null != r && !(0, _.hasDomParent)(r, a) && !(0, _.hasDomParent)(r, o)) {
             let e = s.F3.findDocumentOrShadowRoot(t).getSelection();
             null != e && this.isSelectionEscaping(e) && e.removeAllRanges();
         }
@@ -283,7 +283,7 @@ class N extends i.PureComponent {
                     a = r.endContainer,
                     o = r.startOffset,
                     s = r.endOffset;
-                if ((0, p.hasDomParent)(i, t) || (!(0, p.isDOMRangeCollapsed)(i, o, a, s) && (0, p.hasDomParent)(a, t)))
+                if ((0, _.hasDomParent)(i, t) || (!(0, _.isDOMRangeCollapsed)(i, o, a, s) && (0, _.hasDomParent)(a, t)))
                     return !0;
             }
         return !1;
@@ -299,15 +299,15 @@ class N extends i.PureComponent {
                     s = a.endContainer,
                     l = a.startOffset,
                     c = a.endOffset;
-                if ((0, p.hasDomParent)(o, t)) {
+                if ((0, _.hasDomParent)(o, t)) {
                     if (r) return !0;
                     n = !0;
                 } else {
                     if (n) return !0;
                     r = !0;
                 }
-                if (!(0, p.isDOMRangeCollapsed)(o, l, s, c))
-                    if ((0, p.hasDomParent)(o, t)) {
+                if (!(0, _.isDOMRangeCollapsed)(o, l, s, c))
+                    if ((0, _.hasDomParent)(o, t)) {
                         if (r) return !0;
                         n = !0;
                     } else {
@@ -331,9 +331,9 @@ class N extends i.PureComponent {
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            S(I({}, n), {
+                            T(S({}, n), {
                                 editor: t,
-                                text: m.bN.getSelectedText(t, !0),
+                                text: h.bN.getSelectedText(t, !0),
                             }),
                         );
                 },
@@ -364,10 +364,10 @@ class N extends i.PureComponent {
                 decorate: u,
                 channelId: d,
                 guildId: f,
-                onChange: _,
-                onFocus: p,
-                onBlur: h,
-                onKeyDown: m,
+                onChange: p,
+                onFocus: _,
+                onBlur: m,
+                onKeyDown: h,
                 onKeyUp: g,
                 renderExtraElement: E,
                 renderExtraLeaf: b,
@@ -406,7 +406,7 @@ class N extends i.PureComponent {
                     value: [...this.state.initialValue],
                     children: (0, r.jsx)(
                         s.CX,
-                        S(I({}, v), {
+                        T(S({}, v), {
                             className: o()(O.markup, y.editor, n),
                             decorate: u,
                             renderElement: this.renderElement,
@@ -447,15 +447,15 @@ class N extends i.PureComponent {
             (this.handleBlurCapture = this.handleBlurCapture.bind(this)),
             (this.handleContextMenu = this.handleContextMenu.bind(this)),
             (this.handlePasteCapture = this.handlePasteCapture.bind(this)),
-            m.bN.isEditorEmpty(e.editor)
+            h.bN.isEditorEmpty(e.editor)
                 ? (this.state = {
                       initialValue: (0, f.H2)().richValue,
                       showPlaceholder: !0,
                   })
                 : (this.state = {
-                      initialValue: m.bN.richValue(e.editor),
+                      initialValue: h.bN.richValue(e.editor),
                       showPlaceholder: !1,
                   });
     }
 }
-let R = N;
+let P = N;

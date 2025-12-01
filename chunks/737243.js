@@ -22,7 +22,7 @@ let h = r.memo(function (e) {
             referencedAvatarProfile: v,
             setPopout: _,
         } = e,
-        { isInteractionUserBlocked: x, isInteractionUserIgnored: j } = (0, l.cj)(
+        { isInteractionUserBlocked: O, isInteractionUserIgnored: x } = (0, l.cj)(
             [c.Z],
             () => ({
                 isInteractionUserBlocked: c.Z.isBlockedForMessage(h),
@@ -30,7 +30,7 @@ let h = r.memo(function (e) {
             }),
             [h],
         ),
-        O = (0, l.e7)([s.Z], () => s.Z.getMessageByReference(null == h ? void 0 : h.messageReference)),
+        j = (0, l.e7)([s.Z], () => s.Z.getMessageByReference(null == h ? void 0 : h.messageReference)),
         E = (0, d.wq)(null == (t = h.interaction) ? void 0 : t.user.id, f.id),
         S = (0, d.Nk)(h.interaction, f, g, _),
         P = (0, d.NU)(b, _),
@@ -64,18 +64,18 @@ let h = r.memo(function (e) {
                     referencedAvatarProfile: v,
                     referencedUsernameProfile: C,
                     replyReference: h.messageReference,
-                    replyMessage: O,
+                    replyMessage: j,
                     isReplySpineClickable: !1,
                     showReplySpine: !1,
                 }),
-            [f, m, h, v, O, C, _],
+            [f, m, h, v, j, C, _],
         );
     return (0, i.jsx)(u.Z, {
         message: h,
         channel: f,
         compact: m,
-        isInteractionUserBlocked: x,
-        isInteractionUserIgnored: j,
+        isInteractionUserBlocked: O,
+        isInteractionUserIgnored: x,
         showAvatarPopout: b,
         showUsernamePopout: g,
         showDataPopout: y,

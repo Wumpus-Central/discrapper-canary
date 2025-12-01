@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
-    Jc: () => k,
-    dx: () => M,
+    Jc: () => M,
+    dx: () => j,
     tE: () => G,
 });
 var i,
@@ -70,7 +70,7 @@ var f = function (e, t, n, r, i, a, o, s) {
         throw ((l.framesToPop = 1), l);
     }
 };
-function _(e, t, n) {
+function p(e, t, n) {
     if (/%$/.test(t)) return 3 === n ? parseFloat(t) / 100 : (255 * parseFloat(t)) / 100;
     if ("h" === e[n]) {
         if (/turn$/.test(t)) return 360 * parseFloat(t);
@@ -78,7 +78,7 @@ function _(e, t, n) {
     }
     return parseFloat(t);
 }
-function p({ hue: e, saturation: t, lightness: n, alpha: r }) {
+function _({ hue: e, saturation: t, lightness: n, alpha: r }) {
     let i,
         a = (1 - Math.abs(2 * (n /= 255) - 1)) * (t /= 255),
         o = a * (1 - Math.abs(((e / 60) % 2) - 1)),
@@ -102,7 +102,7 @@ function p({ hue: e, saturation: t, lightness: n, alpha: r }) {
         alpha: r,
     };
 }
-function h({ red: e, green: t, blue: n, alpha: r }) {
+function m({ red: e, green: t, blue: n, alpha: r }) {
     let i = e / 255,
         a = t / 255,
         o = n / 255,
@@ -136,7 +136,7 @@ function h({ red: e, green: t, blue: n, alpha: r }) {
         alpha: r,
     };
 }
-let m = /^#[0-9a-f]{3,8}$/i,
+let h = /^#[0-9a-f]{3,8}$/i,
     g = /^((?:rgb|hsl)a?)\s*\(([^)]*)\)/i;
 class E {
     constructor(e, t, n, r) {
@@ -151,13 +151,13 @@ class E {
         );
     }
     static parseString(e) {
-        return e.match(g) ? this.parseColorFnString(e) : e.match(m) ? this.parseHexString(e) : void 0;
+        return e.match(g) ? this.parseColorFnString(e) : e.match(h) ? this.parseHexString(e) : void 0;
     }
     static parseRgbString(e) {
         return "transparent" === e ? new E(0, 0, 0, 0) : this.parseColorFnString(e);
     }
     static parseHexString(e) {
-        if (!e.match(m) || [6, 8].includes(e.length)) return;
+        if (!e.match(h) || [6, 8].includes(e.length)) return;
         if ((e = e.replace("#", "")).length < 6) {
             let [t, n, r, i] = e.split("");
             (e = t + t + n + n + r + r), i && (e += i + i);
@@ -179,9 +179,9 @@ class E {
             .split(/\s*[,/\s]\s*/)
             .map((e) => e.replace(",", "").trim())
             .filter((e) => "" !== e)
-            .map((e, t) => _(n, e, t));
+            .map((e, t) => p(n, e, t));
         if ("hsl" === n.substr(0, 3)) {
-            let e = p({
+            let e = _({
                 hue: i[0],
                 saturation: i[1],
                 lightness: i[2],
@@ -192,7 +192,7 @@ class E {
         return new E(i[0], i[1], i[2], "number" == typeof i[3] ? i[3] : 1);
     }
     toHSL() {
-        return h({
+        return m({
             red: this.red,
             green: this.green,
             blue: this.blue,
@@ -240,11 +240,11 @@ function O(e) {
     return t.push(new E(255, 255, 255, 1)), t.reduce(b);
 }
 let v = "--__adaptive-focus-ring-color",
-    I = "--__adaptive-focus-ring-radius";
-function T(e) {
+    S = "--__adaptive-focus-ring-radius";
+function I(e) {
     e !== r && (null == r || r.hide(), (r = e));
 }
-function S(e) {
+function T(e) {
     if (e) return parseInt(e) > 0 ? e : void 0;
 }
 class A {
@@ -273,7 +273,7 @@ class A {
             (this.className = t.className),
             (this.offset = null != (n = t.offset) ? n : 0),
             (this.zIndex = t.zIndex),
-            T(this),
+            I(this),
             this.invalidate();
     }
     hide() {
@@ -313,10 +313,10 @@ class A {
     }
     getBorderRadius(e) {
         var t, n, r, i, a, o, s, l;
-        let c = null != (n = S(null == (t = e.styles[0]) ? void 0 : t.borderTopLeftRadius)) ? n : "0",
-            u = null != (i = S(null == (r = e.styles[0]) ? void 0 : r.borderTopRightRadius)) ? i : "0",
-            d = null != (o = S(null == (a = e.styles[0]) ? void 0 : a.borderBottomRightRadius)) ? o : "0",
-            f = null != (l = S(null == (s = e.styles[0]) ? void 0 : s.borderBottomLeftRadius)) ? l : "0";
+        let c = null != (n = T(null == (t = e.styles[0]) ? void 0 : t.borderTopLeftRadius)) ? n : "0",
+            u = null != (i = T(null == (r = e.styles[0]) ? void 0 : r.borderTopRightRadius)) ? i : "0",
+            d = null != (o = T(null == (a = e.styles[0]) ? void 0 : a.borderBottomRightRadius)) ? o : "0",
+            f = null != (l = T(null == (s = e.styles[0]) ? void 0 : s.borderBottomLeftRadius)) ? l : "0";
         if ("0" !== c || "0" !== u || "0" !== d || "0" !== f) return `${c} ${u} ${d} ${f}`;
     }
     makePositionFromDOMRect(e) {
@@ -359,7 +359,7 @@ class A {
                 ...this.makePositionFromDOMRect(this.targetElement.getBoundingClientRect()),
                 zIndex: null != (e = this.zIndex) ? e : this.getNextZIndexForAncestry(this.targetAncestry),
                 [v]: y(n, this.themeOptions),
-                [I]: this.getBorderRadius(this.targetAncestry),
+                [S]: this.getBorderRadius(this.targetAncestry),
             };
         }
         return t;
@@ -368,7 +368,7 @@ class A {
 let C = new A();
 "u" > typeof window && C.setContainer(document.body);
 let N = a.createContext(C);
-var R = function (e, t, n, r) {
+var P = function (e, t, n, r) {
     var i = n ? n.call(r, e, t) : void 0;
     if (void 0 !== i) return !!i;
     if (e === t) return !0;
@@ -385,31 +385,31 @@ var R = function (e, t, n, r) {
     }
     return !0;
 };
-let P = !1,
-    D,
-    w = {};
-function L() {
-    if (!P) return;
+let R = !1,
+    w,
+    D = {};
+function x() {
+    if (!R) return;
     let e = null == r ? void 0 : r.getStyle();
-    null == e || R(e, w) ? null != D && cancelAnimationFrame(D) : ((w = e), null == r || r.invalidate()),
-        (D = requestAnimationFrame(L));
+    null == e || P(e, D) ? null != w && cancelAnimationFrame(w) : ((D = e), null == r || r.invalidate()),
+        (w = requestAnimationFrame(x));
 }
-let x = !1,
-    M = {
+let L = !1,
+    j = {
         get ringsEnabled() {
-            return x;
+            return L;
         },
         setRingsEnabled(e) {
-            (x = e), null == r || r.invalidate();
+            (L = e), null == r || r.invalidate();
         },
         enableAnimationTracking() {
-            (P = !0), (D = requestAnimationFrame(L));
+            (R = !0), (w = requestAnimationFrame(x));
         },
         disableAnimationTracking() {
-            (P = !1), null != D && cancelAnimationFrame(D);
+            (R = !1), null != w && cancelAnimationFrame(w);
         },
     };
-function k(e) {
+function M(e) {
     let { containerRef: t, children: n, themeOptions: r } = e,
         i = a.useRef(new A());
     return (
@@ -418,11 +418,11 @@ function k(e) {
         }, [t.current]),
         (0, o.jsxs)(N.Provider, {
             value: i.current,
-            children: [n, (0, o.jsx)(j, {})],
+            children: [n, (0, o.jsx)(k, {})],
         })
     );
 }
-function j() {
+function k() {
     let e = a.useContext(N),
         [, t] = a.useState({});
     return (
@@ -435,7 +435,7 @@ function j() {
             ),
             [e],
         ),
-        M.ringsEnabled && e.visible
+        j.ringsEnabled && e.visible
             ? (0, o.jsx)("div", {
                   className: d("focus-rings-ring", e.className),
                   style: e.getStyle(),
@@ -458,7 +458,7 @@ function G(e) {
         ringClassName: l,
         focusClassName: c,
         focusWithinClassName: u,
-        children: _,
+        children: p,
     } = e;
     null != o &&
         f(
@@ -470,10 +470,10 @@ function G(e) {
                 null != s,
                 "FocusRing was given a controlled focused prop but no ringTarget to apply the ring to. A ringTarget is required since it cannot be inferred through regular focus events.",
             );
-    let p = a.useRef(!1),
-        [h, m] = a.useState(!1),
+    let _ = a.useRef(!1),
+        [m, h] = a.useState(!1),
         g = a.useContext(N),
-        E = a.Children.only(_),
+        E = a.Children.only(p),
         { onBlur: b, onFocus: y, ...O } = E.props,
         v = a.useMemo(
             () => ({
@@ -490,13 +490,13 @@ function G(e) {
         }, [n, g]),
         a.useEffect(
             () => () => {
-                p.current && g.hide();
+                _.current && g.hide();
             },
             [g],
         ),
         a.useEffect(() => {
             let e = null == s ? void 0 : s.current;
-            null == r || null == e || ((p.current = r), r ? g.showElement(e, v) : !1 === r && g.hide());
+            null == r || null == e || ((_.current = r), r ? g.showElement(e, v) : !1 === r && g.hide());
         }, [r, v, g, s]),
         U(() => {
             if (null != r) return;
@@ -513,28 +513,28 @@ function G(e) {
             function i(e) {
                 if (null != n) {
                     if (e.currentTarget === e.target) {
-                        (p.current = !0), g.showElement(n, v);
+                        (_.current = !0), g.showElement(n, v);
                         return;
                     }
-                    m(!0), t && g.showElement(n, v);
+                    h(!0), t && g.showElement(n, v);
                 }
             }
             function a() {
-                g.hide(), (p.current = !1), m(!1);
+                g.hide(), (_.current = !1), h(!1);
             }
         }, [t, v, r, g, o, s]);
-    let I = a.useCallback(
+    let S = a.useCallback(
             (e) => {
-                g.hide(), (p.current = !1), m(!1), null == b || b(e);
+                g.hide(), (_.current = !1), h(!1), null == b || b(e);
             },
             [b, g],
         ),
-        T = a.useCallback(
+        I = a.useCallback(
             (e) => {
                 let n = null == s ? void 0 : s.current;
                 e.currentTarget === e.target
-                    ? ((p.current = !0), g.showElement(null != n ? n : e.currentTarget, v))
-                    : (m(!0), t && g.showElement(null != n ? n : e.currentTarget, v)),
+                    ? ((_.current = !0), g.showElement(null != n ? n : e.currentTarget, v))
+                    : (h(!0), t && g.showElement(null != n ? n : e.currentTarget, v)),
                     null == y || y(e);
             },
             [s, t, y, g, v],
@@ -542,9 +542,9 @@ function G(e) {
     return n && null == o && null == r
         ? a.cloneElement(E, {
               ...O,
-              className: d(O.className, p.current ? c : void 0, h ? u : void 0),
-              onBlur: I,
-              onFocus: T,
+              className: d(O.className, _.current ? c : void 0, m ? u : void 0),
+              onBlur: S,
+              onFocus: I,
           })
         : E;
 }

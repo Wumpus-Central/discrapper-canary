@@ -1,5 +1,5 @@
 t.d(n, {
-    Z: () => N,
+    Z: () => S,
     c: () => Z,
 });
 var l = t(54381),
@@ -12,8 +12,8 @@ var l = t(54381),
     u = t(607070),
     d = t(436774),
     m = t(639119),
-    g = t(767714),
-    x = t(74538),
+    x = t(767714),
+    g = t(74538),
     h = t(981631),
     j = t(474936),
     v = t(388032),
@@ -45,12 +45,12 @@ function f(e) {
         a = r.useCallback(() => {
             if (null != i) {
                 var e;
-                return null != (e = (0, x.fr)(i, j.Si.TIER_2)) ? e : v.intl.string(v.t.Y2WKTl);
+                return null != (e = (0, g.fr)(i, j.Si.TIER_2)) ? e : v.intl.string(v.t.Y2WKTl);
             }
             return v.intl.string(v.t.Y2WKTl);
         }, [i]);
     return (0, l.jsx)(
-        g.Z,
+        x.Z,
         (function (e) {
             for (var n = 1; n < arguments.length; n++) {
                 var t = null != arguments[n] ? arguments[n] : {},
@@ -108,7 +108,7 @@ function Z() {
         ],
     });
 }
-function N(e) {
+function S(e) {
     let { message: n, onClose: t, openStreamUpsellModal: r, glow: i = !1 } = e,
         a = {
             section: h.jXE.STREAM_SETTINGS,

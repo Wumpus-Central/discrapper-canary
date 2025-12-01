@@ -18,9 +18,9 @@ var i = n(54381),
     C = n(490597),
     v = n(216337),
     _ = n(920888),
-    x = n(287151),
-    j = n(501517),
-    O = n(982168),
+    O = n(287151),
+    x = n(501517),
+    j = n(982168),
     E = n(216572),
     S = n(5101),
     P = n(817608),
@@ -33,19 +33,19 @@ var i = n(54381),
     M = n(109590),
     R = n(228392),
     L = n(981631),
-    k = n(388032),
-    D = n(797013),
+    D = n(388032),
+    k = n(342153),
     U = n(319720),
-    B = n(127947),
-    H = n(577650);
-function F(e) {
+    F = n(127947),
+    B = n(577650);
+function H(e) {
     let { channel: t } = e,
         l = t.isArchivedThread(),
-        a = (0, O.P0)(t),
+        a = (0, j.P0)(t),
         [o, c] = r.useState(!1),
         d = () => {
             c(!0),
-                j.Z.resolveFlag(t.id).then(() => {
+                x.Z.resolveFlag(t.id).then(() => {
                     c(!1);
                 });
         };
@@ -53,7 +53,7 @@ function F(e) {
         ? (0, i.jsx)(u.Button, {
               size: "sm",
               variant: "secondary",
-              text: l ? k.intl.string(D.default["2Y4vkk"]) : k.intl.string(D.default.YIbR4r),
+              text: l ? D.intl.string(k.default["2Y4vkk"]) : D.intl.string(k.default.YIbR4r),
               onClick: () => {
                   !0 === s.K.get(S.F)
                       ? d()
@@ -77,8 +77,8 @@ function F(e) {
 }
 function V(e) {
     let { postId: t, isFirstMessage: n, isLastItem: l = !1, parentChannelId: s } = e,
-        { ref: j, width: O } = (0, h.ZP)(),
-        [S, D] = r.useState(3),
+        { ref: x, width: j } = (0, h.ZP)(),
+        [S, k] = r.useState(3),
         [V, G] = r.useState(!n),
         [z, W] = (0, f.Z)(!1, 2000),
         q = (0, o.e7)([T.Z], () => T.Z.getChannel(t), [t]),
@@ -107,7 +107,7 @@ function V(e) {
             [n],
         );
     r.useLayoutEffect(() => {
-        let e = j.current;
+        let e = x.current;
         if (null == e || !n) return;
         let t = new IntersectionObserver(el, { threshold: 1 });
         return (
@@ -120,8 +120,8 @@ function V(e) {
     let [ea, eo] = r.useState(!0);
     if (
         (r.useEffect(() => {
-            null != O && (D(Math.floor((O - 280) / 58)), eo(!1));
-        }, [O]),
+            null != j && (k(Math.floor((j - 280) / 58)), eo(!1));
+        }, [j]),
         null == q || null == K)
     )
         return null;
@@ -138,7 +138,7 @@ function V(e) {
         children: [
             (0, i.jsxs)("div", {
                 className: a()(U.container, { [U.header]: V }),
-                ref: j,
+                ref: x,
                 children: [
                     et
                         ? (0, i.jsx)("div", {
@@ -155,8 +155,8 @@ function V(e) {
                                       !J &&
                                       null != ei &&
                                       (0, i.jsx)("div", {
-                                          className: B.reactions,
-                                          children: (0, i.jsx)(x.le, {
+                                          className: F.reactions,
+                                          children: (0, i.jsx)(O.le, {
                                               message: K,
                                               readOnly: !1,
                                               useChatFontScaling: !1,
@@ -192,9 +192,9 @@ function V(e) {
                                           message: K,
                                           channel: q,
                                           useChatFontScaling: !1,
-                                          className: a()(H.secondary, U.addReactButton, { [U.hasNoReactions]: !es }),
+                                          className: a()(B.secondary, U.addReactButton, { [U.hasNoReactions]: !es }),
                                           isForumToolbar: !0,
-                                          children: !es && k.intl.string(k.t.xpOyTO),
+                                          children: !es && D.intl.string(D.t.xpOyTO),
                                       }),
                               ],
                           }),
@@ -202,14 +202,14 @@ function V(e) {
                         className: U.buttons,
                         children: [
                             et
-                                ? (0, i.jsx)(F, { channel: q })
+                                ? (0, i.jsx)(H, { channel: q })
                                 : (0, i.jsx)(c.u, {
-                                      text: k.intl.string(k.t.F7oeDv),
+                                      text: D.intl.string(D.t.F7oeDv),
                                       children: (0, i.jsx)(u.Button, {
                                           icon: eu,
                                           size: "sm",
                                           variant: "secondary",
-                                          text: Y ? k.intl.string(k.t["7OkUzs"]) : k.intl.string(k.t["3aOv+h"]),
+                                          text: Y ? D.intl.string(D.t["7OkUzs"]) : D.intl.string(D.t["3aOv+h"]),
                                           onClick: () => {
                                               Y
                                                   ? Z.Z.leaveThread(q, "Forum Toolbar")
@@ -218,26 +218,26 @@ function V(e) {
                                       }),
                                   }),
                             (0, i.jsx)(c.u, {
-                                text: k.intl.string(k.t.WqhZss),
+                                text: D.intl.string(D.t.WqhZss),
                                 children: z
                                     ? (0, i.jsx)(u.Button, {
                                           icon: u.dz2,
                                           size: "sm",
                                           variant: "secondary",
                                           onClick: ec,
-                                          text: k.intl.string(k.t.t5VZ88),
+                                          text: D.intl.string(D.t.t5VZ88),
                                       })
                                     : (0, i.jsx)(u.hU, {
                                           icon: u.xPt,
                                           size: "sm",
                                           variant: "secondary",
                                           onClick: ec,
-                                          "aria-label": k.intl.string(k.t.WqhZss),
+                                          "aria-label": D.intl.string(D.t.WqhZss),
                                       }),
                             }),
                             !n &&
                                 (0, i.jsx)(c.u, {
-                                    text: k.intl.string(k.t.nFP4oa),
+                                    text: D.intl.string(D.t.nFP4oa),
                                     children: (0, i.jsx)(u.hU, {
                                         icon: u.Za2,
                                         size: "sm",
@@ -250,7 +250,7 @@ function V(e) {
                                                 jumpType: p.SR.INSTANT,
                                             });
                                         },
-                                        "aria-label": k.intl.string(k.t.nFP4oa),
+                                        "aria-label": D.intl.string(D.t.nFP4oa),
                                     }),
                                 }),
                         ],

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(539854), n(388685);
+n.d(t, { Z: () => O }), n(539854), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(149765),
@@ -16,11 +16,11 @@ var i = n(54381),
     h = n(768581),
     x = n(388032),
     j = n(144645);
-function v(e) {
+function O(e) {
     var t;
-    let { guild: n, applicationIntegration: v } = e,
-        { application: O } = v,
-        y = null != O.bot ? new b.Z(O.bot) : null,
+    let { guild: n, applicationIntegration: O } = e,
+        { application: v } = O,
+        y = null != v.bot ? new b.Z(v.bot) : null,
         _ = (0, a.e7)([g.ZP], () => (null != y ? g.ZP.getMember(n.id, y.id) : null), [y, n]),
         C = (0, a.e7)([f.Z], () => f.Z.getEveryoneRole(n)),
         N = (0, a.Wu)([f.Z], () => {
@@ -31,13 +31,13 @@ function v(e) {
     r.useEffect(() => {
         null != S && s.Z.requestMembersById(n.id, S);
     }, [n.id, S]);
-    let E = r.useMemo(() => l.$e(C.permissions, ...N.map((e) => e.permissions)), [N, C]);
+    let P = r.useMemo(() => l.$e(C.permissions, ...N.map((e) => e.permissions)), [N, C]);
     if (null == y) return null;
-    let I = h.ZP.getApplicationIconURL({
-        id: O.id,
+    let w = h.ZP.getApplicationIconURL({
+        id: v.id,
         guildMember: _,
-        bot: O.bot,
-        icon: O.icon,
+        bot: v.bot,
+        icon: v.icon,
         size: 32,
     });
     return (0, i.jsx)(o.Zbd, {
@@ -51,7 +51,7 @@ function v(e) {
                     children: [
                         (0, i.jsx)("img", {
                             alt: "",
-                            src: I,
+                            src: w,
                             className: j.iconWrapper,
                         }),
                         (0, i.jsx)(o.Text, {
@@ -95,7 +95,7 @@ function v(e) {
                                 : null,
                         ],
                     });
-                })(y, n, null != (t = null == _ ? void 0 : _.roles) ? t : [], E),
+                })(y, n, null != (t = null == _ ? void 0 : _.roles) ? t : [], P),
             ],
         }),
     });

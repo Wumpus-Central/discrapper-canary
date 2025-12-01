@@ -1,5 +1,5 @@
 n.d(t, {
-    B: () => O,
+    B: () => j,
     default: () => E,
 }),
     n(388685);
@@ -22,7 +22,7 @@ var i = n(54381),
     C = n(981631),
     v = n(388032),
     _ = n(358993);
-function x(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -47,7 +47,7 @@ function x(e) {
     }
     return e;
 }
-function j(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,7 +65,7 @@ function j(e, t) {
         e
     );
 }
-function O(e) {
+function j(e) {
     let {
             channel: t,
             previewIcon: n,
@@ -155,9 +155,9 @@ let E = function (e) {
     }, [Z, P, w, a]),
     (0, d.ZP)(
         () => (
-            b.default.track(C.rMx.GDM_EDIT_INTERACTED, j(x({}, R), { action: "opened" })),
+            b.default.track(C.rMx.GDM_EDIT_INTERACTED, x(O({}, R), { action: "opened" })),
             () => {
-                b.default.track(C.rMx.GDM_EDIT_INTERACTED, j(x({}, R), { action: "dismissed" }));
+                b.default.track(C.rMx.GDM_EDIT_INTERACTED, x(O({}, R), { action: "dismissed" }));
             }
         ),
     ),
@@ -173,7 +173,7 @@ let E = function (e) {
                       if (
                           (b.default.track(
                               C.rMx.GDM_EDIT_INTERACTED,
-                              j(x({}, R), {
+                              x(O({}, R), {
                                   action: "saved",
                                   new_name_set: "" !== Z,
                                   new_icon_set: (r ? N : null == S ? void 0 : S.icon) != null,
@@ -208,7 +208,7 @@ let E = function (e) {
                       children: (0, i.jsxs)("div", {
                           className: _.modalContent,
                           children: [
-                              (0, i.jsx)(O, {
+                              (0, i.jsx)(j, {
                                   channel: S,
                                   previewIcon: N,
                                   onIconChange: (e) => A(e.imageUri),

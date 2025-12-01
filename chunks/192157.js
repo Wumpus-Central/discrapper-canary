@@ -1,12 +1,12 @@
 n.r(t),
     n.d(t, {
-        GB: () => S,
-        casual: () => I,
+        GB: () => T,
+        casual: () => S,
         createCasualConfiguration: () => N,
-        createConfiguration: () => R,
+        createConfiguration: () => P,
         parse: () => A,
         parseDate: () => C,
-        strict: () => T,
+        strict: () => I,
     });
 var r = n(857376),
     i = n(604099),
@@ -18,38 +18,38 @@ var r = n(857376),
     u = n(474507),
     d = n(330564),
     f = n(838929),
-    _ = n(16927),
-    p = n(717319),
-    h = n(362398),
-    m = n(467484),
+    p = n(16927),
+    _ = n(717319),
+    m = n(362398),
+    h = n(467484),
     g = n(334695),
     E = n(709638),
     b = n(201129),
     y = n(659124),
     O = n(264126),
     v = n(283468);
-let I = new b.k(N(!1)),
-    T = new b.k(R(!0, !1)),
-    S = new b.k(R(!1, !0));
+let S = new b.k(N(!1)),
+    I = new b.k(P(!0, !1)),
+    T = new b.k(P(!1, !0));
 function A(e, t, n) {
-    return I.parse(e, t, n);
+    return S.parse(e, t, n);
 }
 function C(e, t, n) {
-    return I.parseDate(e, t, n);
+    return S.parseDate(e, t, n);
 }
 function N(e = !1) {
-    let t = R(!1, e);
+    let t = P(!1, e);
     return (
-        t.parsers.unshift(new h.Z()),
         t.parsers.unshift(new m.Z()),
+        t.parsers.unshift(new h.Z()),
         t.parsers.unshift(new o.Z()),
         t.parsers.unshift(new E.Z()),
         t.parsers.unshift(new O.Z()),
         t
     );
 }
-function R(e = !0, t = !1) {
-    return (0, p.l)(
+function P(e = !0, t = !1) {
+    return (0, _.l)(
         {
             parsers: [
                 new y.Z(t),
@@ -63,7 +63,7 @@ function R(e = !0, t = !1) {
                 new u.Z(e),
                 new d.Z(e),
             ],
-            refiners: [new v.Z(), new _.Z(), new f.Z()],
+            refiners: [new v.Z(), new p.Z(), new f.Z()],
         },
         e,
     );

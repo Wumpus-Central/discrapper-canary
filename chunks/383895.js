@@ -1,33 +1,33 @@
-n.d(t, { Z: () => a });
-var i = n(54381),
-    l = n(499493),
+n.d(t, { Z: () => l });
+var a = n(54381),
+    i = n(499493),
     r = n(810568);
-function a(e) {
+function l(e) {
     var t, n;
-    let { entry: a, viewId: s, officialGuildId: o } = e;
-    return (0, i.jsx)(
-        l.Z,
+    let { entry: l, viewId: s, officialGuildId: o } = e;
+    return (0, a.jsx)(
+        i.Z,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
-                    i = Object.keys(n);
+                    a = Object.keys(n);
                 "function" == typeof Object.getOwnPropertySymbols &&
-                    (i = i.concat(
+                    (a = a.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
                         }),
                     )),
-                    i.forEach(function (t) {
-                        var i;
-                        (i = n[t]),
+                    a.forEach(function (t) {
+                        var a;
+                        (a = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
-                                      value: i,
+                                      value: a,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0,
                                   })
-                                : (e[t] = i);
+                                : (e[t] = a);
                     });
             }
             return e;
@@ -37,9 +37,9 @@ function a(e) {
                 onReaction: () => {
                     (0, r.UE)({
                         action: r.as.SendMessageUser,
-                        applicationId: a.extra.application_id,
-                        gameName: a.extra.game_name,
-                        recipientUserId: a.author_id,
+                        applicationId: l.extra.application_id,
+                        gameName: l.extra.game_name,
+                        recipientUserId: l.author_id,
                         viewId: s,
                         officialGuildId: o,
                     });
@@ -47,9 +47,9 @@ function a(e) {
                 onRequestOpen: () => {
                     (0, r.UE)({
                         action: r.as.ClickMessageUser,
-                        applicationId: a.extra.application_id,
-                        gameName: a.extra.game_name,
-                        recipientUserId: a.author_id,
+                        applicationId: l.extra.application_id,
+                        gameName: l.extra.game_name,
+                        recipientUserId: l.author_id,
                         viewId: s,
                         officialGuildId: o,
                     });
@@ -60,8 +60,8 @@ function a(e) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, i);
+                      var a = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, a);
                   }
                   return n;
               })(Object(n)).forEach(function (e) {

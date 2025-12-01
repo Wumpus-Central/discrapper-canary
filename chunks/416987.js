@@ -1,22 +1,22 @@
-_.d(e, { Y: () => o });
-var a = _(395848);
-let r = -1,
-    n = (t) => {
-        "hidden" === a.m.document.visibilityState &&
-            r > -1 &&
-            ((r = "visibilitychange" === t.type ? t.timeStamp : 0),
-            removeEventListener("visibilitychange", n, !0),
-            removeEventListener("prerenderingchange", n, !0));
+r.d(t, { Y: () => o });
+var n = r(395848);
+let a = -1,
+    i = (e) => {
+        "hidden" === n.m.document.visibilityState &&
+            a > -1 &&
+            ((a = "visibilitychange" === e.type ? e.timeStamp : 0),
+            removeEventListener("visibilitychange", i, !0),
+            removeEventListener("prerenderingchange", i, !0));
     },
     o = () => (
-        a.m.document &&
-            r < 0 &&
-            ((r = "hidden" !== a.m.document.visibilityState || a.m.document.prerendering ? 1 / 0 : 0),
-            addEventListener("visibilitychange", n, !0),
-            addEventListener("prerenderingchange", n, !0)),
+        n.m.document &&
+            a < 0 &&
+            ((a = "hidden" !== n.m.document.visibilityState || n.m.document.prerendering ? 1 / 0 : 0),
+            addEventListener("visibilitychange", i, !0),
+            addEventListener("prerenderingchange", i, !0)),
         {
             get firstHiddenTime() {
-                return r;
+                return a;
             },
         }
     );

@@ -18,8 +18,8 @@ var i = n(54381),
     C = n(340541),
     v = n(416345),
     _ = n(626135),
-    x = n(607187),
-    O = n(981631),
+    O = n(607187),
+    x = n(981631),
     j = n(388032),
     E = n(348130),
     S = n(359165);
@@ -55,7 +55,7 @@ function I(e) {
         { analyticsLocations: l, newestAnalyticsLocation: o } = (0, m.ZP)(f.Z.VC_TILE_ACTIVITY_SHELF_BUTTON);
     return (0, i.jsx)(m.Gt, {
         value: l,
-        children: (0, i.jsxs)(x.Z, {
+        children: (0, i.jsxs)(O.Z, {
             className: E.root,
             children: [
                 (0, i.jsx)(c.u, {
@@ -88,7 +88,7 @@ function I(e) {
                     }),
                 }),
                 (0, i.jsx)(u.f6W, {
-                    theme: O.BRd.DARK,
+                    theme: x.BRd.DARK,
                     children: (e) =>
                         (0, i.jsx)(u.P3F, {
                             onClick: r,
@@ -108,7 +108,7 @@ function I(e) {
 function Z(e) {
     let { channel: t, guild: l, inPopout: o } = e;
     r.useEffect(() => {
-        _.default.track(O.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
+        _.default.track(x.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
             tile_type: "activity invite",
             n_participants: 1,
         });
@@ -154,7 +154,7 @@ function Z(e) {
                             {
                                 guild: l,
                                 channel: t,
-                                source: O.t4x.ACTIVITY_ENTRY_POINT_TILE,
+                                source: x.t4x.ACTIVITY_ENTRY_POINT_TILE,
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
@@ -193,9 +193,9 @@ function Z(e) {
         value: s,
         children: (0, i.jsx)(u.f6W, {
             disableAdaptiveTheme: !0,
-            theme: O.BRd.MIDNIGHT,
+            theme: x.BRd.MIDNIGHT,
             children: (e) =>
-                (0, i.jsxs)(x.Z, {
+                (0, i.jsxs)(O.Z, {
                     className: a()(E.root, E.singleUserRoot, e),
                     children: [
                         (0, i.jsx)("img", {
@@ -231,7 +231,7 @@ function Z(e) {
 function T(e) {
     let { channel: t, guild: n, handleClose: l, width: s, userParticipantCount: c } = e;
     (0, d.ZP)(() => {
-        _.default.track(O.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
+        _.default.track(x.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
             tile_type: "activity suggestion",
             n_participants: c,
         });
@@ -247,7 +247,7 @@ function T(e) {
         );
     return (0, i.jsx)(m.Gt, {
         value: C,
-        children: (0, i.jsxs)(x.Z, {
+        children: (0, i.jsxs)(O.Z, {
             className: E.root,
             children: [
                 s > 300
@@ -276,7 +276,7 @@ function T(e) {
                 (0, i.jsxs)(u.P3F, {
                     className: E.checkboxContainer,
                     onClick: function () {
-                        _.default.track(O.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
+                        _.default.track(x.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
                             tile_type: "activity suggestion",
                             close_type: "permanent",
                             n_participants: c,
@@ -294,7 +294,7 @@ function T(e) {
                 (0, i.jsx)(u.P3F, {
                     className: E.closeButtonContainer,
                     onClick: function () {
-                        _.default.track(O.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
+                        _.default.track(x.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
                             tile_type: "activity suggestion",
                             close_type: "temporary",
                             n_participants: c,

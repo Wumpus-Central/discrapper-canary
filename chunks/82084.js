@@ -1,28 +1,28 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(54381),
     l = n(473749),
     i = n(442837),
     o = n(352065),
     a = n(481060),
-    c = n(607070),
-    s = n(451478),
+    s = n(607070),
+    c = n(451478),
     u = n(585483),
     d = n(79808),
     f = n(981631);
-function b(e) {
+function p(e) {
     var t,
         n,
         {
-            root: b,
-            directory: p,
+            root: p,
+            directory: b,
             target: y,
-            defaultTarget: j,
-            onPanelChange: m,
-            sidebarHeader: v,
-            sidebarFooter: g,
+            defaultTarget: g,
+            onPanelChange: v,
+            sidebarHeader: m,
+            sidebarFooter: h,
             emptyState: x,
         } = e,
-        h = (function (e, t) {
+        j = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -52,21 +52,21 @@ function b(e) {
             "sidebarFooter",
             "emptyState",
         ]);
-    let [O, P] = l.useState(!1),
-        [S, C] = l.useState(1.4),
+    let [O, C] = l.useState(!1),
+        [P, S] = l.useState(1.4),
         _ = l.useRef(null),
-        N = (0, i.e7)([c.Z], () => c.Z.useReducedMotion),
-        E = (0, i.e7)([s.Z], () => s.Z.isFocused());
+        E = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
+        w = (0, i.e7)([c.Z], () => c.Z.isFocused());
     return (
         l.useEffect(() => {
             let e = (e) => {
                 let { intensity: t, duration: n } = e;
-                !N &&
-                    E &&
-                    (P(!0),
-                    C(null != t ? t : 1.4),
+                !E &&
+                    w &&
+                    (C(!0),
+                    S(null != t ? t : 1.4),
                     clearTimeout(_.current),
-                    (_.current = setTimeout(() => P(!1), null != n ? n : 1000)));
+                    (_.current = setTimeout(() => C(!1), null != n ? n : 1000)));
             };
             return (
                 u.S.subscribe(f.CkL.SHAKE_SETTINGS_MODAL, e),
@@ -74,10 +74,10 @@ function b(e) {
                     u.S.unsubscribe(f.CkL.SHAKE_SETTINGS_MODAL, e), clearTimeout(_.current);
                 }
             );
-        }, [N, E]),
+        }, [E, w]),
         (0, r.jsx)(a.UkV, {
             isShaking: O,
-            intensity: S,
+            intensity: P,
             children: (0, r.jsx)(
                 o.A,
                 ((t = (function (e) {
@@ -104,19 +104,19 @@ function b(e) {
                             });
                     }
                     return e;
-                })({}, h)),
+                })({}, j)),
                 (n = n =
                     {
                         children: (0, r.jsx)(d.Z, {
-                            onClose: h.onClose,
-                            root: b,
-                            directory: p,
+                            onClose: j.onClose,
+                            root: p,
+                            directory: b,
                             target: y,
-                            defaultTarget: j,
-                            onPanelChange: m,
-                            sidebarHeader: v,
+                            defaultTarget: g,
+                            onPanelChange: v,
+                            sidebarHeader: m,
                             emptyState: x,
-                            sidebarFooter: g,
+                            sidebarFooter: h,
                         }),
                     }),
                 Object.getOwnPropertyDescriptors

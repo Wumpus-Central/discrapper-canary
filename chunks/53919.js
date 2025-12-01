@@ -8,36 +8,36 @@ var r = n(762378),
     u = "[object Map]",
     d = "[object Object]",
     f = "[object Promise]",
-    _ = "[object Set]",
-    p = "[object WeakMap]",
-    h = "[object DataView]",
-    m = c(r),
+    p = "[object Set]",
+    _ = "[object WeakMap]",
+    m = "[object DataView]",
+    h = c(r),
     g = c(i),
     E = c(a),
     b = c(o),
     y = c(s),
     O = l;
-((r && O(new r(new ArrayBuffer(1))) != h) ||
+((r && O(new r(new ArrayBuffer(1))) != m) ||
     (i && O(new i()) != u) ||
     (a && O(a.resolve()) != f) ||
-    (o && O(new o()) != _) ||
-    (s && O(new s()) != p)) &&
+    (o && O(new o()) != p) ||
+    (s && O(new s()) != _)) &&
     (O = function (e) {
         var t = l(e),
             n = t == d ? e.constructor : void 0,
             r = n ? c(n) : "";
         if (r)
             switch (r) {
-                case m:
-                    return h;
+                case h:
+                    return m;
                 case g:
                     return u;
                 case E:
                     return f;
                 case b:
-                    return _;
-                case y:
                     return p;
+                case y:
+                    return _;
             }
         return t;
     }),

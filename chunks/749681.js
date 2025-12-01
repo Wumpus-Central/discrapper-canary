@@ -1,5 +1,5 @@
 n.r(t),
-    n.d(t, { transitionToGlobalDiscovery: () => h }),
+    n.d(t, { transitionToGlobalDiscovery: () => m }),
     n(65234),
     n(111804),
     n(490233),
@@ -16,9 +16,9 @@ var r = n(258971),
     u = n(836768),
     d = n(49898),
     f = n(981631),
-    _ = n(979007),
-    p = n(128449);
-function h(e) {
+    p = n(979007),
+    _ = n(128449);
+function m(e) {
     var t, n, g;
     let E = e.tab;
     switch ((u.Z.setState({ selectedTab: E }), E)) {
@@ -28,9 +28,9 @@ function h(e) {
                 null != b
                     ? a.Z.setState({
                           selectedTab: b,
-                          entrypoint: null != (t = e.entrypoint) ? t : p.Qq.UNKNOWN,
+                          entrypoint: null != (t = e.entrypoint) ? t : _.Qq.UNKNOWN,
                       })
-                    : a.Z.setState({ entrypoint: null != (n = e.entrypoint) ? n : p.Qq.UNKNOWN }),
+                    : a.Z.setState({ entrypoint: null != (n = e.entrypoint) ? n : _.Qq.UNKNOWN }),
                 (0, s.uL)(f.Z5c.GLOBAL_DISCOVERY_SERVERS, e.extra)
             );
         case d.GlobalDiscoveryTab.APPS:
@@ -52,17 +52,17 @@ function h(e) {
                     }),
                     e.newSessionState.restorePreviousView)
                 )
-                    return h(m());
+                    return m(h());
             }
             if (null != e.applicationId) {
-                if (e.section === _.GlobalDiscoveryAppsSections.STORE)
+                if (e.section === p.GlobalDiscoveryAppsSections.STORE)
                     if (null != e.skuId)
                         return (0, s.uL)(f.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(e.applicationId, e.skuId));
                     else
                         return (0, s.uL)(
                             f.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(
                                 e.applicationId,
-                                _.GlobalDiscoveryAppsSections.STORE,
+                                p.GlobalDiscoveryAppsSections.STORE,
                             ),
                         );
                 return (0, s.uL)(f.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e.applicationId));
@@ -88,7 +88,7 @@ function h(e) {
             throw Error("[transitionToGlobalDiscovery] Unhandled tab type: ".concat(E));
     }
 }
-function m() {
+function h() {
     let { lastItem: e } = r.aQ.getState();
     if (null != e)
         switch (e.type) {

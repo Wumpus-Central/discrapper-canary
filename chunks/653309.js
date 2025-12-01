@@ -1,6 +1,6 @@
 n.d(t, {
-    U: () => p,
-    Z: () => h,
+    U: () => _,
+    Z: () => m,
 }),
     n(388685),
     n(361932),
@@ -55,7 +55,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -66,7 +66,7 @@ function _(e, t) {
         e
     );
 }
-let p = {
+let _ = {
     strong: s.bold,
     em: s.italics,
     u: s.underline,
@@ -87,15 +87,15 @@ let p = {
     mentionSuggestion: l.mentionSuggestion,
     mentionSuggestionSimpleColorVariant: l.mentionSuggestionSimpleColorVariant,
 };
-function h(e, t) {
+function m(e, t) {
     let n,
         { attributes: i, children: c, leaf: u, text: f } = t,
-        h = !1,
-        [m] = o.bN.node(e, o.C0.parent(o.bN.findPath(e, f)));
-    switch (o.bN.isEditor(m) ? "editor" : m.type) {
+        m = !1,
+        [h] = o.bN.node(e, o.C0.parent(o.bN.findPath(e, f)));
+    switch (o.bN.isEditor(h) ? "editor" : h.type) {
         case "line":
         case "blockQuote": {
-            h = void 0;
+            m = void 0;
             let e = Object.entries(u)
                 .filter((e) => {
                     let [t] = e;
@@ -106,11 +106,11 @@ function h(e, t) {
                     if ("hljsTypes" === t) return n;
                     if (!0 === n) {
                         if (
-                            (("codeBlockLang" === t || "codeBlockSyntax" === t) && (h = !1),
+                            (("codeBlockLang" === t || "codeBlockSyntax" === t) && (m = !1),
                             t.startsWith("before_") || t.startsWith("after_"))
                         )
                             return [s[t]];
-                        if (t in p) return [p[t]];
+                        if (t in _) return [_[t]];
                         throw Error("Slate: Unknown decoration attribute: ".concat(t));
                     }
                 })
@@ -123,9 +123,9 @@ function h(e, t) {
         (n = a()(n, { [l.emptyText]: "" === f.text })),
         (0, r.jsx)(
             "span",
-            _(d({}, i), {
+            p(d({}, i), {
                 className: n,
-                spellCheck: h,
+                spellCheck: m,
                 children: c,
             }),
         )

@@ -14,23 +14,23 @@ async function s(e) {
         u = 700,
         d = 640,
         f = Math.round(screen.width / 2 - u / 2),
-        _ = screen.height > d ? Math.round(screen.height / 2 - d / 2) : 0,
-        p = null;
+        p = screen.height > d ? Math.round(screen.height / 2 - d / 2) : 0,
+        _ = null;
     (0, i.isDesktop)() ||
-        (p = window.open(
+        (_ = window.open(
             ""
                 .concat(window.location.protocol, "//")
                 .concat(window.location.host)
                 .concat(o.Z5c.CONNECTIONS(e), "?loading=true"),
             "authorize",
             "scrollbars=yes,resizable=yes,toolbar=no,location=yes,top="
-                .concat(_, ",left=")
+                .concat(p, ",left=")
                 .concat(f, ",width=")
                 .concat(u, ",height=")
                 .concat(d),
         ));
-    let h = c;
-    if (null == h && e !== a.Kt)
+    let m = c;
+    if (null == m && e !== a.Kt)
         try {
             let { body: i } = await r.Z.authorize(e, {
                 location: t,
@@ -38,13 +38,13 @@ async function s(e) {
                 successRedirect: s,
                 handle: l,
             });
-            h = i.url;
+            m = i.url;
         } catch (e) {
-            throw (null == p || p.close(), e);
+            throw (null == _ || _.close(), e);
         }
-    if (null == h) {
-        null == p || p.close();
+    if (null == m) {
+        null == _ || _.close();
         return;
     }
-    return null != p ? (p.location.href = h) : window.open(h), h;
+    return null != _ ? (_.location.href = m) : window.open(m), m;
 }

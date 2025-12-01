@@ -16,7 +16,7 @@ function u(e) {
             enablePremiumBrandRefresh: f,
         } = (0, s.JL)();
     if (f || null == u || 0 === u.length) return null;
-    let _ = u.flatMap((e) => {
+    let p = u.flatMap((e) => {
         let t = e.useBreadcrumbLabel(n);
         return null != t
             ? {
@@ -25,9 +25,9 @@ function u(e) {
               }
             : [];
     });
-    return 0 === _.length
+    return 0 === p.length
         ? null
-        : ((_ = _.filter((e) => {
+        : ((p = p.filter((e) => {
               let t = e.id !== l.h8.ADD_PAYMENT_STEPS,
                   r = e.id === l.h8.ADD_PAYMENT_STEPS && !d.current;
               return !n || (n && (t || r));
@@ -36,7 +36,7 @@ function u(e) {
               className: a()("breadcrumb", c.wrapper, t),
               children: (0, r.jsx)(o.OoM, {
                   activeId: i,
-                  breadcrumbs: _,
+                  breadcrumbs: p,
               }),
           }));
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685), n(539854);
+n.d(t, { Z: () => T }), n(388685), n(539854);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(490597),
     d = n(453687),
     f = n(434624),
-    _ = n(287151),
-    p = n(388032),
-    h = n(127947),
-    m = n(893973);
+    p = n(287151),
+    _ = n(388032),
+    m = n(127947),
+    h = n(893973);
 function g(e, t, n) {
     return (
         t in e
@@ -68,12 +68,12 @@ function y(e, t) {
 let O = (e, t) => (null == e && null == t) || e === t,
     v = (e, t) =>
         e.findIndex((e) => O(e.emoji.id, null == t ? void 0 : t.id) && O(e.emoji.name, null == t ? void 0 : t.name)),
-    I = (e, t) => {
+    S = (e, t) => {
         if (null == t) return e;
         let n = v(e, t);
         return n < 0 ? e : [e[n], ...e.slice(0, n), ...e.slice(n + 1)];
     };
-class T extends i.PureComponent {
+class I extends i.PureComponent {
     static getDerivedStateFromProps(e, t) {
         let n = e.message.reactions.length;
         return 0 === t.reactionsCount && n > 0
@@ -99,16 +99,16 @@ class T extends i.PureComponent {
                 forceAddReactions: y,
                 reactionClassName: O,
                 useChatFontScaling: v,
-                forceHideReactionCreates: I,
-                remainingReactions: T,
-                combinedReactions: S,
+                forceHideReactionCreates: S,
+                remainingReactions: I,
+                combinedReactions: T,
                 visibleReactionsCount: A,
             } = this.props,
             { disableTransitionAppear: C } = this.state,
-            N = v ? m : h,
-            R = A > 0;
-        if (!R && !y) return null;
-        let P = y || R;
+            N = v ? h : m,
+            P = A > 0;
+        if (!P && !y) return null;
+        let R = y || P;
         return (0, r.jsxs)(s.W, {
             component: "div",
             className: o()(N.reactions, b),
@@ -120,7 +120,7 @@ class T extends i.PureComponent {
             onMouseLeave: () => this.setState({ isHovered: !1 }),
             children: [
                 (0, r.jsx)(f.l, {
-                    reactions: S,
+                    reactions: T,
                     message: e,
                     readOnly: n,
                     isLurking: i,
@@ -130,28 +130,28 @@ class T extends i.PureComponent {
                     useChatFontScaling: v,
                     className: O,
                 }),
-                T > 0 &&
+                I > 0 &&
                     (0, r.jsx)(l.P3F, {
                         onClick: (t) => {
-                            t.stopPropagation(), (0, _.op)(E, e);
+                            t.stopPropagation(), (0, p.op)(E, e);
                         },
                         className: o()(N.reaction, O, N.remainingReactions),
-                        "aria-label": p.intl.string(p.t.lfIHs4),
+                        "aria-label": _.intl.string(_.t.lfIHs4),
                         children: (0, r.jsxs)(l.Text, {
                             className: N.reactionInner,
                             variant: "text-sm/normal",
-                            children: ["+", T],
+                            children: ["+", I],
                         }),
                     }),
                 !t &&
-                    !I &&
+                    !S &&
                     (0, r.jsx)(u.X, {
-                        tabIndex: P || this.state.isHovered ? 0 : -1,
+                        tabIndex: R || this.state.isHovered ? 0 : -1,
                         message: e,
                         channel: E,
                         useChatFontScaling: v,
                         isHovered: this.state.isHovered,
-                        className: o()({ [N.forceShow]: P }),
+                        className: o()({ [N.forceShow]: R }),
                     }),
             ],
         });
@@ -165,7 +165,7 @@ class T extends i.PureComponent {
             });
     }
 }
-let S = (e) => {
+let T = (e) => {
     let { message: t, maxReactions: n, hoistReaction: a } = e,
         {
             combinedReactions: o,
@@ -173,7 +173,7 @@ let S = (e) => {
             visibleReactionsCount: l,
         } = i.useMemo(() => {
             let e = [],
-                r = I(t.reactions, a),
+                r = S(t.reactions, a),
                 i = null != n && n < r.length ? r.slice(0, n) : r,
                 o = r.length - i.length,
                 s = r.length;
@@ -191,7 +191,7 @@ let S = (e) => {
             );
         }, [a, n, t.reactions]);
     return (0, r.jsx)(
-        T,
+        I,
         y(E({}, e), {
             visibleReactionsCount: l,
             combinedReactions: o,

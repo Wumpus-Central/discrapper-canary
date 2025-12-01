@@ -57,14 +57,14 @@ let u = (e, t, n) => c({ AvatarImage: e }, null != t && { MediaImage: t }, null 
                 avatarSrc: l,
                 description: c,
                 timestamp: f,
-                episodeDescription: _,
-                colors: p,
-                channelId: h,
+                episodeDescription: p,
+                colors: _,
+                channelId: m,
             } = e,
-            m = n.extra.media_title,
+            h = n.extra.media_title,
             g = u(l, t),
             E = (e) => {
-                let t = p.map((e, t) => ({
+                let t = _.map((e, t) => ({
                     color: e,
                     stop: t,
                 }));
@@ -158,7 +158,7 @@ let u = (e, t, n) => c({ AvatarImage: e }, null != t && { MediaImage: t }, null 
                         },
                         !0,
                     );
-                let a = d(f, _);
+                let a = d(f, p);
                 (0, o.J)({
                     canvas: e,
                     badges: a,
@@ -172,9 +172,9 @@ let u = (e, t, n) => c({ AvatarImage: e }, null != t && { MediaImage: t }, null 
             exportConfigs: {
                 format: i.kH.CloudUpload,
                 quality: 1,
-                fileName: "user-reacting-to-".concat(m, ".png").toLowerCase(),
+                fileName: "user-reacting-to-".concat(h, ".png").toLowerCase(),
                 fileType: "png",
-                channelId: h,
+                channelId: m,
             },
         });
     };

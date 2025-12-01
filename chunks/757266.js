@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -53,15 +53,15 @@ function f(e) {
     let { application: t } = e;
     null != t.id && null != u[t.id] && (u[t.id].authenticated = !0);
 }
-function _(e) {
+function p(e) {
     let { application: t } = e;
     null != t.id && null != u[t.id] && (u[t.id].count--, 0 === u[t.id].count && delete u[t.id]);
 }
-function p(e) {
+function _(e) {
     let { connectedApps: t } = e;
     u = c({}, t);
 }
-class h extends (r = o.ZP.Store) {
+class m extends (r = o.ZP.Store) {
     isConnected(e) {
         return null != u[e];
     }
@@ -75,10 +75,10 @@ class h extends (r = o.ZP.Store) {
         return u;
     }
 }
-l(h, "displayName", "ConnectedAppsStore");
-let m = new h(s.Z, {
-    OVERLAY_INITIALIZE: p,
+l(m, "displayName", "ConnectedAppsStore");
+let h = new m(s.Z, {
+    OVERLAY_INITIALIZE: _,
     RPC_APP_CONNECTED: d,
     RPC_APP_AUTHENTICATED: f,
-    RPC_APP_DISCONNECTED: _,
+    RPC_APP_DISCONNECTED: p,
 });

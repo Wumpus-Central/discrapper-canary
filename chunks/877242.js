@@ -21,18 +21,18 @@ function h() {
         b = (0, f.tP)(e),
         C = o.useRef(null),
         { isHoveringOrFocusing: S } = (0, c.Z)(C),
-        y = (0, E.e)({
+        _ = (0, E.e)({
             quest: e,
             onClose: l,
             sourceQuestContent: t,
             impressionId: h,
         }),
-        _ = e.config.ctaConfig.subtitle,
-        x = void 0 !== _ && !(0, u.Ew)(_);
+        y = e.config.ctaConfig.subtitle,
+        x = void 0 !== y && !(0, u.Ew)(y);
     return (0, r.jsx)(a.u, {
         text: g.intl.string(g.t.EuHF34),
         children: (0, r.jsx)(s.P3F, {
-            onClick: () => y(p.jn.VIDEO_MODAL, d.jZ.OPEN_GAME_LINK),
+            onClick: () => _(p.jn.VIDEO_MODAL, d.jZ.OPEN_GAME_LINK),
             className: O.adInfoClickable,
             children: (0, r.jsxs)("div", {
                 className: i()(O.contentHeaderGameInfo, O.contentHeaderGameInfoHoverable, {
@@ -87,7 +87,7 @@ function h() {
                                               variant: "heading-sm/medium",
                                               lineClamp: n ? void 0 : 1,
                                               color: S ? "text-primary" : "text-secondary",
-                                              children: _,
+                                              children: y,
                                           }),
                                       ],
                                   })

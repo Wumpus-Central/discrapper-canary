@@ -1,13 +1,13 @@
 n.d(t, {
-    Ce: () => _,
+    Ce: () => p,
     Ji: () => d,
     _G: () => E,
-    _I: () => p,
-    _S: () => m,
-    fD: () => h,
+    _I: () => _,
+    _S: () => h,
+    fD: () => m,
     mG: () => y,
     pU: () => f,
-    r4: () => S,
+    r4: () => T,
 }),
     n(35282),
     n(853839),
@@ -29,7 +29,7 @@ let c = void 0,
 function f(e) {
     return "".concat(location.protocol, "//").concat(location.host).concat(e);
 }
-function _() {
+function p() {
     let e = s.Z.safeParseWithQuery(f(u));
     return null == e
         ? Promise.resolve(null)
@@ -46,7 +46,7 @@ function _() {
                   () => null,
               ));
 }
-function p(e) {
+function _(e) {
     if (y(e)) return Promise.resolve(O(e));
     let t = s.Z.safeParseWithQuery(e);
     return null == t
@@ -66,10 +66,10 @@ function p(e) {
                   () => null,
               ));
 }
-function h() {
+function m() {
     return -1 !== window.document.cookie.indexOf("".concat(l.ZF, "="));
 }
-function m() {
+function h() {
     try {
         var e;
         let t = r.parse(window.document.cookie)[l.ZF];
@@ -104,7 +104,7 @@ function O(e) {
     };
 }
 let v = "s",
-    I = new Set([
+    S = new Set([
         "canary.discord.com",
         "ptb.discord.com",
         "discord.com",
@@ -112,15 +112,15 @@ let v = "s",
         "ptb.discordapp.com",
         "discordapp.com",
     ]),
-    T = new Set(["/__development/link", "/__development/link/"]);
-function S(e) {
+    I = new Set(["/__development/link", "/__development/link/"]);
+function T(e) {
     if (y(e))
         return {
             payload: null,
             url: e,
         };
     let t = s.Z.safeParseWithQuery(e);
-    if (null == t || !I.has(t.hostname) || !(v in t.query) || !T.has(t.pathname)) return null;
+    if (null == t || !S.has(t.hostname) || !(v in t.query) || !I.has(t.pathname)) return null;
     for (let e in t.query) e !== v && delete t.query[e];
     return {
         payload: t.query[v],

@@ -1,10 +1,10 @@
 n.d(t, {
     P4: () => d,
     PV: () => u,
-    _e: () => h,
+    _e: () => m,
     gD: () => f,
-    kg: () => p,
-    pO: () => m,
+    kg: () => _,
+    pO: () => h,
 }),
     n(415506),
     n(388685),
@@ -133,7 +133,7 @@ async function f(e) {
         );
     }
 }
-async function _() {
+async function p() {
     let e = await r.tn.get({
         url: l.ANM.SCHEDULED_MESSAGES,
         rejectWithError: !0,
@@ -141,10 +141,10 @@ async function _() {
     if (!e.ok) throw Error("Failed to fetch scheduled messages");
     return e.body.map(s.IR);
 }
-async function p() {
+async function _() {
     i.Z.dispatch({ type: "FETCH_SCHEDULED_MESSAGES" });
     try {
-        let e = await _();
+        let e = await p();
         s.GO.info("Fetched scheduled messages", e),
             i.Z.dispatch({
                 type: "FETCH_SCHEDULED_MESSAGES_SUCCESS",
@@ -158,7 +158,7 @@ async function p() {
             });
     }
 }
-function h(e) {
+function m(e) {
     let { channelId: t, scheduledTimestamp: n } = e;
     i.Z.dispatch({
         type: "CREATE_PENDING_SCHEDULED_MESSAGE",
@@ -166,7 +166,7 @@ function h(e) {
         scheduledTimestamp: n,
     });
 }
-function m(e) {
+function h(e) {
     i.Z.dispatch({
         type: "DELETE_PENDING_SCHEDULED_MESSAGE",
         channelId: e,

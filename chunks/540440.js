@@ -1,5 +1,5 @@
 n.d(t, {
-    B: () => _,
+    B: () => p,
     y: () => f,
 });
 var r = n(54381);
@@ -48,12 +48,12 @@ function f(e) {
             ? c.intl.string(c.t.oSs8eg)
             : c.intl.string(c.t.bK9GT1);
 }
-function _(e) {
-    let { user: t, entry: c, display: u, onAction: _ } = e,
-        p = (0, l.Z)(),
-        h = (0, i.e7)([s.default], () => s.default.getCurrentUser());
-    if (t.id !== (null == h ? void 0 : h.id) || "recent" !== u || !(0, o.Rh)(c)) return null;
-    let m = () => {
+function p(e) {
+    let { user: t, entry: c, display: u, onAction: p } = e,
+        _ = (0, l.Z)(),
+        m = (0, i.e7)([s.default], () => s.default.getCurrentUser());
+    if (t.id !== (null == m ? void 0 : m.id) || "recent" !== u || !(0, o.Rh)(c)) return null;
+    let h = () => {
         (0, a.ZDy)(async () => {
             let { default: e } = await Promise.all([n.e("62880"), n.e("26545")]).then(n.bind(n, 81596));
             return (n) =>
@@ -63,8 +63,8 @@ function _(e) {
                         {
                             entry: c,
                             user: t,
-                            onAction: _,
-                            onOpenGameSettings: p,
+                            onAction: p,
+                            onOpenGameSettings: _,
                         },
                         n,
                     ),
@@ -75,7 +75,7 @@ function _(e) {
         id: "delete-entry-history",
         label: f(c),
         action: () => {
-            null == _ || _({ action: "PRESS_DELETE_HISTORY_MENU_ITEM" }), m();
+            null == p || p({ action: "PRESS_DELETE_HISTORY_MENU_ITEM" }), h();
         },
         color: "danger",
     });

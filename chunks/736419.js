@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(473749),
     i = n(293258),
     a = n(476400),
@@ -44,11 +44,11 @@ function d(e) {
 function f(e) {
     return Array.isArray(e) ? e[0] : e;
 }
-function _(e, t) {
+function p(e, t) {
     var n,
         a,
         l = "__create-react-context-" + c() + "__",
-        _ = (function (e) {
+        p = (function (e) {
             function n() {
                 var t;
                 return (t = e.apply(this, arguments) || this), (t.emitter = d(t.props.value)), t;
@@ -76,8 +76,8 @@ function _(e, t) {
                 n
             );
         })(r.Component);
-    ((n = {})[l] = o().object.isRequired), (_.childContextTypes = n);
-    var p = (function (t) {
+    ((n = {})[l] = o().object.isRequired), (p.childContextTypes = n);
+    var _ = (function (t) {
         function n() {
             var e;
             return (
@@ -115,11 +115,11 @@ function _(e, t) {
     })(r.Component);
     return (
         ((a = {})[l] = o().object),
-        (p.contextTypes = a),
+        (_.contextTypes = a),
         {
-            Provider: _,
-            Consumer: p,
+            Provider: p,
+            Consumer: _,
         }
     );
 }
-let p = r.createContext || _;
+let _ = r.createContext || p;

@@ -5,7 +5,7 @@ n.d(t, {
     n(388685);
 var r = n(54381),
     s = n(473749),
-    o = n(790519),
+    o = n(666917),
     a = n(442837),
     i = n(481060),
     l = n(393238),
@@ -35,21 +35,21 @@ function m(e) {
         g = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
         { ref: f, height: h = null } = (0, l.ZP)(),
         x = null != (t = (0, c.Z)(h)) ? t : null,
-        [{ height: b }, _] = (0, i.q_F)(() => ({
+        [{ height: _ }, b] = (0, i.q_F)(() => ({
             from: { height: 0 },
             config: p,
         }));
     return (
         s.useLayoutEffect(() => {
             null !== h &&
-                _({
+                b({
                     height: h,
                     immediate: !m || g || null === x,
                 });
-        }, [h, _, m, g, x]),
+        }, [h, b, m, g, x]),
         (0, r.jsx)(o.animated.div, {
             style: {
-                height: null === x ? "auto" : b,
+                height: null === x ? "auto" : _,
                 overflow: "hidden",
             },
             children: (0, r.jsx)("div", {

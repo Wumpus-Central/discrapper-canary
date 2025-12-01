@@ -1,8 +1,8 @@
 n.d(t, {
     FE: () => A,
     G5: () => v,
-    IW: () => I,
-    yF: () => p,
+    IW: () => S,
+    yF: () => _,
 });
 var r = n(557635),
     i = n(242315),
@@ -14,31 +14,31 @@ var r = n(557635),
     u = n(112683),
     d = n(525405);
 let f = (0, c.createContext)(!1),
-    _ = (0, c.createContext)(null);
-function p(e) {
-    if ((0, c.useContext)(_)) return e.content;
+    p = (0, c.createContext)(null);
+function _(e) {
+    if ((0, c.useContext)(p)) return e.content;
     let { collection: t, document: n } = E(e.createCollection);
     return c.createElement(
         c.Fragment,
         null,
-        c.createElement(o._G, null, c.createElement(_.Provider, { value: n }, e.content)),
-        c.createElement(h, {
+        c.createElement(o._G, null, c.createElement(p.Provider, { value: n }, e.content)),
+        c.createElement(m, {
             render: e.children,
             collection: t,
         }),
     );
 }
-function h({ collection: e, render: t }) {
+function m({ collection: e, render: t }) {
     return t(e);
 }
-function m(e, t, n) {
+function h(e, t, n) {
     let r = (0, u.Av)(),
         i = (0, c.useRef)(r);
     i.current = r;
     let a = (0, c.useCallback)(() => (i.current ? n() : t()), [t, n]);
     return (0, d.useSyncExternalStore)(e, a);
 }
-let g = "function" == typeof c.useSyncExternalStore ? c.useSyncExternalStore : m;
+let g = "function" == typeof c.useSyncExternalStore ? c.useSyncExternalStore : h;
 function E(e) {
     let [t] = (0, c.useState)(() => new (0, i.BB)((null == e ? void 0 : e()) || new (0, r.Mi)()));
     return {
@@ -94,7 +94,7 @@ function v(e, t) {
         });
     return (r.displayName = t.name), r;
 }
-function I(e, t, n = T) {
+function S(e, t, n = I) {
     let r = ({ node: e }) => t(e.props, e.props.ref, e),
         i = (0, c.forwardRef)((t, i) => {
             var a;
@@ -105,24 +105,24 @@ function I(e, t, n = T) {
         });
     return (i.displayName = t.name), i;
 }
-function T(e) {
+function I(e) {
     return (0, a.H)({
         ...e,
         addIdAndValue: !0,
     });
 }
-let S = (0, c.createContext)(null);
+let T = (0, c.createContext)(null);
 function A(e) {
-    let t = (0, c.useContext)(S),
+    let t = (0, c.useContext)(T),
         n = ((null == t ? void 0 : t.dependencies) || []).concat(e.dependencies),
         r = e.idScope || (null == t ? void 0 : t.idScope),
-        i = T({
+        i = I({
             ...e,
             idScope: r,
             dependencies: n,
         });
     return (
-        (0, c.useContext)(_) && (i = c.createElement(C, null, i)),
+        (0, c.useContext)(p) && (i = c.createElement(C, null, i)),
         (t = (0, c.useMemo)(
             () => ({
                 dependencies: n,
@@ -130,13 +130,13 @@ function A(e) {
             }),
             [r, ...n],
         )),
-        c.createElement(S.Provider, { value: t }, i)
+        c.createElement(T.Provider, { value: t }, i)
     );
 }
 function C({ children: e }) {
-    let t = (0, c.useContext)(_),
+    let t = (0, c.useContext)(p),
         n = (0, c.useMemo)(
-            () => c.createElement(_.Provider, { value: null }, c.createElement(f.Provider, { value: !0 }, e)),
+            () => c.createElement(p.Provider, { value: null }, c.createElement(f.Provider, { value: !0 }, e)),
             [e],
         );
     return (0, u.Av)() ? c.createElement(b.Provider, { value: t }, n) : (0, s.createPortal)(n, t);

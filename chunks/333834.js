@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(442837),
     d = n(481060),
     f = n(724757),
-    p = n(100527),
-    h = n(906732),
+    h = n(100527),
+    p = n(906732),
     g = n(306680),
     m = n(585483),
     b = n(709054),
@@ -56,7 +56,7 @@ function w(e) {
 }
 let T = [E.KZ.UNREAD, E.KZ.TODAY, E.KZ.YESTERDAY, E.KZ.OLDER];
 function A() {
-    let { analyticsLocations: e } = (0, h.ZP)(p.Z.NOTIFICATIONS_INBOX);
+    let { analyticsLocations: e } = (0, p.ZP)(h.Z.NOTIFICATIONS_INBOX);
     return (0, r.jsx)("div", {
         className: N.emptyStateContainer,
         children: (0, r.jsxs)(d.Kqy, {
@@ -96,8 +96,8 @@ function R(e) {
             unreadMessages: n,
             loadMore: l,
             renderLoadingState: a,
-            renderMessageGroup: p,
-            scrollerClassName: h,
+            renderMessageGroup: h,
+            scrollerClassName: p,
             className: I,
             listName: P,
             ignoreGrouping: R = !1,
@@ -212,7 +212,7 @@ function R(e) {
                     : q
                       ? e.push((0, r.jsx)(A, {}, "empty-state"))
                       : R
-                        ? (e.push(...n.map((e) => p([e], !0))), e.push(...t.map((e) => p([e], !1))))
+                        ? (e.push(...n.map((e) => h([e], !0))), e.push(...t.map((e) => h([e], !1))))
                         : s().each(T, (t) => {
                               0 !== Y[t].length &&
                                   (e.push(
@@ -234,11 +234,11 @@ function R(e) {
                                           t,
                                       ),
                                   ),
-                                  H[t] && e.push(...Y[t].map((e) => p(e, t === E.KZ.UNREAD))));
+                                  H[t] && e.push(...Y[t].map((e) => h(e, t === E.KZ.UNREAD))));
                           }),
                 e
             );
-        }, [t, n, a, H, W, Y, R, p, q, Q, D]),
+        }, [t, n, a, H, W, Y, R, h, q, Q, D]),
         J = X[X.length - 1],
         $ = i.isValidElement(J) && J.type === w,
         ee = (0, x.d)((e) => e.setInboxReadState);
@@ -352,7 +352,7 @@ function R(e) {
                                             (i.current =
                                                 null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
                                     },
-                                    className: o()(N.messagesPopout, h),
+                                    className: o()(N.messagesPopout, p),
                                     onScroll: K,
                                     fade: !0,
                                 },

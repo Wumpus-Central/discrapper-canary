@@ -29,18 +29,18 @@ e.exports = function (e) {
                 return c.apply(e, a(u, arguments));
             },
             f = r(0, c.length - u.length),
-            _ = [],
-            p = 0;
-        p < f;
-        p++
+            p = [],
+            _ = 0;
+        _ < f;
+        _++
     )
-        _[p] = "$" + p;
+        p[_] = "$" + _;
     if (
-        ((l = Function("binder", "return function (" + s(_, ",") + "){ return binder.apply(this,arguments); }")(d)),
+        ((l = Function("binder", "return function (" + s(p, ",") + "){ return binder.apply(this,arguments); }")(d)),
         c.prototype)
     ) {
-        var h = function () {};
-        (h.prototype = c.prototype), (l.prototype = new h()), (h.prototype = null);
+        var m = function () {};
+        (m.prototype = c.prototype), (l.prototype = new m()), (m.prototype = null);
     }
     return l;
 };

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R });
+n.d(t, { Z: () => P });
 var r = n(54381),
     i = n(473749),
     a = n(442837),
@@ -9,19 +9,19 @@ var r = n(54381),
     u = n(311819),
     d = n(433534),
     f = n(541716),
-    _ = n(433355),
-    p = n(592125),
-    h = n(944486),
-    m = n(626135),
+    p = n(433355),
+    _ = n(592125),
+    m = n(944486),
+    h = n(626135),
     g = n(572004),
     E = n(591759),
     b = n(135431),
     y = n(621853),
     O = n(497805),
     v = n(732380),
-    I = n(981631),
-    T = n(388032);
-function S(e, t, n) {
+    S = n(981631),
+    I = n(388032);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function A(e) {
                 }),
             )),
             r.forEach(function (t) {
-                S(e, t, n[t]);
+                T(e, t, n[t]);
             });
     }
     return e;
@@ -71,37 +71,37 @@ function N(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function R(e) {
+function P(e) {
     var { user: t, closePopout: n } = e,
-        S = C(e, ["user", "closePopout"]);
+        T = C(e, ["user", "closePopout"]);
     let N = i.useRef(null),
-        R = (0, a.e7)([y.Z], () => {
+        P = (0, a.e7)([y.Z], () => {
             var e;
             return null == (e = y.Z.getUserProfile(t.id)) ? void 0 : e.application;
         }),
-        P = (0, a.e7)([h.Z, p.Z], () => p.Z.getChannel(h.Z.getChannelId())),
-        D = (0, s.Z)(P),
-        w = t.id,
-        L = i.useCallback(() => {
-            if (null != R)
-                if (D) {
-                    let e = h.Z.getCurrentlySelectedChannelId(),
-                        t = p.Z.getChannel(e),
+        R = (0, a.e7)([m.Z, _.Z], () => _.Z.getChannel(m.Z.getChannelId())),
+        w = (0, s.Z)(R),
+        D = t.id,
+        x = i.useCallback(() => {
+            if (null != P)
+                if (w) {
+                    let e = m.Z.getCurrentlySelectedChannelId(),
+                        t = _.Z.getChannel(e),
                         r =
-                            null != _.ZP.getSidebarState(e) || (null == t ? void 0 : t.isGuildVocal())
+                            null != p.ZP.getSidebarState(e) || (null == t ? void 0 : t.isGuildVocal())
                                 ? f.Ie.SIDEBAR
                                 : f.Ie.NORMAL;
-                    l._(c._b.TEXT, r, { applicationId: R.id }),
-                        (0, o.Mr3)((0, O.z)(w, null == P ? void 0 : P.guild_id)),
+                    l._(c._b.TEXT, r, { applicationId: P.id }),
+                        (0, o.Mr3)((0, O.z)(D, null == R ? void 0 : R.guild_id)),
                         null == n || n(),
-                        m.default.track(I.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: R.id });
-                } else (0, b.L)(A({ applicationId: R.id }, R));
-        }, [R, D, w, null == P ? void 0 : P.guild_id, n]),
-        x = D ? T.intl.string(T.t["Cia+A8"]) : T.intl.string(T.t.NgXl3C);
-    if (null == R || !(0, d.Eb)(R)) return null;
-    let { customInstallUrl: M } = R,
-        k = null == M || E.Z.isDiscordUrl(M) ? o.qJs : o.Gr1,
-        j = D ? void 0 : k;
+                        h.default.track(S.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: P.id });
+                } else (0, b.L)(A({ applicationId: P.id }, P));
+        }, [P, w, D, null == R ? void 0 : R.guild_id, n]),
+        L = w ? I.intl.string(I.t["Cia+A8"]) : I.intl.string(I.t.NgXl3C);
+    if (null == P || !(0, d.Eb)(P)) return null;
+    let { customInstallUrl: j } = P,
+        M = null == j || E.Z.isDiscordUrl(j) ? o.qJs : o.Gr1,
+        k = w ? void 0 : M;
     return g.wS
         ? (0, r.jsx)(o.yRy, {
               targetElementRef: N,
@@ -110,13 +110,13 @@ function R(e) {
                   return (0, r.jsx)(o.v2r, {
                       navId: "user-bot-profile-add-app",
                       onClose: t,
-                      "aria-label": T.intl.string(T.t.dbkxVm),
+                      "aria-label": I.intl.string(I.t.dbkxVm),
                       onSelect: void 0,
                       children: (0, r.jsx)(o.kSQ, {
                           children: (0, r.jsx)(o.sNh, {
                               id: "copy",
-                              label: T.intl.string(T.t.XWDihq),
-                              action: () => (0, g.JG)((0, u.J)(R)),
+                              label: I.intl.string(I.t.XWDihq),
+                              action: () => (0, g.JG)((0, u.J)(P)),
                           }),
                       }),
                   });
@@ -130,13 +130,13 @@ function R(e) {
                           {
                               buttonRef: N,
                               action: "PRESS_ADD_APP",
-                              text: x,
-                              icon: j,
+                              text: L,
+                              icon: k,
                               onContextMenu: t,
-                              onClick: L,
+                              onClick: x,
                           },
                           n,
-                          S,
+                          T,
                       ),
                   );
               },
@@ -146,12 +146,12 @@ function R(e) {
               A(
                   {
                       action: "PRESS_ADD_APP",
-                      text: x,
-                      icon: j,
-                      onClick: L,
+                      text: L,
+                      icon: k,
+                      onClick: x,
                       variant: "primary",
                   },
-                  S,
+                  T,
               ),
           );
 }

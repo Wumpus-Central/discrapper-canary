@@ -1,7 +1,7 @@
 n.d(t, { Z: () => d }), n(388685);
 var r = n(54381),
     i = n(473749),
-    l = n(790519),
+    l = n(666917),
     o = n(481060),
     a = n(393903),
     s = n(661977);
@@ -10,10 +10,10 @@ let c = Math.ceil(Math.sqrt(115200)),
     d = i.forwardRef(function (e, t) {
         let { children: n } = e,
             [d, f] = i.useState(-1),
-            p = i.useCallback((e) => {
+            h = i.useCallback((e) => {
                 f(e.contentRect.width);
             }, []),
-            h = (0, a.y)(p, [], { fireOnMount: !0 }),
+            p = (0, a.y)(h, [], { fireOnMount: !0 }),
             [{ shineSpring: g }, m] = (0, o.q_F)(() => ({
                 from: { shineSpring: 0 },
                 config: {
@@ -66,7 +66,7 @@ let c = Math.ceil(Math.sqrt(115200)),
                 onMouseLeave: _,
                 onFocus: b,
                 onBlur: _,
-                ref: h,
+                ref: p,
                 style: {
                     "--custom-shine-dimensions": "".concat(240, "px"),
                     "--custom-shine-rotated-dimensions-delta": "".concat(u, "px"),

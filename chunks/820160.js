@@ -2,8 +2,8 @@ n.d(t, { Z: () => o });
 var i = n(54381);
 n(473749);
 var l = n(481060),
-    s = n(813197),
-    r = n(388032),
+    r = n(813197),
+    s = n(388032),
     a = n(437907);
 function o(e) {
     let { icon: t, onChange: n } = e;
@@ -54,11 +54,11 @@ function o(e) {
                               }),
                           ],
                       }),
-                (0, i.jsx)(s.ZP, {
+                (0, i.jsx)(r.ZP, {
                     onChange: n,
                     multiple: !1,
                     tabIndex: 0,
-                    "aria-label": r.intl.string(r.t.DWB2YZ),
+                    "aria-label": s.intl.string(s.t.DWB2YZ),
                 }),
             ],
         }),

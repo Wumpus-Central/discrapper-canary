@@ -18,9 +18,9 @@ var i = n(54381),
     C = n(680056),
     v = n(266454),
     _ = n(536442),
-    x = n(728285),
-    j = n(79390),
-    O = n(216789),
+    O = n(728285),
+    x = n(79390),
+    j = n(216789),
     E = n(665906),
     S = n(695346),
     P = n(433355),
@@ -33,12 +33,12 @@ var i = n(54381),
     M = n(127654),
     R = n(316595),
     L = n(443603),
-    k = n(193910),
-    D = n(951211),
+    D = n(193910),
+    k = n(951211),
     U = n(981631),
-    B = n(356659),
-    H = n(921944),
-    F = n(388032),
+    F = n(356659),
+    B = n(921944),
+    H = n(388032),
     V = n(90274);
 function G(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -94,7 +94,7 @@ let W = r.memo(function (e) {
             canOnlyUseTextCommands: J,
             chatInputType: Q,
         } = e,
-        $ = (0, x.bp)(),
+        $ = (0, O.bp)(),
         ee = r.useRef(null),
         et = r.useRef(null),
         en = (0, o.e7)([N.Z], () => N.Z.getActivities()),
@@ -108,7 +108,7 @@ let W = r.memo(function (e) {
         ),
         { onShareClick: es } = (0, C.Z)(q.id),
         ec = (0, o.e7)([_.qc], () => _.qc.hasHotspot(_.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
-        eu = (0, c.s9z)((e) => (0, c.DEQ)(e, B.Qr)),
+        eu = (0, c.s9z)((e) => (0, c.DEQ)(e, F.Qr)),
         ed = (0, o.e7)([I.Z], () => I.Z.hasLayers()),
         ep = (0, o.e7)([g.Z], () => g.Z.hasClips()),
         [eh, ef] = r.useState(null),
@@ -139,7 +139,7 @@ let W = r.memo(function (e) {
                         }),
                     );
             },
-            { modalKey: B.Qr },
+            { modalKey: F.Qr },
         ),
             ef(null);
     }
@@ -159,21 +159,21 @@ let W = r.memo(function (e) {
         );
     });
     let e_ = (0, E.NE)(q),
-        ex = (0, E.Xu)(q),
-        ej = !S.dN.useSetting() && !(0, w.isAndroidWeb)() && null != window.ResizeObserver,
-        eO = (0, f.R)({
+        eO = (0, E.Xu)(q),
+        ex = !S.dN.useSetting() && !(0, w.isAndroidWeb)() && null != window.ResizeObserver,
+        ej = (0, f.R)({
             channel: q,
             chatInputType: Q,
         }),
-        eE = (0, j.UI)(null != q ? q : void 0),
+        eE = (0, x.UI)(null != q ? q : void 0),
         eS = (0, p.qB)(),
-        eP = (0, O.Us)({ location: "ChannelAttachButton" }),
+        eP = (0, j.Us)({ location: "ChannelAttachButton" }),
         eI = (0, h.o)(),
         eZ = null != (l = null == el ? void 0 : el.length) ? l : 0,
-        eT = (0, D.Z)({
+        eT = (0, k.Z)({
             canAttachFiles: eb,
-            canStartThreads: e_ || ex,
-            useSlate: ej,
+            canStartThreads: e_ || eO,
+            useSlate: ex,
             hasClips: em,
             canUseApplicationCommands: !J,
             channel: q,
@@ -184,7 +184,7 @@ let W = r.memo(function (e) {
             appContext: $,
             canSendScheduledMessages: eP,
             canSummarizeThreads: eI,
-            showAppLauncher: eO,
+            showAppLauncher: ej,
         });
     if (0 === eT.length) return null;
     let eN = (0, i.jsx)(c.svS, {
@@ -200,12 +200,12 @@ let W = r.memo(function (e) {
             position: "top",
             positionKey: null != eh ? eh : "null",
             onRequestOpen: () => {
-                eC && (0, v.Q3)(s.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: H.L.TAKE_ACTION }),
+                eC && (0, v.Q3)(s.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: B.L.TAKE_ACTION }),
                     ef("attachMenu");
             },
             onRequestClose: () => {
                 (0, c.$sL)() ||
-                    (eC && (0, v.Q3)(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: H.L.TAKE_ACTION }), ef(null));
+                    (eC && (0, v.Q3)(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: B.L.TAKE_ACTION }), ef(null));
             },
             renderPopout: (e) => {
                 switch (eh) {
@@ -219,7 +219,7 @@ let W = r.memo(function (e) {
                         );
                     case "attachMenu":
                         return (0, i.jsx)(
-                            k.Z,
+                            D.Z,
                             z(G({}, e), {
                                 onClose: () => ef(null),
                                 options: eT,
@@ -249,7 +249,7 @@ let W = r.memo(function (e) {
                                 className: a()(V.attachButton, W),
                                 childClassName: V.attachButtonInner,
                                 isActive: !1,
-                                "aria-label": F.intl.string(F.t.d56gCa),
+                                "aria-label": H.intl.string(H.t.d56gCa),
                                 onDoubleClick: eb
                                     ? () => {
                                           var e;

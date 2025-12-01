@@ -29,34 +29,34 @@ function d(e, t) {
         case "<":
             return f(n, o);
         case "<=":
-            return _(n, o);
+            return p(n, o);
         case ">=":
-            return h(n, o);
-        case ">":
             return m(n, o);
+        case ">":
+            return h(n, o);
         case "~":
         case "~>":
             return g(n, o);
         default:
-            return p(n, o);
+            return _(n, o);
     }
 }
 function f(e, t) {
-    return -1 === S(e, t);
-}
-function _(e, t) {
-    var n = S(e, t);
-    return -1 === n || 0 === n;
+    return -1 === T(e, t);
 }
 function p(e, t) {
-    return 0 === S(e, t);
+    var n = T(e, t);
+    return -1 === n || 0 === n;
 }
-function h(e, t) {
-    var n = S(e, t);
-    return 1 === n || 0 === n;
+function _(e, t) {
+    return 0 === T(e, t);
 }
 function m(e, t) {
-    return 1 === S(e, t);
+    var n = T(e, t);
+    return 1 === n || 0 === n;
+}
+function h(e, t) {
+    return 1 === T(e, t);
 }
 function g(e, t) {
     var n = t.slice(),
@@ -64,7 +64,7 @@ function g(e, t) {
     r.length > 1 && r.pop();
     var i = r.length - 1,
         a = parseInt(r[i], 10);
-    return b(a) && (r[i] = a + 1 + ""), h(e, n) && f(e, r);
+    return b(a) && (r[i] = a + 1 + ""), m(e, n) && f(e, r);
 }
 function E(e) {
     var t = e.split(i),
@@ -95,19 +95,19 @@ function v(e, t) {
     }
     return O(t, e.length), [e, t];
 }
-function I(e, t) {
+function S(e, t) {
     var n = e.match(l)[1],
         r = t.match(l)[1],
         i = parseInt(n, 10),
         a = parseInt(r, 10);
-    return b(i) && b(a) && i !== a ? T(i, a) : T(e, t);
+    return b(i) && b(a) && i !== a ? I(i, a) : I(e, t);
 }
-function T(e, t) {
+function I(e, t) {
     return (typeof e != typeof t && r(!1), e > t) ? 1 : e < t ? -1 : 0;
 }
-function S(e, t) {
+function T(e, t) {
     for (var n = v(e, t), r = n[0], i = n[1], a = 0; a < i.length; a++) {
-        var o = I(r[a], i[a]);
+        var o = S(r[a], i[a]);
         if (o) return o;
     }
     return 0;

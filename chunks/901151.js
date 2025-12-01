@@ -9,18 +9,18 @@ var r = n(54381),
     u = n(709054),
     d = n(695346),
     f = n(313789),
-    _ = n(749876),
-    p = n(518596),
-    h = n(546957),
-    m = n(838436),
+    p = n(749876),
+    _ = n(518596),
+    m = n(546957),
+    h = n(838436),
     g = n(51331),
     E = n(726985),
     b = n(981631),
     y = n(388032),
     O = n(42101);
 let v = 3,
-    I = 3;
-function T(e) {
+    S = 3;
+function I(e) {
     let { applications: t } = e,
         n = i.useMemo(() => t.sort((e, t) => u.default.compare(t.id, e.id)), [t]),
         a = i.useMemo(() => {
@@ -51,7 +51,7 @@ function T(e) {
         }, [n]),
         c = i.useMemo(() => {
             let e = [];
-            for (let t = 0; t < I; t++) {
+            for (let t = 0; t < S; t++) {
                 let i = n[t];
                 if (null == i) break;
                 let { icon: a, name: s, id: c } = i,
@@ -74,7 +74,7 @@ function T(e) {
                     ),
                 );
             }
-            let t = n.length - I;
+            let t = n.length - S;
             return (
                 t > 0 &&
                     e.push(
@@ -95,7 +95,7 @@ function T(e) {
             );
         }, [n]),
         d = () => {
-            (0, p.openUserSettings)(f.n.AUTHORIZED_APPS_PANEL, { section: b.oAB.AUTHORIZED_APPS });
+            (0, _.openUserSettings)(f.n.AUTHORIZED_APPS_PANEL, { section: b.oAB.AUTHORIZED_APPS });
         };
     return (0, r.jsxs)("div", {
         className: O.header,
@@ -134,9 +134,9 @@ function T(e) {
         ],
     });
 }
-function S() {
+function T() {
     let e = d._j.useSetting();
-    return (0, r.jsx)(m.U, {
+    return (0, r.jsx)(h.U, {
         setting: E.s6.PRIVACY_AND_SAFETY_ALLOW_GAME_FRIEND_DMS,
         children: (0, r.jsx)(g.ZP, {
             title: y.intl.string(y.t.XpBObB),
@@ -163,10 +163,10 @@ function A() {
                 value: a.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE,
             },
         ];
-    return (0, r.jsxs)(m.U, {
+    return (0, r.jsxs)(h.U, {
         setting: E.s6.PRIVACY_AND_SAFETY_IN_GAME_DMS,
         children: [
-            (0, r.jsx)(m.H, {
+            (0, r.jsx)(h.H, {
                 header: y.intl.string(y.t["ms+Tme"]),
                 description: y.intl.string(y.t["4NN4+/"]),
             }),
@@ -179,15 +179,15 @@ function A() {
     });
 }
 function C() {
-    let { showLoadingIndicator: e, slayerSdkApplications: t } = (0, _.Z)(!0);
-    return (0, r.jsx)(h.Z, {
+    let { showLoadingIndicator: e, slayerSdkApplications: t } = (0, p.Z)(!0);
+    return (0, r.jsx)(m.Z, {
         children: e
             ? (0, r.jsx)(s.$jN, {})
             : t.length > 0
               ? (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(T, { applications: t }),
-                        (0, r.jsx)(S, {}),
+                        (0, r.jsx)(I, { applications: t }),
+                        (0, r.jsx)(T, {}),
                         (0, r.jsx)("div", { className: O.divider }),
                         (0, r.jsx)(A, {}),
                     ],

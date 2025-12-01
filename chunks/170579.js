@@ -10,28 +10,28 @@ var i = n(120356),
     u = n(926153),
     d = n(27693),
     f = n(74538),
-    _ = n(937615),
-    p = n(622909),
-    h = n(639119),
-    m = n(474936),
+    p = n(937615),
+    _ = n(622909),
+    m = n(639119),
+    h = n(474936),
     g = n(388032),
     E = n(716619);
 function b(e, t) {
     let n = f.ZP.getDefaultPrice(e),
         { intervalType: r } = f.ZP.getInterval(e),
-        i = (0, _.T4)(n.amount, n.currency);
+        i = (0, p.T4)(n.amount, n.currency);
     if (t) return i;
     switch (r) {
-        case m.rV.MONTH:
+        case h.rV.MONTH:
             return g.intl.formatToPlainString(g.t.AbOLNu, { price: i });
-        case m.rV.YEAR:
+        case h.rV.YEAR:
             return g.intl.formatToPlainString(g.t["rS8FA+"], { price: i });
     }
 }
 let y = (e) => {
         let { isTier0: t, discountAmount: n } = e,
-            i = (0, h.N)(),
-            s = null != i && i.trial_id === m.a7,
+            i = (0, m.N)(),
+            s = null != i && i.trial_id === h.a7,
             l = g.intl.string(g.t.IBYG5U);
         return (
             void 0 !== n
@@ -53,20 +53,20 @@ let y = (e) => {
             {
                 hideCloseButton: i = !1,
                 hideCloseOnFullScreen: f,
-                shouldShowPrice: _,
-                plan: h,
+                shouldShowPrice: p,
+                plan: m,
                 renderAnimation: g,
                 onClose: O,
                 isGift: v,
-                upgradeToPremiumType: I,
-                className: T,
-                showTrialBadge: S = !1,
+                upgradeToPremiumType: S,
+                className: I,
+                showTrialBadge: T = !1,
                 showDiscountBadge: A = !1,
             } = e,
-            C = I === m.PremiumTypes.TIER_2;
-        n = I === m.PremiumTypes.TIER_0 ? c.Z : I === m.PremiumTypes.TIER_1 ? u.Z : l.Z;
-        let N = (0, p.N)(),
-            R = null == N || null == (t = N.discount) ? void 0 : t.amount;
+            C = S === h.PremiumTypes.TIER_2;
+        n = S === h.PremiumTypes.TIER_0 ? c.Z : S === h.PremiumTypes.TIER_1 ? u.Z : l.Z;
+        let N = (0, _.N)(),
+            P = null == N || null == (t = N.discount) ? void 0 : t.amount;
         return (0, r.jsxs)("div", {
             "aria-hidden": !0,
             className: a()(
@@ -74,10 +74,10 @@ let y = (e) => {
                     [E.headerBackground]: !C,
                     [E.tier2HeaderBackground]: C,
                 },
-                T,
+                I,
             ),
             children: [
-                (S || A) && (0, r.jsx)(d.Z, { className: E.trialBadgeSparkles }),
+                (T || A) && (0, r.jsx)(d.Z, { className: E.trialBadgeSparkles }),
                 g(),
                 (0, r.jsxs)(s.Z, {
                     align: s.Z.Align.START,
@@ -87,10 +87,10 @@ let y = (e) => {
                         (0, r.jsxs)("div", {
                             children: [
                                 (0, r.jsx)(n, { className: a()(E.headerIcon, { [E.nonTier2]: !C }) }),
-                                (S || A) &&
+                                (T || A) &&
                                     (0, r.jsx)(y, {
-                                        isTier0: I === m.PremiumTypes.TIER_0,
-                                        discountAmount: A ? R : void 0,
+                                        isTier0: S === h.PremiumTypes.TIER_0,
+                                        discountAmount: A ? P : void 0,
                                     }),
                             ],
                         }),
@@ -103,10 +103,10 @@ let y = (e) => {
                             }),
                     ],
                 }),
-                _ && null != h
+                p && null != m
                     ? (0, r.jsx)("div", {
                           className: E.price,
-                          children: b(h, v),
+                          children: b(m, v),
                       })
                     : null,
             ],

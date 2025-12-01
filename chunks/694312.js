@@ -12,27 +12,27 @@ function f(e) {
     let t = (0, i.e7)([o.default], o.default.getCurrentUser),
         n = (0, i.Wu)([u.ZP], () => u.ZP.getShelfActivities(e)),
         f = (0, i.e7)([s.Z], () => s.Z.testModeEmbeddedApplicationId),
-        _ = n.map((e) => e.application_id),
-        p = null != f ? [f, ..._] : _,
-        h = (0, a.Z)(p),
-        m = r.useMemo(() => h.filter(l.lm), [h]),
+        p = n.map((e) => e.application_id),
+        _ = null != f ? [f, ...p] : p,
+        m = (0, a.Z)(_),
+        h = r.useMemo(() => m.filter(l.lm), [m]),
         g = r.useMemo(
             () =>
-                null != f && m.length > 0 && m[0].id === f && null != m[0].embeddedActivityConfig
+                null != f && h.length > 0 && h[0].id === f && null != h[0].embeddedActivityConfig
                     ? [
                           {
-                              activity: m[0].embeddedActivityConfig,
-                              application: m[0],
+                              activity: h[0].embeddedActivityConfig,
+                              application: h[0],
                           },
                       ]
                     : [],
-            [m, f],
+            [h, f],
         ),
         E = r.useMemo(
             () =>
                 n
                     .map((e) => {
-                        let t = m.find((t) => t.id === e.application_id);
+                        let t = h.find((t) => t.id === e.application_id);
                         return null == t
                             ? null
                             : {
@@ -41,7 +41,7 @@ function f(e) {
                               };
                     })
                     .filter(l.lm),
-            [n, m],
+            [n, h],
         );
     return r.useMemo(
         () =>

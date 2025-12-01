@@ -1,6 +1,6 @@
 n.d(t, {
-    $x: () => S,
-    ZP: () => P,
+    $x: () => T,
+    ZP: () => R,
     d7: () => C,
     w6: () => A,
 }),
@@ -18,10 +18,10 @@ var r = n(54381),
     u = n(243778),
     d = n(126848),
     f = n(207874),
-    _ = n(585483),
-    p = n(960048),
-    h = n(410575),
-    m = n(493544),
+    p = n(585483),
+    _ = n(960048),
+    m = n(410575),
+    h = n(493544),
     g = n(981631),
     E = n(388032),
     b = n(486807);
@@ -66,7 +66,7 @@ function v(e, t) {
     }
     return n;
 }
-function I(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -77,12 +77,12 @@ function I(e, t) {
         e
     );
 }
-let T = Object.freeze({
+let I = Object.freeze({
         shouldPreventNavigation: !1,
         onPreventNavigation: null,
         sidebarOpen: !0,
     }),
-    S = 1.4,
+    T = 1.4,
     A = 15,
     C = 2;
 function N(e) {
@@ -95,18 +95,18 @@ function N(e) {
     });
     let c = null != (t = null == i ? void 0 : i.element) ? t : g.VqG,
         u = null != (n = null == i ? void 0 : i.elementProps) ? n : {};
-    return (0, r.jsx)(h.Z, {
+    return (0, r.jsx)(m.Z, {
         section: i.section,
         children: (0, r.jsx)(
             c,
-            I(O({}, u), {
+            S(O({}, u), {
                 setPreventNavigation: o,
                 refToScroller: s,
             }),
         ),
     });
 }
-class R extends i.PureComponent {
+class P extends i.PureComponent {
     componentDidMount() {
         this.getPredicateSections().forEach((e) => {
             let { notice: t } = e;
@@ -120,7 +120,7 @@ class R extends i.PureComponent {
     }
     componentDidUpdate(e) {
         let { section: t } = e;
-        t !== this.props.section && (this._intensity = S);
+        t !== this.props.section && (this._intensity = T);
     }
     componentWillUnmount() {
         (this._unmounted = !0),
@@ -138,14 +138,14 @@ class R extends i.PureComponent {
         let { section: t } = this.props,
             { notice: n } = null != (e = this.getPredicateSections().find((e) => t === e.section)) ? e : {};
         return null != n && n.stores.some((e) => e.showNotice() && !(null != e.canCloseEarly && e.canCloseEarly()))
-            ? (_.S.dispatch(g.CkL.SHAKE_APP, {
+            ? (p.S.dispatch(g.CkL.SHAKE_APP, {
                   duration: 300,
                   intensity: this._intensity,
               }),
               (this._intensity = Math.min(this._intensity + C, A)),
-              _.S.dispatch(g.CkL.EMPHASIZE_NOTICE),
+              p.S.dispatch(g.CkL.EMPHASIZE_NOTICE),
               !1)
-            : ((this._intensity = S), !0);
+            : ((this._intensity = T), !0);
     }
     renderSidebar(e) {
         let { section: t, title: n, showUserSettingsSearch: i } = this.props,
@@ -170,11 +170,11 @@ class R extends i.PureComponent {
                         e.map((e, t) => {
                             if (null != e.tabPredicate && !e.tabPredicate()) return null;
                             switch (e.section) {
-                                case m.ID.HEADER:
+                                case h.ID.HEADER:
                                     return (0, r.jsx)(s.njP.Header, { children: e.label }, t);
-                                case m.ID.DIVIDER:
+                                case h.ID.DIVIDER:
                                     return (0, r.jsx)(s.njP.Separator, {}, t);
-                                case m.ID.CUSTOM:
+                                case h.ID.CUSTOM:
                                     var n;
                                     let i = null != (n = e.element) ? n : g.VqG;
                                     return (0, r.jsx)(i, {}, t);
@@ -206,7 +206,7 @@ class R extends i.PureComponent {
                     location: i,
                     subsection: u,
                 }),
-                (0, r.jsx)(m.ZP, {
+                (0, r.jsx)(h.ZP, {
                     sidebarTheme: t,
                     scrollerRef: this.scrollerRef,
                     section: n,
@@ -229,13 +229,13 @@ class R extends i.PureComponent {
     constructor(...e) {
         super(...e),
             y(this, "_unmounted", !1),
-            y(this, "_intensity", S),
+            y(this, "_intensity", T),
             y(this, "_subscribedStores", []),
             y(this, "scrollerRef", i.createRef()),
             y(
                 this,
                 "state",
-                I(O({}, T), {
+                S(O({}, I), {
                     sidebarOpen:
                         this.props.section !== g.oAB.SUBSCRIPTIONS &&
                         this.props.section !== g.oAB.PROFILE_CUSTOMIZATION,
@@ -260,12 +260,12 @@ class R extends i.PureComponent {
                                 this._subscribedStores.includes(e) ||
                                     (e.addChangeListener(this.handleNoticeStoreUpdate), this._subscribedStores.push(e));
                             }),
-                            this.setState(I(O({}, T), { sidebarOpen: !1 }));
+                            this.setState(S(O({}, I), { sidebarOpen: !1 }));
                     };
                 this.validNavigation() &&
                     !r &&
                     (a(),
-                    p.Z.addBreadcrumb({
+                    _.Z.addBreadcrumb({
                         category: "settings",
                         message: "Set section: ".concat(e),
                     })),
@@ -278,7 +278,7 @@ class R extends i.PureComponent {
                 }
             }),
             y(this, "handleNoticeStoreUpdate", () => {
-                this._unmounted || ((this._intensity = S), this.forceUpdate());
+                this._unmounted || ((this._intensity = T), this.forceUpdate());
             }),
             y(this, "renderSettingsSectionTabBarItem", (e, t, n) => {
                 let {
@@ -288,10 +288,10 @@ class R extends i.PureComponent {
                         onClick: c,
                         variant: u,
                         icon: f,
-                        className: _,
-                        newIndicator: p,
-                        newIndicatorDismissibleContentTypes: h,
-                        badgeCount: m,
+                        className: p,
+                        newIndicator: _,
+                        newIndicatorDismissibleContentTypes: m,
+                        badgeCount: h,
                     } = e,
                     y = null;
                 i === g.oAB.ACCOUNT && this.props.isEligibleForPomelo
@@ -307,11 +307,11 @@ class R extends i.PureComponent {
                             color: "text-muted",
                             children: e.decoration,
                         }))
-                      : null != n && (null == h ? void 0 : h.includes(n)) && !t
-                        ? (y = null != p ? p : (0, r.jsx)(s.IGR, { text: E.intl.string(E.t.y2b7CA) }))
+                      : null != n && (null == m ? void 0 : m.includes(n)) && !t
+                        ? (y = null != _ ? _ : (0, r.jsx)(s.IGR, { text: E.intl.string(E.t.y2b7CA) }))
                         : null != f
                           ? (y = f)
-                          : null != m && m > 0 && (y = (0, r.jsx)(s.mAB, { count: m }));
+                          : null != h && h > 0 && (y = (0, r.jsx)(s.mAB, { count: h }));
                 let O =
                     i === g.oAB.PREMIUM
                         ? (0, r.jsx)(d.Z, {
@@ -331,7 +331,7 @@ class R extends i.PureComponent {
                         variant: u,
                         id: i,
                         onClick: c,
-                        className: _,
+                        className: p,
                         "aria-label": l,
                         children: O,
                     },
@@ -340,4 +340,4 @@ class R extends i.PureComponent {
             });
     }
 }
-let P = R;
+let R = P;

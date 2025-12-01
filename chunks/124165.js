@@ -1,7 +1,7 @@
 n.d(t, {
     KX: () => d,
     X2: () => u,
-    cg: () => _,
+    cg: () => p,
     pF: () => f,
 });
 var r = n(314897),
@@ -30,22 +30,22 @@ function f() {
         },
     ];
 }
-function _(e) {
+function p(e) {
     let { eventId: t, recurrenceId: n, guildId: r, updateRsvp: c, openRsvpPicker: d, onRsvp: f } = e,
-        _ = i.ZP.getGuildScheduledEvent(t);
-    if (null == _) return;
-    let p = (0, a.c)(n, t),
-        { startTime: h } = (0, o.Kq)(_, n),
-        m =
-            (null == _ ? void 0 : _.scheduled_start_time) != null
-                ? (0, s.lh)(p, h, new Date(null == _ ? void 0 : _.scheduled_start_time))
+        p = i.ZP.getGuildScheduledEvent(t);
+    if (null == p) return;
+    let _ = (0, a.c)(n, t),
+        { startTime: m } = (0, o.Kq)(p, n),
+        h =
+            (null == p ? void 0 : p.scheduled_start_time) != null
+                ? (0, s.lh)(_, m, new Date(null == p ? void 0 : p.scheduled_start_time))
                 : null,
-        g = null != m && l.$I.has(m) ? null : null != n ? n : (0, s.DK)(_),
-        E = u(_.id),
-        b = u(_.id, g);
+        g = null != h && l.$I.has(h) ? null : null != n ? n : (0, s.DK)(p),
+        E = u(p.id),
+        b = u(p.id, g);
     null == g
         ? (c(t, null, r, null != E ? l.gv.UNINTERESTED : l.gv.INTERESTED), null == f || f())
         : null != b
           ? (c(t, g, r, null != E ? l.gv.INTERESTED : l.gv.UNINTERESTED), null == f || f())
-          : d(_, g);
+          : d(p, g);
 }

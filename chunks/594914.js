@@ -1,6 +1,6 @@
 n.d(t, {
-    P: () => p,
-    b: () => h,
+    P: () => _,
+    b: () => m,
 });
 var r = n(54381),
     i = n(772848),
@@ -50,7 +50,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,10 +61,10 @@ function _(e, t) {
         e
     );
 }
-function p(e, t) {
-    let { isGift: u, giftRecipient: f, giftingOrigin: p } = t,
-        { analyticsLocations: h } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        m = !1,
+function _(e, t) {
+    let { isGift: u, giftRecipient: f, giftingOrigin: _ } = t,
+        { analyticsLocations: m } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        h = !1,
         g = (0, i.Z)();
     (0, a.ZDy)(
         async () => {
@@ -72,30 +72,30 @@ function p(e, t) {
             return (n) =>
                 (0, r.jsx)(
                     t,
-                    _(d({}, n), {
+                    p(d({}, n), {
                         loadId: g,
                         applicationId: e.applicationId,
                         skuId: e.id,
-                        analyticsLocations: null != h ? h : [],
+                        analyticsLocations: null != m ? m : [],
                         isGift: u,
                         giftRecipient: f,
-                        giftingOrigin: p,
+                        giftingOrigin: _,
                         onComplete: () => {
-                            m = !0;
+                            h = !0;
                         },
                     }),
                 );
         },
         {
             onCloseCallback: () => {
-                m ||
+                h ||
                     l.default.track(c.rMx.PAYMENT_FLOW_CANCELED, {
                         load_id: g,
                         payment_type: c.Zuq[c.GZQ.ONE_TIME],
                         is_gift: u,
                         sku_id: e.id,
                         application_id: e.applicationId,
-                        location_stack: h,
+                        location_stack: m,
                         sku_product_line: e.productLine,
                     }),
                     (0, o.fw)(),
@@ -105,7 +105,7 @@ function p(e, t) {
         },
     );
 }
-function h() {
+function m() {
     (0, a.ZDy)(
         async () => {
             let { default: e } = await n.e("21854").then(n.bind(n, 211912));

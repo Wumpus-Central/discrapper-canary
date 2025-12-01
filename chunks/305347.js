@@ -1,7 +1,7 @@
 n.d(t, {
-    Ft: () => p,
-    R$: () => _,
-    ZP: () => h,
+    Ft: () => _,
+    R$: () => p,
+    ZP: () => m,
 });
 var r = n(54381),
     i = n(473749),
@@ -13,7 +13,7 @@ var r = n(54381),
     u = n(768581),
     d = n(624138),
     f = n(272714);
-function _(e) {
+function p(e) {
     let { guildName: t, iconSize: n, className: i } = e,
         a = (0, d.Zg)(t);
     return (0, r.jsx)(l.ZP, {
@@ -27,16 +27,16 @@ function _(e) {
         }),
     });
 }
-function p(e) {
-    let { guildId: t, guildName: n, guildIcon: i, iconSize: a, className: _, acronymClassName: p, animate: h } = e,
-        m = (0, s.e7)([c.Z], () => c.Z.isFocused()),
+function _(e) {
+    let { guildId: t, guildName: n, guildIcon: i, iconSize: a, className: p, acronymClassName: _, animate: m } = e,
+        h = (0, s.e7)([c.Z], () => c.Z.isFocused()),
         g = (0, u.pU)(i)
             ? i
             : u.ZP.getGuildIconURL({
                   id: t,
                   icon: i,
                   size: a,
-                  canAnimate: h && m,
+                  canAnimate: m && h,
               });
     if (null == g) {
         let e = (0, d.Zg)(n);
@@ -44,9 +44,9 @@ function p(e) {
             mask: l.ZP.Masks.CLAN_ICON,
             width: a,
             height: a,
-            className: _,
+            className: p,
             children: (0, r.jsx)("div", {
-                className: o()(f.guildIconImage, f.acronym, p),
+                className: o()(f.guildIconImage, f.acronym, _),
                 children: e,
             }),
         });
@@ -55,7 +55,7 @@ function p(e) {
         mask: l.ZP.Masks.CLAN_ICON,
         width: a,
         height: a,
-        className: _,
+        className: p,
         children: (0, r.jsx)("img", {
             src: g,
             alt: n,
@@ -63,9 +63,9 @@ function p(e) {
         }),
     });
 }
-let h = i.memo(function (e) {
+let m = i.memo(function (e) {
     let { guild: t, iconSize: n, className: i, animate: a } = e;
-    return (0, r.jsx)(p, {
+    return (0, r.jsx)(_, {
         guildName: t.name,
         guildId: t.id,
         guildIcon: t.icon,

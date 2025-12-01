@@ -1,13 +1,13 @@
 n.d(t, {
-    Z: () => m,
-    r: () => h,
+    Z: () => h,
+    r: () => m,
 });
 var r = n(54381);
 n(473749);
 var i = n(481060),
     a = n(518950),
     o = n(998502),
-    s = n(597754),
+    s = n(744038),
     l = n(388032),
     c = n(574999);
 function u(e, t, n) {
@@ -51,7 +51,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -62,8 +62,8 @@ function _(e, t) {
         e
     );
 }
-let p = o.ZP.getEnableHardwareAcceleration() ? i.Xo$ : i.qEK,
-    h = (e) => {
+let _ = o.ZP.getEnableHardwareAcceleration() ? i.Xo$ : i.qEK,
+    m = (e) => {
         let { user: t, avatarSize: n = i.EFr.SIZE_48 } = e,
             {
                 avatarSrc: o,
@@ -75,8 +75,8 @@ let p = o.ZP.getEnableHardwareAcceleration() ? i.Xo$ : i.qEK,
             });
         return (0, r.jsx)(
             "div",
-            _(d({}, u), {
-                children: (0, r.jsx)(p, {
+            p(d({}, u), {
+                children: (0, r.jsx)(_, {
                     src: o,
                     avatarDecoration: c,
                     size: n,
@@ -85,13 +85,13 @@ let p = o.ZP.getEnableHardwareAcceleration() ? i.Xo$ : i.qEK,
             }),
         );
     },
-    m = (e) => {
+    h = (e) => {
         let { currentUser: t, otherUser: n, children: i } = e;
         return (0, r.jsx)("div", {
             className: c.avatarPairContainer,
             children: (0, r.jsxs)("div", {
                 className: c.avatarPair,
-                children: [(0, r.jsx)(h, { user: t }), i, (0, r.jsx)(h, { user: n })],
+                children: [(0, r.jsx)(m, { user: t }), i, (0, r.jsx)(m, { user: n })],
             }),
         });
     };

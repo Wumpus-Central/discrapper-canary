@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(821618);
 function f(e) {
     let { components: t, accentColor: n, spoiler: a, renderComponents: f } = e,
-        [_, p] = i.useState(a),
-        h = (e) =>
+        [p, _] = i.useState(a),
+        m = (e) =>
             (0, r.jsx)(c.am.AutoMeasuredNestedContainer, {
                 children: (i) =>
                     (0, r.jsx)("div", {
@@ -33,9 +33,9 @@ function f(e) {
           ? (0, r.jsx)(l.ZP, {
                 type: l.ZP.Types.ATTACHMENT,
                 reason: s.wk.SPOILER,
-                obscured: _,
-                onToggleObscurity: () => p((e) => !e),
-                children: (e) => h(e),
+                obscured: p,
+                onToggleObscurity: () => _((e) => !e),
+                children: (e) => m(e),
             })
-          : h(!1);
+          : m(!1);
 }

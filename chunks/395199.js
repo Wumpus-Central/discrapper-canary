@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(539854), n(388685);
+n.d(t, { Z: () => S }), n(539854), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,21 +9,21 @@ var r = n(54381),
     u = n(481060),
     d = n(777789),
     f = n(78839),
-    _ = n(709054),
-    p = n(388032),
-    h = n(542886);
-function m(e) {
+    p = n(709054),
+    _ = n(388032),
+    m = n(542886);
+function h(e) {
     let { imageClass: t, children: n, error: i } = e;
     return (0, r.jsxs)("div", {
-        className: h.content,
+        className: m.content,
         children: [
-            (0, r.jsx)("div", { className: o()(h.image, t) }),
+            (0, r.jsx)("div", { className: o()(m.image, t) }),
             n,
             (0, r.jsx)(c.W, {
                 children:
                     null != i
                         ? (0, r.jsx)(u.oXn, {
-                              className: h.error,
+                              className: m.error,
                               children: (0, r.jsx)(s.M14, {
                                   type: "critical",
                                   children: i.message,
@@ -40,19 +40,19 @@ let g = (e) => {
     return null == n
         ? null
         : (0, r.jsxs)("div", {
-              className: h.pendingCancellation,
+              className: m.pendingCancellation,
               children: [
                   (0, r.jsx)(u.Mgn, {
                       size: "custom",
                       width: 20,
                       height: 20,
                       color: "currentColor",
-                      className: h.pendingCancellationIcon,
+                      className: m.pendingCancellationIcon,
                   }),
                   (0, r.jsx)(u.Text, {
                       variant: "text-md/normal",
-                      className: h.pendingCancellationMessage,
-                      children: p.intl.format(p.t.SFpsCH, {
+                      className: m.pendingCancellationMessage,
+                      children: _.intl.format(_.t.SFpsCH, {
                           date: n.currentPeriodEnd,
                           canceledCount: t,
                       }),
@@ -62,7 +62,7 @@ let g = (e) => {
 };
 function E(e) {
     let { imageClass: t, blurb: n, guild: i, warning: a, error: o, slotCount: s = 1, canceledCount: l = 0 } = e;
-    return (0, r.jsxs)(m, {
+    return (0, r.jsxs)(h, {
         imageClass: t,
         error: o,
         children: [
@@ -71,7 +71,7 @@ function E(e) {
                 children: n,
             }),
             (0, r.jsx)(d.Z, {
-                className: h.guildCard,
+                className: m.guildCard,
                 guild: i,
                 subscriptionChange: s,
             }),
@@ -92,7 +92,7 @@ function b(e) {
             null == (n = b.current)
                 ? void 0
                 : n.reduce((e, t) => (e.hasOwnProperty(t.id) || (e[t.id] = []), e[t.id].push(t), e), {});
-    return (0, r.jsxs)(m, {
+    return (0, r.jsxs)(h, {
         imageClass: a,
         error: c,
         children: [
@@ -102,15 +102,15 @@ function b(e) {
             }),
             (0, r.jsx)(u.Text, {
                 variant: "text-xs/bold",
-                className: h.transferGuildCardHeader,
-                children: p.intl.format(p.t["5zQYEz"], { guildCount: null != y ? y : 0 }),
+                className: m.transferGuildCardHeader,
+                children: _.intl.format(_.t["5zQYEz"], { guildCount: null != y ? y : 0 }),
             }),
             null != O
-                ? _.default.keys(O).map((e) =>
+                ? p.default.keys(O).map((e) =>
                       (0, r.jsx)(
                           d.Z,
                           {
-                              className: h.transferFromGuildCard,
+                              className: m.transferFromGuildCard,
                               guild: O[e][0],
                               subscriptionChange: -1 * O[e].length,
                           },
@@ -120,13 +120,13 @@ function b(e) {
                 : null,
             (0, r.jsx)(u.Text, {
                 variant: "text-xs/normal",
-                className: h.transferGuildCardHeader,
-                children: p.intl.format(p.t.ct6oxD, { slotCount: f }),
+                className: m.transferGuildCardHeader,
+                children: _.intl.format(_.t.ct6oxD, { slotCount: f }),
             }),
             (0, r.jsx)("div", {
-                className: h.activeTransferGuildCardBorder,
+                className: m.activeTransferGuildCardBorder,
                 children: (0, r.jsx)(d.Z, {
-                    className: h.transferToGuildCard,
+                    className: m.transferToGuildCard,
                     guild: l,
                     subscriptionChange: null != s ? s.length : 1,
                 }),
@@ -138,7 +138,7 @@ function b(e) {
 function y(e) {
     let { confirmation: t, confirmationLabel: n, isModifyingSubscription: i, onConfirm: a, onCancel: o } = e;
     return (0, r.jsx)("div", {
-        className: h.footer,
+        className: m.footer,
         children: (0, r.jsxs)(u.ButtonGroup, {
             direction: "horizontal-reverse",
             children: [
@@ -151,7 +151,7 @@ function y(e) {
                 }),
                 (0, r.jsx)(u.Button, {
                     variant: "secondary",
-                    text: p.intl.string(p.t["ETE/oC"]),
+                    text: _.intl.string(_.t["ETE/oC"]),
                     onClick: o,
                     disabled: i,
                 }),
@@ -163,7 +163,7 @@ function O(e, t, n, r, i) {
     return [
         {
             variant: "secondary",
-            text: p.intl.string(p.t["ETE/oC"]),
+            text: _.intl.string(_.t["ETE/oC"]),
             onClick: i,
             disabled: n,
         },
@@ -188,24 +188,24 @@ let v = (e) => {
             slotCount: u = 1,
             canceledCount: d = 0,
             isTransfer: f = !1,
-            fromGuilds: _,
-            toGuild: p,
-            confirmation: h,
-            confirmationLabel: m,
+            fromGuilds: p,
+            toGuild: _,
+            confirmation: m,
+            confirmationLabel: h,
             isModifyingSubscription: g,
             onConfirm: y,
             onCancel: v,
-            error: I,
+            error: S,
         } = e,
-        T = O(h, m, g, y, v),
-        S = () =>
-            f && null != p
+        I = O(m, h, g, y, v),
+        T = () =>
+            f && null != _
                 ? (0, r.jsx)(b, {
                       imageClass: null != o ? o : "",
                       blurb: a,
-                      fromGuilds: _,
-                      toGuild: p,
-                      error: I,
+                      fromGuilds: p,
+                      toGuild: _,
+                      error: S,
                       slotCount: u,
                       canceledCount: d,
                   })
@@ -215,7 +215,7 @@ let v = (e) => {
                         blurb: a,
                         guild: l,
                         warning: c,
-                        error: I,
+                        error: S,
                         slotCount: u,
                         canceledCount: d,
                     })
@@ -226,13 +226,13 @@ let v = (e) => {
         size: "sm",
         children: [
             (0, r.jsx)(s.xBx, { title: i }),
-            (0, r.jsx)(s.fef, { children: S() }),
+            (0, r.jsx)(s.fef, { children: T() }),
             (0, r.jsx)(s.Go$, {
-                actions: T,
+                actions: I,
                 actionsFullWidth: !1,
             }),
         ],
     });
 };
 (v.ApplyBody = E), (v.TransferBody = b), (v.Footer = y);
-let I = v;
+let S = v;

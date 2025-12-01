@@ -1,54 +1,54 @@
-_.d(e, {
+r.d(t, {
     EN: () => c,
-    IQ: () => s,
+    IQ: () => E,
     bU: () => o,
 });
-var a = _(176984),
-    r = _(573736),
-    n = _(622916);
+var n = r(176984),
+    a = r(573736),
+    i = r(622916);
 let o = "baggage",
-    E = "sentry-",
-    i = /^sentry-/;
-function c(t) {
-    let e = (function (t) {
-        if (t && ((0, r.HD)(t) || Array.isArray(t)))
-            return Array.isArray(t)
-                ? t.reduce(
-                      (t, e) => (
-                          Object.entries(l(e)).forEach(([e, _]) => {
-                              t[e] = _;
+    _ = "sentry-",
+    s = /^sentry-/;
+function c(e) {
+    let t = (function (e) {
+        if (e && ((0, a.HD)(e) || Array.isArray(e)))
+            return Array.isArray(e)
+                ? e.reduce(
+                      (e, t) => (
+                          Object.entries(l(t)).forEach(([t, r]) => {
+                              e[t] = r;
                           }),
-                          t
+                          e
                       ),
                       {},
                   )
-                : l(t);
-    })(t);
-    if (!e) return;
-    let _ = Object.entries(e).reduce((t, [e, _]) => (e.match(i) && (t[e.slice(E.length)] = _), t), {});
-    return Object.keys(_).length > 0 ? _ : void 0;
+                : l(e);
+    })(e);
+    if (!t) return;
+    let r = Object.entries(t).reduce((e, [t, r]) => (t.match(s) && (e[t.slice(_.length)] = r), e), {});
+    return Object.keys(r).length > 0 ? r : void 0;
 }
-function s(t) {
-    if (t) {
-        var e = Object.entries(t).reduce((t, [e, _]) => (_ && (t[`${E}${e}`] = _), t), {});
-        return 0 !== Object.keys(e).length
-            ? Object.entries(e).reduce((t, [e, _], r) => {
-                  let o = `${encodeURIComponent(e)}=${encodeURIComponent(_)}`,
-                      E = 0 === r ? o : `${t},${o}`;
-                  return E.length > 8192
-                      ? (a.X &&
-                            n.kg.warn(
-                                `Not adding key: ${e} with val: ${_} to baggage header due to exceeding baggage size limits.`,
+function E(e) {
+    if (e) {
+        var t = Object.entries(e).reduce((e, [t, r]) => (r && (e[`${_}${t}`] = r), e), {});
+        return 0 !== Object.keys(t).length
+            ? Object.entries(t).reduce((e, [t, r], a) => {
+                  let o = `${encodeURIComponent(t)}=${encodeURIComponent(r)}`,
+                      _ = 0 === a ? o : `${e},${o}`;
+                  return _.length > 8192
+                      ? (n.X &&
+                            i.kg.warn(
+                                `Not adding key: ${t} with val: ${r} to baggage header due to exceeding baggage size limits.`,
                             ),
-                        t)
-                      : E;
+                        e)
+                      : _;
               }, "")
             : void 0;
     }
 }
-function l(t) {
-    return t
+function l(e) {
+    return e
         .split(",")
-        .map((t) => t.split("=").map((t) => decodeURIComponent(t.trim())))
-        .reduce((t, [e, _]) => (e && _ && (t[e] = _), t), {});
+        .map((e) => e.split("=").map((e) => decodeURIComponent(e.trim())))
+        .reduce((e, [t, r]) => (t && r && (e[t] = r), e), {});
 }

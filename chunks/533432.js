@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(55160),
@@ -9,13 +9,13 @@ var r = n(54381),
     u = n(149203),
     d = n(295907),
     f = n(388032);
-let _ = i.forwardRef(function (e, t) {
+let p = i.forwardRef(function (e, t) {
         let {
                 emojiListRef: n,
-                gridNavigatorId: _,
-                onKeyDown: p,
-                onFocus: h,
-                autoFocus: m,
+                gridNavigatorId: p,
+                onKeyDown: _,
+                onFocus: m,
+                autoFocus: h,
                 defaultSearchPlaceholder: g,
             } = e,
             E = i.useRef(null),
@@ -32,10 +32,10 @@ let _ = i.forwardRef(function (e, t) {
                 },
                 [n],
             ),
-            I = i.useCallback(() => {
+            S = i.useCallback(() => {
                 (0, c.ql)("");
             }, []),
-            T = (e) => {
+            I = (e) => {
                 switch (e.key) {
                     case d.vn.ARROW_LEFT:
                     case d.vn.ARROW_RIGHT:
@@ -43,7 +43,7 @@ let _ = i.forwardRef(function (e, t) {
                     case d.vn.ARROW_DOWN:
                         document.activeElement !== e.target && e.preventDefault();
                 }
-                p(e);
+                _(e);
             };
         return (
             i.useImperativeHandle(t, () => ({
@@ -53,22 +53,22 @@ let _ = i.forwardRef(function (e, t) {
                 },
             })),
             (0, r.jsx)(s.E1j, {
-                autoFocus: m,
+                autoFocus: h,
                 query: b,
                 ref: E,
                 placeholder: null != O ? O : g,
-                onClear: I,
-                onKeyDown: T,
-                onFocus: h,
+                onClear: S,
+                onKeyDown: I,
+                onFocus: m,
                 onChange: v,
                 inputProps: {
                     "aria-label": f.intl.string(f.t.tCauZX),
                     "aria-haspopup": "grid",
-                    "aria-controls": _,
+                    "aria-controls": p,
                     "aria-expanded": !0,
-                    "aria-activedescendant": (0, o.NE)(_, y.columnIndex, y.rowIndex),
+                    "aria-activedescendant": (0, o.NE)(p, y.columnIndex, y.rowIndex),
                 },
             })
         );
     }),
-    p = i.memo(_);
+    _ = i.memo(p);

@@ -1,5 +1,5 @@
 n.d(t, {
-    GF: () => S,
+    GF: () => T,
     ZP: () => C,
     yo: () => A,
 }),
@@ -14,10 +14,10 @@ var r = n(54381),
     u = n(99690),
     d = n(100527),
     f = n(699516),
-    _ = n(594174),
-    p = n(63063),
-    h = n(838436),
-    m = n(526761),
+    p = n(594174),
+    _ = n(63063),
+    m = n(838436),
+    h = n(526761),
     g = n(726985),
     E = n(981631),
     b = n(388032),
@@ -53,23 +53,23 @@ function v(e) {
         ],
     });
 }
-function I(e) {
+function S(e) {
     var t;
     let { userId: n, last: a } = e,
-        p = (0, s.e7)([f.Z], () => f.Z.isBlocked(n)),
-        h = (0, s.e7)([_.default], () => _.default.getUser(n)),
-        [m, g] = i.useState(!1),
+        _ = (0, s.e7)([f.Z], () => f.Z.isBlocked(n)),
+        m = (0, s.e7)([p.default], () => p.default.getUser(n)),
+        [h, g] = i.useState(!1),
         E = i.useCallback(() => {
             g(!0),
-                p
+                _
                     ? c.Z.unblockUser(n).catch(() => {
                           g(!1);
                       })
                     : c.Z.unignoreUser(n, d.Z.USER_SETTINGS).catch(() => {
                           g(!1);
                       });
-        }, [p, n]);
-    return null == h
+        }, [_, n]);
+    return null == m
         ? null
         : (0, r.jsxs)("div", {
               className: o()(y.row, { [y.lastRow]: a }),
@@ -78,7 +78,7 @@ function I(e) {
                       className: y.userInfo,
                       children: [
                           (0, r.jsx)(u.Z, {
-                              user: h,
+                              user: m,
                               size: l.EFr.SIZE_40,
                           }),
                           (0, r.jsxs)("div", {
@@ -87,12 +87,12 @@ function I(e) {
                                   (0, r.jsx)(l.Text, {
                                       variant: "text-md/semibold",
                                       color: "header-primary",
-                                      children: null != (t = h.globalName) ? t : h.username,
+                                      children: null != (t = m.globalName) ? t : m.username,
                                   }),
                                   (0, r.jsx)(l.Text, {
                                       variant: "text-sm/medium",
                                       color: "header-secondary",
-                                      children: null != h.globalName ? h.username : null,
+                                      children: null != m.globalName ? m.username : null,
                                   }),
                               ],
                           }),
@@ -100,20 +100,20 @@ function I(e) {
                   }),
                   (0, r.jsx)(l.Button, {
                       variant: "secondary",
-                      text: b.intl.string(p ? b.t.XyHpKH : b.t["8wXU9B"]),
+                      text: b.intl.string(_ ? b.t.XyHpKH : b.t["8wXU9B"]),
                       onClick: E,
-                      loading: m,
+                      loading: h,
                   }),
               ],
           });
 }
-function T(e) {
+function I(e) {
     let { setting: t, userIds: n, listType: a } = e,
         [o, s] = i.useState(O),
         c = () => {
             s((e) => e + O);
         };
-    return (0, r.jsx)(h.U, {
+    return (0, r.jsx)(m.U, {
         setting: t,
         children: (0, r.jsxs)("div", {
             className: y.card,
@@ -126,7 +126,7 @@ function T(e) {
                     className: y.usersList,
                     children: n.slice(0, o).map((e, t) =>
                         (0, r.jsx)(
-                            I,
+                            S,
                             {
                                 userId: e,
                                 last: t === n.length - 1,
@@ -155,9 +155,9 @@ function T(e) {
         }),
     });
 }
-function S() {
+function T() {
     let e = (0, s.Wu)([f.Z], () => f.Z.getBlockedIDs());
-    return (0, r.jsx)(T, {
+    return (0, r.jsx)(I, {
         setting: g.s6.BLOCKED_USERS,
         userIds: e,
         listType: "blocked",
@@ -165,25 +165,25 @@ function S() {
 }
 function A() {
     let e = (0, s.Wu)([f.Z], () => f.Z.getIgnoredIDs());
-    return (0, r.jsx)(T, {
+    return (0, r.jsx)(I, {
         setting: g.s6.IGNORED_USERS,
         userIds: e,
         listType: "ignored",
     });
 }
 function C() {
-    return (0, r.jsxs)(h.U, {
+    return (0, r.jsxs)(m.U, {
         setting: g.s6.RESTRICTED_USERS,
-        scrollPosition: m.FY.RESTRICTED_ACCOUNTS,
+        scrollPosition: h.FY.RESTRICTED_ACCOUNTS,
         scrollHighlightDelay: 900,
         children: [
-            (0, r.jsx)(h.H, {
+            (0, r.jsx)(m.H, {
                 header: b.intl.string(b.t["3wRort"]),
                 description: b.intl.format(b.t["0aNQo9"], {
-                    helpArticle: p.Z.getArticleURL(E.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE),
+                    helpArticle: _.Z.getArticleURL(E.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE),
                 }),
             }),
-            (0, r.jsx)(S, {}),
+            (0, r.jsx)(T, {}),
             (0, r.jsx)(A, {}),
         ],
     });

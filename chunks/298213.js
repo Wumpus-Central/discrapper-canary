@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,18 +48,18 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e) {
+function m(e) {
     let { userId: t, applicationId: n, location: r, confirmStrangerRequest: o = !1 } = e;
     return null != n
         ? a.Z.acceptGameFriendRequest({
@@ -72,17 +72,17 @@ function h(e) {
               context: { location: r },
           });
 }
-function m(e) {
+function h(e) {
     let { userId: t, applicationId: n, location: r, onConfirm: i, onCancel: a } = e,
         u = (0, o.c_)("useFriendRequestActions"),
         d = (0, s.q)("maybeConfirmFriendRequestAccept"),
         f = u || d,
-        _ = l.Z.isStranger(t);
-    return null == n && f && !1 !== _
-        ? _ && f
+        p = l.Z.isStranger(t);
+    return null == n && f && !1 !== p
+        ? p && f
             ? void (0, c.c)({
                   onConfirm: () => {
-                      h({
+                      m({
                           userId: t,
                           applicationId: n,
                           location: r,
@@ -95,7 +95,7 @@ function m(e) {
                   },
               })
             : f
-              ? void h({
+              ? void m({
                     userId: t,
                     applicationId: n,
                     location: r,
@@ -121,7 +121,7 @@ function m(e) {
                         });
                     })
               : void 0
-        : h({
+        : m({
               userId: t,
               applicationId: n,
               location: r,
@@ -141,7 +141,7 @@ function g(e, t) {
           (0, c.c)({
               onConfirm: () => {
                   var e;
-                  h(p(f({}, t), { confirmStrangerRequest: !0 })), null == (e = t.onConfirm) || e.call(t);
+                  m(_(f({}, t), { confirmStrangerRequest: !0 })), null == (e = t.onConfirm) || e.call(t);
               },
               onCancel: () => {
                   var e;
@@ -176,6 +176,6 @@ let E = {
               })
             : i.Z.cancelFriendRequest(t, { location: r });
     },
-    acceptFriendRequest: h,
-    maybeConfirmFriendRequestAccept: m,
+    acceptFriendRequest: m,
+    maybeConfirmFriendRequestAccept: h,
 };

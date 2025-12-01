@@ -8,14 +8,14 @@ var r = n(54381),
     c = n(933557),
     u = n(266076),
     d = n(769409),
-    p = n(210975),
+    f = n(210975),
     h = n(626135),
-    f = n(981631),
+    p = n(981631),
     g = n(388032),
     m = n(782196);
 let b = (e) => {
         let { channel: t } = e;
-        return (0, p.m$)({ channelId: t.id })
+        return (0, f.m$)({ channelId: t.id })
             ? (0, r.jsx)(l.u, {
                   text: g.intl.string(g.t.QyZ4Td),
                   children: (0, r.jsx)(o.tQf, {
@@ -29,7 +29,7 @@ let b = (e) => {
     _ = i.memo(function (e) {
         let { channel: t } = e,
             i = t.id,
-            p = (0, c.ZP)(t);
+            f = (0, c.ZP)(t);
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(l.u, {
@@ -113,7 +113,7 @@ let b = (e) => {
                             ),
                         onDoubleClick: (e) => e.stopPropagation(),
                         onMouseEnter: () => {
-                            h.default.track(f.rMx.GDM_EDIT_INTERACTED, {
+                            h.default.track(p.rMx.GDM_EDIT_INTERACTED, {
                                 channel_id: t.id,
                                 action: "entry_point_hovered",
                                 location: s.Z.HEADER_BAR,
@@ -131,7 +131,7 @@ let b = (e) => {
                             (0, r.jsx)(o.Text, {
                                 variant: "text-md/medium",
                                 color: "header-primary",
-                                children: null != p ? p : "",
+                                children: null != f ? f : "",
                             }),
                             (0, r.jsx)(o.vdY, {
                                 className: m.editIcon,

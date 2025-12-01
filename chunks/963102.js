@@ -1,10 +1,10 @@
-n.d(t, { I: () => P }), n(388685), n(539854);
+n.d(t, { I: () => B }), n(388685), n(539854);
 var r = n(54381),
     l = n(473749),
     i = n(120356),
     a = n.n(i),
-    s = n(636977),
-    o = n(442837),
+    o = n(636977),
+    s = n(442837),
     c = n(481060),
     u = n(410030),
     d = n(857595),
@@ -35,9 +35,9 @@ function L(e) {
         children: n,
     });
 }
-function B(e) {
-    let { tab: t, selected: n, displayText: i, handleTransition: s } = e,
-        [o, u] = l.useState(!1),
+function P(e) {
+    let { tab: t, selected: n, displayText: i, handleTransition: o } = e,
+        [s, u] = l.useState(!1),
         p = l.useRef(null),
         [m, h] = l.useState(0),
         C = l.useRef(!1),
@@ -59,7 +59,7 @@ function B(e) {
         onMouseLeave: () => _(!1),
         children: (0, r.jsx)(c.yRy, {
             targetElementRef: p,
-            shouldShow: o,
+            shouldShow: s,
             position: "bottom",
             align: "left",
             onRequestOpen: () => _(!0),
@@ -70,16 +70,16 @@ function B(e) {
             renderPopout: (e) => {
                 let { closePopout: t } = e;
                 return (0, r.jsx)(O.Z, {
-                    handleTransition: s,
+                    handleTransition: o,
                     onClose: t,
                 });
             },
             children: (e, l) => {
-                var o, u;
+                var s, u;
                 let { isShown: d } = l;
                 return (0, r.jsx)(
                     g.Z.Title,
-                    ((o = (function (e) {
+                    ((s = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
@@ -107,7 +107,7 @@ function B(e) {
                     (u = u =
                         {
                             ref: p,
-                            onClick: () => s(t),
+                            onClick: () => o(t),
                             onKeyDown: b,
                             wrapperClassName: T.tabWrapper,
                             className: a()(T.tab, { [T.selected]: n }),
@@ -128,7 +128,7 @@ function B(e) {
                             }),
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(u))
+                        ? Object.defineProperties(s, Object.getOwnPropertyDescriptors(u))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -137,21 +137,21 @@ function B(e) {
                               }
                               return n;
                           })(Object(u)).forEach(function (e) {
-                              Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(u, e));
+                              Object.defineProperty(s, e, Object.getOwnPropertyDescriptor(u, e));
                           }),
-                    o),
+                    s),
                 );
             },
         }),
     });
 }
-function P(e) {
+function B(e) {
     let { selectedTab: t, handleTransition: n } = e,
         i = (0, u.ZP)(),
-        d = (0, o.e7)([v.default], () => v.default.getCurrentUser()),
+        d = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
         { enabled: f } = (0, _.WX)({ location: "collectibles_shop_header_bar" }),
         O = (0, m.Y)({ location: "CollectiblesShopHeaderBar" }),
-        P = [
+        B = [
             {
                 tab: y.AW.HOME,
                 displayText: I.intl.string(I.t.ijDDwz),
@@ -162,7 +162,7 @@ function P(e) {
             },
         ];
     f &&
-        P.push({
+        B.push({
             tab: y.AW.ORBS,
             displayText: I.intl.string(I.t.EBYkzk),
         });
@@ -173,7 +173,7 @@ function P(e) {
                 sectionType: j.jXE.ORBS_BALANCE_MENU,
                 ctaObject: j.qAy.CTA_TO_QUEST_HOME,
             }),
-                (0, p.navigateToQuestHome)({ fromContent: s.j.ORBS_BALANCE_MENU });
+                (0, p.navigateToQuestHome)({ fromContent: o.j.ORBS_BALANCE_MENU });
         }, [N]),
         R = (0, E.eN)("collectibles_shop_header_bar"),
         Z = l.useCallback(() => {
@@ -203,11 +203,11 @@ function P(e) {
                     }),
                     (0, r.jsx)("div", {
                         className: T.tabs,
-                        children: P.map((e) => {
+                        children: B.map((e) => {
                             let { tab: l, displayText: i } = e;
                             return l === y.AW.CATALOG
                                 ? (0, r.jsx)(
-                                      B,
+                                      P,
                                       {
                                           tab: l,
                                           selected: (0, y.RE)(t) || t === l,

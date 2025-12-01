@@ -32,25 +32,25 @@ function f() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
     null == u && (u = new s.B()), u.addWords(e);
 }
-function _() {
-    d();
-}
 function p() {
     d();
 }
-function h(e) {
+function _() {
+    d();
+}
+function m(e) {
     let { local: t, settings: n } = e;
     if (!t || n.type !== l.yP.PRELOADED_USER_SETTINGS) return !1;
     null != u && u.clear(), d();
 }
-class m extends r.Z {
+class h extends r.Z {
     loadCache() {
-        let e = this.readSnapshot(m.LATEST_SNAPSHOT_VERSION);
+        let e = this.readSnapshot(h.LATEST_SNAPSHOT_VERSION);
         null != e && (u = null != e.keywordTrie ? s.B.fromSnapshot(e.keywordTrie) : null);
     }
     takeSnapshot() {
         return {
-            version: m.LATEST_SNAPSHOT_VERSION,
+            version: h.LATEST_SNAPSHOT_VERSION,
             data: { keywordTrie: u },
         };
     }
@@ -63,13 +63,13 @@ class m extends r.Z {
     }
     constructor() {
         super({
-            CONNECTION_OPEN: _,
-            CONNECTION_OPEN_SUPPLEMENTAL: _,
+            CONNECTION_OPEN: p,
+            CONNECTION_OPEN_SUPPLEMENTAL: p,
             CACHE_LOADED: () => this.loadCache(),
-            OVERLAY_INITIALIZE: p,
-            USER_SETTINGS_PROTO_UPDATE: h,
+            OVERLAY_INITIALIZE: _,
+            USER_SETTINGS_PROTO_UPDATE: m,
         });
     }
 }
-c(m, "displayName", "KeywordFilterStore"), c(m, "LATEST_SNAPSHOT_VERSION", 2);
-let g = new m();
+c(h, "displayName", "KeywordFilterStore"), c(h, "LATEST_SNAPSHOT_VERSION", 2);
+let g = new h();

@@ -44,7 +44,7 @@ async function d() {
     let e;
     return (
         i.Z.dispatch({ type: "AGE_VERIFICATION_METHODS_LOAD_START" }),
-        (e = (0, a.yF)() ? _() : f()),
+        (e = (0, a.yF)() ? p() : f()),
         await (null == e
             ? void 0
             : e
@@ -65,7 +65,7 @@ function f() {
         rejectWithError: !0,
     });
 }
-function _() {
+function p() {
     let e = o.default.getSuspendedUserToken();
     return r.tn.post({
         url: s.ANM.SAFETY_HUB_GET_SUSPENDED_AGE_VERIFICATION_METHODS,

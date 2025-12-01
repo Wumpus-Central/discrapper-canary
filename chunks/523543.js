@@ -546,26 +546,26 @@ e.exports = function (e) {
             "last",
             "view",
         ].filter((e) => !l.includes(e)),
-        _ = {
+        p = {
             scope: "variable",
             match: /@[a-z0-9][a-z0-9_]*/,
         },
-        p = {
+        _ = {
             scope: "operator",
             match: /[-+*/=%^~]|&&?|\|\|?|!=?|<(?:=>?|<|>)?|>[>=]?/,
             relevance: 0,
         },
-        h = {
+        m = {
             match: t.concat(/\b/, t.either(...d), /\s*\(/),
             relevance: 0,
             keywords: { built_in: d },
         };
-    function m(e) {
+    function h(e) {
         return t.concat(/\b/, t.either(...e.map((e) => e.replace(/\s+/, "\\s+"))), /\b/);
     }
     let g = {
         scope: "keyword",
-        match: m(u),
+        match: h(u),
         relevance: 0,
     };
     return {
@@ -585,17 +585,17 @@ e.exports = function (e) {
         contains: [
             {
                 scope: "type",
-                match: m(o),
+                match: h(o),
             },
             g,
-            h,
-            _,
+            m,
+            p,
             r,
             i,
             e.C_NUMBER_MODE,
             e.C_BLOCK_COMMENT_MODE,
             n,
-            p,
+            _,
         ],
     };
 };

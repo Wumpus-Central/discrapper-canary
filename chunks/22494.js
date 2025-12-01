@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(81825),
     i = n(973616),
     a = n(523080),
@@ -57,11 +57,11 @@ function f(e, t) {
         e
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -69,7 +69,7 @@ function _(e, t) {
     }
     return i;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,13 +78,13 @@ function p(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-class h extends r.Z {
+class m extends r.Z {
     static fromServer(e) {
         var t,
             n,
             { user_id: r, wishlist_items: c } = e,
-            d = _(e, ["user_id", "wishlist_items"]);
-        let p = c.map((e) => {
+            d = p(e, ["user_id", "wishlist_items"]);
+        let _ = c.map((e) => {
             switch (e.sku_product_line) {
                 case l.POd.COLLECTIBLES:
                     return o.Z.fromServer(e);
@@ -94,10 +94,10 @@ class h extends r.Z {
                     return a.Z.fromServer(e);
             }
         });
-        return new h(
+        return new m(
             f(u({}, d), {
                 userId: r,
-                items: p,
+                items: _,
                 applications:
                     null != (n = null == (t = d.applications) ? void 0 : t.map((e) => i.ZP.createFromServer(e)))
                         ? n

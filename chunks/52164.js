@@ -10,10 +10,10 @@ var i = n(512722),
     u = n(74538),
     d = n(937615),
     f = n(374649),
-    _ = n(474936),
-    p = n(981631),
-    h = n(388032),
-    m = n(257053);
+    p = n(474936),
+    _ = n(981631),
+    m = n(388032),
+    h = n(257053);
 function g(e) {
     let t,
         { subscription: n, withOverheadSeparator: i } = e,
@@ -25,7 +25,7 @@ function g(e) {
             analyticsLocation: s.Z.PREMIUM_SUBSCRIPTION_FINE_PRINT_CONTENT,
         });
     if (null == E) return null;
-    let b = i ? m.finePrintWithOverheadSeparator : m.finePrint,
+    let b = i ? h.finePrintWithOverheadSeparator : h.finePrint,
         y = E.invoiceItems.find((e) => {
             let { subscriptionPlanId: t } = e;
             return (0, u.uZ)(t);
@@ -34,29 +34,29 @@ function g(e) {
     let O = y.subscriptionPlanId,
         v = c.Z.get(O);
     a()(null != v, "Missing plan");
-    let I = (0, d.T4)(E.total, E.currency);
+    let S = (0, d.T4)(E.total, E.currency);
     return (
-        v.interval === _.rV.YEAR
-            ? (t = h.intl.format(h.t["jPz/39"], {
-                  price: I,
-                  termsUrl: p.EYA.TERMS,
-                  paidURL: p.EYA.PAID_TERMS,
-                  privacyUrl: p.EYA.PRIVACY,
+        v.interval === p.rV.YEAR
+            ? (t = m.intl.format(m.t["jPz/39"], {
+                  price: S,
+                  termsUrl: _.EYA.TERMS,
+                  paidURL: _.EYA.PAID_TERMS,
+                  privacyUrl: _.EYA.PRIVACY,
               }))
-            : v.interval === _.rV.MONTH &&
+            : v.interval === p.rV.MONTH &&
               (t =
                   1 === v.intervalCount
-                      ? h.intl.format(h.t.m27GpI, {
-                            price: I,
-                            termsUrl: p.EYA.TERMS,
-                            paidURL: p.EYA.PAID_TERMS,
-                            privacyUrl: p.EYA.PRIVACY,
+                      ? m.intl.format(m.t.m27GpI, {
+                            price: S,
+                            termsUrl: _.EYA.TERMS,
+                            paidURL: _.EYA.PAID_TERMS,
+                            privacyUrl: _.EYA.PRIVACY,
                         })
-                      : h.intl.format(h.t["9xf5Vx"], {
-                            price: I,
-                            termsUrl: p.EYA.TERMS,
-                            paidURL: p.EYA.PAID_TERMS,
-                            privacyUrl: p.EYA.PRIVACY,
+                      : m.intl.format(m.t["9xf5Vx"], {
+                            price: S,
+                            termsUrl: _.EYA.TERMS,
+                            paidURL: _.EYA.PAID_TERMS,
+                            privacyUrl: _.EYA.PRIVACY,
                             intervalCount: v.intervalCount,
                         })),
         (0, r.jsx)(o.Text, {
@@ -69,7 +69,7 @@ function g(e) {
 }
 function E(e) {
     let { subscription: t, withOverheadSeparator: n } = e;
-    return t.status === p.O0b.CANCELED || t.isPurchasedExternally
+    return t.status === _.O0b.CANCELED || t.isPurchasedExternally
         ? null
         : (0, r.jsx)(g, {
               subscription: t,

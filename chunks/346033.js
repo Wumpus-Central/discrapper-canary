@@ -9,116 +9,116 @@ var r = n(54381),
     u = n(755721),
     d = n(410030),
     f = n(100527),
-    _ = n(906732),
-    p = n(433811),
-    h = n(214852),
-    m = n(78839),
+    p = n(906732),
+    _ = n(433811),
+    m = n(214852),
+    h = n(78839),
     g = n(626135),
     E = n(74538),
     b = n(367074),
     y = n(140465),
     O = n(347896),
     v = n(639119),
-    I = n(784238),
-    T = n(218390),
-    S = n(823188),
+    S = n(784238),
+    I = n(218390),
+    T = n(823188),
     A = n(135785),
     C = n(498765),
     N = n(635921),
-    R = n(177839),
-    P = n(349803),
-    D = n(179984),
-    w = n(474936),
-    L = n(981631),
-    x = n(388032),
-    M = n(740150),
-    k = n(689095),
-    j = n(865215);
+    P = n(177839),
+    R = n(349803),
+    w = n(179984),
+    D = n(474936),
+    x = n(981631),
+    L = n(388032),
+    j = n(740150),
+    M = n(689095),
+    k = n(865215);
 let U = (e) => {
         let { inOfferExperience: t } = e;
         return t ? (0, r.jsx)(C.Z, { lifted: t }) : null;
     },
     G = () => {
         var e, t;
-        (0, h.z)(p.X);
+        (0, m.z)(_.X);
         let n = i.useRef(null),
             a = i.useRef(null),
             C = i.useRef(null),
             G = (0, d.ZP)(),
-            B = (0, c.wj)(G),
-            [Z, F] = i.useState(!1),
+            Z = (0, c.wj)(G),
+            [B, F] = i.useState(!1),
             [V, H] = i.useState(!1),
             [Y, W] = i.useState(!1),
-            K = !Z && !V,
+            K = !B && !V,
             [z, q] = i.useState(!1),
-            X = (0, s.e7)([m.Z], () => m.Z.getPremiumTypeSubscription()),
-            Q = null != X ? (0, E.Af)(X) : null,
-            J = null != Q ? E.ZP.getSkuIdForPlan(Q.planId) : null,
-            $ = null !== J && J !== w.Si.TIER_2 ? w.Si.TIER_2 : null,
+            Q = (0, s.e7)([h.Z], () => h.Z.getPremiumTypeSubscription()),
+            X = null != Q ? (0, E.Af)(Q) : null,
+            J = null != X ? E.ZP.getSkuIdForPlan(X.planId) : null,
+            $ = null !== J && J !== D.Si.TIER_2 ? D.Si.TIER_2 : null,
             ee = (0, v.N)(),
             et = null == ee || null == (e = ee.subscription_trial) ? void 0 : e.sku_id,
             en = (0, y.Nx)(),
             er = (0, b.Vi)(),
             ei = null != er && er,
             ea = null == (t = (0, O.Z)()) ? void 0 : t.billingSettingsMarketingBanner,
-            { analyticsLocations: eo } = (0, _.ZP)(f.Z.PREMIUM_MARKETING);
+            { analyticsLocations: eo } = (0, p.ZP)(f.Z.PREMIUM_MARKETING);
         i.useEffect(() => {
             q(!0);
         }, []);
         let es = (0, r.jsx)("div", {
-            className: k.premiumTierCardsContainerSettings,
+            className: M.premiumTierCardsContainerSettings,
             children: (0, r.jsx)(l.$, {
                 innerRef: n,
                 onChange: (e) => H(e),
                 threshold: 0.1,
                 active: !0,
-                children: (0, r.jsx)(S.IY, {
+                children: (0, r.jsx)(T.IY, {
                     innerRef: n,
-                    tier0CTAButton: (0, r.jsx)(I.Z, {
+                    tier0CTAButton: (0, r.jsx)(S.Z, {
                         showIcon: !1,
-                        subscriptionTier: w.Si.TIER_0,
-                        className: M.subButton,
+                        subscriptionTier: D.Si.TIER_0,
+                        className: j.subButton,
                         look: u.iL.OUTLINED,
                         color: u.Tt.WHITE,
-                        buttonShineClassName: M.buttonShine,
+                        buttonShineClassName: j.buttonShine,
                     }),
                     tier2CTAButton:
-                        et === w.Si.TIER_0
-                            ? (0, r.jsx)(I.Z, {
+                        et === D.Si.TIER_0
+                            ? (0, r.jsx)(S.Z, {
                                   showIcon: !1,
-                                  subscriptionTier: w.Si.TIER_2,
-                                  className: M.subButton,
+                                  subscriptionTier: D.Si.TIER_2,
+                                  className: j.subButton,
                                   look: u.iL.OUTLINED,
                                   color: u.Tt.WHITE,
-                                  buttonShineClassName: M.buttonShine,
+                                  buttonShineClassName: j.buttonShine,
                               })
-                            : (0, r.jsx)(I.Z, {
+                            : (0, r.jsx)(S.Z, {
                                   color: u.Tt.BRAND_INVERTED,
                                   showIcon: !1,
-                                  subscriptionTier: w.Si.TIER_2,
-                                  className: M.subButton,
+                                  subscriptionTier: D.Si.TIER_2,
+                                  className: j.subButton,
                                   hasActivePromotion: ei,
-                                  textOptions: { textClassName: M.subButtonText },
-                                  buttonShineClassName: M.buttonShine,
+                                  textOptions: { textClassName: j.subButtonText },
+                                  buttonShineClassName: j.buttonShine,
                               }),
                 }),
             }),
         });
         return (0, r.jsxs)("div", {
-            className: k.container,
+            className: M.container,
             "data-cy": "tier-0-marketing-page",
             children: [
                 (0, r.jsx)(A.Z, {
-                    premiumSubscription: X,
-                    className: o()(k.existingSubscriberSpacing, { [k.zIndex1]: en }),
+                    premiumSubscription: Q,
+                    className: o()(M.existingSubscriberSpacing, { [M.zIndex1]: en }),
                 }),
                 (0, r.jsx)(U, { inOfferExperience: en }),
                 (0, r.jsxs)("div", {
-                    className: o()({ [k.settingsContainer]: !en }),
+                    className: o()({ [M.settingsContainer]: !en }),
                     children: [
                         null != ea &&
-                            (0, r.jsx)(T.C, {
-                                className: k.giftPromoCard,
+                            (0, r.jsx)(I.C, {
+                                className: M.giftPromoCard,
                                 config: ea,
                             }),
                         (0, r.jsx)(l.$, {
@@ -130,27 +130,27 @@ let U = (e) => {
                                 ref: a,
                                 subscriptionTier: $,
                                 className: o()({
-                                    [k.settingsHeroNoBackground]: en,
-                                    [k.trialMarketingMargin]: en,
-                                    [k.settingsHeroBogoHeight]: er,
-                                    [k.noTopPaddingOverride]: null != X,
+                                    [M.settingsHeroNoBackground]: en,
+                                    [M.trialMarketingMargin]: en,
+                                    [M.settingsHeroBogoHeight]: er,
+                                    [M.noTopPaddingOverride]: null != Q,
                                 }),
-                                isDarkMode: B,
+                                isDarkMode: Z,
                             }),
                         }),
                     ],
                 }),
                 es,
-                (0, r.jsx)(R.Z, { className: k.perkCardsContainerSpacingSettings }),
+                (0, r.jsx)(P.Z, { className: M.perkCardsContainerSpacingSettings }),
                 (0, r.jsx)("div", {
-                    className: k.planComparisonTableContainer,
-                    children: (0, r.jsx)(D.Z, {
-                        className: k.planComparisonTable,
+                    className: M.planComparisonTableContainer,
+                    children: (0, r.jsx)(w.Z, {
+                        className: M.planComparisonTable,
                         hideCTAs: !0,
                     }),
                 }),
-                (0, r.jsx)("div", { className: k.footerSpacing }),
-                (0, r.jsx)(P.Z, {
+                (0, r.jsx)("div", { className: M.footerSpacing }),
+                (0, r.jsx)(R.Z, {
                     isVisible: K && z,
                     subscriptionTier: $,
                     isApplicationHome: !1,
@@ -161,20 +161,20 @@ let U = (e) => {
                     onChange: (e) => {
                         e &&
                             !Y &&
-                            (g.default.track(L.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eo }),
+                            (g.default.track(x.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eo }),
                             W(!0));
                     },
                     children: (0, r.jsx)("div", {
                         ref: C,
-                        className: k.bottomOfPageVisibilitySensor,
+                        className: M.bottomOfPageVisibilitySensor,
                     }),
                 }),
                 (0, r.jsx)("img", {
-                    src: j,
-                    className: k.bottomIllustration,
+                    src: k,
+                    className: M.bottomIllustration,
                     width: 112,
                     height: 85,
-                    alt: x.intl.string(x.t.X4IxWL),
+                    alt: L.intl.string(L.t.X4IxWL),
                 }),
             ],
         });

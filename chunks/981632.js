@@ -8,31 +8,31 @@ var r = n(54381),
     c = n(474936);
 function u(e) {
     let { giftStyle: t, className: n, shouldAnimate: u = !0, defaultAnimationState: d, idleAnimationState: f } = e,
-        _ = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
-        [p, h] = i.useState(d),
-        m = i.useRef((0, l._)(t, p)),
+        p = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
+        [_, m] = i.useState(d),
+        h = i.useRef((0, l._)(t, _)),
         [g, E] = i.useState(null == f),
         [b, y] = i.useState(!1),
         [O, v] = i.useState(-1),
-        I = () => {
-            (m.current = (0, l._)(t, p)), v((e) => e + 1);
+        S = () => {
+            (h.current = (0, l._)(t, _)), v((e) => e + 1);
         },
-        T = () => {
-            E(!1), y(!0), v(-1), h(d);
+        I = () => {
+            E(!1), y(!0), v(-1), m(d);
         };
     i.useEffect(() => {
-        null == f && h(d);
+        null == f && m(d);
     }, [f, d]);
-    let S = {
-            applyAnimation: I,
+    let T = {
+            applyAnimation: S,
             idleAnimationState: f,
             isChanging: b,
-            resetAnimation: T,
+            resetAnimation: I,
             versionKey: O,
         },
-        A = i.useRef(S);
+        A = i.useRef(T);
     i.useEffect(() => {
-        A.current = S;
+        A.current = T;
     }),
         i.useEffect(() => {
             let { resetAnimation: e, versionKey: t, applyAnimation: n } = A.current;
@@ -42,18 +42,18 @@ function u(e) {
         i.useEffect(() => {
             let { applyAnimation: e, isChanging: t, idleAnimationState: n } = A.current;
             (t && null != n) || e();
-        }, [p]),
+        }, [_]),
         i.useEffect(() => {
             let { applyAnimation: e, idleAnimationState: t } = A.current;
             b && (E(null == t), y(!1), e());
         }, [b]);
     let C = () => {
-        null != f && (h(f), E(!0));
+        null != f && (m(f), E(!0));
     };
     if (!c.Cj.hasOwnProperty(t)) throw Error("Unexpected giftStyle ".concat(t));
     return (0, r.jsx)(o.Fmz, {
-        importData: m.current,
-        shouldAnimate: !_ && u,
+        importData: h.current,
+        shouldAnimate: !p && u,
         className: n,
         versionKey: O,
         onComplete: null != f ? C : void 0,

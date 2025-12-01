@@ -11,11 +11,11 @@ let l = (0, s.createContext)({}),
     c = (0, s.forwardRef)(function (e, t) {
         var n, c;
         [e, t] = (0, r.pE)(e, t, l);
-        let { isDisabled: u, isInvalid: d, isReadOnly: f, onHoverStart: _, onHoverChange: p, onHoverEnd: h, ...m } = e,
+        let { isDisabled: u, isInvalid: d, isReadOnly: f, onHoverStart: p, onHoverChange: _, onHoverEnd: m, ...h } = e,
             { hoverProps: g, isHovered: E } = (0, i.X)({
-                onHoverStart: _,
-                onHoverChange: p,
-                onHoverEnd: h,
+                onHoverStart: p,
+                onHoverChange: _,
+                onHoverEnd: m,
                 isDisabled: u,
             }),
             { isFocused: b, isFocusVisible: y, focusProps: O } = (0, a.F)({ within: !0 });
@@ -35,7 +35,7 @@ let l = (0, s.createContext)({}),
         return s.createElement(
             "div",
             {
-                ...(0, o.d)(m, O, g),
+                ...(0, o.d)(h, O, g),
                 ...v,
                 ref: t,
                 role: null != (n = e.role) ? n : "group",

@@ -9,7 +9,7 @@ var r = n(54381),
     u = n(871499),
     d = n(981631),
     f = n(388032);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,12 +33,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,12 +50,12 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -83,14 +83,14 @@ function E(e, t) {
     return i;
 }
 function b(e) {
-    var { channel: t, centerButton: n = !1, onCallJoined: _ } = e,
-        h = g(e, ["channel", "centerButton", "onCallJoined"]);
+    var { channel: t, centerButton: n = !1, onCallJoined: p } = e,
+        m = g(e, ["channel", "centerButton", "onCallJoined"]);
     let { parentAnalyticsLocation: E } = (0, s.ZP)(),
         b = n ? u.d : u.Z,
         y = t.isManaged() || !t.isPrivate() ? f.intl.string(f.t.S0W8Z5) : f.intl.string(f.t["0D/6Rz"]),
         O = i.useCallback(() => {
-            null == _ || _(), (0, l.v)(E, l.d.JOIN_CALL), o.default.selectVoiceChannel(t.id);
-        }, [t.id, _, E]);
+            null == p || p(), (0, l.v)(E, l.d.JOIN_CALL), o.default.selectVoiceChannel(t.id);
+        }, [t.id, p, E]);
     return (
         i.useEffect(
             () => (
@@ -103,7 +103,7 @@ function b(e) {
         ),
         (0, r.jsx)(
             b,
-            m(p({}, h), {
+            h(_({}, m), {
                 iconComponent: a.Csw,
                 label: y,
                 onClick: O,

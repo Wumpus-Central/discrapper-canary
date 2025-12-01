@@ -2,23 +2,23 @@ n.r(t),
     n.d(t, {
         getAvailableLocales: () => c.u5,
         getLanguages: () => c.Vb,
-        getSystemLocale: () => h,
+        getSystemLocale: () => m,
         initialLocale: () => g,
         international: () => u.Z,
         intl: () => E,
-        systemLocale: () => m,
+        systemLocale: () => h,
         t: () => l.k,
         useSyncMessages: () => b,
     }),
     n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(963225),
+    a = n(502922),
     o = n(159635),
     s = n.n(o),
     l = n(253185),
     c = n(424395),
-    u = n(470572);
+    u = n(716111);
 function d(e, t, n) {
     return (
         t in e
@@ -48,7 +48,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -60,18 +60,18 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e) {
+function m(e) {
     return [
         Array.isArray(navigator.languages) ? navigator.languages[0] : null,
         navigator.language,
@@ -80,8 +80,8 @@ function h(e) {
         e,
     ].find((e) => null != e && "" !== e);
 }
-let m = h("en-US"),
-    g = (0, c.YI)(m, "en-US"),
+let h = m("en-US"),
+    g = (0, c.YI)(h, "en-US"),
     E = new a.IntlManager({
         initialLocale: g,
         defaultLocale: "en-US",
@@ -109,7 +109,7 @@ let m = h("en-US"),
                         if (null == a) break;
                         (l.onClick = null != (c = a.onClick) ? c : a), (l.onContextMenu = a.onContextMenu);
                 }
-                return (0, i.createElement)(o, p(f({}, l), { key: t }), e);
+                return (0, i.createElement)(o, _(f({}, l), { key: t }), e);
             },
         }),
         formatToPlainString: a.stringFormatter,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(54381);
 n(473749);
 var i = n(788111),
@@ -58,7 +58,7 @@ function f(e, t) {
         e
     );
 }
-function _(e) {
+function p(e) {
     let { user: t } = e,
         [n, c] = (0, i.Z)(t.id);
     return n

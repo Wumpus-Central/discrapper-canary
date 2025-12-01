@@ -9,23 +9,23 @@ var r = n(54381),
     u = n(224706),
     d = n(607070),
     f = n(812206),
-    _ = n(835473),
-    p = n(669764),
-    h = n(810568),
-    m = n(774073),
+    p = n(835473),
+    _ = n(669764),
+    m = n(810568),
+    h = n(774073),
     g = n(426482),
     E = n(210887),
     b = n(626135),
     y = n(617136),
     O = n(49436),
     v = n(475595),
-    I = n(602667),
-    T = n(723307),
-    S = n(324805),
+    S = n(602667),
+    I = n(723307),
+    T = n(324805),
     A = n(981631),
     C = n(388032),
     N = n(879048);
-function R(e, t, n) {
+function P(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,7 +38,7 @@ function R(e, t, n) {
         e
     );
 }
-function P(e) {
+function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -49,12 +49,12 @@ function P(e) {
                 }),
             )),
             r.forEach(function (t) {
-                R(e, t, n[t]);
+                P(e, t, n[t]);
             });
     }
     return e;
 }
-function D(e, t) {
+function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -66,40 +66,40 @@ function D(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : D(Object(t)).forEach(function (n) {
+            : w(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let L = 10,
-    x = 20,
-    M = 15,
-    k = 4,
-    j = 5,
+let x = 10,
+    L = 20,
+    j = 15,
+    M = 4,
+    k = 5,
     U = 8,
     G = 10;
-function B(e) {
+function Z(e) {
     var t;
     let n = {
-            [S.S7.PACKAGE_ACTION_ADVENTURE]: C.t.PYFVdf,
-            [S.S7.PACKAGE_RPG_MMO]: C.t.rFQo2F,
-            [S.S7.PACKAGE_RACING_SPORTS]: C.t.zDRa6g,
-            [S.S7.PACKAGE_SANDBOX_CREATIVE]: C.t.vz9U2Q,
-            [S.S7.PACKAGE_FAMILY_FRIENDLY]: C.t.IOiAE0,
-            [S.S7.PACKAGE_HOLIDAY_SEASON]: C.t.cJPqvD,
-            [S.S7.PACKAGE_NEW_YEARS]: C.t.S0w2mv,
+            [T.S7.PACKAGE_ACTION_ADVENTURE]: C.t.PYFVdf,
+            [T.S7.PACKAGE_RPG_MMO]: C.t.rFQo2F,
+            [T.S7.PACKAGE_RACING_SPORTS]: C.t.zDRa6g,
+            [T.S7.PACKAGE_SANDBOX_CREATIVE]: C.t.vz9U2Q,
+            [T.S7.PACKAGE_FAMILY_FRIENDLY]: C.t.IOiAE0,
+            [T.S7.PACKAGE_HOLIDAY_SEASON]: C.t.cJPqvD,
+            [T.S7.PACKAGE_NEW_YEARS]: C.t.S0w2mv,
         },
         r = e.config.features.find((e) => e in n),
         i = null != (t = null != r ? n[r] : null) ? t : C.t["D+DkEH"];
     return C.intl.string(i);
 }
-let Z = (e) => {
+let B = (e) => {
         let { quest: t, onClose: n } = e,
             i = (0, a.e7)([E.Z], () => E.Z.getState().theme),
             o = (0, l.wj)(i) ? A.BRd.DARK : A.BRd.LIGHT;
@@ -120,7 +120,7 @@ let Z = (e) => {
                                 (0, r.jsx)(c.Text, {
                                     variant: "text-sm/semibold",
                                     color: "text-primary",
-                                    children: B(t),
+                                    children: Z(t),
                                 }),
                                 (0, r.jsx)(c.Text, {
                                     variant: "text-sm/normal",
@@ -144,21 +144,21 @@ let Z = (e) => {
         });
     },
     F = (e) => {
-        let { quest: t, game: o, sourceQuestContent: l, onGameProfileModalOpen: u, onGameProfileModalClose: _ } = e,
-            p = (0, y.O5)(),
-            m = (0, a.e7)([f.Z], () => f.Z.getApplication(o.applicationId)),
+        let { quest: t, game: o, sourceQuestContent: l, onGameProfileModalOpen: u, onGameProfileModalClose: p } = e,
+            _ = (0, y.O5)(),
+            h = (0, a.e7)([f.Z], () => f.Z.getApplication(o.applicationId)),
             E = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
             b = i.useRef(null),
             v = () => {
-                p({
+                _({
                     questId: t.id,
                     questContent: O.jn.SPONSORED_QUEST_SHEET,
                     questContentCTA: y.jZ.GAME_STORE_OPEN_GAME_LINK,
                     sourceQuestContent: l,
                 });
             },
-            I = async () => {
-                p({
+            S = async () => {
+                _({
                     questId: t.id,
                     questContent: O.jn.SPONSORED_QUEST_SHEET,
                     questContentCTA: y.jZ.GAME_PROFILE_OPEN,
@@ -170,21 +170,21 @@ let Z = (e) => {
                             return (t) =>
                                 (0, r.jsx)(
                                     e,
-                                    P(
+                                    R(
                                         {
                                             applicationId: o.applicationId,
-                                            source: h.m1.GameSheet,
+                                            source: m.m1.GameSheet,
                                             trackExternalAction: v,
                                         },
                                         t,
                                     ),
                                 );
                         },
-                        { onCloseCallback: _ },
+                        { onCloseCallback: p },
                     ),
                     u();
             },
-            T = i.useCallback(
+            I = i.useCallback(
                 (e) => {
                     if (null == b.current || E) return;
                     let t = b.current.getBoundingClientRect(),
@@ -192,28 +192,28 @@ let Z = (e) => {
                         r = e.clientY - t.top,
                         i = t.width / 2,
                         a = t.height / 2,
-                        o = -(((r - a) / a) * M),
-                        s = ((n - i) / i) * M;
+                        o = -(((r - a) / a) * j),
+                        s = ((n - i) / i) * j;
                     b.current.style.transform = "rotateX(".concat(o, "deg) rotateY(").concat(s, "deg)");
                 },
                 [E],
             ),
-            S = i.useCallback(() => {
+            T = i.useCallback(() => {
                 null == b.current || E || (b.current.style.transform = "rotateX(0deg) rotateY(0deg)");
             }, [E]);
         return (0, r.jsx)(s.u, {
             text: o.name,
             children: (0, r.jsx)(c.P3F, {
                 className: N.gameClickable,
-                onClick: I,
-                onMouseMove: T,
-                onMouseLeave: S,
+                onClick: S,
+                onMouseMove: I,
+                onMouseLeave: T,
                 children: (0, r.jsx)("div", {
                     ref: b,
                     className: N.coverArtContainer,
                     children: (0, r.jsx)(g.C, {
                         game: o,
-                        application: m,
+                        application: h,
                         className: N.coverArt,
                         size: g.Z.SMALL,
                     }),
@@ -261,45 +261,45 @@ function H(e) {
         sourceQuestContent: l,
         impressionRef: d,
         onGameProfileModalOpen: f,
-        onGameProfileModalClose: h,
+        onGameProfileModalClose: m,
     } = e;
-    (0, _.Z)(o),
+    (0, p.Z)(o),
         i.useEffect(() => {
             o.length > 1 && u.Z.getDetectableGamesSupplemental(o);
         }, [o]);
-    let g = (0, a.e7)([p.Z], () => o.some((e) => p.Z.isFetching(e))),
-        E = (0, a.e7)([p.Z], () => o.some((e) => p.Z.didFetchingFail(e))),
-        y = (0, a.Wu)([p.Z], () =>
+    let g = (0, a.e7)([_.Z], () => o.some((e) => _.Z.isFetching(e))),
+        E = (0, a.e7)([_.Z], () => o.some((e) => _.Z.didFetchingFail(e))),
+        y = (0, a.Wu)([_.Z], () =>
             o
-                .map((e) => p.Z.getGame(e))
+                .map((e) => _.Z.getGame(e))
                 .filter((e) => null != e)
-                .filter((e) => (0, m.z6)(e.applicationId))
-                .slice(0, L),
+                .filter((e) => (0, h.z6)(e.applicationId))
+                .slice(0, x),
         ),
         O = i.useMemo(() => {
             let e = y.length;
-            return e <= k ? k - e : e === j ? 0 : e <= U ? U - e : G - e;
+            return e <= M ? M - e : e === k ? 0 : e <= U ? U - e : G - e;
         }, [y.length]);
     if (
         (i.useEffect(() => {
             E &&
                 (b.default.track(A.rMx.QUEST_GAME_SHEET_ERROR, {
                     quest_id: t.id,
-                    error_type: T.n.FETCH_FAILED,
+                    error_type: I.n.FETCH_FAILED,
                 }),
                 s(),
                 (0, c.ZDy)(async () => {
                     let { default: e } = await n.e("12198").then(n.bind(n, 521760));
-                    return (t) => (0, r.jsx)(e, P({}, t));
+                    return (t) => (0, r.jsx)(e, R({}, t));
                 }));
         }, [E, t.id, s]),
         g && !E)
     ) {
-        let e = Math.min(o.length, L);
+        let e = Math.min(o.length, x);
         return (0, r.jsxs)("div", {
             className: N.container,
             children: [
-                (0, r.jsx)(Z, {
+                (0, r.jsx)(B, {
                     quest: t,
                     onClose: s,
                 }),
@@ -318,7 +318,7 @@ function H(e) {
               },
               className: N.container,
               children: [
-                  (0, r.jsx)(Z, {
+                  (0, r.jsx)(B, {
                       quest: t,
                       onClose: s,
                   }),
@@ -333,7 +333,7 @@ function H(e) {
                                       game: e,
                                       sourceQuestContent: l,
                                       onGameProfileModalOpen: f,
-                                      onGameProfileModalClose: h,
+                                      onGameProfileModalClose: m,
                                   },
                                   e.applicationId,
                               ),
@@ -355,31 +355,31 @@ function Y(e) {
             sourceQuestContent: d,
             impressionRef: f,
         } = e,
-        [_, p] = i.useState(!1),
-        h = (0, y.O5)(),
-        m = i.useRef(null),
+        [p, _] = i.useState(!1),
+        m = (0, y.O5)(),
+        h = i.useRef(null),
         g = (null == t ? void 0 : t.current) != null,
-        E = g ? t : m,
+        E = g ? t : h,
         b = g ? "right" : "top",
         O = g ? "bottom" : void 0,
         v = () => {
             null == s || s(),
-                h({
+                m({
                     questId: u.id,
                     questContent: d,
                     questContentCTA: y.jZ.SPONSORED_QUEST_SHEET,
                     sourceQuestContent: d,
                 });
         },
-        I = () => {
-            if (_) return o.F;
+        S = () => {
+            if (p) return o.F;
             null == l || l();
         },
-        T = () => {
-            p(!0);
+        I = () => {
+            _(!0);
         },
-        S = () => {
-            p(!1);
+        T = () => {
+            _(!1);
         };
     return (0, r.jsx)(c.yRy, {
         targetElementRef: E,
@@ -392,27 +392,27 @@ function Y(e) {
                 onClose: t,
                 sourceQuestContent: d,
                 impressionRef: f,
-                onGameProfileModalOpen: T,
-                onGameProfileModalClose: S,
+                onGameProfileModalOpen: I,
+                onGameProfileModalClose: T,
             });
         },
         onRequestOpen: v,
-        onRequestClose: I,
+        onRequestClose: S,
         position: b,
         align: O,
-        spacing: x,
+        spacing: L,
         scrollBehavior: "close",
         ignoreModalClicks: !0,
-        children: (e) => a(e, m),
+        children: (e) => a(e, h),
     });
 }
 let W = function (e) {
     return null == e.quest || e.applications.length <= 1
         ? null
-        : (0, r.jsx)(I.A, {
+        : (0, r.jsx)(S.A, {
               questOrQuests: e.quest,
               questContent: O.jn.SPONSORED_QUEST_SHEET,
               sourceQuestContent: e.sourceQuestContent,
-              children: (t) => (0, r.jsx)(Y, w(P({}, e), { impressionRef: t })),
+              children: (t) => (0, r.jsx)(Y, D(R({}, e), { impressionRef: t })),
           });
 };

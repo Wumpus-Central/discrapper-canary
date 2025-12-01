@@ -12,9 +12,9 @@ var r = n(54381),
     c = n(317632),
     u = n(174767),
     d = n(240126),
-    p = n(326838),
+    f = n(326838),
     h = n(388032),
-    f = n(201848);
+    p = n(201848);
 function g() {
     let e = (0, a.Wu)([c.Z], () => c.Z.getInvites()),
         t = (0, a.e7)([c.Z], () => c.Z.getInviteStatuses()),
@@ -34,7 +34,7 @@ function g() {
     }),
     0 === e.length)
         ? (0, r.jsx)("div", {
-              className: f.__invalid_emptyStateContainer,
+              className: p.__invalid_emptyStateContainer,
               children: (0, r.jsx)(d.Z, {
                   Icon: s.iWm,
                   header: h.intl.string(h.t.PbSPWc),
@@ -43,7 +43,7 @@ function g() {
           })
         : (0, r.jsx)(s.h21, {
               children: (0, r.jsxs)("div", {
-                  className: f.invitesContainer,
+                  className: p.invitesContainer,
                   children: [
                       n.length > 0 &&
                           (0, r.jsxs)(r.Fragment, {
@@ -51,7 +51,7 @@ function g() {
                                   (0, r.jsx)(m, { title: h.intl.string(h.t.yflAJV) }),
                                   n.map((e) =>
                                       (0, r.jsx)(
-                                          p.Z,
+                                          f.Z,
                                           {
                                               invite: e,
                                               expired: !1,
@@ -67,7 +67,7 @@ function g() {
                                   (0, r.jsx)(m, { title: h.intl.string(h.t.f0Ia4V) }),
                                   l.map((e) =>
                                       (0, r.jsx)(
-                                          p.Z,
+                                          f.Z,
                                           {
                                               invite: e,
                                               expired: !0,
@@ -84,15 +84,15 @@ function g() {
 function m(e) {
     let { title: t } = e;
     return (0, r.jsxs)("div", {
-        className: f.headerContainer,
+        className: p.headerContainer,
         children: [
             (0, r.jsx)(s.Text, {
-                className: f.headerTitle,
+                className: p.headerTitle,
                 variant: "text-xs/semibold",
                 color: "interactive-normal",
                 children: t,
             }),
-            (0, r.jsx)("div", { className: f.headerDivider }),
+            (0, r.jsx)("div", { className: p.headerDivider }),
         ],
     });
 }

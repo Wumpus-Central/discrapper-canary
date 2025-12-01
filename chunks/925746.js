@@ -1,59 +1,59 @@
-_.d(e, { L: () => E });
-var a = _(617726),
-    r = _(688838),
-    n = _(151122),
-    o = _(166394);
-let E = (0, n._I)((t) => ({
+r.d(t, { L: () => _ });
+var n = r(617726),
+    a = r(688838),
+    i = r(151122),
+    o = r(166394);
+let _ = (0, i._I)((e) => ({
         name: "ThirdPartyErrorsFilter",
-        setup(t) {
-            t.on("beforeEnvelope", (t) => {
-                (0, a.gv)(t, (t, e) => {
-                    if ("event" === e) {
-                        let e = Array.isArray(t) ? t[1] : void 0;
-                        e && ((0, o.CC)(e), (t[1] = e));
+        setup(e) {
+            e.on("beforeEnvelope", (e) => {
+                (0, n.gv)(e, (e, t) => {
+                    if ("event" === t) {
+                        let t = Array.isArray(e) ? e[1] : void 0;
+                        t && ((0, o.CC)(t), (e[1] = t));
                     }
                 });
             }),
-                t.on("applyFrameMetadata", (e) => {
-                    if (e.type) return;
-                    let _ = t.getOptions().stackParser;
-                    (0, o.GY)(_, e);
+                e.on("applyFrameMetadata", (t) => {
+                    if (t.type) return;
+                    let r = e.getOptions().stackParser;
+                    (0, o.GY)(r, t);
                 });
         },
-        processEvent(e) {
-            let _ = (function (t) {
-                let e = (0, r.Fr)(t);
-                if (e)
-                    return e
-                        .filter((t) => !!t.filename)
-                        .map((t) =>
-                            t.module_metadata
-                                ? Object.keys(t.module_metadata)
-                                      .filter((t) => t.startsWith(i))
-                                      .map((t) => t.slice(i.length))
+        processEvent(t) {
+            let r = (function (e) {
+                let t = (0, a.Fr)(e);
+                if (t)
+                    return t
+                        .filter((e) => !!e.filename)
+                        .map((e) =>
+                            e.module_metadata
+                                ? Object.keys(e.module_metadata)
+                                      .filter((e) => e.startsWith(s))
+                                      .map((e) => e.slice(s.length))
                                 : [],
                         );
-            })(e);
+            })(t);
             if (
-                _ &&
-                _[
-                    "drop-error-if-contains-third-party-frames" === t.behaviour ||
-                    "apply-tag-if-contains-third-party-frames" === t.behaviour
+                r &&
+                r[
+                    "drop-error-if-contains-third-party-frames" === e.behaviour ||
+                    "apply-tag-if-contains-third-party-frames" === e.behaviour
                         ? "some"
                         : "every"
-                ]((e) => !e.some((e) => t.filterKeys.includes(e)))
+                ]((t) => !t.some((t) => e.filterKeys.includes(t)))
             ) {
                 if (
-                    "drop-error-if-contains-third-party-frames" === t.behaviour ||
-                    "drop-error-if-exclusively-contains-third-party-frames" === t.behaviour
+                    "drop-error-if-contains-third-party-frames" === e.behaviour ||
+                    "drop-error-if-exclusively-contains-third-party-frames" === e.behaviour
                 )
                     return null;
-                e.tags = {
-                    ...e.tags,
+                t.tags = {
+                    ...t.tags,
                     third_party_code: !0,
                 };
             }
-            return e;
+            return t;
         },
     })),
-    i = "_sentryBundlerPluginAppKey:";
+    s = "_sentryBundlerPluginAppKey:";

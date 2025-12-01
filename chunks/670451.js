@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381),
     i = n(473749),
     a = n(28664),
@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,11 +58,11 @@ function _(e, t) {
         e
     );
 }
-function p(e) {
+function _(e) {
     let t = i.useRef(null);
     return (0, r.jsx)(
         s.Z,
-        _(d({}, e), {
+        p(d({}, e), {
             targetElementRef: t,
             children: (e) =>
                 (0, r.jsx)(a.u, {
@@ -71,7 +71,7 @@ function p(e) {
                     "aria-label": !1,
                     children: (0, r.jsx)(
                         o.P3F,
-                        _(d({}, e), {
+                        p(d({}, e), {
                             innerRef: t,
                             "aria-label": l.intl.string(l.t["UKOtz+"]),
                             onClick: (t) => {

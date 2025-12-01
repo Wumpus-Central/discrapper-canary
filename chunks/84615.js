@@ -1,7 +1,7 @@
 n.d(t, {
     Ox: () => C,
-    QP: () => I,
-    ob: () => R,
+    QP: () => S,
+    ob: () => P,
     q4: () => N,
 }),
     n(388685);
@@ -15,10 +15,10 @@ var r = n(54381),
     u = n(731965),
     d = n(477690),
     f = n(481060),
-    _ = n(714338),
-    p = n(624138),
-    h = n(314910),
-    m = n(308569),
+    p = n(714338),
+    _ = n(624138),
+    m = n(314910),
+    h = n(308569),
     g = n(102521);
 function E(e, t, n) {
     return (
@@ -72,8 +72,8 @@ function O(e, t) {
         e
     );
 }
-let v = (0, p.Mg)(d.Z.FULL_SCREEN_LAYER_ANIMATION_DURATION),
-    I = (0, c.U)((e) => ({
+let v = (0, _.Mg)(d.Z.FULL_SCREEN_LAYER_ANIMATION_DURATION),
+    S = (0, c.U)((e) => ({
         fullScreenLayers: [],
         addLayer: (t) =>
             (0, u.j)(() => {
@@ -85,16 +85,16 @@ let v = (0, p.Mg)(d.Z.FULL_SCREEN_LAYER_ANIMATION_DURATION),
                 });
             }),
     }));
-function T(e) {
+function I(e) {
     let { item: t, containerRef: n } = e;
     return (
         (0, f.Tbt)(n),
         i.useEffect(
             () => (
-                _.Z.disable(),
-                t.key !== m.CV && _.Z.enableTemp(P(t.key)),
+                p.Z.disable(),
+                t.key !== h.CV && p.Z.enableTemp(R(t.key)),
                 () => {
-                    _.Z.disableTemp();
+                    p.Z.disableTemp();
                 }
             ),
             [t.key],
@@ -107,14 +107,14 @@ function T(e) {
                     (0, r.jsx)("div", { className: g.drag }),
                     t.render({
                         transitionState: null != t ? t.transitionState : 3,
-                        closeLayer: () => R(t.key),
+                        closeLayer: () => P(t.key),
                     }),
                 ],
             }),
         })
     );
 }
-let S = {
+let T = {
         enter: g.enter,
         enterActive: g.enterActive,
         enterDone: g.enterDone,
@@ -132,8 +132,8 @@ let S = {
     };
 function C() {
     let { reducedMotion: e } = i.useContext(f.Sfi),
-        t = e.enabled ? A : S,
-        n = I((e) => e.fullScreenLayers),
+        t = e.enabled ? A : T,
+        n = S((e) => e.fullScreenLayers),
         a = n.map((e) => ({
             item: e,
             nodeRef: i.createRef(),
@@ -149,7 +149,7 @@ function C() {
                     timeout: v,
                     onEntered: () => {
                         (0, u.j)(() => {
-                            I.setState({
+                            S.setState({
                                 fullScreenLayers: n.map((e) =>
                                     e.key === i.key ? O(b({}, e), { transitionState: 2 }) : e,
                                 ),
@@ -157,7 +157,7 @@ function C() {
                         });
                     },
                     unmountOnExit: !0,
-                    children: (0, r.jsx)(T, {
+                    children: (0, r.jsx)(I, {
                         containerRef: a,
                         item: i,
                     }),
@@ -173,13 +173,13 @@ function N(e) {
         i = null != n ? n : o()();
     return (
         (0, u.j)(() => {
-            I.setState((t) => ({
+            S.setState((t) => ({
                 fullScreenLayers: [
                     ...t.fullScreenLayers,
                     {
                         key: i,
                         transitionState: 1,
-                        LayerComponent: null != r ? r : h.ZP,
+                        LayerComponent: null != r ? r : m.ZP,
                         render: e,
                     },
                 ],
@@ -188,18 +188,18 @@ function N(e) {
         i
     );
 }
-function R(e) {
+function P(e) {
     (0, u.j)(() => {
-        I.setState((t) => ({ fullScreenLayers: t.fullScreenLayers.filter((t) => t.key !== e) }));
+        S.setState((t) => ({ fullScreenLayers: t.fullScreenLayers.filter((t) => t.key !== e) }));
     });
 }
-function P(e) {
+function R(e) {
     return {
         POP_LAYER: {
             binds: ["esc"],
             comboKeysBindGlobal: !0,
             action() {
-                R(e);
+                P(e);
             },
         },
     };

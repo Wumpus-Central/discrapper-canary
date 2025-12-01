@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685);
+n.d(t, { Z: () => R }), n(388685);
 var r,
     i = n(442837),
     a = n(433517),
@@ -21,10 +21,10 @@ function d(e, t, n) {
     );
 }
 let f = {},
-    _ = {},
-    p = null,
-    h = null,
+    p = {},
+    _ = null,
     m = null,
+    h = null,
     g = "lastChangeLogDate",
     E = null,
     b = null,
@@ -39,11 +39,11 @@ function v(e) {
     if (!y.has(t)) return !1;
     (y = new Set(y)).delete(t);
 }
-function I(e) {
+function S(e) {
     let { config: t, latestChangelogId: n } = e;
-    (p = n), (m = t);
+    (_ = n), (h = t);
 }
-function T(e) {
+function I(e) {
     let { id: t, changelog: n } = e;
     null == f[t] && (f[t] = {}),
         (f[t][n.locale] = {
@@ -54,17 +54,17 @@ function T(e) {
             locale: n.locale,
             [n.asset_type === u.h3.YOUTUBE_VIDEO_ID ? "youtube_video_id" : "image"]: n.asset,
         }),
-        null == _[t] && (_[t] = {}),
-        (_[t][n.locale] = u.LU.LOADED_SUCCESS);
+        null == p[t] && (p[t] = {}),
+        (p[t][n.locale] = u.LU.LOADED_SUCCESS);
 }
-function S(e) {
+function T(e) {
     let { id: t, locale: n } = e;
     if (null != f[t] && null != f[t][n]) return !1;
-    null == _[t] && (_[t] = {}), (_[t][n] = u.LU.LOADED_FAILURE);
+    null == p[t] && (p[t] = {}), (p[t][n] = u.LU.LOADED_FAILURE);
 }
 function A(e) {
     let { id: t } = e;
-    h = t;
+    m = t;
 }
 function C(e) {
     let { changelogDate: t } = e;
@@ -73,7 +73,7 @@ function C(e) {
 function N() {
     E = l.l4.getSetting();
 }
-class R extends (r = i.ZP.Store) {
+class P extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(s.default, c.Z), this.syncWith([s.default], () => !0), this.syncWith([c.Z], N);
         let e = a.K.get(g);
@@ -89,20 +89,20 @@ class R extends (r = i.ZP.Store) {
         return null != (r = null == (n = f[e]) ? void 0 : n[t]) ? r : null;
     }
     latestChangelogId() {
-        return p;
+        return _;
     }
     getChangelogLoadStatus(e, t) {
         var n, r;
-        return null != (r = null == (n = _[e]) ? void 0 : n[t]) ? r : u.LU.NOT_LOADED;
+        return null != (r = null == (n = p[e]) ? void 0 : n[t]) ? r : u.LU.NOT_LOADED;
     }
     hasLoadedConfig() {
-        return null != m;
+        return null != h;
     }
     getConfig() {
-        return m;
+        return h;
     }
     overrideId() {
-        return h;
+        return m;
     }
     lastSeenChangelogId() {
         return E;
@@ -112,8 +112,8 @@ class R extends (r = i.ZP.Store) {
     }
     getStateForDebugging() {
         return {
-            changelogConfig: m,
-            loadedChangelogs: _,
+            changelogConfig: h,
+            loadedChangelogs: p,
             lastSeenChangelogId: E,
             lastSeenChangelogDate: b,
         };
@@ -122,13 +122,13 @@ class R extends (r = i.ZP.Store) {
         return y.size > 0;
     }
 }
-d(R, "displayName", "ChangelogStore");
-let P = new R(o.Z, {
+d(P, "displayName", "ChangelogStore");
+let R = new P(o.Z, {
     CHANGE_LOG_LOCK: O,
     CHANGE_LOG_UNLOCK: v,
-    CHANGE_LOG_SET_CONFIG: I,
-    CHANGE_LOG_FETCH_SUCCESS: T,
-    CHANGE_LOG_FETCH_FAILED: S,
+    CHANGE_LOG_SET_CONFIG: S,
+    CHANGE_LOG_FETCH_SUCCESS: I,
+    CHANGE_LOG_FETCH_FAILED: T,
     CHANGE_LOG_SET_OVERRIDE: A,
     CHANGE_LOG_MARK_SEEN: C,
 });

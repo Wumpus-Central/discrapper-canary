@@ -53,11 +53,11 @@ function f(e) {
     i.useEffect(() => {
         f(d(t));
     }, [t]);
-    let _ = () => {
+    let p = () => {
             let e = t.component;
             return (0, r.jsx)(e, u({}, c));
         },
-        p = "hidden" !== n && null != t.controls;
+        _ = "hidden" !== n && null != t.controls;
     return (0, r.jsxs)("div", {
         className: o()(l.main, {
             [l.mainBottomLayout]: "bottom" === n,
@@ -68,10 +68,10 @@ function f(e) {
                 className: l.canvas,
                 children: (0, r.jsx)("div", {
                     className: l.storyContent,
-                    children: _(),
+                    children: p(),
                 }),
             }),
-            p &&
+            _ &&
                 null != t.controls &&
                 (0, r.jsx)("div", {
                     className: o()(l.controls, {

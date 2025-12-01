@@ -49,15 +49,15 @@ let d = [
                 id: "void-inputs",
                 component: function (e) {
                     let { disabled: t, placeholder: n } = e,
-                        [f, _] = i.useState(void 0),
-                        [p, h] = i.useState(void 0),
-                        [m, g] = i.useState(void 0);
+                        [f, p] = i.useState(void 0),
+                        [_, m] = i.useState(void 0),
+                        [h, g] = i.useState(void 0);
                     return (0, r.jsxs)(u.Kqy, {
                         gap: 8,
                         children: [
                             (0, r.jsx)(s.q4, {
                                 value: f,
-                                onChange: _,
+                                onChange: p,
                                 options: d,
                                 placeholder: n,
                                 isDisabled: t,
@@ -68,19 +68,19 @@ let d = [
                             }),
                             (0, r.jsx)(o.V, {
                                 value: f,
-                                onChange: _,
+                                onChange: p,
                                 options: d,
                                 placeholder: n,
                                 isDisabled: t,
                             }),
                             (0, r.jsx)(a.W, {
-                                onSelect: h,
-                                value: p,
+                                onSelect: m,
+                                value: _,
                                 disabled: t,
                             }),
                             (0, r.jsx)(c.M, {
                                 onChange: g,
-                                value: m,
+                                value: h,
                                 disabled: t,
                             }),
                         ],

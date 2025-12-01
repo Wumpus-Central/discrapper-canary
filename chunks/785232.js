@@ -29,21 +29,21 @@ function c(e, t) {
 let u = function (e) {
     var { recipients: t, size: n, status: c, isTyping: u, className: d } = e,
         f = l(e, ["recipients", "size", "status", "isTyping", "className"]);
-    let _ = a.ny6[n],
-        p = (0, i.Wu)(
+    let p = a.ny6[n],
+        _ = (0, i.Wu)(
             [s.default],
             () =>
                 t.slice(0, 2).map((e) => {
                     let t = s.default.getUser(e);
-                    if (null != t) return t.getAvatarURL(void 0, _.size, !1);
+                    if (null != t) return t.getAvatarURL(void 0, p.size, !1);
                 }),
-            [t, _.size],
+            [t, p.size],
         );
     return (0, r.jsx)(o.Z, {
         "aria-label": f["aria-label"],
         "aria-hidden": f["aria-hidden"],
-        backSrc: p[0],
-        frontSrc: p[1],
+        backSrc: _[0],
+        frontSrc: _[1],
         size: n,
         status: c,
         isTyping: null != u && u,

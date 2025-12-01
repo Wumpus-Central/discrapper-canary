@@ -39,19 +39,19 @@ function f(e, t) {
     let n = c.get(e);
     return null == n ? null : t(n);
 }
-function _(e) {
+function p(e) {
     let { id: t, editorState: n } = e;
     d(t).editorState = n;
 }
-function p(e) {
+function _(e) {
     let { id: t } = e;
     d(t);
 }
-function h(e) {
+function m(e) {
     let { id: t } = e;
     return c.delete(t);
 }
-function m(e) {
+function h(e) {
     let { id: t, showBlocked: n } = e;
     d(t).showBlockedResults = n;
 }
@@ -105,10 +105,10 @@ class O extends (r = i.ZP.Store) {
 s(O, "displayName", "SearchQueryStore");
 let v = new O(a.Z, {
     SEARCH_RESULTS_QUERY_UPDATE: E,
-    SEARCH_EDITOR_STATE_CLEAR: h,
-    SEARCH_ENSURE_SEARCH_STATE: p,
-    SEARCH_EDITOR_STATE_CHANGE: _,
-    SEARCH_SET_SHOW_BLOCKED_RESULTS: m,
+    SEARCH_EDITOR_STATE_CLEAR: m,
+    SEARCH_ENSURE_SEARCH_STATE: _,
+    SEARCH_EDITOR_STATE_CHANGE: p,
+    SEARCH_SET_SHOW_BLOCKED_RESULTS: h,
     SEARCH_SET_SHOW_NO_RESULTS_ALT: g,
     SEARCH_SEARCH_MODE_UPDATE: b,
     SEARCH_TOKENS_REFRESHED: y,

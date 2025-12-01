@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381);
 n(473749);
 var i = n(442837),
@@ -10,62 +10,62 @@ var i = n(442837),
     u = n(246946),
     d = n(654904),
     f = n(671955),
-    _ = n(116649);
-function p(e) {
+    p = n(116649);
+function _(e) {
     let {
             user: t,
             displayProfile: n,
-            guild: p,
-            pendingAvatar: h,
-            pendingNickname: m,
+            guild: _,
+            pendingAvatar: m,
+            pendingNickname: h,
             pendingGlobalName: g,
             pendingBio: E,
             pendingPronouns: b,
             pendingLegacyUsernameDisabled: y,
             pendingBadges: O,
             pendingDisplayNameStyles: v,
-            isTryItOut: I,
-            hideBioSection: T,
-            shouldOpenBadgeTooltip: S,
+            isTryItOut: S,
+            hideBioSection: I,
+            shouldOpenBadgeTooltip: T,
         } = e,
-        A = (0, i.e7)([c.ZP], () => (null == p ? null : c.ZP.getMember(p.id, t.id))),
+        A = (0, i.e7)([c.ZP], () => (null == _ ? null : c.ZP.getMember(_.id, t.id))),
         C = (0, i.e7)([u.Z], () => u.Z.hidePersonalInformation),
         N = null == n ? void 0 : n.getPreviewBio(E),
-        R = null != b ? b : null == n ? void 0 : n.pronouns,
-        P = (0, d.Ly)({
-            pendingNickname: m,
+        P = null != b ? b : null == n ? void 0 : n.pronouns,
+        R = (0, d.Ly)({
+            pendingNickname: h,
             pendingGlobalName: g,
             user: t,
             guildMember: A,
         }),
-        D = () => {
-            if (null != A && null !== h && (null != A.avatar || null != h))
+        w = () => {
+            if (null != A && null !== m && (null != A.avatar || null != m))
                 return (0, r.jsx)(l.Z, {
                     user: t,
-                    nickname: P,
+                    nickname: R,
                 });
         };
     return (0, r.jsxs)("div", {
-        className: _.body,
+        className: p.body,
         inert: !0,
         children: [
             (0, r.jsx)(o.Z, {
                 user: t,
-                guildId: null == p ? void 0 : p.id,
-                usernameIcon: D(),
-                nickname: P,
+                guildId: null == _ ? void 0 : _.id,
+                usernameIcon: w(),
+                nickname: R,
                 pendingDisplayNameStyles: v,
-                pronouns: R,
-                isTryItOut: I,
+                pronouns: P,
+                isTryItOut: S,
                 tags: (0, r.jsx)(a.Z, {
                     displayProfile: n,
                     themeType: f.l.POPOUT,
                     pendingLegacyUsernameDisabled: y,
                     pendingBadges: O,
-                    shouldOpenBadgeTooltip: S,
+                    shouldOpenBadgeTooltip: T,
                 }),
             }),
-            !T &&
+            !I &&
                 null != N &&
                 "" !== N &&
                 (0, r.jsx)(s.Z, {

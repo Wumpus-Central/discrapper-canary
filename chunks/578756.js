@@ -1,79 +1,79 @@
-n.d(t, {
+t.d(n, {
     $M: () => _,
     Dk: () => m,
-    GA: () => g,
+    GA: () => f,
     Se: () => b,
     cX: () => v,
     cq: () => d,
-    g$: () => f,
+    g$: () => g,
     lY: () => c,
     wz: () => p,
 });
-var l = n(473749),
-    i = n(660815),
-    a = n(442837),
-    r = n(626135),
-    s = n(639777),
-    u = n(60482),
-    o = n(981631);
-function c(e, t, n) {
+var l = t(473749),
+    i = t(660815),
+    a = t(442837),
+    r = t(626135),
+    s = t(639777),
+    u = t(60482),
+    o = t(981631);
+function c(e, n, t) {
     l.useEffect(() => {
         r.default.track(o.rMx.OPEN_MODAL, {
             type: "game_servers_perk_clicked",
             guild_id: e,
-            location: n,
-            location_stack: t,
+            location: t,
+            location_stack: n,
         });
-    }, [e, t, n]);
+    }, [e, n, t]);
 }
-function d(e, t) {
+function d(e, n) {
     l.useEffect(() => {
         r.default.track(o.rMx.GAME_SERVER_GAME_SELECT_OPENED, {
             guild_id: e,
-            type: t,
+            type: n,
         });
-    }, [e, t]);
+    }, [e, n]);
 }
-function m(e, t, n) {
+function m(e, n, t) {
     l.useEffect(() => {
         r.default.track(o.rMx.GAME_SERVER_SETTINGS_OPENED, {
             guild_id: e,
-            game_server_id: t,
-            type: n,
+            game_server_id: n,
+            type: t,
         });
-    }, [e, t, n]);
+    }, [e, n, t]);
 }
 function v(e) {
-    let t = (0, s.Z)(e),
-        n = (0, a.e7)([u.Z], () => u.Z.getStateForGuild(e)),
+    let n = (0, s.Z)(e),
+        t = (0, a.e7)([u.Z], () => u.Z.getStateForGuild(e)),
         c = l.useRef(!1);
     l.useEffect(() => {
-        if ((null == n ? void 0 : n.instances) == null) return;
-        let l = Object.values(n.instances).length,
-            a = Object.values(n.instances).filter((e) => e.status === i.V.ONLINE).length;
+        if ((null == t ? void 0 : t.instances) == null) return;
+        let l = Object.values(t.instances).length,
+            a = Object.values(t.instances).filter((e) => e.status === i.V.ONLINE).length;
         c.current ||
             ((c.current = !0),
             r.default.track(o.rMx.IMPRESSION_GAME_SERVERS_TAB_VIEWED, {
                 guild_id: e,
-                is_admin: t,
+                is_admin: n,
                 num_game_servers: l,
                 num_game_servers_online: a,
                 num_game_servers_offline: l - a,
             }));
-    }, [e, t, null == n ? void 0 : n.instances]);
+    }, [e, n, null == t ? void 0 : t.instances]);
 }
-function g(e, t, n, l) {
+function f(e, n, t, l) {
     r.default.track(o.rMx.GAME_SERVER_GAME_CLICKED, {
         guild_id: e,
-        product_id: t,
-        product_name: n,
+        product_id: n,
+        product_name: t,
         location: l,
     });
 }
-function f(e) {
+function g(e) {
     let {
-        guildId: t,
-        productId: n,
+        guildId: n,
+        productId: t,
         productName: l,
         skuId: i,
         planName: a,
@@ -83,8 +83,8 @@ function f(e) {
         type: d,
     } = e;
     r.default.track(o.rMx.GAME_SERVER_SKU_SELECTED, {
-        guild_id: t,
-        product_id: n,
+        guild_id: n,
+        product_id: t,
         product_name: l,
         sku_id: i,
         plan_name: a,
@@ -94,24 +94,24 @@ function f(e) {
         type: d,
     });
 }
-function p(e, t, n, l) {
+function p(e, n, t, l) {
     r.default.track(o.rMx.GAME_SERVER_JOIN_CLICKED, {
         guild_id: e,
-        game_id: t,
-        game_name: n,
+        game_id: n,
+        game_name: t,
         game_server_id: l,
     });
 }
-function b(e, t, n) {
+function b(e, n, t) {
     r.default.track(o.rMx.GAME_SERVER_COPY_IP_CLICKED, {
         guild_id: e,
-        game_server_id: t,
-        location: n,
+        game_server_id: n,
+        location: t,
     });
 }
-function _(e, t) {
+function _(e, n) {
     r.default.track(o.rMx.GAME_SERVER_VIEW_GAME_PANEL_CLICKED, {
         guild_id: e,
-        game_server_id: t,
+        game_server_id: n,
     });
 }

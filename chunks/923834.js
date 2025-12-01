@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(35282), n(415506);
+n.d(t, { Z: () => p }), n(35282), n(415506);
 var r,
     i = n(442837),
     a = n(570140);
@@ -55,7 +55,7 @@ class f extends (r = i.ZP.Store) {
     }
 }
 o(f, "displayName", "ApplicationStoreLocationStore");
-let _ = new f(a.Z, {
+let p = new f(a.Z, {
     APPLICATION_STORE_LOCATION_CHANGE: c,
     APPLICATION_STORE_RESET_NAVIGATION: u,
 });

@@ -1,22 +1,22 @@
 n.d(t, {
     C: () => C,
-    default: () => S,
+    default: () => T,
 }),
     n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(790519),
+    s = n(666917),
     l = n(481060),
     c = n(493773),
     u = n(600164),
     d = n(626135),
     f = n(617136),
-    _ = n(113434),
-    p = n(569984),
-    h = n(981631),
-    m = n(388032),
+    p = n(313481),
+    _ = n(616022),
+    m = n(981631),
+    h = n(388032),
     g = n(741463),
     E = n(677486);
 function b(e, t, n) {
@@ -71,36 +71,36 @@ function v(e, t) {
         e
     );
 }
-let I = 2500,
-    T = 467;
-function S(e) {
+let S = 2500,
+    I = 467;
+function T(e) {
     let { questId: t, survey: n, transitionState: a, onClose: o, onSubmit: f } = e,
-        p = (0, _.B4)(t),
+        _ = (0, p.B4)(t),
         [b, O] = i.useState(0),
-        [S, C] = (0, l.q_F)(() => ({
+        [T, C] = (0, l.q_F)(() => ({
             from: { width: "0%" },
-            config: { duration: I },
+            config: { duration: S },
         })),
-        R = (e) => {
+        P = (e) => {
             f(),
                 O(1),
-                null != p &&
+                null != _ &&
                     d.default.track(
-                        h.rMx.QUEST_SURVEY_SUBMITTED,
-                        v(y({}, N(p, n)), {
+                        m.rMx.QUEST_SURVEY_SUBMITTED,
+                        v(y({}, N(_, n)), {
                             choice: e.text,
                             choice_id: e.key,
                         }),
                     );
         },
-        P = async (e) => {
+        R = async (e) => {
             1 === e && (await C({ width: "100%" }), o());
         };
     return (
         (0, c.ZP)(() => {
-            null != p && d.default.track(h.rMx.QUEST_SURVEY_DISPLAYED, N(p, n));
+            null != _ && d.default.track(m.rMx.QUEST_SURVEY_DISPLAYED, N(_, n));
         }),
-        null == p && o(),
+        null == _ && o(),
         (0, r.jsx)(l.Y0X, {
             "data-migration-pending": !0,
             transitionState: a,
@@ -109,8 +109,8 @@ function S(e) {
             parentComponent: "QuestSurveyModal",
             children: (0, r.jsxs)(l.MyZ, {
                 activeSlide: b,
-                width: T,
-                onSlideReady: P,
+                width: I,
+                onSlideReady: R,
                 children: [
                     (0, r.jsxs)(l.Mi4, {
                         id: 0,
@@ -150,7 +150,7 @@ function S(e) {
                                         A,
                                         {
                                             choice: e,
-                                            onClick: R,
+                                            onClick: P,
                                         },
                                         e.key,
                                     ),
@@ -172,12 +172,12 @@ function S(e) {
                                     }),
                                     (0, r.jsx)(l.Heading, {
                                         variant: "heading-lg/semibold",
-                                        children: m.intl.string(m.t.KTjjrG),
+                                        children: h.intl.string(h.t.KTjjrG),
                                     }),
                                     (0, r.jsx)(l.Text, {
                                         variant: "text-md/normal",
                                         color: "text-muted",
-                                        children: m.intl.string(m.t.AvbrEM),
+                                        children: h.intl.string(h.t.AvbrEM),
                                     }),
                                 ],
                             }),
@@ -188,12 +188,12 @@ function S(e) {
                                     children: [
                                         (0, r.jsx)(l.Button, {
                                             variant: "primary",
-                                            text: m.intl.string(m.t.cpT0Cq),
+                                            text: h.intl.string(h.t.cpT0Cq),
                                             onClick: o,
                                         }),
                                         (0, r.jsx)(s.animated.div, {
                                             className: g.progressOverlay,
-                                            style: S,
+                                            style: T,
                                         }),
                                     ],
                                 }),
@@ -236,8 +236,8 @@ function C(e) {
         },
         {
             onCloseCallback: () => {
-                let n = p.Z.getQuest(e.questId);
-                null != n && d.default.track(h.rMx.QUEST_SURVEY_DISMISSED, v(y({}, N(n, e.survey)), { submitted: t }));
+                let n = _.Z.getQuest(e.questId);
+                null != n && d.default.track(m.rMx.QUEST_SURVEY_DISMISSED, v(y({}, N(n, e.survey)), { submitted: t }));
             },
         },
     );

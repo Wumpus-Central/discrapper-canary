@@ -65,11 +65,11 @@ e.exports = function (e) {
             scope: "string",
             match: /\$(\\([^0-9]|[0-9]{1,3}|)|.)/,
         },
-        _ = {
+        p = {
             scope: "string",
             match: /"""("*)(?!")[\s\S]*?"""\1/,
         },
-        p = {
+        _ = {
             scope: "string",
             contains: [e.BACKSLASH_ESCAPE],
             variants: [
@@ -116,19 +116,19 @@ e.exports = function (e) {
                 },
             ],
         },
-        h = {
+        m = {
             beginKeywords: "fun receive if try case maybe",
             end: "end",
             keywords: r,
         };
-    h.contains = [
+    m.contains = [
         i,
         o,
         e.inherit(e.APOS_STRING_MODE, { className: "" }),
-        h,
+        m,
         s,
-        p,
         _,
+        p,
         e.QUOTE_STRING_MODE,
         a,
         l,
@@ -137,8 +137,8 @@ e.exports = function (e) {
         d,
         f,
     ];
-    let m = [i, o, h, s, p, _, e.QUOTE_STRING_MODE, a, l, c, u, d, f];
-    (s.contains[1].contains = m), (l.contains = m), (d.contains[1].contains = m);
+    let h = [i, o, m, s, _, p, e.QUOTE_STRING_MODE, a, l, c, u, d, f];
+    (s.contains[1].contains = h), (l.contains = h), (d.contains[1].contains = h);
     let g = [
             "-module",
             "-record",
@@ -169,7 +169,7 @@ e.exports = function (e) {
             className: "params",
             begin: "\\(",
             end: "\\)",
-            contains: m,
+            contains: h,
         };
     return {
         name: "Erlang",
@@ -187,7 +187,7 @@ e.exports = function (e) {
                 starts: {
                     end: ";|\\.",
                     keywords: r,
-                    contains: m,
+                    contains: h,
                 },
             },
             i,
@@ -201,11 +201,11 @@ e.exports = function (e) {
                     $pattern: "-" + e.IDENT_RE,
                     keyword: g.map((e) => `${e}|1.5`).join(" "),
                 },
-                contains: [E, p, _, e.QUOTE_STRING_MODE],
+                contains: [E, _, p, e.QUOTE_STRING_MODE],
             },
             a,
-            p,
             _,
+            p,
             e.QUOTE_STRING_MODE,
             d,
             c,

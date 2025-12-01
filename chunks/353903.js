@@ -1,5 +1,5 @@
 n.d(t, {
-    G0: () => m,
+    G0: () => h,
     u$: () => g,
 }),
     n(388685);
@@ -25,8 +25,8 @@ function d(e, t, n) {
     );
 }
 let f = 12,
-    _ = [c.Z.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, c.Z.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, "#929AFA"];
-class p extends a.PureComponent {
+    p = [c.Z.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, c.Z.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, "#929AFA"];
+class _ extends a.PureComponent {
     render() {
         let {
             props: { height: e },
@@ -41,10 +41,10 @@ class p extends a.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e), d(this, "state", { backgroundColor: s().sample(_) });
+        super(...e), d(this, "state", { backgroundColor: s().sample(p) });
     }
 }
-class h extends (r = a.Component) {
+class m extends (r = a.Component) {
     componentDidMount() {
         this.animateSlide();
     }
@@ -71,8 +71,8 @@ class h extends (r = a.Component) {
             className: u.column,
             style: this.getAnimatedStyle(),
             children: [
-                e.map((e, t) => (0, i.jsx)(p, { height: e }, t)),
-                e.map((e, t) => (0, i.jsx)(p, { height: e }, "alt".concat(t))),
+                e.map((e, t) => (0, i.jsx)(_, { height: e }, t)),
+                e.map((e, t) => (0, i.jsx)(_, { height: e }, "alt".concat(t))),
             ],
         });
     }
@@ -102,8 +102,8 @@ class h extends (r = a.Component) {
         };
     }
 }
-d(h, "defaultProps", { direction: -1 });
-let m = (e) => {
+d(m, "defaultProps", { direction: -1 });
+let h = (e) => {
     let { columns: t } = e;
     return (0, i.jsx)("div", {
         className: u.column,

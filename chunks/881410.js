@@ -80,7 +80,7 @@ function m(e) {
     var { widgetType: t, widget: n, onAddGame: m, children: b } = e,
         h = p(e, ["widgetType", "widget", "onAddGame", "children"]);
     let [y] = (0, l.ynZ)(),
-        [O, v] = i.useState(""),
+        [v, O] = i.useState(""),
         j = i.useRef(""),
         x = i.useMemo(() => new Set(n.games.map((e) => e.applicationId)), [n.games]),
         { trackUserProfileEditAction: _ } = (0, c.KZ)(),
@@ -104,7 +104,7 @@ function m(e) {
         ),
         E = i.useCallback(
             (e) => {
-                "" === O.trim() &&
+                "" === v.trim() &&
                     "" !== e.trim() &&
                     _({
                         action: "GAME_SEARCH_SESSION_STARTED",
@@ -112,14 +112,14 @@ function m(e) {
                         numCharacters: e.trim().length,
                         numResults: S(e).length,
                     }),
-                    v(e),
+                    O(e),
                     (j.current = e);
             },
-            [O, _, t, S],
+            [v, _, t, S],
         ),
         T = i.useMemo(
-            () => ("" !== O.trim() ? u.intl.format(u.t.jhiTsN, { searchTerm: O.trim() }) : u.intl.string(u.t.QwSXv8)),
-            [O],
+            () => ("" !== v.trim() ? u.intl.format(u.t.jhiTsN, { searchTerm: v.trim() }) : u.intl.string(u.t.QwSXv8)),
+            [v],
         );
     return (0, r.jsx)(
         l.yRy,
@@ -129,7 +129,7 @@ function m(e) {
                     action: "PRESS_ADD_GAME",
                     widgetEdited: t,
                 }),
-                    v(""),
+                    O(""),
                     (j.current = "");
             },
             onRequestClose: () => {

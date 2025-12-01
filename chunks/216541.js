@@ -9,26 +9,26 @@ var r = n(54381),
     u = n(566697),
     d = n(876917),
     f = n(328456),
-    _ = n(330349),
-    p = n(619899),
-    h = n(616066),
-    m = n(881937),
+    p = n(330349),
+    _ = n(619899),
+    m = n(616066),
+    h = n(881937),
     g = n(63243),
     E = n(244488);
 let b = i.memo(function (e) {
     let { product: t, isPurchased: n, isHighlighted: a, user: b, forCollectedModal: y, containerClassName: O } = e,
-        { firstProfileEffect: v, firstAvatarDecoration: I, firstNameplate: T } = (0, f.Rj)(t),
-        S = (0, p.O1)(I),
+        { firstProfileEffect: v, firstAvatarDecoration: S, firstNameplate: I } = (0, f.Rj)(t),
+        T = (0, _.O1)(S),
         A = (0, c.ZP)(),
         C = (0, s.ap)(A),
-        N = i.useMemo(() => (0, _.L)(t), [t]),
-        R = i.useMemo(() => (null != T ? l.EFr.SIZE_96 : l.EFr.SIZE_120), [T]),
-        P = i.useMemo(() => (C ? E : g), [C]);
+        N = i.useMemo(() => (0, p.L)(t), [t]),
+        P = i.useMemo(() => (null != I ? l.EFr.SIZE_96 : l.EFr.SIZE_120), [I]),
+        R = i.useMemo(() => (C ? E : g), [C]);
     return (0, r.jsxs)("div", {
-        className: o()(m.container, N ? m.threeItemBundle : null, O),
+        className: o()(h.container, N ? h.threeItemBundle : null, O),
         children: [
             (0, r.jsx)("div", {
-                className: o()(m.profileEffectShopPreview, y ? m.profileEffectShopPreviewCollectedModal : null),
+                className: o()(h.profileEffectShopPreview, y ? h.profileEffectShopPreviewCollectedModal : null),
                 children:
                     null != v &&
                     (0, r.jsx)(d.Z, {
@@ -42,31 +42,31 @@ let b = i.memo(function (e) {
             }),
             (0, r.jsx)("div", {
                 className: o()(
-                    m.avatarDecorationPreview,
-                    y ? m.avatarDecorationPreviewCollectedModal : null,
-                    N ? m.avatarDecorationDropShadow : null,
+                    h.avatarDecorationPreview,
+                    y ? h.avatarDecorationPreviewCollectedModal : null,
+                    N ? h.avatarDecorationDropShadow : null,
                 ),
-                children: (0, r.jsx)(h.R, {
-                    item: S,
+                children: (0, r.jsx)(m.R, {
+                    item: T,
                     user: b,
-                    avatarSize: R,
+                    avatarSize: P,
                     isPurchased: n,
                     isHighlighted: a,
-                    avatarPlaceholderSrc: P,
-                    className: m.avatar,
+                    avatarPlaceholderSrc: R,
+                    className: h.avatar,
                 }),
             }),
             N &&
                 (0, r.jsx)("div", {
-                    className: o()(m.nameplatePreview, y ? m.nameplatePreviewCollectedModal : null),
+                    className: o()(h.nameplatePreview, y ? h.nameplatePreviewCollectedModal : null),
                     children: (0, r.jsx)(u.Z, {
                         user: b,
-                        nameplate: T,
+                        nameplate: I,
                         isHighlighted: a,
                         isPurchased: n,
                         nameplatePreviewSize: "default",
                         showPlaceholderUser: !a,
-                        pendingAvatarDecoration: S,
+                        pendingAvatarDecoration: T,
                     }),
                 }),
         ],

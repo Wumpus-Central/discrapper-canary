@@ -27,26 +27,26 @@ let c = null,
     u = null,
     d = null,
     f = null,
-    _ = {},
     p = {},
-    h = {},
-    m = {};
+    _ = {},
+    m = {},
+    h = {};
 function g() {
     let e = (e) => null != e && Date.now() - e < 60000;
-    for (let t in (e(c) || (c = null), e(u) || (u = null), e(d) || (d = null), e(f) || (f = null), _))
-        e(_[t]) || delete _[t];
-    for (let t in p) e(p[t]) || delete p[t];
-    for (let t in m) e(m[t]) || delete m[t];
+    for (let t in (e(c) || (c = null), e(u) || (u = null), e(d) || (d = null), e(f) || (f = null), p))
+        e(p[t]) || delete p[t];
+    for (let t in _) e(_[t]) || delete _[t];
     for (let t in h) e(h[t]) || delete h[t];
+    for (let t in m) e(m[t]) || delete m[t];
 }
 function E(e) {
     let { guildId: t, mentioned: n, roleMentioned: r, everyoneMentioned: i } = e,
         a = Date.now();
     (c = a),
-        null != t && (_[t] = a),
-        n && ((u = a), null != t && (p[t] = a)),
-        r && ((d = a), null != t && (m[t] = a)),
-        i && ((f = a), null != t && (h[t] = a));
+        null != t && (p[t] = a),
+        n && ((u = a), null != t && (_[t] = a)),
+        r && ((d = a), null != t && (h[t] = a)),
+        i && ((f = a), null != t && (m[t] = a));
 }
 class b extends r.ZP.Store {
     initialize() {
@@ -68,10 +68,10 @@ class b extends r.ZP.Store {
             approx_seconds_since_last_mention: t(u),
             approx_seconds_since_last_role_mention: t(d),
             approx_seconds_since_last_everyone_mention: t(f),
-            approx_seconds_since_last_guild_notification: null == e ? null : t(_[e]),
-            approx_seconds_since_last_guild_mention: null == e ? null : t(p[e]),
-            approx_seconds_since_last_guild_role_mention: null == e ? null : t(m[e]),
-            approx_seconds_since_last_guild_everyone_mention: null == e ? null : t(h[e]),
+            approx_seconds_since_last_guild_notification: null == e ? null : t(p[e]),
+            approx_seconds_since_last_guild_mention: null == e ? null : t(_[e]),
+            approx_seconds_since_last_guild_role_mention: null == e ? null : t(h[e]),
+            approx_seconds_since_last_guild_everyone_mention: null == e ? null : t(m[e]),
         };
     }
 }

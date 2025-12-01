@@ -1,5 +1,5 @@
 n.d(t, {
-    S: () => _,
+    S: () => p,
     V: () => f,
 });
 var r = n(54381),
@@ -95,7 +95,7 @@ function f(e) {
             );
     });
 }
-function _(e) {
+function p(e) {
     let { message: t } = e;
     f({
         header: a.intl.string(a.t.OjbtDm),

@@ -60,7 +60,7 @@ function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -68,7 +68,7 @@ function f(e, t) {
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -77,13 +77,13 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let p = /url\(['"](.*)['"]\)/,
-    h = (e) => {
+let _ = /url\(['"](.*)['"]\)/,
+    m = (e) => {
         if (null == e || "" === e || "none" === e) return null;
-        let t = e.match(p);
+        let t = e.match(_);
         return null != t ? t[1] : e;
     };
-function m(e) {
+function h(e) {
     return null == e || "" === e || "none" === e ? "none" : "url(".concat(e, ")");
 }
 function g(e) {
@@ -92,7 +92,7 @@ function g(e) {
             if (t === this.state) return;
             let { cached: n, loaded: r } = this.state,
                 { style: i } = this.props,
-                a = null != i ? h(i.backgroundImage) : null;
+                a = null != i ? m(i.backgroundImage) : null;
             (null == a && a !== n) || this.cachedURLs.indexOf(a) >= 0
                 ? this.setState({
                       loaded: !0,
@@ -122,12 +122,12 @@ function g(e) {
                 { style: n } = t,
                 i = f(t, ["style"]),
                 { loaded: a, cached: o } = this.state;
-            return a || null == n || (n = d(c({}, n), { backgroundImage: m(o) })), (0, r.jsx)(e, c({ style: n }, i));
+            return a || null == n || (n = d(c({}, n), { backgroundImage: h(o) })), (0, r.jsx)(e, c({ style: n }, i));
         }
         constructor(e) {
             super(e), l(this, "cachedURLs", []), l(this, "canceller", null);
             let { style: t } = e,
-                n = null != t ? h(t.backgroundImage) : null;
+                n = null != t ? m(t.backgroundImage) : null;
             (this.cachedURLs = [n]),
                 (this.state = {
                     cached: n,

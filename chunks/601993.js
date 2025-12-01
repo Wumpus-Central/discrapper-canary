@@ -1,9 +1,9 @@
 n.d(t, {
     Gb: () => s,
-    RD: () => h,
-    Rs: () => _,
+    RD: () => m,
+    Rs: () => p,
     WA: () => f,
-    _2: () => p,
+    _2: () => _,
     f5: () => d,
     fG: () => u,
     gL: () => c,
@@ -37,15 +37,15 @@ async function f(e) {
         r = await l;
     return null == r ? [] : r.getCorrectionsForMisspelling(e, t).slice(0, n);
 }
-async function _(e) {
+async function p(e) {
     let t = await l;
     null != t && t.replaceMisspelling(e);
 }
-async function p(e) {
+async function _(e) {
     let t = await l;
     null != t && t.setAppLocale(e);
 }
-function h(e) {
+function m(e) {
     if (!o()) return () => {};
     let t = r.Z.spellCheck.on("spellcheck-result", e);
     return null != t ? t : () => {};

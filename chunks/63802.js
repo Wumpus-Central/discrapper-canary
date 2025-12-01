@@ -42,7 +42,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,22 +54,22 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -77,7 +77,7 @@ function h(e, t) {
     }
     return i;
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -115,10 +115,10 @@ function b(e) {
 }
 function y(e) {
     var { width: t = 14, height: n = 13, color: i = "white", foreground: a } = e,
-        o = h(e, ["width", "height", "color", "foreground"]);
+        o = m(e, ["width", "height", "color", "foreground"]);
     return (0, r.jsxs)(
         "svg",
-        p(f({}, (0, l.Z)(f({}, o))), {
+        _(f({}, (0, l.Z)(f({}, o))), {
             preserveAspectRatio: "none",
             width: t,
             height: n,

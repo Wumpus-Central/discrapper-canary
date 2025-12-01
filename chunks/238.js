@@ -33,19 +33,19 @@ var f = (function (e) {
         e
     );
 })({});
-let _ = new o.Z({
+let p = new o.Z({
     subscriptions: [],
     otps: [],
 });
-function p(e) {
+function _(e) {
     let { applicationId: t, layout: n } = e;
     u.set(t, o.Z.createFromServer(n)), d.delete(t);
 }
-function h(e) {
+function m(e) {
     let { applicationId: t } = e;
     d.set(t, 3);
 }
-function m(e) {
+function h(e) {
     let { applicationId: t } = e;
     d.set(t, 1);
 }
@@ -58,7 +58,7 @@ class g extends (r = i.ZP.Store) {
     }
     getStoreLayout(e) {
         var t;
-        return null != (t = u.get(e)) ? t : _;
+        return null != (t = u.get(e)) ? t : p;
     }
     getFetchStatus(e) {
         var t;
@@ -67,7 +67,7 @@ class g extends (r = i.ZP.Store) {
 }
 c(g, "displayName", "ApplicationStoreDirectoryStore");
 let E = new g(a.Z, {
-    APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_SUCCESS: p,
-    APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_FAILED: h,
-    APPLICATION_STORE_DIRECTORY_LAYOUT_FETCHING: m,
+    APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_SUCCESS: _,
+    APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_FAILED: m,
+    APPLICATION_STORE_DIRECTORY_LAYOUT_FETCHING: h,
 });

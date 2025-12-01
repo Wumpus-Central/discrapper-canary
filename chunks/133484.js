@@ -155,11 +155,11 @@ e.exports = function (e) {
             a,
             o,
         ],
-        _ = [...f];
+        p = [...f];
     return (
-        _.pop(),
-        _.push(s),
-        (c.contains = _),
+        p.pop(),
+        p.push(s),
+        (c.contains = p),
         {
             name: "YAML",
             case_insensitive: !0,

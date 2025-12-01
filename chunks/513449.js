@@ -1,6 +1,6 @@
 n.d(t, {
-    Ku: () => _,
-    MV: () => p,
+    Ku: () => p,
+    MV: () => _,
     ZP: () => f,
 });
 var r = n(473749),
@@ -13,15 +13,15 @@ var r = n(473749),
     u = n(643632);
 let d = (0, i.U)((e) => ({ isOnStartStageScreen: !0 })),
     f = d;
-function _(e) {
+function p(e) {
     (0, a.j)(() => d.setState({ isOnStartStageScreen: e }));
 }
-function p(e) {
+function _(e) {
     let t = (0, o.e7)([l.Z], () => l.Z.getVoiceChannelId() === e.id),
         n = (0, o.e7)([s.Z], () => s.Z.can(c.yP, e), [e]),
         i = (0, u.Z)(e.id),
         a = n && !i;
     r.useEffect(() => {
-        t ? a || _(!1) : _(a);
+        t ? a || p(!1) : p(a);
     }, [t, a]);
 }

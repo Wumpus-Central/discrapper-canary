@@ -1,4 +1,4 @@
-n.d(t, { l: () => T }), n(388685);
+n.d(t, { l: () => I }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(446489),
     d = n(56314),
     f = n(566006),
-    _ = n(287151),
-    p = n(127947),
-    h = n(893973);
-function m(e, t, n) {
+    p = n(287151),
+    _ = n(127947),
+    m = n(893973);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
@@ -92,67 +92,67 @@ let v = i.memo(function (e) {
             useChatFontScaling: i,
             hideEmoji: a,
             emoji: s,
-            className: m,
+            className: h,
             count: g,
             me: E,
             me_burst: b,
             burst_count: y,
             burst_colors: O,
             readOnly: v,
-            isLurking: I,
-            isGuest: T,
-            isPendingMember: S,
+            isLurking: S,
+            isGuest: I,
+            isPendingMember: T,
             type: A,
             emojiSize: C,
         } = e,
         N = A === f.O.BURST,
-        R = (0, _.y4)(E, b, A),
-        P = (0, d.v)(N && null != O ? O : []),
-        D = i ? h : p,
-        w = N ? y : g,
-        L = (0, u.y)(w, _.aO),
-        x = {};
-    if (N && null != P) {
-        var M;
-        let { accentColor: e, backgroundColor: r, opacity: i } = P,
-            a = null != (M = (0, l.wK)(null != r ? r : "", i)) ? M : "";
-        R && (x.borderColor = r), (x.background = a), (t = e), (n = e);
+        P = (0, p.y4)(E, b, A),
+        R = (0, d.v)(N && null != O ? O : []),
+        w = i ? m : _,
+        D = N ? y : g,
+        x = (0, u.y)(D, p.aO),
+        L = {};
+    if (N && null != R) {
+        var j;
+        let { accentColor: e, backgroundColor: r, opacity: i } = R,
+            a = null != (j = (0, l.wK)(null != r ? r : "", i)) ? j : "";
+        P && (L.borderColor = r), (L.background = a), (t = e), (n = e);
     }
-    let k = {
-        minWidth: L,
+    let M = {
+        minWidth: x,
         color: t,
         borderColor: n,
     };
     return (0, r.jsxs)("div", {
-        className: o()(D.reaction, D.reactionInner, m, {
-            [D.reactionMe]: R,
-            [D.reactionReadOnly]: v && !I && !S && !T,
+        className: o()(w.reaction, w.reactionInner, h, {
+            [w.reactionMe]: P,
+            [w.reactionReadOnly]: v && !S && !T && !I,
         }),
-        style: x,
+        style: L,
         children: [
             (0, r.jsx)(c.Z, {
-                className: o()({ [D.hideEmoji]: a }),
+                className: o()({ [w.hideEmoji]: a }),
                 emojiId: s.id,
                 emojiName: s.name,
                 size: C,
                 animated: N && s.animated,
             }),
             (0, r.jsx)("div", {
-                className: D.reactionCount,
-                style: k,
-                children: w,
+                className: w.reactionCount,
+                style: M,
+                children: D,
             }),
         ],
     });
 });
-function I(e) {
+function S(e) {
     var t;
     return ""
         .concat(e.type === f.O.BURST ? "burst:" : "")
         .concat(null != (t = e.emoji.id) ? t : 0, ":")
         .concat(e.emoji.name);
 }
-let T = i.memo(function (e) {
+let I = i.memo(function (e) {
     var { showImmediate: t, reactions: n } = e,
         a = y(e, ["showImmediate", "reactions"]);
     let [o, l] = i.useState(!1),
@@ -169,11 +169,11 @@ let T = i.memo(function (e) {
             [o, c],
         ),
         f = (0, s.O)(d),
-        p = (o && !c) || t ? _.le : v;
+        _ = (o && !c) || t ? p.le : v;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", { ref: f }),
-            n.map((e) => (0, r.jsx)(p, b(g({}, a, e), { emojiSize: "reaction" }), I(e))),
+            n.map((e) => (0, r.jsx)(_, b(g({}, a, e), { emojiSize: "reaction" }), S(e))),
         ],
     });
 });

@@ -1,7 +1,7 @@
 n.d(t, {
-    _Y: () => T,
+    _Y: () => N,
     aB: () => E,
-    th: () => N,
+    th: () => T,
     ub: () => O,
 }),
     n(388685),
@@ -19,8 +19,8 @@ var a = n(473749),
     p = n(210887),
     h = n(695346),
     x = n(675478),
-    g = n(25990),
-    f = n(594174),
+    f = n(25990),
+    g = n(594174),
     b = n(74538),
     v = n(981631),
     j = n(469115),
@@ -32,7 +32,7 @@ function S(e) {
 }
 async function E() {
     let e = (function () {
-            let e = f.default.getCurrentUser();
+            let e = g.default.getCurrentUser();
             return b.ZP.canUseClientThemes(e) ? Object.keys(j.qt).map((e) => Number(e)) : [];
         })(),
         t = e.length > 0 && Math.random() > 0.7;
@@ -67,7 +67,7 @@ async function E() {
         }
     } catch (e) {}
 }
-async function N() {
+async function T() {
     let e = c.Z.purchases,
         t = (0, d.Ad)(e),
         n = (0, d.jT)(e),
@@ -83,12 +83,12 @@ async function N() {
                 let e = S([...n, null]);
                 (0, u.Wh)(e);
             }
-            let e = g.Z.getAllPending(),
+            let e = f.Z.getAllPending(),
                 r = (0, m.ED)(e);
             await (0, i.Mn)(r).finally(i.si);
         } catch (e) {}
 }
-function T() {
+function N() {
     try {
         let e = S(v.yqN.FONT_SIZES);
         (0, s.oL)(e);
@@ -101,7 +101,7 @@ function T() {
 function O() {
     a.useEffect(() => {
         var e, t, n, a, l;
-        let b = f.default.getCurrentUser(),
+        let b = g.default.getCurrentUser(),
             v = h.L1.getSetting(),
             j = c.Z.purchases,
             _ = (0, d.Ad)(j),
@@ -109,9 +109,9 @@ function O() {
             C = p.Z.theme,
             S = v.backgroundGradientPresetId,
             E = null == b || null == (e = b.avatarDecoration) ? void 0 : e.skuId,
-            N = null == b || null == (n = b.collectibles) || null == (t = n.nameplate) ? void 0 : t.skuId,
-            T = null != E && null != (a = _.find((e) => e.skuId === E)) ? a : null,
-            O = null != N && null != (l = y.find((e) => e.skuId === N)) ? l : null,
+            T = null == b || null == (n = b.collectibles) || null == (t = n.nameplate) ? void 0 : t.skuId,
+            N = null != E && null != (a = _.find((e) => e.skuId === E)) ? a : null,
+            O = null != T && null != (l = y.find((e) => e.skuId === T)) ? l : null,
             P = o.Z.fontSize,
             I = o.Z.messageGroupSpacing,
             w = h.YC.getSetting();
@@ -125,9 +125,9 @@ function O() {
                     },
                     x.fy.INFREQUENT_USER_ACTION,
                 ),
-                    (0, u.PO)(T),
+                    (0, u.PO)(N),
                     (0, u.Wh)(O);
-                let e = g.Z.getAllPending(),
+                let e = f.Z.getAllPending(),
                     t = (0, m.ED)(e);
                 (0, i.Mn)(t).finally(i.si), (0, s.oL)(P), (0, s.ZZ)(I), h.YC.updateSetting(w);
             } catch (e) {}

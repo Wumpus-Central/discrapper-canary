@@ -1,4 +1,4 @@
-n.d(t, { z: () => _ });
+n.d(t, { z: () => p });
 var r = n(54381);
 n(473749);
 var i = n(692547),
@@ -77,17 +77,17 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let _ = (e) => {
+let p = (e) => {
     var t,
         n,
-        { size: s = "md", width: c, height: f, color: _ = i.Z.colors.INTERACTIVE_NORMAL, colorClass: p = "" } = e,
-        h = d(e, ["size", "width", "height", "color", "colorClass"]);
-    let m = (0, o.m)(s),
-        g = null != (t = null == m ? void 0 : m.width) ? t : c,
-        E = null != (n = null == m ? void 0 : m.height) ? n : f;
+        { size: s = "md", width: c, height: f, color: p = i.Z.colors.INTERACTIVE_NORMAL, colorClass: _ = "" } = e,
+        m = d(e, ["size", "width", "height", "color", "colorClass"]);
+    let h = (0, o.m)(s),
+        g = null != (t = null == h ? void 0 : h.width) ? t : c,
+        E = null != (n = null == h ? void 0 : h.height) ? n : f;
     return (0, r.jsxs)(
         "svg",
-        u(l({}, (0, a.Z)(h)), {
+        u(l({}, (0, a.Z)(m)), {
             xmlns: "http://www.w3.org/2000/svg",
             width: g,
             height: E,
@@ -95,16 +95,16 @@ let _ = (e) => {
             viewBox: "0 0 24 24",
             children: [
                 (0, r.jsx)("path", {
-                    fill: "string" == typeof _ ? _ : _.css,
+                    fill: "string" == typeof p ? p : p.css,
                     fillRule: "evenodd",
                     d: "M4.5 5.04A3 3 0 0 0 2 8v12a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V8a3 3 0 0 0-2.5-2.96c-.27-.04-.5.18-.5.46V6a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3v-.5c0-.28-.23-.5-.5-.46ZM7 14a1 1 0 0 1 1-1h8a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1Zm0 4a1 1 0 0 1 1-1h5a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1Z",
                     clipRule: "evenodd",
-                    className: p,
+                    className: _,
                 }),
                 (0, r.jsx)("path", {
-                    fill: "string" == typeof _ ? _ : _.css,
+                    fill: "string" == typeof p ? p : p.css,
                     d: "M7 5a1 1 0 0 1 1-1h1c.55 0 .98-.47 1.24-.96a2 2 0 0 1 3.52 0c.26.49.69.96 1.24.96h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V5Z",
-                    className: p,
+                    className: _,
                 }),
             ],
         }),

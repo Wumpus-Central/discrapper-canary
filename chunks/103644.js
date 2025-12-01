@@ -1,16 +1,16 @@
 n.d(e, { X: () => c });
 var i = n(54381),
-    l = n(793030),
-    u = n(197344),
-    r = n(509613),
+    r = n(793030),
+    l = n(197344),
+    u = n(509613),
     s = n(313789),
     a = n(518596),
     o = n(388032);
-let c = (0, r.ON)(s.n.SOUNDS_HOLIDAY_NOTICE, {
-    usePredicate: () => null != u.Z.useHolidaySoundpack(),
+let c = (0, u.ON)(s.n.SOUNDS_HOLIDAY_NOTICE, {
+    usePredicate: () => null != l.Z.useHolidaySoundpack(),
     useSearchTerms: () => [o.intl.string(o.t.fgSHf8)],
     render: () =>
-        (0, i.jsx)(l.xvT, {
+        (0, i.jsx)(r.xvT, {
             variant: "text-md/normal",
             color: "text-secondary",
             children: o.intl.format(o.t.Eup6Wv, {

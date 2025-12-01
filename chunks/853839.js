@@ -8,41 +8,41 @@ var r = n(98405),
     u = n(556585),
     d = n(573078),
     f = n(77025),
-    _ = n(170322),
-    p = n(179122),
-    h = n(266101),
-    m = n(759319),
+    p = n(170322),
+    _ = n(179122),
+    m = n(266101),
+    h = n(759319),
     g = n(17204),
     E = n(742850),
     b = n(199838),
     y = n(507604),
     O = n(511696),
     v = "DOMException",
-    I = "DATA_CLONE_ERR",
-    T = i("Error"),
-    S =
+    S = "DATA_CLONE_ERR",
+    I = i("Error"),
+    T =
         i(v) ||
         (function () {
             try {
                 new (i("MessageChannel") || a("worker_threads").MessageChannel)().port1.postMessage(new WeakMap());
             } catch (e) {
-                if (e.name === I && 25 === e.code) return e.constructor;
+                if (e.name === S && 25 === e.code) return e.constructor;
             }
         })(),
-    A = S && S.prototype,
-    C = T.prototype,
+    A = T && T.prototype,
+    C = I.prototype,
     N = b.set,
-    R = b.getterFor(v),
-    P = "stack" in new T(v),
-    D = function (e) {
+    P = b.getterFor(v),
+    R = "stack" in new I(v),
+    w = function (e) {
         return f(g, e) && g[e].m ? g[e].c : 0;
     },
-    w = function () {
-        _(this, L);
+    D = function () {
+        p(this, x);
         var e = arguments.length,
-            t = m(e < 1 ? void 0 : arguments[0]),
-            n = m(e < 2 ? void 0 : arguments[1], "Error"),
-            r = D(n);
+            t = h(e < 1 ? void 0 : arguments[0]),
+            n = h(e < 2 ? void 0 : arguments[1], "Error"),
+            r = w(n);
         if (
             (N(this, {
                 type: v,
@@ -51,60 +51,60 @@ var r = n(98405),
                 code: r,
             }),
             y || ((this.name = n), (this.message = t), (this.code = r)),
-            P)
+            R)
         ) {
-            var i = new T(t);
+            var i = new I(t);
             (i.name = v), c(this, "stack", l(1, E(i.stack, 1)));
         }
     },
-    L = (w.prototype = s(C)),
-    x = function (e) {
+    x = (D.prototype = s(C)),
+    L = function (e) {
         return {
             enumerable: !0,
             configurable: !0,
             get: e,
         };
     },
-    M = function (e) {
-        return x(function () {
-            return R(this)[e];
+    j = function (e) {
+        return L(function () {
+            return P(this)[e];
         });
     };
-y && (d(L, "code", M("code")), d(L, "message", M("message")), d(L, "name", M("name"))), c(L, "constructor", l(1, w));
-var k = o(function () {
-        return !(new S() instanceof T);
+y && (d(x, "code", j("code")), d(x, "message", j("message")), d(x, "name", j("name"))), c(x, "constructor", l(1, D));
+var M = o(function () {
+        return !(new T() instanceof I);
     }),
-    j =
-        k ||
+    k =
+        M ||
         o(function () {
-            return C.toString !== h || "2: 1" !== String(new S(1, 2));
+            return C.toString !== m || "2: 1" !== String(new T(1, 2));
         }),
     U =
-        k ||
+        M ||
         o(function () {
-            return 25 !== new S(1, "DataCloneError").code;
+            return 25 !== new T(1, "DataCloneError").code;
         }),
-    G = k || 25 !== S[I] || 25 !== A[I],
-    B = O ? j || U || G : k;
+    G = M || 25 !== T[S] || 25 !== A[S],
+    Z = O ? k || U || G : M;
 r(
     {
         global: !0,
         constructor: !0,
-        forced: B,
+        forced: Z,
     },
-    { DOMException: B ? w : S },
+    { DOMException: Z ? D : T },
 );
-var Z = i(v),
-    F = Z.prototype;
-for (var V in (j && (O || S === Z) && u(F, "toString", h),
+var B = i(v),
+    F = B.prototype;
+for (var V in (k && (O || T === B) && u(F, "toString", m),
 U &&
     y &&
-    S === Z &&
+    T === B &&
     d(
         F,
         "code",
-        x(function () {
-            return D(p(this).name);
+        L(function () {
+            return w(_(this).name);
         }),
     ),
 g))
@@ -112,5 +112,5 @@ g))
         var H = g[V],
             Y = H.s,
             W = l(6, H.c);
-        f(Z, Y) || c(Z, Y, W), f(F, Y) || c(F, Y, W);
+        f(B, Y) || c(B, Y, W), f(F, Y) || c(F, Y, W);
     }

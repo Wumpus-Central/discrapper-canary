@@ -30,9 +30,9 @@ function p(e) {
         v = b - 16,
         _ = y - (h + f),
         {
-            tileStyle: x,
-            tileWidth: j,
-            rows: O,
+            tileStyle: O,
+            tileWidth: x,
+            rows: j,
             columns: E,
         } = r.useMemo(
             () =>
@@ -86,9 +86,9 @@ function p(e) {
             [C, v, _],
         ),
         S = E + 1,
-        P = S * j + (S - 1) * 8 <= b,
-        I = Math.floor(j / c) + 8,
-        Z = Math.max(0, _ - I * O) / 2;
+        P = S * x + (S - 1) * 8 <= b,
+        I = Math.floor(x / c) + 8,
+        Z = Math.max(0, _ - I * j) / 2;
     return (0, i.jsx)(o.Z, {
         fade: !0,
         className: n,
@@ -109,15 +109,15 @@ function p(e) {
                                   return (0, i.jsx)(
                                       "div",
                                       {
-                                          style: x,
+                                          style: O,
                                           className: a()(s.tile, {
                                               [s.padColumn]: P,
-                                              [s.noVerticalMargin]: l >= (O - 1) * E,
+                                              [s.noVerticalMargin]: l >= (j - 1) * E,
                                               [s.noHorizontalMargin]: (l + 1) % E == 0 || l === C - 1,
                                           }),
                                           children: (0, i.jsx)("div", {
                                               className: s.tileSizer,
-                                              children: e(j),
+                                              children: e(x),
                                           }),
                                       },
                                       null != (r = null == p ? void 0 : p(l)) ? r : l,
@@ -127,8 +127,8 @@ function p(e) {
                 e,
             );
         },
-        rowCount: O,
-        rowCountBySection: [O],
+        rowCount: j,
+        rowCountBySection: [j],
         rowHeight: I,
         onResize: g,
     });

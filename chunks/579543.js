@@ -13,35 +13,35 @@ function u(e) {
             currentUserPresenceActivity: u,
             hideParty: d,
             message: f,
-            onView: _,
-            partyStatusElement: p,
-            presenceActivity: h,
-            guildId: m,
+            onView: p,
+            partyStatusElement: _,
+            presenceActivity: m,
+            guildId: h,
         } = e,
-        g = !(0, s.Z)(h, f, n.id),
+        g = !(0, s.Z)(m, f, n.id),
         E = (0, o.dQ)(n.name, null == (t = f.activity) ? void 0 : t.type, g),
         b = i.useMemo(() => {
-            if (null != h) return () => (0, a.aG)(h);
-        }, [h]);
+            if (null != m) return () => (0, a.aG)(m);
+        }, [m]);
     return g
         ? (0, r.jsx)(l.Z, {
               application: n,
               message: f,
               header: E,
               onClickContent: b,
-              onView: _,
-              guildId: m,
+              onView: p,
+              guildId: h,
           })
         : (0, r.jsx)(c.Z, {
               application: n,
               message: f,
               header: E,
-              presenceActivity: h,
+              presenceActivity: m,
               hideParty: d,
-              partyStatusElement: p,
+              partyStatusElement: _,
               currentUserPresenceActivity: u,
               onClickContent: b,
-              onView: _,
-              guildId: m,
+              onView: p,
+              guildId: h,
           });
 }

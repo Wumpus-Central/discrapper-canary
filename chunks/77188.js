@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var r = n(473749),
     i = n(836560),
     a = n(327432),
@@ -9,10 +9,10 @@ var r = n(473749),
     u = n(752305),
     d = n(86724),
     f = n(886027),
-    _ = n(515270),
-    p = n(265446),
-    h = n(196483),
-    m = n(417662),
+    p = n(515270),
+    _ = n(265446),
+    m = n(196483),
+    h = n(417662),
     g = n(847302),
     E = n(374157);
 n(209073);
@@ -20,9 +20,9 @@ var b = n(814011),
     y = n(50607),
     O = n(618136),
     v = n(247765),
-    I = n(15559),
-    T = n(42530);
-function S(e, t, n) {
+    S = n(15559),
+    I = n(42530);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -46,7 +46,7 @@ function A(e) {
                 }),
             )),
             r.forEach(function (t) {
-                S(e, t, n[t]);
+                T(e, t, n[t]);
             });
     }
     return e;
@@ -74,7 +74,7 @@ function N(e, t) {
         e
     );
 }
-function R(e) {
+function P(e) {
     let t = r.useContext(l.ZP),
         n = c.R$.useSetting(),
         [i] = r.useState(() => {
@@ -82,10 +82,10 @@ function R(e) {
             return (
                 (r.children = (0, u.JM)("")),
                 (r.selection = {
-                    anchor: T.nO,
-                    focus: T.nO,
+                    anchor: I.nO,
+                    focus: I.nO,
                 }),
-                P(
+                R(
                     N(A({}, e), {
                         editor: r,
                         windowContext: t,
@@ -112,7 +112,7 @@ function R(e) {
         i
     );
 }
-function P(e) {
+function R(e) {
     var t, n, r;
     let {
             editor: a,
@@ -121,38 +121,38 @@ function P(e) {
             canUseCommands: l,
             canOnlyUseTextCommands: c,
             windowContext: u,
-            previewMarkdown: T,
-            forTests: S,
+            previewMarkdown: I,
+            forTests: T,
             onChangeStart: A,
             onChangeEnd: C,
             updateState: N,
         } = e,
-        R = a,
-        { onChange: P } = R;
-    (R.chatInputType = o),
-        (R.windowContext = u),
-        (R.previewMarkdown = T),
-        (R.composition = null),
-        (R.events = new i.EventEmitter()),
-        (R.isMac = "MacIntel" === navigator.platform),
-        (R.onChange = () => {
-            R.events.emit("onChange"), P();
+        P = a,
+        { onChange: R } = P;
+    (P.chatInputType = o),
+        (P.windowContext = u),
+        (P.previewMarkdown = I),
+        (P.composition = null),
+        (P.events = new i.EventEmitter()),
+        (P.isMac = "MacIntel" === navigator.platform),
+        (P.onChange = () => {
+            P.events.emit("onChange"), R();
         }),
-        (R = (0, y.B)(R, !0 === S)),
-        (R = (0, b.Z)(R)),
-        (R = (0, E.Z)(R)),
-        (null == (t = o.commands) ? void 0 : t.enabled) && (R = (0, d.Z)(R, s, !0 === l, !0 === c)),
-        (R = (0, g.ZP)(R, s.guild_id, s.id)),
-        (null == (n = o.markdown) ? void 0 : n.disableBlockQuotes) || (R = (0, f.Z)(R)),
-        (null == (r = o.markdown) ? void 0 : r.disableCodeBlocks) || (R = (0, _.ZP)(R)),
-        S && (R = (0, v.Z)(R)),
-        (R = (0, m.Z)(R)),
-        (R = (0, p.Z)(R)),
-        (R = (0, O.Z)(R)),
-        (R = (0, I.Z)(R, A, C)),
-        (R = (0, h.Z)(R, (e) => {
+        (P = (0, y.B)(P, !0 === T)),
+        (P = (0, b.Z)(P)),
+        (P = (0, E.Z)(P)),
+        (null == (t = o.commands) ? void 0 : t.enabled) && (P = (0, d.Z)(P, s, !0 === l, !0 === c)),
+        (P = (0, g.ZP)(P, s.guild_id, s.id)),
+        (null == (n = o.markdown) ? void 0 : n.disableBlockQuotes) || (P = (0, f.Z)(P)),
+        (null == (r = o.markdown) ? void 0 : r.disableCodeBlocks) || (P = (0, p.ZP)(P)),
+        T && (P = (0, v.Z)(P)),
+        (P = (0, h.Z)(P)),
+        (P = (0, _.Z)(P)),
+        (P = (0, O.Z)(P)),
+        (P = (0, S.Z)(P, A, C)),
+        (P = (0, m.Z)(P, (e) => {
             let { newValue: t, newSelection: n } = e;
-            return N(R, "undo", {
+            return N(P, "undo", {
                 value: t,
                 selection: n,
             });

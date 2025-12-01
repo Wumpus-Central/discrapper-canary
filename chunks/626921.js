@@ -4,7 +4,7 @@ n(473749);
 var i = n(120356),
     a = n.n(i),
     o = n(793030),
-    s = n(681287),
+    s = n(298200),
     l = n(388032),
     c = n(680765);
 function u(e) {
@@ -15,10 +15,10 @@ function u(e) {
         loading: s,
         clearable: l,
         fullWidth: u,
-        isOpen: _,
-        isInert: p,
-        hasValue: h,
-        hasError: m,
+        isOpen: p,
+        isInert: _,
+        hasValue: m,
+        hasError: h,
         showChevronButton: g = !0,
         children: E,
         handleToggle: b,
@@ -28,14 +28,14 @@ function u(e) {
         ref: t,
         containerClassName: a()(c.selectFieldContainer, { [c.fullWidth]: u }),
         className: a()(c.selectField, {
-            [c.isFocused]: _,
-            [c.isInert]: p,
+            [c.isFocused]: p,
+            [c.isInert]: _,
         }),
         "data-mana-component": "select-input-field",
         disabled: n,
         readOnly: i,
         fullWidth: u,
-        validation: m ? { hasError: !0 } : void 0,
+        validation: h ? { hasError: !0 } : void 0,
         "aria-busy": s,
         children: [
             (0, r.jsx)("div", {
@@ -43,13 +43,13 @@ function u(e) {
                 children: E,
             }),
             (0, r.jsx)(d, {
-                show: !0 === l && !p && !0 === h,
+                show: !0 === l && !_ && !0 === m,
                 iconSize: g ? "xs" : "sm",
                 onClick: y,
             }),
             (0, r.jsx)(f, {
                 show: g,
-                isOpen: _,
+                isOpen: p,
                 onClick: b,
             }),
         ],

@@ -1,11 +1,11 @@
 n.d(t, {
     Df: () => d,
-    S_: () => u,
-    V5: () => a,
-    VX: () => o,
+    S_: () => c,
+    V5: () => o,
+    VX: () => a,
     ZP: () => h,
     ih: () => s,
-    xc: () => c,
+    xc: () => u,
 });
 var i = n(972959);
 let r = {
@@ -13,11 +13,11 @@ let r = {
         reappearTimeMs: 10000,
     },
     l = (0, i.H)(() => r),
-    o = 10000,
-    a = 20000,
+    a = 10000,
+    o = 20000,
     s = 500,
-    c = 1000;
-function u(e) {
+    u = 1000;
+function c(e) {
     l.setState({ timeToLiveMs: e });
 }
 function d(e) {

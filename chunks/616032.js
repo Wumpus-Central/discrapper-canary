@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(213609),
     u = n(441358),
     d = n(426521),
-    p = n(837284);
+    f = n(837284);
 function h(e) {
-    let { initialized: t, items: n, loading: h, loadMore: f } = e,
+    let { initialized: t, items: n, loading: h, loadMore: p } = e,
         g = i.useRef(null),
         m = (0, s.Z)("for-you", g);
     (0, c.Z)(
@@ -25,7 +25,7 @@ function h(e) {
     let b = () => {
         var e;
         let t = null == (e = g.current) ? void 0 : e.getScrollerState();
-        null != t && t.scrollHeight - t.scrollTop - t.offsetHeight < 1500 && f();
+        null != t && t.scrollHeight - t.scrollTop - t.offsetHeight < 1500 && p();
     };
     return t
         ? 0 === n.length
@@ -88,7 +88,7 @@ function h(e) {
                                   return e;
                               })(
                                   {
-                                      className: p.container,
+                                      className: f.container,
                                       ref: (e) => {
                                           var t;
                                           (g.current = e),
@@ -103,7 +103,7 @@ function h(e) {
                                       onScroll: b,
                                       children: [
                                           (0, r.jsx)(d.U, { items: n }),
-                                          h ? (0, r.jsx)(a.$jN, { className: p.spinner }) : null,
+                                          h ? (0, r.jsx)(a.$jN, { className: f.spinner }) : null,
                                       ],
                                   }),
                               Object.getOwnPropertyDescriptors
@@ -123,5 +123,5 @@ function h(e) {
                       },
                   }),
               })
-        : (0, r.jsx)(a.$jN, { className: p.loadingPlaceholder });
+        : (0, r.jsx)(a.$jN, { className: f.loadingPlaceholder });
 }

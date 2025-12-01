@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r,
     i = n(442837),
     a = n(570140),
@@ -26,13 +26,13 @@ function d(e) {
 function f() {
     null != l && null != l.code && c.includes(l.code) && (l = null);
 }
-class _ extends (r = i.ZP.Store) {
+class p extends (r = i.ZP.Store) {
     getLastError() {
         return l;
     }
 }
-s(_, "displayName", "DispatchApplicationErrorStore");
-let p = new _(a.Z, {
+s(p, "displayName", "DispatchApplicationErrorStore");
+let _ = new p(a.Z, {
     DISPATCH_APPLICATION_LAUNCH_SETUP_START: f,
     DISPATCH_APPLICATION_ERROR: d,
 });

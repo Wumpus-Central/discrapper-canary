@@ -12,8 +12,8 @@ var a = n(54381),
     p = n(481060),
     h = n(570140),
     x = n(665149),
-    g = n(55935),
-    f = n(120816),
+    f = n(55935),
+    g = n(120816),
     b = n(31336),
     v = n(257785),
     j = n(484036),
@@ -22,7 +22,7 @@ var a = n(54381),
     C = n(388032),
     S = n(599832),
     E = n(451429);
-let N = [
+let T = [
         {
             key: "id",
             cellClassName: S.eventColumn,
@@ -48,7 +48,7 @@ let N = [
             },
         },
     ],
-    T = [
+    N = [
         {
             id: "details",
             name: "Details",
@@ -85,8 +85,8 @@ let N = [
                                     name: "Timestamp (local)",
                                     children: (0, a.jsx)("time", {
                                         dateTime: s.toISOString(),
-                                        title: (0, g.vc)(u, "LLLL"),
-                                        children: (0, g.Y4)(u),
+                                        title: (0, f.vc)(u, "LLLL"),
+                                        children: (0, f.Y4)(u),
                                     }),
                                 }),
                                 "guild" === n.type &&
@@ -132,7 +132,7 @@ let N = [
 function O() {
     let [e, t] = l.useState(""),
         n = l.useRef(null),
-        i = (0, u.Wu)([f.Z], () => f.Z.loggedTriggers),
+        i = (0, u.Wu)([g.Z], () => g.Z.loggedTriggers),
         s = l.useMemo(
             () =>
                 i
@@ -142,8 +142,8 @@ function O() {
         ),
         [c, d] = l.useState(void 0),
         x = s.find((e) => e.key === c),
-        { TabBar: g, renderSelectedTab: v } = (0, y.ZP)({ tabs: T }, []),
-        O = (0, u.e7)([f.Z], () => f.Z.trackTriggers),
+        { TabBar: f, renderSelectedTab: v } = (0, y.ZP)({ tabs: N }, []),
+        O = (0, u.e7)([g.Z], () => g.Z.trackTriggers),
         P = l.useCallback((e) => {
             h.Z.dispatch({
                 type: "SET_TRACK_TRIGGERS",
@@ -185,7 +185,7 @@ function O() {
                 ],
             }),
             (0, a.jsx)(_.Z, {
-                columns: N,
+                columns: T,
                 data: s,
                 selectedRowKey: c,
                 onClickRow: (e) => d(e.key),
@@ -195,7 +195,7 @@ function O() {
                     className: S.subPanel,
                     minHeight: 100,
                     initialHeight: null != n.current ? n.current.clientHeight / 2 : 300,
-                    children: [(0, a.jsx)(g, {}), v({ loggedTrigger: x })],
+                    children: [(0, a.jsx)(f, {}), v({ loggedTrigger: x })],
                 }),
         ],
     });

@@ -1,10 +1,10 @@
 n.d(t, {
-    A3: () => h,
+    A3: () => m,
     CI: () => E,
     G9: () => u,
-    J6: () => p,
+    J6: () => _,
     Z_: () => l,
-    _v: () => _,
+    _v: () => p,
     jU: () => g,
     sX: () => d,
     zO: () => s,
@@ -146,7 +146,7 @@ class f {
         let i = f.startNew(n);
         do {
             if ((await t()) === !0) return !0;
-            await _(r);
+            await p(r);
         } while (!i.hasTimedOut());
         return !1;
     }
@@ -154,13 +154,13 @@ class f {
         o(this, "timeout", void 0), o(this, "watch", void 0), (this.timeout = e), (this.watch = new u());
     }
 }
-function _(e) {
+function p(e) {
     let t = "number" == typeof e ? e : e.asMilliseconds();
     return new Promise((e) => {
         setTimeout(() => e(), t);
     });
 }
-var p = (function (e) {
+var _ = (function (e) {
     return (
         (e.NONE = "NONE"),
         (e.SECONDS = "SECONDS"),
@@ -173,7 +173,7 @@ var p = (function (e) {
         e
     );
 })({});
-function h(e, t) {
+function m(e, t) {
     switch (t) {
         case "NONE":
             return 0;
@@ -193,7 +193,7 @@ function h(e, t) {
             return e / 60 / 24 / 365;
     }
 }
-let m = [
+let h = [
     {
         unit: "NONE",
         max: 0,
@@ -228,12 +228,12 @@ let m = [
     },
 ];
 function g(e, t) {
-    let n = m.findIndex((t) => {
+    let n = h.findIndex((t) => {
             let { max: n, unit: r } = t;
             return ("NONE" === r && e === n) || e < n;
         }),
         r = i()(
-            m,
+            h,
             (e) => {
                 let { unit: n } = e;
                 return t(n);
@@ -241,7 +241,7 @@ function g(e, t) {
             n,
         );
     if (null != r) return r.unit;
-    let a = m.find((e) => {
+    let a = h.find((e) => {
         let { unit: n } = e;
         return t(n);
     });
@@ -254,7 +254,7 @@ function E(e, t) {
             time: 0,
         };
     let n = g(e, (e) => t.includes(e)),
-        r = null != n ? h(e, n) : null;
+        r = null != n ? m(e, n) : null;
     return {
         unit: n,
         time: null != r ? Math.floor(r) : null,

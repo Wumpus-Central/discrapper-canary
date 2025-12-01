@@ -3,7 +3,7 @@ n.d(t, {
     OJ: () => y,
     iZ: () => O,
     oE: () => g,
-    p2: () => p,
+    p2: () => _,
     zu: () => E,
 });
 var r = n(201767),
@@ -18,7 +18,7 @@ function d(e) {
     return e && e.__esModule ? e.default : e;
 }
 let f = new (0, l.J)(d(r.Z));
-function _() {
+function p() {
     let e = ("undefined" != typeof navigator && (navigator.language || navigator.userLanguage)) || "en-US";
     try {
         Intl.DateTimeFormat.supportedLocalesOf([e]);
@@ -27,25 +27,25 @@ function _() {
     }
     return e;
 }
-function p(e, t, n, r, a) {
+function _(e, t, n, r, a) {
     let o = null != e && null != n && e.compare(n) > 0,
         s = null != e && null != t && 0 > e.compare(t),
         u = (null != e && (null == r ? void 0 : r(e))) || !1,
         d = o || s || u,
-        p = [];
+        _ = [];
     if (d) {
-        let e = _(),
+        let e = p(),
             r = l.J.getGlobalDictionaryForPackage("@react-stately/datepicker") || f,
             d = new (0, c.E)(e, r),
-            h = new (0, i.C)(e, g({}, a)),
-            m = h.resolvedOptions().timeZone;
-        s && null != t && p.push(d.format("rangeUnderflow", { minValue: h.format(t.toDate(m)) })),
-            o && null != n && p.push(d.format("rangeOverflow", { maxValue: h.format(n.toDate(m)) })),
-            u && p.push(d.format("unavailableDate"));
+            m = new (0, i.C)(e, g({}, a)),
+            h = m.resolvedOptions().timeZone;
+        s && null != t && _.push(d.format("rangeUnderflow", { minValue: m.format(t.toDate(h)) })),
+            o && null != n && _.push(d.format("rangeOverflow", { maxValue: m.format(n.toDate(h)) })),
+            u && _.push(d.format("unavailableDate"));
     }
     return {
         isInvalid: d,
-        validationErrors: p,
+        validationErrors: _,
         validationDetails: {
             badInput: u,
             customError: !1,
@@ -61,7 +61,7 @@ function p(e, t, n, r, a) {
         },
     };
 }
-let h = {
+let m = {
         year: "numeric",
         month: "numeric",
         day: "numeric",
@@ -69,7 +69,7 @@ let h = {
         minute: "2-digit",
         second: "2-digit",
     },
-    m = {
+    h = {
         year: "numeric",
         month: "2-digit",
         day: "2-digit",
@@ -80,7 +80,7 @@ let h = {
 function g(e, t) {
     var n;
     e = {
-        ...(t.shouldForceLeadingZeros ? m : h),
+        ...(t.shouldForceLeadingZeros ? h : m),
         ...e,
     };
     let r = t.granularity || "minute",

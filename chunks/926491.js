@@ -9,8 +9,8 @@ var r,
     u = n(93093),
     d = n(430824),
     f = n(149694),
-    _ = n(737406);
-function p(e, t, n) {
+    p = n(737406);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,12 +23,12 @@ function p(e, t, n) {
         e
     );
 }
-let h = 2,
-    m = async () => {
-        if (0 !== h) return;
+let m = 2,
+    h = async () => {
+        if (0 !== m) return;
         let e = s.Z.database();
         if (null == e) return;
-        h = 2;
+        m = 2;
         let t = await (0, l.gs)("StickerStore.loadSavedGuildStickers", () =>
             i.Z.timeAsync("\uD83D\uDCBE", "loadSavedGuildStickers", () => c.Z.getAsync(e)),
         );
@@ -40,64 +40,64 @@ let h = 2,
     },
     g = (e) => {
         let { guilds: t } = e;
-        h = +!!t.every((e) => null != e.stickers.items);
+        m = +!!t.every((e) => null != e.stickers.items);
     },
     E = () => {
-        h = 0;
+        m = 0;
     };
 function b(e) {
     let { guild: t } = e;
-    1 === h && "update" === t.stickers.op && null == t.stickers.items && (h = 0);
+    1 === m && "update" === t.stickers.op && null == t.stickers.items && (m = 0);
 }
 let y = () => {
-    h = 0;
+    m = 0;
 };
 class O extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(u.Z, f.Z, d.Z, _.Z), this.syncWith([f.Z, _.Z], () => !0);
+        this.waitFor(u.Z, f.Z, d.Z, p.Z), this.syncWith([f.Z, p.Z], () => !0);
     }
     get isLoaded() {
-        return 0 !== h;
+        return 0 !== m;
     }
     get loadState() {
-        return h;
+        return m;
     }
     getStickerMetadataArrays() {
-        return m(), [f.Z.getStickerMetadataMap(), _.Z.getStickerMetadataMap()];
+        return h(), [f.Z.getStickerMetadataMap(), p.Z.getStickerMetadataMap()];
     }
     get hasLoadedStickerPacks() {
-        return _.Z.hasLoadedStickerPacks;
+        return p.Z.hasLoadedStickerPacks;
     }
     get isFetchingStickerPacks() {
-        return _.Z.isFetchingStickerPacks;
+        return p.Z.isFetchingStickerPacks;
     }
     getStickerById(e) {
         var t;
-        return m(), null != (t = f.Z.getStickerById(e)) ? t : _.Z.getStickerById(e);
+        return h(), null != (t = f.Z.getStickerById(e)) ? t : p.Z.getStickerById(e);
     }
     getStickerPack(e) {
-        return _.Z.getStickerPack(e);
+        return p.Z.getStickerPack(e);
     }
     getPremiumPacks() {
-        return _.Z.getPremiumPacks();
+        return p.Z.getPremiumPacks();
     }
     isPremiumPack(e) {
-        return _.Z.isPremiumPack(e);
+        return p.Z.isPremiumPack(e);
     }
     getRawStickersByGuild() {
         return f.Z.getAllGuildStickers();
     }
     getAllGuildStickers() {
-        return m(), f.Z.getAllGuildStickers();
+        return h(), f.Z.getAllGuildStickers();
     }
     getAllPackStickers() {
-        return _.Z.getAllPackStickers();
+        return p.Z.getAllPackStickers();
     }
     getStickersByGuildId(e) {
-        return m(), f.Z.getStickersByGuildId(e);
+        return h(), f.Z.getStickersByGuildId(e);
     }
 }
-p(O, "displayName", "StickersStore");
+_(O, "displayName", "StickersStore");
 let v = new O(o.Z, {
     BACKGROUND_SYNC: E,
     CONNECTION_OPEN: g,

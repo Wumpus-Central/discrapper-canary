@@ -7,8 +7,8 @@ n(473749);
 var l = n(120356),
     i = n.n(l),
     a = n(128922),
-    s = n(401975),
-    o = n(638758),
+    o = n(401975),
+    s = n(638758),
     c = n(887353),
     u = n(198501),
     d = n(300179);
@@ -36,12 +36,12 @@ let f = () =>
                         className: c.cardsContainer,
                         children: [
                             e
-                                ? (0, r.jsx)("div", { className: i()(o.catalogBanner, u.bannerSkeletonV2) })
+                                ? (0, r.jsx)("div", { className: i()(s.catalogBanner, u.bannerSkeletonV2) })
                                 : (0, r.jsx)("div", {
-                                      className: i()(u.skeleton, u.bannerSkeleton, o.catalogBanner),
+                                      className: i()(u.skeleton, u.bannerSkeleton, s.catalogBanner),
                                       children: (0, r.jsx)("div", { className: u.bannerBody }),
                                   }),
-                            Array.from({ length: 12 }, (t, n) => (e ? (0, r.jsx)(s.Z, {}, n) : (0, r.jsx)(f, {}, n))),
+                            Array.from({ length: 12 }, (t, n) => (e ? (0, r.jsx)(o.Z, {}, n) : (0, r.jsx)(f, {}, n))),
                         ],
                     },
                     n,

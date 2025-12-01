@@ -58,7 +58,7 @@ function u(e, t) {
 }
 let d = "https://www.tiktok.com",
     f = "allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts";
-function _(e, t) {
+function p(e, t) {
     let n = a.Z.toURLSafe(null != e ? e : "");
     if (null === n) return "";
     if (null == t) return n.toString();
@@ -68,7 +68,7 @@ function _(e, t) {
     }
     return n.toString();
 }
-function p(e) {
+function _(e) {
     var { src: t, autoMute: n } = e,
         a = c(e, ["src", "autoMute"]);
     let o = i.useRef(null),
@@ -100,9 +100,9 @@ function p(e) {
             [n],
         );
     i.useEffect(() => (window.addEventListener("message", s), () => window.removeEventListener("message", s)), [s]);
-    let u = _(t, { utm_source: "discord.gg" });
+    let u = p(t, { utm_source: "discord.gg" });
     return (0, r.jsx)(
-        m,
+        h,
         l(
             {
                 src: u,
@@ -112,17 +112,17 @@ function p(e) {
         ),
     );
 }
-function h(e) {
+function m(e) {
     var { src: t, autoMute: n } = e,
         i = c(e, ["src", "autoMute"]);
-    let a = _(t, {
+    let a = p(t, {
         autoplay: "1",
         auto_play: "1",
         mute: n ? "1" : void 0,
     });
-    return (0, r.jsx)(m, l({ src: a }, i));
+    return (0, r.jsx)(h, l({ src: a }, i));
 }
-let m = i.forwardRef(function (e, t) {
+let h = i.forwardRef(function (e, t) {
     var { allowFullScreen: n } = e,
         i = c(e, ["allowFullScreen"]);
     let a = n ? "".concat(f, " allow-fullscreen") : f,
@@ -149,10 +149,10 @@ var g = (function (e) {
 function E(e) {
     switch (e.provider) {
         case "YouTube":
-            return (0, r.jsx)(h, l({}, e));
-        case "TikTok":
-            return (0, r.jsx)(p, l({}, e));
-        default:
             return (0, r.jsx)(m, l({}, e));
+        case "TikTok":
+            return (0, r.jsx)(_, l({}, e));
+        default:
+            return (0, r.jsx)(h, l({}, e));
     }
 }

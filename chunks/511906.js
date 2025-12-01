@@ -1,21 +1,21 @@
-_.d(e, {
-    K: () => E,
+r.d(t, {
+    K: () => _,
     M: () => o,
 });
-var a = _(622916),
-    r = _(263449),
-    n = _(255768);
-function o(t, e) {
-    !0 === e.debug &&
-        (n.X
-            ? a.kg.enable()
-            : (0, a.Cf)(() => {
+var n = r(622916),
+    a = r(263449),
+    i = r(255768);
+function o(e, t) {
+    !0 === t.debug &&
+        (i.X
+            ? n.kg.enable()
+            : (0, n.Cf)(() => {
                   console.warn("[Sentry] Cannot initialize SDK with `debug` option using a non-debug bundle.");
               })),
-        (0, r.nZ)().update(e.initialScope);
-    let _ = new t(e);
-    return E(_), _.init(), _;
+        (0, a.nZ)().update(t.initialScope);
+    let r = new e(t);
+    return _(r), r.init(), r;
 }
-function E(t) {
-    (0, r.nZ)().setClient(t);
+function _(e) {
+    (0, a.nZ)().setClient(e);
 }

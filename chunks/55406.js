@@ -2,7 +2,7 @@ let r;
 n.r(t),
     n.d(t, {
         default: () => N,
-        renderChangelogMessageMarkup: () => R,
+        renderChangelogMessageMarkup: () => P,
     }),
     n(35282),
     n(704826);
@@ -53,7 +53,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,9 +64,9 @@ function _(e, t) {
         e
     );
 }
-let p = a().defaultRules.lheading,
-    h = a().defaultRules.heading,
-    m = a().defaultRules.link,
+let _ = a().defaultRules.lheading,
+    m = a().defaultRules.heading,
+    h = a().defaultRules.link,
     g = a().defaultRules.image,
     E = a().defaultRules.list,
     b = a().defaultRules.blockQuote,
@@ -74,7 +74,7 @@ let p = a().defaultRules.lheading,
     O = /\{(.+?)}/,
     v = /^\$(\w+?)\$/;
 r = n(235375);
-let I = (e) => {
+let S = (e) => {
         let { transformUpperCase: t = !1 } = e;
         return (e, n, r) => {
             let i = O.exec(e[1]),
@@ -89,10 +89,10 @@ let I = (e) => {
             );
         };
     },
-    T = (e) =>
-        _(d({}, r.baseRules), {
+    I = (e) =>
+        p(d({}, r.baseRules), {
             image: d({}, g, "function" == typeof r.customRules.image ? r.customRules.image(e) : r.customRules.image),
-            link: d({}, m, "function" == typeof r.customRules.link ? r.customRules.link(e) : r.customRules.link),
+            link: d({}, h, "function" == typeof r.customRules.link ? r.customRules.link(e) : r.customRules.link),
             list: d({}, E, "function" == typeof r.customRules.list ? r.customRules.list(e) : r.customRules.list),
             interpolation: {
                 order: l.ZP.order,
@@ -112,12 +112,12 @@ let I = (e) => {
                 react: (e) => e.renderer(),
             },
             lheading: d(
-                _(d({}, p), { parse: I({ transformUpperCase: !0 }) }),
+                p(d({}, _), { parse: S({ transformUpperCase: !0 }) }),
                 "function" == typeof r.customRules.lheading ? r.customRules.lheading(e) : r.customRules.lheading,
             ),
             heading: d(
                 {},
-                h,
+                m,
                 "function" == typeof r.customRules.heading ? r.customRules.heading(e) : r.customRules.heading,
             ),
             blockQuote: d(
@@ -131,28 +131,28 @@ let I = (e) => {
                 "function" == typeof r.customRules.paragraph ? r.customRules.paragraph(e) : r.customRules.paragraph,
             ),
         }),
-    S = (e) => ({
+    T = (e) => ({
         lheading: d(
-            _(d({}, p), { parse: I({ transformUpperCase: !1 }) }),
+            p(d({}, _), { parse: S({ transformUpperCase: !1 }) }),
             "function" == typeof r.customRules.lheading ? r.customRules.lheading(e) : r.customRules.lheading,
         ),
     }),
     A = (e) =>
-        _(d({}, T(e)), {
+        p(d({}, I(e)), {
             newline: d({}, a().defaultRules.newline),
             text: l.ZP,
             list: o.Z,
             subtext: s.Z,
         });
 function C(e) {
-    return d({}, T(e));
+    return d({}, I(e));
 }
 let N = {
     getDefaultRules: C,
-    getSpecialRules: (e) => d({}, T(e), S(e)),
+    getSpecialRules: (e) => d({}, I(e), T(e)),
     getMessageRules: (e) => d({}, A(e)),
 };
-function R(e, t, n) {
+function P(e, t, n) {
     return {
         hasSpoilerEmbeds: !1,
         content: c.Z.reactParserFor(C(t))(e.content, !1, null != n ? { changeLog: n } : {}),

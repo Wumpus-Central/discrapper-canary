@@ -1,21 +1,21 @@
 n.d(t, { Z: () => u }), n(953529);
 var a = n(473749),
     l = n(442837),
-    r = n(480916),
-    i = n(292263),
+    i = n(480916),
+    r = n(292263),
     s = n(352138),
     o = n(81643),
     c = n(469775),
     d = n(388032);
 let u = function (e) {
     let { onClose: t, onMethodClick: n, classificationId: u } = e,
-        { methods: m, loading: p } = (0, l.cj)([i.Z], () => ({
-            methods: i.Z.methods,
-            loading: i.Z.loading,
+        { methods: m, loading: p } = (0, l.cj)([r.Z], () => ({
+            methods: r.Z.methods,
+            loading: r.Z.loading,
         })),
         { initiateAgeVerification: h } = (0, o.WD)({
             onComplete: t,
-            entryPoint: r.cU.EXPRESSIVE_GET_STARTED,
+            entryPoint: i.cU.EXPRESSIVE_GET_STARTED,
             shouldShowExpressiveModal: !0,
             classificationId: u,
         });
@@ -37,7 +37,7 @@ let u = function (e) {
                                   title: d.intl.string(a),
                                   description: d.intl.string(l),
                                   onClick: async (t) => {
-                                      (0, r.x3)(t, r.d_.EXPRESSIVE_PRIMARY, r.sU.METHOD_SELECT, e),
+                                      (0, i.x3)(t, i.d_.EXPRESSIVE_PRIMARY, i.sU.METHOD_SELECT, e),
                                           null == n || n(),
                                           await h(e);
                                   },

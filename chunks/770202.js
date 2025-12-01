@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(239091),
     u = n(146773),
     d = n(201895),
-    p = n(703656),
+    f = n(703656),
     h = n(592125),
-    f = n(430824),
+    p = n(430824),
     g = n(496675),
     m = n(98597),
     b = n(473403),
@@ -46,12 +46,12 @@ function j(e) {
     }
     return e;
 }
-function C(e, t) {
+function x(e, t) {
     let n = t.getGuildId();
     if (null == n) throw Error("TextChannel, preloadChannel: Channel does not have a guildId");
     s.Z.preload(n, t.id);
 }
-class x extends m.ZP {
+class C extends m.ZP {
     render() {
         let {
                 channel: e,
@@ -69,7 +69,7 @@ class x extends m.ZP {
                     channel: e,
                     selected: t,
                     onClick: this.handleClick,
-                    onMouseDown: C,
+                    onMouseDown: x,
                     onContextMenu: this.handleContextMenu,
                     connectDragPreview: a ? l : null,
                     "aria-label": (0, d.ZP)({ channel: e }),
@@ -83,7 +83,7 @@ class x extends m.ZP {
         super(...e),
             v(this, "handleContextMenu", (e) => {
                 let { channel: t } = this.props,
-                    i = f.Z.getGuild(t.getGuildId());
+                    i = p.Z.getGuild(t.getGuildId());
                 null != i &&
                     (0, c.jW)(e, async () => {
                         let { default: e } = await n.e("99905").then(n.bind(n, 649400));
@@ -118,7 +118,7 @@ class x extends m.ZP {
                 !(function (e) {
                     let t = e.getGuildId();
                     if (null == t) throw Error("TextChannel, transitionTo: Channel does not have a guildId");
-                    (0, p.uL)(_.Z5c.CHANNEL(t, e.id), {
+                    (0, f.uL)(_.Z5c.CHANNEL(t, e.id), {
                         state: {
                             analyticsSource: {
                                 page: _.ZY5.GUILD_CHANNEL,
@@ -131,7 +131,7 @@ class x extends m.ZP {
             });
     }
 }
-let E = (0, u.B)(x),
+let E = (0, u.B)(C),
     S = i.memo(function (e) {
         let { channel: t, guild: n, disableSorting: i } = e,
             l = (0, a.cj)([h.Z, g.Z], () => {

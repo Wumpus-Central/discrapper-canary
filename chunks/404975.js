@@ -19,7 +19,7 @@ function h(e) {
     let { root: t, header: n, footer: i, onClose: g, emptyState: h } = e,
         j = y.Z.useField("showNavigationMobile"),
         O = l.useRef(null),
-        P = l.useMemo(() => {
+        C = l.useMemo(() => {
             let e = [];
             return (
                 t.layout.forEach((t) => {
@@ -41,7 +41,7 @@ function h(e) {
                 e
             );
         }, [t.layout]),
-        [C, S] = l.useMemo(() => {
+        [P, S] = l.useMemo(() => {
             let e = [],
                 n = [];
             return (
@@ -75,7 +75,7 @@ function h(e) {
             theme: _,
             children: (e) =>
                 (0, r.jsx)(f.ZP, {
-                    contentTypes: P,
+                    contentTypes: C,
                     children: (t) => {
                         let { visibleContent: l } = t;
                         return (0, r.jsxs)("div", {
@@ -99,7 +99,7 @@ function h(e) {
                                                 }),
                                             }),
                                         (0, r.jsx)("div", {
-                                            children: C.map((e) =>
+                                            children: P.map((e) =>
                                                 (0, r.jsx)(
                                                     x,
                                                     {

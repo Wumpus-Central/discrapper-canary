@@ -31,7 +31,7 @@ let l = 5,
         let n = null != t.id ? t.id : t.name;
         return "".concat(e, ":").concat(n);
     },
-    _ = (e, t) => {
+    p = (e, t) => {
         var n;
         let r;
         switch (e) {
@@ -59,28 +59,28 @@ let l = 5,
         }
         return Object.keys(i).length;
     },
-    p = (e) => {
+    _ = (e) => {
         var t, n, r;
         let { channelId: i, messageId: a, emoji: o, key: s } = e,
             c = f(a, o);
-        if (_(s, i) >= l) return;
-        let p = null != (t = u[i]) ? t : {},
-            h = (null != (n = d[i]) ? n : {})[c],
-            m = p[c];
-        ("HOVER" !== s || null == m) &&
-            ("HOVER" === m &&
+        if (p(s, i) >= l) return;
+        let _ = null != (t = u[i]) ? t : {},
+            m = (null != (n = d[i]) ? n : {})[c],
+            h = _[c];
+        ("HOVER" !== s || null == h) &&
+            ("HOVER" === h &&
                 "EXTERNAL" === s &&
-                null != h &&
-                ("function" == typeof h.destroy && h.destroy(), null == (r = d[i]) || delete r[c], (m = void 0)),
-            null == m && (null != u[i] ? (u[i][c] = s) : (u[i] = { [c]: s })));
+                null != m &&
+                ("function" == typeof m.destroy && m.destroy(), null == (r = d[i]) || delete r[c], (h = void 0)),
+            null == h && (null != u[i] ? (u[i][c] = s) : (u[i] = { [c]: s })));
     },
-    h = (e) => {
+    m = (e) => {
         var t;
         let { channelId: n, messageId: r, emoji: i } = e,
             a = f(r, i);
         null == (t = u[n]) || delete t[a];
     },
-    m = (e) => {
+    h = (e) => {
         let { channelId: t, messageId: n, emoji: r, animation: i } = e,
             a = f(n, r);
         null == d[t] && (d[t] = {}), (d[t][a] = i);
@@ -120,9 +120,9 @@ class b extends (r = i.ZP.Store) {
 }
 o(b, "displayName", "BurstReactionEffectsStore");
 let y = new b(a.Z, {
-    BURST_REACTION_EFFECT_CLEAR: h,
-    BURST_REACTION_EFFECT_PLAY: p,
-    BURST_REACTION_ANIMATION_ADD: m,
+    BURST_REACTION_EFFECT_CLEAR: m,
+    BURST_REACTION_EFFECT_PLAY: _,
+    BURST_REACTION_ANIMATION_ADD: h,
     BURST_REACTION_PICKER_ANIMATION_ADD: g,
     BURST_REACTION_PICKER_ANIMATION_CLEAR: E,
 });

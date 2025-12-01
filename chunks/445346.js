@@ -1,5 +1,5 @@
 let r;
-n.d(t, { y: () => p }), n(358797), n(388685), n(539854);
+n.d(t, { y: () => _ }), n(358797), n(388685), n(539854);
 var i = n(512722),
     a = n.n(i),
     o = n(135273);
@@ -26,7 +26,7 @@ let u = [],
             e(), (r = null);
         };
     });
-function _(e, t) {
+function p(e, t) {
     let n = null;
     return 0 === e
         ? function () {
@@ -43,7 +43,7 @@ function _(e, t) {
                   }, e));
           };
 }
-class p {
+class _ {
     static initialize() {
         (d = !0), u.forEach((e) => e.initializeIfNeeded()), null != r && r();
     }
@@ -75,7 +75,7 @@ class p {
                 i = () => {
                     r !== l.Z.getChangeSentinel() && ((r = l.Z.getChangeSentinel()), !1 !== t() && this.emitChange());
                 };
-            (i = _(null != n ? n : 0, i)), e.forEach((e) => e.addChangeListener(i));
+            (i = p(null != n ? n : 0, i)), e.forEach((e) => e.addChangeListener(i));
         } else
             e.forEach((e) => {
                 e._syncWiths.push({
@@ -136,4 +136,4 @@ class p {
             d && this.initializeIfNeeded();
     }
 }
-c(p, "displayName", void 0), c(p, "initialized", f);
+c(_, "displayName", void 0), c(_, "initialized", f);

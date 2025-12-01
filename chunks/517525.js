@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    o = n(790519),
+    o = n(666917),
     c = n(468194),
     s = n(442837),
     u = n(692547),
@@ -15,8 +15,8 @@ var r = n(54381),
     g = n(194082),
     b = n(484459),
     v = n(594174),
-    E = n(626135),
-    h = n(74538),
+    h = n(626135),
+    E = n(74538),
     y = n(557457),
     S = n(475674),
     O = n(981631),
@@ -114,7 +114,7 @@ let x = (0, c.Mg)(f.Z.LIVE_INDICATOR_BORDER_RADIUS),
         let M = t || l,
             { location: k } = (0, m.O)(),
             L = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
-            F = c && !h.ZP.isPremium(L, C.PremiumTypes.TIER_1) && !h.ZP.canStreamQuality(h.ZP.StreamQuality.MID, L),
+            F = c && !E.ZP.isPremium(L, C.PremiumTypes.TIER_1) && !E.ZP.canStreamQuality(E.ZP.StreamQuality.MID, L),
             V = i.useCallback(() => {
                 F &&
                     M &&
@@ -127,7 +127,7 @@ let x = (0, c.Mg)(f.Z.LIVE_INDICATOR_BORDER_RADIUS),
             (i.useEffect(() => {
                 !x &&
                     M &&
-                    (E.default.track(O.rMx.PREMIUM_UPSELL_VIEWED, {
+                    (h.default.track(O.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: C.cd.STREAM_QUALITY_INDICATOR,
                         has_premium_stream_fps: t,
                         has_premium_stream_resolution: l,
@@ -182,7 +182,7 @@ let x = (0, c.Mg)(f.Z.LIVE_INDICATOR_BORDER_RADIUS),
         i.useEffect(() => {
             (0, b.Z)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), { dispatchWait: !0 });
         }, [t]);
-        let E = (0, p.Yzy)(
+        let h = (0, p.Yzy)(
                 v,
                 {
                     enter: {
@@ -194,7 +194,7 @@ let x = (0, c.Mg)(f.Z.LIVE_INDICATOR_BORDER_RADIUS),
                 },
                 "animate-always",
             ),
-            h = (0, p.q_F)(
+            E = (0, p.q_F)(
                 {
                     to: v ? D : N,
                     config: M,
@@ -207,7 +207,7 @@ let x = (0, c.Mg)(f.Z.LIVE_INDICATOR_BORDER_RADIUS),
                 "div",
                 j(P({ className: a()(I.streamQualityIndicator, n) }, i), {
                     children: [
-                        E((e, n) =>
+                        h((e, n) =>
                             n
                                 ? (0, r.jsx)(o.animated.div, {
                                       style: e,
@@ -226,7 +226,7 @@ let x = (0, c.Mg)(f.Z.LIVE_INDICATOR_BORDER_RADIUS),
                                 : null,
                         ),
                         (0, r.jsx)(o.animated.div, {
-                            style: h,
+                            style: E,
                             className: I.liveIndicator,
                             children: (0, r.jsx)(g.ZP, {
                                 look: g.jZ.RED,

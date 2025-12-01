@@ -24,9 +24,9 @@ function b(e) {
             emptyState: j,
         } = e,
         O = null != y && (null == (t = b.entry(y)) ? void 0 : t.parentPanelKey) != null ? y : g,
-        P = f.Z.useField("currentPanelKey"),
-        [C, S] = l.useState(b),
-        _ = l.useMemo(() => C.get(null != P ? P : O), [C, P, O]),
+        C = f.Z.useField("currentPanelKey"),
+        [P, S] = l.useState(b),
+        _ = l.useMemo(() => P.get(null != C ? C : O), [P, C, O]),
         { navigateWithValidation: E } = (0, u.Cu)();
     (0, o.ZP)(() => {
         var e, t;
@@ -88,12 +88,12 @@ function b(e) {
     let w = l.useMemo(
             () => ({
                 directory: b,
-                fallbackDirectory: C,
+                fallbackDirectory: P,
             }),
-            [b, C],
+            [b, P],
         ),
-        N = () => E(v),
-        Z = null != P ? b.get(P) : void 0;
+        k = () => E(v),
+        N = null != C ? b.get(C) : void 0;
     return (0, r.jsx)(d.j.Provider, {
         value: w,
         children: (0, r.jsxs)("div", {
@@ -103,12 +103,12 @@ function b(e) {
                     root: n,
                     header: m,
                     footer: h,
-                    onClose: N,
+                    onClose: k,
                     emptyState: j,
                 }),
                 (0, r.jsx)(s.Z, {
-                    onClose: N,
-                    setting: null != Z ? Z : _,
+                    onClose: k,
+                    setting: null != N ? N : _,
                 }),
             ],
         }),

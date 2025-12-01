@@ -1,5 +1,5 @@
 n.d(t, {
-    C1: () => _,
+    C1: () => p,
     Ni: () => f,
     TC: () => u,
     TT: () => c,
@@ -83,7 +83,7 @@ let d = c({
         reduceAdaptiveTheme: !1,
     }),
     f = i.createContext(d);
-function _(e) {
+function p(e) {
     let { children: t } = e,
         n = u();
     return (0, r.jsx)(r.Fragment, { children: t(n) });

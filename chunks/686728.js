@@ -21,23 +21,23 @@ function f(e, t, n, c) {
     let u = r.Z.getByteOrder(e, t + n + s),
         d = t + n,
         f = (0, a.N)(e, o.eG, d, d + l, u, c, !0);
-    return _(f) && ((f = (0, i.wB)({}, f, p(e, d + f.LevelInfo.__offset, u))), delete f.LevelInfo), f;
+    return p(f) && ((f = (0, i.wB)({}, f, _(e, d + f.LevelInfo.__offset, u))), delete f.LevelInfo), f;
 }
-function _(e) {
+function p(e) {
     return e.PentaxModelID && e.PentaxModelID.value === c.K3_III && e.LevelInfo;
 }
-function p(e, t, n) {
+function _(e, t, n) {
     let i = {};
     if (t + 7 > e.byteLength) return i;
     let a = e.getInt8(t + u.CAMERA_ORIENTATION);
     i.CameraOrientation = {
         value: a,
-        description: h(a),
+        description: m(a),
     };
     let o = e.getInt16(t + u.ROLL_ANGLE, n === r.Z.LITTLE_ENDIAN);
     i.RollAngle = {
         value: o,
-        description: m(o),
+        description: h(o),
     };
     let s = e.getInt16(t + u.PITCH_ANGLE, n === r.Z.LITTLE_ENDIAN);
     return (
@@ -48,7 +48,7 @@ function p(e, t, n) {
         i
     );
 }
-function h(e) {
+function m(e) {
     return 0 === e
         ? "Horizontal (normal)"
         : 1 === e
@@ -63,7 +63,7 @@ function h(e) {
                   ? "Downwards"
                   : "Unknown";
 }
-function m(e) {
+function h(e) {
     return "" + -0.5 * e;
 }
 function g(e) {

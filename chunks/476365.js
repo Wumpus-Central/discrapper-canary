@@ -1,6 +1,6 @@
 n.d(t, {
-    M: () => h,
-    S: () => m,
+    M: () => m,
+    S: () => h,
 }),
     n(388685);
 var r = n(473749),
@@ -25,7 +25,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,8 +41,8 @@ function _(e) {
     }
     return e;
 }
-let p = new o.Z("useStripePaymentElementOptions"),
-    h = function () {
+let _ = new o.Z("useStripePaymentElementOptions"),
+    m = function () {
         var e, t, n, a, o;
         let s = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
             l = (0, i.dQu)(i.TVs.colors.MODAL_BACKGROUND),
@@ -50,41 +50,41 @@ let p = new o.Z("useStripePaymentElementOptions"),
             u = (0, i.dQu)(i.TVs.colors.INPUT_BACKGROUND),
             d = null != (e = s.theme) ? e : "flat",
             f = null != (t = s.colorText) ? t : c.hex(),
-            _ = null != (n = s.colorBackground) ? n : l.hex(),
-            p = null != (a = s.inputBackgroundColor) ? a : u.hex(),
-            h = null != (o = s.tabBackgroundColor) ? o : u.hex();
+            p = null != (n = s.colorBackground) ? n : l.hex(),
+            _ = null != (a = s.inputBackgroundColor) ? a : u.hex(),
+            m = null != (o = s.tabBackgroundColor) ? o : u.hex();
         return {
             elementsAppearance: r.useMemo(
                 () => ({
                     theme: d,
                     variables: {
                         colorText: f,
-                        colorBackground: _,
+                        colorBackground: p,
                     },
                     rules: {
-                        ".Input": { backgroundColor: p },
-                        ".Tab": { backgroundColor: h },
+                        ".Input": { backgroundColor: _ },
+                        ".Tab": { backgroundColor: m },
                     },
                 }),
-                [d, f, _, p, h],
+                [d, f, p, _, m],
             ),
             elementsAppearanceOptions: {
                 theme: d,
                 colorText: f,
-                colorBackground: _,
-                inputBackgroundColor: p,
-                tabBackgroundColor: h,
+                colorBackground: p,
+                inputBackgroundColor: _,
+                tabBackgroundColor: m,
             },
         };
     },
-    m = (e) => {
+    h = (e) => {
         let { onSetupError: t, elementsAppearanceOptions: n = {} } = e,
             [i, o] = r.useState(void 0),
-            [f, m] = r.useState(null),
+            [f, h] = r.useState(null),
             [g, E] = r.useState(!0),
             [b, y] = r.useState([]),
             [O, v] = r.useState({}),
-            I = r.useCallback(async () => {
+            S = r.useCallback(async () => {
                 var e;
                 let n = (0, u.Q)({
                     ipCountryCode: null != (e = s.Z.ipCountryCode) ? e : "ALL",
@@ -96,37 +96,37 @@ let p = new o.Z("useStripePaymentElementOptions"),
                         i = t.reduce((e, t) => ((e[t.custom_payment_method_id] = t.payment_source_type), e), {});
                     y(r), v(i), o(e);
                 } catch (e) {
-                    m(e),
+                    h(e),
                         null != t && t(e),
-                        p.error("there was an error on setup for Payment Elements: ", e),
+                        _.error("there was an error on setup for Payment Elements: ", e),
                         (0, l.q2)(e, { tags: { source: "payment_elements" } });
                 }
                 E(!1);
             }, [t]);
         (0, a.ZP)(() => {
-            I();
+            S();
         });
-        let { elementsAppearance: T, elementsAppearanceOptions: S } = h(n);
+        let { elementsAppearance: I, elementsAppearanceOptions: T } = m(n);
         return {
             setupError: f,
             elementsOptions: r.useMemo(
                 () =>
                     g
                         ? null
-                        : _(
+                        : p(
                               { clientSecret: i },
                               {
-                                  appearance: T,
+                                  appearance: I,
                                   customPaymentMethods: b,
                                   paymentMethodCreation: "manual",
                               },
                           ),
-                [T, i, b, g],
+                [I, i, b, g],
             ),
             setupIntentSecret: i,
             customPaymentMethods: b,
             customPaymentMethodIdsToSourceTypes: O,
             isLoading: g,
-            elementsAppearanceOptions: S,
+            elementsAppearanceOptions: T,
         };
     };

@@ -1,49 +1,49 @@
-_.d(e, { i: () => o });
-var a = _(573736),
-    r = _(886115);
-function n(t) {
+r.d(t, { i: () => o });
+var n = r(573736),
+    a = r(886115);
+function i(e) {
     return {
-        ...t,
-        path: "path" in t && Array.isArray(t.path) ? t.path.join(".") : void 0,
-        keys: "keys" in t ? JSON.stringify(t.keys) : void 0,
-        unionErrors: "unionErrors" in t ? JSON.stringify(t.unionErrors) : void 0,
+        ...e,
+        path: "path" in e && Array.isArray(e.path) ? e.path.join(".") : void 0,
+        keys: "keys" in e ? JSON.stringify(e.keys) : void 0,
+        unionErrors: "unionErrors" in e ? JSON.stringify(e.unionErrors) : void 0,
     };
 }
-let o = (0, _(151122)._I)((t = {}) => {
-    let e = t.limit || 10;
+let o = (0, r(151122)._I)((e = {}) => {
+    let t = e.limit || 10;
     return {
         name: "ZodErrors",
-        processEvent(t, _) {
+        processEvent(e, r) {
             var o;
-            return t.exception &&
-                t.exception.values &&
-                _ &&
-                _.originalException &&
-                ((o = _.originalException), (0, a.VZ)(o) && "ZodError" === o.name && Array.isArray(o.errors)) &&
-                0 !== _.originalException.issues.length
+            return e.exception &&
+                e.exception.values &&
+                r &&
+                r.originalException &&
+                ((o = r.originalException), (0, n.VZ)(o) && "ZodError" === o.name && Array.isArray(o.errors)) &&
+                0 !== r.originalException.issues.length
                 ? {
-                      ...t,
+                      ...e,
                       exception: {
-                          ...t.exception,
+                          ...e.exception,
                           values: [
                               {
-                                  ...t.exception.values[0],
-                                  value: (function (t) {
-                                      let e = new Set();
-                                      for (let _ of t.issues) _.path && _.path[0] && e.add(_.path[0]);
-                                      let _ = Array.from(e);
-                                      return `Failed to validate keys: ${(0, r.$G)(_.join(", "), 100)}`;
-                                  })(_.originalException),
+                                  ...e.exception.values[0],
+                                  value: (function (e) {
+                                      let t = new Set();
+                                      for (let r of e.issues) r.path && r.path[0] && t.add(r.path[0]);
+                                      let r = Array.from(t);
+                                      return `Failed to validate keys: ${(0, a.$G)(r.join(", "), 100)}`;
+                                  })(r.originalException),
                               },
-                              ...t.exception.values.slice(1),
+                              ...e.exception.values.slice(1),
                           ],
                       },
                       extra: {
-                          ...t.extra,
-                          "zoderror.issues": _.originalException.errors.slice(0, e).map(n),
+                          ...e.extra,
+                          "zoderror.issues": r.originalException.errors.slice(0, t).map(i),
                       },
                   }
-                : t;
+                : e;
         },
     };
 });

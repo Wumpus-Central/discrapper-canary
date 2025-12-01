@@ -8,19 +8,19 @@ var r = n(54381),
     c = n(95632);
 function u(e) {
     let { label: t, onClick: n, "aria-hidden": i, leading: a, trailing: u, inInput: f = !1 } = e,
-        _ = null;
+        p = null;
     null != a &&
-        (_ = (0, r.jsx)("div", {
+        (p = (0, r.jsx)("div", {
             className: l.leading,
             children: (0, r.jsx)(d, {
                 accessory: a,
                 leading: !0,
             }),
         }));
-    let p = null;
+    let _ = null;
     return (
         null != u &&
-            (p = (0, r.jsx)("div", {
+            (_ = (0, r.jsx)("div", {
                 className: l.trailing,
                 children: (0, r.jsx)(d, { accessory: u }),
             })),
@@ -29,18 +29,18 @@ function u(e) {
             onClick: n,
             "aria-hidden": i,
             children: [
-                _,
+                p,
                 (0, r.jsx)(s.xvT, {
                     variant: "text-md/normal",
                     color: "currentColor",
                     lineClamp: 1,
                     style: {
-                        gridColumnStart: null != _ ? "2" : "1",
-                        gridColumnEnd: null != p ? "2" : "3",
+                        gridColumnStart: null != p ? "2" : "1",
+                        gridColumnEnd: null != _ ? "2" : "3",
                     },
                     children: t,
                 }),
-                p,
+                _,
             ],
         })
     );

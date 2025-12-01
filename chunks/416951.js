@@ -16,17 +16,17 @@ var l = t(481060),
     _ = t(794973),
     b = t(158508),
     p = t(558924),
-    O = t(37258),
+    m = t(37258),
     Z = t(332031),
-    m = t(981631),
+    O = t(981631),
     E = t(388032);
 let N = (0, o.Z)(
     (0, a.Z)(
         function (e) {
-            let { user: n, channel: t, channelSelected: a = !1, context: o, onSelect: m, onInteraction: N } = e,
+            let { user: n, channel: t, channelSelected: a = !1, context: o, onSelect: O, onInteraction: N } = e,
                 C = (0, s.Z)(t),
-                y = (0, d.ZP)(t, void 0, !1),
-                j = (0, O.Z)({
+                j = (0, d.ZP)(t, void 0, !1),
+                y = (0, m.Z)({
                     userId: n.id,
                     guildId: null,
                 }),
@@ -34,16 +34,16 @@ let N = (0, o.Z)(
                     user: n,
                     context: o,
                 }),
-                I = (0, p.O)(t.id, u.Z.DM_CONDENSED_MENU),
-                x = (0, p.Z)(n, I),
+                x = (0, p.O)(t.id, u.Z.DM_CONDENSED_MENU),
+                I = (0, p.Z)(n, x),
                 P = (0, f.Z)(n),
-                U = (0, Z.Z)(n.id),
-                T = (0, g.Z)({ user: n }),
-                R = (0, b.Z)({
+                T = (0, Z.Z)(n.id),
+                U = (0, g.Z)({ user: n }),
+                S = (0, b.Z)({
                     user: n,
                     location: u.Z.DM_CONDENSED_MENU,
                 }),
-                S = (0, h.Z)({
+                R = (0, h.Z)({
                     user: n,
                     location: u.Z.DM_CONDENSED_MENU,
                 }),
@@ -55,7 +55,7 @@ let N = (0, o.Z)(
                 navId: "dm-kebab-context",
                 onClose: r.Zy,
                 "aria-label": E.intl.string(E.t.liqwPJ),
-                onSelect: m,
+                onSelect: O,
                 onInteraction: N,
                 children: [
                     (0, i.jsxs)(l.kSQ, {
@@ -64,22 +64,22 @@ let N = (0, o.Z)(
                     !k &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsx)(l.kSQ, { children: j }),
+                                (0, i.jsx)(l.kSQ, { children: y }),
                                 (0, i.jsxs)(l.kSQ, {
-                                    children: [A, !w && x, P, U],
+                                    children: [A, !w && I, P, T],
                                 }),
                                 (0, i.jsxs)(l.kSQ, {
-                                    children: [T, R, S],
+                                    children: [U, S, R],
                                 }),
                             ],
                         }),
                     (0, i.jsxs)(l.kSQ, {
-                        children: [y, D],
+                        children: [j, D],
                     }),
                 ],
             });
         },
-        { object: m.qAy.CONTEXT_MENU },
+        { object: O.qAy.CONTEXT_MENU },
     ),
     [u.Z.CONTEXT_MENU, u.Z.DM_CONDENSED_MENU],
 );

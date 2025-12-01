@@ -24,21 +24,21 @@ function c(e) {
         u = null != (t = c.contrastRatio) ? t : s.NonText,
         d = null != (n = c.tolerance) ? n : a,
         f = i()(null != (r = c.base) ? r : e),
-        _ = i()(e),
-        p = f.luminance(),
-        h = _,
-        m = u,
+        p = i()(e),
+        _ = f.luminance(),
+        m = p,
+        h = u,
         g = u + d,
-        E = i().contrast(f, _),
+        E = i().contrast(f, p),
         b = o;
     for (; b-- > 0; ) {
-        let e = E < m,
+        let e = E < h,
             t = E > g;
         if (!e && !t) break;
-        let n = h.luminance() > p;
-        (h = (t && n) || (e && !n) ? h.darken() : h.brighten()), (E = i().contrast(f, h));
+        let n = m.luminance() > _;
+        (m = (t && n) || (e && !n) ? m.darken() : m.brighten()), (E = i().contrast(f, m));
     }
-    return l(h);
+    return l(m);
 }
 function u(e, t) {
     return l(i()(e).brighten(t));

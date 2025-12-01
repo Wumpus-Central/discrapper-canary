@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => N }), n(388685);
 var a = n(54381),
     l = n(473749),
     i = n(990547),
@@ -12,8 +12,8 @@ var a = n(54381),
     p = n(714338),
     h = n(213609),
     x = n(429142),
-    g = n(144114),
-    f = n(210887),
+    f = n(144114),
+    g = n(210887),
     b = n(23434),
     v = n(1964),
     j = n(762756),
@@ -46,7 +46,7 @@ function E(e) {
     }
     return e;
 }
-function N(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,25 +64,25 @@ function N(e, t) {
         e
     );
 }
-function T() {
-    let { action: e, theme: t } = (0, r.cj)([b.Z, f.Z], () => ({
+function N() {
+    let { action: e, theme: t } = (0, r.cj)([b.Z, g.Z], () => ({
             action: b.Z.getAction(),
-            theme: f.Z.theme,
+            theme: g.Z.theme,
         })),
-        T = v.Z.getVerificationTypes(e),
+        N = v.Z.getVerificationTypes(e),
         [O, P] = l.useState(0),
-        I = (0, m.Z)(T);
+        I = (0, m.Z)(N);
     (0, h.Z)(
         {
             type: i.ImpressionTypes.MODAL,
             name: i.ImpressionNames.USER_ACTION_REQUIRED,
             properties: {
-                verification_type: T[0],
-                verification_types: T,
+                verification_type: N[0],
+                verification_types: N,
             },
         },
         {},
-        [T.toString()],
+        [N.toString()],
     );
     let w = () => {
         (0, u.FD)(),
@@ -109,14 +109,14 @@ function T() {
         ),
         l.useEffect(() => {
             (null == I ? void 0 : I[0]) === y.PUi.PHONE &&
-                (null == T ? void 0 : T[0]) === y.PUi.EMAIL &&
+                (null == N ? void 0 : N[0]) === y.PUi.EMAIL &&
                 (0, o.ZDy)(
                     async () => {
                         let { default: e } = await n.e("84112").then(n.bind(n, 273352));
                         return (t) =>
                             (0, a.jsx)(
                                 e,
-                                N(E({}, t), {
+                                T(E({}, t), {
                                     title: S.intl.string(S.t.KLnLIP),
                                     body: S.intl.string(S.t.XGbCq3),
                                     confirmText: S.intl.string(S.t["3oK4qw"]),
@@ -129,9 +129,9 @@ function T() {
                         onCloseCallback: w,
                     },
                 );
-        }, [T, I]),
+        }, [N, I]),
         (0, a.jsx)(j.Z, {
-            types: T,
+            types: N,
             captchaKey: O,
             onCaptchaVerify: (e) => {
                 s.tn
@@ -158,7 +158,7 @@ function T() {
                                       E(
                                           {
                                               layerContext: x.mK,
-                                              reason: g.L.USER_ACTION_REQUIRED,
+                                              reason: f.L.USER_ACTION_REQUIRED,
                                           },
                                           t,
                                       ),
@@ -177,7 +177,7 @@ function T() {
                         return (n) =>
                             (0, a.jsx)(
                                 e,
-                                N(
+                                T(
                                     E(
                                         {
                                             header: S.intl.string(S.t["2jxGer"]),

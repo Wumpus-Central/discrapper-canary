@@ -1,10 +1,10 @@
 n.d(t, {
-    Ff: () => _,
+    Ff: () => p,
     GS: () => g,
-    KH: () => p,
+    KH: () => _,
     Nm: () => E,
-    RI: () => m,
-    Up: () => h,
+    RI: () => h,
+    Up: () => m,
     XV: () => f,
 });
 var r = n(544891),
@@ -39,7 +39,7 @@ async function f() {
         );
     }
 }
-async function _(e, t, n) {
+async function p(e, t, n) {
     try {
         let a = await r.tn.post({
             url: d.ANM.VIDEO_FILTER_ASSETS,
@@ -61,19 +61,19 @@ async function _(e, t, n) {
         throw new u.Z(e);
     }
 }
-async function p(e) {
+async function _(e) {
     await r.tn.del({
         url: d.ANM.VIDEO_FILTER_ASSET(e.id),
         rejectWithError: !1,
     });
     let t = (0, l.P)(s.default.getCurrentUser());
-    (0, c.rD)(t) && t.id === e.id && h(null),
+    (0, c.rD)(t) && t.id === e.id && m(null),
         i.Z.dispatch({
             type: "VIDEO_FILTER_ASSET_DELETE_SUCCESS",
             videoFilterAsset: e,
         });
 }
-async function h(e) {
+async function m(e) {
     if (
         (await a.hW.updateAsync(
             "voiceAndVideo",
@@ -98,7 +98,7 @@ async function h(e) {
             backgroundOption: e,
         });
 }
-function m(e) {
+function h(e) {
     o.Z.isSupported() &&
         i.Z.dispatch({
             type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS",

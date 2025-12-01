@@ -8,27 +8,27 @@ var r = n(566817),
     u = n(511389),
     d = n(414235),
     f = n(936342),
-    _ = n(951575);
+    p = n(951575);
 e.exports = function (e, t, n) {
-    if (!_(e)) throw new a("Assertion failed: O must be an Object");
+    if (!p(e)) throw new a("Assertion failed: O must be an Object");
     if (!c(t)) throw new a("Assertion failed: P must be a Property Key");
     if (!o(n)) throw new a("Assertion failed: Desc must be a Property Descriptor");
     if (!r) {
         if (s(n)) throw new i("This environment does not support accessor property descriptors.");
-        var p = !(t in e) && n["[[Writable]]"] && n["[[Enumerable]]"] && n["[[Configurable]]"] && "[[Value]]" in n,
-            h =
+        var _ = !(t in e) && n["[[Writable]]"] && n["[[Enumerable]]"] && n["[[Configurable]]"] && "[[Value]]" in n,
+            m =
                 t in e &&
                 (!("[[Configurable]]" in n) || n["[[Configurable]]"]) &&
                 (!("[[Enumerable]]" in n) || n["[[Enumerable]]"]) &&
                 (!("[[Writable]]" in n) || n["[[Writable]]"]) &&
                 "[[Value]]" in n;
-        if (p || h) return (e[t] = n["[[Value]]"]), d(e[t], n["[[Value]]"]);
+        if (_ || m) return (e[t] = n["[[Value]]"]), d(e[t], n["[[Value]]"]);
         throw new i(
             "This environment does not support defining non-writable, non-enumerable, or non-configurable properties",
         );
     }
-    var m = r(e, t),
-        g = m && u(m),
+    var h = r(e, t),
+        g = h && u(h),
         E = l(e);
     return f(e, t, E, n, g);
 };

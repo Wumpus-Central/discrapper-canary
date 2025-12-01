@@ -1,4 +1,4 @@
-n.d(t, { default: () => p });
+n.d(t, { default: () => _ });
 var r = n(54381),
     i = n(473749),
     a = n(990547),
@@ -21,24 +21,24 @@ function f(e, t, n) {
         e
     );
 }
-class _ extends i.PureComponent {
+class p extends i.PureComponent {
     render() {
         let e,
             t,
             n,
             i,
-            { error: f, working: _, transitionState: p, validPhone: h, layerContext: m } = this.props,
+            { error: f, working: p, transitionState: _, validPhone: m, layerContext: h } = this.props,
             { phone: g } = this.state,
             E = [];
         return (
-            h
+            m
                 ? (e = u.intl.string(u.t["4qMI6A"]))
                 : ((e = u.intl.string(u.t.Vp9je2)),
                   (t = (0, r.jsx)(s.Text, {
                       variant: "text-sm/normal",
                       children: u.intl.format(u.t["3BTmqX"], {}),
                   }))),
-            h
+            m
                 ? ((n = (0, r.jsx)(s.gNt, {
                       label: u.intl.string(u.t.Xclkxp),
                       hideLabel: !0,
@@ -50,7 +50,7 @@ class _ extends i.PureComponent {
                           variant: "secondary",
                           text: u.intl.string(u.t["5b60gi"]),
                           onClick: this.handleResendCode,
-                          loading: _,
+                          loading: p,
                       },
                   ]))
                 : ((n = (0, r.jsx)(c.Z, {
@@ -58,26 +58,26 @@ class _ extends i.PureComponent {
                       errorMessage: null != f ? f : void 0,
                       className: d.field,
                       onChange: this.handlePhoneChange,
-                      submitting: _,
-                      layerContext: m,
+                      submitting: p,
+                      layerContext: h,
                   })),
                   (E = [
                       {
                           text: u.intl.string(u.t.TXNS7S),
                           disabled: "" === g,
-                          loading: _,
+                          loading: p,
                           onClick: this.handleAddPhone,
                       },
                   ])),
-            (i = h ? u.intl.string(u.t.Xclkxp) : u.intl.string(u.t.uR76s6)),
+            (i = m ? u.intl.string(u.t.Xclkxp) : u.intl.string(u.t.uR76s6)),
             (0, r.jsx)(o.Modal, {
-                size: h ? "sm" : "md",
+                size: m ? "sm" : "md",
                 title: i,
                 subtitle: e,
                 actions: E,
                 onClose: this.props.onClose,
                 trackingProps: { impression: { impressionName: a.ImpressionNames.USER_VERIFY_PHONE } },
-                transitionState: p,
+                transitionState: _,
                 children: (0, r.jsxs)(s.Kqy, {
                     gap: 8,
                     children: [n, t],
@@ -106,4 +106,4 @@ class _ extends i.PureComponent {
             (this.state = { phone: "" });
     }
 }
-let p = _;
+let _ = p;

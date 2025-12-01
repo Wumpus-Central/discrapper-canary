@@ -20,7 +20,7 @@ function u(e, t, n) {
     );
 }
 let d = {};
-class p extends (r = i.ZP.PersistedStore) {
+class f extends (r = i.ZP.PersistedStore) {
     getState() {
         return d;
     }
@@ -31,9 +31,9 @@ class p extends (r = i.ZP.PersistedStore) {
         return d[e];
     }
 }
-u(p, "displayName", "GuildPowerupsNotificationStore"),
-    u(p, "persistKey", "GuildPowerupsNotificationStore"),
-    u(p, "migrations", [
+u(f, "displayName", "GuildPowerupsNotificationStore"),
+    u(f, "persistKey", "GuildPowerupsNotificationStore"),
+    u(f, "migrations", [
         (e) => (
             Object.entries(e).forEach((t) => {
                 let [n, r] = t;
@@ -42,9 +42,9 @@ u(p, "displayName", "GuildPowerupsNotificationStore"),
             e
         ),
     ]);
-let h = new p(l.Z, {
+let h = new f(l.Z, {
     GUILD_POWERUPS_ACK_NOTIFICATION: function (e) {
-        var t, n, r, i, l, p, h, f;
+        var t, n, r, i, l, f, h, p;
         let { guildId: g } = e,
             m = null != (r = null == (t = o.Z.getGuild(g)) ? void 0 : t.premiumSubscriberCount) ? r : 0,
             b = s.Z.getStateForGuild(g),
@@ -69,17 +69,17 @@ let h = new p(l.Z, {
             }
             return e;
         })({}, d)),
-            (f = f =
+            (p = p =
                 {
                     [g]: {
                         lastSeenWarningNotification: new Date(
-                            null != (p = null == (n = y[y.length - 1]) ? void 0 : n.ends_at) ? p : Date.now(),
+                            null != (f = null == (n = y[y.length - 1]) ? void 0 : n.ends_at) ? f : Date.now(),
                         ).getTime(),
                         lastBoostCount: m,
                     },
                 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(h, Object.getOwnPropertyDescriptors(f))
+                ? Object.defineProperties(h, Object.getOwnPropertyDescriptors(p))
                 : (function (e, t) {
                       var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
@@ -87,8 +87,8 @@ let h = new p(l.Z, {
                           n.push.apply(n, r);
                       }
                       return n;
-                  })(Object(f)).forEach(function (e) {
-                      Object.defineProperty(h, e, Object.getOwnPropertyDescriptor(f, e));
+                  })(Object(p)).forEach(function (e) {
+                      Object.defineProperty(h, e, Object.getOwnPropertyDescriptor(p, e));
                   }),
             (d = h);
     },

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(442837),
@@ -9,48 +9,48 @@ var r = n(54381),
     u = n(494620),
     d = n(65154),
     f = n(388032),
-    _ = n(28025);
-let p = c.isWindows() ? ["BTHENUM", "BTHHFENUM"] : [];
-function h() {
+    p = n(28025);
+let _ = c.isWindows() ? ["BTHENUM", "BTHHFENUM"] : [];
+function m() {
     var e, t;
     let { canSetInputDevice: n, canSetOutputDevice: c } = (0, a.cj)([l.Z], () => ({
             canSetInputDevice: l.Z.supports(d.AN.AUDIO_INPUT_DEVICE),
             canSetOutputDevice: l.Z.supports(d.AN.AUDIO_OUTPUT_DEVICE),
         })),
-        h = (0, s.p6)(d.h7.AUDIO_INPUT),
-        m = (0, s.p6)(d.h7.AUDIO_OUTPUT),
+        m = (0, s.p6)(d.h7.AUDIO_INPUT),
+        h = (0, s.p6)(d.h7.AUDIO_OUTPUT),
         [g, E] = (0, s.Ls)(d.h7.AUDIO_INPUT, { location: "UserSettingsDevices" }),
         [b, y] = (0, s.Ls)(d.h7.AUDIO_OUTPUT, { location: "UserSettingsDevices" }),
         O = g.concat(E),
         v = b.concat(y),
-        I = i.useMemo(() => {
-            let e = p.some((e) => {
-                    var t;
-                    return null == h || null == (t = h.hardwareId) ? void 0 : t.startsWith(e);
-                }),
-                t = p.some((e) => {
+        S = i.useMemo(() => {
+            let e = _.some((e) => {
                     var t;
                     return null == m || null == (t = m.hardwareId) ? void 0 : t.startsWith(e);
+                }),
+                t = _.some((e) => {
+                    var t;
+                    return null == h || null == (t = h.hardwareId) ? void 0 : t.startsWith(e);
                 });
             return (
                 e &&
                 t &&
-                (null == h ? void 0 : h.containerId) != null &&
-                h.containerId === (null == m ? void 0 : m.containerId)
+                (null == m ? void 0 : m.containerId) != null &&
+                m.containerId === (null == h ? void 0 : h.containerId)
             );
-        }, [h, m]),
-        T = O[0],
-        S = v[0],
-        A = null != (e = null == T ? void 0 : T.disabled) ? e : !n,
-        C = null != (t = null == S ? void 0 : S.disabled) ? t : !c;
+        }, [m, h]),
+        I = O[0],
+        T = v[0],
+        A = null != (e = null == I ? void 0 : I.disabled) ? e : !n,
+        C = null != (t = null == T ? void 0 : T.disabled) ? t : !c;
     return (0, r.jsxs)("div", {
-        className: _.devices,
+        className: p.devices,
         children: [
             (0, r.jsxs)("div", {
-                className: _.deviceColumns,
+                className: p.deviceColumns,
                 children: [
                     (0, r.jsx)("div", {
-                        className: _.column,
+                        className: p.column,
                         children: (0, r.jsx)(o.j, {
                             label: f.intl.string(f.t.hHMYbb),
                             deviceType: d.h7.AUDIO_INPUT,
@@ -60,7 +60,7 @@ function h() {
                         }),
                     }),
                     (0, r.jsx)("div", {
-                        className: _.column,
+                        className: p.column,
                         children: (0, r.jsx)(o.j, {
                             label: f.intl.string(f.t.dl18zb),
                             deviceType: d.h7.AUDIO_OUTPUT,
@@ -71,7 +71,7 @@ function h() {
                     }),
                 ],
             }),
-            I &&
+            S &&
                 (0, r.jsx)(u.Z, {
                     look: u.z.WARNING,
                     children: f.intl.string(f.t.Ioz3gx),

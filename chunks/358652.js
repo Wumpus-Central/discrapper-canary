@@ -8,12 +8,12 @@ var r,
     c = n(592125),
     u = n(306680),
     d = n(944486),
-    p = n(55589);
+    f = n(55589);
 let h = [],
-    f = new Set();
+    p = new Set();
 function g() {
-    let e = p.Z.getPrivateChannelIds().filter((e) => u.ZP.getMentionCount(e) > 0);
-    return e.length > 20 && (e.length = 20), !(0, s.EF)(e, h) && ((h = e), (f = new Set(e)), !0);
+    let e = f.Z.getPrivateChannelIds().filter((e) => u.ZP.getMentionCount(e) > 0);
+    return e.length > 20 && (e.length = 20), !(0, s.EF)(e, h) && ((h = e), (p = new Set(e)), !0);
 }
 function m() {
     return g();
@@ -25,7 +25,7 @@ function b(e) {
 }
 class _ extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(p.Z, c.Z, d.Z, u.ZP);
+        this.waitFor(f.Z, c.Z, d.Z, u.ZP);
     }
     getUnreadPrivateChannelIds() {
         return h;
@@ -53,7 +53,7 @@ let y = new _(o.Z, {
         let {
             channel: { id: t },
         } = e;
-        return !!f.has(t) && g();
+        return !!p.has(t) && g();
     },
     WINDOW_FOCUS: function () {
         let e = c.Z.getChannel(d.Z.getChannelId());

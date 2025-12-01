@@ -2,7 +2,7 @@ n.d(t, {
     NX: () => d,
     WS: () => u,
     l5: () => c,
-    qB: () => _,
+    qB: () => p,
 });
 var r = n(106351),
     i = n(442837),
@@ -28,6 +28,6 @@ function f(e, t) {
         null != e && void 0 !== e && !!c(e) && (null == e.guild_id || !!t.can(s.Pl.USE_EMBEDDED_ACTIVITIES, e)) && !0
     );
 }
-function _() {
+function p() {
     return !1;
 }

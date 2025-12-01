@@ -1,26 +1,26 @@
-n.d(t, {
+t.d(n, {
     C: () => h,
     Z: () => S,
 });
-var l = n(54381),
-    i = n(473749),
-    a = n(120356),
-    r = n.n(a),
-    s = n(28664),
-    u = n(481060),
-    o = n(100527),
-    c = n(494620),
-    d = n(639777),
-    m = n(578756),
-    v = n(503274),
-    g = n(858594),
-    f = n(296643),
-    p = n(343312),
-    b = n(30910),
-    _ = n(619733),
-    x = n(732031),
-    j = n(388032),
-    E = n(755350);
+var l = t(54381),
+    i = t(473749),
+    a = t(120356),
+    r = t.n(a),
+    s = t(28664),
+    u = t(481060),
+    o = t(100527),
+    c = t(494620),
+    d = t(639777),
+    m = t(578756),
+    v = t(503274),
+    f = t(858594),
+    g = t(296643),
+    p = t(343312),
+    b = t(30910),
+    _ = t(619733),
+    x = t(613275),
+    j = t(388032),
+    E = t(755350);
 function h() {
     return (0, l.jsx)(c.Z, {
         className: E.maxInstancesWarning,
@@ -33,8 +33,8 @@ function h() {
 function S() {
     let {
         guildId: e,
-        gameServerGames: t,
-        instances: n,
+        gameServerGames: n,
+        instances: t,
         gameServerInstance: a,
         setGameServerInstance: c,
         setCurrentGame: S,
@@ -47,16 +47,16 @@ function S() {
             },
             [S, y],
         ),
-        I = i.useCallback(
+        k = i.useCallback(
             (e) => {
                 c(e), y();
             },
             [c, y],
         ),
-        k = n.length >= _.YX,
-        C = n.length > 0,
+        I = t.length >= _.YX,
+        C = t.length > 0,
         P = (0, d.Z)(e);
-    return 0 === Object.values(t).length
+    return 0 === Object.values(n).length
         ? (0, l.jsx)("div", {
               className: E.loadingContainer,
               children: (0, l.jsx)(u.$jN, { type: u.RAz.SPINNING_CIRCLE }),
@@ -73,23 +73,23 @@ function S() {
                               }),
                               (0, l.jsx)("div", {
                                   className: E.gameInstanceContainer,
-                                  children: n.map((t, n) =>
+                                  children: t.map((n, t) =>
                                       (0, l.jsx)(
                                           v.Z,
                                           {
                                               guildId: e,
-                                              gameInstance: t,
-                                              onClick: I,
+                                              gameInstance: n,
+                                              onClick: k,
                                           },
-                                          "instance-".concat(t.id, "-").concat(n),
+                                          "instance-".concat(n.id, "-").concat(t),
                                       ),
                                   ),
                               }),
-                              k && (0, l.jsx)(h, {}),
+                              I && (0, l.jsx)(h, {}),
                           ],
                       }),
                   (0, l.jsxs)("div", {
-                      className: r()(E.gameSection, { [E.disabled]: k }),
+                      className: r()(E.gameSection, { [E.disabled]: I }),
                       children: [
                           C &&
                               (0, l.jsx)(u.Heading, {
@@ -98,24 +98,24 @@ function S() {
                               }),
                           (0, l.jsx)("div", {
                               className: E.gameContainer,
-                              children: Object.values(t).map((t, n) =>
+                              children: Object.values(n).map((n, t) =>
                                   (0, l.jsx)(
                                       s.u,
                                       {
                                           asContainer: !0,
-                                          text: t.disabled
-                                              ? j.intl.formatToPlainString(x.default.uVpJYf, { gameName: t.name })
+                                          text: n.disabled
+                                              ? j.intl.formatToPlainString(x.default.uVpJYf, { gameName: n.name })
                                               : null,
                                           position: "top",
-                                          children: (0, l.jsx)(g.Z, {
+                                          children: (0, l.jsx)(f.Z, {
                                               guildId: e,
-                                              game: t,
-                                              disabled: k || !P || t.disabled,
+                                              game: n,
+                                              disabled: I || !P || n.disabled,
                                               onClick: O,
                                               location: o.Z.GAME_SERVER_SETUP_MODAL,
                                           }),
                                       },
-                                      "game-".concat(t.id, "-").concat(n),
+                                      "game-".concat(n.id, "-").concat(t),
                                   ),
                               ),
                           }),
@@ -135,7 +135,7 @@ function S() {
                                   }),
                               ],
                           }),
-                          (0, l.jsx)(f.Z, {}),
+                          (0, l.jsx)(g.Z, {}),
                       ],
                   }),
               ],

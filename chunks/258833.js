@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var r = n(147913),
     i = n(460181),
     a = n(474873),
@@ -9,14 +9,14 @@ var r = n(147913),
     u = n(246946),
     d = n(979651),
     f = n(938475),
-    _ = n(358221);
-function p(e, t) {
+    p = n(358221);
+function _(e, t) {
     if (t.has(e)) throw TypeError("Cannot initialize the same private elements twice on an object");
 }
-function h(e, t) {
+function m(e, t) {
     return t.get ? t.get.call(e) : t.value;
 }
-function m(e, t, n) {
+function h(e, t, n) {
     if (t.set) t.set.call(e, n);
     else {
         if (!t.writable) throw TypeError("attempted to set read only private field");
@@ -29,14 +29,14 @@ function g(e, t, n) {
 }
 function E(e, t) {
     var n = g(e, t, "get");
-    return h(e, n);
+    return m(e, n);
 }
 function b(e, t, n) {
-    p(e, t), t.set(e, n);
+    _(e, t), t.set(e, n);
 }
 function y(e, t, n) {
     var r = g(e, t, "set");
-    return m(e, r, n), n;
+    return h(e, r, n), n;
 }
 function O(e, t, n) {
     return (
@@ -52,20 +52,20 @@ function O(e, t, n) {
     );
 }
 let v = (0, i.uk)("call_calling", a.Z.getSoundpack());
-var I = new WeakMap();
-class T extends r.Z {
+var S = new WeakMap();
+class I extends r.Z {
     _initialize() {
         this.stores = new Map()
             .set(o.Z, this.handleRingUpdate)
             .set(l.Z, this.handleRingUpdate)
             .set(u.Z, this.handleRingUpdate)
             .set(d.Z, this.handleRingUpdate)
-            .set(_.Z, this.handleChannelRTCStoreChange)
+            .set(p.Z, this.handleChannelRTCStoreChange)
             .set(a.Z, this.handleSoundpackUpdate);
     }
     constructor(...e) {
         super(...e),
-            b(this, I, {
+            b(this, S, {
                 writable: !0,
                 value: new Set(),
             }),
@@ -88,39 +88,39 @@ class T extends r.Z {
                     i = o.Z.getCalls().some(
                         (e) => e.ringing.length > 0 && d.Z.getCurrentClientVoiceChannelId(null) === e.channelId,
                     );
-                this._handleRing(i || E(this, I).size > 0, r);
+                this._handleRing(i || E(this, S).size > 0, r);
             }),
             O(this, "handleGuildRingStart", (e) => {
                 let { ringing: t, guildId: n } = e;
                 t.forEach((e) => {
-                    E(this, I).add(e);
+                    E(this, S).add(e);
                 }),
-                    this._handleRing(E(this, I).size > 0, n);
+                    this._handleRing(E(this, S).size > 0, n);
             }),
             O(this, "handleGuildRingStop", (e) => {
                 let { ringing: t, guildId: n } = e;
                 t.forEach((e) => {
-                    E(this, I).delete(e);
+                    E(this, S).delete(e);
                 }),
-                    this._handleRing(E(this, I).size > 0, n);
+                    this._handleRing(E(this, S).size > 0, n);
             }),
             O(this, "handleChannelRTCStoreChange", () => {
                 let e = c.Z.getVoiceChannelId(),
-                    t = E(this, I).size > 0;
+                    t = E(this, S).size > 0;
                 if (!t) return;
                 if (null == e && t) {
-                    y(this, I, new Set()), this._handleRing(E(this, I).size > 0, null);
+                    y(this, S, new Set()), this._handleRing(E(this, S).size > 0, null);
                     return;
                 }
                 if (null == e) return;
-                let n = _.Z.getGuildRingingUsers(e),
-                    r = new Set([...E(this, I)].filter((e) => !n.has(e)));
+                let n = p.Z.getGuildRingingUsers(e),
+                    r = new Set([...E(this, S)].filter((e) => !n.has(e)));
                 r.size > 0 &&
                     (r.forEach((e) => {
-                        E(this, I).delete(e);
+                        E(this, S).delete(e);
                     }),
-                    this._handleRing(E(this, I).size > 0, null));
+                    this._handleRing(E(this, S).size > 0, null));
             });
     }
 }
-let S = new T();
+let T = new I();

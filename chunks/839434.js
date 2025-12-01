@@ -15,8 +15,8 @@ var i,
     m = n(872810),
     y = n(586902),
     b = n(835473),
-    v = n(933557),
-    _ = n(600164),
+    _ = n(933557),
+    v = n(600164),
     O = n(594190),
     E = n(925329),
     x = n(569545),
@@ -115,8 +115,8 @@ function es(e) {
             voiceState: m,
         } = e,
         b = (0, J.Z)({ location: "overlay_voice_widget" }),
-        v = (0, a.e7)([G.default], () => G.default.showKeybindIndicators),
-        _ = (0, a.e7)([R.default], () => R.default.getId()),
+        _ = (0, a.e7)([G.default], () => G.default.showKeybindIndicators),
+        v = (0, a.e7)([R.default], () => R.default.getId()),
         O = (0, a.e7)([M.Z], () => M.Z.isLocalMute(i.id)),
         E = (0, a.e7)([k.Z], () => k.Z.getCurrentUserActiveStream()),
         x = (0, a.Wu)([k.Z], () => (null != E ? k.Z.getViewerIds(E) : [])),
@@ -128,9 +128,9 @@ function es(e) {
         j = (0, a.e7)([k.Z], () => null != k.Z.getStreamForUser(i.id, g)),
         C = s.useMemo(() => null != E && E.ownerId !== i.id && x.includes(i.id), [E, i.id, x]);
     if (d === Q.OYC.ONLY_WHILE_SPEAKING && n && !S) return null;
-    let I = i.id === _,
+    let I = i.id === v,
         { mute: P, selfMute: w, suppress: T, deaf: N, selfDeaf: A } = m,
-        L = b && v,
+        L = b && _,
         z = w && (!I || !L);
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -306,9 +306,9 @@ class eo extends (i = s.PureComponent) {
                                       game: o,
                                   })
                                 : (0, r.jsx)(Z.Z, { title: p }),
-                            (0, r.jsxs)(_.Z, {
-                                direction: _.Z.Direction.VERTICAL,
-                                justify: _.Z.Justify.BETWEEN,
+                            (0, r.jsxs)(v.Z, {
+                                direction: v.Z.Direction.VERTICAL,
+                                justify: v.Z.Justify.BETWEEN,
                                 className: et.streamerInfo,
                                 children: [
                                     (0, r.jsx)(h.Text, {
@@ -321,7 +321,7 @@ class eo extends (i = s.PureComponent) {
                             }),
                         ],
                     }),
-                    (0, r.jsxs)(_.Z, {
+                    (0, r.jsxs)(v.Z, {
                         grow: 0,
                         children: [
                             (0, r.jsx)("div", {
@@ -456,7 +456,7 @@ class eo extends (i = s.PureComponent) {
 function el(e) {
     var t;
     let n = (0, a.e7)([z.Z, A.Z], () => A.Z.getChannel(z.Z.getVoiceChannelId())),
-        i = (0, v.ZP)(n),
+        i = (0, _.ZP)(n),
         o = (function () {
             let [e] = (0, a.e7)(
                     [U.ZP, P.Z, z.Z, A.Z],

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -10,18 +10,18 @@ var i = n(120356),
     u = n(164662),
     d = n(732728),
     f = n(388032),
-    _ = n(527552);
-let p = (e) => {
+    p = n(527552);
+let _ = (e) => {
     let { className: t, onBackClick: n } = e,
         i = (0, o.e7)([l.Z], () => l.Z.useReducedMotion),
-        { visibilityPercentageRef: p, visibilityPercentage: h } = (0, u.E)(!i);
+        { visibilityPercentageRef: _, visibilityPercentage: m } = (0, u.E)(!i);
     return (0, r.jsxs)("div", {
-        className: a()(_.container, t),
+        className: a()(p.container, t),
         "data-testid": "all-perks-hero-header",
-        ref: p,
+        ref: _,
         children: [
             (0, r.jsx)("div", {
-                className: _.backButtonContainer,
+                className: p.backButtonContainer,
                 children: (0, r.jsx)(s.zxk, {
                     onClick: n,
                     text: f.intl.string(f.t["13/7kX"]),
@@ -29,12 +29,12 @@ let p = (e) => {
                 }),
             }),
             (0, r.jsx)("div", {
-                className: _.content,
+                className: p.content,
                 children: (0, r.jsxs)("div", {
-                    className: _.headerContainer,
+                    className: p.headerContainer,
                     children: [
                         (0, r.jsx)(d.Z, {
-                            containerVisibilityPercentage: h,
+                            containerVisibilityPercentage: m,
                             isMotionReduced: i,
                         }),
                         (0, r.jsx)(c.Z, { children: f.intl.string(f.t["hqjDX/"]) }),

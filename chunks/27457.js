@@ -13,8 +13,8 @@ var r = n(54381),
     u = n(481060),
     d = n(846027),
     f = n(410575),
-    p = n(812206),
-    h = n(835473),
+    h = n(812206),
+    p = n(835473),
     g = n(414910),
     m = n(598006),
     b = n(415635),
@@ -50,8 +50,8 @@ var r = n(54381),
     K = n(607187),
     Y = n(833519),
     q = n(462061),
-    X = n(623825),
-    Q = n(839662),
+    Q = n(623825),
+    X = n(839662),
     J = n(981631),
     $ = n(354459),
     ee = n(524484),
@@ -71,7 +71,7 @@ let ei = [$.fO.ACTIVITY],
                 onKeyDown: B,
                 className: F,
                 style: V,
-                containerStyle: X,
+                containerStyle: Q,
                 channel: el,
                 width: eo,
                 onVideoResize: ea,
@@ -79,8 +79,8 @@ let ei = [$.fO.ACTIVITY],
                 selected: eu = !1,
                 noBorder: ed = !1,
                 noVideoRender: ef = !1,
-                focused: ep = !1,
-                blocked: eh = !1,
+                focused: eh = !1,
+                blocked: ep = !1,
                 ignored: eg = !1,
                 fit: em = j.L.CONTAIN,
                 paused: eb = !1,
@@ -96,14 +96,14 @@ let ei = [$.fO.ACTIVITY],
             eP = (0, a.e7)([A.default], () => A.default.getId()),
             eN = y.type === $.fO.ACTIVITY ? null : y.user,
             eZ = null != (l = null == eN ? void 0 : eN.id) ? l : null,
-            [ew] = (0, h.Z)(y.type === $.fO.ACTIVITY ? [y.applicationId] : []),
+            [ew] = (0, p.Z)(y.type === $.fO.ACTIVITY ? [y.applicationId] : []),
             eT = (0, a.e7)([L.Z], () => null != eZ && L.Z.isLocalVideoDisabled(eZ, (0, g.Z)(y.type)), [eZ, y.type]),
             eA = (0, a.e7)([L.Z], () => (null != eZ ? L.Z.getVideoToggleState(eZ, (0, g.Z)(y.type)) : J.ZUi.NONE), [
                 eZ,
                 y.type,
             ]),
             eR = eA === J.ZUi.AUTO_PROBING,
-            { speaking: eD, latched: eL, ringing: eM, hasVideo: ek } = (0, Q.Z)(y, eP),
+            { speaking: eD, latched: eL, ringing: eM, hasVideo: ek } = (0, X.Z)(y, eP),
             eG = (0, a.e7)([P.Z], () => null !== eZ && P.Z.isUserPlayingSounds(eZ), [eZ]),
             eU = (function (e, t, n) {
                 var r, i, l, o;
@@ -160,9 +160,9 @@ let ei = [$.fO.ACTIVITY],
             ez = (0, a.e7)([D.Z], () =>
                 (null == eW ? void 0 : eW.application_id) != null ? D.Z.getDetectableGame(eW.application_id) : null,
             ),
-            eK = (0, a.e7)([p.Z], () =>
+            eK = (0, a.e7)([h.Z], () =>
                 null != ez && (null == eW ? void 0 : eW.application_id) != null
-                    ? p.Z.getApplication(null == eW ? void 0 : eW.application_id)
+                    ? h.Z.getApplication(null == eW ? void 0 : eW.application_id)
                     : void 0,
             ),
             eY = (0, I.wV)({
@@ -173,14 +173,14 @@ let ei = [$.fO.ACTIVITY],
                 streamKey: y.type === $.fO.STREAM ? y.id : null,
                 channelId: el.id,
             }),
-            eX = i.useMemo(
+            eQ = i.useMemo(
                 () => (y.type === $.fO.STREAM ? null != eq && eq : y.type === $.fO.USER && null != eY && eY),
                 [eq, eY, y.type],
             );
         i.useEffect(() => {
-            ex(ep);
-        }, [ep]);
-        let eQ = i.useCallback(() => {
+            ex(eh);
+        }, [eh]);
+        let eX = i.useCallback(() => {
                 null != eZ && d.Z.toggleLocalMute(eZ, et.Yn.STREAM);
             }, [eZ]),
             eJ = i.useCallback(
@@ -214,7 +214,7 @@ let ei = [$.fO.ACTIVITY],
                     fit: em,
                     onVideoResize: ea,
                     paused: eb,
-                    focused: ep,
+                    focused: eh,
                     idle: ev,
                     controlsBottom: eO,
                 })),
@@ -222,7 +222,7 @@ let ei = [$.fO.ACTIVITY],
                         participant: y,
                         selected: eu,
                         width: eo,
-                        focused: ep,
+                        focused: eh,
                         idle: ev,
                         premiumIndicator: !1,
                     })),
@@ -239,7 +239,7 @@ let ei = [$.fO.ACTIVITY],
                     paused: eb,
                     selected: eu,
                     width: eo,
-                    blocked: eh,
+                    blocked: ep,
                     ignored: eg,
                     noVideoRender: ef || eR,
                     pulseSpeakingIndicator: e_,
@@ -252,7 +252,7 @@ let ei = [$.fO.ACTIVITY],
                 break;
             case $.fO.ACTIVITY:
                 (e1 = (0, r.jsx)(z.ZP, {
-                    interactible: ep,
+                    interactible: eh,
                     participant: y,
                     selected: eu,
                     channel: el,
@@ -269,7 +269,7 @@ let ei = [$.fO.ACTIVITY],
                     onVideoResize: ea,
                     paused: eb,
                     popoutType: O,
-                    focused: ep,
+                    focused: eh,
                     idle: ev,
                 });
         }
@@ -279,7 +279,7 @@ let ei = [$.fO.ACTIVITY],
             section: J.jXE.VOICE_CHANNEL_TILE,
             children: (0, r.jsx)("div", {
                 className: o()(er.wrapper, { [er.ringing]: eM }, F),
-                style: X,
+                style: Q,
                 onMouseEnter: () => {
                     eI(!0);
                 },
@@ -394,7 +394,7 @@ let ei = [$.fO.ACTIVITY],
                                                   return e;
                                               })(
                                                   {
-                                                      focused: ep,
+                                                      focused: eh,
                                                       width: eo,
                                                       inCall: es,
                                                       participantId: y.id,
@@ -408,17 +408,17 @@ let ei = [$.fO.ACTIVITY],
                                                       idle: ev,
                                                       platform: eV,
                                                       title: (0, H.Z)(el, y),
-                                                      blocked: eh,
+                                                      blocked: ep,
                                                       ignored: eg,
                                                       localVideoDisabled: eT,
                                                       videoToggleState: eA,
                                                       hideAudioIcon: eB,
                                                       onContextMenu: e0,
-                                                      onToggleMute: eQ,
+                                                      onToggleMute: eX,
                                                       participantUserId: eZ,
                                                       channel: el,
                                                       application: eK,
-                                                      secureFramesVerified: eX,
+                                                      secureFramesVerified: eQ,
                                                       isHovered: eS,
                                                       popoutType: O,
                                                   }),
@@ -443,9 +443,9 @@ let ei = [$.fO.ACTIVITY],
                                     es && !ed
                                         ? (0, r.jsx)("div", {
                                               className: o()(er.border, {
-                                                  [er.voiceChannelEffect]: !ep && (eG || null != eF),
-                                                  [er.speaking]: eD && !ep && !eG,
-                                                  [er.latchedNotSpeaking]: eL && !eD && !ep && !eG,
+                                                  [er.voiceChannelEffect]: !eh && (eG || null != eF),
+                                                  [er.speaking]: eD && !eh && !eG,
+                                                  [er.latchedNotSpeaking]: eL && !eD && !eh && !eG,
                                               }),
                                           })
                                         : null,
@@ -535,8 +535,8 @@ let ec = i.memo((e) => {
             width: l,
             focused: d,
             videoToggleState: f,
-            blocked: p,
-            ignored: h,
+            blocked: h,
+            ignored: p,
             participantId: b,
             participantType: _,
             participantUserId: v,
@@ -560,8 +560,8 @@ let ec = i.memo((e) => {
             guildId: j.getGuildId(),
         }),
         k = (0, O.j)({ displayNameStyles: M }),
-        U = (0, X.N)(l),
-        B = (0, X.K)(l),
+        U = (0, Q.N)(l),
+        B = (0, Q.K)(l),
         [F, V] = i.useState(!1);
     i.useEffect(() => {
         let e = !1,
@@ -634,7 +634,7 @@ let ec = i.memo((e) => {
                                         size: "xs",
                                         color: "currentColor",
                                     }),
-                                p
+                                h
                                     ? (0, r.jsx)("div", {
                                           className: er.blocked,
                                           children: (0, r.jsx)(u.t6m, {
@@ -644,7 +644,7 @@ let ec = i.memo((e) => {
                                           }),
                                       })
                                     : null,
-                                h
+                                p
                                     ? (0, r.jsx)("div", {
                                           className: er.ignored,
                                           children: (0, r.jsx)(u.kZF, {

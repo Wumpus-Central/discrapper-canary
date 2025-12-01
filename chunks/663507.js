@@ -70,8 +70,8 @@ class c {
             paddingVertical: u = this.paddingVertical,
             paddingHorizontal: d = this.paddingHorizontal,
             marginLeft: f = this.marginLeft,
-            sectionGutter: _ = this.sectionGutter,
-            dir: p = this.dir,
+            sectionGutter: p = this.sectionGutter,
+            dir: _ = this.dir,
         } = e;
         (this.sections !== t ||
             this.columns !== n ||
@@ -85,8 +85,8 @@ class c {
             this.paddingVertical !== u ||
             this.paddingHorizontal !== d ||
             this.marginLeft !== f ||
-            this.sectionGutter !== _ ||
-            this.dir !== p) &&
+            this.sectionGutter !== p ||
+            this.dir !== _) &&
             ((this.needsFullCompute = !0),
             (this.sections = t),
             (this.columns = n),
@@ -99,8 +99,8 @@ class c {
             (this.paddingVertical = u),
             (this.paddingHorizontal = d),
             (this.marginLeft = f),
-            (this.sectionGutter = _),
-            (this.dir = p));
+            (this.sectionGutter = p),
+            (this.dir = _));
     }
     computeFullCoords() {
         var e, t;
@@ -122,13 +122,13 @@ class c {
             }),
             (this.currentRow = 0),
             (this.lastColumnIndex = 0);
-        let _ = this.getPaddingTop(),
-            p = this.getPaddingBottom(),
-            h = this.getPaddingLeft(),
-            m = this.getPaddingRight(),
+        let p = this.getPaddingTop(),
+            _ = this.getPaddingBottom(),
+            m = this.getPaddingLeft(),
+            h = this.getPaddingRight(),
             g = null != (e = this.marginLeft) ? e : 0;
-        (this.columnHeights = Array(n).fill(_)),
-            (this.columnWidth = (u - m - h - l * (n - 1) - (d ? l : 0)) / n),
+        (this.columnHeights = Array(n).fill(p)),
+            (this.columnWidth = (u - h - m - l * (n - 1) - (d ? l : 0)) / n),
             (this.itemGrid = []);
         let E = 0;
         for (; E < this.sections.length; ) {
@@ -136,10 +136,10 @@ class c {
             let e = this.sections[E],
                 u = 0,
                 d = c(E),
-                _ = this.getMaxColumnHeight(this.columnHeights);
-            E > 0 && (_ = _ - l + this.getSectionGutter());
-            let p = d > 0 ? d + l : 0;
-            for (let e = 0; e < this.columnHeights.length; e++) this.columnHeights[e] = _ + p;
+                p = this.getMaxColumnHeight(this.columnHeights);
+            E > 0 && (p = p - l + this.getSectionGutter());
+            let _ = d > 0 ? d + l : 0;
+            for (let e = 0; e < this.columnHeights.length; e++) this.columnHeights[e] = p + _;
             for (; u < e; ) {
                 let e = r(E, u);
                 if (null == e) {
@@ -151,9 +151,9 @@ class c {
                 let a = o(E, u, this.columnWidth),
                     c = {
                         position: "absolute",
-                        [f]: this.columnWidth * i + l * (i + 1) - l + h,
+                        [f]: this.columnWidth * i + l * (i + 1) - l + m,
                         width: this.columnWidth,
-                        top: n - _,
+                        top: n - p,
                         height: a,
                     },
                     d = {
@@ -171,7 +171,7 @@ class c {
             d > 0 &&
                 (this.coordsMap[a(E)] = {
                     position: "sticky",
-                    [f]: h,
+                    [f]: m,
                     width: this.columnWidth * n + l * n,
                     top: 0,
                     height: d,
@@ -179,13 +179,13 @@ class c {
                 (this.coordsMap[i(E)] = {
                     position: "absolute",
                     [f]: g,
-                    width: this.columnWidth * n + l * (n - 1) + h + m,
-                    top: _,
-                    height: this.getMaxColumnHeight(this.columnHeights) - _,
+                    width: this.columnWidth * n + l * (n - 1) + m + h,
+                    top: p,
+                    height: this.getMaxColumnHeight(this.columnHeights) - p,
                 }),
                 E++;
         }
-        (this.columnHeights = this.columnHeights.map((e) => e - l + p)),
+        (this.columnHeights = this.columnHeights.map((e) => e - l + _)),
             (this.totalHeight = this.getMaxColumnHeight()),
             (this.visibleSections = {}),
             (this.needsFullCompute = !1);

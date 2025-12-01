@@ -1,7 +1,7 @@
 n.d(t, {
     MS: () => y,
     Ph: () => O,
-    _2: () => I,
+    _2: () => S,
     bE: () => b,
     gq: () => E,
     nf: () => g,
@@ -22,22 +22,22 @@ function d(e, t) {
 function f(e, t) {
     return t.map((t) => d(e, t));
 }
-function _(e) {
+function p(e) {
     return e.split("-")[1];
 }
-function p(e) {
-    return e.filter((e) => u[e] <= 1).map(_);
+function _(e) {
+    return e.filter((e) => u[e] <= 1).map(p);
 }
-function h(e, t) {
+function m(e, t) {
     e.forEach((e) => {
         u[e] = t;
     });
 }
-function m(e, t, n) {
+function h(e, t, n) {
     u[d(e, t)] = n;
 }
 function g(e, t) {
-    t.forEach((t) => m(e, t, 3));
+    t.forEach((t) => h(e, t, 3));
 }
 var E = (function (e) {
     return (
@@ -104,18 +104,18 @@ function v(e) {
         integrationType: e.integration_type,
     };
 }
-async function I(e, t) {
+async function S(e, t) {
     let n = f(e, t),
-        i = p(n);
+        i = _(n);
     if (0 === i.length) return [];
-    h(n, 2);
+    m(n, 2);
     try {
         let t = await r.tn.post({
             url: l.ANM.MEMBER_SAFETY_SUPPLEMENTAL(e),
             body: { user_ids: i },
             rejectWithError: !0,
         });
-        if (!Array.isArray(t.body)) return h(n, 0), [];
+        if (!Array.isArray(t.body)) return m(n, 0), [];
         let a = t.body.map(v),
             o = [];
         a.forEach((e) => {
@@ -125,9 +125,9 @@ async function I(e, t) {
         let s = f(e, o),
             c = i.filter((e) => !o.includes(e)),
             u = f(e, c);
-        return h(s, 3), h(u, 0), a;
+        return m(s, 3), m(u, 0), a;
     } catch (e) {
-        h(n, 0);
+        m(n, 0);
     }
     return [];
 }

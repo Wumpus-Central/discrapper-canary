@@ -1,8 +1,8 @@
 n.d(t, { Z: () => C }), n(539854), n(388685);
 var r = n(54381),
     i = n(494497),
-    l = n(793030),
-    o = n(442837),
+    o = n(793030),
+    l = n(442837),
     a = n(704215),
     s = n(243778),
     c = n(430824),
@@ -20,7 +20,7 @@ var r = n(54381),
 function j() {
     return (0, r.jsx)("div", {
         className: h.staffContainer,
-        children: (0, r.jsx)(l.xvT, {
+        children: (0, r.jsx)(o.xvT, {
             variant: "text-sm/medium",
             children: b.intl.string(_.default.l9n4QZ),
         }),
@@ -28,7 +28,7 @@ function j() {
 }
 function C(e) {
     let { guildId: t } = e,
-        n = (0, o.e7)([c.Z], () => {
+        n = (0, l.e7)([c.Z], () => {
             var e;
             return (
                 (null == (e = c.Z.getGuild(t)) ? void 0 : e.features.has(v.GuildFeatures.PREMIUM_TIER_3_OVERRIDE)) ===
@@ -50,17 +50,17 @@ function C(e) {
             let n = [];
             if (I) {
                 let e = C.some((e) => e.skuId === i.A$),
-                    l = w.length > 0 ? b.intl.string(x.default["B3OfL/"]) : void 0,
-                    o = [];
-                e && o.push(b.intl.string(_.default.Sfr0Jw)),
-                    w.length > 0 && o.push(b.intl.string(x.default.wiungr)),
+                    o = w.length > 0 ? b.intl.string(x.default["B3OfL/"]) : void 0,
+                    l = [];
+                e && l.push(b.intl.string(_.default.Sfr0Jw)),
+                    w.length > 0 && l.push(b.intl.string(x.default.wiungr)),
                     n.push(
                         (0, r.jsx)(
                             m.Z,
                             {
                                 guildId: t,
-                                powerupNames: [...C.map((e) => e.title), ...(null != l ? [l] : [])],
-                                warnings: o,
+                                powerupNames: [...C.map((e) => e.title), ...(null != o ? [o] : [])],
+                                warnings: l,
                             },
                             "expiring-powerups",
                         ),
@@ -90,7 +90,7 @@ function C(e) {
         ? (0, r.jsxs)("div", {
               className: h.container,
               children: [
-                  (0, r.jsx)(l.xvT, {
+                  (0, r.jsx)(o.xvT, {
                       variant: "eyebrow",
                       color: "text-secondary",
                       children: b.intl.string(_.default["3FRirU"]),

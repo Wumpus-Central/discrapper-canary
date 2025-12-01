@@ -1,9 +1,9 @@
-_.d(e, { t: () => i });
-var a = _(151122),
-    r = _(370336),
-    n = _(688838),
-    o = _(163162);
-let E = [
+r.d(t, { t: () => s });
+var n = r(151122),
+    a = r(370336),
+    i = r(688838),
+    o = r(163162);
+let _ = [
         "EventTarget",
         "Window",
         "Node",
@@ -36,50 +36,50 @@ let E = [
         "XMLHttpRequestEventTarget",
         "XMLHttpRequestUpload",
     ],
-    i = (0, a._I)((t = {}) => {
-        let e = {
+    s = (0, n._I)((e = {}) => {
+        let t = {
             XMLHttpRequest: !0,
             eventTarget: !0,
             requestAnimationFrame: !0,
             setInterval: !0,
             setTimeout: !0,
-            ...t,
+            ...e,
         };
         return {
             name: "BrowserApiErrors",
             setupOnce() {
-                e.setTimeout && (0, r.hl)(o.m9, "setTimeout", c),
-                    e.setInterval && (0, r.hl)(o.m9, "setInterval", c),
-                    e.requestAnimationFrame && (0, r.hl)(o.m9, "requestAnimationFrame", s),
-                    e.XMLHttpRequest && "XMLHttpRequest" in o.m9 && (0, r.hl)(XMLHttpRequest.prototype, "send", l);
-                let t = e.eventTarget;
-                t && (Array.isArray(t) ? t : E).forEach(I);
+                t.setTimeout && (0, a.hl)(o.m9, "setTimeout", c),
+                    t.setInterval && (0, a.hl)(o.m9, "setInterval", c),
+                    t.requestAnimationFrame && (0, a.hl)(o.m9, "requestAnimationFrame", E),
+                    t.XMLHttpRequest && "XMLHttpRequest" in o.m9 && (0, a.hl)(XMLHttpRequest.prototype, "send", l);
+                let e = t.eventTarget;
+                e && (Array.isArray(e) ? e : _).forEach(u);
             },
         };
     });
-function c(t) {
-    return function (...e) {
-        let _ = e[0];
+function c(e) {
+    return function (...t) {
+        let r = t[0];
         return (
-            (e[0] = (0, o.re)(_, {
+            (t[0] = (0, o.re)(r, {
                 mechanism: {
-                    data: { function: (0, n.$P)(t) },
+                    data: { function: (0, i.$P)(e) },
                     handled: !1,
                     type: "instrument",
                 },
             })),
-            t.apply(this, e)
+            e.apply(this, t)
         );
     };
 }
-function s(t) {
-    return function (e) {
-        return t.apply(this, [
-            (0, o.re)(e, {
+function E(e) {
+    return function (t) {
+        return e.apply(this, [
+            (0, o.re)(t, {
                 mechanism: {
                     data: {
                         function: "requestAnimationFrame",
-                        handler: (0, n.$P)(t),
+                        handler: (0, i.$P)(e),
                     },
                     handled: !1,
                     type: "instrument",
@@ -88,78 +88,78 @@ function s(t) {
         ]);
     };
 }
-function l(t) {
-    return function (...e) {
-        let _ = this;
+function l(e) {
+    return function (...t) {
+        let r = this;
         return (
-            ["onload", "onerror", "onprogress", "onreadystatechange"].forEach((t) => {
-                t in _ &&
-                    "function" == typeof _[t] &&
-                    (0, r.hl)(_, t, function (e) {
-                        let _ = {
+            ["onload", "onerror", "onprogress", "onreadystatechange"].forEach((e) => {
+                e in r &&
+                    "function" == typeof r[e] &&
+                    (0, a.hl)(r, e, function (t) {
+                        let r = {
                                 mechanism: {
                                     data: {
-                                        function: t,
-                                        handler: (0, n.$P)(e),
+                                        function: e,
+                                        handler: (0, i.$P)(t),
                                     },
                                     handled: !1,
                                     type: "instrument",
                                 },
                             },
-                            a = (0, r.HK)(e);
-                        return a && (_.mechanism.data.handler = (0, n.$P)(a)), (0, o.re)(e, _);
+                            n = (0, a.HK)(t);
+                        return n && (r.mechanism.data.handler = (0, i.$P)(n)), (0, o.re)(t, r);
                     });
             }),
-            t.apply(this, e)
+            e.apply(this, t)
         );
     };
 }
-function I(t) {
-    let e = o.m9,
-        _ = e[t] && e[t].prototype;
-    _ &&
-        _.hasOwnProperty &&
-        _.hasOwnProperty("addEventListener") &&
-        ((0, r.hl)(_, "addEventListener", function (e) {
-            return function (_, a, r) {
+function u(e) {
+    let t = o.m9,
+        r = t[e] && t[e].prototype;
+    r &&
+        r.hasOwnProperty &&
+        r.hasOwnProperty("addEventListener") &&
+        ((0, a.hl)(r, "addEventListener", function (t) {
+            return function (r, n, a) {
                 try {
-                    "function" == typeof a.handleEvent &&
-                        (a.handleEvent = (0, o.re)(a.handleEvent, {
+                    "function" == typeof n.handleEvent &&
+                        (n.handleEvent = (0, o.re)(n.handleEvent, {
                             mechanism: {
                                 data: {
                                     function: "handleEvent",
-                                    handler: (0, n.$P)(a),
-                                    target: t,
+                                    handler: (0, i.$P)(n),
+                                    target: e,
                                 },
                                 handled: !1,
                                 type: "instrument",
                             },
                         }));
-                } catch (t) {}
-                return e.apply(this, [
-                    _,
-                    (0, o.re)(a, {
+                } catch (e) {}
+                return t.apply(this, [
+                    r,
+                    (0, o.re)(n, {
                         mechanism: {
                             data: {
                                 function: "addEventListener",
-                                handler: (0, n.$P)(a),
-                                target: t,
+                                handler: (0, i.$P)(n),
+                                target: e,
                             },
                             handled: !1,
                             type: "instrument",
                         },
                     }),
-                    r,
+                    a,
                 ]);
             };
         }),
-        (0, r.hl)(_, "removeEventListener", function (t) {
-            return function (e, _, a) {
+        (0, a.hl)(r, "removeEventListener", function (e) {
+            return function (t, r, n) {
                 try {
-                    let r = _ && _.__sentry_wrapped__;
-                    r && t.call(this, e, r, a);
-                } catch (t) {}
-                return t.call(this, e, _, a);
+                    let a = r && r.__sentry_wrapped__;
+                    a && e.call(this, t, a, n);
+                } catch (e) {}
+                return e.call(this, t, r, n);
             };
         }));
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(54381);
 n(473749);
 var i = n(442837),
@@ -10,15 +10,15 @@ var i = n(442837),
     u = n(228168),
     d = n(388032),
     f = n(862131);
-function _(e) {
+function p(e) {
     let { userId: t, size: n = "xs" } = e,
-        _ = (0, l.ML)(t),
-        p = (0, l.vh)(t),
-        h = (0, i.e7)([c.Z], () => {
+        p = (0, l.ML)(t),
+        _ = (0, l.vh)(t),
+        m = (0, i.e7)([c.Z], () => {
             var e;
             return null == (e = c.Z.getUserProfile(t)) ? void 0 : e.fetchError;
         });
-    return _.length > 0 || p.length > 0 || null == h
+    return p.length > 0 || _.length > 0 || null == m
         ? null
         : (0, r.jsx)(o.jS, {
               className: f.container,

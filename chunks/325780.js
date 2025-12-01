@@ -77,10 +77,10 @@ function d(e, t) {
 }
 function f(e) {
     var { checked: t, disabled: n, id: o, onChange: l, focusProps: d, hasIcon: f = !1 } = e,
-        _ = u(e, ["checked", "disabled", "id", "onChange", "focusProps", "hasIcon"]);
+        p = u(e, ["checked", "disabled", "id", "onChange", "focusProps", "hasIcon"]);
     return (0, r.jsx)(
         i.g,
-        c(s({}, _), {
+        c(s({}, p), {
             id: o,
             disabled: n,
             layout: "horizontal",

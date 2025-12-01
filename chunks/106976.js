@@ -2,7 +2,7 @@ n.d(t, {
     i1: () => d,
     rx: () => u,
     sB: () => f,
-    vY: () => _,
+    vY: () => p,
 }),
     n(953529),
     n(388685);
@@ -107,7 +107,7 @@ function f(e) {
         guildId: e,
     });
 }
-async function _(e) {
+async function p(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
     r.Z.dispatch({
         type: "APPLICATION_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN",
@@ -128,7 +128,7 @@ async function _(e) {
         ),
             c(o);
     } catch (n) {
-        if ("status" in n && 429 === n.status && t < 10) await _(e, ++t);
+        if ("status" in n && 429 === n.status && t < 10) await p(e, ++t);
         else throw n;
     }
 }

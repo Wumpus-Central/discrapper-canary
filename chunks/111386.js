@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(704215),
@@ -33,7 +33,7 @@ let f = () =>
                 }),
             ],
         }),
-    _ = (e) => {
+    p = (e) => {
         let { children: t } = e,
             [n] = (0, l.US)([a.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP]),
             [s, c] = i.useState(!1);

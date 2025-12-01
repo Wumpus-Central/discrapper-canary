@@ -1,13 +1,13 @@
-l.d(n, { I: () => s });
-var t = l(473749),
-    i = l(638730),
-    a = l(626135),
-    o = l(981631);
-function r(e, n, l, t) {
-    let { scrollTop: i = 0, scrollOffset: o = 0, scrollHeight: r = 0, scrollWidth: s = 0 } = t;
-    if (r > 0) {
-        let t = (i + o) / r;
-        if (t > 0) {
+t.d(n, { I: () => r });
+var l = t(473749),
+    i = t(638730),
+    a = t(626135),
+    o = t(981631);
+function s(e, n, t, l) {
+    let { scrollTop: i = 0, scrollOffset: o = 0, scrollHeight: s = 0, scrollWidth: r = 0 } = l;
+    if (s > 0) {
+        let l = (i + o) / s;
+        if (l > 0) {
             let {
                 sessionId: i,
                 guildId: o,
@@ -23,33 +23,33 @@ function r(e, n, l, t) {
                 page_title: c,
                 is_user_guild_member: u,
                 page_has_leaderboard: g,
-                scroll_visible_percent: t,
-                page_height: Math.round(r),
-                page_width: Math.round(s),
-                location_stack: l,
+                scroll_visible_percent: l,
+                page_height: Math.round(s),
+                page_width: Math.round(r),
+                location_stack: t,
             });
         }
     }
 }
-let s = (e, n, l) => {
-    let a = t.useRef(n);
-    t.useEffect(() => {
+let r = (e, n, t) => {
+    let a = l.useRef(n);
+    l.useEffect(() => {
         a.current = n;
     }, [n]);
-    let s = (0, i.h)(r, 5000, [], { trailing: !0 });
+    let r = (0, i.h)(s, 5000, [], { trailing: !0 });
     return {
-        handleScroll: t.useCallback(() => {
+        handleScroll: l.useCallback(() => {
             if (null != e.current) {
                 let n = e.current.getScrollerNode(),
-                    t = a.current;
+                    l = a.current;
                 null != n &&
-                    s(o.rMx.SLAYER_STOREFRONT_PAGE_SCROLLED, t, l, {
+                    r(o.rMx.SLAYER_STOREFRONT_PAGE_SCROLLED, l, t, {
                         scrollTop: n.scrollTop,
                         scrollOffset: n.offsetHeight,
                         scrollHeight: n.scrollHeight,
                         scrollWidth: n.scrollWidth,
                     });
             }
-        }, [s, l, e]),
+        }, [r, t, e]),
     };
 };

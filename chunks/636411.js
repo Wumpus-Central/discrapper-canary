@@ -10,10 +10,10 @@ var i = n(120356),
     u = n(622909),
     d = n(639119),
     f = n(767714),
-    _ = n(165583),
-    p = n(981631),
-    h = n(474936),
-    m = n(388032),
+    p = n(165583),
+    _ = n(981631),
+    m = n(474936),
+    h = n(388032),
     g = n(717461);
 let E = "https://cdn.discordapp.com/assets/22_211_SuperReactions_GTM_Hero_v09.mp4",
     b = 32;
@@ -21,13 +21,13 @@ function y(e) {
     var t, n;
     let { onDismiss: i } = e,
         y = (0, o.e7)([l.Z], () => l.Z.useReducedMotion),
-        O = m.intl.string(m.t.eikz43),
+        O = h.intl.string(h.t.eikz43),
         v = (0, d.N)(),
-        I = (0, u.N)(),
-        T = (null == v ? void 0 : v.subscription_trial) != null || null != I,
-        S = {
-            object: p.qAy.BUTTON_CTA,
-            section: p.jXE.SUPER_REACTION_PICKER,
+        S = (0, u.N)(),
+        I = (null == v ? void 0 : v.subscription_trial) != null || null != S,
+        T = {
+            object: _.qAy.BUTTON_CTA,
+            section: _.jXE.SUPER_REACTION_PICKER,
         };
     return (0, r.jsxs)("div", {
         className: g.wrapper,
@@ -35,7 +35,7 @@ function y(e) {
             (0, r.jsx)(s.P3F, {
                 onClick: i,
                 className: g.closeButton,
-                "aria-label": m.intl.string(m.t.WAI6xu),
+                "aria-label": h.intl.string(h.t.WAI6xu),
                 children: (0, r.jsx)(s.Dio, {
                     size: "md",
                     color: "currentColor",
@@ -47,7 +47,7 @@ function y(e) {
                     (0, r.jsx)("div", {
                         className: g.contentFill,
                         children: (0, r.jsx)(c.Z, {
-                            className: a()(g.banner, { [g.hasTrialOffer]: T }),
+                            className: a()(g.banner, { [g.hasTrialOffer]: I }),
                             src: E,
                             loop: !0,
                             autoPlay: !y,
@@ -55,16 +55,16 @@ function y(e) {
                             controls: !0,
                         }),
                     }),
-                    T
-                        ? (0, r.jsx)(_.ZP, {
-                              type: h.cd.BURST_REACTION_QUICK_ACTION_UPSELL,
+                    I
+                        ? (0, r.jsx)(p.ZP, {
+                              type: m.cd.BURST_REACTION_QUICK_ACTION_UPSELL,
                               subscriptionTier:
                                   null != (n = null == v || null == (t = v.subscription_trial) ? void 0 : t.sku_id)
                                       ? n
-                                      : h.Si.TIER_2,
-                              headingText: m.intl.string(m.t.Wfl5zp),
-                              analyticsLocationObject: S,
-                              discountOffer: I,
+                                      : m.Si.TIER_2,
+                              headingText: h.intl.string(h.t.Wfl5zp),
+                              analyticsLocationObject: T,
+                              discountOffer: S,
                               trialOffer: v,
                               children: O,
                           })
@@ -83,7 +83,7 @@ function y(e) {
                                           (0, r.jsx)(s.Heading, {
                                               className: g.headerText,
                                               variant: "heading-xl/bold",
-                                              children: m.intl.string(m.t.Wfl5zp),
+                                              children: h.intl.string(h.t.Wfl5zp),
                                           }),
                                       ],
                                   }),
@@ -95,8 +95,8 @@ function y(e) {
                                   (0, r.jsx)("div", {
                                       className: g.ctaActionWrapper,
                                       children: (0, r.jsx)(f.Z, {
-                                          subscriptionTier: h.Si.TIER_2,
-                                          textOptions: { textOverride: m.intl.string(m.t.sEAnVH) },
+                                          subscriptionTier: m.Si.TIER_2,
+                                          textOptions: { textOverride: h.intl.string(h.t.sEAnVH) },
                                       }),
                                   }),
                               ],

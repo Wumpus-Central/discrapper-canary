@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(992970),
     d = n(317951),
     f = n(135793),
-    _ = n(883998),
-    p = n(576645),
-    h = n(981631),
-    m = n(388032),
+    p = n(883998),
+    _ = n(576645),
+    m = n(981631),
+    h = n(388032),
     g = n(354617);
 function E(e) {
     let { emojiConfetti: t } = e,
@@ -32,7 +32,7 @@ let b = function (e) {
     let { channel: t } = e,
         n = (0, c.z8)(t.id),
         s = (0, c.OG)(t.id),
-        { entitlement: b, numPotions: y } = (0, p.t6)(d.D1),
+        { entitlement: b, numPotions: y } = (0, _.t6)(d.D1),
         O = i.useCallback(
             (e) => {
                 (0, c.Hi)(e, t.id);
@@ -42,17 +42,17 @@ let b = function (e) {
         v = i.useCallback(() => {
             (0, c.GA)(t.id);
         }, [t.id]),
-        I = i.useMemo(() => (null != n ? n.name.replace(/_/g, " ") : ""), [n]),
-        T = i.useCallback(() => {
+        S = i.useMemo(() => (null != n ? n.name.replace(/_/g, " ") : ""), [n]),
+        I = i.useCallback(() => {
             (0, c.Hb)(t.id);
         }, [t.id]),
-        S = i.useMemo(
+        T = i.useMemo(
             () =>
                 null != y && y > 0
-                    ? (null == b ? void 0 : b.type) === h.qc2.DEVELOPER_GIFT
-                        ? m.intl.format(m.t["b+P6ra"], { numPotions: y })
-                        : m.intl.format(m.t.RiQ4ci, { numPotions: y })
-                    : m.intl.string(m.t.hvVgAZ),
+                    ? (null == b ? void 0 : b.type) === m.qc2.DEVELOPER_GIFT
+                        ? h.intl.format(h.t["b+P6ra"], { numPotions: y })
+                        : h.intl.format(h.t.RiQ4ci, { numPotions: y })
+                    : h.intl.string(h.t.hvVgAZ),
             [y, b],
         ),
         [A, C] = i.useState(!1 === s);
@@ -62,13 +62,13 @@ let b = function (e) {
     let N = i.useCallback(() => {
             C(!1);
         }, []),
-        R = i.useCallback(
+        P = i.useCallback(
             (e) => {
                 O(e), C(!1);
             },
             [O],
         ),
-        P = i.useCallback(() => {
+        R = i.useCallback(() => {
             (0, f.s)({
                 channelId: t.id,
                 onRedeem: () => {},
@@ -76,21 +76,21 @@ let b = function (e) {
                 source: u.YD.MessageConfettiBar,
             });
         }, [t.id]),
-        D = i.useRef(null);
+        w = i.useRef(null);
     return (0, r.jsxs)("div", {
         className: g.bar,
         children: [
-            (0, r.jsx)(_.Z, {
+            (0, r.jsx)(p.Z, {
                 channel: t,
                 shouldShow: A,
                 onRequestClose: N,
-                setEmojiConfetti: R,
-                positionRef: D,
+                setEmojiConfetti: P,
+                positionRef: w,
                 position: "top",
                 align: "left",
                 children: () =>
                     (0, r.jsxs)(o.P3F, {
-                        innerRef: D,
+                        innerRef: w,
                         onClick: () => C(!A),
                         className: g.emojiSelectContainer,
                         children: [
@@ -101,7 +101,7 @@ let b = function (e) {
                             (0, r.jsx)(a.xvT, {
                                 variant: "text-sm/medium",
                                 children:
-                                    null == n ? m.intl.string(m.t.mzfiGW) : m.intl.format(m.t.Hcd9OU, { emojiName: I }),
+                                    null == n ? h.intl.string(h.t.mzfiGW) : h.intl.format(h.t.Hcd9OU, { emojiName: S }),
                             }),
                         ],
                     }),
@@ -110,15 +110,15 @@ let b = function (e) {
                 className: g.end,
                 children: [
                     (0, r.jsx)(o.Button, {
-                        onClick: P,
-                        text: S,
+                        onClick: R,
+                        text: T,
                         variant: "primary",
                     }),
                     (0, r.jsx)("div", {
                         className: g.separator,
                         "aria-hidden": !0,
                     }),
-                    (0, r.jsx)(l.B, { onClick: T }),
+                    (0, r.jsx)(l.B, { onClick: I }),
                 ],
             }),
         ],

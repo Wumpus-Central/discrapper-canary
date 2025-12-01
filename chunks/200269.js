@@ -50,18 +50,18 @@ function c(e) {
     (null != t || (null == a && o.consumed.current)) && u++;
     let d = i.useRef(!1),
         f = i.useRef(!1),
-        _ = i.useMemo(() => s(c, d), [c]),
-        p = i.useMemo(() => s(u, f), [u]);
+        p = i.useMemo(() => s(c, d), [c]),
+        _ = i.useMemo(() => s(u, f), [u]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             null != t
                 ? (0, r.jsx)(l.Provider, {
-                      value: _,
+                      value: p,
                       children: t,
                   })
                 : null,
             (0, r.jsx)(l.Provider, {
-                value: p,
+                value: _,
                 children: n,
             }),
         ],

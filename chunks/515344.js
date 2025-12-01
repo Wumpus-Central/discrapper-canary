@@ -12,15 +12,15 @@ var r = n(473749),
     u = n(496675),
     d = n(944486),
     f = n(914010),
-    _ = n(135431),
-    p = n(433534),
-    h = n(914498),
-    m = n(981631),
+    p = n(135431),
+    _ = n(433534),
+    m = n(914498),
+    h = n(981631),
     g = n(49898),
     E = n(388032);
 function b(e) {
     let { isDiscoverable: t, customInstallUrl: n, installParams: r, integrationTypesConfig: o } = e,
-        s = (0, p.Eb)({
+        s = (0, _.Eb)({
             customInstallUrl: n,
             installParams: r,
             integrationTypesConfig: o,
@@ -29,19 +29,19 @@ function b(e) {
             var e;
             return null != (e = f.Z.getGuildId()) ? e : void 0;
         }),
-        _ = (0, i.e7)([c.Z, u.Z, d.Z], () => {
+        p = (0, i.e7)([c.Z, u.Z, d.Z], () => {
             let e = c.Z.getChannel(d.Z.getChannelId());
-            return null != e && (e.isPrivate() || u.Z.can(m.Plq.SEND_MESSAGES, e));
+            return null != e && (e.isPrivate() || u.Z.can(h.Plq.SEND_MESSAGES, e));
         }, []),
-        h = (0, a.PZ)(e, l) && _,
-        g = t || h;
+        m = (0, a.PZ)(e, l) && p,
+        g = t || m;
     return {
         isDiscoverable: t,
         customInstallUrl: n,
         installParams: r,
         integrationTypesConfig: o,
         canViewApp: g,
-        canOpenAppLauncher: h,
+        canOpenAppLauncher: m,
         isInstallable: s,
         selectedGuildId: l,
     };
@@ -70,7 +70,7 @@ function y(e, t) {
                 : a
                   ? () => {
                         null == t || t(),
-                            (0, _.L)({
+                            (0, p.L)({
                                 applicationId: e.id,
                                 customInstallUrl: c,
                                 installParams: u,
@@ -91,7 +91,7 @@ function O(e) {
             t && null != i
                 ? {
                       label: E.intl.string(E.t.hvVgAZ),
-                      trackingArea: h.j_.VIEW,
+                      trackingArea: m.j_.VIEW,
                       onClick() {
                           i();
                       },
@@ -99,7 +99,7 @@ function O(e) {
                 : n && null != i
                   ? {
                         label: E.intl.string(E.t.NgXl3C),
-                        trackingArea: h.j_.ADD_APP,
+                        trackingArea: m.j_.ADD_APP,
                         onClick() {
                             i();
                         },

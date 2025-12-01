@@ -1,4 +1,4 @@
-n.d(t, { J: () => I }), n(388685), n(65234), n(111804), n(490233), n(97749);
+n.d(t, { J: () => S }), n(388685), n(65234), n(111804), n(490233), n(97749);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(210887),
     d = n(585483),
     f = n(531826),
-    _ = n(53289),
-    p = n(953101),
-    h = n(701488),
-    m = n(981631),
+    p = n(53289),
+    _ = n(953101),
+    m = n(701488),
+    h = n(981631),
     g = n(702255);
 function E(e, t, n) {
     return (
@@ -77,62 +77,62 @@ function v(e) {
             allowPopups: y = !1,
             referrerPolicy: v = "origin",
         } = e,
-        I = (0, f.sU)({}),
-        T = (0, s.useMemoOne)(() => (0, l.Z)(), [t]),
-        S = i.useRef(null),
-        A = (0, _.Z)(S, g, null == I ? window : I),
+        S = (0, f.sU)({}),
+        I = (0, s.useMemoOne)(() => (0, l.Z)(), [t]),
+        T = i.useRef(null),
+        A = (0, p.Z)(T, g, null == S ? window : S),
         C = O(b({}, E), {
-            frame_id: T,
-            platform: h.S4.DESKTOP,
+            frame_id: I,
+            platform: m.S4.DESKTOP,
         }),
-        [N, R] = i.useState(!1),
-        P = u.Z.theme,
-        D = b({}, a);
-    function w(e) {
+        [N, P] = i.useState(!1),
+        R = u.Z.theme,
+        w = b({}, a);
+    function D(e) {
         var n;
         null == o || o(e.target),
-            (S.current = e.target),
+            (T.current = e.target),
             A(!0),
             null == (n = e.target.contentWindow) || n.postMessage([c.Z.HELLO, C], null != t ? t : "");
     }
     return (
-        P === m.BRd.LIGHT ? (D.colorScheme = "light") : (D.colorScheme = "dark"),
+        R === h.BRd.LIGHT ? (w.colorScheme = "light") : (w.colorScheme = "dark"),
         i.useEffect(
             () => (
-                d.S.dispatch(m.CkL.IFRAME_MOUNT, { id: T }),
+                d.S.dispatch(h.CkL.IFRAME_MOUNT, { id: I }),
                 () => {
-                    d.S.dispatch(m.CkL.IFRAME_UNMOUNT, { id: T });
+                    d.S.dispatch(h.CkL.IFRAME_UNMOUNT, { id: I });
                 }
             ),
-            [T],
+            [I],
         ),
         i.useEffect(() => {
             let e = (e) => {
                 let { resizing: t } = e;
-                R(t);
+                P(t);
             };
             return (
-                d.S.subscribe(m.CkL.MANUAL_IFRAME_RESIZING, e),
+                d.S.subscribe(h.CkL.MANUAL_IFRAME_RESIZING, e),
                 () => {
-                    d.S.unsubscribe(m.CkL.MANUAL_IFRAME_RESIZING, e);
+                    d.S.unsubscribe(h.CkL.MANUAL_IFRAME_RESIZING, e);
                 }
             );
         }, []),
-        N && (D.pointerEvents = "none"),
+        N && (w.pointerEvents = "none"),
         null != t
             ? (0, r.jsx)("iframe", {
-                  style: D,
+                  style: w,
                   allow: "autoplay; encrypted-media",
                   referrerPolicy: v,
-                  onLoad: w,
-                  sandbox: (0, p.Z)({ allowPopups: y }),
+                  onLoad: D,
+                  sandbox: (0, _.Z)({ allowPopups: y }),
                   className: n,
                   src: "".concat(t, "?").concat(new URLSearchParams(C)),
               })
             : null
     );
 }
-function I(e) {
+function S(e) {
     let { onLoad: t } = e,
         [n, a] = i.useState(!1),
         s = i.useCallback(

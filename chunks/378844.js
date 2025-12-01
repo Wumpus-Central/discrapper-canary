@@ -12,9 +12,9 @@ var l = n(442837),
     c = n(391650),
     u = n(313201),
     d = n(144114),
-    p = n(607744),
+    f = n(607744),
     h = n(594174),
-    f = n(981631),
+    p = n(981631),
     g = n(815660),
     m = n(388032),
     b = n(36973);
@@ -50,25 +50,25 @@ let O = (e) => {
         {
             notClaimed: v,
             notEmailVerified: j,
-            notPhoneVerified: C,
-            newAccount: x,
+            notPhoneVerified: x,
+            newAccount: C,
             newMember: E,
-        } = (0, l.e7)([p.Z], () => p.Z.getCheck(r), [r]),
+        } = (0, l.e7)([f.Z], () => f.Z.getCheck(r), [r]),
         S = 0 === t ? m.intl.string(m.t["6zY8BI"]) : null,
         I = null,
         P = null;
     return (0 === t &&
         (v
             ? ((I = m.intl.string(m.t.IRxUlG)), (P = m.intl.string(m.t.fiNVin)))
-            : C
+            : x
               ? ((I = m.intl.string(m.t.vW8iUF)), (P = m.intl.string(m.t["50gfOv"])))
               : j
                 ? ((I = m.intl.string(m.t.vdSOpz)), (P = m.intl.string(m.t.lm1UKt)))
                 : E
-                  ? ((I = m.intl.formatToPlainString(m.t.v1ktYb, { min: f.YeM.MEMBER_AGE })),
+                  ? ((I = m.intl.formatToPlainString(m.t.v1ktYb, { min: p.YeM.MEMBER_AGE })),
                     (P = m.intl.string(m.t.BddRzS)))
-                  : x &&
-                    ((I = m.intl.formatToPlainString(m.t.sncw41, { min: f.YeM.ACCOUNT_AGE })),
+                  : C &&
+                    ((I = m.intl.formatToPlainString(m.t.sncw41, { min: p.YeM.ACCOUNT_AGE })),
                     (P = m.intl.string(m.t.BddRzS)))),
     null == S || null == I)
         ? null
@@ -107,7 +107,7 @@ let O = (e) => {
                                                 onClick: () => {
                                                     v
                                                         ? c.j()
-                                                        : C
+                                                        : x
                                                           ? (0, a.ZDy)(
                                                                 async () => {
                                                                     let { default: e } = await Promise.resolve().then(
@@ -176,7 +176,7 @@ let O = (e) => {
                                             }),
                                         })
                                       : null,
-                                  v || C || j
+                                  v || x || j
                                       ? (0, i.jsx)(a.Avr, {
                                             onClick: y,
                                             text: m.intl.string(m.t.oEAioF),

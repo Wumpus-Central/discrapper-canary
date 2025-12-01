@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(642613), n(583741), n(388685), n(415506);
+n.d(t, { Z: () => T }), n(642613), n(583741), n(388685), n(415506);
 var r = n(473749),
     i = n(512722),
     a = n.n(i),
@@ -9,10 +9,10 @@ var r = n(473749),
     u = n(496929),
     d = n(493773),
     f = n(594174),
-    _ = n(78839),
-    p = n(580130),
-    h = n(122289),
-    m = n(74538),
+    p = n(78839),
+    _ = n(580130),
+    m = n(122289),
+    h = n(74538),
     g = n(981631),
     E = n(474936);
 function b(e, t, n) {
@@ -67,7 +67,7 @@ function v(e, t) {
         e
     );
 }
-let I = (e) => {
+let S = (e) => {
     var t;
     let {
             isFetching: n = !1,
@@ -99,26 +99,26 @@ let I = (e) => {
     if ((f.reverse(), f.length > 0 && (f.length !== r.length || null == f[0].startsAt || null == f[0].endsAt))) {
         let e = Array.from(r.values()).map((e) => e.id),
             t = "fractional redemption entitlements should have startsAt/endsAt";
-        throw ((0, h.g9)(t, { extra: { entitlementIds: e } }), Error(t));
+        throw ((0, m.g9)(t, { extra: { entitlementIds: e } }), Error(t));
     }
-    let _ = null != (t = f[0]) ? t : null,
-        p = E.a$.NONE;
-    null != _ && (p = null != s && s.status === g.O0b.PAUSED ? E.a$.FP_SUB_PAUSED : E.a$.FP_ONLY);
-    let b = u && (null == _ ? void 0 : _.sourceType) === g.kNB.REVERSE_TRIAL;
+    let p = null != (t = f[0]) ? t : null,
+        _ = E.a$.NONE;
+    null != p && (_ = null != s && s.status === g.O0b.PAUSED ? E.a$.FP_SUB_PAUSED : E.a$.FP_ONLY);
+    let b = u && (null == p ? void 0 : p.sourceType) === g.kNB.REVERSE_TRIAL;
     return {
-        isFractionalPremiumActive: null != _,
-        fractionalState: p,
-        startsAt: null != _ ? l()(_.startsAt) : l()(0),
-        endsAt: null != _ ? l()((0, m.N1)(_.endsAt, i, void 0, b)) : l()(0),
-        currentEntitlementId: null != _ ? _.id : "",
+        isFractionalPremiumActive: null != p,
+        fractionalState: _,
+        startsAt: null != p ? l()(p.startsAt) : l()(0),
+        endsAt: null != p ? l()((0, h.N1)(p.endsAt, i, void 0, b)) : l()(0),
+        currentEntitlementId: null != p ? p.id : "",
         unactivatedUnits: i,
         fetched: c,
     };
 };
-function T(e, t) {
-    return null != t && !p.Z.fetchingAllEntitlements && (!p.Z.fetchedAllEntitlements || e);
+function I(e, t) {
+    return null != t && !_.Z.fetchingAllEntitlements && (!_.Z.fetchedAllEntitlements || e);
 }
-function S() {
+function T() {
     let {
             forceFetch: e,
             excludeReverseTrial: t,
@@ -131,36 +131,36 @@ function S() {
                   excludeReverseTrialFromCountdown: !1,
               },
         i = (0, c.e7)([f.default], () => f.default.getCurrentUser()),
-        a = (0, c.Wu)([p.Z], () => p.Z.getFractionalPremium({ excludeReverseTrial: t })),
-        s = (0, c.e7)([p.Z], () => p.Z.fetchedAllEntitlements),
-        l = (0, c.Wu)([p.Z], () => p.Z.getUnactivatedFractionalPremiumUnits()),
-        h = (0, c.e7)([_.Z], () => _.Z.getPremiumTypeSubscription()),
-        [m, E] = r.useState(
-            I({
-                isFetching: T(e, i) || p.Z.fetchingAllEntitlements,
+        a = (0, c.Wu)([_.Z], () => _.Z.getFractionalPremium({ excludeReverseTrial: t })),
+        s = (0, c.e7)([_.Z], () => _.Z.fetchedAllEntitlements),
+        l = (0, c.Wu)([_.Z], () => _.Z.getUnactivatedFractionalPremiumUnits()),
+        m = (0, c.e7)([p.Z], () => p.Z.getPremiumTypeSubscription()),
+        [h, E] = r.useState(
+            S({
+                isFetching: I(e, i) || _.Z.fetchingAllEntitlements,
                 entitlements: a,
                 unactivatedFractionalPremiumUnits: l,
                 currentUser: i,
-                premiumSubscription: h,
+                premiumSubscription: m,
                 fetchedAllEntitlements: s,
                 excludeReverseTrialFromCountdown: n,
             }),
         );
     return (
         (0, d.ZP)(() => {
-            T(e, i) && (0, u.p0)({ entitlementType: g.qc2.FRACTIONAL_REDEMPTION });
+            I(e, i) && (0, u.p0)({ entitlementType: g.qc2.FRACTIONAL_REDEMPTION });
         }),
         r.useEffect(() => {
-            let e = I({
+            let e = S({
                 entitlements: a,
                 unactivatedFractionalPremiumUnits: l,
                 currentUser: i,
-                premiumSubscription: h,
+                premiumSubscription: m,
                 fetchedAllEntitlements: s,
                 excludeReverseTrialFromCountdown: n,
             });
             E((t) => ((0, o.isEqual)(t, e) ? t : e));
-        }, [i, a, h, l, s, n]),
-        m
+        }, [i, a, m, l, s, n]),
+        h
     );
 }

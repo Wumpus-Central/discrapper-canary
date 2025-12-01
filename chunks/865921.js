@@ -1,4 +1,4 @@
-n.d(t, { v: () => p }), n(388685);
+n.d(t, { v: () => _ }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(399606),
@@ -9,42 +9,42 @@ var r = n(54381),
     u = n(409813),
     d = n(48931),
     f = n(456251),
-    _ = n(981631);
-function p(e) {
+    p = n(981631);
+function _(e) {
     let { handleStepChange: t, handleClose: n } = e,
         {
-            blockedPayments: p,
-            hasFetchedSkus: h,
-            paymentSources: m,
+            blockedPayments: _,
+            hasFetchedSkus: m,
+            paymentSources: h,
             hasFetchedPaymentSources: g,
             application: E,
             skusById: b,
             selectedSkuId: y,
         } = (0, c.JL)(),
         { isGift: O } = (0, l.wD)(),
-        [v, I] = i.useState(!0),
-        [T, S] = (0, a.Wu)([s.Z], () => [s.Z.isFetchingCategories, s.Z.error]);
+        [v, S] = i.useState(!0),
+        [I, T] = (0, a.Wu)([s.Z], () => [s.Z.isFetchingCategories, s.Z.error]);
     return (i.useEffect(() => {
         let e = null != E;
-        h && g && e && I(T);
-    }, [h, g, E, T]),
+        m && g && e && S(I);
+    }, [m, g, E, I]),
     i.useEffect(() => {
-        if (v || p || null == y) return;
+        if (v || _ || null == y) return;
         let e = b[y];
         return O &&
-            ((null == e ? void 0 : e.productLine) === _.POd.COLLECTIBLES ||
-                (null == e ? void 0 : e.productLine) === _.POd.APPLICATION ||
-                (null == e ? void 0 : e.productLine) === _.POd.SOCIAL_LAYER_GAME_ITEM)
+            ((null == e ? void 0 : e.productLine) === p.POd.COLLECTIBLES ||
+                (null == e ? void 0 : e.productLine) === p.POd.APPLICATION ||
+                (null == e ? void 0 : e.productLine) === p.POd.SOCIAL_LAYER_GAME_ITEM)
             ? void t(u.h8.GIFT_CUSTOMIZATION)
-            : 0 === Object.keys(m).length
+            : 0 === Object.keys(h).length
               ? void t(u.h8.ADD_PAYMENT_STEPS)
               : void t(u.h8.REVIEW);
-    }, [v, p, t, m, O, b, y]),
+    }, [v, _, t, h, O, b, y]),
     v)
         ? (0, r.jsx)(f.Z, {})
-        : p
+        : _
           ? (0, r.jsx)(o.Vq, { onClose: n })
-          : null != S
+          : null != T
             ? (0, r.jsx)(d.Z, { onClose: n })
             : null;
 }

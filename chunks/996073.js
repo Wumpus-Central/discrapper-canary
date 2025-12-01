@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(473749),
     i = n(442837),
     a = n(230711),
@@ -48,7 +48,7 @@ let f = Object.freeze({
         [l.KQ.ContentAndSocialScrollPositions.RESTRICTED_ACCOUNTS]: c.oAB.CONTENT_AND_SOCIAL,
         [l.KQ.AccountScrollPositions.DISABLE_ACCOUNT]: c.oAB.ACCOUNT,
     }),
-    _ = function (e, t, n) {
+    p = function (e, t, n) {
         let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
             c = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
             u = (0, i.e7)([s.Z], () => s.Z.getScrollPosition());

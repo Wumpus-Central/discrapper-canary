@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(442837),
@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function _(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,27 +49,27 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function m(e) {
-    let { user: t, location: f = "ContextMenu", onFriendRequestSent: p, onFriendRemove: m, appContext: g } = e,
+function h(e) {
+    let { user: t, location: f = "ContextMenu", onFriendRequestSent: _, onFriendRemove: h, appContext: g } = e,
         { id: E, username: b, bot: y } = t,
         O = (0, a.e7)([u.default], () => {
             var e;
             return (null == (e = u.default.getCurrentUser()) ? void 0 : e.id) === E;
         }, [E]),
         v = (0, l.n)({ userId: E }),
-        [I, T] = (0, a.Wu)([c.Z], () => [c.Z.isFriend(E), c.Z.isBlocked(E)], [E]),
-        [S, A] = i.useState(!1);
+        [S, I] = (0, a.Wu)([c.Z], () => [c.Z.isFriend(E), c.Z.isBlocked(E)], [E]),
+        [T, A] = i.useState(!1);
     if (y || O) return null;
     function C() {
         (0, o.ZDy)(
@@ -78,14 +78,14 @@ function m(e) {
                 return (t) =>
                     (0, r.jsx)(
                         e,
-                        h(
-                            _(
+                        m(
+                            p(
                                 {
                                     header: d.intl.formatToPlainString(d.t.fPLvZd, { name: b }),
                                     confirmText: d.intl.string(d.t.cvSt1J),
                                     cancelText: d.intl.string(d.t["ETE/oC"]),
                                     onConfirm: () => {
-                                        s.Z.removeFriend(E, { location: f }), A(!1), null == m || m();
+                                        s.Z.removeFriend(E, { location: f }), A(!1), null == h || h();
                                     },
                                 },
                                 t,
@@ -102,7 +102,7 @@ function m(e) {
             { contextKey: null != g ? (0, o.VnL)(g) : void 0 },
         );
     }
-    return I
+    return S
         ? (0, r.jsx)(o.sNh, {
               id: "remove-friend",
               label: d.intl.string(d.t.cvSt1J),
@@ -110,16 +110,16 @@ function m(e) {
           })
         : (0, r.jsx)(o.sNh, {
               id: "add-friend",
-              label: S ? d.intl.string(d.t.xMH6vD) : v,
+              label: T ? d.intl.string(d.t.xMH6vD) : v,
               action: () => {
-                  S ||
+                  T ||
                       (s.Z.addRelationship({
                           userId: E,
                           context: { location: f },
                       }),
                       A(!0),
-                      null == p || p());
+                      null == _ || _());
               },
-              disabled: T || (S && !I),
+              disabled: I || (T && !S),
           });
 }

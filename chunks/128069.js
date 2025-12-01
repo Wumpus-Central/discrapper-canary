@@ -1,7 +1,7 @@
 n.d(t, {
     SM: () => s,
-    ZP: () => m,
-    yD: () => p,
+    ZP: () => h,
+    yD: () => _,
 }),
     n(388685);
 var r = n(544891),
@@ -99,8 +99,8 @@ var d = (function (e) {
     return (e.CARD = "card"), (e.ADDRESS = "address"), e;
 })(d || {});
 let f = new Set(["cardNumber", "cvc", "expirationDate", "name"]),
-    _ = new Set(["name", "line1", "line2", "city", "state", "postalCode", "country"]);
-function p(e) {
+    p = new Set(["name", "line1", "line2", "city", "state", "postalCode", "country"]);
+function _(e) {
     var t, n, i, a, o;
     if ("string" != typeof e && (null == e || null == (t = e.body) ? void 0 : t.code) === r.f$) {
         if (
@@ -115,9 +115,9 @@ function p(e) {
         }
         (null == (o = e.body) ? void 0 : o.errors) != null && (e.body = (0, r.J9)(e.body.errors));
     }
-    return new h(e);
+    return new m(e);
 }
-class h extends i.Z {
+class m extends i.Z {
     _isInFieldSet(e) {
         for (let t in this.fields) if (e.has(t)) return !0;
     }
@@ -125,7 +125,7 @@ class h extends i.Z {
         return this._isInFieldSet(f);
     }
     hasAddressError() {
-        return this._isInFieldSet(_);
+        return this._isInFieldSet(p);
     }
     constructor(e, t) {
         for (let n in (super(e, t),
@@ -167,5 +167,5 @@ class h extends i.Z {
         null != e.body && "string" == typeof e.body.payment_id && (this.paymentId = e.body.payment_id);
     }
 }
-o(h, "ErrorCodes", s), o(h, "Fields", l), o(h, "Sections", d), o(h, "CARD_ERRORS", f), o(h, "ADDRESS_ERRORS", _);
-let m = h;
+o(m, "ErrorCodes", s), o(m, "Fields", l), o(m, "Sections", d), o(m, "CARD_ERRORS", f), o(m, "ADDRESS_ERRORS", p);
+let h = m;

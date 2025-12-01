@@ -9,15 +9,15 @@ var r = n(54381),
     u = n(74838),
     d = n(720834),
     f = n(385925),
-    _ = n(588921),
-    p = n(718720),
-    h = n(721513),
-    m = n(959191);
+    p = n(588921),
+    _ = n(718720),
+    m = n(721513),
+    h = n(959191);
 let g = {
         [o.Cj.STANDARD_BOX]: f,
-        [o.Cj.CAKE]: _,
-        [o.Cj.CHEST]: p,
-        [o.Cj.COFFEE]: h,
+        [o.Cj.CAKE]: p,
+        [o.Cj.CHEST]: _,
+        [o.Cj.COFFEE]: m,
         [o.Cj.SNOWGLOBE]: "",
         [o.Cj.BOX]: "",
         [o.Cj.CUP]: "",
@@ -25,7 +25,7 @@ let g = {
         [o.Cj.SEASONAL_CHEST]: u,
         [o.Cj.SEASONAL_COFFEE]: d,
         [o.Cj.SEASONAL_STANDARD_BOX]: l,
-        [o.Cj.NITROWEEN_STANDARD]: m.Z,
+        [o.Cj.NITROWEEN_STANDARD]: h.Z,
     },
     E = i.forwardRef(function (e, t) {
         let { isSelected: n, giftStyle: i, setSelectedGiftStyle: o, onFocus: l, onBlur: c } = e;

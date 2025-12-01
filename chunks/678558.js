@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685);
+n.d(t, { Z: () => R }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,18 +9,18 @@ var r = n(54381),
     u = n(755721),
     d = n(481060),
     f = n(179360),
-    _ = n(906732),
-    p = n(975298),
-    h = n(728285),
-    m = n(314884),
+    p = n(906732),
+    _ = n(975298),
+    m = n(728285),
+    h = n(314884),
     g = n(78839),
     E = n(267642),
     b = n(879892),
     y = n(981631),
     O = n(474936),
     v = n(388032),
-    I = n(132810);
-function T(e, t, n) {
+    S = n(132810);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function T(e, t, n) {
         e
     );
 }
-function S(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function S(e) {
                 }),
             )),
             r.forEach(function (t) {
-                T(e, t, n[t]);
+                I(e, t, n[t]);
             });
     }
     return e;
@@ -76,7 +76,7 @@ function N(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = R(e, t);
+        i = P(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -84,7 +84,7 @@ function N(e, t) {
     }
     return i;
 }
-function R(e, t) {
+function P(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -93,22 +93,22 @@ function R(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let P = (e) => {
+let R = (e) => {
     let {
             analyticsLocation: t,
             analyticsSourceLocation: n,
             guild: a,
-            buttonText: T,
+            buttonText: I,
             targetBoostedGuildTier: A,
-            onClose: R = () => {},
-            closeLayer: P = () => {},
-            pauseAnimation: D = !1,
-            applicationId: w,
-            handleSubscribeModalClose: L,
-            withHighlight: x = !1,
-            icon: M,
-            intent: k,
-            useExpressiveButton: j = !1,
+            onClose: P = () => {},
+            closeLayer: R = () => {},
+            pauseAnimation: w = !1,
+            applicationId: D,
+            handleSubscribeModalClose: x,
+            withHighlight: L = !1,
+            icon: j,
+            intent: M,
+            useExpressiveButton: k = !1,
         } = e,
         U = N(e, [
             "analyticsLocation",
@@ -126,15 +126,15 @@ let P = (e) => {
             "intent",
             "useExpressiveButton",
         ]),
-        { analyticsLocations: G } = (0, _.ZP)(),
-        B = (0, h.bp)() === y.IlC.POPOUT,
-        [Z, F] = i.useState(!1),
-        { fractionalState: V } = (0, p.Z)(),
-        H = (0, s.e7)([m.Z], () => m.Z.hasFetched);
+        { analyticsLocations: G } = (0, p.ZP)(),
+        Z = (0, m.bp)() === y.IlC.POPOUT,
+        [B, F] = i.useState(!1),
+        { fractionalState: V } = (0, _.Z)(),
+        H = (0, s.e7)([h.Z], () => h.Z.hasFetched);
     i.useEffect(() => {
         H || (0, f.X8)();
     }, [H]);
-    let Y = (0, E.vx)(m.Z.boostSlots),
+    let Y = (0, E.vx)(h.Z.boostSlots),
         W = null != A ? Math.max((0, E.KK)(a, A), 1) : 1,
         K = (0, E.aq)({ fractionalState: V }),
         z = async () => {
@@ -145,36 +145,36 @@ let P = (e) => {
                     analyticsSourceLocation: n,
                     guild: a,
                     numberOfBoostsToAdd: W,
-                    onClose: R,
-                    closeLayer: P,
-                    inPopout: B,
-                    applicationId: w,
-                    handleSubscribeModalClose: L,
-                    intent: k,
+                    onClose: P,
+                    closeLayer: R,
+                    inPopout: Z,
+                    applicationId: D,
+                    handleSubscribeModalClose: x,
+                    intent: M,
                 }),
                 F(!1);
         },
         q = g.Z.getPremiumTypeSubscription(),
-        X = (0, r.jsxs)("div", {
-            className: I.button,
-            children: [M, null != T ? T : v.intl.string(v.t.gKmQ1G)],
+        Q = (0, r.jsxs)("div", {
+            className: S.button,
+            children: [j, null != I ? I : v.intl.string(v.t.gKmQ1G)],
         }),
-        Q = !1;
-    return ((Q = null !== q && !(Y.length > 0) && (null == q ? void 0 : q.isPausedOrPausePending) && V === O.a$.NONE) &&
-        ((X = (0, r.jsxs)("div", {
-            className: I.button,
+        X = !1;
+    return ((X = null !== q && !(Y.length > 0) && (null == q ? void 0 : q.isPausedOrPausePending) && V === O.a$.NONE) &&
+        ((Q = (0, r.jsxs)("div", {
+            className: S.button,
             children: [
                 (0, r.jsx)(d.mBM, {
                     size: "xs",
-                    className: I.buttonIcon,
+                    className: S.buttonIcon,
                 }),
                 " ",
-                X,
+                Q,
             ],
         })),
         (U.disabled = !0)),
     null != K)
-        ? j
+        ? k
             ? (0, r.jsx)(c.u, {
                   text: K,
                   children: (0, r.jsx)(d.Button, {
@@ -182,7 +182,7 @@ let P = (e) => {
                       icon: d.mBM,
                       iconPosition: "start",
                       disabled: !0,
-                      text: null != T ? T : v.intl.string(v.t.gKmQ1G),
+                      text: null != I ? I : v.intl.string(v.t.gKmQ1G),
                   }),
               })
             : (0, r.jsx)(l.Z, {
@@ -192,30 +192,30 @@ let P = (e) => {
                       (0, r.jsx)(
                           d.gtL,
                           C(
-                              S(
-                                  C(S({ "data-migration-pending": !0 }, e), {
+                              T(
+                                  C(T({ "data-migration-pending": !0 }, e), {
                                       disabled: !0,
                                       size: u.zx.Sizes.SMALL,
-                                      pauseAnimation: D,
+                                      pauseAnimation: w,
                                   }),
                                   U,
                               ),
-                              { children: X },
+                              { children: Q },
                           ),
                       ),
               })
-        : j
+        : k
           ? (0, r.jsx)(d.Button, {
                 variant: "expressive",
-                disabled: Q,
-                loading: Z,
-                text: null != T ? T : v.intl.string(v.t.gKmQ1G),
+                disabled: X,
+                loading: B,
+                text: null != I ? I : v.intl.string(v.t.gKmQ1G),
                 onClick: z,
             })
           : (0, r.jsx)(
                 d.gtL,
                 C(
-                    S(
+                    T(
                         {
                             "data-migration-pending": !0,
                             size: u.zx.Sizes.SMALL,
@@ -223,11 +223,11 @@ let P = (e) => {
                         U,
                     ),
                     {
-                        className: o()(U.className, { [I.buttonHighlighted]: x }),
-                        submitting: Z,
+                        className: o()(U.className, { [S.buttonHighlighted]: L }),
+                        submitting: B,
                         onClick: z,
-                        pauseAnimation: D,
-                        children: X,
+                        pauseAnimation: w,
+                        children: Q,
                     },
                 ),
             );

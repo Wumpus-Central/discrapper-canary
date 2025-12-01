@@ -10,10 +10,10 @@ var i = n(120356),
     u = n(124072),
     d = n(198620),
     f = n(746878),
-    _ = n(981631),
-    p = n(330746),
-    h = n(861537);
-function m(e, t, n) {
+    p = n(981631),
+    _ = n(330746),
+    m = n(861537);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
@@ -67,8 +67,8 @@ function b(e, t) {
 }
 function y(e) {
     return {
-        react(t, i, m) {
-            let E = m.noStyleAndInteraction
+        react(t, i, h) {
+            let E = h.noStyleAndInteraction
                     ? void 0
                     : async (n) => {
                           let r = await (0, d.B_)(t.attachmentUrl);
@@ -77,8 +77,8 @@ function y(e) {
                               e.shouldCloseDefaultModals && (0, o.pTH)(),
                               (0, l.Z)(r);
                       },
-                y = m.noStyleAndInteraction
-                    ? _.dG4
+                y = h.noStyleAndInteraction
+                    ? p.dG4
                     : (e) => {
                           (0, s.jW)(e, async () => {
                               let { default: e } = await n.e("98466").then(n.bind(n, 151578));
@@ -103,13 +103,13 @@ function y(e) {
                     children: [
                         (0, r.jsx)(o.Ujz, {
                             size: "xs",
-                            className: a()(h.icon, p.icon),
+                            className: a()(m.icon, _.icon),
                             color: "currentColor",
                         }),
-                        (0, f.S)(t, i, m),
+                        (0, f.S)(t, i, h),
                     ],
                 },
-                m.key,
+                h.key,
             );
         },
     };

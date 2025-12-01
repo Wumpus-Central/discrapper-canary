@@ -35,17 +35,17 @@ var l = n(175469),
     u = n(473749),
     d = n(1231),
     f = n(292489),
-    _ = n(746117),
-    p = n(856084),
-    h = n(606166),
-    m = n(675411),
+    p = n(746117),
+    _ = n(856084),
+    m = n(606166),
+    h = n(675411),
     g = n(685536),
     E = n(126502),
     b = n(581079),
     y = n(207303),
     O = n(467159),
     v = 10,
-    I = function (e, t) {
+    S = function (e, t) {
         return e.getAnchorKey() === t || e.getFocusKey() === t;
     };
 e.exports = (function (e) {
@@ -61,7 +61,7 @@ e.exports = (function (e) {
                 this.props.block !== e.block ||
                 this.props.tree !== e.tree ||
                 this.props.direction !== e.direction ||
-                (I(e.selection, e.block.getKey()) && e.forceSelection)
+                (S(e.selection, e.block.getKey()) && e.forceSelection)
             );
         }),
         (n.componentDidMount = function () {
@@ -75,7 +75,7 @@ e.exports = (function (e) {
                         var i = f.getScrollParent(r),
                             a = g(i);
                         if (i === window) {
-                            var o = m(r);
+                            var o = h(r);
                             (e = o.y + o.height - E().height) > 0 && window.scrollTo(a.x, a.y + e + v);
                         } else
                             y(r) || b(!1),
@@ -91,55 +91,55 @@ e.exports = (function (e) {
                 n = t.getKey(),
                 r = t.getText(),
                 a = this.props.tree.size - 1,
-                o = I(this.props.selection, n);
+                o = S(this.props.selection, n);
             return this.props.tree
                 .map(function (s, d) {
                     var f = s.get("leaves");
                     if (0 === f.size) return null;
-                    var h = f.size - 1,
-                        m = f
+                    var m = f.size - 1,
+                        h = f
                             .map(function (i, s) {
                                 var f = c.encode(n, d, s),
-                                    _ = i.get("start"),
-                                    p = i.get("end");
+                                    p = i.get("start"),
+                                    _ = i.get("end");
                                 return u.createElement(l, {
                                     key: f,
                                     offsetKey: f,
                                     block: t,
-                                    start: _,
+                                    start: p,
                                     selection: o ? e.props.selection : null,
                                     forceSelection: e.props.forceSelection,
-                                    text: r.slice(_, p),
-                                    styleSet: t.getInlineStyleAt(_),
+                                    text: r.slice(p, _),
+                                    styleSet: t.getInlineStyleAt(p),
                                     customStyleMap: e.props.customStyleMap,
                                     customStyleFn: e.props.customStyleFn,
-                                    isLast: d === a && s === h,
+                                    isLast: d === a && s === m,
                                 });
                             })
                             .toArray(),
                         g = s.get("decoratorKey");
-                    if (null == g || !e.props.decorator) return m;
+                    if (null == g || !e.props.decorator) return h;
                     var E = O(e.props.decorator),
                         b = E.getComponentForKey(g);
-                    if (!b) return m;
+                    if (!b) return h;
                     var y = E.getPropsForKey(g),
                         v = c.encode(n, d, 0),
-                        I = f.first().get("start"),
-                        T = f.last().get("end"),
-                        S = r.slice(I, T),
+                        S = f.first().get("start"),
+                        I = f.last().get("end"),
+                        T = r.slice(S, I),
                         A = t.getEntityAt(s.get("start")),
-                        C = p.getHTMLDirIfDifferent(_.getDirection(S), e.props.direction),
+                        C = _.getHTMLDirIfDifferent(p.getDirection(T), e.props.direction),
                         N = {
                             contentState: e.props.contentState,
-                            decoratedText: S,
+                            decoratedText: T,
                             dir: C,
-                            start: I,
-                            end: T,
+                            start: S,
+                            end: I,
                             blockKey: n,
                             entityKey: A,
                             offsetKey: v,
                         };
-                    return u.createElement(b, i({}, y, N, { key: v }), m);
+                    return u.createElement(b, i({}, y, N, { key: v }), h);
                 })
                 .toArray();
         }),
@@ -148,7 +148,7 @@ e.exports = (function (e) {
                 t = this.props,
                 n = t.direction,
                 r = t.offsetKey,
-                i = h({
+                i = m({
                     "public/DraftStyleDefault/block": !0,
                     "public/DraftStyleDefault/ltr": "LTR" === n,
                     "public/DraftStyleDefault/rtl": "RTL" === n,

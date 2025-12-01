@@ -1,8 +1,8 @@
 n.d(t, {
     Pv: () => d,
     _j: () => f,
-    nm: () => _,
-    xS: () => p,
+    nm: () => p,
+    xS: () => _,
 }),
     n(415506);
 var r = n(54381);
@@ -149,8 +149,8 @@ function f(e, t) {
         f = c(t, ["user", "channel", "moderationAlertId", "guildId"]);
     if ((null == s ? void 0 : s.isGroupDM()) || (null == s ? void 0 : s.isDM()))
         throw Error("Cannot moderate user in DM or group DM");
-    let _ = null != d ? d : null == s ? void 0 : s.getGuildId();
-    null != _ &&
+    let p = null != d ? d : null == s ? void 0 : s.getGuildId();
+    null != p &&
         (0, i.jW)(e, async () => {
             let { default: e } = await n.e("16120").then(n.bind(n, 833737));
             return (t) =>
@@ -160,7 +160,7 @@ function f(e, t) {
                         l(o({}, t), {
                             user: a,
                             channelId: null == s ? void 0 : s.id,
-                            guildId: _,
+                            guildId: p,
                             moderationAlertId: u,
                         }),
                         f,
@@ -168,7 +168,7 @@ function f(e, t) {
                 );
         });
 }
-function _(e, t) {
+function p(e, t) {
     let { user: a, guildId: s, analyticsLocations: c, onCloseContextMenu: u, isViewOnly: d } = t;
     (0, i.jW)(e, async () => {
         let { default: e } = await n.e("45130").then(n.bind(n, 246389));
@@ -185,10 +185,10 @@ function _(e, t) {
             );
     });
 }
-function p(e, t, a) {
+function _(e, t, a) {
     null != a &&
         (0, i.jW)(e, async () => {
-            let { default: e } = await n.e("74291").then(n.bind(n, 158195));
+            let { default: e } = await n.e("50331").then(n.bind(n, 158195));
             return (t) => (0, r.jsx)(e, l(o({}, t), { guildId: a }));
         });
 }

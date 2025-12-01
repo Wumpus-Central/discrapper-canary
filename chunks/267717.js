@@ -13,7 +13,7 @@ var i = n(481060),
     u = n(981631),
     d = n(388032),
     f = n(561870);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,16 +37,16 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -54,7 +54,7 @@ function h(e, t) {
     }
     return i;
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -72,7 +72,7 @@ function g(e) {
             return (n) =>
                 (0, r.jsx)(
                     e,
-                    p(
+                    _(
                         {
                             user: s,
                             analyticsSource: t,
@@ -89,10 +89,10 @@ function g(e) {
 }
 function E(e) {
     var { user: t, onClose: n } = e,
-        i = h(e, ["user", "onClose"]);
+        i = m(e, ["user", "onClose"]);
     return (0, r.jsx)(
         l.Z,
-        p(
+        _(
             {
                 modalClassName: f.modal,
                 modalContentClassName: f.modalContent,

@@ -33,8 +33,8 @@ function a(e) {
             }
             return n.stroke(), r;
         },
-        { fillColor: E, outlineColor: h } = (0, r.bg)(t.userId, s, u, c),
-        y = v(h, 6 + l.q2),
+        { fillColor: h, outlineColor: E } = (0, r.bg)(t.userId, s, u, c),
+        y = v(E, 6 + l.q2),
         S = null != y && g(y);
-    S && (0, i.I)(n, y.x, y.y, h, l.q2), v(E, 6), S && (0, i.T)(n, y.x, y.y, t.userId);
+    S && (0, i.I)(n, y.x, y.y, E, l.q2), v(h, 6), S && (0, i.T)(n, y.x, y.y, t.userId);
 }

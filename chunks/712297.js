@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function _(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,66 +49,66 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function m() {
+function h() {
     let [e, t] = r.useState({});
     return {
         previewErrorsById: e,
         setErrorById: r.useCallback(
             (e, n) => {
-                t((t) => h(_({}, t), { [e]: n }));
+                t((t) => m(p({}, t), { [e]: n }));
             },
             [t],
         ),
     };
 }
 function g(e) {
-    let { applicationId: t, skuIDs: n, currentPaymentSourceId: f, isGift: _, excludeSKUPurchasePreviews: p = !1 } = e,
-        h = r.useMemo(() => n.filter((e) => !d.YQ.includes(e)), [JSON.stringify(n)]),
-        g = (0, a.e7)([u.Z], () => h.every((e) => !u.Z.isFetching(e) && null != u.Z.get(e))),
-        { previewErrorsById: E, setErrorById: b } = m(),
+    let { applicationId: t, skuIDs: n, currentPaymentSourceId: f, isGift: p, excludeSKUPurchasePreviews: _ = !1 } = e,
+        m = r.useMemo(() => n.filter((e) => !d.YQ.includes(e)), [JSON.stringify(n)]),
+        g = (0, a.e7)([u.Z], () => m.every((e) => !u.Z.isFetching(e) && null != u.Z.get(e))),
+        { previewErrorsById: E, setErrorById: b } = h(),
         y = (0, a.cj)([u.Z], () => {
             let e = {};
-            for (let n of h) {
+            for (let n of m) {
                 var t;
                 e[n] = null != (t = u.Z.get(n)) ? t : void 0;
             }
             return e;
-        }, [h]);
+        }, [m]);
     r.useEffect(() => {
-        for (let e of h) u.Z.isFetching(e) || null != u.Z.get(e) || (0, o.$N)(t, e, i.v.VARIANTS_GROUP);
-    }, [t, h]);
+        for (let e of m) u.Z.isFetching(e) || null != u.Z.get(e) || (0, o.$N)(t, e, i.v.VARIANTS_GROUP);
+    }, [t, m]);
     let O = (0, a.cj)([c.Z], () => {
         let e = {};
-        for (let n of h) {
+        for (let n of m) {
             var t;
             e[n] = null != (t = c.Z.getPricesForSku(n)) ? t : void 0;
         }
         return e;
-    }, [h]);
+    }, [m]);
     return (
         r.useEffect(() => {
-            if (!p)
-                for (let e of h)
+            if (!_)
+                for (let e of m)
                     c.Z.isFetchingSKU(e) ||
-                        (0, o.x2)(t, e, f, { isGift: _ }).catch((t) => {
+                        (0, o.x2)(t, e, f, { isGift: p }).catch((t) => {
                             t instanceof s.HF &&
                                 (t.code === l.SM.BILLING_BUNDLE_ALREADY_PURCHASED ||
                                     t.code === l.SM.BILLING_BUNDLE_PARTIALLY_OWNED ||
                                     t.code === l.SM.INVALID_BILLING_ADDRESS) &&
                                 b(e, t);
                         });
-        }, [t, h, f, _, b, p]),
+        }, [t, m, f, p, b, _]),
         {
             hasFetchedSkus: g,
             skusById: y,

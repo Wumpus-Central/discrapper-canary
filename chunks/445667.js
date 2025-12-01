@@ -8,8 +8,8 @@ var r = n(507604),
     u = n(527160),
     d = n(79275),
     f = Object.assign,
-    _ = Object.defineProperty,
-    p = i([].concat);
+    p = Object.defineProperty,
+    _ = i([].concat);
 e.exports =
     !f ||
     o(function () {
@@ -19,10 +19,10 @@ e.exports =
                 f(
                     { b: 1 },
                     f(
-                        _({}, "a", {
+                        p({}, "a", {
                             enumerable: !0,
                             get: function () {
-                                _(this, "b", {
+                                p(this, "b", {
                                     value: 3,
                                     enumerable: !1,
                                 });
@@ -46,9 +46,9 @@ e.exports =
         );
     })
         ? function (e, t) {
-              for (var n = u(e), i = arguments.length, o = 1, f = l.f, _ = c.f; i > o; )
-                  for (var h, m = d(arguments[o++]), g = f ? p(s(m), f(m)) : s(m), E = g.length, b = 0; E > b; )
-                      (h = g[b++]), (!r || a(_, m, h)) && (n[h] = m[h]);
+              for (var n = u(e), i = arguments.length, o = 1, f = l.f, p = c.f; i > o; )
+                  for (var m, h = d(arguments[o++]), g = f ? _(s(h), f(h)) : s(h), E = g.length, b = 0; E > b; )
+                      (m = g[b++]), (!r || a(p, h, m)) && (n[m] = h[m]);
               return n;
           }
         : f;

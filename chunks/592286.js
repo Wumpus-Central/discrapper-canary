@@ -1,6 +1,6 @@
 n.d(t, {
-    N4: () => _,
-    Pn: () => p,
+    N4: () => p,
+    Pn: () => _,
     RS: () => f,
     X2: () => o,
     XN: () => l,
@@ -23,5 +23,5 @@ let i = new Set([r.QJ.MULTIPLE_CHOICE, r.QJ.TEXT_INPUT, r.QJ.PARAGRAPH]),
     u = 150,
     d = 150,
     f = 1000,
-    _ = "Membership Gating",
-    p = "in-app-member-verification";
+    p = "Membership Gating",
+    _ = "in-app-member-verification";

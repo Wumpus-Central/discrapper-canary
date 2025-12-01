@@ -53,12 +53,12 @@ function d(e, t, n) {
         u = r.Z.getByteAt(e, t + i.vx + 6);
     return {
         value: [a, o, s, l, c, u],
-        description: `${_(a, 4)}-${_(o, 2)}-${_(s, 2)} ${_(l, 2)}:${_(c, 2)}:${_(u, 2)}`,
+        description: `${p(a, 4)}-${p(o, 2)}-${p(s, 2)} ${p(l, 2)}:${p(c, 2)}:${p(u, 2)}`,
     };
 }
 function f(e, t, n, r, a) {
     return r + a <= n && t + i.vx + r + a <= e.byteLength;
 }
-function _(e, t) {
+function p(e, t) {
     return `${"0".repeat(t - ("" + e).length)}${e}`;
 }

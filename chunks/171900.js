@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(388685), n(539854);
+n.d(t, { Z: () => x }), n(388685), n(539854);
 var r,
     i = n(442837),
     a = n(570140),
@@ -76,28 +76,28 @@ class f {
             d(this, "cursor", null);
     }
 }
-let _ = new Map(),
-    p = new Map(),
-    h = new Map();
-function m(e) {
+let p = new Map(),
+    _ = new Map(),
+    m = new Map();
+function h(e) {
     var t;
-    return null != (t = _.get(e)) ? t : new f();
+    return null != (t = p.get(e)) ? t : new f();
 }
 function g(e) {
-    let t = m(e);
-    return _.set(e, t), t;
+    let t = h(e);
+    return p.set(e, t), t;
 }
 function E(e, t) {
-    let n = p.get(e);
+    let n = _.get(e);
     if (null == n) return !1;
     let r = t(n);
-    return p.set(e, r), !0;
+    return _.set(e, r), !0;
 }
 function b(e, t) {
-    return t(m(e));
+    return t(h(e));
 }
 function y() {
-    (_ = new Map()), (p = new Map()), (h = new Map());
+    (p = new Map()), (_ = new Map()), (m = new Map());
 }
 function O(e) {
     e.ids.forEach((e) => {
@@ -113,21 +113,21 @@ function v(e) {
             });
         t.handleSearchSuccess(e, n).forEach((e) => {
             var t;
-            p.set(e.id, e);
-            let n = null != (t = h.get(e.id)) ? t : 0;
-            h.set(e.id, n + 1);
+            _.set(e.id, e);
+            let n = null != (t = m.get(e.id)) ? t : 0;
+            m.set(e.id, n + 1);
         });
     });
 }
-function I(e) {
+function S(e) {
     let t = e.message.id;
     if (null == t) return !1;
-    let n = p.get(t);
+    let n = _.get(t);
     if (null == n) return !1;
     let r = (0, s.wi)(n, e.message);
-    p.set(t, r);
+    _.set(t, r);
 }
-function T(e) {
+function I(e) {
     let { type: t, messageId: n, userId: r, emoji: i } = e;
     if (!(0, l.sm)(e)) return !1;
     let a = c.default.getId() === r;
@@ -136,7 +136,7 @@ function T(e) {
         return "MESSAGE_REACTION_ADD" === t ? n.addReaction(i, a, e.colors, r) : n.removeReaction(i, a, r);
     });
 }
-function S(e) {
+function T(e) {
     let { messageId: t, reactions: n } = e,
         r = c.default.getId();
     return E(t, (e) => e.addReactionBatch(n, r));
@@ -154,30 +154,30 @@ function N(e) {
         g(e).handleSearchIndexing();
     });
 }
-function R(e) {
+function P(e) {
     e.ids.forEach((t) => {
         g(t).handleSearchFailure(e.error);
     });
 }
-function P(e) {
-    let t = _.get(e.id);
+function R(e) {
+    let t = p.get(e.id);
     if (null == t) return !1;
     t.messageIds.forEach((e) => {
         var t;
-        let n = null != (t = h.get(e)) ? t : 0;
-        n <= 1 ? (p.delete(e), h.delete(e)) : h.set(e, n - 1);
+        let n = null != (t = m.get(e)) ? t : 0;
+        n <= 1 ? (_.delete(e), m.delete(e)) : m.set(e, n - 1);
     }),
-        _.delete(e.id);
+        p.delete(e.id);
 }
-function D(e) {
-    (_ = new Map()), (p = new Map()), (h = new Map());
+function w(e) {
+    (p = new Map()), (_ = new Map()), (m = new Map());
 }
-class w extends (r = i.ZP.Store) {
+class D extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(c.default, u.Z);
     }
     getMessage(e) {
-        return p.get(e);
+        return _.get(e);
     }
     getTotalCount(e) {
         return b(e, (e) => e.totalResults);
@@ -210,21 +210,21 @@ class w extends (r = i.ZP.Store) {
         return b(e, (e) => e.analyticsId);
     }
     hasSearchState(e) {
-        return _.has(e);
+        return p.has(e);
     }
 }
-d(w, "displayName", "SearchMessageStore");
-let L = new w(a.Z, {
+d(D, "displayName", "SearchMessageStore");
+let x = new D(a.Z, {
     SEARCH_MESSAGES_START: O,
     SEARCH_MESSAGES_SUCCESS: v,
     SEARCH_MESSAGES_INDEXING: N,
-    SEARCH_MESSAGES_FAILURE: R,
-    SEARCH_MESSAGES_CLEAR: P,
-    SEARCH_MESSAGES_CLEAR_ALL: D,
-    MESSAGE_UPDATE: I,
-    MESSAGE_REACTION_ADD: T,
-    MESSAGE_REACTION_ADD_MANY: S,
-    MESSAGE_REACTION_REMOVE: T,
+    SEARCH_MESSAGES_FAILURE: P,
+    SEARCH_MESSAGES_CLEAR: R,
+    SEARCH_MESSAGES_CLEAR_ALL: w,
+    MESSAGE_UPDATE: S,
+    MESSAGE_REACTION_ADD: I,
+    MESSAGE_REACTION_ADD_MANY: T,
+    MESSAGE_REACTION_REMOVE: I,
     MESSAGE_REACTION_REMOVE_ALL: A,
     MESSAGE_REACTION_REMOVE_EMOJI: C,
     CONNECTION_OPEN: y,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(392711),
     i = n.n(r),
     a = n(710845),
@@ -57,8 +57,8 @@ function d(e, t) {
     );
 }
 let f = new a.Z("ReadStates"),
-    _ = "dm-sentinel";
-class p {
+    p = "dm-sentinel";
+class _ {
     async getAll(e) {
         let t = performance.now(),
             n = await s.Z.userGuildSettings(e).getMany(),
@@ -84,7 +84,7 @@ class p {
         for (let t of e) {
             var i;
             let e = d(c({}, (0, o.wL)(t.guild_id), t), { channel_overrides: (0, o.U2)(t.channel_overrides) });
-            r.put(null != (i = t.guild_id) ? i : _, e);
+            r.put(null != (i = t.guild_id) ? i : p, e);
         }
         s.Z.nonGuildVersionsTransaction(n).put({
             id: "user_guild_settings_version",
@@ -98,4 +98,4 @@ class p {
         });
     }
 }
-let h = new p();
+let m = new _();

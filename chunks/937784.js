@@ -1,4 +1,4 @@
-n.d(t, { e: () => I }), n(539854), n(388685);
+n.d(t, { e: () => S }), n(539854), n(388685);
 var r = n(54381);
 n(473749);
 var i = n(952265),
@@ -10,10 +10,10 @@ var i = n(952265),
     u = n(375954),
     d = n(626135),
     f = n(709054),
-    _ = n(127654),
-    p = n(894694),
-    h = n(61994),
-    m = n(39604),
+    p = n(127654),
+    _ = n(894694),
+    m = n(61994),
+    h = n(39604),
     g = n(356659),
     E = n(981631);
 function b(e, t, n) {
@@ -68,16 +68,16 @@ function v(e, t) {
         e
     );
 }
-async function I(e, t) {
-    let { channelId: b, analyticsLocations: O, messageReference: I } = t,
-        T = l.Z.getChannel(b);
-    if (null != T) {
-        if (null != I) {
-            let e = u.Z.getMessage(I.channel_id, I.message_id);
+async function S(e, t) {
+    let { channelId: b, analyticsLocations: O, messageReference: S } = t,
+        I = l.Z.getChannel(b);
+    if (null != I) {
+        if (null != S) {
+            let e = u.Z.getMessage(S.channel_id, S.message_id);
             null != e &&
                 (0, s.fE)({
                     message: e,
-                    channel: T,
+                    channel: I,
                     shouldMention: !1,
                     showMentionToggle: !1,
                 });
@@ -86,27 +86,27 @@ async function I(e, t) {
             let t = [],
                 n = [];
             for (let r of e) {
-                var S;
-                let e = await (0, m.rO)(r),
-                    i = null != (S = r.name) ? S : (0, g.yl)(f.default.extractTimestamp(r.id)),
-                    a = (0, h.Z)(i);
-                if (r.type === p.NJ.CLIP || r.type === p.NJ.VOICE_CLIP) {
+                var T;
+                let e = await (0, h.rO)(r),
+                    i = null != (T = r.name) ? T : (0, g.yl)(f.default.extractTimestamp(r.id)),
+                    a = (0, m.Z)(i);
+                if (r.type === _.NJ.CLIP || r.type === _.NJ.VOICE_CLIP) {
                     let i = "".concat("" !== a ? a : "clip", ".mp4");
                     t.push(new File([e], i, { type: "video/mp4" })), n.push({ clip: r });
-                } else if (r.type === p.NJ.SCREENSHOT) {
+                } else if (r.type === _.NJ.SCREENSHOT) {
                     let r = "".concat("" !== a ? a : "screenshot", ".jpeg");
                     t.push(new File([e], r, { type: "image/jpeg" })), n.push({});
                 }
                 d.default.track(E.rMx.CLIP_SHARED, {
                     location_stack: O,
-                    guild_id: T.guild_id,
-                    channel_id: T.id,
-                    channel_type: T.type,
+                    guild_id: I.guild_id,
+                    channel_id: I.id,
+                    channel_type: I.type,
                     application_id: r.applicationId,
                     clip_id: r.id,
                 });
             }
-            (0, _.d)(t, T, c.d.ChannelMessage, {
+            (0, p.d)(t, I, c.d.ChannelMessage, {
                 filesMetadata: n,
                 origin: "unknown:clip_share",
             }),

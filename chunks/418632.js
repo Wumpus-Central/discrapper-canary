@@ -13,8 +13,8 @@ var r = n(54381),
     u = n(481060),
     d = n(893776),
     f = n(594174),
-    _ = n(388032);
-function p(e, t, n) {
+    p = n(388032);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,12 +38,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -60,7 +60,7 @@ function g(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -73,10 +73,10 @@ function E(e) {
                 (0, r.jsx)(
                     u.ConfirmModal,
                     g(
-                        h(
+                        m(
                             {
-                                header: _.intl.string(_.t.LykQYk),
-                                confirmText: _.intl.string(_.t.BddRzS),
+                                header: p.intl.string(p.t.LykQYk),
+                                confirmText: p.intl.string(p.t.BddRzS),
                                 confirmButtonColor: c.zx.Colors.BRAND,
                             },
                             t,
@@ -84,7 +84,7 @@ function E(e) {
                         {
                             children: (0, r.jsx)(u.Text, {
                                 variant: "text-md/normal",
-                                children: _.intl.format(_.t.azKEPy, { email: e.email }),
+                                children: p.intl.format(p.t.azKEPy, { email: e.email }),
                             }),
                         },
                     ),
@@ -93,21 +93,21 @@ function E(e) {
         })
         .catch((e) => {
             let { body: t } = e,
-                n = _.intl.string(_.t.XcrQN5);
+                n = p.intl.string(p.t.XcrQN5);
             null != t && t.email && (n = t.email),
                 (0, u.h7j)((e) =>
                     (0, r.jsx)(
                         s.Modal,
-                        h(
+                        m(
                             {
                                 actions: [
                                     {
                                         variant: "primary",
-                                        text: _.intl.string(_.t.BddRzS),
+                                        text: p.intl.string(p.t.BddRzS),
                                         onClick: e.onClose,
                                     },
                                 ],
-                                title: _.intl.string(_.t.VbTh0E),
+                                title: p.intl.string(p.t.VbTh0E),
                                 subtitle: n,
                             },
                             e,
@@ -128,7 +128,7 @@ function b(e) {
         size: t,
         variant: n,
         onClick: d,
-        text: _.intl.string(_.t.lm1UKt),
+        text: p.intl.string(p.t.lm1UKt),
         disabled: s,
     });
 }

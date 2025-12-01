@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r,
     i = n(54381),
     a = n(473749),
@@ -9,10 +9,10 @@ var r,
     u = n(687755),
     d = n(351465),
     f = n(669021),
-    _ = n(164670),
-    p = n(848118),
-    h = n(73346),
-    m = n(568836),
+    p = n(164670),
+    _ = n(848118),
+    m = n(73346),
+    h = n(568836),
     g = n(345898),
     E = n(981631),
     b = n(697582);
@@ -42,7 +42,7 @@ class v extends (r = a.PureComponent) {
                 renderCustomMedia: s,
                 isEmbed: l,
             } = this.props,
-            c = l ? m.$G : g.Z;
+            c = l ? h.$G : g.Z;
         return (0, i.jsx)(c, {
             className: r,
             renderMedia: null != s ? s : this.renderMedia,
@@ -87,8 +87,8 @@ class v extends (r = a.PureComponent) {
                     isHorizontal: l,
                     storeListing: c,
                 } = this.props;
-                return (0, _.K$)(o)
-                    ? (0, i.jsx)(p.A, {
+                return (0, p.K$)(o)
+                    ? (0, i.jsx)(_.A, {
                           sku: o,
                           shape: "custom",
                           containerClassName: b.socialLayerStorefrontCardContainer,
@@ -99,8 +99,8 @@ class v extends (r = a.PureComponent) {
                           children: [
                               (0, i.jsx)(f.Z, {
                                   className: s()(b.splashContainer, { [b.splashContainerHorizontal]: l }),
-                                  video: null != c.previewVideo ? (0, h._W)(o.applicationId, c.previewVideo) : void 0,
-                                  image: null != c.thumbnail ? (0, h._W)(o.applicationId, c.thumbnail, O) : void 0,
+                                  video: null != c.previewVideo ? (0, m._W)(o.applicationId, c.previewVideo) : void 0,
+                                  image: null != c.thumbnail ? (0, m._W)(o.applicationId, c.thumbnail, O) : void 0,
                                   title: o.name,
                                   playing: e,
                                   muted: t,
@@ -128,4 +128,4 @@ y(v, "defaultProps", {
     isHorizontal: !1,
     isEmbed: !1,
 });
-let I = v;
+let S = v;

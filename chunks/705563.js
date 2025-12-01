@@ -21,9 +21,9 @@ function C(e) {
         v = p.default.cast(t),
         {
             joinRequest: _,
-            isModmin: x,
-            guildId: j,
-            maxMembers: O,
+            isModmin: O,
+            guildId: x,
+            maxMembers: j,
         } = (0, r.cj)([h.Z, u.Z, d.Z], () => {
             let e = h.Z.getRequest(v),
                 t = u.Z.getGuild(null == e ? void 0 : e.guildId);
@@ -34,8 +34,8 @@ function C(e) {
                 maxMembers: null == t ? void 0 : t.maxMembers,
             };
         }),
-        E = (0, r.e7)([c.Z], () => (null != j ? c.Z.getMemberCount(j) : 0)),
-        S = null != O && (null != E ? E : 0) >= O,
+        E = (0, r.e7)([c.Z], () => (null != x ? c.Z.getMemberCount(x) : 0)),
+        S = null != j && (null != E ? E : 0) >= j,
         {
             approveRequest: P,
             rejectRequest: I,
@@ -45,7 +45,7 @@ function C(e) {
             null == _ ? void 0 : _.userId,
             null == _ ? void 0 : _.joinRequestId,
         );
-    return null != _ && _.applicationStatus === f.wB.SUBMITTED && x
+    return null != _ && _.applicationStatus === f.wB.SUBMITTED && O
         ? (0, i.jsxs)("div", {
               className: y.buttons,
               children: [

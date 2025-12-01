@@ -1,4 +1,4 @@
-n.d(t, { h: () => _ });
+n.d(t, { h: () => p });
 var r = n(54381);
 n(473749);
 var i = n(692547),
@@ -77,17 +77,17 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let _ = (e) => {
+let p = (e) => {
     var t,
         n,
-        { size: s = "md", width: c, height: f, color: _ = i.Z.colors.STATUS_WARNING, colorClass: p = "" } = e,
-        h = d(e, ["size", "width", "height", "color", "colorClass"]);
-    let m = (0, o.m)(s),
-        g = null != (t = null == m ? void 0 : m.width) ? t : c,
-        E = null != (n = null == m ? void 0 : m.height) ? n : f;
+        { size: s = "md", width: c, height: f, color: p = i.Z.colors.STATUS_WARNING, colorClass: _ = "" } = e,
+        m = d(e, ["size", "width", "height", "color", "colorClass"]);
+    let h = (0, o.m)(s),
+        g = null != (t = null == h ? void 0 : h.width) ? t : c,
+        E = null != (n = null == h ? void 0 : h.height) ? n : f;
     return (0, r.jsxs)(
         "svg",
-        u(l({}, (0, a.Z)(h)), {
+        u(l({}, (0, a.Z)(m)), {
             xmlns: "http://www.w3.org/2000/svg",
             width: g,
             height: E,
@@ -95,14 +95,14 @@ let _ = (e) => {
             viewBox: "0 0 24 24",
             children: [
                 (0, r.jsx)("path", {
-                    fill: "string" == typeof _ ? _ : _.css,
+                    fill: "string" == typeof p ? p : p.css,
                     d: "M3 7a1 1 0 0 0 0 2 12 12 0 0 1 12 12 1 1 0 1 0 2 0A14 14 0 0 0 3 7Z",
-                    className: p,
+                    className: _,
                 }),
                 (0, r.jsx)("path", {
-                    fill: "string" == typeof _ ? _ : _.css,
+                    fill: "string" == typeof p ? p : p.css,
                     d: "M3 12a1 1 0 1 0 0 2 7 7 0 0 1 7 7 1 1 0 1 0 2 0 9 9 0 0 0-9-9ZM2 17.83c0-.46.37-.83.83-.83C5.13 17 7 18.87 7 21.17c0 .46-.37.83-.83.83H3a1 1 0 0 1-1-1v-3.17Z",
-                    className: p,
+                    className: _,
                 }),
             ],
         }),

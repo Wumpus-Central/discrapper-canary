@@ -2,24 +2,24 @@ n.d(t, {
     Ct: () => a,
     Fp: () => s,
     GW: () => c,
-    Go: () => T,
+    Go: () => I,
     I4: () => E,
-    JB: () => x,
-    KX: () => P,
+    JB: () => L,
+    KX: () => R,
     NM: () => l,
     Qq: () => y,
     Rn: () => g,
     VV: () => o,
     Wh: () => O,
-    gy: () => I,
-    hp: () => m,
+    gy: () => S,
+    hp: () => h,
     i8: () => v,
-    k3: () => h,
-    ku: () => p,
+    k3: () => m,
+    ku: () => _,
     mA: () => r,
-    pw: () => D,
-    uZ: () => _,
-    yd: () => L,
+    pw: () => w,
+    uZ: () => p,
+    yd: () => x,
     ze: () => u,
 });
 let r = ["top", "right", "bottom", "left"],
@@ -43,16 +43,16 @@ let r = ["top", "right", "bottom", "left"],
         start: "end",
         end: "start",
     };
-function _(e, t, n) {
+function p(e, t, n) {
     return s(e, o(t, n));
 }
-function p(e, t) {
+function _(e, t) {
     return "function" == typeof e ? e(t) : e;
 }
-function h(e) {
+function m(e) {
     return e.split("-")[0];
 }
-function m(e) {
+function h(e) {
     return e.split("-")[1];
 }
 function g(e) {
@@ -63,36 +63,36 @@ function E(e) {
 }
 let b = new Set(["top", "bottom"]);
 function y(e) {
-    return b.has(h(e)) ? "y" : "x";
+    return b.has(m(e)) ? "y" : "x";
 }
 function O(e) {
     return g(y(e));
 }
 function v(e, t, n) {
     void 0 === n && (n = !1);
-    let r = m(e),
+    let r = h(e),
         i = O(e),
         a = E(i),
         o = "x" === i ? (r === (n ? "end" : "start") ? "right" : "left") : "start" === r ? "bottom" : "top";
-    return t.reference[a] > t.floating[a] && (o = D(o)), [o, D(o)];
+    return t.reference[a] > t.floating[a] && (o = w(o)), [o, w(o)];
+}
+function S(e) {
+    let t = w(e);
+    return [I(e), t, I(t)];
 }
 function I(e) {
-    let t = D(e);
-    return [T(e), t, T(t)];
-}
-function T(e) {
     return e.replace(/start|end/g, (e) => f[e]);
 }
-let S = ["left", "right"],
+let T = ["left", "right"],
     A = ["right", "left"],
     C = ["top", "bottom"],
     N = ["bottom", "top"];
-function R(e, t, n) {
+function P(e, t, n) {
     switch (e) {
         case "top":
         case "bottom":
-            if (n) return t ? A : S;
-            return t ? S : A;
+            if (n) return t ? A : T;
+            return t ? T : A;
         case "left":
         case "right":
             return t ? C : N;
@@ -100,15 +100,15 @@ function R(e, t, n) {
             return [];
     }
 }
-function P(e, t, n, r) {
-    let i = m(e),
-        a = R(h(e), "start" === n, r);
-    return i && ((a = a.map((e) => e + "-" + i)), t && (a = a.concat(a.map(T)))), a;
-}
-function D(e) {
-    return e.replace(/left|right|bottom|top/g, (e) => d[e]);
+function R(e, t, n, r) {
+    let i = h(e),
+        a = P(m(e), "start" === n, r);
+    return i && ((a = a.map((e) => e + "-" + i)), t && (a = a.concat(a.map(I)))), a;
 }
 function w(e) {
+    return e.replace(/left|right|bottom|top/g, (e) => d[e]);
+}
+function D(e) {
     return {
         top: 0,
         right: 0,
@@ -117,9 +117,9 @@ function w(e) {
         ...e,
     };
 }
-function L(e) {
+function x(e) {
     return "number" != typeof e
-        ? w(e)
+        ? D(e)
         : {
               top: e,
               right: e,
@@ -127,7 +127,7 @@ function L(e) {
               left: e,
           };
 }
-function x(e) {
+function L(e) {
     let { x: t, y: n, width: r, height: i } = e;
     return {
         width: r,

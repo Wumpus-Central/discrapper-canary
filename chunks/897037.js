@@ -1,11 +1,11 @@
 n.d(t, {
     V: () => g,
-    m: () => m,
+    m: () => h,
 }),
     n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(790519),
+    a = n(666917),
     o = n(481060),
     s = n(699682),
     l = n(388032),
@@ -51,7 +51,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -62,11 +62,11 @@ function _(e, t) {
         e
     );
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -74,7 +74,7 @@ function p(e, t) {
     }
     return i;
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -83,7 +83,7 @@ function h(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function m(e) {
+function h(e) {
     let { validateOn: t, error: n, value: r, minLength: a, maxLength: o, defaultDirty: s } = e,
         [c, u] = i.useState(s),
         d = i.useMemo(() => {
@@ -140,12 +140,12 @@ function g(e) {
         children: n((e, n, s) => {
             let { key: l } = s,
                 { transform: u } = e,
-                f = p(e, ["transform"]);
+                f = _(e, ["transform"]);
             return null != n && "" !== n
                 ? (0, r.jsx)(
                       a.animated.div,
                       {
-                          style: _(d({}, f), { overflow: "hidden" }),
+                          style: p(d({}, f), { overflow: "hidden" }),
                           children: (0, r.jsxs)(a.animated.div, {
                               style: { transform: u },
                               className: c.inputError,

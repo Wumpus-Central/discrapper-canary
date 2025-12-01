@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(54381);
 n(473749);
 var i = n(28664),
@@ -10,41 +10,41 @@ var i = n(28664),
     u = n(652853),
     d = n(732380),
     f = n(981631),
-    _ = n(671955),
-    p = n(388032),
-    h = n(704543);
-function m(e) {
-    var t, n, m, g, E;
+    p = n(671955),
+    _ = n(388032),
+    m = n(704543);
+function h(e) {
+    var t, n, h, g, E;
     let { user: b, activity: y, onAction: O } = e,
         { themeType: v } = (0, u.z)(),
-        I = (0, l.Ih)(y, b),
-        T = (0, l.Fe)(y, b);
+        S = (0, l.Ih)(y, b),
+        I = (0, l.Fe)(y, b);
     if (!(0, s.Z)(y) || (!(0, o.Z)(y, f.xjy.PLAY) && !(0, o.Z)(y, f.xjy.SYNC))) return null;
-    let S = (e) => {
-            null == e || e.stopPropagation(), null == O || O({ action: "PRESS_PLAY_ON_SPOTIFY_BUTTON" }), I.onClick();
+    let T = (e) => {
+            null == e || e.stopPropagation(), null == O || O({ action: "PRESS_PLAY_ON_SPOTIFY_BUTTON" }), S.onClick();
         },
         A = (e) => {
-            e.stopPropagation(), null == O || O({ action: "PRESS_LISTEN_ALONG_ON_SPOTIFY_BUTTON" }), T.onClick();
+            e.stopPropagation(), null == O || O({ action: "PRESS_LISTEN_ALONG_ON_SPOTIFY_BUTTON" }), I.onClick();
         };
-    return v === _.l.MODAL_V2
+    return v === p.l.MODAL_V2
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(i.u, {
-                      text: T.tooltip,
+                      text: I.tooltip,
                       children: (0, r.jsx)(d.O1, {
-                          text: null != (t = T.label) ? t : p.intl.string(p.t.eU3inB),
+                          text: null != (t = I.label) ? t : _.intl.string(_.t.eU3inB),
                           onClick: A,
-                          disabled: T.disabled,
-                          loading: T.loading,
+                          disabled: I.disabled,
+                          loading: I.loading,
                       }),
                   }),
                   (0, r.jsx)(i.u, {
-                      text: I.tooltip,
+                      text: S.tooltip,
                       children: (0, r.jsx)(d.O1, {
-                          text: null != (n = I.label) ? n : p.intl.string(p.t.rRffNz),
-                          onClick: S,
-                          disabled: I.disabled,
-                          loading: I.loading,
+                          text: null != (n = S.label) ? n : _.intl.string(_.t.rRffNz),
+                          onClick: T,
+                          disabled: S.disabled,
+                          loading: S.loading,
                       }),
                   }),
               ],
@@ -52,25 +52,25 @@ function m(e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)("div", {
-                      className: h.primaryButton,
+                      className: m.primaryButton,
                       children: (0, r.jsx)(i.u, {
-                          text: I.tooltip,
+                          text: S.tooltip,
                           children: (0, r.jsx)(d.O1, {
                               icon: () => (0, r.jsx)(c.Z, {}),
-                              text: null != (m = I.label) ? m : p.intl.string(p.t.rRffNz),
-                              onClick: S,
-                              disabled: I.disabled,
-                              loading: I.loading,
+                              text: null != (h = S.label) ? h : _.intl.string(_.t.rRffNz),
+                              onClick: T,
+                              disabled: S.disabled,
+                              loading: S.loading,
                               fullWidth: !0,
                           }),
                       }),
                   }),
                   (0, r.jsx)(d.pt, {
                       icon: a.iOO,
-                      tooltipText: null != (g = T.tooltip) ? g : p.intl.string(p.t.eU3inB),
-                      "aria-label": null != (E = T.label) ? E : p.intl.string(p.t.eU3inB),
-                      disabled: T.disabled,
-                      loading: T.loading,
+                      tooltipText: null != (g = I.tooltip) ? g : _.intl.string(_.t.eU3inB),
+                      "aria-label": null != (E = I.label) ? E : _.intl.string(_.t.eU3inB),
+                      disabled: I.disabled,
+                      loading: I.loading,
                       onClick: A,
                   }),
               ],

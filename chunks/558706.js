@@ -1,6 +1,6 @@
 n.d(t, {
     Yn: () => f,
-    tJ: () => _,
+    tJ: () => p,
 }),
     n(415506);
 var r = n(664751),
@@ -91,7 +91,7 @@ class f extends d {
               });
     }
 }
-class _ extends d {
+class p extends d {
     getEndpoint() {
         switch (this.searchType) {
             case s.aib.DMS:

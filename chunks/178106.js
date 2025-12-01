@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(539854), n(388685);
+n.d(t, { Z: () => k }), n(539854), n(388685);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -9,10 +9,10 @@ var r,
     u = n(704907),
     d = n(581883),
     f = n(594174),
-    _ = n(164878),
-    p = n(763296),
-    h = n(697426),
-    m = n(771784),
+    p = n(164878),
+    _ = n(763296),
+    m = n(697426),
+    h = n(771784),
     g = n(710111),
     E = n(526761);
 function b(e, t, n) {
@@ -67,96 +67,96 @@ function v(e, t) {
         e
     );
 }
-let I = [],
-    T = new (s())({ max: g.zb }),
-    S = new u.Z({
+let S = [],
+    I = new (s())({ max: g.zb }),
+    T = new u.Z({
         computeBonus: () => 100,
-        lookupKey: (e) => p.Z.getSoundById(e),
+        lookupKey: (e) => _.Z.getSoundById(e),
         afterCompute: () => {},
         numFrequentlyItems: g.O6,
     });
 function A(e) {
     let { sound: t, trigger: n } = e;
-    if (!M()) return;
+    if (!j()) return;
     let r = t.soundId.toString();
-    n === h.YQ.SOUNDBOARD && R(r);
+    n === m.YQ.SOUNDBOARD && P(r);
 }
 function C(e) {
     var t;
     let { soundId: n, userId: r } = e;
-    if (!x()) return;
+    if (!L()) return;
     let i = n.toString();
-    r !== (null == (t = f.default.getCurrentUser()) ? void 0 : t.id) && P(i) && N(i);
+    r !== (null == (t = f.default.getCurrentUser()) ? void 0 : t.id) && R(i) && N(i);
 }
 function N(e) {
-    T.set(e, e);
+    I.set(e, e);
 }
-function R(e) {
-    S.track(e),
-        I.push({
+function P(e) {
+    T.track(e),
+        S.push({
             key: e,
             timestamp: Date.now(),
         }),
-        S.compute();
+        T.compute();
 }
-function P(e) {
-    for (let t of p.Z.getSounds().values()) if (null != t.find((t) => t.soundId.toString() === e)) return !0;
+function R(e) {
+    for (let t of _.Z.getSounds().values()) if (null != t.find((t) => t.soundId.toString() === e)) return !0;
     return !1;
 }
-function D(e) {
+function w(e) {
     return a().mapValues(e, (e) => v(y({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) }));
 }
-function w() {
+function D() {
     var e;
-    if (!M()) return;
+    if (!j()) return;
     let t = null == (e = d.Z.frecencyWithoutFetchingLatest.playedSoundFrecency) ? void 0 : e.playedSounds;
-    S.overwriteHistory(D(null != t ? t : {}), I);
+    T.overwriteHistory(w(null != t ? t : {}), S);
 }
-function L(e) {
+function x(e) {
     let {
         settings: { type: t },
         wasSaved: n,
     } = e;
-    M() && t === E.yP.FRECENCY_AND_FAVORITES_SETTINGS && n && (I = []);
+    j() && t === E.yP.FRECENCY_AND_FAVORITES_SETTINGS && n && (S = []);
 }
-function x() {
-    return (0, _.v)({
+function L() {
+    return (0, p.v)({
         location: "soundboard_event_store",
         autoTrackExposure: !1,
     }).canSeeRecentlyHeard;
 }
-function M() {
-    return (0, m.Lq)("soundboard_event_store");
+function j() {
+    return (0, h.Lq)("soundboard_event_store");
 }
-class k extends (r = l.ZP.PersistedStore) {
+class M extends (r = l.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(p.Z, d.Z, f.default),
-            (null == e ? void 0 : e.recentlyHeardCache) != null && T.load(e.recentlyHeardCache),
-            (null == e ? void 0 : e.playedEventsPendingFlush) != null && (I = e.playedEventsPendingFlush),
-            this.syncWith([d.Z], w);
+        this.waitFor(_.Z, d.Z, f.default),
+            (null == e ? void 0 : e.recentlyHeardCache) != null && I.load(e.recentlyHeardCache),
+            (null == e ? void 0 : e.playedEventsPendingFlush) != null && (S = e.playedEventsPendingFlush),
+            this.syncWith([d.Z], D);
     }
     getState() {
         return {
-            recentlyHeardCache: T.dump(),
-            playedEventsPendingFlush: I,
+            recentlyHeardCache: I.dump(),
+            playedEventsPendingFlush: S,
         };
     }
     hasPendingUsage() {
-        return I.length > 0;
+        return S.length > 0;
     }
     get playedSoundHistory() {
-        return S.usageHistory;
+        return T.usageHistory;
     }
     get recentlyHeardSoundIds() {
-        return T.values();
+        return I.values();
     }
     get frecentlyPlayedSounds() {
-        return S.frequently;
+        return T.frequently;
     }
 }
-b(k, "displayName", "SoundboardEventStore"), b(k, "persistKey", "SoundboardEventStore");
-let j = new k(c.Z, {
+b(M, "displayName", "SoundboardEventStore"), b(M, "persistKey", "SoundboardEventStore");
+let k = new M(c.Z, {
     GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY: A,
     GUILD_SOUNDBOARD_SOUND_PLAY_START: C,
-    USER_SETTINGS_PROTO_UPDATE: L,
+    USER_SETTINGS_PROTO_UPDATE: x,
 });

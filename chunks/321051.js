@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,23 +9,23 @@ var r = n(54381),
     u = n(697426),
     d = n(603074),
     f = n(388032),
-    _ = n(596806);
-let p = [54, 8, 8, 8];
-function h(e) {
+    p = n(596806);
+let _ = [54, 8, 8, 8];
+function m(e) {
     let { onSelect: t, sound: n } = e,
-        [a, h] = i.useState(!1),
-        m = i.useRef(null),
+        [a, m] = i.useState(!1),
+        h = i.useRef(null),
         g = (0, c.Z)({ location: "GiftSoundboard" }),
-        E = o()(_.text, g && _.refresh);
+        E = o()(p.text, g && p.refresh);
     function b(e) {
-        h(!1), null == t || t(e);
+        m(!1), null == t || t(e);
     }
     let y = (e) =>
         (0, r.jsxs)("div", {
-            className: _.customGiftHeader,
+            className: p.customGiftHeader,
             children: [
                 (0, r.jsxs)("div", {
-                    className: _.__invalid_customGiftHeaderText,
+                    className: p.__invalid_customGiftHeaderText,
                     children: [
                         (0, r.jsx)(l.Text, {
                             variant: "text-md/bold",
@@ -38,17 +38,17 @@ function h(e) {
                     ],
                 }),
                 (0, r.jsx)("div", {
-                    className: _.searchAndSound,
+                    className: p.searchAndSound,
                     children: e,
                 }),
             ],
         });
     return (0, r.jsx)(l.yRy, {
-        targetElementRef: m,
+        targetElementRef: h,
         shouldShow: a,
         position: "bottom",
         align: "left",
-        onRequestClose: () => h(!1),
+        onRequestClose: () => m(!1),
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, r.jsx)(l.VqE, {
@@ -61,7 +61,7 @@ function h(e) {
                     onSelect: b,
                     analyticsSource: "gift soundboard",
                     soundButtonOverlay: u.Pb.ADD,
-                    listPadding: p,
+                    listPadding: _,
                     renderHeader: y,
                     defaultSoundsOnly: !0,
                 }),
@@ -69,18 +69,18 @@ function h(e) {
         },
         children: () =>
             (0, r.jsx)(l.P3F, {
-                className: o()(_.container, g && _.refresh),
-                onClick: () => h(!0),
-                innerRef: m,
+                className: o()(p.container, g && p.refresh),
+                onClick: () => m(!0),
+                innerRef: h,
                 children:
                     null == n
                         ? (0, r.jsxs)("div", {
-                              className: _.contentContainer,
+                              className: p.contentContainer,
                               children: [
                                   (0, r.jsx)(l.KY1, {
                                       size: "custom",
                                       color: g ? s.Z.colors.ICON_PRIMARY : s.Z.colors.WHITE,
-                                      className: _.soundIcon,
+                                      className: p.soundIcon,
                                       width: 14,
                                       height: 14,
                                   }),
@@ -93,7 +93,7 @@ function h(e) {
                               ],
                           })
                         : (0, r.jsxs)("div", {
-                              className: _.contentContainer,
+                              className: p.contentContainer,
                               children: [
                                   (0, r.jsx)(l.Text, {
                                       className: E,

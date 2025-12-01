@@ -10,10 +10,10 @@ var i = n(392711),
     u = n(933557),
     d = n(699516),
     f = n(594174),
-    _ = n(895924),
-    p = n(689079),
-    h = n(981631),
-    m = n(388032);
+    p = n(895924),
+    _ = n(689079),
+    m = n(981631),
+    h = n(388032);
 function g(e, t, n) {
     return (
         t in e
@@ -68,23 +68,23 @@ function y(e, t) {
 }
 function O(e) {
     switch (e) {
-        case h.nkL.GIF.title:
-        case h.nkL.TENOR.title:
-            return m.intl.string(m.t["0vrCgJ"]);
+        case m.nkL.GIF.title:
+        case m.nkL.TENOR.title:
+            return h.intl.string(h.t["0vrCgJ"]);
         default:
             return "";
     }
 }
 let v = [
-    ...a()(h.nkL)
+    ...a()(m.nkL)
         .values()
         .map((e) => ({
             id: e.commandId,
             untranslatedName: e.command,
             displayName: e.command,
             type: c.yU.CHAT,
-            inputType: _.iw.BUILT_IN_INTEGRATION,
-            applicationId: p.bi.BUILT_IN,
+            inputType: p.iw.BUILT_IN_INTEGRATION,
+            applicationId: _.bi.BUILT_IN,
             get untranslatedDescription() {
                 return O(e.title);
             },
@@ -92,17 +92,17 @@ let v = [
                 return O(e.title);
             },
             options:
-                e.type === h.q9n.GIF
+                e.type === m.q9n.GIF
                     ? [
                           {
                               name: "query",
                               displayName: "query",
                               type: c.jw.STRING,
                               get description() {
-                                  return m.intl.string(m.t["+9g3Du"]);
+                                  return h.intl.string(h.t["+9g3Du"]);
                               },
                               get displayDescription() {
-                                  return m.intl.string(m.t["+9g3Du"]);
+                                  return h.intl.string(h.t["+9g3Du"]);
                               },
                               required: !0,
                           },
@@ -117,13 +117,13 @@ let v = [
         untranslatedName: "leave",
         displayName: "leave",
         type: c.yU.CHAT,
-        inputType: _.iw.BUILT_IN,
-        applicationId: p.bi.BUILT_IN,
+        inputType: p.iw.BUILT_IN,
+        applicationId: _.bi.BUILT_IN,
         get untranslatedDescription() {
-            return m.intl.string(m.t["26C4oi"]);
+            return h.intl.string(h.t["26C4oi"]);
         },
         get displayDescription() {
-            return m.intl.string(m.t["26C4oi"]);
+            return h.intl.string(h.t["26C4oi"]);
         },
         options: [
             {
@@ -131,10 +131,10 @@ let v = [
                 displayName: "silent",
                 type: c.jw.BOOLEAN,
                 get description() {
-                    return m.intl.string(m.t.YH7PkD);
+                    return h.intl.string(h.t.YH7PkD);
                 },
                 get displayDescription() {
-                    return m.intl.string(m.t.bq3JXs);
+                    return h.intl.string(h.t.bq3JXs);
                 },
                 required: !1,
             },
@@ -148,29 +148,29 @@ let v = [
             let { channel: a } = t;
             if (null == a) return;
             let c = (0, u.F6)(a, f.default, d.Z),
-                _ = m.intl.formatToPlainString(m.t.hJ5Ap4, { name: c }),
-                p = m.intl.format(m.t.SSIVOu, { name: c }),
-                h = null != (i = null == (n = e.find((e) => "silent" === e.name)) ? void 0 : n.value) && i;
+                p = h.intl.formatToPlainString(h.t.hJ5Ap4, { name: c }),
+                _ = h.intl.format(h.t.SSIVOu, { name: c }),
+                m = null != (i = null == (n = e.find((e) => "silent" === e.name)) ? void 0 : n.value) && i;
             async function g() {
                 if (null != a)
                     try {
-                        await s.Z.closePrivateChannel(a.id, void 0, h);
+                        await s.Z.closePrivateChannel(a.id, void 0, m);
                     } catch (e) {
-                        l.Z.sendBotMessage(a.id, m.intl.string(m.t["YOsuT/"]));
+                        l.Z.sendBotMessage(a.id, h.intl.string(h.t["YOsuT/"]));
                     }
             }
             a.isManaged() &&
-                ((_ = m.intl.formatToPlainString(m.t.hVGjEW, { name: c })),
-                (p = m.intl.format(m.t.IK1Qvs, { name: c }))),
+                ((p = h.intl.formatToPlainString(h.t.hVGjEW, { name: c })),
+                (_ = h.intl.format(h.t.IK1Qvs, { name: c }))),
                 (0, o.h7j)((e) =>
                     (0, r.jsx)(
                         o.ConfirmModal,
                         y(
                             E(
                                 {
-                                    header: _,
-                                    confirmText: m.intl.string(m.t["26C4oi"]),
-                                    cancelText: m.intl.string(m.t["ETE/oC"]),
+                                    header: p,
+                                    confirmText: h.intl.string(h.t["26C4oi"]),
+                                    cancelText: h.intl.string(h.t["ETE/oC"]),
                                     onConfirm: g,
                                 },
                                 e,
@@ -178,7 +178,7 @@ let v = [
                             {
                                 children: (0, r.jsx)(o.Text, {
                                     variant: "text-md/normal",
-                                    children: p,
+                                    children: _,
                                 }),
                             },
                         ),
@@ -191,13 +191,13 @@ let v = [
         untranslatedName: "sticker",
         displayName: "sticker",
         type: c.yU.CHAT,
-        inputType: _.iw.BUILT_IN_INTEGRATION,
-        applicationId: p.bi.BUILT_IN,
+        inputType: p.iw.BUILT_IN_INTEGRATION,
+        applicationId: _.bi.BUILT_IN,
         get untranslatedDescription() {
-            return m.intl.string(m.t.GUH9II);
+            return h.intl.string(h.t.GUH9II);
         },
         get displayDescription() {
-            return m.intl.string(m.t.GUH9II);
+            return h.intl.string(h.t.GUH9II);
         },
         options: [
             {
@@ -205,15 +205,15 @@ let v = [
                 displayName: "query",
                 type: c.jw.STRING,
                 get description() {
-                    return m.intl.string(m.t.hIbHm1);
+                    return h.intl.string(h.t.hIbHm1);
                 },
                 get displayDescription() {
-                    return m.intl.string(m.t.hIbHm1);
+                    return h.intl.string(h.t.hIbHm1);
                 },
                 required: !0,
             },
         ],
-        integrationType: h.q9n.STICKER,
+        integrationType: m.q9n.STICKER,
         integrationTitle: "sticker",
     },
 ];

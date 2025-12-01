@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => Q }), n(388685), n(539854), n(415506);
+n.d(t, { Z: () => X }), n(388685), n(539854), n(415506);
 var i,
     a = n(348327),
     o = n.n(a),
@@ -8,10 +8,10 @@ var i,
     c = n(570140),
     u = n(709054),
     d = n(145597),
-    f = n(427860),
-    _ = n(509140),
-    p = n(987650);
-function h(e, t, n) {
+    f = n(307149),
+    p = n(509140),
+    _ = n(987650);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function h(e, t, n) {
         e
     );
 }
-let m = null,
+let h = null,
     g = new Set(),
     E = null,
     b = null,
@@ -33,16 +33,16 @@ let m = null,
 function v(e) {
     return (0, f.lp)(e) ? "native-".concat(e.id) : null != e.nativeId ? "native-".concat(e.nativeId) : null;
 }
-function I(e) {
+function S(e) {
     var t, n;
     let r = [e.type, null != (n = null == (t = e.pid) ? void 0 : t.toString()) ? n : "null-pid"],
         i = v(e);
     return null != i && r.push(i), r;
 }
-function T(e) {
+function I(e) {
     return -e.timestamp;
 }
-function S(e) {
+function T(e) {
     let t = Math.floor(e);
     try {
         return O.willOverflowNext() && O.reset(), u.default.fromTimestampWithSequence(t, O);
@@ -52,7 +52,7 @@ function S(e) {
 }
 function A(e, t, n) {
     var r;
-    let i = S(e.timestamp);
+    let i = T(e.timestamp);
     return {
         id: i,
         key: i,
@@ -69,24 +69,24 @@ function A(e, t, n) {
 function C() {
     return performance.timeOrigin + performance.now();
 }
-let N = new l.h(I, T),
-    R = 0;
-function P(e) {
+let N = new l.h(S, I),
+    P = 0;
+function R(e) {
     return N.set(e.id, e);
 }
-function D() {
-    return R;
+function w() {
+    return P;
 }
-function w(e, t, n) {
+function D(e, t, n) {
     let r = v(e);
     if (null == r) throw Error("Native breadcrumb has no native id");
-    return !(N.size(r) > 0) && ((R = Math.max(R, Number(e.id))), P(A(e, t, n)));
+    return !(N.size(r) > 0) && ((P = Math.max(P, Number(e.id))), R(A(e, t, n)));
 }
-function L(e, t, n, r) {
+function x(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : f.l6.Info,
         a = C(),
-        o = S(a);
-    return P({
+        o = T(a);
+    return R({
         id: o,
         key: o,
         nativeId: null,
@@ -99,26 +99,26 @@ function L(e, t, n, r) {
         stack: void 0,
     });
 }
-function x(e) {
+function L(e) {
     return [N.values(e, !0), N.version];
 }
-function M() {
+function j() {
     null == b &&
         (b = setInterval(() => {
             var e;
-            let t = null != (e = null == m ? void 0 : m.getLastAssociatedPID()) ? e : null;
-            null == m ||
-                m.getNativeBreadcrumbs({ minBreadcrumbId: D() }, (e) => {
+            let t = null != (e = null == h ? void 0 : h.getLastAssociatedPID()) ? e : null;
+            null == h ||
+                h.getNativeBreadcrumbs({ minBreadcrumbId: w() }, (e) => {
                     let { breadcrumbs: n } = e;
-                    for (let e of n) w(e, f.C7.NativeOOP, null != t ? t : d.UNSET_PID);
-                    X.emitChange();
+                    for (let e of n) D(e, f.C7.NativeOOP, null != t ? t : d.UNSET_PID);
+                    Q.emitChange();
                 });
         }, y));
 }
-function k(e) {
-    return e ? M() : U(), !0;
+function M(e) {
+    return e ? j() : U(), !0;
 }
-function j() {
+function k() {
     return null != b;
 }
 function U() {
@@ -127,21 +127,21 @@ function U() {
 function G() {
     null != E && (clearInterval(E), (E = null));
 }
-function B(e) {
+function Z(e) {
     let { enabled: t, mode: n } = e;
     t ? g.add(n) : g.delete(n), (g = new Set(g));
 }
-let Z = 300;
+let B = 300;
 function F() {
     null == E &&
         (E = setInterval(() => {
             var e;
-            null == m ||
-                null == (e = m.getDebuggingState) ||
-                e.call(m, (e) => {
-                    o()(r, e) || ((r = e), X.emitChange());
+            null == h ||
+                null == (e = h.getDebuggingState) ||
+                e.call(h, (e) => {
+                    o()(r, e) || ((r = e), Q.emitChange());
                 });
-        }, Z));
+        }, B));
 }
 function V(e) {
     let { enabled: t } = e;
@@ -150,27 +150,27 @@ function V(e) {
 function H(e) {
     var t;
     let { enabled: n } = e;
-    null == m || null == (t = m.setDetailedLogging) || t.call(m, n);
+    null == h || null == (t = h.setDetailedLogging) || t.call(h, n);
 }
 function Y() {
-    m = _.Z.getNativeModule();
+    h = p.Z.getNativeModule();
 }
 function W() {
-    m = null;
+    h = null;
 }
 function K(e) {
     let {
         breadcrumb: { pid: t, name: n, data: r, type: i, logType: a },
     } = e;
-    return L(n, null != r ? r : {}, i, t, a), !0;
+    return x(n, null != r ? r : {}, i, t, a), !0;
 }
 function z(e) {
     let { enabled: t } = e;
-    return k(t), !0;
+    return M(t), !0;
 }
 class q extends (i = s.ZP.Store) {
     initialize() {
-        this.waitFor(_.Z);
+        this.waitFor(p.Z);
     }
     getDebuggingState() {
         return r;
@@ -182,28 +182,28 @@ class q extends (i = s.ZP.Store) {
         return g;
     }
     getOverlayLoggingBreadcrumbs(e) {
-        return x(e);
+        return L(e);
     }
     isModuleLoggingEnabled() {
-        return j();
+        return k();
     }
     isStateDebuggingEnabled() {
         return null != E;
     }
 }
-h(q, "displayName", "Overlay-v3-Native-Debug-Module-Store");
-let X = new q(
+m(q, "displayName", "Overlay-v3-Native-Debug-Module-Store");
+let Q = new q(
         c.Z,
-        __OVERLAY__ || !p.iP
+        __OVERLAY__ || !_.iP
             ? {}
             : {
                   OVERLAY_V3_LOAD_NATIVE_MODULE_SUCCESS: Y,
                   OVERLAY_V3_LOAD_NATIVE_MODULE_FAILED: W,
                   OVERLAY_SET_STATE_DEBUGGING: V,
-                  OVERLAY_RENDER_DEBUG_MODE: B,
+                  OVERLAY_RENDER_DEBUG_MODE: Z,
                   OVERLAY_SET_DETAILED_LOGGING: H,
                   OVERLAY_ADD_DEBUG_BREADCRUMB: K,
                   OVERLAY_SET_MODULE_LOGGING: z,
               },
     ),
-    Q = X;
+    X = Q;

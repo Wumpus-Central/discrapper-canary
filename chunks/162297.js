@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(990547),
@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(728345),
     d = n(812206),
     f = n(230171),
-    _ = n(433534);
-function p(e) {
+    p = n(433534);
+function _(e) {
     let { applicationId: t, message: n } = e,
         [a, s, l] = (0, o.Wu)(
             [d.Z],
@@ -21,18 +21,18 @@ function p(e) {
         null != a || s || l || u.ZP.fetchApplication(t);
     }, [a, s, l, t]),
     null != a &&
-        (0, _.Eb)({
+        (0, p.Eb)({
             customInstallUrl: a.customInstallUrl,
             installParams: a.installParams,
             integrationTypesConfig: a.integrationTypesConfig,
         }))
-        ? (0, r.jsx)(h, {
+        ? (0, r.jsx)(m, {
               application: a,
               message: n,
           })
         : null;
 }
-function h(e) {
+function m(e) {
     let { application: t, message: n } = e,
         o = i.useCallback(() => {
             (0, c.h)({

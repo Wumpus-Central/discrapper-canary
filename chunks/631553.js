@@ -15,8 +15,8 @@ var r = n(54381),
     m = n(239091),
     y = n(13245),
     b = n(425493),
-    v = n(951483),
-    _ = n(714338),
+    _ = n(951483),
+    v = n(714338),
     O = n(185666),
     E = n(100527),
     x = n(906732),
@@ -123,7 +123,7 @@ function eb(e) {
     });
 }
 F.isPlatformEmbedded;
-let ev = (e) => {
+let e_ = (e) => {
         let { keybind: t, onClick: n, isPreviewingInGame: i, locked: s } = e,
             o = s ? g.P3F : "div";
         return (0, r.jsx)(o, {
@@ -149,7 +149,7 @@ let ev = (e) => {
                   }),
         });
     },
-    e_ = (e) => {
+    ev = (e) => {
         let { keyCode: t, shiftKey: n, metaKey: i, altKey: r, ctrlKey: s } = e;
         return {
             keyCode: t,
@@ -181,18 +181,18 @@ class eO extends s.Component {
                     let e = Date.now() - em;
                     y.Z.track(ed.rMx.OVERLAY_LOCKED, { unlocked_duration: e }), (em = null);
                 }
-                _.Z.disable(),
+                v.Z.disable(),
                     (this.activeKeyEventShapes = []),
-                    G.default.isPinned(ed.Odu.TEXT) && (_.Z.setLayout(v.Xq), _.Z.enable());
+                    G.default.isPinned(ed.Odu.TEXT) && (v.Z.setLayout(_.Xq), v.Z.enable());
             } else
                 e.locked &&
                     !this.props.locked &&
                     (window.removeEventListener("contextmenu", ey, !1),
                     null == em && ((em = Date.now()), y.Z.track(ed.rMx.OVERLAY_UNLOCKED)),
-                    _.Z.disable(),
+                    v.Z.disable(),
                     (this.activeKeyEventShapes = []),
-                    _.Z.setLayout(v.Sr),
-                    _.Z.enable());
+                    v.Z.setLayout(_.Sr),
+                    v.Z.enable());
             e.keybindKeyCodes !== this.props.keybindKeyCodes &&
                 (this.lockEventShape = (0, X.d2)(this.props.keybindKeyCodes));
         }
@@ -320,7 +320,7 @@ class eO extends s.Component {
                     }),
                 i,
                 (!e || a.has(ed.O0n.TEXT_WIDGET)) &&
-                    (0, r.jsx)(ev, {
+                    (0, r.jsx)(e_, {
                         locked: e,
                         keybind: t,
                         onClick: e ? this.handleDeactivate : this.handleLock,
@@ -370,7 +370,7 @@ class eO extends s.Component {
             ep(this, "lockEventShape", (0, X.d2)(this.props.keybindKeyCodes)),
             ep(this, "getActiveKeyEventIndex", (e) => this.activeKeyEventShapes.findIndex((t) => p()(t, e))),
             ep(this, "onKeyDownGlobal", (e) => {
-                let t = e_(e),
+                let t = ev(e),
                     n = this.getActiveKeyEventIndex(t) > -1,
                     i = [16, 17, 18, 91].includes(e.keyCode);
                 n || i || this.activeKeyEventShapes.push(t),
@@ -381,12 +381,12 @@ class eO extends s.Component {
                 t.keyCode === c().codes.esc && r && s.has(ed.O0n.TEXT_WIDGET) && y.Z.deactivateAllRegions();
             }),
             ep(this, "onKeyUpGlobal", (e) => {
-                let t = e_(e),
+                let t = ev(e),
                     n = this.getActiveKeyEventIndex(t);
                 n > -1 && this.activeKeyEventShapes.splice(n, 1);
             });
         let t = e.locked && G.default.isPinned(ed.Odu.TEXT);
-        _.Z.setLayout(t ? v.Xq : v.Sr), t && _.Z.enable();
+        v.Z.setLayout(t ? _.Xq : _.Sr), t && v.Z.enable();
     }
 }
 function eE() {

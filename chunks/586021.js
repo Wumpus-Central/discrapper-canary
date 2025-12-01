@@ -1,8 +1,8 @@
 n.d(t, {
-    D5: () => p,
-    Ft: () => _,
+    D5: () => _,
+    Ft: () => p,
     IT: () => f,
-    Yk: () => h,
+    Yk: () => m,
 }),
     n(415506);
 var r = n(264344),
@@ -26,10 +26,10 @@ function f() {
         ("transform" in RTCRtpSender.prototype || "createEncodedStreams" in RTCRtpSender.prototype)
     );
 }
-function _() {
+function p() {
     return "object" == typeof WebAssembly;
 }
-function p() {
+function _() {
     return null != l
         ? l
         : (l = new Promise((e, t) => {
@@ -50,7 +50,7 @@ function p() {
                   });
           }));
 }
-function h() {
+function m() {
     if (null == c) throw Error("DAVE module not loaded");
     return null == u && (u = new c.TransientKeys()), u;
 }

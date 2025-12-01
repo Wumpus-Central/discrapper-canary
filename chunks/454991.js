@@ -94,10 +94,10 @@ class s {
             let e = new s(null != (n = f.legacyEnabled) ? n : i.iP, f.oopEnabled || i.iP);
             return e.save(), r.K.remove("OverlayStore5"), e;
         }
-        let _ = r.K.get("OverlayStore6");
-        if (null != _) return new s(null != (a = _.legacyEnabled) ? a : i.iP, null != (o = _.oopEnabled) ? o : i.iP);
-        let p = new s(i.iP, i.iP);
-        return p.save(), p;
+        let p = r.K.get("OverlayStore6");
+        if (null != p) return new s(null != (a = p.legacyEnabled) ? a : i.iP, null != (o = p.oopEnabled) ? o : i.iP);
+        let _ = new s(i.iP, i.iP);
+        return _.save(), _;
     }
     constructor(e, t) {
         a(this, "legacyEnabled", void 0),

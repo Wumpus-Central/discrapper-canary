@@ -61,7 +61,7 @@ function d(e, t, n, i) {
     }
     return {
         value: o,
-        description: o.length > 1 ? f(o) + _(o) : "",
+        description: o.length > 1 ? f(o) + p(o) : "",
     };
 }
 function f(e) {
@@ -74,7 +74,7 @@ function f(e) {
     };
     return e.map((e) => t[e[0]]).join("");
 }
-function _(e) {
+function p(e) {
     let t = {
         17: "4:4:4 (1 1)",
         18: "4:4:0 (1 2)",

@@ -1,5 +1,5 @@
-_.d(e, { A: () => r });
-var a = _(395848);
-let r = (t) => {
-    a.m.document && a.m.document.prerendering ? addEventListener("prerenderingchange", () => t(), !0) : t();
+r.d(t, { A: () => a });
+var n = r(395848);
+let a = (e) => {
+    n.m.document && n.m.document.prerendering ? addEventListener("prerenderingchange", () => e(), !0) : e();
 };

@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
-    Z: () => m,
-    b: () => h,
+    Z: () => h,
+    b: () => m,
 });
 var i = n(544891),
     a = n(570140),
@@ -12,7 +12,7 @@ var i = n(544891),
     u = n(669079),
     d = n(981631),
     f = n(474936);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +25,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,12 +36,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-async function h(e) {
+async function m(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     a.Z.dispatch({
@@ -77,9 +77,9 @@ async function h(e) {
     }
 }
 r = n(775644).Z;
-let m = p(
+let h = _(
     {
-        resolveGiftCode: h,
+        resolveGiftCode: m,
         async fetchUserGiftCodesForSKU(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
             a.Z.dispatch({

@@ -1,6 +1,6 @@
 n.d(t, {
     Eg: () => u,
-    XL: () => p,
+    XL: () => f,
 });
 var r = n(473749),
     i = n(55160),
@@ -65,7 +65,7 @@ function d(e) {
         return !1;
     }
 }
-function p(e, t) {
+function f(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = r.useRef(null);
     return (

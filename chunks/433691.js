@@ -1,8 +1,8 @@
-_.d(e, { u: () => r });
-var a = _(395848);
-let r = (t) => {
-    let e = (e) => {
-        ("pagehide" === e.type || (a.m.document && "hidden" === a.m.document.visibilityState)) && t(e);
+r.d(t, { u: () => a });
+var n = r(395848);
+let a = (e) => {
+    let t = (t) => {
+        ("pagehide" === t.type || (n.m.document && "hidden" === n.m.document.visibilityState)) && e(t);
     };
-    a.m.document && (addEventListener("visibilitychange", e, !0), addEventListener("pagehide", e, !0));
+    n.m.document && (addEventListener("visibilitychange", t, !0), addEventListener("pagehide", t, !0));
 };

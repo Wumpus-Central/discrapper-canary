@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => _,
+    Z: () => p,
     h: () => c,
 });
 var r,
@@ -78,4 +78,4 @@ class f extends (r = i.ZP.DeviceSettingsStore) {
     }
 }
 s(f, "displayName", "DevToolsSettingsStore"), s(f, "persistKey", "DevToolsSettingsStore");
-let _ = new f(a.Z, { DEV_TOOLS_SETTINGS_UPDATE: d });
+let p = new f(a.Z, { DEV_TOOLS_SETTINGS_UPDATE: d });

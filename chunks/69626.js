@@ -1,7 +1,7 @@
 n.d(t, {
-    Wf: () => R,
-    ZP: () => D,
-    wz: () => P,
+    Wf: () => P,
+    ZP: () => w,
+    wz: () => R,
 });
 var r = n(54381),
     i = n(473749),
@@ -13,18 +13,18 @@ var r = n(54381),
     u = n(10718),
     d = n(895924),
     f = n(124072),
-    _ = n(665906),
-    p = n(695346),
-    h = n(592125),
-    m = n(703558),
+    p = n(665906),
+    _ = n(695346),
+    m = n(592125),
+    h = n(703558),
     g = n(496675),
     E = n(944486),
     b = n(585483),
     y = n(981631),
     O = n(689079),
     v = n(761652),
-    I = n(388032);
-function T(e, t, n) {
+    S = n(388032);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ function T(e, t, n) {
         e
     );
 }
-function S(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function S(e) {
                 }),
             )),
             r.forEach(function (t) {
-                T(e, t, n[t]);
+                I(e, t, n[t]);
             });
     }
     return e;
@@ -79,7 +79,7 @@ function C(e, t) {
 function N(e, t, n, i, a) {
     if (null == e) return;
     let o = () => {
-        let r = h.Z.getChannel(e);
+        let r = m.Z.getChannel(e);
         if (null == r) return;
         let { command: o, application: s } = u.Xq(
             {
@@ -115,16 +115,16 @@ function N(e, t, n, i, a) {
                 });
         }
     };
-    "" !== m.Z.getDraft(e, m.d.ChannelMessage)
+    "" !== h.Z.getDraft(e, h.d.ChannelMessage)
         ? (0, l.h7j)((t) =>
               (0, r.jsx)(
                   l.ConfirmModal,
                   C(
-                      S(
+                      T(
                           {
-                              header: I.intl.string(I.t.pe26Cj),
-                              confirmText: I.intl.string(I.t.VkKicb),
-                              cancelText: I.intl.string(I.t["ETE/oC"]),
+                              header: S.intl.string(S.t.pe26Cj),
+                              confirmText: S.intl.string(S.t.VkKicb),
+                              cancelText: S.intl.string(S.t["ETE/oC"]),
                               onConfirm: () => o(),
                               confirmButtonColor: s.zx.Colors.BRAND,
                               onCloseCallback: () => {
@@ -136,7 +136,7 @@ function N(e, t, n, i, a) {
                       {
                           children: (0, r.jsx)(l.Text, {
                               variant: "text-md/normal",
-                              children: I.intl.string(I.t["+awCIy"]),
+                              children: S.intl.string(S.t["+awCIy"]),
                           }),
                       },
                   ),
@@ -144,14 +144,14 @@ function N(e, t, n, i, a) {
           )
         : o();
 }
-function R(e) {
+function P(e) {
     var t;
     let { node: n, stateKey: o, children: s } = e,
-        l = (0, a.e7)([h.Z, E.Z], () => {
+        l = (0, a.e7)([m.Z, E.Z], () => {
             var e;
-            return h.Z.getChannel(null != (e = n.channelId) ? e : E.Z.getChannelId());
+            return m.Z.getChannel(null != (e = n.channelId) ? e : E.Z.getChannelId());
         }, [n.channelId]),
-        { hasSendMessagePerm: c, hasUseAppCommandsPerm: m } = (0, a.cj)([g.Z], () => ({
+        { hasSendMessagePerm: c, hasUseAppCommandsPerm: h } = (0, a.cj)([g.Z], () => ({
             hasSendMessagePerm: g.Z.can(y.Plq.SEND_MESSAGES, l),
             hasUseAppCommandsPerm: g.Z.can(y.Plq.USE_APPLICATION_COMMANDS, l),
         })),
@@ -162,15 +162,15 @@ function R(e) {
                       channel: l,
                   }
                 : { type: "contextless" },
-        { command: I } = u.YZ(b, null != (t = n.commandKey) ? t : ""),
-        T = p.dN.useSetting(),
-        S = i.useMemo(() => {
-            if (null == I || null == l || I.untranslatedName !== n.commandName || T) return !1;
+        { command: S } = u.YZ(b, null != (t = n.commandKey) ? t : ""),
+        I = _.dN.useSetting(),
+        T = i.useMemo(() => {
+            if (null == S || null == l || S.untranslatedName !== n.commandName || I) return !1;
             let e = l.isPrivate();
-            if ((0, _.xl)(l) || (!e && !c)) return !1;
-            let t = (null == I ? void 0 : I.applicationId) === O.bi.BUILT_IN;
-            return !!e || !!t || !!m;
-        }, [l, I, c, m, n.commandName, T]),
+            if ((0, p.xl)(l) || (!e && !c)) return !1;
+            let t = (null == S ? void 0 : S.applicationId) === O.bi.BUILT_IN;
+            return !!e || !!t || !!h;
+        }, [l, S, c, h, n.commandName, I]),
         A = i.useCallback(
             (e) => {
                 null == e || e.stopPropagation(),
@@ -181,7 +181,7 @@ function R(e) {
             },
             [l, n.commandKey, n.commandName],
         );
-    return S
+    return T
         ? (0, r.jsxs)(
               f.Z,
               {
@@ -195,7 +195,7 @@ function R(e) {
               children: [v.GI, s],
           });
 }
-function P(e) {
+function R(e) {
     let { commandId: t, commandName: n, commandDescription: i, applicationId: s, onClick: c } = e,
         u = (0, a.e7)([E.Z], () => E.Z.getChannelId()),
         f = (e) => {
@@ -212,10 +212,10 @@ function P(e) {
         }),
     });
 }
-function D(e) {
+function w(e) {
     return {
         react: (e, t, n) =>
-            (0, r.jsx)(R, {
+            (0, r.jsx)(P, {
                 node: e,
                 stateKey: n.key,
                 children: t(e.content, n),

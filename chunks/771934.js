@@ -1,23 +1,23 @@
 n.d(t, {
     Ac: () => b,
     DI: () => C,
-    HA: () => P,
-    HV: () => I,
-    J4: () => h,
+    HA: () => R,
+    HV: () => S,
+    J4: () => m,
     JL: () => g,
     Ln: () => d,
-    Om: () => T,
-    P0: () => p,
+    Om: () => I,
+    P0: () => _,
     PI: () => O,
     Vb: () => A,
     fR: () => y,
-    gG: () => m,
-    hf: () => R,
+    gG: () => h,
+    hf: () => P,
     u7: () => N,
-    uf: () => S,
+    uf: () => T,
     w8: () => E,
     z3: () => v,
-    zW: () => _,
+    zW: () => p,
 });
 var r = n(473749),
     i = n(704215),
@@ -31,16 +31,16 @@ var r = n(473749),
         return (e.APPEARANCE_SETTINGS = "appearance_settings"), (e.PREVIEW_THEMES = "preview_themes"), e;
     })({});
 let f = "manual",
-    _ = () => {
+    p = () => {
         (f = "manual"), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "hex_input" });
     },
-    p = () => {
+    _ = () => {
         (f = "manual"), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "color_picker" });
     },
-    h = () => {
+    m = () => {
         l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "eye_dropper" });
     },
-    m = () => {
+    h = () => {
         (f = "manual"), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "add_color" });
     },
     g = () => {
@@ -65,13 +65,13 @@ let f = "manual",
         (f = "manual"),
             l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "color_intensity" });
     },
-    I = () => {
+    S = () => {
         (f = "manual"), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: "base_theme" });
     },
-    T = () => {
+    I = () => {
         (f = "surprise_me"), l.default.track(c.rMx.CUSTOM_THEMES_SURPRISE_BUTTON_CLICKED, {});
     },
-    S = () => {
+    T = () => {
         (f = "manual"), l.default.track(c.rMx.CUSTOM_THEME_RESET_BUTTON_CLICKED, {});
     },
     A = () => {
@@ -91,7 +91,7 @@ let f = "manual",
         }),
             (f = "manual");
     },
-    R = (e, t) => {
+    P = (e, t) => {
         let { analyticsLocations: n } = (0, a.ZP)(t);
         r.useEffect(() => {
             e ||
@@ -101,7 +101,7 @@ let f = "manual",
                 });
         }, [e, n]);
     },
-    P = (e, t) => {
+    R = (e, t) => {
         let n = (0, s.Nj)(i.z.CUSTOM_THEME_COACHMARK);
         r.useEffect(() => {
             if (e && !n && t !== i.z.CUSTOM_THEME_COACHMARK) {

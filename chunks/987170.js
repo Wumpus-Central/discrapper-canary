@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685), n(953529);
+n.d(t, { Z: () => p }), n(388685), n(953529);
 var r = n(473749),
     i = n(232616),
     a = n(314897),
@@ -20,7 +20,7 @@ function f(e, t, n, r) {
           ? a
           : e.defaultConfig;
 }
-function _(e) {
+function p(e) {
     (0, l.K)(e.id, e.label, e.commonTriggerPoint);
     let t = new Map();
     t.set(c.NZ.NOT_ELIGIBLE, {
@@ -44,14 +44,14 @@ function _(e) {
         description: [...t.values()].map((e) => e.description),
         buckets: [...t.keys()],
     });
-    function _(e) {
+    function p(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
             n = arguments.length > 2 ? arguments[2] : void 0,
             r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        if (((t.exposureType = n ? c.a0.AUTO_FALLBACK : c.a0.AUTO), (t.excluded = !1), null == r)) return void p(e, t);
-        h(e, t, r);
+        if (((t.exposureType = n ? c.a0.AUTO_FALLBACK : c.a0.AUTO), (t.excluded = !1), null == r)) return void _(e, t);
+        m(e, t, r);
     }
-    function p(t) {
+    function _(t) {
         let r =
                 arguments.length > 1 && void 0 !== arguments[1]
                     ? arguments[1]
@@ -60,13 +60,13 @@ function _(e) {
                           exposureType: c.a0.MANUAL,
                       },
             i = d(e.kind, n.id, t);
-        null != i && h(t, r, i);
+        null != i && m(t, r, i);
     }
-    function h(e, t, r) {
+    function m(e, t, r) {
         if (null != r) {
             var i, s, l, u, d;
             let f = c.a0.MANUAL,
-                _ = !1;
+                p = !1;
             (0, o.W9)(n.id, r, {
                 location: null != (i = null == e ? void 0 : e.location) ? i : "unknown",
                 analyticsLocations: null != (s = null == t ? void 0 : t.analyticsLocations) ? s : [],
@@ -74,18 +74,18 @@ function _(e) {
                     null != (u = null != (l = null == t ? void 0 : t.fingerprint) ? l : a.default.getFingerprint())
                         ? u
                         : void 0,
-                excluded: (null == t ? void 0 : t.excluded) || _,
+                excluded: (null == t ? void 0 : t.excluded) || p,
                 exposureType: null != (d = null == t ? void 0 : t.exposureType) ? d : f,
             });
         }
     }
-    function m(n, r) {
+    function h(n, r) {
         let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
             a = null != i.disable && i.disable,
             o = d(e.kind, e.id, n),
             l = null == o || a ? c.NZ.NOT_ELIGIBLE : o.bucket,
             u = null == o ? -1 : o.revision;
-        function _() {
+        function p() {
             let i = d(e.kind, e.id, n),
                 o = null == i || a ? c.NZ.NOT_ELIGIBLE : i.bucket,
                 s = null == i ? -1 : i.revision;
@@ -93,9 +93,9 @@ function _(e) {
         }
         return (
             r(f(e, l, t, o), l, u),
-            s.Z.addReactChangeListener(_),
+            s.Z.addReactChangeListener(p),
             () => {
-                s.Z.removeReactChangeListener(_);
+                s.Z.removeReactChangeListener(p);
             }
         );
     }
@@ -108,42 +108,42 @@ function _(e) {
             var a, o, s;
             let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { autoTrackExposure: !0 },
                 u = null != (a = l.disable) && a,
-                p = !1 !== l.autoTrackExposure,
-                h = d(e.kind, e.id, n),
+                _ = !1 !== l.autoTrackExposure,
+                m = d(e.kind, e.id, n),
                 g = null == l.trackExposureOptions ? void 0 : (0, i.Z)(null != (o = l.trackExposureOptions) ? o : {}),
-                E = null != (s = null == h ? void 0 : h.triggerDebuggingEnabled) && s,
+                E = null != (s = null == m ? void 0 : m.triggerDebuggingEnabled) && s,
                 [[b, y, O], v] = (0, r.useState)(() => {
-                    let n = null == h || u ? c.NZ.NOT_ELIGIBLE : h.bucket;
-                    return [f(e, n, t, h), n, null == h ? -1 : h.revision];
+                    let n = null == m || u ? c.NZ.NOT_ELIGIBLE : m.bucket;
+                    return [f(e, n, t, m), n, null == m ? -1 : m.revision];
                 }),
-                I = (0, i.Z)(n);
+                S = (0, i.Z)(n);
             return (
                 (0, r.useEffect)(() => {
-                    !u && (p || E) && null == e.commonTriggerPoint && _(I, g, !1 === p);
-                }, [u, p, I, g, y, O, E]),
+                    !u && (_ || E) && null == e.commonTriggerPoint && p(S, g, !1 === _);
+                }, [u, _, S, g, y, O, E]),
                 (0, r.useEffect)(
                     () =>
-                        m(
-                            I,
+                        h(
+                            S,
                             (e, t, n) => {
                                 v((r) => (r[0] === e && r[1] === t && r[2] === n ? r : [e, t, n]));
                             },
                             { disable: u },
                         ),
-                    [u, I],
+                    [u, S],
                 ),
                 b
             );
         },
-        subscribe: m,
-        trackExposure: p,
+        subscribe: h,
+        trackExposure: _,
         getCurrentConfig: function (n) {
             let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { autoTrackExposure: !0 },
                 i = d(e.kind, e.id, n);
             if (null == i || r.disable) return f(e, c.NZ.NOT_ELIGIBLE, t, i);
             if ((!1 !== r.autoTrackExposure || i.triggerDebuggingEnabled) && null == e.commonTriggerPoint) {
                 let e = !1 === r.autoTrackExposure;
-                _(n, r.trackExposureOptions, e, i);
+                p(n, r.trackExposureOptions, e, i);
             }
             return f(e, i.bucket, t, i);
         },

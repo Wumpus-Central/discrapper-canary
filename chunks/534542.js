@@ -1,6 +1,6 @@
 n.d(t, {
     R: () => g,
-    g: () => p,
+    g: () => _,
 });
 var r = n(54381);
 n(473749);
@@ -64,7 +64,7 @@ function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -72,7 +72,7 @@ function f(e, t) {
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -81,18 +81,18 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let p = {
+let _ = {
         DEFAULT: "default",
         DESCRIPTION: "description",
     },
-    h = "modeDefault",
-    m = "modeDisabled";
+    m = "modeDefault",
+    h = "modeDisabled";
 function g(e) {
-    var { type: t = p.DEFAULT, className: n, disabled: i, children: l, style: u } = e,
-        _ = f(e, ["type", "className", "disabled", "children", "style"]);
-    let g = h;
+    var { type: t = _.DEFAULT, className: n, disabled: i, children: l, style: u } = e,
+        p = f(e, ["type", "className", "disabled", "children", "style"]);
+    let g = m;
     return (
-        i && (g = m),
+        i && (g = h),
         (0, r.jsx)(
             o.Text,
             d(
@@ -102,11 +102,11 @@ function g(e) {
                         className: a()(s[t], n, s[g]),
                         style: u,
                     },
-                    _,
+                    p,
                 ),
                 { children: l },
             ),
         )
     );
 }
-g.Types = p;
+g.Types = _;

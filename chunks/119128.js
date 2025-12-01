@@ -1,27 +1,27 @@
-_.d(e, { j: () => i });
-var a = _(696486),
-    r = _(793373),
-    n = _(622916),
-    o = _(454463),
-    E = _(163162);
-function i() {
-    E.m9 && E.m9.document
-        ? E.m9.document.addEventListener("visibilitychange", () => {
-              let t = (0, a.HN)();
-              if (!t) return;
-              let e = (0, a.Gx)(t);
-              if (E.m9.document.hidden && e) {
-                  let t = "cancelled",
-                      { op: _, status: E } = (0, a.XU)(e);
-                  o.X && n.kg.log(`[Tracing] Transaction: ${t} -> since tab moved to the background, op: ${_}`),
-                      E ||
-                          e.setStatus({
-                              code: r.jt,
-                              message: t,
+r.d(t, { j: () => s });
+var n = r(696486),
+    a = r(793373),
+    i = r(622916),
+    o = r(454463),
+    _ = r(163162);
+function s() {
+    _.m9 && _.m9.document
+        ? _.m9.document.addEventListener("visibilitychange", () => {
+              let e = (0, n.HN)();
+              if (!e) return;
+              let t = (0, n.Gx)(e);
+              if (_.m9.document.hidden && t) {
+                  let e = "cancelled",
+                      { op: r, status: _ } = (0, n.XU)(t);
+                  o.X && i.kg.log(`[Tracing] Transaction: ${e} -> since tab moved to the background, op: ${r}`),
+                      _ ||
+                          t.setStatus({
+                              code: a.jt,
+                              message: e,
                           }),
-                      e.setAttribute("sentry.cancellation_reason", "document.hidden"),
-                      e.end();
+                      t.setAttribute("sentry.cancellation_reason", "document.hidden"),
+                      t.end();
               }
           })
-        : o.X && n.kg.warn("[Tracing] Could not set up background tab detection due to lack of global document");
+        : o.X && i.kg.warn("[Tracing] Could not set up background tab detection due to lack of global document");
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(539854), n(388685);
+n.d(t, { Z: () => I }), n(539854), n(388685);
 var r = n(704215),
     i = n(147913),
     a = n(710845),
@@ -9,10 +9,10 @@ var r = n(704215),
     u = n(778033),
     d = n(709706),
     f = n(358820),
-    _ = n(999224),
-    p = n(981631),
-    h = n(921944);
-function m(e, t, n) {
+    p = n(999224),
+    _ = n(981631),
+    m = n(921944);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
@@ -73,7 +73,7 @@ function O(e) {
         : Object.values(null != (t = e.modelIds) ? t : {});
 }
 let v = null;
-class I extends i.Z {
+class S extends i.Z {
     async handleVoiceFilterRequestSwitch(e) {
         let { newVoiceFilterId: t, analyticsContext: n } = e;
         if (__OVERLAY__) return;
@@ -97,7 +97,7 @@ class I extends i.Z {
                     voiceFilterId: i.id,
                     modelId: n,
                     url: r,
-                    fileName: (0, _.i)(n),
+                    fileName: (0, p.i)(n),
                 });
             }
             y.info("Waiting for dependencies for voice filter", i.id, t);
@@ -120,7 +120,7 @@ class I extends i.Z {
                             voiceFilterId: e.id,
                             modelId: t,
                             url: n[t].url,
-                            fileName: (0, _.i)(t),
+                            fileName: (0, p.i)(t),
                         },
                         { reason: u.W.AUTO_PREFETCH },
                     ));
@@ -132,7 +132,7 @@ class I extends i.Z {
             c = null != a && o in a,
             u = (null != (t = null == a ? void 0 : a.message) ? t : String(a)).substring(0, 200);
         c && (u = o),
-            l.default.track(p.rMx.VOICE_FILTER_DOWNLOAD_ATTEMPTED, {
+            l.default.track(_.rMx.VOICE_FILTER_DOWNLOAD_ATTEMPTED, {
                 canceled: c,
                 active_voice_filter_id: null != (n = s.Z.getActiveVoiceFilter()) ? n : null,
                 success: !1,
@@ -147,16 +147,16 @@ class I extends i.Z {
         if (null !== a && null === t) {
             let e = s.Z.getPreviousVoiceFilterAppliedAt(),
                 t = null === e ? null : Date.now() - e;
-            l.default.track(p.rMx.VOICE_FILTER_DISABLED, {
+            l.default.track(_.rMx.VOICE_FILTER_DISABLED, {
                 active_voice_filter_id: a,
                 duration_voice_filter_applied: t,
             });
         }
         null !== t &&
-            ((0, o.Q3)(r.z.VOICE_FILTER_IN_CALL_COACHMARK, { dismissAction: h.L.INDIRECT_ACTION }),
-            (0, o.Q3)(r.z.VOICE_FILTER_FIRST_USE_COACHMARK, { dismissAction: h.L.INDIRECT_ACTION }),
+            ((0, o.Q3)(r.z.VOICE_FILTER_IN_CALL_COACHMARK, { dismissAction: m.L.INDIRECT_ACTION }),
+            (0, o.Q3)(r.z.VOICE_FILTER_FIRST_USE_COACHMARK, { dismissAction: m.L.INDIRECT_ACTION }),
             l.default.track(
-                p.rMx.VOICE_FILTER_ENABLED,
+                _.rMx.VOICE_FILTER_ENABLED,
                 b(
                     g(
                         {
@@ -171,14 +171,14 @@ class I extends i.Z {
     }
     handleVoiceFilterApplyFailed(e) {
         let { voiceFilterId: t } = e;
-        l.default.track(p.rMx.VOICE_FILTER_ACTIVATE_FAILED, { active_voice_filter_id: null != t ? t : null });
+        l.default.track(_.rMx.VOICE_FILTER_ACTIVATE_FAILED, { active_voice_filter_id: null != t ? t : null });
     }
     handleVoiceFilterDownloadCanceled() {
         c.ZP.stopVoiceFilterDownloads();
     }
     constructor(...e) {
         super(...e),
-            m(this, "actions", {
+            h(this, "actions", {
                 VOICE_FILTER_REQUEST_SWITCH: this.handleVoiceFilterRequestSwitch,
                 VOICE_FILTER_PREFETCH: this.handleVoiceFilterPrefetch,
                 VOICE_FILTER_DOWNLOAD_FAILED: this.handleVoiceFilterDownloadFailed,
@@ -188,4 +188,4 @@ class I extends i.Z {
             });
     }
 }
-let T = new I();
+let I = new S();

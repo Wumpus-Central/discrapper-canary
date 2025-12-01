@@ -12,30 +12,30 @@ function f(e, t) {
     if (null == e || null == t) throw Error("cmd and name required");
     return "".concat(e, ":").concat(t);
 }
-let _ = o.parse(location.search.slice(1)),
-    p = parseInt(null != _.rpc && "" !== _.rpc ? _.rpc : u.V6Z, 10),
-    h = null;
-class m extends r.EventEmitter {
+let p = o.parse(location.search.slice(1)),
+    _ = parseInt(null != p.rpc && "" !== p.rpc ? p.rpc : u.V6Z, 10),
+    m = null;
+class h extends r.EventEmitter {
     get port() {
-        return p;
+        return _;
     }
     get connected() {
-        return null != h && h.readyState === WebSocket.OPEN;
+        return null != m && m.readyState === WebSocket.OPEN;
     }
     connect() {
-        if (null == h) {
-            if (p > d) {
-                (p = u.V6Z), this.emit("disconnected");
+        if (null == m) {
+            if (_ > d) {
+                (_ = u.V6Z), this.emit("disconnected");
                 return;
             }
             try {
-                h = new WebSocket("ws://127.0.0.1:".concat(this.port, "/?v=").concat(u.X6Q));
+                m = new WebSocket("ws://127.0.0.1:".concat(this.port, "/?v=").concat(u.X6Q));
             } catch (e) {
                 this.disconnect({ code: u.$VG.CLOSE_ABNORMAL });
                 return;
             }
-            null != h &&
-                ((h.onmessage = (e) => {
+            null != m &&
+                ((m.onmessage = (e) => {
                     let t;
                     try {
                         if ("string" == typeof e.data) t = JSON.parse(e.data);
@@ -57,15 +57,15 @@ class m extends r.EventEmitter {
                     r === u.zMe.ERROR && ((o = new c.Z({ errorCode: a.code }, a.message)), (a = null)),
                         this.emit(f(n, i), o, a);
                 }),
-                (h.onclose = h.onerror = (e) => this.disconnect(e)));
+                (m.onclose = m.onerror = (e) => this.disconnect(e)));
         }
     }
     disconnect(e) {
         if (null != e && "code" in e && [u.$VG.CLOSE_ABNORMAL, u.$VG.INVALID_CLIENTID].includes(e.code)) {
-            p++, (h = null), this.connect();
+            _++, (m = null), this.connect();
             return;
         }
-        null != h && (this.emit("disconnected"), h.close(), (h = null));
+        null != m && (this.emit("disconnected"), m.close(), (m = null));
     }
     subscribe(e, t, n) {
         return this.on(f(u.Etm.DISPATCH, e), n), this.request(u.Etm.SUBSCRIBE, t, e);
@@ -92,7 +92,7 @@ class m extends r.EventEmitter {
                     evt: n,
                     nonce: a,
                 });
-            this.once(f(e, a), (e, t) => (null != e ? i(e) : r(t))), null == h || h.send(o);
+            this.once(f(e, a), (e, t) => (null != e ? i(e) : r(t))), null == m || m.send(o);
         });
     }
     requestOnce(e, t, n) {
@@ -141,4 +141,4 @@ class m extends r.EventEmitter {
         );
     }
 }
-let g = new m();
+let g = new h();

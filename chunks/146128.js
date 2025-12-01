@@ -14,10 +14,10 @@ var r = n(54381),
     u = n(378364),
     d = n(197344),
     f = n(978636),
-    _ = n(643420),
-    p = n(131333),
-    h = n(981631);
-function m(e) {
+    p = n(643420),
+    _ = n(131333),
+    m = n(981631);
+function h(e) {
     if (null == e || null == u.Z.emojiAnimationTriggers) return !1;
     for (let t of u.Z.emojiAnimationTriggers) {
         let n = s.ZP.getByName(t);
@@ -42,10 +42,10 @@ function E(e) {
         s = i.useMemo(
             () => ({
                 triggerAnimation: (e) => {
-                    o !== h.IlC.OVERLAY && m(e) && n(e);
+                    o !== m.IlC.OVERLAY && h(e) && n(e);
                 },
                 untriggerAnimation: (e) => {
-                    o !== h.IlC.OVERLAY && m(e) && a(e);
+                    o !== m.IlC.OVERLAY && h(e) && a(e);
                 },
             }),
             [o, n, a],
@@ -61,9 +61,9 @@ function b(e) {
         a = i.useCallback((e, t) => {
             switch (t) {
                 case u.O.THROW_EMOJI:
-                    return (0, r.jsx)(p.t, { children: e });
+                    return (0, r.jsx)(_.t, { children: e });
                 case u.O.SNOW:
-                    return (0, r.jsx)(_.k, { children: e });
+                    return (0, r.jsx)(p.k, { children: e });
             }
         }, []);
     return n && null != u.Z.emojiAnimationType ? a((0, r.jsx)(E, { children: t }), u.Z.emojiAnimationType) : t;
@@ -76,7 +76,7 @@ function y(e) {
         i.useEffect(() => {
             if (
                 !u.Z.triggerEmojiAnimationFromSentMessage ||
-                (null == s ? void 0 : s.state) !== h.yb.SENT ||
+                (null == s ? void 0 : s.state) !== m.yb.SENT ||
                 (0, f.JL)(r)
             )
                 return;
@@ -90,8 +90,8 @@ function O(e) {
     let { channelId: t, messageId: n, emojiName: i, disable: s, emojiRef: c } = e,
         u = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
         f = d.Z.useIsEligible(),
-        _ = (0, l.bp)();
-    return s || _ === h.IlC.OVERLAY || !f || null == n || null == t || u || null == c || !m(i)
+        p = (0, l.bp)();
+    return s || p === m.IlC.OVERLAY || !f || null == n || null == t || u || null == c || !h(i)
         ? null
         : (0, r.jsx)(y, {
               emojiRef: c,

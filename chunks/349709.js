@@ -74,12 +74,12 @@ function y(e) {
         }),
         Z = (0, i.e7)([f.ZP], () => (null != t ? f.ZP.getDefaultChannel(t) : null)),
         P = a.useRef(null),
-        { isHoveringOrFocusing: M } = (0, u.Z)(P),
-        E = () => {
+        { isHoveringOrFocusing: E } = (0, u.Z)(P),
+        M = () => {
             S(void 0), C(void 0);
         },
         k = (e) => {
-            e.stopPropagation(), E();
+            e.stopPropagation(), M();
         },
         I = a.useMemo(() => {
             let e = null != j && "" !== j,
@@ -113,7 +113,7 @@ function y(e) {
                         onSelectEmoji: (e) => {
                             let { emoji: t, willClose: l } = e,
                                 a = (null == t ? void 0 : t.id) == null;
-                            E(),
+                            M(),
                                 a
                                     ? S(null == t ? void 0 : t.optionallyDiverseSequence)
                                     : (w && S(null == t ? void 0 : t.name), C(null == t ? void 0 : t.id)),
@@ -149,7 +149,7 @@ function y(e) {
                                     color: T ? "text-default" : "text-muted",
                                     children: T ? ":".concat(O, ":") : h.intl.string(h.t.QTK0TJ),
                                 }),
-                                T && M && (0, l.jsx)(o.Z, b(p({}, e), { onClick: k })),
+                                T && E && (0, l.jsx)(o.Z, b(p({}, e), { onClick: k })),
                             ],
                         }),
                     );

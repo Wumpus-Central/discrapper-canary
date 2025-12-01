@@ -1,4 +1,4 @@
-n.d(t, { n: () => h });
+n.d(t, { n: () => m });
 var r = n(54381);
 n(473749);
 var i = n(925513),
@@ -10,19 +10,19 @@ var i = n(925513),
     u = n(526761),
     d = n(726985),
     f = n(981631),
-    _ = n(388032),
-    p = n(20492);
-function h() {
+    p = n(388032),
+    _ = n(20492);
+function m() {
     let e = (0, i.v6)(),
         t = [
             {
-                title: _.intl.string(_.t.GYpoAq),
+                title: p.intl.string(p.t.GYpoAq),
                 component: () => (0, r.jsx)(s.P, {}),
                 orientation: "vertical",
                 setting: d.s6.SEXUALLY_EXPLICIT_MEDIA_REDACTION,
             },
             {
-                title: _.intl.string(_.t["16/3Bi"]),
+                title: p.intl.string(p.t["16/3Bi"]),
                 component: () => (0, r.jsx)(l.I, {}),
                 orientation: "vertical",
                 setting: d.s6.GORE_MEDIA_REDACTION,
@@ -33,15 +33,15 @@ function h() {
         scrollPosition: u.FY.EXPLICIT_MEDIA_REDACTION_V2,
         children: [
             (0, r.jsx)(c.H, {
-                header: _.intl.string(_.t["Hj/But"]),
-                description: _.intl.format(_.t.dliU4j, { learnMoreLink: a.Z.getArticleURL(e) }),
+                header: p.intl.string(p.t["Hj/But"]),
+                description: p.intl.format(p.t.dliU4j, { learnMoreLink: a.Z.getArticleURL(e) }),
             }),
             (0, r.jsx)(o.Z, {
                 parentSetting: d.s6.CONTENT_SOCIAL,
                 settingsSection: f.oAB.CONTENT_AND_SOCIAL,
                 tabs: t,
                 orientation: "vertical",
-                tabsClassName: p.tabs,
+                tabsClassName: _.tabs,
             }),
         ],
     });

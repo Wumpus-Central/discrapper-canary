@@ -33,33 +33,33 @@ let c = (e) => {
               : void 0,
     d = (e) => {
         var t, n;
-        let { subscriptionTier: d, hasActivePromotion: f = !1, useShorterCTA: _ = !1, isPersistentCTA: p = !1 } = e,
-            h = (0, a.N)(),
-            m = null == h ? void 0 : h.subscription_trial,
+        let { subscriptionTier: d, hasActivePromotion: f = !1, useShorterCTA: p = !1, isPersistentCTA: _ = !1 } = e,
+            m = (0, a.N)(),
+            h = null == m ? void 0 : m.subscription_trial,
             g = (0, i.N)(),
             E = (0, o.Wp)(g, s.Si.TIER_2) ? s.Si.TIER_2 : void 0,
             b = (0, r.a5)({
-                intervalType: null == m ? void 0 : m.interval,
-                intervalCount: null == m ? void 0 : m.interval_count,
+                intervalType: null == h ? void 0 : h.interval,
+                intervalCount: null == h ? void 0 : h.interval_count,
             }),
             y =
-                null != (n = null != d ? d : null == h || null == (t = h.subscription_trial) ? void 0 : t.sku_id)
+                null != (n = null != d ? d : null == m || null == (t = m.subscription_trial) ? void 0 : t.sku_id)
                     ? n
                     : E,
-            O = null != m && y === m.sku_id,
-            v = (null == h ? void 0 : h.trial_id) === s.a7;
+            O = null != h && y === h.sku_id,
+            v = (null == m ? void 0 : m.trial_id) === s.a7;
         return {
             buttonText: f
                 ? l.intl.string(l.t.J61px0)
                 : null != g
-                  ? u(y, _, p, g.discount.amount)
+                  ? u(y, p, _, g.discount.amount)
                   : c({
                         showTrialCTA: O,
                         subscriptionTier: y,
                         trialDurationCopy: b,
-                        isPersistentCTA: p,
+                        isPersistentCTA: _,
                         shouldShowReferralTrialCopy: v,
-                        subscriptionTrial: m,
+                        subscriptionTrial: h,
                     }),
             marketingSubscriptionTierSkuId: y,
         };

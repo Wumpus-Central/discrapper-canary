@@ -14,26 +14,26 @@ let f = (e) => {
             isHighlighted: n,
             isPurchased: a,
             removeSetHeight: f = !1,
-            withScaleAnimation: _ = !1,
-            delayProfileEffectIntro: p = !1,
+            withScaleAnimation: p = !1,
+            delayProfileEffectIntro: _ = !1,
         } = e,
-        [h, m] = i.useState(!0);
+        [m, h] = i.useState(!0);
     return (i.useEffect(() => {
-        if (!0 !== _) m(!1);
+        if (!0 !== p) h(!1);
         else {
             let e = setTimeout(() => {
-                m(!1);
+                h(!1);
             }, s.JH);
             return () => {
                 clearTimeout(e);
             };
         }
-    }, [_]),
+    }, [p]),
     null == t)
         ? null
         : (0, r.jsxs)("div", {
               className: o()(u.previewContainer, {
-                  [u.previewContainerAnimation]: _,
+                  [u.previewContainerAnimation]: p,
                   [u.previewContainerSetHeight]: !f,
               }),
               children: [
@@ -43,19 +43,19 @@ let f = (e) => {
                       className: u.preview,
                       "aria-hidden": !0,
                   }),
-                  !h &&
+                  !m &&
                       (0, r.jsx)("div", {
                           className: a ? u.purchasedEffect : void 0,
                           children: (0, r.jsx)(c.Z, {
                               skuId: t,
                               useThumbnail: !0,
-                              autoPlay: _,
+                              autoPlay: p,
                               restartMethod: l.Q.FromStart,
                               resetOnHover: !0,
                               isHovering: n,
                               useOpacityOnHover: !1,
                               urlQueryString: "ProfileEffectShopPreview",
-                              delayIntro: p,
+                              delayIntro: _,
                               shopPreview: !0,
                           }),
                       }),

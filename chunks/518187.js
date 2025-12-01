@@ -9,7 +9,7 @@ var r = n(580983),
     u = RegExp.prototype;
 e.exports = function (e, t, n, d) {
     var f = s(e),
-        _ = !o(function () {
+        p = !o(function () {
             var t = {};
             return (
                 (t[f] = function () {
@@ -18,8 +18,8 @@ e.exports = function (e, t, n, d) {
                 7 !== ""[e](t)
             );
         }),
-        p =
-            _ &&
+        _ =
+            p &&
             !o(function () {
                 var t = !1,
                     n = /a/;
@@ -38,15 +38,15 @@ e.exports = function (e, t, n, d) {
                     !t
                 );
             });
-    if (!_ || !p || n) {
-        var h = /./[f],
-            m = t(f, ""[e], function (e, t, n, i, o) {
+    if (!p || !_ || n) {
+        var m = /./[f],
+            h = t(f, ""[e], function (e, t, n, i, o) {
                 var s = t.exec;
                 return s === a || s === u.exec
-                    ? _ && !o
+                    ? p && !o
                         ? {
                               done: !0,
-                              value: r(h, t, n, i),
+                              value: r(m, t, n, i),
                           }
                         : {
                               done: !0,
@@ -54,7 +54,7 @@ e.exports = function (e, t, n, d) {
                           }
                     : { done: !1 };
             });
-        i(String.prototype, e, m[0]), i(u, f, m[1]);
+        i(String.prototype, e, h[0]), i(u, f, h[1]);
     }
     d && l(u[f], "sham", !0);
 };

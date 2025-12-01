@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r,
     i = n(54381),
     a = n(473749),
@@ -25,26 +25,26 @@ var d = (function (e) {
     f = (function (e) {
         return (e.SMALL = "small"), (e.LARGE = "large"), (e.NONE = "none"), e;
     })(f || {});
-let _ = {
+let p = {
         primary: c.colorPrimary,
         secondary: c.colorSecondary,
         warning: c.colorWarning,
         error: c.colorError,
     },
-    p = {
+    _ = {
         small: c.small,
         large: c.large,
         none: null,
     };
-class h extends (r = a.PureComponent) {
+class m extends (r = a.PureComponent) {
     render() {
         let { icon: e, color: t, children: n, iconSize: r, className: a, iconClassName: o } = this.props;
         return (0, i.jsxs)(l.Z, {
-            className: s()(c.note, _[t], a),
+            className: s()(c.note, p[t], a),
             align: l.Z.Align.CENTER,
             children: [
                 (0, i.jsx)(e, {
-                    className: s()(c.icon, p[r], o),
+                    className: s()(c.icon, _[r], o),
                     color: "currentColor",
                 }),
                 (0, i.jsx)("div", { children: n }),
@@ -52,5 +52,5 @@ class h extends (r = a.PureComponent) {
         });
     }
 }
-u(h, "Colors", d), u(h, "Sizes", f);
-let m = h;
+u(m, "Colors", d), u(m, "Sizes", f);
+let h = m;

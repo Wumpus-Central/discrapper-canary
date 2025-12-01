@@ -18,9 +18,9 @@ var i = n(54381),
     C = n(621853),
     v = n(892001),
     _ = n(433355),
-    x = n(699516),
-    j = n(594174),
-    O = n(768581),
+    O = n(699516),
+    x = n(594174),
+    j = n(768581),
     E = n(525541),
     S = n(981631),
     P = n(228168),
@@ -38,7 +38,7 @@ let T = (e) => {
                                   let { guild: n } = e,
                                       r =
                                           null != n
-                                              ? O.ZP.getGuildIconURL({
+                                              ? j.ZP.getGuildIconURL({
                                                     id: n.id,
                                                     icon: n.icon,
                                                     size: 24,
@@ -106,7 +106,7 @@ let T = (e) => {
     N = (e) => {
         var t;
         let { relationshipType: n, userId: r, showingBanner: l } = e,
-            a = null == (t = j.default.getUser(r)) ? void 0 : t.bot,
+            a = null == (t = x.default.getUser(r)) ? void 0 : t.bot,
             o = () => {
                 u.Z.addRelationship({
                     userId: r,
@@ -215,7 +215,7 @@ let T = (e) => {
                 isOptimisticAccepted: h,
                 isOptimisticRejected: f,
             } = (0, m.m)({
-                user: j.default.getUser(n),
+                user: x.default.getUser(n),
                 onError: l,
                 onAcceptSuccess: o,
                 onRejectSuccess: a,
@@ -246,7 +246,7 @@ let T = (e) => {
         let { userId: t, channel: n, showingBanner: r } = e,
             { channelId: l } = (0, g._)(),
             u = (0, s.e7)([f.Z], () => null != l && f.Z.isSpam(l), [l]),
-            d = (0, s.e7)([x.Z], () => x.Z.getRelationshipType(t), [t]),
+            d = (0, s.e7)([O.Z], () => O.Z.getRelationshipType(t), [t]),
             p = n.id === l,
             h = !o.tq && !p,
             m = !!o.tq || p || u,

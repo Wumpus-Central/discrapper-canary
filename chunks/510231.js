@@ -1,6 +1,6 @@
 n.d(t, {
     N: () => f,
-    h: () => _,
+    h: () => p,
 }),
     n(583741);
 var r = n(473749),
@@ -18,7 +18,7 @@ function d(e) {
 function f(e) {
     return (null == e ? void 0 : e.themes) != null && e.themes.includes(l.J8.EROTIC);
 }
-function _() {
+function p() {
     let e = (0, s.e7)([c.Z], () => c.Z.games),
         t = r.useMemo(
             () =>

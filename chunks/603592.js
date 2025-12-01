@@ -8,12 +8,12 @@ var r = n(54381),
     c = n(276952),
     u = n(682662),
     d = n(662146),
-    p = n(790952);
+    f = n(790952);
 let h = i.forwardRef(function (e, t) {
     var n, l;
     let {
             id: h,
-            onClick: f,
+            onClick: p,
             onContextMenu: g,
             icon: m,
             selected: b,
@@ -22,8 +22,8 @@ let h = i.forwardRef(function (e, t) {
             lowerBadge: O,
             lowerBadgeSize: v,
             showPill: j = !0,
-            className: C,
-            "aria-label": x,
+            className: x,
+            "aria-label": C,
             children: E,
             onMouseEnter: S,
             onMouseLeave: I,
@@ -35,7 +35,7 @@ let h = i.forwardRef(function (e, t) {
         children: [
             j
                 ? (0, r.jsx)("div", {
-                      className: p.pill,
+                      className: f.pill,
                       children: (0, r.jsx)(c.Z, {
                           hovered: Z,
                           selected: b,
@@ -86,9 +86,9 @@ let h = i.forwardRef(function (e, t) {
                                     null == I || I(), w(!1);
                                 },
                                 onMouseDown: P,
-                                className: o()(p.circleIconButton, C, { [p.selected]: b || Z }),
-                                onClick: f,
-                                "aria-label": "string" == typeof _ && null == x ? _ : x,
+                                className: o()(f.circleIconButton, x, { [f.selected]: b || Z }),
+                                onClick: p,
+                                "aria-label": "string" == typeof _ && null == C ? _ : C,
                                 "aria-selected": b,
                                 onContextMenu: g,
                                 focusProps: { enabled: !1 },
@@ -100,7 +100,7 @@ let h = i.forwardRef(function (e, t) {
                                 children:
                                     null != m &&
                                     (0, r.jsx)(m, {
-                                        className: p.circleIcon,
+                                        className: f.circleIcon,
                                         color: "currentColor",
                                     }),
                             }),

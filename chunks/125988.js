@@ -8,9 +8,9 @@ var r = n(473749),
     c = n(676742),
     u = n(660097);
 let d = (e) => {
-    let { user: t, guildId: n, size: d, avatarDecorationOverride: f, onlyAnimateOnHoverOrFocus: _ = !1 } = e,
-        [p, h] = r.useState(!1),
-        { canAnimate: m } = (0, a.j)(p, _),
+    let { user: t, guildId: n, size: d, avatarDecorationOverride: f, onlyAnimateOnHoverOrFocus: p = !1 } = e,
+        [_, m] = r.useState(!1),
+        { canAnimate: h } = (0, a.j)(_, p),
         g = (0, i.e7)([s.ZP], () => (null != n && null != t ? s.ZP.getMember(n, t.id) : null)),
         E = (0, c.Z)(
             (0, o.Ys)({
@@ -23,18 +23,18 @@ let d = (e) => {
             () =>
                 (0, l.NZ)({
                     avatarDecoration: void 0 !== f ? f : E,
-                    canAnimate: m,
+                    canAnimate: h,
                     size: d,
                 }),
-            [f, E, m, d],
+            [f, E, h, d],
         );
     return {
         avatarPlaceholderSrc: u,
         avatarDecorationSrc: b,
-        isAvatarDecorationAnimating: m,
+        isAvatarDecorationAnimating: h,
         eventHandlers: {
-            onMouseEnter: r.useCallback(() => h(!0), []),
-            onMouseLeave: r.useCallback(() => h(!1), []),
+            onMouseEnter: r.useCallback(() => m(!0), []),
+            onMouseLeave: r.useCallback(() => m(!1), []),
         },
     };
 };

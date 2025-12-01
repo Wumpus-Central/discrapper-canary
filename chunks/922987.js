@@ -17,8 +17,8 @@ var r = n(54381),
     j = n(614277),
     O = n(152521),
     g = n(932563),
-    h = n(900617),
-    P = n(336079),
+    h = n(336079),
+    P = n(887505),
     v = n(748714),
     C = n(981631),
     S = n(388032);
@@ -88,7 +88,7 @@ let k = (e) => {
                 isRental: f,
                 analyticsLocations: O,
                 analyticsSourceLocation: E,
-            } = (0, P.CH)();
+            } = (0, h.CH)();
         ((e) => {
             let { handleClose: t } = e,
                 { purchaseState: n } = (0, p.JL)();
@@ -117,8 +117,8 @@ let k = (e) => {
                 { selectedSkuId: f, setPurchaseState: m } = (0, p.JL)(),
                 { product: j } = (0, c.T)(f),
                 O = (0, g.cR)(),
-                P = (0, l.useRef)(O),
-                { emitOrbCheckoutPaymentFlowEvent: v } = (0, h.S)({
+                h = (0, l.useRef)(O),
+                { emitOrbCheckoutPaymentFlowEvent: v } = (0, P.S)({
                     skuId: n,
                     orbProductContext: a,
                     analyticsLocations: d,
@@ -128,16 +128,16 @@ let k = (e) => {
                 v(C.rMx.PAYMENT_FLOW_LOADED);
             }),
                 (0, l.useEffect)(() => {
-                    null != i && null !== P.current && (v(C.rMx.PAYMENT_FLOW_FAILED, i), (P.current = null));
+                    null != i && null !== h.current && (v(C.rMx.PAYMENT_FLOW_FAILED, i), (h.current = null));
                 }, [i, v]);
             let E = (0, l.useCallback)(() => {
-                    (P.current = O),
+                    (h.current = O),
                         v(C.rMx.PAYMENT_FLOW_COMPLETED),
                         r(() => {
                             m(x.A.COMPLETED), v(C.rMx.PAYMENT_FLOW_SUCCEEDED);
                         });
                 }, [r, m, O, v]),
-                I = null != (t = P.current) ? t : O,
+                I = null != (t = h.current) ? t : O,
                 k = null != a ? a.orbPriceAmount : null;
             return {
                 isStepLoading: null == f || null == j,
@@ -231,7 +231,7 @@ let k = (e) => {
     T = (e) => {
         var { skuId: t, analyticsLocations: n = [] } = e,
             i = I(e, ["skuId", "analyticsLocations"]);
-        let { orbProductContext: s, analyticsSourceLocation: o } = (0, P.CH)(),
+        let { orbProductContext: s, analyticsSourceLocation: o } = (0, h.CH)(),
             { analyticsDataOverride: a, onClose: c } = ((e) => {
                 let {
                         skuId: t,
@@ -240,7 +240,7 @@ let k = (e) => {
                         orbProductContext: i,
                         onClose: s,
                     } = e,
-                    { emitOrbCheckoutPaymentFlowEvent: o } = (0, h.S)({
+                    { emitOrbCheckoutPaymentFlowEvent: o } = (0, P.S)({
                         skuId: t,
                         orbProductContext: i,
                         analyticsLocations: n,
@@ -308,7 +308,7 @@ let k = (e) => {
             skuIDs: [t],
             excludeSubscriptionPlansBySKU: !0,
             excludeSKUPurchasePreviews: !0,
-            children: (0, r.jsx)(P.dv, {
+            children: (0, r.jsx)(h.dv, {
                 skuId: t,
                 loadId: n,
                 onCheckoutSuccess: l,

@@ -20,26 +20,26 @@ function l(e) {
     function f() {
         (0, r.gH)(e);
     }
-    function _() {
+    function p() {
         (0, r.Rz)(e), (0, i.UC)(c, e.document.body), (0, i.fO)(n, e.document.body);
     }
-    function p() {
+    function _() {
         (0, s.gK)(n);
     }
-    function h() {
+    function m() {
         setTimeout(() => {
             (0, s.HQ)(n);
         }, 0);
     }
-    function m() {
+    function h() {
         (0, r.CO)(e);
     }
     for (let n of ((0, i.YP)(c, e.document.body),
     e.addEventListener("focus", u),
     e.addEventListener("blur", d),
-    e.addEventListener("unload", _),
-    e.addEventListener("visibilitychange", m),
+    e.addEventListener("unload", p),
+    e.addEventListener("visibilitychange", h),
     s.wu))
-        t.addEventListener(n, p, !0), t.addEventListener(n, h, !1);
+        t.addEventListener(n, _, !0), t.addEventListener(n, m, !1);
     (0, a.uF)(t, f), (0, r.S1)(e);
 }

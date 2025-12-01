@@ -1,4 +1,4 @@
-n.d(t, { o: () => h });
+n.d(t, { o: () => m });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,26 +48,26 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e) {
+function m(e) {
     let {
             children: t,
             color: n = "default",
             isFocused: a = !1,
             disabled: d = !1,
-            keepItemStyles: _ = !1,
-            menuItemProps: h,
-            action: m,
+            keepItemStyles: p = !1,
+            menuItemProps: m,
+            action: h,
             dontCloseOnActionIfHoldingShiftKey: g,
             dontCloseOnAction: E,
             onClose: b,
@@ -78,15 +78,15 @@ function h(e) {
     }, [a]);
     let O = i.useCallback(
             (e) => {
-                if (null == m) return !1;
-                (e.shiftKey && g) || E || b(), e.persist(), requestAnimationFrame(() => m(e));
+                if (null == h) return !1;
+                (e.shiftKey && g) || E || b(), e.persist(), requestAnimationFrame(() => h(e));
             },
-            [m, b, g, E],
+            [h, b, g, E],
         ),
-        v = _ ? o()(u.item, c._e[n], { [u.focused]: a }) : u.customItem;
+        v = p ? o()(u.item, c._e[n], { [u.focused]: a }) : u.customItem;
     return (0, r.jsx)(
         s.P3F,
-        p(
+        _(
             f(
                 {
                     innerRef: y,
@@ -94,7 +94,7 @@ function h(e) {
                     onClick: d ? void 0 : O,
                     "aria-disabled": d,
                 },
-                h,
+                m,
             ),
             {
                 children: t({

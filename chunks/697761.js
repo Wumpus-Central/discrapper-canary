@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(54381);
 n(473749);
 var i = n(481060),
@@ -56,11 +56,11 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function _(e) {
+function p(e) {
     var { activity: t, user: n, variant: c = "secondary", onAction: f } = e,
-        _ = d(e, ["activity", "user", "variant", "onAction"]);
+        p = d(e, ["activity", "user", "variant", "onAction"]);
     if (!(0, o.Z)(t, s.xjy.INSTANCE)) return null;
-    let p = () => {
+    let _ = () => {
         null == f || f(), new a.Z("UserActivityActions").log("notify", n.id, t);
     };
     return (0, r.jsx)(
@@ -70,10 +70,10 @@ function _(e) {
                 text: l.intl.string(l.t.vwl1PK),
                 variant: c,
                 size: "sm",
-                onClick: p,
+                onClick: _,
                 fullWidth: !0,
             },
-            _,
+            p,
         ),
     );
 }

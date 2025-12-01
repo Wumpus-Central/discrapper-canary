@@ -10,23 +10,23 @@ var r = n(54381),
 let d = [];
 function f(e) {
     let { gameFriends: t, hasIncomingPendingGameFriends: n, hasOutgoingPendingGameFriends: f } = e,
-        [_, p] = i.useState(!1),
-        h = i.useCallback(() => p(!0), []),
-        m = i.useMemo(
+        [p, _] = i.useState(!1),
+        m = i.useCallback(() => _(!0), []),
+        h = i.useMemo(
             () =>
-                _
+                p
                     ? t.map((e) => {
                           let { applicationId: t } = e;
                           return t;
                       })
                     : d,
-            [_, t],
+            [p, t],
         ),
-        g = (0, o.Z)(m, _),
+        g = (0, o.Z)(h, p),
         E = i.useMemo(() => g.filter(s.lm), [g]),
         b = i.useMemo(() => (t.length > 0 ? (0, c.A)(E) : void 0), [E, t.length]);
     return {
-        onMouseEnter: h,
+        onMouseEnter: m,
         ariaLabel: b,
         tooltipText: i.useMemo(() => {
             if (t.length > 0) return (0, r.jsx)(l.k, { applications: E });

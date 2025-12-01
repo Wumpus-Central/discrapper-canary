@@ -39,10 +39,10 @@ let d = (e) => {
                 categories: a,
                 store: c,
                 children: f,
-                className: _,
-                listPadding: p,
-                rowCount: h,
-                getScrollOffsetForIndex: m,
+                className: p,
+                listPadding: _,
+                rowCount: m,
+                getScrollOffsetForIndex: h,
                 categoryHeight: g,
                 onScroll: E,
                 renderCategoryListItem: b,
@@ -53,9 +53,9 @@ let d = (e) => {
         d({
             activeIndex: v,
             categoryListRef: t,
-            getScrollOffsetForIndex: m,
+            getScrollOffsetForIndex: h,
         });
-        let I = i.useCallback(
+        let S = i.useCallback(
                 (e) => {
                     let { searchQuery: t } = l.Iu.getState();
                     if ((c.setActiveCategoryIndex(e), "" !== t)) (0, l.ql)("");
@@ -66,23 +66,23 @@ let d = (e) => {
                 },
                 [n, c],
             ),
-            T = i.useCallback((e) => b(a[e], e, () => I(e), v === e), [v, a, I, b]),
-            S = i.useMemo(() => ("function" == typeof g ? (e) => g(a[e], e) : g), [a, g]);
+            I = i.useCallback((e) => b(a[e], e, () => S(e), v === e), [v, a, S, b]),
+            T = i.useMemo(() => ("function" == typeof g ? (e) => g(a[e], e) : g), [a, g]);
         return (0, r.jsxs)("div", {
-            className: o()(u.wrapper, _),
+            className: o()(u.wrapper, p),
             children: [
                 (0, r.jsx)(s.Z, {
-                    listPadding: p,
+                    listPadding: _,
                     onScroll: E,
                     ref: t,
-                    renderRow: T,
-                    rowCount: h,
-                    rowHeight: S,
+                    renderRow: I,
+                    rowCount: m,
+                    rowHeight: T,
                     hideScrollbar: !0,
                     rowCountBySection: y,
                     renderSection: O,
                 }),
-                null == f ? void 0 : f(I),
+                null == f ? void 0 : f(S),
             ],
         });
     };

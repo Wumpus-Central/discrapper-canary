@@ -2,8 +2,8 @@ n.d(t, {
     WW: () => v,
     XO: () => y,
     Yp: () => b,
-    hC: () => T,
-    o9: () => I,
+    hC: () => I,
+    o9: () => S,
     zC: () => O,
 });
 var r = n(692547),
@@ -44,7 +44,7 @@ let l = () => ({
         icon: i.lZ8,
         description: s.intl.string(s.t.zZe94m),
     }),
-    _ = function () {
+    p = function () {
         let e =
             arguments.length > 0 && void 0 !== arguments[0]
                 ? arguments[0]
@@ -55,7 +55,7 @@ let l = () => ({
             description: s.intl.string(s.t.ZwOSdn),
         };
     },
-    p = function (e) {
+    _ = function (e) {
         let t =
                 arguments.length > 1 && void 0 !== arguments[1]
                     ? arguments[1]
@@ -81,12 +81,12 @@ let l = () => ({
             }),
         };
     },
-    h = () => ({
+    m = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_GOLD.css,
         icon: i.r7p,
         description: s.intl.string(s.t["ThRK/u"]),
     }),
-    m = function () {
+    h = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s.intl.string(s.t.SQV8g6);
         return {
             color: r.Z.unsafe_rawColors.PREMIUM_PERK_BLUE.css,
@@ -111,20 +111,20 @@ let l = () => ({
         };
     };
 function b() {
-    return [f(), u(), _(), m()];
+    return [f(), u(), p(), h()];
 }
 function y() {
-    return [f(), p(o.Eu4.TIER_2), E(), m()];
+    return [f(), _(o.Eu4.TIER_2), E(), h()];
 }
 function O() {
-    return [p(o.Eu4.TIER_3, r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css), g(), h(), m()];
+    return [_(o.Eu4.TIER_3, r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css), g(), m(), h()];
 }
 function v() {
-    return [h(), d(), p(o.Eu4.TIER_3), m()];
+    return [m(), d(), _(o.Eu4.TIER_3), h()];
+}
+function S() {
+    return [l(), p(), c(), h()];
 }
 function I() {
-    return [l(), _(), c(), m()];
-}
-function T() {
-    return [_(), m()];
+    return [p(), h()];
 }

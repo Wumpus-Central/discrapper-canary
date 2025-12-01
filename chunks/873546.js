@@ -15,16 +15,16 @@ var r,
     u,
     d,
     f,
-    _,
-    p = n(264344),
-    h = n.n(p);
-let m = new Set(["iPad", "Kindle", "Kindle Fire", "Nook", "PlayBook"]),
+    p,
+    _ = n(264344),
+    m = n.n(_);
+let h = new Set(["iPad", "Kindle", "Kindle Fire", "Nook", "PlayBook"]),
     g = new Set(["Android", "iOS", "Windows Phone"]),
     E =
         (null == (i = window) || null == (r = i.navigator) ? void 0 : r.platform) === "MacIntel" &&
         void 0 !== (null == (o = window) || null == (a = o.navigator) ? void 0 : a.standalone) &&
         (null == (l = window) || null == (s = l.navigator) ? void 0 : s.maxTouchPoints) > 1,
-    b = m.has(null != (f = h().product) ? f : "") || E,
-    y = !b && g.has(null != (_ = null === h() || void 0 === h() || null == (c = h().os) ? void 0 : c.family) ? _ : ""),
-    O = (null === h() || void 0 === h() || null == (u = h().os) ? void 0 : u.family) === "iOS",
-    v = (null === h() || void 0 === h() || null == (d = h().os) ? void 0 : d.family) === "Android";
+    b = h.has(null != (f = m().product) ? f : "") || E,
+    y = !b && g.has(null != (p = null === m() || void 0 === m() || null == (c = m().os) ? void 0 : c.family) ? p : ""),
+    O = (null === m() || void 0 === m() || null == (u = m().os) ? void 0 : u.family) === "iOS",
+    v = (null === m() || void 0 === m() || null == (d = m().os) ? void 0 : d.family) === "Android";

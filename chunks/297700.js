@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -57,11 +57,11 @@ function f(e, t) {
         e
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -69,7 +69,7 @@ function _(e, t) {
     }
     return i;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,23 +78,23 @@ function p(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function h(e) {
+function m(e) {
     let { children: t, size: n = 16, className: a, flowerStarClassName: c } = e,
-        d = _(e, ["children", "size", "className", "flowerStarClassName"]),
-        p = i.Children.only(t),
-        h = {
+        d = p(e, ["children", "size", "className", "flowerStarClassName"]),
+        _ = i.Children.only(t),
+        m = {
             width: n,
             height: n,
         },
-        m = !e.allowFullSizedIcon;
+        h = !e.allowFullSizedIcon;
     return (0, r.jsxs)("div", {
         className: o()(l.flowerStarContainer, a),
-        style: h,
+        style: m,
         children: [
             (0, r.jsx)(s.Z, f(u({}, d), { className: o()(c, l.flowerStar) })),
             (0, r.jsx)("div", {
-                className: o()(l.childContainer, { [l.redesignIconChildContainer]: m }),
-                children: p,
+                className: o()(l.childContainer, { [l.redesignIconChildContainer]: h }),
+                children: _,
             }),
         ],
     });

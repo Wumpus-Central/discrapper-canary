@@ -1,6 +1,6 @@
 n.d(t, {
-    AC: () => h,
-    Ct: () => p,
+    AC: () => m,
+    Ct: () => _,
     ER: () => l,
     Ek: () => s,
     Gg: () => c,
@@ -187,12 +187,12 @@ let u = {
     },
     d = [6, 0, 7, 8, 1, 2, 4, 5, 9, 3],
     f = [21, 22, 23, 24, 25],
-    _ = [26, 27, 28, 29, 30],
-    p = {
+    p = [26, 27, 28, 29, 30],
+    _ = {
         [i.GuildFeatures.GUILD_TAGS_BADGE_PACK_PETS]: f,
-        [i.GuildFeatures.GUILD_TAGS_BADGE_PACK_FLEX]: _,
+        [i.GuildFeatures.GUILD_TAGS_BADGE_PACK_FLEX]: p,
     },
-    h = {
+    m = {
         [i.GuildFeatures.GUILD_TAGS_BADGE_PACK_PETS]: r.MB,
         [i.GuildFeatures.GUILD_TAGS_BADGE_PACK_FLEX]: r.Vk,
     };

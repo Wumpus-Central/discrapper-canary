@@ -1,9 +1,9 @@
 n.d(t, {
-    C$: () => m,
+    C$: () => h,
     Fe: () => d,
     Fz: () => f,
     IB: () => E,
-    iF: () => h,
+    iF: () => m,
     jy: () => g,
 }),
     n(388685),
@@ -42,7 +42,7 @@ var d = (function (e) {
     f = (function (e) {
         return (e[(e.SUCCESS = 1)] = "SUCCESS"), (e[(e.FAIL = 2)] = "FAIL"), e;
     })({});
-class _ {
+class p {
     set(e, t) {
         this.cache.set(e, t);
     }
@@ -62,13 +62,13 @@ class _ {
             (this.expiration = Date.now() + u);
     }
 }
-let p = new _();
-async function h(e, t, n) {
+let _ = new p();
+async function m(e, t, n) {
     let i = JSON.stringify({
         index: e,
         searchQuery: t,
     });
-    if (p.has(i)) return p.get(i);
+    if (_.has(i)) return _.get(i);
     let { users: o, next_index: l } = (
             await r.tn.post({
                 url: s.ANM.GET_REFERRAL_ELIGIBLE_USERS,
@@ -85,9 +85,9 @@ async function h(e, t, n) {
             users: o.map((e) => new a.Z(e)),
             nextIndex: l,
         };
-    return p.set(i, u), u;
+    return _.set(i, u), u;
 }
-let m = () => (
+let h = () => (
     i.Z.dispatch({ type: "BILLING_REFERRALS_REMAINING_FETCH_START" }),
     r.tn
         .get({

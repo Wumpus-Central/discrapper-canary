@@ -28,8 +28,8 @@ var r,
 let g = new Map(),
     b = new Map(),
     v = !1,
-    E = null;
-function h() {
+    h = null;
+function E() {
     return d.Z.getAllActiveStreamKeys().reduce((e, t) => {
         let { ownerId: n } = (0, c.my)(t),
             r = !0 === g.get(n),
@@ -63,7 +63,7 @@ function S(e) {
                 a = l !== g.get(e);
             return g.set(e, l), a;
         })(t),
-        r = h(),
+        r = E(),
         i = y();
     return n || r || i;
 }
@@ -96,8 +96,8 @@ let w = new C(o.Z, {
     CONNECTION_OPEN: O,
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        if (t === E) return !1;
-        (E = t), O();
+        if (t === h) return !1;
+        (h = t), O();
     },
     RTC_CONNECTION_STATE: function (e) {
         let { streamKey: t, state: n, context: r } = e;
@@ -114,7 +114,7 @@ let w = new C(o.Z, {
         let { userIds: t } = e,
             n = s.default.getId(),
             r = t.reduce((e, t) => (n === t ? e : !!S({ userId: t }) || e), !1),
-            i = h(),
+            i = E(),
             l = y();
         return r || i || l;
     },

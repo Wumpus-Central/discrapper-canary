@@ -1,24 +1,24 @@
-n.d(t, { p: () => s });
-var r = n(473749),
-    i = n(5900),
-    a = n(953865),
-    o = n(960048);
+n.d(e, { p: () => s });
+var i = n(473749),
+    r = n(5900),
+    l = n(773275),
+    u = n(960048);
 let s = () => {
-    let e = (0, a.xf)((e) => e.doInstall),
-        t = (0, a.xf)((e) => e.install),
-        n = (0, a.xf)((e) => e.installationStatus),
-        s = (0, a.xf)((e) => e.setDoInstall),
-        l = (0, a.xf)((e) => e.setInstallationStatus);
+    let t = (0, l.xf)((t) => t.doInstall),
+        e = (0, l.xf)((t) => t.install),
+        n = (0, l.xf)((t) => t.installationStatus),
+        s = (0, l.xf)((t) => t.setDoInstall),
+        a = (0, l.xf)((t) => t.setInstallationStatus);
     return (
-        (0, r.useEffect)(() => {
-            e &&
-                n === i._n.NOT_INSTALLED &&
+        (0, i.useEffect)(() => {
+            t &&
+                n === r._n.NOT_INSTALLED &&
                 (s(!1),
-                l(i._n.INSTALLING),
-                t().catch((e) => {
-                    l(i._n.ERROR), o.Z.captureException(e, { tags: { source: "WARP_INSTALL_HELPER" } });
+                a(r._n.INSTALLING),
+                e().catch((t) => {
+                    a(r._n.ERROR), u.Z.captureException(t, { tags: { source: "WARP_INSTALL_HELPER" } });
                 }));
-        }, [e, s, t, n, l]),
+        }, [t, s, e, n, a]),
         null
     );
 };

@@ -44,8 +44,8 @@ function b(e, t) {
             clearTimeout(e);
         };
     }, [t]);
-    let E = i.useRef({}),
-        { visibleParticipants: h, participantTileWidth: y } = i.useMemo(() => {
+    let h = i.useRef({}),
+        { visibleParticipants: E, participantTileWidth: y } = i.useMemo(() => {
             let n = Date.now(),
                 i = (0, l.sortBy)(t, (e) =>
                     (function (e) {
@@ -82,9 +82,9 @@ function b(e, t) {
                 b = p.findIndex(g),
                 v = null;
             -1 !== b && ((v = p[b]), p.splice(b, 1));
-            let h = null == v || f ? e : e - r - c,
-                y = Math.max(0, Math.min(Math.floor((h - c) / (o + c)), u, t.length)),
-                S = Math.min((h - c) / y - c, r),
+            let E = null == v || f ? e : e - r - c,
+                y = Math.max(0, Math.min(Math.floor((E - c) / (o + c)), u, t.length)),
+                S = Math.min((E - c) / y - c, r),
                 O = Math.max(0, y - m.length),
                 C = m.slice(0, y),
                 w = p.slice(0, O),
@@ -92,7 +92,7 @@ function b(e, t) {
             if (O > 0) {
                 let e = [];
                 for (let t of w) {
-                    let n = E.current[t.id];
+                    let n = h.current[t.id];
                     null != n && n < O ? (I[n] = t) : e.push(t);
                 }
                 for (let t = 0; t < I.length; t++) {
@@ -103,7 +103,7 @@ function b(e, t) {
                 }
             }
             let P = I.filter(s.lm);
-            E.current = (0, l.keyBy)((0, l.range)(P.length), (e) => P[e].id);
+            h.current = (0, l.keyBy)((0, l.range)(P.length), (e) => P[e].id);
             let j = [...C, ...P];
             return (
                 null != v && (f && j.length >= y ? (j[Math.max(0, j.length - 1)] = v) : j.push(v)),
@@ -114,7 +114,7 @@ function b(e, t) {
             );
         }, [e, t, b, p, f, u, c, o, r]);
     return {
-        visibleParticipants: h,
+        visibleParticipants: E,
         participantTileWidth: y,
     };
 }

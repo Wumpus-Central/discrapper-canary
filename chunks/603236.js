@@ -43,31 +43,31 @@ let b = s.ZP.connectStores([g.Z], () => ({ hideValue: g.Z.hideInstantInvites }))
                 copyValue: O,
                 changePage: E,
                 inviteChannel: N,
-                source: P,
-                code: C,
+                source: C,
+                code: P,
                 guildScheduledEvent: S,
                 disabled: I,
-                application: T,
+                application: Z,
             } = e,
-            { maxAge: Z, maxUses: w, networkError: D, showVanityURL: k, flags: R } = u,
-            A = l.useCallback(() => {
+            { maxAge: T, maxUses: w, networkError: D, showVanityURL: k, flags: R } = u,
+            _ = l.useCallback(() => {
                 m.default.track(p.rMx.COPY_INSTANT_INVITE, {
                     server: d.Z.getGuildId(),
                     channel: null == N ? void 0 : N.id,
                     channel_type: null == N ? void 0 : N.type,
-                    location: P,
-                    code: C,
+                    location: C,
+                    code: P,
                     guild_scheduled_event_id: null == S ? void 0 : S.id,
-                    application_id: null == T ? void 0 : T.id,
+                    application_id: null == Z ? void 0 : Z.id,
                 });
-            }, [null == T ? void 0 : T.id, N, P, C, S]);
+            }, [null == Z ? void 0 : Z.id, N, C, P, S]);
         return (0, r.jsxs)(c.Kqy, {
             gap: 16,
             children: [
                 (0, r.jsx)(b, {
                     value: O,
                     autoFocus: s,
-                    onCopy: A,
+                    onCopy: _,
                     disabled: I,
                 }),
                 g &&
@@ -84,7 +84,7 @@ let b = s.ZP.connectStores([g.Z], () => ({ hideValue: g.Z.hideInstantInvites }))
                           variant: "text-xs/normal",
                           className: f.footerText,
                           children: [
-                              (0, x.Vg)(Z, w),
+                              (0, x.Vg)(T, w),
                               " ",
                               s
                                   ? (0, r.jsx)(c.Anchor, {

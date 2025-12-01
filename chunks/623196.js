@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(594174),
     d = n(63063),
     f = n(88658),
-    _ = n(398826),
-    p = n(575356),
-    h = n(838436),
-    m = n(726985),
+    p = n(398826),
+    _ = n(575356),
+    m = n(838436),
+    h = n(726985),
     g = n(981631),
     E = n(388032),
     b = n(672413);
@@ -29,22 +29,22 @@ let y = (e) => {
 };
 function O() {
     let e = (0, s.e7)([u.default], () => u.default.getCurrentUser()),
-        { currentHarvestType: t, awaitingInitialRequest: n } = (0, s.cj)([p.Z], () => ({
-            currentHarvestType: p.Z.harvestType,
-            awaitingInitialRequest: p.Z.requestingHarvest,
+        { currentHarvestType: t, awaitingInitialRequest: n } = (0, s.cj)([_.Z], () => ({
+            currentHarvestType: _.Z.harvestType,
+            awaitingInitialRequest: _.Z.requestingHarvest,
         })),
         [a, O] = i.useState(!1);
     if (null == e) return null;
     let v = (0, f.$6)(t, e) || n,
-        I = null != t && o()().diff(o()(t.created_at), "days") < g.eBq,
-        T = v && I,
-        S = e.isStaff(),
+        S = null != t && o()().diff(o()(t.created_at), "days") < g.eBq,
+        I = v && S,
+        T = e.isStaff(),
         A = !e.verified,
         C = () => {
             y({
                 onConfirm: (e) => {
                     O(!0),
-                        (0, _.h)(e)
+                        (0, p.h)(e)
                             .then(
                                 (e) => {
                                     null != e && null != e.body
@@ -70,14 +70,14 @@ function O() {
                 },
             });
         };
-    return (0, r.jsxs)(h.U, {
-        setting: m.s6.PRIVACY_DATA_REQUEST_V2,
+    return (0, r.jsxs)(m.U, {
+        setting: h.s6.PRIVACY_DATA_REQUEST_V2,
         children: [
-            (0, r.jsx)(h.H, {
+            (0, r.jsx)(m.H, {
                 header: E.intl.string(E.t.XAHCgJ),
                 description: E.intl.format(E.t.P3kNfr, { helpdeskArticle: d.Z.getArticleURL(g.BhN.GDPR_REQUEST_DATA) }),
             }),
-            T
+            I
                 ? (0, r.jsx)(l.Zbd, {
                       className: b.card,
                       children: (0, r.jsx)(l.Text, {
@@ -87,7 +87,7 @@ function O() {
                           }),
                       }),
                   })
-                : S
+                : T
                   ? (0, r.jsx)(l.Zbd, {
                         className: b.card,
                         children: (0, r.jsx)(l.Text, {

@@ -37,7 +37,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,22 +49,22 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -72,7 +72,7 @@ function h(e, t) {
     }
     return i;
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -87,12 +87,12 @@ function g(e) {
             channel: n,
             content: i,
             className: d,
-            compact: _,
-            popoutProps: m,
+            compact: p,
+            popoutProps: h,
             hideTimestamp: g = !1,
             withFooter: E = !1,
         } = e,
-        b = h(e, [
+        b = m(e, [
             "message",
             "channel",
             "content",
@@ -104,16 +104,16 @@ function g(e) {
         ]);
     let y = (0, o.ZP)(t);
     return (0, r.jsx)("div", {
-        className: a()({ [u.withFooter]: E }, u.embedCard, { [u.compact]: _ }, d),
+        className: a()({ [u.withFooter]: E }, u.embedCard, { [u.compact]: p }, d),
         children: (0, r.jsx)(
             s.Z,
-            p(f({}, b), {
-                className: a()(u.messageContainer, { [u.compact]: _ }),
+            _(f({}, b), {
+                className: a()(u.messageContainer, { [u.compact]: p }),
                 childrenMessageContent: (0, r.jsx)(l.ZP, {
-                    className: a()(u.__invalid_messageContent, { [u.compact]: _ }),
+                    className: a()(u.__invalid_messageContent, { [u.compact]: p }),
                     message: t,
                     content: i,
-                    compact: null != _ && _,
+                    compact: null != p && p,
                 }),
                 childrenHeader: (0, r.jsx)(
                     c.ZP,
@@ -123,14 +123,14 @@ function g(e) {
                             channel: n,
                             author: y,
                             guildId: null == n ? void 0 : n.guild_id,
-                            compact: _,
+                            compact: p,
                             hideTimestamp: g,
-                            className: a()(u.header, { [u.compact]: _ }),
+                            className: a()(u.header, { [u.compact]: p }),
                         },
-                        null != m ? m : {},
+                        null != h ? h : {},
                     ),
                 ),
-                compact: _,
+                compact: p,
                 author: y,
             }),
         ),

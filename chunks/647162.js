@@ -1,9 +1,9 @@
 n.d(t, {
-    KV: () => p,
-    PY: () => _,
-    Wo: () => h,
+    KV: () => _,
+    PY: () => p,
+    Wo: () => m,
     iy: () => E,
-    yp: () => m,
+    yp: () => h,
 }),
     n(415506),
     n(358797),
@@ -18,10 +18,10 @@ var r = n(763472),
     u = n(616922),
     d = n(981631);
 let f = 30 * o.Z.Millis.SECOND;
-function _(e) {
+function p(e) {
     return null != e.getActiveSocketAndDevice() || l.Z.isProtocolRegistered();
 }
-function p() {
+function _() {
     let e = c.Z.getActiveSocketAndDevice();
     if (null != e) return Promise.resolve(e);
     if (!l.Z.isProtocolRegistered()) return Promise.reject(Error("protocol is not registered"));
@@ -56,13 +56,13 @@ function p() {
         c.Z.addChangeListener(i), window.open("".concat(u.M5, ":"));
     });
 }
-function h() {
+function m() {
     let e = c.Z.getActiveSocketAndDevice();
     if (null == e) return null;
     let { socket: t } = e;
     return t.isPremium;
 }
-function m() {
+function h() {
     let e = c.Z.getActiveSocketAndDevice();
     if (null == e) return Promise.reject(Error("no active profile"));
     let { socket: t } = e;

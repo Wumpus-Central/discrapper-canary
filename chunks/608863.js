@@ -1,4 +1,4 @@
-n.d(t, { r: () => _ });
+n.d(t, { r: () => p });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -77,7 +77,7 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let _ = (e) => {
+let p = (e) => {
     var { open: t = !1, className: n } = e,
         i = d(e, ["open", "className"]);
     return (0, r.jsxs)(

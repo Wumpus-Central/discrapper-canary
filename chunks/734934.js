@@ -1,6 +1,6 @@
 n.d(t, {
-    oW: () => p,
-    p: () => _,
+    oW: () => _,
+    p: () => p,
 });
 var r = n(381499),
     i = n(668781),
@@ -12,12 +12,12 @@ var r = n(381499),
     u = n(468788),
     d = n(981631),
     f = n(388032);
-function _() {
+function p() {
     let e = o.QZ.useSetting(),
         t = o.fv.useSetting();
     return e && ("0" === t || new Date(Number(t)).getTime() - new Date().getTime() > 0);
 }
-function p(e, t) {
+function _(e, t) {
     let n = o.QZ.getSetting();
     s.hW.updateAsync(
         "notifications",

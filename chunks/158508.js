@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(54381);
 n(473749);
 var i = n(442837),
@@ -22,7 +22,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +38,7 @@ function _(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,23 +50,23 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function m(e) {
+function h(e) {
     let {
             user: t,
             guildId: f,
-            channelId: p,
-            onBlock: m,
+            channelId: _,
+            onBlock: h,
             onIgnore: g,
             onUnignore: E,
             location: b = "ContextMenu",
@@ -77,7 +77,7 @@ function m(e) {
             var e;
             return (null == (e = l.default.getCurrentUser()) ? void 0 : e.id) === O;
         }, [O]),
-        { isIgnored: I, isBlocked: T } = (0, i.cj)(
+        { isIgnored: S, isBlocked: I } = (0, i.cj)(
             [s.Z],
             () => ({
                 isIgnored: s.Z.isIgnored(O),
@@ -85,21 +85,21 @@ function m(e) {
             }),
             [O],
         );
-    return v || T
+    return v || I
         ? null
         : (0, r.jsx)(a.sNh, {
               id: "ignore",
               color: "default",
-              label: I
+              label: S
                   ? u.intl.string(u.t["8wXU9B"])
                   : (0, r.jsx)("div", {
                         className: d.label,
                         children: u.intl.string(u.t.ytCpKs),
                     }),
-              action: I
+              action: S
                   ? () => {
                         null == E || E(),
-                            o.Z.unignoreUser(O, null != b ? b : "use-ignore-user-item-web", null != p ? p : void 0);
+                            o.Z.unignoreUser(O, null != b ? b : "use-ignore-user-item-web", null != _ ? _ : void 0);
                     }
                   : () => {
                         (0, a.ZDy)(
@@ -110,12 +110,12 @@ function m(e) {
                                 return (n) =>
                                     (0, r.jsx)(
                                         e,
-                                        h(_({}, n), {
+                                        m(p({}, n), {
                                             guildId: f,
-                                            channelId: p,
+                                            channelId: _,
                                             user: t,
                                             onIgnore: g,
-                                            onBlock: m,
+                                            onBlock: h,
                                             location: b,
                                         }),
                                     );

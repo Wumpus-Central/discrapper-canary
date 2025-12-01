@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(665906),
     d = n(271383),
     f = n(496675),
-    _ = n(594174),
-    p = n(626135),
-    h = n(709054),
-    m = n(838440),
+    p = n(594174),
+    _ = n(626135),
+    m = n(709054),
+    h = n(838440),
     g = n(981631),
     E = n(463116);
 function b(e, t, n) {
@@ -67,7 +67,7 @@ function v(e, t) {
         e
     );
 }
-function I(e) {
+function S(e) {
     let { channel: t, message: n, currentUser: r } = e;
     return (0, a.e7)([f.Z, d.ZP], () => {
         var e;
@@ -80,12 +80,12 @@ function I(e) {
         return o && !a && !s && !l;
     });
 }
-function T(e) {
+function I(e) {
     let { assets: t, currentUser: n, message: r } = e,
-        i = (h.default.extractTimestamp(n.id) + h.default.extractTimestamp(r.id)) % t.length;
+        i = (m.default.extractTimestamp(n.id) + m.default.extractTimestamp(r.id)) % t.length;
     return t[i];
 }
-function S(e) {
+function T(e) {
     let { channel: t, message: n, sticker: r } = e,
         i = {
             channel: t,
@@ -97,61 +97,61 @@ function S(e) {
 }
 function A(e) {
     let { sticker: t, event: n, eventProperties: r } = e;
-    null != n && p.default.track(n, v(y({}, r), { sticker_id: t.id }));
+    null != n && _.default.track(n, v(y({}, r), { sticker_id: t.id }));
 }
 function C(e) {
     let { currentUser: t, channel: n, message: a, buttonLabels: s, stickers: u, event: d, eventProperties: f } = e,
-        _ = i.useMemo(
+        p = i.useMemo(
             () =>
-                T({
+                I({
                     assets: u,
                     currentUser: t,
                     message: a,
                 }),
             [u, t, a],
         ),
-        p = i.useMemo(
+        _ = i.useMemo(
             () =>
-                T({
+                I({
                     assets: s,
                     currentUser: t,
                     message: a,
                 }),
             [s, t, a],
         ),
-        h = i.useCallback(async () => {
-            let { valid: e } = await (0, m.v)({
+        m = i.useCallback(async () => {
+            let { valid: e } = await (0, h.v)({
                 type: l.Ie.FORM,
                 content: "",
                 channel: n,
             });
             e &&
-                (S({
+                (T({
                     channel: n,
                     message: a,
-                    sticker: _,
+                    sticker: p,
                 }),
                 A({
-                    sticker: _,
+                    sticker: p,
                     event: d,
                     eventProperties: f,
                 }));
-        }, [n, a, _, d, f]);
+        }, [n, a, p, d, f]);
     return (0, r.jsx)(o.zxk, {
         icon: {
             type: "sticker",
-            asset: _,
+            asset: p,
             component: c.Z,
         },
-        text: p,
-        onClick: h,
+        text: _,
+        onClick: m,
         variant: "secondary",
     });
 }
 function N(e) {
     let { channel: t, message: n, buttonLabels: i, stickers: a, event: o, eventProperties: s } = e,
-        l = _.default.getCurrentUser(),
-        c = I({
+        l = p.default.getCurrentUser(),
+        c = S({
             channel: t,
             message: n,
             currentUser: l,

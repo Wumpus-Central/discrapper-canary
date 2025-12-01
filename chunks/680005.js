@@ -1,6 +1,6 @@
 n.d(t, {
-    YG: () => S,
-    pV: () => T,
+    YG: () => T,
+    pV: () => I,
     rf: () => v,
 });
 var r = n(54381);
@@ -14,10 +14,10 @@ var i = n(860911),
     u = n(703656),
     d = n(626135),
     f = n(937615),
-    _ = n(110742),
-    p = n(981631),
-    h = n(388032);
-function m(e, t, n) {
+    p = n(110742),
+    _ = n(981631),
+    m = n(388032);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +41,7 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
@@ -100,17 +100,17 @@ var v = (function (e) {
         e
     );
 })({});
-function I(e, t) {
+function S(e, t) {
     switch (e) {
         case 2:
-            return h.intl.formatToPlainString(h.t.k1ew5N, { rate: t });
+            return m.intl.formatToPlainString(m.t.k1ew5N, { rate: t });
         case 3:
-            return h.intl.formatToPlainString(h.t["Hs3Y+I"], { rate: t });
+            return m.intl.formatToPlainString(m.t["Hs3Y+I"], { rate: t });
         case 4:
-            return h.intl.string(h.t.DLAKbi);
+            return m.intl.string(m.t.DLAKbi);
     }
 }
-function T(e) {
+function I(e) {
     let { appId: t, onClick: n, onHasClicked: i, skuId: a, subscriptionPlan: o, icon: s, state: l = 0 } = e,
         c = (e) => {
             n(e), null == i || i();
@@ -124,11 +124,11 @@ function T(e) {
               onClick: c,
               loading: d,
               icon: s,
-              text: null != u ? h.intl.formatToPlainString(h.t.i4T8vz, { rate: u }) : h.intl.string(h.t.uuzaAK),
+              text: null != u ? m.intl.formatToPlainString(m.t.i4T8vz, { rate: u }) : m.intl.string(m.t.uuzaAK),
           })
-        : (0, r.jsx)(C, { text: I(l, null != u ? u : "") });
+        : (0, r.jsx)(C, { text: S(l, null != u ? u : "") });
 }
-function S(e) {
+function T(e) {
     let { appId: t, onClick: n, onHasClicked: i, sku: a, icon: l } = e,
         { analyticsLocations: u } = (0, s.ZP)(o.Z.APP_STOREFRONT),
         d = () => {
@@ -138,20 +138,20 @@ function S(e) {
                 analyticsLocations: u,
             });
         },
-        m = (0, _.M)(a.id),
-        g = a.type === p.epS.DURABLE && m,
+        h = (0, p.M)(a.id),
+        g = a.type === _.epS.DURABLE && h,
         { price: E } = a;
     if (null == E) return null;
     let b = (e) => {
         (null != n ? n : d)(e), null == i || i();
     };
     return g
-        ? (0, r.jsx)(C, { text: h.intl.string(h.t["6cfuDj"]) })
+        ? (0, r.jsx)(C, { text: m.intl.string(m.t["6cfuDj"]) })
         : (0, r.jsx)(A, {
               appId: t,
               skuId: a.id,
               onClick: b,
-              text: h.intl.format(h.t.Xp5WTn, { price: (0, f.T4)(E.amount, E.currency) }),
+              text: m.intl.format(m.t.Xp5WTn, { price: (0, f.T4)(E.amount, E.currency) }),
               icon: l,
           });
 }
@@ -161,14 +161,14 @@ function A(e) {
     let c = (0, l.Z)(),
         f = (e) => {
             if (
-                (d.default.track(p.rMx.STOREFRONT_PURCHASE_CLICKED, {
+                (d.default.track(_.rMx.STOREFRONT_PURCHASE_CLICKED, {
                     application_id: t,
                     sku_id: n,
                 }),
                 !c)
             ) {
                 e.preventDefault(), e.stopPropagation();
-                let r = p.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t, n),
+                let r = _.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t, n),
                     a = (0, i.Ui)(r, !1);
                 (0, u.uL)(a);
                 return;

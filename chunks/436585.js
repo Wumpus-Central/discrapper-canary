@@ -65,7 +65,7 @@ let c = "social-layer-storefront-product-details-modal",
             isStorefront: u,
             analyticsLocations: d,
             analyticsContext: f,
-            onClose: _,
+            onClose: p,
         } = e;
         (0, i.ZDy)(
             async () => {
@@ -86,7 +86,7 @@ let c = "social-layer-storefront-product-details-modal",
             {
                 modalKey: c,
                 onCloseCallback: () => {
-                    null == _ || _();
+                    null == p || p();
                 },
             },
         );

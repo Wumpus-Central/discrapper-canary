@@ -1,7 +1,7 @@
 n.d(t, {
-    Kh: () => _,
-    ad: () => p,
-    jd: () => h,
+    Kh: () => p,
+    ad: () => _,
+    jd: () => m,
 });
 var r = n(512722),
     i = n.n(r),
@@ -40,7 +40,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     let n = l.Z.getChannel(e);
     if (null == n) return;
     let r = (0, s.e)(n);
@@ -48,12 +48,12 @@ function _(e, t) {
         (0, c.uL)(u.Z5c.CHANNEL(r, n.id), f({ openChannel: !0 }, t)),
         (null == t ? void 0 : t.openTextInVoiceIfVoiceChannel) && n.isGuildVocal() && o.Z.updateChatOpen(n.id, !0);
 }
-function p(e, t) {
+function _(e, t) {
     i()(null != e.parent_id, "Thread must have a parent ID.");
     let n = (0, s.e)(e);
     (0, c.uL)(u.Z5c.CHANNEL(n, e.id), f({ openChannel: !0 }, t));
 }
-function h(e, t, n) {
+function m(e, t, n) {
     let r = l.Z.getChannel(e);
     if (null == r) return;
     let i = (0, s.e)(r);

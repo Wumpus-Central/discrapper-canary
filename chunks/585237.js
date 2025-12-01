@@ -61,7 +61,7 @@ function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -69,7 +69,7 @@ function f(e, t) {
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,20 +78,20 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-var p = (function (e) {
+var _ = (function (e) {
     return (e.SMALL = "SMALL"), (e.MEDIUM = "MEDIUM"), (e.LARGE = "LARGE"), e;
-})(p || {});
-let h = {
+})(_ || {});
+let m = {
         SMALL: s.dropdownSmall,
         MEDIUM: s.dropdownMedium,
         LARGE: s.dropdownLarge,
     },
-    m = (e) => {
+    h = (e) => {
         var { onDropdownClick: t, children: n, contentClassName: l, dropdownSize: u = "MEDIUM" } = e,
-            _ = f(e, ["onDropdownClick", "children", "contentClassName", "dropdownSize"]);
+            p = f(e, ["onDropdownClick", "children", "contentClassName", "dropdownSize"]);
         return (0, r.jsx)(
             i.zx,
-            d(c({}, _), {
+            d(c({}, p), {
                 children: (0, r.jsxs)(o.Z, {
                     align: o.Z.Align.CENTER,
                     children: [
@@ -101,7 +101,7 @@ let h = {
                         }),
                         null != t
                             ? (0, r.jsxs)(a.P3F, {
-                                  className: h[u],
+                                  className: m[u],
                                   onClick: (e) => {
                                       e.stopPropagation(), null != t && t(e);
                                   },
@@ -120,5 +120,5 @@ let h = {
             }),
         );
     };
-(m.DropdownSizes = p), (m.Sizes = i.zx.Sizes), (m.Colors = i.zx.Colors), (m.Looks = i.zx.Looks);
-let g = m;
+(h.DropdownSizes = _), (h.Sizes = i.zx.Sizes), (h.Colors = i.zx.Colors), (h.Looks = i.zx.Looks);
+let g = h;

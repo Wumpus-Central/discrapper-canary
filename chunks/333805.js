@@ -1,18 +1,18 @@
-n.d(t, { Z: () => c });
-var i = n(54381);
-n(473749);
-var r = n(481060),
-    l = n(726521),
-    a = n(427679),
-    o = n(388032);
-function c(e) {
-    let t = a.Z.isLive(e.id);
-    return e.isGuildStageVoice() && t
-        ? (0, i.jsx)(r.sNh, {
+e.d(t, { Z: () => s });
+var i = e(54381);
+e(473749);
+var l = e(481060),
+    r = e(726521),
+    a = e(427679),
+    c = e(388032);
+function s(n) {
+    let t = a.Z.isLive(n.id);
+    return n.isGuildStageVoice() && t
+        ? (0, i.jsx)(l.sNh, {
               id: "report-stage",
-              label: o.intl.string(o.t.JGj6Ci),
-              action: () => (0, l.ic)(e),
-              icon: r.U65,
+              label: c.intl.string(c.t.JGj6Ci),
+              action: () => (0, r.ic)(n),
+              icon: l.U65,
               color: "danger",
           })
         : null;

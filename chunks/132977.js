@@ -1,6 +1,6 @@
 n.d(t, {
     ZX: () => v,
-    gt: () => I,
+    gt: () => S,
     rH: () => b,
 });
 var r,
@@ -13,7 +13,7 @@ var r,
     u = n(600164),
     d = n(104505),
     f = n(929370);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,12 +37,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,12 +54,12 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -104,7 +104,7 @@ class v extends (r = a.PureComponent) {
             a = g(e, ["className", "shineSize", "shinePaused"]);
         return (0, i.jsx)(
             l.Z.div,
-            m(p({}, a), {
+            h(_({}, a), {
                 className: s()(f.shineContainer, t, { [f.shinePaused]: r }),
                 children: (0, i.jsx)(u.Z, {
                     align: u.Z.Align.CENTER,
@@ -116,8 +116,8 @@ class v extends (r = a.PureComponent) {
         );
     }
 }
-_(v, "defaultProps", { shineSize: "default" });
-let I = (e) => {
+p(v, "defaultProps", { shineSize: "default" });
+let S = (e) => {
     var {
             children: t,
             className: n,
@@ -125,8 +125,8 @@ let I = (e) => {
             submitting: o,
             pauseAnimation: l,
             shineSize: u = "default",
-            shinePaused: _,
-            buttonShineClassName: h,
+            shinePaused: p,
+            buttonShineClassName: m,
             onlyShineOnHover: E,
         } = e,
         b = g(e, [
@@ -142,11 +142,11 @@ let I = (e) => {
         ]);
     let y = a.useRef(null),
         O = (0, d.X)(y),
-        I = !r && !o && !0 !== l && (!E || O);
+        S = !r && !o && !0 !== l && (!E || O);
     return (0, i.jsxs)(
         c.zx,
-        m(
-            p(
+        h(
+            _(
                 {
                     "data-migration-pending": !0,
                     buttonRef: y,
@@ -159,11 +159,11 @@ let I = (e) => {
                 submitting: o,
                 children: [
                     t,
-                    I
+                    S
                         ? (0, i.jsx)(v, {
                               "data-migration-pending": !0,
-                              shinePaused: _,
-                              className: s()(f.buttonShine, E ? f.onlyShineOnHover : void 0, h),
+                              shinePaused: p,
+                              className: s()(f.buttonShine, E ? f.onlyShineOnHover : void 0, m),
                               shineSize: u,
                           })
                         : null,
@@ -172,4 +172,4 @@ let I = (e) => {
         ),
     );
 };
-I.ShineSizes = b;
+S.ShineSizes = b;

@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,22 +48,22 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -71,7 +71,7 @@ function h(e, t) {
     }
     return i;
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -95,9 +95,9 @@ let g = {
 function b(e) {
     var t,
         { type: n, "aria-label": i } = e,
-        a = h(e, ["type", "aria-label"]);
+        a = m(e, ["type", "aria-label"]);
     let o = g[n];
     if (null == o) return null;
     let s = null != i ? i : null == (t = E[n]) ? void 0 : t.call(E);
-    return (0, r.jsx)(l.Z, p(f({ Icon: o }, a), { "aria-label": s }));
+    return (0, r.jsx)(l.Z, _(f({ Icon: o }, a), { "aria-label": s }));
 }

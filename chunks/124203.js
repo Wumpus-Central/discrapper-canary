@@ -15,7 +15,7 @@ let f = {
         APPLE_AND_GPAY_DISABLED: "Express Checkout Element - Google Pay and Apple Pay Disabled",
         CONFIGURABLE: "Express Checkout Element - Configurable",
     },
-    _ = {
+    p = {
         GPAY_FILTERED: {
             wallets: {
                 googlePay: "always",
@@ -35,7 +35,7 @@ let f = {
             },
         },
     },
-    p = {
+    _ = {
         appearance: {
             theme: "flat",
             variables: {
@@ -44,7 +44,7 @@ let f = {
             },
         },
     },
-    h = {
+    m = {
         buttonType: {
             googlePay: "pay",
             applePay: "book",
@@ -55,32 +55,32 @@ let f = {
         },
         buttonHeight: 40,
     },
-    m = (e) => (void 0 !== e ? JSON.stringify(e, null, 2) : "undefined"),
+    h = (e) => (void 0 !== e ? JSON.stringify(e, null, 2) : "undefined"),
     g = "``";
 function E() {
-    let [e, t] = i.useState(m(p)),
-        [n, c] = i.useState(p),
-        [_, E] = i.useState(m(h)),
-        [b, y] = i.useState(h),
+    let [e, t] = i.useState(h(_)),
+        [n, c] = i.useState(_),
+        [p, E] = i.useState(h(m)),
+        [b, y] = i.useState(m),
         [O, v] = i.useState(null),
-        [I, T] = i.useState(
+        [S, I] = i.useState(
             (0, r.jsx)(u.DS, {
                 errorLabel: f.CONFIGURABLE,
-                elementOptions: p,
+                elementOptions: _,
                 children: (0, r.jsx)(a.ExpressCheckoutElement, {
                     onConfirm: (e) => {
                         console.log("ExpressCheckoutElement onConfirm event: ", e);
                     },
-                    options: h,
+                    options: m,
                 }),
             }),
         ),
-        S = () => {
+        T = () => {
             try {
                 let t = JSON.parse(e),
-                    n = JSON.parse(_);
-                T(null),
-                    T(
+                    n = JSON.parse(p);
+                I(null),
+                    I(
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsxs)(s.Text, {
@@ -162,7 +162,7 @@ function E() {
                 children: (0, r.jsx)(s.Kx8, {
                     placeholder: "Stripe Express Checkout Element Options",
                     showCharacterCount: !0,
-                    value: _,
+                    value: p,
                     onChange: E,
                     rows: 7,
                 }),
@@ -180,7 +180,7 @@ function E() {
                     variant: "primary",
                     size: "sm",
                     text: "Apply Changes",
-                    onClick: S,
+                    onClick: T,
                 }),
             }),
             (0, r.jsx)(s.Text, {
@@ -192,7 +192,7 @@ function E() {
                 variant: "text-md/normal",
                 children: (0, r.jsx)(l.Z, {
                     className: d.markdown,
-                    children: "".concat(g, " ").concat(m(n), " ").concat(g),
+                    children: "".concat(g, " ").concat(h(n), " ").concat(g),
                 }),
             }),
             (0, r.jsx)(s.Text, {
@@ -204,10 +204,10 @@ function E() {
                 variant: "text-md/normal",
                 children: (0, r.jsx)(l.Z, {
                     className: d.markdown,
-                    children: "".concat(g, " ").concat(m(b), " ").concat(g),
+                    children: "".concat(g, " ").concat(h(b), " ").concat(g),
                 }),
             }),
-            I,
+            S,
         ],
     });
 }
@@ -256,7 +256,7 @@ let b = {
                                             variant: "text-md/normal",
                                             children: (0, r.jsx)(l.Z, {
                                                 className: d.markdown,
-                                                children: "".concat(g).concat(m(_[e]), " ").concat(g),
+                                                children: "".concat(g).concat(h(p[e]), " ").concat(g),
                                             }),
                                         }),
                                         (0, r.jsx)(u.DS, {
@@ -265,7 +265,7 @@ let b = {
                                                 onConfirm: (e) => {
                                                     console.log("ExpressCheckoutElement onConfirm event: ", e);
                                                 },
-                                                options: _[e],
+                                                options: p[e],
                                             }),
                                         }),
                                     ],

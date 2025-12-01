@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(54381);
 n(473749);
 var i = n(481060),
@@ -10,8 +10,8 @@ var i = n(481060),
     u = n(981631),
     d = n(474936),
     f = n(388032),
-    _ = n(137435);
-function p(e) {
+    p = n(137435);
+function _(e) {
     let {
         hasAppliedGuildBoosts: t,
         hasBoostPerk: n,
@@ -30,33 +30,33 @@ function p(e) {
             subtitle: f.intl.string(f.t.W5rDjW),
             flavor: f.intl.format(f.t.cUHcaQ, { helpdeskArticle: a.Z.getArticleURL(u.BhN.GUILD_SUBSCRIPTIONS) }),
         };
-    let _ = d.GP[d.Xh.PREMIUM_MONTH_GUILD],
-        p = o.ZP.getDefaultPrice(_.id, n),
-        h = (0, s.og)((0, s.T4)(p.amount, p.currency), _.interval, _.intervalCount);
+    let p = d.GP[d.Xh.PREMIUM_MONTH_GUILD],
+        _ = o.ZP.getDefaultPrice(p.id, n),
+        m = (0, s.og)((0, s.T4)(_.amount, _.currency), p.interval, p.intervalCount);
     return {
         subtitle: n ? f.intl.string(f.t.bhPzXR) : f.intl.string(f.t.Zs9h9Z),
-        flavor: f.intl.formatToPlainString(f.t.PGgTdA, { monthlyGuildBoostPrice: h }),
+        flavor: f.intl.formatToPlainString(f.t.PGgTdA, { monthlyGuildBoostPrice: m }),
     };
 }
-let h = function (e) {
+let m = function (e) {
     let {
             hasAppliedGuildBoosts: t,
             hasBoostPerk: n,
             hasGuildAffinitiesOrInGuild: a,
             subscriptionIsPausedOrPausePending: o,
         } = e,
-        { subtitle: s, flavor: l } = p({
+        { subtitle: s, flavor: l } = _({
             hasAppliedGuildBoosts: t,
             hasBoostPerk: n,
             hasGuildAffinitiesOrInGuild: a,
             subscriptionIsPausedOrPausePending: o,
         });
     return (0, r.jsxs)("div", {
-        className: _.wrapper,
+        className: p.wrapper,
         children: [
             (0, r.jsx)(i.Heading, {
                 variant: "heading-lg/bold",
-                className: _.subtitle,
+                className: p.subtitle,
                 children: s,
             }),
             null != l &&

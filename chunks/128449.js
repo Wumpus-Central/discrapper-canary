@@ -1,19 +1,19 @@
 n.d(t, {
     AF: () => O,
     BP: () => E,
-    Cf: () => S,
+    Cf: () => T,
     Gj: () => v,
     Hk: () => d,
     KL: () => y,
-    L3: () => I,
-    MU: () => m,
-    Qq: () => h,
+    L3: () => S,
+    MU: () => h,
+    Qq: () => m,
     dc: () => u,
     gU: () => f,
     o3: () => c,
     q5: () => g,
     t0: () => b,
-    vf: () => p,
+    vf: () => _,
 }),
     n(388685);
 var r = n(70956),
@@ -74,8 +74,8 @@ let c = 0,
     u = 13,
     d = -1,
     f = -2,
-    _ = -3;
-var p = (function (e) {
+    p = -3;
+var _ = (function (e) {
         return (
             (e.FEATURED = "featured"),
             (e.GAMING = "gaming"),
@@ -87,7 +87,7 @@ var p = (function (e) {
             e
         );
     })({}),
-    h = (function (e) {
+    m = (function (e) {
         return (
             (e.UNKNOWN = "unknown"),
             (e.GUILDS_BAR = "guilds_bar"),
@@ -98,7 +98,7 @@ var p = (function (e) {
             e
         );
     })({});
-let m = new Set(["hubs"]),
+let h = new Set(["hubs"]),
     g = [],
     E = "q",
     b = "c",
@@ -106,7 +106,7 @@ let m = new Set(["hubs"]),
     O = 10 * r.Z.Millis.MINUTE;
 var v = (function (e) {
     return (
-        (e[(e.Clans = _)] = "Clans"),
+        (e[(e.Clans = p)] = "Clans"),
         (e[(e.Hub = f)] = "Hub"),
         (e[(e.Communities = d)] = "Communities"),
         (e[(e.Activity = 1)] = "Activity"),
@@ -117,10 +117,10 @@ var v = (function (e) {
         e
     );
 })({});
-let I = [1, 2, 3, 5, 6],
-    T = ["en-GB"];
-function S() {
+let S = [1, 2, 3, 5, 6],
+    I = ["en-GB"];
+function T() {
     return (0, i.getLanguages)()
-        .filter((e) => !T.includes(e.code))
+        .filter((e) => !I.includes(e.code))
         .map((e) => ("en-US" === e.code ? l(o({}, e), { name: i.intl.string(i.t.LQLMGP) }) : e));
 }

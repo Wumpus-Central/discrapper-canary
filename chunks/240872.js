@@ -64,9 +64,9 @@ let u = {
             confirmVariant: u = "primary",
             cancelText: d,
             onConfirm: f,
-            onCancel: _,
-            onCloseCallback: p,
-            contextKey: h,
+            onCancel: p,
+            onCloseCallback: _,
+            contextKey: m,
         } = e;
         (0, i.ZDy)(
             async () => {
@@ -79,7 +79,7 @@ let u = {
                             i.push({
                                 text: d,
                                 onClick: async () => {
-                                    null == _ || _(), await n.onClose();
+                                    null == p || p(), await n.onClose();
                                 },
                                 variant: "secondary",
                             }),
@@ -103,8 +103,8 @@ let u = {
                 };
             },
             {
-                onCloseCallback: p,
-                contextKey: h,
+                onCloseCallback: _,
+                contextKey: m,
             },
         );
     },

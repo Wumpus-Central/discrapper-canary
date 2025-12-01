@@ -14,9 +14,9 @@ var u = n(709054),
     d = n(561308);
 n(206295);
 var f = n(737583),
-    _ = n(169040),
-    p = n(388032);
-function h(e, t, n) {
+    p = n(169040),
+    _ = n(388032);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +29,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,13 +40,13 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
 }
 let g = (e, t) =>
-        m(
+        h(
             { AvatarImage1: e[0] },
             null != e[1] && { AvatarImage2: e[1] },
             null != e[2] && { AvatarImage3: e[2] },
@@ -55,7 +55,7 @@ let g = (e, t) =>
     E = (e, t) => {
         let n = [
                 {
-                    iconPath: _.NM,
+                    iconPath: p.NM,
                     text: t,
                 },
             ],
@@ -63,32 +63,32 @@ let g = (e, t) =>
         if (
             (7 >= i()().diff(i()(r), "days") &&
                 n.push({
-                    iconPath: _.As,
-                    text: p.intl.string(p.t.vYuyWf),
+                    iconPath: p.As,
+                    text: _.intl.string(_.t.vYuyWf),
                 }),
             (0, d.Ol)(e) &&
                 n.push({
-                    iconPath: _.fO,
-                    text: p.intl.string(p.t.keY6mW),
+                    iconPath: p.fO,
+                    text: _.intl.string(_.t.keY6mW),
                 }),
             (0, d.q_)(e))
         ) {
             let t = (0, d.vU)(e);
             n.push({
-                iconPath: _.t1,
-                text: p.intl.formatToPlainString(p.t["Klie/P"], { days: t }),
+                iconPath: p.t1,
+                text: _.intl.formatToPlainString(_.t["Klie/P"], { days: t }),
             });
         }
         (0, d.ig)(e) === a.o.GLOBAL &&
             n.push({
-                iconPath: _.Op,
-                text: p.intl.string(p.t.kAlUsy),
+                iconPath: p.Op,
+                text: _.intl.string(_.t.kAlUsy),
             });
         let o = (0, d.dw)(e);
         if (
             (null != o &&
                 n.push({
-                    iconPath: _.Z,
+                    iconPath: p.Z,
                     text: (0, d.GE)(o),
                 }),
             (0, d.V5)(e))
@@ -96,18 +96,18 @@ let g = (e, t) =>
             let { text: t } = (0, d.zo)(e);
             null != t &&
                 n.push({
-                    iconPath: _.Md,
+                    iconPath: p.Md,
                     text: t,
                 });
         }
         if ((0, d.Jd)(e)) {
             let t = (0, d.yA)(e);
             if (null != t) {
-                let e = p.intl.formatToPlainString(p.t.C0AxoR, { hours: Math.round(t / c.Z.Seconds.HOUR) });
+                let e = _.intl.formatToPlainString(_.t.C0AxoR, { hours: Math.round(t / c.Z.Seconds.HOUR) });
                 return [
                     {
-                        iconPath: _.eF,
-                        text: "".concat(p.intl.string(p.t["/50eHi"]), " \u2014 ").concat(e),
+                        iconPath: p.eF,
+                        text: "".concat(_.intl.string(_.t["/50eHi"]), " \u2014 ").concat(e),
                     },
                 ];
             }
@@ -122,8 +122,8 @@ let g = (e, t) =>
             }));
         e.setSize(
             {
-                w: _.nx,
-                h: _.bg,
+                w: p.nx,
+                h: p.bg,
             },
             4,
         ),
@@ -131,17 +131,17 @@ let g = (e, t) =>
                 c,
                 {
                     x: 0,
-                    y: _.bg,
+                    y: p.bg,
                 },
                 {
-                    x: _.nx,
+                    x: p.nx,
                     y: 0,
                 },
                 {
                     x: 0,
                     y: 0,
-                    h: _.bg,
-                    w: _.nx,
+                    h: p.bg,
+                    w: p.nx,
                 },
                 8,
             ),
@@ -149,20 +149,20 @@ let g = (e, t) =>
             e.drawRoundedImage(
                 "ApplicationImage",
                 {
-                    x: _.sB,
-                    y: _.sB,
+                    x: p.sB,
+                    y: p.sB,
                 },
                 {
-                    w: _.Pu,
-                    h: _.Pu,
+                    w: p.Pu,
+                    h: p.Pu,
                 },
                 8,
             ) === s.vP.Failure &&
                 e.drawPath(
                     o.C,
                     {
-                        x: _.sB,
-                        y: _.sB,
+                        x: p.sB,
+                        y: p.sB,
                     },
                     !0,
                     2 + 2 / 3,
@@ -172,25 +172,25 @@ let g = (e, t) =>
             canvas: e,
             avatarSrcs: u.slice(0, l),
             position: {
-                x: _.Iq,
-                y: _.sB,
+                x: p.Iq,
+                y: p.sB,
             },
-            avatarImageSize: _.$S,
+            avatarImageSize: p.$S,
         }),
             e.setColor("white"),
             e.setFont({
                 size: 16,
-                family: _.I8,
-                weight: _.Ue,
+                family: p.I8,
+                weight: p.Ue,
                 truncate: s.GX.Wrap,
             }),
             e.drawText(
                 i,
                 {
-                    x: _.Iq,
+                    x: p.Iq,
                     y: 64,
                     h: 32,
-                    w: _.kC,
+                    w: p.kC,
                 },
                 !0,
             );
@@ -198,8 +198,8 @@ let g = (e, t) =>
         (0, f.J)({
             canvas: e,
             badges: d,
-            startPosition: _.Iq,
-            maxWidth: _.kC,
+            startPosition: p.Iq,
+            maxWidth: p.kC,
         });
     },
     y = async (e) => {

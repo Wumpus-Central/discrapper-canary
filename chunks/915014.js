@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(54381);
 n(473749);
 var i = n(36563),
@@ -10,24 +10,24 @@ var i = n(36563),
     u = n(146078),
     d = n(228168),
     f = n(268685),
-    _ = n(99520);
-let p = 3;
-function h(e) {
+    p = n(99520);
+let _ = 3;
+function m(e) {
     let { user: t, onOpenProfile: n } = e,
-        { mutualFriends: h, mutualGuilds: m } = (0, l.Z)(t),
-        g = null != h && h.length > 0,
-        E = null != m && m.length > 0,
+        { mutualFriends: m, mutualGuilds: h } = (0, l.Z)(t),
+        g = null != m && m.length > 0,
+        E = null != h && h.length > 0,
         b = g && E ? "text-xs/normal" : "text-sm/normal";
     if (!g && !E) return null;
     let y = () =>
             g
                 ? (0, r.jsxs)(o.P3F, {
-                      className: _.section,
+                      className: p.section,
                       onClick: () => (null == n ? void 0 : n(d.oh.MUTUAL_FRIENDS)),
                       children: [
                           (0, r.jsx)(i.Z, {
-                              maxUsers: p,
-                              users: h.map((e) => {
+                              maxUsers: _,
+                              users: m.map((e) => {
                                   let { user: t } = e;
                                   return t;
                               }),
@@ -37,10 +37,10 @@ function h(e) {
                               "aria-hidden": !0,
                           }),
                           (0, r.jsx)(o.Text, {
-                              className: _.text,
+                              className: p.text,
                               variant: b,
                               color: "interactive-normal",
-                              children: (0, c.Z)(h.length),
+                              children: (0, c.Z)(m.length),
                           }),
                       ],
                   })
@@ -49,19 +49,19 @@ function h(e) {
             g && E
                 ? (0, r.jsx)("div", {
                       "aria-hidden": "true",
-                      className: _.spacer,
+                      className: p.spacer,
                   })
                 : null,
         v = () =>
             E
                 ? (0, r.jsxs)(o.P3F, {
-                      className: _.section,
+                      className: p.section,
                       onClick: () => (null == n ? void 0 : n(d.oh.MUTUAL_GUILDS)),
                       children: [
                           !g &&
                               (0, r.jsx)(a.Z, {
-                                  maxGuilds: p,
-                                  guilds: m.map((e) => {
+                                  maxGuilds: _,
+                                  guilds: h.map((e) => {
                                       let { guild: t } = e;
                                       return t;
                                   }),
@@ -70,16 +70,16 @@ function h(e) {
                                   disableGuildNameTooltip: !0,
                               }),
                           (0, r.jsx)(o.Text, {
-                              className: _.text,
+                              className: p.text,
                               variant: b,
                               color: "interactive-normal",
-                              children: (0, u.Z)(m.length),
+                              children: (0, u.Z)(h.length),
                           }),
                       ],
                   })
                 : null;
     return (0, r.jsxs)("div", {
-        className: _.mutuals,
+        className: p.mutuals,
         children: [y(), O(), v()],
     });
 }

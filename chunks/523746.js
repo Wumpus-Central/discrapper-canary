@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => D });
 var r,
     i = n(392711),
     a = n.n(i),
@@ -9,7 +9,7 @@ var r,
     u = n(944486),
     d = n(914010),
     f = n(981631);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,12 +33,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,12 +50,12 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -91,19 +91,19 @@ function y() {
 }
 function O(e) {
     let { callStoreInternalState: t } = e;
-    (g = p({}, t.calls)), (E = p({}, t.enqueuedRings));
+    (g = _({}, t.calls)), (E = _({}, t.enqueuedRings));
 }
 function v() {
     (g = {}), (E = {});
 }
-function I() {
+function S() {
     return b(!0);
 }
-function T(e) {
+function I(e) {
     let { channelId: t } = e;
     return b(!1, t);
 }
-function S(e) {
+function T(e) {
     let { channel: t } = e;
     if ((null != E[t.id] && delete E[t.id], null == g[t.id])) return !1;
     delete g[t.id];
@@ -141,18 +141,18 @@ function N(e) {
     let { channelId: t, messageId: n, region: r, ringing: i } = e,
         a = g[t],
         o = null != a && (a.regionUpdated || a.region !== r);
-    g[t] = m(p({}, g[t]), {
+    g[t] = h(_({}, g[t]), {
         messageId: n,
         region: r,
         ringing: i,
         regionUpdated: o,
     });
 }
-function R(e) {
+function P(e) {
     let { channelId: t, unavailable: n } = e,
         r = g[t];
     !0 === n && null != r
-        ? (g[t] = m(p({}, r), { unavailable: n }))
+        ? (g[t] = h(_({}, r), { unavailable: n }))
         : (g[t] = {
               channelId: t,
               ringing: [],
@@ -163,11 +163,11 @@ function R(e) {
           }),
         null != E[t] && delete E[t];
 }
-function P(e) {
+function R(e) {
     let { channelId: t } = e;
     null == t && (E = {});
 }
-class D extends (r = o.ZP.Store) {
+class w extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(c.Z, u.Z, d.Z);
     }
@@ -196,17 +196,17 @@ class D extends (r = o.ZP.Store) {
         };
     }
 }
-_(D, "displayName", "CallStore");
-let w = new D(l.Z, {
+p(w, "displayName", "CallStore");
+let D = new w(l.Z, {
     CONNECTION_OPEN: y,
     CONNECTION_CLOSED: v,
     OVERLAY_INITIALIZE: O,
-    CONNECTION_RESUMED: I,
-    CHANNEL_SELECT: T,
-    CHANNEL_DELETE: S,
+    CONNECTION_RESUMED: S,
+    CHANNEL_SELECT: I,
+    CHANNEL_DELETE: T,
     CALL_CREATE: A,
     CALL_UPDATE: N,
-    CALL_DELETE: R,
+    CALL_DELETE: P,
     CALL_ENQUEUE_RING: C,
-    VOICE_CHANNEL_SELECT: P,
+    VOICE_CHANNEL_SELECT: R,
 });

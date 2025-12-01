@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => R });
 var r = n(54381),
     i = n(473749),
     a = n(374470),
@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(728285),
     d = n(574254),
     f = n(585483),
-    _ = n(499254),
-    p = n(827498),
-    h = n(421591),
-    m = n(496977),
+    p = n(499254),
+    _ = n(827498),
+    m = n(421591),
+    h = n(496977),
     g = n(314734),
     E = n(981631),
     b = n(149203),
@@ -31,7 +31,7 @@ function v(e, t, n) {
         e
     );
 }
-function I(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,11 +47,11 @@ function I(e) {
     }
     return e;
 }
-function T(e, t) {
+function I(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = S(e, t);
+        i = T(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -59,7 +59,7 @@ function T(e, t) {
     }
     return i;
 }
-function S(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -71,7 +71,7 @@ function S(e, t) {
 let A = { height: g.lv };
 function C(e) {
     var { positionTargetRef: t, align: n } = e,
-        i = T(e, ["positionTargetRef", "align"]);
+        i = I(e, ["positionTargetRef", "align"]);
     return (0, r.jsx)("span", {
         style: g.u$,
         children: (0, r.jsx)(c.W5, {
@@ -90,29 +90,29 @@ function C(e) {
                     role: "dialog",
                     style: A,
                     "aria-label": y.intl.string(y.t["3CNGLK"]),
-                    children: t && (0, r.jsx)(R, I({}, i)),
+                    children: t && (0, r.jsx)(P, S({}, i)),
                 });
             },
         }),
     });
 }
 function N() {
-    _.y(p.ti.DISMISSED);
+    p.y(_.ti.DISMISSED);
 }
-function R(e) {
+function P(e) {
     let { channel: t, closeOnModalOuterClick: n = !1, parentModalKey: c } = e,
-        _ = i.useRef(null),
+        p = i.useRef(null),
         { renderWindow: y, windowDispatch: O } = i.useContext(u.ZP),
         v = null != c,
-        I = (0, o.Jw)(null != c ? c : ""),
-        T = i.useCallback(
+        S = (0, o.Jw)(null != c ? c : ""),
+        I = i.useCallback(
             (e) => {
                 var t;
-                if ((!v && (0, o.$s)()) || (v && !(I && n)) || d.Z.isOpen() || e.defaultPrevented) return;
+                if ((!v && (0, o.$s)()) || (v && !(S && n)) || d.Z.isOpen() || e.defaultPrevented) return;
                 let { target: r } = e;
                 if ((0, a.kK)(r) && null != r.closest("." + g.Jh)) return;
                 for (; (0, a.kK)(r); ) {
-                    if (r === _.current) return;
+                    if (r === p.current) return;
                     if (r.classList.contains(g.t4) || r.classList.contains(g.Id)) return void e.preventDefault();
                     if (r.classList.contains(g.NN)) return;
                     let t = [b.cZ, l.N];
@@ -123,34 +123,34 @@ function R(e) {
                 let i = null == (t = (0, a.uB)(e)) ? void 0 : t.activeElement;
                 (null == i || "BODY" === i.tagName) && f.S.dispatchToLastSubscribed(E.CkL.TEXTAREA_FOCUS);
             },
-            [n, I, v],
+            [n, S, v],
         );
     i.useLayoutEffect(
         () => (
-            y.addEventListener("mousedown", T),
-            y.addEventListener("contextmenu", T),
+            y.addEventListener("mousedown", I),
+            y.addEventListener("contextmenu", I),
             O.subscribe(E.CkL.POPOUT_CLOSE, N),
             () => {
-                y.removeEventListener("mousedown", T),
-                    y.removeEventListener("contextmenu", T),
+                y.removeEventListener("mousedown", I),
+                    y.removeEventListener("contextmenu", I),
                     O.unsubscribe(E.CkL.POPOUT_CLOSE, N);
             }
         ),
-        [T, y, O],
+        [I, y, O],
     ),
-        (0, s.Tbt)(_),
+        (0, s.Tbt)(p),
         i.useEffect(() => {
-            ((!v && (0, o.$s)()) || (v && !I)) && N();
-        }, [I, v]);
-    let S = (0, m.Z)();
-    return (0, r.jsx)(h.Z, {
-        ref: _,
+            ((!v && (0, o.$s)()) || (v && !S)) && N();
+        }, [S, v]);
+    let T = (0, h.Z)();
+    return (0, r.jsx)(m.Z, {
+        ref: p,
         context: {
             channel: t,
             type: "channel",
         },
-        entrypoint: p._b.TEXT,
-        initHistory: S,
+        entrypoint: _._b.TEXT,
+        initHistory: T,
     });
 }
-let P = i.memo(C);
+let R = i.memo(C);

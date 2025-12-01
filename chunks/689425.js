@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r,
     i = n(54381),
     a = n(473749),
@@ -40,8 +40,8 @@ let f = (e, t) => {
             { x: i, y: a } = t;
         return Math.pow(n - i, 2) + Math.pow(r - a, 2);
     },
-    _ = 9;
-class p extends (r = a.PureComponent) {
+    p = 9;
+class _ extends (r = a.PureComponent) {
     componentDidMount() {
         let { initialX: e, initialY: t } = this.props;
         this.setPosition(e, t);
@@ -177,7 +177,7 @@ class p extends (r = a.PureComponent) {
                     f(this._dragStart, {
                         x: e.clientX,
                         y: e.clientY,
-                    }) > _ &&
+                    }) > p &&
                     (s = !0),
                     s &&
                         (this.animateToPosition(
@@ -216,7 +216,7 @@ class p extends (r = a.PureComponent) {
         };
     }
 }
-u(p, "defaultProps", {
+u(_, "defaultProps", {
     maxX: 0,
     maxY: 0,
     initialX: 0,
@@ -224,4 +224,4 @@ u(p, "defaultProps", {
     disabled: !1,
     dragAnywhere: !1,
 });
-let h = p;
+let m = _;

@@ -14,18 +14,18 @@ let d = i.forwardRef(function (e, t) {
         unicodeEmoji: a,
         name: d,
         size: f = 20,
-        enableTooltip: _ = !0,
-        enableHeight: p = !0,
-        onClick: h,
+        enableTooltip: p = !0,
+        enableHeight: _ = !0,
+        onClick: m,
     } = e;
     if (null == i && null == a) return null;
-    let m = () => {
+    let h = () => {
         let e = (0, r.jsx)("img", {
             ref: t,
             alt: "",
             "aria-label": c.intl.formatToPlainString(c.t["9+YWrE"], { name: d }),
-            className: o()(u.roleIcon, n, { [u.clickable]: null != h }),
-            height: p ? f : void 0,
+            className: o()(u.roleIcon, n, { [u.clickable]: null != m }),
+            height: _ ? f : void 0,
             src: i,
             width: f,
         });
@@ -34,18 +34,18 @@ let d = i.forwardRef(function (e, t) {
                 ref: t,
                 alt: "",
                 "aria-label": a.allNamesString,
-                className: o()(u.roleIcon, n, { [u.clickable]: null != h }),
-                height: p ? f : void 0,
+                className: o()(u.roleIcon, n, { [u.clickable]: null != m }),
+                height: _ ? f : void 0,
                 src: a.url,
                 width: f,
             })),
-        null == h)
+        null == m)
             ? (0, r.jsx)(l.tEY, {
                   offset: { left: 5 },
                   children: e,
               })
             : (0, r.jsx)(l.P3F, {
-                  onClick: h,
+                  onClick: m,
                   tag: "span",
                   focusProps: { offset: { left: 5 } },
                   children: e,
@@ -55,8 +55,8 @@ let d = i.forwardRef(function (e, t) {
         asContainer: !0,
         text: d,
         "aria-label": !1,
-        shouldShow: _,
+        shouldShow: p,
         tag: "span",
-        children: m(),
+        children: h(),
     });
 });

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r,
     i = n(442837),
     a = n(570140);
@@ -28,7 +28,7 @@ function f(e) {
         l.add(e), c.delete(e);
     });
 }
-function _(e) {
+function p(e) {
     let { applicationIds: t, supplementalGameData: n } = e,
         r = new Set(t);
     t.forEach((e) => {
@@ -46,10 +46,10 @@ function _(e) {
                 artwork_urls: u,
                 screenshot_urls: d,
                 icon_hash: f,
-                cover_image_url: _,
-                first_release_date: p,
-                summary_localized: h,
-                publisher_names: m,
+                cover_image_url: p,
+                first_release_date: _,
+                summary_localized: m,
+                publisher_names: h,
                 developer_names: g,
             } = e;
             r.delete(t),
@@ -57,7 +57,7 @@ function _(e) {
                     applicationId: t,
                     name: n,
                     summary: i,
-                    summaryLocalized: h,
+                    summaryLocalized: m,
                     websites: a,
                     themes: o,
                     genres: l,
@@ -65,9 +65,9 @@ function _(e) {
                     artwork: u,
                     screenshots: d,
                     iconHash: f,
-                    coverImageUrl: _,
-                    firstReleaseDate: p,
-                    publishers: null != m ? m : [],
+                    coverImageUrl: p,
+                    firstReleaseDate: _,
+                    publishers: null != h ? h : [],
                     developers: null != g ? g : [],
                 });
         }),
@@ -75,13 +75,13 @@ function _(e) {
             s.has(e) || u.add(e);
         });
 }
-function p(e) {
+function _(e) {
     let { applicationIds: t } = e;
     t.forEach((e) => {
         l.delete(e), c.add(e);
     });
 }
-class h extends (r = i.ZP.Store) {
+class m extends (r = i.ZP.Store) {
     canFetch(e) {
         return !l.has(e) && !c.has(e) && !s.has(e) && !u.has(e);
     }
@@ -120,10 +120,10 @@ class h extends (r = i.ZP.Store) {
         return s.size;
     }
 }
-o(h, "displayName", "DetectableGameSupplementalStore");
-let m = new h(a.Z, {
+o(m, "displayName", "DetectableGameSupplementalStore");
+let h = new m(a.Z, {
     LOGOUT: d,
     DETECTABLE_GAME_SUPPLEMENTAL_FETCH: f,
-    DETECTABLE_GAME_SUPPLEMENTAL_FETCH_SUCCESS: _,
-    DETECTABLE_GAME_SUPPLEMENTAL_FETCH_FAILURE: p,
+    DETECTABLE_GAME_SUPPLEMENTAL_FETCH_SUCCESS: p,
+    DETECTABLE_GAME_SUPPLEMENTAL_FETCH_FAILURE: _,
 });

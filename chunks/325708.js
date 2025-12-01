@@ -66,35 +66,35 @@ function y(e) {
             },
             [y],
         ),
-        x = 5 === t ? f.at : f.Co,
-        j = (0, f.WL)({
+        O = 5 === t ? f.at : f.Co,
+        x = (0, f.WL)({
             maxWidth: n,
-            minWidth: x,
+            minWidth: O,
         }),
-        O = (0, u.dQu)(c.Z.modules.chat.RESIZE_HANDLE_WIDTH),
-        E = (0, s.clamp)(C, x, n),
-        S = j ? E : E + O;
+        j = (0, u.dQu)(c.Z.modules.chat.RESIZE_HANDLE_WIDTH),
+        E = (0, s.clamp)(C, O, n),
+        S = x ? E : E + j;
     l.useEffect(() => {
-        null == i || i(E, j);
-    }, [E, i, j]);
+        null == i || i(E, x);
+    }, [E, i, x]);
     let P = null != p ? p : l.Fragment;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            !j && (0, r.jsx)("div", { style: { minWidth: S } }),
+            !x && (0, r.jsx)("div", { style: { minWidth: S } }),
             (0, r.jsx)(P, {
                 children: (0, r.jsxs)("div", {
                     className: o()(m.chatLayerWrapper, { [m.hidden]: !1 }),
                     children: [
                         (0, r.jsx)("div", {
                             className: o()(m.chatTarget, {
-                                [m.floating]: j,
-                                [m.notFloating]: !j,
+                                [m.floating]: x,
+                                [m.notFloating]: !x,
                             }),
                             style: { width: S },
                         }),
-                        !j &&
+                        !x &&
                             (0, r.jsx)(b, {
-                                minWidth: x,
+                                minWidth: O,
                                 maxWidth: n,
                                 resizableNode: g,
                                 onResize: v,
@@ -102,7 +102,7 @@ function y(e) {
                             }),
                         (0, r.jsx)("div", {
                             ref: g,
-                            className: o()(m.container, { [m.floating]: j }),
+                            className: o()(m.container, { [m.floating]: x }),
                             style: { width: E },
                             children: a,
                         }),

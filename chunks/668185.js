@@ -8,14 +8,14 @@ var r = n(54381),
     c = n(388032),
     u = n(979995);
 function d(e) {
-    let { application: t, permissions: n, deniedPermissions: d, onPermissionsChange: f, guild: _ } = e,
-        p = i.useMemo(() => a.U_(_.permissions), [_.permissions]);
+    let { application: t, permissions: n, deniedPermissions: d, onPermissionsChange: f, guild: p } = e,
+        _ = i.useMemo(() => a.U_(p.permissions), [p.permissions]);
     i.useEffect(() => {
-        f(!1, a.hX(n, p));
-    }, [p, f, n]);
-    let h = l.VY.filter((e) => a.e$(n, e)),
-        m = h
-            .filter((e) => !a.e$(p, e))
+        f(!1, a.hX(n, _));
+    }, [_, f, n]);
+    let m = l.VY.filter((e) => a.e$(n, e)),
+        h = m
+            .filter((e) => !a.e$(_, e))
             .map((e) => {
                 let t = (0, l.wt)(e),
                     n = !a.e$(d, e);
@@ -32,8 +32,8 @@ function d(e) {
                     String(e),
                 );
             }),
-        g = h
-            .filter((e) => a.e$(p, e))
+        g = m
+            .filter((e) => a.e$(_, e))
             .map((e) => {
                 let t = (0, l.wt)(e);
                 return (0, r.jsxs)(
@@ -61,7 +61,7 @@ function d(e) {
     return (0, r.jsxs)("div", {
         className: u.botPermissions,
         children: [
-            m.length > 0
+            h.length > 0
                 ? (0, r.jsxs)("div", {
                       children: [
                           (0, r.jsx)(o.x, {
@@ -69,12 +69,12 @@ function d(e) {
                               color: "header-secondary",
                               children: c.intl.format(c.t.sOaT2j, {
                                   applicationName: t.name,
-                                  guildName: _.name,
+                                  guildName: p.name,
                               }),
                           }),
                           (0, r.jsx)("ul", {
                               className: u.permissionsList,
-                              children: m,
+                              children: h,
                           }),
                       ],
                   })

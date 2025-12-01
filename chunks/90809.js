@@ -1,4 +1,4 @@
-n.d(t, { n: () => _ });
+n.d(t, { n: () => p });
 var r = n(17042),
     i = n(172395),
     a = n(981166),
@@ -9,35 +9,35 @@ var r = n(17042),
     u = n(473749),
     d = n(227399),
     f = n(624641);
-function _(e, t, n) {
-    var _;
-    let { node: h, isVirtualized: m, focusMode: g = "child", shouldSelectOnPressUp: E, onAction: b } = e,
+function p(e, t, n) {
+    var p;
+    let { node: m, isVirtualized: h, focusMode: g = "child", shouldSelectOnPressUp: E, onAction: b } = e,
         { direction: y } = (0, d.j)(),
         {
             keyboardDelegate: O,
             actions: { onCellAction: v },
         } = r.B.get(t),
-        I = (0, u.useRef)(null),
-        T = () => {
+        S = (0, u.useRef)(null),
+        I = () => {
             if (n.current) {
                 let e = (0, o.QL)(n.current);
                 if ("child" === g) {
                     if (n.current.contains(document.activeElement) && n.current !== document.activeElement) return;
-                    let r = "last" === t.selectionManager.childFocusStrategy ? p(e) : e.firstChild();
+                    let r = "last" === t.selectionManager.childFocusStrategy ? _(e) : e.firstChild();
                     if (r) return void (0, i.e)(r);
                 }
-                ((null == I.current || h.key === I.current) && n.current.contains(document.activeElement)) ||
+                ((null == S.current || m.key === S.current) && n.current.contains(document.activeElement)) ||
                     (0, i.e)(n.current);
             }
         },
-        { itemProps: S, isPressed: A } = (0, f.C)({
+        { itemProps: T, isPressed: A } = (0, f.C)({
             selectionManager: t.selectionManager,
-            key: h.key,
+            key: m.key,
             ref: n,
-            isVirtualized: m,
-            focus: T,
+            isVirtualized: h,
+            focus: I,
             shouldSelectOnPressUp: E,
-            onAction: v ? () => v(h.key) : b,
+            onAction: v ? () => v(m.key) : b,
             isDisabled: 0 === t.collection.size,
         }),
         C = (e) => {
@@ -56,7 +56,7 @@ function _(e, t, n) {
                     if (("child" === g && t === n.current && (t = null), e.preventDefault(), e.stopPropagation(), t))
                         (0, i.e)(t), (0, s.G)(t, { containingElement: (0, l.r)(n.current) });
                     else {
-                        if ((null == (r = O.getKeyLeftOf) ? void 0 : r.call(O, h.key)) !== h.key) {
+                        if ((null == (r = O.getKeyLeftOf) ? void 0 : r.call(O, m.key)) !== m.key) {
                             null == (a = n.current.parentElement) ||
                                 a.dispatchEvent(new KeyboardEvent(e.nativeEvent.type, e.nativeEvent));
                             break;
@@ -64,7 +64,7 @@ function _(e, t, n) {
                         "cell" === g && "rtl" === y
                             ? ((0, i.e)(n.current), (0, s.G)(n.current, { containingElement: (0, l.r)(n.current) }))
                             : ((f.currentNode = n.current),
-                              (t = "rtl" === y ? f.firstChild() : p(f)) &&
+                              (t = "rtl" === y ? f.firstChild() : _(f)) &&
                                   ((0, i.e)(t), (0, s.G)(t, { containingElement: (0, l.r)(n.current) })));
                     }
                     break;
@@ -74,7 +74,7 @@ function _(e, t, n) {
                     if (("child" === g && t === n.current && (t = null), e.preventDefault(), e.stopPropagation(), t))
                         (0, i.e)(t), (0, s.G)(t, { containingElement: (0, l.r)(n.current) });
                     else {
-                        if ((null == (c = O.getKeyRightOf) ? void 0 : c.call(O, h.key)) !== h.key) {
+                        if ((null == (c = O.getKeyRightOf) ? void 0 : c.call(O, m.key)) !== m.key) {
                             null == (u = n.current.parentElement) ||
                                 u.dispatchEvent(new KeyboardEvent(e.nativeEvent.type, e.nativeEvent));
                             break;
@@ -82,7 +82,7 @@ function _(e, t, n) {
                         "cell" === g && "ltr" === y
                             ? ((0, i.e)(n.current), (0, s.G)(n.current, { containingElement: (0, l.r)(n.current) }))
                             : ((f.currentNode = n.current),
-                              (t = "rtl" === y ? p(f) : f.firstChild()) &&
+                              (t = "rtl" === y ? _(f) : f.firstChild()) &&
                                   ((0, i.e)(t), (0, s.G)(t, { containingElement: (0, l.r)(n.current) })));
                     }
                     break;
@@ -98,28 +98,28 @@ function _(e, t, n) {
             }
         },
         N = (e) => {
-            if (((I.current = h.key), e.target !== n.current)) {
-                (0, a.E)() || t.selectionManager.setFocusedKey(h.key);
+            if (((S.current = m.key), e.target !== n.current)) {
+                (0, a.E)() || t.selectionManager.setFocusedKey(m.key);
                 return;
             }
             requestAnimationFrame(() => {
-                "child" === g && document.activeElement === n.current && T();
+                "child" === g && document.activeElement === n.current && I();
             });
         },
-        R = (0, c.d)(S, {
+        P = (0, c.d)(T, {
             role: "gridcell",
             onKeyDownCapture: C,
-            "aria-colspan": h.colSpan,
-            "aria-colindex": null != h.colIndex ? h.colIndex + 1 : void 0,
-            colSpan: m ? void 0 : h.colSpan,
+            "aria-colspan": m.colSpan,
+            "aria-colindex": null != m.colIndex ? m.colIndex + 1 : void 0,
+            colSpan: h ? void 0 : m.colSpan,
             onFocus: N,
         });
     return (
-        m && (R["aria-colindex"] = (null != (_ = h.colIndex) ? _ : h.index) + 1),
+        h && (P["aria-colindex"] = (null != (p = m.colIndex) ? p : m.index) + 1),
         E &&
-            null != R.tabIndex &&
-            null == R.onPointerDown &&
-            (R.onPointerDown = (e) => {
+            null != P.tabIndex &&
+            null == P.onPointerDown &&
+            (P.onPointerDown = (e) => {
                 let t = e.currentTarget,
                     n = t.getAttribute("tabindex");
                 t.removeAttribute("tabindex"),
@@ -128,12 +128,12 @@ function _(e, t, n) {
                     });
             }),
         {
-            gridCellProps: R,
+            gridCellProps: P,
             isPressed: A,
         }
     );
 }
-function p(e) {
+function _(e) {
     let t = null,
         n = null;
     do (n = e.lastChild()) && (t = n);

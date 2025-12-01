@@ -10,18 +10,18 @@ e.exports = function (e, t) {
         u = !n && i(e),
         d = !n && !u && o(e),
         f = !n && !u && !d && l(e),
-        _ = n || u || d || f,
-        p = _ ? r(e.length, String) : [],
-        h = p.length;
-    for (var m in e)
-        (t || c.call(e, m)) &&
+        p = n || u || d || f,
+        _ = p ? r(e.length, String) : [],
+        m = _.length;
+    for (var h in e)
+        (t || c.call(e, h)) &&
             !(
-                _ &&
-                ("length" == m ||
-                    (d && ("offset" == m || "parent" == m)) ||
-                    (f && ("buffer" == m || "byteLength" == m || "byteOffset" == m)) ||
-                    s(m, h))
+                p &&
+                ("length" == h ||
+                    (d && ("offset" == h || "parent" == h)) ||
+                    (f && ("buffer" == h || "byteLength" == h || "byteOffset" == h)) ||
+                    s(h, m))
             ) &&
-            p.push(m);
-    return p;
+            _.push(h);
+    return _;
 };

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L });
+n.d(t, { Z: () => x });
 var r,
     i = n(512722),
     a = n.n(i),
@@ -9,10 +9,10 @@ var r,
     u = n(524437),
     d = n(835913),
     f = n(570140),
-    _ = n(262847),
-    p = n(48481),
-    h = n(526761);
-function m(e, t, n) {
+    p = n(262847),
+    _ = n(48481),
+    m = n(526761);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
@@ -45,23 +45,23 @@ let E = {
         ProtoClass: u.o8,
         proto: u.o8.create(),
         lazyLoaded: !1,
-        editInfo: (0, h.JC)(),
+        editInfo: (0, m.JC)(),
     },
     b = {
         ProtoClass: c.ji,
         proto: c.ji.create(),
         lazyLoaded: !0,
-        editInfo: (0, h.JC)(),
+        editInfo: (0, m.JC)(),
     },
     y = {
-        [h.yP.PRELOADED_USER_SETTINGS]: E,
-        [h.yP.FRECENCY_AND_FAVORITES_SETTINGS]: b,
+        [m.yP.PRELOADED_USER_SETTINGS]: E,
+        [m.yP.FRECENCY_AND_FAVORITES_SETTINGS]: b,
     },
     O = !1;
 function v(e) {
     let { userSettingsProto: t } = e;
     null != t && ((E.proto = t), a()("string" != typeof E.proto, "UserSettingsProto cannot be a string"));
-    let { proto: n, isDirty: r, cleanupFuncs: i } = (0, p.xt)(E.proto, _.Z[h.yP.PRELOADED_USER_SETTINGS]);
+    let { proto: n, isDirty: r, cleanupFuncs: i } = (0, _.xt)(E.proto, p.Z[m.yP.PRELOADED_USER_SETTINGS]);
     r && A(E),
         (E.proto = n),
         a()("string" != typeof E.proto, "UserSettingsProto cannot be a string"),
@@ -71,18 +71,18 @@ function v(e) {
         Object.values(y).forEach((e) => {
             e.lazyLoaded && ((e.editInfo.loaded = !1), (e.editInfo.loading = !1));
         }),
-        S();
-}
-function I() {
-    S();
-}
-function T() {
-    S(),
-        Object.values(y).forEach((e) => {
-            (e.proto = e.ProtoClass.create()), (e.editInfo = (0, h.JC)());
-        });
+        T();
 }
 function S() {
+    T();
+}
+function I() {
+    T(),
+        Object.values(y).forEach((e) => {
+            (e.proto = e.ProtoClass.create()), (e.editInfo = (0, m.JC)());
+        });
+}
+function T() {
     Object.values(y).forEach((e) => {
         if (null != e.editInfo.timeout) {
             var t, n;
@@ -96,11 +96,11 @@ function S() {
     });
 }
 function A(e) {
-    null != e.editInfo.timeout && clearTimeout(e.editInfo.timeout), (e.editInfo = (0, h.JC)());
+    null != e.editInfo.timeout && clearTimeout(e.editInfo.timeout), (e.editInfo = (0, m.JC)());
 }
 function C(e) {
     let { userSettingsProto: t } = e;
-    (E.proto = (0, p.ac)(t)), a()("string" != typeof E.proto, "UserSettingsProto cannot be a string");
+    (E.proto = (0, _.ac)(t)), a()("string" != typeof E.proto, "UserSettingsProto cannot be a string");
 }
 function N(e) {
     let {
@@ -113,14 +113,14 @@ function N(e) {
     let s = y[n];
     i && A(s),
         r
-            ? ((s.proto = (0, p.re)(s.ProtoClass, s.proto, t)),
+            ? ((s.proto = (0, _.re)(s.ProtoClass, s.proto, t)),
               a()("string" != typeof s.proto, "UserSettingsProto cannot be a string"))
             : ((s.proto = t),
               a()("string" != typeof s.proto, "UserSettingsProto cannot be a string"),
               (s.editInfo.loaded = !0),
               (s.editInfo.loading = !1));
 }
-function R(e) {
+function P(e) {
     let {
         settings: { type: t, changes: n },
     } = e;
@@ -128,40 +128,40 @@ function R(e) {
     let r = y[t];
     return (r.editInfo = g({}, r.editInfo, n)), !1;
 }
-function P(e) {
+function R(e) {
     let { userSettings: t } = e;
-    D(t);
+    w(t);
 }
-function D(e) {
+function w(e) {
     null != e &&
         s().forEach(y, (t, n) => {
             var r, i;
             let o = e[Number(n)];
             if (null == o) return;
             let s = null != (r = null == o ? void 0 : o.proto) ? r : "",
-                l = (0, p.d5)(t.ProtoClass, s);
+                l = (0, _.d5)(t.ProtoClass, s);
             if (null == l) return;
             (t.proto = l), a()("string" != typeof t.proto, "UserSettingsProto cannot be a string");
             let c = null != (i = null == o ? void 0 : o.protoToSave) ? i : null;
             if (null == c || null == o.offlineEditDataVersion) return;
-            let u = (0, p.d5)(t.ProtoClass, c);
+            let u = (0, _.d5)(t.ProtoClass, c);
             null != u && ((t.editInfo.protoToSave = u), (t.editInfo.offlineEditDataVersion = o.offlineEditDataVersion));
         });
 }
-class w extends (r = l.ZP.PersistedStore) {
+class D extends (r = l.ZP.PersistedStore) {
     initialize(e) {
-        D(e);
+        w(e);
     }
     getState() {
         return this.computeState();
     }
     computeState() {
         return s().mapValues(y, (e) => {
-            let t = { proto: (0, p.xU)(e.ProtoClass, e.proto) };
+            let t = { proto: (0, _.xU)(e.ProtoClass, e.proto) };
             return (
                 null != e.editInfo.offlineEditDataVersion &&
                     null != e.editInfo.protoToSave &&
-                    ((t.protoToSave = (0, p.xU)(e.ProtoClass, e.editInfo.protoToSave)),
+                    ((t.protoToSave = (0, _.xU)(e.ProtoClass, e.editInfo.protoToSave)),
                     (t.offlineEditDataVersion = e.editInfo.offlineEditDataVersion)),
                 t
             );
@@ -224,15 +224,15 @@ class w extends (r = l.ZP.PersistedStore) {
         return null != (t = null == (e = this.settings.guilds) ? void 0 : e.guilds) ? t : null;
     }
 }
-m(w, "displayName", "UserSettingsProtoStore"), m(w, "persistKey", "UserSettingsProtoStore-Cache");
-let L = new w(f.Z, {
-    CACHE_LOADED: P,
+h(D, "displayName", "UserSettingsProtoStore"), h(D, "persistKey", "UserSettingsProtoStore-Cache");
+let x = new D(f.Z, {
+    CACHE_LOADED: R,
     USER_SETTINGS_PROTO_UPDATE: N,
     USER_SETTINGS_PROTO_ENQUEUE_UPDATE: N,
-    USER_SETTINGS_PROTO_UPDATE_EDIT_INFO: R,
+    USER_SETTINGS_PROTO_UPDATE_EDIT_INFO: P,
     CONNECTION_OPEN: v,
-    CONNECTION_CLOSED: I,
-    CONNECTION_RESUMED: I,
+    CONNECTION_CLOSED: S,
+    CONNECTION_RESUMED: S,
     OVERLAY_INITIALIZE: C,
-    LOGOUT: T,
+    LOGOUT: I,
 });

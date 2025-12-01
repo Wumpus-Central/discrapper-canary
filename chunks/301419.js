@@ -60,23 +60,23 @@ function f(e) {
     let t,
         { entry: n, baseEntryData: l } = e,
         { provider: u, image_url: f } = n.extra.media,
-        _ = n.extra.artist.name,
-        p = {
+        p = n.extra.artist.name,
+        _ = {
             onClick: () => (0, i.o)(o.Hw.ALBUM, n.extra.media.external_parent_id),
             ariaDescription: s.intl.formatToPlainString(s.t.xTsar2, { itemName: n.extra.media.parent_title }),
         },
-        h = {
+        m = {
             onClick: () => (0, i.o)(o.Hw.ARTIST, n.extra.artist.external_id),
-            ariaDescription: s.intl.formatToPlainString(s.t.xTsar2, { itemName: _ }),
+            ariaDescription: s.intl.formatToPlainString(s.t.xTsar2, { itemName: p }),
         };
     return (
         u === r.p.SPOTIFY && (t = { type: a.kG.SPOTIFY }),
         d(c({}, l), {
-            title: _,
+            title: p,
             thumbnailUrl: f,
-            titleClickable: h,
-            subtitleClickable: p,
-            thumbnailClickable: p,
+            titleClickable: m,
+            subtitleClickable: _,
+            thumbnailClickable: _,
             userDescription: s.t.CcVI1T,
             providerIconProps: t,
         })

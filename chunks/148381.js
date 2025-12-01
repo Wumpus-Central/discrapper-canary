@@ -10,11 +10,11 @@ var l = t(54381),
     d = t(308300);
 function m(e) {
     let { title: n, scrollerClassName: t, scrollerInnerClassName: i, children: m } = e,
-        g = r.useRef(null),
-        [x, h] = r.useState(!1),
+        x = r.useRef(null),
+        [g, h] = r.useState(!1),
         [j, v] = r.useState(!1),
         p = r.useCallback(() => {
-            let { current: e } = g;
+            let { current: e } = x;
             null != e && (h(!e.isScrolledToTop()), v(!e.isScrolledToBottom()));
         }, []);
     return (
@@ -29,13 +29,13 @@ function m(e) {
                             className: u.formItemTitle,
                             children: n,
                         }),
-                        (0, l.jsx)(o.Z, { separator: x }),
+                        (0, l.jsx)(o.Z, { separator: g }),
                     ],
                 }),
                 (0, l.jsx)("div", {
                     className: t,
                     children: (0, l.jsx)(a.Den, {
-                        ref: g,
+                        ref: x,
                         className: s()(d.scrollerInner, i, { [d.bottomSeparator]: j }),
                         onScroll: p,
                         children: m,

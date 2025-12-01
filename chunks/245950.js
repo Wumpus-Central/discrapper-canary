@@ -9,21 +9,21 @@ var r = n(473749),
     u = n(289393),
     d = n(697227),
     f = n(981631),
-    _ = n(388032);
-let p = "M/D/YY",
-    h = "M/D/YY";
-function m(e) {
+    p = n(388032);
+let _ = "M/D/YY",
+    m = "M/D/YY";
+function h(e) {
     let { subscription: t } = e,
-        n = a()(t.currentPeriodEnd).format(p),
+        n = a()(t.currentPeriodEnd).format(_),
         r = null != t.price ? (0, l.T4)(t.price, t.currency) : "",
-        i = a()(t.createdAt).format(h),
+        i = a()(t.createdAt).format(m),
         o = t.status === f.O0b.CANCELED,
         s = t.status === f.O0b.PAST_DUE,
         c = t.hasActiveTrial;
     return {
         memberSince: i,
         nextRenewalDate: n,
-        nextRenewalLabel: o ? _.intl.string(_.t.UAfot2) : _.intl.string(_.t.CVjLcM),
+        nextRenewalLabel: o ? p.intl.string(p.t.UAfot2) : p.intl.string(p.t.CVjLcM),
         subscriptionPrice: r,
         isCancelled: o,
         isPastDue: s,
@@ -36,18 +36,18 @@ function g(e) {
         i = (0, o.e7)([u.Z], () => (null != n ? u.Z.getSubscriptionGroupListingForSubscriptionListing(n.id) : null)),
         a = (0, o.e7)([s.Z], () => s.Z.getGuild(null == i ? void 0 : i.guild_id)),
         [l, f] = r.useState(!1),
-        _ = () => f((e) => !e),
-        { fetchSubscriptionsSettings: p } = (0, c.JH)();
+        p = () => f((e) => !e),
+        { fetchSubscriptionsSettings: _ } = (0, c.JH)();
     r.useEffect(() => {
-        l && null != a && null == u.Z.getSubscriptionSettings(a.id) && p(a.id);
-    }, [l, a, p]);
-    let h = null == n ? void 0 : m({ subscription: e });
+        l && null != a && null == u.Z.getSubscriptionSettings(a.id) && _(a.id);
+    }, [l, a, _]);
+    let m = null == n ? void 0 : h({ subscription: e });
     return {
         guild: a,
         expanded: l,
-        handleToggleExpanded: _,
+        handleToggleExpanded: p,
         listing: n,
         groupListing: i,
-        subscriptionInfo: h,
+        subscriptionInfo: m,
     };
 }

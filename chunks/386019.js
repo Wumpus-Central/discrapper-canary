@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(481060),
@@ -9,42 +9,42 @@ var r = n(54381),
     u = n(510659),
     d = n(848966),
     f = n(388032);
-function _(e) {
+function p(e) {
     var t;
     let {
             children: n,
-            user: _,
-            activity: p,
-            entry: h,
-            display: m,
+            user: p,
+            activity: _,
+            entry: m,
+            display: h,
             onSelect: g,
             onClose: E,
             appContext: b,
             targetElementRef: y,
         } = e,
         [O, v] = i.useState(!1),
-        { analyticsLocations: I } = (0, s.ZP)(o.Z.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
-        T = (0, c.Z)({
-            display: m,
-            user: _,
-            activity: p,
-            entry: h,
-            analyticsLocations: I,
+        { analyticsLocations: S } = (0, s.ZP)(o.Z.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
+        I = (0, c.Z)({
+            display: h,
+            user: p,
+            activity: _,
+            entry: m,
+            analyticsLocations: S,
         }),
-        S = (0, u.yi)(),
+        T = (0, u.yi)(),
         A = i.useRef(null),
-        C = null != (t = null == S ? void 0 : S.interactionPopoutTargetRef) ? t : A,
+        C = null != (t = null == T ? void 0 : T.interactionPopoutTargetRef) ? t : A,
         N = (0, d.Z)({
-            entry: h,
-            activity: p,
-            user: _,
-            display: m,
+            entry: m,
+            activity: _,
+            user: p,
+            display: h,
             onClose: E,
-            onAction: T,
+            onAction: I,
             isMenuOpen: O,
             appContext: b,
         });
-    return 0 === N.length || _.bot
+    return 0 === N.length || p.bot
         ? null
         : (0, r.jsx)(a.yRy, {
               targetElementRef: null != y ? y : C,
@@ -52,7 +52,7 @@ function _(e) {
               position: "right",
               disablePointerEvents: !1,
               onRequestOpen: () => {
-                  T({ action: "OPEN_MENU" }), v(!0);
+                  I({ action: "OPEN_MENU" }), v(!0);
               },
               renderPopout: (e) => {
                   let { closePopout: t } = e;

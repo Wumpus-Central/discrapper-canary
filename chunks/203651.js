@@ -74,10 +74,10 @@ let s = n(206339),
     u = n(615252),
     d = n(517024),
     f = d.isObject,
-    _ = d.mixin,
-    p = d.hasOwn,
-    h = n(509337),
-    m = n(675246);
+    p = d.mixin,
+    _ = d.hasOwn,
+    m = n(509337),
+    h = n(675246);
 function g() {}
 e.exports = function (e, n) {
     return "function" == typeof n
@@ -96,7 +96,7 @@ let b = "".trim ? (e) => e.trim() : (e) => e.replace(/(^\s*|\s*$)/g, "");
 function y(e) {
     if (!f(e)) return e;
     let t = [];
-    for (let n in e) p(e, n) && O(t, n, e[n]);
+    for (let n in e) _(e, n) && O(t, n, e[n]);
     return t.join("&");
 }
 function O(e, t, n) {
@@ -115,7 +115,7 @@ function O(e, t, n) {
             } finally {
                 a.f();
             }
-        } else if (f(n)) for (let r in n) p(n, r) && O(e, `${t}[${r}]`, n[r]);
+        } else if (f(n)) for (let r in n) _(n, r) && O(e, `${t}[${r}]`, n[r]);
         else e.push(encodeURI(t) + "=" + encodeURIComponent(n));
     }
 }
@@ -130,7 +130,7 @@ function v(e) {
             : (r[decodeURIComponent(t.slice(0, n))] = decodeURIComponent(t.slice(n + 1)));
     return r;
 }
-function I(e) {
+function S(e) {
     let t,
         n,
         r,
@@ -142,10 +142,10 @@ function I(e) {
             ((r = n.slice(0, t).toLowerCase()), (i = b(n.slice(t + 1))), (o[r] = i));
     return o;
 }
-function T(e) {
+function I(e) {
     return /[/+]json($|[^-\w])/i.test(e);
 }
-function S(e) {
+function T(e) {
     (this.req = e),
         (this.xhr = this.req.xhr),
         (this.text =
@@ -157,7 +157,7 @@ function S(e) {
     let t = this.xhr.status;
     1223 === t && (t = 204),
         this._setStatusProperties(t),
-        (this.headers = I(this.xhr.getAllResponseHeaders())),
+        (this.headers = S(this.xhr.getAllResponseHeaders())),
         (this.header = this.headers),
         (this.header["content-type"] = this.xhr.getResponseHeader("content-type")),
         this._setHeaderProperties(this.header),
@@ -178,7 +178,7 @@ function A(e, t) {
                 t = null,
                 r = null;
             try {
-                r = new S(n);
+                r = new T(n);
             } catch (e) {
                 return (
                     ((t = Error("Parser is unable to parse the response")).parse = !0),
@@ -220,24 +220,24 @@ function A(e, t) {
         "application/x-www-form-urlencoded": v,
         "application/json": JSON.parse,
     }),
-    _(S.prototype, h.prototype),
-    (S.prototype._parseBody = function (e) {
+    p(T.prototype, m.prototype),
+    (T.prototype._parseBody = function (e) {
         let t = E.parse[this.type];
         return this.req._parser
             ? this.req._parser(this, e)
-            : (!t && T(this.type) && (t = E.parse["application/json"]),
+            : (!t && I(this.type) && (t = E.parse["application/json"]),
               t && e && (e.length > 0 || e instanceof Object) ? t(e) : null);
     }),
-    (S.prototype.toError = function () {
+    (T.prototype.toError = function () {
         let e = this.req,
             t = e.method,
             n = e.url,
             r = Error(`cannot ${t} ${n} (${this.status})`);
         return (r.status = this.status), (r.method = t), (r.url = n), r;
     }),
-    (E.Response = S),
+    (E.Response = T),
     s(A.prototype),
-    _(A.prototype, u.prototype),
+    p(A.prototype, u.prototype),
     (A.prototype.type = function (e) {
         return this.set("Content-Type", E.types[e] || e), this;
     }),
@@ -361,27 +361,27 @@ function A(e, t) {
         ) {
             let e = this._header["content-type"],
                 t = this._serializer || E.serialize[e ? e.split(";")[0] : ""];
-            !t && T(e) && (t = E.serialize["application/json"]), t && (n = t(n));
+            !t && I(e) && (t = E.serialize["application/json"]), t && (n = t(n));
         }
         for (let e in this.header)
-            null !== this.header[e] && p(this.header, e) && t.setRequestHeader(e, this.header[e]);
+            null !== this.header[e] && _(this.header, e) && t.setRequestHeader(e, this.header[e]);
         this._responseType && (t.responseType = this._responseType),
             this.emit("request", this),
             t.send(void 0 === n ? null : n);
     }),
-    (E.agent = () => new m());
+    (E.agent = () => new h());
 for (var C = 0, N = ["GET", "POST", "OPTIONS", "PATCH", "PUT", "DELETE"]; C < N.length; C++) {
     let e = N[C];
-    m.prototype[e.toLowerCase()] = function (t, n) {
+    h.prototype[e.toLowerCase()] = function (t, n) {
         let r = new E.Request(e, t);
         return this._setDefaults(r), n && r.end(n), r;
     };
 }
-function R(e, t, n) {
+function P(e, t, n) {
     let r = E("DELETE", e);
     return "function" == typeof t && ((n = t), (t = null)), t && r.send(t), n && r.end(n), r;
 }
-(m.prototype.del = m.prototype.delete),
+(h.prototype.del = h.prototype.delete),
     (E.get = (e, t, n) => {
         let r = E("GET", e);
         return "function" == typeof t && ((n = t), (t = null)), t && r.query(t), n && r.end(n), r;
@@ -394,8 +394,8 @@ function R(e, t, n) {
         let r = E("OPTIONS", e);
         return "function" == typeof t && ((n = t), (t = null)), t && r.send(t), n && r.end(n), r;
     }),
-    (E.del = R),
-    (E.delete = R),
+    (E.del = P),
+    (E.delete = P),
     (E.patch = (e, t, n) => {
         let r = E("PATCH", e);
         return "function" == typeof t && ((n = t), (t = null)), t && r.send(t), n && r.end(n), r;

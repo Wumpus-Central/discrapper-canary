@@ -1,15 +1,15 @@
 n.d(t, {
     Ew: () => y,
     Iv: () => v,
-    Mf: () => m,
-    PM: () => S,
+    Mf: () => h,
+    PM: () => T,
     QW: () => E,
     Uv: () => O,
-    Xp: () => I,
+    Xp: () => S,
     a$: () => g,
     lg: () => b,
-    vL: () => T,
-    vb: () => h,
+    vL: () => I,
+    vb: () => m,
 }),
     n(415506),
     n(953529),
@@ -54,7 +54,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -66,18 +66,18 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e) {
+function m(e) {
     switch (e) {
         case l.vf.FEATURED:
             return u.intl.string(u.t["RU+DCe"]);
@@ -95,7 +95,7 @@ function h(e) {
             return u.intl.string(u.t["q469/Z"]);
     }
 }
-function m(e) {
+function h(e) {
     switch (e) {
         case l.vf.FEATURED:
             return u.intl.string(u.t.OlDfzP);
@@ -211,16 +211,16 @@ function v(e) {
         emojis: [],
     };
 }
-function I() {
+function S() {
     var e;
     let [t] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [i.default],
         n = (0, l.Cf)(),
         r = t.locale;
     return (null != (e = n.find((e) => e.code === r)) ? e : n[0]).code;
 }
-async function T(e) {
+async function I(e) {
     let { loadId: t, guildId: n, index: r, categoryId: i, analyticsLocation: o, options: l } = e,
-        u = p(f({}, l), { loadId: t });
+        u = _(f({}, l), { loadId: t });
     await s.Ub(n, o, u),
         a.default.track(c.rMx.GUILD_DISCOVERY_GUILD_SELECTED, {
             guild_id: n,
@@ -230,6 +230,6 @@ async function T(e) {
             location: o,
         });
 }
-function S() {
+function T() {
     return (0, r.Z)().replace(/-/g, "");
 }

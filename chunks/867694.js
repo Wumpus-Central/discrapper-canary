@@ -8,32 +8,32 @@ function o(e) {
         {
             useValue: o,
             setValue: a,
-            useTitle: c,
-            useSubtitle: s,
+            useTitle: s,
+            useSubtitle: c,
             useDisabled: u,
             useDisabledMessage: d,
             useBadge: f,
         } = n,
-        b = c(),
-        p = null == s ? void 0 : s(),
+        p = s(),
+        b = null == c ? void 0 : c(),
         y = o(),
-        j = null != (t = null == u ? void 0 : u()) && t,
-        m = null == d ? void 0 : d(),
-        v = null == f ? void 0 : f();
+        g = null != (t = null == u ? void 0 : u()) && t,
+        v = null == d ? void 0 : d(),
+        m = null == f ? void 0 : f();
     return (0, r.jsxs)(i.X, {
         children: [
             (0, r.jsx)(l.rsf, {
-                label: b,
-                description: p,
-                badge: v,
+                label: p,
+                description: b,
+                badge: m,
                 checked: y,
                 onChange: (e) => a(e),
-                disabled: j,
+                disabled: g,
             }),
-            j && null != m
+            g && null != v
                 ? (0, r.jsx)(l.Wn, {
                       messageType: l.QYI.WARNING,
-                      children: m,
+                      children: v,
                   })
                 : null,
         ],

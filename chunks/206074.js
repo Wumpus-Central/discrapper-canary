@@ -14,11 +14,11 @@ var r = n(473749),
     u = n(165062),
     d = n(626135),
     f = n(131734),
-    _ = n(981631),
-    p = n(921944);
-let h = new Set();
-function m(e) {
-    return (0, i.yE)(e.flags, _.udG.CLOUD_GAMING_DEMO) && (0, i.yE)(e.flags, _.udG.EMBEDDED);
+    p = n(981631),
+    _ = n(921944);
+let m = new Set();
+function h(e) {
+    return (0, i.yE)(e.flags, p.udG.CLOUD_GAMING_DEMO) && (0, i.yE)(e.flags, p.udG.EMBEDDED);
 }
 function g(e) {
     let { countryCode: t, activity: n } = e;
@@ -33,7 +33,7 @@ function E(e) {
         { data: i, refetch: a } = (0, l.IX)(n);
     return (
         r.useEffect(() => {
-            null == n || null == i || null != i.bot || h.has(n) || (a(), h.add(n));
+            null == n || null == i || null != i.bot || m.has(n) || (a(), m.add(n));
         }, [n, i, a]),
         i
     );
@@ -49,7 +49,7 @@ function b(e) {
                 countryCode: null == t ? void 0 : t.alpha2,
                 activity: e.embeddedActivityConfig,
             })) &&
-        (!!m(e) ||
+        (!!h(e) ||
             (null != r &&
                 null != n &&
                 !!(0, s.ye)(n) &&
@@ -67,17 +67,17 @@ function y(e) {
         l = E(t),
         { bot: u } = null != l ? l : { bot: null },
         f = null == l ? void 0 : l.id,
-        h = null == u ? void 0 : u.id;
+        m = null == u ? void 0 : u.id;
     return r.useMemo(() => {
         if (!i || null == t) return null;
         let e = () => {
-            (0, c.Q3)(a.z.CLOUD_PLAY_NEW_BADGE, { dismissAction: p.L.TAKE_ACTION }),
-                (0, c.Q3)(a.z.CLOUD_PLAY_POPOVER, { dismissAction: p.L.TAKE_ACTION });
+            (0, c.Q3)(a.z.CLOUD_PLAY_NEW_BADGE, { dismissAction: _.L.TAKE_ACTION }),
+                (0, c.Q3)(a.z.CLOUD_PLAY_POPOVER, { dismissAction: _.L.TAKE_ACTION });
         };
-        return m(t) && null != s
+        return h(t) && null != s
             ? () => {
                   e(),
-                      d.default.track(_.rMx.CLOUD_PLAY_CTA_CLICKED, {
+                      d.default.track(p.rMx.CLOUD_PLAY_CTA_CLICKED, {
                           source_application_id: t.id,
                           launching_application_id: t.id,
                           location_stack: n,
@@ -88,20 +88,20 @@ function y(e) {
                           analyticsLocations: null != n ? n : [],
                       });
               }
-            : null != f && null != h
+            : null != f && null != m
               ? () => {
                     e(),
-                        d.default.track(_.rMx.CLOUD_PLAY_CTA_CLICKED, {
+                        d.default.track(p.rMx.CLOUD_PLAY_CTA_CLICKED, {
                             source_application_id: t.id,
                             launching_application_id: f,
                             location_stack: n,
                         }),
                         (0, o.W)({
                             appId: f,
-                            botId: h,
+                            botId: m,
                             analyticsLocations: null != n ? n : [],
                         });
                 }
               : void 0;
-    }, [i, t, s, f, h, n]);
+    }, [i, t, s, f, m, n]);
 }

@@ -13,9 +13,9 @@ var r,
     c = n(442837),
     u = n(692547),
     d = n(215569),
-    p = n(28664),
+    f = n(28664),
     h = n(481060),
-    f = n(812206),
+    p = n(812206),
     g = n(707409),
     m = n(703656),
     b = n(417363),
@@ -24,8 +24,8 @@ var r,
     O = n(353042),
     v = n(981631),
     j = n(388032),
-    C = n(820093);
-function x(e, t, n) {
+    x = n(820093);
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -49,7 +49,7 @@ function E(e) {
                 }),
             )),
             r.forEach(function (t) {
-                x(e, t, n[t]);
+                C(e, t, n[t]);
             });
     }
     return e;
@@ -130,7 +130,7 @@ class I extends l.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            x(this, "renderProgressBody", (e, t) => {
+            C(this, "renderProgressBody", (e, t) => {
                 let { state: n, application: r } = this.props,
                     { stage: i, progress: l, total: o, type: a } = n;
                 if (null == l || null == o || null == i) return null;
@@ -138,9 +138,9 @@ class I extends l.PureComponent {
                     c = 0 !== s ? Math.max(1, (o - l) / s) : null,
                     u = S[a],
                     d = null != u ? Object.keys(u) : [],
-                    { unit: p, time: h } = (0, g.CI)(null != c ? c / 60 : null, d);
-                if (null != u && null != p) {
-                    let e = u[p];
+                    { unit: f, time: h } = (0, g.CI)(null != c ? c / 60 : null, d);
+                if (null != u && null != f) {
+                    let e = u[f];
                     return null != e ? e(r.name, h) : null;
                 }
                 return null;
@@ -177,9 +177,9 @@ class P extends (r = l.PureComponent) {
         let { percent: e, isPaused: t, className: n } = this.props;
         return (0, i.jsx)(s.Z.div, {
             style: { transform: [{ scale: this.state.animationScale }] },
-            className: a()(n, C.progressContainer),
+            className: a()(n, x.progressContainer),
             onClick: this.handleOnClick,
-            children: (0, i.jsx)(p.u, {
+            children: (0, i.jsx)(f.u, {
                 __unsupportedReactNodeAsText: this.getTooltipText(),
                 position: "right",
                 "aria-label": !1,
@@ -190,7 +190,7 @@ class P extends (r = l.PureComponent) {
                         children: (0, i.jsx)(h._8t, {
                             size: "md",
                             color: "currentColor",
-                            className: C.downloadIcon,
+                            className: x.downloadIcon,
                         }),
                     }),
                 }),
@@ -199,8 +199,8 @@ class P extends (r = l.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            x(this, "state", { animationScale: new s.Z.Value(0) }),
-            x(this, "handleOnClick", (e) => {
+            C(this, "state", { animationScale: new s.Z.Value(0) }),
+            C(this, "handleOnClick", (e) => {
                 let { onClick: t } = this.props;
                 e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, m.uL)(v.Z5c.APPLICATION_LIBRARY);
             });
@@ -213,15 +213,15 @@ function N(e, t) {
         return null != l && e.push(l), e;
     }, []);
 }
-x(P, "defaultProps", { strokeSize: h._3P.StrokeSizes.MEDIUM });
-let Z = c.ZP.connectStores([_.Z, b.Z, f.Z], () => {
+C(P, "defaultProps", { strokeSize: h._3P.StrokeSizes.MEDIUM });
+let Z = c.ZP.connectStores([_.Z, b.Z, p.Z], () => {
     let e = _.Z.activeItems,
         t = N(e, b.Z),
         { total: n, progress: r } = y.lK(t);
     return {
         percent: y.xI(r, n),
         isPaused: _.Z.paused,
-        firstApplication: e.length > 0 ? f.Z.getApplication(e[0].applicationId) : null,
+        firstApplication: e.length > 0 ? p.Z.getApplication(e[0].applicationId) : null,
         firstState: t.length > 0 ? t[0] : null,
     };
 })((e) => {

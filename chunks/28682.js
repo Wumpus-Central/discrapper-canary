@@ -1,14 +1,14 @@
 n.d(e, {
-    Jq: () => r,
+    Jq: () => u,
     Lk: () => o,
     PU: () => s,
     y1: () => a,
 }),
     n(473749);
 var i,
+    r,
     l,
-    u,
-    r =
+    u =
         (((i = {})[(i.ROOT = 0)] = "ROOT"),
         (i[(i.SECTION = 1)] = "SECTION"),
         (i[(i.SIDEBAR_ITEM = 2)] = "SIDEBAR_ITEM"),
@@ -30,15 +30,15 @@ var i,
         (i[(i.CUSTOM = 18)] = "CUSTOM"),
         i),
     s =
-        (((l = {})[(l.POPOVER = 0)] = "POPOVER"),
-        (l[(l.BADGE_NEW = 1)] = "BADGE_NEW"),
-        (l[(l.BADGE_COUNT = 2)] = "BADGE_COUNT"),
-        (l[(l.STRONGLY_DISCOURAGED_CUSTOM = 3)] = "STRONGLY_DISCOURAGED_CUSTOM"),
-        l),
+        (((r = {})[(r.POPOVER = 0)] = "POPOVER"),
+        (r[(r.BADGE_NEW = 1)] = "BADGE_NEW"),
+        (r[(r.BADGE_COUNT = 2)] = "BADGE_COUNT"),
+        (r[(r.STRONGLY_DISCOURAGED_CUSTOM = 3)] = "STRONGLY_DISCOURAGED_CUSTOM"),
+        r),
     a =
-        (((u = {})[(u.INLINE_NOTICE = 0)] = "INLINE_NOTICE"),
-        (u[(u.STRONGLY_DISCOURAGED_CUSTOM = 1)] = "STRONGLY_DISCOURAGED_CUSTOM"),
-        u);
+        (((l = {})[(l.INLINE_NOTICE = 0)] = "INLINE_NOTICE"),
+        (l[(l.STRONGLY_DISCOURAGED_CUSTOM = 1)] = "STRONGLY_DISCOURAGED_CUSTOM"),
+        l);
 function o(t) {
     return "layout" in t;
 }

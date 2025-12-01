@@ -21,66 +21,66 @@ function u(e, t, n) {
 }
 let d = {},
     f = {},
-    _ = {},
     p = {},
-    h = new Set();
-function m(e) {
+    _ = {},
+    m = new Set();
+function h(e) {
     let t = e.id,
         n = e.sku.id,
         r = d[t],
         i = l.Z.createFromServer(e);
     (null != r && !r.isSlimDirectoryVersion() && i.isSlimDirectoryVersion()) ||
-        (!1 === e.published ? (null == _[n] && (_[n] = new Set()), _[n].add(t)) : (p[n] = t),
+        (!1 === e.published ? (null == p[n] && (p[n] = new Set()), p[n].add(t)) : (_[n] = t),
         (d[t] = i),
-        h.delete(e.sku.id));
+        m.delete(e.sku.id));
 }
 function g(e, t) {
     return "".concat(e, ":").concat(t);
 }
 function E(e) {
     let { storeListings: t } = e;
-    for (let e of t) m(e);
+    for (let e of t) h(e);
 }
 function b(e) {
     let { storeListing: t, channelId: n } = e;
     if (null != n) {
         let e = l.Z.createFromServer(t);
-        (f[g(n, e.skuId)] = e), (p[e.skuId] = e.id);
-    } else m(t);
+        (f[g(n, e.skuId)] = e), (_[e.skuId] = e.id);
+    } else h(t);
 }
 function y(e) {
     let { giftCode: t } = e;
     if (null == t.store_listing) return !1;
-    m(t.store_listing);
+    h(t.store_listing);
 }
 function O(e) {
     let { skuId: t } = e;
-    h.add(t);
+    m.add(t);
 }
 function v(e) {
     let { skuId: t } = e;
-    h.delete(t);
+    m.delete(t);
+}
+function S() {
+    (d = {}), (_ = {}), (p = {}), (f = {}), (m = new Set());
 }
 function I() {
-    (d = {}), (p = {}), (_ = {}), (f = {}), (h = new Set());
-}
-function T() {
     if (r === s.default.locale) return !1;
-    I(), (r = s.default.locale);
+    S(), (r = s.default.locale);
 }
-class S extends (i = a.ZP.Store) {
+class T extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(s.default), this.syncWith([s.default], T), (r = s.default.locale);
+        this.waitFor(s.default), this.syncWith([s.default], I), (r = s.default.locale);
     }
     get(e) {
         return d[e];
     }
     getForSKU(e, t) {
-        let n = p[e];
+        let n = _[e];
         return null != t ? f[g(t, e)] : null != n ? d[n] : null;
     }
     getUnpublishedForSKU(e) {
-        let t = _[e];
+        let t = p[e];
         return null == t
             ? []
             : Array.from(t)
@@ -91,7 +91,7 @@ class S extends (i = a.ZP.Store) {
         return f[g(e, t)];
     }
     isFetchingForSKU(e) {
-        return h.has(e);
+        return m.has(e);
     }
     getStoreListing(e) {
         let { storeListingId: t, skuId: n, channelId: r, isTestMode: i } = e;
@@ -107,13 +107,13 @@ class S extends (i = a.ZP.Store) {
         return null != n ? this.getForSKU(n) : null;
     }
 }
-u(S, "displayName", "StoreListingStore");
-let A = new S(o.Z, {
+u(T, "displayName", "StoreListingStore");
+let A = new T(o.Z, {
     STORE_LISTINGS_FETCH_START: O,
     STORE_LISTINGS_FETCH_FAIL: v,
     STORE_LISTINGS_FETCH_SUCCESS: E,
     STORE_LISTING_FETCH_SUCCESS: b,
-    USER_SETTINGS_PROTO_UPDATE: T,
-    APPLICATION_STORE_CLEAR_DATA: I,
+    USER_SETTINGS_PROTO_UPDATE: I,
+    APPLICATION_STORE_CLEAR_DATA: S,
     GIFT_CODE_RESOLVE_SUCCESS: y,
 });

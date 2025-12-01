@@ -13,7 +13,7 @@ var l = n(734610),
     p = n(388032),
     h = n(140080);
 function x(e) {
-    let { url: t, trustUrl: n, isProtocol: x, onConfirm: g, onCancel: f, onClose: b, transitionState: v } = e,
+    let { url: t, trustUrl: n, isProtocol: x, onConfirm: f, onCancel: g, onClose: b, transitionState: v } = e,
         {
             protocol: j,
             authorityPrefix: _,
@@ -21,13 +21,13 @@ function x(e) {
             theRestOfTheUrl: C,
             shouldTrustUrl: S,
             setShouldTrustUrl: E,
-            handleConfirm: N,
-            handleCancel: T,
+            handleConfirm: T,
+            handleCancel: N,
         } = (0, u.X)({
             url: t,
             trustUrl: n,
-            onConfirm: g,
-            onCancel: f,
+            onConfirm: f,
+            onCancel: g,
             onClose: b,
         });
     return (
@@ -45,7 +45,7 @@ function x(e) {
                 {
                     text: p.intl.string(p.t["/g10LC"]),
                     onClick: () => {
-                        T(),
+                        N(),
                             d.default.track(m.rMx.MASKED_LINK_MODAL_CLICKED, {
                                 is_trust_url_selected: S,
                                 action_type: "cancel",
@@ -56,7 +56,7 @@ function x(e) {
                 {
                     text: x ? p.intl.string(p.t.COq6kk) : p.intl.string(p.t.NcJfJG),
                     onClick: () => {
-                        N(),
+                        T(),
                             d.default.track(m.rMx.MASKED_LINK_MODAL_CLICKED, {
                                 is_trust_url_selected: S,
                                 action_type: "confirm",

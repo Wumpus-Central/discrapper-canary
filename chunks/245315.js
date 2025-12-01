@@ -1,5 +1,5 @@
 n.d(t, {
-    BF: () => _,
+    BF: () => p,
     QA: () => f,
     cp: () => d,
 });
@@ -44,7 +44,7 @@ function d(e) {
 function f() {
     return l;
 }
-let _ = (e) => {
+let p = (e) => {
     a.default.track(
         s.rMx.USER_FLOW_TRANSITION,
         u(

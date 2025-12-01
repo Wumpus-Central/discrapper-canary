@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Q }), n(388685);
+n.d(t, { Z: () => X }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,35 +9,35 @@ var r = n(54381),
     u = n(755721),
     d = n(481060),
     f = n(568836),
-    _ = n(730749),
-    p = n(112724),
-    h = n(100527),
-    m = n(835473),
+    p = n(730749),
+    _ = n(112724),
+    m = n(100527),
+    h = n(835473),
     g = n(884697),
     E = n(600164),
     b = n(479446),
     y = n(930114),
     O = n(981632),
     v = n(703656),
-    I = n(164670),
-    T = n(436585),
-    S = n(313789),
+    S = n(164670),
+    I = n(436585),
+    T = n(313789),
     A = n(518596),
     C = n(314897),
     N = n(82142),
-    R = n(283595),
-    P = n(594174),
-    D = n(55563),
-    w = n(199480),
-    L = n(626135),
-    x = n(669079),
-    M = n(74538),
-    k = n(296848),
-    j = n(51144),
+    P = n(283595),
+    R = n(594174),
+    w = n(55563),
+    D = n(199480),
+    x = n(626135),
+    L = n(669079),
+    j = n(74538),
+    M = n(296848),
+    k = n(51144),
     U = n(626799),
     G = n(981631),
-    B = n(474936),
-    Z = n(388032),
+    Z = n(474936),
+    B = n(388032),
     F = n(494452);
 function V(e, t, n) {
     return (
@@ -102,7 +102,7 @@ function K(e) {
                 color: "currentColor",
                 className: F.libraryIcon,
             }),
-            (0, r.jsx)("div", { children: n.isHidden() ? Z.intl.string(Z.t.Wi99Ro) : Z.intl.string(Z.t["+tXad7"]) }),
+            (0, r.jsx)("div", { children: n.isHidden() ? B.intl.string(B.t.Wi99Ro) : B.intl.string(B.t["+tXad7"]) }),
         ],
     });
 }
@@ -112,7 +112,7 @@ class z extends i.PureComponent {
         return e >= f.aL;
     }
     handleViewInventory() {
-        (0, A.openUserSettings)(S.n.GIFT_PANEL, { section: G.oAB.INVENTORY });
+        (0, A.openUserSettings)(T.n.GIFT_PANEL, { section: G.oAB.INVENTORY });
     }
     render() {
         return (0, r.jsx)(f.$G, {
@@ -129,25 +129,25 @@ class z extends i.PureComponent {
                 (0, r.jsx)("div", { className: o()(F.invalidPoop, { [F.invalidPoopHorizontal]: this.isHorizontal }) }),
             ),
             V(this, "renderTitle", () =>
-                this.props.isSelfGift ? Z.intl.string(Z.t.mT9B49) : Z.intl.string(Z.t.Vo5yHw),
+                this.props.isSelfGift ? B.intl.string(B.t.mT9B49) : B.intl.string(B.t.Vo5yHw),
             ),
             V(this, "renderActions", () =>
                 this.props.isSelfGift
                     ? (0, r.jsx)(d.Button, {
                           variant: "primary",
                           size: "sm",
-                          text: Z.intl.string(Z.t["jcSP+g"]),
+                          text: B.intl.string(B.t["jcSP+g"]),
                           onClick: this.handleViewInventory,
                       })
                     : (0, r.jsx)(d.Button, {
                           variant: "primary",
                           size: "sm",
-                          text: Z.intl.string(Z.t.bUvv1f),
+                          text: B.intl.string(B.t.bUvv1f),
                           disabled: !0,
                       }),
             ),
             V(this, "renderTagline", () =>
-                this.props.isSelfGift ? Z.intl.string(Z.t.eEM3dq) : Z.intl.string(Z.t.tB8S6u),
+                this.props.isSelfGift ? B.intl.string(B.t.eEM3dq) : B.intl.string(B.t.tB8S6u),
             );
     }
 }
@@ -184,7 +184,7 @@ class q extends i.Component {
                         e.redeemed || e.isClaimed || null != t || null == e.expiresAt
                             ? null
                             : (0, r.jsx)("div", {
-                                  children: Z.intl.format(Z.t.nZBvUR, { hours: e.expiresAt.diff(l()(), "h") }),
+                                  children: B.intl.format(B.t.nZBvUR, { hours: e.expiresAt.diff(l()(), "h") }),
                               }),
                     ],
                 }),
@@ -192,8 +192,8 @@ class q extends i.Component {
         });
     }
     renderGiftCodeCopiesLeft(e) {
-        let t = e.isSubscription ? Z.t["4iHwKT"] : Z.t.YeLq88;
-        return Z.intl.format(t, {
+        let t = e.isSubscription ? B.t["4iHwKT"] : B.t.YeLq88;
+        return B.intl.format(t, {
             remaining: e.remainingUses,
             total: e.maxUses,
         });
@@ -207,7 +207,7 @@ class q extends i.Component {
             o =
                 (!e.isSubscription && null != t) ||
                 (!e.isSelfRedeemable && i) ||
-                (e.isExistingPremiumSubscriptionDisallowed && (0, M.I5)(n));
+                (e.isExistingPremiumSubscriptionDisallowed && (0, j.I5)(n));
         return (
             (e.redeemed || o || e.isClaimed || !n.verified) && ((a.color = u.zx.Colors.BRAND), (a.disabled = !0)),
             (0, r.jsx)(
@@ -216,10 +216,10 @@ class q extends i.Component {
                     className: (0, g.mO)(e) ? F.collectiblesAcceptButton : null,
                     size: u.zx.Sizes.SMALL,
                     children: e.redeemed
-                        ? Z.intl.string(Z.t.BTihou)
+                        ? B.intl.string(B.t.BTihou)
                         : null != e.giftStyle
-                          ? Z.intl.string(Z.t.TiZFqX)
-                          : Z.intl.string(Z.t.bUvv1f),
+                          ? B.intl.string(B.t.TiZFqX)
+                          : B.intl.string(B.t.bUvv1f),
                 }),
             )
         );
@@ -231,16 +231,16 @@ class q extends i.Component {
     renderTitle(e) {
         let { currentUser: t, isSelfGift: n, sku: r } = this.props;
         return this.isCustomGiftMessage() && !n
-            ? Z.intl.formatToPlainString(Z.t.t1SOId, { recipientDisplayName: j.ZP.getName(t) })
+            ? B.intl.formatToPlainString(B.t.t1SOId, { recipientDisplayName: k.ZP.getName(t) })
             : null == r
               ? null
               : e.isSubscription
                 ? n
-                    ? Z.intl.string(Z.t["2PJ1NP"])
-                    : Z.intl.string(Z.t.hrnGng)
+                    ? B.intl.string(B.t["2PJ1NP"])
+                    : B.intl.string(B.t.hrnGng)
                 : n
-                  ? Z.intl.string(Z.t.QLEMld)
-                  : Z.intl.string(Z.t.W4DBcy);
+                  ? B.intl.string(B.t.QLEMld)
+                  : B.intl.string(B.t.W4DBcy);
     }
     renderBody(e) {
         let {
@@ -251,80 +251,80 @@ class q extends i.Component {
             subscriptionPlan: a,
             currentUser: o,
         } = this.props;
-        if (null == r) return Z.intl.string(Z.t.ZTNur7);
+        if (null == r) return B.intl.string(B.t.ZTNur7);
         if (!n && this.isCustomGiftMessage() && !e.redeemed) return;
-        let s = r.isPreorder() ? Z.intl.formatToPlainString(Z.t.evinTd, { name: r.name }) : r.name;
+        let s = r.isPreorder() ? B.intl.formatToPlainString(B.t.evinTd, { name: r.name }) : r.name;
         if (e.redeemed)
-            return e.isSubscription || (0, g.mO)(e) || (0, I.K$)(r)
-                ? Z.intl.string(Z.t.mVC3Cv)
-                : Z.intl.format(Z.t["ss/L+/"], {
+            return e.isSubscription || (0, g.mO)(e) || (0, S.K$)(r)
+                ? B.intl.string(B.t.mVC3Cv)
+                : B.intl.format(B.t["ss/L+/"], {
                       skuName: s,
                       onViewInLibrary: this.handleViewLibrary,
                   });
         if (!e.isSubscription && null != t)
-            return Z.intl.format(Z.t.UdXO8P, {
+            return B.intl.format(B.t.UdXO8P, {
                 skuName: s,
                 onViewInLibrary: this.handleViewLibrary,
             });
-        if (e.isClaimed) return Z.intl.string(Z.t.ARWFQX);
-        if (!o.verified) return Z.intl.format(Z.t.GQxl7v, { onClick: this.handleVerificationClick });
+        if (e.isClaimed) return B.intl.string(B.t.ARWFQX);
+        if (!o.verified) return B.intl.format(B.t.GQxl7v, { onClick: this.handleVerificationClick });
         if (n)
             return e.isSelfRedeemable
-                ? Z.intl.string(Z.t["lQI+cB"])
-                : Z.intl.formatToPlainString(Z.t["A+etHx"], { skuName: s });
-        if (e.isExistingPremiumSubscriptionDisallowed) return Z.intl.string(Z.t.UCIU9y);
+                ? B.intl.string(B.t["lQI+cB"])
+                : B.intl.formatToPlainString(B.t["A+etHx"], { skuName: s });
+        if (e.isExistingPremiumSubscriptionDisallowed) return B.intl.string(B.t.UCIU9y);
         if (e.hasMultipleCopies)
             return null != i
                 ? e.isSubscription
-                    ? Z.intl.format(Z.t.l3VxgG, {
-                          username: j.ZP.getUserTag(i),
+                    ? B.intl.format(B.t.l3VxgG, {
+                          username: k.ZP.getUserTag(i),
                           maxUses: e.maxUses,
                           skuName: s,
                       })
-                    : Z.intl.format(Z.t["9cYrw5"], {
-                          username: j.ZP.getUserTag(i),
+                    : B.intl.format(B.t["9cYrw5"], {
+                          username: k.ZP.getUserTag(i),
                           totalCopies: e.maxUses,
                           skuName: s,
                       })
                 : e.isSubscription
-                  ? Z.intl.formatToPlainString(Z.t.svrO3W, {
+                  ? B.intl.formatToPlainString(B.t.svrO3W, {
                         maxUses: e.maxUses,
                         skuName: s,
                     })
-                  : Z.intl.formatToPlainString(Z.t["3AgAn3"], {
+                  : B.intl.formatToPlainString(B.t["3AgAn3"], {
                         totalCopies: e.maxUses,
                         skuName: s,
                     });
         if (e.isSubscription) {
-            if (null == a) return Z.intl.string(Z.t.ZTNur7);
+            if (null == a) return B.intl.string(B.t.ZTNur7);
             if (null != i) {
-                let e = a.interval === B.rV.MONTH ? Z.t["/RDIEA"] : Z.t["3CX6Ev"];
-                return Z.intl.format(e, {
-                    username: j.ZP.getUserTag(i),
+                let e = a.interval === Z.rV.MONTH ? B.t["/RDIEA"] : B.t["3CX6Ev"];
+                return B.intl.format(e, {
+                    username: k.ZP.getUserTag(i),
                     skuName: s,
                     intervalCount: a.intervalCount,
                 });
             }
-            let e = a.interval === B.rV.MONTH ? Z.t["2O4lo5"] : Z.t["+XjmsR"];
-            return Z.intl.format(e, {
+            let e = a.interval === Z.rV.MONTH ? B.t["2O4lo5"] : B.t["+XjmsR"];
+            return B.intl.format(e, {
                 skuName: s,
                 intervalCount: a.intervalCount,
             });
         }
-        return null != i ? Z.intl.format(Z.t["3HsdQ/"], { username: j.ZP.getUserTag(i) }) : Z.intl.string(Z.t.Jdnjjj);
+        return null != i ? B.intl.format(B.t["3HsdQ/"], { username: k.ZP.getUserTag(i) }) : B.intl.string(B.t.Jdnjjj);
     }
     renderPromotionActions() {
         return (0, r.jsx)(d.Button, {
             variant: "primary",
             size: "sm",
-            text: Z.intl.string(Z.t["71nuwc"]),
+            text: B.intl.string(B.t["71nuwc"]),
             onClick: this.handleClaimPromotion,
         });
     }
     renderEmbed() {
         let { giftCode: e, width: t, sku: n } = this.props;
         if (null == e) return null;
-        let i = null != e.giftStyle && !(0, I.K$)(n);
+        let i = null != e.giftStyle && !(0, S.K$)(n);
         return (0, r.jsx)(U.$, {
             skuId: e.skuId,
             onEmbedClick: this.handleEmbedClick,
@@ -344,8 +344,8 @@ class q extends i.Component {
                 onEmbedClick: this.handleClaimPromotion,
                 analyticsSection: G.jXE.GIFT_CODE_EMBED,
                 renderCustomActions: () => this.renderPromotionActions(),
-                renderCustomTitle: () => Z.intl.string(Z.t.X4p5uH),
-                renderCustomTagline: () => Z.intl.string(Z.t.VIuwD7),
+                renderCustomTitle: () => B.intl.string(B.t.X4p5uH),
+                renderCustomTagline: () => B.intl.string(B.t.VIuwD7),
                 width: n,
             });
         if (null == e || e.revoked)
@@ -374,13 +374,13 @@ class q extends i.Component {
             V(this, "handleVerificationClick", (e) => {
                 e.stopPropagation(),
                     e.preventDefault(),
-                    (0, A.openUserSettings)(S.n.ACCOUNT_PANEL, { section: G.oAB.ACCOUNT });
+                    (0, A.openUserSettings)(T.n.ACCOUNT_PANEL, { section: G.oAB.ACCOUNT });
             }),
             V(this, "handleAccept", (e) => {
                 let { channelId: t, code: n, content: r, type: i, giftInfo: a } = this.props;
                 e.preventDefault(),
                     e.stopPropagation(),
-                    L.default.track(G.rMx.OPEN_MODAL, {
+                    x.default.track(G.rMx.OPEN_MODAL, {
                         type: "gift_accept",
                         location: W(H({}, this.analyticsLocation), { object: G.qAy.BUTTON_CTA }),
                     });
@@ -394,18 +394,18 @@ class q extends i.Component {
             }),
             V(this, "handleEmbedClick", (e) => {
                 let { giftCode: t, sku: n, skuApplication: r } = this.props;
-                null != n && (0, I.K$)(n) && null != r && null != r.guildId
+                null != n && (0, S.K$)(n) && null != r && null != r.guildId
                     ? (e.preventDefault(),
-                      (0, T.g)({
+                      (0, I.g)({
                           skuId: n.id,
                           applicationId: r.id,
                           guildId: r.guildId,
                           isStorefront: !1,
-                          analyticsLocations: [h.Z.GIFT_CODE_EMBED],
+                          analyticsLocations: [m.Z.GIFT_CODE_EMBED],
                       }))
                     : null != t &&
                       t.isSubscription &&
-                      (e.preventDefault(), (0, A.openUserSettings)(S.n.NITRO_PANEL, { section: G.oAB.PREMIUM }));
+                      (e.preventDefault(), (0, A.openUserSettings)(T.n.NITRO_PANEL, { section: G.oAB.PREMIUM }));
             }),
             V(this, "handleClaimPromotion", (e) => {
                 var t;
@@ -416,7 +416,7 @@ class q extends i.Component {
             V(this, "renderCustomGiftBox", (e) => {
                 let { width: t } = this.props;
                 if (null == e || null == e.giftStyle) return null;
-                let n = B.jy.includes(e.giftStyle),
+                let n = Z.jy.includes(e.giftStyle),
                     i = o()(F.customGiftEmbedWrapper, {
                         [F.legacySeasonalGiftEmbedWrapper]: n,
                         [F.giftEmbedWrapperHorizontal]: t >= f.aL,
@@ -430,7 +430,7 @@ class q extends i.Component {
                 return (0, r.jsxs)("div", {
                     className: i,
                     children: [
-                        n && (0, r.jsx)(w.Z, { className: F.headerIcon }),
+                        n && (0, r.jsx)(D.Z, { className: F.headerIcon }),
                         null != e.giftStyle &&
                             (0, r.jsx)(O.Z, {
                                 defaultAnimationState: e.redeemed ? b.SR.LOOP : b.SR.IDLE,
@@ -442,25 +442,25 @@ class q extends i.Component {
             });
     }
 }
-let X = (0, p.Z)((0, _.Z)(q)),
-    Q = function (e) {
+let Q = (0, _.Z)((0, p.Z)(q)),
+    X = function (e) {
         let { code: t, author: n } = e,
             { giftCode: i, resolved: a } = (0, c.cj)([N.Z], () => ({
                 giftCode: N.Z.get(t),
                 resolved: N.Z.getIsResolved(t),
             })),
-            o = (0, c.e7)([P.default], () => (null != i && null != i.userId ? P.default.getUser(i.userId) : null)),
-            s = (0, c.e7)([D.Z], () => (null != i ? D.Z.get(i.skuId) : null)),
-            l = (0, c.e7)([R.Z], () =>
+            o = (0, c.e7)([R.default], () => (null != i && null != i.userId ? R.default.getUser(i.userId) : null)),
+            s = (0, c.e7)([w.Z], () => (null != i ? w.Z.get(i.skuId) : null)),
+            l = (0, c.e7)([P.Z], () =>
                 null != s && (null == i ? void 0 : i.entitlementBranches) != null
-                    ? x.z2(i.entitlementBranches, s, R.Z)
+                    ? L.z2(i.entitlementBranches, s, P.Z)
                     : null,
             ),
-            u = (0, m.q)(null == s ? void 0 : s.applicationId),
-            d = (0, k.IV)(null == i ? void 0 : i.subscriptionPlanId),
+            u = (0, h.q)(null == s ? void 0 : s.applicationId),
+            d = (0, M.IV)(null == i ? void 0 : i.subscriptionPlanId),
             f = (0, c.e7)([C.default], () => (null != i ? C.default.getId() === i.userId : C.default.getId() === n.id));
         return (0, r.jsx)(
-            X,
+            Q,
             W(H({}, e), {
                 skuApplication: u,
                 giftCode: i,

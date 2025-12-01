@@ -10,17 +10,17 @@ var i = n(442837),
     u = n(623624),
     d = n(973542),
     f = n(48950),
-    _ = n(703656),
-    p = n(592125),
-    h = n(485386),
-    m = n(944486),
+    p = n(703656),
+    _ = n(592125),
+    m = n(485386),
+    h = n(944486),
     g = n(626135),
     E = n(524444),
     b = n(981631),
     y = n(176505),
     O = n(388032),
     v = n(804309);
-function I(e, t, n) {
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function I(e, t, n) {
         e
     );
 }
-function T(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,12 +44,12 @@ function T(e) {
                 }),
             )),
             r.forEach(function (t) {
-                I(e, t, n[t]);
+                S(e, t, n[t]);
             });
     }
     return e;
 }
-function S(e, t) {
+function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -66,7 +66,7 @@ function A(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : T(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -75,38 +75,38 @@ function A(e, t) {
 let C = 40,
     N = (e) => {
         let { roleIcon: t, guild: n } = e,
-            { name: I } = t;
+            { name: S } = t;
         (0, s.ZP)(() => {
             g.default.track(
                 b.rMx.OPEN_POPOUT,
-                T(
+                I(
                     {
                         type: "Role Icon Popout",
                         guild_id: n.id,
                     },
-                    (0, l.v_)(p.Z.getChannel(m.Z.getChannelId(n.id))),
+                    (0, l.v_)(_.Z.getChannel(h.Z.getChannelId(n.id))),
                 ),
             );
         });
-        let S = (0, i.e7)([h.Z], () => (null != t.roleId ? h.Z.getRole(n.id, t.roleId) : void 0)),
-            N = (0, d.Z)(S),
-            R = N
-                ? O.intl.formatToPlainString(O.t.t0928V, { name: I })
-                : O.intl.formatToPlainString(O.t.UDDkGy, { name: I }),
-            P = A(T({}, t), {
+        let T = (0, i.e7)([m.Z], () => (null != t.roleId ? m.Z.getRole(n.id, t.roleId) : void 0)),
+            N = (0, d.Z)(T),
+            P = N
+                ? O.intl.formatToPlainString(O.t.t0928V, { name: S })
+                : O.intl.formatToPlainString(O.t.UDDkGy, { name: S }),
+            R = A(I({}, t), {
                 src: null == t.src ? t.src : (0, c.o)(t.src, C),
                 size: C,
             }),
-            D = () => {
+            w = () => {
                 (0, u.f)({
                     guildId: n.id,
                     location: { section: b.jXE.ROLE_ICON_POPOUT },
                 });
             },
-            w = () => {
-                (0, _.uL)(b.Z5c.CHANNEL(n.id, y.oC.ROLE_SUBSCRIPTIONS));
+            D = () => {
+                (0, p.uL)(b.Z5c.CHANNEL(n.id, y.oC.ROLE_SUBSCRIPTIONS));
             },
-            L = N ? w : D;
+            x = N ? D : w;
         return (0, r.jsx)(o.VqE, {
             children: (0, r.jsx)(E.W_, {
                 children: (0, r.jsxs)("div", {
@@ -119,7 +119,7 @@ let C = 40,
                                     className: v.roleIconContainer,
                                     children: (0, r.jsx)(
                                         f.Z,
-                                        A(T({}, P), {
+                                        A(I({}, R), {
                                             enableTooltip: !1,
                                             className: v.__invalid_roleIcon,
                                             enableHeight: !1,
@@ -132,11 +132,11 @@ let C = 40,
                                         (0, r.jsx)(o.Heading, {
                                             variant: "heading-md/semibold",
                                             className: v.roleName,
-                                            children: (0, r.jsx)(a.Z, { children: I }),
+                                            children: (0, r.jsx)(a.Z, { children: S }),
                                         }),
                                         (0, r.jsx)(o.Text, {
                                             variant: "text-sm/normal",
-                                            children: R,
+                                            children: P,
                                         }),
                                     ],
                                 }),
@@ -146,7 +146,7 @@ let C = 40,
                             size: "sm",
                             variant: "secondary",
                             text: O.intl.string(O.t["H930+H"]),
-                            onClick: L,
+                            onClick: x,
                             icon: o.Ucv,
                             fullWidth: !0,
                             autoFocus: !0,

@@ -1,13 +1,13 @@
 n.d(t, {
-    FL: () => B,
-    Mq: () => j,
+    FL: () => Z,
+    Mq: () => k,
     NK: () => V,
-    OP: () => T,
+    OP: () => I,
     Sw: () => Y,
     ZP: () => F,
     ge: () => H,
     hU: () => U,
-    nY: () => I,
+    nY: () => S,
     nj: () => W,
 }),
     n(388685);
@@ -21,11 +21,11 @@ var r = n(473749),
     u = n(729917),
     d = n(932019),
     f = n(442837),
-    _ = n(592125),
-    p = n(496675);
+    p = n(592125),
+    _ = n(496675);
 n(594174);
-var h = n(313889),
-    m = n(177862),
+var m = n(313889),
+    h = n(177862),
     g = n(981631),
     E = n(388032);
 function b(e, t, n) {
@@ -80,10 +80,10 @@ function v(e, t) {
         e
     );
 }
-function I(e) {
+function S(e) {
     return e.type === g.uaV.AUTO_MODERATION_ACTION;
 }
-function T(e) {
+function I(e) {
     var t;
     return null == (t = e.embeds)
         ? void 0
@@ -92,7 +92,7 @@ function T(e) {
               return t === g.hBH.AUTO_MODERATION_NOTIFICATION;
           });
 }
-function S(e) {
+function T(e) {
     return e.type === g.hBH.AUTO_MODERATION_NOTIFICATION;
 }
 function A(e) {
@@ -112,7 +112,7 @@ function C(e, t) {
                     }))
                 ? void 0
                 : r.rawValue;
-        if (S(s))
+        if (T(s))
             return null == s ||
                 null == (o = s.fields) ||
                 null ==
@@ -129,27 +129,27 @@ function N(e) {
     let [r] = null != (t = e.embeds) ? t : [];
     return null != (n = null == r ? void 0 : r.rawDescription) ? n : "";
 }
-function R(e) {
+function P(e) {
     let t = C(e, s.G.DECISION_OUTCOME);
     if (null != t) return t;
 }
-function P(e) {
+function R(e) {
     let t = C(e, s.G.QUARANTINE_USER);
     if (null != t) return t;
 }
-function D(e) {
+function w(e) {
     let t = C(e, s.G.QUARANTINE_USER_ACTION);
     if (null != t) return t;
 }
-function w(e) {
+function D(e) {
     let t = C(e, s.G.BLOCK_PROFILE_UPDATE_TYPE);
     if (null != t) return t;
 }
-function L(e) {
+function x(e) {
     let t = C(e, s.G.QUARANTINE_EVENT);
     if (null != t) return t;
 }
-function x(e, t, n) {
+function L(e, t, n) {
     switch (t) {
         case u.z.BLOCK_PROFILE_UPDATE:
             return r(e);
@@ -186,7 +186,7 @@ function x(e, t, n) {
         }
     }
 }
-function M(e, t) {
+function j(e, t) {
     var n;
     return t
         ? null != (n = null == e ? void 0 : e.name)
@@ -194,7 +194,7 @@ function M(e, t) {
             : E.intl.string(E.t.J90oLW)
         : E.intl.string(E.t["/YzI63"]);
 }
-function k(e, t, n) {
+function M(e, t, n) {
     let r = C(e, s.G.VOICE_CHANNEL_STATUS_OUTCOME);
     if (null == r) return null;
     let i = "blocked" === r ? E.t.cLQrqz : E.t.bma6cs;
@@ -203,49 +203,49 @@ function k(e, t, n) {
         channelHook: n,
     });
 }
-function j(e, t) {
+function k(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : g.VqG,
         r = arguments.length > 3 ? arguments[3] : void 0,
         i = arguments.length > 4 ? arguments[4] : void 0,
-        l = w(e),
-        c = D(e),
-        u = L(e),
-        d = P(e),
-        f = R(e),
-        _ = C(e, s.G.INTERACTION_CALLBACK_TYPE),
-        h = C(e, s.G.APPLICATION_NAME);
+        l = D(e),
+        c = w(e),
+        u = x(e),
+        d = R(e),
+        f = P(e),
+        p = C(e, s.G.INTERACTION_CALLBACK_TYPE),
+        m = C(e, s.G.APPLICATION_NAME);
     if (null != d) {
-        let e = x(l, c, u);
+        let e = L(l, c, u);
         if (null != e) return e;
     }
-    let m = p.Z.can(g.Plq.VIEW_CHANNEL, t),
-        b = M(t, m),
-        y = null != t && m ? n : g.VqG,
-        O = k(e, b, n);
+    let h = _.Z.can(g.Plq.VIEW_CHANNEL, t),
+        b = j(t, h),
+        y = null != t && h ? n : g.VqG,
+        O = M(e, b, n);
     return null != O
         ? O
-        : null != h
-          ? _ === o.y.MODAL && null != i
+        : null != m
+          ? p === o.y.MODAL && null != i
               ? f !== a.P.BLOCKED
                   ? E.intl.format(E.t["4xL9Sk"], {
-                        applicationName: h,
+                        applicationName: m,
                         interactionUserHook: i,
                         integrationOwnerHook: r,
                     })
                   : E.intl.format(E.t.S3lNIT, {
-                        applicationName: h,
+                        applicationName: m,
                         interactionUserHook: i,
                         integrationOwnerHook: r,
                     })
               : f !== a.P.BLOCKED
                 ? E.intl.format(E.t.AXQufN, {
-                      applicationName: h,
+                      applicationName: m,
                       channelName: b,
                       channelHook: y,
                       integrationOwnerHook: r,
                   })
                 : E.intl.format(E.t.s3tjMN, {
-                      applicationName: h,
+                      applicationName: m,
                       channelName: b,
                       channelHook: y,
                       integrationOwnerHook: r,
@@ -277,7 +277,7 @@ function U(e) {
 function G(e) {
     return null == e ? null : e;
 }
-function B(e) {
+function Z(e) {
     var t;
     let n = C(e, l.D.NOTIFICATION_TYPE),
         r = C(e, l.D.JOIN_ATTEMPTS),
@@ -298,10 +298,10 @@ function B(e) {
         suspiciousMentionActivityUntil: null != u ? new Date(u) : void 0,
     };
 }
-function Z(e) {
+function B(e) {
     let t = C(e, s.G.CHANNEL_ID),
         n = C(e, s.G.ALERT_ACTIONS_EXECUTION),
-        r = (0, h.t)(n);
+        r = (0, m.t)(n);
     return {
         content: N(e),
         ruleName: C(e, s.G.RULE_NAME),
@@ -316,29 +316,29 @@ function Z(e) {
         applicationName: C(e, s.G.APPLICATION_NAME),
         interactionUserId: C(e, s.G.INTERACTION_USER_ID),
         interactionCallbackType: C(e, s.G.INTERACTION_CALLBACK_TYPE),
-        embedChannel: _.Z.getChannel(t),
+        embedChannel: p.Z.getChannel(t),
         embedChannelId: t,
         alertActionsExecution: null != r ? r : void 0,
     };
 }
 function F(e) {
-    let t = r.useMemo(() => Z(e), [e]),
-        n = (0, f.e7)([_.Z], () => _.Z.getChannel(t.embedChannelId), [t.embedChannelId]);
+    let t = r.useMemo(() => B(e), [e]),
+        n = (0, f.e7)([p.Z], () => p.Z.getChannel(t.embedChannelId), [t.embedChannelId]);
     return v(y({}, t), { embedChannel: n });
 }
 function V(e) {
     if (null == e) return null;
-    let { alertActionsExecution: t } = Z(e);
+    let { alertActionsExecution: t } = B(e);
     return null != t ? t : null;
 }
 function H(e) {
     if (null == e) return E.intl.string(E.t.Gh3A0O);
     switch (e) {
-        case m.$l.LEGITIMATE_ACTIVITY:
+        case h.$l.LEGITIMATE_ACTIVITY:
             return E.intl.string(E.t["riQ+HH"]);
-        case m.$l.DM_SPAM:
+        case h.$l.DM_SPAM:
             return E.intl.string(E.t.j5V0ij);
-        case m.$l.JOIN_RAID:
+        case h.$l.JOIN_RAID:
             return E.intl.string(E.t.qhaRbG);
         default:
             return E.intl.string(E.t.GPg6JM);

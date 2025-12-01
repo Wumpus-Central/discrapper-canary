@@ -10,10 +10,10 @@ var i = n(120356),
     u = n(162685),
     d = n(979200),
     f = n(709054),
-    _ = n(941532),
-    p = n(713938),
-    h = n(981631),
-    m = n(388032),
+    p = n(941532),
+    _ = n(713938),
+    m = n(981631),
+    h = n(388032),
     g = n(852303);
 let E = (e) => {
     switch (e) {
@@ -28,10 +28,10 @@ let E = (e) => {
 function b(e) {
     var t;
     let n,
-        { application: i, scopes: l, redirectUri: b, approximateGuildCount: O, isEmbeddedFlow: v, disclosures: I } = e,
-        T = new Date(f.default.extractTimestamp(i.id)),
-        S = (0, p.W3)(l),
-        A = (0, s.yE)(null != (t = i.flags) ? t : 0, h.udG.EMBEDDED);
+        { application: i, scopes: l, redirectUri: b, approximateGuildCount: O, isEmbeddedFlow: v, disclosures: S } = e,
+        I = new Date(f.default.extractTimestamp(i.id)),
+        T = (0, _.W3)(l),
+        A = (0, s.yE)(null != (t = i.flags) ? t : 0, m.udG.EMBEDDED);
     if (null != b && !A && !v)
         try {
             let e = new URL(b);
@@ -46,29 +46,29 @@ function b(e) {
             null != n
                 ? (0, r.jsx)(y, {
                       icon: c.xPt,
-                      text: m.intl.format(m.t["5k5OKD"], { origin: n }),
+                      text: h.intl.format(h.t["5k5OKD"], { origin: n }),
                   })
                 : null,
             (0, r.jsx)(y, {
                 icon: c.mBM,
-                text: (0, _.i)(i),
+                text: (0, p.i)(i),
             }),
             (0, r.jsx)(y, {
                 icon: c.T39,
-                text: m.intl.formatToPlainString(m.t["+1bjc8"], { date: T }),
+                text: h.intl.formatToPlainString(h.t["+1bjc8"], { date: I }),
             }),
             l.includes(o.x.BOT) && null != O
                 ? (0, r.jsx)(y, {
                       icon: c.wGt,
-                      text: m.intl.formatToPlainString(m.t.UHGHSP, { guildCount: O }),
+                      text: h.intl.formatToPlainString(h.t.UHGHSP, { guildCount: O }),
                   })
                 : null,
             (0, r.jsx)(y, {
                 icon: c.b7C,
-                text: S,
+                text: T,
             }),
-            null != I
-                ? I.map((e) => {
+            null != S
+                ? S.map((e) => {
                       let t = (0, d.PM)(e),
                           n = E(e);
                       return null != n && null != t

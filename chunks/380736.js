@@ -1,22 +1,22 @@
 n.d(t, {
     Y: () => A,
-    Z: () => D,
+    Z: () => w,
 }),
     n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(790519),
+    s = n(666917),
     l = n(442837),
     c = n(481060),
     u = n(13245),
     d = n(691891),
     f = n(333031),
-    _ = n(610394),
-    p = n(322155),
-    h = n(693091),
-    m = n(981631),
+    p = n(610394),
+    _ = n(322155),
+    m = n(693091),
+    h = n(981631),
     g = n(388032),
     E = n(968803);
 function b(e, t, n) {
@@ -71,11 +71,11 @@ function v(e, t) {
         e
     );
 }
-function I(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = T(e, t);
+        i = I(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -83,7 +83,7 @@ function I(e, t) {
     }
     return i;
 }
-function T(e, t) {
+function I(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -92,7 +92,7 @@ function T(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function S(e) {
+function T(e) {
     e.currentTarget.scrollTo(0, 0);
 }
 let A = i.memo(function (e) {
@@ -102,28 +102,28 @@ let A = i.memo(function (e) {
             onNotificationShow: a,
             onDismissClick: u,
             onConfirmClick: f,
-            onCancelClick: h,
+            onCancelClick: m,
             onNotificationClick: b,
             hint: y,
             cancelText: O,
             confirmText: v,
-            icon: I,
-            body: T,
+            icon: S,
+            body: I,
             title: A,
             renderFooter: C,
             contentOpacity: N,
-            status: R,
-            containerRef: P,
-            className: D,
-            wrapperClassName: w,
+            status: P,
+            containerRef: R,
+            className: w,
+            wrapperClassName: D,
         } = e,
-        [L, x] = i.useState(!1),
-        M = n || L || R === m._1z.FOCUSED,
-        k = (0, l.e7)([p.Z, _.Z], () => p.Z.isInputLocked(_.Z.getTargetPID()));
+        [x, L] = i.useState(!1),
+        j = n || x || P === h._1z.FOCUSED,
+        M = (0, l.e7)([_.Z, p.Z], () => _.Z.isInputLocked(p.Z.getTargetPID()));
     i.useEffect(() => {
         null == a || a();
     }, [a]);
-    let j = i.useCallback(
+    let k = i.useCallback(
             (e) => {
                 e.stopPropagation(), null == u || u(e);
             },
@@ -137,25 +137,25 @@ let A = i.memo(function (e) {
         ),
         G = i.useCallback(
             (e) => {
-                e.stopPropagation(), null == h || h(e);
+                e.stopPropagation(), null == m || m(e);
             },
-            [h],
+            [m],
         ),
-        B = i.useCallback(() => {
-            x(!0);
-        }, []),
         Z = i.useCallback(() => {
-            x(!1);
+            L(!0);
+        }, []),
+        B = i.useCallback(() => {
+            L(!1);
         }, []);
     function F() {
         return (0, r.jsx)(d.Z, {
             className: E.dismissButton,
-            onDismiss: j,
+            onDismiss: k,
             "aria-label": g.intl.string(g.t.LnEgqX),
         });
     }
     function V() {
-        let e = "function" == typeof y ? y(M, k) : y;
+        let e = "function" == typeof y ? y(j, M) : y;
         return null != y
             ? (0, r.jsx)(c.Text, {
                   className: E.hint,
@@ -166,7 +166,7 @@ let A = i.memo(function (e) {
             : null;
     }
     function H() {
-        return null == f && null == h
+        return null == f && null == m
             ? null
             : (0, r.jsxs)("div", {
                   className: E.buttonContainer,
@@ -182,7 +182,7 @@ let A = i.memo(function (e) {
                                 }),
                             })
                           : null,
-                      null != h
+                      null != m
                           ? (0, r.jsx)("div", {
                                 className: E.button,
                                 children: (0, r.jsx)(c.Button, {
@@ -197,22 +197,22 @@ let A = i.memo(function (e) {
               });
     }
     function Y() {
-        return null == I
+        return null == S
             ? null
-            : "string" == typeof I
+            : "string" == typeof S
               ? (0, r.jsx)(c.qEK, {
-                    src: I,
+                    src: S,
                     size: c.EFr.SIZE_40,
                     className: E.avatar,
                     "aria-hidden": !0,
                 })
               : (0, r.jsx)("div", {
                     className: E.avatar,
-                    children: I,
+                    children: S,
                 });
     }
     function W() {
-        let e = null == C ? void 0 : C(M, k);
+        let e = null == C ? void 0 : C(j, M);
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)(s.animated.div, {
@@ -229,12 +229,12 @@ let A = i.memo(function (e) {
                                     lineClamp: 2,
                                     children: A,
                                 }),
-                                null != T
+                                null != I
                                     ? (0, r.jsx)(c.Text, {
                                           color: "interactive-normal",
                                           variant: "text-sm/normal",
-                                          lineClamp: null != t ? t * (M ? 2 : 1) : void 0,
-                                          children: T,
+                                          lineClamp: null != t ? t * (j ? 2 : 1) : void 0,
+                                          children: I,
                                       })
                                     : null,
                                 V(),
@@ -256,15 +256,15 @@ let A = i.memo(function (e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
-                className: o()(E.overflowWrapper, w),
-                onScroll: S,
+                className: o()(E.overflowWrapper, D),
+                onScroll: T,
                 children: (0, r.jsx)(c.P3F, {
-                    innerRef: P,
+                    innerRef: R,
                     ignoreKeyPress: !0,
-                    onMouseOver: B,
-                    onMouseLeave: Z,
+                    onMouseOver: Z,
+                    onMouseLeave: B,
                     onClick: b,
-                    className: o()(E.container, { [E.clickable]: null != b }, D),
+                    className: o()(E.container, { [E.clickable]: null != b }, w),
                     children: W(),
                 }),
             }),
@@ -304,17 +304,17 @@ function N(e) {
           })
         : n;
 }
-let R = {
+let P = {
     mass: 1,
     friction: 8,
     tension: 300,
 };
-function P() {
+function R() {
     let [e, t] = i.useState(!1),
         [n, r] = i.useState(!1),
         a = (0, c.q_F)({
             scale: e ? 0.975 : 1,
-            config: R,
+            config: P,
             onRest: () => {
                 t(!1),
                     setTimeout(() => {
@@ -329,16 +329,16 @@ function P() {
         }, []),
     };
 }
-function D(e) {
+function w(e) {
     let { notification: t, index: n, locked: a, pinned: o, transitionState: s, cleanUp: l } = e,
         {
             id: c,
             props: {
                 onNotificationShow: d,
                 onDismissClick: f,
-                onNotificationClick: _,
-                onConfirmClick: p,
-                onCancelClick: m,
+                onNotificationClick: p,
+                onConfirmClick: _,
+                onCancelClick: h,
                 renderFooter: g,
                 animationWrapperClassName: E,
             },
@@ -352,39 +352,39 @@ function D(e) {
             },
             [c, f],
         ),
-        { clickSpring: T, handleMouseClick: S } = P(),
-        R = i.useCallback(
+        { clickSpring: I, handleMouseClick: T } = R(),
+        P = i.useCallback(
             (e) => {
-                null == _ || _(e, c), S();
+                null == p || p(e, c), T();
             },
-            [_, c, S],
-        ),
-        D = i.useCallback(
-            (e) => {
-                null == p || p(e, c);
-            },
-            [p, c],
+            [p, c, T],
         ),
         w = i.useCallback(
             (e) => {
-                null == m || m(e, c);
+                null == _ || _(e, c);
             },
-            [m, c],
+            [_, c],
         ),
-        L = i.useCallback((e, t) => (null == g ? void 0 : g(e, c, t)), [g, c]),
+        D = i.useCallback(
+            (e) => {
+                null == h || h(e, c);
+            },
+            [h, c],
+        ),
+        x = i.useCallback((e, t) => (null == g ? void 0 : g(e, c, t)), [g, c]),
         {
             props: {
-                onNotificationShow: x,
-                onDismissClick: M,
-                renderFooter: k,
-                onNotificationClick: j,
+                onNotificationShow: L,
+                onDismissClick: j,
+                renderFooter: M,
+                onNotificationClick: k,
                 onConfirmClick: U,
                 onCancelClick: G,
-                disableClickableRegions: B = !1,
+                disableClickableRegions: Z = !1,
             },
-            status: Z,
+            status: B,
         } = t,
-        F = I(t.props, [
+        F = S(t.props, [
             "onNotificationShow",
             "onDismissClick",
             "renderFooter",
@@ -394,12 +394,12 @@ function D(e) {
             "disableClickableRegions",
         ]),
         V = !o && a,
-        H = 0 === n && !B && !V,
-        { ref: Y, springs: W } = (0, h.X4)(t.id, s, l);
+        H = 0 === n && !Z && !V,
+        { ref: Y, springs: W } = (0, m.X4)(t.id, s, l);
     return (0, r.jsx)(C, {
         transitionState: s,
         springs: W,
-        scaleOverride: null == T ? void 0 : T.scale,
+        scaleOverride: null == I ? void 0 : I.scale,
         index: n,
         locked: a,
         animationWrapperClassName: E,
@@ -413,14 +413,14 @@ function D(e) {
                     notificationId: t.id,
                     onNotificationShow: 0 === n ? b : void 0,
                     onDismissClick: O,
-                    onNotificationClick: R,
-                    onConfirmClick: null != p ? D : void 0,
-                    onCancelClick: null != m ? w : void 0,
-                    renderFooter: L,
+                    onNotificationClick: P,
+                    onConfirmClick: null != _ ? w : void 0,
+                    onCancelClick: null != h ? D : void 0,
+                    renderFooter: x,
                     expand: !1,
                     index: n,
                     locked: a,
-                    status: Z,
+                    status: B,
                     contentOpacity: W.contentOpacity,
                 }),
             ),

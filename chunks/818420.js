@@ -10,21 +10,21 @@ var r = n(54381),
     d = n(526265);
 function f(e) {
     let { user: t, guild: n, titleIcon: f } = e,
-        { analyticsLocations: _ } = (0, o.ZP)(),
-        p = null != n,
+        { analyticsLocations: p } = (0, o.ZP)(),
+        _ = null != n,
         {
-            userNameplate: h,
-            guildNameplate: m,
+            userNameplate: m,
+            guildNameplate: h,
             pendingNameplate: g,
             pendingErrors: E,
         } = (0, l.Zx)(t, null == n ? void 0 : n.id),
-        b = void 0 === g ? (p ? m : h) != null : null != g,
+        b = void 0 === g ? (_ ? h : m) != null : null != g,
         y = i.useCallback(() => {
             (0, s.f)({
-                analyticsLocations: _,
+                analyticsLocations: p,
                 guildId: null == n ? void 0 : n.id,
             });
-        }, [_, null == n ? void 0 : n.id]),
+        }, [p, null == n ? void 0 : n.id]),
         O = i.useCallback(() => {
             (0, l.Wh)(null, null == n ? void 0 : n.id);
         }, [null == n ? void 0 : n.id]);
@@ -45,7 +45,7 @@ function f(e) {
                     (0, r.jsx)(a.Button, {
                         variant: "secondary",
                         size: "sm",
-                        text: p ? u.intl.string(u.t.CHf9iJ) : u.intl.string(u.t["9zwziY"]),
+                        text: _ ? u.intl.string(u.t.CHf9iJ) : u.intl.string(u.t["9zwziY"]),
                         onClick: O,
                     }),
             ],

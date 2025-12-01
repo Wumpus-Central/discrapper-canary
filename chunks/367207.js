@@ -9,9 +9,9 @@ var i = n(481060),
     c = n(93127),
     u = n(594174),
     d = n(431),
-    p = n(74538),
+    f = n(74538),
     h = n(970645),
-    f = n(30684),
+    p = n(30684),
     g = n(937579),
     m = n(522558);
 function b(e, t, n) {
@@ -131,14 +131,14 @@ class O extends o.Z {
             b(this, "_maybeFetchPremiumOffer", async () => {
                 let e = u.default.getCurrentUser();
                 if (null != e && e.verified) {
-                    let t = (d.Z.canFractionalPremiumUserUseOffer() || !(0, p.I5)(e)) && !d.Z.isFetchingOffer();
+                    let t = (d.Z.canFractionalPremiumUserUseOffer() || !(0, f.I5)(e)) && !d.Z.isFetchingOffer();
                     await (0, g.Tf)("PremiumManager", t);
                 }
                 l.Z.dispatch({ type: "PREMIUM_MARKETING_DATA_READY" });
             }),
             b(this, "_maybeFetchCheckoutRecovery", async () => {
                 let e = u.default.getCurrentUser();
-                null != e && e.verified && !(0, p.I5)(e) && f.Z.shouldFetchCheckoutRecovery() && (await (0, h.o)());
+                null != e && e.verified && !(0, f.I5)(e) && p.Z.shouldFetchCheckoutRecovery() && (await (0, h.o)());
             }),
             b(this, "_maybeFetchUserAffinities", () => {
                 let { enabled: e } = m.w.getConfig({ location: "PremiumManager" });

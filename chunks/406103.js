@@ -19,7 +19,7 @@ let o = {
                         withMixedDisabledOptions: u,
                     } = e,
                     [d, f] = i.useState(["option1"]),
-                    _ = i.useMemo(
+                    p = i.useMemo(
                         () =>
                             [
                                 {
@@ -60,18 +60,18 @@ let o = {
                             ].slice(0, Math.max(1, Math.min(5, n))),
                         [n, s, l, c, u],
                     ),
-                    p = i.useCallback((e) => {
+                    _ = i.useCallback((e) => {
                         f(e);
                     }, []),
-                    h = i.useCallback(() => {
-                        f(_.map((e) => e.value));
-                    }, [_]),
                     m = i.useCallback(() => {
+                        f(p.map((e) => e.value));
+                    }, [p]),
+                    h = i.useCallback(() => {
                         f([]);
                     }, []),
                     g = i.useCallback(() => {
-                        _.length > 0 && f([_[0].value]);
-                    }, [_]);
+                        p.length > 0 && f([p[0].value]);
+                    }, [p]);
                 return (0, r.jsxs)(a.Kqy, {
                     direction: "vertical",
                     gap: "md",
@@ -79,8 +79,8 @@ let o = {
                         (0, r.jsx)(a.cOn, {
                             selectedValues: d,
                             label: o,
-                            onChange: p,
-                            options: _,
+                            onChange: _,
+                            options: p,
                             disabled: t,
                         }),
                         (0, r.jsxs)(a.xvT, {
@@ -95,21 +95,21 @@ let o = {
                                     variant: "secondary",
                                     size: "sm",
                                     text: "Select All",
-                                    onClick: h,
-                                    disabled: t || 0 === _.length,
+                                    onClick: m,
+                                    disabled: t || 0 === p.length,
                                 }),
                                 (0, r.jsx)(a.zxk, {
                                     variant: "secondary",
                                     size: "sm",
                                     text: "Select First",
                                     onClick: g,
-                                    disabled: t || 0 === _.length,
+                                    disabled: t || 0 === p.length,
                                 }),
                                 (0, r.jsx)(a.zxk, {
                                     variant: "primary",
                                     size: "sm",
                                     text: "Clear All",
-                                    onClick: m,
+                                    onClick: h,
                                     disabled: t,
                                 }),
                             ],

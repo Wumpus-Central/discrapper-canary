@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => _,
+    Z: () => p,
     w: () => s,
 });
 var r = n(299379),
@@ -17,7 +17,7 @@ function d(e) {
 function f() {
     return i.default.locale.toLowerCase();
 }
-let _ = {
+let p = {
     getArticleURL: (e) => d("/hc/".concat(f(), "/articles/").concat(e)),
     getEnglishArticleURL: (e) => d("/hc/en-us/articles/".concat(e)),
     getDevArticleURL: (e) => d("/hc/".concat(f(), "/articles/").concat(e), l),

@@ -1,12 +1,12 @@
-n.d(t, { Z: () => _ }), n(539854), n(388685);
+n.d(t, { Z: () => b }), n(539854), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(442837),
-    o = n(481060),
-    a = n(804570),
+    a = n(481060),
+    o = n(804570),
     s = n(624864),
-    c = n(388627),
-    u = n(561064),
+    u = n(388627),
+    c = n(561064),
     d = n(380736),
     h = n(693091),
     p = n(371467),
@@ -15,17 +15,17 @@ var i = n(54381),
     g = n(388032),
     y = n(63452);
 let O = [];
-function v(e) {
+function E(e) {
     return e.notification.id;
 }
-function E(e, t, n, r) {
-    let { index: l, notification: o, locked: a, pinned: s } = t;
+function v(e, t, n, r) {
+    let { index: l, notification: a, locked: o, pinned: s } = t;
     return (0, i.jsx)(
         d.Z,
         {
             index: l,
-            notification: o,
-            locked: a,
+            notification: a,
+            locked: o,
             pinned: s,
             transitionState: n,
             cleanUp: r,
@@ -33,13 +33,13 @@ function E(e, t, n, r) {
         e,
     );
 }
-function b(e) {
+function S(e) {
     return (0, i.jsx)("div", {
         className: y.container,
         children: e,
     });
 }
-let _ = r.memo(function (e) {
+let b = r.memo(function (e) {
     let { locked: t, pinned: n, showEmpty: d = !0 } = e,
         y = (0, l.e7)(
             [p.Z, s.Z],
@@ -61,27 +61,27 @@ let _ = r.memo(function (e) {
                 return e;
             },
             [t, n],
-            c.E6,
+            u.E6,
         ),
-        _ = r.useState(() => new h.AS(t))[0];
-    return (r.useLayoutEffect(() => _.updateState(y, t)),
-    r.useLayoutEffect(() => (_.initialize((0, u.i)()), () => _.cleanUp()), [_]),
+        b = r.useState(() => new h.AS(t))[0];
+    return (r.useLayoutEffect(() => b.updateState(y, t)),
+    r.useLayoutEffect(() => (b.initialize((0, c.i)()), () => b.cleanUp()), [b]),
     0 !== y.length || t)
         ? (0, i.jsx)(h.S4.Provider, {
-              value: _,
-              children: (0, i.jsx)(o.W3x, {
+              value: b,
+              children: (0, i.jsx)(a.W3x, {
                   items: y,
-                  renderItem: E,
-                  getItemKey: v,
-                  wrapChildren: b,
+                  renderItem: v,
+                  getItemKey: E,
+                  wrapChildren: S,
               }),
           })
         : d
           ? t
               ? null
-              : (0, i.jsx)(a.E, {
+              : (0, i.jsx)(o.E, {
                     emptyText: g.intl.string(g.t.O1Nbjq),
-                    icon: o.Dkj,
+                    icon: a.Dkj,
                     absolute: !0,
                 })
           : null;

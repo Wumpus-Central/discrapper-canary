@@ -42,7 +42,7 @@ e.exports = function (e) {
             end: "\\)",
             contains: ["self", i, o, a, u],
         },
-        _ = {
+        p = {
             contains: [a, o, l, c, f, u],
             variants: [
                 {
@@ -57,19 +57,19 @@ e.exports = function (e) {
                 { begin: "'" + n },
             ],
         },
-        p = {
+        _ = {
             variants: [{ begin: "'" + t }, { begin: "#'" + t + "(::" + t + ")*" }],
         },
-        h = {
+        m = {
             begin: "\\(\\s*",
             end: "\\)",
         },
-        m = {
+        h = {
             endsWithParent: !0,
             relevance: 0,
         };
     return (
-        (h.contains = [
+        (m.contains = [
             {
                 className: "name",
                 variants: [
@@ -80,13 +80,13 @@ e.exports = function (e) {
                     { begin: n },
                 ],
             },
-            m,
+            h,
         ]),
-        (m.contains = [_, p, h, i, a, o, s, l, c, d, u]),
+        (h.contains = [p, _, m, i, a, o, s, l, c, d, u]),
         {
             name: "Lisp",
             illegal: /\S/,
-            contains: [a, e.SHEBANG(), i, o, s, _, p, h, u],
+            contains: [a, e.SHEBANG(), i, o, s, p, _, m, u],
         }
     );
 };

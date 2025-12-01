@@ -21,15 +21,15 @@ function u(e, t) {
         } = e,
         u = (0, s.q)(c(r.Z), "@react-aria/grid"),
         f = t.selectionManager.rawSelection,
-        _ = (0, l.useRef)(f),
-        p = (0, a.i)(() => {
+        p = (0, l.useRef)(f),
+        _ = (0, a.i)(() => {
             var e;
-            if (!t.selectionManager.isFocused || f === _.current) {
-                _.current = f;
+            if (!t.selectionManager.isFocused || f === p.current) {
+                p.current = f;
                 return;
             }
-            let r = d(f, _.current),
-                a = d(_.current, f),
+            let r = d(f, p.current),
+                a = d(p.current, f),
                 o = "replace" === t.selectionManager.selectionBehavior,
                 s = [];
             if (1 === t.selectionManager.selectedKeys.size && o) {
@@ -55,16 +55,16 @@ function u(e, t) {
                 (0 === s.length ||
                     "all" === f ||
                     f.size > 1 ||
-                    "all" === _.current ||
-                    (null == (e = _.current) ? void 0 : e.size) > 1) &&
+                    "all" === p.current ||
+                    (null == (e = p.current) ? void 0 : e.size) > 1) &&
                 s.push("all" === f ? u.format("selectedAll") : u.format("selectedCount", { count: f.size })),
                 s.length > 0 && (0, i.xQ)(s.join(" ")),
-                (_.current = f);
+                (p.current = f);
         });
     (0, o.r)(() => {
-        if (t.selectionManager.isFocused) p();
+        if (t.selectionManager.isFocused) _();
         else {
-            let e = requestAnimationFrame(p);
+            let e = requestAnimationFrame(_);
             return () => cancelAnimationFrame(e);
         }
     }, [f, t.selectionManager.isFocused]);

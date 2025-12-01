@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(772848),
@@ -9,17 +9,17 @@ var r = n(54381),
     u = n(963838),
     d = n(39127),
     f = n(981631),
-    _ = n(57495);
-let p = 50;
-function h(e) {
-    let { channelId: t, guildId: n, userId: h, containerDimensions: m } = e,
+    p = n(57495);
+let _ = 50;
+function m(e) {
+    let { channelId: t, guildId: n, userId: m, containerDimensions: h } = e,
         g = (0, o.e7)([l.Z], () => l.Z.useReducedMotion),
         [E, b] = i.useState([]),
-        y = E.length < p;
+        y = E.length < _;
     i.useEffect(() => {
         function e(e) {
             let { channelId: r, userId: i, emoji: o, animationType: s, animationId: l } = e;
-            if (null != h && h !== i) return;
+            if (null != m && m !== i) return;
             let d = null != o && null != s && null != l;
             if (r === t && !g && y && d) {
                 let e = (0, u._r)(o),
@@ -45,7 +45,7 @@ function h(e) {
                 s.Z.unsubscribe("VOICE_CHANNEL_EFFECT_SEND", e);
             }
         );
-    }, [t, n, h, g, y]);
+    }, [t, n, m, g, y]);
     let O = i.useCallback((e) => {
         b((t) => {
             let n = [...t],
@@ -56,15 +56,15 @@ function h(e) {
     return g
         ? null
         : (0, r.jsx)("div", {
-              className: _.effectsWrapper,
-              style: { width: m.width },
+              className: p.effectsWrapper,
+              style: { width: h.width },
               children: (0, r.jsx)("div", {
-                  className: _.effects,
+                  className: p.effects,
                   children: E.map((e) =>
                       (0, r.jsx)(
                           d.Z,
                           {
-                              containerDimensions: m,
+                              containerDimensions: h,
                               effect: e,
                               onComplete: O,
                           },

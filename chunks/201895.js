@@ -1,5 +1,5 @@
 n.d(t, {
-    Yb: () => _,
+    Yb: () => p,
     ZP: () => d,
 }),
     n(539854);
@@ -23,11 +23,11 @@ function d(e) {
             unread: o = !1,
             mentionCount: d = 0,
             userCount: f,
-            embeddedActivitiesCount: _,
-            isSubscriptionGated: p,
-            needSubscriptionToAccess: h,
+            embeddedActivitiesCount: p,
+            isSubscriptionGated: _,
+            needSubscriptionToAccess: m,
         } = e,
-        m = (0, s.F6)(n, a.default, i.Z);
+        h = (0, s.F6)(n, a.default, i.Z);
     switch (n.type) {
         case l.d4z.DM:
             t = o ? c.t.F2MZsu : c.t.fYqXVY;
@@ -61,10 +61,10 @@ function d(e) {
                       )
                     : g.push(c.intl.formatToPlainString(c.t.GNIiAA, { userCount: f }));
             }
-            null != _ && _ > 0 && g.push(c.intl.formatToPlainString(c.t.O6PLYd, { activitiesCount: _ }));
+            null != p && p > 0 && g.push(c.intl.formatToPlainString(c.t.O6PLYd, { activitiesCount: p }));
             let E = u({
-                isSubscriptionGated: p,
-                needSubscriptionToAccess: h,
+                isSubscriptionGated: _,
+                needSubscriptionToAccess: m,
             });
             return null != E && g.push(E), g.join(", ");
         case l.d4z.GUILD_STAGE_VOICE:
@@ -85,13 +85,13 @@ function d(e) {
     }
     let b = [
             c.intl.formatToPlainString(t, {
-                channelName: m,
+                channelName: h,
                 mentionCount: d,
             }),
         ],
         y = u({
-            isSubscriptionGated: p,
-            needSubscriptionToAccess: h,
+            isSubscriptionGated: _,
+            needSubscriptionToAccess: m,
         });
     return null != y && b.push(y), b.join(", ");
 }
@@ -109,7 +109,7 @@ function f(e) {
             return "";
     }
 }
-function _(e) {
+function p(e) {
     let { channel: t, muted: n, userStatus: r } = e;
     if (!0 === n) return c.intl.string(c.t.C4zCMb);
     let i = [];

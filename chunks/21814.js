@@ -17,13 +17,13 @@ function a(e) {
     return () => (null == t && (t = e()), t);
 }
 n.d(t, {
-    Dt: () => _,
+    Dt: () => p,
     Pf: () => d,
     V5: () => o,
     ad: () => u,
     gn: () => c,
     i7: () => f,
-    vU: () => p,
+    vU: () => _,
     zc: () => l,
 });
 let o = a(function () {
@@ -47,9 +47,9 @@ let o = a(function () {
     f = a(function () {
         return r(/Chrome/i);
     }),
-    _ = a(function () {
+    p = a(function () {
         return r(/Android/i);
     }),
-    p = a(function () {
+    _ = a(function () {
         return r(/Firefox/i);
     });

@@ -23,9 +23,9 @@ let v = (0, a.Z)((e) => {
         selectedParticipant: a,
         participantsVersion: v,
         layout: _,
-        onSelectParticipant: x,
-        onContextMenuParticipant: j,
-        onFullscreenParticipant: O,
+        onSelectParticipant: O,
+        onContextMenuParticipant: x,
+        onFullscreenParticipant: j,
         channel: E,
         hasConnectPermission: S,
         className: P,
@@ -42,11 +42,11 @@ let v = (0, a.Z)((e) => {
     r.useEffect(() => {
         d.S.dispatch(b.CkL.REMEASURE_TARGET);
     }, [T, N, L.width, L.height]);
-    let k = r.useMemo(
+    let D = r.useMemo(
             () => n.filter((e) => e.type !== y.fO.ACTIVITY || !e.participants.some((e) => (0, o.J)(e))),
             [n, v],
         ),
-        D = (0, l.e7)([s.Z], () => s.Z.getVoiceParticipantsHidden(E.id), [E.id]);
+        k = (0, l.e7)([s.Z], () => s.Z.getVoiceParticipantsHidden(E.id), [E.id]);
     if ((null == R ? void 0 : R.channelId) === E.id) return (0, i.jsx)(h.Z, { height: N });
     if ((null == E ? void 0 : E.isGuildVocalOrThread()) && !I)
         return (0, i.jsx)(p.Z, {
@@ -60,11 +60,11 @@ let v = (0, a.Z)((e) => {
             width: T,
             className: C.voiceCallWrapper,
             participants: t,
-            onContextMenu: j,
+            onContextMenu: x,
         });
     if (((n = I ? n : t), null == a)) {
         if (0 === n.length) {
-            let e = t.length > 0 && !D;
+            let e = t.length > 0 && !k;
             return (0, i.jsx)(g.Z, {
                 channelId: E.id,
                 allPoppedOut: e,
@@ -77,22 +77,22 @@ let v = (0, a.Z)((e) => {
             children: (0, i.jsx)(f.Z, {
                 channel: E,
                 className: C.videoGrid,
-                participants: k,
+                participants: D,
                 totalNumberOfParticipants: t.length,
-                onClick: x,
-                onDoubleClick: O,
-                onContextMenu: j,
+                onClick: O,
+                onDoubleClick: j,
+                onContextMenu: x,
                 inCall: I,
                 popoutType: M,
             }),
         });
     }
     return (0, i.jsx)(m.Z, {
-        onFullscreenParticipant: O,
-        onContextMenuParticipant: j,
-        onSelectParticipant: x,
+        onFullscreenParticipant: j,
+        onContextMenuParticipant: x,
+        onSelectParticipant: O,
         selectedParticipant: a,
-        filteredParticipants: k,
+        filteredParticipants: D,
         participants: t,
         popoutType: M,
         className: P,

@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => p,
-    s: () => _,
+    Z: () => _,
+    s: () => p,
 });
 var r = n(54381);
 n(473749);
@@ -13,7 +13,7 @@ var i = n(763472),
     u = n(671955),
     d = n(388032),
     f = n(704543);
-async function _(e) {
+async function p(e) {
     let { activity: t, user: n, index: r } = e;
     try {
         let e = await (0, i.sd)(t, n.id);
@@ -28,7 +28,7 @@ async function _(e) {
         });
     } catch (e) {}
 }
-function p(e) {
+function _(e) {
     let { user: t, activity: n, onAction: i } = e,
         { themeType: o } = (0, l.z)();
     if ((null == n ? void 0 : n.buttons) == null || n.buttons.length < 1) return null;
@@ -45,7 +45,7 @@ function p(e) {
                               e.stopPropagation(),
                                   null == i ||
                                       i({ action: s ? "PRESS_WATCH_ON_CRUNCHYROLL_BUTTON" : "PRESS_CUSTOM_BUTTON" }),
-                                  _({
+                                  p({
                                       user: t,
                                       activity: n,
                                       index: a,
@@ -68,7 +68,7 @@ function p(e) {
                               e.stopPropagation(),
                                   null == i ||
                                       i({ action: s ? "PRESS_WATCH_ON_CRUNCHYROLL_BUTTON" : "PRESS_CUSTOM_BUTTON" }),
-                                  _({
+                                  p({
                                       user: t,
                                       activity: n,
                                       index: a,

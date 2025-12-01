@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,24 +9,24 @@ var r = n(54381),
     u = n(379839),
     d = n(359135),
     f = n(993447);
-function _(e) {
+function p(e) {
     let { nameplate: t, hovered: n, selected: a, content: s, placement: c } = e,
-        _ = (0, u.p)(s, t, n, a, c),
-        h = (0, l.C)(n, a),
-        m = i.useRef(null == t);
+        p = (0, u.p)(s, t, n, a, c),
+        m = (0, l.C)(n, a),
+        h = i.useRef(null == t);
     return (i.useEffect(() => {
-        m.current || null != t || (m.current = !0);
+        h.current || null != t || (h.current = !0);
     }, [t]),
     null == t)
         ? null
         : (0, r.jsx)("div", {
               className: o()(f.container, {
-                  [f.fadeIn]: m.current,
+                  [f.fadeIn]: h.current,
                   [f.fitInAccount]: c === d.i.ACCOUNT,
               }),
-              style: { background: _.background },
+              style: { background: p.background },
               "aria-hidden": !0,
-              children: (0, r.jsx)(p, {
+              children: (0, r.jsx)(_, {
                   nameplate: t,
                   className: o()(f.img, {
                       [f.hover]: n,
@@ -36,25 +36,25 @@ function _(e) {
                       [f.mini_preview]: c === d.i.MINI_PREVIEW,
                       [f.channel]: c === d.i.CHANNEL,
                   }),
-                  style: { maskImage: _.maskImage },
-                  animate: h,
-                  loop: !0 === h && !0 === n,
+                  style: { maskImage: p.maskImage },
+                  animate: m,
+                  loop: !0 === m && !0 === n,
               }),
           });
 }
-function p(e) {
+function _(e) {
     let { nameplate: t, className: n, style: i, animate: a, loop: o } = e,
         { staticAsset: s, animatedAsset: l } = (0, c._)(t),
         u = !(null == l ? void 0 : l.endsWith(".webm"));
     return null == s || null == l
         ? null
         : u
-          ? (0, r.jsx)(m, {
+          ? (0, r.jsx)(h, {
                 asset: a ? l : s,
                 className: n,
                 style: i,
             })
-          : (0, r.jsx)(h, {
+          : (0, r.jsx)(m, {
                 animatedAsset: l,
                 staticAsset: s,
                 animate: a,
@@ -63,7 +63,7 @@ function p(e) {
                 className: n,
             });
 }
-function h(e) {
+function m(e) {
     let { staticAsset: t, animatedAsset: n, animate: a, loop: o, className: l, style: c } = e,
         u = i.useRef(null);
     return (
@@ -86,7 +86,7 @@ function h(e) {
         })
     );
 }
-function m(e) {
+function h(e) {
     let { asset: t, className: n, style: i } = e;
     return (0, r.jsx)("img", {
         src: t,

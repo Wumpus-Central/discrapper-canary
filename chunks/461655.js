@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(953529), n(997841);
+n.d(t, { Z: () => p }), n(953529), n(997841);
 var r = n(314877),
     i = n(95015),
     a = n(81825),
@@ -21,12 +21,12 @@ function f(e, t, n) {
         e
     );
 }
-class _ extends a.Z {
+class p extends a.Z {
     static createFromServer(e) {
         let t = null != e.payment_source ? s.ZP.createFromServer(e.payment_source) : null,
             n = null != e.sku ? l.Z.createFromServer(e.sku) : null,
             r = null != e.subscription ? c.Z.createFromServer(e.subscription) : null;
-        return new _({
+        return new p({
             id: e.id,
             createdAt: new Date(e.created_at),
             currency: e.currency,

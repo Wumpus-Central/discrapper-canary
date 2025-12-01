@@ -29,13 +29,13 @@ function u(e) {
 }
 let d = (e, t) => "".concat(t, "-").concat(e),
     f = (e) => "application-id-".concat(e),
-    _ = (e) => "user-id-".concat(e),
-    p = (e) => "relationship-type-".concat(e);
-function h(e) {
+    p = (e) => "user-id-".concat(e),
+    _ = (e) => "relationship-type-".concat(e);
+function m(e) {
     let t = [];
-    return t.push(f(e.applicationId)), t.push(_(e.id)), t.push(p(e.type)), t;
+    return t.push(f(e.applicationId)), t.push(p(e.id)), t.push(_(e.type)), t;
 }
-let m = new a.h(h, (e) => "".concat(e.since)),
+let h = new a.h(m, (e) => "".concat(e.since)),
     g = 0,
     E = 0,
     b = 0;
@@ -43,7 +43,7 @@ function y() {
     let e = 0,
         t = 0,
         n = 0;
-    m.values().forEach((r) => {
+    h.values().forEach((r) => {
         let { type: i, id: a } = r;
         if (i === l.OGo.FRIEND) n += 1;
         else if (i === l.OGo.PENDING_OUTGOING) t += 1;
@@ -57,28 +57,28 @@ function y() {
         (b = n);
 }
 function O(e) {
-    m.set(d(e.id, e.applicationId), e);
+    h.set(d(e.id, e.applicationId), e);
 }
 function v(e, t) {
-    m.delete(d(e, t));
+    h.delete(d(e, t));
 }
-function I(e) {
+function S(e) {
     let { unknownApplicationIds: t } = e;
     if (null != t) {
         for (let e of t)
-            for (let t of m.values(f(e)))
+            for (let t of h.values(f(e)))
                 (t.type === l.OGo.PENDING_INCOMING || t.type === l.OGo.PENDING_OUTGOING) && v(t.id, e);
         y();
     }
 }
-function T(e) {
-    m.clear(),
+function I(e) {
+    h.clear(),
         e.gameRelationships.forEach((e) => {
             O(u(e));
         }),
         y();
 }
-function S(e) {
+function T(e) {
     O(e.gameRelationship), y();
 }
 function A(e) {
@@ -98,10 +98,10 @@ class C extends (r = i.ZP.Store) {
         return b;
     }
     getGameFriendsForApplication(e) {
-        return m.values(f(e), !0).filter((e) => e.type === l.OGo.FRIEND);
+        return h.values(f(e), !0).filter((e) => e.type === l.OGo.FRIEND);
     }
     getGameRelationshipsForUser(e) {
-        return m.values(_(e), !0);
+        return h.values(p(e), !0);
     }
     getGameRelationshipsForUserByType(e, t) {
         return this.getGameRelationshipsForUser(e).filter((e) => e.type === t);
@@ -110,22 +110,22 @@ class C extends (r = i.ZP.Store) {
         return this.getGameRelationshipsForUserByType(e, l.OGo.FRIEND);
     }
     getGameRelationshipCount() {
-        return m.size();
+        return h.size();
     }
     getGameRelationships() {
-        return m;
+        return h;
     }
     getGameRelationshipsByType(e) {
-        return m.values(p(e), !0);
+        return h.values(_(e), !0);
     }
     getGameRelationshipsVersion() {
-        return m.version;
+        return h.version;
     }
 }
 c(C, "displayName", "GameRelationshipStore");
 let N = new C(o.Z, {
-    CONNECTION_OPEN: T,
-    GAME_RELATIONSHIP_ADD: S,
+    CONNECTION_OPEN: I,
+    GAME_RELATIONSHIP_ADD: T,
     GAME_RELATIONSHIP_REMOVE: A,
-    APPLICATIONS_FETCH_SUCCESS: I,
+    APPLICATIONS_FETCH_SUCCESS: S,
 });

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(433517),
     i = n(147913),
     a = n(594174),
@@ -23,7 +23,7 @@ let u = 604800000,
 function f() {
     r.K.set(d, Date.now());
 }
-function _() {
+function p() {
     if (!o.w8.getCurrentConfig({ location: "b9eb97_1" }, { autoTrackExposure: !1 }).enabled) return !1;
     let e = a.default.getCurrentUser();
     if (null == e || e.hasUniqueUsername() || !e.hasVerifiedEmailOrPhone()) return !1;
@@ -31,13 +31,13 @@ function _() {
         n = r.K.get(t);
     return !(null != n && Date.now() - n < u);
 }
-class p extends i.Z {
+class _ extends i.Z {
     constructor(...e) {
         super(...e),
             c(this, "actions", { POST_CONNECTION_OPEN: () => this.onPostConnectionOpen() }),
             c(this, "onPostConnectionOpen", () => {
-                _() && (0, s.a)(l.Kq.APP_START, !0, !1) && f();
+                p() && (0, s.a)(l.Kq.APP_START, !0, !1) && f();
             });
     }
 }
-let h = new p();
+let m = new _();

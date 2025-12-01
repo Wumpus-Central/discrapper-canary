@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(63063),
     d = n(358085),
     f = n(998502),
-    _ = n(981631),
-    p = n(388032),
-    h = n(761588);
-function m(e, t, n) {
+    p = n(981631),
+    _ = n(388032),
+    m = n(761588);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,23 +28,23 @@ function m(e, t, n) {
 function g(e) {
     switch (e.state) {
         case "unknown":
-            return p.intl.string(p.t["KW+nqT"]);
+            return _.intl.string(_.t["KW+nqT"]);
         case "disabled":
-            return p.intl.string(p.t["Q/wAF7"]);
+            return _.intl.string(_.t["Q/wAF7"]);
         case "disconnected":
-            return p.intl.string(p.t.Xvs9IM);
+            return _.intl.string(_.t.Xvs9IM);
         case "initializing":
-            return p.intl.string(p.t.h4qz8W);
+            return _.intl.string(_.t.h4qz8W);
         case "connecting":
-            return p.intl.string(p.t.fSu9XF);
+            return _.intl.string(_.t.fSu9XF);
         case "handshaking":
-            return p.intl.string(p.t["00aYLJ"]);
+            return _.intl.string(_.t["00aYLJ"]);
         case "running":
-            return p.intl.string(p.t["54TB7Z"]);
+            return _.intl.string(_.t["54TB7Z"]);
         case "waiting-for-retry":
-            return p.intl.string(p.t["0FONwi"]);
+            return _.intl.string(_.t["0FONwi"]);
         case "failure":
-            return p.intl.string(p.t.Ic0nkd);
+            return _.intl.string(_.t.Ic0nkd);
         default:
             (0, c.vE)(e.state);
     }
@@ -54,34 +54,34 @@ function E() {
         [t, n] = i.useState(!1),
         [c, d] = i.useState(() => (0, l.aL)()),
         f = (0, a.e7)([s.ZP], () => s.ZP.getSystemServiceStatus("input-service")),
-        m = i.useCallback(async () => {
+        h = i.useCallback(async () => {
             n(!0), c ? await (0, l.OK)("windows-settings") : await (0, l.sU)("windows-settings"), n(!1), d((0, l.aL)());
         }, [c]);
     if (!e) return null;
     let E = "running" === f.state;
     return (0, r.jsxs)("div", {
-        className: h.systemServiceContainer,
+        className: m.systemServiceContainer,
         children: [
             (0, r.jsxs)("div", {
-                className: h.systemServiceTextContainer,
+                className: m.systemServiceTextContainer,
                 children: [
                     (0, r.jsx)(o.Text, {
                         variant: "text-md/medium",
                         color: "header-primary",
-                        children: p.intl.string(p.t.roHq80),
+                        children: _.intl.string(_.t.roHq80),
                     }),
                     (0, r.jsx)(o.Text, {
                         variant: "text-sm/normal",
                         color: "text-secondary",
-                        children: p.intl.format(p.t["8CAL+D"], {
-                            helpCenterLink: u.Z.getArticleURL(_.BhN.SYSTEM_SERVICE),
+                        children: _.intl.format(_.t["8CAL+D"], {
+                            helpCenterLink: u.Z.getArticleURL(p.BhN.SYSTEM_SERVICE),
                         }),
                     }),
                     c
                         ? (0, r.jsx)(o.Text, {
                               variant: "text-sm/normal",
                               color: E ? "text-feedback-positive" : "text-feedback-warning",
-                              children: E ? p.intl.string(p.t.KHVMkW) : p.intl.format(p.t["5Rlr0b"], { status: g(f) }),
+                              children: E ? _.intl.string(_.t.KHVMkW) : _.intl.format(_.t["5Rlr0b"], { status: g(f) }),
                           })
                         : null,
                 ],
@@ -89,8 +89,8 @@ function E() {
             (0, r.jsx)(o.Button, {
                 variant: c ? "critical-secondary" : "primary",
                 loading: t,
-                onClick: m,
-                text: c ? p.intl.string(p.t.pAwbdL) : p.intl.string(p.t["1iI46O"]),
+                onClick: h,
+                text: c ? _.intl.string(_.t.pAwbdL) : _.intl.string(_.t["1iI46O"]),
             }),
         ],
     });
@@ -105,7 +105,7 @@ class b extends i.PureComponent {
     }
     render() {
         let { openOnStartup: e, startMinimized: t, minimizeToTray: n } = this.state,
-            i = (0, d.isLinux)() ? p.intl.string(p.t["7pPjTW"]) : p.intl.string(p.t.ZkDZov);
+            i = (0, d.isLinux)() ? _.intl.string(_.t["7pPjTW"]) : _.intl.string(_.t.ZkDZov);
         return (0, r.jsxs)(o.Kqy, {
             gap: 16,
             children: [
@@ -117,23 +117,23 @@ class b extends i.PureComponent {
                 (0, r.jsxs)(o.C3N, {
                     children: [
                         (0, r.jsx)(o.rsf, {
-                            label: p.intl.string(p.t.WQm4p1),
-                            description: p.intl.string(p.t["s/cQrU"]),
+                            label: _.intl.string(_.t.WQm4p1),
+                            description: _.intl.string(_.t["s/cQrU"]),
                             checked: e,
                             onChange: this.handleToggleOpenOnStartup,
                         }),
                         (0, d.isWindows)()
                             ? (0, r.jsx)(o.rsf, {
-                                  label: p.intl.string(p.t.n7Yjes),
-                                  description: p.intl.string(p.t.o2FSjB),
+                                  label: _.intl.string(_.t.n7Yjes),
+                                  description: _.intl.string(_.t.o2FSjB),
                                   checked: !!e && t,
                                   disabled: !e,
                                   onChange: this.handleToggleStartMinimized,
                               })
                             : null,
                         (0, r.jsx)(o.rsf, {
-                            label: p.intl.string(p.t.abLFes),
-                            description: p.intl.string(p.t["mVuX+j"]),
+                            label: _.intl.string(_.t.abLFes),
+                            description: _.intl.string(_.t["mVuX+j"]),
                             checked: n,
                             onChange: this.handleToggleMinimizeToTray,
                         }),
@@ -145,15 +145,15 @@ class b extends i.PureComponent {
     }
     constructor(e) {
         super(e),
-            m(this, "handleToggleOpenOnStartup", () => {
+            h(this, "handleToggleOpenOnStartup", () => {
                 let e = !this.state.openOnStartup;
                 this.setState({ openOnStartup: e }), f.ZP.send("TOGGLE_OPEN_ON_STARTUP", e);
             }),
-            m(this, "handleToggleStartMinimized", () => {
+            h(this, "handleToggleStartMinimized", () => {
                 let e = !this.state.startMinimized;
                 this.setState({ startMinimized: e }), f.ZP.send("TOGGLE_START_MINIMIZED", e);
             }),
-            m(this, "handleToggleMinimizeToTray", () => {
+            h(this, "handleToggleMinimizeToTray", () => {
                 let e = !this.state.minimizeToTray;
                 this.setState({ minimizeToTray: e }), f.ZP.send("TOGGLE_MINIMIZE_TO_TRAY", e);
             }),

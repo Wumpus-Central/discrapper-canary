@@ -10,7 +10,7 @@ var i = n(50153),
     u = o.Record,
     d = o.Repeat,
     f = c(),
-    _ = {
+    p = {
         parent: null,
         characterList: s(),
         data: l(),
@@ -22,13 +22,13 @@ var i = n(50153),
         prevSibling: null,
         nextSibling: null,
     },
-    p = function (e, t) {
+    _ = function (e, t) {
         return e.getStyle() === t.getStyle();
     },
-    h = function (e, t) {
+    m = function (e, t) {
         return e.getEntity() === t.getEntity();
     },
-    m = function (e) {
+    h = function (e) {
         if (!e) return e;
         var t = e.characterList,
             n = e.text;
@@ -36,8 +36,8 @@ var i = n(50153),
     };
 e.exports = (function (e) {
     function t() {
-        var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _;
-        return e.call(this, m(t)) || this;
+        var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : p;
+        return e.call(this, h(t)) || this;
     }
     r(t, e);
     var n = t.prototype;
@@ -84,11 +84,11 @@ e.exports = (function (e) {
             return this.get("nextSibling");
         }),
         (n.findStyleRanges = function (e, t) {
-            a(this.getCharacterList(), p, e, t);
+            a(this.getCharacterList(), _, e, t);
         }),
         (n.findEntityRanges = function (e, t) {
-            a(this.getCharacterList(), h, e, t);
+            a(this.getCharacterList(), m, e, t);
         }),
         t
     );
-})(u(_));
+})(u(p));

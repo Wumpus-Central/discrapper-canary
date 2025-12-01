@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-var _ = (function (e) {
+var p = (function (e) {
     return (
         (e[(e.DIRECTORY_HERO = 1)] = "DIRECTORY_HERO"),
         (e[(e.DIRECTORY_TILE = 2)] = "DIRECTORY_TILE"),
@@ -30,8 +30,8 @@ var _ = (function (e) {
         (e[(e.EMBED = 5)] = "EMBED"),
         e
     );
-})(_ || {});
-let p = (e) => {
+})(p || {});
+let _ = (e) => {
         let { className: t } = e;
         return (0, i.jsxs)("div", {
             className: s()(d.row, t),
@@ -45,7 +45,7 @@ let p = (e) => {
             ],
         });
     },
-    h = (e) => {
+    m = (e) => {
         let { sku: t, className: n } = e;
         return (0, i.jsxs)("div", {
             className: s()(d.row, n),
@@ -59,7 +59,7 @@ let p = (e) => {
             ],
         });
     },
-    m = (e) => {
+    h = (e) => {
         let { sku: t, className: n } = e;
         return (0, i.jsx)("div", {
             className: s()(d.salePercentage, n),
@@ -84,7 +84,7 @@ let p = (e) => {
         let { sku: t, className: n } = e;
         return (0, i.jsxs)("div", {
             className: s()(d.row, n),
-            children: [(0, i.jsx)(m, { sku: t }), (0, i.jsx)(g, { sku: t }), (0, i.jsx)(E, { sku: t })],
+            children: [(0, i.jsx)(h, { sku: t }), (0, i.jsx)(g, { sku: t }), (0, i.jsx)(E, { sku: t })],
         });
     },
     y = (e) => {
@@ -111,9 +111,9 @@ class O extends (r = a.PureComponent) {
             case 5:
                 return (0, i.jsx)(y, { className: s()(t, n) });
             case 1:
-                return (0, i.jsx)(p, { className: s()(t, n) });
+                return (0, i.jsx)(_, { className: s()(t, n) });
             case 3:
-                return (0, i.jsx)(h, {
+                return (0, i.jsx)(m, {
                     sku: r,
                     className: s()(t, n),
                 });
@@ -135,7 +135,7 @@ class O extends (r = a.PureComponent) {
             case 5:
                 return (0, i.jsx)(y, { className: t });
             case 3:
-                return (0, i.jsx)(h, {
+                return (0, i.jsx)(m, {
                     sku: n,
                     className: s()(d.directoryHeroPricePremium, t),
                 });
@@ -163,7 +163,7 @@ class O extends (r = a.PureComponent) {
                     children: [
                         (0, i.jsxs)("div", {
                             className: d.row,
-                            children: [(0, i.jsx)(E, { sku: r }), (0, i.jsx)(m, { sku: r })],
+                            children: [(0, i.jsx)(E, { sku: r }), (0, i.jsx)(h, { sku: r })],
                         }),
                         (0, i.jsx)(g, { sku: r }),
                     ],
@@ -196,5 +196,5 @@ class O extends (r = a.PureComponent) {
         }
     }
 }
-f(O, "Types", _);
+f(O, "Types", p);
 let v = O;

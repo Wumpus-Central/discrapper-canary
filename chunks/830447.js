@@ -1,6 +1,6 @@
 n.d(t, {
-    T: () => D,
-    v: () => P,
+    T: () => w,
+    v: () => R,
 }),
     n(361932),
     n(187205),
@@ -17,10 +17,10 @@ var r = n(54381),
     u = n(793030),
     d = n(857595),
     f = n(607070),
-    _ = n(720312),
-    p = n(828214),
-    h = n(670596),
-    m = n(788314),
+    p = n(720312),
+    _ = n(828214),
+    m = n(670596),
+    h = n(788314),
     g = n(939350),
     E = n(334405);
 function b(e, t, n) {
@@ -75,11 +75,11 @@ function v(e, t) {
         e
     );
 }
-function I(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = T(e, t);
+        i = I(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -87,7 +87,7 @@ function I(e, t) {
     }
     return i;
 }
-function T(e, t) {
+function I(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -96,7 +96,7 @@ function T(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function S(e) {
+function T(e) {
     return null == e
         ? []
         : i.Children.toArray(e).flatMap((e) => {
@@ -104,9 +104,9 @@ function S(e) {
               return null == e
                   ? []
                   : Array.isArray(e)
-                    ? S(e)
+                    ? T(e)
                     : e.type === i.Fragment
-                      ? null != (t = S(e.props.children))
+                      ? null != (t = T(e.props.children))
                           ? t
                           : []
                       : [e];
@@ -115,12 +115,12 @@ function S(e) {
 function A(e, t) {
     if (!t || !e.icon || e.iconLeft) return e;
     let { icon: n } = e;
-    return v(y({}, I(e, ["icon"])), { iconLeft: n });
+    return v(y({}, S(e, ["icon"])), { iconLeft: n });
 }
 function C(e, t) {
-    return S(e).reduce((e, n) => {
+    return T(e).reduce((e, n) => {
         var r, i;
-        if (n.type === p.Cl)
+        if (n.type === _.Cl)
             return (
                 e.push({
                     type: "separator",
@@ -128,7 +128,7 @@ function C(e, t) {
                 }),
                 e
             );
-        if (n.type === p.kS) {
+        if (n.type === _.kS) {
             let r = C(n.props.children, t);
             return (
                 r.length > 0 &&
@@ -148,7 +148,7 @@ function C(e, t) {
                 e
             );
         }
-        if (n.type === p.sN) {
+        if (n.type === _.sN) {
             let r = A(n.props, t);
             return (
                 e.push(
@@ -176,7 +176,7 @@ function C(e, t) {
                 e
             );
         }
-        if (n.type === p.S8)
+        if (n.type === _.S8)
             return (
                 e.push({
                     type: "checkbox",
@@ -186,7 +186,7 @@ function C(e, t) {
                 }),
                 e
             );
-        if (n.type === p.k5)
+        if (n.type === _.k5)
             return (
                 e.push({
                     type: "radio",
@@ -196,7 +196,7 @@ function C(e, t) {
                 }),
                 e
             );
-        else if (n.type === p.m7)
+        else if (n.type === _.m7)
             return (
                 e.push({
                     type: "switch",
@@ -206,7 +206,7 @@ function C(e, t) {
                 }),
                 e
             );
-        else if (n.type === p.II)
+        else if (n.type === _.II)
             return (
                 e.push(
                     null != n.props.control
@@ -246,40 +246,40 @@ function N(e) {
         [],
     );
 }
-function R(e, t, n, i) {
+function P(e, t, n, i) {
     let a = 0,
         o = [];
     return e.reduce((e, s, l) => {
         let c = o.length > 0 ? o[o.length - 1] : e;
         switch (s.type) {
             case "separator":
-                c.push((0, r.jsx)(m.Z0, {}, "separator-".concat(l))), (a = 0);
+                c.push((0, r.jsx)(h.Z0, {}, "separator-".concat(l))), (a = 0);
                 break;
             case "groupstart":
-                a > 0 && s.length > 0 && (c.push((0, r.jsx)(m.Z0, {}, "separator-".concat(l))), (a = 0)), o.push([]);
+                a > 0 && s.length > 0 && (c.push((0, r.jsx)(h.Z0, {}, "separator-".concat(l))), (a = 0)), o.push([]);
                 break;
             case "groupend":
-                o.length > 0 && e.push((0, r.jsx)(m.ZA, y({ contents: o.pop() }, s.props), "group-".concat(l)));
+                o.length > 0 && e.push((0, r.jsx)(h.ZA, y({ contents: o.pop() }, s.props), "group-".concat(l)));
                 break;
             case "item": {
                 let { children: e, childRowHeight: o, onChildrenScroll: l, listClassName: u, subMenuClassName: d } = s,
                     f = null != e,
-                    _ = [...n, s.key],
-                    p = t.isFocused(_),
-                    h = null != e ? { "aria-haspopup": !0 } : {},
+                    p = [...n, s.key],
+                    _ = t.isFocused(p),
+                    m = null != e ? { "aria-haspopup": !0 } : {},
                     g = (0, r.jsx)(
-                        m.ck,
+                        h.ck,
                         v(y({}, s.props), {
                             label: s.label,
                             hasSubmenu: null != e,
-                            isFocused: p,
+                            isFocused: _,
                             menuItemProps: y(
                                 {},
                                 t.getItemProps({
-                                    path: _,
+                                    path: p,
                                     hasSubmenu: f,
                                 }),
-                                h,
+                                m,
                             ),
                             onClose: i,
                         }),
@@ -289,12 +289,12 @@ function R(e, t, n, i) {
                     ? null != o
                         ? c.push(
                               (0, r.jsx)(
-                                  m.P2,
+                                  h.P2,
                                   v(y({}, s.props), {
                                       parentItem: g,
-                                      isFocused: p,
-                                      menuSubmenuProps: t.getSubmenuProps({ path: _ }),
-                                      rows: R(e, t, _, i),
+                                      isFocused: _,
+                                      menuSubmenuProps: t.getSubmenuProps({ path: p }),
+                                      rows: P(e, t, p, i),
                                       rowHeight: o,
                                       onScroll: l,
                                       listClassName: u,
@@ -304,13 +304,13 @@ function R(e, t, n, i) {
                           )
                         : c.push(
                               (0, r.jsx)(
-                                  m.LY,
+                                  h.LY,
                                   v(y({}, s.props), {
                                       subMenuClassName: d,
                                       parentItem: g,
-                                      isFocused: p,
-                                      menuSubmenuProps: t.getSubmenuProps({ path: _ }),
-                                      renderSubmenu: () => R(e, t, _, i),
+                                      isFocused: _,
+                                      menuSubmenuProps: t.getSubmenuProps({ path: p }),
+                                      renderSubmenu: () => P(e, t, p, i),
                                   }),
                                   "".concat(s.key, "-submenu"),
                               ),
@@ -323,7 +323,7 @@ function R(e, t, n, i) {
                 let e = [...n, s.key];
                 c.push(
                     (0, r.jsx)(
-                        m.kq,
+                        h.kq,
                         v(y({}, s.props), {
                             isFocused: t.isFocused(e),
                             menuItemProps: t.getItemProps({
@@ -343,7 +343,7 @@ function R(e, t, n, i) {
                 let e = [...n, s.key];
                 c.push(
                     (0, r.jsx)(
-                        m.oC,
+                        h.oC,
                         v(y({}, s.props), {
                             isFocused: t.isFocused(e),
                             menuItemProps: t.getItemProps({
@@ -361,7 +361,7 @@ function R(e, t, n, i) {
                 let e = [...n, s.key];
                 c.push(
                     (0, r.jsx)(
-                        m.Rk,
+                        h.Rk,
                         v(y({}, s.props), {
                             isFocused: t.isFocused(e),
                             menuItemProps: t.getItemProps({
@@ -379,7 +379,7 @@ function R(e, t, n, i) {
                 let e = [...n, s.key];
                 c.push(
                     (0, r.jsx)(
-                        m.TO,
+                        h.TO,
                         v(y({}, s.props), {
                             isFocused: t.isFocused(e),
                             menuItemProps: t.getItemProps({
@@ -397,7 +397,7 @@ function R(e, t, n, i) {
                 let e = [...n, s.key];
                 c.push(
                     (0, r.jsx)(
-                        m.lc,
+                        h.lc,
                         v(y({}, s.props), {
                             isFocused: t.isFocused(e),
                             menuItemProps: t.getItemProps({ path: e }),
@@ -413,7 +413,7 @@ function R(e, t, n, i) {
                 let e = [...n, s.key];
                 c.push(
                     (0, r.jsx)(
-                        m.$I,
+                        h.$I,
                         v(y({}, s.props), {
                             isFocused: t.isFocused(e),
                             menuItemProps: t.getItemProps({ path: e }),
@@ -429,73 +429,73 @@ function R(e, t, n, i) {
         return e;
     }, []);
 }
-function P(e) {
+function R(e) {
     var t;
     let {
             navId: n,
             variant: a = "flexible",
             hideScroller: s = !1,
-            className: p,
+            className: _,
             children: b,
             onClose: O,
-            onSelect: I,
-            onInteraction: T,
-            forceIconsLeft: S,
+            onSelect: S,
+            onInteraction: I,
+            forceIconsLeft: T,
         } = e,
-        A = C(b, S),
-        P = N(A),
-        D = i.useRef([]);
-    l()(D.current, P) || (D.current = P);
-    let L = (0, _.c)("Menu"),
-        x = null == (t = A.find((e) => null != e.key)) ? void 0 : t.key,
-        M = (0, c.Z)({
+        A = C(b, T),
+        R = N(A),
+        w = i.useRef([]);
+    l()(w.current, R) || (w.current = R);
+    let x = (0, p.c)("Menu"),
+        L = null == (t = A.find((e) => null != e.key)) ? void 0 : t.key,
+        j = (0, c.Z)({
             navId: n,
-            items: D.current,
-            initialFocusPath: f.Z.keyboardModeEnabled && null != x ? [x] : [],
+            items: w.current,
+            initialFocusPath: f.Z.keyboardModeEnabled && null != L ? [L] : [],
             closeMenu: O,
             defaultIsUsingKeyboardNavigation: f.Z.keyboardModeEnabled,
         });
     i.useEffect(() => {
-        M.isUsingKeyboardNavigation ? f.Z.keyboardModeEnabled || (0, d.Qj)() : f.Z.keyboardModeEnabled && (0, d.rf)();
-    }, [M.isUsingKeyboardNavigation]);
-    let j = i.useRef(null);
-    (0, u.Tbt)(j);
+        j.isUsingKeyboardNavigation ? f.Z.keyboardModeEnabled || (0, d.Qj)() : f.Z.keyboardModeEnabled && (0, d.rf)();
+    }, [j.isUsingKeyboardNavigation]);
+    let M = i.useRef(null);
+    (0, u.Tbt)(M);
     let k = s ? u.u2D : u.zJl,
         U = i.useMemo(
             () => ({
-                onSelect: I,
-                onInteraction: T,
+                onSelect: S,
+                onInteraction: I,
             }),
-            [I, T],
+            [S, I],
         );
-    return (0, r.jsx)(h.p.Provider, {
+    return (0, r.jsx)(m.p.Provider, {
         value: U,
         children: (0, r.jsx)(
             "div",
             v(
                 y(
                     {
-                        className: o()(E.menu, E[a], p),
-                        style: { "--custom-menu-viewport-padding": L ? "".concat(g.sb, "px") : "".concat(g.F3, "px") },
+                        className: o()(E.menu, E[a], _),
+                        style: { "--custom-menu-viewport-padding": x ? "".concat(g.sb, "px") : "".concat(g.F3, "px") },
                     },
-                    M.getContainerProps(),
+                    j.getContainerProps(),
                 ),
                 {
-                    ref: j,
+                    ref: M,
                     "aria-label": e["aria-label"],
                     children: (0, r.jsxs)(k, {
                         className: E.scroller,
                         children: [
                             0 === A.length &&
-                                (0, r.jsx)(m.ck, {
+                                (0, r.jsx)(h.ck, {
                                     disabled: !0,
-                                    label: () => (0, r.jsx)(w, {}),
-                                    menuItemProps: M.getItemProps({ path: ["empty"] }),
+                                    label: () => (0, r.jsx)(D, {}),
+                                    menuItemProps: j.getItemProps({ path: ["empty"] }),
                                     isFocused: !1,
                                     onFocus: () => {},
                                     onClose: O,
                                 }),
-                            A.length > 0 && R(A, M, [], O),
+                            A.length > 0 && P(A, j, [], O),
                         ],
                     }),
                 },
@@ -503,13 +503,13 @@ function P(e) {
         ),
     });
 }
-function D() {
+function w() {
     return (0, r.jsx)("div", {
         className: o()(E.menu, E.loader, E.flexible),
         children: (0, r.jsx)(u.$jN, {}),
     });
 }
-function w() {
+function D() {
     let e = "\u266B (つ\uFF61\u25D5‿‿\u25D5\uFF61)つ \u266A",
         t = "\u266B \u2282(\uFF61\u25D5‿‿\u25D5\uFF61\u2282) \u266A",
         [n, a] = i.useState(e);

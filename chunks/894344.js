@@ -36,7 +36,7 @@ function u(e) {
     return e;
 }
 async function d(e, t, c) {
-    let { hasSpotifyAccount: d, activity: f, user: _ } = e;
+    let { hasSpotifyAccount: d, activity: f, user: p } = e;
     (0, l.Z)(d) &&
         null != f &&
         null != f.sync_id &&
@@ -50,6 +50,6 @@ async function d(e, t, c) {
                 Promise.reject(e)
             ),
         ),
-        a.Z_(f, _.id),
-        (0, s.Z)(t, _, f, c));
+        a.Z_(f, p.id),
+        (0, s.Z)(t, p, f, c));
 }

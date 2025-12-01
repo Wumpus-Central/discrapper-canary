@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(54381);
 n(473749);
 var i = n(442837),
@@ -10,11 +10,11 @@ var i = n(442837),
     u = n(779618),
     d = n(39604),
     f = n(388032);
-function _() {
+function p() {
     let e = s.tU.useSetting(),
         { enableViewerClipping: t } = o.Z.useExperiment({ location: "Clips Settings" }, { autoTrackExposure: !1 }),
         { viewerClipsEnabled: n } = (0, i.cj)([c.Z], () => c.Z.getSettings()),
-        _ = (0, u.Z)(l.Z);
+        p = (0, u.Z)(l.Z);
     return (0, r.jsxs)(a.l09, {
         children: [
             (0, r.jsx)(a.rsf, {
@@ -24,7 +24,7 @@ function _() {
                 onChange: (e) => d.yg({ allowVoiceRecording: e }),
             }),
             t &&
-                _ &&
+                p &&
                 (0, r.jsx)(a.rsf, {
                     label: f.intl.string(f.t.NWw7kY),
                     description: f.intl.string(f.t["0vjy8N"]),

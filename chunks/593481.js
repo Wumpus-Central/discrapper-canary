@@ -1,7 +1,7 @@
 n.d(t, {
     QR: () => y,
     Yj: () => b,
-    ZP: () => _,
+    ZP: () => v,
 });
 var i,
     r = n(54381),
@@ -56,7 +56,7 @@ let f = (e) => e.stopPropagation(),
             className: u.hintSubtleText,
             children: t,
         });
-class v extends (i = s.PureComponent) {
+class _ extends (i = s.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         let { expand: n } = e,
             { expanded: i } = t;
@@ -261,9 +261,9 @@ class v extends (i = s.PureComponent) {
         this.state = { expanded: t };
     }
 }
-p(v, "defaultProps", {
+p(_, "defaultProps", {
     maxBodyLines: void 0,
     expand: !1,
     disabled: !1,
 });
-let _ = v;
+let v = _;

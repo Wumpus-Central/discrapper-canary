@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => _ }), n(388685), n(35282), n(415506), n(704826);
+n.r(t), n.d(t, { default: () => p }), n(388685), n(35282), n(415506), n(704826);
 var r = n(466332),
     i = n(392711),
     a = n.n(i),
@@ -20,9 +20,9 @@ for (let [e, t] of d) if (null == e.match(c)) throw Error("Language name does no
 function f(e) {
     return d.get(e.toLowerCase());
 }
-let _ = {
+let p = {
         highlight(e, t, n) {
-            if (!h(t, e)) return null;
+            if (!m(t, e)) return null;
             Date.now();
             let i = r.Z.highlight(t, {
                 ignoreIllegals: n,
@@ -34,9 +34,9 @@ let _ = {
         isKnownLanguage: (e) => d.has(e.toLowerCase()),
         resolveLanguageName: f,
     },
-    p = a().repeat("/", 15);
-function h(e, t) {
-    if (e.indexOf(p) >= 0) return !1;
+    _ = a().repeat("/", 15);
+function m(e, t) {
+    if (e.indexOf(_) >= 0) return !1;
     let n = 0;
     for (let t of e.split("\n")) {
         if (t.length > 1000) return !1;

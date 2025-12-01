@@ -20,28 +20,28 @@ function d(e) {
             pendingLegacyUsernameDisabled: c,
             pendingBadges: d,
             onClose: f,
-            shouldOpenBadgeTooltip: _,
-            shouldGlowTenureBadge: p,
+            shouldOpenBadgeTooltip: p,
+            shouldGlowTenureBadge: _,
         } = e,
-        h = (0, o.Z)(t, c),
-        m = i.useMemo(() => {
-            if (null == d) return (0, s.w)(h);
-            let e = new Set(h.map((e) => e.id)),
-                t = [...h, ...d.filter((t) => !e.has(t.id))];
+        m = (0, o.Z)(t, c),
+        h = i.useMemo(() => {
+            if (null == d) return (0, s.w)(m);
+            let e = new Set(m.map((e) => e.id)),
+                t = [...m, ...d.filter((t) => !e.has(t.id))];
             return (0, s.w)(t);
-        }, [h, d]);
-    return 0 === m.length
+        }, [m, d]);
+    return 0 === h.length
         ? null
         : (0, r.jsx)(r.Fragment, {
-              children: (0, a.chunk)(m, u[n]).map((e) =>
+              children: (0, a.chunk)(h, u[n]).map((e) =>
                   (0, r.jsx)(
                       l.Z,
                       {
                           badges: e,
                           displayProfile: t,
                           onClose: f,
-                          shouldOpenBadgeTooltip: _,
-                          shouldGlowTenureBadge: p,
+                          shouldOpenBadgeTooltip: p,
+                          shouldGlowTenureBadge: _,
                       },
                       e[0].id,
                   ),

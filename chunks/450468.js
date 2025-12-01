@@ -1,4 +1,4 @@
-n.d(t, { default: () => T }), n(388685), n(415506);
+n.d(t, { default: () => I }), n(388685), n(415506);
 var r = n(54381),
     i = n(473749),
     a = n(512722),
@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(355467),
     d = n(179360),
     f = n(881052),
-    _ = n(128069),
-    p = n(100527),
-    h = n(906732),
-    m = n(431369),
+    p = n(128069),
+    _ = n(100527),
+    m = n(906732),
+    h = n(431369),
     g = n(78839),
     E = n(74538),
     b = n(388032),
@@ -48,7 +48,7 @@ function v(e) {
         ],
     });
 }
-function I() {
+function S() {
     return (0, r.jsxs)("div", {
         className: y.body,
         children: [
@@ -57,34 +57,34 @@ function I() {
         ],
     });
 }
-function T(e) {
+function I(e) {
     let { guildBoostSlotId: t, transitionState: n, onClose: a } = e,
-        { analyticsLocations: d } = (0, h.ZP)(p.Z.GUILD_BOOST_UNCANCELLATION_MODAL);
+        { analyticsLocations: d } = (0, m.ZP)(_.Z.GUILD_BOOST_UNCANCELLATION_MODAL);
     i.useEffect(() => {
         g.Z.hasFetchedSubscriptions() || (0, u.jg)();
     }, []);
     let y = (0, l.e7)([g.Z], () => g.Z.getPremiumTypeSubscription()),
-        [T, S] = i.useState(1),
+        [I, T] = i.useState(1),
         [A, C] = i.useState(!1),
-        [N, R] = i.useState(null),
-        P = i.useCallback(async () => {
+        [N, P] = i.useState(null),
+        R = i.useCallback(async () => {
             if (null != y)
                 try {
-                    C(!0), R(null);
-                    let e = (0, m.g)(y, 1);
+                    C(!0), P(null);
+                    let e = (0, h.g)(y, 1);
                     o()(
                         (0, E.uV)(e) <= (0, E.uV)(y.additionalPlans),
                         "Uncanceling should not increase the number of guild subscriptions",
                     ),
                         await O(y, e, t, d),
-                        S(2);
+                        T(2);
                 } catch (t) {
                     let e = t instanceof f.HF ? t : new f.HF(t, t.code);
-                    R(b.intl.string(e.code === _.SM.BILLING_PAUSE_INVALID_UPDATE ? b.t.dq4vq7 : b.t["5mlOCW"])), C(!1);
+                    P(b.intl.string(e.code === p.SM.BILLING_PAUSE_INVALID_UPDATE ? b.t.dq4vq7 : b.t["5mlOCW"])), C(!1);
                 }
         }, [y, t, d]),
-        D = () => {
-            switch (T) {
+        w = () => {
+            switch (I) {
                 case 1:
                     return b.intl.string(b.t.l52ih2);
                 case 2:
@@ -93,8 +93,8 @@ function T(e) {
                     return "";
             }
         },
-        w = () => {
-            switch (T) {
+        D = () => {
+            switch (I) {
                 case 1:
                     return [
                         {
@@ -107,7 +107,7 @@ function T(e) {
                             variant: "primary",
                             text: b.intl.string(b.t.etZP4B),
                             loading: A,
-                            onClick: P,
+                            onClick: R,
                         },
                     ];
                 case 2:
@@ -122,26 +122,26 @@ function T(e) {
                     return [];
             }
         },
-        L = () => {
+        x = () => {
             if (null == y) return (0, r.jsx)(c.$jN, {});
-            switch (T) {
+            switch (I) {
                 case 1:
                     return (0, r.jsx)(v, { errorMsg: N });
                 case 2:
-                    return (0, r.jsx)(I, {});
+                    return (0, r.jsx)(S, {});
                 default:
-                    throw Error("Unexpected step: ".concat(T));
+                    throw Error("Unexpected step: ".concat(I));
             }
         };
-    return (0, r.jsx)(h.Gt, {
+    return (0, r.jsx)(m.Gt, {
         value: d,
         children: (0, r.jsx)(s.Modal, {
             transitionState: n,
             onClose: async () => await a(),
             size: "sm",
-            title: D(),
-            actions: w(),
-            children: L(),
+            title: w(),
+            actions: D(),
+            children: x(),
         }),
     });
 }

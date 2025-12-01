@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381);
 n(473749);
 var i = n(481060),
@@ -22,7 +22,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,19 +38,19 @@ function _(e) {
     }
     return e;
 }
-function p(e) {
+function _(e) {
     var t;
-    let { platformType: f, location: p, overrideUrl: h, successRedirect: m } = e;
+    let { platformType: f, location: _, overrideUrl: m, successRedirect: h } = e;
     return (f === d.ABu.LEAGUE_OF_LEGENDS && (f = d.ABu.RIOT_GAMES), f === d.ABu.CRUNCHYROLL)
-        ? void o.K([null != p ? p : "unknown"])
+        ? void o.K([null != _ ? _ : "unknown"])
         : f === d.ABu.XBOX
-          ? void l.K([null != p ? p : "unknown"])
+          ? void l.K([null != _ ? _ : "unknown"])
           : f === d.ABu.PLAYSTATION || f === d.ABu.PLAYSTATION_STAGING
-            ? void s.K([null != p ? p : "unknown"], f)
+            ? void s.K([null != _ ? _ : "unknown"], f)
             : f === d.ABu.DOMAIN
               ? void (0, i.ZDy)(async () => {
                     let { default: e } = await n.e("64941").then(n.bind(n, 907053));
-                    return (t) => (0, r.jsx)(e, _({ analyticsLocation: [null != p ? p : "unknown"] }, t));
+                    return (t) => (0, r.jsx)(e, p({ analyticsLocation: [null != _ ? _ : "unknown"] }, t));
                 })
               : (null == (t = a.Z.get(f)) ? void 0 : t.isFederated) === !0
                 ? void (0, i.ZDy)(async () => {
@@ -58,33 +58,33 @@ function p(e) {
                       return (t) =>
                           (0, r.jsx)(
                               e,
-                              _(
+                              p(
                                   {
                                       platformType: f,
-                                      location: p,
-                                      successRedirect: m,
+                                      location: _,
+                                      successRedirect: h,
                                   },
                                   t,
                               ),
                           );
                   })
-                : null != h
+                : null != m
                   ? void (0, c.q)({
                         shouldConfirm: !0,
-                        href: h,
+                        href: m,
                         onConfirm: () => {
                             (0, u.H)(
                                 f,
                                 {
-                                    location: p,
-                                    successRedirect: m,
+                                    location: _,
+                                    successRedirect: h,
                                 },
-                                h,
+                                m,
                             );
                         },
                     })
                   : void (0, u.H)(f, {
-                        location: p,
-                        successRedirect: m,
+                        location: _,
+                        successRedirect: h,
                     });
 }

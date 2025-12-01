@@ -62,9 +62,9 @@ function y(e) {
         C = (null == y ? void 0 : y.channelId) === e.id,
         v = (0, o.V)(e) && !e.isPrivate(),
         _ = (0, o.Z)(e),
-        x = (!(0, r.e7)([c.Z], () => c.Z.isInChannel(e.id)) && _) || v,
-        j = (0, p.Z)();
-    return C || 0 !== j.length
+        O = (!(0, r.e7)([c.Z], () => c.Z.isInChannel(e.id)) && _) || v,
+        x = (0, p.Z)();
+    return C || 0 !== x.length
         ? C
             ? (0, i.jsx)(l.sNh, {
                   label: m.intl.string(m.t.PlwgdU),
@@ -73,9 +73,9 @@ function y(e) {
                       (0, u.F)(y);
                   },
                   icon: (0, h.Z)(void 0),
-                  disabled: x,
+                  disabled: O,
               })
-            : j.map((r) => {
+            : x.map((r) => {
                   var o, s;
                   return (0, i.jsx)(
                       l.sNh,
@@ -106,7 +106,7 @@ function y(e) {
                                       });
                                   t.type === f.ABu.XBOX
                                       ? (0, l.ZDy)(async () => {
-                                            let { default: t } = await Promise.all([n.e("44802"), n.e("45929")]).then(
+                                            let { default: t } = await Promise.all([n.e("75942"), n.e("45929")]).then(
                                                 n.bind(n, 200623),
                                             );
                                             return (n) => (0, i.jsx)(t, b(g({}, n), { channel: e }));
@@ -125,7 +125,7 @@ function y(e) {
                                         });
                               })(r),
                           icon: (0, h.Z)(r.type),
-                          disabled: x,
+                          disabled: O,
                       },
                       r.id,
                   );

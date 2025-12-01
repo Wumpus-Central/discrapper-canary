@@ -38,8 +38,8 @@ var l,
     D = n(375954),
     w = n(292959),
     k = n(496675),
-    M = n(306680),
-    U = n(699516),
+    U = n(306680),
+    M = n(699516),
     L = n(944486),
     G = n(885110),
     V = n(246946),
@@ -130,7 +130,7 @@ function ed(e) {
 }
 class ef extends (l = r.ZP.Store) {
     initialize() {
-        this.waitFor(h.Z, j.Z, R.Z, y.Z, D.Z, w.Z, k.Z, U.Z, L.Z, G.Z, x.Z, V.Z, F.default, B.Z);
+        this.waitFor(h.Z, j.Z, R.Z, y.Z, D.Z, w.Z, k.Z, M.Z, L.Z, G.Z, x.Z, V.Z, F.default, B.Z);
     }
 }
 $(ef, "displayName", "NotificationStore"),
@@ -225,7 +225,7 @@ $(ef, "displayName", "NotificationStore"),
                               channel_id: c.id,
                               channel_type: c.type,
                               guild_id: c.guild_id,
-                              badge: (0, M.Ex)(Z, g),
+                              badge: (0, U.Ex)(Z, g),
                           },
                           {
                               omitViewTracking: P,
@@ -313,7 +313,7 @@ $(ef, "displayName", "NotificationStore"),
                               (0, A.EB)(s, 128),
                               u.name,
                               J.intl.formatToPlainString(J.t.sqnsSP, {
-                                  channelName: (0, p.F6)(u, F.default, U.Z),
+                                  channelName: (0, p.F6)(u, F.default, M.Z),
                                   channelTopic: null == c ? void 0 : c.topic,
                               }),
                               { notif_type: "Stage Speak Invite" },

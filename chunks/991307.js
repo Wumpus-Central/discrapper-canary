@@ -1,7 +1,7 @@
 n.d(t, { Z: () => v });
-var i = n(54381);
+var l = n(54381);
 n(473749);
-var l = n(442837),
+var i = n(442837),
     r = n(481060),
     a = n(668781),
     o = n(846027),
@@ -17,17 +17,17 @@ var l = n(442837),
     m = n(663213);
 function v(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Z.Yn.DEFAULT,
-        n = (0, l.e7)([g.default], () => {
+        n = (0, i.e7)([g.default], () => {
             var t;
             return (null == (t = g.default.getCurrentUser()) ? void 0 : t.id) === e;
         }),
-        v = (0, l.e7)([s.Z], () => s.Z.isLocalSoundboardMuted(e)),
+        v = (0, i.e7)([s.Z], () => s.Z.isLocalSoundboardMuted(e)),
         {
             muted: O,
             deafened: h = !1,
             localVideoDisabled: _ = !1,
             localVideoAutoDisabled: j = !1,
-        } = (0, l.cj)(
+        } = (0, i.cj)(
             [u.Z],
             () =>
                 n
@@ -44,7 +44,7 @@ function v(e) {
         ),
         x =
             u.Z.supports(Z.AN.DISABLE_VIDEO) && !n
-                ? (0, i.jsx)(
+                ? (0, l.jsx)(
                       r.S89,
                       {
                           id: "disable-video",
@@ -63,10 +63,10 @@ function v(e) {
                           },
                           checked: _,
                           subtext: j
-                              ? (0, i.jsxs)("div", {
+                              ? (0, l.jsxs)("div", {
                                     className: m.videoPaused,
                                     children: [
-                                        (0, i.jsx)(r.Mgn, {
+                                        (0, l.jsx)(r.Mgn, {
                                             size: "custom",
                                             color: "currentColor",
                                             width: 12,
@@ -82,7 +82,7 @@ function v(e) {
                 : null,
         I = n
             ? null
-            : (0, i.jsx)(
+            : (0, l.jsx)(
                   r.S89,
                   {
                       id: "soundboard-sound-mute",
@@ -104,7 +104,7 @@ function v(e) {
               );
     return n
         ? [
-              (0, i.jsx)(
+              (0, l.jsx)(
                   r.S89,
                   {
                       id: "mute",
@@ -118,7 +118,7 @@ function v(e) {
                   },
                   "self-mute",
               ),
-              (0, i.jsx)(
+              (0, l.jsx)(
                   r.S89,
                   {
                       id: "deafen",
@@ -135,7 +135,7 @@ function v(e) {
               x,
           ]
         : [
-              (0, i.jsx)(
+              (0, l.jsx)(
                   r.S89,
                   {
                       id: "mute",

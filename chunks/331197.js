@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(442837),
@@ -18,10 +18,10 @@ var i = n(54381),
     C = n(131951),
     v = n(390322),
     _ = n(871499),
-    x = n(127379),
-    j = n(388032);
-function O(e) {
-    let { channel: t, themeable: O, whichPopoutIsOpen: E, setWhichPopoutIsOpen: S } = e,
+    O = n(127379),
+    x = n(388032);
+function j(e) {
+    let { channel: t, themeable: j, whichPopoutIsOpen: E, setWhichPopoutIsOpen: S } = e,
         { parentAnalyticsLocation: P } = (0, u.ZP)(),
         {
             Component: I,
@@ -32,10 +32,10 @@ function O(e) {
         { mute: w, suppress: M } = (0, y.Z)(t),
         R = (0, l.e7)([C.Z], () => C.Z.isDeaf()),
         L = w || M || R,
-        k = (0, m.sR)({ isSoundboardButtonDisabled: L }),
-        [D, U] = (0, h.cv)(k),
-        { analyticsLocations: B } = (0, u.ZP)(),
-        { isHovered: H, setIsHovered: F, onMouseEnter: V, onMouseLeave: G } = (0, f.Z)(200, 300);
+        D = (0, m.sR)({ isSoundboardButtonDisabled: L }),
+        [k, U] = (0, h.cv)(D),
+        { analyticsLocations: F } = (0, u.ZP)(),
+        { isHovered: B, setIsHovered: H, onMouseEnter: V, onMouseLeave: G } = (0, f.Z)(200, 300);
     function z(e) {
         null != A &&
             (0, c.jW)(e, async () => {
@@ -71,7 +71,7 @@ function O(e) {
                         })(
                             {
                                 guildId: A,
-                                sourceAnalyticsLocations: B,
+                                sourceAnalyticsLocations: F,
                             },
                             t,
                         )),
@@ -95,21 +95,21 @@ function O(e) {
     }
     function W() {
         (0, d.v)(P, d.d.SOUNDBOARD),
-            E === x.D.SOUNDBOARD
+            E === O.D.SOUNDBOARD
                 ? (null == S || S(void 0), G())
-                : (null != E ? (Z(), V()) : Z(), null == S || S(x.D.SOUNDBOARD));
+                : (null != E ? (Z(), V()) : Z(), null == S || S(O.D.SOUNDBOARD));
     }
     let q = r.useRef(null);
     return (0, i.jsx)(s.y, {
         targetElementRef: q,
-        shouldShow: (H && (E === x.D.SOUNDBOARD || null == E)) || E === x.D.SOUNDBOARD,
+        shouldShow: (B && (E === O.D.SOUNDBOARD || null == E)) || E === O.D.SOUNDBOARD,
         animation: s.y.Animation.FADE,
         animationPosition: "top",
         position: "top",
         align: "center",
         spacing: 16,
         onRequestClose: () => {
-            F(!1), null == S || S(void 0);
+            H(!1), null == S || S(void 0);
         },
         renderPopout: (e) => {
             let { closePopout: n } = e;
@@ -124,7 +124,7 @@ function O(e) {
                               channel: t,
                               onClose: n,
                               gridNotice:
-                                  D === a.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
+                                  k === a.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
                                   (0, i.jsx)(g.o, {
                                       onClose: n,
                                       markAsDismissed: U,
@@ -138,13 +138,13 @@ function O(e) {
             (0, i.jsx)(_.d, {
                 ref: q,
                 isTrayButton: !0,
-                themeable: O,
+                themeable: j,
                 label: w
-                    ? j.intl.string(j.t["Ox4/zU"])
+                    ? x.intl.string(x.t["Ox4/zU"])
                     : M
-                      ? j.intl.string(j.t["+YBKYI"])
+                      ? x.intl.string(x.t["+YBKYI"])
                       : R
-                        ? j.intl.string(j.t.X1lQli)
+                        ? x.intl.string(x.t.X1lQli)
                         : void 0,
                 iconComponent: I,
                 disabled: L,
@@ -156,8 +156,8 @@ function O(e) {
                 onMouseLeave: () => {
                     null == E && (G(), N());
                 },
-                isActive: H || E === x.D.SOUNDBOARD,
-                color: H || E === x.D.SOUNDBOARD ? "primaryDark" : void 0,
+                isActive: B || E === O.D.SOUNDBOARD,
+                color: B || E === O.D.SOUNDBOARD ? "primaryDark" : void 0,
             }),
     });
 }

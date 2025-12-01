@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R });
+n.d(t, { Z: () => P });
 var r,
     i = n(442837),
     a = n(46973),
@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function _(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,18 +49,18 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let m = !1,
+let h = !1,
     g = null,
     E = !1,
     b = {};
@@ -71,13 +71,13 @@ function y(e) {
 }
 function O(e) {
     let { videoFilterAsset: t } = e;
-    b = h(_({}, b), { [t.id]: t });
+    b = m(p({}, b), { [t.id]: t });
 }
 function v(e) {
     let { videoFilterAsset: t } = e;
-    (b = _({}, b)), delete b[t.id];
+    (b = p({}, b)), delete b[t.id];
 }
-function I(e) {
+function S(e) {
     var t;
     let n = u.default.getCurrentUser();
     if (null == n) return !1;
@@ -87,19 +87,19 @@ function I(e) {
             : (0, d.Gx)(null == (t = s.Z.settings.voiceAndVideo) ? void 0 : t.videoBackgroundFilterDesktop, n.id);
     return null != c.Z.getVoiceChannelId() && l.Z.isVideoEnabled() && null != r;
 }
-function T(e) {
+function I(e) {
     let { backgroundOption: t } = e;
-    I(t) && (E = !0);
+    S(t) && (E = !0);
 }
-function S(e) {
+function T(e) {
     let { settings: t } = e;
-    a.TO.CAMERA_BACKGROUND_LIVE in t && (m = !0);
+    a.TO.CAMERA_BACKGROUND_LIVE in t && (h = !0);
 }
 function A() {
-    g !== c.Z.getVoiceChannelId() && (E = !1), I() && (E = !0), (g = c.Z.getVoiceChannelId());
+    g !== c.Z.getVoiceChannelId() && (E = !1), S() && (E = !0), (g = c.Z.getVoiceChannelId());
 }
 function C() {
-    (m = !1), (E = !1), (g = null), (b = {});
+    (h = !1), (E = !1), (g = null), (b = {});
 }
 class N extends (r = i.ZP.Store) {
     initialize() {
@@ -109,18 +109,18 @@ class N extends (r = i.ZP.Store) {
         return b;
     }
     get hasBeenApplied() {
-        return m;
+        return h;
     }
     get hasUsedBackgroundInCall() {
         return E;
     }
 }
 f(N, "displayName", "VideoBackgroundStore");
-let R = new N(o.Z, {
+let P = new N(o.Z, {
     VIDEO_FILTER_ASSETS_FETCH_SUCCESS: y,
     VIDEO_FILTER_ASSET_UPLOAD_SUCCESS: O,
     VIDEO_FILTER_ASSET_DELETE_SUCCESS: v,
-    VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION: T,
-    MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: S,
+    VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION: I,
+    MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: T,
     LOGOUT: C,
 });

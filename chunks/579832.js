@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(54381),
     i = n(793030),
     a = n(481060),
@@ -9,7 +9,7 @@ var r = n(54381),
     u = n(388032),
     d = n(887819),
     f = n(617842);
-let _ = () => {
+let p = () => {
         let e = () => {};
         return (0, r.jsx)(a.Button, {
             variant: "expressive",
@@ -19,7 +19,7 @@ let _ = () => {
             onClick: e,
         });
     },
-    p = () => {
+    _ = () => {
         let e = () => {};
         return (0, r.jsx)(a.Button, {
             variant: "expressive",
@@ -28,13 +28,13 @@ let _ = () => {
             onClick: e,
         });
     },
-    h = (e) => {
+    m = (e) => {
         let { message: t, channel: n, compact: c } = e,
             u = s.default.getCurrentUser();
         if (null == u) return null;
-        let h = t.author,
-            m = u.id === h.id,
-            g = m ? (0, l.c)(h, n) : (0, l.l)(h, !1);
+        let m = t.author,
+            h = u.id === m.id,
+            g = h ? (0, l.c)(m, n) : (0, l.l)(m, !1);
         if (null == g) return null;
         let { message: E, header: b, body: y } = g;
         return (0, r.jsxs)(o.Z, {
@@ -77,7 +77,7 @@ let _ = () => {
                                 }),
                                 (0, r.jsx)("div", {
                                     className: d.buttonContainer,
-                                    children: m ? (0, r.jsx)(p, {}) : (0, r.jsx)(_, {}),
+                                    children: h ? (0, r.jsx)(_, {}) : (0, r.jsx)(p, {}),
                                 }),
                             ],
                         }),

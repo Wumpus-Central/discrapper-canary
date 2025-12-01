@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(415506);
+n.d(t, { Z: () => _ }), n(415506);
 var r = n(558706),
     i = n(170216),
     a = n(723642),
@@ -76,12 +76,12 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-class _ extends i.L {
+class p extends i.L {
     createRequestPayload(e) {
         let { searchQuery: t, searchTabs: n, getLimit: r, pagination: i, trackExactTotalHits: o } = e,
             { include_nsfw: s, channel_id: c } = t,
             f = d(t, ["include_nsfw", "channel_id"]),
-            _ = {
+            p = {
                 include_nsfw: s,
                 channel_ids: c,
                 tabs: {},
@@ -92,9 +92,9 @@ class _ extends i.L {
                 let t = r(e),
                     n = a.yY[e],
                     o = null != n ? a.SO[n] : {};
-                _.tabs[e] = u(l({}, a.E2, o, f, i), { limit: t });
+                p.tabs[e] = u(l({}, a.E2, o, f, i), { limit: t });
             }),
-            _
+            p
         );
     }
     createWithPayload(e) {
@@ -141,4 +141,4 @@ class _ extends i.L {
         return this.set(t, l), l;
     }
 }
-let p = new _();
+let _ = new p();

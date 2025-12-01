@@ -19,15 +19,15 @@ function y(e) {
         h = (0, a.Wu)([c.Z], () => c.Z.getNotifications()),
         y = (0, a.e7)([d.default], () => d.default.getNotificationPositionMode());
     if ((0, a.e7)([p.Z], () => p.Z.isNotificationDisabled(f.n0.TextChat)) || y === g._vf.DISABLED) return null;
-    let v = h.filter((e) => !t || e.status !== g._1z.TIMED_OUT),
-        _ = (0, l.groupBy)(v, (e) => e.type);
+    let _ = h.filter((e) => !t || e.status !== g._1z.TIMED_OUT),
+        v = (0, l.groupBy)(_, (e) => e.type);
     return (0, i.jsx)(u.Z, {
         contentDomRef: s,
         observeInterval: 200,
         children: (0, i.jsx)("div", {
             ref: s,
             className: o()(m.container, m[y]),
-            children: Object.entries(_).map((e) => {
+            children: Object.entries(v).map((e) => {
                 let [r, s] = e;
                 return 0 === s.length
                     ? null

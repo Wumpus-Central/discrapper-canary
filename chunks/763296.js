@@ -9,10 +9,10 @@ var r,
     u = n(594174),
     d = n(626135),
     f = n(36703),
-    _ = n(709054),
-    p = n(771784),
-    h = n(710111),
-    m = n(981631),
+    p = n(709054),
+    _ = n(771784),
+    m = n(710111),
+    h = n(981631),
     g = n(526761);
 function E(e, t, n) {
     return (
@@ -31,35 +31,35 @@ let b = new Map(),
     y = new Map(),
     O = new Map(),
     v = new Set(),
+    S = 0,
     I = 0,
     T = 0,
-    S = 0,
     A = 0,
     C = new Set(),
     N = new Map(),
-    R = !1;
-function P() {
-    b.clear(), y.clear(), (A = 0), O.clear(), N.clear(), (R = !1), (T = 0), (S = 0), (I = 0);
-}
-function D() {
-    O.clear(), N.clear();
+    P = !1;
+function R() {
+    b.clear(), y.clear(), (A = 0), O.clear(), N.clear(), (P = !1), (I = 0), (T = 0), (S = 0);
 }
 function w() {
-    T = 1;
+    O.clear(), N.clear();
 }
-function L(e) {
+function D() {
+    I = 1;
+}
+function x(e) {
     let { updates: t } = e;
     t.forEach((e) => {
         let { guildId: t, sounds: n } = e;
         b.set(t, n);
     }),
-        (T = 2);
+        (I = 2);
 }
-function x(e) {
+function L(e) {
     let { guild: t } = e;
     b.delete(t.id);
 }
-function M(e) {
+function j(e) {
     let { sound: t } = e,
         n = b.get(t.guildId),
         r = null == n ? void 0 : n.findIndex((e) => e.soundId === t.soundId);
@@ -67,39 +67,39 @@ function M(e) {
         ? ((n[r] = t), b.set(t.guildId, [...n]))
         : null != n && (null == n || n.push(t), b.set(t.guildId, [...n]));
 }
-function k(e) {
+function M(e) {
     let { guildId: t, soundboardSounds: n } = e;
     b.set(t, n);
 }
-function j(e) {
+function k(e) {
     let { soundId: t, guildId: n } = e,
         r = b.get(n),
         i = null == r ? void 0 : r.findIndex((e) => e.soundId === t);
     null == r || null == i || i < 0 || (r.splice(i, 1), b.set(n, [...r]));
 }
 function U() {
-    I = 1;
+    S = 1;
 }
 function G(e) {
     let { soundboardSounds: t } = e;
-    b.set(h.X8, t), (I = 2);
+    b.set(m.X8, t), (S = 2);
 }
-function B() {
-    S = 1;
+function Z() {
+    T = 1;
 }
-function Z(e) {
+function B(e) {
     let { topSoundsForGuilds: t } = e;
-    (y = new Map(t)), (S = 2), (A = Date.now());
+    (y = new Map(t)), (T = 2), (A = Date.now());
 }
 function F() {
-    (S = 2), (A = 0);
+    (T = 2), (A = 0);
 }
 function V(e) {
     var t, n, r;
     let { soundId: i, userId: a } = e,
         o = (null != (n = O.get(i)) ? n : 0) + 1,
         s = (null != (r = N.get(a)) ? r : 0) + 1;
-    O.set(i, o), N.set(a, s), a !== (null == (t = u.default.getCurrentUser()) ? void 0 : t.id) && (R = !0);
+    O.set(i, o), N.set(a, s), a !== (null == (t = u.default.getCurrentUser()) ? void 0 : t.id) && (P = !0);
 }
 function H(e) {
     var t, n;
@@ -109,7 +109,7 @@ function H(e) {
     a <= 0 ? O.delete(r) : O.set(r, a), o <= 0 ? N.delete(i) : N.set(i, o);
 }
 let Y = a().debounce((e, t) => {
-    d.default.track(m.rMx.UPDATE_SOUNDBOARD_SETTINGS, {
+    d.default.track(h.rMx.UPDATE_SOUNDBOARD_SETTINGS, {
         volume: Math.round((0, f.P)(e)),
         location_stack: t,
     }),
@@ -137,13 +137,13 @@ function q(e) {
     let { userId: t } = e;
     v.has(t) ? v.delete(t) : v.add(t);
 }
-function X(e) {
+function Q(e) {
     let { soundboardStoreState: t } = e;
-    (b = new Map(_.default.entries(t.soundboardSounds))),
+    (b = new Map(p.default.entries(t.soundboardSounds))),
         (C = new Set(t.favoritedSoundIds)),
         (v = new Set(t.localSoundboardMutes));
 }
-class Q extends (r = o.ZP.Store) {
+class X extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(c.Z, u.default), K(c.Z.settings);
     }
@@ -170,19 +170,19 @@ class Q extends (r = o.ZP.Store) {
             .find((t) => t.soundId === e);
     }
     isFetchingSounds() {
-        return 1 === T;
+        return 1 === I;
     }
     isFetchingDefaultSounds() {
-        return 1 === I;
+        return 1 === S;
     }
     isFetching() {
         return this.isFetchingSounds() || this.isFetchingDefaultSounds();
     }
     shouldFetchDefaultSounds() {
-        return 0 === I;
+        return 0 === S;
     }
     hasFetchedDefaultSounds() {
-        return 2 === I;
+        return 2 === S;
     }
     isUserPlayingSounds(e) {
         let t = N.get(e);
@@ -204,42 +204,42 @@ class Q extends (r = o.ZP.Store) {
         return v.has(e);
     }
     hasHadOtherUserPlaySoundInSession() {
-        return R;
+        return P;
     }
     shouldFetchTopSoundsForGuilds() {
-        return (0, p.cI)("SoundboardStore") && (0 === S || (2 === S && Date.now() - A > 86400000));
+        return (0, _.cI)("SoundboardStore") && (0 === T || (2 === T && Date.now() - A > 86400000));
     }
     hasFetchedTopSoundsForGuilds() {
-        return 2 === S;
+        return 2 === T;
     }
     hasFetchedAllSounds() {
-        let e = [T, I];
-        return (0, p.cI)("SoundboardStore") && e.push(S), e.every((e) => 2 === e);
+        let e = [I, S];
+        return (0, _.cI)("SoundboardStore") && e.push(T), e.every((e) => 2 === e);
     }
     isFetchingAnySounds() {
-        return [T, I, S].some((e) => 1 === e);
+        return [I, S, T].some((e) => 1 === e);
     }
 }
-E(Q, "displayName", "SoundboardStore");
-let J = new Q(s.Z, {
-    LOGOUT: P,
-    GUILD_SOUNDBOARD_FETCH: w,
-    GUILD_SOUNDBOARD_SOUND_CREATE: M,
-    GUILD_SOUNDBOARD_SOUND_UPDATE: M,
-    GUILD_SOUNDBOARD_SOUND_DELETE: j,
+E(X, "displayName", "SoundboardStore");
+let J = new X(s.Z, {
+    LOGOUT: R,
+    GUILD_SOUNDBOARD_FETCH: D,
+    GUILD_SOUNDBOARD_SOUND_CREATE: j,
+    GUILD_SOUNDBOARD_SOUND_UPDATE: j,
+    GUILD_SOUNDBOARD_SOUND_DELETE: k,
     GUILD_SOUNDBOARD_SOUND_PLAY_START: V,
     GUILD_SOUNDBOARD_SOUND_PLAY_END: H,
-    GUILD_SOUNDBOARD_SOUNDS_UPDATE: k,
+    GUILD_SOUNDBOARD_SOUNDS_UPDATE: M,
     USER_SOUNDBOARD_SET_VOLUME: W,
-    VOICE_CHANNEL_SELECT: D,
+    VOICE_CHANNEL_SELECT: w,
     USER_SETTINGS_PROTO_UPDATE: z,
     SOUNDBOARD_FETCH_DEFAULT_SOUNDS: U,
     SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS: G,
-    SOUNDBOARD_TOP_SOUNDS_FOR_GUILDS_FETCH: B,
-    SOUNDBOARD_TOP_SOUNDS_FOR_GUILDS_SUCCESS: Z,
+    SOUNDBOARD_TOP_SOUNDS_FOR_GUILDS_FETCH: Z,
+    SOUNDBOARD_TOP_SOUNDS_FOR_GUILDS_SUCCESS: B,
     SOUNDBOARD_TOP_SOUNDS_FOR_GUILDS_FAILURE: F,
-    SOUNDBOARD_SOUNDS_RECEIVED: L,
-    GUILD_DELETE: x,
+    SOUNDBOARD_SOUNDS_RECEIVED: x,
+    GUILD_DELETE: L,
     AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: q,
-    OVERLAY_INITIALIZE: X,
+    OVERLAY_INITIALIZE: Q,
 });

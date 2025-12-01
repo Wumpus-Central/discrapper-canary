@@ -1,8 +1,8 @@
 n.d(t, {
-    PC: () => m,
-    o_: () => h,
-    sO: () => p,
-    xo: () => _,
+    PC: () => h,
+    o_: () => m,
+    sO: () => _,
+    xo: () => p,
 }),
     n(388685),
     n(953529);
@@ -59,7 +59,7 @@ function d(e) {
 function f(e) {
     return null == e || "" === e ? null : e;
 }
-function _(e) {
+function p(e) {
     var t, n, r, i;
     return {
         id: e.id,
@@ -84,7 +84,7 @@ function _(e) {
         premiumTier: e.premium_tier,
     };
 }
-function p(e) {
+function _(e) {
     let t = {};
     return (
         null != e.name && (t.name = e.name),
@@ -116,7 +116,7 @@ function p(e) {
         t
     );
 }
-function h(e) {
+function m(e) {
     return e.reduce(
         (e, t) => (
             (e[t.game_application_id] = {
@@ -128,10 +128,10 @@ function h(e) {
         {},
     );
 }
-function m(e) {
+function h(e) {
     var t, n, r, i, a, o;
     let { guild: l, profile: c } = e,
-        u = null != c ? _(c) : null;
+        u = null != c ? p(c) : null;
     return null != u
         ? u
         : null == l

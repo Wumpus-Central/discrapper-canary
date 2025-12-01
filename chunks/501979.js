@@ -6,18 +6,18 @@ var r = n(425561),
 e.exports = function (e, t, n, l, c, u) {
     var d = n & o,
         f = e.length,
-        _ = t.length;
-    if (f != _ && !(d && _ > f)) return !1;
-    var p = u.get(e),
-        h = u.get(t);
-    if (p && h) return p == t && h == e;
-    var m = -1,
+        p = t.length;
+    if (f != p && !(d && p > f)) return !1;
+    var _ = u.get(e),
+        m = u.get(t);
+    if (_ && m) return _ == t && m == e;
+    var h = -1,
         g = !0,
         E = n & s ? new r() : void 0;
-    for (u.set(e, t), u.set(t, e); ++m < f; ) {
-        var b = e[m],
-            y = t[m];
-        if (l) var O = d ? l(y, b, m, t, e, u) : l(b, y, m, e, t, u);
+    for (u.set(e, t), u.set(t, e); ++h < f; ) {
+        var b = e[h],
+            y = t[h];
+        if (l) var O = d ? l(y, b, h, t, e, u) : l(b, y, h, e, t, u);
         if (void 0 !== O) {
             if (O) continue;
             g = !1;

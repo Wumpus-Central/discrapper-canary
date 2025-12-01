@@ -9,10 +9,10 @@ var n = "function" == typeof Symbol && Symbol.for,
     u = n ? Symbol.for("react.async_mode") : 60111,
     d = n ? Symbol.for("react.concurrent_mode") : 60111,
     f = n ? Symbol.for("react.forward_ref") : 60112,
-    _ = n ? Symbol.for("react.suspense") : 60113,
-    p = n ? Symbol.for("react.suspense_list") : 60120,
-    h = n ? Symbol.for("react.memo") : 60115,
-    m = n ? Symbol.for("react.lazy") : 60116,
+    p = n ? Symbol.for("react.suspense") : 60113,
+    _ = n ? Symbol.for("react.suspense_list") : 60120,
+    m = n ? Symbol.for("react.memo") : 60115,
+    h = n ? Symbol.for("react.lazy") : 60116,
     g = n ? Symbol.for("react.block") : 60121,
     E = n ? Symbol.for("react.fundamental") : 60117,
     b = n ? Symbol.for("react.responder") : 60118,
@@ -28,14 +28,14 @@ function O(e) {
                     case a:
                     case s:
                     case o:
-                    case _:
+                    case p:
                         return e;
                     default:
                         switch ((e = e && e.$$typeof)) {
                             case c:
                             case f:
-                            case m:
                             case h:
+                            case m:
                             case l:
                                 return e;
                             default:
@@ -57,12 +57,12 @@ function v(e) {
     (t.Element = r),
     (t.ForwardRef = f),
     (t.Fragment = a),
-    (t.Lazy = m),
-    (t.Memo = h),
+    (t.Lazy = h),
+    (t.Memo = m),
     (t.Portal = i),
     (t.Profiler = s),
     (t.StrictMode = o),
-    (t.Suspense = _),
+    (t.Suspense = p),
     (t.isAsyncMode = function (e) {
         return v(e) || O(e) === u;
     }),
@@ -83,10 +83,10 @@ function v(e) {
         return O(e) === a;
     }),
     (t.isLazy = function (e) {
-        return O(e) === m;
+        return O(e) === h;
     }),
     (t.isMemo = function (e) {
-        return O(e) === h;
+        return O(e) === m;
     }),
     (t.isPortal = function (e) {
         return O(e) === i;
@@ -98,7 +98,7 @@ function v(e) {
         return O(e) === o;
     }),
     (t.isSuspense = function (e) {
-        return O(e) === _;
+        return O(e) === p;
     }),
     (t.isValidElementType = function (e) {
         return (
@@ -108,12 +108,12 @@ function v(e) {
             e === d ||
             e === s ||
             e === o ||
-            e === _ ||
             e === p ||
+            e === _ ||
             ("object" == typeof e &&
                 null !== e &&
-                (e.$$typeof === m ||
-                    e.$$typeof === h ||
+                (e.$$typeof === h ||
+                    e.$$typeof === m ||
                     e.$$typeof === l ||
                     e.$$typeof === c ||
                     e.$$typeof === f ||

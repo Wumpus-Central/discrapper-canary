@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(254494),
     d = n(895924),
     f = n(826298),
-    _ = n(65573);
-let p = [16, 8, 8, 8],
-    h = 32,
-    m = 4,
+    p = n(65573);
+let _ = [16, 8, 8, 8],
+    m = 32,
+    h = 4,
     g = 8;
 function E(e) {
     let {
@@ -25,35 +25,35 @@ function E(e) {
             applicationCommandListRef: O,
         } = e,
         v = i.useRef(null),
-        I = i.useCallback(
+        S = i.useCallback(
             (e, t) => {
                 var n;
-                let r = 2 * m;
-                return (null == (n = a[t + 1]) ? void 0 : n.type) === d.Qi.BUILT_IN && (r += g), h + r;
+                let r = 2 * h;
+                return (null == (n = a[t + 1]) ? void 0 : n.type) === d.Qi.BUILT_IN && (r += g), m + r;
             },
             [a],
         ),
-        T = i.useCallback(
+        I = i.useCallback(
             (e, t) => {
                 var n;
                 return t
                     ? (null == (n = a[e + 1]) ? void 0 : n.type) === d.Qi.BUILT_IN
                         ? 0
-                        : 2 * m
+                        : 2 * h
                     : 0 === e
                       ? 0
-                      : 2 * m;
+                      : 2 * h;
             },
             [a],
         ),
-        S = i.useCallback(
+        T = i.useCallback(
             (e, t) => {
                 let i = a[t];
                 if (null == i) return;
                 let o = (0, f.ky)(i),
-                    c = i.type === d.Qi.BUILT_IN ? m : 0,
-                    u = h - 2 * c,
-                    p = (0, r.jsx)(o, {
+                    c = i.type === d.Qi.BUILT_IN ? h : 0,
+                    u = m - 2 * c,
+                    _ = (0, r.jsx)(o, {
                         channel: n,
                         section: i,
                         isSelected: null != b ? i.id === b : E === t,
@@ -66,7 +66,7 @@ function E(e) {
                 return (0, r.jsxs)(
                     "div",
                     {
-                        className: _.section,
+                        className: p.section,
                         children: [
                             (0, r.jsx)(s.u, {
                                 text: i.name,
@@ -77,10 +77,10 @@ function E(e) {
                                     onClick: () => {
                                         y(i);
                                     },
-                                    children: p,
+                                    children: _,
                                 }),
                             }),
-                            g ? (0, r.jsx)("hr", { className: _.builtInSeparator }) : null,
+                            g ? (0, r.jsx)("hr", { className: p.builtInSeparator }) : null,
                         ],
                     },
                     i.id,
@@ -91,18 +91,18 @@ function E(e) {
     return 0 === a.length
         ? null
         : (0, r.jsx)("div", {
-              className: o()(t, _.wrapper),
+              className: o()(t, p.wrapper),
               children: (0, r.jsx)(u.Z, {
                   categoryListRef: v,
                   expressionsListRef: O,
                   store: c.Xn,
                   categories: a,
-                  className: _.list,
-                  renderCategoryListItem: S,
+                  className: p.list,
+                  renderCategoryListItem: T,
                   rowCount: a.length,
-                  categoryHeight: I,
-                  listPadding: p,
-                  getScrollOffsetForIndex: T,
+                  categoryHeight: S,
+                  listPadding: _,
+                  getScrollOffsetForIndex: I,
               }),
           });
 }

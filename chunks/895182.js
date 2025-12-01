@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => f });
 var a = n(54381),
     l = n(473749),
     i = n(660815),
@@ -53,7 +53,7 @@ function x(e, t) {
         e
     );
 }
-function g() {
+function f() {
     let e = (0, r.e7)([m.Z], () => m.Z.getGuildId()),
         t = (0, r.e7)([u.Z], () => {
             var t;
@@ -63,18 +63,18 @@ function g() {
             var t;
             return null == (t = d.Z.getStateForGuild(e)) ? void 0 : t.instances;
         }),
-        g = l.useMemo(() => Object.values(null != n ? n : {})[0], [n]),
-        f = l.useCallback(
+        f = l.useMemo(() => Object.values(null != n ? n : {})[0], [n]),
+        g = l.useCallback(
             (t) => {
-                null != g &&
+                null != f &&
                     null != e &&
                     o.Z.dispatch({
                         type: "GAME_SERVER_UPDATE_INSTANCE_SUCCESS",
                         guildId: e,
-                        instance: x(h({}, g), { status: t }),
+                        instance: x(h({}, f), { status: t }),
                     });
             },
-            [g, e],
+            [f, e],
         ),
         b = l.useMemo(
             () =>
@@ -85,27 +85,27 @@ function g() {
                             variant: "primary",
                             text: e,
                             onClick: () => {
-                                f(e);
+                                g(e);
                             },
                         },
                         e,
                     ),
                 ),
-            [f],
+            [g],
         ),
         v = l.useCallback(() => {
-            null != g &&
+            null != f &&
                 null != e &&
                 o.Z.dispatch({
                     type: "GAME_SERVER_UPDATE_INSTANCE_SUCCESS",
                     guildId: e,
-                    instance: x(h({}, g), {
+                    instance: x(h({}, f), {
                         serverIP: void 0,
                         port: void 0,
                         gameServerPanelUrl: void 0,
                     }),
                 });
-        }, [g, e]);
+        }, [f, e]);
     return null == e
         ? null
         : (0, a.jsxs)(s.zJl, {
@@ -123,7 +123,7 @@ function g() {
                       children: [
                           (0, a.jsx)(s.Text, {
                               variant: "eyebrow",
-                              children: "Set server state for first server: ".concat(null == g ? void 0 : g.name),
+                              children: "Set server state for first server: ".concat(null == f ? void 0 : f.name),
                           }),
                           (0, a.jsx)("div", {
                               className: p.buttonContainer,

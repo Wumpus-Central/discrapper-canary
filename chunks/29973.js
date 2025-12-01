@@ -46,7 +46,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,11 +57,11 @@ function _(e, t) {
         e
     );
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -69,7 +69,7 @@ function p(e, t) {
     }
     return i;
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,7 +78,7 @@ function h(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let m = {
+let h = {
     SMALL: c.sizeSmall,
     MEDIUM: c.sizeMedium,
     LARGE: c.sizeLarge,
@@ -113,10 +113,10 @@ class g extends (r = a.PureComponent) {
     render() {
         let e = this.props,
             { className: t, children: n, tag: r, size: a, fullscreenOnMobile: o } = e,
-            l = p(e, ["className", "children", "tag", "size", "fullscreenOnMobile"]);
+            l = _(e, ["className", "children", "tag", "size", "fullscreenOnMobile"]);
         return (0, i.jsx)(
             r,
-            _(d({ className: s()(c.modal, t, a, { [c.fullscreenOnMobile]: o }) }, l), {
+            p(d({ className: s()(c.modal, t, a, { [c.fullscreenOnMobile]: o }) }, l), {
                 children: this.renderChildren(),
             }),
         );
@@ -140,9 +140,9 @@ u(g, "Header", l.xBx),
     u(g, "Content", l.hzk),
     u(g, "ListContent", l.YAO),
     u(g, "CloseButton", l.olH),
-    u(g, "Sizes", m),
+    u(g, "Sizes", h),
     u(g, "defaultProps", {
         fullscreenOnMobile: !0,
-        size: m.SMALL,
+        size: h.SMALL,
         tag: "div",
     });

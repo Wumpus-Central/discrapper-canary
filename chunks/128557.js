@@ -23,9 +23,9 @@ var i = n(54381),
     C = n(430824),
     v = n(594174),
     _ = n(259580),
-    x = n(585483),
-    j = n(63063),
-    O = n(358085),
+    O = n(585483),
+    x = n(63063),
+    j = n(358085),
     E = n(709054),
     S = n(967128),
     P = n(981631),
@@ -120,17 +120,17 @@ function M(e) {
         p = null != l && E.default.extractTimestamp(l.id) < Date.now() - P._8R,
         _ = (0, s.e7)([y.default], () => (null == l ? void 0 : l.ownerId) === y.default.getId(), [l]),
         { canInvite: M, canManageGuild: R, canMessage: L } = (0, f.TE)(t, l),
-        k = (0, s.e7)([v.default], () => {
+        D = (0, s.e7)([v.default], () => {
             var e, t;
             return (
                 (null == (e = v.default.getCurrentUser()) ? void 0 : e.desktop) === !0 ||
                 (null == (t = v.default.getCurrentUser()) ? void 0 : t.mobile) === !0
             );
         }),
-        { guildPopulated: D, guildMessaged: U, guildPersonalized: B } = (0, f.h_)(l),
+        { guildPopulated: k, guildMessaged: U, guildPersonalized: F } = (0, f.h_)(l),
         {
-            handleInvite: H,
-            handleMessage: F,
+            handleInvite: B,
+            handleMessage: H,
             handlePersonalize: V,
             handleDownload: G,
             handleAddApplication: z,
@@ -142,7 +142,7 @@ function M(e) {
                     }),
                         null != e &&
                             (0, u.ZDy)(async () => {
-                                let { default: t } = await Promise.all([n.e("49049"), n.e("7654"), n.e("68971")]).then(
+                                let { default: t } = await Promise.all([n.e("49049"), n.e("7654"), n.e("89772")]).then(
                                     n.bind(n, 560114),
                                 );
                                 return (n) =>
@@ -161,7 +161,7 @@ function M(e) {
                         setup_type: I.Ft.CHANNEL_WELCOME,
                         action: I.j7.SEND_MESSAGE,
                     }),
-                        x.S.dispatch(P.CkL.TEXTAREA_FOCUS, {
+                        O.S.dispatch(P.CkL.TEXTAREA_FOCUS, {
                             highlight: !0,
                             channelId: P.lds,
                         });
@@ -210,7 +210,7 @@ function M(e) {
                 }, [e]),
             };
         })(l),
-        W = !(k || D || U || B),
+        W = !(D || k || U || F),
         { titleAnimatedStyle: q, opacities: K } = (function (e) {
             let t = (0, d.Z)(() => new o.Z.Value(0)),
                 n = (0, d.Z)(() => new o.Z.Value(0)),
@@ -293,8 +293,8 @@ function M(e) {
                         children: (0, i.jsx)(w, {
                             iconUrl: u.YvY,
                             header: Z.intl.string(Z.t.q9n0Ta),
-                            completed: D,
-                            onClick: H,
+                            completed: k,
+                            onClick: B,
                         }),
                     },
                     "invite",
@@ -310,7 +310,7 @@ function M(e) {
                         children: (0, i.jsx)(w, {
                             iconUrl: u.$_T,
                             header: Z.intl.string(Z.t.c5kxPh),
-                            completed: B,
+                            completed: F,
                             onClick: V,
                         }),
                     },
@@ -328,13 +328,13 @@ function M(e) {
                             iconUrl: u.qMX,
                             header: Z.intl.string(Z.t["SoP7+l"]),
                             completed: U,
-                            onClick: F,
+                            onClick: H,
                         }),
                     },
                     "message",
                 ),
             ),
-        (0, O.isWeb)() &&
+        (0, j.isWeb)() &&
             Q.push(
                 (0, i.jsx)(
                     o.Z.div,
@@ -344,7 +344,7 @@ function M(e) {
                         children: (0, i.jsx)(w, {
                             iconUrl: u.yIb,
                             header: Z.intl.string(Z.t.pGVNI9),
-                            completed: k,
+                            completed: D,
                             onClick: G,
                         }),
                     },
@@ -370,7 +370,7 @@ function M(e) {
     let $ = _ ? Z.intl.string(Z.t["1ach9C"]) : Z.intl.string(Z.t["ezm+/j"]);
     p && ($ = Z.intl.string(Z.t["gwyU/J"]));
     let ee = "".concat(
-        j.Z.getArticleURL(P.BhN.GUILD_GETTING_STARTED),
+        x.Z.getArticleURL(P.BhN.GUILD_GETTING_STARTED),
         "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm",
     );
     return (0, i.jsx)(S.ZP, {

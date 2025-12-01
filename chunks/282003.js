@@ -16,11 +16,11 @@ var r =
     u = n(605507),
     d = n(190040),
     f = n(46817),
-    _ = n(187006);
+    p = n(187006);
 n(830884);
-var p = n(365049),
-    h = n(687560),
-    m = n(875583),
+var _ = n(365049),
+    m = n(687560),
+    h = n(875583),
     g = function (e, t, n) {
         if (e instanceof s) {
             var i = r({}, t),
@@ -42,7 +42,7 @@ var p = n(365049),
                     var r = t,
                         i = n;
                     r.stopTracking(),
-                        n.toValue instanceof a ? r.track(new f(r, n.toValue, p, i, e)) : r.animate(new p(i), e);
+                        n.toValue instanceof a ? r.track(new f(r, n.toValue, _, i, e)) : r.animate(new _(i), e);
                 },
                 stop: function () {
                     t.stopAnimation();
@@ -111,7 +111,7 @@ var p = n(365049),
             }),
         );
     },
-    I = function (e, t) {
+    S = function (e, t) {
         return function () {
             for (var n = arguments.length, r = Array(n), a = 0; a < n; a++) r[a] = arguments[a];
             var s = function e(t, n, r) {
@@ -143,7 +143,7 @@ e.exports = {
                 start: function (e) {
                     var r = t,
                         i = n;
-                    r.stopTracking(), r.animate(new h(i), e);
+                    r.stopTracking(), r.animate(new m(i), e);
                 },
                 stop: function () {
                     t.stopAnimation();
@@ -159,7 +159,7 @@ e.exports = {
                     var r = t,
                         i = n;
                     r.stopTracking(),
-                        n.toValue instanceof a ? r.track(new f(r, n.toValue, m, i, e)) : r.animate(new m(i), e);
+                        n.toValue instanceof a ? r.track(new f(r, n.toValue, h, i, e)) : r.animate(new h(i), e);
                 },
                 stop: function () {
                     t.stopAnimation();
@@ -184,8 +184,8 @@ e.exports = {
     sequence: b,
     parallel: y,
     stagger: v,
-    event: I,
-    isAnimated: _,
+    event: S,
+    isAnimated: p,
     createAnimatedComponent: n(533254),
     inject: {
         ApplyAnimatedValues: n(171726).inject,

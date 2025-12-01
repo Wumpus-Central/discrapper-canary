@@ -1,9 +1,9 @@
 n.d(t, {
     A1: () => g,
-    Cy: () => h,
-    VE: () => _,
-    mn: () => p,
-    y_: () => m,
+    Cy: () => m,
+    VE: () => p,
+    mn: () => _,
+    y_: () => h,
 });
 var r = n(54381);
 n(473749);
@@ -16,7 +16,7 @@ var i = n(120356),
     u = n(474936),
     d = n(388032),
     f = n(740150),
-    _ = (function (e) {
+    p = (function (e) {
         return (
             (e[(e.PREMIUM_TIER_0_WHITE_FILL = 0)] = "PREMIUM_TIER_0_WHITE_FILL"),
             (e[(e.PREMIUM_TIER_0_GRADIENT_FILL = 1)] = "PREMIUM_TIER_0_GRADIENT_FILL"),
@@ -29,7 +29,7 @@ var i = n(120356),
             e
         );
     })({});
-function p(e) {
+function _(e) {
     let { text: t, className: n, colorOptions: i = 2, icon: o, gap: l = !0 } = e;
     return (0, r.jsxs)("div", {
         className: a()(n, f.freeTrialPill, {
@@ -56,7 +56,7 @@ function p(e) {
         ],
     });
 }
-function h(e) {
+function m(e) {
     let t,
         { text: n, className: i, colorOptions: s = 2, isPillOnBorder: l = !0 } = e;
     switch (s) {
@@ -89,7 +89,7 @@ function h(e) {
                       foreground: f.sparkleStar3,
                       color: t,
                   }),
-                  (0, r.jsx)(p, {
+                  (0, r.jsx)(_, {
                       text: n,
                       colorOptions: s,
                   }),
@@ -106,7 +106,7 @@ function h(e) {
         : (0, r.jsxs)("div", {
               className: a()(i, f.freeTrialPillWithSparkles),
               children: [
-                  (0, r.jsx)(p, {
+                  (0, r.jsx)(_, {
                       text: n,
                       colorOptions: s,
                   }),
@@ -125,7 +125,7 @@ function h(e) {
               ],
           });
 }
-function m(e, t) {
+function h(e, t) {
     return t === u.Si.TIER_0
         ? d.intl.string(d.t.IBYG5U)
         : e === u.PremiumTypes.TIER_0

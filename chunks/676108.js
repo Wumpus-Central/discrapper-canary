@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(54381),
     i = n(473749),
     a = n(481060),
@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function _(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,21 +49,21 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function m(e) {
+function h(e) {
     var t;
-    let { editorRef: n, options: f, channel: p } = e,
-        m = null == (t = n.current) ? void 0 : t.getSlateEditor(),
+    let { editorRef: n, options: f, channel: _ } = e,
+        h = null == (t = n.current) ? void 0 : t.getSlateEditor(),
         g = i.useRef(null),
         E = i.useCallback(
             (e) => {
@@ -83,7 +83,7 @@ function m(e) {
             let { closePopout: t } = e;
             return (0, r.jsx)(s.Z, {
                 persistSearch: !0,
-                channel: p,
+                channel: _,
                 closePopout: t,
                 onSelectEmoji: (e) => {
                     let { emoji: n, willClose: r } = e;
@@ -96,7 +96,7 @@ function m(e) {
                 pickerIntention: u.Hz.COMMUNITY_CONTENT,
             });
         };
-    return null == m
+    return null == h
         ? null
         : (0, r.jsxs)("div", {
               id: "slate-toolbar",
@@ -121,7 +121,7 @@ function m(e) {
                           let { isShown: n } = t;
                           return (0, r.jsx)(
                               o.Z,
-                              h(_({}, e), {
+                              m(p({}, e), {
                                   ref: g,
                                   active: n,
                                   className: d.emojiButton,

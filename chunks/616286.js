@@ -1,4 +1,4 @@
-n.d(t, { T: () => O }), n(388685), n(539854);
+n.d(t, { T: () => j }), n(388685), n(539854);
 var i = n(54381),
     r = n(473749),
     l = n(120356),
@@ -18,7 +18,7 @@ var i = n(54381),
     C = n(871499),
     v = n(981631),
     _ = n(388032);
-function x(e) {
+function O(e) {
     let t = (0, s.e7)([m.Z], () => !(0, o.isEmpty)(m.Z.getTypingUsers(e)), [e]),
         n = (0, s.e7)([f.Z], () => f.Z.getVoiceChannelId() === e, [e]),
         { unreadCount: i, mentionCount: r } = (0, s.cj)(
@@ -36,9 +36,9 @@ function x(e) {
         isTyping: t,
     };
 }
-function j(e) {
+function x(e) {
     let { className: t, channelId: n } = e,
-        { unreadCount: r, mentionCount: l, isTyping: a, voiceChannelIsSelected: o } = x(n);
+        { unreadCount: r, mentionCount: l, isTyping: a, voiceChannelIsSelected: o } = O(n);
     return (0, i.jsx)(y.Z, {
         className: t,
         unreadCount: r,
@@ -47,7 +47,7 @@ function j(e) {
         canBadge: o,
     });
 }
-function O(e) {
+function j(e) {
     let t;
     var {
             channelId: n,
@@ -58,7 +58,7 @@ function O(e) {
             showRequestToSpeakSidebar: m,
             toggleRequestToSpeakSidebar: y,
         } = e,
-        O = (function (e, t) {
+        j = (function (e, t) {
             if (null == e) return {};
             var n,
                 i,
@@ -88,7 +88,7 @@ function O(e) {
             "toggleRequestToSpeakSidebar",
         ]);
     let { parentAnalyticsLocation: E } = (0, u.ZP)(),
-        { disabled: S } = O,
+        { disabled: S } = j,
         P = r.useRef(null),
         I = (0, s.e7)([d.Z], () => d.Z.getChatOpen(n), [n]),
         {
@@ -96,7 +96,7 @@ function O(e) {
             unreadCount: T,
             mentionCount: N,
         } = (function (e) {
-            let { unreadCount: t, mentionCount: n, isTyping: i } = x(e),
+            let { unreadCount: t, mentionCount: n, isTyping: i } = O(e),
                 [l, a] = r.useState(!1);
             return (
                 r.useEffect(() => {
@@ -121,7 +121,7 @@ function O(e) {
         w = r.useCallback(
             (e) => {
                 let { className: t } = e;
-                return (0, i.jsx)(j, {
+                return (0, i.jsx)(x, {
                     className: t,
                     channelId: n,
                 });
@@ -137,12 +137,12 @@ function O(e) {
         handler: S ? null : M,
     });
     let [R, L] = r.useState(!1),
-        k = r.useCallback(() => {
+        D = r.useCallback(() => {
             f && L(!0);
         }, [f]);
     (0, g.yp)({
         event: v.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
-        handler: k,
+        handler: D,
     }),
         r.useEffect(() => {
             let e;
@@ -156,10 +156,10 @@ function O(e) {
                 }
             );
         }, [R]);
-    let D = [(t = f && S ? _.intl.string(_.t.DPgc5h) : I ? _.intl.string(_.t.nthdxB) : _.intl.string(_.t["5KxXrK"]))];
+    let k = [(t = f && S ? _.intl.string(_.t.DPgc5h) : I ? _.intl.string(_.t.nthdxB) : _.intl.string(_.t["5KxXrK"]))];
     return (
-        N > 0 && D.push(_.intl.formatToPlainString(_.t["3l1GOx"], { mentionCount: N })),
-        T > 0 && D.push(_.intl.string(_.t.x5zAGZ)),
+        N > 0 && k.push(_.intl.formatToPlainString(_.t["3l1GOx"], { mentionCount: N })),
+        T > 0 && k.push(_.intl.string(_.t.x5zAGZ)),
         (0, i.jsx)(
             C.Z,
             (function (e) {
@@ -191,13 +191,13 @@ function O(e) {
                     buttonRef: P,
                     onClick: A,
                     label: t,
-                    "aria-label": D.join(", "),
+                    "aria-label": k.join(", "),
                     iconComponent: w,
                     tooltipPosition: "bottom",
                     wrapperClassName: a()(l, null != o && { [o]: Z }),
                     forceTooltipOpen: R,
                 },
-                O,
+                j,
             ),
         )
     );

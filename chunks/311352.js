@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => C });
 var r = n(54381),
     i = n(473749),
     l = n(399606),
@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(906732),
     u = n(522651),
     d = n(765585),
-    p = n(870569),
+    f = n(870569),
     h = n(819640),
-    f = n(556296),
+    p = n(556296),
     g = n(13140),
     m = n(435064),
     b = n(341569),
@@ -52,7 +52,7 @@ function j(e) {
             );
     });
 }
-let C = (e) => {
+let x = (e) => {
         let { keybindString: t, children: n, targetElementRef: i } = e;
         return (0, r.jsx)(a.yRy, {
             targetElementRef: i,
@@ -103,19 +103,19 @@ let C = (e) => {
             children: () => n,
         });
     },
-    x = () => {
+    C = () => {
         let e = i.useRef(null),
             { parentAnalyticsLocation: t } = (0, c.ZP)(),
             n = (0, l.e7)([h.Z], () => h.Z.hasLayers()),
             o = (0, b.z8)(),
             s = (0, l.e7)([m.Z], () => m.Z.getIsAtMaxSaveClipOperations()),
-            d = (0, l.e7)([f.ZP], () => f.ZP.getKeybindForAction(y.kg4.SAVE_CLIP));
+            d = (0, l.e7)([p.ZP], () => p.ZP.getKeybindForAction(y.kg4.SAVE_CLIP));
         if (!o || null == d || n) return null;
         let v = g.BB(d.shortcut, !0);
-        return (0, r.jsx)(C, {
+        return (0, r.jsx)(x, {
             keybindString: v,
             targetElementRef: e,
-            children: (0, r.jsx)(p.Z, {
+            children: (0, r.jsx)(f.Z, {
                 ref: e,
                 disabled: s,
                 tooltipText:

@@ -10,8 +10,8 @@ var i = n(442837),
     u = n(626135),
     d = n(981631),
     f = n(388032),
-    _ = n(677065);
-function p(e, t, n) {
+    p = n(677065);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,12 +35,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -57,7 +57,7 @@ function g(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -68,8 +68,8 @@ function E() {
             saturation: e,
             useReducedMotion: t,
             roleStyle: n,
-            highContrastMode: p,
-            switchIconsEnabled: m,
+            highContrastMode: _,
+            switchIconsEnabled: h,
         } = (0, i.cj)([s.Z], () => ({
             saturation: s.Z.saturation,
             useReducedMotion: s.Z.useReducedMotion,
@@ -97,7 +97,7 @@ function E() {
     function v() {
         u.default.track(d.rMx.DISPLAY_NAME_STYLES_ACCESSIBILITY_TOGGLE, { enabled: !E }), (0, o.X2)(!E);
     }
-    let I = [
+    let S = [
         (0, r.jsx)(
             a.kSQ,
             {
@@ -119,7 +119,7 @@ function E() {
                     control: (t, n) =>
                         (0, r.jsx)(
                             a._wy,
-                            g(h({}, t), {
+                            g(m({}, t), {
                                 ref: n,
                                 value: 100 * e,
                                 onChange: (e) => (0, o.o2)(e / 100),
@@ -159,7 +159,7 @@ function E() {
             {
                 children: (0, r.jsx)(a.S89, {
                     id: "display-name-styles",
-                    label: f.intl.string(_.default["2gFUEw"]),
+                    label: f.intl.string(p.default["2gFUEw"]),
                     checked: E,
                     action: v,
                 }),
@@ -169,35 +169,35 @@ function E() {
     ];
     return (
         b &&
-            I.unshift(
+            S.unshift(
                 (0, r.jsx)(
                     a.kSQ,
                     {
                         children: (0, r.jsx)(a.S89, {
                             id: "high-contrast",
                             label: f.intl.string(f.t.aZlePv),
-                            checked: p,
-                            action: () => (0, o.vW)(p ? s.X.DEFAULT : s.X.HIGH),
+                            checked: _,
+                            action: () => (0, o.vW)(_ ? s.X.DEFAULT : s.X.HIGH),
                         }),
                     },
                     "high-contrast",
                 ),
             ),
         y &&
-            I.push(
+            S.push(
                 (0, r.jsx)(
                     a.kSQ,
                     {
                         children: (0, r.jsx)(a.S89, {
                             id: "switch-icons",
                             label: f.intl.string(f.t["S3z+pV"]),
-                            checked: m,
-                            action: () => (0, o.ky)(!m),
+                            checked: h,
+                            action: () => (0, o.ky)(!h),
                         }),
                     },
                     "switch-icons",
                 ),
             ),
-        I
+        S
     );
 }

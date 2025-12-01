@@ -8,10 +8,10 @@ var r = n(703656),
     c = n(981631);
 function u(e) {
     var t, n, u, d, f;
-    let _ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    let p = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return null != e && o.Ec.has(e.type)
         ? {
-              location: _ ? (0, r.At)() : void 0,
+              location: p ? (0, r.At)() : void 0,
               thread_approximate_member_count: i.Z.getMemberCount(e.id),
               thread_approximate_message_count: a.Z.getCount(e.id),
               thread_archived: (null == (t = e.threadMetadata) ? void 0 : t.archived) === !0,

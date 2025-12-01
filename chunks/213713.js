@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685);
+n.d(t, { Z: () => A }), n(388685);
 var a = n(54381),
     l = n(473749),
     i = n(120356),
@@ -12,8 +12,8 @@ var a = n(54381),
     p = n(481060),
     h = n(570140),
     x = n(812206),
-    g = n(835473),
-    f = n(246992),
+    f = n(835473),
+    g = n(246992),
     b = n(681619),
     v = n(810568),
     j = n(168524),
@@ -22,8 +22,8 @@ var a = n(54381),
     C = n(550532),
     S = n(71585),
     E = n(146282),
-    N = n(780106),
-    T = n(650613),
+    T = n(780106),
+    N = n(650613),
     O = n(789086),
     P = n(206583),
     I = n(680027),
@@ -58,11 +58,11 @@ let k = [
         cellClassName: I.cell,
         render(e) {
             let { type: t } = e;
-            return (0, a.jsx)(A, { type: t });
+            return (0, a.jsx)(R, { type: t });
         },
     },
 ];
-function A(e) {
+function R(e) {
     var t, n;
     let { type: l } = e,
         i = (0, u.e7)([E.Z], () => E.Z.getFilters()),
@@ -82,7 +82,7 @@ function A(e) {
         },
     });
 }
-function R() {
+function A() {
     var e, t;
     let n = (0, u.e7)([E.Z], () => E.Z.getFeed(P.YN.GLOBAL_FEED)),
         i = (0, u.e7)([E.Z], () => E.Z.getDebugImpressionCappingDisabled()),
@@ -102,17 +102,17 @@ function R() {
             var e;
             return (null == (e = E.Z.getFeedState(P.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
         }),
-        [A, R] = l.useState(""),
+        [R, A] = l.useState(""),
         D = (0, u.e7)([_.Z, x.Z], () => {
             var e, t, n;
-            return parseInt(A) > 0
-                ? A
-                : null != (n = null == (e = _.Z.getGameByName(A)) ? void 0 : e.id)
+            return parseInt(R) > 0
+                ? R
+                : null != (n = null == (e = _.Z.getGameByName(R)) ? void 0 : e.id)
                   ? n
-                  : null == (t = x.Z.getApplicationByName(A))
+                  : null == (t = x.Z.getApplicationByName(R))
                     ? void 0
                     : t.id;
-        }, [A]),
+        }, [R]),
         L = (0, j.Z)({
             applicationId: D,
             location: "DevToolsContentInventory",
@@ -127,8 +127,8 @@ function R() {
                 let [t] = e;
                 return t;
             }),
-        U = (0, g.Z)(M).filter(y.lm),
-        B = (0, u.e7)([C.Z], () => C.Z.getFakeGameToShow());
+        U = (0, f.Z)(M).filter(y.lm),
+        F = (0, u.e7)([C.Z], () => C.Z.getFakeGameToShow());
     return (0, a.jsx)("div", {
         className: w.panel,
         children: (0, a.jsxs)(p.zJl, {
@@ -204,7 +204,7 @@ function R() {
                     ],
                 }),
                 !1,
-                (0, a.jsx)(T.Z, {}),
+                (0, a.jsx)(N.Z, {}),
                 (0, a.jsxs)(p.Kqy, {
                     gap: 8,
                     children: [
@@ -214,14 +214,14 @@ function R() {
                         }),
                         (0, a.jsx)(p.oil, {
                             placeholder: "App ID or full name",
-                            onChange: (e) => (0 === e.length || e.length >= 18) && R(e),
+                            onChange: (e) => (0 === e.length || e.length >= 18) && A(e),
                             onKeyDown: (e) => {
                                 "Enter" === e.key &&
-                                    (A === e.currentTarget.value ? null == L || L(e) : R(e.currentTarget.value));
+                                    (R === e.currentTarget.value ? null == L || L(e) : A(e.currentTarget.value));
                             },
                             error:
-                                A.length > 0 && null == L
-                                    ? "No game profile for ".concat(null != D ? D : A + " - try by id", ".")
+                                R.length > 0 && null == L
+                                    ? "No game profile for ".concat(null != D ? D : R + " - try by id", ".")
                                     : void 0,
                             helperText: null != L ? "Game profile found" : void 0,
                         }),
@@ -248,11 +248,11 @@ function R() {
                             children: "Force show game:",
                         }),
                         (0, a.jsx)(p.PhF, {
-                            options: N.h.map((e) => ({
+                            options: T.h.map((e) => ({
                                 label: e,
                                 value: e,
                             })),
-                            isSelected: (e) => e === B,
+                            isSelected: (e) => e === F,
                             select: function (e) {
                                 h.Z.dispatch({
                                     type: "CONTENT_INVENTORY_FORCE_SHOW_GAME_SHARING",
@@ -260,7 +260,7 @@ function R() {
                                 });
                             },
                             serialize: (e) => e,
-                            popoutLayerContext: f.O$,
+                            popoutLayerContext: g.O$,
                         }),
                     ],
                 }),

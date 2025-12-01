@@ -2,7 +2,7 @@ n.r(t),
     n.d(t, {
         default: () => C,
         errors: () => N,
-        load: () => R,
+        load: () => P,
         loadView: () => V,
     });
 var r = n(822632),
@@ -15,57 +15,57 @@ var r = n(822632),
     u = n(258823),
     d = n(552865),
     f = n(638900),
-    _ = n(460166),
-    p = n(74501),
-    h = n(580829),
-    m = n(193633),
+    p = n(460166),
+    _ = n(74501),
+    m = n(580829),
+    h = n(193633),
     g = n(686728),
     E = n(957047),
     b = n(603083),
     y = n(263007),
     O = n(110552),
     v = n(256184),
-    I = n(410747),
-    T = n(714912),
-    S = n(890742),
+    S = n(410747),
+    I = n(714912),
+    T = n(890742),
     A = n(413135).Buffer;
 let C = {
-        load: R,
+        load: P,
         loadView: V,
-        errors: S.Z,
+        errors: T.Z,
     },
-    N = S.Z;
-function R(e, t = {}) {
-    return P(e)
-        ? ((t.async = !0), D(e, t).then((e) => B(e, t)))
+    N = T.Z;
+function P(e, t = {}) {
+    return R(e)
+        ? ((t.async = !0), w(e, t).then((e) => Z(e, t)))
         : U(e)
-          ? ((t.async = !0), G(e).then((e) => B(e, t)))
-          : B(e, t);
+          ? ((t.async = !0), G(e).then((e) => Z(e, t)))
+          : Z(e, t);
 }
-function P(e) {
+function R(e) {
     return "string" == typeof e;
 }
-function D(e, t) {
+function w(e, t) {
     return /^\w+:\/\//.test(e)
         ? "undefined" != typeof fetch
-            ? w(e, t)
-            : L(e, t)
-        : M(e)
+            ? D(e, t)
+            : x(e, t)
+        : j(e)
           ? Promise.resolve((0, r.u0)(e))
-          : k(e, t);
+          : M(e, t);
 }
-function w(e, { length: t } = {}) {
+function D(e, { length: t } = {}) {
     let n = { method: "GET" };
     return (
         Number.isInteger(t) && t >= 0 && (n.headers = { range: `bytes=0-${t - 1}` }),
         fetch(e, n).then((e) => e.arrayBuffer())
     );
 }
-function L(e, { length: t } = {}) {
+function x(e, { length: t } = {}) {
     return new Promise((n, r) => {
         let i = {};
         Number.isInteger(t) && t >= 0 && (i.headers = { range: `bytes=0-${t - 1}` }),
-            x(e)(e, i, (e) => {
+            L(e)(e, i, (e) => {
                 if (e.statusCode >= 200 && e.statusCode <= 299) {
                     let t = [];
                     e.on("data", (e) => t.push(A.from(e))),
@@ -75,15 +75,15 @@ function L(e, { length: t } = {}) {
             }).on("error", (e) => r(e));
     });
 }
-function x(e) {
+function L(e) {
     return /^https:\/\//.test(e) ? require("https").get : require("http").get;
 }
-function M(e) {
+function j(e) {
     return /^data:[^;,]*(;base64)?,/.test(e);
 }
-function k(e, { length: t } = {}) {
+function M(e, { length: t } = {}) {
     return new Promise((n, r) => {
-        let i = j();
+        let i = k();
         i.open(e, (a, o) => {
             a
                 ? r(a)
@@ -108,7 +108,7 @@ function k(e, { length: t } = {}) {
         });
     });
 }
-function j() {
+function k() {
     try {
         return require("fs");
     } catch (e) {
@@ -124,10 +124,10 @@ function G(e) {
         (r.onload = (e) => t(e.target.result)), (r.onerror = () => n(r.error)), r.readAsArrayBuffer(e);
     });
 }
-function B(e, t) {
-    return Z(e) && (e = new Uint8Array(e).buffer), V(F(e), t);
+function Z(e, t) {
+    return B(e) && (e = new Uint8Array(e).buffer), V(F(e), t);
 }
-function Z(e) {
+function B(e) {
     try {
         return A.isBuffer(e);
     } catch (e) {
@@ -154,51 +154,51 @@ function V(
         C = {},
         N = [],
         {
-            fileType: R,
-            fileDataOffset: P,
-            jfifDataOffset: D,
-            tiffHeaderOffset: w,
-            iptcDataOffset: L,
-            xmpChunks: x,
-            iccChunks: M,
-            mpfDataOffset: k,
-            pngHeaderOffset: j,
+            fileType: P,
+            fileDataOffset: R,
+            jfifDataOffset: w,
+            tiffHeaderOffset: D,
+            iptcDataOffset: x,
+            xmpChunks: L,
+            iccChunks: j,
+            mpfDataOffset: M,
+            pngHeaderOffset: k,
             pngTextChunks: U,
             pngChunkOffsets: G,
-            vp8xChunkOffset: B,
-            gifHeaderOffset: Z,
+            vp8xChunkOffset: Z,
+            gifHeaderOffset: B,
         } = s.Z.parseAppMarkers(e, n);
-    if (a.Z.USE_JPEG && a.Z.USE_FILE && H(P)) {
+    if (a.Z.USE_JPEG && a.Z.USE_FILE && H(R)) {
         A = !0;
-        let n = u.Z.read(e, P);
+        let n = u.Z.read(e, R);
         t ? (C.file = n) : (C = (0, r.wB)({}, C, n));
     }
-    if (a.Z.USE_JPEG && a.Z.USE_JFIF && Y(D)) {
+    if (a.Z.USE_JPEG && a.Z.USE_JFIF && Y(w)) {
         A = !0;
-        let n = d.Z.read(e, D);
+        let n = d.Z.read(e, w);
         t ? (C.jfif = n) : (C = (0, r.wB)({}, C, n));
     }
-    if (a.Z.USE_EXIF && W(w)) {
+    if (a.Z.USE_EXIF && W(D)) {
         A = !0;
-        let { tags: n, byteOrder: s } = l.Z.read(e, w, i);
+        let { tags: n, byteOrder: s } = l.Z.read(e, D, i);
         if (
             (n.Thumbnail && ((C.Thumbnail = n.Thumbnail), delete n.Thumbnail),
             t ? ((C.exif = n), K(C)) : (C = (0, r.wB)({}, C, n)),
-            a.Z.USE_TIFF && a.Z.USE_IPTC && n["IPTC-NAA"] && !z(L))
+            a.Z.USE_TIFF && a.Z.USE_IPTC && n["IPTC-NAA"] && !z(x))
         ) {
             let e = f.Z.read(n["IPTC-NAA"].value, 0, i);
             t ? (C.iptc = e) : (C = (0, r.wB)({}, C, e));
         }
-        if (a.Z.USE_TIFF && a.Z.USE_XMP && n.ApplicationNotes && !q(x)) {
-            let e = _.Z.read((0, r.nZ)(n.ApplicationNotes.value), void 0, o);
+        if (a.Z.USE_TIFF && a.Z.USE_XMP && n.ApplicationNotes && !q(L)) {
+            let e = p.Z.read((0, r.nZ)(n.ApplicationNotes.value), void 0, o);
             t ? (C.xmp = e) : (delete e._raw, (C = (0, r.wB)({}, C, e)));
         }
         if (a.Z.USE_PHOTOSHOP && n.ImageSourceData && n.PhotoshopSettings) {
-            let e = p.Z.read(n.PhotoshopSettings.value, i);
+            let e = _.Z.read(n.PhotoshopSettings.value, i);
             t ? (C.photoshop = e) : (C = (0, r.wB)({}, C, e));
         }
-        if (a.Z.USE_TIFF && a.Z.USE_ICC && n.ICC_Profile && !X(M)) {
-            let e = h.Z.read(n.ICC_Profile.value, [
+        if (a.Z.USE_TIFF && a.Z.USE_ICC && n.ICC_Profile && !Q(j)) {
+            let e = m.Z.read(n.ICC_Profile.value, [
                 {
                     offset: 0,
                     length: n.ICC_Profile.value.length,
@@ -209,39 +209,39 @@ function V(
             t ? (C.icc = e) : (C = (0, r.wB)({}, C, e));
         }
         if (a.Z.USE_MAKER_NOTES && n.MakerNote) {
-            if (Q(n)) {
-                let a = m.Z.read(e, w, n.MakerNote.__offset, s, i);
+            if (X(n)) {
+                let a = h.Z.read(e, D, n.MakerNote.__offset, s, i);
                 t ? (C.makerNotes = a) : (C = (0, r.wB)({}, C, a));
             } else if (J(n)) {
-                let a = g.Z.read(e, w, n.MakerNote.__offset, i);
+                let a = g.Z.read(e, D, n.MakerNote.__offset, i);
                 t ? (C.makerNotes = a) : (C = (0, r.wB)({}, C, a));
             }
         }
         n.MakerNote && delete n.MakerNote.__offset;
     }
-    if (a.Z.USE_JPEG && a.Z.USE_IPTC && z(L)) {
+    if (a.Z.USE_JPEG && a.Z.USE_IPTC && z(x)) {
         A = !0;
-        let n = f.Z.read(e, L, i);
+        let n = f.Z.read(e, x, i);
         t ? (C.iptc = n) : (C = (0, r.wB)({}, C, n));
     }
-    if (a.Z.USE_XMP && q(x)) {
+    if (a.Z.USE_XMP && q(L)) {
         A = !0;
-        let n = _.Z.read(e, x, o);
+        let n = p.Z.read(e, L, o);
         t ? (C.xmp = n) : (delete n._raw, (C = (0, r.wB)({}, C, n)));
     }
-    if ((a.Z.USE_JPEG || a.Z.USE_WEBP) && a.Z.USE_ICC && X(M)) {
+    if ((a.Z.USE_JPEG || a.Z.USE_WEBP) && a.Z.USE_ICC && Q(j)) {
         A = !0;
-        let t = h.Z.read(e, M, n);
+        let t = m.Z.read(e, j, n);
         t instanceof Promise ? N.push(t.then(eo)) : eo(t);
     }
-    if (a.Z.USE_MPF && $(k)) {
+    if (a.Z.USE_MPF && $(M)) {
         A = !0;
-        let n = c.Z.read(e, k, i);
+        let n = c.Z.read(e, M, i);
         t ? (C.mpf = n) : (C = (0, r.wB)({}, C, n));
     }
-    if (a.Z.USE_PNG && a.Z.USE_PNG_FILE && ee(j)) {
+    if (a.Z.USE_PNG && a.Z.USE_PNG_FILE && ee(k)) {
         A = !0;
-        let n = E.Z.read(e, j);
+        let n = E.Z.read(e, k);
         t ? ((C.png = C.png ? (0, r.wB)({}, C.png, n) : n), (C.pngFile = n)) : (C = (0, r.wB)({}, C, n));
     }
     if (a.Z.USE_PNG && et(U)) {
@@ -254,25 +254,25 @@ function V(
         let n = y.Z.read(e, G);
         t ? (C.png = C.png ? (0, r.wB)({}, C.png, n) : n) : (C = (0, r.wB)({}, C, n));
     }
-    if (a.Z.USE_WEBP && er(B)) {
+    if (a.Z.USE_WEBP && er(Z)) {
         A = !0;
-        let n = O.Z.read(e, B);
+        let n = O.Z.read(e, Z);
         t ? (C.riff = C.riff ? (0, r.wB)({}, C.riff, n) : n) : (C = (0, r.wB)({}, C, n));
     }
-    if (a.Z.USE_GIF && ei(Z)) {
+    if (a.Z.USE_GIF && ei(B)) {
         A = !0;
-        let n = v.Z.read(e, Z);
+        let n = v.Z.read(e, B);
         t ? (C.gif = C.gif ? (0, r.wB)({}, C.gif, n) : n) : (C = (0, r.wB)({}, C, n));
     }
-    let F = T.Z.get(C, t);
+    let F = I.Z.get(C, t);
     F && (t ? (C.composite = F) : (C = (0, r.wB)({}, C, F)));
-    let ea = (a.Z.USE_JPEG || a.Z.USE_WEBP) && a.Z.USE_EXIF && a.Z.USE_THUMBNAIL && I.Z.get(e, C.Thumbnail, w);
+    let ea = (a.Z.USE_JPEG || a.Z.USE_WEBP) && a.Z.USE_EXIF && a.Z.USE_THUMBNAIL && S.Z.get(e, C.Thumbnail, D);
     if (
         (ea ? ((A = !0), (C.Thumbnail = ea)) : delete C.Thumbnail,
-        R && (t ? (C.file || (C.file = {}), (C.file.FileType = R)) : (C.FileType = R), (A = !0)),
+        P && (t ? (C.file || (C.file = {}), (C.file.FileType = P)) : (C.FileType = P), (A = !0)),
         !A)
     )
-        throw new S.Z.MetadataMissingError();
+        throw new T.Z.MetadataMissingError();
     if (n) return Promise.all(N).then(() => C);
     return C;
     function eo(e) {
@@ -328,10 +328,10 @@ function z(e) {
 function q(e) {
     return Array.isArray(e) && e.length > 0;
 }
-function X(e) {
+function Q(e) {
     return Array.isArray(e) && e.length > 0;
 }
-function Q(e) {
+function X(e) {
     return (
         e.Make &&
         e.Make.value &&

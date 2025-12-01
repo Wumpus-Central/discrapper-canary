@@ -10,10 +10,10 @@ var i = n(990547),
     u = n(799360),
     d = n(342386),
     f = n(771934),
-    _ = n(422129),
-    p = n(388032),
-    h = n(640744),
-    m = n(758335);
+    p = n(896591),
+    _ = n(388032),
+    m = n(640744),
+    h = n(758335);
 function g() {
     let { analyticsLocations: e } = (0, s.ZP)();
     (0, l.Z)({
@@ -23,27 +23,27 @@ function g() {
     });
     let t = (0, u.B)(
             {
-                "en-US": _.default["f/cLEi"],
-                "en-GB": _.default["f/cLEi"],
+                "en-US": p.default["f/cLEi"],
+                "en-GB": p.default["f/cLEi"],
             },
-            _.default.CARxAC,
+            p.default.CARxAC,
         ),
         n = () => {
             (0, f.DI)(f.Ln.APPEARANCE_SETTINGS), (0, c.XO)(c.wh.CUSTOM_THEME, { from: c.tE.SETTING }), (0, d.default)();
         };
     return (0, r.jsxs)("div", {
-        className: h.container,
+        className: m.container,
         children: [
             (0, r.jsx)("div", {
-                className: h.iconContainer,
+                className: m.iconContainer,
                 children: (0, r.jsx)("img", {
-                    src: m.Z,
-                    className: h.bannerImage,
+                    src: h.Z,
+                    className: m.bannerImage,
                     alt: "",
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: h.textContent,
+                className: m.textContent,
                 children: [
                     (0, r.jsx)(o.Heading, {
                         variant: "heading-lg/semibold",
@@ -52,15 +52,15 @@ function g() {
                     }),
                     (0, r.jsx)(o.Text, {
                         variant: "text-sm/normal",
-                        children: p.intl.string(_.default.nla4RG),
+                        children: _.intl.string(p.default.nla4RG),
                     }),
                 ],
             }),
             (0, r.jsx)("div", {
-                className: h.buttonContainer,
+                className: m.buttonContainer,
                 children: (0, r.jsx)(a.zxk, {
                     variant: "primary",
-                    text: p.intl.string(p.t.uw9zI7),
+                    text: _.intl.string(_.t.uw9zI7),
                     onClick: n,
                 }),
             }),

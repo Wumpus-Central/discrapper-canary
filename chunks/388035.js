@@ -11,10 +11,10 @@ let d = i.z.FOR_LATER_POPOUT_COACHMARK;
 function f(e) {
     let { location: t, targetElementRef: n } = e,
         { enabled: i, inInbox: f } = s.Z.useExperiment({ location: "ForLaterCoachmarkWeb" }, { autoTrackExposure: !1 }),
-        _ = t === (f ? "inbox-button" : "bookmarks-button"),
-        p = i && _ ? [d] : [],
-        [h, m] = (0, o.US)(p, void 0);
-    return h !== d
+        p = t === (f ? "inbox-button" : "bookmarks-button"),
+        _ = i && p ? [d] : [],
+        [m, h] = (0, o.US)(_, void 0);
+    return m !== d
         ? null
         : (0, r.jsx)(a.J2, {
               targetElementRef: n,
@@ -23,13 +23,13 @@ function f(e) {
               align: "right",
               shouldShow: !0,
               caretConfig: { align: "end" },
-              onRequestClose: () => m(l.L.USER_DISMISS),
+              onRequestClose: () => h(l.L.USER_DISMISS),
               title: c.intl.string(c.t.qPbFK2),
               body: c.intl.string(c.t.URrJq1),
               actions: [
                   {
                       text: c.intl.string(c.t["NX+WJN"]),
-                      onClick: () => m(l.L.USER_DISMISS),
+                      onClick: () => h(l.L.USER_DISMISS),
                   },
               ],
               graphic: {

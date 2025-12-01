@@ -1,6 +1,6 @@
 n.d(t, {
-    d: () => m,
-    h: () => h,
+    d: () => h,
+    h: () => m,
 });
 var r = n(54381),
     i = n(473749),
@@ -60,8 +60,8 @@ function f(e, t) {
         e
     );
 }
-let _ = 20,
-    p = {
+let p = 20,
+    _ = {
         confettiCanvas: null,
         cannon: null,
         createConfetti: () => void 0,
@@ -71,22 +71,22 @@ let _ = 20,
         addClickListener: () => l.dG4,
         removeClickListener: l.dG4,
     },
-    h = i.createContext(p);
-function m(e) {
+    m = i.createContext(_);
+function h(e) {
     let {
             children: t,
             confettiCanvas: n,
             spriteCanvas: l,
             baseConfig: c,
             addClickListener: d,
-            removeClickListener: m,
+            removeClickListener: h,
         } = e,
         g = (0, a.uR)(n, l),
         E = (0, o.e7)([s.Z], () => s.Z.useReducedMotion),
         b = i.useMemo(
             () =>
                 E
-                    ? p
+                    ? _
                     : {
                           confettiCanvas: n,
                           cannon: g,
@@ -108,12 +108,12 @@ function m(e) {
                                   r,
                               ),
                           createMultipleConfetti: function (e) {
-                              let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _,
+                              let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : p,
                                   n = arguments.length > 2 ? arguments[2] : void 0;
                               return g.createMultipleConfetti(u({}, c, e), t, n);
                           },
                           createMultipleConfettiAt: function (e, t, n) {
-                              let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : _,
+                              let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : p,
                                   i = arguments.length > 4 ? arguments[4] : void 0;
                               return g.createMultipleConfetti(
                                   u(
@@ -133,11 +133,11 @@ function m(e) {
                               );
                           },
                           addClickListener: d,
-                          removeClickListener: m,
+                          removeClickListener: h,
                       },
-            [d, c, g, n, E, m],
+            [d, c, g, n, E, h],
         );
-    return (0, r.jsx)(h.Provider, {
+    return (0, r.jsx)(m.Provider, {
         value: b,
         children: t,
     });

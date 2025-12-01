@@ -1,6 +1,6 @@
 n.d(t, {
     $: () => c,
-    a: () => _,
+    a: () => p,
 });
 var r = n(231053),
     i = n(388032);
@@ -95,9 +95,9 @@ let u = (e) => {
                 userIsRoleSubscriber: u,
                 isRoleSubscriptionEmoji: d,
                 shouldHideRoleSubscriptionCTA: f,
-                onOpenPremiumSettings: _,
+                onOpenPremiumSettings: p,
             } = e,
-            p = null;
+            _ = null;
         return t === r.w6.APPLICATION && null != n
             ? i.intl.formatToPlainString(i.t.uERlTd, { appName: n.name })
             : a
@@ -128,7 +128,7 @@ let u = (e) => {
                         : i.intl.string(i.t.jQy3aM)
                 : l
                   ? i.intl.string(i.t.FJ6Z01)
-                  : i.intl.format(i.t.U6vLcA, { openPremiumSettings: _ });
+                  : i.intl.format(i.t.U6vLcA, { openPremiumSettings: p });
     },
     f = (e) => {
         let { isPremium: t, hasJoinedEmojiSourceGuild: n, isUnusableRoleSubscriptionEmoji: r, isDiscoverable: a } = e,
@@ -153,7 +153,7 @@ let u = (e) => {
                     description: null,
                 };
     },
-    _ = (e) => {
+    p = (e) => {
         let t = d(e),
             n = u(e);
         return l(o({}, f(e)), {

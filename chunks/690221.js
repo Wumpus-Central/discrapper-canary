@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381),
     i = n(473749),
     a = n(481060),
@@ -60,7 +60,7 @@ function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -68,7 +68,7 @@ function f(e, t) {
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -77,17 +77,17 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let p = i.forwardRef(function (e, t) {
-    var { href: n, children: l, onClick: u, onKeyPress: _, focusProps: p } = e,
-        h = f(e, ["href", "children", "onClick", "onKeyPress", "focusProps"]);
-    let m = i.useCallback(
+let _ = i.forwardRef(function (e, t) {
+    var { href: n, children: l, onClick: u, onKeyPress: p, focusProps: _ } = e,
+        m = f(e, ["href", "children", "onClick", "onKeyPress", "focusProps"]);
+    let h = i.useCallback(
             (e) => {
                 e.repeat ||
                     ((e.charCode === s.yXg.SPACE || e.charCode === s.yXg.ENTER) &&
                         (e.preventDefault(), null != n && (0, o.uL)(n), null == u || u()),
-                    null == _ || _(e));
+                    null == p || p(e));
             },
-            [n, _, u],
+            [n, p, u],
         ),
         g = i.useCallback(
             (e) => {
@@ -106,12 +106,12 @@ let p = i.forwardRef(function (e, t) {
                         ref: t,
                         href: n,
                         onClick: g,
-                        onKeyPress: m,
+                        onKeyPress: h,
                     },
-                    h,
+                    m,
                 ),
                 { children: l },
             ),
         );
-    return (0, r.jsx)(a.tEY, d(c({}, p), { children: E }));
+    return (0, r.jsx)(a.tEY, d(c({}, _), { children: E }));
 });

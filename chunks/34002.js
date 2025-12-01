@@ -8,11 +8,11 @@ var r = n(720218),
     u = n(843260),
     d = "'",
     f = "/",
-    _ = a.isBrowser("Firefox");
-function p(e) {
-    return _ && (e == d || e == f);
+    p = a.isBrowser("Firefox");
+function _(e) {
+    return p && (e == d || e == f);
 }
-function h(e, t, n, a, o) {
+function m(e, t, n, a, o) {
     var s = r.replaceText(e.getCurrentContent(), e.getSelection(), t, n, a);
     return i.push(e, s, "insert-characters", o);
 }
@@ -29,15 +29,15 @@ e.exports = function (e, t) {
             f = a.getAnchorKey();
         if (!a.isCollapsed()) {
             t.preventDefault(),
-                e.update(h(n, r, n.getCurrentInlineStyle(), o(n.getCurrentContent(), n.getSelection()), !0));
+                e.update(m(n, r, n.getCurrentInlineStyle(), o(n.getCurrentContent(), n.getSelection()), !0));
             return;
         }
-        var _ = h(n, r, n.getCurrentInlineStyle(), o(n.getCurrentContent(), n.getSelection()), !1),
-            m = !1;
-        if ((m || (m = l(e._latestCommittedEditorState)), !m)) {
+        var p = m(n, r, n.getCurrentInlineStyle(), o(n.getCurrentContent(), n.getSelection()), !1),
+            h = !1;
+        if ((h || (h = l(e._latestCommittedEditorState)), !h)) {
             var g = n.getBlockTree(f),
-                E = _.getBlockTree(f);
-            m =
+                E = p.getBlockTree(f);
+            h =
                 g.size !== E.size ||
                 g.zip(E).some(function (e) {
                     var t = e[0],
@@ -58,12 +58,12 @@ e.exports = function (e, t) {
                     );
                 });
         }
-        if ((m || (m = p(r)), m || (m = c(_.getDirectionMap()).get(f) !== c(n.getDirectionMap()).get(f)), m)) {
-            t.preventDefault(), (_ = i.set(_, { forceSelection: !0 })), e.update(_);
+        if ((h || (h = _(r)), h || (h = c(p.getDirectionMap()).get(f) !== c(n.getDirectionMap()).get(f)), h)) {
+            t.preventDefault(), (p = i.set(p, { forceSelection: !0 })), e.update(p);
             return;
         }
-        (_ = i.set(_, { nativelyRenderedContent: _.getCurrentContent() })),
-            (e._pendingStateFromBeforeInput = _),
+        (p = i.set(p, { nativelyRenderedContent: p.getCurrentContent() })),
+            (e._pendingStateFromBeforeInput = p),
             u(function () {
                 void 0 !== e._pendingStateFromBeforeInput &&
                     (e.update(e._pendingStateFromBeforeInput), (e._pendingStateFromBeforeInput = void 0));

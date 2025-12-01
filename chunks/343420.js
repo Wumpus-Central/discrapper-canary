@@ -42,11 +42,11 @@ function u() {
         null != C && (e.client_heartbeat_renderer_memory_used_heap = C);
         let N = s.Z.getMemoryUsageElectronProcessTypeDetails();
         if (null != N) {
-            var t, n, r, i, a, o, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S;
+            var t, n, r, i, a, o, l, c, u, d, f, p, _, m, h, g, E, b, y, O, v, S, I, T;
             (e.electron_process_memory_private = [
-                null != (p = null == (t = N.unknown) ? void 0 : t.wss_priv_kb) ? p : -1,
-                null != (h = null == (n = N.main) ? void 0 : n.wss_priv_kb) ? h : -1,
-                null != (m = null == (r = N.renderer) ? void 0 : r.wss_priv_kb) ? m : -1,
+                null != (_ = null == (t = N.unknown) ? void 0 : t.wss_priv_kb) ? _ : -1,
+                null != (m = null == (n = N.main) ? void 0 : n.wss_priv_kb) ? m : -1,
+                null != (h = null == (r = N.renderer) ? void 0 : r.wss_priv_kb) ? h : -1,
                 null != (g = null == (i = N.gpu) ? void 0 : i.wss_priv_kb) ? g : -1,
                 null != (E = null == (a = N.crashpad) ? void 0 : a.wss_priv_kb) ? E : -1,
                 null != (b = null == (o = N.utility) ? void 0 : o.wss_priv_kb) ? b : -1,
@@ -55,9 +55,9 @@ function u() {
                     null != (y = null == (l = N.unknown) ? void 0 : l.wss_kb) ? y : -1,
                     null != (O = null == (c = N.main) ? void 0 : c.wss_kb) ? O : -1,
                     null != (v = null == (u = N.renderer) ? void 0 : u.wss_kb) ? v : -1,
-                    null != (I = null == (d = N.gpu) ? void 0 : d.wss_kb) ? I : -1,
-                    null != (T = null == (f = N.crashpad) ? void 0 : f.wss_kb) ? T : -1,
-                    null != (S = null == (_ = N.utility) ? void 0 : _.wss_kb) ? S : -1,
+                    null != (S = null == (d = N.gpu) ? void 0 : d.wss_kb) ? S : -1,
+                    null != (I = null == (f = N.crashpad) ? void 0 : f.wss_kb) ? I : -1,
+                    null != (T = null == (p = N.utility) ? void 0 : p.wss_kb) ? T : -1,
                 ]);
         }
     }

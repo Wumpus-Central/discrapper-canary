@@ -38,8 +38,8 @@ let d = (0, a.memoize)(
                 u = 0.8,
                 d = i().mix(i()(e), i()(t), o, "lab"),
                 f = Math.round(100 * d.get("hsl.l")) / 100,
-                _ = r ? (0, a.clamp)(f, 0, s) : (0, a.clamp)(f, u, 1);
-            return i()(d).set("hsl.l", _).num();
+                p = r ? (0, a.clamp)(f, 0, s) : (0, a.clamp)(f, u, 1);
+            return i()(d).set("hsl.l", p).num();
         },
         (e, t, n) => "".concat(e, "-").concat(t, "-").concat(n),
     );

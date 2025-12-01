@@ -69,7 +69,7 @@ let y = i.memo(function (e) {
             null != y &&
                 ((0, s.ZDy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("37031"), n.e("89650"), n.e("40394")]).then(
+                        let { default: e } = await Promise.all([n.e("37031"), n.e("89650"), n.e("37157")]).then(
                             n.bind(n, 611446),
                         );
                         return (n) => {

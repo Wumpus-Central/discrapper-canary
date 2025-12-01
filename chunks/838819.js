@@ -1,10 +1,10 @@
-n.r(t), n.d(t, { default: () => D }), n(388685);
+n.r(t), n.d(t, { default: () => H }), n(388685);
 var r = n(54381),
     l = n(473749),
     i = n(120356),
     a = n.n(i),
-    s = n(772848),
-    o = n(399606),
+    o = n(772848),
+    s = n(399606),
     c = n(952265),
     u = n(481060),
     d = n(150063),
@@ -27,14 +27,14 @@ var r = n(54381),
     I = n(426171),
     T = n(963102),
     L = n(508498),
-    B = n(681435),
-    P = n(811847),
+    P = n(681435),
+    B = n(811847),
     N = n(215023),
     A = n(981631),
     R = n(295907),
     Z = n(887353),
     w = n(219588);
-let H = (e) => {
+let D = (e) => {
         let { children: t, shouldAddEventListener: n, onClose: r } = e,
             i = (0, c.f9)();
         return (
@@ -48,16 +48,16 @@ let H = (e) => {
             t
         );
     },
-    D = function (e) {
+    H = function (e) {
         let { tab: t = N.AW.HOME } = e;
         (0, m.z)(p.f), (0, S.f)();
-        let n = (0, f.Z)((0, s.Z)()),
-            i = (0, o.e7)([C.default], () => C.default.getCurrentUser());
+        let n = (0, f.Z)((0, o.Z)()),
+            i = (0, s.e7)([C.default], () => C.default.getCurrentUser());
         (0, h.p2)();
-        let c = (0, P.B)("CollectiblesShop"),
+        let c = (0, B.B)("CollectiblesShop"),
             { onClose: R } = (0, L.Db)(),
-            { currentTab: D, hasFilters: M } = (0, j.S)(),
-            F = l.useMemo(() => (t === N.AW.HOME && D && M() ? D : t), [t, D, M]),
+            { currentTab: H, hasFilters: M } = (0, j.S)(),
+            F = l.useMemo(() => (t === N.AW.HOME && H && M() ? H : t), [t, H, M]),
             { categories: W, refreshCategories: V } = (0, E.ZP)(
                 { logPerf: !0 },
                 {
@@ -67,7 +67,7 @@ let H = (e) => {
             ),
             U = (0, O.O)(W),
             [z, G] = l.useState(),
-            K = (0, o.e7)([b.Z], () => {
+            K = (0, s.e7)([b.Z], () => {
                 var e;
                 return null == (e = b.Z.getCategory(z)) ? void 0 : e.name;
             }),
@@ -78,7 +78,7 @@ let H = (e) => {
             }, []),
             { selectedTab: Q, transitionState: X, transitionToTab: $ } = (0, y.B)(F);
         (0, x.q3)(n, Q, K, X, Y), (0, x.EB)(Q, i);
-        let { dismissShopButtonDC: ee } = (0, B.Z)();
+        let { dismissShopButtonDC: ee } = (0, P.Z)();
         l.useEffect(() => {
             ee();
         }, [ee]),
@@ -103,7 +103,7 @@ let H = (e) => {
                 },
                 children: (0, r.jsx)(v.ni, {
                     tab: Q,
-                    children: (0, r.jsx)(H, {
+                    children: (0, r.jsx)(D, {
                         onClose: R,
                         shouldAddEventListener: !1,
                         children: (0, r.jsxs)("div", {

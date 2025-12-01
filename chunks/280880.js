@@ -10,7 +10,7 @@ var i = n(120356),
     u = n(388032),
     d = n(463063),
     f = n(799641);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,12 +34,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -51,12 +51,12 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -85,20 +85,20 @@ function E(e, t) {
 }
 function b(e) {
     var { guild: t, focused: n, onSelectItem: i } = e,
-        _ = g(e, ["guild", "focused", "onSelectItem"]);
-    let { canCreateExpressions: h } = (0, l.XJ)(t);
+        p = g(e, ["guild", "focused", "onSelectItem"]);
+    let { canCreateExpressions: m } = (0, l.XJ)(t);
     return (0, r.jsx)(o.u, {
         text: u.intl.string(u.t["fHo+z1"]),
-        shouldShow: !h,
+        shouldShow: !m,
         children: (0, r.jsx)("li", {
             className: d.soundButtonWrapper,
             children: (0, r.jsxs)(
                 s.kL8,
-                m(p({}, _), {
+                h(_({}, p), {
                     "aria-label": u.intl.formatToPlainString(u.t.c1qVYh, { guildName: t.name }),
                     className: a()(f.soundAddButton, {
                         [f.focused]: n,
-                        [f.disabled]: !h,
+                        [f.disabled]: !m,
                     }),
                     onClick: () => (null != i ? i() : (0, c.Z)(t.id)),
                     children: [
@@ -108,7 +108,7 @@ function b(e) {
                         }),
                         (0, r.jsx)(s.Text, {
                             variant: "text-xs/semibold",
-                            color: h ? "currentColor" : "text-muted",
+                            color: m ? "currentColor" : "text-muted",
                             children: u.intl.string(u.t["8Fu/S7"]),
                         }),
                     ],

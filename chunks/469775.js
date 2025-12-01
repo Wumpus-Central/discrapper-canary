@@ -1,8 +1,8 @@
 n.d(t, {
-    Rh: () => _,
-    Rp: () => p,
+    Rh: () => p,
+    Rp: () => _,
     dx: () => c,
-    ed: () => h,
+    ed: () => m,
     uH: () => u,
     ux: () => f,
     zJ: () => d,
@@ -12,7 +12,7 @@ var r = n(63063),
     i = n(168107),
     a = n(480916),
     o = n(981631),
-    s = n(760902),
+    s = n(282354),
     l = n(388032);
 let c = new Set([a.cU.NSFW_GUILD]),
     u = (e) => [
@@ -36,10 +36,10 @@ let c = new Set([a.cU.NSFW_GUILD]),
     ],
     d = "AGE_VERIFICATION_MODAL_KEY",
     f = "AGE_VERIFICATION_GET_STARTED_MODAL_KEY";
-var _ = (function (e) {
+var p = (function (e) {
         return (e.K_ID = "K_ID"), (e.PERSONA = "PERSONA"), e;
     })({}),
-    p = (function (e) {
+    _ = (function (e) {
         return (
             (e[(e.FACIAL_AGE_ESTIMATION = 1)] = "FACIAL_AGE_ESTIMATION"),
             (e[(e.ID_VERIFICATION = 2)] = "ID_VERIFICATION"),
@@ -47,7 +47,7 @@ var _ = (function (e) {
             e
         );
     })({});
-let h = {
+let m = {
     1: {
         title: s.default["2yLvkS"],
         description: s.default.eJmat5,

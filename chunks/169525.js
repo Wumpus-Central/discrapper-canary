@@ -1,10 +1,10 @@
 n.d(t, {
     As: () => E,
-    BP: () => h,
+    BP: () => m,
     MC: () => y,
-    dn: () => p,
+    dn: () => _,
     hL: () => b,
-    lK: () => m,
+    lK: () => h,
 }),
     n(997841);
 var r = n(95015),
@@ -17,8 +17,8 @@ var r = n(95015),
     u = n(496675),
     d = n(255269),
     f = n(981631),
-    _ = n(388032);
-let p = (e, t) => {
+    p = n(388032);
+let _ = (e, t) => {
         let { spoiler: n, flags: i = 0 } = e,
             l = (0, s.LD)(
                 {
@@ -42,7 +42,7 @@ let p = (e, t) => {
                 ? o.wk.SPOILER
                 : null;
     },
-    h = (e, t, n, r) => {
+    m = (e, t, n, r) => {
         let i = (0, s.LD)(
                 {
                     type: a.l.Embed,
@@ -61,7 +61,7 @@ let p = (e, t) => {
                 );
         return i.length > 0 ? i[0] : l ? o.wk.POTENTIAL_EXPLICIT_CONTENT : n ? o.wk.SPOILER : null;
     },
-    m = function (e, t) {
+    h = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
             i = (0, s.LD)(
@@ -139,9 +139,9 @@ let y = (e) => {
         case o.wk.EXPLICIT_CONTENT:
         case o.wk.GORE_CONTENT:
         case o.wk.SELF_HARM_CONTENT:
-            return _.intl.string(_.t.SEgHFh);
+            return p.intl.string(p.t.SEgHFh);
         case o.wk.SPOILER:
-            return _.intl.string(_.t["XpfDH+"]);
+            return p.intl.string(p.t["XpfDH+"]);
         default:
             return;
     }

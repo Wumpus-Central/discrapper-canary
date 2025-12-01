@@ -1,6 +1,6 @@
 n.d(t, {
-    A: () => h,
-    Z: () => m,
+    A: () => m,
+    Z: () => h,
 });
 var r = n(54381);
 n(473749);
@@ -40,7 +40,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -52,21 +52,21 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e) {
+function m(e) {
     return (0, r.jsx)(
         "svg",
-        p(f({}, (0, s.Z)(f({}, e))), {
+        _(f({}, (0, s.Z)(f({}, e))), {
             width: "25",
             height: "48",
             viewBox: "0 0 25 48",
@@ -79,7 +79,7 @@ function h(e) {
         }),
     );
 }
-function m(e) {
+function h(e) {
     let {
         className: t,
         forceUseColorForSparkles: n = !1,

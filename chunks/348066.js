@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(54381),
     i = n(473749),
     a = n(670081),
@@ -9,26 +9,26 @@ var r = n(54381),
     u = n(867305),
     d = n(557843),
     f = n(10514),
-    _ = n(686834),
-    p = n(159183);
-function h(e) {
+    p = n(686834),
+    _ = n(159183);
+function m(e) {
     let { questId: t } = e,
         {
             quests: n,
-            excludedQuests: h,
-            isFetchingCurrentQuests: m,
+            excludedQuests: m,
+            isFetchingCurrentQuests: h,
         } = (0, s.J2)({
             fetchPolicy: "cache-or-network",
             callerSource: "embed",
         }),
-        g = i.useMemo(() => (0, c._x)(t, n, h), [t, n, h]),
-        E = i.useMemo(() => h.find((e) => e.id === t), [t, h]),
+        g = i.useMemo(() => (0, c._x)(t, n, m), [t, n, m]),
+        E = i.useMemo(() => m.find((e) => e.id === t), [t, m]),
         b = i.useMemo(
             () => (null == g ? void 0 : g.config.features.includes(a.S.MOBILE_ONLY_QUEST_PUSH_TO_MOBILE)) === !0,
             [null == g ? void 0 : g.config.features],
         );
-    return m
-        ? (0, r.jsx)(o.$jN, { className: p.spinner })
+    return h
+        ? (0, r.jsx)(o.$jN, { className: _.spinner })
         : null == g
           ? null != E
               ? (0, r.jsx)(u.q, { questId: t })
@@ -43,7 +43,7 @@ function h(e) {
               })
             : (0, c.vB)(g.config)
               ? (0, r.jsx)(
-                    _.X,
+                    p.X,
                     {
                         quest: g,
                         location: l.jn.QUESTS_EMBED,

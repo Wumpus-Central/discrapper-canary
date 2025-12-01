@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(413496), n(433524), n(35282), n(997841);
+n.d(t, { Z: () => p }), n(413496), n(433524), n(35282), n(997841);
 var r = n(54381),
     i = n(473749),
     a = n(865427),
@@ -14,7 +14,7 @@ let d = i.lazy(() =>
             .then((e) => ({ default: e.PlaygroundEmbed })),
     ),
     f = RegExp("^" + s.oO.source, s.oO.flags);
-function _(e) {
+function p(e) {
     return {
         match: (e, t) => (t.allowLinks && t.allowDevLinks ? f.exec(e) : null),
         parse: (e, t) => ({

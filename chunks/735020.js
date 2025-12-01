@@ -47,7 +47,7 @@ function f(e) {
         !0)
     );
 }
-function _(e) {
+function p(e) {
     let { messageId: t, channelId: n } = e,
         r = u({
             id: t,
@@ -56,13 +56,13 @@ function _(e) {
         i = c[r];
     null != i && (c[r] = (0, s.Cm)(i));
 }
-function p() {
-    m();
-}
-function h() {
-    m();
+function _() {
+    h();
 }
 function m() {
+    h();
+}
+function h() {
     c = {};
 }
 class g extends (r = i.ZP.Store) {
@@ -80,7 +80,7 @@ let E = new g(a.Z, {
     SEARCH_MESSAGES_SUCCESS: d,
     MOD_VIEW_SEARCH_MESSAGES_SUCCESS: d,
     MESSAGE_UPDATE: f,
-    LOGOUT: p,
-    CONNECTION_OPEN: h,
-    MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: _,
+    LOGOUT: _,
+    CONNECTION_OPEN: m,
+    MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: p,
 });

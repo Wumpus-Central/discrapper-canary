@@ -13,17 +13,17 @@ function c(e) {
             onTier0TrialOffer: u,
             onTier2TrialOffer: d,
             onTier0TrialPeriod: f,
-            onTier2TrialPeriod: _,
-            onNonTier2Subscriber: p,
-            onTier2Subscriber: h,
-            onCustomCriteria: m,
+            onTier2TrialPeriod: p,
+            onNonTier2Subscriber: _,
+            onTier2Subscriber: m,
+            onCustomCriteria: h,
         } = e,
         g = (0, s.N)(),
         E = (0, o.N)(),
         b = (0, r.e7)([i.Z], () => i.Z.getPremiumTypeSubscription()),
         y = a.ZP.getPremiumTypeFromSubscription(b);
-    if (null != m) {
-        let e = m();
+    if (null != h) {
+        let e = h();
         if (null != e) return e;
     }
     return null != g && l.nG[g.trial_id].skus.includes(l.Si.TIER_0)
@@ -39,8 +39,8 @@ function c(e) {
                 ? f
                 : t
             : null != b && b.hasActiveTrial && y === l.PremiumTypes.TIER_2
-              ? null != _
-                  ? _
+              ? null != p
+                  ? p
                   : t
               : null != E
                 ? null != n
@@ -51,10 +51,10 @@ function c(e) {
                       ? c
                       : t
                   : y === l.PremiumTypes.TIER_0 || y === l.PremiumTypes.TIER_1
-                    ? null != p
-                        ? p
+                    ? null != _
+                        ? _
                         : t
-                    : y === l.PremiumTypes.TIER_2 && null != h
-                      ? h
+                    : y === l.PremiumTypes.TIER_2 && null != m
+                      ? m
                       : t;
 }

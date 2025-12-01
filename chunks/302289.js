@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -7,18 +7,18 @@ var i = n(120356),
     s = n(546791),
     l = n(785681),
     c = n(130310),
-    u = n(597754),
+    u = n(744038),
     d = n(388032),
     f = n(398739),
-    _ = n(519279);
-let p = () => {
+    p = n(519279);
+let _ = () => {
     let e = (0, s.nE)(d.intl.string(u.default.XJabSN), d.intl.string(u.default.tr8Gni)),
         t = (0, l.o)(
             (0, s.nE)(d.intl.string(u.default.i4XFEH), d.intl.string(u.default["3xKGSE"])),
             (0, s.nE)(d.intl.string(u.default.eHQZuO), d.intl.string(u.default.XbgrG7)),
         );
     return (0, r.jsxs)(o.Kqy, {
-        className: a()(f.container, _.box),
+        className: a()(f.container, p.box),
         gap: 24,
         padding: 24,
         children: [

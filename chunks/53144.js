@@ -9,7 +9,7 @@ var r = n(54381),
     u = n(626135),
     d = n(981631),
     f = n(388032);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,12 +33,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,12 +50,12 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -67,7 +67,7 @@ function g(e) {
     i.useEffect(() => {
         u.default.track(d.rMx.ONE_TIME_LOGIN_MODAL_OPENED, { has_token: null != t });
     }, [t]);
-    let _ = i.useCallback(async () => {
+    let p = i.useCallback(async () => {
         try {
             if (null == t) {
                 o("error"),
@@ -97,9 +97,9 @@ function g(e) {
         }
     }, [t]);
     i.useEffect(() => {
-        _();
-    }, [_]);
-    let p = i.useCallback(() => {
+        p();
+    }, [p]);
+    let _ = i.useCallback(() => {
         u.default.track(d.rMx.ONE_TIME_LOGIN_MODAL_CANCEL_CLICKED, { current_state: a }), null == n || n();
     }, [n, a]);
     switch (
@@ -120,7 +120,7 @@ function g(e) {
                 subtitle: f.intl.string(f.t["S+YjYJ"]),
                 actions: [
                     {
-                        onClick: p,
+                        onClick: _,
                         text: f.intl.string(f.t["ETE/oC"]),
                     },
                 ],
@@ -133,7 +133,7 @@ function E(e) {
     let { title: t, subtitle: n, body: i, actions: o } = g(e);
     return (0, r.jsxs)(
         a.IX,
-        m(p({}, e), {
+        h(_({}, e), {
             onClose: () => {
                 var t;
                 return Promise.resolve(null == (t = e.onClose) ? void 0 : t.call(e));
@@ -154,5 +154,5 @@ function E(e) {
     );
 }
 function b(e) {
-    (0, o.ZDy)(() => Promise.resolve((t) => (0, r.jsx)(E, p({}, t, e))));
+    (0, o.ZDy)(() => Promise.resolve((t) => (0, r.jsx)(E, _({}, t, e))));
 }

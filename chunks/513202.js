@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var r = n(54381);
 n(473749);
 var i = n(793030),
@@ -10,10 +10,10 @@ var i = n(793030),
     u = n(636449),
     d = n(566620),
     f = n(287545),
-    _ = n(317381),
-    p = n(16609),
-    h = n(318891),
-    m = n(719296),
+    p = n(317381),
+    _ = n(16609),
+    m = n(318891),
+    h = n(719296),
     g = n(918559),
     E = n(981631),
     b = n(388032);
@@ -47,8 +47,8 @@ function O(e) {
     return e;
 }
 let v = !1,
-    I = !1;
-class T extends f.Z {
+    S = !1;
+class I extends f.Z {
     _initialize() {
         super._initialize(),
             s.Z.addChangeListener(this.handlePopoutWindowUpdate),
@@ -120,8 +120,8 @@ class T extends f.Z {
     }
     hidePIPEmbed(e) {
         let { location: t, applicationId: n } = e,
-            r = (0, m.Z)(t.id, n);
-        (0, h.RI)(r);
+            r = (0, h.Z)(t.id, n);
+        (0, m.RI)(r);
     }
     releaseWebView() {}
     constructor(...e) {
@@ -135,21 +135,21 @@ class T extends f.Z {
             }),
             y(this, "handlePopoutWindowOpen", (e) => {
                 let { key: t } = e;
-                t === E.KJ3.ACTIVITY_POPOUT && (I = !1);
+                t === E.KJ3.ACTIVITY_POPOUT && (S = !1);
             }),
             y(this, "popInActivity", () => {
-                (I = !0), l.close(E.KJ3.ACTIVITY_POPOUT);
-                let e = _.ZP.getCurrentEmbeddedActivity();
+                (S = !0), l.close(E.KJ3.ACTIVITY_POPOUT);
+                let e = p.ZP.getCurrentEmbeddedActivity();
                 if (null != e) {
-                    let t = (0, p.p)(e.location);
+                    let t = (0, _.p)(e.location);
                     null != t && (0, c.Kh)(t), (0, d.tg)(g.Ez.PANEL);
                 }
             }),
             y(this, "handlePopoutWindowUpdate", () => {
                 let e = v,
                     t = s.Z.getWindowOpen(E.KJ3.ACTIVITY_POPOUT);
-                if (e && !t && !I) {
-                    let e = _.ZP.getCurrentEmbeddedActivity();
+                if (e && !t && !S) {
+                    let e = p.ZP.getCurrentEmbeddedActivity();
                     null != e &&
                         this.leaveActivity({
                             location: e.location,
@@ -160,4 +160,4 @@ class T extends f.Z {
             });
     }
 }
-let S = new T();
+let T = new I();

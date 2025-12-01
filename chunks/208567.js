@@ -1,6 +1,6 @@
 n.d(t, {
     S: () => j,
-    Z: () => O,
+    Z: () => v,
 }),
     n(35282),
     n(388685);
@@ -75,7 +75,7 @@ function j(e) {
             }),
     });
 }
-class v extends (i = l.PureComponent) {
+class O extends (i = l.PureComponent) {
     handleExternalFileChange(e) {
         c()(null != this.inputRef.current, "ImageInputRef asked to handleExternalFileChange when not mounted"),
             this.inputRef.current.handleFileChange(e);
@@ -91,17 +91,17 @@ class v extends (i = l.PureComponent) {
                 hint: s,
                 name: c,
                 makeURL: f,
-                disabled: v,
-                onChange: O,
+                disabled: O,
+                onChange: v,
                 showIcon: y,
                 showIconDisabled: _,
                 className: C,
                 imageClassName: N,
                 iconClassName: S,
-                iconWrapperClassName: E,
-                icon: I,
-                hideSize: P,
-                imageStyle: w,
+                iconWrapperClassName: P,
+                icon: w,
+                hideSize: E,
+                imageStyle: I,
                 showRemoveButton: T,
                 maxFileSizeBytes: Z,
                 onFileSizeError: k,
@@ -118,19 +118,19 @@ class v extends (i = l.PureComponent) {
                       className: g.imageUploaderAcronym,
                       children: (0, u.Zg)(c),
                   })),
-            v)
+            O)
         )
             return (0, r.jsx)("div", {
                 className: o()(g.imageUploader, g.disabled, C),
                 children: (0, r.jsxs)("div", {
                     className: o()(g.imageUploaderInner, N),
-                    style: x(h({}, w), { backgroundImage: n }),
+                    style: x(h({}, I), { backgroundImage: n }),
                     children: [
                         i,
                         _ &&
                             (0, r.jsx)("div", {
                                 className: o()(g.imageUploaderIcon, g.imageUploaderIconDisabled, S),
-                                children: I,
+                                children: w,
                             }),
                     ],
                 }),
@@ -141,7 +141,7 @@ class v extends (i = l.PureComponent) {
                   onClick: this.handleRemove,
                   children: b.intl.string(b.t.N86XcP),
               }))
-            : P ||
+            : E ||
               (l = (0, r.jsx)("small", {
                   className: g.sizeInfo,
                   children: b.intl.format(b.t.AH4c7Y, { size: m.IXf }),
@@ -153,11 +153,11 @@ class v extends (i = l.PureComponent) {
                 (0, r.jsx)(d.tEY, {
                     within: !0,
                     children: (0, r.jsxs)("div", {
-                        className: y ? o()(g.imageUploaderIconWrapper, E) : void 0,
+                        className: y ? o()(g.imageUploaderIconWrapper, P) : void 0,
                         children: [
                             (0, r.jsxs)("div", {
                                 className: o()(g.imageUploaderInner, N),
-                                style: x(h({}, w), { backgroundImage: n }),
+                                style: x(h({}, I), { backgroundImage: n }),
                                 children: [
                                     (0, r.jsx)("span", {
                                         "aria-hidden": !0,
@@ -171,7 +171,7 @@ class v extends (i = l.PureComponent) {
                                           })
                                         : (0, r.jsx)(p.ZP, {
                                               ref: this.inputRef,
-                                              onChange: O,
+                                              onChange: v,
                                               className: g.imageUploaderFileInput,
                                               "aria-label": R,
                                               tabIndex: 0,
@@ -189,7 +189,7 @@ class v extends (i = l.PureComponent) {
                             y &&
                                 (0, r.jsx)(j, {
                                     className: S,
-                                    icon: I,
+                                    icon: w,
                                 }),
                         ],
                     }),
@@ -206,7 +206,7 @@ class v extends (i = l.PureComponent) {
             });
     }
 }
-f(v, "defaultProps", {
+f(O, "defaultProps", {
     name: "",
     makeURL: (e) => e,
     disabled: !1,
@@ -216,4 +216,4 @@ f(v, "defaultProps", {
     maxFileSizeBytes: 1 / 0,
     icon: null,
 });
-let O = v;
+let v = O;

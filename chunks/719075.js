@@ -3,8 +3,8 @@ var r = n(54381),
     l = n(473749),
     i = n(399606),
     a = n(481060),
-    s = n(594174),
-    o = n(55935),
+    o = n(594174),
+    s = n(55935),
     c = n(74538),
     u = n(429368),
     d = n(884697),
@@ -19,7 +19,7 @@ var r = n(54381),
     v = n(997033);
 let x = (e) => {
         let { product: t, prioritizedCurrency: n } = e,
-            u = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
+            u = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
             h = (0, m.jB)(),
             x = c.ZP.canUseCollectibles(u),
             { isDisabled: E } = (0, f.G)(t.skuId),
@@ -29,8 +29,8 @@ let x = (e) => {
             T = l.useMemo(() => (0, d.BH)(t, x), [t, x]),
             L = (0, C.Iw)(t),
             {
-                checkoutEligiblePrices: B,
-                hasSufficientOrbs: P,
+                checkoutEligiblePrices: P,
+                hasSufficientOrbs: B,
                 shouldCheckoutWithOrbs: N,
             } = (0, _.Ip)({
                 product: t,
@@ -55,7 +55,7 @@ let x = (e) => {
                 children: b.intl.string(b.t.BEjTij),
             });
         if (y && null != j) {
-            let e = (0, o.TD)(Date.now(), j);
+            let e = (0, s.TD)(Date.now(), j);
             return (0, r.jsx)(a.Text, {
                 variant: "text-md/medium",
                 color: "text-tertiary",
@@ -84,15 +84,15 @@ let x = (e) => {
                       lineClamp: 1,
                       children: b.intl.string(b.t.rt69oo),
                   })
-                : 0 === B.length
+                : 0 === P.length
                   ? null
                   : (0, r.jsx)(p.F, {
-                        price: B[0],
+                        price: P[0],
                         discount: T,
                         nitroIconType: x ? "default" : void 0,
                         nitroIconSize: "sm",
                         discountOfferAmount: L,
-                        className: N && !P ? v.insufficientOrbs : void 0,
+                        className: N && !B ? v.insufficientOrbs : void 0,
                         variant: "text-md/bold",
                     });
     },

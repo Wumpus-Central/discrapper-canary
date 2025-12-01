@@ -4,8 +4,8 @@ n(473749);
 var l = n(399606),
     i = n(607070),
     a = n(70097),
-    s = n(451478),
-    o = n(884697),
+    o = n(451478),
+    s = n(884697),
     c = n(813083),
     u = n(794324),
     d = n(388032),
@@ -13,7 +13,7 @@ var l = n(399606),
 function g(e) {
     let { category: t } = e,
         n = (0, l.e7)([i.Z], () => i.Z.useReducedMotion),
-        o = (0, l.e7)([s.Z], () => s.Z.isFocused()),
+        s = (0, l.e7)([o.Z], () => o.Z.isFocused()),
         { catalogBannerStatic: g, catalogBannerAnimated: p } = (0, u.Oi)(t);
     return (0, r.jsxs)("div", {
         className: f.catalogBanner,
@@ -25,7 +25,7 @@ function g(e) {
             }),
             null != p &&
                 !n &&
-                o &&
+                s &&
                 (0, r.jsx)(a.Z, {
                     src: p,
                     className: f.animationAsset,
@@ -40,4 +40,4 @@ function g(e) {
         ],
     });
 }
-(0, o.IC)(90);
+(0, s.IC)(90);

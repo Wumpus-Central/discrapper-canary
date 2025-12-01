@@ -33,15 +33,15 @@ var d = function (e, t) {
     f = function (e, t) {
         return "string" == typeof e ? (0, o.ob)(e, null, null, t) : e;
     },
-    _ = function (e) {
+    p = function (e) {
         return e;
     },
-    p = a.forwardRef;
-function h(e) {
+    _ = a.forwardRef;
+function m(e) {
     return !!(e.metaKey || e.altKey || e.ctrlKey || e.shiftKey);
 }
-void 0 === p && (p = _);
-var m = p(function (e, t) {
+void 0 === _ && (_ = p);
+var h = _(function (e, t) {
         var n = e.innerRef,
             r = e.navigate,
             i = e.onClick,
@@ -54,31 +54,31 @@ var m = p(function (e, t) {
                     } catch (t) {
                         throw (e.preventDefault(), t);
                     }
-                    e.defaultPrevented || 0 !== e.button || (c && "_self" !== c) || h(e) || (e.preventDefault(), r());
+                    e.defaultPrevented || 0 !== e.button || (c && "_self" !== c) || m(e) || (e.preventDefault(), r());
                 },
             });
-        return _ !== p ? (u.ref = t || n) : (u.ref = n), a.createElement("a", u);
+        return p !== _ ? (u.ref = t || n) : (u.ref = n), a.createElement("a", u);
     }),
-    g = p(function (e, t) {
+    g = _(function (e, t) {
         var n = e.component,
-            i = void 0 === n ? m : n,
+            i = void 0 === n ? h : n,
             o = e.replace,
             u = e.to,
-            h = e.innerRef,
+            m = e.innerRef,
             g = (0, l.Z)(e, ["component", "replace", "to", "innerRef"]);
         return a.createElement(r.s6.Consumer, null, function (e) {
             e || (0, c.Z)(!1);
             var n = e.history,
                 r = f(d(u, e.location), e.location),
                 l = r ? n.createHref(r) : "",
-                m = (0, s.Z)({}, g, {
+                h = (0, s.Z)({}, g, {
                     href: l,
                     navigate: function () {
                         var t = d(u, e.location);
                         (o ? n.replace : n.push)(t);
                     },
                 });
-            return _ !== p ? (m.ref = t || h) : (m.innerRef = h), a.createElement(i, m);
+            return p !== _ ? (h.ref = t || m) : (h.innerRef = m), a.createElement(i, h);
         });
     }),
     E = function (e) {
@@ -99,15 +99,15 @@ void 0 === b && (b = E),
             i = void 0 === n ? "page" : n,
             o = e.activeClassName,
             u = void 0 === o ? "active" : o,
-            _ = e.activeStyle,
-            p = e.className,
-            h = e.exact,
-            m = e.isActive,
+            p = e.activeStyle,
+            _ = e.className,
+            m = e.exact,
+            h = e.isActive,
             O = e.location,
             v = e.sensitive,
-            I = e.strict,
-            T = e.style,
-            S = e.to,
+            S = e.strict,
+            I = e.style,
+            T = e.to,
             A = e.innerRef,
             C = (0, l.Z)(e, [
                 "aria-current",
@@ -126,29 +126,29 @@ void 0 === b && (b = E),
         return a.createElement(r.s6.Consumer, null, function (e) {
             e || (0, c.Z)(!1);
             var n = O || e.location,
-                o = f(d(S, n), n),
+                o = f(d(T, n), n),
                 l = o.pathname,
                 N = l && l.replace(/([.+*?=^!:${}()[\]|/\\])/g, "\\$1"),
-                R = N
+                P = N
                     ? (0, r.LX)(n.pathname, {
                           path: N,
-                          exact: h,
+                          exact: m,
                           sensitive: v,
-                          strict: I,
+                          strict: S,
                       })
                     : null,
-                P = !!(m ? m(R, n) : R),
-                D = P ? y(p, u) : p,
-                w = P ? (0, s.Z)({}, T, {}, _) : T,
-                L = (0, s.Z)(
+                R = !!(h ? h(P, n) : P),
+                w = R ? y(_, u) : _,
+                D = R ? (0, s.Z)({}, I, {}, p) : I,
+                x = (0, s.Z)(
                     {
-                        "aria-current": (P && i) || null,
-                        className: D,
-                        style: w,
+                        "aria-current": (R && i) || null,
+                        className: w,
+                        style: D,
                         to: o,
                     },
                     C,
                 );
-            return E !== b ? (L.ref = t || A) : (L.innerRef = A), a.createElement(g, L);
+            return E !== b ? (x.ref = t || A) : (x.innerRef = A), a.createElement(g, x);
         });
     });

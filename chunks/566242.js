@@ -1,6 +1,6 @@
 n.d(t, {
     Wt: () => d,
-    Y0: () => _,
+    Y0: () => p,
     zY: () => f,
 });
 var r = n(720479);
@@ -66,7 +66,7 @@ class f extends d {
         super(...e), (this.identifier = "ethioaa");
     }
 }
-class _ extends d {
+class p extends d {
     fromJulianDay(e) {
         let [t, n, i] = l(a, e),
             o = "CE";

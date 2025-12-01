@@ -13,7 +13,7 @@ var r = n(54381),
     u = n(237872),
     d = n(481060),
     f = n(420153);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,12 +37,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,12 +54,12 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -112,21 +112,21 @@ function y(e) {
         {
             title: n,
             body: a,
-            graphic: _,
-            size: h = "md",
+            graphic: p,
+            size: m = "md",
             actions: E,
             gradientColor: y,
             onRequestClose: O,
             position: v,
-            caretConfig: I,
-            scrollBehavior: T,
-            showCloseButton: S = !0,
+            caretConfig: S,
+            scrollBehavior: I,
+            showCloseButton: T = !0,
             isCaretHoverable: A = !1,
             shouldTrapFocus: C = !1,
             returnRef: N,
-            onNudgeChange: R,
+            onNudgeChange: P,
         } = e,
-        P = g(e, [
+        R = g(e, [
             "title",
             "body",
             "graphic",
@@ -143,72 +143,72 @@ function y(e) {
             "returnRef",
             "onNudgeChange",
         ]);
-    let [D, w] = i.useState(null != v ? v : "top");
+    let [w, D] = i.useState(null != v ? v : "top");
     i.useEffect(() => {
-        null != v && w(v);
+        null != v && D(v);
     }, [v]);
-    let L = i.useMemo(() => {
+    let x = i.useMemo(() => {
             var e;
             return {
-                align: null != (e = null == I ? void 0 : I.align) ? e : "center",
-                customOffset: null == I ? void 0 : I.customOffset,
+                align: null != (e = null == S ? void 0 : S.align) ? e : "center",
+                customOffset: null == S ? void 0 : S.customOffset,
             };
-        }, [I]),
-        x = i.useCallback(() => {
+        }, [S]),
+        L = i.useCallback(() => {
             null == O || O();
         }, [O]),
-        M = i.useCallback(
+        j = i.useCallback(
             (e) => {
                 null == O || O(e);
             },
             [O],
         ),
-        k = i.useCallback((e) => {
-            w(e);
+        M = i.useCallback((e) => {
+            D(e);
         }, []),
-        j = A ? f.caretHoverable : void 0,
-        U = p(
+        k = A ? f.caretHoverable : void 0,
+        U = _(
             {
-                targetElementRef: P.targetElementRef,
-                shouldShow: P.shouldShow,
-                hasVideo: P.hasVideo,
-                position: D,
-                caretConfig: L,
-                onRequestClose: x,
+                targetElementRef: R.targetElementRef,
+                shouldShow: R.shouldShow,
+                hasVideo: R.hasVideo,
+                position: w,
+                caretConfig: x,
+                onRequestClose: L,
                 gradientColor: y,
-                onPositionChange: k,
-                onNudgeChange: R,
-                scrollBehavior: T,
+                onPositionChange: M,
+                onNudgeChange: P,
+                scrollBehavior: I,
                 modal: C,
                 returnRef: N,
                 gradientOffsetBottom: 0,
                 experimental_ignoreModalClicks: !1,
             },
-            "edge" === P.alignmentStrategy
+            "edge" === R.alignmentStrategy
                 ? {
                       alignmentStrategy: "edge",
-                      align: P.align,
+                      align: R.align,
                   }
                 : { alignmentStrategy: "trigger-center" },
         );
     return (0, r.jsx)(
         s.m,
-        m(p({}, U), {
+        h(_({}, U), {
             children: (0, r.jsxs)("div", {
                 "data-mana-component": "popover",
                 children: [
-                    S &&
+                    T &&
                         (0, r.jsx)(u.u, {
-                            onClick: M,
+                            onClick: j,
                             variant: null != y ? "color-mix" : void 0,
                         }),
-                    null != _ &&
+                    null != p &&
                         (0, r.jsx)("div", {
-                            className: o()(f.graphic, { [f["graphic--".concat(h)]]: null != h }),
+                            className: o()(f.graphic, { [f["graphic--".concat(m)]]: null != m }),
                             children: (0, r.jsx)(
                                 d.zsu,
-                                m(p({}, _), {
-                                    aspectRatio: null != (t = _.aspectRatio) ? t : "sm" === h ? "2/1" : "16/9",
+                                h(_({}, p), {
+                                    aspectRatio: null != (t = p.aspectRatio) ? t : "sm" === m ? "2/1" : "16/9",
                                 }),
                             ),
                         }),
@@ -222,7 +222,7 @@ function y(e) {
                               className: f.actionBar,
                           })
                         : null,
-                    null != L && (0, r.jsx)(c.$, { className: j }),
+                    null != x && (0, r.jsx)(c.$, { className: k }),
                 ],
             }),
         }),

@@ -34,11 +34,11 @@ function p(e) {
             }
             return l;
         })(e, ["handleOpenUserProfileModal", "markAsDismissed"]);
-    let { trackUserProfileEditAction: g } = (0, r.KZ)(),
-        f = c.rR.filter((e) => s.Ki.includes(e)),
+    let { trackUserProfileEditAction: f } = (0, r.KZ)(),
+        g = c.rR.filter((e) => s.Ki.includes(e)),
         b = l.useCallback(() => {
-            h(d.L.TAKE_ACTION), g({ action: "PRESS_ADD_WIDGET" }), p();
-        }, [p, h, g]);
+            h(d.L.TAKE_ACTION), f({ action: "PRESS_ADD_WIDGET" }), p();
+        }, [p, h, f]);
     return (0, a.jsx)(
         i.Z,
         ((t = (function (e) {
@@ -78,14 +78,14 @@ function p(e) {
                 children: (0, a.jsx)("ul", {
                     "aria-label": u.intl.string(u.t["+EIBSA"]),
                     className: m.options,
-                    children: f.map((e) =>
+                    children: g.map((e) =>
                         (0, a.jsx)(
                             o.Z,
                             {
                                 widgetType: e,
                                 size: "medium",
                                 onAddWidget: b,
-                                trackUserProfileEditAction: g,
+                                trackUserProfileEditAction: f,
                             },
                             e,
                         ),

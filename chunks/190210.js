@@ -14,7 +14,7 @@ var i = n(54381),
     a = n.n(l),
     o = n(512722),
     s = n.n(o),
-    c = n(790519),
+    c = n(666917),
     u = n(772848),
     d = n(442837),
     p = n(692547),
@@ -27,8 +27,8 @@ var i = n(54381),
     C = n(100527),
     v = n(906732),
     _ = n(998698),
-    x = n(326133),
-    O = n(507366),
+    O = n(326133),
+    x = n(507366),
     j = n(570220),
     E = n(951394),
     S = n(805680),
@@ -150,13 +150,13 @@ let en = r.memo(
                 autoCompletePosition: eC,
                 disableThemedBackground: ev = !1,
                 emojiPickerCloseOnModalOuterClick: e_,
-                parentModalKey: ex,
+                parentModalKey: eO,
             } = e,
-            eO = O.Z.useField("channelDrafts")[L.id],
-            ej = null != (l = null == eO ? void 0 : eO.title) ? l : "",
-            eE = null == eO ? void 0 : eO.heroFile,
-            eS = null == (o = null == eO ? void 0 : eO.publish) || o,
-            eP = null == (u = null == eO ? void 0 : eO.createThread) || u;
+            ex = x.Z.useField("channelDrafts")[L.id],
+            ej = null != (l = null == ex ? void 0 : ex.title) ? l : "",
+            eE = null == ex ? void 0 : ex.heroFile,
+            eS = null == (o = null == ex ? void 0 : ex.publish) || o,
+            eP = null == (u = null == ex ? void 0 : ex.createThread) || u;
         s()(null != k, "chat input type must be set");
         let { analyticsLocations: eI } = (0, v.ZP)(C.Z.CHANNEL_TEXT_AREA),
             eZ = (0, V.qz)(t),
@@ -197,7 +197,7 @@ let en = r.memo(
                     let t = (e) => {
                             if (e.shouldClear) {
                                 var t;
-                                (0, O.c)(L.id, {
+                                (0, x.c)(L.id, {
                                     title: "",
                                     heroFile: null,
                                 }),
@@ -359,7 +359,7 @@ let en = r.memo(
                     null == (e = R.Z.getUploads(L.id, k.drafts.type).find((e) => e.filename === eE.name))
                         ? void 0
                         : e.id;
-                null != t && m.Z.remove(L.id, t, w.d.ChannelMessage), (0, O.c)(L.id, { heroFile: null });
+                null != t && m.Z.remove(L.id, t, w.d.ChannelMessage), (0, x.c)(L.id, { heroFile: null });
             }, [L.id, eE, k.drafts.type]);
         return (0, i.jsx)(j.f6, {
             value: eW,
@@ -399,7 +399,7 @@ let en = r.memo(
                                                             : (0, i.jsx)(ea, {
                                                                   channel: L,
                                                                   onImageUploaded: (e) =>
-                                                                      (0, O.c)(L.id, { heroFile: e }),
+                                                                      (0, x.c)(L.id, { heroFile: e }),
                                                                   onFocus: () => ta(!0),
                                                               }),
                                                         (0, i.jsx)("input", {
@@ -409,7 +409,7 @@ let en = r.memo(
                                                             className: J.titleInput,
                                                             placeholder: X.intl.string(X.t.Z8fYjO),
                                                             value: ej,
-                                                            onChange: (e) => (0, O.c)(L.id, { title: e.target.value }),
+                                                            onChange: (e) => (0, x.c)(L.id, { title: e.target.value }),
                                                         }),
                                                     ],
                                                 }),
@@ -561,7 +561,7 @@ let en = r.memo(
                                     }),
                                 ],
                             }),
-                            (0, i.jsx)(x.Z, {
+                            (0, i.jsx)(O.Z, {
                                 targetRef: eZ,
                                 ref: eJ,
                                 channel: L,
@@ -595,7 +595,7 @@ let en = r.memo(
                               onSelectSticker: tr,
                               channel: L,
                               closeOnModalOuterClick: e_,
-                              parentModalKey: ex,
+                              parentModalKey: eO,
                               position: "top",
                               align: "right",
                               positionLayerClassName: Q.expressionPickerPositionLayer,
@@ -608,7 +608,7 @@ let en = r.memo(
 function ei(e) {
     var t, n;
     let { channelId: r, canCreateThread: l } = e,
-        a = O.Z.useField("channelDrafts")[r],
+        a = x.Z.useField("channelDrafts")[r],
         o = null == (t = null == a ? void 0 : a.createThread) || t,
         s = null == (n = null == a ? void 0 : a.publish) || n;
     return (0, i.jsxs)(f.v2r, {
@@ -623,7 +623,7 @@ function ei(e) {
                 checked: l && o,
                 disabled: !l,
                 action: () => {
-                    (0, O.c)(r, { createThread: !o });
+                    (0, x.c)(r, { createThread: !o });
                 },
             }),
             (0, i.jsx)(f.S89, {
@@ -631,7 +631,7 @@ function ei(e) {
                 label: X.intl.string(X.t.MFGE51),
                 checked: s,
                 action: () => {
-                    (0, O.c)(r, { publish: !s });
+                    (0, x.c)(r, { publish: !s });
                 },
             }),
         ],

@@ -10,9 +10,9 @@ var i = n(793030),
     u = n(626135),
     d = n(542238),
     f = n(927923),
-    _ = n(981631),
-    p = n(388032);
-function h(e, t, n) {
+    p = n(981631),
+    _ = n(388032);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +25,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
@@ -68,12 +68,12 @@ let b = "game_console_alert_modal",
     y = "game_console_ptt_alert_modal",
     O = {
         maybeShowPTTAlert(e) {
-            if (c.Z.getMode() !== _.pM4.PUSH_TO_TALK || (0, l.zu)(a.z.CONSOLE_PTT_DISABLE_ALERT))
+            if (c.Z.getMode() !== p.pM4.PUSH_TO_TALK || (0, l.zu)(a.z.CONSOLE_PTT_DISABLE_ALERT))
                 return Promise.resolve();
             let t = {
-                [_.ABu.XBOX]: p.intl.string(p.t.bVZ7vy),
-                [_.ABu.PLAYSTATION]: p.intl.string(p.t["6iqUsf"]),
-                [_.ABu.PLAYSTATION_STAGING]: p.intl.string(p.t["6iqUsf"]),
+                [p.ABu.XBOX]: _.intl.string(_.t.bVZ7vy),
+                [p.ABu.PLAYSTATION]: _.intl.string(_.t["6iqUsf"]),
+                [p.ABu.PLAYSTATION_STAGING]: _.intl.string(_.t["6iqUsf"]),
             }[e];
             return null == t
                 ? Promise.resolve()
@@ -84,12 +84,12 @@ let b = "game_console_alert_modal",
                           s = (e) =>
                               (0, r.jsx)(
                                   i.Modal,
-                                  E(m({}, e), {
+                                  E(h({}, e), {
                                       title: t,
-                                      subtitle: p.intl.string(p.t.bL21zs),
+                                      subtitle: _.intl.string(_.t.bL21zs),
                                       actions: [
                                           {
-                                              text: p.intl.string(p.t.BddRzS),
+                                              text: _.intl.string(_.t.BddRzS),
                                               onClick: n,
                                           },
                                       ],
@@ -105,10 +105,10 @@ let b = "game_console_alert_modal",
                     errorCodeMessage: a,
                     dismissCallback: () => (0, o.Mr)(b),
                 });
-            function h() {
+            function m() {
                 null != l &&
                     ((0, s.Z)({ platformType: l }),
-                    u.default.track(_.rMx.ACCOUNT_LINK_STEP, {
+                    u.default.track(p.rMx.ACCOUNT_LINK_STEP, {
                         previous_step: f.Lw,
                         current_step: "desktop oauth",
                         platform_type: l,
@@ -117,12 +117,12 @@ let b = "game_console_alert_modal",
             let g = (e) =>
                 (0, r.jsx)(
                     i.Modal,
-                    E(m({}, e), {
+                    E(h({}, e), {
                         title: t,
                         actions: [
                             {
-                                text: p.intl.string(p.t.BddRzS),
-                                onClick: h,
+                                text: _.intl.string(_.t.BddRzS),
+                                onClick: m,
                             },
                         ],
                         children: c,

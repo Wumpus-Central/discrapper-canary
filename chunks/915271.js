@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381),
     i = n(473749),
     a = n(442837),
@@ -9,7 +9,7 @@ var r = n(54381),
     u = n(975060),
     d = n(388032),
     f = n(496758);
-class _ extends i.PureComponent {
+class p extends i.PureComponent {
     componentDidMount() {
         null != this.props.venmoClient && s.by();
     }
@@ -51,7 +51,7 @@ class _ extends i.PureComponent {
         });
     }
 }
-let p = a.ZP.connectStores([c.Z, u.Z], () => ({
+let _ = a.ZP.connectStores([c.Z, u.Z], () => ({
     venmoUsername: u.Z.venmoUsername,
     venmoClient: c.Z.getVenmoClient(),
-}))(_);
+}))(p);

@@ -1,6 +1,6 @@
 n.d(t, {
-    ZP: () => P,
-    yw: () => R,
+    ZP: () => R,
+    yw: () => P,
 }),
     n(388685),
     n(35282),
@@ -24,8 +24,8 @@ var s = n(159635),
     u = n(823379),
     d = n(591759),
     f = n(172244),
-    _ = n(571989);
-function p(e, t, n) {
+    p = n(571989);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,7 +38,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -49,12 +49,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -71,7 +71,7 @@ function g(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -82,8 +82,8 @@ function b(e) {
     let t = e,
         n = E.get(t);
     if (null != n) return n;
-    let r = (0, _.yx)(e),
-        i = (0, _.zq)(r),
+    let r = (0, p.yx)(e),
+        i = (0, p.zq)(r),
         a = {
             whitespaceSanitized: r,
             fullySanitized: i,
@@ -103,9 +103,9 @@ let y = ["http:", "https:", "discord:", "tel:", "sms:", "mailto:"],
         f.b.TIMESTAMP,
     ],
     v = [...O, f.b.EMOJI, f.b.CUSTOM_EMOJI],
-    I = [f.b.LIST, f.b.HEADING, f.b.BLOCK_QUOTE, f.b.SUBTEXT],
-    T = [f.b.TEXT],
-    S = [
+    S = [f.b.LIST, f.b.HEADING, f.b.BLOCK_QUOTE, f.b.SUBTEXT],
+    I = [f.b.TEXT],
+    T = [
         f.b.UNDERLINE,
         f.b.STRONG,
         f.b.ITALICS,
@@ -179,7 +179,7 @@ function N(e) {
     let n = e.split("/");
     return n.length < 3 || "" !== n[1] || d.Z.safeDecodeURIComponent(n[2]) !== n[2];
 }
-function R(e) {
+function P(e) {
     try {
         var t;
         if (N(e)) throw Error("Rejected due to suspicious characters in URL: " + JSON.stringify(e));
@@ -188,9 +188,9 @@ function R(e) {
         if (!y.includes(r.toLowerCase())) throw Error("Provided protocol is not allowed: " + r);
         if (("http:" === r || "https:" === r) && (null == n.hostname || 0 === n.hostname.length))
             throw Error("no hostname");
-        let i = (0, _.MO)(n);
+        let i = (0, p.MO)(n);
         (n.username = ""), (n.password = "");
-        let a = (0, _.MO)(n);
+        let a = (0, p.MO)(n);
         return {
             target: i,
             displayTarget: a,
@@ -199,7 +199,7 @@ function R(e) {
         return null;
     }
 }
-let P = g(h({}, l().defaultRules.link), {
+let R = g(m({}, l().defaultRules.link), {
     match: (e, t, n) => (t.allowLinks ? l().defaultRules.link.match(e, t, n) : null),
     parse(e, t, n) {
         let [r, a, o, s] = e,
@@ -209,33 +209,33 @@ let P = g(h({}, l().defaultRules.link), {
             });
         if (N(o)) return u();
         let d = b(o),
-            _ = b(a),
-            p = b(null != s ? s : ""),
-            m = d.whitespaceSanitized,
-            E = _.fullySanitized,
-            y = p.fullySanitized,
-            P = E.trim();
-        if (0 === m.trim().length || 0 === P.length) return u();
-        let D = R(l().unescapeUrl(o)),
-            w = null == D,
-            L = (0, c.ZP)(a).length > 0 || (0, c.ZP)(s).length > 0;
-        if (w || L) return u();
-        let x = g(h({}, n), {
+            p = b(a),
+            _ = b(null != s ? s : ""),
+            h = d.whitespaceSanitized,
+            E = p.fullySanitized,
+            y = _.fullySanitized,
+            R = E.trim();
+        if (0 === h.trim().length || 0 === R.length) return u();
+        let w = P(l().unescapeUrl(o)),
+            D = null == w,
+            x = (0, c.ZP)(a).length > 0 || (0, c.ZP)(s).length > 0;
+        if (D || x) return u();
+        let L = g(m({}, n), {
                 allowEscape: !1,
                 parseInlineCodeChildContent: !0,
             }),
-            M = n.allowEmojiLinks ? v : O,
-            k = [...M, ...I],
-            j = [...T, ...S],
-            U = A(t(E, x), k, [f.b.EMOJI]),
-            G = A(t(y, x), j);
+            j = n.allowEmojiLinks ? v : O,
+            M = [...j, ...S],
+            k = [...I, ...T],
+            U = A(t(E, L), M, [f.b.EMOJI]),
+            G = A(t(y, L), k);
         if (null == U || null == G || 0 === C(U).trim().length) return u();
-        let B = i().pick(t.rules, M),
-            Z = l().parserFor(B)(_.whitespaceSanitized, x),
-            F = p.whitespaceSanitized,
-            { target: V } = D;
+        let Z = i().pick(t.rules, j),
+            B = l().parserFor(Z)(p.whitespaceSanitized, L),
+            F = _.whitespaceSanitized,
+            { target: V } = w;
         return {
-            content: Z,
+            content: B,
             target: V,
             title: F,
         };

@@ -9,33 +9,33 @@ var r = n(54381),
     u = n(838436),
     d = n(51331),
     f = n(922628),
-    _ = n(726985),
-    p = n(981631),
-    h = n(388032),
-    m = n(597754);
+    p = n(726985),
+    _ = n(981631),
+    m = n(388032),
+    h = n(744038);
 function g() {
     let e = (0, s.LN)(),
-        t = (0, a.e7)([l.Z], () => l.Z.hasConsented(p.pjP.USAGE_STATISTICS)),
+        t = (0, a.e7)([l.Z], () => l.Z.hasConsented(_.pjP.USAGE_STATISTICS)),
         n = i.useCallback((e) => {
             e
-                ? (0, o.g)([p.pjP.USAGE_STATISTICS], []).catch(f.S)
+                ? (0, o.g)([_.pjP.USAGE_STATISTICS], []).catch(f.S)
                 : (0, f.V)({
-                      header: h.intl.string(h.t.OdPCbN),
-                      body: h.intl.string(h.t.MGWabA),
-                      confirmText: h.intl.string(h.t["D3+rU4"]),
-                      cancelText: h.intl.string(h.t.kYpG0u),
-                      onConfirm: () => (0, o.g)([], [p.pjP.USAGE_STATISTICS]).catch(f.S),
+                      header: m.intl.string(m.t.OdPCbN),
+                      body: m.intl.string(m.t.MGWabA),
+                      confirmText: m.intl.string(m.t["D3+rU4"]),
+                      cancelText: m.intl.string(m.t.kYpG0u),
+                      onConfirm: () => (0, o.g)([], [_.pjP.USAGE_STATISTICS]).catch(f.S),
                   });
         }, []);
     return (0, r.jsx)(u.U, {
-        setting: _.s6.PRIVACY_DATA_IMPROVE_DISCORD_V2,
+        setting: p.s6.PRIVACY_DATA_IMPROVE_DISCORD_V2,
         children: (0, r.jsx)(d.ZP, {
-            title: h.intl.string(h.t.XuADY2),
-            note: h.intl.format(h.t["igTSG/"], { helpdeskArticle: c.Z.getArticleURL(p.BhN.DATA_PRIVACY_CONTROLS) }),
+            title: m.intl.string(m.t.XuADY2),
+            note: m.intl.format(m.t["igTSG/"], { helpdeskArticle: c.Z.getArticleURL(_.BhN.DATA_PRIVACY_CONTROLS) }),
             value: t,
             onChange: n,
             disabled: e,
-            tooltipText: e ? h.intl.string(m.default["6Af/cw"]) : void 0,
+            tooltipText: e ? m.intl.string(h.default["6Af/cw"]) : void 0,
         }),
     });
 }

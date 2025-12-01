@@ -45,23 +45,23 @@ let g = a.memo(function (e) {
         [N, w] = a.useState(0),
         [C, S] = a.useState(0),
         [O, Z] = a.useState(0),
-        [P, M] = a.useState(!1),
-        [E, k] = a.useState(!1),
+        [P, E] = a.useState(!1),
+        [M, k] = a.useState(!1),
         [I, T] = a.useState(!1),
         [D, F] = a.useState(0),
         [R, B] = a.useState(-1),
-        _ = a.useMemo(() => D / v.fineTuningScale, [v.fineTuningScale, D]);
+        U = a.useMemo(() => D / v.fineTuningScale, [v.fineTuningScale, D]);
     a.useEffect(() => {
         if (null == p) return;
         let e = p.duration * o.Z.Millis.SECOND;
         w(0), S(0), Z(e), F(e);
     }, [p]);
-    let U = a.useCallback(
+    let _ = a.useCallback(
             (e, n) => {
                 if ((t(), 0 === e.button))
                     switch (n) {
                         case 0:
-                            M(!0);
+                            E(!0);
                             break;
                         case 1:
                             k(!0);
@@ -75,7 +75,7 @@ let g = a.memo(function (e) {
         z = a.useCallback((e) => {
             switch (e) {
                 case 0:
-                    M(!1);
+                    E(!1);
                     break;
                 case 1:
                     k(!1);
@@ -96,11 +96,11 @@ let g = a.memo(function (e) {
         ),
         L = a.useCallback(
             (e) => {
-                if (null == p || !E) return;
+                if (null == p || !M) return;
                 let n = parseInt(e.target.value);
                 n < N ? (i((0, c.my)(N)), S(N)) : n > O ? (i((0, c.my)(O)), S(O)) : (i((0, c.my)(n)), S(n));
             },
-            [p, i, O, E, N],
+            [p, i, O, M, N],
         ),
         H = a.useCallback(
             (e) => {
@@ -139,12 +139,12 @@ let g = a.memo(function (e) {
         a.useEffect(() => {
             if (v.fineTuningDelay <= 0) return;
             let e = setTimeout(() => {
-                P && N == N && -1 === R ? B(N) : I && O == O && -1 === R ? B(O) : E && C == C && -1 === R && B(C);
+                P && N == N && -1 === R ? B(N) : I && O == O && -1 === R ? B(O) : M && C == C && -1 === R && B(C);
             }, v.fineTuningDelay);
             return () => {
                 clearTimeout(e);
             };
-        }, [v.fineTuningDelay, I, O, R, E, C, P, N]),
+        }, [v.fineTuningDelay, I, O, R, M, C, P, N]),
         (0, l.jsxs)("div", {
             className: r()(m.timeline, { [m.initialized]: b }),
             children: [
@@ -158,11 +158,11 @@ let g = a.memo(function (e) {
                                     ref: y,
                                     className: r()(m.rangeHandle, m.rangeHandleStart),
                                     type: "range",
-                                    min: (0, c.ao)(R, _, D),
-                                    max: (0, c.MN)(R, _, D),
+                                    min: (0, c.ao)(R, U, D),
+                                    max: (0, c.MN)(R, U, D),
                                     value: N,
                                     onChange: G,
-                                    onMouseDown: (e) => U(e, 0),
+                                    onMouseDown: (e) => _(e, 0),
                                     onMouseUp: () => z(0),
                                     disabled: !b || h,
                                 }),
@@ -170,11 +170,11 @@ let g = a.memo(function (e) {
                                     ref: x,
                                     className: r()(m.rangeHandle, m.rangeHandleEnd),
                                     type: "range",
-                                    min: (0, c.ao)(R, _, D),
-                                    max: (0, c.MN)(R, _, D),
+                                    min: (0, c.ao)(R, U, D),
+                                    max: (0, c.MN)(R, U, D),
                                     value: O,
                                     onChange: H,
-                                    onMouseDown: (e) => U(e, 2),
+                                    onMouseDown: (e) => _(e, 2),
                                     onMouseUp: () => z(2),
                                     disabled: !b || h,
                                 }),
@@ -186,11 +186,11 @@ let g = a.memo(function (e) {
                                 ref: j,
                                 className: r()(m.rangeHandle, m.rangeHandlePlayhead),
                                 type: "range",
-                                min: (0, c.ao)(R, _, D),
-                                max: (0, c.MN)(R, _, D),
+                                min: (0, c.ao)(R, U, D),
+                                max: (0, c.MN)(R, U, D),
                                 value: C,
                                 onChange: L,
-                                onMouseDown: (e) => U(e, 1),
+                                onMouseDown: (e) => _(e, 1),
                                 onMouseUp: () => z(1),
                                 disabled: !b || h,
                             }),
@@ -206,8 +206,8 @@ let g = a.memo(function (e) {
                                 [m.endDragging]: I,
                             }),
                             style: {
-                                left: "".concat((0, c.pN)(N, R, _, D), "%"),
-                                right: "".concat((0, c.kD)(O, R, _, D), "%"),
+                                left: "".concat((0, c.pN)(N, R, U, D), "%"),
+                                right: "".concat((0, c.kD)(O, R, U, D), "%"),
                             },
                             children: [
                                 (0, l.jsx)("div", {
@@ -239,8 +239,8 @@ let g = a.memo(function (e) {
                         (0, l.jsx)("div", {
                             className: m.playheadTrack,
                             children: (0, l.jsx)("div", {
-                                className: r()(m.playhead, { [m.dragging]: E || P || I || n }),
-                                style: { left: "".concat((0, c.pN)(C, R, _, D), "%") },
+                                className: r()(m.playhead, { [m.dragging]: M || P || I || n }),
+                                style: { left: "".concat((0, c.pN)(C, R, U, D), "%") },
                             }),
                         }),
                     ],
@@ -249,7 +249,7 @@ let g = a.memo(function (e) {
                     className: m.waveformContainer,
                     children: (0, l.jsx)(d.Z, {
                         fineTuning: R,
-                        fineTuningResolution: _,
+                        fineTuningResolution: U,
                         duration: D,
                     }),
                 }),

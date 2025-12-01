@@ -9,17 +9,17 @@ var r = n(54381),
     u = n(578361),
     d = n(460181),
     f = n(342386),
-    _ = n(88658),
-    p = n(57562),
-    h = n(955204),
-    m = n(64078),
+    p = n(88658),
+    _ = n(57562),
+    m = n(955204),
+    h = n(64078),
     g = n(351780),
     E = n(954794),
     b = n(112843),
     y = n(524484),
     O = n(388032),
     v = n(749714);
-function I(e, t, n) {
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +32,7 @@ function I(e, t, n) {
         e
     );
 }
-function T(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,12 +43,12 @@ function T(e) {
                 }),
             )),
             r.forEach(function (t) {
-                I(e, t, n[t]);
+                S(e, t, n[t]);
             });
     }
     return e;
 }
-function S(e, t) {
+function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,7 +65,7 @@ function A(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : T(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -78,10 +78,10 @@ let C = {
         confettiEnabled: !1,
     },
     N = (0, a.range)(0, 11),
-    R = (0, a.range)(0, 2.25, 0.25),
-    P = (0, a.range)(1, 11),
-    D = (0, a.range)(1, 26),
-    w = () => [
+    P = (0, a.range)(0, 2.25, 0.25),
+    R = (0, a.range)(1, 11),
+    w = (0, a.range)(1, 26),
+    D = () => [
         {
             location: y.Hn.CHAT_INPUT,
             title: O.intl.string(O.t.elTtyz),
@@ -103,7 +103,7 @@ let C = {
             description: O.intl.string(O.t.fiHV7u),
         },
     ],
-    L = () => [
+    x = () => [
         {
             location: y.oZ.CHAT_INPUT,
             title: O.intl.string(O.t.vUcvPP),
@@ -120,7 +120,7 @@ let C = {
             description: O.intl.string(O.t["mqfw/H"]),
         },
     ];
-function x(e) {
+function L(e) {
     let { disabled: t, locations: n, settingsLocations: i, onChange: a } = e,
         o = n.map((e) =>
             (0, r.jsx)(
@@ -130,7 +130,7 @@ function x(e) {
                     description: e.description,
                     checked: i[e.location],
                     disabled: t,
-                    onChange: (t) => a(A(T({}, i), { [e.location]: t })),
+                    onChange: (t) => a(A(I({}, i), { [e.location]: t })),
                 },
                 e.location,
             ),
@@ -140,7 +140,7 @@ function x(e) {
         children: o,
     });
 }
-function M(e) {
+function j(e) {
     let { children: t } = e;
     return (0, r.jsx)(l.Text, {
         className: v.sliderDescription,
@@ -149,20 +149,20 @@ function M(e) {
         children: t,
     });
 }
-function k(e) {
+function M(e) {
     let {
             settings: { enabled: t, warningSeen: n },
             updateSettings: i,
         } = e,
         a = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
         s = (e) => {
-            e || (0, p.T)(h.hn.DISABLE_POGGERMODE),
+            e || (0, _.T)(m.hn.DISABLE_POGGERMODE),
                 e && (!n || a)
                     ? (0, l.h7j)((e) =>
                           (0, r.jsx)(
                               l.ConfirmModal,
                               A(
-                                  T(
+                                  I(
                                       {
                                           header: a ? O.intl.string(O.t["FxT+p0"]) : O.intl.string(O.t.TAZ4F9),
                                           confirmText: O.intl.string(O.t.JFfins),
@@ -197,7 +197,7 @@ function k(e) {
         onChange: s,
     });
 }
-function j(e) {
+function k(e) {
     let {
             settings: {
                 enabled: t,
@@ -227,13 +227,13 @@ function j(e) {
                         className: v.sliderLabel,
                         children: O.intl.string(O.t.vd0D81),
                     }),
-                    (0, r.jsx)(M, { children: O.intl.string(O.t.a18Sug) }),
+                    (0, r.jsx)(j, { children: O.intl.string(O.t.a18Sug) }),
                     (0, r.jsx)(l.iRW, {
                         disabled: c,
-                        markers: P,
+                        markers: R,
                         stickToMarkers: !0,
-                        minValue: P[0],
-                        maxValue: P[P.length - 1],
+                        minValue: R[0],
+                        maxValue: R[R.length - 1],
                         initialValue: i,
                         onValueChange: (e) => s({ confettiCount: e }, 0),
                         onValueRender: (e) => "".concat(e),
@@ -248,22 +248,22 @@ function j(e) {
                         className: v.sliderLabel,
                         children: O.intl.string(O.t.sPO3ij),
                     }),
-                    (0, r.jsx)(M, { children: O.intl.string(O.t.xoldVn) }),
+                    (0, r.jsx)(j, { children: O.intl.string(O.t.xoldVn) }),
                     (0, r.jsx)(l.iRW, {
                         disabled: c,
-                        markers: D,
+                        markers: w,
                         stickToMarkers: !0,
-                        minValue: D[0],
-                        maxValue: D[D.length - 1],
+                        minValue: w[0],
+                        maxValue: w[w.length - 1],
                         initialValue: a,
                         onValueChange: (e) => s({ confettiSize: e }, 0),
                         onValueRender: (e) => "".concat(e),
                     }),
                 ],
             }),
-            (0, r.jsx)(x, {
+            (0, r.jsx)(L, {
                 disabled: c,
-                locations: w(),
+                locations: D(),
                 settingsLocations: o,
                 onChange: (e) => s({ confettiEnabledLocations: e }, 0),
             }),
@@ -301,7 +301,7 @@ function U(e) {
                         className: v.sliderLabel,
                         children: O.intl.string(O.t.L0oQuh),
                     }),
-                    (0, r.jsx)(M, { children: O.intl.string(O.t["/OOFpL"]) }),
+                    (0, r.jsx)(j, { children: O.intl.string(O.t["/OOFpL"]) }),
                     (0, r.jsx)(l.iRW, {
                         disabled: s,
                         markers: N,
@@ -325,7 +325,7 @@ function G(e) {
         u = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
         d = !t || !n || u,
         f = (e, t) => {
-            null != e.shakeIntensity && e.shakeIntensity > i && (0, p.T)(h.hn.MORE), s(e, t);
+            null != e.shakeIntensity && e.shakeIntensity > i && (0, _.T)(m.hn.MORE), s(e, t);
         };
     return (0, r.jsxs)(l.C3N, {
         label: O.intl.string(O.t.wVS5Sd),
@@ -345,31 +345,31 @@ function G(e) {
                         className: v.sliderLabel,
                         children: O.intl.string(O.t.UxnnC4),
                     }),
-                    (0, r.jsx)(M, { children: O.intl.string(O.t.CEOEOb) }),
+                    (0, r.jsx)(j, { children: O.intl.string(O.t.CEOEOb) }),
                     (0, r.jsx)(l.iRW, {
                         disabled: d,
-                        markers: R,
+                        markers: P,
                         equidistant: !0,
                         stickToMarkers: !0,
-                        minValue: R[0],
-                        maxValue: R[R.length - 1],
+                        minValue: P[0],
+                        maxValue: P[P.length - 1],
                         initialValue: i,
                         onValueChange: (e) => f({ shakeIntensity: e }, 1),
                         onMarkerRender: (e) =>
-                            e === R[R.length - 1] ? O.intl.string(O.t["4rbMWc"]) : "".concat(100 * e, "%"),
+                            e === P[P.length - 1] ? O.intl.string(O.t["4rbMWc"]) : "".concat(100 * e, "%"),
                     }),
                 ],
             }),
-            (0, r.jsx)(x, {
+            (0, r.jsx)(L, {
                 disabled: d,
-                locations: L(),
+                locations: x(),
                 settingsLocations: a,
                 onChange: (e) => s({ screenshakeEnabledLocations: e }, 1),
             }),
         ],
     });
 }
-function B(e) {
+function Z(e) {
     let { updateSettings: t } = e,
         n = () => {
             t({
@@ -398,7 +398,7 @@ function B(e) {
         }),
     });
 }
-function Z(e) {
+function B(e) {
     let { onChangePage: t } = e,
         n = () => t(1);
     return (0, r.jsxs)(l.P3F, {
@@ -456,19 +456,19 @@ function V(e) {
         let i = null != r ? r : n;
         return (null != t ? t : e) && i;
     }
-    let p = (e) => {
+    let _ = (e) => {
             if (e.enabled && !1 === a.enabled) {
                 var t;
                 n(!0),
                     (0, d.GN)("poggermode_enabled"),
-                    (0, _.Aj)({
+                    (0, p.Aj)({
                         duration: 2000,
                         intensity: null != (t = e.shakeIntensity) ? t : a.shakeIntensity,
                     });
             }
         },
-        h = (e, t) => {
-            if ((p(e), (0, m.AI)(e), null == t)) return;
+        m = (e, t) => {
+            if ((_(e), (0, h.AI)(e), null == t)) return;
             let n = 0 === t,
                 r = f(a.confettiEnabled, e.confettiEnabled, a.enabled, e.enabled);
             n && r && u.fire(s.x, s.y, { settings: e });
@@ -476,7 +476,7 @@ function V(e) {
                 o = f(a.screenshakeEnabled, e.screenshakeEnabled, a.enabled, e.enabled);
             if (i && o) {
                 var l;
-                (0, _.Aj)({
+                (0, p.Aj)({
                     duration: 1000,
                     intensity: null != (l = e.shakeIntensity) ? l : a.shakeIntensity,
                 });
@@ -500,24 +500,24 @@ function V(e) {
                     variant: "heading-lg/semibold",
                     children: O.intl.string(O.t.AtCukI),
                 }),
-                (0, r.jsx)(k, {
+                (0, r.jsx)(M, {
                     settings: a,
-                    updateSettings: h,
+                    updateSettings: m,
                 }),
-                (0, r.jsx)(Z, { onChangePage: t }),
+                (0, r.jsx)(B, { onChangePage: t }),
                 (0, r.jsx)(U, {
                     settings: a,
-                    updateSettings: h,
+                    updateSettings: m,
                 }),
                 (0, r.jsx)(G, {
                     settings: a,
-                    updateSettings: h,
+                    updateSettings: m,
                 }),
-                (0, r.jsx)(j, {
+                (0, r.jsx)(k, {
                     settings: a,
-                    updateSettings: h,
+                    updateSettings: m,
                 }),
-                (0, r.jsx)(B, { updateSettings: h }),
+                (0, r.jsx)(Z, { updateSettings: m }),
             ],
         })
     );
@@ -545,7 +545,7 @@ function K() {
         [n, a] = i.useState(W(e)),
         [s, d] = i.useState(!1),
         f = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
-        _ = s && !f;
+        p = s && !f;
     return (
         i.useEffect(() => {
             let t = setTimeout(() => {
@@ -554,7 +554,7 @@ function K() {
             return () => clearTimeout(t);
         }, [e]),
         i.useEffect(() => {
-            Math.random() > 0.99 && (0, p.T)(h.hn.VISITOR_100);
+            Math.random() > 0.99 && (0, _.T)(m.hn.VISITOR_100);
         }, []),
         (0, r.jsxs)(r.Fragment, {
             children: [
@@ -565,11 +565,11 @@ function K() {
                     children: H(e, t, d),
                 }),
                 (0, r.jsx)("div", {
-                    className: _ ? v.enableAnimationOverlayVisible : v.enableAnimationOverlayHidden,
+                    className: p ? v.enableAnimationOverlayVisible : v.enableAnimationOverlayHidden,
                     children: (0, r.jsx)(l.Fmz, {
                         className: v.enableAnimation,
                         importData: F,
-                        shouldAnimate: _,
+                        shouldAnimate: p,
                         autoplay: !1,
                         resetOnPlay: !0,
                         loop: !1,

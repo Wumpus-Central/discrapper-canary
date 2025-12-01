@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => m,
-    p: () => h,
+    Z: () => h,
+    p: () => m,
 });
 var r = n(54381),
     i = n(473749),
@@ -12,19 +12,19 @@ var r = n(54381),
     u = n(966390),
     d = n(403182),
     f = n(388032),
-    _ = n(449582);
-let p = (e) => {
+    p = n(449582);
+let _ = (e) => {
     let { filename: t } = e,
         i = (0, d.uV)(t),
         a = n(148660)("./icon-file-".concat(i, ".svg"));
     return (0, r.jsx)("img", {
-        className: _.icon,
+        className: p.icon,
         src: a,
         alt: f.intl.formatToPlainString(f.t.g6KdFv, { fileType: i }),
         title: i,
     });
 };
-function h(e) {
+function m(e) {
     let { channelId: t, file: n } = e,
         a = i.useMemo(() => {
             let e = n.items;
@@ -40,35 +40,35 @@ function h(e) {
         s = 100 === n.progress,
         d = !s && n.currentSize > 0;
     return (0, r.jsx)("div", {
-        className: _.fileWrapper,
+        className: p.fileWrapper,
         children: (0, r.jsxs)("div", {
-            className: _.file,
+            className: p.file,
             children: [
-                (0, r.jsx)(p, { filename: a }),
+                (0, r.jsx)(_, { filename: a }),
                 (0, r.jsxs)("div", {
-                    className: _.fileInner,
+                    className: p.fileInner,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: _.filenameWrapper,
+                            className: p.filenameWrapper,
                             children: [
                                 (0, r.jsx)("div", {
-                                    className: _.filename,
+                                    className: p.filename,
                                     children: a,
                                 }),
                                 d
                                     ? (0, r.jsx)("div", {
-                                          className: _.size,
+                                          className: p.size,
                                           children: "\u2014 ".concat(l().filesize(n.currentSize)),
                                       })
                                     : null,
                             ],
                         }),
                         (0, r.jsx)("div", {
-                            className: _.progressContainer,
+                            className: p.progressContainer,
                             children: s
                                 ? f.intl.string(f.t.jfKTes)
                                 : (0, r.jsx)(c.Exd, {
-                                      className: _.progress,
+                                      className: p.progress,
                                       percent: n.progress,
                                   }),
                         }),
@@ -81,29 +81,29 @@ function h(e) {
                           children: (0, r.jsx)(c.Dio, {
                               size: "md",
                               color: "currentColor",
-                              className: _.cancelButton,
+                              className: p.cancelButton,
                           }),
                       }),
             ],
         }),
     });
 }
-let m = (e) => {
+let h = (e) => {
     let { className: t, url: n, fileName: i, fileSize: a, onClick: s, onContextMenu: u, renderAdjacentContent: d } = e;
     return (0, r.jsxs)("div", {
-        className: o()(_.fileWrapper, t),
+        className: o()(p.fileWrapper, t),
         children: [
             (0, r.jsxs)("div", {
-                className: _.file,
+                className: p.file,
                 children: [
-                    (0, r.jsx)(p, { filename: i }),
+                    (0, r.jsx)(_, { filename: i }),
                     (0, r.jsxs)("div", {
-                        className: _.fileInner,
+                        className: p.fileInner,
                         children: [
                             (0, r.jsx)("div", {
-                                className: _.filenameLinkWrapper,
+                                className: p.filenameLinkWrapper,
                                 children: (0, r.jsx)(c.Anchor, {
-                                    className: _.fileNameLink,
+                                    className: p.fileNameLink,
                                     href: n,
                                     onClick: s,
                                     onContextMenu: u,

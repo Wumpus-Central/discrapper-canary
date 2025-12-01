@@ -11,7 +11,7 @@ function u(e) {
     let { message: t, compact: n, usernameHook: u } = e,
         d = (0, o.ZP)(t),
         f = u(d),
-        _ = l.intl.format(l.t["Rv+TSM"], {
+        p = l.intl.format(l.t["Rv+TSM"], {
             username: d.nick,
             usernameHook: f,
             topic: t.content,
@@ -25,6 +25,6 @@ function u(e) {
         iconContainerClassName: c.iconContainer,
         timestamp: t.timestamp,
         compact: n,
-        children: _,
+        children: p,
     });
 }

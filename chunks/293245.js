@@ -1,5 +1,5 @@
 let r, i, a;
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var o,
     s = n(442837),
     l = n(570140),
@@ -7,10 +7,10 @@ var o,
     u = n(594190),
     d = n(283595),
     f = n(780570),
-    _ = n(358085),
-    p = n(209492),
-    h = n(981631);
-function m(e, t, n) {
+    p = n(358085),
+    _ = n(209492),
+    m = n(981631);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -47,7 +47,7 @@ function b(e) {
     return (
         i.delete(a),
         (r[a] = {
-            type: h.TzF.DONE,
+            type: m.TzF.DONE,
             timestamp: Date.now(),
         }),
         !0
@@ -61,7 +61,7 @@ function O(e) {
     let { applicationId: t, branchId: n, next: a, remote: o } = e,
         s = (0, f.Tu)(t, n);
     (r[s] = {
-        type: h.TzF.CONFLICT,
+        type: m.TzF.CONFLICT,
         next: a,
         remote: o,
     }),
@@ -70,11 +70,11 @@ function O(e) {
 function v(e) {
     let { applicationId: t, branchId: n } = e,
         a = (0, f.Tu)(t, n);
-    (r[a] = { type: h.TzF.ERROR }), i.delete(a);
+    (r[a] = { type: m.TzF.ERROR }), i.delete(a);
 }
-class I extends (o = s.ZP.Store) {
+class S extends (o = s.ZP.Store) {
     initialize() {
-        this.waitFor(d.Z, u.ZP), _.isPlatformEmbedded && p.S(), (r = {}), (i = new Set()), (a = []);
+        this.waitFor(d.Z, u.ZP), p.isPlatformEmbedded && _.S(), (r = {}), (i = new Set()), (a = []);
     }
     getState(e, t) {
         return r[(0, f.Tu)(e, t)];
@@ -84,8 +84,8 @@ class I extends (o = s.ZP.Store) {
         return i.has(n);
     }
 }
-m(I, "displayName", "CloudSyncStore");
-let T = new I(l.Z, {
+h(S, "displayName", "CloudSyncStore");
+let I = new S(l.Z, {
     GAME_CLOUD_SYNC_START: E,
     GAME_CLOUD_SYNC_UPDATE: y,
     GAME_CLOUD_SYNC_COMPLETE: b,

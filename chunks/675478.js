@@ -1,15 +1,15 @@
 n.d(t, {
-    BU: () => w,
-    Cd: () => k,
-    DZ: () => R,
-    PS: () => D,
+    BU: () => D,
+    Cd: () => M,
+    DZ: () => P,
+    PS: () => w,
     T6: () => A,
     Z1: () => G,
-    aj: () => P,
+    aj: () => R,
     fy: () => b.fy,
     hW: () => N,
-    m9: () => j,
-    nm: () => L,
+    m9: () => k,
+    nm: () => x,
     w9: () => U,
 }),
     n(415506),
@@ -37,10 +37,10 @@ var r = n(512722),
     d = n(710845);
 n(428967), n(605236);
 var f = n(626135),
-    _ = n(70956),
-    p = n(915486),
-    h = n(262847),
-    m = n(581883),
+    p = n(70956),
+    _ = n(915486),
+    m = n(262847),
+    h = n(581883),
     g = n(28926),
     E = n(48481),
     b = n(526761),
@@ -74,26 +74,26 @@ function v(e) {
     }
     return e;
 }
-let I = 5000,
-    T = "UserSettingsProtoLastWriteTimes",
-    S = Date.now();
+let S = 5000,
+    I = "UserSettingsProtoLastWriteTimes",
+    T = Date.now();
 function A() {}
 u.Z.subscribe("CONNECTION_OPEN", () => {
-    S = Date.now();
+    T = Date.now();
 }),
     u.Z.subscribe("CONNECTION_CLOSED", () => {
-        S = Date.now();
+        T = Date.now();
     }),
     "undefined" != typeof document &&
         (document.addEventListener("mousedown", () => {
-            S = 0;
+            T = 0;
         }),
         document.addEventListener("keydown", () => {
-            S = 0;
+            T = 0;
         }));
 class C {
     getEditInfo() {
-        return m.Z.getFullState()[this.type];
+        return h.Z.getFullState()[this.type];
     }
     getCurrentValue() {
         return this.getEditInfo().proto;
@@ -150,8 +150,8 @@ class C {
                 (clearTimeout(a.timeout), (a.timeout = void 0)),
             null == a.timeout)
         ) {
-            let e = o * _.Z.Millis.SECOND;
-            t.jitter && (e += Math.floor(Math.random() * Math.min(e, 30 * _.Z.Millis.SECOND))),
+            let e = o * p.Z.Millis.SECOND;
+            t.jitter && (e += Math.floor(Math.random() * Math.min(e, 30 * p.Z.Millis.SECOND))),
                 this.logger.log("Scheduling save from markDirty"),
                 (a.timeout = setTimeout(this.persistChanges, e)),
                 (a.timeoutDelay = o);
@@ -173,11 +173,11 @@ class C {
     }
     saveLastSendTime() {
         var e;
-        let t = null != (e = c.K.get(T)) ? e : {};
-        (t[this.type] = Date.now()), c.K.set(T, t);
+        let t = null != (e = c.K.get(I)) ? e : {};
+        (t[this.type] = Date.now()), c.K.set(I, t);
     }
     loadIfUncached(e, t) {
-        (m.Z.hasLoaded(e) && !0 !== t) || this.loadIfNecessary(t);
+        (h.Z.hasLoaded(e) && !0 !== t) || this.loadIfNecessary(t);
     }
     async loadIfNecessary(e) {
         if (__OVERLAY__)
@@ -201,7 +201,7 @@ class C {
                         loading: !1,
                         loaded: !0,
                     });
-                let r = h.Z[this.type],
+                let r = m.Z[this.type],
                     { proto: i, isDirty: o, cleanupFuncs: s } = (0, E.xt)(n, r);
                 return (
                     await u.Z.dispatch({
@@ -252,7 +252,7 @@ class C {
         i()(null != e.protoToSave, "protoToSave cannot be null"),
             i()(null != e.offlineEditDataVersion, "offlineEditDataVersion cannot be null"),
             i()(null == e.timeout, "timeout must not be set already");
-        let t = I + Math.floor(Math.random() * I),
+        let t = S + Math.floor(Math.random() * S),
             n = setTimeout(this.persistChanges, t);
         this.dispatchChanges({
             timeout: n,
@@ -314,7 +314,7 @@ class C {
                         isNaN(t) && (t = 60);
                         let n = setTimeout(
                             this.persistChanges,
-                            Math.min(30 * _.Z.Millis.SECOND, t * _.Z.Millis.SECOND),
+                            Math.min(30 * p.Z.Millis.SECOND, t * p.Z.Millis.SECOND),
                         );
                         this.dispatchChanges({
                             rateLimited: !0,
@@ -332,40 +332,40 @@ class C {
     }
 }
 let N = new C(l.o8, b.yP.PRELOADED_USER_SETTINGS),
-    R = new C(s.ji, b.yP.FRECENCY_AND_FAVORITES_SETTINGS),
-    P = {
+    P = new C(s.ji, b.yP.FRECENCY_AND_FAVORITES_SETTINGS),
+    R = {
         [b.yP.PRELOADED_USER_SETTINGS]: N,
-        [b.yP.FRECENCY_AND_FAVORITES_SETTINGS]: R,
+        [b.yP.FRECENCY_AND_FAVORITES_SETTINGS]: P,
     };
-function D(e, t, n) {
+function w(e, t, n) {
     return N.updateAsync("guilds", (n) => (0, E.u0)(n, e, t), n);
 }
-function w(e, t, n, r) {
-    return D(e, (e) => (0, E.uL)(e, t, n), r);
+function D(e, t, n, r) {
+    return w(e, (e) => (0, E.uL)(e, t, n), r);
 }
-function L(e) {
+function x(e) {
     return (
-        x(e),
+        L(e),
         N.updateAsync(
             "userContent",
             (t) => {
-                if ((0, p.jl)(t.dismissedContents, e)) return !1;
-                t.dismissedContents = (0, p.GV)(t.dismissedContents, e);
+                if ((0, _.jl)(t.dismissedContents, e)) return !1;
+                t.dismissedContents = (0, _.GV)(t.dismissedContents, e);
             },
             b.fy.INFREQUENT_USER_ACTION,
         )
     );
 }
-function x(e) {
-    !m.Z.hasLoaded(b.yP.PRELOADED_USER_SETTINGS) &&
-        (M(e) || f.default.track(y.rMx.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, { content_type: o.z[e] }));
+function L(e) {
+    !h.Z.hasLoaded(b.yP.PRELOADED_USER_SETTINGS) &&
+        (j(e) || f.default.track(y.rMx.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, { content_type: o.z[e] }));
 }
-function M(e) {
+function j(e) {
     var t;
-    let n = null == (t = m.Z.settings.userContent) ? void 0 : t.dismissedContents;
-    return null != n && (0, p.jl)(n, e);
+    let n = null == (t = h.Z.settings.userContent) ? void 0 : t.dismissedContents;
+    return null != n && (0, _.jl)(n, e);
 }
-async function k(e, t) {
+async function M(e, t) {
     return await N.updateAsync(
         "userContent",
         (n) => {
@@ -374,8 +374,8 @@ async function k(e, t) {
         b.fy.INFREQUENT_USER_ACTION,
     );
 }
-async function j(e, t, n) {
-    return await D(
+async function k(e, t, n) {
+    return await w(
         t,
         (t) => {
             t.guildDismissibleContentStates[e] = v({}, t.guildDismissibleContentStates[e], n);
@@ -387,14 +387,14 @@ function U(e) {
     return N.updateAsync(
         "userContent",
         (t) => {
-            if (!(0, p.jl)(t.dismissedContents, e)) return !1;
-            t.dismissedContents = (0, p.jx)(t.dismissedContents, e);
+            if (!(0, _.jl)(t.dismissedContents, e)) return !1;
+            t.dismissedContents = (0, _.jx)(t.dismissedContents, e);
         },
         b.fy.INFREQUENT_USER_ACTION,
     );
 }
 function G(e) {
-    return k(e, {
+    return M(e, {
         lastDismissedVersion: 0,
         lastDismissedAtMs: "0",
         lastDismissedObjectId: "0",

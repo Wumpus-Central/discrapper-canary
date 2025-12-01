@@ -1,6 +1,6 @@
 n.d(t, {
-    V: () => j,
-    Z: () => O,
+    V: () => x,
+    Z: () => j,
 }),
     n(388685);
 var i = n(54381),
@@ -49,7 +49,7 @@ function _(e) {
     }
     return e;
 }
-function x(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -67,7 +67,7 @@ function x(e, t) {
         e
     );
 }
-class j extends r.PureComponent {
+class x extends r.PureComponent {
     componentDidMount() {
         this.updateCache();
     }
@@ -141,7 +141,7 @@ class j extends r.PureComponent {
                 left: null != b ? r.x + b : void 0,
                 top: null != y ? r.y + y : void 0,
             },
-            j = (e) => {
+            x = (e) => {
                 let t = n && !e;
                 return {
                     [C.animating]: t,
@@ -149,10 +149,10 @@ class j extends r.PureComponent {
                     [C.highPriority]: u,
                 };
             },
-            O = this.getTutorialPopoutText();
+            j = this.getTutorialPopoutText();
         return (0, i.jsx)(
             m.ZP,
-            x(
+            O(
                 _(
                     {
                         innerRef: this.contentRef,
@@ -167,19 +167,19 @@ class j extends r.PureComponent {
                         onSkipAll: this.handleSkipTips,
                         onComplete: this.handleDismiss,
                     },
-                    O,
+                    j,
                 ),
                 {
                     children: (e, t) => {
                         let { isShown: r } = t;
                         return (0, i.jsx)(
                             d.P3F,
-                            x(_({}, e), {
+                            O(_({}, e), {
                                 className: C.indicator,
                                 style: v,
                                 innerRef: this.contentRef,
                                 children: (0, i.jsxs)("div", {
-                                    className: a()(C.animationContainer, j(r)),
+                                    className: a()(C.animationContainer, x(r)),
                                     children: [
                                         ((e) => {
                                             let t = n && !e;
@@ -202,8 +202,8 @@ class j extends r.PureComponent {
                                                       ],
                                                   });
                                         })(r),
-                                        (0, i.jsx)("div", { className: a()(C.innerCircle, j(r)) }),
-                                        (0, i.jsx)("div", { className: a()(C.outerCircle, j(r)) }),
+                                        (0, i.jsx)("div", { className: a()(C.innerCircle, x(r)) }),
+                                        (0, i.jsx)("div", { className: a()(C.outerCircle, x(r)) }),
                                     ],
                                 }),
                             }),
@@ -225,7 +225,7 @@ class j extends r.PureComponent {
             });
     }
 }
-let O =
+let j =
     12633 == n.j
         ? function () {
               let {
@@ -247,7 +247,7 @@ let O =
                             return (
                                 s()(null != a, "Missing tutorial definition for ".concat(r)),
                                 (0, i.jsx)(
-                                    j,
+                                    x,
                                     _(
                                         {
                                             tutorialId: r,

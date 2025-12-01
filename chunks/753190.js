@@ -1,4 +1,4 @@
-n.d(t, { y: () => _ }), n(388685), n(583741);
+n.d(t, { y: () => p }), n(388685), n(583741);
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -39,7 +39,7 @@ function d(e) {
 var f = (function (e) {
     return (e.XSMALL = "xsmall"), (e.SMALL = "small"), (e.LARGE = "large"), e;
 })(f || {});
-function _(e) {
+function p(e) {
     let {
             className: t,
             percents: n,
@@ -48,7 +48,7 @@ function _(e) {
             backgroundColor: u = "var(--background-modifier-active)",
             animate: f = !0,
         } = e,
-        _ = s()(null != n ? n : [], o)
+        p = s()(null != n ? n : [], o)
             .map((e, t) => {
                 let n,
                     [o, s] = e;
@@ -78,7 +78,7 @@ function _(e) {
     return (0, r.jsx)("div", {
         className: a()(t, c.progress, c[i]),
         style: { backgroundColor: u },
-        children: _,
+        children: p,
     });
 }
-_.Sizes = f;
+p.Sizes = f;

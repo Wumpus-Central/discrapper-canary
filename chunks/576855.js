@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r,
     i = n(54381),
     a = n(473749),
@@ -24,7 +24,7 @@ let f = {
     BLOCK: u.block,
     INLINE: u.inline,
 };
-class _ extends (r = a.PureComponent) {
+class p extends (r = a.PureComponent) {
     render() {
         let { children: e, className: t, textClassName: n, type: r = f.BLOCK, style: a } = this.props;
         return (0, i.jsxs)("div", {
@@ -47,5 +47,5 @@ class _ extends (r = a.PureComponent) {
         });
     }
 }
-d(_, "Types", f);
-let p = _;
+d(p, "Types", f);
+let _ = p;

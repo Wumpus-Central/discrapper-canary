@@ -9,11 +9,11 @@ var r = n(444675);
             l = Object.getPrototypeOf && Object.getPrototypeOf(e);
         (l = l && l.setTimeout ? l : e),
             "[object process]" === {}.toString.call(e.process)
-                ? _()
-                : p()
-                  ? h()
+                ? p()
+                : _()
+                  ? m()
                   : e.MessageChannel
-                    ? m()
+                    ? h()
                     : s && "onreadystatechange" in s.createElement("script")
                       ? g()
                       : E(),
@@ -66,14 +66,14 @@ var r = n(444675);
             }
         }
     }
-    function _() {
+    function p() {
         n = function (e) {
             r.nextTick(function () {
                 f(e);
             });
         };
     }
-    function p() {
+    function _() {
         if (e.postMessage && !e.importScripts) {
             var t = !0,
                 n = e.onmessage;
@@ -87,7 +87,7 @@ var r = n(444675);
             );
         }
     }
-    function h() {
+    function m() {
         var t = "setImmediate$" + Math.random() + "$",
             r = function (n) {
                 n.source === e && "string" == typeof n.data && 0 === n.data.indexOf(t) && f(+n.data.slice(t.length));
@@ -97,7 +97,7 @@ var r = n(444675);
                 e.postMessage(t + n, "*");
             });
     }
-    function m() {
+    function h() {
         var e = new MessageChannel();
         (e.port1.onmessage = function (e) {
             f(e.data);

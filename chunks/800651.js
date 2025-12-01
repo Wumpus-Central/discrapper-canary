@@ -2,7 +2,7 @@ n.d(t, {
     Jr: () => d,
     bE: () => f,
     n6: () => c,
-    zj: () => p,
+    zj: () => _,
 });
 var r = n(524437),
     i = n(656577),
@@ -62,7 +62,7 @@ let c = (e) => null != e && e !== r.Q4.UNSET_EXPLICIT_CONTENT_REDACTION,
         let a = o.eD.getControlledSetting(t);
         return r ? i.MS[a] : i.FE[a];
     },
-    _ = (e) => {
+    p = (e) => {
         let t = o.sx.getControlledSetting(e);
         return {
             explicitContentNonFriendDm: f({
@@ -77,7 +77,7 @@ let c = (e) => null != e && e !== r.Q4.UNSET_EXPLICIT_CONTENT_REDACTION,
             explicitContentGuilds: r.Q4.BLUR,
         };
     },
-    p = (e, t) => {
-        let n = _(e);
+    _ = (e, t) => {
+        let n = p(e);
         o.sx.updateControlledSetting(e, l({}, n, t));
     };

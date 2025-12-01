@@ -1,15 +1,15 @@
 n.d(t, {
-    A4: () => p,
+    A4: () => _,
     E9: () => f,
     K4: () => g,
     Os: () => c,
-    jx: () => h,
+    jx: () => m,
     n6: () => d,
     nv: () => l,
-    sz: () => _,
+    sz: () => p,
     te: () => s,
     xh: () => u,
-    zG: () => m,
+    zG: () => h,
 });
 var r = n(570140),
     i = n(444295),
@@ -67,22 +67,22 @@ function f(e) {
         widgetId: e,
     });
 }
-function _(e) {
+function p(e) {
     r.Z.dispatch({
         type: "LAYOUT_DELETE_ALL_WIDGETS",
         layoutId: e,
     });
 }
-function p(e) {
-    h([e]);
+function _(e) {
+    m([e]);
 }
-function h(e) {
+function m(e) {
     r.Z.dispatch({
         type: "LAYOUT_CREATE_WIDGETS",
         widgetConfigs: e,
     });
 }
-function m(e, t) {
+function h(e, t) {
     r.Z.dispatch({
         type: "LAYOUT_SET_WIDGET_META",
         widgetId: e,

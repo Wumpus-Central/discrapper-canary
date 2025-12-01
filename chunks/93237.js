@@ -1,10 +1,10 @@
 n.d(t, {
     $q: () => f,
     F6: () => d,
-    HI: () => p,
-    ZL: () => h,
+    HI: () => _,
+    ZL: () => m,
     eW: () => g,
-    p9: () => _,
+    p9: () => p,
 });
 var r = n(442837),
     i = n(704215),
@@ -23,10 +23,10 @@ function d(e) {
           : u.intl.formatToPlainString(u.t["/d0GmT"], { numMinutes: Math.floor(60 * t) });
 }
 let f = () => (0, a.zu)(i.z.REFERRAL_PROGRAM_NITRO_TAB_BADGE),
-    _ = () => {
+    p = () => {
         (0, a.Q3)(i.z.REFERRAL_PROGRAM_NITRO_TAB_BADGE);
     },
-    p = (e) => {
+    _ = (e) => {
         let { trialOffer: t } = e;
         if (null == t) return !1;
         let n = void 0 !== t.referrer_id,
@@ -35,13 +35,13 @@ let f = () => (0, a.zu)(i.z.REFERRAL_PROGRAM_NITRO_TAB_BADGE),
             a = new Date() >= i;
         return n && r && a;
     },
-    h = () => {
+    m = () => {
         (0, a.Q3)(i.z.REFERRAL_PROGRAM_POPOVER);
     },
-    m = () => (0, a.zu)(i.z.REFERRAL_PROGRAM_POPOVER),
+    h = () => (0, a.zu)(i.z.REFERRAL_PROGRAM_POPOVER),
     g = () => {
         let e = (0, c.b)(!1),
-            t = m(),
+            t = h(),
             n = (0, r.e7)([l.Z], () => l.Z.getReferralsRemaining());
         return e && !1 === t && null !== n && n > 0;
     };

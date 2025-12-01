@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(412899),
     d = n(635042),
     f = n(485386),
-    _ = n(981631),
-    p = n(388032),
-    h = n(65448);
-function m(e, t, n) {
+    p = n(981631),
+    _ = n(388032),
+    m = n(65448);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
@@ -88,11 +88,11 @@ function O(e, t) {
 function v(e) {
     let { invite: t } = e,
         n = i.useMemo(() => "invite-roles-".concat((0, a.Z)()), []),
-        m = (0, o.ZP)({
+        h = (0, o.ZP)({
             id: n,
             isEnabled: !0,
-            scrollToStart: _.Cyb,
-            scrollToEnd: _.Cyb,
+            scrollToStart: p.Cyb,
+            scrollToEnd: p.Cyb,
             wrap: !0,
         }),
         E = (0, l.e7)(
@@ -108,28 +108,28 @@ function v(e) {
         );
     if (0 === E.length) return null;
     let O = E.length,
-        v = p.intl.formatToPlainString(p.t.PCs0oo, { numRoles: O });
+        v = _.intl.formatToPlainString(_.t.PCs0oo, { numRoles: O });
     return (0, r.jsx)(s.bG, {
-        navigator: m,
+        navigator: h,
         children: (0, r.jsx)(s.SJ, {
             children: (e) => {
                 var { ref: n } = e,
                     i = y(e, ["ref"]);
                 return (0, r.jsxs)("div", {
-                    className: h.root,
+                    className: m.root,
                     children: [
                         (0, r.jsx)(c.Text, {
                             variant: "text-sm/medium",
                             color: "text-default",
-                            className: h.rolesHeading,
-                            children: p.intl.string(p.t.stcSfI),
+                            className: m.rolesHeading,
+                            children: _.intl.string(_.t.stcSfI),
                         }),
                         (0, r.jsx)(
                             "div",
                             b(
                                 g(
                                     {
-                                        className: h.rolesList,
+                                        className: m.rolesList,
                                         "aria-label": v,
                                         ref: n,
                                     },

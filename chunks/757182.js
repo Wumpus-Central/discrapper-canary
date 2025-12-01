@@ -59,7 +59,7 @@ function f(e) {
     var { activity: t, onAction: n, variant: l = "secondary", size: d = "sm" } = e,
         f = u(e, ["activity", "onAction", "variant", "size"]);
     if (!(0, o.Z)(t)) return null;
-    let _ = () => {
+    let p = () => {
         null == n || n();
         let e = (0, a.Z)(t);
         return window.open(null != e ? e : void 0);
@@ -71,7 +71,7 @@ function f(e) {
                 variant: l,
                 size: d,
                 text: s.intl.string(s.t.I6JG46),
-                onClick: _,
+                onClick: p,
                 fullWidth: !0,
             },
             f,

@@ -13,8 +13,8 @@ var l = n(442837),
     p = n(731722),
     h = n(446094),
     x = n(921944),
-    g = n(388032);
-let f = new c.Z("GuildTagCoachmark");
+    f = n(388032);
+let g = new c.Z("GuildTagCoachmark");
 function b(e) {
     function t(t) {
         var n;
@@ -28,13 +28,13 @@ function b(e) {
     let { isAdopting: n, onAdoptTag: l, onEditProfile: i } = (0, h.Z)(e.guild.id, () => t(x.L.TAKE_ACTION)),
         c = [
             {
-                text: g.intl.string(g.t.jwEaiX),
+                text: f.intl.string(f.t.jwEaiX),
                 loading: n,
                 onClick: l,
                 variant: "primary",
             },
             {
-                text: g.intl.string(g.t.s5vZlQ),
+                text: f.intl.string(f.t.s5vZlQ),
                 onClick: i,
                 variant: "secondary",
             },
@@ -54,8 +54,8 @@ function b(e) {
                         guildProfile: e.guild.profile,
                     },
                 },
-                title: g.intl.formatToPlainString(g.t["m/Tc3n"], { guildName: e.guild.name }),
-                body: g.intl.string(g.t.DrAXIr),
+                title: f.intl.formatToPlainString(f.t["m/Tc3n"], { guildName: e.guild.name }),
+                body: f.intl.string(f.t.DrAXIr),
                 actions: c,
                 size: "md",
                 onRequestClose: () => t(x.L.USER_DISMISS),
@@ -77,13 +77,13 @@ function v(e) {
     let { isAdopting: n, onAdoptTag: l, onEditProfile: c } = (0, h.Z)(e.guild.id, () => t(x.L.TAKE_ACTION)),
         u = [
             {
-                text: g.intl.string(g.t.jwEaiX),
+                text: f.intl.string(f.t.jwEaiX),
                 loading: n,
                 onClick: l,
                 variant: "primary",
             },
             {
-                text: g.intl.string(g.t.s5vZlQ),
+                text: f.intl.string(f.t.s5vZlQ),
                 onClick: c,
                 variant: "secondary",
             },
@@ -103,8 +103,8 @@ function v(e) {
                         guildProfile: e.guild.profile,
                     },
                 },
-                title: g.intl.formatToPlainString(g.t.VFqnyU, { guildName: e.guild.name }),
-                body: g.intl.string(g.t.DrAXIr),
+                title: f.intl.formatToPlainString(f.t.VFqnyU, { guildName: e.guild.name }),
+                body: f.intl.string(f.t.DrAXIr),
                 actions: u,
                 size: "md",
                 onRequestClose: () => t(x.L.USER_DISMISS),
@@ -129,5 +129,5 @@ function j(e) {
                   targetElementRef: e.targetElementRef,
                   children: e.children,
               })
-        : (f.error("GuildTagCoachmark rendered without guildId or coachmark type."), e.children);
+        : (g.error("GuildTagCoachmark rendered without guildId or coachmark type."), e.children);
 }

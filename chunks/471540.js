@@ -11,12 +11,12 @@ var r = n(46015),
                 u,
                 d = a(o(t)),
                 f = i(n),
-                _ = d.length;
-            return f < 0 || f >= _
+                p = d.length;
+            return f < 0 || f >= p
                 ? e
                     ? ""
                     : void 0
-                : (r = l(d, f)) < 55296 || r > 56319 || f + 1 === _ || (u = l(d, f + 1)) < 56320 || u > 57343
+                : (r = l(d, f)) < 55296 || r > 56319 || f + 1 === p || (u = l(d, f + 1)) < 56320 || u > 57343
                   ? e
                       ? s(d, f)
                       : r

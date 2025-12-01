@@ -1,7 +1,7 @@
 n.d(t, {
     JV: () => s,
     aA: () => l,
-    mA: () => _,
+    mA: () => p,
     ug: () => o,
 }),
     n(388685);
@@ -84,7 +84,7 @@ let c = Object.freeze({
         fired_due_to_max_timeout: 0,
         skip_idle_callback_due_to_backgrounded: 0,
     });
-class _ {
+class p {
     reset() {
         (this._timeTracking = (0, r.cloneDeep)(c)),
             (this._timingStats = (0, r.cloneDeep)(u)),

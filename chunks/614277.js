@@ -13,13 +13,13 @@ var r = n(54381),
     u = n(481060),
     d = n(563132),
     f = n(409813),
-    _ = n(474936),
-    p = n(490684);
-function h(e, t) {
+    p = n(474936),
+    _ = n(490684);
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -27,7 +27,7 @@ function h(e, t) {
     }
     return i;
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -41,64 +41,64 @@ function g(e) {
     return {
         header: t,
         isLargeModal: n,
-        stepProps: h(e, ["header", "isLargeModal"]),
+        stepProps: m(e, ["header", "isLargeModal"]),
     };
 }
 function E(e) {
-    var t, n, a, s, c, h;
-    let m,
+    var t, n, a, s, c, m;
+    let h,
         { header: E, isLargeModal: b, stepProps: y } = g(e),
         {
             step: O,
             stepConfigs: v,
-            setBodyNode: I,
-            setFooterNode: T,
-            setModalOverlayNode: S,
+            setBodyNode: S,
+            setFooterNode: I,
+            setModalOverlayNode: T,
             setReadySlideId: A,
             premiumBrandRefreshBackgroundClassName: C,
             selectedSkuId: N,
-            isDisplayingWowMomentConfirmation: R,
-            isGift: P,
+            isDisplayingWowMomentConfirmation: P,
+            isGift: R,
         } = (0, d.JL)(),
-        D = null != N && N in _.y7,
-        w = v.find((e) => e.key === O);
+        w = null != N && N in p.y7,
+        D = v.find((e) => e.key === O);
     i.useEffect(() => {
-        S(null);
-    }, [O, S]),
-        l()(null != w, "Unknown step for current payment flow.");
-    let L = null != (c = null == w || null == (t = w.options) ? void 0 : t.hideSlider) && c,
-        x = null == w || null == (n = w.options) ? void 0 : n.bodyClassName,
-        M = null == w || null == (a = w.options) ? void 0 : a.sliderBodyClassName;
-    switch ((void 0 !== b && b && (M = p.sliderBodyLarge), O)) {
+        T(null);
+    }, [O, T]),
+        l()(null != D, "Unknown step for current payment flow.");
+    let x = null != (c = null == D || null == (t = D.options) ? void 0 : t.hideSlider) && c,
+        L = null == D || null == (n = D.options) ? void 0 : n.bodyClassName,
+        j = null == D || null == (a = D.options) ? void 0 : a.sliderBodyClassName;
+    switch ((void 0 !== b && b && (j = _.sliderBodyLarge), O)) {
         case f.h8.ADD_PAYMENT_STEPS:
-            m = 408;
+            h = 408;
             break;
         case f.h8.REVIEW:
-            m = 392;
+            h = 392;
             break;
         case f.h8.PLAN_SELECT:
-            D && !P && (m = "100%");
+            w && !R && (h = "100%");
     }
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            null == (h = null == w || null == (s = w.options) ? void 0 : s.renderHeader) || h ? E : null,
-            w.renderStep(y),
-            null == O || L
+            null == (m = null == D || null == (s = D.options) ? void 0 : s.renderHeader) || m ? E : null,
+            D.renderStep(y),
+            null == O || x
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(u.hzk, {
                               "data-migration-pending": !0,
-                              className: o()(x, p.body, C, {
-                                  [p.reviewStep]: O === f.h8.REVIEW,
-                                  [p.addPaymentStepForPremium]: O === f.h8.ADD_PAYMENT_STEPS && D,
+                              className: o()(L, _.body, C, {
+                                  [_.reviewStep]: O === f.h8.REVIEW,
+                                  [_.addPaymentStepForPremium]: O === f.h8.ADD_PAYMENT_STEPS && w,
                               }),
                               children: (0, r.jsx)(u.MyZ, {
                                   activeSlide: O,
                                   centered: !1,
                                   onSlideReady: (e) => A(e),
-                                  width: m,
-                                  overflow: R ? "visible" : void 0,
+                                  width: h,
+                                  overflow: P ? "visible" : void 0,
                                   shouldUseMediaQueriesForSizing: !0,
                                   children: v
                                       .filter((e) => null != e.key)
@@ -108,9 +108,9 @@ function E(e) {
                                               {
                                                   id: e.key,
                                                   children: (0, r.jsx)("form", {
-                                                      className: o()(p.sliderBody, M),
+                                                      className: o()(_.sliderBody, j),
                                                       ref: (e) => {
-                                                          I(e);
+                                                          S(e);
                                                       },
                                                       onSubmit: (e) => e.preventDefault(),
                                                   }),
@@ -120,10 +120,10 @@ function E(e) {
                                       ),
                               }),
                           }),
-                          (0, r.jsx)("div", { ref: (e) => T(e) }),
+                          (0, r.jsx)("div", { ref: (e) => I(e) }),
                           (0, r.jsx)("div", {
                               ref: (e) => {
-                                  S(e);
+                                  T(e);
                               },
                           }),
                       ],

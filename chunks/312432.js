@@ -23,22 +23,22 @@ s.List,
                     u = e.decorator,
                     d = e.direction,
                     f = e.forceSelection,
-                    _ = e.hasSelection,
-                    p = e.selection,
-                    h = e.tree,
-                    m = t.getKey(),
+                    p = e.hasSelection,
+                    _ = e.selection,
+                    m = e.tree,
+                    h = t.getKey(),
                     g = t.getText(),
-                    E = h.size - 1,
+                    E = m.size - 1,
                     b =
                         this.props.children ||
-                        h
+                        m
                             .map(function (e, c) {
-                                var h = e.get("decoratorKey"),
+                                var m = e.get("decoratorKey"),
                                     b = e.get("leaves"),
                                     y = b.size - 1,
                                     O = b
                                         .map(function (e, n) {
-                                            var i = o.encode(m, c, n),
+                                            var i = o.encode(h, c, n),
                                                 u = e.get("start"),
                                                 d = e.get("end");
                                             return l.createElement(a, {
@@ -46,23 +46,23 @@ s.List,
                                                 offsetKey: i,
                                                 block: t,
                                                 start: u,
-                                                selection: _ ? p : null,
+                                                selection: p ? _ : null,
                                                 forceSelection: f,
                                                 text: g.slice(u, d),
                                                 styleSet: t.getInlineStyleAt(u),
                                                 customStyleMap: s,
                                                 customStyleFn: r,
-                                                isLast: h === E && n === y,
+                                                isLast: m === E && n === y,
                                             });
                                         })
                                         .toArray();
-                                return h && u
+                                return m && u
                                     ? l.createElement(i, {
                                           block: t,
                                           children: O,
                                           contentState: n,
                                           decorator: u,
-                                          decoratorKey: h,
+                                          decoratorKey: m,
                                           direction: d,
                                           leafSet: e,
                                           text: g,
@@ -74,7 +74,7 @@ s.List,
                 return l.createElement(
                     "div",
                     {
-                        "data-offset-key": o.encode(m, 0, 0),
+                        "data-offset-key": o.encode(h, 0, 0),
                         className: c({
                             "public/DraftStyleDefault/block": !0,
                             "public/DraftStyleDefault/ltr": "LTR" === d,

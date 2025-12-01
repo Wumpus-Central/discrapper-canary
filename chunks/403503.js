@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -10,11 +10,11 @@ var i = n(120356),
     u = n(388032),
     d = n(341461);
 let f = 1000;
-function _(e) {
+function p(e) {
     let t = e.toString();
     return 1 === t.length ? ["0", t[0]] : [t[0], t[1]];
 }
-function p(e) {
+function _(e) {
     switch (e) {
         case "days":
             return u.intl.string(u.t.ixASa2);
@@ -28,8 +28,8 @@ function p(e) {
             return "";
     }
 }
-function h(e, t) {
-    let [n, i] = _(e.unitValue);
+function m(e, t) {
+    let [n, i] = p(e.unitValue);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)(
@@ -61,7 +61,7 @@ function h(e, t) {
                         (0, r.jsx)(l.Text, {
                             variant: "text-xs/semibold",
                             color: "always-white",
-                            children: p(e.unitType),
+                            children: _(e.unitType),
                         }),
                     ],
                 },
@@ -77,26 +77,26 @@ function h(e, t) {
         ],
     });
 }
-let m = (e) => {
+let h = (e) => {
     let { expiresAt: t, className: n } = e,
         i = (0, c.Z)(s()(t).toDate(), f);
     if (null == i) return null;
-    let { days: o, hours: _, minutes: p, seconds: m } = i,
+    let { days: o, hours: p, minutes: _, seconds: h } = i,
         g = [
             {
                 unitValue: o,
                 unitType: "days",
             },
             {
-                unitValue: _,
+                unitValue: p,
                 unitType: "hours",
             },
             {
-                unitValue: p,
+                unitValue: _,
                 unitType: "minutes",
             },
             {
-                unitValue: m,
+                unitValue: h,
                 unitType: "seconds",
             },
         ];
@@ -110,7 +110,7 @@ let m = (e) => {
             }),
             (0, r.jsx)("div", {
                 className: d.timeUnitsOuterContainer,
-                children: g.map((e, t) => h(e, t === g.length - 1)),
+                children: g.map((e, t) => m(e, t === g.length - 1)),
             }),
         ],
     });

@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(5192),
     d = n(785717),
     f = n(698305),
-    _ = n(981631),
-    p = n(388032),
-    h = n(391022);
-function m(e, t, n) {
+    p = n(981631),
+    _ = n(388032),
+    m = n(391022);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
@@ -66,26 +66,26 @@ function b(e, t) {
 }
 let y = (0, c.createChannelRecord)({
     id: "1",
-    type: _.d4z.DM,
+    type: p.d4z.DM,
 });
 function O(e) {
-    let { user: t, guildId: n, channelId: c, onClose: _, disableAutoFocus: m = !1 } = e,
+    let { user: t, guildId: n, channelId: c, onClose: p, disableAutoFocus: h = !1 } = e,
         { newestAnalyticsLocation: E } = (0, a.ZP)(),
         { trackUserProfileAction: O } = (0, d.KZ)(),
-        [v, I] = i.useState(""),
-        [T, S] = i.useState((0, s.JM)(v)),
+        [v, S] = i.useState(""),
+        [I, T] = i.useState((0, s.JM)(v)),
         A = i.useRef(!1),
-        C = i.useMemo(() => b(g({}, o.Ie.USER_PROFILE), { disableAutoFocus: m }), [m]);
+        C = i.useMemo(() => b(g({}, o.Ie.USER_PROFILE), { disableAutoFocus: h }), [h]);
     return (0, r.jsx)(l.ZP, {
-        className: h.container,
-        editorClassName: h.editor,
+        className: m.container,
+        editorClassName: m.editor,
         type: C,
-        placeholder: p.intl.formatToPlainString(p.t["0ZQw/X"], { name: u.ZP.getName(n, c, t) }),
+        placeholder: _.intl.formatToPlainString(_.t["0ZQw/X"], { name: u.ZP.getName(n, c, t) }),
         channel: y,
         textValue: v,
-        richValue: T,
+        richValue: I,
         onChange: (e, t, n) => {
-            t !== v && (I(t), S(n));
+            t !== v && (S(t), T(n));
         },
         focused: A.current,
         onFocus: () => {
@@ -106,7 +106,7 @@ function O(e) {
                         whenReady: !0,
                         location: E,
                     }),
-                    null == _ || _(),
+                    null == p || p(),
                     {
                         shouldClear: !0,
                         shouldRefocus: !1,

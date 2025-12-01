@@ -15,8 +15,8 @@ let d = (e) => {
         className: i,
         renderLinkComponent: d,
         inactive: f,
-        messageId: _,
-        channelId: p,
+        messageId: p,
+        channelId: _,
     } = e;
     return (0, r.jsx)(s.G.Consumer, {
         children: (e) =>
@@ -56,8 +56,8 @@ let d = (e) => {
                                   "aria-label": c.intl.string(c.t.wuRE8M),
                                   className: null != t ? u.iconExternalMargins : u.iconExternal,
                               }),
-                              messageId: _,
-                              channelId: p,
+                              messageId: p,
+                              channelId: _,
                           })
                         : null,
                 ],

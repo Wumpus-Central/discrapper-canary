@@ -1,16 +1,16 @@
-n.d(t, { c: () => p });
+n.d(t, { c: () => _ });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(790519),
+    s = n(666917),
     l = n(442837),
     c = n(481060),
     u = n(607070),
     d = n(79320),
     f = n(388032),
-    _ = n(110109);
-function p(e) {
+    p = n(110109);
+function _(e) {
     let { className: t } = e,
         n = [
             {
@@ -27,9 +27,9 @@ function p(e) {
             },
         ],
         a = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
-        p = (0, d.zP)();
+        _ = (0, d.zP)();
     return (0, c.Yzy)(
-        p,
+        _,
         {
             enter: {
                 from: {
@@ -51,9 +51,9 @@ function p(e) {
     )((e, a) =>
         a
             ? (0, r.jsx)("div", {
-                  className: o()(_.positioner, t),
+                  className: o()(p.positioner, t),
                   children: (0, r.jsx)(s.animated.div, {
-                      className: _.container,
+                      className: p.container,
                       style: e,
                       children: n.map((e, t) => {
                           let { keybinds: a, name: o } = e;
@@ -63,7 +63,7 @@ function p(e) {
                                   children: [
                                       (0, r.jsx)(c.Text, {
                                           variant: "text-md/semibold",
-                                          className: _.bindName,
+                                          className: p.bindName,
                                           children: o,
                                       }),
                                       a.map((e) =>
@@ -71,12 +71,12 @@ function p(e) {
                                               c.M2$,
                                               {
                                                   shortcut: e,
-                                                  className: _.shortcut,
+                                                  className: p.shortcut,
                                               },
                                               e,
                                           ),
                                       ),
-                                      t < n.length - 1 ? (0, r.jsx)("span", { className: _.separator }) : null,
+                                      t < n.length - 1 ? (0, r.jsx)("span", { className: p.separator }) : null,
                                   ],
                               },
                               o,

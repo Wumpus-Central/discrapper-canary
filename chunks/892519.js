@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -10,7 +10,7 @@ var i = n(120356),
     u = n(987106),
     d = n(568248),
     f = n(695796);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,25 +34,25 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e) {
+function m(e) {
     switch (e.type) {
         case o.re.BUTTON:
-            return (0, r.jsx)(u.Z, p({}, e));
+            return (0, r.jsx)(u.Z, _({}, e));
         case o.re.THUMBNAIL:
-            return (0, r.jsx)(d.Z, p({}, e));
+            return (0, r.jsx)(d.Z, _({}, e));
     }
 }
-function m(e) {
+function h(e) {
     let { components: t, accessory: n, renderComponents: i } = e,
         { message: u } = (0, l.CJ)(),
-        [d, _] = (0, c.e4)(),
-        p = (0, c.$Y)(_),
-        m = n.type === o.re.BUTTON;
+        [d, p] = (0, c.e4)(),
+        _ = (0, c.$Y)(p),
+        h = n.type === o.re.BUTTON;
     return (0, r.jsxs)("div", {
         className: f.section,
         ref: d,
@@ -61,12 +61,12 @@ function m(e) {
                 className: f.children,
                 children: [
                     (0, r.jsx)("div", {
-                        className: a()(f.textChildren, { [f.verticallyCenterAlign]: m }),
+                        className: a()(f.textChildren, { [f.verticallyCenterAlign]: h }),
                         children: i(t),
                     }),
                     (0, r.jsx)("div", {
-                        className: a()(f.accessory, { [f.restrictWidth]: p }),
-                        children: h(n),
+                        className: a()(f.accessory, { [f.restrictWidth]: _ }),
+                        children: m(n),
                     }),
                 ],
             }),

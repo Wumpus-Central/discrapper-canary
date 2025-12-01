@@ -44,21 +44,21 @@ function c(e) {
 var u = Object.defineProperty,
     d = Object.getOwnPropertyNames,
     f = Object.getOwnPropertySymbols,
-    _ = Object.getOwnPropertyDescriptor,
-    p = Object.getPrototypeOf,
-    h = Object.prototype;
-function m(e, t, n) {
+    p = Object.getOwnPropertyDescriptor,
+    _ = Object.getPrototypeOf,
+    m = Object.prototype;
+function h(e, t, n) {
     if ("string" != typeof t) {
-        if (h) {
-            var r = p(t);
-            r && r !== h && m(e, r, n);
+        if (m) {
+            var r = _(t);
+            r && r !== m && h(e, r, n);
         }
         var i = d(t);
         f && (i = i.concat(f(t)));
         for (var o = c(e), s = c(t), l = 0; l < i.length; ++l) {
             var g = i[l];
             if (!a[g] && !(n && n[g]) && !(s && s[g]) && !(o && o[g])) {
-                var E = _(t, g);
+                var E = p(t, g);
                 try {
                     u(e, g, E);
                 } catch (e) {}
@@ -67,4 +67,4 @@ function m(e, t, n) {
     }
     return e;
 }
-e.exports = m;
+e.exports = h;

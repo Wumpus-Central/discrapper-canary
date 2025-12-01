@@ -118,17 +118,17 @@ e.exports = (function (e) {
                             f = this._tension * (this._toValue - n) - this._friction * r,
                             n = e + (d * u) / 2,
                             r = t + (f * u) / 2,
-                            _ = r,
-                            p = this._tension * (this._toValue - n) - this._friction * r;
-                        n = e + (_ * u) / 2;
-                        var h = (r = t + (p * u) / 2),
-                            m = this._tension * (this._toValue - n) - this._friction * r;
-                        n = e + (h * u) / 2;
-                        var g = (r = t + (m * u) / 2),
+                            p = r,
+                            _ = this._tension * (this._toValue - n) - this._friction * r;
+                        n = e + (p * u) / 2;
+                        var m = (r = t + (_ * u) / 2),
+                            h = this._tension * (this._toValue - n) - this._friction * r;
+                        n = e + (m * u) / 2;
+                        var g = (r = t + (h * u) / 2),
                             E = this._tension * (this._toValue - n) - this._friction * r;
-                        (n = e + (h * u) / 2), (r = t + (m * u) / 2);
-                        var b = (f + 2 * (p + m) + E) / 6;
-                        (e += ((d + 2 * (_ + h) + g) / 6) * u), (t += b * u);
+                        (n = e + (m * u) / 2), (r = t + (h * u) / 2);
+                        var b = (f + 2 * (_ + h) + E) / 6;
+                        (e += ((d + 2 * (p + m) + g) / 6) * u), (t += b * u);
                     }
                     if (
                         ((this._lastTime = a),

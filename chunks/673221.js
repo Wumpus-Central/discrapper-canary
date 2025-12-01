@@ -1,4 +1,4 @@
-n.d(t, { P: () => P });
+n.d(t, { P: () => R });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,13 +9,13 @@ var r = n(54381),
     u = n(448814),
     d = n(793030),
     f = n(393238),
-    _ = n(199823),
-    p = n(713072),
-    h = n(626921),
-    m = n(415540),
+    p = n(199823),
+    _ = n(713072),
+    m = n(626921),
+    h = n(415540),
     g = n(345729),
     E = n(483753),
-    b = n(681287),
+    b = n(298200),
     y = n(388032),
     O = n(680765);
 function v(e, t, n) {
@@ -31,7 +31,7 @@ function v(e, t, n) {
         e
     );
 }
-function I(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,7 +47,7 @@ function I(e) {
     }
     return e;
 }
-function T(e, t) {
+function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -59,12 +59,12 @@ function T(e, t) {
     }
     return n;
 }
-function S(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : T(Object(t)).forEach(function (n) {
+            : I(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -92,26 +92,26 @@ function C(e, t) {
     return i;
 }
 let N = 24,
-    R = 36;
-function P(e) {
+    P = 36;
+function R(e) {
     var {
             selectionMode: t,
             readOnly: n,
             autoFocus: a,
             clearable: f,
             fullWidth: v,
-            closeOnSelect: T = !0,
+            closeOnSelect: I = !0,
             shouldFocusWrap: C,
-            placeholder: P = y.intl.string(b.default["A+pfVR"]),
-            name: L,
-            form: x,
-            autoComplete: M,
-            maxOptionsVisible: k = 5,
-            options: j,
+            placeholder: R = y.intl.string(b.default["A+pfVR"]),
+            name: x,
+            form: L,
+            autoComplete: j,
+            maxOptionsVisible: M = 5,
+            options: k,
             formatOption: U,
             onSelectionChange: G,
-            value: B,
-            wrapTags: Z = !1,
+            value: Z,
+            wrapTags: B = !1,
         } = e,
         F = A(e, [
             "selectionMode",
@@ -137,33 +137,33 @@ function P(e) {
         { id: Y, required: W, label: K, disabled: z } = H,
         {
             isOpen: q,
-            setIsOpen: X,
-            refs: Q,
+            setIsOpen: Q,
+            refs: X,
             floatingStyles: J,
             getReferenceProps: $,
             getFloatingProps: ee,
             transitionStyles: et,
         } = (0, g.C)(),
         en = i.useId(),
-        { options: er, loading: ei } = (0, m.U)({
+        { options: er, loading: ei } = (0, h.U)({
             active: q,
-            options: j,
+            options: k,
             renderOption: U,
         }),
         ea = i.useRef(null),
         eo = i.useRef(null),
-        es = null != T ? T : "multiple" !== t,
-        el = Array.isArray(B) ? B.length > 0 : null != B,
+        es = null != I ? I : "multiple" !== t,
+        el = Array.isArray(Z) ? Z.length > 0 : null != Z,
         ec = z || n,
-        { measuredWidth: eu, itemsForMeasurement: ed } = D(er, t),
+        { measuredWidth: eu, itemsForMeasurement: ed } = w(er, t),
         ef = i.useCallback(() => {
-            ec || X(!q);
-        }, [ec, X, q]),
-        e_ = i.useCallback(() => {
-            var e;
-            X(!1), null == (e = ea.current) || e.focus();
-        }, [X]),
+            ec || Q(!q);
+        }, [ec, Q, q]),
         ep = i.useCallback(() => {
+            var e;
+            Q(!1), null == (e = ea.current) || e.focus();
+        }, [Q]),
+        e_ = i.useCallback(() => {
             var e;
             "multiple" === t ? G([]) : G(null), null == (e = ea.current) || e.focus();
         }, [G, t]);
@@ -173,13 +173,13 @@ function P(e) {
             null == (e = ea.current) || e.focus();
         }
     }, [a]);
-    let eh = i.useCallback(
+    let em = i.useCallback(
             (e) => {
                 var t, n, r, i, a, o;
                 if (!ec)
                     switch (e.key) {
                         case "ArrowDown":
-                            e.preventDefault(), X(!0);
+                            e.preventDefault(), Q(!0);
                             break;
                         case "ArrowLeft":
                             e.preventDefault(), null == (n = V.current) || null == (t = n.firstChild) || t.focus();
@@ -192,19 +192,19 @@ function P(e) {
                                 (e.preventDefault(), null == (o = V.current) || null == (a = o.lastChild) || a.focus());
                             break;
                         case "Escape":
-                            el && f && (e.preventDefault(), e.stopPropagation(), ep());
+                            el && f && (e.preventDefault(), e.stopPropagation(), e_());
                     }
             },
-            [ep, el, f, X, ec],
+            [e_, el, f, Q, ec],
         ),
-        em = i.useMemo(() => {
-            let e = Array.isArray(B) ? B : [B];
+        eh = i.useMemo(() => {
+            let e = Array.isArray(Z) ? Z : [Z];
             return er.filter((t) => (0, E._s)(t.value, e));
-        }, [B, er]),
+        }, [Z, er]),
         eg = i.useMemo(() => {
             if (!v)
                 return "".concat(
-                    Math.max(null != eu ? eu : 200, 200) * ("multiple" === t ? 1.5 : 1) + !!f * N + R + 12,
+                    Math.max(null != eu ? eu : 200, 200) * ("multiple" === t ? 1.5 : 1) + !!f * N + P + 12,
                     "px",
                 );
         }, [v, eu, t, f]),
@@ -218,16 +218,16 @@ function P(e) {
                     var r, i;
                     G(null != (i = null == (r = n[0]) ? void 0 : r.value) ? i : null);
                 }
-                es && q && e_();
+                es && q && ep();
             },
-            [ec, t, G, es, e_, q],
+            [ec, t, G, es, ep, q],
         ),
-        eb = "multiple" === t && em.length > 0,
+        eb = "multiple" === t && eh.length > 0,
         ey = i.useRef(null);
     i.useEffect(() => {
         clearTimeout(ey.current),
             eb &&
-                !Z &&
+                !B &&
                 (ey.current = setTimeout(() => {
                     var e, t;
                     null == (t = V.current) ||
@@ -238,39 +238,39 @@ function P(e) {
                             block: "end",
                         });
                 }, 10));
-    }, [em, eb, Z]);
-    let eO = (0, s.Z)(eo, Q.setReference),
+    }, [eh, eb, B]);
+    let eO = (0, s.Z)(eo, X.setReference),
         ev = i.useCallback(
             (e) => {
                 if (ec) return;
                 let t = Array.from(e)[0],
-                    n = em.filter((e) => e.id !== t);
+                    n = eh.filter((e) => e.id !== t);
                 if ((eE(n), 0 === n.length)) {
                     var r;
                     null == (r = ea.current) || r.focus();
                 }
             },
-            [eE, em, ec],
+            [eE, eh, ec],
         ),
-        eI = i.useRef(null);
+        eS = i.useRef(null);
     return (
         i.useEffect(
             () => (
                 !ei &&
                     q &&
-                    (eI.current = setTimeout(() => {
+                    (eS.current = setTimeout(() => {
                         var e;
                         return null == (e = document.getElementById((0, E.cA)(en, 0))) ? void 0 : e.focus();
                     }, 10)),
                 () => {
-                    null != eI.current && clearTimeout(eI.current);
+                    null != eS.current && clearTimeout(eS.current);
                 }
             ),
             [ei, en, q],
         ),
         (0, r.jsx)(
             l.g,
-            S(I({}, H), {
+            T(S({}, H), {
                 "data-mana-component": "select",
                 layoutConfig: { horizontalControlColumnWidth: "min(".concat(eg, ", 50%)") },
                 children: (e) =>
@@ -278,9 +278,9 @@ function P(e) {
                         style: { width: v ? "100%" : "min(".concat(eg, ", 100%)") },
                         children: [
                             (0, r.jsx)(
-                                h.q,
-                                S(
-                                    I(
+                                m.q,
+                                T(
+                                    S(
                                         {
                                             ref: eO,
                                             disabled: z,
@@ -293,7 +293,7 @@ function P(e) {
                                             hasValue: el,
                                             hasError: (null == e ? void 0 : e.errorMessageId) != null,
                                             handleToggle: ef,
-                                            handleClear: ep,
+                                            handleClear: e_,
                                         },
                                         $(),
                                     ),
@@ -301,16 +301,16 @@ function P(e) {
                                         children: (0, r.jsxs)(d.kL8, {
                                             "aria-label": K,
                                             buttonRef: ea,
-                                            buttonProps: S(I({}, null != Y ? { id: Y } : {}), {
+                                            buttonProps: T(S({}, null != Y ? { id: Y } : {}), {
                                                 style: { marginLeft: -4 },
                                             }),
                                             focusProps: { ringTarget: eo },
                                             className: o()(O.selectButton, {
-                                                [O.wrapTags]: Z,
+                                                [O.wrapTags]: B,
                                                 [O.multiSelect]: "multiple" === t,
                                             }),
                                             onClick: ef,
-                                            onKeyDown: eh,
+                                            onKeyDown: em,
                                             "aria-expanded": q,
                                             "aria-busy": ei,
                                             "aria-haspopup": "listbox",
@@ -322,11 +322,11 @@ function P(e) {
                                                 (0, r.jsxs)(c.n, {
                                                     children: [K, ", "],
                                                 }),
-                                                (0, r.jsx)(w, {
+                                                (0, r.jsx)(D, {
                                                     tagGroupRef: V,
-                                                    placeholder: P,
+                                                    placeholder: R,
                                                     selectionMode: t,
-                                                    selectedItems: em,
+                                                    selectedItems: eh,
                                                     onRemove: ev,
                                                 }),
                                             ],
@@ -334,13 +334,13 @@ function P(e) {
                                     },
                                 ),
                             ),
-                            (0, r.jsx)(_.M, {
-                                name: L,
-                                form: x,
+                            (0, r.jsx)(p.M, {
+                                name: x,
+                                form: L,
                                 disabled: ec,
-                                autoComplete: M,
+                                autoComplete: j,
                                 selectionMode: t,
-                                selectedItems: em,
+                                selectedItems: eh,
                                 onSelectionChange: eE,
                                 listItems: er,
                             }),
@@ -349,27 +349,27 @@ function P(e) {
                                 q &&
                                 (0, r.jsx)(
                                     "div",
-                                    S(
-                                        I(
+                                    T(
+                                        S(
                                             {
-                                                ref: Q.setFloating,
+                                                ref: X.setFloating,
                                                 className: O.selectDropdown,
                                             },
                                             ee(),
                                         ),
                                         {
-                                            style: I({}, J, et),
+                                            style: S({}, J, et),
                                             children: (0, r.jsx)(d.VqE, {
                                                 children: (0, r.jsx)(u.w, {
                                                     id: en,
                                                     required: W,
                                                     items: er,
                                                     selectionMode: t,
-                                                    selectedItems: em,
+                                                    selectedItems: eh,
                                                     onSelectionChange: eE,
                                                     shouldFocusWrap: C,
-                                                    renderListItem: (e) => (0, r.jsx)(p.W, I({}, e)),
-                                                    maxVisibleItems: k,
+                                                    renderListItem: (e) => (0, r.jsx)(_.W, S({}, e)),
+                                                    maxVisibleItems: M,
                                                     loading: ei,
                                                     typeahead: !0,
                                                 }),
@@ -383,7 +383,7 @@ function P(e) {
         )
     );
 }
-function D(e, t) {
+function w(e, t) {
     let { ref: n, width: a } = (0, f.ZP)(),
         o = i.useId();
     return {
@@ -407,14 +407,14 @@ function D(e, t) {
                         selectedItems: [],
                         onSelectionChange: () => {},
                         shouldFocusWrap: !1,
-                        renderListItem: (e) => (0, r.jsx)(p.W, I({}, e)),
+                        renderListItem: (e) => (0, r.jsx)(_.W, S({}, e)),
                     }),
                 }),
             [e, t, o, n],
         ),
     };
 }
-function w(e) {
+function D(e) {
     let { placeholder: t, selectionMode: n, selectedItems: i, onRemove: a, tagGroupRef: o } = e;
     return null == i || 0 === i.length
         ? (0, r.jsx)("div", {
@@ -434,5 +434,5 @@ function w(e) {
                 layout: "inline",
                 onRemove: a,
             })
-          : (0, r.jsx)(p.W, S(I({}, i[0]), { inInput: !0 }));
+          : (0, r.jsx)(_.W, T(S({}, i[0]), { inInput: !0 }));
 }

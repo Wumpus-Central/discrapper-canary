@@ -13,15 +13,15 @@ let f = function () {
         t = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
         n = (0, l.t7)(),
         f = (0, c._O)(),
-        _ = (0, a.Z)(),
-        p =
+        p = (0, a.Z)(),
+        _ =
             (null == t ? void 0 : t.verified) === !0 &&
             (0, s.M5)(t, d.PremiumTypes.TIER_2) &&
-            _.fetched &&
-            _.fractionalState !== d.a$.FP_ONLY &&
+            p.fetched &&
+            p.fractionalState !== d.a$.FP_ONLY &&
             !n &&
             !f;
     r.useEffect(() => {
-        p && !e && u.Z.checkAndFetchReferralsRemaining();
-    }, [p, e]);
+        _ && !e && u.Z.checkAndFetchReferralsRemaining();
+    }, [_, e]);
 };

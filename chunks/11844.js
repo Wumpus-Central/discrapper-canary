@@ -9,9 +9,9 @@ var r = n(54381),
     u = n(879892),
     d = n(267642),
     f = n(981631),
-    _ = n(388032),
-    p = n(569029);
-function h(e, t, n) {
+    p = n(388032),
+    _ = n(569029);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,7 +35,7 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
@@ -66,7 +66,7 @@ function E(e, t) {
 let b = function () {
     let e = i.useRef(null),
         { analyticsLocations: t } = (0, l.ZP)(),
-        { fractionalState: h } = (0, c.Z)();
+        { fractionalState: m } = (0, c.Z)();
     function g(n) {
         null != e.current && (0, s.Mr3)(e.current),
             (0, u.u)({
@@ -84,7 +84,7 @@ let b = function () {
         e.current = await (0, s.ZDy)(
             async () => {
                 let { default: e } = await Promise.resolve().then(n.bind(n, 719228));
-                return (t) => (0, r.jsx)(e, E(m({}, t), { onSelectGuild: g }));
+                return (t) => (0, r.jsx)(e, E(h({}, t), { onSelectGuild: g }));
             },
             {
                 onCloseRequest: () => {
@@ -93,24 +93,24 @@ let b = function () {
             },
         );
     }
-    let y = (0, d.aq)({ fractionalState: h });
+    let y = (0, d.aq)({ fractionalState: m });
     return (0, r.jsxs)("div", {
-        className: p.wrapper,
+        className: _.wrapper,
         children: [
             (0, r.jsx)(s.Ucv, {
                 color: s.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
-                className: p.boostIcon,
+                className: _.boostIcon,
             }),
             (0, r.jsx)(s.Text, {
-                className: p.copy,
+                className: _.copy,
                 color: "header-secondary",
                 variant: "text-sm/medium",
-                children: _.intl.format(_.t.kqC5vq, {
+                children: p.intl.format(p.t.kqC5vq, {
                     boostAnyGuildHook: (e, t) => {
                         let n = null != y,
                             i = (0, s.qgQ)(e),
                             l = (0, r.jsx)("div", {
-                                className: p.cta,
+                                className: _.cta,
                                 children: (0, r.jsx)(
                                     o.Avr,
                                     {
@@ -128,7 +128,7 @@ let b = function () {
                                   {
                                       text: y,
                                       "aria-label": y.toString(),
-                                      children: (e) => (0, r.jsx)("span", E(m({}, e), { children: l })),
+                                      children: (e) => (0, r.jsx)("span", E(h({}, e), { children: l })),
                                   },
                                   t,
                               )

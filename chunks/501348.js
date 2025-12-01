@@ -9,35 +9,35 @@ var r = n(54381),
     u = n(780384),
     d = n(481060),
     f = n(153867),
-    _ = n(493773),
-    p = n(714338),
-    h = n(857595),
-    m = n(607070),
+    p = n(493773),
+    _ = n(714338),
+    m = n(857595),
+    h = n(607070),
     g = n(627845),
     E = n(514361),
     b = n(93262),
     y = n(990924),
     O = n(313201),
     v = n(266454),
-    I = n(786761),
-    T = n(3148),
-    S = n(739566),
+    S = n(786761),
+    I = n(3148),
+    T = n(739566),
     A = n(753206),
     C = n(921801),
     N = n(984802),
-    R = n(594174),
-    P = n(358085),
-    D = n(210887),
-    w = n(740492),
-    L = n(695346),
-    x = n(313789),
-    M = n(329013),
-    k = n(333859),
-    j = n(273313),
+    P = n(594174),
+    R = n(358085),
+    w = n(210887),
+    D = n(740492),
+    x = n(695346),
+    L = n(313789),
+    j = n(329013),
+    M = n(333859),
+    k = n(273313),
     U = n(518596),
     G = n(726985),
-    B = n(981631),
-    Z = n(921944),
+    Z = n(981631),
+    B = n(921944),
     F = n(959517),
     V = n(388032),
     H = n(226518),
@@ -94,85 +94,85 @@ function q(e, t) {
         e
     );
 }
-let X = "cozy",
-    Q = "compact",
+let Q = "cozy",
+    X = "compact",
     J = (0, O.hQ)(),
     $ = (0, O.hQ)(),
     ee = "1337",
     et = (e) => {
         let t = 0;
         return [
-            (0, I.e5)(
+            (0, S.e5)(
                 q(
                     K(
                         {},
-                        (0, T.ZP)({
+                        (0, I.ZP)({
                             channelId: ee,
                             content: V.intl.string(V.t.oZxkEq),
                         }),
                     ),
                     {
-                        state: B.yb.SENT,
+                        state: Z.yb.SENT,
                         id: "".concat(t++),
                     },
                 ),
             ),
-            (0, I.e5)(
+            (0, S.e5)(
                 q(
                     K(
                         {},
-                        (0, T.ZP)({
+                        (0, I.ZP)({
                             channelId: ee,
                             content: (0, u.wj)(e) ? V.intl.string(V.t["WGb/v7"]) : V.intl.string(V.t["62m4mz"]),
                         }),
                     ),
                     {
-                        state: B.yb.SENT,
+                        state: Z.yb.SENT,
                         id: "".concat(t++),
                     },
                 ),
             ),
-            (0, I.e5)(
+            (0, S.e5)(
                 q(
                     K(
                         {},
-                        (0, T.ZP)({
+                        (0, I.ZP)({
                             channelId: ee,
                             content: V.intl.string(V.t.a0Byo5),
                         }),
                     ),
                     {
-                        state: B.yb.SENT,
+                        state: Z.yb.SENT,
                         id: "".concat(t++),
                     },
                 ),
             ),
-            (0, I.e5)(
+            (0, S.e5)(
                 q(
                     K(
                         {},
-                        (0, T.ZP)({
+                        (0, I.ZP)({
                             channelId: ee,
                             content: V.intl.string(V.t.bmwEWJ),
                         }),
                     ),
                     {
-                        state: B.yb.SENT,
+                        state: Z.yb.SENT,
                         id: "".concat(t++),
                     },
                 ),
             ),
-            (0, I.e5)(
+            (0, S.e5)(
                 q(
                     K(
                         {},
-                        (0, T.ZP)({
+                        (0, I.ZP)({
                             channelId: ee,
                             content: V.intl.string(V.t["hK9QW/"]),
                         }),
                     ),
                     {
-                        state: B.yb.SENT,
+                        state: Z.yb.SENT,
                         id: "".concat(t),
                     },
                 ),
@@ -197,26 +197,26 @@ let X = "cozy",
                         }),
                     ],
                 }),
-                (0, r.jsx)(M.g, {}),
+                (0, r.jsx)(j.g, {}),
             ],
         }),
     er = () =>
         V.intl.format(V.t.Jae48E, {
             onClick: () => {
-                (0, U.openUserSettings)(x.n.ACCESSIBILITY_PANEL, { section: B.oAB.ACCESSIBILITY });
+                (0, U.openUserSettings)(L.n.ACCESSIBILITY_PANEL, { section: Z.oAB.ACCESSIBILITY });
             },
         });
 class ei extends i.Component {
     renderZoomSlider() {
         return (
-            !P.isPlatformEmbedded,
+            !R.isPlatformEmbedded,
             (0, r.jsx)(d.iRW, {
                 label: V.intl.string(V.t.i19n5L),
                 description: V.intl.string(V.t.ip0uSf),
-                helperText: V.intl.format(V.t.OMkSUo, { modKey: p.Z.modKey }),
+                helperText: V.intl.format(V.t.OMkSUo, { modKey: _.Z.modKey }),
                 initialValue: this.props.zoom,
-                defaultValue: B.yqN.ZOOM_DEFAULT,
-                markers: B.yqN.ZOOM_SCALES,
+                defaultValue: Z.yqN.ZOOM_DEFAULT,
+                markers: Z.yqN.ZOOM_SCALES,
                 stickToMarkers: !0,
                 onValueChange: this.handleZoomChange,
                 onValueRender: this.handleSliderRender,
@@ -229,8 +229,8 @@ class ei extends i.Component {
             label: V.intl.string(V.t.qPOqoK),
             description: V.intl.string(V.t.XrtbPo),
             initialValue: this.props.fontSize,
-            defaultValue: B.yqN.FONT_SIZE_DEFAULT,
-            markers: B.yqN.FONT_SIZES,
+            defaultValue: Z.yqN.FONT_SIZE_DEFAULT,
+            markers: Z.yqN.FONT_SIZES,
             stickToMarkers: !0,
             onValueChange: this.handleFontSizeChange,
             onValueRender: this.handleSliderRenderPX,
@@ -271,7 +271,7 @@ class ei extends i.Component {
                     (0, r.jsx)(
                         A.Z,
                         {
-                            author: (0, S.ZH)(t),
+                            author: (0, T.ZH)(t),
                             message: t,
                             compact: e,
                             isGroupStart: n % 2 == 0,
@@ -298,7 +298,7 @@ class ei extends i.Component {
                   label: V.intl.string(V.t.Ksh3ik),
                   children: (0, r.jsx)(d.xJW, {
                       title: (0, r.jsx)(en, {}),
-                      children: (0, r.jsx)(M.i, {}),
+                      children: (0, r.jsx)(j.i, {}),
                   }),
               });
     }
@@ -320,7 +320,7 @@ class ei extends i.Component {
                     value: c.hg.H23,
                 },
             ],
-            onChange: (e) => L.hg.updateSetting(e),
+            onChange: (e) => x.hg.updateSetting(e),
             value: e,
         });
     }
@@ -334,7 +334,7 @@ class ei extends i.Component {
         return V.intl.formatToPlainString(V.t["0hpvOV"], { value: e });
     }
     handleFontSizeChange(e) {
-        (0, h.oL)(e);
+        (0, m.oL)(e);
     }
     handleMessageSpacingChange(e) {
         switch (e) {
@@ -343,11 +343,11 @@ class ei extends i.Component {
             case 8:
             case 16:
             case 24:
-                (0, h.ZZ)(e);
+                (0, m.ZZ)(e);
         }
     }
     handleZoomChange(e) {
-        (0, h.cq)(e);
+        (0, m.cq)(e);
     }
     render() {
         let { density: e } = this.props,
@@ -357,7 +357,7 @@ class ei extends i.Component {
             }),
             n = (0, r.jsx)(C.F, {
                 setting: G.s6.APPEARANCE_ICON,
-                children: (0, r.jsx)(k.c, {}),
+                children: (0, r.jsx)(M.c, {}),
             }),
             i = [
                 {
@@ -399,15 +399,15 @@ class ei extends i.Component {
                                 options: [
                                     {
                                         name: V.intl.string(V.t.Jqj4cZ),
-                                        value: X,
+                                        value: Q,
                                     },
                                     {
                                         name: V.intl.string(V.t["1JNcPS"]),
-                                        value: Q,
+                                        value: X,
                                     },
                                 ],
                                 onChange: (e) => this.handleMessageDisplayModeChange({ value: e }),
-                                value: this.props.messageDisplayCompact ? Q : X,
+                                value: this.props.messageDisplayCompact ? X : Q,
                             }),
                             this.props.messageDisplayCompact &&
                                 (0, r.jsx)(d.rsf, {
@@ -440,15 +440,15 @@ class ei extends i.Component {
                 className: H.a11yCallout,
                 children: (0, r.jsx)(er, {}),
             });
-        return (0, r.jsxs)(j.Z, {
+        return (0, r.jsxs)(k.Z, {
             title: V.intl.string(V.t["iHH+ky"]),
             children: [t, n, a, o, s, l, u],
         });
     }
     constructor(...e) {
         super(...e),
-            W(this, "darkMessages", et(B.BRd.DARK)),
-            W(this, "lightMessages", et(B.BRd.LIGHT)),
+            W(this, "darkMessages", et(Z.BRd.DARK)),
+            W(this, "lightMessages", et(Z.BRd.LIGHT)),
             W(this, "handleDisplayCompactAvatarsChanged", (e) => {
                 f.ZP.updatedUnsyncedSettings({ displayCompactAvatars: e });
             }),
@@ -457,30 +457,30 @@ class ei extends i.Component {
             }),
             W(this, "handleMessageDisplayModeChange", (e) => {
                 let { value: t } = e;
-                L.jU.updateSetting(t === Q), (0, h.ZZ)();
+                x.jU.updateSetting(t === X), (0, m.ZZ)();
             }),
             W(this, "handleUIDensityChange", (e) => {
                 let { value: t } = e;
-                t !== c.Pi.UNSET_UI_DENSITY && L.YC.updateSetting(t);
+                t !== c.Pi.UNSET_UI_DENSITY && x.YC.updateSetting(t);
             });
     }
 }
 let ea = (e) => {
     (0, v.zu)(e) ||
         (0, v.Q3)(e, {
-            dismissAction: Z.L.AUTO,
+            dismissAction: B.L.AUTO,
             forceTrack: !0,
         });
 };
 function eo() {
-    let e = L.jU.useSetting(),
-        t = L.RS.useSetting(),
-        n = L.NA.useSetting(),
-        i = L.L1.useSetting(),
-        a = L.hg.useSetting(),
-        o = L.YC.useSetting(),
+    let e = x.jU.useSetting(),
+        t = x.RS.useSetting(),
+        n = x.NA.useSetting(),
+        i = x.L1.useSetting(),
+        a = x.hg.useSetting(),
+        o = x.YC.useSetting(),
         c = y.y.useConfig({ location: "UserSettingsAppearance" }).enabled;
-    (0, _.ZP)(() => {
+    (0, p.ZP)(() => {
         ea(l.z.CLIENT_THEMES_SETTINGS_BADGE),
             ea(l.z.DEKSTOP_CUSTOM_APP_ICON_BADGE),
             ea(l.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK),
@@ -488,17 +488,17 @@ function eo() {
             c && (0, b.w)();
     });
     let u = (0, N.A6)(),
-        d = (0, s.cj)([D.Z, w.ZP, m.Z, R.default, E.Z], () => {
+        d = (0, s.cj)([w.Z, D.ZP, h.Z, P.default, E.Z], () => {
             var e, t;
             return {
-                theme: D.Z.theme,
-                useForcedColors: m.Z.useForcedColors,
-                useSystemTheme: w.ZP.useSystemTheme,
-                fontSize: m.Z.fontSize,
-                zoom: m.Z.zoom,
-                messageGroupSpacing: m.Z.messageGroupSpacing,
-                displayCompactAvatars: w.ZP.displayCompactAvatars,
-                isStaff: null != (t = null == (e = R.default.getCurrentUser()) ? void 0 : e.isStaff) && t,
+                theme: w.Z.theme,
+                useForcedColors: h.Z.useForcedColors,
+                useSystemTheme: D.ZP.useSystemTheme,
+                fontSize: h.Z.fontSize,
+                zoom: h.Z.zoom,
+                messageGroupSpacing: h.Z.messageGroupSpacing,
+                displayCompactAvatars: D.ZP.displayCompactAvatars,
+                isStaff: null != (t = null == (e = P.default.getCurrentUser()) ? void 0 : e.isStaff) && t,
                 gradientPreset: E.Z.gradientPreset,
             };
         });

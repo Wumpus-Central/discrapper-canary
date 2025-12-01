@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => P }), n(388685), n(415506);
+n.d(t, { ZP: () => Z }), n(388685), n(415506);
 var r = n(54381);
 n(473749);
 var i = n(268146),
@@ -17,7 +17,7 @@ var i = n(268146),
     g = n(396678),
     x = n(37113),
     v = n(65154),
-    j = n(604415),
+    j = n(718629),
     S = n(388032),
     b = n(355669);
 let y = [
@@ -70,13 +70,13 @@ function w(e) {
         ],
     });
 }
-function P(e) {
+function Z(e) {
     var t, n;
     let { onClose: c, onSelect: b } = e,
         [
             {
-                audioSourceId: P,
-                notifyFriends: Z,
+                audioSourceId: Z,
+                notifyFriends: P,
                 hidePreview: I,
                 muteStreamAudio: E,
                 preset: T,
@@ -99,7 +99,7 @@ function P(e) {
                 : [x.ApplicationStreamResolutions.RESOLUTION_SOURCE, x.ApplicationStreamFPS.FPS_15],
         H = (0, o.M)({
             deviceType: v.h7.AUDIO_INPUT,
-            selectedDeviceId: P,
+            selectedDeviceId: Z,
             analyticsLocations: [s.Z.GO_LIVE_MODAL_SETTINGS_SELECTION],
             asSubmenu: !0,
             onDeviceSelect: (e) => (
@@ -276,12 +276,12 @@ function P(e) {
                     D &&
                         (0, r.jsx)(l.S89, {
                             id: "stream-option-notify",
-                            checked: Z,
+                            checked: P,
                             label: S.intl.string(j.default.SiHtXy),
                             action: () =>
                                 k({
                                     type: "set_notify_friends",
-                                    value: !Z,
+                                    value: !P,
                                 }),
                         }),
                 ],

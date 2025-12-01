@@ -1,2 +1,2 @@
-n.d(t, { w: () => r });
-let r = "https://support.discord.com/hc/en-us/articles/35974746352023";
+n.d(e, { w: () => i });
+let i = "https://support.discord.com/hc/en-us/articles/35974746352023";

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(54381);
 n(473749);
 var i = n(481060),
@@ -10,16 +10,16 @@ var i = n(481060),
     u = n(981631),
     d = n(388032),
     f = n(587091);
-function _(e) {
-    let { compact: t, message: n, channel: _ } = e,
-        p = (0, s.ZP)(n),
-        h = (0, l.l)({
+function p(e) {
+    let { compact: t, message: n, channel: p } = e,
+        _ = (0, s.ZP)(n),
+        m = (0, l.l)({
             user: n.author,
             channelId: n.channel_id,
-            guildId: _.guild_id,
+            guildId: p.guild_id,
             messageId: n.id,
-        })(p),
-        m = o.Z.getArticleURL(u.BhN.HD_STREAMING_POTION);
+        })(_),
+        h = o.Z.getArticleURL(u.BhN.HD_STREAMING_POTION);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
@@ -29,8 +29,8 @@ function _(e) {
                     timestamp: n.timestamp,
                     compact: t,
                     children: d.intl.format(d.t.u0qJ4z, {
-                        actorName: p.nick,
-                        actorHook: h,
+                        actorName: _.nick,
+                        actorHook: m,
                     }),
                 }),
             }),
@@ -53,7 +53,7 @@ function _(e) {
                             (0, r.jsx)(i.Text, {
                                 color: "text-primary",
                                 variant: "text-xs/normal",
-                                children: d.intl.format(d.t["bmGF+V"], { helpCenterLink: m }),
+                                children: d.intl.format(d.t["bmGF+V"], { helpCenterLink: h }),
                             }),
                         ],
                     }),

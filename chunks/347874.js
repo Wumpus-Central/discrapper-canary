@@ -79,19 +79,19 @@ function d(e) {
                 ? ((t.byweekday = [t.byweekday.weekday]), (t.bynweekday = null))
                 : ((t.bynweekday = [[t.byweekday.weekday, t.byweekday.n]]), (t.byweekday = null));
         else {
-            for (var f = [], _ = [], n = 0; n < t.byweekday.length; n++) {
-                var p = t.byweekday[n];
-                if ((0, a.hj)(p)) {
-                    f.push(p);
+            for (var f = [], p = [], n = 0; n < t.byweekday.length; n++) {
+                var _ = t.byweekday[n];
+                if ((0, a.hj)(_)) {
+                    f.push(_);
                     continue;
                 }
-                if ((0, a.xs)(p)) {
-                    f.push(l.O.fromStr(p).weekday);
+                if ((0, a.xs)(_)) {
+                    f.push(l.O.fromStr(_).weekday);
                     continue;
                 }
-                !p.n || t.freq > o.Ci.MONTHLY ? f.push(p.weekday) : _.push([p.weekday, p.n]);
+                !_.n || t.freq > o.Ci.MONTHLY ? f.push(_.weekday) : p.push([_.weekday, _.n]);
             }
-            (t.byweekday = (0, a.Dw)(f) ? f : null), (t.bynweekday = (0, a.Dw)(_) ? _ : null);
+            (t.byweekday = (0, a.Dw)(f) ? f : null), (t.bynweekday = (0, a.Dw)(p) ? p : null);
         }
     else t.bynweekday = null;
     return (

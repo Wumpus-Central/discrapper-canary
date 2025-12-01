@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(436774),
     d = n(767714),
     f = n(74538),
-    _ = n(175006),
-    p = n(981631),
-    h = n(474936),
-    m = n(388032),
+    p = n(175006),
+    _ = n(981631),
+    m = n(474936),
+    h = n(388032),
     g = n(807284),
     E = n(492764),
     b = n(235810);
@@ -46,7 +46,7 @@ function O(e) {
     return e;
 }
 function v() {
-    return (0, _.Z)()
+    return (0, p.Z)()
         ? (0, r.jsx)("div", {
               className: g.emptyContainer,
               children: (0, r.jsxs)("div", {
@@ -61,12 +61,12 @@ function v() {
                           className: g.header,
                           variant: "heading-xl/semibold",
                           color: "text-default",
-                          children: m.intl.string(m.t.erEf2g),
+                          children: h.intl.string(h.t.erEf2g),
                       }),
                       (0, r.jsx)(o.xvT, {
                           variant: "text-md/medium",
                           color: "text-muted",
-                          children: m.intl.string(m.t.NaRCXT),
+                          children: h.intl.string(h.t.NaRCXT),
                       }),
                   ],
               }),
@@ -86,21 +86,21 @@ function v() {
                               className: g.header,
                               variant: "heading-xl/semibold",
                               color: "text-default",
-                              children: m.intl.string(m.t.w4DRbZ),
+                              children: h.intl.string(h.t.w4DRbZ),
                           }),
                           (0, r.jsx)(o.xvT, {
                               variant: "text-md/medium",
                               color: "text-muted",
-                              children: m.intl.string(m.t.F6u3E3),
+                              children: h.intl.string(h.t.F6u3E3),
                           }),
                       ],
                   }),
-                  (0, r.jsx)(I, {}),
+                  (0, r.jsx)(S, {}),
               ],
           });
 }
-function I() {
-    let e = (0, f.Px)(h.PremiumTypes.TIER_2),
+function S() {
+    let e = (0, f.Px)(m.PremiumTypes.TIER_2),
         t = i.useCallback(
             () =>
                 (0, l.ZDy)(async () => {
@@ -109,7 +109,7 @@ function I() {
                 }),
             [],
         ),
-        _ = m.intl.format(m.t.qXh3fo, {
+        p = h.intl.format(h.t.qXh3fo, {
             nitroTierName: e,
             onClick: t,
         });
@@ -124,14 +124,14 @@ function I() {
                 variant: "text-xs/medium",
                 color: "header-primary",
                 className: g.upsellText,
-                children: _,
+                children: p,
             }),
             (0, r.jsx)(d.Z, {
                 className: g.upsellButton,
                 size: s.Ph.TINY,
                 shinyButtonClassName: g.upsellButton,
-                subscriptionTier: h.Si.TIER_2,
-                premiumModalAnalyticsLocation: { section: p.jXE.FOR_LATER_POPOUT_UPSELL },
+                subscriptionTier: m.Si.TIER_2,
+                premiumModalAnalyticsLocation: { section: _.jXE.FOR_LATER_POPOUT_UPSELL },
             }),
         ],
     });

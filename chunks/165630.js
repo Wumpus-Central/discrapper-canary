@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(539854);
+n.d(t, { Z: () => h }), n(539854);
 var r,
     i = n(442837),
     a = n(570140),
@@ -41,14 +41,14 @@ function f(e) {
             (u.guildAffinitiesByGuildId[r] = i), u.guildAffinities.push(i);
         });
 }
-function _() {
+function p() {
     return Date.now() - u.lastFetched > c && (0, o.j)(), !1;
 }
-function p() {
+function _() {
     d();
 }
 d();
-class h extends (r = i.ZP.PersistedStore) {
+class m extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         null != e && (u = e), this.waitFor(s.Z);
     }
@@ -65,9 +65,9 @@ class h extends (r = i.ZP.PersistedStore) {
         return 0 !== u.lastFetched;
     }
 }
-l(h, "displayName", "GuildAffinitiesStore"), l(h, "persistKey", "GuildAffinitiesStore");
-let m = new h(a.Z, {
-    CONNECTION_OPEN: _,
+l(m, "displayName", "GuildAffinitiesStore"), l(m, "persistKey", "GuildAffinitiesStore");
+let h = new m(a.Z, {
+    CONNECTION_OPEN: p,
     LOAD_GUILD_AFFINITIES_SUCCESS: f,
-    LOGOUT: p,
+    LOGOUT: _,
 });

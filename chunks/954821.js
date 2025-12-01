@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(100527),
     d = n(906732),
     f = n(313201),
-    _ = n(305342),
-    p = n(293810),
-    h = n(388032),
-    m = n(640749);
+    p = n(305342),
+    _ = n(293810),
+    m = n(388032),
+    h = n(640749);
 function g(e, t, n) {
     return (
         t in e
@@ -64,15 +64,15 @@ let b = "MMMM Do, YYYY",
         let { transitionState: t, groupListing: n, listing: i, subscription: a, onClose: c } = e,
             g = (0, f.Dt)(),
             { analyticsLocations: E } = (0, d.ZP)(u.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
-            { cancelSubscription: O, error: v, submitting: I } = y(E),
-            T = async () => {
+            { cancelSubscription: O, error: v, submitting: S } = y(E),
+            I = async () => {
                 (await O(a.id)) && c();
             },
-            S = i.role_benefits.benefits.filter((e) => e.ref_type === p.Qs.CHANNEL),
-            A = i.role_benefits.benefits.filter((e) => e.ref_type === p.Qs.INTANGIBLE),
+            T = i.role_benefits.benefits.filter((e) => e.ref_type === _.Qs.CHANNEL),
+            A = i.role_benefits.benefits.filter((e) => e.ref_type === _.Qs.INTANGIBLE),
             C = o()(a.currentPeriodEnd).format(b),
-            N = h.intl.formatToPlainString(h.t.KsMRP5, {
-                numChannels: S.length,
+            N = m.intl.formatToPlainString(m.t.KsMRP5, {
+                numChannels: T.length,
                 numAdditionalBenefits: A.length,
                 subscriptionEndDate: C,
             });
@@ -81,18 +81,18 @@ let b = "MMMM Do, YYYY",
             "aria-labelledby": g,
             actions: [
                 {
-                    text: h.intl.string(h.t.EP6EPb),
+                    text: m.intl.string(m.t.EP6EPb),
                     variant: "secondary",
                     onClick: c,
                 },
                 {
                     variant: "critical-primary",
-                    text: h.intl.string(h.t.F6lUDF),
-                    onClick: T,
-                    loading: I,
+                    text: m.intl.string(m.t.F6lUDF),
+                    onClick: I,
+                    loading: S,
                 },
             ],
-            title: h.intl.string(h.t.O6l5tM),
+            title: m.intl.string(m.t.O6l5tM),
             subtitle: N,
             onClose: c,
             children: (0, r.jsxs)(l.Kqy, {
@@ -104,10 +104,10 @@ let b = "MMMM Do, YYYY",
                               children: v.message,
                           })
                         : null,
-                    (0, r.jsx)(_.c, {
+                    (0, r.jsx)(p.c, {
                         listingId: i.id,
                         guildId: n.guild_id,
-                        className: m.benefits,
+                        className: h.benefits,
                     }),
                 ],
             }),

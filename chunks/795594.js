@@ -1,5 +1,5 @@
 n.d(t, {
-    J: () => em,
+    J: () => eh,
     Z: () => eg,
 }),
     n(997841),
@@ -18,35 +18,35 @@ var r = n(54381),
     u = n.n(c),
     d = n(663042),
     f = n(243814),
-    _ = n(95015),
-    p = n(793030),
-    h = n(442837),
-    m = n(921072),
+    p = n(95015),
+    _ = n(793030),
+    m = n(442837),
+    h = n(921072),
     g = n(524437),
     E = n(481060),
     b = n(384275),
     y = n(493683),
     O = n(87051),
     v = n(497321),
-    I = n(317381),
-    T = n(513202),
-    S = n(367907),
+    S = n(317381),
+    I = n(513202),
+    T = n(367907),
     A = n(162685),
     C = n(979200),
     N = n(870822),
-    R = n(589414),
-    P = n(600164),
-    D = n(240991),
-    w = n(713938),
-    L = n(973616),
-    x = n(881998),
-    M = n(592125),
-    k = n(944486),
-    j = n(246946),
+    P = n(589414),
+    R = n(600164),
+    w = n(240991),
+    D = n(713938),
+    x = n(973616),
+    L = n(881998),
+    j = n(592125),
+    M = n(944486),
+    k = n(246946),
     U = n(9156),
     G = n(768581),
-    B = n(49012),
-    Z = n(621600),
+    Z = n(49012),
+    B = n(621600),
     F = n(709054),
     V = n(706454),
     H = n(210887),
@@ -55,8 +55,8 @@ var r = n(54381),
     K = n(581883),
     z = n(526665),
     q = n(436267),
-    X = n(494620),
-    Q = n(273313),
+    Q = n(494620),
+    X = n(273313),
     J = n(869743),
     $ = n(518596),
     ee = n(981631),
@@ -117,7 +117,7 @@ function ec(e, t) {
         e
     );
 }
-let eu = h.ZP.connectStores([H.Z], () => ({ theme: H.Z.theme }))(E.ubH);
+let eu = m.ZP.connectStores([H.Z], () => ({ theme: H.Z.theme }))(E.ubH);
 function ed(e) {
     let { className: t, text: n } = e;
     return (0, r.jsxs)("div", {
@@ -140,20 +140,20 @@ let ef = (e) => {
         let { disclosure: t } = e;
         return i.useMemo(() => {
             switch (t) {
-                case m.u$.IP_LOCATION:
+                case h.u$.IP_LOCATION:
                     return (0, r.jsx)(E.enf, {
                         size: "md",
                         color: "currentColor",
                         className: er.disclosureIcon,
                     });
-                case m.u$.DISPLAYS_ADVERTISEMENTS:
+                case h.u$.DISPLAYS_ADVERTISEMENTS:
                     return (0, r.jsx)(E.FLu, { className: er.disclosureIcon });
                 default:
                     return (0, r.jsx)(E.d3s, { className: er.disclosureIcon });
             }
         }, [t]);
     },
-    e_ = (e, t) => {
+    ep = (e, t) => {
         let n = en.intl.string(en.t["DT39A+"]),
             i = en.intl.formatToPlainString(en.t.QWGvxA, { applicationName: e.name }),
             a = null;
@@ -161,20 +161,20 @@ let ef = (e) => {
             (0, N.Z)(e) &&
                 ((n = en.intl.formatToPlainString(en.t["paC+US"], { applicationName: e.name })),
                 (i = en.intl.formatToPlainString(en.t.inM1Yt, { applicationName: e.name })),
-                (a = (0, r.jsx)(X.Z, {
-                    look: X.z.WARNING,
+                (a = (0, r.jsx)(Q.Z, {
+                    look: Q.z.WARNING,
                     children: en.intl.string(en.t.LY35Zy),
                 }))),
             (0, q.Z)(e.id) &&
                 (a = (0, r.jsxs)(r.Fragment, {
                     children: [
                         a,
-                        (0, r.jsx)(X.Z, { children: en.intl.format(en.t.KRnERi, { applicationName: e.name }) }),
+                        (0, r.jsx)(Q.Z, { children: en.intl.format(en.t.KRnERi, { applicationName: e.name }) }),
                     ],
                 })),
             (0, E.h7j)((e) =>
                 (0, r.jsx)(
-                    p.Modal,
+                    _.Modal,
                     ec(
                         es(
                             {
@@ -208,18 +208,18 @@ let ef = (e) => {
             )
         );
     },
-    ep = (e) => {
+    e_ = (e) => {
         let { application: t, isVisible: n } = e,
             i = () => {
                 null != t.terms_of_service_url &&
-                    (0, B.q)({
+                    (0, Z.q)({
                         href: t.terms_of_service_url,
                         shouldConfirm: !0,
                     });
             },
             a = () => {
                 null != t.privacy_policy_url &&
-                    (0, B.q)({
+                    (0, Z.q)({
                         href: t.privacy_policy_url,
                         shouldConfirm: !0,
                     });
@@ -278,7 +278,7 @@ let ef = (e) => {
               })
             : null;
     },
-    eh = (e) => {
+    em = (e) => {
         let {
                 scopes: t,
                 application: a,
@@ -286,13 +286,13 @@ let ef = (e) => {
                 selectedGuildId: l,
                 onDelete: c,
                 disclosures: d,
-                locale: p,
-                id: m,
+                locale: _,
+                id: h,
             } = e,
             b = a.id,
-            v = i.useMemo(() => L.ZP.createFromServer(a), [a]),
-            I = (0, _.yE)(v.flags, ee.udG.EMBEDDED),
-            T = (0, h.e7)([K.Z], () => {
+            v = i.useMemo(() => x.ZP.createFromServer(a), [a]),
+            S = (0, p.yE)(v.flags, ee.udG.EMBEDDED),
+            I = (0, m.e7)([K.Z], () => {
                 var e, t, n, r;
                 return null == (r = K.Z.settings.applications) ||
                     null == (n = r.appSettings) ||
@@ -302,29 +302,29 @@ let ef = (e) => {
                     : e.allowMobilePush;
             }, [b]),
             N = A.w.useExperiment({ location: "oauth2_authorize" }),
-            x = a.bot,
-            k = (0, h.e7)([M.Z], () => M.Z.getDMFromUserId(null == x ? void 0 : x.id)),
-            { appDMChannelMuteConfig: j, dmChannelMuted: B } = (0, h.cj)([U.ZP], () =>
-                null == k
+            L = a.bot,
+            M = (0, m.e7)([j.Z], () => j.Z.getDMFromUserId(null == L ? void 0 : L.id)),
+            { appDMChannelMuteConfig: k, dmChannelMuted: Z } = (0, m.cj)([U.ZP], () =>
+                null == M
                     ? {
                           appDMChannelMuteConfig: null,
                           dmChannelMuted: !1,
                       }
                     : {
-                          appDMChannelMuteConfig: U.ZP.getChannelMuteConfig(null, k),
-                          dmChannelMuted: U.ZP.isChannelMuted(null, k),
+                          appDMChannelMuteConfig: U.ZP.getChannelMuteConfig(null, M),
+                          dmChannelMuted: U.ZP.isChannelMuted(null, M),
                       },
             ),
             [V, H] = i.useState(!1),
-            [X, Q] = i.useState(!1),
+            [Q, X] = i.useState(!1),
             eo = () => {
                 let e = [];
                 for (let n of t)
-                    e.push(...(0, w.CI)(n, t)), n === f.x.APPLICATIONS_COMMANDS && e.push(en.intl.string(en.t.Ls2XRq));
+                    e.push(...(0, D.CI)(n, t)), n === f.x.APPLICATIONS_COMMANDS && e.push(en.intl.string(en.t.Ls2XRq));
                 if (e.length > 0 || (null != d && d.length > 0))
                     return (0, r.jsx)(E.zF9, {
                         className: er.appDetailsSection,
-                        isExpanded: X,
+                        isExpanded: Q,
                         collapsibleContent: (0, r.jsxs)("ul", {
                             className: er.appDetailsContent,
                             children: [
@@ -374,7 +374,7 @@ let ef = (e) => {
                                     (0, r.jsxs)(E.P3F, {
                                         className: er.appDetailsSectionHeader,
                                         onClick: (e) => {
-                                            Q(!X), n(e);
+                                            X(!Q), n(e);
                                         },
                                         children: [
                                             (0, r.jsx)(E.Heading, {
@@ -382,7 +382,7 @@ let ef = (e) => {
                                                 color: "header-primary",
                                                 children: en.intl.string(en.t.xrmhRX),
                                             }),
-                                            X
+                                            Q
                                                 ? (0, r.jsx)(E.CJ0, {
                                                       size: "md",
                                                       color: E.TVs.colors.INTERACTIVE_NORMAL,
@@ -393,7 +393,7 @@ let ef = (e) => {
                                                   }),
                                         ],
                                     }),
-                                    !X &&
+                                    !Q &&
                                         (0, r.jsx)(E.Text, {
                                             variant: "text-sm/normal",
                                             color: "text-secondary",
@@ -411,7 +411,7 @@ let ef = (e) => {
                         className: ei.markup,
                         variant: "text-sm/normal",
                         color: "text-default",
-                        children: (0, D.parseBioReact)(a.description),
+                        children: (0, w.parseBioReact)(a.description),
                     });
             }, [a.description]),
             ec = () => {
@@ -426,7 +426,7 @@ let ef = (e) => {
                               children: [
                                   e && el,
                                   t &&
-                                      (0, r.jsx)(ep, {
+                                      (0, r.jsx)(e_, {
                                           application: a,
                                           isVisible: V,
                                       }),
@@ -467,7 +467,7 @@ let ef = (e) => {
                     }),
                     t =
                         null != e
-                            ? (0, r.jsx)(P.Z.Child, {
+                            ? (0, r.jsx)(R.Z.Child, {
                                   className: er.appAvatarV2,
                                   grow: 0,
                                   children: (0, r.jsx)("img", {
@@ -476,7 +476,7 @@ let ef = (e) => {
                                   }),
                               })
                             : null,
-                    n = new Date(F.default.extractTimestamp(m)).toLocaleDateString(p);
+                    n = new Date(F.default.extractTimestamp(h)).toLocaleDateString(_);
                 return (0, r.jsxs)("div", {
                     className: er.headerV2,
                     children: [
@@ -504,7 +504,7 @@ let ef = (e) => {
                     ],
                 });
             },
-            eh = (e) => {
+            em = (e) => {
                 W.hW.updateAsync(
                     "applications",
                     (t) => {
@@ -516,18 +516,18 @@ let ef = (e) => {
                     },
                     W.fy.INFREQUENT_USER_ACTION,
                 ),
-                    S.ZP.trackWithMetadata(ee.rMx.NOTIFICATION_SETTINGS_UPDATED, {
+                    T.ZP.trackWithMetadata(ee.rMx.NOTIFICATION_SETTINGS_UPDATED, {
                         update_type: et.I.AUTHORIZED_APP_DM_PUSH_NOTIFICATION,
                         application_id: a.id,
-                        label: e ? Z.ZB.Unmuted : Z.ZB.Muted,
+                        label: e ? B.ZB.Unmuted : B.ZB.Muted,
                     });
             },
-            em = i.useCallback(async () => {
-                u()(null != x, "dm channel mute setting requires having a bot user");
-                let e = k;
-                null == e && (e = await y.Z.ensurePrivateChannel(x.id)),
-                    B
-                        ? O.Z.updateAppDMOverrideSettings(null, e, a.id, { muted: !1 }, Z.ZB.Unmuted)
+            eh = i.useCallback(async () => {
+                u()(null != L, "dm channel mute setting requires having a bot user");
+                let e = M;
+                null == e && (e = await y.Z.ensurePrivateChannel(L.id)),
+                    Z
+                        ? O.Z.updateAppDMOverrideSettings(null, e, a.id, { muted: !1 }, B.ZB.Unmuted)
                         : (0, E.ZDy)(async () => {
                               let { default: t } = await n.e("8246").then(n.bind(n, 540679));
                               return (n) =>
@@ -542,7 +542,7 @@ let ef = (e) => {
                                       ),
                                   );
                           });
-            }, [k, x, B, a.id]),
+            }, [M, L, Z, a.id]),
             eg = () =>
                 N.enabled
                     ? (0, r.jsxs)("div", {
@@ -557,13 +557,13 @@ let ef = (e) => {
                               (0, r.jsxs)(E.Kqy, {
                                   gap: 20,
                                   children: [
-                                      null != x
+                                      null != L
                                           ? (0, r.jsx)(E.rsf, {
                                                 label: en.intl.string(en.t.NkwaBs),
                                                 description:
-                                                    (null == j ? void 0 : j.end_time) != null
+                                                    (null == k ? void 0 : k.end_time) != null
                                                         ? en.intl.format(en.t.j7h4AJ, {
-                                                              endTime: new Date(j.end_time).toLocaleString(
+                                                              endTime: new Date(k.end_time).toLocaleString(
                                                                   en.intl.currentLocale,
                                                                   {
                                                                       month: "numeric",
@@ -574,17 +574,17 @@ let ef = (e) => {
                                                               ),
                                                           })
                                                         : void 0,
-                                                checked: B,
-                                                onChange: em,
+                                                checked: Z,
+                                                onChange: eh,
                                             })
                                           : null,
-                                      I && N.enabled
+                                      S && N.enabled
                                           ? (0, r.jsx)(E.rsf, {
                                                 label: en.intl.string(en.t["Pkw//o"]),
                                                 description: en.intl.string(en.t.hw1nKf),
-                                                checked: T,
-                                                disabled: B,
-                                                onChange: eh,
+                                                checked: I,
+                                                disabled: Z,
+                                                onChange: em,
                                             })
                                           : null,
                                   ],
@@ -593,7 +593,7 @@ let ef = (e) => {
                       })
                     : null,
             eE = (0, q.O)(a.id),
-            eb = (0, R.Z)(a),
+            eb = (0, P.Z)(a),
             ey = () =>
                 (0, r.jsxs)("div", {
                     className: er.footer,
@@ -621,7 +621,7 @@ let ef = (e) => {
                                 variant: "critical-secondary",
                                 size: "sm",
                                 text: en.intl.string(en.t.xUqheM),
-                                onClick: () => e_(a, c),
+                                onClick: () => ep(a, c),
                             }),
                         }),
                     ],
@@ -638,23 +638,23 @@ let ef = (e) => {
             }),
         });
     },
-    em = (0, d.U)(() => ({ searchQuery: "" })),
+    eh = (0, d.U)(() => ({ searchQuery: "" })),
     eg = () => {
-        let e = (0, h.e7)([j.Z], () => j.Z.hidePersonalInformation),
-            { fetchState: t, appAuthTokens: n } = (0, h.cj)([x.default], () => ({
-                fetchState: x.default.getFetchState(),
-                appAuthTokens: x.default.getNewestTokensForNonChildrenApplications(),
+        let e = (0, m.e7)([k.Z], () => k.Z.hidePersonalInformation),
+            { fetchState: t, appAuthTokens: n } = (0, m.cj)([L.default], () => ({
+                fetchState: L.default.getFetchState(),
+                appAuthTokens: L.default.getNewestTokensForNonChildrenApplications(),
             })),
-            a = (0, h.e7)([V.default], () => V.default.locale),
-            o = (0, h.e7)([I.ZP], () => I.ZP.getSelfEmbeddedActivities()),
-            s = (0, h.e7)([M.Z, k.Z], () => M.Z.getChannel(k.Z.getChannelId())),
+            a = (0, m.e7)([V.default], () => V.default.locale),
+            o = (0, m.e7)([S.ZP], () => S.ZP.getSelfEmbeddedActivities()),
+            s = (0, m.e7)([j.Z, M.Z], () => j.Z.getChannel(M.Z.getChannelId())),
             c = null == s ? void 0 : s.getGuildId();
         i.useEffect(() => {
             b.Z.fetch();
         }, []),
             i.useEffect(
                 () => () => {
-                    em.setState({ searchQuery: "" });
+                    eh.setState({ searchQuery: "" });
                 },
                 [],
             );
@@ -663,27 +663,27 @@ let ef = (e) => {
                 b.Z.delete(t);
                 let r = o.get(n.id);
                 null != r &&
-                    T.Z.leaveActivity({
+                    I.Z.leaveActivity({
                         location: r.location,
                         applicationId: n.id,
                         showFeedback: !1,
                     });
             },
-            d = em((e) => e.searchQuery),
-            f = (e) => em.setState({ searchQuery: e }),
-            _ = (e) => {
+            d = eh((e) => e.searchQuery),
+            f = (e) => eh.setState({ searchQuery: e }),
+            p = (e) => {
                 f(e);
             },
-            p = () => {
+            _ = () => {
                 f("");
             },
-            m = () =>
+            h = () =>
                 (0, r.jsx)("div", {
                     className: er.searchContainer,
                     children: (0, r.jsx)(E.E1j, {
                         query: d,
-                        onChange: _,
-                        onClear: p,
+                        onChange: p,
+                        onClear: _,
                         placeholder: en.intl.string(en.t["5prvKe"]),
                         "aria-label": en.intl.string(en.t["5prvKe"]),
                     }),
@@ -705,7 +705,7 @@ let ef = (e) => {
                       : n.filter((t) => t.application.name.toLowerCase().includes(e));
             }, [n, d]),
             O = () =>
-                null == n || null == y || t !== x.FetchState.FETCHED
+                null == n || null == y || t !== L.FetchState.FETCHED
                     ? (0, r.jsx)(E.$jN, {
                           className: ea.marginTop20,
                           type: E.$jN.Type.SPINNING_CIRCLE,
@@ -714,16 +714,16 @@ let ef = (e) => {
                       ? g(en.intl.string(en.t.CpPv5l), en.intl.string(en.t["E+SM6T"]))
                       : 0 === y.length
                         ? (0, r.jsxs)(r.Fragment, {
-                              children: [m(), g(null, en.intl.string(en.t.EVWFNr))],
+                              children: [h(), g(null, en.intl.string(en.t.EVWFNr))],
                           })
                         : (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  m(),
+                                  h(),
                                   y
                                       .sort((e, t) => Number(t.id) - Number(e.id))
                                       .map((e) =>
                                           (0, r.jsx)(
-                                              eh,
+                                              em,
                                               es(
                                                   {
                                                       locale: a,
@@ -740,7 +740,7 @@ let ef = (e) => {
                           });
         return e
             ? (0, r.jsx)(v.Z, {})
-            : (0, r.jsx)(Q.Z, {
+            : (0, r.jsx)(X.Z, {
                   title: en.intl.string(en.t["f6kk+r"]),
                   children: (0, r.jsx)(E.y5t, {
                       component: (0, r.jsxs)(E.Zbd, {

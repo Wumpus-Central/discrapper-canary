@@ -17,11 +17,11 @@ function b(e) {
     let { user: t, onAcceptSuccess: n, onRejectSuccess: r, onError: b } = e,
         y = (0, f.Z)(),
         [C, v] = i.useState(!1),
-        [_, x] = i.useState(!1),
-        [j, O] = i.useState(!1),
+        [_, O] = i.useState(!1),
+        [x, j] = i.useState(!1),
         [E, S] = i.useState(!1),
         [P, I] = i.useState(!1),
-        Z = C || _ || j,
+        Z = C || _ || x,
         T = i.useCallback(
             async (e) => {
                 if (!Z) {
@@ -41,14 +41,14 @@ function b(e) {
         N = i.useCallback(
             async (e) => {
                 if (!Z) {
-                    x(!0);
+                    O(!0);
                     try {
                         await (0, p.gN)(e), I(!0), null == r || r();
                     } catch (t) {
                         let e = new a.Hx(t);
                         null == b || b(e);
                     } finally {
-                        x(!1);
+                        O(!1);
                     }
                 }
             },
@@ -57,7 +57,7 @@ function b(e) {
         A = i.useCallback(
             async (e) => {
                 if (Z) return;
-                x(!0);
+                O(!0);
                 let t = l()(e, m.t$);
                 try {
                     for (let e of t) await (0, p.r_)(e);
@@ -66,7 +66,7 @@ function b(e) {
                     let e = new a.Hx(t);
                     null == b || b(e);
                 } finally {
-                    x(!1);
+                    O(!1);
                 }
             },
             [Z, r, b],
@@ -75,7 +75,7 @@ function b(e) {
             async (e) => {
                 if (Z) return;
                 if (null != t && null == s.Z.getMutualGuilds(t.id)) {
-                    O(!0);
+                    j(!0);
                     try {
                         await (0, c.Z)(t.id, t.getAvatarURL(void 0, 80), {
                             withMutualGuilds: !0,
@@ -83,7 +83,7 @@ function b(e) {
                         });
                     } catch (e) {
                     } finally {
-                        O(!1);
+                        j(!1);
                     }
                 }
                 let n = async () => {
@@ -157,7 +157,7 @@ function b(e) {
         markAsNotSpam: M,
         isAcceptLoading: C,
         isRejectLoading: _,
-        isUserProfileLoading: j,
+        isUserProfileLoading: x,
         isOptimisticAccepted: E,
         isOptimisticRejected: P,
     };

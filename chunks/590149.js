@@ -17,13 +17,13 @@ function d(e) {
             onExpandedChange: p,
             defaultExpanded: h = !1,
             onOpen: x,
-            maxHeight: g,
+            maxHeight: f,
         } = e,
-        [f, b] = l.useState(h),
+        [g, b] = l.useState(h),
         v = l.useRef(null),
         [j, _] = l.useState(null),
         y = void 0 !== m,
-        C = y ? m : f;
+        C = y ? m : g;
     l.useEffect(() => {
         C && null != v.current && _(v.current.scrollHeight);
     }, [C, d]);
@@ -33,10 +33,10 @@ function d(e) {
         }, [C, y, p, x]),
         E = l.useMemo(() => {
             if (C) {
-                if (null != g) return { maxHeight: "number" == typeof g ? "".concat(g, "px") : g };
+                if (null != f) return { maxHeight: "number" == typeof f ? "".concat(f, "px") : f };
                 if (null != j) return { maxHeight: "".concat(j, "px") };
             }
-        }, [g, C, j]);
+        }, [f, C, j]);
     return (0, a.jsxs)("div", {
         className: r()(c.accordionContainer, u, { [c.opened]: C }),
         children: [

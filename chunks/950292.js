@@ -1,4 +1,4 @@
-n.d(t, { z: () => S });
+n.d(t, { z: () => T });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,9 +9,9 @@ var r = n(54381),
     u = n(402453),
     d = n(134057),
     f = n(151108),
-    _ = n(231338),
-    p = n(687352);
-function h(e, t, n) {
+    p = n(231338),
+    _ = n(687352);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,7 +35,7 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
@@ -87,7 +87,7 @@ function y(e, t) {
 function O(e) {
     let { src: t } = e;
     return (0, r.jsx)("img", {
-        className: p.image,
+        className: _.image,
         src: t,
         alt: "",
         draggable: !1,
@@ -98,9 +98,9 @@ function v(e) {
         { reducedMotion: a } = i.useContext(l.S);
     return (0, r.jsx)(
         c.F,
-        m(
+        h(
             {
-                className: p.lottie,
+                className: _.lottie,
                 importData: t,
                 autoplay: !0,
                 shouldAnimate: !a.enabled,
@@ -109,13 +109,13 @@ function v(e) {
         ),
     );
 }
-function I(e) {
+function S(e) {
     let { rive: t, props: n } = e;
     return (0, r.jsx)(
         t,
-        m(
+        h(
             {
-                className: p.rive,
+                className: _.rive,
                 withReducedMotion: "short-loop",
                 autoplay: !0,
                 fit: "contain",
@@ -125,7 +125,7 @@ function I(e) {
         ),
     );
 }
-function T(e) {
+function I(e) {
     let { ref: t, src: n, fallbackImageSrc: a, loop: o, loopAt: s = 0, playbackRate: c, isWindowFocused: u } = e,
         { reducedMotion: d } = i.useContext(l.S),
         f = i.useRef(null);
@@ -148,7 +148,7 @@ function T(e) {
     i.useEffect(() => {
         var e, t;
         null != f.current &&
-            (!d.enabled && u ? null == (e = f.current) || e.play().catch(_.dG) : null == (t = f.current) || t.pause());
+            (!d.enabled && u ? null == (e = f.current) || e.play().catch(p.dG) : null == (t = f.current) || t.pause());
     }, [u, d.enabled]),
     d.enabled && null != a)
         ? (0, r.jsx)(O, {
@@ -156,7 +156,7 @@ function T(e) {
               src: a,
           })
         : (0, r.jsx)("video", {
-              className: p.video,
+              className: _.video,
               ref: f,
               src: n,
               autoPlay: !d.enabled && u,
@@ -166,19 +166,19 @@ function T(e) {
               preload: "metadata",
           });
 }
-function S(e) {
+function T(e) {
     var t,
         n,
         { aspectRatio: i = "16/9" } = e,
         a = b(e, ["aspectRatio"]);
     let l = (0, u.ZF)(),
         c = (0, s.C)(),
-        _ = null != (n = null == (t = l.isWindowFocused) ? void 0 : t.call(l)) ? n : c;
-    function h() {
-        if ((0, f.Or)(a)) return (0, r.jsx)(O, m({}, a));
-        if ((0, f.Am)(a)) return (0, r.jsx)(v, m({}, a));
-        if ((0, f.ko)(a)) return (0, r.jsx)(I, m({}, a));
-        if ((0, f.Wv)(a)) return (0, r.jsx)(T, E(m({}, a), { isWindowFocused: _ }));
+        p = null != (n = null == (t = l.isWindowFocused) ? void 0 : t.call(l)) ? n : c;
+    function m() {
+        if ((0, f.Or)(a)) return (0, r.jsx)(O, h({}, a));
+        if ((0, f.Am)(a)) return (0, r.jsx)(v, h({}, a));
+        if ((0, f.ko)(a)) return (0, r.jsx)(S, h({}, a));
+        if ((0, f.Wv)(a)) return (0, r.jsx)(I, E(h({}, a), { isWindowFocused: p }));
         if ((0, f.Mf)(a))
             return null == l.dynamicGraphicComponents
                 ? (console.warn("Dynamic graphic used but no dynamicGraphicComponents provided in ManaContext"), null)
@@ -192,7 +192,7 @@ function S(e) {
     return null == a
         ? null
         : (0, r.jsx)("div", {
-              className: o()(p.container, p["aspect-ratio-".concat(i)]),
-              children: h(),
+              className: o()(_.container, _["aspect-ratio-".concat(i)]),
+              children: m(),
           });
 }

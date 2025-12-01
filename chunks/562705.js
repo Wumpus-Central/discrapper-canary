@@ -12,8 +12,8 @@ var a = n(54381),
     p = n(553896),
     h = n(804413),
     x = n(787528),
-    g = n(474936),
-    f = n(981631),
+    f = n(474936),
+    g = n(981631),
     b = n(921944),
     v = n(388032);
 function j(e) {
@@ -21,7 +21,7 @@ function j(e) {
         l = (0, h.Z)(),
         s = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
         m = (0, d.Z)((e) => e.isOpen),
-        p = (0, i.e7)([u.Z], () => u.Z.getLayers().includes(f.S9g.USER_SETTINGS));
+        p = (0, i.e7)([u.Z], () => u.Z.getLayers().includes(g.S9g.USER_SETTINGS));
     return s || null == l || m || p
         ? null
         : (0, a.jsx)(c.Nq, {
@@ -42,17 +42,17 @@ function j(e) {
 function _(e) {
     var t;
     let { recentlyLeveledTenureBadge: n, markAsDismissed: i, targetElementRef: r, shouldShow: o } = e,
-        c = g.Qh.indexOf(n),
-        u = (0, x.J)(g.Qh[c > 0 ? c - 1 : c], { ambient: !0 }),
+        c = f.Qh.indexOf(n),
+        u = (0, x.J)(f.Qh[c > 0 ? c - 1 : c], { ambient: !0 }),
         h = (0, l.useCallback)(() => {
             i(b.L.TAKE_ACTION),
                 d.Z.setState({ shouldRenderTenureLevelUp: !0 }),
-                m.S.dispatch(f.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, {});
+                m.S.dispatch(g.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, {});
         }, [i]),
         j = (0, l.useCallback)(() => {
             i(b.L.USER_DISMISS);
         }, [i]),
-        _ = g.vK[n],
+        _ = f.vK[n],
         y = v.intl.formatToPlainString(v.t.ewkaVR, {
             timeMilestone: null == (t = (0, p.q)(_.id, _.tenureReqNumMonths)) ? void 0 : t.toLocaleLowerCase(),
         }),

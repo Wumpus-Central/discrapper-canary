@@ -33,7 +33,7 @@ function u() {
 function d(e) {
     let { children: t, size: n, color: a, weight: d } = e,
         f = u(),
-        _ = i.useMemo(() => {
+        p = i.useMemo(() => {
             let e = {
                     className: void 0,
                     size: null != n ? n : f.size,
@@ -44,7 +44,7 @@ function d(e) {
             return "" !== t && (e.className = o()(s.root, t)), e;
         }, [n, a, d, f]);
     return (0, r.jsx)(c.Provider, {
-        value: _,
+        value: p,
         children: t,
     });
 }

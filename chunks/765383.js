@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => g,
-    k: () => p,
+    k: () => _,
 }),
     n(415506),
     n(388685),
@@ -28,11 +28,11 @@ let c = 60000,
     u = 1000,
     d = 10,
     f = 2000,
-    _ = 500;
-var p = (function (e) {
+    p = 500;
+var _ = (function (e) {
     return (e.ANNOUNCEMENT = "announcement"), (e.APP_EMBED = "app_embed"), e;
 })({});
-function h(e) {
+function m(e) {
     if ("announcement" === e.type)
         return {
             event: s.rMx.ANNOUNCEMENT_MESSAGE_VIEWED,
@@ -57,7 +57,7 @@ function h(e) {
         };
     throw Error("Invalid message type for message view tracking");
 }
-class m extends a.Z {
+class h extends a.Z {
     handleMessageBecameVisible(e) {
         let { type: t, messageId: n } = e,
             r = "".concat(n, "-").concat(t);
@@ -92,7 +92,7 @@ class m extends a.Z {
     }
     drainBuffer() {
         for (let e of this.batchBuffer) {
-            let t = h(e);
+            let t = m(e);
             o.default.track(t.event, t.properties);
         }
         (this.batchBuffer = []),
@@ -111,7 +111,7 @@ class m extends a.Z {
                 this,
                 "recentViewTimes",
                 new (i())({
-                    max: _,
+                    max: p,
                     maxAge: c,
                 }),
             ),
@@ -120,4 +120,4 @@ class m extends a.Z {
             l(this, "actions", { CHANNEL_SELECT: () => this.handleChannelSelect() });
     }
 }
-let g = new m();
+let g = new h();

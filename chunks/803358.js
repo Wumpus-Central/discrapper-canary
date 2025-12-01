@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(781311);
+n.d(t, { Z: () => _ }), n(781311);
 var r = n(979590),
     i = n.n(r),
     a = n(866442),
@@ -76,7 +76,7 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let _ = (e) =>
+let p = (e) =>
     null == e
         ? e
         : {
@@ -84,17 +84,17 @@ let _ = (e) =>
               buttonColors: e.button_colors.map((e) => i()((0, a.Rf)(e))),
               confettiColors: e.confetti_colors.map((e) => i()((0, a.Rf)(e))),
           };
-class p extends o.Z {
+class _ extends o.Z {
     static fromServer(e) {
         var { store_listing_id: t, sku_id: n, unpublished_at: r, styles: i } = e,
             a = d(e, ["store_listing_id", "sku_id", "unpublished_at", "styles"]);
         let o = null != r ? new Date(r) : null;
-        return new p(
+        return new _(
             u(l({}, a), {
                 storeListingId: t,
                 skuId: n,
                 unpublishedAt: o,
-                styles: _(i),
+                styles: p(i),
             }),
         );
     }

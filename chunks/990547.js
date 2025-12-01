@@ -9,11 +9,11 @@ n.r(t),
         analyticsTrackingStoreMaker: () => b.l,
         encodeProperties: () => E.Z,
         extendSuperProperties: () => z,
-        getCampaignParams: () => L,
+        getCampaignParams: () => x,
         getDevice: () => U,
-        getOS: () => j,
-        getSuperProperties: () => X,
-        getSuperPropertiesBase64: () => Q,
+        getOS: () => k,
+        getSuperProperties: () => Q,
+        getSuperPropertiesBase64: () => X,
         isThrottled: () => K,
         trackMaker: () => q,
     }),
@@ -31,10 +31,10 @@ var a,
     d = n.n(u);
 n(804098);
 var f = n(903772),
-    _ = n(627420),
-    p = n(433517),
-    h = n(298444),
-    m = n(979675),
+    p = n(627420),
+    _ = n(433517),
+    m = n(298444),
+    h = n(979675),
     g = n(923452),
     E = n(947486),
     b = n(699407),
@@ -53,7 +53,7 @@ function v(e, t, n) {
         e
     );
 }
-function I(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -69,7 +69,7 @@ function I(e) {
     }
     return e;
 }
-function T(e, t) {
+function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -81,12 +81,12 @@ function T(e, t) {
     }
     return n;
 }
-function S(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : T(Object(t)).forEach(function (n) {
+            : I(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -95,17 +95,17 @@ function S(e, t) {
 let A = "deviceProperties",
     C = "referralProperties",
     N = {},
-    R = {},
-    P = window.DiscordNative;
-if (null != P) {
+    P = {},
+    R = window.DiscordNative;
+if (null != R) {
     let e,
-        t = P.remoteApp.getVersion(),
-        n = P.process.platform,
-        i = P.os.release,
-        o = P.os.arch,
-        s = P.os.appArch,
-        l = P.remoteApp.getReleaseChannel(),
-        c = (0, _.qf)();
+        t = R.remoteApp.getVersion(),
+        n = R.process.platform,
+        i = R.os.release,
+        o = R.os.arch,
+        s = R.os.appArch,
+        l = R.remoteApp.getReleaseChannel(),
+        c = (0, p.qf)();
     switch (n) {
         case "win32":
             e = "Windows";
@@ -136,7 +136,7 @@ if (null != P) {
             ((r.browser_user_agent = d().ua || ""), (r.browser_version = d().version || "")),
         "linux" === n)
     ) {
-        let e = P.crashReporter.getMetadata();
+        let e = R.crashReporter.getMetadata();
         (r.window_manager = e.wm),
             (r.distro = e.distro),
             (r.runtime_environment = e.runtime_environment),
@@ -146,24 +146,24 @@ if (null != P) {
             ? (r.os_sdk_version = null == i ? void 0 : i.split(".")[0])
             : "win32" === n && (r.os_sdk_version = null == i ? void 0 : i.split(".")[2]);
 }
-let D = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
-function w(e, t) {
+let w = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
+function D(e, t) {
     if (null == e) return "";
     t = t.replace(/[[]/, "\\[").replace(/[\]]/, "\\]");
     let n = new RegExp("[\\?&]".concat(t, "=([^&#]*)")).exec(e);
     return null === n || ("string" != typeof n[1] && n[1].length) ? "" : decodeURIComponent(n[1]).replace(/\+/g, " ");
 }
-function L(e) {
+function x(e) {
     let t = {};
     return (
-        D.forEach((n) => {
-            let r = w(e, n);
+        w.forEach((n) => {
+            let r = D(e, n);
             r.length > 0 && (t[n] = r);
         }),
         t
     );
 }
-function x() {
+function L() {
     let e = document.referrer;
     return 0 === e.search("https?://(.*)google.([^/?]*)")
         ? "google"
@@ -175,19 +175,19 @@ function x() {
               ? "duckduckgo"
               : null;
 }
-function M() {
+function j() {
     let e = {},
         t = document.referrer,
-        n = x(),
+        n = L(),
         r = "yahoo" !== n ? "q" : "p";
     if (null != n) {
         e.search_engine = n;
-        let i = w(t, r);
+        let i = D(t, r);
         i.length > 0 && (e.mp_keyword = i);
     }
     return e;
 }
-function k() {
+function M() {
     let { userAgent: e, vendor: t = "" } = window.navigator,
         { opera: n } = window;
     if (n) return /Mini/.test(e) ? "Opera Mini" : "Opera";
@@ -207,7 +207,7 @@ function k() {
     else if (/Gecko/.test(e)) return "Mozilla";
     else return "";
 }
-function j() {
+function k() {
     let { userAgent: e } = window.navigator;
     if (/Windows/i.test(e)) return /Phone/.test(e) ? "Windows Mobile" : "Windows";
     if (/(iPhone|iPad|iPod)/.test(e)) return "iOS";
@@ -231,21 +231,21 @@ function G() {
     let e = document.referrer.split("/");
     return e.length >= 3 ? e[2] : "";
 }
-function B() {
+function Z() {
     let e = {};
     return (
-        (e.os = j()),
-        (e.browser = k()),
+        (e.os = k()),
+        (e.browser = M()),
         (e.device = U()),
-        (e.system_locale = (0, _.qf)()),
+        (e.system_locale = (0, p.qf)()),
         (e.has_client_mods = (0, f.e)()),
         e
     );
 }
-function Z() {
+function B() {
     var e, t;
-    return S(
-        I(
+    return T(
+        S(
             {},
             {
                 browser_user_agent: window.navigator.userAgent || "",
@@ -260,19 +260,19 @@ function Z() {
 }
 function F() {
     let e = {};
-    return (e.referrer = document.referrer), (e.referring_domain = G()), (e = I({}, e, L(window.location.href), M()));
+    return (e.referrer = document.referrer), (e.referring_domain = G()), (e = S({}, e, x(window.location.href), j()));
 }
 function V(e, t) {
     let n = {};
     return Object.keys(e).map((r) => (n["".concat(r).concat(t)] = e[r])), n;
 }
 function H() {
-    let e = p.K.get(A);
-    null == e && ((e = B()), p.K.set(A, e));
-    let t = p.K.get(C);
-    null == t && ((t = F()), p.K.set(C, t));
-    let n = h.x.get(C);
-    return null == n && ((n = V(F(), "_current")), h.x.set(C, n)), I({}, e, Z(), t, n);
+    let e = _.K.get(A);
+    null == e && ((e = Z()), _.K.set(A, e));
+    let t = _.K.get(C);
+    null == t && ((t = F()), _.K.set(C, t));
+    let n = m.x.get(C);
+    return null == n && ((n = V(F(), "_current")), m.x.set(C, n)), S({}, e, B(), t, n);
 }
 function Y() {
     try {
@@ -285,9 +285,9 @@ function W() {
     let n = {},
         r = window.GLOBAL_ENV.RELEASE_CHANNEL;
     r && (null == n.release_channel || "" === n.release_channel) && (n.release_channel = r.split("-")[0]);
-    let i = parseInt("470193", 10);
+    let i = parseInt("473983", 10);
     isNaN(i) || (n.client_build_number = i);
-    let a = null == P || null == (e = (t = P.remoteApp).getBuildNumber) ? void 0 : e.call(t);
+    let a = null == R || null == (e = (t = R.remoteApp).getBuildNumber) ? void 0 : e.call(t);
     return (
         isNaN(a) || (n.native_build_number = a),
         (n.client_event_source = Y()),
@@ -306,12 +306,12 @@ if (null == r)
         r = {};
     }
 function z(e) {
-    (r = I({}, r, e)), (i = (0, E.Z)(r));
+    (r = S({}, r, e)), (i = (0, E.Z)(r));
 }
 z(W());
 let q = (e) => {
     let { analyticEventConfigs: t, dispatcher: r, TRACK_ACTION_NAME: i } = e,
-        a = (0, m.$)(r, i);
+        a = (0, h.$)(r, i);
     return function (e, r) {
         let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         if (null != n.g.isServerRendering && !0 === n.g.isServerRendering) return Promise.resolve();
@@ -327,9 +327,9 @@ let q = (e) => {
                 if (K(t) || ("number" == typeof l.throttlePercent && Math.random() > l.throttlePercent))
                     return Promise.resolve();
                 if (l.deduplicate) {
-                    let e = R[t];
+                    let e = P[t];
                     if (s()(e, o)) return Promise.resolve();
-                    R[t] = o;
+                    P[t] = o;
                 }
                 N[t] = Date.now() + l.throttlePeriod;
             } else if ("throttlePercent" in l) {
@@ -338,9 +338,9 @@ let q = (e) => {
         return a(e, r, i);
     };
 };
-function X() {
+function Q() {
     return r;
 }
-function Q() {
+function X() {
     return i;
 }

@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => D });
+n.d(t, { Z: () => w });
 var i,
     a = n(442837),
     o = n(544891),
@@ -9,7 +9,7 @@ var i,
     u = n(314897),
     d = n(300429),
     f = n(981631);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,13 +33,13 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-let h = 10 * c.Z.Millis.SECOND,
-    m = 1.5 * c.Z.Millis.SECOND,
+let m = 10 * c.Z.Millis.SECOND,
+    h = 1.5 * c.Z.Millis.SECOND,
     g = 5,
     E = {},
     b = Object.freeze({});
@@ -53,7 +53,7 @@ function O(e) {
     if (null == n || t === l.V) return !1;
     null != r && r.channelId !== t && (null != r.timeout && clearTimeout(r.timeout), (r = null));
     let i = Date.now(),
-        a = 0.8 * h;
+        a = 0.8 * m;
     if (null != r && (null != r.timeout || r.prevSend + a > i)) return !1;
     let c = setTimeout(
         () => {
@@ -62,7 +62,7 @@ function O(e) {
                 n === u.default.getId() &&
                 null != r.timeout &&
                 ((r.timeout = null),
-                R(t) > g ||
+                P(t) > g ||
                     o.tn
                         .post({
                             url: f.ANM.TYPING(t),
@@ -91,7 +91,7 @@ function O(e) {
                             }
                         }));
         },
-        null == r || r.prevSend > i - 2 * a ? m : 0,
+        null == r || r.prevSend > i - 2 * a ? h : 0,
     );
     return (
         (r = {
@@ -99,7 +99,7 @@ function O(e) {
             timeout: c,
             prevSend: i,
         }),
-        S({
+        T({
             channelId: t,
             userId: n,
         })
@@ -109,7 +109,7 @@ function v(e) {
     if (null == r || r.channelId !== e) return !1;
     null != r.timeout && clearTimeout(r.timeout), (r = null);
 }
-function I(e) {
+function S(e) {
     let { channelId: t } = e,
         n = u.default.getId();
     return (
@@ -125,25 +125,25 @@ function I(e) {
         }))
     );
 }
-function T(e, t) {
+function I(e, t) {
     return setTimeout(() => {
         s.Z.dispatch({
             type: "TYPING_STOP",
             channelId: e,
             userId: t,
         });
-    }, h);
+    }, m);
 }
-function S(e) {
+function T(e) {
     let { channelId: t, userId: n } = e,
-        r = p({}, y(t));
-    clearTimeout(r[n]), (r[n] = T(t, n)), (E[t] = r);
+        r = _({}, y(t));
+    clearTimeout(r[n]), (r[n] = I(t, n)), (E[t] = r);
 }
 function A(e) {
     let { channelId: t, userId: n } = e,
         r = E[t];
     if (null == r || null == r[n]) return !1;
-    let i = p({}, r);
+    let i = _({}, r);
     clearTimeout(i[n]), delete i[n], (E[t] = i);
 }
 function C(e) {
@@ -164,11 +164,11 @@ function C(e) {
 function N() {
     E = {};
 }
-function R(e) {
+function P(e) {
     let t = y(e);
     return t === b ? 0 : Object.keys(t).length;
 }
-class P extends (i = a.ZP.Store) {
+class R extends (i = a.ZP.Store) {
     initialize() {
         this.waitFor(u.default);
     }
@@ -179,12 +179,12 @@ class P extends (i = a.ZP.Store) {
         return null != y(e)[t];
     }
 }
-_(P, "displayName", "TypingStore");
-let D = new P(s.Z, {
-    TYPING_START: S,
+p(R, "displayName", "TypingStore");
+let w = new R(s.Z, {
+    TYPING_START: T,
     TYPING_STOP: A,
     TYPING_START_LOCAL: O,
-    TYPING_STOP_LOCAL: I,
+    TYPING_STOP_LOCAL: S,
     CONNECTION_OPEN: N,
     OVERLAY_INITIALIZE: N,
     MESSAGE_CREATE: C,

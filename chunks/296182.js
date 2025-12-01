@@ -1,7 +1,7 @@
 n.d(t, {
-    Jj: () => h,
+    Jj: () => m,
     Lz: () => g,
-    gS: () => m,
+    gS: () => h,
     lT: () => E,
     s$: () => b,
     wV: () => c,
@@ -16,21 +16,21 @@ let c = "png",
     u = "https://media.discordapp.net",
     d = "cdn.discordapp.com",
     f = "localhost",
-    _ = "3000",
-    p = "http://localhost:4000";
-function h(e) {
+    p = "3000",
+    _ = "http://localhost:4000";
+function m(e) {
     return !((0, a.B0)(e) || (0, r.zt)(e));
 }
-function m(e, t, n) {
+function h(e, t, n) {
     let r = l.ZP.canSaveImage(e, null != n ? n : t),
         i = s.Z.isDiscordAssetUrl(e, t, n),
-        a = h(e);
+        a = m(e);
     return r && i && a;
 }
 function g(e, t, n) {
     let r = l.ZP.canCopyImage(e),
         i = s.Z.isDiscordAssetUrl(e, t, n),
-        a = h(e);
+        a = m(e);
     return r && i && a;
 }
 function E(e, t) {
@@ -48,7 +48,7 @@ function b(e, t, n, r) {
         c = !1;
     if (
         (i.origin === u && (c = !0),
-        (0, o.ii)() && i.origin === p && (c = !0),
+        (0, o.ii)() && i.origin === _ && (c = !0),
         i.searchParams.delete("width"),
         i.searchParams.delete("height"),
         i.searchParams.delete("quality"),
@@ -58,7 +58,7 @@ function b(e, t, n, r) {
         if ((0, o.ii)()) {
             if (s.Z.isOriginalContentTypeDifferent(t, n)) return i.toString();
             (i.host = f),
-                (i.port = _),
+                (i.port = p),
                 i.pathname.startsWith("/attachments/") && (i.pathname = "/channels/" + i.pathname.substring(13));
         } else i.host = d;
     return i.searchParams.delete("format"), null == a && null != r && i.searchParams.append("format", r), i.toString();

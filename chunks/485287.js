@@ -1,6 +1,6 @@
 n.d(t, {
     U5: () => O,
-    ZP: () => I,
+    ZP: () => S,
     pp: () => y,
 }),
     n(388685);
@@ -14,9 +14,9 @@ var r = n(442837),
     u = n(565799),
     d = n(431328),
     f = n(501655),
-    _ = n(427679),
-    p = n(754277);
-function h(e, t, n) {
+    p = n(427679),
+    _ = n(754277);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,9 +29,9 @@ function h(e, t, n) {
         e
     );
 }
-let m = (e) => e / 400,
+let h = (e) => e / 400,
     g = !1,
-    E = (0, a.tu)("stage_waiting", "stage_waiting", m(s.Z.getOutputVolume()));
+    E = (0, a.tu)("stage_waiting", "stage_waiting", h(s.Z.getOutputVolume()));
 function b() {
     let e = l.Z.getVoiceChannelId();
     if (null == e) {
@@ -43,31 +43,31 @@ function b() {
         E.stop(), (g = !1);
         return;
     }
-    if (p.Z.shouldPlay()) {
-        (E.volume = m(s.Z.getOutputVolume())), E.loop(), (g = !0);
+    if (_.Z.shouldPlay()) {
+        (E.volume = h(s.Z.getOutputVolume())), E.loop(), (g = !0);
         return;
     }
-    if (_.Z.isLive(e)) {
+    if (p.Z.isLive(e)) {
         E.stop(), (g = !1);
         return;
     }
-    if (p.Z.isMuted()) {
+    if (_.Z.isMuted()) {
         E.pause(), (g = !1);
         return;
     }
     let n = null != Object.values(c.Z.getVoiceStatesForChannel(e)).find((e) => !e.suppress && !e.isVoiceMuted());
-    n || g ? n && (E.pause(), (g = !1)) : ((E.volume = m(s.Z.getOutputVolume())), E.loop(), (g = !0));
+    n || g ? n && (E.pause(), (g = !1)) : ((E.volume = h(s.Z.getOutputVolume())), E.loop(), (g = !0));
 }
 function y(e) {
     let t = (0, r.e7)([l.Z], () => l.Z.getVoiceChannelId() === e),
         n = null != (0, d.w8)(e, f.pV.SPEAKER).find((e) => !e.voiceState.isVoiceMuted()),
-        i = (0, r.e7)([_.Z], () => _.Z.getStageInstanceByChannel(e));
+        i = (0, r.e7)([p.Z], () => p.Z.getStageInstanceByChannel(e));
     return t && null == i && !n;
 }
 function O(e) {
     let t = l.Z.getVoiceChannelId() === e,
         n = null != u.Z.getMutableParticipants(e, f.pV.SPEAKER).find((e) => !e.voiceState.isVoiceMuted()),
-        r = _.Z.getStageInstanceByChannel(e);
+        r = p.Z.getStageInstanceByChannel(e);
     return t && null == r && !n;
 }
 class v extends i.Z {
@@ -94,14 +94,14 @@ class v extends i.Z {
     }
     handleSetOutputVolume(e) {
         let { volume: t } = e;
-        E.volume = m(t);
+        E.volume = h(t);
     }
     handleToggleSelfDeaf() {
         b();
     }
     constructor(...e) {
         super(...e),
-            h(this, "actions", {
+            m(this, "actions", {
                 VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect,
                 LOGOUT: this.handleLogout,
                 STAGE_MUSIC_MUTE: this.handleMute,
@@ -112,4 +112,4 @@ class v extends i.Z {
             });
     }
 }
-let I = new v();
+let S = new v();

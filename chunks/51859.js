@@ -1,8 +1,8 @@
 n.d(t, { Z: () => x }), n(388685), n(953529);
 var r = n(54381),
     i = n(473749),
-    l = n(494497),
-    o = n(481060),
+    o = n(494497),
+    l = n(481060),
     a = n(158638),
     s = n(973772),
     c = n(838968),
@@ -21,7 +21,7 @@ function x(e) {
         j = (0, s.ZP)(t, n).type !== g.A3.INACTIVE,
         C = (0, m.d)(j),
         w = (0, a.g1)(t, "GuildPowerupPerkCard"),
-        I = n.skuId === l.A$;
+        I = n.skuId === o.A$;
     return (0, r.jsxs)(p.Z, {
         onHover: (e) => h(e),
         guildId: t,
@@ -40,7 +40,7 @@ function x(e) {
                     guildId: t,
                     powerup: n,
                 }),
-                children: (0, r.jsx)(o.Text, {
+                children: (0, r.jsx)(l.Text, {
                     className: v.description,
                     color: C,
                     variant: "text-sm/medium",

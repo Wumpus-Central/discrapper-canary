@@ -15,14 +15,14 @@ var r = n(239189),
             u = l.range || [0, 1],
             d = l.extrapolateLeft || l.extrapolate || "extend",
             f = l.extrapolateRight || l.extrapolate || "extend",
-            _ =
+            p =
                 l.easing ||
                 function (e) {
                     return e;
                 };
         return function (e) {
             var t = s(e, u);
-            return o(e, u[t], u[t + 1], c[t], c[t + 1], _, d, f, l.map);
+            return o(e, u[t], u[t + 1], c[t], c[t + 1], p, d, f, l.map);
         };
     };
 function o(e, t, n, r, i, a, o, s, l) {

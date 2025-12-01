@@ -11,8 +11,8 @@ var r = t(54381),
     v = t(381585),
     p = t(410127),
     f = t(67409),
-    b = t(981631),
-    g = t(474936),
+    g = t(981631),
+    b = t(474936),
     m = t(388032);
 let h = (e) => {
     let { product: n, primary: t, selectedVariantIndex: h, returnRef: x, onSuccess: j, tooltipDelay: y } = e,
@@ -31,7 +31,7 @@ let h = (e) => {
             size: "md",
             onClick: (e) => {
                 e.stopPropagation(),
-                    d.default.track(b.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                    d.default.track(g.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                         collectibles_shop_session_id: null == C ? void 0 : C.sessionId,
                         sku_id: n.skuId,
                         page_section: null == C ? void 0 : C.pageSection,
@@ -47,7 +47,7 @@ let h = (e) => {
                             selectedVariantIndex: h,
                         }),
                         isGift: !0,
-                        giftingOrigin: g.Wt.SHOP_PAGE,
+                        giftingOrigin: b.Wt.SHOP_PAGE,
                         analyticsLocations: O,
                         returnRef: x,
                         variantsReturnStyle: a.v.VARIANTS_GROUP,

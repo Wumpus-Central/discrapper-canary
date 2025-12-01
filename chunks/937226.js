@@ -6,11 +6,11 @@ var r = n(84854),
     s = n(921448);
 function l(e, t) {
     let { isDisabled: n, name: l, form: c, validationBehavior: u = "aria" } = e,
-        { isInvalid: d, validationErrors: f, validationDetails: _ } = t.displayValidation,
+        { isInvalid: d, validationErrors: f, validationDetails: p } = t.displayValidation,
         {
-            labelProps: p,
-            fieldProps: h,
-            descriptionProps: m,
+            labelProps: _,
+            fieldProps: m,
+            descriptionProps: h,
             errorMessageProps: g,
         } = (0, o.U)({
             ...e,
@@ -21,7 +21,7 @@ function l(e, t) {
     r.k.set(t, {
         name: l,
         form: c,
-        descriptionId: m.id,
+        descriptionId: h.id,
         errorMessageId: g.id,
         validationBehavior: u,
     });
@@ -35,14 +35,14 @@ function l(e, t) {
         groupProps: (0, a.d)(E, {
             role: "group",
             "aria-disabled": n || void 0,
-            ...h,
+            ...m,
             ...b,
         }),
-        labelProps: p,
-        descriptionProps: m,
+        labelProps: _,
+        descriptionProps: h,
         errorMessageProps: g,
         isInvalid: d,
         validationErrors: f,
-        validationDetails: _,
+        validationDetails: p,
     };
 }

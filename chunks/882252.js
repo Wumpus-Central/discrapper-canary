@@ -1,9 +1,9 @@
 n.d(t, {
     FS: () => u,
-    Uw: () => _,
+    Uw: () => p,
     nC: () => d,
-    nU: () => p,
-    yv: () => h,
+    nU: () => _,
+    yv: () => m,
 }),
     n(388685);
 var r = n(683860),
@@ -33,17 +33,17 @@ let f = () => ({
     days: c.t.U4I0sw,
     month: c.intl.string(c.t["nBNJ/L"]),
 });
-function _(e, t) {
+function p(e, t) {
     if (t === s.R6.POSTED_DURATION_AGO && e === r.z.CREATION_DATE) return f;
 }
-function p(e, t) {
+function _(e, t) {
     let [n] = t,
         r = n.hasTrackedUnread(e),
         i = n.hasOpenedThread(e),
         a = null != n.getTrackedAckMessageId(e);
     return r && i && a;
 }
-function h(e) {
+function m(e) {
     var t;
     return (null == (t = i.Z.getChannel(e)) ? void 0 : t.hasFlag(l.zZ.PINNED)) === !0;
 }

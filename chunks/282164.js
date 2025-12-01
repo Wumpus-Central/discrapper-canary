@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(54381),
     i = n(473749),
     a = n(442837),
@@ -29,7 +29,7 @@ class f extends i.PureComponent {
         });
     }
 }
-let _ = a.ZP.connectStores([c.Z, u.Z], () => ({
+let p = a.ZP.connectStores([c.Z, u.Z], () => ({
     braintreeEmail: u.Z.braintreeEmail,
     paypalClient: c.Z.getPayPalClient(),
 }))(f);

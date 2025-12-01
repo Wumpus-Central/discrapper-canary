@@ -15,8 +15,8 @@ var i = n(54381),
     m = n(738619),
     y = n(655687),
     b = n(823748),
-    v = n(25007),
-    _ = n(199649),
+    _ = n(25007),
+    v = n(199649),
     O = n(1397),
     E = n(541716),
     x = n(752305),
@@ -29,7 +29,7 @@ var i = n(54381),
     w = n(400023),
     T = n(623292),
     N = n(807092),
-    D = n(340501),
+    D = n(271172),
     k = n(592125),
     R = n(703558),
     A = n(731290),
@@ -176,7 +176,7 @@ class el extends r.Component {
             });
         return t.isPrivate()
             ? (0, i.jsx)(
-                  _.Z,
+                  v.Z,
                   {
                       channel: t,
                       children: u,
@@ -370,7 +370,7 @@ class ea extends r.PureComponent {
                     children: [
                         !a &&
                             !h &&
-                            (0, i.jsx)(v.Z, {
+                            (0, i.jsx)(_.Z, {
                                 channel: t,
                                 guild: l,
                             }),
@@ -568,8 +568,8 @@ function ec(e) {
         f = (0, c.e7)([A.Z], () => null != r && A.Z.didAgree(r)),
         g = null != o && o.isPrivate() ? o.getRecipientId() : null,
         m = (0, c.e7)([N.Z], () => (null != s ? N.Z.getPendingReply(s) : void 0)),
-        v = (0, c.e7)([W.default], () => (null != g ? W.default.getUser(g) : null)),
-        { placeholder: _ } = (0, y.Z)({ channel: o });
+        _ = (0, c.e7)([W.default], () => (null != g ? W.default.getUser(g) : null)),
+        { placeholder: v } = (0, y.Z)({ channel: o });
     return null != o && null != p && Q.TPd.GUILD_THREADS_ONLY.has(o.type)
         ? (0, i.jsx)(b.Z, {})
         : (0, i.jsx)(
@@ -578,7 +578,7 @@ function ec(e) {
                   {
                       guild: p,
                       channel: o,
-                      user: v,
+                      user: _,
                       opacity: d,
                       nsfwAgree: f,
                       chatKeybind: a,
@@ -586,7 +586,7 @@ function ec(e) {
                       isPreviewingInGame: h,
                       pendingReply: m,
                       contained: t,
-                      placeholder: _,
+                      placeholder: v,
                       widget: Q.Odu.TEXT,
                   },
                   n,

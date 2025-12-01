@@ -10,7 +10,7 @@ function l(e) {
         u = (0, a.ZP)(t),
         d = l(u),
         f = i.Z.getSystemMessageUserJoin(t.id),
-        _ = s.intl.format(f, {
+        p = s.intl.format(f, {
             username: u.nick,
             usernameHook: d,
         });
@@ -18,6 +18,6 @@ function l(e) {
         icon: n(570111),
         timestamp: t.timestamp,
         compact: c,
-        children: _,
+        children: p,
     });
 }

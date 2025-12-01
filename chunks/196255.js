@@ -1,18 +1,18 @@
-n.d(t, { Z: () => d });
-var a = n(54381);
-n(473749);
-var l = n(120356),
-    s = n.n(l),
-    r = n(481060),
-    i = n(942951),
-    o = n(456269),
-    c = n(388032),
-    u = n(423046);
+t.d(n, { Z: () => d });
+var s = t(54381);
+t(473749);
+var l = t(120356),
+    a = t.n(l),
+    r = t(481060),
+    i = t(942951),
+    o = t(456269),
+    c = t(388032),
+    u = t(423046);
 let d = (e) => {
-    var t, n;
+    var n, t;
     let { message: l, channel: d, renderColon: m, hasUnreads: h } = e,
         { user: g, author: f } = (0, o.AJ)(d),
-        x = null != (n = null != (t = null == f ? void 0 : f.nick) ? t : null == g ? void 0 : g.username) ? n : "",
+        x = null != (t = null != (n = null == f ? void 0 : f.nick) ? n : null == g ? void 0 : g.username) ? t : "",
         j = (0, i.l)({
             user: null == l ? void 0 : l.author,
             channelId: d.id,
@@ -21,9 +21,9 @@ let d = (e) => {
             stopPropagation: !0,
             ariaLabel: c.intl.formatToPlainString(c.t.CSIeU1, { name: x }),
         })(null != f ? f : void 0)(x, d.id);
-    return (0, a.jsxs)(r.Text, {
+    return (0, s.jsxs)(r.Text, {
         tag: "span",
-        className: s()(u.author, { [u.hasUnreads]: h }),
+        className: a()(u.author, { [u.hasUnreads]: h }),
         variant: "text-sm/semibold",
         children: [j, !0 === m ? ": " : null],
     });

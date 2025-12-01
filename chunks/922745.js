@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => I,
+    Z: () => S,
     r: () => v,
 });
 var r = n(54381);
@@ -13,10 +13,10 @@ var i = n(120356),
     u = n(312956),
     d = n(501967),
     f = n(19780),
-    _ = n(540028),
-    p = n(507675),
-    h = n(273716),
-    m = n(388032),
+    p = n(540028),
+    _ = n(507675),
+    m = n(273716),
+    h = n(388032),
     g = n(186880);
 function E(e, t, n) {
     return (
@@ -73,12 +73,12 @@ function v(e) {
         c = (0, o.e7)([f.Z], () => f.Z.getChannelId()),
         d =
             null != c
-                ? (0, r.jsx)(_.Z, {
+                ? (0, r.jsx)(p.Z, {
                       voiceChannelId: c,
                       idle: a,
                   })
                 : null,
-        { enabled: p } = u.Z.useExperiment({ location: "PictureInPicturePlayer" });
+        { enabled: _ } = u.Z.useExperiment({ location: "PictureInPicturePlayer" });
     return (0, r.jsxs)(s, {
         className: g.headerIdleContainer,
         children: [
@@ -89,7 +89,7 @@ function v(e) {
                     (0, r.jsx)(l.whL, {
                         size: "custom",
                         color: "currentColor",
-                        "aria-label": m.intl.string(m.t.mSfLs0),
+                        "aria-label": h.intl.string(h.t.mSfLs0),
                         className: g.backButton,
                         width: 20,
                         height: 20,
@@ -102,17 +102,17 @@ function v(e) {
                     }),
                 ],
             }),
-            p && null != i
-                ? (0, r.jsx)(h.Z, {
+            _ && null != i
+                ? (0, r.jsx)(m.Z, {
                       onClick: i,
-                      label: m.intl.string(m.t.BEuDEn),
+                      label: h.intl.string(h.t.BEuDEn),
                   })
                 : null,
             d,
         ],
     });
 }
-function I(e) {
+function S(e) {
     var {
             children: t,
             idle: n,
@@ -121,15 +121,15 @@ function I(e) {
             backgroundKey: l,
             onActive: u,
             onForceIdle: f,
-            renderBottomLeftControls: _,
-            renderBottomRightControls: h,
-            screenMessage: m,
+            renderBottomLeftControls: p,
+            renderBottomRightControls: m,
+            screenMessage: h,
             hideControls: E = !1,
             className: O,
-            innerClassName: I,
-            videoControlsClassName: T,
+            innerClassName: S,
+            videoControlsClassName: I,
         } = e,
-        S = y(e, [
+        T = y(e, [
             "children",
             "idle",
             "onJumpToChannel",
@@ -156,16 +156,16 @@ function I(e) {
                 children: (0, r.jsx)(
                     d.B,
                     {
-                        className: I,
+                        className: S,
                         children: t,
                     },
                     l,
                 ),
             }),
-            null != m ? (0, r.jsx)(p.Z, b({ size: "small" }, m)) : null,
+            null != h ? (0, r.jsx)(_.Z, b({ size: "small" }, h)) : null,
             !E &&
                 (0, r.jsxs)("div", {
-                    className: a()(g.videoControls, T, "theme-dark"),
+                    className: a()(g.videoControls, I, "theme-dark"),
                     children: [
                         (0, r.jsx)("div", {
                             className: g.topControls,
@@ -177,7 +177,7 @@ function I(e) {
                                         onJumpToChannel: i,
                                         onHide: o,
                                     },
-                                    S,
+                                    T,
                                 ),
                             ),
                         }),
@@ -190,7 +190,7 @@ function I(e) {
                                     basis: "50%",
                                     align: c.Z.Align.CENTER,
                                     className: g.bottomLeftControls,
-                                    children: null == _ ? void 0 : _(),
+                                    children: null == p ? void 0 : p(),
                                 }),
                                 (0, r.jsx)(c.Z, {
                                     grow: 0,
@@ -198,7 +198,7 @@ function I(e) {
                                     justify: c.Z.Justify.END,
                                     basis: "50%",
                                     align: c.Z.Align.CENTER,
-                                    children: null == h ? void 0 : h(),
+                                    children: null == m ? void 0 : m(),
                                 }),
                             ],
                         }),

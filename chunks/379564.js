@@ -187,9 +187,9 @@ e.exports = function (e) {
             },
         ];
     d.contains = f;
-    let _ = e.inherit(e.TITLE_MODE, { begin: u }),
-        p = "(\\(.*\\)\\s*)?\\B[-=]>",
-        h = {
+    let p = e.inherit(e.TITLE_MODE, { begin: u }),
+        _ = "(\\(.*\\)\\s*)?\\B[-=]>",
+        m = {
             className: "params",
             begin: "\\([^\\(]",
             returnBegin: !0,
@@ -202,7 +202,7 @@ e.exports = function (e) {
                 },
             ],
         },
-        m = {
+        h = {
             variants: [
                 {
                     match: [/class\s+/, u, /\s+extends\s+/, u],
@@ -228,10 +228,10 @@ e.exports = function (e) {
             e.HASH_COMMENT_MODE,
             {
                 className: "function",
-                begin: "^\\s*" + u + "\\s*=\\s*" + p,
+                begin: "^\\s*" + u + "\\s*=\\s*" + _,
                 end: "[-=]>",
                 returnBegin: !0,
-                contains: [_, h],
+                contains: [p, m],
             },
             {
                 begin: /[:\(,=]\s*/,
@@ -239,14 +239,14 @@ e.exports = function (e) {
                 contains: [
                     {
                         className: "function",
-                        begin: p,
+                        begin: _,
                         end: "[-=]>",
                         returnBegin: !0,
-                        contains: [h],
+                        contains: [m],
                     },
                 ],
             },
-            m,
+            h,
             {
                 begin: u + ":",
                 end: ":",

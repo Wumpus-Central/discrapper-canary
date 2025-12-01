@@ -173,21 +173,21 @@ let a = {
 function d(e) {
     let t = {},
         n = e,
-        r = h.exec(n);
-    for (; r; ) f(t, r), (n = n.substring(r[0].length)), (r = h.exec(n));
+        r = m.exec(n);
+    for (; r; ) f(t, r), (n = n.substring(r[0].length)), (r = m.exec(n));
     return t;
 }
 function f(e, t) {
     let n = b(t[1]);
     e[c[t[2].toLowerCase()]] = n;
 }
-let _ = `(?:${(0, r.q3)(l)}|\\d+)`;
+let p = `(?:${(0, r.q3)(l)}|\\d+)`;
 (0, r.q3)(s), (0, r.q3)(c);
-let p = `(${_})\\s{0,5}(${(0, r.q3)(c)})\\s{0,5}`,
-    h = RegExp(p, "i"),
-    m = `(${_})\\s{0,5}(${(0, r.q3)(u)})\\s{0,5}`,
-    g = (0, r.Xf)("", p),
-    E = (0, r.Xf)("", m);
+let _ = `(${p})\\s{0,5}(${(0, r.q3)(c)})\\s{0,5}`,
+    m = RegExp(_, "i"),
+    h = `(${p})\\s{0,5}(${(0, r.q3)(u)})\\s{0,5}`,
+    g = (0, r.Xf)("", _),
+    E = (0, r.Xf)("", h);
 function b(e) {
     let t = e.toLowerCase();
     return void 0 !== l[t] ? l[t] : parseInt(t);

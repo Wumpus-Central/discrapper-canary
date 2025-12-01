@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(54381);
 n(473749);
 var i = n(442837),
@@ -37,11 +37,11 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -49,7 +49,7 @@ function _(e, t) {
     }
     return i;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -58,9 +58,9 @@ function p(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function h(e) {
+function m(e) {
     var { enabled: t } = e,
-        n = _(e, ["enabled"]);
+        n = p(e, ["enabled"]);
     let i = t ? u.intl.string(u.t.Z7MyNB) : u.intl.string(u.t.OIDkcp),
         o = t ? a.wvt : a.NpZ;
     return (0, r.jsx)(
@@ -74,7 +74,7 @@ function h(e) {
         ),
     );
 }
-let m = i.ZP.connectStores([s.Z, o.Z], (e) => {
+let h = i.ZP.connectStores([s.Z, o.Z], (e) => {
     let { node: t, guestWindow: n } = e;
     return { enabled: (0, l.rB)(t, null == n ? void 0 : n.document) };
-})(h);
+})(m);

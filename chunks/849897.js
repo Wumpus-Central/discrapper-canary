@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381),
     i = n(473749),
     a = n(588468),
@@ -11,10 +11,10 @@ var r = n(54381),
 function f(e) {
     return "".concat(u.ME).concat(e.name);
 }
-function _(e) {
+function p(e) {
     return "<@$".concat(e.id, ">");
 }
-let p = {
+let _ = {
     autocompleteInputElementType: "gameMentionInput",
     stores: [o.Z],
     matches: (e, t, n, r, i) => !0,
@@ -40,15 +40,15 @@ let p = {
                     e.id,
                 ),
             ),
-            _ = d.t["/U2VW+"],
-            p = d.intl.string(d.t.URyqtP);
+            p = d.t["/U2VW+"],
+            _ = d.intl.string(d.t.URyqtP);
         return (0, r.jsxs)(
             i.Fragment,
             {
                 children: [
                     (0, l.gm)({
-                        titleWithQuery: _,
-                        titleWithoutQuery: p,
+                        titleWithQuery: p,
+                        titleWithoutQuery: _,
                         query: o,
                         getQuery: (e) => "".concat(u.ME).concat(e),
                     }),
@@ -66,7 +66,7 @@ let p = {
             } = e,
             i = t[n];
         return (
-            r.replaceInlineInput("gameMentionInput", f(i), _(i)),
+            r.replaceInlineInput("gameMentionInput", f(i), p(i)),
             {
                 type: c.z2.GAME_MENTION,
                 metadata: { applicationId: i.id },

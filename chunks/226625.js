@@ -5,7 +5,7 @@ var a = n(54381),
     r = n.n(i),
     s = n(392711),
     o = n.n(s),
-    c = n(790519),
+    c = n(666917),
     d = n(442837),
     u = n(481060),
     m = n(607070),
@@ -22,7 +22,7 @@ function x(e) {
             x: 0,
             y: 0,
         }),
-        g = l.useMemo(
+        f = l.useMemo(
             () =>
                 o().throttle((e) => {
                     if (!i)
@@ -33,8 +33,8 @@ function x(e) {
                 }, 20),
             [n, i],
         );
-    l.useEffect(() => (window.addEventListener("mousemove", g), () => window.removeEventListener("mousemove", g)), [g]);
-    let [f, b] = (0, u.q_F)(() => ({
+    l.useEffect(() => (window.addEventListener("mousemove", f), () => window.removeEventListener("mousemove", f)), [f]);
+    let [g, b] = (0, u.q_F)(() => ({
         x: 0,
         y: 0,
         config: h,
@@ -48,7 +48,7 @@ function x(e) {
         }, [s.x, s.y, b]),
         (0, a.jsx)(c.animated.div, {
             style: {
-                transform: (0, c.to)([f.x, f.y], (e, t) => "translate3d(".concat(e, "px, ").concat(t, "px, 0)")),
+                transform: (0, c.to)([g.x, g.y], (e, t) => "translate3d(".concat(e, "px, ").concat(t, "px, 0)")),
             },
             className: r()(p.background, t),
         })

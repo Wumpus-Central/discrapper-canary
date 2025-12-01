@@ -36,53 +36,53 @@ function c(e) {
 let u = 0.5,
     d = new Map(),
     f = !1,
-    _ = Object.freeze({
+    p = Object.freeze({
         userAffinities: [],
         userFlags: {},
         lastFetched: 0,
     }),
-    p = c({}, _);
-function h() {
-    d = new Map(p.userAffinities.filter((e) => !o.Z.isBlockedOrIgnored(e.otherUserId)).map((e) => [e.otherUserId, e]));
-}
+    _ = c({}, p);
 function m() {
+    d = new Map(_.userAffinities.filter((e) => !o.Z.isBlockedOrIgnored(e.otherUserId)).map((e) => [e.otherUserId, e]));
+}
+function h() {
     f = !0;
 }
 function g(e) {
     let { affineUsers: t, userFlags: n } = e;
-    (p.lastFetched = Date.now()), (f = !1), (p.userAffinities = t), (p.userFlags = n), h();
+    (_.lastFetched = Date.now()), (f = !1), (_.userAffinities = t), (_.userFlags = n), m();
 }
 function E() {
     f = !1;
 }
 function b() {
-    (p = c({}, _)), (d = new Map()), (f = !1);
+    (_ = c({}, p)), (d = new Map()), (f = !1);
 }
 class y extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         if ((this.waitFor(o.Z), null != e)) {
             var t;
-            (p.userAffinities = e.userAffinities),
-                (p.userFlags = null != (t = e.userFlags) ? t : {}),
-                (p.lastFetched = e.lastFetched),
-                h();
+            (_.userAffinities = e.userAffinities),
+                (_.userFlags = null != (t = e.userFlags) ? t : {}),
+                (_.lastFetched = e.lastFetched),
+                m();
         }
-        this.syncWith([o.Z], h);
+        this.syncWith([o.Z], m);
     }
     shouldFetch() {
-        if (!f) return Date.now() - p.lastFetched > s.K;
+        if (!f) return Date.now() - _.lastFetched > s.K;
     }
     isFetching() {
         return f;
     }
     getUserAffinities() {
-        return p.userAffinities;
+        return _.userAffinities;
     }
     getUserAffinitiesMap() {
         return d;
     }
     getUserFlags() {
-        return p.userFlags;
+        return _.userFlags;
     }
     compare(e, t) {
         var n, r, i, a;
@@ -95,7 +95,7 @@ class y extends (r = i.ZP.PersistedStore) {
         return d.get(e);
     }
     getState() {
-        return p;
+        return _;
     }
     isHighlyAffinedVCUser(e) {
         var t, n;
@@ -104,7 +104,7 @@ class y extends (r = i.ZP.PersistedStore) {
 }
 l(y, "displayName", "UserAffinitiesV2Store"), l(y, "persistKey", "UserAffinitiesStoreV2");
 let O = new y(a.Z, {
-    LOAD_USER_AFFINITIES_V2: m,
+    LOAD_USER_AFFINITIES_V2: h,
     LOAD_USER_AFFINITIES_V2_SUCCESS: g,
     LOAD_USER_AFFINITIES_V2_FAILURE: E,
     LOGOUT: b,

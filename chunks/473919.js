@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -58,13 +58,13 @@ function f(e, t) {
         e
     );
 }
-function _(e) {
+function p(e) {
     let { icon: t, tooltipText: n, tooltipAriaLabel: i, className: c, onTooltipShow: d } = e,
-        _ = (0, o.vjg)(o.Skl.ONLINE);
+        p = (0, o.vjg)(o.Skl.ONLINE);
     return null == n
         ? (0, r.jsx)(t, {
               size: "custom",
-              color: _,
+              color: p,
               className: a()(l.icon, c),
           })
         : (0, r.jsx)(o.aML, {
@@ -79,7 +79,7 @@ function _(e) {
                       t,
                       f(u({}, e), {
                           size: "custom",
-                          color: _,
+                          color: p,
                           className: a()(l.icon, c),
                       }),
                   ),

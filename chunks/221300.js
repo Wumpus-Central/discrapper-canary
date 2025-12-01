@@ -9,7 +9,7 @@ var i = n(979554),
     c = n(688192),
     u = n(232644);
 function d(e) {
-    let { item: t, profileOwner: n, isHighlighted: d, cardSize: p = c.U.MEDIUM } = e,
+    let { item: t, profileOwner: n, isHighlighted: d, cardSize: f = c.U.MEDIUM } = e,
         h = t.collectiblesItem;
     switch (h.type) {
         case i.Z.PROFILE_EFFECT:
@@ -47,7 +47,7 @@ function d(e) {
                             showStatus: !0,
                             isPurchased: !1,
                             nameplatePreviewSize: "default",
-                            width: p === c.U.SMALL ? 136 : 200,
+                            width: f === c.U.SMALL ? 136 : 200,
                         }),
                     }),
                     (0, r.jsx)("div", {
@@ -61,7 +61,7 @@ function d(e) {
                             showStatus: !0,
                             isPurchased: !1,
                             nameplatePreviewSize: "default",
-                            width: p === c.U.SMALL ? 136 : 200,
+                            width: f === c.U.SMALL ? 136 : 200,
                         }),
                     }),
                 ],

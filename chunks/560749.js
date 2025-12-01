@@ -23,8 +23,8 @@ var r = n(54381),
     C = n(823379),
     O = n(102172),
     w = n(981631),
-    P = n(604415),
-    Z = n(388032),
+    Z = n(718629),
+    P = n(388032),
     I = n(603410);
 function E(e) {
     let { result: t, onSelectChannel: n } = e,
@@ -129,7 +129,7 @@ function T(e) {
             (0, r.jsx)("div", {
                 className: I.searchBar,
                 children: (0, r.jsx)(c.E1j, {
-                    placeholder: Z.intl.string(Z.t["3jvv+6"]),
+                    placeholder: P.intl.string(P.t["3jvv+6"]),
                     query: a,
                     onChange: (e) =>
                         l({
@@ -150,7 +150,7 @@ function T(e) {
                           return (0, r.jsx)(c.Text, {
                               variant: "text-xs/semibold",
                               color: "text-muted",
-                              children: Z.intl.string(P.default.FZ9Fl7),
+                              children: P.intl.string(Z.default.FZ9Fl7),
                           });
                       },
                       sections: [A.length],
@@ -186,12 +186,12 @@ function N() {
                 className: I.emptyHeader,
                 variant: "text-lg/medium",
                 color: "header-primary",
-                children: Z.intl.string(P.default.sWGfr9),
+                children: P.intl.string(Z.default.sWGfr9),
             }),
             (0, r.jsx)(c.Text, {
                 variant: "text-sm/medium",
                 color: "text-secondary",
-                children: Z.intl.string(P.default["nBRtt/"]),
+                children: P.intl.string(Z.default["nBRtt/"]),
             }),
         ],
     });

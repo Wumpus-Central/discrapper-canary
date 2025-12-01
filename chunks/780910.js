@@ -51,13 +51,13 @@ e.exports = function (e) {
                 },
             ],
         },
-        _ = {
+        p = {
             className: "name",
             relevance: 0,
             begin: t,
             keywords: i,
         },
-        p = {
+        _ = {
             variants: [
                 {
                     begin: "\\(",
@@ -74,7 +74,7 @@ e.exports = function (e) {
                     endsWithParent: !0,
                     returnBegin: !0,
                     contains: [
-                        _,
+                        p,
                         {
                             endsParent: !0,
                             variants: [
@@ -91,17 +91,17 @@ e.exports = function (e) {
                         },
                     ],
                 },
-                _,
+                p,
                 d,
             ],
         };
     return (
-        (d.contains = [a, o, s, c, u, f, p].concat(l)),
+        (d.contains = [a, o, s, c, u, f, _].concat(l)),
         {
             name: "Scheme",
             aliases: ["scm"],
             illegal: /\S/,
-            contains: [e.SHEBANG(), o, s, u, f, p].concat(l),
+            contains: [e.SHEBANG(), o, s, u, f, _].concat(l),
         }
     );
 };

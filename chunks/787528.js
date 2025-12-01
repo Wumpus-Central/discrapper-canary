@@ -12,10 +12,10 @@ var r = n(474936),
     u = n(634071),
     d = n(557821),
     f = n(111301),
-    _ = n(841264),
-    p = n(678579),
-    h = n(545556),
-    m = n(684868),
+    p = n(841264),
+    _ = n(678579),
+    m = n(545556),
+    h = n(684868),
     g = n(971605),
     E = n(16222),
     b = n(347842);
@@ -26,19 +26,19 @@ let y = {
         },
         [r.VU.PREMIUM_TENURE_3_MONTH]: {
             standard: d,
-            ambient: _.Z,
+            ambient: p.Z,
         },
         [r.VU.PREMIUM_TENURE_6_MONTH]: {
             standard: s,
-            ambient: p.Z,
+            ambient: _.Z,
         },
         [r.VU.PREMIUM_TENURE_12_MONTH]: {
             standard: c,
-            ambient: h.Z,
+            ambient: m.Z,
         },
         [r.VU.PREMIUM_TENURE_24_MONTH]: {
             standard: a,
-            ambient: m.Z,
+            ambient: h.Z,
         },
         [r.VU.PREMIUM_TENURE_36_MONTH]: {
             standard: o,

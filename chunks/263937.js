@@ -44,16 +44,16 @@ function f() {
         animateStickers: null == (a = o.textAndImages) || null == (i = a.animateStickers) ? void 0 : i.value,
     };
 }
-function _() {
+function p() {
     return (d = f()), !1;
 }
-function p() {
+function _() {
     u = {};
 }
-function h() {
+function m() {
     u = {};
 }
-function m(e) {
+function h(e) {
     let { settings: t } = e;
     u = c({}, u, t);
 }
@@ -72,7 +72,7 @@ function E() {
 }
 class b extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        (u = null != e ? e : {}), this.syncWith([s.Z], _);
+        (u = null != e ? e : {}), this.syncWith([s.Z], p);
     }
     getState() {
         return u;
@@ -96,8 +96,8 @@ l(b, "displayName", "UserSettingsOverridesStore"),
     ]);
 let y = new b(o.Z, {
     USER_SETTINGS_PROTO_UPDATE: E,
-    USER_SETTINGS_OVERRIDE_APPLY: m,
+    USER_SETTINGS_OVERRIDE_APPLY: h,
     USER_SETTINGS_OVERRIDE_CLEAR: g,
-    LOGOUT: p,
-    LOGIN_SUCCESS: h,
+    LOGOUT: _,
+    LOGIN_SUCCESS: m,
 });

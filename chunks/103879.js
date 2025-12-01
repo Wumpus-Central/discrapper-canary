@@ -1,8 +1,8 @@
 n.d(t, {
-    FN: () => h,
+    FN: () => m,
     NA: () => f,
-    _w: () => m,
-    uR: () => p,
+    _w: () => h,
+    uR: () => _,
     yq: () => d,
 });
 var r = n(544891),
@@ -40,7 +40,7 @@ async function d() {
                     is_appeal_eligible: l,
                     appeal_eligibility: c,
                 } = t,
-                u = n.map((e) => (_(e), e));
+                u = n.map((e) => (p(e), e));
             i.Z.dispatch({
                 type: "SAFETY_HUB_FETCH_SUCCESS",
                 classifications: u.concat(null != r ? r : []),
@@ -83,7 +83,7 @@ async function f(e) {
                 { classifications: r, account_standing: a, is_dsa_eligible: o, username: s, is_appeal_eligible: l } = n,
                 c = r.find((t) => t.id === e);
             null != c
-                ? (_(c),
+                ? (p(c),
                   i.Z.dispatch({
                       type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS",
                       classification: c,
@@ -107,7 +107,7 @@ async function f(e) {
             });
         });
 }
-function _(e) {
+function p(e) {
     if (null != e.flagged_content && e.flagged_content.length > 0) {
         let t = e.flagged_content[0];
         (t.attachments = t.attachments.filter((e) => {
@@ -117,7 +117,7 @@ function _(e) {
             (e.flagged_content = (0, l.Vt)(t) ? [] : [t]);
     }
 }
-async function p(e, t, n) {
+async function _(e, t, n) {
     let a = o.default.getSuspendedUserToken(),
         s = null != a ? u.ANM.SAFETY_HUB_REQUEST_SUSPENDED_USER_REVIEW(e) : u.ANM.SAFETY_HUB_REQUEST_REVIEW(e),
         l =
@@ -159,7 +159,7 @@ async function p(e, t, n) {
                 );
             });
 }
-async function h(e) {
+async function m(e) {
     i.Z.dispatch({ type: "SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_START" });
     let t = o.default.getSuspendedUserToken(),
         n = u.ANM.SAFETY_HUB_REQUEST_SUSPENDED_AGE_VERIFICATION,
@@ -189,7 +189,7 @@ async function h(e) {
             });
         });
 }
-async function m() {
+async function h() {
     i.Z.dispatch({ type: "SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_START" });
     let e = o.default.getSuspendedUserToken(),
         t = s.Z.getAgeCheckAttempts(),
@@ -203,7 +203,7 @@ async function m() {
         .then((e) => {
             let { body: n } = e,
                 { success: r } = n;
-            !r && t < c.o6 && setTimeout(() => m(), c.Cp),
+            !r && t < c.o6 && setTimeout(() => h(), c.Cp),
                 i.Z.dispatch({
                     type: "SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_SUCCESS",
                     success: r,

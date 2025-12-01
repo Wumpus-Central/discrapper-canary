@@ -14,7 +14,7 @@ function f(e) {
         {
             activityUrlOverride: i,
             useActivityUrlOverride: f,
-            filter: _,
+            filter: p,
         } = (0, o.cj)(
             [c.Z],
             () => ({
@@ -24,7 +24,7 @@ function f(e) {
             }),
             [],
         );
-    function p() {
+    function _() {
         l.a8("");
     }
     return (0, r.jsxs)("div", {
@@ -49,9 +49,9 @@ function f(e) {
                 : (0, r.jsx)("div", {
                       children: (0, r.jsx)(s.E1j, {
                           size: "sm",
-                          query: _,
+                          query: p,
                           onChange: l.a8,
-                          onClear: p,
+                          onClear: _,
                       }),
                   }),
         ],

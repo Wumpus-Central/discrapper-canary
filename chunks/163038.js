@@ -9,77 +9,77 @@ var r = n(54381),
     u = n(232567),
     d = n(100604),
     f = n(39154),
-    _ = n(356264),
-    p = n(628238),
-    h = n(739566),
-    m = n(492593),
+    p = n(356264),
+    _ = n(628238),
+    m = n(739566),
+    h = n(492593),
     g = n(930282),
     E = n(464891),
     b = n(507418),
     y = n(348238),
     O = n(38267),
     v = n(25015),
-    I = n(438075),
-    T = n(359110),
-    S = n(6025),
+    S = n(438075),
+    I = n(359110),
+    T = n(6025),
     A = n(695346),
     C = n(433355),
     N = n(592125),
-    R = n(906467),
-    P = n(430824),
-    D = n(496675),
-    w = n(699516),
-    L = n(944486),
-    x = n(594174),
-    M = n(626135),
-    k = n(22665),
-    j = n(981631),
+    P = n(906467),
+    R = n(430824),
+    w = n(496675),
+    D = n(699516),
+    x = n(944486),
+    L = n(594174),
+    j = n(626135),
+    M = n(22665),
+    k = n(981631),
     U = n(959517),
     G = n(953278);
-function B(e) {
+function Z(e) {
     let { message: t, snapshot: n, index: u } = e,
         f = i.useMemo(() => new d.r(t, n, u), [t, n, u]),
-        p = (0, o.e7)(
-            [N.Z, x.default, w.Z, D.Z, P.Z, _.Z],
-            () => f.getForwardInfo(N.Z, x.default, w.Z, D.Z, P.Z, _.Z).footerInfo,
+        _ = (0, o.e7)(
+            [N.Z, L.default, D.Z, w.Z, R.Z, p.Z],
+            () => f.getForwardInfo(N.Z, L.default, D.Z, w.Z, R.Z, p.Z).footerInfo,
             [f],
             s.Z,
         ),
-        h = i.useCallback(() => {
+        m = i.useCallback(() => {
             var e, n;
             let r = N.Z.getChannel(t.channel_id),
-                i = P.Z.getGuild(null == r ? void 0 : r.guild_id),
+                i = R.Z.getGuild(null == r ? void 0 : r.guild_id),
                 a = null == (e = t.messageReference) ? void 0 : e.channel_id,
-                o = L.Z.getCurrentlySelectedChannelId(),
+                o = x.Z.getCurrentlySelectedChannelId(),
                 s = C.ZP.getCurrentSidebarChannelId(null == (n = t.messageReference) ? void 0 : n.channel_id),
                 l = o === a && s === (null == r ? void 0 : r.id);
             null == r ||
                 null == i ||
                 l ||
                 null == a ||
-                (S.Z.openModReportAsSidebar({
+                (T.Z.openModReportAsSidebar({
                     channelId: r.id,
                     baseChannelId: a,
                     guildId: r.guild_id,
                 }),
-                (0, T.Kh)(a),
-                M.default.track(j.rMx.MODERATOR_REPORT_ORIGINAL_MESSAGE_LINK_CLICKED, {
+                (0, I.Kh)(a),
+                j.default.track(k.rMx.MODERATOR_REPORT_ORIGINAL_MESSAGE_LINK_CLICKED, {
                     moderator_report_id: t.channel_id,
                     destination_channel_id: a,
                     destination_message_id: t.id,
                 }));
         }, [t]);
-    return null == p
+    return null == _
         ? null
         : (0, r.jsxs)(c.P3F, {
               className: G.footerContainer,
-              onClick: h,
-              "aria-label": p.accessibilityLabel,
+              onClick: m,
+              "aria-label": _.accessibilityLabel,
               children: [
-                  null != p.originIconUrl
+                  null != _.originIconUrl
                       ? (0, r.jsx)("img", {
                             className: G.originIcon,
-                            src: p.originIconUrl,
+                            src: _.originIconUrl,
                             alt: "",
                         })
                       : null,
@@ -87,7 +87,7 @@ function B(e) {
                       className: G.footerText,
                       variant: "text-sm/medium",
                       color: "none",
-                      children: "".concat(p.originLabel, "  \u2022  ").concat(p.timestampLabel),
+                      children: "".concat(_.originLabel, "  \u2022  ").concat(_.timestampLabel),
                   }),
                   (0, r.jsx)(c.Fbu, {
                       size: "xxs",
@@ -96,7 +96,7 @@ function B(e) {
               ],
           });
 }
-function Z(e, t) {
+function B(e, t) {
     let { popouts: n, setPopout: r } = (0, O.Z)(e.id, U.d$),
         { usernameProfile: a, avatarProfile: o } = n,
         s = (0, y.XO)(e, t, a, r);
@@ -118,16 +118,16 @@ function Z(e, t) {
 }
 function F(e) {
     let { mergedMessageRecord: t, content: n, channel: i, reportingUserId: a, reportedTimestamp: o } = e,
-        s = (0, h.JZ)(t.author, i),
+        s = (0, m.JZ)(t.author, i),
         {
             onClickUsername: l,
             onClickAvatar: c,
             onPopoutRequestClose: u,
             showUsernamePopout: d,
             showAvatarPopout: f,
-        } = Z(t, i);
-    return (0, r.jsx)(m.Z, {
-        childrenExecutedCommand: (0, r.jsx)(k.Z, {
+        } = B(t, i);
+    return (0, r.jsx)(h.Z, {
+        childrenExecutedCommand: (0, r.jsx)(M.Z, {
             reportingUserId: a,
             guildId: i.guild_id,
             channel: i,
@@ -164,29 +164,29 @@ function F(e) {
 function V(e) {
     var t, n, a;
     let { message: s, snapshot: l, index: c } = e,
-        [d, _] = i.useState(void 0);
+        [d, p] = i.useState(void 0);
     i.useEffect(() => {
         var e;
         (null == l || null == (e = l.moderatorReport) ? void 0 : e.reported_user_id) != null &&
             (0, u.PR)(l.moderatorReport.reported_user_id)
                 .then((e) => {
-                    _(e);
+                    p(e);
                 })
                 .catch(() => {});
     }, [null == l || null == (t = l.moderatorReport) ? void 0 : t.reported_user_id]);
-    let h = i.useMemo(() => {
+    let m = i.useMemo(() => {
             var e;
             let t = (0, f.Z)(s, l);
             return null != d && (null == l || null == (e = l.moderatorReport) ? void 0 : e.reported_user_id) != null
                 ? t.set("author", d)
                 : t;
         }, [s, l, d]),
-        m = A.RS.useSetting(),
+        h = A.RS.useSetting(),
         g = A.NA.useSetting(),
-        E = m && g,
-        b = (0, o.e7)([R.Z], () => R.Z.isDeveloper),
-        y = (0, p.A)((null != (a = h.editedTimestamp) ? a : h.timestamp).valueOf()),
-        { content: O, hasSpoilerEmbeds: T } = (0, v.Z)(h, {
+        E = h && g,
+        b = (0, o.e7)([P.Z], () => P.Z.isDeveloper),
+        y = (0, _.A)((null != (a = m.editedTimestamp) ? a : m.timestamp).valueOf()),
+        { content: O, hasSpoilerEmbeds: I } = (0, v.Z)(m, {
             hideSimpleEmbedContent: E,
             isInteracting: !1,
             formatInline: !1,
@@ -196,8 +196,8 @@ function V(e) {
             allowDevLinks: b,
             previewLinkTarget: !0,
         }),
-        S = (0, o.e7)([N.Z], () => N.Z.getChannel(s.channel_id));
-    return null == S
+        T = (0, o.e7)([N.Z], () => N.Z.getChannel(s.channel_id));
+    return null == T
         ? null
         : (0, r.jsx)(
               "div",
@@ -207,26 +207,26 @@ function V(e) {
                       className: G.content,
                       children: [
                           (0, r.jsx)(F, {
-                              mergedMessageRecord: h,
+                              mergedMessageRecord: m,
                               content: O,
-                              channel: S,
+                              channel: T,
                               reportingUserId:
                                   null == l || null == (n = l.moderatorReport) ? void 0 : n.reporting_user_id,
                               reportedTimestamp: s.timestamp,
                           }),
-                          (0, I.Z)({
+                          (0, S.Z)({
                               channelMessageProps: {
-                                  message: h,
-                                  channel: S,
+                                  message: m,
+                                  channel: T,
                                   compact: !1,
                               },
-                              hasSpoilerEmbeds: T,
+                              hasSpoilerEmbeds: I,
                               isInteracting: !1,
                               isMessageSnapshot: !0,
                               renderThreadAccessory: !1,
                               className: G.nestedAccessories,
                           }),
-                          (0, r.jsx)(B, {
+                          (0, r.jsx)(Z, {
                               message: s,
                               snapshot: l,
                               index: c,

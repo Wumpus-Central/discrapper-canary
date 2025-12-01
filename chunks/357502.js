@@ -24,7 +24,7 @@ function s(e) {
         d = !1;
     for (; u + c < e.byteLength; ) {
         let f = (0, r.oH)(e, u, 4),
-            _ = e.getUint32(u + s, !0);
+            p = e.getUint32(u + s, !0);
         i.Z.USE_EXIF && "EXIF" === f
             ? ((d = !0), (t = (0, r.oH)(e, u + c, l.length) === l ? u + c + l.length : u + c))
             : i.Z.USE_XMP && "XMP " === f
@@ -32,7 +32,7 @@ function s(e) {
                 (n = [
                     {
                         dataOffset: u + c,
-                        length: _,
+                        length: p,
                     },
                 ]))
               : i.Z.USE_ICC && "ICCP" === f
@@ -40,13 +40,13 @@ function s(e) {
                   (a = [
                       {
                           offset: u + c,
-                          length: _,
+                          length: p,
                           chunkNumber: 1,
                           chunksTotal: 1,
                       },
                   ]))
                 : "VP8X" === f && ((d = !0), (o = u + c)),
-            (u += c + (_ % 2 == 0 ? _ : _ + 1));
+            (u += c + (p % 2 == 0 ? p : p + 1));
     }
     return {
         hasAppMarkers: d,

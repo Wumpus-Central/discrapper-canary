@@ -14,21 +14,21 @@ let l = (e) => {
             setInspectedStickerPosition: d,
             onGridItemSelect: f,
         } = e,
-        _ = (0, a.O)(),
-        p = r.useCallback(
+        p = (0, a.O)(),
+        _ = r.useCallback(
             (e) => {
-                f(e, _);
+                f(e, p);
             },
-            [f, _],
+            [f, p],
         ),
-        h = r.useCallback(
+        m = r.useCallback(
             (e, t) => {
                 d(e, t, o.u.GRID_NAVIGATOR_EVENT);
             },
             [d],
         ),
         {
-            gridDispatch: m,
+            gridDispatch: h,
             getItemProps: g,
             getRowProps: E,
             gridContainerProps: b,
@@ -39,8 +39,8 @@ let l = (e) => {
             gridNavigatorId: u,
             itemGrid: n,
             itemList: l,
-            onGridNavigatorItemSelect: p,
-            onGridNavigatorPositionChange: h,
+            onGridNavigatorItemSelect: _,
+            onGridNavigatorPositionChange: m,
         });
     return (
         r.useEffect(
@@ -51,14 +51,14 @@ let l = (e) => {
                         if (null == e) return;
                         let { columnIndex: t, rowIndex: n, source: r } = e;
                         r !== o.u.GRID_NAVIGATOR_EVENT &&
-                            m({
+                            h({
                                 type: i.s.SET_FOCUSED_POSITION,
                                 x: t,
                                 y: n,
                             });
                     },
                 ),
-            [m, c],
+            [h, c],
         ),
         {
             getItemProps: g,

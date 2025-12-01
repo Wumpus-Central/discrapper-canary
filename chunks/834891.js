@@ -1,10 +1,10 @@
 e.d(n, {
-    E: () => c,
+    E: () => o,
     l: () => d,
 });
 var i,
-    l = e(149765),
-    a = e(700785),
+    a = e(149765),
+    l = e(700785),
     s = e(981631),
     r = e(388032),
     d =
@@ -17,7 +17,7 @@ var i,
         (i.LOCAL_COMMUNITY = "LOCAL_COMMUNITY"),
         (i.SCHOOL_CLUB = "SCHOOL_CLUB"),
         i);
-function c() {
+function o() {
     return {
         CREATE: {
             id: "CREATE",
@@ -492,15 +492,15 @@ function c() {
                 {
                     id: "00",
                     name: "@everyone",
-                    permissions: a.TP,
+                    permissions: l.TP,
                 },
                 {
                     id: "01",
                     name: "officers (example)",
                     mentionable: !0,
                     hoist: !0,
-                    permissions: l.$e(
-                        a.TP,
+                    permissions: a.$e(
+                        l.TP,
                         s.Plq.MANAGE_ROLES,
                         s.Plq.MANAGE_CHANNELS,
                         s.Plq.KICK_MEMBERS,

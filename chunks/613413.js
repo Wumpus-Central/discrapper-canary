@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(314910),
     d = n(906467),
     f = n(857192),
-    _ = n(835225),
-    p = n(117795),
-    h = n(565384),
-    m = n(938057);
+    p = n(835225),
+    _ = n(117795),
+    m = n(565384),
+    h = n(938057);
 function g(e, t) {
     if (null == e) return {};
     var n,
@@ -35,7 +35,7 @@ function E(e, t) {
     return i;
 }
 function b() {
-    let { debugTrackedData: e, impressions: t } = (0, h.Xo)(
+    let { debugTrackedData: e, impressions: t } = (0, m.Xo)(
             (e) => ({
                 debugTrackedData: e.debugTrackedData,
                 impressions: e.impressions,
@@ -48,54 +48,54 @@ function b() {
         y = null != e ? e : {},
         { name: O } = y,
         v = g(y, ["name"]),
-        I = null != O;
+        S = null != O;
     return a && n
         ? (0, r.jsx)(u.ZP, {
               children: (0, r.jsxs)("div", {
-                  className: o()(m.container, {
-                      [m.containerMinimized]: E,
-                      [m.notTracked]: !I,
+                  className: o()(h.container, {
+                      [h.containerMinimized]: E,
+                      [h.notTracked]: !S,
                   }),
                   children: [
                       (0, r.jsx)(c.P3F, {
-                          className: m.minimizeButton,
+                          className: h.minimizeButton,
                           onClick: () => {
                               b(!E);
                           },
-                          children: E ? (0, r.jsx)(_.Z, {}) : (0, r.jsx)(p.Z, {}),
+                          children: E ? (0, r.jsx)(p.Z, {}) : (0, r.jsx)(_.Z, {}),
                       }),
                       (0, r.jsxs)("div", {
-                          className: o()(m.content, { [m.contentMinimized]: E }),
+                          className: o()(h.content, { [h.contentMinimized]: E }),
                           children: [
                               (0, r.jsxs)(c.Text, {
-                                  className: o()(m.label, { [m.notTracked]: !I }),
+                                  className: o()(h.label, { [h.notTracked]: !S }),
                                   variant: "text-xxs/normal",
                                   children: [
-                                      I
+                                      S
                                           ? (0, r.jsx)(c.owK, {
                                                 size: "md",
                                                 color: "currentColor",
-                                                className: m.iconTracked,
+                                                className: h.iconTracked,
                                             })
                                           : (0, r.jsx)(c.k$p, {
                                                 size: "md",
                                                 color: "currentColor",
-                                                className: m.iconNotTracked,
+                                                className: h.iconNotTracked,
                                             }),
                                       null != O ? O : "(untracked)",
                                   ],
                               }),
                               (0, r.jsx)("div", {
-                                  className: m.current,
+                                  className: h.current,
                                   children: JSON.stringify(v, void 0, 2),
                               }),
                               (0, r.jsx)(c.Text, {
-                                  className: o()(m.label, { [m.notTracked]: !I }),
+                                  className: o()(h.label, { [h.notTracked]: !S }),
                                   variant: "text-xxs/normal",
                                   children: "impressions stack",
                               }),
                               (0, r.jsx)("div", {
-                                  className: m.stack,
+                                  className: h.stack,
                                   children: JSON.stringify(t, void 0, 2),
                               }),
                           ],

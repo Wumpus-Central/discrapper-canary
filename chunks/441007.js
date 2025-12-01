@@ -1,6 +1,6 @@
 n.d(t, {
     N: () => d,
-    Z: () => _,
+    Z: () => p,
 }),
     n(642613);
 var r = n(54381),
@@ -43,7 +43,7 @@ let f = {
         },
     ],
 };
-function _(e) {
+function p(e) {
     let { page: t } = e,
         n = i.useMemo(() => {
             let e = f[t]

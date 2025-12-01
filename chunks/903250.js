@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D });
+n.d(t, { Z: () => w });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,45 +9,45 @@ var r = n(54381),
     u = n(607070),
     d = n(100527),
     f = n(906732),
-    _ = n(70097),
-    p = n(526167),
-    h = n(357355),
-    m = n(140465),
+    p = n(70097),
+    _ = n(526167),
+    m = n(357355),
+    h = n(140465),
     g = n(775412),
     E = n(105759),
     b = n(736519),
     y = n(422034),
     O = n(710220),
     v = n(635921),
-    I = n(638631),
-    T = n(869783),
-    S = n(388032),
+    S = n(638631),
+    I = n(869783),
+    T = n(388032),
     A = n(876544),
     C = n(181960),
     N = n(313199),
-    R = n(821969);
-let P = (e, t) => {
+    P = n(821969);
+let R = (e, t) => {
         let {
                 className: n,
                 buttonClassName: i,
                 subscriptionTier: a,
-                isDarkMode: P,
-                isEligibleForBogoPromotion: D,
-                videoRef: w,
+                isDarkMode: R,
+                isEligibleForBogoPromotion: w,
+                videoRef: D,
             } = e,
-            { analyticsLocations: L } = (0, f.ZP)(d.Z.PREMIUM_MARKETING_HERO_CTA),
-            x = (0, g._O)(),
-            M = (0, m.Nx)(),
-            k = (0, s.e7)([h.Z], () => h.Z.affinities),
-            j = (0, E.Z)(),
-            U = null != j,
-            G = P ? l.Tt.WHITE : l.Tt.BRAND,
-            B = k.length > 0,
-            Z = S.intl.string(S.t.YCZldK),
-            F = (0, p.rO)(),
+            { analyticsLocations: x } = (0, f.ZP)(d.Z.PREMIUM_MARKETING_HERO_CTA),
+            L = (0, g._O)(),
+            j = (0, h.Nx)(),
+            M = (0, s.e7)([m.Z], () => m.Z.affinities),
+            k = (0, E.Z)(),
+            U = null != k,
+            G = R ? l.Tt.WHITE : l.Tt.BRAND,
+            Z = M.length > 0,
+            B = T.intl.string(T.t.YCZldK),
+            F = (0, _.rO)(),
             V = (0, s.e7)([u.Z], () => u.Z.useReducedMotion);
         return (0, r.jsx)(f.Gt, {
-            value: L,
+            value: x,
             children: (0, r.jsxs)("div", {
                 className: o()(A.container, A.heroHeadingContainer, n),
                 ref: t,
@@ -58,16 +58,16 @@ let P = (e, t) => {
                         children: (0, r.jsxs)("div", {
                             className: A.marketingPageTextContainer,
                             children: [
-                                M && (0, r.jsx)(I.Z, {}),
+                                j && (0, r.jsx)(S.Z, {}),
                                 (0, r.jsx)(c.Heading, {
                                     className: A.marketingPageHeading,
                                     variant: "display-sm",
                                     color: "header-primary",
-                                    children: Z,
+                                    children: B,
                                 }),
                                 U
-                                    ? (0, r.jsx)(O.Z, { referrer: j })
-                                    : B &&
+                                    ? (0, r.jsx)(O.Z, { referrer: k })
+                                    : Z &&
                                       (0, r.jsx)("div", {
                                           className: A.affinityDescriptionContainer,
                                           children: (0, r.jsx)(y.Z, {
@@ -76,10 +76,10 @@ let P = (e, t) => {
                                               isApplicationHome: !0,
                                           }),
                                       }),
-                                x
+                                L
                                     ? (0, r.jsx)("div", {
                                           className: o()(A.buttonContainer, A.marketingPageCTAContainer, {
-                                              [A.marketingPageCTAMargin]: !(B || U),
+                                              [A.marketingPageCTAMargin]: !(Z || U),
                                           }),
                                           children: (0, r.jsx)(b.Z, {
                                               className: o()(A.button, i),
@@ -88,14 +88,14 @@ let P = (e, t) => {
                                       })
                                     : (0, r.jsx)(v.PK, {
                                           subscriptionTier: a,
-                                          inOfferExperience: M,
+                                          inOfferExperience: j,
                                           containerClassName: o()(A.marketingPageCTAContainer, {
-                                              [A.marketingPageCTAMargin]: !(B || U),
+                                              [A.marketingPageCTAMargin]: !(Z || U),
                                           }),
                                           buttonClassName: i,
                                           isApplicationHome: !0,
-                                          isDarkMode: P,
-                                          isEligibleForBogoPromotion: D,
+                                          isDarkMode: R,
+                                          isEligibleForBogoPromotion: w,
                                       }),
                                 (0, r.jsx)(v._O, {
                                     variant: "text-sm/normal",
@@ -107,17 +107,17 @@ let P = (e, t) => {
                     }),
                     (0, r.jsx)("div", {
                         className: A.heroHeadingV2ArtContainer,
-                        children: (0, r.jsx)(_.Z, {
+                        children: (0, r.jsx)(p.Z, {
                             autoPlay: !V,
                             playsInline: !0,
                             preload: V ? "none" : "auto",
                             poster: N.Z,
                             loop: !0,
                             className: A.heroHeadingV2Art,
-                            ref: w,
+                            ref: D,
                             children: (0, r.jsx)("source", {
-                                src: F ? C.Z : R.Z,
-                                type: F ? T.m.MP4 : T.m.WEBM,
+                                src: F ? C.Z : P.Z,
+                                type: F ? I.m.MP4 : I.m.WEBM,
                             }),
                         }),
                     }),
@@ -125,4 +125,4 @@ let P = (e, t) => {
             }),
         });
     },
-    D = i.forwardRef(P);
+    w = i.forwardRef(R);

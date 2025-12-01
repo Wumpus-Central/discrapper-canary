@@ -1,22 +1,22 @@
 n.d(t, {
-    I: () => I,
-    m: () => D,
+    I: () => S,
+    m: () => w,
 }),
     n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(790519),
+    s = n(666917),
     l = n(793030),
     c = n(442837),
     u = n(930295),
     d = n(393238),
     f = n(819640),
-    _ = n(945909),
-    p = n(866577),
-    h = n(231338),
-    m = n(254477);
+    p = n(945909),
+    _ = n(866577),
+    m = n(231338),
+    h = n(254477);
 function g(e, t, n) {
     return (
         t in e
@@ -90,14 +90,14 @@ function v(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let I = i.createContext(null),
-    T = 20,
-    S = 22,
+let S = i.createContext(null),
+    I = 20,
+    T = 22,
     A = 240,
     C = 10,
     N = 4,
-    R = h.Vq;
-function P() {
+    P = m.Vq;
+function R() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "center",
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "top",
         n = arguments.length > 2 ? arguments[2] : void 0,
@@ -105,7 +105,7 @@ function P() {
     if ("center" === e || "custom" === e) return 0;
     let i = "left" === t || "right" === t,
         a = i ? r : null != n ? n : A,
-        o = i ? S : T;
+        o = i ? T : I;
     if (0 === a) return 0;
     let s = a / 2 - o;
     switch (e) {
@@ -117,38 +117,38 @@ function P() {
             return 0;
     }
 }
-function D(e) {
+function w(e) {
     var t;
     let {
             children: n,
             targetElementRef: a,
-            shouldShow: h = !0,
+            shouldShow: m = !0,
             onRequestClose: g,
             position: b = "top",
             align: v,
-            alignmentStrategy: D = "trigger-center",
-            caretConfig: w,
-            hasVideo: L = !1,
-            gradientColor: x,
-            gradientOffsetBottom: M = 0.4,
-            onPositionChange: k,
-            onNudgeChange: j,
+            alignmentStrategy: w = "trigger-center",
+            caretConfig: D,
+            hasVideo: x = !1,
+            gradientColor: L,
+            gradientOffsetBottom: j = 0.4,
+            onPositionChange: M,
+            onNudgeChange: k,
             scrollBehavior: U = "sticky",
             modal: G = !1,
-            returnRef: B,
-            experimental_ignoreModalClicks: Z = !0,
+            returnRef: Z,
+            experimental_ignoreModalClicks: B = !0,
         } = e,
-        [F, V] = i.useState(h),
+        [F, V] = i.useState(m),
         [H, Y] = i.useState(b),
         W = i.useRef(b),
         K = i.useRef(0),
-        { ref: z, width: q, height: X } = (0, d.ZP)(),
-        Q = (0, c.e7)([f.Z], () => f.Z.getLayers()),
-        J = null != (t = Q[Q.length - 1]) ? t : "base",
-        $ = i.useRef(k);
+        { ref: z, width: q, height: Q } = (0, d.ZP)(),
+        X = (0, c.e7)([f.Z], () => f.Z.getLayers()),
+        J = null != (t = X[X.length - 1]) ? t : "base",
+        $ = i.useRef(M);
     i.useEffect(() => {
-        $.current = k;
-    }, [k]);
+        $.current = M;
+    }, [M]);
     let ee = i.useCallback((e) => {
             var t;
             null != e && e !== W.current && ((W.current = e), Y(e), null == (t = $.current) || t.call($, e));
@@ -163,21 +163,21 @@ function D(e) {
             );
         }, [a, J]);
     i.useEffect(() => {
-        et && h ? V(!0) : et || V(!1);
-    }, [et, h]),
+        et && m ? V(!0) : et || V(!1);
+    }, [et, m]),
         i.useEffect(() => {
             ee(b);
         }, [b, ee]);
     let en = () => {
             V(!1);
         },
-        er = (0, p.i)({
-            shouldShow: h,
-            caretPosition: (0, _.z)(H),
+        er = (0, _.i)({
+            shouldShow: m,
+            caretPosition: (0, p.z)(H),
             onExitComplete: en,
         }),
         ei = i.useMemo(() => {
-            if ("edge" === D && null != v) {
+            if ("edge" === w && null != v) {
                 let e = "top" === H || "bottom" === H,
                     t = "left" === H || "right" === H;
                 if (e) {
@@ -185,24 +185,24 @@ function D(e) {
                 } else if (t && ("top" === v || "center" === v || "bottom" === v)) return v;
             }
             return "center";
-        }, [D, v, H]),
+        }, [w, v, H]),
         ea = i.useMemo(() => {
             var e;
-            if ("edge" !== D) return P(null != (e = null == w ? void 0 : w.align) ? e : "center", H, q, X);
-        }, [D, w, H, q, X]),
+            if ("edge" !== w) return R(null != (e = null == D ? void 0 : D.align) ? e : "center", H, q, Q);
+        }, [w, D, H, q, Q]),
         eo = i.useMemo(
             () => ({
                 position: H,
-                caretConfig: null != w ? w : { align: "center" },
+                caretConfig: null != D ? D : { align: "center" },
             }),
-            [H, w],
+            [H, D],
         ),
         es = (e) => {
             var { setPopoutRef: t, position: i, nudge: a } = e,
                 c = O(e, ["setPopoutRef", "position", "nudge"]);
             return (
                 ee(i),
-                a !== K.current && ((K.current = a), null == j || j(a)),
+                a !== K.current && ((K.current = a), null == k || k(a)),
                 er((e, i) => {
                     if (!i) return null;
                     let a = (0, r.jsx)(
@@ -210,11 +210,11 @@ function D(e) {
                         y(E({}, c), {
                             setDialogRef: t,
                             modal: G,
-                            className: o()(null != x ? m.popoverContentWithGradient : m.popover, {
-                                [m["popover--video"]]: L,
+                            className: o()(null != L ? h.popoverContentWithGradient : h.popover, {
+                                [h["popover--video"]]: x,
                             }),
-                            returnRef: B,
-                            children: (0, r.jsx)(I.Provider, {
+                            returnRef: Z,
+                            children: (0, r.jsx)(S.Provider, {
                                 value: eo,
                                 children: n,
                             }),
@@ -224,16 +224,16 @@ function D(e) {
                         ref: z,
                         "data-mana-component": "popover",
                         style: y(E({}, e), {
-                            "--custom-caret-edge-offset-horizontal": "".concat(T, "px"),
-                            "--custom-caret-edge-offset-vertical": "".concat(S, "px"),
+                            "--custom-caret-edge-offset-horizontal": "".concat(I, "px"),
+                            "--custom-caret-edge-offset-vertical": "".concat(T, "px"),
                             "--custom-popover-width": "".concat(A, "px"),
                         }),
                         children:
-                            null != x
+                            null != L
                                 ? (0, r.jsx)(l.$1m, {
-                                      offsetBottom: M,
-                                      color: x,
-                                      className: m.popoverGradientWrapper,
+                                      offsetBottom: j,
+                                      color: L,
+                                      className: h.popoverGradientWrapper,
                                       children: a,
                                   })
                                 : a,
@@ -256,9 +256,9 @@ function D(e) {
         autoInvert: !0,
         nudgeAlignIntoViewport: "top" === H || "bottom" === H,
         closeOnClickOutside: !1,
-        ignoreModalClicks: Z,
+        ignoreModalClicks: B,
         scrollBehavior: U,
         renderPopout: es,
-        children: R,
+        children: P,
     });
 }

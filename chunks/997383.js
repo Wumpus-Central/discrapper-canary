@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }),
+n.d(t, { Z: () => T }),
     n(388685),
     n(704826),
     n(35282),
@@ -22,10 +22,10 @@ var r = n(392711),
     u = n(984933),
     d = n(699516),
     f = n(594174),
-    _ = n(483360),
-    p = n(892880),
-    h = n(591759),
-    m = n(279779),
+    p = n(483360),
+    _ = n(892880),
+    m = n(591759),
+    h = n(279779),
     g = n(620490),
     E = n(727785);
 function b(e, t, n) {
@@ -59,14 +59,14 @@ function y(e) {
 }
 let O = 100,
     v = Object.freeze({}),
-    I = 300;
-function T(e, t) {
-    return t.frecencyBoosters ? (0, _.Cq)(e) : {};
+    S = 300;
+function I(e, t) {
+    return t.frecencyBoosters ? (0, p.Cq)(e) : {};
 }
-class S {
+class T {
     createSearchContext() {
         null == this.userSearchContext &&
-            (this.userSearchContext = m.Z.getUserSearchContext(this.parseUserResults, this._limit));
+            (this.userSearchContext = h.Z.getUserSearchContext(this.parseUserResults, this._limit));
     }
     setLimit(e) {
         let { userSearchContext: t } = this;
@@ -169,7 +169,7 @@ class S {
                 (this._linkResults = this.queryLink(e, this._limit)),
                 (this._inAppNavigations = this.queryInAppNavigations(e, this._limit)),
                 this._isAsyncSearch()
-                    ? (clearTimeout(this._asyncTimeout), (this._asyncTimeout = setTimeout(this.updateAllResults, I)))
+                    ? (clearTimeout(this._asyncTimeout), (this._asyncTimeout = setTimeout(this.updateAllResults, S)))
                     : this._include(E.h8.USER) || this.updateAllResults();
         });
     }
@@ -203,10 +203,10 @@ class S {
     }
     queryTextChannels(e, t) {
         if (!this._include(E.h8.TEXT_CHANNEL)) return [];
-        let n = T(E.h8.TEXT_CHANNEL, this.options),
+        let n = I(E.h8.TEXT_CHANNEL, this.options),
             { allowSnowflake: r, blacklist: i } = this.options,
             a = null != i ? (e) => !i.has("channel:".concat(e.id)) : void 0;
-        return _.ZP.queryChannels({
+        return p.ZP.queryChannels({
             query: e,
             guildId: null,
             limit: t,
@@ -219,8 +219,8 @@ class S {
     queryVoiceChannels(e, t) {
         if (!this._include(E.h8.VOICE_CHANNEL)) return [];
         let { allowSnowflake: n, voiceChannelGuildFilter: r } = this.options,
-            i = T(E.h8.VOICE_CHANNEL, this.options);
-        return _.ZP.queryChannels({
+            i = I(E.h8.VOICE_CHANNEL, this.options);
+        return p.ZP.queryChannels({
             query: e,
             guildId: r,
             limit: t,
@@ -232,10 +232,10 @@ class S {
     }
     queryGuilds(e, t) {
         if (!this._include(E.h8.GUILD)) return [];
-        let n = T(E.h8.GUILD, this.options),
+        let n = I(E.h8.GUILD, this.options),
             { allowSnowflake: r, blacklist: i } = this.options,
             a = null != i ? (e) => !i.has("guild:".concat(e.id)) : void 0;
-        return _.ZP.queryGuilds({
+        return p.ZP.queryGuilds({
             query: e,
             limit: t,
             fuzzy: !0,
@@ -248,7 +248,7 @@ class S {
         let { userSearchContext: r } = this;
         if (null == r || !this._include(E.h8.USER)) return;
         let { allowSnowflake: i, userFilters: a } = this.options,
-            o = T(E.h8.USER, this.options);
+            o = I(E.h8.USER, this.options);
         if ((null == a ? void 0 : a.thread) != null) {
             let t = s.Z.getMemberListSections(a.thread),
                 r = [];
@@ -264,7 +264,7 @@ class S {
                             }));
                 }
             }
-            this._userResults = _.ZP.queryUsers({
+            this._userResults = p.ZP.queryUsers({
                 query: e,
                 users: r,
                 limit: n,
@@ -273,7 +273,7 @@ class S {
             });
             return;
         }
-        void 0 !== t && p.Z.requestMembers(t, e, 100),
+        void 0 !== t && _.Z.requestMembers(t, e, 100),
             r.setLimit(n),
             r.setQuery({
                 query: e,
@@ -285,9 +285,9 @@ class S {
     queryGroupDMs(e, t) {
         if (!this._include(E.h8.GROUP_DM)) return [];
         let { blacklist: n } = this.options,
-            r = T(E.h8.GROUP_DM, this.options),
+            r = I(E.h8.GROUP_DM, this.options),
             i = null != n ? (e) => !n.has("channel:".concat(e.id)) : void 0;
-        return _.ZP.queryGroupDMs({
+        return p.ZP.queryGroupDMs({
             query: e,
             limit: t,
             fuzzy: !0,
@@ -297,7 +297,7 @@ class S {
     }
     queryApplications(e, t) {
         return this._include(E.h8.APPLICATION)
-            ? _.ZP.queryApplications({
+            ? p.ZP.queryApplications({
                   query: e,
                   limit: t,
                   fuzzy: !0,
@@ -314,8 +314,8 @@ class S {
             return [];
         }
         let { pathname: i, hostname: a = "", host: s } = n,
-            l = h.Z.isDiscordHostname(a) || window.location.host === s;
-        return null !== i && l && h.Z.isAppRoute(i)
+            l = m.Z.isDiscordHostname(a) || window.location.host === s;
+        return null !== i && l && m.Z.isAppRoute(i)
             ? [
                   {
                       type: E.h8.LINK,
@@ -327,7 +327,7 @@ class S {
     }
     queryInAppNavigations(e, t) {
         return this._include(E.h8.IN_APP_NAVIGATION)
-            ? _.ZP.queryInAppNavigations({
+            ? p.ZP.queryInAppNavigations({
                   query: e,
                   limit: t,
                   fuzzy: !0,
@@ -363,7 +363,7 @@ class S {
                         this._userResults.push({
                             type: E.h8.USER,
                             record: t,
-                            score: (0, _.mB)(n),
+                            score: (0, p.mB)(n),
                             comparator: null != r ? r : void 0,
                         });
                 }

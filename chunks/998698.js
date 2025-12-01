@@ -38,7 +38,7 @@ let d = {};
 function f() {
     return (d = {}), !0;
 }
-function _(e) {
+function p(e) {
     return (
         e in d ||
             (d[e] = {
@@ -53,7 +53,7 @@ function _(e) {
         d[e]
     );
 }
-function p(e) {
+function _(e) {
     var t;
     let {
             channelId: n,
@@ -66,18 +66,18 @@ function p(e) {
             sectionName: u,
             query: d,
             searchResultsPosition: f,
-            source: p,
-            commandOrigin: h,
+            source: _,
+            commandOrigin: m,
         } = e,
-        m = _(n);
-    if ((null == r ? void 0 : r.id) === (null == (t = m.activeCommand) ? void 0 : t.id)) return !1;
-    (m.activeCommand = r),
-        (m.activeCommandSection = i),
-        (m.activeOptionName = null),
-        (m.preferredCommandId = null),
-        (m.initialValues = null != a ? a : {}),
-        (m.commandOrigin = null != h ? h : null),
-        (m.source = p);
+        h = p(n);
+    if ((null == r ? void 0 : r.id) === (null == (t = h.activeCommand) ? void 0 : t.id)) return !1;
+    (h.activeCommand = r),
+        (h.activeCommandSection = i),
+        (h.activeOptionName = null),
+        (h.preferredCommandId = null),
+        (h.initialValues = null != a ? a : {}),
+        (h.commandOrigin = null != m ? m : null),
+        (h.source = _);
     let g = {};
     return (
         (null == r ? void 0 : r.options) != null &&
@@ -89,7 +89,7 @@ function p(e) {
                     optionValue: null,
                 };
             }),
-        (m.optionStates = g),
+        (h.optionStates = g),
         null != r &&
             (0, l.qJ)({
                 command: r,
@@ -99,15 +99,15 @@ function p(e) {
                 sectionName: u,
                 query: d,
                 searchResultsPosition: f,
-                source: p,
+                source: _,
             }),
         !0
     );
 }
-function h(e) {
+function m(e) {
     var t, n;
     let { channelId: r, commandId: i } = e,
-        a = _(r);
+        a = p(r);
     return (
         i !== a.preferredCommandId &&
         (null !== a.preferredCommandId ||
@@ -115,9 +115,9 @@ function h(e) {
         ((a.activeCommand = null), (a.activeOptionName = null), (a.preferredCommandId = i), (a.optionStates = {}), !0)
     );
 }
-function m(e) {
+function h(e) {
     let { channelId: t, changedOptionStates: n } = e,
-        r = _(t),
+        r = p(t),
         i = u({}, r.optionStates);
     for (let [e, t] of Object.entries(n)) {
         var a, o, s;
@@ -156,19 +156,19 @@ function m(e) {
 }
 function g(e) {
     let { channelId: t, preferredCommandId: n, command: r, section: i, location: a, changedOptionStates: o } = e,
-        s = p({
+        s = _({
             type: "APPLICATION_COMMAND_SET_ACTIVE_COMMAND",
             channelId: t,
             command: r,
             section: i,
             location: a,
         }),
-        l = h({
+        l = m({
             type: "APPLICATION_COMMAND_SET_PREFERRED_COMMAND",
             channelId: t,
             commandId: n,
         }),
-        c = m({
+        c = h({
             type: "APPLICATION_COMMAND_UPDATE_OPTIONS",
             channelId: t,
             changedOptionStates: o,
@@ -187,17 +187,17 @@ class E extends (r = i.ZP.Store) {
             });
     }
     getActiveCommand(e) {
-        return _(e).activeCommand;
+        return p(e).activeCommand;
     }
     getActiveCommandSection(e) {
-        return _(e).activeCommandSection;
+        return p(e).activeCommandSection;
     }
     getActiveOptionName(e) {
-        return _(e).activeOptionName;
+        return p(e).activeOptionName;
     }
     getActiveOption(e) {
         var t, n, r;
-        let i = _(e);
+        let i = p(e);
         return null !=
             (r =
                 null == (n = i.activeCommand) || null == (t = n.options)
@@ -207,26 +207,26 @@ class E extends (r = i.ZP.Store) {
             : null;
     }
     getPreferredCommandId(e) {
-        return _(e).preferredCommandId;
+        return p(e).preferredCommandId;
     }
     getOptionStates(e) {
-        return _(e).optionStates;
+        return p(e).optionStates;
     }
     getOptionState(e, t) {
-        return _(e).optionStates[t];
+        return p(e).optionStates[t];
     }
     getCommandOrigin(e) {
-        return _(e).commandOrigin;
+        return p(e).commandOrigin;
     }
     getSource(e) {
-        return _(e).source;
+        return p(e).source;
     }
     getOption(e, t) {
         var n, r;
-        return null == (r = _(e).activeCommand) || null == (n = r.options) ? void 0 : n.find((e) => e.name === t);
+        return null == (r = p(e).activeCommand) || null == (n = r.options) ? void 0 : n.find((e) => e.name === t);
     }
     getState(e) {
-        return u({}, _(e));
+        return u({}, p(e));
     }
 }
 c(E, "displayName", "ApplicationCommandStore");
@@ -234,8 +234,8 @@ let b = new E(a.Z, {
     CONNECTION_OPEN: f,
     CHANNEL_SELECT: f,
     LOGOUT: f,
-    APPLICATION_COMMAND_SET_ACTIVE_COMMAND: p,
-    APPLICATION_COMMAND_SET_PREFERRED_COMMAND: h,
-    APPLICATION_COMMAND_UPDATE_OPTIONS: m,
+    APPLICATION_COMMAND_SET_ACTIVE_COMMAND: _,
+    APPLICATION_COMMAND_SET_PREFERRED_COMMAND: m,
+    APPLICATION_COMMAND_UPDATE_OPTIONS: h,
     APPLICATION_COMMAND_UPDATE_CHANNEL_STATE: g,
 });

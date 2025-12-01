@@ -9,13 +9,13 @@ var r = n(252258),
     u = n(966434),
     d = n(649591),
     f = n(16609),
-    _ = n(224189),
-    p = n(574952),
-    h = n(981631);
-async function m(e) {
+    p = n(224189),
+    _ = n(574952),
+    m = n(981631);
+async function h(e) {
     let { applicationId: t, channelId: n, guildId: i } = e;
     try {
-        return await (0, _.Z)(t, n);
+        return await (0, p.Z)(t, n);
     } catch (s) {
         let e = null != i ? r.E.GUILD_CHANNEL : r.E.PRIVATE_CHANNEL;
         a.Z.dispatch({
@@ -47,7 +47,7 @@ async function g(e) {
                         t,
                         o,
                         () => {
-                            (0, p.Z)().leaveActivity({
+                            (0, _.Z)().leaveActivity({
                                 location: i.location,
                                 applicationId: t.id,
                                 shouldClosePopout: n,
@@ -67,7 +67,7 @@ async function E(e) {
         let e =
             null != t
                 ? t
-                : await m({
+                : await h({
                       applicationId: n,
                       channelId: null == r ? void 0 : r.id,
                       guildId: null != (s = null == r ? void 0 : r.getGuildId()) ? s : void 0,
@@ -96,14 +96,14 @@ async function b(e) {
         s =
             null != n
                 ? n
-                : await m({
+                : await h({
                       applicationId: r,
                       channelId: null == a ? void 0 : a.id,
                       guildId: null != (t = null == a ? void 0 : a.getGuildId()) ? t : void 0,
                   });
     return (
         null != s &&
-        (!!((0, i.yE)(s.flags, h.udG.EMBEDDED_RELEASED) || s.isVerified || l.ZP.hasActivityEverBeenLaunched(r)) ||
+        (!!((0, i.yE)(s.flags, m.udG.EMBEDDED_RELEASED) || s.isVerified || l.ZP.hasActivityEverBeenLaunched(r)) ||
             new Promise((e) => {
                 null == o || o(),
                     (0, d.j)({

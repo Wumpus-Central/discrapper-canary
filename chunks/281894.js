@@ -1,77 +1,77 @@
-_.d(e, { O1: () => c });
-var a = _(349812),
-    r = _(617726),
-    n = _(387486);
-function o(t) {
-    return new Promise((e, _) => {
-        (t.oncomplete = t.onsuccess = () => e(t.result)), (t.onabort = t.onerror = () => _(t.error));
+r.d(t, { O1: () => c });
+var n = r(349812),
+    a = r(617726),
+    i = r(387486);
+function o(e) {
+    return new Promise((t, r) => {
+        (e.oncomplete = e.onsuccess = () => t(e.result)), (e.onabort = e.onerror = () => r(e.error));
     });
 }
-function E(t) {
-    return o(t.getAllKeys());
+function _(e) {
+    return o(e.getAllKeys());
 }
-function i(t) {
-    let e;
-    function _() {
+function s(e) {
+    let t;
+    function r() {
         return (
-            void 0 == e &&
-                (e = (function (t, e) {
-                    let _ = indexedDB.open(t);
-                    _.onupgradeneeded = () => _.result.createObjectStore(e);
-                    let a = o(_);
-                    return (t) => a.then((_) => t(_.transaction(e, "readwrite").objectStore(e)));
-                })(t.dbName || "sentry-offline", t.storeName || "queue")),
-            e
+            void 0 == t &&
+                (t = (function (e, t) {
+                    let r = indexedDB.open(e);
+                    r.onupgradeneeded = () => r.result.createObjectStore(t);
+                    let n = o(r);
+                    return (e) => n.then((r) => e(r.transaction(t, "readwrite").objectStore(t)));
+                })(e.dbName || "sentry-offline", e.storeName || "queue")),
+            t
         );
     }
     return {
-        push: async (e) => {
+        push: async (t) => {
             try {
-                var a, n;
-                let i = await (0, r.V$)(e);
-                await ((a = _()),
-                (n = t.maxQueueSize || 30),
-                a((t) =>
-                    E(t).then((e) => {
-                        if (!(e.length >= n)) return t.put(i, Math.max(...e, 0) + 1), o(t.transaction);
+                var n, i;
+                let s = await (0, a.V$)(t);
+                await ((n = r()),
+                (i = e.maxQueueSize || 30),
+                n((e) =>
+                    _(e).then((t) => {
+                        if (!(t.length >= i)) return e.put(s, Math.max(...t, 0) + 1), o(e.transaction);
                     }),
                 ));
-            } catch (t) {}
+            } catch (e) {}
         },
-        unshift: async (e) => {
+        unshift: async (t) => {
             try {
-                var a, n;
-                let i = await (0, r.V$)(e);
-                await ((a = _()),
-                (n = t.maxQueueSize || 30),
-                a((t) =>
-                    E(t).then((e) => {
-                        if (!(e.length >= n)) return t.put(i, Math.min(...e, 0) - 1), o(t.transaction);
+                var n, i;
+                let s = await (0, a.V$)(t);
+                await ((n = r()),
+                (i = e.maxQueueSize || 30),
+                n((e) =>
+                    _(e).then((t) => {
+                        if (!(t.length >= i)) return e.put(s, Math.min(...t, 0) - 1), o(e.transaction);
                     }),
                 ));
-            } catch (t) {}
+            } catch (e) {}
         },
         shift: async () => {
             try {
-                let t = await _()((t) =>
-                    E(t).then((e) => {
-                        let _ = e[0];
-                        if (null != _) return o(t.get(_)).then((e) => (t.delete(_), o(t.transaction).then(() => e)));
+                let e = await r()((e) =>
+                    _(e).then((t) => {
+                        let r = t[0];
+                        if (null != r) return o(e.get(r)).then((t) => (e.delete(r), o(e.transaction).then(() => t)));
                     }),
                 );
-                if (t) return (0, r.f4)(t);
-            } catch (t) {}
+                if (e) return (0, a.f4)(e);
+            } catch (e) {}
         },
     };
 }
-function c(t = n.f) {
-    var e;
+function c(e = i.f) {
+    var t;
     return (
-        (e = (0, a.Pd)(t)),
-        (t) =>
-            e({
-                ...t,
-                createStore: i,
+        (t = (0, n.Pd)(e)),
+        (e) =>
+            t({
+                ...e,
+                createStore: s,
             })
     );
 }

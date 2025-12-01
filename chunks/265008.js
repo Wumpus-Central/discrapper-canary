@@ -9,7 +9,7 @@ var r = n(544891),
     u = n(395687),
     d = n(981631),
     f = n(231338);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,16 +22,16 @@ function _(e, t, n) {
         e
     );
 }
-let p = 5 * s.Z.Millis.MINUTE,
-    h = 0.5 * s.Z.Millis.MINUTE;
-function m() {
+let _ = 5 * s.Z.Millis.MINUTE,
+    m = 0.5 * s.Z.Millis.MINUTE;
+function h() {
     return c.Z.getCurrentConfig({ location: "FriendOnlineTimer" }).useOnlineTimer;
 }
 function g() {
-    return c.Z.getCurrentConfig({ location: "FriendOnlineTimer" }).useTestTimerDuration ? h : p;
+    return c.Z.getCurrentConfig({ location: "FriendOnlineTimer" }).useTestTimerDuration ? m : _;
 }
 async function E() {
-    if (m())
+    if (h())
         try {
             await r.tn.post({
                 url: d.ANM.USER_MEANINGFULLY_ONLINE,
@@ -55,16 +55,16 @@ class y extends a.Z {
     }
     constructor(...e) {
         super(...e),
-            _(this, "timerId", null),
-            _(this, "actions", {
+            p(this, "timerId", null),
+            p(this, "actions", {
                 POST_CONNECTION_OPEN: () => this.start(),
                 CONNECTION_RESUMED: () => this.start(),
                 CONNECTION_CLOSED: () => this.clear(),
                 CONNECTION_INTERRUPTED: () => this.clear(),
                 SELF_PRESENCE_STORE_UPDATE: () => this.start(),
             }),
-            _(this, "start", () => {
-                m() &&
+            p(this, "start", () => {
+                h() &&
                     u.Z.isCooldownElapsed() &&
                     null == this.timerId &&
                     b(o.Z.getStatus()) &&
@@ -72,7 +72,7 @@ class y extends a.Z {
                         (this.timerId = null), b(o.Z.getStatus()) && u.Z.isCooldownElapsed() && E();
                     }, g()));
             }),
-            _(this, "clear", () => {
+            p(this, "clear", () => {
                 null != this.timerId && (clearTimeout(this.timerId), (this.timerId = null));
             });
     }

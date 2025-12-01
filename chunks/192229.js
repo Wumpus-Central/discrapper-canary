@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(872810),
     i = n(147913),
     a = n(199902),
@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-class _ extends i.Z {
+class p extends i.Z {
     handleVoiceStateUpdates(e) {
         let { voiceStates: t } = e;
         for (let e of t) {
@@ -44,9 +44,9 @@ class _ extends i.Z {
                     })
             )
                 continue;
-            let _ = a.Z.getStreamForUser(e.userId, e.guildId);
-            null != _ &&
-                r.rn(_, {
+            let p = a.Z.getStreamForUser(e.userId, e.guildId);
+            null != p &&
+                r.rn(p, {
                     forceMultiple: !0,
                     noFocus: !0,
                 });
@@ -56,4 +56,4 @@ class _ extends i.Z {
         super(...e), f(this, "actions", { VOICE_STATE_UPDATES: this.handleVoiceStateUpdates });
     }
 }
-let p = new _();
+let _ = new p();

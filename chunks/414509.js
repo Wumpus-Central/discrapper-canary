@@ -27,9 +27,9 @@ function d(e, t, n) {
 }
 n(334431);
 let f = 3 * s.Z.Millis.DAY,
-    _ = 2 * s.Z.Millis.DAY,
-    p = +s.Z.Millis.HOUR;
-function h(e) {
+    p = 2 * s.Z.Millis.DAY,
+    _ = +s.Z.Millis.HOUR;
+function m(e) {
     let { channelId: t } = e;
     if (null == t) return;
     let n = i.Z.getChannel(t);
@@ -46,12 +46,12 @@ function h(e) {
             });
     }
 }
-function m(e) {
+function h(e) {
     let { state: t } = e;
 }
 function g() {
     var e;
-    return (null != (e = (0, l.km)()) ? e : 0) > Date.now() - p;
+    return (null != (e = (0, l.km)()) ? e : 0) > Date.now() - _;
 }
 function E(e) {
     return g() || Array.from(e).every((e) => b(e, !0));
@@ -59,7 +59,7 @@ function E(e) {
 function b(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return !!(!n && g()) || (null != (t = (0, l._$)(e)) ? t : 0) > Date.now() - _;
+    return !!(!n && g()) || (null != (t = (0, l._$)(e)) ? t : 0) > Date.now() - p;
 }
 function y(e) {
     var t;
@@ -73,8 +73,8 @@ class O extends r.Z {
     constructor(...e) {
         super(...e),
             d(this, "actions", {
-                CHANNEL_SELECT: h,
-                APP_STATE_UPDATE: m,
+                CHANNEL_SELECT: m,
+                APP_STATE_UPDATE: h,
             });
     }
 }

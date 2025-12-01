@@ -77,12 +77,12 @@ let p = r.forwardRef(function (e, t) {
             onRequestClose: y,
         } = e,
         [C, v] = r.useState(!1),
-        { isHovered: _, setIsHovered: x, onMouseEnter: j, onMouseLeave: O, cancelTimers: E } = (0, o.Z)(200, 300);
+        { isHovered: _, setIsHovered: O, onMouseEnter: x, onMouseLeave: j, cancelTimers: E } = (0, o.Z)(200, 300);
     function S(e) {
-        "focus" === e.type || C || j();
+        "focus" === e.type || C || x();
     }
     function P() {
-        C || O();
+        C || j();
     }
     function I(e) {
         E(), v(!C), C ? null == b || b() : null == g || g(), (!_ || C) && e();
@@ -91,10 +91,10 @@ let p = r.forwardRef(function (e, t) {
         t,
         () => ({
             hidePopout() {
-                x(!1), v(!1);
+                O(!1), v(!1);
             },
         }),
-        [x, v],
+        [O, v],
     );
     let Z = (_ && !m) || C;
     return (0, i.jsx)(a.yRy, {
@@ -107,7 +107,7 @@ let p = r.forwardRef(function (e, t) {
         spacing: 16,
         onRequestClose: () => {
             if ((null == y ? void 0 : y()) === l.F) return l.F;
-            x(!1), v(!1), null == b || b();
+            O(!1), v(!1), null == b || b();
         },
         renderPopout: (e) =>
             (0, i.jsx)(
@@ -116,7 +116,7 @@ let p = r.forwardRef(function (e, t) {
                     {
                         isHovered: Z,
                         onFocus: () => v(!0),
-                        onMouseEnter: j,
+                        onMouseEnter: x,
                         onMouseLeave: P,
                         renderPopout: n,
                     },

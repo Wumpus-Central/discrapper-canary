@@ -39,11 +39,11 @@ function d(e) {
 function f(e) {
     var t;
     let { user: n, checked: i, onChange: u, disabled: f } = e,
-        { avatarSrc: _, eventHandlers: p } = (0, l.Z)({
+        { avatarSrc: p, eventHandlers: _ } = (0, l.Z)({
             userId: null == n ? void 0 : n.id,
             size: s.EFr.SIZE_32,
         }),
-        h = null != (t = n.globalName) ? t : n.username;
+        m = null != (t = n.globalName) ? t : n.username;
     return (0, r.jsxs)("div", {
         className: c.container,
         children: [
@@ -54,11 +54,11 @@ function f(e) {
                     d(
                         {
                             className: a()({ [c.muted]: f }),
-                            src: _,
-                            "aria-label": h,
+                            src: p,
+                            "aria-label": m,
                             size: s.EFr.SIZE_32,
                         },
-                        p,
+                        _,
                     ),
                 ),
             }),
@@ -69,7 +69,7 @@ function f(e) {
                         className: c.userName,
                         color: f ? "text-muted" : "text-default",
                         variant: "text-md/semibold",
-                        children: h,
+                        children: m,
                     }),
                     (0, r.jsx)(s.Text, {
                         className: c.userName,

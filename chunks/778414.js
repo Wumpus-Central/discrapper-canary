@@ -1,6 +1,6 @@
 n.d(t, {
     C: () => W,
-    Z: () => G,
+    Z: () => M,
 }),
     n(388685);
 var r = n(54381),
@@ -19,8 +19,8 @@ var r = n(54381),
     b = n(351402),
     h = n(931847),
     y = n(836197),
-    O = n(880421),
-    v = n(206599),
+    v = n(880421),
+    O = n(206599),
     j = n(50130),
     x = n(5136),
     _ = n(690760),
@@ -37,7 +37,7 @@ var r = n(54381),
     A = n(795990),
     Z = n(388032),
     R = n(830202);
-function L(e) {
+function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -62,7 +62,7 @@ function L(e) {
     }
     return e;
 }
-function M(e, t) {
+function L(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -82,13 +82,13 @@ function M(e, t) {
     }
     return i;
 }
-function G(e) {
+function M(e) {
     var { widget: t } = e,
-        n = M(e, ["widget"]);
+        n = L(e, ["widget"]);
     return t instanceof h.q
-        ? (0, r.jsx)(I.Z, L({ widget: t }, n))
+        ? (0, r.jsx)(I.Z, G({ widget: t }, n))
         : t instanceof y.zy
-          ? (0, r.jsx)(C.Z, L({ widget: t }, n))
+          ? (0, r.jsx)(C.Z, G({ widget: t }, n))
           : null;
 }
 function B() {
@@ -110,7 +110,7 @@ function F(e) {
         { application: n } = (0, j.G)(),
         { token: i } = (0, d.o)(null == n ? void 0 : n.id),
         a = (0, P.Z)(t.id),
-        l = (0, O.k)({ location: "ApplicationWidgetUpsell" }),
+        l = (0, v.k)({ location: "ApplicationWidgetUpsell" }),
         o = a.some((e) => e instanceof h.q && e.applicationId === (null == n ? void 0 : n.id));
     return null == n || !l || null == i || o
         ? null
@@ -142,11 +142,11 @@ function U(e) {
                 "GB" === e && n
             );
         })(),
-        d = (0, O.k)({ location: "UserProfileModalV2Widgets" }),
+        d = (0, v.k)({ location: "UserProfileModalV2Widgets" }),
         f = 0 === l.length && c,
         j = i.useMemo(() => l.filter(y.Wc), [l]),
         x = i.useMemo(() => l.filter((e) => e instanceof h.q), [l]);
-    (0, v.J)(c, j);
+    (0, O.J)(c, j);
     var I = t.id;
     (0, _.s)(x);
     let { data: w, refetch: T } = (0, p.O)(I),
@@ -162,7 +162,7 @@ function U(e) {
                 c && (0, r.jsx)(F, { user: t }),
                 l.map((e, i) =>
                     (0, r.jsx)(
-                        G,
+                        M,
                         {
                             widget: e,
                             user: t,
@@ -183,7 +183,7 @@ function U(e) {
 }
 function W(e) {
     var { user: t } = e,
-        n = M(e, ["user"]);
+        n = L(e, ["user"]);
     let a = i.useRef(null);
     (0, x.r)({ container: a.current });
     let o = (0, k.h)(t.id);
@@ -192,6 +192,6 @@ function W(e) {
         scrollerRef: a,
         className: l()(R.scroller, { [R.hasToolbar]: o }),
         fade: !0,
-        children: [(0, r.jsx)(T.Z, { scrollerRef: a }), (0, r.jsx)(U, L({ user: t }, n))],
+        children: [(0, r.jsx)(T.Z, { scrollerRef: a }), (0, r.jsx)(U, G({ user: t }, n))],
     });
 }

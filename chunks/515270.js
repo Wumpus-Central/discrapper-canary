@@ -1,6 +1,6 @@
 n.d(t, {
     L6: () => N,
-    ZP: () => h,
+    ZP: () => m,
     iF: () => C,
 }),
     n(388685),
@@ -17,16 +17,16 @@ var r = n(466332),
     u = n(436660),
     d = n(887490),
     f = n(42530);
-let _ = new Set(["line"]),
-    p = /^[a-z0-9_+\-.#]+$/i;
-function h(e) {
+let p = new Set(["line"]),
+    _ = /^[a-z0-9_+\-.#]+$/i;
+function m(e) {
     let { onChange: t } = e,
         n = null;
     return (
         (e.onChange = () => {
             d.bN.richValue(e) !== n &&
                 (l.T.withMergedEntry(e, () => {
-                    d.bN.withoutNormalizing(e, () => m(e));
+                    d.bN.withoutNormalizing(e, () => h(e));
                 }),
                 (n = d.bN.richValue(e))),
                 t();
@@ -34,7 +34,7 @@ function h(e) {
         e
     );
 }
-function m(e) {
+function h(e) {
     let t = E(e);
     y(e, t);
 }
@@ -66,20 +66,20 @@ function b(e, t, n, r, i) {
         u = t.text.substring(c.offset + 3);
     }
     let f = n && null != l,
-        _ = n && 0 === o.length,
-        h = r && 0 === o.length,
-        m = (f ? o.slice(1) : o).length % 2 == 1,
-        g = m && (null == u || "" === u || null != u.match(p)),
+        p = n && 0 === o.length,
+        m = r && 0 === o.length,
+        h = (f ? o.slice(1) : o).length % 2 == 1,
+        g = h && (null == u || "" === u || null != u.match(_)),
         E = g && null != u && null != (a = s.default.resolveLanguageName(u)) ? a : null;
     return {
         blockEntry: t,
         wasInCodeBlock: n,
-        isInCodeBlock: _,
-        isStyledCodeBlockLine: h,
-        lang: m || f ? E : i,
+        isInCodeBlock: p,
+        isStyledCodeBlockLine: m,
+        lang: h || f ? E : i,
         hljsTypes: null,
         closesCodeBlock: f,
-        opensCodeBlock: m,
+        opensCodeBlock: h,
         opensCodeBlockOnOwnLine: g,
     };
 }
@@ -110,7 +110,7 @@ function v(e) {
             let e = t.map((e) => (0, c.sg)(e.blockEntry[0])).join("\n"),
                 n = t[0].lang;
             if (null != n && null != r.Z.getLanguage(n)) {
-                let r = S(e, n);
+                let r = T(e, n);
                 if (null != r && r.length === t.length) {
                     let e = [];
                     for (let n = 0; n < t.length; n++) {
@@ -155,25 +155,25 @@ function v(e) {
         n && t.push(i), i.opensCodeBlock && (n = !0);
     }
 }
-let I = {
+let S = {
         max: 1 / 0,
         maxAge: +o.Z.Millis.MINUTE,
         updateAgeOnGet: !0,
     },
-    T = new (a())(I);
-function S(e, t) {
+    I = new (a())(S);
+function T(e, t) {
     let n = "".concat(e, "-").concat(t),
-        r = T.get(n);
+        r = I.get(n);
     if (null != r) return r;
     let i = s.default.highlight(t, e, !1);
     if (null == i || i.illegal) return null;
     let a = i.value.split("\n");
-    return T.set(n, a), a;
+    return I.set(n, a), a;
 }
 function A(e) {
     let t,
         [n, r] = e;
-    if (!_.has(n.type)) return [];
+    if (!p.has(n.type)) return [];
     let i = [],
         a = /\\|```/g;
     for (let e = 0; e < n.children.length; e++) {

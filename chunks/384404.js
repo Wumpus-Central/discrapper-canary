@@ -35,7 +35,7 @@ var a = n(131522),
     u = c.OrderedSet,
     d = c.Record,
     f = c.Stack,
-    _ = d({
+    p = d({
         allowUndo: !0,
         currentContent: null,
         decorator: null,
@@ -50,7 +50,7 @@ var a = n(131522),
         treeMap: null,
         undoStack: f(),
     }),
-    p = (function () {
+    _ = (function () {
         (t.createEmpty = function (e) {
             return t.createWithContent(o.createFromText(""), e);
         }),
@@ -69,9 +69,9 @@ var a = n(131522),
                 var n = e.currentContent,
                     i = e.decorator;
                 return new t(
-                    new _(
+                    new p(
                         r({}, e, {
-                            treeMap: m(n, i),
+                            treeMap: h(n, i),
                             directionMap: s.getDirectionMap(n),
                         }),
                     ),
@@ -87,7 +87,7 @@ var a = n(131522),
                         if (i !== r) {
                             var o,
                                 s = t.get("treeMap");
-                            (o = i && r ? E(a, a.getBlockMap(), s, i, r) : m(a, i)),
+                            (o = i && r ? E(a, a.getBlockMap(), s, i, r) : h(a, i)),
                                 t.merge({
                                     decorator: i,
                                     treeMap: o,
@@ -167,10 +167,10 @@ var a = n(131522),
                 return this.getImmutable().get("directionMap");
             }),
             (t.acceptSelection = function (e, t) {
-                return h(e, t, !1);
+                return m(e, t, !1);
             }),
             (t.forceSelection = function (e, t) {
-                return t.getHasFocus() || (t = t.set("hasFocus", !0)), h(e, t, !0);
+                return t.getHasFocus() || (t = t.set("hasFocus", !0)), m(e, t, !0);
             }),
             (t.moveSelectionToEnd = function (e) {
                 var n = e.getCurrentContent().getLastBlock(),
@@ -214,7 +214,7 @@ var a = n(131522),
                       (u = u.set("selectionBefore", l.getSelectionBefore()));
                 var d = e.getInlineStyleOverride();
                 -1 === ["adjust-depth", "change-block-type", "split-block"].indexOf(r) && (d = null);
-                var _ = {
+                var p = {
                     currentContent: u,
                     directionMap: a,
                     undoStack: c,
@@ -224,7 +224,7 @@ var a = n(131522),
                     forceSelection: i,
                     inlineStyleOverride: d,
                 };
-                return t.set(e, _);
+                return t.set(e, p);
             }),
             (t.undo = function (e) {
                 if (!e.getAllowUndo()) return e;
@@ -270,15 +270,15 @@ var a = n(131522),
             t
         );
     })();
-function h(e, t, n) {
-    return p.set(e, {
+function m(e, t, n) {
+    return _.set(e, {
         selection: t,
         forceSelection: n,
         nativelyRenderedContent: null,
         inlineStyleOverride: null,
     });
 }
-function m(e, t) {
+function h(e, t) {
     return e
         .getBlockMap()
         .map(function (n) {
@@ -347,4 +347,4 @@ function v(e, t) {
         .first();
     return n ? n.getInlineStyleAt(n.getLength() - 1) : u();
 }
-e.exports = p;
+e.exports = _;

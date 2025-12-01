@@ -1,4 +1,4 @@
-n.d(t, { f: () => h }), n(953529), n(415506);
+n.d(t, { f: () => m }), n(953529), n(415506);
 var r = n(512722),
     i = n.n(r),
     a = n(442837),
@@ -21,9 +21,9 @@ function d(e, t, n) {
     );
 }
 let f = new o.Yd("KvStore"),
-    _ = Object.prototype.hasOwnProperty,
-    p = Symbol("version");
-class h extends a.yh {
+    p = Object.prototype.hasOwnProperty,
+    _ = Symbol("version");
+class m extends a.yh {
     getMode() {
         return this.mode;
     }
@@ -65,13 +65,13 @@ class h extends a.yh {
         return () => {
             let { memoized: n } = this.state.derived,
                 r = n[t];
-            return _.call(n, t) || ((r = e(this.state.root)), (n[t] = r)), r;
+            return p.call(n, t) || ((r = e(this.state.root)), (n[t] = r)), r;
         };
     }
     version() {
         let { memoized: e } = this.state.derived,
-            t = e[p];
-        return null == t && (e[p] = t = ++this.nextVersion), t;
+            t = e[_];
+        return null == t && (e[_] = t = ++this.nextVersion), t;
     }
     get(e) {
         return this.state.root[e];
@@ -110,7 +110,7 @@ class h extends a.yh {
                         return void 0 === r && i.length++, (i.memoized = {}), (t = !0), !0;
                     },
                     remove: (e) => {
-                        let n = _.call(this.state.root, e);
+                        let n = p.call(this.state.root, e);
                         if (n) {
                             delete this.state.root[e];
                             let { derived: n } = this.state;

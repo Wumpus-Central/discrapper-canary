@@ -8,25 +8,25 @@ var r = n(98405),
     u = n(661970),
     d = n(992174),
     f = n(380297),
-    _ = n(504290),
-    p = String,
-    h = i("JSON", "stringify"),
-    m = s(/./.exec),
+    p = n(504290),
+    _ = String,
+    m = i("JSON", "stringify"),
+    h = s(/./.exec),
     g = s("".charAt),
     E = s("".charCodeAt),
     b = s("".replace),
     y = s((1).toString),
     O = /[\uD800-\uDFFF]/g,
     v = /^[\uD800-\uDBFF]$/,
-    I = /^[\uDC00-\uDFFF]$/,
-    T =
-        !_ ||
+    S = /^[\uDC00-\uDFFF]$/,
+    I =
+        !p ||
         l(function () {
             var e = i("Symbol")("stringify detection");
-            return "[null]" !== h([e]) || "{}" !== h({ a: e }) || "{}" !== h(Object(e));
+            return "[null]" !== m([e]) || "{}" !== m({ a: e }) || "{}" !== m(Object(e));
         }),
-    S = l(function () {
-        return '"\uDF06\uD834"' !== h("\uDF06\uD834") || '"\uDEAD"' !== h("\uDEAD");
+    T = l(function () {
+        return '"\uDF06\uD834"' !== m("\uDF06\uD834") || '"\uDEAD"' !== m("\uDEAD");
     }),
     A = function (e, t) {
         var n = d(arguments),
@@ -34,29 +34,29 @@ var r = n(98405),
         if (!(!c(r) && (void 0 === e || u(e))))
             return (
                 (n[1] = function (e, t) {
-                    if ((c(r) && (t = o(r, this, p(e), t)), !u(t))) return t;
+                    if ((c(r) && (t = o(r, this, _(e), t)), !u(t))) return t;
                 }),
-                a(h, null, n)
+                a(m, null, n)
             );
     },
     C = function (e, t, n) {
         var r = g(n, t - 1),
             i = g(n, t + 1);
-        return (m(v, e) && !m(I, i)) || (m(I, e) && !m(v, r)) ? "\\u" + y(E(e, 0), 16) : e;
+        return (h(v, e) && !h(S, i)) || (h(S, e) && !h(v, r)) ? "\\u" + y(E(e, 0), 16) : e;
     };
-h &&
+m &&
     r(
         {
             target: "JSON",
             stat: !0,
             arity: 3,
-            forced: T || S,
+            forced: I || T,
         },
         {
             stringify: function (e, t, n) {
                 var r = d(arguments),
-                    i = a(T ? A : h, null, r);
-                return S && "string" == typeof i ? b(i, O, C) : i;
+                    i = a(I ? A : m, null, r);
+                return T && "string" == typeof i ? b(i, O, C) : i;
             },
         },
     );

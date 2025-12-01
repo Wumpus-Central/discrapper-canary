@@ -1,20 +1,20 @@
-n.d(t, { Z: () => d });
-var i = n(54381);
-n(473749);
-var r = n(442837),
-    l = n(481060),
-    a = n(475179),
-    o = n(703656),
-    c = n(496675),
-    s = n(981631),
-    u = n(388032);
-function d(e, t) {
-    return (0, r.e7)([c.Z], () => c.Z.can(s.Plq.CONNECT, e), [e]) && e.isGuildVocal()
-        ? (0, i.jsx)(l.sNh, {
+e.d(t, { Z: () => u });
+var i = e(54381);
+e(473749);
+var l = e(442837),
+    r = e(481060),
+    a = e(475179),
+    c = e(703656),
+    s = e(496675),
+    o = e(981631),
+    d = e(388032);
+function u(n, t) {
+    return (0, l.e7)([s.Z], () => s.Z.can(o.Plq.CONNECT, n), [n]) && n.isGuildVocal()
+        ? (0, i.jsx)(r.sNh, {
               id: "open-chat",
-              label: u.intl.string(u.t.ZXxLQg),
+              label: d.intl.string(d.t.ZXxLQg),
               action: () => {
-                  a.Z.updateChatOpen(e.id, !0), (0, o.XU)(t.id, e.id);
+                  a.Z.updateChatOpen(n.id, !0), (0, c.XU)(t.id, n.id);
               },
           })
         : null;

@@ -14,7 +14,7 @@ function d(e) {
             { location: "CollectiblesGiftPaymentModalHeader" },
             { autoTrackExposure: !1 },
         ),
-        _ = (0, i.EQ)(t)
+        p = (0, i.EQ)(t)
             .with(s.h8.REVIEW, () => c.intl.string(c.t.JbRd5s))
             .with(s.h8.ADD_PAYMENT_STEPS, () => c.intl.string(c.t.QiGOak))
             .with(s.h8.GIFT_CUSTOMIZATION, () =>
@@ -23,7 +23,7 @@ function d(e) {
             .with(s.h8.AWAITING_PURCHASE_TOKEN_AUTH, () => c.intl.string(c.t.lDbi6H))
             .with(s.h8.CONFIRM, () => "")
             .otherwise(() => null);
-    return null == _
+    return null == p
         ? null
         : (0, r.jsxs)(a.xBx, {
               "data-migration-pending": !0,
@@ -32,7 +32,7 @@ function d(e) {
               children: [
                   (0, r.jsx)(a.Heading, {
                       variant: "heading-lg/semibold",
-                      children: _,
+                      children: p,
                   }),
                   (0, r.jsx)(a.olH, {
                       "data-migration-pending": !0,

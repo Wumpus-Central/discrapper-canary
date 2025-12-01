@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685), n(704826), n(35282), n(539854), n(781311);
+n.d(t, { Z: () => T }), n(388685), n(704826), n(35282), n(539854), n(781311);
 var r = n(879443),
     i = n.n(r),
     a = n(360038),
@@ -9,10 +9,10 @@ var r = n(879443),
     u = n(981631);
 let d = {},
     f = [],
-    _ = !1,
-    p = (0, s.r)(window),
-    h = (0, c.isMac)() || (0, c.isMacWeb)() ? "cmd" : "ctrl",
-    m = (0, c.isMac)() || (0, c.isMacWeb)() ? "opt" : "alt",
+    p = !1,
+    _ = (0, s.r)(window),
+    m = (0, c.isMac)() || (0, c.isMacWeb)() ? "cmd" : "ctrl",
+    h = (0, c.isMac)() || (0, c.isMacWeb)() ? "opt" : "alt",
     g = (0, c.isMac)() || (0, c.isMacWeb)() ? "return" : "enter",
     E = [
         ...a.u.binds,
@@ -30,7 +30,7 @@ let d = {},
         "mod+plus",
         "mod+minus",
         "mod+0",
-    ].map((e) => e.replace("mod", h)),
+    ].map((e) => e.replace("mod", m)),
     b = () => [],
     y = [];
 function O(e, t) {
@@ -40,9 +40,9 @@ function O(e, t) {
 function v(e) {
     let t = [];
     for (let n of Object.values(e)) null != n && t.push(...n.binds);
-    return t.map((e) => e.replace("mod", h));
+    return t.map((e) => e.replace("mod", m));
 }
-function I(e, t) {
+function S(e, t) {
     return (n, r) => (
         l.default.track(u.rMx.KEYBOARD_SHORTCUT_USED, {
             shortcut_name: e,
@@ -51,31 +51,31 @@ function I(e, t) {
         t(n, r)
     );
 }
-function T(e) {
+function I(e) {
     for (let [t, n] of Object.entries(e)) {
         if (null == n) continue;
         let e = b();
         c.isPlatformEmbedded || (e = e.concat(E));
-        let r = n.binds.filter((t) => ((t = t.replace("mod", h)), 0 > e.indexOf(t)));
+        let r = n.binds.filter((t) => ((t = t.replace("mod", m)), 0 > e.indexOf(t)));
         if (0 === r.length) continue;
-        let i = n.comboKeysBindGlobal ? p.bindGlobal : p.bind;
+        let i = n.comboKeysBindGlobal ? _.bindGlobal : _.bind;
         if (
-            (null != n.action && i.call(p, r, I(t, n.action)),
-            null != n.keyup && i.call(p, r, I(t, n.keyup), "keyup"),
+            (null != n.action && i.call(_, r, S(t, n.action)),
+            null != n.keyup && i.call(_, r, S(t, n.keyup), "keyup"),
             null != n.keydown)
         ) {
             let e = r.indexOf("any-character");
             -1 !== e && (O("keydown", n.keydown), r.splice(e, 1)),
-                r.length > 0 && i.call(p, r, I(t, n.keydown), "keydown");
+                r.length > 0 && i.call(_, r, S(t, n.keydown), "keydown");
         }
-        null != n.keypress && i.call(p, r, I(t, n.keypress), "keypress");
+        null != n.keypress && i.call(_, r, S(t, n.keypress), "keypress");
     }
 }
 (0, c.isDesktop)() && new (i())(document.documentElement).bind("backspace", (e) => e.preventDefault());
-let S = {
-    combokeys: p,
-    modKey: h,
-    altKey: m,
+let T = {
+    combokeys: _,
+    modKey: m,
+    altKey: h,
     returnKey: g,
     setGetKeybindList(e) {
         b = e;
@@ -90,20 +90,20 @@ let S = {
         d = e;
     },
     enable() {
-        _ || ((_ = !0), this.checkDupes(d), T(d));
+        p || ((p = !0), this.checkDupes(d), I(d));
     },
     enableTemp(e) {
-        f.push(d), (d = e), T(e), (_ = !0);
+        f.push(d), (d = e), I(e), (p = !0);
     },
     disableTemp() {
         let e = f.pop();
         null != e && (d = e), this.disable(), this.enable();
     },
     disable() {
-        _ && ((_ = !1), y.forEach((e) => e()), (y = []), p.reset());
+        p && ((p = !1), y.forEach((e) => e()), (y = []), _.reset());
     },
     validateKeybind(e) {
-        _ && this.hasBind(e) && p.unbind(e);
+        p && this.hasBind(e) && _.unbind(e);
     },
     hasBind(e) {
         let t = v(d);

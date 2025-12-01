@@ -18,11 +18,11 @@ function j(e) {
     var t, n;
     let { guildId: j, guildEvent: f, guildEventId: b, error: y } = e,
         O = l.useMemo(() => (0, g.Gb)(f, j), [f, j]),
-        { channel_id: E, name: N, image: P, description: C } = O,
+        { channel_id: E, name: N, image: C, description: P } = O,
         S = (0, i.e7)([c.Z], () => c.Z.getChannel(E), [E]),
         I = (0, i.e7)([u.Z], () => u.Z.getGuild(j), [j]),
-        T = (0, m.cS)(O),
-        Z = (0, i.e7)(
+        Z = (0, m.cS)(O),
+        T = (0, i.e7)(
             [d.default],
             () => (null != f.creatorId ? d.default.getUser(f.creatorId) : d.default.getCurrentUser()),
             [f.creatorId],
@@ -36,13 +36,13 @@ function j(e) {
                 className: p.previewCard,
                 guild: I,
                 channel: S,
-                location: null != T ? T : void 0,
-                creator: Z,
+                location: null != Z ? Z : void 0,
+                creator: T,
                 name: N,
-                description: C,
+                description: P,
                 imageSource:
                     ((n = (0, g.Gb)(f, j, b)),
-                    null == P && null == n.image ? null : null != P && /^data:/.test(P) ? P : (0, x.Z)(n)),
+                    null == C && null == n.image ? null : null != C && /^data:/.test(C) ? C : (0, x.Z)(n)),
                 isActive: !1,
                 isUserLurking: w,
                 speakers: [],
@@ -87,7 +87,7 @@ function j(e) {
                                                             width: 18,
                                                             className: p.locationIcon,
                                                         }),
-                                                  null != (e = null == S ? void 0 : S.name) ? e : T,
+                                                  null != (e = null == S ? void 0 : S.name) ? e : Z,
                                               ],
                                           });
                                       },

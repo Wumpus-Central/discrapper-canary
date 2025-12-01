@@ -1,4 +1,4 @@
-n.d(t, { l: () => p });
+n.d(t, { l: () => _ });
 var r = n(314897),
     i = n(131951),
     a = n(19780),
@@ -36,15 +36,15 @@ function d(e) {
     return e;
 }
 let f = 10,
-    _ = 20 * o.Z.Millis.SECOND,
-    p = {
+    p = 20 * o.Z.Millis.SECOND,
+    _ = {
         getActiveErrors: () => {
             let e = a.Z.getRTCConnection();
             if (null == e) return null;
             let t = e.getMediaEngineConnectionId();
             if (null == t || !i.Z.isVideoEnabled()) return null;
             let n = a.Z.getLastNonZeroRemoteVideoSinkWantsTime();
-            if ((null != n && performance.now() - n < _) || !e.hasActiveRemoteWants()) return null;
+            if ((null != n && performance.now() - n < p) || !e.hasActiveRemoteWants()) return null;
             let o = (0, c.hj)(t, r.default.getId());
             return null == o
                 ? null

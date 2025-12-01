@@ -10,16 +10,16 @@ e.exports = function (e, t) {
         u,
         d,
         f,
-        _,
-        p = e.target,
-        h = e.global,
-        m = e.stat;
-    if ((n = h ? r : m ? r[p] || s(p, {}) : r[p] && r[p].prototype))
+        p,
+        _ = e.target,
+        m = e.global,
+        h = e.stat;
+    if ((n = m ? r : h ? r[_] || s(_, {}) : r[_] && r[_].prototype))
         for (u in t) {
             if (
                 ((f = t[u]),
-                (d = e.dontCallGetSet ? (_ = i(n, u)) && _.value : n[u]),
-                !c(h ? u : p + (m ? "." : "#") + u, e.forced) && void 0 !== d)
+                (d = e.dontCallGetSet ? (p = i(n, u)) && p.value : n[u]),
+                !c(m ? u : _ + (h ? "." : "#") + u, e.forced) && void 0 !== d)
             ) {
                 if (typeof f == typeof d) continue;
                 l(f, d);

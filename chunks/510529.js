@@ -1,36 +1,36 @@
-_.d(e, {
+r.d(t, {
     U: () => o,
-    h: () => E,
+    h: () => _,
 });
-var a = _(370336),
-    r = _(967752);
-function n(t) {
-    let e = t.protocol ? `${t.protocol}:` : "",
-        _ = t.port ? `:${t.port}` : "";
-    return `${e}//${t.host}${_}${t.path ? `/${t.path}` : ""}/api/`;
+var n = r(370336),
+    a = r(967752);
+function i(e) {
+    let t = e.protocol ? `${e.protocol}:` : "",
+        r = e.port ? `:${e.port}` : "";
+    return `${t}//${e.host}${r}${e.path ? `/${e.path}` : ""}/api/`;
 }
-function o(t, e, _) {
+function o(e, t, r) {
     return (
-        e ||
-        `${n(t)}${t.projectId}/envelope/?${(0, a._j)({
-            sentry_key: t.publicKey,
+        t ||
+        `${i(e)}${e.projectId}/envelope/?${(0, n._j)({
+            sentry_key: e.publicKey,
             sentry_version: "7",
-            ...(_ && { sentry_client: `${_.name}/${_.version}` }),
+            ...(r && { sentry_client: `${r.name}/${r.version}` }),
         })}`
     );
 }
-function E(t, e) {
-    let _ = (0, r.vK)(t);
-    if (!_) return "";
-    let a = `${n(_)}embed/error-page/`,
-        o = `dsn=${(0, r.RA)(_)}`;
-    for (let t in e)
-        if ("dsn" !== t && "onClose" !== t)
-            if ("user" === t) {
-                let t = e.user;
-                if (!t) continue;
-                t.name && (o += `&name=${encodeURIComponent(t.name)}`),
-                    t.email && (o += `&email=${encodeURIComponent(t.email)}`);
-            } else o += `&${encodeURIComponent(t)}=${encodeURIComponent(e[t])}`;
-    return `${a}?${o}`;
+function _(e, t) {
+    let r = (0, a.vK)(e);
+    if (!r) return "";
+    let n = `${i(r)}embed/error-page/`,
+        o = `dsn=${(0, a.RA)(r)}`;
+    for (let e in t)
+        if ("dsn" !== e && "onClose" !== e)
+            if ("user" === e) {
+                let e = t.user;
+                if (!e) continue;
+                e.name && (o += `&name=${encodeURIComponent(e.name)}`),
+                    e.email && (o += `&email=${encodeURIComponent(e.email)}`);
+            } else o += `&${encodeURIComponent(e)}=${encodeURIComponent(t[e])}`;
+    return `${n}?${o}`;
 }

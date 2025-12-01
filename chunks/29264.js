@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(415506);
+n.d(t, { Z: () => m }), n(415506);
 var r = n(54381);
 n(473749);
 var i = n(481060),
@@ -39,7 +39,7 @@ function b(e) {
 function p(e, t) {
     (0, i.showToast)((0, i.createToast)(e, i.ToastType.FAILURE)), c.Z.captureException(t);
 }
-function y(e, t, n) {
+function m(e, t, n) {
     if (
         (0, a.Z)(null == t ? void 0 : t.getChannelId()) ||
         (null == n ? void 0 : n.shouldHideMediaOptions) === !0 ||
@@ -49,7 +49,7 @@ function y(e, t, n) {
     )
         return null;
     let c = (0, l.s$)(e, null == n ? void 0 : n.contentType, null == n ? void 0 : n.originalContentType, l.wV),
-        y = async () => {
+        m = async () => {
             try {
                 let e = await u.ZP.saveImage(c, null == n ? void 0 : n.contentType, l.wV);
                 if (e === u.mQ.ERRORED) throw Error("NativeUtils.saveImage errored for ".concat(c));
@@ -61,7 +61,7 @@ function y(e, t, n) {
                     p(g.intl.string(g.t["8Ve/S0"]), e);
             }
         },
-        O = async () => {
+        y = async () => {
             try {
                 await u.ZP.copyImage(c, null == n ? void 0 : n.contentType),
                     o.default.track(f.rMx.CONTEXT_MENU_IMAGE_COPIED, b({}, (0, d.v)())),
@@ -78,7 +78,7 @@ function y(e, t, n) {
                   {
                       id: "copy-image",
                       label: g.intl.string(g.t.tvUqWn),
-                      action: O,
+                      action: y,
                   },
                   "copy-image",
               )
@@ -88,7 +88,7 @@ function y(e, t, n) {
             {
                 id: "save-image",
                 label: g.intl.string(g.t.PeXhgO),
-                action: y,
+                action: m,
             },
             "save-image",
         ),

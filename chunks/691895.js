@@ -9,8 +9,8 @@ function s(e) {
     return a.Z.logGroups
         .map((r) => {
             var a, s;
-            let { index: c, timestamp: d, logs: f, nativeLogs: _, serverTrace: p } = r,
-                h =
+            let { index: c, timestamp: d, logs: f, nativeLogs: p, serverTrace: _ } = r,
+                m =
                     0 === c
                         ? null !=
                           (s =
@@ -20,12 +20,12 @@ function s(e) {
                             ? s
                             : e
                         : d,
-                m = l(u(f, _, t, n), h),
+                h = l(u(f, p, t, n), m),
                 g = "Trace #"
                     .concat(c + 1, " started ")
                     .concat((0, o.Ye)(d), "\n")
-                    .concat(m);
-            return null != p && (g += "\n Server trace for trace #".concat(c + 1).concat(p)), g;
+                    .concat(h);
+            return null != _ && (g += "\n Server trace for trace #".concat(c + 1).concat(_)), g;
         })
         .join("\n\n");
 }
@@ -83,7 +83,7 @@ function u(e, t, n, r) {
             log: r,
             shouldKeep: l,
         };
-        _(e, u), c && ((a += "| "), o.push(u));
+        p(e, u), c && ((a += "| "), o.push(u));
     });
     let s = !1;
     return e.filter(
@@ -101,7 +101,7 @@ function f(e) {
         t
     );
 }
-function _(e, t) {
+function p(e, t) {
     let n = 0;
     for (; n < e.length; n++) {
         let { timestamp: r } = e[n];

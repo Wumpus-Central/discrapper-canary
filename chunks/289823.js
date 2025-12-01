@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => T });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,7 +9,7 @@ var r = n(54381),
     u = n(686546),
     d = n(3682),
     f = n(647718);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,16 +33,16 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -50,7 +50,7 @@ function h(e, t) {
     }
     return i;
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -131,7 +131,7 @@ function v(e) {
         height: n,
     });
 }
-let I = {
+let S = {
     [c.EFr.SIZE_16]: {
         default: u.QS.DIAGONAL_FACEPILE_16,
         typing: u.QS.DIAGONAL_FACEPILE_TYPING_16,
@@ -188,35 +188,35 @@ let I = {
         status: u.QS.DIAGONAL_FACEPILE_STATUS_120,
     },
 };
-function T(e, t, n) {
-    return t ? I[n].typing : e ? I[n].status : I[n].default;
+function I(e, t, n) {
+    return t ? S[n].typing : e ? S[n].status : S[n].default;
 }
-let S = function (e) {
-    var { backSrc: t, frontSrc: n, size: a, isTyping: s, status: l, style: d, className: _ } = e,
-        m = h(e, ["backSrc", "frontSrc", "size", "isTyping", "status", "style", "className"]);
+let T = function (e) {
+    var { backSrc: t, frontSrc: n, size: a, isTyping: s, status: l, style: d, className: p } = e,
+        h = m(e, ["backSrc", "frontSrc", "size", "isTyping", "status", "style", "className"]);
     let { size: b } = c.ny6[a],
         {
             statusCoords: y,
-            frontAvatarOffsetPx: I,
-            frontAvatarSizePx: S,
+            frontAvatarOffsetPx: S,
+            frontAvatarSizePx: T,
             backAvatarSizePx: A,
         } = i.useMemo(() => {
             var e;
             let t = "".concat(b, "-").concat(s);
             return null != (e = g[t]) ? e : E(a, s, t);
         }, [b, s, a]),
-        C = T(null != l, s, a);
+        C = I(null != l, s, a);
     return (0, r.jsxs)("div", {
-        style: p(
+        style: _(
             {
                 width: b,
                 height: b,
             },
             d,
         ),
-        "aria-label": m["aria-label"],
-        "aria-hidden": m["aria-hidden"],
-        className: o()(f.container, _),
+        "aria-label": h["aria-label"],
+        "aria-hidden": h["aria-hidden"],
+        className: o()(f.container, p),
         children: [
             (0, r.jsxs)(u.ZP, {
                 mask: C,
@@ -232,12 +232,12 @@ let S = function (e) {
                     (0, r.jsx)("div", {
                         style: {
                             position: "absolute",
-                            top: I,
-                            left: I,
+                            top: S,
+                            left: S,
                         },
                         children: (0, r.jsx)(v, {
                             src: n,
-                            size: S,
+                            size: T,
                             isTyping: s,
                             status: l,
                         }),

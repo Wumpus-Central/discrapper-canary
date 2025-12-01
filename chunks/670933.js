@@ -10,10 +10,10 @@ function o(e, t) {
         s = (0, a.Z)(null != (n = null == t ? void 0 : t.additionalDigits) ? n : 2);
     if (2 !== s && 1 !== s && 0 !== s) throw RangeError("additionalDigits must be 0, 1 or 2");
     if ("string" != typeof e && "[object String]" !== Object.prototype.toString.call(e)) return new Date(NaN);
-    var l = _(e);
+    var l = p(e);
     if (l.date) {
-        var c = p(l.date, s);
-        r = h(c.restDateString, c.year);
+        var c = _(l.date, s);
+        r = m(c.restDateString, c.year);
     }
     if (!r || isNaN(r.getTime())) return new Date(NaN);
     var u = r.getTime(),
@@ -23,11 +23,11 @@ function o(e, t) {
         if (isNaN((o = b(l.timezone)))) return new Date(NaN);
     } else {
         var f = new Date(u + d),
-            m = new Date(0);
+            h = new Date(0);
         return (
-            m.setFullYear(f.getUTCFullYear(), f.getUTCMonth(), f.getUTCDate()),
-            m.setHours(f.getUTCHours(), f.getUTCMinutes(), f.getUTCSeconds(), f.getUTCMilliseconds()),
-            m
+            h.setFullYear(f.getUTCFullYear(), f.getUTCMonth(), f.getUTCDate()),
+            h.setHours(f.getUTCHours(), f.getUTCMinutes(), f.getUTCSeconds(), f.getUTCMilliseconds()),
+            h
         );
     }
     return new Date(u + d + o);
@@ -38,7 +38,7 @@ var s = /[T ]/,
     u = /^-?(?:(\d{3})|(\d{2})(?:-?(\d{2}))?|W(\d{2})(?:-?(\d{1}))?|)$/,
     d = /^(\d{2}(?:[.,]\d*)?)(?::?(\d{2}(?:[.,]\d*)?))?(?::?(\d{2}(?:[.,]\d*)?))?$/,
     f = /^([+-])(\d{2})(?::?(\d{2}))?$/;
-function _(e) {
+function p(e) {
     var t,
         n = {},
         r = e.split(s);
@@ -56,7 +56,7 @@ function _(e) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     var n = RegExp("^(?:(\\d{4}|[+-]\\d{" + (4 + t) + "})|(\\d{2}|[+-]\\d{" + (2 + t) + "})$)"),
         r = e.match(n);
     if (!r)
@@ -71,21 +71,21 @@ function p(e, t) {
         restDateString: e.slice((r[1] || r[2]).length),
     };
 }
-function h(e, t) {
+function m(e, t) {
     if (null === t) return new Date(NaN);
     var n = e.match(u);
     if (!n) return new Date(NaN);
     var r = !!n[4],
-        i = m(n[1]),
-        a = m(n[2]) - 1,
-        o = m(n[3]),
-        s = m(n[4]),
-        l = m(n[5]) - 1;
-    if (r) return S(t, s, l) ? y(t, s, l) : new Date(NaN);
+        i = h(n[1]),
+        a = h(n[2]) - 1,
+        o = h(n[3]),
+        s = h(n[4]),
+        l = h(n[5]) - 1;
+    if (r) return T(t, s, l) ? y(t, s, l) : new Date(NaN);
     var c = new Date(0);
-    return I(t, a, o) && T(t, i) ? (c.setUTCFullYear(t, a, Math.max(i, o)), c) : new Date(NaN);
+    return S(t, a, o) && I(t, i) ? (c.setUTCFullYear(t, a, Math.max(i, o)), c) : new Date(NaN);
 }
-function m(e) {
+function h(e) {
     return e ? parseInt(e) : 1;
 }
 function g(e) {
@@ -118,13 +118,13 @@ var O = [31, null, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 function v(e) {
     return e % 400 == 0 || (e % 4 == 0 && e % 100 != 0);
 }
-function I(e, t, n) {
+function S(e, t, n) {
     return t >= 0 && t <= 11 && n >= 1 && n <= (O[t] || (v(e) ? 29 : 28));
 }
-function T(e, t) {
+function I(e, t) {
     return t >= 1 && t <= (v(e) ? 366 : 365);
 }
-function S(e, t, n) {
+function T(e, t, n) {
     return t >= 1 && t <= 53 && n >= 0 && n <= 6;
 }
 function A(e, t, n) {

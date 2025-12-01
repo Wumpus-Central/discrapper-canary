@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(990547),
@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(239091),
     d = n(213609),
     f = n(314910),
-    _ = n(728285),
-    p = n(210887),
-    h = n(574254),
-    m = n(585483),
+    p = n(728285),
+    _ = n(210887),
+    m = n(574254),
+    h = n(585483),
     g = n(981631);
 function E(e, t, n) {
     return (
@@ -69,24 +69,24 @@ function O(e, t) {
 function v() {
     window.getSelection().removeAllRanges();
 }
-let I = (e) => {
+let S = (e) => {
     let {
             children: t,
             close: n,
             onUnmount: s,
             target: u,
-            rect: p,
-            position: h,
-            align: m,
+            rect: _,
+            position: m,
+            align: h,
             impressionName: E,
             impressionProperties: b,
             disableClickTrap: y = !1,
         } = e,
         O = i.useRef(null),
-        I = i.useMemo(() => ({ current: u }), [u]),
-        T = i.useRef(n);
+        S = i.useMemo(() => ({ current: u }), [u]),
+        I = i.useRef(n);
     i.useEffect(() => {
-        T.current = n;
+        I.current = n;
     }),
         i.useEffect(() => {
             var e, t, n;
@@ -96,7 +96,7 @@ let I = (e) => {
                 var t;
                 let n = e.target,
                     r = null == (t = O.current) ? void 0 : t.elementRef.current;
-                (null != r && (0, c.ty$)(r, n)) || (v(), T.current());
+                (null != r && (0, c.ty$)(r, n)) || (v(), I.current());
             };
             return (
                 null == (t = r.ownerDocument) || t.addEventListener("click", i, !0),
@@ -108,14 +108,14 @@ let I = (e) => {
                 }
             );
         }, []);
-    let S = i.useRef(s);
+    let T = i.useRef(s);
     i.useEffect(() => {
-        S.current = s;
+        T.current = s;
     }),
         i.useEffect(
             () => () => {
                 var e;
-                return null == (e = S.current) ? void 0 : e.call(S);
+                return null == (e = T.current) ? void 0 : e.call(T);
             },
             [],
         ),
@@ -128,7 +128,7 @@ let I = (e) => {
             name: E,
             properties: b,
         });
-    let A = (0, _.Aq)(),
+    let A = (0, p.Aq)(),
         C = i.useCallback(() => {
             A.dispatch(g.CkL.POPOUT_SHOW);
         }, [A]),
@@ -139,24 +139,24 @@ let I = (e) => {
         ? (0, r.jsx)(o.pS, {
               open: !0,
               onOpenChange: (e) => {
-                  e ? C() : (N(), v(), T.current());
+                  e ? C() : (N(), v(), I.current());
               },
-              overrideTargetRect: p,
-              placement: (0, o.a_)(null != h ? h : "right", null != m ? m : "top"),
+              overrideTargetRect: _,
+              placement: (0, o.a_)(null != m ? m : "right", null != h ? h : "top"),
               blockPointerEvents: !y,
               renderLayer: (e) => {
                   let { update: n } = e;
-                  return t({ position: h }, n);
+                  return t({ position: m }, n);
               },
               children: () => null,
           })
         : (0, r.jsx)(f.W5, {
               onMount: C,
               onUnmount: N,
-              targetRef: I,
-              overrideTargetRect: p,
-              position: null != h ? h : "right",
-              align: null != m ? m : "top",
+              targetRef: S,
+              overrideTargetRect: _,
+              position: null != m ? m : "right",
+              align: null != h ? h : "top",
               autoInvert: !0,
               ref: O,
               nudgeAlignIntoViewport: !0,
@@ -164,12 +164,12 @@ let I = (e) => {
               children: t,
           });
 };
-class T extends i.PureComponent {
+class I extends i.PureComponent {
     componentDidMount() {
         let { renderLazy: e, renderWindow: t } = this.props;
         if (
             (t.addEventListener("resize", this.closeResize, !0),
-            m.S.subscribe(g.CkL.CONTEXT_MENU_CLOSE, this.props.closeContextMenu),
+            h.S.subscribe(g.CkL.CONTEXT_MENU_CLOSE, this.props.closeContextMenu),
             null != e)
         ) {
             let t = setTimeout(() => {
@@ -190,7 +190,7 @@ class T extends i.PureComponent {
     componentWillUnmount() {
         let { renderWindow: e } = this.props;
         e.removeEventListener("resize", this.closeResize, !0),
-            m.S.unsubscribe(g.CkL.CONTEXT_MENU_CLOSE, this.props.closeContextMenu);
+            h.S.unsubscribe(g.CkL.CONTEXT_MENU_CLOSE, this.props.closeContextMenu);
     }
     render() {
         var e, t, n;
@@ -203,7 +203,7 @@ class T extends i.PureComponent {
             null != d &&
             l.context === i &&
             (null == (e = a.ownerDocument) ? void 0 : e.defaultView) === u
-            ? (0, r.jsx)(I, {
+            ? (0, r.jsx)(S, {
                   target: a,
                   rect: c,
                   close: this.close,
@@ -240,20 +240,20 @@ class T extends i.PureComponent {
             });
     }
 }
-function S() {
+function T() {
     let {
             contextMenu: e,
             version: t,
             isOpen: n,
-        } = (0, s.cj)([h.Z], () => ({
-            contextMenu: h.Z.getContextMenu(),
-            version: h.Z.version,
-            isOpen: h.Z.isOpen(),
+        } = (0, s.cj)([m.Z], () => ({
+            contextMenu: m.Z.getContextMenu(),
+            version: m.Z.version,
+            isOpen: m.Z.isOpen(),
         })),
-        a = (0, s.e7)([p.Z], () => p.Z.theme),
-        { appContext: o, renderWindow: l } = i.useContext(_.ZP);
+        a = (0, s.e7)([_.Z], () => _.Z.theme),
+        { appContext: o, renderWindow: l } = i.useContext(p.ZP);
     return (0, r.jsx)(
-        T,
+        I,
         O(
             b(
                 {

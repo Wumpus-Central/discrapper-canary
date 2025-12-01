@@ -1,4 +1,4 @@
-n.d(t, { _: () => _ });
+n.d(t, { _: () => p });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -13,7 +13,7 @@ let c = 8,
         let n = (t ? d : u) / 2 - c;
         return Math.max(-n, Math.min(n, e));
     };
-function _(e) {
+function p(e) {
     let { caretConfig: t } = e,
         { position: n, align: i, customOffset: c } = t,
         { isRichTooltip: u } = (0, s.nr)();
@@ -25,9 +25,9 @@ function _(e) {
                       "--custom-caret-offset-y": ["left", "right"].includes(n) ? "".concat(f(c, u), "px") : "0px",
                   }
                 : void 0,
-        _ = a()(l.caret, l["caret--".concat(n)], l["caret--".concat(i)]);
+        p = a()(l.caret, l["caret--".concat(n)], l["caret--".concat(i)]);
     return (0, r.jsx)("div", {
-        className: _,
+        className: p,
         style: d,
         children: (0, r.jsx)(o.V, {}),
     });

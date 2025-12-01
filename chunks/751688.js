@@ -5,7 +5,7 @@ var r = n(54381),
     o = n.n(a),
     s = n(481060),
     l = n(129861),
-    c = n(456077),
+    c = n(670188),
     u = n(612818);
 function d(e, t, n) {
     return (
@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,22 +48,22 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -71,7 +71,7 @@ function h(e, t) {
     }
     return i;
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -86,8 +86,8 @@ function g(e) {
             guildId: n,
             channelId: a,
             nick: d,
-            className: _,
-            textClassName: m,
+            className: p,
+            textClassName: h,
             disablePopout: g,
             ignoreModalClicks: E,
             onClick: b,
@@ -95,9 +95,9 @@ function g(e) {
             onPopoutRequestOpen: O,
             onPopoutRequestClose: v,
         } = e,
-        I = i.useRef(null);
+        S = i.useRef(null);
     return (0, r.jsx)(c.Z, {
-        targetElementRef: I,
+        targetElementRef: S,
         user: t,
         guildId: n,
         channelId: a,
@@ -108,12 +108,12 @@ function g(e) {
         ignoreModalClicks: E,
         children: (e) => {
             var { onClick: i } = e,
-                a = h(e, ["onClick"]);
+                a = m(e, ["onClick"]);
             return (0, r.jsxs)(
                 s.P3F,
-                p(f({}, a), {
-                    innerRef: I,
-                    className: o()(u.userListItem, _, { [u.popoutDisabled]: g }),
+                _(f({}, a), {
+                    innerRef: S,
+                    className: o()(u.userListItem, p, { [u.popoutDisabled]: g }),
                     onContextMenu: y,
                     onClick: (e) => {
                         i(e), null == b || b(e);
@@ -126,7 +126,7 @@ function g(e) {
                             size: s.EFr.SIZE_24,
                         }),
                         (0, r.jsx)(s.Text, {
-                            className: o()(u.userListItemTag, m),
+                            className: o()(u.userListItemTag, h),
                             variant: "text-sm/normal",
                             children: (0, r.jsx)(l.Z, {
                                 user: t,

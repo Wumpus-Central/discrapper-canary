@@ -1,46 +1,46 @@
-let a;
-_.d(e, { a: () => i });
-var r = _(578346),
-    n = _(987886),
-    o = _(370336),
-    E = _(395848);
-function i(t) {
-    let e = "history";
-    (0, r.Hj)(e, t), (0, r.D2)(e, c);
+let n;
+r.d(t, { a: () => s });
+var a = r(578346),
+    i = r(987886),
+    o = r(370336),
+    _ = r(395848);
+function s(e) {
+    let t = "history";
+    (0, a.Hj)(t, e), (0, a.D2)(t, c);
 }
 function c() {
-    if (!(0, n.B)()) return;
-    let t = E.m.onpopstate;
-    function e(t) {
-        return function (...e) {
-            let _ = e.length > 2 ? e[2] : void 0;
-            if (_) {
-                let t = a,
-                    e = String(_);
-                (a = e),
-                    (0, r.rK)("history", {
-                        from: t,
-                        to: e,
+    if (!(0, i.B)()) return;
+    let e = _.m.onpopstate;
+    function t(e) {
+        return function (...t) {
+            let r = t.length > 2 ? t[2] : void 0;
+            if (r) {
+                let e = n,
+                    t = String(r);
+                (n = t),
+                    (0, a.rK)("history", {
+                        from: e,
+                        to: t,
                     });
             }
-            return t.apply(this, e);
+            return e.apply(this, t);
         };
     }
-    (E.m.onpopstate = function (...e) {
-        let _ = E.m.location.href,
-            n = a;
+    (_.m.onpopstate = function (...t) {
+        let r = _.m.location.href,
+            i = n;
         if (
-            ((a = _),
-            (0, r.rK)("history", {
-                from: n,
-                to: _,
+            ((n = r),
+            (0, a.rK)("history", {
+                from: i,
+                to: r,
             }),
-            t)
+            e)
         )
             try {
-                return t.apply(this, e);
-            } catch (t) {}
+                return e.apply(this, t);
+            } catch (e) {}
     }),
-        (0, o.hl)(E.m.history, "pushState", e),
-        (0, o.hl)(E.m.history, "replaceState", e);
+        (0, o.hl)(_.m.history, "pushState", t),
+        (0, o.hl)(_.m.history, "replaceState", t);
 }

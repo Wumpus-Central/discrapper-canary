@@ -10,11 +10,11 @@ var r = n(473749),
     d = n(981631);
 function f(e) {
     let [t, n] = r.useState(!1),
-        [f, _] = r.useState(!1),
-        p = s.default.cast(e),
-        { joinRequest: h, guild: m } = (0, i.cj)([c.Z, u.Z, a.Z, o.Z], () => {
+        [f, p] = r.useState(!1),
+        _ = s.default.cast(e),
+        { joinRequest: m, guild: h } = (0, i.cj)([c.Z, u.Z, a.Z, o.Z], () => {
             var e;
-            let t = c.Z.getRequest(p);
+            let t = c.Z.getRequest(_);
             if (null == t)
                 return {
                     joinRequest: null,
@@ -30,19 +30,19 @@ function f(e) {
         });
     return (
         r.useEffect(() => {
-            null != m || f || (_(!0), l.Z.fetchRequestToJoinGuilds());
-        }, [m, f]),
+            null != h || f || (p(!0), l.Z.fetchRequestToJoinGuilds());
+        }, [h, f]),
         r.useEffect(() => {
-            null == h &&
+            null == m &&
                 (n(!0),
-                l.Z.fetchGuildJoinRequest(p).finally(() => {
+                l.Z.fetchGuildJoinRequest(_).finally(() => {
                     n(!1);
                 }));
-        }, [h, p]),
+        }, [m, _]),
         {
             loading: t,
-            joinRequest: h,
-            joinRequestGuild: m,
+            joinRequest: m,
+            joinRequestGuild: h,
         }
     );
 }

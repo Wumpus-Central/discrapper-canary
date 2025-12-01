@@ -1,7 +1,7 @@
 n.d(t, {
-    $c: () => _,
-    Nx: () => p,
-    On: () => h,
+    $c: () => p,
+    Nx: () => _,
+    On: () => m,
     tQ: () => d,
     x5: () => f,
 });
@@ -23,7 +23,7 @@ let d = {
         comboKeysBindGlobal: !0,
         action: () => ((0, r.Z)(-1), !1),
     },
-    _ = {
+    p = {
         binds: ["mod+alt+right"],
         comboKeysBindGlobal: !0,
         action() {
@@ -36,12 +36,12 @@ let d = {
             return null != e && (0, o.X)(e), !1;
         },
     },
-    p = {
+    _ = {
         binds: (0, c.isMac)() ? ["mod+["] : ["alt+left"],
         comboKeysBindGlobal: !0,
         action: () => ((0, a.Hm)("keybind"), !1),
     },
-    h = {
+    m = {
         binds: (0, c.isMac)() ? ["mod+]"] : ["alt+right"],
         comboKeysBindGlobal: !0,
         action: () => ((0, a.TL)("keybind"), !1),

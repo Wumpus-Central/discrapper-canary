@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,15 +9,15 @@ var r = n(54381),
     u = n(249458),
     d = n(313201),
     f = n(240991),
-    _ = n(388032),
-    p = n(430864);
-function h(e) {
+    p = n(388032),
+    _ = n(430864);
+function m(e) {
     let {
             userBio: t,
             className: n,
             animateOnHoverOrFocusOnly: a = !1,
-            isHoveringOrFocusing: h = !1,
-            lineClamp: m = 6,
+            isHoveringOrFocusing: m = !1,
+            lineClamp: h = 6,
             setLineClamp: g = !0,
             textColor: E,
             userId: b,
@@ -30,22 +30,22 @@ function h(e) {
     return null == O
         ? null
         : (0, r.jsxs)("section", {
-              className: o()(n, p.markup),
+              className: o()(n, _.markup),
               "aria-labelledby": y,
               children: [
                   (0, r.jsx)(s.nn4, {
                       children: (0, r.jsx)(s.H, {
                           id: y,
-                          children: _.intl.string(_.t.jGoPJT),
+                          children: p.intl.string(p.t.jGoPJT),
                       }),
                   }),
                   (0, r.jsx)(s.Text, {
                       variant: "text-sm/normal",
-                      lineClamp: g ? m : void 0,
+                      lineClamp: g ? h : void 0,
                       color: void 0 !== E ? E : void 0,
                       children: (0, r.jsx)(u.G.Provider, {
                           value: {
-                              disableAnimations: a && !h,
+                              disableAnimations: a && !m,
                               disableInteractions: !1,
                           },
                           children: O,

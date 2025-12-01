@@ -1,4 +1,4 @@
-n.d(t, { y: () => p }), n(539854), n(388685);
+n.d(t, { y: () => _ }), n(539854), n(388685);
 var r = n(873546),
     i = n(379649),
     a = n(710845),
@@ -21,8 +21,8 @@ function c(e, t, n) {
 let u = 16,
     d = 600,
     f = 900,
-    _ = !1;
-class p {
+    p = !1;
+class _ {
     calculateFps(e, t, n) {
         if (
             -1 === this.prevFramesCodec[e] ||
@@ -41,7 +41,7 @@ class p {
         if (!this.disabled && !this.streamDisabledUsers.has(e)) {
             let r = this.calculateFps(e, t, n);
             if (
-                (_ && this.logger.info("frames=".concat(t, ", timestamp=").concat(n, " fps=").concat(r)),
+                (p && this.logger.info("frames=".concat(t, ", timestamp=").concat(n, " fps=").concat(r)),
                 !(r < 0) && Number.isFinite(r))
             )
                 this.perUserFpsWindow[e].push(r),
@@ -164,7 +164,7 @@ class p {
             );
     }
 }
-c(p, "defaultConfig", {
+c(_, "defaultConfig", {
     featureEnabled: r.tq,
     windowLength: 5,
     allowedPoorFpsRatio: 1,

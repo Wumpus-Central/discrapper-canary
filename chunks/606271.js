@@ -2,8 +2,8 @@ n.d(t, { Z: () => P }), n(388685);
 var r = n(442837),
     i = n(570140),
     l = n(107105),
-    a = n(509212),
-    s = n(569984),
+    a = n(616022),
+    s = n(509212),
     o = n(592125),
     c = n(271383),
     u = n(430824),
@@ -461,9 +461,9 @@ class P {
                 let { enrolledQuestUserStatus: t } = e;
                 if (0 === this.rpcServer.subscriptions.length) return;
                 let n = t.questId,
-                    r = s.Z.getQuest(n);
+                    r = a.Z.getQuest(n);
                 if (null == r) return;
-                let i = (0, a.nY)(r);
+                let i = (0, s.nY)(r);
                 null != i &&
                     this.rpcServer.dispatchToSubscriptions(
                         C.zMe.QUEST_ENROLLMENT_STATUS_UPDATE,

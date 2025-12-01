@@ -8,9 +8,9 @@ var r,
     c = n.n(s),
     u = n(748780),
     d = n(902704),
-    p = n(481060),
+    f = n(481060),
     h = n(247060);
-function f(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
@@ -100,7 +100,7 @@ class b extends l.Component {
     }
     constructor(e) {
         super(e),
-            f(this, "_timeout", void 0),
+            p(this, "_timeout", void 0),
             (this.state = {
                 translateY: new u.Z.Value(),
                 reduceMotion: !1,
@@ -143,11 +143,11 @@ class _ extends (r = l.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            f(this, "state", {
+            p(this, "state", {
                 unread: null,
                 mention: null,
             }),
-            f(
+            p(
                 this,
                 "calculateState",
                 c()(() => {
@@ -176,14 +176,14 @@ class _ extends (r = l.PureComponent) {
                             null == a && i(e, l, c) && (a = e), null == s && r(e, l, c) && (s = e);
                         },
                         d = l ? c.length - 1 : 0,
-                        p = c[d];
-                    for (; null != p; ) {
-                        if ("string" == typeof p) {
-                            if (n(p, l, c)) break;
-                            u(p);
+                        f = c[d];
+                    for (; null != f; ) {
+                        if ("string" == typeof f) {
+                            if (n(f, l, c)) break;
+                            u(f);
                         } else {
                             let e = !1;
-                            for (let t of p) {
+                            for (let t of f) {
                                 if (n(t, l, c)) {
                                     e = !0;
                                     break;
@@ -192,7 +192,7 @@ class _ extends (r = l.PureComponent) {
                             }
                             if (e) break;
                         }
-                        (d += l ? -1 : 1), (p = c[d]);
+                        (d += l ? -1 : 1), (f = c[d]);
                     }
                     null != o && o(a, s, l),
                         this.setState({
@@ -201,7 +201,7 @@ class _ extends (r = l.PureComponent) {
                         });
                 }, 200),
             ),
-            f(this, "handleClick", (e) => {
+            p(this, "handleClick", (e) => {
                 e.preventDefault(), e.stopPropagation();
                 let { unread: t, mention: n } = this.state,
                     { onJumpTo: r } = this.props,
@@ -210,8 +210,8 @@ class _ extends (r = l.PureComponent) {
             });
     }
 }
-f(_, "contextType", p.Sfi),
-    f(_, "defaultProps", {
+p(_, "contextType", f.Sfi),
+    p(_, "defaultProps", {
         className: h.container,
         reverse: !1,
         hide: !1,

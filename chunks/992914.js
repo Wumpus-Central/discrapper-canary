@@ -9,10 +9,10 @@ var r = n(992174),
             }
         else
             for (
-                var c = i(n / 2), u = a(r(e, 0, c), t), d = a(r(e, c), t), f = u.length, _ = d.length, p = 0, h = 0;
-                p < f || h < _;
+                var c = i(n / 2), u = a(r(e, 0, c), t), d = a(r(e, c), t), f = u.length, p = d.length, _ = 0, m = 0;
+                _ < f || m < p;
             )
-                e[p + h] = p < f && h < _ ? (0 >= t(u[p], d[h]) ? u[p++] : d[h++]) : p < f ? u[p++] : d[h++];
+                e[_ + m] = _ < f && m < p ? (0 >= t(u[_], d[m]) ? u[_++] : d[m++]) : _ < f ? u[_++] : d[m++];
         return e;
     };
 e.exports = a;

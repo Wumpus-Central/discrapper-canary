@@ -10,7 +10,7 @@ var r = n(54381),
     d = n(893966),
     C = n(527379),
     m = n(388032),
-    b = n(266631),
+    b = n(490225),
     p = n(51237);
 function f(e) {
     let { guild: t, onSubmit: i } = e,

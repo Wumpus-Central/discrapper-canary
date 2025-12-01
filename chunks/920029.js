@@ -12,23 +12,23 @@ var r = n(48657),
             u = 4 === e,
             d = 6 === e,
             f = 7 === e,
-            _ = 5 === e || d;
-        return function (p, h, m, g) {
+            p = 5 === e || d;
+        return function (_, m, h, g) {
             for (
                 var E,
                     b,
-                    y = o(p),
+                    y = o(_),
                     O = a(y),
                     v = s(O),
-                    I = r(h, m),
-                    T = 0,
-                    S = g || l,
-                    A = t ? S(p, v) : n || f ? S(p, 0) : void 0;
-                v > T;
-                T++
+                    S = r(m, h),
+                    I = 0,
+                    T = g || l,
+                    A = t ? T(_, v) : n || f ? T(_, 0) : void 0;
+                v > I;
+                I++
             )
-                if ((_ || T in O) && ((b = I((E = O[T]), T, y)), e))
-                    if (t) A[T] = b;
+                if ((p || I in O) && ((b = S((E = O[I]), I, y)), e))
+                    if (t) A[I] = b;
                     else if (b)
                         switch (e) {
                             case 3:
@@ -36,7 +36,7 @@ var r = n(48657),
                             case 5:
                                 return E;
                             case 6:
-                                return T;
+                                return I;
                             case 2:
                                 c(A, E);
                         }

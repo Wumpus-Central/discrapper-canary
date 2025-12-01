@@ -1,4 +1,4 @@
-n.d(t, { j: () => R }), n(388685);
+n.d(t, { j: () => P }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,17 +9,17 @@ var r = n(54381),
     u = n(846027),
     d = n(906732),
     f = n(210887),
-    _ = n(962100),
-    p = n(463395),
-    h = n(131951),
-    m = n(626135),
+    p = n(962100),
+    _ = n(463395),
+    m = n(131951),
+    h = n(626135),
     g = n(568001),
     E = n(72897),
     b = n(981631),
     y = n(65154),
     O = n(388032),
     v = n(118896);
-function I(e, t, n) {
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +32,7 @@ function I(e, t, n) {
         e
     );
 }
-function T(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,12 +43,12 @@ function T(e) {
                 }),
             )),
             r.forEach(function (t) {
-                I(e, t, n[t]);
+                S(e, t, n[t]);
             });
     }
     return e;
 }
-function S(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -77,7 +77,7 @@ function N(e) {
             Icon: c.S6n,
             getCanSetDevice: (e) => e.supports(y.AN.AUDIO_INPUT_DEVICE),
             getWarningMessage: () =>
-                O.intl.format(O.t["1iK6UW"], { onDownloadClick: () => (0, _.y)("Help Text Input Devices") }),
+                O.intl.format(O.t["1iK6UW"], { onDownloadClick: () => (0, p.y)("Help Text Input Devices") }),
             getLocation: (e) => "".concat(e, ".SingleSelectInputDevices"),
         },
         [y.h7.AUDIO_OUTPUT]: {
@@ -85,7 +85,7 @@ function N(e) {
             Icon: c.VWR,
             getCanSetDevice: (e) => e.supports(y.AN.AUDIO_OUTPUT_DEVICE),
             getWarningMessage: () =>
-                O.intl.format(O.t.Ow0dbF, { onDownloadClick: () => (0, _.y)("Help Text Output Devices") }),
+                O.intl.format(O.t.Ow0dbF, { onDownloadClick: () => (0, p.y)("Help Text Output Devices") }),
             getLocation: (e) => "".concat(e, ".SingleSelectOutputDevices"),
         },
         [y.h7.VIDEO_INPUT]: {
@@ -93,22 +93,22 @@ function N(e) {
             Icon: c.xmR,
             getCanSetDevice: (e) => e.isVideoAvailable(),
             getWarningMessage: () =>
-                O.intl.format(O.t["1iK6UW"], { onDownloadClick: () => (0, _.y)("Help Text Video Devices") }),
+                O.intl.format(O.t["1iK6UW"], { onDownloadClick: () => (0, p.y)("Help Text Video Devices") }),
             getLocation: (e) => "".concat(e, ".SingleSelectVideoDevices"),
         },
     }[e];
 }
-function R(e) {
+function P(e) {
     var {
             deviceType: t,
             location: a,
             showAllDevices: u = !1,
-            selectedDeviceId: _,
+            selectedDeviceId: p,
             onSelectDevice: y,
-            hideDeviceTypeIcon: I = !1,
+            hideDeviceTypeIcon: S = !1,
             label: A,
         } = e,
-        R = S(e, [
+        P = T(e, [
             "deviceType",
             "location",
             "showAllDevices",
@@ -117,41 +117,41 @@ function R(e) {
             "hideDeviceTypeIcon",
             "label",
         ]);
-    let { setDevice: P, Icon: D, getCanSetDevice: w, getWarningMessage: L, getLocation: x } = N(t),
-        { analyticsLocations: M } = (0, d.ZP)(),
-        k = (0, s.e7)([f.Z], () => f.Z.theme),
-        [j, U] = i.useState(u),
-        G = x(a),
-        [B, Z] = (0, E.Ls)(t, { location: G }),
+    let { setDevice: R, Icon: w, getCanSetDevice: D, getWarningMessage: x, getLocation: L } = N(t),
+        { analyticsLocations: j } = (0, d.ZP)(),
+        M = (0, s.e7)([f.Z], () => f.Z.theme),
+        [k, U] = i.useState(u),
+        G = L(a),
+        [Z, B] = (0, E.Ls)(t, { location: G }),
         { id: F } = (0, E.p6)(t),
-        V = null != _ ? _ : F,
-        H = (0, s.e7)([h.Z], () => w(h.Z)),
+        V = null != p ? p : F,
+        H = (0, s.e7)([m.Z], () => D(m.Z)),
         { showDeviceSelectionImprovements: Y } = (0, g.V)({ location: "".concat(G, "/SingleSelectDevices") }),
         W = (0, r.jsx)(c.Wn, {
             messageType: c.QYI.WARNING,
-            children: L(),
+            children: x(),
         }),
         K = i.useCallback(
             (e) => {
                 if (e === C)
                     U(!0),
-                        m.default.track(b.rMx.DEVICES_LIST_SHOW_MORE_CLICKED, {
+                        h.default.track(b.rMx.DEVICES_LIST_SHOW_MORE_CLICKED, {
                             device_type: t,
                             location: G,
-                            location_stack: M,
-                            shown_device_count: B.length,
-                            hidden_device_count: Z.length,
+                            location_stack: j,
+                            shown_device_count: Z.length,
+                            hidden_device_count: B.length,
                         });
                 else {
                     var n;
                     (null == (n = null == y ? void 0 : y(e)) || n) &&
-                        P(e, {
+                        R(e, {
                             location: G,
-                            analyticsLocations: M,
+                            analyticsLocations: j,
                         });
                 }
             },
-            [t, G, B.length, Z.length, M, y, P],
+            [t, G, Z.length, B.length, j, y, R],
         );
     function z(e) {
         let t,
@@ -164,9 +164,9 @@ function R(e) {
             ((0, g.M)({ location: "".concat(G, "/SingleSelectDevices.defaultRenderOptionLabel") }),
             (d = f.prefix),
             (t = f.subName));
-        let _ = p.Z.getCertifiedDeviceName(s, d);
-        if (p.Z.isCertified(s)) {
-            let e = (0, l.ap)(k) ? n(561259) : n(887695);
+        let p = _.Z.getCertifiedDeviceName(s, d);
+        if (_.Z.isCertified(s)) {
+            let e = (0, l.ap)(M) ? n(561259) : n(887695);
             i = (0, r.jsx)("img", {
                 src: e,
                 alt: O.intl.string(O.t.smSKsj),
@@ -175,13 +175,13 @@ function R(e) {
         return (0, r.jsxs)("div", {
             className: o()(v.deviceContainer, {
                 [v.multiLine]: u && null != t,
-                [v.withIcon]: !I,
+                [v.withIcon]: !S,
             }),
             children: [
-                !I &&
+                !S &&
                     (0, r.jsx)("div", {
                         className: v.deviceIcon,
-                        children: (0, r.jsx)(D, {
+                        children: (0, r.jsx)(w, {
                             size: "custom",
                             width: 20,
                             height: 20,
@@ -193,7 +193,7 @@ function R(e) {
                     variant: "text-md/medium",
                     color: u ? "text-secondary" : "text-default",
                     className: v.deviceLabel,
-                    children: _,
+                    children: p,
                 }),
                 null != t &&
                     (0, r.jsx)(c.Text, {
@@ -219,9 +219,9 @@ function R(e) {
                     label: n,
                 };
             },
-            t = B.map(e);
-        if (j || 0 === Z.length) {
-            let n = Z.map(e);
+            t = Z.map(e);
+        if (k || 0 === B.length) {
+            let n = B.map(e);
             return t.concat(n);
         }
         {
@@ -237,7 +237,7 @@ function R(e) {
         children: [
             (0, r.jsx)(
                 c.q4e,
-                T(
+                I(
                     {
                         label: A,
                         value: V,
@@ -252,7 +252,7 @@ function R(e) {
                         },
                         optionClassName: v.singleSelectOption,
                     },
-                    R,
+                    P,
                 ),
             ),
             !H && W,

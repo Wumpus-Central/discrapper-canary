@@ -105,10 +105,10 @@ e.exports = function (e) {
                 },
             ],
         },
-        _ = f;
+        p = f;
     return (
-        (_.variants[1].contains = [f]),
-        (f.variants[1].contains = [_]),
+        (p.variants[1].contains = [f]),
+        (f.variants[1].contains = [p]),
         {
             name: "Kotlin",
             aliases: ["kt", "kts"],

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(379649),
     i = n(846519),
     a = n(361291),
@@ -60,7 +60,7 @@ function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
     return null != e ? Math.round(e) : t;
 }
-class _ {
+class p {
     start() {
         let { resolution: e, fps: t } = a.Z.getState();
         (this._targetResolution = e),

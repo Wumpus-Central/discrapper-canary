@@ -21,7 +21,7 @@ let p = (e) => {
             variant: s = "text-md/semibold",
         } = e;
         return n.currency === u.pK.DISCORD_ORB
-            ? (0, r.jsx)(b, {
+            ? (0, r.jsx)(g, {
                   orbAmount: n.amount,
                   className: i,
                   variant: s,
@@ -43,19 +43,19 @@ let p = (e) => {
                 nitroIconSize: u = "md",
                 className: p,
                 discountOfferAmount: f,
-                discount: b = c.f_,
-                variant: g = "heading-md/semibold",
+                discount: g = c.f_,
+                variant: b = "heading-md/semibold",
             } = e,
             m = null != f,
             h = (0, s.qr)(n, t),
             x =
-                b !== c.f_ && b.discountPercentage >= 5 && !m
+                g !== c.f_ && g.discountPercentage >= 5 && !m
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(o.nn4, {
                                   children: d.intl.format(d.t.niC6DK, {
                                       price: h,
-                                      discountPercentage: b.discountPercentage,
+                                      discountPercentage: g.discountPercentage,
                                   }),
                               }),
                               (0, r.jsx)("span", {
@@ -65,7 +65,7 @@ let p = (e) => {
                               (0, r.jsx)("span", {
                                   className: v.discount,
                                   "aria-hidden": !0,
-                                  children: " (-".concat(b.discountPercentage, "%)"),
+                                  children: " (-".concat(g.discountPercentage, "%)"),
                               }),
                           ],
                       })
@@ -100,14 +100,14 @@ let p = (e) => {
                         })
                       : null,
                 (0, r.jsx)(o.Text, {
-                    variant: g,
+                    variant: b,
                     color: "currentColor",
                     lineClamp: 1,
                     children: x,
                 }),
                 m &&
                     (0, r.jsxs)(o.Text, {
-                        variant: g,
+                        variant: b,
                         className: v.discountPill,
                         lineClamp: 1,
                         children: [
@@ -121,7 +121,7 @@ let p = (e) => {
             ],
         });
     },
-    b = (e) => {
+    g = (e) => {
         let { orbAmount: n, className: t, variant: l = "text-md/semibold" } = e;
         return (0, r.jsxs)("div", {
             className: i()(v.container, t),

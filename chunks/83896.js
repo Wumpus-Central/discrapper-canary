@@ -18,9 +18,9 @@ var i = n(54381),
     C = n(505905),
     v = n(981631),
     _ = n(388032),
-    x = n(10359),
-    j = n(254477);
-function O(e) {
+    O = n(10359),
+    x = n(254477);
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -75,7 +75,7 @@ function S(e) {
         r.useEffect(() => {
             p.default.track(
                 v.rMx.VIEW_HANG_STATUS,
-                O(
+                j(
                     {
                         source: "HangStatusPopout",
                         other_user_id: l,
@@ -90,7 +90,7 @@ function S(e) {
                 (c.default.selectVoiceChannel(n.id),
                 p.default.track(
                     v.rMx.HANG_STATUS_CTA_CLICKED,
-                    E(O({ source: "HangStatusPopout" }, (0, g.Z)(n.id)), {
+                    E(j({ source: "HangStatusPopout" }, (0, g.Z)(n.id)), {
                         other_user_id: l,
                         cta_type: "join",
                     }),
@@ -106,7 +106,7 @@ function S(e) {
                 } else (0, h.Zx)(e, !0);
                 p.default.track(
                     v.rMx.HANG_STATUS_CTA_CLICKED,
-                    E(O({ source: "HangStatusPopout" }, (0, g.Z)(n.id)), {
+                    E(j({ source: "HangStatusPopout" }, (0, g.Z)(n.id)), {
                         other_user_id: l,
                         cta_type: "swipe",
                     }),
@@ -115,17 +115,17 @@ function S(e) {
         }, [I, T, t, n.id, l]);
     return (0, i.jsxs)("div", {
         ref: P,
-        className: a()(j.popover, x.container),
+        className: a()(x.popover, O.container),
         children: [
             (0, i.jsx)(y.Z, {
                 userId: l,
                 size: 32,
-                className: x.icon,
+                className: O.icon,
                 hangStatusActivity: t,
             }),
             (0, i.jsx)(s.Text, {
                 variant: "text-md/medium",
-                className: x.statusText,
+                className: O.statusText,
                 children: (0, f.O8)(l, t),
             }),
             I
@@ -135,7 +135,7 @@ function S(e) {
                       children: (e) =>
                           (0, i.jsx)(
                               "div",
-                              E(O({}, e), {
+                              E(j({}, e), {
                                   children: (0, i.jsx)(s.Button, {
                                       size: "sm",
                                       variant: "secondary",

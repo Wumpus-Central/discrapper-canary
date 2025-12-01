@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(539854), n(415506), n(388685), n(49124), n(290780), n(35282);
+n.d(t, { Z: () => I }), n(539854), n(415506), n(388685), n(49124), n(290780), n(35282);
 var r,
     i = n(74514),
     a = n.n(i),
@@ -9,10 +9,10 @@ var r,
     u = n(579092),
     d = n(46973),
     f = n(912095),
-    _ = n(405475),
-    p = n(886848),
-    h = n(586021),
-    m = n(649318),
+    p = n(405475),
+    _ = n(886848),
+    m = n(586021),
+    h = n(649318),
     g = n(65154),
     E = n(436620);
 function b(e, t, n) {
@@ -31,10 +31,10 @@ function b(e, t, n) {
 let y = 10,
     O = 10,
     v = null == (r = c().name) ? void 0 : r.toLowerCase().includes("firefox");
-function I(e, t) {
+function S(e, t) {
     e.sender.replaceTrack(t), (e.direction = null != t ? "sendrecv" : "recvonly");
 }
-class T extends f.Z {
+class I extends f.Z {
     destroy() {
         super.destroy(), "closed" !== this.signalingState && this.pc.close();
     }
@@ -57,8 +57,8 @@ class T extends f.Z {
         let t = "closed" === this.iceConnectionState;
         null != e &&
             !t &&
-            (I(this.audioTransceiver, e.getAudioTracks()[0]),
-            this.videoSupported && I(this.videoTransceiver, e.getVideoTracks()[0])),
+            (S(this.audioTransceiver, e.getAudioTracks()[0]),
+            this.videoSupported && S(this.videoTransceiver, e.getVideoTracks()[0])),
             this.logger.info("Renegotiating: Streams changed"),
             this.handleNegotiationNeeded();
     }
@@ -137,7 +137,7 @@ class T extends f.Z {
         this.enableAudioNack = e > 0;
     }
     setSDP(e) {
-        if (!(0, m.$6)(e)) throw Error("Incorrect SDP received from rtc-worker: ".concat(e));
+        if (!(0, h.$6)(e)) throw Error("Incorrect SDP received from rtc-worker: ".concat(e));
         if ("have-local-offer" !== this.signalingState)
             throw Error("Invalid signaling state ".concat(this.signalingState));
         let { outboundStreams: t } = this.parseLocalDescription();
@@ -274,8 +274,8 @@ class T extends f.Z {
                 audioSSRC: i,
                 videoSSRC: a,
                 rtxSSRC: o,
-            } = (0, m.Nl)(t, this.experimentFlags.has(g.V8.BROWSER_HEVC)),
-            s = (0, m.nX)(t);
+            } = (0, h.Nl)(t, this.experimentFlags.has(g.V8.BROWSER_HEVC)),
+            s = (0, h.nX)(t);
         return {
             sdp: t,
             outboundStreams: n,
@@ -334,7 +334,7 @@ class T extends f.Z {
                         ssrc: s.ssrc,
                         cname: s.cname,
                         type: a,
-                        direction: (0, m.Mg)(o),
+                        direction: (0, h.Mg)(o),
                         mid: i,
                     }
                 );
@@ -365,14 +365,14 @@ class T extends f.Z {
                     .concat(null == f ? "null" : f),
             );
         let {
-            ssrcs: _,
-            remainingAudioStreams: p,
-            remainingVideoStreams: h,
+            ssrcs: p,
+            remainingAudioStreams: _,
+            remainingVideoStreams: m,
         } = this.buildSSRCsFromOutboundStreams(e, t, n, r);
         return {
-            remainingAudioStreams: p,
-            remainingVideoStreams: h,
-            answer: (0, m.Rx)({
+            remainingAudioStreams: _,
+            remainingVideoStreams: m,
+            answer: (0, h.Rx)({
                 type: "answer",
                 baseSDP: f,
                 audioCodec: o,
@@ -383,7 +383,7 @@ class T extends f.Z {
                 videoBitRate: 2500,
                 sendingVideo: u,
                 rtxPayloadType: d,
-                ssrcs: _,
+                ssrcs: p,
                 extensions: this.extensions,
                 enableAudioNack: this.enableAudioNack,
             }),
@@ -410,7 +410,7 @@ class T extends f.Z {
         this.input.reset(),
             this.setConnectionState(g.$j.CONNECTED),
             this.on(d.Sh.Stats, this.handleStats),
-            this.input.on(p.G.VoiceActivity, this.handleVoiceActivity);
+            this.input.on(_.G.VoiceActivity, this.handleVoiceActivity);
     }
     async handleNegotiationNeeded() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -438,34 +438,34 @@ class T extends f.Z {
             outboundStreams: c,
             codecs: u,
             audioSSRC: f,
-            videoSSRC: _,
-            rtxSSRC: p,
-            extensions: h,
+            videoSSRC: p,
+            rtxSSRC: _,
+            extensions: m,
         } = this.parseLocalDescription();
-        if (((this.codecs = u), (this.extensions = h), f !== this.audioSSRC || _ !== this.videoSSRC)) {
+        if (((this.codecs = u), (this.extensions = m), f !== this.audioSSRC || p !== this.videoSSRC)) {
             var E;
-            null == (E = this.daveSessionManager) || E.updateSsrcs(this.userId, f, [_]);
+            null == (E = this.daveSessionManager) || E.updateSsrcs(this.userId, f, [p]);
         }
         (this.audioSSRC = f),
-            (this.videoSSRC = _),
-            (this.videoReady = _ > 0 && p > 0),
-            (this.videoStreamParameters[0].ssrc !== _ ||
-                this.videoStreamParameters[0].rtxSsrc !== p ||
+            (this.videoSSRC = p),
+            (this.videoReady = p > 0 && _ > 0),
+            (this.videoStreamParameters[0].ssrc !== p ||
+                this.videoStreamParameters[0].rtxSsrc !== _ ||
                 this.videoReady) &&
-                ((this.videoStreamParameters[0].ssrc = 0 === _ ? this.videoStreamParameters[0].ssrc : _),
-                (this.videoStreamParameters[0].rtxSsrc = 0 === p ? this.videoStreamParameters[0].rtxSsrc : p),
+                ((this.videoStreamParameters[0].ssrc = 0 === p ? this.videoStreamParameters[0].ssrc : p),
+                (this.videoStreamParameters[0].rtxSsrc = 0 === _ ? this.videoStreamParameters[0].rtxSsrc : _),
                 (this.videoStreamParameters[0].active = this.videoReady),
                 this.emit(
                     d.Sh.Video,
                     this.userId,
                     this.input.getVideoStreamId(),
                     this.audioSSRC,
-                    _,
                     p,
+                    _,
                     this.videoStreamParameters,
                 )),
             null == this.sdp
-                ? this.emit(d.Sh.Connected, "webrtc", (0, m.sc)(l, this.experimentFlags.has(g.V8.BROWSER_HEVC)))
+                ? this.emit(d.Sh.Connected, "webrtc", (0, h.sc)(l, this.experimentFlags.has(g.V8.BROWSER_HEVC)))
                 : this.setRemoteAnswer(c, t, n, r);
     }
     constructor(e) {
@@ -571,10 +571,10 @@ class T extends f.Z {
             (this.logger = new u.Yd("UnifiedConnection(".concat(e.context, ")")));
         let n = e.dave;
         null == n ||
-            (0, h.IT)() ||
+            (0, m.IT)() ||
             (this.logger.warn("DAVE is initialized but encoded transforms are not supported"), (n = null)),
             null != n &&
-                ((this.daveSessionManager = new _.j(n, e.transientKeys, this.userId)),
+                ((this.daveSessionManager = new p.j(n, e.transientKeys, this.userId)),
                 this.daveSessionManager.on(d.Sh.MLSFailure, (e, t) => {
                     this.emit(d.Sh.MLSFailure, e, t);
                 }),

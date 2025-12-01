@@ -1,13 +1,13 @@
 n.d(t, {
     Gj: () => l,
     Ic: () => u,
-    Jn: () => p,
+    Jn: () => _,
     ZN: () => g,
     ZP: () => a,
-    a0: () => _,
-    oT: () => m,
+    a0: () => p,
+    oT: () => h,
     vx: () => d,
-    z_: () => h,
+    z_: () => m,
     zi: () => c,
 });
 var r = n(822632),
@@ -23,10 +23,10 @@ let a = {
     u = 4,
     d = 8,
     f = "XML:com.adobe.xmp\0",
-    _ = "tEXt",
-    p = "iTXt",
-    h = "zTXt",
-    m = "pHYs",
+    p = "tEXt",
+    _ = "iTXt",
+    m = "zTXt",
+    h = "pHYs",
     g = "tIME",
     E = "eXIf",
     b = "iCCP";
@@ -39,7 +39,7 @@ function O(e, t) {
         f = o.length;
     for (; f + s + l <= e.byteLength; ) {
         if (i.Z.USE_PNG_FILE && v(e, f)) (a.hasAppMarkers = !0), (a.pngHeaderOffset = f + d);
-        else if (i.Z.USE_XMP && I(e, f)) {
+        else if (i.Z.USE_XMP && S(e, f)) {
             let t = N(e, f);
             void 0 !== t &&
                 ((a.hasAppMarkers = !0),
@@ -49,7 +49,7 @@ function O(e, t) {
                         length: e.getUint32(f + c) - (t - (f + d)),
                     },
                 ]));
-        } else if (T(e, f, t)) {
+        } else if (I(e, f, t)) {
             a.hasAppMarkers = !0;
             let t = (0, r.oH)(e, f + u, l);
             a.pngTextChunks || (a.pngTextChunks = []),
@@ -58,12 +58,12 @@ function O(e, t) {
                     type: t,
                     offset: f + d,
                 });
-        } else if (S(e, f)) (a.hasAppMarkers = !0), (a.tiffHeaderOffset = f + d);
+        } else if (T(e, f)) (a.hasAppMarkers = !0), (a.tiffHeaderOffset = f + d);
         else if (i.Z.USE_ICC && t && A(e, f)) {
             a.hasAppMarkers = !0;
             let t = e.getUint32(f + c),
                 n = f + d,
-                { profileName: r, compressionMethod: i, compressedProfileOffset: o } = R(e, n);
+                { profileName: r, compressionMethod: i, compressedProfileOffset: o } = P(e, n);
             a.iccChunks || (a.iccChunks = []),
                 a.iccChunks.push({
                     offset: o,
@@ -84,21 +84,21 @@ function v(e, t) {
     let n = "IHDR";
     return (0, r.oH)(e, t + u, l) === n;
 }
-function I(e, t) {
-    return (0, r.oH)(e, t + u, l) === p && (0, r.oH)(e, t + d, f.length) === f;
-}
-function T(e, t, n) {
-    let i = (0, r.oH)(e, t + u, l);
-    return i === _ || i === p || (i === h && n);
-}
 function S(e, t) {
+    return (0, r.oH)(e, t + u, l) === _ && (0, r.oH)(e, t + d, f.length) === f;
+}
+function I(e, t, n) {
+    let i = (0, r.oH)(e, t + u, l);
+    return i === p || i === _ || (i === m && n);
+}
+function T(e, t) {
     return (0, r.oH)(e, t + u, l) === E;
 }
 function A(e, t) {
     return (0, r.oH)(e, t + u, l) === b;
 }
 function C(e, t) {
-    return [m, g].includes((0, r.oH)(e, t + u, l));
+    return [h, g].includes((0, r.oH)(e, t + u, l));
 }
 function N(e, t) {
     let n = 1,
@@ -108,7 +108,7 @@ function N(e, t) {
     for (; i < 2 && t < e.byteLength; ) 0 === e.getUint8(t) && i++, t++;
     if (!(i < 2)) return t;
 }
-function R(e, t) {
+function P(e, t) {
     let n = 1,
         i = 1,
         a = (0, r.o7)(e, t);

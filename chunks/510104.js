@@ -12,47 +12,47 @@ function f(e, t) {
     void 0 === t && (t = {});
     var n = t,
         f = n.placement,
-        _ = void 0 === f ? e.placement : f,
-        p = n.strategy,
-        h = void 0 === p ? e.strategy : p,
-        m = n.boundary,
-        g = void 0 === m ? l.zV : m,
+        p = void 0 === f ? e.placement : f,
+        _ = n.strategy,
+        m = void 0 === _ ? e.strategy : _,
+        h = n.boundary,
+        g = void 0 === h ? l.zV : h,
         E = n.rootBoundary,
         b = void 0 === E ? l.Pj : E,
         y = n.elementContext,
         O = void 0 === y ? l.k5 : y,
         v = n.altBoundary,
-        I = void 0 !== v && v,
-        T = n.padding,
-        S = void 0 === T ? 0 : T,
-        A = (0, u.Z)("number" != typeof S ? S : (0, d.Z)(S, l.mv)),
+        S = void 0 !== v && v,
+        I = n.padding,
+        T = void 0 === I ? 0 : I,
+        A = (0, u.Z)("number" != typeof T ? T : (0, d.Z)(T, l.mv)),
         C = O === l.k5 ? l.YP : l.k5,
         N = e.rects.popper,
-        R = e.elements[I ? C : O],
-        P = (0, r.Z)((0, c.kK)(R) ? R : R.contextElement || (0, i.Z)(e.elements.popper), g, b, h),
-        D = (0, a.Z)(e.elements.reference),
-        w = (0, o.Z)({
-            reference: D,
+        P = e.elements[S ? C : O],
+        R = (0, r.Z)((0, c.kK)(P) ? P : P.contextElement || (0, i.Z)(e.elements.popper), g, b, m),
+        w = (0, a.Z)(e.elements.reference),
+        D = (0, o.Z)({
+            reference: w,
             element: N,
             strategy: "absolute",
-            placement: _,
+            placement: p,
         }),
-        L = (0, s.Z)(Object.assign({}, N, w)),
-        x = O === l.k5 ? L : D,
-        M = {
-            top: P.top - x.top + A.top,
-            bottom: x.bottom - P.bottom + A.bottom,
-            left: P.left - x.left + A.left,
-            right: x.right - P.right + A.right,
+        x = (0, s.Z)(Object.assign({}, N, D)),
+        L = O === l.k5 ? x : w,
+        j = {
+            top: R.top - L.top + A.top,
+            bottom: L.bottom - R.bottom + A.bottom,
+            left: R.left - L.left + A.left,
+            right: L.right - R.right + A.right,
         },
-        k = e.modifiersData.offset;
-    if (O === l.k5 && k) {
-        var j = k[_];
-        Object.keys(M).forEach(function (e) {
+        M = e.modifiersData.offset;
+    if (O === l.k5 && M) {
+        var k = M[p];
+        Object.keys(j).forEach(function (e) {
             var t = [l.F2, l.I].indexOf(e) >= 0 ? 1 : -1,
                 n = [l.we, l.I].indexOf(e) >= 0 ? "y" : "x";
-            M[e] += j[n] * t;
+            j[e] += k[n] * t;
         });
     }
-    return M;
+    return j;
 }

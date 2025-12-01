@@ -1,4 +1,4 @@
-n.d(t, { J: () => _ });
+n.d(t, { J: () => p });
 var r = n(54381);
 n(473749);
 var i = n(657707),
@@ -77,7 +77,7 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function _(e) {
+function p(e) {
     var { "aria-label": t, playing: n } = e,
         s = d(e, ["aria-label", "playing"]);
     let { i18n: c } = (0, a.ZF)();

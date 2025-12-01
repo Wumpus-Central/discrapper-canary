@@ -1,5 +1,5 @@
 n.d(t, {
-    X: () => _,
+    X: () => p,
     e: () => f,
 });
 var r = n(579092),
@@ -32,6 +32,6 @@ function f() {
         a
     );
 }
-function _() {
+function p() {
     return void 0 !== window._libdiscoreWasm;
 }

@@ -1,12 +1,12 @@
 n.d(t, {
-    F0: () => i,
+    F0: () => r,
     cN: () => s,
     vc: () => o,
 });
 var a,
     l,
-    r = n(544891),
-    i =
+    i = n(544891),
+    r =
         (((a = {})[(a.DEFAULT = 0)] = "DEFAULT"),
         (a[(a.SUCCESSFUL = 1)] = "SUCCESSFUL"),
         (a[(a.FAILURE = 2)] = "FAILURE"),
@@ -25,15 +25,15 @@ var a,
         l);
 async function o(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        { targetDate: a, paymentType: l, sendReminderEmail: i } = n;
+        { targetDate: a, paymentType: l, sendReminderEmail: r } = n;
     return (
-        await r.tn.post({
+        await i.tn.post({
             url: "/debug/subscriptions/".concat(e, "/transition"),
             body: {
                 target_datetime: null == a ? void 0 : a.toISOString(),
                 payment_type: null != l ? l : 0,
                 transition: t,
-                send_reminder_email: null != i && i,
+                send_reminder_email: null != r && r,
             },
             rejectWithError: !0,
         })

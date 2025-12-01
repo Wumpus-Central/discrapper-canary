@@ -28,7 +28,7 @@ function d() {
         };
         return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e);
     }, [f]);
-    let _ = i.useCallback((e) => {
+    let p = i.useCallback((e) => {
         c.Z.setState({ query: e });
     }, []);
     return (0, r.jsx)("div", {
@@ -37,7 +37,7 @@ function d() {
             ref: d,
             query: e,
             onClear: n,
-            onChange: _,
+            onChange: p,
             placeholder: u.intl.string(u.t["5h0QOP"]),
             inputProps: {
                 "aria-label": u.intl.string(u.t.pk9BWW),

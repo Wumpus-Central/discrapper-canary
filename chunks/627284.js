@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(594190),
     d = n(865066),
     f = n(131951),
-    _ = n(19780),
-    p = n(63063),
-    h = n(981631),
-    m = n(388032);
+    p = n(19780),
+    _ = n(63063),
+    m = n(981631),
+    h = n(388032);
 function g(e, t, n) {
     return (
         t in e
@@ -76,21 +76,21 @@ function O(e) {
             E(
                 {
                     size: "md",
-                    title: m.intl.string(m.t.eotlXE),
-                    subtitle: m.intl.formatToPlainString(m.t.Lw6KXV, { game: null == t ? void 0 : t.name }),
+                    title: h.intl.string(h.t.eotlXE),
+                    subtitle: h.intl.formatToPlainString(h.t.Lw6KXV, { game: null == t ? void 0 : t.name }),
                     actions: [
                         {
-                            text: m.intl.string(m.t.psXQHP),
+                            text: h.intl.string(h.t.psXQHP),
                             onClick: () => {
                                 n.onClose(),
-                                    window.open(p.Z.getArticleURL(h.BhN.PUSH_TO_TALK_ADMINISTRATOR_MODE), "_blank");
+                                    window.open(_.Z.getArticleURL(m.BhN.PUSH_TO_TALK_ADMINISTRATOR_MODE), "_blank");
                             },
                         },
                     ],
                     actionBarInput: (0, r.jsx)(s.Checkbox, {
                         checked: a,
                         onChange: (e) => u(e),
-                        label: m.intl.string(m.t["5E9SB9"]),
+                        label: h.intl.string(h.t["5E9SB9"]),
                         labelType: "secondary",
                     }),
                 },
@@ -101,8 +101,8 @@ function O(e) {
 }
 function v() {
     let [e, t] = (0, a.Wu)([u.ZP], () => [u.ZP.canShowAdminWarning, u.ZP.getVisibleGame()], []),
-        n = (0, a.e7)([_.Z], () => _.Z.isConnected(), []),
-        o = (0, a.e7)([f.Z], () => f.Z.getMode() === h.pM4.PUSH_TO_TALK, []),
+        n = (0, a.e7)([p.Z], () => p.Z.isConnected(), []),
+        o = (0, a.e7)([f.Z], () => f.Z.getMode() === m.pM4.PUSH_TO_TALK, []),
         l = null != t && t.elevated && n && o && e,
         c = i.useRef(null);
     return (

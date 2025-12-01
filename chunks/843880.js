@@ -11,12 +11,12 @@ var r = n(512722),
 function f(e) {
     let { guildId: t, guildProductListingId: n, sourceAnalyticsLocations: r } = e,
         f = (0, a.e7)([l.Z], () => l.Z.getGuildProduct(n)),
-        _ = (0, a.e7)([o.Z], () => o.Z.getGuild(t), [t]),
-        p = (0, u.Z)({
+        p = (0, a.e7)([o.Z], () => o.Z.getGuild(t), [t]),
+        _ = (0, u.Z)({
             guildId: t,
             productId: n,
         });
-    if ((i()(null != _, "guild cannot be null"), i()(null != f, "guildProductListing cannot be null"), (0, s.SO)(_)))
+    if ((i()(null != p, "guild cannot be null"), i()(null != f, "guildProductListing cannot be null"), (0, s.SO)(p)))
         return {
             variant: "primary",
             text: d.intl.string(d.t.xUi3BL),
@@ -24,7 +24,7 @@ function f(e) {
         };
     if (f.has_entitlement)
         return null != f.attachments
-            ? p
+            ? _
             : {
                   variant: "secondary",
                   text: d.intl.string(d.t.RcTOGF),
@@ -34,7 +34,7 @@ function f(e) {
         let e = () =>
             (0, c.z)({
                 guildProductListing: f,
-                guildId: _.id,
+                guildId: p.id,
                 sourceAnalyticsLocations: r,
             });
         return {

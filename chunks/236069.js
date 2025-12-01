@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var r = n(54381);
 n(473749);
 var i = n(442837),
@@ -10,10 +10,10 @@ var i = n(442837),
     u = n(271383),
     d = n(715903),
     f = n(295474),
-    _ = n(372897),
-    p = n(526761),
-    h = n(388032);
-function m(e, t, n) {
+    p = n(372897),
+    _ = n(526761),
+    m = n(388032);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
@@ -92,8 +92,8 @@ function v(e) {
             guildId: t,
             analyticsLocations: n,
         }),
-        s = o ? h.intl.string(h.t["6ndMcq"]) : h.intl.string(h.t["0eiu6J"]),
-        l = o ? h.intl.string(h.t.S09nw4) : h.intl.string(h.t.tEttXd);
+        s = o ? m.intl.string(m.t["6ndMcq"]) : m.intl.string(m.t["0eiu6J"]),
+        l = o ? m.intl.string(m.t.S09nw4) : m.intl.string(m.t.tEttXd);
     return (0, r.jsxs)(a.qXd, {
         color: a.DM8.DANGER,
         children: [
@@ -105,20 +105,20 @@ function v(e) {
         ],
     });
 }
-function I() {
-    let e = (0, l.Z)({ scrollPosition: p.Y_.GUILD_TAG });
+function S() {
+    let e = (0, l.Z)({ scrollPosition: _.Y_.GUILD_TAG });
     return (0, r.jsxs)(a.qXd, {
         color: a.DM8.DANGER,
         children: [
-            h.intl.string(h.t.Zqlecb),
+            m.intl.string(m.t.Zqlecb),
             (0, r.jsx)(a.EyT, {
                 onClick: e,
-                children: h.intl.string(h.t.SJehVW),
+                children: m.intl.string(m.t.SJehVW),
             }),
         ],
     });
 }
-function T(e) {
+function I(e) {
     var { analyticsLocations: t } = e,
         n = y(e, ["analyticsLocations"]);
     let { analyticsLocations: a } = (0, s.ZP)(t, o.Z.AUTOMOD_NAGBAR_NOTICE),
@@ -127,9 +127,9 @@ function T(e) {
             let e = c.default.getId();
             return (0, d.no)(u.ZP.getMember(n.guildId, e));
         }, [n.guildId]);
-    return l.has(_.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) || l.has(_.q.AUTOMOD_QUARANTINED_BIO)
+    return l.has(p.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) || l.has(p.q.AUTOMOD_QUARANTINED_BIO)
         ? (0, r.jsx)(v, b(g({}, n), { analyticsLocations: a }))
-        : l.has(_.q.AUTOMOD_QUARANTINED_SERVER_TAG)
-          ? (0, r.jsx)(I, {})
+        : l.has(p.q.AUTOMOD_QUARANTINED_SERVER_TAG)
+          ? (0, r.jsx)(S, {})
           : (0, r.jsx)(v, b(g({}, n), { analyticsLocations: a }));
 }

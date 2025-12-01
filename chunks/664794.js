@@ -1,5 +1,5 @@
 n.d(t, {
-    Cn: () => I,
+    Cn: () => S,
     wV: () => v,
 });
 var r = n(54381),
@@ -12,10 +12,10 @@ var r = n(54381),
     u = n(158508),
     d = n(710631),
     f = n(622724),
-    _ = n(785717),
-    p = n(732380),
-    h = n(228168),
-    m = n(388032);
+    p = n(785717),
+    _ = n(732380),
+    m = n(228168),
+    h = n(388032);
 function g(e, t, n) {
     return (
         t in e
@@ -69,16 +69,16 @@ function y(e, t) {
     );
 }
 function O(e) {
-    let { user: t, guildId: n, viewProfileItem: i, appContext: p, popoutTargetRef: g, children: b } = e,
-        { trackUserProfileAction: y } = (0, _.KZ)(),
+    let { user: t, guildId: n, viewProfileItem: i, appContext: _, popoutTargetRef: g, children: b } = e,
+        { trackUserProfileAction: y } = (0, p.KZ)(),
         { analyticsLocations: O, newestAnalyticsLocation: v } = (0, s.ZP)(o.Z.USER_PROFILE_OVERFLOW_MENU),
-        I = {
-            action: h.yM.PRESS_OPTIONS,
+        S = {
+            action: m.yM.PRESS_OPTIONS,
             icon: a.xhG,
-            tooltipText: m.intl.string(m.t["UKOtz+"]),
-            "aria-label": m.intl.string(m.t["UKOtz+"]),
+            tooltipText: h.intl.string(h.t["UKOtz+"]),
+            "aria-label": h.intl.string(h.t["UKOtz+"]),
         },
-        T = (0, d.Z)({
+        I = (0, d.Z)({
             user: t,
             guildId: n,
             onAction: () =>
@@ -87,12 +87,12 @@ function O(e) {
                     analyticsLocations: O,
                 }),
         }),
-        S = (0, c.Z)({
+        T = (0, c.Z)({
             user: t,
             guildId: n,
             location: v,
             color: "danger",
-            appContext: p,
+            appContext: _,
             onBlock: () =>
                 y({
                     action: "BLOCK",
@@ -113,7 +113,7 @@ function O(e) {
             user: t,
             guildId: n,
             location: v,
-            appContext: p,
+            appContext: _,
             onBlock: () =>
                 y({
                     action: "BLOCK",
@@ -134,7 +134,7 @@ function O(e) {
             user: t,
             guildId: n,
             location: v,
-            appContext: p,
+            appContext: _,
             color: "danger",
             onAction: () =>
                 y({
@@ -143,16 +143,16 @@ function O(e) {
                 }),
         }),
         N = [
-            [i, T],
+            [i, I],
             [
                 A,
-                S,
+                T,
                 C,
                 (0, f.T)({
                     user: t,
                     guildId: n,
                     location: v,
-                    appContext: p,
+                    appContext: _,
                     color: "danger",
                     onAction: () =>
                         y({
@@ -164,7 +164,7 @@ function O(e) {
             [
                 (0, l.Z)({
                     id: t.id,
-                    label: m.intl.string(m.t["/AXYnE"]),
+                    label: h.intl.string(h.t["/AXYnE"]),
                     onSuccess: () =>
                         y({
                             action: "COPY_USER_ID",
@@ -185,11 +185,11 @@ function O(e) {
                           navId: "user-profile-overflow-menu",
                           onSelect: void 0,
                           onClose: t,
-                          "aria-label": m.intl.string(m.t.AXIHpV),
+                          "aria-label": h.intl.string(h.t.AXIHpV),
                           children: N.map((e, t) => (0, r.jsx)(a.kSQ, { children: e.map((e) => e) }, t)),
                       });
                   },
-                  children: (e) => b(E({}, e, I)),
+                  children: (e) => b(E({}, e, S)),
               }),
           });
 }
@@ -199,17 +199,17 @@ function v(e) {
         O,
         y(E({}, e), {
             popoutTargetRef: t,
-            children: (e) => (0, r.jsx)(p.pt, E({ buttonRef: t }, e)),
+            children: (e) => (0, r.jsx)(_.pt, E({ buttonRef: t }, e)),
         }),
     );
 }
-function I(e) {
+function S(e) {
     let t = i.useRef(null);
     return (0, r.jsx)(
         O,
         y(E({}, e), {
             popoutTargetRef: t,
-            children: (e) => (0, r.jsx)(p.f6, E({ buttonRef: t }, e)),
+            children: (e) => (0, r.jsx)(_.f6, E({ buttonRef: t }, e)),
         }),
     );
 }

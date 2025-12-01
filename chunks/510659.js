@@ -1,7 +1,7 @@
 n.d(t, {
     $m: () => d,
     NJ: () => u,
-    Xo: () => _,
+    Xo: () => p,
     yi: () => f,
 }),
     n(388685);
@@ -30,19 +30,19 @@ function d() {
         f = i.useCallback((e) => {
             u(e);
         }, []),
-        _ = i.useCallback(() => {
+        p = i.useCallback(() => {
             d({
                 interactionType: null,
                 interactionSource: null,
                 interactionSourceId: null,
             });
         }, [d]),
-        [p, h] = i.useState(!1),
-        [m, g] = i.useState(null),
+        [_, m] = i.useState(!1),
+        [h, g] = i.useState(null),
         [E] = i.useState(new s.V7()),
         b = i.useCallback(
             (e) => {
-                g(e), h(!0), null === e ? E.stop() : E.start(l._1, () => h(!1));
+                g(e), m(!0), null === e ? E.stop() : E.start(l._1, () => m(!1));
             },
             [E],
         );
@@ -57,20 +57,20 @@ function d() {
                 interactionSourceId: a,
                 onInteraction: d,
                 setInteractionToast: b,
-                resetInteraction: _,
-                showInteractionToast: p,
-                interactionTypeSent: m,
+                resetInteraction: p,
+                showInteractionToast: _,
+                interactionTypeSent: h,
                 interactionPopoutTargetRef: c,
                 onInteractionPopoutTargetRefChange: f,
             }),
-            [d, b, n, a, p, e, m, _, c, f],
+            [d, b, n, a, _, e, h, p, c, f],
         )
     );
 }
 function f() {
     return i.useContext(c);
 }
-function _() {
+function p() {
     let e = f();
     return (
         o()(null != e, "must use useUserProfileInteractionContext within a UserProfileInteractionContextProvider"), e

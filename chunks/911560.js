@@ -9,23 +9,23 @@ var r = n(828700),
     u = n(592125),
     d = n(944486),
     f = n(981631),
-    _ = n(176505);
-let p = {},
-    h = !1;
-function m() {
-    h ||
-        ((h = !0),
+    p = n(176505);
+let _ = {},
+    m = !1;
+function h() {
+    m ||
+        ((m = !0),
         a.Z.subscribe("CONNECTION_OPEN", () => {
-            p = {};
+            _ = {};
             let e = d.Z.getChannelId(),
                 t = u.Z.getChannel(e);
             null != e && null == t && g(e);
         }));
 }
 function g(e) {
-    if (null == e || e === o.V || (0, _.AB)(e) || null != u.Z.getChannel(e) || (m(), !s.Z.isConnected()))
+    if (null == e || e === o.V || (0, p.AB)(e) || null != u.Z.getChannel(e) || (h(), !s.Z.isConnected()))
         return Promise.resolve();
-    let t = p[e];
+    let t = _[e];
     if (null != t)
         if ("LOADING" === t.type) return t.promise;
         else return Promise.resolve();
@@ -40,7 +40,7 @@ function g(e) {
             })
             .then((t) => {
                 let { body: r } = t;
-                if (((p[e] = { type: "LOADED" }), c.Ec.has(r.type))) {
+                if (((_[e] = { type: "LOADED" }), c.Ec.has(r.type))) {
                     var i;
                     a.Z.dispatch({
                         type: "THREAD_CREATE",
@@ -51,7 +51,7 @@ function g(e) {
             })
             .catch(() => {
                 var t;
-                (p[e] = { type: "NOT_FOUND" }),
+                (_[e] = { type: "NOT_FOUND" }),
                     a.Z.dispatch({
                         type: "CHANNEL_DELETE",
                         channel: {
@@ -62,7 +62,7 @@ function g(e) {
                     });
             });
     return (
-        (p[e] = {
+        (_[e] = {
             type: "LOADING",
             promise: d,
         }),

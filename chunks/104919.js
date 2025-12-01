@@ -9,35 +9,35 @@ var r = n(373793),
     u = n(981631);
 async function d(e) {
     var t, n, d;
-    let { applicationId: f, channel: _, commandIntegrationTypes: p, appLauncherContext: h } = e;
+    let { applicationId: f, channel: p, commandIntegrationTypes: _, appLauncherContext: m } = e;
     if (
         !(0, c.x$)({
             applicationId: f,
-            channel: _,
-            commandIntegrationTypes: p,
+            channel: p,
+            commandIntegrationTypes: _,
         })
     )
         return Promise.resolve({ isAuthorized: !0 });
-    let m = l.Z.getApplication(f);
-    if (null == m) {
+    let h = l.Z.getApplication(f);
+    if (null == h) {
         let e = await (0, s.UM)(f);
-        m = o.ZP.createFromServer(e);
+        h = o.ZP.createFromServer(e);
     }
     let g = r.Y.USER_INSTALL,
         E =
-            null == m ||
-            null == (d = m.integrationTypesConfig) ||
+            null == h ||
+            null == (d = h.integrationTypesConfig) ||
             null == (n = d[g]) ||
             null == (t = n.oauth2InstallParams)
                 ? void 0
                 : t.scopes;
     return (
-        null != h &&
+        null != m &&
             (0, i.yw)(u.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, {
                 application_id: f,
-                location: h.location,
-                section_name: h.sectionName,
-                source: h.entrypoint,
+                location: m.location,
+                section_name: m.sectionName,
+                source: m.entrypoint,
             }),
         new Promise((e) => {
             (0, a.openOAuth2Modal)(
@@ -48,12 +48,12 @@ async function d(e) {
                     callback: (t) => {
                         let { location: n } = t;
                         null != n
-                            ? (null != h &&
+                            ? (null != m &&
                                   (0, i.yw)(u.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, {
                                       application_id: f,
-                                      location: h.location,
-                                      section_name: h.sectionName,
-                                      source: h.entrypoint,
+                                      location: m.location,
+                                      section_name: m.sectionName,
+                                      source: m.entrypoint,
                                   }),
                               e({ isAuthorized: !0 }))
                             : e({ isAuthorized: !1 });

@@ -1,5 +1,5 @@
 n.d(t, {
-    R: () => _,
+    R: () => p,
     i: () => f,
 });
 var r = n(544891),
@@ -85,7 +85,7 @@ async function f(e) {
         t
     );
 }
-function _(e) {
+function p(e) {
     return r.tn
         .get({
             url: s.ANM.GUILD_WIDGET(e),

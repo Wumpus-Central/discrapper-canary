@@ -1,5 +1,5 @@
 n.d(t, {
-    Np: () => _,
+    Np: () => p,
     l8: () => d,
     mc: () => f,
     so: () => u,
@@ -68,7 +68,7 @@ function d(e) {
         initialSelectedDestinations: l = [],
         forwardOptions: d,
         onRequestSent: f,
-        customSendHandler: _,
+        customSendHandler: p,
     } = e;
     (0, a.Lb)(t.channel_id, t.id, o),
         (0, i.ZDy)(
@@ -84,7 +84,7 @@ function d(e) {
                             initialSelectedDestinations: l,
                             forwardOptions: d,
                             onRequestSent: f,
-                            customSendHandler: _,
+                            customSendHandler: p,
                         }),
                     );
             },
@@ -94,7 +94,7 @@ function d(e) {
 function f() {
     (0, i.Mr3)(u);
 }
-function _(e) {
+function p(e) {
     let { message: t, failedDestinations: a, forwardOptions: o } = e;
     (0, i.ZDy)(async () => {
         let { ForwardFailedAlertModal: e } = await n.e("86590").then(n.bind(n, 384331));

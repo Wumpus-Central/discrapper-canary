@@ -15,10 +15,10 @@ function u(e) {
             textValue: u,
             minValue: d,
             maxValue: f,
-            isDisabled: _,
-            isReadOnly: p,
-            isRequired: h,
-            onIncrement: m,
+            isDisabled: p,
+            isReadOnly: _,
+            isRequired: m,
+            onIncrement: h,
             onIncrementPage: g,
             onDecrement: E,
             onDecrementPage: b,
@@ -26,10 +26,10 @@ function u(e) {
             onIncrementToMax: O,
         } = e,
         v = (0, l.q)(c(r.Z), "@react-aria/spinbutton"),
-        I = () => clearTimeout(t.current);
-    (0, a.useEffect)(() => () => I(), []);
-    let T = (e) => {
-            if (!e.ctrlKey && !e.metaKey && !e.shiftKey && !e.altKey && !p && !e.nativeEvent.isComposing)
+        S = () => clearTimeout(t.current);
+    (0, a.useEffect)(() => () => S(), []);
+    let I = (e) => {
+            if (!e.ctrlKey && !e.metaKey && !e.shiftKey && !e.altKey && !_ && !e.nativeEvent.isComposing)
                 switch (e.key) {
                     case "PageUp":
                         if (g) {
@@ -38,7 +38,7 @@ function u(e) {
                         }
                     case "ArrowUp":
                     case "Up":
-                        m && (e.preventDefault(), null == m || m());
+                        h && (e.preventDefault(), null == h || h());
                         break;
                     case "PageDown":
                         if (b) {
@@ -56,35 +56,35 @@ function u(e) {
                         O && (e.preventDefault(), null == O || O());
                 }
         },
-        S = (0, a.useRef)(!1),
+        T = (0, a.useRef)(!1),
         A = () => {
-            S.current = !0;
+            T.current = !0;
         },
         C = () => {
-            S.current = !1;
+            T.current = !1;
         },
         N = "" === u ? v.format("Empty") : (u || `${n}`).replace("-", "\u2212");
     (0, a.useEffect)(() => {
-        S.current && ((0, i.gb)("assertive"), (0, i.xQ)(N, "assertive"));
+        T.current && ((0, i.gb)("assertive"), (0, i.xQ)(N, "assertive"));
     }, [N]);
-    let R = (0, o.i)((e) => {
-            I(),
-                null == m || m(),
+    let P = (0, o.i)((e) => {
+            S(),
+                null == h || h(),
                 (t.current = window.setTimeout(() => {
-                    (void 0 === f || isNaN(f) || void 0 === n || isNaN(n) || n < f) && R(60);
+                    (void 0 === f || isNaN(f) || void 0 === n || isNaN(n) || n < f) && P(60);
                 }, e));
         }),
-        P = (0, o.i)((e) => {
-            I(),
+        R = (0, o.i)((e) => {
+            S(),
                 null == E || E(),
                 (t.current = window.setTimeout(() => {
-                    (void 0 === d || isNaN(d) || void 0 === n || isNaN(n) || n > d) && P(60);
+                    (void 0 === d || isNaN(d) || void 0 === n || isNaN(n) || n > d) && R(60);
                 }, e));
         }),
-        D = (e) => {
+        w = (e) => {
             e.preventDefault();
         },
-        { addGlobalListener: w, removeAllGlobalListeners: L } = (0, s.x)();
+        { addGlobalListener: D, removeAllGlobalListeners: x } = (0, s.x)();
     return {
         spinButtonProps: {
             role: "spinbutton",
@@ -92,29 +92,29 @@ function u(e) {
             "aria-valuetext": N,
             "aria-valuemin": d,
             "aria-valuemax": f,
-            "aria-disabled": _ || void 0,
-            "aria-readonly": p || void 0,
-            "aria-required": h || void 0,
-            onKeyDown: T,
+            "aria-disabled": p || void 0,
+            "aria-readonly": _ || void 0,
+            "aria-required": m || void 0,
+            onKeyDown: I,
             onFocus: A,
             onBlur: C,
         },
         incrementButtonProps: {
             onPressStart: () => {
-                R(400), w(window, "contextmenu", D);
+                P(400), D(window, "contextmenu", w);
             },
             onPressEnd: () => {
-                I(), L();
+                S(), x();
             },
             onFocus: A,
             onBlur: C,
         },
         decrementButtonProps: {
             onPressStart: () => {
-                P(400), w(window, "contextmenu", D);
+                R(400), D(window, "contextmenu", w);
             },
             onPressEnd: () => {
-                I(), L();
+                S(), x();
             },
             onFocus: A,
             onBlur: C,

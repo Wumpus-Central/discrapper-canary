@@ -21,8 +21,8 @@ var s,
         (a[(a.Custom = 5)] = "Custom"),
         (a[(a.Plugin = 6)] = "Plugin"),
         a),
-    _ =
-        (((o = _ || {})[(o.Mutation = 0)] = "Mutation"),
+    p =
+        (((o = p || {})[(o.Mutation = 0)] = "Mutation"),
         (o[(o.MouseMove = 1)] = "MouseMove"),
         (o[(o.MouseInteraction = 2)] = "MouseInteraction"),
         (o[(o.Scroll = 3)] = "Scroll"),
@@ -40,14 +40,14 @@ var s,
         (o[(o.AdoptedStyleSheet = 15)] = "AdoptedStyleSheet"),
         (o[(o.CustomElement = 16)] = "CustomElement"),
         o);
-let p = (e, t) => t.some((t) => e instanceof t),
-    h = new WeakMap(),
+let _ = (e, t) => t.some((t) => e instanceof t),
     m = new WeakMap(),
+    h = new WeakMap(),
     g = new WeakMap(),
     E = {
         get(e, t, n) {
             if (e instanceof IDBTransaction) {
-                if ("done" === t) return h.get(e);
+                if ("done" === t) return m.get(e);
                 if ("store" === t) return n.objectStoreNames[1] ? void 0 : n.objectStore(n.objectStoreNames[0]);
             }
             return v(e[t]);
@@ -63,10 +63,10 @@ function y(e) {
         i || (i = [IDBCursor.prototype.advance, IDBCursor.prototype.continue, IDBCursor.prototype.continuePrimaryKey])
     ).includes(e)
         ? function (...t) {
-              return e.apply(I(this), t), v(this.request);
+              return e.apply(S(this), t), v(this.request);
           }
         : function (...t) {
-              return v(e.apply(I(this), t));
+              return v(e.apply(S(this), t));
           };
 }
 function O(e) {
@@ -74,7 +74,7 @@ function O(e) {
         ? y(e)
         : (e instanceof IDBTransaction &&
               (function (e) {
-                  if (h.has(e)) return;
+                  if (m.has(e)) return;
                   let t = new Promise((t, n) => {
                       let r = () => {
                           n(e.error || new DOMException("AbortError", "AbortError"));
@@ -85,9 +85,9 @@ function O(e) {
                           (e.onerror = r),
                           (e.onabort = r);
                   });
-                  h.set(e, t);
+                  m.set(e, t);
               })(e),
-          p(e, r || (r = [IDBDatabase, IDBObjectStore, IDBIndex, IDBCursor, IDBTransaction])) ? new Proxy(e, E) : e);
+          _(e, r || (r = [IDBDatabase, IDBObjectStore, IDBIndex, IDBCursor, IDBTransaction])) ? new Proxy(e, E) : e);
 }
 function v(e) {
     if (e instanceof IDBRequest)
@@ -102,16 +102,16 @@ function v(e) {
             });
             return g.set(t, e), t;
         })(e);
-    if (m.has(e)) return m.get(e);
+    if (h.has(e)) return h.get(e);
     let t = O(e);
-    return t !== e && (m.set(e, t), g.set(t, e)), t;
+    return t !== e && (h.set(e, t), g.set(t, e)), t;
 }
-let I = (e) => g.get(e);
-function T(e, { blocked: t } = {}) {
+let S = (e) => g.get(e);
+function I(e, { blocked: t } = {}) {
     let n = indexedDB.deleteDatabase(e);
     return t && (n.onblocked = (e) => t(e.oldVersion, e)), v(n).then(() => {});
 }
-let S = ["get", "getKey", "getAll", "getAllKeys", "count"],
+let T = ["get", "getKey", "getAll", "getAllKeys", "count"],
     A = ["put", "add", "delete", "clear"],
     C = new Map();
 function N(e, t) {
@@ -120,7 +120,7 @@ function N(e, t) {
     let n = t.replace(/FromIndex$/, ""),
         r = t !== n,
         i = A.includes(n);
-    if (!(n in (r ? IDBIndex : IDBObjectStore).prototype) || (!i && !S.includes(n))) return;
+    if (!(n in (r ? IDBIndex : IDBObjectStore).prototype) || (!i && !T.includes(n))) return;
     let a = async function (e, ...t) {
         let a = this.transaction(e, i ? "readwrite" : "readonly"),
             o = a.store;
@@ -133,47 +133,47 @@ b((e) => ({
     get: (t, n, r) => N(t, n) || e.get(t, n, r),
     has: (t, n) => !!N(t, n) || e.has(t, n),
 }));
-let R = ["continue", "continuePrimaryKey", "advance"],
-    P = {},
-    D = new WeakMap(),
+let P = ["continue", "continuePrimaryKey", "advance"],
+    R = {},
     w = new WeakMap(),
-    L = {
+    D = new WeakMap(),
+    x = {
         get(e, t) {
-            if (!R.includes(t)) return e[t];
-            let n = P[t];
+            if (!P.includes(t)) return e[t];
+            let n = R[t];
             return (
                 n ||
-                    (n = P[t] =
+                    (n = R[t] =
                         function (...e) {
-                            D.set(this, w.get(this)[t](...e));
+                            w.set(this, D.get(this)[t](...e));
                         }),
                 n
             );
         },
     };
-async function* x(...e) {
+async function* L(...e) {
     let t = this;
     if ((t instanceof IDBCursor || (t = await t.openCursor(...e)), !t)) return;
-    let n = new Proxy(t, L);
-    for (w.set(n, t), g.set(n, I(t)); t; ) yield n, (t = await (D.get(n) || t.continue())), D.delete(n);
+    let n = new Proxy(t, x);
+    for (D.set(n, t), g.set(n, S(t)); t; ) yield n, (t = await (w.get(n) || t.continue())), w.delete(n);
 }
-function M(e, t) {
+function j(e, t) {
     return (
-        (t === Symbol.asyncIterator && p(e, [IDBIndex, IDBObjectStore, IDBCursor])) ||
-        ("iterate" === t && p(e, [IDBIndex, IDBObjectStore]))
+        (t === Symbol.asyncIterator && _(e, [IDBIndex, IDBObjectStore, IDBCursor])) ||
+        ("iterate" === t && _(e, [IDBIndex, IDBObjectStore]))
     );
 }
 b((e) => ({
     ...e,
-    get: (t, n, r) => (M(t, n) ? x : e.get(t, n, r)),
-    has: (t, n) => M(t, n) || e.has(t, n),
+    get: (t, n, r) => (j(t, n) ? L : e.get(t, n, r)),
+    has: (t, n) => j(t, n) || e.has(t, n),
 }));
-let k = "sprigReplayIframeLoaded",
-    j = "sprigReplayIframeSettings",
+let M = "sprigReplayIframeLoaded",
+    k = "sprigReplayIframeSettings",
     U = "sprigReplayIframeTakeFullSnapshot",
     G = "sprigReplayTeardown",
-    B = [],
-    Z = new (class {
+    Z = [],
+    B = new (class {
         constructor(e) {
             d(this, "awaitingResolvers", []), d(this, "activeCount", 0), (this.capacity = e);
         }
@@ -296,8 +296,8 @@ let k = "sprigReplayIframeLoaded",
     K = ["a", "button", "input", "option", "li", "link"],
     z = ["Escape", "Enter", "Backspace", "F5", "Tab"],
     q = !1,
-    X = null,
     Q = null,
+    X = null,
     J = (e) => {
         var t;
         if ((null == (t = e.tagName) ? void 0 : t.toLowerCase()) === "html") return { element: "html" };
@@ -341,11 +341,11 @@ let k = "sprigReplayIframeLoaded",
                 }).elementAttributes) &&
                 r.text &&
                 (i.elementAttributes.text = Y(i.elementAttributes.text)),
-            null == X || X("Sprig_Click", i);
+            null == Q || Q("Sprig_Click", i);
     },
     et = (e) => {
         var t;
-        z.includes(e.key) && ((t = { key: e.key }), null == X || X("Sprig_Keystroke", t));
+        z.includes(e.key) && ((t = { key: e.key }), null == Q || Q("Sprig_Keystroke", t));
     },
     en = () => {
         var e;
@@ -357,7 +357,7 @@ let k = "sprigReplayIframeLoaded",
                 url: window.location.href,
                 currentPageTitle: document.title,
             }),
-            null == X || X("Sprig_Refresh", e));
+            null == Q || Q("Sprig_Refresh", e));
     },
     er = () => {
         var e;
@@ -370,7 +370,7 @@ let k = "sprigReplayIframeLoaded",
                 fromUrl: document.referrer,
                 currentPageTitle: document.title,
             }).currentPageTitle && (e.currentPageTitle = Y(e.currentPageTitle)),
-            null == X || X("Sprig_BackForward", e));
+            null == Q || Q("Sprig_BackForward", e));
     },
     ei = ((e, t) => {
         let n;
@@ -381,8 +381,8 @@ let k = "sprigReplayIframeLoaded",
         if (!(e.target instanceof HTMLElement || e.target instanceof Document)) return;
         let t = e.target;
         "scrollTop" in t || (t = t.documentElement),
-            null == Q ||
-                Q({
+            null == X ||
+                X({
                     xPath: H(t),
                     x: t.scrollLeft,
                     y: t.scrollTop,
@@ -417,20 +417,20 @@ let k = "sprigReplayIframeLoaded",
         l.a.setItem("sprig.disableReplayRecording", "disabled");
     },
     ef = () => !!l.a.getItem("sprig.disableReplayRecording"),
-    e_ = () => !!l.a.getItem("sprig.isReplayPaused");
+    ep = () => !!l.a.getItem("sprig.isReplayPaused");
 window.addEventListener("beforeunload", () => {
     l.b.info("BeforeUnload", { sessionId: eu }), l.a.setItem("sprig.sessionId", eu);
 });
-let ep = (e, t) => {
+let e_ = (e, t) => {
         var n, r;
-        if (!ef() && el.isRecording && !e_())
+        if (!ef() && el.isRecording && !ep())
             try {
                 null == (r = null == (n = window.rrwebRecord) ? void 0 : n.addCustomEvent) || r.call(n, e, t);
             } catch (e) {
                 eb("Error recording custom event", e);
             }
     },
-    eh = async (e) => {
+    em = async (e) => {
         let { x: t, xPath: n, y: r } = e,
             i = el.scrollEventUuids[n];
         if (i)
@@ -448,11 +448,11 @@ let ep = (e, t) => {
                         (i.data.payload.elementAttributes = e.elementAttributes),
                         (c.event = JSON.stringify(i)),
                         await l.put("events", c);
-                } else ep("Sprig_Scroll", e);
+                } else e_("Sprig_Scroll", e);
             }, "Error updating scroll event");
-        ep("Sprig_Scroll", e);
+        e_("Sprig_Scroll", e);
     },
-    em = () => {
+    eh = () => {
         el.stopRecording && (el.stopRecording(), (el.stopRecording = void 0)),
             (el.isRecording = !1),
             ["cleanupInterval", "inactivityInterval", "pendingCheckInterval"].forEach((e) => {
@@ -465,7 +465,7 @@ let ep = (e, t) => {
                 window.removeEventListener("keydown", et, W),
                 window.removeEventListener("scroll", ei, W),
                 (q = !1)),
-            B.forEach((e) => {
+            Z.forEach((e) => {
                 var t;
                 null == (t = e.source) || t.postMessage({ type: G }, { targetOrigin: e.origin });
             });
@@ -482,7 +482,7 @@ let ep = (e, t) => {
         }
     },
     eb = (e, t, { reportError: n } = { reportError: !0 }) => {
-        em(),
+        eh(),
             l.b.error("ReplayErr", {
                 code: t.code,
                 name: t.name,
@@ -504,12 +504,12 @@ let ep = (e, t) => {
                     ? void 0
                     : t.call(e, !0);
             }, "Error recording full snapshot"),
-            B.forEach((e) => {
+            Z.forEach((e) => {
                 var t;
                 null == (t = e.source) || t.postMessage({ type: U }, { targetOrigin: e.origin });
             }));
     };
-(async () => ec() && Promise.allSettled([T("replayStorage"), T("sprig.replay")]))();
+(async () => ec() && Promise.allSettled([I("replayStorage"), I("sprig.replay")]))();
 let ev = new (class {
         openDB() {
             return (function (e, t, { blocked: n, upgrade: r, blocking: i, terminated: a } = {}) {
@@ -556,7 +556,7 @@ let ev = new (class {
         }
         async deleteDB() {
             try {
-                await T("sprigReplay");
+                await I("sprigReplay");
             } catch {}
         }
         async bulkAdd(e, t) {
@@ -666,31 +666,31 @@ let ev = new (class {
             await n.done;
         }
     })(),
-    eI = [],
+    eS = [],
+    eI,
     eT,
-    eS,
     eA,
     eC,
     eN,
-    eR,
-    eP = [],
-    eD = !1,
-    ew = 0,
-    eL = !1,
+    eP,
+    eR = [],
+    ew = !1,
+    eD = 0,
     ex = !1,
-    eM = [],
-    ek = !1,
-    ej = () => eL && !eD && Date.now() <= eA,
+    eL = !1,
+    ej = [],
+    eM = !1,
+    ek = () => ex && !ew && Date.now() <= eA,
     eU = ({ apiUrl: e, config: t, triggerSnapshot: n, forceInit: r = !1 }) => {
-        (eL && !r) ||
+        (ex && !r) ||
             (l.a.isStorageAvailable
-                ? ((eP = []),
-                  eM.splice(0),
-                  eI.splice(0),
-                  (ew = 0),
+                ? ((eR = []),
+                  ej.splice(0),
+                  eS.splice(0),
+                  (eD = 0),
                   (eN = n),
-                  (eS = e),
-                  (eT = {
+                  (eT = e),
+                  (eI = {
                       responseGroupUuid: t.responseGroupUuid,
                       surveyId: t.surveyId,
                       userAgent: t.userAgent,
@@ -698,35 +698,35 @@ let ev = new (class {
                   }),
                   (eC = t.maxDurationSeconds),
                   eH(),
-                  eL || (eR = window.setInterval(eF, 500)),
-                  (eL = !0))
-                : (eD = !0));
+                  ex || (eP = window.setInterval(eF, 500)),
+                  (ex = !0))
+                : (ew = !0));
     },
-    eG = [_.Drag, _.Input, _.MediaInteraction, _.MouseInteraction, _.MouseMove, _.Scroll, _.Selection, _.TouchMove],
-    eB = (e) => e.type === f.Custom || (e.type === f.IncrementalSnapshot && eG.includes(e.data.source)),
-    eZ = (e) => e.some(eB),
+    eG = [p.Drag, p.Input, p.MediaInteraction, p.MouseInteraction, p.MouseMove, p.Scroll, p.Selection, p.TouchMove],
+    eZ = (e) => e.type === f.Custom || (e.type === f.IncrementalSnapshot && eG.includes(e.data.source)),
+    eB = (e) => e.some(eZ),
     eF = async () => {
-        if (!ej()) return void window.clearInterval(eR);
-        if ((eV(), !eZ(eI))) return;
-        let e = eI[0].timestamp;
+        if (!ek()) return void window.clearInterval(eP);
+        if ((eV(), !eB(eS))) return;
+        let e = eS[0].timestamp;
         Date.now() - e > 35000 && (null == eN || eN());
     },
     eV = async () => {
-        if (eP.length || ek) return;
-        ek = !0;
+        if (eR.length || eM) return;
+        eM = !0;
         let e = await ez();
-        if (!e) return void (eD = !0);
-        eM.splice(0, e.length).forEach((t) => t(e.shift())), e.forEach((e) => eP.push(e)), (ek = !1);
+        if (!e) return void (ew = !0);
+        ej.splice(0, e.length).forEach((t) => t(e.shift())), e.forEach((e) => eR.push(e)), (eM = !1);
     },
     eH = () => {
         let e = l.a.getItem("sprig.alwayson.info");
         if (e) {
             l.b.info("Read stored session state", e);
             let t = JSON.parse(e);
-            (eD = t.disabled),
-                (eT = t.metadata),
-                (eP = t.uploadUrls),
-                (ew = t.currentIndex),
+            (ew = t.disabled),
+                (eI = t.metadata),
+                (eR = t.uploadUrls),
+                (eD = t.currentIndex),
                 (eA = t.expirationTimestamp),
                 t.pendingEventTimestamp &&
                     (l.b.info(`Uploading with pending timestamp: ${t.pendingEventTimestamp}`),
@@ -736,8 +736,8 @@ let ev = new (class {
     eY = async (e) => {
         let t = Date.now(),
             n = (await ev.getEventsBetween(e, t)).map((e) => JSON.parse(e.event));
-        if (!eZ(n)) return;
-        eX(n);
+        if (!eB(n)) return;
+        eQ(n);
         let r = await eq();
         r && (await eK(r, n));
     },
@@ -747,11 +747,11 @@ let ev = new (class {
             if (!n.ok) throw Error(`Error ${t}`);
             return n;
         } catch {
-            eD = !0;
+            ew = !0;
         }
     },
     eK = async (e, t) => {
-        if (!ej() || !e) return;
+        if (!ek() || !e) return;
         let n = await (async (e) => {
             let t = new TextEncoder(),
                 n = new CompressionStream("gzip"),
@@ -770,17 +770,17 @@ let ev = new (class {
             );
     },
     ez = async () => {
-        if (!ej()) return;
-        let { surveyId: e, responseGroupUuid: t } = eT,
+        if (!ek()) return;
+        let { surveyId: e, responseGroupUuid: t } = eI,
             n = {
                 responseGroupUuid: t,
                 surveyId: e,
-                index: ew + 1,
+                index: eD + 1,
             };
         l.b.info("Fetching always-on upload urls", n);
         let r = await eW(
             () =>
-                (0, l.s)(`${eS}/sdk/1/replayUrls`, {
+                (0, l.s)(`${eT}/sdk/1/replayUrls`, {
                     method: "POST",
                     body: JSON.stringify(n),
                     headers: (0, l.g)(window.UserLeap),
@@ -798,27 +798,27 @@ let ev = new (class {
         );
     },
     eq = async () => {
-        if (eP.length) return eP.shift();
+        if (eR.length) return eR.shift();
         let e = new Promise((e) => {
-            eM.push(e);
+            ej.push(e);
         });
         return eV(), e;
     },
-    eX = (e) => {
+    eQ = (e) => {
         var t, n, r;
         let i = e.length ? e[e.length - 1].timestamp : Date.now(),
-            a = ew,
+            a = eD,
             o =
                 (null == (n = null == (t = window.UserLeap) ? void 0 : t.config) ? void 0 : n.customMetadata) ??
                 (null == (r = window.__cfg) ? void 0 : r.customMetadata);
-        ew++,
+        eD++,
             e.push({
                 timestamp: i,
                 type: f.Custom,
                 data: {
                     tag: "Sprig_Meta",
                     payload: {
-                        ...eT,
+                        ...eI,
                         index: a,
                         visitorId: window.UserLeap.visitorId ?? "",
                         timestamp: i,
@@ -827,33 +827,33 @@ let ev = new (class {
                 },
             });
     },
-    eQ = (e, t) => {
-        ej() &&
-            !ex &&
-            (e || eI.length) &&
+    eX = (e, t) => {
+        ek() &&
+            !eL &&
+            (e || eS.length) &&
             (e &&
-                eI.length &&
+                eS.length &&
                 (async () => {
-                    let e = eI.splice(0);
-                    if (!eZ(e)) return;
-                    l.b.info("Capturing always-on event array to upload"), eX(e);
+                    let e = eS.splice(0);
+                    if (!eB(e)) return;
+                    l.b.info("Capturing always-on event array to upload"), eQ(e);
                     let t = await eq();
                     t && (await eK(t, e));
                 })(),
-            eI.push(t));
+            eS.push(t));
     };
 window.addEventListener("beforeunload", async () => {
-    (ex = !0),
-        ej() &&
+    (eL = !0),
+        ek() &&
             (l.b.info("Always On handle page unload"),
             (() => {
                 let e;
-                eI.length && (e = eI[0].timestamp);
+                eS.length && (e = eS[0].timestamp);
                 let t = {
-                    disabled: eD,
-                    metadata: eT,
-                    uploadUrls: eP,
-                    currentIndex: ew,
+                    disabled: ew,
+                    metadata: eI,
+                    uploadUrls: eR,
+                    currentIndex: eD,
                     pendingEventTimestamp: e,
                     expirationTimestamp: eA,
                 };
@@ -903,7 +903,7 @@ let eJ = async (e, t) => {
     e6 = () => {
         (e4 = !0),
             setTimeout(async () => {
-                if (ef() || e_()) return;
+                if (ef() || ep()) return;
                 let e = e5;
                 (e5 = []),
                     (e4 = !1),
@@ -1010,7 +1010,7 @@ let eJ = async (e, t) => {
         Promise.all(
             e.map(async (e) => {
                 let t = await (async (e) =>
-                    Z.execute(async () => {
+                    B.execute(async () => {
                         var t;
                         l.b.info("UploadChunkStart", {
                             chunkIndex: e.chunkIndex,
@@ -1108,9 +1108,9 @@ let eJ = async (e, t) => {
                 let i = d.map((e) => e.event);
                 i.push(`{"timestamp":${t}}`);
                 let f = `${o ? "," : "["}${i}`,
-                    _ = n.encode(f);
+                    p = n.encode(f);
                 e$(() => {
-                    a.write(_);
+                    a.write(p);
                 }, "sdk_replay_compression_seconds"),
                     (o = !0);
             }
@@ -1193,7 +1193,7 @@ let eJ = async (e, t) => {
     },
     tc = async () => {
         parseInt(e2 ?? "0") || l.a.removeItem("sprig.isCapturingHeatmap"),
-            l.a.getItem("sprig.teardownAfterCapture") && (em(), tu(), l.a.removeItem("sprig.teardownAfterCapture"));
+            l.a.getItem("sprig.teardownAfterCapture") && (eh(), tu(), l.a.removeItem("sprig.teardownAfterCapture"));
     },
     tu = async () =>
         ef()
@@ -1244,13 +1244,13 @@ let eJ = async (e, t) => {
             {
                 __proto__: null,
                 RecordEvent: (e) => {
-                    ep("Sprig_TrackEvent", e);
+                    e_("Sprig_TrackEvent", e);
                 },
                 RecordPageView: (e) => {
-                    e.description && (e.description = Y(e.description)), ep("Sprig_PageView", e);
+                    e.description && (e.description = Y(e.description)), e_("Sprig_PageView", e);
                 },
                 RecordSurveyShown: (e) => {
-                    ep("Sprig_ShowSurvey", e);
+                    e_("Sprig_ShowSurvey", e);
                 },
                 _completeSessionReplay: async ({ surveyId: e, responseGroupUuid: t, eventDigest: n, headers: r }) => {
                     if (!e || !t) return !1;
@@ -1339,7 +1339,7 @@ let eJ = async (e, t) => {
                     ey(async () => {
                         await tt(!0);
                     }, "Error uploading ready pending captures");
-                    let o = Math.max(e ?? 0, 30 * !!ej());
+                    let o = Math.max(e ?? 0, 30 * !!ek());
                     if (!o) return l.b.debug("MissingDuration");
                     l.b.debug("ReplayInit"),
                         await ey(async () => {
@@ -1347,7 +1347,7 @@ let eJ = async (e, t) => {
                             null != n && n.minDuration && (e0 = n.minDuration),
                                 null != n && n.batchDuration && (e1 = n.batchDuration),
                                 (e = t),
-                                Z.setLimit(e),
+                                B.setLimit(e),
                                 ta(),
                                 e7(o + 35, 1800, o + 35),
                                 e9();
@@ -1373,7 +1373,7 @@ let eJ = async (e, t) => {
                                 };
                             (el.stopRecording = s({
                                 emit: (e, t) => {
-                                    if ((e.type === f.Custom && (e3 = Date.now()), ef() || e_())) return;
+                                    if ((e.type === f.Custom && (e3 = Date.now()), ef() || ep())) return;
                                     if (t && e.type === f.Meta) u = performance.now();
                                     else if (t && u && e.type === f.FullSnapshot) {
                                         let e = performance.now() - u;
@@ -1381,7 +1381,7 @@ let eJ = async (e, t) => {
                                     }
                                     let n = c || (!!t && e.type === f.Meta);
                                     (c = !1),
-                                        eQ(n, e),
+                                        eX(n, e),
                                         e8({
                                             uuid: (0, l.v)(),
                                             event: JSON.stringify(e),
@@ -1396,15 +1396,15 @@ let eJ = async (e, t) => {
                                     (((e, t) => {
                                         window.addEventListener("message", (n) => {
                                             var r;
-                                            n.data.type === k &&
-                                                (B.push({
+                                            n.data.type === M &&
+                                                (Z.push({
                                                     source: n.source,
                                                     origin: n.origin,
                                                 }),
                                                 null == (r = n.source) ||
                                                     r.postMessage(
                                                         {
-                                                            type: j,
+                                                            type: k,
                                                             settings: e,
                                                             replayLibraryUrl: t,
                                                         },
@@ -1413,16 +1413,16 @@ let eJ = async (e, t) => {
                                         });
                                     })(d, a),
                                     l.e.on("survey.complete", (e) => {
-                                        ep("Sprig_SubmitSurvey", {
+                                        e_("Sprig_SubmitSurvey", {
                                             id: e,
                                             userAgent: window.navigator.userAgent,
                                         });
                                     }),
-                                    (r = ep),
-                                    (i = eh),
+                                    (r = e_),
+                                    (i = em),
                                     q ||
-                                        ((X = r),
-                                        (Q = i),
+                                        ((Q = r),
+                                        (X = i),
                                         window.addEventListener("click", ea, W),
                                         window.addEventListener("pointerdown", es, W),
                                         window.addEventListener("mousedown", eo, W),
@@ -1433,14 +1433,14 @@ let eJ = async (e, t) => {
                                         er()));
                         }, "Error initializing replay");
                 },
-                isReplayPaused: e_,
+                isReplayPaused: ep,
                 isReplayRecording: () => el.isRecording,
                 recordFullSnapshot: eO,
                 recordReplayPaused: () => {
-                    ep("Sprig_ReplayPaused", { timestamp: Date.now() }), l.a.setItem("sprig.isReplayPaused", "true");
+                    e_("Sprig_ReplayPaused", { timestamp: Date.now() }), l.a.setItem("sprig.isReplayPaused", "true");
                 },
                 recordReplayResumed: () => {
-                    l.a.removeItem("sprig.isReplayPaused"), ep("Sprig_ReplayResumed", { timestamp: Date.now() });
+                    l.a.removeItem("sprig.isReplayPaused"), e_("Sprig_ReplayResumed", { timestamp: Date.now() });
                 },
                 scheduleCapture: td,
                 scheduleOrCaptureReplay: tl,

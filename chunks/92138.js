@@ -10,11 +10,11 @@ var a = n(213919),
     u = n(481060),
     d = n(781272),
     f = n(579806),
-    _ = n(627845),
-    p = n(675896);
+    p = n(627845),
+    _ = n(675896);
 n(308765);
-var h = n(109117),
-    m = n(710845);
+var m = n(109117),
+    h = n(710845);
 n(729345);
 var g = n(981631);
 (n.p = (null != (r = window.GLOBAL_ENV.STATIC_ENDPOINT) ? r : "") + window.GLOBAL_ENV.PUBLIC_PATH),
@@ -30,11 +30,11 @@ var g = n(981631);
     l.ZP.initialize(),
     n.e("40637").then(n.t.bind(n, 281307, 19));
 let E = window.GLOBAL_ENV.RELEASE_CHANNEL,
-    b = "470193",
-    y = "b9237c513b1b65a94f4a20064aadcc393225b7cc";
-new m.Z().log("[BUILD INFO] Release Channel: ".concat(E, ", Build Number: ").concat(b, ", Version Hash: ").concat(y)),
+    b = "473983",
+    y = "9d2c854e9b7fa7a2a3a3ffa3e833de461a587ee1";
+new h.Z().log("[BUILD INFO] Release Channel: ".concat(E, ", Build Number: ").concat(b, ", Version Hash: ").concat(y)),
     i.Z.setTags({ appContext: g.e3s }),
-    _.Z.initBasic(),
-    p.Z.init(),
+    p.Z.initBasic(),
+    _.Z.init(),
     u.dxT.init(),
-    h.S1();
+    m.S1();

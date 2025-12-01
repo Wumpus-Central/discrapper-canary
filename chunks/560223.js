@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => I });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(172416),
     d = n(695349),
     f = n(340625),
-    _ = n(119850),
-    p = n(22189),
-    h = n(391110),
-    m = n(75077),
+    p = n(119850),
+    _ = n(22189),
+    m = n(391110),
+    h = n(75077),
     g = n(51636),
     E = n(484327);
 function b(e, t, n) {
@@ -67,7 +67,7 @@ function v(e, t) {
         e
     );
 }
-let I = (e) => {
+let S = (e) => {
         let { showAllPerksButton: t, leftAlignHeaders: n, title: i, headerClassname: a } = e,
             o = (0, r.jsx)(s.Heading, {
                 variant: "heading-xxl/extrabold",
@@ -97,43 +97,43 @@ let I = (e) => {
                     }),
                 });
     },
-    T = (e) => {
+    I = (e) => {
         let {
                 className: t,
                 variant: n,
                 noBackground: a = !1,
                 leftAlignHeaders: b = !1,
                 showAllPerksButton: O,
-                headerClassname: T,
+                headerClassname: I,
             } = e,
-            S = i.useRef(null),
-            A = n === h.gM.WHATS_NEW,
-            C = (0, _.x)();
+            T = i.useRef(null),
+            A = n === m.gM.WHATS_NEW,
+            C = (0, p.x)();
         i.useEffect(() => {
             A && C();
         }, [C, A]);
-        let N = (0, m.re)(A),
-            R = (0, p.Z)(),
-            P = (0, m.mN)(),
-            { fractionalState: D } = (0, l.Z)(),
-            w = (0, d.W)(),
-            L = (0, u.bg)({ location: "PremiumPerks" }),
-            x = c.JH.useExperiment({ location: "PremiumPerks" }).enabled,
-            M = f.Z.useExperiment({ location: "PremiumPerks" }).enabled,
-            k = (0, m.ZM)({
-                perksCards: R,
+        let N = (0, h.re)(A),
+            P = (0, _.Z)(),
+            R = (0, h.mN)(),
+            { fractionalState: w } = (0, l.Z)(),
+            D = (0, d.W)(),
+            x = (0, u.bg)({ location: "PremiumPerks" }),
+            L = c.JH.useExperiment({ location: "PremiumPerks" }).enabled,
+            j = f.Z.useExperiment({ location: "PremiumPerks" }).enabled,
+            M = (0, h.ZM)({
+                perksCards: P,
                 variant: n,
                 hideCardsOnNarrowScreen: !1,
-                isPremiumSubscriber: P,
-                fractionalState: D,
-                isInReverseTrial: w,
-                showProfileWidgets: L,
-                showDisplayNameStyles: x,
-                recurring3PPromotionExperiment: M,
+                isPremiumSubscriber: R,
+                fractionalState: w,
+                isInReverseTrial: D,
+                showProfileWidgets: x,
+                showDisplayNameStyles: L,
+                recurring3PPromotionExperiment: j,
             }),
-            j = k.some((e) => null != e.pillText);
+            k = M.some((e) => null != e.pillText);
         return (0, r.jsxs)("div", {
-            ref: S,
+            ref: T,
             className: o()(
                 E.section,
                 {
@@ -143,11 +143,11 @@ let I = (e) => {
                 t,
             ),
             children: [
-                (0, r.jsx)(I, {
+                (0, r.jsx)(S, {
                     showAllPerksButton: O,
                     leftAlignHeaders: b,
                     title: N.title,
-                    headerClassname: T,
+                    headerClassname: I,
                 }),
                 (0, r.jsx)(s.Text, {
                     variant: "text-lg/normal",
@@ -156,7 +156,7 @@ let I = (e) => {
                         [E.subtitle]: null == O || b,
                         [E.subtitleWithButton]: null != O && !b,
                         [E.fullWidth]: A || b,
-                        [E.moreSubtitleMargin]: j,
+                        [E.moreSubtitleMargin]: k,
                         [E.leftAlignSubtitle]: b,
                         [E.centerAlignSubtitle]: !b,
                     }),
@@ -170,7 +170,7 @@ let I = (e) => {
                     }),
                 (0, r.jsx)("div", {
                     className: E.cardContainer,
-                    children: k.map((e, t) =>
+                    children: M.map((e, t) =>
                         (0, r.jsx)(g.Z, v(y({}, e), { forceShadow: a }), "".concat(e.name, "_").concat(t)),
                     ),
                 }),

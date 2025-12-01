@@ -11,16 +11,16 @@ e.exports = function (e, t, n, r) {
         u = t.getStartOffset(),
         d = l.get(c),
         f = d.getText(),
-        _ = d.merge({
+        p = d.merge({
             text: f.slice(0, u) + n + f.slice(u, d.getLength()),
             characterList: i(d.getCharacterList(), o(r, s).toList(), u),
         }),
-        p = u + s;
+        _ = u + s;
     return e.merge({
-        blockMap: l.set(c, _),
+        blockMap: l.set(c, p),
         selectionAfter: t.merge({
-            anchorOffset: p,
-            focusOffset: p,
+            anchorOffset: _,
+            focusOffset: _,
         }),
     });
 };

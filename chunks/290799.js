@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -47,7 +47,7 @@ let f = [
             getAnswer: () => u.intl.string(u.t.Aje8Pb),
         },
     ],
-    _ = function (e) {
+    p = function (e) {
         let { className: t } = e,
             [n, a] = i.useState(null);
         return (0, r.jsxs)("div", {

@@ -13,8 +13,8 @@ var i = n(54381),
     m = n(699516),
     x = n(594174),
     p = n(621600),
-    v = n(981631),
-    j = n(388032),
+    j = n(981631),
+    v = n(388032),
     f = n(385888);
 function N(e, t, n) {
     return (
@@ -70,10 +70,10 @@ class b extends s.PureComponent {
                 checkboxColor: a,
             } = this.props,
             o = t === e;
-        (null == t || t === v.bL.NULL) && e === r && (o = !0);
+        (null == t || t === j.bL.NULL) && e === r && (o = !0);
         let d = l.M0.INVERTED;
         return (
-            (s || t === v.bL.NULL || null == t) && (d = l.M0.GHOST),
+            (s || t === j.bL.NULL || null == t) && (d = l.M0.GHOST),
             (0, i.jsx)(l.$q, {
                 value: !n && o,
                 disabled: n,
@@ -90,14 +90,14 @@ class b extends s.PureComponent {
             { channel: n } = this.props;
         null != n.parent_id && (e = h.Z.getChannel(n.parent_id));
         let s = (0, c.KS)(n);
-        if (n.type === v.d4z.GUILD_CATEGORY && null != n.guild_id && "" !== n.guild_id) {
+        if (n.type === j.d4z.GUILD_CATEGORY && null != n.guild_id && "" !== n.guild_id) {
             let e = g.Z.getCategories(n.guild_id);
-            t = j.intl.formatToPlainString(j.t["2KzH89"], { num: null != e[n.id] ? e[n.id].length : 0 });
+            t = v.intl.formatToPlainString(v.t["2KzH89"], { num: null != e[n.id] ? e[n.id].length : 0 });
         } else
             t =
                 null != e
-                    ? j.intl.formatToPlainString(j.t.L1zJgb, { categoryName: (0, d.F6)(e, x.default, m.Z) })
-                    : j.intl.string(j.t.uIzfCE);
+                    ? v.intl.formatToPlainString(v.t.L1zJgb, { categoryName: (0, d.F6)(e, x.default, m.Z) })
+                    : v.intl.string(v.t.uIzfCE);
         return (0, i.jsxs)(u.Z, {
             grow: 1,
             className: f.nameContainer,
@@ -135,21 +135,21 @@ class b extends s.PureComponent {
                     grow: 0,
                     shrink: 0,
                     className: t ? f.checkboxContainerMuted : f.checkboxContainer,
-                    children: this.renderMessageNotificationsRadioOption(v.bL.ALL_MESSAGES),
+                    children: this.renderMessageNotificationsRadioOption(j.bL.ALL_MESSAGES),
                 }),
                 (0, i.jsx)(u.Z.Child, {
                     wrap: !0,
                     grow: 0,
                     shrink: 0,
                     className: t ? f.checkboxContainerMuted : f.checkboxContainer,
-                    children: this.renderMessageNotificationsRadioOption(v.bL.ONLY_MENTIONS),
+                    children: this.renderMessageNotificationsRadioOption(j.bL.ONLY_MENTIONS),
                 }),
                 (0, i.jsx)(u.Z.Child, {
                     wrap: !0,
                     grow: 0,
                     shrink: 0,
                     className: t ? f.checkboxContainerMuted : f.checkboxContainer,
-                    children: this.renderMessageNotificationsRadioOption(v.bL.NO_MESSAGES),
+                    children: this.renderMessageNotificationsRadioOption(j.bL.NO_MESSAGES),
                 }),
                 (0, i.jsx)(u.Z.Child, {
                     wrap: !0,
@@ -193,11 +193,11 @@ class b extends s.PureComponent {
             }),
             N(this, "handleMute", (e, t) => {
                 let { messageNotifications: n } = this.props;
-                this.setMessageNotification(null != n ? n : v.bL.NULL, t, p.UE.muted(t));
+                this.setMessageNotification(null != n ? n : j.bL.NULL, t, p.UE.muted(t));
             }),
             N(this, "handleDelete", () => {
                 let { onDelete: e, channel: t } = this.props;
-                this.setMessageNotification(v.bL.NULL, !1, p.ZB.OverrideDeleted), null != e && e(t.id);
+                this.setMessageNotification(j.bL.NULL, !1, p.ZB.OverrideDeleted), null != e && e(t.id);
             });
     }
 }

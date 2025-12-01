@@ -17,28 +17,28 @@ function l(e) {
             r = n.publishSource,
             a = void 0 === r || r,
             l = n.clientOffset,
-            _ = n.getSourceClientOffset,
-            p = e.getMonitor(),
-            h = e.getRegistry();
-        e.dispatch((0, i.T)(l)), c(t, p, h);
-        var m = f(t, p);
-        if (null === m) return void e.dispatch(s);
+            p = n.getSourceClientOffset,
+            _ = e.getMonitor(),
+            m = e.getRegistry();
+        e.dispatch((0, i.T)(l)), c(t, _, m);
+        var h = f(t, _);
+        if (null === h) return void e.dispatch(s);
         var g = null;
         if (l) {
-            if (!_) throw Error("getSourceClientOffset must be defined");
-            u(_), (g = _(m));
+            if (!p) throw Error("getSourceClientOffset must be defined");
+            u(p), (g = p(h));
         }
         e.dispatch((0, i.T)(l, g));
-        var E = h.getSource(m).beginDrag(p, m);
+        var E = m.getSource(h).beginDrag(_, h);
         if (null != E) {
-            d(E), h.pinSource(m);
-            var b = h.getSourceType(m);
+            d(E), m.pinSource(h);
+            var b = m.getSourceType(h);
             return {
                 type: o.qu,
                 payload: {
                     itemType: b,
                     item: E,
-                    sourceId: m,
+                    sourceId: h,
                     clientOffset: l || null,
                     sourceClientOffset: g || null,
                     isSourcePublic: !!a,

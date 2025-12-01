@@ -9,7 +9,7 @@ var r = n(348326),
     u = n(40455),
     d = n(989263),
     f = n(513418);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,13 +33,13 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-let h = new i.Z("Messages");
-class m {
+let m = new i.Z("Messages");
+class h {
     static computeUsersAndMembers(e) {
         (0, f.Z)(e);
         let t = new Map(),
@@ -56,15 +56,15 @@ class m {
     }
     constructor(e) {
         if (
-            (_(this, "connectionId", null),
-            _(this, "users", []),
-            _(this, "members", []),
-            _(this, "messages", []),
+            (p(this, "connectionId", null),
+            p(this, "users", []),
+            p(this, "members", []),
+            p(this, "messages", []),
             e.length > 0)
         ) {
             var t;
             let n = null == (t = e[0]) ? void 0 : t.connectionId,
-                [r, i] = m.computeUsersAndMembers(e);
+                [r, i] = h.computeUsersAndMembers(e);
             e.length > 0 && e.every((e) => e.connectionId === n) && (this.connectionId = n),
                 (this.users = r),
                 (this.members = i),
@@ -75,14 +75,14 @@ class m {
 class g {
     async startupLoad(e, t, n, r) {
         let i = l.Z.messages(e);
-        return new m(await i.getLatest(t, n, r));
+        return new h(await i.getLatest(t, n, r));
     }
     async load(e, t, n) {
         let r = o.Z.getBasicChannel(t);
-        if (null == t || null == r || !(0, d.v)(r)) return new m([]);
+        if (null == t || null == r || !(0, d.v)(r)) return new h([]);
         {
             let i = l.Z.messages(e);
-            return new m(await i.getLatest(r.guild_id, t, n));
+            return new h(await i.getLatest(r.guild_id, t, n));
         }
     }
     handleMessageCreate(e, t) {
@@ -149,11 +149,11 @@ class g {
     }
     async updateOne(e, t, n, r) {
         if (null == n.id)
-            return void h.warn("updateOne: message.id is null; cannot update a message if we do not know its id.");
+            return void m.warn("updateOne: message.id is null; cannot update a message if we do not know its id.");
         let i = l.Z.messages(r.database),
             o = await i.get(e, t, n.id),
             s = a.Z.lastTimeConnectedChanged();
-        null != o && i.put(e, t, c.a.fromMessage(e, t, p({}, o.message, n), s));
+        null != o && i.put(e, t, c.a.fromMessage(e, t, _({}, o.message, n), s));
     }
     deleteOne(e, t, n, r) {
         l.Z.messagesTransaction(r).deleteMessage(e, t, n);
@@ -165,7 +165,7 @@ class g {
         l.Z.messagesTransaction(t).deleteGuild(e);
     }
     constructor() {
-        _(this, "actions", {
+        p(this, "actions", {
             CHANNEL_DELETE: (e, t) => this.handleChannelDelete(e, t),
             GUILD_DELETE: (e, t) => this.handleGuildDelete(e, t),
             LOAD_MESSAGES_SUCCESS: (e, t) => this.handleLoadMessagesSuccess(e, t),

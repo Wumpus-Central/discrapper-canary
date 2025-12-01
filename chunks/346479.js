@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(997841);
+n.d(t, { Z: () => T }), n(997841);
 var r = n(697988),
     i = n(544891),
     a = n(570140),
@@ -9,17 +9,17 @@ var r = n(697988),
     u = n(131704),
     d = n(314897),
     f = n(592125),
-    _ = n(496675),
-    p = n(823379),
-    h = n(920303),
-    m = n(569471),
+    p = n(496675),
+    _ = n(823379),
+    m = n(920303),
+    h = n(569471),
     g = n(286934),
     E = n(91159),
     b = n(952537),
     y = n(981631),
     O = n(176505),
     v = n(388032);
-function I(e, t) {
+function S(e, t) {
     return i.tn
         .patch({
             url: y.ANM.CHANNEL(e.id),
@@ -42,7 +42,7 @@ function I(e, t) {
             ),
         );
 }
-function T(e, t) {
+function I(e, t) {
     a.Z.dispatch({
         type: "THREAD_MEMBER_LOCAL_UPDATE",
         id: e.id,
@@ -51,16 +51,16 @@ function T(e, t) {
         isJoining: t,
     });
 }
-let S = {
+let T = {
     archiveThread(e, t) {
         let n = { archived: !0 };
-        return t && (n.locked = !0), I(e, n);
+        return t && (n.locked = !0), S(e, n);
     },
     async lockThread(e) {
         let t = e.isArchivedThread();
         return (
             t && (await this.unarchiveThread(e, !1)),
-            I(e, {
+            S(e, {
                 locked: !0,
                 archived: t,
             })
@@ -70,7 +70,7 @@ let S = {
         let t = e.isArchivedThread();
         return (
             t && (await this.unarchiveThread(e, !0)),
-            I(e, {
+            S(e, {
                 locked: !1,
                 archived: t,
             })
@@ -81,7 +81,7 @@ let S = {
             r = e.isForumPost();
         t && (n.locked = !1);
         try {
-            return await I(e, n);
+            return await S(e, n);
         } catch (e) {
             var i, a;
             throw (
@@ -111,15 +111,15 @@ let S = {
     async unarchiveThreadIfNecessary(e) {
         var t;
         let n = f.Z.getChannel(e),
-            r = _.Z.can(y.Plq.MANAGE_THREADS, n);
+            r = p.Z.can(y.Plq.MANAGE_THREADS, n);
         null != n &&
             n.isArchivedThread() &&
             (r || (null == (t = n.threadMetadata) ? void 0 : t.locked) !== !0) &&
             (await this.unarchiveThread(n, !1));
     },
-    setInvitable: (e, t) => I(e, { invitable: t }),
+    setInvitable: (e, t) => S(e, { invitable: t }),
     async joinThread(e, t) {
-        e.isForumPost() && T(e, !0);
+        e.isForumPost() && I(e, !0);
         try {
             return await i.tn.post({
                 url: y.ANM.THREAD_MEMBER(e.id),
@@ -139,7 +139,7 @@ let S = {
                     title: v.intl.string(v.t.j2d6Km),
                     body: v.intl.string(v.t.fEptJP),
                 });
-            e.isForumPost() && T(e, !1);
+            e.isForumPost() && I(e, !1);
         }
     },
     async addMember(e, t, n) {
@@ -165,7 +165,7 @@ let S = {
         }
     },
     leaveThread: (e, t) => (
-        e.isForumPost() && T(e, !1),
+        e.isForumPost() && I(e, !1),
         i.tn.del({
             url: y.ANM.THREAD_MEMBER(e.id),
             query: { location: t },
@@ -277,7 +277,7 @@ let S = {
     async setNotificationSettings(e, t) {
         return (
             (0, E.ZJ)(e, t),
-            m.Z.hasJoined(e.id) || (await this.joinThread(e, "Change Notification Settings")),
+            h.Z.hasJoined(e.id) || (await this.joinThread(e, "Change Notification Settings")),
             i.tn.patch({
                 url: y.ANM.THREAD_MEMBER_SETTINGS(e.id),
                 body: t,
@@ -287,7 +287,7 @@ let S = {
     },
     loadArchivedThreads(e) {
         let { guildId: t, channelId: n, sortOrder: r, tagFilter: o, tagSetting: s, offset: l } = e;
-        h.Z.isLoading(n, r, o, s) ||
+        m.Z.isLoading(n, r, o, s) ||
             (a.Z.dispatch({
                 type: "LOAD_ARCHIVED_THREADS",
                 channelId: n,
@@ -302,7 +302,7 @@ let S = {
                         archived: !0,
                         sort_by: "last_message_time",
                         sort_order: "desc",
-                        limit: h.I,
+                        limit: m.I,
                         tag: o.size > 0 ? Array.from(o).join(",") : void 0,
                         tag_setting: s,
                         offset: l,
@@ -335,7 +335,7 @@ let S = {
                                   firstMessages: d,
                                   mostRecentMessages: f,
                                   members: (null != c ? c : []).map((e) => (0, b.Z)(e)),
-                                  owners: i.map((e) => e.owner).filter(p.lm),
+                                  owners: i.map((e) => e.owner).filter(_.lm),
                                   hasMore: u,
                               });
                     },

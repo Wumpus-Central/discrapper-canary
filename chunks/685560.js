@@ -12,8 +12,8 @@ var a = n(54381),
     p = n(645041),
     h = n(905551),
     x = n(713081),
-    g = n(675478),
-    f = n(581883),
+    f = n(675478),
+    g = n(581883),
     b = n(899667),
     v = n(430824),
     j = n(914010),
@@ -34,12 +34,12 @@ let C = [
         o.C.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK,
     ],
     E = [o.C.ADOPT_CLAN_IDENTITY_NOTICE],
-    N = [
+    T = [
         o.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION,
         o.z.VANITY_URL_POWERUP_ROLLBACK_MODAL,
         o.z.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER,
     ];
-function T(e) {
+function N(e) {
     switch (e) {
         case o.C.GUILD_POWERUP_LEVEL_1_COACHMARK:
             return "GUILD_POWERUP_LEVEL_1_COACHMARK";
@@ -79,7 +79,7 @@ function I() {
             var t;
             return null == (t = v.Z.getGuild(e)) ? void 0 : t.name;
         }),
-        n = (0, r.Wu)([f.Z], () => [...S, ...E].filter((t) => null != e && (0, p.OY)(t, e))),
+        n = (0, r.Wu)([g.Z], () => [...S, ...E].filter((t) => null != e && (0, p.OY)(t, e))),
         l = (0, r.Wu)([b.Z], () => {
             var t;
             return null != e && null != (t = b.Z.getAppliedGuildBoostsForGuild(e)) ? t : [];
@@ -185,12 +185,12 @@ function I() {
                             (0, a.jsx)(
                                 c.rsf,
                                 {
-                                    label: T(t),
+                                    label: N(t),
                                     checked: n.includes(t),
                                     onChange: (n) => {
                                         n
                                             ? (0, p.Qd)(t, e, !1)
-                                            : ((0, g.Z1)(o.z.GUILD_POWERUP_NOTIFICATION), (0, p.c7)(t, e));
+                                            : ((0, f.Z1)(o.z.GUILD_POWERUP_NOTIFICATION), (0, p.c7)(t, e));
                                     },
                                 },
                                 t,
@@ -206,12 +206,12 @@ function I() {
                             (0, a.jsx)(
                                 c.rsf,
                                 {
-                                    label: T(t),
+                                    label: N(t),
                                     checked: n.includes(t),
                                     onChange: (n) => {
                                         n
                                             ? (0, p.Qd)(t, e, !1)
-                                            : ((0, g.Z1)(o.z.GUILD_POWERUP_NOTIFICATION), (0, p.c7)(t, e));
+                                            : ((0, f.Z1)(o.z.GUILD_POWERUP_NOTIFICATION), (0, p.c7)(t, e));
                                     },
                                 },
                                 t,
@@ -227,7 +227,7 @@ function I() {
                             className: y.header,
                             children: "Reset Powerup Rollback DCs",
                         }),
-                        N.map((e) =>
+                        T.map((e) =>
                             (0, a.jsx)(
                                 u.Z,
                                 {

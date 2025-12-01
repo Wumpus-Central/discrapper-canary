@@ -13,9 +13,9 @@ var r = n(570140),
     u = n(358085),
     d = n(548570),
     f = n(616810),
-    _ = n(755278),
-    p = n(866483);
-function h(e, t, n) {
+    p = n(755278),
+    _ = n(866483);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +39,7 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
@@ -70,17 +70,17 @@ function E(e, t) {
 let b = new o.Z("ConnectionStore"),
     y = new d.Z(),
     O = new f.Z(y),
-    v = new _.Z(y);
+    v = new p.Z(y);
 (y.handleIdentify = () => {
     let e = s.default.getToken();
     if ((b.verbose("handleIdentify called", { hasToken: null != e }), null == e)) return null;
     let t = a.Z.getState();
     return {
         token: e,
-        properties: E(m({}, l.default.getSuperProperties()), {
+        properties: E(h({}, l.default.getSuperProperties()), {
             client_app_state: t,
             is_fast_connect: !1,
-            gateway_connect_reasons: p.Pf(),
+            gateway_connect_reasons: _.Pf(),
         }),
         presence: O.getInitialState(),
     };

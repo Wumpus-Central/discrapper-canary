@@ -44,25 +44,25 @@ function u(e, t, n, a, s) {
             x: n.x - d.x,
             y: n.y - d.y,
         },
-        _ = e.offsetWidth,
-        p = e.offsetHeight,
-        h = a.anchorX,
-        m = a.anchorY,
-        g = c(u, t, _, p),
+        p = e.offsetWidth,
+        _ = e.offsetHeight,
+        m = a.anchorX,
+        h = a.anchorY,
+        g = c(u, t, p, _),
         E = g.dragPreviewWidth,
         b = g.dragPreviewHeight,
         y = function () {
-            var e = new i.I([0, 0.5, 1], [f.y, (f.y / p) * b, f.y + b - p]).interpolate(m);
+            var e = new i.I([0, 0.5, 1], [f.y, (f.y / _) * b, f.y + b - _]).interpolate(h);
             return (0, r.G)() && u && (e += (window.devicePixelRatio - 1) * b), e;
         },
         O = function () {
-            return new i.I([0, 0.5, 1], [f.x, (f.x / _) * E, f.x + E - _]).interpolate(h);
+            return new i.I([0, 0.5, 1], [f.x, (f.x / p) * E, f.x + E - p]).interpolate(m);
         },
         v = s.offsetX,
-        I = s.offsetY,
-        T = 0 === I || I;
+        S = s.offsetY,
+        I = 0 === S || S;
     return {
         x: 0 === v || v ? v : O(),
-        y: T ? I : y(),
+        y: I ? S : y(),
     };
 }

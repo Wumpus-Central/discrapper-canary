@@ -9,27 +9,27 @@ var i = n(481060),
 let c = 20;
 function u(e) {
     var t;
-    let { message: n, channel: u, playingActivity: d, onJoinStream: f, usernameHook: _, compact: p } = e,
-        h = (0, o.ZP)(n),
-        m = null == (t = n.call) ? void 0 : t.duration,
-        g = _(h),
+    let { message: n, channel: u, playingActivity: d, onJoinStream: f, usernameHook: p, compact: _ } = e,
+        m = (0, o.ZP)(n),
+        h = null == (t = n.call) ? void 0 : t.duration,
+        g = p(m),
         E = l.intl.format(l.t.FKXvaI, {
-            username: h.nick,
+            username: m.nick,
             activityName: null != d ? d.name : "unknown",
             onJoinStream: f,
             usernameHook: g,
         });
     return (
-        null != m &&
+        null != h &&
             (E = l.intl.format(l.t.NEFxtd, {
-                username: h.nick,
-                duration: m.humanize(),
+                username: m.nick,
+                duration: h.humanize(),
                 channelName: u.name,
                 usernameHook: g,
             })),
         (0, r.jsx)(s.Z, {
             iconNode:
-                null != m
+                null != h
                     ? (0, r.jsx)(i.g5r, {
                           size: "custom",
                           color: "currentColor",
@@ -38,7 +38,7 @@ function u(e) {
                       })
                     : (0, r.jsx)(a.ZP, { size: a.ZP.Sizes.SMALL }),
             timestamp: n.timestamp,
-            compact: p,
+            compact: _,
             children: E,
         })
     );

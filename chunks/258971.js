@@ -1,10 +1,10 @@
 n.d(t, {
-    Uc: () => p,
-    Xh: () => h,
+    Uc: () => _,
+    Xh: () => m,
     aQ: () => d,
     m_: () => u,
     xF: () => f,
-    z8: () => _,
+    z8: () => p,
 }),
     n(65234),
     n(111804),
@@ -39,19 +39,19 @@ var f = (function (e) {
         e
     );
 })({});
-let _ = (0, i.H)(() => ({
+let p = (0, i.H)(() => ({
     sessionId: null,
     guildId: null,
     entrypoint: null,
     trackedOpenedFromExternalEntrypoint: !1,
 }));
-function p() {
+function _() {
     let {
         location: { state: e },
     } = (0, a.s1)();
     return null == e ? void 0 : e.previousView;
 }
-function h() {
+function m() {
     var e, t, n;
     let {
         location: { pathname: i, search: u },
@@ -90,7 +90,7 @@ function h() {
             type: "category",
             categoryId: f,
         };
-    let _ = (0, r.LX)(i, {
+    let p = (0, r.LX)(i, {
             path: [
                 c.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(":applicationId"),
                 c.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(":applicationId", ":section"),
@@ -98,15 +98,15 @@ function h() {
             ],
             exact: !0,
         }),
-        { applicationId: p, section: h, skuId: m } = null != (t = null == _ ? void 0 : _.params) ? t : {};
-    if (null != _ && null != p) {
-        let e = null == (n = o.Z.getApplication(p)) ? void 0 : n.name;
+        { applicationId: _, section: m, skuId: h } = null != (t = null == p ? void 0 : p.params) ? t : {};
+    if (null != p && null != _) {
+        let e = null == (n = o.Z.getApplication(_)) ? void 0 : n.name;
         return {
             type: "application",
-            applicationId: p,
+            applicationId: _,
             applicationName: e,
             section:
-                null != h ? h : null != m ? l.GlobalDiscoveryAppsSections.STORE : l.GlobalDiscoveryAppsSections.ABOUT,
+                null != m ? m : null != h ? l.GlobalDiscoveryAppsSections.STORE : l.GlobalDiscoveryAppsSections.ABOUT,
         };
     }
 }

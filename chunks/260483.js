@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685);
+n.d(t, { Z: () => D }), n(388685);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -36,17 +36,17 @@ function d(e) {
     return e;
 }
 let f = {};
-function _(e) {
+function p(e) {
     f = a().omitBy(f, (t) => t.guildId === e);
 }
-function p(e) {
+function _(e) {
     f = a().omitBy(f, (t) => t.parentId === e);
 }
-function h(e) {
+function m(e) {
     var t;
     null == (t = e.threads) || t.forEach(g);
 }
-function m(e) {
+function h(e) {
     if (!(e.id in f)) {
         var t, n;
         f[e.id] = {
@@ -60,12 +60,12 @@ function m(e) {
 }
 function g(e) {
     if (!l.AW.has(e.type)) return !1;
-    let t = m(e);
+    let t = h(e);
     null != e.memberCount && (t.memberCount = e.memberCount),
         null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview);
 }
 function E(e) {
-    (f = {}), e.guilds.forEach(h);
+    (f = {}), e.guilds.forEach(m);
 }
 function b(e) {
     let { threadMembers: t } = e;
@@ -73,27 +73,27 @@ function b(e) {
 }
 function y(e) {
     let { guild: t } = e;
-    h(t);
+    m(t);
 }
 function O(e) {
     let { guild: t } = e;
-    _(t.id);
+    p(t.id);
 }
 function v(e) {
     let { channel: t } = e;
     return g(t);
 }
-function I(e) {
+function S(e) {
     let { threads: t } = e;
     t.forEach(g);
 }
-function T(e) {
+function I(e) {
     let { threads: t } = e;
-    t.forEach(R);
+    t.forEach(P);
 }
-function S(e) {
+function T(e) {
     let { channel: t } = e;
-    p(t.id);
+    _(t.id);
 }
 function A(e) {
     let { channel: t } = e;
@@ -101,7 +101,7 @@ function A(e) {
 }
 function C(e) {
     let t = !1;
-    for (let n of e.messages) t = R(n.thread) || t;
+    for (let n of e.messages) t = P(n.thread) || t;
     return t;
 }
 function N(e) {
@@ -112,29 +112,29 @@ function N(e) {
             let { threads: t, messages: r } = e;
             r.forEach((e) => {
                 e.forEach((e) => {
-                    n = R(e.thread) || n;
+                    n = P(e.thread) || n;
                 });
             }),
                 t.forEach((e) => {
-                    n = R(e) || n;
+                    n = P(e) || n;
                 });
         }),
         n
     );
 }
-function R(e) {
+function P(e) {
     if (null != e && !(e.id in f)) {
         let t = c.Z.getChannel(e.id);
         if (null != t) return g(t), !0;
     }
     return !1;
 }
-function P(e) {
+function R(e) {
     let t = f[e.id];
     if (null == t) return !1;
     null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview), (t.memberCount = e.memberCount);
 }
-class D extends (r = o.ZP.Store) {
+class w extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(c.Z);
     }
@@ -150,21 +150,21 @@ class D extends (r = o.ZP.Store) {
         return f;
     }
 }
-u(D, "displayName", "ThreadMembersStore");
-let w = new D(s.Z, {
+u(w, "displayName", "ThreadMembersStore");
+let D = new w(s.Z, {
     CONNECTION_OPEN: E,
     OVERLAY_INITIALIZE: b,
     GUILD_CREATE: y,
     GUILD_DELETE: O,
-    CHANNEL_DELETE: S,
+    CHANNEL_DELETE: T,
     THREAD_CREATE: v,
     THREAD_UPDATE: v,
-    THREAD_LIST_SYNC: I,
-    THREAD_MEMBERS_UPDATE: P,
+    THREAD_LIST_SYNC: S,
+    THREAD_MEMBERS_UPDATE: R,
     SEARCH_MESSAGES_SUCCESS: N,
     MOD_VIEW_SEARCH_MESSAGES_SUCCESS: N,
-    LOAD_THREADS_SUCCESS: T,
-    LOAD_ARCHIVED_THREADS_SUCCESS: T,
+    LOAD_THREADS_SUCCESS: I,
+    LOAD_ARCHIVED_THREADS_SUCCESS: I,
     THREAD_DELETE: A,
     LOAD_MESSAGES_SUCCESS: C,
 });

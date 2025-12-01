@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(392711),
@@ -9,31 +9,31 @@ var r = n(54381),
     u = n(98528),
     d = n(557340);
 let f = 20,
-    _ = i.forwardRef(function (e, t) {
+    p = i.forwardRef(function (e, t) {
         let {
                 categories: n,
                 store: a,
                 hasSearchResults: c,
-                listPadding: _,
-                renderRow: h,
-                renderSection: m,
+                listPadding: p,
+                renderRow: m,
+                renderSection: h,
                 renderSectionHeader: g,
                 renderSectionFooter: E,
                 renderInspector: b,
                 renderEmptySearchState: y,
                 rowCount: O,
                 rowCountBySection: v,
-                rowHeight: I,
-                sectionHeaderHeight: T,
-                sectionFooterHeight: S,
+                rowHeight: S,
+                sectionHeaderHeight: I,
+                sectionFooterHeight: T,
                 renderUpsell: A,
                 onScroll: C,
             } = e,
             N = i.useRef(!1),
-            R = i.useRef(null),
-            P = (0, l.Iu)((e) => e.searchQuery),
-            D = a.useStore((e) => e.activeCategoryIndex),
-            w = i.useMemo(
+            P = i.useRef(null),
+            R = (0, l.Iu)((e) => e.searchQuery),
+            w = a.useStore((e) => e.activeCategoryIndex),
+            D = i.useMemo(
                 () =>
                     n.map((e) =>
                         (0, s._O)(e.categoryInfo)
@@ -42,70 +42,70 @@ let f = 20,
                     ),
                 [n],
             ),
-            L = (0, u.Qs)({
-                activeCategoryIndex: D,
+            x = (0, u.Qs)({
+                activeCategoryIndex: w,
                 isScrolling: N,
-                listRef: R,
+                listRef: P,
                 onActiveCategoryIndexChange: a.setActiveCategoryIndex,
                 scrollOffset: f,
-                searchQuery: P,
+                searchQuery: R,
             }),
-            x = i.useCallback(
+            L = i.useCallback(
                 (e) => {
-                    L(e),
-                        p({
-                            listRef: R,
-                            searchQuery: P,
-                            nitroLockedSectionStates: w,
+                    x(e),
+                        _({
+                            listRef: P,
+                            searchQuery: R,
+                            nitroLockedSectionStates: D,
                             scrollTop: e,
                         }),
                         null == C || C(e);
                 },
-                [L, P, w, C],
+                [x, R, D, C],
             );
         return (
             i.useEffect(() => {
-                null != R.current && x(0);
-            }, [x, R]),
+                null != P.current && L(0);
+            }, [L, P]),
             (0, u.Xs)({
-                searchQuery: P,
-                activeCategoryIndex: D,
-                listRef: R,
+                searchQuery: R,
+                activeCategoryIndex: w,
+                listRef: P,
             }),
             i.useImperativeHandle(
                 t,
                 () => ({
                     scrollTo: function () {
                         for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-                        return null == (e = R.current) ? void 0 : e.scrollTo(...n);
+                        return null == (e = P.current) ? void 0 : e.scrollTo(...n);
                     },
                     getRowDescriptors: () => {
                         var e, t;
-                        return null != (t = null == (e = R.current) ? void 0 : e.getRowDescriptors()) ? t : [];
+                        return null != (t = null == (e = P.current) ? void 0 : e.getRowDescriptors()) ? t : [];
                     },
                     getSectionDescriptors: () => {
                         var e, t;
-                        return null != (t = null == (e = R.current) ? void 0 : e.getSectionDescriptors()) ? t : [];
+                        return null != (t = null == (e = P.current) ? void 0 : e.getSectionDescriptors()) ? t : [];
                     },
                     scrollToSectionTop: function () {
                         for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-                        return null == (e = R.current) ? void 0 : e.scrollToSectionTop(...n);
+                        return null == (e = P.current) ? void 0 : e.scrollToSectionTop(...n);
                     },
                     scrollRowIntoView: function () {
                         for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-                        return null == (e = R.current) ? void 0 : e.scrollRowIntoView(...n);
+                        return null == (e = P.current) ? void 0 : e.scrollRowIntoView(...n);
                     },
                     getScrollerNode: function () {
                         for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-                        return null == (e = R.current) ? void 0 : e.getScrollerNode(...n);
+                        return null == (e = P.current) ? void 0 : e.getScrollerNode(...n);
                     },
                     scrollIntoViewNode: function () {
                         for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-                        return null == (e = R.current) ? void 0 : e.scrollIntoViewNode(...n);
+                        return null == (e = P.current) ? void 0 : e.scrollIntoViewNode(...n);
                     },
                     getListDimensions: function () {
                         for (var e, t, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
-                        return null != (t = null == (e = R.current) ? void 0 : e.getListDimensions(...r))
+                        return null != (t = null == (e = P.current) ? void 0 : e.getListDimensions(...r))
                             ? t
                             : {
                                   height: -1,
@@ -118,23 +118,23 @@ let f = 20,
             (0, r.jsxs)("div", {
                 className: d.wrapper,
                 children: [
-                    P.length > 0 && !c && null != y
+                    R.length > 0 && !c && null != y
                         ? y()
                         : (0, r.jsx)(o.Z, {
                               role: "none presentation",
-                              listPadding: _,
-                              onScroll: x,
-                              renderRow: h,
-                              renderSection: m,
+                              listPadding: p,
+                              onScroll: L,
+                              renderRow: m,
+                              renderSection: h,
                               renderSectionHeader: g,
                               renderSectionFooter: E,
                               rowCount: O,
                               rowCountBySection: v,
-                              rowHeight: I,
-                              sectionHeaderHeight: T,
-                              sectionFooterHeight: S,
+                              rowHeight: S,
+                              sectionHeaderHeight: I,
+                              sectionFooterHeight: T,
                               stickyHeaders: !0,
-                              ref: R,
+                              ref: P,
                           }),
                     null == A ? void 0 : A(),
                     null == b ? void 0 : b(),
@@ -142,11 +142,11 @@ let f = 20,
             })
         );
     }),
-    p = (0, a.throttle)(h, 300, {
+    _ = (0, a.throttle)(m, 300, {
         leading: !1,
         trailing: !0,
     });
-function h(e) {
+function m(e) {
     let { listRef: t, searchQuery: n, nitroLockedSectionStates: r, scrollTop: i } = e;
     if (null == t.current) return;
     let a = (0, c.y)({
@@ -160,4 +160,4 @@ function h(e) {
         areOnlyNitroLockedSectionsVisible: a.areOnlyNitroLockedSectionsVisible,
     });
 }
-let m = _;
+let h = p;

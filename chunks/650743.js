@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => I });
 var r = n(54381);
 n(473749);
 var i = n(399606),
@@ -10,10 +10,10 @@ var i = n(399606),
     u = n(880949),
     d = n(28546),
     f = n(65029),
-    _ = n(430824),
-    p = n(556296),
-    h = n(451478),
-    m = n(358085),
+    p = n(430824),
+    _ = n(556296),
+    m = n(451478),
+    h = n(358085),
     g = n(13140),
     E = n(763296),
     b = n(981631),
@@ -32,7 +32,7 @@ function v(e, t, n) {
         e
     );
 }
-function I(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,15 +48,15 @@ function I(e) {
     }
     return e;
 }
-function T(e) {
+function I(e) {
     let { soundboardSound: t, closePicker: v } = e,
-        T = (0, d.Iu)((e) => e.searchQuery),
-        S = (0, i.e7)([E.Z], () => null != t && E.Z.isFavoriteSound(t.soundId)),
-        A = (0, i.e7)([_.Z], () => _.Z.getGuild(null == t ? void 0 : t.guildId)),
+        I = (0, d.Iu)((e) => e.searchQuery),
+        T = (0, i.e7)([E.Z], () => null != t && E.Z.isFavoriteSound(t.soundId)),
+        A = (0, i.e7)([p.Z], () => p.Z.getGuild(null == t ? void 0 : t.guildId)),
         C = (0, i.e7)([l.Z], () => l.Z.useReducedMotion, []),
-        N = (0, i.e7)([h.Z], () => h.Z.isFocused()),
-        R = (0, i.e7)([p.ZP], () => p.ZP.getKeybindForAction(b.kg4.SOUNDBOARD_HOLD));
-    if (null != t && T.length > 0)
+        N = (0, i.e7)([m.Z], () => m.Z.isFocused()),
+        P = (0, i.e7)([_.ZP], () => _.ZP.getKeybindForAction(b.kg4.SOUNDBOARD_HOLD));
+    if (null != t && I.length > 0)
         return (0, r.jsx)(f.Z, {
             graphicPrimary:
                 null != t.emojiId || null != t.emojiName
@@ -79,33 +79,33 @@ function T(e) {
                     : null,
             titlePrimary: t.name,
             titleSecondary: null == A ? void 0 : A.name,
-            isFavorite: S,
+            isFavorite: T,
         });
-    let P = () => {
+    let R = () => {
             v(),
                 (0, o.ZDy)(async () => {
                     let { default: e } = await n.e("58120").then(n.bind(n, 355453));
-                    return (t) => (0, r.jsx)(e, I({}, t));
+                    return (t) => (0, r.jsx)(e, S({}, t));
                 });
         },
-        D = (0, c.zu)(a.z.SOUNDBOARD_KEYBIND_TIP),
-        w = () => (0, c.Q3)(a.z.SOUNDBOARD_KEYBIND_TIP),
-        L =
-            null != R && (0, m.isWindows)() && !D
+        w = (0, c.zu)(a.z.SOUNDBOARD_KEYBIND_TIP),
+        D = () => (0, c.Q3)(a.z.SOUNDBOARD_KEYBIND_TIP),
+        x =
+            null != P && (0, h.isWindows)() && !w
                 ? y.intl.format(y.t.udMTth, {
-                      keybind: (0, g.BB)(R.shortcut, !0),
+                      keybind: (0, g.BB)(P.shortcut, !0),
                       openSettingsHook: (e, t) =>
                           (0, r.jsx)(
                               o.Anchor,
                               {
-                                  onClick: P,
+                                  onClick: R,
                                   children: e,
                               },
                               t,
                           ),
                   })
                 : null;
-    return null == L
+    return null == x
         ? null
         : (0, r.jsxs)("div", {
               className: O.keybindHint,
@@ -121,11 +121,11 @@ function T(e) {
                       variant: "text-sm/medium",
                       color: "text-default",
                       className: O.keybindHintText,
-                      children: L,
+                      children: x,
                   }),
                   (0, r.jsx)(o.P3F, {
                       className: O.closeButton,
-                      onClick: w,
+                      onClick: D,
                       children: (0, r.jsx)(o.Dio, {
                           size: "xs",
                           color: "currentColor",

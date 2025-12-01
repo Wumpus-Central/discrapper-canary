@@ -1,5 +1,5 @@
 n.d(t, {
-    E_: () => P,
+    E_: () => Z,
     Ti: () => w,
     Yw: () => O,
 }),
@@ -164,8 +164,8 @@ function w(e, t, n) {
         { preset: a, resolution: b, fps: y, soundshareEnabled: O } = (0, c.cj)([p.Z], () => p.Z.getState());
     s && (a = g.ApplicationStreamPresets.PRESET_AUTO);
     let w = (0, c.e7)([h.Z], () => h.Z.getInputDeviceId()),
-        P = null != (r = f.I0.useSetting()) && r,
-        Z = null != (l = f.eo.useSetting()) && l;
+        Z = null != (r = f.I0.useSetting()) && r,
+        P = null != (l = f.eo.useSetting()) && l;
     (a in g.ApplicationStreamPresets && (a !== g.ApplicationStreamPresets.PRESET_AUTO || o)) ||
         (a = g.ApplicationStreamPresets.PRESET_VIDEO),
         (0, _.Z)(g.ApplicationStreamPresets.PRESET_CUSTOM, b, y, t, n) ||
@@ -177,8 +177,8 @@ function w(e, t, n) {
             preset: a,
             resolution: b,
             fps: y,
-            hidePreview: P,
-            notifyFriends: Z,
+            hidePreview: Z,
+            notifyFriends: P,
             selectedSource: e,
             nativeSourceType: h.Z.getUseGamescopeCapture() ? "gamescope" : "",
             audioSourceId: w,
@@ -207,6 +207,6 @@ function w(e, t, n) {
         }
     );
 }
-function P() {
+function Z() {
     return [i.useContext(b), i.useContext(y)];
 }

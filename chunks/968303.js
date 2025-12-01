@@ -1,4 +1,4 @@
-n.d(t, { n: () => R }), n(704826), n(35282), n(415506), n(388685);
+n.d(t, { n: () => P }), n(704826), n(35282), n(415506), n(388685);
 var r,
     i,
     a = n(54381),
@@ -9,10 +9,10 @@ var r,
     u = n(866442),
     d = n(692547),
     f = n(360920),
-    _ = n(777207),
-    p = n(295907),
-    h = n(82642);
-function m(e, t, n) {
+    p = n(777207),
+    _ = n(295907),
+    m = n(82642);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
@@ -86,36 +86,36 @@ function O(e, t) {
     return i;
 }
 let v = {
-        side: h.side,
-        top: h.top,
-        "top-pill": h.topPill,
+        side: m.side,
+        top: m.top,
+        "top-pill": m.topPill,
     },
-    I = o.forwardRef(function (e, t) {
+    S = o.forwardRef(function (e, t) {
         let { className: n, onClick: r, children: i, "aria-expanded": o, "aria-controls": s } = e;
         return (0, a.jsx)(f.P, {
             innerRef: t,
             tabIndex: null == r ? -1 : 0,
-            className: l()(h.header, n),
+            className: l()(m.header, n),
             onClick: r,
             "aria-expanded": o,
             "aria-controls": s,
             focusProps: { offset: { top: -6 } },
-            children: (0, a.jsx)(_.x, {
+            children: (0, a.jsx)(p.x, {
                 variant: "eyebrow",
                 color: "none",
-                className: h.headerText,
+                className: m.headerText,
                 children: i,
             }),
         });
     });
-function T(e) {
+function I(e) {
     let { style: t } = e;
     return (0, a.jsx)("div", {
-        className: h.separator,
+        className: m.separator,
         style: t,
     });
 }
-let S = o.forwardRef(function (e, t) {
+let T = o.forwardRef(function (e, t) {
     var { children: n, id: r } = e,
         i = y(e, ["children", "id"]);
     return (0, a.jsx)(
@@ -189,19 +189,19 @@ class N extends (r = o.Component) {
                 onContextMenu: c,
                 clickableRef: u,
                 clickableInnerRef: d,
-                look: _,
-                disableItemStyles: p,
+                look: p,
+                disableItemStyles: _,
             } = this.props,
-            m = this.props["aria-label"],
+            h = this.props["aria-label"],
             g = r === n;
         return (0, a.jsx)(f.P, {
             className: l()(t, {
-                [h.item]: !p,
-                [h.brand]: "brand" === _,
-                [h.selected]: null == i && g,
-                [h.themed]: "grey" === _,
-                [h.disabled]: null == i && s,
-                [h.destructive]: "destructive" === o,
+                [m.item]: !_,
+                [m.brand]: "brand" === p,
+                [m.selected]: null == i && g,
+                [m.themed]: "grey" === p,
+                [m.disabled]: null == i && s,
+                [m.destructive]: "destructive" === o,
             }),
             style: this.getStyle(),
             role: "tab",
@@ -215,7 +215,7 @@ class N extends (r = o.Component) {
             onMouseUp: null != i ? this.handleMouseUp : void 0,
             onMouseDown: this.handleMouseDown,
             onContextMenu: c,
-            "aria-label": m,
+            "aria-label": h,
             innerRef: d,
             ref: u,
             children: e,
@@ -223,25 +223,25 @@ class N extends (r = o.Component) {
     }
     constructor(...e) {
         super(...e),
-            m(this, "state", {
+            h(this, "state", {
                 hover: !1,
                 active: !1,
             }),
-            m(this, "handleClick", (e) => {
+            h(this, "handleClick", (e) => {
                 let { disabled: t, onClick: n, id: r, onItemSelect: i } = this.props;
                 t || (null != n ? n(e) : null != i && i(r));
             }),
-            m(this, "handleMouseDown", () => {
+            h(this, "handleMouseDown", () => {
                 let { color: e } = this.props;
                 null != e && this.setState({ active: !0 });
             }),
-            m(this, "handleMouseUp", () => {
+            h(this, "handleMouseUp", () => {
                 this.setState({ active: !1 });
             }),
-            m(this, "handleMouseOver", () => {
+            h(this, "handleMouseOver", () => {
                 this.setState({ hover: !0 });
             }),
-            m(this, "handleMouseOut", () => {
+            h(this, "handleMouseOut", () => {
                 this.setState({
                     hover: !1,
                     active: !1,
@@ -249,12 +249,12 @@ class N extends (r = o.Component) {
             });
     }
 }
-m(N, "defaultProps", {
+h(N, "defaultProps", {
     disabled: !1,
     look: "grey",
     disableItemStyles: !1,
 });
-class R extends (i = o.Component) {
+class P extends (i = o.Component) {
     render() {
         let {
             className: e,
@@ -277,8 +277,8 @@ class R extends (i = o.Component) {
     }
     constructor(...e) {
         super(...e),
-            m(this, "tabBarRef", o.createRef()),
-            m(
+            h(this, "tabBarRef", o.createRef()),
+            h(
                 this,
                 "focusManager",
                 (0, c.E)({
@@ -292,7 +292,7 @@ class R extends (i = o.Component) {
                     },
                 }),
             ),
-            m(this, "renderChildren", (e) => {
+            h(this, "renderChildren", (e) => {
                 let { selectedItem: t, onItemSelect: n, type: r = "side", look: i = "grey" } = this.props;
                 return o.isValidElement(e)
                     ? o.cloneElement(e, {
@@ -303,26 +303,26 @@ class R extends (i = o.Component) {
                       })
                     : null;
             }),
-            m(this, "getNodeForKeydownEvent", async (e) => {
+            h(this, "getNodeForKeydownEvent", async (e) => {
                 let { orientation: t = "horizontal" } = this.props,
-                    n = "vertical" === t ? p.vn.ARROW_UP : p.vn.ARROW_LEFT,
-                    r = "vertical" === t ? p.vn.ARROW_DOWN : p.vn.ARROW_RIGHT;
+                    n = "vertical" === t ? _.vn.ARROW_UP : _.vn.ARROW_LEFT,
+                    r = "vertical" === t ? _.vn.ARROW_DOWN : _.vn.ARROW_RIGHT;
                 switch (e.key) {
                     case n:
                         return this.focusManager.getPreviousFocusableElement();
                     case r:
                         return this.focusManager.getNextFocusableElement();
-                    case p.vn.HOME:
+                    case _.vn.HOME:
                         return this.focusManager.getFirstFocusableElement();
-                    case p.vn.END:
+                    case _.vn.END:
                         return this.focusManager.getLastFocusableElement();
                 }
                 return null;
             }),
-            m(this, "handleKeyDown", async (e) => {
+            h(this, "handleKeyDown", async (e) => {
                 let t = await this.getNodeForKeydownEvent(e);
                 null != t && (e.preventDefault(), t.focus());
             });
     }
 }
-m(R, "Header", I), m(R, "Item", N), m(R, "Separator", T), m(R, "Panel", S);
+h(P, "Header", S), h(P, "Item", N), h(P, "Separator", I), h(P, "Panel", T);

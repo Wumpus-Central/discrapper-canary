@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685);
+n.d(t, { Z: () => R }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,19 +9,19 @@ var r = n(54381),
     u = n(100527),
     d = n(906732),
     f = n(140701),
-    _ = n(158776),
-    p = n(74538),
-    h = n(998502),
-    m = n(785717),
+    p = n(158776),
+    _ = n(74538),
+    m = n(998502),
+    h = n(785717),
     g = n(369566),
     E = n(518950),
     b = n(652853),
     y = n(228168),
     O = n(981631),
     v = n(474936),
-    I = n(671955),
-    T = n(66856);
-function S(e, t, n) {
+    S = n(671955),
+    I = n(66856);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function A(e) {
                 }),
             )),
             r.forEach(function (t) {
-                S(e, t, n[t]);
+                T(e, t, n[t]);
             });
     }
     return e;
@@ -73,33 +73,33 @@ function N(e, t) {
         e
     );
 }
-let R = h.ZP.getEnableHardwareAcceleration() ? l.Xo$ : l.qEK;
-function P(e) {
+let P = m.ZP.getEnableHardwareAcceleration() ? l.Xo$ : l.qEK;
+function R(e) {
     let {
             user: t,
             displayProfile: n,
             guildId: a,
-            channelId: h,
-            themeType: S,
+            channelId: m,
+            themeType: T,
             animateOnHover: C,
-            onOpenProfile: P,
-            className: D,
-            previewStatus: w,
+            onOpenProfile: R,
+            className: w,
+            previewStatus: D,
         } = e,
-        { theme: L } = (0, b.z)(),
-        { analyticsLocations: x } = (0, d.ZP)(u.Z.AVATAR),
-        { trackUserProfileAction: M } = (0, m.KZ)(),
-        k = p.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, v.PremiumTypes.TIER_2),
-        j = i.useMemo(() => t.isNonUserBot() || (0, f.W)(t, h), [t, h]),
+        { theme: x } = (0, b.z)(),
+        { analyticsLocations: L } = (0, d.ZP)(u.Z.AVATAR),
+        { trackUserProfileAction: j } = (0, h.KZ)(),
+        M = _.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, v.PremiumTypes.TIER_2),
+        k = i.useMemo(() => t.isNonUserBot() || (0, f.W)(t, m), [t, m]),
         { live: U } = (0, g.Z)(t.id),
         [G] = U,
-        { status: B, isMobileOnline: Z } = (0, s.cj)([_.Z], () => ({
-            status: (0, c.Z)(G) ? O.Skl.STREAMING : _.Z.getStatus(t.id),
-            isMobileOnline: _.Z.isMobileOnline(t.id),
+        { status: Z, isMobileOnline: B } = (0, s.cj)([p.Z], () => ({
+            status: (0, c.Z)(G) ? O.Skl.STREAMING : p.Z.getStatus(t.id),
+            isMobileOnline: p.Z.isMobileOnline(t.id),
         })),
-        F = void 0 !== w ? w : B,
-        V = [I.l.MODAL, I.l.MODAL_V2].includes(S) ? l.EFr.SIZE_120 : l.EFr.SIZE_80,
-        H = o()(T.avatar, D),
+        F = void 0 !== D ? D : Z,
+        V = [S.l.MODAL, S.l.MODAL_V2].includes(T) ? l.EFr.SIZE_120 : l.EFr.SIZE_80,
+        H = o()(I.avatar, w),
         {
             avatarDecorationSrc: Y,
             avatarSrc: W,
@@ -110,19 +110,19 @@ function P(e) {
             size: V,
             animateOnHover: C,
         }),
-        z = (0, r.jsx)(R, {
+        z = (0, r.jsx)(P, {
             src: W,
             avatarDecoration: Y,
             size: V,
             "aria-label": t.username,
-            imageClassName: null != P ? T.overlay : void 0,
-            status: j ? O.Skl.UNKNOWN : F,
-            statusBackdropColor: k && !j ? (0, l.QFD)(L) : void 0,
-            isMobile: Z,
+            imageClassName: null != R ? I.overlay : void 0,
+            status: k ? O.Skl.UNKNOWN : F,
+            statusBackdropColor: M && !k ? (0, l.QFD)(x) : void 0,
+            isMobile: B,
             statusTooltip: !0,
             statusTooltipDelay: y.vB,
         });
-    return null == P
+    return null == R
         ? (0, r.jsx)(
               "div",
               N(A({}, K), {
@@ -133,14 +133,14 @@ function P(e) {
         : (0, r.jsx)(
               l.P3F,
               N(A({}, K), {
-                  className: o()(H, T.clickable),
-                  focusProps: { ringClassName: T.focusRing },
+                  className: o()(H, I.clickable),
+                  focusProps: { ringClassName: I.focusRing },
                   onClick: () => {
-                      M({
+                      j({
                           action: "PRESS_VIEW_PROFILE",
-                          analyticsLocations: x,
+                          analyticsLocations: L,
                       }),
-                          null == P || P();
+                          null == R || R();
                   },
                   children: z,
               }),

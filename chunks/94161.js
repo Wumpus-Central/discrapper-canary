@@ -9,31 +9,31 @@ var r = n(54381),
     u = n(28546),
     d = n(713913),
     f = n(541716),
-    _ = n(957825),
-    p = n(388032),
-    h = n(564355);
-function m(e, t) {
-    let { disabled: n, type: a, pickerView: m = _.X1.EMOJI } = e,
+    p = n(957825),
+    _ = n(388032),
+    m = n(564355);
+function h(e, t) {
+    let { disabled: n, type: a, pickerView: h = p.X1.EMOJI } = e,
         [g, E, b] = (0, u.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], s.X),
         y = (0, d.v)(l.S),
         O = a === f.Ie.NORMAL,
-        { tooltipsWithKeybinds: v, expressionsCombinedIntoEmojiButton: I } = d.n.useConfig({ location: "EmojiButton" }),
-        T = I ? void 0 : O ? y : void 0,
-        S = v && I && O ? p.intl.string(p.t.DSBQ6F) : void 0,
+        { tooltipsWithKeybinds: v, expressionsCombinedIntoEmojiButton: S } = d.n.useConfig({ location: "EmojiButton" }),
+        I = S ? void 0 : O ? y : void 0,
+        T = v && S && O ? _.intl.string(_.t.DSBQ6F) : void 0,
         A = i.useCallback(() => {
-            (0, u.RO)(m, a);
-        }, [a, m]);
+            (0, u.RO)(h, a);
+        }, [a, h]);
     return n
         ? null
         : (0, r.jsx)("div", {
-              className: o()(_.CT, h.buttonContainer),
+              className: o()(p.CT, m.buttonContainer),
               ref: t,
               children: (0, r.jsx)(c.Z, {
-                  "aria-label": S,
-                  tooltipText: S,
-                  className: h.emojiButton,
+                  "aria-label": T,
+                  tooltipText: T,
+                  className: m.emojiButton,
                   onClick: A,
-                  active: g === m && E === a,
+                  active: g === h && E === a,
                   "aria-controls": b,
                   tabIndex: 0,
                   focusProps: {
@@ -44,9 +44,9 @@ function m(e, t) {
                           right: -4,
                       },
                   },
-                  keyboardShortcut: T,
+                  keyboardShortcut: I,
                   canShowNUXPremiumTooltip: O,
               }),
           });
 }
-let g = i.memo(i.forwardRef(m));
+let g = i.memo(i.forwardRef(h));

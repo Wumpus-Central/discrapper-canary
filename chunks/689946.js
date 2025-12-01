@@ -2,31 +2,31 @@ function r(e, t) {
     var n, r, i, a, o, s;
     let { Operator: l, QuestionID: c, ChoiceLocator: u, LeftOperand: d, RightOperand: f } = e;
     if (null == c) return !0;
-    let _ = t[c];
-    if (null == _ || "" === _) return !1;
-    let p = null == u ? void 0 : u.match(/SelectableChoice\/(\d+)/),
-        h = null == p ? void 0 : p[1];
+    let p = t[c];
+    if (null == p || "" === p) return !1;
+    let _ = null == u ? void 0 : u.match(/SelectableChoice\/(\d+)/),
+        m = null == _ ? void 0 : _[1];
     switch (l) {
         case "Selected":
-            return null != h && _.split(",").includes(h);
+            return null != m && p.split(",").includes(m);
         case "NotSelected":
-            return null != h && !_.split(",").includes(h);
+            return null != m && !p.split(",").includes(m);
         case "EqualTo":
-            return _ === (null != f ? f : d);
+            return p === (null != f ? f : d);
         case "NotEqualTo":
-            return _ !== (null != f ? f : d);
+            return p !== (null != f ? f : d);
         case "GreaterThan":
-            return Number(_) > Number(null != (n = null != f ? f : d) ? n : 0);
+            return Number(p) > Number(null != (n = null != f ? f : d) ? n : 0);
         case "LessThan":
-            return Number(_) < Number(null != (r = null != f ? f : d) ? r : 0);
+            return Number(p) < Number(null != (r = null != f ? f : d) ? r : 0);
         case "GreaterThanOrEqualTo":
-            return Number(_) >= Number(null != (i = null != f ? f : d) ? i : 0);
+            return Number(p) >= Number(null != (i = null != f ? f : d) ? i : 0);
         case "LessThanOrEqualTo":
-            return Number(_) <= Number(null != (a = null != f ? f : d) ? a : 0);
+            return Number(p) <= Number(null != (a = null != f ? f : d) ? a : 0);
         case "Contains":
-            return _.includes(null != (o = null != f ? f : d) ? o : "");
+            return p.includes(null != (o = null != f ? f : d) ? o : "");
         case "DoesNotContain":
-            return !_.includes(null != (s = null != f ? f : d) ? s : "");
+            return !p.includes(null != (s = null != f ? f : d) ? s : "");
         default:
             return !0;
     }

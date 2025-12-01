@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(592125),
     i = n(594174),
     a = n(636449),
@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,7 +58,7 @@ function _(e, t) {
         e
     );
 }
-async function p(e) {
+async function _(e) {
     let t;
     if (null == e.targetApplicationId) return !1;
     let n = !1;
@@ -67,9 +67,9 @@ async function p(e) {
     } catch (e) {
         return !1;
     }
-    return (0, a.C)(n, () => h(_(d({}, e), { targetApplication: t })));
+    return (0, a.C)(n, () => m(p(d({}, e), { targetApplication: t })));
 }
-async function h(e) {
+async function m(e) {
     let {
             targetApplication: t,
             locationObject: n,
@@ -78,10 +78,10 @@ async function h(e) {
             componentId: u,
             commandOrigin: d,
             sectionName: f,
-            source: _,
-            onExecutedCallback: p,
-            referrerId: h,
-            customId: m,
+            source: p,
+            onExecutedCallback: _,
+            referrerId: m,
+            customId: h,
             inviterUserId: g,
             onConfirmActivityLaunchChecksAlertOpen: E,
         } = e,
@@ -103,10 +103,10 @@ async function h(e) {
             sectionName: f,
             locationObject: n,
             analyticsLocations: l,
-            source: _,
-            onExecutedCallback: p,
-            referrerId: h,
-            customId: m,
+            source: p,
+            onExecutedCallback: _,
+            referrerId: m,
+            customId: h,
             inviterUserId: g,
             onConfirmActivityLaunchChecksAlertOpen: E,
         }))

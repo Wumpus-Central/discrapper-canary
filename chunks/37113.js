@@ -4,14 +4,14 @@ n.d(t, {
     ApplicationStreamResolutions: () => o,
     L9: () => u,
     ND: () => f,
-    WC: () => p,
+    WC: () => _,
     aW: () => s,
     af: () => b,
     k0: () => E,
     km: () => g,
     no: () => d,
-    o6: () => m,
-    z8: () => h,
+    o6: () => h,
+    z8: () => m,
 }),
     n(415506);
 var r = n(981631),
@@ -201,7 +201,7 @@ let d = {
             fps: 5,
         },
     ];
-function _(e, t) {
+function p(e, t) {
     return {
         value: e,
         get label() {
@@ -209,13 +209,13 @@ function _(e, t) {
         },
     };
 }
-let p = [_(720), _(1080), _(1440), _(0, () => a.intl.string(a.t.XjXqzh))],
-    h = [_(720), _(1080), _(1440)],
-    m = (e) => (0 === e ? a.intl.string(a.t.XjXqzh) : a.intl.formatToPlainString(a.t.TEOC0I, { resolution: e })),
-    g = [_(480, () => m(480)), _(720, () => m(720)), _(1080, () => m(1080)), _(1440, () => m(1440)), _(0, () => m(0))],
-    E = [_(15), _(30), _(60)],
+let _ = [p(720), p(1080), p(1440), p(0, () => a.intl.string(a.t.XjXqzh))],
+    m = [p(720), p(1080), p(1440)],
+    h = (e) => (0 === e ? a.intl.string(a.t.XjXqzh) : a.intl.formatToPlainString(a.t.TEOC0I, { resolution: e })),
+    g = [p(480, () => h(480)), p(720, () => h(720)), p(1080, () => h(1080)), p(1440, () => h(1440)), p(0, () => h(0))],
+    E = [p(15), p(30), p(60)],
     b = [
-        _(15, () => a.intl.formatToPlainString(a.t["bW+JCW"], { value: 15 })),
-        _(30, () => a.intl.formatToPlainString(a.t["bW+JCW"], { value: 30 })),
-        _(60, () => a.intl.formatToPlainString(a.t["bW+JCW"], { value: 60 })),
+        p(15, () => a.intl.formatToPlainString(a.t["bW+JCW"], { value: 15 })),
+        p(30, () => a.intl.formatToPlainString(a.t["bW+JCW"], { value: 30 })),
+        p(60, () => a.intl.formatToPlainString(a.t["bW+JCW"], { value: 60 })),
     ];

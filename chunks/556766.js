@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(317381),
     d = n(966302),
     f = n(460181),
-    _ = n(474873),
-    p = n(292959),
-    h = n(944486),
-    m = n(246946),
+    p = n(474873),
+    _ = n(292959),
+    m = n(944486),
+    h = n(246946),
     g = n(340895),
     E = n(918559),
     b = n(871465);
@@ -57,7 +57,7 @@ function v(e, t) {
     }
     return n;
 }
-function I(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -68,11 +68,11 @@ function I(e, t) {
         e
     );
 }
-let T = {
+let I = {
         transform: "scale(0.7)",
         opacity: 0,
     },
-    S = {
+    T = {
         transform: "scale(1)",
         opacity: 1,
     };
@@ -82,22 +82,22 @@ function A() {
         : o().sample(["call_ringing_beat", "call_ringing_snow_halation"]);
 }
 function C() {
-    let e = (0, l.Wu)([g.Z, h.Z, u.ZP], () =>
+    let e = (0, l.Wu)([g.Z, m.Z, u.ZP], () =>
             g.Z.getIncomingCalls().filter((e) => {
                 let { channel: t } = e,
-                    n = h.Z.getChannelId() === t.id,
+                    n = m.Z.getChannelId() === t.id,
                     r = null == t.guild_id && n,
                     i =
                         u.ZP.getConnectedActivityChannelId() === t.id &&
-                        h.Z.getVoiceChannelId() !== t.id &&
+                        m.Z.getVoiceChannelId() !== t.id &&
                         u.ZP.getActivityPanelMode() === E.Ez.PANEL;
                 return !r || i;
             }),
         ),
         t = (0, l.e7)([g.Z], () => g.Z.hasIncomingCalls()),
-        n = (0, l.e7)([p.Z], () => p.Z.isSoundDisabled("call_ringing")),
-        a = (0, l.e7)([m.Z], () => m.Z.disableSounds),
-        o = (0, l.e7)([_.Z], () => _.Z.getSoundpack()),
+        n = (0, l.e7)([_.Z], () => _.Z.isSoundDisabled("call_ringing")),
+        a = (0, l.e7)([h.Z], () => h.Z.disableSounds),
+        o = (0, l.e7)([p.Z], () => p.Z.getSoundpack()),
         y = i.useRef(!1),
         v = (0, s.Z)(() => {
             let e = "call_ringing";
@@ -123,17 +123,17 @@ function C() {
                 return null == (t = e.channel) ? void 0 : t.id;
             },
             enter: {
-                from: T,
-                to: S,
+                from: I,
+                to: T,
             },
-            leave: T,
+            leave: I,
             config: {
                 mass: 1,
                 tension: 500,
                 friction: 18,
                 clamp: !0,
             },
-        })((e, t) => (0, r.jsx)(d.Z, I(O({}, t), { animatedStyle: e })))
+        })((e, t) => (0, r.jsx)(d.Z, S(O({}, t), { animatedStyle: e })))
     );
 }
 let N = i.memo(C);

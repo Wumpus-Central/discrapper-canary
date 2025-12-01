@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(442837),
     i = n(570140),
     a = n(710845),
@@ -56,4 +56,4 @@ class f extends r.ZP.Store {
             setInterval(() => this.refresh(), d);
     }
 }
-let _ = new f();
+let p = new f();

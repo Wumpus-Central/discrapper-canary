@@ -16,8 +16,8 @@ var u = n(984933),
 n(709054);
 var o = n(853856),
     c = n(362658),
-    s = n(434065),
-    d = n(981631);
+    d = n(434065),
+    s = n(981631);
 function f(e) {
     let { favoritesEnabled: t, hasStaffPrivileges: n } = (0, c.z)("useCanFavoriteChannel"),
         i = (0, l.e7)([o.Z], () => o.Z.isFavorite(e.id)),
@@ -28,17 +28,17 @@ function E(e) {
     return (0, l.e7)([o.Z], () => o.Z.getFavorite(e));
 }
 function g() {
-    return (0, l.e7)([u.ZP], () => u.ZP.getChannels(d.I_8))[r.d.GUILD_CATEGORY].map((e) => ({
+    return (0, l.e7)([u.ZP], () => u.ZP.getChannels(s.I_8))[r.d.GUILD_CATEGORY].map((e) => ({
         id: "null" === e.channel.id ? null : e.channel.id,
         name: e.channel.name,
     }));
 }
 function O() {
-    return (0, l.e7)([a.Z], () => a.Z.getGuildId()) === d.I_8;
+    return (0, l.e7)([a.Z], () => a.Z.getGuildId()) === s.I_8;
 }
 function p() {
     let { isFavoritesPerk: e } = (0, c.z)("useFavoriteAdded"),
-        t = (0, s.r)(),
+        t = (0, d.r)(),
         n = i.useCallback(() => {
             e && t.notifyFavoriteAdded();
         }, [t, e]),

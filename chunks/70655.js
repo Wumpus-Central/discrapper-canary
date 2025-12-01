@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(70780),
     i = n(147913),
     a = n(710845),
@@ -21,10 +21,10 @@ function u(e, t, n) {
 }
 let d = +l.Z.Millis.SECOND,
     f = 30 * l.Z.Millis.SECOND,
-    _ = 360,
-    p = new a.Z("RTCLatencyTestManager");
-p.enableNativeLogger(!0);
-class h extends i.Z {
+    p = 360,
+    _ = new a.Z("RTCLatencyTestManager");
+_.enableNativeLogger(!0);
+class m extends i.Z {
     _terminate() {
         null != this.refetchTimeout && clearTimeout(this.refetchTimeout);
     }
@@ -38,16 +38,16 @@ class h extends i.Z {
                     ? o.Z.getMediaEngine()
                           .rankRtcRegions(e)
                           .then((e) => {
-                              p.verbose("RTC region latency test completed, ranked regions are: ", e), (0, r.o)(e, t);
+                              _.verbose("RTC region latency test completed, ranked regions are: ", e), (0, r.o)(e, t);
                           })
-                          .catch((e) => p.warn(e))
-                    : p.verbose("RTC cached ranked preferred regions are ".concat(s.Z.getPreferredRegions()));
+                          .catch((e) => _.warn(e))
+                    : _.verbose("RTC cached ranked preferred regions are ".concat(s.Z.getPreferredRegions()));
             }),
             u(this, "_fetchAndScheduleRefetch", () => {
                 (0, r.J)()
                     .then((e) => this._handleTestRegionsResponse(e.body))
-                    .catch((e) => p.warn(e)),
-                    (this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, _ * l.Z.Millis.MINUTE));
+                    .catch((e) => _.warn(e)),
+                    (this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, p * l.Z.Millis.MINUTE));
             }),
             u(this, "_handleConnectionOpen", () => {
                 if (c.isPlatformEmbedded && !__OVERLAY__) {
@@ -58,4 +58,4 @@ class h extends i.Z {
             });
     }
 }
-let m = new h();
+let h = new m();

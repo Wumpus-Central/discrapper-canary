@@ -5,10 +5,10 @@ n.d(t, {
     dp: () => g,
     f3: () => b,
     iL: () => C,
-    nA: () => I,
-    qF: () => m,
+    nA: () => S,
+    qF: () => h,
     uV: () => y,
-    vY: () => S,
+    vY: () => T,
 }),
     n(35282),
     n(388685);
@@ -22,10 +22,10 @@ var r = n(112456),
     u = n(74538),
     d = n(981631),
     f = n(474936),
-    _ = n(388032);
-let p = 524288000,
-    h = 524288000;
-function m(e, t) {
+    p = n(388032);
+let _ = 524288000,
+    m = 524288000;
+function h(e, t) {
     return e instanceof File ? e : g(e.data.buffer, e.filename, null != t ? t : "text/plain");
 }
 function g(e, t, n) {
@@ -110,27 +110,27 @@ function v(e) {
     let r = s.Z.getGuild(e);
     return Math.max(null != r ? f.HO[r.premiumTier].limits.fileSize : d.mBz, n);
 }
-function I(e, t) {
+function S(e, t) {
     let n = v(t);
     return Array.from(e).some((e) => e.size > n);
 }
-function T(e) {
+function I(e) {
     let t = 0;
     for (let n of e) t += n.size;
     return t;
 }
-function S(e) {
-    return T(e) > A();
+function T(e) {
+    return I(e) > A();
 }
 function A() {
     let e = l.default.getCurrentUser();
-    return null != e && e.isStaff() ? h : p;
+    return null != e && e.isStaff() ? m : _;
 }
 function C(e) {
     let { guildId: t, onClick: n } = e,
         r = (0, c.BU)(v(t) / 1024, { useKibibytes: !0 }),
         i = (0, c.BU)(f.Uq / 1024, { useKibibytes: !0 });
-    return _.intl.format(_.t.tRuxk9, {
+    return p.intl.format(p.t.tRuxk9, {
         maxSize: r,
         premiumMaxSize: i,
         onClick: n,

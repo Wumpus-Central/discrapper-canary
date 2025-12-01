@@ -37,7 +37,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,22 +49,22 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -72,7 +72,7 @@ function h(e, t) {
     }
     return i;
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -84,7 +84,7 @@ function m(e, t) {
 let g = "useReportAppItemModal";
 function E(e) {
     var { applicationId: t } = e,
-        n = h(e, ["applicationId"]);
+        n = m(e, ["applicationId"]);
     return null == t
         ? null
         : (0, r.jsx)(a.sNh, {
@@ -106,7 +106,7 @@ function b(e, t) {
             return (e) =>
                 (0, r.jsx)(
                     i.u_l,
-                    p(
+                    _(
                         f(
                             {
                                 title: u.intl.string(u.t.Bd10bR),

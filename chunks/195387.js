@@ -10,29 +10,29 @@ var i = n(442837),
     u = n(887413),
     d = n(359110),
     f = n(314897),
-    _ = n(944486),
-    p = n(732380),
-    h = n(176505),
-    m = n(50493),
+    p = n(944486),
+    _ = n(732380),
+    m = n(176505),
+    h = n(50493),
     g = n(388032);
 function E(e) {
     let { user: t, guildId: n, channelId: E, onClose: b, appContext: y } = e,
         { newestAnalyticsLocation: O } = (0, o.ZP)(),
         v = (0, i.e7)([f.default], () => f.default.getId() === (null == t ? void 0 : t.id)),
-        I = (0, l.m)(null != n ? n : null),
-        T = (0, i.e7)([_.Z], () => (null != E ? E : _.Z.getChannelId(n, !0)), [E, n]);
-    return null == n || !I || v
+        S = (0, l.m)(null != n ? n : null),
+        I = (0, i.e7)([p.Z], () => (null != E ? E : p.Z.getChannelId(n, !0)), [E, n]);
+    return null == n || !S || v
         ? null
-        : (0, r.jsx)(p.f6, {
+        : (0, r.jsx)(_.f6, {
               action: "PRESS_MOD_VIEW",
               icon: a.HI3,
               tooltipText: g.intl.string(g.t.kj3tz2),
               onClick: () => {
                   c.Z.close(),
-                      null != T && (0, d.Kh)(T),
+                      null != I && (0, d.Kh)(I),
                       (0, u.i)(y),
-                      (0, s.r)(n, t.id, null != T ? T : h.oC.MEMBER_SAFETY, {
-                          modViewPanel: m.k.INFO,
+                      (0, s.r)(n, t.id, null != I ? I : m.oC.MEMBER_SAFETY, {
+                          modViewPanel: h.k.INFO,
                           sourceLocation: O,
                       }),
                       null == b || b();

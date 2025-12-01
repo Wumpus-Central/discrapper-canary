@@ -12,16 +12,16 @@ var i = n(54381),
     S = n(710808),
     T = n(65154),
     I = n(388032);
-let O = (0, o.H)(() => ({ isUploading: !1 }));
-async function g() {
+let g = (0, o.H)(() => ({ isUploading: !1 }));
+async function O() {
     await (0, S.xI)({
-        onUploadStart: () => O.setState({ isUploading: !0 }),
-        onUploadFinish: () => O.setState({ isUploading: !1 }),
+        onUploadStart: () => g.setState({ isUploading: !0 }),
+        onUploadFinish: () => g.setState({ isUploading: !1 }),
     });
 }
 function _() {
     let t = (0, s.e7)([d.Z], () => d.Z.getDebugLogging()),
-        e = O.useField("isUploading"),
+        e = g.useField("isUploading"),
         n = r.useId();
     return (0, i.jsxs)("fieldset", {
         children: [
@@ -48,7 +48,7 @@ function _() {
                                 (0, i.jsx)(u.zxk, {
                                     variant: "secondary",
                                     text: I.intl.string(I.t.EbwFfR),
-                                    onClick: g,
+                                    onClick: O,
                                     disabled: e,
                                     "aria-label": I.intl.string(I.t.aY1OH2),
                                 }),

@@ -21,18 +21,18 @@ function d(e, t) {
         c = (0, s.d)(n, o),
         d = u(t),
         f = e.isDisabled ? {} : d,
-        _ = (0, l.useRef)(e.autoFocus);
+        p = (0, l.useRef)(e.autoFocus);
     (0, l.useEffect)(() => {
-        _.current && t.current && (0, r.e)(t.current), (_.current = !1);
+        p.current && t.current && (0, r.e)(t.current), (p.current = !1);
     }, [t]);
-    let p = e.excludeFromTabOrder ? -1 : 0;
+    let _ = e.excludeFromTabOrder ? -1 : 0;
     return (
-        e.isDisabled && (p = void 0),
+        e.isDisabled && (_ = void 0),
         {
             focusableProps: (0, s.d)(
                 {
                     ...c,
-                    tabIndex: p,
+                    tabIndex: _,
                 },
                 f,
             ),

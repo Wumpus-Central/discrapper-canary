@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(147913),
     i = n(914010),
     a = n(924301),
@@ -28,7 +28,7 @@ let l = {},
                 c.delete(e);
             }
     };
-class _ extends r.Z {
+class p extends r.Z {
     async getGuildEventUserCounts(e, t, n) {
         let r = n.filter(
             (n) =>
@@ -89,4 +89,4 @@ class _ extends r.Z {
             });
     }
 }
-let p = new _();
+let _ = new p();

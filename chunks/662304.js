@@ -8,7 +8,7 @@ var r = n(54381),
     c = n(686546),
     u = n(781293);
 let d = [1752220, 3066993, 3447003, 10181046, 15277667, 15844367];
-function p(e) {
+function f(e) {
     return (0, a.Rf)(
         d[
             (function (e) {
@@ -23,10 +23,10 @@ function p(e) {
 function h(e) {
     var t;
     let { title: n, className: l, icon: a } = e,
-        [d, h] = i.useState(p(n));
+        [d, h] = i.useState(f(n));
     return (
         i.useEffect(() => {
-            h(p(n));
+            h(f(n));
         }, [n]),
         (0, r.jsxs)("div", {
             className: o()(u.wrapper, l),

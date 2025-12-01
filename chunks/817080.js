@@ -23,12 +23,12 @@ var t =
                 u = "application/octet-stream",
                 d = 0,
                 f = 40000,
-                _ = function (e) {
+                p = function (e) {
                     setTimeout(function () {
                         "string" == typeof e ? n().revokeObjectURL(e) : e.remove();
                     }, f);
                 },
-                p = function (e, t, n) {
+                _ = function (e, t, n) {
                     for (var r = (t = [].concat(t)).length; r--; ) {
                         var i = e["on" + t[r]];
                         if ("function" == typeof i)
@@ -39,20 +39,20 @@ var t =
                             }
                     }
                 },
-                h = function (e) {
+                m = function (e) {
                     return /^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(e.type)
                         ? new Blob(["ï\xBB\xBF", e], { type: e.type })
                         : e;
                 },
-                m = function (t, c, f) {
-                    f || (t = h(t));
-                    var m,
+                h = function (t, c, f) {
+                    f || (t = m(t));
+                    var h,
                         g,
                         E = this,
                         b = t.type,
                         y = !1,
                         O = function () {
-                            p(E, "writestart progress write writeend".split(" "));
+                            _(E, "writestart progress write writeend".split(" "));
                         },
                         v = function () {
                             if (g && o && "undefined" != typeof FileReader) {
@@ -67,27 +67,27 @@ var t =
                                     (E.readyState = E.INIT);
                                 return;
                             }
-                            (y || !m) && (m = n().createObjectURL(t)),
+                            (y || !h) && (h = n().createObjectURL(t)),
                                 g
-                                    ? (g.location.href = m)
-                                    : void 0 === e.open(m, "_blank") && o && (e.location.href = m),
+                                    ? (g.location.href = h)
+                                    : void 0 === e.open(h, "_blank") && o && (e.location.href = h),
                                 (E.readyState = E.DONE),
                                 O(),
-                                _(m);
+                                p(h);
                         },
-                        I = function (e) {
+                        S = function (e) {
                             return function () {
                                 if (E.readyState !== E.DONE) return e.apply(this, arguments);
                             };
                         },
-                        T = {
+                        I = {
                             create: !0,
                             exclusive: !1,
                         };
                     if (((E.readyState = E.INIT), c || (c = "download"), i)) {
-                        (m = n().createObjectURL(t)),
+                        (h = n().createObjectURL(t)),
                             setTimeout(function () {
-                                (r.href = m), (r.download = c), a(r), O(), _(m), (E.readyState = E.DONE);
+                                (r.href = h), (r.download = c), a(r), O(), p(h), (E.readyState = E.DONE);
                             });
                         return;
                     }
@@ -102,23 +102,23 @@ var t =
                         l(
                             e.TEMPORARY,
                             d,
-                            I(function (e) {
+                            S(function (e) {
                                 e.root.getDirectory(
                                     "saved",
-                                    T,
-                                    I(function (e) {
+                                    I,
+                                    S(function (e) {
                                         var n = function () {
                                             e.getFile(
                                                 c,
-                                                T,
-                                                I(function (e) {
+                                                I,
+                                                S(function (e) {
                                                     e.createWriter(
-                                                        I(function (n) {
+                                                        S(function (n) {
                                                             (n.onwriteend = function (t) {
                                                                 (g.location.href = e.toURL()),
                                                                     (E.readyState = E.DONE),
-                                                                    p(E, "writeend", t),
-                                                                    _(e);
+                                                                    _(E, "writeend", t),
+                                                                    p(e);
                                                             }),
                                                                 (n.onerror = function () {
                                                                     var e = n.error;
@@ -144,10 +144,10 @@ var t =
                                         e.getFile(
                                             c,
                                             { create: !1 },
-                                            I(function (e) {
+                                            S(function (e) {
                                                 e.remove(), n();
                                             }),
-                                            I(function (e) {
+                                            S(function (e) {
                                                 e.code === e.NOT_FOUND_ERR ? n() : v();
                                             }),
                                         );
@@ -158,17 +158,17 @@ var t =
                             v,
                         );
                 },
-                g = m.prototype,
+                g = h.prototype,
                 E = function (e, t, n) {
-                    return new m(e, t, n);
+                    return new h(e, t, n);
                 };
             return "undefined" != typeof navigator && navigator.msSaveOrOpenBlob
                 ? function (e, t, n) {
-                      return n || (e = h(e)), navigator.msSaveOrOpenBlob(e, t || "download");
+                      return n || (e = m(e)), navigator.msSaveOrOpenBlob(e, t || "download");
                   }
                 : ((g.abort = function () {
                       var e = this;
-                      (e.readyState = e.DONE), p(e, "abort");
+                      (e.readyState = e.DONE), _(e, "abort");
                   }),
                   (g.readyState = g.INIT = 0),
                   (g.WRITING = 1),

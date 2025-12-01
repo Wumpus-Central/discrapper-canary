@@ -8,7 +8,7 @@ var r = n(54381),
     c = n(434404),
     d = n(981631),
     u = n(388032),
-    g = n(797013),
+    g = n(342153),
     m = n(776853);
 async function p(e, t) {
     return await c.Z.saveGuild(e.id, { moderatorReportingEnabled: t });

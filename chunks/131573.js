@@ -1,6 +1,6 @@
 n.d(t, {
     $: () => E,
-    R: () => m,
+    R: () => h,
 });
 var r = n(54381),
     i = n(473749),
@@ -50,7 +50,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,11 +61,11 @@ function _(e, t) {
         e
     );
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -73,7 +73,7 @@ function p(e, t) {
     }
     return i;
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -82,7 +82,7 @@ function h(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-var m = (function (e) {
+var h = (function (e) {
     return (
         (e.WANDERING_CUBES = "wanderingCubes"),
         (e.CHASING_DOTS = "chasingDots"),
@@ -105,21 +105,21 @@ function g(e) {
 function E(e) {
     var t,
         { type: n = "wanderingCubes", animated: a = !0, className: u, itemClassName: f } = e,
-        h = p(e, ["type", "animated", "className", "itemClassName"]);
-    let { i18n: m } = (0, l.ZF)(),
+        m = _(e, ["type", "animated", "className", "itemClassName"]);
+    let { i18n: h } = (0, l.ZF)(),
         { reducedMotion: E } = i.useContext(s.S),
         b = E.enabled ? g(n) : n,
-        y = null != (t = h["aria-label"]) ? t : m.SPINNER_LOADING_LABEL;
+        y = null != (t = m["aria-label"]) ? t : h.SPINNER_LOADING_LABEL;
     if ("spinningCircle" === b || "spinningCircleSimple" === b)
         return (0, r.jsx)(
             "div",
-            _(
+            p(
                 d(
                     {
                         className: o()(c.spinner, c[b], u, { [c.stopAnimation]: !a }),
                         role: "img",
                     },
-                    h,
+                    m,
                 ),
                 {
                     "aria-label": y,
@@ -161,14 +161,14 @@ function E(e) {
     let O = o()(c.item, f);
     return (0, r.jsx)(
         "span",
-        _(
+        p(
             d(
                 {
                     className: o()(c.spinner, u, { [c.stopAnimation]: !a }),
                     role: "img",
                     "aria-label": y,
                 },
-                h,
+                m,
             ),
             {
                 children: (0, r.jsxs)("span", {
@@ -183,4 +183,4 @@ function E(e) {
         ),
     );
 }
-E.Type = m;
+E.Type = h;

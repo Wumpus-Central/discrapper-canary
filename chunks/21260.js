@@ -1,7 +1,7 @@
 n.d(t, {
-    AJ: () => p,
-    Ep: () => m,
-    te: () => _,
+    AJ: () => _,
+    Ep: () => h,
+    te: () => p,
     zP: () => f,
 }),
     n(388685);
@@ -38,7 +38,7 @@ function f(e) {
         c = i.useRef(0),
         u = i.useRef(0),
         f = i.useRef(null),
-        _ = i.useCallback((e, t) => {
+        p = i.useCallback((e, t) => {
             l.current[e] = t;
         }, []);
     return (
@@ -59,16 +59,16 @@ function f(e) {
         i.useMemo(
             () => ({
                 lastVisibleIndex: u.current,
-                onItemLayout: _,
+                onItemLayout: p,
                 overflowItemsRef: f,
                 itemWidthsRef: l,
                 version: o,
             }),
-            [_, o],
+            [p, o],
         )
     );
 }
-function _(e) {
+function p(e) {
     let { items: t, renderItem: n } = e;
     return (0, r.jsx)(s.u, {
         __unsupportedReactNodeAsText: (0, r.jsx)("div", {
@@ -79,7 +79,7 @@ function _(e) {
         children: (0, r.jsx)("div", { children: n(c.intl.formatToPlainString(c.t.vGclWm, { count: t.length })) }),
     });
 }
-function p(e) {
+function _(e) {
     let { onItemLayout: t, index: n, children: a } = e,
         o = i.useRef(null);
     return (
@@ -92,11 +92,11 @@ function p(e) {
         })
     );
 }
-function h(e) {
+function m(e) {
     return "string" == typeof e ? e : e.key;
 }
-function m(e) {
-    let { className: t, items: n, renderItem: a, itemGapPx: s = 0, maxLines: d, renderOverflow: m } = e,
+function h(e) {
+    let { className: t, items: n, renderItem: a, itemGapPx: s = 0, maxLines: d, renderOverflow: h } = e,
         { ref: g, width: E = 0 } = (0, l.ZP)(),
         {
             lastVisibleIndex: b,
@@ -110,15 +110,15 @@ function m(e) {
         }),
         v = i.useCallback(
             (e) =>
-                (0, r.jsx)(_, {
+                (0, r.jsx)(p, {
                     items: e,
                     renderItem: a,
                 }),
             [a],
         ),
-        I = null != m ? m : v,
-        T = i.useMemo(() => n.slice(0, b + 1), [n, b]),
-        S = i.useMemo(() => n.slice(b + 1), [n, b]);
+        S = null != h ? h : v,
+        I = i.useMemo(() => n.slice(0, b + 1), [n, b]),
+        T = i.useMemo(() => n.slice(b + 1), [n, b]);
     return (0, r.jsxs)("div", {
         className: o()(t, u.items),
         ref: g,
@@ -131,13 +131,13 @@ function m(e) {
                         className: u.itemMeasurements,
                         children: n.map((e, t) =>
                             (0, r.jsx)(
-                                p,
+                                _,
                                 {
                                     index: t,
                                     onItemLayout: y,
                                     children: a(e),
                                 },
-                                h(e),
+                                m(e),
                             ),
                         ),
                     }),
@@ -148,8 +148,8 @@ function m(e) {
                     }),
                 ],
             }),
-            T.map(a),
-            S.length > 0 && I(S),
+            I.map(a),
+            T.length > 0 && S(T),
         ],
     });
 }

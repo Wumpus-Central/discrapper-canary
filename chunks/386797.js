@@ -1,42 +1,42 @@
-_.d(e, { S: () => i });
-var a = _(151122),
-    r = _(899517),
-    n = _(873567),
-    o = _(394798);
-let E = r.n,
-    i = (0, a._I)((t = {}) => {
-        let e = null != t.frameContextLines ? t.frameContextLines : 7;
+r.d(t, { S: () => s });
+var n = r(151122),
+    a = r(899517),
+    i = r(873567),
+    o = r(394798);
+let _ = a.n,
+    s = (0, n._I)((e = {}) => {
+        let t = null != e.frameContextLines ? e.frameContextLines : 7;
         return {
             name: "ContextLines",
-            processEvent: (t) =>
-                (function (t, e) {
-                    let _ = E.document,
-                        a = E.location && (0, n.rt)(E.location.href);
-                    if (!_ || !a) return t;
-                    let r = t.exception && t.exception.values;
-                    if (!r || !r.length) return t;
-                    let i = _.documentElement.innerHTML;
-                    if (!i) return t;
-                    let c = ["<!DOCTYPE html>", "<html>", ...i.split("\n"), "</html>"];
+            processEvent: (e) =>
+                (function (e, t) {
+                    let r = _.document,
+                        n = _.location && (0, i.rt)(_.location.href);
+                    if (!r || !n) return e;
+                    let a = e.exception && e.exception.values;
+                    if (!a || !a.length) return e;
+                    let s = r.documentElement.innerHTML;
+                    if (!s) return e;
+                    let c = ["<!DOCTYPE html>", "<html>", ...s.split("\n"), "</html>"];
                     return (
-                        r.forEach((t) => {
-                            let _ = t.stacktrace;
-                            _ &&
-                                _.frames &&
-                                (_.frames = _.frames.map((t) => {
-                                    var _, r, n, E;
+                        a.forEach((e) => {
+                            let r = e.stacktrace;
+                            r &&
+                                r.frames &&
+                                (r.frames = r.frames.map((e) => {
+                                    var r, a, i, _;
                                     return (
+                                        (r = e),
+                                        (a = c),
+                                        (i = n),
                                         (_ = t),
-                                        (r = c),
-                                        (n = a),
-                                        (E = e),
-                                        _.filename === n && _.lineno && r.length && (0, o.go)(r, _, E),
-                                        _
+                                        r.filename === i && r.lineno && a.length && (0, o.go)(a, r, _),
+                                        r
                                     );
                                 }));
                         }),
-                        t
+                        e
                     );
-                })(t, e),
+                })(e, t),
         };
     });

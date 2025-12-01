@@ -9,7 +9,7 @@ function i(e) {
         u = null == e ? void 0 : e.get("response_type"),
         d = null != (n = null == e ? void 0 : e.get("nonce")) ? n : void 0,
         f = null != (i = null == e ? void 0 : e.get("code_challenge")) ? i : void 0,
-        _ = null != (a = null == e ? void 0 : e.get("code_challenge_method")) ? a : void 0;
+        p = null != (a = null == e ? void 0 : e.get("code_challenge_method")) ? a : void 0;
     return (
         null == o ||
         null == s ||
@@ -23,7 +23,7 @@ function i(e) {
             responseType: u,
             nonce: d,
             codeChallenge: f,
-            codeChallengeMethod: _,
+            codeChallengeMethod: p,
         }),
         !0)
     );

@@ -48,18 +48,18 @@ e.exports = function (e, t) {
                 });
             });
     }
-    var _ = t.getAnchorOffset(),
-        p = l.getCharacterList(),
-        h = i(),
-        m = l instanceof r,
+    var p = t.getAnchorOffset(),
+        _ = l.getCharacterList(),
+        m = i(),
+        h = l instanceof r,
         g = l.merge({
-            text: u.slice(0, _),
-            characterList: p.slice(0, _),
+            text: u.slice(0, p),
+            characterList: _.slice(0, p),
         }),
         E = g.merge({
-            key: h,
-            text: u.slice(_),
-            characterList: p.slice(_),
+            key: m,
+            text: u.slice(p),
+            characterList: _.slice(p),
             data: c(),
         }),
         b = a.toSeq().takeUntil(function (e) {
@@ -75,20 +75,20 @@ e.exports = function (e, t) {
             .concat(
                 [
                     [n, g],
-                    [h, E],
+                    [m, E],
                 ],
                 y,
             )
             .toOrderedMap();
     return (
-        m && (l.getChildKeys().isEmpty() || o(!1), (O = d(O, g, E))),
+        h && (l.getChildKeys().isEmpty() || o(!1), (O = d(O, g, E))),
         e.merge({
             blockMap: O,
             selectionBefore: t,
             selectionAfter: t.merge({
-                anchorKey: h,
+                anchorKey: m,
                 anchorOffset: 0,
-                focusKey: h,
+                focusKey: m,
                 focusOffset: 0,
                 isBackward: !1,
             }),

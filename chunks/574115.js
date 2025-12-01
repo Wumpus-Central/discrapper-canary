@@ -8,7 +8,7 @@ var r = n(720218),
     u = n(467159),
     d = o.isEngine("Gecko"),
     f = "\n\n";
-function _(e, t) {
+function p(e, t) {
     return "deleteContentBackward" === e ? c(t) : t;
 }
 e.exports = function (e, t) {
@@ -17,65 +17,65 @@ e.exports = function (e, t) {
     var n,
         o,
         c,
-        p,
-        h = e.editor.ownerDocument.defaultView.getSelection(),
-        m = h.anchorNode,
-        g = h.isCollapsed;
+        _,
+        m = e.editor.ownerDocument.defaultView.getSelection(),
+        h = m.anchorNode,
+        g = m.isCollapsed;
     if (
-        (null == m ? void 0 : m.nodeType) === Node.TEXT_NODE ||
-        (null == m ? void 0 : m.nodeType) === Node.ELEMENT_NODE
+        (null == h ? void 0 : h.nodeType) === Node.TEXT_NODE ||
+        (null == h ? void 0 : h.nodeType) === Node.ELEMENT_NODE
     ) {
-        if (m.nodeType === Node.TEXT_NODE && (null !== m.previousSibling || null !== m.nextSibling)) {
-            var E = m.parentNode;
-            m.nodeValue = E.textContent;
-            for (var b = E.firstChild; null !== b; b = b.nextSibling) b !== m && E.removeChild(b);
+        if (h.nodeType === Node.TEXT_NODE && (null !== h.previousSibling || null !== h.nextSibling)) {
+            var E = h.parentNode;
+            h.nodeValue = E.textContent;
+            for (var b = E.firstChild; null !== b; b = b.nextSibling) b !== h && E.removeChild(b);
         }
-        var y = m.textContent,
+        var y = h.textContent,
             O = e._latestEditorState,
-            v = u(l(m)),
-            I = i.decode(v),
-            T = I.blockKey,
-            S = I.decoratorKey,
-            A = I.leafKey,
-            C = O.getBlockTree(T).getIn([S, "leaves", A]),
+            v = u(l(h)),
+            S = i.decode(v),
+            I = S.blockKey,
+            T = S.decoratorKey,
+            A = S.leafKey,
+            C = O.getBlockTree(I).getIn([T, "leaves", A]),
             N = C.start,
-            R = C.end,
-            P = O.getCurrentContent(),
-            D = P.getBlockForKey(T),
-            w = D.getText().slice(N, R);
-        if ((y.endsWith(f) && (y = y.slice(0, -1)), y === w)) {
-            var L = t.nativeEvent.inputType;
-            if (L) {
-                var x = _(L, O);
-                x !== O && (e.restoreEditorDOM(), e.update(x));
+            P = C.end,
+            R = O.getCurrentContent(),
+            w = R.getBlockForKey(I),
+            D = w.getText().slice(N, P);
+        if ((y.endsWith(f) && (y = y.slice(0, -1)), y === D)) {
+            var x = t.nativeEvent.inputType;
+            if (x) {
+                var L = p(x, O);
+                L !== O && (e.restoreEditorDOM(), e.update(L));
             }
             return;
         }
-        var M = O.getSelection(),
-            k = M.merge({
+        var j = O.getSelection(),
+            M = j.merge({
                 anchorOffset: N,
-                focusOffset: R,
+                focusOffset: P,
                 isBackward: !1,
             }),
-            j = D.getEntityAt(N),
-            U = s(j) ? P.getEntity(j) : null,
+            k = w.getEntityAt(N),
+            U = s(k) ? R.getEntity(k) : null,
             G = null != U ? U.getMutability() : null,
-            B = "MUTABLE" === G,
-            Z = B ? "spellcheck-change" : "apply-entity",
-            F = r.replaceText(P, k, y, D.getInlineStyleAt(N), B ? D.getEntityAt(N) : null);
+            Z = "MUTABLE" === G,
+            B = Z ? "spellcheck-change" : "apply-entity",
+            F = r.replaceText(R, M, y, w.getInlineStyleAt(N), Z ? w.getEntityAt(N) : null);
         if (d)
-            (n = h.anchorOffset), (p = (c = N + Math.min(n, (o = h.focusOffset))) + Math.abs(n - o)), (n = c), (o = p);
+            (n = m.anchorOffset), (_ = (c = N + Math.min(n, (o = m.focusOffset))) + Math.abs(n - o)), (n = c), (o = _);
         else {
-            var V = y.length - w.length;
-            (c = M.getStartOffset()), (p = M.getEndOffset()), (n = g ? p + V : c), (o = p + V);
+            var V = y.length - D.length;
+            (c = j.getStartOffset()), (_ = j.getEndOffset()), (n = g ? _ + V : c), (o = _ + V);
         }
         var H = F.merge({
-            selectionBefore: P.getSelectionAfter(),
-            selectionAfter: M.merge({
+            selectionBefore: R.getSelectionAfter(),
+            selectionAfter: j.merge({
                 anchorOffset: n,
                 focusOffset: o,
             }),
         });
-        e.update(a.push(O, H, Z));
+        e.update(a.push(O, H, B));
     }
 };

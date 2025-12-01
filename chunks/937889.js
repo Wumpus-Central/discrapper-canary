@@ -2,7 +2,7 @@ n.d(t, {
     ZP: () => y,
     k$: () => v,
     p6: () => g,
-    rs: () => m,
+    rs: () => h,
 }),
     n(388685),
     n(781311),
@@ -68,10 +68,10 @@ function f(e, t) {
         e
     );
 }
-let _ = 30,
-    p = new Set([l.hBH.IMAGE, l.hBH.GIFV]),
-    h = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
-function m(e, t) {
+let p = 30,
+    _ = new Set([l.hBH.IMAGE, l.hBH.GIFV]),
+    m = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
+function h(e, t) {
     var n;
     let r = g({
             channelId: e.channel_id,
@@ -125,7 +125,7 @@ function E(e, t, n) {
         } = n,
         d = !1,
         f = (null != u ? u : t).content,
-        _ = e(
+        p = e(
             c
                 ? (0, i.N)(f, {
                       escapeReplacement: !0,
@@ -135,21 +135,21 @@ function E(e, t, n) {
                   })
                 : f,
             !0,
-            m(t, n),
+            h(t, n),
             (e, n) => (
                 Array.isArray(e) || (e = [e]),
                 o && (e = N(e, (null != u ? u : t).embeds)),
-                s || (e = I(e, n)),
+                s || (e = S(e, n)),
                 (e = b(e)),
-                t.embeds.length > 0 && (d = S(e, n)),
-                s && (e = R(e)),
+                t.embeds.length > 0 && (d = T(e, n)),
+                s && (e = P(e)),
                 null != l && (e = l(e, n)),
                 e
             ),
         );
     return {
         hasSpoilerEmbeds: d,
-        content: _,
+        content: p,
     };
 }
 function b(e) {
@@ -192,12 +192,12 @@ function O(e, t, n, r) {
 function v(e, t, n) {
     return O(a.Z.parseAutoModerationSystemMessage, e, t, n);
 }
-function I(e, t) {
+function S(e, t) {
     return t
-        ? T(e)
-        : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = T(e[0].content)), e);
+        ? I(e)
+        : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = I(e[0].content)), e);
 }
-function T(e) {
+function I(e) {
     if (
         e.some(
             (e) =>
@@ -211,17 +211,17 @@ function T(e) {
     let t = 0;
     return (
         e.forEach((e) => {
-            if ((("emoji" === e.type || "customEmoji" === e.type || "soundboard" === e.type) && (t += 1), t > _))
+            if ((("emoji" === e.type || "customEmoji" === e.type || "soundboard" === e.type) && (t += 1), t > p))
                 return !1;
         }),
-        t > _ ||
+        t > p ||
             e.forEach((e) => {
                 e.jumboable = !0;
             }),
         e
     );
 }
-function S(e, t) {
+function T(e, t) {
     return t ? C(e) : "paragraph" === e[0].type && e[0].content instanceof Array && C(e[0].content);
 }
 function A(e, t) {
@@ -242,15 +242,15 @@ function N(e, t) {
     if (1 !== e.length || 1 !== t.length) return e;
     let n = e[0],
         r = t[0];
-    return ("link" === n.type || "attachmentLink" === n.type) && p.has(r.type) && (0, o.dY)(r) ? [] : e;
+    return ("link" === n.type || "attachmentLink" === n.type) && _.has(r.type) && (0, o.dY)(r) ? [] : e;
 }
-function R(e) {
+function P(e) {
     return (
         e.forEach((e) => {
-            h.has(e.type) &&
+            m.has(e.type) &&
                 null != e.content &&
                 (Array.isArray(e.content)
-                    ? R(e.content)
+                    ? P(e.content)
                     : "string" == typeof e.content
                       ? (e.content = e.content.replace(/\n/g, " "))
                       : s.Z.captureMessage(

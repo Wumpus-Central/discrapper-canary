@@ -13,7 +13,7 @@ var r = n(54381),
     u = n(583478),
     d = n(976845),
     f = n(647917);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,94 +37,94 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-let h = () =>
+let m = () =>
         (0, r.jsx)("img", {
             className: f.notificationBadge,
             src: n(808824),
             alt: "",
         }),
-    m = "balance-widget-pill",
+    h = "balance-widget-pill",
     g = (e, t) => (e === c.b.SELECTED ? f.selected : t ? f.highlighted : f.default),
     E = (0, i.forwardRef)(function (e, t) {
         let {
                 id: n,
                 balance: a,
-                balanceWidgetMode: _ = c.b.DEFAULT,
+                balanceWidgetMode: p = c.b.DEFAULT,
                 showNotificationBadge: E,
                 onClick: b,
                 onMouseDown: y,
                 disabled: O,
                 isInModalOverlay: v,
-                className: I,
+                className: S,
             } = e,
-            [T, S] = (0, i.useState)(!1),
-            A = (0, i.useMemo)(() => g(_, T), [_, T]),
+            [I, T] = (0, i.useState)(!1),
+            A = (0, i.useMemo)(() => g(p, I), [p, I]),
             [C, N] = (0, i.useState)(!1),
-            [R, P] = (0, i.useState)(!1),
-            [D, w] = (0, i.useState)(0.9 * l.D2),
-            L = null === a;
+            [P, R] = (0, i.useState)(!1),
+            [w, D] = (0, i.useState)(0.9 * l.D2),
+            x = null === a;
         (0, i.useEffect)(() => {
-            L &&
+            x &&
                 !C &&
                 (N(!0),
                 setTimeout(() => {
-                    P(!0);
+                    R(!0);
                 }, 500));
-        }, [L, N, C]),
+        }, [x, N, C]),
             (0, i.useEffect)(() => {
-                R && !L && N(!1);
-            }, [L, R]);
-        let x = L || C,
-            M = C ? null : a,
-            [k, j] = (0, i.useState)(null),
+                P && !x && N(!1);
+            }, [x, P]);
+        let L = x || C,
+            j = C ? null : a,
+            [M, k] = (0, i.useState)(null),
             U = (0, i.useRef)(null),
             G = (0, i.useCallback)(() => {
-                (U.current = null), j(null);
+                (U.current = null), k(null);
             }, []),
-            B = (0, i.useCallback)(
+            Z = (0, i.useCallback)(
                 (e) => {
-                    let t = k === U.current;
-                    e > 0 && ("earn" !== k || !t) && j("earn");
+                    let t = M === U.current;
+                    e > 0 && ("earn" !== M || !t) && k("earn");
                 },
-                [j, k],
+                [k, M],
             ),
-            Z = {
-                currentAnimationType: k,
+            B = {
+                currentAnimationType: M,
                 animationTypeRef: U,
-                onSetAnimationDurationMS: w,
+                onSetAnimationDurationMS: D,
             };
         return (0, r.jsx)(s.P3F, {
-            onClick: x ? void 0 : b,
+            onClick: L ? void 0 : b,
             className: o()(f.clickable, { [f.disabled]: O }),
-            id: null != n ? n : m,
+            id: null != n ? n : h,
             children: (0, r.jsxs)("span", {
                 onMouseDown: y,
-                onMouseEnter: O ? void 0 : () => S(!0),
-                onMouseLeave: O ? void 0 : () => S(!1),
+                onMouseEnter: O ? void 0 : () => T(!0),
+                onMouseLeave: O ? void 0 : () => T(!1),
                 ref: t,
-                className: o()(f.container, A, I, {
-                    [f.containerLoading]: x,
+                className: o()(f.container, A, S, {
+                    [f.containerLoading]: L,
                     [f.inModalOverlay]: v,
                     [f.disabled]: O,
                 }),
                 children: [
                     (0, r.jsx)("div", {
-                        className: o()(f.orbsLottieContainer, x ? f.orbIconloading : void 0),
-                        children: (0, r.jsx)(d.ZP, p({}, Z)),
+                        className: o()(f.orbsLottieContainer, L ? f.orbIconloading : void 0),
+                        children: (0, r.jsx)(d.ZP, _({}, B)),
                     }),
                     (0, r.jsx)(u.Z, {
-                        value: M,
-                        onValueChange: B,
+                        value: j,
+                        onValueChange: Z,
                         onValueReached: G,
-                        targetTotalCounterTime: D,
-                        className: x ? f.counterLoading : void 0,
+                        targetTotalCounterTime: w,
+                        className: L ? f.counterLoading : void 0,
                     }),
-                    E && (0, r.jsx)(h, {}),
+                    E && (0, r.jsx)(m, {}),
                 ],
             }),
         });

@@ -52,10 +52,10 @@ function d(e) {
         C = t || n || d,
         v = p ? u.d : u.Z,
         _ = (0, o.Z)(t, n, d, h),
-        { events: x, play: j, Component: O } = (0, c.b)(C),
-        E = n || d ? l.v0G : O;
+        { events: O, play: x, Component: j } = (0, c.b)(C),
+        E = n || d ? l.v0G : j;
     return (
-        r.useEffect(() => () => j(), [j, C]),
+        r.useEffect(() => () => x(), [x, C]),
         (0, i.jsx)(
             v,
             (function (e) {
@@ -90,10 +90,10 @@ function d(e) {
                     color: C ? "red" : void 0,
                     label: _,
                     onMouseEnter: (e) => {
-                        null == f || f(e), x.onMouseEnter();
+                        null == f || f(e), O.onMouseEnter();
                     },
                     onMouseLeave: (e) => {
-                        null == m || m(e), x.onMouseLeave();
+                        null == m || m(e), O.onMouseLeave();
                     },
                     onClick: (e) => {
                         null == g || g(e), (0, s.v)(y, s.d.MIC, t);

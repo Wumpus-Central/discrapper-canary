@@ -71,10 +71,10 @@ function f(e, t) {
             Object.defineProperty(e, r.key, r);
     }
 }
-function _(e, t, n) {
+function p(e, t, n) {
     return t && f(e.prototype, t), n && f(e, n), e;
 }
-function p(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -91,13 +91,13 @@ n.d(t, {
     GT: () => E,
     gr: () => g,
 });
-var h = 10,
-    m = (function () {
+var m = 10,
+    h = (function () {
         function e() {
-            d(this, e), p(this, "subPriority", 0);
+            d(this, e), _(this, "subPriority", 0);
         }
         return (
-            _(e, [
+            p(e, [
                 {
                     key: "validate",
                     value: function (e, t) {
@@ -124,7 +124,7 @@ var h = 10,
             );
         }
         return (
-            _(n, [
+            p(n, [
                 {
                     key: "validate",
                     value: function (e, t) {
@@ -140,7 +140,7 @@ var h = 10,
             ]),
             n
         );
-    })(m),
+    })(h),
     E = (function (e) {
         i(n, e);
         var t = o(n);
@@ -148,10 +148,10 @@ var h = 10,
             var e;
             d(this, n);
             for (var r = arguments.length, i = Array(r), a = 0; a < r; a++) i[a] = arguments[a];
-            return p(l((e = t.call.apply(t, [this].concat(i)))), "priority", h), p(l(e), "subPriority", -1), e;
+            return _(l((e = t.call.apply(t, [this].concat(i)))), "priority", m), _(l(e), "subPriority", -1), e;
         }
         return (
-            _(n, [
+            p(n, [
                 {
                     key: "set",
                     value: function (e, t) {
@@ -167,4 +167,4 @@ var h = 10,
             ]),
             n
         );
-    })(m);
+    })(h);

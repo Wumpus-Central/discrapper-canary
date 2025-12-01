@@ -11,14 +11,14 @@ function d(e, t) {
     var n;
     let d = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
         f = null != (n = null == e ? void 0 : e.guild_id) ? n : c.lds,
-        _ = (0, i.e7)([o.ZP], () => o.ZP.getFlattenedGuildIds()),
-        p = (0, i.e7)([a.Z], () => null == e || null == e.guild_id || a.Z.can(u.Pl.USE_EXTERNAL_SOUNDS, e));
+        p = (0, i.e7)([o.ZP], () => o.ZP.getFlattenedGuildIds()),
+        _ = (0, i.e7)([a.Z], () => null == e || null == e.guild_id || a.Z.can(u.Pl.USE_EXTERNAL_SOUNDS, e));
     return r.useMemo(() => {
-        if ((l.ZP.canUseSoundboardEverywhere(d) || !t) && p) {
+        if ((l.ZP.canUseSoundboardEverywhere(d) || !t) && _) {
             let e = "" !== f,
-                t = e ? _.filter((e) => e !== f) : _;
+                t = e ? p.filter((e) => e !== f) : p;
             return e && t.unshift(f), t;
         }
         return [f];
-    }, [d, t, f, _, p]);
+    }, [d, t, f, p, _]);
 }

@@ -1,6 +1,6 @@
 n.d(t, {
     OH: () => d,
-    ZP: () => p,
+    ZP: () => _,
     eE: () => f,
     jZ: () => u,
 });
@@ -25,23 +25,23 @@ let d = {
         [s.Dv2.ROUND_RIGHT]: c.liveShapeRoundRight,
         [s.Dv2.SQUARE]: "",
     };
-function _(e) {
-    let { className: t, style: n, shape: i = s.Dv2.ROUND, look: u = "RED", size: _ = d.LARGE } = e;
+function p(e) {
+    let { className: t, style: n, shape: i = s.Dv2.ROUND, look: u = "RED", size: p = d.LARGE } = e;
     return "RED" === u
         ? (0, r.jsx)(s.IGR, {
               text: l.intl.string(l.t.dI3q4h),
-              className: a()(t, c.live, _),
+              className: a()(t, c.live, p),
               color: o.Z.unsafe_rawColors.RED_400.css,
               shape: f[i],
               style: n,
           })
         : (0, r.jsx)(s.IGR, {
               text: l.intl.string(l.t.dI3q4h),
-              className: a()(t, c.live, _, c.grey),
+              className: a()(t, c.live, p, c.grey),
               disableColor: !0,
               shape: f[i],
               style: n,
           });
 }
-(_.Looks = u), (_.Sizes = d);
-let p = _;
+(p.Looks = u), (p.Sizes = d);
+let _ = p;

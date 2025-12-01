@@ -1,10 +1,10 @@
 i.d(e, { Z: () => a });
-var r = i(54381),
-    n = i(793030),
+var n = i(54381),
+    r = i(793030),
     l = i(198358);
 function a() {
-    return (0, r.jsx)(l.Z, {
-        children: (0, r.jsx)(n.xvT, {
+    return (0, n.jsx)(l.Z, {
+        children: (0, n.jsx)(r.xvT, {
             variant: "display-lg",
             color: "text-primary",
             children: "TBD",

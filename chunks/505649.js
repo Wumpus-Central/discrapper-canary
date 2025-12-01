@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(415506);
+n.d(t, { Z: () => S }), n(415506);
 var r,
     i = n(442837),
     a = n(570140),
@@ -9,7 +9,7 @@ var r,
     u = n(622999),
     d = n(981631),
     f = n(388032);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,18 +22,18 @@ function _(e, t, n) {
         e
     );
 }
-let p = !1,
-    h = null,
-    m = null;
+let _ = !1,
+    m = null,
+    h = null;
 function g() {
-    (p = !1), (m = null), (h = null);
+    (_ = !1), (h = null), (m = null);
 }
 function E(e) {
     let { error: t } = e,
         { code: n, paymentId: r } = t;
     if (n !== l.ZP.ErrorCodes.CONFIRMATION_REQUIRED && n !== l.ZP.ErrorCodes.AUTHENTICATION_REQUIRED)
-        return (p = !1), !1;
-    p || ((p = !0), (h = r), n === l.ZP.ErrorCodes.AUTHENTICATION_REQUIRED && b(r));
+        return (_ = !1), !1;
+    _ || ((_ = !0), (m = r), n === l.ZP.ErrorCodes.AUTHENTICATION_REQUIRED && b(r));
 }
 async function b(e) {
     if (null == e) return;
@@ -45,33 +45,33 @@ async function b(e) {
 }
 function y(e) {
     let { error: t } = e;
-    (m = t), (p = !1);
+    (h = t), (_ = !1);
 }
 function O(e) {
     let { payment: t } = e,
         n = [d.PyE.COMPLETED, d.PyE.FAILED, d.PyE.CANCELED];
-    if (!p || t.id !== h || !n.includes(t.status)) return !1;
-    if (((p = !1), (h = null), t.status === d.PyE.FAILED)) {
+    if (!_ || t.id !== m || !n.includes(t.status)) return !1;
+    if (((_ = !1), (m = null), t.status === d.PyE.FAILED)) {
         var r;
         let e = null;
         (null == (r = t.metadata) ? void 0 : r.billing_error_code) === l.SM.BILLING_INSUFFICIENT_FUNDS &&
             (e = l.SM.BILLING_INSUFFICIENT_FUNDS),
-            (m = new l.ZP(f.intl.string(f.t.khEaRI), e));
-    } else (m = null), a.Z.wait(o.fw), a.Z.wait(s.pB);
+            (h = new l.ZP(f.intl.string(f.t.khEaRI), e));
+    } else (h = null), a.Z.wait(o.fw), a.Z.wait(s.pB);
 }
 class v extends (r = i.ZP.Store) {
     get isAwaitingAuthentication() {
-        return p;
+        return _;
     }
     get error() {
-        return m;
-    }
-    get awaitingPaymentId() {
         return h;
     }
+    get awaitingPaymentId() {
+        return m;
+    }
 }
-_(v, "displayName", "PaymentAuthenticationStore");
-let I = new v(a.Z, {
+p(v, "displayName", "PaymentAuthenticationStore");
+let S = new v(a.Z, {
     BILLING_SUBSCRIPTION_UPDATE_START: g,
     PAYMENT_AUTHENTICATION_CLEAR_ERROR: g,
     PREMIUM_PAYMENT_ERROR_CLEAR: g,

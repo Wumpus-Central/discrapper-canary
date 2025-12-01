@@ -1,4 +1,4 @@
-n.d(t, { Z: () => e_ }), n(388685);
+n.d(t, { Z: () => ep }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(512722),
@@ -9,45 +9,45 @@ var r = n(54381),
     u = n(46973),
     d = n(481060),
     f = n(846027),
-    _ = n(475179),
-    p = n(925549),
-    h = n(37234),
-    m = n(519938),
+    p = n(475179),
+    _ = n(925549),
+    m = n(37234),
+    h = n(519938),
     g = n(100527),
     E = n(367907),
     b = n(358221),
     y = n(414910),
     O = n(221888),
     v = n(522651),
-    I = n(933557),
-    T = n(502053),
-    S = n(965048),
+    S = n(933557),
+    I = n(502053),
+    T = n(965048),
     A = n(569545),
     C = n(74299),
     N = n(863908),
-    R = n(803647),
-    P = n(266910),
-    D = n(788983),
-    w = n(703656),
-    L = n(937995),
-    x = n(618158),
-    M = n(922745),
-    k = n(197016),
-    j = n(800965),
+    P = n(803647),
+    R = n(266910),
+    w = n(788983),
+    D = n(703656),
+    x = n(937995),
+    L = n(618158),
+    j = n(922745),
+    M = n(197016),
+    k = n(800965),
     U = n(445062),
     G = n(7188),
-    B = n(199902),
-    Z = n(314897),
+    Z = n(199902),
+    B = n(314897),
     F = n(131951),
     V = n(699516),
     H = n(594174),
-    W = n(248402),
-    Y = n(33039),
+    Y = n(248402),
+    W = n(33039),
     K = n(451478),
     z = n(626135),
     q = n(5192),
-    X = n(51144),
-    Q = n(484286),
+    Q = n(51144),
+    X = n(484286),
     J = n(822296),
     $ = n(916771),
     ee = n(792517),
@@ -197,7 +197,7 @@ class ef extends i.PureComponent {
         let { channel: e, participantOnScreen: t } = this.props;
         if ((null == t ? void 0 : t.type) === ea.fO.STREAM || (null == t ? void 0 : t.type) === ea.fO.USER) {
             var n;
-            let i = null != (n = q.ZP.getNickname(e.getGuildId(), e.id, t.user)) ? n : X.ZP.getName(t.user);
+            let i = null != (n = q.ZP.getNickname(e.getGuildId(), e.id, t.user)) ? n : Q.ZP.getName(t.user);
             return (0, r.jsx)(d.Text, {
                 variant: "text-md/normal",
                 color: "always-white",
@@ -210,8 +210,8 @@ class ef extends i.PureComponent {
     }
     render() {
         let { channel: e, streamId: t, participantOnScreen: n, isVideoEnabled: i, width: a } = this.props,
-            o = (0, I.F6)(e, H.default, V.Z),
-            s = (null == n ? void 0 : n.id) === Z.default.getId() && i,
+            o = (0, S.F6)(e, H.default, V.Z),
+            s = (null == n ? void 0 : n.id) === B.default.getId() && i,
             l = this.renderStreamState(),
             c = this.activeStreamForSelectedParticipant,
             u = null;
@@ -221,12 +221,12 @@ class ef extends i.PureComponent {
                     ? (u = l)
                     : ((null == n ? void 0 : n.type) === ea.fO.USER ||
                           (null == n ? void 0 : n.type) === ea.fO.STREAM) &&
-                      (u = (0, r.jsx)(Q.Z, {
+                      (u = (0, r.jsx)(X.Z, {
                           paused: this.streamerPaused,
                           streamId: t,
                           component: F.Z.getVideoComponent(),
                           mirror: s,
-                          children: (0, r.jsx)(P.Z, {
+                          children: (0, r.jsx)(R.Z, {
                               size: d.EFr.SIZE_80,
                               src: null == n ? void 0 : n.user.getAvatarURL(e.guild_id, 80),
                               "aria-label": null == n ? void 0 : n.user.username,
@@ -234,12 +234,12 @@ class ef extends i.PureComponent {
                               userId: null == n ? void 0 : n.user.id,
                           }),
                       }))),
-            (0, r.jsx)(L.ZP, {
+            (0, r.jsx)(x.ZP, {
                 timeout: 1800,
                 children: (e) => {
                     var t;
                     return (0, r.jsx)(
-                        M.Z,
+                        j.Z,
                         ed(
                             ec(
                                 {
@@ -250,7 +250,7 @@ class ef extends i.PureComponent {
                                     onHide: this.handleHidePIP,
                                     renderBottomLeftControls: this.renderBottomLeftControls,
                                     renderBottomRightControls: this.renderBottomRightControls,
-                                    preventIdleComponent: x.Z,
+                                    preventIdleComponent: L.Z,
                                     width: a,
                                     className: es.elevationHigh,
                                     videoControlsClassName:
@@ -279,25 +279,25 @@ class ef extends i.PureComponent {
             el(this, "handleJumpToChannel", () => {
                 var e;
                 let { channel: t } = this.props;
-                (0, h.Ou)();
+                (0, m.Ou)();
                 let n = null != (e = t.getGuildId()) ? e : ei.ME;
-                (0, w.XU)(n, t.id), p.Z.channelListScrollTo(n, t.id);
+                (0, D.XU)(n, t.id), _.Z.channelListScrollTo(n, t.id);
                 let r = this.activeStreamForSelectedParticipant;
-                null != r && _.Z.selectParticipant(r.channelId, (0, A.V9)(r));
+                null != r && p.Z.selectParticipant(r.channelId, (0, A.V9)(r));
             }),
             el(this, "handleStopStream", () => {
                 let { participantOnScreen: e } = this.props;
                 o()((0, ea._5)(e), "cannot stop stream for non streamer"),
                     (0, v.v)(g.Z.VIDEO_PIP, v.d.STREAM, !1),
-                    (0, R.Z)(e.stream);
+                    (0, P.Z)(e.stream);
             }),
             el(this, "handleHidePIP", () => {
                 let { channel: e } = this.props;
-                m.Cp(e.id);
+                h.Cp(e.id);
             }),
             el(this, "handleOpenPopout", () => {
                 let { channel: e } = this.props;
-                (0, v.v)(g.Z.VIDEO_PIP, v.d.POPOUT, !0), D.openChannelCallPopout(e);
+                (0, v.v)(g.Z.VIDEO_PIP, v.d.POPOUT, !0), w.openChannelCallPopout(e);
             }),
             el(this, "renderBottomLeftControls", () => {
                 let { canSeeParticipantName: e } = this.viewProperties;
@@ -322,7 +322,7 @@ class ef extends i.PureComponent {
                 });
             }),
             el(this, "renderDisconnectButton", () =>
-                (0, r.jsx)(k.Z, {
+                (0, r.jsx)(M.Z, {
                     className: eo.rightTrayIcon,
                     onClick: () => (0, v.v)(g.Z.VIDEO_PIP, v.d.DISCONNECT),
                 }),
@@ -342,7 +342,7 @@ class ef extends i.PureComponent {
                         (0, ea._5)(e) || (null == e ? void 0 : e.type) === ea.fO.ACTIVITY,
                         "Cannot render participants for participant type ".concat(null == e ? void 0 : e.type),
                     ),
-                    (0, r.jsx)(x.Z, {
+                    (0, r.jsx)(L.Z, {
                         children: (0, r.jsx)(O.Z, {
                             channelId: t.id,
                             guildId: t.getGuildId(),
@@ -354,7 +354,7 @@ class ef extends i.PureComponent {
                 );
             }),
             el(this, "renderPopoutIcon", () =>
-                (0, r.jsx)(j.Z, {
+                (0, r.jsx)(k.Z, {
                     className: eo.rightTrayIcon,
                     popoutOpen: !1,
                     onOpenPopout: this.handleOpenPopout,
@@ -376,39 +376,39 @@ class ef extends i.PureComponent {
             });
     }
 }
-function e_(e) {
+function ep(e) {
     let { channel: t, width: n } = e,
-        i = (0, c.e7)([W.Z], () => W.Z.getSpeaker(t.id)),
+        i = (0, c.e7)([Y.Z], () => Y.Z.getSpeaker(t.id)),
         a = (0, c.e7)([b.Z], () => b.Z.getParticipant(t.id, i), [t.id, i]),
         o = (0, c.e7)([F.Z], () => l()(F.Z.getVideoDevices()).values().first()),
         s = (0, c.e7)(
-            [Y.Z],
+            [W.Z],
             () =>
                 null != a && a.type !== ea.fO.ACTIVITY && a.type !== ea.fO.HIDDEN_STREAM
-                    ? Y.Z.getStreamId(a.user.id, t.getGuildId(), (0, y.Z)(a.type))
+                    ? W.Z.getStreamId(a.user.id, t.getGuildId(), (0, y.Z)(a.type))
                     : null,
             [a, t],
         ),
         d = null == o || o.disabled,
         f = !d,
-        _ = (0, c.e7)([F.Z], () => !d && F.Z.isVideoEnabled(), [d]),
-        p = (0, c.e7)([F.Z], () => (0, C.Z)(F.Z)),
-        h = (0, c.e7)([Z.default], () => Z.default.getId()),
-        m = (0, c.e7)([B.Z], () => B.Z.getCurrentUserActiveStream()),
+        p = (0, c.e7)([F.Z], () => !d && F.Z.isVideoEnabled(), [d]),
+        _ = (0, c.e7)([F.Z], () => (0, C.Z)(F.Z)),
+        m = (0, c.e7)([B.default], () => B.default.getId()),
+        h = (0, c.e7)([Z.Z], () => Z.Z.getCurrentUserActiveStream()),
         g = null != a && "user" in a ? a.user.id : "",
-        E = (0, S.Z)((null == a ? void 0 : a.type) === ea.fO.STREAM ? u.Yn.STREAM : u.Yn.DEFAULT, g),
-        O = (0, T.Z)(g),
-        v = (0, c.Wu)([B.Z], () => B.Z.getAllActiveStreams());
+        E = (0, T.Z)((null == a ? void 0 : a.type) === ea.fO.STREAM ? u.Yn.STREAM : u.Yn.DEFAULT, g),
+        O = (0, I.Z)(g),
+        v = (0, c.Wu)([Z.Z], () => Z.Z.getAllActiveStreams());
     return (0, r.jsx)(ef, {
         channel: t,
         streamId: s,
         participantOnScreen: a,
         isVideoAvailable: f,
-        isVideoEnabled: _,
-        canGoLive: p,
-        currentUserId: h,
+        isVideoEnabled: p,
+        canGoLive: _,
+        currentUserId: m,
         activeStreams: v,
-        activeSelfStream: m,
+        activeSelfStream: h,
         isMainWindowFocused: K.Z.isFocused(),
         width: n,
         isOverlayRenderingVideo: !1,

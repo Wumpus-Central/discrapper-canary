@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685), n(539854);
+n.d(t, { Z: () => _ }), n(388685), n(539854);
 var r,
     i = n(442837),
     a = n(570140),
@@ -41,14 +41,14 @@ function d() {
     c = new Map();
 }
 let f = [];
-class _ extends (r = i.ZP.Store) {
+class p extends (r = i.ZP.Store) {
     getRecentMessageAuthorIds(e) {
         var t;
         return null != (t = c.get(e)) ? t : f;
     }
 }
-s(_, "displayName", "SearchRecentMessageStore");
-let p = new _(a.Z, {
+s(p, "displayName", "SearchRecentMessageStore");
+let _ = new p(a.Z, {
     SEARCH_MESSAGES_SUCCESS: u,
     SEARCH_RECENT_MESSAGES_CLEAR: d,
     CONNECTION_OPEN: d,

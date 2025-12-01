@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -10,13 +10,13 @@ var i = n(120356),
     u = n(228168),
     d = n(388032),
     f = n(925568);
-function _(e) {
+function p(e) {
     let { userId: t, isVisible: n, onOpenProfile: i } = e,
-        { note: _ } = (0, c.Z)(t),
-        p = null != _ && "" !== _,
-        h = p ? s.hH0 : s.Wos,
-        m = p ? d.intl.string(d.t["gs+qcM"]) : d.intl.string(d.t["1ZZtts"]),
-        g = p ? _ : d.intl.string(d.t["1ZZtts"]),
+        { note: p } = (0, c.Z)(t),
+        _ = null != p && "" !== p,
+        m = _ ? s.hH0 : s.Wos,
+        h = _ ? d.intl.string(d.t["gs+qcM"]) : d.intl.string(d.t["1ZZtts"]),
+        g = _ ? p : d.intl.string(d.t["1ZZtts"]),
         { trackUserProfileAction: E } = (0, l.KZ)(),
         b = () => {
             E({ action: "PRESS_ADD_NOTE" }), null == i || i({ subsection: u.Tb.NOTE });
@@ -25,10 +25,10 @@ function _(e) {
         asContainer: !0,
         text: g,
         children: (0, r.jsx)(s.P3F, {
-            "aria-label": m,
+            "aria-label": h,
             onClick: b,
             className: a()(f.button, n && f.visible),
-            children: (0, r.jsx)(h, {
+            children: (0, r.jsx)(m, {
                 size: "xs",
                 color: "currentColor",
             }),

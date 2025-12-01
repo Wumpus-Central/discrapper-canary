@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,22 +48,22 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -71,7 +71,7 @@ function h(e, t) {
     }
     return i;
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -83,8 +83,8 @@ function m(e, t) {
 function g(e) {
     var t,
         n,
-        { onChange: d, options: _, selectedValues: m, disabled: g = !1 } = e,
-        E = h(e, ["onChange", "options", "selectedValues", "disabled"]);
+        { onChange: d, options: p, selectedValues: h, disabled: g = !1 } = e,
+        E = m(e, ["onChange", "options", "selectedValues", "disabled"]);
     let b = i.useContext(c.KJ),
         y =
             null == b || null == (n = b.experiments) || null == (t = n.enabledExperiments)
@@ -94,26 +94,26 @@ function g(e) {
             null == d || d(e);
         },
         v = (e, t) => {
-            let n = t ? [...m, e] : m.filter((t) => t !== e);
+            let n = t ? [...h, e] : h.filter((t) => t !== e);
             null == d || d(n);
         };
     return (0, r.jsx)(
         l.g,
-        p(f({}, E), {
+        _(f({}, E), {
             role: "group",
             children: y
                 ? (0, r.jsx)(a.cO, {
                       className: u.group,
-                      value: m.map(String),
+                      value: h.map(String),
                       onChange: O,
                       "data-mana-component": "checkbox-group",
                       isDisabled: g,
-                      children: _.map((e) =>
+                      children: p.map((e) =>
                           (0, r.jsx)(
                               o.C,
                               {
                                   disabled: g || e.disabled,
-                                  checked: m.includes(e.value),
+                                  checked: h.includes(e.value),
                                   label: e.label,
                                   value: e.value,
                                   description: e.description,
@@ -125,14 +125,14 @@ function g(e) {
                   })
                 : (0, r.jsx)("div", {
                       className: u.group,
-                      children: _.map((e) =>
+                      children: p.map((e) =>
                           (0, r.jsx)(
                               "div",
                               {
                                   className: u.backwardsCompatibleCheckbox,
                                   children: (0, r.jsx)(s.h, {
                                       disabled: g || e.disabled,
-                                      checked: m.includes(e.value),
+                                      checked: h.includes(e.value),
                                       label: e.label,
                                       description: e.description,
                                       leadingIcon: e.leadingIcon,

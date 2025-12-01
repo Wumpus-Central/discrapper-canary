@@ -15,7 +15,7 @@ var l = n(442837),
 function x(e) {
     let { markAsDismissed: t, onCTA: n } = e,
         x = (0, l.e7)([o.default], () => o.default.getCurrentUser()),
-        g = (0, c.M5)(x, u.PremiumTypes.TIER_2);
+        f = (0, c.M5)(x, u.PremiumTypes.TIER_2);
     return (0, a.jsx)("div", {
         className: p.popup,
         children: (0, a.jsxs)("div", {
@@ -46,7 +46,7 @@ function x(e) {
                         }),
                     ],
                 }),
-                g
+                f
                     ? (0, a.jsx)(r.Button, {
                           text: m.intl.string(m.t.LhcHi5),
                           fullWidth: !0,

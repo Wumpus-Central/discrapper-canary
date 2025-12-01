@@ -6,7 +6,7 @@ var r = n(54381),
     o = n(442837),
     c = n(481060),
     s = n(911969),
-    u = n(535139),
+    u = n(524995),
     d = n(812206),
     f = n(810568),
     g = n(168524),
@@ -188,7 +188,7 @@ let A = /{{(.*?)}}/g,
 function R(e) {
     return null != e && e.loadingState === s.f.LOADED_SUCCESS && null != e.width && null != e.height;
 }
-function L(e) {
+function G(e) {
     let { component: t } = e;
     if (Array.isArray(t)) return M(t);
     switch (t.type) {
@@ -222,8 +222,8 @@ function L(e) {
             return (0, r.jsx)(F, { children: M(t.children) });
         case "FIELD":
             return (0, r.jsx)(U, {
-                value: G(t.value),
-                name: G(t.name),
+                value: L(t.value),
+                name: L(t.name),
             });
         case "TEXT":
             return (0, r.jsx)(W, k({}, t));
@@ -235,11 +235,11 @@ function L(e) {
             return (0, r.jsx)(K, {});
     }
 }
-function G(e, t) {
-    return (0, r.jsx)(L, { component: e }, t);
+function L(e, t) {
+    return (0, r.jsx)(G, { component: e }, t);
 }
 function M(e) {
-    return e.map((e, t) => G(e, t));
+    return e.map((e, t) => L(e, t));
 }
 function B(e) {
     let { title: t, body: n, image: i, imagePlaceholder: a } = e;
@@ -372,7 +372,7 @@ function K() {
               channelId: e.channelId,
           });
 }
-function q(e, t) {
+function V(e, t) {
     if (null == e) return null;
     let n = e.split(A);
     if (1 === n.length) return n[0];
@@ -395,7 +395,7 @@ function q(e, t) {
     }
     return r;
 }
-function V(e, t) {
+function q(e, t) {
     var n, r;
     if (null == e || "skeleton" === t.mode) return null;
     let i = null == (r = e.match(A)) || null == (n = r[0]) ? void 0 : n.slice(2, -2);
@@ -487,15 +487,15 @@ let $ = Object.assign(
                 sourceUserId: n.id,
                 trackEntryPointImpression: !0,
             }),
-            { fetched: T, hasAlreadyLinked: A, canStartAuthorization: R, startAuthorization: G } = (0, u.F)(m),
+            { fetched: T, hasAlreadyLinked: A, canStartAuthorization: R, startAuthorization: L } = (0, u.F)(m),
             M = i.useCallback(() => {
                 R &&
                     (t({
                         action: "PRESS_APPLICATION_WIDGET_UNLINKED_CONNECT",
                         applicationId: a.applicationId,
                     }),
-                    G());
-            }, [R, G, t, a.applicationId]),
+                    L());
+            }, [R, L, t, a.applicationId]),
             B = null == s && T && !A && R,
             F = (0, r.jsxs)(r.Fragment, {
                 children: [
@@ -595,8 +595,8 @@ let $ = Object.assign(
                             return {
                                 type: "HERO",
                                 body: n.body.map(t),
-                                title: q(n.title, e),
-                                image: V(n.image, e),
+                                title: V(n.title, e),
+                                image: q(n.image, e),
                                 imagePlaceholder: null == (r = e.config) ? void 0 : r.hero_placeholder_image,
                             };
                         case "GRID":
@@ -613,13 +613,13 @@ let $ = Object.assign(
                         case "TEXT":
                             return {
                                 type: "TEXT",
-                                content: q(n.content, e),
+                                content: V(n.content, e),
                             };
                         case "TEXT_WITH_IMAGE":
                             return {
                                 type: "TEXT_WITH_IMAGE",
-                                content: q(n.content, e),
-                                image: V(n.image, e),
+                                content: V(n.content, e),
+                                image: q(n.image, e),
                                 imagePosition: n.imagePosition,
                             };
                         case "SEPARATOR":
@@ -650,7 +650,7 @@ let $ = Object.assign(
                         value: e,
                         children: (0, r.jsx)(Q, {
                             widget: a,
-                            children: (0, r.jsx)(L, { component: H }),
+                            children: (0, r.jsx)(G, { component: H }),
                         }),
                     }),
                     p &&

@@ -5,7 +5,7 @@ var r = n(54381),
     o = n(642197),
     s = ["children"];
 function l(e, t) {
-    return _(e) || f(e, t) || u(e, t) || c();
+    return p(e) || f(e, t) || u(e, t) || c();
 }
 function c() {
     throw TypeError(
@@ -48,14 +48,14 @@ function f(e, t) {
         return a;
     }
 }
-function _(e) {
+function p(e) {
     if (Array.isArray(e)) return e;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -63,7 +63,7 @@ function p(e, t) {
     }
     return i;
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -72,11 +72,11 @@ function h(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-var m = 0,
+var h = 0,
     g = Symbol.for("__REACT_DND_CONTEXT_INSTANCE__"),
     E = (0, i.memo)(function (e) {
         var t = e.children,
-            n = l(b(p(e, s)), 2),
+            n = l(b(_(e, s)), 2),
             a = n[0],
             c = n[1];
         return (
@@ -84,9 +84,9 @@ var m = 0,
                 if (c) {
                     var e = O();
                     return (
-                        ++m,
+                        ++h,
                         function () {
-                            0 == --m && (e[g] = null);
+                            0 == --h && (e[g] = null);
                         }
                     );
                 }

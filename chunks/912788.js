@@ -24,20 +24,20 @@ function d(e) {
     l = t;
 }
 function f() {
-    h();
-}
-function _(e) {
-    let { message: t } = e;
-    l = new o.HF(t);
+    m();
 }
 function p(e) {
     let { message: t } = e;
     l = new o.HF(t);
 }
-function h() {
+function _(e) {
+    let { message: t } = e;
+    l = new o.HF(t);
+}
+function m() {
     l = null;
 }
-function m(e) {
+function h(e) {
     (c = e.giftCode), (u = e.skuId);
 }
 function g(e) {
@@ -64,11 +64,11 @@ let O = new y(a.Z, {
     PREMIUM_PAYMENT_SUBSCRIBE_FAIL: d,
     PREMIUM_PAYMENT_UPDATE_FAIL: d,
     PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: f,
-    PREMIUM_PAYMENT_UPDATE_SUCCESS: h,
-    PREMIUM_PAYMENT_ERROR_CLEAR: h,
-    BRAINTREE_TOKENIZE_PAYPAL_FAIL: _,
-    BRAINTREE_TOKENIZE_VENMO_FAIL: p,
-    SKU_PURCHASE_SUCCESS: m,
+    PREMIUM_PAYMENT_UPDATE_SUCCESS: m,
+    PREMIUM_PAYMENT_ERROR_CLEAR: m,
+    BRAINTREE_TOKENIZE_PAYPAL_FAIL: p,
+    BRAINTREE_TOKENIZE_VENMO_FAIL: _,
+    SKU_PURCHASE_SUCCESS: h,
     SKU_PURCHASE_FAIL: E,
     SKU_PURCHASE_AWAIT_CONFIRMATION: b,
     GIFT_CODE_CREATE: g,

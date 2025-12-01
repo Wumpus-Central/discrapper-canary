@@ -4,8 +4,8 @@ n(473749);
 var l = n(120356),
     i = n.n(l),
     a = n(907331),
-    s = n(685816),
-    o = n(442837),
+    o = n(685816),
+    s = n(442837),
     c = n(481060),
     u = n(594174),
     d = n(884697),
@@ -22,13 +22,13 @@ let h = {
         categorySkuId: void 0,
         bannerAsset: void 0,
         summary: "",
-        type: s.z.REWARD_HERO,
+        type: o.z.REWARD_HERO,
         categoryStoreListingId: "",
         rewardSkuId: void 0,
     },
     C = (e) => {
         var t;
-        let { isLoading: n = !1, heroBlock: l, tab: s, onVisibilityChange: d } = e,
+        let { isLoading: n = !1, heroBlock: l, tab: o, onVisibilityChange: d } = e,
             C = (0, a.O)(
                 (e) => {
                     null == d || d(e);
@@ -36,7 +36,7 @@ let h = {
                 0.1,
                 null != d,
             ),
-            _ = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
+            _ = (0, s.e7)([u.default], () => u.default.getCurrentUser()),
             {
                 bannerStyleOverrides: b,
                 logoStyleOverrides: v,
@@ -105,7 +105,7 @@ let h = {
                               (0, r.jsx)(p.Z, {
                                   isBlockLoading: n,
                                   heroBlock: l,
-                                  tab: s,
+                                  tab: o,
                               }),
                           ],
                       }),

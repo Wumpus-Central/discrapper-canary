@@ -11,28 +11,28 @@ function l(e, t, n) {
             value: u,
             name: d,
             form: f,
-            children: _,
-            "aria-label": p,
-            "aria-labelledby": h,
-            validationState: m = "valid",
+            children: p,
+            "aria-label": _,
+            "aria-labelledby": m,
+            validationState: h = "valid",
             isInvalid: g,
             onPressStart: E,
             onPressEnd: b,
             onPressChange: y,
             onPress: O,
             onPressUp: v,
-            onClick: I,
+            onClick: S,
         } = e,
-        T = (e) => {
+        I = (e) => {
             e.stopPropagation(), t.setSelected(e.target.checked);
         },
-        { pressProps: S, isPressed: A } = (0, o.r)({
+        { pressProps: T, isPressed: A } = (0, o.r)({
             onPressStart: E,
             onPressEnd: b,
             onPressChange: y,
             onPress: O,
             onPressUp: v,
-            onClick: I,
+            onClick: S,
             isDisabled: l,
         }),
         { pressProps: C, isPressed: N } = (0, o.r)({
@@ -40,38 +40,38 @@ function l(e, t, n) {
             onPressEnd: b,
             onPressChange: y,
             onPressUp: v,
-            onClick: I,
+            onClick: S,
             onPress(e) {
                 var r;
                 null == O || O(e), t.toggle(), null == (r = n.current) || r.focus();
             },
             isDisabled: l || c,
         }),
-        { focusableProps: R } = (0, s.kc)(e, n),
-        P = (0, r.d)(S, R),
-        D = (0, i.z)(e, { labelable: !0 });
+        { focusableProps: P } = (0, s.kc)(e, n),
+        R = (0, r.d)(T, P),
+        w = (0, i.z)(e, { labelable: !0 });
     return (
         (0, a.y)(n, t.defaultSelected, t.setSelected),
         {
             labelProps: (0, r.d)(C, { onClick: (e) => e.preventDefault() }),
-            inputProps: (0, r.d)(D, {
-                "aria-invalid": g || "invalid" === m || void 0,
+            inputProps: (0, r.d)(w, {
+                "aria-invalid": g || "invalid" === h || void 0,
                 "aria-errormessage": e["aria-errormessage"],
                 "aria-controls": e["aria-controls"],
                 "aria-readonly": c || void 0,
-                onChange: T,
+                onChange: I,
                 disabled: l,
                 ...(null == u ? {} : { value: u }),
                 name: d,
                 form: f,
                 type: "checkbox",
-                ...P,
+                ...R,
             }),
             isSelected: t.isSelected,
             isPressed: A || N,
             isDisabled: l,
             isReadOnly: c,
-            isInvalid: g || "invalid" === m,
+            isInvalid: g || "invalid" === h,
         }
     );
 }

@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => m,
-    j: () => h,
+    Z: () => h,
+    j: () => m,
 }),
     n(388685),
     n(781311),
@@ -42,7 +42,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,18 +54,18 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h() {
+function m() {
     let e = (0, a.e7)([s.Z], () => s.Z.getSettings().autoClipPhrases),
         [t, n] = i.useState(""),
         c = i.useMemo(
@@ -92,7 +92,7 @@ function h() {
             },
             [t, e],
         ),
-        _ = i.useCallback(
+        p = i.useCallback(
             (t) => {
                 let n = Array.from(t)[0],
                     r = e.filter((e) => e !== n);
@@ -110,29 +110,29 @@ function h() {
                 ? {
                       type: "tags",
                       items: c,
-                      onRemove: _,
+                      onRemove: p,
                   }
                 : void 0,
     });
 }
-function m() {
+function h() {
     let { maxAutoClips: e, clipSignals: t } = (0, a.cj)([s.Z], () => s.Z.getSettings()),
         n = i.useCallback(
             (e) => {
-                l.Rr(p(f({}, t), { enableGameSignals: e }));
+                l.Rr(_(f({}, t), { enableGameSignals: e }));
             },
             [t],
         ),
         d = i.useCallback(
             (e) => {
-                l.Rr(p(f({}, t), { enablePhraseSignals: e }));
+                l.Rr(_(f({}, t), { enablePhraseSignals: e }));
             },
             [t],
         ),
-        _ = i.useCallback((e) => {
+        p = i.useCallback((e) => {
             l.W6(Math.floor(e));
         }, []),
-        m = i.useMemo(() => {
+        h = i.useMemo(() => {
             let e = [c.qb];
             for (let t = 10; t <= c.b0; t += 10) e.push(t);
             return e[e.length - 1] !== c.b0 && e.push(c.b0), e;
@@ -147,8 +147,8 @@ function m() {
                 onValueRender: (e) => "".concat(Math.floor(e)),
                 minValue: c.qb,
                 maxValue: c.b0,
-                onValueChange: _,
-                markers: m,
+                onValueChange: p,
+                markers: h,
                 onMarkerRender: (e) => "".concat(Math.floor(e)),
             }),
             (0, r.jsx)(o.izJ, {}),
@@ -164,7 +164,7 @@ function m() {
                 checked: t.enablePhraseSignals,
                 onChange: d,
             }),
-            t.enablePhraseSignals && (0, r.jsx)(h, {}),
+            t.enablePhraseSignals && (0, r.jsx)(m, {}),
         ],
     });
 }

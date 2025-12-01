@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(607070),
     d = n(906732),
     f = n(951394),
-    _ = n(695346),
-    p = n(785717),
-    h = n(388032),
-    m = n(81064);
+    p = n(695346),
+    _ = n(785717),
+    m = n(388032),
+    h = n(81064);
 function g(e, t, n) {
     return (
         t in e
@@ -71,57 +71,57 @@ let O = 300,
             let { default: t } = await n.e("76215").then(n.bind(n, 66630));
             return (n) => (0, r.jsx)(t, y(E({}, n), { sourceAnalyticsLocations: e }));
         });
-function I(e) {
+function S(e) {
     let { isVisible: t, isExpandable: n, onCloseProfile: a } = e,
         { analyticsLocations: g } = (0, d.ZP)(),
-        { trackUserProfileAction: E } = (0, p.KZ)(),
+        { trackUserProfileAction: E } = (0, _.KZ)(),
         b = i.useRef(null),
         y = i.useRef(null),
-        [I, T] = (0, s.Wu)([u.Z], () => [u.Z.useReducedMotion, u.Z.keyboardModeEnabled]),
-        S = !n || I || T ? 0 : O,
+        [S, I] = (0, s.Wu)([u.Z], () => [u.Z.useReducedMotion, u.Z.keyboardModeEnabled]),
+        T = !n || S || I ? 0 : O,
         A = () => {
             E({ action: "PRESS_EDIT_CUSTOM_STATUS" }), v(g), null == a || a();
         },
         C = () => {
-            E({ action: "PRESS_CLEAR_CUSTOM_STATUS" }), _.Ok.updateSetting(void 0);
+            E({ action: "PRESS_CLEAR_CUSTOM_STATUS" }), p.Ok.updateSetting(void 0);
         };
     return (0, r.jsxs)(f.ZP, {
-        className: o()(m.popover, {
-            [m.visible]: t,
-            [m.expandable]: n,
+        className: o()(h.popover, {
+            [h.visible]: t,
+            [h.expandable]: n,
         }),
         children: [
             (0, r.jsx)(l.u, {
                 asContainer: !0,
                 targetElementRef: b,
-                text: h.intl.string(h.t.bt75uw),
-                delay: S,
+                text: m.intl.string(m.t.bt75uw),
+                delay: T,
                 ariaHidden: !0,
                 children: (0, r.jsx)(f.zx, {
                     ref: b,
-                    className: o()(m.button, m.left),
-                    "aria-label": h.intl.string(h.t.QdHxos),
+                    className: o()(h.button, h.left),
+                    "aria-label": m.intl.string(m.t.QdHxos),
                     "aria-haspopup": "dialog",
                     onClick: A,
                     children: (0, r.jsx)(c.vdY, {
                         size: "xs",
-                        colorClass: m.icon,
+                        colorClass: h.icon,
                     }),
                 }),
             }),
             (0, r.jsx)(l.u, {
                 asContainer: !0,
-                text: h.intl.string(h.t.VkKicb),
-                delay: S,
+                text: m.intl.string(m.t.VkKicb),
+                delay: T,
                 ariaHidden: !0,
                 children: (0, r.jsx)(f.zx, {
                     ref: y,
-                    className: o()(m.button, m.right),
-                    "aria-label": h.intl.string(h.t.wfYTHe),
+                    className: o()(h.button, h.right),
+                    "aria-label": m.intl.string(m.t.wfYTHe),
                     onClick: C,
                     children: (0, r.jsx)(c.XHJ, {
                         size: "xs",
-                        colorClass: m.icon,
+                        colorClass: h.icon,
                     }),
                 }),
             }),

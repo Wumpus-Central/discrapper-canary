@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => S });
 var r = n(54381),
     i = n(473749),
     a = n(442837),
@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(424218),
     d = n(403182),
     f = n(63063),
-    _ = n(74538),
-    p = n(790527),
-    h = n(474936),
-    m = n(981631),
+    p = n(74538),
+    _ = n(790527),
+    m = n(474936),
+    h = n(981631),
     g = n(388032),
     E = n(117474);
 function b(e, t, n) {
@@ -65,29 +65,29 @@ function v(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function I(e) {
+function S(e) {
     var { onClose: t, handleLearnMore: n } = e,
         b = O(e, ["onClose", "handleLearnMore"]);
     let v = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
-        I = (0, a.e7)([s.Z], () => s.Z.theme),
-        T = (0, a.e7)([l.Z], () => l.Z.getGuildId()),
-        S = I === m.BRd.LIGHT ? "light" : "dark",
+        S = (0, a.e7)([s.Z], () => s.Z.theme),
+        I = (0, a.e7)([l.Z], () => l.Z.getGuildId()),
+        T = S === h.BRd.LIGHT ? "light" : "dark",
         A = (0, r.jsx)("img", {
             className: E.art,
             alt: "File Upload Nitro Perk",
-            src: "https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_".concat(S, "_v2.png"),
+            src: "https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_".concat(T, "_v2.png"),
         }),
         C = i.useMemo(() => {
-            let e = _.ZP.getUserMaxFileSize(v);
+            let e = p.ZP.getUserMaxFileSize(v);
             return (0, u.BU)(e / 1024, { useKibibytes: !0 });
         }, [v]),
         N = (0, d.iL)({
-            guildId: T,
+            guildId: I,
             onClick: () => {
-                window.open(f.Z.getArticleURL(m.BhN.NITRO_FAQ), "_blank");
+                window.open(f.Z.getArticleURL(h.BhN.NITRO_FAQ), "_blank");
             },
         }),
-        R = (0, r.jsx)("div", {
+        P = (0, r.jsx)("div", {
             className: E.body,
             children: (0, r.jsx)(o.Text, {
                 variant: "text-sm/medium",
@@ -95,20 +95,20 @@ function I(e) {
             }),
         });
     return (0, r.jsx)(
-        p.Z,
+        _.Z,
         y(
             {
                 artElement: A,
                 artContainerClassName: E.artContainer,
                 enableArtBoxShadow: !1,
-                type: h.cd.UPLOAD_ERROR_UPSELL,
+                type: m.cd.UPLOAD_ERROR_UPSELL,
                 title: g.intl.string(g.t["9C+41g"]),
-                body: R,
+                body: P,
                 context: g.intl.formatToPlainString(g.t.q5fTZp, { maxSize: C }),
                 glowUp: N,
-                analyticsLocation: { section: m.jXE.FILE_UPLOAD_POPOUT },
+                analyticsLocation: { section: h.jXE.FILE_UPLOAD_POPOUT },
                 onClose: t,
-                subscriptionTier: h.Si.TIER_2,
+                subscriptionTier: m.Si.TIER_2,
                 secondaryCTA: g.intl.string(g.t.ZnqyZ2),
                 onSecondaryClick: n,
                 showEnhancedUpsell: !0,

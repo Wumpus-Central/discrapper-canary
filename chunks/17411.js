@@ -1,42 +1,42 @@
-_.d(e, { y: () => s });
-var a = _(263449),
-    r = _(233517),
-    n = _(151122),
-    o = _(899517),
-    E = _(694043);
-let i = o.n,
+r.d(t, { y: () => E });
+var n = r(263449),
+    a = r(233517),
+    i = r(151122),
+    o = r(899517),
+    _ = r(694043);
+let s = o.n,
     c = new WeakMap(),
-    s = (0, n._I)((t = {}) => {
-        let e = t.types || ["crash", "deprecation", "intervention"];
-        function _(t) {
-            if (c.has((0, a.s3)()))
-                for (let e of t)
-                    (0, a.$e)((t) => {
-                        t.setExtra("url", e.url);
-                        let _ = `ReportingObserver [${e.type}]`,
-                            a = "No details available";
-                        if (e.body) {
-                            let _ = {};
-                            for (let t in e.body) _[t] = e.body[t];
-                            if ((t.setExtra("body", _), "crash" === e.type)) {
-                                let t = e.body;
-                                a = [t.crashId || "", t.reason || ""].join(" ").trim() || a;
-                            } else a = e.body.message || a;
+    E = (0, i._I)((e = {}) => {
+        let t = e.types || ["crash", "deprecation", "intervention"];
+        function r(e) {
+            if (c.has((0, n.s3)()))
+                for (let t of e)
+                    (0, n.$e)((e) => {
+                        e.setExtra("url", t.url);
+                        let r = `ReportingObserver [${t.type}]`,
+                            n = "No details available";
+                        if (t.body) {
+                            let r = {};
+                            for (let e in t.body) r[e] = t.body[e];
+                            if ((e.setExtra("body", r), "crash" === t.type)) {
+                                let e = t.body;
+                                n = [e.crashId || "", e.reason || ""].join(" ").trim() || n;
+                            } else n = t.body.message || n;
                         }
-                        (0, r.uT)(`${_}: ${a}`);
+                        (0, a.uT)(`${r}: ${n}`);
                     });
         }
         return {
             name: "ReportingObserver",
             setupOnce() {
-                (0, E.zb)() &&
-                    new i.ReportingObserver(_, {
+                (0, _.zb)() &&
+                    new s.ReportingObserver(r, {
                         buffered: !0,
-                        types: e,
+                        types: t,
                     }).observe();
             },
-            setup(t) {
-                c.set(t, !0);
+            setup(e) {
+                c.set(e, !0);
             },
         };
     });

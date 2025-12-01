@@ -1,4 +1,4 @@
-n.d(t, { l: () => _ });
+n.d(t, { l: () => p });
 var r = n(54381),
     i = n(473749),
     a = n(821541),
@@ -76,7 +76,7 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function _(e) {
+function p(e) {
     var { children: t } = e,
         n = d(e, ["children"]);
     let { spacing: s } = i.useContext(o.q);

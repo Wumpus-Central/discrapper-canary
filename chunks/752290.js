@@ -21,36 +21,36 @@ let l = 100,
     u = 500,
     d = (0, o.tu)("vibing_wumpus", "vibing_wumpus", 0),
     f = 0,
-    _ = 0,
-    p = null;
-function h(e, t) {
+    p = 0,
+    _ = null;
+function m(e, t) {
     let n = Math.round(100 * e),
-        r = Math.round(100 * _),
+        r = Math.round(100 * p),
         a = Math.round(100 * f);
     (n > 0 && a >= r) || (n < 0 && a <= r)
-        ? (clearInterval(p), 0 === r && null != t && t())
+        ? (clearInterval(_), 0 === r && null != t && t())
         : ((a += n), (f = a / 100), (d.volume = i()(f, 0, c)));
 }
-function m(e) {
-    null != p && clearInterval(p), (_ = 0);
+function h(e) {
+    null != _ && clearInterval(_), (p = 0);
     let t = y();
-    p = setInterval(() => {
-        h(t, e);
+    _ = setInterval(() => {
+        m(t, e);
     }, l);
 }
 function g() {
-    null != p && clearInterval(p), d.loop(), (_ = c);
+    null != _ && clearInterval(_), d.loop(), (p = c);
     let e = y();
-    p = setInterval(() => h(e), l);
+    _ = setInterval(() => m(e), l);
 }
 function E() {
-    m(d.pause.bind(d));
+    h(d.pause.bind(d));
 }
 function b() {
-    m(d.stop.bind(d));
+    h(d.stop.bind(d));
 }
 function y() {
-    return (l / u) * (_ - f);
+    return (l / u) * (p - f);
 }
 class O extends a.Z {
     constructor(...e) {

@@ -15,17 +15,17 @@ function s(e, t, n) {
     var u = ((0, r.kK)(e) ? (0, a.Z)(e) : window).visualViewport,
         d = !(0, o.Z)() && n,
         f = (s.left + (d && u ? u.offsetLeft : 0)) / l,
-        _ = (s.top + (d && u ? u.offsetTop : 0)) / c,
-        p = s.width / l,
-        h = s.height / c;
+        p = (s.top + (d && u ? u.offsetTop : 0)) / c,
+        _ = s.width / l,
+        m = s.height / c;
     return {
-        width: p,
-        height: h,
-        top: _,
-        right: f + p,
-        bottom: _ + h,
+        width: _,
+        height: m,
+        top: p,
+        right: f + _,
+        bottom: p + m,
         left: f,
         x: f,
-        y: _,
+        y: p,
     };
 }

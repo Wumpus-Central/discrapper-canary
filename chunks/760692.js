@@ -57,19 +57,19 @@ let c = "--custom-display-name-styles-gradient-start-color",
     u = "--custom-display-name-styles-gradient-end-color",
     d = "--custom-display-name-styles-main-color",
     f = "--custom-display-name-styles-light-1-color",
-    _ = "--custom-display-name-styles-light-2-color",
-    p = "--custom-display-name-styles-dark-1-color",
-    h = "--custom-display-name-styles-dark-2-color",
-    m = "--custom-display-name-styles-wrap",
+    p = "--custom-display-name-styles-light-2-color",
+    _ = "--custom-display-name-styles-dark-1-color",
+    m = "--custom-display-name-styles-dark-2-color",
+    h = "--custom-display-name-styles-wrap",
     g = "--custom-display-name-styles-font-opacity";
 function E(e) {
     let { main: t, light1: n, light2: r, dark1: a, dark2: o } = (0, i.hX)(e);
     return {
         [d]: t,
         [f]: n,
-        [_]: r,
-        [p]: a,
-        [h]: o,
+        [p]: r,
+        [_]: a,
+        [m]: o,
     };
 }
 function b(e) {
@@ -98,7 +98,7 @@ function y(e, t) {
             t.length > 0 && (a = E(t[0]));
     }
     return l(o({}, a), {
-        [m]: n ? "wrap" : "nowrap",
+        [h]: n ? "wrap" : "nowrap",
         [g]: i,
     });
 }

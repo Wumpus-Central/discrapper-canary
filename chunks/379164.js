@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var r = n(570140),
     i = n(447543),
     l = n(18438),
@@ -8,7 +8,7 @@ var r = n(570140),
     c = n(782605),
     u = n(88658),
     d = n(981631);
-let p = {
+let f = {
     acceptInvite(e) {
         let t = i.ZP.getInviteContext("Desktop Invite Modal", e),
             n = (0, o.y)(),

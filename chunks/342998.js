@@ -9,65 +9,65 @@ var r = n(54381),
     u = n(206074),
     d = n(100527),
     f = n(906732),
-    _ = n(213609),
-    p = n(728345),
-    h = n(266454),
-    m = n(243778),
+    p = n(213609),
+    _ = n(728345),
+    m = n(266454),
+    h = n(243778),
     g = n(921944),
     E = n(388032),
-    b = n(427760);
+    b = n(627261);
 let y = (0, a.U)((e) => ({
         activeEntryId: null,
         setActiveEntryId: (t) => e({ activeEntryId: t }),
     })),
     O = (e) => {
         let { entry: t, isFirstApplicationOccurrence: n, targetElementRef: a } = e,
-            { data: O } = (0, p.IX)(t.extra.application_id),
+            { data: O } = (0, _.IX)(t.extra.application_id),
             { analyticsLocations: v } = (0, f.ZP)(d.Z.CLOUD_PLAY_POPOVER),
-            I = (0, u.Z)({
+            S = (0, u.Z)({
                 application: O,
                 analyticsLocations: v,
             }),
-            T = (0, h.Nj)(s.z.CLOUD_PLAY_NEW_BADGE),
-            S = null != I && !T && n,
+            I = (0, m.Nj)(s.z.CLOUD_PLAY_NEW_BADGE),
+            T = null != S && !I && n,
             { activeEntryId: A, setActiveEntryId: C } = y(),
             N = A === t.id,
-            R = S && N ? [s.z.CLOUD_PLAY_POPOVER] : [],
-            [P, D] = (0, m.US)(R),
-            w = P === s.z.CLOUD_PLAY_POPOVER;
+            P = T && N ? [s.z.CLOUD_PLAY_POPOVER] : [],
+            [R, w] = (0, h.US)(P),
+            D = R === s.z.CLOUD_PLAY_POPOVER;
         i.useEffect(() => {
-            S && null === A && C(t.id);
-        }, [A, S, t.id, C]);
-        let L = () => {
-            null == I || I();
+            T && null === A && C(t.id);
+        }, [A, T, t.id, C]);
+        let x = () => {
+            null == S || S();
         };
         i.useEffect(
             () => () => {
-                w && (D(g.L.USER_DISMISS), C(null));
+                D && (w(g.L.USER_DISMISS), C(null));
             },
-            [w, D, C],
+            [D, w, C],
         );
-        let [x, M] = i.useState(!1);
+        let [L, j] = i.useState(!1);
         i.useEffect(() => {
-            w && !x && M(!0);
-        }, [w, x]),
-            (0, _.Z)(
+            D && !L && j(!0);
+        }, [D, L]),
+            (0, p.Z)(
                 {
                     name: o.ImpressionNames.CLOUD_PLAY_CTA,
                     type: o.ImpressionTypes.VIEW,
                     properties: { location_stack: v },
                 },
-                { disableTrack: !x },
-                [x],
+                { disableTrack: !L },
+                [L],
             );
-        let k = () => {
-            D(g.L.USER_DISMISS), C(null);
+        let M = () => {
+            w(g.L.USER_DISMISS), C(null);
         };
         return (0, r.jsx)(l.J2, {
             title: E.intl.string(E.t["+WNDtV"]),
             body: E.intl.string(E.t["5QKxGI"]),
             targetElementRef: a,
-            shouldShow: w,
+            shouldShow: D,
             position: "left",
             caretConfig: { align: "center" },
             gradientColor: "pink",
@@ -79,10 +79,10 @@ let y = (0, a.U)((e) => ({
                 {
                     icon: c.v3n,
                     text: E.intl.string(E.t["jaYS/h"]),
-                    onClick: L,
+                    onClick: x,
                 },
             ],
-            onRequestClose: k,
+            onRequestClose: M,
         });
     },
     v = (e) => {

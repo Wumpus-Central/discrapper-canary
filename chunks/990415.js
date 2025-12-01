@@ -1,5 +1,5 @@
 n.d(t, {
-    WZ: () => _,
+    WZ: () => p,
     d0: () => d,
     nh: () => u,
     uR: () => f,
@@ -78,7 +78,7 @@ function d(e) {
     );
 }
 let f = !1;
-function _(e) {
+function p(e) {
     for (; e && !(0, a.E)(e); ) e = e.parentElement;
     let t = (0, o.kR)(e),
         n = t.document.activeElement;
@@ -102,7 +102,7 @@ function _(e) {
         t.addEventListener("focusin", u, !0),
         t.addEventListener("focus", c, !0);
     let d = () => {
-            cancelAnimationFrame(_),
+            cancelAnimationFrame(p),
                 t.removeEventListener("blur", i, !0),
                 t.removeEventListener("focusout", l, !0),
                 t.removeEventListener("focusin", u, !0),
@@ -110,6 +110,6 @@ function _(e) {
                 (f = !1),
                 (r = !1);
         },
-        _ = requestAnimationFrame(d);
+        p = requestAnimationFrame(d);
     return d;
 }

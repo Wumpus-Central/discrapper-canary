@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(392711),
     i = n.n(r),
     a = n(710845),
@@ -61,4 +61,4 @@ class f {
             u(this, "throttledOnChange", i().debounce(this.handleUserSettingsProtoChange, 0));
     }
 }
-let _ = new f();
+let p = new f();

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r,
     i = n(54381),
     a = n(473749),
@@ -57,11 +57,11 @@ function f(e, t) {
         e
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -69,7 +69,7 @@ function _(e, t) {
     }
     return i;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,11 +78,11 @@ function p(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-class h extends (r = a.PureComponent) {
+class m extends (r = a.PureComponent) {
     render() {
         let e = this.props,
             { tag: t, children: n, hoverText: r, className: a, forceHover: o } = e,
-            c = _(e, ["tag", "children", "hoverText", "className", "forceHover"]);
+            c = p(e, ["tag", "children", "hoverText", "className", "forceHover"]);
         return (0, i.jsxs)(
             "div",
             f(u({}, c), {
@@ -104,8 +104,8 @@ class h extends (r = a.PureComponent) {
         );
     }
 }
-c(h, "defaultProps", {
+c(m, "defaultProps", {
     tag: "div",
     forceHover: !1,
 });
-let m = h;
+let h = m;

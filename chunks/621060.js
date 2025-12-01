@@ -1,7 +1,7 @@
 n.d(t, {
     ZP: () => j,
-    Zj: () => f,
-    v0: () => g,
+    Zj: () => g,
+    v0: () => f,
 }),
     n(388685);
 var a,
@@ -17,7 +17,7 @@ var a,
     p = n(246992),
     h = n(252899),
     x = n(451429),
-    g =
+    f =
         (((a = {}).NONE = ""),
         (a.DISMISSIBLE_CONTENT = "Dismissible Content"),
         (a.EXPERIMENTS = "Experiments"),
@@ -33,7 +33,7 @@ var a,
         (a.DEVELOPMENT = "Development"),
         (a.BOOSTING = "Boosting"),
         a);
-let f = [
+let g = [
         "Experiments",
         "Dismissible Content",
         "Events",
@@ -61,8 +61,8 @@ let f = [
 function v(e) {
     let { tabs: t, selectedTabId: n, onSelectTab: a } = e,
         r = i.useRef(new Map()),
-        [s, g] = i.useState(() => new Set()),
-        { ref: f, width: v } = (0, d.ZP)(),
+        [s, f] = i.useState(() => new Set()),
+        { ref: g, width: v } = (0, d.ZP)(),
         j = i.useRef(null),
         _ = (0, h.F)(t, a);
     i.useEffect(() => {
@@ -79,8 +79,8 @@ function v(e) {
                         ? i
                         : 0) < 0 &&
                 s.add(c.id);
-        g(s);
-    }, [t, v, f, n]);
+        f(s);
+    }, [t, v, g, n]);
     let y = i.useCallback(
         (e) => {
             let { closePopout: t } = e;
@@ -100,7 +100,7 @@ function v(e) {
         children: [
             (0, l.jsxs)("div", {
                 className: x.tabBar,
-                ref: f,
+                ref: g,
                 children: [
                     t
                         .map((e) => {

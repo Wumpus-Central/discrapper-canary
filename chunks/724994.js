@@ -14,23 +14,23 @@ let l = (e, t) => {
             u = null != (n = null == l ? void 0 : l.expiresAt) ? n : null,
             d = null != u,
             f = null != (r = t.items) ? r : [],
-            _ = i()(f.map((t) => e.getPurchase(t.skuId)));
+            p = i()(f.map((t) => e.getPurchase(t.skuId)));
         switch (null == t ? void 0 : t.type) {
             case a.Z.BUNDLE:
                 return {
-                    isPurchased: c || (f.length > 0 && _.length === f.length),
-                    isPartiallyOwnedBundle: _.length > 0 && _.length < f.length,
+                    isPurchased: c || (f.length > 0 && p.length === f.length),
+                    isPartiallyOwnedBundle: p.length > 0 && p.length < f.length,
                     isPartiallyOwnedVariantsGroup: !1,
                     isRented: !1,
                     rentalExpiresAt: null,
                 };
             case a.Z.VARIANTS_GROUP:
-                let p = null == (o = t.variants) ? void 0 : o.every((t) => null != e.getPurchase(t.skuId)),
-                    h = (null == (s = t.variants) ? void 0 : s.some((t) => null != e.getPurchase(t.skuId))) && !p;
+                let _ = null == (o = t.variants) ? void 0 : o.every((t) => null != e.getPurchase(t.skuId)),
+                    m = (null == (s = t.variants) ? void 0 : s.some((t) => null != e.getPurchase(t.skuId))) && !_;
                 return {
-                    isPurchased: null != p && p,
+                    isPurchased: null != _ && _,
                     isPartiallyOwnedBundle: !1,
-                    isPartiallyOwnedVariantsGroup: null != h && h,
+                    isPartiallyOwnedVariantsGroup: null != m && m,
                     isRented: d,
                     rentalExpiresAt: u,
                 };

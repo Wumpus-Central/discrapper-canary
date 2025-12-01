@@ -10,10 +10,10 @@ var i = n(126182),
     u = n(703579),
     d = n(40375),
     f = n(65183),
-    _ = n(799995),
-    p = f.List,
-    h = f.Record,
-    m = f.Repeat;
+    p = n(799995),
+    _ = f.List,
+    m = f.Record,
+    h = f.Repeat;
 e.exports = (function (e) {
     function t() {
         return e.apply(this, arguments) || this;
@@ -125,12 +125,12 @@ e.exports = (function (e) {
             var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : /\r\n?|\n/g,
                 r = e.split(n).map(function (e) {
                     return (
-                        (e = _(e)),
+                        (e = p(e)),
                         new (d("draft_tree_data_support") ? s : o)({
                             key: u(),
                             text: e,
                             type: "unstyled",
-                            characterList: p(m(a.EMPTY, e.length)),
+                            characterList: _(h(a.EMPTY, e.length)),
                         })
                     );
                 });
@@ -139,7 +139,7 @@ e.exports = (function (e) {
         t
     );
 })(
-    h({
+    m({
         entityMap: null,
         blockMap: null,
         selectionBefore: null,

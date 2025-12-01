@@ -35,31 +35,31 @@ var a,
     u = n(364918),
     d = n(946572),
     f = n(606166),
-    _ = n(703579),
-    p = n(249252),
-    h = n(40375),
-    m = n(65183),
-    g = m.List,
-    E = m.Map,
-    b = m.OrderedSet,
+    p = n(703579),
+    _ = n(249252),
+    m = n(40375),
+    h = n(65183),
+    g = h.List,
+    E = h.Map,
+    b = h.OrderedSet,
     y = n(277844),
     O = n(139500),
     v = n(207303),
-    I = n(81894),
-    T = h("draft_tree_data_support"),
-    S = "&nbsp;",
+    S = n(81894),
+    I = m("draft_tree_data_support"),
+    T = "&nbsp;",
     A = " ",
     C = RegExp("\r", "g"),
     N = RegExp("\n", "g"),
-    R = RegExp("^\n", "g"),
-    P = RegExp(S, "g"),
-    D = RegExp("&#13;?", "g"),
-    w = RegExp("&#8203;?", "g"),
-    L = ["bold", "bolder", "500", "600", "700", "800", "900"],
-    x = ["light", "lighter", "normal", "100", "200", "300", "400"],
-    M = ["className", "href", "rel", "target", "title"],
-    k = ["alt", "className", "height", "src", "width"],
-    j =
+    P = RegExp("^\n", "g"),
+    R = RegExp(T, "g"),
+    w = RegExp("&#13;?", "g"),
+    D = RegExp("&#8203;?", "g"),
+    x = ["bold", "bolder", "500", "600", "700", "800", "900"],
+    L = ["light", "lighter", "normal", "100", "200", "300", "400"],
+    j = ["className", "href", "rel", "target", "title"],
+    M = ["alt", "className", "height", "src", "width"],
+    k =
         (i((a = {}), f("public/DraftStyleDefault/depth0"), 0),
         i(a, f("public/DraftStyleDefault/depth1"), 1),
         i(a, f("public/DraftStyleDefault/depth2"), 2),
@@ -91,22 +91,22 @@ var a,
             E(t)
         );
     },
-    B = function (e) {
+    Z = function (e) {
         var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
         return (
-            Object.keys(j).some(function (n) {
-                e.classList.contains(n) && (t = j[n]);
+            Object.keys(k).some(function (n) {
+                e.classList.contains(n) && (t = k[n]);
             }),
             t
         );
     },
-    Z = function (e) {
+    B = function (e) {
         if (!y(e)) return !1;
         var t = e;
         return !!(t.href && ("http:" === t.protocol || "https:" === t.protocol || "mailto:" === t.protocol));
     },
     F = function (e) {
-        if (!I(e)) return !1;
+        if (!S(e)) return !1;
         var t = e;
         return !!(t.attributes.getNamedItem("src") && t.attributes.getNamedItem("src").value);
     },
@@ -117,7 +117,7 @@ var a,
             i = n.style.fontStyle,
             a = n.style.textDecoration;
         return t.withMutations(function (e) {
-            L.indexOf(r) >= 0 ? e.add("BOLD") : x.indexOf(r) >= 0 && e.remove("BOLD"),
+            x.indexOf(r) >= 0 ? e.add("BOLD") : L.indexOf(r) >= 0 && e.remove("BOLD"),
                 "italic" === i ? e.add("ITALIC") : "normal" === i && e.remove("ITALIC"),
                 "underline" === a && e.add("UNDERLINE"),
                 "line-through" === a && e.add("STRIKETHROUGH"),
@@ -171,7 +171,7 @@ var a,
             (t.getContentBlocks = function () {
                 return (
                     0 === this.contentBlocks.length &&
-                        (T ? this._toContentBlocks(this.blockConfigs) : this._toFlatContentBlocks(this.blockConfigs)),
+                        (I ? this._toContentBlocks(this.blockConfigs) : this._toFlatContentBlocks(this.blockConfigs)),
                     {
                         contentBlocks: this.contentBlocks,
                         entityMap: this.entityMap,
@@ -182,7 +182,7 @@ var a,
                 var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                     t = r(
                         {
-                            key: e.key || _(),
+                            key: e.key || p(),
                             type: this.currentBlockType,
                             text: this.currentText,
                             characterList: this.characterList,
@@ -219,18 +219,18 @@ var a,
                         if (
                             ((this.wrapper = "pre" === a ? "pre" : this.wrapper),
                             "string" != typeof l && (l = this.disambiguate(a, this.wrapper) || l[0] || "unstyled"),
-                            !T && v(i) && ("unordered-list-item" === l || "ordered-list-item" === l))
+                            !I && v(i) && ("unordered-list-item" === l || "ordered-list-item" === l))
                         ) {
                             var d = i;
-                            this.currentDepth = B(d, this.currentDepth);
+                            this.currentDepth = Z(d, this.currentDepth);
                         }
-                        var f = _(),
-                            p = this._toBlockConfigs(Array.from(i.childNodes), t);
+                        var f = p(),
+                            _ = this._toBlockConfigs(Array.from(i.childNodes), t);
                         this._trimCurrentText(),
                             n.push(
                                 this._makeBlockConfig({
                                     key: f,
-                                    childConfigs: p,
+                                    childConfigs: _,
                                     type: l,
                                 }),
                             ),
@@ -250,14 +250,14 @@ var a,
                         this._addImgNode(i, t);
                         continue;
                     }
-                    if (Z(i)) {
+                    if (B(i)) {
                         this._addAnchorNode(i, n, t);
                         continue;
                     }
-                    var h = t;
-                    U.has(a) && (h = h.add(U.get(a))),
-                        (h = V(i, h)),
-                        n.push.apply(n, this._toBlockConfigs(Array.from(i.childNodes), h));
+                    var m = t;
+                    U.has(a) && (m = m.add(U.get(a))),
+                        (m = V(i, m)),
+                        n.push.apply(n, this._toBlockConfigs(Array.from(i.childNodes), m));
                 }
                 return n;
             }),
@@ -292,22 +292,22 @@ var a,
             (t._addTextNode = function (e, t) {
                 var n = e.textContent;
                 "" === n.trim() && "pre" !== this.wrapper && (n = " "),
-                    "pre" !== this.wrapper && (n = (n = n.replace(R, "")).replace(N, A)),
+                    "pre" !== this.wrapper && (n = (n = n.replace(P, "")).replace(N, A)),
                     this._appendText(n, t);
             }),
             (t._addBreakNode = function (e, t) {
                 O(e) && this._appendText("\n", t);
             }),
             (t._addImgNode = function (e, t) {
-                if (I(e)) {
+                if (S(e)) {
                     var n = e,
                         r = {};
-                    k.forEach(function (e) {
+                    M.forEach(function (e) {
                         var t = n.getAttribute(e);
                         t && (r[e] = t);
                     }),
                         (this.currentEntity = this.entityMap.__create("IMAGE", "IMMUTABLE", r)),
-                        h("draftjs_fix_paste_for_img")
+                        m("draftjs_fix_paste_for_img")
                             ? "presentation" !== n.getAttribute("role") && this._appendText("\uD83D\uDCF7", t)
                             : this._appendText("\uD83D\uDCF7", t),
                         (this.currentEntity = null);
@@ -317,7 +317,7 @@ var a,
                 if (y(e)) {
                     var r = e,
                         i = {};
-                    M.forEach(function (e) {
+                    j.forEach(function (e) {
                         var t = r.getAttribute(e);
                         t && (i[e] = t);
                     }),
@@ -390,9 +390,9 @@ var a,
         );
     })();
 e.exports = function (e) {
-    var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : p,
+    var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _,
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c,
-        r = t((e = e.trim().replace(C, "").replace(P, A).replace(D, "").replace(w, "")));
+        r = t((e = e.trim().replace(C, "").replace(R, A).replace(w, "").replace(D, "")));
     return r
         ? new Y(G(n), function (e, t) {
               return "li" === e ? ("ol" === t ? "ordered-list-item" : "unordered-list-item") : null;

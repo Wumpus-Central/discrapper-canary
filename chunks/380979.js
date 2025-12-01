@@ -1,9 +1,9 @@
 n.d(t, {
-    $U: () => h,
+    $U: () => m,
     HB: () => E,
     Km: () => g,
-    vV: () => p,
-    yz: () => m,
+    vV: () => _,
+    yz: () => h,
 });
 var r = n(979554),
     i = n(357352),
@@ -12,10 +12,10 @@ var r = n(979554),
     s = n(212161),
     l = n(768581),
     c = n(474936),
-    u = n(597754),
+    u = n(744038),
     d = n(388032);
 let f = 40,
-    _ = (e) => {
+    p = (e) => {
         switch (e) {
             case r.Z.AVATAR_DECORATION:
                 return d.intl.string(u.default.obi47v);
@@ -29,7 +29,7 @@ let f = 40,
                 return "";
         }
     },
-    p = (e) => {
+    _ = (e) => {
         if (0 === e.items.length) return null;
         let t = e.items[0];
         return (0, a.M)(t)
@@ -40,12 +40,12 @@ let f = 40,
               })
             : null;
     },
-    h = (e) => {
+    m = (e) => {
         if (0 === e.items.length) return null;
         let t = e.items[0];
         return (0, o.k)(t) ? (0, i.b)("collectibles/".concat(t.asset, "static.png")) : null;
     },
-    m = (e) => {
+    h = (e) => {
         if (0 === e.items.length) return null;
         let t = e.items[0];
         return (0, s.H)(t) ? t.thumbnailPreviewSrc : null;
@@ -59,7 +59,7 @@ let f = 40,
         let n,
             r,
             i = null != t;
-        if (null != e) (n = e.name), (r = _(e.type));
+        if (null != e) (n = e.name), (r = p(e.type));
         else if (i && null != t) {
             let e = c.GP[t];
             n = null == e ? void 0 : e.name;

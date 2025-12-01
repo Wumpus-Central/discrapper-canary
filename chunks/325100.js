@@ -1,5 +1,5 @@
 n.d(t, {
-    Ak: () => _,
+    Ak: () => p,
     uH: () => f,
 }),
     n(35282);
@@ -52,7 +52,7 @@ let c = (e) => {
             { deep_link_type: s } = (0, r.parse)(n);
         return d(o, a, s);
     },
-    _ = function (e) {
+    p = function (e) {
         let { location: t } = e,
             n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             i = window.location.pathname,

@@ -12,8 +12,8 @@ var a = n(54381),
     p = n(981631),
     h = n(723359),
     x = n(388032),
-    g = n(711322),
-    f = n(451429);
+    f = n(711322),
+    g = n(451429);
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -567,8 +567,8 @@ let j = {
         function u(n) {
             let [u, m] = c.useState(s.DURATION_60_SEC),
                 [p, h] = c.useState(""),
-                [x, g] = c.useState(!1),
-                [f, b] = c.useState(!1),
+                [x, f] = c.useState(!1),
+                [g, b] = c.useState(!1),
                 v = [
                     {
                         value: s.DURATION_60_SEC,
@@ -596,17 +596,17 @@ let j = {
                     },
                 ],
                 j = c.useCallback(async () => {
-                    g(!0),
+                    f(!0),
                         console.log("GuildDisableCommunicationModal: Timing out user", {
                             user: d,
                             duration: o(u),
                             reason: null != p ? p : "No reason provided",
-                            resolveFlag: f,
+                            resolveFlag: g,
                         }),
                         await new Promise((e) => setTimeout(e, 1000)),
-                        g(!1),
+                        f(!1),
                         n.onClose();
-                }, [u, p, f, n]);
+                }, [u, p, g, n]);
             return (0, a.jsxs)("div", {
                 style: {
                     padding: "20px",
@@ -676,7 +676,7 @@ let j = {
                     (0, a.jsx)("div", {
                         className: "mb-4",
                         children: (0, a.jsx)(i, {
-                            checked: f,
+                            checked: g,
                             onChange: b,
                             label: "Resolve associated mod report",
                         }),
@@ -1283,7 +1283,7 @@ let j = {
             );
     },
     FamilyCenterQRCodeModal: async () => {
-        let { default: e } = await Promise.all([n.e("44802"), n.e("90688")]).then(n.bind(n, 978305));
+        let { default: e } = await Promise.all([n.e("75942"), n.e("90688")]).then(n.bind(n, 978305));
         return (t) => (0, a.jsx)(e, b({}, t));
     },
     PremiumGroupFriendsSelectorModal: async () => {
@@ -1316,22 +1316,22 @@ function _() {
         ),
         [t, n] = l.useState(e[0].value);
     return (0, a.jsx)(s.zJl, {
-        className: f.panel,
+        className: g.panel,
         children: (0, a.jsxs)("div", {
-            className: g.panelInner,
+            className: f.panelInner,
             children: [
                 (0, a.jsxs)("section", {
-                    className: g.section,
+                    className: f.section,
                     children: [
                         (0, a.jsx)(s.Heading, {
                             variant: "heading-md/semibold",
                             children: "Open a Modal",
                         }),
                         (0, a.jsxs)("div", {
-                            className: g.inputRow,
+                            className: f.inputRow,
                             children: [
                                 (0, a.jsx)(s.PhF, {
-                                    className: g.input,
+                                    className: f.input,
                                     options: e,
                                     isSelected: (e) => t === e,
                                     serialize: (e) => e,
@@ -1348,14 +1348,14 @@ function _() {
                     ],
                 }),
                 (0, a.jsxs)("section", {
-                    className: g.section,
+                    className: f.section,
                     children: [
                         (0, a.jsx)(s.Heading, {
                             variant: "heading-md/semibold",
                             children: "Wow moment",
                         }),
                         (0, a.jsx)("div", {
-                            className: g.inputRow,
+                            className: f.inputRow,
                             children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 text: "Open",

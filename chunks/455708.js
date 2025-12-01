@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(68405),
     d = n(600164),
     f = n(28546),
-    _ = n(656733),
-    p = n(985375),
-    h = n(653235),
-    m = n(215016),
+    p = n(656733),
+    _ = n(985375),
+    m = n(653235),
+    h = n(215016),
     g = n(981631),
     E = n(149203),
     b = n(295907),
@@ -31,7 +31,7 @@ function v(e, t, n) {
         e
     );
 }
-function I(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,7 +47,7 @@ function I(e) {
     }
     return e;
 }
-function T(e, t) {
+function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -59,12 +59,12 @@ function T(e, t) {
     }
     return n;
 }
-function S(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : T(Object(t)).forEach(function (n) {
+            : I(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -151,12 +151,12 @@ class C extends i.PureComponent {
             } = this.props,
             { resultType: d } = this.state;
         return null == d
-            ? (0, r.jsx)(h.Z, {
+            ? (0, r.jsx)(m.Z, {
                   className: e,
                   hideFavoritesTile: u,
                   onSelectItem: this.handleSelectItem,
               })
-            : (0, r.jsx)(m.ZP, {
+            : (0, r.jsx)(h.ZP, {
                   className: e,
                   data: d === g.wI2.FAVORITES ? a : t,
                   onSelectGIF: this.handleSelectGIF,
@@ -236,29 +236,29 @@ let N = i.forwardRef((e, t) => {
             resultQuery: o,
             resultItems: l,
             suggestions: c,
-        } = (0, s.cj)([_.Z], () => ({
-            query: _.Z.getQuery(),
-            resultQuery: _.Z.getResultQuery(),
-            resultItems: _.Z.getResultItems(),
-            suggestions: _.Z.getSuggestions(),
+        } = (0, s.cj)([p.Z], () => ({
+            query: p.Z.getQuery(),
+            resultQuery: p.Z.getResultQuery(),
+            resultItems: p.Z.getResultItems(),
+            suggestions: p.Z.getSuggestions(),
         })),
         u = (0, f.Iu)((e) => e.searchQuery),
         d = null != a && "" !== a ? a : u,
-        h = (0, p.HI)(),
-        m = i.useRef(null);
+        m = (0, _.HI)(),
+        h = i.useRef(null);
     return (0, r.jsx)(
         C,
-        S(I({}, e), {
+        T(S({}, e), {
             forwardedRef: t,
             query: d,
             resultQuery: o,
             resultItems: l,
             suggestions: c,
-            favorites: h,
+            favorites: m,
             searchOffset: 0,
-            searchTotalResults: _.Z.getResultItems().length,
+            searchTotalResults: p.Z.getResultItems().length,
             searchLimit: null,
-            searchBarRef: m,
+            searchBarRef: h,
             selectedGIF: e.selectedGIF,
         }),
     );

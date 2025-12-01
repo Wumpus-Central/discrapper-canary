@@ -9,10 +9,10 @@ var r,
     u = n(837268),
     d = n(371651),
     f = n(829907),
-    _ = n(509140),
-    p = n(987650),
-    h = n(981631);
-function m(e, t, n) {
+    p = n(509140),
+    _ = n(987650),
+    m = n(981631);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
@@ -73,7 +73,7 @@ function v(e) {
     let t = O(e);
     y[e] = b(g({}, y[e]), { overlay_method: null != t ? u.gl[t] : u.gl[u.gl.OutOfProcess] });
 }
-function I(e) {
+function S(e) {
     var t, n;
     if (null != y[e]) return;
     let r = o.ZP.getGameOrTransformedSubgameForPID(e),
@@ -95,22 +95,22 @@ function I(e) {
         host_crash_count: 0,
     };
 }
-function T(e) {
+function I(e) {
     var t;
     return null != (t = y[e]) ? t : {};
 }
-function S(e, t) {
+function T(e, t) {
     var n, r;
     let i = null == (n = y[e]) ? void 0 : n.error,
         a = null == (r = y[e]) ? void 0 : r.error_description;
     (y[e] = g({}, y[e], t)), null != i && (y[e].error = i), null != a && (y[e].error_description = a);
 }
 function A(e) {
-    s.default.track(h.rMx.OVERLAY_HOOK_RESULT, T(e));
+    s.default.track(m.rMx.OVERLAY_HOOK_RESULT, I(e));
 }
 function C(e, t) {
     e !== l.UNSET_PID &&
-        S(e, {
+        T(e, {
             host_crash_count: 1,
             error: t.message,
             error_description: t.stack,
@@ -118,67 +118,67 @@ function C(e, t) {
 }
 function N(e, t) {
     e !== l.UNSET_PID &&
-        S(e, {
+        T(e, {
             renderer_crash_count: 1,
             error: t.message,
             error_description: t.stack,
         });
 }
-function R() {
+function P() {
     y = {};
 }
-function P(e, t) {
+function R(e, t) {
     let n = o.ZP.getGameOrTransformedSubgameForPID(e);
     return {
         crash_type: t,
         gameName: null == n ? void 0 : n.name,
     };
 }
-function D(e) {
+function w(e) {
     let { pid: t, error: n, crashType: r } = e,
         i = n instanceof Error ? n : Error(null != n ? n : "Unknown error");
     return (
         "native" === r
-            ? (C(t, i), (0, c.V6)(i, u.gl.OutOfProcess, { extra: P(t, "host") }))
-            : (N(t, i), (0, c.V6)(i, u.gl.OutOfProcess, { extra: P(t, "renderer") })),
+            ? (C(t, i), (0, c.V6)(i, u.gl.OutOfProcess, { extra: R(t, "host") }))
+            : (N(t, i), (0, c.V6)(i, u.gl.OutOfProcess, { extra: R(t, "renderer") })),
         !0
     );
 }
-function w(e) {
+function D(e) {
     let { createWindowTriggeringPID: t } = e;
-    return S(t, { mounting_started_at: new Date().getTime() }), !0;
+    return T(t, { mounting_started_at: new Date().getTime() }), !0;
 }
-function L(e) {
+function x(e) {
     var t, n;
     let { createWindowTriggeringPID: r } = e,
-        i = null != (n = null == (t = T(r)) ? void 0 : t.mounting_started_at) ? n : new Date().getTime(),
+        i = null != (n = null == (t = I(r)) ? void 0 : t.mounting_started_at) ? n : new Date().getTime(),
         a = {
             renderer_started: !0,
             fullscreen_type: (0, f.hs)(r),
             graphics_info_after: new Date().getTime() - i,
         };
-    return S(r, a), !0;
+    return T(r, a), !0;
 }
-function x(e) {
+function L(e) {
     var t, n;
     let { createWindowTriggeringPID: r } = e,
-        i = null != (n = null == (t = T(r)) ? void 0 : t.mounting_started_at) ? n : new Date().getTime();
-    return S(r, { renderer_started_after: new Date().getTime() - i }), !0;
-}
-function M(e) {
-    let { pid: t } = e;
-    return I(t), !0;
-}
-function k(e) {
-    let { lastAssociatedPID: t } = e;
-    if (t !== l.UNSET_PID) return A(t), R(), !0;
+        i = null != (n = null == (t = I(r)) ? void 0 : t.mounting_started_at) ? n : new Date().getTime();
+    return T(r, { renderer_started_after: new Date().getTime() - i }), !0;
 }
 function j(e) {
+    let { pid: t } = e;
+    return S(t), !0;
+}
+function M(e) {
+    let { lastAssociatedPID: t } = e;
+    if (t !== l.UNSET_PID) return A(t), P(), !0;
+}
+function k(e) {
     var t, n;
     let { pid: r } = e,
-        i = null != (n = null == (t = T(r)) ? void 0 : t.mounting_started_at) ? n : new Date().getTime();
+        i = null != (n = null == (t = I(r)) ? void 0 : t.mounting_started_at) ? n : new Date().getTime();
     return (
-        S(r, {
+        T(r, {
             total_mount_time_ms: null != i ? new Date().getTime() - i : void 0,
             success: !0,
         }),
@@ -188,27 +188,27 @@ function j(e) {
 }
 class U extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(d.default, _.Z, o.ZP);
+        this.waitFor(d.default, p.Z, o.ZP);
     }
     getData(e) {
-        return T(e);
+        return I(e);
     }
     getCrashExtra(e, t) {
-        return P(e, t);
+        return R(e, t);
     }
 }
-m(U, "displayName", "Overlay-v3-Native-Analytics-Store");
+h(U, "displayName", "Overlay-v3-Native-Analytics-Store");
 let G = new U(
     a.Z,
-    __OVERLAY__ || !p.iP
+    __OVERLAY__ || !_.iP
         ? {}
         : {
-              OVERLAY_V3_PRE_CREATE_POPOUT: w,
-              OVERLAY_V3_POST_CREATE_POPOUT: L,
-              OVERLAY_V3_CREATE_WINDOW_HANDLE_SUCCESS: x,
-              OVERLAY_V3_NATIVE_DESTROY_HOST_WINDOW: k,
-              OVERLAY_SUCCESSFULLY_SHOWN: j,
-              OVERLAY_CRASHED: D,
-              OVERLAY_V3_NATIVE_TRACK_GAME: M,
+              OVERLAY_V3_PRE_CREATE_POPOUT: D,
+              OVERLAY_V3_POST_CREATE_POPOUT: x,
+              OVERLAY_V3_CREATE_WINDOW_HANDLE_SUCCESS: L,
+              OVERLAY_V3_NATIVE_DESTROY_HOST_WINDOW: M,
+              OVERLAY_SUCCESSFULLY_SHOWN: k,
+              OVERLAY_CRASHED: w,
+              OVERLAY_V3_NATIVE_TRACK_GAME: j,
           },
 );

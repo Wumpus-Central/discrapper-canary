@@ -2,17 +2,17 @@ n.d(t, {
     $7: () => y,
     FB: () => u,
     MJ: () => E,
-    T_: () => h,
+    T_: () => m,
     aZ: () => l,
     b5: () => d,
-    b9: () => m,
+    b9: () => h,
     ct: () => g,
     iF: () => c,
     nw: () => r.LX,
     rN: () => f,
     s_: () => b,
-    tX: () => p,
-    uf: () => _,
+    tX: () => _,
+    uf: () => p,
 });
 var r = n(524437);
 function i(e, t, n) {
@@ -87,8 +87,8 @@ let d = [
         r.LX.AGE_VERIFICATION,
     ].reduce((e, t, n) => s(a({}, e), { [t]: n }), {}),
     f = ["bad", "neutral", "good"],
-    _ = 8640000000000000;
-var p = (function (e) {
+    p = 8640000000000000;
+var _ = (function (e) {
         return (
             (e.CONNECTION = "CONNECTION"),
             (e.AUDIO = "AUDIO"),
@@ -99,7 +99,7 @@ var p = (function (e) {
             e
         );
     })({}),
-    h = (function (e) {
+    m = (function (e) {
         return (
             (e.FREEFORM = "FREEFORM"),
             (e.COULD_NOT_CONNECT = "COULD_NOT_CONNECT"),
@@ -111,7 +111,7 @@ var p = (function (e) {
             e
         );
     })({}),
-    m = (function (e) {
+    h = (function (e) {
         return (
             (e.FREEFORM = "FREEFORM"),
             (e.NO_AUDIO = "NO_AUDIO"),

@@ -1,6 +1,6 @@
 n.d(t, {
     d: () => f,
-    k: () => S,
+    k: () => x,
 }),
     n(388685);
 var i = n(54381),
@@ -14,11 +14,11 @@ var i = n(54381),
     c = n(699516),
     g = n(594174),
     h = n(768581),
-    v = n(624138),
-    p = n(51144),
+    p = n(624138),
+    v = n(51144),
     I = n(388032),
     m = n(451964);
-function x(e, t, n) {
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function x(e, t, n) {
         e
     );
 }
-let S = 44;
+let x = 44;
 class f extends l.Component {
     shouldComponentUpdate(e, t) {
         return (
@@ -47,7 +47,7 @@ class f extends l.Component {
             t,
             n,
             { user: l, channel: r } = this.props;
-        if (null != l) (t = l.getAvatarURL(null == r ? void 0 : r.guild_id, 32)), (n = p.ZP.getName(l));
+        if (null != l) (t = l.getAvatarURL(null == r ? void 0 : r.guild_id, 32)), (n = v.ZP.getName(l));
         else if (
             null != r &&
             ((t = (0, a.x)(r)), (n = (0, o.F6)(r, g.default, c.Z)), null == t && null != r.guild_id)
@@ -60,7 +60,7 @@ class f extends l.Component {
                           icon: n.icon,
                           size: 32,
                       }))
-                    : (e = (0, v.Zg)(n.name)));
+                    : (e = (0, p.Zg)(n.name)));
         }
         if (null == t || null == n)
             if (null != e)
@@ -100,7 +100,7 @@ class f extends l.Component {
                         this.renderUserOrChannel(),
                         (0, i.jsxs)("div", {
                             className: m.inviteRowName,
-                            children: [p.ZP.getName(e), null != t ? (0, o.F6)(t, g.default, c.Z, !0) : null],
+                            children: [v.ZP.getName(e), null != t ? (0, o.F6)(t, g.default, c.Z, !0) : null],
                         }),
                     ],
                 }),
@@ -110,18 +110,18 @@ class f extends l.Component {
     }
     constructor(...e) {
         super(...e),
-            x(this, "state", {
+            S(this, "state", {
                 sending: !1,
                 invited: !1,
                 hovered: !1,
             }),
-            x(this, "handleMouseEnter", () => {
+            S(this, "handleMouseEnter", () => {
                 this.setState({ hovered: !0 });
             }),
-            x(this, "handleMouseLeave", () => {
+            S(this, "handleMouseLeave", () => {
                 this.setState({ hovered: !1 });
             }),
-            x(this, "getInviteAnalyticsMetadata", () => {
+            S(this, "getInviteAnalyticsMetadata", () => {
                 let { row: e, source: t } = this.props;
                 if (null != e)
                     return {
@@ -129,7 +129,7 @@ class f extends l.Component {
                         source: t,
                     };
             }),
-            x(this, "handleClickInvite", () => {
+            S(this, "handleClickInvite", () => {
                 let { user: e, channel: t, inviteKey: n, location: i } = this.props;
                 null != n &&
                     (null != t

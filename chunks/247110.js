@@ -10,9 +10,9 @@ var a = n(473749),
     u = "unmounted",
     d = "exited",
     f = "entering",
-    _ = "entered",
-    p = "exiting",
-    h = (function (e) {
+    p = "entered",
+    _ = "exiting",
+    m = (function (e) {
         function t(t, n) {
             var r,
                 i = e.call(this, t, n) || this,
@@ -23,7 +23,7 @@ var a = n(473749),
                 t.in
                     ? o
                         ? ((r = d), (i.appearStatus = f))
-                        : (r = _)
+                        : (r = p)
                     : (r = t.unmountOnExit || t.mountOnEnter ? u : d),
                 (i.state = { status: r }),
                 (i.nextCallback = null),
@@ -43,7 +43,7 @@ var a = n(473749),
                 var t = null;
                 if (e !== this.props) {
                     var n = this.state.status;
-                    this.props.in ? n !== f && n !== _ && (t = f) : (n === f || n === _) && (t = p);
+                    this.props.in ? n !== f && n !== p && (t = f) : (n === f || n === p) && (t = _);
                 }
                 this.updateStatus(!1, t);
             }),
@@ -88,14 +88,14 @@ var a = n(473749),
                     c = this.getTimeouts(),
                     u = r ? c.appear : c.enter;
                 if ((!e && !n) || s.Z.disabled)
-                    return void this.safeSetState({ status: _ }, function () {
+                    return void this.safeSetState({ status: p }, function () {
                         t.props.onEntered(a);
                     });
                 this.props.onEnter(a, l),
                     this.safeSetState({ status: f }, function () {
                         t.props.onEntering(a, l),
                             t.onTransitionEnd(u, function () {
-                                t.safeSetState({ status: _ }, function () {
+                                t.safeSetState({ status: p }, function () {
                                     t.props.onEntered(a, l);
                                 });
                             });
@@ -111,7 +111,7 @@ var a = n(473749),
                         e.props.onExited(r);
                     });
                 this.props.onExit(r),
-                    this.safeSetState({ status: p }, function () {
+                    this.safeSetState({ status: _ }, function () {
                         e.props.onExiting(r),
                             e.onTransitionEnd(n.exit, function () {
                                 e.safeSetState({ status: d }, function () {
@@ -200,26 +200,26 @@ var a = n(473749),
             t
         );
     })(a.Component);
-function m() {}
-(h.contextType = l.Z),
-    (h.propTypes = {}),
-    (h.defaultProps = {
+function h() {}
+(m.contextType = l.Z),
+    (m.propTypes = {}),
+    (m.defaultProps = {
         in: !1,
         mountOnEnter: !1,
         unmountOnExit: !1,
         appear: !1,
         enter: !0,
         exit: !0,
-        onEnter: m,
-        onEntering: m,
-        onEntered: m,
-        onExit: m,
-        onExiting: m,
-        onExited: m,
+        onEnter: h,
+        onEntering: h,
+        onEntered: h,
+        onExit: h,
+        onExiting: h,
+        onExited: h,
     }),
-    (h.UNMOUNTED = u),
-    (h.EXITED = d),
-    (h.ENTERING = f),
-    (h.ENTERED = _),
-    (h.EXITING = p);
-let g = h;
+    (m.UNMOUNTED = u),
+    (m.EXITED = d),
+    (m.ENTERING = f),
+    (m.ENTERED = p),
+    (m.EXITING = _);
+let g = m;

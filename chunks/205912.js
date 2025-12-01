@@ -1,4 +1,4 @@
-n.d(t, { M: () => T });
+n.d(t, { M: () => I });
 var r = n(54381),
     i = n(120356),
     a = n.n(i),
@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(929887),
     d = n(407558),
     f = n(787304),
-    _ = n(483566),
-    p = n(657707),
-    h = n(454389),
-    m = n(402453),
+    p = n(483566),
+    _ = n(657707),
+    m = n(454389),
+    h = n(402453),
     g = n(170382);
 function E(e, t, n) {
     return (
@@ -70,7 +70,7 @@ function v(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = I(e, t);
+        i = S(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -78,7 +78,7 @@ function v(e, t) {
     }
     return i;
 }
-function I(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -87,16 +87,16 @@ function I(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function T(e) {
+function I(e) {
     var {
             value: t,
             onChange: n,
             minValue: i,
             maxValue: E,
             placeholderValue: y,
-            granularity: I = "day",
-            hourCycle: T,
-            hideTimeZone: S = !1,
+            granularity: S = "day",
+            hourCycle: I,
+            hideTimeZone: T = !1,
         } = e,
         A = v(e, [
             "value",
@@ -108,23 +108,23 @@ function T(e) {
             "hourCycle",
             "hideTimeZone",
         ]);
-    let { i18n: C } = (0, m.ZF)(),
-        { fieldProps: N } = (0, _.X)(A),
-        { disabled: R, errorMessage: P, required: D = !1 } = N,
-        w = { hasError: null != P && "" !== P },
+    let { i18n: C } = (0, h.ZF)(),
+        { fieldProps: N } = (0, p.X)(A),
+        { disabled: P, errorMessage: R, required: w = !1 } = N,
+        D = { hasError: null != R && "" !== R },
         {
-            refs: L,
-            floatingStyles: x,
-            isOpen: M,
-            setIsOpen: k,
-            context: j,
+            refs: x,
+            floatingStyles: L,
+            isOpen: j,
+            setIsOpen: M,
+            context: k,
             getFloatingProps: U,
             getReferenceProps: G,
         } = (0, d.O)({
             matchReferenceWidth: !1,
             placement: "bottom-start",
         }),
-        { isMounted: B, styles: Z } = (0, d.Y)(j, {
+        { isMounted: Z, styles: B } = (0, d.Y)(k, {
             common: (e) => {
                 let { side: t } = e;
                 return { transformOrigin: "".concat("top" === t ? "bottom" : "top", " center") };
@@ -136,20 +136,20 @@ function T(e) {
             duration: 100,
         }),
         F = (e) => {
-            null == n || n(e), k(!1);
+            null == n || n(e), M(!1);
         };
     return (0, r.jsx)(
-        _.g,
+        p.g,
         O(b({}, N), {
             children: (e) =>
                 (0, r.jsx)(
-                    h.U,
+                    m.U,
                     O(
                         b(
                             {
                                 className: g.inputField,
-                                validation: w,
-                                ref: L.setReference,
+                                validation: D,
+                                ref: x.setReference,
                             },
                             G(),
                         ),
@@ -162,14 +162,14 @@ function T(e) {
                                 "aria-errormessage": e.errorMessageId,
                                 value: t,
                                 onChange: F,
-                                isDisabled: R,
-                                isRequired: D,
+                                isDisabled: P,
+                                isRequired: w,
                                 minValue: i,
                                 maxValue: E,
                                 placeholderValue: y,
-                                granularity: I,
-                                hourCycle: T,
-                                hideTimeZone: S,
+                                granularity: S,
+                                hourCycle: I,
+                                hideTimeZone: T,
                                 "data-mana-component": "date-picker",
                                 className: g.datePicker,
                                 children: [
@@ -185,32 +185,32 @@ function T(e) {
                                             }),
                                             (0, r.jsx)(c.z, {
                                                 className: g.calendarButton,
-                                                onClick: () => k(!M),
+                                                onClick: () => M(!j),
                                                 "aria-label": C.DATE_INPUT_OPEN_CALENDAR_LABEL,
-                                                children: (0, r.jsx)(p.Que, {
+                                                children: (0, r.jsx)(_.Que, {
                                                     size: "sm",
                                                     color: "currentColor",
                                                 }),
                                             }),
                                         ],
                                     }),
-                                    M &&
-                                        B &&
+                                    j &&
+                                        Z &&
                                         (0, r.jsx)(
                                             "div",
                                             O(b({}, U()), {
-                                                ref: L.setFloating,
-                                                style: x,
+                                                ref: x.setFloating,
+                                                style: L,
                                                 className: g.popover,
                                                 children: (0, r.jsx)(u.Vq, {
-                                                    style: Z,
+                                                    style: B,
                                                     className: g.dialog,
                                                     children: (0, r.jsx)(f.f, {
                                                         value: t,
                                                         onChange: F,
                                                         minValue: i,
                                                         maxValue: E,
-                                                        disabled: R,
+                                                        disabled: P,
                                                     }),
                                                 }),
                                             }),

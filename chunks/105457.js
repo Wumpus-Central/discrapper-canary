@@ -46,10 +46,10 @@ function m(e) {
     let _ = r.useCallback(() => {
             null == m || m(), t();
         }, [m, t]),
-        x = r.useCallback(() => {
+        O = r.useCallback(() => {
             null == g || g(), t();
         }, [g, t]),
-        j = r.useRef(null);
+        x = r.useRef(null);
     return (
         r.useEffect(() => {
             let e,
@@ -63,9 +63,9 @@ function m(e) {
                             (0, a.wj)(t) ? v.dark() : v.light(),
                         ]);
                         i ||
-                            null == j.current ||
+                            null == x.current ||
                             (e = r.loadAnimation({
-                                container: j.current,
+                                container: x.current,
                                 renderer: "svg",
                                 loop: !0,
                                 autoplay: !0,
@@ -89,7 +89,7 @@ function m(e) {
                             null != v &&
                                 (0, i.jsx)("div", {
                                     className: h.animation,
-                                    ref: j,
+                                    ref: x,
                                 }),
                             (0, i.jsxs)("div", {
                                 className: h.content,
@@ -114,7 +114,7 @@ function m(e) {
                                                         className: h.button,
                                                         children: (0, i.jsx)(o.Button, {
                                                             variant: "secondary",
-                                                            onClick: x,
+                                                            onClick: O,
                                                             text: p.intl.string(p.t.fsBWmS),
                                                         }),
                                                     }),

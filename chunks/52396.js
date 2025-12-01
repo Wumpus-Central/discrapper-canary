@@ -13,9 +13,9 @@ var r = n(54381),
     u = n(214597),
     d = n(498187),
     f = n(482417),
-    _ = n(301419),
-    p = n(397035);
-function h(e, t, n) {
+    p = n(301419),
+    _ = n(397035);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +39,7 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
@@ -73,7 +73,7 @@ function y() {
 function O(e) {
     var { entry: t } = e,
         n = g(e, ["entry"]);
-    let i = m(
+    let i = h(
         {
             baseEntryData: (0, u.Z)({
                 entry: t,
@@ -84,17 +84,17 @@ function O(e) {
     );
     switch (t.content_type) {
         case s.s.TOP_ARTIST:
-            return (0, r.jsx)(T, m({ entry: t }, i));
+            return (0, r.jsx)(I, h({ entry: t }, i));
         case s.s.TOP_GAME:
-            return (0, r.jsx)(S, m({ entry: t }, i));
+            return (0, r.jsx)(T, h({ entry: t }, i));
         case s.s.PLAYED_GAME:
-            return (0, r.jsx)(A, m({ entry: t }, i));
+            return (0, r.jsx)(A, h({ entry: t }, i));
         case s.s.WATCHED_MEDIA:
-            return (0, r.jsx)(C, m({ entry: t }, i));
+            return (0, r.jsx)(C, h({ entry: t }, i));
         case s.s.LISTENED_SESSION:
-            return (0, r.jsx)(N, m({ entry: t }, i));
+            return (0, r.jsx)(N, h({ entry: t }, i));
         case s.s.LAUNCHED_ACTIVITY:
-            return (0, r.jsx)(I, m({ entry: t }, i));
+            return (0, r.jsx)(S, h({ entry: t }, i));
         default:
             throw Error("Unsupported content type: ".concat(t.content_type));
     }
@@ -104,60 +104,60 @@ function v(e) {
         n = g(e, ["errorFallback"]);
     return (0, r.jsx)(l.S, {
         fallback: t,
-        children: (0, r.jsx)(O, m({}, n)),
+        children: (0, r.jsx)(O, h({}, n)),
+    });
+}
+function S(e) {
+    var { entry: t, children: n } = e,
+        i = g(e, ["entry", "children"]);
+    let a = (0, c.Z)(h({ entry: t }, i));
+    return (0, r.jsx)(b.Provider, {
+        value: h({ parsedEntry: a }, i),
+        children: n,
     });
 }
 function I(e) {
     var { entry: t, children: n } = e,
         i = g(e, ["entry", "children"]);
-    let a = (0, c.Z)(m({ entry: t }, i));
+    let a = (0, p.Z)(h({ entry: t }, i));
     return (0, r.jsx)(b.Provider, {
-        value: m({ parsedEntry: a }, i),
+        value: h({ parsedEntry: a }, i),
         children: n,
     });
 }
 function T(e) {
     var { entry: t, children: n } = e,
         i = g(e, ["entry", "children"]);
-    let a = (0, _.Z)(m({ entry: t }, i));
+    let a = (0, d.Z)(h({ entry: t }, i));
     return (0, r.jsx)(b.Provider, {
-        value: m({ parsedEntry: a }, i),
-        children: n,
-    });
-}
-function S(e) {
-    var { entry: t, children: n } = e,
-        i = g(e, ["entry", "children"]);
-    let a = (0, d.Z)(m({ entry: t }, i));
-    return (0, r.jsx)(b.Provider, {
-        value: m({ parsedEntry: a }, i),
+        value: h({ parsedEntry: a }, i),
         children: n,
     });
 }
 function A(e) {
     var { entry: t, children: n } = e,
         i = g(e, ["entry", "children"]);
-    let a = (0, d.Z)(m({ entry: t }, i));
+    let a = (0, d.Z)(h({ entry: t }, i));
     return (0, r.jsx)(b.Provider, {
-        value: m({ parsedEntry: a }, i),
+        value: h({ parsedEntry: a }, i),
         children: n,
     });
 }
 function C(e) {
     var { entry: t, children: n } = e,
         i = g(e, ["entry", "children"]);
-    let a = (0, p.Z)(m({ entry: t }, i));
+    let a = (0, _.Z)(h({ entry: t }, i));
     return (0, r.jsx)(b.Provider, {
-        value: m({ parsedEntry: a }, i),
+        value: h({ parsedEntry: a }, i),
         children: n,
     });
 }
 function N(e) {
     var { entry: t, children: n } = e,
         i = g(e, ["entry", "children"]);
-    let a = (0, f.Z)(m({ entry: t }, i));
+    let a = (0, f.Z)(h({ entry: t }, i));
     return (0, r.jsx)(b.Provider, {
-        value: m({ parsedEntry: a }, i),
+        value: h({ parsedEntry: a }, i),
         children: n,
     });
 }

@@ -10,13 +10,13 @@ n(358085);
 var u = n(960048),
     d = n(591759),
     f = n(303850),
-    _ = n(105713),
-    p = n(981631);
-let h = [
+    p = n(105713),
+    _ = n(981631);
+let m = [
         "https://cdn.discordapp.com/bad-domains/updated_hashes.json",
         "https://cdn.discordapp.com/bad-domains/hashes.json",
     ],
-    m = new f.R();
+    h = new f.R();
 function g(e) {
     let t = new URLSearchParams();
     t.append("query", '@http.x_client_trace_id:"'.concat(e, '"')), t.append("showAllSpans", "true");
@@ -42,7 +42,7 @@ function b(e) {
             { default: c } = n(626135),
             { isPlatformEmbedded: d } = n(358085);
         if ("/" === e.url[0]) {
-            var f, p;
+            var f, _;
             (e.url = (0, r.K0)() + e.url),
                 "Authorization" in e.header || "authorization" in e.header || e.set("Authorization", t.getToken()),
                 (0, i.c)();
@@ -58,12 +58,12 @@ function b(e) {
                 e.set("Accept-Language", n);
             }
             e.set("X-Discord-Locale", s.locale);
-            let h = (0, _.Z)();
-            null != h && e.set("X-Discord-Timezone", h);
+            let m = (0, p.Z)();
+            null != m && e.set("X-Discord-Timezone", m);
             let y = o.getDebugOptionsHeaderValue();
             if ((null != y && "" !== y && e.set("X-Debug-Options", y), o.isTracingRequests)) {
                 let t = l.getCurrentUser(),
-                    n = m.generate(null != (p = null == t ? void 0 : t.id) ? p : "0");
+                    n = h.generate(null != (_ = null == t ? void 0 : t.id) ? _ : "0");
                 e.set("x-client-trace-id", n);
                 try {
                     let t = new URL(e.url).pathname;
@@ -102,7 +102,7 @@ function b(e) {
                     null != t && "parse" in t && t.parse)
                 ) {
                     let n = "[FILTERED]";
-                    if (h.includes(e.url)) {
+                    if (m.includes(e.url)) {
                         var r, i;
                         n = null == (i = e.xhr) || null == (r = i.responseText) ? void 0 : r.slice(0, 1000);
                     }
@@ -135,7 +135,7 @@ function b(e) {
                   .catch(r),
               !0)
             : 401 === e.statusCode &&
-                (null == (a = e.body) ? void 0 : a.code) === p.evJ.MFA_REQUIRED &&
+                (null == (a = e.body) ? void 0 : a.code) === _.evJ.MFA_REQUIRED &&
                 (null == (c = e.body) ? void 0 : c.mfa)
               ? (Promise.all([n.e("52030"), n.e("1286")])
                     .then(n.bind(n, 24031))

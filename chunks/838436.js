@@ -1,5 +1,5 @@
 n.d(t, {
-    H: () => p,
+    H: () => _,
     U: () => E,
 }),
     n(953529);
@@ -26,7 +26,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +42,7 @@ function _(e) {
     }
     return e;
 }
-function p(e) {
+function _(e) {
     let { header: t, description: n, relatedId: i, disabled: s } = e;
     return (0, r.jsxs)("div", {
         className: d.header,
@@ -65,14 +65,14 @@ function p(e) {
         ],
     });
 }
-function h(e) {
+function m(e) {
     let { className: t, children: n } = e;
     return (0, r.jsx)("div", {
         className: a()(d.container, t),
         children: n,
     });
 }
-function m(e) {
+function h(e) {
     let { setting: t, className: n, children: i } = e;
     return (0, r.jsx)(s.F, {
         setting: t,
@@ -84,12 +84,12 @@ function m(e) {
 }
 function g(e) {
     let { setting: t, className: n, children: i, scrollPosition: o, scrollHighlightDelay: f } = e,
-        _ = (0, l.a)(o);
+        p = (0, l.a)(o);
     return (0, r.jsx)(s.F, {
         setting: t,
         children: (0, r.jsxs)("div", {
             className: a()(d.container, n, { [u.settingsBackgroundFlashElement]: null != o }),
-            ref: _,
+            ref: p,
             children: [
                 i,
                 null != o
@@ -104,8 +104,8 @@ function g(e) {
 }
 function E(e) {
     return null != e.scrollPosition
-        ? (0, r.jsx)(g, _({}, e))
+        ? (0, r.jsx)(g, p({}, e))
         : null != e.setting
-          ? (0, r.jsx)(m, _({}, e))
-          : (0, r.jsx)(h, _({}, e));
+          ? (0, r.jsx)(h, p({}, e))
+          : (0, r.jsx)(m, p({}, e));
 }

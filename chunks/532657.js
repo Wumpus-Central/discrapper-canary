@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,16 +58,16 @@ function _(e, t) {
         e
     );
 }
-function p(e) {
+function _(e) {
     let {
             text: t,
             tooltipText: n,
             textVariant: a = "text-xs/medium",
             textClassName: u,
             "aria-label": f,
-            icon: p,
-            canTruncate: h = !0,
-            hideTooltip: m = !1,
+            icon: _,
+            canTruncate: m = !0,
+            hideTooltip: h = !1,
             hideText: g = !1,
         } = e,
         E = i.useRef(null),
@@ -75,7 +75,7 @@ function p(e) {
             let e = null != n ? n : t;
             return (0, r.jsxs)(r.Fragment, {
                 children: [
-                    p,
+                    _,
                     (0, r.jsx)(s.Text, {
                         variant: "text-sm/medium",
                         color: "none",
@@ -88,11 +88,11 @@ function p(e) {
         y = {
             variant: a,
             color: "none",
-            className: o()(h && c.truncated, u),
+            className: o()(m && c.truncated, u),
         },
-        O = null != t && null == n && h,
-        v = !m && (null != n || O || g);
-    return null == p && g
+        O = null != t && null == n && m,
+        v = !h && (null != n || O || g);
+    return null == _ && g
         ? null
         : v
           ? (0, r.jsx)(s.aML, {
@@ -111,11 +111,11 @@ function p(e) {
                             (null != n || t || g) && (null == i || i());
                         },
                         onMouseLeave: a,
-                        children: [p, !g && (0, r.jsx)(s.Text, _(d({ ref: E }, y), { children: t }))],
+                        children: [_, !g && (0, r.jsx)(s.Text, p(d({ ref: E }, y), { children: t }))],
                     });
                 },
             })
           : (0, r.jsxs)(r.Fragment, {
-                children: [p, !g && (0, r.jsx)(s.Text, _(d({}, y), { children: t }))],
+                children: [_, !g && (0, r.jsx)(s.Text, p(d({}, y), { children: t }))],
             });
 }

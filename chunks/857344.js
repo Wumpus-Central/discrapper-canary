@@ -23,23 +23,23 @@ function l(e) {
             }),
             [e.children, u, c, d],
         ),
-        _ = (0, o.K)(
+        p = (0, o.K)(
             e,
             (0, a.useCallback)((e) => new (0, r.J)(e, null, f), [f]),
             f,
         ),
-        { disabledKeys: p, selectionManager: h } = (0, i.S)({
+        { disabledKeys: _, selectionManager: m } = (0, i.S)({
             ...e,
-            collection: _,
+            collection: p,
             disabledBehavior: e.disabledBehavior || "selection",
         });
     return {
-        collection: _,
-        disabledKeys: p,
-        selectionManager: h,
+        collection: p,
+        disabledKeys: _,
+        selectionManager: m,
         showSelectionCheckboxes: e.showSelectionCheckboxes || !1,
         sortDescriptor: null != (t = e.sortDescriptor) ? t : null,
-        isKeyboardNavigationDisabled: 0 === _.size || n,
+        isKeyboardNavigationDisabled: 0 === p.size || n,
         setKeyboardNavigationDisabled: l,
         sort(t, n) {
             var r, i;

@@ -1,8 +1,8 @@
 n.d(t, {
-    E6: () => p,
-    HP: () => _,
-    II: () => m,
-    pL: () => h,
+    E6: () => _,
+    HP: () => p,
+    II: () => h,
+    pL: () => m,
 }),
     n(388685);
 var r = n(442837),
@@ -22,13 +22,13 @@ function f() {
     return e.getWindowVisible(OVERLAY_V3_KEY);
 }
 n(340101), n(757744), n(501787);
-function _(e, t) {
+function p(e, t) {
     if (e === t) return !0;
     if (e.length !== t.length) return !1;
     for (let n = 0; n < e.length; n++) if (e[n].widget !== t[n].widget) return !1;
     return !0;
 }
-function p(e, t) {
+function _(e, t) {
     if (e === t) return !0;
     if (e.length !== t.length) return !1;
     for (let n = 0; n < e.length; n++)
@@ -36,22 +36,22 @@ function p(e, t) {
             return !1;
     return !0;
 }
-function h() {
+function m() {
     var e, t;
     let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.ZP,
         r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.Z,
         i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.ZP,
         s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : l.Z,
         f = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : d.Z,
-        _ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : (0, o.e)(),
-        p = i.getCurrentEmbeddedActivity(),
-        h = null == p ? void 0 : p.applicationId,
-        m = null == h ? void 0 : s.getApplication(h);
-    if (null != p && null != m && _)
+        p = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : (0, o.e)(),
+        _ = i.getCurrentEmbeddedActivity(),
+        m = null == _ ? void 0 : _.applicationId,
+        h = null == m ? void 0 : s.getApplication(m);
+    if (null != _ && null != h && p)
         return {
-            id: p.applicationId,
+            id: _.applicationId,
             altId: void 0,
-            name: m.name,
+            name: h.name,
         };
     let g = f.getTargetPID(),
         E = n.getGameForPID(g),
@@ -64,7 +64,7 @@ function h() {
               name: null != (t = null == E ? void 0 : E.name) ? t : null == b ? void 0 : b.name,
           };
 }
-function m() {
+function h() {
     let e = (0, s.P)();
-    return (0, r.e7)([c.ZP, u.Z, a.ZP, l.Z, d.Z], () => h(c.ZP, u.Z, a.ZP, l.Z, d.Z, e), [e], i.Z);
+    return (0, r.e7)([c.ZP, u.Z, a.ZP, l.Z, d.Z], () => m(c.ZP, u.Z, a.ZP, l.Z, d.Z, e), [e], i.Z);
 }

@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,22 +48,22 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -71,7 +71,7 @@ function h(e, t) {
     }
     return i;
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -82,8 +82,8 @@ function m(e, t) {
 }
 let g = 1,
     E = i.memo(function (e) {
-        let { onClick: t, trusted: n, title: a, href: d, children: _, messageId: m, channelId: E } = e,
-            b = h(e, ["onClick", "trusted", "title", "href", "children", "messageId", "channelId"]),
+        let { onClick: t, trusted: n, title: a, href: d, children: p, messageId: h, channelId: E } = e,
+            b = m(e, ["onClick", "trusted", "title", "href", "children", "messageId", "channelId"]),
             { analyticsLocations: y } = (0, c.ZP)(l.Z.MASKED_LINK),
             O = i.useCallback((t) => (0, u.q)(e, t, y), [y, e]),
             v = i.useCallback(
@@ -92,17 +92,17 @@ let g = 1,
                 },
                 [O],
             ),
-            I = o().sanitizeUrl(d);
+            S = o().sanitizeUrl(d);
         return (0, r.jsx)(
             s.Anchor,
-            p(f({}, b), {
+            _(f({}, b), {
                 title: a,
                 target: "_blank",
                 rel: "noreferrer noopener",
-                href: I,
+                href: S,
                 onClick: O,
                 onAuxClick: v,
-                children: null != _ ? _ : a,
+                children: null != p ? p : a,
             }),
         );
     });

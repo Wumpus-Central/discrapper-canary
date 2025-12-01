@@ -19,8 +19,8 @@ var r = n(54381),
     g = n(716600),
     b = n(778569),
     v = n(563218),
-    E = n(318891),
-    h = n(884338),
+    h = n(318891),
+    E = n(884338),
     y = n(719296),
     S = n(958185),
     O = n(100527),
@@ -40,13 +40,13 @@ function M(e) {
     let { avatarSize: t, guildId: n, channelId: i, users: l } = e,
         a = null != t ? t : s.EFr.SIZE_32,
         o = (0, s.pxk)(a);
-    return (0, r.jsx)(h.ZP, {
+    return (0, r.jsx)(E.ZP, {
         size: o,
         guildId: n,
         users: l,
         max: 4,
         renderUser: (e) => {
-            if (null == e || e === h.ag) return null;
+            if (null == e || e === E.ag) return null;
             let t = T.ZP.getName(n, i, e);
             return (0, r.jsx)(
                 c.u,
@@ -72,12 +72,12 @@ function k(e) {
     let { participants: l, application: c, channel: m, width: g } = e,
         b = g > 400 ? 2 : +(g > 300),
         [v] = g > 400 ? [s.EFr.SIZE_56, 56] : g > 300 ? [s.EFr.SIZE_32, 32] : [s.EFr.SIZE_24, 24],
-        E = (0, o.Wu)([Z.default, j.default], () =>
+        h = (0, o.Wu)([Z.default, j.default], () =>
             Array.from(l)
                 .map((e) => ((0, p.J)(e, j.default) ? null : Z.default.getUser(e.userId)))
                 .filter(R.lm),
         ),
-        h = (0, o.e7)([d.ZP], () => {
+        E = (0, o.e7)([d.ZP], () => {
             var e;
             return null != (e = d.ZP.getEmbeddedActivitiesForChannel(m.id).find((e) => e.applicationId === c.id))
                 ? e
@@ -85,7 +85,7 @@ function k(e) {
         }),
         { analyticsLocations: y } = (0, C.ZP)(),
         S = (0, u.O)(),
-        O = T.ZP.getName(m.getGuildId(), m.id, null == E ? void 0 : E[0]),
+        O = T.ZP.getName(m.getGuildId(), m.id, null == h ? void 0 : h[0]),
         I =
             (0, _.s5)({
                 userId: null == (t = Z.default.getCurrentUser()) ? void 0 : t.id,
@@ -114,7 +114,7 @@ function k(e) {
                 avatarSize: v,
                 guildId: P,
                 channelId: m.id,
-                users: E,
+                users: h,
             }),
             (0, r.jsx)(s.Text, {
                 className: a()(N.subheader, {
@@ -123,10 +123,10 @@ function k(e) {
                 }),
                 variant: "text-sm/normal",
                 children:
-                    E.length > 1
+                    h.length > 1
                         ? A.intl.formatToPlainString(A.t.cpe6CK, {
                               username: O,
-                              count: E.length - 1,
+                              count: h.length - 1,
                           })
                         : A.intl.formatToPlainString(A.t["7Uuia2"], { username: O }),
             }),
@@ -145,9 +145,9 @@ function k(e) {
                           text: A.intl.string(A.t["4i2vj+"]),
                           onClick: function (e) {
                               e.stopPropagation(),
-                                  null != h &&
+                                  null != E &&
                                       (0, f.Z)({
-                                          applicationId: h.applicationId,
+                                          applicationId: E.applicationId,
                                           activityChannelId: m.id,
                                           locationObject: S.location,
                                           analyticsLocations: y,
@@ -175,7 +175,7 @@ function L(e) {
             names: D,
             size: 1024,
         }),
-        h = !l && f,
+        E = !l && f,
         w = !f,
         j = !f && !l,
         Z = (0, o.e7)([x.Z, P.Z], () =>
@@ -186,17 +186,17 @@ function L(e) {
         );
     return (
         i.useEffect(() => {
-            if (h && null != d && !Z) {
+            if (E && null != d && !Z) {
                 let e = (0, y.Z)(d.location.id, d.applicationId);
-                (0, E.jy)(e);
+                (0, h.jy)(e);
             }
-        }, [h, d, Z]),
+        }, [E, d, Z]),
         (0, r.jsx)(C.Gt, {
             value: s,
             children: (0, r.jsxs)("div", {
                 className: N.container,
                 children: [
-                    h &&
+                    E &&
                         null != d &&
                         (0, r.jsx)(v.Z, {
                             className: N.iframe,

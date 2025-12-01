@@ -1,6 +1,6 @@
 n.d(t, {
-    C$: () => p,
-    fm: () => _,
+    C$: () => _,
+    fm: () => p,
     sf: () => f,
     tj: () => u,
 });
@@ -84,5 +84,5 @@ let u = "custom-themes-share-modal",
                 setSend: (t) => e({ send: t }),
             }),
         ),
-    _ = (0, r.createContext)(null),
-    p = () => (0, a.o)((0, r.useContext)(_));
+    p = (0, r.createContext)(null),
+    _ = () => (0, a.o)((0, r.useContext)(p));

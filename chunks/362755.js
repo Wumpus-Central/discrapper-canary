@@ -1,6 +1,6 @@
 n.d(t, {
     Y: () => s,
-    Z: () => h,
+    Z: () => m,
 });
 var r,
     i = n(442837),
@@ -28,12 +28,12 @@ let l = 0,
 function f(e) {
     (l = 1), (c = e.loadId);
 }
-function _(e) {
+function p(e) {
     var t, n;
     c === e.loadId &&
         ((u = null != (t = e.skuId) ? t : null), (d = null != (n = e.skuSubscriptionPlanId) ? n : null), (l = 2));
 }
-class p extends (r = i.ZP.Store) {
+class _ extends (r = i.ZP.Store) {
     get browserCheckoutState() {
         return l;
     }
@@ -47,8 +47,8 @@ class p extends (r = i.ZP.Store) {
         return d;
     }
 }
-o(p, "displayName", "BrowserCheckoutStateStore");
-let h = new p(a.Z, {
+o(_, "displayName", "BrowserCheckoutStateStore");
+let m = new _(a.Z, {
     USER_PAYMENT_BROWSER_CHECKOUT_STARTED: f,
-    USER_PAYMENT_BROWSER_CHECKOUT_DONE: _,
+    USER_PAYMENT_BROWSER_CHECKOUT_DONE: p,
 });

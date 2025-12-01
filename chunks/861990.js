@@ -130,20 +130,20 @@ function d(e) {
     var t, n, r, i, a, s;
     let l,
         { uri: c, i: u, overrideFilename: d, overrideType: f } = e,
-        _ = c.split("/"),
-        p = _[_.length - 1];
-    p = null != (r = null == (n = p.split("?")) || null == (t = n[0]) ? void 0 : t.toLowerCase()) ? r : "";
-    let h = o.find((e) => e.reName.test(p));
-    if ((null == h && null != d && (h = o.find((e) => e.reName.test(d))), null != h && null != d)) {
-        let e = h.name(u).split(".").pop(),
+        p = c.split("/"),
+        _ = p[p.length - 1];
+    _ = null != (r = null == (n = _.split("?")) || null == (t = n[0]) ? void 0 : t.toLowerCase()) ? r : "";
+    let m = o.find((e) => e.reName.test(_));
+    if ((null == m && null != d && (m = o.find((e) => e.reName.test(d))), null != m && null != d)) {
+        let e = m.name(u).split(".").pop(),
             t = d.lastIndexOf(".");
         l = -1 !== t ? "".concat(d.substr(0, t), ".").concat(e) : "".concat(d, ".").concat(e);
-    } else l = null != h ? h.name(u) : null != d ? d : "unknown";
+    } else l = null != m ? m.name(u) : null != d ? d : "unknown";
     return {
         uri: c,
         filename: l,
-        type: null != (i = null != f ? f : null == h ? void 0 : h.type) ? i : "unknown",
-        isVideo: -1 !== (null != (a = null != f ? f : null == h ? void 0 : h.name(u)) ? a : "").indexOf("video"),
-        isImage: -1 !== (null != (s = null != f ? f : null == h ? void 0 : h.name(u)) ? s : "").indexOf("image"),
+        type: null != (i = null != f ? f : null == m ? void 0 : m.type) ? i : "unknown",
+        isVideo: -1 !== (null != (a = null != f ? f : null == m ? void 0 : m.name(u)) ? a : "").indexOf("video"),
+        isImage: -1 !== (null != (s = null != f ? f : null == m ? void 0 : m.name(u)) ? s : "").indexOf("image"),
     };
 }

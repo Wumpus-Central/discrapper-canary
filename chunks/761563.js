@@ -53,20 +53,20 @@ e.exports = function (e) {
             className: "literal",
             begin: /\b(true|false|nil)\b/,
         },
-        _ = {
+        p = {
             begin: "\\[|(#::?" + n + ")?\\{",
             end: "[\\]\\}]",
             relevance: 0,
         },
-        p = {
+        _ = {
             className: "symbol",
             begin: "[:]{1,2}" + n,
         },
-        h = {
+        m = {
             begin: "\\(",
             end: "\\)",
         },
-        m = {
+        h = {
             endsWithParent: !0,
             relevance: 0,
         },
@@ -75,11 +75,11 @@ e.exports = function (e) {
             className: "name",
             begin: n,
             relevance: 0,
-            starts: m,
+            starts: h,
         },
-        E = [u, h, s, l, c, d, p, _, o, f, a];
+        E = [u, m, s, l, c, d, _, p, o, f, a];
     return (
-        (h.contains = [
+        (m.contains = [
             {
                 beginKeywords: r,
                 keywords: {
@@ -98,15 +98,15 @@ e.exports = function (e) {
                 ].concat(E),
             },
             g,
-            m,
+            h,
         ]),
-        (m.contains = E),
-        (_.contains = E),
+        (h.contains = E),
+        (p.contains = E),
         {
             name: "Clojure",
             aliases: ["clj", "edn"],
             illegal: /\S/,
-            contains: [u, h, s, l, c, d, p, _, o, f],
+            contains: [u, m, s, l, c, d, _, p, o, f],
         }
     );
 };

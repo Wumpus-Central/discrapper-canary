@@ -22,23 +22,23 @@ function f() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
     return e;
 }
-let _ = h(),
-    p = null;
-function h() {
+let p = m(),
+    _ = null;
+function m() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     return e;
 }
-_ && (p = setInterval(b, a));
-let m = new Map();
+p && (_ = setInterval(b, a));
+let h = new Map();
 function g(e) {
     return "anonymous" !== e.name && ("" === d || e.name === d) && (e.execCount > c || e.execTime > s);
 }
 function E() {
-    for (let [e, t] of m) if (g(t)) return !0;
+    for (let [e, t] of h) if (g(t)) return !0;
     return !1;
 }
 function b() {
-    for (let [e, t] of (E() || "" !== d ? y() : i.log("No violators found"), m))
+    for (let [e, t] of (E() || "" !== d ? y() : i.log("No violators found"), h))
         (t.warned = !1), (t.execTime = 0), (t.execCount = 0);
 }
 let y = function () {
@@ -55,7 +55,7 @@ let y = function () {
             "| ".concat("Total Exec Count".padEnd(n, " "), "|"),
     ),
     i.log("|".padEnd(r, "-") + "|"),
-    m))
+    h))
         (("" !== d && a === d) || g(o)) &&
             i.log(
                 "| ".concat(a.padEnd(e, " ")) +

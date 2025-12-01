@@ -1,7 +1,7 @@
 n.d(t, { f: () => c }), n(388685);
 var r = n(243814),
-    i = n(509212),
-    l = n(569984),
+    i = n(616022),
+    l = n(509212),
     a = n(996106),
     s = n(452426),
     o = n(981631);
@@ -14,8 +14,8 @@ let c = {
                     args: { quest_id: t },
                     socket: n,
                 } = e,
-                r = l.Z.getQuest(t),
-                s = (0, i.nY)(r);
+                r = i.Z.getQuest(t),
+                s = (0, l.nY)(r);
             if (null == r || null == s || s !== n.application.id)
                 throw new a.Z({ errorCode: o.lTL.INVALID_COMMAND }, "Quest not found: ".concat(t));
         },

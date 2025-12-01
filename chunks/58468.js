@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -39,12 +39,12 @@ function f(e) {
     let { channelId: t } = e;
     d[t] ? delete d[t] : (d[t] = !0), (d = c({}, d));
 }
-function _() {
+function p() {
     o.default.keys(d).forEach((e) => {
         null == s.Z.getChannel(e) && delete d[e];
     });
 }
-class p extends (r = i.ZP.PersistedStore) {
+class _ extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         this.waitFor(s.Z), (d = null != e ? e : u);
     }
@@ -58,9 +58,9 @@ class p extends (r = i.ZP.PersistedStore) {
         return d[e] || !1;
     }
 }
-l(p, "displayName", "CollapsedVoiceChannelStore"), l(p, "persistKey", "collapsedChannels");
-let h = new p(a.Z, {
-    CONNECTION_OPEN: _,
-    OVERLAY_INITIALIZE: _,
+l(_, "displayName", "CollapsedVoiceChannelStore"), l(_, "persistKey", "collapsedChannels");
+let m = new _(a.Z, {
+    CONNECTION_OPEN: p,
+    OVERLAY_INITIALIZE: p,
     CHANNEL_COLLAPSE: f,
 });

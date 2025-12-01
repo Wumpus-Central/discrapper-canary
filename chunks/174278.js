@@ -1,4 +1,4 @@
-n.d(t, { q: () => h });
+n.d(t, { q: () => m });
 var r = n(54381);
 n(473749);
 var i = n(952265),
@@ -7,7 +7,7 @@ var i = n(952265),
     s = n(481060),
     l = n(479661),
     c = n(135102),
-    u = n(422129),
+    u = n(896591),
     d = n(388032);
 function f(e, t, n) {
     return (
@@ -22,7 +22,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,18 +38,18 @@ function _(e) {
     }
     return e;
 }
-let p = () => {
+let _ = () => {
         (0, i.ZD)(
             async () => {
                 let { CustomThemesShareModalWrapper: e } = await Promise.all([n.e("36653"), n.e("26196")]).then(
                     n.bind(n, 433359),
                 );
-                return (t) => (0, r.jsx)(e, _({}, t));
+                return (t) => (0, r.jsx)(e, p({}, t));
             },
             { modalKey: c.tj },
         );
     },
-    h = () =>
+    m = () =>
         (0, l.e)("client_themes_editor")
             ? (0, r.jsx)(a.u, {
                   text: d.intl.string(d.t.RDE0Sc),
@@ -58,7 +58,7 @@ let p = () => {
                       icon: s.aAc,
                       variant: "icon-only",
                       onClick: () => {
-                          p();
+                          _();
                       },
                   }),
               })

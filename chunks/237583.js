@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(539854), n(388685);
+n.d(t, { Z: () => m }), n(539854), n(388685);
 var r,
     i = n(54381),
     a = n(473749),
@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e, t, n) {
+function p(e, t, n) {
     return (0, i.jsx)(
         "div",
         {
@@ -31,7 +31,7 @@ function _(e, t, n) {
         n,
     );
 }
-class p extends (r = a.PureComponent) {
+class _ extends (r = a.PureComponent) {
     renderUsers() {
         let { users: e, max: t, renderUser: n = this.defaultRenderUser, renderMoreUsers: r } = this.props,
             i = [],
@@ -75,27 +75,27 @@ class p extends (r = a.PureComponent) {
             f(this, "_ref", void 0),
             f(this, "defaultRenderUser", (e, t, n, r) => {
                 let { onClick: a, size: o, guildId: f } = this.props,
-                    _ = e instanceof c.Z ? e : null != e ? e.user : null;
-                return null == _
+                    p = e instanceof c.Z ? e : null != e ? e.user : null;
+                return null == p
                     ? (0, i.jsx)("div", { className: s()(u.emptyUser, t) }, n)
                     : (0, i.jsx)(
                           l.qEK,
                           {
                               tabIndex: 0,
-                              src: _.getAvatarURL(f, (0, l.pxk)(o)),
+                              src: p.getAvatarURL(f, (0, l.pxk)(o)),
                               size: o,
-                              "aria-label": _.username,
+                              "aria-label": p.username,
                               className: s()(t, d.cursorPointer, u.avatarSize),
-                              onClick: (e) => (null != a ? a(e, _, this._ref) : null),
+                              onClick: (e) => (null != a ? a(e, p, this._ref) : null),
                           },
-                          _.id,
+                          p.id,
                       );
             });
     }
 }
-f(p, "defaultProps", {
+f(_, "defaultProps", {
     max: 10,
-    renderMoreUsers: _,
+    renderMoreUsers: p,
     size: l.EFr.SIZE_24,
 });
-let h = p;
+let m = _;

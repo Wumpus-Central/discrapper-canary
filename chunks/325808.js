@@ -1,6 +1,6 @@
 n.d(t, {
-    XH: () => I,
-    ZP: () => T,
+    XH: () => S,
+    ZP: () => I,
     cO: () => O,
 });
 var r = n(54381),
@@ -13,10 +13,10 @@ var r = n(54381),
     u = n(131951),
     d = n(358085),
     f = n(383451),
-    _ = n(313789),
-    p = n(518596),
-    h = n(962100),
-    m = n(981631),
+    p = n(313789),
+    _ = n(518596),
+    m = n(962100),
+    h = n(981631),
     g = n(388032);
 function E(e, t, n) {
     return (
@@ -58,16 +58,16 @@ function v(e) {
         { enableLatching: b } = (0, f.H)({ location: "PTTTools" });
     return (
         (t =
-            d.isPlatformEmbedded || n !== m.pM4.PUSH_TO_TALK
+            d.isPlatformEmbedded || n !== h.pM4.PUSH_TO_TALK
                 ? (0, r.jsx)(o.Wn, {
                       messageType: o.QYI.INFO,
                       children: g.intl.format(g.t.HVvn5T, {
-                          onClick: () => (0, p.openUserSettings)(_.n.KEYBINDS_PANEL, { section: m.oAB.KEYBINDS }),
+                          onClick: () => (0, _.openUserSettings)(p.n.KEYBINDS_PANEL, { section: h.oAB.KEYBINDS }),
                       }),
                   })
                 : (0, r.jsx)(o.Wn, {
                       messageType: o.QYI.WARNING,
-                      children: g.intl.format(g.t.zvMPOc, { onDownloadClick: () => (0, h.y)("Help Text PTT") }),
+                      children: g.intl.format(g.t.zvMPOc, { onDownloadClick: () => (0, m.y)("Help Text PTT") }),
                   })),
         (0, r.jsxs)(o.Kqy, {
             gap: 20,
@@ -88,7 +88,7 @@ function v(e) {
                             initialValue: c,
                             onValueChange: (e) => s.Z.setMode(n, { delay: e }),
                             onValueRender: O,
-                            maxValue: m.qhL,
+                            maxValue: h.qhL,
                         }),
                     ],
                 }),
@@ -104,8 +104,8 @@ function v(e) {
         })
     );
 }
-function I(e, t) {
-    e === m.pM4.PUSH_TO_TALK &&
+function S(e, t) {
+    e === h.pM4.PUSH_TO_TALK &&
         y &&
         (0, o.ZDy)(async () => {
             let { default: e } = await n.e("84112").then(n.bind(n, 273352));
@@ -117,7 +117,7 @@ function I(e, t) {
                             title: g.intl.string(g.t.Kdt0Gb),
                             confirmText: g.intl.string(g.t["1WjMbC"]),
                             cancelText: g.intl.string(g.t.BddRzS),
-                            onConfirm: () => (0, h.y)("PTT Limited Modal"),
+                            onConfirm: () => (0, m.y)("PTT Limited Modal"),
                             body: g.intl.string(g.t.NIozvt),
                         },
                         t,
@@ -126,23 +126,23 @@ function I(e, t) {
         }),
         s.Z.setMode(e, void 0, void 0, { analyticsLocations: t });
 }
-function T() {
+function I() {
     let { analyticsLocations: e } = (0, c.ZP)(),
         t = (0, a.e7)([u.Z], () => u.Z.getMode()),
         n = [
             {
-                value: m.pM4.VOICE_ACTIVITY,
+                value: h.pM4.VOICE_ACTIVITY,
                 name: g.intl.string(g.t.cHCEOJ),
             },
             {
-                value: m.pM4.PUSH_TO_TALK,
+                value: h.pM4.PUSH_TO_TALK,
                 name: y ? g.intl.string(g.t["1AINrB"]) : g.intl.string(g.t.Q8gkVL),
             },
         ],
         s = i.useCallback(
             (t) => {
                 let { value: n } = t;
-                I(n, e);
+                S(n, e);
             },
             [e],
         );
@@ -155,7 +155,7 @@ function T() {
                 options: n,
                 value: t,
             }),
-            t === m.pM4.PUSH_TO_TALK && (0, r.jsx)(v, { inputMode: t }),
+            t === h.pM4.PUSH_TO_TALK && (0, r.jsx)(v, { inputMode: t }),
         ],
     });
 }

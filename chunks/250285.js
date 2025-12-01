@@ -9,7 +9,7 @@ var r = n(54381),
     u = n(906732),
     d = n(892001),
     f = n(326218);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,12 +33,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,20 +50,20 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 let g = (e) => {
-    let { userId: t, children: n, isLast: a, className: _ } = e,
-        h = 1,
+    let { userId: t, children: n, isLast: a, className: p } = e,
+        m = 1,
         [g, E] = i.useState(!1),
         { analyticsLocations: b } = (0, u.ZP)(),
         y = i.useCallback(() => {
@@ -88,11 +88,11 @@ let g = (e) => {
                 },
                 children: (0, r.jsx)(
                     s.Z.div,
-                    m(
-                        p(
+                    h(
+                        _(
                             {
-                                style: { opacity: h },
-                                className: o()(f.rowItem, _, {
+                                style: { opacity: m },
+                                className: o()(f.rowItem, p, {
                                     [f.last]: a,
                                     [f.active]: g,
                                 }),

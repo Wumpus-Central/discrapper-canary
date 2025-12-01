@@ -1,15 +1,15 @@
-n.d(t, { a: () => a });
+n.d(t, { a: () => o });
 var i = n(54381);
 n(473749);
 var r = n(692547),
     l = n(390507),
-    o = n(325767);
-let a = (e) => {
+    a = n(325767);
+let o = (e) => {
     var t,
         n,
-        a,
+        o,
         s,
-        { size: c = "md", width: u, height: d, color: h = r.Z.colors.INTERACTIVE_NORMAL, colorClass: p = "" } = e,
+        { size: u = "md", width: c, height: d, color: h = r.Z.colors.INTERACTIVE_NORMAL, colorClass: p = "" } = e,
         f = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -31,8 +31,8 @@ let a = (e) => {
             }
             return r;
         })(e, ["size", "width", "height", "color", "colorClass"]);
-    let m = (0, l.m)(c),
-        g = null != (a = null == m ? void 0 : m.width) ? a : u,
+    let m = (0, l.m)(u),
+        g = null != (o = null == m ? void 0 : m.width) ? o : c,
         y = null != (s = null == m ? void 0 : m.height) ? s : d;
     return (0, i.jsxs)(
         "svg",
@@ -60,7 +60,7 @@ let a = (e) => {
                     });
             }
             return e;
-        })({}, (0, o.Z)(f))),
+        })({}, (0, a.Z)(f))),
         (n = n =
             {
                 xmlns: "http://www.w3.org/2000/svg",

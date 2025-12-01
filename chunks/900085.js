@@ -8,9 +8,9 @@ var r,
     c = n(442837),
     u = n(28664),
     d = n(481060),
-    p = n(239091),
+    f = n(239091),
     h = n(134616),
-    f = n(714338),
+    p = n(714338),
     g = n(212819),
     m = n(815372),
     b = n(14429),
@@ -19,8 +19,8 @@ var r,
     O = n(991346),
     v = n(592125),
     j = n(888369),
-    C = n(430824),
-    x = n(158776),
+    x = n(430824),
+    C = n(158776),
     E = n(306680),
     S = n(944486),
     I = n(938475),
@@ -102,7 +102,7 @@ let V = () =>
     });
 class H extends (r = l.Component) {
     render() {
-        let e = C.Z.getGuild(this.props.channel.guild_id);
+        let e = x.Z.getGuild(this.props.channel.guild_id);
         return (0, i.jsx)(
             R.$W,
             F(B({}, this.props), {
@@ -115,7 +115,7 @@ class H extends (r = l.Component) {
     }
 }
 U(H, "defaultProps", { unread: !1 });
-let z = c.ZP.connectStores([E.ZP, v.Z], (e) => {
+let W = c.ZP.connectStores([E.ZP, v.Z], (e) => {
         let { channel: t } = e;
         return {
             unread: E.ZP.hasUnread(t.id),
@@ -124,7 +124,7 @@ let z = c.ZP.connectStores([E.ZP, v.Z], (e) => {
             category: v.Z.getChannel(t.parent_id),
         };
     })(H),
-    W = c.ZP.connectStores([I.ZP], (e) => {
+    z = c.ZP.connectStores([I.ZP], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id)
             throw Error("ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...");
@@ -134,11 +134,11 @@ let z = c.ZP.connectStores([E.ZP, v.Z], (e) => {
         let { guild: t } = e;
         return { unread: j.default.hasUnread(t.id) };
     })(R.ic),
-    Y = c.ZP.connectStores([E.ZP, x.Z], (e) => {
+    Y = c.ZP.connectStores([E.ZP, C.Z], (e) => {
         var t;
         let { channel: n } = e,
             r = null,
-            i = x.Z.getState().statuses;
+            i = C.Z.getState().statuses;
         return (
             (null == (t = n.recipients) ? void 0 : t.some((e) => i[e] === M.Skl.ONLINE)) && (r = M.Skl.ONLINE),
             {
@@ -147,16 +147,16 @@ let z = c.ZP.connectStores([E.ZP, v.Z], (e) => {
             }
         );
     })(R.PZ),
-    q = c.ZP.connectStores([v.Z, E.ZP, x.Z], (e) => {
+    q = c.ZP.connectStores([v.Z, E.ZP, C.Z], (e) => {
         let { user: t } = e,
             n = v.Z.getDMFromUserId(t.id);
         return {
             mentions: null != n ? E.ZP.getMentionCount(n) : 0,
-            status: x.Z.getStatus(t.id),
-            isMobile: x.Z.isMobileOnline(t.id),
+            status: C.Z.getStatus(t.id),
+            isMobile: C.Z.isMobileOnline(t.id),
         };
     })(R.n5);
-function X(e, t, n) {
+function Q(e, t, n) {
     return (0, i.jsx)(
         u.u,
         {
@@ -169,12 +169,12 @@ function X(e, t, n) {
         e,
     );
 }
-class Q extends l.PureComponent {
+class X extends l.PureComponent {
     componentDidMount() {
-        f.Z.disable(), f.Z.enableTemp(h.u);
+        p.Z.disable(), p.Z.enableTemp(h.u);
     }
     componentWillUnmount() {
-        f.Z.disableTemp(), f.Z.enable();
+        p.Z.disableTemp(), p.Z.enable();
     }
     componentDidUpdate(e, t) {
         let { mouseFocusDisabled: n, query: r } = this.state,
@@ -270,10 +270,10 @@ class Q extends l.PureComponent {
             className: a()(G.protip, { [G.hasContent]: this.state.query.length > 0 }),
             type: _.Z.Types.INLINE,
             children: k.intl.format(k.t.wukqXQ, {
-                userSymbolHook: (e, t) => X(t, g.xQ.USER, k.intl.string(k.t.GQRCGn)),
-                textChannelSymbolHook: (e, t) => X(t, g.xQ.TEXT_CHANNEL, k.intl.string(k.t.wrwhuZ)),
-                voiceChannelSymbolHook: (e, t) => X(t, g.xQ.VOICE_CHANNEL, k.intl.string(k.t["jz+hJp"])),
-                guildSymbolHook: (e, t) => X(t, g.xQ.GUILD, k.intl.string(k.t.WuwCWi)),
+                userSymbolHook: (e, t) => Q(t, g.xQ.USER, k.intl.string(k.t.GQRCGn)),
+                textChannelSymbolHook: (e, t) => Q(t, g.xQ.TEXT_CHANNEL, k.intl.string(k.t.wrwhuZ)),
+                voiceChannelSymbolHook: (e, t) => Q(t, g.xQ.VOICE_CHANNEL, k.intl.string(k.t["jz+hJp"])),
+                guildSymbolHook: (e, t) => Q(t, g.xQ.GUILD, k.intl.string(k.t.WuwCWi)),
                 helpdeskArticle: w.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL),
             }),
         });
@@ -323,7 +323,7 @@ class Q extends l.PureComponent {
                 let t = this.props.results[this.props.selectedIndex];
                 switch (t.type) {
                     case g.h8.GUILD:
-                        return (0, p.jW)(e, async () => {
+                        return (0, f.jW)(e, async () => {
                             let { default: e } = await Promise.all([
                                 n.e("70363"),
                                 n.e("36599"),
@@ -356,14 +356,14 @@ class Q extends l.PureComponent {
                     case g.h8.TEXT_CHANNEL:
                     case g.h8.VOICE_CHANNEL:
                         let r = t.record,
-                            l = C.Z.getGuild(r.getGuildId());
+                            l = x.Z.getGuild(r.getGuildId());
                         if (null == l) return;
                         switch (r.type) {
                             case M.d4z.GUILD_TEXT:
                             case M.d4z.GUILD_ANNOUNCEMENT:
                             case M.d4z.GUILD_FORUM:
                             case M.d4z.GUILD_MEDIA:
-                                return (0, p.jW)(e, async () => {
+                                return (0, f.jW)(e, async () => {
                                     let { default: e } = await Promise.all([
                                         n.e("79695"),
                                         n.e("18320"),
@@ -381,7 +381,7 @@ class Q extends l.PureComponent {
                                 });
                             case M.d4z.GUILD_VOICE:
                             case M.d4z.GUILD_STAGE_VOICE:
-                                return (0, p.jW)(e, async () => {
+                                return (0, f.jW)(e, async () => {
                                     let { default: e } = await Promise.all([
                                         n.e("79695"),
                                         n.e("18320"),
@@ -401,7 +401,7 @@ class Q extends l.PureComponent {
                             case M.d4z.ANNOUNCEMENT_THREAD:
                             case M.d4z.PUBLIC_THREAD:
                             case M.d4z.PRIVATE_THREAD:
-                                return (0, p.jW)(e, async () => {
+                                return (0, f.jW)(e, async () => {
                                     let { default: e } = await n.e("40157").then(n.bind(n, 422200));
                                     return (t) =>
                                         (0, i.jsx)(
@@ -413,7 +413,7 @@ class Q extends l.PureComponent {
                                         );
                                 });
                             case M.d4z.GUILD_STORE:
-                                return (0, p.jW)(e, async () => {
+                                return (0, f.jW)(e, async () => {
                                     let { default: e } = await n.e("99905").then(n.bind(n, 649400));
                                     return (t) =>
                                         (0, i.jsx)(
@@ -426,14 +426,14 @@ class Q extends l.PureComponent {
                                         );
                                 });
                             case M.d4z.GUILD_DIRECTORY:
-                                return (0, p.jW)(e, async () => {
+                                return (0, f.jW)(e, async () => {
                                     let { default: e } = await n.e("70623").then(n.bind(n, 99334));
                                     return (t) => (0, i.jsx)(e, F(B({}, t), { channel: r }));
                                 });
                         }
                         break;
                     case g.h8.GROUP_DM:
-                        return (0, p.jW)(e, async () => {
+                        return (0, f.jW)(e, async () => {
                             let { default: e } = await Promise.all([n.e("79695"), n.e("25421")]).then(
                                 n.bind(n, 354741),
                             );
@@ -448,7 +448,7 @@ class Q extends l.PureComponent {
                                 );
                         });
                     case g.h8.USER:
-                        return (0, p.jW)(e, async () => {
+                        return (0, f.jW)(e, async () => {
                             let { default: e } = await Promise.all([n.e("79695"), n.e("69220"), n.e("77635")]).then(
                                 n.bind(n, 881351),
                             );
@@ -527,7 +527,7 @@ class Q extends l.PureComponent {
                         );
                     case g.h8.TEXT_CHANNEL:
                         return (0, i.jsx)(
-                            z,
+                            W,
                             {
                                 id: this.getRowId(t),
                                 focused: r >= 0 && t === r,
@@ -542,7 +542,7 @@ class Q extends l.PureComponent {
                         );
                     case g.h8.VOICE_CHANNEL:
                         return (0, i.jsx)(
-                            W,
+                            z,
                             {
                                 id: this.getRowId(t),
                                 focused: r >= 0 && t === r,
@@ -689,6 +689,6 @@ function J(e) {
             }),
                 (0, P.gF)(e);
         }, [o, r]),
-        (0, i.jsx)(Q, B({}, t, e))
+        (0, i.jsx)(X, B({}, t, e))
     );
 }

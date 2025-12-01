@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(290780);
+n.d(t, { Z: () => S }), n(290780);
 var r = n(54381),
     i = n(473749),
     a = n(780384),
@@ -9,21 +9,21 @@ var r = n(54381),
     u = n(981631),
     d = n(73117),
     f = n(988868),
-    _ = n(554355),
-    p = n(991989),
-    h = n(787462),
-    m = n(635507),
+    p = n(554355),
+    _ = n(991989),
+    m = n(787462),
+    h = n(635507),
     g = n(470794),
     E = n(886777);
 function b(e) {
     let {
             movDark: t = d,
-            movLight: n = h,
+            movLight: n = m,
             mp4Dark: i = f,
-            mp4Light: a = m,
-            pngDark: o = _,
+            mp4Light: a = h,
+            pngDark: o = p,
             pngLight: s = g,
-            webmDark: c = p,
+            webmDark: c = _,
             webmLight: b = E,
         } = e,
         y = (0, l.vu)(),
@@ -115,26 +115,26 @@ function b(e) {
 let y = s.Z.getAppSpinnerSources(),
     O = null != y ? b(y) : null,
     v = b({}),
-    I = (e) => {
+    S = (e) => {
         var t;
         let { loop: n = !0, autoPlay: s = !0, setRef: l, className: d, onReady: f } = e,
-            { theme: _ } = (0, o.TCT)(),
-            { reducedMotion: p } = i.useContext(o.Sfi),
-            h = v;
-        null != O && (h = O);
-        let m = null != (t = h[(0, a.wj)(_) ? u.BRd.DARK : u.BRd.LIGHT]) ? t : h[u.BRd.DARK];
+            { theme: p } = (0, o.TCT)(),
+            { reducedMotion: _ } = i.useContext(o.Sfi),
+            m = v;
+        null != O && (m = O);
+        let h = null != (t = m[(0, a.wj)(p) ? u.BRd.DARK : u.BRd.LIGHT]) ? t : m[u.BRd.DARK];
         return (0, r.jsx)(
             c.Z,
             {
                 ref: l,
                 onLoadedData: f,
                 className: d,
-                loop: !p.enabled && n,
-                autoPlay: !p.enabled && s,
+                loop: !_.enabled && n,
+                autoPlay: !_.enabled && s,
                 playsInline: !0,
                 "data-testid": "app-spinner",
-                children: m,
+                children: h,
             },
-            _,
+            p,
         );
     };

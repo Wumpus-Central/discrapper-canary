@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var a = n(54381),
     l = n(473749),
     i = n(120356),
@@ -12,7 +12,7 @@ var a = n(54381),
     p = n(383036),
     h = n(981631),
     x = n(511130);
-let g = (e) => {
+let f = (e) => {
         let { setTab: t } = e,
             n = (0, o.e7)([u.Z], () => u.Z.getWindowOpen(h.KJ3.DEVTOOLS_POPOUT));
         return (0, a.jsxs)("div", {
@@ -87,7 +87,7 @@ let g = (e) => {
             ],
         });
     },
-    f = () => {
+    g = () => {
         let [e, t] = l.useState(0);
         return (0, a.jsxs)(s.zJl, {
             className: x.wrapper,
@@ -116,7 +116,7 @@ let g = (e) => {
                         case 3:
                             return (0, a.jsx)(p.Z, {});
                         default:
-                            return (0, a.jsx)(g, { setTab: t });
+                            return (0, a.jsx)(f, { setTab: t });
                     }
                 })(),
             ],

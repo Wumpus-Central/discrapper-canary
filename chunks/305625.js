@@ -1,50 +1,50 @@
-_.d(e, {
-    Lh: () => s,
+r.d(t, {
+    Lh: () => E,
     _l: () => l,
-    jC: () => I,
-    uc: () => R,
+    jC: () => u,
+    uc: () => d,
 });
-var a = _(370336),
-    r = _(285883),
-    n = _(559508),
-    o = _(263449),
-    E = _(988097),
-    i = _(696486);
+var n = r(370336),
+    a = r(285883),
+    i = r(559508),
+    o = r(263449),
+    _ = r(988097),
+    s = r(696486);
 let c = "_frozenDsc";
-function s(t, e) {
-    (0, a.xp)(t, c, e);
+function E(e, t) {
+    (0, n.xp)(e, c, t);
 }
-function l(t, e) {
-    let _ = e.getOptions(),
-        { publicKey: r } = e.getDsn() || {},
-        o = (0, a.Jr)({
-            environment: _.environment || n.J,
-            release: _.release,
-            public_key: r,
-            trace_id: t,
+function l(e, t) {
+    let r = t.getOptions(),
+        { publicKey: a } = t.getDsn() || {},
+        o = (0, n.Jr)({
+            environment: r.environment || i.J,
+            release: r.release,
+            public_key: a,
+            trace_id: e,
         });
-    return e.emit("createDsc", o), o;
+    return t.emit("createDsc", o), o;
 }
-function I(t) {
-    let e = (0, o.s3)();
-    if (!e) return {};
-    let _ = l((0, i.XU)(t).trace_id || "", e),
-        a = (0, i.Gx)(t),
-        n = a[c];
-    if (n) return n;
-    let s = a.spanContext().traceState,
-        I = s && s.get("sentry.dsc"),
-        R = I && (0, r.EN)(I);
-    if (R) return R;
-    let N = (0, i.XU)(a),
-        A = N.data || {},
-        u = A[E.TE];
-    null != u && (_.sample_rate = `${u}`);
-    let T = A[E.Zj],
-        d = N.description;
-    return "url" !== T && d && (_.transaction = d), (_.sampled = String((0, i.Tt)(a))), e.emit("createDsc", _, a), _;
+function u(e) {
+    let t = (0, o.s3)();
+    if (!t) return {};
+    let r = l((0, s.XU)(e).trace_id || "", t),
+        n = (0, s.Gx)(e),
+        i = n[c];
+    if (i) return i;
+    let E = n.spanContext().traceState,
+        u = E && E.get("sentry.dsc"),
+        d = u && (0, a.EN)(u);
+    if (d) return d;
+    let I = (0, s.XU)(n),
+        p = I.data || {},
+        R = p[_.TE];
+    null != R && (r.sample_rate = `${R}`);
+    let T = p[_.Zj],
+        A = I.description;
+    return "url" !== T && A && (r.transaction = A), (r.sampled = String((0, s.Tt)(n))), t.emit("createDsc", r, n), r;
 }
-function R(t) {
-    let e = I(t);
-    return (0, r.IQ)(e);
+function d(e) {
+    let t = u(e);
+    return (0, a.IQ)(t);
 }

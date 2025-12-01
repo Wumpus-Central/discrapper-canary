@@ -26,9 +26,9 @@ if (a) {
         });
 } else {
     var f = i("Object.prototype.toString"),
-        _ = "[object RegExp]";
+        p = "[object RegExp]";
     r = function (e) {
-        return !!e && ("object" == typeof e || "function" == typeof e) && f(e) === _;
+        return !!e && ("object" == typeof e || "function" == typeof e) && f(e) === p;
     };
 }
 e.exports = r;

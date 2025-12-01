@@ -1,5 +1,5 @@
 n.d(t, {
-    F: () => h,
+    F: () => m,
     Z: () => g,
 }),
     n(539854),
@@ -26,7 +26,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,15 +42,15 @@ function _(e) {
     }
     return e;
 }
-let p = Object.freeze({
+let _ = Object.freeze({
     SMALL: d.small,
     MEDIUM: d.medium,
     LARGE: d.large,
 });
-var h = (function (e) {
+var m = (function (e) {
     return (e.MEMBER = "MEMBER"), (e.ROLE = "ROLE"), (e.CHANNEL = "CHANNEL"), (e.USER = "USER"), e;
 })({});
-class m extends (r = a.Component) {
+class h extends (r = a.Component) {
     componentDidMount() {
         let e = this.containerRef.current;
         null != e && (this.previousHeight = e.offsetHeight);
@@ -188,9 +188,9 @@ class m extends (r = a.Component) {
                 size: o,
                 maxHeight: c,
                 tags: f,
-                onActivate: p,
-                className: h,
-                inputProps: m,
+                onActivate: _,
+                className: m,
+                inputProps: h,
                 focusAfterReady: g,
             } = this.props,
             E = !1,
@@ -267,7 +267,7 @@ class m extends (r = a.Component) {
                     children: (r) =>
                         (0, i.jsx)("div", {
                             ref: this.containerRef,
-                            className: s()(h, d.container, o, r, { [d.disabled]: a }),
+                            className: s()(m, d.container, o, r, { [d.disabled]: a }),
                             children: (0, i.jsxs)(l.zJl, {
                                 className: d.inner,
                                 style: { maxHeight: c },
@@ -275,7 +275,7 @@ class m extends (r = a.Component) {
                                     b,
                                     (0, i.jsx)(
                                         "input",
-                                        _(
+                                        p(
                                             {
                                                 className: s()(d.input, { [d.richTagInput]: E }),
                                                 type: "text",
@@ -289,10 +289,10 @@ class m extends (r = a.Component) {
                                                 disabled: a,
                                                 "aria-disabled": a,
                                                 autoFocus: !g && e,
-                                                onMouseDown: p,
+                                                onMouseDown: _,
                                             },
                                             this.defaultInputProps,
-                                            m,
+                                            h,
                                         ),
                                     ),
                                 ],
@@ -344,9 +344,9 @@ class m extends (r = a.Component) {
             });
     }
 }
-f(m, "Sizes", p),
-    f(m, "defaultProps", {
-        size: p.SMALL,
+f(h, "Sizes", _),
+    f(h, "defaultProps", {
+        size: _.SMALL,
         query: "",
         sections: [],
         selectedSection: 0,
@@ -358,4 +358,4 @@ f(m, "Sizes", p),
         preventEscapePropagation: !0,
         useKeyboardNavigation: !0,
     });
-let g = m;
+let g = h;

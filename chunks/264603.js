@@ -7,13 +7,13 @@ var a = n(54381),
     o = n(524437),
     c = n(481060),
     d = n(384275),
-    u = n(758677),
-    m = n(535139),
+    u = n(407089),
+    m = n(524995),
     p = n(812206),
     h = n(835473),
     x = n(594190),
-    g = n(989941),
-    f = n(695346),
+    f = n(989941),
+    g = n(695346),
     b = n(881998),
     v = n(449224),
     j = n(246992),
@@ -39,9 +39,9 @@ let C = [
 ];
 function S() {
     let e = l.useRef(null),
-        t = f.JG.useSetting(),
+        t = g.JG.useSetting(),
         [n, i] = l.useState(""),
-        o = (0, s.e7)([x.ZP, v.Z], () => (0, g.Z)(x.ZP, v.Z)),
+        o = (0, s.e7)([x.ZP, v.Z], () => (0, f.Z)(x.ZP, v.Z)),
         S = (0, h.q)(n),
         E = (0, s.Wu)([p.Z], () => {
             var e, t;
@@ -53,8 +53,8 @@ function S() {
                 ? t
                 : [];
         }),
-        N = (0, m.F)(S, { allowedFlows: [m.r.RPC] }),
-        T = (0, m.F)(S, { allowedFlows: [m.r.WEB] }),
+        T = (0, m.F)(S, { allowedFlows: [m.r.RPC] }),
+        N = (0, m.F)(S, { allowedFlows: [m.r.WEB] }),
         O = (0, m.F)(S),
         { canDeauthorize: P, deauthorize: I } = (function (e) {
             let t = (0, s.e7)([b.default], () => b.default.getNewestTokenForApplication(e)),
@@ -81,7 +81,7 @@ function S() {
                         label: "Receive DMs In Game",
                         options: C,
                         isSelected: (e) => e === t,
-                        select: f.JG.updateSetting,
+                        select: g.JG.updateSetting,
                         popoutLayerContext: j.O$,
                         serialize: (e) => e.toString(),
                     }),
@@ -118,7 +118,7 @@ function S() {
                             E.length > 0
                                 ? E.map((e) => {
                                       var t;
-                                      return (null == (t = (0, u.j)(S)) ? void 0 : t.id) === e.id
+                                      return (null == (t = (0, u.r)(S)) ? void 0 : t.id) === e.id
                                           ? "".concat(e.name, "*")
                                           : e.name;
                                   }).join(", ")
@@ -147,14 +147,14 @@ function S() {
                             "This will start whichever authorization flow is available. RPC authorization takes precedence over web.",
                     }),
                     (0, a.jsx)(c.Button, {
-                        disabled: !N.canStartAuthorization,
-                        onClick: () => N.startAuthorization(),
+                        disabled: !T.canStartAuthorization,
+                        onClick: () => T.startAuthorization(),
                         variant: "secondary",
                         text: "Start In-App Authorization",
                     }),
                     (0, a.jsx)(c.Button, {
-                        disabled: !T.canStartAuthorization,
-                        onClick: () => T.startAuthorization(),
+                        disabled: !N.canStartAuthorization,
+                        onClick: () => N.startAuthorization(),
                         variant: "secondary",
                         text: "Start Web Authorization",
                     }),

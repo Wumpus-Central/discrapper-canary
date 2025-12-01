@@ -18,9 +18,9 @@ var i = n(54381),
     C = n(243778),
     v = n(728285),
     _ = n(579185),
-    x = n(301076),
-    j = n(127379),
-    O = n(981631),
+    O = n(301076),
+    x = n(127379),
+    j = n(981631),
     E = n(921944),
     S = n(388032);
 function P(e) {
@@ -30,22 +30,22 @@ function P(e) {
         N = (0, p.g5)(T),
         A = T !== p.jy.CAN_LAUNCH || Z,
         { isHovered: w, setIsHovered: M, onMouseEnter: R, onMouseLeave: L } = (0, _.Z)(200, 300),
-        k = (0, d.p)({ surface: c.eR.VOICE_LAUNCHER }),
-        D = (0, l.e7)(
+        D = (0, d.p)({ surface: c.eR.VOICE_LAUNCHER }),
+        k = (0, l.e7)(
             [u.ZP],
             () => null != u.ZP.getSelfEmbeddedActivityForLocation(u.ZP.getConnectedActivityLocation()),
         ),
         U = !A,
-        B = r.useCallback(
+        F = r.useCallback(
             (e) => {
                 "focus" !== e.type && R();
             },
             [R],
         ),
-        H = (0, v.bp)() === O.IlC.POPOUT,
-        { parentAnalyticsLocation: F, newestAnalyticsLocation: V } = (0, g.ZP)(),
+        B = (0, v.bp)() === j.IlC.POPOUT,
+        { parentAnalyticsLocation: H, newestAnalyticsLocation: V } = (0, g.ZP)(),
         G = r.useCallback(() => {
-            (0, y.v)(F, y.d.ACTIVITY),
+            (0, y.v)(H, y.d.ACTIVITY),
                 (0, b.Z)({
                     context:
                         null != t
@@ -54,10 +54,10 @@ function P(e) {
                                   channel: t,
                               }
                             : { type: "contextless" },
-                    openInPopout: H,
+                    openInPopout: B,
                     analyticsLocation: V,
                 });
-        }, [t, H, V, F]),
+        }, [t, B, V, H]),
         z = [];
     A || z.push(a.z.ACTIVITIES_MINI_SHELF_SPARKLES),
         (0, h.Z)(t.id) && !A && z.push(a.z.ACTIVITY_GDM_ROCKET_SPARKLE),
@@ -75,7 +75,7 @@ function P(e) {
                 (0, i.jsx)(s.yRy, {
                     targetElementRef: q,
                     fixed: !0,
-                    shouldShow: w && (P === j.D.ACTIVITY || null == P),
+                    shouldShow: w && (P === x.D.ACTIVITY || null == P),
                     animation: s.yRy.Animation.FADE,
                     animationPosition: "top",
                     position: "top",
@@ -103,7 +103,7 @@ function P(e) {
                     children: () =>
                         (0, i.jsx)(C.Xf, {
                             contentType: a.z.ACTIVITIES_VOICE_LAUNCHER_BADGE,
-                            latestVersion: k,
+                            latestVersion: D,
                             children: (e) => {
                                 let { visibleContent: t, markAsDismissed: n } = e;
                                 return (0, i.jsxs)(i.Fragment, {
@@ -114,11 +114,11 @@ function P(e) {
                                             shouldShow: c,
                                             children: (0, i.jsx)("div", {
                                                 ref: q,
-                                                children: (0, i.jsx)(x.Z, {
+                                                children: (0, i.jsx)(O.Z, {
                                                     disabled: A,
                                                     "aria-label": N,
                                                     label: U ? void 0 : N,
-                                                    isActivityActive: D,
+                                                    isActivityActive: k,
                                                     onClick: () => {
                                                         G(),
                                                             (r === a.z.ACTIVITIES_MINI_SHELF_SPARKLES ||
@@ -136,7 +136,7 @@ function P(e) {
                                                             t === a.z.ACTIVITIES_VOICE_LAUNCHER_BADGE &&
                                                                 n(E.L.TAKE_ACTION);
                                                     },
-                                                    onMouseEnter: B,
+                                                    onMouseEnter: F,
                                                     onMouseLeave: L,
                                                 }),
                                             }),

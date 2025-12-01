@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,18 +9,18 @@ var r = n(54381),
     u = n(595519),
     d = n(317381),
     f = n(16609),
-    _ = n(588468),
-    p = n(30465),
-    h = n(313201),
-    m = n(314910),
+    p = n(588468),
+    _ = n(30465),
+    m = n(313201),
+    h = n(314910),
     g = n(549006),
     E = n(430824),
     b = n(590921),
     y = n(606992),
     O = n(51062),
     v = n(918559),
-    I = n(671982);
-function T(e, t, n) {
+    S = n(671982);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function T(e, t, n) {
         e
     );
 }
-function S(e) {
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function S(e) {
                 }),
             )),
             r.forEach(function (t) {
-                T(e, t, n[t]);
+                I(e, t, n[t]);
             });
     }
     return e;
@@ -76,7 +76,7 @@ function N(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = R(e, t);
+        i = P(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -84,7 +84,7 @@ function N(e, t) {
     }
     return i;
 }
-function R(e, t) {
+function P(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -93,27 +93,27 @@ function R(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let P = 490,
-    D = 490,
-    w = 245,
-    L = 200,
-    x = 120,
-    M = i.forwardRef(function (e, t) {
-        var n, a, T, A, R, M, k, j, U;
-        let { channel: G, type: B, editorHeight: Z, onVisibilityChange: F, editorScrollerRef: V, barsHeight: H } = e,
-            Y = (0, h.Dt)(),
+let R = 490,
+    w = 490,
+    D = 245,
+    x = 200,
+    L = 120,
+    j = i.forwardRef(function (e, t) {
+        var n, a, I, A, P, j, M, k, U;
+        let { channel: G, type: Z, editorHeight: B, onVisibilityChange: F, editorScrollerRef: V, barsHeight: H } = e,
+            Y = (0, m.Dt)(),
             W = (0, l.e7)([E.Z], () => {
                 var e;
                 return null != (e = E.Z.getGuild(G.guild_id)) ? e : null;
             }, [G.guild_id]),
             K = i.useRef(null),
-            [z, q, X] = (0, O.Z)(C(S({}, e), { guild: W }), t, K),
-            Q = (null == (n = B.autocomplete) ? void 0 : n.forceChatLayer) ? g.ZP : m.ZP,
-            J = (0, _.DJ)(z.selectedIndex);
-        (0, p.KR)(Y, z.isVisible, J);
+            [z, q, Q] = (0, O.Z)(C(T({}, e), { guild: W }), t, K),
+            X = (null == (n = Z.autocomplete) ? void 0 : n.forceChatLayer) ? g.ZP : h.ZP,
+            J = (0, p.DJ)(z.selectedIndex);
+        (0, _.KR)(Y, z.isVisible, J);
         let $ = (0, y.Z)({
-                editorHeight: Z,
-                type: B,
+                editorHeight: B,
+                type: Z,
                 state: z,
             }),
             ee = (0, l.e7)([d.ZP], () => {
@@ -146,7 +146,7 @@ let P = 490,
             return null;
         let en =
             null !=
-            (R = z.query.typeInfo.renderResults({
+            (P = z.query.typeInfo.renderResults({
                 results: z.query.results,
                 selectedIndex: z.selectedIndex,
                 channel: G,
@@ -156,33 +156,33 @@ let P = 490,
                 onHover: (e) => q.onResultHover(e),
                 onClick: (e) => q.onResultClick(e),
             }))
-                ? R
+                ? P
                 : null;
         if (null == en) return null;
         let er = {
-                [I.autocompleteAttached]: null == $,
-                [I.autocompletePopout]: null != $,
-                [I.bottom]: null == $ && "bottom" === e.position,
-                [I.autocompleteTop]: ee,
-                [I.minimal]: (null == (T = z.query) ? void 0 : T.type) === b.eq.MENTION_SUGGESTIONS,
+                [S.autocompleteAttached]: null == $,
+                [S.autocompletePopout]: null != $,
+                [S.bottom]: null == $ && "bottom" === e.position,
+                [S.autocompleteTop]: ee,
+                [S.minimal]: (null == (I = z.query) ? void 0 : I.type) === b.eq.MENTION_SUGGESTIONS,
             },
-            ei = P;
+            ei = R;
         null != $ &&
-            (ei = (null == (M = B.autocomplete) ? void 0 : M.small)
-                ? L
-                : (null == (k = z.query) ? void 0 : k.type) === b.eq.EMOJIS_AND_STICKERS
-                  ? D
-                  : w);
-        let ea = Math.max(Z, null != (j = null == V || null == (A = V.current) ? void 0 : A.clientHeight) ? j : 0),
+            (ei = (null == (j = Z.autocomplete) ? void 0 : j.small)
+                ? x
+                : (null == (M = z.query) ? void 0 : M.type) === b.eq.EMOJIS_AND_STICKERS
+                  ? w
+                  : D);
+        let ea = Math.max(B, null != (k = null == V || null == (A = V.current) ? void 0 : A.clientHeight) ? k : 0),
             eo = Math.min(0.5 * window.innerHeight, ea);
-        ei = Math.min(window.innerHeight - x - eo - (null != H ? H : 0), ei);
-        let es = (0, r.jsx)(_.ZP, {
+        ei = Math.min(window.innerHeight - L - eo - (null != H ? H : 0), ei);
+        let es = (0, r.jsx)(p.ZP, {
             id: Y,
-            className: o()(I.autocomplete, er),
-            innerClassName: I.autocompleteInner,
+            className: o()(S.autocomplete, er),
+            innerClassName: S.autocompleteInner,
             onMouseDown: (e) => e.preventDefault(),
             children: (0, r.jsx)(s.bG, {
-                navigator: X,
+                navigator: Q,
                 children: (0, r.jsx)(s.SJ, {
                     children: (e) => {
                         var { ref: t } = e,
@@ -190,7 +190,7 @@ let P = 490,
                         return (0, r.jsx)(
                             c.h21,
                             C(
-                                S(
+                                T(
                                     {
                                         id: Y,
                                         ref: (e) => {
@@ -205,10 +205,10 @@ let P = 490,
                                     n,
                                 ),
                                 {
-                                    className: I.scroller,
+                                    className: S.scroller,
                                     style: { maxHeight: ei },
                                     role: "listbox",
-                                    "aria-labelledby": (0, _.rp)(Y),
+                                    "aria-labelledby": (0, p.rp)(Y),
                                     children: en,
                                 },
                             ),
@@ -218,7 +218,7 @@ let P = 490,
             }),
         });
         return null != $
-            ? (0, r.jsx)(Q, {
+            ? (0, r.jsx)(X, {
                   children: (0, r.jsx)(c.jRF, {
                       targetRef: e.targetRef,
                       overrideTargetRect: $,

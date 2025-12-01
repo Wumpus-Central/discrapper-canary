@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r,
     i = n(442837),
     a = n(570140),
@@ -63,18 +63,18 @@ function f(e) {
         chance: r,
     });
 }
-function _(e) {
+function p(e) {
     let { feedbackType: t } = e;
     delete d[t];
 }
-class p extends (r = i.ZP.Store) {
+class _ extends (r = i.ZP.Store) {
     initialize() {}
     getFeedbackConfig(e) {
         return d[e];
     }
 }
-s(p, "displayName", "FeedbackOverrideStore"), s(p, "persistKey", "feedbackOverrides");
-let h = new p(a.Z, {
+s(_, "displayName", "FeedbackOverrideStore"), s(_, "persistKey", "feedbackOverrides");
+let m = new _(a.Z, {
     FEEDBACK_OVERRIDE_SET: f,
-    FEEDBACK_OVERRIDE_CLEAR: _,
+    FEEDBACK_OVERRIDE_CLEAR: p,
 });

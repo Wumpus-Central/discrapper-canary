@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r,
     i = n(442837),
     a = n(570140),
@@ -28,13 +28,13 @@ function d() {
 function f() {
     c = {};
 }
-class _ extends (r = i.ZP.Store) {
+class p extends (r = i.ZP.Store) {
     getMute(e) {
         return c[e];
     }
 }
-l(_, "displayName", "GameMentionSettingsStore");
-let p = new _(a.Z, {
+l(p, "displayName", "GameMentionSettingsStore");
+let _ = new p(a.Z, {
     REPLACE_GAME_MENTION_SETTINGS: u,
     CONNECTION_OPEN: d,
     LOGOUT: f,

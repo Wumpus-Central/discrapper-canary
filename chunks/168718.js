@@ -27,7 +27,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,8 +43,8 @@ function _(e) {
     }
     return e;
 }
-let p = d.layerContainer;
-class h extends i.Component {
+let _ = d.layerContainer;
+class m extends i.Component {
     componentWillUnmount() {
         this.state.layerContainerElement = null;
     }
@@ -69,7 +69,7 @@ class h extends i.Component {
             );
     }
 }
-let m = (e) => {
+let h = (e) => {
     let { layerContext: t, className: n } = e,
         [, a] = i.useContext(t),
         s = i.useCallback(
@@ -79,7 +79,7 @@ let m = (e) => {
             [a],
         );
     return (0, r.jsx)("div", {
-        className: o()(p, n),
+        className: o()(_, n),
         ref: s,
     });
 };
@@ -99,9 +99,9 @@ let b = (e) => {
 function y(e) {
     let t = i.createContext([null, () => {}]),
         n = {
-            LayerProvider: (e) => (0, r.jsx)(h, _({ layerContext: t }, e)),
-            LayerContainer: (e) => (0, r.jsx)(m, _({ layerContext: t }, e)),
-            Layer: (e) => (0, r.jsx)(b, _({ layerContext: t }, e)),
+            LayerProvider: (e) => (0, r.jsx)(m, p({ layerContext: t }, e)),
+            LayerContainer: (e) => (0, r.jsx)(h, p({ layerContext: t }, e)),
+            Layer: (e) => (0, r.jsx)(b, p({ layerContext: t }, e)),
             layerContext: t,
         };
     return (

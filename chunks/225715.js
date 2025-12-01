@@ -1,5 +1,5 @@
 n.d(t, {
-    CW: () => m,
+    CW: () => h,
     G9: () => y,
     K9: () => b,
     q$: () => O,
@@ -56,7 +56,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -67,11 +67,11 @@ function _(e, t) {
         e
     );
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -79,7 +79,7 @@ function p(e, t) {
     }
     return i;
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -88,9 +88,9 @@ function h(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let m = (e) => {
+let h = (e) => {
         var { application: t, asset: n, className: i } = e,
-            a = p(e, ["application", "asset", "className"]);
+            a = _(e, ["application", "asset", "className"]);
         return (0, r.jsx)(
             s.Z,
             d(
@@ -106,10 +106,10 @@ let m = (e) => {
     },
     g = (e) => {
         var { children: t, className: n, id: i } = e,
-            s = p(e, ["children", "className", "id"]);
+            s = _(e, ["children", "className", "id"]);
         return (0, r.jsx)(
             o.Heading,
-            _(
+            p(
                 d(
                     {
                         className: a()(c.header, n),
@@ -127,10 +127,10 @@ function E() {
 }
 let b = (e) => {
         var { className: t, title: n, description: i } = e,
-            a = p(e, ["className", "title", "description"]);
+            a = _(e, ["className", "title", "description"]);
         return (0, r.jsxs)(
             "div",
-            _(d({ className: t }, a), {
+            p(d({ className: t }, a), {
                 children: [
                     (0, r.jsx)(o.Heading, {
                         variant: "heading-md/bold",
@@ -148,10 +148,10 @@ let b = (e) => {
     },
     y = (e) => {
         var { applicationId: t, storeListingBenefits: n, skuBenefits: i, className: o } = e,
-            s = p(e, ["applicationId", "storeListingBenefits", "skuBenefits", "className"]);
+            s = _(e, ["applicationId", "storeListingBenefits", "skuBenefits", "className"]);
         return (0, r.jsx)(
             "div",
-            _(d({ className: a()(c.benefitsContainer, o) }, s), {
+            p(d({ className: a()(c.benefitsContainer, o) }, s), {
                 children: (0, r.jsx)(l.GU, {
                     applicationId: t,
                     storeListingBenefits: n,
@@ -163,6 +163,6 @@ let b = (e) => {
     },
     O = (e) => {
         var { children: t, className: n } = e,
-            i = p(e, ["children", "className"]);
-        return (0, r.jsx)("div", _(d({ className: a()(c.container, n) }, i), { children: t }));
+            i = _(e, ["children", "className"]);
+        return (0, r.jsx)("div", p(d({ className: a()(c.container, n) }, i), { children: t }));
     };

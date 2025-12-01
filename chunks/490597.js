@@ -9,17 +9,17 @@ var r = n(54381),
     u = n(507274),
     d = n(681715),
     f = n(481060),
-    _ = n(255963),
-    p = n(387188),
-    h = n(222677),
-    m = n(995774),
+    p = n(255963),
+    _ = n(387188),
+    m = n(222677),
+    h = n(995774),
     g = n(931651),
     E = n(981631),
     b = n(185923),
     y = n(388032),
     O = n(127947),
     v = n(893973);
-function I(e, t, n) {
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +32,7 @@ function I(e, t, n) {
         e
     );
 }
-function T(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,12 +43,12 @@ function T(e) {
                 }),
             )),
             r.forEach(function (t) {
-                I(e, t, n[t]);
+                S(e, t, n[t]);
             });
     }
     return e;
 }
-function S(e, t) {
+function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,7 +65,7 @@ function A(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : T(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -83,7 +83,7 @@ class C extends i.Component {
                 className: l.icon,
             };
         return e.type === E.uaV.EMOJI_ADDED && 0 === e.reactions.length
-            ? (0, r.jsx)(p.e, {
+            ? (0, r.jsx)(_.e, {
                   message: e,
                   className: o()(l.reactionBtn, t),
               })
@@ -100,16 +100,16 @@ class C extends i.Component {
                           text: y.intl.string(y.t.lfIHs4),
                           children: (0, r.jsxs)(
                               f.P3F,
-                              A(T({}, e), {
+                              A(I({}, e), {
                                   innerRef: this.ref,
                                   tabIndex: a,
                                   onClick: (e) => {
                                       this.handleAddReactionClick(e);
                                   },
-                                  onMouseEnter: () => (0, _.x)(b.qR.AddReactionPopoutMouseEntered),
-                                  onFocus: () => (0, _.x)(b.qR.AddReactionPopoutFocused),
+                                  onMouseEnter: () => (0, p.x)(b.qR.AddReactionPopoutMouseEntered),
+                                  onFocus: () => (0, p.x)(b.qR.AddReactionPopoutFocused),
                                   className: o()(l.reactionBtn, { [l.active]: s }, t),
-                                  children: [(0, r.jsx)(f.EO4, T({}, u)), n],
+                                  children: [(0, r.jsx)(f.EO4, I({}, u)), n],
                               }),
                           ),
                       });
@@ -118,20 +118,20 @@ class C extends i.Component {
     }
     constructor(...e) {
         super(...e),
-            I(this, "state", { isReactionPickerActive: !1 }),
-            I(this, "ref", i.createRef()),
-            I(this, "onAddReaction", (e, t) => {
+            S(this, "state", { isReactionPickerActive: !1 }),
+            S(this, "ref", i.createRef()),
+            S(this, "onAddReaction", (e, t) => {
                 if (null == e) return;
                 let { channel: n, message: r, isForumToolbar: i } = this.props;
-                (0, h.rU)(n.id, r.id, (0, m.g1)(e), i ? h.TW.FORUM_TOOLBAR : h.TW.MESSAGE_INLINE_BUTTON, { burst: t });
+                (0, m.rU)(n.id, r.id, (0, h.g1)(e), i ? m.TW.FORUM_TOOLBAR : m.TW.MESSAGE_INLINE_BUTTON, { burst: t });
             }),
-            I(this, "handleReactionPickerToggle", () => {
+            S(this, "handleReactionPickerToggle", () => {
                 this.setState((e) => ({ isReactionPickerActive: !e.isReactionPickerActive }));
             }),
-            I(this, "handleAddReactionClick", (e) => {
+            S(this, "handleAddReactionClick", (e) => {
                 e.stopPropagation(), this.handleReactionPickerToggle();
             }),
-            I(this, "renderReactionPopout", (e) => {
+            S(this, "renderReactionPopout", (e) => {
                 let { closePopout: t } = e,
                     { channel: n, message: i } = this.props,
                     a = { openPopoutType: "message_reaction_emoji_picker" },

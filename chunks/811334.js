@@ -1,9 +1,9 @@
 n.d(t, {
-    B1: () => m,
+    B1: () => h,
     P7: () => y,
     UN: () => E,
-    Z9: () => h,
-    aO: () => p,
+    Z9: () => m,
+    aO: () => _,
     az: () => b,
     i$: () => g,
 });
@@ -17,8 +17,8 @@ var r = n(54381),
     u = n(388032),
     d = n(704442);
 let f = i.createContext({ isPremiumRebrand: !1 }),
-    _ = () => i.useContext(f).isPremiumRebrand;
-function p(e) {
+    p = () => i.useContext(f).isPremiumRebrand;
+function _(e) {
     let { children: t, className: n, isPremiumRebrand: i = !1 } = e;
     return (0, r.jsx)(f.Provider, {
         value: { isPremiumRebrand: i },
@@ -28,9 +28,9 @@ function p(e) {
         }),
     });
 }
-function h(e) {
+function m(e) {
     let { children: t } = e;
-    return _()
+    return p()
         ? (0, r.jsx)(s.Heading, {
               variant: "heading-md/semibold",
               color: "text-primary",
@@ -42,9 +42,9 @@ function h(e) {
               children: t,
           });
 }
-function m(e) {
+function h(e) {
     let { label: t, value: n, className: i } = e;
-    return _()
+    return p()
         ? (0, r.jsxs)("div", {
               className: o()(d.row, i),
               children: [
@@ -83,9 +83,9 @@ function g(e) {
             originalAmount: a,
             interval: o,
             currency: f,
-            className: _,
-            intervalCount: p,
-            inTrialPeriod: h,
+            className: p,
+            intervalCount: _,
+            inTrialPeriod: m,
         } = e,
         g = (e) => (null != i ? i.find((t) => t.type === e) : null),
         E = g(l.eW.SUBSCRIPTION_PLAN),
@@ -94,11 +94,11 @@ function g(e) {
         O = (0, c.T4)(a, f);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(m, {
+            (0, r.jsx)(h, {
                 label: t,
                 value: (0, r.jsxs)(r.Fragment, {
                     children: [
-                        h ? u.intl.formatToPlainString(u.t.hXcaLT, { price: (0, c.T4)(0, f) }) : n,
+                        m ? u.intl.formatToPlainString(u.t.hXcaLT, { price: (0, c.T4)(0, f) }) : n,
                         null != y
                             ? (0, r.jsxs)("div", {
                                   className: d.rowPercentDiscount,
@@ -107,9 +107,9 @@ function g(e) {
                             : null,
                     ],
                 }),
-                className: _,
+                className: p,
             }),
-            h &&
+            m &&
                 (0, r.jsx)(s.Text, {
                     variant: "text-md/medium",
                     className: d.trialEndPrice,
@@ -118,7 +118,7 @@ function g(e) {
             null != y
                 ? (0, r.jsxs)("div", {
                       className: d.rowDiscountOriginalPrice,
-                      children: ["(", null != o && null != p ? (0, c.og)(O, o, p) : O, ")"],
+                      children: ["(", null != o && null != _ ? (0, c.og)(O, o, _) : O, ")"],
                   })
                 : null,
             null != b

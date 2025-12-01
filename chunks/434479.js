@@ -1,4 +1,4 @@
-n.d(t, { m: () => f });
+n.d(t, { m: () => p });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -9,7 +9,7 @@ var i = n(120356),
     c = n(780462),
     u = n(55940),
     d = n(509612);
-function p(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,12 +52,12 @@ function h(e, t) {
         e
     );
 }
-function f(e) {
+function p(e) {
     var t,
         {
             id: n,
             className: i,
-            innerClassName: f,
+            innerClassName: p,
             renderIcon: g,
             text: m,
             selected: b,
@@ -98,19 +98,19 @@ function f(e) {
             "showUnread",
             "ref",
         ]);
-    let C = (0, o.JA)(n),
-        x = null != (t = (0, a.q)(m)) ? t : "";
+    let x = (0, o.JA)(n),
+        C = null != (t = (0, a.q)(m)) ? t : "";
     return (0, r.jsx)("li", {
         ref: v,
         children: (0, r.jsxs)(
             s.kL8,
-            h(p({}, j), {
-                buttonProps: h(p({}, C), {
+            h(f({}, j), {
+                buttonProps: h(f({}, x), {
                     id: n,
                     role: "button",
                 }),
                 tag: "div",
-                "aria-label": x,
+                "aria-label": C,
                 focusProps: {
                     offset: {
                         top: 1,
@@ -129,7 +129,7 @@ function f(e) {
                     y,
                     O ? (0, r.jsx)("div", { className: l()(d.unread, d.unreadImportant) }) : null,
                     (0, r.jsx)("div", {
-                        className: l()([d.link, d.basicChannelRowLink, f]),
+                        className: l()([d.link, d.basicChannelRowLink, p]),
                         children: (0, r.jsxs)("div", {
                             className: c.content,
                             children: [

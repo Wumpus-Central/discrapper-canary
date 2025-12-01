@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(629710),
     d = n(124347),
     f = n(52824),
-    _ = n(549635),
-    p = n(217702),
-    h = n(388032),
-    m = n(27505);
+    p = n(549635),
+    _ = n(217702),
+    m = n(388032),
+    h = n(27505);
 let g = 40;
 function E(e) {
     return "media-view-scroll-thumbnail-".concat(e);
@@ -24,7 +24,7 @@ function b(e) {
               url: e.url,
           })
         : "VIDEO" === e.type && null != e.proxyUrl
-          ? (0, _.Dt)(e.proxyUrl)
+          ? (0, p.Dt)(e.proxyUrl)
           : null;
 }
 function y(e) {
@@ -43,7 +43,7 @@ function y(e) {
           ? (0, r.jsx)(s.Kqy, {
                 align: "center",
                 justify: "center",
-                className: m.obscured,
+                className: h.obscured,
                 style: {
                     width: g,
                     height: g,
@@ -64,7 +64,7 @@ function y(e) {
                 shouldRenderAccessory: !1,
                 srcIsAnimated: i.srcIsAnimated,
                 alt: i.alt,
-                mediaLayoutType: p.hV.MOSAIC,
+                mediaLayoutType: _.hV.MOSAIC,
             });
 }
 let O = i.memo(y);
@@ -83,25 +83,25 @@ function v(e) {
                 });
         }, [n]),
         (0, r.jsx)("div", {
-            className: o()(m.galleryContainer, c),
+            className: o()(h.galleryContainer, c),
             children: (0, r.jsx)(s.h21, {
                 orientation: "horizontal",
-                className: o()(m.gallery, c),
+                className: o()(h.gallery, c),
                 ref: d,
                 onClick: (e) => e.stopPropagation(),
                 children: t.map((e, i) => {
                     let l = i === n,
-                        c = l ? h.t["qv/U5V"] : h.t.zviMAG;
+                        c = l ? m.t["qv/U5V"] : m.t.zviMAG;
                     return (0, r.jsx)(
                         s.P3F,
                         {
                             id: E(i),
-                            className: o()(m.galleryItem, {
-                                [m.inactive]: !l,
-                                [m.first]: 0 === i,
-                                [m.last]: i === t.length - 1,
+                            className: o()(h.galleryItem, {
+                                [h.inactive]: !l,
+                                [h.first]: 0 === i,
+                                [h.last]: i === t.length - 1,
                             }),
-                            "aria-label": h.intl.formatToPlainString(c, {
+                            "aria-label": m.intl.formatToPlainString(c, {
                                 pageNumber: i + 1,
                                 totalPages: t.length,
                             }),

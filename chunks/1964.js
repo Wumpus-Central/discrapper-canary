@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(392711),
     i = n.n(r),
     a = n(981631),
@@ -17,7 +17,7 @@ let { CAPTCHA: s, EMAIL: l, PHONE: c, REVERIFY_EMAIL: u, REVERIFY_PHONE: d } = a
         [a.c2C.AGREEMENTS]: [],
         [a.c2C.REQUIRE_SAFETY_FLOWS]: [],
     },
-    _ = {
+    p = {
         isPhoneReverification: (e, t) =>
             void 0 !== e &&
             e.isPhoneVerified() &&

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(442837),
@@ -18,17 +18,17 @@ var i = n(54381),
     C = n(967128),
     v = n(388032),
     _ = n(963392);
-function x(e) {
+function O(e) {
     var t;
-    let { channel: n, children: x, user: j } = e,
-        O = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
+    let { channel: n, children: O, user: x } = e,
+        j = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
         E = null != (t = (0, d.ZP)(n)) ? t : "",
         {
             avatarDecorationSrc: S,
             eventHandlers: P,
             isAnimating: I,
         } = (0, y.Z)({
-            userId: null == j ? void 0 : j.id,
+            userId: null == x ? void 0 : x.id,
             size: o.EFr.SIZE_80,
             animateOnHover: !0,
         }),
@@ -39,14 +39,14 @@ function x(e) {
         A = r.useCallback(() => {
             P.onMouseLeave(), T(!1);
         }, [P]),
-        w = !n.isMultiUserDM() && (null == j ? void 0 : j.displayNameStyles) != null;
+        w = !n.isMultiUserDM() && (null == x ? void 0 : x.displayNameStyles) != null;
     return (0, i.jsxs)(C.ZP, {
         channelId: n.id,
         onMouseEnter: N,
         onMouseLeave: A,
         children: [
             (() => {
-                let e = !O && I;
+                let e = !j && I;
                 return n.isMultiUserDM()
                     ? (0, i.jsx)(m.v, {
                           channel: n,
@@ -70,13 +70,13 @@ function x(e) {
                 children: w
                     ? (0, i.jsx)(h.Z, {
                           userName: E,
-                          displayNameStyles: null == j ? void 0 : j.displayNameStyles,
+                          displayNameStyles: null == x ? void 0 : x.displayNameStyles,
                           effectDisplayType: Z ? p.F.ANIMATED : p.F.STATIC,
                           loop: !0,
                       })
                     : E,
             }),
-            (0, i.jsx)(C.jz, { children: x }),
+            (0, i.jsx)(C.jz, { children: O }),
             n.isMultiUserDM() &&
                 (0, i.jsxs)(a.hE2, {
                     className: _.buttonContainer,

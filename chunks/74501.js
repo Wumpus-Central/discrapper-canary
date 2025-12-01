@@ -14,26 +14,26 @@ function d(e, t) {
     for (; d < e.length; ) {
         let e = (0, r.oH)(n, d, u);
         d += u;
-        let _ = i.Z.getShortAt(n, d),
-            { tagName: p, tagNameSize: h } = f(n, (d += l));
-        d += h;
-        let m = i.Z.getLongAt(n, d);
+        let p = i.Z.getShortAt(n, d),
+            { tagName: _, tagNameSize: m } = f(n, (d += l));
+        d += m;
+        let h = i.Z.getLongAt(n, d);
         if (((d += c), e === s)) {
-            let e = (0, r.Wp)(n.buffer, d, m),
+            let e = (0, r.Wp)(n.buffer, d, h),
                 i = {
-                    id: _,
-                    value: (0, r.oH)(e, 0, m),
+                    id: p,
+                    value: (0, r.oH)(e, 0, h),
                 };
-            if (a.Z[_]) {
+            if (a.Z[p]) {
                 try {
-                    i.description = a.Z[_].description(e);
+                    i.description = a.Z[p].description(e);
                 } catch (e) {
                     i.description = "<no description formatter>";
                 }
-                o[p || a.Z[_].name] = i;
-            } else t && (o[`undefined-${_}`] = i);
+                o[_ || a.Z[p].name] = i;
+            } else t && (o[`undefined-${p}`] = i);
         }
-        d += m + (m % 2);
+        d += h + (h % 2);
     }
     return o;
 }

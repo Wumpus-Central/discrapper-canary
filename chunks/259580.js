@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381);
 n(473749);
 var i = n(481060),
@@ -82,7 +82,7 @@ let f = {
         DOWN: a.directionDown,
         LEFT: a.directionLeft,
     },
-    _ = (e) => {
+    p = (e) => {
         var {
                 direction: t = f.DOWN,
                 width: n = 24,
@@ -90,20 +90,20 @@ let f = {
                 color: o = "currentColor",
                 className: l,
                 foreground: d,
-                expanded: _,
+                expanded: p,
             } = e,
-            p = u(e, ["direction", "width", "height", "color", "className", "foreground", "expanded"]);
-        let h = t;
-        !0 === _ ? (h = f.DOWN) : !1 === _ && (h = f.RIGHT);
-        let m = {
+            _ = u(e, ["direction", "width", "height", "color", "className", "foreground", "expanded"]);
+        let m = t;
+        !0 === p ? (m = f.DOWN) : !1 === p && (m = f.RIGHT);
+        let h = {
             [f.UP]: i.u04,
             [f.DOWN]: i.CJ0,
             [f.LEFT]: i.V7D,
             [f.RIGHT]: i.Fbu,
-        }[h];
+        }[m];
         return (0, r.jsx)(
-            m,
-            c(s({}, p), {
+            h,
+            c(s({}, _), {
                 className: l,
                 size: "custom",
                 width: n,
@@ -113,5 +113,5 @@ let f = {
             }),
         );
     };
-_.Directions = f;
-let p = _;
+p.Directions = f;
+let _ = p;

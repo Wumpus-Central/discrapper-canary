@@ -8,11 +8,11 @@ var r = n(54381),
     o = n(739566),
     s = n(942951),
     l = n(834129),
-    c = n(456077),
+    c = n(670188),
     u = n(768581),
     d = n(693912),
     f = n(981631);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +25,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,12 +36,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,12 +53,12 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -90,7 +90,7 @@ function g(e, t) {
                           children: (e) =>
                               (0, r.jsx)(
                                   a.Anchor,
-                                  m(p({}, e), {
+                                  h(_({}, e), {
                                       ref: n,
                                       children: o,
                                   }),
@@ -106,13 +106,13 @@ function E(e) {
     let { message: t, channel: i, compact: a } = e,
         c = (0, o.ZP)(t),
         u = t.application,
-        _ = (0, s.l)({
+        p = (0, s.l)({
             user: t.author,
             channelId: i.id,
             guildId: i.guild_id,
             messageId: t.id,
         }),
-        p = g(i, t);
+        _ = g(i, t);
     return (0, r.jsx)(l.Z, {
         icon: n(570111),
         timestamp: t.timestamp,
@@ -120,8 +120,8 @@ function E(e) {
         children: (0, d.DS)({
             application: u,
             username: c.nick,
-            usernameHook: _(c),
-            applicationNameHook: null != u ? p(u) : f.dG4,
+            usernameHook: p(c),
+            applicationNameHook: null != u ? _(u) : f.dG4,
         }),
     });
 }
@@ -129,13 +129,13 @@ function b(e) {
     let { message: t, channel: i, compact: a } = e,
         c = (0, o.ZP)(t),
         u = t.application,
-        _ = (0, s.l)({
+        p = (0, s.l)({
             user: t.author,
             channelId: i.id,
             guildId: i.guild_id,
             messageId: t.id,
         }),
-        p = g(i, t);
+        _ = g(i, t);
     return (0, r.jsx)(l.Z, {
         icon: n(474019),
         timestamp: t.timestamp,
@@ -143,8 +143,8 @@ function b(e) {
         children: (0, d.nh)({
             application: u,
             username: c.nick,
-            usernameHook: _(c),
-            applicationNameHook: null != u ? p(u) : f.dG4,
+            usernameHook: p(c),
+            applicationNameHook: null != u ? _(u) : f.dG4,
         }),
     });
 }

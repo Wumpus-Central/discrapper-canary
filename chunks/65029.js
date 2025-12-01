@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -25,15 +25,15 @@ let f = (e) => {
             ],
         });
     },
-    _ = (e) => {
+    p = (e) => {
         let {
             className: t,
             graphicPrimary: n,
             graphicSecondary: i,
             titlePrimary: s,
             titleSecondary: l,
-            isFavorite: _ = !1,
-            emojiSubCategory: p = c.t0.NONE,
+            isFavorite: p = !1,
+            emojiSubCategory: _ = c.t0.NONE,
         } = e;
         return (0, r.jsxs)("div", {
             className: a()(d.inspector, t),
@@ -50,11 +50,11 @@ let f = (e) => {
                             className: d.titlePrimary,
                             variant: "text-md/semibold",
                             children: [
-                                _
+                                p
                                     ? (0, r.jsx)(o.r7p, {
                                           size: "custom",
                                           color: "currentColor",
-                                          "aria-label": _
+                                          "aria-label": p
                                               ? u.intl.formatToPlainString(u.t["+fdUkf"], { names: s })
                                               : void 0,
                                           width: 15,
@@ -73,14 +73,14 @@ let f = (e) => {
                             }),
                     ],
                 }),
-                p === c.t0.NONE
+                _ === c.t0.NONE
                     ? null != i &&
                       (0, r.jsx)("div", {
                           className: d.graphicSecondary,
                           "aria-hidden": !0,
                           children: i,
                       })
-                    : (0, r.jsx)(f, { emojiSubCategory: p }),
+                    : (0, r.jsx)(f, { emojiSubCategory: _ }),
             ],
         });
     };

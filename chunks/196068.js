@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(748770),
     d = n(313789),
     f = n(518596),
-    _ = n(594174),
-    p = n(626135),
-    h = n(74538),
-    m = n(243778),
+    p = n(594174),
+    _ = n(626135),
+    m = n(74538),
+    h = n(243778),
     g = n(921944),
     E = n(981631),
     b = n(474936),
@@ -21,21 +21,21 @@ var r = n(54381),
 let v = (e) => {
     let { dismissibleContent: t } = e,
         n = (0, c.a0)(),
-        v = (0, a.e7)([_.default], () => h.ZP.isPremiumExactly(_.default.getCurrentUser(), b.PremiumTypes.TIER_2)),
-        { enabled: I } = l.g.useExperiment(
+        v = (0, a.e7)([p.default], () => m.ZP.isPremiumExactly(p.default.getCurrentUser(), b.PremiumTypes.TIER_2)),
+        { enabled: S } = l.g.useExperiment(
             { location: "OutboundPromotionNotice" },
             {
                 autoTrackExposure: !1,
                 disable: v,
             },
         ),
-        T = i.useCallback(() => {
-            p.default.track(E.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED),
+        I = i.useCallback(() => {
+            _.default.track(E.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED),
                 (0, f.openUserSettings)(d.n.GIFT_PANEL, { section: E.oAB.INVENTORY }),
                 u.ZP.dismissOutboundPromotionNotice();
         }, []);
     if (null == n) return null;
-    let S = (e) =>
+    let T = (e) =>
         (0, r.jsxs)(s.qXd, {
             color: s.DM8.PREMIUM_TIER_2,
             children: [
@@ -50,17 +50,17 @@ let v = (e) => {
                     color: "currentColor",
                     className: O.premiumIcon,
                 }),
-                I ? y.intl.string(y.t["5JMiOo"]) : y.intl.string(y.t["Pzh+G2"]),
+                S ? y.intl.string(y.t["5JMiOo"]) : y.intl.string(y.t["Pzh+G2"]),
                 (0, r.jsx)(s.NoS, {
                     noticeType: E.kVF.OUTBOUND_PROMOTION,
                     onClick: () => {
-                        T(), null !== e && e(g.L.TAKE_ACTION);
+                        I(), null !== e && e(g.L.TAKE_ACTION);
                     },
                     children: y.intl.string(y.t.jVcuVY),
                 }),
             ],
         });
-    return (0, r.jsx)(m.O1, {
+    return (0, r.jsx)(h.O1, {
         contentType: t,
         newSnowflakeId: n,
         timeRecurringConfig: { cooldownDurationMs: 0 },
@@ -68,7 +68,7 @@ let v = (e) => {
         bypassAutoDismiss: !0,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: n } = e;
-            if (t === o.z.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR) return S(n);
+            if (t === o.z.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR) return T(n);
         },
     });
 };

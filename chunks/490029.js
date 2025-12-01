@@ -1,8 +1,8 @@
 n.d(t, {
     $j: () => u,
     Ty: () => f,
-    lW: () => p,
-    sr: () => _,
+    lW: () => _,
+    sr: () => p,
     zP: () => d,
 }),
     n(415506);
@@ -23,7 +23,7 @@ function f(e, t) {
     if (!__OVERLAY__) throw new i.Z({ errorCode: l.lTL.UNKNOWN_ERROR }, "called from wrong app context");
     r.default.subscribe(l.zMe.OVERLAY, { token: t }, (t) => e((0, s.H)(t)));
 }
-function _(e, t) {
+function p(e, t) {
     if (__OVERLAY__) throw new i.Z({ errorCode: l.lTL.UNKNOWN_ERROR }, "called from wrong app context");
     a.Z.setCommandHandler(l.Etm.OVERLAY, {
         scope: c.cE,
@@ -41,7 +41,7 @@ function _(e, t) {
             },
         });
 }
-function p(e) {
+function _(e) {
     if (__OVERLAY__) return r.default.request(l.Etm.OVERLAY, (0, s.G)(e));
     try {
         return a.Z.dispatchToSubscriptions(l.zMe.OVERLAY, {}, (0, s.G)(e)), Promise.resolve();

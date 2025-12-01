@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(54381);
 n(473749);
 var i = n(481060),
@@ -10,37 +10,37 @@ var i = n(481060),
     u = n(944486),
     d = n(626135),
     f = n(981631),
-    _ = n(388032),
-    p = n(829424);
-let h = function (e) {
-    let { guild: t, message: n, onClose: h } = e,
-        m = c.Z.getChannel(u.Z.getChannelId(t.id));
+    p = n(388032),
+    _ = n(829424);
+let m = function (e) {
+    let { guild: t, message: n, onClose: m } = e,
+        h = c.Z.getChannel(u.Z.getChannelId(t.id));
     if (
         ((0, a.ZP)(() => {
             d.default.track(f.rMx.OPEN_POPOUT, {
                 type: "New Member Badge Popout",
                 guild_id: t.id,
-                channel_id: null == m ? void 0 : m.id,
+                channel_id: null == h ? void 0 : h.id,
             });
         }),
-        null == m)
+        null == h)
     )
         return null;
     let g = () => {
         o.ZP.trackWithMetadata(f.rMx.NEW_MEMBER_MENTION_CTA_CLICKED, { target_user_id: n.author.id }),
-            h(),
-            (0, l.q)(n.author, m.id);
+            m(),
+            (0, l.q)(n.author, h.id);
     };
     return (0, r.jsx)(s.W_, {
-        className: p.messagePopoutContent,
+        className: _.messagePopoutContent,
         children: (0, r.jsxs)("div", {
-            className: p.popoutContainer,
+            className: _.popoutContainer,
             children: [
                 (0, r.jsxs)("div", {
-                    className: p.mainContent,
+                    className: _.mainContent,
                     children: [
                         (0, r.jsx)("div", {
-                            className: p.iconContainer,
+                            className: _.iconContainer,
                             children: (0, r.jsx)(i.hg2, {
                                 size: "custom",
                                 color: "currentColor",
@@ -52,12 +52,12 @@ let h = function (e) {
                             children: [
                                 (0, r.jsx)(i.Heading, {
                                     variant: "heading-md/semibold",
-                                    className: p.header,
-                                    children: _.intl.string(_.t["v/OYd2"]),
+                                    className: _.header,
+                                    children: p.intl.string(p.t["v/OYd2"]),
                                 }),
                                 (0, r.jsx)(i.Text, {
                                     variant: "text-sm/normal",
-                                    children: _.intl.string(_.t.Z85MlD),
+                                    children: p.intl.string(p.t.Z85MlD),
                                 }),
                             ],
                         }),
@@ -65,11 +65,11 @@ let h = function (e) {
                 }),
                 (0, r.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
-                    className: p.ctaButton,
+                    className: _.ctaButton,
                     children: (0, r.jsx)(i.Button, {
                         variant: "primary",
                         size: "sm",
-                        text: _.intl.format(_.t["+xsVS6"], { username: n.author.username }),
+                        text: p.intl.format(p.t["+xsVS6"], { username: n.author.username }),
                         fullWidth: !0,
                         onClick: g,
                     }),

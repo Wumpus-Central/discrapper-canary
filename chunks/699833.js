@@ -10,26 +10,26 @@ var i = n(913527),
     u = n(832467);
 let d = (e) => a()().diff(a().unix(e), "days");
 function f(e) {
-    var t, i, a, f, _;
+    var t, i, a, f, p;
     if (null == e.message.embeds || null == e.message.embeds[0].fields) return null;
-    let p = e.message.embeds[0],
-        h =
-            null != (a = null == (t = p.fields) ? void 0 : t.find((e) => e.rawName === l.Cg.CLASSIFICATION_ID))
+    let _ = e.message.embeds[0],
+        m =
+            null != (a = null == (t = _.fields) ? void 0 : t.find((e) => e.rawName === l.Cg.CLASSIFICATION_ID))
                 ? a
                 : void 0,
-        m = null != (f = null == h ? void 0 : h.rawValue) ? f : void 0,
+        h = null != (f = null == m ? void 0 : m.rawValue) ? f : void 0,
         g =
-            null != (_ = null == (i = p.fields) ? void 0 : i.find((e) => e.rawName === l.Cg.INCIDENT_TIMESTAMP))
-                ? _
+            null != (p = null == (i = _.fields) ? void 0 : i.find((e) => e.rawName === l.Cg.INCIDENT_TIMESTAMP))
+                ? p
                 : void 0,
         E = null == g || null == g.rawValue ? void 0 : parseFloat(g.rawValue);
-    if (null == m || null == E) return null;
+    if (null == h || null == E) return null;
     let b = () => {
         (0, s.ZDy)(async () => {
             let { default: e } = await n.e("18831").then(n.bind(n, 41164));
             return (t) =>
                 (0, r.jsx)(e, {
-                    classificationId: m,
+                    classificationId: h,
                     source: l.s.SystemDM,
                     transitionState: t.transitionState,
                     onClose: t.onClose,

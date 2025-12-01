@@ -8,24 +8,24 @@ var r = n(939793),
     u = "[object Map]",
     d = "[object Number]",
     f = "[object RegExp]",
-    _ = "[object Set]",
-    p = "[object String]",
-    h = "[object Symbol]",
-    m = "[object ArrayBuffer]",
+    p = "[object Set]",
+    _ = "[object String]",
+    m = "[object Symbol]",
+    h = "[object ArrayBuffer]",
     g = "[object DataView]",
     E = "[object Float32Array]",
     b = "[object Float64Array]",
     y = "[object Int8Array]",
     O = "[object Int16Array]",
     v = "[object Int32Array]",
-    I = "[object Uint8Array]",
-    T = "[object Uint8ClampedArray]",
-    S = "[object Uint16Array]",
+    S = "[object Uint8Array]",
+    I = "[object Uint8ClampedArray]",
+    T = "[object Uint16Array]",
     A = "[object Uint32Array]";
 e.exports = function (e, t, n) {
     var C = e.constructor;
     switch (t) {
-        case m:
+        case h:
             return r(e);
         case l:
         case c:
@@ -37,21 +37,21 @@ e.exports = function (e, t, n) {
         case y:
         case O:
         case v:
+        case S:
         case I:
         case T:
-        case S:
         case A:
             return s(e, n);
         case u:
             return new C();
         case d:
-        case p:
+        case _:
             return new C(e);
         case f:
             return a(e);
-        case _:
+        case p:
             return new C();
-        case h:
+        case m:
             return o(e);
     }
 };

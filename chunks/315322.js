@@ -2,21 +2,21 @@ n.d(t, {
     $z: () => N,
     I1: () => E,
     IZ: () => b,
-    Ix: () => D,
-    PJ: () => S,
+    Ix: () => w,
+    PJ: () => T,
     Qb: () => g,
     Yc: () => v,
-    bh: () => R,
-    bo: () => I,
+    bh: () => P,
+    bo: () => S,
     cy: () => y,
-    hM: () => _,
-    sL: () => p,
-    t6: () => m,
-    tA: () => P,
+    hM: () => p,
+    sL: () => _,
+    t6: () => h,
+    tA: () => R,
     tI: () => O,
-    yn: () => w,
-    z4: () => T,
-    zW: () => h,
+    yn: () => D,
+    z4: () => I,
+    zW: () => m,
 }),
     n(781311),
     n(388685);
@@ -39,7 +39,7 @@ function f(e) {
     let t = (0, s.Tm)(e);
     return o.Z.getAnalyticsId(t);
 }
-function _(e) {
+function p(e) {
     let {
         searchContext: t,
         searchRequestAnalyticsId: n,
@@ -48,10 +48,10 @@ function _(e) {
         limit: o,
         offset: s,
         page: f,
-        totalResults: _,
-        pageResults: p,
-        isIndexing: h,
-        pageNumMessages: m,
+        totalResults: p,
+        pageResults: _,
+        isIndexing: m,
+        pageNumMessages: h,
         pageNumLinks: g,
         pageNumEmbeds: E,
         pageNumAttachments: b,
@@ -68,10 +68,10 @@ function _(e) {
         limit: o,
         offset: s,
         page: f,
-        total_results: _,
-        page_results: p,
-        is_indexing: h,
-        page_num_messages: m,
+        total_results: p,
+        page_results: _,
+        is_indexing: m,
+        page_num_messages: h,
         page_num_links: g,
         page_num_embeds: E,
         page_num_attach: b,
@@ -79,7 +79,7 @@ function _(e) {
         search_query_content_length: d(O),
     });
 }
-function p(e) {
+function _(e) {
     let {
         searchContext: t,
         searchRequestAnalyticsId: n,
@@ -88,10 +88,10 @@ function p(e) {
         channelId: o,
         pageResults: s,
         totalResults: f,
-        page: _,
-        limit: p,
-        offset: h,
-        index: m,
+        page: p,
+        limit: _,
+        offset: m,
+        index: h,
         searchQueryString: g,
         searchQuery: E,
     } = e;
@@ -105,15 +105,15 @@ function p(e) {
         channel_id: o,
         page_results: s,
         total_results: f,
-        page: _,
-        limit: p,
-        offset: h,
-        index_num: m,
+        page: p,
+        limit: _,
+        offset: m,
+        index_num: h,
         search_query_length: u(g),
         search_query_content_length: d(E),
     });
 }
-function h(e) {
+function m(e) {
     let { searchContext: t, searchRequestAnalyticsId: n, mode: i } = e;
     r.ZP.trackWithMetadata(c.rMx.SEARCH_RESULT_SORT_CHANGED, {
         search_id: n,
@@ -123,7 +123,7 @@ function h(e) {
         new_sort_type: i,
     });
 }
-function m(e) {
+function h(e) {
     let { searchContext: t, searchRequestAnalyticsId: n, newPageIndex: i } = e;
     r.ZP.trackWithMetadata(c.rMx.SEARCH_RESULT_PAGE_CHANGED, {
         search_id: n,
@@ -179,23 +179,23 @@ function O(e) {
             let r = n[t];
             return (e[t] = Array.isArray(r) ? r.length : 1), e;
         }, {}),
-        _ = null != i ? (0, s.kG)(i) : [],
-        p = 0,
-        h = 0,
+        p = null != i ? (0, s.kG)(i) : [],
+        _ = 0,
         m = 0,
+        h = 0,
         g = 0,
         E = 0,
         b = 0,
         y = 0,
         O = 0,
         v = 0;
-    _.forEach((e) => {
+    p.forEach((e) => {
         e.type === c.dCx.ANSWER_IN
-            ? p++
+            ? _++
             : e.type === c.dCx.ANSWER_USERNAME_FROM
-              ? h++
+              ? m++
               : e.type === c.dCx.ANSWER_USERNAME_MENTIONS
-                ? m++
+                ? h++
                 : e.type === c.dCx.ANSWER_HAS
                   ? g++
                   : e.type === c.dCx.ANSWER_BEFORE
@@ -208,18 +208,18 @@ function O(e) {
                           ? O++
                           : e.type === c.dCx.ANSWER_AUTHOR_TYPE && v++;
     });
-    let I = l.Z.getQueryId(t);
+    let S = l.Z.getQueryId(t);
     r.ZP.trackWithMetadata(c.rMx.MESSAGES_SEARCH_STARTED, {
         search_id: f(t),
         search_session_id: l.Z.getSessionId(t),
-        search_query_id: I,
+        search_query_id: S,
         search_type: t.type,
         search_query_length: u(i),
         search_query_content_length: d(n),
         sort_type: (0, s.Vj)(n),
-        filter_in_count: p,
-        filter_from_count: h,
-        filter_mentions_count: m,
+        filter_in_count: _,
+        filter_from_count: m,
+        filter_mentions_count: h,
         filter_has_count: g,
         filter_before_count: E,
         filter_during_count: b,
@@ -246,7 +246,7 @@ function v(e) {
         search_query_id: l.Z.getQueryId(n),
     });
 }
-function I(e) {
+function S(e) {
     let { searchContext: t } = e;
     r.ZP.trackWithMetadata(c.rMx.SEARCH_RESULTS_FEEDBACK_ENTRYPOINT_VIEWED, {
         search_id: f(t),
@@ -255,7 +255,7 @@ function I(e) {
         search_query_id: l.Z.getQueryId(t),
     });
 }
-function T(e) {
+function I(e) {
     let {
         rating: t,
         searchContext: n,
@@ -276,7 +276,7 @@ function T(e) {
         describe_search_question_text: s,
     });
 }
-function S(e) {
+function T(e) {
     let { searchContext: t } = e;
     l.Z.initialize({ searchContext: t }),
         r.ZP.trackWithMetadata(c.rMx.SEARCH_MESSAGES_CHANNEL_PREFILL, {
@@ -319,7 +319,7 @@ function N(e) {
         search_history_total_results: i,
     });
 }
-function R(e) {
+function P(e) {
     var t;
     let {
         searchContext: n,
@@ -327,17 +327,17 @@ function R(e) {
         searchQueryString: a,
         searchAutocompleteResultIndex: o,
         searchAutocompleteTotalResults: s,
-        searchTokenType: _,
-        searchAutocompleteGroup: p,
-        isSearchFilterPrefix: h,
-        isSearchFilterAnswer: m,
+        searchTokenType: p,
+        searchAutocompleteGroup: _,
+        isSearchFilterPrefix: m,
+        isSearchFilterAnswer: h,
         isSearchFilterComplete: g,
         isInFilterForSelectedChannel: E,
         searchAutocompleteSelectAction: b,
     } = e;
     c.rtL.HISTORY;
-    let y = null != (t = A.get(p)) ? t : C.get(p),
-        O = null != _ ? A.get(_) : null;
+    let y = null != (t = A.get(_)) ? t : C.get(_),
+        O = null != p ? A.get(p) : null;
     r.ZP.trackWithMetadata(c.rMx.SEARCH_MESSAGES_AUTOCOMPLETE_CLICKED, {
         search_id: f(n),
         search_type: n.type,
@@ -349,14 +349,14 @@ function R(e) {
         search_autocomplete_total_results: s,
         search_autocomplete_group: y,
         search_autocomplete_filter_type: O,
-        is_search_filter_prefix: h,
-        is_search_filter_answer: m,
+        is_search_filter_prefix: m,
+        is_search_filter_answer: h,
         is_search_filter_complete: g,
         is_in_filter_for_selected_channel: E,
         search_autocomplete_select_action: b,
     });
 }
-function P(e) {
+function R(e) {
     let { searchContext: t, searchAutocompleteSelectAction: n } = e;
     r.ZP.trackWithMetadata(c.rMx.SEARCH_MESSAGES_SELECTED_CHANNEL_FILTER_CLICKED, {
         search_id: f(t),
@@ -366,10 +366,10 @@ function P(e) {
         search_autocomplete_select_action: n,
     });
 }
-var D = (function (e) {
+var w = (function (e) {
     return (e.SEARCH_HEADER = "search_header"), (e.USER_SETTINGS = "user_settings"), e;
 })({});
-function w(e) {
+function D(e) {
     let { searchContext: t, prevIsCrossDMSettingEnabled: n, isCrossDMSettingEnabled: i, location: a } = e;
     r.ZP.trackWithMetadata(c.rMx.SEARCH_CROSS_DM_SETTING_UPDATE, {
         search_id: null != t ? f(t) : null,

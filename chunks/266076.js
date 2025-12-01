@@ -27,11 +27,11 @@ function c(e, t) {
 }
 function u(e) {
     var { channel: t, size: n, facepileSizeOverride: i, isTyping: c, status: u, className: d, animated: f = !1 } = e,
-        _ = l(e, ["channel", "size", "facepileSizeOverride", "isTyping", "status", "className", "animated"]);
+        p = l(e, ["channel", "size", "facepileSizeOverride", "isTyping", "status", "className", "animated"]);
     return t.recipients.length >= 2 && null == t.icon
         ? (0, r.jsx)(s.Z, {
-              "aria-label": _["aria-label"],
-              "aria-hidden": _["aria-hidden"],
+              "aria-label": p["aria-label"],
+              "aria-hidden": p["aria-hidden"],
               className: d,
               recipients: t.recipients,
               size: null != i ? i : n,
@@ -39,8 +39,8 @@ function u(e) {
               status: u,
           })
         : (0, r.jsx)(a.qEK, {
-              "aria-hidden": _["aria-hidden"],
-              "aria-label": _["aria-label"],
+              "aria-hidden": p["aria-hidden"],
+              "aria-label": p["aria-label"],
               className: d,
               size: n,
               src: (0, o.x)(t, 80, f),

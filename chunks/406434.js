@@ -43,15 +43,15 @@ function s(e) {
                 y: n.y,
             };
     }
-    var _ = c ? (0, a.Z)(c) : null;
-    if (null != _) {
-        var p = "y" === _ ? "height" : "width";
+    var p = c ? (0, a.Z)(c) : null;
+    if (null != p) {
+        var _ = "y" === p ? "height" : "width";
         switch (u) {
             case o.BL:
-                t[_] = t[_] - (n[p] / 2 - s[p] / 2);
+                t[p] = t[p] - (n[_] / 2 - s[_] / 2);
                 break;
             case o.ut:
-                t[_] = t[_] + (n[p] / 2 - s[p] / 2);
+                t[p] = t[p] + (n[_] / 2 - s[_] / 2);
         }
     }
     return t;

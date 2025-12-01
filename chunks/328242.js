@@ -12,7 +12,7 @@ var r = n(54381),
     p = n(594190),
     h = n(320724),
     m = n(751571),
-    _ = n(569984),
+    _ = n(616022),
     g = n(63063),
     x = n(358085),
     v = n(747268),
@@ -21,10 +21,10 @@ var r = n(54381),
     b = n(567126),
     y = n(615161),
     C = n(761274),
-    O = n(604415),
+    O = n(718629),
     w = n(388032),
-    P = n(602804);
-function Z(e) {
+    Z = n(602804);
+function P(e) {
     let { source: t } = e;
     return t.id.startsWith(c.vA.SCREEN)
         ? (0, r.jsx)(u.pzj, { size: "xs" })
@@ -32,7 +32,7 @@ function Z(e) {
           ? null != t.icon && "" !== t.icon
               ? (0, r.jsx)("img", {
                     src: t.icon,
-                    className: P.sourceIcon,
+                    className: Z.sourceIcon,
                     alt: "",
                 })
               : (0, r.jsx)(u.GON, { size: "xs" })
@@ -43,22 +43,22 @@ function I(e) {
         { url: l, name: o } = t;
     return (0, r.jsxs)(u.P3F, {
         onClick: () => i(t),
-        className: s()(P.source, { [P.selectedSource]: n }),
+        className: s()(Z.source, { [Z.selectedSource]: n }),
         children: [
             (0, r.jsx)("div", {
-                className: P.sourcePreviewContainer,
+                className: Z.sourcePreviewContainer,
                 children: (0, r.jsxs)("div", {
-                    className: P.sourcePreview,
+                    className: Z.sourcePreview,
                     children: [
                         (0, r.jsx)("img", {
                             src: l,
-                            className: P.sourcePreviewImage,
+                            className: Z.sourcePreviewImage,
                             alt: "",
                         }),
                         (0, r.jsx)("div", {
-                            className: P.sourceOverlay,
+                            className: Z.sourceOverlay,
                             children: (0, r.jsx)("div", {
-                                className: P.sourceOverlayCTA,
+                                className: Z.sourceOverlayCTA,
                                 children: (0, r.jsx)(u.Text, {
                                     variant: "text-sm/medium",
                                     color: "button-filled-white-text",
@@ -70,12 +70,12 @@ function I(e) {
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: P.sourceNameContainer,
+                className: Z.sourceNameContainer,
                 children: [
-                    (0, r.jsx)(Z, { source: t }),
+                    (0, r.jsx)(P, { source: t }),
                     (0, r.jsx)(u.Text, {
                         variant: "text-sm/medium",
-                        className: P.sourceName,
+                        className: Z.sourceName,
                         children: o,
                     }),
                 ],
@@ -93,7 +93,7 @@ function E(e) {
                 sourceType: o,
                 fetchingSources: g,
                 selectedSource: O,
-                discordSourceId: Z,
+                discordSourceId: P,
                 hasPermission: E,
             },
         ] = (0, y.E_)(),
@@ -113,11 +113,11 @@ function E(e) {
             N
                 ? [...n].sort(
                       (e, t) =>
-                          (0, b.ov)(t, null == k ? void 0 : k.source.id, Z, R) -
-                          (0, b.ov)(e, null == k ? void 0 : k.source.id, Z, R),
+                          (0, b.ov)(t, null == k ? void 0 : k.source.id, P, R) -
+                          (0, b.ov)(e, null == k ? void 0 : k.source.id, P, R),
                   )
                 : n,
-        [k, N, n, Z, R],
+        [k, N, n, P, R],
     );
     if (g) {
         if (!1 === E) {
@@ -131,10 +131,10 @@ function E(e) {
                 e = !v.o || "0.0.0" === t || a().satisfies(t, "0.0.363");
             }
             return (0, r.jsxs)("div", {
-                className: P.errorBox,
+                className: Z.errorBox,
                 children: [
                     (0, r.jsxs)(u.Text, {
-                        className: P.errorText,
+                        className: Z.errorText,
                         variant: "text-md/normal",
                         color: "text-danger",
                         children: [w.intl.string(w.t["kW5h/W"]), (0, r.jsx)("br", {}), w.intl.string(w.t["5Jvu1R"])],
@@ -150,7 +150,7 @@ function E(e) {
             });
         }
         return (0, r.jsx)("div", {
-            className: P.loading,
+            className: Z.loading,
             children: (0, r.jsx)(u.$jN, {}),
         });
     }
@@ -158,7 +158,7 @@ function E(e) {
     return ((G = o === c.vA.WINDOW ? D : o === c.vA.SCREEN ? s : l), o === c.vA.CAMERA && 0 === G.length)
         ? (0, r.jsx)(T, {})
         : (0, r.jsx)("div", {
-              className: P.root,
+              className: Z.root,
               children: G.map((e) =>
                   (0, r.jsx)(
                       I,
@@ -177,23 +177,23 @@ function E(e) {
 }
 function T() {
     return (0, r.jsxs)("div", {
-        className: P.emptyState,
+        className: Z.emptyState,
         children: [
             (0, r.jsx)(u.Odl, {
                 size: "md",
                 color: u.TVs.colors.ICON_MUTED,
-                className: P.emptyIcon,
+                className: Z.emptyIcon,
             }),
             (0, r.jsx)(u.Text, {
                 variant: "text-lg/medium",
                 color: "header-primary",
-                className: P.emptyHeader,
+                className: Z.emptyHeader,
                 children: w.intl.string(O.default["/z3YaZ"]),
             }),
             (0, r.jsx)(u.Text, {
                 variant: "text-sm/medium",
                 color: "text-secondary",
-                className: P.emptyBody,
+                className: Z.emptyBody,
                 children: w.intl.string(O.default.agwSGA),
             }),
             (0, r.jsx)(u.Text, {

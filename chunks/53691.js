@@ -1,17 +1,17 @@
-n.d(t, { p: () => m });
+n.d(t, { p: () => h });
 var r = n(54381);
 n(473749);
 var i = n(120356),
     a = n.n(i),
-    o = n(790519),
+    o = n(666917),
     s = n(481060),
     l = n(436774),
     c = n(597276),
     u = n(740594),
     d = n(767714),
     f = n(474936),
-    _ = n(414239);
-function p(e, t, n) {
+    p = n(414239);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,28 +35,28 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e) {
+function h(e) {
     let {
             showUpsell: t,
             text: n,
             textVariant: i,
-            button: p,
-            buttonAnalyticsObject: m,
+            button: _,
+            buttonAnalyticsObject: h,
             className: g,
             buttonStyles: E,
             onSubscribeModalClose: b,
             showShadow: y = !0,
             position: O = "floating",
             buttonSize: v = "md",
-            useLockIcon: I = !1,
+            useLockIcon: S = !1,
         } = e,
-        T = (0, c.Z)({ location: "PremiumFloatingPickerUpsell" }),
-        S = (0, s.q_F)({
+        I = (0, c.Z)({ location: "PremiumFloatingPickerUpsell" }),
+        T = (0, s.q_F)({
             transform: t ? "translateY(0%)" : "translateY(120%)",
             opacity: +!!t,
             config: {
@@ -64,58 +64,58 @@ function m(e) {
                 friction: 14,
             },
         }),
-        A = I
+        A = S
             ? (0, r.jsx)(s.d$P, {
                   size: "custom",
                   height: 20,
                   width: 20,
                   color: "currentColor",
-                  className: _.lockIcon,
+                  className: p.lockIcon,
               })
             : (0, r.jsx)(s.SrA, {
                   size: "md",
                   color: l.JX.PREMIUM_TIER_2,
               });
     return (0, r.jsxs)(o.animated.div, {
-        style: h({}, S),
+        style: m({}, T),
         className: a()(
-            _.upsellContainer,
+            p.upsellContainer,
             {
-                [_.upsellContainerShadow]: !T && y,
-                [_.upsellContainerFloating]: "floating" === O,
-                [_.upsellContainerInline]: "inline" === O,
+                [p.upsellContainerShadow]: !I && y,
+                [p.upsellContainerFloating]: "floating" === O,
+                [p.upsellContainerInline]: "inline" === O,
             },
             g,
         ),
         children: [
-            !T && A,
+            !I && A,
             (0, r.jsx)(s.Text, {
                 variant: null != i ? i : "text-sm/medium",
                 color: "header-primary",
-                className: _.upsellText,
+                className: p.upsellText,
                 children: n,
             }),
-            "string" == typeof p
-                ? T
+            "string" == typeof _
+                ? I
                     ? (0, r.jsx)(u.Z, {
                           size: "sm",
                           subscriptionTier: f.Si.TIER_2,
-                          buttonTextOverride: p,
-                          premiumModalAnalyticsLocation: m,
+                          buttonTextOverride: _,
+                          premiumModalAnalyticsLocation: h,
                           tabIndex: t ? 0 : -1,
                           onSubscribeModalClose: b,
                       })
                     : (0, r.jsx)(d.Z, {
                           size: v,
-                          className: _.upsellButton,
-                          shinyButtonClassName: null != E ? E : _.upsellButton,
+                          className: p.upsellButton,
+                          shinyButtonClassName: null != E ? E : p.upsellButton,
                           subscriptionTier: f.Si.TIER_2,
-                          textOptions: { textOverride: p },
-                          premiumModalAnalyticsLocation: m,
+                          textOptions: { textOverride: _ },
+                          premiumModalAnalyticsLocation: h,
                           tabIndex: t ? 0 : -1,
                           onSubscribeModalClose: b,
                       })
-                : p,
+                : _,
         ],
     });
 }

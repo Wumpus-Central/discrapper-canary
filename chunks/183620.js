@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r,
     i = n(54381),
     a = n(473749),
@@ -30,10 +30,10 @@ class f extends (r = a.PureComponent) {
                 error: o,
                 isLoading: d,
                 maxLength: f,
-                transitionState: _,
-                helpMessage: p,
-                retryPrompt: h,
-                retrySuccessMessage: m,
+                transitionState: p,
+                helpMessage: _,
+                retryPrompt: m,
+                retrySuccessMessage: h,
             } = this.props,
             { code: g, errorMessage: E, retrySuccess: b } = this.state,
             y =
@@ -48,7 +48,7 @@ class f extends (r = a.PureComponent) {
                       })
                     : null,
             O =
-                null != h
+                null != m
                     ? (0, i.jsxs)(l.Text, {
                           className: s()(u.__invalid_submitText, u.spacing),
                           variant: "text-sm/normal",
@@ -57,7 +57,7 @@ class f extends (r = a.PureComponent) {
                               (0, i.jsx)(l.P3F, {
                                   className: s()(u.spacing, u.__invalid_link),
                                   onClick: this.handleRetry,
-                                  children: (0, i.jsx)(l.Anchor, { children: h }),
+                                  children: (0, i.jsx)(l.Anchor, { children: m }),
                               }),
                           ],
                       })
@@ -68,12 +68,12 @@ class f extends (r = a.PureComponent) {
                       className: u.card,
                       children: (0, i.jsx)(l.Text, {
                           variant: "text-md/normal",
-                          children: m,
+                          children: h,
                       }),
                   })
                 : null;
         return (0, i.jsx)(l.Y0X, {
-            transitionState: _,
+            transitionState: p,
             parentComponent: "MFAConfirm",
             children: (0, i.jsxs)("form", {
                 onSubmit: this.handleSubmit,
@@ -87,12 +87,12 @@ class f extends (r = a.PureComponent) {
                     }),
                     (0, i.jsxs)(l.hzk, {
                         children: [
-                            null != p
+                            null != _
                                 ? (0, i.jsx)(l.Text, {
                                       color: "text-default",
                                       variant: "text-md/normal",
                                       className: u.spacing,
-                                      children: p,
+                                      children: _,
                                   })
                                 : null,
                             y,
@@ -211,4 +211,4 @@ d(f, "defaultProps", {
     error: null,
     forceNoPlaceholder: !1,
 });
-let _ = f;
+let p = f;

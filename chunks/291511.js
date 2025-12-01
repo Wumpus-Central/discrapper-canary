@@ -25,7 +25,7 @@ function d() {
     let d = (t) => {
             (0, s.zj)(e, t);
         },
-        { explicitContentFriendDm: f, explicitContentNonFriendDm: _ } = t;
+        { explicitContentFriendDm: f, explicitContentNonFriendDm: p } = t;
     return (0, r.jsxs)(a.n, {
         description: u.intl.string(u.t.Wnojv1),
         children: [
@@ -37,7 +37,7 @@ function d() {
             }),
             (0, r.jsx)(o.Z, {
                 title: u.intl.string(u.t["Yh+HX1"]),
-                value: _,
+                value: p,
                 onChange: (e) => d({ explicitContentNonFriendDm: e }),
                 options: n,
             }),

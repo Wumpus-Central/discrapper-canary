@@ -1,9 +1,9 @@
 n.d(t, {
-    eC: () => h,
+    eC: () => m,
     f0: () => A,
     fh: () => b,
-    nK: () => T,
-    sN: () => S,
+    nK: () => I,
+    sN: () => T,
 }),
     n(35282),
     n(784620),
@@ -19,15 +19,15 @@ var r = n(754700),
     i = n(887003),
     a = n(591759),
     o = n(921948),
-    s = n(509212),
+    s = n(115179),
     l = n(324805),
     c = n(981631),
     u = n(380299),
     d = n(772400);
 let f = 3,
-    _ = /\.([a-zA-Z0-9]+)$/,
-    p = ["video/mp4", "video/webm"];
-var h = (function (e) {
+    p = /\.([a-zA-Z0-9]+)$/,
+    _ = ["video/mp4", "video/webm"];
+var m = (function (e) {
     return (
         (e.HERO = "hero"),
         (e.HERO_IMAGE = "hero_image"),
@@ -48,10 +48,10 @@ var h = (function (e) {
         e
     );
 })({});
-function m(e, t, n) {
+function h(e, t, n) {
     let r = O(e, t, n),
         i = v(t),
-        a = null != i && p.includes(i);
+        a = null != i && _.includes(i);
     return {
         url: r,
         mimetype: i,
@@ -90,8 +90,8 @@ let E = {
 function b(e, t, n, a) {
     var o, l, c;
     let f,
-        _ = !1,
-        p = !1;
+        p = !1,
+        _ = !1;
     switch (t) {
         case "hero":
             f = g(e.config.assets.heroVideo, e.config.assets.hero);
@@ -156,14 +156,14 @@ function b(e, t, n, a) {
                 ? (f = e.config.assets.gameTileDark)
                 : "light" === n && null != e.config.assets.gameTileLight
                   ? (f = e.config.assets.gameTileLight)
-                  : ((f = e.config.assets.gameTile), (_ = !0));
+                  : ((f = e.config.assets.gameTile), (p = !0));
             break;
         case "logo_type":
             "dark" === n && null != e.config.assets.logotypeDark
                 ? (f = e.config.assets.logotypeDark)
                 : "light" === n && null != e.config.assets.logotypeLight
                   ? (f = e.config.assets.logotypeLight)
-                  : ((f = e.config.assets.logotype), (_ = !0));
+                  : ((f = e.config.assets.logotype), (p = !0));
             break;
         case "cosponsor_logo_type":
             if (null == e.config.cosponsorMetadata) return null;
@@ -171,7 +171,7 @@ function b(e, t, n, a) {
                 ? (f = e.config.cosponsorMetadata.logotypeDark)
                 : "light" === n && null != e.config.cosponsorMetadata.logotypeLight
                   ? (f = e.config.cosponsorMetadata.logotypeLight)
-                  : ((f = e.config.cosponsorMetadata.logotype), (_ = !0));
+                  : ((f = e.config.cosponsorMetadata.logotype), (p = !0));
             break;
         case "video_player_video":
         case "video_player_video_low_res":
@@ -184,11 +184,11 @@ function b(e, t, n, a) {
                 i = E[t],
                 o = null == n || null == (c = n.assets[i.variant]) ? void 0 : c[i.property];
             if (null == o) return null;
-            (f = o), (p = !0);
+            (f = o), (_ = !0);
         }
     }
-    let h = m(e.id, f, { theme: _ ? n : void 0 });
-    return p && null == h.mimetype ? null : h;
+    let m = h(e.id, f, { theme: p ? n : void 0 });
+    return _ && null == m.mimetype ? null : m;
 }
 function y(e) {
     var t;
@@ -211,7 +211,7 @@ function v(e) {
         let t = null != (r = new URL(e).searchParams.get("mimetype")) ? r : void 0;
         return null != t ? decodeURIComponent(t) : null;
     }
-    switch (null == (n = _.exec(e)) || null == (t = n[1]) ? void 0 : t.toLowerCase()) {
+    switch (null == (n = p.exec(e)) || null == (t = n[1]) ? void 0 : t.toLowerCase()) {
         case "webm":
             return "video/webm";
         case "mp4":
@@ -239,10 +239,10 @@ function v(e) {
             return null;
     }
 }
-function I(e) {
+function S(e) {
     return Math.min(Math.ceil(e), c.hiG);
 }
-function T(e, t) {
+function I(e, t) {
     let n = (0, o.Z)();
     return n < f
         ? {
@@ -254,15 +254,15 @@ function T(e, t) {
               height: t * n,
           };
 }
-function S(e) {
+function T(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     if (e.startsWith("blob:")) return e;
     let n = a.Z.toURLSafe(e);
     return null == n
         ? e
         : (null != t.format && n.searchParams.append("format", t.format),
-          null != t.width && n.searchParams.append("width", "".concat(I(t.width))),
-          null != t.height && n.searchParams.append("height", "".concat(I(t.height))),
+          null != t.width && n.searchParams.append("width", "".concat(S(t.width))),
+          null != t.height && n.searchParams.append("height", "".concat(S(t.height))),
           n.toString());
 }
 function A(e, t) {
@@ -272,7 +272,7 @@ function A(e, t) {
         ? null
         : (n.searchParams.append("format", "webp"),
           null != t &&
-              (n.searchParams.append("width", "".concat(I(t.width))),
-              n.searchParams.append("height", "".concat(I(t.height)))),
+              (n.searchParams.append("width", "".concat(S(t.width))),
+              n.searchParams.append("height", "".concat(S(t.height)))),
           n.toString());
 }

@@ -10,10 +10,10 @@ var i = n(120356),
     u = n(639119),
     d = n(784238),
     f = n(176782),
-    _ = n(743612),
-    p = n(474936),
-    h = n(388032),
-    m = n(505754);
+    p = n(743612),
+    _ = n(474936),
+    m = n(388032),
+    h = n(505754);
 let g = (e) => {
     var t;
     let {
@@ -25,32 +25,32 @@ let g = (e) => {
             descriptionCta: y = "",
             isPremiumGetCta: O,
             onCtaClick: v,
-            cardVariant: I,
+            cardVariant: S,
         } = e,
-        T = (0, u.N)(),
-        S = null == T ? void 0 : T.subscription_trial,
+        I = (0, u.N)(),
+        T = null == I ? void 0 : I.subscription_trial,
         A = (0, c.N)(),
         C = (0, s.Rt)({
-            intervalType: null == S ? void 0 : S.interval,
-            intervalCount: null == S ? void 0 : S.interval_count,
+            intervalType: null == T ? void 0 : T.interval,
+            intervalCount: null == T ? void 0 : T.interval_count,
         }),
         N = (0, l._)({
-            defaultResponse: h.intl.string(h.t["8x0jKT"]),
-            onNonTier2Subscriber: h.intl.string(h.t.IJI7yk),
+            defaultResponse: m.intl.string(m.t["8x0jKT"]),
+            onNonTier2Subscriber: m.intl.string(m.t.IJI7yk),
             onTier2TrialOffer: C,
             onTier0TrialOffer: C,
-            onDiscountOffer: h.intl.formatToPlainString(h.t.bkQ4bH, {
+            onDiscountOffer: m.intl.formatToPlainString(m.t.bkQ4bH, {
                 percent: null == A ? void 0 : A.discount.amount,
             }),
         }),
-        R = (0, f._)(I),
-        P = (e) => (null == e ? void 0 : e.hideOnHoverComponent) !== !0;
+        P = (0, f._)(S),
+        R = (e) => (null == e ? void 0 : e.hideOnHoverComponent) !== !0;
     return (0, r.jsxs)("div", {
-        className: a()(m.cardDescription, null == R || null == (t = R.description) ? void 0 : t.className),
+        className: a()(h.cardDescription, null == P || null == (t = P.description) ? void 0 : t.className),
         children: [
-            (0, r.jsx)(_.Z, {
+            (0, r.jsx)(p.Z, {
                 title: n,
-                cardVariantStyleInfo: R,
+                cardVariantStyleInfo: P,
                 titleClassName: i,
                 subtitle: E,
                 description: b,
@@ -60,12 +60,12 @@ let g = (e) => {
                     className: g,
                     look: o.zx.Looks.BLANK,
                     color: o.zx.Colors.CUSTOM,
-                    subscriptionTier: p.Si.TIER_2,
+                    subscriptionTier: _.Si.TIER_2,
                     textOptions: { textOverride: N },
                     showGradient: !0,
                 }),
             0 !== y.length &&
-                P(null == R ? void 0 : R.descriptionCta) &&
+                R(null == P ? void 0 : P.descriptionCta) &&
                 null != v &&
                 (0, r.jsx)(o.zx, {
                     "data-migration-pending": !0,

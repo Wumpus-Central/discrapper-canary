@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
 var r = n(54381),
     i = n(473749),
-    l = n(657707),
-    o = n(793030),
+    o = n(657707),
+    l = n(793030),
     a = n(442837),
     s = n(692547),
     c = n(899667),
@@ -33,16 +33,16 @@ function m(e) {
         : (0, r.jsxs)("div", {
               className: f.container,
               children: [
-                  (0, r.jsx)(l.Mgn, {
+                  (0, r.jsx)(o.Mgn, {
                       color: s.Z.colors.TEXT_FEEDBACK_WARNING,
                       className: f.icon,
                   }),
-                  (0, r.jsx)(o.xvT, {
+                  (0, r.jsx)(l.xvT, {
                       variant: "text-md/semibold",
                       color: "text-feedback-warning",
                       children: p.intl.string(d.default.n5hQhc),
                   }),
-                  (0, r.jsxs)(o.xvT, {
+                  (0, r.jsxs)(l.xvT, {
                       variant: "text-sm/medium",
                       children: [
                           p.intl.formatToPlainString(d.default.iAaAiG, {
@@ -53,7 +53,7 @@ function m(e) {
                               ? void 0
                               : m.map((e, t) =>
                                     (0, r.jsx)(
-                                        o.xvT,
+                                        l.xvT,
                                         {
                                             variant: "text-sm/medium",
                                             color: "text-feedback-warning",

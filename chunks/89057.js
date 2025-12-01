@@ -15,53 +15,53 @@ var i = n(120356),
     u = n(600164),
     d = n(63063),
     f = n(211242),
-    _ = n(981631),
-    p = n(388032),
-    h = n(840416),
-    m = n(51125),
+    p = n(981631),
+    _ = n(388032),
+    m = n(840416),
+    h = n(51125),
     g = n(47268);
 function E(e) {
     let { className: t } = e,
         n = (0, c.ZP)(),
-        i = (0, s.wj)(n) ? m : g;
+        i = (0, s.wj)(n) ? h : g;
     return (0, r.jsxs)("div", {
-        className: a()(h.container, t),
+        className: a()(m.container, t),
         children: [
             (0, r.jsx)(l.Heading, {
-                className: h.header,
+                className: m.header,
                 variant: "heading-xl/semibold",
-                children: p.intl.string(p.t.vwMEHS),
+                children: _.intl.string(_.t.vwMEHS),
             }),
             (0, r.jsxs)(l.Text, {
-                className: h.description,
+                className: m.description,
                 variant: "text-md/normal",
                 color: "header-secondary",
                 children: [
-                    (0, r.jsx)("p", { children: p.intl.string(p.t.fev8MQ) }),
+                    (0, r.jsx)("p", { children: _.intl.string(_.t.fev8MQ) }),
                     (0, r.jsx)("p", {
-                        children: p.intl.format(p.t.IHxEJU, {
-                            helpdeskArticle: d.Z.getArticleURL(_.BhN.BLOCKED_PAYMENTS),
+                        children: _.intl.format(_.t.IHxEJU, {
+                            helpdeskArticle: d.Z.getArticleURL(p.BhN.BLOCKED_PAYMENTS),
                         }),
                     }),
                 ],
             }),
             (0, r.jsx)("img", {
                 src: i,
-                className: h.splashImage,
+                className: m.splashImage,
                 alt: "Blocked Payments",
             }),
         ],
     });
 }
 function b() {
-    return (0, r.jsx)(E, { className: h.settings });
+    return (0, r.jsx)(E, { className: m.settings });
 }
 function y(e) {
     let { onClose: t } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(l.xBx, {
-                className: h.blockedPaymentsModalHeader,
+                className: m.blockedPaymentsModalHeader,
                 justify: u.Z.Justify.END,
                 "data-migration-pending": !0,
                 children: (0, r.jsx)(l.olH, {
@@ -70,9 +70,9 @@ function y(e) {
                 }),
             }),
             (0, r.jsx)(l.hzk, {
-                className: h.blockedPaymentsModalContent,
+                className: m.blockedPaymentsModalContent,
                 "data-migration-pending": !0,
-                children: (0, r.jsx)(E, { className: h.modal }),
+                children: (0, r.jsx)(E, { className: m.modal }),
             }),
         ],
     });
@@ -81,20 +81,20 @@ function O(e) {
     let { className: t } = e;
     return (0, f.Q)()
         ? (0, r.jsxs)(l.Zbd, {
-              className: a()(h.blockedPaymentsWarning, t),
+              className: a()(m.blockedPaymentsWarning, t),
               type: l.Zbd.Types.CUSTOM,
               children: [
                   (0, r.jsx)(l.Mgn, {
                       size: "custom",
                       width: 20,
                       height: 20,
-                      className: h.blockedPaymentsWarningIcon,
+                      className: m.blockedPaymentsWarningIcon,
                       color: o.Z.unsafe_rawColors.YELLOW_300.css,
                   }),
                   (0, r.jsx)(l.Text, {
                       variant: "text-sm/normal",
-                      children: p.intl.format(p.t.NYkcCh, {
-                          helpdeskArticle: d.Z.getArticleURL(_.BhN.BLOCKED_PAYMENTS),
+                      children: _.intl.format(_.t.NYkcCh, {
+                          helpdeskArticle: d.Z.getArticleURL(p.BhN.BLOCKED_PAYMENTS),
                       }),
                   }),
               ],

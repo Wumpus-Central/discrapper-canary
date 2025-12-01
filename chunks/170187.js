@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -48,7 +48,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,11 +59,11 @@ function _(e, t) {
         e
     );
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -71,7 +71,7 @@ function p(e, t) {
     }
     return i;
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -80,19 +80,19 @@ function h(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function m(e) {
+function h(e) {
     var { children: t, className: n, variant: i = "text-xs/medium", hideTooltip: u = !1, canTruncate: f = !0 } = e,
-        h = p(e, ["children", "className", "variant", "hideTooltip", "canTruncate"]);
+        m = _(e, ["children", "className", "variant", "hideTooltip", "canTruncate"]);
     return (0, r.jsx)(
         o.xvT,
-        _(
+        p(
             d(
                 {
                     variant: i,
                     color: "none",
                     className: a()(f && c.truncated, n),
                 },
-                h,
+                m,
             ),
             {
                 children:

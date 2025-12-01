@@ -1,6 +1,6 @@
 n.d(t, {
-    V: () => w,
-    Z: () => L,
+    V: () => D,
+    Z: () => x,
 }),
     n(410992),
     n(227481),
@@ -27,7 +27,7 @@ var r = n(512722),
     u = n(70956),
     d = n(358085),
     f = n(65154);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +40,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,12 +51,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -68,12 +68,12 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -85,9 +85,9 @@ function b() {}
 let y = 20 * u.Z.Millis.SECOND,
     O = 3,
     v = +u.Z.Millis.MINUTE,
-    I = 0.25,
-    T = 0.1,
-    S = 5 * u.Z.Millis.SECOND,
+    S = 0.25,
+    I = 0.1,
+    T = 5 * u.Z.Millis.SECOND,
     A = 2,
     C = 8;
 function N(e) {
@@ -101,7 +101,7 @@ function N(e) {
         decode: e.decode,
     }));
 }
-function R(e) {
+function P(e) {
     return null == e
         ? void 0
         : e.map((e) => ({
@@ -123,17 +123,17 @@ function R(e) {
                       : void 0,
           }));
 }
-function P(e) {
+function R(e) {
     return "audio" === e ? f.Tr.AUDIO : "test" === e ? f.Tr.TEST : "screen" === e ? f.Tr.SCREEN : f.Tr.VIDEO;
 }
-function D(e) {
+function w(e) {
     var t;
     return null !=
         (t =
             null == e
                 ? void 0
                 : e.map((e) => ({
-                      type: P(e.type),
+                      type: R(e.type),
                       rid: e.rid,
                       ssrc: e.ssrc,
                       rtxSsrc: e.rtx_ssrc,
@@ -153,7 +153,7 @@ function D(e) {
         ? t
         : [];
 }
-var w = (function (e) {
+var D = (function (e) {
     return (
         (e.Connecting = "connecting"),
         (e.Connect = "connect"),
@@ -189,7 +189,7 @@ var w = (function (e) {
         e
     );
 })({});
-class L extends o.Z {
+class x extends o.Z {
     createWebSocket() {
         this.logger.info("[CONNECT] ".concat(this.url)),
             null !== this.webSocket &&
@@ -258,7 +258,7 @@ class L extends o.Z {
                         this.handleHeartbeatAck(r);
                         break;
                     case 12:
-                        this.emit("video", r.user_id, r.audio_ssrc, r.video_ssrc, D(r.streams));
+                        this.emit("video", r.user_id, r.audio_ssrc, r.video_ssrc, w(r.streams));
                         break;
                     case 11:
                         this.emit("client-connect", r.user_ids);
@@ -386,12 +386,12 @@ class L extends o.Z {
     handleHello(e) {
         var t, n, r;
         if (((this.serverVersion = null != (t = e.v) ? t : g), this.serverVersion <= 3)) {
-            let t = d.isPlatformEmbedded ? I : T;
+            let t = d.isPlatformEmbedded ? S : I;
             this.heartbeatInterval = e.heartbeat_interval * t;
         } else
             (this.heartbeatInterval = e.heartbeat_interval * this.heartbeatIntervalModifier),
                 d.isPlatformEmbedded ||
-                    (this.heartbeatInterval = Math.min(S, null != (n = this.heartbeatInterval) ? n : NaN));
+                    (this.heartbeatInterval = Math.min(T, null != (n = this.heartbeatInterval) ? n : NaN));
         let i = (0, s.zO)() - this.connectionStartTime;
         this.logger.info(
             "[HELLO] heartbeat interval: "
@@ -406,7 +406,7 @@ class L extends o.Z {
         let t = (0, s.zO)() - this.connectionStartTime;
         this.logger.info("[READY] took ".concat(t, " ms")),
             this.serverVersion >= 6 && this.send(16, {}),
-            this.emit("ready", e.ip, e.port, e.modes, e.ssrc, D(e.streams), e.experiments);
+            this.emit("ready", e.ip, e.port, e.modes, e.ssrc, w(e.streams), e.experiments);
     }
     handleResumed(e) {
         this.backoff.succeed();
@@ -551,7 +551,7 @@ class L extends o.Z {
                 token: a,
                 max_dave_protocol_version: o,
                 video: s,
-                streams: R(l),
+                streams: P(l),
             });
     }
     expeditedHeartbeat(e) {
@@ -602,7 +602,7 @@ class L extends o.Z {
             ? (i = null)
             : "sdp" in n && null != n.sdp && "" !== n.sdp
               ? ((i = n.sdp),
-                (a = m(p({}, n), {
+                (a = h(_({}, n), {
                     codecs: N(n.codecs),
                     rtc_connection_id: t,
                 })))
@@ -617,14 +617,14 @@ class L extends o.Z {
                     port: n.port,
                     mode: n.mode,
                 }),
-                (a = m(p({}, n), {
+                (a = h(_({}, n), {
                     codecs: N(n.codecs),
                     rtc_connection_id: t,
                     experiments: r,
                 }))),
             this.send(
                 1,
-                p(
+                _(
                     {
                         protocol: e,
                         data: i,
@@ -650,7 +650,7 @@ class L extends o.Z {
             audio_ssrc: e,
             video_ssrc: t,
             rtx_ssrc: n,
-            streams: R(r),
+            streams: P(r),
         });
     }
     mediaSinkWants(e) {
@@ -676,26 +676,26 @@ class L extends o.Z {
     }
     constructor(e, t = f.Yn.DEFAULT) {
         super(),
-            _(this, "url", void 0),
-            _(this, "logger", void 0),
-            _(this, "backoff", new a.Z(1000, 5000)),
-            _(this, "webSocket", void 0),
-            _(this, "connectionState", void 0),
-            _(this, "heartbeatInterval", void 0),
-            _(this, "helloTimeout", void 0),
-            _(this, "heartbeater", void 0),
-            _(this, "lastHeartbeatAckTime", void 0),
-            _(this, "expeditedHeartbeatTimeout", void 0),
-            _(this, "heartbeatAck", void 0),
-            _(this, "heartbeatIntervalModifier", void 0),
-            _(this, "connectionStartTime", void 0),
-            _(this, "lastRecvSeqNum", void 0),
-            _(this, "sessionId", void 0),
-            _(this, "serverId", void 0),
-            _(this, "channelId", void 0),
-            _(this, "token", void 0),
-            _(this, "resumable", void 0),
-            _(this, "serverVersion", 0),
+            p(this, "url", void 0),
+            p(this, "logger", void 0),
+            p(this, "backoff", new a.Z(1000, 5000)),
+            p(this, "webSocket", void 0),
+            p(this, "connectionState", void 0),
+            p(this, "heartbeatInterval", void 0),
+            p(this, "helloTimeout", void 0),
+            p(this, "heartbeater", void 0),
+            p(this, "lastHeartbeatAckTime", void 0),
+            p(this, "expeditedHeartbeatTimeout", void 0),
+            p(this, "heartbeatAck", void 0),
+            p(this, "heartbeatIntervalModifier", void 0),
+            p(this, "connectionStartTime", void 0),
+            p(this, "lastRecvSeqNum", void 0),
+            p(this, "sessionId", void 0),
+            p(this, "serverId", void 0),
+            p(this, "channelId", void 0),
+            p(this, "token", void 0),
+            p(this, "resumable", void 0),
+            p(this, "serverVersion", 0),
             (this.url = e),
             (this.logger = new l.Z("RTCControlSocket(".concat(t, ")"))),
             this.logger.enableNativeLogger(!0),

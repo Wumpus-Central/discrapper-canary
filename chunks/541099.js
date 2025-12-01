@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r,
     i = n(442837),
     a = n(570140),
@@ -67,16 +67,16 @@ class d extends (r = i.ZP.Store) {
 function f() {
     u({ closeReason: o.ti.DISMISSED });
 }
-function _() {
+function p() {
     u({ closeReason: o.ti.COMMAND });
 }
 s(d, "displayName", "AppLauncherStore");
-let p = new d(a.Z, {
+let _ = new d(a.Z, {
     APP_LAUNCHER_SHOW: c,
     APP_LAUNCHER_DISMISS: u,
     CONNECTION_OPEN: f,
     LOGOUT: f,
     CHANNEL_SELECT: f,
-    APPLICATION_COMMAND_SET_ACTIVE_COMMAND: _,
-    APP_LAUNCHER_SET_ACTIVE_COMMAND: _,
+    APPLICATION_COMMAND_SET_ACTIVE_COMMAND: p,
+    APP_LAUNCHER_SET_ACTIVE_COMMAND: p,
 });

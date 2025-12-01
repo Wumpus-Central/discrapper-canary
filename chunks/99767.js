@@ -3,8 +3,8 @@ var r = n(473749),
     l = n(828700),
     i = n(335818),
     a = n(825102),
-    s = n(870289),
-    o = n(501431),
+    o = n(870289),
+    s = n(501431),
     c = n(149705),
     u = n(215023),
     d = n(981631);
@@ -16,8 +16,8 @@ let f = {
     },
     g = (e) => {
         let { enabled: t } = (0, a.WX)({ location: "useShopViewTransition" }),
-            n = (0, s.FF)("CollectiblesBrowse"),
-            { setItemTypeFilter: i, reset: g, setCurrentTab: p } = (0, o.S)(),
+            n = (0, o.FF)("CollectiblesBrowse"),
+            { setItemTypeFilter: i, reset: g, setCurrentTab: p } = (0, s.S)(),
             m = r.useMemo(() => (e !== u.AW.ORBS || t ? ((0, u.RE)(e) && n ? u.AW.CATALOG : e) : u.AW.HOME), [e, t, n]),
             [h, C] = r.useState(m),
             [_, b] = r.useState(u.f7.VISIBLE);

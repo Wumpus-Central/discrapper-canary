@@ -9,7 +9,7 @@ var r = n(948932),
 function u(e, t) {
     let { startDate: n = t.visibleRange.start, endDate: u = t.visibleRange.end, firstDayOfWeek: d } = e,
         { direction: f } = (0, l.j)(),
-        _ = (e) => {
+        p = (e) => {
             switch (e.key) {
                 case "Enter":
                 case " ":
@@ -43,11 +43,11 @@ function u(e, t) {
                     "setAnchorDate" in t && (e.preventDefault(), t.setAnchorDate(null));
             }
         },
-        p = (0, r.FK)(n, u, t.timeZone, !0),
-        { ariaLabel: h, ariaLabelledBy: m } = r.Lh.get(t),
+        _ = (0, r.FK)(n, u, t.timeZone, !0),
+        { ariaLabel: m, ariaLabelledBy: h } = r.Lh.get(t),
         g = (0, o.b)({
-            "aria-label": [h, p].filter(Boolean).join(", "),
-            "aria-labelledby": m,
+            "aria-label": [m, _].filter(Boolean).join(", "),
+            "aria-labelledby": h,
         }),
         E = (0, c.a)({
             weekday: e.weekdayStyle || "narrow",
@@ -68,7 +68,7 @@ function u(e, t) {
             "aria-readonly": t.isReadOnly || void 0,
             "aria-disabled": t.isDisabled || void 0,
             "aria-multiselectable": "highlightedRange" in t || void 0,
-            onKeyDown: _,
+            onKeyDown: p,
             onFocus: () => t.setFocused(!0),
             onBlur: () => t.setFocused(!1),
         }),

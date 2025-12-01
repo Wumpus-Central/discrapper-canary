@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(539854);
 var l = n(54381);
 n(473749);
-var a = n(442837),
-    i = n(481060),
+var i = n(442837),
+    a = n(481060),
     r = n(179658),
     o = n(482215),
     s = n(906467),
@@ -69,11 +69,11 @@ function f() {
             isForcedCanary: j,
             isSourceMapsEnabled: A,
             isIdleStatusIndicatorEnabled: N,
-            isAxeEnabled: w,
-            preventPopoutClose: _,
-            onlyShowPreviewAppCollections: D,
+            isAxeEnabled: I,
+            preventPopoutClose: w,
+            onlyShowPreviewAppCollections: _,
             disableAppCollectionsCache: x,
-        } = (0, a.cj)([c.default, u.default, s.Z], () => {
+        } = (0, i.cj)([c.default, u.default, s.Z], () => {
             var e;
             return {
                 layoutDebuggingEnabled: c.default.layoutDebuggingEnabled,
@@ -93,7 +93,7 @@ function f() {
                 disableAppCollectionsCache: c.default.disableAppCollectionsCache,
             };
         }),
-        { horizontalSpacing: I, verticalSpacing: T, maxHorizontalSpacing: C, maxVerticalSpacing: m } = (0, o.i)(),
+        { horizontalSpacing: D, verticalSpacing: T, maxHorizontalSpacing: C, maxVerticalSpacing: m } = (0, o.i)(),
         { setHorizontalSpacing: L, setVerticalSpacing: R } = o.i.getState(),
         Z = d.zY.useSetting(),
         k = [];
@@ -102,7 +102,7 @@ function f() {
             n &&
             (k.push(
                 (0, l.jsx)(
-                    i.sNh,
+                    a.sNh,
                     {
                         id: "overrides",
                         label: "Overrides",
@@ -118,7 +118,7 @@ function f() {
             ),
             k.push(
                 (0, l.jsx)(
-                    i.sNh,
+                    a.sNh,
                     {
                         id: "manual-triggers",
                         label: "Manual Triggers",
@@ -134,7 +134,7 @@ function f() {
             ),
             k.push(
                 (0, l.jsxs)(
-                    i.sNh,
+                    a.sNh,
                     {
                         id: "developer-flags",
                         label: "Developer Flags",
@@ -146,7 +146,7 @@ function f() {
                         },
                         children: [
                             (0, l.jsx)(
-                                i.S89,
+                                a.S89,
                                 {
                                     id: "tracing-requests",
                                     label: "Tracing Requests",
@@ -158,7 +158,7 @@ function f() {
                                 "tracing-requests",
                             ),
                             (0, l.jsx)(
-                                i.S89,
+                                a.S89,
                                 {
                                     id: "forced-canary",
                                     label: "Forced Canary",
@@ -170,7 +170,7 @@ function f() {
                                 "forced-canary",
                             ),
                             (0, l.jsx)(
-                                i.S89,
+                                a.S89,
                                 {
                                     id: "always-deliver",
                                     label: "Ads auto-targeting",
@@ -182,7 +182,7 @@ function f() {
                                 "always-deliver",
                             ),
                             (0, l.jsx)(
-                                i.S89,
+                                a.S89,
                                 {
                                     id: "source-maps",
                                     label: "Source Maps",
@@ -194,7 +194,7 @@ function f() {
                                 "source-maps",
                             ),
                             (0, l.jsx)(
-                                i.S89,
+                                a.S89,
                                 {
                                     id: "idle-status",
                                     label: "Idle Status Indicator",
@@ -206,43 +206,43 @@ function f() {
                                 "idle-status",
                             ),
                             (0, l.jsx)(
-                                i.S89,
+                                a.S89,
                                 {
                                     id: "accessibility-auditing",
                                     label: "Accessibility Auditing",
-                                    checked: w,
+                                    checked: I,
                                     action: () => {
-                                        (0, r.y)({ axeEnabled: !w });
+                                        (0, r.y)({ axeEnabled: !I });
                                     },
                                 },
                                 "accessibility-auditing",
                             ),
                             (0, l.jsx)(
-                                i.S89,
+                                a.S89,
                                 {
                                     id: "prevent-popout-close",
                                     label: "Prevent Popouts From Closing",
-                                    checked: _,
+                                    checked: w,
                                     action: () => {
-                                        (0, r.y)({ preventPopoutClose: !_ });
+                                        (0, r.y)({ preventPopoutClose: !w });
                                     },
                                 },
                                 "prevent-popout-close",
                             ),
                             (0, l.jsx)(
-                                i.S89,
+                                a.S89,
                                 {
                                     id: "preview-collections",
                                     label: "Preview Unpublished Collections",
-                                    checked: D,
+                                    checked: _,
                                     action: () => {
-                                        (0, r.y)({ onlyShowPreviewAppCollections: !D });
+                                        (0, r.y)({ onlyShowPreviewAppCollections: !_ });
                                     },
                                 },
                                 "preview-collections",
                             ),
                             (0, l.jsx)(
-                                i.S89,
+                                a.S89,
                                 {
                                     id: "disable-collections-cache",
                                     label: "Disable Collections Cache",
@@ -260,7 +260,7 @@ function f() {
             ),
             k.push(
                 (0, l.jsxs)(
-                    i.sNh,
+                    a.sNh,
                     {
                         id: "logging",
                         label: "Logging",
@@ -272,7 +272,7 @@ function f() {
                         },
                         children: [
                             (0, l.jsx)(
-                                i.S89,
+                                a.S89,
                                 {
                                     id: "gateway-events",
                                     label: "Gateway Events",
@@ -284,7 +284,7 @@ function f() {
                                 "gateway-events",
                             ),
                             (0, l.jsx)(
-                                i.S89,
+                                a.S89,
                                 {
                                     id: "overlay-events",
                                     label: "Overlay RPC Events",
@@ -296,7 +296,7 @@ function f() {
                                 "overlay-events",
                             ),
                             (0, l.jsx)(
-                                i.S89,
+                                a.S89,
                                 {
                                     id: "analytics-events",
                                     label: "Analytics Events",
@@ -308,7 +308,7 @@ function f() {
                                 "analytics-events",
                             ),
                             (0, l.jsx)(
-                                i.S89,
+                                a.S89,
                                 {
                                     id: "analytics-debugger",
                                     label: "Analytics Debugger",
@@ -326,7 +326,7 @@ function f() {
             ),
             k.push(
                 (0, l.jsx)(
-                    i.sNh,
+                    a.sNh,
                     {
                         id: "design-tools",
                         label: "Design Tools",
@@ -337,7 +337,7 @@ function f() {
                             });
                         },
                         children: (0, l.jsx)(
-                            i.S89,
+                            a.S89,
                             {
                                 id: "layout-debugging",
                                 label: "Enable Layout Debugging",
@@ -355,16 +355,16 @@ function f() {
             e &&
                 (k.push(
                     (0, l.jsx)(
-                        i.II_,
+                        a.II_,
                         {
                             id: "horizontal-spacing",
                             label: "Horizontal Spacing",
                             control: (e, t) =>
                                 (0, l.jsx)(
-                                    i._wy,
+                                    a._wy,
                                     y(E({}, e), {
                                         ref: t,
-                                        value: I,
+                                        value: D,
                                         minValue: 0,
                                         maxValue: C,
                                         onChange: (e) => L(e),
@@ -378,13 +378,13 @@ function f() {
                 ),
                 k.push(
                     (0, l.jsx)(
-                        i.II_,
+                        a.II_,
                         {
                             id: "vertical-spacing",
                             label: "Vertical Spacing",
                             control: (e, t) =>
                                 (0, l.jsx)(
-                                    i._wy,
+                                    a._wy,
                                     y(E({}, e), {
                                         ref: t,
                                         value: T,

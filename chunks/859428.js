@@ -9,14 +9,14 @@ var r = n(54381),
     u = n(749210),
     d = n(703656),
     f = n(430824),
-    _ = n(914010),
-    p = n(900849),
-    h = n(981631),
-    m = n(388032),
+    p = n(914010),
+    _ = n(900849),
+    m = n(981631),
+    h = n(388032),
     g = n(990186),
     E = n(226910);
 let b = () => {
-    let e = (0, s.e7)([_.Z], () => _.Z.getGuildId(), []),
+    let e = (0, s.e7)([p.Z], () => p.Z.getGuildId(), []),
         t = (0, s.e7)([f.Z], () => f.Z.getGuild(e), [e]),
         [n, a] = i.useState(!1);
     if (null == t) return null;
@@ -26,7 +26,7 @@ let b = () => {
         y = async () => {
             a(!0);
             try {
-                p.mT(t.id), await u.Z.joinGuild(t.id, { source: h.vtS.NOTICE_BAR });
+                _.mT(t.id), await u.Z.joinGuild(t.id, { source: m.vtS.NOTICE_BAR });
             } catch (e) {
                 a(!1);
             }
@@ -47,13 +47,13 @@ let b = () => {
                         color: "currentColor",
                         className: g.arrow,
                     }),
-                    m.intl.string(m.t["13/7kX"]),
+                    h.intl.string(h.t["13/7kX"]),
                 ],
             }),
             (0, r.jsx)(c.Text, {
                 className: g.header,
                 variant: "text-sm/normal",
-                children: m.intl.string(m.t["N/y2WE"]),
+                children: h.intl.string(h.t["N/y2WE"]),
             }),
             (0, r.jsx)(l.zx, {
                 className: g.button,
@@ -62,7 +62,7 @@ let b = () => {
                 size: l.zx.Sizes.NONE,
                 submitting: n,
                 onClick: y,
-                children: m.intl.format(m.t.uHN7ny, { guild: t.name }),
+                children: h.intl.format(h.t.uHN7ny, { guild: t.name }),
             }),
         ],
     });

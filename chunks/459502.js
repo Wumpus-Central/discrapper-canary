@@ -19,15 +19,15 @@ function b(e) {
         C = (0, p.sz)(t),
         v = null != (0, p.qY)(t),
         { canManageGuildEvent: _ } = (0, s.XJ)(y),
-        [x, j] = r.useState(() => new Set()),
-        O = r.useMemo(() => C.filter((e) => !x.has(e.id)), [C, x]),
-        E = (0, l.cj)([d.ZP], () => O.reduce((e, t) => ((e[t.id] = d.ZP.getUserCount(t.id, (0, h.DK)(t))), e), {}), [
-            O,
+        [O, x] = r.useState(() => new Set()),
+        j = r.useMemo(() => C.filter((e) => !O.has(e.id)), [C, O]),
+        E = (0, l.cj)([d.ZP], () => j.reduce((e, t) => ((e[t.id] = d.ZP.getUserCount(t.id, (0, h.DK)(t))), e), {}), [
+            j,
         ]);
-    return O.length < 1 || v
+    return j.length < 1 || v
         ? null
         : (0, i.jsx)(i.Fragment, {
-              children: O.map((e) =>
+              children: j.map((e) =>
                   (0, i.jsx)(
                       f.Z,
                       {
@@ -104,7 +104,7 @@ function b(e) {
                           onDismiss: b
                               ? () => {
                                     var t;
-                                    return (t = e.id), void j((e) => new Set(e).add(t));
+                                    return (t = e.id), void x((e) => new Set(e).add(t));
                                 }
                               : void 0,
                           userCount: E[e.id],

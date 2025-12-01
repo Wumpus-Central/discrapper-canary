@@ -1,4 +1,4 @@
-n.d(t, { d: () => j });
+n.d(t, { d: () => _ });
 var i = n(54381),
     l = n(473749),
     a = n(512722),
@@ -12,29 +12,29 @@ var i = n(54381),
     g = n(698708),
     m = n(844068),
     p = n(517730),
-    x = n(436585),
-    h = n(848118),
+    h = n(436585),
+    x = n(848118),
     v = n(388032),
     C = n(216215);
-function j(e) {
+function _(e) {
     var t;
     let { handleClose: n } = e,
         { analyticsLocations: a } = (0, c.ZP)(),
-        { skusById: j, selectedSkuId: b, application: _ } = (0, u.JL)(),
+        { skusById: _, selectedSkuId: j, application: b } = (0, u.JL)(),
         { isGift: I, giftRecipient: P } = (0, d.wD)();
-    r()(null != b, "Expected selectedSkuId"), r()(null != _, "Expected application");
-    let w = j[b];
+    r()(null != j, "Expected selectedSkuId"), r()(null != b, "Expected application");
+    let w = _[j];
     return (r()(null != w, "Expected sku"),
     l.useEffect(() => {
         I ||
-            ((0, x.U)(),
+            ((0, h.U)(),
             n(),
             (0, p.I)({
                 sku: w,
-                application: _,
+                application: b,
                 analyticsLocations: a,
             }));
-    }, [I, w, _, n, a]),
+    }, [I, w, b, n, a]),
     I)
         ? (0, i.jsxs)(f.C3, {
               children: [
@@ -43,7 +43,7 @@ function j(e) {
                   (0, i.jsxs)("div", {
                       className: C.confirmation,
                       children: [
-                          (0, i.jsx)(h.A, {
+                          (0, i.jsx)(x.A, {
                               sku: w,
                               shape: "square",
                               containerClassName: C.skuImage,

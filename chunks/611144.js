@@ -81,21 +81,21 @@ function f(e, t) {
         focusedY: i,
     });
 }
-function _(e, t) {
+function p(e, t) {
     let n = c(0, e.focusedY - 1);
     return s(a({}, e), {
         focusedX: u(e.columnCounts[n] - 1, e.focusedX),
         focusedY: n,
     });
 }
-function p(e, t) {
+function _(e, t) {
     let n = u(e.focusedY + 1, e.columnCounts.length - 1);
     return s(a({}, e), {
         focusedX: u(e.columnCounts[n] - 1, e.focusedX),
         focusedY: n,
     });
 }
-function h(e, t) {
+function m(e, t) {
     let n = e.focusedY !== e.columnCounts.length - 1 && e.focusedX + 1 === e.columnCounts[e.focusedY],
         r = n ? 0 : u(e.focusedX + 1, e.columnCounts[e.focusedY] - 1),
         i = n ? e.focusedY + 1 : e.focusedY;
@@ -104,7 +104,7 @@ function h(e, t) {
         focusedY: i,
     });
 }
-function m(e, t) {
+function h(e, t) {
     let n = 0 !== e.focusedY && 0 === e.focusedX,
         r = n ? e.focusedY - 1 : e.focusedY,
         i = n ? e.columnCounts[r] - 1 : c(0, e.focusedX - 1);
@@ -135,13 +135,13 @@ function y(e, t) {
 function O(e, t) {
     switch (t.type) {
         case r.Us.NAVIGATE_UP:
-            return _(e, t);
-        case r.Us.NAVIGATE_DOWN:
             return p(e, t);
+        case r.Us.NAVIGATE_DOWN:
+            return _(e, t);
         case r.Us.NAVIGATE_RIGHT:
-            return h(e, t);
-        case r.Us.NAVIGATE_LEFT:
             return m(e, t);
+        case r.Us.NAVIGATE_LEFT:
+            return h(e, t);
         case r.Us.NAVIGATE_INLINE_START:
             return g(e, t);
         case r.Us.NAVIGATE_INLINE_END:

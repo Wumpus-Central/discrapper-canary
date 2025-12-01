@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(539854), n(388685);
+n.d(t, { Z: () => T }), n(539854), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(442837),
@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(317381),
     d = n(812206),
     f = n(358221),
-    _ = n(199902),
-    p = n(366050),
-    h = n(594174),
-    m = n(981631),
+    p = n(199902),
+    _ = n(366050),
+    m = n(594174),
+    h = n(981631),
     g = n(354459),
     E = n(388032),
     b = n(186880);
@@ -57,7 +57,7 @@ function v(e, t) {
     }
     return n;
 }
-function I(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -68,20 +68,20 @@ function I(e, t) {
         e
     );
 }
-function T(e) {
-    let { closePopout: t, idle: n, pipWindows: i, voiceChannelId: o, onSelect: h } = e;
+function I(e) {
+    let { closePopout: t, idle: n, pipWindows: i, voiceChannelId: o, onSelect: m } = e;
     n && t();
     let b = (0, a.e7)([u.ZP], () => u.ZP.getCurrentEmbeddedActivity()),
-        y = (0, a.e7)([p.Z], () => p.Z.pipWindow),
+        y = (0, a.e7)([_.Z], () => _.Z.pipWindow),
         O = (0, a.e7)([f.Z], () => f.Z.getSelectedParticipant(o)),
         v = (0, a.e7)([f.Z], () => f.Z.getStreamParticipants(o));
-    function I(e) {
+    function S(e) {
         (null == y ? void 0 : y.id) !== e.pipWindow.id && (0, c.k3)(e.pipWindow.id);
         let t = e.participant;
         null != t && t.type !== g.fO.ACTIVITY && l.Z.selectParticipant(o, t.id);
     }
-    function T(e) {
-        if (e.pipWindow.component === m.NYg.ACTIVITY && null != b) {
+    function I(e) {
+        if (e.pipWindow.component === h.NYg.ACTIVITY && null != b) {
             var t;
             let e = null == (t = d.Z.getApplication(b.applicationId)) ? void 0 : t.name;
             return null == e
@@ -92,13 +92,13 @@ function T(e) {
             ? E.intl.string(E.t["ng/Kwl"])
             : E.intl.formatToPlainString(E.t.sqmFRg, { username: e.participant.userNick });
     }
-    function S() {
+    function T() {
         let e = [],
-            t = i.find((e) => e.component === m.NYg.VIDEO);
+            t = i.find((e) => e.component === h.NYg.VIDEO);
         return (
             null != t &&
                 v.forEach((n) => {
-                    let r = _.Z.getActiveStreamForApplicationStream(n.stream),
+                    let r = p.Z.getActiveStreamForApplicationStream(n.stream),
                         i = n.id === (null == O ? void 0 : O.id) && (null == y ? void 0 : y.id) === t.id;
                     null == r ||
                         i ||
@@ -115,14 +115,14 @@ function T(e) {
         var t;
         let n = e.pipWindow.id,
             i = null == (t = e.participant) ? void 0 : t.id,
-            a = T(e),
+            a = I(e),
             o = "".concat(n).concat(null != i ? i : "");
         return (0, r.jsx)(
             s.sNh,
             {
                 id: o,
                 label: a,
-                action: () => I(e),
+                action: () => S(e),
             },
             o,
         );
@@ -131,19 +131,19 @@ function T(e) {
         navId: "pip-menu",
         "aria-label": "switch PIP",
         onClose: t,
-        onSelect: h,
-        children: S().map(A),
+        onSelect: m,
+        children: T().map(A),
     });
 }
-let S = function (e) {
+let T = function (e) {
     let { voiceChannelId: t, idle: n } = e,
         l = i.useRef(null),
-        c = Array.from((0, a.e7)([p.Z], () => p.Z.pipWindows).values()).filter((e) => e.component !== m.NYg.ACTIVITY),
-        u = (0, a.Wu)([_.Z], () => _.Z.getAllActiveStreamsForChannel(t)).filter((e) => {
+        c = Array.from((0, a.e7)([_.Z], () => _.Z.pipWindows).values()).filter((e) => e.component !== h.NYg.ACTIVITY),
+        u = (0, a.Wu)([p.Z], () => p.Z.getAllActiveStreamsForChannel(t)).filter((e) => {
             var n;
-            return e.ownerId !== (null == (n = h.default.getCurrentUser()) ? void 0 : n.id) && e.channelId === t;
+            return e.ownerId !== (null == (n = m.default.getCurrentUser()) ? void 0 : n.id) && e.channelId === t;
         }),
-        d = (1 === c.length && c[0].component === m.NYg.ACTIVITY) || 0 === u.length,
+        d = (1 === c.length && c[0].component === h.NYg.ACTIVITY) || 0 === u.length,
         f = 1 === c.length && u.length <= 1;
     return d || f
         ? null
@@ -152,7 +152,7 @@ let S = function (e) {
               position: "bottom",
               renderPopout: (e) =>
                   (0, r.jsx)(
-                      T,
+                      I,
                       O(
                           {
                               voiceChannelId: t,
@@ -165,7 +165,7 @@ let S = function (e) {
               children: (e) =>
                   (0, r.jsx)(
                       s.P3F,
-                      I(O({ className: b.menuIcon }, e), {
+                      S(O({ className: b.menuIcon }, e), {
                           innerRef: l,
                           children: (0, r.jsx)(s.Huf, {
                               size: "md",

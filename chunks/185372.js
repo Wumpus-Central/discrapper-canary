@@ -13,7 +13,7 @@ var r = n(54381),
     u = n(981631),
     d = n(148781),
     f = n(197571);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,12 +37,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,12 +54,12 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -70,16 +70,16 @@ class b extends i.PureComponent {
     render() {
         let { lightSrc: e, darkSrc: t, width: n, height: i, offsetX: a, offsetY: l, style: u } = this.props;
         return (0, r.jsx)(E, {
-            children: (_) =>
+            children: (p) =>
                 (0, r.jsx)(c.Z.Child, {
                     grow: 0,
                     className: o()(d.image, f.marginBottom40),
-                    style: m(p({}, u), {
+                    style: h(_({}, u), {
                         width: n,
                         height: i,
                         marginLeft: a,
                         marginTop: l,
-                        backgroundImage: "url(".concat((0, s.wj)(_) ? t : e, ")"),
+                        backgroundImage: "url(".concat((0, s.wj)(p) ? t : e, ")"),
                     }),
                 }),
         });

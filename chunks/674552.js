@@ -1,8 +1,8 @@
 n.d(t, {
     Ne: () => d,
     Ny: () => f,
-    Or: () => p,
-    jt: () => h,
+    Or: () => h,
+    jt: () => p,
 }),
     n(388685);
 var r = n(54381);
@@ -28,7 +28,7 @@ function f() {
         className: u.unavailableBadge,
     });
 }
-function p(e) {
+function h(e) {
     let t,
         {
             audio: n,
@@ -53,7 +53,7 @@ function p(e) {
         isCurrentUserConnected: l,
     });
 }
-function h(e) {
+function p(e) {
     let { guildJoinRequestStatus: t } = e,
         [n, r] = (function (e) {
             switch (e) {

@@ -58,18 +58,18 @@ function d(e, t, n, r) {
 }
 let f = i.memo(function (e) {
     var { user: t, guildId: n, size: s = a.EFr.SIZE_32, animate: u = !1, "aria-hidden": f = !1 } = e,
-        _ = c(e, ["user", "guildId", "size", "animate", "aria-hidden"]);
-    let p = i.useContext(o.Z);
+        p = c(e, ["user", "guildId", "size", "animate", "aria-hidden"]);
+    let _ = i.useContext(o.Z);
     return (0, r.jsx)(
         a.qEK,
         l(
             {
-                src: d(t, (0, a.pxk)(s), u, null != n ? n : p),
+                src: d(t, (0, a.pxk)(s), u, null != n ? n : _),
                 size: s,
                 "aria-label": f ? void 0 : t.username,
                 "aria-hidden": f,
             },
-            _,
+            p,
         ),
     );
 });

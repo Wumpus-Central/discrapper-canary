@@ -1,6 +1,6 @@
 n.d(t, {
     Bh: () => f,
-    G5: () => _,
+    G5: () => p,
     ig: () => d,
 });
 var r = n(399606),
@@ -49,12 +49,12 @@ function d(e) {
         userId: a.default.getId(),
         newUserMinAgeRequiredOverridden: l.Z.newUserMinAgeRequiredOverridden,
     }));
-    return n ? e : e.filter((e) => _(t, e));
+    return n ? e : e.filter((e) => p(t, e));
 }
 function f(e) {
-    return !l.Z.newUserMinAgeRequiredOverridden && !_(a.default.getId(), e);
+    return !l.Z.newUserMinAgeRequiredOverridden && !p(a.default.getId(), e);
 }
-function _(e, t) {
+function p(e, t) {
     var n;
     return null != e && s.default.age(e) >= (null != (n = c[t]) ? n : u);
 }

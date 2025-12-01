@@ -9,9 +9,9 @@ var r = n(54381),
     u = n(966902),
     d = n(237872),
     f = n(562618),
-    _ = n(388032),
-    p = n(254477);
-function h(e, t, n) {
+    p = n(388032),
+    _ = n(254477);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,7 +35,7 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
@@ -88,15 +88,15 @@ function O(e) {
     var t,
         n,
         a,
-        h,
+        m,
         g,
         {
             steps: y,
             caretConfig: O = { align: "center" },
             size: v = "md",
-            onStepChange: I,
-            onRequestClose: T,
-            popoverRef: S,
+            onStepChange: S,
+            onRequestClose: I,
+            popoverRef: T,
             shouldShow: A,
             position: C,
         } = e,
@@ -110,48 +110,48 @@ function O(e) {
             "shouldShow",
             "position",
         ]);
-    let [R, P] = i.useState(0);
+    let [P, R] = i.useState(0);
     i.useEffect(() => {
-        A && P(0);
+        A && R(0);
     }, [A]),
         i.useEffect(() => {
-            null == I || I(R);
-        }, [R, I]);
-    let D = y[R],
-        w = R + 1 === y.length,
-        L = i.useCallback(() => {
-            var e;
-            null == D || null == (e = D.onCta) || e.call(D), w ? null == T || T() : P((e) => e + 1);
-        }, [D, w, T]),
+            null == S || S(P);
+        }, [P, S]);
+    let w = y[P],
+        D = P + 1 === y.length,
         x = i.useCallback(() => {
-            null == T || T();
-        }, [T]),
-        M = i.useCallback(() => {
-            null == T || T();
-        }, [T]);
-    if (!A || null == D) return null;
-    let k = m(
+            var e;
+            null == w || null == (e = w.onCta) || e.call(w), D ? null == I || I() : R((e) => e + 1);
+        }, [w, D, I]),
+        L = i.useCallback(() => {
+            null == I || I();
+        }, [I]),
+        j = i.useCallback(() => {
+            null == I || I();
+        }, [I]);
+    if (!A || null == w) return null;
+    let M = h(
             {
                 text:
-                    null != (a = null == (t = D.action) ? void 0 : t.text)
+                    null != (a = null == (t = w.action) ? void 0 : t.text)
                         ? a
-                        : w
-                          ? _.intl.string(_.t.i4jeWR)
-                          : _.intl.string(_.t.PDTjLN),
-                variant: null != (h = null == (n = D.action) ? void 0 : n.variant) ? h : "primary",
-                onClick: L,
+                        : D
+                          ? p.intl.string(p.t.i4jeWR)
+                          : p.intl.string(p.t.PDTjLN),
+                variant: null != (m = null == (n = w.action) ? void 0 : n.variant) ? m : "primary",
+                onClick: x,
             },
-            D.action,
+            w.action,
         ),
-        j = m(
+        k = h(
             {
                 targetElementRef: N.targetElementRef,
                 hasVideo: N.hasVideo,
                 scrollBehavior: N.scrollBehavior,
                 position: C,
                 shouldShow: A,
-                onRequestClose: x,
-                gradientColor: D.gradientColor,
+                onRequestClose: L,
+                gradientColor: w.gradientColor,
                 caretConfig: O,
             },
             "edge" === N.alignmentStrategy
@@ -163,44 +163,44 @@ function O(e) {
         );
     return (0, r.jsx)(
         c.m,
-        E(m({}, j), {
+        E(h({}, k), {
             children: (0, r.jsxs)("div", {
-                ref: S,
+                ref: T,
                 children: [
                     (0, r.jsx)(d.u, {
-                        onClick: M,
-                        variant: null != D.gradientColor ? "color-mix" : void 0,
+                        onClick: j,
+                        variant: null != w.gradientColor ? "color-mix" : void 0,
                     }),
-                    null != D.graphic &&
+                    null != w.graphic &&
                         (0, r.jsx)("div", {
-                            className: o()(p.graphic, { [p["graphic--".concat(v)]]: null != v }),
+                            className: o()(_.graphic, { [_["graphic--".concat(v)]]: null != v }),
                             children: (0, r.jsx)(
                                 s.zsu,
-                                E(m({}, D.graphic), {
-                                    aspectRatio: null != (g = D.graphic.aspectRatio) ? g : "sm" === v ? "2/1" : "16/9",
+                                E(h({}, w.graphic), {
+                                    aspectRatio: null != (g = w.graphic.aspectRatio) ? g : "sm" === v ? "2/1" : "16/9",
                                 }),
                             ),
                         }),
                     (0, r.jsx)(f.Y, {
-                        title: D.title,
-                        body: D.body,
-                        badge: D.badge,
-                        textLink: D.textLink,
+                        title: w.title,
+                        body: w.body,
+                        badge: w.badge,
+                        textLink: w.textLink,
                     }),
                     (0, r.jsx)("div", {
-                        className: p.actionBar,
+                        className: _.actionBar,
                         children: (0, r.jsxs)("div", {
-                            className: p.multistepActionLayout,
+                            className: _.multistepActionLayout,
                             children: [
                                 (0, r.jsx)(s.xvT, {
                                     variant: "text-xs/normal",
-                                    className: p.multistepIndicator,
-                                    children: _.intl.formatToPlainString(_.t.rO31eY, {
-                                        count: R + 1,
+                                    className: _.multistepIndicator,
+                                    children: p.intl.formatToPlainString(p.t.rO31eY, {
+                                        count: P + 1,
                                         totalSteps: y.length,
                                     }),
                                 }),
-                                (0, r.jsx)(l.zxk, m({ size: "sm" }, k)),
+                                (0, r.jsx)(l.zxk, h({ size: "sm" }, M)),
                             ],
                         }),
                     }),

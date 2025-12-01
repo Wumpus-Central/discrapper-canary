@@ -1,10 +1,10 @@
 n.d(t, {
     AZ: () => u,
-    RL: () => p,
+    RL: () => _,
     cN: () => f,
     gr: () => d,
-    pB: () => _,
-    vu: () => h,
+    pB: () => p,
+    vu: () => m,
 }),
     n(388685);
 var r = n(423875),
@@ -32,23 +32,23 @@ function f(e, t) {
             ("game_name" in n ? t.name === n.game_name : "activity_name" in n && t.name === n.activity_name))
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (u(e)) {
         var n;
         return (0, l.Ps)(null == (n = t.party) ? void 0 : n.id);
     }
     return !1;
 }
-function p(e, t) {
+function _(e, t) {
     return !!((0, i.Z)(t) && d(e)) && e.extra.media_title === t.details;
 }
-function h(e, t) {
+function m(e, t) {
     let n = e.filter(o.kr);
     return t.type === s.IIU.PLAYING
         ? n.filter(a.dX).find((e) => f(e, t))
         : t.type === s.IIU.LISTENING
-          ? n.filter(a.dU).find((e) => _(e, t))
+          ? n.filter(a.dU).find((e) => p(e, t))
           : t.type === s.IIU.WATCHING
-            ? e.filter(a.y0).find((e) => p(e, t))
+            ? e.filter(a.y0).find((e) => _(e, t))
             : void 0;
 }

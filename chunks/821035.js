@@ -10,12 +10,12 @@ var i = n(524437),
     u = n(666515),
     d = n(915009),
     f = n(880257),
-    _ = n(400313),
-    p = n(947707),
-    h = n(526761),
-    m = n(726985),
+    p = n(400313),
+    _ = n(947707),
+    m = n(526761),
+    h = n(726985),
     g = n(388032),
-    E = n(597754);
+    E = n(744038);
 function b(e, t, n) {
     return (
         t in e
@@ -50,8 +50,8 @@ function O() {
     let t = null == (e = (0, f.Z)()) || e,
         n = (0, d.LN)(),
         b = (0, u.r)(),
-        { explicitContentGuilds: O, explicitContentFriendDm: v, explicitContentNonFriendDm: I } = (0, c.B)(),
-        T = (e) => {
+        { explicitContentGuilds: O, explicitContentFriendDm: v, explicitContentNonFriendDm: S } = (0, c.B)(),
+        I = (e) => {
             let t = Object.values(e);
             if ((0, s.Ks)() && t.includes(i.Q4.SHOW))
                 return void a.Z.showAgeVerificationGetStartedModal({
@@ -59,7 +59,7 @@ function O() {
                 });
             (0, l.zj)(e);
         },
-        S = [
+        T = [
             {
                 value: i.Q4.BLUR,
                 label: g.intl.string(g.t.S49Uad),
@@ -79,44 +79,44 @@ function O() {
             value: i.Q4.SHOW,
             label: g.intl.string(g.t["5k5OFp"]),
         };
-    t && (S.unshift(C), A.unshift(C));
+    t && (T.unshift(C), A.unshift(C));
     let N = {
         isDisabled: b,
         tooltipText: n ? g.intl.string(E.default["6Af/cw"]) : void 0,
     };
-    return (0, r.jsxs)(_.n, {
-        setting: m.s6.PRIVACY_SENSITIVE_MEDIA_V2,
-        scrollPosition: h.FY.EXPLICIT_MEDIA_REDACTION_V2,
+    return (0, r.jsxs)(p.n, {
+        setting: h.s6.PRIVACY_SENSITIVE_MEDIA_V2,
+        scrollPosition: m.FY.EXPLICIT_MEDIA_REDACTION_V2,
         description: g.intl.string(g.t.Wnojv1),
         children: [
             (0, r.jsx)(
-                p.Z,
+                _.Z,
                 y(
                     {
                         title: g.intl.string(g.t["+uI23H"]),
                         value: v,
-                        onChange: (e) => T({ explicitContentFriendDm: e }),
-                        options: S,
+                        onChange: (e) => I({ explicitContentFriendDm: e }),
+                        options: T,
                     },
                     N,
                 ),
             ),
             (0, r.jsx)(
-                p.Z,
+                _.Z,
                 y(
                     {
                         title: g.intl.string(g.t["Yh+HX1"]),
-                        value: I,
-                        onChange: (e) => T({ explicitContentNonFriendDm: e }),
-                        options: S,
+                        value: S,
+                        onChange: (e) => I({ explicitContentNonFriendDm: e }),
+                        options: T,
                     },
                     N,
                 ),
             ),
-            (0, r.jsx)(p.Z, {
+            (0, r.jsx)(_.Z, {
                 title: g.intl.string(g.t["FP+a42"]),
                 value: O,
-                onChange: (e) => T({ explicitContentGuilds: e }),
+                onChange: (e) => I({ explicitContentGuilds: e }),
                 isDisabled: !t || b,
                 tooltipText: n ? g.intl.string(E.default["6Af/cw"]) : void 0,
                 options: A,

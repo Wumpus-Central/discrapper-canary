@@ -5,19 +5,19 @@ var i = n(54381),
     r = n(906732),
     s = n(835473),
     o = n(987209),
-    d = n(563132),
-    c = n(409813),
+    c = n(563132),
+    d = n(409813),
     u = n(107998),
-    g = n(791785),
-    f = n(961830),
+    f = n(791785),
+    g = n(961830),
     m = n(55563),
     p = n(551428),
-    x = n(411935),
-    h = n(444448),
+    h = n(411935),
+    x = n(444448),
     v = n(439293),
     C = n(152242),
-    j = n(231338);
-function b(e) {
+    _ = n(231338);
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -42,7 +42,7 @@ function b(e) {
     }
     return e;
 }
-let _ = function () {
+let b = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     return (t, n, l) =>
         (0, i.jsx)(v.Z, {
@@ -59,16 +59,16 @@ function I(e) {
             applicationId: a,
             analyticsLocationObject: s,
             skuId: o,
-            isGift: c,
+            isGift: d,
         } = e,
-        {} = (0, d.JL)(),
+        {} = (0, c.JL)(),
         { analyticsLocations: u } = (0, r.ZP)();
-    return (0, i.jsx)(g.PaymentModal, {
+    return (0, i.jsx)(f.PaymentModal, {
         onClose: t,
         onComplete: n,
         applicationId: a,
         skuId: o,
-        renderHeader: _(c),
+        renderHeader: b(d),
         initialPlanId: null,
         analyticsObject: s,
         analyticsLocations: u,
@@ -79,52 +79,52 @@ function P(e) {
     let {
             loadId: t,
             applicationId: n,
-            skuId: g,
+            skuId: f,
             analyticsLocations: v,
-            isGift: _ = !1,
+            isGift: b = !1,
             giftRecipient: P,
             giftingOrigin: w,
         } = e,
         { analyticsLocations: y } = (0, r.ZP)(v, a.Z.SLAYER_STOREFRONT_PAYMENT_MODAL),
-        N = (0, s.q)(n);
+        S = (0, s.q)(n);
     return (
         l.useEffect(() => {
-            null == N ||
-                null == N.guildId ||
-                null == g ||
-                p.Z.isFetchingForSKU(g) ||
-                null != m.Z.get(g) ||
-                (0, x.y)(N.guildId, g);
-        }, [N, g]),
+            null == S ||
+                null == S.guildId ||
+                null == f ||
+                p.Z.isFetchingForSKU(f) ||
+                null != m.Z.get(f) ||
+                (0, h.y)(S.guildId, f);
+        }, [S, f]),
         (0, i.jsx)(r.Gt, {
             value: y,
-            children: (0, i.jsx)(d.PaymentContextProvider, {
+            children: (0, i.jsx)(c.PaymentContextProvider, {
                 loadId: t,
                 stepConfigs: (function () {
                     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                     return [
-                        f.WA,
+                        g.WA,
                         ...(e ? [C.jM] : []),
-                        f.s2,
-                        ...f.yp,
-                        f.wo,
+                        g.s2,
+                        ...g.yp,
+                        g.wo,
                         {
-                            key: c.h8.CONFIRM,
-                            renderStep: (e) => (0, i.jsx)(h.d, b({}, e)),
+                            key: d.h8.CONFIRM,
+                            renderStep: (e) => (0, i.jsx)(x.d, j({}, e)),
                         },
                     ];
-                })(_),
+                })(b),
                 applicationId: n,
-                skuIDs: [g],
+                skuIDs: [f],
                 activeSubscription: null,
-                purchaseType: j.GZ.ONE_TIME,
-                isGift: _,
+                purchaseType: _.GZ.ONE_TIME,
+                isGift: b,
                 children: (0, i.jsx)(u.c1, {
                     children: (0, i.jsx)(o.KB, {
-                        isGift: _,
+                        isGift: b,
                         giftRecipient: P,
                         giftingOrigin: w,
-                        children: (0, i.jsx)(I, b({}, e)),
+                        children: (0, i.jsx)(I, j({}, e)),
                     }),
                 }),
             }),

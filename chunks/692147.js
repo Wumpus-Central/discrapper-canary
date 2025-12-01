@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(54381),
     i = n(473749),
     a = n(392711),
@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function _(e) {
     }
     return e;
 }
-function p(e) {
+function _(e) {
     let { reactionRef: t, count: n } = e,
         r = i.useRef(n),
         l = (0, o.e7)([s.Z], () => s.Z.getState()),
@@ -54,9 +54,9 @@ function p(e) {
         null
     );
 }
-function h(e) {
+function m(e) {
     return (0, r.jsx)(l.Z, {
         confettiLocation: d.Hn.REACTION,
-        children: (0, r.jsx)(p, _({}, e)),
+        children: (0, r.jsx)(_, p({}, e)),
     });
 }

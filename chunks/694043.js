@@ -1,41 +1,41 @@
-_.d(e, {
+r.d(t, {
     Ak: () => o,
-    QC: () => E,
-    t$: () => i,
+    QC: () => _,
+    t$: () => s,
     zb: () => c,
 });
-var a = _(176984),
-    r = _(622916);
-let n = _(899517).n;
+var n = r(176984),
+    a = r(622916);
+let i = r(899517).n;
 function o() {
-    if (!("fetch" in n)) return !1;
+    if (!("fetch" in i)) return !1;
     try {
         return new Headers(), new Request("http://www.example.com"), new Response(), !0;
-    } catch (t) {
+    } catch (e) {
         return !1;
     }
 }
-function E(t) {
-    return t && /^function\s+\w+\(\)\s+\{\s+\[native code\]\s+\}$/.test(t.toString());
+function _(e) {
+    return e && /^function\s+\w+\(\)\s+\{\s+\[native code\]\s+\}$/.test(e.toString());
 }
-function i() {
+function s() {
     if ("string" == typeof EdgeRuntime) return !0;
     if (!o()) return !1;
-    if (E(n.fetch)) return !0;
-    let t = !1,
-        e = n.document;
-    if (e && "function" == typeof e.createElement)
+    if (_(i.fetch)) return !0;
+    let e = !1,
+        t = i.document;
+    if (t && "function" == typeof t.createElement)
         try {
-            let _ = e.createElement("iframe");
-            (_.hidden = !0),
-                e.head.appendChild(_),
-                _.contentWindow && _.contentWindow.fetch && (t = E(_.contentWindow.fetch)),
-                e.head.removeChild(_);
-        } catch (t) {
-            a.X && r.kg.warn("Could not create sandbox iframe for pure fetch check, bailing to window.fetch: ", t);
+            let r = t.createElement("iframe");
+            (r.hidden = !0),
+                t.head.appendChild(r),
+                r.contentWindow && r.contentWindow.fetch && (e = _(r.contentWindow.fetch)),
+                t.head.removeChild(r);
+        } catch (e) {
+            n.X && a.kg.warn("Could not create sandbox iframe for pure fetch check, bailing to window.fetch: ", e);
         }
-    return t;
+    return e;
 }
 function c() {
-    return "ReportingObserver" in n;
+    return "ReportingObserver" in i;
 }

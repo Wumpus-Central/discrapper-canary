@@ -11,22 +11,22 @@ var l = n(54381),
     f = n(700582),
     h = n(212819),
     m = n(933557),
-    b = n(266076),
+    p = n(266076),
     g = n(810123),
-    p = n(448486),
+    b = n(448486),
     y = n(987509),
     E = n(592125),
     S = n(430824),
     Z = n(158776),
     v = n(306680),
     P = n(699516),
-    j = n(594174),
-    O = n(55935),
+    O = n(594174),
+    j = n(55935),
     x = n(823379),
     L = n(51144),
-    _ = n(784384),
-    N = n(490897),
-    C = n(773921);
+    C = n(784384),
+    _ = n(490897),
+    N = n(773921);
 function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -101,10 +101,10 @@ function T(e) {
             onPressDestination: f,
             "aria-setsize": h,
             "aria-posinset": m,
-            className: b,
+            className: p,
         } = e,
         g = (0, c.JA)(t.id),
-        p = r.useCallback(() => {
+        b = r.useCallback(() => {
             null == f || f(t);
         }, [f, t]);
     return (0, l.jsxs)(
@@ -112,8 +112,8 @@ function T(e) {
         A(
             M(
                 {
-                    className: s()(C.destinationRow, b, { [C.disabled]: o }),
-                    onClick: o ? void 0 : p,
+                    className: s()(N.destinationRow, p, { [N.disabled]: o }),
+                    onClick: o ? void 0 : b,
                     "aria-selected": a,
                     "aria-setsize": h,
                     "aria-posinset": m,
@@ -123,24 +123,24 @@ function T(e) {
             {
                 children: [
                     (0, l.jsxs)("div", {
-                        className: C.identity,
+                        className: N.identity,
                         children: [
                             (0, l.jsx)("div", {
-                                className: C.iconWrapper,
+                                className: N.iconWrapper,
                                 children: n,
                             }),
                             (0, l.jsxs)("div", {
-                                className: C.labels,
+                                className: N.labels,
                                 children: [
                                     (0, l.jsx)(d.Text, {
                                         tag: "strong",
-                                        className: C.label,
+                                        className: N.label,
                                         variant: "text-md/semibold",
                                         lineClamp: 1,
                                         children: i,
                                     }),
                                     (0, l.jsx)(d.Text, {
-                                        className: C.subLabel,
+                                        className: N.subLabel,
                                         variant: "text-xs/normal",
                                         color: "text-muted",
                                         children: u,
@@ -150,7 +150,7 @@ function T(e) {
                         ],
                     }),
                     (0, l.jsx)("div", {
-                        className: C.checkbox,
+                        className: N.checkbox,
                         children: (0, l.jsx)(d.FZ5, {
                             checked: !!a,
                             disabled: o,
@@ -186,11 +186,11 @@ function w(e) {
     var { channel: t, subLabel: n } = e,
         r = I(e, ["channel", "subLabel"]);
     let i = (0, m.ZP)(t),
-        s = (0, p._)(t);
+        s = (0, b._)(t);
     return (0, l.jsx)(
         T,
         A(M({}, r), {
-            icon: (0, l.jsx)(b.Z, {
+            icon: (0, l.jsx)(p.Z, {
                 "aria-hidden": !0,
                 size: d.EFr.SIZE_32,
                 channel: t,
@@ -205,20 +205,20 @@ function R(e) {
         r = I(e, ["channel", "subLabel"]);
     let i = (0, o.e7)([S.Z], () => S.Z.getGuild(null == t ? void 0 : t.guild_id)),
         s = (0, m.ZP)(t),
-        u = (0, o.e7)([E.Z, j.default, P.Z], () => {
+        u = (0, o.e7)([E.Z, O.default, P.Z], () => {
             let e = E.Z.getChannel(t.parent_id);
-            return null == e ? null : (0, m.F6)(e, j.default, P.Z, !1);
+            return null == e ? null : (0, m.F6)(e, O.default, P.Z, !1);
         }),
-        c = (0, o.e7)([v.ZP], () => v.ZP.lastMessageTimestamp(t.id, N.W.CHANNEL)),
+        c = (0, o.e7)([v.ZP], () => v.ZP.lastMessageTimestamp(t.id, _.W.CHANNEL)),
         f = null == i ? void 0 : i.name;
     if (t.isThread() || t.isForumPost()) {
         let e = t.isForumPost() ? d.Mmi : d.VL1;
         f = (0, l.jsxs)("div", {
-            className: C.threadSubLabel,
+            className: N.threadSubLabel,
             children: [
                 (0, l.jsx)(e, {
                     color: d.TVs.colors.TEXT_SECONDARY,
-                    className: C.subLabelIcon,
+                    className: N.subLabelIcon,
                 }),
                 (0, l.jsx)(d.Text, {
                     variant: "text-xs/medium",
@@ -230,7 +230,7 @@ function R(e) {
                     ? (0, l.jsxs)(l.Fragment, {
                           children: [
                               (0, l.jsx)(d.Text, {
-                                  className: C.subLabelSeparator,
+                                  className: N.subLabelSeparator,
                                   variant: "text-xs/medium",
                                   color: "text-secondary",
                                   children: "\u2022",
@@ -238,7 +238,7 @@ function R(e) {
                               (0, l.jsx)(d.Text, {
                                   variant: "text-xs/medium",
                                   color: "text-secondary",
-                                  children: (0, O.Xf)(a()(c)),
+                                  children: (0, j.Xf)(a()(c)),
                               }),
                           ],
                       })
@@ -280,7 +280,7 @@ function U(e) {
                 if (r > 0) return;
                 let { type: f, record: m } = t[s];
                 if (f === h.h8.HEADER) return;
-                let b =
+                let p =
                         f === h.h8.USER
                             ? {
                                   type: "user",
@@ -290,15 +290,15 @@ function U(e) {
                                   type: "channel",
                                   id: m.id,
                               },
-                    g = (0, y.hC)(b),
-                    p = (0, _.HY)(n, i, m, o),
+                    g = (0, y.hC)(p),
+                    b = (0, C.HY)(n, i, m, o),
                     E = d.includes(g),
                     S = {
                         key: g,
                         message: n,
-                        destination: b,
-                        subLabel: null != p ? p.label : void 0,
-                        disabled: (a && !E) || null != p,
+                        destination: p,
+                        subLabel: null != b ? b.label : void 0,
+                        disabled: (a && !E) || null != b,
                         selected: E,
                         onPressDestination: u,
                         "aria-posinset": s + 1,

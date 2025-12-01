@@ -1,4 +1,4 @@
-n.d(t, { i: () => _ });
+n.d(t, { i: () => p });
 var r = n(54381),
     i = n(473749),
     a = n(438393),
@@ -55,7 +55,7 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function _(e) {
+function p(e) {
     var { appId: t, skuId: n } = e,
         c = d(e, ["appId", "skuId"]);
     let { analyticsLocations: f } = (0, o.ZP)();

@@ -40,20 +40,20 @@ let l = { enabled: !1 },
     u = {},
     d = new Set(),
     f = {};
-function _(e) {
+function p(e) {
     var t;
     let n = null == (t = u[e]) ? void 0 : t.newMemberActions;
     return null == n ? null : ((f[e] = n), f[e]);
 }
-function p(e) {
+function _(e) {
     let { homeSettings: t, guildId: n } = e;
-    null != n && (null == t && (u[n] = l), (u[n] = t), _(n), d.delete(n));
+    null != n && (null == t && (u[n] = l), (u[n] = t), p(n), d.delete(n));
 }
-function h(e) {
+function m(e) {
     let { guildId: t } = e;
     d.add(t);
 }
-function m(e) {
+function h(e) {
     let { guildId: t } = e;
     d.delete(t);
 }
@@ -96,7 +96,7 @@ class O extends (r = i.ZP.Store) {
         return null == e || (null == (t = this.getSettings(e)) ? void 0 : t.newMemberActions) == null
             ? null
             : null == f[e]
-              ? _(e)
+              ? p(e)
               : f[e];
     }
     getActionForChannel(e, t) {
@@ -142,10 +142,10 @@ class O extends (r = i.ZP.Store) {
 }
 o(O, "displayName", "GuildOnboardingHomeSettingsStore");
 let v = new O(a.Z, {
-    GUILD_HOME_SETTINGS_FETCH_START: h,
-    GUILD_HOME_SETTINGS_FETCH_SUCCESS: p,
-    GUILD_HOME_SETTINGS_FETCH_FAIL: m,
-    GUILD_HOME_SETTINGS_UPDATE_SUCCESS: p,
+    GUILD_HOME_SETTINGS_FETCH_START: m,
+    GUILD_HOME_SETTINGS_FETCH_SUCCESS: _,
+    GUILD_HOME_SETTINGS_FETCH_FAIL: h,
+    GUILD_HOME_SETTINGS_UPDATE_SUCCESS: _,
     GUILD_HOME_SETTINGS_TOGGLE_ENABLED: g,
     GUILD_RESOURCE_CHANNEL_UPDATE_SUCCESS: b,
     GUILD_NEW_MEMBER_ACTION_UPDATE_SUCCESS: y,

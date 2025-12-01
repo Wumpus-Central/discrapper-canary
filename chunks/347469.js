@@ -28,32 +28,32 @@ let l = (e) => {
             onElementResizeStart: u,
             onElementResizeEnd: d,
             throttleDuration: f = a,
-            orientation: _,
-            usePointerEvents: p = !1,
-            getClampedValue: h = i.clamp,
+            orientation: p,
+            usePointerEvents: _ = !1,
+            getClampedValue: m = i.clamp,
         } = e,
-        [m, g] = r.useState(!1),
+        [h, g] = r.useState(!1),
         E = r.useRef(0),
         b = r.useRef(!1),
         y = r.useRef(null == t ? 0 : t);
     return (
         r.useLayoutEffect(() => {
-            if (!m || null == n.current) return;
+            if (!h || null == n.current) return;
             function e(e) {
-                let t = 1 === s(_) ? e.screenX : e.screenY,
-                    n = 0 === _ || 2 === _,
+                let t = 1 === s(p) ? e.screenX : e.screenY,
+                    n = 0 === p || 2 === p,
                     r = (t - E.current) * (n ? -1 : 1);
                 return y.current + r;
             }
             function t(e) {
-                return h(e, null != l ? l : 0, null != o ? o : e);
+                return m(e, null != l ? l : 0, null != o ? o : e);
             }
             let r = (0, i.throttle)(c, f),
                 a = (i) => {
                     if (null == n.current) return null;
                     let a = e(i),
                         o = t(a),
-                        l = 1 === s(_) ? "width" : "height";
+                        l = 1 === s(p) ? "width" : "height";
                     (n.current.style[l] = "".concat(o, "px")),
                         b.current || ((b.current = !0), null == u || u(o)),
                         r(o, a);
@@ -64,25 +64,25 @@ let l = (e) => {
                         i = t(r);
                     c(i, r), null == d || d(i), (b.current = !1);
                 },
-                v = p ? "pointerup" : "mouseup",
-                I = p ? "pointermove" : "mousemove",
-                T = n.current.ownerDocument;
+                v = _ ? "pointerup" : "mouseup",
+                S = _ ? "pointermove" : "mousemove",
+                I = n.current.ownerDocument;
             return (
-                T.addEventListener(v, O),
-                T.addEventListener(I, a),
+                I.addEventListener(v, O),
+                I.addEventListener(S, a),
                 () => {
-                    T.removeEventListener(v, O), T.removeEventListener(I, a), r.cancel();
+                    I.removeEventListener(v, O), I.removeEventListener(S, a), r.cancel();
                 }
             );
-        }, [m, c, l, o, _, n, f, d, p, h, u]),
+        }, [h, c, l, o, p, n, f, d, _, m, u]),
         r.useCallback(
             (e) => {
-                let t = 1 === s(_);
+                let t = 1 === s(p);
                 null != n.current && (y.current = t ? n.current.offsetWidth : n.current.offsetHeight),
                     (E.current = t ? e.screenX : e.screenY),
                     g(!0);
             },
-            [_, n],
+            [p, n],
         )
     );
 };

@@ -10,10 +10,10 @@ var i = n(120356),
     u = n(631885),
     d = n(568671),
     f = n(292352),
-    _ = n(597754),
-    p = n(388032),
-    h = n(26919),
-    m = n(519279),
+    p = n(744038),
+    _ = n(388032),
+    m = n(26919),
+    h = n(519279),
     g = n(633488),
     E = n(361848);
 let b = () => {
@@ -23,11 +23,11 @@ let b = () => {
         return (0, u.VM)() || (t && e)
             ? null
             : (0, r.jsx)("div", {
-                  className: h.button,
+                  className: m.button,
                   children: t
                       ? (0, r.jsx)(o.Button, {
                             variant: "primary",
-                            text: p.intl.string(p.t.LhlgY9),
+                            text: _.intl.string(_.t.LhlgY9),
                             onClick: () => n(f.dG.REQUESTS),
                         })
                       : (0, r.jsx)(d.Z, {}),
@@ -35,23 +35,23 @@ let b = () => {
     },
     y = () => {
         let e = (0, c.Z)(),
-            t = (0, s.o)(p.intl.string(_.default["T7GyW+"]), p.intl.string(_.default.goKE2b)),
+            t = (0, s.o)(_.intl.string(p.default["T7GyW+"]), _.intl.string(p.default.goKE2b)),
             n = (0, s.o)(
-                p.intl.format(_.default.MXjDSv, {
+                _.intl.format(p.default.MXjDSv, {
                     articleLink: "https://support.discord.com/hc/articles/14155060633623",
                 }),
-                p.intl.format(_.default.EMCf6j, {
+                _.intl.format(p.default.EMCf6j, {
                     articleLink: "https://support.discord.com/hc/articles/14155043715735",
                 }),
             );
         return (0, r.jsxs)("div", {
-            className: a()(h.container, m.box),
+            className: a()(m.container, h.box),
             children: [
                 (0, r.jsxs)("div", {
                     children: [
                         (0, r.jsx)("div", {
                             children: (0, r.jsxs)("div", {
-                                className: h.headerText,
+                                className: m.headerText,
                                 children: [
                                     (0, r.jsx)(o.Heading, {
                                         variant: "heading-xl/medium",
@@ -69,10 +69,10 @@ let b = () => {
                     ],
                 }),
                 (0, r.jsx)("div", {
-                    className: h.headerImage,
+                    className: m.headerImage,
                     children: (0, r.jsx)("img", {
                         src: e ? g : E,
-                        alt: p.intl.string(_.default.ffg6xd),
+                        alt: _.intl.string(p.default.ffg6xd),
                     }),
                 }),
             ],

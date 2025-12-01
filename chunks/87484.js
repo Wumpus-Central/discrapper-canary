@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(54381);
 n(473749);
 var i = n(772848),
@@ -48,7 +48,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,11 +59,11 @@ function _(e, t) {
         e
     );
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -71,7 +71,7 @@ function p(e, t) {
     }
     return i;
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -80,13 +80,13 @@ function h(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function m(e) {
+function h(e) {
     let {
             applicationId: t,
             skuId: u,
             onClose: f,
-            onComplete: h,
-            analyticsLocations: m,
+            onComplete: m,
+            analyticsLocations: h,
             analyticsLocationObject: g,
             contextKey: E,
             isGift: b = !1,
@@ -98,21 +98,21 @@ function m(e) {
             let { default: e } = await n.e("61670").then(n.bind(n, 409600));
             return (n) => {
                 var { onClose: i } = n,
-                    a = p(n, ["onClose"]);
+                    a = _(n, ["onClose"]);
                 return (0, r.jsx)(
                     e,
-                    _(d({}, a), {
+                    p(d({}, a), {
                         loadId: O,
                         applicationId: t,
                         skuId: u,
-                        analyticsLocations: m,
+                        analyticsLocations: h,
                         analyticsLocationObject: g,
                         isGift: b,
                         onClose: (e) => {
                             i(), null == f || f(e);
                         },
                         onComplete: (e) => {
-                            (y = !0), null == h || h(e);
+                            (y = !0), null == m || m(e);
                         },
                     }),
                 );
@@ -129,7 +129,7 @@ function m(e) {
                         is_gift: b,
                         sku_id: u,
                         application_id: t,
-                        location_stack: m,
+                        location_stack: h,
                     }),
                     (0, o.fw)(),
                     (0, s.p)(),

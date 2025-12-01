@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(54381),
     i = n(473749),
     a = n(442837),
@@ -36,45 +36,45 @@ function f(e) {
     }
     return e;
 }
-function _(e) {
+function p(e) {
     var t;
-    let { user: d, disabledInputs: _, containerClassName: p } = e,
-        { reducedMotion: h } = i.useContext(o.Sfi),
+    let { user: d, disabledInputs: p, containerClassName: _ } = e,
+        { reducedMotion: m } = i.useContext(o.Sfi),
         {
-            pendingAvatar: m,
+            pendingAvatar: h,
             pendingBanner: g,
             pendingAvatarDecoration: E,
             pendingProfileEffect: b,
             pendingDisplayNameStyles: y,
             pendingThemeColors: O,
             pendingPronouns: v,
-            pendingBio: I,
-            tryItOutThemeColors: T,
-            tryItOutAvatar: S,
+            pendingBio: S,
+            tryItOutThemeColors: I,
+            tryItOutAvatar: T,
             tryItOutBanner: A,
             tryItOutProfileEffect: C,
             tryItOutAvatarDecoration: N,
-            tryItOutDisplayNameStyles: R,
+            tryItOutDisplayNameStyles: P,
         } = (0, a.cj)([l.Z], () => f({}, l.Z.getAllPending(), l.Z.getAllTryItOut())),
-        P = (0, s.SD)({
+        R = (0, s.SD)({
             userId: d.id,
-            image: null != S ? S : m,
+            image: null != T ? T : h,
         });
     return (0, r.jsx)(c.Z, {
-        containerClassName: p,
+        containerClassName: _,
         user: d,
         pendingPronouns: v,
-        pendingBio: I,
+        pendingBio: S,
         pendingBanner: null != (t = null != A ? A : g) ? t : n(466045),
-        pendingDisplayNameStyles: null != R ? R : y,
-        pendingAvatar: P,
-        pendingThemeColors: null != T ? T : O,
+        pendingDisplayNameStyles: null != P ? P : y,
+        pendingAvatar: R,
+        pendingThemeColors: null != I ? I : O,
         pendingAvatarDecoration: void 0 !== N ? N : E,
         pendingProfileEffect: void 0 !== C ? C : b,
-        avatarClassName: null != S || null != m || h.enabled ? void 0 : u.spinningAvatar,
+        avatarClassName: null != T || null != h || m.enabled ? void 0 : u.spinningAvatar,
         canUsePremiumCustomization: !0,
         isTryItOut: !0,
-        disabledInputs: _,
+        disabledInputs: p,
         hideExampleButton: !0,
     });
 }

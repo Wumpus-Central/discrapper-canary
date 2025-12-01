@@ -15,10 +15,10 @@ var r = n(473749),
     u = n(592125),
     d = n(271383),
     f = n(878884),
-    _ = n(19780),
-    p = n(594174),
-    h = n(979651),
-    m = n(823379);
+    p = n(19780),
+    _ = n(594174),
+    m = n(979651),
+    h = n(823379);
 function g(e, t, n) {
     if ((null == e || 0 === e.length) && 0 === n.length) return t;
     let r = [],
@@ -52,11 +52,11 @@ function g(e, t, n) {
     );
 }
 function E(e, t) {
-    let n = (0, a.e7)([f.Z, _.Z], () => (e === _.Z.getChannelId() ? f.Z.getDesyncedVoiceStates() : null)),
+    let n = (0, a.e7)([f.Z, p.Z], () => (e === p.Z.getChannelId() ? f.Z.getDesyncedVoiceStates() : null)),
         i = (0, a.Wu)([s.Z], () => (null == e ? [] : [...s.Z.getGuildRingingUsers(e)])),
-        o = (0, a.Wu)([p.default], () => i.map((e) => p.default.getUser(e)).filter(m.lm)),
+        o = (0, a.Wu)([_.default], () => i.map((e) => _.default.getUser(e)).filter(h.lm)),
         c = (0, a.e7)([u.Z], () => u.Z.getBasicChannel(e)),
-        h = r.useMemo(
+        m = r.useMemo(
             () =>
                 o.map((e) => ({
                     voiceState: new l.Z(e.id),
@@ -71,7 +71,7 @@ function E(e, t) {
                 })),
             [o, null == c ? void 0 : c.guild_id],
         );
-    return r.useMemo(() => g(n, t, h), [n, t, h]);
+    return r.useMemo(() => g(n, t, m), [n, t, m]);
 }
 function b(e, t) {
     if (null == e || 0 === e.length) return t;
@@ -88,7 +88,7 @@ function b(e, t) {
     );
 }
 function y(e) {
-    return (0, a.e7)([f.Z, _.Z], () => (e === _.Z.getChannelId() ? f.Z.getDesyncedParticipants() : null));
+    return (0, a.e7)([f.Z, p.Z], () => (e === p.Z.getChannelId() ? f.Z.getDesyncedParticipants() : null));
 }
 function O(e, t) {
     let n = y(e);
@@ -96,27 +96,27 @@ function O(e, t) {
 }
 function v(e, t) {
     let n = (0, a.e7)([c.default], () => c.default.getId() === t),
-        i = (0, a.e7)([_.Z], () => _.Z.getChannelId()),
+        i = (0, a.e7)([p.Z], () => p.Z.getChannelId()),
         o = r.useRef(null),
         [s, l] = r.useState(!1),
         [u, d] = r.useState(!1),
         f = (0, a.e7)(
-            [_.Z, h.Z],
+            [p.Z, m.Z],
             () =>
                 null != t &&
                 null != e &&
-                _.Z.getChannelId() === e &&
-                null != h.Z.isInChannel(e, t) &&
-                _.Z.isUserConnected(t),
+                p.Z.getChannelId() === e &&
+                null != m.Z.isInChannel(e, t) &&
+                p.Z.isUserConnected(t),
         ),
-        p = (0, a.e7)(
-            [_.Z, h.Z],
+        _ = (0, a.e7)(
+            [p.Z, m.Z],
             () =>
                 null != t &&
                 null != e &&
-                _.Z.getChannelId() === e &&
-                null != h.Z.isInChannel(e, t) &&
-                !_.Z.isUserConnected(t),
+                p.Z.getChannelId() === e &&
+                null != m.Z.isInChannel(e, t) &&
+                !p.Z.isUserConnected(t),
         );
     return (
         r.useEffect(() => {
@@ -127,7 +127,7 @@ function v(e, t) {
         }, [e, i]),
         r.useEffect(
             () => (
-                p && null == o.current
+                _ && null == o.current
                     ? (o.current = setTimeout(() => {
                           (o.current = null), l(!0);
                       }, 250))
@@ -136,7 +136,7 @@ function v(e, t) {
                     clearTimeout(o.current), (o.current = null);
                 }
             ),
-            [p],
+            [_],
         ),
         !n && u && s
     );

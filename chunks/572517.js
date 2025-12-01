@@ -20,24 +20,24 @@ function h() {
         { claimableRewards: v } = (0, d.wD)();
     if (null == g || null == v) return null;
     let x = null == (e = g.getBackgroundImageUrl) ? void 0 : e.call(g, f),
-        y = (0, u.Yr)(x),
-        P =
+        P = (0, u.Yr)(x),
+        y =
             null == (t = g.gradientConfig)
                 ? void 0
                 : t.call(g, {
                       isDarkMode: f,
                       isAndroid: !1,
                   }),
-        S = (0, u.Tl)(P, {
+        j = (0, u.Tl)(y, {
             colorStops: [0, 12, 100],
         }),
-        j = (0, u.$q)(y, S, {
+        S = (0, u.$q)(P, j, {
             backgroundSize: "cover, auto",
             backgroundPosition: "right center, 0% 0%",
         });
     return (0, r.jsxs)("div", {
         className: m.promotionalFooterBanner,
-        style: j,
+        style: S,
         children: [
             (0, r.jsx)("div", {
                 className: m.avatar,

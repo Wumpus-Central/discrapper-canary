@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(539854);
+n.d(t, { Z: () => p }), n(539854);
 var r = n(54381);
 n(473749);
 var i = n(392711),
@@ -23,11 +23,11 @@ let u = 99,
               });
     },
     f = (0, s.Z)(d),
-    _ = (e) => {
+    p = (e) => {
         let { partySize: t, members: n, minAvatarsShown: i = 1, maxAvatarsShown: o = 2, guildId: s } = e,
-            { totalSize: d, knownSize: _ } = t;
+            { totalSize: d, knownSize: p } = t;
         if (d < i) return null;
-        let p = a()(n)
+        let _ = a()(n)
                 .filter(l.lm)
                 .take(o)
                 .map((e) =>
@@ -41,9 +41,9 @@ let u = 99,
                     ),
                 )
                 .value(),
-            h = d - _;
-        for (let e = 0; e < h && p.length < o; e++)
-            p.push(
+            m = d - p;
+        for (let e = 0; e < m && _.length < o; e++)
+            _.push(
                 (0, r.jsx)(
                     f,
                     {
@@ -53,10 +53,10 @@ let u = 99,
                     "empty-member-".concat(e),
                 ),
             );
-        let m = Math.max(Math.min(d - p.length, u), 0);
-        if (1 === m) {
+        let h = Math.max(Math.min(d - _.length, u), 0);
+        if (1 === h) {
             let e = n[o];
-            p.push(
+            _.push(
                 (0, r.jsx)(
                     f,
                     {
@@ -72,11 +72,11 @@ let u = 99,
             children: (0, r.jsxs)("div", {
                 className: c.partyMembers,
                 children: [
-                    p,
-                    m > 1
+                    _,
+                    h > 1
                         ? (0, r.jsxs)("div", {
                               className: c.partyMemberOverflow,
-                              children: ["+", m],
+                              children: ["+", h],
                           })
                         : null,
                 ],

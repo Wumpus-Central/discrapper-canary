@@ -1,7 +1,7 @@
 n.d(t, {
     Ir: () => H,
     J: () => V,
-    YN: () => j,
+    YN: () => k,
     ZP: () => W,
     iZ: () => G,
 }),
@@ -16,25 +16,25 @@ var r = n(54381),
     u = n(481060),
     d = n(239091),
     f = n(607070),
-    _ = n(439170),
-    p = n(594174),
-    h = n(69259),
-    m = n(370370),
+    p = n(439170),
+    _ = n(594174),
+    m = n(69259),
+    h = n(370370),
     g = n(107062),
     E = n(159862),
     b = n(227172),
     y = n(342998),
     O = n(551228),
     v = n(678869),
-    I = n(278399),
-    T = n(886217),
-    S = n(555672),
+    S = n(278399),
+    I = n(886217),
+    T = n(555672),
     A = n(644548),
     C = n(335326),
     N = n(268010),
-    R = n(797342),
-    P = n(206583);
-function D(e, t, n) {
+    P = n(797342),
+    R = n(206583);
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -47,7 +47,7 @@ function D(e, t, n) {
         e
     );
 }
-function w(e) {
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -58,12 +58,12 @@ function w(e) {
                 }),
             )),
             r.forEach(function (t) {
-                D(e, t, n[t]);
+                w(e, t, n[t]);
             });
     }
     return e;
 }
-function L(e, t) {
+function x(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -75,22 +75,22 @@ function L(e, t) {
     }
     return n;
 }
-function x(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : L(Object(t)).forEach(function (n) {
+            : x(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function M(e, t) {
+function j(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = k(e, t);
+        i = M(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -98,7 +98,7 @@ function M(e, t) {
     }
     return i;
 }
-function k(e, t) {
+function M(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -107,35 +107,35 @@ function k(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let j = 72,
+let k = 72,
     U = 2000;
 function G(e) {
-    return (null == e ? void 0 : e.type) === _.so.CONTENT_INVENTORY ? j : 0;
+    return (null == e ? void 0 : e.type) === p.so.CONTENT_INVENTORY ? k : 0;
 }
-let B = (e) => {
+let Z = (e) => {
         var { entry: t } = e,
-            n = M(e, ["entry"]);
+            n = j(e, ["entry"]);
         switch (t.content_type) {
             case l.s.PLAYED_GAME:
-                return (0, r.jsx)(E.Z, x(w({}, n), { entry: t }));
+                return (0, r.jsx)(E.Z, L(D({}, n), { entry: t }));
             case l.s.WATCHED_MEDIA:
-                return (0, r.jsx)(C.Z, x(w({}, n), { entry: t }));
+                return (0, r.jsx)(C.Z, L(D({}, n), { entry: t }));
             case l.s.TOP_GAME:
-                return (0, r.jsx)(S.ZP, x(w({}, n), { entry: t }));
+                return (0, r.jsx)(T.ZP, L(D({}, n), { entry: t }));
             case l.s.TOP_ARTIST:
-                return (0, r.jsx)(I.ZP, x(w({}, n), { entry: t }));
+                return (0, r.jsx)(S.ZP, L(D({}, n), { entry: t }));
             case l.s.LISTENED_SESSION:
-                return (0, r.jsx)(O.ZP, x(w({}, n), { entry: t }));
+                return (0, r.jsx)(O.ZP, L(D({}, n), { entry: t }));
             case l.s.LAUNCHED_ACTIVITY:
-                return (0, r.jsx)(m.Z, x(w({}, n), { entry: t }));
+                return (0, r.jsx)(h.Z, L(D({}, n), { entry: t }));
             default:
                 return null;
         }
     },
-    Z = (e) => {
+    B = (e) => {
         var t,
             { entry: n, targetElementRef: i } = e,
-            a = M(e, ["entry", "targetElementRef"]);
+            a = j(e, ["entry", "targetElementRef"]);
         return n.content_type === l.s.PLAYED_GAME
             ? (0, r.jsx)(y.Z, {
                   entry: n,
@@ -146,10 +146,10 @@ let B = (e) => {
     },
     F = (e) => {
         var { closePopout: t } = e,
-            n = M(e, ["closePopout"]);
+            n = j(e, ["closePopout"]);
         return (0, r.jsx)(
             V,
-            w(
+            D(
                 {
                     onReaction: (e, r) => {
                         n.trackRankingItemInteraction(e, {
@@ -160,7 +160,7 @@ let B = (e) => {
                     },
                     closePopout: t,
                     onVoiceChannelPreview: (e) => {
-                        n.trackRankingItemInteraction(P.xP.VOICE_CHANNEL_PREVIEWED, {
+                        n.trackRankingItemInteraction(R.xP.VOICE_CHANNEL_PREVIEWED, {
                             destinationChannelId: e.id,
                             destinationGuildId: e.guild_id,
                         });
@@ -172,20 +172,20 @@ let B = (e) => {
     },
     V = (e) => {
         var { entry: t } = e,
-            n = M(e, ["entry"]);
+            n = j(e, ["entry"]);
         switch (t.content_type) {
             case l.s.PLAYED_GAME:
-                return (0, r.jsx)(b.Z, x(w({}, n), { entry: t }));
+                return (0, r.jsx)(b.Z, L(D({}, n), { entry: t }));
             case l.s.WATCHED_MEDIA:
-                return (0, r.jsx)(N.Z, x(w({}, n), { entry: t }));
+                return (0, r.jsx)(N.Z, L(D({}, n), { entry: t }));
             case l.s.TOP_GAME:
-                return (0, r.jsx)(A.Z, x(w({}, n), { entry: t }));
+                return (0, r.jsx)(A.Z, L(D({}, n), { entry: t }));
             case l.s.TOP_ARTIST:
-                return (0, r.jsx)(T.Z, x(w({}, n), { entry: t }));
+                return (0, r.jsx)(I.Z, L(D({}, n), { entry: t }));
             case l.s.LISTENED_SESSION:
-                return (0, r.jsx)(v.Z, x(w({}, n), { entry: t }));
+                return (0, r.jsx)(v.Z, L(D({}, n), { entry: t }));
             case l.s.LAUNCHED_ACTIVITY:
-                return (0, r.jsx)(g.ZP, x(w({}, n), { entry: t }));
+                return (0, r.jsx)(g.ZP, L(D({}, n), { entry: t }));
             default:
                 return null;
         }
@@ -194,46 +194,46 @@ let B = (e) => {
     Y = (e) => {
         var t,
             { index: a, ref: l } = e,
-            _ = M(e, ["index", "ref"]);
-        let m = i.useRef(null),
+            p = j(e, ["index", "ref"]);
+        let h = i.useRef(null),
             [g, E] = i.useState("default"),
             [b, y] = i.useState(!1),
             O = (0, s.JA)("".concat(a)),
-            v = null == (t = p.default.getCurrentUser()) ? void 0 : t.isStaff(),
-            { isRich: I, appName: T } = (0, R.n)(_.entry),
-            S = i.useMemo(
+            v = null == (t = _.default.getCurrentUser()) ? void 0 : t.isStaff(),
+            { isRich: S, appName: I } = (0, P.n)(p.entry),
+            T = i.useMemo(
                 () => ({
-                    entry: _.entry,
-                    channelId: _.channel.id,
-                    guildId: _.channel.guild_id,
-                    requestId: _.requestId,
-                    richPresenceName: I ? T : void 0,
+                    entry: p.entry,
+                    channelId: p.channel.id,
+                    guildId: p.channel.guild_id,
+                    requestId: p.requestId,
+                    richPresenceName: S ? I : void 0,
                 }),
-                [T, _.channel.guild_id, _.channel.id, _.entry, _.requestId, I],
+                [I, p.channel.guild_id, p.channel.id, p.entry, p.requestId, S],
             ),
             A = i.useRef(!1),
             [C, N] = i.useState(!1),
-            [D, L] = i.useState(!1),
-            k = (0, c.e7)([f.Z], () => f.Z.keyboardModeEnabled);
+            [w, x] = i.useState(!1),
+            M = (0, c.e7)([f.Z], () => f.Z.keyboardModeEnabled);
         i.useEffect(() => {
-            C && k && L(!0);
-        }, [C, k]),
+            C && M && x(!0);
+        }, [C, M]),
             i.useLayoutEffect(() => {
-                null != m.current && y(!0);
+                null != h.current && y(!0);
             }, []);
-        let j = i.useCallback(
+        let k = i.useCallback(
                 (e) => {
                     v &&
                         (0, d.jW)(e, async () => {
                             let { default: e } = await n.e("153").then(n.bind(n, 330150));
                             return () =>
                                 (0, r.jsx)(e, {
-                                    entry: _.entry,
-                                    requestId: _.requestId,
+                                    entry: p.entry,
+                                    requestId: p.requestId,
                                 });
                         });
                 },
-                [_, v],
+                [p, v],
             ),
             G = i.useCallback(() => {
                 E(String(Date.now()));
@@ -241,15 +241,15 @@ let B = (e) => {
             V = i.useCallback(
                 function (e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                    (0, h.L)(e, w({}, S, t));
+                    (0, m.L)(e, D({}, T, t));
                 },
-                [S],
+                [T],
             ),
             Y = i.useMemo(
                 () =>
                     o().throttle(
                         (e) => {
-                            (0, h.L)(P.xP.CARD_POPOUT_OPEN, e);
+                            (0, m.L)(R.xP.CARD_POPOUT_OPEN, e);
                         },
                         U,
                         {
@@ -262,36 +262,36 @@ let B = (e) => {
             W = () => {
                 (A.current = !1),
                     setTimeout(() => {
-                        A.current || (N(!1), L(k));
+                        A.current || (N(!1), x(M));
                     }, 100);
             };
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                b && (0, r.jsx)(Z, x(w({}, _), { targetElementRef: m })),
+                b && (0, r.jsx)(B, L(D({}, p), { targetElementRef: h })),
                 (0, r.jsx)("div", {
                     ref: l,
                     onMouseEnter: () => {
                         (A.current = !0),
                             setTimeout(() => {
-                                A.current && N(!0), Y(S);
+                                A.current && N(!0), Y(T);
                             }, 100);
                     },
                     onMouseLeave: W,
                     children: (0, r.jsx)(u.yRy, {
-                        targetElementRef: m,
+                        targetElementRef: h,
                         renderPopout: (e) => {
                             let { closePopout: t } = e;
                             return (0, r.jsx)(H.Provider, {
                                 value: W,
                                 children: (0, r.jsx)(
                                     F,
-                                    w(
+                                    D(
                                         {
                                             closePopout: t,
                                             updatePopoutPosition: G,
                                             trackRankingItemInteraction: V,
                                         },
-                                        _,
+                                        p,
                                     ),
                                 ),
                             });
@@ -299,17 +299,17 @@ let B = (e) => {
                         position: "left",
                         shouldShow: C,
                         positionKey: g,
-                        onRequestOpen: () => Y(S),
+                        onRequestOpen: () => Y(T),
                         onRequestClose: () => {
-                            D && W();
+                            w && W();
                         },
                         spacing: 8,
                         children: (e, t) => {
                             let { isShown: n } = t;
                             return (0, r.jsx)(
                                 u.P3F,
-                                x(w({}, e, O), {
-                                    innerRef: m,
+                                L(D({}, e, O), {
+                                    innerRef: h,
                                     focusProps: {
                                         offset: {
                                             top: 4,
@@ -321,10 +321,10 @@ let B = (e) => {
                                     onClick: () => {
                                         C || N(!0);
                                     },
-                                    onContextMenu: j,
+                                    onContextMenu: k,
                                     children: (0, r.jsx)(
-                                        B,
-                                        x(w({}, _), {
+                                        Z,
+                                        L(D({}, p), {
                                             selected: n,
                                             hovered: A.current,
                                         }),

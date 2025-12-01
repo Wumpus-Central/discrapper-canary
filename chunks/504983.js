@@ -30,12 +30,12 @@ let c = {
             backgroundClassName: d,
         } = e;
         if (!a) return n;
-        let { border: f, background: _ } = c[i];
+        let { border: f, background: p } = c[i];
         return (0, r.jsx)("div", {
             ref: t,
             className: o()(f, u),
             children: (0, r.jsx)("div", {
-                className: o()(l ? _ : s.background, d),
+                className: o()(l ? p : s.background, d),
                 children: n,
             }),
         });

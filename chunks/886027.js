@@ -82,12 +82,12 @@ function c(e) {
         if ("blockQuote" === c.type || a.bN.areStylesDisabled(e)) continue;
         let f = c.children[0];
         if (!a.LC.isText(f)) continue;
-        let _ = f.text.match(/^\s*>>> /),
-            p = f.text.match(/^\s*> /);
-        if ((null != p || null != _ || t) && (i.Q.setNodes(e, { type: "blockQuote" }, { at: u }), !t)) {
+        let p = f.text.match(/^\s*>>> /),
+            _ = f.text.match(/^\s*> /);
+        if ((null != _ || null != p || t) && (i.Q.setNodes(e, { type: "blockQuote" }, { at: u }), !t)) {
             var n, r;
             let o =
-                    null != (r = null != (n = null == p ? void 0 : p[0].length) ? n : null == _ ? void 0 : _[0].length)
+                    null != (r = null != (n = null == _ ? void 0 : _[0].length) ? n : null == p ? void 0 : p[0].length)
                         ? r
                         : 0,
                 s = a.C0.child(u, 0);
@@ -103,7 +103,7 @@ function c(e) {
                     },
                 },
             }),
-                (t = null != _);
+                (t = null != p);
         }
     }
 }

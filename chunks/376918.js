@@ -1,6 +1,6 @@
 n.d(t, {
     Qt: () => f,
-    _H: () => p,
+    _H: () => _,
     a7: () => d,
 });
 var r = n(367907),
@@ -73,7 +73,7 @@ function d(e, t, n, i) {
     );
 }
 function f(e, t, n, i) {
-    var s, c, d, f, _;
+    var s, c, d, f, p;
     a.default.track(
         o.rMx.CHANNEL_AUTOCOMPLETE_SELECTED,
         u(l({}, (0, r.v_)(n), (0, r.hH)(n.guild_id)), {
@@ -85,12 +85,12 @@ function f(e, t, n, i) {
             num_sticker_results: null != (c = null == i ? void 0 : i.numStickerResults) ? c : 0,
             emoji_name: null != (d = null == i ? void 0 : i.expressionName) ? d : "",
             is_custom: null != (f = null == i ? void 0 : i.isCustom) && f,
-            is_animated: null != (_ = null == i ? void 0 : i.isAnimated) && _,
+            is_animated: null != (p = null == i ? void 0 : i.isAnimated) && p,
             application_id: null == i ? void 0 : i.applicationId,
         }),
     );
 }
-function _(e) {
+function p(e) {
     switch (e) {
         case i.V0.AUTOCOMPLETE:
             return "autocomplete";
@@ -102,11 +102,11 @@ function _(e) {
             return null;
     }
 }
-function p(e) {
+function _(e) {
     let { sticker: t, stickerSelectLocation: n, isReplacement: r, analyticsLocations: i } = e;
     a.default.track(o.rMx.STICKER_ATTACHED, {
         replaced: r,
-        source: _(n),
+        source: p(n),
         sticker_id: t.id,
         location_stack: i,
     });

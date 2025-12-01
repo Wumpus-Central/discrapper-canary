@@ -79,8 +79,8 @@ let u = [
     d = () => {
         let [e, t] = i.useState(15),
             [n, d] = i.useState(8),
-            [f, _] = i.useState("xl"),
-            p = i.useMemo(
+            [f, p] = i.useState("xl"),
+            _ = i.useMemo(
                 () =>
                     [...Array(e)].map((e, t) =>
                         (0, r.jsx)(
@@ -100,7 +100,7 @@ let u = [
                 (0, r.jsx)(s.Z, {
                     gap: n,
                     edgeFade: f,
-                    children: p,
+                    children: _,
                 }),
                 (0, r.jsx)(l.dv, {}),
                 (0, r.jsx)(l.BZ, {
@@ -126,7 +126,7 @@ let u = [
                     children: (0, r.jsx)(o.q4e, {
                         value: f,
                         options: u,
-                        onChange: (e) => _(e),
+                        onChange: (e) => p(e),
                         label: "Edge Fade Space",
                     }),
                 }),

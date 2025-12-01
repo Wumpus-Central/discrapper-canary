@@ -62,11 +62,11 @@ function f(e, t) {
         ? "timestamp" !== e.type
             ? null
             : o.Z.getCurrentConfig({ location: "renderElement" }, { autoTrackExposure: !1 }).enabled
-              ? (0, r.jsx)(_, d(c({}, t), { timestamp: e.parsed }))
+              ? (0, r.jsx)(p, d(c({}, t), { timestamp: e.parsed }))
               : null
         : null;
 }
-function _(e) {
+function p(e) {
     var t;
     let { timestamp: n, replace: o } = e,
         l = (e) => {

@@ -9,46 +9,46 @@ var r = n(54381),
     u = n(28664),
     d = n(481060),
     f = n(497321),
-    _ = n(100527),
-    p = n(43015),
-    h = n(136097),
-    m = n(266454),
+    p = n(100527),
+    _ = n(43015),
+    m = n(136097),
+    h = n(266454),
     g = n(246946),
     E = n(594174),
     b = n(460562),
     y = n(823379),
     O = n(313789),
     v = n(10298),
-    I = n(518596),
-    T = n(981631),
-    S = n(921944),
+    S = n(518596),
+    I = n(981631),
+    T = n(921944),
     A = n(388032),
     C = n(844642);
 function N() {
     let e,
-        { currentSession: t, otherSessions: n } = (0, h.h)(),
+        { currentSession: t, otherSessions: n } = (0, m.h)(),
         a = (0, s.e7)([g.Z], () => g.Z.hidePersonalInformation),
         o = (0, s.e7)([E.default], () => E.default.getCurrentUser()),
-        [_, b] = i.useState(!1);
+        [p, b] = i.useState(!1);
     i.useEffect(() => {
-        (0, m.Q3)(c.z.AUTH_SESSIONS_NEW, { dismissAction: S.L.AUTO }), (0, p.fw)();
+        (0, h.Q3)(c.z.AUTH_SESSIONS_NEW, { dismissAction: T.L.AUTO }), (0, _.fw)();
         let e = setTimeout(() => b(!0), 500);
         return () => {
-            clearTimeout(e), (0, p.$Z)();
+            clearTimeout(e), (0, _.$Z)();
         };
     }, []);
     let y = () => {
             l.tn.post({
-                url: T.ANM.AUTH_SESSION_NOTIFICATIONS_DEBUG,
+                url: I.ANM.AUTH_SESSION_NOTIFICATIONS_DEBUG,
                 rejectWithError: !0,
             });
         },
-        [O, I] = i.useState(new Set());
+        [O, S] = i.useState(new Set());
     return a
         ? (0, r.jsx)(f.Z, {})
         : ((e =
               null == t && 0 === n.length
-                  ? _
+                  ? p
                       ? (0, r.jsx)("div", {
                             className: C.loading,
                             children: (0, r.jsx)(d.$jN, {}),
@@ -64,7 +64,7 @@ function N() {
                                         label: A.intl.string(A.t.LLS19o),
                                         children:
                                             null != t
-                                                ? (0, r.jsx)(R, {
+                                                ? (0, r.jsx)(P, {
                                                       session: t,
                                                       current: !0,
                                                   })
@@ -77,20 +77,20 @@ function N() {
                                               children: [
                                                   n.map((e) =>
                                                       (0, r.jsx)(
-                                                          R,
+                                                          P,
                                                           {
                                                               session: e,
                                                               useChecks: O.size > 0,
                                                               checked: O.has(e.id_hash),
                                                               setChecked: (t) => {
                                                                   let n = new Set(O);
-                                                                  t ? n.add(e.id_hash) : n.delete(e.id_hash), I(n);
+                                                                  t ? n.add(e.id_hash) : n.delete(e.id_hash), S(n);
                                                               },
                                                           },
                                                           e.id_hash,
                                                       ),
                                                   ),
-                                                  (null == o ? void 0 : o.mfaEnabled) ? null : (0, r.jsx)(P, {}),
+                                                  (null == o ? void 0 : o.mfaEnabled) ? null : (0, r.jsx)(R, {}),
                                               ],
                                           }),
                                 ],
@@ -111,8 +111,8 @@ function N() {
                                                       : A.intl.string(A.t.cLmmeY),
                                               onClick: () => {
                                                   O.size > 0
-                                                      ? (0, p.L$)(Array.from(O))
-                                                      : (0, p.L$)(n.map((e) => e.id_hash));
+                                                      ? (0, _.L$)(Array.from(O))
+                                                      : (0, _.L$)(n.map((e) => e.id_hash));
                                               },
                                           }),
                                       }),
@@ -159,20 +159,20 @@ function N() {
               ],
           }));
 }
-function R(e) {
+function P(e) {
     var t, n, i, a, s;
-    let { session: l, current: c, setChecked: u, checked: f, useChecks: _ } = e,
-        m =
+    let { session: l, current: c, setChecked: u, checked: f, useChecks: p } = e,
+        h =
             null != (s = null == (t = l.client_info) ? void 0 : t.location)
                 ? s
                 : null == (n = l.client_info)
                   ? void 0
                   : n.ip,
         g = null == (i = l.client_info) ? void 0 : i.platform,
-        { text: E, icon: b } = D(null == (a = l.client_info) ? void 0 : a.os),
-        O = c ? null : (0, h.p)(l.approx_last_used_time),
+        { text: E, icon: b } = w(null == (a = l.client_info) ? void 0 : a.os),
+        O = c ? null : (0, m.p)(l.approx_last_used_time),
         v = [E, g].filter(y.lm),
-        I = [m, O].filter(y.lm);
+        S = [h, O].filter(y.lm);
     return (0, r.jsxs)(
         "div",
         {
@@ -206,12 +206,12 @@ function R(e) {
                             variant: "text-sm/medium",
                             className: C.sessionInfoRow,
                             children: [
-                                (0, r.jsx)("span", { children: I[0] }),
-                                I.length > 1 &&
+                                (0, r.jsx)("span", { children: S[0] }),
+                                S.length > 1 &&
                                     (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             (0, r.jsx)("span", { children: "\xB7" }),
-                                            (0, r.jsx)("span", { children: I[1] }),
+                                            (0, r.jsx)("span", { children: S[1] }),
                                         ],
                                     }),
                             ],
@@ -220,7 +220,7 @@ function R(e) {
                 }),
                 c
                     ? null
-                    : _
+                    : p
                       ? (0, r.jsx)("div", {
                             className: C.sessionCheckbox,
                             children: (0, r.jsx)(d.Cnq, {
@@ -233,7 +233,7 @@ function R(e) {
                       : (0, r.jsx)(d.P3F, {
                             className: C.sessionMoreButton,
                             onClick: (e) => {
-                                e.shiftKey ? null == u || u(!0) : (0, p.L$)(l.id_hash);
+                                e.shiftKey ? null == u || u(!0) : (0, _.L$)(l.id_hash);
                             },
                             "aria-label": A.intl.string(A.t.E4MJNt),
                             children: (0, r.jsx)(d.Dio, {
@@ -246,7 +246,7 @@ function R(e) {
         l.id_hash,
     );
 }
-function P() {
+function R() {
     return (0, r.jsxs)("div", {
         className: o()(C.session, C.legacySession),
         children: [
@@ -273,9 +273,9 @@ function P() {
                         children: (0, r.jsx)("span", {
                             children: A.intl.format(A.t["044+8i"], {
                                 onClick: () =>
-                                    (0, I.openUserSettings)(O.n.ACCOUNT_PANEL, {
-                                        section: T.oAB.ACCOUNT,
-                                        analyticsLocations: [_.Z.USER_SETTINGS_SESSIONS],
+                                    (0, S.openUserSettings)(O.n.ACCOUNT_PANEL, {
+                                        section: I.oAB.ACCOUNT,
+                                        analyticsLocations: [p.Z.USER_SETTINGS_SESSIONS],
                                     }),
                             }),
                         }),
@@ -285,7 +285,7 @@ function P() {
         ],
     });
 }
-function D(e) {
+function w(e) {
     switch (null == e ? void 0 : e.toLowerCase().trim()) {
         case null:
         case void 0:

@@ -15,8 +15,8 @@ var i = n(54381),
     m = n(809357),
     y = n(624864),
     b = n(987650),
-    v = n(981631),
-    _ = n(388032),
+    _ = n(981631),
+    v = n(388032),
     O = n(183322),
     E = n(197571);
 function x(e, t, n) {
@@ -34,10 +34,10 @@ function x(e, t, n) {
 }
 function S() {
     let e = h.default.getNotificationPositionMode(),
-        t = e !== v._vf.DISABLED,
+        t = e !== _._vf.DISABLED,
         n = u.ZP.getOverlayKeybind(),
         i = u.ZP.getOverlayChatKeybind();
-    l.Z.track(v.rMx.OVERLAY_SETTINGS_UPDATED, {
+    l.Z.track(_.rMx.OVERLAY_SETTINGS_UPDATED, {
         enabled: !0,
         notifications_enabled: t,
         notifications_position: t ? e : null,
@@ -49,7 +49,7 @@ function S() {
 }
 class Z extends r.PureComponent {
     componentDidMount() {
-        l.Z.track(v.rMx.SETTINGS_PANE_VIEWED, {
+        l.Z.track(_.rMx.SETTINGS_PANE_VIEWED, {
             settings_type: "overlay",
             destination_pane: "OVERLAY SETTINGS",
             origin_pane: null,
@@ -82,7 +82,7 @@ class Z extends r.PureComponent {
                         (0, i.jsx)(o.Heading, {
                             variant: "heading-md/semibold",
                             className: O.headerTitle,
-                            children: _.intl.string(_.t["35G2Mq"]),
+                            children: v.intl.string(v.t["35G2Mq"]),
                         }),
                         (0, i.jsx)("div", {
                             className: O.headerClose,
@@ -91,7 +91,7 @@ class Z extends r.PureComponent {
                                 size: "md",
                                 icon: o.Dio,
                                 onClick: this.props.onClose,
-                                "aria-label": _.intl.string(_.t.cpT0Cq),
+                                "aria-label": v.intl.string(v.t.cpT0Cq),
                             }),
                         }),
                     ],
@@ -118,12 +118,12 @@ class Z extends r.PureComponent {
                 (0, i.jsx)(o.njP.Item, {
                     id: "GENERAL",
                     className: O.tabBarItem,
-                    children: _.intl.string(_.t["0FYxxw"]),
+                    children: v.intl.string(v.t["0FYxxw"]),
                 }),
                 (0, i.jsx)(o.njP.Item, {
                     id: "VOICE",
                     className: O.tabBarItem,
-                    children: _.intl.string(_.t["3WeSiE"]),
+                    children: v.intl.string(v.t["3WeSiE"]),
                 }),
                 t,
             ],
@@ -159,31 +159,31 @@ class Z extends r.PureComponent {
                 shouldShowInviteNotification: r,
             } = this.props,
             s = !y.Z.isNotificationDisabled(b.n0.TextChat),
-            a = e !== v._vf.DISABLED;
+            a = e !== _._vf.DISABLED;
         return (0, i.jsxs)(o.C3N, {
             children: [
                 (0, i.jsx)(o.gNt, {
-                    label: _.intl.string(_.t.IQv8Eo),
+                    label: v.intl.string(v.t.IQv8Eo),
                     children: (0, i.jsx)(c.Z, {
                         position: e,
                         onChange: this.handleChangeNotificationPositionMode,
                     }),
                 }),
                 (0, i.jsx)(o.rsf, {
-                    label: _.intl.string(_.t.Fy5kPp),
+                    label: v.intl.string(v.t.Fy5kPp),
                     checked: s && a,
                     onChange: this.handleToggleTextChatNotifications,
                     disabled: !a,
                 }),
                 (0, i.jsx)(o.rsf, {
-                    label: _.intl.string(_.t["f+c48/"]),
-                    description: _.intl.string(_.t.W9DVVf),
+                    label: v.intl.string(v.t["f+c48/"]),
+                    description: v.intl.string(v.t.W9DVVf),
                     checked: r,
                     onChange: this.handleToggleInviteNotification,
                 }),
                 n &&
                     (0, i.jsx)(o.rsf, {
-                        label: _.intl.string(_.t.XZTl9r),
+                        label: v.intl.string(v.t.XZTl9r),
                         checked: t,
                         onChange: (e) => l.Z.setShowKeybindIndicators(e),
                     }),
@@ -196,50 +196,50 @@ class Z extends r.PureComponent {
             gap: 20,
             children: [
                 (0, i.jsx)(o.FXm, {
-                    label: _.intl.string(_.t.dnvZSg),
+                    label: v.intl.string(v.t.dnvZSg),
                     onChange: (e) => this.handleChangeAvatarSizeMode({ value: e }),
                     options: [
                         {
-                            value: v.ipw.LARGE,
-                            name: _.intl.string(_.t.YcOxtr),
+                            value: _.ipw.LARGE,
+                            name: v.intl.string(v.t.YcOxtr),
                         },
                         {
-                            value: v.ipw.SMALL,
-                            name: _.intl.string(_.t.BKIKqx),
+                            value: _.ipw.SMALL,
+                            name: v.intl.string(v.t.BKIKqx),
                         },
                     ],
                     value: e,
                 }),
                 (0, i.jsx)(o.FXm, {
-                    label: _.intl.string(_.t.J0dpcB),
+                    label: v.intl.string(v.t.J0dpcB),
                     onChange: (e) => this.handleChangeDisplayNameMode({ value: e }),
                     options: [
                         {
-                            value: v.wC$.ALWAYS,
-                            name: _.intl.string(_.t.nBmDrT),
+                            value: _.wC$.ALWAYS,
+                            name: v.intl.string(v.t.nBmDrT),
                         },
                         {
-                            value: v.wC$.ONLY_WHILE_SPEAKING,
-                            name: _.intl.string(_.t["2OvIZY"]),
+                            value: _.wC$.ONLY_WHILE_SPEAKING,
+                            name: v.intl.string(v.t["2OvIZY"]),
                         },
                         {
-                            value: v.wC$.NEVER,
-                            name: _.intl.string(_.t.ekjlPL),
+                            value: _.wC$.NEVER,
+                            name: v.intl.string(v.t.ekjlPL),
                         },
                     ],
                     value: t,
                 }),
                 (0, i.jsx)(o.FXm, {
-                    label: _.intl.string(_.t.swsWWC),
+                    label: v.intl.string(v.t.swsWWC),
                     onChange: (e) => this.handleChangeDisplayUserMode({ value: e }),
                     options: [
                         {
-                            value: v.OYC.ALWAYS,
-                            name: _.intl.string(_.t.nBmDrT),
+                            value: _.OYC.ALWAYS,
+                            name: v.intl.string(v.t.nBmDrT),
                         },
                         {
-                            value: v.OYC.ONLY_WHILE_SPEAKING,
-                            name: _.intl.string(_.t["2OvIZY"]),
+                            value: _.OYC.ONLY_WHILE_SPEAKING,
+                            name: v.intl.string(v.t["2OvIZY"]),
                         },
                     ],
                     value: n,
@@ -285,7 +285,7 @@ class Z extends r.PureComponent {
     }
     render() {
         return (0, i.jsxs)(o.VqE, {
-            "aria-label": _.intl.string(_.t["35G2Mq"]),
+            "aria-label": v.intl.string(v.t["35G2Mq"]),
             className: O.container,
             children: [this.renderHeader(), this.renderBody()],
         });

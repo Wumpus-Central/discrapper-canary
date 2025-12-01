@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(54381),
     i = n(473749),
     a = n(442837),
@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function _() {
+function p() {
     let e = (0, a.e7)([l.Z], () => l.Z.affinities.slice(0, 3)),
         t = e[0],
         { avatarSrc: n, eventHandlers: d } = (0, s.Z)({
@@ -44,13 +44,13 @@ function _() {
             size: o.EFr.SIZE_24,
             animateOnHover: !0,
         }),
-        _ = (e) => (null != e.globalName ? e.globalName : e.username),
-        p = i.useMemo(
+        p = (e) => (null != e.globalName ? e.globalName : e.username),
+        _ = i.useMemo(
             () =>
                 e.length >= 2
-                    ? c.intl.formatToPlainString(c.t.c7ETJH, { username: _(e[0]) })
+                    ? c.intl.formatToPlainString(c.t.c7ETJH, { username: p(e[0]) })
                     : 1 === e.length
-                      ? c.intl.formatToPlainString(c.t.dpjXPL, { username: _(e[0]) })
+                      ? c.intl.formatToPlainString(c.t.dpjXPL, { username: p(e[0]) })
                       : "",
             [e],
         );
@@ -75,7 +75,7 @@ function _() {
                       className: u.text,
                       variant: "text-sm/normal",
                       color: "always-white",
-                      children: p,
+                      children: _,
                   }),
               ],
           });

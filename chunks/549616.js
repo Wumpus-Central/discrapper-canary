@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(539854);
+n.d(t, { Z: () => m }), n(539854);
 var r = n(979554),
     i = n(884697),
     a = n(27123),
@@ -60,7 +60,7 @@ function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -68,7 +68,7 @@ function f(e, t) {
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -77,8 +77,8 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let p = (e) => e === r.Z.VARIANTS_GROUP || e === r.Z.EXTERNAL_SKU;
-class h extends s.Z {
+let _ = (e) => e === r.Z.VARIANTS_GROUP || e === r.Z.EXTERNAL_SKU;
+class m extends s.Z {
     static fromServer(e) {
         var {
                 products: t,
@@ -88,24 +88,24 @@ class h extends s.Z {
                 mobile_bg: s,
                 mobile_banner: l,
                 catalog_banner_asset: u,
-                hero_banner_asset: _,
-                featured_block: m,
+                hero_banner_asset: p,
+                featured_block: h,
                 hero_logo: g,
                 hero_logo_display_config: E,
                 hero_banner_display_config: b,
                 hero_banner_url: y,
                 hero_banner_animated_url: O,
                 hero_rive_url: v,
-                hero_logo_url: I,
-                catalog_banner_url: T,
-                catalog_banner_animated_url: S,
+                hero_logo_url: S,
+                catalog_banner_url: I,
+                catalog_banner_animated_url: T,
                 featured_block_url: A,
                 logo_url: C,
                 pdp_bg_url: N,
-                mobile_banner_url: R,
-                mobile_bg_url: P,
+                mobile_banner_url: P,
+                mobile_bg_url: R,
             } = e,
-            D = f(e, [
+            w = f(e, [
                 "products",
                 "logo",
                 "hero_ranking",
@@ -130,11 +130,11 @@ class h extends s.Z {
                 "mobile_banner_url",
                 "mobile_bg_url",
             ]);
-        return new h(
-            d(c({}, super.fromServer(D)), {
+        return new m(
+            d(c({}, super.fromServer(w)), {
                 products: t.reduce((e, t) => {
                     let n = o.Z.fromServer(t);
-                    return (p(n.type) || 0 !== n.items.length) && e.push(n), e;
+                    return (_(n.type) || 0 !== n.items.length) && e.push(n), e;
                 }, []),
                 logo: n,
                 heroRanking: r,
@@ -142,22 +142,22 @@ class h extends s.Z {
                 mobileBg: s,
                 mobileBanner: l,
                 catalogBannerAsset: u,
-                heroBannerAsset: _,
-                featuredBlock: m,
+                heroBannerAsset: p,
+                featuredBlock: h,
                 heroLogo: g,
                 heroLogoDisplayConfig: (0, i.QG)(E),
                 heroBannerDisplayConfig: (0, i.QG)(b),
                 heroBannerUrl: y,
                 heroBannerAnimatedUrl: O,
                 heroRiveUrl: v,
-                heroLogoUrl: I,
-                catalogBannerUrl: T,
-                catalogBannerAnimatedUrl: S,
+                heroLogoUrl: S,
+                catalogBannerUrl: I,
+                catalogBannerAnimatedUrl: T,
                 featuredBlockUrl: A,
                 logoUrl: C,
                 pdpBgUrl: N,
-                mobileBannerUrl: R,
-                mobileBgUrl: P,
+                mobileBannerUrl: P,
+                mobileBgUrl: R,
             }),
         );
     }

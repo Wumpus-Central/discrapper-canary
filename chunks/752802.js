@@ -6,11 +6,11 @@ n.d(t, {
 var i = n(54381),
     r = n(473749),
     l = n(120356),
-    o = n.n(l),
-    a = n(399606),
+    a = n.n(l),
+    o = n(399606),
     s = n(46973),
-    c = n(481060),
-    u = n(846027),
+    u = n(481060),
+    c = n(846027),
     d = n(239091),
     h = n(765250),
     p = n(872810),
@@ -19,23 +19,23 @@ var i = n(54381),
     g = n(194082),
     y = n(569545),
     O = n(871118),
-    v = n(172751),
-    E = n(728285),
-    b = n(352978),
-    _ = n(833519),
-    S = n(839662),
-    x = n(199902),
+    E = n(172751),
+    v = n(728285),
+    S = n(352978),
+    b = n(833519),
+    x = n(839662),
+    j = n(199902),
     I = n(314897),
     C = n(131951),
-    j = n(594174),
+    Z = n(594174),
     N = n(5192),
-    Z = n(444295),
-    w = n(32300),
-    T = n(1226),
+    w = n(444295),
+    T = n(32300),
+    _ = n(1226),
     P = n(981631),
     A = n(388032),
-    k = n(379746);
-function D(e) {
+    D = n(379746);
+function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -60,7 +60,7 @@ function D(e) {
     }
     return e;
 }
-function R(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -100,74 +100,74 @@ function L(e, t) {
 }
 function M(e) {
     let { participant: t } = e;
-    return (0, i.jsx)(c.aML, {
+    return (0, i.jsx)(u.aML, {
         "data-migration-pending": !0,
         text: A.intl.string(A.t["4EGMWL"]),
         children: (e) => {
             var { onClick: n } = e,
                 r = L(e, ["onClick"]);
             return (0, i.jsx)(
-                c.P3F,
-                R(D({}, r), {
-                    className: k.controlAction,
+                u.P3F,
+                k(R({}, r), {
+                    className: D.controlAction,
                     onClick: (e) => {
                         null == n || n(),
                             (0, p.g)((0, y.V9)(t.stream), !1),
                             e.stopPropagation(),
-                            (0, Z.Ws)(P.Odu.GO_LIVE, {
-                                type: Z.Qu.SCREEN_SHARE,
-                                value: Z.bk.DISABLED,
+                            (0, w.Ws)(P.Odu.GO_LIVE, {
+                                type: w.Qu.SCREEN_SHARE,
+                                value: w.bk.DISABLED,
                                 userId: t.user.id,
                             });
                     },
-                    children: (0, i.jsx)(c.g5r, {
+                    children: (0, i.jsx)(u.g5r, {
                         size: "sm",
-                        color: c.TVs.colors.WHITE,
+                        color: u.TVs.colors.WHITE,
                     }),
                 }),
             );
         },
     });
 }
-function z(e) {
+function V(e) {
     let { participant: t } = e,
         n = t.user.id,
-        l = (0, a.e7)([C.Z], () => {
+        l = (0, o.e7)([C.Z], () => {
             let e = (0, f.Z)(t.type);
             return C.Z.isLocalMute(t.user.id, e);
         }, [t]),
-        o = (0, a.e7)([I.default], () => I.default.getId()),
-        { hasVideo: d } = (0, S.Z)(t, o),
+        a = (0, o.e7)([I.default], () => I.default.getId()),
+        { hasVideo: d } = (0, x.Z)(t, a),
         h = l && d,
         p = r.useCallback(() => {
-            u.Z.toggleLocalMute(n, s.Yn.STREAM);
+            c.Z.toggleLocalMute(n, s.Yn.STREAM);
         }, [n]);
-    return (0, i.jsx)(c.aML, {
+    return (0, i.jsx)(u.aML, {
         "data-migration-pending": !0,
         text: h ? A.intl.string(A.t.YqAjXy) : A.intl.string(A.t.w4m945),
         children: (e) => {
             var { onClick: n } = e,
                 r = L(e, ["onClick"]);
             return (0, i.jsx)(
-                c.P3F,
-                R(D({}, r), {
-                    className: k.controlAction,
+                u.P3F,
+                k(R({}, r), {
+                    className: D.controlAction,
                     onClick: (e) => {
                         e.stopPropagation(),
-                            (0, Z.Ws)(P.Odu.GO_LIVE, {
-                                type: Z.Qu.AUDIO,
-                                value: h ? Z.bk.ENABLED : Z.bk.DISABLED,
+                            (0, w.Ws)(P.Odu.GO_LIVE, {
+                                type: w.Qu.AUDIO,
+                                value: h ? w.bk.ENABLED : w.bk.DISABLED,
                                 userId: t.user.id,
                             }),
                             null == n || n(),
                             p();
                     },
                     children: h
-                        ? (0, i.jsx)(c.OyP, {
+                        ? (0, i.jsx)(u.OyP, {
                               size: "sm",
                               color: "currentColor",
                           })
-                        : (0, i.jsx)(c.gj8, {
+                        : (0, i.jsx)(u.gj8, {
                               size: "sm",
                               color: "currentColor",
                           }),
@@ -176,11 +176,11 @@ function z(e) {
         },
     });
 }
-function V(e, t, r) {
+function z(e, t, r) {
     return (l) => {
-        (0, Z.Ws)(P.Odu.GO_LIVE, {
-            type: Z.Qu.GO_LIVE,
-            value: Z.bk.SETTINGS_OPENED,
+        (0, w.Ws)(P.Odu.GO_LIVE, {
+            type: w.Qu.GO_LIVE,
+            value: w.bk.SETTINGS_OPENED,
             userId: e.user.id,
         }),
             l.stopPropagation(),
@@ -190,7 +190,7 @@ function V(e, t, r) {
                 return (n) =>
                     (0, i.jsx)(
                         r,
-                        R(D({}, n), {
+                        k(R({}, n), {
                             stream: e.stream,
                             exitFullscreen: () => {},
                             appContext: t,
@@ -201,28 +201,28 @@ function V(e, t, r) {
 }
 function U(e) {
     let { hasActiveStream: t, participant: n, onEnablePin: r } = e,
-        l = (0, E.bp)(),
+        l = (0, v.bp)(),
         s = n.user,
-        u = (0, a.e7)([j.default], () => {
+        c = (0, o.e7)([Z.default], () => {
             var e;
-            return null != (e = j.default.getUser(s.id)) ? e : s;
+            return null != (e = Z.default.getUser(s.id)) ? e : s;
         }, [s]),
         d = t ? A.intl.string(A.t.tLxK4l) : A.intl.string(A.t.E5RDnK),
-        { enabled: h } = (0, w.aq)("GoLiveTile");
+        { enabled: h } = (0, T.aq)("GoLiveTile");
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)("div", { className: o()(k.controlBackground, { [k.controlsWithActiveStream]: t }) }),
+            (0, i.jsx)("div", { className: a()(D.controlBackground, { [D.controlsWithActiveStream]: t }) }),
             !t &&
                 (0, i.jsx)("div", {
-                    className: k.watchActionContainer,
-                    children: (0, i.jsx)(c.aML, {
+                    className: D.watchActionContainer,
+                    children: (0, i.jsx)(u.aML, {
                         "data-migration-pending": !0,
                         text: d,
                         children: (e) =>
                             (0, i.jsxs)(
-                                c.P3F,
-                                R(D({}, e), {
-                                    className: k.watchButton,
+                                u.P3F,
+                                k(R({}, e), {
+                                    className: D.watchButton,
                                     onClick: () => {
                                         var t;
                                         null == (t = e.onClick) || t.call(e),
@@ -231,19 +231,19 @@ function U(e) {
                                                 noFocus: !0,
                                             }),
                                             r(),
-                                            (0, Z.Ws)(P.Odu.GO_LIVE, {
-                                                type: Z.Qu.GO_LIVE,
-                                                value: Z.bk.ENABLED,
+                                            (0, w.Ws)(P.Odu.GO_LIVE, {
+                                                type: w.Qu.GO_LIVE,
+                                                value: w.bk.ENABLED,
                                                 userId: n.user.id,
                                             });
                                     },
                                     children: [
-                                        (0, i.jsx)(c.Text, {
+                                        (0, i.jsx)(u.Text, {
                                             variant: "text-sm/semibold",
                                             color: "always-white",
                                             children: A.intl.string(A.t.I6JG46),
                                         }),
-                                        (0, i.jsx)(c.OgY, {
+                                        (0, i.jsx)(u.OgY, {
                                             size: "sm",
                                             color: "currentColor",
                                         }),
@@ -253,28 +253,28 @@ function U(e) {
                     }),
                 }),
             (0, i.jsxs)("div", {
-                className: k.controls,
+                className: D.controls,
                 children: [
                     (0, i.jsx)("div", {
-                        className: k.controlUser,
+                        className: D.controlUser,
                         children: (0, i.jsxs)("div", {
-                            className: k.controlUserContainer,
+                            className: D.controlUserContainer,
                             children: [
-                                (0, i.jsx)(c.Text, {
+                                (0, i.jsx)(u.Text, {
                                     variant: "text-md/medium",
                                     color: "always-white",
-                                    className: k.controlUserName,
+                                    className: D.controlUserName,
                                     children: N.ZP.getName(n.stream.guildId, n.stream.channelId, s),
                                 }),
-                                (0, i.jsx)(v.ZP, {
-                                    primaryGuild: u.primaryGuild,
-                                    userId: u.id,
-                                    containerClassName: k.guildTag,
+                                (0, i.jsx)(E.ZP, {
+                                    primaryGuild: c.primaryGuild,
+                                    userId: c.id,
+                                    containerClassName: D.guildTag,
                                     inline: !1,
                                     onShowProfile: () => {
-                                        (0, Z.Ws)(P.Odu.GO_LIVE, {
-                                            type: Z.Qu.GO_LIVE,
-                                            value: Z.bk.GUILD_PROFILE_OPENED,
+                                        (0, w.Ws)(P.Odu.GO_LIVE, {
+                                            type: w.Qu.GO_LIVE,
+                                            value: w.bk.GUILD_PROFILE_OPENED,
                                             userId: n.user.id,
                                         });
                                     },
@@ -283,25 +283,25 @@ function U(e) {
                         }),
                     }),
                     (0, i.jsx)("div", {
-                        className: k.controlActions,
+                        className: D.controlActions,
                         children:
                             t &&
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
                                     h && (0, i.jsx)(M, { participant: n }),
-                                    (0, i.jsx)(z, { participant: n }),
-                                    (0, i.jsx)(c.aML, {
+                                    (0, i.jsx)(V, { participant: n }),
+                                    (0, i.jsx)(u.aML, {
                                         "data-migration-pending": !0,
                                         text: A.intl.string(A.t["3D5yo/"]),
                                         children: (e) => {
                                             var { onClick: t } = e,
                                                 r = L(e, ["onClick"]);
                                             return (0, i.jsx)(
-                                                c.P3F,
-                                                R(D({}, r), {
-                                                    className: k.controlAction,
-                                                    onClick: V(n, l, t),
-                                                    children: (0, i.jsx)(c.xhG, {
+                                                u.P3F,
+                                                k(R({}, r), {
+                                                    className: D.controlAction,
+                                                    onClick: z(n, l, t),
+                                                    children: (0, i.jsx)(u.xhG, {
                                                         size: "sm",
                                                         color: "currentColor",
                                                     }),
@@ -319,54 +319,54 @@ function U(e) {
 }
 let W = new Set([P.jm8.ENDED, P.jm8.FAILED, P.jm8.PAUSED]),
     G = r.memo(function (e) {
-        let { participant: t, width: n, locked: r, widgetId: l, pinned: o } = e,
-            s = (0, a.e7)([x.Z], () => x.Z.getActiveStreamForUser(t.user.id, t.stream.guildId), [
+        let { participant: t, width: n, locked: r, widgetId: l, pinned: a } = e,
+            s = (0, o.e7)([j.Z], () => j.Z.getActiveStreamForUser(t.user.id, t.stream.guildId), [
                 t.user.id,
                 t.stream.guildId,
             ]),
-            u = (0, E.bp)(),
+            c = (0, v.bp)(),
             d = null != s && W.has(s.state),
             p = null != s,
-            f = (0, T.yA)(t.stream),
-            y = (0, T.xN)(t.stream);
+            f = (0, _.yA)(t.stream),
+            y = (0, _.xN)(t.stream);
         return (!p && r) || d
             ? null
             : (0, i.jsxs)("div", {
-                  className: k.tile,
+                  className: D.tile,
                   children: [
                       p &&
                           !r &&
                           (0, i.jsx)(g.ZP, {
                               size: g.ZP.Sizes.SMALL,
-                              className: k.liveIndicator,
+                              className: D.liveIndicator,
                           }),
                       p
                           ? (0, i.jsx)("div", {
-                                className: k.streamTile,
-                                children: (0, i.jsx)(c.kL8, {
+                                className: D.streamTile,
+                                children: (0, i.jsx)(u.kL8, {
                                     "aria-label": A.intl.formatToPlainString(A.t.gHPz3Q, {
                                         streamerName: t.user.username,
                                     }),
                                     onClick: () => {},
-                                    onContextMenu: V(t, u),
-                                    className: k.streamTile,
+                                    onContextMenu: z(t, c),
+                                    className: D.streamTile,
                                     style: { transform: "scale(".concat(f, ")") },
-                                    children: (0, i.jsx)(_.Z, {
+                                    children: (0, i.jsx)(b.Z, {
                                         participant: t,
                                         width: n,
-                                        fit: null != y ? y : b.L.CONTAIN,
+                                        fit: null != y ? y : S.L.CONTAIN,
                                         popoutType: m.P.OVERLAY,
                                         focused: !r,
                                         selected: !1,
-                                        wrapperClassName: r ? k.streamTileWrapper : void 0,
+                                        wrapperClassName: r ? D.streamTileWrapper : void 0,
                                     }),
                                 }),
                             })
                           : (0, i.jsx)("div", {
-                                className: k.streamPreview,
+                                className: D.streamPreview,
                                 children: (0, i.jsx)(O.Z, {
                                     noText: !0,
-                                    className: k.absoluteFill,
+                                    className: D.absoluteFill,
                                     stream: t.stream,
                                 }),
                             }),
@@ -376,7 +376,7 @@ let W = new Set([P.jm8.ENDED, P.jm8.FAILED, P.jm8.PAUSED]),
                                 participant: t,
                                 hasActiveStream: p,
                                 onEnablePin: () => {
-                                    o || (0, h.xh)(l);
+                                    a || (0, h.xh)(l);
                                 },
                             }),
                   ],

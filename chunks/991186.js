@@ -1,9 +1,9 @@
 n.d(t, {
     FM: () => A,
-    Wx: () => I,
-    ZP: () => R,
-    Zh: () => T,
-    jt: () => S,
+    Wx: () => S,
+    ZP: () => P,
+    Zh: () => I,
+    jt: () => T,
     xj: () => y,
 }),
     n(388685);
@@ -17,8 +17,8 @@ var r = n(663042),
     u = n(556296),
     d = n(13140),
     f = n(32300),
-    _ = n(981631);
-function p(e, t, n) {
+    p = n(981631);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,12 +42,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -64,7 +64,7 @@ function g(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -77,22 +77,22 @@ function O() {
     return y.getState();
 }
 function v(e) {
-    y.setState((t) => h({}, t, e), !0), o.K.set(E, y.getState());
+    y.setState((t) => m({}, t, e), !0), o.K.set(E, y.getState());
 }
-let I = () => {
+let S = () => {
         v({ isNewOverlayUser: void 0 });
     },
-    T = () => {
+    I = () => {
         v({ isUsingDefaultOverlayKeybind: void 0 });
     },
-    S = (e) => {
+    T = (e) => {
         v({ overrideIsNewOverlayUser: e });
     };
 function A(e) {
     v({ overrideIsUsingDefaultOverlayKeybind: e });
 }
 function C() {
-    let e = u.ZP.getKeybindForAction(_.kg4.TOGGLE_OVERLAY_INPUT_LOCK, !0);
+    let e = u.ZP.getKeybindForAction(p.kg4.TOGGLE_OVERLAY_INPUT_LOCK, !0);
     if (null == e) return !0;
     let t = (0, u.vN)();
     return (0, d.m3)(e.shortcut, t.shortcut);
@@ -100,23 +100,23 @@ function C() {
 class N extends l.Z {
     constructor(...e) {
         super(...e),
-            p(this, "_hasInitialized", !1),
-            p(this, "_isProcessing", !1),
-            p(this, "initializeKeybind", () => {
+            _(this, "_hasInitialized", !1),
+            _(this, "_isProcessing", !1),
+            _(this, "initializeKeybind", () => {
                 if (null != O().previousKeybind) return;
                 let e = u.ZP.getOverlayKeybind();
                 v({ previousKeybind: (0, d.BB)(e.shortcut) });
             }),
-            p(this, "dispatchSetKeybind", (e) => {
+            _(this, "dispatchSetKeybind", (e) => {
                 if (null == e) return;
                 let t = u.ZP.getOverlayKeybind();
-                return s.Z.setKeybind(g(h({}, t), { shortcut: (0, d.Kd)(e) }));
+                return s.Z.setKeybind(g(m({}, t), { shortcut: (0, d.Kd)(e) }));
             }),
-            p(this, "restoreKeybind", async () => {
+            _(this, "restoreKeybind", async () => {
                 let e = O().previousKeybind;
                 null != e && (await this.dispatchSetKeybind(e));
             }),
-            p(this, "processKeybindExperiment", async () => {
+            _(this, "processKeybindExperiment", async () => {
                 this.initializeKeybind();
                 let { keybindOverride: e } = (0, f.eV)("OverlayKeybindExperimentManager", !1),
                     t = this.isEligibleForExperiment();
@@ -125,7 +125,7 @@ class N extends l.Z {
                         ? (await this.restoreKeybind(), v({ keybindTreatment: void 0 }))
                         : t && (await this.dispatchSetKeybind(e), v({ keybindTreatment: e })));
             }),
-            p(this, "processExperiment", async () => {
+            _(this, "processExperiment", async () => {
                 if (!__OVERLAY__ && !this._isProcessing) {
                     this._isProcessing = !0;
                     try {
@@ -137,14 +137,14 @@ class N extends l.Z {
                     }
                 }
             }),
-            p(this, "maybeInitExperiment", async () => {
+            _(this, "maybeInitExperiment", async () => {
                 this._hasInitialized ||
                     ((this._hasInitialized = !0),
                     b.info("Experiments initializing..."),
                     await this.processExperiment(),
                     b.info("Experiments initialized"));
             }),
-            p(this, "isNewOverlayUser", () =>
+            _(this, "isNewOverlayUser", () =>
                 (null == O().isNewOverlayUser &&
                     v({
                         isNewOverlayUser:
@@ -155,40 +155,40 @@ class N extends l.Z {
                     ? O().overrideIsNewOverlayUser
                     : O().isNewOverlayUser,
             ),
-            p(this, "isUsingDefaultOverlayKeybind", () =>
+            _(this, "isUsingDefaultOverlayKeybind", () =>
                 (null == O().isUsingDefaultOverlayKeybind && v({ isUsingDefaultOverlayKeybind: C() }),
                 null != O().overrideIsUsingDefaultOverlayKeybind)
                     ? O().overrideIsUsingDefaultOverlayKeybind
                     : O().isUsingDefaultOverlayKeybind,
             ),
-            p(this, "isEligibleForExperiment", () => {
+            _(this, "isEligibleForExperiment", () => {
                 let e = this.isNewOverlayUser(),
                     t = this.isUsingDefaultOverlayKeybind();
                 return e && t;
             }),
-            p(this, "handlePostConnectionOpen", async () => {
+            _(this, "handlePostConnectionOpen", async () => {
                 __OVERLAY__ || this._isProcessing || (await this.maybeInitExperiment());
             }),
-            p(this, "handleExperimentsInit", async () => {
+            _(this, "handleExperimentsInit", async () => {
                 __OVERLAY__ || this._isProcessing || (await this.maybeInitExperiment());
             }),
-            p(this, "handleExperimentOverrideBucket", async (e) => {
+            _(this, "handleExperimentOverrideBucket", async (e) => {
                 __OVERLAY__ ||
                     this._isProcessing ||
                     (b.info("Experiments processing...", { action: e }), await this.processExperiment());
             }),
-            p(this, "handleKeybindSet", (e) => {
+            _(this, "handleKeybindSet", (e) => {
                 __OVERLAY__ ||
                     this._isProcessing ||
-                    (e.keybind.action === _.kg4.TOGGLE_OVERLAY_INPUT_LOCK &&
+                    (e.keybind.action === p.kg4.TOGGLE_OVERLAY_INPUT_LOCK &&
                         v({ previousKeybind: (0, d.BB)(e.keybind.shortcut) }));
             }),
-            p(this, "handleOverlayReady", () => {
+            _(this, "handleOverlayReady", () => {
                 !__OVERLAY__ &&
                     this.isEligibleForExperiment() &&
                     f.ZU.trackExposure({ location: "OverlayKeybindExperimentManager" });
             }),
-            p(this, "actions", {
+            _(this, "actions", {
                 POST_CONNECTION_OPEN: this.handlePostConnectionOpen,
                 EXPERIMENTS_FETCH_SUCCESS: this.handleExperimentsInit,
                 EXPERIMENT_OVERRIDE_BUCKET: this.handleExperimentOverrideBucket,
@@ -197,4 +197,4 @@ class N extends l.Z {
             });
     }
 }
-let R = new N();
+let P = new N();

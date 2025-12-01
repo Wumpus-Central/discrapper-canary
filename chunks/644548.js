@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(919394),
     d = n(206295),
     f = n(227172),
-    _ = n(555672),
-    p = n(297781),
-    h = n(591853),
-    m = n(410441),
+    p = n(555672),
+    _ = n(297781),
+    m = n(591853),
+    h = n(410441),
     g = n(797342),
     E = n(388032);
 function b(e) {
@@ -37,18 +37,18 @@ let y = (e, t, n, r) => {
     v = (e) => {
         let { channel: t, entry: n, disableGameProfileLinks: a, onReaction: s, onVoiceChannelPreview: b } = e,
             { largeImage: v } = (0, l.rv)({ entry: n }),
-            { user: I, details: T, appName: S } = (0, g.n)(n),
+            { user: S, details: I, appName: T } = (0, g.n)(n),
             { primaryColor: A, secondaryColor: C } = (0, d.Z)(null == v ? void 0 : v.src),
             N = (0, c.yA)(n),
-            R = (0, c.Nq)(n),
-            P = i.useCallback(
+            P = (0, c.Nq)(n),
+            R = i.useCallback(
                 (e) => {
-                    if (null != t && null != I && null != N && null != R && (0, _.qy)(R))
+                    if (null != t && null != S && null != N && null != P && (0, p.qy)(P))
                         return (0, u.SO)({
                             entry: n,
                             applicationImageSrc: null == v ? void 0 : v.src,
-                            avatarSrcs: [I.getAvatarURL(null == t ? void 0 : t.guild_id, 128)],
-                            description: y(n, t, I, R),
+                            avatarSrcs: [S.getAvatarURL(null == t ? void 0 : t.guild_id, 128)],
+                            description: y(n, t, S, P),
                             timestamp: E.intl.formatToPlainString(E.t.YL7UE3, {
                                 hours: Math.round(N / o.Z.Seconds.HOUR),
                             }),
@@ -56,39 +56,39 @@ let y = (e, t, n, r) => {
                             channelId: e,
                         });
                 },
-                [null == v ? void 0 : v.src, t, N, n, A, R, C, I],
+                [null == v ? void 0 : v.src, t, N, n, A, P, C, S],
             );
-        if (null == I || null == N || null == R || !(0, _.qy)(R)) return null;
-        let D = null != n.extra.platform ? f.v[n.extra.platform] : null;
-        return (0, r.jsxs)(h.yR, {
+        if (null == S || null == N || null == P || !(0, p.qy)(P)) return null;
+        let w = null != n.extra.platform ? f.v[n.extra.platform] : null;
+        return (0, r.jsxs)(m.yR, {
             children: [
-                (0, r.jsx)(h.wG, {
+                (0, r.jsx)(m.wG, {
                     channel: t,
                     headerIcons:
-                        null == D
+                        null == w
                             ? null
-                            : (0, r.jsx)(m.Z, {
-                                  Icon: D,
+                            : (0, r.jsx)(h.Z, {
+                                  Icon: w,
                                   "aria-label": E.intl.string(E.t.YR4cHH),
                               }),
                     entry: n,
                     userDescription: E.t.rPqqts,
-                    title: S,
-                    subtitle: T,
-                    badges: (0, r.jsx)(p.Gk, {
-                        location: p.Gt.POPOUT,
-                        children: _.Hs.map((e, t) => (0, r.jsx)(e, { entry: n }, t)),
+                    title: T,
+                    subtitle: I,
+                    badges: (0, r.jsx)(_.Gk, {
+                        location: _.Gt.POPOUT,
+                        children: p.Hs.map((e, t) => (0, r.jsx)(e, { entry: n }, t)),
                     }),
                     disableGameProfileLinks: a,
                 }),
-                (0, r.jsx)(h.St, {
-                    children: (0, r.jsx)(h.WT, {
+                (0, r.jsx)(m.St, {
+                    children: (0, r.jsx)(m.WT, {
                         onReaction: s,
                         onVoiceChannelPreview: b,
-                        user: I,
+                        user: S,
                         channel: t,
-                        generateReactionImage: P,
-                        reactionImageAltText: O(n, I),
+                        generateReactionImage: R,
+                        reactionImageAltText: O(n, S),
                         entry: n,
                     }),
                 }),

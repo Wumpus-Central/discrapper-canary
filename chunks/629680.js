@@ -8,22 +8,22 @@ var r = n(127849),
     u = n(635464),
     d = n(287353),
     f = n(920542),
-    _ = l.aTypedArray,
-    p = l.exportTypedArrayMethod,
-    h = r.Uint16Array,
-    m = h && i(h.prototype.sort),
+    p = l.aTypedArray,
+    _ = l.exportTypedArrayMethod,
+    m = r.Uint16Array,
+    h = m && i(m.prototype.sort),
     g =
-        !!m &&
+        !!h &&
         !(
             a(function () {
-                m(new h(2), null);
+                h(new m(2), null);
             }) &&
             a(function () {
-                m(new h(2), {});
+                h(new m(2), {});
             })
         ),
     E =
-        !!m &&
+        !!h &&
         !a(function () {
             if (d) return d < 74;
             if (c) return c < 67;
@@ -31,11 +31,11 @@ var r = n(127849),
             if (f) return f < 602;
             var e,
                 t,
-                n = new h(516),
+                n = new m(516),
                 r = Array(516);
             for (e = 0; e < 516; e++) (t = e % 4), (n[e] = 515 - e), (r[e] = e - 2 * t + 3);
             for (
-                m(n, function (e, t) {
+                h(n, function (e, t) {
                     return ((e / 4) | 0) - ((t / 4) | 0);
                 }),
                     e = 0;
@@ -59,10 +59,10 @@ var r = n(127849),
                       : t > n;
         };
     };
-p(
+_(
     "sort",
     function (e) {
-        return (void 0 !== e && o(e), E) ? m(this, e) : s(_(this), b(e));
+        return (void 0 !== e && o(e), E) ? h(this, e) : s(p(this), b(e));
     },
     !E || g,
 );

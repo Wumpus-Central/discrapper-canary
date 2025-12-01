@@ -13,26 +13,26 @@ var r = n(54381),
     u = n(100527),
     d = n(906732),
     f = n(387188),
-    _ = n(978003),
-    p = n(39154),
-    h = n(245216),
-    m = n(79390),
+    p = n(978003),
+    _ = n(39154),
+    m = n(245216),
+    h = n(79390),
     g = n(869765),
     E = n(403132),
     b = n(378233),
     y = n(768581),
     O = n(55935),
     v = n(823379),
-    I = n(453687),
-    T = n(930282),
-    S = n(123145),
+    S = n(453687),
+    I = n(930282),
+    T = n(123145),
     A = n(223021),
     C = n(217702),
     N = n(981631),
-    R = n(388032),
-    P = n(724913),
-    D = n(430864);
-function w(e) {
+    P = n(388032),
+    R = n(724913),
+    w = n(430864);
+function D(e) {
     let { width: t = 12, height: n = 8, color: i = "currentColor", className: a, foreground: o } = e;
     return (0, r.jsx)("svg", {
         className: a,
@@ -46,7 +46,7 @@ function w(e) {
         }),
     });
 }
-function L(e) {
+function x(e) {
     let { width: t = 18, height: n = 18, className: i, foreground: a } = e;
     return (0, r.jsx)("svg", {
         className: i,
@@ -60,7 +60,7 @@ function L(e) {
         }),
     });
 }
-function x(e, t, n, i, a, s) {
+function L(e, t, n, i, a, s) {
     return (0, r.jsx)("img", {
         alt: "",
         src:
@@ -74,35 +74,35 @@ function x(e, t, n, i, a, s) {
         onClick: i,
         onContextMenu: a,
         className: o()({
-            [P.replyAvatar]: !0,
-            [P.clickable]: null != i,
+            [R.replyAvatar]: !0,
+            [R.clickable]: null != i,
         }),
         ref: s,
     });
 }
-function M(e, t, n) {
+function j(e, t, n) {
     let {
             referencedMessage: a,
             channel: o,
             compact: s,
             isReplyAuthorBlocked: l,
             repliedAuthor: f,
-            showAvatarPopout: _,
-            onClickAvatar: p,
-            onContextMenu: h,
-            onPopoutRequestClose: m,
+            showAvatarPopout: p,
+            onClickAvatar: _,
+            onContextMenu: m,
+            onPopoutRequestClose: h,
         } = e,
         { analyticsLocations: E } = (0, d.ZP)(u.Z.AVATAR),
         b = i.useRef(null);
     if (s || a.state !== g.Y.LOADED || l)
         return n === N.uaV.CONTEXT_MENU_COMMAND
             ? (0, r.jsx)("div", {
-                  className: P.replyChatIconContainer,
+                  className: R.replyChatIconContainer,
                   children: (0, r.jsx)(c.kBi, { size: "xs" }),
               })
             : (0, r.jsx)("div", {
-                  className: P.replyBadge,
-                  children: (0, r.jsx)(w, { className: P.replyIcon }),
+                  className: R.replyBadge,
+                  children: (0, r.jsx)(D, { className: R.replyIcon }),
               });
     if (
         a.message.type === N.uaV.USER_JOIN ||
@@ -110,30 +110,30 @@ function M(e, t, n) {
         a.message.type === N.uaV.GUILD_DEADCHAT_REVIVE_PROMPT ||
         a.message.type === N.uaV.GUILD_GAMING_STATS_PROMPT
     )
-        return (0, r.jsx)(L, { className: P.userJoinSystemMessageIcon });
+        return (0, r.jsx)(x, { className: R.userJoinSystemMessageIcon });
     if (a.message.type === N.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION)
         return (0, r.jsx)(c.Prq, {
             size: "md",
             color: "currentColor",
-            className: P.ticketIcon,
+            className: R.ticketIcon,
         });
     if (a.message.type === N.uaV.POLL_RESULT)
         return (0, r.jsx)(c.QDj, {
-            className: P.repliedTextContentLeadingIcon,
+            className: R.repliedTextContentLeadingIcon,
             width: C.WW,
             height: C.WW,
             size: "custom",
         });
-    let y = () => x(a.message.author, f, o.guild_id, p, h, b);
-    return null != t && null != _
+    let y = () => L(a.message.author, f, o.guild_id, _, m, b);
+    return null != t && null != p
         ? (0, r.jsx)(d.Gt, {
               value: E,
               children: (0, r.jsx)(c.yRy, {
                   targetElementRef: b,
                   renderPopout: t,
-                  shouldShow: _,
+                  shouldShow: p,
                   position: "right",
-                  onRequestClose: m,
+                  onRequestClose: h,
                   children: y,
               }),
           })
@@ -142,7 +142,7 @@ function M(e, t, n) {
               children: y(),
           });
 }
-function k(e, t) {
+function M(e, t) {
     let {
             baseMessage: n,
             channel: i,
@@ -161,7 +161,7 @@ function k(e, t) {
         u.type === N.uaV.GUILD_GAMING_STATS_PROMPT ||
         u.type === N.uaV.POLL_RESULT
         ? null
-        : (0, r.jsx)(S.Z, {
+        : (0, r.jsx)(T.Z, {
               message: u,
               channel: i,
               compact: !0,
@@ -174,7 +174,7 @@ function k(e, t) {
               isRepliedMessage: !0,
           });
 }
-function j(e, t, n) {
+function k(e, t, n) {
     let { content: i, referencedMessage: a, isReplyAuthorBlocked: s, isReplyAuthorIgnored: l, onClickReply: u } = e,
         d = a.state !== g.Y.DELETED ? u : void 0;
     switch (a.state) {
@@ -183,18 +183,18 @@ function j(e, t, n) {
                 contentPlaceholder: e,
                 renderedContent: u,
                 trailingIcon: f,
-                leadingIcon: _,
-            } = U(a.message, i, s, l, P.repliedTextContent, {
-                trailingIconClass: P.repliedTextContentTrailingIcon,
-                leadingIconClass: P.repliedTextContentLeadingIcon,
+                leadingIcon: p,
+            } = U(a.message, i, s, l, R.repliedTextContent, {
+                trailingIconClass: R.repliedTextContentTrailingIcon,
+                leadingIconClass: R.repliedTextContentLeadingIcon,
                 iconSize: C.WW,
             });
             return (0, r.jsxs)(r.Fragment, {
                 children: [
-                    _,
+                    p,
                     (0, r.jsx)(c.P3F, {
-                        className: o()(P.repliedTextPreview, P.clickable, {
-                            [P.repliedMessageClickableSpineHovered]: t,
+                        className: o()(R.repliedTextPreview, R.clickable, {
+                            [R.repliedMessageClickableSpineHovered]: t,
                         }),
                         onClick: d,
                         onMouseEnter: n,
@@ -204,7 +204,7 @@ function j(e, t, n) {
                                 null != u
                                     ? u
                                     : (0, r.jsx)("span", {
-                                          className: P.repliedTextPlaceholder,
+                                          className: R.repliedTextPlaceholder,
                                           children: e,
                                       }),
                         }),
@@ -215,19 +215,19 @@ function j(e, t, n) {
         }
         case g.Y.NOT_LOADED:
             return (0, r.jsx)(c.P3F, {
-                className: o()(P.repliedTextPreview, P.clickable),
+                className: o()(R.repliedTextPreview, R.clickable),
                 onClick: d,
                 children: (0, r.jsx)("span", {
-                    className: P.repliedTextPlaceholder,
-                    children: R.intl.string(R.t["1i+hMi"]),
+                    className: R.repliedTextPlaceholder,
+                    children: P.intl.string(P.t["1i+hMi"]),
                 }),
             });
         case g.Y.DELETED:
             return (0, r.jsx)("div", {
-                className: P.repliedTextPreview,
+                className: R.repliedTextPreview,
                 children: (0, r.jsx)("span", {
-                    className: P.repliedTextPlaceholder,
-                    children: R.intl.string(R.t.mE3KJN),
+                    className: R.repliedTextPlaceholder,
+                    children: P.intl.string(P.t.mE3KJN),
                 }),
             });
         default:
@@ -239,17 +239,17 @@ function U(e, t, n, i, a, s) {
         u,
         d,
         g,
-        E = (0, p.Z)(e),
+        E = (0, _.Z)(e),
         { trailingIconClass: y, leadingIconClass: O, iconSize: v } = s,
-        I = null == t || "" === t || (Array.isArray(t) && 0 === t.length),
-        S = (0, b.cv)(E).length > 0,
+        S = null == t || "" === t || (Array.isArray(t) && 0 === t.length),
+        T = (0, b.cv)(E).length > 0,
         A = null != E.interaction,
         C = E.hasFlag(N.iLy.IS_VOICE_MESSAGE),
-        w = E.isPoll(),
-        L = E.type === N.uaV.POLL_RESULT;
+        D = E.isPoll(),
+        x = E.type === N.uaV.POLL_RESULT;
     if (
-        ((0, _.Z)(e) &&
-            (g = (0, r.jsx)(h.Z, {
+        ((0, p.Z)(e) &&
+            (g = (0, r.jsx)(m.Z, {
                 size: "custom",
                 className: O,
                 width: v,
@@ -257,33 +257,33 @@ function U(e, t, n, i, a, s) {
             })),
         n)
     )
-        l = R.intl.string(R.t.XAkOo2);
-    else if (i) l = R.intl.string(R.t["G7p6v/"]);
-    else if (E.type === N.uaV.CHANNEL_PINNED_MESSAGE) l = R.intl.string(R.t.sCfDDl);
+        l = P.intl.string(P.t.XAkOo2);
+    else if (i) l = P.intl.string(P.t["G7p6v/"]);
+    else if (E.type === N.uaV.CHANNEL_PINNED_MESSAGE) l = P.intl.string(P.t.sCfDDl);
     else if (E.type === N.uaV.EMOJI_ADDED)
         u = (0, r.jsx)(f.Zh, {
             message: E,
             rendered: t,
         });
-    else if (I)
-        if (w) {
-            var x, M;
+    else if (S)
+        if (D) {
+            var L, j;
             u = (0, r.jsx)("div", {
-                className: o()(P.repliedTextContent, D.markup),
-                children: null == E || null == (M = E.poll) || null == (x = M.question) ? void 0 : x.text,
+                className: o()(R.repliedTextContent, w.markup),
+                children: null == E || null == (j = E.poll) || null == (L = j.question) ? void 0 : L.text,
             });
         } else
-            L
-                ? (l = (0, m.N4)(E))
-                : S
-                  ? (l = R.intl.string(R.t.kHdYCW))
+            x
+                ? (l = (0, h.N4)(E))
+                : T
+                  ? (l = P.intl.string(P.t.kHdYCW))
                   : A
-                    ? (l = R.intl.string(R.t["E+6SSY"]))
+                    ? (l = P.intl.string(P.t["E+6SSY"]))
                     : C
-                      ? (l = R.intl.string(R.t.XC3A52))
+                      ? (l = P.intl.string(P.t.XC3A52))
                       : E.hasFlag(N.iLy.IS_COMPONENTS_V2)
-                        ? (l = R.intl.string(R.t.Xxat6S))
-                        : ((l = R.intl.string(R.t["6hGo0c"])),
+                        ? (l = P.intl.string(P.t.Xxat6S))
+                        : ((l = P.intl.string(P.t["6hGo0c"])),
                           (d = (0, r.jsx)(c.XBm, {
                               size: "custom",
                               color: "currentColor",
@@ -292,14 +292,14 @@ function U(e, t, n, i, a, s) {
                               height: v,
                           })));
     else
-        u = (0, r.jsx)(T.ZP, {
+        u = (0, r.jsx)(I.ZP, {
             message: E,
             content: t,
             className: a,
             compact: !0,
         });
     return (
-        S
+        T
             ? (d = (0, r.jsx)(c.B7q, {
                   size: "custom",
                   color: "currentColor",
@@ -324,7 +324,7 @@ function U(e, t, n, i, a, s) {
                       height: v,
                   }))
                 : (E.attachments.length > 0 || E.embeds.length > 0) &&
-                  !L &&
+                  !x &&
                   (d = (0, r.jsx)(c.XBm, {
                       size: "custom",
                       color: "currentColor",
@@ -349,33 +349,33 @@ function G(e) {
             referencedMessage: u,
             renderPopout: d,
             isReplySpineClickable: f,
-            showReplySpine: _,
+            showReplySpine: p,
         } = e,
-        [p, h] = i.useState(!1),
-        m = i.useMemo(() => (null != d && u.state === g.Y.LOADED ? (e) => d(e, u.message) : void 0), [u, d]),
-        E = i.useCallback(() => h((e) => !e), []),
-        b = M(e, m, s.type),
-        y = k(e, m),
-        v = j(e, p, E),
-        T = i.useMemo(() => (e.compact ? (0, A.Z)((0, O.vc)(l()(), "LT")) : null), [e.compact]);
+        [_, m] = i.useState(!1),
+        h = i.useMemo(() => (null != d && u.state === g.Y.LOADED ? (e) => d(e, u.message) : void 0), [u, d]),
+        E = i.useCallback(() => m((e) => !e), []),
+        b = j(e, h, s.type),
+        y = M(e, h),
+        v = k(e, _, E),
+        I = i.useMemo(() => (e.compact ? (0, A.Z)((0, O.vc)(l()(), "LT")) : null), [e.compact]);
     null != n &&
         null != a &&
-        (t = R.intl.formatToPlainString(R.t.RhbQ2K, {
+        (t = P.intl.formatToPlainString(P.t.RhbQ2K, {
             author: null == a ? void 0 : a.nick,
             repliedAuthor: null == n ? void 0 : n.nick,
         }));
-    let S = s.type === N.uaV.CONTEXT_MENU_COMMAND;
+    let T = s.type === N.uaV.CONTEXT_MENU_COMMAND;
     return (0, r.jsxs)("div", {
-        id: (0, I.Gq)(s),
-        className: o()(P.repliedMessage, T, S ? P.contextCommandMessage : { [P.messageSpine]: !f && _ }),
+        id: (0, S.Gq)(s),
+        className: o()(R.repliedMessage, I, T ? R.contextCommandMessage : { [R.messageSpine]: !f && p }),
         "aria-label": t,
         children: [
             f &&
-                _ &&
+                p &&
                 (0, r.jsx)(c.P3F, {
                     tag: "div",
-                    "aria-label": R.intl.string(R.t.dpjpOp),
-                    className: o()(P.repliedMessageClickableSpine, { [P.repliedMessageContentHovered]: p }),
+                    "aria-label": P.intl.string(P.t.dpjpOp),
+                    className: o()(R.repliedMessageClickableSpine, { [R.repliedMessageContentHovered]: _ }),
                     onClick: e.onClickReply,
                     onMouseEnter: E,
                     onMouseLeave: E,

@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => _,
+    Z: () => p,
     o: () => f,
 }),
     n(388685);
@@ -46,7 +46,7 @@ async function f() {
         );
     }
 }
-async function _(e) {
+async function p(e) {
     try {
         let t = await a.tn.get({
                 url: u.ANM.OWNED_APPLICATION_BRANCHES(e),

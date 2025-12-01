@@ -48,30 +48,30 @@ var r = n(288660),
             d = t.ignoreQueryPrefix ? e.replace(/^\?/, "") : e;
         d = d.replace(/%5B/gi, "[").replace(/%5D/gi, "]");
         var f = t.parameterLimit === 1 / 0 ? void 0 : t.parameterLimit,
-            _ = d.split(t.delimiter, t.throwOnLimitExceeded ? f + 1 : f);
-        if (t.throwOnLimitExceeded && _.length > f)
+            p = d.split(t.delimiter, t.throwOnLimitExceeded ? f + 1 : f);
+        if (t.throwOnLimitExceeded && p.length > f)
             throw RangeError("Parameter limit exceeded. Only " + f + " parameter" + (1 === f ? "" : "s") + " allowed.");
-        var p = -1,
-            h = t.charset;
+        var _ = -1,
+            m = t.charset;
         if (t.charsetSentinel)
-            for (m = 0; m < _.length; ++m)
-                0 === _[m].indexOf("utf8=") &&
-                    (_[m] === u ? (h = "utf-8") : _[m] === c && (h = "iso-8859-1"), (p = m), (m = _.length));
-        for (m = 0; m < _.length; ++m)
-            if (m !== p) {
-                var m,
+            for (h = 0; h < p.length; ++h)
+                0 === p[h].indexOf("utf8=") &&
+                    (p[h] === u ? (m = "utf-8") : p[h] === c && (m = "iso-8859-1"), (_ = h), (h = p.length));
+        for (h = 0; h < p.length; ++h)
+            if (h !== _) {
+                var h,
                     g,
                     E,
-                    b = _[m],
+                    b = p[h],
                     y = b.indexOf("]="),
                     O = -1 === y ? b.indexOf("=") : y + 1;
                 -1 === O
-                    ? ((g = t.decoder(b, o.decoder, h, "key")), (E = t.strictNullHandling ? null : ""))
-                    : ((g = t.decoder(b.slice(0, O), o.decoder, h, "key")),
+                    ? ((g = t.decoder(b, o.decoder, m, "key")), (E = t.strictNullHandling ? null : ""))
+                    : ((g = t.decoder(b.slice(0, O), o.decoder, m, "key")),
                       (E = r.maybeMap(l(b.slice(O + 1), t, a(n[g]) ? n[g].length : 0), function (e) {
-                          return t.decoder(e, o.decoder, h, "value");
+                          return t.decoder(e, o.decoder, m, "value");
                       }))),
-                    E && t.interpretNumericEntities && "iso-8859-1" === h && (E = s(String(E))),
+                    E && t.interpretNumericEntities && "iso-8859-1" === m && (E = s(String(E))),
                     b.indexOf("[]=") > -1 && (E = a(E) ? [E] : E);
                 var v = i.call(n, g);
                 v && "combine" === t.duplicates
@@ -94,19 +94,19 @@ var r = n(288660),
             else {
                 u = n.plainObjects ? { __proto__: null } : {};
                 var f = "[" === d.charAt(0) && "]" === d.charAt(d.length - 1) ? d.slice(1, -1) : d,
-                    _ = n.decodeDotInKeys ? f.replace(/%2E/g, ".") : f,
-                    p = parseInt(_, 10);
-                n.parseArrays || "" !== _
-                    ? !isNaN(p) && d !== _ && String(p) === _ && p >= 0 && n.parseArrays && p <= n.arrayLimit
-                        ? ((u = [])[p] = s)
-                        : "__proto__" !== _ && (u[_] = s)
+                    p = n.decodeDotInKeys ? f.replace(/%2E/g, ".") : f,
+                    _ = parseInt(p, 10);
+                n.parseArrays || "" !== p
+                    ? !isNaN(_) && d !== p && String(_) === p && _ >= 0 && n.parseArrays && _ <= n.arrayLimit
+                        ? ((u = [])[_] = s)
+                        : "__proto__" !== p && (u[p] = s)
                     : (u = { 0: s });
             }
             s = u;
         }
         return s;
     },
-    _ = function (e, t, n, r) {
+    p = function (e, t, n, r) {
         if (e) {
             var a = n.allowDots ? e.replace(/\.([^.[]+)/g, "[$1]") : e,
                 o = /(\[[^[\]]*])/,
@@ -131,7 +131,7 @@ var r = n(288660),
             return f(u, t, n, r);
         }
     },
-    p = function (e) {
+    _ = function (e) {
         if (!e) return o;
         if (void 0 !== e.allowEmptyArrays && "boolean" != typeof e.allowEmptyArrays)
             throw TypeError("`allowEmptyArrays` option can only be `true` or `false`, when provided");
@@ -175,7 +175,7 @@ var r = n(288660),
         };
     };
 e.exports = function (e, t) {
-    var n = p(t);
+    var n = _(t);
     if ("" === e || null == e) return n.plainObjects ? { __proto__: null } : {};
     for (
         var i = "string" == typeof e ? d(e, n) : e,
@@ -186,7 +186,7 @@ e.exports = function (e, t) {
         ++s
     ) {
         var l = o[s],
-            c = _(l, i[l], n, "string" == typeof e);
+            c = p(l, i[l], n, "string" == typeof e);
         a = r.merge(a, c, n);
     }
     return !0 === n.allowSparse ? a : r.compact(a);

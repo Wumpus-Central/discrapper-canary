@@ -1,4 +1,4 @@
-n.d(t, { X: () => _ });
+n.d(t, { X: () => p });
 var r = n(54381);
 n(473749);
 var i = n(692547),
@@ -77,26 +77,26 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let _ = (e) => {
+let p = (e) => {
     var t,
         n,
-        { size: s = "md", width: c, height: f, color: _ = i.Z.colors.INTERACTIVE_NORMAL, colorClass: p = "" } = e,
-        h = d(e, ["size", "width", "height", "color", "colorClass"]);
-    let m = (0, o.m)(s),
-        g = null != (t = null == m ? void 0 : m.width) ? t : c,
-        E = null != (n = null == m ? void 0 : m.height) ? n : f;
+        { size: s = "md", width: c, height: f, color: p = i.Z.colors.INTERACTIVE_NORMAL, colorClass: _ = "" } = e,
+        m = d(e, ["size", "width", "height", "color", "colorClass"]);
+    let h = (0, o.m)(s),
+        g = null != (t = null == h ? void 0 : h.width) ? t : c,
+        E = null != (n = null == h ? void 0 : h.height) ? n : f;
     return (0, r.jsx)(
         "svg",
-        u(l({}, (0, a.Z)(h)), {
+        u(l({}, (0, a.Z)(m)), {
             xmlns: "http://www.w3.org/2000/svg",
             width: g,
             height: E,
             fill: "none",
             viewBox: "0 0 24 24",
             children: (0, r.jsx)("path", {
-                fill: "string" == typeof _ ? _ : _.css,
+                fill: "string" == typeof p ? p : p.css,
                 d: "M11 2.5a1 1 0 1 1 2 0v2.3l1.6-1.05a1 1 0 0 1 1.1 1.67L13 7.2v4.34l4.18-1.35.88-3.1a1 1 0 1 1 1.93.54l-.52 1.82 2.22-.71a1 1 0 1 1 .62 1.9l-2.21.71 1.5 1.17a1 1 0 1 1-1.24 1.57l-2.56-2-4.17 1.35 2.57 3.5 3.26-.12a1 1 0 0 1 .08 2l-1.91.07 1.36 1.86a1 1 0 0 1-1.62 1.18L16 20.06l-.67 1.79a1 1 0 0 1-1.87-.7l1.12-3.02L12 14.61l-2.58 3.52 1.12 3.02a1 1 0 0 1-1.87.7L8 20.06l-1.37 1.88A1 1 0 1 1 5 20.76l1.36-1.86-1.9-.08a1 1 0 1 1 .07-2l3.26.14 2.57-3.51L6.2 12.1l-2.56 2a1 1 0 1 1-1.23-1.57l1.49-1.17-2.2-.7a1 1 0 0 1 .6-1.91l2.23.71L4 7.64a1 1 0 0 1 1.93-.54l.88 3.1L11 11.55V7.2L8.3 5.4a1 1 0 0 1 1.1-1.66L11 4.8V2.5Z",
-                className: p,
+                className: _,
             }),
         }),
     );

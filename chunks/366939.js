@@ -1,9 +1,9 @@
 n.d(t, {
     Ld: () => u,
     O5: () => d,
-    fG: () => _,
-    fw: () => h,
-    tq: () => p,
+    fG: () => p,
+    fw: () => m,
+    tq: () => _,
     v4: () => f,
 });
 var r = n(512722),
@@ -67,22 +67,22 @@ async function d(e, t, n, r, u, d) {
     try {
         let f = (0, s.Af)(e);
         i()(f, "Expected existing premium plan");
-        let _ = (0, s.XK)(e, f.planId),
-            p = void 0 !== n ? n.toLowerCase() : e.currency;
+        let p = (0, s.XK)(e, f.planId),
+            _ = void 0 !== n ? n.toLowerCase() : e.currency;
         (0, o.V)(e, t, d),
             await l.Mg(
                 e,
                 {
                     status: c.O0b.ACTIVE,
                     paymentSource: r,
-                    items: _,
+                    items: p,
                     currency: n,
                 },
                 {
                     amount: 0,
-                    currency: p,
+                    currency: _,
                 },
-                (0, s.UX)(_, p, null == r ? void 0 : r.id),
+                (0, s.UX)(p, _, null == r ? void 0 : r.id),
                 t,
                 u,
                 d,
@@ -115,7 +115,7 @@ async function f(e, t, n) {
         throw e;
     }
 }
-async function _(e, t, n, r, i) {
+async function p(e, t, n, r, i) {
     try {
         await l.fG(e, t, n, r, i), a.Z.dispatch({ type: "PREMIUM_PAYMENT_UPDATE_SUCCESS" });
     } catch (e) {
@@ -128,7 +128,7 @@ async function _(e, t, n, r, i) {
         );
     }
 }
-async function p(e, t, n, r, i, o) {
+async function _(e, t, n, r, i, o) {
     try {
         await l.tq(e, t, n, r, i, o), a.Z.dispatch({ type: "PREMIUM_PAYMENT_UPDATE_SUCCESS" });
     } catch (e) {
@@ -141,6 +141,6 @@ async function p(e, t, n, r, i, o) {
         );
     }
 }
-function h() {
+function m() {
     a.Z.dispatch({ type: "PREMIUM_PAYMENT_ERROR_CLEAR" });
 }

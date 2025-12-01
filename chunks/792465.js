@@ -53,12 +53,12 @@ e.exports = function (e) {
             begin: /<<<[ \t]*'(\w+)'\n/,
             end: /[ \t]*(\w+)\b/,
         }),
-        _ = "[ \t\n]",
-        p = {
+        p = "[ \t\n]",
+        _ = {
             scope: "string",
             variants: [u, c, d, f],
         },
-        h = {
+        m = {
             scope: "number",
             variants: [
                 { begin: "\\b0[bB][01]+(?:_[01]+)*\\b" },
@@ -68,7 +68,7 @@ e.exports = function (e) {
             ],
             relevance: 0,
         },
-        m = ["false", "null", "true"],
+        h = ["false", "null", "true"],
         g = [
             "__CLASS__",
             "__DIR__",
@@ -261,14 +261,14 @@ e.exports = function (e) {
                     }),
                     t
                 );
-            })(m),
+            })(h),
             built_in: E,
         },
         y = (e) => e.map((e) => e.replace(/\|\d+$/, "")),
         O = {
             variants: [
                 {
-                    match: [/new/, t.concat(_, "+"), t.concat("(?!", y(E).join("\\b|"), "\\b)"), i],
+                    match: [/new/, t.concat(p, "+"), t.concat("(?!", y(E).join("\\b|"), "\\b)"), i],
                     scope: {
                         1: "keyword",
                         4: "title.class",
@@ -277,7 +277,7 @@ e.exports = function (e) {
             ],
         },
         v = t.concat(r, "\\b(?!\\()"),
-        I = {
+        S = {
             variants: [
                 {
                     match: [t.concat(/::/, t.lookahead(/(?!class\b)/)), v],
@@ -307,16 +307,16 @@ e.exports = function (e) {
                 },
             ],
         },
-        T = {
+        I = {
             scope: "attr",
             match: t.concat(r, t.lookahead(":"), t.lookahead(/(?!::)/)),
         },
-        S = {
+        T = {
             relevance: 0,
             begin: /\(/,
             end: /\)/,
             keywords: b,
-            contains: [T, o, I, e.C_BLOCK_COMMENT_MODE, p, h, O],
+            contains: [I, o, S, e.C_BLOCK_COMMENT_MODE, _, m, O],
         },
         A = {
             relevance: 0,
@@ -324,21 +324,21 @@ e.exports = function (e) {
                 /\b/,
                 t.concat("(?!fn\\b|function\\b|", y(g).join("\\b|"), "|", y(E).join("\\b|"), "\\b)"),
                 r,
-                t.concat(_, "*"),
+                t.concat(p, "*"),
                 t.lookahead(/(?=\()/),
             ],
             scope: { 3: "title.function.invoke" },
-            contains: [S],
+            contains: [T],
         };
-    S.contains.push(A);
-    let C = [T, I, e.C_BLOCK_COMMENT_MODE, p, h, O],
+    T.contains.push(A);
+    let C = [I, S, e.C_BLOCK_COMMENT_MODE, _, m, O],
         N = {
             begin: t.concat(/#\[\s*\\?/, t.either(i, a)),
             beginScope: "meta",
             end: /]/,
             endScope: "meta",
             keywords: {
-                literal: m,
+                literal: h,
                 keyword: ["new", "array"],
             },
             contains: [
@@ -346,7 +346,7 @@ e.exports = function (e) {
                     begin: /\[/,
                     end: /]/,
                     keywords: {
-                        literal: m,
+                        literal: h,
                         keyword: ["new", "array"],
                     },
                     contains: ["self", ...C],
@@ -395,7 +395,7 @@ e.exports = function (e) {
             },
             o,
             A,
-            I,
+            S,
             {
                 match: [/const/, /\s/, r],
                 scope: {
@@ -425,7 +425,7 @@ e.exports = function (e) {
                         excludeBegin: !0,
                         excludeEnd: !0,
                         keywords: b,
-                        contains: ["self", N, o, I, e.C_BLOCK_COMMENT_MODE, p, h],
+                        contains: ["self", N, o, S, e.C_BLOCK_COMMENT_MODE, _, m],
                     },
                 ],
             },
@@ -465,8 +465,8 @@ e.exports = function (e) {
                     e.UNDERSCORE_TITLE_MODE,
                 ],
             },
-            p,
-            h,
+            _,
+            m,
         ],
     };
 };

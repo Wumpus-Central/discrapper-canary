@@ -9,35 +9,35 @@ var r = n(54381),
     u = n(314897),
     d = n(993413),
     f = n(504983),
-    _ = n(921944),
-    p = n(228168),
-    h = n(388032),
-    m = n(700803);
+    p = n(921944),
+    _ = n(228168),
+    m = n(388032),
+    h = n(700803);
 let g = () => {
     let [e, t] = (0, l.US)([a.z.WIDGETS_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE]),
         n = e === a.z.WIDGETS_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE,
         g = (0, i.e7)([u.default], () => u.default.getId());
     return (0, r.jsx)(d.Z, {
-        title: h.intl.string(h.t.Jzj9q4),
-        description: h.intl.string(h.t.lfF1Sp),
+        title: m.intl.string(m.t.Jzj9q4),
+        description: m.intl.string(m.t.lfF1Sp),
         titleIcon: n
             ? (0, r.jsx)(o.IGR, {
-                  className: m.newBadge,
-                  text: h.intl.string(h.t.y2b7CA),
+                  className: h.newBadge,
+                  text: m.intl.string(m.t.y2b7CA),
               })
             : null,
         borderType: f.Y.LIMITED,
         showBorder: n,
         hasBackground: n,
         children: (0, r.jsx)(o.Button, {
-            text: h.intl.string(h.t.Geikwq),
+            text: m.intl.string(m.t.Geikwq),
             onClick: () => {
-                n && t(_.L.TAKE_ACTION),
+                n && t(p.L.TAKE_ACTION),
                     (0, c.openUserProfileModal)({
                         userId: g,
                         sourceAnalyticsLocations: [s.Z.USER_SETTINGS_USER_PROFILE],
                         hideRestrictedProfile: !0,
-                        section: p.oh.WIDGETS,
+                        section: _.oh.WIDGETS,
                     });
             },
             size: "sm",

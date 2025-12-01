@@ -1,4 +1,4 @@
-n.d(t, { D: () => m });
+n.d(t, { D: () => h });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,11 +58,11 @@ function _(e, t) {
         e
     );
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -70,7 +70,7 @@ function p(e, t) {
     }
     return i;
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -79,20 +79,20 @@ function h(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function m(e) {
+function h(e) {
     var {
             children: t,
             placeholder: n,
             value: a,
             onChange: u,
             onClose: f,
-            className: h,
-            multiSelect: m,
+            className: m,
+            multiSelect: h,
             emptyStateText: g,
             emptyStateHeader: E,
             onQueryChange: b,
         } = e,
-        y = p(e, [
+        y = _(e, [
             "children",
             "placeholder",
             "value",
@@ -106,17 +106,17 @@ function m(e) {
         ]);
     let O = i.useCallback(
         (e) => {
-            u(e), m || null == f || f();
+            u(e), h || null == f || f();
         },
-        [u, f, m],
+        [u, f, h],
     );
     return (0, r.jsx)(s.V, {
-        className: o()(c.container, c.scroller, h),
+        className: o()(c.container, c.scroller, m),
         children: (0, r.jsx)(
             l.hQ,
-            _(d({}, y), {
+            p(d({}, y), {
                 value: a,
-                multiSelect: m,
+                multiSelect: h,
                 onChange: O,
                 placeholder: n,
                 children: t,

@@ -39,7 +39,7 @@ function y(e) {
     }
     return e;
 }
-function O(e, t) {
+function v(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -59,9 +59,9 @@ function O(e, t) {
     }
     return i;
 }
-let v = (e) => {
+let O = (e) => {
         var { widget: t } = e,
-            n = O(e, ["widget"]);
+            n = v(e, ["widget"]);
         switch (t.type) {
             case a.l.FAVORITE_GAMES:
                 return (0, r.jsx)(g.Z, y({ widget: t }, n));
@@ -77,7 +77,7 @@ let v = (e) => {
     },
     j = (e) => {
         var { widget: t, user: n, disableInteraction: a } = e,
-            f = O(e, ["widget", "user", "disableInteraction"]);
+            f = v(e, ["widget", "user", "disableInteraction"]);
         let { shouldShowSuggestions: g, handleDismissSuggestions: p } = (0, s.h)(t),
             m = (0, l.e7)([o.default], () => o.default.getId() === n.id),
             j = m && !a && g,
@@ -92,7 +92,7 @@ let v = (e) => {
                 setExpanded: S,
             },
             children: (0, r.jsx)(
-                v,
+                O,
                 y(
                     {
                         widget: t,

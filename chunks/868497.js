@@ -1,114 +1,114 @@
-_.d(e, { m: () => A });
-var a = _(873567),
-    r = _(370541),
-    n = _(285883),
-    o = _(573736),
-    E = _(263449),
-    i = _(988097),
-    c = _(73453),
-    s = _(696486),
-    l = _(789112),
-    I = _(793373),
-    R = _(152228),
-    N = _(305625);
-function A(t, e, _, u, T = "auto.http.browser") {
-    if (!t.fetchData) return;
-    let d = (0, c.z)() && e(t.fetchData.url);
-    if (t.endTimestamp && d) {
-        let e = t.fetchData.__span;
-        if (!e) return;
-        let _ = u[e];
-        _ &&
-            ((function (t, e) {
-                if (e.response) {
-                    (0, I.Q0)(t, e.response.status);
-                    let _ = e.response && e.response.headers && e.response.headers.get("content-length");
-                    if (_) {
-                        let e = parseInt(_);
-                        e > 0 && t.setAttribute("http.response_content_length", e);
+r.d(t, { m: () => p });
+var n = r(873567),
+    a = r(370541),
+    i = r(285883),
+    o = r(573736),
+    _ = r(263449),
+    s = r(988097),
+    c = r(73453),
+    E = r(696486),
+    l = r(789112),
+    u = r(793373),
+    d = r(152228),
+    I = r(305625);
+function p(e, t, r, R, T = "auto.http.browser") {
+    if (!e.fetchData) return;
+    let A = (0, c.z)() && t(e.fetchData.url);
+    if (e.endTimestamp && A) {
+        let t = e.fetchData.__span;
+        if (!t) return;
+        let r = R[t];
+        r &&
+            ((function (e, t) {
+                if (t.response) {
+                    (0, u.Q0)(e, t.response.status);
+                    let r = t.response && t.response.headers && t.response.headers.get("content-length");
+                    if (r) {
+                        let t = parseInt(r);
+                        t > 0 && e.setAttribute("http.response_content_length", t);
                     }
                 } else
-                    e.error &&
-                        t.setStatus({
-                            code: I.jt,
+                    t.error &&
+                        e.setStatus({
+                            code: u.jt,
                             message: "internal_error",
                         });
-                t.end();
-            })(_, t),
-            delete u[e]);
+                e.end();
+            })(r, e),
+            delete R[t]);
         return;
     }
-    let f = (0, E.nZ)(),
-        O = (0, E.s3)(),
-        { method: L, url: p } = t.fetchData,
-        C = (function (t) {
+    let N = (0, _.nZ)(),
+        f = (0, _.s3)(),
+        { method: O, url: h } = e.fetchData,
+        D = (function (e) {
             try {
-                return new URL(t).href;
-            } catch (t) {
+                return new URL(e).href;
+            } catch (e) {
                 return;
             }
-        })(p),
-        P = C ? (0, a.en)(C).host : void 0,
-        h = !!(0, s.HN)(),
-        D =
-            d && h
-                ? (0, R.qp)({
-                      name: `${L} ${p}`,
+        })(h),
+        S = D ? (0, n.en)(D).host : void 0,
+        L = !!(0, E.HN)(),
+        C =
+            A && L
+                ? (0, d.qp)({
+                      name: `${O} ${h}`,
                       attributes: {
-                          url: p,
+                          url: h,
                           type: "fetch",
-                          "http.method": L,
-                          "http.url": C,
-                          "server.address": P,
-                          [i.S3]: T,
-                          [i.$J]: "http.client",
+                          "http.method": O,
+                          "http.url": D,
+                          "server.address": S,
+                          [s.S3]: T,
+                          [s.$J]: "http.client",
                       },
                   })
                 : new l.b();
-    if (((t.fetchData.__span = D.spanContext().spanId), (u[D.spanContext().spanId] = D), _(t.fetchData.url) && O)) {
-        let e = t.args[0];
-        t.args[1] = t.args[1] || {};
-        let _ = t.args[1];
-        _.headers = (function (t, e, _, a, i) {
+    if (((e.fetchData.__span = C.spanContext().spanId), (R[C.spanContext().spanId] = C), r(e.fetchData.url) && f)) {
+        let t = e.args[0];
+        e.args[1] = e.args[1] || {};
+        let r = e.args[1];
+        r.headers = (function (e, t, r, n, s) {
             let {
                     traceId: c,
                     spanId: l,
-                    sampled: I,
-                    dsc: R,
+                    sampled: u,
+                    dsc: d,
                 } = {
-                    ...(0, E.aF)().getPropagationContext(),
-                    ..._.getPropagationContext(),
+                    ...(0, _.aF)().getPropagationContext(),
+                    ...r.getPropagationContext(),
                 },
-                A = i ? (0, s.Hb)(i) : (0, r.$p)(c, l, I),
-                u = (0, n.IQ)(R || (i ? (0, N.jC)(i) : (0, N._l)(c, e))),
-                T = a.headers || ("undefined" != typeof Request && (0, o.V9)(t, Request) ? t.headers : void 0);
+                p = s ? (0, E.Hb)(s) : (0, a.$p)(c, l, u),
+                R = (0, i.IQ)(d || (s ? (0, I.jC)(s) : (0, I._l)(c, t))),
+                T = n.headers || ("undefined" != typeof Request && (0, o.V9)(e, Request) ? e.headers : void 0);
             if (!T)
                 return {
-                    "sentry-trace": A,
-                    baggage: u,
+                    "sentry-trace": p,
+                    baggage: R,
                 };
             if ("undefined" != typeof Headers && (0, o.V9)(T, Headers)) {
-                let t = new Headers(T);
-                return t.append("sentry-trace", A), u && t.append(n.bU, u), t;
+                let e = new Headers(T);
+                return e.append("sentry-trace", p), R && e.append(i.bU, R), e;
             }
             if (Array.isArray(T)) {
-                let t = [...T, ["sentry-trace", A]];
-                return u && t.push([n.bU, u]), t;
+                let e = [...T, ["sentry-trace", p]];
+                return R && e.push([i.bU, R]), e;
             }
             {
-                let t = "baggage" in T ? T.baggage : void 0,
-                    e = [];
+                let e = "baggage" in T ? T.baggage : void 0,
+                    t = [];
                 return (
-                    Array.isArray(t) ? e.push(...t) : t && e.push(t),
-                    u && e.push(u),
+                    Array.isArray(e) ? t.push(...e) : e && t.push(e),
+                    R && t.push(R),
                     {
                         ...T,
-                        "sentry-trace": A,
-                        baggage: e.length > 0 ? e.join(",") : void 0,
+                        "sentry-trace": p,
+                        baggage: t.length > 0 ? t.join(",") : void 0,
                     }
                 );
             }
-        })(e, O, f, _, (0, c.z)() && h ? D : void 0);
+        })(t, f, N, r, (0, c.z)() && L ? C : void 0);
     }
-    return D;
+    return C;
 }

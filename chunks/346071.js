@@ -10,9 +10,9 @@ var i = n(481060),
 function u(e) {
     let { fractionalPremiumInfo: t, variant: n = "default", enablePremiumBrandRefresh: u = !1, style: d } = e,
         f = t.fractionalState === o.a$.FP_SUB_PAUSED,
-        _ = (0, a.Z)(t.endsAt, f),
-        p = "",
-        h = {
+        p = (0, a.Z)(t.endsAt, f),
+        _ = "",
+        m = {
             trial: {
                 days_and_hours: s.t.SQyVVd,
                 days: s.t["2ifAYG"],
@@ -24,15 +24,15 @@ function u(e) {
                 hours: s.t["8Xm6uL"],
             },
         };
-    return (_.days > 0 && _.hours > 0
-        ? (p = s.intl.format(h[n].days_and_hours, {
-              days: _.days,
-              hours: _.hours,
+    return (p.days > 0 && p.hours > 0
+        ? (_ = s.intl.format(m[n].days_and_hours, {
+              days: p.days,
+              hours: p.hours,
           }))
-        : _.days > 0
-          ? (p = s.intl.format(h[n].days, { days: _.days }))
-          : _.hours > 0 && (p = s.intl.format(h[n].hours, { hours: _.hours })),
-    "" === p)
+        : p.days > 0
+          ? (_ = s.intl.format(m[n].days, { days: p.days }))
+          : p.hours > 0 && (_ = s.intl.format(m[n].hours, { hours: p.hours })),
+    "" === _)
         ? null
         : u
           ? (0, r.jsxs)("div", {
@@ -46,7 +46,7 @@ function u(e) {
                     }),
                     (0, r.jsx)(i.Text, {
                         variant: "text-sm/medium",
-                        children: p,
+                        children: _,
                     }),
                 ],
             })
@@ -71,7 +71,7 @@ function u(e) {
                     }),
                     (0, r.jsx)(i.Text, {
                         variant: "text-sm/normal",
-                        children: p,
+                        children: _,
                     }),
                     (0, r.jsx)("div", { className: l.activeFractionalPremiumBannerBackgroundImage }),
                 ],

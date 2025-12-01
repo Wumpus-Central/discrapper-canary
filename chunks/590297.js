@@ -8,27 +8,27 @@ var r = n(754981),
     u = n(708150),
     d = n(520480),
     f = n(467159),
-    _ = 20,
-    p = !1,
-    h = !1,
-    m = null;
+    p = 20,
+    _ = !1,
+    m = !1,
+    h = null;
 function g(e) {
-    m || (m = new r(c(e))).start();
+    h || (h = new r(c(e))).start();
 }
 var E = {
     onCompositionStart: function (e) {
-        (h = !0), g(e);
+        (m = !0), g(e);
     },
     onCompositionEnd: function (e) {
-        (p = !1),
-            (h = !1),
+        (_ = !1),
+            (m = !1),
             setTimeout(function () {
-                p || E.resolveComposition(e);
-            }, _);
+                _ || E.resolveComposition(e);
+            }, p);
     },
     onSelect: l,
     onKeyDown: function (e, t) {
-        if (!h) {
+        if (!m) {
             E.resolveComposition(e), e._onKeyDown(t);
             return;
         }
@@ -38,9 +38,9 @@ var E = {
         t.which === s.RETURN && t.preventDefault();
     },
     resolveComposition: function (e) {
-        if (!h) {
-            var t = f(m).stopAndFlushMutations();
-            (m = null), (p = !0);
+        if (!m) {
+            var t = f(h).stopAndFlushMutations();
+            (h = null), (_ = !0);
             var n = o.set(e._latestEditorState, { inCompositionMode: !1 });
             if ((e.exitCurrentMode(), !t.size)) return void e.update(n);
             var r = n.getCurrentContent();
@@ -50,24 +50,24 @@ var E = {
                     c = s.decoratorKey,
                     u = s.leafKey,
                     f = n.getBlockTree(l).getIn([c, "leaves", u]),
-                    _ = f.start,
-                    p = f.end,
-                    h = n.getSelection().merge({
+                    p = f.start,
+                    _ = f.end,
+                    m = n.getSelection().merge({
                         anchorKey: l,
                         focusKey: l,
-                        anchorOffset: _,
-                        focusOffset: p,
+                        anchorOffset: p,
+                        focusOffset: _,
                         isBackward: !1,
                     }),
-                    m = d(r, h),
-                    g = r.getBlockForKey(l).getInlineStyleAt(_);
-                (r = i.replaceText(r, h, e, g, m)), (n = o.set(n, { currentContent: r }));
+                    h = d(r, m),
+                    g = r.getBlockForKey(l).getInlineStyleAt(p);
+                (r = i.replaceText(r, m, e, g, h)), (n = o.set(n, { currentContent: r }));
             });
             var s = u(n, c(e)),
                 l = s.selectionState;
             e.restoreEditorDOM();
-            var _ = o.acceptSelection(n, l);
-            e.update(o.push(_, r, "insert-characters"));
+            var p = o.acceptSelection(n, l);
+            e.update(o.push(p, r, "insert-characters"));
         }
     },
 };

@@ -14,14 +14,14 @@ var r = n(692547),
     c = n(659953),
     u = n(319707),
     d = n(584914),
-    p = n(962575),
+    f = n(962575),
     h = n(334702),
-    f = n(333722),
+    p = n(333722),
     g = n(549931),
     m = n(178561),
     b = n(39863);
 let _ = {
-        MISSED_MESSAGES: f,
+        MISSED_MESSAGES: p,
         FRIEND_REQUEST_REMINDER: d,
         SCHEDULED_GUILD_EVENT: c,
         TOP_MESSAGES: h,
@@ -92,7 +92,7 @@ let _ = {
             case i.O7.INCOMING_GAME_FRIEND_REQUESTS:
             case i.O7.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED:
                 return {
-                    icon: p,
+                    icon: f,
                     color: r.Z.colors.BACKGROUND_ACCENT,
                 };
             default:

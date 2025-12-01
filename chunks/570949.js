@@ -1,6 +1,6 @@
 n.d(t, {
-    P: () => p,
-    Z: () => h,
+    P: () => _,
+    Z: () => m,
 });
 var r = n(54381),
     i = n(481060),
@@ -12,8 +12,8 @@ var r = n(54381),
     u = n(499254),
     d = n(827498),
     f = n(314734),
-    _ = n(388032);
-function p(e) {
+    p = n(388032);
+function _(e) {
     var t;
     let { application: n } = e,
         r = null != (t = c.Z.getGuildId()) ? t : void 0,
@@ -26,18 +26,18 @@ function p(e) {
         onItemClick: a,
     });
 }
-function h(e) {
+function m(e) {
     let { application: t, onSelect: n } = e,
         s = l.Sb.useSetting(),
         c = (0, o.Z)({
             id: t.id,
-            label: _.intl.string(_.t["+NP/b2"]),
+            label: p.intl.string(p.t["+NP/b2"]),
         }),
-        u = p({ application: t });
+        u = _({ application: t });
     return (0, r.jsxs)(i.v2r, {
         navId: "activity-shelf-item-context",
         onClose: a.Zy,
-        "aria-label": _.intl.string(_.t.WkcHT9),
+        "aria-label": p.intl.string(p.t.WkcHT9),
         onSelect: n,
         children: [
             null != u && (0, r.jsx)(i.kSQ, { children: u }, "manage-app-actions"),

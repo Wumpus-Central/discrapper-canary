@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r,
     i = n(442837),
     a = n(570140);
@@ -43,7 +43,7 @@ class f extends (r = i.ZP.Store) {
     }
 }
 o(f, "displayName", "BasicGuildStore");
-let _ = new f(a.Z, {
+let p = new f(a.Z, {
     BASIC_GUILD_FETCH: c,
     BASIC_GUILD_FETCH_SUCCESS: u,
     BASIC_GUILD_FETCH_FAILURE: d,

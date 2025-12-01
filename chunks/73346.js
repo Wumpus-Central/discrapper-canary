@@ -1,10 +1,11 @@
 n.d(t, {
-    Gg: () => x,
-    Kb: () => R,
-    Ww: () => k,
+    $k: () => I,
+    Gg: () => L,
+    Kb: () => P,
+    Ww: () => M,
     ZI: () => A,
     _W: () => C,
-    uF: () => P,
+    uF: () => R,
 }),
     n(539854),
     n(388685),
@@ -22,10 +23,10 @@ var r = n(392711),
     u = n(95015),
     d = n(544891),
     f = n(355467),
-    _ = n(134432),
-    p = n(314897),
-    h = n(351402),
-    m = n(853872),
+    p = n(134432),
+    _ = n(314897),
+    m = n(351402),
+    h = n(853872),
     g = n(78839),
     E = n(526167),
     b = n(823379);
@@ -45,7 +46,7 @@ function v(e, t, n) {
         e
     );
 }
-function I(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -62,8 +63,8 @@ function I(e) {
     return e;
 }
 n(388032), l().shim();
-let T = !c.tq && !c.Em && -1 !== (0, E.vu)(),
-    S = 3;
+let I = !c.tq && !c.Em && -1 !== (0, E.vu)(),
+    T = 3;
 function A(e, t) {
     let { analyticsSource: n, analyticsProperties: r, storeListingId: i, slug: a, channelId: o, guildId: s } = t,
         l = {
@@ -73,7 +74,7 @@ function A(e, t) {
             },
             search: null != i ? "?store_listing_id=".concat(i) : "",
         };
-    return I(
+    return S(
         { pathname: null != o && null != s ? O.Z5c.CHANNEL(s, o, e) : O.Z5c.APPLICATION_STORE_LISTING_SKU(e, a) },
         l,
     );
@@ -94,7 +95,7 @@ function C(e, t, n, r) {
             default:
                 r = "webp";
         }
-    "webp" !== r || T || (r = "png");
+    "webp" !== r || I || (r = "png");
     let s = "string" == typeof t ? t : t.id,
         l = (i = "https:");
     return (
@@ -105,37 +106,37 @@ function C(e, t, n, r) {
                       .concat(l)
                       .concat(window.GLOBAL_ENV.API_ENDPOINT)
                       .concat(O.ANM.STORE_ASSET(e, s, r))),
-        null != n && (a += "?size=".concat((0, _.oO)(n * (0, _.x_)()))),
+        null != n && (a += "?size=".concat((0, p.oO)(n * (0, p.x_)()))),
         a
     );
 }
 function N() {
     return new Promise(async (e) => {
         if (g.Z.hasFetchedSubscriptions()) e();
-        else if (h.Z.isSubscriptionFetching) {
+        else if (m.Z.isSubscriptionFetching) {
             let t = () => {
-                h.Z.isSubscriptionFetching ? setTimeout(t, 50) : e();
+                m.Z.isSubscriptionFetching ? setTimeout(t, 50) : e();
             };
             t();
         } else await (0, f.jg)(), e();
     });
 }
-async function R(e) {
+async function P(e) {
     var t, n, r, i;
     let a = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        o = p.default.isAuthenticated();
+        o = _.default.isAuthenticated();
     if (a && o) {
         let e = [];
-        m.Z.hasFetchedPaymentSources || e.push(null != (n = h.Z.paymentSourcesFetchRequest) ? n : (0, f.tZ)()),
-            h.Z.ipCountryCodeLoaded || e.push((0, f.GE)()),
+        h.Z.hasFetchedPaymentSources || e.push(null != (n = m.Z.paymentSourcesFetchRequest) ? n : (0, f.tZ)()),
+            m.Z.ipCountryCodeLoaded || e.push((0, f.GE)()),
             e.push(N()),
             await Promise.race([Promise.allSettled(e), new Promise((e) => setTimeout(e, 10000))]);
     }
-    let s = m.Z.getDefaultBillingCountryCode(),
-        l = null != (r = null == (t = m.Z.defaultPaymentSource) ? void 0 : t.id) ? r : null,
+    let s = h.Z.getDefaultBillingCountryCode(),
+        l = null != (r = null == (t = h.Z.defaultPaymentSource) ? void 0 : t.id) ? r : null,
         c = g.Z.getPremiumTypeSubscription();
     null != c && null != c.paymentSourceId && (l = c.paymentSourceId),
-        null === s && (s = null != (i = h.Z.ipCountryCode) ? i : null);
+        null === s && (s = null != (i = m.Z.ipCountryCode) ? i : null);
     let u = {};
     if ((null != s && (u.country_code = s), null != l && (u.payment_source_id = l), null != s || null != l)) {
         if (
@@ -148,15 +149,15 @@ async function R(e) {
             "string" == typeof e.query)
         )
             throw Error("string query not supported");
-        e.query = I({}, u, e.query);
+        e.query = S({}, u, e.query);
     }
     return d.tn.get(e);
 }
-function P(e, t, n) {
+function R(e, t, n) {
     let r = t.getApplication(e);
     return null == r || null == r.primarySkuId ? null : n.get(r.primarySkuId);
 }
-function D(e, t, n) {
+function w(e, t, n) {
     var r;
     let i = null != (r = n.getNowPlaying(e)) ? r : {},
         a = y.default
@@ -179,7 +180,7 @@ function D(e, t, n) {
               userInfo: a,
           };
 }
-function w(e, t, n) {
+function D(e, t, n) {
     let r = n.getStatisticsForApplication(e);
     if (null == r) return null;
     let i = r
@@ -201,14 +202,14 @@ function w(e, t, n) {
               userInfo: i,
           };
 }
-let L = [];
-function x(e, t, n, r, a) {
+let x = [];
+function L(e, t, n, r, a) {
     let o = t.get(e);
-    if (null == o) return L;
+    if (null == o) return x;
     let s = o.applicationId,
         l = [],
         c = [],
-        u = D(s, n, r);
+        u = w(s, n, r);
     null != u &&
         (l.push(u),
         (c = u.userInfo.map((e) => {
@@ -219,23 +220,23 @@ function x(e, t, n, r, a) {
     if (null != d) {
         let e = d.map((e) => e.user_id);
         if (i().difference(e, c).length > 0) {
-            let e = w(s, n, a);
+            let e = D(s, n, a);
             null != e && l.push(e);
         }
     }
     return l;
 }
-let M = [];
-function k(e, t, n) {
+let j = [];
+function M(e, t, n) {
     let r = t.get(e),
         i = n.getForSKU(e);
-    if (null == r || null == i) return M;
+    if (null == r || null == i) return j;
     let a = [];
     (0, u.yE)(r.flags, O.l4R.HAS_FREE_PREMIUM_CONTENT) && a.push({ type: O.AzA.HAS_FREE_PREMIUM_CONTENT });
     let s = r.releaseDate;
     return (
         null != s &&
-            o()().diff(s, "months") < S &&
+            o()().diff(s, "months") < T &&
             (r.accessType === O.kGb.EARLY_ACCESS
                 ? a.push({
                       type: O.AzA.EARLY_ACCESS,

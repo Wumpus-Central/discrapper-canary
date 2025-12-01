@@ -1,7 +1,7 @@
 n.d(t, {
     XX: () => U,
-    ZP: () => H,
-    ul: () => B,
+    ZP: () => B,
+    ul: () => F,
 }),
     n(388685);
 var i = n(54381),
@@ -23,11 +23,11 @@ var i = n(54381),
     C = n(569545),
     v = n(102172),
     _ = n(525925),
-    x = n(701362),
-    j = n(655018),
-    O = n(83896),
+    O = n(701362),
+    x = n(655018),
+    j = n(83896),
     E = n(821415),
-    S = n(456077),
+    S = n(670188),
     P = n(597998),
     I = n(314897),
     Z = n(430824),
@@ -38,7 +38,7 @@ var i = n(54381),
     M = n(70722),
     R = n(388032),
     L = n(92024);
-function k(e) {
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -63,7 +63,7 @@ function k(e) {
     }
     return e;
 }
-function D(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -92,7 +92,7 @@ function U(e) {
         }),
     });
 }
-function B(e) {
+function F(e) {
     let { numAudience: t, collapsed: n } = e,
         r = n ? t : R.intl.formatToPlainString(R.t["+v2pN2"], { count: t });
     return (0, i.jsxs)("div", {
@@ -114,15 +114,15 @@ function B(e) {
         ],
     });
 }
-let H = (0, h.$)(function (e) {
+let B = (0, h.$)(function (e) {
     var t;
     let {
             collapsed: l,
             user: h,
             channel: U,
-            mute: B,
-            localMute: H,
-            localVideoDisabled: F,
+            mute: F,
+            localMute: B,
+            localVideoDisabled: H,
             deaf: V,
             video: G,
             embeddedApplication: z,
@@ -156,13 +156,13 @@ let H = (0, h.$)(function (e) {
         } = e,
         eC = r.useRef(null),
         [ev, e_] = r.useState(!1),
-        ex = r.useRef(null),
-        [ej, eO] = r.useState(!1),
+        eO = r.useRef(null),
+        [ex, ej] = r.useState(!1),
         [eE, eS] = r.useState(!1),
         [eP, eI] = r.useState(!1),
         [eZ, eT] = r.useState(!1),
         eN = eE || eZ || eP,
-        eA = ej || eN,
+        eA = ex || eN,
         ew = (null == eb ? void 0 : eb.session_id) != null,
         eM = () => {
             e_(!ev);
@@ -174,16 +174,16 @@ let H = (0, h.$)(function (e) {
         eL = () => {
             (et || ey || ew) && (null == ea || ea(h.id));
         },
-        ek = (e) => {
+        eD = (e) => {
             e
-                ? (ex.current = setTimeout(() => {
-                      eO(!0);
+                ? (eO.current = setTimeout(() => {
+                      ej(!0);
                   }, 150 * !!es))
-                : clearTimeout(ex.current);
+                : clearTimeout(eO.current);
         };
-    r.useEffect(() => () => clearTimeout(ex.current), []);
-    let eD = (e) => {
-            e && eO(!1);
+    r.useEffect(() => () => clearTimeout(eO.current), []);
+    let ek = (e) => {
+            e && ej(!1);
         },
         eU = () => {
             if (!(et && (0, v.p9)(U, A.Z, Z.Z, T.Z, b.default)[0])) return;
@@ -197,7 +197,7 @@ let H = (0, h.$)(function (e) {
                 en ? ((0, _.Z)(e), c.Z.selectParticipant(e.channelId, (0, C.V9)(e))) : (0, p.iV)(e),
                 null == ea || ea(h.id);
         },
-        eB = (e) => {
+        eF = (e) => {
             (0, u.jW)(e, async () => {
                 let { default: e } = await Promise.all([
                     n.e("79695"),
@@ -209,7 +209,7 @@ let H = (0, h.$)(function (e) {
                 return (t) =>
                     (0, i.jsx)(
                         e,
-                        D(k({}, t), {
+                        k(D({}, t), {
                             user: h,
                             guildId: U.guild_id,
                             channel: U,
@@ -222,11 +222,11 @@ let H = (0, h.$)(function (e) {
                     );
             });
         },
-        eH = (e) =>
+        eB = (e) =>
             ef
                 ? (0, i.jsx)(
-                      j.$,
-                      D(k({}, e), {
+                      x.$,
+                      k(D({}, e), {
                           channel: U,
                           setIsHangStatusInputFocused: eS,
                           setIsEmojiPickerOpen: eT,
@@ -234,15 +234,15 @@ let H = (0, h.$)(function (e) {
                   )
                 : null != eg
                   ? (0, i.jsx)(
-                        O.I,
-                        D(k({}, e), {
+                        j.I,
+                        k(D({}, e), {
                             hangStatusActivity: eg,
                             channel: U,
                             userId: h.id,
                         }),
                     )
                   : null,
-        eF = () =>
+        eH = () =>
             (0, i.jsx)(E.Z, {
                 userId: h.id,
                 channel: U,
@@ -250,7 +250,7 @@ let H = (0, h.$)(function (e) {
         eV = () =>
             (0, f.dl)() && (0, f.zd)(U.id)
                 ? null
-                : (0, i.jsx)(x.Z, {
+                : (0, i.jsx)(O.Z, {
                       user: h,
                       channel: U,
                       onWatch: eU,
@@ -284,9 +284,9 @@ let H = (0, h.$)(function (e) {
                                 speaking: X,
                                 latched: J,
                                 disconnected: Q,
-                                mute: B,
-                                localMute: H,
-                                localVideoDisabled: F,
+                                mute: F,
+                                localMute: B,
+                                localVideoDisabled: H,
                                 isStreaming: et,
                                 isGuest: ei,
                                 video: G,
@@ -307,7 +307,7 @@ let H = (0, h.$)(function (e) {
                                 selected: ev,
                                 onClick: t ? void 0 : eM,
                                 onDoubleClick: eU,
-                                onContextMenu: eB,
+                                onContextMenu: eF,
                                 guildId: U.guild_id,
                                 isSelf: ef,
                                 application: em,
@@ -319,18 +319,18 @@ let H = (0, h.$)(function (e) {
                             var r;
                             return (0, i.jsx)(o.u, {
                                 text: null != (r = (0, y.Z)(ec)) ? r : R.intl.string(R.t.IyYqqY),
-                                children: (0, i.jsx)(P.ZP, k({ ref: eC }, n)),
+                                children: (0, i.jsx)(P.ZP, D({ ref: eC }, n)),
                             });
                         }
                         let c = () => null;
                         return (
                             ey && eA
-                                ? (c = eH)
+                                ? (c = eB)
                                 : et
                                   ? (c = eV)
                                   : ew && h.id !== I.default.getId()
-                                    ? (c = eF)
-                                    : ey && (c = eH),
+                                    ? (c = eH)
+                                    : ey && (c = eB),
                             (0, i.jsx)(s.yRy, {
                                 targetElementRef: eC,
                                 position: "right",
@@ -342,12 +342,12 @@ let H = (0, h.$)(function (e) {
                                 children: () =>
                                     (0, i.jsx)(
                                         P.ZP,
-                                        D(k({}, n), {
+                                        k(D({}, n), {
                                             ref: eC,
                                             onMouseDown: e.onMouseDown,
                                             onKeyDown: e.onKeyDown,
-                                            handleHoverHangStatus: ek,
-                                            handleHoverIcons: eD,
+                                            handleHoverHangStatus: eD,
+                                            handleHoverIcons: ek,
                                             onAddHangStatusClicked: () => eI(!0),
                                         }),
                                     ),

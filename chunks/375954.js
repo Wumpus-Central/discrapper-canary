@@ -1,4 +1,4 @@
-n.d(t, { Z: () => em }), n(388685), n(997841), n(539854), n(583741), n(358797);
+n.d(t, { Z: () => eh }), n(388685), n(997841), n(539854), n(583741), n(358797);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -9,27 +9,27 @@ var r,
     u = n(89892),
     d = n(673750),
     f = n(710845),
-    _ = n(247206),
-    p = n(723352),
-    h = n(160404),
-    m = n(786761),
+    p = n(247206),
+    _ = n(723352),
+    m = n(160404),
+    h = n(786761),
     g = n(418476),
     E = (n(739566), n(995774)),
     b = n(706454),
     y = n(709054),
     O = n(314897),
     v = n(592125),
-    I = n(796974),
-    T = n(984933),
-    S = n(271383),
+    S = n(796974),
+    I = n(984933),
+    T = n(271383),
     A = n(430824),
     C = n(496675),
     N = n(699516),
-    R = n(944486),
-    P = n(914010),
-    D = n(594174),
-    w = n(981631);
-function L(e, t, n) {
+    P = n(944486),
+    R = n(914010),
+    w = n(594174),
+    D = n(981631);
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,10 +42,10 @@ function L(e, t, n) {
         e
     );
 }
-let x = new Set(),
-    M = new f.Z("MessageStore"),
-    k = !1;
-function j() {
+let L = new Set(),
+    j = new f.Z("MessageStore"),
+    M = !1;
+function k() {
     u.Z.forEach((e) => {
         u.Z.commit(
             e.mutate({
@@ -54,7 +54,7 @@ function j() {
             }),
         );
     }),
-        x.clear();
+        L.clear();
 }
 function U(e) {
     let { changesByChannelId: t } = e;
@@ -63,7 +63,7 @@ function U(e) {
         if (null == n) continue;
         let r = !1;
         if (!(n.cached || !r)) {
-            M.log(
+            j.log(
                 "Skipping background message sync for ".concat(e, " cached:").concat(n.cached, " ") +
                     "ready:".concat(n.ready, " hasMoreAfter:").concat(n.hasMoreAfter, " ") +
                     "isConnected:".concat(r),
@@ -76,15 +76,15 @@ function U(e) {
 function G() {
     return !0;
 }
-function B(e) {
+function Z(e) {
     let { channelId: t, truncateBottom: n, truncateTop: r } = e;
-    M.log("Truncating messages for ".concat(t, " bottom:").concat(n, " top:").concat(r));
+    j.log("Truncating messages for ".concat(t, " bottom:").concat(n, " top:").concat(r));
     let i = u.Z.getOrCreate(t);
     (i = i.truncate(n, r)), u.Z.commit(i);
 }
-function Z(e) {
+function B(e) {
     let { channelId: t } = e;
-    M.log("Clearing messages for ".concat(t)), u.Z.clear(t), x.clear();
+    j.log("Clearing messages for ".concat(t)), u.Z.clear(t), L.clear();
 }
 function F(e) {
     let { channelId: t, jump: n, focus: r, before: i, after: a, limit: o, truncate: s } = e,
@@ -139,27 +139,27 @@ function H(e) {
 }
 function Y(e) {
     let { message: t } = e;
-    (null == t ? void 0 : t.nonce) != null && x.add(t.nonce);
+    (null == t ? void 0 : t.nonce) != null && L.add(t.nonce);
 }
 function W(e) {
     let { channelId: t, messageId: n } = e;
-    if (null == n || !x.has(n)) return !1;
+    if (null == n || !L.has(n)) return !1;
     let r = u.Z.getOrCreate(t),
         i = r.get(n);
     if (null == i) return !1;
-    (r = (r = r.remove(n)).merge([i])), x.delete(n), u.Z.commit(r);
+    (r = (r = r.remove(n)).merge([i])), L.delete(n), u.Z.commit(r);
 }
 function K(e) {
     let { channelId: t, message: n, isPushNotification: r } = e,
         i = u.Z.getOrCreate(t);
     if (r) {
-        M.log("Inserting message tapped on from a push notification", n.id, n.channel_id),
+        j.log("Inserting message tapped on from a push notification", n.id, n.channel_id),
             u.Z.commit(i.receivePushNotification(n));
         return;
     }
     if (!i.ready) return !1;
-    null != n.nonce && n.state !== w.yb.SENDING && x.has(n.nonce) && ((i = i.remove(n.nonce)), x.delete(n.nonce)),
-        (i = i.receiveMessage(n, !0 === I.Z.isAtBottom(t))),
+    null != n.nonce && n.state !== D.yb.SENDING && L.has(n.nonce) && ((i = i.remove(n.nonce)), L.delete(n.nonce)),
+        (i = i.receiveMessage(n, !0 === S.Z.isAtBottom(t))),
         u.Z.commit(i);
 }
 function z(e) {
@@ -173,10 +173,10 @@ function z(e) {
             : i.update(
                   n,
                   (e) => (
-                      (e = e.set("state", w.yb.SEND_FAILED)).isCommandType()
+                      (e = e.set("state", D.yb.SEND_FAILED)).isCommandType()
                           ? (e = (e = e.set("interactionError", null != r ? r : "")).set(
                                 "flags",
-                                (0, o.pj)(e.flags, w.iLy.EPHEMERAL),
+                                (0, o.pj)(e.flags, D.iLy.EPHEMERAL),
                             ))
                           : null != r && (e = e.set("interactionError", null != r ? r : "")),
                       e
@@ -192,9 +192,9 @@ function q(e) {
         let e = r.getAfter(t);
         r = null != e && e.blocked ? r.mutate({ revealedMessageId: e.id }) : r.mutate({ revealedMessageId: null });
     }
-    (r = r.remove(t)), u.Z.commit(r), x.delete(t);
+    (r = r.remove(t)), u.Z.commit(r), L.delete(t);
 }
-function X(e) {
+function Q(e) {
     let { ids: t, channelId: n } = e,
         r = u.Z.getOrCreate(n);
     if (null == r) return !1;
@@ -206,21 +206,21 @@ function X(e) {
     }
     u.Z.commit(i),
         t.forEach((e) => {
-            x.delete(e);
+            L.delete(e);
         });
 }
-function Q(e) {
+function X(e) {
     let t = e.message.id,
         n = e.message.channel_id,
         r = u.Z.getOrCreate(n);
     if (null == r || !r.has(t)) return !1;
-    (r = r.update(t, (t) => (0, m.wi)(t, e.message))), u.Z.commit(r);
+    (r = r.update(t, (t) => (0, h.wi)(t, e.message))), u.Z.commit(r);
 }
 function J(e) {
     let { messageId: t, channelId: n } = e,
         r = u.Z.get(n);
     if (null == r || !r.has(t)) return !1;
-    (r = r.update(t, _.Cm)), u.Z.commit(r);
+    (r = r.update(t, p.Cm)), u.Z.commit(r);
 }
 function $(e) {
     let t = e.messageId,
@@ -289,7 +289,7 @@ function es(e) {
     if (null == i) return !1;
     (i = i.update(n, (e) => {
         var t;
-        return e.addReactionBatch(r, null == (t = D.default.getCurrentUser()) ? void 0 : t.id);
+        return e.addReactionBatch(r, null == (t = w.default.getCurrentUser()) ? void 0 : t.id);
     })),
         u.Z.commit(i);
 }
@@ -303,8 +303,8 @@ function el(e) {
     (s = s.update(i, (e) => {
         var n;
         return (
-            (null == (n = e.embeds) ? void 0 : n.filter(p.K).length) > 0 && (e = e.set("embeds", [])),
-            "MESSAGE_SEND_FAILED_AUTOMOD" === t && (e = e.set("flags", (0, o.pj)(e.flags, w.iLy.EPHEMERAL))),
+            (null == (n = e.embeds) ? void 0 : n.filter(_.K).length) > 0 && (e = e.set("embeds", [])),
+            "MESSAGE_SEND_FAILED_AUTOMOD" === t && (e = e.set("flags", (0, o.pj)(e.flags, D.iLy.EPHEMERAL))),
             e
         );
     })),
@@ -326,7 +326,7 @@ function ed() {
     u.Z.forEach((e) => {
         u.Z.clear(e.channelId);
     }),
-        x.clear();
+        L.clear();
 }
 function ef(e) {
     for (let [t, n] of y.default.entries(e.messages)) {
@@ -334,25 +334,25 @@ function ef(e) {
         u.Z.commit(e);
     }
 }
-function e_(e) {
+function ep(e) {
     let t = u.Z.getOrCreate(e.channelId);
     (t.cached || !t.ready) && u.Z.commit(t.addCachedMessages(e.messages, e.stale));
 }
-function ep(e) {
+function e_(e) {
     let { message: t } = e,
-        n = D.default.getCurrentUser();
-    null != t && null != t.author && null != n && t.author.id === n.id && (k = !0);
+        n = w.default.getCurrentUser();
+    null != t && null != t.author && null != n && t.author.id === n.id && (M = !0);
 }
-class eh extends (r = s.ZP.Store) {
+class em extends (r = s.ZP.Store) {
     initialize() {
-        this.waitFor(O.default, v.Z, I.Z, T.ZP, S.ZP, A.Z, h.Z, b.default, C.Z, N.Z, R.Z, P.Z, D.default),
-            this.syncWith([h.Z], () => {});
+        this.waitFor(O.default, v.Z, S.Z, I.ZP, T.ZP, A.Z, m.Z, b.default, C.Z, N.Z, P.Z, R.Z, w.default),
+            this.syncWith([m.Z], () => {});
     }
     getMessages(e) {
-        if (h.Z.hasViewingRoles()) {
+        if (m.Z.hasViewingRoles()) {
             let t = v.Z.getChannel(e),
                 n = null == t ? void 0 : t.getGuildId();
-            if (h.Z.isViewingRoles(n) && !C.Z.can(w.Plq.VIEW_CHANNEL, t)) return new u.Z(e);
+            if (m.Z.isViewingRoles(n) && !C.Z.can(D.Plq.VIEW_CHANNEL, t)) return new u.Z(e);
         }
         return u.Z.getOrCreate(e);
     }
@@ -360,13 +360,13 @@ class eh extends (r = s.ZP.Store) {
         return u.Z.getOrCreate(e).get(t);
     }
     getLastEditableMessage(e) {
-        let t = D.default.getCurrentUser();
+        let t = w.default.getCurrentUser();
         return a()(this.getMessages(e).toArray())
             .reverse()
             .find((e) => (0, g.Z)(e, null == t ? void 0 : t.id));
     }
     getLastChatCommandMessage(e) {
-        let t = D.default.getCurrentUser();
+        let t = w.default.getCurrentUser();
         return this.getMessages(e)
             .toArray()
             .reverse()
@@ -383,7 +383,7 @@ class eh extends (r = s.ZP.Store) {
         return a()(this.getMessages(e).toArray()).reverse().get(0);
     }
     getLastNonCurrentUserMessage(e) {
-        let t = D.default.getCurrentUser();
+        let t = w.default.getCurrentUser();
         return a()(this.getMessages(e).toArray())
             .reverse()
             .find((e) => e.author.id !== (null == t ? void 0 : t.id));
@@ -412,35 +412,35 @@ class eh extends (r = s.ZP.Store) {
         return u.Z.getOrCreate(e).loadingMore;
     }
     hasCurrentUserSentMessage(e) {
-        let t = D.default.getCurrentUser();
+        let t = w.default.getCurrentUser();
         return null != this.getMessages(e).findNewest((e) => e.author.id === (null == t ? void 0 : t.id));
     }
     hasCurrentUserSentMessageSinceAppStart() {
-        return k;
+        return M;
     }
 }
-L(eh, "displayName", "MessageStore");
-let em = new eh(l.Z, {
+x(em, "displayName", "MessageStore");
+let eh = new em(l.Z, {
     BACKGROUND_SYNC_CHANNEL_MESSAGES: U,
-    CONNECTION_OPEN: j,
-    OVERLAY_INITIALIZE: j,
+    CONNECTION_OPEN: k,
+    OVERLAY_INITIALIZE: k,
     CACHE_LOADED: ef,
     LOAD_MESSAGES: G,
     LOAD_MESSAGES_SUCCESS: V,
     LOAD_MESSAGES_FAILURE: H,
     LOAD_MESSAGES_SUCCESS_CACHED: F,
-    LOCAL_MESSAGES_LOADED: e_,
+    LOCAL_MESSAGES_LOADED: ep,
     LOAD_MESSAGE_INTERACTION_DATA_SUCCESS: $,
-    TRUNCATE_MESSAGES: B,
-    CLEAR_MESSAGES: Z,
+    TRUNCATE_MESSAGES: Z,
+    CLEAR_MESSAGES: B,
     MESSAGE_CREATE: K,
     MESSAGE_SEND_FAILED: z,
     MESSAGE_SEND_FAILED_AUTOMOD: el,
     MESSAGE_EDIT_FAILED_AUTOMOD: el,
-    MESSAGE_UPDATE: Q,
+    MESSAGE_UPDATE: X,
     MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: J,
     MESSAGE_DELETE: q,
-    MESSAGE_DELETE_BULK: X,
+    MESSAGE_DELETE_BULK: Q,
     MESSAGE_REVEAL: er,
     THREAD_CREATE_LOCAL: ee,
     CHANNEL_DELETE: et,
@@ -459,5 +459,5 @@ let em = new eh(l.Z, {
     LOGOUT: ed,
     UPLOAD_START: Y,
     UPLOAD_FAIL: W,
-    LOCAL_MESSAGE_CREATE: ep,
+    LOCAL_MESSAGE_CREATE: e_,
 });

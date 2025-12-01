@@ -1,6 +1,6 @@
 n.d(t, {
     EQ: () => $,
-    P: () => Q,
+    P: () => X,
 });
 let r = Symbol.for("@ts-pattern/matcher"),
     i = Symbol.for("@ts-pattern/isVariadic"),
@@ -74,13 +74,13 @@ function d(...e) {
 }
 function f(e) {
     return Object.assign(e, {
-        optional: () => p(e),
+        optional: () => _(e),
         and: (t) => g(e, t),
         or: (t) => E(e, t),
         select: (t) => (void 0 === t ? y(e) : y(t, e)),
     });
 }
-function _(e) {
+function p(e) {
     let t;
     return Object.assign(
         Object.assign((t = e), {
@@ -89,12 +89,12 @@ function _(e) {
             },
         }),
         {
-            optional: () => _(p(e)),
-            select: (t) => _(void 0 === t ? y(e) : y(t, e)),
+            optional: () => p(_(e)),
+            select: (t) => p(void 0 === t ? y(e) : y(t, e)),
         },
     );
 }
-function p(e) {
+function _(e) {
     return f({
         [r]: () => ({
             match: (t) => {
@@ -118,11 +118,11 @@ function p(e) {
         }),
     });
 }
-let h = (e, t) => {
+let m = (e, t) => {
         for (let n of e) if (!t(n)) return !1;
         return !0;
     },
-    m = (e, t) => {
+    h = (e, t) => {
         for (let [n, r] of e.entries()) if (!t(r, n)) return !1;
         return !0;
     };
@@ -194,15 +194,15 @@ function O(e) {
 function v(e) {
     return "string" == typeof e;
 }
-function I(e) {
+function S(e) {
     return "bigint" == typeof e;
 }
-let T = f(
+let I = f(
         b(function (e) {
             return !0;
         }),
     ),
-    S = T,
+    T = I,
     A = (e) =>
         Object.assign(f(e), {
             startsWith: (t) => {
@@ -232,45 +232,45 @@ let T = f(
         }),
     C = A(b(v)),
     N = (e, t) => b((n) => O(n) && e <= n && t >= n),
-    R = (e) => b((t) => O(t) && t < e),
-    P = (e) => b((t) => O(t) && t > e),
-    D = (e) => b((t) => O(t) && t <= e),
-    w = (e) => b((t) => O(t) && t >= e),
-    L = () => b((e) => O(e) && Number.isInteger(e)),
-    x = () => b((e) => O(e) && Number.isFinite(e)),
-    M = () => b((e) => O(e) && e > 0),
-    k = () => b((e) => O(e) && e < 0),
-    j = (e) =>
+    P = (e) => b((t) => O(t) && t < e),
+    R = (e) => b((t) => O(t) && t > e),
+    w = (e) => b((t) => O(t) && t <= e),
+    D = (e) => b((t) => O(t) && t >= e),
+    x = () => b((e) => O(e) && Number.isInteger(e)),
+    L = () => b((e) => O(e) && Number.isFinite(e)),
+    j = () => b((e) => O(e) && e > 0),
+    M = () => b((e) => O(e) && e < 0),
+    k = (e) =>
         Object.assign(f(e), {
-            between: (t, n) => j(g(e, N(t, n))),
-            lt: (t) => j(g(e, R(t))),
-            gt: (t) => j(g(e, P(t))),
-            lte: (t) => j(g(e, D(t))),
-            gte: (t) => j(g(e, w(t))),
-            int: () => j(g(e, L())),
-            finite: () => j(g(e, x())),
-            positive: () => j(g(e, M())),
-            negative: () => j(g(e, k())),
+            between: (t, n) => k(g(e, N(t, n))),
+            lt: (t) => k(g(e, P(t))),
+            gt: (t) => k(g(e, R(t))),
+            lte: (t) => k(g(e, w(t))),
+            gte: (t) => k(g(e, D(t))),
+            int: () => k(g(e, x())),
+            finite: () => k(g(e, L())),
+            positive: () => k(g(e, j())),
+            negative: () => k(g(e, M())),
         }),
-    U = j(b(O)),
-    G = (e, t) => b((n) => I(n) && e <= n && t >= n),
-    B = (e) => b((t) => I(t) && t < e),
-    Z = (e) => b((t) => I(t) && t > e),
-    F = (e) => b((t) => I(t) && t <= e),
-    V = (e) => b((t) => I(t) && t >= e),
-    H = () => b((e) => I(e) && e > 0),
-    Y = () => b((e) => I(e) && e < 0),
+    U = k(b(O)),
+    G = (e, t) => b((n) => S(n) && e <= n && t >= n),
+    Z = (e) => b((t) => S(t) && t < e),
+    B = (e) => b((t) => S(t) && t > e),
+    F = (e) => b((t) => S(t) && t <= e),
+    V = (e) => b((t) => S(t) && t >= e),
+    H = () => b((e) => S(e) && e > 0),
+    Y = () => b((e) => S(e) && e < 0),
     W = (e) =>
         Object.assign(f(e), {
             between: (t, n) => W(g(e, G(t, n))),
-            lt: (t) => W(g(e, B(t))),
-            gt: (t) => W(g(e, Z(t))),
+            lt: (t) => W(g(e, Z(t))),
+            gt: (t) => W(g(e, B(t))),
             lte: (t) => W(g(e, F(t))),
             gte: (t) => W(g(e, V(t))),
             positive: () => W(g(e, H())),
             negative: () => W(g(e, Y())),
         }),
-    K = W(b(I)),
+    K = W(b(S)),
     z = f(
         b(function (e) {
             return "boolean" == typeof e;
@@ -281,17 +281,17 @@ let T = f(
             return "symbol" == typeof e;
         }),
     ),
-    X = f(
+    Q = f(
         b(function (e) {
             return null == e;
         }),
     );
-var Q = {
+var X = {
     __proto__: null,
     matcher: r,
-    optional: p,
+    optional: _,
     array: function (...e) {
-        return _({
+        return p({
             [r]: () => ({
                 match: (t) => {
                     if (!Array.isArray(t)) return { matched: !1 };
@@ -337,7 +337,7 @@ var Q = {
                         },
                         i = e[0];
                     return {
-                        matched: h(t, (e) => l(i, e, r)),
+                        matched: m(t, (e) => l(i, e, r)),
                         selections: n,
                     };
                 },
@@ -367,7 +367,7 @@ var Q = {
                         );
                     let [a, o] = e;
                     return {
-                        matched: m(t, (e, t) => {
+                        matched: h(t, (e, t) => {
                             let n = l(a, t, i),
                                 r = l(o, e, i);
                             return n && r;
@@ -394,22 +394,22 @@ var Q = {
     },
     when: b,
     select: y,
-    any: T,
-    _: S,
+    any: I,
+    _: T,
     string: C,
     between: N,
-    lt: R,
-    gt: P,
-    lte: D,
-    gte: w,
-    int: L,
-    finite: x,
-    positive: M,
-    negative: k,
+    lt: P,
+    gt: R,
+    lte: w,
+    gte: D,
+    int: x,
+    finite: L,
+    positive: j,
+    negative: M,
     number: U,
     betweenBigInt: G,
-    ltBigInt: B,
-    gtBigInt: Z,
+    ltBigInt: Z,
+    gtBigInt: B,
     lteBigInt: F,
     gteBigInt: V,
     positiveBigInt: H,
@@ -417,7 +417,7 @@ var Q = {
     bigint: K,
     boolean: z,
     symbol: q,
-    nullish: X,
+    nullish: Q,
     instanceOf: function (e) {
         return f(
             b(

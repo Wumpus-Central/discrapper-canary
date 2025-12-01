@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r,
     i = n(442837),
     a = n(570140);
@@ -45,10 +45,10 @@ function f(e) {
     let { updates: t } = e;
     l = s({}, l, t);
 }
-function _() {
+function p() {
     (l = {}), (c = null);
 }
-class p extends (r = i.ZP.Store) {
+class _ extends (r = i.ZP.Store) {
     getEmailSettings() {
         return {
             categories: l,
@@ -56,10 +56,10 @@ class p extends (r = i.ZP.Store) {
         };
     }
 }
-o(p, "displayName", "EmailSettingsStore");
-let h = new p(a.Z, {
-    CONNECTION_OPEN: _,
-    LOGOUT: _,
+o(_, "displayName", "EmailSettingsStore");
+let m = new _(a.Z, {
+    CONNECTION_OPEN: p,
+    LOGOUT: p,
     EMAIL_SETTINGS_FETCH_SUCCESS: u,
     EMAIL_SETTINGS_UPDATE_SUCCESS: d,
     EMAIL_SETTINGS_UPDATE: f,

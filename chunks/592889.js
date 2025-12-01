@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -22,7 +22,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +38,7 @@ function _(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,23 +50,23 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function m(e) {
-    let { subscription: t, renewalMutations: i, className: f, analyticsLocation: p } = e,
-        m = (0, s.Z)(),
+function h(e) {
+    let { subscription: t, renewalMutations: i, className: f, analyticsLocation: _ } = e,
+        h = (0, s.Z)(),
         g = t.currentPeriodEnd;
     return (
-        m.fractionalState === c.a$.FP_SUB_PAUSED && (g = m.endsAt.toDate()),
+        h.fractionalState === c.a$.FP_SUB_PAUSED && (g = h.endsAt.toDate()),
         (0, r.jsxs)("div", {
             className: a()(d.root, f),
             children: [
@@ -94,10 +94,10 @@ function m(e) {
                                       return (n) =>
                                           (0, r.jsx)(
                                               e,
-                                              h(_({}, n), {
+                                              m(p({}, n), {
                                                   subscription: t,
                                                   renewalMutations: i,
-                                                  analyticsLocation: p,
+                                                  analyticsLocation: _,
                                               }),
                                           );
                                   });

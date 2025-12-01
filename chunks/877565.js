@@ -88,10 +88,10 @@ function f(e) {
         onClick: s,
         titleWithQuery: c,
         titleWithoutQuery: f,
-        Component: _,
-        getProps: p,
-        getQuery: h,
-        key: m,
+        Component: p,
+        getProps: _,
+        getQuery: m,
+        key: h,
         indexOffset: g = 0,
         headerClassName: E,
         headerTrailingContent: b,
@@ -103,9 +103,9 @@ function f(e) {
             ? void 0
             : a.map((e, t) => {
                   let r = t + g,
-                      a = p(e, r);
+                      a = _(e, r);
                   return (0, i.createElement)(
-                      _,
+                      p,
                       u(
                           l(
                               {
@@ -129,7 +129,7 @@ function f(e) {
                           titleWithQuery: c,
                           titleWithoutQuery: f,
                           query: t,
-                          getQuery: h,
+                          getQuery: m,
                           headerClassName: E,
                           headerTrailingContent: b,
                       })
@@ -138,6 +138,6 @@ function f(e) {
                 y,
             ],
         },
-        m,
+        h,
     );
 }

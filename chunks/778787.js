@@ -26,7 +26,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +42,7 @@ function _(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,18 +54,18 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -102,9 +102,9 @@ let E = (e) =>
 class y extends l.Z {
     static fromServer(e) {
         var { type: t, premium_type: n, category_sku_id: r, prices: i, bundled_products: a, variants: l } = e,
-            c = m(e, ["type", "premium_type", "category_sku_id", "prices", "bundled_products", "variants"]);
+            c = h(e, ["type", "premium_type", "category_sku_id", "prices", "bundled_products", "variants"]);
         return new y(
-            h(_({}, super.fromServer(c)), {
+            m(p({}, super.fromServer(c)), {
                 type: t,
                 premiumType: n === d.WND ? null : n,
                 categorySkuId: r,
@@ -144,9 +144,9 @@ class y extends l.Z {
 class O extends y {
     static fromServer(e) {
         var { base_variant_name: t, base_variant_sku_id: n, variant_label: r, variant_value: i } = e,
-            a = m(e, ["base_variant_name", "base_variant_sku_id", "variant_label", "variant_value"]);
+            a = h(e, ["base_variant_name", "base_variant_sku_id", "variant_label", "variant_value"]);
         return new O(
-            h(_({}, super.fromServer(a)), {
+            m(p({}, super.fromServer(a)), {
                 baseVariantName: t,
                 baseVariantSkuId: n,
                 variantLabel: r,

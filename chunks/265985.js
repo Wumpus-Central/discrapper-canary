@@ -1,5 +1,5 @@
 n.d(t, {
-    h: () => S,
+    h: () => T,
     x: () => A,
 });
 var r = n(54381);
@@ -13,25 +13,25 @@ var i = n(120356),
     u = n(131388),
     d = n(409813),
     f = n(430824),
-    _ = n(73346),
-    p = n(817460),
-    h = n(584825),
-    m = n(570533),
+    p = n(73346),
+    _ = n(817460),
+    m = n(584825),
+    h = n(570533),
     g = n(629262),
     E = n(575460),
     b = n(293810),
     y = n(388032),
     O = n(673854);
 let v = 440,
-    I = 80,
-    T = 4,
-    S = (e) => {
+    S = 80,
+    I = 4,
+    T = (e) => {
         let { onClose: t, listing: n, step: i, guildId: o } = e,
-            s = (0, h.YB)(o),
+            s = (0, m.YB)(o),
             c = (0, u.Z)(b.Xy),
             f = () => {
                 if (i !== d.h8.CONFIRM) return null;
-                let e = null == n.image_asset ? void 0 : (0, _._W)(n.application_id, n.image_asset, I);
+                let e = null == n.image_asset ? void 0 : (0, p._W)(n.application_id, n.image_asset, S);
                 return (0, r.jsx)("div", {
                     className: O.tierImageContainer,
                     children: (0, r.jsx)("img", {
@@ -41,12 +41,12 @@ let v = 440,
                     }),
                 });
             },
-            p = (() => {
+            _ = (() => {
                 var e;
                 if (c) return null;
                 let t =
                     (null == s || null == (e = s.cover_image_asset) ? void 0 : e.application_id) != null
-                        ? (0, _._W)(s.cover_image_asset.application_id, s.cover_image_asset, v)
+                        ? (0, p._W)(s.cover_image_asset.application_id, s.cover_image_asset, v)
                         : void 0;
                 return null == t && i !== d.h8.CONFIRM
                     ? null
@@ -59,9 +59,9 @@ let v = 440,
                         });
             })();
         return (0, r.jsxs)("div", {
-            className: a()(O.headerContainer, { [O.headerEmpty]: c || null == p }),
+            className: a()(O.headerContainer, { [O.headerEmpty]: c || null == _ }),
             children: [
-                p,
+                _,
                 f(),
                 (0, r.jsx)(l.P3F, {
                     className: O.closeContainer,
@@ -79,10 +79,10 @@ let v = 440,
     A = (e) => {
         let { onClose: t, listing: n, guildId: i } = e,
             a = (0, o.e7)([f.Z], () => f.Z.getGuild(i), [i]),
-            u = (0, m.Z)(i).filter((e) => e.roles.includes(n.role_id)),
-            d = n.role_benefits.benefits.filter(p.rC).slice(0, null === u.length ? T : T - 1),
-            _ = (0, g.Z)(d).slice(0, null === u.length ? T : T - 1),
-            h = () => {
+            u = (0, h.Z)(i).filter((e) => e.roles.includes(n.role_id)),
+            d = n.role_benefits.benefits.filter(_.rC).slice(0, null === u.length ? I : I - 1),
+            p = (0, g.Z)(d).slice(0, null === u.length ? I : I - 1),
+            m = () => {
                 var e;
                 if (0 === u.length) return null;
                 let t = u[0];
@@ -138,7 +138,7 @@ let v = 440,
                     color: "header-secondary",
                     children: y.intl.format(y.t.oi3gip, { tier: n.name }),
                 }),
-                _.length > 0 &&
+                p.length > 0 &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)(l.Text, {
@@ -149,7 +149,7 @@ let v = 440,
                             }),
                             (0, r.jsx)("div", {
                                 className: O.confirmationBenefits,
-                                children: _.map((e) =>
+                                children: p.map((e) =>
                                     (0, r.jsx)(
                                         E.Z,
                                         {
@@ -157,13 +157,13 @@ let v = 440,
                                             guildId: i,
                                             onClick: () => t(!0),
                                         },
-                                        (0, p.ab)(e),
+                                        (0, _.ab)(e),
                                     ),
                                 ),
                             }),
                         ],
                     }),
-                h(),
+                m(),
                 (0, r.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
                     className: O.confirmationButton,

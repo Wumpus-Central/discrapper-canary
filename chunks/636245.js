@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(54381);
 n(473749);
 var i = n(442837),
@@ -56,12 +56,12 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let _ = (e) => {
-    var { guildId: t, channelId: n, variant: c = "active", size: f = "sm", onAction: _ } = e,
-        p = d(e, ["guildId", "channelId", "variant", "size", "onAction"]);
-    let h = (0, i.e7)([s.Z], () => s.Z.isInChannel(n), [n]),
-        m = () => {
-            null == _ || _(), o.AC(t, n);
+let p = (e) => {
+    var { guildId: t, channelId: n, variant: c = "active", size: f = "sm", onAction: p } = e,
+        _ = d(e, ["guildId", "channelId", "variant", "size", "onAction"]);
+    let m = (0, i.e7)([s.Z], () => s.Z.isInChannel(n), [n]),
+        h = () => {
+            null == p || p(), o.AC(t, n);
         };
     return (0, r.jsx)(
         a.Button,
@@ -70,11 +70,11 @@ let _ = (e) => {
                 variant: c,
                 size: f,
                 text: l.intl.string(l.t.ZYO5OK),
-                disabled: h,
-                onClick: m,
+                disabled: m,
+                onClick: h,
                 fullWidth: !0,
             },
-            p,
+            _,
         ),
     );
 };

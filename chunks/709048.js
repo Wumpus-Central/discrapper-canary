@@ -13,18 +13,18 @@ function u(e) {
             gradient: u,
             disableAdaptiveTheme: d,
             reduceAdaptiveTheme: f,
-            customBackgroundClassName: _,
-            children: p,
+            customBackgroundClassName: p,
+            children: _,
         } = e,
-        { theme: h } = i.useContext(s.Ni);
+        { theme: m } = i.useContext(s.Ni);
     return (0, r.jsx)(l.z, {
         theme: a,
         gradient: u,
         disableAdaptiveTheme: d,
         reduceAdaptiveTheme: f,
-        children: p(
-            o()((0, c.Q)(null != (n = null != (t = null == u ? void 0 : u.theme) ? t : a) ? n : h), {
-                [null != _ ? _ : ""]: null != u && null != _,
+        children: _(
+            o()((0, c.Q)(null != (n = null != (t = null == u ? void 0 : u.theme) ? t : a) ? n : m), {
+                [null != p ? p : ""]: null != u && null != p,
                 "disable-adaptive-theme": d,
                 "reduce-adaptive-theme": f,
             }),

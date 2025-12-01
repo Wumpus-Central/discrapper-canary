@@ -24,9 +24,9 @@ function o(e, t, n, o) {
                             pageSection: u,
                             pageSectionTitle: d,
                             isUserGuildMember: f,
-                            pageHasLeaderboard: _,
+                            pageHasLeaderboard: p,
                         } = l.current,
-                        { positionInSection: p, analyticsLocations: h } = c.current;
+                        { positionInSection: _, analyticsLocations: m } = c.current;
                     i.default.track(a.rMx.SLAYER_STOREFRONT_CARD_HOVERED, {
                         slayer_storefront_session_id: t,
                         sku_id: e,
@@ -35,10 +35,10 @@ function o(e, t, n, o) {
                         page_title: o,
                         page_section: u,
                         page_section_title: d,
-                        position_in_section: p,
+                        position_in_section: _,
                         is_user_guild_member: f,
-                        page_has_leaderboard: _,
-                        location_stack: h,
+                        page_has_leaderboard: p,
+                        location_stack: m,
                     }),
                         (s.current = !0);
                 }

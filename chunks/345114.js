@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(834129),
     d = n(703656),
     f = n(35125),
-    _ = n(626751),
-    p = n(891614),
-    h = n(981631),
-    m = n(176505),
+    p = n(626751),
+    _ = n(891614),
+    m = n(981631),
+    h = n(176505),
     g = n(388032),
     E = n(545716);
 function b(e) {
@@ -25,18 +25,18 @@ function b(e) {
             messageId: r.id,
         })(t),
         { analyticsLocations: u } = (0, s.ZP)(o.Z.GUILD_ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE),
-        _ = r.roleSubscriptionData,
-        p = i.useCallback(() => {
-            (0, d.uL)(h.Z5c.CHANNEL(a, m.oC.ROLE_SUBSCRIPTIONS), { sourceLocationStack: u }),
-                (null == _ ? void 0 : _.role_subscription_listing_id) != null &&
-                    (0, f.y8)(a, n.id, r.id, _.role_subscription_listing_id);
-        }, [a, n, r, _, u]);
-    return null == _
+        p = r.roleSubscriptionData,
+        _ = i.useCallback(() => {
+            (0, d.uL)(m.Z5c.CHANNEL(a, h.oC.ROLE_SUBSCRIPTIONS), { sourceLocationStack: u }),
+                (null == p ? void 0 : p.role_subscription_listing_id) != null &&
+                    (0, f.y8)(a, n.id, r.id, p.role_subscription_listing_id);
+        }, [a, n, r, p, u]);
+    return null == p
         ? null
         : (0, f.Tn)({
               username: t.nick,
               usernameOnClickHandler: l,
-              roleSubscriptionOnClickHandler: p,
+              roleSubscriptionOnClickHandler: _,
               guildId: a,
               roleSubscriptionData: r.roleSubscriptionData,
           });
@@ -75,7 +75,7 @@ function O(e) {
         role: "img",
         "aria-label": g.intl.formatToPlainString(g.t["utf8+W"], { username: i }),
         children: [
-            (0, r.jsx)(p.Z, {
+            (0, r.jsx)(_.Z, {
                 guildId: t,
                 user: n,
                 className: E.welcomeCardBadge,
@@ -112,7 +112,7 @@ function v(e) {
                           user: o.author,
                           username: c.nick,
                       }),
-                  (0, r.jsx)(_.Z, {
+                  (0, r.jsx)(p.Z, {
                       channel: a,
                       message: o,
                   }),

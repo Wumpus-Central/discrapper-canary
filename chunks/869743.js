@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,18 +48,18 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let h = (e) => {
+let m = (e) => {
         let { appRecord: t, closePopout: n, selectedGuildId: i, selectedChannelId: l, children: u = null } = e,
             d = (0, o.Z)({
                 id: t.id,
@@ -88,9 +88,9 @@ let h = (e) => {
             ],
         });
     },
-    m = (e) => {
+    h = (e) => {
         let { appRecord: t, botUser: n, closePopout: i, selectedGuildId: a, selectedChannelId: o } = e;
-        return (0, r.jsx)(h, {
+        return (0, r.jsx)(m, {
             appRecord: t,
             closePopout: i,
             selectedGuildId: a,
@@ -110,13 +110,13 @@ let h = (e) => {
             renderPopout: (e) => {
                 let { closePopout: i } = e;
                 return null == t.bot
-                    ? (0, r.jsx)(h, {
+                    ? (0, r.jsx)(m, {
                           appRecord: t,
                           closePopout: i,
                           selectedGuildId: n,
                           selectedChannelId: o,
                       })
-                    : (0, r.jsx)(m, {
+                    : (0, r.jsx)(h, {
                           appRecord: t,
                           botUser: t.bot,
                           closePopout: i,
@@ -129,7 +129,7 @@ let h = (e) => {
             children: (e) =>
                 (0, r.jsx)(
                     a.P3F,
-                    p(
+                    _(
                         f(
                             {
                                 innerRef: s,

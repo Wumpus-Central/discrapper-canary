@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -10,15 +10,15 @@ var i = n(120356),
     u = n(509545),
     d = n(74538),
     f = n(474936),
-    _ = n(274065);
-let p = function (e) {
+    p = n(274065);
+let _ = function (e) {
     let {
             subscriptionTier: t,
             interval: n = f.rV.MONTH,
             className: i,
-            isGift: p = !1,
-            variant: h,
-            priceOptions: m,
+            isGift: _ = !1,
+            variant: m,
+            priceOptions: h,
             isApplicationHome: g,
             enablePremiumBrandRefresh: E,
         } = e,
@@ -27,10 +27,10 @@ let p = function (e) {
     if (!b)
         return (0, r.jsx)(l.$jN, {
             type: l.$jN.Type.PULSING_ELLIPSIS,
-            className: _.priceSpinner,
+            className: p.priceSpinner,
         });
     let O = u.Z.getForSkuAndInterval((0, d.Wz)(t), n),
-        v = null != O ? (0, d.gy)(O, m, !1, p) : null;
+        v = null != O ? (0, d.gy)(O, h, !1, _) : null;
     if (E) {
         let e = n === f.rV.YEAR,
             t = e ? "text-muted" : y ? "header-primary" : "always-white";
@@ -53,12 +53,12 @@ let p = function (e) {
     }
     return (0, r.jsx)(l.Heading, {
         color: g ? "none" : "always-white",
-        variant: null != h ? h : "heading-md/medium",
-        className: a()(_.pricePerInterval, i),
+        variant: null != m ? m : "heading-md/medium",
+        className: a()(p.pricePerInterval, i),
         children: (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)("span", {
-                    className: g ? void 0 : _.price,
+                    className: g ? void 0 : p.price,
                     children: v,
                 }),
                 " / ",

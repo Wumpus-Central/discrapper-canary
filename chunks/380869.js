@@ -53,7 +53,7 @@ function l(e, t, n) {
             }
             n && n.focus();
         },
-        { pressProps: _ } = (0, s.r)({
+        { pressProps: p } = (0, s.r)({
             preventFocusOnPress: !0,
             allowTextSelectionOnPress: !0,
             onPressStart(e) {
@@ -63,7 +63,7 @@ function l(e, t, n) {
                 ("touch" === e.pointerType || "pen" === e.pointerType) && f();
             },
         });
-    return (0, i.d)(_, { onKeyDown: d });
+    return (0, i.d)(p, { onKeyDown: d });
 }
 function c(e, t, n) {
     let i = (0, r.QL)(e, { tabbable: !0 }),

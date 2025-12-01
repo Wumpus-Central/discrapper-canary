@@ -1,18 +1,18 @@
-n.d(t, { J: () => D }), n(388685), n(583741);
+n.d(t, { J: () => w }), n(388685), n(583741);
 var r = n(54381),
     i = n(473749),
     a = n(74361),
     o = n(69771),
-    s = n(790519),
+    s = n(666917),
     l = n(698369),
     c = n(692547),
     u = n(251052),
     d = n(673824),
     f = n(213305),
-    _ = n(155127),
-    p = n(635041),
-    h = n(571755);
-function m(e, t, n) {
+    p = n(155127),
+    _ = n(635041),
+    m = n(571755);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
@@ -67,14 +67,14 @@ function b(e, t) {
 let y = "M4.10585 5.3837L5.37864 4.11091L11.884 10.61632L10.6112 11.88912L4.10585 5.3837Z",
     O = "M10.61632 4.11091L11.88912 5.3837L5.3837 11.88912L4.11091 10.61632L10.61632 4.11091Z",
     v = "M5.25333 8.80104L5.25333 7.17346L10.85336 7.17346L10.85336 8.80104L5.25333 8.80104Z",
-    I = "M10.84656 7.17346L10.84656 8.80104L5.24954 8.80104L5.24954 7.17346L10.84656 7.17346Z",
-    T = "M6.31649 11.88304L5.0437 10.61032L11.44792 4.20604L12.72072 5.47883L6.31649 11.88304Z",
-    S = "M3.26914 8.87224L4.54194 7.59943L7.5588 10.61632L6.28601 11.88912L3.26914 8.87224Z",
+    S = "M10.84656 7.17346L10.84656 8.80104L5.24954 8.80104L5.24954 7.17346L10.84656 7.17346Z",
+    I = "M6.31649 11.88304L5.0437 10.61032L11.44792 4.20604L12.72072 5.47883L6.31649 11.88304Z",
+    T = "M3.26914 8.87224L4.54194 7.59943L7.5588 10.61632L6.28601 11.88912L3.26914 8.87224Z",
     A = [0, 0.1, 0.4, 0.6, 0.9, 1],
     C = [0, 0.1, 0.9, 1],
     N = [0, 0.1, 0.2, 0.5, 0.7, 1],
-    R = [0, 0.3, 0.5, 0.8, 0.9, 1];
-function P(e, t, n) {
+    P = [0, 0.3, 0.5, 0.8, 0.9, 1];
+function R(e, t, n) {
     let i = e.to({
         range: C,
         output: [t, t, n, n],
@@ -90,7 +90,7 @@ function P(e, t, n) {
                     fill: i,
                     d: e.to({
                         range: C,
-                        output: [y, v, v, T],
+                        output: [y, v, v, I],
                         extrapolate: "clamp",
                     }),
                 }),
@@ -98,7 +98,7 @@ function P(e, t, n) {
                     fill: i,
                     d: e.to({
                         range: C,
-                        output: [O, I, I, S],
+                        output: [O, S, S, T],
                         extrapolate: "clamp",
                     }),
                 }),
@@ -106,44 +106,44 @@ function P(e, t, n) {
         }),
     });
 }
-function D(e) {
+function w(e) {
     let {
             checked: t,
             disabled: n,
-            id: m,
+            id: h,
             onChange: E,
             focusProps: y,
             hasIcon: O = !1,
             describedBy: v,
-            labelledBy: I,
-            innerRef: T,
+            labelledBy: S,
+            innerRef: I,
         } = e,
-        { reducedMotion: S } = i.useContext(f.S),
-        D = i.useRef(null),
+        { reducedMotion: T } = i.useContext(f.S),
         w = i.useRef(null),
-        L = null != T ? T : w,
-        x = (0, l.l)({
+        D = i.useRef(null),
+        x = null != I ? I : D,
+        L = (0, l.l)({
             isSelected: t,
             onChange: E,
             isDisabled: n,
         }),
         {
-            inputProps: M,
-            labelProps: k,
-            isPressed: j,
+            inputProps: j,
+            labelProps: M,
+            isPressed: k,
         } = (0, a.h)(
             {
-                id: m,
+                id: h,
                 isDisabled: n,
                 "aria-describedby": v,
-                "aria-labelledby": I,
+                "aria-labelledby": S,
             },
-            x,
             L,
+            x,
         ),
         { hoverProps: U, isHovered: G } = (0, o.X)({ isDisabled: n }),
-        B = (0, d.d)(c.Z.colors.SWITCH_BACKGROUND_DEFAULT).spring(),
         Z = (0, d.d)(c.Z.colors.SWITCH_BACKGROUND_DEFAULT).spring(),
+        B = (0, d.d)(c.Z.colors.SWITCH_BACKGROUND_DEFAULT).spring(),
         F = (0, d.d)(c.Z.colors.SWITCH_BACKGROUND_DEFAULT_SELECTED).spring(),
         V = (0, d.d)(c.Z.colors.SWITCH_BACKGROUND_ACTIVE).spring(),
         H = (0, d.d)(c.Z.colors.SWITCH_BORDER_DEFAULT).spring(),
@@ -152,15 +152,15 @@ function D(e) {
         K = (0, d.d)(c.Z.colors.SWITCH_BACKGROUND_HOVER_SELECTED).spring(),
         z = (0, d.d)(c.Z.colors.SWITCH_BORDER_HOVER).spring(),
         q = (0, d.d)(c.Z.colors.SWITCH_BORDER_HOVER_SELECTED).spring(),
-        X = (0, d.d)(c.Z.colors.SWITCH_THUMB_FOREGROUND_DEFAULT).spring(),
-        Q = (0, d.d)(c.Z.colors.SWITCH_THUMB_FOREGROUND_ACTIVE).spring(),
+        Q = (0, d.d)(c.Z.colors.SWITCH_THUMB_FOREGROUND_DEFAULT).spring(),
+        X = (0, d.d)(c.Z.colors.SWITCH_THUMB_FOREGROUND_ACTIVE).spring(),
         J = (0, d.d)(c.Z.colors.SWITCH_THUMB_BACKGROUND_DEFAULT).spring(),
         $ = (0, d.d)(c.Z.colors.SWITCH_THUMB_BACKGROUND_DEFAULT_SELECTED).spring(),
         { state: ee, opacity: et } = (0, u.q)(
             {
-                config: { duration: S.enabled ? 200 : 300 },
+                config: { duration: T.enabled ? 200 : 300 },
                 opacity: n ? 0.5 : 1,
-                state: j ? (t ? R[R.length - 2] : N[1]) : +!!t,
+                state: k ? (t ? P[P.length - 2] : N[1]) : +!!t,
             },
             "animate-always",
         ),
@@ -168,7 +168,7 @@ function D(e) {
             let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [...e].reverse();
             return t
                 ? ee.to({
-                      range: R,
+                      range: P,
                       output: n,
                   })
                 : ee.to({
@@ -177,29 +177,29 @@ function D(e) {
                   });
         };
     return (0, r.jsx)(
-        _.tE,
+        p.tE,
         b(g({}, y), {
-            ringTarget: D,
-            focusTarget: L,
+            ringTarget: w,
+            focusTarget: x,
             within: !0,
             offset: -2,
             children: (0, r.jsxs)(
                 "label",
-                b(g({}, k), {
-                    className: h.container,
+                b(g({}, M), {
+                    className: m.container,
                     children: [
                         (0, r.jsx)(
                             s.animated.div,
                             b(g({}, U), {
-                                ref: D,
-                                className: h.switchIndicator,
+                                ref: w,
+                                className: m.switchIndicator,
                                 "data-size": "md",
                                 "data-mana-component": "switch",
                                 style: {
                                     opacity: et,
                                     backgroundColor: ee.to({
                                         range: C,
-                                        output: [G ? W : B, Z, V, G ? K : F],
+                                        output: [G ? W : Z, B, V, G ? K : F],
                                         extrapolate: "clamp",
                                     }),
                                     border: "1px solid",
@@ -210,12 +210,12 @@ function D(e) {
                                     }),
                                 },
                                 children: (0, r.jsxs)(s.animated.svg, {
-                                    className: h.thumb,
+                                    className: m.thumb,
                                     viewBox: "0 0 24 24",
                                     preserveAspectRatio: "xMidYMin meet",
                                     style: {
                                         left: ee.to(
-                                            S.enabled
+                                            T.enabled
                                                 ? {
                                                       range: C,
                                                       output: [1, 1, 24, 24],
@@ -233,18 +233,18 @@ function D(e) {
                                                 range: C,
                                                 output: [J, J, $, $],
                                             }),
-                                            x: S.enabled ? 4 : en([4, 4, 2.5, 1, 2.5, 4]),
-                                            y: S.enabled ? 4 : en([4, 7, 2.5, 7, 2.5, 4]),
-                                            width: S.enabled ? 16 : en([16, 16, 19, 22, 19, 16]),
-                                            height: S.enabled ? 16 : en([16, 10, 19, 10, 19, 16]),
-                                            rx: S.enabled ? 8 : en([8, 5, 9.5, 5, 9.5, 8]),
+                                            x: T.enabled ? 4 : en([4, 4, 2.5, 1, 2.5, 4]),
+                                            y: T.enabled ? 4 : en([4, 7, 2.5, 7, 2.5, 4]),
+                                            width: T.enabled ? 16 : en([16, 16, 19, 22, 19, 16]),
+                                            height: T.enabled ? 16 : en([16, 10, 19, 10, 19, 16]),
+                                            rx: T.enabled ? 8 : en([8, 5, 9.5, 5, 9.5, 8]),
                                         }),
-                                        O && P(ee, X, Q),
+                                        O && R(ee, Q, X),
                                     ],
                                 }),
                             }),
                         ),
-                        (0, r.jsx)(p.n, { children: (0, r.jsx)("input", b(g({}, M), { ref: L })) }),
+                        (0, r.jsx)(_.n, { children: (0, r.jsx)("input", b(g({}, j), { ref: x })) }),
                     ],
                 }),
             ),

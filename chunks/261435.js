@@ -15,8 +15,8 @@ var i,
     m = n(998033),
     y = n(181364),
     b = n(435064),
-    v = n(668761),
-    _ = n(864060),
+    _ = n(668761),
+    v = n(864060),
     O = n(358446),
     E = n(371651),
     x = n(624864),
@@ -244,7 +244,7 @@ let es = new er(
                       (null == (n = o.activity) ? void 0 : n.type) === V.mFx.JOIN ||
                       (null == (i = o.activity) ? void 0 : i.type) === V.mFx.JOIN_REQUEST
                   ) {
-                      if (!(0, _.eF)(o, r, !0, !0)) return !1;
+                      if (!(0, v.eF)(o, r, !0, !0)) return !1;
                       let e = (function (e, t, n) {
                           let i, r;
                           if ((s()(null != t.activity, "received null message activity"), n.id === j.default.getId()))
@@ -284,7 +284,7 @@ let es = new er(
                       ((!A.default.isInstanceLocked() || A.default.isPinned(V.Odu.TEXT)) && r === w.Z.getChannelId()) ||
                       x.Z.isNotificationDisabled(W.n0.TextChat) ||
                       N.Z.disableNotifications ||
-                      !(0, _.eF)(o, r)
+                      !(0, v.eF)(o, r)
                   )
                       return !1;
                   let c = !I.Z.isSoundDisabled(k.Ay);
@@ -336,13 +336,13 @@ let es = new er(
                   );
               },
               CLIPS_SAVE_CLIP_START: function (e) {
-                  "manual" === e.clipMethod && en((0, v.f)(U.intl.string(U.t.NBMK9m)));
+                  "manual" === e.clipMethod && en((0, _.f)(U.intl.string(U.t.NBMK9m)));
               },
               CLIPS_SAVE_CLIP_ERROR: function () {
-                  en((0, v.f)(U.intl.string(U.t["1ZbZuh"])));
+                  en((0, _.f)(U.intl.string(U.t["1ZbZuh"])));
               },
               STREAM_START: function (e) {
-                  let t = (0, v.y)();
+                  let t = (0, _.y)();
                   null != t && en(t);
               },
           },

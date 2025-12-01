@@ -11,7 +11,7 @@ function s(e, t) {
         u = (0, i.Eg)(e + 1) ? 366 : 365,
         d = (0, i.fv)(s),
         f = (0, i.FO)(s),
-        _ = (0, r.pi)(
+        p = (0, r.pi)(
             (0, r.pi)(
                 {
                     yearlen: c,
@@ -23,37 +23,37 @@ function s(e, t) {
             ),
             { wnomask: null },
         );
-    if ((0, a.cS)(t.byweekno)) return _;
-    _.wnomask = (0, a.rx)(0, c + 7);
-    var p = (n = (0, a.Vy)(7 - f + t.wkst, 7));
-    p >= 4 ? ((p = 0), (o = _.yearlen + (0, a.Vy)(f - t.wkst, 7))) : (o = c - p);
-    for (var h = Math.floor(Math.floor(o / 7) + (0, a.Vy)(o, 7) / 4), m = 0; m < t.byweekno.length; m++) {
-        var g = t.byweekno[m];
-        if ((g < 0 && (g += h + 1), g > 0 && g <= h)) {
+    if ((0, a.cS)(t.byweekno)) return p;
+    p.wnomask = (0, a.rx)(0, c + 7);
+    var _ = (n = (0, a.Vy)(7 - f + t.wkst, 7));
+    _ >= 4 ? ((_ = 0), (o = p.yearlen + (0, a.Vy)(f - t.wkst, 7))) : (o = c - _);
+    for (var m = Math.floor(Math.floor(o / 7) + (0, a.Vy)(o, 7) / 4), h = 0; h < t.byweekno.length; h++) {
+        var g = t.byweekno[h];
+        if ((g < 0 && (g += m + 1), g > 0 && g <= m)) {
             var E = void 0;
-            g > 1 ? ((E = p + (g - 1) * 7), p !== n && (E -= 7 - n)) : (E = p);
-            for (var b = 0; b < 7 && ((_.wnomask[E] = 1), E++, _.wdaymask[E] !== t.wkst); b++);
+            g > 1 ? ((E = _ + (g - 1) * 7), _ !== n && (E -= 7 - n)) : (E = _);
+            for (var b = 0; b < 7 && ((p.wnomask[E] = 1), E++, p.wdaymask[E] !== t.wkst); b++);
         }
     }
     if ((0, a.q9)(t.byweekno, 1)) {
-        var E = p + 7 * h;
-        if ((p !== n && (E -= 7 - n), E < c))
-            for (var m = 0; m < 7 && ((_.wnomask[E] = 1), (E += 1), _.wdaymask[E] !== t.wkst); m++);
+        var E = _ + 7 * m;
+        if ((_ !== n && (E -= 7 - n), E < c))
+            for (var h = 0; h < 7 && ((p.wnomask[E] = 1), (E += 1), p.wdaymask[E] !== t.wkst); h++);
     }
-    if (p) {
+    if (_) {
         var y = void 0;
         if ((0, a.q9)(t.byweekno, -1)) y = -1;
         else {
             var O = (0, i.FO)((0, i.t2)(e - 1, 1, 1)),
                 v = (0, a.Vy)(7 - O.valueOf() + t.wkst, 7),
-                I = (0, i.Eg)(e - 1) ? 366 : 365,
-                T = void 0;
-            v >= 4 ? ((v = 0), (T = I + (0, a.Vy)(O - t.wkst, 7))) : (T = c - p),
-                (y = Math.floor(52 + (0, a.Vy)(T, 7) / 4));
+                S = (0, i.Eg)(e - 1) ? 366 : 365,
+                I = void 0;
+            v >= 4 ? ((v = 0), (I = S + (0, a.Vy)(O - t.wkst, 7))) : (I = c - _),
+                (y = Math.floor(52 + (0, a.Vy)(I, 7) / 4));
         }
-        if ((0, a.q9)(t.byweekno, y)) for (var E = 0; E < p; E++) _.wnomask[E] = 1;
+        if ((0, a.q9)(t.byweekno, y)) for (var E = 0; E < _; E++) p.wnomask[E] = 1;
     }
-    return _;
+    return p;
 }
 function l(e) {
     var t = (0, i.Eg)(e) ? 366 : 365,

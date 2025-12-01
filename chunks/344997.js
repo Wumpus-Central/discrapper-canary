@@ -10,7 +10,7 @@ var i = n(913527),
     u = n(388032),
     d = n(304451);
 let f = (e) => a()().diff(a().unix(e), "days");
-function _(e) {
+function p(e) {
     let { classificationId: t } = e,
         i = () => {
             (0, s.ZDy)(async () => {
@@ -30,7 +30,7 @@ function _(e) {
         children: u.intl.string(u.t.QsqdXC),
     });
 }
-function p(e) {
+function _(e) {
     let { learnMoreLink: t } = e;
     return (0, r.jsx)(s.Anchor, {
         className: d.detailsButton,
@@ -38,20 +38,20 @@ function p(e) {
         children: u.intl.string(u.t["8/GdRB"]),
     });
 }
-function h(e) {
+function m(e) {
     let { ctaType: t, classificationId: n, learnMoreLink: i } = e;
     switch (t) {
         case c.wo.POLICY_VIOLATION_DETAIL:
             if (null == n) return null;
-            return (0, r.jsx)(_, { classificationId: n });
+            return (0, r.jsx)(p, { classificationId: n });
         case c.wo.LEARN_MORE_LINK:
             if (null == i) return null;
-            return (0, r.jsx)(p, { learnMoreLink: i });
+            return (0, r.jsx)(_, { learnMoreLink: i });
         default:
             return null;
     }
 }
-function m(e) {
+function h(e) {
     let { iconType: t } = e,
         n = {
             default: (0, r.jsx)(s.MqZ, {
@@ -93,7 +93,7 @@ function E(e) {
                           (0, r.jsxs)("div", {
                               className: d.headerRow,
                               children: [
-                                  (0, r.jsx)(m, { iconType: i.icon }),
+                                  (0, r.jsx)(h, { iconType: i.icon }),
                                   (0, r.jsx)(s.Text, {
                                       variant: "text-md/semibold",
                                       children: i.header,
@@ -126,7 +126,7 @@ function E(e) {
                               ? void 0
                               : t.map((e) =>
                                     (0, r.jsx)(
-                                        h,
+                                        m,
                                         {
                                             ctaType: e,
                                             classificationId: i.classification_id,

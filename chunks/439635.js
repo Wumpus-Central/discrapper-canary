@@ -32,8 +32,8 @@ let Z = (0, o.Z)(
             m = (0, O.Z)(n),
             S = (0, y.Z)(n, t),
             T = (0, s.Z)(n, t),
-            A = (0, b.Z)(n, t, _.d4z.GUILD_TEXT),
-            I = (0, b.Z)(n, t, _.d4z.GUILD_VOICE),
+            I = (0, b.Z)(n, t, _.d4z.GUILD_TEXT),
+            A = (0, b.Z)(n, t, _.d4z.GUILD_VOICE),
             D = (0, f.Z)(n),
             k = (0, a.Z)({
                 id: n.id,
@@ -54,7 +54,7 @@ let Z = (0, o.Z)(
                     children: [o ? x : M ? G : w, m],
                 }),
                 (0, r.jsxs)(i.kSQ, {
-                    children: [S, C, T, A, I],
+                    children: [S, C, T, I, A],
                 }),
                 (0, r.jsx)(i.kSQ, { children: L }),
                 (0, r.jsx)(i.kSQ, { children: D }),

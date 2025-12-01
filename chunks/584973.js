@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(695346),
     d = n(563114),
     f = n(556638),
-    _ = n(80568);
-function p(e, t, n) {
+    p = n(80568);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,23 +34,23 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e) {
-    let { emoji: t, className: n, animate: a = !0, hideTooltip: p = !1, tooltipDelay: m = f.X } = e,
+function h(e) {
+    let { emoji: t, className: n, animate: a = !0, hideTooltip: _ = !1, tooltipDelay: h = f.X } = e,
         g = u.Yk.useSetting(),
         E = i.useRef(null),
         b = null != t.id ? ":".concat(t.name, ":") : c.ZP.translateSurrogatesToInlineEmoji(t.name);
     if (null == t.id && d.T.has(t.name))
         return (0, r.jsx)("span", {
-            className: o()(_.emoji, n),
+            className: o()(p.emoji, n),
             children: t.name,
         });
     let y = {
-        className: o()(_.emoji, n),
+        className: o()(p.emoji, n),
         emojiId: t.id,
         emojiName: t.name,
         autoplay: !0,
@@ -59,13 +59,13 @@ function m(e) {
             E.current = e;
         },
     };
-    return p
-        ? (0, r.jsx)(l.Z, h({}, y))
+    return _
+        ? (0, r.jsx)(l.Z, m({}, y))
         : (0, r.jsx)(s.aML, {
               "data-migration-pending": !0,
               targetElementRef: E,
               text: b,
-              delay: m,
-              children: (e) => (0, r.jsx)(l.Z, h({}, e, y)),
+              delay: h,
+              children: (e) => (0, r.jsx)(l.Z, m({}, e, y)),
           });
 }

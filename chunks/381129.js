@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(413496), n(433524), n(35282), n(388685);
+n.d(t, { Z: () => p }), n(413496), n(433524), n(35282), n(388685);
 var r = n(512722),
     i = n.n(r),
     a = n(957730),
@@ -36,7 +36,7 @@ function f(e) {
         }
     return null;
 }
-let _ = {
+let p = {
     shouldShowEveryoneGuard: function (e, t) {
         let n = t.getGuildId();
         return i()(n, "isGuildChannel with null guildId"), d(e, t) > u && s.Z.can(l.Plq.MENTION_EVERYONE, t);

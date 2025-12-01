@@ -9,9 +9,9 @@ let c = "0.3",
     u = "0.2",
     d = "var(--premium-tier-2-purple)",
     f = "var(--background-base-low)",
-    _ = "url(#gradient)",
-    p = "url(#gradient_nitro_logo)",
-    h = (e, t) => {
+    p = "url(#gradient)",
+    _ = "url(#gradient_nitro_logo)",
+    m = (e, t) => {
         switch (e) {
             case s.Qo.NITRO_LOGO:
                 return t ? c : u;
@@ -21,7 +21,7 @@ let c = "0.3",
                 return;
         }
     },
-    m = (e) => {
+    h = (e) => {
         switch (e) {
             case s.Qo.NITRO_GEM:
             case s.Qo.AVATAR_DECO:
@@ -36,9 +36,9 @@ let c = "0.3",
         switch (t) {
             case s.Qo.NITRO_GEM:
             case s.Qo.AVATAR_DECO:
-                return _;
+                return p;
             case s.Qo.NITRO_LOGO:
-                return e ? p : _;
+                return e ? _ : p;
             default:
                 return;
         }
@@ -51,10 +51,10 @@ let c = "0.3",
                 initialPercentage: u = 0,
                 progressCircleStrokeSize: d = 2,
                 progressCircleVariation: f,
-                progressCircleStroke: _,
+                progressCircleStroke: p,
             } = e,
-            p = 43 + d / 2,
-            E = 2 * Math.PI * p,
+            _ = 43 + d / 2,
+            E = 2 * Math.PI * _,
             [b, y] = i.useState(u);
         i.useEffect(() => {
             let e = setTimeout(() => {
@@ -64,10 +64,10 @@ let c = "0.3",
         }, [t]);
         let O = (0, o.ZP)(),
             v = (0, a.ap)(O),
-            I = (1 - b / 100) * E,
-            T = m(f),
-            S = h(f, v),
-            A = null != _ ? _ : g(v, f);
+            S = (1 - b / 100) * E,
+            I = h(f),
+            T = m(f, v),
+            A = null != p ? p : g(v, f);
         return (0, r.jsxs)("div", {
             className: l.circleContainer,
             children: [
@@ -79,11 +79,11 @@ let c = "0.3",
                             className: f === s.Qo.NITRO_GEM || f === s.Qo.AVATAR_DECO ? l.baseProgressCircle : void 0,
                             fill: "transparent",
                             strokeWidth: d,
-                            r: "".concat(p),
+                            r: "".concat(_),
                             cx: "50%",
                             cy: "50%",
-                            stroke: T,
-                            strokeOpacity: S,
+                            stroke: I,
+                            strokeOpacity: T,
                         }),
                         (0, r.jsx)("circle", {
                             stroke: A,
@@ -91,8 +91,8 @@ let c = "0.3",
                             strokeLinecap: "round",
                             strokeDasharray: "".concat(E, " ").concat(E),
                             className: c,
-                            style: { strokeDashoffset: I },
-                            r: "".concat(p),
+                            style: { strokeDashoffset: S },
+                            r: "".concat(_),
                             cx: "50%",
                             cy: "50%",
                         }),

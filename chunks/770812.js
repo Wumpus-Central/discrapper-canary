@@ -10,10 +10,10 @@ var i = n(990547),
     u = n(906732),
     d = n(213609),
     f = n(703656),
-    _ = n(430824),
-    p = n(687476),
-    h = n(761966),
-    m = n(981631),
+    p = n(430824),
+    _ = n(687476),
+    m = n(761966),
+    h = n(981631),
     g = n(176505),
     E = n(388032),
     b = n(454615);
@@ -35,14 +35,14 @@ function O(e) {
         },
     });
     let v = () => {
-            (0, f.uL)(m.Z5c.CHANNEL(n, g.oC.ROLE_SUBSCRIPTIONS), { sourceLocationStack: O });
+            (0, f.uL)(h.Z5c.CHANNEL(n, g.oC.ROLE_SUBSCRIPTIONS), { sourceLocationStack: O });
         },
-        I = (0, a.e7)([_.Z], () => _.Z.getGuild(n)),
-        T = (0, a.e7)([p.Z], () => null != n && p.Z.getUserSubscriptionRoles(n).size > 0),
-        S = T
+        S = (0, a.e7)([p.Z], () => p.Z.getGuild(n)),
+        I = (0, a.e7)([_.Z], () => null != n && _.Z.getUserSubscriptionRoles(n).size > 0),
+        T = I
             ? E.intl.string(E.t.GoLM9z)
-            : E.intl.formatToPlainString(E.t["h0u/Hi"], { serverName: null == I ? void 0 : I.name }),
-        A = T ? E.intl.string(E.t.PjZ7Db) : E.intl.string(E.t.p8FG1D);
+            : E.intl.formatToPlainString(E.t["h0u/Hi"], { serverName: null == S ? void 0 : S.name }),
+        A = I ? E.intl.string(E.t.PjZ7Db) : E.intl.string(E.t.p8FG1D);
     return (0, r.jsxs)("div", {
         className: b.container,
         children: [
@@ -78,10 +78,10 @@ function O(e) {
                         color: "header-secondary",
                         variant: "text-md/normal",
                         className: b.description,
-                        children: S,
+                        children: T,
                     }),
                     (0, r.jsx)(s.LZC, { size: 24 }),
-                    (0, r.jsx)(h.Z, {
+                    (0, r.jsx)(m.Z, {
                         text: A,
                         onClick: v,
                     }),

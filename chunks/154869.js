@@ -7,16 +7,16 @@ var i = n(54381),
     a = n(481060),
     o = n(660216),
     c = n(825209),
-    E = n(924557),
-    d = n(509613),
+    d = n(924557),
+    E = n(509613),
     S = n(556296),
     T = n(313789),
     I = n(981631),
-    O = n(388032),
-    g = n(360919);
-let _ = (0, d.ON)(T.n.CLIPS_SCREENSHOT_KEYBIND, {
-    useSearchTerms: () => [O.intl.string(O.t["0U/hj7"]), O.intl.string(O.t["5zxkdo"])],
-    usePredicate: E.PP,
+    g = n(388032),
+    O = n(360919);
+let _ = (0, E.ON)(T.n.CLIPS_SCREENSHOT_KEYBIND, {
+    useSearchTerms: () => [g.intl.string(g.t["0U/hj7"]), g.intl.string(g.t["5zxkdo"])],
+    usePredicate: d.PP,
     render: () => {
         let t = (0, s.e7)([S.ZP], () => S.ZP.getKeybindForAction(I.kg4.SAVE_CLIP, !0)),
             e = (0, s.e7)([S.ZP], () => S.ZP.getKeybindForAction(I.kg4.SAVE_SCREENSHOT, !0));
@@ -69,11 +69,11 @@ let _ = (0, d.ON)(T.n.CLIPS_SCREENSHOT_KEYBIND, {
             [e],
         );
         return (0, i.jsx)(a.gNt, {
-            label: O.intl.string(O.t["0U/hj7"]),
-            description: O.intl.string(O.t["5zxkdo"]),
+            label: g.intl.string(g.t["0U/hj7"]),
+            description: g.intl.string(g.t["5zxkdo"]),
             layout: "horizontal",
             children: (0, i.jsx)("div", {
-                className: g.keyRecorder,
+                className: O.keyRecorder,
                 children: (0, i.jsx)(c.Z, {
                     defaultValue: e.shortcut,
                     onChange: n,

@@ -10,31 +10,31 @@ var i = n(442837),
     u = n(906732),
     d = n(705262),
     f = n(210887),
-    _ = n(740492),
-    p = n(695346),
-    h = n(874893),
-    m = n(981631),
+    p = n(740492),
+    _ = n(695346),
+    m = n(874893),
+    h = n(981631),
     g = n(388032);
 function E() {
-    let e = p.jU.useSetting(),
+    let e = _.jU.useSetting(),
         { analyticsLocations: t } = (0, u.ZP)(),
         {
             theme: n,
             useSystemTheme: E,
             useForcedColors: b,
-        } = (0, i.cj)([f.Z, _.ZP, c.Z], () => ({
+        } = (0, i.cj)([f.Z, p.ZP, c.Z], () => ({
             theme: f.Z.theme,
-            useSystemTheme: _.ZP.useSystemTheme,
+            useSystemTheme: p.ZP.useSystemTheme,
             useForcedColors: c.Z.useForcedColors,
         })),
-        y = p.YC.useSetting(),
+        y = _.YC.useSetting(),
         O = (e, i) =>
             (0, r.jsx)(o.k5B, {
                 id: e,
                 group: "input-modes",
                 label: i,
                 disabled: b,
-                checked: E === h.KW.ON ? "system" === e : e === n,
+                checked: E === m.KW.ON ? "system" === e : e === n,
                 action: () => {
                     (0, d.Yk)({
                         isPersisted: !0,
@@ -49,10 +49,10 @@ function E() {
                 o.kSQ,
                 {
                     children: [
-                        O(m.BRd.LIGHT, g.intl.string(g.t.K2sFfo)),
-                        O(m.BRd.DARK, g.intl.string(g.t.SMPT1k)),
-                        O(m.BRd.DARKER, g.intl.string(g.t.b8Cei3)),
-                        O(m.BRd.MIDNIGHT, g.intl.string(g.t.Do4ZJx)),
+                        O(h.BRd.LIGHT, g.intl.string(g.t.K2sFfo)),
+                        O(h.BRd.DARK, g.intl.string(g.t.SMPT1k)),
+                        O(h.BRd.DARKER, g.intl.string(g.t.b8Cei3)),
+                        O(h.BRd.MIDNIGHT, g.intl.string(g.t.Do4ZJx)),
                         O("system", g.intl.string(g.t["7rOU6j"])),
                     ],
                 },
@@ -72,7 +72,7 @@ function E() {
                             label: g.intl.string(g.t["7iegX4"]),
                             checked: y === a.Pi.COMPACT,
                             action: () => {
-                                p.YC.updateSetting(a.Pi.COMPACT);
+                                _.YC.updateSetting(a.Pi.COMPACT);
                             },
                         }),
                         (0, r.jsx)(o.k5B, {
@@ -81,7 +81,7 @@ function E() {
                             label: g.intl.string(g.t.bBvAEH),
                             checked: y === a.Pi.DEFAULT,
                             action: () => {
-                                p.YC.updateSetting(a.Pi.DEFAULT);
+                                _.YC.updateSetting(a.Pi.DEFAULT);
                             },
                         }),
                         (0, r.jsx)(o.k5B, {
@@ -90,7 +90,7 @@ function E() {
                             label: g.intl.string(g.t["4cuYHx"]),
                             checked: y === a.Pi.COZY,
                             action: () => {
-                                p.YC.updateSetting(a.Pi.COZY);
+                                _.YC.updateSetting(a.Pi.COZY);
                             },
                         }),
                     ],
@@ -110,7 +110,7 @@ function E() {
                             label: g.intl.string(g.t.Jqj4cZ),
                             checked: !e,
                             action: () => {
-                                p.jU.updateSetting(!1), (0, l.ZZ)();
+                                _.jU.updateSetting(!1), (0, l.ZZ)();
                             },
                         }),
                         (0, r.jsx)(o.k5B, {
@@ -119,7 +119,7 @@ function E() {
                             label: g.intl.string(g.t["1JNcPS"]),
                             checked: e,
                             action: () => {
-                                p.jU.updateSetting(!0), (0, l.ZZ)();
+                                _.jU.updateSetting(!0), (0, l.ZZ)();
                             },
                         }),
                     ],

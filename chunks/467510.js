@@ -14,8 +14,8 @@ function o(e, t = {}) {
             u = " > ",
             d = u.length,
             f = Array.isArray(t) ? t : t.keyAttrs,
-            _ = (!Array.isArray(t) && t.maxStringLength) || a;
-        for (; r && l++ < i && ((n = s(r, f)), "html" !== n && (!(l > 1) || !(c + o.length * d + n.length >= _))); )
+            p = (!Array.isArray(t) && t.maxStringLength) || a;
+        for (; r && l++ < i && ((n = s(r, f)), "html" !== n && (!(l > 1) || !(c + o.length * d + n.length >= p))); )
             o.push(n), (c += n.length), (r = r.parentNode);
         return o.reverse().join(u);
     } catch (e) {

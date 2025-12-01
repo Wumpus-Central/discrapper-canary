@@ -49,12 +49,12 @@ function _(e) {
         o = null != (n = l[a + (Math.abs(r) > 0 ? r : 1)]) ? n : l[a - 1];
     return null != o ? o : null;
 }
-let x = {
+let O = {
     scrollTop: 0,
     scrollHeight: 0,
     offsetHeight: 0,
 };
-class O {
+class x {
     isReady() {
         return this.props.messages.ready;
     }
@@ -326,7 +326,7 @@ class O {
     }
     getScrollerState() {
         var e, t;
-        return null != (t = null == (e = this.ref.current) ? void 0 : e.getScrollerState()) ? t : x;
+        return null != (t = null == (e = this.ref.current) ? void 0 : e.getScrollerState()) ? t : O;
     }
     isHeightChange(e, t) {
         return e !== this.offsetHeightCache || t !== this.scrollHeightCache;
@@ -706,7 +706,7 @@ function j(e) {
         { windowId: h } = i.useContext(d.ZP),
         [f] = i.useState(
             () =>
-                new O({
+                new x({
                     messages: t,
                     channel: n,
                     compact: r,

@@ -1,7 +1,7 @@
 n.d(t, {
-    P3: () => _,
+    P3: () => p,
     ZK: () => f,
-    en: () => h,
+    en: () => m,
 }),
     n(704826),
     n(35282),
@@ -49,7 +49,7 @@ function f(e) {
     let t = (0, a.LX)(e, { path: o.Z5c.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug") });
     return null != t ? t.params.skuId : null;
 }
-function _(e) {
+function p(e) {
     switch (e) {
         case o.EKQ.ACTION:
             return s.intl.string(s.t["1o2/IM"]);
@@ -198,19 +198,19 @@ Object.keys(d).forEach((e) => {
         n = d[e];
     (c[t] = n), (u[n] = t);
 });
-let p = [
+let _ = [
     ["YYYY-MM-DD", "MMMM DD, Y"],
     ["YYYY-MM", "MMMM Y"],
     ["MM-DD", "MMMM DD"],
     ["MM", "MMMM"],
     ["YYYY", "Y"],
 ];
-function h(e) {
+function m(e) {
     let { preorderReleaseAt: t, preorderApproximateReleaseDate: n } = e;
     if (null != t) return t.format("MMMM DD");
     if (null == n) return null;
-    for (let e = 0; e < p.length; e++) {
-        let [t, r] = p[e],
+    for (let e = 0; e < _.length; e++) {
+        let [t, r] = _[e],
             a = i()(n, t, !0);
         if (a.isValid()) return a.format(r);
     }

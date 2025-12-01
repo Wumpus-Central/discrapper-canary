@@ -1,7 +1,7 @@
 n.d(t, {
     Jy: () => d,
     OJ: () => f,
-    eJ: () => _,
+    eJ: () => p,
 });
 var r = n(54381);
 n(473749);
@@ -31,7 +31,7 @@ let d = (e) => {
             variant: "secondary",
         });
     };
-function _(e) {
+function p(e) {
     let { className: t, ref: n, children: i, onClick: o } = e;
     return (0, r.jsx)(s.f6W, {
         theme: l.BR.DARKER,

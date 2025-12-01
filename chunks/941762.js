@@ -1,4 +1,4 @@
-t.d(n, { Z: () => v });
+t.d(n, { Z: () => _ });
 var r = t(54381),
     a = t(473749),
     i = t(481060),
@@ -9,10 +9,10 @@ var r = t(54381),
     d = t(47695),
     u = t(735276),
     m = t(619733),
-    g = t(732031),
+    g = t(613275),
     f = t(388032),
     x = t(799070);
-let _ = {
+let v = {
     steps: {
         [m.EK.SERVER_SETTINGS]: {
             onBack: { type: "close" },
@@ -20,10 +20,10 @@ let _ = {
         },
     },
 };
-function v(e) {
+function _(e) {
     let { guildId: n, instance: t } = e,
         m = a.useRef(null),
-        v = (0, d.Z)(t.providerType, t.gameServerPanelUrl);
+        _ = (0, d.Z)(t.providerType, t.gameServerPanelUrl);
     return (0, c.Z)(n)
         ? (0, r.jsx)(i.yRy, {
               targetElementRef: m,
@@ -42,13 +42,13 @@ function v(e) {
                       onSelect: void 0,
                       children: (0, r.jsxs)(i.kSQ, {
                           children: [
-                              null != v &&
+                              null != _ &&
                                   (0, r.jsx)(i.sNh, {
                                       id: "get-support",
                                       icon: i.kBi,
                                       label: f.intl.string(g.default.bBkeMs),
                                       action: () => {
-                                          (0, o.q)({ href: v });
+                                          (0, o.q)({ href: _ });
                                       },
                                   }),
                               (0, r.jsx)(i.sNh, {
@@ -58,7 +58,7 @@ function v(e) {
                                   action: () => {
                                       (0, u.Z)({
                                           guildId: n,
-                                          stepConfig: _,
+                                          stepConfig: v,
                                           initialGameServerInstance: t,
                                           analyticsLocation: s.Z.GAME_SERVER_PAGE,
                                       });

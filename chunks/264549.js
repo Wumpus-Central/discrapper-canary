@@ -8,7 +8,7 @@ var r = n(54381),
     c = n(714338),
     u = n(585483),
     d = n(981631),
-    p = n(24445);
+    f = n(24445);
 function h(e, t, n) {
     return (
         t in e
@@ -22,13 +22,13 @@ function h(e, t, n) {
         e
     );
 }
-let f = () =>
+let p = () =>
     (0, r.jsxs)(
         "div",
         {
-            className: p.symbol,
+            className: f.symbol,
             children: [
-                (0, r.jsx)("div", { className: p.symbolBackground }),
+                (0, r.jsx)("div", { className: f.symbolBackground }),
                 (0, r.jsx)("img", {
                     alt: "",
                     src: n(977706),
@@ -55,32 +55,32 @@ class g extends i.PureComponent {
         return (0, r.jsxs)(
             "div",
             {
-                className: p.primaryExplosion,
+                className: f.primaryExplosion,
                 children: [
                     (0, r.jsx)("img", {
                         alt: "",
-                        className: p.circleInner,
+                        className: f.circleInner,
                         src: n(273226),
                         width: 70,
                         height: 69,
                     }),
                     (0, r.jsx)("img", {
                         alt: "",
-                        className: p.circleOuter,
+                        className: f.circleOuter,
                         src: n(922026),
                         width: 96,
                         height: 95,
                     }),
                     (0, r.jsx)("img", {
                         alt: "",
-                        className: p.linesSecondary,
+                        className: f.linesSecondary,
                         src: n(827926),
                         width: 183,
                         height: 104,
                     }),
                     (0, r.jsx)("img", {
                         alt: "",
-                        className: p.linesMain,
+                        className: f.linesMain,
                         src: n(873180),
                         width: 69,
                         height: 180,
@@ -94,7 +94,7 @@ class g extends i.PureComponent {
         return (0, r.jsxs)(
             "div",
             {
-                className: p.secondaryExplosion,
+                className: f.secondaryExplosion,
                 style: {
                     top: t,
                     left: e,
@@ -104,7 +104,7 @@ class g extends i.PureComponent {
                         "img",
                         {
                             alt: "",
-                            className: p.circleInner,
+                            className: f.circleInner,
                             src: n(272162),
                             width: 61,
                             height: 58,
@@ -115,7 +115,7 @@ class g extends i.PureComponent {
                         "img",
                         {
                             alt: "",
-                            className: p.circleOuter,
+                            className: f.circleOuter,
                             src: n(632989),
                             width: 85,
                             height: 85,
@@ -126,7 +126,7 @@ class g extends i.PureComponent {
                         "img",
                         {
                             alt: "",
-                            className: p.linesSecondary,
+                            className: f.linesSecondary,
                             src: n(376252),
                             width: 162,
                             height: 173,
@@ -137,7 +137,7 @@ class g extends i.PureComponent {
                         "img",
                         {
                             alt: "",
-                            className: p.linesMain,
+                            className: f.linesMain,
                             src: n(720617),
                             width: 156,
                             height: 306,
@@ -155,7 +155,7 @@ class g extends i.PureComponent {
         return (
             e && a.push(this.renderSecondary(t, n)),
             (0, r.jsx)("div", {
-                className: o()(p.container, { [p.animate]: i }),
+                className: o()(f.container, { [f.animate]: i }),
                 style: {
                     top: this.props.top,
                     left: this.props.left,
@@ -193,7 +193,7 @@ class m extends i.PureComponent {
     }
     render() {
         return (0, r.jsx)("div", {
-            className: o()(p.ragingDemon, { [p.visible]: this.state.visible }),
+            className: o()(f.ragingDemon, { [f.visible]: this.state.visible }),
             children: this.children,
         });
     }
@@ -241,7 +241,7 @@ class m extends i.PureComponent {
                 } else this.setTimeout(this.addSymbol, 750);
             }),
             h(this, "addSymbol", () => {
-                (this.children = [(0, r.jsx)(f, {}, "symbol")]),
+                (this.children = [(0, r.jsx)(p, {}, "symbol")]),
                     this.forceUpdate(),
                     this.setTimeout(this.delayedClose, 3000);
             }),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r,
     i = n(442837),
     a = n(570140);
@@ -62,7 +62,7 @@ function f(e) {
     let { sessions: t } = e;
     u = t.map((e) => c(s({}, e), { approx_last_used_time: new Date(e.approx_last_used_time) }));
 }
-function _(e) {
+function p(e) {
     let { sessionIdHashes: t } = e,
         n = [...u],
         r = !1;
@@ -73,15 +73,15 @@ function _(e) {
     if (!r) return !1;
     u = n;
 }
-class p extends (r = i.ZP.Store) {
+class _ extends (r = i.ZP.Store) {
     getSessions() {
         return u;
     }
 }
-o(p, "displayName", "AuthSessionsStore");
-let h = new p(a.Z, {
+o(_, "displayName", "AuthSessionsStore");
+let m = new _(a.Z, {
     LOGOUT: d,
     LOGIN_SUCCESS: d,
     FETCH_AUTH_SESSIONS_SUCCESS: f,
-    LOGOUT_AUTH_SESSIONS_SUCCESS: _,
+    LOGOUT_AUTH_SESSIONS_SUCCESS: p,
 });

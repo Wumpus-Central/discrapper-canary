@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381),
     i = n(473749),
     a = n(481060),
@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,26 +37,26 @@ function _(e) {
     }
     return e;
 }
-function p(e) {
+function _(e) {
     let { user: t, viewProfileItem: n } = e,
         f = i.useRef(null),
-        { trackUserProfileAction: p } = (0, c.KZ)(),
-        { analyticsLocations: h } = (0, s.ZP)(o.Z.USER_PROFILE_OVERFLOW_MENU),
-        m = [
+        { trackUserProfileAction: _ } = (0, c.KZ)(),
+        { analyticsLocations: m } = (0, s.ZP)(o.Z.USER_PROFILE_OVERFLOW_MENU),
+        h = [
             [n],
             [
                 (0, l.Z)({
                     id: t.id,
                     label: d.intl.string(d.t["/AXYnE"]),
                     onSuccess: () =>
-                        p({
+                        _({
                             action: "COPY_USER_ID",
-                            analyticsLocations: h,
+                            analyticsLocations: m,
                         }),
                 }),
             ],
         ];
-    return m.every((e) => e.every((e) => null == e))
+    return h.every((e) => e.every((e) => null == e))
         ? null
         : (0, r.jsx)(a.yRy, {
               targetElementRef: f,
@@ -67,13 +67,13 @@ function p(e) {
                       onSelect: void 0,
                       onClose: t,
                       "aria-label": d.intl.string(d.t.AXIHpV),
-                      children: m.map((e, t) => (0, r.jsx)(a.kSQ, { children: e.map((e) => e) }, t)),
+                      children: h.map((e, t) => (0, r.jsx)(a.kSQ, { children: e.map((e) => e) }, t)),
                   });
               },
               children: (e) =>
                   (0, r.jsx)(
                       u.oY,
-                      _(
+                      p(
                           {
                               ref: f,
                               action: "PRESS_OPTIONS",

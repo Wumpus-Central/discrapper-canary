@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(192918),
     d = n(256139),
     f = n(91907),
-    _ = n(866040),
-    p = n(388032),
-    h = n(817120);
-function m(e, t, n) {
+    p = n(866040),
+    _ = n(388032),
+    m = n(817120);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
@@ -66,25 +66,25 @@ function b(e, t) {
 }
 function y(e) {
     let { entry: t, channel: n, className: a } = e,
-        m = i.useRef(null),
+        h = i.useRef(null),
         E = i.useRef(null),
         {
             displayParticipants: y,
             participant1: O,
             participant2: v,
-            numOtherParticipants: I,
-            orderedParticipants: T,
+            numOtherParticipants: S,
+            orderedParticipants: I,
         } = (0, u.Z)(t),
-        S = [O, v];
+        T = [O, v];
     return (0, r.jsxs)("div", {
-        className: o()(h.container, a),
+        className: o()(m.container, a),
         children: [
             y.length > 0
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)(_.Z, {
-                              targetElementRef: m,
-                              participants: T,
+                          (0, r.jsx)(p.Z, {
+                              targetElementRef: h,
+                              participants: I,
                               channel: n,
                               children: (e) =>
                                   (0, r.jsx)(
@@ -92,8 +92,8 @@ function y(e) {
                                       b(
                                           g(
                                               {
-                                                  innerRef: m,
-                                                  className: h.clickable,
+                                                  innerRef: h,
+                                                  className: m.clickable,
                                               },
                                               e,
                                           ),
@@ -119,18 +119,18 @@ function y(e) {
             (0, r.jsx)(l.Heading, {
                 variant: "text-sm/semibold",
                 color: "text-secondary",
-                className: o()(h.truncatedText, h.usersHeader),
+                className: o()(m.truncatedText, m.usersHeader),
                 scaleFontToUserSetting: !0,
-                children: p.intl.format(p.t.rH95Gu, {
-                    user0: c.ZP.getName(n.guild_id, n.id, S[0]),
-                    user1: c.ZP.getName(n.guild_id, n.id, S[1]),
-                    countOthers: I,
+                children: _.intl.format(_.t.rH95Gu, {
+                    user0: c.ZP.getName(n.guild_id, n.id, T[0]),
+                    user1: c.ZP.getName(n.guild_id, n.id, T[1]),
+                    countOthers: S,
                     name0Hook: (e, t) =>
                         (0, r.jsx)(
                             f.Z,
                             {
                                 text: e,
-                                user: S[0],
+                                user: T[0],
                                 channel: n,
                             },
                             t,
@@ -140,17 +140,17 @@ function y(e) {
                             f.Z,
                             {
                                 text: e,
-                                user: S[1],
+                                user: T[1],
                                 channel: n,
                             },
                             t,
                         ),
                     countOthersHook: (e, t) =>
                         (0, r.jsx)(
-                            _.Z,
+                            p.Z,
                             {
                                 targetElementRef: E,
-                                participants: T,
+                                participants: I,
                                 channel: n,
                                 children: (t) =>
                                     (0, r.jsx)(

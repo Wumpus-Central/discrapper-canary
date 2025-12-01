@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381),
     i = n(473749),
     a = n(608787),
@@ -9,7 +9,7 @@ var r = n(54381),
     u = n(31336),
     d = n(19759),
     f = n(981631);
-let _ = (0, a.Un)({
+let p = (0, a.Un)({
     createPromise: () =>
         Promise.all([
             n.e("50448"),
@@ -31,24 +31,24 @@ let _ = (0, a.Un)({
         ]).then(n.bind(n, 678717)),
     webpackId: 678717,
 });
-function p(e) {
+function _(e) {
     let { mobile: t } = e,
         n = (0, o.e7)([l.Z], () => l.Z.isDeveloper),
         a = (0, o.e7)([d.Z], () => d.Z.displayTools),
-        p = (0, o.e7)([s.Z], () => s.Z.getWindowOpen(f.KJ3.DEVTOOLS_POPOUT)),
-        h = i.useCallback((e) => {
+        _ = (0, o.e7)([s.Z], () => s.Z.getWindowOpen(f.KJ3.DEVTOOLS_POPOUT)),
+        m = i.useCallback((e) => {
             ((0, c.isMac)() ? e.metaKey : e.ctrlKey) && e.altKey && "KeyO" === e.code && (0, u.SO)();
         }, []);
     return (i.useLayoutEffect(
         () => (
-            window.addEventListener("keydown", h),
+            window.addEventListener("keydown", m),
             () => {
-                window.removeEventListener("keydown", h);
+                window.removeEventListener("keydown", m);
             }
         ),
-        [h],
+        [m],
     ),
-    (t ? n : a) && !p)
-        ? (0, r.jsx)(_, { mobile: t })
+    (t ? n : a) && !_)
+        ? (0, r.jsx)(p, { mobile: t })
         : null;
 }

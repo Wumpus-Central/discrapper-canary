@@ -13,14 +13,14 @@ if (n(738146)() || n(247131)()) {
         u = c("%Map%", !0),
         d = c("%Set%", !0),
         f = n(887937),
-        _ = f("Array.prototype.push"),
-        p = f("String.prototype.charCodeAt"),
-        h = f("String.prototype.slice"),
-        m = function (e, t) {
+        p = f("Array.prototype.push"),
+        _ = f("String.prototype.charCodeAt"),
+        m = f("String.prototype.slice"),
+        h = function (e, t) {
             if (t + 1 >= e.length) return t + 1;
-            var n = p(e, t);
+            var n = _(e, t);
             if (n < 55296 || n > 56319) return t + 1;
-            var r = p(e, t + 1);
+            var r = _(e, t + 1);
             return r < 56320 || r > 57343 ? t + 1 : t + 2;
         },
         g = function (e) {
@@ -45,8 +45,8 @@ if (n(738146)() || n(247131)()) {
                 var n = 0;
                 return {
                     next: function () {
-                        var t = m(e, n),
-                            r = h(e, n, t);
+                        var t = h(e, n),
+                            r = m(e, n, t);
                         return (
                             (n = t),
                             {
@@ -65,32 +65,32 @@ if (n(738146)() || n(247131)()) {
             O = f("Map.prototype.forEach", !0),
             v = f("Set.prototype.forEach", !0);
         if (void 0 === r || !r.versions || !r.versions.node)
-            var I = f("Map.prototype.iterator", !0),
-                T = f("Set.prototype.iterator", !0);
-        var S = f("Map.prototype.@@iterator", !0) || f("Map.prototype._es6-shim iterator_", !0),
+            var S = f("Map.prototype.iterator", !0),
+                I = f("Set.prototype.iterator", !0);
+        var T = f("Map.prototype.@@iterator", !0) || f("Map.prototype._es6-shim iterator_", !0),
             A = f("Set.prototype.@@iterator", !0) || f("Set.prototype._es6-shim iterator_", !0),
             C = function (e) {
                 if (b(e)) {
-                    if (I) return a(I(e));
-                    if (S) return S(e);
+                    if (S) return a(S(e));
+                    if (T) return T(e);
                     if (O) {
                         var t = [];
                         return (
                             O(e, function (e, n) {
-                                _(t, [n, e]);
+                                p(t, [n, e]);
                             }),
                             g(t)
                         );
                     }
                 }
                 if (y(e)) {
-                    if (T) return a(T(e));
+                    if (I) return a(I(e));
                     if (A) return A(e);
                     if (v) {
                         var n = [];
                         return (
                             v(e, function (e) {
-                                _(n, e);
+                                p(n, e);
                             }),
                             g(n)
                         );

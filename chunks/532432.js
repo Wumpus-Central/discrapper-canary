@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,62 +9,62 @@ var r = n(54381),
     u = n(654904),
     d = n(993413),
     f = n(486324),
-    _ = n(388032),
-    p = n(801292);
-let h = [
+    p = n(388032),
+    _ = n(801292);
+let m = [
     {
         name: "gif",
         extensions: ["gif"],
     },
 ];
-function m(e) {
+function h(e) {
     let {
             showRemoveAvatarButton: t,
             errors: n,
             onAvatarChange: a,
-            sectionTitle: m,
+            sectionTitle: h,
             changeAvatarButtonText: g,
             guildId: E,
             className: b,
             disabled: y = !1,
             isTryItOut: O = !1,
             forcedDivider: v,
-            withHighlight: I = !1,
+            withHighlight: S = !1,
         } = e,
-        { newestAnalyticsLocation: T } = (0, c.ZP)(),
-        S = I ? l.gtL : s.zx,
+        { newestAnalyticsLocation: I } = (0, c.ZP)(),
+        T = S ? l.gtL : s.zx,
         A = i.useCallback(() => {
             (0, u.$r)({
                 uploadType: f.pC.AVATAR,
-                analyticsSource: T,
-                filters: O ? h : void 0,
+                analyticsSource: I,
+                filters: O ? m : void 0,
                 guildId: E,
                 isTryItOut: O,
             });
-        }, [E, T, O]);
+        }, [E, I, O]);
     return (0, r.jsx)(d.Z, {
         className: b,
-        title: m,
+        title: h,
         errors: n,
         disabled: y,
         forcedDivider: v,
         children: (0, r.jsxs)("div", {
-            className: p.buttonsContainer,
+            className: _.buttonsContainer,
             children: [
-                (0, r.jsx)(S, {
-                    className: o()({ [p.buttonHighlighted]: I }),
+                (0, r.jsx)(T, {
+                    className: o()({ [_.buttonHighlighted]: S }),
                     size: s.zx.Sizes.SMALL,
                     onClick: A,
-                    children: null != g ? g : _.intl.string(_.t["4OynCD"]),
+                    children: null != g ? g : p.intl.string(p.t["4OynCD"]),
                 }),
                 t &&
                     (0, r.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
-                        className: p.removeButton,
+                        className: _.removeButton,
                         children: (0, r.jsx)(l.Button, {
                             variant: "secondary",
                             size: "sm",
-                            text: null != E ? _.intl.string(_.t.TDjKDm) : _.intl.string(_.t.twB3fz),
+                            text: null != E ? p.intl.string(p.t.TDjKDm) : p.intl.string(p.t.twB3fz),
                             onClick: () => a(null),
                         }),
                     }),

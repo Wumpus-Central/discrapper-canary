@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(54381),
     i = n(120356),
     a = n.n(i),
@@ -9,15 +9,15 @@ var r = n(54381),
     u = n(320067),
     d = n(476921),
     f = n(266768);
-let _ = (e) => {
+let p = (e) => {
     let {
         isMotionReduced: t,
         containerVisibilityPercentage: n,
         boltContainerClassName: i,
-        carContainerClassName: _,
-        hammerContainerClassName: p,
-        keyContainerClassName: h,
-        starContainerClassName: m,
+        carContainerClassName: p,
+        hammerContainerClassName: _,
+        keyContainerClassName: m,
+        starContainerClassName: h,
         boltAssetClassName: g,
         carAssetClassName: E,
         hammerAssetClassName: b,
@@ -65,9 +65,9 @@ let _ = (e) => {
                         }),
                     }),
                 }),
-            null != _ &&
+            null != p &&
                 (0, r.jsx)("div", {
-                    className: a()(s.carContainer, _),
+                    className: a()(s.carContainer, p),
                     children: (0, r.jsx)(o.ZP, {
                         yAxisAnimationData: {
                             range: 15,
@@ -93,9 +93,9 @@ let _ = (e) => {
                         }),
                     }),
                 }),
-            null != p &&
+            null != _ &&
                 (0, r.jsx)("div", {
-                    className: a()(s.hammerContainer, p),
+                    className: a()(s.hammerContainer, _),
                     children: (0, r.jsx)(o.ZP, {
                         yAxisAnimationData: {
                             range: 15,
@@ -121,9 +121,9 @@ let _ = (e) => {
                         }),
                     }),
                 }),
-            null != h &&
+            null != m &&
                 (0, r.jsx)("div", {
-                    className: a()(s.keyContainer, h),
+                    className: a()(s.keyContainer, m),
                     children: (0, r.jsx)(o.ZP, {
                         blurAnimationData: {
                             startBlurRadius: 5,
@@ -159,9 +159,9 @@ let _ = (e) => {
                         }),
                     }),
                 }),
-            null != m &&
+            null != h &&
                 (0, r.jsx)("div", {
-                    className: a()(s.starContainer, m),
+                    className: a()(s.starContainer, h),
                     children: (0, r.jsx)(o.ZP, {
                         blurAnimationData: {
                             startBlurRadius: 0,

@@ -13,8 +13,8 @@ var i = n(54381),
     m = n(699516),
     x = n(594174),
     p = n(981631),
-    v = n(388032);
-let j = (e) => {
+    j = n(388032);
+let v = (e) => {
     let {
         channel: { type: t },
     } = e;
@@ -25,7 +25,7 @@ function f(e) {
         { channels: s, categories: u } = (0, r.cj)([g.Z], () => {
             let e = g.Z.getCategories(t);
             return {
-                channels: (0, o.Z)(e._categories, e, j),
+                channels: (0, o.Z)(e._categories, e, v),
                 categories: e,
             };
         }),
@@ -43,7 +43,7 @@ function f(e) {
             })
             .value();
     return (0, i.jsx)(a.VcW, {
-        description: v.intl.string(v.t["2Y9ZfA"]),
+        description: j.intl.string(j.t["2Y9ZfA"]),
         value: p.lds,
         onChange: n,
         options: f,
@@ -58,6 +58,6 @@ function f(e) {
                 subtitle: s,
             });
         },
-        placeholder: v.intl.string(v.t["Z+oF8h"]),
+        placeholder: j.intl.string(j.t["Z+oF8h"]),
     });
 }

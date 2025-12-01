@@ -152,17 +152,17 @@ function W(e) {
                               src: (0, P._W)(t, e, O.Q, "mp4"),
                               videoThumbnailSrc: (0, P._W)(t, e, O.Q, "webp"),
                               thumbnailSrc:
-                                  null != r.thumbnailAssetId ? (0, P._W)(t, r.thumbnailAssetId, O.Q, "webp") : void 0,
+                                  null != r.thumbnailAssetId ? (0, P._W)(t, r.thumbnailAssetId, 112, "webp") : void 0,
                               backgroundSrc:
-                                  null != r.backgroundAssetId ? (0, P._W)(t, r.backgroundAssetId, O.Q, "webp") : void 0,
+                                  null != r.backgroundAssetId ? (0, P._W)(t, r.backgroundAssetId, O.Q, k._Z) : void 0,
                           })
                         : a.push({
                               type: "image",
                               src: (0, P._W)(t, e, O.Q, "webp"),
                               thumbnailSrc:
-                                  null != r.thumbnailAssetId ? (0, P._W)(t, r.thumbnailAssetId, O.Q, "webp") : void 0,
+                                  null != r.thumbnailAssetId ? (0, P._W)(t, r.thumbnailAssetId, 112, "webp") : void 0,
                               backgroundSrc:
-                                  null != r.backgroundAssetId ? (0, P._W)(t, r.backgroundAssetId, O.Q, "webp") : void 0,
+                                  null != r.backgroundAssetId ? (0, P._W)(t, r.backgroundAssetId, O.Q, k._Z) : void 0,
                           }));
             }
             return [l, a];

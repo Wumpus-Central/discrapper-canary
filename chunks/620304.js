@@ -1,16 +1,16 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
     o = n.n(l),
-    a = n(790519),
+    a = n(666917),
     s = n(793030),
     c = n(442837),
     u = n(481060),
     d = n(239091),
-    p = n(100527),
+    f = n(100527),
     h = n(667815),
-    f = n(531572),
+    p = n(531572),
     g = n(259580),
     m = n(639777),
     b = n(495804),
@@ -21,13 +21,13 @@ var r = n(54381),
 function j(e) {
     let { guild: t, withMargin: l } = e,
         j = (0, b.Z)(t),
-        C = (0, m.Z)(t.id),
-        x = i.useCallback(() => {
-            (0, _.Z)(t.id, p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY);
+        x = (0, m.Z)(t.id),
+        C = i.useCallback(() => {
+            (0, _.Z)(t.id, f.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY);
         }, [t.id]),
-        E = (0, c.e7)([f.Z], () => {
+        E = (0, c.e7)([p.Z], () => {
             var e;
-            return null != (e = f.Z.getCountForGuild(t.id)) ? e : 0;
+            return null != (e = p.Z.getCountForGuild(t.id)) ? e : 0;
         });
     i.useEffect(() => {
         E !== t.premiumSubscriberCount && (0, h.v)(t.id, t.premiumSubscriberCount);
@@ -59,11 +59,11 @@ function j(e) {
             },
         },
         onClick: () => {
-            x();
+            C();
         },
         className: o()(v.container, { [v.containerWithMargin]: l }),
         onContextMenu: (e) => {
-            C &&
+            x &&
                 (0, d.jW)(e, async () => {
                     let { default: e } = await n.e("8570").then(n.bind(n, 651138));
                     return (n) => {
@@ -167,7 +167,7 @@ function j(e) {
         }),
     });
 }
-function C(e) {
+function x(e) {
     let { guild: t, withMargin: n } = e;
     return (0, r.jsx)(j, {
         guild: t,

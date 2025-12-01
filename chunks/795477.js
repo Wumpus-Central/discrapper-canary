@@ -1,9 +1,9 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var r = n(54381),
     l = n(481060),
     i = n(388032),
     a = n(831901);
-let s = () =>
+let o = () =>
     (0, r.jsxs)("div", {
         className: a.error,
         children: [

@@ -1,9 +1,9 @@
 n.d(t, {
-    AN: () => h,
+    AN: () => m,
     Aq: () => O,
     GB: () => E,
-    J5: () => p,
-    Su: () => m,
+    J5: () => _,
+    Su: () => h,
     UI: () => u,
     Wu: () => b,
     ZP: () => v,
@@ -26,7 +26,7 @@ let u = new o.b(),
         windowId: (0, s.UU)(),
     }),
     f = new Map();
-function _(e, t) {
+function p(e, t) {
     let [n, r] = i.useState((0, s.ZY)(t)),
         a = i.useMemo(() => new o.b(), []),
         l = i.useMemo(
@@ -57,18 +57,18 @@ function _(e, t) {
         l
     );
 }
-function p(e) {
+function _(e) {
     var t;
     let n = e.ownerDocument.defaultView;
     if (null == n) return;
     let r = (0, s.ZY)(n);
     return null == (t = f.get(r)) ? void 0 : t.windowDispatch;
 }
-function h(e) {
+function m(e) {
     var t;
-    return (0, a.kK)(null == e ? void 0 : e.target) && null != (t = p(e.target)) ? t : null;
+    return (0, a.kK)(null == e ? void 0 : e.target) && null != (t = _(e.target)) ? t : null;
 }
-function m() {
+function h() {
     var e;
     let t = (0, l.GR)();
     return null == t ? null : null != (e = f.get(t)) ? e : null;
@@ -77,12 +77,12 @@ function g(e) {
     return f.get(e);
 }
 function E() {
-    let e = m();
+    let e = h();
     return null != e ? e.appContext : null;
 }
 function b(e) {
     let { appContext: t, renderWindow: n, children: i } = e,
-        a = _(t, n);
+        a = p(t, n);
     return (0, r.jsx)(d.Provider, {
         value: a,
         children: i,

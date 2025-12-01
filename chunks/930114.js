@@ -1,4 +1,4 @@
-n.d(t, { V: () => p });
+n.d(t, { V: () => _ });
 var r = n(54381);
 n(473749);
 var i = n(481060),
@@ -22,7 +22,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,9 +38,9 @@ function _(e) {
     }
     return e;
 }
-function p(e) {
-    let { processedCode: t, channelContext: f, customGiftMessage: p, giftInfo: h } = e,
-        m = !1,
+function _(e) {
+    let { processedCode: t, channelContext: f, customGiftMessage: _, giftInfo: m } = e,
+        h = !1,
         g = null,
         E = a.default.getCurrentUser(),
         b = (0, l.yd)(null == E ? void 0 : E.premiumType, u.PremiumTypes.TIER_0);
@@ -51,17 +51,17 @@ function p(e) {
                 var i, a;
                 return (0, r.jsx)(
                     e,
-                    _(
+                    p(
                         {
                             code: t,
                             channelContext: f,
-                            customGiftMessage: p,
-                            emojiName: null == h || null == (i = h.emoji) ? void 0 : i.name,
-                            soundId: null == h || null == (a = h.sound) ? void 0 : a.id,
+                            customGiftMessage: _,
+                            emojiName: null == m || null == (i = m.emoji) ? void 0 : i.name,
+                            soundId: null == m || null == (a = m.sound) ? void 0 : a.id,
                             onComplete: (e, t) => {
                                 (g = e),
                                     t &&
-                                        ((m = t),
+                                        ((h = t),
                                         e.isSubscription && null == o.Z.getPremiumSubscription(!1) && (0, c.H)(!0));
                             },
                         },
@@ -73,7 +73,7 @@ function p(e) {
         {
             onCloseCallback: () => {
                 var e;
-                m &&
+                h &&
                     null != g &&
                     !b &&
                     g.isSubscription &&

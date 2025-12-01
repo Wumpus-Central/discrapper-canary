@@ -1,6 +1,6 @@
 n.d(t, {
     g: () => d,
-    m: () => p,
+    m: () => f,
 });
 var r = n(54381),
     i = n(120356),
@@ -18,7 +18,7 @@ function d(e) {
         src: u,
     });
 }
-function p(e) {
+function f(e) {
     let { className: t, powerup: n, isHovering: i } = e,
         u = (0, a.Z)(n, i);
     switch (n.type) {

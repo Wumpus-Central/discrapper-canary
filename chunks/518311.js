@@ -27,8 +27,8 @@ var i,
     C = n(194359),
     v = n(425493),
     _ = n(493773),
-    x = n(100527),
-    O = n(367907),
+    O = n(100527),
+    x = n(367907),
     j = n(906732),
     E = n(43267),
     S = n(933557),
@@ -42,11 +42,11 @@ var i,
     M = n(752048),
     R = n(131704),
     L = n(592125),
-    k = n(341165),
-    D = n(544610),
+    D = n(341165),
+    k = n(544610),
     U = n(19780),
-    B = n(306680),
-    F = n(699516),
+    F = n(306680),
+    B = n(699516),
     H = n(246946),
     V = n(594174),
     G = n(626135),
@@ -134,9 +134,9 @@ let eo = (0, P.hQ)(),
         var t;
         let { channel: n, onClose: i } = e,
             l = null != (t = (0, S.ZP)(n)) ? t : "",
-            a = (0, u.e7)([B.ZP], () => {
+            a = (0, u.e7)([F.ZP], () => {
                 var e;
-                return null != (e = B.ZP.lastMessageId(n.id)) ? e : n.id;
+                return null != (e = F.ZP.lastMessageId(n.id)) ? e : n.id;
             });
         return (0, r.jsx)(p.P3F, {
             onClick: () => {
@@ -244,7 +244,7 @@ class eu extends (i = l.PureComponent) {
     componentDidMount() {
         let { channel: e } = this.props;
         h.Z.wait(() => y.Z.open(null == e ? void 0 : e.id));
-        let t = (0, O.v_)(e);
+        let t = (0, x.v_)(e);
         G.default.track(
             $.rMx.OPEN_POPOUT,
             el(er({}, t), {
@@ -267,7 +267,7 @@ class eu extends (i = l.PureComponent) {
         if (null == e || !e.isDM()) return !1;
         let t = e.getRecipientId();
         if (null == t) throw Error("no recipient in DM");
-        return !F.Z.isFriend(t);
+        return !B.Z.isFriend(t);
     }
     createInvite() {
         let { channel: e } = this.props;
@@ -510,7 +510,7 @@ class eu extends (i = l.PureComponent) {
             let e = null != t ? t.getRecipientId() : null;
             if (null == e) throw Error("no recipient in DM");
             let n = V.default.getUser(e),
-                i = null != n && F.Z.getRelationshipType(n.id) === $.OGo.PENDING_OUTGOING;
+                i = null != n && B.Z.getRelationshipType(n.id) === $.OGo.PENDING_OUTGOING;
             return {
                 actions: [
                     {
@@ -722,7 +722,7 @@ class eu extends (i = l.PureComponent) {
             }),
             ei(this, "handleQueryChange", (e) => {
                 let { channel: t } = this.props,
-                    n = (0, O.v_)(t);
+                    n = (0, x.v_)(t);
                 y.Z.search(e, null == t ? void 0 : t.id),
                     null != this._existingTimeout && clearTimeout(this._existingTimeout),
                     (this._existingTimeout = setTimeout(() => {
@@ -774,7 +774,7 @@ class eu extends (i = l.PureComponent) {
             ei(this, "createNewDM", (e) => {
                 let t = this._searchCounter,
                     { channel: n } = this.props,
-                    i = (0, O.v_)(n),
+                    i = (0, x.v_)(n),
                     r = !0;
                 1 === e.length && (r = null == m.Z._openCachedDMChannel(e[0])),
                     G.default.track(
@@ -798,11 +798,11 @@ class eu extends (i = l.PureComponent) {
                         "" !== this.state.newChannelName && (t.name = this.state.newChannelName),
                             null != this.state.previewIcon && (t.icon = this.state.previewIcon),
                             (null != t.name || null != t.icon) &&
-                                m.Z.updateChannel(e, t, x.Z.NEW_GROUP_DM_INVITE_MODAL),
+                                m.Z.updateChannel(e, t, O.Z.NEW_GROUP_DM_INVITE_MODAL),
                             G.default.track($.rMx.GDM_EDIT_INTERACTED, {
                                 channel_id: e,
                                 channel_type: $.d4z.GROUP_DM,
-                                location: x.Z.NEW_GROUP_DM_INVITE_MODAL,
+                                location: O.Z.NEW_GROUP_DM_INVITE_MODAL,
                                 new_name_set: "" !== this.state.newChannelName,
                                 new_icon_set: null != this.state.previewIcon,
                             });
@@ -810,7 +810,7 @@ class eu extends (i = l.PureComponent) {
             }),
             ei(this, "pushToExistingDM", (e, t) => {
                 let n = this._searchCounter,
-                    i = (0, O.v_)(e),
+                    i = (0, x.v_)(e),
                     r = U.Z.getChannelId() === e.id;
                 m.Z.addRecipients(e.id, t, $.Sbl.ADD_FRIENDS_TO_DM).then((n) => {
                     if (r) {
@@ -894,9 +894,9 @@ class eu extends (i = l.PureComponent) {
 }
 function ed(e) {
     let { selectedUsers: t, channelName: n, previewIcon: i, onIconChange: l, onIconRemove: a, onChange: o } = e,
-        { analyticsLocations: s } = (0, j.ZP)(x.Z.NEW_GROUP_DM_INVITE_MODAL);
-    if (!(0, I.a)(x.Z.NEW_GROUP_DM_INVITE_MODAL)) return null;
-    let c = (0, S.pT)(Array.from(t), V.default, F.Z);
+        { analyticsLocations: s } = (0, j.ZP)(O.Z.NEW_GROUP_DM_INVITE_MODAL);
+    if (!(0, I.a)(O.Z.NEW_GROUP_DM_INVITE_MODAL)) return null;
+    let c = (0, S.pT)(Array.from(t), V.default, B.Z);
     return (0, r.jsxs)("div", {
         className: en.customizationContainer,
         children: [
@@ -929,11 +929,11 @@ function ed(e) {
 function ep(e) {
     var { channel: t } = e,
         n = ea(e, ["channel"]);
-    let i = (0, u.cj)([D.Z, k.Z, H.Z], () => {
+    let i = (0, u.cj)([k.Z, D.Z, H.Z], () => {
         let e;
         return (
-            null != t && null != (e = k.Z.getInvite(t.id)) && e.isExpired() && (e = null),
-            el(er({}, D.Z.getState()), {
+            null != t && null != (e = D.Z.getInvite(t.id)) && e.isExpired() && (e = null),
+            el(er({}, k.Z.getState()), {
                 invite: e,
                 hideDiscriminator: H.Z.hidePersonalInformation,
                 hideInstantInvites: H.Z.hideInstantInvites,
@@ -1017,8 +1017,8 @@ function ef(e) {
             showModal: C,
             renderPopout: v,
             toggleVisible: _,
-            popoutOpen: x,
-            setPopoutOpen: O,
+            popoutOpen: O,
+            setPopoutOpen: x,
             inBornThisNamedExperiment: j,
         } = eh({
             initialPopoutOpen: null != i && i.isGroupDM() && 0 === i.recipients.length,
@@ -1043,11 +1043,11 @@ function ef(e) {
                 targetElementRef: b,
                 renderPopout: v,
                 position: h,
-                shouldShow: x,
+                shouldShow: O,
                 nudgeAlignIntoViewport: !0,
                 autoInvert: !0,
                 align: f,
-                onRequestClose: () => O(!1),
+                onRequestClose: () => x(!1),
                 animation: p.yRy.Animation.NONE,
                 ignoreModalClicks: !0,
                 clickTrap: !0,

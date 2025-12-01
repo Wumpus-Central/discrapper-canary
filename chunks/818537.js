@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(44837),
     i = n(791819),
     a = n(282253);
@@ -26,7 +26,7 @@ var o = n(898061),
             })
         );
     },
-    _ = (function (e) {
+    p = (function (e) {
         function t() {
             for (var t, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
             return (
@@ -124,5 +124,5 @@ var o = n(898061),
             t
         );
     })(l.Component);
-(_.defaultProps = { classNames: "" }), (_.propTypes = {});
-let p = _;
+(p.defaultProps = { classNames: "" }), (p.propTypes = {});
+let _ = p;

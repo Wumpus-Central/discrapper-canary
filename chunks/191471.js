@@ -1,53 +1,53 @@
-r.d(t, { J: () => o });
-var n = r(54381);
-r(473749);
-var c = r(481060);
-function o(e) {
-    (0, c.ZDy)(async () => {
-        let { default: t } = await r.e("9354").then(r.bind(r, 461533));
-        return (r) => {
-            var c, o;
-            return (0, n.jsx)(
+n.d(t, { J: () => a });
+var i = n(54381);
+n(473749);
+var r = n(481060);
+function a(e) {
+    (0, r.ZDy)(async () => {
+        let { default: t } = await n.e("9354").then(n.bind(n, 461533));
+        return (n) => {
+            var r, a;
+            return (0, i.jsx)(
                 t,
-                ((c = (function (e) {
+                ((r = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
-                        var r = null != arguments[t] ? arguments[t] : {},
-                            n = Object.keys(r);
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            i = Object.keys(n);
                         "function" == typeof Object.getOwnPropertySymbols &&
-                            (n = n.concat(
-                                Object.getOwnPropertySymbols(r).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                            (i = i.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 }),
                             )),
-                            n.forEach(function (t) {
-                                var n;
-                                (n = r[t]),
+                            i.forEach(function (t) {
+                                var i;
+                                (i = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: n,
+                                              value: i,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0,
                                           })
-                                        : (e[t] = n);
+                                        : (e[t] = i);
                             });
                     }
                     return e;
-                })({}, r)),
-                (o = o = { guildId: e }),
+                })({}, n)),
+                (a = a = { guildId: e }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(c, Object.getOwnPropertyDescriptors(o))
+                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
                     : (function (e, t) {
-                          var r = Object.keys(e);
+                          var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
-                              var n = Object.getOwnPropertySymbols(e);
-                              r.push.apply(r, n);
+                              var i = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, i);
                           }
-                          return r;
-                      })(Object(o)).forEach(function (e) {
-                          Object.defineProperty(c, e, Object.getOwnPropertyDescriptor(o, e));
+                          return n;
+                      })(Object(a)).forEach(function (e) {
+                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
                       }),
-                c),
+                r),
             );
         };
     });

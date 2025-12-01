@@ -9,29 +9,29 @@ var r = n(54381),
     u = n(973616),
     d = n(914010),
     f = n(626135),
-    _ = n(471518),
-    p = n(370210),
-    h = n(981631),
-    m = n(388032),
+    p = n(471518),
+    _ = n(370210),
+    m = n(981631),
+    h = n(388032),
     g = n(923289);
 function E(e) {
     let { code: t, message: n } = e,
         [E, b, y] = (0, s.Wu)(
-            [p.Z],
-            () => [p.Z.getApplication(t), p.Z.isInvalidApplication(t), p.Z.getApplicationFetchState(t)],
+            [_.Z],
+            () => [_.Z.getApplication(t), _.Z.isInvalidApplication(t), _.Z.getApplicationFetchState(t)],
             [t],
         ),
         O = (0, s.e7)([d.Z], () => {
             var e;
             return null != (e = d.Z.getGuildId()) ? e : void 0;
         }),
-        [v, I] = i.useState(!1),
-        T = i.useCallback((e) => {
-            e && I(!0);
+        [v, S] = i.useState(!1),
+        I = i.useCallback((e) => {
+            e && S(!0);
         }, []),
-        S = (0, a.O)(T),
+        T = (0, a.O)(I),
         A = i.useCallback(() => {
-            f.default.track(h.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
+            f.default.track(m.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
                 application_id: t,
                 device_platform: o.tq ? "mobile_web" : "desktop_web",
                 sender_user_id: n.author.id,
@@ -40,15 +40,15 @@ function E(e) {
             });
         }, [t, O, n.author.id, n.channel_id]);
     return (i.useEffect(() => {
-        (0, _.gZ)(t);
+        (0, p.gZ)(t);
     }, [t]),
     i.useEffect(() => {
-        v && y === p.M.FETCHED && A();
+        v && y === _.M.FETCHED && A();
     }, [v, y, A]),
     i.useEffect(() => {
         v &&
             b &&
-            f.default.track(h.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
+            f.default.track(m.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
                 device_platform: o.tq ? "mobile_web" : "desktop_web",
                 sender_user_id: n.author.id,
                 guild_id: O,
@@ -57,9 +57,9 @@ function E(e) {
     }, [v, O, b, n.author.id, n.channel_id]),
     b)
         ? (0, r.jsxs)(c.Z, {
-              containerRef: S,
+              containerRef: T,
               children: [
-                  (0, r.jsx)(c.Z.Header, { text: m.intl.string(m.t.j4KtLa) }),
+                  (0, r.jsx)(c.Z.Header, { text: h.intl.string(h.t.j4KtLa) }),
                   (0, r.jsx)(c.Z.Body, {
                       children: (0, r.jsxs)("div", {
                           className: g.invalidBody,
@@ -67,19 +67,19 @@ function E(e) {
                               (0, r.jsx)(c.Z.Icon, { expired: !0 }),
                               (0, r.jsx)(c.Z.Info, {
                                   expired: !0,
-                                  title: m.intl.string(m.t.NaQLEx),
-                                  children: m.intl.string(m.t["0H5OT2"]),
+                                  title: h.intl.string(h.t.NaQLEx),
+                                  children: h.intl.string(h.t["0H5OT2"]),
                               }),
                           ],
                       }),
                   }),
               ],
           })
-        : null == E || y === p.M.FETCHING
+        : null == E || y === _.M.FETCHING
           ? (0, r.jsxs)(c.Z, {
-                containerRef: S,
+                containerRef: T,
                 children: [
-                    (0, r.jsx)(c.Z.Header, { text: m.intl.string(m.t.m9hXGR) }),
+                    (0, r.jsx)(c.Z.Header, { text: h.intl.string(h.t.m9hXGR) }),
                     (0, r.jsx)(c.Z.Body, { resolving: !0 }),
                 ],
             })

@@ -3,7 +3,7 @@ n.d(t, {
     Pb: () => y,
     XX: () => E,
     ZP: () => v,
-    ZT: () => h,
+    ZT: () => m,
     iv: () => b,
     pk: () => g,
 });
@@ -47,18 +47,18 @@ function d(e) {
 function f(e) {
     return "".concat(e / 16, "rem");
 }
-function _() {
+function p() {
     return Array(s().random(3, 8))
         .fill(null)
         .map(() => s().random(30, 80));
 }
-function p() {
+function _() {
     return (0, r.jsx)("div", {
         className: c.avatar,
         style: { opacity: 0.08 },
     });
 }
-function h(e) {
+function m(e) {
     let { width: t, height: n, opacity: i, className: o } = e,
         l = {
             width: f(t),
@@ -72,7 +72,7 @@ function h(e) {
         })
     );
 }
-function m(e) {
+function h(e) {
     let t,
         {
             groupStart: n = !1,
@@ -80,7 +80,7 @@ function m(e) {
             attachmentSpecs: o,
             usernameWidth: u,
             usernameOpacity: f,
-            className: m,
+            className: h,
             style: g,
         } = e,
         E = i ? 50 : s().random(40, 50);
@@ -88,10 +88,10 @@ function m(e) {
         !i && n
             ? (t = (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsx)(p, {}),
+                      (0, r.jsx)(_, {}),
                       (0, r.jsx)(l.H, {
                           className: c.header,
-                          children: (0, r.jsx)(h, {
+                          children: (0, r.jsx)(m, {
                               width: u,
                               opacity: f,
                               className: c.__invalid_username,
@@ -103,7 +103,7 @@ function m(e) {
               (t = (0, r.jsxs)(r.Fragment, {
                   children: [
                       i &&
-                          (0, r.jsx)(h, {
+                          (0, r.jsx)(m, {
                               width: E,
                               className: a()({
                                   [c.compactTimestamp]: !0,
@@ -112,7 +112,7 @@ function m(e) {
                           }),
                       (0, r.jsx)(l.H, {
                           className: c.header,
-                          children: (0, r.jsx)(h, {
+                          children: (0, r.jsx)(m, {
                               width: u,
                               opacity: f,
                           }),
@@ -121,7 +121,7 @@ function m(e) {
               })),
         (0, r.jsxs)("div", {
             "aria-hidden": !0,
-            className: a()(m, {
+            className: a()(h, {
                 [c.wrapper]: !0,
                 [c.compact]: i,
                 [c.cozy]: !i,
@@ -134,9 +134,9 @@ function m(e) {
                         t,
                         (0, r.jsx)("div", {
                             className: c.content,
-                            children: _().map((e, t) =>
+                            children: p().map((e, t) =>
                                 (0, r.jsx)(
-                                    h,
+                                    m,
                                     {
                                         width: e,
                                         opacity: 0.06,
@@ -174,7 +174,7 @@ function v(e) {
             .fill(null)
             .map((e, t) =>
                 (0, r.jsx)(
-                    m,
+                    h,
                     {
                         compact: i,
                         className: o,

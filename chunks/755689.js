@@ -103,11 +103,11 @@ e.exports = function (e) {
             ],
             contains: [d],
         }),
-        _ = {
+        p = {
             className: "built_in",
             variants: [{ begin: "(".concat(n, ")+(-)[\\w\\d]+") }],
         },
-        p = {
+        _ = {
             className: "class",
             beginKeywords: "class enum",
             end: /\s*[{]/,
@@ -115,7 +115,7 @@ e.exports = function (e) {
             relevance: 0,
             contains: [e.TITLE_MODE],
         },
-        h = {
+        m = {
             className: "function",
             begin: /function\s+/,
             end: /\s*\{|$/,
@@ -142,7 +142,7 @@ e.exports = function (e) {
                 },
             ],
         },
-        m = {
+        h = {
             begin: /using\s/,
             end: /$/,
             returnBegin: !0,
@@ -189,7 +189,7 @@ e.exports = function (e) {
                 e.inherit(e.TITLE_MODE, { endsParent: !0 }),
             ],
         },
-        y = [b, f, o, e.NUMBER_MODE, c, u, _, s, l, E],
+        y = [b, f, o, e.NUMBER_MODE, c, u, p, s, l, E],
         O = {
             begin: /\[/,
             end: /\]/,
@@ -218,7 +218,7 @@ e.exports = function (e) {
             aliases: ["pwsh", "ps", "ps1"],
             case_insensitive: !0,
             keywords: i,
-            contains: y.concat(p, h, m, g, O),
+            contains: y.concat(_, m, h, g, O),
         }
     );
 };

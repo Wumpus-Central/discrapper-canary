@@ -13,39 +13,39 @@ var r = n(54381),
     u = n(569504),
     d = n(453687),
     f = n(328966),
-    _ = n(981631),
-    p = n(388032),
-    h = n(724913),
-    m = n(430864);
+    p = n(981631),
+    _ = n(388032),
+    m = n(724913),
+    h = n(430864);
 function g(e, t) {
-    return e.type === _.uaV.VOICE_HANGOUT_INVITE
+    return e.type === p.uaV.VOICE_HANGOUT_INVITE
         ? ""
-        : e.hasFlag(_.iLy.SOURCE_MESSAGE_DELETED)
-          ? p.intl.string(p.t.JOtgSw)
+        : e.hasFlag(p.iLy.SOURCE_MESSAGE_DELETED)
+          ? _.intl.string(_.t.JOtgSw)
           : t;
 }
 function E(e) {
     var t;
-    let { className: n, message: a, children: s, content: c, onUpdate: p, contentRef: E, compact: b } = e,
-        y = a.state === _.yb.SEND_FAILED,
-        O = a.state === _.yb.SENDING,
+    let { className: n, message: a, children: s, content: c, onUpdate: _, contentRef: E, compact: b } = e,
+        y = a.state === p.yb.SEND_FAILED,
+        O = a.state === p.yb.SENDING,
         v = a.isCommandType(),
-        I = null == (t = a.editedTimestamp) ? void 0 : t.toString(),
-        T = i.useRef(!1);
+        S = null == (t = a.editedTimestamp) ? void 0 : t.toString(),
+        I = i.useRef(!1);
     i.useLayoutEffect(() => {
-        T.current ? null != p && p() : (T.current = !0);
-    }, [p, a.content, c, I, s]);
-    let S = u.Y.useConfig({ location: "MessageContent" }).alignMessagesStart;
+        I.current ? null != _ && _() : (I.current = !0);
+    }, [_, a.content, c, S, s]);
+    let T = u.Y.useConfig({ location: "MessageContent" }).alignMessagesStart;
     return (0, r.jsxs)("div", {
         id: (0, d.ut)(a),
         ref: E,
-        className: o()(n, m.markup, {
-            [h.messageContent]: !0,
-            [h.isSending]: O && !v,
-            [h.markupBidi]: S,
-            [h.markupRtl]: !S && "rtl" === l()(a.content),
-            [h.isFailed]: y,
-            [h.isUnsupported]: a.isUnsupported,
+        className: o()(n, h.markup, {
+            [m.messageContent]: !0,
+            [m.isSending]: O && !v,
+            [m.markupBidi]: T,
+            [m.markupRtl]: !T && "rtl" === l()(a.content),
+            [m.isFailed]: y,
+            [m.isUnsupported]: a.isUnsupported,
         }),
         children: [
             null != s ? s : g(a, c),

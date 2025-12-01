@@ -14,30 +14,30 @@ function l(e) {
             onFetchMore: u,
             isUserDisabled: d,
             searchQuery: f = "",
-            emptySearchContent: _,
-            className: p,
+            emptySearchContent: p,
+            className: _,
         } = e,
-        h = (0, i.O)((e) => {
+        m = (0, i.O)((e) => {
             e && !c && (null == u || u());
         });
-    return f.length > 0 && 0 === t.length && null != _
+    return f.length > 0 && 0 === t.length && null != p
         ? (0, r.jsxs)("div", {
               className: s.emptySearchResultsContainer,
               children: [
                   (0, r.jsx)(a.Heading, {
                       variant: "heading-md/semibold",
                       color: "header-primary",
-                      children: _.header,
+                      children: p.header,
                   }),
                   (0, r.jsx)(a.Text, {
                       variant: "text-md/medium",
                       color: "text-secondary",
-                      children: _.body,
+                      children: p.body,
                   }),
               ],
           })
         : (0, r.jsxs)(a.u2D, {
-              className: p,
+              className: _,
               children: [
                   t.map((e) =>
                       (0, r.jsx)(
@@ -54,7 +54,7 @@ function l(e) {
                       ),
                   ),
                   c && (0, r.jsx)(a.$jN, {}),
-                  (0, r.jsx)("div", { ref: h }),
+                  (0, r.jsx)("div", { ref: m }),
               ],
           });
 }

@@ -19,7 +19,7 @@ function s(e, t, n) {
         f = (0, o.i)(() => {
             d.current || t.resetValidation();
         }),
-        _ = (0, o.i)((e) => {
+        p = (0, o.i)((e) => {
             var i, a;
             t.displayValidation.isInvalid || t.commitValidation();
             let o = null == n || null == (i = n.current) ? void 0 : i.form;
@@ -30,7 +30,7 @@ function s(e, t, n) {
                 (l ? l() : null == (a = n.current) || a.focus(), (0, r._w)("keyboard")),
                 e.preventDefault();
         }),
-        p = (0, o.i)(() => {
+        _ = (0, o.i)(() => {
             t.commitValidation();
         });
     (0, i.useEffect)(() => {
@@ -47,17 +47,17 @@ function s(e, t, n) {
                         null == r || r.call(t),
                         (d.current = !1);
                 }),
-            e.addEventListener("invalid", _),
-            e.addEventListener("change", p),
+            e.addEventListener("invalid", p),
+            e.addEventListener("change", _),
             null == t || t.addEventListener("reset", f),
             () => {
-                e.removeEventListener("invalid", _),
-                    e.removeEventListener("change", p),
+                e.removeEventListener("invalid", p),
+                    e.removeEventListener("change", _),
                     null == t || t.removeEventListener("reset", f),
                     t && (t.reset = r);
             }
         );
-    }, [n, _, p, f, s]);
+    }, [n, p, _, f, s]);
 }
 function l(e) {
     let t = e.validity;

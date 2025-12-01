@@ -1,10 +1,10 @@
 n.d(t, {
     $k: () => b,
     In: () => y,
-    Lr: () => m,
+    Lr: () => h,
     PR: () => E,
     Sr: () => O,
-    k: () => h,
+    k: () => m,
     mB: () => g,
 }),
     n(997841);
@@ -18,14 +18,14 @@ var r = n(512722),
     u = n(598077),
     d = n(594174),
     f = n(573261),
-    _ = n(981631);
-let p = new c.Z("UserProfileModalActionCreators");
-function h() {
+    p = n(981631);
+let _ = new c.Z("UserProfileModalActionCreators");
+function m() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { withAnalyticsToken: t = !1 } = e;
     return o.tn
         .get({
-            url: _.ANM.ME,
+            url: p.ANM.ME,
             query: { with_analytics_token: t },
             oldFormErrors: !0,
             rejectWithError: !1,
@@ -41,11 +41,11 @@ function h() {
             ),
         );
 }
-function m() {
+function h() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return f.Z.patch({
-        url: _.ANM.USER_AGREEMENTS,
+        url: p.ANM.USER_AGREEMENTS,
         trackedActionData: { event: a.a.USER_ACCEPT_AGREEMENTS },
         body: {
             terms: e,
@@ -63,7 +63,7 @@ function g(e, t) {
     i()(null != n, "setFlag: user cannot be undefined");
     let r = t ? n.flags | e : n.flags & ~e;
     return o.tn.patch({
-        url: _.ANM.ME,
+        url: p.ANM.ME,
         oldFormErrors: !0,
         body: { flags: r },
         rejectWithError: !1,
@@ -75,7 +75,7 @@ function E(e) {
         ? Promise.resolve(t)
         : o.tn
               .get({
-                  url: _.ANM.USER(e),
+                  url: p.ANM.USER(e),
                   oldFormErrors: !0,
                   rejectWithError: !1,
               })
@@ -110,7 +110,7 @@ async function y(e) {
             abortSignal: d,
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         f = arguments.length > 2 ? arguments[2] : void 0,
-        h = Date.now();
+        m = Date.now();
     s.Z.dispatch({
         type: "USER_PROFILE_FETCH_START",
         userId: e,
@@ -119,7 +119,7 @@ async function y(e) {
     });
     try {
         let l = await o.tn.get({
-            url: _.ANM.USER_PROFILE(e),
+            url: p.ANM.USER_PROFILE(e),
             query: {
                 type: t,
                 with_mutual_guilds: n,
@@ -140,7 +140,7 @@ async function y(e) {
             s.Z.dispatch({
                 type: "USER_PROFILE_FETCH_SUCCESS",
                 userProfile: l.body,
-                fetchStartedAt: h,
+                fetchStartedAt: m,
             }),
             null != a &&
                 null != l.body.guild_member &&
@@ -153,11 +153,11 @@ async function y(e) {
         throw (
             (null != t &&
                 (null == t ? void 0 : t.body) != null &&
-                p.warn("fetchProfile error: ".concat(t.body.code, " - ").concat(t.body.message)),
+                _.warn("fetchProfile error: ".concat(t.body.code, " - ").concat(t.body.message)),
             s.Z.dispatch({
                 type: "USER_PROFILE_FETCH_FAILURE",
                 apiError: new l.Hx(t),
-                fetchStartedAt: h,
+                fetchStartedAt: m,
                 userId: e,
                 guildId: a,
             }),
@@ -172,7 +172,7 @@ async function O(e, t) {
     });
     try {
         let n = await o.tn.get({
-            url: _.ANM.USER_RELATIONSHIPS(e),
+            url: p.ANM.USER_RELATIONSHIPS(e),
             oldFormErrors: !0,
             signal: t,
             rejectWithError: !1,
@@ -185,7 +185,7 @@ async function O(e, t) {
     } catch (t) {
         throw (
             ((null == t ? void 0 : t.body) != null &&
-                p.warn("fetchMutualFriends error: ".concat(t.body.code, " - ").concat(t.body.message)),
+                _.warn("fetchMutualFriends error: ".concat(t.body.code, " - ").concat(t.body.message)),
             s.Z.dispatch({
                 type: "MUTUAL_FRIENDS_FETCH_FAILURE",
                 userId: e,

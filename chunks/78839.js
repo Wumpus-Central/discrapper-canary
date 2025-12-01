@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(539854), n(388685);
+n.d(t, { Z: () => B }), n(539854), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,28 +48,28 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let h = null,
-    m = null,
+let m = null,
+    h = null,
     g = null,
     E = null,
     b = null,
     y = !1,
     O = null,
     v = !1,
-    I = !1,
-    T = null,
     S = !1,
+    I = null,
+    T = !1,
     A = null;
 function C(e) {
     let { subscriptions: t, lastLazyPerkSync: n } = e,
@@ -87,8 +87,8 @@ function C(e) {
                 t.type === c.NYc.GUILD && t.status !== c.O0b.ENDED && a.push(t),
                 t.type === c.NYc.APPLICATION && t.status !== c.O0b.ENDED && o.push(t));
     }),
-        (h = r),
-        (m = i),
+        (m = r),
+        (h = i),
         (E = a),
         (b = o),
         (A = n);
@@ -102,12 +102,12 @@ function N(e) {
         return U(n) && n.status !== c.O0b.ENDED ? (e[r] = n) : e.splice(r, 1), e;
     }
 }
-function R(e) {
+function P(e) {
     let { subscription: t } = e;
     if (t.user_id !== l.default.getId()) return;
     let n = s.Q.createFromServer(t);
-    (h = p(f({}, h), { [n.id]: n })),
-        U(n) && (m = p(f({}, m), { [n.id]: n })),
+    (m = _(f({}, m), { [n.id]: n })),
+        U(n) && (h = _(f({}, h), { [n.id]: n })),
         null != E &&
             n.type === c.NYc.GUILD &&
             (E = N({
@@ -121,9 +121,9 @@ function R(e) {
                 record: n,
             }));
 }
-function P(e) {
+function R(e) {
     let { subscription: t } = e;
-    if (((y = !0), (S = !1), null != t)) {
+    if (((y = !0), (T = !1), null != t)) {
         if (t.user_id !== l.default.getId()) {
             y = !1;
             return;
@@ -131,10 +131,10 @@ function P(e) {
         g = s.Q.createFromServer(t);
     }
 }
-function D() {
-    S = !1;
+function w() {
+    T = !1;
 }
-function w(e) {
+function D(e) {
     let { subscription: t } = e;
     if (((v = !0), null != t)) {
         if (t.user_id !== l.default.getId()) {
@@ -144,31 +144,31 @@ function w(e) {
         O = s.Q.createFromServer(t);
     }
 }
-function L() {
-    I = !0;
-}
 function x() {
     S = !0;
 }
-function M(e) {
+function L() {
+    T = !0;
+}
+function j(e) {
     let { eligible: t } = e;
-    (T = t), (I = !1);
+    (I = t), (S = !1);
 }
-function k(e) {
+function M(e) {
     let {} = e;
-    (T = !1), (I = !1);
+    (I = !1), (S = !1);
 }
-function j() {
-    (h = null),
-        (m = null),
+function k() {
+    (m = null),
+        (h = null),
         (g = null),
         (E = null),
         (b = null),
         (y = !1),
         (O = null),
         (v = !1),
-        (I = !1),
         (S = !1),
+        (T = !1),
         (A = null);
 }
 function U(e) {
@@ -176,7 +176,7 @@ function U(e) {
 }
 function G(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        r = n ? m : h;
+        r = n ? h : m;
     if (null == r) return null;
     for (let n in r) {
         let i = r[n];
@@ -185,12 +185,12 @@ function G(e, t) {
     }
     return null;
 }
-class B extends (r = i.ZP.Store) {
+class Z extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(l.default);
     }
     hasFetchedSubscriptions() {
-        return null != h;
+        return null != m;
     }
     hasFetchedMostRecentPremiumTypeSubscription() {
         return y;
@@ -212,11 +212,11 @@ class B extends (r = i.ZP.Store) {
     }
     getSubscriptions() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return e ? m : h;
+        return e ? h : m;
     }
     getSubscriptionById(e) {
         var t;
-        return null != (t = null == h ? void 0 : h[e]) ? t : void 0;
+        return null != (t = null == m ? void 0 : m[e]) ? t : void 0;
     }
     getActiveGuildSubscriptions() {
         return E;
@@ -228,7 +228,7 @@ class B extends (r = i.ZP.Store) {
         var t;
         let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             r = new Set(e),
-            i = n ? m : h;
+            i = n ? h : m;
         return null == i
             ? null
             : null != (t = Object.values(i).find((e) => e.items.some((e) => r.has(e.planId))))
@@ -242,13 +242,13 @@ class B extends (r = i.ZP.Store) {
         return O;
     }
     getIsSubscriptionEligibleForReward() {
-        return T;
-    }
-    getIsFetchingSubscriptionRewardEligibility() {
         return I;
     }
-    getIsFetchingMostRecentSubscription() {
+    getIsFetchingSubscriptionRewardEligibility() {
         return S;
+    }
+    getIsFetchingMostRecentSubscription() {
+        return T;
     }
     getLastLazyPerkSync() {
         return A;
@@ -257,17 +257,17 @@ class B extends (r = i.ZP.Store) {
         return G(c.NYc.PREMIUM, (e) => e.hasAnyPremiumGroup, !0);
     }
 }
-d(B, "displayName", "SubscriptionStore");
-let Z = new B(a.Z, {
+d(Z, "displayName", "SubscriptionStore");
+let B = new Z(a.Z, {
     BILLING_SUBSCRIPTION_FETCH_SUCCESS: C,
-    BILLING_SUBSCRIPTION_UPDATE_SUCCESS: R,
-    BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_START: x,
-    BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: P,
-    BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_FAIL: D,
-    BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS: w,
-    BILLING_SUBSCRIPTION_RESET: j,
-    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_START: L,
-    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_SUCCESS: M,
-    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_FAILURE: k,
-    LOGOUT: j,
+    BILLING_SUBSCRIPTION_UPDATE_SUCCESS: P,
+    BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_START: L,
+    BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: R,
+    BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_FAIL: w,
+    BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS: D,
+    BILLING_SUBSCRIPTION_RESET: k,
+    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_START: x,
+    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_SUCCESS: j,
+    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_FAILURE: M,
+    LOGOUT: k,
 });

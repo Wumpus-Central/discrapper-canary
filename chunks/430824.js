@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(516888),
     i = n(601964),
     a = n(411198),
@@ -62,7 +62,7 @@ class f extends r.f {
     }
 }
 u(f, "displayName", "GuildStore");
-let _ = new f(
+let p = new f(
     {
         BACKGROUND_SYNC: (e, t) => {
             let { guilds: n } = e;

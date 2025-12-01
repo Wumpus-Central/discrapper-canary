@@ -1,33 +1,33 @@
-_.d(e, {
+r.d(t, {
     Z: () => o,
-    w: () => E,
+    w: () => _,
 });
-var a = _(622916),
-    r = _(255768),
-    n = _(696486);
-function o(t) {
-    if (!r.X) return;
-    let { description: e = "< unknown name >", op: _ = "< unknown op >", parent_span_id: o } = (0, n.XU)(t),
-        { spanId: E } = t.spanContext(),
-        i = (0, n.Tt)(t),
-        c = (0, n.Gx)(t),
-        s = c === t,
-        l = `[Tracing] Starting ${i ? "sampled" : "unsampled"} ${s ? "root " : ""}span`,
-        I = [`op: ${_}`, `name: ${e}`, `ID: ${E}`];
-    if ((o && I.push(`parent ID: ${o}`), !s)) {
-        let { op: t, description: e } = (0, n.XU)(c);
-        I.push(`root ID: ${c.spanContext().spanId}`),
-            t && I.push(`root op: ${t}`),
-            e && I.push(`root description: ${e}`);
+var n = r(622916),
+    a = r(255768),
+    i = r(696486);
+function o(e) {
+    if (!a.X) return;
+    let { description: t = "< unknown name >", op: r = "< unknown op >", parent_span_id: o } = (0, i.XU)(e),
+        { spanId: _ } = e.spanContext(),
+        s = (0, i.Tt)(e),
+        c = (0, i.Gx)(e),
+        E = c === e,
+        l = `[Tracing] Starting ${s ? "sampled" : "unsampled"} ${E ? "root " : ""}span`,
+        u = [`op: ${r}`, `name: ${t}`, `ID: ${_}`];
+    if ((o && u.push(`parent ID: ${o}`), !E)) {
+        let { op: e, description: t } = (0, i.XU)(c);
+        u.push(`root ID: ${c.spanContext().spanId}`),
+            e && u.push(`root op: ${e}`),
+            t && u.push(`root description: ${t}`);
     }
-    a.kg.log(`${l}
-  ${I.join("\n  ")}`);
+    n.kg.log(`${l}
+  ${u.join("\n  ")}`);
 }
-function E(t) {
-    if (!r.X) return;
-    let { description: e = "< unknown name >", op: _ = "< unknown op >" } = (0, n.XU)(t),
-        { spanId: o } = t.spanContext(),
-        E = (0, n.Gx)(t) === t,
-        i = `[Tracing] Finishing "${_}" ${E ? "root " : ""}span "${e}" with ID ${o}`;
-    a.kg.log(i);
+function _(e) {
+    if (!a.X) return;
+    let { description: t = "< unknown name >", op: r = "< unknown op >" } = (0, i.XU)(e),
+        { spanId: o } = e.spanContext(),
+        _ = (0, i.Gx)(e) === e,
+        s = `[Tracing] Finishing "${r}" ${_ ? "root " : ""}span "${t}" with ID ${o}`;
+    n.kg.log(s);
 }

@@ -1,5 +1,5 @@
 n.d(t, {
-    Ie: () => P,
+    Ie: () => R,
     OW: () => c,
     gy: () => u,
 });
@@ -145,7 +145,7 @@ let d = {
         showSlowmodeIndicator: !0,
         showTypingIndicator: !0,
     },
-    _ = {
+    p = {
         analyticsName: "sidebar",
         attachments: !0,
         autocomplete: {
@@ -181,7 +181,7 @@ let d = {
         showSlowmodeIndicator: !0,
         showTypingIndicator: !0,
     },
-    p = {
+    _ = {
         analyticsName: "edit",
         autocomplete: { mentionSuggestions: !0 },
         drafts: { type: i.d.ChannelMessage },
@@ -193,7 +193,7 @@ let d = {
         submit: { useDisabledStylesOnSubmit: !0 },
         showCharacterCount: !0,
     },
-    h = {
+    m = {
         analyticsName: "forum",
         drafts: { type: i.d.ChannelMessage },
         emojis: { button: !0 },
@@ -211,7 +211,7 @@ let d = {
         showSlowmodeIndicator: !0,
         showTypingIndicator: !0,
     },
-    m = {
+    h = {
         analyticsName: "voice_channel_status",
         drafts: { type: i.d.ChannelMessage },
         emojis: { button: !0 },
@@ -327,7 +327,7 @@ let d = {
         hideAccessoryBar: !0,
         layout: 1,
     },
-    I = {
+    S = {
         analyticsName: "user_profile_reply",
         drafts: { type: i.d.ChannelMessage },
         emojis: { button: !0 },
@@ -343,7 +343,7 @@ let d = {
         },
         toolbarType: 2,
     },
-    T = {
+    I = {
         analyticsName: "profile_bio_input",
         drafts: { type: i.d.ChannelMessage },
         emojis: { button: !0 },
@@ -355,7 +355,7 @@ let d = {
         disableAutoFocus: !0,
         showCharacterCount: !0,
     },
-    S = {
+    T = {
         analyticsName: "custom_gift_type",
         drafts: { type: i.d.ChannelMessage },
         emojis: {},
@@ -414,7 +414,7 @@ let d = {
             disableInlineCode: !0,
         },
     },
-    R = {
+    P = {
         analyticsName: "atomic_reator_reply_input",
         drafts: { type: i.d.ChannelMessage },
         permissions: { requireSendMessages: !0 },
@@ -427,26 +427,26 @@ let d = {
         showCharacterCount: !0,
         layout: 1,
     },
-    P = {
+    R = {
         NORMAL: d,
         OVERLAY: f,
         OVERLAY_INLINE_REPLY: v,
-        SIDEBAR: _,
-        EDIT: p,
-        FORM: h,
-        VOICE_CHANNEL_STATUS: m,
+        SIDEBAR: p,
+        EDIT: _,
+        FORM: m,
+        VOICE_CHANNEL_STATUS: h,
         THREAD_CREATION: g,
         USER_PROFILE: O,
-        USER_PROFILE_REPLY: I,
-        PROFILE_BIO_INPUT: T,
-        CUSTOM_GIFT: S,
+        USER_PROFILE_REPLY: S,
+        PROFILE_BIO_INPUT: I,
+        CUSTOM_GIFT: T,
         RULES_INPUT: A,
         CREATE_FORUM_POST: b,
         CREATE_ANNOUNCEMENT_POST: E,
         CREATE_POLL: y,
         FORUM_CHANNEL_GUIDELINES: C,
         CHANNEL_TOPIC: N,
-        ATOMIC_REACTOR_REPLY_INPUT: R,
+        ATOMIC_REACTOR_REPLY_INPUT: P,
         FORWARD_MESSAGE_INPUT: {
             analyticsName: "forward_message_input",
             drafts: { type: i.d.ChannelMessage },

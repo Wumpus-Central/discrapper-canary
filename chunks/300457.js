@@ -794,7 +794,7 @@ e.exports = function (e) {
         u = "and or not only",
         d = /@-?\w[\w]*(-\w+)*/,
         f = "[a-zA-Z-][a-zA-Z0-9_-]*",
-        _ = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE];
+        p = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE];
     return {
         name: "CSS",
         case_insensitive: !0,
@@ -833,14 +833,14 @@ e.exports = function (e) {
                     l.HEXCOLOR,
                     l.IMPORTANT,
                     l.CSS_NUMBER_MODE,
-                    ..._,
+                    ...p,
                     {
                         begin: /(url|data-uri)\(/,
                         end: /\)/,
                         relevance: 0,
                         keywords: { built_in: "url data-uri" },
                         contains: [
-                            ..._,
+                            ...p,
                             {
                                 className: "string",
                                 begin: /[^)]/,
@@ -877,7 +877,7 @@ e.exports = function (e) {
                                 begin: /[a-z-]+(?=:)/,
                                 className: "attribute",
                             },
-                            ..._,
+                            ...p,
                             l.CSS_NUMBER_MODE,
                         ],
                     },

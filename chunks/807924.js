@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(126387),
     i = n(493623),
     a = n(67966),
@@ -14,7 +14,7 @@ var r = n(126387),
             (0, c.Z)("number" != typeof e ? e : (0, u.Z)(e, d.mv))
         );
     };
-let _ = {
+let p = {
     name: "arrow",
     enabled: !0,
     phase: "main",
@@ -24,26 +24,26 @@ let _ = {
             a = e.name,
             c = e.options,
             u = n.elements.arrow,
-            _ = n.modifiersData.popperOffsets,
-            p = (0, r.Z)(n.placement),
-            h = (0, s.Z)(p),
-            m = [d.t$, d.F2].indexOf(p) >= 0 ? "height" : "width";
-        if (u && _) {
+            p = n.modifiersData.popperOffsets,
+            _ = (0, r.Z)(n.placement),
+            m = (0, s.Z)(_),
+            h = [d.t$, d.F2].indexOf(_) >= 0 ? "height" : "width";
+        if (u && p) {
             var g = f(c.padding, n),
                 E = (0, i.Z)(u),
-                b = "y" === h ? d.we : d.t$,
-                y = "y" === h ? d.I : d.F2,
-                O = n.rects.reference[m] + n.rects.reference[h] - _[h] - n.rects.popper[m],
-                v = _[h] - n.rects.reference[h],
-                I = (0, o.Z)(u),
-                T = I ? ("y" === h ? I.clientHeight || 0 : I.clientWidth || 0) : 0,
-                S = O / 2 - v / 2,
+                b = "y" === m ? d.we : d.t$,
+                y = "y" === m ? d.I : d.F2,
+                O = n.rects.reference[h] + n.rects.reference[m] - p[m] - n.rects.popper[h],
+                v = p[m] - n.rects.reference[m],
+                S = (0, o.Z)(u),
+                I = S ? ("y" === m ? S.clientHeight || 0 : S.clientWidth || 0) : 0,
+                T = O / 2 - v / 2,
                 A = g[b],
-                C = T - E[m] - g[y],
-                N = T / 2 - E[m] / 2 + S,
-                R = (0, l.u)(A, N, C),
-                P = h;
-            n.modifiersData[a] = ((t = {}), (t[P] = R), (t.centerOffset = R - N), t);
+                C = I - E[h] - g[y],
+                N = I / 2 - E[h] / 2 + T,
+                P = (0, l.u)(A, N, C),
+                R = m;
+            n.modifiersData[a] = ((t = {}), (t[R] = P), (t.centerOffset = P - N), t);
         }
     },
     effect: function (e) {

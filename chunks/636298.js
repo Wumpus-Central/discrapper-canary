@@ -1,19 +1,19 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => v });
 var r = n(54381),
     l = n(473749),
     i = n(120356),
     o = n.n(i),
     a = n(873546),
-    c = n(159691),
-    s = n(481060),
+    s = n(159691),
+    c = n(481060),
     u = n(984802),
     d = n(996435),
     f = n(36361),
-    b = n(388032),
-    p = n(214779);
+    p = n(388032),
+    b = n(214779);
 function y(e) {
     let { icon: t, label: n, onClick: l } = e;
-    return (0, r.jsx)(c.hU, {
+    return (0, r.jsx)(s.hU, {
         onClick: l,
         icon: t,
         size: "sm",
@@ -21,25 +21,25 @@ function y(e) {
         "aria-label": n,
     });
 }
-function j(e) {
+function g(e) {
     let { title: t, badge: n, onClose: l } = e,
         i = (0, u.Ll)();
-    return (0, r.jsx)(s.f6W, {
+    return (0, r.jsx)(c.f6W, {
         theme: i,
         children: (e) =>
             (0, r.jsxs)("div", {
-                className: o()(p.contentHeader, e),
+                className: o()(b.contentHeader, e),
                 children: [
                     (0, r.jsxs)("div", {
-                        className: p.contentHeaderLeft,
+                        className: b.contentHeaderLeft,
                         children: [
                             a.tq &&
                                 (0, r.jsx)(y, {
-                                    icon: s.yFM,
+                                    icon: c.yFM,
                                     onClick: () => d.Z.setState({ showNavigationMobile: !0 }),
-                                    label: b.intl.string(b.t["13/7kX"]),
+                                    label: p.intl.string(p.t["13/7kX"]),
                                 }),
-                            (0, r.jsx)(s.Heading, {
+                            (0, r.jsx)(c.Heading, {
                                 variant: "heading-md/medium",
                                 color: "header-secondary",
                                 children: t,
@@ -48,33 +48,33 @@ function j(e) {
                         ],
                     }),
                     (0, r.jsx)(y, {
-                        icon: s.Uz9,
+                        icon: c.Uz9,
                         onClick: l,
-                        label: b.intl.string(b.t.cpT0Cq),
+                        label: p.intl.string(p.t.cpT0Cq),
                     }),
                 ],
             }),
     });
 }
-let m = l.memo(function (e) {
+let v = l.memo(function (e) {
     var t, n;
     let { onClose: l, setting: i } = e,
-        c = null != (n = null == i ? void 0 : i.useTitle()) ? n : "",
-        s = null == i || null == (t = i.useBadge) ? void 0 : t.call(i),
+        s = null != (n = null == i ? void 0 : i.useTitle()) ? n : "",
+        c = null == i || null == (t = i.useBadge) ? void 0 : t.call(i),
         u = d.Z.useField("showNavigationMobile");
     return (0, r.jsxs)("div", {
-        className: o()(p.content, {
-            [p.mobile]: a.tq,
-            [p.mobileNavigationOpen]: u,
+        className: o()(b.content, {
+            [b.mobile]: a.tq,
+            [b.mobileNavigationOpen]: u,
         }),
         children: [
-            (0, r.jsx)(j, {
-                title: c,
-                badge: s,
+            (0, r.jsx)(g, {
+                title: s,
+                badge: c,
                 onClose: l,
             }),
             (0, r.jsx)("div", {
-                className: p.contentBody,
+                className: b.contentBody,
                 children: null != i && (0, r.jsx)(f.Z, { node: i }),
             }),
         ],

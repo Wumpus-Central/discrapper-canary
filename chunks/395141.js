@@ -218,7 +218,7 @@ e.exports = function (e) {
             },
         ];
     u.contains = f;
-    let _ = {
+    let p = {
             className: "params",
             begin: "\\(",
             returnBegin: !0,
@@ -231,8 +231,8 @@ e.exports = function (e) {
                 },
             ],
         },
-        p = { begin: "(#=>|=>|\\|>>|-?->|!->)" },
-        h = {
+        _ = { begin: "(#=>|=>|\\|>>|-?->|!->)" },
+        m = {
             variants: [
                 {
                     match: [/class\s+/, l, /\s+extends\s+/, l],
@@ -255,10 +255,10 @@ e.exports = function (e) {
         contains: f.concat([
             e.COMMENT("\\/\\*", "\\*\\/"),
             e.HASH_COMMENT_MODE,
-            p,
+            _,
             {
                 className: "function",
-                contains: [c, _],
+                contains: [c, p],
                 returnBegin: !0,
                 variants: [
                     {
@@ -275,7 +275,7 @@ e.exports = function (e) {
                     },
                 ],
             },
-            h,
+            m,
             {
                 begin: l + ":",
                 end: ":",

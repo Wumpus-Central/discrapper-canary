@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -57,11 +57,11 @@ function f(e, t) {
         e
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -69,7 +69,7 @@ function _(e, t) {
     }
     return i;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,27 +78,27 @@ function p(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let h = 500;
-function m(e) {
+let m = 500;
+function h(e) {
     let { children: t, "aria-label": n, className: a, position: c, delay: d } = e,
-        p = _(e, ["children", "aria-label", "className", "position", "delay"]),
-        m = i.useRef(null),
+        _ = p(e, ["children", "aria-label", "className", "position", "delay"]),
+        h = i.useRef(null),
         g = null != n ? n : "string" == typeof t && t;
     return (0, r.jsx)(
         s.aML,
-        f(u({}, p), {
+        f(u({}, _), {
             position: null != c ? c : "top",
-            delay: null != d ? d : h,
+            delay: null != d ? d : m,
             text: t,
             "aria-label": g,
             children: (n) => {
                 let { onMouseEnter: i, onMouseLeave: s } = n;
                 return (0, r.jsx)("div", {
                     className: o()(a, l.overflow),
-                    ref: m,
+                    ref: h,
                     "aria-hidden": e["aria-hidden"],
                     onMouseEnter: () => {
-                        let { current: e } = m;
+                        let { current: e } = h;
                         null != e && e.offsetWidth < e.scrollWidth && (null == i || i());
                     },
                     onMouseLeave: s,

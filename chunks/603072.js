@@ -1,4 +1,4 @@
-t.r(n), t.d(n, { default: () => Z }), t(388685);
+t.r(n), t.d(n, { default: () => I }), t(388685);
 var r = t(54381),
     l = t(473749),
     i = t(120356),
@@ -18,16 +18,16 @@ var r = t(54381),
     C = t(31445),
     b = t(59350),
     j = t(290511),
-    O = t(176505),
-    v = t(921944),
+    v = t(176505),
+    O = t(921944),
     y = t(388032),
     N = t(126512),
-    I = t(97009);
-function w(e) {
+    w = t(97009);
+function Z(e) {
     let { guild: n } = e,
         t = (0, C.Z)(n);
     l.useEffect(() => {
-        (0, p.Q3)(s.z.CHANNEL_BROWSER_NEW_BADGE_NUX, { dismissAction: v.L.DISMISS });
+        (0, p.Q3)(s.z.CHANNEL_BROWSER_NEW_BADGE_NUX, { dismissAction: O.L.DISMISS });
     });
     let i = t
             ? y.intl.formatToPlainString(y.t.uqZgYe, { guildName: n.name })
@@ -39,7 +39,7 @@ function w(e) {
             className: N.header,
             innerClassname: N.innerHeader,
             hideSearch: !0,
-            channelId: O.oC.CUSTOMIZE_COMMUNITY,
+            channelId: v.oC.CUSTOMIZE_COMMUNITY,
             guildId: n.id,
             children: [
                 (0, r.jsx)(h.Z.Icon, {
@@ -51,7 +51,7 @@ function w(e) {
         })
     );
 }
-function Z(e) {
+function I(e) {
     let { guildId: n, selectedSection: t } = e,
         i = (0, o.e7)([x.Z], () => x.Z.getGuild(n)),
         s = (0, C.Z)(i),
@@ -59,20 +59,20 @@ function Z(e) {
     l.useEffect(() => {
         null != t && p(t);
     }, [t]);
-    let h = (0, o.e7)([_.ZP], () => _.ZP.getCurrentSidebarChannelId(O.oC.CHANNEL_BROWSER)),
-        v = null != h && u === j.l7.BROWSE,
-        Z = (0, o.e7)([g.Z], () => g.Z.getNewChannelIds(n).size > 0),
+    let h = (0, o.e7)([_.ZP], () => _.ZP.getCurrentSidebarChannelId(v.oC.CHANNEL_BROWSER)),
+        O = null != h && u === j.l7.BROWSE,
+        I = (0, o.e7)([g.Z], () => g.Z.getNewChannelIds(n).size > 0),
         P = (0, m.fU)(n);
     return null == i
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)("div", {
-                      className: a()(I.chat, { [I.threadSidebarOpen]: v }),
+                      className: a()(w.chat, { [w.threadSidebarOpen]: O }),
                       children: [
-                          (0, r.jsx)(w, { guild: i }),
+                          (0, r.jsx)(Z, { guild: i }),
                           (0, r.jsxs)("div", {
-                              className: a()(I.content, N.container),
+                              className: a()(w.content, N.container),
                               children: [
                                   s &&
                                       (0, r.jsxs)(d.njP, {
@@ -100,11 +100,11 @@ function Z(e) {
                                                       children: [
                                                           y.intl.string(y.t.et6wav),
                                                           (0, r.jsx)(d.IGR, {
-                                                              text: Z ? y.intl.string(y.t.psHMa6) : P,
-                                                              color: Z
+                                                              text: I ? y.intl.string(y.t.psHMa6) : P,
+                                                              color: I
                                                                   ? c.Z.unsafe_rawColors.BRAND_260.css
                                                                   : c.Z.colors.BACKGROUND_ACCENT.css,
-                                                              className: a()({ [N.newBadge]: Z }),
+                                                              className: a()({ [N.newBadge]: I }),
                                                           }),
                                                       ],
                                                   },
@@ -128,7 +128,7 @@ function Z(e) {
                           }),
                       ],
                   }),
-                  v && (0, r.jsx)(f.I, { channelId: h }),
+                  O && (0, r.jsx)(f.I, { channelId: h }),
               ],
           });
 }

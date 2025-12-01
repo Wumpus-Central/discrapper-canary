@@ -1,6 +1,6 @@
 n.d(t, {
     KV: () => o.KV,
-    ZP: () => _,
+    ZP: () => p,
 }),
     n(388685);
 var r = n(392711),
@@ -42,7 +42,7 @@ function d(e) {
 function f(e) {
     return null != e && "null" !== e && e !== c.ME && "undefined" !== e && e !== c.I_8;
 }
-class _ {
+class p {
     _enqueue(e, t) {
         (this._pending[e] = d({}, this._pending[e], t)), this._flush.delay();
     }

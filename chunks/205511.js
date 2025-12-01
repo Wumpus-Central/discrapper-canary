@@ -144,7 +144,7 @@ let O = function (e) {
         o = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         a = (0, g.z6)(),
         i = s.useMemo(
-            () => (0, x._4)(t).filter((e) => a.xboxAndPlaystationAccounts.find((t) => t.type === e)),
+            () => (0, x.B3)(t).filter((e) => a.xboxAndPlaystationAccounts.find((t) => t.type === e)),
             [a.xboxAndPlaystationAccounts, t],
         ),
         {

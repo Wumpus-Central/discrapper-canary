@@ -1,6 +1,6 @@
 n.d(t, {
-    Nq: () => _,
-    O1: () => p,
+    Nq: () => p,
+    O1: () => _,
     TE: () => c,
     US: () => o,
     XR: () => s,
@@ -61,7 +61,7 @@ function f(e) {
         })
     );
 }
-function _(e) {
+function p(e) {
     let { contentType: t, timeRecurringConfig: n, groupName: o, bypassAutoDismiss: s, children: l } = e,
         [c, u] = (0, i.Tt)(t, n, o);
     return (
@@ -74,7 +74,7 @@ function _(e) {
         })
     );
 }
-function p(e) {
+function _(e) {
     let {
             contentType: t,
             newSnowflakeId: n,

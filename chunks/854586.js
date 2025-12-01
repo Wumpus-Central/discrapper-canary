@@ -30,12 +30,12 @@ function d(e, t) {
 function f(e, t, n) {
     let r = [];
     n((e, t) => {
-        _(r, e, t);
+        p(r, e, t);
     }),
         g(e, t, r),
         b(e, r);
 }
-function _(e, t, n) {
+function p(e, t, n) {
     t.derived.length !== n.derived.length &&
         e.push({
             type: "length-mismatch",
@@ -52,7 +52,7 @@ function _(e, t, n) {
             });
             continue;
         }
-        let r = p(i, t.root[i], n.root[i]);
+        let r = _(i, t.root[i], n.root[i]);
         null != r && e.push(r);
     }
     for (let n of i)
@@ -62,7 +62,7 @@ function _(e, t, n) {
                 key: n,
             });
 }
-function p(e, t, n) {
+function _(e, t, n) {
     let r = [];
     for (let e in t)
         if (Object.prototype.hasOwnProperty.call(t, e)) {
@@ -92,10 +92,10 @@ function p(e, t, n) {
             mismatches: r,
         };
 }
-function h(e) {
+function m(e) {
     return "object" == typeof e && null !== e && !Array.isArray(e) && !(e instanceof Date) && !(e instanceof Set);
 }
-function m(e, t) {
+function h(e, t) {
     let n = new Map();
     function r(e, t) {
         if (!d(e, t)) {
@@ -125,7 +125,7 @@ function m(e, t) {
                     : t.length > e.length && console.info("Extra in shadow: ", t.slice(e.length));
                 return;
             }
-            if (h(e) && h(t)) {
+            if (m(e) && m(t)) {
                 let n = new Set(Object.keys(e)),
                     i = new Set(Object.keys(t));
                 for (let a of Array.from(new Set([...n, ...i])).sort())
@@ -169,7 +169,7 @@ function g(e, t, n) {
                         "field-missing" === e.type
                             ? console.info("Field missing: ".concat(String(e.field)))
                             : (console.groupCollapsed('Field "'.concat(String(e.field), '" value mismatch')),
-                              m(e.primaryValue, e.shadowValue),
+                              h(e.primaryValue, e.shadowValue),
                               console.groupEnd());
                     }),
                     console.groupEnd();

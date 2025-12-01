@@ -1,4 +1,4 @@
-n.d(e, { Z: () => g });
+n.d(e, { Z: () => O });
 var i = n(54381),
     r = n(473749),
     l = n(512722),
@@ -7,16 +7,16 @@ var i = n(54381),
     a = n(481060),
     o = n(660216),
     c = n(825209),
-    E = n(509613),
-    d = n(556296),
+    d = n(509613),
+    E = n(556296),
     S = n(313789),
     T = n(981631),
     I = n(388032),
-    O = n(360919);
-let g = (0, E.ON)(S.n.CLIPS_KEYBIND, {
+    g = n(360919);
+let O = (0, d.ON)(S.n.CLIPS_KEYBIND, {
     useSearchTerms: () => [I.intl.string(I.t.pf54EU), I.intl.string(I.t["QyB/jK"])],
     render: () => {
-        let t = (0, s.e7)([d.ZP], () => d.ZP.getKeybindForAction(T.kg4.SAVE_CLIP, !0));
+        let t = (0, s.e7)([E.ZP], () => E.ZP.getKeybindForAction(T.kg4.SAVE_CLIP, !0));
         u()(null != t, "Save clip keybind unset");
         let e = r.useCallback(
             (e) => {
@@ -70,7 +70,7 @@ let g = (0, E.ON)(S.n.CLIPS_KEYBIND, {
             description: I.intl.string(I.t["QyB/jK"]),
             layout: "horizontal",
             children: (0, i.jsx)("div", {
-                className: O.keyRecorder,
+                className: g.keyRecorder,
                 children: (0, i.jsx)(c.Z, {
                     defaultValue: t.shortcut,
                     onChange: e,

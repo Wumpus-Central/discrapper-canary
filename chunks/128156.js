@@ -16,8 +16,8 @@ var i = n(442837),
     b = n(527790),
     h = n(769140),
     y = n(864141),
-    O = n(264481),
-    v = n(693408),
+    v = n(264481),
+    O = n(693408),
     j = n(661462),
     x = n(228168),
     _ = n(981631),
@@ -28,21 +28,21 @@ function w(e) {
         { voiceActivityStatusEnabled: D } = (0, l.U)({ location: "UserProfileModalV2Activity" }),
         k = (0, f.b)({ location: "UserProfileModalV2Activity" }),
         { live: N, recent: A, stream: Z } = (0, g.Z)(t.id),
-        { voiceChannel: R, voiceActivity: L } = (0, p.Z)({
+        { voiceChannel: R, voiceActivity: G } = (0, p.Z)({
             userId: t.id,
             guildId: S,
         }),
-        M = (0, i.e7)([o.Z], () => o.Z.isFetchingUserOutbox(t.id)),
-        G = t.id === n.id,
+        L = (0, i.e7)([o.Z], () => o.Z.isFetchingUserOutbox(t.id)),
+        M = t.id === n.id,
         B = (0, i.e7)([u.Z, s.Z], () => {
-            let e = G ? u.Z.getStatus() : s.Z.getStatus(t.id);
+            let e = M ? u.Z.getStatus() : s.Z.getStatus(t.id);
             return e === a.Skl.OFFLINE || e === a.Skl.INVISIBLE;
         }),
         F = N.length > 0 || null != Z,
-        U = D && null == Z && null == L && null != R,
+        U = D && null == Z && null == G && null != R,
         W = !B && (F || U),
         H = A.length > 0;
-    if (!W && !H && M)
+    if (!W && !H && L)
         return (0, r.jsx)("div", {
             className: I.cards,
             children: Array.from({ length: 8 }).map((e, t) =>
@@ -65,11 +65,11 @@ function w(e) {
                 ),
             ),
         });
-    if (!W && !H && !M) {
+    if (!W && !H && !L) {
         var z;
-        return G
-            ? (0, r.jsx)(O.Uf, { onClose: C })
-            : (0, r.jsx)(O.P9, {
+        return M
+            ? (0, r.jsx)(v.Uf, { onClose: C })
+            : (0, r.jsx)(v.P9, {
                   user: t,
                   guildId: null != (z = null == w ? void 0 : w.guildId) ? z : S,
                   channelId: E,
@@ -81,7 +81,7 @@ function w(e) {
         fade: !0,
         children: [
             W
-                ? (0, r.jsx)(v.Z, {
+                ? (0, r.jsx)(O.Z, {
                       heading: P.intl.string(P.t.J6STd9),
                       children: (0, r.jsxs)("ul", {
                           className: I.cards,
@@ -134,9 +134,9 @@ function w(e) {
                   })
                 : null,
             H
-                ? (0, r.jsx)(v.Z, {
+                ? (0, r.jsx)(O.Z, {
                       heading: P.intl.string(P.t.jzgEoL),
-                      introText: G
+                      introText: M
                           ? P.intl.format(P.t["4bk9Ak"], {
                                 learnMoreHook: (e, t) =>
                                     (0, r.jsx)(

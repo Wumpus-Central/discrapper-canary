@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(952265),
     d = n(481060),
     f = n(239091),
-    p = n(243778),
-    h = n(703656),
+    h = n(243778),
+    p = n(703656),
     g = n(164670),
     m = n(210218),
     b = n(445606),
@@ -27,7 +27,7 @@ let E = i.memo(function (e) {
         S = i.useRef(null),
         I = (0, u.f9)(),
         P = (0, a.e7)([y.Z], () => y.Z.hasLayers()),
-        [N, Z] = (0, p.ZT)([s.z.GAME_SHOP_NEW_BADGE], t.id);
+        [N, Z] = (0, h.ZT)([s.z.GAME_SHOP_NEW_BADGE], t.id);
     i.useEffect(() => {
         l && N === s.z.GAME_SHOP_NEW_BADGE && Z(j.L.INDIRECT_ACTION);
     }, [Z, l, N]);
@@ -35,7 +35,7 @@ let E = i.memo(function (e) {
             var e, n;
             Z(j.L.USER_DISMISS);
             let r = null != (n = null == (e = m.Z.getStorefrontState(t.id)) ? void 0 : e.activePage) ? n : 0;
-            (0, h.uL)(v.Z5c.CHANNELS_GAME_SHOP(t.id, r));
+            (0, p.uL)(v.Z5c.CHANNELS_GAME_SHOP(t.id, r));
         }, [t, Z]),
         T = i.useCallback(() => {
             Z(j.L.USER_DISMISS);

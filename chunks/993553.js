@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(692547),
@@ -57,11 +57,11 @@ function f(e, t) {
         e
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -69,7 +69,7 @@ function _(e, t) {
     }
     return i;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,16 +78,16 @@ function p(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function h(e) {
+function m(e) {
     var { children: t, lineClamp: n = 2 } = e,
-        c = _(e, ["children", "lineClamp"]);
-    let [d, p] = i.useState(!1),
-        [h, m] = i.useState(null),
+        c = p(e, ["children", "lineClamp"]);
+    let [d, _] = i.useState(!1),
+        [m, h] = i.useState(null),
         g =
-            null != h &&
+            null != m &&
             (0, r.jsx)("button", {
                 className: l.button,
-                onClick: () => p((e) => !e),
+                onClick: () => _((e) => !e),
                 children: (0, r.jsxs)(o.Text, {
                     className: l.seeMore,
                     variant: "text-sm/medium",
@@ -111,7 +111,7 @@ function h(e) {
             if (null == E) return;
             let { scrollHeight: e, clientHeight: t } = E;
             e > t &&
-                m({
+                h({
                     truncatedHeight: t,
                     expandedHeight: e,
                 });
@@ -121,7 +121,7 @@ function h(e) {
     }, [y, t, n]);
     let O = "auto";
     return (
-        null != h && (O = d ? "".concat(h.expandedHeight, "px") : "".concat(h.truncatedHeight, "px")),
+        null != m && (O = d ? "".concat(m.expandedHeight, "px") : "".concat(m.truncatedHeight, "px")),
         (0, r.jsxs)("div", {
             children: [
                 (0, r.jsx)(

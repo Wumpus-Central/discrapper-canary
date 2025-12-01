@@ -9,19 +9,19 @@ var r = n(54381),
     u = n(481060),
     d = n(700582),
     f = n(906732),
-    _ = n(213609),
-    p = n(963249),
-    h = n(594174),
-    m = n(51144),
+    p = n(213609),
+    _ = n(963249),
+    m = n(594174),
+    h = n(51144),
     g = n(479446),
     E = n(441623),
     b = n(317271),
     y = n(474936),
     O = n(981631),
     v = n(268685),
-    I = n(388032),
-    T = n(553517);
-function S(e, t, n) {
+    S = n(388032),
+    I = n(553517);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function A(e) {
                 }),
             )),
             r.forEach(function (t) {
-                S(e, t, n[t]);
+                T(e, t, n[t]);
             });
     }
     return e;
@@ -54,20 +54,20 @@ function C(e) {
     let {
             giftIntentType: t,
             recipientUser: a,
-            onMouseEnter: S,
+            onMouseEnter: T,
             onMouseLeave: C,
             popoutPosition: N,
-            analyticsPage: R,
-            analyticsSection: P,
-            glow: D,
-            innerRef: w,
+            analyticsPage: P,
+            analyticsSection: R,
+            glow: w,
+            innerRef: D,
         } = e,
-        L = (0, l.e7)([h.default], () => h.default.getCurrentUser()),
-        { analyticsLocations: x } = (0, f.ZP)(),
-        M = (0, l.e7)([E.ZP], () => E.ZP.getFriendAnniversaryYears(a.id)),
-        { Component: k } = (0, c.V)();
+        x = (0, l.e7)([m.default], () => m.default.getCurrentUser()),
+        { analyticsLocations: L } = (0, f.ZP)(),
+        j = (0, l.e7)([E.ZP], () => E.ZP.getFriendAnniversaryYears(a.id)),
+        { Component: M } = (0, c.V)();
     i.useEffect(() => {
-        (0, _.h)({
+        (0, p.h)({
             name: s.ImpressionNames.GIFT_INTENT_CARD,
             type: s.ImpressionTypes.VIEW,
             properties: {
@@ -76,79 +76,79 @@ function C(e) {
             },
         });
     }, [t]);
-    let j = () =>
+    let k = () =>
             t === y.hX.FRIEND_ANNIVERSARY
-                ? I.intl.formatToPlainString(I.t.rtRr04, { friendUserName: m.ZP.getName(a) })
+                ? S.intl.formatToPlainString(S.t.rtRr04, { friendUserName: h.ZP.getName(a) })
                 : (0, g.Ou)(t),
         U = () =>
-            t === y.hX.FRIEND_ANNIVERSARY ? I.intl.formatToPlainString(I.t.PpG27s, { numberOfYears: M }) : (0, g.Ou)(t),
+            t === y.hX.FRIEND_ANNIVERSARY ? S.intl.formatToPlainString(S.t.PpG27s, { numberOfYears: j }) : (0, g.Ou)(t),
         G = () =>
             t === y.hX.FRIEND_ANNIVERSARY
-                ? I.intl.formatToPlainString(I.t.W7AF4C, { friendUserName: m.ZP.getName(a) })
+                ? S.intl.formatToPlainString(S.t.W7AF4C, { friendUserName: h.ZP.getName(a) })
                 : (0, g.Ou)(t),
-        B = () => (t === y.hX.FRIEND_ANNIVERSARY ? I.intl.string(I.t.OrwKgi) : (0, g.Ou)(t)),
-        Z = (e) => {
+        Z = () => (t === y.hX.FRIEND_ANNIVERSARY ? S.intl.string(S.t.OrwKgi) : (0, g.Ou)(t)),
+        B = (e) => {
             e.stopPropagation();
             let n = (0, b.F)(t);
-            (0, p.Z)({
+            (0, _.Z)({
                 isGift: !0,
                 initialPlanId: null,
                 giftRecipient: a,
                 analyticsLocation: n.chat,
-                analyticsLocations: x,
+                analyticsLocations: L,
                 analyticsObject: {
-                    page: R,
-                    section: P,
+                    page: P,
+                    section: R,
                     object: O.qAy.BUTTON_CTA,
                     objectType: O.AnalyticsObjectTypes.GIFT,
                 },
-                giftMessage: B(),
+                giftMessage: Z(),
             });
         };
     return (0, r.jsx)("div", {
-        ref: w,
-        className: o()(T.content, { [T.outerGlow]: D }),
-        onMouseEnter: S,
+        ref: D,
+        className: o()(I.content, { [I.outerGlow]: w }),
+        onMouseEnter: T,
         onMouseLeave: C,
         children: (0, r.jsxs)("div", {
-            className: o()(T.innerContent, { [T.innerGlow]: D }),
+            className: o()(I.innerContent, { [I.innerGlow]: w }),
             children: [
                 (0, r.jsxs)("div", {
-                    className: T.subContent,
+                    className: I.subContent,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: T.avatars,
+                            className: I.avatars,
                             children: [
                                 (0, r.jsx)(d.Z, {
-                                    className: T.recipientUserAvatar,
+                                    className: I.recipientUserAvatar,
                                     user: a,
                                     "aria-label": a.username,
                                     size: v.EF.SIZE_56,
                                 }),
-                                null != L &&
+                                null != x &&
                                     (0, r.jsx)(d.Z, {
-                                        className: T.currentUserAvatar,
-                                        user: L,
+                                        className: I.currentUserAvatar,
+                                        user: x,
                                         "aria-label": a.username,
                                         size: v.EF.SIZE_24,
                                     }),
                             ],
                         }),
                         (0, r.jsxs)("div", {
-                            className: T.textContainer,
+                            className: I.textContainer,
                             children: [
                                 (0, r.jsx)(u.Text, {
                                     variant: "text-md/medium",
                                     color: "text-primary",
                                     lineClamp: 3,
-                                    children: j(),
+                                    children: k(),
                                 }),
                                 (0, r.jsxs)("div", {
-                                    className: T.subHeaderContainer,
+                                    className: I.subHeaderContainer,
                                     children: [
                                         (0, r.jsx)(u.iFz, { size: "xs" }),
                                         (0, r.jsx)(u.Text, {
-                                            className: T.subHeaderText,
+                                            className: I.subHeaderText,
                                             variant: "text-sm/normal",
                                             color: "text-secondary",
                                             children: U(),
@@ -160,13 +160,13 @@ function C(e) {
                     ],
                 }),
                 (0, r.jsxs)("div", {
-                    className: T.buttonContainer,
+                    className: I.buttonContainer,
                     children: [
                         (0, r.jsx)(u.hU, {
                             size: "sm",
                             variant: "secondary",
-                            icon: k,
-                            "aria-label": I.intl.string(I.t.I61IsE),
+                            icon: M,
+                            "aria-label": S.intl.string(S.t.I61IsE),
                             onClick: () => {
                                 (0, u.ZDy)(async () => {
                                     let { default: e } = await n.e("5890").then(n.bind(n, 171793));
@@ -180,15 +180,15 @@ function C(e) {
                             text: G(),
                             icon: u.OgN,
                             "aria-label": G(),
-                            onClick: Z,
+                            onClick: B,
                         }),
                     ],
                 }),
                 null != N &&
                     (0, r.jsx)("div", {
-                        className: o()(T.connector, {
-                            [T.leftPopoutConnector]: "left" === N,
-                            [T.rightPopoutConnector]: "right" === N,
+                        className: o()(I.connector, {
+                            [I.leftPopoutConnector]: "left" === N,
+                            [I.rightPopoutConnector]: "right" === N,
                         }),
                     }),
             ],

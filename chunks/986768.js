@@ -1,8 +1,8 @@
 n.d(t, { V: () => u });
 var r = n(317381),
     i = n(107105),
-    l = n(509212),
-    a = n(569984);
+    l = n(616022),
+    a = n(509212);
 n(817938);
 var s = n(238679),
     o = n(981631),
@@ -32,8 +32,8 @@ function u(e, t, n) {
         case o.zMe.QUEST_ENROLLMENT_STATUS_UPDATE: {
             let { quest_id: t } = n;
             if (!t) return null;
-            let r = a.Z.getQuest(t),
-                i = (0, l.nY)(r);
+            let r = l.Z.getQuest(t),
+                i = (0, a.nY)(r);
             if (null == r || null == i || i !== (null == (p = e.application) ? void 0 : p.id)) return null;
             return {
                 quest_id: t,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(54381);
 n(473749);
 var i = n(524437),
@@ -10,14 +10,14 @@ var i = n(524437),
     u = n(273313),
     d = n(726985),
     f = n(981631),
-    _ = n(388032),
-    p = n(361742),
-    h = n(85240);
-function m(e) {
+    p = n(388032),
+    _ = n(779334),
+    m = n(85240);
+function h(e) {
     let { className: t } = e;
     return (0, r.jsxs)(u.Z, {
         className: t,
-        title: _.intl.string(_.t.Cq98yL),
+        title: p.intl.string(p.t.Cq98yL),
         children: [
             (0, r.jsx)(b, {}),
             (0, r.jsx)(a.izJ, { gap: 32 }),
@@ -38,45 +38,45 @@ function g() {
         s = [
             {
                 value: i.GI.ACTIVITY_STATUS_ON,
-                name: _.intl.string(_.t.UzGMH9),
+                name: p.intl.string(p.t.UzGMH9),
             },
             {
                 value: i.GI.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS,
-                name: _.intl.string(p.default["/sAeRY"]),
+                name: p.intl.string(_.default["/sAeRY"]),
             },
             {
                 value: i.GI.ACTIVITY_STATUS_OFF,
-                name: _.intl.string(p.default.m3oL7Q),
+                name: p.intl.string(_.default.m3oL7Q),
             },
         ];
     return (0, r.jsxs)(a.C3N, {
-        label: _.intl.string(p.default.TG0QsS),
-        description: _.intl.string(p.default.OO17Lg),
+        label: p.intl.string(_.default.TG0QsS),
+        description: p.intl.string(_.default.OO17Lg),
         children: [
             (0, r.jsx)(a.FXm, {
-                label: _.intl.string(p.default["/LHVbt"]),
+                label: p.intl.string(_.default["/LHVbt"]),
                 options: s,
                 value: t,
                 onChange: (e) => n(e),
             }),
             (0, r.jsxs)("div", {
-                className: h.myServersContainer,
+                className: m.myServersContainer,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: h.myServersHeaderContainer,
+                        className: m.myServersHeaderContainer,
                         children: [
                             (0, r.jsx)(a.Heading, {
-                                className: h.myServersTitle,
+                                className: m.myServersTitle,
                                 variant: "heading-md/medium",
                                 color: "header-primary",
-                                children: _.intl.string(_.t.TqdOvC),
+                                children: p.intl.string(p.t.TqdOvC),
                             }),
                             !e &&
                                 (0, r.jsx)("div", {
-                                    className: h.myServersIgnoredWarning,
+                                    className: m.myServersIgnoredWarning,
                                     children: (0, r.jsx)(a.M14, {
                                         type: "warning",
-                                        children: _.intl.string(p.default["xxI0/W"]),
+                                        children: p.intl.string(_.default["xxI0/W"]),
                                     }),
                                 }),
                         ],
@@ -93,18 +93,18 @@ function E() {
     return (0, r.jsx)(s.F, {
         setting: d.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
         children: (0, r.jsxs)(a.C3N, {
-            label: _.intl.string(p.default["5rYBAQ"]),
+            label: p.intl.string(_.default["5rYBAQ"]),
             children: [
                 (0, r.jsx)(a.rsf, {
-                    label: _.intl.string(p.default.khuuzv),
-                    description: _.intl.string(p.default["8EWsJ8"]),
+                    label: p.intl.string(_.default.khuuzv),
+                    description: p.intl.string(_.default["8EWsJ8"]),
                     id: "allow-friends-to-join-my-game",
                     checked: e,
                     onChange: (e) => c.cP.updateSetting(e),
                 }),
                 (0, r.jsx)(a.rsf, {
-                    label: _.intl.string(p.default.Uz5Ipi),
-                    description: _.intl.string(p.default.CZI2Gb),
+                    label: p.intl.string(_.default.Uz5Ipi),
+                    description: p.intl.string(_.default.CZI2Gb),
                     id: "allow-vc-join-without-request",
                     checked: t,
                     onChange: (e) => c.Ou.updateSetting(e),
@@ -115,15 +115,15 @@ function E() {
 }
 function b() {
     let e = c.G6.useSetting(),
-        t = l.isPlatformEmbedded ? _.intl.string(p.default.UQ9RHJ) : _.intl.string(_.t.oKqC4t);
+        t = l.isPlatformEmbedded ? p.intl.string(_.default.UQ9RHJ) : p.intl.string(p.t.oKqC4t);
     return (0, r.jsx)(s.F, {
         setting: d.s6.ACTIVITY_PRIVACY_STATUS,
         children: (0, r.jsxs)(a.Kqy, {
             gap: 32,
             children: [
-                (0, r.jsx)("div", { children: _.intl.string(p.default.t2YsrV) }),
+                (0, r.jsx)("div", { children: p.intl.string(_.default.t2YsrV) }),
                 (0, r.jsx)(a.rsf, {
-                    label: _.intl.string(p.default.WhdCGP),
+                    label: p.intl.string(_.default.WhdCGP),
                     description: t,
                     id: "share-my-activity",
                     checked: e,
@@ -138,10 +138,10 @@ function y() {
         setting: d.s6.ACTIVITY_PRIVACY_TOS,
         children: (0, r.jsx)(a.Zbd, {
             type: a.Zbd.Types.PRIMARY,
-            className: h.privacyTermsCard,
+            className: m.privacyTermsCard,
             children: (0, r.jsx)(a.Text, {
                 variant: "text-sm/normal",
-                children: _.intl.format(_.t.xvCsx4, {
+                children: p.intl.format(p.t.xvCsx4, {
                     termsLink: f.EYA.TERMS,
                     privacyLink: f.EYA.PRIVACY,
                 }),

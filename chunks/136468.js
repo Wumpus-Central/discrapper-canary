@@ -1,4 +1,4 @@
-n.d(t, { r: () => _ });
+n.d(t, { r: () => p });
 var r = n(54381),
     i = n(473749),
     a = n(213305),
@@ -57,16 +57,16 @@ function f(e, t) {
         e
     );
 }
-function _(e) {
+function p(e) {
     var t, n;
     let c = i.useContext(o.KJ),
         d =
             null == c || null == (n = c.experiments) || null == (t = n.enabledExperiments)
                 ? void 0
                 : t.includes("mana-toggle-inputs"),
-        { switchIconsEnabled: _ } = i.useContext(a.S);
+        { switchIconsEnabled: p } = i.useContext(a.S);
     if (d) {
-        let t = void 0 !== e.hasIcon ? e.hasIcon : _;
+        let t = void 0 !== e.hasIcon ? e.hasIcon : p;
         return (0, r.jsx)(s.k, f(u({}, e), { hasIcon: t }));
     }
     return (0, r.jsx)(l.T, u({}, e));

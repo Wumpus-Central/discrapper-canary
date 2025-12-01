@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381);
 n(473749);
 var i = n(442837),
@@ -10,25 +10,25 @@ var i = n(442837),
     u = n(732380),
     d = n(981631),
     f = n(671955),
-    _ = n(388032);
-function p(e) {
-    let { platformType: t, icon: n, onAction: p } = e,
-        { newestAnalyticsLocation: h } = (0, o.ZP)(),
-        { themeType: m } = (0, c.z)(),
-        g = m === f.l.MODAL_V2;
+    p = n(388032);
+function _(e) {
+    let { platformType: t, icon: n, onAction: _ } = e,
+        { newestAnalyticsLocation: m } = (0, o.ZP)(),
+        { themeType: h } = (0, c.z)(),
+        g = h === f.l.MODAL_V2;
     if ((0, i.e7)([l.Z], () => null != l.Z.getAccount(null, t))) return null;
     let E = (e) => {
         e.stopPropagation();
         let n = t === d.ABu.XBOX;
-        null == p || p({ action: n ? "PRESS_CONNECT_XBOX_BUTTON" : "PRESS_CONNECT_PLAYSTATION_BUTTON" }),
+        null == _ || _({ action: n ? "PRESS_CONNECT_XBOX_BUTTON" : "PRESS_CONNECT_PLAYSTATION_BUTTON" }),
             (0, s.Z)({
                 platformType: t,
-                location: h,
+                location: m,
             });
     };
     return (0, r.jsx)(u.O1, {
         icon: n,
-        text: _.intl.formatToPlainString(_.t.XWSHTb, { platform: a.Z.get(t).name }),
+        text: p.intl.formatToPlainString(p.t.XWSHTb, { platform: a.Z.get(t).name }),
         fullWidth: !g,
         onClick: E,
     });

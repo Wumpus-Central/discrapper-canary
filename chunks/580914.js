@@ -3,8 +3,8 @@ var r = n(54381),
     l = n(473749),
     i = n(120356),
     a = n.n(i),
-    s = n(907331),
-    o = n(636977),
+    o = n(907331),
+    s = n(636977),
     c = n(685816),
     u = n(442837),
     d = n(481060),
@@ -27,8 +27,8 @@ var r = n(54381),
     I = n(709999),
     T = n(653126),
     L = n(786040),
-    B = n(401975),
-    P = n(794324),
+    P = n(401975),
+    B = n(794324),
     N = n(934760),
     A = n(126026),
     R = n(619899),
@@ -54,7 +54,7 @@ let V = (0, x.IC)(90),
     z = (e) => {
         var t;
         let { isLoading: n, handleTransition: i, category: z, heroBlock: G, tab: K, onVisibilityChange: Y } = e,
-            q = (0, s.O)(
+            q = (0, o.O)(
                 (e) => {
                     null == Y || Y(e);
                 },
@@ -95,10 +95,10 @@ let V = (0, x.IC)(90),
                 bannerStyleOverrides: el,
                 logoStyleOverrides: ei,
                 heroLogo: ea,
-                heroBannerStatic: es,
-                heroBannerAnimated: eo,
+                heroBannerStatic: eo,
+                heroBannerAnimated: es,
                 heroBannerRive: ec,
-            } = (0, P.hr)(et),
+            } = (0, B.hr)(et),
             eu = null != (t = null == el ? void 0 : el.responsive) && t,
             ed = null == el ? void 0 : el.backgroundStyle,
             ef = null != ec,
@@ -156,7 +156,7 @@ let V = (0, x.IC)(90),
                       }),
                       en
                           ? (0, A.Z)({ analyticsLocations: ej })
-                          : (0, m.navigateToQuestHome)({ fromContent: o.j.ORBS_SHOP_HERO_CTA }))
+                          : (0, m.navigateToQuestHome)({ fromContent: s.j.ORBS_SHOP_HERO_CTA }))
                     : (i({
                           sourceButton: "shop latest category hero",
                           categorySkuId: !eS || eC ? et.categorySkuId : void 0,
@@ -191,10 +191,10 @@ let V = (0, x.IC)(90),
                           }),
                           style: null != ed ? { background: ed } : void 0,
                           children:
-                              null != es &&
+                              null != eo &&
                               (0, r.jsx)(D.Z, {
-                                  bannerStatic: es,
-                                  bannerAnimated: eo,
+                                  bannerStatic: eo,
+                                  bannerAnimated: es,
                                   bannerRive: ec,
                                   isResponsive: eu,
                                   eventTargetRef: J,
@@ -287,7 +287,7 @@ let V = (0, x.IC)(90),
                                       n || em
                                           ? (0, r.jsx)(r.Fragment, {
                                                 children: [...Array(null != eb ? eb : 4)].map((e, t) =>
-                                                    ey ? (0, r.jsx)(B.Z, {}, t) : (0, r.jsx)(k.K, {}, t),
+                                                    ey ? (0, r.jsx)(P.Z, {}, t) : (0, r.jsx)(k.K, {}, t),
                                                 ),
                                             })
                                           : (0, r.jsx)(L.zp.Provider, {

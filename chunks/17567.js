@@ -9,7 +9,7 @@ var r = n(710845),
     u = n(539600),
     d = n(625137),
     f = n(287328);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,12 +33,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,12 +50,12 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -105,17 +105,17 @@ class E {
             r = s.Z.getUnsafeMutableRoles(e.guildId);
         null != n &&
             this.put(
-                c.rk(n, u.an(m(p({}, r), { [e.role.id]: u.wD(e.guildId, e.role) })), o.ZP.getSelfMember(e.guildId)),
+                c.rk(n, u.an(h(_({}, r), { [e.role.id]: u.wD(e.guildId, e.role) })), o.ZP.getSelfMember(e.guildId)),
                 t,
             );
     }
     handleGuildRoleDelete(e, t) {
         let n = l.Z.getGuild(e.guildId);
         if (null != n) {
-            let r = p({}, s.Z.getUnsafeMutableRoles(e.guildId));
+            let r = _({}, s.Z.getUnsafeMutableRoles(e.guildId));
             delete r[e.roleId];
             let i = o.ZP.getSelfMember(e.guildId);
-            null != i && (i = m(p({}, i), { roles: i.roles.filter((t) => t !== e.roleId) })),
+            null != i && (i = h(_({}, i), { roles: i.roles.filter((t) => t !== e.roleId) })),
                 this.put(c.rk(n, u.an(r), i), t);
         }
     }
@@ -167,7 +167,7 @@ class E {
         f.Z.guildsTransaction(e).delete();
     }
     constructor() {
-        _(this, "actions", {
+        p(this, "actions", {
             BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
             CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
             GUILD_CREATE: (e, t) => this.handleGuildCreate(e, t),

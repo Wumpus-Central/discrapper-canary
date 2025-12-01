@@ -9,8 +9,8 @@ var r = n(374470),
     u = n(13140),
     d = n(981631);
 let f = "BODY",
-    _ = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"]),
-    p = new Set([
+    p = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"]),
+    _ = new Set([
         "Alt",
         "AltGraph",
         "CapsLock",
@@ -27,7 +27,7 @@ let f = "BODY",
         "Symbol",
         "SymbolLock",
     ]),
-    h = new Set([
+    m = new Set([
         "F1",
         "F2",
         "F3",
@@ -54,7 +54,7 @@ let f = "BODY",
         "ZoomIn",
         "ZoomOut",
     ]),
-    m = new Set([
+    h = new Set([
         "ChannelDown",
         "ChannelUp",
         "MediaFastForward",
@@ -90,7 +90,7 @@ let f = "BODY",
         keydown(e, t) {
             var n;
             let g = null == (n = (0, r.uB)(e)) ? void 0 : n.activeElement;
-            if ((0, r.VG)(g) || i.fCx.isActive() || p.has(t) || h.has(t) || m.has(t)) return !1;
+            if ((0, r.VG)(g) || i.fCx.isActive() || _.has(t) || m.has(t) || h.has(t)) return !1;
             let E = null != g && g.tagName === f;
             return (
                 !(
@@ -113,7 +113,7 @@ let f = "BODY",
                       void (
                           !e.metaKey &&
                           !e.ctrlKey &&
-                          !_.has(t) &&
+                          !p.has(t) &&
                           c.S.dispatchToLastSubscribed(d.CkL.TEXTAREA_FOCUS)
                       ))
             );

@@ -46,23 +46,23 @@ e.exports = function (e) {
             ],
             end: '"[cwd]?',
         },
-        _ = {
+        p = {
             className: "string",
             begin: '[rq]"',
             end: '"[cwd]?',
             relevance: 5,
         },
-        p = {
+        _ = {
             className: "string",
             begin: "`",
             end: "`[cwd]?",
         },
-        h = {
+        m = {
             className: "string",
             begin: 'x"[\\da-fA-F\\s\\n\\r]*"[cwd]?',
             relevance: 10,
         },
-        m = {
+        h = {
             className: "string",
             begin: 'q"\\{',
             end: '\\}"',
@@ -90,6 +90,6 @@ e.exports = function (e) {
     return {
         name: "D",
         keywords: t,
-        contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, y, h, f, _, p, m, u, c, d, g, E, b],
+        contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, y, m, f, p, _, h, u, c, d, g, E, b],
     };
 };

@@ -30,6 +30,6 @@ function l() {
         d = (0, s.dl)(l, u);
     if (!(d.length > 0 || !(0, a.Hj)(l, u))) return o.Hn;
     var f = u[u.length - 1],
-        _ = l[l.length - 1];
-    return f !== _ && (f && d.push(f), _ && d.push(_)), d;
+        p = l[l.length - 1];
+    return f !== p && (f && d.push(f), p && d.push(p)), d;
 }

@@ -10,10 +10,10 @@ var l = "undefined" != typeof BigInt,
     u = s(Object.prototype.toString),
     d = s(Number.prototype.valueOf),
     f = s(String.prototype.valueOf),
-    _ = s(Boolean.prototype.valueOf);
-if (l) var p = s(BigInt.prototype.valueOf);
-if (c) var h = s(Symbol.prototype.valueOf);
-function m(e, t) {
+    p = s(Boolean.prototype.valueOf);
+if (l) var _ = s(BigInt.prototype.valueOf);
+if (c) var m = s(Symbol.prototype.valueOf);
+function h(e, t) {
     if ("object" != typeof e) return !1;
     try {
         return t(e), !0;
@@ -39,11 +39,11 @@ function O(e) {
 function v(e) {
     return "undefined" != typeof ArrayBuffer && (O.working ? O(e) : e instanceof ArrayBuffer);
 }
-function I(e) {
+function S(e) {
     return "[object DataView]" === u(e);
 }
-function T(e) {
-    return "undefined" != typeof DataView && (I.working ? I(e) : e instanceof DataView);
+function I(e) {
+    return "undefined" != typeof DataView && (S.working ? S(e) : e instanceof DataView);
 }
 (t.isArgumentsObject = r),
     (t.isGeneratorFunction = i),
@@ -55,7 +55,7 @@ function T(e) {
         );
     }),
     (t.isArrayBufferView = function (e) {
-        return "undefined" != typeof ArrayBuffer && ArrayBuffer.isView ? ArrayBuffer.isView(e) : o(e) || T(e);
+        return "undefined" != typeof ArrayBuffer && ArrayBuffer.isView ? ArrayBuffer.isView(e) : o(e) || I(e);
     }),
     (t.isUint8Array = function (e) {
         return "Uint8Array" === a(e);
@@ -108,32 +108,32 @@ function T(e) {
     }),
     (O.working = "undefined" != typeof ArrayBuffer && O(new ArrayBuffer())),
     (t.isArrayBuffer = v),
-    (I.working =
+    (S.working =
         "undefined" != typeof ArrayBuffer &&
         "undefined" != typeof DataView &&
-        I(new DataView(new ArrayBuffer(1), 0, 1))),
-    (t.isDataView = T);
-var S = "undefined" != typeof SharedArrayBuffer ? SharedArrayBuffer : void 0;
+        S(new DataView(new ArrayBuffer(1), 0, 1))),
+    (t.isDataView = I);
+var T = "undefined" != typeof SharedArrayBuffer ? SharedArrayBuffer : void 0;
 function A(e) {
     return "[object SharedArrayBuffer]" === u(e);
 }
 function C(e) {
-    return void 0 !== S && (void 0 === A.working && (A.working = A(new S())), A.working ? A(e) : e instanceof S);
+    return void 0 !== T && (void 0 === A.working && (A.working = A(new T())), A.working ? A(e) : e instanceof T);
 }
 function N(e) {
-    return m(e, d);
-}
-function R(e) {
-    return m(e, f);
+    return h(e, d);
 }
 function P(e) {
-    return m(e, _);
+    return h(e, f);
 }
-function D(e) {
-    return l && m(e, p);
+function R(e) {
+    return h(e, p);
 }
 function w(e) {
-    return c && m(e, h);
+    return l && h(e, _);
+}
+function D(e) {
+    return c && h(e, m);
 }
 (t.isSharedArrayBuffer = C),
     (t.isAsyncFunction = function (e) {
@@ -152,12 +152,12 @@ function w(e) {
         return "[object WebAssembly.Module]" === u(e);
     }),
     (t.isNumberObject = N),
-    (t.isStringObject = R),
-    (t.isBooleanObject = P),
-    (t.isBigIntObject = D),
-    (t.isSymbolObject = w),
+    (t.isStringObject = P),
+    (t.isBooleanObject = R),
+    (t.isBigIntObject = w),
+    (t.isSymbolObject = D),
     (t.isBoxedPrimitive = function (e) {
-        return N(e) || R(e) || P(e) || D(e) || w(e);
+        return N(e) || P(e) || R(e) || w(e) || D(e);
     }),
     (t.isAnyArrayBuffer = function (e) {
         return "undefined" != typeof Uint8Array && (v(e) || C(e));

@@ -9,26 +9,26 @@ var r = n(54381),
     u = n(240872),
     d = n(23645),
     f = n(600164),
-    _ = n(183620),
-    p = n(144114),
-    h = n(921801),
-    m = n(355497),
+    p = n(183620),
+    _ = n(144114),
+    m = n(921801),
+    h = n(355497),
     g = n(607018),
     E = n(778764),
     b = n(314897),
     y = n(325067),
     O = n(594174),
     v = n(572004),
-    I = n(287880),
-    T = n(714565),
-    S = n(202858),
+    S = n(287880),
+    I = n(714565),
+    T = n(202858),
     A = n(726985),
     C = n(981631),
     N = n(815660),
-    R = n(388032),
-    P = n(343396),
-    D = n(197571);
-function w(e, t, n) {
+    P = n(388032),
+    R = n(343396),
+    w = n(197571);
+function D(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +41,7 @@ function w(e, t, n) {
         e
     );
 }
-function L(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,12 +52,12 @@ function L(e) {
                 }),
             )),
             r.forEach(function (t) {
-                w(e, t, n[t]);
+                D(e, t, n[t]);
             });
     }
     return e;
 }
-function x(e, t) {
+function L(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -69,18 +69,18 @@ function x(e, t) {
     }
     return n;
 }
-function M(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : x(Object(t)).forEach(function (n) {
+            : L(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function k(e) {
+function M(e) {
     let {
             code: { code: t, consumed: n },
         } = e,
@@ -99,22 +99,22 @@ function k(e) {
             [a],
         );
     return (0, r.jsx)("li", {
-        className: D.marginBottom20,
+        className: w.marginBottom20,
         children: (0, r.jsxs)(l.P3F, {
             innerRef: o,
-            className: P.backupCode,
+            className: R.backupCode,
             onKeyDown: s,
             children: [
                 (0, r.jsx)(l.FZ5, { checked: n }),
                 (0, r.jsx)("span", {
-                    className: P.code,
+                    className: R.code,
                     children: a,
                 }),
             ],
         }),
     });
 }
-class j extends i.PureComponent {
+class k extends i.PureComponent {
     maskPhoneNumber(e) {
         return null == e ? "" : "".concat("*".repeat(e.length - 4)).concat(e.slice(-4));
     }
@@ -131,11 +131,11 @@ class j extends i.PureComponent {
                 t = (0, r.jsxs)(l.Text, {
                     variant: "text-sm/normal",
                     children: [
-                        R.intl.format(R.t.PXVoEO, { phoneNumber: e }),
+                        P.intl.format(P.t.PXVoEO, { phoneNumber: e }),
                         (0, r.jsx)(l.Anchor, {
                             onClick: this.togglePhoneNumberVisibility,
-                            className: P.phoneRevealer,
-                            children: n ? R.intl.string(R.t.FfltIN) : R.intl.string(R.t.llArAg),
+                            className: R.phoneRevealer,
+                            children: n ? P.intl.string(P.t.FfltIN) : P.intl.string(P.t.llArAg),
                         }),
                     ],
                 });
@@ -144,19 +144,19 @@ class j extends i.PureComponent {
                 e = (0, r.jsx)(l.Button, {
                     variant: "critical-secondary",
                     size: "sm",
-                    text: R.intl.string(R.t.KLWnit),
+                    text: P.intl.string(P.t.KLWnit),
                     loading: a,
                     onClick: this.handleDisableSMS,
                 });
             else {
-                let t = (0, T.c)(i);
+                let t = (0, I.c)(i);
                 e = (0, r.jsxs)(l.ButtonGroup, {
                     size: "sm",
                     children: [
                         (0, r.jsx)(l.Button, {
                             variant: "primary",
                             size: "sm",
-                            text: null != t ? t : R.intl.string(R.t.DZQe23),
+                            text: null != t ? t : P.intl.string(P.t.DZQe23),
                             onClick: this.handleEnableSMS,
                             loading: a,
                             disabled: null != t,
@@ -165,18 +165,18 @@ class j extends i.PureComponent {
                             ? (0, r.jsx)(l.Button, {
                                   variant: "secondary",
                                   size: "sm",
-                                  text: R.intl.string(R.t.Ulqq6K),
+                                  text: P.intl.string(P.t.Ulqq6K),
                                   onClick: this.handleChangePhoneNumber,
                               })
                             : null,
                     ],
                 });
             }
-            return (0, r.jsx)(h.F, {
+            return (0, r.jsx)(m.F, {
                 setting: A.s6.ACCOUNT_SMS_BACKUP,
                 children: (0, r.jsxs)(l.gNt, {
-                    label: R.intl.string(R.t.uHAJ5v),
-                    description: R.intl.string(R.t.fspJ4H),
+                    label: P.intl.string(P.t.uHAJ5v),
+                    description: P.intl.string(P.t.fspJ4H),
                     children: [t, e],
                 }),
             });
@@ -185,12 +185,12 @@ class j extends i.PureComponent {
     renderEnabled() {
         let e,
             { backupCodes: t } = this.props,
-            n = (0, r.jsx)(h.F, {
+            n = (0, r.jsx)(m.F, {
                 setting: A.s6.ACCOUNT_VIEW_BACKUP_CODES,
                 children: (0, r.jsx)(l.Button, {
                     variant: "primary",
                     size: "sm",
-                    text: R.intl.string(R.t.xZEzbu),
+                    text: P.intl.string(P.t.xZEzbu),
                     onClick: this.sendMFABackupCodesVerificationKeyEmail,
                 }),
             });
@@ -202,28 +202,28 @@ class j extends i.PureComponent {
                 children: (0, r.jsx)(l.Button, {
                     variant: "primary",
                     size: "sm",
-                    text: R.intl.string(R.t.qZZUy6),
+                    text: P.intl.string(P.t.qZZUy6),
                 }),
             });
-            let i = (e) => e.map((e) => (0, r.jsx)(k, { code: e }, e.code));
+            let i = (e) => e.map((e) => (0, r.jsx)(M, { code: e }, e.code));
             e = (0, r.jsxs)(l.Kqy, {
                 gap: 16,
                 children: [
                     (0, r.jsxs)(l.gNt, {
-                        label: R.intl.string(R.t.GfqHPn),
-                        description: R.intl.format(R.t.OhmvYt, {}),
+                        label: P.intl.string(P.t.GfqHPn),
+                        description: P.intl.format(P.t.OhmvYt, {}),
                         children: [
                             (0, r.jsxs)(f.Z, {
                                 children: [
                                     (0, r.jsx)(f.Z.Child, {
                                         children: (0, r.jsx)("ul", {
-                                            className: P.checkboxGroup,
+                                            className: R.checkboxGroup,
                                             children: i(t.slice(0, t.length / 2)),
                                         }),
                                     }),
                                     (0, r.jsx)(f.Z.Child, {
                                         children: (0, r.jsx)("ul", {
-                                            className: P.checkboxGroup,
+                                            className: R.checkboxGroup,
                                             children: i(t.slice(t.length / 2)),
                                         }),
                                     }),
@@ -232,7 +232,7 @@ class j extends i.PureComponent {
                             (0, r.jsx)(l.Avr, {
                                 textVariant: "text-sm/medium",
                                 onClick: this.generateBackupCodes,
-                                text: R.intl.string(R.t.RIThUu),
+                                text: P.intl.string(P.t.RIThUu),
                             }),
                         ],
                     }),
@@ -243,28 +243,28 @@ class j extends i.PureComponent {
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(l.gNt, {
-                    label: R.intl.string(R.t.EPVq00),
-                    description: R.intl.string(R.t.bQwxib),
+                    label: P.intl.string(P.t.EPVq00),
+                    description: P.intl.string(P.t.bQwxib),
                     children: (0, r.jsxs)(l.ButtonGroup, {
                         size: "sm",
                         children: [
                             n,
-                            (0, r.jsx)(h.F, {
+                            (0, r.jsx)(m.F, {
                                 setting: A.s6.ACCOUNT_REMOVE_2FA,
                                 children: (0, r.jsx)(l.Button, {
                                     variant: "critical-secondary",
                                     size: "sm",
-                                    text: R.intl.string(R.t["D+aE7g"]),
+                                    text: P.intl.string(P.t["D+aE7g"]),
                                     onClick: this.handleDisableMFA,
                                 }),
                             }),
-                            (0, r.jsx)(h.F, {
+                            (0, r.jsx)(m.F, {
                                 setting: A.s6.ACCOUNT_ENABLE_2FA,
                                 children: (0, r.jsx)(l.Button, {
                                     variant: "primary",
                                     size: "sm",
-                                    text: R.intl.string(R.t.cDgKte),
-                                    onClick: S.ZP.enableMFA,
+                                    text: P.intl.string(P.t.cDgKte),
+                                    onClick: T.ZP.enableMFA,
                                 }),
                             }),
                         ],
@@ -272,7 +272,7 @@ class j extends i.PureComponent {
                 }),
                 e,
                 this.renderMFASMS(),
-                (0, r.jsx)(h.F, {
+                (0, r.jsx)(m.F, {
                     setting: A.s6.ACCOUNT_SECURITY_KEYS,
                     children: (0, r.jsx)(E.Z, {}),
                 }),
@@ -283,13 +283,13 @@ class j extends i.PureComponent {
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(l.gNt, {
-                    label: R.intl.string(R.t.EPVq00),
-                    description: R.intl.string(R.t["8aDa1t"]),
+                    label: P.intl.string(P.t.EPVq00),
+                    description: P.intl.string(P.t["8aDa1t"]),
                     children: (0, r.jsx)(l.Button, {
                         variant: "primary",
                         size: "sm",
-                        text: R.intl.string(R.t.cDgKte),
-                        onClick: S.ZP.enableMFA,
+                        text: P.intl.string(P.t.cDgKte),
+                        onClick: T.ZP.enableMFA,
                     }),
                 }),
                 (0, r.jsx)(E.Z, {}),
@@ -298,88 +298,88 @@ class j extends i.PureComponent {
     }
     render() {
         let { currentUser: e } = this.props;
-        return I.uZ
+        return S.uZ
             ? e.verified
                 ? e.mfaEnabled
                     ? this.renderEnabled()
                     : this.renderDisabled()
                 : (0, r.jsx)(l.gNt, {
-                      label: R.intl.string(R.t.EPVq00),
+                      label: P.intl.string(P.t.EPVq00),
                       children: (0, r.jsx)(l.Wn, {
                           messageType: l.QYI.WARNING,
-                          children: R.intl.string(R.t.uggF7o),
+                          children: P.intl.string(P.t.uggF7o),
                       }),
                   })
             : (0, r.jsx)(l.gNt, {
-                  label: R.intl.string(R.t.EPVq00),
+                  label: P.intl.string(P.t.EPVq00),
                   children: (0, r.jsx)(l.Wn, {
                       messageType: l.QYI.INFO,
-                      children: R.intl.string(R.t.PhHhsj),
+                      children: P.intl.string(P.t.PhHhsj),
                   }),
               });
     }
     openPhoneVerificationModal() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        (0, l.h7j)((t) => (0, r.jsx)(g.default, L({ reason: p.L.USER_SETTINGS_UPDATE }, t, e)), { modalKey: N.M });
+        (0, l.h7j)((t) => (0, r.jsx)(g.default, x({ reason: _.L.USER_SETTINGS_UPDATE }, t, e)), { modalKey: N.M });
     }
     constructor(...e) {
         super(...e),
-            w(this, "state", {
+            D(this, "state", {
                 revealed: !1,
                 password: "",
             }),
-            w(this, "togglePhoneNumberVisibility", (e) => {
+            D(this, "togglePhoneNumberVisibility", (e) => {
                 e.preventDefault(), this.setState({ revealed: !this.state.revealed });
             }),
-            w(this, "handleDisableMFA", () => {
+            D(this, "handleDisableMFA", () => {
                 u.Z.show({
-                    title: R.intl.string(R.t["D+aE7g"]),
-                    body: R.intl.string(R.t.EA4ZEk),
-                    cancelText: R.intl.string(R.t["ETE/oC"]),
+                    title: P.intl.string(P.t["D+aE7g"]),
+                    body: P.intl.string(P.t.EA4ZEk),
+                    cancelText: P.intl.string(P.t["ETE/oC"]),
                     onConfirm: () => c.Z.disable(),
                 });
             }),
-            w(this, "generateBackupCodes", async () => {
+            D(this, "generateBackupCodes", async () => {
                 let e = y.Z.getVerificationKey();
                 await c.Z.confirmViewBackupCodes(e, !0);
             }),
-            w(this, "sendMFABackupCodesVerificationKeyEmail", () => {
+            D(this, "sendMFABackupCodesVerificationKeyEmail", () => {
                 (0, l.h7j)((e) =>
                     (0, r.jsx)(
-                        m.Z,
-                        M(L({}, e), {
+                        h.Z,
+                        j(x({}, e), {
                             handleSubmit: (e) =>
                                 c.Z.sendMFABackupCodesVerificationKeyEmail(e).then(() => {
                                     this.viewBackupCodes(e);
                                 }),
-                            title: R.intl.string(R.t.PsQmzU),
-                            actionText: R.intl.string(R.t.ajkYcF),
+                            title: P.intl.string(P.t.PsQmzU),
+                            actionText: P.intl.string(P.t.ajkYcF),
                         }),
                     ),
                 );
             }),
-            w(this, "viewBackupCodes", (e) => {
+            D(this, "viewBackupCodes", (e) => {
                 (0, l.h7j)(
                     (t) =>
                         (0, r.jsx)(
-                            _.Z,
-                            M(L({}, t), {
+                            p.Z,
+                            j(x({}, t), {
                                 handleSubmit: (e) => c.Z.confirmViewBackupCodes(e, !1).then(() => t.onClose()),
                                 maxLength: 8,
-                                title: R.intl.string(R.t["mGppp/"]),
-                                label: R.intl.string(R.t.TjGb4Q),
+                                title: P.intl.string(P.t["mGppp/"]),
+                                label: P.intl.string(P.t.TjGb4Q),
                                 forceNoPlaceholder: !0,
-                                retryPrompt: R.intl.string(R.t.PZgmxv),
-                                retrySuccessMessage: R.intl.string(R.t.j4qu8n),
+                                retryPrompt: P.intl.string(P.t.PZgmxv),
+                                retrySuccessMessage: P.intl.string(P.t.j4qu8n),
                                 onRetry: () => c.Z.sendMFABackupCodesVerificationKeyEmail(e),
-                                actionText: R.intl.string(R.t.piW6YS),
-                                helpMessage: R.intl.string(R.t["37S9yU"]),
+                                actionText: P.intl.string(P.t.piW6YS),
+                                helpMessage: P.intl.string(P.t["37S9yU"]),
                             }),
                         ),
                     { stackingBehavior: "stack" },
                 );
             }),
-            w(this, "getDownloadFileContents", () => {
+            D(this, "getDownloadFileContents", () => {
                 let e = this.props.backupCodes
                         .map((e) => {
                             let { consumed: t, code: n } = e;
@@ -389,24 +389,24 @@ class j extends i.PureComponent {
                                 .concat(t ? "(used)" : "");
                         })
                         .join("\r\n"),
-                    t = R.intl.formatToPlainString(R.t["uYWwh/"], { email: this.props.currentUser.email });
+                    t = P.intl.formatToPlainString(P.t["uYWwh/"], { email: this.props.currentUser.email });
                 return "".concat(t, "\r\n\r\n").concat(e);
             }),
-            w(this, "handleChangePhoneNumber", () => {
+            D(this, "handleChangePhoneNumber", () => {
                 this.openPhoneVerificationModal();
             }),
-            w(this, "handleEnableSMS", () => {
+            D(this, "handleEnableSMS", () => {
                 let { currentUser: e } = this.props;
                 null == e.phone ? this.openPhoneVerificationModal({ onAddedPhone: c.Z.enableSMS }) : c.Z.enableSMS();
             }),
-            w(this, "handleDisableSMS", () => {
+            D(this, "handleDisableSMS", () => {
                 (0, l.h7j)((e) =>
                     (0, r.jsx)(
-                        m.Z,
-                        M(L({}, e), {
+                        h.Z,
+                        j(x({}, e), {
                             handleSubmit: c.Z.disableSMS,
-                            title: R.intl.string(R.t.KLWnit),
-                            children: R.intl.string(R.t["W0/Duf"]),
+                            title: P.intl.string(P.t.KLWnit),
+                            children: P.intl.string(P.t["W0/Duf"]),
                         }),
                     ),
                 );
@@ -420,5 +420,5 @@ function U(e) {
         togglingSMS: y.Z.togglingSMS,
         hasTOTPEnabled: b.default.hasTOTPEnabled(),
     }));
-    return (0, r.jsx)(j, L({ currentUser: t }, n, e));
+    return (0, r.jsx)(k, x({ currentUser: t }, n, e));
 }

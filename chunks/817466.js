@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => T });
 var a = n(780384),
     l = n(410030),
     i = n(291175),
@@ -12,8 +12,8 @@ var a = n(780384),
     p = n(925773),
     h = n(298342),
     x = n(761822),
-    g = n(131664),
-    f = n(389457),
+    f = n(131664),
+    g = n(389457),
     b = n(673252),
     v = n(869708),
     j = n(288829),
@@ -57,11 +57,11 @@ let S = {
     E = {
         [s.VU.PREMIUM_TENURE_1_MONTH]: {
             dark: o.Z,
-            light: g.Z,
+            light: f.Z,
         },
         [s.VU.PREMIUM_TENURE_3_MONTH]: {
             dark: c.Z,
-            light: f.Z,
+            light: g.Z,
         },
         [s.VU.PREMIUM_TENURE_6_MONTH]: {
             dark: d.Z,
@@ -88,7 +88,7 @@ let S = {
             light: C.Z,
         },
     };
-function N() {
+function T() {
     let e = (0, r.Z)(),
         t = (0, a.wj)((0, l.ZP)());
     if (!e) return null;

@@ -9,22 +9,22 @@ e.exports = function (e, t, n) {
     var u = -1,
         d = i,
         f = e.length,
-        _ = !0,
-        p = [],
-        h = p;
-    if (n) (_ = !1), (d = a);
+        p = !0,
+        _ = [],
+        m = _;
+    if (n) (p = !1), (d = a);
     else if (f >= c) {
-        var m = t ? null : s(e);
-        if (m) return l(m);
-        (_ = !1), (d = o), (h = new r());
-    } else h = t ? [] : p;
+        var h = t ? null : s(e);
+        if (h) return l(h);
+        (p = !1), (d = o), (m = new r());
+    } else m = t ? [] : _;
     n: for (; ++u < f; ) {
         var g = e[u],
             E = t ? t(g) : g;
-        if (((g = n || 0 !== g ? g : 0), _ && E == E)) {
-            for (var b = h.length; b--; ) if (h[b] === E) continue n;
-            t && h.push(E), p.push(g);
-        } else d(h, E, n) || (h !== p && h.push(E), p.push(g));
+        if (((g = n || 0 !== g ? g : 0), p && E == E)) {
+            for (var b = m.length; b--; ) if (m[b] === E) continue n;
+            t && m.push(E), _.push(g);
+        } else d(m, E, n) || (m !== _ && m.push(E), _.push(g));
     }
-    return p;
+    return _;
 };

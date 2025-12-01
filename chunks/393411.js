@@ -14,30 +14,30 @@ var i = n(120356),
     u = n(366939),
     d = n(100527),
     f = n(906732),
-    _ = n(975298),
-    p = n(710845),
-    h = n(963249),
-    m = n(301766),
+    p = n(975298),
+    _ = n(710845),
+    m = n(963249),
+    h = n(301766),
     g = n(509545),
     E = n(931331),
     b = n(754347),
     y = n(122289),
     O = n(74538),
     v = n(212895),
-    I = n(296848),
-    T = n(140465),
-    S = n(695349),
+    S = n(296848),
+    I = n(140465),
+    T = n(695349),
     A = n(879463),
     C = n(622909),
     N = n(382791),
-    R = n(987997),
-    P = n(45474),
-    D = n(474936),
-    w = n(981631),
-    L = n(362786),
-    x = n(388032),
-    M = n(965406);
-function k(e, t, n) {
+    P = n(987997),
+    R = n(45474),
+    w = n(474936),
+    D = n(981631),
+    x = n(362786),
+    L = n(388032),
+    j = n(965406);
+function M(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -50,7 +50,7 @@ function k(e, t, n) {
         e
     );
 }
-function j(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -61,7 +61,7 @@ function j(e) {
                 }),
             )),
             r.forEach(function (t) {
-                k(e, t, n[t]);
+                M(e, t, n[t]);
             });
     }
     return e;
@@ -89,13 +89,13 @@ function G(e, t) {
         e
     );
 }
-let B = new p.Z("SubscriptionHeader.tsx"),
-    Z = {
-        page: w.ZY5.USER_SETTINGS,
-        section: w.jXE.SETTINGS_PREMIUM,
-        object: w.qAy.CARD,
+let Z = new _.Z("SubscriptionHeader.tsx"),
+    B = {
+        page: D.ZY5.USER_SETTINGS,
+        section: D.jXE.SETTINGS_PREMIUM,
+        object: D.qAy.CARD,
     },
-    F = [w.O0b.PAUSED, w.O0b.PAUSE_PENDING, w.O0b.BILLING_RETRY];
+    F = [D.O0b.PAUSED, D.O0b.PAUSE_PENDING, D.O0b.BILLING_RETRY];
 function V(e) {
     let {
         wordMark: t,
@@ -106,25 +106,25 @@ function V(e) {
         discountAmount: l,
     } = e;
     return (0, r.jsxs)("div", {
-        className: a()(M.banner, o),
+        className: a()(j.banner, o),
         children: [
-            (0, r.jsx)("div", { className: M.bannerBackgroundImage }),
+            (0, r.jsx)("div", { className: j.bannerBackgroundImage }),
             (0, r.jsxs)("div", {
-                className: M.detailsContainer,
+                className: j.detailsContainer,
                 children: [
-                    (0, r.jsx)("div", { className: M.image }),
+                    (0, r.jsx)("div", { className: j.image }),
                     (0, r.jsxs)("div", {
-                        className: M.details,
+                        className: j.details,
                         children: [
                             (0, r.jsxs)("div", {
-                                className: M.headerLabel,
+                                className: j.headerLabel,
                                 children: [
                                     t,
                                     s &&
                                         null != l &&
                                         (0, r.jsx)(N.Cy, {
-                                            text: x.intl.formatToPlainString(x.t.iiLbvu, { percent: l }),
-                                            className: M.discountPill,
+                                            text: L.intl.formatToPlainString(L.t.iiLbvu, { percent: l }),
+                                            className: j.discountPill,
                                             colorOptions: N.VE.PREMIUM_TIER_2_WHITE_FILL,
                                             isPillOnBorder: !1,
                                         }),
@@ -136,7 +136,7 @@ function V(e) {
                 ],
             }),
             (0, r.jsx)("div", {
-                className: M.buttons,
+                className: j.buttons,
                 children: i,
             }),
         ],
@@ -152,26 +152,26 @@ function H(e) {
         discountAmount: l,
     } = e;
     return (0, r.jsxs)("div", {
-        className: a()(M.banner, o, M.repositioned),
+        className: a()(j.banner, o, j.repositioned),
         children: [
-            (0, r.jsx)("div", { className: M.bannerBackgroundImage }),
+            (0, r.jsx)("div", { className: j.bannerBackgroundImage }),
             (0, r.jsx)("div", {
-                className: M.detailsContainer,
+                className: j.detailsContainer,
                 children: (0, r.jsx)("div", {
-                    className: M.details,
+                    className: j.details,
                     children: (0, r.jsxs)("div", {
-                        className: M.headerLabel,
+                        className: j.headerLabel,
                         children: [
-                            (0, r.jsx)("div", { className: M.image }),
+                            (0, r.jsx)("div", { className: j.image }),
                             (0, r.jsxs)("div", {
-                                className: M.headerColumnB,
+                                className: j.headerColumnB,
                                 children: [
                                     t,
                                     s &&
                                         null != l &&
                                         (0, r.jsx)(N.Cy, {
-                                            text: x.intl.formatToPlainString(x.t.iiLbvu, { percent: l }),
-                                            className: M.discountPill,
+                                            text: L.intl.formatToPlainString(L.t.iiLbvu, { percent: l }),
+                                            className: j.discountPill,
                                             colorOptions: N.VE.PREMIUM_TIER_2_WHITE_FILL,
                                             isPillOnBorder: !1,
                                         }),
@@ -183,7 +183,7 @@ function H(e) {
                 }),
             }),
             (0, r.jsx)("div", {
-                className: M.buttons,
+                className: j.buttons,
                 children: i,
             }),
         ],
@@ -191,13 +191,13 @@ function H(e) {
 }
 function Y() {
     return (0, r.jsxs)("div", {
-        className: M.wordMark,
+        className: j.wordMark,
         children: [
             (0, r.jsx)(b.Z, {
-                className: M.discordWordmark,
-                "aria-label": x.intl.string(x.t.FSOz78),
+                className: j.discordWordmark,
+                "aria-label": L.intl.string(L.t.FSOz78),
             }),
-            (0, r.jsx)("div", { className: M.classicWordmark }),
+            (0, r.jsx)("div", { className: j.classicWordmark }),
         ],
     });
 }
@@ -206,45 +206,45 @@ function W() {
     return (0, r.jsx)(V, {
         wordMark: (0, r.jsx)(Y, {}),
         subscriptionInfo: (0, r.jsx)("div", {
-            className: M.planInfo,
-            children: x.intl.string(x.t.R0GJL2),
+            className: j.planInfo,
+            children: L.intl.string(L.t.R0GJL2),
         }),
-        buttons: (0, r.jsx)(R.Z, {
-            className: M.toolsButton,
+        buttons: (0, r.jsx)(P.Z, {
+            className: j.toolsButton,
             onClick: () =>
-                (0, h.Z)({
-                    subscriptionTier: D.Si.TIER_1,
+                (0, m.Z)({
+                    subscriptionTier: w.Si.TIER_1,
                     analyticsLocations: e,
-                    analyticsObject: Z,
+                    analyticsObject: B,
                 }),
-            text: x.intl.string(x.t["/ygMUY"]),
+            text: L.intl.string(L.t["/ygMUY"]),
         }),
-        statusClasses: { [M.tier1]: !0 },
+        statusClasses: { [j.tier1]: !0 },
     });
 }
 let K = function (e) {
     var t;
-    let { subscription: i, renewalInvoicePreview: o, paymentSource: p, busy: N, analyticsLocation: k } = e,
+    let { subscription: i, renewalInvoicePreview: o, paymentSource: _, busy: N, analyticsLocation: M } = e,
         U = "subscription_header",
         { analyticsLocations: W } = (0, f.ZP)(d.Z.SUBSCRIPTION_HEADER),
-        { fractionalState: K } = (0, _.Z)({ forceFetch: !1 }),
-        z = K === D.a$.FP_SUB_PAUSED,
+        { fractionalState: K } = (0, p.Z)({ forceFetch: !1 }),
+        z = K === w.a$.FP_SUB_PAUSED,
         { enabled: q } = (0, A.ZP)({ location: U });
-    (D.pj.has(i.planId) && w.JwP.ALL_PAUSEABLE.has(i.status) && !z) || (q = !1);
-    let X = (0, C.N)(),
-        Q = null == X || null == (t = X.discount) ? void 0 : t.amount,
-        J = (0, T.t7)(),
-        $ = (0, T.lr)(),
-        ee = (0, S.W)(),
+    (w.pj.has(i.planId) && D.JwP.ALL_PAUSEABLE.has(i.status) && !z) || (q = !1);
+    let Q = (0, C.N)(),
+        X = null == Q || null == (t = Q.discount) ? void 0 : t.amount,
+        J = (0, I.t7)(),
+        $ = (0, I.lr)(),
+        ee = (0, T.W)(),
         et = () => {
-            (i.status === w.O0b.ACTIVE || i.status === w.O0b.PAST_DUE || i.status === w.O0b.PAUSED) &&
-                ei(P.R.PAUSE_SELECT);
+            (i.status === D.O0b.ACTIVE || i.status === D.O0b.PAST_DUE || i.status === D.O0b.PAUSED) &&
+                ei(R.R.PAUSE_SELECT);
         },
         en = () => {
-            (i.status === w.O0b.ACTIVE || i.status === w.O0b.PAST_DUE || i.status === w.O0b.PAUSE_PENDING || z) && ei();
+            (i.status === D.O0b.ACTIVE || i.status === D.O0b.PAST_DUE || i.status === D.O0b.PAUSE_PENDING || z) && ei();
         },
         er = () => {
-            i.status === w.O0b.BILLING_RETRY && ei(P.R.CONFIRM);
+            i.status === D.O0b.BILLING_RETRY && ei(R.R.CONFIRM);
         },
         ei = (e) => {
             (0, c.ZDy)(async () => {
@@ -252,9 +252,9 @@ let K = function (e) {
                 return (n) =>
                     (0, r.jsx)(
                         t,
-                        G(j({}, n), {
+                        G(k({}, n), {
                             premiumSubscription: i,
-                            analyticsLocation: k,
+                            analyticsLocation: M,
                             analyticsLocations: W,
                             initialStep: e,
                         }),
@@ -264,21 +264,21 @@ let K = function (e) {
         ea = () => {
             if (null != i && null != i.premiumPlanIdFromItems) {
                 let e = g.Z.get(i.premiumPlanIdFromItems);
-                if (null == e) return void B.info("Plan not fetched for plan id: ".concat(i.premiumPlanIdFromItems));
-                let t = (0, v.DE)(e, null == p ? void 0 : p.id, !1),
+                if (null == e) return void Z.info("Plan not fetched for plan id: ".concat(i.premiumPlanIdFromItems));
+                let t = (0, v.DE)(e, null == _ ? void 0 : _.id, !1),
                     n = t.length > 0 ? t[0] : i.currency,
                     r = !1;
                 1 === t.length &&
-                    (null == p ? void 0 : p.id) === i.paymentSourceId &&
-                    (0, v.tD)(e.id, n, null == p ? void 0 : p.id) &&
+                    (null == _ ? void 0 : _.id) === i.paymentSourceId &&
+                    (0, v.tD)(e.id, n, null == _ ? void 0 : _.id) &&
                     (r = !0),
                     r
                         ? u.O5(i, W)
-                        : (0, h.Z)({
+                        : (0, m.Z)({
                               initialPlanId: i.premiumPlanIdFromItems,
                               analyticsLocations: W,
-                              analyticsLocation: k,
-                              analyticsObject: Z,
+                              analyticsLocation: M,
+                              analyticsObject: B,
                               subscription: i,
                           });
             }
@@ -292,29 +292,29 @@ let K = function (e) {
                         pauseEndsAt: i.pauseEndsAt,
                     },
                 });
-            i.status === w.O0b.PAUSED && i.pauseReason !== L.Id.USER_TEMPORARY_BAN
-                ? (0, h.Z)({
+            i.status === D.O0b.PAUSED && i.pauseReason !== x.Id.USER_TEMPORARY_BAN
+                ? (0, m.Z)({
                       initialPlanId: i.premiumPlanIdFromItems,
                       analyticsLocations: W,
-                      analyticsLocation: k,
-                      analyticsObject: Z,
+                      analyticsLocation: M,
+                      analyticsObject: B,
                       subscription: i,
                       skipConfirm: !0,
                   })
                 : u.v4(i, W);
         },
         es = () => {
-            i.status === w.O0b.PAUSED && ei(P.R.PAUSE_SELECT);
+            i.status === D.O0b.PAUSED && ei(R.R.PAUSE_SELECT);
         },
         el = () => {
-            ei(P.R.WHAT_YOU_LOSE);
+            ei(R.R.WHAT_YOU_LOSE);
         },
         ec = (e) => (
             s()(null != o, "Expected renewalInvoicePreview"),
             (0, r.jsx)("div", {
-                className: M.planInfo,
+                className: j.planInfo,
                 children: ee
-                    ? x.intl.format(x.t["/SfHwl"], { weeks: 1 })
+                    ? L.intl.format(L.t["/SfHwl"], { weeks: 1 })
                     : (0, O.qV)({
                           planId: e,
                           subscription: i,
@@ -336,7 +336,7 @@ let K = function (e) {
                         variant: "overlay-primary",
                         size: "sm",
                         loading: N,
-                        text: x.intl.string(x.t.obRG6Y).toLocaleUpperCase(),
+                        text: L.intl.string(L.t.obRG6Y).toLocaleUpperCase(),
                     }),
                 });
             }
@@ -344,44 +344,44 @@ let K = function (e) {
                 let e = O.ZP.isSwitchingPlansDisabled(i),
                     t = O.ZP.getSwitchingPlansDisabledMessage(i);
                 return (0, r.jsxs)("div", {
-                    className: M.toolsButtons,
+                    className: j.toolsButtons,
                     children: [
                         q
                             ? (0, r.jsx)("div", {
-                                  className: M.secondaryBannerTextButtonContainerWithPause,
+                                  className: j.secondaryBannerTextButtonContainerWithPause,
                                   children: (0, r.jsx)(c.Avr, {
                                       variant: "always-white",
                                       disabled: N,
                                       onClick: et,
                                       size: "sm",
-                                      text: x.intl.string(x.t.eFlYVA),
+                                      text: L.intl.string(L.t.eFlYVA),
                                   }),
                               })
                             : (0, r.jsx)("div", {
-                                  className: M.secondaryBannerTextButtonContainer,
+                                  className: j.secondaryBannerTextButtonContainer,
                                   children: (0, r.jsx)(c.Avr, {
                                       variant: "always-white",
                                       onClick: en,
                                       disabled: N,
                                       size: "sm",
-                                      text: x.intl.string(x.t["ETE/oC"]),
+                                      text: L.intl.string(L.t["ETE/oC"]),
                                   }),
                               }),
                         (0, r.jsx)(l.u, {
                             text: t,
                             asContainer: !0,
-                            children: (0, r.jsx)(R.Z, {
-                                className: a()(M.toolsButton, M.premiumSettingsPushButton),
+                            children: (0, r.jsx)(P.Z, {
+                                className: a()(j.toolsButton, j.premiumSettingsPushButton),
                                 disabled: e,
                                 onClick: () => {
-                                    (0, h.Z)({
+                                    (0, m.Z)({
                                         analyticsLocations: W,
-                                        analyticsLocation: k,
-                                        analyticsObject: Z,
+                                        analyticsLocation: M,
+                                        analyticsObject: B,
                                         subscription: i,
                                     });
                                 },
-                                text: x.intl.string(x.t["dylp/7"]),
+                                text: L.intl.string(L.t["dylp/7"]),
                             }),
                         }),
                     ],
@@ -390,59 +390,59 @@ let K = function (e) {
             if (O.ZP.isBaseSubscriptionCanceled(i))
                 return (0, r.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
-                    className: M.toolsButton,
+                    className: j.toolsButton,
                     children: (0, r.jsx)(c.Button, {
                         variant: "overlay-primary",
                         size: "sm",
-                        text: x.intl.string(x.t.iIvF2z),
+                        text: L.intl.string(L.t.iIvF2z),
                         loading: N,
                         onClick: ea,
                     }),
                 });
             switch (e) {
-                case w.O0b.BILLING_RETRY:
+                case D.O0b.BILLING_RETRY:
                     return (0, r.jsx)(c.Button, {
                         variant: "overlay-primary",
                         size: "sm",
                         onClick: er,
                         loading: N,
-                        text: x.intl.string(x.t["ETE/oC"]),
+                        text: L.intl.string(L.t["ETE/oC"]),
                     });
-                case w.O0b.PAUSE_PENDING:
+                case D.O0b.PAUSE_PENDING:
                     return (0, r.jsxs)("div", {
-                        className: M.toolsButtons,
+                        className: j.toolsButtons,
                         children: [
                             (0, r.jsx)("div", {
-                                className: M.secondaryBannerTextButtonContainer,
+                                className: j.secondaryBannerTextButtonContainer,
                                 children: (0, r.jsx)(c.Avr, {
                                     variant: "always-white",
                                     disabled: N,
                                     onClick: en,
                                     size: "sm",
-                                    text: x.intl.string(x.t.cM1H0K),
+                                    text: L.intl.string(L.t.cM1H0K),
                                 }),
                             }),
                             (0, r.jsx)("div", {
                                 "data-button-hoisted-classname-wrapper": !0,
-                                className: M.toolsButton,
+                                className: j.toolsButton,
                                 children: (0, r.jsx)(c.Button, {
                                     variant: "overlay-primary",
                                     size: "sm",
-                                    text: x.intl.string(x.t.TgV5Qf),
+                                    text: L.intl.string(L.t.TgV5Qf),
                                     loading: N,
                                     onClick: eo,
                                 }),
                             }),
                         ],
                     });
-                case w.O0b.PAUSED:
+                case D.O0b.PAUSED:
                     if (z) return t();
-                    let { durations: n } = (0, I.AT)(i);
+                    let { durations: n } = (0, S.AT)(i);
                     return (0, r.jsxs)("div", {
-                        className: M.toolsButtons,
+                        className: j.toolsButtons,
                         children: [
                             (0, r.jsx)("div", {
-                                className: M.secondaryBannerTextButtonContainer,
+                                className: j.secondaryBannerTextButtonContainer,
                                 children:
                                     n.length > 0
                                         ? (0, r.jsx)(c.Avr, {
@@ -450,77 +450,77 @@ let K = function (e) {
                                               onClick: es,
                                               disabled: N,
                                               size: "sm",
-                                              text: x.intl.string(x.t.jNHWt6),
+                                              text: L.intl.string(L.t.jNHWt6),
                                           })
                                         : (0, r.jsx)(c.Avr, {
                                               variant: "always-white",
                                               onClick: el,
                                               disabled: N,
                                               size: "sm",
-                                              text: x.intl.string(x.t.cM1H0K),
+                                              text: L.intl.string(L.t.cM1H0K),
                                           }),
                             }),
                             (0, r.jsx)("div", {
                                 "data-button-hoisted-classname-wrapper": !0,
-                                className: M.toolsButton,
+                                className: j.toolsButton,
                                 children: (0, r.jsx)(c.Button, {
                                     variant: "overlay-primary",
                                     size: "sm",
-                                    text: x.intl.string(x.t.zpi5pg),
+                                    text: L.intl.string(L.t.zpi5pg),
                                     loading: N,
                                     onClick: eo,
                                 }),
                             }),
                         ],
                     });
-                case w.O0b.ACTIVE:
-                case w.O0b.PAST_DUE:
+                case D.O0b.ACTIVE:
+                case D.O0b.PAST_DUE:
                     return t();
             }
         },
         ed = O.ZP.getPlanIdFromInvoice(i, o);
-    if ((0, m.Q0)(ed)) return null;
+    if ((0, h.Q0)(ed)) return null;
     let ef = O.ZP.getStatusFromInvoice(i, o),
-        e_ = O.ZP.getPremiumType(ed),
-        ep = {
-            [M.tier0]: e_ === D.PremiumTypes.TIER_0,
-            [M.tier1]: e_ === D.PremiumTypes.TIER_1,
-            [M.tier2]: e_ === D.PremiumTypes.TIER_2,
-            [M.canceled]: ef === w.O0b.CANCELED,
-            [M.pausePending]: ef === w.O0b.PAUSE_PENDING,
-            [M.paused]: ef === w.O0b.PAUSED && !z,
-            [M.failedPayment]: (0, O.zV)(ef),
+        ep = O.ZP.getPremiumType(ed),
+        e_ = {
+            [j.tier0]: ep === w.PremiumTypes.TIER_0,
+            [j.tier1]: ep === w.PremiumTypes.TIER_1,
+            [j.tier2]: ep === w.PremiumTypes.TIER_2,
+            [j.canceled]: ef === D.O0b.CANCELED,
+            [j.pausePending]: ef === D.O0b.PAUSE_PENDING,
+            [j.paused]: ef === D.O0b.PAUSED && !z,
+            [j.failedPayment]: (0, O.zV)(ef),
         },
-        eh = null;
-    switch (e_) {
-        case D.PremiumTypes.TIER_0:
-            eh = (0, r.jsxs)("div", {
-                className: M.wordMark,
+        em = null;
+    switch (ep) {
+        case w.PremiumTypes.TIER_0:
+            em = (0, r.jsxs)("div", {
+                className: j.wordMark,
                 children: [
                     (0, r.jsx)(b.Z, {
-                        className: M.discordWordmark,
-                        "aria-label": x.intl.string(x.t["t9uG/o"]),
+                        className: j.discordWordmark,
+                        "aria-label": L.intl.string(L.t["t9uG/o"]),
                     }),
-                    (0, r.jsx)("div", { className: M.basicWordmark }),
+                    (0, r.jsx)("div", { className: j.basicWordmark }),
                 ],
             });
             break;
-        case D.PremiumTypes.TIER_1:
-            eh = (0, r.jsx)(Y, {});
+        case w.PremiumTypes.TIER_1:
+            em = (0, r.jsx)(Y, {});
             break;
-        case D.PremiumTypes.TIER_2:
-            eh = (0, r.jsx)(E.Z, {
-                className: M.planName,
-                "aria-label": x.intl.string(x.t.lpNrPu),
+        case w.PremiumTypes.TIER_2:
+            em = (0, r.jsx)(E.Z, {
+                className: j.planName,
+                "aria-label": L.intl.string(L.t.lpNrPu),
             });
     }
-    let em = F.includes(i.status) && !z ? H : V;
-    return (0, r.jsx)(em, {
-        wordMark: eh,
+    let eh = F.includes(i.status) && !z ? H : V;
+    return (0, r.jsx)(eh, {
+        wordMark: em,
         subscriptionInfo: ec(ed),
         buttons: eu(),
-        statusClasses: ep,
+        statusClasses: e_,
         shouldUseDiscountMarketing: J,
-        discountAmount: Q,
+        discountAmount: X,
     });
 };

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => x });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -9,9 +9,9 @@ var i = n(120356),
     c = n(717881),
     u = n(503438),
     d = n(850827),
-    p = n(952164),
+    f = n(952164),
     h = n(237583),
-    f = n(131704),
+    p = n(131704),
     g = n(314897),
     m = n(594174),
     b = n(768581),
@@ -61,7 +61,7 @@ function j(e) {
             ),
     });
 }
-let C = (e) => {
+let x = (e) => {
     let { channel: t, presenceActivity: n, members: i, embeddedApp: l, onAction: a } = e,
         s = null != l,
         h = s ? Array.from(l.embeddedActivity.userIds) : [],
@@ -78,7 +78,7 @@ let C = (e) => {
         });
     if (null == b) return null;
     let _ = s || (0, u.Z)(n),
-        v = (0, f.vd)(t.type);
+        v = (0, p.vd)(t.type);
     return (0, r.jsxs)("div", {
         className: O.activity,
         children: [
@@ -91,9 +91,9 @@ let C = (e) => {
                           user: b,
                           channel: t,
                           sortedVoiceStates: i,
-                          onOpenSpotifyTrack: v ? p.aG : void 0,
-                          onOpenSpotifyArtist: v ? p.d$ : void 0,
-                          onOpenSpotifyAlbum: v ? p.Z5 : void 0,
+                          onOpenSpotifyTrack: v ? f.aG : void 0,
+                          onOpenSpotifyArtist: v ? f.d$ : void 0,
+                          onOpenSpotifyAlbum: v ? f.Z5 : void 0,
                       })
                     : (0, r.jsx)(c.Z, {
                           type: c.P.VOICE_CHANNEL,

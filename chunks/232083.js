@@ -90,8 +90,8 @@ function p(e) {
         b = (0, i.e7)([a.default], () => a.default.getId() === s.id),
         { getManageButtonForWidget: h } = (0, u.j)(),
         y = h(d),
-        { expanded: O, setExpanded: v } = (0, o.g)(),
-        j = O ? m : m.slice(0, 2),
+        { expanded: v, setExpanded: O } = (0, o.g)(),
+        j = v ? m : m.slice(0, 2),
         x = m.length > 2,
         _ = (0, r.jsxs)(r.Fragment, {
             children: [
@@ -115,8 +115,8 @@ function p(e) {
                 ),
                 x &&
                     (0, r.jsx)(c.Z, {
-                        expanded: O,
-                        onClick: () => v((e) => !e),
+                        expanded: v,
+                        onClick: () => O((e) => !e),
                     }),
             ],
         });

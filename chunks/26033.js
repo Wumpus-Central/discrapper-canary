@@ -1,10 +1,10 @@
 n.d(t, {
     Cb: () => a,
     KF: () => u,
-    Mq: () => m,
+    Mq: () => h,
     Q0: () => o,
     Rh: () => g,
-    aA: () => h,
+    aA: () => m,
     dU: () => c,
     dX: () => s,
     kq: () => d,
@@ -37,16 +37,16 @@ function d(e) {
 function f(e) {
     return (null == e ? void 0 : e.content_type) === r.s.WATCHED_MEDIA;
 }
-function _(e) {
+function p(e) {
     return !!s(e) && e.extra.platform === i.z.XBOX;
 }
-function p(e) {
+function _(e) {
     return !!s(e) && e.extra.platform === i.z.PLAYSTATION;
 }
-function h(e) {
-    return _(e) || p(e);
-}
 function m(e) {
+    return p(e) || _(e);
+}
+function h(e) {
     return (null == e ? void 0 : e.content_type) === r.s.LAUNCHED_ACTIVITY;
 }
 function g(e) {

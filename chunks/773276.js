@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => _ });
+n.r(t), n.d(t, { default: () => p });
 var r = n(54381);
 n(473749);
 var i = n(399606),
@@ -10,32 +10,32 @@ var i = n(399606),
     u = n(668058),
     d = n(160877),
     f = n(388032);
-function _(e) {
-    let { channelId: t, messageId: n, transitionState: _, onClose: p } = e,
-        h = (0, i.e7)([c.Z], () => c.Z.getFpMessageInfo(n)),
-        m = h.attachments.map((e) => e.id),
-        g = h.attachments.map((e) => e.filename),
+function p(e) {
+    let { channelId: t, messageId: n, transitionState: p, onClose: _ } = e,
+        m = (0, i.e7)([c.Z], () => c.Z.getFpMessageInfo(n)),
+        h = m.attachments.map((e) => e.id),
+        g = m.attachments.map((e) => e.filename),
         { reportFalsePositive: E, isReportFalsePositiveLoading: b } = (0, u.$)({
             onSuccess: () => {
-                (0, d.s)(p), o.Z.disableFalsePositiveButton(t, n);
+                (0, d.s)(_), o.Z.disableFalsePositiveButton(t, n);
             },
             onError: () => {
                 (0, a.showToast)((0, a.createToast)(f.intl.string(f.t.R0RpRX), a.ToastType.FAILURE));
             },
             report: () => {
-                (0, s.Eq)(t, n, m, g);
+                (0, s.Eq)(t, n, h, g);
             },
         });
     return (
-        h.attachments.length > 0 || p(),
+        m.attachments.length > 0 || _(),
         (0, r.jsx)(d.$, {
             messageId: n,
             channelId: t,
             isReportFalsePositiveLoading: b,
             analyticsContext: l.UU.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_FLOW,
             onConfirmPress: E,
-            transitionState: _,
-            onClose: p,
+            transitionState: p,
+            onClose: _,
         })
     );
 }

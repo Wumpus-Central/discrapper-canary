@@ -9,10 +9,10 @@ var r = n(392711),
     u = n(517100),
     d = n(451478),
     f = n(70956),
-    _ = n(162461),
-    p = n(564990),
-    h = n(71585),
-    m = n(146282),
+    p = n(162461),
+    _ = n(564990),
+    m = n(71585),
+    h = n(146282),
     g = n(206583),
     E = n(981631);
 function b(e, t, n) {
@@ -31,64 +31,64 @@ function b(e, t, n) {
 let y = 4,
     O = 2 * f.Z.Millis.MINUTE,
     v = g.YN.GLOBAL_FEED,
-    I = 15 * f.Z.Millis.MINUTE,
-    T = new Map(),
-    S = new Set(),
+    S = 15 * f.Z.Millis.MINUTE,
+    I = new Map(),
+    T = new Set(),
     A = new Map(),
     C = null,
-    N = (0, r.debounce)(p.yK, 3000, { trailing: !0 });
-function R() {
+    N = (0, r.debounce)(_.yK, 3000, { trailing: !0 });
+function P() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
     return Math.random() * (e + 1) * O;
 }
-function P(e, t) {
+function R(e, t) {
     a.Z.dispatch({
         type: "CONTENT_INVENTORY_SET_FEED_STATE",
         feedId: e,
         state: t,
     });
 }
-function D(e) {
+function w(e) {
     if (
-        S.has(e) ||
-        (e === g.YN.GAME_PROFILE_FEED && (!(0, s._J)("ContentInventoryManager") || void 0 !== m.Z.getFeed(e)))
+        T.has(e) ||
+        (e === g.YN.GAME_PROFILE_FEED && (!(0, s._J)("ContentInventoryManager") || void 0 !== h.Z.getFeed(e)))
     )
         return !1;
     if (e === v) {
         if (
-            !(0, _.sA)("ContentInventoryManager") ||
-            (h.Z.hidden && null != m.Z.getFeed(e)) ||
+            !(0, p.sA)("ContentInventoryManager") ||
+            (m.Z.hidden && null != h.Z.getFeed(e)) ||
             !d.Z.isFocused() ||
             !l.Z.isConnected()
         )
             return !1;
         let t = u.Z.getIdleSince();
-        if (null != t && Date.now() - t > I) return !1;
+        if (null != t && Date.now() - t > S) return !1;
     }
     return !0;
 }
-function w(e) {
-    P(e, { loading: !1 });
-    let t = T.get(e);
-    void 0 !== t && (clearTimeout(t), T.delete(e));
+function D(e) {
+    R(e, { loading: !1 });
+    let t = I.get(e);
+    void 0 !== t && (clearTimeout(t), I.delete(e));
 }
-function L() {
+function x() {
     var e;
     let t = null != (e = A.get(v)) ? e : 0;
-    if ((t > 0 && t <= y) || (w(v), !D(v))) return;
-    let n = m.Z.getFeed(v);
+    if ((t > 0 && t <= y) || (D(v), !w(v))) return;
+    let n = h.Z.getFeed(v);
     if ((null == n ? void 0 : n.refresh_stale_inbox_after_ms) != null && null == C) return;
     let r = (null == n ? void 0 : n.expired_at) == null ? 0 : new Date(n.expired_at).getTime() - Date.now(),
-        a = Math.max(0, null == C ? 0 : new Date(C).getTime() - Date.now(), r) + (t > 0 ? R() : 0);
-    P(v, {
+        a = Math.max(0, null == C ? 0 : new Date(C).getTime() - Date.now(), r) + (t > 0 ? P() : 0);
+    R(v, {
         loading: !1,
         nextFetchDate: new Date(Date.now() + a),
     }),
-        T.set(
+        I.set(
             v,
             setTimeout(
                 () =>
-                    x({
+                    L({
                         feedId: v,
                         feature: i.L.INBOX,
                     }),
@@ -96,13 +96,13 @@ function L() {
             ),
         );
 }
-async function x(e) {
+async function L(e) {
     let { feedId: t, feature: n, force: r = !1 } = e;
-    if (D(t) || r)
+    if (w(t) || r)
         try {
-            let e = m.Z.getFeed(t);
-            S.add(t), P(t, { loading: !0 });
-            let r = await (0, p.mt)({
+            let e = h.Z.getFeed(t);
+            T.add(t), R(t, { loading: !0 });
+            let r = await (0, _.mt)({
                 token: null == e ? void 0 : e.refresh_token,
                 feedId: t,
                 feature: n,
@@ -113,19 +113,19 @@ async function x(e) {
                 feed: r,
             }),
                 A.set(t, 0),
-                S.delete(t),
-                P(t, { loading: !1 }),
-                t === v && ((C = null), L());
+                T.delete(t),
+                R(t, { loading: !1 }),
+                t === v && ((C = null), x());
         } catch (o) {
             var i;
             let e = null != (i = A.get(t)) ? i : 0;
             if (e < y) {
-                let i = f.Z.Millis.MINUTE * Math.pow(2, e) + R(e);
-                T.set(
+                let i = f.Z.Millis.MINUTE * Math.pow(2, e) + P(e);
+                I.set(
                     t,
                     setTimeout(
                         () =>
-                            x({
+                            L({
                                 feedId: t,
                                 feature: n,
                                 force: r,
@@ -139,22 +139,22 @@ async function x(e) {
                     type: "CONTENT_INVENTORY_CLEAR_FEED",
                     feedId: t,
                 });
-            S.delete(t);
+            T.delete(t);
         }
 }
+function j() {
+    x();
+}
 function M() {
-    L();
+    j();
 }
 function k() {
-    M();
-}
-function j() {
-    w(v);
+    D(v);
 }
 function U(e) {
     let { feedId: t, feature: n } = e;
-    w(t),
-        x({
+    D(t),
+        L({
             feedId: t,
             feature: n,
             force: !0,
@@ -162,17 +162,17 @@ function U(e) {
 }
 function G(e) {
     let { refreshAfterMs: t } = e,
-        n = m.Z.getFeed(v);
+        n = h.Z.getFeed(v);
     (null == n ? void 0 : n.refresh_stale_inbox_after_ms) != null &&
-        ((C = new Date(Date.now() + (null != t ? t : n.refresh_stale_inbox_after_ms)).toUTCString()), L());
+        ((C = new Date(Date.now() + (null != t ? t : n.refresh_stale_inbox_after_ms)).toUTCString()), x());
 }
-function B(e) {
+function Z(e) {
     var t;
     let { connectionId: n, track: r } = e;
     null != n && (null == (t = c.Z.getAccount(n, E.ABu.SPOTIFY)) ? void 0 : t.showActivity) && N(n, r);
 }
-function Z() {
-    x({
+function B() {
+    L({
         feedId: g.YN.GLOBAL_FEED,
         feature: i.L.GAME_PROFILE,
     });
@@ -181,15 +181,15 @@ class F extends o.Z {
     constructor(...e) {
         super(...e),
             b(this, "actions", {
-                POST_CONNECTION_OPEN: k,
-                CONNECTION_CLOSED: j,
-                WINDOW_FOCUS: M,
-                IDLE: M,
-                CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: M,
+                POST_CONNECTION_OPEN: M,
+                CONNECTION_CLOSED: k,
+                WINDOW_FOCUS: j,
+                IDLE: j,
+                CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: j,
                 CONTENT_INVENTORY_MANUAL_REFRESH: U,
                 CONTENT_INVENTORY_INBOX_STALE: G,
-                SPOTIFY_NEW_TRACK: B,
-                GAME_PROFILE_OPEN: Z,
+                SPOTIFY_NEW_TRACK: Z,
+                GAME_PROFILE_OPEN: B,
             });
     }
 }

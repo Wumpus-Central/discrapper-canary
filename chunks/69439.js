@@ -75,8 +75,8 @@ function O(e) {
             questContent: w,
             onReceiveErrorHints: P,
             contentPosition: N,
-            rowIndex: A,
-            sourceQuestContent: R,
+            rowIndex: R,
+            sourceQuestContent: A,
         } = e,
         B = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
         k = (0, x.g2)({ useReducedMotion: B }),
@@ -101,13 +101,13 @@ function O(e) {
         H = W && (null == (O = T.userStatus) ? void 0 : O.claimedAt) == null,
         U = (0, f.iQ)(T),
         F = !(0, f.zi)(T),
-        G = (0, p._Q)(T),
-        z = (0, f.PB)(T),
+        z = (0, p._Q)(T),
+        G = (0, f.PB)(T),
         K = (0, f.HJ)(T),
-        X = (0, f.Vl)(T),
-        Y = (0, p.Rf)(T),
-        [J, $, ee] = (0, p.me)(T, Y),
-        et = F && G === p.OH.ACCEPTED,
+        Y = (0, f.Vl)(T),
+        X = (0, p.Rf)(T),
+        [J, $, ee] = (0, p.me)(T, X),
+        et = F && z === p.OH.ACCEPTED,
         en = et && J === g.LI.SELECT,
         er = et && !en && $.length > 1,
         es = s.useCallback(
@@ -117,15 +117,15 @@ function O(e) {
             [ee, P],
         ),
         { text: eo, onClick: ea } = (0, x.Ks)({
-            progressState: G,
+            progressState: z,
             quest: T,
             questContent: w,
             questContentPosition: N,
-            questContentRowIndex: A,
+            questContentRowIndex: R,
             inGiftInventory: !0,
-            isVideoQuest: z,
-            inGameQuest: X,
-            sourceQuestContent: R,
+            isVideoQuest: G,
+            inGameQuest: Y,
+            sourceQuestContent: A,
         }),
         { startingConsoleQuest: ei, startConsoleQuest: el } = (0, p.GI)({
             questId: T.id,
@@ -136,8 +136,8 @@ function O(e) {
                         questContent: w,
                         questContentCTA: u.jZ.DEFIBRILLATOR,
                         questContentPosition: N,
-                        questContentRowIndex: A,
-                        sourceQuestContent: R,
+                        questContentRowIndex: R,
+                        sourceQuestContent: A,
                     });
             },
             afterRequest: (e) => {
@@ -164,7 +164,7 @@ function O(e) {
               }),
           }))
         : W
-          ? (em = z
+          ? (em = G
                 ? (0, r.jsxs)(a.hE2, {
                       direction: "horizontal",
                       fullWidth: !0,
@@ -177,7 +177,7 @@ function O(e) {
                                   (0, _.openVideoQuestModal)({
                                       quest: T,
                                       questContent: w,
-                                      sourceQuestContent: R,
+                                      sourceQuestContent: A,
                                       sourceQuestContentCTA: u.jZ.WATCH_VIDEO,
                                       skipEnrollmentCheck: !0,
                                   });
@@ -296,7 +296,7 @@ function O(e) {
                                           children: [k.render(), j.intl.string(j.t.nPThNb)],
                                       }),
                                   })
-                            : z
+                            : G
                               ? (0, r.jsx)("div", {
                                     className: v.button,
                                     children: (0, r.jsx)(a.zxk, {
@@ -340,7 +340,7 @@ function O(e) {
                                     }),
                                     (0, r.jsx)(a.zxk, {
                                         variant: "primary",
-                                        onClick: () => (0, _.openQuestMinorEnrollmentBlockModal)(T, w, R),
+                                        onClick: () => (0, _.openQuestMinorEnrollmentBlockModal)(T, w, A),
                                         text: j.intl.string(j.t.vY9GgG),
                                     }),
                                 ],

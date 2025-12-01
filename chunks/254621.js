@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(734610),
@@ -9,19 +9,19 @@ var r = n(54381),
     u = n(998054),
     d = n(5900),
     f = n(60995),
-    _ = n(607726),
-    p = n(773275);
-let h = () => {
+    p = n(607726),
+    _ = n(773275);
+let m = () => {
         let {
                 installationStatus: e,
                 setInstallationStatus: t,
                 setConnectionStatus: n,
                 finishSetup: r,
                 getWarpInstallationStatus: a,
-            } = (0, p.xf)(),
+            } = (0, _.xf)(),
             { status: o } = (0, s.e7)([l.Z], () => l.Z.state, []),
-            [h, m] = (0, i.useState)(0),
-            { installedDiscordPrivateBrowsingPerk: g } = (0, s.e7)([_.Z], () => _.Z.getState(), []),
+            [m, h] = (0, i.useState)(0),
+            { installedDiscordPrivateBrowsingPerk: g } = (0, s.e7)([p.Z], () => p.Z.getState(), []),
             [E, b] = (0, i.useState)(!1);
         return (
             (0, i.useEffect)(() => {
@@ -61,8 +61,8 @@ let h = () => {
                 }
             }, [o, e, n]),
             (0, i.useEffect)(() => {
-                h > 10 && (t(d._n.ERROR), m(0));
-            }, [h, t]),
+                m > 10 && (t(d._n.ERROR), h(0));
+            }, [m, t]),
             (0, i.useEffect)(() => {
                 e === d._n.READY_FOR_LICENSE &&
                     r()
@@ -80,7 +80,7 @@ let h = () => {
                     let e = await a();
                     switch (e) {
                         case d._n.ERROR:
-                            m((e) => e + 1);
+                            h((e) => e + 1);
                             return;
                         case d._n.NOT_INSTALLED:
                             return;
@@ -98,10 +98,10 @@ let h = () => {
             null
         );
     },
-    m = () =>
+    h = () =>
         (0, o.nI)()
             ? (0, r.jsx)(a.SV, {
                   fallback: null,
-                  children: (0, r.jsx)(h, {}),
+                  children: (0, r.jsx)(m, {}),
               })
             : null;

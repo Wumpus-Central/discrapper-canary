@@ -1,4 +1,4 @@
-n.d(t, { M: () => S });
+n.d(t, { M: () => T });
 var r = n(54381),
     i = n(473749),
     a = n(150677),
@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(920155),
     d = n(744399),
     f = n(966902),
-    _ = n(562618),
-    p = n(803866),
-    h = n(231338),
-    m = n(298200),
+    p = n(562618),
+    _ = n(803866),
+    m = n(231338),
+    h = n(298200),
     g = n(388032),
     E = n(37751);
 function b(e, t, n) {
@@ -67,11 +67,11 @@ function v(e, t) {
         e
     );
 }
-function I(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = T(e, t);
+        i = I(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -79,7 +79,7 @@ function I(e, t) {
     }
     return i;
 }
-function T(e, t) {
+function I(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -88,26 +88,26 @@ function T(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function S(e) {
+function T(e) {
     var t,
         n,
         b,
         {
             title: O,
-            body: T,
-            assetUrl: S,
-            previewUrl: A = S,
+            body: I,
+            assetUrl: T,
+            previewUrl: A = T,
             disableMediaViewer: C = !1,
             action: N,
-            caretConfig: R = { align: "center" },
-            badge: P,
-            textLink: D,
-            onWatchVideo: w,
-            onRequestClose: L,
-            popoverRef: x,
-            position: M,
+            caretConfig: P = { align: "center" },
+            badge: R,
+            textLink: w,
+            onWatchVideo: D,
+            onRequestClose: x,
+            popoverRef: L,
+            position: j,
         } = e,
-        k = I(e, [
+        M = S(e, [
             "title",
             "body",
             "assetUrl",
@@ -122,36 +122,36 @@ function S(e) {
             "popoverRef",
             "position",
         ]);
-    let { reducedMotion: j } = i.useContext(o.Sfi),
+    let { reducedMotion: k } = i.useContext(o.Sfi),
         U = (0, a.C)(),
         G = null != (b = null == (t = (n = (0, o.ZFG)()).isWindowFocused) ? void 0 : t.call(n)) ? b : U,
-        B = i.useRef(null),
-        Z = (0, o.j1L)(A),
+        Z = i.useRef(null),
+        B = (0, o.j1L)(A),
         F = i.useCallback(
             () => ({
                 type: "VIDEO",
-                url: S,
-                proxyUrl: S,
+                url: T,
+                proxyUrl: T,
                 alt: O,
                 width: 1280,
                 height: 720,
                 className: E.media,
             }),
-            [S, O],
+            [T, O],
         );
     i.useEffect(() => {
         var e, t;
-        null != B.current &&
-            (!j.enabled && G ? null == (e = B.current) || e.play().catch(h.dG) : null == (t = B.current) || t.pause());
-    }, [G, j.enabled]);
+        null != Z.current &&
+            (!k.enabled && G ? null == (e = Z.current) || e.play().catch(m.dG) : null == (t = Z.current) || t.pause());
+    }, [G, k.enabled]);
     let V = i.useCallback(() => {
-            null !== B.current && B.current.pause(), null == L || L();
-        }, [L]),
+            null !== Z.current && Z.current.pause(), null == x || x();
+        }, [x]),
         H = i.useCallback(() => {
-            null !== B.current && B.current.pause(), null == L || L();
-        }, [L]),
+            null !== Z.current && Z.current.pause(), null == x || x();
+        }, [x]),
         Y = i.useCallback(() => {
-            null !== B.current && B.current.pause();
+            null !== Z.current && Z.current.pause();
             let e = F();
             (0, c.K)({
                 items: [e],
@@ -159,10 +159,10 @@ function S(e) {
                 location: "VideoPopover",
                 shouldHideMediaOptions: !0,
             }),
-                null == L || L(),
-                null == w || w();
-        }, [F, w, L]),
-        W = Z
+                null == x || x(),
+                null == D || D();
+        }, [F, D, x]),
+        W = B
             ? (0, r.jsx)(o.zsu, {
                   type: "image",
                   src: A,
@@ -170,11 +170,11 @@ function S(e) {
             : (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsx)(l.Z, {
-                          ref: B,
+                          ref: Z,
                           src: A,
                           width: 232,
                           height: 131,
-                          autoPlay: !j.enabled && G,
+                          autoPlay: !k.enabled && G,
                           muted: !0,
                           loop: !0,
                           playsInline: !0,
@@ -187,7 +187,7 @@ function S(e) {
                               children: (0, r.jsx)(s.JM1, {
                                   playing: !1,
                                   size: "sm",
-                                  "aria-label": g.intl.string(m.default.YpT3kk),
+                                  "aria-label": g.intl.string(h.default.YpT3kk),
                                   onClick: Y,
                               }),
                           }),
@@ -195,18 +195,18 @@ function S(e) {
               }),
         K = y(
             {
-                targetElementRef: k.targetElementRef,
-                shouldShow: k.shouldShow,
-                scrollBehavior: k.scrollBehavior,
-                position: M,
+                targetElementRef: M.targetElementRef,
+                shouldShow: M.shouldShow,
+                scrollBehavior: M.scrollBehavior,
+                position: j,
                 onRequestClose: V,
                 hasVideo: !0,
-                caretConfig: R,
+                caretConfig: P,
             },
-            "edge" === k.alignmentStrategy
+            "edge" === M.alignmentStrategy
                 ? {
                       alignmentStrategy: "edge",
-                      align: k.align,
+                      align: M.align,
                   }
                 : { alignmentStrategy: "trigger-center" },
         );
@@ -214,19 +214,19 @@ function S(e) {
         u.m,
         v(y({}, K), {
             children: (0, r.jsxs)("div", {
-                ref: x,
+                ref: L,
                 children: [
-                    (0, r.jsx)(p.N, { onClick: H }),
+                    (0, r.jsx)(_.N, { onClick: H }),
                     (0, r.jsx)(f.$, {}),
                     (0, r.jsx)("div", {
                         className: E.assetContainer,
                         children: W,
                     }),
-                    (0, r.jsx)(_.Y, {
+                    (0, r.jsx)(p.Y, {
                         title: O,
-                        body: T,
-                        badge: P,
-                        textLink: D,
+                        body: I,
+                        badge: R,
+                        textLink: w,
                     }),
                     null != N ? (0, r.jsx)(d.k, { actions: [N] }) : null,
                 ],

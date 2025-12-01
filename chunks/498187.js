@@ -9,7 +9,7 @@ var r = n(876215),
     u = n(96513),
     d = n(701488),
     f = n(388032);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,12 +33,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,12 +50,12 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -71,8 +71,8 @@ function b(e) {
         n,
         { entry: i, location: o, baseEntryData: c } = e,
         u = (0, a.q)(i.extra.application_id),
-        _ = null == u ? void 0 : u.getIconURL(d.Si.LARGE),
-        h = i.extra.game_name;
+        p = null == u ? void 0 : u.getIconURL(d.Si.LARGE),
+        m = i.extra.game_name;
     if (null != i.extra.platform) {
         let e = g[i.extra.platform];
         null != e && (t = { type: e });
@@ -87,11 +87,11 @@ function b(e) {
                 trackEntryPointImpression: !0,
                 sourceUserId: i.author_id,
             }),
-            ariaDescription: f.intl.formatToPlainString(f.t["9sZWVp"], { gameName: h }),
+            ariaDescription: f.intl.formatToPlainString(f.t["9sZWVp"], { gameName: m }),
         };
-    return m(p({}, c), {
-        thumbnailUrl: _,
-        title: h,
+    return h(_({}, c), {
+        thumbnailUrl: p,
+        title: m,
         titleClickable: y,
         thumbnailClickable: y,
         userDescription: n,

@@ -13,8 +13,8 @@ var i = n(120356),
     u = n(906467),
     d = n(981631),
     f = n(388032),
-    _ = n(697257);
-function p(e, t, n) {
+    p = n(697257);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,12 +38,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -60,7 +60,7 @@ function g(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -95,13 +95,13 @@ function y(e) {
         theme: d.BRd.DARK,
         children: (e) =>
             (0, r.jsx)("div", {
-                className: a()(e, _.oauth2PageWrapper, i),
+                className: a()(e, p.oauth2PageWrapper, i),
                 style: { marginBottom: o },
                 children:
                     !0 === n
                         ? t
                         : (0, r.jsx)("div", {
-                              className: _.oauth2PageContent,
+                              className: p.oauth2PageContent,
                               children: t,
                           }),
             }),
@@ -114,7 +114,7 @@ function O(e) {
         a = E(e, ["hideHeader"]);
     return (0, r.jsxs)(
         o.IX,
-        g(h({}, a), {
+        g(m({}, a), {
             onClose: () => {
                 var e;
                 return Promise.resolve(null == (e = a.onClose) ? void 0 : e.call(a));

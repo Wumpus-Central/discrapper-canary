@@ -8,10 +8,10 @@ var r = n(556585),
     u = i(l.delete),
     d = i(l.forEach),
     f = i([].push),
-    _ = new s("a=1&a=2&b=3");
-_.delete("a", 1),
-    _.delete("b", void 0),
-    _ + "" != "a=2" &&
+    p = new s("a=1&a=2&b=3");
+p.delete("a", 1),
+    p.delete("b", void 0),
+    p + "" != "a=2" &&
         r(
             l,
             "delete",
@@ -28,9 +28,9 @@ _.delete("a", 1),
                     });
                 }),
                     o(n, 1);
-                for (var s = a(e), l = a(r), _ = 0, p = 0, h = !1, m = i.length; _ < m; )
-                    (t = i[_++]), h || t.key === s ? ((h = !0), u(this, t.key)) : p++;
-                for (; p < m; ) ((t = i[p++]).key !== s || t.value !== l) && c(this, t.key, t.value);
+                for (var s = a(e), l = a(r), p = 0, _ = 0, m = !1, h = i.length; p < h; )
+                    (t = i[p++]), m || t.key === s ? ((m = !0), u(this, t.key)) : _++;
+                for (; _ < h; ) ((t = i[_++]).key !== s || t.value !== l) && c(this, t.key, t.value);
             },
             {
                 enumerable: !0,

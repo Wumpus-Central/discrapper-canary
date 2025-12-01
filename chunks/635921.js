@@ -1,5 +1,5 @@
 n.d(t, {
-    PK: () => I,
+    PK: () => S,
     ZP: () => C,
     _O: () => A,
 }),
@@ -14,17 +14,17 @@ var r = n(54381),
     u = n(100527),
     d = n(906732),
     f = n(535322),
-    _ = n(357355),
-    p = n(367074),
-    h = n(140465),
-    m = n(775412),
+    p = n(357355),
+    _ = n(367074),
+    m = n(140465),
+    h = n(775412),
     g = n(736519),
     E = n(784238),
     b = n(422034),
     y = n(206127),
     O = n(388032),
     v = n(876544);
-let I = (e) => {
+let S = (e) => {
         let {
                 inOfferExperience: t,
                 subscriptionTier: n,
@@ -65,7 +65,7 @@ let I = (e) => {
             children: [d, " ", f],
         });
     },
-    T = () =>
+    I = () =>
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(f.A, { className: v.settingsSparkleStar1 }),
@@ -74,38 +74,38 @@ let I = (e) => {
                 (0, r.jsx)(f.A, { className: v.settingsSparkleStar4 }),
             ],
         }),
-    S = (e, t) => {
+    T = (e, t) => {
         let { className: n, buttonClassName: i, subscriptionTier: a, isDarkMode: f } = e,
             { analyticsLocations: E } = (0, d.ZP)(u.Z.PREMIUM_MARKETING_HERO_CTA),
-            y = (0, m._O)(),
-            S = (0, h.Nx)(),
-            C = (0, p.Vi)(),
-            N = (0, s.e7)([_.Z], () => _.Z.affinities).length > 0,
-            R = O.intl.string(O.t.YCZldK);
+            y = (0, h._O)(),
+            T = (0, m.Nx)(),
+            C = (0, _.Vi)(),
+            N = (0, s.e7)([p.Z], () => p.Z.affinities).length > 0,
+            P = O.intl.string(O.t.YCZldK);
         return (0, r.jsx)(d.Gt, {
             value: E,
             children: (0, r.jsxs)("div", {
                 ref: t,
                 className: o()(v.container, n, {
-                    [v.settingsContainer]: !S,
-                    [v.affinityHeight]: !S && N,
+                    [v.settingsContainer]: !T,
+                    [v.affinityHeight]: !T && N,
                 }),
                 "data-testid": "v2-marketing-page-hero-header",
                 children: [
                     (0, r.jsxs)("div", {
-                        className: S ? v.fullscreenTextContainer : v.settingsTextContainer,
+                        className: T ? v.fullscreenTextContainer : v.settingsTextContainer,
                         children: [
                             (0, r.jsx)(c.Heading, {
-                                variant: S ? "display-lg" : "display-md",
+                                variant: T ? "display-lg" : "display-md",
                                 color: "always-white",
-                                children: R,
+                                children: P,
                             }),
                             N
                                 ? (0, r.jsx)("div", {
                                       className: v.affinityDescription,
                                       children: (0, r.jsx)(b.Z, {
                                           textColor: "always-white",
-                                          smallerText: !S,
+                                          smallerText: !T,
                                       }),
                                   })
                                 : (0, r.jsx)(A, {}),
@@ -117,9 +117,9 @@ let I = (e) => {
                                           color: l.Tt.WHITE,
                                       }),
                                   })
-                                : (0, r.jsx)(I, {
+                                : (0, r.jsx)(S, {
                                       subscriptionTier: a,
-                                      inOfferExperience: S,
+                                      inOfferExperience: T,
                                       buttonClassName: i,
                                       isDarkMode: f,
                                   }),
@@ -130,7 +130,7 @@ let I = (e) => {
                                 }),
                         ],
                     }),
-                    !S && (0, r.jsx)(T, {}),
+                    !T && (0, r.jsx)(I, {}),
                 ],
             }),
         });
@@ -148,4 +148,4 @@ function A(e) {
         children: O.intl.format(O.t.kt9wxs, { cheapestMonthlyPrice: a }),
     });
 }
-let C = i.forwardRef(S);
+let C = i.forwardRef(T);

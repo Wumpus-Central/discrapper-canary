@@ -13,11 +13,11 @@ function l(e) {
             onTooltipHide: u,
             forceOpen: d = !1,
             overflowOnly: f = !1,
-            hideOnClick: _ = !0,
+            hideOnClick: p = !0,
         } = e,
-        p = r.useRef(null),
-        h = null != t ? t : p,
-        [m, g] = r.useState(!1),
+        _ = r.useRef(null),
+        m = null != t ? t : _,
+        [h, g] = r.useState(!1),
         E = r.useRef(null),
         b = r.useRef(!1);
     r.useEffect(
@@ -30,12 +30,12 @@ function l(e) {
         ),
         [],
     );
-    let y = null != h.current,
-        O = !1 !== n && (m || d) && y && !b.current,
+    let y = null != m.current,
+        O = !1 !== n && (h || d) && y && !b.current,
         v = r.useCallback(() => {
-            if (b.current || (f && null == h.current)) return;
-            if (f && null != h.current) {
-                let e = h.current;
+            if (b.current || (f && null == m.current)) return;
+            if (f && null != m.current) {
+                let e = m.current;
                 if ((0, i.kK)(e, HTMLElement) && e.offsetWidth >= e.scrollWidth) return;
             }
             let e = null != l ? l : s,
@@ -48,48 +48,48 @@ function l(e) {
                     },
                     !1,
                 );
-        }, [l, c, f, h]),
-        I = r.useCallback(() => {
+        }, [l, c, f, m]),
+        S = r.useCallback(() => {
             var e;
             null == (e = E.current) || e.stop(), g(!1), null == u || u();
         }, [u]),
-        T = r.useCallback(() => {
-            _ && I();
-        }, [I, _]),
-        S = r.useCallback(
+        I = r.useCallback(() => {
+            p && S();
+        }, [S, p]),
+        T = r.useCallback(
             (e) => {
-                null == h.current && (h.current = e.currentTarget), (b.current = !1), v();
+                null == m.current && (m.current = e.currentTarget), (b.current = !1), v();
             },
-            [v, h],
+            [v, m],
         ),
         A = r.useCallback(
             (e) => {
-                o.Z.keyboardModeEnabled && (null == h.current && (h.current = e.currentTarget), (b.current = !1), v());
+                o.Z.keyboardModeEnabled && (null == m.current && (m.current = e.currentTarget), (b.current = !1), v());
             },
-            [v, h],
+            [v, m],
         ),
         C = r.useCallback(() => {
             var e;
-            null == (e = E.current) || e.stop(), I();
-        }, [I]),
+            null == (e = E.current) || e.stop(), S();
+        }, [S]),
         N = r.useMemo(
             () => ({
-                onMouseEnter: S,
+                onMouseEnter: T,
                 onMouseLeave: C,
                 onFocus: A,
-                onBlur: I,
-                onContextMenu: I,
-                onClick: T,
+                onBlur: S,
+                onContextMenu: S,
+                onClick: I,
             }),
-            [S, C, A, I, T],
+            [T, C, A, S, I],
         );
     return (
         r.useEffect(() => {
             var e, t;
             if (!O) return;
-            let n = null != (t = null == (e = h.current) ? void 0 : e.ownerDocument) ? t : document,
+            let n = null != (t = null == (e = m.current) ? void 0 : e.ownerDocument) ? t : document,
                 r = (e) => {
-                    ("Escape" === e.key || "Esc" === e.key) && ((b.current = !0), I());
+                    ("Escape" === e.key || "Esc" === e.key) && ((b.current = !0), S());
                 };
             return (
                 n.addEventListener("keydown", r),
@@ -97,13 +97,13 @@ function l(e) {
                     n.removeEventListener("keydown", r);
                 }
             );
-        }, [O, I, h]),
+        }, [O, S, m]),
         r.useEffect(() => {
             var e, t;
             if (!O) return;
-            let n = null != (t = null == (e = h.current) ? void 0 : e.ownerDocument) ? t : document,
+            let n = null != (t = null == (e = m.current) ? void 0 : e.ownerDocument) ? t : document,
                 r = () => {
-                    I();
+                    S();
                 };
             return (
                 n.addEventListener("click", r),
@@ -111,7 +111,7 @@ function l(e) {
                     n.removeEventListener("click", r);
                 }
             );
-        }, [O, I, h]),
+        }, [O, S, m]),
         {
             isVisible: O,
             triggerProps: N,

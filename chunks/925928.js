@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => p,
+    ZP: () => _,
     Zk: () => f,
     d0: () => d,
 });
@@ -25,7 +25,7 @@ let o = 60,
         months: a.t.SoON3V,
         years: a.t["12B3Re"],
     });
-function _(e) {
+function p(e) {
     let { seconds: t, getFormatter: n } = e,
         r = n(),
         i = "";
@@ -41,9 +41,9 @@ function _(e) {
                 ? a.intl.formatToPlainString(r.months, { months: Math.floor(t / c) })
                 : a.intl.formatToPlainString(r.years, { years: Math.floor(t / u) });
 }
-function p(e) {
+function _(e) {
     let { since: t, getFormatter: n } = e;
-    return _({
+    return p({
         seconds: i()().diff(i()(t), "s"),
         getFormatter: n,
     });

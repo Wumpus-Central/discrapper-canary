@@ -35,7 +35,7 @@ let r = (function () {
         return document.createTextNode(t ? e.replace(r, "") : e);
     }
     function c(e) {
-        return e.replace(a, h);
+        return e.replace(a, m);
     }
     function u(e, t) {
         return "".concat(t.base, t.size, "/", e, t.ext);
@@ -50,29 +50,29 @@ let r = (function () {
     function f(e) {
         return v(0 > e.indexOf(i) ? e.replace(r, "") : e);
     }
-    function _(e, t) {
-        for (var r, i, a, o, s, c, u, _, p, h, m, g, E, b = d(e, []), y = b.length; y--; ) {
-            for (a = !1, o = document.createDocumentFragment(), c = (s = b[y]).nodeValue, _ = 0; (u = n.exec(c)); ) {
+    function p(e, t) {
+        for (var r, i, a, o, s, c, u, p, _, m, h, g, E, b = d(e, []), y = b.length; y--; ) {
+            for (a = !1, o = document.createDocumentFragment(), c = (s = b[y]).nodeValue, p = 0; (u = n.exec(c)); ) {
                 if (
-                    ((p = u.index) !== _ && o.appendChild(l(c.slice(_, p), !0)),
-                    (g = f((m = u[0]))),
-                    (_ = p + m.length),
+                    ((_ = u.index) !== p && o.appendChild(l(c.slice(p, _), !0)),
+                    (g = f((h = u[0]))),
+                    (p = _ + h.length),
                     (E = t.callback(g, t)),
                     g && E)
                 ) {
-                    for (i in (((h = new Image()).onerror = t.onerror),
-                    h.setAttribute("draggable", "false"),
-                    (r = t.attributes(m, g))))
-                        r.hasOwnProperty(i) && 0 !== i.indexOf("on") && !h.hasAttribute(i) && h.setAttribute(i, r[i]);
-                    (h.className = t.className), (h.alt = m), (h.src = E), (a = !0), o.appendChild(h);
+                    for (i in (((m = new Image()).onerror = t.onerror),
+                    m.setAttribute("draggable", "false"),
+                    (r = t.attributes(h, g))))
+                        r.hasOwnProperty(i) && 0 !== i.indexOf("on") && !m.hasAttribute(i) && m.setAttribute(i, r[i]);
+                    (m.className = t.className), (m.alt = h), (m.src = E), (a = !0), o.appendChild(m);
                 }
-                h || o.appendChild(l(m, !1)), (h = null);
+                m || o.appendChild(l(h, !1)), (m = null);
             }
-            a && (_ < c.length && o.appendChild(l(c.slice(_), !0)), s.parentNode.replaceChild(o, s));
+            a && (p < c.length && o.appendChild(l(c.slice(p), !0)), s.parentNode.replaceChild(o, s));
         }
         return e;
     }
-    function p(e, t) {
+    function _(e, t) {
         return y(e, function (e) {
             var n,
                 r,
@@ -102,10 +102,10 @@ let r = (function () {
             return i;
         });
     }
-    function h(e) {
+    function m(e) {
         return t[e];
     }
-    function m() {
+    function h() {
         return null;
     }
     function g(e) {
@@ -118,9 +118,9 @@ let r = (function () {
     function b(t, n) {
         return (
             (n && "function" != typeof n) || (n = { callback: n }),
-            ("string" == typeof t ? p : _)(t, {
+            ("string" == typeof t ? _ : p)(t, {
                 callback: n.callback || u,
-                attributes: "function" == typeof n.attributes ? n.attributes : m,
+                attributes: "function" == typeof n.attributes ? n.attributes : h,
                 base: "string" == typeof n.base ? n.base : e.base,
                 ext: n.ext || e.ext,
                 size: n.folder || g(n.size || e.size),

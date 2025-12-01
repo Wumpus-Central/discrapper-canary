@@ -9,9 +9,9 @@ var r = n(54381),
     u = n(570949),
     d = n(753972),
     f = n(532309),
-    _ = n(934347),
-    p = n(413097);
-function h(e, t, n) {
+    p = n(934347),
+    _ = n(413097);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,53 +35,53 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
 }
 function g(e) {
     var t;
-    let { command: n, application: h, onClick: g, query: E, searchResultsPosition: b } = e,
+    let { command: n, application: m, onClick: g, query: E, searchResultsPosition: b } = e,
         y = i.useCallback(
             (e) => {
-                if ((0, l.BQ)(h)) {
-                    let t = h instanceof s.ZP ? h : s.ZP.createFromServer(h);
-                    (0, o.vq)(e, (e) => (0, r.jsx)(u.Z, m({ application: t }, e)));
+                if ((0, l.BQ)(m)) {
+                    let t = m instanceof s.ZP ? m : s.ZP.createFromServer(m);
+                    (0, o.vq)(e, (e) => (0, r.jsx)(u.Z, h({ application: t }, e)));
                 }
             },
-            [h],
+            [m],
         ),
-        { iconURL: O, name: v, description: I } = i.useMemo(() => (0, l.sl)(h, { fakeAppIconURL: p }), [h]),
-        T = i.useMemo(() => {
+        { iconURL: O, name: v, description: S } = i.useMemo(() => (0, l.sl)(m, { fakeAppIconURL: _ }), [m]),
+        I = i.useMemo(() => {
             var e;
-            let t = null != (e = null == n ? void 0 : n.displayDescription) ? e : I;
+            let t = null != (e = null == n ? void 0 : n.displayDescription) ? e : S;
             return null == t ? null : (0, c.ae)(t, void 0);
-        }, [I, null == n ? void 0 : n.displayDescription]),
-        { trackSearchResultsItemImpressionRef: S } = (0, f.Z)({
-            applicationId: h.id,
+        }, [S, null == n ? void 0 : n.displayDescription]),
+        { trackSearchResultsItemImpressionRef: T } = (0, f.Z)({
+            applicationId: m.id,
             commandId: null == n ? void 0 : n.id,
             query: E,
             searchResultsPosition: b,
         });
     return (0, r.jsx)(a.P3F, {
-        className: _.clickable,
+        className: p.clickable,
         innerRef: (e) => {
-            S.current = e;
+            T.current = e;
         },
         onClick: g,
         onContextMenu: y,
         children: (0, r.jsxs)(a.Rny, {
-            className: _.focusBlock,
+            className: p.focusBlock,
             children: [
                 (0, r.jsx)(d.Z, {
                     src: O,
-                    className: _.icon,
+                    className: p.icon,
                     "aria-hidden": !0,
                     rendersPlaceholder: !0,
                 }),
                 (0, r.jsxs)("div", {
-                    className: _.cmdDetails,
+                    className: p.cmdDetails,
                     children: [
                         (0, r.jsx)(a.Heading, {
                             variant: "heading-md/semibold",
@@ -93,19 +93,19 @@ function g(e) {
                             variant: "text-sm/normal",
                             color: "text-secondary",
                             lineClamp: 1,
-                            children: T,
+                            children: I,
                         }),
                     ],
                 }),
                 null != n
                     ? (0, r.jsx)(a.Text, {
-                          className: _.cmdAppName,
+                          className: p.cmdAppName,
                           variant: "text-sm/normal",
                           color: "text-secondary",
                           children: v,
                       })
                     : null,
-                (0, r.jsx)("div", { className: _.underline }),
+                (0, r.jsx)("div", { className: p.underline }),
             ],
         }),
     });

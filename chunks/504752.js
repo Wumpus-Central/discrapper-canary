@@ -1,10 +1,10 @@
-n.d(e, { W: () => u });
+n.d(e, { W: () => l });
 var i = n(509613),
-    l = n(388032);
-function u(t, e) {
+    r = n(388032);
+function l(t, e) {
     let { buildLayout: n } = e;
     return (0, i.$l)(t, {
-        useTitle: () => l.intl.string(l.t.rPREPG),
+        useTitle: () => r.intl.string(r.t.rPREPG),
         buildLayout: n,
     });
 }

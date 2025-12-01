@@ -13,21 +13,21 @@ let f = function (e) {
     let {
             message: n,
             errorMessage: f,
-            submitting: _,
-            onReset: p,
-            onSave: h,
-            onSaveText: m,
+            submitting: p,
+            onReset: _,
+            onSave: m,
+            onSaveText: h,
             onResetText: g,
             onSaveButtonColor: E,
             disabled: b,
             saveButtonTooltip: y,
         } = e,
         O = i.useRef(null),
-        [v, I] = i.useState(!1);
+        [v, S] = i.useState(!1);
     return (
         i.useEffect(() => {
             function e() {
-                I(!0), setTimeout(() => I(!1), 1000);
+                S(!0), setTimeout(() => S(!1), 1000);
             }
             return (
                 l.S.subscribe(c.CkL.EMPHASIZE_NOTICE, e),
@@ -55,27 +55,27 @@ let f = function (e) {
                         (0, r.jsxs)("div", {
                             className: d.actions,
                             children: [
-                                null != p &&
+                                null != _ &&
                                     (0, r.jsx)(o.zx, {
                                         className: d.resetButton,
                                         size: o.zx.Sizes.SMALL,
                                         color: o.zx.Colors.PRIMARY,
                                         look: o.zx.Looks.LINK,
-                                        onClick: p,
+                                        onClick: _,
                                         children: (0, r.jsx)("span", {
                                             children: null != g ? g : u.intl.string(u.t.yBZMsQ),
                                         }),
                                     }),
-                                null != h
+                                null != m
                                     ? (0, r.jsx)(a.u, {
                                           text: y,
                                           children: (0, r.jsx)(o.zx, {
                                               size: o.zx.Sizes.SMALL,
                                               color: null != E ? E : o.zx.Colors.GREEN,
-                                              submitting: _,
+                                              submitting: p,
                                               disabled: b,
-                                              onClick: h,
-                                              children: null != m ? m : u.intl.string(u.t.K344S7),
+                                              onClick: m,
+                                              children: null != h ? h : u.intl.string(u.t.K344S7),
                                           }),
                                       })
                                     : null,

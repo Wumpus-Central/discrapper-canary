@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(442837),
     i = n(853856),
     l = n(592125),
@@ -8,7 +8,7 @@ var r = n(442837),
     c = n(709054),
     u = n(565799),
     d = n(501655),
-    p = n(981631);
+    f = n(981631);
 function h(e) {
     let { voiceState: t, userNick: n, user: r } = e,
         i = (0, o.sQ)(t, n);
@@ -19,14 +19,14 @@ function h(e) {
         comparator: i,
     };
 }
-function f(e) {
+function p(e) {
     let [t] = (0, r.e7)(
         [u.Z, l.Z, i.Z],
         () => {
             let t;
             return [
                 (t =
-                    e === p.I_8
+                    e === f.I_8
                         ? c.default
                               .keys(i.Z.getFavoriteChannels())
                               .map((e) => l.Z.getChannel(e))

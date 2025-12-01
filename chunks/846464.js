@@ -1,4 +1,4 @@
-n.d(t, { q: () => y });
+n.d(t, { q: () => P });
 var r = n(54381),
     l = n(120356),
     a = n.n(l),
@@ -16,7 +16,7 @@ var r = n(54381),
     g = n(474936),
     v = n(388032),
     x = n(360026);
-function y(e) {
+function P(e) {
     let { handleStepChange: t, handleClose: n, referralTrialOfferId: l } = e,
         {
             setSelectedSkuId: a,
@@ -24,14 +24,14 @@ function y(e) {
             startedPaymentFlowWithPaymentSourcesRef: c,
             setSelectedPlanId: v,
             priceOptions: x,
-            defaultPlanId: y,
+            defaultPlanId: P,
         } = (0, m.JL)(),
-        { isGift: S, claimableRewards: j } = (0, p.wD)(),
-        _ = S && null != j && j.length > 0,
+        { isGift: j, claimableRewards: S } = (0, p.wD)(),
+        _ = j && null != S && S.length > 0,
         w = (0, d.N)(l),
-        O = (0, o.Nx)(),
-        C = (0, s.Z)({ location: "PremiumPaymentSelect" });
-    return (0, r.jsx)(P, {
+        C = (0, o.Nx)(),
+        O = (0, s.Z)({ location: "PremiumPaymentSelect" });
+    return (0, r.jsx)(y, {
         selectSku: (e) =>
             (function (e) {
                 let {
@@ -67,21 +67,21 @@ function y(e) {
                 newSkuId: e,
                 setSelectedSkuId: a,
                 handleStepChange: t,
-                isGift: S,
+                isGift: j,
                 userTrialOffer: w,
                 startedPaymentFlowWithPaymentSources: c.current,
                 setSelectedPlanId: v,
-                defaultPlanId: y,
+                defaultPlanId: P,
             }),
         onClose: n,
-        isGift: S,
-        inOfferExperience: O,
+        isGift: j,
+        inOfferExperience: C,
         priceOptions: x,
         showPromotionalGiftBanner: _,
-        enablePremiumBrandRefresh: C,
+        enablePremiumBrandRefresh: O,
     });
 }
-function P(e) {
+function y(e) {
     let {
             selectSku: t,
             onClose: n,

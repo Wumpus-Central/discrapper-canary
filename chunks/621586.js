@@ -18,8 +18,8 @@ var i = n(54381),
     C = n(701488),
     v = n(474936),
     _ = n(388032),
-    x = n(842350);
-let O = "vc-gifting-".concat((0, l.Z)());
+    O = n(842350);
+let x = "vc-gifting-".concat((0, l.Z)());
 function j(e) {
     var t;
     let { isHovered: n, closePopout: l, onMouseEnter: j, onMouseLeave: E, channel: S } = e;
@@ -55,21 +55,21 @@ function j(e) {
         }, [S.id, S.guild_id, N]),
         (0, i.jsx)(d.Z, {
             children: (0, i.jsx)(a.VqE, {
-                "aria-labelledby": O,
+                "aria-labelledby": x,
                 modal: !1,
                 children: (0, i.jsxs)("div", {
-                    className: x.container,
+                    className: O.container,
                     onMouseEnter: j,
                     onMouseLeave: E,
                     children: [
                         (0, i.jsx)(a.X6q, {
-                            className: x.title,
+                            className: O.title,
                             variant: "text-lg/bold",
                             color: "text-primary",
                             children: _.intl.string(_.t.xLP3bi),
                         }),
                         (0, i.jsx)(a.xvT, {
-                            className: x.subtitle,
+                            className: O.subtitle,
                             variant: "text-sm/medium",
                             color: "text-secondary",
                             children: _.intl.format(_.t["+SqhBF"], {
@@ -78,10 +78,10 @@ function j(e) {
                             }),
                         }),
                         (0, i.jsx)("div", {
-                            className: x.wishlistItemsContainer,
+                            className: O.wishlistItemsContainer,
                             children:
                                 Z || 0 === T.length
-                                    ? (0, i.jsx)(a.$jN, { className: x.loading })
+                                    ? (0, i.jsx)(a.$jN, { className: O.loading })
                                     : T.map((e) =>
                                           (0, i.jsx)(
                                               s.i_,

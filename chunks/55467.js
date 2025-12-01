@@ -1,8 +1,8 @@
 n.d(e, { R: () => d });
 var i = n(54381);
 n(473749);
-var l = n(793030),
-    r = n(921801),
+var r = n(793030),
+    l = n(921801),
     u = n(273313),
     s = n(868802),
     a = n(726985),
@@ -11,11 +11,11 @@ var l = n(793030),
 let d = () =>
     (0, i.jsx)(u.Z, {
         title: o.intl.string(c.default.bU5ANm),
-        children: (0, i.jsx)(l.Kqy, {
+        children: (0, i.jsx)(r.Kqy, {
             gap: 16,
-            children: (0, i.jsx)(r.F, {
+            children: (0, i.jsx)(l.F, {
                 setting: a.s6.PRIVATE_BROWSING_PERK,
-                children: (0, i.jsx)(l.Kqy, {
+                children: (0, i.jsx)(r.Kqy, {
                     gap: 16,
                     children: (0, i.jsx)(s.M, {}),
                 }),

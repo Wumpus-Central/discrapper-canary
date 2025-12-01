@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(54381),
     i = n(159691),
     a = n(648613),
@@ -76,17 +76,17 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let _ = function (e) {
+let p = function (e) {
     var {
             subscriptionTier: t,
             onClick: n,
             postSuccessGuild: s,
             onSubscribeModalClose: c,
             premiumModalAnalyticsLocation: f,
-            applicationId: _,
-            confirmationFooter: p,
-            buttonTextOverride: h,
-            defaultTextOverride: m,
+            applicationId: p,
+            confirmationFooter: _,
+            buttonTextOverride: m,
+            defaultTextOverride: h,
             iconOverride: g,
             variantOverride: E,
         } = e,
@@ -109,13 +109,13 @@ let _ = function (e) {
             postSuccessGuild: s,
             onSubscribeModalClose: c,
             premiumModalAnalyticsLocation: f,
-            applicationId: _,
-            confirmationFooter: p,
+            applicationId: p,
+            confirmationFooter: _,
         },
         { subscribeButtonProps: O } = (0, o.F)({
             subscriptionTier: t,
-            buttonTextOverride: h,
-            defaultTextOverride: m,
+            buttonTextOverride: m,
+            defaultTextOverride: h,
             iconOverride: g,
             variantOverride: E,
         });

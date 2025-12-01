@@ -1,38 +1,38 @@
-_.d(e, { f: () => o });
-var a = _(650093),
-    r = _(867921),
-    n = _(928541);
-function o(t, e = (0, a.L2)("fetch")) {
-    let _ = 0,
-        E = 0;
-    return (0, r.q)(t, function (r) {
-        let o = r.body.length;
-        (_ += o), E++;
-        let i = {
-            body: r.body,
+r.d(t, { f: () => o });
+var n = r(650093),
+    a = r(867921),
+    i = r(928541);
+function o(e, t = (0, n.L2)("fetch")) {
+    let r = 0,
+        _ = 0;
+    return (0, a.q)(e, function (a) {
+        let o = a.body.length;
+        (r += o), _++;
+        let s = {
+            body: a.body,
             method: "POST",
             referrerPolicy: "origin",
-            headers: t.headers,
-            keepalive: _ <= 60000 && E < 15,
-            ...t.fetchOptions,
+            headers: e.headers,
+            keepalive: r <= 60000 && _ < 15,
+            ...e.fetchOptions,
         };
-        if (!e) return (0, a._6)("fetch"), (0, n.$2)("No fetch implementation available");
+        if (!t) return (0, n._6)("fetch"), (0, i.$2)("No fetch implementation available");
         try {
-            return e(t.url, i).then(
-                (t) => (
-                    (_ -= o),
-                    E--,
+            return t(e.url, s).then(
+                (e) => (
+                    (r -= o),
+                    _--,
                     {
-                        statusCode: t.status,
+                        statusCode: e.status,
                         headers: {
-                            "x-sentry-rate-limits": t.headers.get("X-Sentry-Rate-Limits"),
-                            "retry-after": t.headers.get("Retry-After"),
+                            "x-sentry-rate-limits": e.headers.get("X-Sentry-Rate-Limits"),
+                            "retry-after": e.headers.get("Retry-After"),
                         },
                     }
                 ),
             );
-        } catch (t) {
-            return (0, a._6)("fetch"), (_ -= o), E--, (0, n.$2)(t);
+        } catch (e) {
+            return (0, n._6)("fetch"), (r -= o), _--, (0, i.$2)(e);
         }
     });
 }

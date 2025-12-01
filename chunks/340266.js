@@ -10,9 +10,9 @@ var i = n(392711),
     u = n(671955),
     d = n(16535);
 let f = 4,
-    _ = 1,
-    p = 3,
-    h = [
+    p = 1,
+    _ = 3,
+    m = [
         [
             {
                 top: 15,
@@ -82,7 +82,7 @@ let f = 4,
             },
         ],
     ],
-    m = [
+    h = [
         [
             {
                 top: 23,
@@ -155,10 +155,10 @@ let f = 4,
 function g(e) {
     let { users: t, channel: n } = e,
         { themeType: g } = (0, c.z)(),
-        E = g === u.l.MODAL_V2 ? m : h,
+        E = g === u.l.MODAL_V2 ? h : m,
         b = t.length > f,
         y = t.length - f + 1,
-        O = y >= 10 ? p : _;
+        O = y >= 10 ? _ : p;
     return (0, r.jsx)("div", {
         className: d.container,
         children: E[(0, i.clamp)(t.length - 1, 0, E.length - 1)].map((e, i) => {

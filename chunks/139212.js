@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r,
     i = n(31775),
     a = n.n(i),
@@ -31,4 +31,4 @@ class f extends (r = o.ZP.Store) {
     }
 }
 l(f, "displayName", "MessageActivityInviteCoverImageStore");
-let _ = new f(s.Z, { SET_MESSAGE_ACTIVITY_INVITE_COVER_IMAGE_URL: d });
+let p = new f(s.Z, { SET_MESSAGE_ACTIVITY_INVITE_COVER_IMAGE_URL: d });

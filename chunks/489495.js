@@ -2,8 +2,8 @@ n.d(t, {
     $j: () => b,
     Xv: () => u,
     cq: () => d,
-    i0: () => _,
-    yR: () => m,
+    i0: () => p,
+    yR: () => h,
     z: () => f,
 }),
     n(190126),
@@ -93,7 +93,7 @@ let f = (e, t) => ({
         src: URL.createObjectURL(t),
         base64: e,
     }),
-    _ = (e, t) => {
+    p = (e, t) => {
         if (null == e) return;
         let n = new FileReader();
         (n.onload = (e) => {
@@ -101,15 +101,15 @@ let f = (e, t) => ({
         }),
             n.readAsDataURL(e);
     },
-    p = (e) => e.trim().replace(/\s+/g, "_").toLowerCase(),
-    h = (e) => (null != e ? p(e.split("-")[0]) : ""),
-    m = (e, t) => {
-        let n = p(e);
+    _ = (e) => e.trim().replace(/\s+/g, "_").toLowerCase(),
+    m = (e) => (null != e ? _(e.split("-")[0]) : ""),
+    h = (e, t) => {
+        let n = _(e);
         return (
             "PASTE THIS INTO THE DROP JSON:\n\n" +
             t
                 .map((e) => {
-                    let t = h(e.name);
+                    let t = m(e.name);
                     return JSON.stringify(
                         o(
                             {
@@ -140,7 +140,7 @@ let f = (e, t) => ({
         let t = "[";
         return (
             e.forEach((e) => {
-                let n = h(e.name);
+                let n = m(e.name);
                 t += "\n              ProfileEffectKeyFrame(\n                  src='"
                     .concat(n, ".png',\n                  loop=")
                     .concat(e.loop ? "True" : "False", ",\n                  width=")

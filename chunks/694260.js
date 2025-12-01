@@ -3,23 +3,23 @@ var r = n(579092),
     i = n(490029),
     a = n(511405),
     o = n(145597),
-    s = n(402498),
+    s = n(951806),
     l = n(981631);
 let c = new r.Yd("LegacyOverlayLogger"),
     u = null,
     d = !1,
     f = null,
-    _ = {
+    p = {
         log: console.log.bind(console),
         info: console.info.bind(console),
         warn: console.warn.bind(console),
         error: console.error.bind(console),
     },
-    p = 0,
-    h = 3;
-async function m(e, t) {
+    _ = 0,
+    m = 3;
+async function h(e, t) {
     if (!__OVERLAY__) return void c.warn("sendLegacyOverlayLog called from main app context, logging locally instead");
-    if (p > 10) return;
+    if (_ > 10) return;
     let { level: n, message: r, context: s } = e,
         u = null;
     if (null != s)
@@ -47,17 +47,17 @@ async function m(e, t) {
         },
     };
     try {
-        await i.lW(d), (p = 0);
+        await i.lW(d), (_ = 0);
     } catch (e) {
-        ++p <= h &&
-            (c.error("Failed to send log to main app (failure ".concat(p, "):"), e),
-            p === h && c.error("Too many RPC send failures, suppressing further error logs"));
+        ++_ <= m &&
+            (c.error("Failed to send log to main app (failure ".concat(_, "):"), e),
+            _ === m && c.error("Too many RPC send failures, suppressing further error logs"));
     }
 }
 function g(e) {
     return {
         log: (t, n) =>
-            m(
+            h(
                 {
                     level: "log",
                     message: t,
@@ -66,7 +66,7 @@ function g(e) {
                 e,
             ),
         info: (t, n) =>
-            m(
+            h(
                 {
                     level: "info",
                     message: t,
@@ -75,7 +75,7 @@ function g(e) {
                 e,
             ),
         warn: (t, n) =>
-            m(
+            h(
                 {
                     level: "warn",
                     message: t,
@@ -84,7 +84,7 @@ function g(e) {
                 e,
             ),
         error: (t, n) =>
-            m(
+            h(
                 {
                     level: "error",
                     message: t,
@@ -93,7 +93,7 @@ function g(e) {
                 e,
             ),
         crash: (t, n) =>
-            m(
+            h(
                 {
                     level: "crash",
                     message: t,
@@ -105,49 +105,49 @@ function g(e) {
 }
 function E(e) {
     if (__OVERLAY__) {
-        if (d) return void _.warn("Overlay logger already set up, skipping duplicate setup");
+        if (d) return void p.warn("Overlay logger already set up, skipping duplicate setup");
         (u = g(e)),
             (d = !0),
             u.info("Overlay logger initialized"),
             (console.log = function () {
                 for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                if ((_.log(...t), null != u))
+                if ((p.log(...t), null != u))
                     try {
                         let e = b(t)
                             .map((e) => y(e))
                             .join(" ");
                         u.log(e);
                     } catch (e) {
-                        _.error("[Logger Error]", e);
+                        p.error("[Logger Error]", e);
                     }
             }),
             (console.info = function () {
                 for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                if ((_.info(...t), null != u))
+                if ((p.info(...t), null != u))
                     try {
                         let e = b(t)
                             .map((e) => y(e))
                             .join(" ");
                         u.info(e);
                     } catch (e) {
-                        _.error("[Logger Error]", e);
+                        p.error("[Logger Error]", e);
                     }
             }),
             (console.warn = function () {
                 for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                if ((_.warn(...t), null != u))
+                if ((p.warn(...t), null != u))
                     try {
                         let e = b(t)
                             .map((e) => y(e))
                             .join(" ");
                         u.warn(e);
                     } catch (e) {
-                        _.error("[Logger Error]", e);
+                        p.error("[Logger Error]", e);
                     }
             }),
             (console.error = function () {
                 for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                if ((_.error(...t), null != u))
+                if ((p.error(...t), null != u))
                     try {
                         let e = b(t)
                             .map((e) => y(e))
@@ -183,7 +183,7 @@ function E(e) {
                                         : null,
                                 });
                         } catch (t) {
-                            _.error("[Failed to log error]", t, e);
+                            p.error("[Failed to log error]", t, e);
                         }
                 },
                 !0,
@@ -204,7 +204,7 @@ function E(e) {
                               (n = { reason: e.reason })),
                             u.crash(t, n);
                     } catch (t) {
-                        _.error("[Failed to log rejection]", t, e);
+                        p.error("[Failed to log rejection]", t, e);
                     }
             }),
             window.addEventListener("securitypolicyviolation", (e) => {
@@ -219,7 +219,7 @@ function E(e) {
                             columnNumber: e.columnNumber,
                         });
                     } catch (t) {
-                        _.error("[Failed to log security violation]", t, e);
+                        p.error("[Failed to log security violation]", t, e);
                     }
             }),
             window.addEventListener("beforeunload", () => {
@@ -238,10 +238,10 @@ function E(e) {
                                 : void 0,
                         });
                     } catch (e) {
-                        _.error("[Heartbeat Error]", e);
+                        p.error("[Heartbeat Error]", e);
                     }
             }, s.bk)),
-            _.log("Overlay error handlers and console interception set up");
+            p.log("Overlay error handlers and console interception set up");
     }
 }
 function b(e) {

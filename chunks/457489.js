@@ -1,4 +1,4 @@
-t.r(n), t.d(n, { default: () => R }), t(35282);
+t.r(n), t.d(n, { default: () => Z }), t(35282);
 var l = t(54381),
     i = t(473749),
     a = t(120356),
@@ -68,17 +68,17 @@ function E(e) {
         })
     );
 }
-function R(e) {
+function Z(e) {
     var n, t, a, p, j;
     let { match: b } = e,
-        { guildId: S, gameShopPageIndex: L, gameShopSkuId: R } = b.params,
-        { analyticsLocations: Z } = (0, g.ZP)(u.Z.SOCIAL_LAYER_STOREFRONT),
+        { guildId: S, gameShopPageIndex: L, gameShopSkuId: Z } = b.params,
+        { analyticsLocations: R } = (0, g.ZP)(u.Z.SOCIAL_LAYER_STOREFRONT),
         T = (0, k.Z)({
             guildId: S,
             location: "Social Layer Storefront",
         }),
         A = (0, r.e7)([I.default], () => I.default.getSessionId(), []),
-        M = (0, r.e7)([x.Z], () => x.Z.get(R), [R]);
+        M = (0, r.e7)([x.Z], () => x.Z.get(Z), [Z]);
     (0, _.p2)();
     let y = (0, c.Z)((0, s.Z)()),
         O = (0, r.e7)([f.ZP, I.default], () => f.ZP.isMember(S, I.default.getId())),
@@ -104,8 +104,8 @@ function R(e) {
             [y, S, P, w, O, G],
         );
     return (i.useEffect(() => {
-        null != S && (0, v.m0)(S, P, null != R ? R : null);
-    }, [S, P, R]),
+        null != S && (0, v.m0)(S, P, null != Z ? Z : null);
+    }, [S, P, Z]),
     i.useEffect(() => {
         null != S && null != A && null == h.Z.getGuild(S) && (0, m.Ub)(S, {}, { shouldNavigate: !1 });
     }, [S, A]),
@@ -117,7 +117,7 @@ function R(e) {
               children: (0, l.jsx)(d.$jN, {}),
           })
         : (0, l.jsx)(g.Gt, {
-              value: Z,
+              value: R,
               children: (0, l.jsx)(C.hL, {
                   newValue: B,
                   children: (0, l.jsx)(E, {

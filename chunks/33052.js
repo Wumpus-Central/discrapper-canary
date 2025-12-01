@@ -13,13 +13,13 @@ function f() {
     let t = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
         { claimableRewards: n } = (0, s.wD)(),
         f = (0, l.Z)(),
-        _ = null == f ? void 0 : f.planSelection;
-    if (null == _ || null == n || 0 === n.length) return null;
-    let p = (0, c.Yr)(null == (e = _.getBannerImageUrl) ? void 0 : e.call(_)),
-        h = (0, c.Tl)(_.gradientConfig, { defaultAngle: 180 });
+        p = null == f ? void 0 : f.planSelection;
+    if (null == p || null == n || 0 === n.length) return null;
+    let _ = (0, c.Yr)(null == (e = p.getBannerImageUrl) ? void 0 : e.call(p)),
+        m = (0, c.Tl)(p.gradientConfig, { defaultAngle: 180 });
     return (0, r.jsxs)("div", {
         className: d.promotionalGiftMessage,
-        style: null != p ? p : h,
+        style: null != _ ? _ : m,
         children: [
             (0, r.jsxs)("div", {
                 className: d.promotionalTextSection,
@@ -27,20 +27,20 @@ function f() {
                     (0, r.jsx)(a.Text, {
                         variant: "text-sm/semibold",
                         color: "always-white",
-                        children: _.heading(),
+                        children: p.heading(),
                     }),
-                    null != _.subheading &&
+                    null != p.subheading &&
                         (0, r.jsx)(a.Text, {
                             variant: "text-sm/normal",
                             color: "always-white",
-                            children: _.subheading(n.length),
+                            children: p.subheading(n.length),
                         }),
                 ],
             }),
             (0, r.jsx)("div", {
                 className: d.avatar,
                 children: (0, r.jsx)(u.Z, {
-                    maxRewardImageSrc: _.getImageUrl(!0, t),
+                    maxRewardImageSrc: p.getImageUrl(!0, t),
                     claimableRewards: n,
                     size: a.EFr.SIZE_80,
                 }),

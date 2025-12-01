@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(147913),
     i = n(362721),
     a = n(314897),
@@ -9,8 +9,8 @@ var r = n(147913),
     u = n(106301),
     d = n(866071),
     f = n(505905),
-    _ = n(981631);
-function p(e, t, n) {
+    p = n(981631);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,23 +23,23 @@ function p(e, t, n) {
         e
     );
 }
-class h extends r.Z {
+class m extends r.Z {
     constructor(...e) {
         super(...e),
-            p(this, "previousVoiceChannelId", void 0),
-            p(this, "actions", {
+            _(this, "previousVoiceChannelId", void 0),
+            _(this, "actions", {
                 POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
                 VOICE_CHANNEL_SELECT: (e) => this.handleVoiceChannelSelect(e),
                 GUILD_MEMBER_UPDATE: (e) => this.handleGuildMemberUpdate(e),
                 LOGOUT: () => this.handleLogout(),
             }),
-            p(this, "handlePostConnectionOpen", () => {
+            _(this, "handlePostConnectionOpen", () => {
                 (0, l.UP)();
             }),
-            p(this, "handleVoiceChannelSelect", (e) => {
+            _(this, "handleVoiceChannelSelect", (e) => {
                 let { channelId: t, guildId: n } = e,
                     { enableHangStatus: r, setDefaultStatus: a } = (0, c.gx)({
-                        guildId: null != n ? n : _.lds,
+                        guildId: null != n ? n : p.lds,
                         location: "HangStatusManager",
                     });
                 if (null == n && null == t) {
@@ -55,26 +55,26 @@ class h extends r.Z {
                 let s = o.Z.getChannel(t);
                 if (
                     null == s ||
-                    s.type !== _.d4z.GUILD_VOICE ||
+                    s.type !== p.d4z.GUILD_VOICE ||
                     !(0, i.wQ)(s, !0) ||
                     null != u.Z.getCurrentHangStatus()
                 )
                     return;
-                let p = u.Z.getCurrentDefaultStatus();
-                if (null != p) {
-                    if (p.status === f.tN.CUSTOM && null != p.customHangStatus) {
-                        let { status: e, emoji: t } = p.customHangStatus;
+                let _ = u.Z.getCurrentDefaultStatus();
+                if (null != _) {
+                    if (_.status === f.tN.CUSTOM && null != _.customHangStatus) {
+                        let { status: e, emoji: t } = _.customHangStatus;
                         if (null != t && !(0, d.K)(t, s)) {
                             a && (0, l.Zx)(f.tN.CHILLING);
                             return;
                         }
                         (0, l._s)(e, t);
-                    } else if (null != p.status) return void (0, l.Zx)(p.status);
+                    } else if (null != _.status) return void (0, l.Zx)(_.status);
                     return;
                 }
                 a && (0, l.Zx)(f.tN.CHILLING);
             }),
-            p(this, "handleGuildMemberUpdate", (e) => {
+            _(this, "handleGuildMemberUpdate", (e) => {
                 let { user: t, guildId: n } = e;
                 if (t.id !== a.default.getId()) return;
                 let r = s.Z.getCurrentClientVoiceChannelId(n);
@@ -82,12 +82,12 @@ class h extends r.Z {
                 let c = o.Z.getChannel(r);
                 (0, i.wQ)(c, !0) || (0, l.Sc)();
             }),
-            p(this, "handleDisconnectFromVoiceChannel", () => {
+            _(this, "handleDisconnectFromVoiceChannel", () => {
                 (0, l.Sc)();
             }),
-            p(this, "handleLogout", () => {
+            _(this, "handleLogout", () => {
                 this.handleDisconnectFromVoiceChannel();
             });
     }
 }
-let m = new h();
+let h = new m();

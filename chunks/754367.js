@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(54381);
 n(473749);
 var i = n(481060),
@@ -10,7 +10,7 @@ var i = n(481060),
     u = n(710808),
     d = n(726985),
     f = n(388032);
-function _() {
+function p() {
     return (0, r.jsxs)(s.Z, {
         webSetting: d.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
         children: [

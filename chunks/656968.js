@@ -43,7 +43,7 @@ var f = function (e) {
                   ref: e,
               });
     },
-    _ = function (e) {
+    p = function (e) {
         return u
             ? o.createElement(
                   "span",
@@ -90,7 +90,7 @@ e.exports = (function (e) {
                     ? f(function (t) {
                           return (e._node = t);
                       })
-                    : _(function (t) {
+                    : p(function (t) {
                           return (e._node = t);
                       })
                 : o.createElement(

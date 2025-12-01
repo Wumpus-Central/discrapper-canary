@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(473749),
     i = n(442837),
     a = n(607070),
@@ -9,18 +9,18 @@ var r = n(473749),
     u = n(211712),
     d = n(981631);
 let f = Object.keys(u.hq),
-    _ = (e) => {
+    p = (e) => {
         let t = null == e ? f : f.filter((t) => t !== e);
         return t[Math.floor(Math.random() * t.length)];
     };
-function p() {
+function _() {
     let e = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
-        [t, n] = (0, r.useState)(_()),
+        [t, n] = (0, r.useState)(p()),
         {
             banner: f,
-            themeColors: p,
-            avatarDecorationSkuId: h,
-            displayNameStyles: m,
+            themeColors: _,
+            avatarDecorationSkuId: m,
+            displayNameStyles: h,
         } = (0, r.useMemo)(() => {
             let n = (0, u.Ib)(t);
             return {
@@ -31,19 +31,19 @@ function p() {
             };
         }, [t, e]),
         g = (0, i.e7)([o.Z], () => {
-            let e = o.Z.getProduct(h);
+            let e = o.Z.getProduct(m);
             return (0, s.M)(null == e ? void 0 : e.items[0]) ? e.items[0] : null;
         });
     (0, r.useEffect)(() => {
         (0, l.x3)({
             banner: f,
-            themeColors: p,
+            themeColors: _,
             avatarDecoration: g,
-            displayNameStyles: m,
+            displayNameStyles: h,
         });
-    }, [f, p, g, m]);
+    }, [f, _, g, h]);
     let E = (0, r.useCallback)(() => {
-        let e = _(t);
+        let e = p(t);
         n(e), c.default.track(d.rMx.TRY_IT_OUT_PRESET_SHUFFLED, { preset: e });
     }, [t]);
     return {

@@ -21,10 +21,10 @@ var r = n(392711),
     u = n(592125),
     d = n(271383),
     f = n(699516),
-    _ = n(594174),
-    p = n(823379),
-    h = n(960048),
-    m = n(709054),
+    p = n(594174),
+    _ = n(823379),
+    m = n(960048),
+    h = n(709054),
     g = n(51144),
     E = n(981631);
 function b(e, t, n) {
@@ -69,19 +69,19 @@ function O(e) {
 function v(e, t, n) {
     null != e && (e.nicknames[t] = null != n && "" !== n ? n : null);
 }
-function I(e) {
+function S(e) {
     let t = [];
     if (null == e || !(0, l.hv)(e.type)) return t;
     let { recipients: n = [] } = e;
     return (
         n.forEach((n) => {
-            let r = O(_.default.getUser(n));
+            let r = O(p.default.getUser(n));
             null != e && v(r, e.id), t.push(r);
         }),
         t
     );
 }
-function T(e, t) {
+function I(e, t) {
     let n = [];
     return (
         e.forEach((e) => {
@@ -91,7 +91,7 @@ function T(e, t) {
         n
     );
 }
-function S(e) {
+function T(e) {
     var t;
     let { message: n, nicknameContextId: r } = e,
         i = u.Z.getChannel(n.channel_id),
@@ -214,9 +214,9 @@ class C extends s.Z {
     updateUsers(e, t) {
         let { _worker: n } = this;
         if (null != n) {
-            for (let n of (e = e.filter(p.lm)))
+            for (let n of (e = e.filter(_.lm)))
                 (null == n ? void 0 : n.id) == null &&
-                    h.Z.addBreadcrumb({
+                    m.Z.addBreadcrumb({
                         category: "debug",
                         message: "User missing id",
                         data: {
@@ -305,11 +305,11 @@ class C extends s.Z {
             }),
             b(this, "_handleConnectionOpen", () => {
                 setTimeout(() => {
-                    let e = _.default.getCurrentUser();
+                    let e = p.default.getCurrentUser();
                     if (null == e) return;
                     let t = O(e),
                         n = { [t.id]: t };
-                    Object.values(_.default.getUsers()).forEach((e) => {
+                    Object.values(p.default.getUsers()).forEach((e) => {
                         n[e.id] = O(e);
                     });
                     let r = d.ZP.getMutableAllGuildsAndMembers();
@@ -326,7 +326,7 @@ class C extends s.Z {
             b(this, "_handleConnectionOpenSupplemental", (e) => {
                 let { guilds: t } = e;
                 setTimeout(() => {
-                    let e = i().flatMap(t, (e) => T(e.members, e.id)),
+                    let e = i().flatMap(t, (e) => I(e.members, e.id)),
                         n = i().flatMap(t, (e) => {
                             var t;
                             let n = [];
@@ -351,10 +351,10 @@ class C extends s.Z {
                 let { users: t, guildMembers: n } = e,
                     r = new Map();
                 for (let e of t) r.set(e.id, O(e));
-                for (let e of m.default.keys(n)) {
+                for (let e of h.default.keys(n)) {
                     let t = n[e];
                     if (null != t)
-                        for (let n of m.default.keys(t)) {
+                        for (let n of h.default.keys(t)) {
                             let i = r.get(n),
                                 a = t[n];
                             null != i && null != a && null != a.nick && (v(i, e, a.nick), r.set(n, i));
@@ -370,12 +370,12 @@ class C extends s.Z {
             b(this, "_handleGuildCreate", (e) => {
                 let { guild: t } = e,
                     { members: n } = t;
-                this.updateUsers(T(n, t.id), "guild_create");
+                this.updateUsers(I(n, t.id), "guild_create");
             }),
             b(this, "_handleGuildMembersChunkBatch", (e) => {
                 let { chunks: t } = e,
                     n = [];
-                for (let e of t) n.push(...T(e.members, e.guildId));
+                for (let e of t) n.push(...I(e.members, e.guildId));
                 this.updateUsers(n, "guild_members_chunk_batch");
             }),
             b(this, "_handleGuildMemberUpdate", (e) => {
@@ -384,35 +384,35 @@ class C extends s.Z {
                 null != i && (v(i, t, r), this.updateUsers([i], "guild_member_update"));
             }),
             b(this, "_handlePassiveUpdateV2", (e) => {
-                this.updateUsers(T(e.members, e.guildId), "passive_update_v2");
+                this.updateUsers(I(e.members, e.guildId), "passive_update_v2");
             }),
             b(this, "_handleRelationshipAdd", (e) => {
                 let t = O(e.relationship.user);
                 this.updateUsers([t], "relationship_add");
             }),
             b(this, "_handleRelationshipUpdate", (e) => {
-                let t = O(_.default.getUser(e.relationship.id));
+                let t = O(p.default.getUser(e.relationship.id));
                 this.updateUsers([t], "relationship_update");
             }),
             b(this, "_handleRelationshipRemove", (e) => {
-                let t = O(_.default.getUser(e.relationship.id));
+                let t = O(p.default.getUser(e.relationship.id));
                 this.updateUsers([t], "relationship_remove");
             }),
             b(this, "_handleDMCreate", (e) => {
                 let {
                         channel: { id: t },
                     } = e,
-                    n = I(u.Z.getChannel(t));
+                    n = S(u.Z.getChannel(t));
                 if (0 === n.length) return;
-                let r = O(_.default.getCurrentUser());
+                let r = O(p.default.getCurrentUser());
                 v(r, t), n.push(r), this.updateUsers(n, "dm_create");
             }),
             b(this, "_handleDMUpdates", (e) => {
                 let { channels: t } = e;
                 for (let e of t) {
-                    let t = I(u.Z.getChannel(e.id));
+                    let t = S(u.Z.getChannel(e.id));
                     if (0 === t.length) continue;
-                    let n = O(_.default.getCurrentUser());
+                    let n = O(p.default.getCurrentUser());
                     v(n, e.id), t.push(n), this.updateUsers(t, "dm_updates");
                 }
             }),
@@ -427,7 +427,7 @@ class C extends s.Z {
                 if (null == n) return;
                 let r = [];
                 n.forEach((e) => {
-                    S({
+                    T({
                         message: e,
                         nicknameContextId: t,
                     }).forEach((e) => r.push(e));
@@ -440,22 +440,22 @@ class C extends s.Z {
                 Object.values(n).forEach((e) => {
                     let { first_message: n, most_recent_message: i, owner: a } = e;
                     null != n &&
-                        S({
+                        T({
                             message: n,
                             nicknameContextId: t,
                         }).forEach((e) => r.push(e)),
                         null != i &&
-                            S({
+                            T({
                                 message: i,
                                 nicknameContextId: t,
                             }).forEach((e) => r.push(e)),
-                        null != a && T([a], t).forEach((e) => r.push(e));
+                        null != a && I([a], t).forEach((e) => r.push(e));
                 }),
                     this.updateUsers(r, "load_forum_posts");
             }),
             b(this, "_handleLoadMessagesSuccess", (e) => {
                 let { messages: t } = e,
-                    n = t.flatMap((e) => S({ message: e }));
+                    n = t.flatMap((e) => T({ message: e }));
                 this.updateUsers(n, "load_messages_success");
             }),
             b(this, "_handleLoadPinnedMessagesSuccess", (e) => {
@@ -463,7 +463,7 @@ class C extends s.Z {
                     n = [];
                 t.forEach((e) => {
                     let { message: t } = e;
-                    S({ message: t }).forEach((e) => n.push(e));
+                    T({ message: t }).forEach((e) => n.push(e));
                 }),
                     this.updateUsers(n, "load_pinned_messages_success");
             }),
@@ -474,7 +474,7 @@ class C extends s.Z {
                     let { messages: t } = e;
                     t.forEach((e) => {
                         e.forEach((e) => {
-                            S({ message: e }).forEach((e) => n.push(e));
+                            T({ message: e }).forEach((e) => n.push(e));
                         });
                     });
                 }),
@@ -485,23 +485,23 @@ class C extends s.Z {
                     a = [];
                 null == n ||
                     n.forEach((e) => {
-                        S({
+                        T({
                             message: e,
                             nicknameContextId: t,
                         }).forEach((e) => a.push(e));
                     }),
                     null == r ||
                         r.forEach((e) => {
-                            S({
+                            T({
                                 message: e,
                                 nicknameContextId: t,
                             }).forEach((e) => a.push(e));
                         }),
-                    null != i && T(i, t).forEach((e) => a.push(e)),
+                    null != i && I(i, t).forEach((e) => a.push(e)),
                     this.updateUsers(a, "load_threads_success");
             }),
             b(this, "_handleMessageCreateOrUpdate", (e) => {
-                let t = S({ message: e.message });
+                let t = T({ message: e.message });
                 this.updateUsers(t, "message_create_or_update");
             }),
             b(this, "_handleGuildScheduledEventUsersFetchSuccess", (e) => {

@@ -192,7 +192,7 @@ e.exports = function (e) {
                 l,
             ],
         },
-        _ = [
+        p = [
             "Abort",
             "AddBrandingImage",
             "AddSize",
@@ -406,7 +406,7 @@ e.exports = function (e) {
             "WriteUninstaller",
             "XPStyle",
         ],
-        p = [
+        _ = [
             "admin",
             "all",
             "auto",
@@ -461,14 +461,14 @@ e.exports = function (e) {
             "WinVista",
             "zlib",
         ],
-        h = {
+        m = {
             match: [/Function/, /\s+/, t.concat(/(\.)?/, e.IDENT_RE)],
             scope: {
                 1: "keyword",
                 3: "title.function",
             },
         },
-        m = {
+        h = {
             match: [/Var/, /\s+/, /(?:\/GLOBAL\s+)?/, /[A-Za-z][\w.]*/],
             scope: {
                 1: "keyword",
@@ -480,15 +480,15 @@ e.exports = function (e) {
         name: "NSIS",
         case_insensitive: !0,
         keywords: {
-            keyword: _,
-            literal: p,
+            keyword: p,
+            literal: _,
         },
         contains: [
             e.HASH_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
             e.COMMENT(";", "$", { relevance: 0 }),
-            m,
             h,
+            m,
             { beginKeywords: "Function PageEx Section SectionGroup FunctionEnd SectionEnd" },
             f,
             u,

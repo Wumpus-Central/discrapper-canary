@@ -12,8 +12,8 @@ var a = n(54381),
     p = n(981631),
     h = n(921944),
     x = n(677065),
-    g = n(388032),
-    f = n(374104);
+    f = n(388032),
+    g = n(374104);
 let b = new o.Z("DisplayNameStylesCoachmark");
 function v(e) {
     let { markAsDismissed: t, targetElementRef: n, children: o } = e,
@@ -57,16 +57,16 @@ function v(e) {
                     graphic: {
                         type: "video",
                         ref: j,
-                        src: f.Z,
+                        src: g.Z,
                         aspectRatio: "21/9",
                         loop: !0,
                     },
                     size: "lg",
-                    title: g.intl.string(x.default["1AE464"]),
-                    body: [g.intl.string(x.default.cNc1g9), g.intl.string(g.t["4JNXHG"])],
+                    title: f.intl.string(x.default["1AE464"]),
+                    body: [f.intl.string(x.default.cNc1g9), f.intl.string(f.t["4JNXHG"])],
                     actions: [
                         {
-                            text: g.intl.string(g.t.uw9zI7),
+                            text: f.intl.string(f.t.uw9zI7),
                             variant: "primary",
                             onClick: y,
                         },

@@ -26,7 +26,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,11 +42,11 @@ function _(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -54,7 +54,7 @@ function p(e, t) {
     }
     return i;
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -63,7 +63,7 @@ function h(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let m = new Set();
+let h = new Set();
 function g(e, t) {
     return "USER_PROFILE_MODAL_KEY:".concat(e, ":").concat(null == t ? "" : t);
 }
@@ -73,14 +73,14 @@ async function E(e) {
             userId: a,
             section: o,
             subsection: f,
-            guildId: h,
+            guildId: m,
             channelId: E,
             showGuildProfile: b = !0,
             appContext: y,
             customStatusPrompt: O,
             disableActionsForPreview: v = !1,
         } = e,
-        I = p(e, [
+        S = _(e, [
             "userId",
             "section",
             "subsection",
@@ -91,21 +91,21 @@ async function E(e) {
             "customStatusPrompt",
             "disableActionsForPreview",
         ]);
-    let T = l.default.getUser(a);
+    let I = l.default.getUser(a);
+    if (null == I) return;
+    let T = l.default.getCurrentUser();
     if (null == T) return;
-    let S = l.default.getCurrentUser();
-    if (null == S) return;
-    let A = g(a, b ? h : void 0);
-    m.add(
+    let A = g(a, b ? m : void 0);
+    h.add(
         await (0, i.ZDy)(
             async () => {
                 let e = (
                     await Promise.all([
                         n.e("61924"),
                         n.e("21976"),
+                        n.e("13587"),
                         n.e("62880"),
                         n.e("39380"),
-                        n.e("35387"),
                         n.e("44097"),
                         n.e("93979"),
                     ]).then(n.bind(n, 866035))
@@ -113,11 +113,11 @@ async function E(e) {
                 return (t) =>
                     (0, r.jsx)(
                         e,
-                        _(
+                        p(
                             {
-                                user: T,
-                                currentUser: S,
-                                guildId: h,
+                                user: I,
+                                currentUser: T,
+                                guildId: m,
                                 initialSection: o,
                                 initialSubsection: f,
                                 channelId: E,
@@ -126,7 +126,7 @@ async function E(e) {
                                 disableActionsForPreview: v,
                             },
                             t,
-                            I,
+                            S,
                         ),
                     );
             },
@@ -135,16 +135,16 @@ async function E(e) {
                 contextKey: (0, i.VnL)(null != (t = null != y ? y : (0, s.GB)()) ? t : d.IlC.APP),
                 onCloseRequest: () => {
                     if (u.Z.hasSaveablePendingChanges()) return void c.Z.notifyPendingWidgets();
-                    (0, i.Mr3)(A), m.delete(A), c.Z.clearPendingWidgets();
+                    (0, i.Mr3)(A), h.delete(A), c.Z.clearPendingWidgets();
                 },
             },
         ),
     );
 }
 function b() {
-    if (0 !== m.size) {
-        for (let e of m) (0, i.Mr3)(e);
-        m.clear(), c.Z.clearPendingWidgets();
+    if (0 !== h.size) {
+        for (let e of h) (0, i.Mr3)(e);
+        h.clear(), c.Z.clearPendingWidgets();
     }
 }
 class y extends o.Z {

@@ -1,6 +1,6 @@
 n.d(t, {
     J: () => d,
-    Z: () => _,
+    Z: () => p,
 }),
     n(388685);
 var r = n(298444),
@@ -46,4 +46,4 @@ class f extends o.Z {
             });
     }
 }
-let _ = new f();
+let p = new f();

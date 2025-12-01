@@ -4,8 +4,8 @@ n(473749);
 var l = n(907331),
     i = n(481060),
     a = n(168020),
-    s = n(794324),
-    o = n(859788),
+    o = n(794324),
+    s = n(859788),
     c = n(388032),
     u = n(449177);
 function d(e) {
@@ -42,7 +42,7 @@ let f = (e) => {
             0.33,
             null != n,
         ),
-        { bannerUrl: g, bannerAnimatedUrl: p } = (0, s._M)(t),
+        { bannerUrl: g, bannerAnimatedUrl: p } = (0, o._M)(t),
         m = null != t.textColor ? { color: t.textColor } : void 0,
         h = null != t.body && "" !== t.body,
         C = null != t.helpCenterUrl && "" !== t.helpCenterUrl;
@@ -54,7 +54,7 @@ let f = (e) => {
                 className: u.banner,
                 children:
                     null != g &&
-                    (0, r.jsx)(o.Z, {
+                    (0, r.jsx)(s.Z, {
                         bannerStatic: g,
                         bannerAnimated: p,
                     }),

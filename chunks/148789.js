@@ -8,10 +8,10 @@ var r = n(54381),
 function c(e) {
     let { userId: t, applicationId: n } = e,
         [c, u] = i.useState(!1),
-        [d, p] = i.useState(!1),
+        [d, f] = i.useState(!1),
         h = i.useCallback(
             async (e) => {
-                e.stopPropagation(), p(!0);
+                e.stopPropagation(), f(!0);
                 try {
                     await o.Z.cancelFriendRequest({
                         userId: t,
@@ -19,12 +19,12 @@ function c(e) {
                         location: "ActionButtonFriendRequest",
                     });
                 } finally {
-                    p(!1);
+                    f(!1);
                 }
             },
             [n, t],
         ),
-        f = i.useCallback(
+        p = i.useCallback(
             async (e) => {
                 e.stopPropagation(), u(!0);
                 try {
@@ -46,7 +46,7 @@ function c(e) {
             children: [
                 (0, r.jsx)(l.zxk, {
                     variant: "active",
-                    onClick: f,
+                    onClick: p,
                     text: a.intl.string(a.t.Zcibdf),
                     loading: c,
                     disabled: d,

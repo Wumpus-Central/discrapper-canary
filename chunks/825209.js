@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685), n(539854);
+n.d(t, { Z: () => m }), n(388685), n(539854);
 var r = n(54381),
     i = n(473749),
     a = n(921738),
@@ -21,8 +21,8 @@ function f(e, t, n) {
         e
     );
 }
-let _ = c.isPlatformEmbedded && null != u.ZP.getDiscordUtils().inputCaptureRegisterElement;
-class p extends i.PureComponent {
+let p = c.isPlatformEmbedded && null != u.ZP.getDiscordUtils().inputCaptureRegisterElement;
+class _ extends i.PureComponent {
     componentDidMount() {
         this._mounted = !0;
     }
@@ -46,7 +46,7 @@ class p extends i.PureComponent {
             { codes: n, mode: i } = this.state,
             { disabled: a } = this.props;
         return (
-            _
+            p
                 ? ((t = u.ZP.getDiscordUtils().inputCaptureRegisterElement), (e = this.handleNativeChange))
                 : c.isPlatformEmbedded || (e = this.handleComboKeys),
             (0, r.jsx)(l.Z, {
@@ -56,7 +56,7 @@ class p extends i.PureComponent {
                 onClick: this.toggleRecordMode,
                 onChange: e,
                 registerNativeRecorder: t,
-                disableOnClickWhileRecording: _,
+                disableOnClickWhileRecording: p,
             })
         );
     }
@@ -66,7 +66,7 @@ class p extends i.PureComponent {
             f(this, "gs", void 0),
             f(this, "_mounted", !1),
             f(this, "recordStart", () => {
-                c.isPlatformEmbedded && !_ && ((this.gs = new s.Z()), this.gs.on("change", this.handleGSChange)),
+                c.isPlatformEmbedded && !p && ((this.gs = new s.Z()), this.gs.on("change", this.handleGSChange)),
                     this.setState({ mode: l.c.RECORDING });
             }),
             f(this, "recordEnd", () => {
@@ -102,4 +102,4 @@ class p extends i.PureComponent {
         };
     }
 }
-let h = p;
+let m = _;

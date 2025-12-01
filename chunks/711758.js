@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r,
     i = n(442837),
     a = n(570140);
@@ -62,7 +62,7 @@ function f(e) {
     let { userId: t, timestamp: n } = e;
     u.ignoreTimestamps[t] = n;
 }
-class _ extends (r = i.ZP.PersistedStore) {
+class p extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         var t;
         let n = null != (t = null == e ? void 0 : e.ignoreTimestamps) ? t : {};
@@ -75,5 +75,5 @@ class _ extends (r = i.ZP.PersistedStore) {
         return u.ignoreTimestamps;
     }
 }
-o(_, "displayName", "IgnoreNoticeStore"), o(_, "persistKey", "IgnoreNoticeStore");
-let p = new _(a.Z, { RELATIONSHIP_IGNORE_USER_SUCCESS: f });
+o(p, "displayName", "IgnoreNoticeStore"), o(p, "persistKey", "IgnoreNoticeStore");
+let _ = new p(a.Z, { RELATIONSHIP_IGNORE_USER_SUCCESS: f });

@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,11 +58,11 @@ function _(e, t) {
         e
     );
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -70,7 +70,7 @@ function p(e, t) {
     }
     return i;
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -79,7 +79,7 @@ function h(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let m = {
+let h = {
         width: 60,
         height: 60,
     },
@@ -97,14 +97,14 @@ let m = {
     },
     b = (e) => {
         var { currentAnimationType: t } = e,
-            n = p(e, ["currentAnimationType"]);
+            n = _(e, ["currentAnimationType"]);
         let i = (0, o.D)(null != t ? t : "earn"),
             { Component: a } = i;
         return (
-            E(d({ currentAnimationType: t }, n, p(i, ["Component"]))),
+            E(d({ currentAnimationType: t }, n, _(i, ["Component"]))),
             (0, r.jsx)(
                 a,
-                _(d({}, m), {
+                p(d({}, h), {
                     size: "custom",
                     className: c.orbsLottie,
                     useLottieDefaultColors: !0,
@@ -114,14 +114,14 @@ let m = {
     },
     y = (e) => {
         var { currentAnimationType: t } = e,
-            n = p(e, ["currentAnimationType"]);
+            n = _(e, ["currentAnimationType"]);
         let i = (0, a.v)(null != t ? t : "earn"),
             { Component: o } = i;
         return (
-            E(d({ currentAnimationType: t }, n, p(i, ["Component"]))),
+            E(d({ currentAnimationType: t }, n, _(i, ["Component"]))),
             (0, r.jsx)(
                 o,
-                _(d({}, m), {
+                p(d({}, h), {
                     size: "custom",
                     className: c.orbsLottie,
                     useLottieDefaultColors: !0,

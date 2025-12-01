@@ -217,7 +217,7 @@ e.exports = function (e) {
                 { begin: `\\b(${c})[jJ](?=${d})` },
             ],
         },
-        _ = {
+        p = {
             className: "comment",
             begin: t.lookahead(/# type:/),
             end: /$/,
@@ -231,7 +231,7 @@ e.exports = function (e) {
                 },
             ],
         },
-        p = {
+        _ = {
             className: "params",
             variants: [
                 {
@@ -273,7 +273,7 @@ e.exports = function (e) {
                     scope: "keyword",
                 },
                 l,
-                _,
+                p,
                 e.HASH_COMMENT_MODE,
                 {
                     match: [/\bdef/, /\s+/, n],
@@ -281,7 +281,7 @@ e.exports = function (e) {
                         1: "keyword",
                         3: "title.function",
                     },
-                    contains: [p],
+                    contains: [_],
                 },
                 {
                     variants: [
@@ -302,7 +302,7 @@ e.exports = function (e) {
                     className: "meta",
                     begin: /^[\t ]*@/,
                     end: /(?=#)|$/,
-                    contains: [f, p, l],
+                    contains: [f, _, l],
                 },
             ],
         }

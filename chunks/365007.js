@@ -1,10 +1,10 @@
 n.d(t, {
     Sr: () => E,
-    WQ: () => m,
-    cT: () => h,
-    d$: () => _,
+    WQ: () => h,
+    cT: () => m,
+    d$: () => p,
     ef: () => b,
-    hL: () => p,
+    hL: () => _,
     startRegisterWebAuthnCredential: () => g,
     us: () => f,
     vg: () => y,
@@ -75,7 +75,7 @@ async function f() {
         })
     ).body;
 }
-async function _() {
+async function p() {
     let { challenge: e, ticket: t } = (
         await i.tn.post({
             url: s.ANM.WEBAUTHN_PASSWORDLESS_CHALLENGE,
@@ -87,7 +87,7 @@ async function _() {
         ticket: t,
     };
 }
-function p() {
+function _() {
     i.tn
         .get({
             url: s.ANM.MFA_WEBAUTHN_CREDENTIALS,
@@ -106,7 +106,7 @@ function p() {
             }
         });
 }
-function h(e) {
+function m(e) {
     i.tn
         .del({
             url: s.ANM.MFA_WEBAUTHN_CREDENTIAL(e.id),
@@ -119,7 +119,7 @@ function h(e) {
             });
         });
 }
-async function m(e, t) {
+async function h(e, t) {
     let n = await i.tn.patch({
         url: s.ANM.MFA_WEBAUTHN_CREDENTIAL(e),
         body: { name: t },

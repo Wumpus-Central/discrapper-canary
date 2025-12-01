@@ -39,7 +39,7 @@ function v(e) {
     }
     return e;
 }
-function j(e, n) {
+function h(e, n) {
     return (
         (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
@@ -57,10 +57,10 @@ function j(e, n) {
         e
     );
 }
-function h(e) {
+function j(e) {
     let { step: n, setFooterNode: t } = (0, g.JL)(),
         a = (0, d.V)("GameServerSetupModal"),
-        { title: s, subtitle: h } = (function (e) {
+        { title: s, subtitle: j } = (function (e) {
             switch (e) {
                 case m.EK.SELECT_GAME:
                     return {
@@ -73,12 +73,12 @@ function h(e) {
         })(n);
     return (0, r.jsxs)(
         i.IX,
-        j(v({}, e), {
+        h(v({}, e), {
             size: "lg",
             children: [
                 (0, r.jsx)(i.xBx, {
                     title: s,
-                    subtitle: h,
+                    subtitle: j,
                 }),
                 a &&
                     (0, r.jsx)("div", {
@@ -128,7 +128,7 @@ function b(e) {
         (0, s.lY)(e.guildId, n, e.analyticsLocation),
         (0, r.jsx)(a.Gt, {
             value: n,
-            children: (0, r.jsx)(g.BT, j(v({}, e), { children: (0, r.jsx)(h, v({}, e)) })),
+            children: (0, r.jsx)(g.BT, h(v({}, e), { children: (0, r.jsx)(j, v({}, e)) })),
         })
     );
 }

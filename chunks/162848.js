@@ -66,28 +66,28 @@ function o(e, t) {
         if ((e && (n.interval = parseInt(e[0], 10)), o.isDone())) throw Error("Unexpected end");
         switch (o.symbol) {
             case "day(s)":
-                (n.freq = i.Ci.DAILY), o.nextSymbol() && (c(), p());
+                (n.freq = i.Ci.DAILY), o.nextSymbol() && (c(), _());
                 break;
             case "weekday(s)":
                 (n.freq = i.Ci.WEEKLY),
                     (n.byweekday = [i.Ci.MO, i.Ci.TU, i.Ci.WE, i.Ci.TH, i.Ci.FR]),
                     o.nextSymbol(),
-                    p();
+                    _();
                 break;
             case "week(s)":
-                (n.freq = i.Ci.WEEKLY), o.nextSymbol() && (l(), p());
+                (n.freq = i.Ci.WEEKLY), o.nextSymbol() && (l(), _());
                 break;
             case "hour(s)":
-                (n.freq = i.Ci.HOURLY), o.nextSymbol() && (l(), p());
+                (n.freq = i.Ci.HOURLY), o.nextSymbol() && (l(), _());
                 break;
             case "minute(s)":
-                (n.freq = i.Ci.MINUTELY), o.nextSymbol() && (l(), p());
+                (n.freq = i.Ci.MINUTELY), o.nextSymbol() && (l(), _());
                 break;
             case "month(s)":
-                (n.freq = i.Ci.MONTHLY), o.nextSymbol() && (l(), p());
+                (n.freq = i.Ci.MONTHLY), o.nextSymbol() && (l(), _());
                 break;
             case "year(s)":
-                (n.freq = i.Ci.YEARLY), o.nextSymbol() && (l(), p());
+                (n.freq = i.Ci.YEARLY), o.nextSymbol() && (l(), _());
                 break;
             case "monday":
             case "tuesday":
@@ -105,7 +105,7 @@ function o(e, t) {
                     if (!r) throw Error("Unexpected symbol " + o.symbol + ", expected weekday");
                     n.byweekday.push(i.Ci[r]), o.nextSymbol();
                 }
-                _(), p();
+                p(), _();
                 break;
             case "january":
             case "february":
@@ -126,7 +126,7 @@ function o(e, t) {
                     if (!a) throw Error("Unexpected symbol " + o.symbol + ", expected month");
                     n.bymonth.push(a), o.nextSymbol();
                 }
-                l(), p();
+                l(), _();
                 break;
             default:
                 throw Error("Unknown symbol");
@@ -235,7 +235,7 @@ function o(e, t) {
                 return !1;
         }
     }
-    function _() {
+    function p() {
         o.accept("on"), o.accept("the");
         var e = f();
         if (e)
@@ -244,7 +244,7 @@ function o(e, t) {
                 n.bymonthday.push(e), o.nextSymbol();
             }
     }
-    function p() {
+    function _() {
         if ("until" === o.symbol) {
             var e = Date.parse(o.text);
             if (!e) throw Error("Cannot parse until date:" + o.text);

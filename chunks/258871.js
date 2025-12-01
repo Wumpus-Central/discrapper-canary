@@ -9,7 +9,7 @@ var i = n(442837),
     c = n(944486),
     u = n(688438),
     d = n(981631),
-    p = n(388032);
+    f = n(388032);
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,7 +35,7 @@ function h(e) {
     }
     return e;
 }
-function f(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -62,7 +62,7 @@ let g = [
                     color: "currentColor",
                     className: e,
                 }),
-            getName: () => p.intl.string(p.t.K50GHd),
+            getName: () => f.intl.string(f.t.K50GHd),
             handler: (e, t) => (0, s.XU)(e.id, t.id),
         },
         {
@@ -73,14 +73,14 @@ let g = [
                     color: "currentColor",
                     className: e,
                 }),
-            getName: () => p.intl.string(p.t.emRpdS),
+            getName: () => f.intl.string(f.t.emRpdS),
             handler: (e, t) =>
                 (0, l.ZDy)(async () => {
                     let { default: i } = await n.e("79764").then(n.bind(n, 533202));
                     return (n) =>
                         (0, r.jsx)(
                             i,
-                            f(h({}, n), {
+                            p(h({}, n), {
                                 directoryGuildName: e.name,
                                 directoryGuildId: e.id,
                                 directoryChannelId: t.id,
@@ -91,14 +91,14 @@ let g = [
         {
             key: "INVITE_MEMBERS",
             renderIcon: (e) => (0, r.jsx)(l.ejJ, { className: e }),
-            getName: () => p.intl.string(p.t.MJQOuJ),
+            getName: () => f.intl.string(f.t.MJQOuJ),
             handler: (e, t) =>
                 (0, l.ZDy)(async () => {
-                    let { default: i } = await Promise.all([n.e("7654"), n.e("89772")]).then(n.bind(n, 560114));
+                    let { default: i } = await Promise.all([n.e("7654"), n.e("77653")]).then(n.bind(n, 560114));
                     return (n) =>
                         (0, r.jsx)(
                             i,
-                            f(h({}, n), {
+                            p(h({}, n), {
                                 guild: e,
                                 channel: t,
                                 source: d.t4x.HUB_SIDEBAR,
@@ -114,18 +114,18 @@ let g = [
         return (0, r.jsx)(r.Fragment, {
             children: g.map((e) => {
                 let { key: i, getName: c, handler: u, renderIcon: d } = e,
-                    p = "".concat(i, "-").concat(t.id);
+                    f = "".concat(i, "-").concat(t.id);
                 return (0, r.jsx)(
                     o.m,
                     {
-                        id: p,
+                        id: f,
                         renderIcon: d,
                         text: c(),
                         selected: l && "JOIN_SERVERS" === i,
                         onClick: null != n ? () => u(t, n) : void 0,
                         trailing: "JOIN_SERVERS" === i && s > 0 ? (0, a.N)(s) : null,
                     },
-                    p,
+                    f,
                 );
             }),
         });

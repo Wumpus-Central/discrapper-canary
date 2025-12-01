@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(477102),
     i = n(633971);
 let a = 943868237,
@@ -9,19 +9,19 @@ let a = 943868237,
     u = 12,
     d = 1028,
     f = 5,
-    _ = { read: p };
-function p(e, t, n) {
+    p = { read: _ };
+function _(e, t, n) {
     try {
         if (Array.isArray(e)) return b(new DataView(Uint8Array.from(e).buffer), { size: e.length }, 0, n);
-        let { naaBlock: r, dataOffset: i } = h(e, t);
+        let { naaBlock: r, dataOffset: i } = m(e, t);
         return b(e, r, i, n);
     } catch (e) {
         return {};
     }
 }
-function h(e, t) {
+function m(e, t) {
     for (; t + u <= e.byteLength; ) {
-        let n = m(e, t);
+        let n = h(e, t);
         if (g(n))
             return {
                 naaBlock: n,
@@ -31,7 +31,7 @@ function h(e, t) {
     }
     throw Error("No IPTC NAA resource block.");
 }
-function m(e, t) {
+function h(e, t) {
     if (e.getUint32(t, !1) !== a) throw Error("Not an IPTC resource block.");
     let n = e.getUint8(t + o + s),
         r = (n % 2 == 0 ? n + 1 : n) + l;
@@ -97,13 +97,13 @@ function y(e, t, n, i, a) {
     let u = v(e, t + f, c),
         d = {
             id: l,
-            name: I(r.Z.iptc[l], l, u),
+            name: S(r.Z.iptc[l], l, u),
             value: u,
             description: A(r.Z.iptc[l], u, n, i),
         };
     return (
-        R(l) && (d.repeatable = !0),
-        P(l) && (d.encoding = r.Z.iptc[l].encoding_name(u)),
+        P(l) && (d.repeatable = !0),
+        R(l) && (d.encoding = r.Z.iptc[l].encoding_name(u)),
         {
             tag: d,
             tagSize: c,
@@ -119,13 +119,13 @@ function v(e, t, n) {
     for (let i = 0; i < n; i++) r.push(e.getUint8(t + i));
     return r;
 }
-function I(e, t, n) {
-    return e ? (T(e) ? e : S(e) ? e.name(n) : e.name) : `undefined-${t}`;
+function S(e, t, n) {
+    return e ? (I(e) ? e : T(e) ? e.name(n) : e.name) : `undefined-${t}`;
 }
-function T(e) {
+function I(e) {
     return "string" == typeof e;
 }
-function S(e) {
+function T(e) {
     return "function" == typeof e.name;
 }
 function A(e, t, n, r) {
@@ -141,9 +141,9 @@ function C(e, t) {
 function N(e) {
     return e && void 0 !== e.description;
 }
-function R(e) {
+function P(e) {
     return r.Z.iptc[e] && r.Z.iptc[e].repeatable;
 }
-function P(e) {
+function R(e) {
     return r.Z.iptc[e] && void 0 !== r.Z.iptc[e].encoding_name;
 }

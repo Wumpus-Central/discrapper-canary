@@ -47,7 +47,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -59,22 +59,22 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -82,7 +82,7 @@ function h(e, t) {
     }
     return i;
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -151,11 +151,11 @@ let E = {
         async getApplicationsForGuild(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             var { includeTeam: n } = t,
-                r = h(t, ["includeTeam"]);
+                r = m(t, ["includeTeam"]);
             let i = (
                 await a.tn.get({
                     url: u.ANM.GUILD_APPLICATIONS(e),
-                    query: p(f({}, r), { include_team: n }),
+                    query: _(f({}, r), { include_team: n }),
                     rejectWithError: !1,
                 })
             ).body;

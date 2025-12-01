@@ -74,7 +74,7 @@ let O = function (e) {
                     suggested_application_ids: null == e ? void 0 : e.map((e) => e.id),
                 });
         }, [null == A ? void 0 : A.id, M]);
-    let z = a.useMemo(
+    let H = a.useMemo(
             () => [
                 {
                     id: y.GlobalDiscoveryAppsSections.ABOUT,
@@ -87,7 +87,7 @@ let O = function (e) {
             ],
             [],
         ),
-        H = a.useMemo(() => {
+        z = a.useMemo(() => {
             if (null == A) return null;
             switch (Z) {
                 case y.GlobalDiscoveryAppsSections.ABOUT:
@@ -142,12 +142,12 @@ let O = function (e) {
                                                   (0, r.jsx)("div", {
                                                       className: P.contentTabs,
                                                       children: (0, r.jsx)(o.Z, {
-                                                          tabs: z,
+                                                          tabs: H,
                                                           onTabSelect: V,
                                                           selectedTab: Z,
                                                       }),
                                                   }),
-                                              H,
+                                              z,
                                               (0, r.jsx)(C.Z, {
                                                   applicationId: t,
                                                   fetchState: M,

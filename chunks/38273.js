@@ -83,15 +83,15 @@ let d = (e) => {
             useShorterCTA: a,
             isPersistentCTA: s,
         },
-        { buttonText: f, marketingSubscriptionTierSkuId: _ } = (0, r.G)(d),
-        { subscribeButtonProps: p } = (0, i.F)(
+        { buttonText: f, marketingSubscriptionTierSkuId: p } = (0, r.G)(d),
+        { subscribeButtonProps: _ } = (0, i.F)(
             l(o({}, u), {
-                subscriptionTier: _,
+                subscriptionTier: p,
                 buttonTextOverride: f,
             }),
         );
     return {
-        subscribeButtonProps: p,
-        subscriptionTier: _,
+        subscribeButtonProps: _,
+        subscriptionTier: p,
     };
 };

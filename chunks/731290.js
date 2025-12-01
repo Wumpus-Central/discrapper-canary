@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r,
     i = n(442837),
     a = n(433517),
@@ -33,4 +33,4 @@ class f extends (r = i.ZP.Store) {
     }
 }
 l(f, "displayName", "GuildNSFWAgreeStore");
-let _ = new f(o.Z, { GUILD_NSFW_AGREE: d });
+let p = new f(o.Z, { GUILD_NSFW_AGREE: d });

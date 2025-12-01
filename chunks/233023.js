@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -10,67 +10,67 @@ var i = n(120356),
     u = n(223135),
     d = n(741570),
     f = n(584973),
-    _ = n(556638),
-    p = n(80568);
-let h = 14;
-function m(e) {
+    p = n(556638),
+    _ = n(80568);
+let m = 14;
+function h(e) {
     let {
             customStatusActivity: t,
             textClassName: n,
             iconClassName: i,
-            tooltipClassName: m,
+            tooltipClassName: h,
             voiceChannel: g,
             hangStatus: E,
             userId: b,
             textSize: y = "xs",
             animateEmoji: O = !0,
             hideEmoji: v = !1,
-            hideTooltip: I = !1,
+            hideTooltip: S = !1,
         } = e,
-        T = (0, d.E)("ActivityStatus", g),
-        { defaultStatusVariant: S } = (0, l.bN)({
+        I = (0, d.E)("ActivityStatus", g),
+        { defaultStatusVariant: T } = (0, l.bN)({
             guildId: null == g ? void 0 : g.guild_id,
             location: "CustomStatusActivityStatus",
         });
     if (null == t && null == E) return null;
-    let A = null != E && T,
-        C = A && null != b ? (0, c.O8)(b, E, S) : null,
+    let A = null != E && I,
+        C = A && null != b ? (0, c.O8)(b, E, T) : null,
         N = null == t ? void 0 : t.emoji,
-        R = null != C ? C : null == t ? void 0 : t.state,
-        P = null != R && "" !== R,
-        D = null;
+        P = null != C ? C : null == t ? void 0 : t.state,
+        R = null != P && "" !== P,
+        w = null;
     A && null != b
-        ? (D = (0, r.jsx)(u.Z, {
+        ? (w = (0, r.jsx)(u.Z, {
               userId: b,
-              size: h,
-              className: a()(i, p.hangStatusIcon),
+              size: m,
+              className: a()(i, _.hangStatusIcon),
               hangStatusActivity: E,
           }))
         : null == N ||
           v ||
-          (D = (0, r.jsx)(f.Z, {
+          (w = (0, r.jsx)(f.Z, {
               emoji: N,
               animate: O,
               className: i,
-              hideTooltip: I || P,
+              hideTooltip: S || R,
           }));
-    let w = P && (null != D ? " ".concat(R) : R),
-        L = () => {
-            let e = null != N && !v && !P;
-            return I || e
+    let D = R && (null != w ? " ".concat(P) : P),
+        x = () => {
+            let e = null != N && !v && !R;
+            return S || e
                 ? (0, r.jsxs)(r.Fragment, {
-                      children: [D, w],
+                      children: [w, D],
                   })
                 : (0, r.jsxs)(o.Z, {
-                      delay: _.X,
-                      tooltipClassName: m,
-                      children: [D, w],
+                      delay: p.X,
+                      tooltipClassName: h,
+                      children: [w, D],
                   });
         };
     return (0, r.jsx)(s.Text, {
         variant: "text-".concat(y, "/medium"),
         color: "none",
-        className: a()(p.truncated, n),
-        children: L(),
+        className: a()(_.truncated, n),
+        children: x(),
     });
 }

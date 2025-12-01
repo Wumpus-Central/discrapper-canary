@@ -1,9 +1,9 @@
 n.d(t, {
     $K: () => C,
     OQ: () => O,
-    RE: () => I,
+    RE: () => S,
     Xe: () => N,
-    dv: () => T,
+    dv: () => I,
     rS: () => v,
     t0: () => y,
 }),
@@ -19,15 +19,15 @@ var r = n(392711),
     u = n(633302),
     d = n(856985),
     f = n(38618),
-    _ = n(675478),
-    p = n(486472),
-    h = n(823379),
-    m = n(668781),
+    p = n(675478),
+    _ = n(486472),
+    m = n(823379),
+    h = n(668781),
     g = n(981631),
     E = n(526761),
     b = n(388032);
 function y(e) {
-    _.hW.updateAsync(
+    p.hW.updateAsync(
         "textAndImages",
         (t) => {
             (t.diversitySurrogate = o.Gm.create()), (t.diversitySurrogate.value = e);
@@ -97,7 +97,7 @@ function v(e) {
             )
     );
 }
-function I(e, t, n) {
+function S(e, t, n) {
     return (
         s.Z.dispatch({
             type: "EMOJI_DELETE",
@@ -112,7 +112,7 @@ function I(e, t, n) {
         })
     );
 }
-async function T(e) {
+async function I(e) {
     let { guildId: t, emojiId: n, name: r, roles: i } = e;
     try {
         return await a.tn.patch({
@@ -128,14 +128,14 @@ async function T(e) {
         throw new l.Z(e);
     }
 }
-function S(e) {
-    if (p.Z.totalUnavailableGuilds > 0 || !f.Z.isConnected()) return e;
+function T(e) {
+    if (_.Z.totalUnavailableGuilds > 0 || !f.Z.isConnected()) return e;
     let t = e
         .map((e) => {
             var t;
             return null != (t = c.ZP.getCustomEmojiById(e)) ? t : u.ZP.getByName(e);
         })
-        .filter(h.lm);
+        .filter(m.lm);
     return [...(0, d.Z)(t).keys()];
 }
 function A(e) {
@@ -150,11 +150,11 @@ function A(e) {
 function C(e) {
     let t = A(e);
     null != t &&
-        _.DZ.updateAsync(
+        p.DZ.updateAsync(
             "favoriteEmojis",
             (e) =>
-                ((e.emojis = S(e.emojis)), i().size(e.emojis) >= E.oX)
-                    ? (m.Z.show({
+                ((e.emojis = T(e.emojis)), i().size(e.emojis) >= E.oX)
+                    ? (h.Z.show({
                           title: b.intl.string(b.t["+XYXtZ"]),
                           body: b.intl.formatToPlainString(b.t.JaIyFi, { count: E.oX }),
                       }),
@@ -166,10 +166,10 @@ function C(e) {
 function N(e) {
     let t = A(e);
     null != t &&
-        _.DZ.updateAsync(
+        p.DZ.updateAsync(
             "favoriteEmojis",
             (e) => {
-                if (((e.emojis = S(e.emojis)), !e.emojis.includes(t))) return !1;
+                if (((e.emojis = T(e.emojis)), !e.emojis.includes(t))) return !1;
                 e.emojis = e.emojis.filter((e) => t !== e);
             },
             E.fy.INFREQUENT_USER_ACTION,

@@ -1,9 +1,9 @@
 n.d(t, {
     JZ: () => g,
     Sw: () => E,
-    Uj: () => h,
-    ZH: () => m,
-    ZP: () => p,
+    Uj: () => m,
+    ZH: () => h,
+    ZP: () => _,
     ij: () => b,
 });
 var r = n(512722),
@@ -16,21 +16,21 @@ var r = n(512722),
     u = n(430824),
     d = n(699516),
     f = n(594174),
-    _ = n(51144);
-function p(e, t) {
-    let n = h(e);
+    p = n(51144);
+function _(e, t) {
+    let n = m(e);
     return i()(null != n, "Result cannot be null because the message is not null"), null != t ? t : n;
 }
-function h(e) {
+function m(e) {
     var t;
     let n = (0, a.e7)([s.Z], () => (null == e ? null : s.Z.getChannel(e.channel_id))),
         r = null == e || null == (t = e.author) ? void 0 : t.id,
         i = null == n ? void 0 : n.guild_id,
-        p = (0, a.e7)([l.ZP], () => (null == i || null == r ? null : l.ZP.getMember(i, r))),
-        h = (0, a.e7)([f.default], () => f.default.getUser(r), [r]),
-        m = _.ZP.useName((null == e ? void 0 : e.author.bot) ? (null == e ? void 0 : e.author) : h),
+        _ = (0, a.e7)([l.ZP], () => (null == i || null == r ? null : l.ZP.getMember(i, r))),
+        m = (0, a.e7)([f.default], () => f.default.getUser(r), [r]),
+        h = p.ZP.useName((null == e ? void 0 : e.author.bot) ? (null == e ? void 0 : e.author) : m),
         g = (0, a.e7)([u.Z], () => u.Z.getGuild(i), [i]),
-        E = null == p ? void 0 : p.colorRoleId,
+        E = null == _ ? void 0 : _.colorRoleId,
         b = (0, a.e7)([c.Z], () => (null != i && null != E ? c.Z.getRole(i, E) : void 0), [i, E]),
         O = (0, a.e7)([d.Z], () => (null != r && (null == n ? void 0 : n.isPrivate()) ? d.Z.getNickname(r) : null)),
         v = (0, o.Z)({
@@ -44,13 +44,13 @@ function h(e) {
               channel: n,
               guild: g,
               memberColorRole: b,
-              userName: m,
-              member: p,
+              userName: h,
+              member: _,
               friendNickname: O,
               displayNameStyles: v,
           });
 }
-function m(e) {
+function h(e) {
     let t = s.Z.getChannel(e.channel_id);
     return b(e.author, t);
 }
@@ -65,16 +65,16 @@ function E(e, t) {
         o = (0, a.e7)([u.Z], () => u.Z.getGuild(r), [r]),
         s = null == i ? void 0 : i.colorRoleId,
         f = (0, a.e7)([c.Z], () => (null != r && null != s ? c.Z.getRole(r, s) : void 0), [r, s]),
-        p = (0, a.e7)([d.Z], () => (null != n && (null == t ? void 0 : t.isPrivate()) ? d.Z.getNickname(n) : null)),
-        h = _.ZP.useName(e);
+        _ = (0, a.e7)([d.Z], () => (null != n && (null == t ? void 0 : t.isPrivate()) ? d.Z.getNickname(n) : null)),
+        m = p.ZP.useName(e);
     return y({
         user: e,
         channel: t,
         guild: o,
         memberColorRole: f,
         member: i,
-        userName: h,
-        friendNickname: p,
+        userName: m,
+        friendNickname: _,
         displayNameStyles: null == e ? void 0 : e.displayNameStyles,
     });
 }
@@ -107,7 +107,7 @@ function y(e) {
             friendNickname: c,
             displayNameStyles: u,
         } = e,
-        d = null == r ? "???" : null != l ? l : _.ZP.getName(r);
+        d = null == r ? "???" : null != l ? l : p.ZP.getName(r);
     return (null == r ? void 0 : r.id) == null || null == i
         ? {
               nick: d,

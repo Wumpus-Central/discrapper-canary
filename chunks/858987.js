@@ -1,6 +1,6 @@
 n.d(t, {
     K: () => O,
-    Z: () => I,
+    Z: () => S,
 }),
     n(997841);
 var r = n(54381);
@@ -14,10 +14,10 @@ var i = n(512722),
     u = n(563132),
     d = n(74538),
     f = n(296848),
-    _ = n(244923),
-    p = n(981631),
-    h = n(231338),
-    m = n(388032);
+    p = n(244923),
+    _ = n(981631),
+    m = n(231338),
+    h = n(388032);
 function g(e, t, n) {
     return (
         t in e
@@ -81,30 +81,30 @@ function O(e) {
         isPrepaidPaymentSource: l,
         inReverseTrial: c,
         paymentSourceId: u,
-        hasPaymentSources: _,
+        hasPaymentSources: p,
     } = e;
-    if (null === u && _) return m.intl.string(m.t.CpOiEO);
-    if (t === h.GZ.ONE_TIME) return o ? m.intl.string(m.t.ouo4FK) : m.intl.string(m.t.ExD0Ng);
-    if ((a()(null != n, "Subscription plan must be selected to render SubscriptionReviewButton"), i === p.POd.BOOST))
-        return m.intl.string(m.t.eUEeCt);
-    if (o) return m.intl.string(m.t.ouo4FK);
-    if (c) return m.intl.string(m.t.LQVQIq);
+    if (null === u && p) return h.intl.string(h.t.CpOiEO);
+    if (t === m.GZ.ONE_TIME) return o ? h.intl.string(h.t.ouo4FK) : h.intl.string(h.t.ExD0Ng);
+    if ((a()(null != n, "Subscription plan must be selected to render SubscriptionReviewButton"), i === _.POd.BOOST))
+        return h.intl.string(h.t.eUEeCt);
+    if (o) return h.intl.string(h.t.ouo4FK);
+    if (c) return h.intl.string(h.t.LQVQIq);
     if ((0, d.PV)(n.id))
         return l
-            ? m.intl.string(m.t.cRCCJ3)
+            ? h.intl.string(h.t.cRCCJ3)
             : null != r
               ? r.isPausedAllowsResumeButNotUpdates
-                  ? m.intl.string(m.t.zpi5pg)
+                  ? h.intl.string(h.t.zpi5pg)
                   : (0, f.R4)(r, n.id, s)
-                    ? m.intl.string(m.t.IJI7yk)
-                    : m.intl.string(m.t.VPuTc5)
+                    ? h.intl.string(h.t.IJI7yk)
+                    : h.intl.string(h.t.VPuTc5)
               : (0, d.W_)(null, n);
-    return m.intl.string(m.t.YScQSF);
+    return h.intl.string(h.t.YScQSF);
 }
 function v(e, t) {
     null != e.current && (e.current.scrollIntoView({ behavior: "smooth" }), t());
 }
-function I(e) {
+function S(e) {
     var t;
     let {
             legalTermsNodeRef: n,
@@ -112,40 +112,40 @@ function I(e) {
             planError: a,
             disablePurchase: d,
             flashLegalTerms: f,
-            isSubmitting: h,
+            isSubmitting: m,
             premiumSubscription: g,
             isGift: b,
-            planGroup: I,
-            isPrepaid: T,
-            isTrial: S,
+            planGroup: S,
+            isPrepaid: I,
+            isTrial: T,
             makePurchase: A,
             needsPaymentSource: C,
             inReverseTrial: N,
-            onNext: R,
-            onPaymentSourceAdd: P,
+            onNext: P,
+            onPaymentSourceAdd: R,
         } = e,
         {
-            application: D,
-            selectedPlan: w,
-            hasAcceptedTerms: L,
-            purchaseType: x,
-            paymentSourceId: M,
-            activeSubscription: k,
-            devShelfFetchState: j,
+            application: w,
+            selectedPlan: D,
+            hasAcceptedTerms: x,
+            purchaseType: L,
+            paymentSourceId: j,
+            activeSubscription: M,
+            devShelfFetchState: k,
             hasPaymentSources: U,
         } = (0, u.JL)(),
         G = O({
-            purchaseType: x,
-            plan: w,
+            purchaseType: L,
+            plan: D,
             premiumSubscription: g,
             isGift: b,
-            planGroup: I,
-            isPrepaidPaymentSource: T,
+            planGroup: S,
+            isPrepaidPaymentSource: I,
             inReverseTrial: N,
-            paymentSourceId: M,
+            paymentSourceId: j,
             hasPaymentSources: U,
         }),
-        { analyticsLocations: B } = (0, c.ZP)();
+        { analyticsLocations: Z } = (0, c.ZP)();
     if (null != i || null != a || d)
         return (0, r.jsx)(s.Button, {
             variant: "active",
@@ -155,7 +155,7 @@ function I(e) {
     if (C && U)
         return (0, r.jsx)(s.aML, {
             "data-migration-pending": !0,
-            text: m.intl.string(m.t.L7jbQV),
+            text: h.intl.string(h.t.L7jbQV),
             children: (e) =>
                 (0, r.jsx)(
                     s.Button,
@@ -170,7 +170,7 @@ function I(e) {
                         {
                             type: "submit",
                             "data-testid": "submitButton",
-                            onClick: P,
+                            onClick: R,
                         },
                     ),
                 ),
@@ -178,7 +178,7 @@ function I(e) {
     if (C && !U)
         return (0, r.jsx)(s.aML, {
             "data-migration-pending": !0,
-            text: m.intl.string(m.t.L7jbQV),
+            text: h.intl.string(h.t.L7jbQV),
             children: (e) =>
                 (0, r.jsx)(
                     s.Button,
@@ -198,10 +198,10 @@ function I(e) {
                     ),
                 ),
         });
-    if ((0, o.yE)(null != (t = null == D ? void 0 : D.flags) ? t : 0, p.udG.EMBEDDED) && j === l.O.LOADING)
+    if ((0, o.yE)(null != (t = null == w ? void 0 : w.flags) ? t : 0, _.udG.EMBEDDED) && k === l.O.LOADING)
         return (0, r.jsx)(s.aML, {
             "data-migration-pending": !0,
-            text: m.intl.string(m.t.cjA5tj),
+            text: h.intl.string(h.t.cjA5tj),
             children: (e) =>
                 (0, r.jsx)(
                     s.Button,
@@ -221,20 +221,20 @@ function I(e) {
                     ),
                 ),
         });
-    if (S)
+    if (T)
         return (0, r.jsx)(s.Button, {
             variant: "expressive",
-            "data-testid": L ? "purchase" : "submitButton",
+            "data-testid": x ? "purchase" : "submitButton",
             text: G,
-            onClick: L ? A : () => v(n, f),
-            loading: h,
+            onClick: x ? A : () => v(n, f),
+            loading: m,
             iconPosition: "start",
             icon: () => (0, r.jsx)(s.SrA, { color: "currentColor" }),
         });
-    else if (!L)
+    else if (!x)
         return (0, r.jsx)(s.aML, {
             "data-migration-pending": !0,
-            text: m.intl.string(m.t.XdvBLS),
+            text: h.intl.string(h.t.XdvBLS),
             children: (e) =>
                 (0, r.jsx)(
                     s.Button,
@@ -254,14 +254,14 @@ function I(e) {
                     ),
                 ),
         });
-    else if (N && null != k && null != M)
-        return (0, r.jsx)(_.Z, {
-            activeSubscription: k,
-            onNext: R,
-            isSubmitting: h,
-            paymentSourceId: M,
+    else if (N && null != M && null != j)
+        return (0, r.jsx)(p.Z, {
+            activeSubscription: M,
+            onNext: P,
+            isSubmitting: m,
+            paymentSourceId: j,
             buttonLabel: G,
-            analyticsLocations: B,
+            analyticsLocations: Z,
         });
     else
         return (0, r.jsx)(s.Button, {
@@ -269,6 +269,6 @@ function I(e) {
             text: G,
             "data-testid": "purchase",
             onClick: A,
-            loading: h,
+            loading: m,
         });
 }

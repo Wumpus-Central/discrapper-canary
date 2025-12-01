@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(626135),
     d = n(617136),
     f = n(49436),
-    _ = n(110560),
-    p = n(981631),
-    h = n(388032),
-    m = n(154115),
+    p = n(110560),
+    _ = n(981631),
+    m = n(388032),
+    h = n(154115),
     g = n(66094);
 function E(e, t, n) {
     return (
@@ -49,9 +49,9 @@ function O() {
         t = i.useMemo(() => ({ backgroundImage: "url(".concat(y, ")") }), []),
         n = i.useCallback(() => {
             (0, c.default)(),
-                (0, _.navigateToQuestHome)({ fromContent: f.jn.QUEST_HOME_MOVE_CALLOUT }),
+                (0, p.navigateToQuestHome)({ fromContent: f.jn.QUEST_HOME_MOVE_CALLOUT }),
                 u.default.track(
-                    p.rMx.QUEST_CONTENT_CLICKED,
+                    _.rMx.QUEST_CONTENT_CLICKED,
                     b(
                         {
                             cta_name: d.jZ.VIEW_QUESTS,
@@ -63,40 +63,40 @@ function O() {
                 );
         }, []);
     return (0, r.jsx)("div", {
-        className: m.container,
+        className: h.container,
         style: t,
         children: (0, r.jsxs)(s.Kqy, {
-            className: m.textContainer,
+            className: h.textContainer,
             justify: "space-between",
             children: [
                 (0, r.jsxs)(s.Kqy, {
                     gap: 4,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: m.headerContainer,
+                            className: h.headerContainer,
                             children: [
                                 (0, r.jsx)("img", {
                                     alt: "",
                                     src: g,
-                                    className: m.icon,
+                                    className: h.icon,
                                 }),
                                 (0, r.jsx)(s.Heading, {
                                     variant: "heading-lg/bold",
                                     color: "always-white",
-                                    children: h.intl.string(h.t.z8YP2A),
+                                    children: m.intl.string(m.t.z8YP2A),
                                 }),
                             ],
                         }),
                         (0, r.jsx)(s.Text, {
                             variant: "text-md/medium",
                             color: "text-secondary",
-                            children: h.intl.string(h.t.HdKh65),
+                            children: m.intl.string(m.t.HdKh65),
                         }),
                     ],
                 }),
                 (0, r.jsx)(s.Button, {
                     variant: e ? "primary" : "overlay-primary",
-                    text: h.intl.string(h.t.GURBQl),
+                    text: m.intl.string(m.t.GURBQl),
                     onClick: n,
                 }),
             ],

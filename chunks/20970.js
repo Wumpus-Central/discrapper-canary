@@ -52,7 +52,7 @@ function s(e, t) {
         e
     );
 }
-let { newline: l, paragraph: c, url: u, link: d, strong: f, u: _, br: p, em: h, image: m, text: g } = r.defaultRules,
+let { newline: l, paragraph: c, url: u, link: d, strong: f, u: p, br: _, em: m, image: h, text: g } = r.defaultRules,
     E = {
         newline: l,
         paragraph: c,
@@ -64,10 +64,10 @@ let { newline: l, paragraph: c, url: u, link: d, strong: f, u: _, br: p, em: h, 
             },
         }),
         strong: f,
-        u: _,
-        br: p,
-        em: h,
-        image: m,
+        u: p,
+        br: _,
+        em: m,
+        image: h,
         hook: {
             order: g.order,
             match: (0, r.inlineRegex)(/^\$\[(.*?)\]\((\w+)\)/),

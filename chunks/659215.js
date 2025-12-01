@@ -13,9 +13,9 @@ var i = n(481060),
     u = n(474936),
     d = n(981631),
     f = n(388032),
-    _ = n(819620),
-    p = n(784370);
-function h(e, t, n) {
+    p = n(819620),
+    _ = n(784370);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +39,7 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
@@ -68,7 +68,7 @@ function E(e, t) {
 function b(e) {
     var t,
         n,
-        { onClose: i, analyticsSource: h } = e,
+        { onClose: i, analyticsSource: m } = e,
         E = g(e, ["onClose", "analyticsSource"]);
     let b = f.intl.format(f.t["JmbS+T"], {
             onClick: () => {
@@ -80,17 +80,17 @@ function b(e) {
         v = null != y || null != O;
     return (0, r.jsx)(
         c.Z,
-        m(
+        h(
             {
-                artURL: p,
-                artContainerClassName: _.artContainer,
-                modalClassName: _.modalContainer,
-                bodyClassName: _.bodyContainer,
+                artURL: _,
+                artContainerClassName: p.artContainer,
+                modalClassName: p.modalContainer,
+                bodyClassName: p.bodyContainer,
                 type: u.cd.BURST_REACTION_UPSELL,
                 title: f.intl.string(f.t.N4SCJ0),
                 body: b,
                 glowUp: b,
-                analyticsSource: h,
+                analyticsSource: m,
                 analyticsLocation: {
                     page: d.ZY5.PREMIUM_UPSELL_BURST_REACTIONS,
                     object: d.qAy.BUTTON_CTA,
@@ -109,6 +109,6 @@ function y(e) {
     let { analytics: t } = e;
     (0, i.ZDy)(async () => {
         let { default: e } = await Promise.resolve().then(n.bind(n, 659215));
-        return (n) => (0, r.jsx)(e, m({ analyticsSource: t }, n));
+        return (n) => (0, r.jsx)(e, h({ analyticsSource: t }, n));
     });
 }

@@ -1,12 +1,12 @@
-_.d(e, { z: () => r });
-var a = _(263449);
-function r(t) {
+r.d(t, { z: () => a });
+var n = r(263449);
+function a(e) {
     if ("boolean" == typeof __SENTRY_TRACING__ && !__SENTRY_TRACING__) return !1;
-    let e =
-        t ||
+    let t =
+        e ||
         (function () {
-            let t = (0, a.s3)();
-            return t && t.getOptions();
+            let e = (0, n.s3)();
+            return e && e.getOptions();
         })();
-    return !!e && (e.enableTracing || "tracesSampleRate" in e || "tracesSampler" in e);
+    return !!t && (t.enableTracing || "tracesSampleRate" in t || "tracesSampler" in t);
 }

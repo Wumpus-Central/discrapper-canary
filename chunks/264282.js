@@ -2,14 +2,14 @@ n.d(t, { Z: () => d }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(481060),
-    a = n(509212),
-    s = n(113434),
+    a = n(313481),
+    s = n(509212),
     o = n(670362),
     c = n(388032),
     u = n(477813);
 let d = function (e) {
     let { onChange: t, selectedFilters: n } = e,
-        d = (0, s.N8)(),
+        d = (0, a.N8)(),
         p = i.useCallback(
             (e) => (r) => {
                 let i = e.filter((e) => r.includes(e.filter));
@@ -19,12 +19,12 @@ let d = function (e) {
         );
     return (0, r.jsx)(o.Z, {
         renderPopout: (e, i) => {
-            let { closePopout: s } = e;
+            let { closePopout: a } = e;
             return (0, r.jsxs)("div", {
                 children: [
                     d.map((e, t) => {
-                        let s = e.options.map((e) => ({
-                                label: (0, a.Nt)(e.filter),
+                        let a = e.options.map((e) => ({
+                                label: (0, s.Nt)(e.filter),
                                 value: e.filter,
                             })),
                             c = n.filter((t) => e.options.some((e) => e.filter === t.filter)).map((e) => e.filter);
@@ -39,7 +39,7 @@ let d = function (e) {
                                     }),
                                     (0, r.jsx)(l.cOn, {
                                         "aria-labelledby": i,
-                                        options: s,
+                                        options: a,
                                         selectedValues: c,
                                         onChange: p(e.options),
                                     }),
@@ -53,7 +53,7 @@ let d = function (e) {
                         children: (0, r.jsx)(l.Button, {
                             fullWidth: !0,
                             onClick: () => {
-                                t([]), s();
+                                t([]), a();
                             },
                             size: "sm",
                             text: c.intl.string(c.t.VkKicb),

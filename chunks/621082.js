@@ -1,7 +1,7 @@
 n.d(t, {
-    Gm: () => h,
-    Uj: () => p,
-    ZI: () => _,
+    Gm: () => m,
+    Uj: () => _,
+    ZI: () => p,
 }),
     n(953529);
 var r = n(54381);
@@ -15,29 +15,29 @@ var i = n(120356),
     u = n(173258),
     d = n(494933);
 let f = 48,
-    _ = 5;
-function p(e) {
+    p = 5;
+function _(e) {
     let {
         description: t,
         imgSrc: n,
         renderPurchaseButton: i,
-        onPurchase: p,
-        title: h,
-        onDetails: m,
+        onPurchase: _,
+        title: m,
+        onDetails: h,
         benefitItems: g,
         benefitsSummary: E,
         subtitle: b,
-        maxBenefits: y = _,
+        maxBenefits: y = p,
     } = e;
     return (0, r.jsx)(o.tE, {
         children: (0, r.jsxs)("div", {
             className: a()(u.container, d.hoverCard),
             tabIndex: 0,
             onClick: () => {
-                null != m ? m() : null != p && p();
+                null != h ? h() : null != _ && _();
             },
             onKeyUp: (e) => {
-                "Enter" === e.key && (e.stopPropagation(), e.preventDefault(), null != m ? m() : null != p && p());
+                "Enter" === e.key && (e.stopPropagation(), e.preventDefault(), null != h ? h() : null != _ && _());
             },
             children: [
                 (0, r.jsx)("div", {
@@ -48,7 +48,7 @@ function p(e) {
                             (0, r.jsx)(l.xvT, {
                                 tag: "div",
                                 variant: "heading-lg/semibold",
-                                children: h,
+                                children: m,
                             }),
                             (0, r.jsx)("div", {
                                 className: u.image,
@@ -68,7 +68,7 @@ function p(e) {
                             null != i
                                 ? i({
                                       onClick: (e) => {
-                                          e.stopPropagation(), null == p || p();
+                                          e.stopPropagation(), null == _ || _();
                                       },
                                   })
                                 : null,
@@ -129,7 +129,7 @@ function p(e) {
         }),
     });
 }
-function h(e) {
+function m(e) {
     let { icon: t, header: n, description: i } = e;
     return (0, r.jsxs)("div", {
         className: u.cardBenefit,

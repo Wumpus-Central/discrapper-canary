@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,19 +48,19 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let h = 1000;
-class m extends (r = a.PureComponent) {
+let m = 1000;
+class h extends (r = a.PureComponent) {
     componentWillUnmount() {
         this._timeout.stop();
     }
@@ -70,7 +70,7 @@ class m extends (r = a.PureComponent) {
             n = t === l.kO8.Modes.SUCCESS ? u.intl.string(u.t.t5VZ88) : e;
         return (0, i.jsx)(
             l.kO8,
-            p(f({}, this.props), {
+            _(f({}, this.props), {
                 onCopy: this.handleCopy,
                 mode: t,
                 text: n,
@@ -79,7 +79,7 @@ class m extends (r = a.PureComponent) {
         );
     }
     handleCopy(e) {
-        let { onCopy: t, delay: n = h } = this.props;
+        let { onCopy: t, delay: n = m } = this.props;
         (0, c.JG)(
             e,
             () => this.setState({ mode: l.kO8.Modes.SUCCESS }),
@@ -106,5 +106,5 @@ class m extends (r = a.PureComponent) {
             (this.handleCopy = this.handleCopy.bind(this));
     }
 }
-d(m, "defaultProps", { delay: h });
-let g = m;
+d(h, "defaultProps", { delay: m });
+let g = h;

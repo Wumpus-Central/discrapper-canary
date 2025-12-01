@@ -1,5 +1,5 @@
 n.d(t, {
-    M: () => _,
+    M: () => p,
     Z: () => O,
 });
 var r,
@@ -60,7 +60,7 @@ function d(e, t) {
     );
 }
 let f = 20;
-var _ = (function (e) {
+var p = (function (e) {
     return (
         (e[(e.NOT_FETCHED = 0)] = "NOT_FETCHED"),
         (e[(e.FETCHING = 1)] = "FETCHING"),
@@ -69,62 +69,62 @@ var _ = (function (e) {
         e
     );
 })({});
-function p(e) {
+function _(e) {
     let { applicationId: t, guildId: n, page: r } = e;
     return "applicationId:".concat(t, " guildId:").concat(n, " page:").concat(r);
 }
-let h = new (a())({ max: f }),
-    m = {};
+let m = new (a())({ max: f }),
+    h = {};
 function g(e) {
     let { applicationId: t, guildId: n, page: r } = e,
-        i = p({
+        i = _({
             applicationId: t,
             guildId: n,
             page: r,
         });
-    m = d(c({}, m), { [i]: 1 });
+    h = d(c({}, h), { [i]: 1 });
 }
 function E(e) {
     let { applicationId: t, guildId: n, similarApplications: r, loadId: i, page: a, totalPages: o } = e,
-        s = p({
+        s = _({
             applicationId: t,
             guildId: n,
             page: a,
         });
-    h.set(s, {
+    m.set(s, {
         lastFetchTimeMs: Date.now(),
         applications: r,
         loadId: i,
         page: a,
         totalPages: o,
     }),
-        (m = d(c({}, m), { [s]: 2 }));
+        (h = d(c({}, h), { [s]: 2 }));
 }
 function b(e) {
     let { applicationId: t, guildId: n, page: r } = e,
-        i = p({
+        i = _({
             applicationId: t,
             guildId: n,
             page: r,
         });
-    m = d(c({}, m), { [i]: 3 });
+    h = d(c({}, h), { [i]: 3 });
 }
 class y extends (r = o.ZP.Store) {
     getSimilarApplications(e) {
         let { applicationId: t, guildId: n, page: r } = e;
         if (null == t) return;
-        let i = p({
+        let i = _({
             applicationId: t,
             guildId: n,
             page: r,
         });
-        return h.get(i);
+        return m.get(i);
     }
     getFetchState(e) {
         let { applicationId: t, guildId: n, page: r } = e;
         if (null != t)
-            return m[
-                p({
+            return h[
+                _({
                     applicationId: t,
                     guildId: n,
                     page: r,

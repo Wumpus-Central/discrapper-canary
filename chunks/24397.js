@@ -1,6 +1,6 @@
 n.d(t, {
     K: () => C,
-    Z: () => P,
+    Z: () => R,
 }),
     n(413496),
     n(433524),
@@ -17,19 +17,19 @@ var i = n(793030),
     u = n(10718),
     d = n(367790),
     f = n(998698),
-    _ = n(895924),
-    p = n(581364),
-    h = n(826298),
-    m = n(588468),
+    p = n(895924),
+    _ = n(581364),
+    m = n(826298),
+    h = n(588468),
     g = n(496675),
     E = n(226951),
     b = n(877565),
     y = n(590921),
     O = n(761652),
     v = n(689079),
-    I = n(388032),
-    T = n(793872);
-function S(e, t, n) {
+    S = n(388032),
+    I = n(793872);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -53,7 +53,7 @@ function A(e) {
                 }),
             )),
             r.forEach(function (t) {
-                S(e, t, n[t]);
+                T(e, t, n[t]);
             });
     }
     return e;
@@ -65,10 +65,10 @@ function N() {
         return (t) => (0, r.jsx)(e, A({}, t));
     });
 }
-function R(e) {
+function P(e) {
     return "".concat(O.GI).concat(e.displayName);
 }
-let P = {
+let R = {
     sentinel: O.GI,
     stores: [f.Z, c.ZP, g.Z],
     matches: (e, t, n, r, i) =>
@@ -78,7 +78,7 @@ let P = {
         if (r.commands === y.L8.OLD_BUILT_INS) {
             let r = (0, l.Kh)([o.yU.CHAT], !1, !1),
                 i = RegExp("^".concat(E.Z.escape(n)), "i"),
-                a = (0, p.Dd)(
+                a = (0, _.Dd)(
                     r,
                     i,
                     {
@@ -99,7 +99,7 @@ let P = {
                       },
                   };
         }
-        let a = (0, h.hV)(e, n),
+        let a = (0, m.hV)(e, n),
             { commands: s, sections: c } = u.JT(
                 {
                     channel: e,
@@ -144,7 +144,7 @@ let P = {
                 onHover: l,
                 onClick: c,
             } = e,
-            u = (0, h.hV)(a, o),
+            u = (0, m.hV)(a, o),
             d = s.commands === y.L8.OLD_BUILT_INS;
         return (0, b.HI)({
             query: u.text,
@@ -152,10 +152,10 @@ let P = {
             autocompletes: t,
             onHover: l,
             onClick: c,
-            titleWithQuery: I.t.HFRoZR,
-            titleWithoutQuery: I.intl.string(I.t["0hKkS+"]),
+            titleWithQuery: S.t.HFRoZR,
+            titleWithoutQuery: S.intl.string(S.t["0hKkS+"]),
             getQuery: (e) => "".concat(O.GI).concat(e),
-            Component: d ? m.ZP.Command : m.ZP.NewCommand,
+            Component: d ? h.ZP.Command : h.ZP.NewCommand,
             getProps: (e) => {
                 let { command: t, section: n } = e;
                 return {
@@ -168,13 +168,13 @@ let P = {
                 };
             },
             key: "commands",
-            headerClassName: d ? T.legacyInputCommandHeader : null,
+            headerClassName: d ? I.legacyInputCommandHeader : null,
             headerTrailingContent:
                 d &&
                 (0, r.jsx)(i.Avr, {
                     size: "xs",
                     onClick: N,
-                    text: I.intl.string(I.t["8a0P0y"]),
+                    text: S.intl.string(S.t["8a0P0y"]),
                 }),
         });
     },
@@ -189,11 +189,11 @@ let P = {
                 tabOrEnter: l,
             } = e,
             { command: c, section: u } = t[n];
-        if (c.inputType === _.iw.PLACEHOLDER) return null;
-        if (i.commands === y.L8.OLD_BUILT_INS) i.insertText(R(c));
+        if (c.inputType === p.iw.PLACEHOLDER) return null;
+        if (i.commands === y.L8.OLD_BUILT_INS) i.insertText(P(c));
         else {
             let e = o;
-            null == e && (e = l ? _.Vh.QUERY : _.Vh.DISCOVERY),
+            null == e && (e = l ? p.Vh.QUERY : p.Vh.DISCOVERY),
                 s.Po({
                     channelId: a.id,
                     command: c,

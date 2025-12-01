@@ -18,9 +18,9 @@ var i = n(54381),
     C = n(954551),
     v = n(44136),
     _ = n(651183),
-    x = n(853476),
-    j = n(390322),
-    O = n(616286),
+    O = n(853476),
+    x = n(390322),
+    j = n(616286),
     E = n(975146),
     S = n(597998),
     P = n(606304),
@@ -86,7 +86,7 @@ function R(e) {
         A = t.isGuildVoiceOrThread() && !n,
         { hasParticipantsPanel: R } = (0, T.Z)({ location: "ChannelCallHeaderToolbar" }),
         L = !P && R && (t.isGuildVoiceOrThread() || t.isGroupDM()),
-        { enabled: k, inInbox: D } = y.Z.useExperiment({ location: "ChannelCallHeaderToolbar" }),
+        { enabled: D, inInbox: k } = y.Z.useExperiment({ location: "ChannelCallHeaderToolbar" }),
         U = [];
     return (
         u &&
@@ -137,7 +137,7 @@ function R(e) {
         (null == v ? void 0 : v.type) === N.fO.USER &&
             U.push(
                 (0, i.jsx)(
-                    x.Z,
+                    O.Z,
                     {
                         className: w.button,
                         userId: v.id,
@@ -153,7 +153,7 @@ function R(e) {
                     {
                         targetElementRef: l,
                         position: "bottom",
-                        renderPopout: () => (0, i.jsx)(j.Z, { children: (0, i.jsx)(Z.Z, { channel: t }) }),
+                        renderPopout: () => (0, i.jsx)(x.Z, { children: (0, i.jsx)(Z.Z, { channel: t }) }),
                         children: (e, t) => {
                             var n, i;
                             let { isShown: a } = t;
@@ -211,7 +211,7 @@ function R(e) {
                     "call-members-popout",
                 ),
             ),
-        k && !D && U.push((0, i.jsx)(C.Z, { className: w.button }, "for-later")),
+        D && !k && U.push((0, i.jsx)(C.Z, { className: w.button }, "for-later")),
         L &&
             U.push(
                 (0, i.jsx)(
@@ -226,7 +226,7 @@ function R(e) {
         A &&
             U.push(
                 (0, i.jsx)(
-                    O.T,
+                    j.T,
                     {
                         channelId: t.id,
                         className: a()(w.button, { [w.lastButton]: P }),

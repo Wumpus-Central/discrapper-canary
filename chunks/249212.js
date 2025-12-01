@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(54381),
     i = n(46973),
     a = n(846027),
@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(981631),
     d = n(388032);
 let f = n(66737);
-function _(e) {
+function p(e) {
     var t;
-    let { userId: n, width: _, avError: p, selected: h = !1, noArt: m = !1 } = e,
-        g = null == (t = (0, s.hp)(p)) ? void 0 : t.errorCode;
+    let { userId: n, width: p, avError: _, selected: m = !1, noArt: h = !1 } = e,
+        g = null == (t = (0, s.hp)(_)) ? void 0 : t.errorCode;
     function E() {
         (0, o.w)(i.Yn.DEFAULT, n),
             a.Z.setDisableLocalVideo(n, u.ZUi.DISABLED, i.Yn.DEFAULT, !1),
@@ -23,9 +23,9 @@ function _(e) {
     return (0, r.jsx)(c.Z, {
         artURL: f,
         header: d.intl.string(d.t["z+mxvo"]),
-        size: (0, c.L)(_),
-        noArt: m,
-        selected: h,
+        size: (0, c.L)(p),
+        noArt: h,
+        selected: m,
         description: d.intl.format(d.t.d486Wm, { helpUrl: l.Z.getArticleURL(u.BhN.VOICE_VIDEO_TROUBLESHOOTING) }),
         errorCodeMessage: d.intl.formatToPlainString(d.t.ejOT95, { errorCode: g }),
         onCTAClick: E,

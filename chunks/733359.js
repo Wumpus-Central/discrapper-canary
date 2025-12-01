@@ -18,7 +18,7 @@ function f(e) {
     for (var t = 0, n = 0; n < e.length; n += d(e, n)) t++;
     return t;
 }
-function _(e, t, n) {
+function p(e, t, n) {
     if (((t = t || 0), (n = void 0 === n ? 1 / 0 : n || 0), !u(e))) return e.substr(t, n);
     var r = e.length;
     if (r <= 0 || t > r || n <= 0) return "";
@@ -52,7 +52,7 @@ e.exports = {
     substring: function (e, t, n) {
         (t = t || 0) < 0 && (t = 0), (n = void 0 === n ? 1 / 0 : n || 0) < 0 && (n = 0);
         var r = Math.abs(n - t);
-        return _(e, (t = t < n ? t : n), r);
+        return p(e, (t = t < n ? t : n), r);
     },
-    substr: _,
+    substr: p,
 };

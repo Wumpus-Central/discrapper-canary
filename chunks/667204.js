@@ -21,31 +21,31 @@ var r = n(512722),
     u = n(673750),
     d = n(237992),
     f = n(367907),
-    _ = n(465343),
-    p = n(339085),
-    h = n(633302),
-    m = n(603721),
+    p = n(465343),
+    _ = n(339085),
+    m = n(633302),
+    h = n(603721),
     g = n(188597),
     E = n(3148),
     b = n(48854),
     y = n(346479),
     O = n(706454),
     v = n(430824),
-    I = n(117530),
-    T = n(594174),
-    S = n(403182),
+    S = n(117530),
+    I = n(594174),
+    T = n(403182),
     A = n(823379),
     C = n(861990),
     N = n(555573),
-    R = n(160062),
-    P = n(456007),
-    D = n(10718),
-    w = n(998698),
-    L = n(895924),
-    x = n(581364),
-    M = n(981631),
-    k = n(959517),
-    j = n(388032);
+    P = n(160062),
+    R = n(456007),
+    w = n(10718),
+    D = n(998698),
+    x = n(895924),
+    L = n(581364),
+    j = n(981631),
+    M = n(959517),
+    k = n(388032);
 function U(e, t, n) {
     return (
         t in e
@@ -75,7 +75,7 @@ function G(e) {
     }
     return e;
 }
-function B(e, t) {
+function Z(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -87,61 +87,61 @@ function B(e, t) {
     }
     return n;
 }
-function Z(e, t) {
+function B(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : B(Object(t)).forEach(function (n) {
+            : Z(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 async function F(e) {
-    var t, n, r, o, l, u, d, p, h, m, g, E, b, v, T, S, A;
+    var t, n, r, o, l, u, d, _, m, h, g, E, b, v, I, T, A;
     let {
         command: C,
-        optionValues: D,
-        context: k,
-        commandTargetId: j,
+        optionValues: w,
+        context: M,
+        commandTargetId: k,
         maxSizeCallback: U,
-        commandOrigin: G = L.bB.CHAT,
-        sectionName: B,
-        interactionLifecycleOptionsFactory: Z = K,
+        commandOrigin: G = x.bB.CHAT,
+        sectionName: Z,
+        interactionLifecycleOptionsFactory: B = K,
         source: F,
     } = e;
-    if (null == k.channel) return;
-    let H = null != (r = w.Z.getSource(k.channel.id)) ? r : F,
-        W = null != (o = w.Z.getCommandOrigin(k.channel.id)) ? o : G;
-    null == k.autocomplete &&
+    if (null == M.channel) return;
+    let H = null != (r = D.Z.getSource(M.channel.id)) ? r : F,
+        W = null != (o = D.Z.getCommandOrigin(M.channel.id)) ? o : G;
+    null == M.autocomplete &&
         a.Z.dispatch({
             type: "APPLICATION_COMMAND_USED",
-            context: k,
+            context: M,
             command: C,
             commandOrigin: W,
         }),
-        await y.Z.unarchiveThreadIfNecessary(k.channel.id);
+        await y.Z.unarchiveThreadIfNecessary(M.channel.id);
     let q = [],
-        X = [],
-        Q = (0, x.D7)(W);
+        Q = [],
+        X = (0, L.D7)(W);
     if (null != C.options)
         for (let e of C.options) {
             let t;
-            if (e.type === c.jw.SUB_COMMAND || e.type === c.jw.SUB_COMMAND_GROUP || !(e.name in D)) continue;
-            let n = (null == (l = k.autocomplete) ? void 0 : l.name) === e.name || void 0;
+            if (e.type === c.jw.SUB_COMMAND || e.type === c.jw.SUB_COMMAND_GROUP || !(e.name in w)) continue;
+            let n = (null == (l = M.autocomplete) ? void 0 : l.name) === e.name || void 0;
             if (e.type === c.jw.STRING) {
-                let r = null != (d = null == (u = P.li(D, e.name)) ? void 0 : u.trim()) ? d : "";
+                let r = null != (d = null == (u = R.li(w, e.name)) ? void 0 : u.trim()) ? d : "";
                 if (
                     (null != e.choices
-                        ? (t = (0, R.cT)(e.choices, r))
+                        ? (t = (0, P.cT)(e.choices, r))
                         : e.autocomplete &&
-                          (t = null != k.autocomplete && n ? k.autocomplete.query : (0, R.Wv)(k.channel.id, e.name, r)),
+                          (t = null != M.autocomplete && n ? M.autocomplete.query : (0, P.Wv)(M.channel.id, e.name, r)),
                     null == t && (t = r),
-                    "" === t && null != k.autocomplete && !n)
+                    "" === t && null != M.autocomplete && !n)
                 )
                     continue;
-                i()(null != k.autocomplete || null != t, 'Option "'.concat(e.name, '" expects a value')),
+                i()(null != M.autocomplete || null != t, 'Option "'.concat(e.name, '" expects a value')),
                     q.push({
                         type: e.type,
                         name: e.name,
@@ -151,11 +151,11 @@ async function F(e) {
                 continue;
             }
             if (e.type === c.jw.ATTACHMENT) {
-                if (null != k.autocomplete) continue;
-                let t = I.Z.getUpload(k.channel.id, e.name, Q);
+                if (null != M.autocomplete) continue;
+                let t = S.Z.getUpload(M.channel.id, e.name, X);
                 if (null == t) continue;
-                let r = X.length;
-                X.push(t),
+                let r = Q.length;
+                Q.push(t),
                     q.push({
                         type: e.type,
                         name: e.name,
@@ -164,18 +164,18 @@ async function F(e) {
                     });
                 continue;
             }
-            let r = P.OU(D[e.name]);
+            let r = R.OU(w[e.name]);
             if (
                 (i()(
-                    null != k.autocomplete || 1 === r.length,
+                    null != M.autocomplete || 1 === r.length,
                     'Option "'.concat(e.name, '" expects a single option type'),
                 ),
                 null == r[0] && !n)
             )
                 continue;
             let a =
-                null != (p = r[0])
-                    ? p
+                null != (_ = r[0])
+                    ? _
                     : {
                           type: "text",
                           text: "",
@@ -184,9 +184,9 @@ async function F(e) {
                 case c.jw.CHANNEL:
                     if ("channelMention" === a.type) t = a.channelId;
                     else if ("text" === a.type)
-                        if ((0, x.BH)(a.text)) t = a.text.trim();
+                        if ((0, L.BH)(a.text)) t = a.text.trim();
                         else {
-                            let e = (0, _.K)(a.text, null == (h = k.guild) ? void 0 : h.id, k.channel.id);
+                            let e = (0, p.K)(a.text, null == (m = M.guild) ? void 0 : m.id, M.channel.id);
                             i()(
                                 (null == e ? void 0 : e.type) === "channelMention",
                                 "Failed to resolve ".concat(a.text),
@@ -197,9 +197,9 @@ async function F(e) {
                 case c.jw.ROLE:
                     if ("roleMention" === a.type) t = a.roleId;
                     else if ("text" === a.type)
-                        if ((0, x.BH)(a.text)) t = a.text.trim();
+                        if ((0, L.BH)(a.text)) t = a.text.trim();
                         else {
-                            let e = (0, _.K)(a.text, null == (m = k.guild) ? void 0 : m.id, k.channel.id, {
+                            let e = (0, p.K)(a.text, null == (h = M.guild) ? void 0 : h.id, M.channel.id, {
                                 allowUsers: !1,
                             });
                             i()((null == e ? void 0 : e.type) === "roleMention", "Failed to resolve ".concat(a.text)),
@@ -208,14 +208,14 @@ async function F(e) {
                     else
                         "textMention" === a.type &&
                             "@everyone" === a.text &&
-                            (t = null == (g = k.guild) ? void 0 : g.id);
+                            (t = null == (g = M.guild) ? void 0 : g.id);
                     break;
                 case c.jw.USER:
                     if ("userMention" === a.type) t = a.userId;
                     else if ("text" === a.type)
-                        if ((0, x.BH)(a.text)) t = a.text.trim();
+                        if ((0, L.BH)(a.text)) t = a.text.trim();
                         else {
-                            let e = (0, _.K)(a.text, null == (E = k.guild) ? void 0 : E.id, k.channel.id, {
+                            let e = (0, p.K)(a.text, null == (E = M.guild) ? void 0 : E.id, M.channel.id, {
                                 allowRoles: !1,
                             });
                             i()((null == e ? void 0 : e.type) === "userMention", "Failed to resolve ".concat(a.text)),
@@ -226,54 +226,54 @@ async function F(e) {
                     if ("userMention" === a.type) t = a.userId;
                     else if ("roleMention" === a.type) t = a.roleId;
                     else if ("textMention" === a.type && "@everyone" === a.text)
-                        t = null == (b = k.guild) ? void 0 : b.id;
+                        t = null == (b = M.guild) ? void 0 : b.id;
                     else if ("text" === a.type)
-                        if ((0, x.BH)(a.text)) t = a.text.trim();
+                        if ((0, L.BH)(a.text)) t = a.text.trim();
                         else {
-                            let e = (0, _.K)(a.text, null == (v = k.guild) ? void 0 : v.id, k.channel.id);
+                            let e = (0, p.K)(a.text, null == (v = M.guild) ? void 0 : v.id, M.channel.id);
                             (null == e ? void 0 : e.type) === "userMention"
                                 ? (t = e.userId)
                                 : (null == e ? void 0 : e.type) === "roleMention"
                                   ? (t = e.roleId)
                                   : (null == e ? void 0 : e.type) === "textMention" && "@everyone" === e.text
-                                    ? (t = null == (T = k.guild) ? void 0 : T.id)
+                                    ? (t = null == (I = M.guild) ? void 0 : I.id)
                                     : i()(!1, "Failed to resolve ".concat(a.text));
                         }
                     break;
                 case c.jw.BOOLEAN:
-                    "text" === a.type && (t = (0, R.Kl)(a.text.trim()));
+                    "text" === a.type && (t = (0, P.Kl)(a.text.trim()));
                     break;
                 case c.jw.INTEGER:
                     if ("text" === a.type) {
                         let r = a.text.trim();
                         null != e.choices
-                            ? (t = (0, R.l1)(e.choices, r))
+                            ? (t = (0, P.l1)(e.choices, r))
                             : e.autocomplete &&
                               (t =
-                                  null != k.autocomplete && n
-                                      ? k.autocomplete.query
-                                      : (0, R.xg)(k.channel.id, e.name, r)),
-                            null == t && (t = Number(P.AS(O.default.locale, r)));
+                                  null != M.autocomplete && n
+                                      ? M.autocomplete.query
+                                      : (0, P.xg)(M.channel.id, e.name, r)),
+                            null == t && (t = Number(R.AS(O.default.locale, r)));
                     }
                     break;
                 case c.jw.NUMBER:
                     if ("text" === a.type) {
                         let r = a.text.trim();
                         null != e.choices
-                            ? (t = (0, R.l1)(e.choices, r))
+                            ? (t = (0, P.l1)(e.choices, r))
                             : e.autocomplete &&
                               (t =
-                                  null != k.autocomplete && n
-                                      ? k.autocomplete.query
-                                      : (0, R.xg)(k.channel.id, e.name, r)),
-                            null == t && (t = Number(P.AS(O.default.locale, r)));
+                                  null != M.autocomplete && n
+                                      ? M.autocomplete.query
+                                      : (0, P.xg)(M.channel.id, e.name, r)),
+                            null == t && (t = Number(R.AS(O.default.locale, r)));
                     }
                     break;
                 default:
                     throw Error("Unsupported option type: ".concat(e.type));
             }
-            ("" !== t || null == k.autocomplete || n) &&
-                (i()(null != k.autocomplete || null != t, 'Unexpected value for option "'.concat(e.name, '"')),
+            ("" !== t || null == M.autocomplete || n) &&
+                (i()(null != M.autocomplete || null != t, 'Unexpected value for option "'.concat(e.name, '"')),
                 null != t &&
                     q.push({
                         type: e.type,
@@ -295,24 +295,24 @@ async function F(e) {
         }
     if (null != C.execute)
         return (
-            f.ZP.trackWithMetadata(M.rMx.APPLICATION_COMMAND_USED, {
+            f.ZP.trackWithMetadata(j.rMx.APPLICATION_COMMAND_USED, {
                 command_id: C.id,
                 application_id: C.applicationId,
                 command_type: C.type,
                 location: z(W),
                 source: H,
             }),
-            C.execute(q, k)
+            C.execute(q, M)
         );
     if (
-        C.inputType === L.iw.BUILT_IN ||
-        C.inputType === L.iw.BUILT_IN_TEXT ||
-        C.inputType === L.iw.BUILT_IN_INTEGRATION
+        C.inputType === x.iw.BUILT_IN ||
+        C.inputType === x.iw.BUILT_IN_TEXT ||
+        C.inputType === x.iw.BUILT_IN_INTEGRATION
     )
         return;
     let J = {
             version: C.version,
-            id: null != (S = null == (t = C.rootCommand) ? void 0 : t.id) ? S : C.id,
+            id: null != (T = null == (t = C.rootCommand) ? void 0 : t.id) ? T : C.id,
             guild_id: C.guildId,
             name: null != (A = null == (n = C.rootCommand) ? void 0 : n.name) ? A : C.untranslatedName,
             type: C.type,
@@ -320,23 +320,23 @@ async function F(e) {
             application_command: C.rootCommand,
         },
         $ = () => {
-            V(D);
+            V(w);
         };
-    null != j && (J.target_id = j),
-        null != k.autocomplete
-            ? (0, N.GV)(C, k, J)
-            : (s.Z.clearAll(k.channel.id, Q),
+    null != k && (J.target_id = k),
+        null != M.autocomplete
+            ? (0, N.GV)(C, M, J)
+            : (s.Z.clearAll(M.channel.id, X),
               Y({
                   applicationId: C.applicationId,
                   data: J,
-                  context: k,
-                  attachments: X,
+                  context: M,
+                  attachments: Q,
                   maxSizeCallback: U,
                   onMessageSuccess: $,
                   analytics_location: z(W),
-                  sectionName: B,
+                  sectionName: Z,
                   source: H,
-                  interactionLifecycleOptions: await Z(C, k, J),
+                  interactionLifecycleOptions: await B(C, M, J),
               }));
 }
 let V = (e) => {
@@ -344,13 +344,13 @@ let V = (e) => {
             e
                 .map((e) =>
                     "emoji" === e.type
-                        ? new h.dy({
+                        ? new m.dy({
                               names: [e.name.replaceAll(":", "")],
                               surrogates: "",
                               unicodeVersion: 6,
                           })
                         : "customEmoji" === e.type
-                          ? p.ZP.getCustomEmojiById(e.emojiId)
+                          ? _.ZP.getCustomEmojiById(e.emojiId)
                           : null,
                 )
                 .filter(A.lm),
@@ -390,12 +390,12 @@ let V = (e) => {
             interactionLifecycleOptions: f,
         } = e;
         if (null == i.channel) return;
-        let { channel: _, guild: p } = i,
-            h = _.id,
-            g = null == p ? void 0 : p.id,
+        let { channel: p, guild: _ } = i,
+            m = p.id,
+            g = null == _ ? void 0 : _.id,
             E = {
                 applicationId: n,
-                channelId: h,
+                channelId: m,
                 guildId: g,
                 data: r,
                 nonce: null != (t = f.nonce) ? t : (0, b.r)(),
@@ -405,7 +405,7 @@ let V = (e) => {
                 sectionName: u,
                 source: d,
             };
-        m.kz(E.nonce, {
+        h.kz(E.nonce, {
             messageId: f.messageId,
             onCreate: f.onCreate,
             onSuccess: f.onSuccess,
@@ -413,11 +413,11 @@ let V = (e) => {
             data: {
                 interactionType: c.B8.APPLICATION_COMMAND,
                 applicationId: n,
-                channelId: h,
+                channelId: m,
             },
         }),
             null != a && a.length > 0
-                ? X(a, E.nonce, g, o).then((e) => {
+                ? Q(a, E.nonce, g, o).then((e) => {
                       e && W(E, s);
                   })
                 : W(E, s);
@@ -438,7 +438,7 @@ function W(e, t) {
 async function K(e, t, n) {
     var r;
     if (null == t.channel) return {};
-    let i = D.Nk(
+    let i = w.Nk(
         {
             channel: t.channel,
             type: "channel",
@@ -452,20 +452,20 @@ async function K(e, t, n) {
         try {
             await l.PR(i.botId);
         } catch (e) {}
-    let u = Z(
+    let u = B(
         G(
             {},
             (0, E.ZP)({
                 channelId: t.channel.id,
                 content: "",
-                type: n.type === c.yU.CHAT ? M.uaV.CHAT_INPUT_COMMAND : M.uaV.CONTEXT_MENU_COMMAND,
+                type: n.type === c.yU.CHAT ? j.uaV.CHAT_INPUT_COMMAND : j.uaV.CONTEXT_MENU_COMMAND,
                 author:
                     null != s
                         ? s
                         : {
                               id: i.id,
                               username: i.name,
-                              discriminator: M.fo$,
+                              discriminator: j.fo$,
                               avatar: null,
                               bot: !0,
                           },
@@ -478,7 +478,7 @@ async function K(e, t, n) {
                 name: n.name,
                 name_localized: e.displayName,
                 type: c.B8.APPLICATION_COMMAND,
-                user: (0, E.pe)(T.default.getCurrentUser()),
+                user: (0, E.pe)(I.default.getCurrentUser()),
             },
             interaction_data: n,
         },
@@ -516,26 +516,26 @@ async function K(e, t, n) {
 }
 function z(e) {
     switch (e) {
-        case L.bB.APPLICATION_LAUNCHER:
-            return L.Vh.APP_LAUNCHER;
-        case L.bB.APP_LAUNCHER_APPLICATION_VIEW:
-            return L.Vh.APP_LAUNCHER_APPLICATION_VIEW;
-        case L.bB.IMAGE_RECS_MENU:
-            return L.Vh.IMAGE_RECS_MENU;
-        case L.bB.IMAGE_RECS_SUBMENU:
-            return L.Vh.IMAGE_RECS_SUBMENU;
-        case L.bB.ACTIVITY_INSTANCE_EMBED:
-            return L.Vh.ACTIVITY_INSTANCE_EMBED;
-        case L.bB.ACTIVITY_BOOKMARK_EMBED:
-            return L.Vh.ACTIVITY_BOOKMARK_EMBED;
-        case L.bB.MINI_SHELF:
-            return L.Vh.ACTIVITIES_MINI_SHELF;
-        case L.bB.VOICE_TILE_ACTIVITY_SUGGESTIONS:
-            return L.Vh.VC_TILE_ACTIVITY_SUGGESTION;
-        case L.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON:
-            return L.Vh.APP_DMS_ENTRY_POINT_COMMAND_BUTTON;
+        case x.bB.APPLICATION_LAUNCHER:
+            return x.Vh.APP_LAUNCHER;
+        case x.bB.APP_LAUNCHER_APPLICATION_VIEW:
+            return x.Vh.APP_LAUNCHER_APPLICATION_VIEW;
+        case x.bB.IMAGE_RECS_MENU:
+            return x.Vh.IMAGE_RECS_MENU;
+        case x.bB.IMAGE_RECS_SUBMENU:
+            return x.Vh.IMAGE_RECS_SUBMENU;
+        case x.bB.ACTIVITY_INSTANCE_EMBED:
+            return x.Vh.ACTIVITY_INSTANCE_EMBED;
+        case x.bB.ACTIVITY_BOOKMARK_EMBED:
+            return x.Vh.ACTIVITY_BOOKMARK_EMBED;
+        case x.bB.MINI_SHELF:
+            return x.Vh.ACTIVITIES_MINI_SHELF;
+        case x.bB.VOICE_TILE_ACTIVITY_SUGGESTIONS:
+            return x.Vh.VC_TILE_ACTIVITY_SUGGESTION;
+        case x.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON:
+            return x.Vh.APP_DMS_ENTRY_POINT_COMMAND_BUTTON;
         default:
-            return L.Vh.SLASH_UI;
+            return x.Vh.SLASH_UI;
     }
 }
 async function q(e, t) {
@@ -551,21 +551,21 @@ async function q(e, t) {
         largestUploadedFileSize: r,
     };
 }
-async function X(e, t, n, r) {
-    let i = (0, S.dg)(n),
+async function Q(e, t, n, r) {
+    let i = (0, T.dg)(n),
         a = (e) => {
             null == r || r(i, e),
-                m.yr(t, M.evJ.ENTITY_TOO_LARGE, j.intl.formatToPlainString(j.t.fxEKdS, { maxSize: (0, S.Ng)(i) }));
+                h.yr(t, j.evJ.ENTITY_TOO_LARGE, k.intl.formatToPlainString(k.t.fxEKdS, { maxSize: (0, T.Ng)(i) }));
         },
         { totalSize: o, largestUploadedFileSize: s } = await q(e, !1);
-    if (s > Math.max(i, k.Y1) || o > C.zz) return a(s), !1;
+    if (s > Math.max(i, M.Y1) || o > C.zz) return a(s), !1;
     try {
         await (0, d.Z)(e);
     } catch (n) {
-        m.yr(t, void 0, j.intl.formatToPlainString(j.t["9h1/1p"], { count: e.length }));
+        h.yr(t, void 0, k.intl.formatToPlainString(k.t["9h1/1p"], { count: e.length }));
     }
     return (
         ({ totalSize: o, largestUploadedFileSize: s } = await q(e, !0)),
-        (!e.some((e) => e.error === M.evJ.ENTITY_TOO_LARGE) && !(o > C.zz)) || (a(s), !1)
+        (!e.some((e) => e.error === j.evJ.ENTITY_TOO_LARGE) && !(o > C.zz)) || (a(s), !1)
     );
 }

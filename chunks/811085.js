@@ -9,14 +9,14 @@ var r = n(54381),
     u = n(531441),
     d = n(451284),
     f = n(959562),
-    _ = n(800530),
-    p = n(388032),
-    h = n(498714);
-let m = 36;
+    p = n(800530),
+    _ = n(388032),
+    m = n(498714);
+let h = 36;
 function g() {
     let e = (0, d.P)(),
         t = (0, o.e7)([c.default], () => c.default.getCurrentUser()),
-        [n, g] = i.useState(m),
+        [n, g] = i.useState(h),
         E = i.useRef({
             [u.Sn.ALL_GOOD]: null,
             [u.Sn.LIMITED]: null,
@@ -30,10 +30,10 @@ function g() {
                     Math.max(
                         ...Object.values(E.current).map((e) => {
                             var t;
-                            return null != (t = null == e ? void 0 : e.getBoundingClientRect().height) ? t : m;
+                            return null != (t = null == e ? void 0 : e.getBoundingClientRect().height) ? t : h;
                         }),
                     ),
-                    m,
+                    h,
                 ),
             );
         }, []);
@@ -44,70 +44,70 @@ function g() {
     }, [b]);
     let y = {
             [u.Sn.ALL_GOOD]: {
-                title: p.t.uaKrRi,
-                description: p.intl.format(p.t.pEdBD4, {
-                    termsOfService: _.sQ.TOS_LINK,
-                    communityGuidelines: _.sQ.COMMUNITY_GUIDELINES,
+                title: _.t.uaKrRi,
+                description: _.intl.format(_.t.pEdBD4, {
+                    termsOfService: p.sQ.TOS_LINK,
+                    communityGuidelines: p.sQ.COMMUNITY_GUIDELINES,
                 }),
-                status: p.t["/Idfao"],
+                status: _.t["/Idfao"],
                 Icon: l.owK,
                 color: s.Z.colors.STATUS_POSITIVE,
             },
             [u.Sn.LIMITED]: {
-                title: p.t.epkcmS,
-                description: p.intl.string(p.t["774juc"]),
-                status: p.t.umleq4,
+                title: _.t.epkcmS,
+                description: _.intl.string(_.t["774juc"]),
+                status: _.t.umleq4,
                 Icon: l.Mgn,
                 color: s.Z.colors.STATUS_WARNING,
             },
             [u.Sn.VERY_LIMITED]: {
-                title: p.t.crzE2X,
-                description: p.intl.string(p.t["T/Ufh9"]),
-                status: p.t.WBtMHf,
+                title: _.t.crzE2X,
+                description: _.intl.string(_.t["T/Ufh9"]),
+                status: _.t.WBtMHf,
                 Icon: l.Mgn,
                 color: s.Z.unsafe_rawColors.ORANGE_345,
             },
             [u.Sn.AT_RISK]: {
-                title: p.t.XRNVzO,
-                description: p.intl.string(p.t["hbH+9S"]),
-                status: p.t["7f+4Lg"],
+                title: _.t.XRNVzO,
+                description: _.intl.string(_.t["hbH+9S"]),
+                status: _.t["7f+4Lg"],
                 Icon: l.Mgn,
                 color: s.Z.colors.STATUS_DANGER,
             },
             [u.Sn.SUSPENDED]: {
-                title: p.t.MExFkz,
-                description: p.intl.string(p.t["2liUvt"]),
-                status: p.t["0OONGB"],
+                title: _.t.MExFkz,
+                description: _.intl.string(_.t["2liUvt"]),
+                status: _.t["0OONGB"],
                 Icon: l.k$p,
                 color: s.Z.colors.ICON_MUTED,
             },
         },
-        { title: O, description: v, color: I, Icon: T } = y[e.state],
-        S = Object.keys(y).length;
+        { title: O, description: v, color: S, Icon: I } = y[e.state],
+        T = Object.keys(y).length;
     return (0, r.jsxs)(l.Zbd, {
-        className: h.container,
+        className: m.container,
         outline: !1,
         children: [
             (0, r.jsx)("div", {
-                className: h.profile,
+                className: m.profile,
                 children: (0, r.jsx)(f.Z, {
                     user: t,
                     size: l.EFr.SIZE_80,
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: h.status,
+                className: m.status,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: h.title,
+                        className: m.title,
                         children: [
                             (0, r.jsx)(l.Heading, {
                                 color: "header-primary",
                                 variant: "heading-lg/normal",
-                                children: p.intl.format(O, {
+                                children: _.intl.format(O, {
                                     hook: (e) =>
                                         (0, r.jsx)(l.Text, {
-                                            style: { color: I.css },
+                                            style: { color: S.css },
                                             variant: "heading-lg/bold",
                                             tag: "span",
                                             children: e,
@@ -122,40 +122,40 @@ function g() {
                         ],
                     }),
                     (0, r.jsxs)("div", {
-                        className: h.health,
+                        className: m.health,
                         style: { height: n },
                         children: [
-                            (0, r.jsx)("div", { className: h.line }),
+                            (0, r.jsx)("div", { className: m.line }),
                             Object.entries(y).map((t, n) => {
                                 let [i, a] = t,
                                     o = parseInt(i) === e.state;
                                 return (0, r.jsxs)(
                                     "div",
                                     {
-                                        className: h.statusOption,
+                                        className: m.statusOption,
                                         ref: (e) => {
                                             E.current[parseInt(i)] = e;
                                         },
                                         children: [
                                             o
-                                                ? (0, r.jsx)(T, {
-                                                      className: h.marker,
+                                                ? (0, r.jsx)(I, {
+                                                      className: m.marker,
                                                       color: a.color,
                                                   })
                                                 : (0, r.jsx)("div", {
-                                                      className: h.marker,
+                                                      className: m.marker,
                                                       style: {
                                                           marginLeft: 0 === n ? -6 : 0,
-                                                          marginRight: n === S - 1 ? -6 : 0,
+                                                          marginRight: n === T - 1 ? -6 : 0,
                                                       },
-                                                      children: (0, r.jsx)("div", { className: h.empty }),
+                                                      children: (0, r.jsx)("div", { className: m.empty }),
                                                   }),
-                                            p.intl.format(a.status, {
+                                            _.intl.format(a.status, {
                                                 hook: (e) =>
                                                     (0, r.jsx)(l.Text, {
                                                         color: "text-default",
                                                         variant: "text-sm/normal",
-                                                        className: h.statusLabel,
+                                                        className: m.statusLabel,
                                                         children: e,
                                                     }),
                                             }),

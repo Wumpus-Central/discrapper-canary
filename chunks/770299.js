@@ -116,7 +116,7 @@ let o = (e) => r(/\b/, e, /\w$/.test(e) ? /\b/ : /\B/),
     ],
     d = ["false", "nil", "true"],
     f = ["assignment", "associativity", "higherThan", "left", "lowerThan", "none", "right"],
-    _ = [
+    p = [
         "#colorLiteral",
         "#column",
         "#dsohandle",
@@ -137,7 +137,7 @@ let o = (e) => r(/\b/, e, /\w$/.test(e) ? /\b/ : /\B/),
         "#sourceLocation",
         "#warning",
     ],
-    p = [
+    _ = [
         "abs",
         "all",
         "any",
@@ -173,7 +173,7 @@ let o = (e) => r(/\b/, e, /\w$/.test(e) ? /\b/ : /\B/),
         "withoutActuallyEscaping",
         "zip",
     ],
-    h = a(
+    m = a(
         /[/=\-+!*%<>&|^~?]/,
         /[\u00A1-\u00A7]/,
         /[\u00A9\u00AB]/,
@@ -193,8 +193,8 @@ let o = (e) => r(/\b/, e, /\w$/.test(e) ? /\b/ : /\B/),
         /[\u3008-\u3020]/,
         /[\u3030]/,
     ),
-    m = a(h, /[\u0300-\u036F]/, /[\u1DC0-\u1DFF]/, /[\u20D0-\u20FF]/, /[\uFE00-\uFE0F]/, /[\uFE20-\uFE2F]/),
-    g = r(h, m, "*"),
+    h = a(m, /[\u0300-\u036F]/, /[\u1DC0-\u1DFF]/, /[\u20D0-\u20FF]/, /[\uFE00-\uFE0F]/, /[\uFE20-\uFE2F]/),
+    g = r(m, h, "*"),
     E = a(
         /[a-zA-Z_]/,
         /[\u00A8\u00AA\u00AD\u00AF\u00B2-\u00B5\u00B7-\u00BA]/,
@@ -247,7 +247,7 @@ let o = (e) => r(/\b/, e, /\w$/.test(e) ? /\b/ : /\B/),
         "usableFromInline",
         "warn_unqualified_access",
     ],
-    I = [
+    S = [
         "iOS",
         "iOSApplicationExtension",
         "macOS",
@@ -266,16 +266,16 @@ e.exports = function (e) {
             relevance: 0,
         },
         i = e.COMMENT("/\\*", "\\*/", { contains: ["self"] }),
-        h = [e.C_LINE_COMMENT_MODE, i],
+        m = [e.C_LINE_COMMENT_MODE, i],
         E = {
             match: [/\./, a(...s, ...l)],
             className: { 2: "keyword" },
         },
-        T = {
+        I = {
             match: r(/\./, a(...u)),
             relevance: 0,
         },
-        S = u.filter((e) => "string" == typeof e).concat(["_|0"]),
+        T = u.filter((e) => "string" == typeof e).concat(["_|0"]),
         A = {
             variants: [
                 {
@@ -292,53 +292,53 @@ e.exports = function (e) {
         },
         C = {
             $pattern: a(/\b\w+/, /#\w+/),
-            keyword: S.concat(_),
+            keyword: T.concat(p),
             literal: d,
         },
-        N = [E, T, A],
-        R = [
+        N = [E, I, A],
+        P = [
             {
-                match: r(/\./, a(...p)),
+                match: r(/\./, a(..._)),
                 relevance: 0,
             },
             {
                 className: "built_in",
-                match: r(/\b/, a(...p), /(?=\()/),
+                match: r(/\b/, a(..._), /(?=\()/),
             },
         ],
-        P = {
+        R = {
             match: /->/,
             relevance: 0,
         },
-        D = [
-            P,
+        w = [
+            R,
             {
                 className: "operator",
                 relevance: 0,
-                variants: [{ match: g }, { match: `\\.(\\.|${m})+` }],
+                variants: [{ match: g }, { match: `\\.(\\.|${h})+` }],
             },
         ],
-        w = "([0-9]_*)+",
-        L = "([0-9a-fA-F]_*)+",
-        x = {
+        D = "([0-9]_*)+",
+        x = "([0-9a-fA-F]_*)+",
+        L = {
             className: "number",
             relevance: 0,
             variants: [
-                { match: `\\b(${w})(\\.(${w}))?([eE][+-]?(${w}))?\\b` },
-                { match: `\\b0x(${L})(\\.(${L}))?([pP][+-]?(${w}))?\\b` },
+                { match: `\\b(${D})(\\.(${D}))?([eE][+-]?(${D}))?\\b` },
+                { match: `\\b0x(${x})(\\.(${x}))?([pP][+-]?(${D}))?\\b` },
                 { match: /\b0o([0-7]_*)+\b/ },
                 { match: /\b0b([01]_*)+\b/ },
             ],
         },
-        M = (e = "") => ({
+        j = (e = "") => ({
             className: "subst",
             variants: [{ match: r(/\\/, e, /[0\\tnr"']/) }, { match: r(/\\/, e, /u\{[0-9a-fA-F]{1,8}\}/) }],
         }),
-        k = (e = "") => ({
+        M = (e = "") => ({
             className: "subst",
             match: r(/\\/, e, /[\t ]*(?:[\r\n]|\r\n)/),
         }),
-        j = (e = "") => ({
+        k = (e = "") => ({
             className: "subst",
             label: "interpol",
             begin: r(/\\/, e, /\(/),
@@ -347,18 +347,18 @@ e.exports = function (e) {
         U = (e = "") => ({
             begin: r(e, /"""/),
             end: r(/"""/, e),
-            contains: [M(e), k(e), j(e)],
+            contains: [j(e), M(e), k(e)],
         }),
         G = (e = "") => ({
             begin: r(e, /"/),
             end: r(/"/, e),
-            contains: [M(e), j(e)],
+            contains: [j(e), k(e)],
         }),
-        B = {
+        Z = {
             className: "string",
             variants: [U(), U("#"), U("##"), U("###"), G(), G("#"), G("##"), G("###")],
         },
-        Z = [
+        B = [
             e.BACKSLASH_ESCAPE,
             {
                 begin: /\[/,
@@ -370,7 +370,7 @@ e.exports = function (e) {
         F = {
             begin: /\/[^\s](?=[^/\n]*\/)/,
             end: /\//,
-            contains: Z,
+            contains: B,
         },
         V = (e) => {
             let t = r(e, /\//),
@@ -379,7 +379,7 @@ e.exports = function (e) {
                 begin: t,
                 end: n,
                 contains: [
-                    ...Z,
+                    ...B,
                     {
                         scope: "comment",
                         begin: `#(?!.*${n})`,
@@ -413,8 +413,8 @@ e.exports = function (e) {
                         {
                             begin: /\(/,
                             end: /\)/,
-                            keywords: I,
-                            contains: [...D, x, B],
+                            keywords: S,
+                            contains: [...w, L, Z],
                         },
                     ],
                 },
@@ -459,10 +459,10 @@ e.exports = function (e) {
             begin: /</,
             end: />/,
             keywords: C,
-            contains: [...h, ...N, ...K, P, z],
+            contains: [...m, ...N, ...K, R, z],
         };
     z.contains.push(q);
-    let X = {
+    let Q = {
             begin: /\(/,
             end: /\)/,
             relevance: 0,
@@ -474,23 +474,23 @@ e.exports = function (e) {
                     keywords: "_|0",
                     relevance: 0,
                 },
-                ...h,
+                ...m,
                 H,
                 ...N,
-                ...R,
-                ...D,
-                x,
-                B,
+                ...P,
+                ...w,
+                L,
+                Z,
                 ...W,
                 ...K,
                 z,
             ],
         },
-        Q = {
+        X = {
             begin: /</,
             end: />/,
             keywords: "repeat each",
-            contains: [...h, z],
+            contains: [...m, z],
         },
         J = {
             begin: /\(/,
@@ -512,14 +512,14 @@ e.exports = function (e) {
                         },
                     ],
                 },
-                ...h,
+                ...m,
                 ...N,
-                ...D,
-                x,
-                B,
+                ...w,
+                L,
+                Z,
                 ...K,
                 z,
-                X,
+                Q,
             ],
             endsParent: !0,
             illegal: /["']/,
@@ -530,13 +530,13 @@ e.exports = function (e) {
                 1: "keyword",
                 3: "title.function",
             },
-            contains: [Q, J, t],
+            contains: [X, J, t],
             illegal: [/\[/, /%/],
         },
         ee = {
             match: [/\b(?:subscript|init[?!]?)/, /\s*(?=[<(])/],
             className: { 1: "keyword" },
-            contains: [Q, J, t],
+            contains: [X, J, t],
             illegal: /\[|%/,
         },
         et = {
@@ -579,7 +579,7 @@ e.exports = function (e) {
             },
             keywords: C,
             contains: [
-                Q,
+                X,
                 ...N,
                 {
                     begin: /:/,
@@ -596,10 +596,10 @@ e.exports = function (e) {
                 },
             ],
         };
-    for (let e of B.variants) {
+    for (let e of Z.variants) {
         let t = e.contains.find((e) => "interpol" === e.label);
         t.keywords = C;
-        let n = [...N, ...R, ...D, x, B, ...W];
+        let n = [...N, ...P, ...w, L, Z, ...W];
         t.contains = [
             ...n,
             {
@@ -613,7 +613,7 @@ e.exports = function (e) {
         name: "Swift",
         keywords: C,
         contains: [
-            ...h,
+            ...m,
             $,
             ee,
             er,
@@ -624,19 +624,19 @@ e.exports = function (e) {
             {
                 beginKeywords: "import",
                 end: /$/,
-                contains: [...h],
+                contains: [...m],
                 relevance: 0,
             },
             H,
             ...N,
-            ...R,
-            ...D,
-            x,
-            B,
+            ...P,
+            ...w,
+            L,
+            Z,
             ...W,
             ...K,
             z,
-            X,
+            Q,
         ],
     };
 };

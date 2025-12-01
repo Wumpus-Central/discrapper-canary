@@ -1,40 +1,40 @@
 n.d(e, {
     Z: () =>
-        function t(e, n, r) {
-            var s, a, o, c, E, S;
-            let T = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+        function t(e, n, u) {
+            var s, a, o, c, d, E;
+            let S = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
             if (!n.has(e.key)) return null;
             if (!(0, i.Lk)(e))
                 return (
-                    r.register(
+                    u.register(
                         e,
-                        null == (c = T.panel) ? void 0 : c.key,
-                        null == (E = T.category) ? void 0 : E.key,
-                        null == (S = T.accordion) ? void 0 : S.key,
+                        null == (c = S.panel) ? void 0 : c.key,
+                        null == (d = S.category) ? void 0 : d.key,
+                        null == (E = S.accordion) ? void 0 : E.key,
                     ),
                     e
                 );
-            let d = T;
-            e.type === i.Jq.SIDEBAR_ITEM && (d = u(l({}, T), { panel: e.layout[0] })),
-                e.type === i.Jq.PANEL && (d = u(l({}, T), { panel: e })),
-                e.type === i.Jq.CATEGORY && (d = u(l({}, T), { category: e })),
-                e.type === i.Jq.ACCORDION && (d = u(l({}, T), { accordion: e }));
-            let I = e.layout.map((e) => t(e, n, r, d)).filter((t) => null != t);
+            let T = S;
+            e.type === i.Jq.SIDEBAR_ITEM && (T = l(r({}, S), { panel: e.layout[0] })),
+                e.type === i.Jq.PANEL && (T = l(r({}, S), { panel: e })),
+                e.type === i.Jq.CATEGORY && (T = l(r({}, S), { category: e })),
+                e.type === i.Jq.ACCORDION && (T = l(r({}, S), { accordion: e }));
+            let I = e.layout.map((e) => t(e, n, u, T)).filter((t) => null != t);
             if (0 === I.length && !("render" in e || (e.type === i.Jq.SIDEBAR_ITEM && "onClick" in e))) return null;
-            let O = u(l({}, e), { layout: I });
+            let g = l(r({}, e), { layout: I });
             return (
-                r.register(
-                    O,
-                    null == (s = d.panel) ? void 0 : s.key,
-                    null == (a = d.category) ? void 0 : a.key,
-                    null == (o = d.accordion) ? void 0 : o.key,
+                u.register(
+                    g,
+                    null == (s = T.panel) ? void 0 : s.key,
+                    null == (a = T.category) ? void 0 : a.key,
+                    null == (o = T.accordion) ? void 0 : o.key,
                 ),
-                O
+                g
             );
         },
 });
 var i = n(28682);
-function l(t) {
+function r(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
             i = Object.keys(n);
@@ -59,7 +59,7 @@ function l(t) {
     }
     return t;
 }
-function u(t, e) {
+function l(t, e) {
     return (
         (e = null != e ? e : {}),
         Object.getOwnPropertyDescriptors

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(54381);
 n(473749);
 var i = n(481060),
@@ -10,10 +10,10 @@ var i = n(481060),
     u = n(981631),
     d = n(388032),
     f = n(698311);
-let _ = (e) => {
+let p = (e) => {
     let { onClose: t } = e,
         { analyticsLocations: n } = (0, s.ZP)(),
-        _ = () => {
+        p = () => {
             t(),
                 (0, l.uL)(u.Z5c.COLLECTIBLES_SHOP),
                 (0, c.mK)({
@@ -40,7 +40,7 @@ let _ = (e) => {
                     checkItOut: (e) =>
                         (0, r.jsx)(i.P3F, {
                             className: f.link,
-                            onClick: _,
+                            onClick: p,
                             children: e,
                         }),
                 }),

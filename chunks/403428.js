@@ -12,25 +12,25 @@ function a(e, t, n) {
                 var a;
                 let u = n(s, e),
                     [d, f] = (0, i.Wu)([t], () => t.getEvaluationAndAssignment(s, u, o), [u]),
-                    _ = null == f ? void 0 : f.variantId,
-                    p = null != (a = null == f ? void 0 : f.trackedVariantId) ? a : _,
-                    h = null == f ? void 0 : f.revision,
-                    m = null == f ? void 0 : f.isOverride,
+                    p = null == f ? void 0 : f.variantId,
+                    _ = null != (a = null == f ? void 0 : f.trackedVariantId) ? a : p,
+                    m = null == f ? void 0 : f.revision,
+                    h = null == f ? void 0 : f.isOverride,
                     g = null == f ? void 0 : f.exposureTrackingEnabled;
                 if (
                     ((0, r.useEffect)(() => {
                         null != d &&
-                            null != p &&
-                            null != h &&
-                            !1 === m &&
+                            null != _ &&
+                            null != m &&
+                            !1 === h &&
                             !0 === g &&
-                            t.trackExperimentExposure(d, o, e.location, s, h, p);
-                    }, [u, d, p, h, e.location, m, g]),
-                    null == _)
+                            t.trackExperimentExposure(d, o, e.location, s, m, _);
+                    }, [u, d, _, m, e.location, h, g]),
+                    null == p)
                 )
                     return c;
                 {
-                    let e = l[_];
+                    let e = l[p];
                     return null != e ? e : c;
                 }
             },
@@ -40,16 +40,16 @@ function a(e, t, n) {
                     [a, u] = t.getEvaluationAndAssignment(s, i, o),
                     d = null == u ? void 0 : u.variantId,
                     f = null != (r = null == u ? void 0 : u.trackedVariantId) ? r : d,
-                    _ = null == u ? void 0 : u.revision,
-                    p = null == u ? void 0 : u.isOverride,
-                    h = null == u ? void 0 : u.exposureTrackingEnabled;
+                    p = null == u ? void 0 : u.revision,
+                    _ = null == u ? void 0 : u.isOverride,
+                    m = null == u ? void 0 : u.exposureTrackingEnabled;
                 if (
                     (null != a &&
                         null != f &&
-                        null != _ &&
-                        !1 === p &&
-                        !0 === h &&
-                        t.trackExperimentExposure(a, o, e.location, s, _, f),
+                        null != p &&
+                        !1 === _ &&
+                        !0 === m &&
+                        t.trackExperimentExposure(a, o, e.location, s, p, f),
                     null == d)
                 )
                     return c;

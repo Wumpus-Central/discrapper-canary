@@ -1,6 +1,6 @@
 n.d(t, {
     dO: () => l,
-    pq: () => _,
+    pq: () => p,
 }),
     n(388685);
 var r = n(688619),
@@ -30,7 +30,7 @@ let c = [1.3, 0.7],
     u = [0.98, 1],
     d = [0.75, 1.5],
     f = [1.45, 0.45];
-function _(e, t, n, r) {
+function p(e, t, n, r) {
     switch (t) {
         case "background":
         case "border":

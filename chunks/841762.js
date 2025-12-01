@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -57,11 +57,11 @@ function f(e, t) {
         e
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -69,7 +69,7 @@ function _(e, t) {
     }
     return i;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,9 +78,9 @@ function p(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function h(e) {
+function m(e) {
     var { alt: t } = e,
-        n = _(e, ["alt"]);
+        n = p(e, ["alt"]);
     let [a, o] = i.useState(!0);
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -99,9 +99,9 @@ function h(e) {
         ],
     });
 }
-function m(e) {
+function h(e) {
     var { src: t, backgroundSrc: n, alt: i, aspectRatio: a, className: s, imageChildClassName: c } = e,
-        d = _(e, ["src", "backgroundSrc", "alt", "aspectRatio", "className", "imageChildClassName"]);
+        d = p(e, ["src", "backgroundSrc", "alt", "aspectRatio", "className", "imageChildClassName"]);
     return (0, r.jsxs)("div", {
         className: o()(l.container, s),
         children: [
@@ -115,7 +115,7 @@ function m(e) {
                 style: { aspectRatio: a },
                 className: l.imageContainer,
                 children: (0, r.jsx)(
-                    h,
+                    m,
                     u(
                         {
                             src: t,

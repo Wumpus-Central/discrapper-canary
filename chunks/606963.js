@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function _(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,18 +49,18 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -84,7 +84,7 @@ function g(e, t) {
 function E(e) {
     let t, n;
     var { afk: a } = e,
-        s = m(e, ["afk"]);
+        s = h(e, ["afk"]);
     let [c, u] = i.useState(!1);
     return (
         a
@@ -92,7 +92,7 @@ function E(e) {
             : ((t = d.intl.string(d.t.FJSZVM)), (n = d.intl.string(d.t.etJjgW))),
         (0, r.jsx)(
             o.u_l,
-            _(
+            p(
                 {
                     size: "md",
                     title: t,
@@ -125,12 +125,12 @@ let b = () => {
     }
     let [o, l] = (0, a.Wu)([u.Z], () => [u.Z.shouldShowWarning(), u.Z.isAFKChannel()], []),
         d = i.useCallback(() => {
-            e.current = (0, s.h7j)((e) => (0, r.jsx)(E, _({ afk: l }, e)));
+            e.current = (0, s.h7j)((e) => (0, r.jsx)(E, p({ afk: l }, e)));
         }, [l]),
         f = i.useCallback(() => {
             (0, s.ZDy)(async () => {
                 let { default: e } = await n.e("41281").then(n.bind(n, 669732));
-                return (t) => (0, r.jsx)(e, h(_({}, t), { showHideSuppressWarning: !0 }));
+                return (t) => (0, r.jsx)(e, m(p({}, t), { showHideSuppressWarning: !0 }));
             }).then((t) => {
                 null != t && (e.current = t);
             });

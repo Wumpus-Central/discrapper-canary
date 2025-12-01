@@ -95,28 +95,28 @@ let f = {
     },
     saveAccountChanges(e, t) {
         a.Z.dispatch({ type: "USER_SETTINGS_MODAL_SUBMIT" });
-        let { username: n, email: s, emailToken: u, password: d, avatar: f, newPassword: _, discriminator: p } = e,
-            { close: h } = t,
-            m = {
+        let { username: n, email: s, emailToken: u, password: d, avatar: f, newPassword: p, discriminator: _ } = e,
+            { close: m } = t,
+            h = {
                 username: n,
                 email: s,
                 email_token: u,
                 password: d,
                 avatar: f,
-                new_password: _,
-                discriminator: null != p && "" !== p ? p : void 0,
+                new_password: p,
+                discriminator: null != _ && "" !== _ ? _ : void 0,
             },
             g = i.K.get(l.JkL),
             E = (0, c.xJ)();
-        null != E && null != g && ((m.push_provider = E), (m.push_token = g));
+        null != E && null != g && ((h.push_provider = E), (h.push_token = g));
         let b = i.K.get(l.scU);
         return (
-            null != c.mv && null != b && ((m.push_voip_provider = c.mv), (m.push_voip_token = b)),
+            null != c.mv && null != b && ((h.push_voip_provider = c.mv), (h.push_voip_token = b)),
             r.tn
                 .patch({
                     url: l.ANM.ME,
                     oldFormErrors: !0,
-                    body: m,
+                    body: h,
                     rejectWithError: !1,
                 })
                 .then(
@@ -135,19 +135,19 @@ let f = {
                                 user: t,
                             }),
                             void 0 !== f && (0, o.Z)({ avatarHash: t.avatar }),
-                            null != _ &&
+                            null != p &&
                                 a.Z.dispatch({
                                     type: "USER_PASSWORD_UPDATE",
                                     user: t,
-                                    newPassword: _,
+                                    newPassword: p,
                                 }),
                             null != d &&
-                                null != _ &&
+                                null != p &&
                                 a.Z.dispatch({
                                     type: "PASSWORD_UPDATED",
                                     userId: t.id,
                                 }),
-                            h ? this.close() : this.submitComplete(),
+                            m ? this.close() : this.submitComplete(),
                             e
                         );
                     },

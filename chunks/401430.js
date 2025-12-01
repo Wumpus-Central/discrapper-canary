@@ -1,7 +1,7 @@
 n.d(t, {
-    Wt: () => _,
-    mc: () => p,
-    q$: () => h,
+    Wt: () => p,
+    mc: () => _,
+    q$: () => m,
 }),
     n(415506),
     n(997841),
@@ -16,7 +16,7 @@ var r = n(95015),
     u = n(591759),
     d = n(978085),
     f = n(981631);
-async function _(e, t) {
+async function p(e, t) {
     i.Z.dispatch({
         applicationId: e,
         type: "DEVELOPER_TEST_MODE_AUTHORIZATION_START",
@@ -47,11 +47,11 @@ async function _(e, t) {
         );
     }
 }
-function p() {
+function _() {
     l.oq.getState().activePanel === l.wh.APPLICATION_TEST_MODE_DEBUG && (0, l.Ll)(),
         i.Z.dispatch({ type: "DEVELOPER_TEST_MODE_RESET" });
 }
-function h() {
+function m() {
     l.oq.getState().activePanel === l.wh.APPLICATION_TEST_MODE_DEBUG && (0, l.Ll)(),
         i.Z.dispatch({ type: "DEVELOPER_TEST_MODE_RESET_ERROR" });
 }

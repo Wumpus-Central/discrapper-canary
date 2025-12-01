@@ -14,13 +14,13 @@ var r = n(54381),
     u = n(607070),
     d = n(706454),
     f = n(70956),
-    _ = n(506071),
-    p = n(719247),
-    h = n(561308),
-    m = n(284635);
+    p = n(506071),
+    _ = n(719247),
+    m = n(561308),
+    h = n(284635);
 function g(e) {
     let [t, n] = i.useState(Date.now()),
-        r = (0, _.n)(),
+        r = (0, p.n)(),
         a = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         o = !r || (a && !e);
     return (
@@ -50,44 +50,44 @@ let E = (e) => {
                 bold: d = !1,
                 scaleFontToUserSetting: f = !1,
             } = e,
-            { now: _ } = g(u),
-            p = i.useMemo(() => (0, h.T_)(t, _), [t, _]),
-            E = i.useRef(p),
-            b = i.useRef(p);
+            { now: p } = g(u),
+            _ = i.useMemo(() => (0, m.T_)(t, p), [t, p]),
+            E = i.useRef(_),
+            b = i.useRef(_);
         return (
             i.useEffect(() => {
-                b.current = p;
+                b.current = _;
             }),
             i.useEffect(() => {
                 E.current = b.current;
             }, [t]),
             (0, r.jsx)(c.Text, {
                 className: o()({
-                    [m.fontCode]: l,
-                    [m.bold]: d,
-                    [m.inlineTimestamp]: n,
+                    [h.fontCode]: l,
+                    [h.bold]: d,
+                    [h.inlineTimestamp]: n,
                 }),
                 variant: "text-xs/medium",
                 tabularNumbers: s,
                 color: a,
                 scaleFontToUserSetting: f,
                 "aria-label": E.current,
-                children: p,
+                children: _,
             })
         );
     },
     b = (e) => {
         var t, n;
         let { entry: i, textColor: a, hovered: o = !1, bold: l = !1, scaleFontToUserSetting: u = !1 } = e,
-            f = (0, h.Jg)(i),
-            _ = (0, s.e7)([d.default], () => d.default.locale),
-            m = (0, s.e7)([p.Z], () => p.Z.getMatchingActivity(i)),
+            f = (0, m.Jg)(i),
+            p = (0, s.e7)([d.default], () => d.default.locale),
+            h = (0, s.e7)([_.Z], () => _.Z.getMatchingActivity(i)),
             g =
-                null != (n = null == m || null == (t = m.timestamps) ? void 0 : t.start)
+                null != (n = null == h || null == (t = h.timestamps) ? void 0 : t.start)
                     ? n
-                    : null == m
+                    : null == h
                       ? void 0
-                      : m.created_at;
+                      : h.created_at;
         return null != g
             ? (0, r.jsx)(E, {
                   entry: { start: g },
@@ -109,6 +109,6 @@ let E = (e) => {
                     color: a,
                     lineClamp: 1,
                     scaleFontToUserSetting: u,
-                    children: (0, h.GL)(i, _),
+                    children: (0, m.GL)(i, p),
                 });
     };

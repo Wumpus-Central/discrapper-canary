@@ -11,7 +11,7 @@ function u(e) {
     let { message: t, channel: n, compact: u } = e,
         d = (0, a.ZP)(t),
         f = t.application,
-        _ = (0, o.l)({
+        p = (0, o.l)({
             user: t.author,
             channelId: n.id,
             guildId: n.guild_id,
@@ -28,7 +28,7 @@ function u(e) {
         children: (0, l.A)({
             application: f,
             username: d.nick,
-            usernameHook: _(d),
+            usernameHook: p(d),
         }),
     });
 }

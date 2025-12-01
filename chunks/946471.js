@@ -1,10 +1,10 @@
-function a(t, e) {
-    var _, a, n, o;
-    let E = e && e.getDsn(),
-        i = e && e.getOptions().tunnel;
-    return (_ = t), (!!(a = E) && _.includes(a.host)) || ((n = t), !!(o = i) && r(n) === r(o));
+function n(e, t) {
+    var r, n, i, o;
+    let _ = t && t.getDsn(),
+        s = t && t.getOptions().tunnel;
+    return (r = e), (!!(n = _) && r.includes(n.host)) || ((i = e), !!(o = s) && a(i) === a(o));
 }
-function r(t) {
-    return "/" === t[t.length - 1] ? t.slice(0, -1) : t;
+function a(e) {
+    return "/" === e[e.length - 1] ? e.slice(0, -1) : e;
 }
-_.d(e, { W: () => a });
+r.d(t, { W: () => n });

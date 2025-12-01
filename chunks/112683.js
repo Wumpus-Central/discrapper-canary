@@ -1,5 +1,5 @@
 n.d(t, {
-    Av: () => h,
+    Av: () => m,
     gP: () => d,
 });
 var r = n(473749);
@@ -41,7 +41,7 @@ function c(e) {
 }
 function u(e) {
     let t = r.useId(),
-        [n] = (0, r.useState)(h()),
+        [n] = (0, r.useState)(m()),
         a = n ? "react-aria" : `react-aria${i.prefix}`;
     return e || `${a}-${t}`;
 }
@@ -49,12 +49,12 @@ let d = "function" == typeof r.useId ? u : c;
 function f() {
     return !1;
 }
-function _() {
+function p() {
     return !0;
 }
-function p(e) {
+function _(e) {
     return () => {};
 }
-function h() {
-    return "function" == typeof r.useSyncExternalStore ? r.useSyncExternalStore(p, f, _) : (0, r.useContext)(o);
+function m() {
+    return "function" == typeof r.useSyncExternalStore ? r.useSyncExternalStore(_, f, p) : (0, r.useContext)(o);
 }

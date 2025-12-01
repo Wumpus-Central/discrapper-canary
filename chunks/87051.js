@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685), n(997841);
+n.d(t, { Z: () => m }), n(388685), n(997841);
 var r = n(95015),
     i = n(544891),
     a = n(780384),
@@ -9,9 +9,9 @@ var r = n(95015),
     u = n(709054),
     d = n(981631),
     f = n(468788),
-    _ = n(526761),
-    p = n(388032);
-let h = {
+    p = n(526761),
+    _ = n(388032);
+let m = {
     open(e) {
         o.Z.dispatch({
             type: "NOTIFICATION_SETTINGS_MODAL_OPEN",
@@ -79,7 +79,7 @@ let h = {
                 channelId: t,
                 settings: n,
             }),
-            a.uv.announce(p.intl.string(p.t.MlIsJ8)),
+            a.uv.announce(_.intl.string(_.t.MlIsJ8)),
             (0, c.jz)({
                 guildId: e,
                 channelId: t,
@@ -120,7 +120,7 @@ let h = {
                 channelId: t,
                 settings: r,
             }),
-            a.uv.announce(p.intl.string(p.t.MlIsJ8)),
+            a.uv.announce(_.intl.string(_.t.MlIsJ8)),
             (0, c.jz)({
                 updateType: f.I.AUTHORIZED_APP_DM,
                 guildId: e,
@@ -132,8 +132,8 @@ let h = {
             });
     },
     setForumThreadsCreated(e, t) {
-        let n = t ? _.ic.NEW_FORUM_THREADS_ON : _.ic.NEW_FORUM_THREADS_OFF,
-            r = t ? _.ic.NEW_FORUM_THREADS_OFF : _.ic.NEW_FORUM_THREADS_ON,
+        let n = t ? p.ic.NEW_FORUM_THREADS_ON : p.ic.NEW_FORUM_THREADS_OFF,
+            r = t ? p.ic.NEW_FORUM_THREADS_OFF : p.ic.NEW_FORUM_THREADS_ON,
             i = (l.ZP.getChannelFlags(e) & ~r) | n;
         this.updateChannelOverrideSettings(e.guild_id, e.id, { flags: i }, c.UE.forumThreadsCreated(t));
     },

@@ -20,14 +20,14 @@ function d(e, t, n) {
     );
 }
 let f = "hideSuppressWarning",
-    _ = !1,
-    p = !0,
-    h = !1;
-function m(e) {
-    (r = e.sessionId), (_ = !1);
+    p = !1,
+    _ = !0,
+    m = !1;
+function h(e) {
+    (r = e.sessionId), (p = !1);
 }
 function g() {
-    (r = null), (i = null), (p = !0);
+    (r = null), (i = null), (_ = !0);
 }
 function E(e) {
     let { voiceStates: t } = e;
@@ -35,20 +35,20 @@ function E(e) {
         (e, t) =>
             r !== t.sessionId
                 ? e
-                : (_ !== t.suppress && (p = !(_ = t.suppress)),
-                  i !== t.channelId && ((i = t.channelId), (p = !_)),
-                  (h || null == t.channelId) && (p = !0),
+                : (p !== t.suppress && (_ = !(p = t.suppress)),
+                  i !== t.channelId && ((i = t.channelId), (_ = !p)),
+                  (m || null == t.channelId) && (_ = !0),
                   !0),
         !1,
     );
 }
 function b(e) {
     let { forever: t } = e;
-    (p = !0), t && ((h = !0), s.K.set(f, h));
+    (_ = !0), t && ((m = !0), s.K.set(f, m));
 }
 class y extends (a = o.ZP.Store) {
     initialize() {
-        this.waitFor(c.Z, u.Z), (h = s.K.get(f) || h);
+        this.waitFor(c.Z, u.Z), (m = s.K.get(f) || m);
     }
     isAFKChannel() {
         let e = c.Z.getChannel(i);
@@ -58,12 +58,12 @@ class y extends (a = o.ZP.Store) {
     }
     shouldShowWarning() {
         var e;
-        return !(null == (e = c.Z.getChannel(i)) ? void 0 : e.isGuildStageVoice()) && !p;
+        return !(null == (e = c.Z.getChannel(i)) ? void 0 : e.isGuildStageVoice()) && !_;
     }
 }
 d(y, "displayName", "PermissionSpeakStore");
 let O = new y(l.Z, {
-    CONNECTION_OPEN: m,
+    CONNECTION_OPEN: h,
     CONNECTION_CLOSED: g,
     VOICE_STATE_UPDATES: E,
     PERMISSION_CLEAR_SUPPRESS_WARNING: b,

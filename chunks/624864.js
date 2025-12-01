@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685), n(467055);
+n.d(t, { Z: () => S }), n(388685), n(467055);
 var r,
     i = n(442837),
     a = n(570140),
@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,28 +58,28 @@ function _(e, t) {
         e
     );
 }
-function p() {
+function _() {
     return g();
 }
-function h() {
+function m() {
     return {
         gameSettings: {},
         notificationSettings: new Set(),
     };
 }
-let m = h();
+let h = m();
 function g() {
-    m = h();
+    h = m();
 }
 function E(e) {
     let { applicationId: t, enabled: n } = e;
-    return (m.gameSettings[t] = { limitedInteractionOverride: n }), !0;
+    return (h.gameSettings[t] = { limitedInteractionOverride: n }), !0;
 }
 function b(e) {
     let { setting: t, disabled: n } = e;
     return (
-        n ? m.notificationSettings.add(t) : m.notificationSettings.delete(t),
-        (m.notificationSettings = new Set(m.notificationSettings)),
+        n ? h.notificationSettings.add(t) : h.notificationSettings.delete(t),
+        (h.notificationSettings = new Set(h.notificationSettings)),
         !0
     );
 }
@@ -116,7 +116,7 @@ function y(e) {
 }
 function O(e) {
     let { overlayNotificationSettings: t } = e;
-    m.notificationSettings = new Set(t.notificationSettings);
+    h.notificationSettings = new Set(t.notificationSettings);
     let n = Object.fromEntries(
         Object.entries(t.gameSettings)
             .filter((e) => {
@@ -129,13 +129,13 @@ function O(e) {
                 return [n, { limitedInteractionOverride: null != (t = r.limitedInteractionOverride) ? t : void 0 }];
             }),
     );
-    m.gameSettings = d({}, m.gameSettings, n);
+    h.gameSettings = d({}, h.gameSettings, n);
 }
 class v extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         var t;
-        let n = h();
-        (m = _(d({}, n, null != e ? e : {}), {
+        let n = m();
+        (h = p(d({}, n, null != e ? e : {}), {
             notificationSettings: new Set(
                 null != (t = null == e ? void 0 : e.notificationSettings) ? t : n.notificationSettings,
             ),
@@ -145,39 +145,39 @@ class v extends (r = i.ZP.PersistedStore) {
     getInitialOverlayState() {
         return {
             gameSettings: Object.fromEntries(
-                Object.entries(m.gameSettings).map((e) => {
+                Object.entries(h.gameSettings).map((e) => {
                     var t;
                     let [n, r] = e;
                     return [n, { limitedInteractionOverride: null != (t = r.limitedInteractionOverride) ? t : null }];
                 }),
             ),
-            notificationSettings: Array.from(m.notificationSettings),
+            notificationSettings: Array.from(h.notificationSettings),
         };
     }
     getState() {
-        return m;
+        return h;
     }
     isLimitedInteractionOverrideEnabled(e) {
         var t, n;
-        return null != e && null != (n = null == (t = m.gameSettings[e]) ? void 0 : t.limitedInteractionOverride) && n;
+        return null != e && null != (n = null == (t = h.gameSettings[e]) ? void 0 : t.limitedInteractionOverride) && n;
     }
     isNotificationDisabledBySetting(e) {
-        return m.notificationSettings.has(e);
+        return h.notificationSettings.has(e);
     }
     isNotificationDisabled(e) {
         let t = y(e);
-        return null != t && m.notificationSettings.has(t);
+        return null != t && h.notificationSettings.has(t);
     }
     getDisabledNotifications() {
-        return m.notificationSettings;
+        return h.notificationSettings;
     }
     getDisabledSettingByNotificationType(e) {
         return y(e);
     }
 }
 u(v, "displayName", "OverlaySettingsStore"), u(v, "persistKey", "OverlaySettingsStore");
-let I = new v(a.Z, {
-    LOGOUT: p,
+let S = new v(a.Z, {
+    LOGOUT: _,
     OVERLAY_SET_LIMITED_INTERACTION_OVERRIDE: E,
     OVERLAY_SET_NOTIFICATION_DISABLED_SETTING: b,
     OVERLAY_INITIALIZE: O,

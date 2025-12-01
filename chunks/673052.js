@@ -11,18 +11,18 @@ var i = n(481060),
 function d(e) {
     let { message: t, channel: n, compact: d } = e,
         f = (0, o.ZP)(t),
-        _ = (0, s.l)({
+        p = (0, s.l)({
             user: t.author,
             channelId: n.id,
             guildId: n.guild_id,
             messageId: t.id,
         })(f),
-        p = (0, a.q)(t.applicationId);
-    if (null == p) return null;
-    let h = c.intl.format(c.t.mAtJTC, {
+        _ = (0, a.q)(t.applicationId);
+    if (null == _) return null;
+    let m = c.intl.format(c.t.mAtJTC, {
         username: t.author.username,
-        usernameHook: _,
-        applicationName: p.name,
+        usernameHook: p,
+        applicationName: _.name,
         applicationNameHook: () =>
             (0, r.jsx)(
                 i.Text,
@@ -30,9 +30,9 @@ function d(e) {
                     className: u.applicationName,
                     variant: "text-md/semibold",
                     color: "header-primary",
-                    children: p.name,
+                    children: _.name,
                 },
-                p.name,
+                _.name,
             ),
         helpdeskArticle: "#",
     });
@@ -44,6 +44,6 @@ function d(e) {
         timestamp: t.timestamp,
         compact: d,
         contentClassName: u.systemMessage,
-        children: h,
+        children: m,
     });
 }

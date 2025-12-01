@@ -1,4 +1,4 @@
-n.d(t, { C: () => m });
+n.d(t, { C: () => h });
 var r = n(36056),
     i = n(950697),
     a = n(614456),
@@ -9,10 +9,10 @@ var r = n(36056),
     u = n(320215),
     d = n(660284),
     f = n(838390),
-    _ = n(284267),
-    p = n(973408),
-    h = n(647943);
-class m {
+    p = n(284267),
+    _ = n(973408),
+    m = n(647943);
+class h {
     constructor(e, t, n) {
         (this.defaultCheckDepth = 16),
             (this.typeName = e),
@@ -33,7 +33,7 @@ class m {
         return (0, u.l)(this, t, e), t;
     }
     equals(e, t) {
-        return (0, _.Y)(this, e, t);
+        return (0, p.Y)(this, e, t);
     }
     is(e, t = this.defaultCheckDepth) {
         return this.refTypeCheck.is(e, t, !1);
@@ -45,7 +45,7 @@ class m {
         (0, u.l)(this, e, t);
     }
     fromBinary(e, t) {
-        let n = (0, h.Z)(t);
+        let n = (0, m.Z)(t);
         return this.internalBinaryRead(n.readerFactory(e), e.byteLength, n);
     }
     fromJson(e, t) {
@@ -63,7 +63,7 @@ class m {
         return JSON.stringify(this.toJson(e, t), null, null != (n = null == t ? void 0 : t.prettySpaces) ? n : 0);
     }
     toBinary(e, t) {
-        let n = (0, p.X)(t);
+        let n = (0, _.X)(t);
         return this.internalBinaryWrite(e, n.writerFactory(), n).finish();
     }
     internalJsonRead(e, t, n) {

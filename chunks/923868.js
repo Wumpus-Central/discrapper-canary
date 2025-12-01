@@ -12,9 +12,9 @@ function s(e, t) {
         u,
         d,
         f,
-        _,
-        p = (0, o.j)(),
-        h = (0, i.Z)(
+        p,
+        _ = (0, o.j)(),
+        m = (0, i.Z)(
             null !=
                 (n =
                     null !=
@@ -27,17 +27,17 @@ function s(e, t) {
                                   ? void 0
                                   : d.weekStartsOn)
                             ? l
-                            : p.weekStartsOn)
+                            : _.weekStartsOn)
                         ? s
-                        : null == (f = p.locale) || null == (_ = f.options)
+                        : null == (f = _.locale) || null == (p = f.options)
                           ? void 0
-                          : _.weekStartsOn)
+                          : p.weekStartsOn)
                 ? n
                 : 0,
         );
-    if (!(h >= 0 && h <= 6)) throw RangeError("weekStartsOn must be between 0 and 6 inclusively");
-    var m = (0, r.default)(e),
-        g = m.getDay(),
-        E = 7 * (g < h) + g - h;
-    return m.setDate(m.getDate() - E), m.setHours(0, 0, 0, 0), m;
+    if (!(m >= 0 && m <= 6)) throw RangeError("weekStartsOn must be between 0 and 6 inclusively");
+    var h = (0, r.default)(e),
+        g = h.getDay(),
+        E = 7 * (g < m) + g - m;
+    return h.setDate(h.getDate() - E), h.setHours(0, 0, 0, 0), h;
 }

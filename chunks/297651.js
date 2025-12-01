@@ -14,8 +14,8 @@ function m(e, t) {
         p = (0, l.e7)([o.Z], () => o.Z.getProduct(e)),
         h = (0, d.x)(),
         x = r.ZP.canUseCollectibles(h),
-        g = a.useRef(null),
-        f = a.useCallback(() => {
+        f = a.useRef(null),
+        g = a.useCallback(() => {
             let a = null != p ? (0, c.Vw)(p, x, !1) : null,
                 l = null != p ? (0, c.eu)(p, x, !1) : void 0;
             i.default.track(u.rMx.COLLECTIBLES_TILE_IMPRESSION, {
@@ -46,18 +46,18 @@ function m(e, t) {
         b = a.useCallback(
             (e) => {
                 e
-                    ? null === g.current &&
-                      (g.current = setTimeout(() => {
-                          f(), (g.current = null);
+                    ? null === f.current &&
+                      (f.current = setTimeout(() => {
+                          g(), (f.current = null);
                       }, 1000))
-                    : null !== g.current && (clearTimeout(g.current), (g.current = null));
+                    : null !== f.current && (clearTimeout(f.current), (f.current = null));
             },
-            [f],
+            [g],
         );
     return (
         a.useEffect(
             () => () => {
-                null !== g.current && (clearTimeout(g.current), (g.current = null));
+                null !== f.current && (clearTimeout(f.current), (f.current = null));
             },
             [],
         ),

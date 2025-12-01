@@ -140,7 +140,7 @@ class f {
             (this.endImportTime = 0);
     }
 }
-class _ {
+class p {
     get time() {
         return this.time_;
     }
@@ -182,7 +182,7 @@ class _ {
             (this.importTime = 0);
     }
 }
-class p {
+class _ {
     get time() {
         return this.time_;
     }
@@ -193,7 +193,7 @@ class p {
         a(this, "time_", 0);
     }
 }
-class h {
+class m {
     constructor() {
         a(this, "loadIndex", new f("\u2757", "Load index.tsx")),
             a(this, "loadFastConnectNativeModule", new f("\uD83D\uDCBE", "Load fast_connect native module")),
@@ -206,15 +206,15 @@ class h {
             a(this, "fetchGuildCache", new f("\uD83D\uDCBE", "Fetch Guild Cache")),
             a(this, "fetchGuildChannelsCache", new f("\uD83D\uDCBE", "Fetch Initial Guild Channels Cache")),
             a(this, "loadCachedMessages", new f("\uD83D\uDCBE", "Load Cached Messages")),
-            a(this, "renderApp", new _("\uD83C\uDFA8", "First React Render")),
-            a(this, "renderAppEffect", new _("\uD83C\uDFA8", "First React Render useEffect")),
-            a(this, "firstContentfulPaint", new _("\uD83C\uDFA8", "First Contentful Paint", !1, !0)),
-            a(this, "renderMessages", new _("\uD83C\uDFA8", "React Render Messages", !0)),
-            a(this, "renderMessagesWithCache", new _("\uD83C\uDFA8", "React Render Cached Messages", !0)),
+            a(this, "renderApp", new p("\uD83C\uDFA8", "First React Render")),
+            a(this, "renderAppEffect", new p("\uD83C\uDFA8", "First React Render useEffect")),
+            a(this, "firstContentfulPaint", new p("\uD83C\uDFA8", "First Contentful Paint", !1, !0)),
+            a(this, "renderMessages", new p("\uD83C\uDFA8", "React Render Messages", !0)),
+            a(this, "renderMessagesWithCache", new p("\uD83C\uDFA8", "React Render Cached Messages", !0)),
             a(this, "firstRowGenerator", new f("\uD83C\uDFA8", "RowGenerator.generate()")),
-            a(this, "displayMessagesWithCache", new _("\uD83D\uDDA5️", "Display Cached Messages", !1, !0)),
-            a(this, "renderLatestMessages", new _("\uD83C\uDFA8", "React Render Latest Messages")),
-            a(this, "displayLatestMessages", new _("\uD83D\uDDA5️", "Display Latest Messages")),
+            a(this, "displayMessagesWithCache", new p("\uD83D\uDDA5️", "Display Cached Messages", !1, !0)),
+            a(this, "renderLatestMessages", new p("\uD83C\uDFA8", "React Render Latest Messages")),
+            a(this, "displayLatestMessages", new p("\uD83D\uDDA5️", "Display Latest Messages")),
             a(this, "initialGuild", new f("\uD83C\uDF10", "Initial Guild")),
             a(this, "loadLazyCache", new f("\uD83D\uDCBE", "Load Lazy Cache")),
             a(this, "fetchLazyCache", new f("\uD83D\uDCBE", "Fetch Lazy Cache")),
@@ -233,17 +233,17 @@ class h {
             a(this, "fetchMessages", new f("\uD83C\uDF10", "Fetch messages")),
             a(this, "dispatchMessages", new f("\uD83C\uDF10", "Dispatch messages")),
             a(this, "imports", {
-                polyfillsEnd: new p(),
-                sentryEnd: new p(),
-                appStateChangeStart: new p(),
-                appStateChangeEnd: new p(),
-                loadMiniCacheStart: new p(),
-                loadStorageStart: new p(),
-                loadStorageEnd: new p(),
+                polyfillsEnd: new _(),
+                sentryEnd: new _(),
+                appStateChangeStart: new _(),
+                appStateChangeEnd: new _(),
+                loadMiniCacheStart: new _(),
+                loadStorageStart: new _(),
+                loadStorageEnd: new _(),
             });
     }
 }
-class m extends h {
+class h extends m {
     setTTICallback(e) {
         c = () => {
             !0 === e() && (c = () => !1);
@@ -572,4 +572,4 @@ class m extends h {
             a(this, "extraProperties", {});
     }
 }
-let g = new m();
+let g = new h();

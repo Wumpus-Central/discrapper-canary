@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(240872),
     d = n(19780),
     f = n(942389),
-    _ = n(572004),
-    p = n(63063),
-    h = n(358085),
-    m = n(145022),
+    p = n(572004),
+    _ = n(63063),
+    m = n(358085),
+    h = n(145022),
     g = n(981631),
     E = n(388032),
     b = n(322108);
@@ -25,13 +25,13 @@ function O(e) {
         s = i.useRef(void 0),
         l = i.useCallback(() => {
             n ||
-                (0, _.JG)(t, () => {
+                (0, p.JG)(t, () => {
                     a(!0), (s.current = setTimeout(() => a(!1), 2000));
                 });
         }, [t, n]);
     return (
         i.useEffect(() => () => clearTimeout(s.current), []),
-        _.wS
+        p.wS
             ? (0, r.jsxs)(c.P3F, {
                   className: o()(b.copyLink, n ? b.copied : null),
                   onClick: l,
@@ -61,7 +61,7 @@ function v() {
         ],
     });
 }
-function I(e) {
+function S(e) {
     let {
         subHead: t,
         buildDetails: n,
@@ -98,18 +98,18 @@ function I(e) {
         ],
     });
 }
-function T(e) {
+function I(e) {
     let t,
         n,
         r,
         { currentOverrides: i, linkMeta: a, applyBuildOverride: o, clearBuildOverride: s, submitting: c } = e,
         f = ["discord_web"];
-    h.isPlatformEmbedded || f.push("discord_marketing", "discord_developers");
-    let _ = (0, m.Z)(a, f);
-    if (!_.valid) return S(_.reason);
+    m.isPlatformEmbedded || f.push("discord_marketing", "discord_developers");
+    let p = (0, h.Z)(a, f);
+    if (!p.valid) return T(p.reason);
     l()(null != a, "BuildOverrideEmbed.renderResolved: linkMeta should never be null if resolved");
-    let { discord_web: p, discord_developers: g } = a.targetBuildOverride,
-        b = null != p ? p : g;
+    let { discord_web: _, discord_developers: g } = a.targetBuildOverride,
+        b = null != _ ? _ : g;
     l()(
         null != b,
         "BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web or linkMeta.targetBuildOverride.discord_developers should never be null if resolved",
@@ -129,7 +129,7 @@ function T(e) {
               })
             : t();
     };
-    return I({
+    return S({
         subHead: E.intl.string(E.t.RCYGot),
         buildDetails: b.id,
         buttonClick: O,
@@ -138,8 +138,8 @@ function T(e) {
         submitting: c,
     });
 }
-function S(e) {
-    return I({
+function T(e) {
+    return S({
         subHead: E.intl.string(E.t.ODXApH),
         variant: "secondary",
         buttonText: "Invalid",
@@ -161,7 +161,7 @@ function A(e, t, n) {
             }),
             (0, r.jsx)(c.Anchor, {
                 className: b.infoLink,
-                href: p.Z.getArticleURL(g.BhN.BUILD_OVERRIDE_EMBED),
+                href: _.Z.getArticleURL(g.BhN.BUILD_OVERRIDE_EMBED),
                 target: "_blank",
                 children: (0, r.jsx)(c.d3s, {
                     size: "xs",
@@ -179,7 +179,7 @@ let C = (e) => {
         d = i.useCallback(() => {
             c || (u(!0), s().catch(() => u(!1)));
         }, [s, c]),
-        _ = i.useCallback(() => {
+        p = i.useCallback(() => {
             c || (u(!0), l().catch(() => u(!1)));
         }, [l, c]);
     return (0, r.jsxs)("div", {
@@ -192,11 +192,11 @@ let C = (e) => {
                     (0, r.jsx)(f.Z, { className: b.icon }),
                     t
                         ? v()
-                        : T({
+                        : I({
                               currentOverrides: n,
                               linkMeta: a,
                               applyBuildOverride: d,
-                              clearBuildOverride: _,
+                              clearBuildOverride: p,
                               submitting: c,
                           }),
                 ],

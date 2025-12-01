@@ -1,6 +1,6 @@
 n.d(t, {
     K: () => g,
-    i: () => m,
+    i: () => h,
 }),
     n(388685),
     n(35282);
@@ -14,10 +14,10 @@ var r = n(933557),
     u = n(485386),
     d = n(430824),
     f = n(594174),
-    _ = n(483360),
-    p = n(709054),
-    h = n(752305);
-function m(e, t, n, r) {
+    p = n(483360),
+    _ = n(709054),
+    m = n(752305);
+function h(e, t, n, r) {
     let { allowUsers: i = !0, allowRoles: a = !0 } = null != r ? r : {};
     switch (e[0]) {
         case "@":
@@ -30,8 +30,8 @@ function m(e, t, n, r) {
     return null;
 }
 function g(e, t, n, r) {
-    let i = m(e, t, n, r);
-    return null == i ? null : (0, h.VI)(i);
+    let i = h(e, t, n, r);
+    return null == i ? null : (0, m.VI)(i);
 }
 function E(e, t, n, r, i) {
     let [a, o] = e.slice(1).split("#", 2),
@@ -79,14 +79,14 @@ function y(e, t) {
     if (null == t) return null;
     n = e.length > 3 && '"' === e[1] && '"' === e[e.length - 1] ? (0, r.mA)(e.slice(2, e.length - 1)) : e.slice(1);
     let i = l.ZP.getTextChannelNameDisambiguations(t);
-    for (let e of p.default.keys(i))
+    for (let e of _.default.keys(i))
         if (i[e].name === n)
             return {
                 type: "channelMention",
                 channelId: e,
                 children: [{ text: "" }],
             };
-    for (let e of _.k1)
+    for (let e of p.k1)
         if (e !== l.sH) {
             for (let { channel: r } of l.ZP.getChannels(t)[e])
                 if (r.name === n)
@@ -97,8 +97,8 @@ function y(e, t) {
                     };
         }
     let a = o.Z.getActiveJoinedThreadsForGuild(t);
-    for (let e of p.default.keys(a))
-        for (let t of p.default.keys(a[e])) {
+    for (let e of _.default.keys(a))
+        for (let t of _.default.keys(a[e])) {
             let { channel: r } = a[e][t];
             if (r.name === n)
                 return {

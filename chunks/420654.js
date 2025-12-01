@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(892001),
     d = n(280885),
     f = n(388032),
-    _ = n(108670);
-function p(e, t, n) {
+    p = n(108670);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,12 +34,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -56,7 +56,7 @@ function g(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -64,36 +64,36 @@ function g(e, t) {
 }
 let E = 57.75,
     b = i.memo(function (e) {
-        let { user: t, onClose: n, bio: a, hidePersonalInformation: p, viewFullBioDisabled: m = !1 } = e,
+        let { user: t, onClose: n, bio: a, hidePersonalInformation: _, viewFullBioDisabled: h = !1 } = e,
             { context: b } = (0, c.KZ)(),
             { analyticsLocations: y } = (0, l.ZP)(),
             [O, v] = i.useState(!1),
-            [I, T] = i.useState(!1),
-            S = i.useRef(null),
+            [S, I] = i.useState(!1),
+            T = i.useRef(null),
             A = (e) => {
-                (S.current = e),
+                (T.current = e),
                     null != e &&
-                        (v(!I && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > E && T(!0));
+                        (v(!S && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > E && I(!0));
             },
             C = () => {
                 null == n || n(),
                     (0, u.openUserProfileModal)(
-                        g(h({}, b), {
+                        g(m({}, b), {
                             userId: t.id,
                             sourceAnalyticsLocations: y,
                         }),
                     );
             },
             N = (e) => {
-                null == S.current || S.current.contains(e.relatedTarget) || (S.current.scrollTop = 0);
+                null == T.current || T.current.contains(e.relatedTarget) || (T.current.scrollTop = 0);
             };
-        return p || null == a || "" === a
+        return _ || null == a || "" === a
             ? null
             : (0, r.jsxs)("div", {
                   children: [
                       (0, r.jsx)("div", {
                           ref: A,
-                          className: o()(_.descriptionClamp, I && _.maxBioHeight),
+                          className: o()(p.descriptionClamp, S && p.maxBioHeight),
                           onBlur: N,
                           children: (0, r.jsx)(d.Z, {
                               userBio: a,
@@ -101,16 +101,16 @@ let E = 57.75,
                               textColor: "header-primary",
                           }),
                       }),
-                      (O || I) &&
+                      (O || S) &&
                           (0, r.jsx)("div", {
-                              className: _.viewFullBio,
+                              className: p.viewFullBio,
                               children: (0, r.jsx)(s.Avr, {
                                   textVariant: "text-xs/normal",
                                   size: "sm",
                                   variant: "secondary",
                                   text: f.intl.string(f.t.YDiPq8),
                                   onClick: C,
-                                  disabled: m,
+                                  disabled: h,
                               }),
                           }),
                   ],

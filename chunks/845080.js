@@ -15,8 +15,8 @@ function l(e) {
         isGroupStart: u = !0,
         roleIcon: d,
         hideTimestamp: f,
-        hideGuildTag: _,
-        preview: p,
+        hideGuildTag: p,
+        preview: _,
     } = e;
     return !(0, a.Z)(t) && (u || o)
         ? (0, r.jsx)(s, {
@@ -28,8 +28,8 @@ function l(e) {
               animate: l,
               roleIcon: d,
               hideTimestamp: f,
-              hideGuildTag: _,
-              preview: p,
+              hideGuildTag: p,
+              preview: _,
           })
         : void 0;
 }

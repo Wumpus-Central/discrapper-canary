@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(54381);
 n(473749);
 var i = n(28664),
@@ -10,48 +10,48 @@ var i = n(28664),
     u = n(652853),
     d = n(732380),
     f = n(614716),
-    _ = n(671955),
-    p = n(388032);
-function h(e) {
-    let { user: t, activity: n, onAction: h, onClose: m } = e,
+    p = n(671955),
+    _ = n(388032);
+function m(e) {
+    let { user: t, activity: n, onAction: m, onClose: h } = e,
         { themeType: g } = (0, u.z)(),
         E = (0, f.Z)({
             applicationId: null == n ? void 0 : n.application_id,
-            onClose: m,
+            onClose: h,
         }),
         b = (0, c.e)({
             activity: null != n ? n : void 0,
             embeddedActivity: void 0,
             user: t,
-            onClose: m,
+            onClose: h,
         }),
         y = (0, l.h)(null == n ? void 0 : n.application_id);
     if (null == b && null != n && (0, s.Z)(n))
         return (0, r.jsx)(d.O1, {
             icon: a.jje,
-            text: p.intl.string(p.t.RscU7I),
-            fullWidth: g !== _.l.MODAL_V2,
+            text: _.intl.string(_.t.RscU7I),
+            fullWidth: g !== p.l.MODAL_V2,
             onClick: (e) => {
                 e.stopPropagation(),
                     null != y
                         ? o.Z.launch({ applicationId: y })
-                        : (null == h || h({ action: "PRESS_PLAY_BUTTON" }), E());
+                        : (null == m || m({ action: "PRESS_PLAY_BUTTON" }), E());
             },
         });
     if (null == b) return null;
-    let { isJoining: O, handleJoinRequest: v, buttonCTA: I, tooltip: T, isEnabled: S, isEmbedded: A } = b;
+    let { isJoining: O, handleJoinRequest: v, buttonCTA: S, tooltip: I, isEnabled: T, isEmbedded: A } = b;
     return (0, r.jsx)(i.u, {
-        text: T,
-        asContainer: !S,
+        text: I,
+        asContainer: !T,
         children: (0, r.jsx)(d.O1, {
             icon: A ? a.YVR : a.iWm,
-            text: I,
-            disabled: !S,
+            text: S,
+            disabled: !T,
             loading: O,
-            fullWidth: g !== _.l.MODAL_V2,
+            fullWidth: g !== p.l.MODAL_V2,
             onClick: (e) => {
                 e.stopPropagation(),
-                    null == h || h({ action: A ? "PRESS_JOIN_BUTTON" : "PRESS_ASK_TO_JOIN_BUTTON" }),
+                    null == m || m({ action: A ? "PRESS_JOIN_BUTTON" : "PRESS_ASK_TO_JOIN_BUTTON" }),
                     v();
             },
         }),

@@ -1,9 +1,9 @@
 n.d(t, {
-    Ad: () => m,
+    Ad: () => h,
     Lb: () => d,
-    ZF: () => p,
-    gP: () => _,
-    mh: () => h,
+    ZF: () => _,
+    gP: () => p,
+    mh: () => m,
     sF: () => f,
 });
 var r = n(473749),
@@ -57,7 +57,7 @@ function f(e) {
         num_query_changes: i,
     });
 }
-function _(e) {
+function p(e) {
     let {
         channelId: t,
         messageId: n,
@@ -66,8 +66,8 @@ function _(e) {
         numDestinations: c,
         numDestinationChanges: d,
         numQueryChanges: f,
-        anyDestinationHasSlowmode: _,
-        source: p,
+        anyDestinationHasSlowmode: p,
+        source: _,
     } = e;
     if (
         (s.default.track(l.rMx.FORWARD_MESSAGE_SENT, {
@@ -78,9 +78,9 @@ function _(e) {
             num_destinations: c,
             num_destination_changes: d,
             num_query_changes: f,
-            any_destination_has_slowmode: _,
+            any_destination_has_slowmode: p,
         }),
-        "message-shortcut" === p)
+        "message-shortcut" === _)
     ) {
         let e = o.Z.getChannel(t);
         s.default.track(
@@ -96,7 +96,7 @@ function _(e) {
         );
     }
 }
-function p() {
+function _() {
     return r.useMemo(
         () =>
             (0, i.once)((e, t, n) => {
@@ -109,7 +109,7 @@ function p() {
         [],
     );
 }
-function h() {
+function m() {
     return r.useMemo(
         () =>
             (0, i.once)((e, t) => {
@@ -121,7 +121,7 @@ function h() {
         [],
     );
 }
-function m() {
+function h() {
     return r.useMemo(
         () =>
             (0, i.once)((e, t) => {

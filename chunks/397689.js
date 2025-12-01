@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(1585),
     d = n(158776),
     f = n(998502),
-    _ = n(445924),
-    p = n(654904),
-    h = n(486324),
-    m = n(86698);
+    p = n(445924),
+    _ = n(654904),
+    m = n(486324),
+    h = n(86698);
 function g(e, t, n) {
     return (
         t in e
@@ -75,50 +75,50 @@ function v(e) {
             previewAvatar: g,
             previewAvatarDecorationSrc: b,
             previewTheme: v,
-            previewPrimaryColor: I,
-            className: T,
-            disabledInputs: S,
+            previewPrimaryColor: S,
+            className: I,
+            disabledInputs: T,
             isTryItOut: A,
             onUpsellClick: C,
         } = e,
         N = i.useRef(null),
-        { analyticsLocations: R, newestAnalyticsLocation: P } = (0, c.ZP)(),
-        D = (0, s.e7)([d.Z], () => d.Z.getStatus(t.id)),
-        w = null == n || (null == a ? void 0 : a.canUsePremiumProfileCustomization) || f,
-        L = (0, r.jsx)(O, {
+        { analyticsLocations: P, newestAnalyticsLocation: R } = (0, c.ZP)(),
+        w = (0, s.e7)([d.Z], () => d.Z.getStatus(t.id)),
+        D = null == n || (null == a ? void 0 : a.canUsePremiumProfileCustomization) || f,
+        x = (0, r.jsx)(O, {
             src: g,
             avatarDecoration: b,
-            imageClassName: o()(T, { [m.overlay]: !S }),
+            imageClassName: o()(I, { [h.overlay]: !T }),
             size: l.EFr.SIZE_80,
             "aria-label": t.username,
-            status: D,
+            status: w,
             statusTooltip: !1,
-            statusBackdropColor: null != I ? (0, l.QFD)(v) : void 0,
+            statusBackdropColor: null != S ? (0, l.QFD)(v) : void 0,
         });
-    return S
+    return T
         ? (0, r.jsx)("div", {
-              className: m.avatar,
-              children: L,
+              className: h.avatar,
+              children: x,
           })
-        : w
+        : D
           ? (0, r.jsx)(l.yRy, {
                 targetElementRef: N,
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
-                    return (0, r.jsx)(_.Z, {
-                        className: m.menu,
+                    return (0, r.jsx)(p.Z, {
+                        className: h.menu,
                         onClose: t,
                         onChangeAvatar: () =>
-                            (0, p.$r)({
-                                uploadType: h.pC.AVATAR,
+                            (0, _.$r)({
+                                uploadType: m.pC.AVATAR,
                                 guildId: null == n ? void 0 : n.id,
-                                analyticsSource: P,
+                                analyticsSource: R,
                                 isTryItOut: A,
                             }),
                         onChangeAvatarDecoration: () => {
                             (0, u.ps)({
                                 guild: null == n ? void 0 : n,
-                                analyticsLocations: R,
+                                analyticsLocations: P,
                                 isTryItOut: A,
                             });
                         },
@@ -129,12 +129,12 @@ function v(e) {
                         l.P3F,
                         y(E({}, e), {
                             innerRef: N,
-                            className: o()(m.avatar, m.clickable),
+                            className: o()(h.avatar, h.clickable),
                             children: [
-                                L,
+                                x,
                                 (0, r.jsx)(l.vdY, {
                                     size: "custom",
-                                    className: m.overlayIcon,
+                                    className: h.overlayIcon,
                                     width: 20,
                                     height: 20,
                                     color: "white",
@@ -145,12 +145,12 @@ function v(e) {
             })
           : (0, r.jsxs)(l.P3F, {
                 onClick: C,
-                className: o()(m.avatar, m.clickable),
+                className: o()(h.avatar, h.clickable),
                 children: [
-                    L,
+                    x,
                     (0, r.jsx)(l.SrA, {
                         size: "custom",
-                        className: m.overlayIcon,
+                        className: h.overlayIcon,
                         width: 20,
                         height: 20,
                         color: "white",

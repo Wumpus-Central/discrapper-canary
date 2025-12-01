@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(54381);
 n(473749);
 var i = n(399606),
@@ -10,29 +10,29 @@ var i = n(399606),
     u = n(703656),
     d = n(331372),
     f = n(981631),
-    _ = n(388032),
-    p = n(418783);
-function h(e) {
+    p = n(388032),
+    _ = n(418783);
+function m(e) {
     let { guildId: t, user: n, username: s } = e,
         l = (0, i.e7)([o.Z], () => !o.Z.useReducedMotion),
         c = n.getAvatarURL(t, 56, l),
         u = (0, r.jsx)("img", {
             src: c,
-            className: p.userAvatar,
+            className: _.userAvatar,
             alt: "",
         });
     return (0, r.jsxs)("div", {
-        className: p.thankYouCard,
+        className: _.thankYouCard,
         role: "img",
-        "aria-label": _.intl.formatToPlainString(_.t["utf8+W"], { username: s }),
+        "aria-label": p.intl.formatToPlainString(p.t["utf8+W"], { username: s }),
         children: [
             (0, r.jsx)(d.Z, { avatar: u }),
             (0, r.jsx)(a.Text, {
-                className: p.thankYouText,
+                className: _.thankYouText,
                 tag: "p",
                 color: "status-positive-text",
                 variant: "heading-xl/medium",
-                children: _.intl.format(_.t["52BAtC"], {
+                children: p.intl.format(p.t["52BAtC"], {
                     username: s,
                     usernameHook: (e, t) =>
                         (0, r.jsx)(
@@ -51,18 +51,18 @@ function h(e) {
         ],
     });
 }
-function m(e) {
+function h(e) {
     var t, i, a;
-    let { channel: o, message: d, compact: p } = e,
-        m = (0, s.ZP)(d),
+    let { channel: o, message: d, compact: _ } = e,
+        h = (0, s.ZP)(d),
         g = (0, l.l)({
             user: d.author,
             channelId: o.id,
             guildId: o.guild_id,
             messageId: d.id,
-        })(m),
-        E = _.intl.format(_.t.TQs67g, {
-            username: m.nick,
+        })(h),
+        E = p.intl.format(p.t.TQs67g, {
+            username: h.nick,
             usernameHook: g,
             productName:
                 null !=
@@ -93,11 +93,11 @@ function m(e) {
             (0, r.jsx)(c.Z, {
                 icon: n(570111),
                 timestamp: d.timestamp,
-                compact: p,
+                compact: _,
                 children: E,
             }),
-            (0, r.jsx)(h, {
-                username: m.nick,
+            (0, r.jsx)(m, {
+                username: h.nick,
                 guildId: o.guild_id,
                 user: d.author,
             }),

@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(350327),
     d = n(330055),
     f = n(25990),
-    _ = n(695346),
-    p = n(647699),
-    h = n(155433),
-    m = n(388032);
+    p = n(695346),
+    _ = n(647699),
+    m = n(155433),
+    h = n(388032);
 function g() {
     let e = (0, a.e7)([f.Z], () => f.Z.getIsSubmitDisabled()),
         t = (0, a.e7)([f.Z], () => f.Z.getErrors()),
@@ -24,7 +24,7 @@ function g() {
                         ? void 0
                         : t.message
                     : Object.keys(null != t ? t : {}).length > 0
-                      ? m.intl.string(m.t["84MExs"])
+                      ? h.intl.string(h.t["84MExs"])
                       : null,
             [t],
         ),
@@ -33,7 +33,7 @@ function g() {
             g(!0);
             let a = f.Z.getAllPending(),
                 o = (0, c.ED)(a),
-                m = (0, c.g9)(a),
+                h = (0, c.g9)(a),
                 E = (0, c.jE)(a),
                 b = !0;
             if (Object.keys(o).length > 0) {
@@ -47,25 +47,25 @@ function g() {
                             avatarAssetOrigin: null == (n = a.pendingAvatar) ? void 0 : n.assetOrigin,
                         }),
                         (0, s.si)();
-                } else (null == r || null == (e = r.body) ? void 0 : e.username) != null && (0, h.P)();
+                } else (null == r || null == (e = r.body) ? void 0 : e.username) != null && (0, m.P)();
             }
-            if (Object.keys(m).length > 0) {
-                let e = await (0, u.Z)(m);
+            if (Object.keys(h).length > 0) {
+                let e = await (0, u.Z)(h);
                 (b = b && null != (r = null == e ? void 0 : e.ok) && r),
-                    (null == e ? void 0 : e.ok) ? (0, u.pG)() : (0, p.r)();
+                    (null == e ? void 0 : e.ok) ? (0, u.pG)() : (0, _.r)();
             }
             if (void 0 !== a.pendingLegacyUsernameDisabled)
                 try {
-                    await _.R_.updateSetting(a.pendingLegacyUsernameDisabled), (0, s.iR)();
+                    await p.R_.updateSetting(a.pendingLegacyUsernameDisabled), (0, s.iR)();
                 } catch (e) {
-                    (0, p.r)(), (b = !1);
+                    (0, _.r)(), (b = !1);
                 }
             if (Object.keys(E).length > 0) {
                 let { primaryGuildId: e } = E;
                 if (void 0 !== e) {
                     let t = await (0, l.c)(e, null !== e);
                     (b = b && null != (i = null == t ? void 0 : t.ok) && i),
-                        (null == t ? void 0 : t.ok) ? (0, s.OU)() : (0, p.r)();
+                        (null == t ? void 0 : t.ok) ? (0, s.OU)() : (0, _.r)();
                 }
             }
             b && (0, s.b9)(), g(!1);

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(392711),
@@ -9,19 +9,19 @@ var r = n(54381),
     u = n(903772),
     d = n(793030),
     f = n(442837),
-    _ = n(386506),
-    p = n(304761),
-    h = n(865427),
-    m = n(797614),
+    p = n(386506),
+    _ = n(304761),
+    m = n(865427),
+    h = n(797614),
     g = n(703656),
     E = n(626135),
     b = n(960048),
     y = n(998502),
     O = n(406128),
     v = n(981631),
-    I = n(388032),
-    T = n(365861);
-function S(e, t, n) {
+    S = n(388032),
+    I = n(365861);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,10 +38,10 @@ function A() {
     let [e, t] = i.useState(!1);
     if (
         null ==
-        (0, f.e7)([p.C], () => {
+        (0, f.e7)([_.C], () => {
             var e;
-            return (0, h.fD)()
-                ? null == (e = p.C.getCurrentBuildOverride().overrides)
+            return (0, m.fD)()
+                ? null == (e = _.C.getCurrentBuildOverride().overrides)
                     ? void 0
                     : e.discord_web
                 : null;
@@ -50,7 +50,7 @@ function A() {
         return null;
     let n = async () => {
         try {
-            t(!0), await (0, _.bF)(), window.location.reload(!0);
+            t(!0), await (0, p.bF)(), window.location.reload(!0);
         } catch (e) {
             t(!1);
         }
@@ -58,14 +58,14 @@ function A() {
     return (0, r.jsx)(d.zxk, {
         variant: "primary",
         size: "md",
-        text: I.intl.string(I.t["/Nz9rY"]),
+        text: S.intl.string(S.t["/Nz9rY"]),
         onClick: n,
         loading: e,
     });
 }
 let C = o().throttle(
     (e) => {
-        m.Z.increment(
+        h.Z.increment(
             {
                 name: c.V.APP_CRASHED,
                 tags: [
@@ -124,8 +124,8 @@ class N extends i.PureComponent {
         if (null !== this.state.error) {
             let e = (0, r.jsxs)("div", {
                     children: [
-                        (0, r.jsx)("p", { children: I.intl.string(I.t.tx8CkI) }),
-                        (0, r.jsx)("p", { children: I.intl.string(I.t.CvQlAH) }),
+                        (0, r.jsx)("p", { children: S.intl.string(S.t.tx8CkI) }),
+                        (0, r.jsx)("p", { children: S.intl.string(S.t.CvQlAH) }),
                     ],
                 }),
                 n = (0, r.jsxs)(d.hE2, {
@@ -133,28 +133,28 @@ class N extends i.PureComponent {
                         (0, r.jsx)(d.zxk, {
                             variant: "primary",
                             size: "md",
-                            text: I.intl.string(I.t["+hivLW"]),
+                            text: S.intl.string(S.t["+hivLW"]),
                             onClick: this._handleSubmitReport,
                         }),
                         (0, r.jsx)(A, {}),
                     ],
                 });
             return (0, r.jsx)(O.Z, {
-                title: I.intl.string(I.t["3h+n+8"]),
+                title: S.intl.string(S.t["3h+n+8"]),
                 note: null != t ? t() : e,
                 action: n,
-                className: T.errorPage,
+                className: I.errorPage,
             });
         }
         return e;
     }
     constructor(...e) {
         super(...e),
-            S(this, "state", {
+            T(this, "state", {
                 error: null,
                 info: null,
             }),
-            S(this, "discordErrorsSet", !1);
+            T(this, "discordErrorsSet", !1);
     }
 }
-let R = N;
+let P = N;

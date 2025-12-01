@@ -1,8 +1,8 @@
 n.d(t, {
-    Hx: () => h,
+    Hx: () => m,
     ZP: () => E,
     hv: () => g,
-    pi: () => p,
+    pi: () => _,
 }),
     n(997841),
     n(539854);
@@ -54,7 +54,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,12 +65,12 @@ function _(e, t) {
         e
     );
 }
-class p extends a.Z {
+class _ extends a.Z {
     hasFlag(e) {
         return (0, i.yE)(this.flags, e);
     }
     constructor(e) {
-        var t, n, r, i, a, o, s, l, d, f, _, p, h;
+        var t, n, r, i, a, o, s, l, d, f, p, _, m;
         super(),
             u(this, "type", void 0),
             u(this, "content", void 0),
@@ -94,21 +94,21 @@ class p extends a.Z {
             (this.components = null != (l = e.components) ? l : []),
             (this.codedLinks = null != (d = e.codedLinks) ? d : []),
             (this.stickers = null != (f = e.stickers) ? f : []),
-            (this.stickerItems = null != (p = null != (_ = e.sticker_items) ? _ : e.stickerItems) ? p : []),
-            (this.soundboardSounds = null != (h = e.soundboard_sounds) ? h : e.soundboardSounds);
+            (this.stickerItems = null != (_ = null != (p = e.sticker_items) ? p : e.stickerItems) ? _ : []),
+            (this.soundboardSounds = null != (m = e.soundboard_sounds) ? m : e.soundboardSounds);
     }
 }
-class h extends a.Z {
+class m extends a.Z {
     constructor(e) {
         var t;
         super(),
             u(this, "message", void 0),
             u(this, "moderatorReport", void 0),
-            (this.message = new p(e.message)),
+            (this.message = new _(e.message)),
             (this.moderatorReport = null != (t = e.moderator_report) ? t : null);
     }
 }
-class m extends p {
+class h extends _ {
     isEdited() {
         return null != this.editedTimestamp;
     }
@@ -137,26 +137,26 @@ class m extends p {
                         if (t && a.me) return a;
                         let e = t && a.me_burst ? a.burst_count : a.burst_count + 1,
                             r = null != a.burst_colors && a.burst_colors.length > 0 ? a.burst_colors : n;
-                        a = _(d({}, a), {
+                        a = p(d({}, a), {
                             me_burst: !!t || a.me_burst,
                             burst_count: e,
-                            count_details: _(d({}, a.count_details), { burst: e }),
+                            count_details: p(d({}, a.count_details), { burst: e }),
                             burst_colors: r,
                         });
                     } else if (r === s.O.VOTE) {
                         var c, u;
                         let e = null != (u = null == (c = a.count_details) ? void 0 : c.vote) ? u : 0,
                             n = t && a.me_vote ? e : e + 1;
-                        a = _(d({}, a), {
-                            count_details: _(d({}, a.count_details), { vote: n }),
+                        a = p(d({}, a), {
+                            count_details: p(d({}, a.count_details), { vote: n }),
                             me_vote: !!t || a.me_vote,
                         });
                     } else {
                         if (t && a.me_burst) return a;
                         let e = t && a.me ? a.count : a.count + 1;
-                        a = _(d({}, a), {
+                        a = p(d({}, a), {
                             count: e,
-                            count_details: _(d({}, a.count_details), { normal: e }),
+                            count_details: p(d({}, a.count_details), { normal: e }),
                             me: !!t || a.me,
                         });
                     }
@@ -222,36 +222,36 @@ class m extends p {
                 if ((0, l.ir)(t.emoji, e)) {
                     if (o === s.O.BURST) {
                         let e = a && !t.me_burst ? t.burst_count : t.burst_count - 1;
-                        t = _(d({}, t), {
+                        t = p(d({}, t), {
                             burst_count: e,
                             me_burst: !a && t.me_burst,
-                            count_details: _(d({}, t.count_details), { burst: e }),
+                            count_details: p(d({}, t.count_details), { burst: e }),
                         });
                     } else if (o === s.O.VOTE) {
                         var r, i;
                         let e = null != (i = null == (r = t.count_details) ? void 0 : r.vote) ? i : 0,
                             n = a && !t.me_vote ? e : e - 1;
-                        t = _(d({}, t), {
-                            count_details: _(d({}, t.count_details), { vote: n }),
+                        t = p(d({}, t), {
+                            count_details: p(d({}, t.count_details), { vote: n }),
                             me_vote: !a && t.me_vote,
                         });
                     } else {
                         let e = a && !t.me ? t.count : t.count - 1;
-                        t = _(d({}, t), {
+                        t = p(d({}, t), {
                             count: e,
                             me: !a && t.me,
-                            count_details: _(d({}, t.count_details), { normal: e }),
+                            count_details: p(d({}, t.count_details), { normal: e }),
                         });
                     }
                     c = n;
                 }
                 return t;
             }),
-            { count: f, burst_count: p, count_details: h } = null != (t = u[c]) ? t : {},
-            m = null != (n = null == h ? void 0 : h.normal) ? n : 0,
-            g = null != (r = null == h ? void 0 : h.burst) ? r : 0,
-            E = null != (i = null == h ? void 0 : h.vote) ? i : 0;
-        return -1 !== c && f <= 0 && p <= 0 && m <= 0 && g <= 0 && E <= 0 && u.splice(c, 1), this.set("reactions", u);
+            { count: f, burst_count: _, count_details: m } = null != (t = u[c]) ? t : {},
+            h = null != (n = null == m ? void 0 : m.normal) ? n : 0,
+            g = null != (r = null == m ? void 0 : m.burst) ? r : 0,
+            E = null != (i = null == m ? void 0 : m.vote) ? i : 0;
+        return -1 !== c && f <= 0 && _ <= 0 && h <= 0 && g <= 0 && E <= 0 && u.splice(c, 1), this.set("reactions", u);
     }
     removeReactionsForEmoji(e) {
         return this.set(
@@ -287,7 +287,7 @@ class m extends p {
         );
     }
     toJS() {
-        return _(d({}, this), {
+        return p(d({}, this), {
             webkhook_id: this.webhookId,
             edited_timestamp: this.editedTimestamp,
             mention_everyone: this.mentionEveryone,
@@ -394,4 +394,4 @@ class m extends p {
 function g(e) {
     return (0, i.yE)(e.flags, c.iLy.IS_COMPONENTS_V2);
 }
-let E = m;
+let E = h;

@@ -1,6 +1,6 @@
 n.d(t, {
     kq: () => g,
-    vy: () => m,
+    vy: () => h,
 });
 var r = n(392711),
     i = n(544891),
@@ -12,9 +12,9 @@ var r = n(392711),
     u = n(696900),
     d = n(963838),
     f = n(353368),
-    _ = n(981631),
-    p = n(710111);
-function h(e) {
+    p = n(981631),
+    _ = n(710111);
+function m(e) {
     let t = new AbortController(),
         n = (0, r.throttle)((n) => {
             c.Z.getVoiceChannelId() !== e && t.abort();
@@ -24,23 +24,23 @@ function h(e) {
         onRequestProgress: n,
     };
 }
-function m(e, t, n) {
+function h(e, t, n) {
     var r;
-    let { abortController: o, onRequestProgress: c } = h(e),
-        p = null != (r = u.Z.getState().animationType) ? r : f.q.BASIC,
-        m = {
-            animation_type: p,
-            animation_id: (0, d.Iu)(p, d.v),
+    let { abortController: o, onRequestProgress: c } = m(e),
+        _ = null != (r = u.Z.getState().animationType) ? r : f.q.BASIC,
+        h = {
+            animation_type: _,
+            animation_id: (0, d.Iu)(_, d.v),
         };
     i.tn
         .post({
-            url: _.ANM.CUSTOM_CALL_SOUNDS(e),
-            body: m,
+            url: p.ANM.CUSTOM_CALL_SOUNDS(e),
+            body: h,
             signal: o.signal,
             onRequestProgress: c,
             rejectWithError: !0,
         })
-        .then(_.VqG, () => {
+        .then(p.VqG, () => {
             if (o.signal.aborted) return;
         }),
         (0, l.Z)([a.Z.CHANNEL_CALL], n, t, s.jy.ENTRY);
@@ -48,22 +48,22 @@ function m(e, t, n) {
 function g(e, t, n, r, a) {
     var c;
     let u = null != t.emojiId ? o.ZP.getCustomEmojiById(t.emojiId) : null,
-        { abortController: d, onRequestProgress: f } = h(e),
-        m = {
+        { abortController: d, onRequestProgress: f } = m(e),
+        h = {
             sound_id: t.soundId,
             emoji_id: t.emojiId,
             emoji_name: null != (c = t.emojiName) ? c : null == u ? void 0 : u.name,
         };
-    t.guildId !== p.X8 && (m.source_guild_id = t.guildId),
+    t.guildId !== _.X8 && (h.source_guild_id = t.guildId),
         i.tn
             .post({
-                url: _.ANM.SEND_SOUNDBOARD_SOUND(e),
-                body: m,
+                url: p.ANM.SEND_SOUNDBOARD_SOUND(e),
+                body: h,
                 signal: d.signal,
                 onRequestProgress: f,
                 rejectWithError: !0,
             })
-            .then(_.VqG, () => {
+            .then(p.VqG, () => {
                 if (d.signal.aborted) return;
             }),
         (0, l.Z)(null != r ? r : [], n, t, s.jy.DEFAULT, a);

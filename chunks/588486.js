@@ -1,6 +1,6 @@
 n.d(t, {
     dR: () => d,
-    qK: () => h,
+    qK: () => m,
 }),
     n(980754),
     n(388685),
@@ -31,7 +31,7 @@ var r = n(230367),
     f = (function (e) {
         return (e[(e.ENABLED = 0)] = "ENABLED"), (e[(e.DISABLED = 1)] = "DISABLED"), e;
     })({}),
-    _ = (function (e) {
+    p = (function (e) {
         return (
             (e[(e.FULL = 0)] = "FULL"),
             (e[(e.FORCE_CONTROL = 3)] = "FORCE_CONTROL"),
@@ -40,10 +40,10 @@ var r = n(230367),
             e
         );
     })({}),
-    p = (function (e) {
+    _ = (function (e) {
         return (e[(e.DEFAULT = 0)] = "DEFAULT"), (e[(e.HOLDOUT = 1)] = "HOLDOUT"), e;
     })({}),
-    h = (function (e) {
+    m = (function (e) {
         return (
             (e[(e.UNSPECIFIED = 0)] = "UNSPECIFIED"),
             (e[(e.CONTROL = 1)] = "CONTROL"),
@@ -52,7 +52,7 @@ var r = n(230367),
             e
         );
     })({}),
-    m = (function (e) {
+    h = (function (e) {
         return (
             (e[(e.UNSPECIFIED = 0)] = "UNSPECIFIED"),
             (e[(e.ACTIVE = 1)] = "ACTIVE"),
@@ -206,7 +206,7 @@ class E extends o.C {
                     a.engineFeatureFlags.push(e.string());
                     break;
                 case 30:
-                    a.debugConfig = T.internalBinaryRead(e, e.uint32(), n, a.debugConfig);
+                    a.debugConfig = I.internalBinaryRead(e, e.uint32(), n, a.debugConfig);
                     break;
                 case 31:
                     a.expectedEndDate = c.E.internalBinaryRead(e, e.uint32(), n, a.expectedEndDate);
@@ -265,7 +265,7 @@ class E extends o.C {
         }
         for (let n = 0; n < e.engineFeatureFlags.length; n++)
             t.tag(29, r.TD.LengthDelimited).string(e.engineFeatureFlags[n]);
-        e.debugConfig && T.internalBinaryWrite(e.debugConfig, t.tag(30, r.TD.LengthDelimited).fork(), n).join(),
+        e.debugConfig && I.internalBinaryWrite(e.debugConfig, t.tag(30, r.TD.LengthDelimited).fork(), n).join(),
             e.expectedEndDate &&
                 c.E.internalBinaryWrite(e.expectedEndDate, t.tag(31, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
@@ -406,7 +406,7 @@ class E extends o.C {
                 no: 25,
                 name: "assignment_mode",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Experiment.AssignmentMode", _],
+                T: () => ["discord_protos.discord_experimentation.v1.Experiment.AssignmentMode", p],
             },
             {
                 no: 23,
@@ -424,7 +424,7 @@ class E extends o.C {
                 no: 26,
                 name: "type",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Experiment.Type", p],
+                T: () => ["discord_protos.discord_experimentation.v1.Experiment.Type", _],
             },
             {
                 no: 27,
@@ -450,7 +450,7 @@ class E extends o.C {
                 no: 30,
                 name: "debug_config",
                 kind: "message",
-                T: () => T,
+                T: () => I,
             },
             {
                 no: 31,
@@ -559,7 +559,7 @@ class b extends o.C {
                 no: 5,
                 name: "type",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Variation.Type", h],
+                T: () => ["discord_protos.discord_experimentation.v1.Variation.Type", m],
             },
             {
                 no: 6,
@@ -639,13 +639,13 @@ class O extends o.C {
                 no: 3,
                 name: "type",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Bucket.Type", m],
+                T: () => ["discord_protos.discord_experimentation.v1.Bucket.Type", h],
             },
         ]);
     }
 }
 let v = new O();
-class I extends o.C {
+class S extends o.C {
     create(e) {
         let t = {
             enableDecisionLogging: !1,
@@ -751,4 +751,4 @@ class I extends o.C {
         ]);
     }
 }
-let T = new I();
+let I = new S();

@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(863249),
     u = n(937111),
     d = n(914010),
-    p = n(289090),
+    f = n(289090),
     h = n(727258),
-    f = n(234383),
+    p = n(234383),
     g = n(179809),
     m = n(588275),
     b = n(388032),
@@ -19,29 +19,29 @@ function y(e) {
     let { onActivate: t, children: n } = e,
         s = i.useRef(null),
         d = (0, l.e7)([u.Z], () => u.Z.hasJoinRequestCoackmark()),
-        p = i.useCallback(() => {
+        f = i.useCallback(() => {
             c.ZP.clearCoachmark();
         }, []),
         h = (0, a.Z)(d),
-        f = i.useRef(null);
+        p = i.useRef(null);
     return (
         i.useEffect(() => {
             if (d && d !== h) {
                 var e, n, r, i, l;
                 t(),
-                    null == (l = f.current) ||
+                    null == (l = p.current) ||
                         null == (i = l.ref) ||
                         null == (r = i.current) ||
                         null == (n = r.layerRef) ||
                         null == (e = n.current) ||
                         e.updatePosition();
             }
-        }, [f, d, h, t]),
+        }, [p, d, h, t]),
         (0, r.jsxs)("div", {
             className: _.container,
             children: [
                 (0, r.jsx)(o.yRy, {
-                    ref: f,
+                    ref: p,
                     targetElementRef: s,
                     shouldShow: d,
                     renderPopout: () =>
@@ -70,7 +70,7 @@ function y(e) {
                                             size: "sm",
                                             text: b.intl.string(b.t["4r+amb"]),
                                             fullWidth: !0,
-                                            onClick: p,
+                                            onClick: f,
                                         }),
                                     ],
                                 }),
@@ -141,26 +141,26 @@ function O(e) {
         [n, O] = i.useState(!1),
         v = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
         j = (0, l.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
-        C = (0, f.Z)(),
-        x = (0, a.Z)(v),
+        x = (0, p.Z)(),
+        C = (0, a.Z)(v),
         E = i.useMemo(() => {
             let e = (0, h.qQ)({
-                folderId: p.S.PENDING_JOIN_REQUESTS_FOLDER,
+                folderId: f.S.PENDING_JOIN_REQUESTS_FOLDER,
                 folderName: b.intl.string(b.t["scsU+l"]),
                 expanded: n,
                 guildIds: [],
             });
-            for (let t of C) e.children.push((0, h.Mg)(t, e.id));
+            for (let t of x) e.children.push((0, h.Mg)(t, e.id));
             return e;
-        }, [C, n]);
+        }, [x, n]);
     i.useEffect(() => {
         n && !j && s.Z.fetchRequestToJoinGuilds();
     }, [n, j]);
-    let S = null != v && C.includes(v);
+    let S = null != v && x.includes(v);
     return (i.useEffect(() => {
-        !n && S && x !== v && O(!0);
-    }, [n, S, x, v]),
-    0 === C.length)
+        !n && S && C !== v && O(!0);
+    }, [n, S, C, v]),
+    0 === x.length)
         ? null
         : (0, r.jsx)(y, {
               onActivate: t,

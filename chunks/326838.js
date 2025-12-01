@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(755721),
     u = n(481060),
     d = n(782568),
-    p = n(104505),
+    f = n(104505),
     h = n(317632),
-    f = n(174767),
+    p = n(174767),
     g = n(594174),
     m = n(55935),
     b = n(388032),
@@ -23,10 +23,10 @@ function y(e) {
         }),
         s = (0, m.vc)(o()(t.created_at), "LT"),
         c = i.useRef(null),
-        { isHoveringOrFocusing: d } = (0, p.Z)(c);
+        { isHoveringOrFocusing: d } = (0, f.Z)(c);
     return (
         i.useEffect(() => {
-            n || (0, f.Br)(t);
+            n || (0, p.Br)(t);
         }, [t, n]),
         (0, r.jsxs)("div", {
             className: _.container,
@@ -60,7 +60,7 @@ function y(e) {
                                     color: u.YX$.SECONDARY,
                                     icon: (0, r.jsx)(u.XHJ, { size: "xs" }),
                                     onClick: () => {
-                                        (0, f.UF)(t);
+                                        (0, p.UF)(t);
                                     },
                                 }),
                             ],
@@ -96,19 +96,19 @@ function y(e) {
 function O(e) {
     let { expired: t, invite: n, isHoveringInvite: l } = e,
         o = (0, a.e7)([h.Z], () => h.Z.isInviteGameInstalled(n)),
-        p = (0, a.e7)([h.Z], () => h.Z.isInviteJoinable(n)),
+        f = (0, a.e7)([h.Z], () => h.Z.isInviteJoinable(n)),
         [g, m] = i.useState(!1),
         y = i.useCallback(async () => {
             m(!0);
             try {
-                await (0, f.MH)(n);
+                await (0, p.MH)(n);
             } catch (e) {}
             m(!1);
         }, [n]),
         O = i.useCallback(async () => {
             m(!0);
             try {
-                await (0, f.Ol)(n);
+                await (0, p.Ol)(n);
             } catch (e) {}
             m(!1);
         }, [n]);
@@ -123,7 +123,7 @@ function O(e) {
                 children: b.intl.string(b.t["s+J8Dl"]),
             });
         else return null;
-    return o && p
+    return o && f
         ? (0, r.jsx)(c.zx, {
               className: _.primaryButton,
               color: c.Tt.GREEN,

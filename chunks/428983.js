@@ -1,36 +1,36 @@
-_.d(e, { N: () => N });
-var a = _(395848),
-    r = _(140955),
-    n = _(202937),
-    o = _(416987),
-    E = _(596308),
-    i = _(622574),
-    c = _(433691),
-    s = _(135813),
-    l = _(662355);
-let I = [2500, 4000],
-    R = {},
-    N = (t, e = {}) => {
+r.d(t, { N: () => I });
+var n = r(395848),
+    a = r(140955),
+    i = r(202937),
+    o = r(416987),
+    _ = r(596308),
+    s = r(622574),
+    c = r(433691),
+    E = r(135813),
+    l = r(662355);
+let u = [2500, 4000],
+    d = {},
+    I = (e, t = {}) => {
         (0, l.A)(() => {
-            let _,
+            let r,
                 l = (0, o.Y)(),
-                N = (0, E.I)("LCP"),
-                A = (t) => {
-                    let e = t[t.length - 1];
-                    e &&
-                        e.startTime < l.firstHiddenTime &&
-                        ((N.value = Math.max(e.startTime - (0, n.A)(), 0)), (N.entries = [e]), _());
+                I = (0, _.I)("LCP"),
+                p = (e) => {
+                    let t = e[e.length - 1];
+                    t &&
+                        t.startTime < l.firstHiddenTime &&
+                        ((I.value = Math.max(t.startTime - (0, i.A)(), 0)), (I.entries = [t]), r());
                 },
-                u = (0, i.N)("largest-contentful-paint", A);
-            if (u) {
-                _ = (0, r._)(t, N, I, e.reportAllChanges);
-                let n = (0, s.R)(() => {
-                    R[N.id] || (A(u.takeRecords()), u.disconnect(), (R[N.id] = !0), _(!0));
+                R = (0, s.N)("largest-contentful-paint", p);
+            if (R) {
+                r = (0, a._)(e, I, u, t.reportAllChanges);
+                let i = (0, E.R)(() => {
+                    d[I.id] || (p(R.takeRecords()), R.disconnect(), (d[I.id] = !0), r(!0));
                 });
-                ["keydown", "click"].forEach((t) => {
-                    a.m.document && addEventListener(t, () => setTimeout(n, 0), !0);
+                ["keydown", "click"].forEach((e) => {
+                    n.m.document && addEventListener(e, () => setTimeout(i, 0), !0);
                 }),
-                    (0, c.u)(n);
+                    (0, c.u)(i);
             }
         });
     };

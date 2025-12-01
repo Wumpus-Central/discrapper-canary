@@ -1,7 +1,7 @@
 n.d(t, { Z: () => f });
 var r = n(54381);
 n(473749);
-var i = n(790519),
+var i = n(666917),
     a = n(481060),
     o = n(117791),
     s = n(638212),
@@ -11,7 +11,7 @@ let u = 120,
     d = 12,
     f = function (e) {
         let { isVisible: t, subscriptionTier: n, isEligibleForBogoPromotion: f } = e,
-            _ = (0, a.q_F)({
+            p = (0, a.q_F)({
                 transform: t ? "translateY(-100%)" : "translateY(0%)",
                 opacity: +!!t,
                 config: {
@@ -19,10 +19,10 @@ let u = 120,
                     friction: d,
                 },
             }),
-            p = { section: l.jXE.MARKETING_FLOATING_CTA };
+            _ = { section: l.jXE.MARKETING_FLOATING_CTA };
         return (0, r.jsx)(i.animated.div, {
             className: c.wrapper,
-            style: _,
+            style: p,
             "data-mtctest-ignore": "true",
             children: (0, r.jsxs)("div", {
                 className: c.buttonContainer,
@@ -32,7 +32,7 @@ let u = 120,
                         subscriptionTier: n,
                         hasActivePromotion: !!f,
                         isPersistentCTA: !0,
-                        premiumModalAnalyticsLocation: p,
+                        premiumModalAnalyticsLocation: _,
                     }),
                     (0, r.jsx)(o.Z, {
                         variant: "secondary",

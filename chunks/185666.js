@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => p });
 var r = n(54381);
 n(473749);
 var i = n(481060),
@@ -9,21 +9,21 @@ var i = n(481060),
     c = n(379164),
     u = n(590965),
     d = n(981631);
-let p = "INVITE_MODAL_KEY";
+let f = "INVITE_MODAL_KEY";
 class h extends o.Z {
     _initialize() {
         l.Z.subscribe("INVITE_MODAL_OPEN", this.handleOpenModal),
             l.Z.subscribe("INVITE_MODAL_CLOSE", this.handleCloseModal);
     }
     _terminate() {
-        (0, i.Mr3)(p),
+        (0, i.Mr3)(f),
             l.Z.unsubscribe("INVITE_MODAL_OPEN", this.handleOpenModal),
             l.Z.unsubscribe("INVITE_MODAL_CLOSE", this.handleCloseModal);
     }
     handleOpenModal(e) {
         let { context: t } = e;
         u.Z.isOpen() &&
-            !(0, i.nfh)(p) &&
+            !(0, i.nfh)(f) &&
             (0, i.ZDy)(
                 async () => {
                     let { default: e } = await n.e("86872").then(n.bind(n, 472365));
@@ -58,7 +58,7 @@ class h extends o.Z {
                         );
                 },
                 {
-                    modalKey: p,
+                    modalKey: f,
                     contextKey: (0, i.VnL)(t),
                     onCloseRequest: () => {
                         let e = (0, a.e7)(),
@@ -73,7 +73,7 @@ class h extends o.Z {
             );
     }
     handleCloseModal() {
-        (0, i.Mr3)(p);
+        (0, i.Mr3)(f);
     }
 }
-let f = new h();
+let p = new h();

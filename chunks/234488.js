@@ -8,8 +8,8 @@ var r = n(46015),
     u = s("Reflect", "construct"),
     d = /^\s*(?:class|function)\b/,
     f = r(d.exec),
-    _ = !d.test(c),
-    p = function (e) {
+    p = !d.test(c),
+    _ = function (e) {
         if (!a(e)) return !1;
         try {
             return u(c, [], e), !0;
@@ -17,7 +17,7 @@ var r = n(46015),
             return !1;
         }
     },
-    h = function (e) {
+    m = function (e) {
         if (!a(e)) return !1;
         switch (o(e)) {
             case "AsyncFunction":
@@ -26,24 +26,24 @@ var r = n(46015),
                 return !1;
         }
         try {
-            return _ || !!f(d, l(e));
+            return p || !!f(d, l(e));
         } catch (e) {
             return !0;
         }
     };
-(h.sham = !0),
+(m.sham = !0),
     (e.exports =
         !u ||
         i(function () {
             var e;
             return (
-                p(p.call) ||
-                !p(Object) ||
-                !p(function () {
+                _(_.call) ||
+                !_(Object) ||
+                !_(function () {
                     e = !0;
                 }) ||
                 e
             );
         })
-            ? h
-            : p);
+            ? m
+            : _);

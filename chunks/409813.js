@@ -1,10 +1,10 @@
 n.d(t, {
     Ck: () => f,
-    DJ: () => _,
+    DJ: () => p,
     Nj: () => d,
-    dZ: () => h,
+    dZ: () => m,
     h8: () => u,
-    ly: () => p,
+    ly: () => _,
 }),
     n(388685),
     n(415506);
@@ -71,7 +71,7 @@ let d = new Set([
         "premium_upsell",
         "przelewy24_information",
     ]);
-function _(e) {
+function p(e) {
     switch (e) {
         case "plan_select":
             return l.intl.string(l.t["r+SebU"]);
@@ -102,7 +102,7 @@ function _(e) {
     }
     throw Error("Unexpected step: ".concat(e));
 }
-function p(e) {
+function _(e) {
     if (null != e) {
         if (!(e instanceof i.HF)) throw (c.error(e), (0, o.q2)(e), Error("Unexpected error type"));
         if (e.hasCardError()) return "credit_card_information";
@@ -110,7 +110,7 @@ function p(e) {
     }
     return null;
 }
-function h(e, t, n) {
+function m(e, t, n) {
     r.useEffect(() => {
         null != e && "review" !== e && t !== s.A.WAITING && t !== s.A.COMPLETED && n(s.A.WAITING);
     }, [e, t, n]);

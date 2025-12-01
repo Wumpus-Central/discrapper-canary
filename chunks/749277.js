@@ -1,4 +1,4 @@
-n.d(t, { A: () => L });
+n.d(t, { A: () => x });
 var r = n(54381);
 n(473749);
 var i = n(442837),
@@ -10,23 +10,23 @@ var i = n(442837),
     u = n(231757),
     d = n(674525),
     f = n(963249),
-    _ = n(303172),
-    p = n(246965),
-    h = n(703656),
-    m = n(313789),
+    p = n(303172),
+    _ = n(246965),
+    m = n(703656),
+    h = n(313789),
     g = n(518596),
     E = n(914010),
     b = n(594174),
     y = n(395361),
     O = n(626135),
     v = n(243778),
-    I = n(921944),
-    T = n(981631),
-    S = n(801461),
+    S = n(921944),
+    I = n(981631),
+    T = n(801461),
     A = n(474936),
     C = n(388032),
     N = n(655227);
-function R(e, t, n) {
+function P(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,7 +39,7 @@ function R(e, t, n) {
         e
     );
 }
-function P(e) {
+function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -50,12 +50,12 @@ function P(e) {
                 }),
             )),
             r.forEach(function (t) {
-                R(e, t, n[t]);
+                P(e, t, n[t]);
             });
     }
     return e;
 }
-function D(e, t) {
+function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -67,24 +67,24 @@ function D(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : D(Object(t)).forEach(function (n) {
+            : w(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let L = (e) => {
-    let { dismissibleContent: t, noticeType: R } = e,
-        D = (0, i.e7)([b.default], () => b.default.getCurrentUser()),
-        L = (0, i.e7)([E.Z], () => E.Z.getGuildId());
+let x = (e) => {
+    let { dismissibleContent: t, noticeType: P } = e,
+        w = (0, i.e7)([b.default], () => b.default.getCurrentUser()),
+        x = (0, i.e7)([E.Z], () => E.Z.getGuildId());
     return (0, r.jsx)(v.ZP, {
         contentTypes: [t],
-        groupName: I.R.NOTICE_BAR,
+        groupName: S.R.NOTICE_BAR,
         bypassAutoDismiss: !0,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: i } = e;
@@ -94,21 +94,21 @@ let L = (e) => {
                         color: o.DM8.DEFAULT,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                onClick: () => i(I.L.UNKNOWN),
-                                noticeType: R,
+                                onClick: () => i(S.L.UNKNOWN),
+                                noticeType: P,
                             }),
                             C.intl.string(C.t["+xn1o5"]),
                             (0, r.jsx)("i", { className: N.iconApple }),
                             (0, r.jsx)("i", { className: N.iconAndroid }),
                             (0, r.jsx)("i", { className: N.iconWindows }),
                             (0, r.jsx)(o.NoS, {
-                                noticeType: R,
+                                noticeType: P,
                                 onClick: () => {
                                     (0, o.ZDy)(async () => {
                                         let { default: e } = await Promise.all([n.e("32996"), n.e("74023")]).then(
                                             n.bind(n, 431583),
                                         );
-                                        return (t) => (0, r.jsx)(e, P({ source: "Top Bar Nag" }, t));
+                                        return (t) => (0, r.jsx)(e, R({ source: "Top Bar Nag" }, t));
                                     });
                                 },
                                 children: C.intl.string(C.t["1WjMbC"]),
@@ -120,18 +120,18 @@ let L = (e) => {
                         color: o.DM8.SPOTIFY,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                onClick: () => i(I.L.UNKNOWN),
-                                noticeType: R,
+                                onClick: () => i(S.L.UNKNOWN),
+                                noticeType: P,
                             }),
                             (0, r.jsx)(y.Z, { className: N.platformIcon }),
                             C.intl.string(C.t["5NUVHH"]),
                             (0, r.jsx)(o.NoS, {
                                 onClick: () =>
                                     (0, u.Z)({
-                                        platformType: T.ABu.SPOTIFY,
+                                        platformType: I.ABu.SPOTIFY,
                                         location: "Notice Bar",
                                     }),
-                                noticeType: R,
+                                noticeType: P,
                                 children: C.intl.string(C.t.S0W8Z5),
                             }),
                         ],
@@ -141,19 +141,19 @@ let L = (e) => {
                         color: o.DM8.PLAYSTATION,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                noticeType: R,
-                                onClick: () => i(I.L.UNKNOWN),
+                                noticeType: P,
+                                onClick: () => i(S.L.UNKNOWN),
                             }),
                             (0, r.jsx)("img", {
                                 alt: "",
                                 className: N.platformIcon,
-                                src: l.Z.get(T.ABu.PLAYSTATION).icon.whiteSVG,
+                                src: l.Z.get(I.ABu.PLAYSTATION).icon.whiteSVG,
                             }),
                             C.intl.string(C.t.WHWgoY),
                             (0, r.jsx)(o.EyT, {
                                 onClick: () =>
                                     (0, u.Z)({
-                                        platformType: T.ABu.PLAYSTATION,
+                                        platformType: I.ABu.PLAYSTATION,
                                         location: "Notice Bar",
                                     }),
                                 children: C.intl.string(C.t.S0W8Z5),
@@ -165,13 +165,13 @@ let L = (e) => {
                         color: o.DM8.DEFAULT,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                onClick: () => i(I.L.USER_DISMISS),
-                                noticeType: R,
+                                onClick: () => i(S.L.USER_DISMISS),
+                                noticeType: P,
                             }),
                             C.intl.string(C.t["3qKN/h"]),
                             (0, r.jsx)(o.NoS, {
                                 onClick: async () => {
-                                    i(I.L.TAKE_ACTION);
+                                    i(S.L.TAKE_ACTION);
                                     try {
                                         let { startRegisterWebAuthnCredential: e } = await Promise.resolve().then(
                                                 n.bind(n, 365007),
@@ -184,7 +184,7 @@ let L = (e) => {
                                             return (n) =>
                                                 (0, r.jsx)(
                                                     e,
-                                                    w(P({}, n), {
+                                                    D(R({}, n), {
                                                         ticket: t,
                                                         challenge: i,
                                                         showAccountSettingsButton: !0,
@@ -197,7 +197,7 @@ let L = (e) => {
                                         );
                                     }
                                 },
-                                noticeType: R,
+                                noticeType: P,
                                 children: C.intl.string(C.t["ff/XXy"]),
                             }),
                         ],
@@ -213,32 +213,32 @@ let L = (e) => {
                             }),
                             (0, r.jsx)(o.NoS, {
                                 className: N.premiumAction,
-                                noticeType: R,
+                                noticeType: P,
                                 onClick: () => {
-                                    O.default.track(T.rMx.PREMIUM_PROMOTION_OPENED, {
-                                        location_section: T.jXE.NOTIFICATION_BAR,
-                                        location_object: T.qAy.BUTTON_CTA,
+                                    O.default.track(I.rMx.PREMIUM_PROMOTION_OPENED, {
+                                        location_section: I.jXE.NOTIFICATION_BAR,
+                                        location_object: I.qAy.BUTTON_CTA,
                                     }),
-                                        (0, g.openUserSettings)(m.n.NITRO_PANEL, { section: T.oAB.PREMIUM });
+                                        (0, g.openUserSettings)(h.n.NITRO_PANEL, { section: I.oAB.PREMIUM });
                                 },
                                 children: C.intl.string(C.t["8JC5e/"]),
                             }),
                             (0, r.jsx)(o.RyX, {
                                 onClick: () => {
-                                    i(I.L.UNKNOWN), (0, s.mB)(T.xW$.PREMIUM_PROMO_DISMISSED, !0);
+                                    i(S.L.UNKNOWN), (0, s.mB)(I.xW$.PREMIUM_PROMO_DISMISSED, !0);
                                 },
-                                noticeType: R,
+                                noticeType: P,
                             }),
                         ],
                     });
                 case a.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING:
-                    return (0, r.jsx)(p.Z, {
-                        dismissCurrentNotice: () => i(I.L.UNKNOWN),
+                    return (0, r.jsx)(_.Z, {
+                        dismissCurrentNotice: () => i(S.L.UNKNOWN),
                         subscriptionTier: A.Si.TIER_2,
                     });
                 case a.z.NAGBAR_NOTICE_PREMIUM_TIER_0_TRIAL_ENDING:
-                    return (0, r.jsx)(p.Z, {
-                        dismissCurrentNotice: () => i(I.L.UNKNOWN),
+                    return (0, r.jsx)(_.Z, {
+                        dismissCurrentNotice: () => i(S.L.UNKNOWN),
                         subscriptionTier: A.Si.TIER_0,
                     });
                 case a.z.NAGBAR_NOTICE_PREMIUM_REACTIVATE:
@@ -246,15 +246,15 @@ let L = (e) => {
                         color: o.DM8.PREMIUM_TIER_2,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                noticeType: R,
-                                onClick: () => i(I.L.UNKNOWN),
+                                noticeType: P,
+                                onClick: () => i(S.L.UNKNOWN),
                             }),
                             C.intl.string(C.t["0KFB2B"]),
                             (0, r.jsx)(o.NoS, {
-                                noticeType: R,
+                                noticeType: P,
                                 onClick: () => {
-                                    i(I.L.UNKNOWN),
-                                        (0, g.openUserSettings)(m.n.NITRO_PANEL, { section: T.oAB.PREMIUM });
+                                    i(S.L.UNKNOWN),
+                                        (0, g.openUserSettings)(h.n.NITRO_PANEL, { section: I.oAB.PREMIUM });
                                 },
                                 children: C.intl.string(C.t.pyYSiO),
                             }),
@@ -265,14 +265,14 @@ let L = (e) => {
                         color: o.DM8.DANGER,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                onClick: () => i(I.L.UNKNOWN),
-                                noticeType: R,
+                                onClick: () => i(S.L.UNKNOWN),
+                                noticeType: P,
                             }),
                             C.intl.string(C.t["7490vQ"]),
                             (0, r.jsx)(o.NoS, {
-                                noticeType: R,
+                                noticeType: P,
                                 onClick: () => {
-                                    (0, h.uL)(T.Z5c.SETTINGS("account"));
+                                    (0, m.uL)(I.Z5c.SETTINGS("account"));
                                 },
                                 children: C.intl.string(C.t.Vm8akB),
                             }),
@@ -284,18 +284,18 @@ let L = (e) => {
                         color: o.DM8.DEFAULT,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                onClick: () => i(I.L.UNKNOWN),
-                                noticeType: R,
+                                onClick: () => i(S.L.UNKNOWN),
+                                noticeType: P,
                             }),
                             C.intl.string(C.t.pJ4hJE),
                             (0, r.jsx)(o.NoS, {
-                                noticeType: R,
+                                noticeType: P,
                                 onClick: () => {
-                                    i(I.L.PRIMARY),
-                                        (0, h.uL)(
+                                    i(S.L.PRIMARY),
+                                        (0, m.uL)(
                                             1 === E.length
-                                                ? T.Z5c.GUILD_SETTINGS(E[0], "role-subscriptions")
-                                                : T.Z5c.PICK_GUILD_SETTINGS(
+                                                ? I.Z5c.GUILD_SETTINGS(E[0], "role-subscriptions")
+                                                : I.Z5c.PICK_GUILD_SETTINGS(
                                                       "role-subscriptions",
                                                       void 0,
                                                       "server-subscriptions-finish-setting-up",
@@ -311,13 +311,13 @@ let L = (e) => {
                         color: o.DM8.WARNING,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                onClick: () => i(I.L.UNKNOWN),
-                                noticeType: R,
+                                onClick: () => i(S.L.UNKNOWN),
+                                noticeType: P,
                             }),
                             C.intl.format(C.t.pdYZyg, {}),
                             (0, r.jsx)(o.NoS, {
-                                onClick: () => (0, _.Z)(S.Kq.NOTICE),
-                                noticeType: R,
+                                onClick: () => (0, p.Z)(T.Kq.NOTICE),
+                                noticeType: P,
                                 children: C.intl.string(C.t.LhlgY9),
                             }),
                         ],
@@ -327,8 +327,8 @@ let L = (e) => {
                         color: o.DM8.PREMIUM_TIER_2,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                onClick: () => i(I.L.UNKNOWN),
-                                noticeType: R,
+                                onClick: () => i(S.L.UNKNOWN),
+                                noticeType: P,
                             }),
                             C.intl.string(C.t["O9GI+k"]),
                             (0, r.jsx)(o.NoS, {
@@ -336,11 +336,11 @@ let L = (e) => {
                                     (0, f.Z)({
                                         subscriptionTier: A.Si.TIER_2,
                                         analyticsLocations: [c.Z.CHECKOUT_RECOVERY_NAGBAR],
-                                        analyticsLocation: T.Sbl.CHECKOUT_RECOVERY_NAGBAR,
-                                        onClose: () => i(I.L.UNKNOWN),
+                                        analyticsLocation: I.Sbl.CHECKOUT_RECOVERY_NAGBAR,
+                                        onClose: () => i(S.L.UNKNOWN),
                                     });
                                 },
-                                noticeType: R,
+                                noticeType: P,
                                 children: C.intl.string(C.t.Zi69D4),
                             }),
                         ],
@@ -350,21 +350,21 @@ let L = (e) => {
                         color: o.DM8.BRAND,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                onClick: () => i(I.L.USER_DISMISS),
-                                noticeType: T.kVF.REPORT_TO_MOD_EXIT_SURVEY,
+                                onClick: () => i(S.L.USER_DISMISS),
+                                noticeType: I.kVF.REPORT_TO_MOD_EXIT_SURVEY,
                             }),
                             C.intl.string(C.t.sw22sn),
                             (0, r.jsx)(o.NoS, {
                                 onClick: () => {
                                     window.open(
                                         "https://discord.sjc1.qualtrics.com/jfe/form/SV_9zz09xNJ3Qvyb78?user_id="
-                                            .concat(null == D ? void 0 : D.id, "&guild_id=")
-                                            .concat(L),
+                                            .concat(null == w ? void 0 : w.id, "&guild_id=")
+                                            .concat(x),
                                         "_blank",
                                     ),
-                                        i(I.L.TAKE_ACTION);
+                                        i(S.L.TAKE_ACTION);
                                 },
-                                noticeType: T.kVF.REPORT_TO_MOD_EXIT_SURVEY,
+                                noticeType: I.kVF.REPORT_TO_MOD_EXIT_SURVEY,
                                 children: C.intl.string(C.t.rulMOX),
                             }),
                         ],

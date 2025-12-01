@@ -1,5 +1,5 @@
 n.d(t, {
-    Ou: () => _,
+    Ou: () => p,
     SR: () => d,
     YD: () => f,
 }),
@@ -29,4 +29,4 @@ let f = async (e, t) => {
             location: u.dy.GIFTING,
         });
     },
-    _ = (e) => {};
+    p = (e) => {};

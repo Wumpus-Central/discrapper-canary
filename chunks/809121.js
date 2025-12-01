@@ -12,22 +12,22 @@ var r = t(54381),
     g = t(243778),
     f = t(690221),
     x = t(77498),
-    _ = t(823379),
-    v = t(49012),
+    v = t(823379),
+    _ = t(49012),
     b = t(639777),
-    p = t(905551),
-    j = t(578756),
+    j = t(905551),
+    p = t(578756),
     h = t(441494),
     C = t(775146),
     y = t(941762),
     O = t(587065),
     I = t(162190),
-    S = t(986841),
-    N = t(47695),
+    N = t(986841),
+    S = t(47695),
     P = t(329871),
     E = t(110381),
     T = t(921944),
-    w = t(732031),
+    w = t(613275),
     Z = t(388032),
     R = t(500104);
 function k(e) {
@@ -60,7 +60,7 @@ function G(e) {
         [i, l] = a.useState(!1),
         s = a.useCallback(() => {
             l(!0),
-                (0, p.WX)(n, t.id).finally(() => {
+                (0, j.WX)(n, t.id).finally(() => {
                     l(!1);
                 });
         }, [n, t.id]);
@@ -115,12 +115,12 @@ function M(e) {
         ),
     );
 }
-function B(e) {
+function V(e) {
     let { guildId: n } = e,
         [t, i] = a.useState(!1),
         l = a.useCallback(() => {
             i(!0),
-                (0, p.mF)(n).finally(() => {
+                (0, j.mF)(n).finally(() => {
                     i(!1);
                 });
         }, [n]);
@@ -132,28 +132,28 @@ function B(e) {
         onClick: l,
     });
 }
-function V(e) {
+function B(e) {
     let { instance: n } = e,
-        t = (0, N.Z)(n.providerType, n.gameServerPanelUrl);
+        t = (0, S.Z)(n.providerType, n.gameServerPanelUrl);
     return (0, r.jsx)(u.Button, {
         fullWidth: !0,
         text: Z.intl.string(w.default.bBkeMs),
         variant: "secondary",
         onClick: () => {
-            null != t && (0, v.q)({ href: t });
+            null != t && (0, _.q)({ href: t });
         },
     });
 }
 function W(e) {
     let { guildId: n, instance: t } = e,
-        i = (0, S.Z)(t),
-        [p, k] = (0, g.US)([c.z.GAME_SERVER_HOSTING_PORTKEY_TOS]),
-        W = p !== c.z.GAME_SERVER_HOSTING_PORTKEY_TOS,
+        i = (0, N.Z)(t),
+        [j, k] = (0, g.US)([c.z.GAME_SERVER_HOSTING_PORTKEY_TOS]),
+        W = j !== c.z.GAME_SERVER_HOSTING_PORTKEY_TOS,
         L = (0, o.e7)([x.Z], () => x.Z.getDetectableGame(t.gameId)),
-        U = (0, N.Z)(t.providerType, t.gameServerPanelUrl),
+        U = (0, S.Z)(t.providerType, t.gameServerPanelUrl),
         z = a.useCallback(() => {
             var e;
-            (0, j.wz)(n, t.gameId, null != (e = null == L ? void 0 : L.name) ? e : "", t.id),
+            (0, p.wz)(n, t.gameId, null != (e = null == L ? void 0 : L.name) ? e : "", t.id),
                 W || null == t.providerType
                     ? (0, P.Z)(n, t)
                     : (0, E.Z)({
@@ -164,11 +164,11 @@ function W(e) {
                       });
         }, [t, W, k, n, null == L ? void 0 : L.name]),
         { handleCopyServerIp: F, animateCopyIcon: K } = (0, O.Z)(n, t.id, m.Z.GAME_SERVER_GAME, null != i ? i : ""),
-        q = (0, I.Z)(t.gameId, "cover"),
-        H = (0, b.Z)(n),
-        X = a.useCallback(() => {
+        X = (0, I.Z)(t.gameId, "cover"),
+        q = (0, b.Z)(n),
+        H = a.useCallback(() => {
             var e;
-            (0, j.$M)(n, t.id), (0, v.q)({ href: null != (e = t.gameServerPanelUrl) ? e : "" });
+            (0, p.$M)(n, t.id), (0, _.q)({ href: null != (e = t.gameServerPanelUrl) ? e : "" });
         }, [t.gameServerPanelUrl, n, t.id]),
         Y = a.useMemo(() => {
             switch (t.status) {
@@ -179,9 +179,9 @@ function W(e) {
                                 guildId: n,
                                 instance: t,
                             }),
-                            H &&
+                            q &&
                                 (0, r.jsx)(A, {
-                                    onClick: X,
+                                    onClick: H,
                                     disabled: null == t.gameServerPanelUrl,
                                 }),
                         ],
@@ -192,25 +192,25 @@ function W(e) {
                     return (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)(D, { onClick: z }),
-                            H &&
+                            q &&
                                 (0, r.jsx)(A, {
-                                    onClick: X,
+                                    onClick: H,
                                     disabled: null == t.gameServerPanelUrl,
                                 }),
                         ],
                     });
                 case s.V.STARTUP_FAILED:
                 case s.V.MISSING_STOCK:
-                    return H
-                        ? (0, r.jsx)(M, { onClick: X })
+                    return q
+                        ? (0, r.jsx)(M, { onClick: H })
                         : (0, r.jsx)(D, {
                               onClick: z,
                               disabled: !0,
                           });
                 case s.V.DELETED:
-                    return H
+                    return q
                         ? (0, r.jsx)(A, {
-                              onClick: X,
+                              onClick: H,
                               disabled: null == t.gameServerPanelUrl,
                           })
                         : (0, r.jsx)(D, {
@@ -220,8 +220,8 @@ function W(e) {
                 case s.V.PROVIDER_ERRORED:
                     return (0, r.jsxs)(r.Fragment, {
                         children: [
-                            H && null != U
-                                ? (0, r.jsx)(V, {
+                            q && null != U
+                                ? (0, r.jsx)(B, {
                                       guildId: n,
                                       instance: t,
                                   })
@@ -229,7 +229,7 @@ function W(e) {
                                       onClick: z,
                                       disabled: !0,
                                   }),
-                            (0, r.jsx)(B, {
+                            (0, r.jsx)(V, {
                                 guildId: n,
                                 instance: t,
                             }),
@@ -238,27 +238,27 @@ function W(e) {
                 default:
                     return null;
             }
-        }, [t, z, H, X, n, U]),
+        }, [t, z, q, H, n, U]),
         J = a.useMemo(() => {
             if (null == t.gameConfig) return null;
-            let e = [t.gameConfig.type, t.gameConfig.version].filter(_.lm).join(" ");
+            let e = [t.gameConfig.type, t.gameConfig.version].filter(v.lm).join(" ");
             return "" === e ? null : e;
         }, [t.gameConfig]),
-        Q = a.useMemo(() => {
+        $ = a.useMemo(() => {
             switch (t.status) {
                 case s.V.STARTING:
                     if (null == t.gameServerPanelUrl) return Z.intl.string(w.default["1A3US2"]);
                     return null;
                 case s.V.STARTUP_FAILED:
-                    return Z.intl.string(H ? w.default.Mdoc98 : w.default.osZiRl);
+                    return Z.intl.string(q ? w.default.Mdoc98 : w.default.osZiRl);
                 case s.V.MISSING_STOCK:
-                    return Z.intl.string(H ? w.default.YCakvM : w.default.osZiRl);
+                    return Z.intl.string(q ? w.default.YCakvM : w.default.osZiRl);
                 case s.V.PROVIDER_ERRORED:
-                    return Z.intl.string(H ? w.default.NRyCeY : w.default.osZiRl);
+                    return Z.intl.string(q ? w.default.NRyCeY : w.default.osZiRl);
                 default:
                     return null;
             }
-        }, [t.status, t.gameServerPanelUrl, H]);
+        }, [t.status, t.gameServerPanelUrl, q]);
     return (0, r.jsxs)(C.Z, {
         actions: Y,
         children: [
@@ -269,7 +269,7 @@ function W(e) {
                         className: R.serverHeader,
                         children: [
                             (0, r.jsx)("img", {
-                                src: null != q ? q : "",
+                                src: null != X ? X : "",
                                 alt: "",
                                 className: R.gameImage,
                             }),
@@ -283,7 +283,7 @@ function W(e) {
                                     (0, r.jsx)(u.Text, {
                                         variant: "text-sm/medium",
                                         color: "text-tertiary",
-                                        children: [null == L ? void 0 : L.name, J].filter(_.lm).join(" \u2022 "),
+                                        children: [null == L ? void 0 : L.name, J].filter(v.lm).join(" \u2022 "),
                                     }),
                                 ],
                             }),
@@ -413,10 +413,10 @@ function W(e) {
                                                         }
                                                     })(t.status),
                                                 }),
-                                                null != Q &&
+                                                null != $ &&
                                                     (0, r.jsx)(d.u, {
                                                         position: "top",
-                                                        text: Q,
+                                                        text: $,
                                                         children: (0, r.jsx)(u.idN, {
                                                             className: R.statusTooltipIcon,
                                                             size: "xs",
@@ -445,7 +445,7 @@ function W(e) {
                     }),
                 ],
             }),
-            H &&
+            q &&
                 (0, r.jsx)("div", {
                     className: R.overflowMenu,
                     children: (0, r.jsx)(y.Z, {
@@ -455,7 +455,7 @@ function W(e) {
                 }),
             (0, r.jsx)("div", {
                 className: R.imageBackground,
-                children: (0, r.jsx)(h.b, { imageUrl: null != q ? q : "" }),
+                children: (0, r.jsx)(h.b, { imageUrl: null != X ? X : "" }),
             }),
         ],
     });

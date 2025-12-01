@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(415506);
+n.d(t, { Z: () => _ }), n(415506);
 var r = n(836560),
     i = n(579092),
     a = n(740197),
@@ -21,14 +21,14 @@ function d(e, t, n) {
     );
 }
 let f = new i.Yd("Output"),
-    _ = new o.Z();
-class p extends r.EventEmitter {
+    p = new o.Z();
+class _ extends r.EventEmitter {
     destroy() {
         var e, t, n;
         this.removeAllListeners(),
             null == (e = (t = this).cleanup) || e.call(t),
             this.reset(),
-            null != this.stream && (_.release(this.stream), (this.stream = void 0)),
+            null != this.stream && (p.release(this.stream), (this.stream = void 0)),
             null == (n = this._audioFilter) || n.dispose(),
             (this._audioFilter = void 0),
             (this.destroyed = !0);
@@ -83,7 +83,7 @@ class p extends r.EventEmitter {
     }
     async enable() {
         null != this.cleanup && (this.cleanup(), (this.cleanup = void 0)),
-            null != this.stream && (_.release(this.stream), (this.stream = void 0));
+            null != this.stream && (p.release(this.stream), (this.stream = void 0));
         let e = await (0, a.Hg)(),
             t = {
                 echoCancellation: this.echoCancellation,
@@ -92,8 +92,8 @@ class p extends r.EventEmitter {
             };
         e.some((e) => e.id === this.sourceId) && (t.deviceId = { exact: this.sourceId });
         try {
-            let e = await _.acquire({ audio: t });
-            if (this.destroyed) throw (_.release(e), Error("AudioInput: Already destroyed"));
+            let e = await p.acquire({ audio: t });
+            if (this.destroyed) throw (p.release(e), Error("AudioInput: Already destroyed"));
             if (this._noiseCancellation)
                 try {
                     let t = await (0, s.n)();
@@ -103,7 +103,7 @@ class p extends r.EventEmitter {
                             null == (t = this._audioFilter) || t.enable();
                         }),
                         this._audioFilter.addEventListener("dispose", (t) => {
-                            _.release(e);
+                            p.release(e);
                         });
                     let n = this.context.createMediaStreamSource(e),
                         r = this.context.createMediaStreamDestination();

@@ -9,62 +9,62 @@ e.exports = function (e, t, n) {
         u,
         d,
         f,
-        _,
         p,
-        h = 0,
-        m = !1,
+        _,
+        m = 0,
+        h = !1,
         g = !1,
         E = !0;
     if ("function" != typeof e) throw TypeError(o);
     function b(t) {
         var n = c,
             r = u;
-        return (c = u = void 0), (h = t), (f = e.apply(r, n));
+        return (c = u = void 0), (m = t), (f = e.apply(r, n));
     }
     function y(e) {
-        return (h = e), (_ = setTimeout(I, t)), m ? b(e) : f;
+        return (m = e), (p = setTimeout(S, t)), h ? b(e) : f;
     }
     function O(e) {
-        var n = e - p,
-            r = e - h,
+        var n = e - _,
+            r = e - m,
             i = t - n;
         return g ? l(i, d - r) : i;
     }
     function v(e) {
-        var n = e - p,
-            r = e - h;
-        return void 0 === p || n >= t || n < 0 || (g && r >= d);
-    }
-    function I() {
-        var e = i();
-        if (v(e)) return T(e);
-        _ = setTimeout(I, O(e));
-    }
-    function T(e) {
-        return ((_ = void 0), E && c) ? b(e) : ((c = u = void 0), f);
+        var n = e - _,
+            r = e - m;
+        return void 0 === _ || n >= t || n < 0 || (g && r >= d);
     }
     function S() {
-        return void 0 === _ ? f : T(i());
+        var e = i();
+        if (v(e)) return I(e);
+        p = setTimeout(S, O(e));
+    }
+    function I(e) {
+        return ((p = void 0), E && c) ? b(e) : ((c = u = void 0), f);
+    }
+    function T() {
+        return void 0 === p ? f : I(i());
     }
     function A() {
         var e = i(),
             n = v(e);
-        if (((c = arguments), (u = this), (p = e), n)) {
-            if (void 0 === _) return y(p);
-            if (g) return clearTimeout(_), (_ = setTimeout(I, t)), b(p);
+        if (((c = arguments), (u = this), (_ = e), n)) {
+            if (void 0 === p) return y(_);
+            if (g) return clearTimeout(p), (p = setTimeout(S, t)), b(_);
         }
-        return void 0 === _ && (_ = setTimeout(I, t)), f;
+        return void 0 === p && (p = setTimeout(S, t)), f;
     }
     return (
         (t = a(t) || 0),
         r(n) &&
-            ((m = !!n.leading),
+            ((h = !!n.leading),
             (d = (g = "maxWait" in n) ? s(a(n.maxWait) || 0, t) : d),
             (E = "trailing" in n ? !!n.trailing : E)),
         (A.cancel = function () {
-            void 0 !== _ && clearTimeout(_), (h = 0), (c = p = u = _ = void 0);
+            void 0 !== p && clearTimeout(p), (m = 0), (c = _ = u = p = void 0);
         }),
-        (A.flush = S),
+        (A.flush = T),
         A
     );
 };

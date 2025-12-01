@@ -1,7 +1,7 @@
 n.d(t, {
     Cl: () => f,
     DisableCommunicationDuration: () => o,
-    GN: () => _,
+    GN: () => p,
     av: () => d,
     cu: () => c,
     getFriendlyDurationString: () => s,
@@ -54,4 +54,4 @@ let l = () =>
     u = "GuildCommunicationDisabledDismissedGuilds",
     d = "Set Communication Disabled Modal",
     f = "Clear Communication Disabled Modal",
-    _ = 512;
+    p = 512;

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(442837),
     d = n(902704),
     f = n(13245),
-    _ = n(928518),
-    p = n(237997),
-    h = n(358085),
-    m = n(837268),
+    p = n(928518),
+    _ = n(237997),
+    m = n(358085),
+    h = n(837268),
     g = n(338949),
     E = n(561064),
     b = n(501787),
@@ -39,7 +39,7 @@ function v(e, t) {
         bottom: Math.ceil(t.bottom),
     };
 }
-class I {
+class S {
     observe(e) {
         var t;
         if (
@@ -47,7 +47,7 @@ class I {
             null == this.mutationObserver)
         ) {
             this.mutationObserver = new MutationObserver(this.handleMutations);
-            let e = _.Z.getWindow(b.$J);
+            let e = p.Z.getWindow(b.$J);
             null != e &&
                 this.mutationObserver.observe(null == e ? void 0 : e.document.body, {
                     subtree: !0,
@@ -74,8 +74,8 @@ class I {
             this.updateZones());
     }
     updateZones() {
-        if (!h.isPlatformEmbedded) return;
-        let e = _.Z.getWindow(b.$J);
+        if (!m.isPlatformEmbedded) return;
+        let e = p.Z.getWindow(b.$J);
         null != e &&
             f.Z.setClickZones(
                 Array.from(this.zones.values()).map((t) => {
@@ -140,13 +140,13 @@ class I {
             (this.window = e);
     }
 }
-let T = i.createContext(new I((0, E.i)()));
-function S(e) {
+let I = i.createContext(new S((0, E.i)()));
+function T(e) {
     let { observe: t = !0, className: n, style: a, children: s } = e,
-        l = i.useContext(T),
-        c = (0, u.e7)([g.Z], () => g.Z.hasRenderDebugMode(m.GO.ClickZones)),
-        d = (0, u.e7)([p.default], () => p.default.disableClickableRegions),
-        [{ refHandler: f, setObserve: _ }] = i.useState(() => {
+        l = i.useContext(I),
+        c = (0, u.e7)([g.Z], () => g.Z.hasRenderDebugMode(h.GO.ClickZones)),
+        d = (0, u.e7)([_.default], () => _.default.disableClickableRegions),
+        [{ refHandler: f, setObserve: p }] = i.useState(() => {
             let e = null;
             return {
                 setObserve(t) {
@@ -159,8 +159,8 @@ function S(e) {
         });
     return (
         i.useLayoutEffect(() => {
-            d ? _(!1) : _(t);
-        }, [t, _, d]),
+            d ? p(!1) : p(t);
+        }, [t, p, d]),
         (0, r.jsx)("div", {
             ref: f,
             style: a,

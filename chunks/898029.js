@@ -1,23 +1,23 @@
-_.d(e, { E: () => s });
-var a = _(573736),
-    r = _(202811),
-    n = _(370336),
-    o = _(886115),
-    E = _(622916),
-    i = _(151122),
-    c = _(255768);
-let s = (0, i._I)((t = {}) => {
-    let { depth: e = 3, captureErrorCause: _ = !0 } = t;
+r.d(t, { E: () => E });
+var n = r(573736),
+    a = r(202811),
+    i = r(370336),
+    o = r(886115),
+    _ = r(622916),
+    s = r(151122),
+    c = r(255768);
+let E = (0, s._I)((e = {}) => {
+    let { depth: t = 3, captureErrorCause: r = !0 } = e;
     return {
         name: "ExtraErrorData",
-        processEvent(t, i, s) {
-            let { maxValueLength: l = 250 } = s.getOptions();
-            return (function (t, e = {}, _, i, s) {
-                if (!e.originalException || !(0, a.VZ)(e.originalException)) return t;
-                let l = e.originalException.name || e.originalException.constructor.name,
-                    I = (function (t, e, _) {
+        processEvent(e, s, E) {
+            let { maxValueLength: l = 250 } = E.getOptions();
+            return (function (e, t = {}, r, s, E) {
+                if (!t.originalException || !(0, n.VZ)(t.originalException)) return e;
+                let l = t.originalException.name || t.originalException.constructor.name,
+                    u = (function (e, t, r) {
                         try {
-                            let r = [
+                            let a = [
                                     "name",
                                     "message",
                                     "stack",
@@ -28,43 +28,43 @@ let s = (0, i._I)((t = {}) => {
                                     "columnNumber",
                                     "toJSON",
                                 ],
-                                n = {};
-                            for (let e of Object.keys(t)) {
-                                if (-1 !== r.indexOf(e)) continue;
-                                let E = t[e];
-                                n[e] = (0, a.VZ)(E) || "string" == typeof E ? (0, o.$G)(`${E}`, _) : E;
+                                i = {};
+                            for (let t of Object.keys(e)) {
+                                if (-1 !== a.indexOf(t)) continue;
+                                let _ = e[t];
+                                i[t] = (0, n.VZ)(_) || "string" == typeof _ ? (0, o.$G)(`${_}`, r) : _;
                             }
                             if (
-                                (e &&
-                                    void 0 !== t.cause &&
-                                    (n.cause = (0, a.VZ)(t.cause) ? t.cause.toString() : t.cause),
-                                "function" == typeof t.toJSON)
+                                (t &&
+                                    void 0 !== e.cause &&
+                                    (i.cause = (0, n.VZ)(e.cause) ? e.cause.toString() : e.cause),
+                                "function" == typeof e.toJSON)
                             ) {
-                                let e = t.toJSON();
-                                for (let t of Object.keys(e)) {
-                                    let _ = e[t];
-                                    n[t] = (0, a.VZ)(_) ? _.toString() : _;
+                                let t = e.toJSON();
+                                for (let e of Object.keys(t)) {
+                                    let r = t[e];
+                                    i[e] = (0, n.VZ)(r) ? r.toString() : r;
                                 }
                             }
-                            return n;
-                        } catch (t) {
-                            c.X && E.kg.error("Unable to extract extra data from the Error object:", t);
+                            return i;
+                        } catch (e) {
+                            c.X && _.kg.error("Unable to extract extra data from the Error object:", e);
                         }
                         return null;
-                    })(e.originalException, i, s);
-                if (I) {
-                    let e = { ...t.contexts },
-                        o = (0, r.Fv)(I, _);
+                    })(t.originalException, s, E);
+                if (u) {
+                    let t = { ...e.contexts },
+                        o = (0, a.Fv)(u, r);
                     return (
-                        (0, a.PO)(o) && ((0, n.xp)(o, "__sentry_skip_normalization__", !0), (e[l] = o)),
+                        (0, n.PO)(o) && ((0, i.xp)(o, "__sentry_skip_normalization__", !0), (t[l] = o)),
                         {
-                            ...t,
-                            contexts: e,
+                            ...e,
+                            contexts: t,
                         }
                     );
                 }
-                return t;
-            })(t, i, e, _, l);
+                return e;
+            })(e, s, t, r, l);
         },
     };
 });

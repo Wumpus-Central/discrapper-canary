@@ -1,10 +1,10 @@
 n.d(t, {
     C0: () => u,
-    W3: () => _,
+    W3: () => p,
     X8: () => f,
-    bG: () => m,
-    dG: () => p,
-    pD: () => h,
+    bG: () => h,
+    dG: () => _,
+    pD: () => m,
     tH: () => d,
 });
 var r = n(544891),
@@ -66,7 +66,7 @@ async function f() {
         e
     );
 }
-async function _(e, t) {
+async function p(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     i.Z.dispatch({ type: "GUILD_APPLY_BOOST_START" });
     try {
@@ -99,7 +99,7 @@ async function _(e, t) {
         );
     }
 }
-async function p(e, t) {
+async function _(e, t) {
     i.Z.dispatch({ type: "GUILD_UNAPPLY_BOOST_START" });
     try {
         await r.tn.del({
@@ -123,7 +123,7 @@ async function p(e, t) {
         boostId: t,
     });
 }
-async function h(e) {
+async function m(e) {
     let t = await r.tn.post({
             url: c.ANM.USER_GUILD_BOOST_SLOT_CANCEL(e),
             oldFormErrors: !0,
@@ -138,7 +138,7 @@ async function h(e) {
         n
     );
 }
-async function m(e) {
+async function h(e) {
     let t = await r.tn.post({
             url: c.ANM.USER_GUILD_BOOST_SLOT_UNCANCEL(e),
             oldFormErrors: !0,

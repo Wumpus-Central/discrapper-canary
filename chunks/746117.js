@@ -27,10 +27,10 @@ function d(e, t) {
 function f(e, t) {
     return t || (t = r.getGlobalDir()), r.isStrong(t) || i(!1), d(e, t);
 }
-function _(e, t) {
+function p(e, t) {
     return f(e, t) === r.LTR;
 }
-function p(e, t) {
+function _(e, t) {
     return f(e, t) === r.RTL;
 }
 e.exports = {
@@ -38,6 +38,6 @@ e.exports = {
     firstStrongCharDir: u,
     resolveBlockDir: d,
     getDirection: f,
-    isDirectionLTR: _,
-    isDirectionRTL: p,
+    isDirectionLTR: p,
+    isDirectionRTL: _,
 };

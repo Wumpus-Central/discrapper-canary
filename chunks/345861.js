@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381),
     i = n(473749),
     a = n(481060),
@@ -60,7 +60,7 @@ function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -68,7 +68,7 @@ function f(e, t) {
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -77,25 +77,25 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function p(e) {
-    var { onChange: t, onFileSizeError: n, multiple: l = !1, disabled: u = !1, maxFileSizeBytes: _, filters: p } = e,
-        h = f(e, ["onChange", "onFileSizeError", "multiple", "disabled", "maxFileSizeBytes", "filters"]);
-    let m = i.useRef(null),
+function _(e) {
+    var { onChange: t, onFileSizeError: n, multiple: l = !1, disabled: u = !1, maxFileSizeBytes: p, filters: _ } = e,
+        m = f(e, ["onChange", "onFileSizeError", "multiple", "disabled", "maxFileSizeBytes", "filters"]);
+    let h = i.useRef(null),
         g = () => {
             var e;
-            null == (e = m.current) || e.activateUploadDialogue();
+            null == (e = h.current) || e.activateUploadDialogue();
         };
     return (0, r.jsxs)("div", {
         children: [
             (0, r.jsx)("div", {
                 className: s.imageInputContainer,
                 children: (0, r.jsx)(o.ZP, {
-                    ref: m,
+                    ref: h,
                     onChange: t,
                     onFileSizeError: n,
                     multiple: l,
-                    maxFileSizeBytes: _,
-                    filters: p,
+                    maxFileSizeBytes: p,
+                    filters: _,
                     disabled: u,
                     tabIndex: -1,
                     "aria-hidden": !0,
@@ -103,7 +103,7 @@ function p(e) {
             }),
             (0, r.jsx)(
                 a.Button,
-                d(c({}, h), {
+                d(c({}, m), {
                     disabled: u,
                     onClick: g,
                 }),

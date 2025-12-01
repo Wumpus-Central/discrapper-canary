@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(473749),
     i = n(565183),
     a = n(817788),
@@ -57,20 +57,20 @@ function f(e, t) {
         e
     );
 }
-function _(e) {
+function p(e) {
     let { onOpened: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { applicationId: n } = e,
         c = (0, i.Z)(n),
         d = r.useMemo(() => (null == c ? n : (0, o.bP)(c) ? a.eB : n), [c, n]),
-        _ = (0, l.ZP)(f(u({}, e), { applicationId: d }));
-    return _.shouldOpenGameProfile && null != d
+        p = (0, l.ZP)(f(u({}, e), { applicationId: d }));
+    return p.shouldOpenGameProfile && null != d
         ? (n) => {
               n.stopPropagation(),
                   n.preventDefault(),
                   s.Z.openGameProfileModal(
                       f(u({}, e), {
                           applicationId: d,
-                          gameProfileModalChecks: _,
+                          gameProfileModalChecks: p,
                       }),
                   ),
                   null == t || t();

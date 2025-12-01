@@ -1,4 +1,4 @@
-n.d(t, { I: () => p });
+n.d(t, { I: () => _ });
 var r = n(54381);
 n(473749);
 var i = n(987153),
@@ -61,7 +61,7 @@ function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -69,7 +69,7 @@ function f(e, t) {
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,16 +78,16 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function p(e) {
+function _(e) {
     var {
             size: t = "md",
             gradientColor: n = "purple",
             graphic: l,
             badge: u,
-            title: _,
-            subtitle: p,
-            actionBarInput: h,
-            actions: m,
+            title: p,
+            subtitle: _,
+            actionBarInput: m,
+            actions: h,
             children: g,
         } = e,
         E = f(e, [
@@ -111,16 +111,16 @@ function p(e) {
                     gradientColor: n,
                     graphic: l,
                     badge: u,
-                    title: _,
+                    title: p,
                     titleTextVariant: "heading-xl/semibold",
-                    subtitle: p,
+                    subtitle: _,
                     alignCenter: !0,
                 }),
                 (0, r.jsx)(o.f, { children: g }),
                 (0, r.jsx)(a.G, {
-                    leading: h,
-                    actions: m,
-                    actionsFullWidth: null == h,
+                    leading: m,
+                    actions: h,
+                    actionsFullWidth: null == m,
                 }),
             ],
         }),

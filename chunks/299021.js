@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685), n(467055);
+n.d(t, { Z: () => M }), n(388685), n(467055);
 var r,
     i = n(108131),
     a = n.n(i),
@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,22 +48,22 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -71,7 +71,7 @@ function h(e, t) {
     }
     return i;
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -104,43 +104,43 @@ let O = [c.Cm.User],
         user: {},
         guild: {},
     },
+    S = {},
     I = {},
     T = {},
-    S = {},
     A = {},
     C = new Set(),
     N = new Set(),
-    R = "apexTrackedExposures",
-    P = 2,
-    D = 604800000,
-    w = {},
-    L = 2,
-    x = {};
-function M(e) {
-    let t = x[e];
-    return null == t && ((t = a().v3(e)), (x[e] = t)), t;
+    P = "apexTrackedExposures",
+    R = 2,
+    w = 604800000,
+    D = {},
+    x = 2,
+    L = {};
+function j(e) {
+    let t = L[e];
+    return null == t && ((t = a().v3(e)), (L[e] = t)), t;
 }
-class k extends (r = o.ZP.PersistedStore) {
+class M extends (r = o.ZP.PersistedStore) {
     loadStoredState(e, t) {
-        for (let n in (null != e && e.version === L && ((T = e.clientOverrides), (v = e.evaluatedExperiments)),
-        (S = {}),
+        for (let n in (null != e && e.version === x && ((I = e.clientOverrides), (v = e.evaluatedExperiments)),
+        (T = {}),
         t)) {
-            let e = M(n),
+            let e = j(n),
                 r = t[n];
-            S[n] = {
+            T[n] = {
                 hashedName: e,
                 variantId: r,
                 isOverride: !0,
                 exposureTrackingEnabled: !1,
             };
         }
-        w = this.loadTrackedExposures();
+        D = this.loadTrackedExposures();
     }
     getState() {
         return {
-            version: L,
+            version: x,
             evaluatedExperiments: v,
-            clientOverrides: T,
+            clientOverrides: I,
         };
     }
     setExperimentAssignments(e) {
@@ -172,9 +172,9 @@ class k extends (r = o.ZP.PersistedStore) {
         return !0;
     }
     createOverride(e, t) {
-        (T = p(f({}, T), {
+        (I = _(f({}, I), {
             [e]: {
-                hashedName: M(e),
+                hashedName: j(e),
                 variantId: t,
                 isOverride: !0,
                 exposureTrackingEnabled: !1,
@@ -183,8 +183,8 @@ class k extends (r = o.ZP.PersistedStore) {
             this.trackExposureSuppression(e, "client_override");
     }
     deleteOverride(e) {
-        let { [e]: t } = T;
-        T = h(T, [e].map(E));
+        let { [e]: t } = I;
+        I = m(I, [e].map(E));
     }
     setExperimentsMetadata(e) {
         A = f({}, A, Object.fromEntries(e.map((e) => [e.name, e])));
@@ -193,27 +193,27 @@ class k extends (r = o.ZP.PersistedStore) {
         return A;
     }
     getClientOverrides() {
-        return T;
+        return I;
     }
     getExperimentClientOverride(e) {
-        return T[e];
+        return I[e];
     }
     handleLogout(e) {
-        e || this.clearAllServerAssignments(), l.K.remove(R), this.clearAllTrackedExposures();
+        e || this.clearAllServerAssignments(), l.K.remove(P), this.clearAllTrackedExposures();
     }
     registerExperiment(e) {
-        (I[e.name] = e), null != S[e.name] && this.trackExposureSuppression(e.name, "cookie_override");
+        (S[e.name] = e), null != T[e.name] && this.trackExposureSuppression(e.name, "cookie_override");
     }
     getRegisteredExperiments() {
-        return I;
+        return S;
     }
     getAssignment(e, t, n) {
         var r;
-        let i = null != (r = T[n]) ? r : S[n];
+        let i = null != (r = I[n]) ? r : T[n];
         return null != i ? i : this.getServerAssignment(e, t, n);
     }
     getServerAssignment(e, t, n) {
-        let r = M(n),
+        let r = j(n),
             i = v[e][t];
         if (null != i) return i.assignments[r];
     }
@@ -223,13 +223,13 @@ class k extends (r = o.ZP.PersistedStore) {
     }
     getEvaluationAndAssignment(e, t, n) {
         var r;
-        let i = null != (r = T[n]) ? r : S[n];
+        let i = null != (r = I[n]) ? r : T[n];
         if (null != i) return [void 0, i];
         let a = v[e][t];
-        return null == a ? [void 0, void 0] : [a.evaluationId, a.assignments[M(n)]];
+        return null == a ? [void 0, void 0] : [a.evaluationId, a.assignments[j(n)]];
     }
     trackExperimentExposure(e, t, n, r, i, a) {
-        let o = M("".concat(t, "|").concat(i, "|").concat(a, "|").concat(n));
+        let o = j("".concat(t, "|").concat(i, "|").concat(a, "|").concat(n));
         this.shouldTrackExposure(o) &&
             "user" === r &&
             (this.track(
@@ -243,12 +243,12 @@ class k extends (r = o.ZP.PersistedStore) {
                 },
                 { flush: !0 },
             ),
-            (w[o] = Date.now()),
-            this.saveTrackedExposures(w));
+            (D[o] = Date.now()),
+            this.saveTrackedExposures(D));
     }
     trackCommonTriggerPointExposures(e) {
         for (let t of this.evaluationIds("user")) {
-            let n = M("".concat(t, "|").concat(e));
+            let n = j("".concat(t, "|").concat(e));
             this.shouldTrackExposure(n) &&
                 (this.track(
                     u.j_.EXPERIMENT_USER_EVALUATION_EXPOSED,
@@ -259,12 +259,12 @@ class k extends (r = o.ZP.PersistedStore) {
                     },
                     { flush: !0 },
                 ),
-                (w[n] = Date.now()),
-                this.saveTrackedExposures(w));
+                (D[n] = Date.now()),
+                this.saveTrackedExposures(D));
         }
     }
     trackExposureSuppression(e, t) {
-        let n = I[e];
+        let n = S[e];
         null != n &&
             "user" === n.kind &&
             this.track(
@@ -283,22 +283,22 @@ class k extends (r = o.ZP.PersistedStore) {
             .filter((e) => null != e);
     }
     shouldTrackExposure(e) {
-        let t = w[e];
-        return null == t || Date.now() - t > D;
+        let t = D[e];
+        return null == t || Date.now() - t > w;
     }
     loadTrackedExposures() {
-        let e = l.K.get(R);
-        if (null == e || e.version !== P) return {};
+        let e = l.K.get(P);
+        if (null == e || e.version !== R) return {};
         let t = e.exposures,
             n = Date.now(),
             r = !1;
-        for (let e in t) n - t[e] > D && (delete t[e], (r = !0));
+        for (let e in t) n - t[e] > w && (delete t[e], (r = !0));
         return r && this.saveTrackedExposures(t), t;
     }
     saveTrackedExposures(e) {
         try {
-            l.K.set(R, {
-                version: P,
+            l.K.set(P, {
+                version: R,
                 exposures: e,
             });
         } catch (e) {
@@ -327,13 +327,13 @@ class k extends (r = o.ZP.PersistedStore) {
         };
     }
     clearAllOverrides() {
-        (T = {}), (S = {});
+        (I = {}), (T = {});
     }
     clearAllTrackedExposures() {
-        w = {};
+        D = {};
     }
     getHash(e) {
-        return M(e);
+        return j(e);
     }
     handleFetchStart(e) {
         C.add(e);
@@ -354,4 +354,4 @@ class k extends (r = o.ZP.PersistedStore) {
         super(...e), d(this, "track", () => Promise.resolve()), d(this, "surface", "unset");
     }
 }
-d(k, "displayName", "ApexExperimentStore"), d(k, "persistKey", "ApexExperimentStore");
+d(M, "displayName", "ApexExperimentStore"), d(M, "persistKey", "ApexExperimentStore");

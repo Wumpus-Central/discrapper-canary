@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(209698),
     d = n(592125),
     f = n(814454),
-    _ = n(473919),
-    p = n(170187),
-    h = n(532657),
-    m = n(981631),
+    p = n(473919),
+    _ = n(170187),
+    m = n(532657),
+    h = n(981631),
     g = n(388032);
 function E(e, t, n) {
     return (
@@ -48,41 +48,41 @@ function y(e) {
             stream: t,
             game: n,
             textVariant: u,
-            textClassName: h,
+            textClassName: m,
             iconClassName: E,
             hideIcon: b = !1,
             hideText: y = !1,
             hideTooltip: O = !1,
             canTruncate: v = !0,
         } = e,
-        I = (0, a.e7)([d.Z], () => d.Z.getChannel(t.channelId)),
-        T = (0, c.ZP)(I),
-        { analyticsLocations: S } = (0, s.ZP)(),
+        S = (0, a.e7)([d.Z], () => d.Z.getChannel(t.channelId)),
+        I = (0, c.ZP)(S),
+        { analyticsLocations: T } = (0, s.ZP)(),
         A = i.useCallback(() => {
             (0, f.A)({
-                analyticsLocations: S,
-                activityType: m.IIU.STREAMING,
+                analyticsLocations: T,
+                activityType: h.IIU.STREAMING,
                 voiceChannelId: t.channelId,
             });
-        }, [S, t.channelId]);
+        }, [T, t.channelId]);
     if (b && y) return null;
     let C = (null == n ? void 0 : n.name) === "" ? null : null == n ? void 0 : n.name,
         N = null != C ? C : g.intl.string(g.t.eXan7B),
-        R = !O && null != I && null != T;
+        P = !O && null != S && null != I;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             !b &&
-                (0, r.jsx)(_.Z, {
+                (0, r.jsx)(p.Z, {
                     icon: o.ARS,
-                    tooltipText: R ? T : void 0,
-                    tooltipAriaLabel: R ? (0, l.ZP)({ channel: I }) : void 0,
+                    tooltipText: P ? I : void 0,
+                    tooltipAriaLabel: P ? (0, l.ZP)({ channel: S }) : void 0,
                     className: E,
-                    onTooltipShow: R ? A : void 0,
+                    onTooltipShow: P ? A : void 0,
                 }),
             !y &&
-                (0, r.jsx)(p.Z, {
+                (0, r.jsx)(_.Z, {
                     variant: u,
-                    className: h,
+                    className: m,
                     canTruncate: v,
                     hideTooltip: O,
                     children: N,
@@ -99,36 +99,36 @@ function O(e) {
             iconClassName: l,
             hideIcon: u = !1,
             hideText: f = !1,
-            hideTooltip: p = !1,
-            canTruncate: m = !0,
+            hideTooltip: _ = !1,
+            canTruncate: h = !0,
             showChannelName: E = !1,
         } = e,
         b = (0, a.e7)([d.Z], () => d.Z.getChannel(t.channelId)),
         y = (0, c.ZP)(b),
         O = (null == n ? void 0 : n.name) === "" ? null : null == n ? void 0 : n.name,
         v = null != O ? O : g.intl.string(g.t.eXan7B),
-        I = null != O ? O : g.intl.string(g.t.eXan7B),
-        T =
+        S = null != O ? O : g.intl.string(g.t.eXan7B),
+        I =
             null != y
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [v, " (", y, ")"],
                   })
                 : v,
-        S = E ? T : v,
-        A = null != y ? "".concat(I, " (").concat(y, ")") : I;
-    return (0, r.jsx)(h.Z, {
+        T = E ? I : v,
+        A = null != y ? "".concat(S, " (").concat(y, ")") : S;
+    return (0, r.jsx)(m.Z, {
         icon: u
             ? void 0
-            : (0, r.jsx)(_.Z, {
+            : (0, r.jsx)(p.Z, {
                   icon: o.ARS,
                   className: l,
               }),
-        text: S,
-        tooltipText: p ? void 0 : T,
+        text: T,
+        tooltipText: _ ? void 0 : I,
         textVariant: i,
         className: s,
-        canTruncate: m,
-        hideTooltip: p,
+        canTruncate: h,
+        hideTooltip: _,
         "aria-label": A,
         hideText: f,
     });

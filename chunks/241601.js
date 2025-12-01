@@ -3,12 +3,12 @@ n.d(t, {
     Ql: () => u,
     R_: () => c,
     _2: () => d,
-    jY: () => h,
+    jY: () => m,
 }),
     n(539854),
     n(388685),
     n(35282);
-var i = n(963225),
+var i = n(502922),
     a = n(150924),
     o = n(748521),
     s = n(388032),
@@ -64,8 +64,8 @@ async function d(e) {
         ),
         null != r && (r.setLocale(e), n.push(r.loadPromise)),
         n.push(f(e)),
-        n.push(_(e)),
         n.push(p(e)),
+        n.push(_(e)),
         await Promise.all(n).catch((n) => t.setLoadingFailed(n, e)),
         t.setLoadingSucceeded(e);
 }
@@ -80,7 +80,7 @@ async function f(e) {
     }
     t.setLocaleData(i);
 }
-async function _(e) {
+async function p(e) {
     let t = n(352968).y[e];
     null != t && (await t());
     let r = [],
@@ -88,11 +88,11 @@ async function _(e) {
     for (; i.length > 0; ) r.push(i.join("-")), i.pop();
     r.push("en-US"), n(913527).locale(r);
 }
-function p(e) {
+function _(e) {
     let { setTags: t } = n(960048).Z;
     return t({ locale: e }), Promise.resolve();
 }
-function h() {
+function m() {
     let e = c((e) => e.localeData);
     return null != e ? e : a.default;
 }

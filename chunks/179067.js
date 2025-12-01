@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,22 +48,22 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -71,7 +71,7 @@ function h(e, t) {
     }
     return i;
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -81,12 +81,12 @@ function m(e, t) {
     return i;
 }
 function g(e) {
-    var { label: t, layout: n, isDisabled: d, icon: _, accessibilityHint: m } = e,
-        g = h(e, ["label", "layout", "isDisabled", "icon", "accessibilityHint"]);
-    let E = [t, m].filter(Boolean).join(", ");
+    var { label: t, layout: n, isDisabled: d, icon: p, accessibilityHint: h } = e,
+        g = m(e, ["label", "layout", "isDisabled", "icon", "accessibilityHint"]);
+    let E = [t, h].filter(Boolean).join(", ");
     return (0, r.jsx)(
         i.Vp,
-        p(f({}, g), {
+        _(f({}, g), {
             className: u.tag,
             textValue: E,
             isDisabled: d,
@@ -94,9 +94,9 @@ function g(e) {
                 let { allowsRemoving: i } = e;
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
-                        null != _ &&
+                        null != p &&
                             (0, r.jsx)(c.D, {
-                                graphic: _,
+                                graphic: p,
                                 layout: n,
                             }),
                         (0, r.jsx)(l.x, {

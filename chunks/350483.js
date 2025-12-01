@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var r = n(54381);
 n(473749);
 var i = n(392711),
@@ -10,10 +10,10 @@ var i = n(392711),
     u = n(914010),
     d = n(771845),
     f = n(55589),
-    _ = n(585483),
-    p = n(475468),
-    h = n(981631),
-    m = n(490897);
+    p = n(585483),
+    _ = n(475468),
+    m = n(981631),
+    h = n(490897);
 function g(e, t, n) {
     return (
         t in e
@@ -67,51 +67,51 @@ function y(e, t) {
     );
 }
 function O(e, t) {
-    let n = [h.ME, ...d.ZP.getFlattenedGuildIds()],
+    let n = [m.ME, ...d.ZP.getFlattenedGuildIds()],
         r = n.indexOf(e);
     return t > 0 ? n.slice(r).concat(n.slice(0, r), e) : (n.splice(r, 0, e), n.slice(r + 1).concat(n.slice(0, r + 1)));
 }
 function v(e, t) {
-    return e === h.ME
+    return e === m.ME
         ? f.Z.getPrivateChannelIds()
         : (0, s.Z)(e, {
               withVoiceChannels: t,
               withCurrentVoiceChannel: !0,
           }).map((e) => e.id);
 }
-function I(e, t) {
+function S(e, t) {
     return [
         {
             resourceId: e,
-            type: m.W.GUILD_EVENT,
+            type: h.W.GUILD_EVENT,
         },
         ...v(e, t),
     ];
 }
-function T(e, t) {
+function I(e, t) {
     var i, a;
     let s,
         {
             channelPredicate: d = () => !0,
             guildPredicate: f = () => !0,
-            guildFeaturePredicate: m = () => !1,
+            guildFeaturePredicate: h = () => !1,
             ensureChatIsVisible: g = () => !1,
             withVoiceChannels: b = !1,
         } = t,
-        v = null != (i = l.Z.getState().guildId) ? i : h.ME,
-        T = l.Z.getState().channelId,
-        S = O(v, e),
-        A = e > 0 ? 0 : S.length - 1,
-        C = I(v, b),
-        N = C.indexOf(T) + e;
+        v = null != (i = l.Z.getState().guildId) ? i : m.ME,
+        I = l.Z.getState().channelId,
+        T = O(v, e),
+        A = e > 0 ? 0 : T.length - 1,
+        C = S(v, b),
+        N = C.indexOf(I) + e;
     for (; null != v && "" !== v; ) {
         if (((s = C[N]), f(v)))
             for (; null != s && "" !== s; ) {
                 if ("string" == typeof s) {
-                    if (d(v, s)) return (0, p.K)(v, s, !1, g(v, s));
-                } else if ("object" == typeof s && m(s.resourceId, s.type))
+                    if (d(v, s)) return (0, _.K)(v, s, !1, g(v, s));
+                } else if ("object" == typeof s && h(s.resourceId, s.type))
                     return (
-                        v !== u.Z.getGuildId() && (0, p.K)(v, null == (a = c.ZP.getDefaultChannel(v)) ? void 0 : a.id),
+                        v !== u.Z.getGuildId() && (0, _.K)(v, null == (a = c.ZP.getDefaultChannel(v)) ? void 0 : a.id),
                         (0, o.ZDy)(async () => {
                             let { default: e } = await Promise.all([n.e("4096"), n.e("56236"), n.e("74103")]).then(
                                 n.bind(n, 17671),
@@ -121,12 +121,12 @@ function T(e, t) {
                     );
                 (N += e), (s = C[N]);
             }
-        if (((A += e), null == (v = S[A]) || "" === v)) break;
-        (C = I(v, b)), (N = e < 0 ? C.length - 1 : 0);
+        if (((A += e), null == (v = T[A]) || "" === v)) break;
+        (C = S(v, b)), (N = e < 0 ? C.length - 1 : 0);
     }
-    _.S.dispatch(h.CkL.SHAKE_APP, {
+    p.S.dispatch(m.CkL.SHAKE_APP, {
         duration: 200,
         intensity: 2,
     });
 }
-let S = a().throttle(T, h.aZC);
+let T = a().throttle(I, m.aZC);

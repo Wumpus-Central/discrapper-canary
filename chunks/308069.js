@@ -3,7 +3,7 @@ var r = n(54381),
     s = n(473749),
     o = n(120356),
     a = n.n(o),
-    i = n(790519),
+    i = n(666917),
     l = n(481060),
     c = n(617136),
     d = n(915750),
@@ -50,10 +50,10 @@ let v = (0, i.animated)(f.ZP),
                     sourceQuestContent: u.jn.QUEST_BAR_V2,
                 });
             }, [S, t]),
-            A = E && O,
-            R = (0, r.jsx)(l.P3F, {
+            R = E && O,
+            A = (0, r.jsx)(l.P3F, {
                 onClick: N,
-                className: a()(j.clickable, { [j.logo]: A }),
+                className: a()(j.clickable, { [j.logo]: R }),
                 children: (0, r.jsx)(v, {
                     quest: t,
                     withGameTile: !1,
@@ -74,7 +74,7 @@ let v = (0, i.animated)(f.ZP),
                 }),
             });
         return (0, r.jsxs)(i.animated.div, {
-            className: a()(j.wrapper, j.rewardHighlightWrapper, { [j.interactable]: A }),
+            className: a()(j.wrapper, j.rewardHighlightWrapper, { [j.interactable]: R }),
             style: {
                 transform: (0, i.to)(
                     [
@@ -99,8 +99,8 @@ let v = (0, i.animated)(f.ZP),
                 (0, r.jsx)(x.Z, {
                     quest: t,
                     expansionSpring: n,
-                    isFullyExpanded: A,
-                    partnerBranding: R,
+                    isFullyExpanded: R,
+                    partnerBranding: A,
                     useReducedMotion: y,
                 }),
                 (0, r.jsxs)(i.animated.div, {

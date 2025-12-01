@@ -1,4 +1,4 @@
-n.d(t, { N: () => x }), n(953529), n(388685);
+n.d(t, { N: () => L }), n(953529), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,17 +9,17 @@ var r = n(54381),
     u = n(499033),
     d = n(626135),
     f = n(709054),
-    _ = n(531441),
-    p = n(236289),
-    h = n(788080),
-    m = n(467432),
+    p = n(531441),
+    _ = n(236289),
+    m = n(788080),
+    h = n(467432),
     g = n(451284),
     E = n(613734),
     b = n(800530),
     y = n(981631),
     O = n(388032),
     v = n(712243);
-function I(e, t, n) {
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +32,7 @@ function I(e, t, n) {
         e
     );
 }
-function T(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,12 +43,12 @@ function T(e) {
                 }),
             )),
             r.forEach(function (t) {
-                I(e, t, n[t]);
+                S(e, t, n[t]);
             });
     }
     return e;
 }
-function S(e, t) {
+function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,7 +65,7 @@ function A(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : T(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -143,7 +143,7 @@ let C = (e) => {
                 }),
             ],
         }),
-    R = () =>
+    P = () =>
         (0, r.jsx)("div", {
             className: v.emptyState,
             children: (0, r.jsx)(l.Text, {
@@ -152,25 +152,25 @@ let C = (e) => {
                 children: O.intl.string(O.t.RV3AXf),
             }),
         }),
-    P = (e) => {
+    R = (e) => {
         let { timestamp: t } = e;
         return (0, r.jsx)(l.Text, {
             variant: "text-xs/normal",
             className: v.timestamp,
-            children: (0, h.XX)(t),
+            children: (0, m.XX)(t),
         });
     },
-    D = () =>
+    w = () =>
         (0, r.jsx)(l.Text, {
             variant: "text-xs/bold",
             className: v.newBadge,
             children: O.intl.string(O.t.QKMRC4),
         }),
-    w = (e) => {
+    D = (e) => {
         let { classification: t } = e,
             { id: a, description: s } = t,
             c = f.default.extractTimestamp(a),
-            u = (0, m.e)(t),
+            u = (0, h.e)(t),
             d = i.useMemo(() => {
                 var e, n, i;
                 let a = {
@@ -182,11 +182,11 @@ let C = (e) => {
                             children: e,
                         }),
                 };
-                return (0, h.FB)(t)
-                    ? (null == t || null == (e = t.guild_metadata) ? void 0 : e.member_type) === _.wO.OWNER
+                return (0, m.FB)(t)
+                    ? (null == t || null == (e = t.guild_metadata) ? void 0 : e.member_type) === p.wO.OWNER
                         ? O.intl.format(
                               O.t.Lb0HVv,
-                              A(T({}, a), { guildName: null == t || null == (n = t.guild_metadata) ? void 0 : n.name }),
+                              A(I({}, a), { guildName: null == t || null == (n = t.guild_metadata) ? void 0 : n.name }),
                           )
                         : O.intl.format(O.t.rmpEPD, {
                               guildName: null == t || null == (i = t.guild_metadata) ? void 0 : i.name,
@@ -195,13 +195,13 @@ let C = (e) => {
                           })
                     : O.intl.format(O.t.QY4g5t, a);
             }, [t, s]),
-            p = () => {
+            _ = () => {
                 (0, l.ZDy)(async () => {
                     let { default: e } = await n.e("18831").then(n.bind(n, 41164));
                     return (t) =>
                         (0, r.jsx)(
                             e,
-                            T(
+                            I(
                                 {
                                     classificationId: a,
                                     source: b.s.StandingTab,
@@ -214,12 +214,12 @@ let C = (e) => {
         return (0, r.jsx)(
             l.P3F,
             {
-                onClick: p,
+                onClick: _,
                 className: o()(v.itemDetail, { [v.itemDetailNew]: u }),
                 children: (0, r.jsxs)("div", {
                     className: v.descriptionContainer,
                     children: [
-                        u ? (0, r.jsx)(D, {}) : (0, r.jsx)(P, { timestamp: c }),
+                        u ? (0, r.jsx)(w, {}) : (0, r.jsx)(R, { timestamp: c }),
                         (0, r.jsx)(l.Heading, {
                             variant: "heading-lg/normal",
                             children: d,
@@ -230,25 +230,25 @@ let C = (e) => {
             a,
         );
     },
-    L = (e) => {
+    x = (e) => {
         let { status: t, classifications: n } = e,
             [a, o] = i.useState(!1),
             [c, u] = i.useState(3),
             f = (0, g.P)(),
-            _ = (0, s.e7)([p.Z], () => p.Z.getIsDsaEligible()),
-            h = i.useMemo(() => n.slice(0, c), [n, c]);
+            p = (0, s.e7)([_.Z], () => _.Z.getIsDsaEligible()),
+            m = i.useMemo(() => n.slice(0, c), [n, c]);
         i.useEffect(() => {
             a &&
                 d.default.track(y.rMx.SAFETY_HUB_ACTION, {
                     action: b.n0.ViewViolationsDropdown,
                     account_standing: f.state,
-                    classification_ids: h.map((e) => Number(e.id)),
+                    classification_ids: m.map((e) => Number(e.id)),
                     source: b.s.StandingTab,
                     is_violative_content_shown: !1,
-                    is_dsa_eligible: _,
+                    is_dsa_eligible: p,
                 });
-        }, [a, f.state, h, _]);
-        let m = n.length - h.length > 3 ? 3 : n.length - h.length;
+        }, [a, f.state, m, p]);
+        let h = n.length - m.length > 3 ? 3 : n.length - m.length;
         return (0, r.jsxs)("div", {
             className: v.dropdown,
             children: [
@@ -268,8 +268,8 @@ let C = (e) => {
                                     width: "100%",
                                 },
                             }),
-                            h.length > 0 && h.map((e) => (0, r.jsx)(w, { classification: e }, e.id)),
-                            h.length < n.length &&
+                            m.length > 0 && m.map((e) => (0, r.jsx)(D, { classification: e }, e.id)),
+                            m.length < n.length &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(l.njP.Separator, {
@@ -280,30 +280,30 @@ let C = (e) => {
                                         }),
                                         (0, r.jsx)("button", {
                                             className: v.paginationButton,
-                                            onClick: () => u((e) => e + m),
-                                            children: O.intl.format(O.t["9Ml56H"], { nextPageSize: m }),
+                                            onClick: () => u((e) => e + h),
+                                            children: O.intl.format(O.t["9Ml56H"], { nextPageSize: h }),
                                         }),
                                     ],
                                 }),
-                            0 === h.length && "active" === t && (0, r.jsx)(N, {}),
-                            0 === h.length && "expired" === t && (0, r.jsx)(R, {}),
+                            0 === m.length && "active" === t && (0, r.jsx)(N, {}),
+                            0 === m.length && "expired" === t && (0, r.jsx)(P, {}),
                         ],
                     }),
             ],
         });
     },
-    x = () => {
+    L = () => {
         let e = (0, E.y9)(),
             t = (0, E.KM)();
         return 0 === e.length && 0 === t.length
             ? null
             : (0, r.jsxs)("div", {
                   children: [
-                      (0, r.jsx)(L, {
+                      (0, r.jsx)(x, {
                           status: "active",
                           classifications: e,
                       }),
-                      (0, r.jsx)(L, {
+                      (0, r.jsx)(x, {
                           status: "expired",
                           classifications: t,
                       }),

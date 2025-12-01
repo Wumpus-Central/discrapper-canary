@@ -14,9 +14,9 @@ var r = n(54381),
     u = n(841110),
     d = n(689946),
     f = n(207385),
-    _ = n(388032),
-    p = n(467250);
-function h(e, t, n) {
+    p = n(388032),
+    _ = n(467250);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +29,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
@@ -70,16 +70,16 @@ function E(e, t) {
 }
 function b(e) {
     let { surveyId: t, survey: n, onClose: o, transitionState: u } = e,
-        { getSurveyResponses: h, setResponse: g, trackDisplayedQuestions: b } = (0, c.H)(),
-        y = h(t),
+        { getSurveyResponses: m, setResponse: g, trackDisplayedQuestions: b } = (0, c.H)(),
+        y = m(t),
         O = (0, d.l6)(n),
-        [v, I] = i.useState(O.blockId),
-        [T, S] = i.useState(O.pageIndex),
+        [v, S] = i.useState(O.blockId),
+        [I, T] = i.useState(O.pageIndex),
         [A, C] = i.useState(!1),
         N = (e, n) => {
             g(t, e, n);
         },
-        R = i.useCallback(
+        P = i.useCallback(
             () => (
                 A
                     ? o()
@@ -87,18 +87,18 @@ function b(e) {
                           (0, r.jsx)(
                               a.Modal,
                               E(
-                                  m(
+                                  h(
                                       {
-                                          title: _.intl.string(_.t.T9Sx3z),
+                                          title: p.intl.string(p.t.T9Sx3z),
                                           actions: [
                                               {
                                                   variant: "secondary",
-                                                  text: _.intl.string(_.t.oEAioF),
+                                                  text: p.intl.string(p.t.oEAioF),
                                                   onClick: e.onClose,
                                               },
                                               {
                                                   variant: "critical-primary",
-                                                  text: _.intl.string(_.t.p89ACt),
+                                                  text: p.intl.string(p.t.p89ACt),
                                                   onClick: () => {
                                                       e.onClose(), o();
                                                   },
@@ -110,7 +110,7 @@ function b(e) {
                                   {
                                       children: (0, r.jsx)(s.Text, {
                                           variant: "text-md/normal",
-                                          children: _.intl.string(_.t.iCK6G0),
+                                          children: p.intl.string(p.t.iCK6G0),
                                       }),
                                   },
                               ),
@@ -120,35 +120,35 @@ function b(e) {
             ),
             [o, A],
         ),
-        P = i.useMemo(
+        R = i.useMemo(
             () =>
                 null == v
                     ? []
                     : (0, d.B_)(n, {
                           blockId: v,
-                          pageIndex: T,
+                          pageIndex: I,
                           responses: y,
                       }),
-            [n, v, T, y],
+            [n, v, I, y],
         ),
-        D = i.useCallback(() => {
+        w = i.useCallback(() => {
             if (null == n || null == v) return;
             let e = (0, d.KZ)(n, {
                 blockId: v,
-                pageIndex: T,
+                pageIndex: I,
                 responses: y,
             });
-            b(t, P), e.isComplete && l.ZP.submitSurveyResponse(t, y), I(e.blockId), S(e.pageIndex), C(e.isComplete);
-        }, [n, v, T, y, t, P, b]);
+            b(t, R), e.isComplete && l.ZP.submitSurveyResponse(t, y), S(e.blockId), T(e.pageIndex), C(e.isComplete);
+        }, [n, v, I, y, t, R, b]);
     i.useEffect(() => {
-        0 === P.length && D();
-    }, [P, D]);
-    let w = (e) =>
-            0 === P.length
+        0 === R.length && w();
+    }, [R, w]);
+    let D = (e) =>
+            0 === R.length
                 ? null
                 : (0, r.jsx)("div", {
-                      className: p.content,
-                      children: P.map((t) => {
+                      className: _.content,
+                      children: R.map((t) => {
                           let n = e.Questions[t];
                           return null == n
                               ? null
@@ -164,9 +164,9 @@ function b(e) {
                                 );
                       }),
                   }),
-        L = i.useMemo(() => {
+        x = i.useMemo(() => {
             if (A) return !1;
-            for (let r of P) {
+            for (let r of R) {
                 var e, t;
                 let i = n.Questions[r];
                 if (
@@ -178,47 +178,47 @@ function b(e) {
                 }
             }
             return !0;
-        }, [A, P, n, y]);
+        }, [A, R, n, y]);
     return A
         ? (0, r.jsxs)(a.Modal, {
               transitionState: u,
               onClose: o,
               size: "md",
-              title: _.intl.string(_.t.OSqLUF),
+              title: p.intl.string(p.t.OSqLUF),
               actions: [
                   {
                       variant: "primary",
-                      text: _.intl.string(_.t.i4jeWR),
+                      text: p.intl.string(p.t.i4jeWR),
                       onClick: o,
                   },
               ],
               children: [
                   (0, r.jsx)(s.Text, {
                       variant: "text-md/normal",
-                      children: _.intl.string(_.t["2scvdw"]),
+                      children: p.intl.string(p.t["2scvdw"]),
                   }),
                   (0, r.jsx)(s.Text, {
                       variant: "text-md/normal",
-                      children: _.intl.string(_.t.chZxOD),
+                      children: p.intl.string(p.t.chZxOD),
                   }),
               ],
           })
         : (0, r.jsx)(a.Modal, {
               transitionState: u,
-              onClose: R,
-              title: _.intl.string(_.t.OSqLUF),
+              onClose: P,
+              title: p.intl.string(p.t.OSqLUF),
               size: "md",
               actions: [
                   {
                       variant: "primary",
-                      text: _.intl.string(_.t.PDTjLN),
-                      onClick: D,
-                      disabled: !L,
+                      text: p.intl.string(p.t.PDTjLN),
+                      onClick: w,
+                      disabled: !x,
                   },
               ],
               children: (0, r.jsx)("div", {
                   style: { width: "100%" },
-                  children: w(n),
+                  children: D(n),
               }),
           });
 }
@@ -228,7 +228,7 @@ async function y(e) {
         (0, s.ZDy)(
             async () => {
                 let { default: t } = await Promise.resolve().then(n.bind(n, 126916));
-                return (n) => (0, r.jsx)(t, E(m({}, n), { surveyId: e }));
+                return (n) => (0, r.jsx)(t, E(h({}, n), { surveyId: e }));
             },
             {
                 onCloseRequest: () => {},
@@ -241,8 +241,8 @@ function O(e) {
     return null == a
         ? (0, r.jsx)(s.Text, {
               variant: "text-md/medium",
-              className: p.loading,
-              children: _.intl.string(_.t.MKDeyL),
+              className: _.loading,
+              children: p.intl.string(p.t.MKDeyL),
           })
         : (0, r.jsx)(b, {
               surveyId: t,

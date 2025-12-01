@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => h }), n(539854), n(388685);
+n.d(t, { Z: () => m }), n(539854), n(388685);
 var i = n(31775),
     a = n.n(i),
     o = n(749210),
@@ -9,7 +9,7 @@ var i = n(31775),
     u = n(51144),
     d = n(388032);
 let f = new (a())({ maxAge: +c.Z.Millis.MINUTE });
-function _(e, t, n) {
+function p(e, t, n) {
     null != r && clearTimeout(r),
         (r = setTimeout(() => {
             let r = [],
@@ -29,13 +29,13 @@ function _(e, t, n) {
             r.length > 0 && o.Z.requestMembers(r, t.toLocaleLowerCase(), n);
         }, 200));
 }
-function p(e, t) {
+function _(e, t) {
     let n = "".concat(null != e ? e : "", ":").concat(t),
         r = f.get(n);
     if (null != r) return r;
     f.set(n, !0);
 }
-let h = {
+let m = {
     getGuildNameSuggestion: function (e) {
         let t = l.default.getCurrentUser(),
             n = u.oY(t);
@@ -52,9 +52,9 @@ let h = {
             a = !1;
         r
             ? e.forEach((e) => {
-                  null == p(e, t) && i.push(e);
+                  null == _(e, t) && i.push(e);
               })
-            : null == p(e, t) && (a = !0),
-            i.length > 0 && r ? _(i, t, n) : a && _(e, t, n);
+            : null == _(e, t) && (a = !0),
+            i.length > 0 && r ? p(i, t, n) : a && p(e, t, n);
     },
 };

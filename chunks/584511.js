@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -37,32 +37,32 @@ function f(e) {
     }
     return e;
 }
-var _ = (function (e) {
+var p = (function (e) {
     return (e[(e.OUTGOING = 0)] = "OUTGOING"), (e[(e.INCOMING = 1)] = "INCOMING"), e;
-})(_ || {});
-function p(e) {
+})(p || {});
+function _(e) {
     let {
             userId: t,
             size: n,
             speaking: i = !1,
             latched: d = !1,
-            muted: _ = !1,
-            deafen: p = !1,
-            src: h,
-            disabled: m = !1,
+            muted: p = !1,
+            deafen: _ = !1,
+            src: m,
+            disabled: h = !1,
             ringing: g,
             ringingType: E = 0,
             avatarClassName: b,
             renderIcon: y,
             style: O,
             onClick: v,
-            onContextMenu: I,
-            className: T,
+            onContextMenu: S,
+            className: I,
         } = e,
-        S = (0, o.e7)([c.Z], () => null != t && c.Z.isLocalMute(t)),
+        T = (0, o.e7)([c.Z], () => null != t && c.Z.isLocalMute(t)),
         A = () => {
-            let e = S ? s.v0G : p ? s.wE8 : s.nRN;
-            return _ || p || S
+            let e = T ? s.v0G : _ ? s.wE8 : s.nRN;
+            return p || _ || T
                 ? (0, r.jsx)("div", {
                       className: u.statusContainer,
                       children: (0, r.jsx)(
@@ -88,26 +88,26 @@ function p(e) {
                 "border",
             ),
         N = () =>
-            _ && i
+            p && i
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [C(), A()],
                   })
-                : _ || p || S
+                : p || _ || T
                   ? (0, r.jsx)(r.Fragment, { children: A() })
                   : (0, r.jsx)(r.Fragment, { children: C() }),
-        R = () => {
+        P = () => {
             let e = (0, s.pxk)(n),
                 t = (0, r.jsx)("img", {
-                    src: h,
+                    src: m,
                     alt: " ",
                     className: a()(u.voiceAvatar, b, { [u.ringingOutgoing]: g && 0 === E }),
                 });
-            if (m) return t;
+            if (h) return t;
             let i = l.QS.AVATAR_DEFAULT;
             return (
                 null != y
                     ? (i = n === s.EFr.SIZE_32 ? l.QS.AVATAR_CALL_ICON_32 : l.QS.AVATAR_CALL_ICON)
-                    : (_ || p || S) && (i = l.QS.AVATAR_VOICE_CALL_80),
+                    : (p || _ || T) && (i = l.QS.AVATAR_VOICE_CALL_80),
                 (0, r.jsxs)("div", {
                     className: u.callAvatarMaskContainer,
                     children: [
@@ -123,29 +123,29 @@ function p(e) {
                 })
             );
         },
-        P = a()(
+        R = a()(
             u.wrapper,
             {
                 [u.clickable]: null != v,
                 [u.ringingOutgoing]: g && 0 === E,
                 [u.ringingIncoming]: g && 1 === E,
             },
-            T,
+            I,
         ),
-        D = (0, s.pxk)(n),
-        w = f(
+        w = (0, s.pxk)(n),
+        D = f(
             {
-                height: D,
-                width: D,
+                height: w,
+                width: w,
             },
             O,
         );
     return (0, r.jsx)("div", {
-        style: w,
-        onContextMenu: I,
-        className: P,
-        children: R(),
+        style: D,
+        onContextMenu: S,
+        className: R,
+        children: P(),
     });
 }
-p.RingingType = _;
-let h = p;
+_.RingingType = p;
+let m = _;

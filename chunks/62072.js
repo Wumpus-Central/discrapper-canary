@@ -18,9 +18,9 @@ var i = n(473749),
     C = n(572004),
     v = n(585483),
     _ = n(358085),
-    x = n(709054),
-    j = n(418476),
-    O = n(151007),
+    O = n(709054),
+    x = n(418476),
+    j = n(151007),
     E = n(432376),
     S = n(996861),
     P = n(981631);
@@ -50,10 +50,10 @@ let I = function (e, t, n) {
                         ((0, _.isMac)() ? N : T) && C.wS && (n.preventDefault(), (0, C.JG)(w.content));
                         break;
                     case "e":
-                        i && !M.isSystemDM() && (0, j.Z)(w, R) && (n.preventDefault(), (0, S.Hd)(M, w));
+                        i && !M.isSystemDM() && (0, x.Z)(w, R) && (n.preventDefault(), (0, S.Hd)(M, w));
                         break;
                     case "p":
-                        (i || A) && (0, O.Z)(w, M) && (n.preventDefault(), (0, S.rY)(M, w, n));
+                        (i || A) && (0, j.Z)(w, M) && (n.preventDefault(), (0, S.rY)(M, w, n));
                         break;
                     case "+":
                         (i || A) &&
@@ -89,7 +89,7 @@ let I = function (e, t, n) {
                     case "t":
                         if (i && (0, c.ki)(M, w)) n.preventDefault(), (0, u.R6)(M, w, "Message Shortcut");
                         else if (w.hasFlag(P.iLy.HAS_THREAD)) {
-                            let e = h.Z.getChannel(x.default.castMessageIdAsChannelId(w.id));
+                            let e = h.Z.getChannel(O.default.castMessageIdAsChannelId(w.id));
                             null != e && (i || A) && (n.preventDefault(), (0, u.ok)(e, A));
                         }
                         break;

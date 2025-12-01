@@ -13,8 +13,8 @@ var l = n(120356),
     p = n(906605),
     h = n(359119),
     x = n(423932),
-    g = n(695346),
-    f = n(306052),
+    f = n(695346),
+    g = n(306052),
     b = n(944486),
     v = n(594174),
     j = n(134612),
@@ -46,12 +46,12 @@ let C = () => {
 function S() {
     let e = v.default.getCurrentUser(),
         t = null == e ? void 0 : e.isStaff(),
-        l = g.Rt.useSetting();
+        l = f.Rt.useSetting();
     return (0, a.jsxs)(s.Ttm, {
         children: [
             (0, a.jsx)("div", {
                 className: i()(_.buttonsContainer, y.marginBottom20),
-                children: (0, a.jsx)(f.g, { isDevTools: !0 }),
+                children: (0, a.jsx)(g.g, { isDevTools: !0 }),
             }),
             (0, a.jsx)("div", {
                 className: i()(_.buttonsContainer, y.marginBottom8),
@@ -86,7 +86,7 @@ function S() {
                                     let { default: e } = await Promise.all([
                                         n.e("37031"),
                                         n.e("89650"),
-                                        n.e("76144"),
+                                        n.e("81865"),
                                     ]).then(n.bind(n, 611446));
                                     return (n) =>
                                         (0, a.jsx)(
@@ -196,7 +196,7 @@ function S() {
                             children: (0, a.jsx)(s.rsf, {
                                 label: "Ignore profile speedbump disabled",
                                 checked: l,
-                                onChange: (e) => g.Rt.updateSetting(e),
+                                onChange: (e) => f.Rt.updateSetting(e),
                             }),
                         }),
                     ],

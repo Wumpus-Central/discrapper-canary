@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(476326),
     d = n(703558),
     f = n(117530),
-    _ = n(859235),
-    p = n(898463),
-    h = n(981631),
-    m = n(388032),
+    p = n(859235),
+    _ = n(898463),
+    m = n(981631),
+    h = n(388032),
     g = n(163514),
     E = n(451328);
 function b(e) {
@@ -20,14 +20,14 @@ function b(e) {
         b = i.useRef(null),
         [y, O] = i.useState(!1),
         v = f.Z.getUpload(t, n.name, d.d.SlashCommand),
-        I = i.useRef(null),
-        T = (e) => {
-            if (e.which === h.yXg.ENTER) {
+        S = i.useRef(null),
+        I = (e) => {
+            if (e.which === m.yXg.ENTER) {
                 var t;
                 e.preventDefault(), null == (t = b.current) || t.activateUploadDialogue();
             }
         },
-        S = i.useCallback(() => {
+        T = i.useCallback(() => {
             O(!0);
         }, []),
         A = i.useCallback(() => {
@@ -54,19 +54,19 @@ function b(e) {
             [t, n],
         );
     i.useEffect(() => {
-        let e = I.current;
+        let e = S.current;
         return (
             null == v &&
-                (null == e || e.addEventListener("dragover", S, !1),
+                (null == e || e.addEventListener("dragover", T, !1),
                 null == e || e.addEventListener("dragleave", A, !1),
                 null == e || e.addEventListener("drop", C, !1)),
             () => {
-                null == e || e.removeEventListener("dragover", S, !1),
+                null == e || e.removeEventListener("dragover", T, !1),
                     null == e || e.removeEventListener("dragleave", A, !1),
                     null == e || e.removeEventListener("drop", C, !1);
             }
         );
-    }, [v, S, A, C]);
+    }, [v, T, A, C]);
     let N = (e) => {
         var r, i;
         if (null != t && (null == (i = e.currentTarget) || null == (r = i.files) ? void 0 : r[0]) != null) {
@@ -87,7 +87,7 @@ function b(e) {
         }
     };
     return null != v
-        ? (0, r.jsx)(p.Z, {
+        ? (0, r.jsx)(_.Z, {
               channelId: t,
               upload: v,
               keyboardModeEnabled: a,
@@ -109,14 +109,14 @@ function b(e) {
               }),
               canEdit: !1,
           })
-        : (0, r.jsxs)(_.Z, {
+        : (0, r.jsxs)(p.Z, {
               id: n.name,
               channelId: t,
               keyboardModeEnabled: a,
-              onKeyDown: T,
+              onKeyDown: I,
               className: o()(g.emptyOption, { [g.emptyOptionActive]: y }),
               draftType: d.d.SlashCommand,
-              ref: I,
+              ref: S,
               children: [
                   (0, r.jsx)("span", {
                       className: o()(g.optionName, { [g.optionNameActive]: y }),
@@ -139,7 +139,7 @@ function b(e) {
                               (0, r.jsx)(s.Text, {
                                   className: g.optionHelp,
                                   variant: "text-sm/normal",
-                                  children: m.intl.string(m.t.IJyOUf),
+                                  children: h.intl.string(h.t.IJyOUf),
                               }),
                               (0, r.jsx)(c.Z, {
                                   ref: b,

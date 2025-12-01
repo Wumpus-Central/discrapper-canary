@@ -9,7 +9,7 @@ var r = n(473749),
     u = n(388032),
     d = n(513767),
     f = n(78230);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,12 +33,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,12 +50,12 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -65,7 +65,7 @@ let g = () => {
     let e = (0, l.zL)(c.jE.UPSELL_BANNER),
         t = (0, l.zL)(c.jE.UPSELL_BANNER_POPOUT),
         n = (0, o.e7)([s.Z], () => s.Z.getMarketingBySurface(i.K.EDIT_PROFILE_SETTINGS)),
-        _ = r.useMemo(
+        p = r.useMemo(
             () =>
                 null != n
                     ? n
@@ -81,11 +81,11 @@ let g = () => {
         );
     return r.useMemo(
         () =>
-            m(p({}, _), {
+            h(_({}, p), {
                 type: a.Z.BANNER,
-                asset: null != e ? e : _.asset,
-                popoutAsset: null != t ? t : _.popoutAsset,
+                asset: null != e ? e : p.asset,
+                popoutAsset: null != t ? t : p.popoutAsset,
             }),
-        [e, t, _],
+        [e, t, p],
     );
 };

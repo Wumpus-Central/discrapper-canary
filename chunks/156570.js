@@ -71,7 +71,7 @@ class s extends r.Z {
         return null == this.description;
     }
     constructor(e) {
-        var t, n, r, i, a, s, l, c, u, d, f, _, p;
+        var t, n, r, i, a, s, l, c, u, d, f, p, _;
         super(),
             o(this, "id", void 0),
             o(this, "applicationId", void 0),
@@ -119,8 +119,8 @@ class s extends r.Z {
             (this.headerLogoDarkTheme = null != (u = e.headerLogoDarkTheme) ? u : null),
             (this.headerLogoLightTheme = null != (d = e.headerLogoLightTheme) ? d : null),
             (this.heroBackground = null != (f = e.heroBackground) ? f : null),
-            (this.heroVideo = null != (_ = e.heroVideo) ? _ : null),
-            (this.entitlementBranchId = null != (p = e.entitlementBranchId) ? p : null),
+            (this.heroVideo = null != (p = e.heroVideo) ? p : null),
+            (this.entitlementBranchId = null != (_ = e.entitlementBranchId) ? _ : null),
             (this.benefits = e.benefits),
             (this.published = !!e.published);
     }

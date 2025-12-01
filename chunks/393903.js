@@ -1,6 +1,6 @@
 n.d(t, {
     s: () => f,
-    y: () => _,
+    y: () => p,
 }),
     n(368063),
     n(358797),
@@ -57,30 +57,30 @@ function c(e) {
             },
         },
         f = getComputedStyle(l),
-        _ = [
+        p = [
             {
                 inlineSize: d.width,
                 blockSize: d.height,
             },
         ],
-        p = [
+        _ = [
             {
                 inlineSize: d.width - (parseFloat(f.paddingLeft) + parseFloat(f.paddingRight)),
                 blockSize: d.height - (parseFloat(f.paddingTop) + parseFloat(f.paddingBottom)),
             },
         ],
-        h = null != (s = window.devicePixelRatio) ? s : 1,
-        m = [
+        m = null != (s = window.devicePixelRatio) ? s : 1,
+        h = [
             {
-                inlineSize: p[0].inlineSize * h,
-                blockSize: p[0].blockSize * h,
+                inlineSize: _[0].inlineSize * m,
+                blockSize: _[0].blockSize * m,
             },
         ];
     return {
         target: l,
-        borderBoxSize: _,
-        contentBoxSize: p,
-        devicePixelContentBoxSize: m,
+        borderBoxSize: p,
+        contentBoxSize: _,
+        devicePixelContentBoxSize: h,
         contentRect: d,
     };
 }
@@ -132,7 +132,7 @@ function f(e, t) {
             if (((c.current = r), null != r)) return (0, i.YP)(r, n), () => (0, i.UC)(r, n);
         }, [s, o, t, e, ...n]);
 }
-function _(e) {
+function p(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { enabled: a = !0 } = n,

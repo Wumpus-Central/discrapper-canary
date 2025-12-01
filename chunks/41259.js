@@ -9,19 +9,19 @@ var r = n(54381),
     u = n(768581),
     d = n(489863),
     f = n(713938),
-    _ = n(314583),
-    p = n(981631),
-    h = n(268685),
-    m = n(388032),
+    p = n(314583),
+    _ = n(981631),
+    m = n(268685),
+    h = n(388032),
     g = n(604483);
 function E(e) {
     let { user: t, application: n, bot: E, accountScopes: b, showLogout: y, location: O, scopes: v } = e,
-        I = (0, _.X)(),
-        T = u.ZP.getApplicationIconURL({
+        S = (0, p.X)(),
+        I = u.ZP.getApplicationIconURL({
             id: n.id,
             icon: n.icon,
         }),
-        S = u.ZP.getUserAvatarURL(t),
+        T = u.ZP.getUserAvatarURL(t),
         A = i.useMemo(
             () =>
                 v.some((e) => (0, f.sg)(e))
@@ -30,7 +30,7 @@ function E(e) {
                               (0, r.jsx)(l.x, {
                                   variant: "text-lg/normal",
                                   color: "header-secondary",
-                                  children: m.intl.string(m.t.uT1CPa),
+                                  children: h.intl.string(h.t.uT1CPa),
                               }),
                               (0, r.jsx)(o.X6q, {
                                   variant: "heading-xxl/bold",
@@ -51,7 +51,7 @@ function E(e) {
                                                 className: g.botTag,
                                                 verified:
                                                     null != E.public_flags &&
-                                                    (0, a.yE)(E.public_flags, p.xW$.VERIFIED_BOT),
+                                                    (0, a.yE)(E.public_flags, _.xW$.VERIFIED_BOT),
                                             })
                                           : null,
                                   ],
@@ -60,19 +60,19 @@ function E(e) {
                                   ? (0, r.jsx)(l.x, {
                                         variant: "text-md/normal",
                                         color: "header-secondary",
-                                        children: m.intl.string(m.t.jFbDnJ),
+                                        children: h.intl.string(h.t.jFbDnJ),
                                     })
                                   : (0, r.jsx)(l.x, {
                                         variant: "text-md/normal",
                                         color: "header-secondary",
-                                        children: m.intl.string(m.t["X+Fdpo"]),
+                                        children: h.intl.string(h.t["X+Fdpo"]),
                                     }),
                           ],
                       }),
             [b.length, n, E, v],
         );
     return (0, r.jsxs)("header", {
-        id: I,
+        id: S,
         className: g.header,
         children: [
             (0, r.jsxs)("div", {
@@ -80,8 +80,8 @@ function E(e) {
                 children: [
                     (0, r.jsx)(s.qE, {
                         className: g.avatar,
-                        src: T,
-                        size: h.EF.SIZE_80,
+                        src: I,
+                        size: m.EF.SIZE_80,
                         "aria-label": n.name,
                     }),
                     (0, r.jsxs)("div", {
@@ -94,8 +94,8 @@ function E(e) {
                     }),
                     (0, r.jsx)(s.qE, {
                         className: g.avatar,
-                        src: S,
-                        size: h.EF.SIZE_80,
+                        src: T,
+                        size: m.EF.SIZE_80,
                         "aria-label": t.username,
                     }),
                 ],
@@ -108,7 +108,7 @@ function E(e) {
                           variant: "text-sm/normal",
                           color: "text-muted",
                           children: [
-                              m.intl.format(m.t.qRvpYU, {
+                              h.intl.format(h.t.qRvpYU, {
                                   userHook: () =>
                                       (0, r.jsxs)(
                                           l.x,
@@ -132,7 +132,7 @@ function E(e) {
                                   tag: "a",
                                   className: g.logoutLink,
                                   onClick: () => (0, d.c$)(O, "oauth2_logout"),
-                                  children: m.intl.string(m.t["yV/hjC"]),
+                                  children: h.intl.string(h.t["yV/hjC"]),
                               }),
                           ],
                       }),

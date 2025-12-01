@@ -15,8 +15,8 @@ var i = n(54381),
     m = n(592125),
     y = n(430824),
     b = n(699516),
-    v = n(944486),
-    _ = n(707878),
+    _ = n(944486),
+    v = n(707878),
     O = n(518084),
     E = n(388032),
     x = n(846602);
@@ -79,7 +79,7 @@ class Z extends r.Component {
             ? (0, i.jsxs)(O.ZP.Bar, {
                   className: x.opacityHeader,
                   children: [
-                      (0, i.jsx)(_.Z, {}),
+                      (0, i.jsx)(v.Z, {}),
                       (0, i.jsx)(h.Z.Icon, {
                           icon: a.Dio,
                           onClick: this.handleCloseOpacitySettings,
@@ -190,8 +190,8 @@ function j(e) {
             }
             return r;
         })(e, ["channel"]);
-    let r = (0, l.e7)([v.Z, m.Z], () => {
-            let e = v.Z.getVoiceChannelId();
+    let r = (0, l.e7)([_.Z, m.Z], () => {
+            let e = _.Z.getVoiceChannelId();
             return m.Z.getChannel(e);
         }),
         s = (0, l.e7)([y.Z], () => y.Z.getGuild(t.guild_id)),

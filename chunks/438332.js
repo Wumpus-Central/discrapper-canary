@@ -57,50 +57,50 @@ function f(e, t) {
         e
     );
 }
-let _ = { lastSeenNewlyAddedEmojiIds: {} },
-    p = _,
-    h = {};
-function m() {
-    (p = _), (h = {});
+let p = { lastSeenNewlyAddedEmojiIds: {} },
+    _ = p,
+    m = {};
+function h() {
+    (_ = p), (m = {});
 }
 function g(e) {
     var t;
     let { guildId: n, emojiId: r } = e,
-        i = null != (t = h[n]) ? t : p.lastSeenNewlyAddedEmojiIds[n];
+        i = null != (t = m[n]) ? t : _.lastSeenNewlyAddedEmojiIds[n];
     null == i || 0 > l.default.compare(i.id, r)
-        ? (h[n] = {
+        ? (m[n] = {
               id: r,
               lastSeen: Date.now(),
               acknowledged: !0,
           })
-        : (h[n] = f(u({}, i), { acknowledged: !0 }));
+        : (m[n] = f(u({}, i), { acknowledged: !0 }));
 }
 function E(e) {
     var t;
     let { guildId: n, emojiId: r } = e,
-        i = null != (t = h[n]) ? t : p.lastSeenNewlyAddedEmojiIds[n];
+        i = null != (t = m[n]) ? t : _.lastSeenNewlyAddedEmojiIds[n];
     (null == i || 0 > l.default.compare(i.id, r)) &&
-        (h[n] = {
+        (m[n] = {
             id: r,
             lastSeen: Date.now(),
             acknowledged: !1,
         });
 }
 function b() {
-    for (let e in h) p.lastSeenNewlyAddedEmojiIds[e] = h[e];
+    for (let e in m) _.lastSeenNewlyAddedEmojiIds[e] = m[e];
 }
 function y() {
-    (p = _), b();
+    (_ = p), b();
 }
 class O extends (r = o.ZP.PersistedStore) {
     initialize(e) {
-        p = null != e ? e : _;
+        _ = null != e ? e : p;
     }
     getState() {
-        return p;
+        return _;
     }
     getLastSeenEmojiByGuild(e) {
-        return p.lastSeenNewlyAddedEmojiIds[e];
+        return _.lastSeenNewlyAddedEmojiIds[e];
     }
     isNewerThanLastSeen(e, t) {
         if (null == e || null == t) return !1;
@@ -130,7 +130,7 @@ c(O, "displayName", "NewlyAddedEmojiStore"),
         },
     ]);
 let v = new O(s.Z, {
-    LOGOUT: m,
+    LOGOUT: h,
     NEWLY_ADDED_EMOJI_SEEN_ACKNOWLEDGED: g,
     NEWLY_ADDED_EMOJI_SEEN_PENDING: E,
     NEWLY_ADDED_EMOJI_SEEN_UPDATED: b,

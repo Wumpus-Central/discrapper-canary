@@ -1,15 +1,15 @@
 n.d(t, {
     AT: () => E,
     DQ: () => A,
-    Hz: () => D,
+    Hz: () => w,
     LD: () => C,
-    MD: () => S,
-    SI: () => P,
-    UJ: () => R,
-    X6: () => I,
+    MD: () => T,
+    SI: () => R,
+    UJ: () => P,
+    X6: () => S,
     aQ: () => U,
     g4: () => N,
-    hi: () => L,
+    hi: () => x,
     kC: () => v,
     kh: () => O,
     px: () => G,
@@ -30,39 +30,39 @@ var r = n(95015),
     u = n(375954),
     d = n(699516),
     f = n(594174),
-    _ = n(823379),
-    p = n(991621),
-    h = n(774863),
-    m = n(294509);
+    p = n(823379),
+    _ = n(991621),
+    m = n(774863),
+    h = n(294509);
 let g = -1,
     E = () =>
-        Object.values(m.Fj).filter((e) => {
+        Object.values(h.Fj).filter((e) => {
             var t;
             return null == e.isEligible || (null == (t = e.isEligible) ? void 0 : t.call(e));
         }),
     b = (e) => {
         let { channelId: t, authorId: n } = G(e);
-        return null == t || null == e ? m.qn.NONE : y(t, n);
+        return null == t || null == e ? h.qn.NONE : y(t, n);
     },
     y = (e, t) => {
         let n = f.default.getCurrentUser();
-        if (null == n || t === n.id) return m.qn.NONE;
-        let r = L(e, t, [c.Z, d.Z]);
-        return null == r ? m.qn.NONE : O(r);
+        if (null == n || t === n.id) return h.qn.NONE;
+        let r = x(e, t, [c.Z, d.Z]);
+        return null == r ? h.qn.NONE : O(r);
     },
     O = (e) => {
         let t = E();
         return null == e
-            ? m.qn.NONE
-            : D(t.map((t) => (U(t.getUserSettingsWithDefaults()[e]) ? t.harmType : null)).filter(_.lm));
+            ? h.qn.NONE
+            : w(t.map((t) => (U(t.getUserSettingsWithDefaults()[e]) ? t.harmType : null)).filter(p.lm));
     };
 function v(e) {
     let t = b(e);
-    return I(e, t);
+    return S(e, t);
 }
-function I(e, t) {
+function S(e, t) {
     var n, r;
-    if (t === m.qn.NONE || null == e) return !1;
+    if (t === h.qn.NONE || null == e) return !1;
     if (
         (null == (n = e.attachments)
             ? void 0
@@ -70,7 +70,7 @@ function I(e, t) {
                   (e) =>
                       C(
                           {
-                              type: p.l.Attachment,
+                              type: _.l.Attachment,
                               media: e,
                           },
                           t,
@@ -82,7 +82,7 @@ function I(e, t) {
                   (e) =>
                       C(
                           {
-                              type: p.l.Embed,
+                              type: _.l.Embed,
                               media: e,
                           },
                           t,
@@ -96,10 +96,10 @@ function I(e, t) {
         null == i || 0 === i.length)
     )
         return !1;
-    for (let e of i) if (I(e.message, t)) return !0;
+    for (let e of i) if (S(e.message, t)) return !0;
     return !1;
 }
-function T(e) {
+function I(e) {
     return (Array.isArray(e) ? e : [e])
         .flatMap((e) => {
             switch (e.type) {
@@ -111,24 +111,24 @@ function T(e) {
                     return e.file;
                 case a.re.SECTION:
                 case a.re.ACTION_ROW:
-                    return e.components.flatMap(T);
+                    return e.components.flatMap(I);
                 default:
                     return [];
             }
         })
         .map((e) => ("proxy_url" in e ? (0, l.ym)(e) : e));
 }
-function S(e, t) {
+function T(e, t) {
     var n, r;
     let i = null != t ? t : b(e);
-    if (i === m.qn.NONE) return !1;
+    if (i === h.qn.NONE) return !1;
     if (
         (null == (n = e.attachments)
             ? void 0
             : n.some((e) =>
-                  R(
+                  P(
                       {
-                          type: p.l.Attachment,
+                          type: _.l.Attachment,
                           media: e,
                       },
                       i,
@@ -137,19 +137,19 @@ function S(e, t) {
         (null == (r = e.embeds)
             ? void 0
             : r.some((e) =>
-                  R(
+                  P(
                       {
-                          type: p.l.Embed,
+                          type: _.l.Embed,
                           media: e,
                       },
                       i,
                   ),
               )) ||
         (null != e.components &&
-            T(e.components).some((e) =>
-                R(
+            I(e.components).some((e) =>
+                P(
                     {
-                        type: p.l.GenericMedia,
+                        type: _.l.GenericMedia,
                         media: e,
                     },
                     i,
@@ -163,13 +163,13 @@ function S(e, t) {
         null == a || 0 === a.length)
     )
         return !1;
-    for (let e of a) if (S(e.message, i)) return !0;
+    for (let e of a) if (T(e.message, i)) return !0;
     return !1;
 }
 function A(e) {
     var t, n, r, i;
     let a = b(e);
-    if (a === m.qn.NONE)
+    if (a === h.qn.NONE)
         return {
             attachmentIds: [],
             embedIds: [],
@@ -178,9 +178,9 @@ function A(e) {
             null == (t = e.attachments)
                 ? void 0
                 : t.filter((e) =>
-                      R(
+                      P(
                           {
-                              type: p.l.Attachment,
+                              type: _.l.Attachment,
                               media: e,
                           },
                           a,
@@ -190,9 +190,9 @@ function A(e) {
             null == (n = e.embeds)
                 ? void 0
                 : n.filter((e) =>
-                      R(
+                      P(
                           {
-                              type: p.l.Embed,
+                              type: _.l.Embed,
                               media: e,
                           },
                           a,
@@ -204,41 +204,41 @@ function A(e) {
     };
 }
 function C(e, t) {
-    if (t === m.qn.NONE) return [];
-    let n = w(t);
-    return 0 === n.length ? [] : n.filter((t) => P(t, e)).map((e) => m.Fj[e].obscureReason);
+    if (t === h.qn.NONE) return [];
+    let n = D(t);
+    return 0 === n.length ? [] : n.filter((t) => R(t, e)).map((e) => h.Fj[e].obscureReason);
 }
 function N(e, t) {
-    if (t === m.qn.NONE) return !1;
-    let n = w(t);
-    return 0 !== n.length && n.filter((t) => P(t, e)).length > 0;
+    if (t === h.qn.NONE) return !1;
+    let n = D(t);
+    return 0 !== n.length && n.filter((t) => R(t, e)).length > 0;
 }
-function R(e, t) {
-    if (t === m.qn.NONE || o.ZP.get("explicit_media_redaction_ignore_pending_scan")) return !1;
-    let n = w(t);
+function P(e, t) {
+    if (t === h.qn.NONE || o.ZP.get("explicit_media_redaction_ignore_pending_scan")) return !1;
+    let n = D(t);
     if (0 === n.length) return !1;
     switch (e.type) {
-        case p.l.Embed:
-            return x(e.media, n);
-        case p.l.Attachment:
+        case _.l.Embed:
+            return L(e.media, n);
+        case _.l.Attachment:
+            return j(e.media, n);
+        case _.l.GenericMedia:
             return M(e.media, n);
-        case p.l.GenericMedia:
-            return k(e.media, n);
         default:
             return !1;
     }
 }
-function P(e, t) {
+function R(e, t) {
     var n, i, a, s;
     if (null == e) return !1;
-    let l = m.Fj[e];
+    let l = h.Fj[e];
     if (null != l.devSettingKey && o.ZP.get(l.devSettingKey)) return !0;
     switch (t.type) {
-        case p.l.Embed:
+        case _.l.Embed:
             return (0, r.yE)(null != (n = t.media.flags) ? n : 0, l.embedFlag);
-        case p.l.Attachment:
+        case _.l.Attachment:
             return (0, r.yE)(null != (i = t.media.flags) ? i : 0, l.attachmentFlag);
-        case p.l.GenericMedia:
+        case _.l.GenericMedia:
             return (0, r.yE)(
                 null != (s = null == (a = t.media.contentScanMetadata) ? void 0 : a.flags) ? s : 0,
                 l.genericMediaFlag,
@@ -247,28 +247,28 @@ function P(e, t) {
             return !1;
     }
 }
-function D(e) {
-    let t = m.qn.NONE;
+function w(e) {
+    let t = h.qn.NONE;
     for (let n of e)
         switch (n) {
-            case m._.EXPLICIT:
-                t |= m.qn.EXPLICIT;
+            case h._.EXPLICIT:
+                t |= h.qn.EXPLICIT;
                 break;
-            case m._.GORE:
-                t |= m.qn.GORE;
+            case h._.GORE:
+                t |= h.qn.GORE;
                 break;
-            case m._.SELF_HARM:
-                t |= m.qn.SELF_HARM;
+            case h._.SELF_HARM:
+                t |= h.qn.SELF_HARM;
         }
     return t;
 }
-function w(e) {
-    if (e === m.qn.NONE) return [];
+function D(e) {
+    if (e === h.qn.NONE) return [];
     let t = [];
     for (let n of E()) (e & n.bitmask) > 0 && t.push(n.harmType);
     return t;
 }
-function L(e, t) {
+function x(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [c.Z, d.Z],
         [r, i] = n,
         a = r.getChannel(e),
@@ -277,11 +277,11 @@ function L(e, t) {
         ? null
         : a.isDM() || a.isGroupDM()
           ? null != t && i.getFriendIDs().includes(t)
-              ? p.n.FRIEND_DM
-              : p.n.NON_FRIEND_DM
-          : p.n.GUILD;
+              ? _.n.FRIEND_DM
+              : _.n.NON_FRIEND_DM
+          : _.n.GUILD;
 }
-function x(e, t) {
+function L(e, t) {
     var n, r, i, a, o, s, l;
     return (
         !(
@@ -290,8 +290,8 @@ function x(e, t) {
             0 ===
                 t.filter(
                     (t) =>
-                        !P(t, {
-                            type: p.l.Embed,
+                        !R(t, {
+                            type: _.l.Embed,
                             media: e,
                         }),
                 ).length ||
@@ -309,7 +309,22 @@ function x(e, t) {
                 (null == (s = e.image) ? void 0 : s.height) === 0) ||
             ("images" in e &&
                 (null == (l = e.images) ? void 0 : l.some((e) => null != e && 0 === e.width && 0 === e.height)))
-        ) && j(B(e), t)
+        ) && k(Z(e), t)
+    );
+}
+function j(e, t) {
+    var n;
+    return (
+        0 !== t.length &&
+        0 !==
+            t.filter(
+                (t) =>
+                    !R(t, {
+                        type: _.l.Attachment,
+                        media: e,
+                    }),
+            ).length &&
+        k(null != (n = e.content_scan_version) ? n : e.contentScanVersion, t)
     );
 }
 function M(e, t) {
@@ -319,32 +334,17 @@ function M(e, t) {
         0 !==
             t.filter(
                 (t) =>
-                    !P(t, {
-                        type: p.l.Attachment,
+                    !R(t, {
+                        type: _.l.GenericMedia,
                         media: e,
                     }),
             ).length &&
-        j(null != (n = e.content_scan_version) ? n : e.contentScanVersion, t)
+        k(null == (n = e.contentScanMetadata) ? void 0 : n.version, t)
     );
 }
 function k(e, t) {
-    var n;
-    return (
-        0 !== t.length &&
-        0 !==
-            t.filter(
-                (t) =>
-                    !P(t, {
-                        type: p.l.GenericMedia,
-                        media: e,
-                    }),
-            ).length &&
-        j(null == (n = e.contentScanMetadata) ? void 0 : n.version, t)
-    );
-}
-function j(e, t) {
-    let n = h.Z.validContentScanVersion;
-    return e !== g && (t.includes(m._.GORE) || t.includes(m._.SELF_HARM) ? null == e || e < n : null == e);
+    let n = m.Z.validContentScanVersion;
+    return e !== g && (t.includes(h._.GORE) || t.includes(h._.SELF_HARM) ? null == e || e < n : null == e);
 }
 function U(e) {
     return null != e && [i.Q4.BLOCK, i.Q4.BLUR].includes(e);
@@ -369,7 +369,7 @@ function G(e) {
         authorId: i,
     };
 }
-function B(e) {
+function Z(e) {
     return null != e.content_scan_version
         ? e.content_scan_version
         : null != e.contentScanVersion || null != e.contentScanVersion

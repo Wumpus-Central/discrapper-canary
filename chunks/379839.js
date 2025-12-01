@@ -1,6 +1,6 @@
 n.d(t, {
-    A: () => p,
-    p: () => h,
+    A: () => _,
+    p: () => m,
 }),
     n(388685);
 var r = n(473749),
@@ -13,8 +13,8 @@ let l = "14",
     u = "33",
     d = "4D",
     f = "66",
-    _ = "80";
-function p(e) {
+    p = "80";
+function _(e) {
     let t = (0, i.ZP)(),
         [n, a] = (0, r.useState)({});
     return (
@@ -31,13 +31,13 @@ function p(e) {
         n
     );
 }
-function h(e, t, n, o, s) {
+function m(e, t, n, o, s) {
     let l = (0, i.ZP)(),
         c = (0, r.useMemo)(
             () =>
                 null == t
                     ? null
-                    : m({
+                    : h({
                           palette: t.palette,
                           theme: l,
                           hover: n,
@@ -68,22 +68,22 @@ function h(e, t, n, o, s) {
         u
     );
 }
-function m(e) {
-    let { palette: t, theme: n, hover: r, selected: i, placement: p } = e;
+function h(e) {
+    let { palette: t, theme: n, hover: r, selected: i, placement: _ } = e;
     if (!(0, o.ic)(t)) return;
-    let h = n === s.BR.LIGHT,
-        m = h ? t.lightBackground : t.darkBackground;
-    if (p === a.i.MEMBER_LIST || p === a.i.CHANNEL) {
-        let e = "".concat(i ? _ : r && p === a.i.MEMBER_LIST ? d : u);
+    let m = n === s.BR.LIGHT,
+        h = m ? t.lightBackground : t.darkBackground;
+    if (_ === a.i.MEMBER_LIST || _ === a.i.CHANNEL) {
+        let e = "".concat(i ? p : r && _ === a.i.MEMBER_LIST ? d : u);
         return "linear-gradient(90deg, transparent 0%, "
-            .concat(m)
+            .concat(h)
             .concat(l, " 20%, ")
-            .concat(m)
+            .concat(h)
             .concat(l, " 50%, ")
-            .concat(m)
+            .concat(h)
             .concat(e, " 100%)");
     }
-    let g = p === a.i.MINI_PREVIEW ? u : c,
-        E = h ? d : f;
-    return "linear-gradient(90deg, ".concat(m).concat(g, " 0%, ").concat(m).concat(E, " 100%)");
+    let g = _ === a.i.MINI_PREVIEW ? u : c,
+        E = m ? d : f;
+    return "linear-gradient(90deg, ".concat(h).concat(g, " 0%, ").concat(h).concat(E, " 100%)");
 }

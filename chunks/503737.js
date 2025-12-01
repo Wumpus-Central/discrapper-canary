@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => p });
 var r = n(54381);
 n(473749);
 var i = n(793030),
@@ -33,7 +33,7 @@ function u(e) {
     return e;
 }
 let d = "ActivityInviteManager",
-    p = () => {
+    f = () => {
         o.Z.dispatch({ type: "ACTIVITY_INVITE_MODAL_CLOSE" });
     };
 class h extends a.Z {
@@ -91,7 +91,7 @@ class h extends a.Z {
                       );
                   },
                   {
-                      onCloseCallback: p,
+                      onCloseCallback: f,
                       modalKey: d,
                   },
                   h,
@@ -102,7 +102,7 @@ class h extends a.Z {
                       return (t) => (0, r.jsx)(e, u({}, t));
                   },
                   {
-                      onCloseCallback: p,
+                      onCloseCallback: f,
                       modalKey: d,
                       contextKey: h,
                   },
@@ -112,4 +112,4 @@ class h extends a.Z {
         (0, l.Mr3)(d);
     }
 }
-let f = new h();
+let p = new h();

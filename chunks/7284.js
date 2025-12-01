@@ -1,6 +1,6 @@
 n.d(t, {
     U: () => f,
-    j: () => _,
+    j: () => p,
 });
 var r = n(120356),
     i = n.n(r),
@@ -27,7 +27,7 @@ function f(e) {
         className: null != (t = d[e]) ? t : "",
     };
 }
-function _(e) {
+function p(e) {
     let { displayNameStyles: t, inProfile: n } = e,
         { includeNonProfile: r } = s.fN.useExperiment({ location: "useDisplayNameStylesFont" });
     if (!(0, c.Y)({ location: "useDisplayNameStylesFont" }) || (!n && !r) || null == t) return "";

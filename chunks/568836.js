@@ -1,6 +1,6 @@
 n.d(t, {
-    $G: () => _,
-    OR: () => p,
+    $G: () => p,
+    OR: () => _,
     aL: () => f,
 });
 var r = n(54381);
@@ -62,7 +62,7 @@ function d(e, t) {
     );
 }
 let f = 660,
-    _ = (e) =>
+    p = (e) =>
         (0, r.jsx)(
             o.Z,
             d(c({}, e), {
@@ -72,7 +72,7 @@ let f = 660,
                 }),
             }),
         ),
-    p = (e) => {
+    _ = (e) => {
         let { isHorizontal: t } = e,
             n = () => (0, r.jsx)("div", { className: a()(s.loadingImage, { [s.loadingImageHorizontal]: t }) }),
             i = () =>
@@ -84,7 +84,7 @@ let f = 660,
                     }),
                 });
         return (0, r.jsx)(
-            _,
+            p,
             d(c({}, e), {
                 media: i,
                 title: n,

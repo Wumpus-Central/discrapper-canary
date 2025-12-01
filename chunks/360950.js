@@ -109,7 +109,7 @@ e.exports = function (e) {
             begin: "~[A-Z](?=" + l + ")",
             contains: c.map((t) => e.inherit(t, { contains: [u(t.end)] })),
         },
-        _ = {
+        p = {
             className: "regex",
             variants: [
                 {
@@ -132,7 +132,7 @@ e.exports = function (e) {
                 },
             ],
         },
-        p = {
+        _ = {
             className: "string",
             contains: [e.BACKSLASH_ESCAPE, a],
             variants: [
@@ -174,7 +174,7 @@ e.exports = function (e) {
                 },
             ],
         },
-        h = {
+        m = {
             className: "function",
             beginKeywords: "def defp defmacro defmacrop",
             end: /\B\b/,
@@ -185,24 +185,24 @@ e.exports = function (e) {
                 }),
             ],
         },
-        m = e.inherit(h, {
+        h = e.inherit(m, {
             className: "class",
             beginKeywords: "defimpl defmodule defprotocol defrecord",
             end: /\bdo\b|$|;/,
         }),
         g = [
-            p,
             _,
+            p,
             f,
             d,
             e.HASH_COMMENT_MODE,
-            m,
             h,
+            m,
             { begin: "::" },
             {
                 className: "symbol",
                 begin: ":(?![\\s:])",
-                contains: [p, { begin: r }],
+                contains: [_, { begin: r }],
                 relevance: 0,
             },
             {

@@ -11,24 +11,24 @@ function c(e) {
     let n,
         { message: c, onDeleteMessage: u, children: d } = e,
         f = null == (t = c.interactionMetadata) ? void 0 : t.ephemerality_reason,
-        _ = () => u(c, !0);
+        p = () => u(c, !0);
     if (null != f) {
         let e = (0, a.i)(f);
         n = (0, r.jsx)("div", {
             className: l.userAppsBetaContent,
             children: s.intl.format(s.t.wx1tLQ, {
-                handleDelete: _,
+                handleDelete: p,
                 reason: e,
             }),
         });
     } else
         n =
             c.type === o.uaV.STAGE_RAISE_HAND
-                ? s.intl.format(s.t["qDAX++"], { handleDelete: _ })
+                ? s.intl.format(s.t["qDAX++"], { handleDelete: p })
                 : s.intl.format(s.t.uX3ecL, {
                       count: 1,
                       countMessages: 1,
-                      handleDelete: _,
+                      handleDelete: p,
                   });
     return (0, r.jsxs)("div", {
         className: l.ephemeralMessage,

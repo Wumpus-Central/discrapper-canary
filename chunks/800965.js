@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -40,7 +40,7 @@ function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -48,7 +48,7 @@ function f(e, t) {
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -57,15 +57,15 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function p(e) {
+function _(e) {
     var { popoutOpen: t, onClosePopout: n, onOpenPopout: i } = e,
         u = f(e, ["popoutOpen", "onClosePopout", "onOpenPopout"]);
-    let _ = t ? l.intl.string(l.t["7Dwcnj"]) : l.intl.string(l.t.JzWezz);
+    let p = t ? l.intl.string(l.t["7Dwcnj"]) : l.intl.string(l.t.JzWezz);
     return (0, r.jsx)(
         s.Z,
         d(
             {
-                label: _,
+                label: p,
                 onClick: t ? n : i,
                 iconComponent: o.rgF,
                 iconClassName: a()({ [c.popIn]: t }),

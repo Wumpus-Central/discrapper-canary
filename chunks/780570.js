@@ -1,11 +1,11 @@
 n.d(t, {
     CP: () => l,
-    Je: () => p,
+    Je: () => _,
     KJ: () => f,
     OT: () => c,
     Tu: () => s,
     d0: () => d,
-    lK: () => _,
+    lK: () => p,
     xI: () => u,
 }),
     n(388685),
@@ -42,7 +42,7 @@ function f(e) {
           ? e
           : null;
 }
-function _(e) {
+function p(e) {
     return e.reduce(
         (e, t) => {
             let n = f(t);
@@ -59,6 +59,6 @@ function _(e) {
         },
     );
 }
-function p(e) {
+function _(e) {
     return !!e.isDiscordApplication() && e.isEntitled(i.default.getCurrentUser(), a.Z);
 }

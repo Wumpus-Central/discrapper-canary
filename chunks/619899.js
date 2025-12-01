@@ -1,9 +1,9 @@
 n.d(t, {
     Cr: () => N,
     N9: () => y,
-    O1: () => R,
+    O1: () => P,
     St: () => C,
-    ex: () => I,
+    ex: () => S,
     xq: () => O,
     zL: () => v,
 }),
@@ -54,7 +54,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -66,22 +66,22 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -89,7 +89,7 @@ function h(e, t) {
     }
     return i;
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -135,7 +135,7 @@ let y = (0, a.U)((e) => ({
                             name: n.name,
                             src: i,
                         }),
-                        p(f({}, e), {
+                        _(f({}, e), {
                             collectionAssets: a,
                             previewEnabled: !0,
                         })
@@ -150,9 +150,9 @@ let y = (0, a.U)((e) => ({
                     URL.revokeObjectURL(n.src);
                     let r = e.collectionAssets,
                         { [t]: i } = r,
-                        a = h(r, [t].map(E)),
+                        a = m(r, [t].map(E)),
                         o = Object.keys(a).length > 0 || Object.keys(e.avatarDecorationAssets).length > 0;
-                    return p(f({}, e), {
+                    return _(f({}, e), {
                         collectionAssets: a,
                         previewEnabled: o,
                     });
@@ -171,7 +171,7 @@ let y = (0, a.U)((e) => ({
                             name: t.name,
                             src: r,
                         }),
-                        p(f({}, e), {
+                        _(f({}, e), {
                             avatarDecorationAssets: i,
                             previewEnabled: !0,
                         })
@@ -186,9 +186,9 @@ let y = (0, a.U)((e) => ({
                     URL.revokeObjectURL(n.src);
                     let r = e.avatarDecorationAssets,
                         { [t]: i } = r,
-                        a = h(r, [t].map(E)),
+                        a = m(r, [t].map(E)),
                         o = Object.keys(a).length > 0 || Object.keys(e.collectionAssets).length > 0;
-                    return p(f({}, e), {
+                    return _(f({}, e), {
                         avatarDecorationAssets: a,
                         previewEnabled: o,
                     });
@@ -241,7 +241,7 @@ let y = (0, a.U)((e) => ({
             var n;
             return t.previewEnabled ? (null == (n = t.collectionAssets[e]) ? void 0 : n.src) : null;
         }),
-    I = (e) => {
+    S = (e) => {
         let { previewEnabled: t, previewProfileEffectSkuId: n } = y(),
             a = t ? n : null,
             o = (0, l.mr)(a);
@@ -255,25 +255,25 @@ let y = (0, a.U)((e) => ({
                 ((a.title = o.name),
                 (a.effects = t.map((e) => {
                     let { base64: t } = e;
-                    return h(e, ["base64"]);
+                    return m(e, ["base64"]);
                 })),
                 r)
             ) {
-                var s, l, u, d, f, _;
+                var s, l, u, d, f, p;
                 (a.reducedMotionSrc = null != (d = null == (s = n[c.cq.REDUCED_MOTION]) ? void 0 : s.src) ? d : ""),
                     (a.staticFrameSrc = null != (f = null == (l = n[c.cq.STATIC]) ? void 0 : l.src) ? f : ""),
-                    (a.thumbnailPreviewSrc = null != (_ = null == (u = n[c.cq.THUMBNAIL]) ? void 0 : u.src) ? _ : "");
+                    (a.thumbnailPreviewSrc = null != (p = null == (u = n[c.cq.THUMBNAIL]) ? void 0 : u.src) ? p : "");
             }
             return a;
         }, [o, e]);
     },
-    T = (e, t) => p(f({}, e), { asset: t.src }),
-    S = (e, t) => {
+    I = (e, t) => _(f({}, e), { asset: t.src }),
+    T = (e, t) => {
         if (e.type !== o.Z.AVATAR_DECORATION) return e;
         let n = (0, i.cloneDeep)(e);
         if (n.items.length > 0) {
             let r = n.items[0];
-            (e.name = t.name.replace(".png", "")), (n.items[0] = T(r, t));
+            (e.name = t.name.replace(".png", "")), (n.items[0] = I(r, t));
         }
         return n;
     },
@@ -289,11 +289,11 @@ let y = (0, a.U)((e) => ({
             if (!t || 0 === r.length || 0 === e.length) return e;
             if (null != n) {
                 let t = i[n];
-                return null == t ? e : e.map((e) => S(e, t));
+                return null == t ? e : e.map((e) => T(e, t));
             }
             return e.map((e, t) => {
                 let n = t % r.length;
-                return S(e, r[n]);
+                return T(e, r[n]);
             });
         }, [e, t, n, i]);
     },
@@ -303,15 +303,15 @@ let y = (0, a.U)((e) => ({
         return r.useMemo(() => {
             if (null == e || e.type !== o.Z.AVATAR_DECORATION || 0 === e.items.length) return e;
             let r = A(t, i, n);
-            return null == r ? e : S(e, r);
+            return null == r ? e : T(e, r);
         }, [e, t, n, i]);
     },
-    R = (e) => {
+    P = (e) => {
         let { previewEnabled: t, previewAvatarDecorationSkuId: n } = y(),
             i = y((e) => e.avatarDecorationAssets);
         return r.useMemo(() => {
             if (null == e) return null;
             let r = A(t, i, n);
-            return null == r ? e : T(e, r);
+            return null == r ? e : I(e, r);
         }, [e, t, n, i]);
     };

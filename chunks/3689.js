@@ -1,16 +1,16 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => u });
 var r = n(54381);
 n(473749);
 var i = n(442837),
     l = n(481060),
-    o = n(496675),
-    a = n(981631),
-    c = n(388032);
-function s(e, t) {
-    let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : e.type,
-        u = (0, i.e7)([o.Z], () => o.Z.can(a.Plq.MANAGE_CHANNELS, e), [e]);
-    if (__OVERLAY__ || !u) return null;
-    let d = () => {
+    c = n(496675),
+    o = n(981631),
+    a = n(388032);
+function u(e, t) {
+    let u = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : e.type,
+        s = (0, i.e7)([c.Z], () => c.Z.can(o.Plq.MANAGE_CHANNELS, e), [e]);
+    if (__OVERLAY__ || !s) return null;
+    let b = () => {
         (0, l.ZDy)(async () => {
             let { default: t } = await Promise.all([n.e("33285"), n.e("29497"), n.e("26861")]).then(n.bind(n, 241865));
             return (n) => {
@@ -44,7 +44,7 @@ function s(e, t) {
                     })({}, n)),
                     (l = l =
                         {
-                            channelType: s,
+                            channelType: u,
                             guildId: e.guild_id,
                             categoryId: e.parent_id,
                         }),
@@ -65,18 +65,18 @@ function s(e, t) {
             };
         });
     };
-    switch (s) {
-        case a.d4z.GUILD_TEXT:
+    switch (u) {
+        case o.d4z.GUILD_TEXT:
             return (0, r.jsx)(l.sNh, {
                 id: "create-text-channel",
-                label: c.intl.string(c.t.HHkTJP),
-                action: d,
+                label: a.intl.string(a.t.HHkTJP),
+                action: b,
             });
-        case a.d4z.GUILD_VOICE:
+        case o.d4z.GUILD_VOICE:
             return (0, r.jsx)(l.sNh, {
                 id: "create-voice-channel",
-                label: c.intl.string(c.t.AlbZaI),
-                action: d,
+                label: a.intl.string(a.t.AlbZaI),
+                action: b,
             });
         default:
             return null;

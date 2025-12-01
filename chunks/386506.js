@@ -1,8 +1,8 @@
 let r;
 n.d(t, {
-    M3: () => p,
+    M3: () => _,
     aD: () => d,
-    bF: () => _,
+    bF: () => p,
     f0: () => f,
 });
 var i = n(544891),
@@ -47,7 +47,7 @@ async function f(e) {
         return e;
     }
 }
-async function _() {
+async function p() {
     let e = await i.tn.del({
         url: (0, s.pU)(l),
         oldFormErrors: !0,
@@ -55,7 +55,7 @@ async function _() {
     });
     return await r(e), e;
 }
-function p(e) {
+function _(e) {
     var t;
     return i.tn
         .post({

@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function _(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,18 +49,18 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -82,24 +82,24 @@ function g(e, t) {
     return i;
 }
 function E(e) {
-    var { event: t, recurrenceId: n, guildId: f, onRsvp: p } = e,
-        g = m(e, ["event", "recurrenceId", "guildId", "onRsvp"]);
+    var { event: t, recurrenceId: n, guildId: f, onRsvp: _ } = e,
+        g = h(e, ["event", "recurrenceId", "guildId", "onRsvp"]);
     let [E, b] = i.useState(l.KX.SERIES),
         y = (0, l.X2)(t.id, null),
         O = (null == y ? void 0 : y.response) === c.gv.INTERESTED ? c.gv.UNINTERESTED : c.gv.INTERESTED,
         v = O === c.gv.INTERESTED ? u.intl.string(u.t.WtORed) : u.intl.string(u.t["8MPCVr"]),
-        I = () => {
+        S = () => {
             E === l.KX.SERIES ? s.Z.updateRsvp(t.id, null, f, O) : s.Z.updateRsvp(t.id, n, f, O),
-                null == p || p(),
+                null == _ || _(),
                 g.onClose();
         };
     return (0, r.jsx)(
         o.ConfirmModal,
-        h(_({}, g), {
+        m(p({}, g), {
             header: v,
             confirmText: u.intl.string(u.t.TyCVIq),
             cancelText: u.intl.string(u.t["ETE/oC"]),
-            onConfirm: I,
+            onConfirm: S,
             confirmButtonColor: a.zx.Colors.BRAND,
             children: (0, r.jsx)("div", {
                 className: d.responseOptions,
@@ -118,7 +118,7 @@ function b(e, t, n, i) {
             Promise.resolve((a) =>
                 (0, r.jsx)(
                     E,
-                    h(_({}, a), {
+                    m(p({}, a), {
                         event: e,
                         recurrenceId: t,
                         guildId: n,

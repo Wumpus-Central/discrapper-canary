@@ -10,8 +10,8 @@ var r = n(54381),
 let d = 5;
 function f(e) {
     var t;
-    let { selectedGuildId: n, selectedChannelId: f, onChannelChange: _, error: p } = e,
-        [h, m] = i.useState(null),
+    let { selectedGuildId: n, selectedChannelId: f, onChannelChange: p, error: _ } = e,
+        [m, h] = i.useState(null),
         g = i.useRef(!1);
     if (
         (i.useEffect(() => {
@@ -19,24 +19,24 @@ function f(e) {
                 let t = await (0, l.UR)(e);
                 n === e &&
                     (t.sort((e, t) => e.name.localeCompare(t.name)),
-                    m({
+                    h({
                         guildId: e,
                         channels: t,
                     }),
                     (g.current = !0));
             }
-            m(null), null == n ? _(null) : e(n);
-        }, [_, n]),
+            h(null), null == n ? p(null) : e(n);
+        }, [p, n]),
         i.useEffect(() => {
-            g.current && (null == h ? null != f && _(null) : h.channels.some((e) => e.id === f) || _(null));
-        }, [h, _, f, n]),
+            g.current && (null == m ? null != f && p(null) : m.channels.some((e) => e.id === f) || p(null));
+        }, [m, p, f, n]),
         null == n)
     )
         return null;
     let E =
-        null == h || h.guildId !== n
+        null == m || m.guildId !== n
             ? []
-            : (null != (t = null == h ? void 0 : h.channels) ? t : []).map((e) => ({
+            : (null != (t = null == m ? void 0 : m.channels) ? t : []).map((e) => ({
                   value: e.id,
                   label: e.name,
               }));
@@ -48,17 +48,17 @@ function f(e) {
                 className: u.sectionLabel,
                 children: c.intl.string(c.t["8qKd+J"]),
             }),
-            null != p && "" !== p
+            null != _ && "" !== _
                 ? (0, r.jsx)(o.x, {
                       variant: "text-xs/normal",
                       color: "text-danger",
-                      children: p,
+                      children: _,
                   })
                 : null,
             (0, r.jsx)(s.VcW, {
                 wrapperClassName: u.select,
                 maxVisibleItems: d,
-                onChange: _,
+                onChange: p,
                 placeholder: c.intl.string(c.t["Re/64R"]),
                 options: E,
                 value: f,

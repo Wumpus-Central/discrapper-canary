@@ -10,10 +10,10 @@ var i = n(120356),
     u = n(430824),
     d = n(914010),
     f = n(693546),
-    _ = n(305325),
-    p = n(246364),
-    h = n(983736),
-    m = n(937111),
+    p = n(305325),
+    _ = n(246364),
+    m = n(983736),
+    h = n(937111),
     g = n(981631),
     E = n(176505),
     b = n(388032),
@@ -32,7 +32,7 @@ function v(e, t, n) {
         e
     );
 }
-function I(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function I(e) {
     }
     return e;
 }
-function T(e, t) {
+function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -60,12 +60,12 @@ function T(e, t) {
     }
     return n;
 }
-function S(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : T(Object(t)).forEach(function (n) {
+            : I(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -75,22 +75,22 @@ let A = () => {
     var e, t;
     let i = (0, s.e7)([d.Z], () => d.Z.getGuildId(), []),
         v = (0, s.e7)([u.Z], () => u.Z.getGuild(i), [i]),
-        T = (0, s.e7)([m.Z], () => (null != i ? m.Z.getRequest(i) : null), [i]),
+        I = (0, s.e7)([h.Z], () => (null != i ? h.Z.getRequest(i) : null), [i]),
         A = (0, o.TH)(),
         C =
             (null == (e = (0, o.LX)(A.pathname, g.Z5c.CHANNEL(null == v ? void 0 : v.id, E.oC.GUILD_ONBOARDING)))
                 ? void 0
                 : e.isExact) === !0;
-    if (null == v || !(0, h.Dc)(v) || C) return null;
+    if (null == v || !(0, m.Dc)(v) || C) return null;
     let N = () => {
-            (0, _.hk)(v.id);
+            (0, p.hk)(v.id);
         },
-        R = () => {
+        P = () => {
             (0, c.h7j)((e) =>
                 (0, r.jsx)(
                     c.ConfirmModal,
-                    S(
-                        I(
+                    T(
+                        S(
                             {
                                 header: b.intl.string(b.t.aIz1oV),
                                 confirmText: b.intl.string(b.t["cY+Oob"]),
@@ -110,40 +110,40 @@ let A = () => {
                 ),
             );
         },
-        P = () => {
+        R = () => {
             (0, c.ZDy)(async () => {
                 let { default: e } = await n.e("3378").then(n.bind(n, 76075));
-                return (t) => (0, r.jsx)(e, I({ guildId: v.id }, t));
+                return (t) => (0, r.jsx)(e, S({ guildId: v.id }, t));
             });
         },
-        D = null != (t = null == T ? void 0 : T.applicationStatus) ? t : p.wB.STARTED,
-        w = null,
-        L = null,
+        w = null != (t = null == I ? void 0 : I.applicationStatus) ? t : _.wB.STARTED,
+        D = null,
         x = null,
-        M = [y.notice, O.notice];
-    switch (D) {
-        case p.wB.SUBMITTED:
-            (w = b.intl.string(b.t["5iLvSx"])), (L = b.intl.string(b.t.mqtdmQ)), (x = R);
+        L = null,
+        j = [y.notice, O.notice];
+    switch (w) {
+        case _.wB.SUBMITTED:
+            (D = b.intl.string(b.t["5iLvSx"])), (x = b.intl.string(b.t.mqtdmQ)), (L = P);
             break;
-        case p.wB.REJECTED:
-            (w = b.intl.string(b.t.lk30cY)), (L = b.intl.string(b.t["8RrsHr"])), (x = P), M.push(y.error);
+        case _.wB.REJECTED:
+            (D = b.intl.string(b.t.lk30cY)), (x = b.intl.string(b.t["8RrsHr"])), (L = R), j.push(y.error);
             break;
         default:
-            (w = b.intl.string(b.t.G5YKXP)), (L = b.intl.string(b.t["r8/DT+"])), (x = N);
+            (D = b.intl.string(b.t.G5YKXP)), (x = b.intl.string(b.t["r8/DT+"])), (L = N);
     }
     return (0, r.jsxs)("div", {
-        className: a()(...M),
+        className: a()(...j),
         children: [
             (0, r.jsx)(c.Text, {
                 className: y.header,
                 variant: "text-sm/normal",
-                children: w,
+                children: D,
             }),
             (0, r.jsx)(c.Button, {
                 variant: "overlay-primary",
                 size: "sm",
-                onClick: x,
-                text: L,
+                onClick: L,
+                text: x,
             }),
         ],
     });

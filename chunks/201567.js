@@ -11,48 +11,48 @@ async function d(e, t) {
     let n,
         d,
         f,
-        _ = u.intl.string(u.t["IOy+I5"]);
+        p = u.intl.string(u.t["IOy+I5"]);
     if (e instanceof r.Z) {
         (n = 0), (f = e.reason);
         let i = s.Z.getFetchState();
         switch ((o.Sb.getSetting() && i !== s.O.LOADED && (await (0, l.$h)()), e.reason)) {
             case r.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND:
-                s.Z.inDevModeForApplication(t) && (_ = u.intl.string(u.t.hXRXfz));
+                s.Z.inDevModeForApplication(t) && (p = u.intl.string(u.t.hXRXfz));
                 break;
             case r.Z.Reasons.INVALID_CHANNEL:
-                _ = u.intl.string(u.t.j29zCr);
+                p = u.intl.string(u.t.j29zCr);
                 break;
             case r.Z.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED:
                 d = e.detailCode;
         }
     } else if (e instanceof i.Z) {
-        var p;
-        (n = 1), (f = e.reason), (_ = null != (p = (0, a.A0)(e.reason, t)) ? p : _);
+        var _;
+        (n = 1), (f = e.reason), (p = null != (_ = (0, a.A0)(e.reason, t)) ? _ : p);
     } else
         switch (((n = 2), (d = e.status), (f = e.code), e.code)) {
             case c.evJ.INVALID_ACTIVITY_LAUNCH_NO_ACCESS:
-                _ = u.intl.string(u.t.GyzcrS);
+                p = u.intl.string(u.t.GyzcrS);
                 break;
             case c.evJ.INVALID_ACTIVITY_LAUNCH_PREMIUM_TIER:
-                _ = u.intl.string(u.t.zxv7EF);
+                p = u.intl.string(u.t.zxv7EF);
                 break;
             case c.evJ.INVALID_PERMISSIONS:
-                _ = u.intl.string(u.t.hHGrWz);
+                p = u.intl.string(u.t.hHGrWz);
                 break;
             case c.evJ.INVALID_ACTIVITY_LAUNCH_AFK_CHANNEL:
-                _ = u.intl.string(u.t.j29zCr);
+                p = u.intl.string(u.t.j29zCr);
                 break;
             case c.evJ.INVALID_ACTIVITY_LAUNCH_AGE_GATED:
-                _ = u.intl.string(u.t["4WuFRE"]);
+                p = u.intl.string(u.t["4WuFRE"]);
                 break;
             case c.evJ.INVALID_ACTIVITY_LAUNCH_DEV_PREVIEW_GUILD_SIZE:
-                _ = u.intl.string(u.t.RvkXdb);
+                p = u.intl.string(u.t.RvkXdb);
                 break;
             case c.evJ.ACTIVITY_CONFIGURATION_DOES_NOT_SUPPORT_PLATFORM:
-                _ = u.intl.string(u.t.uGDCcw);
+                p = u.intl.string(u.t.uGDCcw);
         }
     return {
-        message: _,
+        message: p,
         errorType: n,
         errorStatus: d,
         errorCode: f,

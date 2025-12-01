@@ -7,7 +7,7 @@ var r = t(54381),
     o = t(49012),
     c = t(775146),
     d = t(619733),
-    u = t(732031),
+    u = t(613275),
     m = t(388032),
     g = t(835295);
 function f(e) {
@@ -27,7 +27,7 @@ function f(e) {
         children: (0, r.jsxs)("div", {
             className: g.content,
             children: [
-                (0, r.jsx)(l.Q6, {
+                (0, r.jsx)(l.c0, {
                     alt: "",
                     width: 117,
                     height: 78,

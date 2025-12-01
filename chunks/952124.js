@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(423086),
     d = n(299206),
     f = n(389052),
-    _ = n(158508),
-    p = n(785717),
-    h = n(621853),
-    m = n(475413),
+    p = n(158508),
+    _ = n(785717),
+    m = n(621853),
+    h = n(475413),
     g = n(388032);
 function E(e, t, n) {
     return (
@@ -46,14 +46,14 @@ function b(e) {
 function y(e) {
     let { user: t, guildId: n, viewProfileItem: E } = e,
         y = i.useRef(null),
-        { trackUserProfileAction: O } = (0, p.KZ)(),
-        { analyticsLocations: v, newestAnalyticsLocation: I } = (0, l.ZP)(s.Z.USER_PROFILE_OVERFLOW_MENU),
-        T = (0, a.e7)([h.Z], () => h.Z.getUserProfile(t.id)),
-        S = null == T ? void 0 : T.application,
+        { trackUserProfileAction: O } = (0, _.KZ)(),
+        { analyticsLocations: v, newestAnalyticsLocation: S } = (0, l.ZP)(s.Z.USER_PROFILE_OVERFLOW_MENU),
+        I = (0, a.e7)([m.Z], () => m.Z.getUserProfile(t.id)),
+        T = null == I ? void 0 : I.application,
         A = (0, f.Z)({
             user: t,
             guildId: n,
-            location: I,
+            location: S,
             color: "danger",
             onBlock: () =>
                 O({
@@ -66,10 +66,10 @@ function y(e) {
                     analyticsLocations: v,
                 }),
         }),
-        C = (0, _.Z)({
+        C = (0, p.Z)({
             user: t,
             guildId: n,
-            location: I,
+            location: S,
             onIgnore: () =>
                 O({
                     action: "IGNORE",
@@ -82,7 +82,7 @@ function y(e) {
                 }),
         }),
         N = (0, u.Z)({
-            applicationId: null == S ? void 0 : S.id,
+            applicationId: null == T ? void 0 : T.id,
             user: t,
             guildId: n,
             onSubmit: () =>
@@ -92,8 +92,8 @@ function y(e) {
                 }),
             color: "danger",
         }),
-        R = (0, d.Z)({
-            id: null == S ? void 0 : S.id,
+        P = (0, d.Z)({
+            id: null == T ? void 0 : T.id,
             label: g.intl.string(g.t["+NP/b2"]),
             onSuccess: () =>
                 O({
@@ -101,12 +101,12 @@ function y(e) {
                     analyticsLocations: v,
                 }),
         }),
-        P = [
+        R = [
             [E],
             [C, A, N],
             [
                 (0, c.Z)({
-                    application: S,
+                    application: T,
                     label: g.intl.string(g.t.WqhZss),
                     onSuccess: () =>
                         O({
@@ -114,10 +114,10 @@ function y(e) {
                             analyticsLocations: v,
                         }),
                 }),
-                R,
+                P,
             ],
         ];
-    return P.every((e) => e.every((e) => null == e))
+    return R.every((e) => e.every((e) => null == e))
         ? null
         : (0, r.jsx)(o.yRy, {
               targetElementRef: y,
@@ -128,12 +128,12 @@ function y(e) {
                       onSelect: void 0,
                       onClose: t,
                       "aria-label": g.intl.string(g.t.AXIHpV),
-                      children: P.map((e, t) => (0, r.jsx)(o.kSQ, { children: e.map((e) => e) }, t)),
+                      children: R.map((e, t) => (0, r.jsx)(o.kSQ, { children: e.map((e) => e) }, t)),
                   });
               },
               children: (e) =>
                   (0, r.jsx)(
-                      m.oY,
+                      h.oY,
                       b(
                           {
                               ref: y,

@@ -28,34 +28,34 @@ async function d() {
     return c.systemLocale;
 }
 let f = c.intl.currentLocale,
-    _ = c.systemLocale;
-function p() {
+    p = c.systemLocale;
+function _() {
     var e, t;
     let n = null == (t = l.Z.settings.localization) || null == (e = t.locale) ? void 0 : e.value;
     return null != n && "" !== n && n !== f && ((f = n), (0, o._2)(f), !0);
 }
-function h(e) {
+function m(e) {
     (f = e.locale), (0, o._2)(f);
 }
 d().then((e) => {
-    _ = e;
+    p = e;
 });
-class m extends (r = i.ZP.Store) {
+class h extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(l.Z), p(), (0, o._2)(f);
+        this.waitFor(l.Z), _(), (0, o._2)(f);
     }
     get locale() {
         return f;
     }
     get systemLocale() {
-        return _;
+        return p;
     }
 }
-u(m, "displayName", "LocaleStore");
-let g = new m(a.Z, {
-    OVERLAY_INITIALIZE: p,
-    CACHE_LOADED: p,
-    CONNECTION_OPEN: p,
-    USER_SETTINGS_PROTO_UPDATE: p,
-    USER_SETTINGS_LOCALE_OVERRIDE: h,
+u(h, "displayName", "LocaleStore");
+let g = new h(a.Z, {
+    OVERLAY_INITIALIZE: _,
+    CACHE_LOADED: _,
+    CONNECTION_OPEN: _,
+    USER_SETTINGS_PROTO_UPDATE: _,
+    USER_SETTINGS_LOCALE_OVERRIDE: m,
 });

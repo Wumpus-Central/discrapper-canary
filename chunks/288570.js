@@ -1,27 +1,27 @@
-_.d(e, { m: () => l });
-var a = _(395848),
-    r = _(140955),
-    n = _(202937),
-    o = _(896247),
-    E = _(596308),
-    i = _(662355);
+r.d(t, { m: () => l });
+var n = r(395848),
+    a = r(140955),
+    i = r(202937),
+    o = r(896247),
+    _ = r(596308),
+    s = r(662355);
 let c = [800, 1800],
-    s = (t) => {
-        a.m.document && a.m.document.prerendering
-            ? (0, i.A)(() => s(t))
-            : a.m.document && "complete" !== a.m.document.readyState
-              ? addEventListener("load", () => s(t), !0)
-              : setTimeout(t, 0);
+    E = (e) => {
+        n.m.document && n.m.document.prerendering
+            ? (0, s.A)(() => E(e))
+            : n.m.document && "complete" !== n.m.document.readyState
+              ? addEventListener("load", () => E(e), !0)
+              : setTimeout(e, 0);
     },
-    l = (t, e = {}) => {
-        let _ = (0, E.I)("TTFB"),
-            a = (0, r._)(t, _, c, e.reportAllChanges);
-        s(() => {
-            let t = (0, o.W)();
-            if (t) {
-                let e = t.responseStart;
-                if (e <= 0 || e > performance.now()) return;
-                (_.value = Math.max(e - (0, n.A)(), 0)), (_.entries = [t]), a(!0);
+    l = (e, t = {}) => {
+        let r = (0, _.I)("TTFB"),
+            n = (0, a._)(e, r, c, t.reportAllChanges);
+        E(() => {
+            let e = (0, o.W)();
+            if (e) {
+                let t = e.responseStart;
+                if (t <= 0 || t > performance.now()) return;
+                (r.value = Math.max(t - (0, i.A)(), 0)), (r.entries = [e]), n(!0);
             }
         });
     };

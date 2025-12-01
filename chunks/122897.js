@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381),
     i = n(473749),
     a = n(793030),
@@ -9,16 +9,16 @@ var r = n(54381),
     u = n(838436),
     d = n(726985),
     f = n(981631),
-    _ = n(388032);
-function p() {
+    p = n(388032);
+function _() {
     let e = (0, c.m)(),
         t = i.useMemo(() => (0, s.c7)(), []);
     return (0, r.jsxs)(u.U, {
         setting: d.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER_V2,
         children: [
             (0, r.jsx)(u.H, {
-                header: _.intl.string(_.t.tiCXaH),
-                description: _.intl.format(_.t.RvjRRI, { appealLink: o.Z.getArticleURL(f.BhN.SAFE_DIRECT_MESSAGING) }),
+                header: p.intl.string(p.t.tiCXaH),
+                description: p.intl.format(p.t.RvjRRI, { appealLink: o.Z.getArticleURL(f.BhN.SAFE_DIRECT_MESSAGING) }),
             }),
             (0, r.jsx)(a.Eep, {
                 value: e,

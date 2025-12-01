@@ -100,7 +100,7 @@ function T(e) {
                 source: s.F.APP_DIRECTORY,
             }),
         })),
-        z = (0, o.cj)([b.Z], () => {
+        H = (0, o.cj)([b.Z], () => {
             let e = b.Z.getSearchResults({
                 query: w,
                 source: s.F.APP_DIRECTORY,
@@ -133,8 +133,8 @@ function T(e) {
                   })({ [x.MU]: e.totalCount }, e.countsByCategory)
                 : {};
         }),
-        H = (0, d.Z)(F),
-        V = a.useMemo(() => (U === _.M.FETCHING ? H : F), [U, H, F]),
+        z = (0, d.Z)(F),
+        V = a.useMemo(() => (U === _.M.FETCHING ? z : F), [U, z, F]),
         Y = a.useCallback(
             (e) => {
                 (0, I.pR)({
@@ -190,7 +190,7 @@ function T(e) {
                                     (0, r.jsx)("div", {
                                         className: N.topFilterContainer,
                                         children: (0, r.jsx)(S.V, {
-                                            countsByCategory: z,
+                                            countsByCategory: H,
                                             selectedCategoryId: k,
                                             onSelectCategory: W,
                                         }),
@@ -249,7 +249,7 @@ function T(e) {
                 children: (0, r.jsx)("div", {
                     className: N.sideFilterContent,
                     children: (0, r.jsx)(S.Z, {
-                        countsByCategory: z,
+                        countsByCategory: H,
                         selectedCategoryId: k,
                         onSelectCategory: W,
                     }),

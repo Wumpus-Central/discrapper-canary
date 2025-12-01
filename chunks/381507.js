@@ -10,9 +10,9 @@ var i = n(780384),
     u = n(898969),
     d = n(703614),
     f = n(268685),
-    _ = n(388032),
-    p = n(908780);
-function h(e, t, n) {
+    p = n(388032),
+    _ = n(908780);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +25,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
@@ -48,20 +48,20 @@ let g = () => {
             size: f.EF.SIZE_32,
             animateOnHover: !0,
         }),
-        h = (0, o.Fg)(),
-        g = (0, i.ap)(h),
+        m = (0, o.Fg)(),
+        g = (0, i.ap)(m),
         E = l.ZP.getName(e),
         b = g ? u.Z : d.Z;
     return null == e
         ? null
         : (0, r.jsxs)("div", {
-              className: p.attributionBannerContainer,
+              className: _.attributionBannerContainer,
               children: [
                   (0, r.jsx)("div", {
-                      className: p.avatarContainer,
+                      className: _.avatarContainer,
                       children: (0, r.jsx)(
                           a.qEK,
-                          m(
+                          h(
                               {
                                   src: t,
                                   "aria-label": e.username,
@@ -73,10 +73,10 @@ let g = () => {
                   }),
                   (0, r.jsx)(a.Text, {
                       variant: "text-xs/bold",
-                      className: p.bannerHeader,
-                      children: _.intl.format(_.t.oxhCOl, { userName: E }),
+                      className: _.bannerHeader,
+                      children: p.intl.format(p.t.oxhCOl, { userName: E }),
                   }),
-                  (0, r.jsx)(b, { className: p.bannerIcon }),
+                  (0, r.jsx)(b, { className: _.bannerIcon }),
               ],
           });
 };

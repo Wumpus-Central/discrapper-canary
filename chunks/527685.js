@@ -15,17 +15,17 @@ var s = n(410030),
 let u = (e) => {
     var t;
     let { progress: n, minimum: a = 0, maximum: c = 100, variant: u, override: d, labelledBy: f } = e,
-        _ = null != d && "unset" === u,
-        p = (0, s.ZP)(),
-        h = null != (t = null == d ? void 0 : d[p]) ? t : null == d ? void 0 : d.default,
-        m = i.useMemo(() => ((n - a) / (c - a)) * 100, [n, a, c]),
+        p = null != d && "unset" === u,
+        _ = (0, s.ZP)(),
+        m = null != (t = null == d ? void 0 : d[_]) ? t : null == d ? void 0 : d.default,
+        h = i.useMemo(() => ((n - a) / (c - a)) * 100, [n, a, c]),
         g = n === a,
-        E = _
+        E = p
             ? {
-                  "--custom-background": null == h ? void 0 : h.background,
-                  "--custom-gradient-start": null == h ? void 0 : h.gradientStart,
-                  "--custom-gradient-end": null == h ? void 0 : h.gradientEnd,
-                  "--custom-gradient-glow": null == h ? void 0 : h.gradientEnd,
+                  "--custom-background": null == m ? void 0 : m.background,
+                  "--custom-gradient-start": null == m ? void 0 : m.gradientStart,
+                  "--custom-gradient-end": null == m ? void 0 : m.gradientEnd,
+                  "--custom-gradient-glow": null == m ? void 0 : m.gradientEnd,
               }
             : {};
     return (0, r.jsx)("div", {
@@ -33,7 +33,7 @@ let u = (e) => {
         style: E,
         children: (0, r.jsxs)("div", {
             className: o()(l.progress, { [l.empty]: g }),
-            style: { width: "".concat(m, "%") },
+            style: { width: "".concat(h, "%") },
             role: "meter",
             "aria-valuenow": n,
             "aria-valuemin": a,

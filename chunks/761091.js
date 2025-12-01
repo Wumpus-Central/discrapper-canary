@@ -9,8 +9,8 @@ var r = n(399606),
     u = n(460347),
     d = n(994592),
     f = n(265418),
-    p = n(398758),
-    h = n(755458),
+    h = n(398758),
+    p = n(755458),
     g = n(13439),
     m = n(639777),
     b = n(164670),
@@ -33,11 +33,11 @@ function j(e) {
         w = [],
         T = e.features.has(v.GuildFeatures.HUB),
         A = e.features.has(v.GuildFeatures.COMMUNITY),
-        R = (0, y.l)(!(0, p.r1)(e.id)),
+        R = (0, y.l)(!(0, h.r1)(e.id)),
         D = e.features.has(v.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY),
         L = (0, m.Z)(e.id);
     (0, g.e)(e.id, "useGuildActionRows", !0);
-    let M = (0, h.BU)(e.id, "useGuildActionRows"),
+    let M = (0, p.BU)(e.id, "useGuildActionRows"),
         k = e.features.has(v.GuildFeatures.GAME_SERVERS);
     return (
         T && w.push(O.z.GUILD_HUB_HEADER_OPTIONS),

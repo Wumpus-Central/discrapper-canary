@@ -1,4 +1,4 @@
-n.d(t, { Oi: () => h }), n(388685);
+n.d(t, { Oi: () => m }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(159691),
@@ -60,7 +60,7 @@ function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -68,7 +68,7 @@ function f(e, t) {
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -77,7 +77,7 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let p = {
+let _ = {
         balance: {
             label: "Balance",
             type: "number",
@@ -114,7 +114,7 @@ let p = {
             defaultValue: !1,
         },
     },
-    h = {
+    m = {
         title: "Balance Widget Pill",
         stories: [
             {
@@ -123,10 +123,10 @@ let p = {
                 component: (e) => {
                     var { loading: t, shouldUseTabularNums: n } = e,
                         l = f(e, ["loading", "shouldUseTabularNums"]);
-                    let [u, _] = (0, i.useState)(l.balance);
+                    let [u, p] = (0, i.useState)(l.balance);
                     return (
                         (0, i.useEffect)(() => {
-                            null == u && null != l.balance && _(l.balance);
+                            null == u && null != l.balance && p(l.balance);
                         }, [l.balance, u]),
                         (0, r.jsxs)("div", {
                             className: s.verticalContainer,
@@ -139,7 +139,7 @@ let p = {
                                     }),
                                 ),
                                 (0, r.jsx)(a.zxk, {
-                                    onClick: () => _(l.balance),
+                                    onClick: () => p(l.balance),
                                     text: "Update Balance",
                                 }),
                             ],
@@ -154,7 +154,7 @@ let p = {
                             defaultValue: !1,
                         },
                     },
-                    p,
+                    _,
                 ),
             },
             {
@@ -163,10 +163,10 @@ let p = {
                 component: (e) => {
                     var { loadingDuration: t, shouldUseTabularNums: n } = e,
                         l = f(e, ["loadingDuration", "shouldUseTabularNums"]);
-                    let [u, _] = (0, i.useState)(l.balance);
+                    let [u, p] = (0, i.useState)(l.balance);
                     return (
                         (0, i.useEffect)(() => {
-                            _(l.balance);
+                            p(l.balance);
                         }, [l.balance]),
                         (0, r.jsxs)("div", {
                             className: s.verticalContainer,
@@ -180,9 +180,9 @@ let p = {
                                 ),
                                 (0, r.jsx)(a.zxk, {
                                     onClick: () => {
-                                        _(null),
+                                        p(null),
                                             setTimeout(() => {
-                                                _(l.balance);
+                                                p(l.balance);
                                             }, t);
                                     },
                                     text: "Simulate Loading State",
@@ -199,7 +199,7 @@ let p = {
                             defaultValue: 500,
                         },
                     },
-                    p,
+                    _,
                 ),
             },
         ],

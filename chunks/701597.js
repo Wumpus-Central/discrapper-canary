@@ -265,10 +265,10 @@ class f {
         });
     }
     getGoliveLQQuality() {
-        var e, t, n, r, a, o, s, l, c, d, f, _;
-        let p = Math.min(i.ef, null != (s = null == (e = this.goliveMaxQuality.encode) ? void 0 : e.width) ? s : i.ef),
-            h = Math.min(i.ru, null != (l = null == (t = this.goliveMaxQuality.encode) ? void 0 : t.height) ? l : i.ru),
-            m = Math.min(
+        var e, t, n, r, a, o, s, l, c, d, f, p;
+        let _ = Math.min(i.ef, null != (s = null == (e = this.goliveMaxQuality.encode) ? void 0 : e.width) ? s : i.ef),
+            m = Math.min(i.ru, null != (l = null == (t = this.goliveMaxQuality.encode) ? void 0 : t.height) ? l : i.ru),
+            h = Math.min(
                 i.R$,
                 null != (c = null == (n = this.goliveMaxQuality.encode) ? void 0 : n.framerate) ? c : i.R$,
             ),
@@ -282,14 +282,14 @@ class f {
                 ),
                 framerate: Math.min(
                     i.R$,
-                    null != (_ = null == (o = this.goliveMaxQuality.capture) ? void 0 : o.framerate) ? _ : i.R$,
+                    null != (p = null == (o = this.goliveMaxQuality.capture) ? void 0 : o.framerate) ? p : i.R$,
                 ),
             },
             encode: {
-                width: p,
-                height: h,
-                framerate: m,
-                pixelCount: p * h,
+                width: _,
+                height: m,
+                framerate: h,
+                pixelCount: _ * m,
             },
             bitrateMin: i.UC,
             bitrateMax: this.goliveSimulcastLQBitrateMax,

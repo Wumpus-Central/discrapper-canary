@@ -50,35 +50,35 @@ var c = n(329554),
     u = n(613990),
     d = n(590297),
     f = n(410937),
-    _ = n(493807),
-    p = n(529742),
-    h = n(36706),
-    m = n(753294),
+    p = n(493807),
+    _ = n(529742),
+    m = n(36706),
+    h = n(753294),
     g = n(833866),
     E = n(384404),
     b = n(473749),
     y = n(1231),
     O = n(292489),
     v = n(169774),
-    I = n(606166),
-    T = n(703579),
-    S = n(797487),
+    S = n(606166),
+    I = n(703579),
+    T = n(797487),
     A = n(685536),
     C = n(40375),
     N = n(581079),
-    R = n(207303),
-    P = n(467159),
-    D = v.isBrowser("IE"),
-    w = !D,
-    L = {
-        edit: p,
+    P = n(207303),
+    R = n(467159),
+    w = v.isBrowser("IE"),
+    D = !w,
+    x = {
+        edit: _,
         composite: d,
-        drag: _,
+        drag: p,
         cut: null,
         render: null,
     },
-    x = !1,
-    M = (function (e) {
+    L = !1,
+    j = (function (e) {
         function t() {
             return e.apply(this, arguments) || this;
         }
@@ -101,7 +101,7 @@ var c = n(329554),
             t
         );
     })(b.Component),
-    k = (function (e) {
+    M = (function (e) {
         function t(t) {
             var n;
             return (
@@ -160,7 +160,7 @@ var c = n(329554),
                             o = e || A(a),
                             s = o.x,
                             l = o.y;
-                        R(i) || N(!1),
+                        P(i) || N(!1),
                             i.focus(),
                             a === window ? window.scrollTo(s, l) : y.setTop(a, l),
                             r || n.update(E.forceSelection(t, t.getSelection()));
@@ -168,18 +168,18 @@ var c = n(329554),
                 }),
                 s(o(n), "blur", function () {
                     var e = n.editor;
-                    e && (R(e) || N(!1), e.blur());
+                    e && (P(e) || N(!1), e.blur());
                 }),
                 s(o(n), "setMode", function (e) {
                     var t = n.props,
                         r = t.onPaste,
                         i = t.onCut,
                         o = t.onCopy,
-                        s = a({}, L.edit);
+                        s = a({}, x.edit);
                     r && (s.onPaste = r),
                         i && (s.onCut = i),
                         o && (s.onCopy = o),
-                        (n._handler = a({}, L, { edit: s })[e]);
+                        (n._handler = a({}, x, { edit: s })[e]);
                 }),
                 s(o(n), "exitCurrentMode", function () {
                     n.setMode("edit");
@@ -208,7 +208,7 @@ var c = n(329554),
                 (n._clipboard = null),
                 (n._handler = null),
                 (n._dragCount = 0),
-                (n._editorKey = t.editorKey || T()),
+                (n._editorKey = t.editorKey || I()),
                 (n._placeholderAccessibilityID = "placeholder-" + n._editorKey),
                 (n._latestEditorState = t.editorState),
                 (n._latestCommittedEditorState = t.editorState),
@@ -248,8 +248,8 @@ var c = n(329554),
                     if (!t.props.readOnly) {
                         var r = t._handler && t._handler[e];
                         r &&
-                            (h
-                                ? h(function () {
+                            (m
+                                ? m(function () {
                                       return r(t, n);
                                   })
                                 : r(t, n));
@@ -266,12 +266,12 @@ var c = n(329554),
             (r._renderPlaceholder = function () {
                 if (this._showPlaceholder()) {
                     var e = {
-                        text: P(this.props.placeholder),
+                        text: R(this.props.placeholder),
                         editorState: this.props.editorState,
                         textAlignment: this.props.textAlignment,
                         accessibilityID: this._placeholderAccessibilityID,
                     };
-                    return b.createElement(m, e);
+                    return b.createElement(h, e);
                 }
                 return null;
             }),
@@ -285,15 +285,15 @@ var c = n(329554),
                     l = e.editorState,
                     c = e.preventScroll,
                     d = e.readOnly,
-                    _ = e.textAlignment,
-                    p = e.textDirectionality,
-                    h = I({
+                    p = e.textAlignment,
+                    _ = e.textDirectionality,
+                    m = S({
                         "DraftEditor/root": !0,
-                        "DraftEditor/alignLeft": "left" === _,
-                        "DraftEditor/alignRight": "right" === _,
-                        "DraftEditor/alignCenter": "center" === _,
+                        "DraftEditor/alignLeft": "left" === p,
+                        "DraftEditor/alignRight": "right" === p,
+                        "DraftEditor/alignCenter": "center" === p,
                     }),
-                    m = {
+                    h = {
                         outline: "none",
                         userSelect: "text",
                         WebkitUserSelect: "text",
@@ -311,16 +311,16 @@ var c = n(329554),
                         editorKey: this._editorKey,
                         editorState: l,
                         preventScroll: c,
-                        textDirectionality: p,
+                        textDirectionality: _,
                     };
                 return b.createElement(
                     "div",
-                    { className: h },
+                    { className: m },
                     this._renderPlaceholder(),
                     b.createElement(
                         "div",
                         {
-                            className: I("DraftEditor/editorContainer"),
+                            className: S("DraftEditor/editorContainer"),
                             ref: this._handleEditorContainerRef,
                         },
                         b.createElement(
@@ -338,7 +338,7 @@ var c = n(329554),
                                 autoCapitalize: this.props.autoCapitalize,
                                 autoComplete: this.props.autoComplete,
                                 autoCorrect: this.props.autoCorrect,
-                                className: I({
+                                className: S({
                                     notranslate: !d,
                                     "public/DraftEditor/content": !0,
                                 }),
@@ -366,12 +366,12 @@ var c = n(329554),
                                 onSelect: this._onSelect,
                                 ref: this.props.editorRef,
                                 role: d ? null : g,
-                                spellCheck: w && this.props.spellCheck,
-                                style: m,
+                                spellCheck: D && this.props.spellCheck,
+                                style: h,
                                 suppressContentEditableWarning: !0,
                                 tabIndex: this.props.tabIndex,
                             },
-                            b.createElement(M, {
+                            b.createElement(j, {
                                 editor: this,
                                 editorState: l,
                             }),
@@ -382,9 +382,9 @@ var c = n(329554),
             }),
             (r.componentDidMount = function () {
                 (this._blockSelectEvents = !1),
-                    !x && C("draft_ods_enabled") && ((x = !0), g.initODS()),
+                    !L && C("draft_ods_enabled") && ((L = !0), g.initODS()),
                     this.setMode("edit"),
-                    D &&
+                    w &&
                         (this.editor
                             ? this.editor.ownerDocument.execCommand("AutoUrlDetect", !1, !1)
                             : n.g.execCommand("AutoUrlDetect", !1, !1));
@@ -397,7 +397,7 @@ var c = n(329554),
             t
         );
     })(b.Component);
-s(k, "defaultProps", {
+s(M, "defaultProps", {
     blockRenderMap: c,
     blockRendererFn: function () {
         return null;
@@ -405,9 +405,9 @@ s(k, "defaultProps", {
     blockStyleFn: function () {
         return "";
     },
-    keyBindingFn: S,
+    keyBindingFn: T,
     readOnly: !1,
     spellCheck: !1,
     stripPastedStyles: !1,
 }),
-    (e.exports = k);
+    (e.exports = M);

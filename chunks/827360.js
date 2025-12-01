@@ -7,7 +7,7 @@ var r = n(54381),
     o = n(335131),
     c = n(215023),
     u = n(388032),
-    d = n(595619);
+    d = n(768232);
 let p = (e) => {
     let { targetElementRef: t, onRequestClose: n, onClick: p } = e,
         { analyticsLocations: f } = (0, s.ZP)(a.Z.HOME_PAGE_SHOP_TAB),

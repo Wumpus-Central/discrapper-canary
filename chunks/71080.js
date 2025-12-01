@@ -1,6 +1,6 @@
 n.d(t, {
     EQ: () => d,
-    IG: () => _,
+    IG: () => p,
     aC: () => c,
     kf: () => f,
     m$: () => u,
@@ -34,7 +34,7 @@ var r = n(197062),
     })({});
 let d = 20,
     f = "channelPermissionSettingsAdvancedModeOn";
-function _(e, t, c) {
+function p(e, t, c) {
     let u = e.type;
     return {
         [s.Plq.VIEW_CHANNEL.toString()]: {

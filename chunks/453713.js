@@ -11,8 +11,8 @@ var r = t(54381),
     v = t(28664),
     p = t(481060),
     f = t(209613),
-    b = t(429368),
-    g = t(724994),
+    g = t(429368),
+    b = t(724994),
     m = t(388032),
     h = t(270132);
 function x(e) {
@@ -97,13 +97,13 @@ let O = s()((e) => {
                 onLeave: f,
                 minimal: P,
             } = e,
-            { isPurchased: C } = (0, g.L)(t),
+            { isPurchased: C } = (0, b.L)(t),
             S = (0, c.JA)("shop-variants-group-".concat(n.storeListingId, "-").concat(i)),
             { onFocus: N } = S,
             I = y(S, ["onFocus"]),
             _ = l.useCallback(
                 (e) => {
-                    e.preventDefault(), e.stopPropagation(), (0, b.$)(n, i), N();
+                    e.preventDefault(), e.stopPropagation(), (0, g.$)(n, i), N();
                 },
                 [N, n, i],
             );
@@ -162,11 +162,11 @@ let O = s()((e) => {
                 setIsHoveringOnSwitch: s,
                 minimal: d,
                 selectedVariantIndex: v,
-                alternativeBackgroundColor: b,
+                alternativeBackgroundColor: g,
             } = e,
-            g = o.previewingVariantIndex,
+            b = o.previewingVariantIndex,
             O = null == (n = l.variants) ? void 0 : n[v],
-            C = null !== g ? (null == (t = l.variants) ? void 0 : t[g]) : void 0,
+            C = null !== b ? (null == (t = l.variants) ? void 0 : t[b]) : void 0,
             S = (0, f.Z)("shop-variants-group-".concat(l.storeListingId), u.hy.HORIZONTAL);
         if (null == O) return null;
         let N = null != C ? C.variantLabel : null == O ? void 0 : O.variantLabel;
@@ -182,7 +182,7 @@ let O = s()((e) => {
                         j(x({ ref: t }, c), {
                             className: a()(h.variantsPanel, i, {
                                 [h.minimalState]: d,
-                                [h.alternativeColor]: b,
+                                [h.alternativeColor]: g,
                             }),
                             onMouseEnter: () => (null == s ? void 0 : s(!0)),
                             onMouseLeave: () => (null == s ? void 0 : s(!1)),

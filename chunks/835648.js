@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => k });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,19 +9,19 @@ var r = n(54381),
     u = n(481060),
     d = n(880949),
     f = n(806966),
-    _ = n(254494),
-    p = n(648307),
-    h = n(594174),
-    m = n(626135),
+    p = n(254494),
+    _ = n(648307),
+    m = n(594174),
+    h = n(626135),
     g = n(74538),
     E = n(697426),
     b = n(526617),
     y = n(981631),
     O = n(957825),
     v = n(474936),
-    I = n(388032),
-    T = n(422840);
-function S(e, t, n) {
+    S = n(388032),
+    I = n(422840);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function A(e) {
                 }),
             )),
             r.forEach(function (t) {
-                S(e, t, n[t]);
+                T(e, t, n[t]);
             });
     }
     return e;
@@ -73,11 +73,11 @@ function N(e, t) {
         e
     );
 }
-function R(e, t) {
+function P(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = P(e, t);
+        i = R(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -85,7 +85,7 @@ function R(e, t) {
     }
     return i;
 }
-function P(e, t) {
+function R(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -94,28 +94,28 @@ function P(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let D = [8, 8, 8, 8],
-    w = 40;
-function L(e) {
+let w = [8, 8, 8, 8],
+    D = 40;
+function x(e) {
     var { icon: t, isSelected: n, onClick: i, listItemProps: a } = e,
-        s = R(e, ["icon", "isSelected", "onClick", "listItemProps"]);
+        s = P(e, ["icon", "isSelected", "onClick", "listItemProps"]);
     return (0, r.jsx)(
         u.P3F,
         N(A({}, a, s), {
             onClick: i,
-            className: o()(T.categoryIcon, { [T.selected]: n }),
+            className: o()(I.categoryIcon, { [I.selected]: n }),
             children: (0, r.jsx)(t, {
-                className: T.categoryIconIcon,
+                className: I.categoryIconIcon,
                 color: "currentColor",
             }),
         }),
     );
 }
-function x(e, t, n, i, a) {
+function L(e, t, n, i, a) {
     switch (e.categoryInfo.type) {
         case E.bg.FAVORITES:
             return (0, r.jsx)(
-                L,
+                x,
                 {
                     icon: u.r7p,
                     onClick: t,
@@ -126,7 +126,7 @@ function x(e, t, n, i, a) {
             );
         case E.bg.RECENTLY_HEARD:
             return (0, r.jsx)(
-                L,
+                x,
                 {
                     icon: u.T39,
                     onClick: t,
@@ -137,7 +137,7 @@ function x(e, t, n, i, a) {
             );
         case E.bg.FREQUENTLY_USED:
             return (0, r.jsx)(
-                L,
+                x,
                 {
                     icon: u.IeX,
                     onClick: t,
@@ -150,7 +150,7 @@ function x(e, t, n, i, a) {
             return (0, r.jsx)(
                 u.P3F,
                 N(A({}, i), {
-                    className: T.category,
+                    className: I.category,
                     onClick: t,
                     children: (0, r.jsx)(d.Z, {
                         guild: e.categoryInfo.guild,
@@ -162,7 +162,7 @@ function x(e, t, n, i, a) {
             );
         case E.bg.DEFAULTS:
             return (0, r.jsx)(
-                L,
+                x,
                 {
                     icon: u.gw7,
                     onClick: t,
@@ -175,52 +175,52 @@ function x(e, t, n, i, a) {
             return null;
     }
 }
-function M(e) {
+function j(e) {
     switch (e.categoryInfo.type) {
         case E.bg.FAVORITES:
-            return I.intl.string(I.t.k8fFjp);
+            return S.intl.string(S.t.k8fFjp);
         case E.bg.RECENTLY_HEARD:
-            return I.intl.string(I.t["8i/+SA"]);
+            return S.intl.string(S.t["8i/+SA"]);
         case E.bg.FREQUENTLY_USED:
-            return I.intl.string(I.t["+cGVV6"]);
+            return S.intl.string(S.t["+cGVV6"]);
         case E.bg.GUILD:
             return e.categoryInfo.guild.name;
         case E.bg.DEFAULTS:
-            return I.intl.string(I.t.Rtvk9X);
+            return S.intl.string(S.t.Rtvk9X);
     }
 }
-function k(e) {
+function M(e) {
     let { category: t, categoryIndex: n, onClick: i, isSelected: a, isNitroLocked: o } = e,
         l = (0, s.JA)("soundboard_guild_".concat(n));
     return t.categoryInfo.type === E.bg.GUILD
-        ? (0, r.jsx)(p.V, {
+        ? (0, r.jsx)(_.V, {
               guild: t.categoryInfo.guild,
-              children: x(t, i, a, l, o),
+              children: L(t, i, a, l, o),
           })
         : (0, r.jsx)(c.u, {
-              text: M(t),
+              text: j(t),
               position: "right",
               align: "center",
-              children: x(t, i, a, l, o),
+              children: L(t, i, a, l, o),
           });
 }
-function j(e) {
+function k(e) {
     let {
             soundboardListRef: t,
             categories: n,
             shouldUpsellLockedCategories: a,
-            listPadding: o = D,
+            listPadding: o = w,
             guildId: s,
             inExpressionPicker: c,
         } = e,
         u = i.useRef(null),
-        d = (0, l.e7)([h.default], () => h.default.getCurrentUser()),
-        p = (0, g.I5)(d, v.PremiumTypes.TIER_2),
+        d = (0, l.e7)([m.default], () => m.default.getCurrentUser()),
+        _ = (0, g.I5)(d, v.PremiumTypes.TIER_2),
         E = i.useCallback(
             (e, t, n, i) => {
-                let o = a && (0, b.O)(e.categoryInfo, p, s),
+                let o = a && (0, b.O)(e.categoryInfo, _, s),
                     l = () => {
-                        m.default.track(y.rMx.EXPRESSION_PICKER_CATEGORY_SELECTED, {
+                        h.default.track(y.rMx.EXPRESSION_PICKER_CATEGORY_SELECTED, {
                             location: { page: y.ZY5.SOUNDBOARD_POPOUT },
                             guild_id: null != s ? s : null,
                             num_expressions: e.items.length,
@@ -230,7 +230,7 @@ function j(e) {
                         }),
                             n();
                     };
-                return (0, r.jsx)(k, {
+                return (0, r.jsx)(M, {
                     category: e,
                     categoryIndex: t,
                     onClick: l,
@@ -238,10 +238,10 @@ function j(e) {
                     isNitroLocked: o,
                 });
             },
-            [s, a, p],
+            [s, a, _],
         );
-    return (0, r.jsx)(_.Z, {
-        className: c ? T.expressionPickerCategoryList : T.categoryList,
+    return (0, r.jsx)(p.Z, {
+        className: c ? I.expressionPickerCategoryList : I.categoryList,
         categoryListRef: u,
         expressionsListRef: t,
         store: f.Wq,
@@ -249,6 +249,6 @@ function j(e) {
         listPadding: o,
         renderCategoryListItem: E,
         rowCount: n.length,
-        categoryHeight: w,
+        categoryHeight: D,
     });
 }

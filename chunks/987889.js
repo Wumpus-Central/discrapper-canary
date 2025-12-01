@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(45114),
     u = n(110255),
     d = n(268623),
-    p = n(324701),
+    f = n(324701),
     h = n(768943),
-    f = n(64247),
+    p = n(64247),
     g = n(804932),
     m = n(370774),
     b = n(993609),
@@ -43,7 +43,7 @@ function j(e) {
     }
     return e;
 }
-function C(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,7 +61,7 @@ function C(e, t) {
         e
     );
 }
-let x = {
+let C = {
     [_.ln.MENTION]: [_.r0.SETTINGS],
     [_.ln.REPLY]: [_.r0.SETTINGS],
     [_.ln.REACTION]: [_.r0.SETTINGS],
@@ -71,7 +71,7 @@ let x = {
 function E(e) {
     let { label: t, onClick: n, message: l, Icon: s, interactionType: c } = e,
         [u, d] = (0, i.useState)(!1),
-        p = (0, g.fJ)();
+        f = (0, g.fJ)();
     return (0, r.jsx)(o.u, {
         text: t,
         position: "top",
@@ -85,7 +85,7 @@ function E(e) {
                 (0, g.Qz)({
                     message: l,
                     interactionType: c,
-                    viewId: p,
+                    viewId: f,
                 }),
                     e.stopPropagation(),
                     n(l);
@@ -99,11 +99,11 @@ function E(e) {
 }
 function S(e) {
     let { channel: t, message: n, label: l, Icon: s, Menu: c, interactionType: u, actionType: d } = e,
-        p = (0, g.fJ)(),
-        [h, f] = (0, i.useState)(!1),
+        f = (0, g.fJ)(),
+        [h, p] = (0, i.useState)(!1),
         [m, _] = (0, i.useState)(!1),
         y = (0, i.useRef)(null),
-        { openMenu: O, closeMenu: x } = (0, b.z)();
+        { openMenu: O, closeMenu: C } = (0, b.z)();
     return (0, r.jsx)(a.yRy, {
         shouldShow: m,
         animation: a.yRy.Animation.NONE,
@@ -112,7 +112,7 @@ function S(e) {
         autoInvert: !1,
         targetElementRef: y,
         onRequestClose: () => {
-            _(!1), x(n.id, d);
+            _(!1), C(n.id, d);
         },
         renderPopout: (e) =>
             (0, r.jsx)(a.VqE, {
@@ -130,8 +130,8 @@ function S(e) {
                 position: "top",
                 spacing: 4,
                 asContainer: !0,
-                onTooltipShow: () => f(!0),
-                onTooltipHide: () => f(!1),
+                onTooltipShow: () => p(!0),
+                onTooltipHide: () => p(!1),
                 children: (0, r.jsx)(a.P3F, {
                     innerRef: y,
                     className: v.action,
@@ -139,15 +139,15 @@ function S(e) {
                         (0, g.Qz)({
                             message: n,
                             interactionType: u,
-                            viewId: p,
+                            viewId: f,
                         }),
                             e.stopPropagation();
                         let t = !m;
-                        _(t), t ? O(n.id, d) : x(n.id, d);
+                        _(t), t ? O(n.id, d) : C(n.id, d);
                     },
                     children: (0, r.jsx)(
                         s,
-                        C(j({}, e), {
+                        x(j({}, e), {
                             message: n,
                             "aria-label": l,
                             className: v.actionIcon,
@@ -199,7 +199,7 @@ let I = {
                 });
             return (0, r.jsxs)(
                 a.v2r,
-                C(j({}, n), {
+                x(j({}, n), {
                     navId: "message-reminder-create",
                     "aria-label": O.intl.string(O.t.mJ3P0N),
                     onClose: n.closePopout,
@@ -211,7 +211,7 @@ let I = {
                                   label: O.intl.string(O.t.SvXS1Z),
                                   icon: a.plf,
                                   action: () =>
-                                      (0, p.x)({
+                                      (0, f.x)({
                                           channelId: t.channel_id,
                                           messageId: t.id,
                                           dueAt: i.saveData.dueAt,
@@ -223,7 +223,7 @@ let I = {
                                   label: O.intl.string(O.t["9p3D9p"]),
                                   icon: a.gt9,
                                   action: () =>
-                                      (0, p.z)({
+                                      (0, f.z)({
                                           channelId: t.channel_id,
                                           messageId: t.id,
                                           displayToast: !0,
@@ -245,8 +245,8 @@ let I = {
             let { channel: t, renderPopoutProps: n } = e;
             return t.isThread()
                 ? (0, r.jsx)(
-                      f.Z,
-                      C(j({}, n), {
+                      p.Z,
+                      x(j({}, n), {
                           channel: t,
                           navId: "thread-context",
                           label: O.intl.string(O.t["1NBjqb"]),
@@ -254,7 +254,7 @@ let I = {
                   )
                 : (0, r.jsx)(
                       u.Z,
-                      C(j({}, n), {
+                      x(j({}, n), {
                           channel: t,
                           navId: "channel-context",
                           label: O.intl.string(O.t.Xm41aV),
@@ -270,7 +270,7 @@ function P(e) {
             return (0, i.useMemo)(() => {
                 let e = _.ln.MENTION,
                     r = new Set();
-                return t && r.add(_.r0.ACK), n && r.add(_.r0.BOOKMARK), x[e].forEach((e) => r.add(e)), Array.from(r);
+                return t && r.add(_.r0.ACK), n && r.add(_.r0.BOOKMARK), C[e].forEach((e) => r.add(e)), Array.from(r);
             }, [e, t, n]);
         })(t, l);
     return (0, r.jsx)(a.Kqy, {
@@ -285,7 +285,7 @@ function P(e) {
                 case "standard":
                     return (0, r.jsx)(
                         E,
-                        C(j({}, i), {
+                        x(j({}, i), {
                             actionType: e,
                             message: t,
                         }),
@@ -294,7 +294,7 @@ function P(e) {
                 case "menu":
                     return (0, r.jsx)(
                         S,
-                        C(j({}, i), {
+                        x(j({}, i), {
                             actionType: e,
                             channel: n,
                             message: t,

@@ -8,15 +8,15 @@ var r = n(50153),
     u = n(985407),
     d = n(581079),
     f = n(470780),
-    _ = n(652092),
-    p = n(348568),
-    h = n(20271),
-    m = l.OrderedSet,
+    p = n(652092),
+    _ = n(348568),
+    m = n(20271),
+    h = l.OrderedSet,
     g = {
         replaceText: function (e, t, n, i, a) {
-            var o = p(_(e, t), t),
+            var o = _(p(e, t), t),
                 s = r.create({
-                    style: i || m(),
+                    style: i || h(),
                     entity: a || null,
                 });
             return u(o, o.getSelectionAfter(), n, s);
@@ -31,7 +31,7 @@ var r = n(50153),
         },
         replaceWithFragment: function (e, t, n) {
             var r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "REPLACE_WITH_NEW_DATA",
-                i = p(_(e, t), t);
+                i = _(p(e, t), t);
             return c(i, i.getSelectionAfter(), n, r);
         },
         removeRange: function (e, t, n) {
@@ -56,13 +56,13 @@ var r = n(50153),
                 d = s.getEntityAt(c - 1);
             if (r === i && u && u === d) {
                 var f = o(e.getEntityMap(), a, s, t, n);
-                return p(e, f);
+                return _(e, f);
             }
-            return p(_(e, t), t);
+            return _(p(e, t), t);
         },
         splitBlock: function (e, t) {
-            var n = p(_(e, t), t);
-            return h(n, n.getSelectionAfter());
+            var n = _(p(e, t), t);
+            return m(n, n.getSelectionAfter());
         },
         applyInlineStyle: function (e, t, n) {
             return i.add(e, t, n);
@@ -89,7 +89,7 @@ var r = n(50153),
             });
         },
         applyEntity: function (e, t, n) {
-            return a(_(e, t), t, n);
+            return a(p(e, t), t, n);
         },
     };
 e.exports = g;

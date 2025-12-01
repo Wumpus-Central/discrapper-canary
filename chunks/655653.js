@@ -69,8 +69,8 @@ e.exports = function (e) {
             begin: t.optional(i) + e.IDENT_RE,
             relevance: 0,
         },
-        _ = t.optional(i) + e.IDENT_RE + "\\s*\\(",
-        p = {
+        p = t.optional(i) + e.IDENT_RE + "\\s*\\(",
+        _ = {
             keyword: [
                 "asm",
                 "auto",
@@ -151,8 +151,8 @@ e.exports = function (e) {
             built_in:
                 "std string wstring cin cout cerr clog stdin stdout stderr stringstream istringstream ostringstream auto_ptr deque list queue stack vector map set pair bitset multiset multimap unordered_set unordered_map unordered_multiset unordered_multimap priority_queue make_pair array shared_ptr abort terminate abs acos asin atan2 atan calloc ceil cosh cos exit exp fabs floor fmod fprintf fputs free frexp fscanf future isalnum isalpha iscntrl isdigit isgraph islower isprint ispunct isspace isupper isxdigit tolower toupper labs ldexp log10 log malloc realloc memchr memcmp memcpy memset modf pow printf putchar puts scanf sinh sin snprintf sprintf sqrt sscanf strcat strchr strcmp strcpy strcspn strlen strncat strncmp strncpy strpbrk strrchr strspn strstr tanh tan vfprintf vprintf vsprintf endl initializer_list unique_ptr",
         },
-        h = [d, s, n, e.C_BLOCK_COMMENT_MODE, u, c],
-        m = {
+        m = [d, s, n, e.C_BLOCK_COMMENT_MODE, u, c],
+        h = {
             variants: [
                 {
                     begin: /=/,
@@ -167,33 +167,33 @@ e.exports = function (e) {
                     end: /;/,
                 },
             ],
-            keywords: p,
-            contains: h.concat([
+            keywords: _,
+            contains: m.concat([
                 {
                     begin: /\(/,
                     end: /\)/,
-                    keywords: p,
-                    contains: h.concat(["self"]),
+                    keywords: _,
+                    contains: m.concat(["self"]),
                     relevance: 0,
                 },
             ]),
             relevance: 0,
         },
         g = {
-            begin: "(" + o + "[\\*&\\s]+)+" + _,
+            begin: "(" + o + "[\\*&\\s]+)+" + p,
             returnBegin: !0,
             end: /[{;=]/,
             excludeEnd: !0,
-            keywords: p,
+            keywords: _,
             illegal: /[^\w\s\*&:<>.]/,
             contains: [
                 {
                     begin: r,
-                    keywords: p,
+                    keywords: _,
                     relevance: 0,
                 },
                 {
-                    begin: _,
+                    begin: p,
                     returnBegin: !0,
                     contains: [e.inherit(f, { className: "title.function" })],
                     relevance: 0,
@@ -206,7 +206,7 @@ e.exports = function (e) {
                     className: "params",
                     begin: /\(/,
                     end: /\)/,
-                    keywords: p,
+                    keywords: _,
                     relevance: 0,
                     contains: [
                         n,
@@ -217,7 +217,7 @@ e.exports = function (e) {
                         {
                             begin: /\(/,
                             end: /\)/,
-                            keywords: p,
+                            keywords: _,
                             relevance: 0,
                             contains: ["self", n, e.C_BLOCK_COMMENT_MODE, c, u, s],
                         },
@@ -232,14 +232,14 @@ e.exports = function (e) {
     return {
         name: "C",
         aliases: ["h"],
-        keywords: p,
+        keywords: _,
         disableAutodetect: !0,
         illegal: "</",
-        contains: [].concat(m, g, h, [
+        contains: [].concat(h, g, m, [
             d,
             {
                 begin: e.IDENT_RE + "::",
-                keywords: p,
+                keywords: _,
             },
             {
                 className: "class",
@@ -251,7 +251,7 @@ e.exports = function (e) {
         exports: {
             preprocessor: d,
             strings: c,
-            keywords: p,
+            keywords: _,
         },
     };
 };

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(481060),
     d = n(583901),
     f = n(997945),
-    _ = n(630117),
-    p = n(441319),
-    h = n(981631),
-    m = n(388032),
+    p = n(630117),
+    _ = n(441319),
+    m = n(981631),
+    h = n(388032),
     g = n(63224);
 function E(e, t, n) {
     return (
@@ -67,42 +67,42 @@ function O(e, t) {
     );
 }
 let v = () => [
-        m.intl.string(m.t["EgWTY+"]),
-        m.intl.string(m.t.umBn5f),
-        m.intl.string(m.t.dG1wD1),
-        m.intl.string(m.t.SesI4S),
-        m.intl.string(m.t.RnMLvl),
+        h.intl.string(h.t["EgWTY+"]),
+        h.intl.string(h.t.umBn5f),
+        h.intl.string(h.t.dG1wD1),
+        h.intl.string(h.t.SesI4S),
+        h.intl.string(h.t.RnMLvl),
     ],
-    I = () => {
+    S = () => {
         var e;
-        return null != (e = l().sample(v())) ? e : m.intl.string(m.t["EgWTY+"]);
+        return null != (e = l().sample(v())) ? e : h.intl.string(h.t["EgWTY+"]);
     };
-function T(e) {
-    let { id: t, className: n, onSelect: a, isSelected: s = !1, tabIndex: l, children: _, locked: m = !1 } = e,
-        [E, y] = i.useState((0, p.aW)(t).name),
+function I(e) {
+    let { id: t, className: n, onSelect: a, isSelected: s = !1, tabIndex: l, children: p, locked: h = !1 } = e,
+        [E, y] = i.useState((0, _.aW)(t).name),
         v = t === f.Ru.PIRATE,
-        T = (0, c.jm)({
+        I = (0, c.jm)({
             label: E,
             isSelected: s,
         });
     return (0, r.jsx)(u.aML, {
         text: E,
-        onTooltipShow: () => v && y(I()),
+        onTooltipShow: () => v && y(S()),
         children: (e) =>
             (0, r.jsxs)("div", {
                 className: g.appIconSelectionContainer,
                 children: [
                     (0, r.jsx)(
                         u.P3F,
-                        O(b({}, e, T), {
-                            tabIndex: null != l ? l : T.tabIndex,
+                        O(b({}, e, I), {
+                            tabIndex: null != l ? l : I.tabIndex,
                             className: o()(g.appIconSelection, { [g.selected]: s }, n),
-                            onClick: s ? h.dG4 : () => (null == a ? void 0 : a(t)),
-                            children: _,
+                            onClick: s ? m.dG4 : () => (null == a ? void 0 : a(t)),
+                            children: p,
                         }),
                     ),
                     s && (0, r.jsx)(d.oK, {}),
-                    m &&
+                    h &&
                         (0, r.jsx)("div", {
                             className: g.lockedBadgeContainer,
                             children: (0, r.jsx)(u.mBM, {
@@ -114,18 +114,18 @@ function T(e) {
             }),
     });
 }
-function S(e) {
+function T(e) {
     let { icon: t, isSelected: n, disabled: i, tabIndex: a, onSelect: o, locked: s } = e;
-    return (0, r.jsx)(T, {
+    return (0, r.jsx)(I, {
         onSelect: i ? void 0 : o,
         isSelected: n,
         id: t.id,
         className: i ? g.disabled : void 0,
         tabIndex: a,
         locked: s,
-        children: (0, r.jsx)(_.Z, {
+        children: (0, r.jsx)(p.Z, {
             id: t.id,
-            width: p.M9,
+            width: _.M9,
         }),
     });
 }

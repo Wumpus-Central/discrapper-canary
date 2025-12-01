@@ -9,12 +9,12 @@ var r = n(544891),
     u = n(70956),
     d = n(981631);
 let f = 10 * u.Z.Millis.MINUTE,
-    _ = 10 * u.Z.Millis.MINUTE,
-    p = +u.Z.Millis.MINUTE,
-    h = {};
-function m(e, t) {
-    null == h[t] && (h[t] = new a.V7()),
-        h[t].start(f + Math.random() * _, () => {
+    p = 10 * u.Z.Millis.MINUTE,
+    _ = +u.Z.Millis.MINUTE,
+    m = {};
+function h(e, t) {
+    null == m[t] && (m[t] = new a.V7()),
+        m[t].start(f + Math.random() * p, () => {
             null != l.Z.getLibraryApplication(e, t) && g(e, t);
         });
 }
@@ -28,7 +28,7 @@ async function g(e, t) {
             branchId: t,
             locale: a,
         }),
-        n && (await (0, i._v)(Math.random() * p)),
+        n && (await (0, i._v)(Math.random() * _)),
         r.tn
             .get({
                 url: d.ANM.APPLICATION_LIVE_BUILD(e, t),
@@ -64,7 +64,7 @@ async function g(e, t) {
                               applicationId: e,
                               branchId: t,
                           })
-                        : m(e, t);
+                        : h(e, t);
                 },
             )
     );

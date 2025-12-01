@@ -12,7 +12,7 @@ var a,
     p = n(981631),
     h = n(388032),
     x = n(222198);
-function g(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +25,7 @@ function g(e, t, n) {
         e
     );
 }
-let f = u.Z.getArticleURL(p.BhN.VERIFICATION_FAQ);
+let g = u.Z.getArticleURL(p.BhN.VERIFICATION_FAQ);
 class b extends (a = i.PureComponent) {
     renderFields() {
         let { types: e, captchaKey: t, theme: n, onCaptchaVerify: a } = this.props;
@@ -87,7 +87,7 @@ class b extends (a = i.PureComponent) {
                                         }),
                                         (0, l.jsx)(c.Text, {
                                             variant: "text-md/normal",
-                                            children: h.intl.format(h.t["0rqMV5"], { helpCenterURL: f }),
+                                            children: h.intl.format(h.t["0rqMV5"], { helpCenterURL: g }),
                                         }),
                                     ],
                                 }),
@@ -142,13 +142,13 @@ class b extends (a = i.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            g(this, "handleClick", (e) => {
+            f(this, "handleClick", (e) => {
                 let { onClick: t } = this.props;
                 null == t || t(e);
             });
     }
 }
-g(b, "defaultProps", {
+f(b, "defaultProps", {
     types: [p.PUi.CAPTCHA],
     onCaptchaVerify: p.dG4,
     onLogout: p.dG4,

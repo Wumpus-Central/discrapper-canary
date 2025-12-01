@@ -22,7 +22,7 @@ function u(e) {
                     },
                     children: (0, r.jsx)(d, { className: l()(c.lineShort, c.loadingAnimation) }),
                 }),
-            Array.from({ length: n }).map((e, t) => (0, r.jsx)(p, {}, t)),
+            Array.from({ length: n }).map((e, t) => (0, r.jsx)(f, {}, t)),
         ],
     });
 }
@@ -30,7 +30,7 @@ function d(e) {
     let { className: t } = e;
     return (0, r.jsx)("div", { className: l()(c.line, t) });
 }
-function p() {
+function f() {
     let e = (0, a.e7)([s.Z], () => s.Z.useReducedMotion);
     return (0, r.jsxs)("div", {
         style: {

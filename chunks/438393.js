@@ -8,7 +8,7 @@ let s = 96;
 function l(e) {
     let { benefits: t, description: n, imgSrc: l, title: c, tag: u, FallbackIcon: d } = e,
         f = null != l ? { "--custom-background-url": "url(".concat(l.toString(), ")") } : void 0,
-        _ = null != n && "" !== n;
+        p = null != n && "" !== n;
     return (0, r.jsxs)("div", {
         className: o.container,
         children: [
@@ -48,7 +48,7 @@ function l(e) {
                                 variant: "heading-xl/semibold",
                                 children: c,
                             }),
-                            _ &&
+                            p &&
                                 (0, r.jsx)(a.xvT, {
                                     color: "text-default",
                                     variant: "text-md/normal",

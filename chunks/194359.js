@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685), n(35282);
+n.d(t, { Z: () => T }), n(388685), n(35282);
 var r = n(544891),
     i = n(780384),
     a = n(570140),
@@ -9,10 +9,10 @@ var r = n(544891),
     u = n(397550),
     d = n(594174),
     f = n(657682),
-    _ = n(51144),
-    p = n(668781),
-    h = n(239091),
-    m = n(981631),
+    p = n(51144),
+    _ = n(668781),
+    m = n(239091),
+    h = n(981631),
     g = n(858380),
     E = n(388032);
 function b(e, t, n) {
@@ -45,12 +45,12 @@ function y(e) {
     return e;
 }
 function O(e) {
-    (0, h.Zy)(), p.Z.show(e);
+    (0, m.Zy)(), _.Z.show(e);
 }
 function v() {
-    (0, h.Zy)(), (0, l.default)();
+    (0, m.Zy)(), (0, l.default)();
 }
-function I(e, t, n) {
+function S(e, t, n) {
     let { status: r, body: i } = e,
         a = i && i.code;
     switch (r) {
@@ -63,7 +63,7 @@ function I(e, t, n) {
                 });
             break;
         case 403:
-            if (a === m.evJ.EMAIL_VERIFICATION_REQUIRED) {
+            if (a === h.evJ.EMAIL_VERIFICATION_REQUIRED) {
                 O({
                     title: E.intl.string(E.t.Gqf33E),
                     body: E.intl.string(E.t.GHOBdx),
@@ -75,9 +75,9 @@ function I(e, t, n) {
                 break;
             }
         default:
-            if (a === m.evJ.USER_QUARANTINED) v();
+            if (a === h.evJ.USER_QUARANTINED) v();
             else if ((0, u.b)(r, a)) break;
-            else if (a === m.evJ.RELATIONSHIP_INVALID_NO_CONFIRMATION) break;
+            else if (a === h.evJ.RELATIONSHIP_INVALID_NO_CONFIRMATION) break;
             else if (0 === t) {
                 let e = null != n ? (0, f.NF)(a || 0, n) : E.intl.string(E.t.paDJBM);
                 O({
@@ -89,13 +89,13 @@ function I(e, t, n) {
     }
     throw e;
 }
-let T = {
+let I = {
         sendRequest(e) {
             let { discordTag: t, context: n, captchaPayload: i, errorUxConfig: a = 0 } = e,
                 [o, s] = t.split("#");
             return r.tn
                 .post({
-                    url: m.ANM.USER_RELATIONSHIPS(),
+                    url: h.ANM.USER_RELATIONSHIPS(),
                     body: y(
                         {
                             username: o,
@@ -108,7 +108,7 @@ let T = {
                     rejectWithError: !1,
                 })
                 .catch((e) => {
-                    I(e, a, t);
+                    S(e, a, t);
                 });
         },
         addRelationship(e, t) {
@@ -124,7 +124,7 @@ let T = {
                 u = d.default.getUser(n);
             return r.tn
                 .put({
-                    url: m.ANM.USER_RELATIONSHIP(n),
+                    url: h.ANM.USER_RELATIONSHIP(n),
                     body: y(
                         {
                             type: a,
@@ -140,35 +140,35 @@ let T = {
                 .then(() => {
                     null == t || t();
                 })
-                .catch((e) => (I(e, c, _.ZP.getUserTag(u)), Promise.reject(e)));
+                .catch((e) => (S(e, c, p.ZP.getUserTag(u)), Promise.reject(e)));
         },
         acceptFriendRequest(e) {
             function t() {
                 i.uv.announce(E.intl.string(E.t["3goNa5"]));
             }
-            return T.addRelationship(e, t);
+            return I.addRelationship(e, t);
         },
         cancelFriendRequest(e, t) {
             function n() {
                 i.uv.announce(E.intl.string(E.t.pLUaxR));
             }
-            return T.removeRelationship(e, t, n);
+            return I.removeRelationship(e, t, n);
         },
         removeFriend(e, t) {
             function n() {
                 i.uv.announce(E.intl.string(E.t.vGSLa2));
             }
-            T.removeRelationship(e, t, n);
+            I.removeRelationship(e, t, n);
         },
         blockUser(e, t) {
             function n() {
                 i.uv.announce(E.intl.string(E.t.mU0Vrp));
             }
-            return T.addRelationship(
+            return I.addRelationship(
                 {
                     userId: e,
                     context: t,
-                    type: m.OGo.BLOCKED,
+                    type: h.OGo.BLOCKED,
                 },
                 n,
             );
@@ -177,12 +177,12 @@ let T = {
             function n() {
                 i.uv.announce(E.intl.string(E.t["9t1au7"]));
             }
-            return T.removeRelationship(e, t, n);
+            return I.removeRelationship(e, t, n);
         },
         removeRelationship: (e, t, n) =>
             r.tn
                 .del({
-                    url: m.ANM.USER_RELATIONSHIP(e),
+                    url: h.ANM.USER_RELATIONSHIP(e),
                     context: t,
                     oldFormErrors: !0,
                     rejectWithError: !1,
@@ -195,14 +195,14 @@ let T = {
                 }),
         updateRelationship: (e, t) =>
             r.tn.patch({
-                url: m.ANM.USER_RELATIONSHIP(e),
+                url: h.ANM.USER_RELATIONSHIP(e),
                 body: { nickname: t },
                 rejectWithError: !1,
             }),
         fetchRelationships() {
             r.tn
                 .get({
-                    url: m.ANM.USER_RELATIONSHIPS(),
+                    url: h.ANM.USER_RELATIONSHIPS(),
                     oldFormErrors: !0,
                     rejectWithError: !0,
                 })
@@ -221,8 +221,8 @@ let T = {
         clearPendingRelationships: () =>
             r.tn
                 .del({
-                    url: m.ANM.USER_RELATIONSHIPS(),
-                    query: { relationship_type: m.OGo.PENDING_INCOMING },
+                    url: h.ANM.USER_RELATIONSHIPS(),
+                    query: { relationship_type: h.OGo.PENDING_INCOMING },
                     rejectWithError: !1,
                 })
                 .then(() => {
@@ -234,8 +234,8 @@ let T = {
         clearPendingSpamAndIgnored: () =>
             r.tn
                 .del({
-                    url: m.ANM.USER_RELATIONSHIPS(),
-                    query: { relationship_type: m.OGo.PENDING_INCOMING },
+                    url: h.ANM.USER_RELATIONSHIPS(),
+                    query: { relationship_type: h.OGo.PENDING_INCOMING },
                     body: {
                         filters: [g.G.SPAM, g.G.IGNORED],
                     },
@@ -250,7 +250,7 @@ let T = {
         ignoreUser: (e, t, n) =>
             r.tn
                 .put({
-                    url: m.ANM.IGNORE_USER(e),
+                    url: h.ANM.IGNORE_USER(e),
                     context: { location: t },
                     rejectWithError: !1,
                 })
@@ -269,7 +269,7 @@ let T = {
         unignoreUser: (e, t, n) =>
             r.tn
                 .del({
-                    url: m.ANM.IGNORE_USER(e),
+                    url: h.ANM.IGNORE_USER(e),
                     context: { location: t },
                     rejectWithError: !1,
                 })
@@ -280,4 +280,4 @@ let T = {
                     c.Z.showFailedToast(), i.uv.announce(E.intl.string(E.t.n6Jo3E));
                 }),
     },
-    S = T;
+    T = I;

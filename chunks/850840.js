@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => h }), n(539854);
+n.d(t, { Z: () => m }), n(539854);
 var i,
     a = n(442837),
     o = n(570140);
@@ -62,12 +62,12 @@ let d = {
 function f() {
     r.hasAcceptedStoreTerms = !0;
 }
-function _(e) {
+function p(e) {
     let { eulaId: t } = e;
     if (r.hasAcceptedEulaIds.includes(t)) return !1;
     r.hasAcceptedEulaIds.push(t);
 }
-class p extends (i = a.ZP.PersistedStore) {
+class _ extends (i = a.ZP.PersistedStore) {
     initialize(e) {
         r = null != e ? e : d;
     }
@@ -81,10 +81,10 @@ class p extends (i = a.ZP.PersistedStore) {
         return r.hasAcceptedEulaIds.includes(e);
     }
 }
-s(p, "displayName", "ApplicationStoreUserSettingsStore"),
-    s(p, "persistKey", "ApplicationStoreUserSettingsStore"),
-    s(p, "migrations", [(e) => (null == e.hasAcceptedEulaIds ? u(l({}, e), { hasAcceptedEulaIds: [] }) : e)]);
-let h = new p(o.Z, {
+s(_, "displayName", "ApplicationStoreUserSettingsStore"),
+    s(_, "persistKey", "ApplicationStoreUserSettingsStore"),
+    s(_, "migrations", [(e) => (null == e.hasAcceptedEulaIds ? u(l({}, e), { hasAcceptedEulaIds: [] }) : e)]);
+let m = new _(o.Z, {
     APPLICATION_STORE_ACCEPT_STORE_TERMS: f,
-    APPLICATION_STORE_ACCEPT_EULA: _,
+    APPLICATION_STORE_ACCEPT_EULA: p,
 });

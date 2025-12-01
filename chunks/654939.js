@@ -9,7 +9,7 @@ var r = n(54381),
     u = n(474936),
     d = n(921944),
     f = n(388032);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,12 +33,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,12 +50,12 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -65,29 +65,29 @@ let g = (e) => {
     let {
             badgeId: t = u.VU.PREMIUM_TENURE_1_MONTH,
             markAsDismissed: n,
-            children: _,
-            mode: h = "popover",
+            children: p,
+            mode: m = "popover",
             tooltipDelay: g = 300,
             targetElementRef: E,
             body: b,
             progressCircleText: y,
             progressCirclePercent: O,
             progressCircleUrgency: v,
-            actions: I,
-            onShow: T,
-            estimatedTooltipHeight: S = 300,
+            actions: S,
+            onShow: I,
+            estimatedTooltipHeight: T = 300,
         } = e,
         A = u.vK[t].nameUnformatted,
         C = (f.intl.string(f.t.lG6a5x) + " " + f.intl.string(A)).toLocaleUpperCase(),
         N = (0, o.Z)(t),
-        R = (0, s.J)(t);
+        P = (0, s.J)(t);
     (0, i.useEffect)(() => {
-        a.a[a.DynamicGraphicComponent.BADGE_IMAGE_WITH_PROGRESS_CIRCLE](), (new Image().src = R);
-    }, [R]);
-    let P = (0, i.useCallback)(() => {
+        a.a[a.DynamicGraphicComponent.BADGE_IMAGE_WITH_PROGRESS_CIRCLE](), (new Image().src = P);
+    }, [P]);
+    let R = (0, i.useCallback)(() => {
             null == n || n(d.L.USER_DISMISS);
         }, [n]),
-        D = {
+        w = {
             gradientColor: N,
             size: "lg",
             graphic: {
@@ -95,7 +95,7 @@ let g = (e) => {
                 component: a.DynamicGraphicComponent.BADGE_IMAGE_WITH_PROGRESS_CIRCLE,
                 aspectRatio: "6/4",
                 props: {
-                    src: R,
+                    src: P,
                     alt: C,
                     progressCircleText: y,
                     progressCirclePercent: O,
@@ -104,39 +104,39 @@ let g = (e) => {
             },
             title: C,
             body: b,
-            actions: I,
+            actions: S,
         };
-    return "tooltip" === h
+    return "tooltip" === m
         ? (0, r.jsx)(
               c.Z,
-              m(
-                  p(
+              h(
+                  _(
                       {
                           targetElementRef: E,
-                          estimatedTooltipHeight: S,
+                          estimatedTooltipHeight: T,
                           delay: g,
-                          onShow: T,
+                          onShow: I,
                       },
-                      D,
+                      w,
                   ),
-                  { children: _ },
+                  { children: p },
               ),
           )
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  _,
+                  p,
                   (0, r.jsx)(
                       l.Z,
-                      p(
+                      _(
                           {
                               targetElementRef: E,
                               shouldShow: !0,
-                              onRequestClose: P,
+                              onRequestClose: R,
                               align: "right",
                               position: "top",
                               caretConfig: { align: "center" },
                           },
-                          D,
+                          w,
                       ),
                   ),
               ],

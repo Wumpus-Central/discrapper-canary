@@ -10,20 +10,20 @@ var i = n(835473),
     u = n(186880);
 function d(e) {
     var t;
-    let { applicationId: n, onMouseDown: d, onMouseMove: f, onMouseLeave: _, onFocus: p, idle: h } = e,
-        m = (0, i.q)(n);
+    let { applicationId: n, onMouseDown: d, onMouseMove: f, onMouseLeave: p, onFocus: _, idle: m } = e,
+        h = (0, i.q)(n);
     return (0, r.jsxs)("div", {
         className: u.videoControls,
         onMouseMove: f,
         onMouseDown: d,
-        onMouseLeave: _,
+        onMouseLeave: p,
         children: [
             (0, r.jsx)("div", {
                 className: u.topControls,
                 children: (0, r.jsx)(s.r, {
-                    idle: h,
-                    title: null != (t = null == m ? void 0 : m.name) ? t : "",
-                    onJumpToChannel: p,
+                    idle: m,
+                    title: null != (t = null == h ? void 0 : h.name) ? t : "",
+                    onJumpToChannel: _,
                     preventIdleComponent: o.Z,
                 }),
             }),

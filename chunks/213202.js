@@ -1,212 +1,212 @@
-n.d(t, { default: () => H });
-var i = n(54381);
-n(473749);
-var r = n(442837),
-    l = n(481060),
-    a = n(239091),
-    o = n(883385),
-    c = n(108843),
-    s = n(947440),
-    u = n(100527),
-    d = n(299206),
-    Z = n(916069),
-    f = n(895563),
-    g = n(212205),
-    h = n(478035),
-    b = n(62420),
-    j = n(420529),
-    v = n(554747),
-    p = n(924952),
-    O = n(423589),
-    y = n(427679),
-    x = n(398048),
-    S = n(109764),
-    P = n(3689),
-    C = n(323597),
-    E = n(852245),
-    m = n(493802),
-    N = n(367722),
-    k = n(461535),
-    _ = n(776568),
-    w = n(218035),
-    T = n(775666),
-    L = n(442754),
-    Q = n(333805),
-    V = n(567521),
-    A = n(624514),
-    G = n(917327),
-    I = n(381924),
-    M = n(601274),
-    D = n(981631),
-    R = n(388032);
-function U(e) {
+e.d(t, { default: () => Y });
+var i = e(54381);
+e(473749);
+var l = e(442837),
+    r = e(481060),
+    a = e(239091),
+    c = e(883385),
+    s = e(108843),
+    o = e(947440),
+    d = e(100527),
+    u = e(299206),
+    Z = e(916069),
+    h = e(895563),
+    g = e(212205),
+    f = e(478035),
+    v = e(62420),
+    j = e(420529),
+    b = e(554747),
+    x = e(924952),
+    p = e(423589),
+    C = e(427679),
+    S = e(398048),
+    y = e(109764),
+    N = e(3689),
+    P = e(323597),
+    k = e(852245),
+    E = e(493802),
+    O = e(367722),
+    m = e(461535),
+    _ = e(776568),
+    L = e(218035),
+    Q = e(775666),
+    G = e(442754),
+    V = e(333805),
+    A = e(567521),
+    T = e(624514),
+    w = e(917327),
+    M = e(381924),
+    I = e(601274),
+    q = e(981631),
+    X = e(388032);
+function D(n) {
     for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+        var e = null != arguments[t] ? arguments[t] : {},
+            i = Object.keys(e);
         "function" == typeof Object.getOwnPropertySymbols &&
             (i = i.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                Object.getOwnPropertySymbols(e).filter(function (n) {
+                    return Object.getOwnPropertyDescriptor(e, n).enumerable;
                 }),
             )),
             i.forEach(function (t) {
                 var i;
-                (i = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
+                (i = e[t]),
+                    t in n
+                        ? Object.defineProperty(n, t, {
                               value: i,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[t] = i);
+                        : (n[t] = i);
             });
     }
-    return e;
+    return n;
 }
-function X(e) {
-    let { channel: t, guild: n, onSelect: o } = e,
-        c = t.isGuildStageVoice(),
-        u = (0, r.e7)([y.Z], () => (c ? y.Z.getStageInstanceByChannel(t.id) : void 0), [c, t.id]),
-        Z = (0, S.Z)(t),
-        j = (0, v.qY)(t.id),
-        x = (0, p.Z)(null == j ? void 0 : j.id, n, t),
-        P = (0, V.Z)(t, u),
-        C = (0, f.l)(t),
-        N = (0, f.P)(t),
-        k = (0, g.Z)(t),
-        _ = (0, h.Z)(t),
-        L = (0, b.Z)(t),
-        G = (0, m.Z)(t),
-        I = (0, w.Z)(t),
-        D = (0, E.Z)(t),
-        U = (0, M.Z)(t, n),
-        X = (0, d.Z)({
+function U(n) {
+    let { channel: t, guild: e, onSelect: c } = n,
+        s = t.isGuildStageVoice(),
+        d = (0, l.e7)([C.Z], () => (s ? C.Z.getStageInstanceByChannel(t.id) : void 0), [s, t.id]),
+        Z = (0, y.Z)(t),
+        j = (0, b.qY)(t.id),
+        S = (0, x.Z)(null == j ? void 0 : j.id, e, t),
+        N = (0, A.Z)(t, d),
+        P = (0, h.l)(t),
+        O = (0, h.P)(t),
+        m = (0, g.Z)(t),
+        _ = (0, f.Z)(t),
+        G = (0, v.Z)(t),
+        w = (0, E.Z)(t),
+        M = (0, L.Z)(t),
+        q = (0, k.Z)(t),
+        D = (0, I.Z)(t, e),
+        U = (0, u.Z)({
             id: t.id,
-            label: R.intl.string(R.t.gFHI3k),
+            label: X.intl.string(X.t.gFHI3k),
         }),
-        q = (0, Q.Z)(t),
-        H = (0, s.Z)(t),
-        Y = (0, O.Mn)("ChannelListVoiceContextMenuFavorite"),
-        F = (0, T.ZP)(t),
-        z = (0, A.Z)();
-    return (0, i.jsxs)(l.v2r, {
+        H = (0, V.Z)(t),
+        Y = (0, o.Z)(t),
+        z = (0, p.Mn)("ChannelListVoiceContextMenuFavorite"),
+        R = (0, Q.ZP)(t),
+        W = (0, T.Z)();
+    return (0, i.jsxs)(r.v2r, {
         navId: "channel-context",
         onClose: a.Zy,
-        "aria-label": R.intl.string(R.t.Xm41aV),
-        onSelect: o,
+        "aria-label": X.intl.string(X.t.Xm41aV),
+        onSelect: c,
         children: [
-            (0, i.jsx)(l.kSQ, { children: null != j ? x : P }),
-            (0, i.jsxs)(l.kSQ, {
-                children: [_, L, k, C],
+            (0, i.jsx)(r.kSQ, { children: null != j ? S : N }),
+            (0, i.jsxs)(r.kSQ, {
+                children: [_, G, m, P],
             }),
-            (0, i.jsxs)(l.kSQ, {
-                children: [G, Y ? F : I, D],
+            (0, i.jsxs)(r.kSQ, {
+                children: [w, z ? R : M, q],
             }),
-            (0, i.jsx)(l.kSQ, { children: H }),
-            (0, i.jsx)(l.kSQ, { children: N }),
-            (0, i.jsxs)(l.kSQ, {
-                children: [U, Z],
+            (0, i.jsx)(r.kSQ, { children: Y }),
+            (0, i.jsx)(r.kSQ, { children: O }),
+            (0, i.jsxs)(r.kSQ, {
+                children: [D, Z],
             }),
-            (0, i.jsx)(l.kSQ, { children: q }),
-            (0, i.jsxs)(l.kSQ, {
-                children: [X, z],
+            (0, i.jsx)(r.kSQ, { children: H }),
+            (0, i.jsxs)(r.kSQ, {
+                children: [U, W],
             }),
         ],
     });
 }
-function q(e) {
-    let { channel: t, guild: n, onSelect: o } = e,
-        c = t.isGuildStageVoice(),
-        u = (0, r.e7)([y.Z], () => (c ? y.Z.getStageInstanceByChannel(t.id) : void 0), [c, t.id]),
-        Z = (0, k.Z)(t),
-        g = (0, S.Z)(t),
-        h = (0, v.qY)(t.id),
-        b = (0, p.Z)(null == h ? void 0 : h.id, n, t),
-        D = (0, V.Z)(t, u),
-        U = (0, f.l)(t),
-        X = (0, f.P)(t),
-        q = (0, m.Z)(t),
-        H = (0, w.Z)(t),
-        Y = (0, E.Z)(t),
-        F = (0, N.Z)(t, n, u),
-        z = (0, M.Z)(t, n),
-        W = (0, G.Z)(t, n),
-        B = (0, I.Z)(t, n.id),
-        J = (0, x.Z)(t, n),
-        K = (0, P.Z)(t, n),
-        $ = (0, C.Z)(t),
-        ee = (0, d.Z)({
+function H(n) {
+    let { channel: t, guild: e, onSelect: c } = n,
+        s = t.isGuildStageVoice(),
+        d = (0, l.e7)([C.Z], () => (s ? C.Z.getStageInstanceByChannel(t.id) : void 0), [s, t.id]),
+        Z = (0, m.Z)(t),
+        g = (0, y.Z)(t),
+        f = (0, b.qY)(t.id),
+        v = (0, x.Z)(null == f ? void 0 : f.id, e, t),
+        q = (0, A.Z)(t, d),
+        D = (0, h.l)(t),
+        U = (0, h.P)(t),
+        H = (0, E.Z)(t),
+        Y = (0, L.Z)(t),
+        z = (0, k.Z)(t),
+        R = (0, O.Z)(t, e, d),
+        W = (0, I.Z)(t, e),
+        B = (0, w.Z)(t, e),
+        F = (0, M.Z)(t, e.id),
+        J = (0, S.Z)(t, e),
+        K = (0, N.Z)(t, e),
+        $ = (0, P.Z)(t),
+        nn = (0, u.Z)({
             id: t.id,
-            label: R.intl.string(R.t.gFHI3k),
+            label: X.intl.string(X.t.gFHI3k),
         }),
-        et = (0, Q.Z)(t),
-        en = (0, s.Z)(t),
-        ei = (0, L.Z)(t),
-        er = (0, j.Z)(t),
-        el = (0, _.ZP)(t),
-        ea = (0, O.Mn)("ChannelListVoiceContextMenuNormal"),
-        eo = (0, T.ZP)(t),
-        ec = (0, A.Z)();
-    return (0, i.jsxs)(l.v2r, {
+        nt = (0, V.Z)(t),
+        ne = (0, o.Z)(t),
+        ni = (0, G.Z)(t),
+        nl = (0, j.Z)(t),
+        nr = (0, _.ZP)(t),
+        na = (0, p.Mn)("ChannelListVoiceContextMenuNormal"),
+        nc = (0, Q.ZP)(t),
+        ns = (0, T.Z)();
+    return (0, i.jsxs)(r.v2r, {
         navId: "channel-context",
         onClose: a.Zy,
-        "aria-label": R.intl.string(R.t.Xm41aV),
-        onSelect: o,
+        "aria-label": X.intl.string(X.t.Xm41aV),
+        onSelect: c,
         children: [
-            (0, i.jsx)(l.kSQ, { children: null != h ? b : D }),
+            (0, i.jsx)(r.kSQ, { children: null != f ? v : q }),
             (0, i.jsxs)(
-                l.kSQ,
+                r.kSQ,
                 {
-                    children: [Z, U],
+                    children: [Z, D],
                 },
                 "mark-as-read-or-favorite",
             ),
             (0, i.jsxs)(
-                l.kSQ,
+                r.kSQ,
                 {
-                    children: [F, en, ei, g],
+                    children: [R, ne, ni, g],
                 },
                 "channel-actions",
             ),
             (0, i.jsxs)(
-                l.kSQ,
+                r.kSQ,
                 {
-                    children: [B, z, W, q, er, et],
+                    children: [F, W, B, H, nl, nt],
                 },
                 "voice-actions",
             ),
             (0, i.jsxs)(
-                l.kSQ,
+                r.kSQ,
                 {
-                    children: [el, ea ? eo : H],
+                    children: [nr, na ? nc : Y],
                 },
                 "notifications",
             ),
-            (0, i.jsx)(l.kSQ, { children: X }),
+            (0, i.jsx)(r.kSQ, { children: U }),
             (0, i.jsxs)(
-                l.kSQ,
+                r.kSQ,
                 {
-                    children: [Y, J, K, $],
+                    children: [z, J, K, $],
                 },
                 "admin-actions",
             ),
             (0, i.jsxs)(
-                l.kSQ,
+                r.kSQ,
                 {
-                    children: [ee, ec],
+                    children: [nn, ns],
                 },
                 "developer-actions",
             ),
         ],
     });
 }
-let H = (0, c.Z)(
-    (0, o.Z)(
-        function (e) {
-            return (0, Z.Z)() ? (0, i.jsx)(X, U({}, e)) : (0, i.jsx)(q, U({}, e));
+let Y = (0, s.Z)(
+    (0, c.Z)(
+        function (n) {
+            return (0, Z.Z)() ? (0, i.jsx)(U, D({}, n)) : (0, i.jsx)(H, D({}, n));
         },
-        { object: D.qAy.CONTEXT_MENU },
+        { object: q.qAy.CONTEXT_MENU },
     ),
-    [u.Z.CONTEXT_MENU, u.Z.CHANNEL_LIST_VOICE_CHANNEL_MENU],
+    [d.Z.CONTEXT_MENU, d.Z.CHANNEL_LIST_VOICE_CHANNEL_MENU],
 );

@@ -36,15 +36,15 @@ n(72322);
 var u = n(365702),
     d = n(281509),
     f = n(62105),
-    _ = n(504117),
-    p = n(703579),
-    h = n(40375),
-    m = n(65183),
+    p = n(504117),
+    _ = n(703579),
+    m = n(40375),
+    h = n(65183),
     g = n(581079),
-    E = h("draft_tree_data_support"),
-    b = m.List,
-    y = m.Map,
-    O = m.OrderedMap,
+    E = m("draft_tree_data_support"),
+    b = h.List,
+    y = h.Map,
+    O = h.OrderedMap,
     v = function (e, t) {
         var n = e.key,
             r = e.type,
@@ -53,18 +53,18 @@ var u = n(365702),
             text: e.text,
             depth: e.depth || 0,
             type: r || "unstyled",
-            key: n || p(),
+            key: n || _(),
             data: y(i),
-            characterList: I(e, t),
+            characterList: S(e, t),
         };
     },
-    I = function (e, t) {
+    S = function (e, t) {
         var n = e.text,
             i = e.entityRanges,
             a = e.inlineStyleRanges,
             o = i || [];
         return d(
-            _(n, a || []),
+            p(n, a || []),
             f(
                 n,
                 o
@@ -77,19 +77,19 @@ var u = n(365702),
             ),
         );
     },
-    T = function (e) {
-        return r({}, e, { key: e.key || p() });
+    I = function (e) {
+        return r({}, e, { key: e.key || _() });
     },
-    S = function (e, t, n) {
+    T = function (e, t, n) {
         var i = t.map(function (e) {
             return r({}, e, { parentRef: n });
         });
         return e.concat(i.reverse());
     },
     A = function (e, t) {
-        return e.map(T).reduce(function (n, i, a) {
+        return e.map(I).reduce(function (n, i, a) {
             Array.isArray(i.children) || g(!1);
-            var s = i.children.map(T),
+            var s = i.children.map(I),
                 l = new o(
                     r({}, v(i, t), {
                         prevSibling: 0 === a ? null : e[a - 1].key,
@@ -102,30 +102,30 @@ var u = n(365702),
                     }),
                 );
             n = n.set(l.getKey(), l);
-            for (var c = S([], s, l); c.length > 0; ) {
+            for (var c = T([], s, l); c.length > 0; ) {
                 var u = c.pop(),
                     d = u.parentRef,
                     f = d.getChildKeys(),
-                    _ = f.indexOf(u.key),
-                    p = Array.isArray(u.children);
-                if (!p) {
-                    p || g(!1);
+                    p = f.indexOf(u.key),
+                    _ = Array.isArray(u.children);
+                if (!_) {
+                    _ || g(!1);
                     break;
                 }
-                var h = u.children.map(T),
-                    m = new o(
+                var m = u.children.map(I),
+                    h = new o(
                         r({}, v(u, t), {
                             parent: d.getKey(),
                             children: b(
-                                h.map(function (e) {
+                                m.map(function (e) {
                                     return e.key;
                                 }),
                             ),
-                            prevSibling: 0 === _ ? null : f.get(_ - 1),
-                            nextSibling: _ === f.size - 1 ? null : f.get(_ + 1),
+                            prevSibling: 0 === p ? null : f.get(p - 1),
+                            nextSibling: p === f.size - 1 ? null : f.get(p + 1),
                         }),
                     );
-                (n = n.set(m.getKey(), m)), (c = S(c, h, m));
+                (n = n.set(h.getKey(), h)), (c = T(c, m, h));
             }
             return n;
         }, O());
@@ -145,7 +145,7 @@ var u = n(365702),
             r = E && !n ? c.fromRawStateToRawTreeState(e).blocks : e.blocks;
         return E ? A(r, t) : C(n ? c.fromRawTreeStateToRawState(e).blocks : r, t);
     },
-    R = function (e) {
+    P = function (e) {
         var t = e.entityMap,
             n = {};
         return (
@@ -161,7 +161,7 @@ var u = n(365702),
     };
 e.exports = function (e) {
     Array.isArray(e.blocks) || g(!1);
-    var t = R(e),
+    var t = P(e),
         n = N(e, t),
         r = n.isEmpty() ? new u() : u.createEmpty(n.first().getKey());
     return new s({

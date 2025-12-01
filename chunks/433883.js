@@ -1,4 +1,4 @@
-n.d(t, { E: () => p });
+n.d(t, { E: () => _ });
 var r = n(450109),
     i = n(131951),
     a = n(19780),
@@ -36,32 +36,32 @@ function u(e) {
 }
 let d = 30,
     f = 10 * o.Z.Millis.SECOND,
-    _ = 30,
-    p = {
+    p = 30,
+    _ = {
         getActiveErrors: () => {
-            var e, t, n, o, c, p;
+            var e, t, n, o, c, _;
             if (
                 (null != (c = null == (e = a.Z.getRTCConnection()) ? void 0 : e.getDurationSeconds()) ? c : 0) < d ||
                 performance.now() - i.Z.getLastAudioInputDeviceChangeTimestamp() < f
             )
                 return;
-            let h =
+            let m =
                 null !=
-                (p =
+                (_ =
                     null ==
                         (n = r.Z.getConnectionStats(
                             null == (o = a.Z.getRTCConnection()) ? void 0 : o.getMediaEngineConnectionId(),
                         )) || null == (t = n.stats.rtp.outbound.find((e) => "audio" === e.type))
                         ? void 0
                         : t.sampleRateMismatchPercent)
-                    ? p
+                    ? _
                     : 0;
-            if (Math.abs(h) > _)
+            if (Math.abs(m) > p)
                 return [
                     u(
                         {
                             type: s.u.AUDIO_CAPTURE_SAMPLE_RATE_MISMATCH,
-                            audioCaptureSampleRateMismatchPercent: h,
+                            audioCaptureSampleRateMismatchPercent: m,
                         },
                         (0, l.Y9)(),
                     ),

@@ -8,9 +8,9 @@ var r = n(127849),
     u = n(511696),
     d = n(287353),
     f = i && i.prototype,
-    _ = l("species"),
-    p = !1,
-    h = a(r.PromiseRejectionEvent);
+    p = l("species"),
+    _ = !1,
+    m = a(r.PromiseRejectionEvent);
 e.exports = {
     CONSTRUCTOR: o("Promise", function () {
         var e = s(i),
@@ -26,10 +26,10 @@ e.exports = {
                         function () {},
                     );
                 };
-            if ((((n.constructor = {})[_] = r), !(p = n.then(function () {}) instanceof r))) return !0;
+            if ((((n.constructor = {})[p] = r), !(_ = n.then(function () {}) instanceof r))) return !0;
         }
-        return !t && ("BROWSER" === c || "DENO" === c) && !h;
+        return !t && ("BROWSER" === c || "DENO" === c) && !m;
     }),
-    REJECTION_EVENT: h,
-    SUBCLASSING: p,
+    REJECTION_EVENT: m,
+    SUBCLASSING: _,
 };

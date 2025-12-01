@@ -56,7 +56,7 @@ class i {
         return { renderer: t.renderer || e.renderer };
     }
     *getFullNode(e, t, n, i) {
-        var l, c, u, d, f, _, p, h;
+        var l, c, u, d, f, p, _, m;
         if (r.isValidElement(e.element) && e.element.type === r.Fragment) {
             let a = [];
             r.Children.forEach(e.element.props.children, (e) => {
@@ -75,30 +75,30 @@ class i {
                 );
             return;
         }
-        let m = e.element;
-        if (!m && e.value && t && t.renderer) {
+        let h = e.element;
+        if (!h && e.value && t && t.renderer) {
             let n = this.cache.get(e.value);
             if (n && (!n.shouldInvalidate || !n.shouldInvalidate(this.context))) {
                 (n.index = e.index), (n.parentKey = i ? i.key : null), yield n;
                 return;
             }
-            m = t.renderer(e.value);
+            h = t.renderer(e.value);
         }
-        if (r.isValidElement(m)) {
-            let r = m.type;
+        if (r.isValidElement(h)) {
+            let r = h.type;
             if ("function" != typeof r && "function" != typeof r.getCollectionNode) {
-                let e = m.type;
+                let e = h.type;
                 throw Error(`Unknown element <${e}> in collection.`);
             }
-            let a = r.getCollectionNode(m.props, this.context),
+            let a = r.getCollectionNode(h.props, this.context),
                 l = null != (c = e.index) ? c : 0,
-                p = a.next();
-            for (; !p.done && p.value; ) {
-                let r = p.value;
+                _ = a.next();
+            for (; !_.done && _.value; ) {
+                let r = _.value;
                 e.index = l;
                 let c = null != (u = r.key) ? u : null;
-                null == c && (c = r.element ? null : this.getKey(m, e, t, n));
-                let h = [
+                null == c && (c = r.element ? null : this.getKey(h, e, t, n));
+                let m = [
                     ...this.getFullNode(
                         {
                             ...r,
@@ -107,22 +107,22 @@ class i {
                             wrapper: o(e.wrapper, r.wrapper),
                         },
                         this.getChildState(t, r),
-                        n ? `${n}${m.key}` : m.key,
+                        n ? `${n}${h.key}` : h.key,
                         i,
                     ),
                 ];
-                for (let t of h) {
+                for (let t of m) {
                     if (
                         ((t.value = null != (f = null != (d = r.value) ? d : e.value) ? f : null),
                         t.value && this.cache.set(t.value, t),
                         e.type && t.type !== e.type)
                     )
                         throw Error(
-                            `Unsupported type <${s(t.type)}> in <${s(null != (_ = null == i ? void 0 : i.type) ? _ : "unknown parent type")}>. Only <${s(e.type)}> is supported.`,
+                            `Unsupported type <${s(t.type)}> in <${s(null != (p = null == i ? void 0 : i.type) ? p : "unknown parent type")}>. Only <${s(e.type)}> is supported.`,
                         );
                     l++, yield t;
                 }
-                p = a.next(h);
+                _ = a.next(m);
             }
             return;
         }
@@ -133,11 +133,11 @@ class i {
                 props: e.props,
                 key: e.key,
                 parentKey: i ? i.key : null,
-                value: null != (p = e.value) ? p : null,
+                value: null != (_ = e.value) ? _ : null,
                 level: i ? i.level + 1 : 0,
                 index: e.index,
                 rendered: e.rendered,
-                textValue: null != (h = e.textValue) ? h : "",
+                textValue: null != (m = e.textValue) ? m : "",
                 "aria-label": e["aria-label"],
                 wrapper: e.wrapper,
                 shouldInvalidate: e.shouldInvalidate,

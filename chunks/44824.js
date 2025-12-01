@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(853839), n(570086), n(479048);
+n.d(t, { Z: () => h }), n(853839), n(570086), n(479048);
 var r = n(54381),
     i = n(473749),
     a = n(70097),
@@ -57,11 +57,11 @@ function f(e, t) {
         e
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -69,7 +69,7 @@ function _(e, t) {
     }
     return i;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,7 +78,7 @@ function p(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function h(e) {
+function m(e) {
     let {
             poster: t,
             src: n,
@@ -88,12 +88,12 @@ function h(e) {
             naturalHeight: u,
             play: d = !0,
             className: f,
-            alt: _,
-            responsive: p,
+            alt: p,
+            responsive: _,
         } = e,
-        h = i.useRef(null);
+        m = i.useRef(null);
     return (i.useEffect(() => {
-        let { current: e } = h;
+        let { current: e } = m;
         if (d) {
             var t;
             null == e ||
@@ -105,19 +105,19 @@ function h(e) {
     }, [d]),
     (c <= s.N_j && u <= s.XKF) || (c <= s.XKF && u <= s.N_j))
         ? (0, r.jsx)(a.Z, {
-              ref: h,
+              ref: m,
               className: f,
               poster: t,
               src: n,
               width: o,
               height: l,
-              responsive: p,
+              responsive: _,
               muted: !0,
               loop: !0,
               autoPlay: d,
               playsInline: !0,
               preload: "none",
-              "aria-label": _,
+              "aria-label": p,
           })
         : (0, r.jsx)("img", {
               alt: "",
@@ -126,7 +126,7 @@ function h(e) {
               height: l,
           });
 }
-function m(e) {
+function h(e) {
     var {
             src: t,
             poster: n,
@@ -135,12 +135,12 @@ function m(e) {
             responsive: s,
             autoPlay: c,
             className: d,
-            playable: p = !0,
-            renderImageComponent: m,
+            playable: _ = !0,
+            renderImageComponent: h,
             alt: g = l.intl.string(l.t.I5gL2H),
             sourceMetadata: E,
         } = e,
-        b = _(e, [
+        b = p(e, [
             "src",
             "poster",
             "naturalWidth",
@@ -155,20 +155,20 @@ function m(e) {
         ]);
     return (0, r.jsx)(o.h.Consumer, {
         children: (e) =>
-            m(
+            h(
                 f(u({}, b), {
                     alt: g,
                     src: n,
                     containerClassName: d,
                     autoPlay: c,
-                    animated: p,
+                    animated: _,
                     responsive: s,
                     renderAccessory: e,
-                    tabIndex: p ? 0 : -1,
+                    tabIndex: _ ? 0 : -1,
                     dataSafeSrc: t,
                     children(e) {
                         let { src: n, size: o, animating: l, alt: c } = e;
-                        return (0, r.jsx)(h, {
+                        return (0, r.jsx)(m, {
                             alt: c,
                             className: d,
                             poster: n,
@@ -178,7 +178,7 @@ function m(e) {
                             naturalWidth: i,
                             naturalHeight: a,
                             responsive: s,
-                            play: p && l,
+                            play: _ && l,
                         });
                     },
                     sourceMetadata: E,

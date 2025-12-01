@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function _(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,18 +49,18 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let m = 3 * o.Z.Millis.SECOND;
+let h = 3 * o.Z.Millis.SECOND;
 class g {
     getSearchIndex() {
         return null == this._search || this._search.hasDefaultQuery
@@ -113,7 +113,7 @@ class g {
     }
     _getIsIncludedInSearch(e, t) {
         if (null == this._search || this._search.hasDefaultQuery) return [!1, !1];
-        let n = _({}, e, t),
+        let n = p({}, e, t),
             r = this._search.isMemberIncludedInSearchResults(n),
             i = r !== e.isIncludedInSearchResults;
         return [r, i];
@@ -173,9 +173,9 @@ class g {
         for (let a of e) {
             if (null == a.joinedAt) continue;
             let e = a;
-            if ((t && (e = h(_({}, e), { isIncludedInSearchResults: !0 })), n)) {
+            if ((t && (e = m(p({}, e), { isIncludedInSearchResults: !0 })), n)) {
                 let t = (0, s.Dw)(a.joinedAt);
-                e = h(_({}, e), {
+                e = m(p({}, e), {
                     isCurrentGuildMemberByTimestamp: t <= this._members.newMemberTimestamp,
                     refreshTimestamp: this.lastRefreshTimestamp,
                 });
@@ -252,7 +252,7 @@ class g {
             null != this._lastRefreshTimer && clearTimeout(this._lastRefreshTimer),
             (this._lastRefreshTimer = setTimeout(() => {
                 (this._lastRefreshTimer = null), (this.lastRefreshTimestamp = 0);
-            }, m));
+            }, h));
     }
     refreshNewMembersAndSearchResults() {
         if (null == this._search || null == this._members || !this._initialized) return !1;

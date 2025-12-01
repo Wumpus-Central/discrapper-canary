@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r,
     i = n(442837),
     a = n(570140),
@@ -48,7 +48,7 @@ function f(e) {
     let { integration: t, query: n } = e;
     delete l[t][n];
 }
-class _ extends (r = i.ZP.Store) {
+class p extends (r = i.ZP.Store) {
     getResults(e, t) {
         if (null == e || null == t) return null;
         let n = l[e];
@@ -58,8 +58,8 @@ class _ extends (r = i.ZP.Store) {
         return c;
     }
 }
-s(_, "displayName", "IntegrationQueryStore");
-let p = new _(a.Z, {
+s(p, "displayName", "IntegrationQueryStore");
+let _ = new p(a.Z, {
     INTEGRATION_QUERY: u,
     INTEGRATION_QUERY_SUCCESS: d,
     INTEGRATION_QUERY_FAILURE: f,

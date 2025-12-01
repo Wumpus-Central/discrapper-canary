@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -21,22 +21,22 @@ function d(e, t, n) {
     );
 }
 let f = {},
-    _ = 0;
-function p() {
-    _ += 1;
+    p = 0;
+function _() {
+    p += 1;
 }
-function h(e) {
+function m(e) {
     if (null == f[e]) return !1;
     delete f[e];
 }
-function m(e) {
+function h(e) {
     let { id: t } = e;
     if (f[t]) return !1;
     f[t] = !0;
 }
 function g(e) {
     let { id: t } = e;
-    return h(t);
+    return m(t);
 }
 function E(e) {
     for (let t of (e.userGuildSettings.partial || (f = {}), e.userGuildSettings.entries))
@@ -56,7 +56,7 @@ function y(e) {
     let {
         channel: { id: t },
     } = e;
-    return h(t);
+    return m(t);
 }
 function O(e) {
     let { guildId: t } = e;
@@ -72,9 +72,9 @@ function v(e) {
         delete f[t.id];
     });
 }
-class I extends (r = i.ZP.PersistedStore) {
+class S extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(s.Z, l.Z, c.ZP), this.removeChangeListener(p), this.addChangeListener(p), (f = null != e ? e : {});
+        this.waitFor(s.Z, l.Z, c.ZP), this.removeChangeListener(_), this.addChangeListener(_), (f = null != e ? e : {});
     }
     getState() {
         return f;
@@ -86,14 +86,14 @@ class I extends (r = i.ZP.PersistedStore) {
         return f;
     }
     get version() {
-        return _;
+        return p;
     }
 }
-d(I, "displayName", "CategoryCollapseStore"), d(I, "persistKey", "collapsedCategories");
-let T = new I(a.Z, {
+d(S, "displayName", "CategoryCollapseStore"), d(S, "persistKey", "collapsedCategories");
+let I = new S(a.Z, {
     CONNECTION_OPEN: E,
     USER_GUILD_SETTINGS_FULL_UPDATE: b,
-    CATEGORY_COLLAPSE: m,
+    CATEGORY_COLLAPSE: h,
     CATEGORY_EXPAND: g,
     CATEGORY_COLLAPSE_ALL: O,
     CATEGORY_EXPAND_ALL: v,

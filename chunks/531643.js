@@ -13,8 +13,8 @@ var i = n(952265),
     u = n(703656),
     d = n(626135),
     f = n(981631),
-    _ = n(388032);
-function p(e, t, n) {
+    p = n(388032);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,17 +38,17 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e) {
-    let { title: t, help: n, showPremiumUpsell: i, transitionState: p, fileSize: h, onClose: m } = e,
+function h(e) {
+    let { title: t, help: n, showPremiumUpsell: i, transitionState: _, fileSize: m, onClose: h } = e,
         g = (0, s.Z)({ location: "UploadError" }),
         E = () => {
             (0, o.Z)(),
-                m(),
+                h(),
                 d.default.track(f.rMx.PREMIUM_PROMOTION_OPENED, {
                     location_section: f.jXE.FILE_UPLOAD_UPSELL_MODAL,
                     location_object: f.qAy.NAVIGATION_LINK,
@@ -58,31 +58,31 @@ function m(e) {
     return i
         ? g
             ? (0, r.jsx)(c.Z, {
-                  transitionState: p,
-                  onClose: m,
+                  transitionState: _,
+                  onClose: h,
                   handleLearnMore: E,
               })
             : (0, r.jsx)(l.Z, {
-                  transitionState: p,
-                  onClose: m,
+                  transitionState: _,
+                  onClose: h,
                   handleLearnMore: E,
-                  fileSize: h,
+                  fileSize: m,
               })
         : (0, r.jsx)(a.u_l, {
               title: t,
               subtitle: n,
-              transitionState: p,
+              transitionState: _,
               actions: [
                   {
-                      text: _.intl.string(_.t["NX+WJN"]),
-                      onClick: m,
+                      text: p.intl.string(p.t["NX+WJN"]),
+                      onClick: h,
                       variant: "primary",
                   },
               ],
-              onClose: m,
+              onClose: h,
           });
 }
 let g = "UPLOAD_ERROR_MODAL_KEY";
 function E(e) {
-    (0, i.h7)((t) => (0, r.jsx)(m, h({}, t, e)), { modalKey: g });
+    (0, i.h7)((t) => (0, r.jsx)(h, m({}, t, e)), { modalKey: g });
 }

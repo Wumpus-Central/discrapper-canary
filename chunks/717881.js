@@ -1,6 +1,6 @@
 n.d(t, {
-    P: () => R,
-    Z: () => P,
+    P: () => P,
+    Z: () => R,
 });
 var r = n(54381),
     i = n(473749),
@@ -12,10 +12,10 @@ var r = n(54381),
     u = n(699263),
     d = n(741570),
     f = n(952164),
-    _ = n(199902),
-    p = n(592125),
-    h = n(430824),
-    m = n(979651),
+    p = n(199902),
+    _ = n(592125),
+    m = n(430824),
+    h = n(979651),
     g = n(626135),
     E = n(153066),
     b = n(981631),
@@ -49,7 +49,7 @@ function v(e) {
     }
     return e;
 }
-function I(e, t) {
+function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -61,18 +61,18 @@ function I(e, t) {
     }
     return n;
 }
-function T(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : I(Object(t)).forEach(function (n) {
+            : S(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function S(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -117,33 +117,33 @@ function N(e) {
             hideHeader: y = !1,
             showChannelDetails: O = !1,
         } = e,
-        I = S(e, ["activity", "user", "useStoreStream", "showActions", "hideHeader", "showChannelDetails"]);
-    let A = (0, a.e7)([m.Z, p.Z], () => {
+        S = T(e, ["activity", "user", "useStoreStream", "showActions", "hideHeader", "showChannelDetails"]);
+    let A = (0, a.e7)([h.Z, _.Z], () => {
             var e;
-            return p.Z.getChannel(null == (e = m.Z.getVoiceStateForUser(n.id)) ? void 0 : e.channelId);
+            return _.Z.getChannel(null == (e = h.Z.getVoiceStateForUser(n.id)) ? void 0 : e.channelId);
         }),
         N = (0, d.E)("UserActivityContainer", A),
-        R = (0, a.e7)([_.Z], () => (l ? _.Z.getAnyStreamForUser(n.id) : null)),
-        P = (null == t ? void 0 : t.type) === b.IIU.HANG_STATUS && N ? A : null,
-        D = (0, a.e7)([h.Z, m.Z, p.Z], () => {
+        P = (0, a.e7)([p.Z], () => (l ? p.Z.getAnyStreamForUser(n.id) : null)),
+        R = (null == t ? void 0 : t.type) === b.IIU.HANG_STATUS && N ? A : null,
+        w = (0, a.e7)([m.Z, h.Z, _.Z], () => {
             var e, r;
             return (0, o.Z)(t, b.xjy.EMBEDDED)
-                ? h.Z.getGuild(
+                ? m.Z.getGuild(
                       null ==
-                          (e = p.Z.getChannel(
-                              null == (r = m.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id))
+                          (e = _.Z.getChannel(
+                              null == (r = h.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id))
                                   ? void 0
                                   : r.channelId,
                           ))
                           ? void 0
                           : e.getGuildId(),
                   )
-                : null != P
-                  ? h.Z.getGuild(P.getGuildId())
+                : null != R
+                  ? m.Z.getGuild(R.getGuildId())
                   : null;
         }),
-        w = (0, a.e7)([h.Z], () => (null != R ? h.Z.getGuild(R.guildId) : null)),
-        L = (0, a.e7)([c.Z], () => {
+        D = (0, a.e7)([m.Z], () => (null != P ? m.Z.getGuild(P.guildId) : null)),
+        x = (0, a.e7)([c.Z], () => {
             if (null != t)
                 if (null != t.application_id) return c.Z.getApplication(t.application_id);
                 else return c.Z.getApplicationByName(t.name);
@@ -159,27 +159,27 @@ function N(e) {
                         source: "UserActivity",
                         other_user_id: n.id,
                     },
-                    (0, u.Z)(null == P ? void 0 : P.id),
+                    (0, u.Z)(null == R ? void 0 : R.id),
                 ),
             );
-    }, [null == t ? void 0 : t.type, N, P, n.id]),
+    }, [null == t ? void 0 : t.type, N, R, n.id]),
     (null == t ? void 0 : t.type) !== b.IIU.HANG_STATUS || N)
         ? (0, r.jsx)(
               s.Z,
-              T(v({}, I), {
+              I(v({}, S), {
                   activity: t,
                   user: n,
-                  application: L,
+                  application: x,
                   hideHeader: y,
-                  activityGuild: null != D ? D : w,
+                  activityGuild: null != w ? w : D,
                   showChannelDetails: O,
                   channel: O ? A : void 0,
                   renderActions: E
                       ? () =>
                             (0, r.jsx)(
                                 C,
-                                T(v({}, I), {
-                                    applicationStream: R,
+                                I(v({}, S), {
+                                    applicationStream: P,
                                     activity: t,
                                     user: n,
                                 }),
@@ -192,5 +192,5 @@ function N(e) {
           )
         : null;
 }
-let R = s.Z.Types,
-    P = N;
+let P = s.Z.Types,
+    R = N;

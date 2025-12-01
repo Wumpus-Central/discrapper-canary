@@ -21,7 +21,7 @@ function d(e) {
         [y, C] = r.useState(!1),
         v = (0, l.e7)([s.ZP], () => s.ZP.callHeaderHeight),
         _ = r.useRef(null),
-        x = r.useRef(0);
+        O = r.useRef(0);
     r.useEffect(() => {
         let e = t.current;
         if (null != e) return e.addEventListener("click", d), () => e.removeEventListener("click", d);
@@ -29,15 +29,15 @@ function d(e) {
         r.useEffect(() => {
             if (!f) {
                 var e, t;
-                b(String(x.current)),
+                b(String(O.current)),
                     C(
                         void 0 !== v &&
                             v < (null != (t = null == (e = _.current) ? void 0 : e.clientHeight) ? t : 300) + 24,
                     ),
-                    (x.current += 1);
+                    (O.current += 1);
             }
         }, [v, _, f]);
-    let { preventIdle: j, allowIdle: O } = (0, u.Y)("popup");
+    let { preventIdle: x, allowIdle: j } = (0, u.Y)("popup");
     return (null == t ? void 0 : t.current) == null
         ? null
         : (0, i.jsx)(o.ZP, {
@@ -51,10 +51,10 @@ function d(e) {
                   children: () =>
                       (0, i.jsx)("div", {
                           ref: _,
-                          onMouseOver: j,
-                          onFocus: j,
-                          onBlur: O,
-                          onMouseLeave: O,
+                          onMouseOver: x,
+                          onFocus: x,
+                          onBlur: j,
+                          onMouseLeave: j,
                           children: p({
                               hidden: y || m || n,
                               onDismiss: d,

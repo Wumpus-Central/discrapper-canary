@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,11 +58,11 @@ function _(e, t) {
         e
     );
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -70,7 +70,7 @@ function p(e, t) {
     }
     return i;
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -79,7 +79,7 @@ function h(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function m(e) {
+function h(e) {
     let t = Object.keys(e)[0];
     return "".concat(t, "(").concat(e[t], ")");
 }
@@ -99,7 +99,7 @@ function E(e) {
 function b(e) {
     return (
         e &&
-            (e.transform && (e.transform = e.WebkitTransform = e.MozTransform = e.transform.map(m).join(" ")),
+            (e.transform && (e.transform = e.WebkitTransform = e.MozTransform = e.transform.map(h).join(" ")),
             e.color && (e.color = E(e.color)),
             e.backgroundColor && (e.backgroundColor = E(e.backgroundColor))),
         e
@@ -118,7 +118,7 @@ function O(e) {
 function v(e, t, n) {
     return void 0 !== t && void 0 != n ? s()(t, n) : e;
 }
-function I(e, t) {
+function S(e, t) {
     let n,
         {
             toValueMin: i,
@@ -129,12 +129,12 @@ function I(e, t) {
             reverse: c,
             invert: u,
             callback: f,
-            type: h = "spring",
-            shouldLoop: m,
+            type: m = "spring",
+            shouldLoop: h,
             durationMin: g,
             durationMax: E,
         } = t,
-        b = p(t, [
+        b = _(t, [
             "toValueMin",
             "toValueMax",
             "tension",
@@ -150,37 +150,37 @@ function I(e, t) {
         ]),
         y = e._value,
         O = v(t.duration, g, E),
-        T = v(t.toValue, i, a),
-        S = r[h](
+        I = v(t.toValue, i, a),
+        T = r[m](
             e,
-            _(d({}, b), {
-                toValue: T,
+            p(d({}, b), {
+                toValue: I,
                 tension: o,
                 friction: s,
                 duration: O,
             }),
         ),
-        A = S;
+        A = T;
     if (c || u) {
         let i = v(t.duration, g, E);
-        (n = r[h](
+        (n = r[m](
             e,
-            _(d({}, b), {
-                toValue: c ? y : -T,
+            p(d({}, b), {
+                toValue: c ? y : -I,
                 tension: o,
                 friction: s,
                 duration: i,
             }),
         )),
-            (A = r.sequence([S, n]));
+            (A = r.sequence([T, n]));
     }
     l
         ? A.start(() => {
-              (!m || (m && m())) && (f ? f(I.bind(null, e, t)) : I(e, t));
+              (!h || (h && h())) && (f ? f(S.bind(null, e, t)) : S(e, t));
           })
         : A.start(f);
 }
-function T(e) {
+function I(e) {
     for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
     return e.interpolate({
         inputRange: [0, 1],
@@ -188,13 +188,13 @@ function T(e) {
     });
 }
 r.inject.ApplyAnimatedValues(y, (e) => e);
-let S = { CLAMP: "clamp" },
-    A = _(d({}, r), {
+let T = { CLAMP: "clamp" },
+    A = p(d({}, r), {
         Easing: a(),
         accelerate: O,
-        animate: I,
-        interpolate: T,
-        Extrapolate: S,
+        animate: S,
+        interpolate: I,
+        Extrapolate: T,
         div: r.createAnimatedComponent("div"),
         span: r.createAnimatedComponent("span"),
         img: r.createAnimatedComponent("img"),

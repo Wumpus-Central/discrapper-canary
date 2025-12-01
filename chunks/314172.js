@@ -10,9 +10,9 @@ var i = n(442837),
     u = n(496675),
     d = n(608798),
     f = n(981631),
-    _ = n(388032),
-    p = n(880033);
-function h(e, t, n) {
+    p = n(388032),
+    _ = n(880033);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +25,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
@@ -65,7 +65,7 @@ function E(e, t) {
     );
 }
 function b(e) {
-    let { guild: t, guildMember: n, numRoles: h, highestRole: g, onAddRole: b, buttonRef: y } = e,
+    let { guild: t, guildMember: n, numRoles: m, highestRole: g, onAddRole: b, buttonRef: y } = e,
         O = (0, i.e7)([l.Z], () => l.Z.roleStyle);
     if (!(0, i.e7)([u.Z], () => u.Z.can(f.Plq.MANAGE_ROLES, t))) return null;
     let v = (e) => !(0, c.fI)(e) && !e.managed && u.Z.isRoleHigher(t, g, e) && -1 === n.roles.indexOf(e.id);
@@ -86,18 +86,18 @@ function b(e) {
         children: (e) =>
             (0, r.jsx)(o.u, {
                 asContainer: !0,
-                text: _.intl.string(_.t.icyMgc),
+                text: p.intl.string(p.t.icyMgc),
                 "aria-label": !1,
-                shouldShow: h > 0,
+                shouldShow: m > 0,
                 children: (0, r.jsxs)(
                     s.P3F,
                     E(
-                        m(
+                        h(
                             {
                                 innerRef: y,
-                                className: p.button,
+                                className: _.button,
                                 role: "button",
-                                "aria-label": _.intl.string(_.t.icyMgc),
+                                "aria-label": p.intl.string(p.t.icyMgc),
                             },
                             e,
                         ),
@@ -107,11 +107,11 @@ function b(e) {
                                     size: "xs",
                                     color: "currentColor",
                                 }),
-                                0 === h &&
+                                0 === m &&
                                     (0, r.jsx)(s.Text, {
                                         variant: "text-xs/normal",
                                         color: "none",
-                                        children: _.intl.string(_.t.icyMgc),
+                                        children: p.intl.string(p.t.icyMgc),
                                     }),
                             ],
                         },

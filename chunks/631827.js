@@ -2,14 +2,14 @@ function r(e, t) {
     var n, r, l, c, u;
     let d,
         f = null != (n = t.limit) ? n : 1 / 0,
-        _ = i(e, null != (r = t.filterPredicates) ? r : []);
+        p = i(e, null != (r = t.filterPredicates) ? r : []);
     return s(
         (d =
             null != t.bucketPredicates && t.bucketPredicates.length > 0
-                ? f >= _.length
-                    ? o(_, null != (l = t.bucketPredicates) ? l : [])
-                    : a(_, null != (c = t.bucketPredicates) ? c : [], f)
-                : [_]),
+                ? f >= p.length
+                    ? o(p, null != (l = t.bucketPredicates) ? l : [])
+                    : a(p, null != (c = t.bucketPredicates) ? c : [], f)
+                : [p]),
         null != (u = t.sortComparers) ? u : [],
         f,
     ).slice(0, f);

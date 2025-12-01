@@ -10,10 +10,10 @@ var i = n(100527),
     u = n(417420),
     d = n(973465),
     f = n(546997),
-    _ = n(186934),
-    p = n(520384),
-    h = n(154784),
-    m = n(726985),
+    p = n(186934),
+    _ = n(520384),
+    m = n(154784),
+    h = n(726985),
     g = n(65154),
     E = n(388032);
 function b() {
@@ -23,19 +23,19 @@ function b() {
         value: t,
         children: [
             (0, r.jsxs)(s.Z, {
-                webSetting: m.s6.VOICE_AND_VIDEO_VIDEO,
+                webSetting: h.s6.VOICE_AND_VIDEO_VIDEO,
                 children: [
                     (0, r.jsxs)(l.Z, {
                         children: [(0, r.jsx)(c.Z, {}), (0, r.jsx)(u.Z, {}), (0, r.jsx)(d.Z, {})],
                     }),
-                    (0, r.jsx)(h.Z, {}),
+                    (0, r.jsx)(m.Z, {}),
                 ],
             }),
             (0, r.jsx)(s.Z, {
                 title: E.intl.string(E.t.KDdjou),
-                webSetting: m.s6.VOICE_AND_VIDEO_VIDEO_STREAMING,
+                webSetting: h.s6.VOICE_AND_VIDEO_VIDEO_STREAMING,
                 children: (0, r.jsxs)(l.Z, {
-                    children: [(0, r.jsx)(p.Z, {}), e && (0, r.jsx)(_.Z, {}), (0, r.jsx)(f.Z, {})],
+                    children: [(0, r.jsx)(_.Z, {}), e && (0, r.jsx)(p.Z, {}), (0, r.jsx)(f.Z, {})],
                 }),
             }),
         ],

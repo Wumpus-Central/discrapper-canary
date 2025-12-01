@@ -28,7 +28,7 @@ class f extends r.ZP.Store {
             s.default.addChangeListener(() => this.handleAuthenticationStoreChanged());
     }
     databaseName(e) {
-        return p(e);
+        return _(e);
     }
     database(e) {
         if (null != e) {
@@ -41,7 +41,7 @@ class f extends r.ZP.Store {
         if (this.preventWritingCachesAgainThisSession)
             return u.verbose("Not opening database because caches have been manually cleared."), null;
         if (null != e && !this.databases.has(e)) {
-            let t = h(e);
+            let t = m(e);
             u.verbose("added database (".concat(e, " \u2192 ").concat(t, ")")),
                 this.databases.set(e, t),
                 this.emitChange();
@@ -88,7 +88,7 @@ class f extends r.ZP.Store {
         if (this.preventWritingCachesAgainThisSession)
             return void u.verbose("Not opening database because caches have been manually cleared.");
         if (null != e) {
-            let t = await m(e);
+            let t = await h(e);
             null == t || this.databases.has(e)
                 ? (u.verbose("discarding speculative database (".concat(e, " \u2192 ").concat(t, ")")),
                   null == t || t.close())
@@ -113,7 +113,7 @@ class f extends r.ZP.Store {
             c(this, "preventWritingCachesAgainThisSession", !1);
     }
 }
-function _(e, t) {
+function p(e, t) {
     for (let n = 0; n < e; n++)
         try {
             return t();
@@ -122,23 +122,23 @@ function _(e, t) {
         }
     return null;
 }
-function p(e) {
+function _(e) {
     return "@account.".concat(e);
 }
-function h(e) {
+function m(e) {
     if (d) {
         let t = 50,
-            n = p(e);
+            n = _(e);
         return (
             u.verbose("synchronously opening ".concat(n)),
-            _(t, () => i.vo.openSyncUnsafe(n, { invalidateDisabledHandles: !0 }))
+            p(t, () => i.vo.openSyncUnsafe(n, { invalidateDisabledHandles: !0 }))
         );
     }
     return null;
 }
-async function m(e) {
+async function h(e) {
     if (d) {
-        let t = p(e);
+        let t = _(e);
         u.verbose("speculatively opening ".concat(t));
         try {
             return await i.vo.open(t);

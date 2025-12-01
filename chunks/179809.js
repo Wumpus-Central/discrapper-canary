@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(866442),
     d = n(477690),
     f = n(481060),
-    p = n(153867),
-    h = n(591146),
+    h = n(153867),
+    p = n(591146),
     g = n(771845),
     m = n(624138),
     b = n(727258),
@@ -53,7 +53,7 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
             [K, Y] = i.useState(!1),
             [q, Q] = i.useState(!1),
             X = K || q,
-            J = (0, h.Ml)("FolderItem");
+            J = (0, p.Ml)("FolderItem");
         i.useEffect(() => {
             R && Y(!1);
         }, [R]);
@@ -67,7 +67,7 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                     }
                 ),
                 end() {
-                    null == L || L(), (0, p.V1)(g.ZP.getCompatibleGuildFolders());
+                    null == L || L(), (0, h.V1)(g.ZP.getCompatibleGuildFolders());
                 },
                 collect: (e) => ({ dragging: e.isDragging() }),
             }),

@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(25015),
     d = n(963550),
     f = n(845080),
-    _ = n(360514);
-function p(e, t, n) {
+    p = n(360514);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,12 +34,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -56,7 +56,7 @@ function g(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -67,45 +67,45 @@ function E(e) {
     let {
             message: n,
             channel: a,
-            compact: p,
-            className: m,
+            compact: _,
+            className: h,
             isGroupStart: E,
             hideSimpleEmbedContent: b = !0,
             disableInteraction: y,
             previewGuildId: O,
             preview: v,
-            author: I,
+            author: S,
         } = e,
-        T = null != O ? O : (0, l.k)(n),
-        S = (0, s.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
+        I = null != O ? O : (0, l.k)(n),
+        T = (0, s.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
         { content: A } = (0, u.Z)(n, {
             hideSimpleEmbedContent: b,
-            allowList: S,
-            allowHeading: S,
+            allowList: T,
+            allowHeading: T,
             allowLinks: !0,
             previewLinkTarget: !0,
         }),
         C = i.useMemo(
             () =>
                 (0, f.Z)(
-                    g(h({}, e), {
+                    g(m({}, e), {
                         channel: a,
-                        guildId: T,
+                        guildId: I,
                     }),
                 ),
-            [e, a, T],
+            [e, a, I],
         );
     return (0, r.jsx)(c.Z, {
-        compact: p,
-        className: o()(m, {
-            [_.message]: !0,
-            [_.cozyMessage]: !p,
-            [_.groupStart]: E,
+        compact: _,
+        className: o()(h, {
+            [p.message]: !0,
+            [p.cozyMessage]: !_,
+            [p.groupStart]: E,
         }),
         childrenHeader: C,
         childrenMessageContent: (0, d.Z)(e, A),
         disableInteraction: y,
-        author: I,
+        author: S,
         preview: v,
     });
 }

@@ -2,7 +2,7 @@ n.d(t, {
     BR: () => d,
     RX: () => l,
     Tw: () => u,
-    dY: () => _,
+    dY: () => p,
     wL: () => f,
     z5: () => c,
 });
@@ -51,7 +51,7 @@ let l = (e) => {
             children: t,
         });
     },
-    _ = (e) => {
+    p = (e) => {
         let { children: t, className: n } = e;
         return (0, r.jsx)(o.Text, {
             className: a()(n, s.autocompleteRowContentSecondary),

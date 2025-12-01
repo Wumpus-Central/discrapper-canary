@@ -1,4 +1,4 @@
-n.d(t, { Z: () => D });
+n.d(t, { Z: () => w });
 var r = n(54381),
     i = n(473749),
     a = n(512722),
@@ -9,19 +9,19 @@ var r = n(54381),
     u = n(825209),
     d = n(706454),
     f = n(494620),
-    _ = n(131951),
-    p = n(556296),
-    h = n(358085),
-    m = n(924557),
+    p = n(131951),
+    _ = n(556296),
+    m = n(358085),
+    h = n(924557),
     g = n(435064),
     E = n(894694),
     b = n(779618),
     y = n(341569),
     O = n(39604),
     v = n(356659),
-    I = n(981631),
-    T = n(37113),
-    S = n(388032),
+    S = n(981631),
+    I = n(37113),
+    T = n(388032),
     A = n(556865);
 function C(e, t, n) {
     return (
@@ -52,7 +52,7 @@ function N(e) {
     }
     return e;
 }
-function R(e, t) {
+function P(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -64,124 +64,124 @@ function R(e, t) {
     }
     return n;
 }
-function P(e, t) {
+function R(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : R(Object(t)).forEach(function (n) {
+            : P(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function D() {
+function w() {
     let e = (0, y.nq)(),
         t = (0, y.z8)(),
-        n = (0, h.isWindows)(),
-        { remindersEnabled: a, clipsLength: C, clipsQuality: R } = (0, s.cj)([g.Z], () => g.Z.getSettings()),
-        D = (0, s.e7)([g.Z], () => g.Z.getHardwareClassification()),
-        w = (0, s.e7)([p.ZP], () => p.ZP.getKeybindForAction(I.kg4.SAVE_CLIP, !0)),
-        L = (0, s.e7)([p.ZP], () => p.ZP.getKeybindForAction(I.kg4.SAVE_SCREENSHOT, !0)),
-        x = (0, b.Z)(_.Z),
-        { showClipsHeaderEntrypoint: M } = m.NV.useExperiment(
+        n = (0, m.isWindows)(),
+        { remindersEnabled: a, clipsLength: C, clipsQuality: P } = (0, s.cj)([g.Z], () => g.Z.getSettings()),
+        w = (0, s.e7)([g.Z], () => g.Z.getHardwareClassification()),
+        D = (0, s.e7)([_.ZP], () => _.ZP.getKeybindForAction(S.kg4.SAVE_CLIP, !0)),
+        x = (0, s.e7)([_.ZP], () => _.ZP.getKeybindForAction(S.kg4.SAVE_SCREENSHOT, !0)),
+        L = (0, b.Z)(p.Z),
+        { showClipsHeaderEntrypoint: j } = h.NV.useExperiment(
             { location: "clips_recording_settings" },
             { autoTrackExposure: !1 },
         ),
-        k = (0, m.PP)();
-    o()(null != w, "Save clip keybind unset"), o()(null != L, "Save screenshot keybind unset");
-    let j = (0, s.e7)([d.default], () => d.default.locale),
+        M = (0, h.PP)();
+    o()(null != D, "Save clip keybind unset"), o()(null != x, "Save screenshot keybind unset");
+    let k = (0, s.e7)([d.default], () => d.default.locale),
         U = i.useMemo(
             () => [
                 {
                     value: v.OT.SECONDS_30,
-                    label: S.intl.formatToPlainString(S.t["bTFv/3"], { count: 30 }),
+                    label: T.intl.formatToPlainString(T.t["bTFv/3"], { count: 30 }),
                 },
                 {
                     value: v.OT.MINUTES_1,
-                    label: S.intl.formatToPlainString(S.t.ICo9Nk, { count: 1 }),
+                    label: T.intl.formatToPlainString(T.t.ICo9Nk, { count: 1 }),
                 },
                 {
                     value: v.OT.MINUTES_2,
-                    label: S.intl.formatToPlainString(S.t.ICo9Nk, { count: 2 }),
+                    label: T.intl.formatToPlainString(T.t.ICo9Nk, { count: 2 }),
                 },
             ],
-            [j],
+            [k],
         ),
         G = i.useMemo(
             () => [
                 {
-                    value: T.ApplicationStreamResolutions.RESOLUTION_480,
-                    label: S.intl.formatToPlainString(S.t.TEOC0I, {
-                        resolution: T.ApplicationStreamResolutions.RESOLUTION_480,
+                    value: I.ApplicationStreamResolutions.RESOLUTION_480,
+                    label: T.intl.formatToPlainString(T.t.TEOC0I, {
+                        resolution: I.ApplicationStreamResolutions.RESOLUTION_480,
                     }),
                 },
                 {
-                    value: T.ApplicationStreamResolutions.RESOLUTION_720,
-                    label: S.intl.formatToPlainString(S.t.TEOC0I, {
-                        resolution: T.ApplicationStreamResolutions.RESOLUTION_720,
+                    value: I.ApplicationStreamResolutions.RESOLUTION_720,
+                    label: T.intl.formatToPlainString(T.t.TEOC0I, {
+                        resolution: I.ApplicationStreamResolutions.RESOLUTION_720,
                     }),
                 },
                 {
-                    value: T.ApplicationStreamResolutions.RESOLUTION_1080,
-                    label: S.intl.formatToPlainString(S.t.TEOC0I, {
-                        resolution: T.ApplicationStreamResolutions.RESOLUTION_1080,
+                    value: I.ApplicationStreamResolutions.RESOLUTION_1080,
+                    label: T.intl.formatToPlainString(T.t.TEOC0I, {
+                        resolution: I.ApplicationStreamResolutions.RESOLUTION_1080,
                     }),
                 },
                 {
-                    value: T.ApplicationStreamResolutions.RESOLUTION_1440,
-                    label: S.intl.formatToPlainString(S.t.TEOC0I, {
-                        resolution: T.ApplicationStreamResolutions.RESOLUTION_1440,
+                    value: I.ApplicationStreamResolutions.RESOLUTION_1440,
+                    label: T.intl.formatToPlainString(T.t.TEOC0I, {
+                        resolution: I.ApplicationStreamResolutions.RESOLUTION_1440,
                     }),
                 },
                 {
-                    value: T.ApplicationStreamResolutions.RESOLUTION_SOURCE,
-                    label: S.intl.string(S.t.XjXqzh),
+                    value: I.ApplicationStreamResolutions.RESOLUTION_SOURCE,
+                    label: T.intl.string(T.t.XjXqzh),
                 },
             ],
-            [j],
+            [k],
         ),
-        B = i.useMemo(
+        Z = i.useMemo(
             () => [
                 {
-                    value: T.ApplicationStreamFPS.FPS_15,
-                    label: S.intl.formatToPlainString(S.t.Qb44XH, { fps: T.ApplicationStreamFPS.FPS_15 }),
+                    value: I.ApplicationStreamFPS.FPS_15,
+                    label: T.intl.formatToPlainString(T.t.Qb44XH, { fps: I.ApplicationStreamFPS.FPS_15 }),
                 },
                 {
-                    value: T.ApplicationStreamFPS.FPS_30,
-                    label: S.intl.formatToPlainString(S.t.Qb44XH, { fps: T.ApplicationStreamFPS.FPS_30 }),
+                    value: I.ApplicationStreamFPS.FPS_30,
+                    label: T.intl.formatToPlainString(T.t.Qb44XH, { fps: I.ApplicationStreamFPS.FPS_30 }),
                 },
                 {
-                    value: T.ApplicationStreamFPS.FPS_60,
-                    label: S.intl.formatToPlainString(S.t.Qb44XH, { fps: T.ApplicationStreamFPS.FPS_60 }),
+                    value: I.ApplicationStreamFPS.FPS_60,
+                    label: T.intl.formatToPlainString(T.t.Qb44XH, { fps: I.ApplicationStreamFPS.FPS_60 }),
                 },
             ],
-            [j],
+            [k],
         ),
-        Z = i.useCallback(
+        B = i.useCallback(
             (e) => {
-                c.Z.setKeybind(P(N({}, w), { shortcut: e }));
+                c.Z.setKeybind(R(N({}, D), { shortcut: e }));
             },
-            [w],
+            [D],
         ),
         F = i.useCallback(
             (e) => {
-                c.Z.setKeybind(P(N({}, L), { shortcut: e }));
+                c.Z.setKeybind(R(N({}, x), { shortcut: e }));
             },
-            [L],
+            [x],
         );
     return (0, r.jsxs)(l.C3N, {
         children: [
-            (0, r.jsx)(f.Z, { children: S.intl.string(S.t["Z+MfqT"]) }),
-            D === E.xH.BELOW_MINIMUM
+            (0, r.jsx)(f.Z, { children: T.intl.string(T.t["Z+MfqT"]) }),
+            w === E.xH.BELOW_MINIMUM
                 ? (0, r.jsx)(f.Z, {
                       look: f.z.WARNING,
-                      children: S.intl.string(S.t.SIxrIF),
+                      children: T.intl.string(T.t.SIxrIF),
                   })
                 : null,
             (0, r.jsx)(l.rsf, {
-                label: S.intl.string(S.t.h8rgrK),
-                description: S.intl.string(S.t["4Qw3NO"]),
+                label: T.intl.string(T.t.h8rgrK),
+                description: T.intl.string(T.t["4Qw3NO"]),
                 checked: t,
                 onChange: (e) =>
                     O.em({
@@ -190,11 +190,11 @@ function D() {
                     }),
             }),
             n &&
-                x &&
+                L &&
                 (0, r.jsx)(r.Fragment, {
                     children: (0, r.jsx)(l.rsf, {
-                        label: S.intl.string(S.t.yXvykv),
-                        description: S.intl.string(S.t.YP3ujk),
+                        label: T.intl.string(T.t.yXvykv),
+                        description: T.intl.string(T.t.YP3ujk),
                         checked: e,
                         onChange: (e) =>
                             O._Q({
@@ -203,17 +203,17 @@ function D() {
                             }),
                     }),
                 }),
-            M &&
+            j &&
                 (0, r.jsx)(l.rsf, {
-                    label: S.intl.string(S.t["3zwNf6"]),
-                    description: S.intl.string(S.t.m4Cjj9),
+                    label: T.intl.string(T.t["3zwNf6"]),
+                    description: T.intl.string(T.t.m4Cjj9),
                     checked: a,
                     onChange: (e) => O.N0(e),
                 }),
             (0, r.jsx)(l.q4e, {
                 onChange: O.eU,
-                label: S.intl.string(S.t.OgfUio),
-                description: S.intl.string(S.t.H7j4tY),
+                label: T.intl.string(T.t.OgfUio),
+                description: T.intl.string(T.t.H7j4tY),
                 value: C,
                 options: U,
             }),
@@ -221,45 +221,45 @@ function D() {
                 onChange: (e) =>
                     O.yi({
                         resolution: e,
-                        frameRate: R.frameRate,
+                        frameRate: P.frameRate,
                     }),
-                label: S.intl.string(S.t.aFudZJ),
-                description: S.intl.string(S.t.nIrkW5),
-                value: R.resolution,
+                label: T.intl.string(T.t.aFudZJ),
+                description: T.intl.string(T.t.nIrkW5),
+                value: P.resolution,
                 options: G,
             }),
             (0, r.jsx)(l.q4e, {
                 onChange: (e) =>
                     O.yi({
-                        resolution: R.resolution,
+                        resolution: P.resolution,
                         frameRate: e,
                     }),
-                label: S.intl.string(S.t["2wScL1"]),
-                description: S.intl.string(S.t["Rf9+fy"]),
-                value: R.frameRate,
-                options: B,
+                label: T.intl.string(T.t["2wScL1"]),
+                description: T.intl.string(T.t["Rf9+fy"]),
+                value: P.frameRate,
+                options: Z,
             }),
             (0, r.jsx)(l.gNt, {
-                label: S.intl.string(S.t.pf54EU),
-                description: S.intl.string(S.t["QyB/jK"]),
+                label: T.intl.string(T.t.pf54EU),
+                description: T.intl.string(T.t["QyB/jK"]),
                 layout: "horizontal",
                 children: (0, r.jsx)("div", {
                     className: A.keyRecorder,
                     children: (0, r.jsx)(u.Z, {
-                        defaultValue: w.shortcut,
-                        onChange: Z,
+                        defaultValue: D.shortcut,
+                        onChange: B,
                     }),
                 }),
             }),
-            k &&
+            M &&
                 (0, r.jsx)(l.gNt, {
-                    label: S.intl.string(S.t["0U/hj7"]),
-                    description: S.intl.string(S.t["5zxkdo"]),
+                    label: T.intl.string(T.t["0U/hj7"]),
+                    description: T.intl.string(T.t["5zxkdo"]),
                     layout: "horizontal",
                     children: (0, r.jsx)("div", {
                         className: A.keyRecorder,
                         children: (0, r.jsx)(u.Z, {
-                            defaultValue: L.shortcut,
+                            defaultValue: x.shortcut,
                             onChange: F,
                         }),
                     }),

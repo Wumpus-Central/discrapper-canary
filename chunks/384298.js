@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(54381);
 n(473749);
 var i = n(442837),
@@ -10,42 +10,42 @@ var i = n(442837),
     u = n(979651),
     d = n(652853),
     f = n(732380),
-    _ = n(981631),
-    p = n(671955),
-    h = n(388032);
-function m(e) {
-    let { channel: t, onAction: n, onClose: m } = e,
+    p = n(981631),
+    _ = n(671955),
+    m = n(388032);
+function h(e) {
+    let { channel: t, onAction: n, onClose: h } = e,
         { themeType: g } = (0, d.z)(),
-        E = g === p.l.MODAL_V2,
+        E = g === _.l.MODAL_V2,
         b = (0, i.e7)([u.Z], () => u.Z.isInChannel(t.id));
     if (
         !(0, i.e7)([c.Z], () => {
             let e = (0, o.dl)() && (0, o.zd)(t.id);
-            return (t.isPrivate() || c.Z.can(_.Plq.CONNECT, t)) && !e;
+            return (t.isPrivate() || c.Z.can(p.Plq.CONNECT, t)) && !e;
         })
     )
         return null;
     let y = () =>
-            g === p.l.MODAL || g === p.l.MODAL_V2
-                ? h.intl.string(h.t["3xjX0U"])
+            g === _.l.MODAL || g === _.l.MODAL_V2
+                ? m.intl.string(m.t["3xjX0U"])
                 : t.isDM() || t.isGroupDM()
-                  ? h.intl.string(h.t["7hwn2A"])
+                  ? m.intl.string(m.t["7hwn2A"])
                   : t.isGuildStageVoice()
-                    ? h.intl.string(h.t.Acqcot)
-                    : h.intl.string(h.t.BXxdl7),
+                    ? m.intl.string(m.t.Acqcot)
+                    : m.intl.string(m.t.BXxdl7),
         O = () =>
-            g === p.l.MODAL || g === p.l.MODAL_V2
-                ? h.intl.string(h.t.VJlc0S)
+            g === _.l.MODAL || g === _.l.MODAL_V2
+                ? m.intl.string(m.t.VJlc0S)
                 : t.isDM() || t.isGroupDM()
-                  ? h.intl.string(h.t.ozoE2A)
+                  ? m.intl.string(m.t.ozoE2A)
                   : t.isGuildStageVoice()
-                    ? h.intl.string(h.t["7vb2cc"])
-                    : h.intl.string(h.t["96ANUN"]),
+                    ? m.intl.string(m.t["7vb2cc"])
+                    : m.intl.string(m.t["96ANUN"]),
         v = (e) => {
             e.stopPropagation(),
                 null == n || n({ action: "PRESS_JOIN_CALL_BUTTON" }),
                 t.isGuildStageVoice() ? (0, l.Cq)(t) : (a.default.selectVoiceChannel(t.id), (0, s.Kh)(t.id)),
-                null == m || m();
+                null == h || h();
         };
     return (0, r.jsx)(f.O1, {
         text: b ? y() : O(),

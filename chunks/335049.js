@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => E });
 var i = n(54381),
     r = n(473749),
     l = n(120356),
@@ -16,14 +16,14 @@ var i = n(54381),
     h = n(48950),
     x = n(592125),
     j = n(271383),
-    v = n(485386),
-    O = n(246946),
+    O = n(485386),
+    v = n(246946),
     y = n(594174),
     _ = n(51144),
     C = n(981631),
     N = n(388032),
     S = n(243226);
-function E(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -48,7 +48,7 @@ function E(e) {
     }
     return e;
 }
-function I(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -66,7 +66,7 @@ function I(e, t) {
         e
     );
 }
-function P(e) {
+function E(e) {
     let { guild: t, id: l, type: a, isLocked: o, lockTooltipText: c } = e,
         d = !o || null != c;
     s()(d, "No lockTooltipText provided while isLocked=true");
@@ -77,7 +77,7 @@ function P(e) {
                 return (t) =>
                     (0, i.jsx)(
                         e,
-                        I(E({}, t), {
+                        w(P({}, t), {
                             id: l,
                             label: N.intl.string(N.t.oJ1Muw),
                         }),
@@ -88,7 +88,7 @@ function P(e) {
     );
     switch (a) {
         case m.Kw.CHANNEL:
-            return (0, i.jsx)(w, {
+            return (0, i.jsx)(I, {
                 guild: t,
                 id: l,
                 isLocked: o,
@@ -113,7 +113,7 @@ function P(e) {
             });
     }
 }
-function w(e) {
+function I(e) {
     let { guild: t, id: n, isLocked: l, lockTooltipText: o, openEntryContextMenu: s } = e,
         d = (0, b.bD)(t.id),
         {
@@ -173,7 +173,7 @@ function w(e) {
 function T(e) {
     var t;
     let { guild: l, id: o, isLocked: s, lockTooltipText: d } = e,
-        m = (0, c.e7)([v.Z], () => v.Z.getRole(l.id, o)),
+        m = (0, c.e7)([O.Z], () => O.Z.getRole(l.id, o)),
         b = (0, f.p9)({
             guildId: l.id,
             roleId: o,
@@ -188,7 +188,7 @@ function T(e) {
                         return (t) =>
                             (0, i.jsx)(
                                 e,
-                                I(E({}, t), {
+                                w(P({}, t), {
                                     guild: l,
                                     role: m,
                                 }),
@@ -204,7 +204,7 @@ function T(e) {
               className: S.identifier,
               children: [
                   null != b
-                      ? (0, i.jsx)(h.Z, E({ className: a()(S.__invalid_icon, S.image) }, b))
+                      ? (0, i.jsx)(h.Z, P({ className: a()(S.__invalid_icon, S.image) }, b))
                       : (0, i.jsx)(u.lZ8, {
                             size: "custom",
                             width: 23,
@@ -229,7 +229,7 @@ function Z(e) {
             var e;
             return null == (e = j.ZP.getMember(t.id, n)) ? void 0 : e.nick;
         }, [t.id, n]),
-        d = (0, c.e7)([O.Z], () => O.Z.hidePersonalInformation);
+        d = (0, c.e7)([v.Z], () => v.Z.hidePersonalInformation);
     return null == o
         ? null
         : (0, i.jsxs)("div", {

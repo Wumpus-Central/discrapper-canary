@@ -15,8 +15,8 @@ var i = n(54381),
     m = n(345243),
     y = n(873596),
     b = n(917405),
-    v = n(430824),
-    _ = n(131951),
+    _ = n(430824),
+    v = n(131951),
     O = n(699516),
     E = n(594174),
     x = n(979651),
@@ -215,9 +215,9 @@ function k(e) {
             }
             return r;
         })(e, ["context", "lobbyId", "channel"]);
-    let o = (0, a.e7)([v.Z], () => v.Z.getGuild(null == r ? void 0 : r.getGuildId())),
+    let o = (0, a.e7)([_.Z], () => _.Z.getGuild(null == r ? void 0 : r.getGuildId())),
         l = (0, a.e7)([x.Z], () => null != r && x.Z.hasVideo(r.id)),
-        [c, d] = (0, a.Wu)([_.Z], () => [_.Z.isSelfMute(t) || _.Z.isSelfMutedTemporarily(t), _.Z.isSelfDeaf(t)]),
+        [c, d] = (0, a.Wu)([v.Z], () => [v.Z.isSelfMute(t) || v.Z.isSelfMutedTemporarily(t), v.Z.isSelfDeaf(t)]),
         [u, h, p] = (0, a.Wu)([S.Z], () => [S.Z.getConnectionState(n), S.Z.getLastPing(n), S.Z.getQuality(n)]);
     return (0, i.jsx)(
         D,

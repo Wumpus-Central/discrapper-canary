@@ -1,7 +1,7 @@
 n.d(t, {
     Zh: () => O,
     e: () => v,
-    iq: () => I,
+    iq: () => S,
 }),
     n(388685);
 var r = n(54381),
@@ -14,10 +14,10 @@ var r = n(54381),
     u = n(596454),
     d = n(739566),
     f = n(590956),
-    _ = n(834129),
-    p = n(222677),
-    h = n(768581),
-    m = n(585483),
+    p = n(834129),
+    _ = n(222677),
+    m = n(768581),
+    h = n(585483),
     g = n(139688),
     E = n(981631),
     b = n(388032),
@@ -41,16 +41,16 @@ function v(e) {
         [a, s] = i.useState(!1),
         d = t.getChannelId(),
         f = (0, g.xE)(t.content),
-        _ = i.useCallback(() => {
+        p = i.useCallback(() => {
             null != f &&
-                (0, p.rU)(
+                (0, _.rU)(
                     d,
                     t.id,
                     {
                         id: f.id,
                         name: f.name,
                     },
-                    p.TW.MESSAGE,
+                    _.TW.MESSAGE,
                 );
         }, [d, f, t.id]);
     return null == f
@@ -69,7 +69,7 @@ function v(e) {
               }),
               children: (0, r.jsx)(c.P3F, {
                   className: o()(n, y.ctaReactionButton),
-                  onClick: _,
+                  onClick: p,
                   onMouseEnter: () => {
                       s(!0);
                   },
@@ -96,27 +96,27 @@ function v(e) {
               }),
           });
 }
-function I(e) {
+function S(e) {
     let { message: t, compact: n, usernameHook: a } = e,
         o = t.content,
         [l, u] = i.useState(!1),
-        p = (0, d.ZP)(t),
-        O = a(p),
+        _ = (0, d.ZP)(t),
+        O = a(_),
         v = (0, g.xE)(o),
-        I = i.useCallback(() => {
+        S = i.useCallback(() => {
             null != v &&
-                m.S.dispatchToLastSubscribed(E.CkL.INSERT_TEXT, {
+                h.S.dispatchToLastSubscribed(E.CkL.INSERT_TEXT, {
                     plainText: ":".concat(v.name, ":"),
                     rawText: o,
                     addSpace: !0,
                 });
         }, [v, o]),
-        T = i.useMemo(
+        I = i.useMemo(
             () =>
                 null == v
                     ? null
                     : {
-                          src: h.ZP.getEmojiURL({
+                          src: m.ZP.getEmojiURL({
                               id: v.id,
                               animated: v.animated,
                               size: 48,
@@ -127,7 +127,7 @@ function I(e) {
                       },
             [v],
         );
-    return (0, r.jsx)(_.Z, {
+    return (0, r.jsx)(p.Z, {
         iconNode: (0, r.jsx)(s.EO4, {
             size: "refresh_sm",
             color: "currentColor",
@@ -138,22 +138,22 @@ function I(e) {
         contentClassName: y.content,
         children: (0, r.jsx)("span", {
             children:
-                null == v || null == T
+                null == v || null == I
                     ? b.intl.format(b.t.k6Jc9Y, {
-                          username: p.nick,
+                          username: _.nick,
                           usernameHook: O,
                       })
                     : b.intl.format(b.t.IihHB0, {
-                          username: p.nick,
+                          username: _.nick,
                           usernameHook: O,
                           emojiPreview: (0, r.jsx)(f.Y, {
-                              node: T,
+                              node: I,
                               isInteracting: l,
                           }),
                           emojiName: (0, r.jsx)(c.P3F, {
                               className: y.clickableEmoji,
                               tag: "span",
-                              onClick: I,
+                              onClick: S,
                               onMouseEnter: () => u(!0),
                               onMouseLeave: () => u(!1),
                               children: (0, r.jsx)(c.Text, {

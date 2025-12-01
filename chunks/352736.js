@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685);
+n.d(t, { Z: () => D }), n(388685);
 var r = n(721355),
     i = n(320285),
     a = n(25209),
@@ -9,10 +9,10 @@ var r = n(721355),
     u = n(499401),
     d = n(693912),
     f = n(23750),
-    _ = n(314897),
-    p = n(592125),
-    h = n(430824),
-    m = n(594174),
+    p = n(314897),
+    _ = n(592125),
+    m = n(430824),
+    h = n(594174),
     g = n(5192),
     E = n(709054),
     b = n(981631),
@@ -37,7 +37,7 @@ let O = {
         y.t.Iw6d8w,
         y.t["WecSZ/"],
     ],
-    I = () => [
+    S = () => [
         y.t.Jm6e0x,
         y.t.MGRnRT,
         y.t.EXOEGh,
@@ -52,15 +52,15 @@ let O = {
         y.t["b/1SBX"],
         y.t.LhebZF,
     ];
-function T(e) {
-    let t = I(),
+function I(e) {
+    let t = S(),
         n = E.default.extractTimestamp(e) % t.length;
     return t[n];
 }
-function S(e) {
+function T(e) {
     var t;
-    let n = p.Z.getChannel(e.channel_id),
-        r = null == n ? null : h.Z.getGuild(n.getGuildId());
+    let n = _.Z.getChannel(e.channel_id),
+        r = null == n ? null : m.Z.getGuild(n.getGuildId());
     return (0, a.Rp)(
         y.intl.formatToParts(y.t.PJsjbP, {
             emoji: e.content,
@@ -77,8 +77,8 @@ function A(e) {
     );
 }
 function C(e, t) {
-    let n = p.Z.getChannel(t);
-    return null == n || null == h.Z.getGuild(n.getGuildId())
+    let n = _.Z.getChannel(t);
+    return null == n || null == m.Z.getGuild(n.getGuildId())
         ? A(e)
         : (0, a.Rp)(
               y.intl.formatToParts(y.t.ihxM9x, {
@@ -88,9 +88,9 @@ function C(e, t) {
           );
 }
 function N(e, t, n) {
-    let r = p.Z.getChannel(t);
+    let r = _.Z.getChannel(t);
     if (null == r) return null;
-    let i = h.Z.getGuild(r.getGuildId());
+    let i = m.Z.getGuild(r.getGuildId());
     return null == i
         ? null
         : (0, a.Rp)(
@@ -107,10 +107,10 @@ function N(e, t, n) {
               }),
           );
 }
-function R(e, t) {
-    let n = p.Z.getChannel(t);
+function P(e, t) {
+    let n = _.Z.getChannel(t);
     if (null == n) return null;
-    let r = h.Z.getGuild(n.getGuildId());
+    let r = m.Z.getGuild(n.getGuildId());
     return null == r
         ? null
         : (0, a.Rp)(
@@ -120,10 +120,10 @@ function R(e, t) {
               }),
           );
 }
-function P(e, t) {
-    let n = p.Z.getChannel(e);
+function R(e, t) {
+    let n = _.Z.getChannel(e);
     if (null == n) return null;
-    let r = h.Z.getGuild(n.getGuildId());
+    let r = m.Z.getGuild(n.getGuildId());
     if (null == r) return null;
     switch (t) {
         case i.p.ACTIVITY_ALERTS_ENABLED:
@@ -134,40 +134,40 @@ function P(e, t) {
             return (0, a.Rp)(y.intl.formatToParts(y.t["a+lJKl"], { guildName: r.name }));
     }
 }
-function D(e) {
+function w(e) {
     var t, n, r;
     let [i] = null != (t = e.mentions) ? t : [];
     return null == i
         ? null
         : "object" == typeof i
-          ? null != (n = m.default.getUser(i.id))
+          ? null != (n = h.default.getUser(i.id))
               ? n
               : null
-          : "string" == typeof i && null != (r = m.default.getUser(i))
+          : "string" == typeof i && null != (r = h.default.getUser(i))
             ? r
             : null;
 }
-let w = {
+let D = {
     stringify: function (e, t) {
-        var n, i, p, h;
-        let m = D(e),
+        var n, i, _, m;
+        let h = w(e),
             E = e.channel_id,
             O = g.ZP.getName(null, E, e.author);
         switch (e.type) {
             case b.uaV.RECIPIENT_ADD:
-                if (null == m) return;
+                if (null == h) return;
                 return (0, a.Rp)(
                     y.intl.formatToParts(y.t["7/Xl0S"], {
                         username: O,
                         usernameOnClick: b.dG4,
-                        otherUsername: g.ZP.getName(null, E, m),
+                        otherUsername: g.ZP.getName(null, E, h),
                         otherUsernameOnClick: b.dG4,
                     }),
                 );
             case b.uaV.RECIPIENT_REMOVE:
-                if (null == m) return;
+                if (null == h) return;
                 let v = e.author;
-                if (null == v || v.id === m.id)
+                if (null == v || v.id === h.id)
                     return (0, a.Rp)(
                         y.intl.formatToParts(y.t["Qn5+Lf"], {
                             username: O,
@@ -178,13 +178,13 @@ let w = {
                     y.intl.formatToParts(y.t.QtZ0RD, {
                         username: O,
                         usernameOnClick: b.dG4,
-                        otherUsername: g.ZP.getName(null, E, m),
+                        otherUsername: g.ZP.getName(null, E, h),
                         otherUsernameOnClick: b.dG4,
                     }),
                 );
             case b.uaV.CALL:
-                let { call: I } = e;
-                if (null != I && -1 === I.participants.indexOf(_.default.getId()))
+                let { call: S } = e;
+                if (null != S && -1 === S.participants.indexOf(p.default.getId()))
                     return (0, a.Rp)(
                         y.intl.formatToParts(y.t.DbgSA0, {
                             username: O,
@@ -216,13 +216,13 @@ let w = {
                 );
             case b.uaV.USER_JOIN:
                 return (0, a.Rp)(
-                    y.intl.formatToParts(T(e.id), {
+                    y.intl.formatToParts(I(e.id), {
                         username: O,
                         usernameOnClick: b.dG4,
                     }),
                 );
             case b.uaV.EMOJI_ADDED:
-                return S(e);
+                return T(e);
             case b.uaV.GUILD_BOOST:
                 return A(O);
             case b.uaV.GUILD_BOOST_TIER_1:
@@ -261,11 +261,11 @@ let w = {
                 );
             case b.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION:
                 if (e instanceof f.ZP) return null;
-                let w = (0, c.ZH)((0, l.e5)(e));
+                let D = (0, c.ZH)((0, l.e5)(e));
                 return (0, a.Rp)(
                     (0, u.Y)({
                         application: e.application,
-                        username: w.nick,
+                        username: D.nick,
                     }),
                 );
             case b.uaV.PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -286,9 +286,9 @@ let w = {
                 );
             case b.uaV.AUTO_MODERATION_ACTION:
                 if (
-                    null == (p = e.embeds)
+                    null == (_ = e.embeds)
                         ? void 0
-                        : p.some((e) => {
+                        : _.some((e) => {
                               let { type: t } = e;
                               return t === b.hBH.AUTO_MODERATION_NOTIFICATION;
                           })
@@ -298,16 +298,16 @@ let w = {
                             return t === b.hBH.AUTO_MODERATION_NOTIFICATION;
                         }),
                         n =
-                            null == t || null == (h = t.fields)
+                            null == t || null == (m = t.fields)
                                 ? void 0
-                                : h.find((e) => "name" in e && e.name === r.D.NOTIFICATION_TYPE);
-                    return P(E, null != n && "value" in n ? n.value : void 0);
+                                : m.find((e) => "name" in e && e.name === r.D.NOTIFICATION_TYPE);
+                    return R(E, null != n && "value" in n ? n.value : void 0);
                 }
                 return e.content;
             case b.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED:
                 return N(O, E, e.content);
             case b.uaV.GUILD_INCIDENT_ALERT_MODE_DISABLED:
-                return R(O, E);
+                return P(O, E);
             default:
                 return e.content;
         }
@@ -317,7 +317,7 @@ let w = {
             n = E.default.extractTimestamp(e) % t.length;
         return t[n];
     },
-    getSystemMessageUserJoinMobile: T,
+    getSystemMessageUserJoinMobile: I,
     getSystemMessageBotJoin: function (e) {
         return null == O[e] ? null : y.intl.format(y.t.xw1Ij0, { learnOnClick: { onClick: () => window.open(O[e]) } });
     },

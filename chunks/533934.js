@@ -183,7 +183,7 @@ let eU = (0, u.Un)({
         renderLoader: eG,
     }),
     eK = (0, u.Un)({
-        createPromise: () => Promise.all([n.e("63639"), n.e("62934")]).then(n.bind(n, 109838)),
+        createPromise: () => Promise.all([n.e("67365"), n.e("62934")]).then(n.bind(n, 109838)),
         webpackId: 109838,
         name: "GameServerPage",
         renderLoader: eG,

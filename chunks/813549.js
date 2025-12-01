@@ -19,15 +19,15 @@ let c = (e) => {
         botType: u,
         usernameClass: d,
         discriminatorClass: f,
-        botClass: _,
-        botVerified: p = !1,
-        style: h,
-        useRemSizes: m = !1,
+        botClass: p,
+        botVerified: _ = !1,
+        style: m,
+        useRemSizes: h = !1,
         usernameIcon: g,
     } = e;
     return (0, r.jsxs)("div", {
         className: a()(c, l.nameTag),
-        style: h,
+        style: m,
         children: [
             (0, r.jsxs)("span", {
                 className: a()(l.username, d),
@@ -44,9 +44,9 @@ let c = (e) => {
                 ? (0, r.jsx)(o.Z, {
                       type: u,
                       invertColor: i,
-                      className: a()(_, l.bot),
-                      verified: p,
-                      useRemSizes: m,
+                      className: a()(p, l.bot),
+                      verified: _,
+                      useRemSizes: h,
                   })
                 : null,
         ],

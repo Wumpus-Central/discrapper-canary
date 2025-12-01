@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685), n(35282), n(415506), n(539854), n(993155);
+n.d(t, { Z: () => k }), n(388685), n(35282), n(415506), n(539854), n(993155);
 var r,
     i = n(348327),
     a = n.n(i),
@@ -9,10 +9,10 @@ var r,
     u = n(726542),
     d = n(81063),
     f = n(70956),
-    _ = n(553795),
-    p = n(246946),
-    h = n(981631);
-function m(e, t, n) {
+    p = n(553795),
+    _ = n(246946),
+    m = n(981631);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,17 +31,17 @@ let g = "33kozedd0zs6fbauka98psnc7zwom2s",
     y = 5 * f.Z.Millis.MINUTE,
     O = "https://api.twitch.tv/helix",
     v = /live_user_(.*)-\{width\}/,
-    I = 128,
-    T = null,
-    S = 0,
+    S = 128,
+    I = null,
+    T = 0,
     A = null,
     C = new Set(),
     N = {};
-function R(e) {
+function P(e) {
     var t;
     return null == (t = v.exec(e)) ? void 0 : t[1];
 }
-function P(e, t, n) {
+function R(e, t, n) {
     return s.tn.get({
         url: "".concat(O).concat(e),
         query: t,
@@ -52,24 +52,24 @@ function P(e, t, n) {
         rejectWithError: !1,
     });
 }
-async function D(e, t) {
+async function w(e, t) {
     var n;
     let r = N[e];
     if (null != r) return r;
     let {
             body: { data: i },
-        } = await P("/games", { id: e }, t),
+        } = await R("/games", { id: e }, t),
         a = null == (n = i[0]) ? void 0 : n.name;
     return (N[e] = a), a;
 }
-class w {
+class D {
     start() {
-        this._started || ((this._started = !0), _.Z.isFetching() ? c.Z.fetch() : this._check());
+        this._started || ((this._started = !0), p.Z.isFetching() ? c.Z.fetch() : this._check());
     }
     stop() {
         (this._started = !1),
             (A = null),
-            (S = 0),
+            (T = 0),
             null != this._nextCheck && clearTimeout(this._nextCheck),
             l.Z.dispatch({
                 type: "STREAMING_UPDATE",
@@ -83,7 +83,7 @@ class w {
             var n, r, i;
             let {
                     body: { data: a },
-                } = await P(
+                } = await R(
                     "/streams",
                     {
                         user_id: e.id,
@@ -94,21 +94,21 @@ class w {
                 o = a[0];
             if (null == o || "live" !== o.type) throw Error("no stream");
             let { thumbnail_url: s, game_id: l, title: c } = o,
-                f = { large_image: null != s && null != (r = (0, d.f)(h.ABu.TWITCH, s)) ? r : void 0 },
-                _ = await D(l, t),
-                p = u.Z.get(h.ABu.TWITCH),
-                m = null != (i = R(s)) ? i : e.name,
-                g = null != c && "" !== c ? c.slice(0, I) : void 0,
-                E = null != _ && "" !== _ ? _.slice(0, I) : void 0;
+                f = { large_image: null != s && null != (r = (0, d.f)(m.ABu.TWITCH, s)) ? r : void 0 },
+                p = await w(l, t),
+                _ = u.Z.get(m.ABu.TWITCH),
+                h = null != (i = P(s)) ? i : e.name,
+                g = null != c && "" !== c ? c.slice(0, S) : void 0,
+                E = null != p && "" !== p ? p.slice(0, S) : void 0;
             return {
                 url:
-                    null == (n = p.getPlatformUserUrl)
+                    null == (n = _.getPlatformUserUrl)
                         ? void 0
-                        : n.call(p, {
+                        : n.call(_, {
                               id: e.id,
-                              name: m,
+                              name: h,
                           }),
-                name: p.name,
+                name: _.name,
                 assets: f,
                 details: g,
                 state: E,
@@ -144,11 +144,11 @@ class w {
                     id: i,
                     snippet: { title: a, thumbnails: o },
                 } = r[0],
-                l = { large_image: null != (n = (0, d.f)(h.ABu.YOUTUBE, o.high.url)) ? n : void 0 },
-                c = null != a && "" !== a ? a.slice(0, I) : void 0;
+                l = { large_image: null != (n = (0, d.f)(m.ABu.YOUTUBE, o.high.url)) ? n : void 0 },
+                c = null != a && "" !== a ? a.slice(0, S) : void 0;
             return (A = {
                 url: b(i),
-                name: u.Z.get(h.ABu.YOUTUBE).name,
+                name: u.Z.get(m.ABu.YOUTUBE).name,
                 details: c,
                 assets: l,
             });
@@ -162,16 +162,16 @@ class w {
     }
     _check() {
         if (!this._started) return;
-        let e = _.Z.getAccounts();
+        let e = p.Z.getAccounts();
         if (null == e) return;
         null != this._nextCheck && clearTimeout(this._nextCheck);
-        let t = [h.ABu.TWITCH],
+        let t = [m.ABu.TWITCH],
             n = Date.now();
-        S <= n && (t.push(h.ABu.YOUTUBE), (S = n + y)),
+        T <= n && (t.push(m.ABu.YOUTUBE), (T = n + y)),
             Promise.allSettled(
                 e
                     .filter((e) => t.includes(e.type))
-                    .map((e) => (e.type === h.ABu.TWITCH ? this._checkTwitch(e) : this._checkYouTube(e))),
+                    .map((e) => (e.type === m.ABu.TWITCH ? this._checkTwitch(e) : this._checkYouTube(e))),
             ).then((e) => {
                 if (this._started) {
                     var t;
@@ -189,28 +189,28 @@ class w {
         this._started && (this._nextCheck = setTimeout(() => this._check(), E));
     }
     constructor() {
-        m(this, "_nextCheck", void 0), m(this, "_started", void 0), (this._started = !1);
+        h(this, "_nextCheck", void 0), h(this, "_started", void 0), (this._started = !1);
     }
 }
-let L = new w();
-function x() {
-    p.Z.enabled ? L.start() : L.stop();
+let x = new D();
+function L() {
+    _.Z.enabled ? x.start() : x.stop();
 }
-function M(e) {
+function j(e) {
     var t;
-    if (a()(e.stream, T)) return !1;
-    T = null != (t = e.stream) ? t : null;
+    if (a()(e.stream, I)) return !1;
+    I = null != (t = e.stream) ? t : null;
 }
-class k extends (r = o.ZP.Store) {
+class M extends (r = o.ZP.Store) {
     initialize() {
-        x(), this.waitFor(_.Z, p.Z), this.syncWith([p.Z], x);
+        L(), this.waitFor(p.Z, _.Z), this.syncWith([_.Z], L);
     }
     getStream() {
-        return T;
+        return I;
     }
 }
-m(k, "displayName", "ExternalStreamingStore");
-let j = new k(l.Z, {
-    STREAMING_UPDATE: M,
-    USER_CONNECTIONS_UPDATE: () => L._check(),
+h(M, "displayName", "ExternalStreamingStore");
+let k = new M(l.Z, {
+    STREAMING_UPDATE: j,
+    USER_CONNECTIONS_UPDATE: () => x._check(),
 });

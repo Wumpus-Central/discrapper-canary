@@ -11,12 +11,12 @@ function i(t, e, n) {
         t
     );
 }
-n.d(e, { Z: () => l }), n(388685);
-class l {
+n.d(e, { Z: () => r }), n(388685);
+class r {
     register(t, e, n, i) {
         this.map.set(t.key, {
             node: t,
-            targetPanelKey: e,
+            parentPanelKey: e,
             parentCategoryKey: n,
             parentAccordionKey: i,
         });

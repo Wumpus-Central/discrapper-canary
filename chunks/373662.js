@@ -1,7 +1,7 @@
 n.d(t, {
     ZP: () => E,
     fO: () => g,
-    sF: () => m,
+    sF: () => h,
 });
 var r = n(54381),
     i = n(473749),
@@ -51,7 +51,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -62,11 +62,11 @@ function _(e, t) {
         e
     );
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -74,7 +74,7 @@ function p(e, t) {
     }
     return i;
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -83,15 +83,15 @@ function h(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let m = i.forwardRef(function (e, t) {
+let h = i.forwardRef(function (e, t) {
     var {
             label: n,
             ariaLabel: i,
             tooltipText: a,
             icon: u,
             iconProps: f,
-            onClick: h,
-            onTooltipShow: m,
+            onClick: m,
+            onTooltipShow: h,
             onTooltipHide: g,
             disabled: E,
             dangerous: b,
@@ -99,7 +99,7 @@ let m = i.forwardRef(function (e, t) {
             buttonClassName: O,
             children: v,
         } = e,
-        I = p(e, [
+        S = _(e, [
             "label",
             "ariaLabel",
             "tooltipText",
@@ -118,25 +118,25 @@ let m = i.forwardRef(function (e, t) {
         asContainer: !0,
         __unsupportedReactNodeAsText: null != a ? a : n,
         "aria-label": n,
-        onTooltipShow: m,
+        onTooltipShow: h,
         onTooltipHide: g,
         children: (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)(
                     l.zx,
-                    _(
+                    p(
                         d(
                             {
                                 ref: t,
                                 className: o()(c.hoverBarButton, O),
                                 onClick: (e) => {
-                                    h(e);
+                                    m(e);
                                 },
                                 "aria-label": null != i ? i : n,
                                 disabled: E,
                                 dangerous: b,
                             },
-                            I,
+                            S,
                         ),
                         {
                             children: [
@@ -173,7 +173,7 @@ function g(e) {
 }
 function E(e) {
     var { children: t } = e,
-        n = p(e, ["children"]);
+        n = _(e, ["children"]);
     return (0, r.jsx)(l.ZP, {
         className: o()(n.className, c.popover),
         children: t,

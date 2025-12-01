@@ -1,6 +1,6 @@
 n.d(t, {
-    T: () => p,
-    Z: () => _,
+    T: () => _,
+    Z: () => p,
 }),
     n(539854);
 var r = n(473749),
@@ -13,11 +13,11 @@ var r = n(473749),
     u = n(944486),
     d = n(981631),
     f = n(647086);
-function _(e) {
+function p(e) {
     let { withVoiceChannels: t = !1, withCurrentVoiceChannel: n = !1 } =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         r = arguments.length > 2 ? arguments[2] : void 0;
-    return h(
+    return m(
         e === f._ || e === d.I_8 ? (0, o.t)() : a.Z.getGuildWithoutChangingGuildActionRows(e).guildChannels,
         {
             currentVoiceChannelId: u.Z.getVoiceChannelId(),
@@ -30,23 +30,23 @@ function _(e) {
         r,
     );
 }
-function p(e, t, n) {
+function _(e, t, n) {
     let { withVoiceChannels: a = !1, withCurrentVoiceChannel: o = !1 } =
             arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
         s = arguments.length > 4 ? arguments[4] : void 0,
         d = (0, i.e7)([c.default], () => c.default.getGuildChangeSentinel(e)),
         f = (0, i.e7)([l.Z], () => l.Z.version),
-        { currentVoiceChannelId: _, selectedChannelId: p } = (0, i.cj)([u.Z], () => ({
+        { currentVoiceChannelId: p, selectedChannelId: _ } = (0, i.cj)([u.Z], () => ({
             currentVoiceChannelId: u.Z.getVoiceChannelId(),
             selectedChannelId: u.Z.getChannelId(),
         }));
     return (0, r.useMemo)(
         () =>
-            h(
+            m(
                 t,
                 {
-                    currentVoiceChannelId: _,
-                    selectedChannelId: p,
+                    currentVoiceChannelId: p,
+                    selectedChannelId: _,
                 },
                 {
                     withVoiceChannels: a,
@@ -57,7 +57,7 @@ function p(e, t, n) {
         [t, n, d, f],
     );
 }
-function h(e, t) {
+function m(e, t) {
     let { currentVoiceChannelId: n, selectedChannelId: r } = t,
         { withVoiceChannels: i, withCurrentVoiceChannel: a } =
             arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},

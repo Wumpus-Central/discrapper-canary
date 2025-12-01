@@ -1,6 +1,6 @@
 n.d(t, {
     I: () => O,
-    L0: () => m,
+    L0: () => h,
     Rr: () => E,
     nH: () => y,
     tp: () => g,
@@ -16,16 +16,16 @@ var r = n(704215),
     u = n(982863),
     d = n(987562),
     f = n(981631);
-let _ = 3 * s.Z.Millis.DAY,
-    p = s.Z.Millis.WEEK,
-    h = s.Z.Millis.DAYS_30,
-    m = () => {
+let p = 3 * s.Z.Millis.DAY,
+    _ = s.Z.Millis.WEEK,
+    m = s.Z.Millis.DAYS_30,
+    h = () => {
         if (!(0, l.nZ)("block_user_feedback_utils")) return !1;
         let e = a.Z.getSinces();
         return Object.keys(e).some((t) => {
             let n = t,
                 r = Date.now() - Date.parse(e[n]);
-            return a.Z.isBlocked(n) && r > p && r < h;
+            return a.Z.isBlocked(n) && r > _ && r < m;
         });
     },
     g = (e, t, n, r) => {
@@ -41,12 +41,12 @@ let _ = 3 * s.Z.Millis.DAY,
         if (!e) return !1;
         let { isDismissed: n } = (0, i.Fo)(r.z.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK, { cooldownDurationMs: d.pv });
         if (n) return !1;
-        let o = t ? _ : p,
+        let o = t ? p : _,
             s = c.Z.getIgnoreTimestamps();
         return Object.keys(s).some((e) => {
             let t = e,
                 n = Date.now() - Number(s[t]);
-            return a.Z.isIgnored(t) && n > o && n < h;
+            return a.Z.isIgnored(t) && n > o && n < m;
         });
     },
     b = (e, t, n, r) => {

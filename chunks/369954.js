@@ -1,4 +1,4 @@
-n.d(t, { J: () => S });
+n.d(t, { J: () => T });
 var r = n(54381),
     i = n(473749),
     a = n(793030),
@@ -9,13 +9,13 @@ var r = n(54381),
     u = n(981312),
     d = n(342386),
     f = n(260722),
-    _ = n(277537),
-    p = n(841409),
-    h = n(780985),
-    m = n(631885),
+    p = n(277537),
+    _ = n(841409),
+    m = n(780985),
+    h = n(631885),
     g = n(292352),
     E = n(981631),
-    b = n(597754),
+    b = n(744038),
     y = n(388032),
     O = n(271650);
 let v = (e) => {
@@ -43,8 +43,8 @@ let v = (e) => {
             ],
         });
     },
-    I = () => {
-        let e = (0, m.ZM)(),
+    S = () => {
+        let e = (0, h.ZM)(),
             t = () => {
                 (0, d.default)(), s.Z.openPrivateChannel({ recipientIds: e });
             },
@@ -91,10 +91,10 @@ let v = (e) => {
             ],
         });
     },
-    T = () => {
-        let e = (0, h.cz)(),
-            t = (0, h.$r)(),
-            { handleTabChange: n } = (0, p.Z)();
+    I = () => {
+        let e = (0, m.cz)(),
+            t = (0, m.$r)(),
+            { handleTabChange: n } = (0, _.Z)();
         i.useEffect(() => {
             (null == e ? void 0 : e.id) != null && t && f.ZP.fetchTeenSettingsAndConsents(null == e ? void 0 : e.id);
         }, [null == e ? void 0 : e.id, t]);
@@ -132,13 +132,13 @@ let v = (e) => {
             ],
         });
     },
-    S = () => {
+    T = () => {
         let e = (0, u.U)(),
-            t = (0, m.ZM)();
-        return (0, _.PO)("settings-controls") && 0 !== t.length
+            t = (0, h.ZM)();
+        return (0, p.PO)("settings-controls") && 0 !== t.length
             ? (0, r.jsx)("div", {
                   className: O.container,
-                  children: e ? (0, r.jsx)(I, {}) : (0, r.jsx)(T, {}),
+                  children: e ? (0, r.jsx)(S, {}) : (0, r.jsx)(I, {}),
               })
             : null;
     };

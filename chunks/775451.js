@@ -1,6 +1,6 @@
 n.d(t, {
     V9: () => g,
-    ek: () => m,
+    ek: () => h,
 }),
     n(388685);
 var r = n(54381),
@@ -13,12 +13,12 @@ var r = n(54381),
     u = n(317257),
     d = n(120786),
     f = n(82856),
-    _ = n(981631),
-    p = n(388032),
-    h = n(152935);
-let m = {
-        START: h.alignLeft,
-        END: h.alignRight,
+    p = n(981631),
+    _ = n(388032),
+    m = n(152935);
+let h = {
+        START: m.alignLeft,
+        END: m.alignRight,
     },
     g = (e) => {
         let {
@@ -26,47 +26,47 @@ let m = {
                 ctaText: n,
                 ctaOnClick: a,
                 analyticsPage: g,
-                linkText: E = p.intl.string(p.t.XRdyjz),
-                cardAlignment: b = m.START,
+                linkText: E = _.intl.string(_.t.XRdyjz),
+                cardAlignment: b = h.START,
                 className: y,
             } = e,
             { balance: O } = (0, c.A)(),
-            [v, I] = i.useState(u.b.DEFAULT),
-            [T, S] = i.useState(!1),
+            [v, S] = i.useState(u.b.DEFAULT),
+            [I, T] = i.useState(!1),
             [A, C] = i.useState(!1),
             N = i.useRef(null),
-            R = i.useCallback(() => {
-                let e = !T;
+            P = i.useCallback(() => {
+                let e = !I;
                 e &&
                     null != g &&
                     (0, l.Y)({
                         pageType: g,
-                        sectionType: _.jXE.ORBS_BALANCE_MENU,
-                        ctaObject: _.qAy.OPEN_ORB_BALANCE_MENU_FROM_PILL,
+                        sectionType: p.jXE.ORBS_BALANCE_MENU,
+                        ctaObject: p.qAy.OPEN_ORB_BALANCE_MENU_FROM_PILL,
                     }),
-                    I(e ? u.b.SELECTED : u.b.DEFAULT),
-                    S(e);
-            }, [T, g]),
-            P = i.useCallback(() => {
-                T && R();
-            }, [T, R]),
-            D = (0, s.Z)(null, P),
-            w = i.useMemo(
+                    S(e ? u.b.SELECTED : u.b.DEFAULT),
+                    T(e);
+            }, [I, g]),
+            R = i.useCallback(() => {
+                I && P();
+            }, [I, P]),
+            w = (0, s.Z)(null, R),
+            D = i.useMemo(
                 () =>
                     (0, r.jsx)(d.L, {
                         analyticsPage: g,
                         ctaText: n,
                         ctaOnClick: () => {
-                            R(), a();
+                            P(), a();
                         },
                         linkText: E,
                     }),
-                [g, n, E, R, a],
+                [g, n, E, P, a],
             );
         return (0, r.jsxs)("div", {
-            className: o()(h.container, y, {
-                [h.hidden]: A,
-                [h.visible]: !A,
+            className: o()(m.container, y, {
+                [m.hidden]: A,
+                [m.visible]: !A,
             }),
             children: [
                 (0, r.jsx)(f.y, {
@@ -76,19 +76,19 @@ let m = {
                     onMouseDown: (e) => {
                         e.stopPropagation();
                     },
-                    onClick: R,
+                    onClick: P,
                     showNotificationBadge: t,
                 }),
-                T &&
+                I &&
                     (0, r.jsx)("div", {
-                        className: o()(h.cardContainer, b, {
-                            [h.hidden]: A,
-                            [h.visible]: !A,
+                        className: o()(m.cardContainer, b, {
+                            [m.hidden]: A,
+                            [m.visible]: !A,
                         }),
-                        ref: D,
-                        children: w,
+                        ref: w,
+                        children: D,
                     }),
             ],
         });
     };
-g.CardAlignment = m;
+g.CardAlignment = h;

@@ -1,8 +1,8 @@
 n.d(t, {
-    Fs: () => p,
-    Xu: () => _,
+    Fs: () => _,
+    Xu: () => p,
     ZP: () => f,
-    ms: () => m,
+    ms: () => h,
     sV: () => u,
 }),
     n(415506);
@@ -21,7 +21,7 @@ async function f(e, t) {
     if (
         (null != r &&
             null ==
-                (n = _(
+                (n = p(
                     {
                         channel: r,
                         type: "channel",
@@ -32,7 +32,7 @@ async function f(e, t) {
                 type: "application",
                 applicationId: t,
             }),
-            (n = _(
+            (n = p(
                 {
                     channel: r,
                     type: "channel",
@@ -44,7 +44,7 @@ async function f(e, t) {
         return n;
     throw Error(u);
 }
-function _(e, t) {
+function p(e, t) {
     return l.ZP.query(
         e,
         { commandTypes: [a.yU.PRIMARY_ENTRY_POINT] },
@@ -57,8 +57,8 @@ function _(e, t) {
         },
     ).commands[0];
 }
-function p(e, t) {
-    let { commands: n, loading: i } = h(e, t),
+function _(e, t) {
+    let { commands: n, loading: i } = m(e, t),
         a = n[0],
         o = null != a;
     return (
@@ -73,7 +73,7 @@ function p(e, t) {
         a
     );
 }
-function h(e, t) {
+function m(e, t) {
     return (0, l.v1)(
         e,
         { commandTypes: d },
@@ -86,9 +86,9 @@ function h(e, t) {
         },
     );
 }
-function m(e) {
+function h(e) {
     let { context: t, applicationId: n, botUserId: r } = e,
-        i = p(t, n);
+        i = _(t, n);
     return null != i && null != r && g(i);
 }
 function g(e) {

@@ -1,7 +1,7 @@
 n.d(t, {
-    CR: () => p,
-    MA: () => m,
-    pV: () => h,
+    CR: () => _,
+    MA: () => h,
+    pV: () => m,
     vb: () => g,
 });
 var r = n(544891),
@@ -14,15 +14,15 @@ var r = n(544891),
     u = n(314852),
     d = n(981631);
 let f = 60000;
-function _(e) {
+function p(e) {
     return Date.now() - (null != e ? e : 0) > f;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return Promise.resolve(null);
     let n = u.Z.getFetchStatus(e) === u.a.FETCHING,
         o = u.Z.getLastSyncTimestamp(e),
         s = u.Z.getProfile(e),
-        l = _(o);
+        l = p(o);
     return n && !t
         ? Promise.resolve(null)
         : null == s || l || t
@@ -59,7 +59,7 @@ function p(e, t) {
                 }))
           : Promise.resolve(s);
 }
-function h(e, t) {
+function m(e, t) {
     return u.Z.getIsUpdating(e)
         ? Promise.resolve(null)
         : (i.Z.dispatch({
@@ -96,7 +96,7 @@ function h(e, t) {
                   );
               }));
 }
-async function m(e) {
+async function h(e) {
     let t = await r.tn.get({
         url: d.ANM.GUILD_TOP_GAMES(e),
         rejectWithError: !1,

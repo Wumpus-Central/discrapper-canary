@@ -29,7 +29,7 @@ d.Toggle = function (e) {
     let { className: t, text: n } = e,
         { isOpen: a, toggleOpen: d } = i.useContext(u),
         f = a ? s.u04 : s.CJ0,
-        _ = null != n ? n : a ? l.intl.string(l.t.fgq1gs) : l.intl.string(l.t.XJuakA);
+        p = null != n ? n : a ? l.intl.string(l.t.fgq1gs) : l.intl.string(l.t.XJuakA);
     return (0, r.jsxs)(s.P3F, {
         className: o()(c.toggle, t),
         onClick: d,
@@ -38,7 +38,7 @@ d.Toggle = function (e) {
                 variant: "heading-sm/semibold",
                 tag: "div",
                 color: "currentColor",
-                children: _,
+                children: p,
             }),
             (0, r.jsx)(f, {
                 size: "sm",

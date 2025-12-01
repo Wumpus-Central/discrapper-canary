@@ -1,4 +1,4 @@
-n.d(t, { F: () => m });
+n.d(t, { F: () => h });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,20 +9,20 @@ var r = n(54381),
     u = n(607070),
     d = n(104505),
     f = n(176354),
-    _ = n(300849);
-function p(e) {
+    p = n(300849);
+function _(e) {
     let { emoji: t, shouldAnimate: n } = e;
     if (null == t) return null;
     let i = f.ZP.isCustomEmoji(t) ? t.name : t.surrogates;
     return (0, r.jsx)(c.Z, {
-        className: _.traitEmoji,
+        className: p.traitEmoji,
         emojiId: t.id,
         emojiName: i,
         animated: t.animated,
         shouldAnimate: n,
     });
 }
-function h(e) {
+function m(e) {
     let { trait: t, ellipsize: n } = e,
         a = i.useRef(null),
         c = (0, d.X)(a),
@@ -31,15 +31,15 @@ function h(e) {
         ? null
         : (0, r.jsxs)("div", {
               ref: a,
-              className: o()(_.trait, { [_.ellipsize]: n }),
+              className: o()(p.trait, { [p.ellipsize]: n }),
               children: [
-                  (0, r.jsx)(p, {
+                  (0, r.jsx)(_, {
                       emoji: t.emoji,
                       shouldAnimate: f,
                   }),
                   (0, r.jsx)(l.Text, {
                       tag: "span",
-                      className: n ? _.ellipsize : void 0,
+                      className: n ? p.ellipsize : void 0,
                       variant: "text-sm/normal",
                       color: "text-default",
                       children: t.label,
@@ -47,7 +47,7 @@ function h(e) {
               ],
           });
 }
-function m(e) {
+function h(e) {
     let { items: t } = e,
         n = i.useCallback(
             (e, t) =>
@@ -55,7 +55,7 @@ function m(e) {
                     ? (0, r.jsx)(
                           "div",
                           {
-                              className: o()(_.trait, { [_.ellipsize]: t.ellipsize }),
+                              className: o()(p.trait, { [p.ellipsize]: t.ellipsize }),
                               children: (0, r.jsx)(l.Text, {
                                   tag: "span",
                                   variant: "text-sm/normal",
@@ -66,7 +66,7 @@ function m(e) {
                           "overflow",
                       )
                     : (0, r.jsx)(
-                          h,
+                          m,
                           {
                               trait: e,
                               ellipsize: t.ellipsize,
@@ -88,7 +88,7 @@ function m(e) {
     return 0 === t.length
         ? null
         : (0, r.jsx)(l.Epb, {
-              className: _.container,
+              className: p.container,
               items: t,
               renderItem: a,
               renderOverflow: c,

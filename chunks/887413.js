@@ -1,4 +1,4 @@
-n.d(t, { i: () => h });
+n.d(t, { i: () => m });
 var r = n(54381),
     i = n(481060),
     a = n(451478),
@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,23 +58,23 @@ function _(e, t) {
         e
     );
 }
-function p() {
+function _() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.IlC.POPOUT;
     e !== c.IlC.APP &&
         (0, i.ZDy)(
             async () => {
                 let { default: t } = await n.e("47552").then(n.bind(n, 520977));
-                return (n) => (0, r.jsx)(t, _(d({}, n), { contextKey: e }));
+                return (n) => (0, r.jsx)(t, p(d({}, n), { contextKey: e }));
             },
             { contextKey: (0, i.VnL)(e) },
         );
 }
-function h() {
+function m() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.IlC.APP,
         t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = null != e ? e : (0, l.GB)();
     if (n !== c.IlC.APP && null != n) {
         if (a.Z.isFocused()) return;
-        t ? (o.isPlatformEmbedded ? s.ZP.focus() : window.focus()) : p(e);
+        t ? (o.isPlatformEmbedded ? s.ZP.focus() : window.focus()) : _(e);
     }
 }

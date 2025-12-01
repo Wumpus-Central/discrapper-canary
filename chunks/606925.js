@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(54381);
 n(473749);
 var i = n(442837),
@@ -56,11 +56,11 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function _(e) {
-    var { platform: t, variant: n = "secondary", size: c = "sm", onAction: f, icon: _ } = e,
-        p = d(e, ["platform", "variant", "size", "onAction", "icon"]);
+function p(e) {
+    var { platform: t, variant: n = "secondary", size: c = "sm", onAction: f, icon: p } = e,
+        _ = d(e, ["platform", "variant", "size", "onAction", "icon"]);
     if ((0, i.e7)([s.Z], () => s.Z.getAccounts().some((e) => e.type === t.type))) return null;
-    let h = () => {
+    let m = () => {
         null == f || f(),
             (0, o.Z)({
                 platformType: t.type,
@@ -71,14 +71,14 @@ function _(e) {
         a.Button,
         u(
             {
-                onClick: h,
+                onClick: m,
                 variant: n,
                 size: c,
-                icon: _,
+                icon: p,
                 text: l.intl.format(l.t.XWSHTb, { platform: t.name }),
                 fullWidth: !0,
             },
-            p,
+            _,
         ),
     );
 }

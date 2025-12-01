@@ -1,4 +1,4 @@
-n.d(t, { I: () => p }),
+n.d(t, { I: () => _ }),
     n(539854),
     n(415506),
     n(644351),
@@ -212,7 +212,7 @@ d.push(
             }
         },
     );
-class _ extends f {
+class p extends f {
     static canUse() {
         return !0;
     }
@@ -228,9 +228,9 @@ class _ extends f {
     }
     close() {}
 }
-function p(e) {
-    if (a.s.isDiscordGatewayPlaintextSet()) return new _(e);
+function _(e) {
+    if (a.s.isDiscordGatewayPlaintextSet()) return new p(e);
     for (var t of d) if (t.canUse()) return new t(e);
-    return new _(e);
+    return new p(e);
 }
-d.push(_);
+d.push(p);

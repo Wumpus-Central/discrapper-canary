@@ -1,6 +1,6 @@
 r.d(t, {
-    $0: () => u,
-    Tm: () => d,
+    $0: () => d,
+    Tm: () => u,
     ZP: () => p,
     oT: () => m,
 }),
@@ -9,16 +9,16 @@ r.d(t, {
 var n,
     i = r(473749),
     l = r(399606),
-    s = r(597688),
-    a = r(1870),
+    a = r(597688),
+    s = r(1870),
     o = r(884697),
     c = r(388032),
-    u = (((n = {}).PURCHASE = "purchase"), (n.PREMIUM_PURCHASE = "premium_purchase"), (n.PREVIEW = "preview"), n);
-let d = { skuId: "None" },
+    d = (((n = {}).PURCHASE = "purchase"), (n.PREMIUM_PURCHASE = "premium_purchase"), (n.PREVIEW = "preview"), n);
+let u = { skuId: "None" },
     m = { skuId: "Shop" },
     p = () => {
-        let e = (0, l.e7)([a.Z], () => a.Z.purchases),
-            [t, r] = (0, l.Wu)([s.Z], () => [s.Z.categories, s.Z.products]);
+        let e = (0, l.e7)([s.Z], () => s.Z.purchases),
+            [t, r] = (0, l.Wu)([a.Z], () => [a.Z.categories, a.Z.products]);
         return (0, i.useMemo)(() => {
             let n = (0, o.iC)(e, t).reduce(
                 (t, n) => {
@@ -41,7 +41,7 @@ let d = { skuId: "None" },
             return [
                 {
                     section: "purchase",
-                    items: [d, m, ...n.purchase],
+                    items: [u, m, ...n.purchase],
                     height: 12,
                     header: c.intl.string(c.t.VqmVqE),
                 },

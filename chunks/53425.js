@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(592125),
     u = n(938475),
     d = n(823379),
-    p = n(734190),
+    f = n(734190),
     h = n(388032),
-    f = n(113914);
+    p = n(113914);
 let g = i.memo(function (e) {
     let { channel: t, selectedChannel: n, selectedVoiceChannelId: i, sortedThreadIds: l, withGuildIcon: g } = e,
         { density: m } = (0, s.TCT)(),
@@ -22,18 +22,18 @@ let g = i.memo(function (e) {
             return null == t || 0 === t.length ? 0 : i !== e.id ? 40 : 32 * t.length + 8;
         });
     return (0, r.jsx)("li", {
-        className: f.container,
+        className: p.container,
         children: (0, r.jsxs)("ul", {
             role: "group",
             "aria-label": h.intl.formatToPlainString(h.t.EiyIi6, { channelName: t.name }),
             children: [
                 (0, r.jsx)("div", {
-                    className: o()(f.spineBorder, { [f.spineBorderWithGuildIcon]: g }),
+                    className: o()(p.spineBorder, { [p.spineBorderWithGuildIcon]: g }),
                     style: { bottom: ("cozy" === m ? 28 : 24) + _ },
                 }),
                 b.map((e, t) =>
                     (0, r.jsx)(
-                        p.Z,
+                        f.Z,
                         {
                             thread: e,
                             isSelectedChannel: (null == n ? void 0 : n.id) === e.id,

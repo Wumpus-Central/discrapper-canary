@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685), n(539854);
+n.d(t, { Z: () => h }), n(388685), n(539854);
 var r = n(54381),
     i = n(473749),
     a = n(442837),
@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(594174),
     d = n(981631),
     f = n(450779);
-let _ = [];
-function p(e, t) {
+let p = [];
+function _(e, t) {
     let n = (0, s.Z)(e, t);
     return i.useMemo(() => {
         let e = new Map();
@@ -22,7 +22,7 @@ function p(e, t) {
         );
     }, [n]);
 }
-function h(e) {
+function m(e) {
     let { application: t } = e;
     return (0, r.jsxs)("div", {
         className: f.subtext,
@@ -35,18 +35,18 @@ function h(e) {
         ],
     });
 }
-function m(e) {
-    let { menuItemId: t, user: n, label: s, gameRelationships: f, onClick: m, color: g } = e,
+function h(e) {
+    let { menuItemId: t, user: n, label: s, gameRelationships: f, onClick: h, color: g } = e,
         { id: E, bot: b } = n,
         y =
             (0, a.e7)([u.default], () => {
                 var e;
                 return (null == (e = u.default.getCurrentUser()) ? void 0 : e.id) === E;
             }) || b,
-        O = y ? _ : f,
-        [v, I] = i.useState(!1),
-        T = i.useCallback(() => I(!0), []),
-        S = i.useMemo(
+        O = y ? p : f,
+        [v, S] = i.useState(!1),
+        I = i.useCallback(() => S(!0), []),
+        T = i.useMemo(
             () =>
                 O.map((e) => {
                     let { applicationId: t } = e;
@@ -55,7 +55,7 @@ function m(e) {
             [O],
         ),
         A = (0, a.e7)([c.Z], () => c.Z.getRelationshipType(E), [E]),
-        C = p(S, v || 1 === O.length);
+        C = _(T, v || 1 === O.length);
     if (y || 0 === O.length || A === d.OGo.FRIEND) return null;
     if (1 === O.length) {
         let { applicationId: e } = O[0],
@@ -66,9 +66,9 @@ function m(e) {
                   color: g,
                   id: t,
                   label: s,
-                  subtext: (0, r.jsx)(h, { application: n }),
-                  onFocus: T,
-                  action: () => m(n),
+                  subtext: (0, r.jsx)(m, { application: n }),
+                  onFocus: I,
+                  action: () => h(n),
               });
     }
     let N = [];
@@ -86,7 +86,7 @@ function m(e) {
                             game: n,
                             size: l.A.XXSMALL,
                         }),
-                        action: () => m(n),
+                        action: () => h(n),
                     },
                     t,
                 ),
@@ -98,7 +98,7 @@ function m(e) {
               color: g,
               id: t,
               label: s,
-              onFocus: T,
+              onFocus: I,
               children: N,
           });
 }

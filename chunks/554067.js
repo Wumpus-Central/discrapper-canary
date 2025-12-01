@@ -3,8 +3,8 @@ var r = n(54381),
     l = n(473749),
     i = n(442837),
     a = n(481060),
-    s = n(706454),
-    o = n(626135),
+    o = n(706454),
+    s = n(626135),
     c = n(381585),
     u = n(501431),
     d = n(215023),
@@ -16,7 +16,7 @@ function m(e) {
         { searchQuery: m, onSetSearchQuery: h } = (0, u.S)(),
         [C, _] = l.useState(""),
         b = (0, c.sp)(),
-        v = (0, i.e7)([s.default], () => s.default.locale);
+        v = (0, i.e7)([o.default], () => o.default.locale);
     return (
         l.useEffect(() => {
             let e = setTimeout(() => {
@@ -32,7 +32,7 @@ function m(e) {
             className: p.searchBar,
             onClick: () => {
                 n !== d.AW.CATALOG && t(d.AW.CATALOG),
-                    o.default.track(f.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                    s.default.track(f.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                         collectibles_shop_session_id: null == b ? void 0 : b.sessionId,
                         page_section: null == b ? void 0 : b.pageSection,
                         page_category: null == b ? void 0 : b.pageCategory,
@@ -51,7 +51,7 @@ function m(e) {
                 onChange: _,
                 onClear: () => {
                     _(""),
-                        o.default.track(f.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                        s.default.track(f.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                             collectibles_shop_session_id: null == b ? void 0 : b.sessionId,
                             page_section: null == b ? void 0 : b.pageSection,
                             page_category: null == b ? void 0 : b.pageCategory,

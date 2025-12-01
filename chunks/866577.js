@@ -1,4 +1,4 @@
-n.d(t, { i: () => h });
+n.d(t, { i: () => m });
 var r = n(473749),
     i = n(793030),
     a = n(481060),
@@ -76,8 +76,8 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let _ = 10,
-    p = (e, t) => {
+let p = 10,
+    _ = (e, t) => {
         let n = {
                 opacity: 0,
                 transform: "",
@@ -99,20 +99,20 @@ let _ = 10,
             };
         switch (e) {
             case "top":
-                (n.transform = "translate3d(0, -".concat(_, "px, 0)")),
-                    (i.transform = "translate3d(0, -".concat(_, "px, 0)"));
+                (n.transform = "translate3d(0, -".concat(p, "px, 0)")),
+                    (i.transform = "translate3d(0, -".concat(p, "px, 0)"));
                 break;
             case "bottom":
-                (n.transform = "translate3d(0, ".concat(_, "px, 0)")),
-                    (i.transform = "translate3d(0, ".concat(_, "px, 0)"));
+                (n.transform = "translate3d(0, ".concat(p, "px, 0)")),
+                    (i.transform = "translate3d(0, ".concat(p, "px, 0)"));
                 break;
             case "left":
-                (n.transform = "translate3d(-".concat(_, "px, 0, 0)")),
-                    (i.transform = "translate3d(-".concat(_, "px, 0, 0)"));
+                (n.transform = "translate3d(-".concat(p, "px, 0, 0)")),
+                    (i.transform = "translate3d(-".concat(p, "px, 0, 0)"));
                 break;
             case "right":
-                (n.transform = "translate3d(".concat(_, "px, 0, 0)")),
-                    (i.transform = "translate3d(".concat(_, "px, 0, 0)"));
+                (n.transform = "translate3d(".concat(p, "px, 0, 0)")),
+                    (i.transform = "translate3d(".concat(p, "px, 0, 0)"));
         }
         return {
             from: n,
@@ -121,16 +121,16 @@ let _ = 10,
             config: void 0,
         };
     };
-function h(e) {
+function m(e) {
     let { shouldShow: t, caretPosition: n, onExitComplete: s } = e,
         { reducedMotion: c } = r.useContext(i.Sfi),
-        f = p(n, c.enabled),
-        { config: _ } = f,
-        h = d(f, ["config"]);
+        f = _(n, c.enabled),
+        { config: p } = f,
+        m = d(f, ["config"]);
     return (0, a.Yzy)(
         t,
-        u(l({}, h), {
-            config: null != _ ? _ : (e, n) => (t ? o.Z : o.R),
+        u(l({}, m), {
+            config: null != p ? p : (e, n) => (t ? o.Z : o.R),
             onRest: () => {
                 t || null == s || s();
             },

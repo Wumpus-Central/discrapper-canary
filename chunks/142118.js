@@ -7,20 +7,20 @@ var r = n(54381),
     s = n(175993);
 let c = l.memo(function (e) {
     let { node: t } = e,
-        { useTitle: n, useNavigationTitle: c, layout: u, init: d, useBadge: f, useNotice: b } = t,
-        y = null == n ? void 0 : n(),
-        p = null == f ? void 0 : f(),
-        v = null == b ? void 0 : b();
+        { useTitle: n, useNavigationTitle: c, layout: u, init: d, useBadge: f, useNotice: p } = t,
+        b = null == n ? void 0 : n(),
+        y = null == f ? void 0 : f(),
+        g = null == p ? void 0 : p();
     return (
         l.useEffect(() => {
             null == d || d();
         }, [d]),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                null != y &&
+                null != b &&
                     (0, r.jsx)(a.Y, {
-                        title: y,
-                        badge: p,
+                        title: b,
+                        badge: y,
                     }),
                 (0, r.jsx)("div", {
                     "data-settings-category-key": null != n || null != c ? t.key : void 0,
@@ -30,7 +30,7 @@ let c = l.memo(function (e) {
                 (0, r.jsxs)(i.Kqy, {
                     gap: 16,
                     children: [
-                        null != v && (0, r.jsx)(s.Z, { notice: v }),
+                        null != g && (0, r.jsx)(s.Z, { notice: g }),
                         u.map((e) => (0, r.jsx)(o.Z, { node: e }, e.key)),
                     ],
                 }),

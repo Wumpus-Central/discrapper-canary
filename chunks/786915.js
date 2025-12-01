@@ -47,9 +47,9 @@ function C(e) {
             channel: C,
             exitFullScreen: v,
             appContext: _,
-            analyticsLocation: x,
-            guildScheduledEvent: j,
-            shouldPrioritizeGroupPlusIcon: O = !1,
+            analyticsLocation: O,
+            guildScheduledEvent: x,
+            shouldPrioritizeGroupPlusIcon: j = !1,
             isRichPresenceInvite: E = !1,
             iconClassName: S,
             look: P,
@@ -98,15 +98,15 @@ function C(e) {
         M = null == C ? void 0 : C.getGuildId(),
         R = (0, a.e7)([p.Z], () => (null != M ? p.Z.getGuild(M) : null), [M]),
         L = (0, a.e7)([h.Z], () => (null != t ? h.Z.getApplicationActivity(t) : void 0)),
-        k = null == t || O ? o.ejJ : o.gQj,
-        D = null != t ? b.intl.string(b.t["OzOM/q"]) : b.intl.string(b.t["6F9ivu"]);
+        D = null == t || j ? o.ejJ : o.gQj,
+        k = null != t ? b.intl.string(b.t["OzOM/q"]) : b.intl.string(b.t["6F9ivu"]);
     return null != L && E
         ? (0, i.jsx)(m.Z, {
               onClick: () => {
                   null != w && (0, u.v)(w, u.d.INVITE), s.h7(L, !1, A);
               },
-              iconComponent: k,
-              label: D,
+              iconComponent: D,
+              label: k,
               iconClassName: S,
               look: P,
               size: I,
@@ -139,7 +139,7 @@ function C(e) {
                                                 let { default: e } = await Promise.all([
                                                     n.e("49049"),
                                                     n.e("7654"),
-                                                    n.e("68971"),
+                                                    n.e("89772"),
                                                 ]).then(n.bind(n, 560114));
                                                 return (n) => {
                                                     var o, s;
@@ -193,12 +193,12 @@ function C(e) {
                                     applicationId: t,
                                     appContext: null != _ ? _ : A,
                                     exitFullScreen: v,
-                                    analyticsLocation: x,
-                                    guildScheduledEvent: j,
+                                    analyticsLocation: O,
+                                    guildScheduledEvent: x,
                                 });
                         },
-                        iconComponent: k,
-                        label: D,
+                        iconComponent: D,
+                        label: k,
                         iconClassName: S,
                         look: P,
                         size: I,

@@ -1,12 +1,12 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(120356),
-    o = n.n(l),
-    a = n(790519),
+    a = n.n(l),
+    o = n(666917),
     s = n(481060),
-    c = n(110924),
-    u = n(569545),
+    u = n(110924),
+    c = n(569545),
     d = n(237997),
     h = n(444295),
     p = n(752802),
@@ -15,7 +15,7 @@ var i = n(54381),
     g = n(340101),
     y = n(981631),
     O = n(339882);
-function v(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -40,7 +40,7 @@ function v(e) {
     }
     return e;
 }
-function E(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,68 +58,68 @@ function E(e, t) {
         e
     );
 }
-let b = {
+let S = {
         mass: 1,
         tension: 250,
         friction: 18,
         clamp: !0,
     },
-    _ = r.memo(function (e) {
+    b = r.memo(function (e) {
         let {
                 widgetId: t,
                 tileWidth: n,
                 tileHeight: l,
-                layout: _,
-                locked: S,
-                activeStreams: x,
+                layout: b,
+                locked: x,
+                activeStreams: j,
                 streamParticipants: I,
                 participantsVersion: C,
-                pinned: j,
+                pinned: Z,
                 padding: N,
             } = e,
-            Z = I.map((e) => ({
+            w = I.map((e) => ({
                 participant: e,
                 key: e.user.id,
                 width: n,
                 height: l,
-                locked: S,
+                locked: x,
                 widgetId: t,
-                pinned: j,
+                pinned: Z,
             })),
-            w = (0, c.Z)(n),
-            T = (0, c.Z)(S),
-            P = _ === g.C5.VERTICAL,
-            A = S || T !== S || w !== n,
-            k = r.useMemo(() => {
+            T = (0, u.Z)(n),
+            _ = (0, u.Z)(x),
+            P = b === g.C5.VERTICAL,
+            A = x || _ !== x || T !== n,
+            D = r.useMemo(() => {
                 let e = 0,
                     t = 0;
                 return P
-                    ? Z.map((t, n) =>
-                          E(v({}, t), {
+                    ? w.map((t, n) =>
+                          v(E({}, t), {
                               y: (e += t.height + (n > 0 ? N : 0)) - t.height,
                               x: 0,
                           }),
                       )
-                    : Z.map((e, n) =>
-                          E(v({}, e), {
+                    : w.map((e, n) =>
+                          v(E({}, e), {
                               x: (t += e.width + (n > 0 ? N : 0)) - e.width,
                               y: 0,
                           }),
                       );
-            }, [Z, N, P]),
-            D = r.useMemo(
-                () =>
-                    0 === k.length
-                        ? (0, m.MH)(f.bt)
-                        : k.reduce((e, t) => e + t.height, 0) + (P ? N * (k.length - 1) : 0),
-                [k, P, N],
-            ),
+            }, [w, N, P]),
             R = r.useMemo(
-                () => (0 === k.length ? f.bt : k.reduce((e, t) => e + t.width, 0) + (P ? 0 : N * (k.length - 1))),
-                [k, P, N],
+                () =>
+                    0 === D.length
+                        ? (0, m.MH)(f.bt)
+                        : D.reduce((e, t) => e + t.height, 0) + (P ? N * (D.length - 1) : 0),
+                [D, P, N],
+            ),
+            k = r.useMemo(
+                () => (0 === D.length ? f.bt : D.reduce((e, t) => e + t.width, 0) + (P ? 0 : N * (D.length - 1))),
+                [D, P, N],
             ),
             L = (0, s.Yzy)(
-                k,
+                D,
                 {
                     key: (e) => e.key,
                     from: {
@@ -149,40 +149,40 @@ let b = {
                             height: r,
                         };
                     },
-                    config: b,
+                    config: S,
                     trail: 100 * !A,
                 },
                 A ? "animate-never" : "respect-motion-settings",
             ),
             M = (0, h.ee)(() => new Set(I.map((e) => e.user.id)), [I, C]),
-            z = (0, h.ee)(() => new Set(I.filter((e) => x.has((0, u.V9)(e.stream))).map((e) => e.user.id)), [I, x, C]);
+            V = (0, h.ee)(() => new Set(I.filter((e) => j.has((0, c.V9)(e.stream))).map((e) => e.user.id)), [I, j, C]);
         return (
             r.useEffect(() => {
                 0 !== M.size &&
                     (0, h.zi)(y.Odu.GO_LIVE, {
                         locked: d.default.isInstanceLocked(),
                         shownUserIds: Array.from(M),
-                        liveUserIds: Array.from(z),
+                        liveUserIds: Array.from(V),
                         contentInventoryIds: [],
                     });
-            }, [M, z]),
+            }, [M, V]),
             (0, i.jsx)("div", {
-                className: o()({
+                className: a()({
                     [O.gridContainer]: !0,
                     [O.vertical]: P,
                     [O.horizontal]: !P,
                 }),
-                style: P ? { height: D } : { width: R },
-                children: L((e, t, r, o) =>
-                    (0, i.jsx)(a.animated.div, {
+                style: P ? { height: R } : { width: k },
+                children: L((e, t, r, a) =>
+                    (0, i.jsx)(o.animated.div, {
                         className: O.gridItem,
                         style: Object.assign({}, e, {
                             width: n,
                             height: l,
-                            zIndex: Z.length - o,
+                            zIndex: w.length - a,
                         }),
                         children: ((e) => {
-                            let { participant: t, width: n, locked: r, widgetId: l, pinned: o } = e;
+                            let { participant: t, width: n, locked: r, widgetId: l, pinned: a } = e;
                             return (0, i.jsx)("div", {
                                 className: O.tileContainer,
                                 children: (0, i.jsx)(
@@ -192,7 +192,7 @@ let b = {
                                         width: n,
                                         locked: r,
                                         widgetId: l,
-                                        pinned: o,
+                                        pinned: a,
                                     },
                                     t.user.id,
                                 ),

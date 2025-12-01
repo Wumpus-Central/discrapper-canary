@@ -48,7 +48,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -60,22 +60,22 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let h = "__DEBUG_PROFILE_EFFECTS_STORE",
-    m = { profileEffects: null != (r = l.K.get(h)) ? r : {} },
+let m = "__DEBUG_PROFILE_EFFECTS_STORE",
+    h = { profileEffects: null != (r = l.K.get(m)) ? r : {} },
     g = (e) => {
         try {
-            l.K.set(h, e.profileEffects);
+            l.K.set(m, e.profileEffects);
         } catch (e) {
             console.error(e),
                 (0, c.showToast)(
@@ -87,7 +87,7 @@ let h = "__DEBUG_PROFILE_EFFECTS_STORE",
         }
     },
     E = (0, o.F)((e) =>
-        p(f({}, m), {
+        _(f({}, h), {
             upsertConfig: (t) =>
                 (0, s.j)(() => {
                     e((e) => {
@@ -104,7 +104,7 @@ let h = "__DEBUG_PROFILE_EFFECTS_STORE",
                 }),
             clearAll: () =>
                 (0, s.j)(() => {
-                    e(() => (l.K.remove(h), { profileEffects: {} }));
+                    e(() => (l.K.remove(m), { profileEffects: {} }));
                 }),
         }),
     ),
@@ -132,15 +132,15 @@ let h = "__DEBUG_PROFILE_EFFECTS_STORE",
                         let t = (0, u.$j)(e);
                         return n.current.push(t), t;
                     },
-                    r = t.config.effects.map((t) => p(f({}, t), { src: e(t.base64) })),
+                    r = t.config.effects.map((t) => _(f({}, t), { src: e(t.base64) })),
                     i = t.config.stillFrames,
                     a = null != i ? f({}, i) : {};
                 for (let t in a) {
                     let n = a[t];
-                    null != n && (a[t] = p(f({}, n), { src: e(n.base64) }));
+                    null != n && (a[t] = _(f({}, n), { src: e(n.base64) }));
                 }
-                return p(f({}, t), {
-                    config: p(f({}, t.config), {
+                return _(f({}, t), {
+                    config: _(f({}, t.config), {
                         effects: r,
                         stillFrames: a,
                     }),

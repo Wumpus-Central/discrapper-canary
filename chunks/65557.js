@@ -52,5 +52,5 @@ function d(e) {
 function f(e, t) {
     return t();
 }
-var _ = "undefined" == typeof window || void 0 === window.document || void 0 === window.document.createElement ? f : u;
-t.useSyncExternalStore = void 0 !== r.useSyncExternalStore ? r.useSyncExternalStore : _;
+var p = "undefined" == typeof window || void 0 === window.document || void 0 === window.document.createElement ? f : u;
+t.useSyncExternalStore = void 0 !== r.useSyncExternalStore ? r.useSyncExternalStore : p;

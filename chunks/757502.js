@@ -1,66 +1,66 @@
-_.d(e, { v: () => n });
-var a = _(899517),
-    r = _(679179);
-let n = (0, _(151122)._I)((t = {}) => {
-    let e = t.root,
-        _ = t.prefix || "app:///",
-        n = "window" in a.n && void 0 !== a.n.window,
+r.d(t, { v: () => i });
+var n = r(899517),
+    a = r(679179);
+let i = (0, r(151122)._I)((e = {}) => {
+    let t = e.root,
+        r = e.prefix || "app:///",
+        i = "window" in n.n && void 0 !== n.n.window,
         o =
-            t.iteratee ||
-            (function ({ isBrowser: t, root: e, prefix: _ }) {
-                return (a) => {
-                    if (!a.filename) return a;
-                    let n = /^[a-zA-Z]:\\/.test(a.filename) || (a.filename.includes("\\") && !a.filename.includes("/")),
-                        o = /^\//.test(a.filename);
-                    if (t) {
-                        if (e) {
-                            let t = a.filename;
-                            0 === t.indexOf(e) && (a.filename = t.replace(e, _));
+            e.iteratee ||
+            (function ({ isBrowser: e, root: t, prefix: r }) {
+                return (n) => {
+                    if (!n.filename) return n;
+                    let i = /^[a-zA-Z]:\\/.test(n.filename) || (n.filename.includes("\\") && !n.filename.includes("/")),
+                        o = /^\//.test(n.filename);
+                    if (e) {
+                        if (t) {
+                            let e = n.filename;
+                            0 === e.indexOf(t) && (n.filename = e.replace(t, r));
                         }
-                    } else if (n || o) {
-                        let t = n ? a.filename.replace(/^[a-zA-Z]:/, "").replace(/\\/g, "/") : a.filename,
-                            o = e ? (0, r.Gf)(e, t) : (0, r.EZ)(t);
-                        a.filename = `${_}${o}`;
+                    } else if (i || o) {
+                        let e = i ? n.filename.replace(/^[a-zA-Z]:/, "").replace(/\\/g, "/") : n.filename,
+                            o = t ? (0, a.Gf)(t, e) : (0, a.EZ)(e);
+                        n.filename = `${r}${o}`;
                     }
-                    return a;
+                    return n;
                 };
             })({
-                isBrowser: n,
-                root: e,
-                prefix: _,
+                isBrowser: i,
+                root: t,
+                prefix: r,
             });
     return {
         name: "RewriteFrames",
-        processEvent(t) {
-            let e = t;
+        processEvent(e) {
+            let t = e;
             return (
-                t.exception &&
-                    Array.isArray(t.exception.values) &&
-                    (e = (function (t) {
+                e.exception &&
+                    Array.isArray(e.exception.values) &&
+                    (t = (function (e) {
                         try {
                             return {
-                                ...t,
+                                ...e,
                                 exception: {
-                                    ...t.exception,
-                                    values: t.exception.values.map((t) => {
-                                        var e;
+                                    ...e.exception,
+                                    values: e.exception.values.map((e) => {
+                                        var t;
                                         return {
-                                            ...t,
-                                            ...(t.stacktrace && {
+                                            ...e,
+                                            ...(e.stacktrace && {
                                                 stacktrace: {
-                                                    ...(e = t.stacktrace),
-                                                    frames: e && e.frames && e.frames.map((t) => o(t)),
+                                                    ...(t = e.stacktrace),
+                                                    frames: t && t.frames && t.frames.map((e) => o(e)),
                                                 },
                                             }),
                                         };
                                     }),
                                 },
                             };
-                        } catch (e) {
-                            return t;
+                        } catch (t) {
+                            return e;
                         }
-                    })(e)),
-                e
+                    })(t)),
+                t
             );
         },
     };

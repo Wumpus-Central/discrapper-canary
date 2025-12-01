@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(54381),
     i = n(473749),
     a = n(374470),
@@ -76,7 +76,7 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function _(e) {
+function p(e) {
     e.removeAttribute("src"),
         Array.from(e.children).forEach((e) => {
             (0, a.kK)(e, HTMLSourceElement) && (e.removeAttribute("src"), e.removeAttribute("type")),
@@ -86,7 +86,7 @@ function _(e) {
         e.load();
     } catch (e) {}
 }
-let p = (e) => {
+let _ = (e) => {
         var {
                 alt: t,
                 externalRef: n,
@@ -96,7 +96,7 @@ let p = (e) => {
                 mediaLayoutType: u,
                 useReducedMotion: f,
             } = e,
-            p = d(e, [
+            _ = d(e, [
                 "alt",
                 "externalRef",
                 "autoPlay",
@@ -105,15 +105,15 @@ let p = (e) => {
                 "mediaLayoutType",
                 "useReducedMotion",
             ]);
-        let h = !f && !s && a,
-            m = i.useRef(null);
+        let m = !f && !s && a,
+            h = i.useRef(null);
         function g() {
             var e;
-            s && (null == m || null == (e = m.current) || e.play());
+            s && (null == h || null == (e = h.current) || e.play());
         }
         function E() {
             var e;
-            s && (null == m || null == (e = m.current) || e.pause());
+            s && (null == h || null == (e = h.current) || e.pause());
         }
         function b() {
             return u === o.h.MOSAIC
@@ -129,8 +129,8 @@ let p = (e) => {
         }
         function y() {
             return {
-                maxWidth: p.width,
-                maxHeight: p.height,
+                maxWidth: _.width,
+                maxHeight: _.height,
                 width: "100%",
                 height: "100%",
             };
@@ -138,36 +138,36 @@ let p = (e) => {
         return (
             i.useLayoutEffect(
                 () => () => {
-                    let { current: e } = m;
-                    null != e && _(e);
+                    let { current: e } = h;
+                    null != e && p(e);
                 },
                 [],
             ),
             i.useLayoutEffect(
                 () => (
-                    "function" == typeof n ? (n(null), n(m.current)) : null != n && (n.current = m.current),
+                    "function" == typeof n ? (n(null), n(h.current)) : null != n && (n.current = h.current),
                     () => {
                         "function" == typeof n ? n(null) : null != n && (n.current = null);
                     }
                 ),
-                [n, m],
+                [n, h],
             ),
             (0, r.jsx)(
                 "video",
                 l(
                     {
                         "aria-label": t,
-                        ref: m,
-                        autoPlay: h,
+                        ref: h,
+                        autoPlay: m,
                         onMouseEnter: g,
                         onMouseLeave: E,
                         onFocus: g,
                         onBlur: E,
                         style: b(),
                     },
-                    p,
+                    _,
                 ),
             )
         );
     },
-    h = i.forwardRef((e, t) => (0, r.jsx)(p, u(l({}, e), { externalRef: t })));
+    m = i.forwardRef((e, t) => (0, r.jsx)(_, u(l({}, e), { externalRef: t })));

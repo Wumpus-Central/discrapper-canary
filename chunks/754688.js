@@ -1,8 +1,8 @@
 n.d(t, {
     Ao: () => g,
-    Jv: () => p,
-    M0: () => h,
-    Qj: () => m,
+    Jv: () => _,
+    M0: () => m,
+    Qj: () => h,
     VO: () => b,
     YO: () => E,
 }),
@@ -21,17 +21,17 @@ let l = Array.from(n(176505).Vg)
     u = new RegExp("^/channels/(\\d+|".concat(s.ME, ")(?:/)(\\d+|").concat(l, ")(?:/)(\\d+)")),
     d = RegExp("^/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)"),
     f = RegExp("^/guild-stages/(\\d+)(?:/)?(\\d+)?"),
-    _ = RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?"),
-    p = new RegExp(
+    p = RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?"),
+    _ = new RegExp(
         "^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+|".concat(
             s.ME,
             ")(?:/(\\d+|[a-zA-Z-]+))?(?:/(\\d+|[a-zA-Z-]+))?",
         ),
     ),
-    h = RegExp(
+    m = RegExp(
         "^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)",
     );
-function m(e) {
+function h(e) {
     if (null == e) return null;
     let t = e.match(u);
     if (null != t && t.length > 3)
@@ -61,7 +61,7 @@ function m(e) {
 }
 function g(e) {
     if (null == e) return null;
-    let t = e.match(_);
+    let t = e.match(p);
     return null != t && t.length > 1
         ? {
               guildId: t[1],

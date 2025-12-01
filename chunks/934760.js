@@ -1,9 +1,9 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var r = n(473749),
     l = n(557816),
     i = n.n(l),
     a = n(597688);
-function s() {
+function o() {
     return (0, r.useCallback)(
         (e) =>
             i()(

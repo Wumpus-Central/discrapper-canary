@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => g,
-    f: () => m,
+    f: () => h,
 }),
     n(781311);
 var r = n(54381);
@@ -62,11 +62,11 @@ function f(e, t) {
         e
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -74,7 +74,7 @@ function _(e, t) {
     }
     return i;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -83,29 +83,29 @@ function p(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function h(e) {
+function m(e) {
     var { text: t, onClick: n, component: c } = e,
-        d = _(e, ["text", "onClick", "component"]);
-    let { themeType: p } = (0, o.z)(),
-        h = "string" == typeof t ? t.trim() : t;
-    if (null == h || "" === h) return null;
-    let m = () =>
-        p === s.l.MODAL || p === s.l.MODAL_V2
-            ? (0, r.jsx)(c, f(u({ color: "text-default" }, d), { children: h }))
-            : (0, r.jsx)(c, f(u({ color: "text-default" }, d), { children: (0, r.jsx)(i.Z, { children: h }) }));
+        d = p(e, ["text", "onClick", "component"]);
+    let { themeType: _ } = (0, o.z)(),
+        m = "string" == typeof t ? t.trim() : t;
+    if (null == m || "" === m) return null;
+    let h = () =>
+        _ === s.l.MODAL || _ === s.l.MODAL_V2
+            ? (0, r.jsx)(c, f(u({ color: "text-default" }, d), { children: m }))
+            : (0, r.jsx)(c, f(u({ color: "text-default" }, d), { children: (0, r.jsx)(i.Z, { children: m }) }));
     return null != n
         ? (0, r.jsx)(a.P3F, {
               onClick: (e) => {
                   e.stopPropagation(), n(e);
               },
               className: l.clickableText,
-              children: m(),
+              children: h(),
           })
-        : m();
+        : h();
 }
-function m(e) {
-    return (0, r.jsx)(h, u({ component: a.Heading }, e));
+function h(e) {
+    return (0, r.jsx)(m, u({ component: a.Heading }, e));
 }
 function g(e) {
-    return (0, r.jsx)(h, u({ component: a.Text }, e));
+    return (0, r.jsx)(m, u({ component: a.Text }, e));
 }

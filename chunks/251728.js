@@ -1,4 +1,4 @@
-n.d(t, { Y: () => h });
+n.d(t, { Y: () => m });
 var r = n(685816),
     i = n(549616),
     a = n(863611),
@@ -9,8 +9,8 @@ var r = n(685816),
     u = n(820200),
     d = n(930877),
     f = n(690913),
-    _ = n(608413);
-function p(e, t, n) {
+    p = n(608413);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,15 +23,15 @@ function p(e, t, n) {
         e
     );
 }
-class h {
+class m {
     static fromServer(e) {
-        return new h(e);
+        return new m(e);
     }
     constructor(e) {
         var t;
-        p(this, "shopBlocks", void 0),
-            p(this, "categories", void 0),
-            p(this, "userDiscounts", void 0),
+        _(this, "shopBlocks", void 0),
+            _(this, "categories", void 0),
+            _(this, "userDiscounts", void 0),
             (this.shopBlocks = e.shop_blocks
                 .map((e) => {
                     switch (e.type) {
@@ -42,7 +42,7 @@ class h {
                         case r.z.FEED:
                             return l.K.fromServer(e);
                         case r.z.WIDE_BANNER:
-                            return _.j.fromServer(e);
+                            return p.j.fromServer(e);
                         case r.z.SHELF:
                             return f.O.fromServer(e);
                         case r.z.COUNTDOWN_TIMER:

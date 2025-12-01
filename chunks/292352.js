@@ -7,35 +7,35 @@ n.d(t, {
     TX: () => C,
     U: () => A,
     Wz: () => N,
-    YC: () => T,
-    _6: () => I,
-    _w: () => _,
+    YC: () => I,
+    _6: () => S,
+    _w: () => p,
     dG: () => y,
-    f2: () => h,
+    f2: () => m,
     i0: () => u,
-    iB: () => p,
+    iB: () => _,
     ip: () => f,
     ix: () => g,
     ne: () => E,
-    tx: () => S,
-    vH: () => m,
+    tx: () => T,
+    vH: () => h,
     zE: () => d,
 }),
     n(388685);
 var r = n(860911),
     i = n(70956),
     a = n(546791),
-    o = n(597754),
+    o = n(744038),
     s = n(388032);
 let l = 30 * i.Z.Millis.SECOND,
     c = 8,
     u = 3,
     d = 26,
     f = 64,
-    _ = (e, t) => "https://discord.com/feature/family-center/my-family/".concat(e, "/").concat(t),
-    p = 4,
-    h = 5 * i.Z.Millis.MINUTE,
-    m = "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    p = (e, t) => "https://discord.com/feature/family-center/my-family/".concat(e, "/").concat(t),
+    _ = 4,
+    m = 5 * i.Z.Millis.MINUTE,
+    h = "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     g = (0, r.Ft)(
         Object.freeze({
             FAMILY_CENTER_SETTINGS: "/family-center/settings",
@@ -88,10 +88,10 @@ var E = (function (e) {
     v = (function (e) {
         return (e.SIDENAV = "SIDENAV"), (e.SETTINGS = "SETTINGS"), e;
     })({}),
-    I = (function (e) {
+    S = (function (e) {
         return (e[(e.SIDENAV = 0)] = "SIDENAV"), (e[(e.SETTINGS = 1)] = "SETTINGS"), e;
     })({}),
-    T = (function (e) {
+    I = (function (e) {
         return (
             (e[(e.TabChange = 0)] = "TabChange"),
             (e[(e.ShowQRCodeModal = 1)] = "ShowQRCodeModal"),
@@ -104,7 +104,7 @@ var E = (function (e) {
             e
         );
     })({});
-let S = new Map([
+let T = new Map([
         [
             3,
             {

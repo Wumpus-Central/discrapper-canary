@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,22 +48,22 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = m(e, t);
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -71,7 +71,7 @@ function h(e, t) {
     }
     return i;
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -83,14 +83,14 @@ function m(e, t) {
 function g(e, t, n) {
     let a = (0, s.G6)(e),
         d = new Map(),
-        _ = new n((e) => {
+        p = new n((e) => {
             e.forEach((e) => {
                 var t;
                 let { target: n } = e;
                 null == (t = d.get(n)) || t(e);
             });
         });
-    return (0, i.forwardRef)(function (n, m) {
+    return (0, i.forwardRef)(function (n, h) {
         var g,
             {
                 onScroll: E,
@@ -98,26 +98,26 @@ function g(e, t, n) {
                 sections: y,
                 columns: O,
                 getItemKey: v,
-                getItemHeight: I,
-                getSectionHeight: T,
-                chunkSize: S,
+                getItemHeight: S,
+                getSectionHeight: I,
+                chunkSize: T,
                 renderSection: A,
                 renderItem: C,
                 getSectionProps: N,
-                itemGutter: R,
-                removeEdgeItemGutters: P,
-                sectionGutter: D,
-                padding: w,
-                paddingVertical: L,
-                paddingHorizontal: x,
-                fade: M = !1,
-                className: k,
-                style: j,
+                itemGutter: P,
+                removeEdgeItemGutters: R,
+                sectionGutter: w,
+                padding: D,
+                paddingVertical: x,
+                paddingHorizontal: L,
+                fade: j = !1,
+                className: M,
+                style: k,
                 maxContentWidth: U,
                 renderAccessory: G,
-                onItemVisibilityChange: B,
+                onItemVisibilityChange: Z,
             } = n,
-            Z = h(n, [
+            B = m(n, [
                 "onScroll",
                 "dir",
                 "sections",
@@ -149,14 +149,14 @@ function g(e, t, n) {
             { scrollerRef: K, scrollerState: z, getScrollerState: q } = (0, s.T4)();
         (0, s.tT)({
             scrollerRef: K,
-            className: k,
+            className: M,
             specs: a,
             orientation: "vertical",
             dir: b,
         });
         let {
-            forceUpdateOnChunkChange: X,
-            coordsMap: Q,
+            forceUpdateOnChunkChange: Q,
+            coordsMap: X,
             gridData: J,
             visibleSections: $,
             totalHeight: ee,
@@ -166,28 +166,28 @@ function g(e, t, n) {
             sections: y,
             columns: O,
             getItemKey: v,
-            getItemHeight: I,
-            getSectionHeight: T,
-            chunkSize: S,
-            itemGutter: R,
-            removeEdgeItemGutters: P,
-            sectionGutter: D,
-            padding: w,
-            paddingVertical: L,
-            paddingHorizontal: x,
+            getItemHeight: S,
+            getSectionHeight: I,
+            chunkSize: T,
+            itemGutter: P,
+            removeEdgeItemGutters: R,
+            sectionGutter: w,
+            padding: D,
+            paddingVertical: x,
+            paddingHorizontal: L,
             getScrollerState: q,
             dir: b,
             maxBufferWidth: U,
         });
         i.useEffect(() => {
-            null != B && (0, l.ZI)($, H.current, B), (H.current = $);
-        }, [$, B]);
+            null != Z && (0, l.ZI)($, H.current, Z), (H.current = $);
+        }, [$, Z]);
         let er = (0, i.useCallback)(
                 function () {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
-                    e > z.current.dirty && (z.current.dirty = e), 2 === e ? et() : X(1);
+                    e > z.current.dirty && (z.current.dirty = e), 2 === e ? et() : Q(1);
                 },
-                [X, z, et],
+                [Q, z, et],
             ),
             ei = (0, s.t2)(K),
             ea = (0, i.useCallback)(() => en.itemGrid, [en]),
@@ -197,11 +197,11 @@ function g(e, t, n) {
             ref: K,
             key: "container",
             onUpdate: es,
-            resizeObserver: _,
+            resizeObserver: p,
             listenerMap: d,
         }),
             (0, i.useImperativeHandle)(
-                m,
+                h,
                 () =>
                     f(
                         {
@@ -231,19 +231,19 @@ function g(e, t, n) {
             }, [ee, z]),
             (0, r.jsxs)(
                 "div",
-                p(
+                _(
                     f(
                         {
                             ref: K,
                             onScroll: el,
-                            className: o()(k, {
+                            className: o()(M, {
                                 [e]: !0,
-                                [t]: M,
+                                [t]: j,
                                 [u.scrolling]: Y,
                             }),
-                            style: (0, s.uT)(j),
+                            style: (0, s.uT)(k),
                         },
-                        Z,
+                        B,
                     ),
                     {
                         children: [
@@ -259,14 +259,14 @@ function g(e, t, n) {
                                             children: Object.keys($).map((e) => {
                                                 var t;
                                                 let n = (0, s.t$)(e),
-                                                    i = Q[e],
+                                                    i = X[e],
                                                     a = $[e],
-                                                    o = Q[(0, s.DP)(n)],
+                                                    o = X[(0, s.DP)(n)],
                                                     l = null == N ? void 0 : N(n);
                                                 return null != i && null != a
                                                     ? (0, r.jsxs)(
                                                           "div",
-                                                          p(f({}, l), {
+                                                          _(f({}, l), {
                                                               style: f(
                                                                   {},
                                                                   i,
@@ -276,7 +276,7 @@ function g(e, t, n) {
                                                                   null != A && null != o && A(n, o, e),
                                                                   a.map((e) => {
                                                                       let [t, n, r] = e,
-                                                                          i = Q[t];
+                                                                          i = X[t];
                                                                       return null != i ? C(n, r, i, t, J) : null;
                                                                   }),
                                                               ],
@@ -287,7 +287,7 @@ function g(e, t, n) {
                                             }),
                                         }),
                                     }),
-                                [$, C, A, Q, ee, N, J],
+                                [$, C, A, X, ee, N, J],
                             ),
                         ],
                     },

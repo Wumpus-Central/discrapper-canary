@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function _(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,18 +49,18 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let m = new o.Z("UploaderBase.tsx");
+let h = new o.Z("UploaderBase.tsx");
 class g extends r.EventEmitter {
     _fileSize() {
         return this.files.reduce((e, t) => {
@@ -72,7 +72,7 @@ class g extends r.EventEmitter {
         var e, t;
         let n = (0, l.F)(null == (t = this.files[0]) || null == (e = t.item) ? void 0 : e.target);
         return this.files.length > n.getMaxAttachmentsCount()
-            ? (m.log("Too many attachments for ".concat(this.id)),
+            ? (h.log("Too many attachments for ".concat(this.id)),
               this._handleError({ code: u.evJ.TOO_MANY_ATTACHMENTS }),
               !1)
             : !(this._fileSize() > n.getMaxTotalAttachmentSize()) ||
@@ -86,13 +86,13 @@ class g extends r.EventEmitter {
         let e = this.files.some((e) => e.isImage),
             t = this.files.some((e) => e.isVideo),
             n = this._fileSize();
-        m.log(
+        h.log(
             "setUploadingTextForUI - total content: "
                 .concat(n, " bytes and ")
                 .concat(this.files.length, " attachments for ")
                 .concat(this.id),
         ),
-            (this._file = h(_({}, this._file), {
+            (this._file = m(p({}, this._file), {
                 totalPostCompressionSize: n,
                 currentSize: n,
                 hasVideo: t,
@@ -126,7 +126,7 @@ class g extends r.EventEmitter {
         );
     }
     _addAttachmentsToPayload(e, t, n) {
-        let r = _({}, e),
+        let r = p({}, e),
             i = [...a().get(r, t, []), ...n];
         return a().set(r, t, i);
     }
@@ -136,7 +136,7 @@ class g extends r.EventEmitter {
     }
     cancel() {
         var e, t;
-        m.log("cancel() for ".concat(this.id)),
+        h.log("cancel() for ".concat(this.id)),
             this._aborted ||
                 ((this._aborted = !0),
                 null == (e = (t = this)._cancel) || e.call(t),
@@ -144,12 +144,12 @@ class g extends r.EventEmitter {
                 this._handleComplete());
     }
     async cancelItem(e) {
-        m.log("Cancel called for ".concat(this.id, " for item ").concat(e));
+        h.log("Cancel called for ".concat(this.id, " for item ").concat(e));
         let t = this.files.find((t) => t.id === e);
         if (null == t || t.isCancelled()) return;
         let n = this.files.indexOf(t);
         (this.files = [...this.files.slice(0, n), ...this.files.slice(n + 1)]),
-            (this._file = h(_({}, this._file), { items: this.files })),
+            (this._file = m(p({}, this._file), { items: this.files })),
             await (0, s.V_)(t),
             t.cancel(),
             this.emit("cancel-upload-item", this._file),
@@ -200,7 +200,7 @@ class g extends r.EventEmitter {
                 }
                 (this._lastUpdate = r),
                     (this._loaded = e),
-                    (this._file = h(_({}, this._file), {
+                    (this._file = m(p({}, this._file), {
                         currentSize: t,
                         progress: i,
                         rate: a,
@@ -223,13 +223,13 @@ class g extends r.EventEmitter {
                 this.clearProcessingMessageInterval(),
                     this._aborted ||
                         ((this._errored = !0),
-                        m.log("_handleError: ".concat(t, " (").concat(JSON.stringify(n), ") for ").concat(this.id)),
+                        h.log("_handleError: ".concat(t, " (").concat(JSON.stringify(n), ") for ").concat(this.id)),
                         this.emit("error", this._file, t, r, n),
                         this.removeAllListeners());
             }),
             f(this, "_handleComplete", (e) => {
                 this.clearProcessingMessageInterval(),
-                    m.log("_handleComplete for ".concat(this.id)),
+                    h.log("_handleComplete for ".concat(this.id)),
                     this.emit("complete", this._file, e),
                     this.removeAllListeners();
             }),

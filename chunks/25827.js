@@ -12,8 +12,8 @@ var r = n(54381),
     u = n(67844),
     d = n(871499),
     f = n(981631),
-    _ = n(461812);
-function p(e, t, n) {
+    p = n(461812);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,12 +37,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -59,7 +59,7 @@ function g(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -93,27 +93,27 @@ function y(e) {
             cameraUnavailable: a,
             onChange: o,
             onCameraUnavailable: d,
-            hasPermission: _,
-            children: p,
-            channelLimitReached: h = !1,
-            join: m,
+            hasPermission: p,
+            children: _,
+            channelLimitReached: m = !1,
+            join: h,
         } = e,
         g = (0, c.bp)(),
         E = a ? () => d() : () => o(!e.enabled, g),
-        { Component: b, play: y, events: O } = (0, s.o)(m || n ? "disable" : "enable");
+        { Component: b, play: y, events: O } = (0, s.o)(h || n ? "disable" : "enable");
     i.useEffect(() => () => y(), [n, y]);
-    let v = m ? l.Odl : g === f.IlC.POPOUT ? (n ? l.Odl : l.Amn) : b;
+    let v = h ? l.Odl : g === f.IlC.POPOUT ? (n ? l.Odl : l.Amn) : b;
     return (0, r.jsx)(r.Fragment, {
-        children: p({
+        children: _({
             onClick: E,
             isActive: n,
-            disabled: !n && (!_ || h),
+            disabled: !n && (!p || m),
             iconComponent: v,
             iconColor: "currentColor",
             label: t,
             unavailable: a,
-            onMouseEnter: m ? void 0 : O.onMouseEnter,
-            onMouseLeave: m ? void 0 : O.onMouseLeave,
+            onMouseEnter: h ? void 0 : O.onMouseEnter,
+            onMouseLeave: h ? void 0 : O.onMouseLeave,
         }),
     });
 }
@@ -128,8 +128,8 @@ function O(e) {
             hasPermission: c,
             className: u,
             channelLimitReached: f,
-            channelLimit: p,
-            centerButton: m = !1,
+            channelLimit: _,
+            centerButton: h = !1,
             onPopoutClick: b,
         } = e,
         O = E(e, [
@@ -146,9 +146,9 @@ function O(e) {
             "centerButton",
             "onPopoutClick",
         ]);
-    let v = m ? d.d : d.Z,
-        I = () => (n ? "join" : t ? "green" : "primaryDark"),
-        T = (e) => (n ? "join" : e ? "green" : O.color);
+    let v = h ? d.d : d.Z,
+        S = () => (n ? "join" : t ? "green" : "primaryDark"),
+        I = (e) => (n ? "join" : e ? "green" : O.color);
     return (0, r.jsx)(y, {
         enabled: t,
         join: n,
@@ -158,15 +158,15 @@ function O(e) {
         cameraUnavailable: l,
         hasPermission: c,
         channelLimitReached: f,
-        channelLimit: p,
+        channelLimit: _,
         children: (e) => {
             var { unavailable: t, onMouseEnter: i, onMouseLeave: a, isActive: s } = e,
                 l = E(e, ["unavailable", "onMouseEnter", "onMouseLeave", "isActive"]);
             return (0, r.jsx)(
                 v,
-                g(h({}, l, O), {
-                    color: T(s),
-                    caretColor: I(),
+                g(m({}, l, O), {
+                    color: I(s),
+                    caretColor: S(),
                     isActive: s,
                     onMouseEnter: (e) => {
                         var t;
@@ -176,7 +176,7 @@ function O(e) {
                         var t;
                         null == (t = O.onMouseLeave) || t.call(O, e), null == a || a();
                     },
-                    className: o()(u, { [_.fauxDisabled]: t }),
+                    className: o()(u, { [p.fauxDisabled]: t }),
                     onPopoutClick: b,
                     isTrayButton: !n,
                 }),

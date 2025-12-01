@@ -8,12 +8,12 @@ var r,
     u = n(661314),
     d = ">",
     f = "<",
-    _ = "prototype",
-    p = "script",
-    h = u("IE_PROTO"),
-    m = function () {},
+    p = "prototype",
+    _ = "script",
+    m = u("IE_PROTO"),
+    h = function () {},
     g = function (e) {
-        return f + p + d + e + f + "/" + p + d;
+        return f + _ + d + e + f + "/" + _ + d;
     },
     E = function (e) {
         e.write(g("")), e.close();
@@ -23,7 +23,7 @@ var r,
     b = function () {
         var e,
             t = c("iframe"),
-            n = "java" + p + ":";
+            n = "java" + _ + ":";
         return (
             (t.style.display = "none"),
             l.appendChild(t),
@@ -39,16 +39,16 @@ var r,
             r = new ActiveXObject("htmlfile");
         } catch (e) {}
         y = "undefined" != typeof document ? (document.domain && r ? E(r) : b()) : E(r);
-        for (var e = o.length; e--; ) delete y[_][o[e]];
+        for (var e = o.length; e--; ) delete y[p][o[e]];
         return y();
     };
-(s[h] = !0),
+(s[m] = !0),
     (e.exports =
         Object.create ||
         function (e, t) {
             var n;
             return (
-                null !== e ? ((m[_] = i(e)), (n = new m()), (m[_] = null), (n[h] = e)) : (n = y()),
+                null !== e ? ((h[p] = i(e)), (n = new h()), (h[p] = null), (n[m] = e)) : (n = y()),
                 void 0 === t ? n : a.f(n, t)
             );
         });

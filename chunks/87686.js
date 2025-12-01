@@ -44,7 +44,7 @@ let h = {
                 },
                 [p],
             ),
-            M = a.useCallback(() => {
+            E = a.useCallback(() => {
                 if (null != p) {
                     if (b) return void P();
                     N >= w ? (p.currentTime = (0, f.my)(C)) : (p.currentTime = (0, f.my)(N)),
@@ -53,7 +53,7 @@ let h = {
                         y(!0);
                 }
             }, [p, w, P, N, b, C, t]),
-            E = a.useCallback(
+            M = a.useCallback(
                 (e) => {
                     x(e),
                         null == v ||
@@ -85,7 +85,7 @@ let h = {
                     children: [
                         (0, l.jsx)(s.P3F, {
                             className: g.playButton,
-                            onClick: S ? M : void 0,
+                            onClick: S ? E : void 0,
                             children: b
                                 ? (0, l.jsx)(s.wNq, {
                                       size: "xs",
@@ -113,7 +113,7 @@ let h = {
                     playing: b,
                     onPlaybackChange: k,
                     onPausePlayback: P,
-                    onChangePosition: E,
+                    onChangePosition: M,
                     disabled: i,
                 }),
             ],

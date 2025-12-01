@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685), n(642613), n(583741);
+n.d(t, { Z: () => x }), n(388685), n(642613), n(583741);
 var r = n(54381),
     i = n(473749),
     l = n(392711),
@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(99690),
     u = n(359110),
     d = n(601070),
-    p = n(91159),
+    f = n(91159),
     h = n(488131),
-    f = n(496675),
+    p = n(496675),
     g = n(306680),
     m = n(594174),
     b = n(768581),
@@ -19,15 +19,15 @@ var r = n(54381),
     O = n(124368),
     v = n(388032),
     j = n(531198);
-function C(e) {
+function x(e) {
     let { channel: t } = e,
-        l = (0, a.Wu)([d.Z, g.ZP, f.Z], () => {
+        l = (0, a.Wu)([d.Z, g.ZP, p.Z], () => {
             let e = d.Z.getActiveJoinedRelevantThreadsForParent(t.guild_id, t.id);
             return o()(d.Z.getActiveJoinedThreadsForParent(t.guild_id, t.id))
                 .values()
                 .map((e) => e.channel)
                 .concat(o().values(d.Z.getActiveUnjoinedThreadsForParent(t.guild_id, t.id)))
-                .filter((t) => !(t.id in e) && f.Z.can(y.Plq.VIEW_CHANNEL, t))
+                .filter((t) => !(t.id in e) && p.Z.can(y.Plq.VIEW_CHANNEL, t))
                 .sort((e, t) => {
                     let n = g.ZP.lastMessageId(e.id),
                         r = g.ZP.lastMessageId(t.id);
@@ -39,7 +39,7 @@ function C(e) {
         c = t.isForumLikeChannel() ? 5 : 3;
     return (
         i.useEffect(() => {
-            (0, p.q)();
+            (0, f.q)();
         }, []),
         (0, r.jsxs)("div", {
             className: j.popout,
@@ -52,7 +52,7 @@ function C(e) {
                 }),
                 l
                     .slice(0, t.isForumLikeChannel() ? l.length : c)
-                    .map((e) => (0, r.jsx)(x, { thread: e }, e.id))
+                    .map((e) => (0, r.jsx)(C, { thread: e }, e.id))
                     .filter((e) => i.isValidElement(e))
                     .slice(0, c),
                 (0, r.jsx)(s.P3F, {
@@ -103,10 +103,10 @@ function C(e) {
         })
     );
 }
-function x(e) {
+function C(e) {
     let { thread: t } = e,
         n = (0, a.e7)([m.default], () => m.default.getUser(t.ownerId)),
-        i = (0, p.Ok)(t);
+        i = (0, f.Ok)(t);
     return (0, r.jsxs)(s.P3F, {
         className: j.row,
         onClick: (e) => {
@@ -139,7 +139,7 @@ function x(e) {
                         className: j.bullet,
                         children: "\u2022",
                     }),
-                    (0, p.Ye)(i),
+                    (0, f.Ye)(i),
                 ],
             }),
         ],

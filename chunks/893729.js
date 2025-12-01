@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(786761),
     d = n(3148),
     f = n(753206),
-    _ = n(594174),
-    p = n(5192),
-    h = n(981631),
-    m = n(388032),
+    p = n(594174),
+    _ = n(5192),
+    m = n(981631),
+    h = n(388032),
     g = n(914933);
 function E(e, t, n) {
     return (
@@ -67,11 +67,11 @@ function O(e, t) {
     );
 }
 function v(e) {
-    let { guildId: t, role: n, theme: a, content: E = m.intl.string(m.t["6OSasb"]), className: y } = e,
-        v = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
-        I = p.ZP.useName(t, null, v),
-        T = (0, c.Kz)(n),
-        S = i.useMemo(
+    let { guildId: t, role: n, theme: a, content: E = h.intl.string(h.t["6OSasb"]), className: y } = e,
+        v = (0, s.e7)([p.default], () => p.default.getCurrentUser()),
+        S = _.ZP.useName(t, null, v),
+        I = (0, c.Kz)(n),
+        T = i.useMemo(
             () =>
                 (0, u.e5)(
                     O(
@@ -88,7 +88,7 @@ function v(e) {
                             }),
                         ),
                         {
-                            state: h.yb.SENT,
+                            state: m.yb.SENT,
                             id: "0",
                         },
                     ),
@@ -96,7 +96,7 @@ function v(e) {
             [v, E],
         ),
         A = {
-            nick: I,
+            nick: S,
             colorString: n.colorString,
             colorStrings: n.colorStrings,
         };
@@ -108,8 +108,8 @@ function v(e) {
                 children: (0, r.jsx)(f.Z, {
                     hideTimestamp: !0,
                     author: A,
-                    roleIcon: T,
-                    message: S,
+                    roleIcon: I,
+                    message: T,
                     isGroupStart: !0,
                     disableInteraction: !0,
                 }),

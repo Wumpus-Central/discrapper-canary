@@ -8,35 +8,35 @@ var r = n(620014),
     u = n(388456),
     d = n(325512),
     f = n(990393),
-    _ = n(890179),
-    p = n(65064),
-    h = n(207635),
-    m = n(354199),
+    p = n(890179),
+    _ = n(65064),
+    m = n(207635),
+    h = n(354199),
     g = n(671660),
     E = n(402428),
     b = n(207757),
     y = n(397985),
     O = n(706627),
     v = n(822480),
-    I = n(58834),
-    T = n(453342),
-    S = 1,
+    S = n(58834),
+    I = n(453342),
+    T = 1,
     A = 2,
     C = 4,
     N = "[object Arguments]",
-    R = "[object Array]",
-    P = "[object Boolean]",
-    D = "[object Date]",
-    w = "[object Error]",
-    L = "[object Function]",
-    x = "[object GeneratorFunction]",
-    M = "[object Map]",
-    k = "[object Number]",
-    j = "[object Object]",
+    P = "[object Array]",
+    R = "[object Boolean]",
+    w = "[object Date]",
+    D = "[object Error]",
+    x = "[object Function]",
+    L = "[object GeneratorFunction]",
+    j = "[object Map]",
+    M = "[object Number]",
+    k = "[object Object]",
     U = "[object RegExp]",
     G = "[object Set]",
-    B = "[object String]",
-    Z = "[object Symbol]",
+    Z = "[object String]",
+    B = "[object Symbol]",
     F = "[object WeakMap]",
     V = "[object ArrayBuffer]",
     H = "[object DataView]",
@@ -45,75 +45,75 @@ var r = n(620014),
     K = "[object Int8Array]",
     z = "[object Int16Array]",
     q = "[object Int32Array]",
-    X = "[object Uint8Array]",
-    Q = "[object Uint8ClampedArray]",
+    Q = "[object Uint8Array]",
+    X = "[object Uint8ClampedArray]",
     J = "[object Uint16Array]",
     $ = "[object Uint32Array]",
     ee = {};
-function et(e, t, n, R, P, D) {
-    var w,
-        M = t & S,
-        k = t & A,
+function et(e, t, n, P, R, w) {
+    var D,
+        j = t & T,
+        M = t & A,
         U = t & C;
-    if ((n && (w = P ? n(e, R, P, D) : n(e)), void 0 !== w)) return w;
+    if ((n && (D = R ? n(e, P, R, w) : n(e)), void 0 !== D)) return D;
     if (!O(e)) return e;
     var G = E(e);
     if (G) {
-        if (((w = h(e)), !M)) return c(e, w);
+        if (((D = m(e)), !j)) return c(e, D);
     } else {
-        var B = p(e),
-            Z = B == L || B == x;
-        if (b(e)) return l(e, M);
-        if (B == j || B == N || (Z && !P)) {
-            if (((w = k || Z ? {} : g(e)), !M)) return k ? d(e, s(w, e)) : u(e, o(w, e));
+        var Z = _(e),
+            B = Z == x || Z == L;
+        if (b(e)) return l(e, j);
+        if (Z == k || Z == N || (B && !R)) {
+            if (((D = M || B ? {} : g(e)), !j)) return M ? d(e, s(D, e)) : u(e, o(D, e));
         } else {
-            if (!ee[B]) return P ? e : {};
-            w = m(e, B, M);
+            if (!ee[Z]) return R ? e : {};
+            D = h(e, Z, j);
         }
     }
-    D || (D = new r());
-    var F = D.get(e);
+    w || (w = new r());
+    var F = w.get(e);
     if (F) return F;
-    D.set(e, w),
+    w.set(e, D),
         v(e)
             ? e.forEach(function (r) {
-                  w.add(et(r, t, n, r, e, D));
+                  D.add(et(r, t, n, r, e, w));
               })
             : y(e) &&
               e.forEach(function (r, i) {
-                  w.set(i, et(r, t, n, i, e, D));
+                  D.set(i, et(r, t, n, i, e, w));
               });
-    var V = U ? (k ? _ : f) : k ? T : I,
+    var V = U ? (M ? p : f) : M ? I : S,
         H = G ? void 0 : V(e);
     return (
         i(H || e, function (r, i) {
-            H && (r = e[(i = r)]), a(w, i, et(r, t, n, i, e, D));
+            H && (r = e[(i = r)]), a(D, i, et(r, t, n, i, e, w));
         }),
-        w
+        D
     );
 }
 (ee[N] =
-    ee[R] =
+    ee[P] =
     ee[V] =
     ee[H] =
-    ee[P] =
-    ee[D] =
+    ee[R] =
+    ee[w] =
     ee[Y] =
     ee[W] =
     ee[K] =
     ee[z] =
     ee[q] =
+    ee[j] =
     ee[M] =
     ee[k] =
-    ee[j] =
     ee[U] =
     ee[G] =
-    ee[B] =
     ee[Z] =
-    ee[X] =
+    ee[B] =
     ee[Q] =
+    ee[X] =
     ee[J] =
     ee[$] =
         !0),
-    (ee[w] = ee[L] = ee[F] = !1),
+    (ee[D] = ee[x] = ee[F] = !1),
     (e.exports = et);

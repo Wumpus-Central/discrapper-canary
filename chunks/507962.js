@@ -7,22 +7,22 @@ var i = n(739566),
 function s(e) {
     let t,
         { message: s, usernameHook: l, otherUser: c, otherUsernameHook: u, compact: d, channel: f } = e,
-        _ = (0, i.ZP)(s),
-        p = _.nick,
-        h = l(_),
-        m = (0, i.Sw)(c, f);
-    if (null != m && null != u) {
-        let e = u(m);
+        p = (0, i.ZP)(s),
+        _ = p.nick,
+        m = l(p),
+        h = (0, i.Sw)(c, f);
+    if (null != h && null != u) {
+        let e = u(h);
         t = o.intl.format(o.t.L2FyVq, {
-            username: p,
-            usernameHook: h,
-            otherUsername: m.nick,
+            username: _,
+            usernameHook: m,
+            otherUsername: h.nick,
             otherUsernameHook: e,
         });
     } else
         t = o.intl.format(o.t["5v2xa8"], {
-            username: p,
-            usernameHook: h,
+            username: _,
+            usernameHook: m,
         });
     return (0, r.jsx)(a.Z, {
         icon: n(474019),

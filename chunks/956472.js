@@ -1,7 +1,7 @@
 n.d(t, {
     Ip: () => E,
     oQ: () => g,
-    oo: () => p,
+    oo: () => _,
 }),
     n(539854);
 var r = n(932563),
@@ -41,7 +41,7 @@ function f(e) {
     }
     return e;
 }
-let _ = (e) => {
+let p = (e) => {
         let { product: t, isPremiumUser: n } = e,
             r = (0, s.vH)({
                 product: t,
@@ -57,13 +57,13 @@ let _ = (e) => {
             isOrbExclusive: c,
         };
     },
-    p = (e) => {
+    _ = (e) => {
         let { product: t, isPremiumUser: n, prioritizedCurrency: r, hasDiscountOffer: i = !1 } = e,
             {
                 orbPrice: a,
                 fiatPrice: o,
                 isOrbExclusive: s,
-            } = _({
+            } = p({
                 product: t,
                 isPremiumUser: n,
             }),
@@ -78,7 +78,7 @@ let _ = (e) => {
             }
         );
     },
-    h = (e) => {
+    m = (e) => {
         var t;
         let {
                 hasSufficientOrbs: n,
@@ -105,7 +105,7 @@ let _ = (e) => {
             shouldCheckoutWithOrbs: f,
         };
     },
-    m = () => {
+    h = () => {
         let e = [c.sT];
         return {
             orbPrice: c.sT,
@@ -122,12 +122,12 @@ let _ = (e) => {
                 orbPrice: s,
                 fiatPrice: l,
                 isOrbExclusive: c,
-            } = _({
+            } = p({
                 product: t,
                 isPremiumUser: o.ZP.canUseCollectibles(i),
             }),
             u = null != s && null != n && n >= s.amount,
-            { shouldCheckoutWithOrbs: d } = h({
+            { shouldCheckoutWithOrbs: d } = m({
                 orbPrice: s,
                 fiatPrice: l,
                 isOrbExclusive: c,
@@ -143,8 +143,8 @@ function E(e) {
             isOrbExclusive: c,
             displayPrices: u,
         } = o
-            ? m()
-            : p({
+            ? h()
+            : _({
                   product: t,
                   isPremiumUser: n,
                   prioritizedCurrency: i,
@@ -153,7 +153,7 @@ function E(e) {
         d = (0, r.V_)(null != s ? s.amount : null);
     return f(
         { displayPrices: u },
-        h({
+        m({
             orbPrice: s,
             fiatPrice: l,
             isOrbExclusive: c,

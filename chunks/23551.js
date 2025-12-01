@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -10,11 +10,11 @@ var i = n(120356),
     u = n(726542),
     d = n(122021),
     f = n(231757),
-    _ = n(626135),
-    p = n(981631),
-    h = n(391475);
-let m = (e) => {
-    let { disabled: t = !1, type: n, className: i, innerClassName: m, onConnect: g } = e,
+    p = n(626135),
+    _ = n(981631),
+    m = n(391475);
+let h = (e) => {
+    let { disabled: t = !1, type: n, className: i, innerClassName: h, onConnect: g } = e,
         E = (0, c.ZP)();
     function b(e) {
         let t = u.Z.get(e);
@@ -22,7 +22,7 @@ let m = (e) => {
             platformType: t.type,
             location: "Friends List",
         }),
-            _.default.track(p.rMx.ACCOUNT_LINK_STEP, {
+            p.default.track(_.rMx.ACCOUNT_LINK_STEP, {
                 previous_step: "desktop connections",
                 current_step: "desktop oauth",
                 platform_type: t.type,
@@ -32,10 +32,10 @@ let m = (e) => {
     return (0, r.jsx)(o.u, {
         text: y.name,
         children: (0, r.jsx)("div", {
-            className: a()(h.wrapper, i),
+            className: a()(m.wrapper, i),
             children: (0, r.jsx)(l.tEY, {
                 children: (0, r.jsx)("button", {
-                    className: a()(h.inner, m),
+                    className: a()(m.inner, h),
                     type: "button",
                     disabled: t,
                     style: { backgroundImage: "url('".concat((0, s.wj)(E) ? y.icon.darkSVG : y.icon.lightSVG, "')") },

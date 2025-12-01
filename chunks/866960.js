@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r,
     i = n(442837),
     a = n(570140),
@@ -25,9 +25,9 @@ function f(e) {
     (c = null != e.type ? e.type : s.IWh.UNKNOWN),
         (u = null != (t = e.effectiveSpeed) ? t : s.IyS.UNKNOWN),
         (d = e.serviceProvider),
-        p.emitChange();
+        _.emitChange();
 }
-class _ extends (r = i.ZP.Store) {
+class p extends (r = i.ZP.Store) {
     initialize() {
         o.Z.getNetworkInformation().then(f), o.Z.addChangeCallback(f);
     }
@@ -41,6 +41,6 @@ class _ extends (r = i.ZP.Store) {
         return d;
     }
 }
-l(_, "displayName", "NetworkStore");
-let p = new _(a.Z, {}),
-    h = p;
+l(p, "displayName", "NetworkStore");
+let _ = new p(a.Z, {}),
+    m = _;

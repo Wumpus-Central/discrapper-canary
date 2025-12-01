@@ -1,7 +1,7 @@
 n.d(t, { Z: () => O }), n(388685), n(583741);
 var r = n(54381),
     i = n(473749),
-    a = n(790519),
+    a = n(666917),
     o = n(442837),
     s = n(481060),
     l = n(607070),
@@ -9,18 +9,18 @@ var r = n(54381),
     u = n(198466),
     d = n(436444),
     f = n(981631),
-    _ = n(388032),
-    p = n(228103);
-let h = 200,
-    m = 250,
+    p = n(388032),
+    _ = n(228103);
+let m = 200,
+    h = 250,
     g = 36,
     E = 660,
     b = [f.Eu4.NONE, f.Eu4.TIER_1, f.Eu4.TIER_2, f.Eu4.TIER_3];
 function y(e) {
     let { fillFactor: t, guildBoostCount: n, premiumTier: r, isRevealed: a, useReducedMotion: o } = e,
         [l, c] = i.useState(o ? r : -1),
-        [u, _] = i.useState(0 === n),
-        [p, m] = i.useState(!1),
+        [u, p] = i.useState(0 === n),
+        [_, h] = i.useState(!1),
         b = i.useRef(!0);
     function y(e) {
         let { widthFactor: t } = e;
@@ -40,15 +40,15 @@ function y(e) {
         },
         onChange: y,
         onStart: () => {
-            _(!1);
+            p(!1);
         },
         onRest: () => {
-            _(!0),
+            p(!0),
                 r === f.Eu4.TIER_3 &&
-                    (m(!0),
+                    (h(!0),
                     window.setTimeout(() => {
-                        b.current && m(!1);
-                    }, h));
+                        b.current && h(!1);
+                    }, m));
         },
     });
     return (
@@ -61,8 +61,8 @@ function y(e) {
         {
             isProgressBarAnimationComplete: u,
             progressBarFillWidthFactor: O,
-            setShouldFireConfetti: m,
-            shouldFireConfetti: p,
+            setShouldFireConfetti: h,
+            shouldFireConfetti: _,
             tierMarkerAnimationPosition: l,
         }
     );
@@ -70,58 +70,58 @@ function y(e) {
 function O(e) {
     let { guild: t } = e,
         n = (0, o.e7)([l.Z], () => l.Z.useReducedMotion),
-        [s, h] = i.useState(!1),
+        [s, m] = i.useState(!1),
         [g, E] = i.useState(0),
         O = i.useRef(null),
         v = s || n,
-        { fillFactor: I, totalAvailableBoostsCount: T } = i.useMemo(() => (0, c.Hl)(t), [t]),
+        { fillFactor: S, totalAvailableBoostsCount: I } = i.useMemo(() => (0, c.Hl)(t), [t]),
         {
-            progressBarFillWidthFactor: S,
+            progressBarFillWidthFactor: T,
             isProgressBarAnimationComplete: A,
             setShouldFireConfetti: C,
             shouldFireConfetti: N,
-            tierMarkerAnimationPosition: R,
+            tierMarkerAnimationPosition: P,
         } = y({
-            fillFactor: I,
+            fillFactor: S,
             isRevealed: v,
             useReducedMotion: n,
             premiumTier: t.premiumTier,
-            guildBoostCount: T,
+            guildBoostCount: I,
         });
     return (
         i.useEffect(() => {
             let e = window.setTimeout(() => {
-                h(!0);
-            }, m);
+                m(!0);
+            }, h);
             return () => {
                 window.clearTimeout(e);
             };
         }, []),
         (0, r.jsxs)("div", {
-            className: p.progressBar,
+            className: _.progressBar,
             role: "progressbar",
-            "aria-valuenow": T,
+            "aria-valuenow": I,
             "aria-valuetext":
                 t.premiumTier === f.Eu4.NONE
-                    ? _.intl.formatToPlainString(_.t.Ukqm9v, { numSubscriptionsApplied: T })
-                    : _.intl.formatToPlainString(_.t.qWunaU, {
-                          numSubscriptionsApplied: T,
+                    ? p.intl.formatToPlainString(p.t.Ukqm9v, { numSubscriptionsApplied: I })
+                    : p.intl.formatToPlainString(p.t.qWunaU, {
+                          numSubscriptionsApplied: I,
                           tierName: (0, c.nW)(t.premiumTier, { useLevels: !1 }),
                       }),
             children: [
                 (0, r.jsxs)("div", {
-                    className: p.progressBarScrubber,
+                    className: _.progressBarScrubber,
                     children: [
                         (0, r.jsx)(a.animated.div, {
-                            className: p.progressBarFill,
+                            className: _.progressBarFill,
                             style: {
-                                width: S.to({
+                                width: T.to({
                                     range: [0, 1],
                                     output: [0, 100],
                                 }).to((e) => "".concat(e, "%")),
                             },
                         }),
-                        (0, r.jsx)("div", { className: p.progressBarTrack }),
+                        (0, r.jsx)("div", { className: _.progressBarTrack }),
                     ],
                 }),
                 b.map((e) =>
@@ -134,8 +134,8 @@ function O(e) {
                             setConfettiCount: E,
                             setShouldFireConfetti: C,
                             tier: e,
-                            tierMarkerAnimationPosition: R,
-                            totalAvailableBoostsCount: T,
+                            tierMarkerAnimationPosition: P,
+                            totalAvailableBoostsCount: I,
                             children: (0, c.nW)(e),
                         },
                         e,

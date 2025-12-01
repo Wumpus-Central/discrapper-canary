@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,9 +58,9 @@ function _(e, t) {
         e
     );
 }
-let p = "daily_cap",
-    h = 3,
-    m = {
+let _ = "daily_cap",
+    m = 3,
+    h = {
         numberOfDCsShownToday: 0,
         dailyCapPeriodStart: null,
         dismissibleContentSeenDuringSession: new Set(),
@@ -71,7 +71,7 @@ let p = "daily_cap",
         seenForGuildId: new Map(),
     };
 function g() {
-    m = _(d({}, m), {
+    h = p(d({}, h), {
         dismissibleContentSeenDuringSession: new Set(),
         renderedAtTimestamps: new Map(),
         seenForGuildId: new Map(),
@@ -79,108 +79,108 @@ function g() {
 }
 function E(e) {
     let { value: t } = e;
-    m.dailyCapOverridden = t;
+    h.dailyCapOverridden = t;
 }
 function b(e) {
     let { value: t } = e;
-    m.newUserMinAgeRequiredOverridden = t;
+    h.newUserMinAgeRequiredOverridden = t;
 }
 function y(e, t) {
-    let n = m.seenForGuildId.get(t);
+    let n = h.seenForGuildId.get(t);
     return null != n && n.has(e);
 }
 function O(e) {
     let { dismissibleContent: t, guildId: n } = e,
         r = new Date();
-    if ((m.renderedAtTimestamps.set(t, r.getTime()), s.O.has(t) || m.dailyCapOverridden)) return;
+    if ((h.renderedAtTimestamps.set(t, r.getTime()), s.O.has(t) || h.dailyCapOverridden)) return;
     let i = (0, l.fn)(t) && null != n;
-    if (!(!i && m.dismissibleContentSeenDuringSession.has(t))) {
+    if (!(!i && h.dismissibleContentSeenDuringSession.has(t))) {
         if (!(i && y(t, n))) {
             if (i) {
                 var a;
-                let e = null != (a = m.seenForGuildId.get(n)) ? a : new Set();
-                e.add(t), m.seenForGuildId.set(n, e);
-            } else m.dismissibleContentSeenDuringSession.add(t);
-            if (null == m.dailyCapPeriodStart) {
+                let e = null != (a = h.seenForGuildId.get(n)) ? a : new Set();
+                e.add(t), h.seenForGuildId.set(n, e);
+            } else h.dismissibleContentSeenDuringSession.add(t);
+            if (null == h.dailyCapPeriodStart) {
                 let e = new Date();
-                e.setHours(0, 0, 0, 0), (m.dailyCapPeriodStart = e.getTime());
+                e.setHours(0, 0, 0, 0), (h.dailyCapPeriodStart = e.getTime());
             }
-            (m.numberOfDCsShownToday += 1),
-                m.numberOfDCsShownToday > h &&
+            (h.numberOfDCsShownToday += 1),
+                h.numberOfDCsShownToday > m &&
                     o.default.track(c.rMx.DCF_CAP_EXCEEDED, {
-                        cap_type: p,
+                        cap_type: _,
                         dismissible_content: t,
-                        shown_dcs: m.numberOfDCsShownToday,
+                        shown_dcs: h.numberOfDCsShownToday,
                     });
         }
     }
 }
 function v(e) {
     let { dismissibleContent: t } = e;
-    (m.lastDCDismissed = t), m.renderedAtTimestamps.delete(t);
+    (h.lastDCDismissed = t), h.renderedAtTimestamps.delete(t);
 }
-function I(e) {
+function S(e) {
     let { dismissibleContent: t } = e;
-    m.lastDCDismissed = null != t ? t : null;
+    h.lastDCDismissed = null != t ? t : null;
 }
-function T() {
-    (m.dailyCapPeriodStart = null),
-        (m.numberOfDCsShownToday = 0),
-        (m.dismissibleContentSeenDuringSession = new Set()),
-        (m.seenForGuildId = new Map()),
-        (m.lastDCDismissed = null);
+function I() {
+    (h.dailyCapPeriodStart = null),
+        (h.numberOfDCsShownToday = 0),
+        (h.dismissibleContentSeenDuringSession = new Set()),
+        (h.seenForGuildId = new Map()),
+        (h.lastDCDismissed = null);
 }
-class S extends (r = i.ZP.PersistedStore) {
+class T extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
             var t, n, r;
-            (m.numberOfDCsShownToday = null != (t = e.numberOfDCsShownToday) ? t : 0),
-                (m.dailyCapPeriodStart = e.dailyCapPeriodStart),
-                (m.dailyCapOverridden = null != (n = e.dailyCapOverridden) && n),
-                (m.newUserMinAgeRequiredOverridden = null != (r = e.newUserMinAgeRequiredOverridden) && r);
+            (h.numberOfDCsShownToday = null != (t = e.numberOfDCsShownToday) ? t : 0),
+                (h.dailyCapPeriodStart = e.dailyCapPeriodStart),
+                (h.dailyCapOverridden = null != (n = e.dailyCapOverridden) && n),
+                (h.newUserMinAgeRequiredOverridden = null != (r = e.newUserMinAgeRequiredOverridden) && r);
         }
-        (m.dismissibleContentSeenDuringSession = new Set()), (m.seenForGuildId = new Map()), (m.lastDCDismissed = null);
+        (h.dismissibleContentSeenDuringSession = new Set()), (h.seenForGuildId = new Map()), (h.lastDCDismissed = null);
     }
     getState() {
-        return m;
+        return h;
     }
     get dailyCapOverridden() {
-        return m.dailyCapOverridden;
+        return h.dailyCapOverridden;
     }
     get newUserMinAgeRequiredOverridden() {
-        return m.newUserMinAgeRequiredOverridden;
+        return h.newUserMinAgeRequiredOverridden;
     }
     get lastDCDismissed() {
-        return m.lastDCDismissed;
+        return h.lastDCDismissed;
     }
     getRenderedAtTimestamp(e) {
-        return m.renderedAtTimestamps.get(e);
+        return h.renderedAtTimestamps.get(e);
     }
     hasUserHitDCCap(e, t) {
-        if (null != e && (s.O.has(e) || m.dailyCapOverridden)) return !1;
+        if (null != e && (s.O.has(e) || h.dailyCapOverridden)) return !1;
         if (null != e) {
             let n = null != t && (0, l.fn)(e);
-            if ((n && null != t && y(e, t)) || (!n && m.dismissibleContentSeenDuringSession.has(e))) return !1;
+            if ((n && null != t && y(e, t)) || (!n && h.dismissibleContentSeenDuringSession.has(e))) return !1;
         }
         let n = new Date();
         return (
             n.setHours(0, 0, 0, 0),
-            null != m.dailyCapPeriodStart &&
-                m.dailyCapPeriodStart < n.getTime() &&
-                ((m.numberOfDCsShownToday = 0), (m.dailyCapPeriodStart = null)),
-            m.numberOfDCsShownToday >= h
+            null != h.dailyCapPeriodStart &&
+                h.dailyCapPeriodStart < n.getTime() &&
+                ((h.numberOfDCsShownToday = 0), (h.dailyCapPeriodStart = null)),
+            h.numberOfDCsShownToday >= m
         );
     }
 }
-u(S, "displayName", "DismissibleContentFrameworkStore"),
-    u(S, "persistKey", "DismissibleContentFrameworkStore"),
-    u(S, "migrations", [(e) => d({}, e)]);
-let A = new S(a.Z, {
+u(T, "displayName", "DismissibleContentFrameworkStore"),
+    u(T, "persistKey", "DismissibleContentFrameworkStore"),
+    u(T, "migrations", [(e) => d({}, e)]);
+let A = new T(a.Z, {
     LOGOUT: g,
     DCF_DAILY_CAP_OVERRIDE: E,
     DCF_NEW_USER_MIN_AGE_REQUIRED_OVERRIDE: b,
     DCF_HANDLE_DC_SHOWN: O,
     DCF_HANDLE_DC_DISMISSED: v,
-    DCF_OVERRIDE_LAST_DC_DISMISSED: I,
-    DCF_RESET: T,
+    DCF_OVERRIDE_LAST_DC_DISMISSED: S,
+    DCF_RESET: I,
 });

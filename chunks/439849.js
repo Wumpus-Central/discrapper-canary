@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
-    F: () => p,
-    Z: () => h,
+    F: () => _,
+    Z: () => m,
 }),
     n(704826),
     n(35282),
@@ -18,12 +18,12 @@ let u = [],
 function f(e) {
     return (e = e.toLowerCase()), (0, l.isWindows)() && (e = (e = e.replace(/^[a-z]:/, "")).replace(/\\/g, "/")), e;
 }
-function _(e) {
+function p(e) {
     null != e &&
         "" !== e &&
         ((e = f(e)).endsWith("/") || (e += "/"), u.push(e), (0, l.isLinux)() && u.push("/var" + e));
 }
-function p(e) {
+function _(e) {
     e = f(e);
     let t = !1;
     if (
@@ -39,7 +39,7 @@ function p(e) {
     }
     return (e = e.includes(d) ? e.split("/").slice(-3).join("/") : e.split("/").slice(-2).join("/"));
 }
-async function h() {
+async function m() {
     if (null != r) return r;
     try {
         await c.ZP.ensureModule("discord_game_utils"), (r = await c.ZP.requireModule("discord_game_utils"));
@@ -48,22 +48,22 @@ async function h() {
     }
     if ((0, l.isWindows)()) {
         let e = o.Z.process.env;
-        _(e.LOCALAPPDATA),
-            _(e["PROGRAMFILES(X86)"]),
-            _(e.PROGRAMFILES),
-            _(e.PROGRAMW6432),
-            _(e.PROGRAMDATA),
-            _("/games/"),
-            _("/steamlibrary/steamapps/common/");
+        p(e.LOCALAPPDATA),
+            p(e["PROGRAMFILES(X86)"]),
+            p(e.PROGRAMFILES),
+            p(e.PROGRAMW6432),
+            p(e.PROGRAMDATA),
+            p("/games/"),
+            p("/steamlibrary/steamapps/common/");
     } else
-        (0, l.isMac)() ? _("/Applications") : (0, l.isLinux)() && (_("/app/bin"), _("/usr/bin"), _("/usr/local/bin"));
+        (0, l.isMac)() ? p("/Applications") : (0, l.isLinux)() && (p("/app/bin"), p("/usr/bin"), p("/usr/local/bin"));
     let e = o.Z.remoteApp.getPath;
     return (
-        _(await e("home")),
-        _(await e("appData")),
-        _(await e("desktop")),
-        _(await e("documents")),
-        _(await e("downloads")),
+        p(await e("home")),
+        p(await e("appData")),
+        p(await e("desktop")),
+        p(await e("documents")),
+        p(await e("downloads")),
         (u = a().uniq(u)).sort((e, t) => t.length - e.length),
         r
     );

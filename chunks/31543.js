@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381),
     i = n(473749),
     a = n(55160),
@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(453070),
     d = n(611480),
     f = n(388032),
-    _ = n(943341);
-let p = i.forwardRef(function (e, t) {
-    let { onKeyDown: n, stickersListRef: p, channel: h } = e,
-        m = (0, u.fQ)(h),
+    p = n(943341);
+let _ = i.forwardRef(function (e, t) {
+    let { onKeyDown: n, stickersListRef: _, channel: m } = e,
+        h = (0, u.fQ)(m),
         g = i.useRef(null),
         { searchQuery: E, isSearchSuggestion: b } = (0, c.Iu)(
             (e) => ({
@@ -30,11 +30,11 @@ let p = i.forwardRef(function (e, t) {
                     l.ZN.setInspectedExpressionPosition(0, 0),
                     l.ZN.setSearchPlaceholder(null),
                     (0, c.ql)(e),
-                    null == (t = p.current) || t.scrollTo(0);
+                    null == (t = _.current) || t.scrollTo(0);
             },
-            [p],
+            [_],
         ),
-        I = i.useCallback(() => {
+        S = i.useCallback(() => {
             (0, c.ql)("");
         }, []);
     return (
@@ -51,14 +51,14 @@ let p = i.forwardRef(function (e, t) {
             }
         }, [b]),
         (0, r.jsx)("div", {
-            className: _.wrapper,
+            className: p.wrapper,
             children: (0, r.jsx)(s.E1j, {
-                autoFocus: m,
-                disabled: !m,
+                autoFocus: h,
+                disabled: !h,
                 query: E,
                 ref: g,
-                placeholder: null != y ? y : m ? f.intl.string(f.t.dt5h1C) : f.intl.string(f.t["Pck/4U"]),
-                onClear: I,
+                placeholder: null != y ? y : h ? f.intl.string(f.t.dt5h1C) : f.intl.string(f.t["Pck/4U"]),
+                onClear: S,
                 onKeyDown: n,
                 onChange: v,
                 inputProps: {

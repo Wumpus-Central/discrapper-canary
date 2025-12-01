@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(54381);
 n(473749);
 var i = n(481060),
@@ -48,7 +48,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,14 +59,14 @@ function _(e, t) {
         e
     );
 }
-let p = o.ZP.getEnableHardwareAcceleration() ? i.Xo$ : i.qEK;
-function h(e) {
+let _ = o.ZP.getEnableHardwareAcceleration() ? i.Xo$ : i.qEK;
+function m(e) {
     let { otherUser: t, status: n } = e,
         o = (0, s.j_)(t.id, n),
         {
             avatarSrc: u,
             avatarDecorationSrc: f,
-            eventHandlers: h,
+            eventHandlers: m,
         } = (0, a.Z)({
             userId: t.id,
             size: i.EFr.SIZE_40,
@@ -76,8 +76,8 @@ function h(e) {
         children: [
             (0, r.jsx)(
                 "div",
-                _(d({}, h), {
-                    children: (0, r.jsx)(p, {
+                p(d({}, m), {
+                    children: (0, r.jsx)(_, {
                         className: c.avatar,
                         src: u,
                         avatarDecoration: f,

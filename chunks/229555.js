@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -10,7 +10,7 @@ var i = n(120356),
     u = n(787528),
     d = n(388032),
     f = n(726185);
-let _ = (e, t) =>
+let p = (e, t) =>
         (null == e ? void 0 : e.status) === c.Vq.EARNED
             ? d.intl.format(d.t.Hu4jfi, { date: null != t ? t : new Date() })
             : (null == e ? void 0 : e.status) === c.Vq.UPCOMING
@@ -19,15 +19,15 @@ let _ = (e, t) =>
                     days: e.daysLeft,
                 })
               : null,
-    p = () => {
+    _ = () => {
         var e;
         let t = (0, c.Rw)(),
             n = null != (e = (0, c.GG)()) ? e : new Date(),
             i = (0, u.u)(null == t ? void 0 : t.id);
         if (null == t || null == i) return null;
-        let { id: p, nameUnformatted: h, tenureReqNumMonths: m, hasWideArt: g } = t,
-            E = d.intl.string(h),
-            b = (0, l.q)(p, m),
+        let { id: _, nameUnformatted: m, tenureReqNumMonths: h, hasWideArt: g } = t,
+            E = d.intl.string(m),
+            b = (0, l.q)(_, h),
             y = { "--custom-badge-glow-color": (0, s.rj)(t.glowColor, 0.5) };
         return (0, r.jsxs)("div", {
             className: f.container,
@@ -58,7 +58,7 @@ let _ = (e, t) =>
                         }),
                         (0, r.jsx)(o.xvT, {
                             variant: "text-xs/normal",
-                            children: _(t, n),
+                            children: p(t, n),
                         }),
                     ],
                 }),

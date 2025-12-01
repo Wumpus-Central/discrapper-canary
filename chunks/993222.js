@@ -4,8 +4,8 @@ n(473749);
 var l = n(120356),
     i = n.n(l),
     a = n(442837),
-    s = n(481060),
-    o = n(594174),
+    o = n(481060),
+    s = n(594174),
     c = n(74538),
     u = n(597688),
     d = n(429368),
@@ -24,7 +24,7 @@ let v = (e) => {
             O = (0, f.G1)(t),
             S = (0, a.e7)([u.Z], () => u.Z.getCategoryForProduct(t.skuId)),
             y = (null == S ? void 0 : S.unpublishedAt) != null ? (0, f.OT)(S.unpublishedAt) : null,
-            j = (0, a.e7)([o.default], () => o.default.getCurrentUser()),
+            j = (0, a.e7)([s.default], () => s.default.getCurrentUser()),
             k = c.ZP.canUseCollectibles(j),
             I = (0, h.Iw)(t),
             { isOrbExclusive: T } = (0, C.Ip)({
@@ -52,10 +52,10 @@ let v = (e) => {
             null == L || L === p.Zh.NONE)
         )
             return null;
-        let B = null;
+        let P = null;
         switch (L) {
             case p.Zh.LIMITED_TIME:
-                B =
+                P =
                     null != y
                         ? y > 1
                             ? _.intl.formatToPlainString(_.t.Io7ozn, { days: y })
@@ -63,35 +63,35 @@ let v = (e) => {
                         : _.intl.string(_.t["h/uBCR"]);
                 break;
             case p.Zh.NEW:
-                B = _.intl.string(_.t.y2b7CA);
+                P = _.intl.string(_.t.y2b7CA);
                 break;
             case p.Zh.NITRO_EXCLUSIVE:
-                B = _.intl.string(_.t.X3Ekj8);
+                P = _.intl.string(_.t.X3Ekj8);
                 break;
             case p.Zh.ORBS_EXCLUSIVE:
-                B = _.intl.string(_.t["0TmQRG"]);
+                P = _.intl.string(_.t["0TmQRG"]);
                 break;
             case p.Zh.ONE_DAY_RENTAL:
-                B = _.intl.string(_.t["9dHf8O"]);
+                P = _.intl.string(_.t["9dHf8O"]);
                 break;
             case p.Zh.THREE_DAY_RENTAL:
-                B = _.intl.string(_.t["52UXCo"]);
+                P = _.intl.string(_.t["52UXCo"]);
                 break;
             case p.Zh.RENTAL:
-                B = _.intl.string(_.t.VgsFa1);
+                P = _.intl.string(_.t.VgsFa1);
         }
-        return (0, r.jsx)(s.IGR, {
-            text: B,
+        return (0, r.jsx)(o.IGR, {
+            text: P,
             disableColor: !0,
             className: i()(d, b.productCardBadge),
         });
     },
     x = (e) => {
         let { skuId: t, badgeOverride: n, className: l, prioritizedCurrency: i, skipLimitedTimeCheck: a } = e,
-            s = (0, p.LJ)(t),
-            o = (0, d.o)(s);
-        if (null == s) return null;
-        let c = (0, m.W)(s, o);
+            o = (0, p.LJ)(t),
+            s = (0, d.o)(o);
+        if (null == o) return null;
+        let c = (0, m.W)(o, s);
         return (0, r.jsx)(v, {
             product: c,
             badgeOverride: n,

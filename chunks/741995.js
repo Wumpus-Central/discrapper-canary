@@ -21,7 +21,7 @@ let c = s.OA,
     u = "tokenized",
     d = !1,
     f = {};
-function _(e) {
+function p(e) {
     var t;
     let { id: n, query: r } = e;
     if ("string" != typeof r || "" === (r = r.trim())) return;
@@ -35,15 +35,15 @@ function _(e) {
         i.length > 5 && i.splice(5, i.length),
         a.K.set(s.OA, { history: f });
 }
-function p(e) {
+function _(e) {
     let { id: t } = e;
     delete f[t], a.K.set(s.OA, { history: f });
 }
-function h(e) {
+function m(e) {
     let { id: t, query: n } = e;
     null != f[t] && ((f[t] = f[t].filter((e) => e !== n)), a.K.set(s.OA, { history: f }));
 }
-function m(e) {
+function h(e) {
     return (
         Object.keys(e).forEach((t) => {
             Array.isArray(e[t]) && (e[t] = e[t].filter((e) => "string" == typeof e && e.trim())),
@@ -58,7 +58,7 @@ function g() {
 class E extends (r = i.ZP.Store) {
     initialize() {
         let e = a.K.get(c);
-        (null == e ? void 0 : e.history) != null && (f = m(e.history)), (d = !!a.K.get(u));
+        (null == e ? void 0 : e.history) != null && (f = h(e.history)), (d = !!a.K.get(u));
     }
     isTokenized() {
         return d;
@@ -69,8 +69,8 @@ class E extends (r = i.ZP.Store) {
 }
 l(E, "displayName", s.zn);
 let b = new E(o.Z, {
-    SEARCH_HISTORY_WEB_CLEAR_ITEMS: p,
-    SEARCH_HISTORY_WEB_REMOVE_ITEM: h,
-    SEARCH_HISTORY_WEB_ADD_ITEM: _,
+    SEARCH_HISTORY_WEB_CLEAR_ITEMS: _,
+    SEARCH_HISTORY_WEB_REMOVE_ITEM: m,
+    SEARCH_HISTORY_WEB_ADD_ITEM: p,
     LOGOUT: g,
 });

@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(481060),
     d = n(850840),
     f = n(63063),
-    _ = n(74538),
-    p = n(981631),
-    h = n(388032),
-    m = n(209857);
+    p = n(74538),
+    _ = n(981631),
+    m = n(388032),
+    h = n(209857);
 function g(e, t, n) {
     return (
         t in e
@@ -68,11 +68,11 @@ class b extends i.Component {
                 isTrial: y,
                 inReverseTrial: O,
                 isDiscount: v,
-                subscriptionPlan: I,
-                finePrintClassname: T,
+                subscriptionPlan: S,
+                finePrintClassname: I,
             } = this.props,
-            { hasAcceptedEULA: S, hasAcceptedWithdrawalWaiver: A } = this.state;
-        return (l()(!y || null != I, "subscriptionPlan cannot be null if shouldShowUpdatedPaymentModal is true"),
+            { hasAcceptedEULA: T, hasAcceptedWithdrawalWaiver: A } = this.state;
+        return (l()(!y || null != S, "subscriptionPlan cannot be null if shouldShowUpdatedPaymentModal is true"),
         a || (null != e && !i) || b)
             ? (0, r.jsxs)("div", {
                   className: c,
@@ -80,15 +80,15 @@ class b extends i.Component {
                       b &&
                           (0, r.jsx)(u.Heading, {
                               variant: "heading-md/semibold",
-                              className: m.formTitle,
-                              children: h.intl.string(h.t.Ogvn5o),
+                              className: h.formTitle,
+                              children: m.intl.string(m.t.Ogvn5o),
                           }),
                       null != e && (a || !i)
                           ? (0, r.jsx)(u.Checkbox, {
-                                checked: S,
+                                checked: T,
                                 onChange: (e) => this.setState({ hasAcceptedEULA: e }),
                                 disabled: s,
-                                label: h.intl.format(h.t.IodJKT, {
+                                label: m.intl.format(m.t.IodJKT, {
                                     applicationName: t,
                                     onClick: (t) => {
                                         (0, u.ZDy)(async () => {
@@ -103,7 +103,7 @@ class b extends i.Component {
                       null == d
                           ? null
                           : (0, r.jsx)("div", {
-                                className: o()(m.finePrint, T),
+                                className: o()(h.finePrint, I),
                                 children: d,
                             }),
                       b
@@ -114,59 +114,59 @@ class b extends i.Component {
                                         checked: A,
                                         onChange: (e) => this.setState({ hasAcceptedWithdrawalWaiver: e }),
                                         disabled: s,
-                                        label: h.intl.string(h.t["DFCVN+"]),
+                                        label: m.intl.string(m.t["DFCVN+"]),
                                     }),
                                     (0, r.jsx)("div", {
-                                        className: m.finePrint,
-                                        children: h.intl.string(h.t.jhu6zm),
+                                        className: h.finePrint,
+                                        children: m.intl.string(m.t.jhu6zm),
                                     }),
                                 ],
                             })
                           : null,
                       g &&
                           (0, r.jsxs)("div", {
-                              className: m.finePrint,
+                              className: h.finePrint,
                               children: [
                                   "*",
-                                  h.intl.format(h.t["5zmY3F"], {
-                                      documentationLink: f.Z.getArticleURL(p.BhN.LOCALIZED_PRICING),
+                                  m.intl.format(m.t["5zmY3F"], {
+                                      documentationLink: f.Z.getArticleURL(_.BhN.LOCALIZED_PRICING),
                                   }),
                               ],
                           }),
                       y &&
-                          null != I &&
+                          null != S &&
                           (0, r.jsx)(u.Text, {
                               variant: "text-xs/medium",
                               color: "interactive-normal",
-                              children: h.intl.format(h.t["Hvo/Z5"], {
-                                  buttonText: (0, _.W_)(null, I),
-                                  interval: _.ZP.formatInterval(null == I ? void 0 : I.interval),
-                                  cancelSubscriptionArticle: f.Z.getArticleURL(p.BhN.PREMIUM_DETAILS_CANCEL_SUB),
-                                  paidServiceTermsArticle: f.Z.getArticleURL(p.BhN.PAID_TERMS),
+                              children: m.intl.format(m.t["Hvo/Z5"], {
+                                  buttonText: (0, p.W_)(null, S),
+                                  interval: p.ZP.formatInterval(null == S ? void 0 : S.interval),
+                                  cancelSubscriptionArticle: f.Z.getArticleURL(_.BhN.PREMIUM_DETAILS_CANCEL_SUB),
+                                  paidServiceTermsArticle: f.Z.getArticleURL(_.BhN.PAID_TERMS),
                               }),
                           }),
                       O &&
-                          null != I &&
+                          null != S &&
                           (0, r.jsx)(u.Text, {
                               variant: "text-xs/medium",
                               color: "interactive-normal",
-                              children: h.intl.format(h.t.Oo2FeS, {
-                                  buttonText: (0, _.W_)(null, I),
-                                  interval: _.ZP.formatInterval(null == I ? void 0 : I.interval),
-                                  cancelSubscriptionArticle: f.Z.getArticleURL(p.BhN.PREMIUM_DETAILS_CANCEL_SUB),
-                                  paidServiceTermsArticle: f.Z.getArticleURL(p.BhN.PAID_TERMS),
+                              children: m.intl.format(m.t.Oo2FeS, {
+                                  buttonText: (0, p.W_)(null, S),
+                                  interval: p.ZP.formatInterval(null == S ? void 0 : S.interval),
+                                  cancelSubscriptionArticle: f.Z.getArticleURL(_.BhN.PREMIUM_DETAILS_CANCEL_SUB),
+                                  paidServiceTermsArticle: f.Z.getArticleURL(_.BhN.PAID_TERMS),
                               }),
                           }),
                       v &&
-                          null != I &&
+                          null != S &&
                           (0, r.jsx)(u.Text, {
                               variant: "text-xs/medium",
                               color: "interactive-normal",
-                              children: h.intl.format(h.t["Z2c+aV"], {
-                                  buttonText: (0, _.W_)(null, I),
-                                  interval: _.ZP.formatInterval(null == I ? void 0 : I.interval),
-                                  cancelSubscriptionArticle: f.Z.getArticleURL(p.BhN.PREMIUM_DETAILS_CANCEL_SUB),
-                                  paidServiceTermsArticle: f.Z.getArticleURL(p.BhN.PAID_TERMS),
+                              children: m.intl.format(m.t["Z2c+aV"], {
+                                  buttonText: (0, p.W_)(null, S),
+                                  interval: p.ZP.formatInterval(null == S ? void 0 : S.interval),
+                                  cancelSubscriptionArticle: f.Z.getArticleURL(_.BhN.PREMIUM_DETAILS_CANCEL_SUB),
+                                  paidServiceTermsArticle: f.Z.getArticleURL(_.BhN.PAID_TERMS),
                               }),
                           }),
                   ],

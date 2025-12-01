@@ -13,10 +13,10 @@ var r = n(54381),
     u = n(314910),
     d = n(728285),
     f = n(53529),
-    _ = n(50659),
-    p = n(436660),
-    h = n(887490),
-    m = n(447525),
+    p = n(50659),
+    _ = n(436660),
+    m = n(887490),
+    h = n(447525),
     g = n(436349);
 function E(e) {
     var t;
@@ -93,11 +93,11 @@ let b = i.forwardRef(function (e, t) {
     var n;
     let { editorRef: a, containerRef: o, options: c } = e,
         f = i.useRef(null),
-        [_, p] = i.useState(!1),
-        m = i.useRef(null),
+        [p, _] = i.useState(!1),
+        h = i.useRef(null),
         b = i.useContext(d.ZP),
         y = i.useCallback(() => {
-            p(!1), clearTimeout(m.current);
+            _(!1), clearTimeout(h.current);
         }, []),
         O = i.useCallback(
             (e) => {
@@ -107,7 +107,7 @@ let b = i.forwardRef(function (e, t) {
             },
             [b, y],
         ),
-        I = i.useCallback(
+        S = i.useCallback(
             (e) => {
                 let t = b.renderWindow;
                 if (e.target instanceof t.Element)
@@ -115,12 +115,12 @@ let b = i.forwardRef(function (e, t) {
                     else {
                         var n;
                         let r = e.target instanceof t.Node && (null == (n = f.current) ? void 0 : n.contains(e.target));
-                        clearTimeout(m.current),
-                            (m.current = setTimeout(() => {
+                        clearTimeout(h.current),
+                            (h.current = setTimeout(() => {
                                 var t;
                                 let n = null == (t = (0, l.uB)(e)) ? void 0 : t.activeElement,
                                     i = o.current;
-                                p(r || (null != n && null != i && i.contains(n)));
+                                _(r || (null != n && null != i && i.contains(n)));
                             }, 100));
                     }
                 else y();
@@ -133,23 +133,23 @@ let b = i.forwardRef(function (e, t) {
             return (
                 e.document.addEventListener("keydown", y),
                 e.document.addEventListener("mousedown", O),
-                e.document.addEventListener("mouseup", I),
+                e.document.addEventListener("mouseup", S),
                 e.addEventListener("focus", y),
                 e.addEventListener("blur", y),
                 () => {
                     e.document.removeEventListener("keydown", y),
                         e.document.removeEventListener("mousedown", O),
-                        e.document.removeEventListener("mouseup", I),
+                        e.document.removeEventListener("mouseup", S),
                         e.removeEventListener("focus", y),
                         e.removeEventListener("blur", y),
-                        clearTimeout(m.current);
+                        clearTimeout(h.current);
                 }
             );
-        }, [b, y, O, I]);
-    let { x: T, y: S } = i.useMemo(() => {
+        }, [b, y, O, S]);
+    let { x: I, y: T } = i.useMemo(() => {
             var e, t, n, r;
             let i = null == (e = a.current) ? void 0 : e.getSlateEditor();
-            if ((null == i ? void 0 : i.selection) == null || h.M8.isCollapsed(i.selection) || !_)
+            if ((null == i ? void 0 : i.selection) == null || m.M8.isCollapsed(i.selection) || !p)
                 return {
                     x: null,
                     y: null,
@@ -166,35 +166,35 @@ let b = i.forwardRef(function (e, t) {
             let d = u.getBoundingClientRect(),
                 f = l.createRange();
             f.setStart(c.anchorNode, c.anchorOffset), f.setEnd(c.anchorNode, c.anchorOffset);
-            let p = f.getBoundingClientRect(),
-                m = l.createRange();
-            m.setStart(c.anchorNode, c.anchorOffset), m.setEnd(c.focusNode, c.focusOffset);
-            let g = m.getBoundingClientRect(),
-                E = d.x === p.x,
-                b = E ? g.x : Math.min(d.x, p.x),
-                y = E ? g.x + g.width : Math.max(d.x, p.x),
+            let _ = f.getBoundingClientRect(),
+                h = l.createRange();
+            h.setStart(c.anchorNode, c.anchorOffset), h.setEnd(c.focusNode, c.focusOffset);
+            let g = h.getBoundingClientRect(),
+                E = d.x === _.x,
+                b = E ? g.x : Math.min(d.x, _.x),
+                y = E ? g.x + g.width : Math.max(d.x, _.x),
                 O =
                     null != (r = null == (n = o.current) || null == (t = n.getBoundingClientRect()) ? void 0 : t.y)
                         ? r
                         : 0;
             return {
                 x: b + (y - b) / 2,
-                y: Math.max(O, Math.min(p.y, d.y)),
+                y: Math.max(O, Math.min(_.y, d.y)),
             };
-        }, [o, _, a]),
+        }, [o, p, a]),
         [A, C] = i.useState(0),
-        [N, R] = i.useState(0);
+        [N, P] = i.useState(0);
     if (
         (i.useLayoutEffect(() => {
-            if (null == T || null == S || null == f.current) return;
+            if (null == I || null == T || null == f.current) return;
             let e = f.current.getBoundingClientRect();
-            R(e.width / 2), C(e.height + 12);
-        }, [T, S]),
-        null == T || null == S)
+            P(e.width / 2), C(e.height + 12);
+        }, [I, T]),
+        null == I || null == T)
     )
         return null;
-    let P = null == (n = a.current) ? void 0 : n.getSlateEditor();
-    return null == P
+    let R = null == (n = a.current) ? void 0 : n.getSlateEditor();
+    return null == R
         ? null
         : (0, r.jsx)(u.ZP, {
               children: (0, r.jsxs)("div", {
@@ -202,8 +202,8 @@ let b = i.forwardRef(function (e, t) {
                   ref: f,
                   className: g.toolbar,
                   style: {
-                      top: S - A,
-                      left: T - N,
+                      top: T - A,
+                      left: I - N,
                   },
                   onMouseDown: (e) => {
                       e.stopPropagation();
@@ -212,7 +212,7 @@ let b = i.forwardRef(function (e, t) {
                       e.stopPropagation();
                   },
                   children: [
-                      (0, r.jsx)(v, { slateEditor: P }),
+                      (0, r.jsx)(v, { slateEditor: R }),
                       (0, r.jsx)(E, {
                           editorRef: a,
                           options: c,
@@ -224,12 +224,12 @@ let b = i.forwardRef(function (e, t) {
 function y(e) {
     let { slateEditor: t, markdownSyntax: n, children: i } = e,
         a = () => {
-            null != t && f.T.withSingleEntry(t, () => (0, _.py)(t, n));
+            null != t && f.T.withSingleEntry(t, () => (0, p.py)(t, n));
         },
         o = !1;
     if ((null == t ? void 0 : t.selection) != null) {
-        let [e, r] = h.M8.edges(t.selection);
-        o = null != (0, _.U4)(t, e, r).before[n];
+        let [e, r] = m.M8.edges(t.selection);
+        o = null != (0, p.U4)(t, e, r).before[n];
     }
     return (0, r.jsx)("button", {
         "aria-pressed": o,
@@ -241,10 +241,10 @@ function y(e) {
 function O(e) {
     let { blockType: t, slateEditor: n, children: i } = e,
         a = () => {
-            null != n && f.T.withSingleEntry(n, () => (0, _.hm)(n, t));
+            null != n && f.T.withSingleEntry(n, () => (0, p.hm)(n, t));
         },
-        o = null != n ? h.bN.getCurrentBlock(n) : null,
-        s = null != o && h.aj.isType(o[0], t);
+        o = null != n ? m.bN.getCurrentBlock(n) : null,
+        s = null != o && m.aj.isType(o[0], t);
     return (0, r.jsx)("button", {
         "aria-pressed": s,
         className: g.button,
@@ -255,16 +255,16 @@ function O(e) {
 function v(e) {
     var t;
     let { slateEditor: n } = e,
-        [r, a] = null != (t = h.bN.getSelectedVoid(n)) ? t : [null, null],
+        [r, a] = null != (t = m.bN.getSelectedVoid(n)) ? t : [null, null],
         o = i.useCallback(
             (e) => {
                 if ((null == n ? void 0 : n.selection) == null || null == a) return;
                 let t = n.selection;
                 f.T.withSingleEntry(n, () => {
-                    p.Q.voidToText(n, e, a), p.Q.select(n, t);
+                    _.Q.voidToText(n, e, a), _.Q.select(n, t);
                 });
             },
             [n, a],
         );
-    return null == r ? null : (0, m.Z)(r, { replace: o });
+    return null == r ? null : (0, h.Z)(r, { replace: o });
 }

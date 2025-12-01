@@ -1,4 +1,4 @@
-n.d(t, { I: () => _ });
+n.d(t, { I: () => p });
 var r = n(54381),
     i = n(481060),
     a = n(626135),
@@ -57,7 +57,7 @@ function d(e, t) {
     );
 }
 let f = "social-layer-storefront-item-claimed-successfully-modal",
-    _ = (e) => {
+    p = (e) => {
         let { sku: t, application: l, analyticsLocations: u } = e;
         (0, i.ZDy)(
             async () => {

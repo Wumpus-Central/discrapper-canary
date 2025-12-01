@@ -1,6 +1,6 @@
 n.d(t, {
-    $: () => h,
-    M: () => p,
+    $: () => m,
+    M: () => _,
 }),
     n(539854),
     n(388685);
@@ -47,14 +47,14 @@ class f {
             u(this, "_flushHandler", new s.sW(32, () => this._flush()));
     }
 }
-let _ = new f();
-function p(e) {
+let p = new f();
+function _(e) {
     r.useEffect(() => {
-        null != e && _.request(e);
+        null != e && p.request(e);
     }, [e]);
 }
-function h(e, t) {
-    p(e);
+function m(e, t) {
+    _(e);
     let n = r.useMemo(
         () =>
             null != t

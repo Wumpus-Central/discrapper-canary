@@ -9,8 +9,8 @@ var r,
     u = n(442837),
     d = n(902704),
     f = n(481060),
-    p = n(925549),
-    h = n(607070),
+    h = n(925549),
+    p = n(607070),
     g = n(100527),
     m = n(367907),
     b = n(906732),
@@ -385,7 +385,7 @@ class U extends (r = l.Component) {
                 a()(() => {
                     if (null != this._list) {
                         let e = this._list.getScrollerNode();
-                        null != e && p.Z.updateChannelListScroll(A.ME, e.scrollTop);
+                        null != e && h.Z.updateChannelListScroll(A.ME, e.scrollTop);
                     }
                     void 0 !== this.props.onHandleScroll && this.props.onHandleScroll();
                 }, 100),
@@ -477,20 +477,20 @@ class U extends (r = l.Component) {
 L(U, "defaultProps", { padding: 8 });
 let B = (e) => {
     let { density: t } = (0, f.TCT)(),
-        { version: n, theme: r, children: o, showDMHeader: a, listScrollerRef: d, hideAllDMs: p } = e,
+        { version: n, theme: r, children: o, showDMHeader: a, listScrollerRef: d, hideAllDMs: h } = e,
         m = l.Children.count(o),
         _ = N.Z.getMutablePrivateChannels(),
-        y = p ? {} : (0, S.k1)(_),
+        y = h ? {} : (0, S.k1)(_),
         O = (0, u.Wu)([w.Z, E.Z, I.Z], () => {
             let e = w.Z.getPrivateChannelIds(),
                 t = (0, S.tU)(e, [E.Z, I.Z]);
-            return p ? [] : t;
-        }, [p]);
+            return h ? [] : t;
+        }, [h]);
     (0, x.z)(j.R);
     let { analyticsLocations: C } = (0, b.ZP)(g.Z.CONTACTS_LIST),
         Z = (0, P.Ll)(),
-        { keyboardModeEnabled: T, version: A } = (0, u.cj)([h.Z, N.Z], () => ({
-            keyboardModeEnabled: h.Z.keyboardModeEnabled,
+        { keyboardModeEnabled: T, version: A } = (0, u.cj)([p.Z, N.Z], () => ({
+            keyboardModeEnabled: p.Z.keyboardModeEnabled,
             version:
                 null != n ? "".concat(n, ":").concat(N.Z.getPrivateChannelsVersion()) : N.Z.getPrivateChannelsVersion(),
         })),

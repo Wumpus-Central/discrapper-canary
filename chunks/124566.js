@@ -10,10 +10,10 @@ var r = n(979554),
     d = n(815301),
     f = n(233634);
 n(337357), n(349927);
-var _ = n(191333),
-    p = n(81932),
-    h = n(770476);
-let m = {
+var p = n(191333),
+    _ = n(81932),
+    m = n(770476);
+let h = {
         skuId: i.d.SEASONAL_GIFTING_2025_HEAD_IN_THE_CLOUDS_SKU_ID,
         assetId: "a_670b722e56740d11d1e6fe55b8094013",
         type: r.Z.AVATAR_DECORATION,
@@ -42,8 +42,8 @@ let m = {
         gradient: ["rgba(74, 87, 192, 1)", "rgba(8, 5, 67, 1)"],
     },
     O = {
-        rewards: [m, g, E],
-        rewardAssetIdMap: (0, o.YV)([m, g, E]),
+        rewards: [h, g, E],
+        rewardAssetIdMap: (0, o.YV)([h, g, E]),
         chatGiftIcon: {
             trinketsAnimation: {
                 getAnimationData: () =>
@@ -88,21 +88,21 @@ let m = {
             mobileSubheading: (e) => l.intl.formatToPlainString(l.t["2h5M+X"], { availableCount: e }),
             gradientConfig: b,
             getImageUrl: (e, t) => (t ? f.Z : d.Z),
-            getBannerImageUrl: () => h.Z,
-            getBackgroundImageUrl: () => p.Z,
+            getBannerImageUrl: () => m.Z,
+            getBackgroundImageUrl: () => _.Z,
         },
         planSelectionBanner: {
             desktopBannerText: () => l.intl.string(l.t.Abiuci),
             mobileBannerText: () => l.intl.string(l.t.cMiNit),
             getImageUrl: () => f.Z,
             gradientConfig: () => b,
-            getBackgroundImageUrl: () => h.Z,
+            getBackgroundImageUrl: () => m.Z,
         },
         billingSettingsMarketingBanner: {
             getImageUrl: (e) => (e ? f.Z : d.Z),
             title: () => l.intl.string(l.t.Eeqjcv),
             body: () => l.intl.string(l.t.IuMZS3),
-            getBackgroundImageUrl: () => _.Z,
+            getBackgroundImageUrl: () => p.Z,
             gradientConfig: y,
         },
         giftPurchaseConfirmation: {

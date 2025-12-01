@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(953529);
+n.d(t, { Z: () => _ }), n(953529);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -64,15 +64,15 @@ let f = (e) => {
             ],
         });
     },
-    _ = 50;
-function p(e) {
+    p = 50;
+function _(e) {
     let { achievement: t, unlocked: n } = e,
-        { name: a, description: p, rarity: h, hideDescriptionUntilUnlock: m, onAction: g } = t,
-        { color: E } = (0, l.F7)(h);
+        { name: a, description: _, rarity: m, hideDescriptionUntilUnlock: h, onAction: g } = t,
+        { color: E } = (0, l.F7)(m);
     i.useEffect(() => {
         let e = setTimeout(() => {
             c.Z.playAchievementUnlockSound();
-        }, _);
+        }, p);
         return () => {
             clearTimeout(e);
         };
@@ -105,7 +105,7 @@ function p(e) {
                     (0, r.jsx)(s.Text, {
                         variant: "text-xs/medium",
                         color: "header-secondary",
-                        children: m && !n ? "?????" : p(),
+                        children: h && !n ? "?????" : _(),
                     }),
                 ],
             }),

@@ -27,12 +27,12 @@ let f = (e) => {
                     : t,
             [n, t],
         ),
-        _ = null != e && null == f,
-        p = (0, l.F)("useProfileEffectPreset");
+        p = null != e && null == f,
+        _ = (0, l.F)("useProfileEffectPreset");
     return (
         r.useEffect(() => {
-            _ && (p ? (0, a.lW)(e) : (0, u.t)(!0));
-        }, [_, e, p]),
+            p && (_ ? (0, a.lW)(e) : (0, u.t)(!0));
+        }, [p, e, _]),
         f
     );
 };

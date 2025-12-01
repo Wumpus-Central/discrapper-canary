@@ -20,18 +20,18 @@ function b(e) {
         C = (0, l.e7)([d.Z], () => d.Z.getChannel(t), [t]),
         { canManageGuildEvent: v } = (0, s.XJ)(C),
         _ = v(y),
-        x = r.useRef(null);
+        O = r.useRef(null);
     if (null == y) return null;
-    let j = () => {
+    let x = () => {
             if (null != C && (0, f.Z)(C)) return void (0, p.lC)(C, b);
             n();
         },
-        O = () => {
+        j = () => {
             h.Z.endEvent(y.id, y.guild_id);
         };
     return _
         ? (0, i.jsx)(a.yRy, {
-              targetElementRef: x,
+              targetElementRef: O,
               renderPopout: (e) => {
                   let { closePopout: t } = e;
                   return (0, i.jsx)(c.Z, {
@@ -43,7 +43,7 @@ function b(e) {
                           children: (0, i.jsx)(a.sNh, {
                               id: "end-voice-event",
                               color: "danger",
-                              action: O,
+                              action: j,
                               label: g.intl.string(g.t.qaYzPA),
                               icon: a.k$p,
                           }),
@@ -56,9 +56,9 @@ function b(e) {
               children: (e) => {
                   let { onClick: t } = e;
                   return (0, i.jsx)(u.Z, {
-                      buttonRef: x,
+                      buttonRef: O,
                       label: g.intl.string(g.t["6vrfgt"]),
-                      onClick: j,
+                      onClick: x,
                       onPopoutClick: t,
                   });
               },

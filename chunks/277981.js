@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(35282), n(781311);
+n.d(t, { Z: () => I }), n(35282), n(781311);
 var r = n(54381),
     i = n(473749),
     a = n(392711),
@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(367907),
     d = n(998698),
     f = n(895924),
-    _ = n(588468),
-    p = n(600164),
-    h = n(718745),
-    m = n(590921),
+    p = n(588468),
+    _ = n(600164),
+    m = n(718745),
+    h = n(590921),
     g = n(761652),
     E = n(981631),
     b = n(388032),
@@ -28,7 +28,7 @@ function v(e, t, n) {
     var r, i;
     let a;
     return (
-        n.commands === m.L8.OLD_BUILT_INS
+        n.commands === h.L8.OLD_BUILT_INS
             ? ((a = t.split(" ")[0].substring(g.GI.length)),
               (t = t.substring((null != (r = a.length) ? r : 0) + g.GI.length)))
             : (a = null == (i = d.Z.getActiveCommand(e.id)) ? void 0 : i.untranslatedName),
@@ -38,16 +38,16 @@ function v(e, t, n) {
         }
     );
 }
-function I(e) {
+function S(e) {
     return e.meta.url;
 }
-let T = {
-    stores: [d.Z, h.Z],
+let I = {
+    stores: [d.Z, m.Z],
     matches(e, t, n, r, i) {
         var a;
         return (
-            i.commands !== m.L8.DISABLED &&
-            (i.commands === m.L8.OLD_BUILT_INS
+            i.commands !== h.L8.DISABLED &&
+            (i.commands === h.L8.OLD_BUILT_INS
                 ? n.startsWith(g.GI + "gif") || n.startsWith(g.GI + "tenor")
                 : (null == (a = d.Z.getActiveCommand(e.id)) ? void 0 : a.integrationType) === E.q9n.GIF &&
                   d.Z.getOptionStates(e.id).query.hasValue)
@@ -58,7 +58,7 @@ let T = {
         if (null == a) return O;
         let l = o().findKey(E.nkL, (e) => e.command === a);
         i && null != l && s.length > 0 && c.Z.search(l, s);
-        let u = h.Z.getResults(l, s);
+        let u = m.Z.getResults(l, s);
         return null == u
             ? O
             : {
@@ -79,15 +79,15 @@ let T = {
                 onHover: u,
                 onClick: f,
             } = e,
-            { command: h, query: g } = v(o, l, c);
-        if (null == h || 0 === g.length) return null;
+            { command: m, query: g } = v(o, l, c);
+        if (null == m || 0 === g.length) return null;
         if (n)
             return (0, r.jsx)(s.$jN, {
                 className: y.spinner,
                 type: s.$jN.Type.SPINNING_CIRCLE,
             });
         if (null != t) {
-            var O, I;
+            var O, S;
             let e = !1,
                 n = t.map((t, n) => {
                     if (t.type === E.q9n.GIF) {
@@ -95,7 +95,7 @@ let T = {
                         return (
                             (e = !0),
                             (0, r.jsx)(
-                                _.ZP.GIFIntegration,
+                                p.ZP.GIFIntegration,
                                 {
                                     className: y.horizontalAutocomplete,
                                     onClick: f,
@@ -113,11 +113,11 @@ let T = {
                     }
                 }),
                 s =
-                    c.commands === m.L8.OLD_BUILT_INS
-                        ? h
-                        : null != (I = null == (O = d.Z.getActiveCommand(o.id)) ? void 0 : O.integrationTitle)
-                          ? I
-                          : h,
+                    c.commands === h.L8.OLD_BUILT_INS
+                        ? m
+                        : null != (S = null == (O = d.Z.getActiveCommand(o.id)) ? void 0 : O.integrationTitle)
+                          ? S
+                          : m,
                 l =
                     g.length > 0 && null != s
                         ? b.intl.format(b.t["3njXz/"], {
@@ -126,14 +126,14 @@ let T = {
                           })
                         : null != s
                           ? s
-                          : h;
+                          : m;
             return (0, r.jsxs)(
                 i.Fragment,
                 {
                     children: [
-                        (0, r.jsx)(_.ZP.Title, { title: l }),
+                        (0, r.jsx)(p.ZP.Title, { title: l }),
                         e
-                            ? (0, r.jsx)(p.Z, {
+                            ? (0, r.jsx)(_.Z, {
                                   className: y.horizontalAutocompletes,
                                   children: n,
                               })
@@ -156,13 +156,13 @@ let T = {
         if (null == t) return { type: null };
         let c = n[r];
         if (
-            (i === m.QB.INSERT ? a.replaceText(I(c)) : a.sendMessage(I(c)),
+            (i === h.QB.INSERT ? a.replaceText(S(c)) : a.sendMessage(S(c)),
             u.ZP.trackWithMetadata(E.rMx.SEARCH_RESULT_SELECTED, {
                 search_type: E.aib.GIF,
                 index_num: r,
                 source_object: "/".concat(t),
             }),
-            a.commands !== m.L8.OLD_BUILT_INS)
+            a.commands !== h.L8.OLD_BUILT_INS)
         ) {
             let e = d.Z.getActiveCommand(o.id);
             (null == e ? void 0 : e.inputType) === f.iw.BUILT_IN_INTEGRATION &&
@@ -182,6 +182,6 @@ let T = {
                     source: d.Z.getSource(o.id),
                 }));
         }
-        return { type: m.z2.GIF };
+        return { type: h.z2.GIF };
     },
 };

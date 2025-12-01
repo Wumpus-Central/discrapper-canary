@@ -25,21 +25,21 @@ var r = n(512722),
     u = n(634041),
     d = n(647177),
     f = n(63985),
-    _ = n(638457),
-    p = n(678916),
-    h = n(981631);
-function m(e) {
+    p = n(638457),
+    _ = n(678916),
+    m = n(981631);
+function h(e) {
     return new Promise((t, n) => {
         let r = new Image();
         (r.crossOrigin = "anonymous"),
             (r.onload = () => {
                 let e = document.createElement("canvas");
-                (e.width = p.HE.width), (e.height = p.HE.height);
+                (e.width = _.HE.width), (e.height = _.HE.height);
                 let n = e.getContext("2d");
                 i()(null != n, "Canvas context is missing");
                 let a = r.height / r.width,
-                    o = p.HE.height,
-                    s = p.HE.height / a,
+                    o = _.HE.height,
+                    s = _.HE.height / a,
                     l = (e.width - s) / 2,
                     c = (e.height - o) / 2;
                 n.drawImage(r, l, c, s, o);
@@ -74,7 +74,7 @@ async function b(e, t, n) {
     let r,
         i = !1;
     if (null == n) return E(e, t, a.zZ.NONE);
-    if (n === p.f7) return E(e, t, a.zZ.BACKGROUND_BLUR);
+    if (n === _.f7) return E(e, t, a.zZ.BACKGROUND_BLUR);
     if ("string" == typeof n || "number" == typeof n) {
         var o;
         let e = (0, f.Z)()[n];
@@ -86,12 +86,12 @@ async function b(e, t, n) {
                 userId: n.user_id,
                 assetId: n.id,
                 assetHash: e,
-                size: p.HE.width,
+                size: _.HE.width,
             }));
     }
     if (null != r)
         try {
-            let n = i ? void 0 : await m(r),
+            let n = i ? void 0 : await h(r),
                 o = i ? await g(r) : void 0;
             E(e, t, a.zZ.BACKGROUND_REPLACEMENT, n, o);
         } catch (e) {
@@ -119,5 +119,5 @@ function v() {
     let e = o.default.getCurrentUser();
     if (null == e) return;
     let t = (0, l.P)(e);
-    (0, _.Z)() && !u.Z.hasBeenApplied && null != t && y(t, { track: !1 }).catch(h.dG4);
+    (0, p.Z)() && !u.Z.hasBeenApplied && null != t && y(t, { track: !1 }).catch(m.dG4);
 }

@@ -1,5 +1,5 @@
 n.d(t, {
-    OG: () => C,
+    OG: () => x,
     ZP: () => v,
     Zu: () => j,
 }),
@@ -13,9 +13,9 @@ var r = n(54381),
     c = n(692992),
     u = n(749210),
     d = n(626135),
-    p = n(727258),
+    f = n(727258),
     h = n(662146),
-    f = n(981631),
+    p = n(981631),
     g = n(388032),
     m = n(606989);
 function b(e) {
@@ -36,16 +36,16 @@ function _(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     return (
-        s()(t.type !== p.eD.ROOT, "[GuildDropTarget] Tried using a root node as a drop target."),
+        s()(t.type !== f.eD.ROOT, "[GuildDropTarget] Tried using a root node as a drop target."),
         {
             accept: e,
             canDrop: (e) =>
                 e.nodeId !== t.id &&
-                (!r || e.type !== p.eD.FOLDER || t.type !== p.eD.FOLDER) &&
-                (e.type !== p.eD.FOLDER || null == t.parentId),
+                (!r || e.type !== f.eD.FOLDER || t.type !== f.eD.FOLDER) &&
+                (e.type !== f.eD.FOLDER || null == t.parentId),
             drop(e) {
                 let { nodeId: i } = e;
-                r && t.type !== p.eD.FOLDER && d.default.track(f.rMx.GUILD_FOLDER_CREATED), u.Z.moveById(i, t.id, n, r);
+                r && t.type !== f.eD.FOLDER && d.default.track(p.rMx.GUILD_FOLDER_CREATED), u.Z.moveById(i, t.id, n, r);
             },
             collect: (e) => ({
                 canDrop: e.canDrop(),
@@ -56,7 +56,7 @@ function _(e, t) {
 }
 function y(e) {
     let { name: t, targetNode: n, combine: l, below: o } = e,
-        a = i.useMemo(() => _([p.eD.GUILD, p.eD.FOLDER], n, o, l), [n, o, l]),
+        a = i.useMemo(() => _([f.eD.GUILD, f.eD.FOLDER], n, o, l), [n, o, l]),
         [{ canDrop: s, isOver: u }, d] = (0, c.L)(a),
         h = b([
             [s, m.autoPointerEvents],
@@ -72,7 +72,7 @@ function y(e) {
 }
 function O(e) {
     let { name: t, targetNode: n, onDragOverChanged: l } = e,
-        [{ canDrop: a, isOver: s }, u] = (0, c.L)(() => _([p.eD.GUILD], n, !0, !0));
+        [{ canDrop: a, isOver: s }, u] = (0, c.L)(() => _([f.eD.GUILD], n, !0, !0));
     i.useEffect(() => {
         null == l || l(s);
     }, [l, s]);
@@ -118,7 +118,7 @@ let v = i.memo(function (e) {
 });
 function j(e) {
     let { name: t, targetNode: n } = e,
-        [{ canDrop: i, isOver: l }, o] = (0, c.L)(() => _([p.eD.GUILD], n, !0, !0)),
+        [{ canDrop: i, isOver: l }, o] = (0, c.L)(() => _([f.eD.GUILD], n, !0, !0)),
         a = b([[l, m.wrapperOver]]),
         s = b([
             [l, m.dragOver],
@@ -140,7 +140,7 @@ function j(e) {
         }),
     });
 }
-function C(e) {
+function x(e) {
     let { children: t } = e,
         [, n] = (0, c.L)({ accept: [] });
     return (0, r.jsx)("div", {

@@ -1,11 +1,11 @@
 n.d(t, {
     B4: () => O,
-    Nx: () => h,
+    Nx: () => m,
     UV: () => b,
     WR: () => E,
     Yi: () => y,
     lr: () => g,
-    t7: () => m,
+    t7: () => h,
 }),
     n(388685);
 var r = n(473749),
@@ -18,16 +18,16 @@ var r = n(473749),
     u = n(695349),
     d = n(937579),
     f = n(622909),
-    _ = n(639119),
-    p = n(474936);
-function h() {
-    let e = (0, _.N)(),
+    p = n(639119),
+    _ = n(474936);
+function m() {
+    let e = (0, p.N)(),
         t = (0, c._O)(),
         n = (0, f.N)(),
-        r = m();
+        r = h();
     return null != e || t || null != n || r;
 }
-let m = () => {
+let h = () => {
         var e;
         let t = (0, o.e7)([l.Z], () => l.Z.getPremiumTypeSubscription()),
             n = null == t || null == (e = t.metadata) ? void 0 : e.active_discount_expires_at;
@@ -38,34 +38,34 @@ let m = () => {
         let t = (0, o.e7)([l.Z], () => l.Z.getPremiumTypeSubscription()),
             n = null == t || null == (e = t.metadata) ? void 0 : e.active_discount_id;
         switch (n) {
-            case p.dT:
-            case p.rB:
+            case _.dT:
+            case _.rB:
                 return {
                     duration: 1,
                     percentage: 30,
                     discountId: n,
                 };
-            case p.dB:
-            case p.hs:
-            case p.RU:
+            case _.dB:
+            case _.hs:
+            case _.RU:
                 return {
                     duration: 3,
                     percentage: 30,
                     discountId: n,
                 };
-            case p.ih:
+            case _.ih:
                 return {
                     duration: 1,
                     percentage: 40,
                     discountId: n,
                 };
-            case p.gW:
+            case _.gW:
                 return {
                     duration: 1,
                     percentage: 20,
                     discountId: n,
                 };
-            case p.Nl:
+            case _.Nl:
                 return {
                     duration: 1,
                     percentage: 25,
@@ -106,7 +106,7 @@ let m = () => {
     },
     b = () => {
         let e = (0, o.e7)([l.Z], () => l.Z.getPremiumTypeSubscription()),
-            t = m(),
+            t = h(),
             n = null !== e && e.hasPremiumNitroMonthly,
             r = !!(null == e ? void 0 : e.hasActiveTrial);
         return n && !r && !t;
@@ -116,13 +116,13 @@ let m = () => {
             let e = t.discounts.find((e) => e.type === s.eW.SUBSCRIPTION_PLAN);
             if (null != e)
                 switch (e.discount_id) {
-                    case p.dT:
+                    case _.dT:
                         return {
                             duration: 1,
                             percentage: e.percentage_amount,
                             discountId: e.discount_id,
                         };
-                    case p.dB:
+                    case _.dB:
                         return {
                             duration: 3,
                             percentage: e.percentage_amount,

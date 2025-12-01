@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -10,30 +10,30 @@ var i = n(120356),
     u = n(533432),
     d = n(149203),
     f = n(185923),
-    _ = n(359175);
-let p = (e) => {
+    p = n(359175);
+let _ = (e) => {
     let {
             channel: t,
             accessory: n,
             pickerIntention: i,
-            headerClassName: p,
-            emojiListRef: h,
-            onKeyDown: m,
+            headerClassName: _,
+            emojiListRef: m,
+            onKeyDown: h,
             onFocus: g,
             autoFocus: E,
             searchBarRef: b,
             diversitySurrogate: y,
             isBurstReaction: O,
             onBurstReactionToggle: v,
-            renderHeader: I,
-            showAddEmojiButton: T = !1,
+            renderHeader: S,
+            showAddEmojiButton: I = !1,
         } = e,
-        S = (0, r.jsxs)(r.Fragment, {
+        T = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(u.Z, {
-                    emojiListRef: h,
+                    emojiListRef: m,
                     gridNavigatorId: d.Vr,
-                    onKeyDown: m,
+                    onKeyDown: h,
                     ref: b,
                     onFocus: g,
                     autoFocus: E,
@@ -49,14 +49,14 @@ let p = (e) => {
                     ? n
                     : (0, r.jsx)(c.Z, {
                           searchBarRef: b,
-                          className: _.diversitySelector,
+                          className: p.diversitySelector,
                           selectedSurrogate: y,
                       }),
-                T && (0, r.jsx)(l.Z, { channel: t }),
+                I && (0, r.jsx)(l.Z, { channel: t }),
             ],
         });
     return (0, r.jsx)("div", {
-        className: a()(_.header, p),
-        children: null != I ? I(S) : S,
+        className: a()(p.header, _),
+        children: null != S ? S(T) : T,
     });
 };

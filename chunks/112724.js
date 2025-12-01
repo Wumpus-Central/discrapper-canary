@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(393903),
@@ -65,13 +65,13 @@ let d = {
         height: "100%",
         flex: 1,
     };
-function _(e) {
+function p(e) {
     return i.forwardRef(function (t, n) {
         let [s, c] = i.useState({
                 width: 0,
                 height: 0,
             }),
-            _ = (0, o.Z)((e) => {
+            p = (0, o.Z)((e) => {
                 if (null != e) {
                     let { width: t, height: n } = e;
                     c({
@@ -80,19 +80,19 @@ function _(e) {
                     });
                 }
             }),
-            p = (0, o.Z)((e) => {
-                _(e.contentRect);
+            _ = (0, o.Z)((e) => {
+                p(e.contentRect);
             }),
-            h = (0, a.y)(p);
+            m = (0, a.y)(_);
         return (
             i.useImperativeHandle(n, () => ({
                 triggerResize: () => {
                     var e;
-                    _(null == (e = h.current) ? void 0 : e.getBoundingClientRect());
+                    p(null == (e = m.current) ? void 0 : e.getBoundingClientRect());
                 },
             })),
             (0, r.jsx)("div", {
-                ref: h,
+                ref: m,
                 style: d,
                 children: (0, r.jsx)(
                     e,

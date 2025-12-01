@@ -10,22 +10,22 @@ var i = n(442837),
     u = n(539873),
     d = n(550385),
     f = n(638212),
-    _ = n(626135),
-    p = n(342386),
-    h = n(981631),
-    m = n(474936),
+    p = n(626135),
+    _ = n(342386),
+    m = n(981631),
+    h = n(474936),
     g = n(388032),
     E = n(980676);
 let b = () => {
-        (0, d.XO)(d.wh.APP_ICON), (0, p.default)();
+        (0, d.XO)(d.wh.APP_ICON), (0, _.default)();
     },
     y = () => {
         let { analyticsLocations: e } = (0, l.ZP)(s.Z.USER_SETTINGS),
             t = (0, i.e7)([c.Z], () => c.Z.isUpsellPreview);
         (0, o.ZP)(() => {
             t &&
-                _.default.track(h.rMx.PREMIUM_UPSELL_VIEWED, {
-                    type: m.cd.APP_ICON_UPSELL,
+                p.default.track(m.rMx.PREMIUM_UPSELL_VIEWED, {
+                    type: h.cd.APP_ICON_UPSELL,
                     location_stack: e,
                 });
         });
@@ -40,11 +40,11 @@ let b = () => {
                     }),
                     t
                         ? (0, r.jsx)(f.Z, {
-                              subscriptionTier: m.Si.TIER_2,
+                              subscriptionTier: h.Si.TIER_2,
                               defaultTextOverride: g.intl.string(g.t.mr4K7D),
                               premiumModalAnalyticsLocation: {
-                                  object: h.qAy.BUTTON_CTA,
-                                  objectType: h.AnalyticsObjectTypes.BUY,
+                                  object: m.qAy.BUTTON_CTA,
+                                  objectType: m.AnalyticsObjectTypes.BUY,
                               },
                               fullWidth: !0,
                           })

@@ -17,16 +17,16 @@ function u(e) {
             voiceStateStore: u = l.Z,
             mediaEngineStore: d = o.Z,
             permissionStore: f = s.Z,
-            impersonateStore: _ = i.Z,
+            impersonateStore: p = i.Z,
         } = e,
-        p = null != n ? u.getVoiceState(n.getGuildId(), r.getId()) : null,
-        h = d.isSelfMute() || d.isSelfMutedTemporarily(),
-        m = null == n ? void 0 : n.getGuildId(),
-        g = _.isViewingRoles(m) && !f.can(c.Plq.SPEAK, n);
+        _ = null != n ? u.getVoiceState(n.getGuildId(), r.getId()) : null,
+        m = d.isSelfMute() || d.isSelfMutedTemporarily(),
+        h = null == n ? void 0 : n.getGuildId(),
+        g = p.isViewingRoles(h) && !f.can(c.Plq.SPEAK, n);
     return {
-        selfMute: h,
-        suppress: (null == p ? void 0 : p.suppress) || g,
-        mute: null != (t = null == p ? void 0 : p.mute) && t,
+        selfMute: m,
+        suppress: (null == _ ? void 0 : _.suppress) || g,
+        mute: null != (t = null == _ ? void 0 : _.mute) && t,
     };
 }
 function d(e) {

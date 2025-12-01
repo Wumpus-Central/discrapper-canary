@@ -8,7 +8,7 @@ var r = n(54381),
     c = n(358652),
     u = n(19780),
     d = n(919436),
-    p = n(388032);
+    f = n(388032);
 function h() {
     (0, l.e7)([s.Z], () => s.Z.getPrivateChannelsVersion());
     let e = s.Z.getMutablePrivateChannels(),
@@ -17,22 +17,22 @@ function h() {
             selectedVoiceGuildId: u.Z.getGuildId(),
             selectedVoiceChannelId: u.Z.getChannelId(),
         })),
-        f = t.map((t) => {
+        p = t.map((t) => {
             let n = e[t];
             return null == n || n.id === h ? null : (0, r.jsx)(d.Z, { channel: n }, n.id);
         }),
         g = null == n && null != h ? e[h] : null;
     return (
-        null != g && f.unshift((0, r.jsx)(d.Z, { channel: g }, g.id)),
+        null != g && p.unshift((0, r.jsx)(d.Z, { channel: g }, g.id)),
         (0, r.jsx)(a.Kqy, {
             id: "guild-list-unread-dms",
             role: "group",
-            "aria-label": p.intl.string(p.t.YUU0RF),
+            "aria-label": f.intl.string(f.t.YUU0RF),
             gap: "xs",
-            hidden: f.length < 1,
+            hidden: p.length < 1,
             children: (0, r.jsx)(o.W, {
                 component: i.Fragment,
-                children: f,
+                children: p,
             }),
         })
     );

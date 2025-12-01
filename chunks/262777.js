@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function _(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,43 +49,43 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function m(e, t) {
+function h(e, t) {
     let n = (0, u.AT)(),
         f = (0, i.e7)([l.default], () => l.default.getCurrentUser()),
-        p = (0, i.e7)([o.Z, s.Z], () => (0, u.hi)(e, t, [o.Z, s.Z])),
-        m = (0, i.e7)(
+        _ = (0, i.e7)([o.Z, s.Z], () => (0, u.hi)(e, t, [o.Z, s.Z])),
+        h = (0, i.e7)(
             [a.Z],
-            () => n.reduce((e, t) => h(_({}, e), { [t.harmType]: t.getProtoUserSettings(a.Z.settings) }), {}),
+            () => n.reduce((e, t) => m(p({}, e), { [t.harmType]: t.getProtoUserSettings(a.Z.settings) }), {}),
             [n],
             d.l,
         ),
         g = r.useMemo(
             () =>
-                null == p || t === (null == f ? void 0 : f.id) || null == f
+                null == _ || t === (null == f ? void 0 : f.id) || null == f
                     ? []
                     : n
                           .map((e) => {
-                              let t = m[e.harmType],
-                                  n = null == p ? null : e.getUserSettingsWithDefaults(t)[p];
+                              let t = h[e.harmType],
+                                  n = null == _ ? null : e.getUserSettingsWithDefaults(t)[_];
                               return (0, u.aQ)(n) ? e.harmType : null;
                           })
                           .filter((e) => null != e),
-            [p, n, m, t, f],
+            [_, n, h, t, f],
         );
     return 0 === g.length ? c.qn.NONE : (0, u.Hz)(g);
 }
 function g(e) {
     let { channelId: t, authorId: n } = null == e ? {} : (0, u.px)(e);
-    return m(t, n);
+    return h(t, n);
 }

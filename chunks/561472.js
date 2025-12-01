@@ -18,13 +18,13 @@ var i = n(54381),
     C = n(981631),
     v = n(388032);
 let _ = function (e) {
-    let { className: t, style: n, channel: _, draftType: x } = e,
-        [j, O] = r.useState(!0),
+    let { className: t, style: n, channel: _, draftType: O } = e,
+        [x, j] = r.useState(!0),
         E = (0, l.e7)([d.Z], () => d.Z.hasLayers()),
         S = (0, l.e7)([p.Z], () => null != _ && p.Z.can(C.Plq.ATTACH_FILES, _), [_]),
         P = null != (0, l.e7)([o.Z], () => o.Z.getActiveCommand(_.id)),
         I = _.getGuildId(),
-        Z = x === c.d.FirstThreadMessage,
+        Z = O === c.d.FirstThreadMessage,
         T = (0, a.$5)(_),
         N = r.useMemo(
             () => !E && ((_.isPrivate() && !_.isManaged()) || (null != I && !T && S && u.Z.canChatInGuild(I))),
@@ -34,7 +34,7 @@ let _ = function (e) {
             ? C.TPd.GUILD_THREADS_ONLY.has(_.type)
                 ? v.intl.string(v.t.RBBLhL)
                 : v.intl.string(v.t.gUx4eu)
-            : j
+            : x
               ? v.intl.format(v.t.dYP2Fc, { destination: (0, s.F6)(_, f.default, h.Z, !0) })
               : v.intl.string(v.t.h76ulG);
     return P || !N
@@ -49,17 +49,17 @@ let _ = function (e) {
                   if (P) return !1;
                   N &&
                       null != _ &&
-                      ((0, g.d)(e, _, x, {
-                          requireConfirm: j,
+                      ((0, g.d)(e, _, O, {
+                          requireConfirm: x,
                           showLargeMessageDialog: !1,
                           origin: "drag_drop",
                       }),
                       m.S.dispatchToLastSubscribed(C.CkL.TEXTAREA_FOCUS));
               },
-              onDragClear: () => O(!0),
+              onDragClear: () => j(!0),
               onDragOver: (e) => {
                   if (P) return !1;
-                  Z || e.shiftKey !== j || O(!e.shiftKey);
+                  Z || e.shiftKey !== x || j(!e.shiftKey);
               },
           });
 };

@@ -47,8 +47,8 @@ var l = n(848643),
     u = n(473749),
     d = n(606166),
     f = n(679785),
-    _ = n(467159),
-    p = function (e, t, n, r) {
+    p = n(467159),
+    _ = function (e, t, n, r) {
         return d({
             "public/DraftStyleDefault/unorderedListItem": "unordered-list-item" === e,
             "public/DraftStyleDefault/orderedListItem": "ordered-list-item" === e,
@@ -96,94 +96,94 @@ e.exports = (function (e) {
                     o = e.customStyleMap,
                     s = e.customStyleFn,
                     d = e.editorState,
-                    h = e.editorKey,
-                    m = e.preventScroll,
+                    m = e.editorKey,
+                    h = e.preventScroll,
                     g = e.textDirectionality,
                     E = d.getCurrentContent(),
                     b = d.getSelection(),
                     y = d.mustForceSelection(),
                     O = d.getDecorator(),
-                    v = _(d.getDirectionMap()),
-                    I = E.getBlocksAsArray(),
-                    T = [],
-                    S = null,
+                    v = p(d.getDirectionMap()),
+                    S = E.getBlocksAsArray(),
+                    I = [],
+                    T = null,
                     A = null,
                     C = 0;
-                C < I.length;
+                C < S.length;
                 C++
             ) {
-                var N = I[C],
-                    R = N.getKey(),
-                    P = N.getType(),
-                    D = n(N),
-                    w = void 0,
-                    L = void 0,
-                    x = void 0;
-                D && ((w = D.component), (L = D.props), (x = D.editable));
-                var M = g || v.get(R),
-                    k = c.encode(R, 0, 0),
-                    j = {
+                var N = S[C],
+                    P = N.getKey(),
+                    R = N.getType(),
+                    w = n(N),
+                    D = void 0,
+                    x = void 0,
+                    L = void 0;
+                w && ((D = w.component), (x = w.props), (L = w.editable));
+                var j = g || v.get(P),
+                    M = c.encode(P, 0, 0),
+                    k = {
                         contentState: E,
                         block: N,
-                        blockProps: L,
+                        blockProps: x,
                         blockStyleFn: r,
                         customStyleMap: o,
                         customStyleFn: s,
                         decorator: O,
-                        direction: M,
+                        direction: j,
                         forceSelection: y,
-                        offsetKey: k,
-                        preventScroll: m,
+                        offsetKey: M,
+                        preventScroll: h,
                         selection: b,
-                        tree: d.getBlockTree(R),
+                        tree: d.getBlockTree(P),
                     },
-                    U = t.get(P) || t.get("unstyled"),
+                    U = t.get(R) || t.get("unstyled"),
                     G = U.wrapper,
-                    B = U.element || t.get("unstyled").element,
-                    Z = N.getDepth(),
+                    Z = U.element || t.get("unstyled").element,
+                    B = N.getDepth(),
                     F = "";
-                if ((r && (F = r(N)), "li" === B)) {
-                    var V = A !== G || null === S || Z > S;
-                    F = f(F, p(P, Z, V, M));
+                if ((r && (F = r(N)), "li" === Z)) {
+                    var V = A !== G || null === T || B > T;
+                    F = f(F, _(R, B, V, j));
                 }
-                var H = w || l,
+                var H = D || l,
                     Y = {
                         className: F,
                         "data-block": !0,
-                        "data-editor": h,
-                        "data-offset-key": k,
-                        key: R,
+                        "data-editor": m,
+                        "data-offset-key": M,
+                        key: P,
                     };
-                void 0 !== x &&
+                void 0 !== L &&
                     (Y = a({}, Y, {
-                        contentEditable: x,
+                        contentEditable: L,
                         suppressContentEditableWarning: !0,
                     }));
-                var W = u.createElement(B, Y, u.createElement(H, i({}, j, { key: R })));
-                T.push({
+                var W = u.createElement(Z, Y, u.createElement(H, i({}, k, { key: P })));
+                I.push({
                     block: W,
                     wrapperTemplate: G,
-                    key: R,
-                    offsetKey: k,
+                    key: P,
+                    offsetKey: M,
                 }),
-                    (S = G ? N.getDepth() : null),
+                    (T = G ? N.getDepth() : null),
                     (A = G);
             }
-            for (var K = [], z = 0; z < T.length; ) {
-                var q = T[z];
+            for (var K = [], z = 0; z < I.length; ) {
+                var q = I[z];
                 if (q.wrapperTemplate) {
-                    var X = [];
-                    do X.push(T[z].block), z++;
-                    while (z < T.length && T[z].wrapperTemplate === q.wrapperTemplate);
-                    var Q = u.cloneElement(
+                    var Q = [];
+                    do Q.push(I[z].block), z++;
+                    while (z < I.length && I[z].wrapperTemplate === q.wrapperTemplate);
+                    var X = u.cloneElement(
                         q.wrapperTemplate,
                         {
                             key: q.key + "-wrap",
                             "data-offset-key": q.offsetKey,
                         },
-                        X,
+                        Q,
                     );
-                    K.push(Q);
+                    K.push(X);
                 } else K.push(q.block), z++;
             }
             return u.createElement("div", { "data-contents": "true" }, K);

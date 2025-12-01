@@ -1,31 +1,31 @@
-_.d(e, { o: () => E });
-var a = _(622916),
-    r = _(967752),
-    n = _(617726),
-    o = _(939747);
-function E(t, e) {
-    a.kg.log(`Flushing aggregated metrics, number of metrics: ${e.length}`);
-    let _ = t.getDsn(),
-        E = (function (t, e, _, a) {
-            let E = { sent_at: new Date().toISOString() };
-            _ &&
-                _.sdk &&
-                (E.sdk = {
-                    name: _.sdk.name,
-                    version: _.sdk.version,
+r.d(t, { o: () => _ });
+var n = r(622916),
+    a = r(967752),
+    i = r(617726),
+    o = r(939747);
+function _(e, t) {
+    n.kg.log(`Flushing aggregated metrics, number of metrics: ${t.length}`);
+    let r = e.getDsn(),
+        _ = (function (e, t, r, n) {
+            let _ = { sent_at: new Date().toISOString() };
+            r &&
+                r.sdk &&
+                (_.sdk = {
+                    name: r.sdk.name,
+                    version: r.sdk.version,
                 }),
-                a && e && (E.dsn = (0, r.RA)(e));
-            let i = (function (t) {
-                let e = (0, o.uv)(t);
+                n && t && (_.dsn = (0, a.RA)(t));
+            let s = (function (e) {
+                let t = (0, o.uv)(e);
                 return [
                     {
                         type: "statsd",
-                        length: e.length,
+                        length: t.length,
                     },
-                    e,
+                    t,
                 ];
-            })(t);
-            return (0, n.Jd)(E, [i]);
-        })(e, _, t.getSdkMetadata(), t.getOptions().tunnel);
-    t.sendEnvelope(E);
+            })(e);
+            return (0, i.Jd)(_, [s]);
+        })(t, r, e.getSdkMetadata(), e.getOptions().tunnel);
+    e.sendEnvelope(_);
 }

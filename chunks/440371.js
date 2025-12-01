@@ -71,7 +71,7 @@ function m(e) {
         E = i()().add(s.G3, "days"),
         N = i()().add(s.Ib, "days");
     null != v && (E.add(s.hn, "years"), N.add(s.hn, "years"));
-    let P = (e) => {
+    let C = (e) => {
         n(g(d({}, h), { endDate: e }));
     };
     return (
@@ -87,7 +87,7 @@ function m(e) {
                                           label: c.intl.string(c.t.CTLgZJ),
                                           required: j,
                                           value: h.endDate,
-                                          onSelect: P,
+                                          onSelect: C,
                                           minDate: h.startDate,
                                           maxDate: N,
                                       }),
@@ -95,7 +95,7 @@ function m(e) {
                                           label: c.intl.string(c.t.j2RuXF),
                                           required: j,
                                           value: h.endDate,
-                                          onChange: P,
+                                          onChange: C,
                                       }),
                                   ],
                               }),
@@ -105,7 +105,7 @@ function m(e) {
                                         children: [
                                             (0, r.jsx)(a.Avr, {
                                                 onClick: () => {
-                                                    P(void 0);
+                                                    C(void 0);
                                                 },
                                                 text: c.intl.string(c.t.petdfk),
                                                 size: "sm",
@@ -119,7 +119,7 @@ function m(e) {
                           children: [
                               (0, r.jsx)(a.Avr, {
                                   onClick: () => {
-                                      P(i()(h.startDate).add(1, "hour"));
+                                      C(i()(h.startDate).add(1, "hour"));
                                   },
                                   text: c.intl.string(c.t.ncdPcn),
                                   size: "sm",

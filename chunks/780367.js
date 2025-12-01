@@ -8,23 +8,23 @@ var r = n(54381),
     c = n(944486),
     u = n(55589),
     d = n(276952),
-    p = n(682662),
+    f = n(682662),
     h = n(662146),
-    f = n(981631),
+    p = n(981631),
     g = n(388032),
     m = n(815141);
 function b() {
     var e, t;
     let { pathname: n } = (0, l.TH)(),
-        b = n.startsWith(f.Z5c.CHANNEL(f.ME)) && n !== f.Z5c.CHANNEL(f.ME) && n !== f.Z5c.ME_ACTIVITY,
+        b = n.startsWith(p.Z5c.CHANNEL(p.ME)) && n !== p.Z5c.CHANNEL(p.ME) && n !== p.Z5c.ME_ACTIVITY,
         _ = (0, a.e7)([u.Z], () => u.Z.getPrivateChannelIds()[0]),
         y = (0, a.e7)([c.Z], () => {
             var e;
-            return null != (e = c.Z.getChannelId(f.ME)) ? e : _;
+            return null != (e = c.Z.getChannelId(p.ME)) ? e : _;
         }),
         [O, v] = i.useState(!1),
         j = (0, o.Ie)("dms");
-    return (0, r.jsxs)(p.H, {
+    return (0, r.jsxs)(f.H, {
         children: [
             (0, r.jsx)(d.Z, {
                 selected: b,
@@ -69,7 +69,7 @@ function b() {
                             {
                                 onMouseEnter: () => v(!0),
                                 onMouseLeave: () => v(!1),
-                                onClick: f.dG4,
+                                onClick: p.dG4,
                                 selected: b || O,
                                 ariaLabel: g.intl.string(g.t.YUU0RF),
                                 "aria-owns": "guild-list-dms",
@@ -80,11 +80,11 @@ function b() {
                         (t = t =
                             {
                                 to: {
-                                    pathname: null != y ? f.Z5c.CHANNEL(f.ME, y) : f.Z5c.ME_DMS,
+                                    pathname: null != y ? p.Z5c.CHANNEL(p.ME, y) : p.Z5c.ME_DMS,
                                     state: {
                                         analyticsSource: {
-                                            page: f.ZY5.GUILD_CHANNEL,
-                                            section: f.jXE.NAVIGATION,
+                                            page: p.ZY5.GUILD_CHANNEL,
+                                            section: p.jXE.NAVIGATION,
                                             object: "DMS_BUTTON",
                                         },
                                     },

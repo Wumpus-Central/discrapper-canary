@@ -21,30 +21,30 @@ let { INVITE_OPTIONS_7_DAYS: b, INVITE_OPTIONS_UNLIMITED: y } = h.ZP;
 function O(e) {
     var t, n, O;
     let { onClose: E, event: N } = e,
-        P = null == N ? void 0 : N.guild_id,
-        C = (0, l.e7)([u.ZP], () => {
+        C = null == N ? void 0 : N.guild_id,
+        P = (0, l.e7)([u.ZP], () => {
             var e;
-            return null != P ? (null == (e = u.ZP.getDefaultChannel(P)) ? void 0 : e.id) : null;
-        }, [P]),
-        S = (0, l.e7)([d.Z], () => d.Z.getGuild(P), [P]),
-        { channel_id: I, id: T } = null != N ? N : {},
-        Z = (0, l.e7)([g.Z], () => {
-            let e = null != I ? I : C;
+            return null != C ? (null == (e = u.ZP.getDefaultChannel(C)) ? void 0 : e.id) : null;
+        }, [C]),
+        S = (0, l.e7)([d.Z], () => d.Z.getGuild(C), [C]),
+        { channel_id: I, id: Z } = null != N ? N : {},
+        T = (0, l.e7)([g.Z], () => {
+            let e = null != I ? I : P;
             return null == e ? null : g.Z.getInvite(e);
-        }, [I, C]);
+        }, [I, P]);
     if (null == N) return E(), null;
-    let w = null != (t = null == S ? void 0 : S.vanityURLCode) ? t : null == Z ? void 0 : Z.code,
+    let w = null != (t = null == S ? void 0 : S.vanityURLCode) ? t : null == T ? void 0 : T.code,
         D =
             null != w
                 ? (0, a.tV)({
                       baseCode: w,
-                      guildScheduledEventId: T,
+                      guildScheduledEventId: Z,
                   })
                 : null,
-        k = null == D || null == Z,
+        k = null == D || null == T,
         R = (0, s.Z)(null != D ? D : ""),
-        A = null != (n = null == Z ? void 0 : Z.maxAge) ? n : b.value,
-        _ = null != (O = null == Z ? void 0 : Z.maxUses) ? O : y.value;
+        _ = null != (n = null == T ? void 0 : T.maxAge) ? n : b.value,
+        A = null != (O = null == T ? void 0 : T.maxUses) ? O : y.value;
     return (0, r.jsxs)("div", {
         className: f.container,
         children: [
@@ -95,7 +95,7 @@ function O(e) {
                                 channel: I,
                                 channel_type: t,
                                 location: p.t4x.GUILD_EVENTS,
-                                code: Z.code,
+                                code: T.code,
                                 guild_scheduled_event_id: null == N ? void 0 : N.id,
                             });
                         },
@@ -105,7 +105,7 @@ function O(e) {
                             variant: "text-xs/normal",
                             color: "header-secondary",
                             className: f.inviteDetail,
-                            children: (0, h.Vg)(A, _),
+                            children: (0, h.Vg)(_, A),
                         }),
                 ],
             }),

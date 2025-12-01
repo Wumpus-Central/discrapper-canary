@@ -60,7 +60,7 @@ function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -68,7 +68,7 @@ function f(e, t) {
     }
     return i;
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -77,7 +77,7 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-var p = (function (e) {
+var _ = (function (e) {
         return (
             (e.ACTIVITY_FEED = "ACTIVITY_FEED"),
             (e.ACTIVITY_FEED_NEW = "ACTIVITY_FEED_NEW"),
@@ -86,11 +86,11 @@ var p = (function (e) {
             (e.GAME_LIBRARY_LAST_PLAYED = "GAME_LIBRARY_LAST_PLAYED"),
             e
         );
-    })(p || {}),
-    h = (function (e) {
+    })(_ || {}),
+    m = (function (e) {
         return (e.START = "START"), (e.END = "END"), (e.TIME = "TIME"), e;
-    })(h || {});
-let m = (e) => (t, n) => (null == n ? "" : s.intl.format(e(), c({ time: t }, n))),
+    })(m || {});
+let h = (e) => (t, n) => (null == n ? "" : s.intl.format(e(), c({ time: t }, n))),
     g = {
         ACTIVITY_FEED: {
             START: {
@@ -111,10 +111,10 @@ let m = (e) => (t, n) => (null == n ? "" : s.intl.format(e(), c({ time: t }, n))
         },
         ACTIVITY_FEED_NEW: {
             START: {
-                [a.J6.SECONDS]: m(() => s.t.Bf3PRU),
-                [a.J6.MINUTES]: m(() => s.t["A9P+dT"]),
-                [a.J6.HOURS]: m(() => s.t.KwVzfh),
-                [a.J6.DAYS]: m(() => s.t.hbUpBN),
+                [a.J6.SECONDS]: h(() => s.t.Bf3PRU),
+                [a.J6.MINUTES]: h(() => s.t["A9P+dT"]),
+                [a.J6.HOURS]: h(() => s.t.KwVzfh),
+                [a.J6.DAYS]: h(() => s.t.hbUpBN),
             },
             END: {
                 [a.J6.SECONDS]: (e) => s.intl.formatToPlainString(s.t.C3MTOD, { seconds: e }),
@@ -218,12 +218,12 @@ function b(e) {
                     { time: l } = this.state,
                     u = this.getType();
                 if (null == u) return null;
-                let _ = this.getTimeUnit(l, n, u),
-                    p = g[n][u];
-                if (null == p) return null;
-                let h = p[_],
-                    m = Math.floor((0, a.A3)(l, _));
-                return (0, r.jsx)(e, d(c({}, s), { children: null == h ? void 0 : h(m, i, o) }));
+                let p = this.getTimeUnit(l, n, u),
+                    _ = g[n][u];
+                if (null == _) return null;
+                let m = _[p],
+                    h = Math.floor((0, a.A3)(l, p));
+                return (0, r.jsx)(e, d(c({}, s), { children: null == m ? void 0 : m(h, i, o) }));
             }
             constructor(...e) {
                 super(...e),
@@ -234,8 +234,8 @@ function b(e) {
                     });
             }
         }),
-        l(n, "Locations", p),
-        l(n, "Types", h),
+        l(n, "Locations", _),
+        l(n, "Types", m),
         n
     );
 }

@@ -1,6 +1,6 @@
-function a(e) {
-    var t, n, a, l, i, r, s, o, c, d;
-    let u = e.skus
+function r(e) {
+    var t, n, r, i, a, o, s, l, c, u;
+    let d = e.skus
             .map((e) => {
                 let t = e.tenant_metadata.plan_features.map((e) => ({
                     title: e.title,
@@ -14,28 +14,28 @@ function a(e) {
                 };
             })
             .sort((e, t) => t.cost - e.cost),
-        m = u.length > 0 ? Math.min(...u.map((e) => e.cost)) : 0;
+        f = d.length > 0 ? Math.min(...d.map((e) => e.cost)) : 0;
     return {
         id: e.id,
         name: e.name,
         gameId:
             null !=
-            (d =
-                null == (a = e.tenant_metadata) || null == (n = a.guild_monetization) || null == (t = n.game_server)
+            (u =
+                null == (r = e.tenant_metadata) || null == (n = r.guild_monetization) || null == (t = n.game_server)
                     ? void 0
                     : t.game_application_id)
-                ? d
+                ? u
                 : "",
         provider:
-            null == (r = e.tenant_metadata) || null == (i = r.guild_monetization) || null == (l = i.game_server)
+            null == (o = e.tenant_metadata) || null == (a = o.guild_monetization) || null == (i = a.game_server)
                 ? void 0
-                : l.provider,
-        plans: u,
-        baseCost: m,
+                : i.provider,
+        plans: d,
+        baseCost: f,
         disabled:
-            null == (c = e.tenant_metadata) || null == (o = c.guild_monetization) || null == (s = o.game_server)
+            null == (c = e.tenant_metadata) || null == (l = c.guild_monetization) || null == (s = l.game_server)
                 ? void 0
                 : s.disabled,
     };
 }
-n.d(t, { m: () => a }), n(953529), n(642613), n(388685);
+n.d(t, { m: () => r }), n(953529), n(642613), n(388685);

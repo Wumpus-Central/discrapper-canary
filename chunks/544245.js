@@ -27,8 +27,8 @@ function p() {
         p = m.useField("includeQuickSwitcherState"),
         h = m.useField("includeUserSearchWorkerState"),
         x = m.useField("isUploading"),
-        g = m.useField("isSuccess"),
-        f = m.useField("errorMessage"),
+        f = m.useField("isSuccess"),
+        g = m.useField("errorMessage"),
         b = l.useCallback(async () => {
             let {
                 includeFrecency: e,
@@ -112,8 +112,8 @@ function p() {
             }),
             (0, a.jsx)(d.a, {
                 isUploading: x,
-                isSuccess: g,
-                errorMessage: f,
+                isSuccess: f,
+                errorMessage: g,
                 onClick: b,
                 title: "Upload Snapshot Logs",
             }),

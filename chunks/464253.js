@@ -9,9 +9,9 @@ var r = n(570140),
     u = n(314897),
     d = n(569545),
     f = n(803647),
-    _ = n(981631),
-    p = n(65154);
-function h(e, t, n) {
+    p = n(981631),
+    _ = n(65154);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function h(e, t, n) {
         e
     );
 }
-class m {
+class h {
     _onGameDetectionUpdate(e) {
         (this.applications = e.map((e) => {
             var t, n;
@@ -102,7 +102,7 @@ class m {
                             resolution: o.resolution,
                             frameRate: o.fps,
                         },
-                        context: p.Yn.STREAM,
+                        context: _.Yn.STREAM,
                     });
                 } else
                     i.Z.setGoLiveSource({
@@ -115,7 +115,7 @@ class m {
                             resolution: o.resolution,
                             frameRate: o.fps,
                         },
-                        context: p.Yn.STREAM,
+                        context: _.Yn.STREAM,
                     });
                 break;
             case s.A.PAUSE:
@@ -147,10 +147,10 @@ class m {
         }
     }
     constructor() {
-        h(this, "director", void 0),
-            h(this, "applications", void 0),
-            h(this, "streamKey", void 0),
-            h(this, "mode", void 0),
+        m(this, "director", void 0),
+            m(this, "applications", void 0),
+            m(this, "streamKey", void 0),
+            m(this, "mode", void 0),
             (this.mode = null),
             (this.applications = []),
             (this.director = new s.a((e) => this._onDirectorAction(e))),
@@ -186,12 +186,12 @@ class m {
             }),
             r.Z.subscribe("MEDIA_ENGINE_VIDEO_STATE_CHANGED", (e) => {
                 let { videoState: t, context: n } = e;
-                n === p.Yn.STREAM && this._onCapturePaused(t === _.FQ1.PAUSED);
+                n === _.Yn.STREAM && this._onCapturePaused(t === p.FQ1.PAUSED);
             }),
             r.Z.subscribe("MEDIA_ENGINE_SET_GO_LIVE_SOURCE", (e) => {
                 var t;
                 let { settings: n, errorCode: r } = e;
-                (null == n ? void 0 : n.context) === p.Yn.STREAM &&
+                (null == n ? void 0 : n.context) === _.Yn.STREAM &&
                     (null == n ? void 0 : n.desktopSettings) == null &&
                     (null == n ? void 0 : n.cameraSettings) == null &&
                     this._onCaptureEnded(null == r),
@@ -203,6 +203,6 @@ class m {
 let g = {
     instance: null,
     init() {
-        null == this.instance && (this.instance = new m());
+        null == this.instance && (this.instance = new h());
     },
 };

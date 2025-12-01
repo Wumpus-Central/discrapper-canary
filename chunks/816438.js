@@ -1,4 +1,4 @@
-n.d(t, { kZ: () => _ });
+n.d(t, { kZ: () => p });
 var r = n(4313),
     i = n(493623),
     a = n(620720),
@@ -18,19 +18,19 @@ function f() {
         return !(e && "function" == typeof e.getBoundingClientRect);
     });
 }
-function _(e) {
+function p(e) {
     void 0 === e && (e = {});
     var t = e,
         n = t.defaultModifiers,
-        _ = void 0 === n ? [] : n,
-        p = t.defaultOptions,
-        h = void 0 === p ? d : p;
+        p = void 0 === n ? [] : n,
+        _ = t.defaultOptions,
+        m = void 0 === _ ? d : _;
     return function (e, t, n) {
-        void 0 === n && (n = h);
-        var p = {
+        void 0 === n && (n = m);
+        var _ = {
                 placement: "bottom",
                 orderedModifiers: [],
-                options: Object.assign({}, d, h),
+                options: Object.assign({}, d, m),
                 modifiersData: {},
                 elements: {
                     reference: e,
@@ -39,21 +39,21 @@ function _(e) {
                 attributes: {},
                 styles: {},
             },
-            m = [],
+            h = [],
             g = !1,
             E = {
-                state: p,
+                state: _,
                 setOptions: function (n) {
-                    var r = "function" == typeof n ? n(p.options) : n;
+                    var r = "function" == typeof n ? n(_.options) : n;
                     y(),
-                        (p.options = Object.assign({}, h, p.options, r)),
-                        (p.scrollParents = {
+                        (_.options = Object.assign({}, m, _.options, r)),
+                        (_.scrollParents = {
                             reference: (0, u.kK)(e) ? (0, a.Z)(e) : e.contextElement ? (0, a.Z)(e.contextElement) : [],
                             popper: (0, a.Z)(t),
                         });
-                    var i = (0, s.Z)((0, c.Z)([].concat(_, p.options.modifiers)));
+                    var i = (0, s.Z)((0, c.Z)([].concat(p, _.options.modifiers)));
                     return (
-                        (p.orderedModifiers = i.filter(function (e) {
+                        (_.orderedModifiers = i.filter(function (e) {
                             return e.enabled;
                         })),
                         b(),
@@ -62,44 +62,44 @@ function _(e) {
                 },
                 forceUpdate: function () {
                     if (!g) {
-                        var e = p.elements,
+                        var e = _.elements,
                             t = e.reference,
                             n = e.popper;
                         if (f(t, n)) {
-                            (p.rects = {
-                                reference: (0, r.Z)(t, (0, o.Z)(n), "fixed" === p.options.strategy),
+                            (_.rects = {
+                                reference: (0, r.Z)(t, (0, o.Z)(n), "fixed" === _.options.strategy),
                                 popper: (0, i.Z)(n),
                             }),
-                                (p.reset = !1),
-                                (p.placement = p.options.placement),
-                                p.orderedModifiers.forEach(function (e) {
-                                    return (p.modifiersData[e.name] = Object.assign({}, e.data));
+                                (_.reset = !1),
+                                (_.placement = _.options.placement),
+                                _.orderedModifiers.forEach(function (e) {
+                                    return (_.modifiersData[e.name] = Object.assign({}, e.data));
                                 });
-                            for (var a = 0; a < p.orderedModifiers.length; a++) {
-                                if (!0 === p.reset) {
-                                    (p.reset = !1), (a = -1);
+                            for (var a = 0; a < _.orderedModifiers.length; a++) {
+                                if (!0 === _.reset) {
+                                    (_.reset = !1), (a = -1);
                                     continue;
                                 }
-                                var s = p.orderedModifiers[a],
+                                var s = _.orderedModifiers[a],
                                     l = s.fn,
                                     c = s.options,
                                     u = void 0 === c ? {} : c,
                                     d = s.name;
                                 "function" == typeof l &&
-                                    (p =
+                                    (_ =
                                         l({
-                                            state: p,
+                                            state: _,
                                             options: u,
                                             name: d,
                                             instance: E,
-                                        }) || p);
+                                        }) || _);
                             }
                         }
                     }
                 },
                 update: (0, l.Z)(function () {
                     return new Promise(function (e) {
-                        E.forceUpdate(), e(p);
+                        E.forceUpdate(), e(_);
                     });
                 }),
                 destroy: function () {
@@ -108,28 +108,28 @@ function _(e) {
             };
         if (!f(e, t)) return E;
         function b() {
-            p.orderedModifiers.forEach(function (e) {
+            _.orderedModifiers.forEach(function (e) {
                 var t = e.name,
                     n = e.options,
                     r = void 0 === n ? {} : n,
                     i = e.effect;
                 if ("function" == typeof i) {
                     var a = i({
-                            state: p,
+                            state: _,
                             name: t,
                             instance: E,
                             options: r,
                         }),
                         o = function () {};
-                    m.push(a || o);
+                    h.push(a || o);
                 }
             });
         }
         function y() {
-            m.forEach(function (e) {
+            h.forEach(function (e) {
                 return e();
             }),
-                (m = []);
+                (h = []);
         }
         return (
             E.setOptions(n).then(function (e) {

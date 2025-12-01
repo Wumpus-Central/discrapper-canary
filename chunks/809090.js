@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(768581),
     d = n(895924),
     f = n(557545),
-    _ = n(970952);
-function p(e, t, n) {
+    p = n(970952);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,12 +34,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -56,7 +56,7 @@ function g(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -88,15 +88,15 @@ function y(e) {
             section: t,
             channel: { guild_id: n },
             isSelected: a,
-            width: p,
-            height: m,
+            width: _,
+            height: h,
             className: b,
             selectable: y = !1,
             isSquircle: O,
             onFocus: v,
-            onBlur: I,
-            onMouseOver: T,
-            onMouseLeave: S,
+            onBlur: S,
+            onMouseOver: I,
+            onMouseLeave: T,
         } = e,
         A = E(e, [
             "section",
@@ -113,61 +113,61 @@ function y(e) {
             "onMouseLeave",
         ]);
     let [C, N] = i.useState(!1),
-        R = i.useCallback(() => {
+        P = i.useCallback(() => {
             N(!0), null == v || v();
         }, [v]),
-        P = i.useCallback(() => {
-            N(!1), null == I || I();
-        }, [I]),
-        D = i.useCallback(() => {
-            N(!0), null == T || T();
-        }, [T]),
-        w = i.useCallback(() => {
+        R = i.useCallback(() => {
             N(!1), null == S || S();
         }, [S]),
-        L = (0, s.e7)([c.ZP], () => {
+        w = i.useCallback(() => {
+            N(!0), null == I || I();
+        }, [I]),
+        D = i.useCallback(() => {
+            N(!1), null == T || T();
+        }, [T]),
+        x = (0, s.e7)([c.ZP], () => {
             var e, r, i, a;
             return (null == (r = t.application) || null == (e = r.bot) ? void 0 : e.id) != null
                 ? c.ZP.getMember(n, null == (a = t.application) || null == (i = a.bot) ? void 0 : i.id)
                 : null;
         }),
-        x = i.useMemo(() => {
+        L = i.useMemo(() => {
             var e;
             return t.type !== d.Qi.APPLICATION
-                ? _
+                ? p
                 : u.ZP.getApplicationIconURL({
                       id: t.id,
                       icon: t.icon,
                       bot: null == (e = t.application) ? void 0 : e.bot,
                       botIconFirst: !0,
-                      guildMember: L,
-                      size: p,
+                      guildMember: x,
+                      size: _,
                   });
-        }, [t, p, L]);
+        }, [t, _, x]);
     return (0, r.jsx)(
         "div",
-        g(h({}, A), {
+        g(m({}, A), {
             className: o()(f.wrapper, b, {
                 [f.selectable]: y,
                 [f.selected]: y && a,
             }),
-            onFocus: R,
-            onBlur: P,
-            onMouseOver: D,
-            onMouseLeave: w,
+            onFocus: P,
+            onBlur: R,
+            onMouseOver: w,
+            onMouseLeave: D,
             children: (0, r.jsx)(l.ZP, {
                 className: f.mask,
                 mask: O || (y && (a || C)) ? l.QS.SQUIRCLE : l.QS.AVATAR_DEFAULT,
-                width: p,
-                height: m,
+                width: _,
+                height: h,
                 children: (0, r.jsx)("img", {
                     alt: "",
                     className: f.icon,
                     style: {
-                        width: p,
-                        height: m,
+                        width: _,
+                        height: h,
                     },
-                    src: x,
+                    src: L,
                 }),
             }),
         }),

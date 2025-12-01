@@ -13,21 +13,21 @@ var r = n(54381),
     u = n(369171),
     d = n(111173);
 let f = 24,
-    _ = 36,
-    p = 76,
-    h = 88,
-    m = 272;
+    p = 36,
+    _ = 76,
+    m = 88,
+    h = 272;
 function g(e, t) {
-    let n = window.innerWidth - (e ? p : f) * 2,
-        r = window.innerHeight - 2 * h;
+    let n = window.innerWidth - (e ? _ : f) * 2,
+        r = window.innerHeight - 2 * m;
     if (!(0, l._H)(t))
         return {
             width: n,
             height: r,
         };
     let { width: i, height: a } = t,
-        o = window.innerWidth - 2 * m,
-        s = window.innerHeight - (e ? h : _) * 2,
+        o = window.innerWidth - 2 * h,
+        s = window.innerHeight - (e ? m : p) * 2,
         c = (0, l.Tj)({
             width: i,
             height: a,
@@ -49,10 +49,10 @@ function E(e) {
             width: l.width,
             height: l.height,
         }),
-        [_, p] = i.useState(0);
+        [p, _] = i.useState(0);
     return (
         i.useEffect(() => {
-            let e = () => p((e) => e + 1);
+            let e = () => _((e) => e + 1);
             return window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
         }),
         i.useEffect(() => {

@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => S,
-    b: () => T,
+    Z: () => T,
+    b: () => I,
 });
 var r = n(54381);
 n(473749);
@@ -13,8 +13,8 @@ var i = n(481060),
     u = n(857595),
     d = n(607070),
     f = n(981631),
-    _ = n(874893);
-function p(e, t, n) {
+    p = n(874893);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,29 +38,29 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-let m = window.matchMedia("(prefers-reduced-motion: reduce)"),
+let h = window.matchMedia("(prefers-reduced-motion: reduce)"),
     g = window.matchMedia("(prefers-contrast: more)"),
     E = window.matchMedia("(prefers-contrast: less)"),
     b = window.matchMedia("(prefers-color-scheme: dark)"),
     y = window.matchMedia("(prefers-color-scheme: light)"),
     O = window.matchMedia("(forced-colors: active)"),
     v = 5;
-function I() {
+function S() {
     let e = s.default.getCurrentUser();
     return null == e || Date.now() - e.createdAt < 86400000;
 }
-function T() {
+function I() {
     return "windows" === (0, c.getOS)();
 }
-let S = {
+let T = {
     initBasic() {
-        m.addListener(this.handleSystemPrefersReducedMotionChanged),
-            this.handleSystemPrefersReducedMotionChanged(m),
+        h.addListener(this.handleSystemPrefersReducedMotionChanged),
+            this.handleSystemPrefersReducedMotionChanged(h),
             b.addListener(this.handleSystemColorPreferencesChanged),
             y.addListener(this.handleSystemColorPreferencesChanged),
             O.addListener(this.handleSystemColorPreferencesChanged),
@@ -80,12 +80,12 @@ let S = {
     },
     maybeShowKeyboardNavigationExplainerModal() {
         (v = Math.max(v - 1, 0)),
-            I() ||
+            S() ||
                 d.Z.keyboardNavigationExplainerModalSeen ||
                 0 !== v ||
                 (0, i.ZDy)(async () => {
                     let { default: e } = await n.e("73872").then(n.bind(n, 461964));
-                    return (t) => (0, r.jsx)(e, h({}, t));
+                    return (t) => (0, r.jsx)(e, m({}, t));
                 });
     },
     handleSystemPrefersReducedMotionChanged(e) {
@@ -94,9 +94,9 @@ let S = {
         });
     },
     handleSystemColorPreferencesChanged() {
-        let e = _.zd.NO_PREFERENCE;
-        b.matches ? (e = _.zd.DARK) : y.matches && (e = _.zd.LIGHT);
-        let t = (!c.isPlatformEmbedded || T()) && O.matches ? "active" : "none";
+        let e = p.zd.NO_PREFERENCE;
+        b.matches ? (e = p.zd.DARK) : y.matches && (e = p.zd.LIGHT);
+        let t = (!c.isPlatformEmbedded || I()) && O.matches ? "active" : "none";
         a.Z.wait(() => {
             o.Q_(e), u.Ej(t);
         });

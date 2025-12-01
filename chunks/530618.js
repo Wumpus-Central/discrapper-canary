@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(921254),
@@ -57,8 +57,8 @@ function u(e, t) {
 }
 let d = 50,
     f = 10,
-    _ = 100;
-function p(e, t) {
+    p = 100;
+function _(e, t) {
     return (
         (t = null != t ? t : 1),
         u(l({}, o.We), {
@@ -91,30 +91,30 @@ function p(e, t) {
         })
     );
 }
-let h = function (e) {
+let m = function (e) {
     let { confettiTarget: t, confettiCanvas: n, confettiVelocityMultiplier: s, sprites: l, colors: c } = e,
-        [u, h] = i.useState(null),
-        m = (0, a.uR)(n, u),
+        [u, m] = i.useState(null),
+        h = (0, a.uR)(n, u),
         [g, E] = i.useState(!1);
     return (
         i.useEffect(() => {
             let e = Array(f).fill(0);
             return (
                 null != t &&
-                    m.isReady &&
+                    h.isReady &&
                     !g &&
                     (e = e.map((n, r) =>
                         setTimeout(() => {
-                            r === e.length - 1 && E(!0), m.createMultipleConfetti(p(t.getBoundingClientRect(), s), d);
-                        }, r * _),
+                            r === e.length - 1 && E(!0), h.createMultipleConfetti(_(t.getBoundingClientRect(), s), d);
+                        }, r * p),
                     )),
                 () => {
                     for (let t of e) clearTimeout(t);
                 }
             );
-        }, [m, t, g, s]),
+        }, [h, t, g, s]),
         (0, r.jsx)(a.Ji, {
-            ref: h,
+            ref: m,
             sprites: null != l ? l : o.CA,
             colors: null != c ? c : o.Br,
             spriteWidth: o.Ko,

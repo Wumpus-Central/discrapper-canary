@@ -1,5 +1,5 @@
 let r, i, a;
-n.d(t, { Z: () => R }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var o,
     s = n(442837),
     l = n(570140),
@@ -34,7 +34,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -46,19 +46,19 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let h = new Map(),
-    m = {},
+let m = new Map(),
+    h = {},
     g = c.VD2.BOTTOM_RIGHT,
     E = {
         [u.cL.VIDEO]: u.l8[u.cL.VIDEO],
@@ -67,7 +67,7 @@ let h = new Map(),
 function b(e) {
     var t, n;
     let { id: o, component: s, props: l } = e;
-    if (null != h.get(o)) return;
+    if (null != m.get(o)) return;
     let u = {
         id: o,
         component: s,
@@ -75,7 +75,7 @@ function b(e) {
         props: l,
         docked: null != (n = l.docked) && n,
     };
-    h.set(o, u),
+    m.set(o, u),
         s === c.NYg.VIDEO
             ? null == r && (r = o)
             : s === c.NYg.ACTIVITY
@@ -84,23 +84,23 @@ function b(e) {
 }
 function y(e) {
     let { id: t } = e;
-    if (!h.has(t)) return !1;
+    if (!m.has(t)) return !1;
     {
-        h.delete(t);
-        let e = Array.from(h.keys());
+        m.delete(t);
+        let e = Array.from(m.keys());
         r === t
             ? (r = e.find((e) => {
-                  let t = h.get(e);
+                  let t = m.get(e);
                   return null != t && t.component === c.NYg.VIDEO;
               }))
             : i === t
               ? (i = e.find((e) => {
-                    let t = h.get(e);
+                    let t = m.get(e);
                     return null != t && t.component === c.NYg.ACTIVITY;
                 }))
               : a === t &&
                 (a = e.find((e) => {
-                    let t = h.get(e);
+                    let t = m.get(e);
                     return null != t && t.component === c.NYg.FRAME;
                 }));
     }
@@ -110,10 +110,10 @@ function O(e) {
     if (null == t || (r !== t && i !== t && a !== t)) return !1;
     {
         let e = new Map();
-        h.forEach((t, r) => {
-            e.set(r, p(f({}, t), { position: n }));
+        m.forEach((t, r) => {
+            e.set(r, _(f({}, t), { position: n }));
         }),
-            (h = e),
+            (m = e),
             (g = n);
     }
 }
@@ -121,31 +121,31 @@ function v(e) {
     let { width: t, pipType: n } = e;
     E[n] = t;
 }
-function I(e) {
+function S(e) {
     let { id: t, rect: n } = e;
-    m[t] = n;
+    h[t] = n;
+}
+function I(e) {
+    let { id: t } = e;
+    if (r !== t && i !== t && a !== t) return !1;
+    {
+        let e = m.get(t);
+        if (null == e) return !1;
+        m.set(t, _(f({}, e), { hidden: !0 }));
+    }
 }
 function T(e) {
     let { id: t } = e;
     if (r !== t && i !== t && a !== t) return !1;
     {
-        let e = h.get(t);
+        let e = m.get(t);
         if (null == e) return !1;
-        h.set(t, p(f({}, e), { hidden: !0 }));
-    }
-}
-function S(e) {
-    let { id: t } = e;
-    if (r !== t && i !== t && a !== t) return !1;
-    {
-        let e = h.get(t);
-        if (null == e) return !1;
-        h.set(t, p(f({}, e), { hidden: !1 }));
+        m.set(t, _(f({}, e), { hidden: !1 }));
     }
 }
 function A(e) {
     let { id: t } = e,
-        n = h.get(t);
+        n = m.get(t);
     null != n &&
         (n.component === c.NYg.VIDEO
             ? (r = t)
@@ -154,7 +154,7 @@ function A(e) {
               : n.component === c.NYg.FRAME && (a = t));
 }
 function C() {
-    (r = null), (i = null), (a = null), (h = new Map());
+    (r = null), (i = null), (a = null), (m = new Map());
 }
 class N extends (o = s.ZP.PersistedStore) {
     initialize(e) {
@@ -172,19 +172,19 @@ class N extends (o = s.ZP.PersistedStore) {
         var e, t;
         return null == r && null == i && null == a
             ? null
-            : h.get(null != (t = null != (e = null != r ? r : i) ? e : a) ? t : "");
+            : m.get(null != (t = null != (e = null != r ? r : i) ? e : a) ? t : "");
     }
     get pipVideoWindow() {
-        return null == r ? null : h.get(r);
+        return null == r ? null : m.get(r);
     }
     get pipActivityWindow() {
-        return null == i ? null : h.get(i);
+        return null == i ? null : m.get(i);
     }
     get pipFrameWindow() {
-        return null == a ? null : h.get(a);
+        return null == a ? null : m.get(a);
     }
     get pipWindows() {
-        return h;
+        return m;
     }
     pipWidth(e) {
         return E[e];
@@ -196,10 +196,10 @@ class N extends (o = s.ZP.PersistedStore) {
         return null == a;
     }
     getDockedRect(e) {
-        return m[e];
+        return h[e];
     }
     isOpen(e) {
-        return null != e && h.has(e);
+        return null != e && m.has(e);
     }
     getState() {
         return {
@@ -222,14 +222,14 @@ d(N, "displayName", "PictureInPictureStore"),
             };
         },
     ]);
-let R = new N(l.Z, {
+let P = new N(l.Z, {
     PICTURE_IN_PICTURE_OPEN: b,
     PICTURE_IN_PICTURE_CLOSE: y,
     PICTURE_IN_PICTURE_MOVE: O,
     PICTURE_IN_PICTURE_RESIZE: v,
-    PICTURE_IN_PICTURE_HIDE: T,
-    PICTURE_IN_PICTURE_SHOW: S,
-    PICTURE_IN_PICTURE_UPDATE_RECT: I,
+    PICTURE_IN_PICTURE_HIDE: I,
+    PICTURE_IN_PICTURE_SHOW: T,
+    PICTURE_IN_PICTURE_UPDATE_RECT: S,
     PICTURE_IN_PICTURE_UPDATE_SELECTED_WINDOW: A,
     LOGOUT: C,
 });

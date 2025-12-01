@@ -13,14 +13,14 @@ var r = n(54381),
     u = n(292419),
     d = n(282397),
     f = n(188597),
-    _ = n(981631),
-    p = n(388032),
-    h = n(954800);
-function m(e) {
+    p = n(981631),
+    _ = n(388032),
+    m = n(954800);
+function h(e) {
     return {
         text: e,
         icon: (0, r.jsx)(c.bbz, {
-            className: h.icon,
+            className: m.icon,
             dotRadius: 3.5,
             themed: !0,
         }),
@@ -28,23 +28,23 @@ function m(e) {
 }
 function g(e) {
     return {
-        text: null != e ? e : p.intl.string(p.t.VCsUJu),
+        text: null != e ? e : _.intl.string(_.t.VCsUJu),
         color: "text-danger",
         icon: (0, r.jsx)(c.Mgn, {
             size: "xs",
             color: "currentColor",
-            className: o()(h.icon, h.errorIcon),
+            className: o()(m.icon, m.errorIcon),
         }),
     };
 }
 function E(e, t) {
     switch ((0, f.t$)(t, e)) {
         case f.rQ.SENDING:
-            return m(p.intl.string(p.t.RiLfBY));
+            return h(_.intl.string(_.t.RiLfBY));
         case f.rQ.CREATED:
-            return m(p.intl.formatToPlainString(p.t["7ePV4t"], { applicationName: t.author.username }));
+            return h(_.intl.formatToPlainString(_.t["7ePV4t"], { applicationName: t.author.username }));
         case f.rQ.TIMED_OUT:
-            return g(p.intl.string(p.t.h8hzPd));
+            return g(_.intl.string(_.t.h8hzPd));
         case f.rQ.FAILED:
             return g(t.interactionError);
     }
@@ -52,7 +52,7 @@ function E(e, t) {
 function b(e) {
     let { className: t, icon: n, text: i, color: a } = e;
     return (0, r.jsxs)("div", {
-        className: o()(h.wrapper, t),
+        className: o()(m.wrapper, t),
         children: [
             n,
             (0, r.jsx)(c.Text, {
@@ -70,7 +70,7 @@ function y(e) {
         c = (0, l.e7)([d.ZP], () => d.ZP.getInteraction(t), [t]);
     i.useEffect(() => {
         let e = null;
-        if (t.hasFlag(_.iLy.LOADING) && null != c) {
+        if (t.hasFlag(p.iLy.LOADING) && null != c) {
             let n = (0, f.ow)(t.id) - Date.now();
             n > 0 && (e = setTimeout(() => o(), 1000 + n));
         }
@@ -78,17 +78,17 @@ function y(e) {
             clearTimeout(e);
         };
     }, [o, c, t]);
-    let p = null;
-    if (null == a) p = E(c, t);
+    let _ = null;
+    if (null == a) _ = E(c, t);
     else {
         let e = (0, u.SD)(c, t, a);
-        null != e && (p = g(e));
+        null != e && (_ = g(e));
     }
-    if (null == p) return null;
-    let { text: h, icon: m, color: y } = p;
+    if (null == _) return null;
+    let { text: m, icon: h, color: y } = _;
     return (0, r.jsx)(b, {
-        icon: m,
-        text: h,
+        icon: h,
+        text: m,
         className: n,
         color: y,
     });

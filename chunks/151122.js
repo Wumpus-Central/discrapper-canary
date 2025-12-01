@@ -1,81 +1,81 @@
-_.d(e, {
-    M5: () => I,
-    _I: () => R,
+r.d(t, {
+    M5: () => u,
+    _I: () => d,
     m7: () => l,
-    m8: () => i,
+    m8: () => s,
     q4: () => c,
-    uf: () => s,
+    uf: () => E,
 });
-var a = _(394798),
-    r = _(622916),
-    n = _(263449),
-    o = _(255768);
-let E = [];
-function i(t) {
-    let e = t.defaultIntegrations || [],
-        _ = t.integrations;
-    e.forEach((t) => {
-        t.isDefaultInstance = !0;
+var n = r(394798),
+    a = r(622916),
+    i = r(263449),
+    o = r(255768);
+let _ = [];
+function s(e) {
+    let t = e.defaultIntegrations || [],
+        r = e.integrations;
+    t.forEach((e) => {
+        e.isDefaultInstance = !0;
     });
-    let r = (function (t) {
-            let e = {};
+    let a = (function (e) {
+            let t = {};
             return (
-                t.forEach((t) => {
-                    let { name: _ } = t,
-                        a = e[_];
-                    (a && !a.isDefaultInstance && t.isDefaultInstance) || (e[_] = t);
+                e.forEach((e) => {
+                    let { name: r } = e,
+                        n = t[r];
+                    (n && !n.isDefaultInstance && e.isDefaultInstance) || (t[r] = e);
                 }),
-                Object.values(e)
+                Object.values(t)
             );
-        })(Array.isArray(_) ? [...e, ..._] : "function" == typeof _ ? (0, a.lE)(_(e)) : e),
-        n = r.findIndex((t) => "Debug" === t.name);
-    if (n > -1) {
-        let [t] = r.splice(n, 1);
-        r.push(t);
+        })(Array.isArray(r) ? [...t, ...r] : "function" == typeof r ? (0, n.lE)(r(t)) : t),
+        i = a.findIndex((e) => "Debug" === e.name);
+    if (i > -1) {
+        let [e] = a.splice(i, 1);
+        a.push(e);
     }
-    return r;
+    return a;
 }
-function c(t, e) {
-    let _ = {};
+function c(e, t) {
+    let r = {};
     return (
-        e.forEach((e) => {
-            e && l(t, e, _);
+        t.forEach((t) => {
+            t && l(e, t, r);
         }),
-        _
+        r
     );
 }
-function s(t, e) {
-    for (let _ of e) _ && _.afterAllSetup && _.afterAllSetup(t);
+function E(e, t) {
+    for (let r of t) r && r.afterAllSetup && r.afterAllSetup(e);
 }
-function l(t, e, _) {
-    if (_[e.name]) {
-        o.X && r.kg.log(`Integration skipped because it was already installed: ${e.name}`);
+function l(e, t, r) {
+    if (r[t.name]) {
+        o.X && a.kg.log(`Integration skipped because it was already installed: ${t.name}`);
         return;
     }
     if (
-        ((_[e.name] = e),
-        -1 === E.indexOf(e.name) && "function" == typeof e.setupOnce && (e.setupOnce(), E.push(e.name)),
-        e.setup && "function" == typeof e.setup && e.setup(t),
-        "function" == typeof e.preprocessEvent)
+        ((r[t.name] = t),
+        -1 === _.indexOf(t.name) && "function" == typeof t.setupOnce && (t.setupOnce(), _.push(t.name)),
+        t.setup && "function" == typeof t.setup && t.setup(e),
+        "function" == typeof t.preprocessEvent)
     ) {
-        let _ = e.preprocessEvent.bind(e);
-        t.on("preprocessEvent", (e, a) => _(e, a, t));
+        let r = t.preprocessEvent.bind(t);
+        e.on("preprocessEvent", (t, n) => r(t, n, e));
     }
-    if ("function" == typeof e.processEvent) {
-        let _ = e.processEvent.bind(e),
-            a = Object.assign((e, a) => _(e, a, t), { id: e.name });
-        t.addEventProcessor(a);
+    if ("function" == typeof t.processEvent) {
+        let r = t.processEvent.bind(t),
+            n = Object.assign((t, n) => r(t, n, e), { id: t.name });
+        e.addEventProcessor(n);
     }
-    o.X && r.kg.log(`Integration installed: ${e.name}`);
+    o.X && a.kg.log(`Integration installed: ${t.name}`);
 }
-function I(t) {
-    let e = (0, n.s3)();
-    if (!e) {
-        o.X && r.kg.warn(`Cannot add integration "${t.name}" because no SDK Client is available.`);
+function u(e) {
+    let t = (0, i.s3)();
+    if (!t) {
+        o.X && a.kg.warn(`Cannot add integration "${e.name}" because no SDK Client is available.`);
         return;
     }
-    e.addIntegration(t);
+    t.addIntegration(e);
 }
-function R(t) {
-    return t;
+function d(e) {
+    return e;
 }

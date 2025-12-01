@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,49 +58,49 @@ function _(e, t) {
         e
     );
 }
-let p = {};
-function h(e) {
+let _ = {};
+function m(e) {
     let { changes: t } = e;
     for (let e in t) {
         var n;
         let r = e,
             { shouldSync: i, settings: a } = t[r];
         if (!0 === i) {
-            delete p[r];
+            delete _[r];
             continue;
         }
         if (
             (!1 === i &&
-                (p[r] = {
+                (_[r] = {
                     shouldSync: i,
                     settings: {},
                 }),
-            (null == (n = p[r]) ? void 0 : n.shouldSync) === !1)
+            (null == (n = _[r]) ? void 0 : n.shouldSync) === !1)
         )
-            for (let e in a) p[r].settings[e] = a[e];
+            for (let e in a) _[r].settings[e] = a[e];
     }
 }
-function m() {
-    p = {};
+function h() {
+    _ = {};
 }
 class g extends (r = o.ZP.PersistedStore) {
     initialize(e) {
-        p = null != e ? e : {};
+        _ = null != e ? e : {};
     }
     getState() {
-        return p;
+        return _;
     }
     shouldSync(e) {
         var t;
-        return (null == (t = p[e]) ? void 0 : t.shouldSync) !== !1;
+        return (null == (t = _[e]) ? void 0 : t.shouldSync) !== !1;
     }
     getTextSettings() {
         var e;
-        return null == (e = p.text) ? void 0 : e.settings;
+        return null == (e = _.text) ? void 0 : e.settings;
     }
     getAppearanceSettings() {
         var e;
-        return null == (e = p.appearance) ? void 0 : e.settings;
+        return null == (e = _.appearance) ? void 0 : e.settings;
     }
 }
 u(g, "displayName", "SelectivelySyncedUserSettingsStore"),
@@ -138,14 +138,14 @@ u(g, "displayName", "SelectivelySyncedUserSettingsStore"),
         (e) => {
             var t, n;
             if ((null == e || null == (n = e.appearance) || null == (t = n.settings) ? void 0 : t.theme) === "amoled")
-                return _(d({}, e), {
-                    appearance: _(d({}, e.appearance), {
-                        settings: _(d({}, e.appearance.settings), { theme: "midnight" }),
+                return p(d({}, e), {
+                    appearance: p(d({}, e.appearance), {
+                        settings: p(d({}, e.appearance.settings), { theme: "midnight" }),
                     }),
                 });
         },
     ]);
 let E = new g(l.Z, {
-    SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: h,
-    LOGOUT: m,
+    SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: m,
+    LOGOUT: h,
 });

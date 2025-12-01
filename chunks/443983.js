@@ -13,11 +13,11 @@ function d(e) {
             onLongPressStart: n,
             onLongPressEnd: d,
             onLongPress: f,
-            threshold: _ = u,
-            accessibilityDescription: p,
+            threshold: p = u,
+            accessibilityDescription: _,
         } = e,
-        h = (0, c.useRef)(void 0),
-        { addGlobalListener: m, removeGlobalListener: g } = (0, i.x)(),
+        m = (0, c.useRef)(void 0),
+        { addGlobalListener: h, removeGlobalListener: g } = (0, i.x)(),
         { pressProps: E } = (0, r.r)({
             isDisabled: t,
             onPressStart(e) {
@@ -29,7 +29,7 @@ function d(e) {
                                 ...e,
                                 type: "longpressstart",
                             }),
-                        (h.current = setTimeout(() => {
+                        (m.current = setTimeout(() => {
                             e.target.dispatchEvent(new PointerEvent("pointercancel", { bubbles: !0 })),
                                 (0, a.r3)(e.target).activeElement !== e.target && (0, o.A)(e.target),
                                 f &&
@@ -37,15 +37,15 @@ function d(e) {
                                         ...e,
                                         type: "longpress",
                                     }),
-                                (h.current = void 0);
-                        }, _)),
+                                (m.current = void 0);
+                        }, p)),
                         "touch" === e.pointerType))
                 ) {
                     let t = (e) => {
                         e.preventDefault();
                     };
-                    m(e.target, "contextmenu", t, { once: !0 }),
-                        m(
+                    h(e.target, "contextmenu", t, { once: !0 }),
+                        h(
                             window,
                             "pointerup",
                             () => {
@@ -58,7 +58,7 @@ function d(e) {
                 }
             },
             onPressEnd(e) {
-                h.current && clearTimeout(h.current),
+                m.current && clearTimeout(m.current),
                     d &&
                         ("mouse" === e.pointerType || "touch" === e.pointerType) &&
                         d({
@@ -67,6 +67,6 @@ function d(e) {
                         });
             },
         }),
-        b = (0, s.P)(f && !t ? p : void 0);
+        b = (0, s.P)(f && !t ? _ : void 0);
     return { longPressProps: (0, l.d)(E, b) };
 }

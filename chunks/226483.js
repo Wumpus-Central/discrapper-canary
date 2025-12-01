@@ -1,8 +1,8 @@
-_.d(e, { r: () => n });
-var a = _(185461),
-    r = _(27269);
-let n = (0, a.rp)({
-    lazyLoadIntegration: r.R,
-    getModalIntegration: () => a.gS,
-    getScreenshotIntegration: () => a.U0,
+r.d(t, { r: () => i });
+var n = r(185461),
+    a = r(27269);
+let i = (0, n.rp)({
+    lazyLoadIntegration: a.R,
+    getModalIntegration: () => n.gS,
+    getScreenshotIntegration: () => n.U0,
 });

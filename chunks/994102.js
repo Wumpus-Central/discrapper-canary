@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(54381),
     i = n(990547),
     a = n(681715),
@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(732380),
     d = n(671955),
     f = n(388032);
-function _(e) {
-    let { application: t, analyticsLocations: n, onAction: _, onClose: p } = e,
-        { themeType: h } = (0, c.z)(),
-        m = (0, s.Z)({
+function p(e) {
+    let { application: t, analyticsLocations: n, onAction: p, onClose: _ } = e,
+        { themeType: m } = (0, c.z)(),
+        h = (0, s.Z)({
             application: t,
             analyticsLocations: n,
         });
@@ -22,10 +22,10 @@ function _(e) {
             type: i.ImpressionTypes.VIEW,
             properties: { location_stack: n },
         },
-        { disableTrack: null == m },
-        [m],
+        { disableTrack: null == h },
+        [h],
     ),
-    null == m)
+    null == h)
         ? null
         : (0, r.jsx)(a.u, {
               text: f.intl.string(f.t.JVwWva),
@@ -35,9 +35,9 @@ function _(e) {
                   text: f.intl.string(f.t["jaYS/h"]),
                   size: "sm",
                   onClick: (e) => {
-                      e.stopPropagation(), null == _ || _({ action: "PRESS_CLOUD_PLAY_BUTTON" }), m(), null == p || p();
+                      e.stopPropagation(), null == p || p({ action: "PRESS_CLOUD_PLAY_BUTTON" }), h(), null == _ || _();
                   },
-                  fullWidth: h !== d.l.MODAL_V2,
+                  fullWidth: m !== d.l.MODAL_V2,
               }),
           });
 }

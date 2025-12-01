@@ -15,8 +15,8 @@ var r = n(54381),
     u = n(243778),
     d = n(645041),
     f = n(430824),
-    p = n(823379),
-    h = n(267642),
+    h = n(823379),
+    p = n(267642),
     g = n(755458),
     m = n(60482),
     b = n(713081),
@@ -39,7 +39,7 @@ function N(e) {
                 { shouldShow: u } = (0, E._)(e, "useGuildPowerupsChannelListIndicators"),
                 d = (0, c.OA)(a.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION, e),
                 f = u && !d,
-                p = (0, o.e7)([m.Z], () => m.Z.getStateForGuild(e));
+                h = (0, o.e7)([m.Z], () => m.Z.getStateForGuild(e));
             return i.useMemo(() => {
                 var e, i, o, a;
                 if (null == t)
@@ -50,12 +50,12 @@ function N(e) {
                 let { unlockedPowerups: c } = t,
                     u = (0, C.h)([
                         ...Object.values(c),
-                        ...Object.values(null != (i = null == p ? void 0 : p.entitlements) ? i : {}),
+                        ...Object.values(null != (i = null == h ? void 0 : h.entitlements) ? i : {}),
                     ]),
                     d = null != (o = null == n ? void 0 : n.lastSeenWarningNotification) ? o : Date.now(),
-                    h = new Date(null == (e = u[u.length - 1]) ? void 0 : e.ends_at).getTime(),
+                    p = new Date(null == (e = u[u.length - 1]) ? void 0 : e.ends_at).getTime(),
                     g = null != (a = null == n ? void 0 : n.lastBoostCount) ? a : 0;
-                return (u.length > 0 && d < h) || f
+                return (u.length > 0 && d < p) || f
                     ? {
                           trailing: (0, r.jsx)(s.Mgn, {
                               color: s.TVs.colors.STATUS_WARNING,
@@ -81,7 +81,7 @@ function N(e) {
                 null == n ? void 0 : n.lastSeenWarningNotification,
                 t,
                 f,
-                null == p ? void 0 : p.entitlements,
+                null == h ? void 0 : h.entitlements,
             ]);
         })(e, n, t),
         N = (function (e, t) {
@@ -123,7 +123,7 @@ function N(e) {
                                 r = S.Rx[n],
                                 o = (null == t || null == (i = t.unlockedPowerups) ? void 0 : i[n]) != null;
                             if (null == r && !o) return S.Du.VANITY_URL;
-                            let a = (0, h.Jh)(e);
+                            let a = (0, p.Jh)(e);
                             if (null != a && null != r && a < r && !o) return S.Du.VANITY_URL;
                         }
                         return 0;
@@ -134,7 +134,7 @@ function N(e) {
                 N = i.useMemo(() => {
                     if (null == t || s || P) return;
                     let n = (function (e, t) {
-                        let n = h.Oe.find((e) => {
+                        let n = p.Oe.find((e) => {
                             let n = S.Cp[e],
                                 r = null != n ? t.unlockedPowerups[n] : void 0;
                             return null != r && r.user_id !== S.Fq;
@@ -175,7 +175,7 @@ function N(e) {
                                                   : i;
                                           }),
                                 )
-                                .filter(p.lm);
+                                .filter(h.lm);
                         if (0 !== o.length) {
                             if (1 === o.length && !(0, d.OY)(a.C.GUILD_POWERUP_SINGLE_SKU_PURCHASE_COACHMARK, e))
                                 return {
@@ -307,7 +307,7 @@ function Z(e) {
         }, [n]),
         i.useEffect(() => {
             null != t &&
-                h.Oe.forEach((n) => {
+                p.Oe.forEach((n) => {
                     let r = S.Cp[n];
                     if (null == r || null == t.unlockedPowerups[r]) return;
                     let i = S.Q1[n];

@@ -9,7 +9,7 @@ var r = n(512722),
     u = n(456007),
     d = n(581364),
     f = n(388032);
-let _ = {
+let p = {
         [a.jw.SUB_COMMAND]: () => ({ success: !1 }),
         [a.jw.SUB_COMMAND_GROUP]: () => ({ success: !1 }),
         [a.jw.BOOLEAN]: (e) => {
@@ -34,7 +34,7 @@ let _ = {
             let o = r;
             if (void 0 !== t.minLength || void 0 !== t.maxLength) {
                 if (null == o) return { success: !1 };
-                let e = m(o, t, {
+                let e = h(o, t, {
                     exactRangeErrorMessage: f.t["e+9/SY"],
                     rangeErrorMessage: f.t.IE1sTh,
                     minErrorMessage: f.t.rXAFQD,
@@ -53,7 +53,7 @@ let _ = {
             let o = Number(u.AS(s.default.locale, r));
             return null == o || isNaN(o) || !Number.isInteger(o) || !Number.isSafeInteger(o)
                 ? { success: !1 }
-                : h(o, t, f.t["8Y5zsp"], f.t.CyRLmH, f.t["VD3Q+S"]);
+                : m(o, t, f.t["8Y5zsp"], f.t.CyRLmH, f.t["VD3Q+S"]);
         },
         [a.jw.NUMBER]: (e, t, n) => {
             i()(t.type === a.jw.NUMBER, "option type must match validator type");
@@ -64,7 +64,7 @@ let _ = {
             let o = Number(u.AS(s.default.locale, r));
             return isNaN(o) || o > Number.MAX_SAFE_INTEGER || o < Number.MIN_SAFE_INTEGER
                 ? { success: !1 }
-                : h(o, t, f.t["8Y5zsp"], f.t.CyRLmH, f.t["VD3Q+S"]);
+                : m(o, t, f.t["8Y5zsp"], f.t.CyRLmH, f.t["VD3Q+S"]);
         },
         [a.jw.USER]: (e, t, n, r) => {
             if ("text" !== e.type) return { success: "userMention" === e.type };
@@ -83,7 +83,7 @@ let _ = {
             }
         },
         [a.jw.ROLE]: (e, t, n, r) => {
-            if ("text" !== e.type) return { success: p(e) };
+            if ("text" !== e.type) return { success: _(e) };
             {
                 if ((0, d.BH)(e.text)) return { success: !0 };
                 let t = (0, o.K)(e.text, r, n, { allowUsers: !1 });
@@ -91,11 +91,11 @@ let _ = {
             }
         },
         [a.jw.MENTIONABLE]: (e, t, n, r) => {
-            if ("text" !== e.type) return { success: "userMention" === e.type || p(e) };
+            if ("text" !== e.type) return { success: "userMention" === e.type || _(e) };
             {
                 if ((0, d.BH)(e.text)) return { success: !0 };
                 let t = (0, o.K)(e.text, r, n);
-                return { success: null != t && ("userMention" === t.type || p(t)) };
+                return { success: null != t && ("userMention" === t.type || _(t)) };
             }
         },
         [a.jw.ATTACHMENT]: (e, t, n, r, i) => {
@@ -104,8 +104,8 @@ let _ = {
             return { success: null != a && a.filename === e.text };
         },
     },
-    p = (e) => "roleMention" === e.type || ("textMention" === e.type && "@everyone" === e.text);
-function h(e, t, n, r, i) {
+    _ = (e) => "roleMention" === e.type || ("textMention" === e.type && "@everyone" === e.text);
+function m(e, t, n, r, i) {
     if ((null != t.minValue && e < t.minValue) || (null != t.maxValue && e > t.maxValue)) {
         if (null != t.maxValue && null != t.minValue)
             return {
@@ -128,7 +128,7 @@ function h(e, t, n, r, i) {
     }
     return { success: !0 };
 }
-function m(e, t, n) {
+function h(e, t, n) {
     if ((void 0 !== t.minLength && e.length < t.minLength) || (void 0 !== t.maxLength && e.length > t.maxLength)) {
         if (void 0 !== t.maxLength && void 0 !== t.minLength && t.minLength === t.maxLength)
             return {
@@ -159,4 +159,4 @@ function m(e, t, n) {
 function g(e) {
     return e.toLocaleString(f.intl.currentLocale, { useGrouping: !1 });
 }
-let E = _;
+let E = p;

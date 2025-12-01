@@ -10,16 +10,16 @@ var r = n(54381),
 function d(e) {
     let { children: t } = e,
         [n, d] = i.useState(null),
-        [f, _] = i.useState(null),
-        p = i.useRef(new Set()),
-        [h, m] = i.useState(!1),
+        [f, p] = i.useState(null),
+        _ = i.useRef(new Set()),
+        [m, h] = i.useState(!1),
         g = (0, o.e7)([s.Z], () => s.Z.getCurrentlySelectedChannelId()),
         E = i.useCallback((e) => {
-            p.current.delete(e), m(p.current.size > 0);
+            _.current.delete(e), h(_.current.size > 0);
         }, []),
-        b = i.useCallback((e) => (p.current.add(e), m(!0), () => E(e)), [E]),
+        b = i.useCallback((e) => (_.current.add(e), h(!0), () => E(e)), [E]),
         y = i.useCallback((e, t) => {
-            for (let n of p.current) n(e, t);
+            for (let n of _.current) n(e, t);
         }, []);
     return (
         i.useEffect(() => {
@@ -36,10 +36,10 @@ function d(e) {
                     children: t,
                 }),
                 (0, r.jsx)(a.O_, {
-                    ref: _,
+                    ref: p,
                     className: u.canvas,
                     environment: c.rq,
-                    onClick: h ? y : void 0,
+                    onClick: m ? y : void 0,
                 }),
                 (0, r.jsx)(a.Ji, {
                     ref: d,

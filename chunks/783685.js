@@ -9,14 +9,14 @@ var r = n(54381),
     u = n(388032);
 function d(e) {
     let { botUserId: t, applicationId: n, analyticsLocations: d } = e,
-        [f, _] = i.useState(!1),
-        p = i.useRef(null),
-        h = i.useCallback(async () => {
+        [f, p] = i.useState(!1),
+        _ = i.useRef(null),
+        m = i.useCallback(async () => {
             o.default.track(c.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
                 application_id: n,
                 button_action: s._y.OPEN_APP_DM,
             }),
-                _(!0);
+                p(!0);
             try {
                 await (0, l.W)({
                     appId: n,
@@ -24,14 +24,14 @@ function d(e) {
                     analyticsLocations: d,
                 });
             } catch (e) {}
-            clearTimeout(p.current), _(!1);
+            clearTimeout(_.current), p(!1);
         }, [t, n, d]);
     return (0, r.jsx)(a.Button, {
         type: "submit",
         size: "md",
         variant: "secondary",
         loading: f,
-        onClick: h,
+        onClick: m,
         "aria-label": u.intl.string(u.t.AUM8hY),
         text: u.intl.string(u.t.AUM8hY),
     });

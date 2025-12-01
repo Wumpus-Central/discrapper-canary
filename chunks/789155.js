@@ -11,8 +11,8 @@ var i = n(780384),
     d = n(299156);
 let f = function (e) {
     let { churnUserDiscountOffer: t, onDiscountClaim: n, onContinue: f } = e,
-        _ = (0, s.ZP)(),
-        p = (0, i.wj)(_) ? u : d;
+        p = (0, s.ZP)(),
+        _ = (0, i.wj)(p) ? u : d;
     return null == t
         ? null
         : (0, r.jsxs)("div", {
@@ -27,7 +27,7 @@ let f = function (e) {
                           children: [
                               (0, r.jsx)("img", {
                                   alt: "",
-                                  src: p,
+                                  src: _,
                                   className: c.churnFooterIcon,
                               }),
                               (0, r.jsxs)("div", {

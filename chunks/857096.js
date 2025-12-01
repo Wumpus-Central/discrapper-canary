@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => T });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -10,25 +10,25 @@ var i = n(120356),
     u = n(100527),
     d = n(906732),
     f = n(835473),
-    _ = n(607187),
-    p = n(937995),
-    h = n(366050),
-    m = n(48131),
+    p = n(607187),
+    _ = n(937995),
+    m = n(366050),
+    h = n(48131),
     g = n(591472),
     E = n(754376),
     b = n(408491),
     y = n(701488),
     O = n(505386),
     v = n(186880),
-    I = n(315091);
-function T(e) {
+    S = n(315091);
+function I(e) {
     let { isLoading: t } = e,
         n = (0, o.e7)([g.Z], () => g.Z.getConnectedFrame()),
         i = (0, o.e7)([g.Z], () => g.Z.getFrameLayoutMode()),
         u = (0, f.q)(null == n ? void 0 : n.applicationId),
-        d = (0, o.e7)([h.Z], () => h.Z.isFrameHidden()),
-        T = i === b.U.PIP && !d,
-        S = T && null != h.Z.pipVideoWindow && null != h.Z.pipFrameWindow;
+        d = (0, o.e7)([m.Z], () => m.Z.isFrameHidden()),
+        I = i === b.U.PIP && !d,
+        T = I && null != m.Z.pipVideoWindow && null != m.Z.pipFrameWindow;
     if (null == n || null == u) return null;
     let A = {
         instance_id: "example-cl-instance",
@@ -36,7 +36,7 @@ function T(e) {
     };
     function C(e) {
         let { onActive: t, onForceIdle: i, idle: a } = e;
-        return T && null != n
+        return I && null != n
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsx)("div", {
@@ -51,7 +51,7 @@ function T(e) {
                           onMouseDown: t,
                           onMouseLeave: i,
                           onFocus: () => {
-                              m.Z.updateFrameLayoutMode({
+                              h.Z.updateFrameLayoutMode({
                                   applicationId: n.applicationId,
                                   layoutMode: b.U.FOCUSED,
                               });
@@ -64,20 +64,20 @@ function T(e) {
     }
     return (
         null != n.proxyTicket && (A.discord_proxy_ticket = n.proxyTicket),
-        (0, r.jsx)(p.ZP, {
+        (0, r.jsx)(_.ZP, {
             timeout: 2000,
             children: (e) => {
                 let { idle: i, onActive: o, onForceIdle: f } = e;
-                return (0, r.jsxs)(_.Z, {
+                return (0, r.jsxs)(p.Z, {
                     className: a()(O.root, {
-                        [O.pipMode]: T,
-                        [I.elevationHigh]: T,
+                        [O.pipMode]: I,
+                        [S.elevationHigh]: I,
                         [v.idle]: i,
-                        [O.pipModeShort]: T,
+                        [O.pipModeShort]: I,
                         [O.hidden]: d,
-                        [O.multiPIPMode]: S,
+                        [O.multiPIPMode]: T,
                     }),
-                    noBorder: !T,
+                    noBorder: !I,
                     children: [
                         (0, r.jsx)("div", {
                             className: "theme-dark",
@@ -88,17 +88,17 @@ function T(e) {
                             }),
                         }),
                         t
-                            ? (0, r.jsx)(s.$jN, { className: a()(O.iframe, { [O.pipModeShort]: T }) })
+                            ? (0, r.jsx)(s.$jN, { className: a()(O.iframe, { [O.pipModeShort]: I }) })
                             : (0, r.jsx)(c.J, {
                                   allowPopups: (0, l.h)(u),
                                   referrerPolicy: "origin",
                                   url: n.url,
                                   queryParams: A,
                                   className: a()(O.iframe, {
-                                      [O.pipModeShort]: T,
-                                      [O.pipNonInteractive]: T,
+                                      [O.pipModeShort]: I,
+                                      [O.pipNonInteractive]: I,
                                   }),
-                                  shouldRefocus: !T,
+                                  shouldRefocus: !I,
                               }),
                     ],
                 });
@@ -106,11 +106,11 @@ function T(e) {
         })
     );
 }
-let S = () => {
+let T = () => {
     let { analyticsLocations: e } = (0, d.ZP)(u.Z.FRAME_PIP),
         t = (0, o.e7)([g.Z], () => g.Z.isFrameActive());
     return (0, r.jsx)(d.Gt, {
         value: e,
-        children: (0, r.jsx)(T, { isLoading: !t }),
+        children: (0, r.jsx)(I, { isLoading: !t }),
     });
 };

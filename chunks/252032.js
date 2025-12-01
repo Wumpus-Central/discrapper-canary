@@ -18,8 +18,8 @@ var i = n(54381),
     C = n(955384),
     v = n(981631),
     _ = n(224837),
-    x = n(360514);
-function j(e) {
+    O = n(360514);
+function x(e) {
     let { value: t, channel: n } = e;
     return (0, g.v)({
         type: c.Ie.EDIT,
@@ -29,15 +29,15 @@ function j(e) {
         respectCooldown: !1,
     });
 }
-function O(e) {
+function j(e) {
     let { channel: t, message: n } = e,
         { id: c } = t,
         { id: u } = n,
         m = t.getGuildId(),
         g = (0, a.e7)([h.Z], () => h.Z.getGuild(m), [m]),
         y = t.type === v.d4z.GUILD_ANNOUNCEMENT,
-        O = null != g && g.features.has(v.GuildFeatures.NEWS),
-        S = y && O,
+        j = null != g && g.features.has(v.GuildFeatures.NEWS),
+        S = y && j,
         {
             editingMessage: P,
             editingTextValue: I,
@@ -115,7 +115,7 @@ function O(e) {
                     })({}, e)),
                     (n = n =
                         {
-                            className: x.channelTextArea,
+                            className: O.channelTextArea,
                             key: u,
                         }),
                     Object.getOwnPropertyDescriptors
@@ -146,7 +146,7 @@ function O(e) {
               onChange: o.Z.updateEditMessage,
               onConfirmDelete: b.Z.confirmDelete,
               saveMessage: N,
-              validateEdit: j,
+              validateEdit: x,
               children: A,
           })
         : null;
@@ -179,7 +179,7 @@ function E(e) {
         (0, i.jsx)(
             u.ZP,
             {
-                className: x.channelTextArea,
+                className: O.channelTextArea,
                 textValue: t,
                 richValue: n,
                 channel: a,
@@ -202,7 +202,7 @@ function E(e) {
 function S(e, t, n) {
     let { message: r, channel: l, compact: a } = e;
     return n
-        ? (0, i.jsx)(O, {
+        ? (0, i.jsx)(j, {
               channel: l,
               message: r,
           })

@@ -21,8 +21,8 @@ var l = n(54381),
     b = n(499533),
     S = n(709054),
     P = n(145597),
-    E = n(427860),
-    I = n(837268),
+    E = n(837268),
+    I = n(307149),
     O = n(475866),
     Z = n(371651),
     G = n(610394),
@@ -162,14 +162,14 @@ function A(e) {
 let B = {
     HandleFocusChanged: (e, t) => {
         var n;
-        if (!(0, E._R)(e, "HandleFocusChanged")) return !0;
+        if (!(0, I._R)(e, "HandleFocusChanged")) return !0;
         let l = null != t && null != (n = G.Z.getKnownWindowHandlesForPID(t)) ? n : new Set(),
             { focusedPid: r, focusedWindowHandle: a } = e.data;
         return null != a && null != r && r !== P.UNSET_PID && !!l.has(a) && r === t;
     },
     EventHook: (e, t) => {
         var n;
-        if (!(0, E._R)(e, "EventHook")) return !0;
+        if (!(0, I._R)(e, "EventHook")) return !0;
         let l = null != t && null != (n = G.Z.getKnownWindowHandlesForPID(t)) ? n : new Set();
         try {
             let { receivedWindow: n, targetPid: r } = e.data;
@@ -304,9 +304,9 @@ function K(e) {
             let o = null != (r = x.default.getFocusedPID()) ? r : (0, P.getPID)(),
                 c = Z.default.getTrackedGameByPid(o),
                 g = G.Z.getPopoutInitializationStages(),
-                p = (null == c ? void 0 : c.overlayMethod) != null ? I.gl[c.overlayMethod] : null,
+                p = (null == c ? void 0 : c.overlayMethod) != null ? E.gl[c.overlayMethod] : null,
                 y = null != (a = null == c ? void 0 : c.fullscreenType) ? a : m.Jx.UNKNOWN,
-                w = (0, E.y2)(eu, (e) => {
+                w = (0, I.y2)(eu, (e) => {
                     for (let t of Object.values(B))
                         try {
                             if (!t(e, o)) return !1;

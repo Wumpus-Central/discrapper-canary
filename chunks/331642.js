@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(442837),
@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(74538),
     d = n(242291),
     f = n(830253),
-    _ = n(792165),
-    p = n(603074),
-    h = n(294206),
-    m = n(388032),
+    p = n(792165),
+    _ = n(603074),
+    m = n(294206),
+    h = n(388032),
     g = n(298879);
 function E(e, t, n) {
     return (
@@ -83,27 +83,27 @@ function v(e) {
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, r.jsx)(s.VqE, {
-                children: (0, r.jsx)(p.Z, {
+                children: (0, r.jsx)(_.Z, {
                     suppressPlaySound: !0,
                     shouldShowUpsell: !1,
                     guildId: null,
                     channel: null,
                     onClose: t,
                     onSelect: E,
-                    gridNotice: d ? null : (0, r.jsx)(_.o, {}),
+                    gridNotice: d ? null : (0, r.jsx)(p.o, {}),
                     analyticsSource: "call sounds edit setting",
                 }),
             });
         },
         children: (e) =>
             (0, r.jsx)(
-                h.hU,
+                m.hU,
                 O(b({}, e), {
                     ref: f,
                     onClick: () => {
                         o(!n);
                     },
-                    text: m.intl.string(m.t.uOe0Az),
+                    text: h.intl.string(h.t.uOe0Az),
                     children: (0, r.jsx)(s.vdY, {
                         size: "md",
                         color: "currentColor",
@@ -113,17 +113,17 @@ function v(e) {
             ),
     });
 }
-function I(e) {
+function S(e) {
     let { sound: t } = e,
         { previewSound: n } = (0, f.Z)(t, null),
         i =
             0 === (0, d.pI)()
-                ? m.intl.string(m.t.OASXjt)
-                : m.intl.formatToPlainString(m.t["/8fYO5"], {
+                ? h.intl.string(h.t.OASXjt)
+                : h.intl.formatToPlainString(h.t["/8fYO5"], {
                       emojiName: t.emojiName,
                       soundName: t.name,
                   });
-    return (0, r.jsx)(h.hU, {
+    return (0, r.jsx)(m.hU, {
         onClick: n,
         text: i,
         children: (0, r.jsx)(s.gj8, {
@@ -133,7 +133,7 @@ function I(e) {
         }),
     });
 }
-function T(e) {
+function I(e) {
     let { sound: t, isGlobal: n, onSelect: i } = e,
         a = null != t,
         c = null == t ? void 0 : t.emojiId,
@@ -146,11 +146,11 @@ function T(e) {
                 tag: "span",
                 children: e,
             });
-    function _() {
+    function p() {
         return null == t
-            ? m.intl.string(m.t.PoWNfe)
+            ? h.intl.string(h.t.PoWNfe)
             : n
-              ? m.intl.format(m.t.B6HU6O, {
+              ? h.intl.format(h.t.B6HU6O, {
                     soundName: t.name,
                     subtextHook: f,
                 })
@@ -172,10 +172,10 @@ function T(e) {
                         variant: "text-xs/medium",
                         color: "header-primary",
                         className: g.soundText,
-                        children: _(),
+                        children: p(),
                     }),
                     a
-                        ? (0, r.jsx)(I, { sound: t })
+                        ? (0, r.jsx)(S, { sound: t })
                         : (0, r.jsx)(s.gj8, {
                               size: "md",
                               color: "currentColor",
@@ -189,9 +189,9 @@ function T(e) {
                     (0, r.jsx)(v, { onSelect: i }),
                     a &&
                         !n &&
-                        (0, r.jsx)(h.hU, {
+                        (0, r.jsx)(m.hU, {
                             onClick: () => i(null),
-                            text: m.intl.string(m.t.jmtcGA),
+                            text: h.intl.string(h.t.jmtcGA),
                             children: (0, r.jsx)(s.XHJ, {
                                 size: "md",
                                 color: o.Z.unsafe_rawColors.RED_400.css,

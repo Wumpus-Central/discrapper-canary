@@ -8,11 +8,11 @@ var r,
     c = n(70956),
     u = n(973285);
 let d = new Set(),
-    p = {};
+    f = {};
 function h(e) {
     return new Date(e * c.Z.Millis.SECOND).getTime();
 }
-function f() {
+function p() {
     d.clear();
 }
 function g(e) {
@@ -25,7 +25,7 @@ class m extends (r = o.ZP.Store) {
     getStartTime(e) {
         var t;
         if (null != e && null != e.guild_id && e.type === l.d.GUILD_VOICE)
-            return null == (t = p[e.guild_id]) ? void 0 : t[e.id];
+            return null == (t = f[e.guild_id]) ? void 0 : t[e.id];
     }
     hasRequestedStartTimes(e) {
         return d.has(e);
@@ -42,8 +42,8 @@ class m extends (r = o.ZP.Store) {
 let b = new m(a.Z, {
     GUILD_CREATE: g,
     GUILD_DELETE: g,
-    CONNECTION_RESUMED: f,
-    CONNECTION_OPEN: f,
+    CONNECTION_RESUMED: p,
+    CONNECTION_OPEN: p,
     VOICE_CHANNEL_START_TIME_UPDATE: function (e) {
         let { guildId: t, id: n, voiceStartTime: r } = e;
         if (
@@ -53,11 +53,11 @@ let b = new m(a.Z, {
             }).enabled
         )
             return !1;
-        null == p[t] && (p[t] = {}), (p[t][n] = null != r ? h(r) : void 0);
+        null == f[t] && (f[t] = {}), (f[t][n] = null != r ? h(r) : void 0);
     },
     CHANNEL_INFO: function (e) {
         let { guildId: t, channels: n } = e;
-        for (let { id: e, voiceStartTime: r } of ((p[t] = {}), n)) p[t][e] = null != r ? h(r) : void 0;
+        for (let { id: e, voiceStartTime: r } of ((f[t] = {}), n)) f[t][e] = null != r ? h(r) : void 0;
     },
     FETCH_CHANNEL_INFO: function (e) {
         let { guildId: t } = e;

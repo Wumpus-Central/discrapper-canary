@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(54381);
 n(473749);
 var i = n(481060),
@@ -71,7 +71,7 @@ function f(e, t, n) {
     }),
         (0, i.showToast)((0, i.createToast)(s.intl.string(s.t["d9+vQ8"]), i.ToastType.SUCCESS));
 }
-function _(e) {
+function p(e) {
     let { summary: t, channel: a, rating: s } = e;
     null != t &&
         (s === o.aZ.BAD

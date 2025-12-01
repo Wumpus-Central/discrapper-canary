@@ -1,33 +1,33 @@
-n.d(t, { Z: () => m });
-var l = n(54381);
-n(473749);
-var i = n(120356),
-    a = n.n(i),
-    r = n(481060),
-    s = n(578756),
-    u = n(162190),
-    o = n(732031),
-    c = n(388032),
-    d = n(722417);
+t.d(n, { Z: () => m });
+var l = t(54381);
+t(473749);
+var i = t(120356),
+    a = t.n(i),
+    r = t(481060),
+    s = t(578756),
+    u = t(162190),
+    o = t(613275),
+    c = t(388032),
+    d = t(722417);
 function m(e) {
     let {
-            className: t,
-            guildId: n,
+            className: n,
+            guildId: t,
             game: i,
             onClick: m,
             imageClassName: v,
-            titleClassName: g,
-            disabled: f = !1,
+            titleClassName: f,
+            disabled: g = !1,
             location: p,
         } = e,
         b = (0, u.Z)(i.gameId, "cover");
     return (0, l.jsxs)(r.P3F, {
-        "aria-disabled": f,
-        className: a()(d.game, { [d.disabled]: f }, t),
-        onClick: f
+        "aria-disabled": g,
+        className: a()(d.game, { [d.disabled]: g }, n),
+        onClick: g
             ? void 0
             : () => {
-                  (0, s.GA)(n, i.id, i.name, p), m(i);
+                  (0, s.GA)(t, i.id, i.name, p), m(i);
               },
         children: [
             (0, l.jsxs)("div", {
@@ -43,7 +43,7 @@ function m(e) {
                 ],
             }),
             (0, l.jsxs)("div", {
-                className: a()(d.textContainer, g),
+                className: a()(d.textContainer, f),
                 children: [
                     (0, l.jsx)(r.Heading, {
                         variant: "heading-sm/semibold",

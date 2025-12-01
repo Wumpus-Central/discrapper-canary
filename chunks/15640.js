@@ -22,9 +22,9 @@ function d() {
         u = n.paymentSourceIds,
         d = n.defaultPaymentSourceId,
         f = r.isLoadedForSKUs(t),
-        _ = null == (e = i.getPremiumTypeSubscription()) ? void 0 : e.paymentSourceId;
-    if (null != _ && !r.hasPaymentSourceForSKUIds(_, t))
-        return c("subscription payment source ".concat(_, " not loaded for ").concat(t)), !1;
+        p = null == (e = i.getPremiumTypeSubscription()) ? void 0 : e.paymentSourceId;
+    if (null != p && !r.hasPaymentSourceForSKUIds(p, t))
+        return c("subscription payment source ".concat(p, " not loaded for ").concat(t)), !1;
     if (null != d && !r.hasPaymentSourceForSKUIds(d, t))
         return c("default payment source ".concat(d, " not loaded for ").concat(t)), !1;
     for (let e of u)

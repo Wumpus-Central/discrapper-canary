@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(45114),
     u = n(404616),
     d = n(470623),
-    p = n(344185),
+    f = n(344185),
     h = n(488131),
-    f = n(592125),
+    p = n(592125),
     g = n(823379),
     m = n(709054),
     b = n(981631),
@@ -19,9 +19,9 @@ var r = n(54381),
 function O(e) {
     let { channel: t, channelRecord: n, deleteChannel: l } = e,
         O = (0, a.Wu)(
-            [p.Z, f.Z],
+            [f.Z, p.Z],
             () =>
-                o()(p.Z.getThreadsForParent(n.guild_id, n.id))
+                o()(f.Z.getThreadsForParent(n.guild_id, n.id))
                     .values()
                     .filter((e) => {
                         let { id: n } = e;
@@ -29,7 +29,7 @@ function O(e) {
                     })
                     .map((e) => {
                         let { id: t } = e;
-                        return f.Z.getChannel(t);
+                        return p.Z.getChannel(t);
                     })
                     .filter(g.lm)
                     .sort((e, t) => m.default.compare(e.id, t.id))

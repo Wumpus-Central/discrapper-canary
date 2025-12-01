@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -10,29 +10,29 @@ var i = n(120356),
     u = n(74538),
     d = n(140465),
     f = n(474936),
-    _ = n(981631),
-    p = n(388032),
-    h = n(561485);
-let m = (e) => {
+    p = n(981631),
+    _ = n(388032),
+    m = n(561485);
+let h = (e) => {
     let t,
         n,
-        { premiumSubscription: i, className: m, textColor: g } = e,
+        { premiumSubscription: i, className: h, textColor: g } = e,
         E = (0, d.Nx)();
     if (null == i) return null;
     let b = null != i ? u.ZP.getPremiumPlanItem(i) : null;
     if (
         (u.ZP.isBoostOnlySubscription(i)
-            ? (t = p.intl.string(p.t.Uj0md3))
+            ? (t = _.intl.string(_.t.Uj0md3))
             : null != b && (t = u.ZP.getTierDisplayNameByPlanId(b.planId)),
         null == t)
     )
         return null;
-    let y = () => (0, l.openUserSettings)(s.n.SUBSCRIPTIONS_PANEL, { section: _.oAB.SUBSCRIPTIONS }),
+    let y = () => (0, l.openUserSettings)(s.n.SUBSCRIPTIONS_PANEL, { section: p.oAB.SUBSCRIPTIONS }),
         O = (null != b ? u.ZP.getSkuIdForPlan(b.planId) : null) === f.Si.TIER_1;
     return (
         (n = null != g ? g : E ? "always-white" : "text-default"),
         (0, r.jsxs)(o.Zbd, {
-            className: a()(h.container, m, { [h.centerText]: E }),
+            className: a()(m.container, h, { [m.centerText]: E }),
             type: o.Zbd.Types.CUSTOM,
             children: [
                 (0, r.jsx)(o.Mgn, {
@@ -40,17 +40,17 @@ let m = (e) => {
                     width: 20,
                     height: 20,
                     color: "currentColor",
-                    className: a()(h.icon, { [h.lightThemeColorOnly]: E }),
+                    className: a()(m.icon, { [m.lightThemeColorOnly]: E }),
                 }),
                 (0, r.jsx)(o.Text, {
                     variant: "text-sm/medium",
                     color: n,
                     children: O
-                        ? p.intl.format(p.t["tYuv+T"], {
-                              helpdeskArticle: c.Z.getArticleURL(_.BhN.PREMIUM_DETAILS),
+                        ? _.intl.format(_.t["tYuv+T"], {
+                              helpdeskArticle: c.Z.getArticleURL(p.BhN.PREMIUM_DETAILS),
                               onSubscriptionsClick: y,
                           })
-                        : p.intl.format(p.t.xHRgU2, {
+                        : _.intl.format(_.t.xHRgU2, {
                               subscriptionName: t,
                               onSubscriptionsClick: y,
                           }),

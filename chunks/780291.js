@@ -9,7 +9,7 @@ var r = n(54381),
     u = n(112843),
     d = n(524484),
     f = n(675654);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,27 +33,27 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-let h = 16,
-    m = 0.05;
+let m = 16,
+    h = 0.05;
 function g(e) {
     var t, n;
     let { editorHeight: r, textValue: c, channelId: d } = e,
-        _ = i.useRef(c),
-        p = (0, o.Z)({ editorHeight: r }),
+        p = i.useRef(c),
+        _ = (0, o.Z)({ editorHeight: r }),
         g = (0, u.Z)(),
         E = (0, a.e7)([l.ZP, s.default], () => l.ZP.isComboing(s.default.getId(), d)),
-        b = null != (t = null == p ? void 0 : p.left) ? t : 0,
-        y = (null != (n = null == p ? void 0 : p.top) ? n : 0) - h,
+        b = null != (t = null == _ ? void 0 : _.left) ? t : 0,
+        y = (null != (n = null == _ ? void 0 : _.top) ? n : 0) - m,
         O = 0 === c.length,
-        v = i.useMemo(() => Math.random() < m, [O]);
+        v = i.useMemo(() => Math.random() < h, [O]);
     return (
         i.useEffect(() => {
-            0 !== c.length && c !== _.current && E && (g.fire(b, y, v ? { sprite: f.vv } : null), (_.current = c));
+            0 !== c.length && c !== p.current && E && (g.fire(b, y, v ? { sprite: f.vv } : null), (p.current = c));
         }, [c, E, b, y, v, g]),
         null
     );
@@ -61,6 +61,6 @@ function g(e) {
 function E(e) {
     return (0, r.jsx)(c.Z, {
         confettiLocation: d.Hn.CHAT_INPUT,
-        children: (0, r.jsx)(g, p({}, e)),
+        children: (0, r.jsx)(g, _({}, e)),
     });
 }

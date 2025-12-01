@@ -1,7 +1,7 @@
 n.d(t, {
-    Y7: () => _,
-    oc: () => h,
-    pR: () => p,
+    Y7: () => p,
+    oc: () => m,
+    pR: () => _,
 });
 var r = n(990547),
     i = n(283693),
@@ -61,7 +61,7 @@ function f(e, t) {
         e
     );
 }
-async function _() {
+async function p() {
     try {
         let e = await o.Z.get({
             url: l.ANM.EMAIL_SETTINGS,
@@ -86,7 +86,7 @@ async function _() {
         a.Z.dispatch({ type: "EMAIL_SETTINGS_FETCH_FAILURE" });
     }
 }
-async function p(e, t) {
+async function _(e, t) {
     a.Z.dispatch({
         type: "EMAIL_SETTINGS_UPDATE",
         updates: { [e]: t },
@@ -112,7 +112,7 @@ async function p(e, t) {
         a.Z.dispatch({ type: "EMAIL_SETTINGS_UPDATE_FAILURE" });
     }
 }
-async function h() {
+async function m() {
     let e = s.M0.reduce((e, t) => f(u({}, e), { [t]: !1 }), {});
     a.Z.dispatch({
         type: "EMAIL_SETTINGS_UPDATE",

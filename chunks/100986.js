@@ -10,19 +10,19 @@ var r = n(594190),
 function d(e, t) {
     return e.guildId === l.X8 ? "default" : t ? "custom-external" : "custom";
 }
-function f(e, t, n, f, _) {
-    var p;
-    let h = i.Z.getChannel(o.Z.getVoiceChannelId()),
-        m = null == h ? void 0 : h.getGuildId(),
+function f(e, t, n, f, p) {
+    var _;
+    let m = i.Z.getChannel(o.Z.getVoiceChannelId()),
+        h = null == m ? void 0 : m.getGuildId(),
         g = a.Z.getMediaSessionId(),
         E = a.Z.getRTCConnectionId(),
-        b = null == (p = r.ZP.getCurrentGameForAnalytics()) ? void 0 : p.name,
-        y = m !== n.guildId && n.guildId !== l.X8,
+        b = null == (_ = r.ZP.getCurrentGameForAnalytics()) ? void 0 : _.name,
+        y = h !== n.guildId && n.guildId !== l.X8,
         O = d(n, y);
     s.default.track(c.rMx.PREMIUM_FEATURE_USAGE, {
         feature_name: u.QP.SOUNDBOARD_PLAY,
         feature_tier: y ? u.h1.PREMIUM_STANDARD : u.h1.FREE,
-        guild_id: m,
+        guild_id: h,
         home_guild_id: n.guildId,
         location_stack: e,
         rtc_connection_id: E,
@@ -33,6 +33,6 @@ function f(e, t, n, f, _) {
         feature_selection: O,
         feature_selection_id: n.soundId,
         sound_type: f,
-        sequence_number: null != _ ? _ + 1 : null,
+        sequence_number: null != p ? p + 1 : null,
     });
 }

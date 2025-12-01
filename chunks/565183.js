@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(539854), n(388685);
+n.d(t, { Z: () => h }), n(539854), n(388685);
 var r = n(473749),
     i = n(392711),
     a = n.n(i),
@@ -21,7 +21,7 @@ function u(e, t, n) {
 }
 let d = 20,
     f = 60000;
-class _ {
+class p {
     request(e) {
         if (this._pending.has(e)) return;
         let t = this._lastFetchedAttempted.get(e);
@@ -57,12 +57,12 @@ class _ {
             u(this, "_flushHandler", new s.sW(32, () => this._flush()));
     }
 }
-let p = new _();
-function h(e) {
+let _ = new p();
+function m(e) {
     r.useEffect(() => {
-        null != e && "" !== e && p.request(e);
+        null != e && "" !== e && _.request(e);
     }, [e]);
 }
-function m(e) {
-    return h(e), (0, o.e7)([c.Z], () => (null != e && "" !== e ? c.Z.getApplication(e) : null), [e]);
+function h(e) {
+    return m(e), (0, o.e7)([c.Z], () => (null != e && "" !== e ? c.Z.getApplication(e) : null), [e]);
 }

@@ -12,36 +12,36 @@ var r = n(54381),
     u = n(914788),
     d = n(322192),
     f = n(981631),
-    _ = n(597754),
-    p = n(388032),
-    h = n(641947);
-let m = [18, 18, 16, 16, 14, 12, 10];
+    p = n(744038),
+    _ = n(388032),
+    m = n(641947);
+let h = [18, 18, 16, 16, 14, 12, 10];
 function g(e) {
     var t;
-    return null != (t = m[e.length - 1]) ? t : m[m.length - 1];
+    return null != (t = h[e.length - 1]) ? t : h[h.length - 1];
 }
 let E = i.memo((e) => {
     let { guildId: t, className: n, customSubtext: i } = e,
         a = (0, s.e7)([u.Z], () => u.Z.getGuild(t));
     if (void 0 === a) return null;
-    let m = a.features.has(f.GuildFeatures.VERIFIED) || a.features.has(f.GuildFeatures.PARTNERED),
+    let h = a.features.has(f.GuildFeatures.VERIFIED) || a.features.has(f.GuildFeatures.PARTNERED),
         { name: g } = a;
     return (0, r.jsxs)("div", {
-        className: o()(h.container, n),
+        className: o()(m.container, n),
         children: [
             (0, r.jsx)(d.Z, { guildId: t }),
             (0, r.jsxs)("div", {
-                className: h.descriptors,
+                className: m.descriptors,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: h.header,
+                        className: m.header,
                         children: [
-                            m
+                            h
                                 ? (0, r.jsx)(c.Z, {
                                       guild: a,
                                       tooltipPosition: "bottom",
                                       tooltipColor: l.aML.Colors.PRIMARY,
-                                      className: h.guildBadge,
+                                      className: m.guildBadge,
                                   })
                                 : null,
                             (0, r.jsx)(l.Text, {
@@ -57,7 +57,7 @@ let E = i.memo((e) => {
                             null != i
                                 ? i
                                 : void 0 !== a.approximateMemberCount
-                                  ? p.intl.format(_.default["5JmNgg"], { members: a.approximateMemberCount })
+                                  ? _.intl.format(p.default["5JmNgg"], { members: a.approximateMemberCount })
                                   : null,
                     }),
                 ],

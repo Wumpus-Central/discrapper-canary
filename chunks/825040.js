@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -55,16 +55,16 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function _(e) {
+function p(e) {
     var { streamId: t, paused: n = !1, onReady: a, onResize: c, className: f } = e,
-        _ = d(e, ["streamId", "paused", "onReady", "onResize", "className"]);
-    let p = i.useRef(null),
-        h = i.useRef({
+        p = d(e, ["streamId", "paused", "onReady", "onResize", "className"]);
+    let _ = i.useRef(null),
+        m = i.useRef({
             width: 0,
             height: 0,
         });
     i.useLayoutEffect(() => {
-        let e = p.current;
+        let e = _.current;
         if (null != e)
             return (
                 (0, s.rY)(t),
@@ -78,30 +78,30 @@ function _(e) {
             var e, r;
             return (
                 n
-                    ? (null == (e = p.current) || e.pause(), (0, s.Bw)(t))
-                    : null == (r = p.current) || r.play().catch(() => {}),
+                    ? (null == (e = _.current) || e.pause(), (0, s.Bw)(t))
+                    : null == (r = _.current) || r.play().catch(() => {}),
                 () => {
                     n && (0, s.rY)(t);
                 }
             );
         }, [n]);
-    let m = i.useCallback(() => {
+    let h = i.useCallback(() => {
         var e, t, n, r;
-        let { width: i, height: a } = h.current,
-            o = null != (n = null == (e = p.current) ? void 0 : e.videoWidth) ? n : 0,
-            s = null != (r = null == (t = p.current) ? void 0 : t.videoHeight) ? r : 0;
+        let { width: i, height: a } = m.current,
+            o = null != (n = null == (e = _.current) ? void 0 : e.videoWidth) ? n : 0,
+            s = null != (r = null == (t = _.current) ? void 0 : t.videoHeight) ? r : 0;
         if (i !== o || a !== s) {
             let e = {
                 width: o,
                 height: s,
             };
-            null == c || c(e), (h.current = e);
+            null == c || c(e), (m.current = e);
         }
     }, [c]);
     i.useLayoutEffect(() => {
-        let e = p.current;
-        if (null != e) return e.addEventListener("resize", m), () => e.removeEventListener("resize", m);
-    }, [m]);
+        let e = _.current;
+        if (null != e) return e.addEventListener("resize", h), () => e.removeEventListener("resize", h);
+    }, [h]);
     let g = i.useCallback(() => {
             null == a || a();
         }, [a]),
@@ -116,13 +116,13 @@ function _(e) {
         u(
             {
                 className: o()("media-engine-video", f),
-                ref: p,
+                ref: _,
                 autoPlay: !0,
                 onPause: E,
                 onCanPlayThrough: g,
                 muted: !0,
             },
-            _,
+            p,
         ),
     );
 }

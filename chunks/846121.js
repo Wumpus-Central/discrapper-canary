@@ -57,11 +57,11 @@ function c(e, t) {
 let u = {},
     d = {},
     f = new Set();
-function _(e) {
+function p(e) {
     let { guildId: t, channelId: n } = e;
     d = c(s({}, d), { [t]: c(s({}, d[t]), { [n]: !0 }) });
 }
-function p(e) {
+function _(e) {
     let { memberActions: t, guildId: n } = e;
     if (null == t) {
         d[n] = u;
@@ -69,11 +69,11 @@ function p(e) {
     }
     (d[n] = t), f.delete(n);
 }
-function h(e) {
+function m(e) {
     let { guildId: t } = e;
     f.add(t);
 }
-function m(e) {
+function h(e) {
     let { guildId: t } = e;
     f.delete(t);
 }
@@ -106,10 +106,10 @@ class b extends (r = i.ZP.Store) {
 }
 o(b, "displayName", "GuildOnboardingMemberActionStore");
 let y = new b(a.Z, {
-    GUILD_NEW_MEMBER_ACTIONS_FETCH_START: h,
-    GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS: p,
-    GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL: m,
+    GUILD_NEW_MEMBER_ACTIONS_FETCH_START: m,
+    GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS: _,
+    GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL: h,
     GUILD_NEW_MEMBER_ACTIONS_DELETE_SUCCESS: E,
-    COMPLETE_NEW_MEMBER_ACTION: _,
+    COMPLETE_NEW_MEMBER_ACTION: p,
     GUILD_DELETE: g,
 });

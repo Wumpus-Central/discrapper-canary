@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r = n(54381),
     i = n(793030),
-    l = n(159691),
-    o = n(481060),
+    o = n(159691),
+    l = n(481060),
     a = n(921944),
     s = n(130231),
     c = n(388032),
@@ -30,14 +30,14 @@ function p(e) {
             }),
             (0, r.jsx)("div", {
                 className: u.close,
-                children: (0, r.jsx)(l.hU, {
+                children: (0, r.jsx)(o.hU, {
                     variant: "icon-only",
                     size: "md",
                     "aria-label": c.intl.string(c.t.cpT0Cq),
                     onClick: () => {
                         t(a.L.USER_DISMISS);
                     },
-                    icon: o.Dio,
+                    icon: l.Dio,
                 }),
             }),
         ],

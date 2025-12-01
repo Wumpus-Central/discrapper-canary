@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(394821),
     i = n(841784),
     a = n(833664),
@@ -36,8 +36,8 @@ function f(e) {
     }
     return e;
 }
-function _(e) {
-    let { location: t, user: n, currentUser: d, activity: _, application: p, entry: h, onClose: m } = e,
+function p(e) {
+    let { location: t, user: n, currentUser: d, activity: p, application: _, entry: m, onClose: h } = e,
         g = (0, s.Z)(
             f(
                 {
@@ -47,24 +47,24 @@ function _(e) {
                 },
                 (0, c.nK)({
                     user: n,
-                    activity: _,
-                    entry: h,
+                    activity: p,
+                    entry: m,
                 }),
             ),
         ),
         E = (0, u.Z)({
-            applicationId: null == p ? void 0 : p.id,
-            onClose: m,
+            applicationId: null == _ ? void 0 : _.id,
+            onClose: h,
         }),
-        b = (0, i.Z)(_);
-    return b && null != p
+        b = (0, i.Z)(p);
+    return b && null != _
         ? E
-        : !b && (0, a.Z)(_)
+        : !b && (0, a.Z)(p)
           ? g
-          : (0, r.Z)(_) && n.id !== d.id
+          : (0, r.Z)(p) && n.id !== d.id
             ? () =>
                   (0, l.s)({
-                      activity: _,
+                      activity: p,
                       user: n,
                       index: 0,
                   })

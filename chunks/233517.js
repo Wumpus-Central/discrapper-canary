@@ -1,107 +1,107 @@
-_.d(e, {
-    Qy: () => C,
-    TM: () => h,
-    Tb: () => s,
+r.d(t, {
+    Qy: () => D,
+    TM: () => L,
+    Tb: () => E,
     YA: () => T,
-    av: () => d,
-    cg: () => S,
-    dk: () => p,
-    eN: () => I,
-    eW: () => f,
-    mG: () => u,
-    rJ: () => N,
-    sU: () => A,
+    av: () => A,
+    cg: () => g,
+    dk: () => h,
+    eN: () => u,
+    eW: () => N,
+    mG: () => R,
+    rJ: () => I,
+    sU: () => p,
     uT: () => l,
-    v: () => R,
-    xv: () => L,
-    yj: () => P,
-    yl: () => O,
+    v: () => d,
+    xv: () => O,
+    yj: () => S,
+    yl: () => f,
 });
-var a = _(622916),
-    r = _(899517),
-    n = _(559508),
-    o = _(263449),
-    E = _(255768),
-    i = _(112797),
-    c = _(822578);
-function s(t, e) {
-    return (0, o.nZ)().captureException(t, (0, c.U0)(e));
+var n = r(622916),
+    a = r(899517),
+    i = r(559508),
+    o = r(263449),
+    _ = r(255768),
+    s = r(112797),
+    c = r(822578);
+function E(e, t) {
+    return (0, o.nZ)().captureException(e, (0, c.U0)(t));
 }
-function l(t, e) {
-    let _ = "string" == typeof e ? e : void 0,
-        a = "string" != typeof e ? { captureContext: e } : void 0;
-    return (0, o.nZ)().captureMessage(t, _, a);
+function l(e, t) {
+    let r = "string" == typeof t ? t : void 0,
+        n = "string" != typeof t ? { captureContext: t } : void 0;
+    return (0, o.nZ)().captureMessage(e, r, n);
 }
-function I(t, e) {
-    return (0, o.nZ)().captureEvent(t, e);
+function u(e, t) {
+    return (0, o.nZ)().captureEvent(e, t);
 }
-function R(t, e) {
-    (0, o.aF)().setContext(t, e);
+function d(e, t) {
+    (0, o.aF)().setContext(e, t);
 }
-function N(t) {
-    (0, o.aF)().setExtras(t);
+function I(e) {
+    (0, o.aF)().setExtras(e);
 }
-function A(t, e) {
-    (0, o.aF)().setExtra(t, e);
+function p(e, t) {
+    (0, o.aF)().setExtra(e, t);
 }
-function u(t) {
-    (0, o.aF)().setTags(t);
+function R(e) {
+    (0, o.aF)().setTags(e);
 }
-function T(t, e) {
-    (0, o.aF)().setTag(t, e);
+function T(e, t) {
+    (0, o.aF)().setTag(e, t);
 }
-function d(t) {
-    (0, o.aF)().setUser(t);
+function A(e) {
+    (0, o.aF)().setUser(e);
 }
-function f() {
+function N() {
     return (0, o.aF)().lastEventId();
 }
-async function O(t) {
-    let e = (0, o.s3)();
-    return e ? e.flush(t) : (E.X && a.kg.warn("Cannot flush events. No client defined."), Promise.resolve(!1));
+async function f(e) {
+    let t = (0, o.s3)();
+    return t ? t.flush(e) : (_.X && n.kg.warn("Cannot flush events. No client defined."), Promise.resolve(!1));
 }
-async function L(t) {
-    let e = (0, o.s3)();
-    return e
-        ? e.close(t)
-        : (E.X && a.kg.warn("Cannot flush events and disable SDK. No client defined."), Promise.resolve(!1));
-}
-function p() {
-    return !!(0, o.s3)();
-}
-function C(t) {
-    (0, o.aF)().addEventProcessor(t);
-}
-function P(t) {
-    let e = (0, o.s3)(),
-        _ = (0, o.aF)(),
-        a = (0, o.nZ)(),
-        { release: E, environment: c = n.J } = (e && e.getOptions()) || {},
-        { userAgent: s } = r.n.navigator || {},
-        l = (0, i.Hv)({
-            release: E,
-            environment: c,
-            user: a.getUser() || _.getUser(),
-            ...(s && { userAgent: s }),
-            ...t,
-        }),
-        I = _.getSession();
-    return I && "ok" === I.status && (0, i.CT)(I, { status: "exited" }), h(), _.setSession(l), a.setSession(l), l;
+async function O(e) {
+    let t = (0, o.s3)();
+    return t
+        ? t.close(e)
+        : (_.X && n.kg.warn("Cannot flush events and disable SDK. No client defined."), Promise.resolve(!1));
 }
 function h() {
-    let t = (0, o.aF)(),
-        e = (0, o.nZ)(),
-        _ = e.getSession() || t.getSession();
-    _ && (0, i.RJ)(_), D(), t.setSession(), e.setSession();
+    return !!(0, o.s3)();
 }
-function D() {
-    let t = (0, o.aF)(),
-        e = (0, o.nZ)(),
-        _ = (0, o.s3)(),
-        a = e.getSession() || t.getSession();
-    a && _ && _.captureSession(a);
+function D(e) {
+    (0, o.aF)().addEventProcessor(e);
 }
-function S(t = !1) {
-    if (t) return void h();
-    D();
+function S(e) {
+    let t = (0, o.s3)(),
+        r = (0, o.aF)(),
+        n = (0, o.nZ)(),
+        { release: _, environment: c = i.J } = (t && t.getOptions()) || {},
+        { userAgent: E } = a.n.navigator || {},
+        l = (0, s.Hv)({
+            release: _,
+            environment: c,
+            user: n.getUser() || r.getUser(),
+            ...(E && { userAgent: E }),
+            ...e,
+        }),
+        u = r.getSession();
+    return u && "ok" === u.status && (0, s.CT)(u, { status: "exited" }), L(), r.setSession(l), n.setSession(l), l;
+}
+function L() {
+    let e = (0, o.aF)(),
+        t = (0, o.nZ)(),
+        r = t.getSession() || e.getSession();
+    r && (0, s.RJ)(r), C(), e.setSession(), t.setSession();
+}
+function C() {
+    let e = (0, o.aF)(),
+        t = (0, o.nZ)(),
+        r = (0, o.s3)(),
+        n = t.getSession() || e.getSession();
+    n && r && r.captureSession(n);
+}
+function g(e = !1) {
+    if (e) return void L();
+    C();
 }

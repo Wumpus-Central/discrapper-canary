@@ -1,6 +1,6 @@
 n.d(t, {
-    ZP: () => O,
-    cy: () => x,
+    ZP: () => j,
+    cy: () => O,
     iu: () => _,
 }),
     n(388685);
@@ -67,8 +67,8 @@ function v(e, t) {
     );
 }
 var _ = (((r = {}).CENTER = "center"), (r.LEFT = "left"), r),
-    x = (((l = {}).TOP = "top"), (l.MIDDLE = "middle"), l);
-class j extends o.PureComponent {
+    O = (((l = {}).TOP = "top"), (l.MIDDLE = "middle"), l);
+class x extends o.PureComponent {
     componentDidMount() {
         let { uniqueId: e } = this.props;
         f.default.track(m.rMx.SHOW_TUTORIAL, { tutorial: e });
@@ -147,7 +147,7 @@ class j extends o.PureComponent {
             });
     }
 }
-class O extends (i = o.PureComponent) {
+class j extends (i = o.PureComponent) {
     render() {
         let e = this.props,
             {
@@ -225,7 +225,7 @@ class O extends (i = o.PureComponent) {
                     theme: i,
                     children: (e) =>
                         (0, a.jsx)(
-                            j,
+                            x,
                             v(C({}, this.props), {
                                 className: c()(
                                     {
@@ -251,4 +251,4 @@ class O extends (i = o.PureComponent) {
             });
     }
 }
-y(O, "TextAlignments", _), y(O, "defaultProps", { textAlign: "left" });
+y(j, "TextAlignments", _), y(j, "defaultProps", { textAlign: "left" });

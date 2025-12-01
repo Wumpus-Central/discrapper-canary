@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(28664),
     u = n(481060),
     d = n(884338),
-    p = n(100527),
+    f = n(100527),
     h = n(906732),
-    f = n(150039),
+    p = n(150039),
     g = n(892001),
     m = n(271383),
     b = n(430824),
@@ -19,8 +19,8 @@ var r = n(54381),
     O = n(823379),
     v = n(665149),
     j = n(228168),
-    C = n(388032),
-    x = n(130370);
+    x = n(388032),
+    C = n(130370);
 function E(e, t, n) {
     return (
         t in e
@@ -108,15 +108,15 @@ class S {
                     {
                         asContainer: !0,
                         tag: "span",
-                        text: C.intl.string(C.t["UTjRE/"]),
+                        text: x.intl.string(x.t["UTjRE/"]),
                         position: "bottom",
                         children: (0, r.jsx)(u.P3F, {
-                            className: x.moreAvatars,
+                            className: C.moreAvatars,
                             onClick: this.handleClick,
                             children: (0, r.jsx)(u.oFk, {
                                 size: "xs",
                                 color: "currentColor",
-                                className: x.plusIcon,
+                                className: C.plusIcon,
                             }),
                         }),
                     },
@@ -140,9 +140,9 @@ class S {
 function I(e) {
     let { channel: t } = e,
         n = t.getRecipientId(),
-        l = (0, f.gc)(n),
+        l = (0, p.gc)(n),
         o = Array(l.length).fill(null),
-        { analyticsLocations: g } = (0, h.ZP)(p.Z.AKA),
+        { analyticsLocations: g } = (0, h.ZP)(f.Z.AKA),
         m = (function (e) {
             let { userId: t, channelId: n, analyticsLocations: r } = e,
                 l = (0, a.e7)([_.default], () => _.default.getUser(t), [t]),
@@ -177,15 +177,15 @@ function I(e) {
             O(!1);
         }, [O]);
     return 0 === m.getNicknameGuildPairs().length && 0 === l.length
-        ? (0, r.jsx)("div", { className: x.spacer })
+        ? (0, r.jsx)("div", { className: C.spacer })
         : (0, r.jsxs)(h.Gt, {
               value: g,
               children: [
-                  (0, r.jsx)(v.iz, { className: x.divider }),
+                  (0, r.jsx)(v.iz, { className: C.divider }),
                   (0, r.jsx)(u.IGR, {
-                      text: C.intl.string(C.t.l1QVfj),
+                      text: x.intl.string(x.t.l1QVfj),
                       disableColor: !0,
-                      className: x.akaBadge,
+                      className: C.akaBadge,
                   }),
                   l.length > 0
                       ? (0, r.jsx)(d.ZP, {
@@ -206,7 +206,7 @@ function I(e) {
                                               position: "bottom",
                                               children: (0, r.jsx)("img", {
                                                   alt: "",
-                                                  className: x.avatar,
+                                                  className: C.avatar,
                                                   onClick: m.handleClick,
                                                   src: o.getAvatarURL(a, 16),
                                                   "aria-hidden": !0,
@@ -218,13 +218,13 @@ function I(e) {
                             renderMoreUsers: m.renderMoreAvatars,
                             guildId: void 0,
                             max: 3,
-                            className: x.avatars,
+                            className: C.avatars,
                         })
                       : null,
                   m.getNicknameGuildPairs().length > 0
                       ? (0, r.jsx)(s.Z, {
                             position: "bottom",
-                            className: x.nicknames,
+                            className: C.nicknames,
                             delay: 0,
                             onTooltipShow: j,
                             onTooltipHide: E,

@@ -14,25 +14,25 @@ function f(e) {
             isInteracting: n,
             hideAssets: a,
             imageSize: f,
-            containerClassName: _,
-            imageClassName: p,
-            assetRef: h,
+            containerClassName: p,
+            imageClassName: _,
+            assetRef: m,
         } = e,
-        m = i.useMemo(() => (0, s.fh)(t, s.eC.HERO_IMAGE), [t]),
+        h = i.useMemo(() => (0, s.fh)(t, s.eC.HERO_IMAGE), [t]),
         g = i.useMemo(() => (0, s.fh)(t, s.eC.HERO_VIDEO), [t]),
         { onAssetLoadComplete: E } = i.useContext(c.k);
     return (0, r.jsx)("div", {
-        className: o()(d.heroAssetCont, _),
+        className: o()(d.heroAssetCont, p),
         children:
             !a &&
             (0, r.jsx)(l.K, {
                 imageAsset:
-                    null != m
+                    null != h
                         ? {
-                              asset: m,
+                              asset: h,
                               assetId: "QuestTileBanner",
                               alt: u.intl.string(u.t.jnijWz),
-                              className: o()(d.heroAsset, p),
+                              className: o()(d.heroAsset, _),
                           }
                         : void 0,
                 videoAsset:
@@ -46,7 +46,7 @@ function f(e) {
                 showVideo: n,
                 imageSize: f,
                 onLoadComplete: E,
-                assetRef: h,
+                assetRef: m,
             }),
     });
 }

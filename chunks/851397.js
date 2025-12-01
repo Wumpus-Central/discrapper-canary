@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(892001),
     d = n(688192),
     f = n(89196),
-    p = n(602733),
-    h = n(937615),
+    h = n(602733),
+    p = n(937615),
     g = n(436585),
     m = n(594914),
     b = n(848118),
@@ -26,7 +26,7 @@ function j(e) {
             hideButtonIcon: x = !1,
             showPrice: C = !1,
             showIcons: E = !1,
-            source: S = p.lr.WISHLIST,
+            source: S = h.lr.WISHLIST,
         } = e,
         I = (function (e, t) {
             if (null == e) return {};
@@ -67,7 +67,7 @@ function j(e) {
             return N || M
                 ? {
                       buttonCTALabel: C
-                          ? (0, h.T4)(
+                          ? (0, p.T4)(
                                 null != (i = null == (n = w.price) ? void 0 : n.amount) ? i : 0,
                                 null != (l = null == (r = w.price) ? void 0 : r.currency) ? l : y.pK.USD,
                             )
@@ -87,7 +87,7 @@ function j(e) {
                   }
                 : {
                       buttonCTALabel: C
-                          ? (0, h.T4)(
+                          ? (0, p.T4)(
                                 null != (s = null == (e = w.price) ? void 0 : e.amount) ? s : 0,
                                 null != (c = null == (t = w.price) ? void 0 : t.currency) ? c : y.pK.USD,
                             )
@@ -113,7 +113,7 @@ function j(e) {
         F = i.useCallback(
             () =>
                 E
-                    ? S === p.lr.WISHLIST
+                    ? S === h.lr.WISHLIST
                         ? (0, r.jsx)("div", {
                               className: v.itemIcon,
                               children: (0, r.jsx)(o.h_8, {
@@ -124,7 +124,7 @@ function j(e) {
                                   colorClass: v.itemIconHeart,
                               }),
                           })
-                        : S === p.lr.POPULAR
+                        : S === h.lr.POPULAR
                           ? (0, r.jsx)("div", {
                                 className: v.itemIcon,
                                 children: (0, r.jsx)(o.YqE, {

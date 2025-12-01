@@ -1,15 +1,15 @@
 n.d(t, {
-    $e: () => T,
-    Bw: () => h,
+    $e: () => I,
+    Bw: () => m,
     Db: () => A,
     IH: () => C,
     Od: () => N,
     U_: () => v,
-    e$: () => S,
-    fS: () => I,
+    e$: () => T,
+    fS: () => S,
     hX: () => b,
-    r0: () => R,
-    ug: () => P,
+    r0: () => P,
+    ug: () => R,
     vB: () => g,
 }),
     n(368063);
@@ -61,15 +61,15 @@ function f(e) {
     for (let e = 0; e < l; e++) n[l - 1 - e] = u(t, e * l, l);
     return n;
 }
-class _ {
+class p {
     static fromString(e) {
-        return new _(f(e), e);
+        return new p(f(e), e);
     }
     static fromBit(e) {
         let t = Array(l),
             n = Math.floor(e / s);
         for (let r = 0; r < l; r++) t[l - 1 - r] = r === n ? 1 << (e - n * s) : 0;
-        return new _(t);
+        return new p(t);
     }
     static asUintN(e, t) {
         let { parts: n } = t,
@@ -85,18 +85,18 @@ class _ {
     }
     and(e) {
         let { parts: t } = e;
-        return new _(this.parts.map((e, n) => e & t[n]));
+        return new p(this.parts.map((e, n) => e & t[n]));
     }
     or(e) {
         let { parts: t } = e;
-        return new _(this.parts.map((e, n) => e | t[n]));
+        return new p(this.parts.map((e, n) => e | t[n]));
     }
     xor(e) {
         let { parts: t } = e;
-        return new _(this.parts.map((e, n) => e ^ t[n]));
+        return new p(this.parts.map((e, n) => e ^ t[n]));
     }
     not() {
-        return new _(this.parts.map((e) => ~e));
+        return new p(this.parts.map((e) => ~e));
     }
     equals(e) {
         let { parts: t } = e;
@@ -120,31 +120,31 @@ class _ {
         a(this, "parts", void 0), a(this, "str", void 0), (this.parts = e), (this.str = t);
     }
 }
-let p = c();
-p &&
+let _ = c();
+_ &&
     null == BigInt.prototype.toJSON &&
     (BigInt.prototype.toJSON = function () {
         return this.toString();
     });
-let h = p
+let m = _
         ? function (e) {
               return "bigint" == typeof e;
           }
         : function (e) {
-              return e instanceof _;
+              return e instanceof p;
           },
-    m = {},
-    g = p
+    h = {},
+    g = _
         ? function (e) {
               return BigInt(e);
           }
         : function (e) {
-              return e instanceof _
+              return e instanceof p
                   ? e
-                  : ("number" == typeof e && (e = e.toString()), null != m[e] || (m[e] = _.fromString(e)), m[e]);
+                  : ("number" == typeof e && (e = e.toString()), null != h[e] || (h[e] = p.fromString(e)), h[e]);
           },
     E = g(0),
-    b = p
+    b = _
         ? function () {
               let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : E,
                   t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : E;
@@ -155,7 +155,7 @@ let h = p
                   t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : E;
               return e.and(t);
           },
-    y = p
+    y = _
         ? function () {
               let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : E,
                   t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : E;
@@ -166,7 +166,7 @@ let h = p
                   t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : E;
               return e.or(t);
           },
-    O = p
+    O = _
         ? function () {
               let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : E,
                   t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : E;
@@ -177,7 +177,7 @@ let h = p
                   t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : E;
               return e.xor(t);
           },
-    v = p
+    v = _
         ? function () {
               let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : E;
               return ~e;
@@ -186,24 +186,24 @@ let h = p
               let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : E;
               return e.not();
           },
-    I = p
+    S = _
         ? function (e, t) {
               return e === t;
           }
         : function (e, t) {
               return null == e || null == t ? e == t : e.equals(t);
           };
-function T() {
+function I() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     let r = t[0];
     for (let e = 1; e < t.length; e++) r = y(r, t[e]);
     return r;
 }
-function S(e, t) {
-    return I(b(e, t), t);
+function T(e, t) {
+    return S(b(e, t), t);
 }
 function A(e, t) {
-    return !I(b(e, t), E);
+    return !S(b(e, t), E);
 }
 function C(e, t) {
     return t === E ? e : y(e, t);
@@ -211,17 +211,17 @@ function C(e, t) {
 function N(e, t) {
     return t === E ? e : O(e, b(e, t));
 }
-let R = p
+let P = _
         ? function (e) {
               return BigInt(1) << BigInt(e);
           }
         : function (e) {
-              return _.fromBit(e);
+              return p.fromBit(e);
           },
-    P = p
+    R = _
         ? function (e, t) {
               return Number(BigInt.asUintN(e, t));
           }
         : function (e, t) {
-              return _.asUintN(e, t);
+              return p.asUintN(e, t);
           };

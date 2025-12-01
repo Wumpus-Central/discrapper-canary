@@ -9,16 +9,16 @@ var r = n(54381),
     u = n(151662),
     d = n(695346),
     f = n(342386),
-    _ = n(981631),
-    p = n(930441),
-    h = n(597754),
-    m = n(388032),
+    p = n(981631),
+    _ = n(930441),
+    m = n(744038),
+    h = n(388032),
     g = n(286661);
 let E = () => {
     let e = d.Ex.useSetting(),
         { categories: t, initialized: n } = (0, s.cj)([u.Z], () => u.Z.getEmailSettings());
     function E(e) {
-        (0, c.pR)(p.$Z.FAMILY_CENTER_DIGEST, e);
+        (0, c.pR)(_.$Z.FAMILY_CENTER_DIGEST, e);
     }
     return (
         i.useEffect(() => {
@@ -27,13 +27,13 @@ let E = () => {
         (0, r.jsx)("div", {
             className: g.container,
             children: (0, r.jsxs)(l.C3N, {
-                label: m.intl.string(h.default.USIXU7),
+                label: h.intl.string(m.default.USIXU7),
                 children: [
                     (0, r.jsx)(l.rsf, {
                         checked: e,
-                        description: m.intl.string(h.default["5MdB3j"]),
+                        description: h.intl.string(m.default["5MdB3j"]),
                         onChange: d.Ex.updateSetting,
-                        label: m.intl.string(h.default.zkEceS),
+                        label: h.intl.string(m.default.zkEceS),
                     }),
                     e
                         ? (0, r.jsx)(l.Zbd, {
@@ -47,17 +47,17 @@ let E = () => {
                                           children: (0, r.jsx)(l.Text, {
                                               variant: "text-sm/semibold",
                                               color: "text-default",
-                                              children: m.intl.string(h.default.xAVm7K),
+                                              children: h.intl.string(m.default.xAVm7K),
                                           }),
                                       }),
                                       (0, r.jsx)(l.P3F, {
                                           children: (0, r.jsx)(a.rU, {
                                               onClick: f.default,
                                               to: {
-                                                  pathname: _.Z5c.FAMILY_CENTER,
+                                                  pathname: p.Z5c.FAMILY_CENTER,
                                                   state: { scrollRestoration: !1 },
                                               },
-                                              children: m.intl.string(h.default.cUIXFY),
+                                              children: h.intl.string(m.default.cUIXFY),
                                           }),
                                       }),
                                       (0, r.jsx)(l.G2e, {
@@ -70,10 +70,10 @@ let E = () => {
                           })
                         : null,
                     (0, r.jsx)(l.rsf, {
-                        checked: !!t[p.$Z.FAMILY_CENTER_DIGEST],
-                        description: m.intl.string(h.default.y34S46),
+                        checked: !!t[_.$Z.FAMILY_CENTER_DIGEST],
+                        description: h.intl.string(m.default.y34S46),
                         onChange: E,
-                        label: m.intl.string(h.default.irvJKR),
+                        label: h.intl.string(m.default.irvJKR),
                     }),
                 ],
             }),

@@ -1,6 +1,6 @@
 t.d(n, {
     I: () => j,
-    Z: () => O,
+    Z: () => v,
 }),
     t(388685);
 var r = t(54381),
@@ -32,17 +32,17 @@ function j(e) {
         }),
     });
 }
-function O(e) {
+function v(e) {
     let { guildId: n } = e,
         [o, s] = l.useState(""),
         j = (0, i.e7)([p.Z], () => p.Z.getGuild(n)),
-        O = (0, i.e7)([u.ZP], () => u.ZP.getChannels(n)),
-        v = (0, i.e7)([d.Z], () => d.Z.getCategories(n)),
-        y = (0, f.Fo)(n, v, O, o),
+        v = (0, i.e7)([u.ZP], () => u.ZP.getChannels(n)),
+        O = (0, i.e7)([d.Z], () => d.Z.getCategories(n)),
+        y = (0, f.Fo)(n, O, v, o),
         N = (0, i.e7)([h.Z], () => h.Z.canWithPartialContext(_.Plq.MANAGE_CHANNELS, { guildId: n })),
-        I = (0, i.e7)([c.ZP], () => null != c.ZP.getCurrentSidebarChannelId(x.oC.CHANNEL_BROWSER)),
-        w = l.useCallback(() => s(""), [s]),
-        Z = l.useCallback(() => {
+        w = (0, i.e7)([c.ZP], () => null != c.ZP.getCurrentSidebarChannelId(x.oC.CHANNEL_BROWSER)),
+        Z = l.useCallback(() => s(""), [s]),
+        I = l.useCallback(() => {
             (0, a.ZDy)(async () => {
                 let { default: e } = await Promise.all([t.e("29497"), t.e("53781")]).then(t.bind(t, 241865));
                 return (t) => {
@@ -112,13 +112,13 @@ function O(e) {
                                       m.default.track(_.rMx.SEARCH_STARTED, { search_type: "channel browser" }),
                                       s(e.toLowerCase());
                               },
-                              onClear: w,
+                              onClear: Z,
                               placeholder: C.intl.string(C.t.s5MnmC),
                           }),
                           N
                               ? (0, r.jsx)(a.Button, {
                                     icon: a.qJs,
-                                    onClick: Z,
+                                    onClick: I,
                                     text: C.intl.string(C.t.CumH4u),
                                 })
                               : null,
@@ -126,10 +126,10 @@ function O(e) {
                   }),
                   (0, r.jsx)(g.Z, {
                       className: b.browser,
-                      channels: O,
+                      channels: v,
                       categories: y,
                       guild: j,
-                      hasSidebar: I,
+                      hasSidebar: w,
                   }),
               ],
           });

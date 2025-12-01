@@ -1,7 +1,7 @@
 n.d(t, {
     Cf: () => v,
     Dq: () => y,
-    SR: () => m,
+    SR: () => h,
     ZP: () => O,
     vM: () => E,
 }),
@@ -28,7 +28,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function _(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -56,48 +56,48 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let m = (0, o.U)(() => ({
+let h = (0, o.U)(() => ({
     palette: {},
     fetching: {},
 }));
 function g(e) {
-    return null != m.getState().palette[e];
+    return null != h.getState().palette[e];
 }
 async function E(e) {
     g(e) || (await b(e));
 }
 async function b(e) {
-    if (!m.getState().fetching[e]) {
-        (0, s.j)(() => m.setState((t) => ({ fetching: h(_({}, t.fetching), { [e]: !0 }) })));
+    if (!h.getState().fetching[e]) {
+        (0, s.j)(() => h.setState((t) => ({ fetching: m(p({}, t.fetching), { [e]: !0 }) })));
         try {
             let t = await (0, d.OF)(e),
                 n = (0, u.WY)(t[0]);
             (0, s.j)(() => {
-                m.setState((r) => ({
-                    fetching: h(_({}, r.fetching), { [e]: !1 }),
-                    palette: h(_({}, r.palette), {
+                h.setState((r) => ({
+                    fetching: m(p({}, r.fetching), { [e]: !1 }),
+                    palette: m(p({}, r.palette), {
                         [e]: [...t.slice(0, 2), ...n],
                     }),
                 }));
             });
         } catch (t) {
-            (0, s.j)(() => m.setState((t) => ({ fetching: h(_({}, t.fetching), { [e]: !1 }) })));
+            (0, s.j)(() => h.setState((t) => ({ fetching: m(p({}, t.fetching), { [e]: !1 }) })));
         }
     }
 }
 function y(e) {
-    return !m((t) => null != e && t.fetching[e]);
+    return !h((t) => null != e && t.fetching[e]);
 }
 function O(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
@@ -106,7 +106,7 @@ function O(e, t) {
 }
 function v(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        i = m((t) => (null == e ? void 0 : t.palette[e])),
+        i = h((t) => (null == e ? void 0 : t.palette[e])),
         o = (0, l.e7)([c.Z], () => (n && c.Z.desaturateUserColors ? c.Z.saturation : 1));
     r.useEffect(() => {
         null != e && null == i && b(e);

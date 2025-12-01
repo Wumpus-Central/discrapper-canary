@@ -57,7 +57,7 @@ function d(e, t) {
             }
             constructor(...n) {
                 super(...n),
-                    s(this, "memoizedGetStateFromStores", _(t)),
+                    s(this, "memoizedGetStateFromStores", p(t)),
                     s(
                         this,
                         "listener",
@@ -72,13 +72,13 @@ function d(e, t) {
             }
         }
         s(f, "displayName", d);
-        let p = i.forwardRef((e, t) =>
+        let _ = i.forwardRef((e, t) =>
             (0, r.jsx)(f, {
                 childProps: e,
                 forwardedConnectStoresRef: t,
             }),
         );
-        return (p.displayName = "ForwardRef(".concat(d, ")")), p;
+        return (_.displayName = "ForwardRef(".concat(d, ")")), _;
     };
 }
 function f(e, t) {
@@ -98,7 +98,7 @@ function f(e, t) {
             }
             constructor(...n) {
                 super(...n),
-                    s(this, "memoizedGetStateFromStores", _(t)),
+                    s(this, "memoizedGetStateFromStores", p(t)),
                     s(
                         this,
                         "listener",
@@ -115,7 +115,7 @@ function f(e, t) {
         return s(f, "displayName", d), f;
     };
 }
-function _(e) {
+function p(e) {
     let t = null,
         n = null,
         r = (e) =>

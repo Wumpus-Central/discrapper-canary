@@ -9,7 +9,7 @@ var r = n(54381),
     u = n(761652),
     d = n(388032),
     f = n(585238);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,12 +33,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,12 +50,12 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -64,8 +64,8 @@ function m(e, t) {
 function g(e) {
     var t;
     let a,
-        _,
-        h,
+        p,
+        m,
         { className: g, activeCommand: E, activeOption: b, optionStates: y, channelId: O } = e,
         v = i.useCallback(
             (e) => {
@@ -77,7 +77,7 @@ function g(e) {
                     return (t) =>
                         (0, r.jsx)(
                             e,
-                            m(p({}, t), {
+                            h(_({}, t), {
                                 id: i,
                                 label: d.intl.string(d.t.oJ1Muw),
                             }),
@@ -86,7 +86,7 @@ function g(e) {
             },
             [null == E || null == (t = E.rootCommand) ? void 0 : t.id],
         ),
-        I = i.useCallback(() => {
+        S = i.useCallback(() => {
             c.Po({
                 channelId: O,
                 command: null,
@@ -97,9 +97,9 @@ function g(e) {
     if (null != b) {
         let e = y[b.name].lastValidationResult;
         (a = b.displayName),
-            (_ = b.displayDescription),
-            (h = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error);
-    } else (a = "".concat(u.GI).concat(E.displayName)), (_ = E.displayDescription), (h = null);
+            (p = b.displayDescription),
+            (m = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error);
+    } else (a = "".concat(u.GI).concat(E.displayName)), (p = E.displayDescription), (m = null);
     return (0, r.jsxs)("div", {
         className: o()(g, f.bar),
         onContextMenu: v,
@@ -111,20 +111,20 @@ function g(e) {
                         className: f.name,
                         children: a,
                     }),
-                    null != h
+                    null != m
                         ? (0, r.jsx)("span", {
                               className: f.error,
-                              children: h,
+                              children: m,
                           })
                         : (0, r.jsx)("span", {
                               className: f.description,
-                              children: _,
+                              children: p,
                           }),
                 ],
             }),
             (0, r.jsx)("div", {
                 className: f.actions,
-                children: (0, r.jsx)(l.B, { onClick: I }),
+                children: (0, r.jsx)(l.B, { onClick: S }),
             }),
         ],
     });

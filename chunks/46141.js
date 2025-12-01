@@ -1,22 +1,22 @@
 n.d(t, {
-    $z: () => R,
+    $z: () => P,
     D0: () => E,
     JC: () => A,
-    Om: () => S,
-    Sf: () => h,
+    Om: () => T,
+    Sf: () => m,
     U4: () => C,
     Vg: () => g,
-    Xc: () => T,
+    Xc: () => I,
     ZP: () => f,
-    dm: () => _,
-    fv: () => m,
+    dm: () => p,
+    fv: () => h,
     jc: () => b,
     kX: () => v,
     o_: () => O,
-    qo: () => p,
+    qo: () => _,
     sn: () => y,
     u_: () => N,
-    z: () => I,
+    z: () => S,
 }),
     n(997841),
     n(415506);
@@ -101,7 +101,7 @@ class f extends i.Z {
             };
         switch (e.type) {
             case s.HeQ.CARD:
-                return new _(
+                return new p(
                     d(c({}, r), {
                         brand: e.brand,
                         last4: e.last_4,
@@ -110,14 +110,14 @@ class f extends i.Z {
                     }),
                 );
             case s.HeQ.PAYPAL:
-                return new p(d(c({}, r), { email: e.email }));
+                return new _(d(c({}, r), { email: e.email }));
             case s.HeQ.VENMO:
-                return new T(d(c({}, r), { username: e.username }));
+                return new I(d(c({}, r), { username: e.username }));
             case s.HeQ.SEPA_DEBIT:
             case s.HeQ.SOFORT:
-                return new h(d(c({}, r), { email: e.email }));
+                return new m(d(c({}, r), { email: e.email }));
             case s.HeQ.GIROPAY:
-                return new m(c({}, r));
+                return new h(c({}, r));
             case s.HeQ.PRZELEWY24:
                 return new g(
                     d(c({}, r), {
@@ -134,9 +134,9 @@ class f extends i.Z {
             case s.HeQ.GRABPAY_MY:
                 return new v(c({}, r));
             case s.HeQ.MOMO_WALLET:
-                return new I(c({}, r));
-            case s.HeQ.KAKAOPAY:
                 return new S(c({}, r));
+            case s.HeQ.KAKAOPAY:
+                return new T(c({}, r));
             case s.HeQ.GOPAY_WALLET:
                 return new A(c({}, r));
             case s.HeQ.BANCONTACT:
@@ -153,14 +153,14 @@ class f extends i.Z {
         let t = e.type;
         switch (t) {
             case s.HeQ.CARD:
-                return new _(e);
-            case s.HeQ.PAYPAL:
                 return new p(e);
+            case s.HeQ.PAYPAL:
+                return new _(e);
             case s.HeQ.SOFORT:
             case s.HeQ.SEPA_DEBIT:
-                return new h(e);
-            case s.HeQ.GIROPAY:
                 return new m(e);
+            case s.HeQ.GIROPAY:
+                return new h(e);
             case s.HeQ.PRZELEWY24:
                 return new g(e);
             case s.HeQ.PAYSAFE_CARD:
@@ -170,11 +170,11 @@ class f extends i.Z {
             case s.HeQ.GRABPAY_MY:
                 return new v(e);
             case s.HeQ.MOMO_WALLET:
-                return new I(e);
-            case s.HeQ.VENMO:
-                return new T(e);
-            case s.HeQ.KAKAOPAY:
                 return new S(e);
+            case s.HeQ.VENMO:
+                return new I(e);
+            case s.HeQ.KAKAOPAY:
+                return new T(e);
             case s.HeQ.GOPAY_WALLET:
                 return new A(e);
             case s.HeQ.BANCONTACT:
@@ -228,7 +228,7 @@ class f extends i.Z {
             (this.country = null != (i = e.country) ? i : "");
     }
 }
-class _ extends f {
+class p extends f {
     constructor(e) {
         var t, n, r, i;
         if (
@@ -248,7 +248,7 @@ class _ extends f {
             (this.expiresYear = null != (i = e.expiresYear) ? i : 0);
     }
 }
-class p extends f {
+class _ extends f {
     constructor(e) {
         if ((super(e), l(this, "email", void 0), e.type !== s.HeQ.PAYPAL))
             throw Error(
@@ -257,7 +257,7 @@ class p extends f {
         this.email = e.email || "";
     }
 }
-class h extends f {
+class m extends f {
     constructor(e) {
         if ((super(e), l(this, "email", void 0), e.type !== s.HeQ.SOFORT && e.type !== s.HeQ.SEPA_DEBIT))
             throw Error(
@@ -268,7 +268,7 @@ class h extends f {
         this.email = e.email || "";
     }
 }
-class m extends f {
+class h extends f {
     constructor(e) {
         if ((super(e), e.type !== s.HeQ.GIROPAY))
             throw Error(
@@ -333,7 +333,7 @@ class v extends f {
             );
     }
 }
-class I extends f {
+class S extends f {
     constructor(e) {
         if ((super(e), e.type !== s.HeQ.MOMO_WALLET))
             throw Error(
@@ -343,7 +343,7 @@ class I extends f {
             );
     }
 }
-class T extends f {
+class I extends f {
     constructor(e) {
         if ((super(e), l(this, "username", void 0), e.type !== s.HeQ.VENMO))
             throw Error(
@@ -352,7 +352,7 @@ class T extends f {
         this.username = e.username || "";
     }
 }
-class S extends f {
+class T extends f {
     constructor(e) {
         if ((super(e), e.type !== s.HeQ.KAKAOPAY))
             throw Error(
@@ -389,7 +389,7 @@ class N extends f {
         this.username = e.username || "";
     }
 }
-class R extends f {
+class P extends f {
     constructor(e) {
         if (
             ((e.id = ""),

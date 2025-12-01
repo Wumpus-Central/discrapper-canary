@@ -1,9 +1,9 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(790519),
+    s = n(666917),
     l = n(481060),
     c = n(110924),
     u = n(372840);
@@ -36,8 +36,8 @@ function f(e) {
     }
     return e;
 }
-let _ = 8;
-function p() {
+let p = 8;
+function _() {
     let e = (0, l.dQu)(l.TVs.colors.BG_BACKDROP_NO_OPACITY).spring({ opacity: 0.25 }),
         t = (0, l.dQu)(l.TVs.colors.BG_BACKDROP).spring(),
         n = (0, l.dQu)(l.TVs.colors.BG_BACKDROP_IMMERSIVE).spring(),
@@ -51,18 +51,18 @@ function p() {
         [l.fCB.TOP_RADIAL]: t,
     };
 }
-let h = i.forwardRef(function (e, t) {
+let m = i.forwardRef(function (e, t) {
     let {
             backdropStyle: n = l.fCB.SUBTLE,
             backdropInstant: i = !1,
             zIndexBoost: a = 0,
             LayerComponent: d,
-            isVisible: h,
-            onClose: m,
+            isVisible: m,
+            onClose: h,
         } = e,
-        g = p()[n],
+        g = _()[n],
         E = (0, l.dQu)(l.TVs.colors.BG_BACKDROP_NO_OPACITY).spring({ opacity: 0 }),
-        b = n === l.fCB.BLUR ? _ : 0,
+        b = n === l.fCB.BLUR ? p : 0,
         y = {
             background: E,
             backdropFilter: "blur(0px)",
@@ -72,8 +72,8 @@ let h = i.forwardRef(function (e, t) {
             backdropFilter: "blur(".concat(b, "px)"),
         },
         v = (0, c.Z)(i),
-        I = (0, l.Yzy)(
-            h,
+        S = (0, l.Yzy)(
+            m,
             {
                 keys: (e) => (e ? "backdrop" : "empty"),
                 config: { duration: i || v ? 0 : 200 },
@@ -85,18 +85,18 @@ let h = i.forwardRef(function (e, t) {
         );
     if (null == d) {
         let e = { zIndex: 1000 + a };
-        return I((t, n) =>
+        return S((t, n) =>
             n
                 ? (0, r.jsx)(s.animated.div, {
                       className: u.backdrop,
                       style: f({}, t, e),
-                      onClick: m,
+                      onClick: h,
                   })
                 : null,
         );
     }
     return (0, r.jsx)(d, {
-        children: I((e, t) =>
+        children: S((e, t) =>
             t
                 ? (0, r.jsx)(s.animated.div, {
                       className: o()(u.backdrop, u.withLayer),
@@ -107,7 +107,7 @@ let h = i.forwardRef(function (e, t) {
                                         "radial-gradient(96.68% 96.68% at 50.04% 3.32%, rgba(0, 0, 0, 0.52) 0%, rgba(0, 0, 0, 0.00) 100%)",
                                 }
                               : e,
-                      onClick: m,
+                      onClick: h,
                   })
                 : null,
         ),

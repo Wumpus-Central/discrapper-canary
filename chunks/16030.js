@@ -61,18 +61,18 @@ let c = function (e) {
             u,
             d,
             { color: f } = n,
-            _ = s(n, ["color"]);
-        let p = "currentColor";
-        null != f && (p = "string" != typeof f && "css" in f ? f.css : f);
-        let h = null != (a = _.size) ? a : "md",
-            m = (0, i.m)(h),
+            p = s(n, ["color"]);
+        let _ = "currentColor";
+        null != f && (_ = "string" != typeof f && "css" in f ? f.css : f);
+        let m = null != (a = p.size) ? a : "md",
+            h = (0, i.m)(m),
             g = {
-                color: p,
-                width: null != (c = null != (l = null == m ? void 0 : m.width) ? l : _.width) ? c : 24,
-                height: null != (d = null != (u = null == m ? void 0 : m.height) ? u : _.height) ? d : 24,
-                foreground: _.colorClass,
+                color: _,
+                width: null != (c = null != (l = null == h ? void 0 : h.width) ? l : p.width) ? c : 24,
+                height: null != (d = null != (u = null == h ? void 0 : h.height) ? u : p.height) ? d : 24,
+                foreground: p.colorClass,
             };
-        for (let [e, n] of Object.entries(t)) null != _[e] && (g[n] = _[e]);
-        return (0, r.jsx)(e, o({}, _, g));
+        for (let [e, n] of Object.entries(t)) null != p[e] && (g[n] = p[e]);
+        return (0, r.jsx)(e, o({}, p, g));
     };
 };

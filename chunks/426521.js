@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(906732),
     u = n(812206),
     d = n(336197),
-    p = n(454585),
+    f = n(454585),
     h = n(833062),
-    f = n(892001),
+    p = n(892001),
     g = n(695346),
     m = n(598077),
     b = n(594174),
@@ -19,8 +19,8 @@ var r = n(54381),
     O = n(591759),
     v = n(833592),
     j = n(497089),
-    C = n(178480),
-    x = n(418316),
+    x = n(178480),
+    C = n(418316),
     E = n(382865),
     S = n(526146),
     I = n(400565),
@@ -40,7 +40,7 @@ function D(e) {
             null != (a = b.default.getUser(null == (i = c.message) || null == (n = i.author) ? void 0 : n.id))
                 ? a
                 : new m.Z(null == (l = c.message) ? void 0 : l.author),
-        h = p.Z.parse(u);
+        h = f.Z.parse(u);
     return (0, r.jsxs)("div", {
         className: T.messagePreviewContainer,
         children: [
@@ -62,7 +62,7 @@ function L(e) {
         item: { callout: t },
     } = e;
     if (null == t) return null;
-    let n = p.Z.parse(t);
+    let n = f.Z.parse(t);
     return (0, r.jsx)("div", {
         className: T.calloutContainer,
         children: (0, r.jsx)(o.Text, {
@@ -150,7 +150,7 @@ let G = i.memo(function (e) {
                         let t = r.match("^/users/(\\d+)");
                         if (null != t && 2 === t.length) {
                             var e;
-                            (0, f.openUserProfileModal)({
+                            (0, p.openUserProfileModal)({
                                 userId: t[1],
                                 messageId: null == (e = l.message) ? void 0 : e.id,
                                 sourceAnalyticsLocations: u,
@@ -175,7 +175,7 @@ let G = i.memo(function (e) {
                   applicationId: l.applicationId,
               }));
         let b = null != l.local_id,
-            E = (0, x.Z)({
+            E = (0, C.Z)({
                 item: l,
                 renderApplication: (e) => (0, r.jsx)(k, { applicationId: e }),
             }),
@@ -206,7 +206,7 @@ let G = i.memo(function (e) {
                                 (0, r.jsxs)(o.Text, {
                                     variant: "text-md/normal",
                                     color: h ? "text-muted" : "text-default",
-                                    children: ["string" != typeof E ? E : p.Z.parse(E), R],
+                                    children: ["string" != typeof E ? E : f.Z.parse(E), R],
                                 }),
                                 (null == (t = l.message) ? void 0 : t.content) != null
                                     ? (0, r.jsx)(D, { item: l })
@@ -215,7 +215,7 @@ let G = i.memo(function (e) {
                                 (0, r.jsx)(o.Text, {
                                     variant: "text-xs/medium",
                                     color: h ? "text-muted" : "header-secondary",
-                                    children: (0, C.a3)(y.default.extractTimestamp(l.id)),
+                                    children: (0, x.a3)(y.default.extractTimestamp(l.id)),
                                 }),
                                 m,
                             ],

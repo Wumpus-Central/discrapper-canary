@@ -15,7 +15,7 @@ function l(e) {
         currentPronouns: d,
         disabled: f = !1,
     } = e;
-    function _(e) {
+    function p(e) {
         l(e === d ? void 0 : e);
     }
     return (0, r.jsx)(a.Z, {
@@ -26,7 +26,7 @@ function l(e) {
             placeholder: null != u ? u : o.intl.string(o.t.NPEUUu),
             maxLength: s,
             value: null != c ? c : d,
-            onChange: _,
+            onChange: p,
             disabled: f,
         }),
     });

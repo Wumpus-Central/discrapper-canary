@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685), n(781311);
+n.d(t, { Z: () => g }), n(388685), n(781311);
 var a = n(54381),
     l = n(473749),
     i = n(399606),
@@ -12,7 +12,7 @@ var a = n(54381),
     p = n(832149),
     h = n(215023),
     x = n(277790);
-let g = (e) => {
+let f = (e) => {
         let [t, n] = l.useState(0);
         return (
             l.useLayoutEffect(() => {
@@ -57,30 +57,30 @@ let g = (e) => {
             )
         );
     },
-    f = () => {
+    g = () => {
         let e = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
             t = (0, i.e7)([c.Z], () => c.Z.categories),
             n = (0, i.e7)([d.Z], () => d.Z.purchases),
             m = (0, i.e7)([c.Z], () => c.Z.lastSuccessfulFetch),
-            f = t.size > 0 && n.size > 0 && null != m,
+            g = t.size > 0 && n.size > 0 && null != m,
             { isFetching: b, categories: v } = (0, u.ZP)({
                 logPerf: !1,
                 stalePurchasesOK: !0,
-                noOp: f,
+                noOp: g,
             }),
-            j = f ? t : v,
-            _ = f || (!b && j.size > 0),
+            j = g ? t : v,
+            _ = g || (!b && j.size > 0),
             [y, C] = l.useState(""),
             [S, E] = l.useState(null),
-            [N, T] = l.useState(null);
+            [T, N] = l.useState(null);
         return (l.useEffect(() => {
             if ("" === y.trim() || !_) {
-                E(null), T(null);
+                E(null), N(null);
                 return;
             }
             let e = c.Z.getProduct(y),
                 t = c.Z.getCategoryForProduct(y);
-            null != e && null != t ? (E(e), T(t)) : (E(null), T(null));
+            null != e && null != t ? (E(e), N(t)) : (E(null), N(null));
         }, [y, _]),
         b)
             ? (0, a.jsx)(r.Text, {
@@ -147,14 +147,14 @@ let g = (e) => {
                                     variant: "heading-lg/semibold",
                                     children: "Product Preview",
                                 }),
-                                null != S && null != N
+                                null != S && null != T
                                     ? (0, a.jsxs)("div", {
                                           className: x.previewContainer,
                                           children: [
-                                              (0, a.jsx)(g, {
+                                              (0, a.jsx)(f, {
                                                   product: S,
                                                   user: e,
-                                                  category: N,
+                                                  category: T,
                                                   tab: h.AW.HOME,
                                               }),
                                               (0, a.jsx)(r.Button, {

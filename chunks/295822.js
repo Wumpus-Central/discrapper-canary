@@ -16,7 +16,7 @@ function d() {
         f = (t) => {
             (0, s.Jr)(e, t);
         },
-        _ = [
+        p = [
             {
                 value: i.Q4.BLUR,
                 label: u.intl.string(u.t.S49Uad),
@@ -33,13 +33,13 @@ function d() {
                 title: u.intl.string(u.t["+uI23H"]),
                 value: n,
                 onChange: (e) => f({ goreContentFriendDm: e }),
-                options: _,
+                options: p,
             }),
             (0, r.jsx)(o.Z, {
                 title: u.intl.string(u.t["Yh+HX1"]),
                 value: d,
                 onChange: (e) => f({ goreContentNonFriendDm: e }),
-                options: _,
+                options: p,
             }),
         ],
     });

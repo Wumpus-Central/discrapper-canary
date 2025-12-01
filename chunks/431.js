@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(388685), n(825670);
+n.d(t, { Z: () => D }), n(388685), n(825670);
 var r,
     i = n(442837),
     a = n(570140),
@@ -9,7 +9,7 @@ var r,
     u = n(74538),
     d = n(78839),
     f = n(474936);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,12 +33,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,12 +50,12 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -92,15 +92,15 @@ function v(e) {
         (b.isFetching = !1),
         (b.lastFetchSuccessful = !0);
 }
-function I() {
+function S() {
     A(), (b.userOffersLastFetchedAtDate = Date.now()), (b.isFetching = !1), (b.lastFetchSuccessful = !1);
 }
-function T(e) {
+function I(e) {
     let { userTrialOffer: t } = e;
     null != t ? (b.userTrialOffers[t.trial_id] = t) : (b.userTrialOffers = {}),
         (b.userOffersLastFetchedAtDate = Date.now());
 }
-function S(e) {
+function T(e) {
     let { userTrialOffer: t, userDiscount: n, userDiscountOffer: r } = e;
     null != t ? (b.userTrialOffers[t.trial_id] = t) : (b.userTrialOffers = {}),
         null != n
@@ -129,11 +129,11 @@ function N() {
         !0)
     );
 }
-function R() {
+function P() {
     let e = l.default.getCurrentUser();
     !(0, u.I5)(e) && Object.keys(b.userDiscountOffers).length > 0 && (0, s.Tf)("UserOfferStore", !0);
 }
-function P() {
+function R() {
     var e;
     let t = null == (e = l.default.getCurrentUser()) ? void 0 : e.id;
     if (null == t) return !1;
@@ -144,13 +144,13 @@ function P() {
     }
     return !1;
 }
-class D extends (r = i.ZP.PersistedStore) {
+class w extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         (b = null != e ? e : E),
             this.waitFor(c.Z, o.Z, d.Z, l.default),
             this.syncWith([l.default], C),
             this.syncWith([d.Z], N),
-            this.syncWith([o.Z], P);
+            this.syncWith([o.Z], R);
     }
     getUserTrialOffer(e) {
         if (null !== e) return b.userTrialOffers[e];
@@ -252,12 +252,12 @@ class D extends (r = i.ZP.PersistedStore) {
         return b.lastFetchSuccessful;
     }
 }
-_(D, "displayName", "UserOfferStore"),
-    _(D, "persistKey", "UserOfferStore"),
-    _(D, "migrations", [
+p(w, "displayName", "UserOfferStore"),
+    p(w, "persistKey", "UserOfferStore"),
+    p(w, "migrations", [
         (e) => {
             let t = null == e ? void 0 : e.userDiscounts;
-            if (null != t) return m(p({}, e), { userDiscountOffers: t });
+            if (null != t) return h(_({}, e), { userDiscountOffers: t });
         },
         (e) => {
             if (null != e)
@@ -266,18 +266,18 @@ _(D, "displayName", "UserOfferStore"),
                 );
         },
         (e) => {
-            if (null != e) return (null == e ? void 0 : e.isFetching) == null ? m(p({}, e), { isFetching: !1 }) : e;
+            if (null != e) return (null == e ? void 0 : e.isFetching) == null ? h(_({}, e), { isFetching: !1 }) : e;
         },
     ]);
-let w = new D(a.Z, {
+let D = new w(a.Z, {
     BILLING_USER_OFFER_FETCH_START: y,
     BILLING_USER_TRIAL_OFFER_FETCH_SUCCESS: O,
-    BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS: T,
+    BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS: I,
     BILLING_USER_OFFER_FETCH_SUCCESS: v,
-    BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS: S,
-    BILLING_USER_OFFER_FETCH_FAIL: I,
-    BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: R,
-    BILLING_PAYMENT_SOURCE_UPDATE_SUCCESS: R,
-    BILLING_PAYMENT_SOURCE_REMOVE_SUCCESS: R,
+    BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS: T,
+    BILLING_USER_OFFER_FETCH_FAIL: S,
+    BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: P,
+    BILLING_PAYMENT_SOURCE_UPDATE_SUCCESS: P,
+    BILLING_PAYMENT_SOURCE_REMOVE_SUCCESS: P,
     LOGOUT: A,
 });

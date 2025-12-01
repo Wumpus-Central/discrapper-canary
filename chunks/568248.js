@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(499376),
     d = n(128854),
     f = n(524444),
-    _ = n(411405),
-    p = n(295435),
-    h = n(217702),
-    m = n(156259);
+    p = n(411405),
+    _ = n(295435),
+    m = n(217702),
+    h = n(156259);
 let g = 85;
 function E(e) {
     let { media: t, spoiler: n, description: a } = e,
@@ -20,11 +20,11 @@ function E(e) {
         b = (0, s.yE)(t.flags, c.hR.IS_ANIMATED),
         { gifAutoPlay: y } = (0, d.c)(),
         [O, v] = i.useState(n),
-        I = (e) => {
+        S = (e) => {
             var n, i;
             return "IMAGE" !== E
-                ? (0, r.jsx)(p.S, {
-                      className: m.imgContainer,
+                ? (0, r.jsx)(_.S, {
+                      className: h.imgContainer,
                       media: t,
                       placeholderWidth: g,
                       placeholderHeight: g,
@@ -33,8 +33,8 @@ function E(e) {
                       hiddenSpoilers: e,
                   })
                 : (0, r.jsx)(f.Yi, {
-                      containerClassName: o()(m.imgContainer, { [m.hiddenSpoiler]: e }),
-                      imageClassName: m.img,
+                      containerClassName: o()(h.imgContainer, { [h.hiddenSpoiler]: e }),
+                      imageClassName: h.img,
                       src: t.proxyUrl,
                       alt: a,
                       original: t.url,
@@ -48,18 +48,18 @@ function E(e) {
                       minWidth: g,
                       minHeight: g,
                       autoPlay: y && !e,
-                      mediaLayoutType: h.hV.MOSAIC,
+                      mediaLayoutType: m.hV.MOSAIC,
                       reducedSizeAltTextButton: !0,
                       srcIsAnimated: b,
                   });
         };
     return n
-        ? (0, r.jsx)(_.ZP, {
-              type: _.ZP.Types.ATTACHMENT,
+        ? (0, r.jsx)(p.ZP, {
+              type: p.ZP.Types.ATTACHMENT,
               reason: l.wk.SPOILER,
               obscured: O,
               onToggleObscurity: () => v((e) => !e),
-              children: (e) => I(e),
+              children: (e) => S(e),
           })
-        : I(!1);
+        : S(!1);
 }

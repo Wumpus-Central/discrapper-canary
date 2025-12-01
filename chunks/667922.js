@@ -12,25 +12,25 @@ var r = n(54381),
     g = n(695346),
     b = n(496675),
     p = n(768581),
-    y = n(585483),
-    O = n(176354),
-    h = n(981631),
-    m = n(185923),
+    m = n(585483),
+    y = n(176354),
+    O = n(981631),
+    h = n(185923),
     v = n(388032),
     j = n(576311);
 function S(e, t) {
     let { reducedMotion: n } = i.useContext(s.Sfi),
         l = (0, f.$R)(t),
-        a = (0, o.e7)([b.Z], () => (t.isPrivate() || b.Z.can(h.Plq.ADD_REACTIONS, t)) && l, [t, l]),
+        a = (0, o.e7)([b.Z], () => (t.isPrivate() || b.Z.can(O.Plq.ADD_REACTIONS, t)) && l, [t, l]),
         p = (0, c.MZ)(t.getGuildId());
     if (!g.nc.getSetting() || !a) return null;
     let j = p
         .filter(
             (e) =>
-                !O.ZP.isEmojiFilteredOrLocked({
+                !y.ZP.isEmojiFilteredOrLocked({
                     emoji: e,
                     channel: t,
-                    intention: m.Hz.REACTION,
+                    intention: h.Hz.REACTION,
                 }),
         )
         .slice(0, 12)
@@ -103,7 +103,7 @@ function S(e, t) {
         id: "add-reaction",
         label: v.intl.string(v.t.lfIHs4),
         action: () => {
-            y.S.dispatchKeyed(h.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
+            m.S.dispatchKeyed(O.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
         },
         color: "default",
         children: (0, r.jsxs)(r.Fragment, {
@@ -116,7 +116,7 @@ function S(e, t) {
                     label: v.intl.string(v.t["OBCR+p"]),
                     icon: s.EO4,
                     action: () => {
-                        y.S.dispatchKeyed(h.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
+                        m.S.dispatchKeyed(O.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
                     },
                 }),
             ],
@@ -135,7 +135,7 @@ function E(e) {
                       animated: n.animated && (!i || o),
                       size: 18,
                   })
-                : O.ZP.getURL(null != (t = n.optionallyDiverseSequence) ? t : ""),
+                : y.ZP.getURL(null != (t = n.optionallyDiverseSequence) ? t : ""),
         alt: "",
     });
 }

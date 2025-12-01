@@ -13,8 +13,8 @@ var i = n(442837),
     u = n(131951),
     d = n(358085),
     f = n(726985),
-    _ = n(388032);
-function p(e, t, n) {
+    p = n(388032);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,12 +38,12 @@ function h(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -60,7 +60,7 @@ function g(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -73,17 +73,17 @@ function E(e) {
               return (n) =>
                   (0, r.jsx)(
                       t,
-                      g(h({}, n), {
+                      g(m({}, n), {
                           onConfirm: () => {
                               s.Z.setUseSystemScreensharePicker(e), l.Z.app.relaunch();
                           },
                           confirmButtonColor: a.zx.Colors.BRAND,
-                          header: _.intl.string(_.t["9jf31O"]),
-                          cancelText: _.intl.string(_.t["ETE/oC"]),
-                          confirmText: _.intl.string(_.t.BddRzS),
+                          header: p.intl.string(p.t["9jf31O"]),
+                          cancelText: p.intl.string(p.t["ETE/oC"]),
+                          confirmText: p.intl.string(p.t.BddRzS),
                           children: (0, r.jsx)(o.Text, {
                               variant: "text-md/normal",
-                              children: _.intl.string(_.t.uBd6JW),
+                              children: p.intl.string(p.t.uBd6JW),
                           }),
                       }),
                   );
@@ -110,8 +110,8 @@ function b() {
             (0, r.jsx)(c.F, {
                 setting: f.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE_VIDEO_HOOK,
                 children: (0, r.jsx)(o.rsf, {
-                    label: _.intl.string(_.t.GmWk2E),
-                    description: _.intl.string(_.t["Fj/xn1"]),
+                    label: p.intl.string(p.t.GmWk2E),
+                    description: p.intl.string(p.t["Fj/xn1"]),
                     checked: e,
                     onChange: (e) => s.Z.setVideoHook(e),
                 }),
@@ -121,7 +121,7 @@ function b() {
                 (0, r.jsx)(c.F, {
                     setting: f.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE_EXPERIMENTAL_SOUNDSHARE,
                     children: (0, r.jsx)(o.rsf, {
-                        label: _.intl.string(_.t["4I0qzZ"]),
+                        label: p.intl.string(p.t["4I0qzZ"]),
                         checked: t,
                         onChange: (e) => s.Z.setExperimentalSoundshare(e),
                     }),
@@ -129,7 +129,7 @@ function b() {
             (0, r.jsx)(c.F, {
                 setting: f.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE_SYSTEM_PICKER,
                 children: (0, r.jsx)(o.rsf, {
-                    label: _.intl.string(_.t.ie1mgY),
+                    label: p.intl.string(p.t.ie1mgY),
                     checked: l,
                     onChange: E,
                 }),

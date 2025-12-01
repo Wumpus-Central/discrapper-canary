@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(54381);
 n(473749);
 var i = n(442837),
@@ -22,7 +22,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +38,7 @@ function _(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,23 +50,23 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function m(e) {
+function h(e) {
     let {
             user: t,
             guildId: f,
-            channelId: p,
-            onBlock: m,
+            channelId: _,
+            onBlock: h,
             onIgnore: g,
             onUnblock: E,
             location: b = "ContextMenu",
@@ -77,19 +77,19 @@ function m(e) {
             var e;
             return (null == (e = c.default.getCurrentUser()) ? void 0 : e.id) === O;
         }, [O]),
-        I = (0, i.e7)([l.Z], () => l.Z.isBlocked(O), [O]),
-        T = I ? "default" : "danger";
+        S = (0, i.e7)([l.Z], () => l.Z.isBlocked(O), [O]),
+        I = S ? "default" : "danger";
     return v
         ? null
         : (0, r.jsx)(a.sNh, {
               id: "block",
-              color: null != T ? T : "default",
-              label: I ? d.intl.string(d.t.XyHpKH) : d.intl.string(d.t.l4Emac),
-              action: I
+              color: null != I ? I : "default",
+              label: S ? d.intl.string(d.t.XyHpKH) : d.intl.string(d.t.l4Emac),
+              action: S
                   ? () => {
                         null == E || E(),
                             o.Z.unblockUser(O, { location: b }),
-                            s.Z.showUnblockSuccessToast(O, null != p ? p : void 0);
+                            s.Z.showUnblockSuccessToast(O, null != _ ? _ : void 0);
                     }
                   : () => {
                         (0, a.ZDy)(
@@ -100,11 +100,11 @@ function m(e) {
                                 return (n) =>
                                     (0, r.jsx)(
                                         e,
-                                        h(_({}, n), {
+                                        m(p({}, n), {
                                             user: t,
                                             guildId: f,
-                                            channelId: p,
-                                            onBlock: m,
+                                            channelId: _,
+                                            onBlock: h,
                                             onIgnore: g,
                                             location: b,
                                         }),

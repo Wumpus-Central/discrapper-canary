@@ -1,1 +1,1 @@
-s.exports = { browser: "browser__9a792" };
+e.exports = { browser: "browser__9a792" };

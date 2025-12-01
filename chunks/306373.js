@@ -12,19 +12,19 @@ function f(e, t) {
     let {
             name: n,
             form: f,
-            isReadOnly: _,
-            isRequired: p,
-            isDisabled: h,
-            orientation: m = "vertical",
+            isReadOnly: p,
+            isRequired: _,
+            isDisabled: m,
+            orientation: h = "vertical",
             validationBehavior: g = "aria",
         } = e,
         { direction: E } = (0, d.j)(),
         { isInvalid: b, validationErrors: y, validationDetails: O } = t.displayValidation,
         {
             labelProps: v,
-            fieldProps: I,
-            descriptionProps: T,
-            errorMessageProps: S,
+            fieldProps: S,
+            descriptionProps: I,
+            errorMessageProps: T,
         } = (0, c.U)({
             ...e,
             labelElementType: "span",
@@ -44,10 +44,10 @@ function f(e, t) {
             let n, r;
             switch (e.key) {
                 case "ArrowRight":
-                    n = "rtl" === E && "vertical" !== m ? "prev" : "next";
+                    n = "rtl" === E && "vertical" !== h ? "prev" : "next";
                     break;
                 case "ArrowLeft":
-                    n = "rtl" === E && "vertical" !== m ? "next" : "prev";
+                    n = "rtl" === E && "vertical" !== h ? "next" : "prev";
                     break;
                 case "ArrowDown":
                     n = "next";
@@ -68,13 +68,13 @@ function f(e, t) {
                 : (r = i.previousNode()) || ((i.currentNode = e.currentTarget), (r = i.lastChild())),
                 r && (r.focus(), t.setSelectedValue(r.value));
         },
-        R = (0, o.Me)(n);
+        P = (0, o.Me)(n);
     return (
         r.H.set(t, {
-            name: R,
+            name: P,
             form: f,
-            descriptionId: T.id,
-            errorMessageId: S.id,
+            descriptionId: I.id,
+            errorMessageId: T.id,
             validationBehavior: g,
         }),
         {
@@ -83,16 +83,16 @@ function f(e, t) {
                 onKeyDown: N,
                 "aria-invalid": t.isInvalid || void 0,
                 "aria-errormessage": e["aria-errormessage"],
-                "aria-readonly": _ || void 0,
-                "aria-required": p || void 0,
-                "aria-disabled": h || void 0,
-                "aria-orientation": m,
-                ...I,
+                "aria-readonly": p || void 0,
+                "aria-required": _ || void 0,
+                "aria-disabled": m || void 0,
+                "aria-orientation": h,
+                ...S,
                 ...C,
             }),
             labelProps: v,
-            descriptionProps: T,
-            errorMessageProps: S,
+            descriptionProps: I,
+            errorMessageProps: T,
             isInvalid: b,
             validationErrors: y,
             validationDetails: O,

@@ -1,6 +1,6 @@
 n.d(t, { b: () => c }), n(388685);
 var r = n(473749),
-    i = n(790519),
+    i = n(666917),
     a = n(793030),
     o = n(481060);
 function s(e, t, n) {
@@ -41,6 +41,6 @@ function c(e, t) {
         ("respect-motion-settings" !== n || c) &&
         (u = "function" == typeof t ? (e, n) => l({}, t(e, n), a.FWm) : t.map((e) => l({}, e, a.FWm)));
     let d = "function" == typeof u,
-        [f, _, p] = (0, i.useSprings)(e, u, s);
-    return d || 4 == arguments.length ? [f, _, p] : f;
+        [f, p, _] = (0, i.useSprings)(e, u, s);
+    return d || 4 == arguments.length ? [f, p, _] : f;
 }

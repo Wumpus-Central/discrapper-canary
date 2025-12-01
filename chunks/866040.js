@@ -4,7 +4,7 @@ var r = n(54381),
     a = n(481060),
     o = n(239091),
     s = n(751688),
-    l = n(456077),
+    l = n(670188),
     c = n(210887),
     u = n(5192),
     d = n(263884);
@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function _(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,18 +49,18 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function m(e) {
+function h(e) {
     let { participants: t, channel: i } = e;
     return (0, r.jsx)(a.Ttm, {
         className: d.popout,
@@ -77,7 +77,7 @@ function m(e) {
                             let { default: t } = await Promise.all([n.e("79695"), n.e("69220"), n.e("77635")]).then(
                                 n.bind(n, 881351),
                             );
-                            return (n) => (0, r.jsx)(t, h(_({}, n), { user: e }));
+                            return (n) => (0, r.jsx)(t, m(p({}, n), { user: e }));
                         });
                     },
                 },
@@ -108,7 +108,7 @@ function g(e) {
                   targetElementRef: u,
                   renderPopout: () => {
                       if (null != n)
-                          return (0, r.jsx)(m, {
+                          return (0, r.jsx)(h, {
                               participants: n,
                               channel: o,
                           });

@@ -9,28 +9,28 @@ var r = n(54381),
     u = n(906732),
     d = n(955415),
     f = n(598077),
-    _ = n(314897),
-    p = n(592125),
-    h = n(699516),
-    m = n(51144),
+    p = n(314897),
+    _ = n(592125),
+    m = n(699516),
+    h = n(51144),
     g = n(981631),
     E = n(388032),
     b = n(105341);
 function y(e) {
     var t;
     let { invite: n, message: y, getAcceptInviteContext: O } = e,
-        v = (0, o.e7)([_.default], () => _.default.getId()),
-        I = (null == (t = n.inviter) ? void 0 : t.id) === v,
-        T = n.state === g.r2o.ACCEPTING,
-        { analyticsLocations: S } = (0, u.ZP)(c.Z.INVITE_EMBED),
-        A = (0, o.e7)([h.Z], () => {
+        v = (0, o.e7)([p.default], () => p.default.getId()),
+        S = (null == (t = n.inviter) ? void 0 : t.id) === v,
+        I = n.state === g.r2o.ACCEPTING,
+        { analyticsLocations: T } = (0, u.ZP)(c.Z.INVITE_EMBED),
+        A = (0, o.e7)([m.Z], () => {
             var e;
-            return null != n.inviter && h.Z.isFriend(null == (e = n.inviter) ? void 0 : e.id);
+            return null != n.inviter && m.Z.isFriend(null == (e = n.inviter) ? void 0 : e.id);
         }),
         C = i.useCallback(() => {
             let e = "noop";
             null != n.inviter &&
-                null != p.Z.getDMFromUserId(n.inviter.id) &&
+                null != _.Z.getDMFromUserId(n.inviter.id) &&
                 ((e = "transition"), s.Z.openPrivateChannel({ recipientIds: [n.inviter.id] })),
                 (0, l.r$)(
                     {
@@ -39,9 +39,9 @@ function y(e) {
                         inviter_id: y.author.id,
                         invite_message_id: y.id,
                     },
-                    S,
+                    T,
                 );
-        }, [n, y, S]),
+        }, [n, y, T]),
         N = i.useCallback(() => {
             (0, l.r$)(
                 {
@@ -50,27 +50,27 @@ function y(e) {
                     inviter_id: y.author.id,
                     invite_message_id: y.id,
                 },
-                S,
+                T,
             );
             let e = O("Invite Button Embed");
             l.ZP.acceptInviteAndTransitionToInviteChannel({
                 inviteKey: n.code,
                 context: e,
             });
-        }, [n, y, S, O]);
+        }, [n, y, T, O]);
     if (null == n.inviter) return null;
-    let R = A ? C : N,
-        P = E.intl.string(E.t.ib7Ng1),
-        D = "active";
+    let P = A ? C : N,
+        R = E.intl.string(E.t.ib7Ng1),
+        w = "active";
     A
-        ? ((P = E.intl.string(E.t.xhxnPn)), (D = "secondary"))
-        : I && ((P = E.intl.string(E.t.ib7Ng1)), (D = "secondary"));
-    let w = I ? E.intl.string(E.t.eQyu1F) : E.intl.string(E.t.PYJHW6),
-        L = null != n.inviter ? "".concat(n.inviter.username) : "",
-        x = null != n.inviter ? m.ZP.getUserTag(n.inviter) : "";
+        ? ((R = E.intl.string(E.t.xhxnPn)), (w = "secondary"))
+        : S && ((R = E.intl.string(E.t.ib7Ng1)), (w = "secondary"));
+    let D = S ? E.intl.string(E.t.eQyu1F) : E.intl.string(E.t.PYJHW6),
+        x = null != n.inviter ? "".concat(n.inviter.username) : "",
+        L = null != n.inviter ? h.ZP.getUserTag(n.inviter) : "";
     return (0, r.jsxs)(d.Z, {
         children: [
-            (0, r.jsx)(d.Z.Header, { text: w }),
+            (0, r.jsx)(d.Z.Header, { text: D }),
             (0, r.jsxs)(d.Z.Body, {
                 children: [
                     (0, r.jsxs)("div", {
@@ -78,21 +78,21 @@ function y(e) {
                         children: [
                             (0, r.jsx)(d.Z.Icon, {
                                 user: new f.Z(n.inviter),
-                                onClick: A ? R : void 0,
+                                onClick: A ? P : void 0,
                             }),
                             (0, r.jsx)(d.Z.Info, {
-                                title: L,
-                                onClick: A ? R : void 0,
-                                children: x,
+                                title: x,
+                                onClick: A ? P : void 0,
+                                children: L,
                             }),
                         ],
                     }),
                     (0, r.jsx)(a.zxk, {
-                        onClick: R,
-                        text: P,
-                        loading: T,
-                        disabled: I,
-                        variant: D,
+                        onClick: P,
+                        text: R,
+                        loading: I,
+                        disabled: S,
+                        variant: w,
                     }),
                 ],
             }),

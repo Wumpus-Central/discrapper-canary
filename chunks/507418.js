@@ -10,7 +10,7 @@ var i = n(512722),
     u = n(592125),
     d = n(594174),
     f = n(368859);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,12 +34,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -51,12 +51,12 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -79,18 +79,18 @@ function g(e, t) {
             });
     }
     if (null != t.interaction && "SENDING" === t.state) return (0, r.jsx)(r.Fragment, {});
-    let _ = null != t.webhookId ? t.author : d.default.getUser(t.author.id);
-    a()(null != _, "renderUserGuildPopout: user should never be null");
-    let h = d.default.getCurrentUser();
-    a()(null != h, "renderUserGuildPopout: currentUser should never be null");
+    let p = null != t.webhookId ? t.author : d.default.getUser(t.author.id);
+    a()(null != p, "renderUserGuildPopout: user should never be null");
+    let m = d.default.getCurrentUser();
+    a()(null != m, "renderUserGuildPopout: currentUser should never be null");
     let g = u.Z.getChannel(t.channel_id);
     return (
         a()(null != g, "renderUserGuildPopout: channel should never be null"),
         (0, r.jsx)(
             c.Z,
-            m(p({}, e), {
-                user: _,
-                currentUser: h,
+            h(_({}, e), {
+                user: p,
+                currentUser: m,
                 guildId: g.guild_id,
                 channelId: t.channel_id,
                 messageId: t.id,

@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(790519),
+    s = n(666917),
     l = n(481060),
     c = n(51636),
     u = n(329352);
@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,23 +48,23 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let h = 910,
-    m = 1400,
+let m = 910,
+    h = 1400,
     g = (e) => {
         let { cards: t, className: n, cardType: a } = e,
-            d = () => (window.innerWidth < h ? 1 : window.innerWidth < m ? 2 : 3),
-            [_, g] = i.useState(0),
+            d = () => (window.innerWidth < m ? 1 : window.innerWidth < h ? 2 : 3),
+            [p, g] = i.useState(0),
             [E, b] = i.useState(d()),
             y = t.length;
         i.useEffect(() => {
@@ -81,19 +81,19 @@ let h = 910,
             i.useEffect(() => {
                 g((e) => (y > E && e > y - E ? y - E : y <= E ? 0 : e));
             }, [y, E]);
-        let O = _ > 0,
+        let O = p > 0,
             v = () => {
                 g((e) => (0 === e ? y - E : e - 1));
             },
-            I = () => {
+            S = () => {
                 g((e) => (e >= y - E ? 0 : e + 1));
             },
-            T = i.useCallback((e) => ({ x: (e - _) * 100 }), [_]),
-            [S, A] = (0, l.bYB)(t.length, T);
+            I = i.useCallback((e) => ({ x: (e - p) * 100 }), [p]),
+            [T, A] = (0, l.bYB)(t.length, I);
         return (
             i.useEffect(() => {
-                A(T);
-            }, [A, T]),
+                A(I);
+            }, [A, I]),
             (0, r.jsx)("div", {
                 className: n,
                 children: (0, r.jsxs)("div", {
@@ -113,7 +113,7 @@ let h = 910,
                             }),
                         (0, r.jsx)("div", {
                             className: u.cardInnerContainer,
-                            children: S.map((e, n) => {
+                            children: T.map((e, n) => {
                                 let { x: i } = e;
                                 return (0, r.jsx)(
                                     s.animated.div,
@@ -125,7 +125,7 @@ let h = 910,
                                         },
                                         children: (0, r.jsx)(
                                             c.Z,
-                                            p(f({}, t[n]), { cardType: a }),
+                                            _(f({}, t[n]), { cardType: a }),
                                             "".concat(t[n].name, "_").concat(n, "_perks_card"),
                                         ),
                                     },
@@ -135,7 +135,7 @@ let h = 910,
                         }),
                         y > E &&
                             (0, r.jsx)(l.P3F, {
-                                onClick: I,
+                                onClick: S,
                                 className: u.rightArrow,
                                 children: (0, r.jsx)(l.ZSh, {
                                     className: u.arrowIcon,
@@ -149,7 +149,7 @@ let h = 910,
                                     if (!(t > y - E))
                                         return (0, r.jsx)(
                                             "div",
-                                            { className: t === _ ? u.selectedDot : u.dot },
+                                            { className: t === p ? u.selectedDot : u.dot },
                                             "progress_bar_dot_".concat(t),
                                         );
                                 }),

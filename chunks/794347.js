@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => g,
-    _: () => p,
+    _: () => _,
 });
 var r = n(54381),
     i = n(473749),
@@ -12,16 +12,16 @@ var r = n(54381),
     u = n(162168),
     d = n(624138),
     f = n(776421);
-let _ = (0, d.Mg)(l.Z.GRADIENT_PROGRESS_NOTCH_WIDTH);
-var p = (function (e) {
+let p = (0, d.Mg)(l.Z.GRADIENT_PROGRESS_NOTCH_WIDTH);
+var _ = (function (e) {
     return (e.BLACK = "BLACK"), (e.GRAY = "GRAY"), e;
 })({});
-let h = {
+let m = {
     BLACK: f.black,
     GRAY: f.gray,
 };
-function m(e) {
-    return Math.round(e / _) * _;
+function h(e) {
+    return Math.round(e / p) * p;
 }
 function g(e) {
     let {
@@ -30,13 +30,13 @@ function g(e) {
             gradientStart: a = s.Z.unsafe_rawColors.YELLOW_260.css,
             gradientEnd: l = s.Z.unsafe_rawColors.GREEN_360.css,
             className: d,
-            notchClassName: _,
-            children: p,
+            notchClassName: p,
+            children: _,
         } = e,
         { ref: g, width: E } = (0, c.ZP)(),
-        b = i.useMemo(() => (null != E ? m(E) : 0), [E]),
+        b = i.useMemo(() => (null != E ? h(E) : 0), [E]),
         y = i.useMemo(() => {
-            let e = Math.abs(m((b * (100 - Math.max(0, Math.min(100, n)))) / 100) - b);
+            let e = Math.abs(h((b * (100 - Math.max(0, Math.min(100, n)))) / 100) - b);
             return { transform: "translateX(".concat(e, "px)") };
         }, [n, b]),
         O = i.useMemo(
@@ -61,11 +61,11 @@ function g(e) {
                     0 !== b &&
                         (0, r.jsx)(u.Z, {
                             width: b,
-                            className: o()(f.notches, h[t], _),
+                            className: o()(f.notches, m[t], p),
                         }),
                 ],
             }),
-            p,
+            _,
         ],
     });
 }

@@ -1,4 +1,4 @@
-n.d(t, { q: () => _ }), n(953529);
+n.d(t, { q: () => p }), n(953529);
 var r = n(54381);
 n(473749);
 var i = n(704215),
@@ -10,10 +10,10 @@ var i = n(704215),
     u = n(243778),
     d = n(921944),
     f = n(655227);
-let _ = (e) => {
+let p = (e) => {
     let { dismissibleContent: t, noticeType: n } = e,
-        { analyticsLocations: _ } = (0, o.ZP)(),
-        p = (0, l.Z)();
+        { analyticsLocations: p } = (0, o.ZP)(),
+        _ = (0, l.Z)();
     return (0, r.jsx)(u.Xf, {
         contentType: t,
         latestVersion: (0, c.t)(t),
@@ -22,7 +22,7 @@ let _ = (e) => {
         children: (e) => {
             let { visibleContent: t, markAsDismissed: o } = e;
             if (t === i.z.GIFTING_PROMOTION_REMINDER) {
-                let e = null == p ? void 0 : p.reminderNagbar;
+                let e = null == _ ? void 0 : _.reminderNagbar;
                 return (0, r.jsxs)(a.qXd, {
                     color: a.DM8.PREMIUM_TIER_2,
                     children: [
@@ -43,7 +43,7 @@ let _ = (e) => {
                                 (0, s.Z)({
                                     isGift: !0,
                                     initialPlanId: null,
-                                    analyticsLocations: _,
+                                    analyticsLocations: p,
                                     analyticsLocation: null == e ? void 0 : e.analyticsLocation,
                                     analyticsObject: { page: null == e ? void 0 : e.analyticsPage },
                                 });

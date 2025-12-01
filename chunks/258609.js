@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => T }), n(388685);
+n.r(t), n.d(t, { default: () => I }), n(388685);
 var r,
     i = n(442837),
     a = n(570140),
@@ -21,13 +21,13 @@ let c = null,
     u = null,
     d = new Set(),
     f = {},
-    _ = {},
-    p = new Set();
-function h(e) {
+    p = {},
+    _ = new Set();
+function m(e) {
     let { sessionId: t } = e;
     (c = t), (u = null);
 }
-function m() {
+function h() {
     (c = null), (u = null);
 }
 function g(e) {
@@ -43,45 +43,45 @@ function g(e) {
 }
 function E(e) {
     let { platform: t } = e;
-    p.add(t);
+    _.add(t);
 }
 function b(e) {
     let { platform: t, devices: n } = e;
-    p.delete(t);
+    _.delete(t);
     let r = (f[t] = {}),
         i = {};
-    for (let e of n) (r[e.id] = e), _[t] === e.id && (i[t] = e.id);
-    _ = i;
+    for (let e of n) (r[e.id] = e), p[t] === e.id && (i[t] = e.id);
+    p = i;
 }
 function y(e) {
     let { platform: t } = e;
-    p.delete(t);
+    _.delete(t);
 }
 function O(e) {
     let { platform: t, deviceId: n } = e;
-    _[t] = n;
+    p[t] = n;
 }
 let v = Object.freeze({});
-class I extends (r = i.ZP.DeviceSettingsStore) {
+class S extends (r = i.ZP.DeviceSettingsStore) {
     initialize(e) {
-        null != e && (_ = e.lastSelectedDeviceByPlatform), this.waitFor(o.Z, s.Z);
+        null != e && (p = e.lastSelectedDeviceByPlatform), this.waitFor(o.Z, s.Z);
     }
     getUserAgnosticState() {
-        return { lastSelectedDeviceByPlatform: _ };
+        return { lastSelectedDeviceByPlatform: p };
     }
     getDevicesForPlatform(e) {
         var t;
         return null != (t = f[e]) ? t : v;
     }
     getLastSelectedDeviceByPlatform(e) {
-        return _[e];
+        return p[e];
     }
     getDevice(e, t) {
         var n;
         return null == (n = f[e]) ? void 0 : n[t];
     }
     getFetchingDevices(e) {
-        return p.has(e);
+        return _.has(e);
     }
     getPendingDeviceCommands() {
         return d;
@@ -93,10 +93,10 @@ class I extends (r = i.ZP.DeviceSettingsStore) {
         return u;
     }
 }
-l(I, "displayName", "GameConsoleStore"), l(I, "persistKey", "GameConsoleStore");
-let T = new I(a.Z, {
-    REMOTE_SESSION_CONNECT: h,
-    REMOTE_SESSION_DISCONNECT: m,
+l(S, "displayName", "GameConsoleStore"), l(S, "persistKey", "GameConsoleStore");
+let I = new S(a.Z, {
+    REMOTE_SESSION_CONNECT: m,
+    REMOTE_SESSION_DISCONNECT: h,
     WAIT_FOR_REMOTE_SESSION: g,
     GAME_CONSOLE_FETCH_DEVICES_START: E,
     GAME_CONSOLE_FETCH_DEVICES_SUCCESS: b,

@@ -1,10 +1,10 @@
 n.d(t, {
     DM: () => E,
     Ey: () => b,
-    No: () => I,
-    Ry: () => S,
+    No: () => S,
+    Ry: () => T,
     qX: () => A,
-    u3: () => T,
+    u3: () => I,
 });
 var r = n(54381);
 n(473749);
@@ -29,7 +29,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,7 +45,7 @@ function _(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -57,18 +57,18 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -106,11 +106,11 @@ let E = Object.freeze({
 });
 function b(e) {
     var { children: t, className: n, minor: i = !1 } = e,
-        o = m(e, ["children", "className", "minor"]);
+        o = h(e, ["children", "className", "minor"]);
     return (0, r.jsx)(s.tEY, {
         children: (0, r.jsx)(
             "button",
-            h(_({ className: a()(d.button, n, { [d.buttonMinor]: i }) }, o), { children: t }),
+            m(p({ className: a()(d.button, n, { [d.buttonMinor]: i }) }, o), { children: t }),
         ),
     });
 }
@@ -126,12 +126,12 @@ function v(e, t) {
         href: t,
     });
 }
-function I(e) {
+function S(e) {
     var { children: t, noticeType: n } = e,
-        i = m(e, ["children", "noticeType"]);
+        i = h(e, ["children", "noticeType"]);
     return (0, r.jsx)(
         b,
-        h(_({}, i), {
+        m(p({}, i), {
             onClick: (e) => {
                 null != i.onClick && i.onClick(e), y(n);
             },
@@ -139,12 +139,12 @@ function I(e) {
         }),
     );
 }
-function T(e) {
+function I(e) {
     var { children: t, href: n, noticeType: i } = e,
-        a = m(e, ["children", "href", "noticeType"]);
+        a = h(e, ["children", "href", "noticeType"]);
     return (0, r.jsx)(
         s.Anchor,
-        h(_({}, a), {
+        m(p({}, a), {
             className: d.button,
             href: n,
             onClick: (e) => {
@@ -155,7 +155,7 @@ function T(e) {
         }),
     );
 }
-function S(e) {
+function T(e) {
     let { onClick: t, noticeType: n, className: i } = e;
     return (0, r.jsx)(s.P3F, {
         focusProps: { offset: 6 },

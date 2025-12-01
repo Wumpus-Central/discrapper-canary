@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,9 +58,9 @@ function _(e, t) {
         e
     );
 }
-let p = 2,
-    h = 3,
-    m = 14 * s.Z.Millis.DAY,
+let _ = 2,
+    m = 3,
+    h = 14 * s.Z.Millis.DAY,
     g = Object.freeze([]),
     E = {},
     b = {};
@@ -80,20 +80,20 @@ function O(e) {
     let { messageId: t, channelId: n } = e,
         r = b[n];
     null != r &&
-        ((b[n] = r.map((e) => (e.messageId === t ? _(d({}, e), { reportSubmit: !0 }) : e))),
-        (E[t] = _(d({}, E[t]), { reportSubmit: !0 })));
+        ((b[n] = r.map((e) => (e.messageId === t ? p(d({}, e), { reportSubmit: !0 }) : e))),
+        (E[t] = p(d({}, E[t]), { reportSubmit: !0 })));
 }
 function v() {
-    T();
+    I();
 }
-function I(e) {
+function S(e) {
     let { explicitContentScanVersion: t } = e;
-    (r = t), T();
+    (r = t), I();
 }
-function T() {
+function I() {
     (E = {}), (b = {});
 }
-class S extends (i = a.ZP.Store) {
+class T extends (i = a.ZP.Store) {
     getFpMessageInfo(e) {
         return E[e];
     }
@@ -103,20 +103,20 @@ class S extends (i = a.ZP.Store) {
     }
     canSubmitFpReport(e) {
         let t = E[e];
-        return null != t && !t.reportSubmit && l.default.age(t.messageId) < m;
+        return null != t && !t.reportSubmit && l.default.age(t.messageId) < h;
     }
     get validContentScanVersion() {
         return (0, c.zV)("ExplicitMediaStore.validContentScanVersion")
             ? null != r
                 ? r
-                : h
-            : Math.min(null != r ? r : p, p);
+                : m
+            : Math.min(null != r ? r : _, _);
     }
 }
-u(S, "displayName", "FalsePositiveStore");
-let A = new S(o.Z, {
+u(T, "displayName", "FalsePositiveStore");
+let A = new T(o.Z, {
     LOGOUT: v,
-    CONNECTION_OPEN: I,
+    CONNECTION_OPEN: S,
     MESSAGE_EXPLICIT_CONTENT_FP_CREATE: y,
     MESSAGE_EXPLICIT_CONTENT_FP_SUBMIT: O,
 });

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(544891),
     i = n(570140),
     a = n(668781),
@@ -9,8 +9,8 @@ var r = n(544891),
     u = n(246364),
     d = n(937111),
     f = n(981631),
-    _ = n(388032);
-let p = {
+    p = n(388032);
+let _ = {
     fetchGuildJoinRequest: async (e) => {
         let t = await r.tn.get({
                 url: f.ANM.GUILD_JOIN_REQUEST_BY_ID(e),
@@ -27,11 +27,11 @@ let p = {
     },
     fetchGuildJoinRequests: async (e) => {
         let { guildId: t, status: n = u.wB.SUBMITTED, before: a, after: o, limit: s = u.tB, force: l = !1 } = e,
-            _ = l || !c.Z.hasFetched(t);
-        if (!c.Z.isFetching() && _) {
+            p = l || !c.Z.hasFetched(t);
+        if (!c.Z.isFetching() && p) {
             i.Z.dispatch({ type: "GUILD_JOIN_REQUESTS_FETCH_START" });
             try {
-                var p;
+                var _;
                 let e = await r.tn.get({
                         url: f.ANM.GUILD_JOIN_REQUESTS(t),
                         query: {
@@ -43,7 +43,7 @@ let p = {
                         rejectWithError: !1,
                     }),
                     l = e.body.total,
-                    c = (null != (p = e.body.guild_join_requests) ? p : []).map(d.j);
+                    c = (null != (_ = e.body.guild_join_requests) ? _ : []).map(d.j);
                 return (
                     i.Z.dispatch({
                         type: "GUILD_JOIN_REQUESTS_FETCH_SUCCESS",
@@ -116,8 +116,8 @@ let p = {
                         e.body &&
                         e.body.code === f.evJ.REQUEST_TO_JOIN_USER_INELIGIBLE &&
                         a.Z.show({
-                            title: _.intl.string(_.t.DxJj4e),
-                            body: _.intl.string(_.t.rSAOk9),
+                            title: p.intl.string(p.t.DxJj4e),
+                            body: p.intl.string(p.t.rSAOk9),
                         }),
                     Promise.reject(e)
                 ),

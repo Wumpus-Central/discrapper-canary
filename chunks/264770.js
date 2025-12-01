@@ -21,10 +21,10 @@ function u(e, t, n) {
 }
 let d = new a.Z("OverlayWidgetPinManager"),
     f = {},
-    _ = 28800000,
-    p = !1,
-    h = new Set([c.Odu.GO_LIVE]),
-    m = new Set([
+    p = 28800000,
+    _ = !1,
+    m = new Set([c.Odu.GO_LIVE]),
+    h = new Set([
         s.mM.WAITING_FOR_POPOUT_OPEN,
         s.mM.WAITING_FOR_REACT_INITIALIZATION,
         s.mM.WAITING_FOR_PID_FOCUS,
@@ -32,7 +32,7 @@ let d = new a.Z("OverlayWidgetPinManager"),
     ]),
     g = (e) => {
         let t = f[e];
-        return null == t || Date.now() - t < _;
+        return null == t || Date.now() - t < p;
     },
     E = (e) => {
         f[e] = Date.now();
@@ -47,16 +47,16 @@ class y extends i.Z {
                 OVERLAY_UPDATE_OVERLAY_STATE: (e) => {
                     let { overlayState: t } = e,
                         { enabled: n } = (0, l.lj)("OverlayWidgetPinManager");
-                    if (n && m.has(t))
+                    if (n && h.has(t))
                         for (let e of Object.keys(f)) {
                             var i, a;
                             if (g(e)) continue;
                             let t = o.Z.getWidget(e);
-                            if (null == t || !h.has(t.type)) continue;
+                            if (null == t || !m.has(t.type)) continue;
                             let n =
                                 null != (a = null == (i = o.Z.getWidgetDefaultSettings(t.type)) ? void 0 : i.pinned)
                                     ? a
-                                    : p;
+                                    : _;
                             t.pinned !== n &&
                                 (d.verbose(
                                     "Widget "
@@ -73,7 +73,7 @@ class y extends i.Z {
                         { enabled: r } = (0, l.lj)("OverlayWidgetPinManager");
                     if (!r) return;
                     let i = o.Z.getWidget(t);
-                    null != i && h.has(i.type) && null != n && (n ? E(t) : b(t));
+                    null != i && m.has(i.type) && null != n && (n ? E(t) : b(t));
                 },
             });
     }

@@ -1,7 +1,7 @@
 n.d(t, {
-    De: () => p,
-    EJ: () => h,
-    Ic: () => _,
+    De: () => _,
+    EJ: () => m,
+    Ic: () => p,
     JU: () => f,
 }),
     n(413496),
@@ -21,22 +21,22 @@ function f(e) {
     var t, n, r;
     let { colorStrings: i, useReducedMotion: a, roleStyle: s, includeConvenienceGlow: l, animateGradient: d } = e,
         f = "username" === s,
-        _ = "dot" === s,
-        p = f && l,
-        h = null != (t = null == i ? void 0 : i.primaryColor) ? t : c.Pbq,
-        m = {
-            "--custom-gradient-color-1": h,
-            "--custom-gradient-color-2": null != (n = null == i ? void 0 : i.secondaryColor) ? n : h,
-            "--custom-gradient-color-3": null != (r = null == i ? void 0 : i.tertiaryColor) ? r : h,
+        p = "dot" === s,
+        _ = f && l,
+        m = null != (t = null == i ? void 0 : i.primaryColor) ? t : c.Pbq,
+        h = {
+            "--custom-gradient-color-1": m,
+            "--custom-gradient-color-2": null != (n = null == i ? void 0 : i.secondaryColor) ? n : m,
+            "--custom-gradient-color-3": null != (r = null == i ? void 0 : i.tertiaryColor) ? r : m,
         },
         g = (null == i ? void 0 : i.tertiaryColor) != null ? u.threeColorGradient : u.twoColorGradient;
     return {
-        gradientStyle: m,
+        gradientStyle: h,
         gradientClassname: o()(g, {
             [u.usernameGradient]: f,
-            [u.convenienceGlowGradient]: p,
-            [u.convenienceGlowGradientActive]: p && d,
-            [u.gradientDotAnimation]: !a && _,
+            [u.convenienceGlowGradient]: _,
+            [u.convenienceGlowGradientActive]: _ && d,
+            [u.gradientDotAnimation]: !a && p,
             [u.animateGradient]: d && f,
         }),
         gradientGlowClassname: o()(g, u.usernameGlow, {
@@ -46,7 +46,7 @@ function f(e) {
         }),
     };
 }
-function _(e) {
+function p(e) {
     let { colorStrings: t, roleStyle: n, includeConvenienceGlow: r, animateGradient: a } = e,
         o = (0, s.e7)([l.Z], () => l.Z.useReducedMotion);
     return i.useMemo(
@@ -61,7 +61,7 @@ function _(e) {
         [t, n, r, o, a],
     );
 }
-function p(e, t, n) {
+function _(e, t, n) {
     return i.useMemo(() => {
         let i = [e, t, n].filter((e) => null != e),
             a = i.length >= 2,
@@ -85,7 +85,7 @@ function p(e, t, n) {
         };
     }, [e, t, n]);
 }
-function h(e, t) {
+function m(e, t) {
     return i.useMemo(() => {
         let n;
         if (null == e) return e;

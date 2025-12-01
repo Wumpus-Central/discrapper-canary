@@ -1,5 +1,5 @@
 let r, i, a;
-n.d(t, { Z: () => R });
+n.d(t, { Z: () => P });
 var o,
     s = n(772848),
     l = n(442837),
@@ -7,10 +7,10 @@ var o,
     u = n(846519),
     d = n(570140),
     f = n(899742),
-    _ = n(598077),
-    p = n(12647),
-    h = n(358085),
-    m = n(374023);
+    p = n(598077),
+    _ = n(12647),
+    m = n(358085),
+    h = n(374023);
 function g(e, t, n) {
     return (
         t in e
@@ -28,35 +28,35 @@ let E = "BrowserHandoffStore",
     b = !1,
     y = new u.V7();
 function O() {
-    null != r && null != i && (window.open("".concat(r, "&key=").concat(i)), p.Z.focus(null, !0));
+    null != r && null != i && (window.open("".concat(r, "&key=").concat(i)), _.Z.focus(null, !0));
 }
 function v() {
     (i = null), y.stop(), (b = !1), c.K.set(E, b);
 }
-function I(e) {
+function S(e) {
     (r = "".concat(location.protocol, "//").concat(location.host, "/handoff?rpc=").concat(e.port)), O();
 }
-function T(e) {
+function I(e) {
     if (null != i) return !1;
     (i = (0, s.Z)()), y.start(e.timeout, () => (0, f.lx)()), O();
 }
-function S(e) {
+function T(e) {
     let { handoffKey: t, handoffToken: n, timeout: r } = e;
     if (null == t || null == n) return !1;
     (b = !0), y.start(r, () => (0, f.lx)());
 }
 function A(e) {
-    a = new _.Z(e.user);
+    a = new p.Z(e.user);
 }
 function C() {
     v();
 }
 class N extends (o = l.ZP.Store) {
     initialize() {
-        !1 !== c.K.get(E) && (b = h.isPlatformEmbedded && "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL);
+        !1 !== c.K.get(E) && (b = m.isPlatformEmbedded && "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL);
     }
     isHandoffAvailable() {
-        return !m.s.isDisallowPopupsSet() && b;
+        return !h.s.isDisallowPopupsSet() && b;
     }
     get user() {
         return a;
@@ -66,10 +66,10 @@ class N extends (o = l.ZP.Store) {
     }
 }
 g(N, "displayName", "BrowserHandoffStore");
-let R = new N(d.Z, {
-    RPC_SERVER_READY: I,
-    BROWSER_HANDOFF_BEGIN: T,
-    BROWSER_HANDOFF_FROM_APP: S,
+let P = new N(d.Z, {
+    RPC_SERVER_READY: S,
+    BROWSER_HANDOFF_BEGIN: I,
+    BROWSER_HANDOFF_FROM_APP: T,
     BROWSER_HANDOFF_UNAVAILABLE: v,
     BROWSER_HANDOFF_SET_USER: A,
     LOGIN: C,

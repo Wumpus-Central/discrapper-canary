@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var r = n(54381);
 n(473749);
 var i = n(392711),
@@ -10,10 +10,10 @@ var i = n(392711),
     u = n(928518),
     d = n(314897),
     f = n(592125),
-    _ = n(158776),
-    p = n(19780),
-    h = n(959457),
-    m = n(178635),
+    p = n(158776),
+    _ = n(19780),
+    m = n(959457),
+    h = n(178635),
     g = n(531578),
     E = n(981631);
 function b(e, t, n) {
@@ -68,7 +68,7 @@ function v(e, t) {
         e
     );
 }
-class I extends m.Z {
+class S extends h.Z {
     constructor(...e) {
         super(...e),
             b(this, "actions", {
@@ -107,18 +107,18 @@ class I extends m.Z {
                 var t, i;
                 let { streamKey: o, canShowFeedback: s } = e,
                     u = (0, l.my)(o),
-                    f = (0, c.L2)(u, _.Z),
-                    p = null != (i = h.Z.getVideoStats(o)) ? i : {},
-                    m = y(
+                    f = (0, c.L2)(u, p.Z),
+                    _ = null != (i = m.Z.getVideoStats(o)) ? i : {},
+                    h = y(
                         {
-                            media_session_id: h.Z.getMediaSessionId(o),
-                            rtc_connection_id: h.Z.getRtcConnectionId(o),
-                            stream_region: h.Z.getRegion(o),
-                            max_viewers: h.Z.getMaxViewers(o),
+                            media_session_id: m.Z.getMediaSessionId(o),
+                            rtc_connection_id: m.Z.getRtcConnectionId(o),
+                            stream_region: m.Z.getRegion(o),
+                            max_viewers: m.Z.getMaxViewers(o),
                             parent_media_session_id:
-                                null == (t = h.Z.getRTCConnection(o)) ? void 0 : t.parentMediaSessionId,
+                                null == (t = m.Z.getRTCConnection(o)) ? void 0 : t.parentMediaSessionId,
                         },
-                        p,
+                        _,
                     );
                 s &&
                     this.possiblyShowFeedbackModal(g.nw.STREAM, () => {
@@ -138,7 +138,7 @@ class I extends m.Z {
                                             },
                                             t,
                                         ),
-                                        { analyticsData: m },
+                                        { analyticsData: h },
                                     ),
                                 );
                         });
@@ -159,12 +159,12 @@ class I extends m.Z {
                 let { applicationId: t, location: i, showFeedback: l } = e,
                     c = s.Z.getApplication(t),
                     d = (0, o.p)(i),
-                    _ = f.Z.getChannel(d),
-                    h = {
-                        rtc_connection_id: p.Z.getRTCConnectionId(),
-                        media_session_id: p.Z.getMediaSessionId(),
+                    p = f.Z.getChannel(d),
+                    m = {
+                        rtc_connection_id: _.Z.getRTCConnectionId(),
+                        media_session_id: _.Z.getMediaSessionId(),
                     },
-                    m = u.Z.getWindowOpen(E.KJ3.CHANNEL_CALL_POPOUT) ? a.u1M : a.z1l;
+                    h = u.Z.getWindowOpen(E.KJ3.CHANNEL_CALL_POPOUT) ? a.u1M : a.z1l;
                 null != c &&
                     l &&
                     this.possiblyShowFeedbackModal(g.nw.ACTIVITY, () => {
@@ -178,13 +178,13 @@ class I extends m.Z {
                                         e,
                                         v(y({}, t), {
                                             activityApplication: c,
-                                            channel: _,
+                                            channel: p,
                                             embeddedActivityLocation: i,
-                                            analyticsData: h,
+                                            analyticsData: m,
                                         }),
                                     );
                             },
-                            { contextKey: m },
+                            { contextKey: h },
                         );
                     });
             }),
@@ -238,4 +238,4 @@ class I extends m.Z {
             });
     }
 }
-let T = new I();
+let I = new S();

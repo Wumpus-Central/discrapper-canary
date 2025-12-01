@@ -41,8 +41,8 @@ let r = new Set(["id"]),
     ]),
     l = /^(data-.*)$/;
 function c(e, t = {}) {
-    let { labelable: n, isLink: u, global: d, events: f = d, propNames: _ } = t,
-        p = {};
+    let { labelable: n, isLink: u, global: d, events: f = d, propNames: p } = t,
+        _ = {};
     for (let t in e)
         Object.prototype.hasOwnProperty.call(e, t) &&
             (r.has(t) ||
@@ -51,8 +51,8 @@ function c(e, t = {}) {
                 (d && o.has(t)) ||
                 (f && s.has(t)) ||
                 (t.endsWith("Capture") && s.has(t.slice(0, -7))) ||
-                (null == _ ? void 0 : _.has(t)) ||
+                (null == p ? void 0 : p.has(t)) ||
                 l.test(t)) &&
-            (p[t] = e[t]);
-    return p;
+            (_[t] = e[t]);
+    return _;
 }

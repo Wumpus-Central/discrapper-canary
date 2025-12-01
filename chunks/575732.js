@@ -1,6 +1,6 @@
 n.d(t, {
     CD: () => l,
-    FV: () => _,
+    FV: () => p,
     Nv: () => d,
     Pc: () => u,
     X: () => f,
@@ -134,7 +134,7 @@ let l = [
             getText: () => s.intl.string(s.t.Uukj4o),
         },
     ],
-    _ = [
+    p = [
         {
             Icon: r.rG2,
             getText: () =>

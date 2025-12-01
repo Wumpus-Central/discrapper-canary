@@ -71,9 +71,9 @@ function u(e) {
                 : document;
         }, [n.attachTo, e]),
         f = r.useRef(null),
-        _ = n.disable ? f : e;
+        p = n.disable ? f : e;
     return (0, i.ZP)(
-        _,
+        p,
         c(s({}, n), {
             disableReturnRef: u,
             attachTo: d,

@@ -7,12 +7,12 @@ var r = n(46015),
     c = /\$([$&'`]|\d{1,2}|<[^>]*>)/g,
     u = /\$([$&'`]|\d{1,2})/g;
 e.exports = function (e, t, n, r, d, f) {
-    var _ = n + e.length,
-        p = r.length,
-        h = u;
+    var p = n + e.length,
+        _ = r.length,
+        m = u;
     return (
-        void 0 !== d && ((d = i(d)), (h = c)),
-        s(f, h, function (i, s) {
+        void 0 !== d && ((d = i(d)), (m = c)),
+        s(f, m, function (i, s) {
             var c;
             switch (o(s, 0)) {
                 case "$":
@@ -22,17 +22,17 @@ e.exports = function (e, t, n, r, d, f) {
                 case "`":
                     return l(t, 0, n);
                 case "'":
-                    return l(t, _);
+                    return l(t, p);
                 case "<":
                     c = d[l(s, 1, -1)];
                     break;
                 default:
                     var u = +s;
                     if (0 === u) return i;
-                    if (u > p) {
+                    if (u > _) {
                         var f = a(u / 10);
                         if (0 === f) return i;
-                        if (f <= p) return void 0 === r[f - 1] ? o(s, 1) : r[f - 1] + o(s, 1);
+                        if (f <= _) return void 0 === r[f - 1] ? o(s, 1) : r[f - 1] + o(s, 1);
                         return i;
                     }
                     c = r[u - 1];

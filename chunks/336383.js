@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => S });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(892001),
     d = n(502762),
     f = n(652853),
-    _ = n(228168),
-    p = n(671955),
-    h = n(388032),
-    m = n(704543);
+    p = n(228168),
+    _ = n(671955),
+    m = n(388032),
+    h = n(704543);
 function g(e, t, n) {
     return (
         t in e
@@ -86,7 +86,7 @@ function v(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let I = i.forwardRef(function (e, t) {
+let S = i.forwardRef(function (e, t) {
     var {
             children: n,
             className: i,
@@ -94,42 +94,42 @@ let I = i.forwardRef(function (e, t) {
             onAction: g,
             onClose: b,
             "aria-label": v,
-            "aria-labelledby": I,
+            "aria-labelledby": S,
         } = e,
-        T = O(e, ["children", "className", "subsection", "onAction", "onClose", "aria-label", "aria-labelledby"]);
-    let { themeType: S } = (0, f.z)(),
+        I = O(e, ["children", "className", "subsection", "onAction", "onClose", "aria-label", "aria-labelledby"]);
+    let { themeType: T } = (0, f.z)(),
         { analyticsLocations: A } = (0, l.ZP)(),
         { context: C } = (0, c.KZ)();
-    return S === p.l.MODAL || S === p.l.MODAL_V2 || (null == C ? void 0 : C.userId) == null
+    return T === _.l.MODAL || T === _.l.MODAL_V2 || (null == C ? void 0 : C.userId) == null
         ? (0, r.jsx)("article", {
               "aria-label": v,
-              "aria-labelledby": I,
+              "aria-labelledby": S,
               children: (0, r.jsx)(
                   d.Z.Overlay,
                   y(
                       E(
                           {
                               ref: t,
-                              className: o()(m.card, i),
+                              className: o()(h.card, i),
                           },
-                          T,
+                          I,
                       ),
                       { children: n },
                   ),
               ),
           })
         : (0, r.jsx)("article", {
-              "aria-labelledby": I,
+              "aria-labelledby": S,
               children: (0, r.jsx)(s.kL8, {
-                  className: m.clickableContainer,
-                  "aria-label": h.intl.string(h.t.pD1L1u),
+                  className: h.clickableContainer,
+                  "aria-label": m.intl.string(m.t.pD1L1u),
                   focusProps: { ringTarget: t },
                   onClick: () => {
                       null == g || g({ action: "PRESS_CARD" }),
                           (0, u.openUserProfileModal)(
                               E(
                                   {
-                                      section: _.oh.ACTIVITY,
+                                      section: p.oh.ACTIVITY,
                                       sourceAnalyticsLocations: A,
                                       subsection: a,
                                   },
@@ -144,9 +144,9 @@ let I = i.forwardRef(function (e, t) {
                           E(
                               {
                                   ref: t,
-                                  className: o()(m.card, i),
+                                  className: o()(h.card, i),
                               },
-                              T,
+                              I,
                           ),
                           { children: n },
                       ),

@@ -352,8 +352,8 @@ class f extends o.C {
         ]);
     }
 }
-let _ = new f();
-class p extends o.C {
+let p = new f();
+class _ extends o.C {
     create(e) {
         let t = {
             link: "",
@@ -426,8 +426,8 @@ class p extends o.C {
         ]);
     }
 }
-let h = new p();
-class m extends o.C {
+let m = new _();
+class h extends o.C {
     create(e) {
         let t = {
             header: "",
@@ -495,10 +495,10 @@ class m extends o.C {
                     a.body = e.string();
                     break;
                 case 13:
-                    a.heroArtVideoSubtitles.push(h.internalBinaryRead(e, e.uint32(), n));
+                    a.heroArtVideoSubtitles.push(m.internalBinaryRead(e, e.uint32(), n));
                     break;
                 case 14:
-                    a.storage = _.internalBinaryRead(e, e.uint32(), n, a.storage);
+                    a.storage = p.internalBinaryRead(e, e.uint32(), n, a.storage);
                     break;
                 default:
                     let o = n.readUnknownField;
@@ -527,8 +527,8 @@ class m extends o.C {
             "" !== e.modalTopPill && t.tag(11, r.TD.LengthDelimited).string(e.modalTopPill),
             "" !== e.body && t.tag(12, r.TD.LengthDelimited).string(e.body);
         for (let i = 0; i < e.heroArtVideoSubtitles.length; i++)
-            h.internalBinaryWrite(e.heroArtVideoSubtitles[i], t.tag(13, r.TD.LengthDelimited).fork(), n).join();
-        e.storage && _.internalBinaryWrite(e.storage, t.tag(14, r.TD.LengthDelimited).fork(), n).join();
+            m.internalBinaryWrite(e.heroArtVideoSubtitles[i], t.tag(13, r.TD.LengthDelimited).fork(), n).join();
+        e.storage && p.internalBinaryWrite(e.storage, t.tag(14, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -612,15 +612,15 @@ class m extends o.C {
                 name: "hero_art_video_subtitles",
                 kind: "message",
                 repeat: 1,
-                T: () => h,
+                T: () => m,
             },
             {
                 no: 14,
                 name: "storage",
                 kind: "message",
-                T: () => _,
+                T: () => p,
             },
         ]);
     }
 }
-let g = new m();
+let g = new h();

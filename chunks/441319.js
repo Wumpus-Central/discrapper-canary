@@ -1,7 +1,7 @@
 n.d(t, {
     M9: () => N,
-    aW: () => w,
-    wu: () => D,
+    aW: () => D,
+    wu: () => w,
 }),
     n(388685);
 var r = n(997945),
@@ -14,23 +14,23 @@ var r = n(997945),
     u = n(760260),
     d = n(448578),
     f = n(946185),
-    _ = n(480423),
-    p = n(273593),
-    h = n(665801),
-    m = n(818143),
+    p = n(480423),
+    _ = n(273593),
+    m = n(665801),
+    h = n(818143),
     g = n(666475),
     E = n(591304),
     b = n(73375),
     y = n(328664),
     O = n(328259),
     v = n(19009),
-    I = n(234912),
-    T = n(405571),
-    S = n(730886),
+    S = n(234912),
+    I = n(405571),
+    T = n(730886),
     A = n(473974),
     C = n(563856);
 let N = 60;
-function R() {
+function P() {
     return {
         id: r.aH.DEFAULT,
         iconSource: o,
@@ -38,7 +38,7 @@ function R() {
         isPremium: !1,
     };
 }
-function P() {
+function R() {
     return [
         {
             id: r.Ru.BRAND_DARK,
@@ -66,13 +66,13 @@ function P() {
         },
         {
             id: r.Ru.PASTEL,
-            iconSource: T,
+            iconSource: I,
             isPremium: !0,
             name: i.intl.string(i.t.mTSkLT),
         },
         {
             id: r.Ru.PIRATE,
-            iconSource: S,
+            iconSource: T,
             isPremium: !0,
             name: i.intl.string(i.t["EgWTY+"]),
         },
@@ -90,7 +90,7 @@ function P() {
         },
         {
             id: r.Ru.GALAXY,
-            iconSource: m,
+            iconSource: h,
             isPremium: !0,
             name: i.intl.string(i.t.cb78Ls),
         },
@@ -120,7 +120,7 @@ function P() {
         },
         {
             id: r.Ru.CIRCUIT,
-            iconSource: _,
+            iconSource: p,
             isPremium: !0,
             name: i.intl.string(i.t.dUpxKb),
         },
@@ -144,7 +144,7 @@ function P() {
         },
         {
             id: r.Ru.CONTROLLER,
-            iconSource: h,
+            iconSource: m,
             isPremium: !0,
             name: i.intl.string(i.t["4QM2U1"]),
         },
@@ -162,22 +162,22 @@ function P() {
         },
         {
             id: r.Ru.MIDNIGHT_PRISM,
-            iconSource: I,
+            iconSource: S,
             isPremium: !0,
             name: i.intl.string(i.t.nshUZZ),
         },
         {
             id: r.Ru.COLOR_WAVE,
-            iconSource: p,
+            iconSource: _,
             isPremium: !0,
             name: i.intl.string(i.t.MWRYqh),
         },
     ];
 }
-function D() {
-    return [R(), ...P()];
+function w() {
+    return [P(), ...R()];
 }
-function w(e) {
-    let t = D().find((t) => t.id === e);
-    return null != t ? t : R();
+function D(e) {
+    let t = w().find((t) => t.id === e);
+    return null != t ? t : P();
 }

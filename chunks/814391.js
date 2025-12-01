@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(913527),
     i = n.n(r),
     a = n(388032);
@@ -16,7 +16,7 @@ let o = 60,
         years: a.t.KjKr2P,
     }),
     f = (e, t) => null != t && null != t[e],
-    _ = (e, t, n) => {
+    p = (e, t, n) => {
         var r, i, a;
         return f(e, t)
             ? null != (i = null != (r = t[e]) ? r : null == n ? void 0 : n[e])
@@ -26,37 +26,37 @@ let o = 60,
               ? a
               : null;
     },
-    p = function (e, t) {
+    _ = function (e, t) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
             r = i()().diff(i()(e), "s"),
             f = null != t ? t() : void 0,
-            p = d(),
-            h = (e, t) => {
-                let r = _(e, f, n ? p : void 0);
+            _ = d(),
+            m = (e, t) => {
+                let r = p(e, f, n ? _ : void 0);
                 return null == r ? null : "string" == typeof r ? r : a.intl.formatToPlainString(r, { count: t });
             };
         if (r < o) {
-            let e = (null == f ? void 0 : f.seconds) != null ? h("seconds", r) : h("minutes", 1);
+            let e = (null == f ? void 0 : f.seconds) != null ? m("seconds", r) : m("minutes", 1);
             if (null != e) return e;
         }
         if (r < s) {
-            let e = h("minutes", Math.floor(r / o));
+            let e = m("minutes", Math.floor(r / o));
             if (null != e) return e;
         }
         if (r < l) {
-            let e = h("hours", Math.floor(r / s));
+            let e = m("hours", Math.floor(r / s));
             if (null != e) return e;
         }
         if (r < c) {
-            let e = h("days", Math.floor(r / l));
+            let e = m("days", Math.floor(r / l));
             if (null != e) return e;
         }
         if (r < u) {
-            let e = h("months", Math.floor(r / c));
+            let e = m("months", Math.floor(r / c));
             if (null != e) return e;
         }
         if (r >= u && (null == f ? void 0 : f.years) != null) {
-            let e = h("years", Math.floor(r / u));
+            let e = m("years", Math.floor(r / u));
             if (null != e) return e;
         }
         return i()(e).format("LL");

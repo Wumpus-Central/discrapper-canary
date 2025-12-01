@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(239091),
     u = n(454585),
     d = n(984370),
-    p = n(981631),
+    f = n(981631),
     h = n(388032),
-    f = n(413140),
+    p = n(413140),
     g = n(430864);
 function m(e, t, n) {
     return (
@@ -54,7 +54,7 @@ class y extends i.Component {
                   children: [
                       (0, r.jsx)(d.Z.Divider, {}),
                       (0, r.jsxs)("div", {
-                          className: o()(f.topic, f.expandable, g.markup),
+                          className: o()(p.topic, p.expandable, g.markup),
                           onMouseDown: this.onMouseDown,
                           onMouseMove: this.onMouseMove,
                           onMouseUp: this.onMouseUp,
@@ -64,7 +64,7 @@ class y extends i.Component {
                               (0, r.jsx)(s.P3F, {
                                   onClick: this.handleClick,
                                   "aria-label": h.intl.string(h.t.mKwsSp),
-                                  className: f.topicClickTarget,
+                                  className: p.topicClickTarget,
                               }),
                               null == e.linkedLobby || t
                                   ? u.Z.parseTopic(e.topic, !0, { channelId: e.id })
@@ -98,7 +98,7 @@ class y extends i.Component {
                 this._mouseDown && (this._mouseDown = !1);
             }),
             m(this, "onMouseUp", (e) => {
-                this._mouseDown && e.button !== p.AeJ.SECONDARY && this.handleOpenTopic(e),
+                this._mouseDown && e.button !== f.AeJ.SECONDARY && this.handleOpenTopic(e),
                     (this._mouseUp = !0),
                     (this._mouseDown = !1);
             }),
@@ -115,7 +115,7 @@ class y extends i.Component {
                         n.e("30474"),
                         n.e("91053"),
                         n.e("24783"),
-                        n.e("43426"),
+                        n.e("82082"),
                     ]).then(n.bind(n, 439635));
                     return (n) =>
                         (0, r.jsx)(

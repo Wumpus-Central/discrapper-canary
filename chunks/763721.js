@@ -1,4 +1,4 @@
-n.d(t, { z: () => m }), n(388685), n(953529);
+n.d(t, { z: () => h }), n(388685), n(953529);
 var r = n(54381),
     i = n(473749),
     a = n(793030),
@@ -57,11 +57,11 @@ function f(e, t) {
         e
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -69,7 +69,7 @@ function _(e, t) {
     }
     return i;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,7 +78,7 @@ function p(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let h = [
+let m = [
         {
             id: "strength",
             label: "Strength",
@@ -109,31 +109,31 @@ let h = [
             label: "Constitution",
         },
     ],
-    m = {
+    h = {
         title: "Input Components",
         stories: [
             {
                 name: "TextInput",
                 component: function (e) {
                     var { leading: t, trailing: n } = e,
-                        a = _(e, ["leading", "trailing"]);
+                        a = p(e, ["leading", "trailing"]);
                     let [c, d] = i.useState(""),
-                        p = (0, s.U)("UserSettingsDesignSystems"),
-                        [m, g] = i.useState(h),
+                        _ = (0, s.U)("UserSettingsDesignSystems"),
+                        [h, g] = i.useState(m),
                         E = i.useCallback(
                             (e) => {
-                                g(m.filter((t) => !e.has(t.id)));
+                                g(h.filter((t) => !e.has(t.id)));
                             },
-                            [m],
+                            [h],
                         );
                     function b(e) {
-                        if (p)
+                        if (_)
                             switch (e) {
                                 case "tags":
                                     return {
                                         type: "tags",
                                         label: "Tags",
-                                        items: m,
+                                        items: h,
                                         onRemove: E,
                                     };
                                 case "icon":
@@ -149,7 +149,7 @@ let h = [
                             }
                     }
                     function y(e) {
-                        if (p)
+                        if (_)
                             if ("icon" === e)
                                 return {
                                     icon: o.qJs,
@@ -176,7 +176,7 @@ let h = [
                                       text: "Reset Tags",
                                       size: "sm",
                                       variant: "secondary",
-                                      onClick: () => g(h),
+                                      onClick: () => g(m),
                                   })
                                 : null,
                         ],
@@ -441,9 +441,9 @@ let h = [
                             required: s,
                             error: c,
                             disabled: d,
-                            placeholder: _,
-                            value: p = "",
-                            readOnly: m,
+                            placeholder: p,
+                            value: _ = "",
+                            readOnly: h,
                             helperText: g,
                             successMessage: E,
                             showCharacterCount: b,
@@ -453,11 +453,11 @@ let h = [
                             hideLabel: n,
                             description: i,
                             required: s,
-                            value: p,
+                            value: _,
                             error: c,
                             disabled: d,
-                            placeholder: _,
-                            readOnly: m,
+                            placeholder: p,
+                            readOnly: h,
                             helperText: g,
                             showCharacterCount: b,
                             successMessage: E,
@@ -499,7 +499,7 @@ let h = [
                                             leading: {
                                                 type: "tags",
                                                 label: "Tags",
-                                                items: h.slice(0, 3),
+                                                items: m.slice(0, 3),
                                             },
                                         }),
                                     ),
@@ -510,17 +510,17 @@ let h = [
                                 label: "Search Bar",
                                 children: [
                                     (0, r.jsx)(o.E1j, {
-                                        query: p,
+                                        query: _,
                                         onChange: l.dG,
                                         disabled: d,
-                                        placeholder: _,
+                                        placeholder: p,
                                     }),
                                     (0, r.jsx)(o.E1j, {
-                                        query: p,
+                                        query: _,
                                         onChange: l.dG,
                                         size: "sm",
                                         disabled: d,
-                                        placeholder: _,
+                                        placeholder: p,
                                     }),
                                 ],
                             }),

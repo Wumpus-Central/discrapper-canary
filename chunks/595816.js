@@ -1,6 +1,6 @@
 n.d(t, {
-    $: () => _,
-    P: () => p,
+    $: () => p,
+    P: () => _,
 });
 var r = n(442837),
     i = n(722733),
@@ -65,12 +65,12 @@ let d = { defaultWatchMultipleStreams: !1 },
         defaultConfig: d,
         variations: { 1: u(l({}, d), { defaultWatchMultipleStreams: !0 }) },
     });
-function _(e) {
+function p(e) {
     let { location: t } = e,
         { isInHoldout: n } = o.L.getCurrentConfig({ location: t }, { autoTrackExposure: !0 });
     return n ? f.definition.defaultConfig : f.getConfig({ location: t });
 }
-function p(e) {
+function _(e) {
     let { location: t } = e;
-    return (0, r.e7)([a.Z], () => _({ location: t }));
+    return (0, r.e7)([a.Z], () => p({ location: t }));
 }

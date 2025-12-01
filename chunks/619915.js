@@ -1,6 +1,6 @@
 n.d(t, {
-    QN: () => m,
-    ZP: () => h,
+    QN: () => h,
+    ZP: () => m,
     gb: () => g,
     uF: () => E,
 }),
@@ -43,7 +43,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -55,18 +55,18 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e, t) {
+function m(e, t) {
     return g(
         (0, i.Wu)([c.ZP], () =>
             null != e && null != e.id && "" !== e.id ? c.ZP.getEmbeddedActivitiesForChannel(e.id) : c.i6,
@@ -74,7 +74,7 @@ function h(e, t) {
         t,
     );
 }
-function m(e) {
+function h(e) {
     let t = g((0, i.e7)([c.ZP], () => (null != e ? c.ZP.getEmbeddedActivitiesForGuild(e) : c.i6)));
     return r.useMemo(() => {
         let e = new Map();
@@ -147,7 +147,7 @@ function E(e) {
                     );
                     t.set(
                         null == e || null == (n = e.application) ? void 0 : n.id,
-                        p(f({}, e), { presenceActivity: r }),
+                        _(f({}, e), { presenceActivity: r }),
                     );
                 }),
                 t

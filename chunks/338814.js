@@ -65,18 +65,18 @@ e.exports = function (e) {
             ],
         },
         f = ["fish", "bash", "zsh", "sh", "csh", "ksh", "tcsh", "dash", "scsh"],
-        _ = e.SHEBANG({
+        p = e.SHEBANG({
             binary: `(${f.join("|")})`,
             relevance: 10,
         }),
-        p = {
+        _ = {
             className: "function",
             begin: /\w[\w\d_]*\s*\(\s*\)\s*\{/,
             returnBegin: !0,
             contains: [e.inherit(e.TITLE_MODE, { begin: /\w[\w\d_]*/ })],
             relevance: 0,
         },
-        h = { match: /(\/[a-z._-]+)+/ };
+        m = { match: /(\/[a-z._-]+)+/ };
     return {
         name: "Bash",
         aliases: ["sh", "zsh"],
@@ -316,6 +316,6 @@ e.exports = function (e) {
                 "yes",
             ],
         },
-        contains: [_, e.SHEBANG(), p, d, a, o, h, s, l, c, u, n],
+        contains: [p, e.SHEBANG(), _, d, a, o, m, s, l, c, u, n],
     };
 };

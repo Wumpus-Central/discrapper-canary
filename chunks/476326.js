@@ -1,6 +1,6 @@
 n.d(t, {
     BS: () => f,
-    ZP: () => _,
+    ZP: () => p,
     ow: () => u,
     rG: () => d,
 }),
@@ -33,7 +33,7 @@ function d(e) {
 var f = (function (e) {
     return (e[(e.FILE_ATTACHMENT = 0)] = "FILE_ATTACHMENT"), (e[(e.IMAGE_PICKER = 1)] = "IMAGE_PICKER"), e;
 })({});
-class _ extends r.EventEmitter {
+class p extends r.EventEmitter {
     cancel() {}
     resetState() {
         return this;

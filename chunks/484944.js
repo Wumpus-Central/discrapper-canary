@@ -1,31 +1,31 @@
-n.d(t, { q: () => d });
-var u = n(24156),
-    r = n(473749),
+n.d(t, { q: () => c });
+var r = n(24156),
+    l = n(473749),
     i = n(752689),
     o = n(447770),
     a = n(159447),
     s = n(112683);
-function d(e, t, n) {
-    let { isDisabled: d } = e,
-        f = (0, i.Me)(),
-        l = (0, i.Me)(),
-        c = (0, s.Av)(),
-        p = (0, r.useRef)(null),
-        x = (0, r.useCallback)(() => {
+function c(e, t, n) {
+    let { isDisabled: c } = e,
+        u = (0, i.Me)(),
+        d = (0, i.Me)(),
+        f = (0, s.Av)(),
+        p = (0, l.useRef)(null),
+        b = (0, l.useCallback)(() => {
             (p.current = requestAnimationFrame(() => {
                 n.current && n.current.setAttribute("hidden", "until-found");
             })),
-                (0, u.flushSync)(() => {
+                (0, r.flushSync)(() => {
                     t.toggle();
                 });
         }, [n, t]);
-    (0, o.z)(n, "beforematch", x);
-    let h = (0, r.useRef)(null);
+    (0, o.z)(n, "beforematch", b);
+    let y = (0, l.useRef)(null);
     return (
         (0, a.b)(() => {
-            if ((p.current && cancelAnimationFrame(p.current), n.current && !d && !c)) {
+            if ((p.current && cancelAnimationFrame(p.current), n.current && !c && !f)) {
                 let e = n.current;
-                null == h.current || "function" != typeof e.getAnimations
+                null == y.current || "function" != typeof e.getAnimations
                     ? t.isExpanded
                         ? (e.removeAttribute("hidden"),
                           e.style.setProperty("--disclosure-panel-width", "auto"),
@@ -33,7 +33,7 @@ function d(e, t, n) {
                         : (e.setAttribute("hidden", "until-found"),
                           e.style.setProperty("--disclosure-panel-width", "0px"),
                           e.style.setProperty("--disclosure-panel-height", "0px"))
-                    : t.isExpanded !== h.current &&
+                    : t.isExpanded !== y.current &&
                       (t.isExpanded
                           ? (e.removeAttribute("hidden"),
                             e.style.setProperty("--disclosure-panel-width", e.scrollWidth + "px"),
@@ -52,10 +52,10 @@ function d(e, t, n) {
                             Promise.all(e.getAnimations().map((e) => e.finished))
                                 .then(() => e.setAttribute("hidden", "until-found"))
                                 .catch(() => {}))),
-                    (h.current = t.isExpanded);
+                    (y.current = t.isExpanded);
             }
-        }, [d, n, t.isExpanded, c]),
-        (0, r.useEffect)(
+        }, [c, n, t.isExpanded, f]),
+        (0, l.useEffect)(
             () => () => {
                 p.current && cancelAnimationFrame(p.current);
             },
@@ -63,23 +63,23 @@ function d(e, t, n) {
         ),
         {
             buttonProps: {
-                id: f,
+                id: u,
                 "aria-expanded": t.isExpanded,
-                "aria-controls": l,
+                "aria-controls": d,
                 onPress: (e) => {
-                    d || "keyboard" === e.pointerType || t.toggle();
+                    c || "keyboard" === e.pointerType || t.toggle();
                 },
-                isDisabled: d,
+                isDisabled: c,
                 onPressStart(e) {
-                    "keyboard" !== e.pointerType || d || t.toggle();
+                    "keyboard" !== e.pointerType || c || t.toggle();
                 },
             },
             panelProps: {
-                id: l,
+                id: d,
                 role: "group",
-                "aria-labelledby": f,
+                "aria-labelledby": u,
                 "aria-hidden": !t.isExpanded,
-                hidden: c || d ? d || !t.isExpanded : void 0,
+                hidden: f || c ? c || !t.isExpanded : void 0,
             },
         }
     );

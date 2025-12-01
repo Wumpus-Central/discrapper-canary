@@ -1,4 +1,4 @@
-n.d(t, { default: () => j }), n(388685), n(953529), n(539854);
+n.d(t, { default: () => x }), n(388685), n(953529), n(539854);
 var i = n(54381),
     r = n(473749),
     l = n(793030),
@@ -42,7 +42,7 @@ function _(e) {
     }
     return e;
 }
-function x(e, t) {
+function O(e, t) {
     if (null == e) return {};
     var n,
         i,
@@ -62,9 +62,9 @@ function x(e, t) {
     }
     return r;
 }
-function j(e) {
+function x(e) {
     var { channelId: t } = e,
-        n = x(e, ["channelId"]);
+        n = O(e, ["channelId"]);
     let l = (0, a.e7)([d.Z], () => d.Z.getChannel(t), [t]),
         o = (0, a.e7)([p.Z], () => p.Z.getGuild(null == l ? void 0 : l.getGuildId()));
     return (r.useEffect(() => {
@@ -73,7 +73,7 @@ function j(e) {
     null == l || null == o)
         ? null
         : (0, i.jsx)(
-              O,
+              j,
               _(
                   {
                       guild: o,
@@ -83,23 +83,23 @@ function j(e) {
               ),
           );
 }
-function O(e) {
+function j(e) {
     var t,
         n,
         { guild: a, channel: d, onClose: p, newChannel: h, inSettings: y } = e,
-        j = x(e, ["guild", "channel", "onClose", "newChannel", "inSettings"]);
-    let [O, E] = r.useState(""),
+        x = O(e, ["guild", "channel", "onClose", "newChannel", "inSettings"]);
+    let [j, E] = r.useState(""),
         [S, P] = r.useState({}),
         [I, Z] = r.useState(!1),
         [T, N] = r.useState(null),
         A = r.useRef(null),
-        { roles: w, members: M, getRichTag: R } = (0, g.Q)(a, d, d.accessPermissions, O),
+        { roles: w, members: M, getRichTag: R } = (0, g.Q)(a, d, d.accessPermissions, j),
         L = m.Z.useSections({
             roles: w,
             members: M,
         }),
-        k = h && 0 === Object.keys(S).length;
-    async function D() {
+        D = h && 0 === Object.keys(S).length;
+    async function k() {
         if (null == d || 0 === Object.keys(S).length) return void p();
         Z(!0);
         try {
@@ -127,7 +127,7 @@ function O(e) {
     let U = (0, u.zi)(d.type) ? o.W4G : o.gjC;
     return (0, i.jsx)(m.Z.Provider, {
         listRef: A,
-        query: O,
+        query: j,
         setQuery: E,
         pendingAdditions: S,
         setPendingAdditions: P,
@@ -136,7 +136,7 @@ function O(e) {
         getRichTag: R,
         children: (0, i.jsx)(
             l.Modal,
-            ((t = _({}, j)),
+            ((t = _({}, x)),
             (n = n =
                 {
                     title: C.intl.string(C.t.dMJ3Y6),
@@ -187,7 +187,7 @@ function O(e) {
                         renderRow: m.Z.renderRow,
                         sections: L,
                     },
-                    actions: k
+                    actions: D
                         ? [
                               {
                                   variant: "secondary",
@@ -204,7 +204,7 @@ function O(e) {
                               {
                                   variant: "primary",
                                   text: C.intl.string(C.t.i4jeWR),
-                                  onClick: D,
+                                  onClick: k,
                                   loading: I,
                               },
                           ],

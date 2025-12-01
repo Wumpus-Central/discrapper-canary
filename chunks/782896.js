@@ -7,10 +7,10 @@ var r = n(54381),
     s = n(430824),
     c = n(914010),
     u = n(797670),
-    d = n(361742),
-    p = n(388032),
+    d = n(779334),
+    f = n(388032),
     h = n(906530);
-function f(e) {
+function p(e) {
     let { children: t } = e;
     return (0, r.jsx)(a.ZP, {
         className: h.facepileItemContainer,
@@ -51,7 +51,7 @@ function g(e) {
                 (0, r.jsx)(o.Text, {
                     variant: "text-xs/medium",
                     color: "text-secondary",
-                    children: p.intl.format(d.default.bAzBIf, { numServers: n }),
+                    children: f.intl.format(d.default.bAzBIf, { numServers: n }),
                 }),
         ],
     });
@@ -87,7 +87,7 @@ function m(e) {
                   };
         }, [m, n]);
     return (0, r.jsx)(o.jSM, {
-        "aria-label": p.intl.string(d.default.TG0QsS),
+        "aria-label": f.intl.string(d.default.TG0QsS),
         text: (0, r.jsx)(g, {
             guilds: y,
             numTruncated: O,
@@ -98,7 +98,7 @@ function m(e) {
             children: [
                 b.map((e) =>
                     (0, r.jsx)(
-                        f,
+                        p,
                         {
                             children: (0, r.jsx)(u.V, {
                                 guild: e,
@@ -109,7 +109,7 @@ function m(e) {
                     ),
                 ),
                 _ > 0 &&
-                    (0, r.jsx)(f, {
+                    (0, r.jsx)(p, {
                         children: (0, r.jsxs)(o.Text, {
                             className: h.textItem,
                             color: "text-secondary",

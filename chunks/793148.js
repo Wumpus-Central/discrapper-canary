@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r,
     i = n(54381),
     a = n(473749),
@@ -21,8 +21,8 @@ function f(e, t, n) {
         e
     );
 }
-let _ = 150;
-class p extends (r = a.PureComponent) {
+let p = 150;
+class _ extends (r = a.PureComponent) {
     componentDidMount() {
         this.updateMediaBar();
     }
@@ -43,16 +43,16 @@ class p extends (r = a.PureComponent) {
                 sliderClassName: a,
                 currentWindow: o,
                 muted: f,
-                minValue: p,
-                maxValue: h,
-                value: m,
+                minValue: _,
+                maxValue: m,
+                value: h,
                 onVolumeShow: g,
                 onVolumeHide: E,
             } = this.props,
             { hovered: b, focused: y, dragging: O } = this.state,
             v = l.gj8;
         return (
-            f || m === p ? (v = l.OyP) : m < h / 2 && (v = l.X2j),
+            f || h === _ ? (v = l.OyP) : h < m / 2 && (v = l.X2j),
             (0, i.jsxs)("div", {
                 className: s()(n, d.container),
                 onMouseEnter: () => {
@@ -62,7 +62,7 @@ class p extends (r = a.PureComponent) {
                     clearTimeout(this._hoverTimeout),
                         (this._hoverTimeout = setTimeout(() => {
                             this.setState({ hovered: !1 }), null == E || E();
-                        }, _));
+                        }, p));
                 },
                 onBlur: () => this.setState({ focused: !1 }),
                 onKeyDown: this.handleKeyDown,
@@ -74,12 +74,12 @@ class p extends (r = a.PureComponent) {
                         },
                         onMouseLeave: () => {
                             clearTimeout(this._hoverTimeout),
-                                (this._hoverTimeout = setTimeout(() => this.setState({ hovered: !1 }), _));
+                                (this._hoverTimeout = setTimeout(() => this.setState({ hovered: !1 }), p));
                         },
                         children: (0, i.jsx)(c.Z, {
                             sliderClassName: a,
                             type: c.Z.Types.VOLUME,
-                            value: m / h,
+                            value: h / m,
                             onDrag: this.handleValueChange,
                             onDragStart: this.handleDragStart,
                             onDragEnd: this.handleDragEnd,
@@ -151,9 +151,9 @@ class p extends (r = a.PureComponent) {
             });
     }
 }
-f(p, "defaultProps", {
+f(_, "defaultProps", {
     minValue: 0,
     maxValue: 100,
     handleSize: 16,
 });
-let h = p;
+let m = _;

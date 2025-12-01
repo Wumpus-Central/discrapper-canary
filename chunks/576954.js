@@ -47,36 +47,36 @@ function v(e) {
     });
 }
 function _(e) {
-    let { channelId: t, warningId: _, senderId: x } = e,
-        { isBlocked: j } = (0, a.cj)([p.Z], () => ({ isBlocked: p.Z.isBlocked(x) }), [x]),
-        O = r.useCallback(() => {
+    let { channelId: t, warningId: _, senderId: O } = e,
+        { isBlocked: x } = (0, a.cj)([p.Z], () => ({ isBlocked: p.Z.isBlocked(O) }), [O]),
+        j = r.useCallback(() => {
             (0, h.T)(t, [_]);
         }, [t, _]),
         E = (0, b.C2)(),
         S = r.useCallback(
             (e) => () => {
-                s.Z.blockUser(x, { location: b.zr }).then(() => {
-                    O();
+                s.Z.blockUser(O, { location: b.zr }).then(() => {
+                    j();
                 }),
                     (0, m.qc)({
                         channelId: t,
                         warningId: _,
-                        senderId: x,
+                        senderId: O,
                         warningType: f.pj.STRANGER_DANGER,
                         cta: e,
                     });
             },
-            [O, t, _, x],
+            [j, t, _, O],
         );
     r.useEffect(() => {
         (0, m.MC)(y.rMx.SAFETY_WARNING_VIEWED, {
             channelId: t,
             warningId: _,
-            senderId: x,
+            senderId: O,
             warningType: f.pj.STRANGER_DANGER,
         }),
             c.Z.increment({ name: l.V.SAFETY_WARNING_VIEW });
-    }, [t, _, x]);
+    }, [t, _, O]);
     let P = () => {
             (0, o.ZDy)(async () => {
                 let { default: e } = await n.e("59385").then(n.bind(n, 480884));
@@ -87,7 +87,7 @@ function _(e) {
                         onClose: l,
                         channelId: t,
                         warningId: _,
-                        senderId: x,
+                        senderId: O,
                         description: C.intl.string(C.t.DJMZX6),
                         safetyTipRows: E.map((e, t) =>
                             (0, i.jsx)(
@@ -105,7 +105,7 @@ function _(e) {
                                 (0, i.jsx)(
                                     v,
                                     {
-                                        senderId: x,
+                                        senderId: O,
                                         channelId: t,
                                         warningId: _,
                                     },
@@ -164,14 +164,14 @@ function _(e) {
                         })({}, n)),
                         (s = s =
                             {
-                                userId: x,
+                                userId: O,
                                 confirmBlock: S(e),
                                 onCancel: () => {
                                     null == l || l(),
                                         (0, m.qc)({
                                             channelId: t,
                                             warningId: _,
-                                            senderId: x,
+                                            senderId: O,
                                             warningType: f.pj.STRANGER_DANGER,
                                             cta: r,
                                         });
@@ -197,11 +197,11 @@ function _(e) {
     return (0, i.jsx)(g.Q, {
         channelId: t,
         warningId: _,
-        senderId: x,
+        senderId: O,
         warningType: f.pj.STRANGER_DANGER,
         header: C.intl.string(C.t.iOkDpM),
         description: C.intl.string(C.t.ISUbcM),
-        onDismiss: O,
+        onDismiss: j,
         buttons: [
             {
                 text: C.intl.string(C.t["Qk/c48"]),
@@ -211,13 +211,13 @@ function _(e) {
                         (0, m.qc)({
                             channelId: t,
                             warningId: _,
-                            senderId: x,
+                            senderId: O,
                             warningType: f.pj.STRANGER_DANGER,
                             cta: m.NM.OPEN_MORE_TIPS,
                         });
                 },
             },
-            ...(j
+            ...(x
                 ? []
                 : [
                       {

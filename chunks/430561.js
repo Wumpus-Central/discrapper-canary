@@ -1,11 +1,11 @@
 n.d(t, {
-    GY: () => D,
-    PI: () => I,
-    RT: () => w,
-    XM: () => R,
-    bc: () => T,
-    ls: () => P,
-    xZ: () => S,
+    GY: () => w,
+    PI: () => S,
+    RT: () => D,
+    XM: () => P,
+    bc: () => I,
+    ls: () => R,
+    xZ: () => T,
 }),
     n(388685);
 var r = n(54381),
@@ -18,17 +18,17 @@ var r = n(54381),
     u = n(481060),
     d = n(765250),
     f = n(13245),
-    _ = n(493773),
-    p = n(355863),
-    h = n(444295),
-    m = n(333031),
+    p = n(493773),
+    _ = n(355863),
+    m = n(444295),
+    h = n(333031),
     g = n(610394),
     E = n(618373),
     b = n(620954),
     y = n(985149),
     O = n(388032),
     v = n(962967);
-function I(e) {
+function S(e) {
     let { children: t } = e;
     return (0, r.jsx)("div", {
         className: v.titleWrapper,
@@ -39,10 +39,10 @@ function I(e) {
         }),
     });
 }
-let T = 7000;
-function S(e, t) {
+let I = 7000;
+function T(e, t) {
     return C(
-        (0, s.e7)([p.Z], () => p.Z.getWidget(e), [e]),
+        (0, s.e7)([_.Z], () => _.Z.getWidget(e), [e]),
         t,
     );
 }
@@ -62,7 +62,7 @@ function C(e, t) {
                     a(!1);
                 }, t)));
         }, [t, null == e ? void 0 : e.showExtrasHintTimestamp]),
-        (0, _.ZP)(() => {
+        (0, p.ZP)(() => {
             let n = null == e ? void 0 : e.showExtrasHintTimestamp;
             return (
                 null != n &&
@@ -80,9 +80,9 @@ function C(e, t) {
     );
 }
 let N = 8000;
-function R(e) {
+function P(e) {
     let { children: t, widgetId: n } = e,
-        i = (0, s.e7)([p.Z], () => p.Z.getWidget(n), [n]),
+        i = (0, s.e7)([_.Z], () => _.Z.getWidget(n), [n]),
         a = C(i, N),
         o = () =>
             (0, E.QR)((0, b.Pb)(), O.t["1XA04X"], O.intl.string(O.t.uZZGzf), {
@@ -93,16 +93,16 @@ function R(e) {
     return a
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(m.Z, {
+                  (0, r.jsx)(h.Z, {
                       className: v.titleWrapperWithHint,
                       children: (0, r.jsx)(u.P3F, {
                           className: v.titleWrapperClickable,
                           onClick: () => {
                               null != i &&
                                   (f.Z.setInputLocked(!1, g.Z.getTargetPID()),
-                                  (0, h.Ws)(i.type, {
-                                      type: h.Qu.KEYBIND_HINT,
-                                      value: h.bk.OVERLAY_UNLOCKED,
+                                  (0, m.Ws)(i.type, {
+                                      type: m.Qu.KEYBIND_HINT,
+                                      value: m.bk.OVERLAY_UNLOCKED,
                                   }));
                           },
                           children: (0, r.jsx)(u.Text, {
@@ -124,7 +124,7 @@ function R(e) {
               }),
           });
 }
-function P(e) {
+function R(e) {
     let { onClick: t } = e;
     if ((0, y.Z)()) return null;
     let n = O.intl.string(O.t["3D5yo/"]);
@@ -141,7 +141,7 @@ function P(e) {
         }),
     });
 }
-function D(e) {
+function w(e) {
     let { widgetId: t, showAllStreams: n } = e,
         i = n ? O.intl.string(O.t.q2B3rh) : O.intl.string(O.t.JKGi6o),
         a = () => {
@@ -162,7 +162,7 @@ function D(e) {
               }),
           });
 }
-function w(e) {
+function D(e) {
     let { id: t, pinned: n } = e,
         i = n ? O.intl.string(O.t.cSu80j) : O.intl.string(O.t.cM8Vnm),
         a = (0, y.Z)();

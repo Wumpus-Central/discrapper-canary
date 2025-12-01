@@ -10,10 +10,10 @@ var i = n(120356),
     u = n(304761),
     d = n(313201),
     f = n(320161),
-    _ = n(998502),
-    p = n(388032),
-    h = n(447160);
-function m(e, t, n) {
+    p = n(998502),
+    _ = n(388032),
+    m = n(447160);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
@@ -70,7 +70,7 @@ function y() {
     let t = null === s() || void 0 === s() || null == (e = s().os) ? void 0 : e.toString();
     if (null == t || null == c.Z) return null;
     let n = c.Z.os.release,
-        [r, i, a] = _.ZP.parsedOSRelease;
+        [r, i, a] = p.ZP.parsedOSRelease;
     if (
         (t.includes("Windows 10") && void 0 !== a && a >= 22000 && (t = t.replace("Windows 10", "Windows 11")),
         t.includes("OS X 10.15.7") && void 0 !== r && r >= 20)
@@ -82,38 +82,38 @@ function y() {
 }
 function O(e) {
     var t, n, i, o, s;
-    let { compact: _ = !1 } = e,
-        m = (0, d.Dt)(),
+    let { compact: p = !1 } = e,
+        h = (0, d.Dt)(),
         E = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        O = "470193",
-        v = "b9237c513b1b65a94f4a20064aadcc393225b7cc".substring(0, 7),
-        I = null === c.Z || void 0 === c.Z ? void 0 : c.Z.remoteApp.getVersion(),
-        T = null === c.Z || void 0 === c.Z || null == (t = (n = c.Z.remoteApp).getBuildNumber) ? void 0 : t.call(n),
-        S = null === c.Z || void 0 === c.Z || null == (i = (o = c.Z.remoteApp).getAppArch) ? void 0 : i.call(o),
+        O = "473983",
+        v = "9d2c854e9b7fa7a2a3a3ffa3e833de461a587ee1".substring(0, 7),
+        S = null === c.Z || void 0 === c.Z ? void 0 : c.Z.remoteApp.getVersion(),
+        I = null === c.Z || void 0 === c.Z || null == (t = (n = c.Z.remoteApp).getBuildNumber) ? void 0 : t.call(n),
+        T = null === c.Z || void 0 === c.Z || null == (i = (o = c.Z.remoteApp).getAppArch) ? void 0 : i.call(o),
         A = null == (s = u.C.getCurrentBuildOverride().overrides) ? void 0 : s.discord_web,
         C = y(),
         N = [E, O, "(".concat(v, ")")];
-    return (null != I &&
-        (N.push("Host ".concat(I)), null != S && N.push(S.toLowerCase()), null != T && N.push("(".concat(T, ")"))),
+    return (null != S &&
+        (N.push("Host ".concat(S)), null != T && N.push(T.toLowerCase()), null != I && N.push("(".concat(I, ")"))),
     N.push("Build Override: ".concat(null != A ? A.id : "N/A")),
     null != C && N.push(C),
-    _)
+    p)
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(f.Z, {
                       copyValue: N.join(" "),
-                      text: p.intl.string(p.t["9Al4Qd"]),
+                      text: _.intl.string(_.t["9Al4Qd"]),
                       "aria-label": !1,
                       dataMeticulousIgnore: "true",
                       children: (e) =>
                           (0, r.jsxs)(
                               l.P3F,
                               b(g({}, e), {
-                                  "aria-describedby": m,
-                                  className: a()(h.clickable, h.compact),
+                                  "aria-describedby": h,
+                                  className: a()(m.clickable, m.compact),
                                   children: [
                                       (0, r.jsxs)("div", {
-                                          className: h.compactInfo,
+                                          className: m.compactInfo,
                                           "data-mtctest-ignore": "true",
                                           children: [
                                               (0, r.jsxs)(l.Text, {
@@ -126,26 +126,26 @@ function O(e) {
                                                       O,
                                                       " ",
                                                       (0, r.jsxs)("span", {
-                                                          className: h.versionHash,
+                                                          className: m.versionHash,
                                                           children: ["(", v, ")"],
                                                       }),
                                                   ],
                                               }),
-                                              null != I &&
+                                              null != S &&
                                                   (0, r.jsxs)(l.Text, {
                                                       tag: "span",
                                                       variant: "text-xxs/normal",
                                                       color: "text-muted",
                                                       children: [
-                                                          I,
-                                                          null != S &&
-                                                              (0, r.jsxs)("span", {
-                                                                  className: h.appArch,
-                                                                  children: [" ", S.toLowerCase()],
-                                                              }),
+                                                          S,
                                                           null != T &&
                                                               (0, r.jsxs)("span", {
-                                                                  children: [" (", T, ")"],
+                                                                  className: m.appArch,
+                                                                  children: [" ", T.toLowerCase()],
+                                                              }),
+                                                          null != I &&
+                                                              (0, r.jsxs)("span", {
+                                                                  children: [" (", I, ")"],
                                                               }),
                                                       ],
                                                   }),
@@ -157,7 +157,7 @@ function O(e) {
                                               variant: "text-xxs/normal",
                                               color: "text-muted",
                                               children: (0, r.jsxs)("span", {
-                                                  className: h.versionHash,
+                                                  className: m.versionHash,
                                                   children: ["Build Override: ", A.id],
                                               }),
                                           }),
@@ -166,8 +166,8 @@ function O(e) {
                           ),
                   }),
                   (0, r.jsx)(l.nn4, {
-                      id: m,
-                      children: p.intl.string(p.t["9Al4Qd"]),
+                      id: h,
+                      children: _.intl.string(_.t["9Al4Qd"]),
                   }),
               ],
           })
@@ -175,22 +175,22 @@ function O(e) {
               children: [
                   (0, r.jsx)(f.Z, {
                       copyValue: N.join(" "),
-                      text: p.intl.string(p.t["9Al4Qd"]),
+                      text: _.intl.string(_.t["9Al4Qd"]),
                       "aria-label": !1,
                       dataMeticulousIgnore: "true",
                       children: (e) =>
                           (0, r.jsx)(
                               l.P3F,
                               b(g({}, e), {
-                                  "aria-describedby": m,
-                                  className: a()(h.clickable, h.compact),
+                                  "aria-describedby": h,
+                                  className: a()(m.clickable, m.compact),
                                   children: (0, r.jsxs)("div", {
-                                      className: h.info,
+                                      className: m.info,
                                       "data-mtctest-ignore": "true",
                                       children: [
                                           (0, r.jsxs)(l.Text, {
                                               tag: "span",
-                                              className: h.line,
+                                              className: m.line,
                                               variant: "text-xs/normal",
                                               color: "text-muted",
                                               children: [
@@ -199,7 +199,7 @@ function O(e) {
                                                   O,
                                                   " ",
                                                   (0, r.jsxs)("span", {
-                                                      className: h.versionHash,
+                                                      className: m.versionHash,
                                                       children: ["(", v, ")"],
                                                   }),
                                               ],
@@ -208,35 +208,35 @@ function O(e) {
                                           null != A &&
                                               (0, r.jsx)(l.Text, {
                                                   tag: "span",
-                                                  className: h.line,
+                                                  className: m.line,
                                                   variant: "text-xs/normal",
                                                   color: "text-muted",
                                                   children: (0, r.jsxs)("span", {
-                                                      className: h.versionHash,
+                                                      className: m.versionHash,
                                                       children: ["Build Override: ", A.id],
                                                   }),
                                               }),
-                                          null != I
+                                          null != S
                                               ? (0, r.jsxs)(r.Fragment, {
                                                     children: [
                                                         (0, r.jsxs)(l.Text, {
                                                             tag: "span",
-                                                            className: h.line,
+                                                            className: m.line,
                                                             variant: "text-xs/normal",
                                                             color: "text-muted",
                                                             children: [
                                                                 "Host ",
-                                                                I,
+                                                                S,
                                                                 " ",
-                                                                null != S
-                                                                    ? (0, r.jsxs)("span", {
-                                                                          className: h.appArch,
-                                                                          children: [S.toLowerCase(), " "],
-                                                                      })
-                                                                    : null,
                                                                 null != T
                                                                     ? (0, r.jsxs)("span", {
-                                                                          children: ["(", T, ")"],
+                                                                          className: m.appArch,
+                                                                          children: [T.toLowerCase(), " "],
+                                                                      })
+                                                                    : null,
+                                                                null != I
+                                                                    ? (0, r.jsxs)("span", {
+                                                                          children: ["(", I, ")"],
                                                                       })
                                                                     : null,
                                                             ],
@@ -248,7 +248,7 @@ function O(e) {
                                           null != C
                                               ? (0, r.jsx)(l.Text, {
                                                     tag: "span",
-                                                    className: a()(h.line, h.os),
+                                                    className: a()(m.line, m.os),
                                                     variant: "text-xs/normal",
                                                     color: "text-muted",
                                                     children: C,
@@ -260,8 +260,8 @@ function O(e) {
                           ),
                   }),
                   (0, r.jsx)(l.nn4, {
-                      id: m,
-                      children: p.intl.string(p.t["9Al4Qd"]),
+                      id: h,
+                      children: _.intl.string(_.t["9Al4Qd"]),
                   }),
               ],
           });

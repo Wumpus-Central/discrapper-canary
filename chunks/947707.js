@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(54381);
 n(473749);
 var i = n(681715),
@@ -82,7 +82,7 @@ function f(e) {
         ],
     });
 }
-function _(e) {
+function p(e) {
     var { tooltipText: t } = e,
         n = u(e, ["tooltipText"]);
     return (0, r.jsx)(i.u, {
@@ -91,6 +91,6 @@ function _(e) {
         children: (0, r.jsx)(f, c({}, n)),
     });
 }
-function p(e) {
-    return "tooltipText" in e && null != e.tooltipText ? (0, r.jsx)(_, c({}, e)) : (0, r.jsx)(f, c({}, e));
+function _(e) {
+    return "tooltipText" in e && null != e.tooltipText ? (0, r.jsx)(p, c({}, e)) : (0, r.jsx)(f, c({}, e));
 }

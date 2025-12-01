@@ -9,33 +9,33 @@ var r = n(54381),
     u = n(283066),
     d = n(981631),
     f = n(185923),
-    _ = n(388032),
-    p = n(41356);
-let h = {
+    p = n(388032),
+    _ = n(41356);
+let m = {
         section: d.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
         openPopoutType: "gift_effect_emoji_picker",
     },
-    m = f.Hz.GIFT;
+    h = f.Hz.GIFT;
 function g(e) {
     let { setEmojiConfetti: t, emojiConfetti: n } = e,
         [a, d] = i.useState(!1),
         f = i.useRef(null),
         g = (0, u.Z)({ location: "GiftEmoji" }),
-        E = o()(p.text, g && p.refresh),
+        E = o()(_.text, g && _.refresh),
         b = (e) =>
             (0, r.jsxs)("div", {
-                className: p.customGiftContent,
+                className: _.customGiftContent,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: p.customGiftHeader,
+                        className: _.customGiftHeader,
                         children: [
                             (0, r.jsx)(l.Text, {
                                 variant: "text-md/bold",
-                                children: _.intl.string(_.t.Hl2Ige),
+                                children: p.intl.string(p.t.Hl2Ige),
                             }),
                             (0, r.jsx)(l.Text, {
                                 variant: "text-sm/normal",
-                                children: _.intl.string(_.t.stGFA3),
+                                children: p.intl.string(p.t.stGFA3),
                             }),
                         ],
                     }),
@@ -56,34 +56,34 @@ function g(e) {
             let { closePopout: t } = e;
             return (0, r.jsx)(l.VqE, {
                 children: (0, r.jsx)(c.Z, {
-                    analyticsOverride: h,
+                    analyticsOverride: m,
                     closePopout: t,
                     onSelectEmoji: y,
                     wrapper: "div",
-                    pickerIntention: m,
+                    pickerIntention: h,
                     renderHeader: b,
-                    headerClassName: p.emojiHeader,
-                    className: p.emojiList,
-                    listHeaderClassName: p.emojiList,
-                    categoryListClassName: p.categoryList,
+                    headerClassName: _.emojiHeader,
+                    className: _.emojiList,
+                    listHeaderClassName: _.emojiList,
+                    categoryListClassName: _.categoryList,
                     searchProps: { accessory: (0, r.jsx)(r.Fragment, {}) },
                 }),
             });
         },
         children: () =>
             (0, r.jsx)(l.P3F, {
-                className: o()(p.container, g && p.refresh),
+                className: o()(_.container, g && _.refresh),
                 onClick: () => d(!0),
                 innerRef: f,
                 children:
                     (null == n ? void 0 : n.name) == null
                         ? (0, r.jsxs)("div", {
-                              className: p.contentContainer,
+                              className: _.contentContainer,
                               children: [
                                   (0, r.jsx)(l.EO4, {
                                       size: "custom",
                                       color: g ? s.Z.colors.ICON_PRIMARY : s.Z.colors.WHITE,
-                                      className: p.emojiIcon,
+                                      className: _.emojiIcon,
                                       width: 14,
                                       height: 14,
                                   }),
@@ -91,12 +91,12 @@ function g(e) {
                                       className: E,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
-                                      children: _.intl.string(_.t.Hl2Ige),
+                                      children: p.intl.string(p.t.Hl2Ige),
                                   }),
                               ],
                           })
                         : (0, r.jsxs)("div", {
-                              className: p.contentContainer,
+                              className: _.contentContainer,
                               children: [
                                   (0, r.jsx)(l.Text, {
                                       className: E,

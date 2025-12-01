@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r,
     i = n(54381),
     a = n(473749),
@@ -23,11 +23,11 @@ function d(e, t, n) {
 var f = (function (e) {
     return (e.SINGLE_AVATAR = "1"), (e.MULTIPLE_AVATAR = "2"), e;
 })(f || {});
-let _ = {
+let p = {
     [l.EFr.SIZE_32]: u.avatarSmall,
     [l.EFr.SIZE_40]: u.avatarLarge,
 };
-class p extends (r = a.Component) {
+class _ extends (r = a.Component) {
     render() {
         let { type: e, avatarSize: t, className: n, childrenClassName: r, doNotAnimate: a } = this.props;
         return "2" === e
@@ -36,9 +36,9 @@ class p extends (r = a.Component) {
                   children: [
                       (0, i.jsxs)(c.Z, {
                           children: [
-                              (0, i.jsx)("div", { className: s()(u.placeholderAvatar, _[t], u.avatarMasked) }),
-                              (0, i.jsx)("div", { className: s()(u.placeholderAvatar, _[t], u.avatarMasked) }),
-                              (0, i.jsx)("div", { className: s()(u.placeholderAvatar, _[t]) }),
+                              (0, i.jsx)("div", { className: s()(u.placeholderAvatar, p[t], u.avatarMasked) }),
+                              (0, i.jsx)("div", { className: s()(u.placeholderAvatar, p[t], u.avatarMasked) }),
+                              (0, i.jsx)("div", { className: s()(u.placeholderAvatar, p[t]) }),
                           ],
                       }),
                       (0, i.jsx)(c.Z, {
@@ -51,7 +51,7 @@ class p extends (r = a.Component) {
             : (0, i.jsxs)(c.Z, {
                   className: s()(u.placeholder, !a && u.placeholderAnimated, n),
                   children: [
-                      (0, i.jsx)("div", { className: s()(u.placeholderAvatar, _[t], r) }),
+                      (0, i.jsx)("div", { className: s()(u.placeholderAvatar, p[t], r) }),
                       (0, i.jsx)(c.Z, {
                           grow: 1,
                           className: s()(u.placeholderUsername, r),
@@ -64,5 +64,5 @@ class p extends (r = a.Component) {
         super(...e), d(this, "placeholderMaxWidth", "".concat(Math.floor(40 * Math.random()) + 40, "%"));
     }
 }
-d(p, "defaultProps", { type: "1" }), d(p, "Types", f);
-let h = p;
+d(_, "defaultProps", { type: "1" }), d(_, "Types", f);
+let m = _;

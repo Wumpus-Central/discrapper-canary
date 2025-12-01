@@ -1,4 +1,4 @@
-n.d(t, { W: () => p });
+n.d(t, { W: () => _ });
 var r = n(455419),
     i = n(478906),
     a = n(21814),
@@ -9,12 +9,12 @@ var r = n(455419),
     u = n(497448),
     d = n(90809),
     f = n(218769);
-function _(e) {
+function p(e) {
     return e && e.__esModule ? e.default : e;
 }
-function p(e, t, n) {
-    var p, h;
-    let m,
+function _(e, t, n) {
+    var _, m;
+    let h,
         g,
         { node: E } = e,
         b = E.props.allowsSorting,
@@ -34,13 +34,13 @@ function p(e, t, n) {
             },
             ref: n,
         }),
-        { focusableProps: I } = (0, u.kc)({}, n),
-        T = (null == (p = t.sortDescriptor) ? void 0 : p.column) === E.key,
-        S = null == (h = t.sortDescriptor) ? void 0 : h.direction;
-    E.props.allowsSorting && !(0, a.Dt)() && (g = T ? S : "none");
-    let A = (0, f.q)(_(i.Z), "@react-aria/table");
-    b && ((m = `${A.format("sortable")}`), T && S && (0, a.Dt)() && (m = `${m}, ${A.format(S)}`));
-    let C = (0, o.P)(m),
+        { focusableProps: S } = (0, u.kc)({}, n),
+        I = (null == (_ = t.sortDescriptor) ? void 0 : _.column) === E.key,
+        T = null == (m = t.sortDescriptor) ? void 0 : m.direction;
+    E.props.allowsSorting && !(0, a.Dt)() && (g = I ? T : "none");
+    let A = (0, f.q)(p(i.Z), "@react-aria/table");
+    b && ((h = `${A.format("sortable")}`), I && T && (0, a.Dt)() && (h = `${h}, ${A.format(T)}`));
+    let C = (0, o.P)(h),
         N = 0 === t.collection.size;
     return (
         (0, l.useEffect)(() => {
@@ -48,7 +48,7 @@ function p(e, t, n) {
         }, [N, t.selectionManager, E.key]),
         {
             columnHeaderProps: {
-                ...(0, s.d)(I, y, v, C, N ? { tabIndex: -1 } : null),
+                ...(0, s.d)(S, y, v, C, N ? { tabIndex: -1 } : null),
                 role: "columnheader",
                 id: (0, r.z9)(t, E.key),
                 "aria-colspan": E.colSpan && E.colSpan > 1 ? E.colSpan : void 0,

@@ -8,46 +8,46 @@ var r = n(56135),
     u = 2,
     d = "[object Boolean]",
     f = "[object Date]",
-    _ = "[object Error]",
-    p = "[object Map]",
-    h = "[object Number]",
-    m = "[object RegExp]",
+    p = "[object Error]",
+    _ = "[object Map]",
+    m = "[object Number]",
+    h = "[object RegExp]",
     g = "[object Set]",
     E = "[object String]",
     b = "[object Symbol]",
     y = "[object ArrayBuffer]",
     O = "[object DataView]",
     v = r ? r.prototype : void 0,
-    I = v ? v.valueOf : void 0;
-e.exports = function (e, t, n, r, v, T, S) {
+    S = v ? v.valueOf : void 0;
+e.exports = function (e, t, n, r, v, I, T) {
     switch (n) {
         case O:
             if (e.byteLength != t.byteLength || e.byteOffset != t.byteOffset) break;
             (e = e.buffer), (t = t.buffer);
         case y:
-            if (e.byteLength != t.byteLength || !T(new i(e), new i(t))) break;
+            if (e.byteLength != t.byteLength || !I(new i(e), new i(t))) break;
             return !0;
         case d:
         case f:
-        case h:
-            return a(+e, +t);
-        case _:
-            return e.name == t.name && e.message == t.message;
         case m:
+            return a(+e, +t);
+        case p:
+            return e.name == t.name && e.message == t.message;
+        case h:
         case E:
             return e == t + "";
-        case p:
+        case _:
             var A = s;
         case g:
             var C = r & c;
             if ((A || (A = l), e.size != t.size && !C)) break;
-            var N = S.get(e);
+            var N = T.get(e);
             if (N) return N == t;
-            (r |= u), S.set(e, t);
-            var R = o(A(e), A(t), r, v, T, S);
-            return S.delete(e), R;
+            (r |= u), T.set(e, t);
+            var P = o(A(e), A(t), r, v, I, T);
+            return T.delete(e), P;
         case b:
-            if (I) return I.call(e) == I.call(t);
+            if (S) return S.call(e) == S.call(t);
     }
     return !1;
 };

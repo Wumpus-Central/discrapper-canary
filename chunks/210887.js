@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k });
+n.d(t, { Z: () => M });
 var r,
     i = n(442837),
     a = n(780384),
@@ -9,10 +9,10 @@ var r,
     u = n(49214),
     d = n(238514),
     f = n(740492),
-    _ = n(581883),
-    p = n(874893),
-    h = n(981631);
-function m(e, t, n) {
+    p = n(581883),
+    _ = n(874893),
+    m = n(981631);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
@@ -65,26 +65,26 @@ function b(e, t) {
     );
 }
 let y = 0,
-    O = p.K2,
+    O = _.K2,
     v = (0, l.Z)(),
-    I = O[v],
-    T = null;
-function S() {
-    return __OVERLAY__ || null == T ? (0, c.Z)(v, O, I) : T;
+    S = O[v],
+    I = null;
+function T() {
+    return __OVERLAY__ || null == I ? (0, c.Z)(v, O, S) : I;
 }
 function A() {
-    let e = S();
-    return e !== I && ((I = e), (0, u.Z)(I), !0);
+    let e = T();
+    return e !== S && ((S = e), (0, u.Z)(S), !0);
 }
 class C extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         (null == e ? void 0 : e.theme) != null &&
             ((y = 1),
-            (I = e.theme),
-            (0, u.Z)(I),
+            (S = e.theme),
+            (0, u.Z)(S),
             null != e.preferences && (O = e.preferences),
-            (0, a.wj)(I) && (O[p.zd.DARK] = I)),
-            this.waitFor(f.ZP, d.Z, _.Z, s.Z);
+            (0, a.wj)(S) && (O[_.zd.DARK] = S)),
+            this.waitFor(f.ZP, d.Z, p.Z, s.Z);
     }
     getState() {
         return {
@@ -94,7 +94,7 @@ class C extends (r = i.ZP.PersistedStore) {
         };
     }
     get theme() {
-        return I;
+        return S;
     }
     get systemTheme() {
         return v;
@@ -104,52 +104,52 @@ class C extends (r = i.ZP.PersistedStore) {
     }
 }
 function N() {
-    return 0 === y && ((O = b(g({}, O), { [p.zd.DARK]: h.BRd.DARKER })), (y = 1)), A();
+    return 0 === y && ((O = b(g({}, O), { [_.zd.DARK]: m.BRd.DARKER })), (y = 1)), A();
 }
-function R() {
-    return (0, a.ap)(S());
+function P() {
+    return (0, a.ap)(T());
 }
-function P(e) {
-    return (T = null), !e.isSwitchingAccount && I !== h.BRd.DARK && ((I = h.BRd.DARK), (0, u.Z)(I), A());
+function R(e) {
+    return (I = null), !e.isSwitchingAccount && S !== m.BRd.DARK && ((S = m.BRd.DARK), (0, u.Z)(S), A());
 }
-function D(e) {
+function w(e) {
     let { systemTheme: t } = e;
     return (v = t), A();
 }
-function w(e) {
+function D(e) {
     return (O = g({}, O, e.preferences)), A();
 }
-function L(e) {
-    return (T = e.theme), A();
+function x(e) {
+    return (I = e.theme), A();
 }
-function x() {
-    return (T = null), A();
+function L() {
+    return (I = null), A();
 }
-function M() {
+function j() {
     return A();
 }
-m(C, "displayName", "ThemeStore"),
-    m(C, "persistKey", "ThemeStore"),
-    m(C, "migrations", [
+h(C, "displayName", "ThemeStore"),
+    h(C, "persistKey", "ThemeStore"),
+    h(C, "migrations", [
         (e) => {
             let t = e.theme;
             return "amoled" === t && (t = "midnight"), b(g({}, e), { theme: t });
         },
         (e) => e,
     ]);
-let k = new C(o.Z, {
+let M = new C(o.Z, {
     CACHE_LOADED: A,
     CONNECTION_OPEN: N,
-    LOGOUT: P,
+    LOGOUT: R,
     OVERLAY_INITIALIZE: A,
     SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: A,
     UNSYNCED_USER_SETTINGS_UPDATE: A,
     USER_SETTINGS_PROTO_UPDATE: A,
     RESET_PREVIEW_CLIENT_THEME: A,
-    SYSTEM_THEME_CHANGE: D,
-    ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: R,
-    UPDATE_THEME_PREFERENCES: w,
-    SET_THEME_OVERRIDE: L,
-    CLEAR_THEME_OVERRIDE: x,
-    REFRESH_THEME: M,
+    SYSTEM_THEME_CHANGE: w,
+    ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: P,
+    UPDATE_THEME_PREFERENCES: D,
+    SET_THEME_OVERRIDE: x,
+    CLEAR_THEME_OVERRIDE: L,
+    REFRESH_THEME: j,
 });

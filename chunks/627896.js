@@ -1,21 +1,21 @@
-n.d(t, { x: () => l }), n(388685);
-var a = n(473749);
-function l(e, t, n) {
-    let l = a.useRef(null),
-        [s, r] = a.useState(!1),
-        i = a.useCallback(() => {
+t.d(n, { x: () => l }), t(388685);
+var s = t(473749);
+function l(e, n, t) {
+    let l = s.useRef(null),
+        [a, r] = s.useState(!1),
+        i = s.useCallback(() => {
             if (e && null !== l.current) {
-                var n;
-                r((null == (n = l.current) ? void 0 : n.offsetHeight) > 2.5 * t);
+                var t;
+                r((null == (t = l.current) ? void 0 : t.offsetHeight) > 2.5 * n);
             }
-        }, [r, e, t]);
+        }, [r, e, n]);
     return (
-        a.useLayoutEffect(() => {
+        s.useLayoutEffect(() => {
             i();
-        }, [i, e, n]),
+        }, [i, e, t]),
         {
             postTitleRef: l,
-            isNewBadgeOverflow: s,
+            isNewBadgeOverflow: a,
         }
     );
 }

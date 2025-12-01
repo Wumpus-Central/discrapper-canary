@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381);
 n(473749);
 var i = n(481060),
@@ -10,7 +10,7 @@ var i = n(481060),
     u = n(981631),
     d = n(388032),
     f = n(104844);
-function _(e) {
+function p(e) {
     var t;
     let { shopLink: n, skuId: a, onClick: c } = e,
         { product: u } = (0, o.T)(a);
@@ -33,7 +33,7 @@ function _(e) {
         a,
     );
 }
-function p(e) {
+function _(e) {
     return {
         react(t, n, i) {
             let o = i.noStyleAndInteraction
@@ -43,7 +43,7 @@ function p(e) {
                           c.default.track(u.rMx.SHOP_LINK_MENTION_CLICKED, { sku_id: t.skuId }),
                           (0, a.Z)(t.shopLink);
                   };
-            return (0, r.jsx)(_, {
+            return (0, r.jsx)(p, {
                 shopLink: t.shopLink,
                 skuId: t.skuId,
                 onClick: o,

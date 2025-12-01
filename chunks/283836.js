@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => p,
-    q: () => _,
+    Z: () => _,
+    q: () => p,
 });
 var r = n(473749),
     i = n(442837),
@@ -12,9 +12,9 @@ var r = n(473749),
     u = n(509545),
     d = n(238),
     f = n(55563);
-function _(e) {
+function p(e) {
     r.useEffect(() => {
-        p(e);
+        _(e);
     }, [e]);
     let t = (0, i.Wu)([d.Z, f.Z, u.Z], () => {
             let t = d.Z.getStoreLayout(e);
@@ -29,6 +29,6 @@ function _(e) {
         [t, n],
     );
 }
-function p(e) {
+function _(e) {
     (0, a.k)(e), (0, s.oJ)(e), c.default.isAuthenticated() && (0, o.yD)(e, !1);
 }

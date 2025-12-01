@@ -21,9 +21,9 @@ function f(e, t, n) {
         e
     );
 }
-let _ = 3,
-    p = 180000;
-function h() {
+let p = 3,
+    _ = 180000;
+function m() {
     let e = c.Z.getCurrentClientVoiceChannelId(null);
     if (null == e) return !1;
     let t = l.Z.getChannel(e);
@@ -32,11 +32,11 @@ function h() {
         null == s.ZP.getSelfEmbeddedActivityForChannel(e)
     );
 }
-function m() {
-    if (!h()) return;
+function h() {
+    if (!m()) return;
     let e = c.Z.getCurrentClientVoiceChannelId(null);
     null != e &&
-        (i.Z.sendBotMessage(e, d.intl.formatToPlainString(d.t.XYof5G, { number: _ })),
+        (i.Z.sendBotMessage(e, d.intl.formatToPlainString(d.t.XYof5G, { number: p })),
         a.default.selectVoiceChannel(null));
 }
 class g extends o.Z {
@@ -47,11 +47,11 @@ class g extends o.Z {
                 this.idleTimeout.stop();
             }),
             f(this, "handleEmbeddedActivityDisconnect", () => {
-                h() && this.idleTimeout.start(p, m, !0);
+                m() && this.idleTimeout.start(_, h, !0);
             }),
             f(this, "handleVoiceStateUpdates", () => {
-                if (!h()) return void this.idleTimeout.stop();
-                this.idleTimeout.start(p, m, !1);
+                if (!m()) return void this.idleTimeout.stop();
+                this.idleTimeout.start(_, h, !1);
             }),
             f(this, "actions", {
                 VOICE_STATE_UPDATES: this.handleVoiceStateUpdates,

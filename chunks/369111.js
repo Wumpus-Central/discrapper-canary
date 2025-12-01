@@ -10,11 +10,11 @@ var r = n(473749),
 function d(e) {
     let { isTryItOut: t, analyticsLocations: n, guildId: d } = e,
         f = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
-        _ = (0, a.Z)(n),
+        p = (0, a.Z)(n),
         {
-            pendingAvatar: p,
-            pendingAvatarDecoration: h,
-            pendingErrors: m,
+            pendingAvatar: _,
+            pendingAvatarDecoration: m,
+            pendingErrors: h,
         } = (0, i.cj)([l.Z, o.Z], () => ({
             pendingAvatar: t ? l.Z.getTryItOutAvatar() : null != d ? o.Z.getPendingAvatar() : l.Z.getPendingAvatar(),
             pendingAvatarDecoration: t
@@ -27,14 +27,14 @@ function d(e) {
         g = (0, r.useCallback)((e) => (0, s.Jw)(e, null == f ? void 0 : f.avatar), [null == f ? void 0 : f.avatar]),
         E = (0, r.useCallback)(
             (e) => {
-                (0, s.PO)(e, d), null != e && _(e);
+                (0, s.PO)(e, d), null != e && p(e);
             },
-            [_, d],
+            [p, d],
         );
     return {
-        pendingAvatar: p,
-        pendingAvatarDecoration: h,
-        pendingErrors: m,
+        pendingAvatar: _,
+        pendingAvatarDecoration: m,
+        pendingErrors: h,
         setPendingAvatar: t ? u.c_ : g,
         setPendingAvatarDecoration: t ? u.Xz : E,
     };

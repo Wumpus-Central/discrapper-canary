@@ -2,9 +2,9 @@ n.d(t, {
     PA: () => d,
     Tn: () => u,
     _i: () => g,
-    eI: () => h,
-    vp: () => p,
-    y8: () => m,
+    eI: () => m,
+    vp: () => _,
+    y8: () => h,
 });
 var r = n(367907),
     i = n(200876),
@@ -24,7 +24,7 @@ function u(e) {
             guildId: i,
             roleSubscriptionData: a,
         } = e,
-        { content: o, formatParams: s } = _({
+        { content: o, formatParams: s } = p({
             username: t,
             usernameOnClickHandler: n,
             roleSubscriptionOnClickHandler: r,
@@ -41,7 +41,7 @@ function d(e) {
             guildId: i,
             roleSubscriptionData: a,
         } = e,
-        { content: o, formatParams: s } = _({
+        { content: o, formatParams: s } = p({
             username: t,
             usernameOnClickHandler: n,
             roleSubscriptionOnClickHandler: r,
@@ -62,7 +62,7 @@ function f(e, t) {
         isRenewal: null != (r = null == t ? void 0 : t.is_renewal) && r,
     };
 }
-function _(e) {
+function p(e) {
     let {
             username: t,
             usernameOnClickHandler: n = c,
@@ -70,9 +70,9 @@ function _(e) {
             guildId: i,
             roleSubscriptionData: a,
         } = e,
-        { guild: o, totalMonthsSubscribed: u, showWithDuration: d, isRenewal: _ } = f(i, a);
+        { guild: o, totalMonthsSubscribed: u, showWithDuration: d, isRenewal: p } = f(i, a);
     return {
-        content: d ? (_ ? l.t.Iy66M7 : l.t.eCgb2W) : _ ? l.t.mPTTdv : l.t.mYjFFx,
+        content: d ? (p ? l.t.Iy66M7 : l.t.eCgb2W) : p ? l.t.mPTTdv : l.t.mYjFFx,
         formatParams: {
             username: t,
             usernameHook: n,
@@ -83,7 +83,7 @@ function _(e) {
         },
     };
 }
-function p(e) {
+function _(e) {
     let t,
         {
             username: n,
@@ -92,9 +92,9 @@ function p(e) {
             guildId: a,
             roleSubscriptionData: o,
         } = e,
-        { guild: u, totalMonthsSubscribed: d, showWithDuration: _, isRenewal: p } = f(a, o);
+        { guild: u, totalMonthsSubscribed: d, showWithDuration: p, isRenewal: _ } = f(a, o);
     return (
-        (t = _ ? (p ? l.t.OQ0OUy : l.t["+N9bxq"]) : p ? l.t.OxP1NC : l.t["6Z1E+7"]),
+        (t = p ? (_ ? l.t.OQ0OUy : l.t["+N9bxq"]) : _ ? l.t.OxP1NC : l.t["6Z1E+7"]),
         l.intl.formatToParts(t, {
             guildName: null == u ? void 0 : u.name,
             tierName: null == o ? void 0 : o.tier_name,
@@ -105,10 +105,10 @@ function p(e) {
         })
     );
 }
-function h(e) {
+function m(e) {
     return (0, i.l)(e);
 }
-function m(e, t, n, i) {
+function h(e, t, n, i) {
     var a;
     r.ZP.trackWithMetadata(s.rMx.ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE_CLICKED, {
         guild_id: e,

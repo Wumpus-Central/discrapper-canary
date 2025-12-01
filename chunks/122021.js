@@ -14,10 +14,10 @@ var r = n(473749),
     u = n(594174),
     d = n(70956),
     f = n(981631),
-    _ = n(295907);
-let p = { [f.ABu.INSTAGRAM]: ["1036753656588017764"] },
-    h = new Map([[f.ABu.INSTAGRAM, new Date(2023, 1, 18).getTime()]]),
-    m = 30 * d.Z.Millis.DAY;
+    p = n(295907);
+let _ = { [f.ABu.INSTAGRAM]: ["1036753656588017764"] },
+    m = new Map([[f.ABu.INSTAGRAM, new Date(2023, 1, 18).getTime()]]),
+    h = 30 * d.Z.Millis.DAY;
 function g(e) {
     let { forUserProfile: t } = e,
         n = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
@@ -26,7 +26,7 @@ function g(e) {
         var i;
         return e.type === f.ABu.PLAYSTATION_STAGING
             ? r
-            : !!(void 0 !== n && (null == (i = p[e.type]) ? void 0 : i.includes(n.id))) || !!t || e.enabled;
+            : !!(void 0 !== n && (null == (i = _[e.type]) ? void 0 : i.includes(n.id))) || !!t || e.enabled;
     };
 }
 function E() {
@@ -41,7 +41,7 @@ function E() {
             a().sortBy(s.Z.filter(t), [
                 (e) => {
                     var t;
-                    return !(h.has(e.type) && Date.now() < (null != (t = h.get(e.type)) ? t : 0) + m);
+                    return !(m.has(e.type) && Date.now() < (null != (t = m.get(e.type)) ? t : 0) + h);
                 },
                 (e) => n.has(e.type),
                 (e) => e.hasMetadata,
@@ -55,11 +55,11 @@ function b(e) {
     let [t, n] = r.useState(!1);
     function i(e) {
         let { key: t } = e;
-        t === _.vn.SHIFT && n(!0);
+        t === p.vn.SHIFT && n(!0);
     }
     function a(e) {
         let { key: t } = e;
-        t === _.vn.SHIFT && n(!1);
+        t === p.vn.SHIFT && n(!1);
     }
     return (r.useEffect(
         () => (

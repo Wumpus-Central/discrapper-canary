@@ -29,17 +29,17 @@ function f(e) {
     if (null == o) return null;
     let l = o.query.iframe_url;
     if (null == l || Array.isArray(l) || null == d(l)) return null;
-    let { width: f, height: _ } = i,
-        p = f,
-        h = _;
+    let { width: f, height: p } = i,
+        _ = f,
+        m = p;
     return (
-        (f > c || _ > u) && (f > _ ? ((p = c), (h = (c * _) / f)) : ((p = (u * f) / _), (h = u))),
+        (f > c || p > u) && (f > p ? ((_ = c), (m = (c * p) / f)) : ((_ = (u * f) / p), (m = u))),
         (0, r.jsx)("iframe", {
             className: a()(s.embedAmazonMusic, t),
             src: l,
             style: {
-                width: p,
-                height: h,
+                width: _,
+                height: m,
             },
             frameBorder: 0,
             sandbox:

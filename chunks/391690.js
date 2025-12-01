@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => R }), n(388685), n(704826), n(35282);
+n.d(t, { Z: () => P }), n(388685), n(704826), n(35282);
 var i,
     a = n(442837),
     o = n(570140),
@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,32 +48,32 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let h = {},
-    m = (0, l.isWindows)()
+let m = {},
+    h = (0, l.isWindows)()
         ? "".concat(s.Z.process.env.LOCALAPPDATA, "\\DiscordGames")
         : (0, l.isMac)()
           ? "/Applications/DiscordGames"
           : "/tmp";
 function g(e, t) {
     var n;
-    h = p(f({}, h), { [e]: f({}, null != (n = h[e]) ? n : {}, t) });
+    m = _(f({}, m), { [e]: f({}, null != (n = m[e]) ? n : {}, t) });
 }
 function E(e) {
-    (h = f({}, h)), delete h[e];
+    (m = f({}, m)), delete m[e];
 }
 function b(e, t) {
-    r.pathLabels = p(f({}, r.pathLabels), { [e]: t });
+    r.pathLabels = _(f({}, r.pathLabels), { [e]: t });
 }
 function y(e) {
     if (null == r.pathLabels[e]) return !1;
@@ -84,7 +84,7 @@ function O(e) {
     null == r.installations[t] && (r.installations[t] = {}),
         (r.installations[t][n] = { installationPath: i }),
         r.installationPaths.has(i) ||
-            T({
+            I({
                 path: i,
                 metadata: {},
             });
@@ -95,23 +95,23 @@ function v(e) {
     null != r &&
         null == r.buildId &&
         null == r.manifestIds &&
-        I({
+        S({
             applicationId: t,
             branchId: n,
         });
 }
-function I(e) {
+function S(e) {
     let { applicationId: t, branchId: n } = e;
     if (null == r.installations[t]) return !1;
     delete r.installations[t][n], 0 === Object.keys(r.installations[t]).length && delete r.installations[t];
 }
-function T(e) {
+function I(e) {
     if (r.installationPaths.has(e.path)) return !1;
     g(e.path, e.metadata);
     let t = new Set(r.installationPaths);
     t.add(e.path), (r.installationPaths = t);
 }
-function S(e) {
+function T(e) {
     let { path: t } = e;
     if (!r.installationPaths.has(t) || r.defaultInstallationPath === t) return !1;
     let n = new Set(r.installationPaths);
@@ -131,7 +131,7 @@ class N extends (i = a.ZP.PersistedStore) {
     initialize(e) {
         let t = f({}, e);
         null == t.installations && (t.installations = {}),
-            null == t.defaultInstallationPath && (t.defaultInstallationPath = m),
+            null == t.defaultInstallationPath && (t.defaultInstallationPath = h),
             null == t.installationPaths
                 ? (t.installationPaths = new Set([t.defaultInstallationPath]))
                 : (t.installationPaths = new Set(Array.from(t.installationPaths))),
@@ -151,7 +151,7 @@ class N extends (i = a.ZP.PersistedStore) {
         }));
     }
     get installationPathsMetadata() {
-        return h;
+        return m;
     }
     hasGamesInstalledInPath(e) {
         let { installations: t } = r;
@@ -168,7 +168,7 @@ class N extends (i = a.ZP.PersistedStore) {
     }
     getLabelFromPath(e) {
         var t, n;
-        return e === m
+        return e === h
             ? u.intl.string(u.t.VdDrjm)
             : null !=
                 (n =
@@ -183,12 +183,12 @@ class N extends (i = a.ZP.PersistedStore) {
     }
 }
 d(N, "displayName", "InstallationManagerStore"), d(N, "persistKey", "InstallationManagerStore");
-let R = new N(o.Z, {
+let P = new N(o.Z, {
     DISPATCH_APPLICATION_INSTALL: O,
-    DISPATCH_APPLICATION_UNINSTALL: I,
+    DISPATCH_APPLICATION_UNINSTALL: S,
     DISPATCH_APPLICATION_CANCEL: v,
-    INSTALLATION_LOCATION_ADD: T,
-    INSTALLATION_LOCATION_REMOVE: S,
+    INSTALLATION_LOCATION_ADD: I,
+    INSTALLATION_LOCATION_REMOVE: T,
     INSTALLATION_LOCATION_UPDATE: A,
     INSTALLATION_LOCATION_FETCH_METADATA: C,
     DISPATCH_APPLICATION_ADD_TO_INSTALLATIONS: O,

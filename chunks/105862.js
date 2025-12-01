@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(54381),
     i = n(473749),
     a = n(481060),
@@ -9,12 +9,12 @@ var r = n(54381),
     u = n(981631),
     d = n(388032),
     f = n(431048);
-function _(e) {
+function p(e) {
     let { padding: t = !1 } = e,
         n = i.useCallback(() => {
             (0, o.Z)(s.Z.getAppsSupportURL(u.BhN.APPS_LEARN_MORE));
         }, []),
-        { trackSectionImpressionRef: _ } = (0, c.Z)({
+        { trackSectionImpressionRef: p } = (0, c.Z)({
             sectionName: l.L3.NEW_TO_APPS,
             numItems: 1,
             numVisibleItems: 1,
@@ -23,7 +23,7 @@ function _(e) {
         className: t ? f.containerPadding : void 0,
         children: (0, r.jsxs)("div", {
             ref: (e) => {
-                _.current = e;
+                p.current = e;
             },
             className: f.container,
             children: [

@@ -40,7 +40,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -52,34 +52,34 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let h = {
+let m = {
         allowAutoQuality: !1,
         defaultAutoQuality: !1,
         migrateAutoQuality: !1,
     },
-    m = "GoLiveAutoQualityMigrationVersion",
+    h = "GoLiveAutoQualityMigrationVersion",
     g = 1,
     E = (0, o.Z)({
         name: "2025-10-go-live-auto-quality",
         kind: "user",
-        defaultConfig: h,
+        defaultConfig: m,
         variations: {
-            1: p(f({}, h), {
+            1: _(f({}, m), {
                 allowAutoQuality: !0,
                 migrateAutoQuality: !0,
             }),
-            2: p(f({}, h), {
+            2: _(f({}, m), {
                 allowAutoQuality: !0,
                 defaultAutoQuality: !0,
             }),
@@ -97,7 +97,7 @@ function y(e) {
 function O() {
     var e;
     let t = E.getConfig({ location: "maybeMigrateToAutoQuality" }).migrateAutoQuality,
-        n = Number(null != (e = i.K.get(m)) ? e : 0);
+        n = Number(null != (e = i.K.get(h)) ? e : 0);
     if (!t || n >= g) return;
     let r = c.Z.getState();
     if (r.preset !== u.ApplicationStreamPresets.PRESET_CUSTOM) {
@@ -108,7 +108,7 @@ function O() {
             soundshareEnabled: r.soundshareEnabled,
             noTrack: !0,
         }),
-            i.K.set(m, g);
+            i.K.set(h, g);
         return;
     }
 }

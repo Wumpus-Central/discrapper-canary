@@ -1,4 +1,4 @@
-n.d(t, { W: () => _ }), n(539854), n(388685);
+n.d(t, { W: () => p }), n(539854), n(388685);
 var r,
     i = n(473749),
     a = n(830483);
@@ -69,7 +69,7 @@ function d(e) {
 function f(e) {
     return e && "undefined" != typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e;
 }
-class _ extends (r = i.Component) {
+class p extends (r = i.Component) {
     static getDerivedStateFromProps(e, t) {
         let { children: n, firstRender: r } = t,
             i = (0, a.n)(e.children);
@@ -172,7 +172,7 @@ class _ extends (r = i.Component) {
                 );
         }
         let a = s({}, this.props);
-        return Object.keys(_.defaultProps).forEach((e) => delete a[e]), i.createElement(t, a, r);
+        return Object.keys(p.defaultProps).forEach((e) => delete a[e]), i.createElement(t, a, r);
     }
     constructor(e) {
         super(e),
@@ -194,7 +194,7 @@ class _ extends (r = i.Component) {
             (this._isMounted = !1);
     }
 }
-o(_, "defaultProps", {
+o(p, "defaultProps", {
     component: "span",
     transitionAppear: !0,
     transitionLeave: !0,

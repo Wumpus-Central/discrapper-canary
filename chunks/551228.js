@@ -1,7 +1,7 @@
 n.d(t, {
-    ZP: () => m,
-    pi: () => p,
-    te: () => _,
+    ZP: () => h,
+    pi: () => _,
+    te: () => p,
 }),
     n(388685),
     n(704826),
@@ -16,8 +16,8 @@ var r = n(54381),
     u = n(297781),
     d = n(443487),
     f = n(451419);
-let _ = [u.XF];
-function p(e) {
+let p = [u.XF];
+function _(e) {
     var t, n, r, i;
     let s = (0, a.e7)([l.Z], () => l.Z.getMatchingActivity(e)),
         c = (0, a.e7)([o.default], () => o.default.getUser(e.author_id));
@@ -36,10 +36,10 @@ function p(e) {
         user: c,
     };
 }
-function h(e) {
+function m(e) {
     let { entry: t, channel: n, selected: i, hovered: a } = e,
-        { activity: o, artist: l } = p(t),
-        { largeImage: h } = (0, s.rv)({ entry: t });
+        { activity: o, artist: l } = _(t),
+        { largeImage: m } = (0, s.rv)({ entry: t });
     return null == o
         ? (0, r.jsx)(d.cA, {})
         : (0, r.jsxs)(d.Zb, {
@@ -55,7 +55,7 @@ function h(e) {
                           (0, r.jsx)(d.ll, { children: l.replace(/; /g, ", ") }),
                           (0, r.jsx)(u.Gk, {
                               location: u.Gt.CARD,
-                              children: _.map((e, n) =>
+                              children: p.map((e, n) =>
                                   (0, r.jsx)(
                                       e,
                                       {
@@ -69,11 +69,11 @@ function h(e) {
                       ],
                   }),
                   (0, r.jsx)(c.f, {
-                      src: null == h ? void 0 : h.src,
+                      src: null == m ? void 0 : m.src,
                       size: 48,
                       className: f.thumbnail,
                   }),
               ],
           });
 }
-let m = i.memo(h);
+let h = i.memo(m);

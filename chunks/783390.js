@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function _(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,18 +49,18 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -183,14 +183,14 @@ f(E, "defaultProps", {
 let b = (e) => {
     var t,
         { componentRef: n, ignoreReducedMotion: r = !1 } = e,
-        o = m(e, ["componentRef", "ignoreReducedMotion"]);
+        o = h(e, ["componentRef", "ignoreReducedMotion"]);
     let { isWindowFocused: s } = (0, u.ZF)(),
         d = (0, l.C)(),
         { reducedMotion: f } = a.useContext(c.S),
-        p = f.enabled && !r,
-        g = h(_({}, o), {
+        _ = f.enabled && !r,
+        g = m(p({}, o), {
             isWindowFocused: null != (t = null == s ? void 0 : s()) ? t : d,
-            useReducedMotion: p,
+            useReducedMotion: _,
         });
-    return (0, i.jsx)(E, h(_({}, g), { ref: n }));
+    return (0, i.jsx)(E, m(p({}, g), { ref: n }));
 };

@@ -10,7 +10,7 @@ var i = n(481060),
     u = n(344532),
     d = n(981631),
     f = n(231338);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,12 +34,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -51,12 +51,12 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -81,7 +81,7 @@ class E extends o.Z {
                               };
                           return (0, r.jsx)(
                               e,
-                              m(p({}, t), {
+                              h(_({}, t), {
                                   onSuccess: i,
                                   onClose: n,
                                   requirementsUpdated: !0,
@@ -98,7 +98,7 @@ class E extends o.Z {
             : t && a.Z.logout("login_required_account_manager", d.Z5c.LOGIN);
     }
     constructor(...e) {
-        super(...e), _(this, "actions", { POST_CONNECTION_OPEN: this.handleConnectionOpen });
+        super(...e), p(this, "actions", { POST_CONNECTION_OPEN: this.handleConnectionOpen });
     }
 }
 let b = new E();

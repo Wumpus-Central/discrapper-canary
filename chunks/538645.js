@@ -12,21 +12,21 @@ var a = n(54381),
     p = n(365943),
     h = n(25251),
     x = n(373071),
-    g = n(782691),
-    f = n(558270);
+    f = n(782691),
+    g = n(558270);
 let b = "Make sure you're only uploading text files!",
     v = (e) => {
         var t, n, l;
         let { effect: i, onClick: r } = e,
             { deleteConfig: s } = (0, x.n6)();
         return (0, a.jsxs)(c.P3F, {
-            className: f.previewCard,
+            className: g.previewCard,
             onClick: () => {
                 r(i);
             },
             children: [
                 (0, a.jsx)("div", {
-                    className: f.previewCardImage,
+                    className: g.previewCardImage,
                     style: {
                         backgroundImage: "url(".concat(
                             null == (l = i.config) || null == (n = l.effects) || null == (t = n[0]) ? void 0 : t.base64,
@@ -35,7 +35,7 @@ let b = "Make sure you're only uploading text files!",
                     },
                 }),
                 (0, a.jsxs)("div", {
-                    className: f.previewCardFooter,
+                    className: g.previewCardFooter,
                     children: [
                         (0, a.jsx)(c.Text, {
                             variant: "text-md/bold",
@@ -75,7 +75,7 @@ function j() {
                       }),
             [C, y],
         ),
-        N = l.useCallback(
+        T = l.useCallback(
             (e, n) => {
                 if (null == n || !e.type.startsWith("text/")) return (0, m.Eo)(b);
                 let [a, l] = n.split(",");
@@ -85,26 +85,26 @@ function j() {
             },
             [t],
         ),
-        T = l.useCallback(
+        N = l.useCallback(
             (e) => {
                 var t;
                 if ((null == (t = e.currentTarget) ? void 0 : t.files) == null)
                     return void (0, m.Eo)("Error uploading file. Try again!");
-                (0, m.Kr)(e.currentTarget.files, N, m.Eo);
+                (0, m.Kr)(e.currentTarget.files, T, m.Eo);
             },
-            [N],
+            [T],
         );
     return (0, a.jsxs)("div", {
-        className: f.root,
+        className: g.root,
         children: [
             null == i &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsxs)("div", {
-                            className: f.col,
+                            className: g.col,
                             children: [
                                 (0, a.jsxs)("div", {
-                                    className: r()(f.section, f.row),
+                                    className: r()(g.section, g.row),
                                     children: [
                                         (0, a.jsx)(c.Heading, {
                                             variant: "heading-xl/bold",
@@ -125,7 +125,7 @@ function j() {
                                     ],
                                 }),
                                 (0, a.jsx)("div", {
-                                    className: f.customEffectsGrid,
+                                    className: g.customEffectsGrid,
                                     children: Object.values(e).map((e) =>
                                         (0, a.jsx)(
                                             v,
@@ -142,10 +142,10 @@ function j() {
                             ],
                         }),
                         (0, a.jsxs)("div", {
-                            className: r()(f.row, f.end, f.section),
+                            className: r()(g.row, g.end, g.section),
                             children: [
                                 (0, a.jsxs)("div", {
-                                    className: f.uploadButton,
+                                    className: g.uploadButton,
                                     children: [
                                         (0, a.jsx)(c.Text, {
                                             variant: "text-md/normal",
@@ -154,7 +154,7 @@ function j() {
                                         }),
                                         (0, a.jsx)(u.Z, {
                                             ref: _,
-                                            onChange: T,
+                                            onChange: N,
                                             multiple: !1,
                                         }),
                                     ],
@@ -174,7 +174,7 @@ function j() {
                         }),
                         (0, a.jsx)("hr", {}),
                         (0, a.jsxs)("div", {
-                            className: f.section,
+                            className: g.section,
                             children: [
                                 (0, a.jsx)(c.Heading, {
                                     variant: "heading-xl/bold",
@@ -187,12 +187,12 @@ function j() {
                                     },
                                 }),
                                 (0, a.jsx)("div", {
-                                    className: f.pfxGrid,
+                                    className: g.pfxGrid,
                                     children: E.map((e) =>
                                         (0, a.jsx)(
                                             c.P3F,
                                             {
-                                                className: f.pfxListItem,
+                                                className: g.pfxListItem,
                                                 style: {
                                                     backgroundImage: "url(".concat(e.config.thumbnailPreviewSrc, ")"),
                                                 },
@@ -205,7 +205,7 @@ function j() {
                                                     });
                                                 },
                                                 children: (0, a.jsx)("div", {
-                                                    className: f.pfxListItemFooter,
+                                                    className: g.pfxListItemFooter,
                                                     children: (0, a.jsx)(c.Text, {
                                                         variant: "text-md/normal",
                                                         color: "always-white",
@@ -221,7 +221,7 @@ function j() {
                         }),
                     ],
                 }),
-            null != i && (0, a.jsx)(g.Z, { effect: i }),
+            null != i && (0, a.jsx)(f.Z, { effect: i }),
         ],
     });
 }

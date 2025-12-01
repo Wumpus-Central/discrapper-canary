@@ -9,7 +9,7 @@ var r = n(570140),
     u = n(754142),
     d = n(915525),
     f = n(990291);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,11 +22,11 @@ function _(e, t, n) {
         e
     );
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -34,7 +34,7 @@ function p(e, t) {
     }
     return i;
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -43,7 +43,7 @@ function h(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let m = new a.Z("AVErrorManager");
+let h = new a.Z("AVErrorManager");
 function g(e, t) {
     let n = new Set();
     for (let r of e) t.has(r) || n.add(r);
@@ -72,27 +72,27 @@ class y extends i.Z {
             });
             if (null != t) for (let e of t) u.set(b(e), e);
         }
-        let _ = d.Z.getActiveErrors();
-        if (!(_ instanceof Map))
-            return void m.error(
-                "existingErrors is not a Map: ".concat(_, " type: ").concat(Object.prototype.toString.call(_)),
+        let p = d.Z.getActiveErrors();
+        if (!(p instanceof Map))
+            return void h.error(
+                "existingErrors is not a Map: ".concat(p, " type: ").concat(Object.prototype.toString.call(p)),
             );
-        if (0 === u.size && 0 === _.size) return;
-        let h = new Set(u.keys()),
-            E = new Set(_.keys());
-        if (h.size > E.size)
-            for (let e of g(h, E)) {
+        if (0 === u.size && 0 === p.size) return;
+        let m = new Set(u.keys()),
+            E = new Set(p.keys());
+        if (m.size > E.size)
+            for (let e of g(m, E)) {
                 let t = u.get(e);
                 null != t && (0, c.kr)(t);
             }
-        if (E.size > h.size)
-            for (let e of g(E, h)) {
+        if (E.size > m.size)
+            for (let e of g(E, m)) {
                 let t = e,
-                    n = _.get(t);
+                    n = p.get(t);
                 if (null != n) {
                     let { type: e } = n,
-                        t = p(n, ["type"]);
-                    m.info("Error resolved: ".concat(e, " ").concat(JSON.stringify(t)));
+                        t = _(n, ["type"]);
+                    h.info("Error resolved: ".concat(e, " ").concat(JSON.stringify(t)));
                 }
             }
         r.Z.dispatch({
@@ -106,7 +106,7 @@ class y extends i.Z {
     }
     constructor(...e) {
         super(...e),
-            _(this, "actions", {
+            p(this, "actions", {
                 MEDIA_ENGINE_SET_AUDIO_ENABLED: this.updateActiveErrors,
                 AUDIO_INPUT_DETECTED: this.updateActiveErrors,
                 AUDIO_SET_DISPLAY_SILENCE_WARNING: this.updateActiveErrors,

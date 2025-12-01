@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(54381),
     i = n(473749),
     a = n(335854),
@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,11 +58,11 @@ function _(e, t) {
         e
     );
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -70,7 +70,7 @@ function p(e, t) {
     }
     return i;
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -79,19 +79,19 @@ function h(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let m = (e) => {
+let h = (e) => {
     var {
             href: t,
             className: n,
             iconClassName: u,
             rel: f,
-            target: h,
-            mimeType: m,
+            target: m,
+            mimeType: h,
             fileName: g,
             focusProps: E,
             onClick: b,
         } = e,
-        y = p(e, [
+        y = _(e, [
             "href",
             "className",
             "iconClassName",
@@ -106,23 +106,23 @@ let m = (e) => {
         v = i.useCallback(
             (e) => {
                 s.default.track(l.rMx.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
-                    attachment_type: null == m ? void 0 : m[0],
-                    attachment_subtype: null == m ? void 0 : m[1],
+                    attachment_type: null == h ? void 0 : h[0],
+                    attachment_subtype: null == h ? void 0 : h[1],
                 }),
                     null == b || b(),
                     null == O || O(e);
             },
-            [O, m, b],
+            [O, h, b],
         );
     return null != g
         ? (0, r.jsx)(
               o.Anchor,
-              _(
+              p(
                   d(
                       {
                           href: t,
                           onClick: v,
-                          target: h,
+                          target: m,
                           rel: f,
                           className: n,
                           "aria-label": c.intl.string(c.t["1WjMbC"]),
@@ -135,12 +135,12 @@ let m = (e) => {
           )
         : (0, r.jsx)(
               o.Anchor,
-              _(
+              p(
                   d(
                       {
                           href: t,
                           onClick: v,
-                          target: h,
+                          target: m,
                           rel: f,
                           className: n,
                           "aria-label": c.intl.string(c.t["1WjMbC"]),

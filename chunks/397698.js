@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => _ });
 var r = n(54381);
 n(473749);
 var i = n(481060),
@@ -22,7 +22,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,27 +38,27 @@ function _(e) {
     }
     return e;
 }
-function p(e) {
-    let { context: t, openInPopout: f, analyticsLocation: p = "open-activity-shelf", initialState: h } = e;
+function _(e) {
+    let { context: t, openInPopout: f, analyticsLocation: _ = "open-activity-shelf", initialState: m } = e;
     f && (0, a.Z)(d.KJ3.CHANNEL_CALL_POPOUT);
-    let m = f ? i.u1M : i.z1l;
-    (0, l.y)(c.ti.DISMISSED), (0, l._)(c._b.VOICE, void 0, h);
+    let h = f ? i.u1M : i.z1l;
+    (0, l.y)(c.ti.DISMISSED), (0, l._)(c._b.VOICE, void 0, m);
     let g = "contextless" !== t.type && (o.ZP.hasUnread(t.channel.id) || o.ZP.getMentionCount(t.channel.id) > 0);
     return (
         s.default.track(d.rMx.VOICE_PANEL_TAB_OPENED, {
             tab: "activities",
-            location: p,
+            location: _,
             source: c._b.VOICE,
             is_chat_badged: g,
         }),
         (0, i.ZDy)(
             async () => {
                 let { default: e } = await n.e("81056").then(n.bind(n, 743161));
-                return (n) => (0, r.jsx)(e, _({ context: t }, n));
+                return (n) => (0, r.jsx)(e, p({ context: t }, n));
             },
             {
                 modalKey: u.e9,
-                contextKey: m,
+                contextKey: h,
             },
         )
     );

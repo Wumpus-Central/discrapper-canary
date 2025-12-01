@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(54381),
     i = n(473749),
     a = n(481060),
@@ -57,11 +57,11 @@ function f(e, t) {
         e
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -69,7 +69,7 @@ function _(e, t) {
     }
     return i;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,15 +78,15 @@ function p(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function h(e) {
+function m(e) {
     var { applicationId: t, centerButton: n = !1 } = e,
-        c = _(e, ["applicationId", "centerButton"]);
+        c = p(e, ["applicationId", "centerButton"]);
     let d = i.useCallback(() => {
             s.Z.stopFrame({ applicationId: t });
         }, [t]),
-        p = n ? o.d : o.Z;
+        _ = n ? o.d : o.Z;
     return (0, r.jsx)(
-        p,
+        _,
         f(u({}, c), {
             isTrayButton: !1,
             onClick: d,

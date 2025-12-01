@@ -1,4 +1,4 @@
-n.d(t, { A: () => m }), n(388685);
+n.d(t, { A: () => h }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(907331),
@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,7 +58,7 @@ function _(e, t) {
         e
     );
 }
-let p = (e) => {
+let _ = (e) => {
         let [t, n] = i.useState(!1),
             r = null != e ? e : t,
             o = r !== (0, s.Z)(r);
@@ -68,7 +68,7 @@ let p = (e) => {
             reference: (0, a.O)((e) => n(e), c.PI),
         };
     },
-    h = () => {
+    m = () => {
         let e = (0, o.e7)([l.Z], () => l.Z.isFocused()),
             t = (0, s.Z)(e),
             n = e !== t;
@@ -77,12 +77,12 @@ let p = (e) => {
             focusedChanged: n,
         };
     },
-    m = i.memo(function (e) {
-        let { focused: t, focusedChanged: n } = h(),
-            { visible: i, visibleChanged: a, reference: o } = p(e.overrideVisibility);
+    h = i.memo(function (e) {
+        let { focused: t, focusedChanged: n } = m(),
+            { visible: i, visibleChanged: a, reference: o } = _(e.overrideVisibility);
         return (0, r.jsx)(
             c.ui,
-            _(d({}, e), {
+            p(d({}, e), {
                 focused: t,
                 focusedChanged: n,
                 visible: i,

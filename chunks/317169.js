@@ -20,10 +20,10 @@ function c(e) {
             spent: 0,
             total: c,
         };
-    let _ = d + (null != f ? f : 0);
+    let p = d + (null != f ? f : 0);
     return {
-        available: Math.max(0, c - _),
-        spent: _,
+        available: Math.max(0, c - p),
+        spent: p,
         total: c,
     };
 }

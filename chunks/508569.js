@@ -21,10 +21,10 @@ function d(e, t, n) {
     );
 }
 let f = new i.Z("GatewaySocket"),
-    _ = new Set(["INITIAL_GUILD", "READY"]),
-    p = new Set(["READY", "INITIAL_GUILD"]),
-    h = new Set(["READY", "READY_SUPPLEMENTAL", "RESUMED"]),
-    m = new Set([
+    p = new Set(["INITIAL_GUILD", "READY"]),
+    _ = new Set(["READY", "INITIAL_GUILD"]),
+    m = new Set(["READY", "READY_SUPPLEMENTAL", "RESUMED"]),
+    h = new Set([
         "READY",
         "INITIAL_GUILD",
         "READY_SUPPLEMENTAL",
@@ -85,7 +85,7 @@ class y {
         this.queue.push(r), this.maybePreload(r) || this.scheduleFlush(t);
     }
     maybePreload(e) {
-        if (this.paused && !_.has(e.type)) return !1;
+        if (this.paused && !p.has(e.type)) return !1;
         if (0 === e.status) {
             var t;
             let n = null == (t = this.getDispatchHandler(e.type)) ? void 0 : t.preload(e.data);
@@ -108,10 +108,10 @@ class y {
     }
     scheduleFlush(e) {
         !this.paused &&
-            (p.has(e)
+            (_.has(e)
                 ? (this.scheduler.clearWorkTimeout(), this.flush())
                 : this.scheduler.hasWorkScheduled || this.scheduler.requestWorkTimeout(this.flush),
-            m.has(e) && this.scheduler.markCriticalWorkScheduled());
+            h.has(e) && this.scheduler.markCriticalWorkScheduled());
     }
     getDispatchTimings() {
         return g;
@@ -141,7 +141,7 @@ class y {
                 (r.ZP.Emitter.batched(() => {
                     for (let r = 0; r < e.length; r++) {
                         let a = e[r];
-                        (n = a.type), (i = i || h.has(a.type));
+                        (n = a.type), (i = i || m.has(a.type));
                         let o = performance.now();
                         if ((this.dispatchOne(a), (l = performance.now() - o), E(a.type, l), b(e, r, t))) {
                             (s = e.slice(r + 1)),

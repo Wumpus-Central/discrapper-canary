@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(54381),
     i = n(604849),
     a = n(278828),
@@ -9,7 +9,7 @@ var r = n(54381),
     u = n(726985),
     d = n(981631),
     f = n(388032);
-function _() {
+function p() {
     let e = (0, i.c)();
     return (0, r.jsx)(s.U, {
         setting: u.s6.PRIVACY_SAFETY_ALERTS_V2,

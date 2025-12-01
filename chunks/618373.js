@@ -1,6 +1,6 @@
 n.d(t, {
     Ae: () => g,
-    QR: () => m,
+    QR: () => h,
 });
 var r = n(54381);
 n(473749);
@@ -13,10 +13,10 @@ var i = n(442837),
     u = n(518596),
     d = n(809357),
     f = n(44359),
-    _ = n(981631),
-    p = n(388032),
-    h = n(8280);
-function m(e, t, n) {
+    p = n(981631),
+    _ = n(388032),
+    m = n(8280);
+function h(e, t, n) {
     let {
         highlightAdminWarningIfElevated: i,
         useFlexboxLayout: a,
@@ -33,15 +33,15 @@ function m(e, t, n) {
 }
 let g = (e, t) =>
     (0, r.jsx)(r.Fragment, {
-        children: p.intl.format(t, {
+        children: _.intl.format(t, {
             keybind: e,
             keybindHook: (t, n) =>
                 (0, r.jsx)(
                     a.M2$,
                     {
                         shortcut: e,
-                        className: h.keyCombo,
-                        keyClassName: h.keyComboKey,
+                        className: m.keyCombo,
+                        keyClassName: m.keyComboKey,
                     },
                     n,
                 ),
@@ -51,7 +51,7 @@ function E(e) {
     let {
             keybind: t,
             message: n,
-            messageWithoutKeybind: m,
+            messageWithoutKeybind: h,
             highlightAdminWarningIfElevated: g = !1,
             useFlexboxLayout: E = !1,
             keybindClassName: b,
@@ -67,20 +67,20 @@ function E(e) {
               variant: "text-xxs/semibold",
               color: g ? "text-feedback-warning" : "text-muted",
               children: v
-                  ? p.intl.format(p.t.MVS9pV, {
+                  ? _.intl.format(_.t.MVS9pV, {
                         onSettingsClick: (e) => {
                             e.stopPropagation(),
                                 (0, s.Z)(void 0, !0),
-                                (0, u.openUserSettings)(c.n.OVERLAY_PANEL, { section: _.oAB.OVERLAY });
+                                (0, u.openUserSettings)(c.n.OVERLAY_PANEL, { section: p.oAB.OVERLAY });
                         },
                     })
-                  : p.intl.string(p.t.PIeSHF),
+                  : _.intl.string(_.t.PIeSHF),
           })
         : y
           ? E
               ? (0, r.jsx)("div", {
-                    className: h.keybindFlexboxLayout,
-                    children: p.intl.format(n, {
+                    className: m.keybindFlexboxLayout,
+                    children: _.intl.format(n, {
                         keybind: t,
                         keybindHook: (e) =>
                             (0, r.jsx)(
@@ -94,10 +94,10 @@ function E(e) {
                     }),
                 })
               : (0, r.jsx)(r.Fragment, {
-                    children: p.intl.format(n, {
+                    children: _.intl.format(n, {
                         keybind: t,
                         keybindHook: (e) => (0, r.jsx)(f.t, { keybind: t }, t.join("+")),
                     }),
                 })
-          : m;
+          : h;
 }

@@ -9,10 +9,10 @@ var r = n(911969),
     u = n(594174),
     d = n(5192),
     f = n(417574),
-    _ = n(877565),
-    p = n(590921),
-    h = n(24397),
-    m = n(388032);
+    p = n(877565),
+    _ = n(590921),
+    m = n(24397),
+    h = n(388032);
 function g(e, t, n) {
     return (
         t in e
@@ -80,21 +80,21 @@ function O(e) {
     }
     return null;
 }
-let v = y(E({}, h.Z), {
+let v = y(E({}, m.Z), {
     sentinel: void 0,
-    focusMode: p.QZ.MANUAL,
+    focusMode: _.QZ.MANUAL,
     matches(e, t, n, r, i) {
-        if (i.commands === p.L8.DISABLED || i.commands === p.L8.OLD_BUILT_INS || n.length < 2 || !c.Xk.getSetting())
+        if (i.commands === _.L8.DISABLED || i.commands === _.L8.OLD_BUILT_INS || n.length < 2 || !c.Xk.getSetting())
             return !1;
         let a = O(n);
         return null != a && a.cleanedQuery.length > 0;
     },
     queryResults(e, t, n, o, l) {
-        if (!c.Xk.getSetting()) return h.K;
+        if (!c.Xk.getSetting()) return m.K;
         let u = O(n);
-        if (null == u) return h.K;
+        if (null == u) return m.K;
         let d = (0, s.hV)(e, u.cleanedQuery),
-            { commands: f, sections: _ } = i.JT(
+            { commands: f, sections: p } = i.JT(
                 {
                     channel: e,
                     type: "channel",
@@ -104,26 +104,26 @@ let v = y(E({}, h.Z), {
                     text: d.text,
                 },
                 {
-                    limit: p.AQ,
-                    placeholderCount: p.YP,
+                    limit: _.AQ,
+                    placeholderCount: _.YP,
                     scoreMethod: a.p.COMMAND_OR_APPLICATION,
                     allowFetch: l,
                 },
             );
-        if (null == f) return h.K;
-        let m = f.filter((e) => e.section.botId === u.user.id);
+        if (null == f) return m.K;
+        let h = f.filter((e) => e.section.botId === u.user.id);
         if (d.hasSpaceTerminator) {
             let e = d.text.trim(),
                 t = e + " ";
-            m = m.filter((n) => n.untranslatedName === e || n.untranslatedName.startsWith(t));
+            h = h.filter((n) => n.untranslatedName === e || n.untranslatedName.startsWith(t));
         }
-        return 0 === m.length
-            ? h.K
+        return 0 === h.length
+            ? m.K
             : {
                   results: {
-                      entries: m.slice(0, p.AQ).map((e) => ({
+                      entries: h.slice(0, _.AQ).map((e) => ({
                           command: e,
-                          section: null == _ ? void 0 : _.find((t) => t.id === e.applicationId),
+                          section: null == p ? void 0 : p.find((t) => t.id === e.applicationId),
                       })),
                   },
               };
@@ -139,15 +139,15 @@ let v = y(E({}, h.Z), {
             onHover: s,
             onClick: c,
         } = e;
-        return (0, _.HI)({
+        return (0, p.HI)({
             query: a,
             selectedIndex: n,
             autocompletes: t,
             onHover: s,
             onClick: c,
-            titleWithQuery: m.t.HFRoZR,
-            titleWithoutQuery: m.intl.string(m.t["0hKkS+"]),
-            Component: o.commands === p.L8.OLD_BUILT_INS ? l.ZP.Command : l.ZP.NewCommand,
+            titleWithQuery: h.t.HFRoZR,
+            titleWithoutQuery: h.intl.string(h.t["0hKkS+"]),
+            Component: o.commands === _.L8.OLD_BUILT_INS ? l.ZP.Command : l.ZP.NewCommand,
             getProps: (e) => {
                 let { command: t, section: n } = e;
                 return {
@@ -170,7 +170,7 @@ let v = y(E({}, h.Z), {
     },
     onSelect(e) {
         let { results: t, index: n, type: r, options: i, channel: a, guild: s } = e,
-            l = h.Z.onSelect({
+            l = m.Z.onSelect({
                 results: t,
                 index: n,
                 type: r,
@@ -179,6 +179,6 @@ let v = y(E({}, h.Z), {
                 guild: s,
                 location: o.Vh.SUGGESTION,
             });
-        return null == l ? null : y(E({}, l), { type: p.z2.COMMAND_SUGGESTION });
+        return null == l ? null : y(E({}, l), { type: _.z2.COMMAND_SUGGESTION });
     },
 });

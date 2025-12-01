@@ -1,4 +1,4 @@
-n.d(t, { i: () => _ });
+n.d(t, { i: () => p });
 var r = n(54381);
 n(473749);
 var i = n(692547),
@@ -77,17 +77,17 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let _ = (e) => {
+let p = (e) => {
     var t,
         n,
         {
             size: s = "md",
             width: c,
             height: f,
-            secondaryColor: _ = "transparent",
-            secondaryColorClass: p = "",
-            color: h = i.Z.colors.INTERACTIVE_NORMAL,
-            colorClass: m = "",
+            secondaryColor: p = "transparent",
+            secondaryColorClass: _ = "",
+            color: m = i.Z.colors.INTERACTIVE_NORMAL,
+            colorClass: h = "",
         } = e,
         g = d(e, ["size", "width", "height", "secondaryColor", "secondaryColorClass", "color", "colorClass"]);
     let E = (0, o.m)(s),
@@ -106,15 +106,15 @@ let _ = (e) => {
                     cx: "12",
                     cy: "12",
                     r: "10",
-                    fill: "string" == typeof _ ? _ : _.css,
-                    className: p,
+                    fill: "string" == typeof p ? p : p.css,
+                    className: _,
                 }),
                 (0, r.jsx)("path", {
-                    fill: "string" == typeof h ? h : h.css,
+                    fill: "string" == typeof m ? m : m.css,
                     fillRule: "evenodd",
                     d: "M12 23a11 11 0 1 0 0-22 11 11 0 0 0 0 22Zm-.28-16c-.98 0-1.81.47-2.27 1.14A1 1 0 1 1 7.8 7.01 4.73 4.73 0 0 1 11.72 5c2.5 0 4.65 1.88 4.65 4.38 0 2.1-1.54 3.77-3.52 4.24l.14 1a1 1 0 0 1-1.98.27l-.28-2a1 1 0 0 1 .99-1.14c1.54 0 2.65-1.14 2.65-2.38 0-1.23-1.1-2.37-2.65-2.37ZM13 17.88a1.13 1.13 0 1 1-2.25 0 1.13 1.13 0 0 1 2.25 0Z",
                     clipRule: "evenodd",
-                    className: m,
+                    className: h,
                 }),
             ],
         }),

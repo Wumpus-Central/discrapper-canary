@@ -57,30 +57,30 @@ function f(e, t) {
         e
     );
 }
-let _ = null;
-function p(e, t) {
+let p = null;
+function _(e, t) {
     let n = {};
-    return null != e.mention && null != _ && (n = { mention: _ }), (0, l.Z)([e, ...t, n]);
+    return null != e.mention && null != p && (n = { mention: p }), (0, l.Z)([e, ...t, n]);
 }
-_ = n(878611).Z;
-let h = {
+p = n(878611).Z;
+let m = {
         enableBuildOverrides: !1,
         enableEmojiClick: !0,
     },
-    m = p(s.Z.RULES, [(0, o.Z)({ enableBuildOverrides: !0 })]),
-    g = i().omit(p(s.Z.RULES, [(0, o.Z)(h)]), "paragraph", "newline"),
-    E = p(s.Z.CHANNEL_TOPIC_RULES, [
-        (0, o.Z)(f(u({}, h), { emojiTooltipPosition: "bottom" })),
+    h = _(s.Z.RULES, [(0, o.Z)({ enableBuildOverrides: !0 })]),
+    g = i().omit(_(s.Z.RULES, [(0, o.Z)(m)]), "paragraph", "newline"),
+    E = _(s.Z.CHANNEL_TOPIC_RULES, [
+        (0, o.Z)(f(u({}, m), { emojiTooltipPosition: "bottom" })),
         { codeBlock: { react: s.Z.RULES.text.react } },
     ]),
-    b = p(s.Z.VOICE_CHANNEL_STATUS_RULES, [(0, o.Z)(f(u({}, h), { enableEmojiClick: !1 }))]),
-    y = p(s.Z.EMBED_TITLE_RULES, [(0, o.Z)(h)]),
-    O = p(s.Z.INLINE_REPLY_RULES, [(0, o.Z)(h)]),
-    v = p(s.Z.GUILD_VERIFICATION_FORM_RULES, [(0, o.Z)(h)]),
-    I = p(s.Z.GUILD_EVENT_RULES, [(0, o.Z)(h)]),
-    T = p(s.Z.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, o.Z)(h)]),
-    S = i().omit(
-        p(s.Z.RULES, [(0, o.Z)(h)]),
+    b = _(s.Z.VOICE_CHANNEL_STATUS_RULES, [(0, o.Z)(f(u({}, m), { enableEmojiClick: !1 }))]),
+    y = _(s.Z.EMBED_TITLE_RULES, [(0, o.Z)(m)]),
+    O = _(s.Z.INLINE_REPLY_RULES, [(0, o.Z)(m)]),
+    v = _(s.Z.GUILD_VERIFICATION_FORM_RULES, [(0, o.Z)(m)]),
+    S = _(s.Z.GUILD_EVENT_RULES, [(0, o.Z)(m)]),
+    I = _(s.Z.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, o.Z)(m)]),
+    T = i().omit(
+        _(s.Z.RULES, [(0, o.Z)(m)]),
         "paragraph",
         "newline",
         "strong",
@@ -96,27 +96,27 @@ let h = {
     ),
     A = { text: s.Z.RULES.text },
     C = {
-        combineAndInjectMentionRule: p,
+        combineAndInjectMentionRule: _,
         createReactRules: o.Z,
-        defaultReactRuleOptions: h,
-        defaultRules: m,
-        guildEventRules: I,
-        notifCenterV2MessagePreviewRules: S,
+        defaultReactRuleOptions: m,
+        defaultRules: h,
+        guildEventRules: S,
+        notifCenterV2MessagePreviewRules: T,
         lockscreenWidgetMessageRules: A,
         astParserFor: a._p,
         reactParserFor: a.w4,
-        parse: a.w4(m),
+        parse: a.w4(h),
         parseTopic: (e, t, n, r) => a.w4(E)(e, t, u({ allowLinks: !0 }, n), r),
         parseVoiceChannelStatus: a.w4(b),
         parseEmbedTitle: a.w4(y),
         parseInlineReply: a.w4(O),
         parseGuildVerificationFormRule: a.w4(v),
-        parseGuildEventDescription: a.w4(I),
-        parseAutoModerationSystemMessage: a.w4(T),
+        parseGuildEventDescription: a.w4(S),
+        parseAutoModerationSystemMessage: a.w4(I),
         parseForumPostGuidelines: a.w4(g),
-        parseToAST: a._p(m),
+        parseToAST: a._p(h),
         parseTopicToAST: a._p(E),
         parseEmbedTitleToAST: a._p(y),
         parseInlineReplyToAST: a._p(O),
-        parseAutoModerationSystemMessageToAST: a._p(T),
+        parseAutoModerationSystemMessageToAST: a._p(I),
     };

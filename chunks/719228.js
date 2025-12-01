@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(37234),
     d = n(565138),
     f = n(703656),
-    _ = n(430824),
-    p = n(771845),
-    h = n(267642),
-    m = n(981631),
+    p = n(430824),
+    _ = n(771845),
+    m = n(267642),
+    h = n(981631),
     g = n(388032),
     E = n(30408);
 function b(e) {
@@ -27,10 +27,10 @@ function b(e) {
 }
 function y(e) {
     let { isTransfer: t = !1, selectedSlotGuilds: n, onClose: i, onSelectGuild: a, query: s } = e,
-        b = (0, l.e7)([p.ZP], () => p.ZP.getFlattenedGuildIds()),
-        y = (0, l.Wu)([_.Z], () =>
+        b = (0, l.e7)([_.ZP], () => _.ZP.getFlattenedGuildIds()),
+        y = (0, l.Wu)([p.Z], () =>
             b.reduce((e, t) => {
-                let r = _.Z.getGuild(t);
+                let r = p.Z.getGuild(t);
                 return (
                     null == r ||
                         (null != n && n.some((e) => e.id === t)) ||
@@ -41,7 +41,7 @@ function y(e) {
             }, []),
         );
     function O() {
-        i(), (0, u.xf)(), (0, f.uL)(m.Z5c.GUILD_DISCOVERY);
+        i(), (0, u.xf)(), (0, f.uL)(h.Z5c.GUILD_DISCOVERY);
     }
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -93,7 +93,7 @@ function y(e) {
                                         className: E.selectGuildLevel,
                                         color: "text-muted",
                                         variant: "text-xs/normal",
-                                        children: (0, h.nW)(e.premiumTier),
+                                        children: (0, m.nW)(e.premiumTier),
                                     }),
                                 ],
                             }),

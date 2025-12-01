@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => D,
-    j: () => P,
+    Z: () => w,
+    j: () => R,
 });
 var r = n(526167),
     i = n(621554),
@@ -12,31 +12,31 @@ var r = n(526167),
     u = n(926425),
     d = n(844049),
     f = n(712386),
-    _ = n(602722),
-    p = n(534109),
-    h = n(859500),
-    m = n(484542),
+    p = n(602722),
+    _ = n(534109),
+    m = n(859500),
+    h = n(484542),
     g = n(881500),
     E = n(910826),
     b = n(307244),
     y = n(669730),
     O = n(666828),
     v = n(131999),
-    I = n(649272),
-    T = n(241372),
-    S = n(538387),
+    S = n(649272),
+    I = n(241372),
+    T = n(538387),
     A = n(213921),
     C = n(34721),
     N = n(410693),
-    R = n(235731);
-function P() {
+    P = n(235731);
+function R() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    return e ? R : i;
+    return e ? P : i;
 }
-let D = {
+let w = {
     DEFAULT_AVATARS: [o, s, l, c, u, d],
-    DEFAULT_PROVISIONAL_AVATARS: [I, T, S, A, C, N],
-    DEFAULT_GROUP_DM_AVATARS: [f, _, p, h, m, g, E, b],
+    DEFAULT_PROVISIONAL_AVATARS: [S, I, T, A, C, N],
+    DEFAULT_GROUP_DM_AVATARS: [f, p, _, m, h, g, E, b],
     BOT_AVATARS: {
         clyde: a,
         nitro: O,

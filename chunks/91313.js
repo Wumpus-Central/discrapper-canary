@@ -1,8 +1,8 @@
 n.d(t, {
-    HZ: () => h,
+    HZ: () => m,
     IB: () => E,
-    cr: () => p,
-    cu: () => m,
+    cr: () => _,
+    cu: () => h,
     lk: () => b,
     tM: () => g,
     xi: () => y,
@@ -25,12 +25,12 @@ var r = n(911969),
     u = n(925994),
     d = n(887490),
     f = n(42530);
-let _ = RegExp("([\\p{L}\\p{N}\\p{sc=Deva}\\p{sc=Thai}_-]+):", "gu");
-function p(e) {
+let p = RegExp("([\\p{L}\\p{N}\\p{sc=Deva}\\p{sc=Thai}_-]+):", "gu");
+function _(e) {
     let t = d.bN.richValue(e)[0];
     return null == t || "applicationCommand" !== t.type ? null : [t, f.YD];
 }
-function h(e) {
+function m(e) {
     var t, n;
     if (null == e.selection) return null;
     let r =
@@ -51,8 +51,8 @@ function h(e) {
           ? n
           : null;
 }
-function m(e) {
-    let t = p(e),
+function h(e) {
+    let t = _(e),
         n = [],
         r = null == t ? void 0 : t[0].children;
     if (null != r) for (let e of r) d.aj.isType(e, "applicationCommandOption") && n.push(e.optionName);
@@ -61,7 +61,7 @@ function m(e) {
 function g(e, t, n) {
     let r = {};
     if (null == t.options) return {};
-    let i = p(e),
+    let i = _(e),
         a = Object.fromEntries(t.options.map((e) => [e.name, e])),
         o = null == i ? void 0 : i[0].children;
     if (null != o) {
@@ -131,20 +131,20 @@ function y(e, t, n, r, s) {
         d = null == u || null == (l = u.options) ? void 0 : l.find((e) => e.name === c.optionName);
     if (null == d) return;
     let f = E(e, d, c, n),
-        _ = o.f({
+        p = o.f({
             option: d,
             content: f,
             guildId: t,
             channelId: n,
             allowEmptyValues: s,
         });
-    return i.g7(n, { [c.optionName]: { lastValidationResult: _ } }), _;
+    return i.g7(n, { [c.optionName]: { lastValidationResult: p } }), p;
 }
 function O(e, t) {
     if (null == t.options || 0 === t.options.length) return [];
     let n = d.bN.richValue(e),
         r = [],
-        i = new Set(m(e)),
+        i = new Set(h(e)),
         a = {},
         o = new Set();
     for (let e of t.options) (a[e.displayName] = e), i.has(e.name) || o.add(e.displayName);
@@ -154,12 +154,12 @@ function O(e, t) {
         if ("line" === i.type || "applicationCommand" === i.type)
             for (let c = 0; c < i.children.length; c++) {
                 let f,
-                    p = i.children[c],
-                    h = [t, c];
-                if (d.aj.isType(p, "applicationCommandOption")) {
+                    _ = i.children[c],
+                    m = [t, c];
+                if (d.aj.isType(_, "applicationCommandOption")) {
                     if (null != s) {
                         var l;
-                        (s.valueRange.focus = null != (l = d.bN.before(e, h)) ? l : d.bN.start(e, [])),
+                        (s.valueRange.focus = null != (l = d.bN.before(e, m)) ? l : d.bN.start(e, [])),
                             (s.text = (0, u.sk)(n, {
                                 mode: "raw",
                                 range: s.valueRange,
@@ -169,24 +169,24 @@ function O(e, t) {
                     }
                     continue;
                 }
-                if (d.LC.isText(p))
-                    for (_.lastIndex = 0; null != (f = _.exec(p.text)); ) {
-                        if (0 !== f.index && null == p.text.charAt(f.index - 1).match(/(\t|\s)/)) continue;
+                if (d.LC.isText(_))
+                    for (p.lastIndex = 0; null != (f = p.exec(_.text)); ) {
+                        if (0 !== f.index && null == _.text.charAt(f.index - 1).match(/(\t|\s)/)) continue;
                         let e = f[1];
                         if (!o.has(e)) continue;
                         o.delete(e);
                         let t = a[e];
                         if (null == t) continue;
                         let i = {
-                                path: h,
+                                path: m,
                                 offset: f.index,
                             },
                             l = {
-                                path: h,
+                                path: m,
                                 offset: i.offset + f[0].length,
                             },
                             c = {
-                                path: h,
+                                path: m,
                                 offset: l.offset,
                             },
                             d = {

@@ -3,14 +3,14 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     o = n.n(l),
-    a = n(790519),
+    a = n(666917),
     s = n(442837),
     c = n(481060),
     u = n(492162),
     d = n(237583),
-    p = n(451478),
+    f = n(451478),
     h = n(934415),
-    f = n(968847),
+    p = n(968847),
     g = n(388032),
     m = n(74664);
 let b = {
@@ -22,22 +22,22 @@ function _(e) {
     let { guildChannels: n, jumpToVoiceChannels: l } = e,
         a = n.getCategoryFromSection(n.voiceChannelsSectionNumber),
         s = (0, u.Z)(n.id),
-        p = i.useCallback(
+        f = i.useCallback(
             (e) => {
                 e.preventDefault(), e.stopPropagation(), l();
             },
             [l],
         ),
-        f = null != (t = null == a ? void 0 : a.getChannelRecords()) ? t : [],
+        p = null != (t = null == a ? void 0 : a.getChannelRecords()) ? t : [],
         b = (0, h.c4)({
-            channels: f,
+            channels: p,
             selectedChannelId: null,
             selectedVoiceChannelId: null,
             voiceStates: s,
         });
     return (0, r.jsxs)(c.P3F, {
         className: o()(m.bar, m.voiceBar),
-        onClick: p,
+        onClick: f,
         children: [
             (0, r.jsx)(c.gj8, {
                 size: "custom",
@@ -64,22 +64,22 @@ function _(e) {
 }
 function y(e) {
     let { position: t, guildChannels: n, guildChannelsVersion: l, jumpToVoiceChannels: u, jumpToChannel: d } = e,
-        { bottomBar: h, topBar: y } = (0, s.cj)([f.Z], () => f.Z.getUnreadStateForGuildId(n.id)),
-        O = (0, s.e7)([p.Z], () => p.Z.isFocused()),
-        { mode: v, mentionCount: j, targetChannelId: C } = "bottom" === t ? h : y,
-        x = v === f.x.HIDDEN,
+        { bottomBar: h, topBar: y } = (0, s.cj)([p.Z], () => p.Z.getUnreadStateForGuildId(n.id)),
+        O = (0, s.e7)([f.Z], () => f.Z.isFocused()),
+        { mode: v, mentionCount: j, targetChannelId: x } = "bottom" === t ? h : y,
+        C = v === p.x.HIDDEN,
         E = (0, c.q_F)(
             {
-                to: { transform: x ? ("bottom" === t ? "translateY(180%)" : "translateY(-180%)") : "translateY(0%)" },
+                to: { transform: C ? ("bottom" === t ? "translateY(180%)" : "translateY(-180%)") : "translateY(0%)" },
                 config: b,
             },
             O ? "respect-motion-settings" : "animate-never",
         ),
         S = i.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), null != C && d(C);
+                e.preventDefault(), e.stopPropagation(), null != x && d(x);
             },
-            [d, C],
+            [d, x],
         );
     return (0, r.jsx)("div", {
         className: o()(m.container, {
@@ -89,11 +89,11 @@ function y(e) {
         children: (0, r.jsx)(a.animated.div, {
             className: m.containerPadding,
             style: E,
-            "aria-hidden": x,
+            "aria-hidden": C,
             children:
-                v === f.x.HIDDEN
+                v === p.x.HIDDEN
                     ? (0, r.jsx)("div", { className: o()(m.bar, m.emptyBar) })
-                    : v === f.x.UNREAD
+                    : v === p.x.UNREAD
                       ? (0, r.jsxs)(c.P3F, {
                             className: m.bar,
                             onClick: S,
@@ -121,7 +121,7 @@ function y(e) {
                                 }),
                             ],
                         })
-                      : v === f.x.MENTIONS
+                      : v === p.x.MENTIONS
                         ? (0, r.jsx)(c.P3F, {
                               className: o()(m.bar, m.mentionsBar),
                               onClick: S,
@@ -132,7 +132,7 @@ function y(e) {
                                   children: g.intl.format(g.t.EQcLyp, { count: j }),
                               }),
                           })
-                        : v === f.x.VOICE_CHANNELS
+                        : v === p.x.VOICE_CHANNELS
                           ? (0, r.jsx)(_, {
                                 jumpToVoiceChannels: u,
                                 guildChannels: n,

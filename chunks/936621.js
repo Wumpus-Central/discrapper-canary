@@ -1,4 +1,4 @@
-n.d(t, { F: () => h });
+n.d(t, { F: () => m });
 var r = n(54381),
     i = n(473749),
     a = n(512722),
@@ -57,11 +57,11 @@ function f(e, t) {
         e
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -69,7 +69,7 @@ function _(e, t) {
     }
     return i;
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,7 +78,7 @@ function p(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-class h extends i.Component {
+class m extends i.Component {
     getDefaultAnimProps(e, t) {
         return {
             duration: null != e ? e : 300,
@@ -105,7 +105,7 @@ class h extends i.Component {
     render() {
         let e = this.props,
             { children: t } = e,
-            n = _(e, ["children"]);
+            n = p(e, ["children"]);
         return (0, r.jsx)(
             "div",
             f(u({}, n), {

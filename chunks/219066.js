@@ -13,7 +13,7 @@ function f(e) {
     let { context: n } = e,
         i = "channel" === n.type ? n.channel : void 0,
         f = (0, l.LD)(null == i ? void 0 : i.guild_id, !0),
-        { commandsByActiveSection: _, loading: p } = c.wi({
+        { commandsByActiveSection: p, loading: _ } = c.wi({
             context: n,
             filters: {
                 commandTypes: [o.yU.CHAT, o.yU.PRIMARY_ENTRY_POINT],
@@ -25,24 +25,24 @@ function f(e) {
             },
             allowFetch: !0,
         }),
-        h = r.useMemo(
+        m = r.useMemo(
             () =>
-                _.reduce((e, t) => {
+                p.reduce((e, t) => {
                     let { section: n, data: r } = t;
                     return r.length > 0 && e.add(n.id), e;
                 }, new Set()),
-            [_],
+            [p],
         ),
-        m = r.useMemo(() => {
+        h = r.useMemo(() => {
             var e, t;
             return Object.values(null != (t = null == (e = f.result) ? void 0 : e.sections) ? t : {})
                 .map((e) => {
                     let { descriptor: t } = e;
                     return t;
                 })
-                .filter((e) => !(e.id in s.Tm) && h.has(e.id));
-        }, [null == (t = f.result) ? void 0 : t.sections, h]),
-        g = (0, u.h)(m);
+                .filter((e) => !(e.id in s.Tm) && m.has(e.id));
+        }, [null == (t = f.result) ? void 0 : t.sections, m]),
+        g = (0, u.h)(h);
     return {
         appsInThisServer: r.useMemo(
             () =>
@@ -56,6 +56,6 @@ function f(e) {
                     .map((e) => ({ application: e })),
             [g],
         ),
-        isLoading: f.fetchState.fetching || p,
+        isLoading: f.fetchState.fetching || _,
     };
 }

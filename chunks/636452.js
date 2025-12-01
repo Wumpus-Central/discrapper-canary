@@ -1,9 +1,9 @@
 n.d(e, { Z: () => s });
 var i = n(509613),
-    l = n(313789),
-    u = n(359138),
-    r = n(388032);
-let s = (0, i.ON)(l.n.CAMERA_VIDEO_PREVIEW, {
-    useSearchTerms: () => [r.intl.string(r.t.JIf4v7)],
-    render: u.Z,
+    r = n(313789),
+    l = n(359138),
+    u = n(388032);
+let s = (0, i.ON)(r.n.CAMERA_VIDEO_PREVIEW, {
+    useSearchTerms: () => [u.intl.string(u.t.JIf4v7)],
+    render: l.Z,
 });

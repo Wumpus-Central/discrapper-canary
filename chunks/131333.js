@@ -1,4 +1,4 @@
-n.d(t, { t: () => j }), n(388685), n(35282), n(413496), n(433524);
+n.d(t, { t: () => k }), n(388685), n(35282), n(413496), n(433524);
 var r = n(54381),
     i = n(473749),
     a = n(921254),
@@ -9,9 +9,9 @@ var r = n(54381),
     u = n(728285),
     d = n(146128),
     f = n(981631),
-    _ = n(675654),
-    p = n(433661);
-function h(e, t, n) {
+    p = n(675654),
+    _ = n(433661);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,7 +35,7 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
@@ -67,26 +67,26 @@ let b = [],
     y = -5,
     O = -40,
     v = -40,
-    I = -100,
-    T = 11,
-    S = 125,
+    S = -100,
+    I = 11,
+    T = 125,
     A = 20,
     C = 12,
     N = 48,
-    R = 0.01,
-    P = new Set(["jack_o_lantern", "nose"]),
-    D = {
+    P = 0.01,
+    R = new Set(["jack_o_lantern", "nose"]),
+    w = {
         jack_o_lantern: {
             sprites: (0, l.Z)(["chocolate_bar", "lollipop", "candy"]),
         },
         nose: { sprites: (0, l.Z)(["foot"]) },
     };
-function w(e) {
+function D(e) {
     if (null == e) return null;
-    for (let t of P) if (null != e.match(new RegExp(":".concat(t, "(_tone[1-9])?")))) return t;
+    for (let t of R) if (null != e.match(new RegExp(":".concat(t, "(_tone[1-9])?")))) return t;
     return null;
 }
-let L = {
+let x = {
     enter: {
         BEG: 0,
         END: 22,
@@ -100,7 +100,7 @@ let L = {
         END: 200,
     },
 };
-function x() {
+function L() {
     return n
         .e("77843")
         .then(n.t.bind(n, 931152, 19))
@@ -109,7 +109,7 @@ function x() {
             return t;
         });
 }
-function M(e) {
+function j(e) {
     if (null == e) return "enter";
     switch (e) {
         case "enter":
@@ -120,7 +120,7 @@ function M(e) {
             return "enter";
     }
 }
-let k = i.forwardRef(function (e, t) {
+let M = i.forwardRef(function (e, t) {
     let { sprites: n } = e,
         [o, l] = i.useState(null),
         { confettiCanvas: c } = i.useContext(s.h),
@@ -131,7 +131,7 @@ let k = i.forwardRef(function (e, t) {
             () => ({
                 fireConfetti: (e, t) => {
                     u.createMultipleConfetti(
-                        E(m({}, _.We), {
+                        E(h({}, p.We), {
                             position: {
                                 type: "static",
                                 value: {
@@ -147,7 +147,7 @@ let k = i.forwardRef(function (e, t) {
                                 },
                                 maxValue: {
                                     x: O,
-                                    y: I,
+                                    y: S,
                                 },
                             },
                             size: {
@@ -157,7 +157,7 @@ let k = i.forwardRef(function (e, t) {
                             },
                             dragCoefficient: {
                                 type: "static",
-                                value: R,
+                                value: P,
                             },
                         }),
                         A,
@@ -175,23 +175,23 @@ let k = i.forwardRef(function (e, t) {
         })
     );
 });
-function j(e) {
+function k(e) {
     let { children: t } = e,
         n = i.useRef({}),
         [a, s] = i.useState(null),
-        l = M(a),
-        _ = i.useRef(null),
-        [h, m] = i.useState(!1),
+        l = j(a),
+        p = i.useRef(null),
+        [m, h] = i.useState(!1),
         g = i.useRef("jack_o_lantern"),
         E = (0, u.bp)(),
         b = i.useCallback(
             (e) => {
-                if (!h) {
-                    let t = w(e);
-                    null != t && ((g.current = t), m(!0), s(null));
+                if (!m) {
+                    let t = D(e);
+                    null != t && ((g.current = t), h(!0), s(null));
                 }
             },
-            [h],
+            [m],
         ),
         y = i.useMemo(
             () => ({
@@ -204,17 +204,17 @@ function j(e) {
             s(e);
         }, []),
         v = i.useCallback((e) => {
-            "exit" === e && m(!1);
+            "exit" === e && h(!1);
         }, []),
-        I = i.useCallback((e) => {
-            _.current = e;
+        S = i.useCallback((e) => {
+            p.current = e;
         }, []);
     return (i.useEffect(() => {
         if ("confetti" === a) {
-            if (null == _.current) return;
-            let e = _.current.getBoundingClientRect(),
-                t = e.left - T,
-                r = e.top + S,
+            if (null == p.current) return;
+            let e = p.current.getBoundingClientRect(),
+                t = e.left - I,
+                r = e.top + T,
                 i = n.current[g.current];
             null == i || i.fireConfetti(t, r);
         }
@@ -225,10 +225,10 @@ function j(e) {
               value: y,
               children: [
                   t,
-                  Object.keys(D).map((e) => {
-                      let t = D[e];
+                  Object.keys(w).map((e) => {
+                      let t = w[e];
                       return (0, r.jsx)(
-                          k,
+                          M,
                           {
                               ref: (t) => {
                                   null != t ? (n.current[e] = t) : delete n.current[e];
@@ -238,18 +238,18 @@ function j(e) {
                           e,
                       );
                   }),
-                  h
+                  m
                       ? (0, r.jsx)(c.ZP, {
                             children: (0, r.jsx)("div", {
-                                className: p.animationWrapper,
+                                className: _.animationWrapper,
                                 children: (0, r.jsx)(o.kci, {
-                                    animationRef: I,
-                                    className: p.lottieAnimation,
+                                    animationRef: S,
+                                    className: _.lottieAnimation,
                                     nextScene: l,
-                                    sceneSegments: L,
+                                    sceneSegments: x,
                                     onScenePlay: O,
                                     onSceneComplete: v,
-                                    importData: x,
+                                    importData: L,
                                     pauseWhileUnfocused: !1,
                                 }),
                             }),

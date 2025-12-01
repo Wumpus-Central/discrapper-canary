@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(481060),
     d = n(248514),
     f = n(177475),
-    _ = n(691739);
-function p(e, t, n) {
+    p = n(691739);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,8 +23,8 @@ function p(e, t, n) {
         e
     );
 }
-function h() {
-    return (h =
+function m() {
+    return (m =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -34,7 +34,7 @@ function h() {
             return e;
         }).apply(this, arguments);
 }
-function m(e) {
+function h(e) {
     if (null == e) throw TypeError("Cannot destructure " + e);
     return e;
 }
@@ -49,7 +49,7 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -356,13 +356,13 @@ let v = {
                 var t,
                     { graphic: l, subtitleIcon: c } = e,
                     d = y(e, ["graphic", "subtitleIcon"]);
-                let p = c
+                let _ = c
                         ? {
                               text: null != (t = d.subtitle) ? t : "Default subtitle",
                               leadingIcon: o.VL1,
                           }
                         : d.subtitle,
-                    h = i.useMemo(
+                    m = i.useMemo(
                         () =>
                             0 === l
                                 ? {
@@ -383,7 +383,7 @@ let v = {
                                     : 3 === l
                                       ? {
                                             type: "video",
-                                            src: _.Z,
+                                            src: p.Z,
                                             fallbackImageSrc: f,
                                             loop: !0,
                                             loopAt: 2.5,
@@ -416,8 +416,8 @@ let v = {
                                             o.ExpressiveModal,
                                             b(g({}, e, d), {
                                                 title: d.title,
-                                                subtitle: p,
-                                                graphic: h,
+                                                subtitle: _,
+                                                graphic: m,
                                                 actions: [
                                                     {
                                                         variant: "secondary",
@@ -671,7 +671,7 @@ let v = {
             name: "LayerModal",
             id: "layer-modal",
             component: function (e) {
-                var t = h({}, m(e));
+                var t = m({}, h(e));
                 return (0, r.jsxs)(u.Kqy, {
                     gap: 16,
                     align: "center",

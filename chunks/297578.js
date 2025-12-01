@@ -52,7 +52,7 @@ var a = n(117242),
         if (s) return void i[s].children.push(l);
         n.push(l);
     },
-    _ = function (e, t) {
+    p = function (e, t) {
         var n = t.entityMap,
             r = [],
             i = {},
@@ -78,7 +78,7 @@ var a = n(117242),
             }
         );
     },
-    p = function (e, t) {
+    _ = function (e, t) {
         var n = t.blocks,
             r = t.entityMap,
             i = {};
@@ -102,5 +102,5 @@ e.exports = function (e) {
         entityMap: {},
         blocks: [],
     };
-    return (t = _(e, t)), (t = p(e, t));
+    return (t = p(e, t)), (t = _(e, t));
 };

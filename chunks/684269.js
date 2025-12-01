@@ -13,6 +13,6 @@ function a() {
         o = new Date(n);
     if (a.getFullYear() !== o.getFullYear() || a.getMonth() !== o.getMonth() || a.getDate() !== o.getDate())
         return i.FO.TODAY;
-    let s = Number(n) - Date.now();
-    return null != (e = l.find((e) => s <= e)) ? e : i.FO.TODAY;
+    let u = Number(n) - Date.now();
+    return null != (e = l.find((e) => u <= e)) ? e : i.FO.TODAY;
 }

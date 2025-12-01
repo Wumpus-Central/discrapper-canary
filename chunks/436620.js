@@ -3,7 +3,7 @@ n.d(t, {
     KO: () => l,
     U8: () => u,
     WS: () => d,
-    X6: () => _,
+    X6: () => p,
     Zb: () => o,
     fi: () => c,
 });
@@ -47,7 +47,7 @@ let o = parseInt(null != (r = a().version) ? r : "0", 10),
         ("Chrome" === a().name && o >= 58) ||
         ("Safari" === a().name && o >= 15) ||
         ("Firefox" === a().name && o >= 108),
-    _ =
+    p =
         ("Chrome" === a().name && o >= 72) ||
         ("Safari" === a().name && o >= 11) ||
         ("Opera" === a().name && o >= 60) ||

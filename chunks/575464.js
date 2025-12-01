@@ -23,9 +23,9 @@ function m(e) {
             checked: C,
             disabled: v = !1,
             inlineUsername: _ = !0,
-            onClick: x,
-            onMouseEnter: j,
-            "aria-setsize": O,
+            onClick: O,
+            onMouseEnter: x,
+            "aria-setsize": j,
             "aria-posinset": E,
         } = e,
         S = (0, o.e7)([p.Z], () => p.Z.getStatus(r.id)),
@@ -61,10 +61,10 @@ function m(e) {
                 id: "user-row-".concat(m),
                 className: l()(f.friendWrapper, { [f.disabled]: v }),
                 onClick: () => {
-                    null != x && x(r.id);
+                    null != O && O(r.id);
                 },
                 onMouseEnter: () => {
-                    null != j && j(m);
+                    null != x && x(m);
                 },
             },
             P,
@@ -74,7 +74,7 @@ function m(e) {
                 role: "option",
                 "aria-selected": C,
                 "aria-disabled": v,
-                "aria-setsize": O,
+                "aria-setsize": j,
                 "aria-posinset": E,
                 children: (0, i.jsxs)(d.Z, {
                     align: d.Z.Align.CENTER,

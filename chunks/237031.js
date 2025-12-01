@@ -1,6 +1,6 @@
 n.d(t, {
-    T: () => _,
-    v: () => p,
+    T: () => p,
+    v: () => _,
 });
 var r = n(54381);
 n(473749);
@@ -61,15 +61,15 @@ function d(e, t) {
     );
 }
 let f = "collectibles shop product details modal",
-    _ = (e) => {
+    p = (e) => {
         let {
             product: t,
             category: l,
             shouldCheckoutWithOrbs: u,
-            analyticsSource: _,
-            analyticsLocations: p,
-            returnRef: h,
-            tab: m,
+            analyticsSource: p,
+            analyticsLocations: _,
+            returnRef: m,
+            tab: h,
             rentalDuration: g,
         } = e;
         if (
@@ -91,10 +91,10 @@ let f = "collectibles shop product details modal",
                             product: t,
                             category: l,
                             shouldCheckoutWithOrbs: u,
-                            analyticsSource: _,
-                            analyticsLocations: p,
-                            returnRef: h,
-                            tab: m,
+                            analyticsSource: p,
+                            analyticsLocations: _,
+                            returnRef: m,
+                            tab: h,
                             rentalDuration: g,
                         }),
                     );
@@ -102,6 +102,6 @@ let f = "collectibles shop product details modal",
             { modalKey: f },
         );
     },
-    p = () => {
+    _ = () => {
         (0, i.Mr3)(f);
     };

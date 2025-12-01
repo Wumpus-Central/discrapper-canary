@@ -1,6 +1,6 @@
 n.d(t, {
     M: () => f,
-    Z: () => T,
+    Z: () => I,
 });
 var r,
     i = n(392711),
@@ -62,17 +62,17 @@ function d(e, t) {
 var f = (function (e) {
     return (e[(e.FETCHING = 0)] = "FETCHING"), (e[(e.FETCHED = 1)] = "FETCHED"), (e[(e.ERROR = 2)] = "ERROR"), e;
 })({});
-let _ = [],
-    p = {},
-    h = {},
-    m = {};
+let p = [],
+    _ = {},
+    m = {},
+    h = {};
 function g(e) {
     let { surface: t, activeState: n } = e;
     return "surface:".concat(t, " activeState:").concat(n);
 }
 function E(e) {
     let { surface: t, activeState: n } = e;
-    h = d(c({}, h), {
+    m = d(c({}, m), {
         [g({
             surface: t,
             activeState: n,
@@ -94,23 +94,23 @@ function O(e) {
         a = b(
             t.map((e) => ((e.application_directory_collection_items = y(e.application_directory_collection_items)), e)),
         );
-    (p = d(c({}, p), { [i]: a })), (h = d(c({}, h), { [i]: 1 }));
+    (_ = d(c({}, _), { [i]: a })), (m = d(c({}, m), { [i]: 1 }));
     let o = Date.now();
-    m = d(c({}, m), { [i]: o });
+    h = d(c({}, h), { [i]: o });
 }
 function v(e) {
     let { surface: t, activeState: n } = e;
-    h = d(c({}, h), {
+    m = d(c({}, m), {
         [g({
             surface: t,
             activeState: n,
         })]: 2,
     });
 }
-class I extends (r = o.ZP.Store) {
+class S extends (r = o.ZP.Store) {
     getLastFetchTimeMs(e) {
         let { surface: t, activeState: n } = e;
-        return m[
+        return h[
             g({
                 surface: t,
                 activeState: n,
@@ -119,7 +119,7 @@ class I extends (r = o.ZP.Store) {
     }
     getFetchState(e) {
         let { surface: t, activeState: n } = e;
-        return h[
+        return m[
             g({
                 surface: t,
                 activeState: n,
@@ -131,18 +131,18 @@ class I extends (r = o.ZP.Store) {
         let { surface: n, activeState: r } = e;
         return null !=
             (t =
-                p[
+                _[
                     g({
                         surface: n,
                         activeState: r,
                     })
                 ])
             ? t
-            : _;
+            : p;
     }
 }
-l(I, "displayName", void 0);
-let T = new I(s.Z, {
+l(S, "displayName", void 0);
+let I = new S(s.Z, {
     APPLICATION_DIRECTORY_FETCH_COLLECTIONS: E,
     APPLICATION_DIRECTORY_FETCH_COLLECTIONS_SUCCESS: O,
     APPLICATION_DIRECTORY_FETCH_COLLECTIONS_FAILURE: v,

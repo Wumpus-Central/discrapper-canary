@@ -1,7 +1,7 @@
 n.d(t, {
-    BA: () => p,
-    ZN: () => h,
-    ZP: () => m,
+    BA: () => _,
+    ZN: () => m,
+    ZP: () => h,
 }),
     n(953529),
     n(997841),
@@ -65,11 +65,11 @@ function f(e, t) {
         e
     );
 }
-let _ = {
+let p = {
     [l.Zc]: 7,
     [l.qm]: 12,
 };
-function p(e) {
+function _(e) {
     let t = {
         os: e.os,
         name: e.name,
@@ -78,9 +78,9 @@ function p(e) {
         null != e.arguments && (t.arguments = e.arguments), null != e.is_launcher && (t.isLauncher = e.is_launcher), t
     );
 }
-class h extends i.Z {
+class m extends i.Z {
     static createFromServer(e) {
-        return new h(
+        return new m(
             f(u({}, e), {
                 coverImage: e.cover_image,
                 primarySkuId: e.primary_sku_id,
@@ -169,10 +169,10 @@ class h extends i.Z {
             (this.connectionEntrypointUrl = null != (o = e.connection_entrypoint_url) ? o : e.connectionEntrypointUrl);
     }
 }
-class m extends h {
+class h extends m {
     static createFromServer(e) {
         var t, n, i;
-        return new m(
+        return new h(
             f(u({}, e), {
                 coverImage: e.cover_image,
                 primarySkuId: e.primary_sku_id,
@@ -213,7 +213,7 @@ class m extends h {
                         ? void 0
                         : t.map((e) =>
                               f(u({}, e), {
-                                  application: null != e.application ? m.createFromServer(e.application) : void 0,
+                                  application: null != e.application ? h.createFromServer(e.application) : void 0,
                               }),
                           ),
                 deepLinkUri: e.deeplink_uri,
@@ -232,41 +232,41 @@ class m extends h {
             c,
             d,
             f,
-            _,
             p,
-            h,
+            _,
+            m,
             g,
             E,
             b,
             y,
             O,
             v,
+            S,
             I,
             T,
-            S,
             A,
             C,
             N,
-            R,
             P,
-            D,
+            R,
             w,
-            L,
+            D,
             x,
+            L,
+            j,
             M,
             k,
-            j,
             U,
             G,
-            B,
             Z,
+            B,
             F,
             V,
             H,
             Y,
             W,
             K;
-        return new m({
+        return new h({
             id: null != (t = e.id) ? t : this.id,
             name: null != (n = e.name) ? n : this.name,
             icon: null != (r = e.icon) ? r : this.icon,
@@ -278,40 +278,40 @@ class m extends h {
             hook: null != (c = e.hook) ? c : this.hook,
             aliases: null != (d = e.aliases) ? d : this.aliases,
             publishers: null != (f = e.publishers) ? f : this.publishers,
-            developers: null != (_ = e.developers) ? _ : this.developers,
-            primarySkuId: null != (p = e.primarySkuId) ? p : this.primarySkuId,
-            storeListingSkuId: null != (h = e.storeListingSkuId) ? h : this.storeListingSkuId,
+            developers: null != (p = e.developers) ? p : this.developers,
+            primarySkuId: null != (_ = e.primarySkuId) ? _ : this.primarySkuId,
+            storeListingSkuId: null != (m = e.storeListingSkuId) ? m : this.storeListingSkuId,
             thirdPartySkus: null != (g = e.thirdPartySkus) ? g : this.thirdPartySkus,
             guildId: null != (E = e.guildId) ? E : this.guildId,
             guild: null != (b = e.guild) ? b : this.guild,
             executables: null != (y = e.executables) ? y : this.executables,
             hashes: null != (O = e.hashes) ? O : this.hashes,
             description: null != (v = e.description) ? v : this.description,
-            eulaId: null != (I = e.eulaId) ? I : this.eulaId,
-            slug: null != (T = e.slug) ? T : this.slug,
-            coverImage: null != (S = e.coverImage) ? S : this.coverImage,
+            eulaId: null != (S = e.eulaId) ? S : this.eulaId,
+            slug: null != (I = e.slug) ? I : this.slug,
+            coverImage: null != (T = e.coverImage) ? T : this.coverImage,
             bot: null != (A = e.bot) ? A : this.bot,
             flags: null != (C = e.flags) ? C : this.flags,
             maxParticipants: null != (N = e.maxParticipants) ? N : this.maxParticipants,
-            tags: null != (R = e.tags) ? R : this.tags,
+            tags: null != (P = e.tags) ? P : this.tags,
             embeddedActivityConfig:
-                null != (P = e.embeddedActivityConfig)
-                    ? P
+                null != (R = e.embeddedActivityConfig)
+                    ? R
                     : null != this.embeddedActivityConfig
                       ? u({}, this.embeddedActivityConfig)
                       : void 0,
-            type: null != (D = e.type) ? D : this.type,
-            team: null != (w = e.team) ? w : this.team,
+            type: null != (w = e.type) ? w : this.type,
+            team: null != (D = e.team) ? D : this.team,
             roleConnectionsVerificationUrl:
-                null != (L = e.roleConnectionsVerificationUrl) ? L : this.roleConnectionsVerificationUrl,
-            connectionEntrypointUrl: null != (x = e.connectionEntrypointUrl) ? x : this.connectionEntrypointUrl,
-            integrationTypesConfig: null != (M = e.integrationTypesConfig) ? M : this.integrationTypesConfig,
-            isMonetized: null != (k = e.isMonetized) ? k : this.isMonetized,
-            storefront_available: null != (j = e.storefront_available) ? j : this.storefront_available,
+                null != (x = e.roleConnectionsVerificationUrl) ? x : this.roleConnectionsVerificationUrl,
+            connectionEntrypointUrl: null != (L = e.connectionEntrypointUrl) ? L : this.connectionEntrypointUrl,
+            integrationTypesConfig: null != (j = e.integrationTypesConfig) ? j : this.integrationTypesConfig,
+            isMonetized: null != (M = e.isMonetized) ? M : this.isMonetized,
+            storefront_available: null != (k = e.storefront_available) ? k : this.storefront_available,
             termsOfServiceUrl: null != (U = e.termsOfServiceUrl) ? U : this.termsOfServiceUrl,
             privacyPolicyUrl: null != (G = e.privacyPolicyUrl) ? G : this.privacyPolicyUrl,
-            isVerified: null != (B = e.isVerified) ? B : this.isVerified,
-            customInstallUrl: null != (Z = e.customInstallUrl) ? Z : this.customInstallUrl,
+            isVerified: null != (Z = e.isVerified) ? Z : this.isVerified,
+            customInstallUrl: null != (B = e.customInstallUrl) ? B : this.customInstallUrl,
             installParams: null != (F = e.installParams) ? F : this.installParams,
             isDiscoverable: null != (V = e.isDiscoverable) ? V : this.isDiscoverable,
             directoryEntry: null != (H = e.directoryEntry) ? H : this.directoryEntry,
@@ -322,7 +322,7 @@ class m extends h {
     }
     getMaxParticipants() {
         var e, t;
-        return null != (t = null != (e = this.maxParticipants) ? e : _[this.id]) ? t : 0;
+        return null != (t = null != (e = this.maxParticipants) ? e : p[this.id]) ? t : 0;
     }
     supportsIntegrationTypes() {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
@@ -333,14 +333,14 @@ class m extends h {
         return null != this.storeListingSkuId ? this.storeListingSkuId : this.primarySkuId;
     }
     get supportsOutOfProcessOverlay() {
-        return m.supportsOutOfProcessOverlay(this.overlayMethods);
+        return h.supportsOutOfProcessOverlay(this.overlayMethods);
     }
     static supportsOutOfProcessOverlay(e) {
         let t = r.e.OUT_OF_PROCESS;
         return null != e && (e & t) === t;
     }
     constructor(e) {
-        var t, n, i, a, o, s, l, d, _, h, g, E, b, y, O, v, I, T, S, A;
+        var t, n, i, a, o, s, l, d, p, m, g, E, b, y, O, v, S, I, T, A;
         super(e),
             c(this, "overlay", void 0),
             c(this, "overlayWarn", void 0),
@@ -380,11 +380,11 @@ class m extends h {
             (this.hook = null == (s = e.hook) || s),
             (this.aliases = null != (l = e.aliases) ? l : []),
             (this.publishers = null != (d = e.publishers) ? d : []),
-            (this.developers = null != (_ = e.developers) ? _ : []),
+            (this.developers = null != (p = e.developers) ? p : []),
             (this.storeListingSkuId = e.storeListingSkuId),
             (this.guildId = e.guildId),
             (this.guild = e.guild),
-            (this.executables = (null != (h = e.executables) ? h : []).map(p)),
+            (this.executables = (null != (m = e.executables) ? m : []).map(_)),
             (this.hashes = null != (g = e.hashes) ? g : []),
             (this.eulaId = e.eulaId),
             (this.slug = e.slug),
@@ -399,20 +399,20 @@ class m extends h {
             (this.privacyPolicyUrl = e.privacyPolicyUrl),
             (this.isDiscoverable = null != (O = e.is_discoverable) ? O : e.isDiscoverable),
             (this.customInstallUrl = null != (v = e.custom_install_url) ? v : e.customInstallUrl),
-            (this.installParams = null != (I = e.install_params) ? I : e.installParams),
-            (this.directoryEntry = null != (T = e.directory_entry) ? T : e.directoryEntry),
+            (this.installParams = null != (S = e.install_params) ? S : e.installParams),
+            (this.directoryEntry = null != (I = e.directory_entry) ? I : e.directoryEntry),
             (this.categories = e.categories),
             (this.linkedGames =
                 null !=
-                (S =
+                (T =
                     null == (t = e.linked_games)
                         ? void 0
                         : t.map((e) =>
                               f(u({}, e), {
-                                  application: null != e.application ? m.createFromServer(e.application) : void 0,
+                                  application: null != e.application ? h.createFromServer(e.application) : void 0,
                               }),
                           ))
-                    ? S
+                    ? T
                     : e.linkedGames),
             (this.deepLinkUri = null != (A = e.deepLinkUri) ? A : e.deeplink_uri);
     }

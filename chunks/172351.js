@@ -9,9 +9,9 @@ var r = n(54381),
     u = n(785717),
     d = n(678738),
     f = n(981631),
-    _ = n(388032),
-    p = n(555013);
-function h(e, t, n) {
+    p = n(388032),
+    _ = n(555013);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,13 +35,13 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
 }
 function g(e) {
-    let { applicationId: t, commandIds: n, guildId: h, channel: g, onClick: E } = e,
+    let { applicationId: t, commandIds: n, guildId: m, channel: g, onClick: E } = e,
         { trackUserProfileAction: b } = (0, u.KZ)(),
         y = i.useMemo(
             () => ({
@@ -70,25 +70,25 @@ function g(e) {
             [O],
         );
     if (null == v || 0 === v.length) return null;
-    let I = (e) => {
+    let S = (e) => {
         null == E || E(),
             b({ action: "PRESS_APP_COMMAND" }),
             c.default.track(
                 f.rMx.POPULAR_APPLICATION_COMMAND_CLICKED,
-                m(
+                h(
                     {
                         application_id: t,
                         command_id: e,
-                        guild_id: h,
+                        guild_id: m,
                     },
                     (0, o.JS)(g.id),
                 ),
             );
     };
     return (0, r.jsx)(d.Z, {
-        heading: _.intl.string(_.t["0hKkS+"]),
+        heading: p.intl.string(p.t["0hKkS+"]),
         children: (0, r.jsx)("ul", {
-            className: p.list,
+            className: _.list,
             children: v.map((e) =>
                 (0, r.jsx)(
                     "li",
@@ -97,8 +97,8 @@ function g(e) {
                             commandId: e.id,
                             commandName: e.displayName,
                             commandDescription: e.displayDescription,
-                            onClick: I,
-                            guildId: h,
+                            onClick: S,
+                            guildId: m,
                             channelId: g.id,
                             applicationId: e.applicationId,
                         }),

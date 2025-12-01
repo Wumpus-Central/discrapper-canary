@@ -1,6 +1,6 @@
 n.d(t, {
-    Q: () => _,
-    r: () => I,
+    Q: () => p,
+    r: () => S,
 }),
     n(35282),
     n(388685);
@@ -24,10 +24,10 @@ let d = {
             queryInfo: d,
         },
     },
-    _ = 3,
-    p = 5,
-    h = 100,
-    m = 200,
+    p = 3,
+    _ = 5,
+    m = 100,
+    h = 200,
     g = /\w/,
     E = /[^\w\s]/;
 function b(e, t) {
@@ -53,11 +53,11 @@ function y(e, t, n, r) {
     let {
             onlyExactMatch: O,
             eagerRecentSenders: v,
-            largeGuildExactMatchRecentSenders: I,
+            largeGuildExactMatchRecentSenders: S,
         } = (0, c.kB)("getMentionSuggestions", { autoTrackExposure: !1 }),
-        T = b(t, n),
-        { query: S } = T;
-    if (S.length < _ || u.Z.getMaxWordCount() < h || u.Z.isFrequentlyUsedWord(S)) return f;
+        I = b(t, n),
+        { query: T } = I;
+    if (T.length < p || u.Z.getMaxWordCount() < m || u.Z.isFrequentlyUsedWord(T)) return f;
     let A = (0, l.Cq)(i.h8.USER),
         C = s.Z.getMessages(e.id).toArray(),
         N = new Set();
@@ -65,25 +65,25 @@ function y(e, t, n, r) {
         let t = C[e];
         (A[t.author.id] = (null != (d = A[t.author.id]) ? d : 1) + (C.length - e) / C.length), N.add(t.author.id);
     }
-    let R = !1;
-    I && (R = null != e.guild_id && (null != (g = o.Z.getMemberCount(e.guild_id)) ? g : 0) > m);
-    let P = l.ZP.queryMentionSuggestionResults({
-        query: S,
+    let P = !1;
+    S && (P = null != e.guild_id && (null != (g = o.Z.getMemberCount(e.guild_id)) ? g : 0) > h);
+    let R = l.ZP.queryMentionSuggestionResults({
+        query: T,
         channel: e,
         boosters: A,
-        onlyExactMatch: O && (!v || R),
+        onlyExactMatch: O && (!v || P),
     });
-    return (R
-        ? (P = P.filter((e) => N.has(e.user.id)))
-        : v && (P = P.filter((e) => "exact" === e.matchType || N.has(e.user.id))),
+    return (P
+        ? (R = R.filter((e) => N.has(e.user.id)))
+        : v && (R = R.filter((e) => "exact" === e.matchType || N.has(e.user.id))),
     E ||
         y === a.eq.MENTION_SUGGESTIONS ||
-        !(S.length < p) ||
-        P.some((e) => "exact" === e.matchType || (v && N.has(e.user.id))))
+        !(T.length < _) ||
+        R.some((e) => "exact" === e.matchType || (v && N.has(e.user.id))))
         ? {
               results: {
-                  suggestions: P,
-                  queryInfo: T,
+                  suggestions: R,
+                  queryInfo: I,
               },
           }
         : f;
@@ -92,7 +92,7 @@ let O = (0, r.memoize)(y, (e, t, n, r) =>
         "".concat(e.id, "-").concat(r.isIdle, "-").concat(r.currentAutocompleteType, "-").concat(t, "-").concat(n),
     ),
     v = null;
-function I(e, t, n, r) {
+function S(e, t, n, r) {
     return (
         null == v &&
             (v = setTimeout(() => {

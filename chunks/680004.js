@@ -72,7 +72,7 @@ function m() {
         ),
         [m, p] = l.useState(o.x0.KILL),
         [h, x] = l.useState(1),
-        [g, f] = l.useState(""),
+        [f, g] = l.useState(""),
         [b, v] = l.useState(""),
         j = l.useCallback(
             (e) => {
@@ -203,8 +203,8 @@ function m() {
                         }),
                         (0, a.jsx)(r.oil, {
                             label: "Title (optional)",
-                            value: g,
-                            onChange: f,
+                            value: f,
+                            onChange: g,
                             placeholder: "e.g., First Blood",
                         }),
                         (0, a.jsx)(r.oil, {
@@ -220,7 +220,7 @@ function m() {
                                     type: o.Bs.GAME_EVENT,
                                     eventType: m,
                                     importance: h,
-                                    title: g,
+                                    title: f,
                                     description: b,
                                 });
                             },

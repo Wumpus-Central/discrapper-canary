@@ -1,4 +1,4 @@
-n.d(t, { i: () => T }), n(35282), n(415506);
+n.d(t, { i: () => I }), n(35282), n(415506);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(314910),
     d = n(550656),
     f = n(725027),
-    _ = n(464281),
-    p = n(102725),
-    h = n(342134),
-    m = n(966327),
+    p = n(464281),
+    _ = n(102725),
+    m = n(342134),
+    h = n(966327),
     g = n(890955);
 function E(e, t, n) {
     return (
@@ -70,7 +70,7 @@ function v(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = I(e, t);
+        i = S(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -78,7 +78,7 @@ function v(e, t) {
     }
     return i;
 }
-function I(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -87,27 +87,27 @@ function I(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function T(e) {
+function I(e) {
     let t;
     var {
             children: n,
             title: a,
             body: E,
             asset: y,
-            assetSize: I = 48,
-            asContainer: T = !1,
-            element: S = "span",
+            assetSize: S = 48,
+            asContainer: I = !1,
+            element: T = "span",
             position: A = "top",
             align: C = "center",
             spacing: N,
-            caretConfig: R,
-            layerContext: P,
-            targetElementRef: D,
-            anchorRef: w,
-            positionKey: L,
-            ariaHidden: x = !1,
+            caretConfig: P,
+            layerContext: R,
+            targetElementRef: w,
+            anchorRef: D,
+            positionKey: x,
+            ariaHidden: L = !1,
         } = e,
-        M = v(e, [
+        j = v(e, [
             "children",
             "title",
             "body",
@@ -125,12 +125,12 @@ function T(e) {
             "positionKey",
             "ariaHidden",
         ]);
-    let j = (0, m.c)(D),
+    let M = (0, h.c)(w),
         k = i.useId(),
-        U = x ? void 0 : k,
+        U = L ? void 0 : k,
         G = null != a && ("string" != typeof a || "" !== a),
-        B = null != y && !i.isValidElement(y),
-        Z = i.useMemo(
+        Z = null != y && !i.isValidElement(y),
+        B = i.useMemo(
             () =>
                 (0, r.jsxs)("div", {
                     className: o()(g.richTooltipContent, { [g.noAsset]: null == y }),
@@ -138,8 +138,8 @@ function T(e) {
                         null != y &&
                             (0, r.jsx)("div", {
                                 className: g.assetContainer,
-                                style: { width: I },
-                                children: B ? (0, r.jsx)(l.zsu, b({}, y)) : y,
+                                style: { width: S },
+                                children: Z ? (0, r.jsx)(l.zsu, b({}, y)) : y,
                             }),
                         (0, r.jsxs)("div", {
                             className: g.textContent,
@@ -158,24 +158,24 @@ function T(e) {
                         }),
                     ],
                 }),
-            [y, I, a, E, G, B],
+            [y, S, a, E, G, Z],
         ),
-        { isVisible: F, triggerProps: V } = (0, p.l)(b({ targetElementRef: j.targetElementRef }, M)),
-        H = null != L ? L : "".concat((0, _.Sw)(null != a ? a : ""), "|").concat((0, _.Sw)(E)),
-        Y = (0, h.Q)({ shouldShow: F });
-    if (T) {
-        let e = x
+        { isVisible: F, triggerProps: V } = (0, _.l)(b({ targetElementRef: M.targetElementRef }, j)),
+        H = null != x ? x : "".concat((0, p.Sw)(null != a ? a : ""), "|").concat((0, p.Sw)(E)),
+        Y = (0, m.Q)({ shouldShow: F });
+    if (I) {
+        let e = L
             ? V
             : O(b({}, V), {
-                  onFocus: (0, _.tS)(V.onFocus, (e) => {
+                  onFocus: (0, p.tS)(V.onFocus, (e) => {
                       let t = e.target;
                       if (null != t) {
                           var n;
-                          let e = (0, _.QV)(null != (n = t.getAttribute("aria-describedby")) ? n : void 0, k);
+                          let e = (0, p.QV)(null != (n = t.getAttribute("aria-describedby")) ? n : void 0, k);
                           t.setAttribute("aria-describedby", e);
                       }
                   }),
-                  onBlur: (0, _.tS)(V.onBlur, (e) => {
+                  onBlur: (0, p.tS)(V.onBlur, (e) => {
                       let t = e.target;
                       if (null != t) {
                           let e = t.getAttribute("aria-describedby");
@@ -188,15 +188,15 @@ function T(e) {
                       }
                   }),
               });
-        t = (0, _.FX)({
-            tag: S,
+        t = (0, p.FX)({
+            tag: T,
             children: n,
             triggerHandlers: e,
-            triggerRef: j.triggerRef,
+            triggerRef: M.triggerRef,
         });
     } else {
         if (!i.isValidElement(n)) return null;
-        t = (0, _.C9)(n, V, U, j.triggerRef);
+        t = (0, p.C9)(n, V, U, M.triggerRef);
     }
     let W = Y((e, t) =>
         t
@@ -205,15 +205,15 @@ function T(e) {
                   children: (0, r.jsx)(d.N, {
                       isVisible: F,
                       isRendered: !0,
-                      targetElementRef: j.targetElementRef,
-                      anchorRef: w,
+                      targetElementRef: M.targetElementRef,
+                      anchorRef: D,
                       id: k,
-                      content: Z,
+                      content: B,
                       position: A,
                       align: C,
                       spacing: N,
-                      caretConfig: R,
-                      layerContext: null != P ? P : u.nz,
+                      caretConfig: P,
+                      layerContext: null != R ? R : u.nz,
                       animationStyle: e,
                       positionKey: H,
                       "data-mana-component": "rich-tooltip",
@@ -224,11 +224,11 @@ function T(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             t,
-            x || null == Z
+            L || null == B
                 ? null
                 : (0, r.jsx)(s.n, {
                       id: k,
-                      children: Z,
+                      children: B,
                   }),
             W,
         ],

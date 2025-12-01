@@ -2,15 +2,15 @@ n.d(t, { Z: () => R }), n(415506), n(388685);
 var r,
     i = n(54381),
     l = n(473749),
-    o = n(790519),
+    o = n(666917),
     a = n(91192),
     s = n(442837),
     c = n(481060),
     u = n(239091),
     d = n(358221),
-    p = n(43267),
+    f = n(43267),
     h = n(933557),
-    f = n(266076),
+    p = n(266076),
     g = n(199902),
     m = n(19780),
     b = n(306680),
@@ -19,8 +19,8 @@ var r,
     O = n(451478),
     v = n(276952),
     j = n(682662),
-    C = n(662146),
-    x = n(674552),
+    x = n(662146),
+    C = n(674552),
     E = n(981631),
     S = n(388032),
     I = n(514483);
@@ -144,7 +144,7 @@ class A extends (r = l.PureComponent) {
     getChannelIcon() {
         let { channel: e } = this.props,
             t = e.type === E.d4z.DM ? y.default.getUser(e.getRecipientId()) : null;
-        return null != t ? t.getAvatarURL(void 0, 48, !1) : (0, p.x)(e);
+        return null != t ? t.getAvatarURL(void 0, 48, !1) : (0, f.x)(e);
     }
     render() {
         let {
@@ -157,7 +157,7 @@ class A extends (r = l.PureComponent) {
                 stream: s,
                 isCurrentUserInThisDMCall: u,
                 unread: d,
-                treeItemProps: p,
+                treeItemProps: f,
             } = this.props,
             { hovered: h, animating: g } = this.state,
             m = e.isMultiUserDM() && null == e.icon,
@@ -181,7 +181,7 @@ class A extends (r = l.PureComponent) {
                             icon: m ? void 0 : this.getChannelIcon(),
                             backgroundStyle: m ? "on-hover" : "always",
                             children: m
-                                ? (0, i.jsx)(f.Z, {
+                                ? (0, i.jsx)(p.Z, {
                                       channel: e,
                                       size: c.EFr.SIZE_40,
                                       facepileSizeOverride: c.EFr.SIZE_32,
@@ -189,7 +189,7 @@ class A extends (r = l.PureComponent) {
                                   })
                                 : void 0,
                         },
-                        p,
+                        f,
                     ),
                 );
         return (0, i.jsx)(o.animated.div, {
@@ -202,14 +202,14 @@ class A extends (r = l.PureComponent) {
                         unread: !g && d,
                         className: I.pill,
                     }),
-                    (0, i.jsx)(C.Z, {
+                    (0, i.jsx)(x.Z, {
                         text: null != t ? t : "",
                         selected: n,
                         children: (0, i.jsx)(c.aRk, {
                             rounded: !0,
                             selected: !1,
-                            lowerBadge: r > 0 ? (0, x.Ne)(r, void 0, !0) : null,
-                            upperBadge: (0, x.Or)({
+                            lowerBadge: r > 0 ? (0, C.Ne)(r, void 0, !0) : null,
+                            upperBadge: (0, C.Or)({
                                 audio: l,
                                 video: a,
                                 screenshare: s,
@@ -281,27 +281,27 @@ let R = l.forwardRef(function (e, t) {
         l = (0, a.Ie)(n, 2),
         o = (0, s.e7)([m.Z], () => m.Z.getChannelId(), []),
         u = (0, s.e7)([d.Z], () => (null != o ? d.Z.getMode(o) : E.WtW.VOICE), [o]),
-        p = (0, s.e7)([g.Z], () => g.Z.getAllApplicationStreamsForChannel(n).length > 0),
-        f = (0, s.e7)([_.Z], () => _.Z.getChannelId(), []),
+        f = (0, s.e7)([g.Z], () => g.Z.getAllApplicationStreamsForChannel(n).length > 0),
+        p = (0, s.e7)([_.Z], () => _.Z.getChannelId(), []),
         y = (0, s.e7)([b.ZP], () => b.ZP.getMentionCount(n), [n]),
         O = o === n,
         v = !1,
         j = !1;
     O && ((v = u === E.WtW.VOICE), (j = u === E.WtW.VIDEO));
-    let C = (0, c.dQu)(c.TVs.modules.guildbar.AVATAR_SIZE);
+    let x = (0, c.dQu)(c.TVs.modules.guildbar.AVATAR_SIZE);
     return (0, i.jsx)(
         A,
         Z(N({}, e), {
             ref: t,
             channelName: r,
             unread: y > 0,
-            selected: f === n,
+            selected: p === n,
             badge: y,
             audio: v,
             video: j,
-            stream: p,
+            stream: f,
             isCurrentUserInThisDMCall: O,
-            size: C,
+            size: x,
             treeItemProps: l,
         }),
     );

@@ -32,14 +32,14 @@ let x = [
         s.aXf,
         s.ewm,
     ],
-    g = [
+    f = [
         "text-default",
         "text-feedback-positive",
         "text-feedback-warning",
         "text-feedback-info",
         "text-feedback-critical",
     ],
-    f = () => {
+    g = () => {
         let [e, t] = l.useState(""),
             [n, i] = l.useState(""),
             [r, s] = l.useState(!1);
@@ -118,10 +118,10 @@ let x = [
     b = (e) => {
         let { pool: t } = e,
             { id: n, summary: i } = t,
-            f = u.Z.getUsersForPool(n),
+            g = u.Z.getUsersForPool(n),
             b = (0, o.e7)([p.default], () => p.default.getId()),
             v = x[Number(n) % x.length],
-            j = g[Number(n) % g.length],
+            j = f[Number(n) % f.length],
             _ = l.useCallback(() => {
                 (0, d.KZ)(n);
             }, [n]);
@@ -143,7 +143,7 @@ let x = [
                 }),
                 title: i,
                 className: h.accordion,
-                subtitle: "".concat(f.length, " users"),
+                subtitle: "".concat(g.length, " users"),
                 children: (0, a.jsxs)(c.Kqy, {
                     direction: "vertical",
                     gap: 4,
@@ -154,7 +154,7 @@ let x = [
                     },
                     fullWidth: !1,
                     children: [
-                        f.map((e, n) =>
+                        g.map((e, n) =>
                             (0, a.jsxs)(
                                 l.Fragment,
                                 {
@@ -259,7 +259,7 @@ function v() {
         fullWidth: !1,
         className: h.container,
         children: [
-            (0, a.jsx)(f, {}),
+            (0, a.jsx)(g, {}),
             (0, a.jsx)(c.Ttm, {
                 className: h.poolsScroller,
                 children: null == e ? void 0 : e.map((e) => (0, a.jsx)(b, { pool: e }, e.id)),

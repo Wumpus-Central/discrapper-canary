@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function _(e) {
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,18 +49,18 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function m(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -90,12 +90,12 @@ let E = Object.fromEntries(Object.keys(c.Z.colors).map((e) => [l()(e), e])),
                 tag: s = "div",
                 selectable: l = !1,
                 className: f,
-                lineClamp: p,
+                lineClamp: _,
                 color: g,
                 tabularNumbers: b = !1,
                 scaleFontToUserSetting: y = !1,
             } = e,
-            O = m(e, [
+            O = h(e, [
                 "variant",
                 "tag",
                 "selectable",
@@ -106,16 +106,16 @@ let E = Object.fromEntries(Object.keys(c.Z.colors).map((e) => [l()(e), e])),
                 "scaleFontToUserSetting",
             ]);
         let v = s,
-            I = "",
-            T = {};
+            S = "",
+            I = {};
         if (
-            (null != p &&
-                (1 === p
-                    ? (I = u.lineClamp1)
-                    : ((I = u.lineClamp2Plus),
-                      (T = {
-                          lineClamp: p,
-                          WebkitLineClamp: p,
+            (null != _ &&
+                (1 === _
+                    ? (S = u.lineClamp1)
+                    : ((S = u.lineClamp2Plus),
+                      (I = {
+                          lineClamp: _,
+                          WebkitLineClamp: _,
                       }))),
             void 0 !== g)
         )
@@ -132,11 +132,11 @@ let E = Object.fromEntries(Object.keys(c.Z.colors).map((e) => [l()(e), e])),
                 default:
                     n = null == (i = c.Z.colors[E[g]]) ? void 0 : i.css;
             }
-        let S = _({ color: n }, T, O.style);
+        let T = p({ color: n }, I, O.style);
         return (0, r.jsx)(
             v,
-            h(
-                _(
+            m(
+                p(
                     {
                         ref: t,
                         className: o()(
@@ -146,7 +146,7 @@ let E = Object.fromEntries(Object.keys(c.Z.colors).map((e) => [l()(e), e])),
                                 [u.tabularNumbers]: b,
                                 [d.fontScaling]: y,
                             },
-                            I,
+                            S,
                             d[a],
                             f,
                         ),
@@ -154,7 +154,7 @@ let E = Object.fromEntries(Object.keys(c.Z.colors).map((e) => [l()(e), e])),
                     O,
                 ),
                 {
-                    style: Object.values(S).filter(Boolean).length > 0 ? S : void 0,
+                    style: Object.values(T).filter(Boolean).length > 0 ? T : void 0,
                     "data-text-variant": a,
                 },
             ),

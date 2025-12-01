@@ -16,9 +16,9 @@ var i = n(120356),
     c = n(907862),
     u = n(100527),
     d = n(703656),
-    p = n(430824),
+    f = n(430824),
     h = n(326660),
-    f = n(156732),
+    p = n(156732),
     g = n(639777),
     m = n(441536),
     b = n(795338),
@@ -27,8 +27,8 @@ var i = n(120356),
     O = n(981631),
     v = n(176505),
     j = n(921944),
-    C = n(613275),
-    x = n(130231),
+    x = n(613275),
+    C = n(130231),
     E = n(388032),
     S = n(428197),
     I = n(611087),
@@ -39,8 +39,8 @@ function w(e) {
     let { guildId: t, powerup: n, channelRowRef: i, markAsDismissed: o } = e;
     return (0, r.jsx)(M, {
         asset: (0, r.jsx)(b.g, { className: l()(S.image, S.levelImage) }),
-        title: E.intl.formatToPlainString(x.default["Zg/m9K"], { perkName: n.title }),
-        body: E.intl.formatToPlainString(x.default["1EGXSK"], { perkName: n.title }),
+        title: E.intl.formatToPlainString(C.default["Zg/m9K"], { perkName: n.title }),
+        body: E.intl.formatToPlainString(C.default["1EGXSK"], { perkName: n.title }),
         actions: [
             {
                 text: E.intl.string(E.t.RzWDqY),
@@ -58,8 +58,8 @@ function T(e) {
     return (0, r.jsx)(c.Mb, {
         targetElementRef: i,
         assetUrl: P.Z,
-        title: E.intl.string(x.default.QpQBPQ),
-        body: E.intl.string(x.default["6hn0xF"]),
+        title: E.intl.string(C.default.QpQBPQ),
+        body: E.intl.string(C.default["6hn0xF"]),
         action: {
             text: E.intl.string(E.t.RzWDqY),
             variant: "primary",
@@ -76,25 +76,25 @@ function T(e) {
 }
 function A(e) {
     let { guildId: t, powerups: n, channelRowRef: i, markAsDismissed: o } = e,
-        s = (0, a.e7)([p.Z], () => {
+        s = (0, a.e7)([f.Z], () => {
             var e;
-            return null == (e = p.Z.getGuild(t)) ? void 0 : e.name;
+            return null == (e = f.Z.getGuild(t)) ? void 0 : e.name;
         }),
         { onActivate: c } = (0, _.ZP)(t, n[0]),
-        d = (0, f.Z)(n[0], !0);
+        d = (0, p.Z)(n[0], !0);
     if (0 === n.length) return;
     let h =
             n.length >= 3
-                ? E.intl.formatToPlainString(x.default["6Sv+3M"], {
+                ? E.intl.formatToPlainString(C.default["6Sv+3M"], {
                       perk: n[0].title,
                       perk2: n[1].title,
                       perk3: n[2].title,
                   })
                 : 2 === n.length
-                  ? E.intl.formatToPlainString(x.default.wcQOqC, {
+                  ? E.intl.formatToPlainString(C.default.wcQOqC, {
                         perks: "".concat(n[0].title, " & ").concat(n[1].title),
                     })
-                  : E.intl.formatToPlainString(x.default.ZF8NT6, { perk: n[0].title }),
+                  : E.intl.formatToPlainString(C.default.ZF8NT6, { perk: n[0].title }),
         g = 1 === n.length;
     return (0, r.jsx)(M, {
         size: 1 === n.length ? "video" : "lg",
@@ -106,11 +106,11 @@ function A(e) {
                       src: d,
                       className: S.image,
                   }),
-        title: E.intl.formatToPlainString(x.default.LmpChE, { guildName: s }),
+        title: E.intl.formatToPlainString(C.default.LmpChE, { guildName: s }),
         body: h,
         actions: [
             {
-                text: g ? E.intl.string(x.default.gSxlHf) : E.intl.string(E.t.RzWDqY),
+                text: g ? E.intl.string(C.default.gSxlHf) : E.intl.string(E.t.RzWDqY),
                 variant: "primary",
                 onClick: (e) => {
                     g ? c(e) : (0, m.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_PURCHASEABLE_PERKS);
@@ -127,8 +127,8 @@ function R(e) {
     if (null != a)
         return (0, r.jsx)(M, {
             targetElementRef: i,
-            title: E.intl.string(x.default.Ygpx4Q),
-            body: E.intl.string(x.default.mmNkUA),
+            title: E.intl.string(C.default.Ygpx4Q),
+            body: E.intl.string(C.default.mmNkUA),
             size: "video",
             asset: Z.Z,
             actions: [
@@ -146,8 +146,8 @@ function R(e) {
     return null != s
         ? (0, r.jsx)(M, {
               targetElementRef: i,
-              title: E.intl.string(x.default["kA2c+n"]),
-              body: E.intl.string(x.default.TUilLj),
+              title: E.intl.string(C.default["kA2c+n"]),
+              body: E.intl.string(C.default.TUilLj),
               asset: (0, r.jsx)("img", {
                   alt: "",
                   src: N.Z,
@@ -176,11 +176,11 @@ function D(e) {
             src: I.Z,
             className: l()(S.image, S.gameServerHostingImage),
         }),
-        title: E.intl.string(n === h.J.GAME_SERVER_HOSTING_AVAILABLE ? C.default.wXLChx : C.default["8z8RpY"]),
+        title: E.intl.string(n === h.J.GAME_SERVER_HOSTING_AVAILABLE ? x.default.wXLChx : x.default["8z8RpY"]),
         body:
             n === h.J.GAME_SERVER_HOSTING_AVAILABLE
-                ? E.intl.string(C.default.lZ6m7Q)
-                : E.intl.format(C.default["IQ1E+d"], { boostCount: a }),
+                ? E.intl.string(x.default.lZ6m7Q)
+                : E.intl.format(x.default["IQ1E+d"], { boostCount: a }),
         actions: [
             {
                 text: E.intl.string(E.t.RzWDqY),
@@ -201,8 +201,8 @@ function L(e) {
             src: I.Z,
             className: l()(S.image, S.gameServerHostingImage),
         }),
-        title: E.intl.string(C.default["eX64+z"]),
-        body: E.intl.string(C.default.NpgfEB),
+        title: E.intl.string(x.default["eX64+z"]),
+        body: E.intl.string(x.default.NpgfEB),
         actions: [
             {
                 text: E.intl.string(E.t.RzWDqY),
@@ -223,7 +223,7 @@ function M(e) {
             alignmentStrategy: a = "edge",
             markAsDismissed: u,
             size: d = "lg",
-            asset: p,
+            asset: f,
         } = e,
         h = (function (e, t) {
             if (null == e) return {};
@@ -278,7 +278,7 @@ function M(e) {
                 graphic: {
                     type: "dynamic",
                     component: s.DynamicGraphicComponent.GUILD_POWERUPS_COACHMARK_ASSET,
-                    props: { asset: p },
+                    props: { asset: f },
                 },
                 size: d,
                 shouldShow: !0,

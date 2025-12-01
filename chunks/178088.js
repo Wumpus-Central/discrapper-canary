@@ -8,9 +8,9 @@ var r = n(54381),
     c = n(524437),
     u = n(481060),
     d = n(100527),
-    p = n(906732),
+    f = n(906732),
     h = n(602478),
-    f = n(2818),
+    p = n(2818),
     g = n(768943),
     m = n(453473),
     b = n(216789),
@@ -19,8 +19,8 @@ var r = n(54381),
     O = n(585483),
     v = n(153209),
     j = n(903672),
-    C = n(791914),
-    x = n(711165),
+    x = n(791914),
+    C = n(711165),
     E = n(946443),
     S = n(264233),
     I = n(981631),
@@ -38,7 +38,7 @@ function Z(e) {
             spacing: R,
             dialogClassName: D,
         } = e,
-        { analyticsLocations: L } = (0, p.ZP)(d.Z.NOTIFICATION_CENTER),
+        { analyticsLocations: L } = (0, f.ZP)(d.Z.NOTIFICATION_CENTER),
         [M, k] = i.useState(!1),
         [G, U] = [
             (0, s.e7)([y.Z], () => {
@@ -82,11 +82,11 @@ function Z(e) {
             k(!M), M ? null == n || n() : null == t || t();
         }, [n, t, M]);
     i.useEffect(() => (O.S.subscribe(I.CkL.TOGGLE_INBOX, H), () => void O.S.unsubscribe(I.CkL.TOGGLE_INBOX, H)), [H]);
-    let { enabled: z, inInbox: W } = f.Z.useExperiment({ location: "RecentsPopout" }),
-        K = (0, s.e7)([g.Z], () => g.Z.hasOverdueReminder(), []) && z && W,
+    let { enabled: W, inInbox: z } = p.Z.useExperiment({ location: "RecentsPopout" }),
+        K = (0, s.e7)([g.Z], () => g.Z.hasOverdueReminder(), []) && W && z,
         { enabled: Y } = h.Z.useExperiment({ location: "RecentsPopout" });
     i.useEffect(() => {
-        G !== c.X.BOOKMARKS || z || W || U(c.X.MENTIONS);
+        G !== c.X.BOOKMARKS || W || z || U(c.X.MENTIONS);
     });
     let q = i.useCallback(
             (e) => {
@@ -94,8 +94,8 @@ function Z(e) {
             },
             [V],
         ),
-        X = (0, b.Us)({ location: "ForYou" });
-    return (0, r.jsx)(p.Gt, {
+        Q = (0, b.Us)({ location: "ForYou" });
+    return (0, r.jsx)(f.Gt, {
         value: L,
         children: (0, r.jsx)(u.yRy, {
             targetElementRef: A,
@@ -110,9 +110,9 @@ function Z(e) {
                     "aria-label": P.intl.string(P.t.GSmTKJ),
                     className: D,
                     children: (0, r.jsx)("div", {
-                        className: o()(N.container, { [N.widerInbox]: X }),
+                        className: o()(N.container, { [N.widerInbox]: Q }),
                         children: (0, r.jsx)(u.y5t, {
-                            component: (0, r.jsx)(C.Z, {
+                            component: (0, r.jsx)(x.Z, {
                                 tab: G,
                                 setTab: U,
                                 badgeState: Z,
@@ -125,10 +125,10 @@ function Z(e) {
                                       ? (0, r.jsx)(j.Z, { onJump: q })
                                       : Y && G === c.X.GAME_INVITES
                                         ? (0, r.jsx)(S.Z, {})
-                                        : z && W && G === c.X.BOOKMARKS
+                                        : W && z && G === c.X.BOOKMARKS
                                           ? (0, r.jsx)(m.K, { closePopout: V })
                                           : G === c.X.SCHEDULED
-                                            ? (0, r.jsx)(x._, {})
+                                            ? (0, r.jsx)(C._, {})
                                             : (0, r.jsx)(a.SV, {
                                                   fallback: (0, r.jsx)(E.h6, {}),
                                                   children: (0, r.jsx)(E.ZP, {

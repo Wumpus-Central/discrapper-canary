@@ -10,7 +10,7 @@ var r = t(473749),
 let d = (e) => {
     let { product: n, onSuccess: d, onError: v } = e,
         [p, f] = r.useState(!1),
-        { firstAvatarDecoration: b, firstProfileEffect: g, firstNameplate: m } = (0, c.Rj)(n),
+        { firstAvatarDecoration: g, firstProfileEffect: b, firstNameplate: m } = (0, c.Rj)(n),
         h = (0, s.x6)(n)
             ? u.intl.string(u.t.tf1ZZ4)
             : n.type === l.Z.AVATAR_DECORATION
@@ -23,8 +23,8 @@ let d = (e) => {
             f(!0);
             let e = {};
             try {
-                if ((null != b && (e.avatarDecoration = b), null != g)) {
-                    let e = (0, a.g9)({ pendingProfileEffect: g });
+                if ((null != g && (e.avatarDecoration = g), null != b)) {
+                    let e = (0, a.g9)({ pendingProfileEffect: b });
                     await (0, o.Z)(e);
                 }
                 null != m && (e.nameplate = m), Object.keys(e).length > 0 && (await (0, i.Mn)(e));
@@ -50,7 +50,7 @@ let d = (e) => {
             } finally {
                 f(!1);
             }
-        }, [b, g, m, d, h, v]),
+        }, [g, b, m, d, h, v]),
         isApplying: p,
     };
 };

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => T });
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,10 +9,10 @@ var r = n(54381),
     u = n(239091),
     d = n(810568),
     f = n(774073),
-    _ = n(916317),
-    p = n(592125),
-    h = n(77498),
-    m = n(768581),
+    p = n(916317),
+    _ = n(592125),
+    m = n(77498),
+    h = n(768581),
     g = n(124072),
     E = n(457926),
     b = n(388032),
@@ -46,7 +46,7 @@ function v(e) {
     }
     return e;
 }
-function I(e, t) {
+function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -58,33 +58,33 @@ function I(e, t) {
     }
     return n;
 }
-function T(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : I(Object(t)).forEach(function (n) {
+            : S(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let S = function (e) {
+let T = function (e) {
     let { gameId: t, channelId: a } = e,
         O = i.useRef(null),
-        I = (0, s.e7)([h.Z], () => h.Z.getDetectableGame(t)),
-        S = (0, s.e7)([p.Z], () => p.Z.getChannel(a)),
-        A = null != S ? S.getGuildId() : null,
+        S = (0, s.e7)([m.Z], () => m.Z.getDetectableGame(t)),
+        T = (0, s.e7)([_.Z], () => _.Z.getChannel(a)),
+        A = null != T ? T.getGuildId() : null,
         C =
-            null != I
+            null != S
                 ? (e) => {
                       (0, u.jW)(e, async () => {
                           let { default: e } = await n.e("51064").then(n.bind(n, 631861));
                           return (t) =>
                               (0, r.jsx)(
                                   e,
-                                  T(v({}, t), {
-                                      game: I,
+                                  I(v({}, t), {
+                                      game: S,
                                       guildId: A,
                                   }),
                               );
@@ -92,32 +92,32 @@ let S = function (e) {
                   }
                 : void 0,
         N =
-            null != I
+            null != S
                 ? (0, r.jsx)("img", {
                       alt: "",
                       className: o()(y.icon, y.imageIcon),
-                      src: m.ZP.getApplicationIconURL({
-                          id: I.id,
-                          icon: I.icon,
+                      src: h.ZP.getApplicationIconURL({
+                          id: S.id,
+                          icon: S.icon,
                           size: 32,
                       }),
                   })
                 : null,
-        R = (0, f.ZP)({
+        P = (0, f.ZP)({
             applicationId: t,
             location: "GameMention",
             source: d.m1.GameMention,
             trackEntryPointImpression: !1,
             autoTrackExposure: !1,
         }),
-        P = i.useCallback(() => {
+        R = i.useCallback(() => {
             (0, c.ZDy)(async () => {
                 let { default: e } = await n.e("36427").then(n.bind(n, 196738));
                 return (t) => (0, r.jsx)(e, v({}, t));
             });
         }, []),
-        D = null != I ? "@game ".concat(I.name) : void 0;
-    return (0, r.jsx)(_.Z, {
+        w = null != S ? "@game ".concat(S.name) : void 0;
+    return (0, r.jsx)(p.Z, {
         applicationId: t,
         targetElementRef: O,
         source: d.m1.GameMention,
@@ -126,12 +126,12 @@ let S = function (e) {
             return (0, r.jsx)(l.u, {
                 asContainer: !0,
                 tag: "span",
-                text: D,
-                "aria-label": D,
+                text: w,
+                "aria-label": w,
                 delay: 750,
                 children: (0, r.jsxs)(
                     g.Z,
-                    T(
+                    I(
                         v(
                             {
                                 onContextMenu: C,
@@ -141,17 +141,17 @@ let S = function (e) {
                         ),
                         {
                             onClick: (n) => {
-                                if (R.shouldOpenGameProfile && null != t) {
+                                if (P.shouldOpenGameProfile && null != t) {
                                     var r;
                                     null == (r = e.onClick) || r.call(e, n);
-                                } else P();
+                                } else R();
                             },
                             children: [
                                 (0, r.jsx)(E.Z, { children: N }),
                                 (0, r.jsx)("span", {
                                     className: y.name,
                                     children:
-                                        null != (n = null == I ? void 0 : I.name) ? n : b.intl.string(b.t["11pdXZ"]),
+                                        null != (n = null == S ? void 0 : S.name) ? n : b.intl.string(b.t["11pdXZ"]),
                                 }),
                             ],
                         },

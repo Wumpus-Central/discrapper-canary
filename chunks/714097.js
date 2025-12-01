@@ -1,4 +1,4 @@
-n.d(t, { o: () => h });
+n.d(t, { o: () => m });
 var r = n(54381);
 n(473749);
 var i = n(657707),
@@ -8,11 +8,11 @@ var i = n(657707),
     l = n(866419),
     c = n(771934),
     u = n(231338),
-    d = n(422129),
+    d = n(896591),
     f = n(388032),
-    _ = n(884984);
-let p = (e, t) => (e === t ? _.themePillItemSelected : void 0);
-function h() {
+    p = n(884984);
+let _ = (e, t) => (e === t ? p.themePillItemSelected : void 0);
+function m() {
     let e = (0, a.e7)([s.Z], () => s.Z.theme),
         t = (0, o.wjy)(e) ? u.BR.DARK : u.BR.LIGHT,
         n = [
@@ -20,7 +20,7 @@ function h() {
                 name: "",
                 value: u.BR.DARK,
                 icon: i.Z6G,
-                className: p(t, u.BR.DARK),
+                className: _(t, u.BR.DARK),
                 tooltip: f.intl.string(d.default["Dk+OWY"]),
                 tooltipAriaLabel: f.intl.string(d.default["Dk+OWY"]),
             },
@@ -28,13 +28,13 @@ function h() {
                 name: "",
                 value: u.BR.LIGHT,
                 icon: i.chG,
-                className: p(t, u.BR.LIGHT),
+                className: _(t, u.BR.LIGHT),
                 tooltip: f.intl.string(d.default["5vlJkY"]),
                 tooltipAriaLabel: f.intl.string(d.default["5vlJkY"]),
             },
         ];
     return (0, r.jsx)(o.sY7, {
-        className: _.themeSelector,
+        className: p.themeSelector,
         options: n,
         value: t,
         onChange: (e) => {

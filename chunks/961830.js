@@ -3,7 +3,7 @@ n.d(t, {
     WA: () => g,
     s2: () => E,
     wo: () => O,
-    yp: () => I,
+    yp: () => S,
 });
 var r = n(54381);
 n(473749);
@@ -16,7 +16,7 @@ var i = n(853872),
     u = n(710094),
     d = n(865921),
     f = n(388032);
-function _(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +29,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,12 +40,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -57,12 +57,12 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -70,14 +70,14 @@ function m(e, t) {
 }
 let g = {
         key: null,
-        renderStep: (e) => (0, r.jsx)(d.v, p({}, e)),
+        renderStep: (e) => (0, r.jsx)(d.v, _({}, e)),
     },
     E = {
         key: a.h8.ADD_PAYMENT_STEPS,
         renderStep: (e) =>
             (0, r.jsx)(
                 o.J,
-                m(p({}, e), {
+                h(_({}, e), {
                     breadcrumbSteps: [a.h8.ADD_PAYMENT_STEPS, a.h8.REVIEW, a.h8.CONFIRM],
                     onReturn: () => {
                         0 === Object.keys(i.Z.paymentSources).length
@@ -99,11 +99,11 @@ let g = {
     },
     O = {
         key: a.h8.REVIEW,
-        renderStep: (e) => (0, r.jsx)(u.l, p({}, e)),
+        renderStep: (e) => (0, r.jsx)(u.l, _({}, e)),
         options: { useBreadcrumbLabel: () => f.intl.string(f.t.QBnNHq) },
     },
     v = {
         key: a.h8.CONFIRM,
-        renderStep: (e) => (0, r.jsx)(c.w, p({}, e)),
+        renderStep: (e) => (0, r.jsx)(c.w, _({}, e)),
     },
-    I = [b, y];
+    S = [b, y];

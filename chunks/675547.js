@@ -15,12 +15,12 @@ function d(e) {
             for (let e of p)
                 if ((0, u.Io)(e) || (0, u._5)(e)) {
                     for (let t of o.Z.getActivities(e.user.id))
-                        if (null != t.application_id && c.Nx.has(t.application_id)) return !0;
+                        if (null != t.application_id && c.RI.has(t.application_id)) return !0;
                 }
             return !1;
         }, [p]),
         f = (0, i.e7)([a.ZP], () =>
-            a.ZP.getRunningGames().some((e) => null != e.id && c.Nx.has(e.id) && a.ZP.isDetectionEnabled(e)),
+            a.ZP.getRunningGames().some((e) => null != e.id && c.RI.has(e.id) && a.ZP.isDetectionEnabled(e)),
         );
     return d && (f || h);
 }

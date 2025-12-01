@@ -10,7 +10,7 @@ function s(e) {
             sensitivity: "base",
         }),
         f = t.disabledBehavior,
-        _ = (0, o.useMemo)(
+        p = (0, o.useMemo)(
             () =>
                 c ||
                 new (0, i.d)({
@@ -23,11 +23,11 @@ function s(e) {
                 }),
             [c, u, n, s, l, d, f],
         ),
-        { collectionProps: p } = (0, r.g)({
+        { collectionProps: _ } = (0, r.g)({
             ...e,
             ref: l,
             selectionManager: t,
-            keyboardDelegate: _,
+            keyboardDelegate: p,
         });
-    return { listProps: p };
+    return { listProps: _ };
 }

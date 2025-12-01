@@ -1,4 +1,4 @@
-n.d(e, { Z: () => E });
+n.d(e, { Z: () => d });
 var i = n(54381),
     r = n(442837),
     l = n(435064),
@@ -7,7 +7,7 @@ var i = n(54381),
     a = n(313789),
     o = n(494620),
     c = n(388032);
-let E = (0, s.ON)(a.n.CLIPS_HARDWARE_CLASSIFICATION_WARNING, {
+let d = (0, s.ON)(a.n.CLIPS_HARDWARE_CLASSIFICATION_WARNING, {
     useSearchTerms: () => [c.intl.string(c.t.SIxrIF)],
     usePredicate: () => (0, r.e7)([l.Z], () => l.Z.getHardwareClassification()) === u.xH.BELOW_MINIMUM,
     render: () =>

@@ -6,16 +6,16 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(790519),
+    s = n(666917),
     l = n(990547),
     c = n(872175),
     u = n(873546),
     d = n(793030),
     f = n(481060),
-    _ = n(393238),
-    p = n(699682),
-    h = n(793903),
-    m = n(906732),
+    p = n(393238),
+    _ = n(699682),
+    m = n(793903),
+    h = n(906732),
     g = n(430723);
 function E(e, t, n) {
     return (
@@ -73,7 +73,7 @@ function v(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = I(e, t);
+        i = S(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -81,7 +81,7 @@ function v(e, t) {
     }
     return i;
 }
-function I(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -90,13 +90,13 @@ function I(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let T = {
+let I = {
     mass: 1,
     tension: 300,
     friction: 28,
     clamp: !0,
 };
-function S(e, t) {
+function T(e, t) {
     return null == e ? null : e.index > t.index ? "backwards" : e.index < t.index ? "forwards" : null;
 }
 function A(e, t) {
@@ -122,10 +122,10 @@ function N(e) {
         n,
         a,
         { contentDisplay: E, fadeInOut: y = !1 } = e,
-        I = v(e, ["contentDisplay", "fadeInOut"]);
+        S = v(e, ["contentDisplay", "fadeInOut"]);
     let C = {},
-        { analyticsLocations: N } = (0, m.ZP)();
-    i.Children.forEach(I.children, (e, t) => {
+        { analyticsLocations: N } = (0, h.ZP)();
+    i.Children.forEach(S.children, (e, t) => {
         C[e.props.id] = {
             children: e.props.children,
             impressionName: e.props.impressionName,
@@ -133,31 +133,31 @@ function N(e) {
             index: t,
         };
     });
-    let R = I.activeSlide,
-        P = (0, p.Z)(I.activeSlide),
-        D = null != (t = I.directionOverride) ? t : S(null != P ? C[P] : null, C[R]),
-        { reducedMotion: w } = i.useContext(d.Sfi),
-        L = i.useContext(h.Z),
-        x = C[R].impressionName,
-        M = O(b({}, C[R].impressionProperties), { location_stack: N });
-    L({
+    let P = S.activeSlide,
+        R = (0, _.Z)(S.activeSlide),
+        w = null != (t = S.directionOverride) ? t : T(null != R ? C[R] : null, C[P]),
+        { reducedMotion: D } = i.useContext(d.Sfi),
+        x = i.useContext(m.Z),
+        L = C[P].impressionName,
+        j = O(b({}, C[P].impressionProperties), { location_stack: N });
+    x({
         type: l.ImpressionTypes.MODAL,
-        name: x,
-        properties: M,
+        name: L,
+        properties: j,
         _stackContext: { isSlide: !0 },
     });
-    let { ref: k, width: j = 0, height: U = 0 } = (0, _.ZP)(R),
-        G = b({}, T, I.springConfig, w.enabled ? { clamp: !0 } : null),
-        B = (0, f.q_F)(
+    let { ref: M, width: k = 0, height: U = 0 } = (0, p.ZP)(P),
+        G = b({}, I, S.springConfig, D.enabled ? { clamp: !0 } : null),
+        Z = (0, f.q_F)(
             {
-                width: null != (n = I.width) ? n : j,
+                width: null != (n = S.width) ? n : k,
                 height: U,
                 config: G,
             },
-            null == P ? "animate-never" : "respect-motion-settings",
+            null == R ? "animate-never" : "respect-motion-settings",
         ),
-        Z = (0, f.Yzy)(
-            R,
+        B = (0, f.Yzy)(
+            P,
             {
                 value: 0,
                 from: { value: 1 },
@@ -166,18 +166,18 @@ function N(e) {
                 config: G,
                 onRest: (e, t) => {
                     let { item: n } = t;
-                    n === R && null != I.onSlideReady && I.onSlideReady(n);
+                    n === P && null != S.onSlideReady && S.onSlideReady(n);
                 },
             },
-            null == P ? "animate-never" : "respect-motion-settings",
+            null == R ? "animate-never" : "respect-motion-settings",
         ),
-        F = (0, c.Z)(D),
-        { width: V, centered: H = !0 } = I,
+        F = (0, c.Z)(w),
+        { width: V, centered: H = !0 } = S,
         Y =
-            u.tq && !I.shouldUseMediaQueriesForSizing
+            u.tq && !S.shouldUseMediaQueriesForSizing
                 ? "100%"
-                : B.width.to((e) => ("string" == typeof e ? e : Math.round(e))),
-        W = u.tq && !I.shouldUseMediaQueriesForSizing ? "100%" : B.height.to((e) => Math.round(e)),
+                : Z.width.to((e) => ("string" == typeof e ? e : Math.round(e))),
+        W = u.tq && !S.shouldUseMediaQueriesForSizing ? "100%" : Z.height.to((e) => Math.round(e)),
         K = u.tq
             ? {}
             : H
@@ -186,10 +186,10 @@ function N(e) {
                     top: "50%",
                 }
               : { transform: "scale(1.0, 1.0)" },
-        z = u.tq ? {} : { overflow: null != (a = I.overflow) ? a : "hidden" },
+        z = u.tq ? {} : { overflow: null != (a = S.overflow) ? a : "hidden" },
         q = i.useMemo(
-            () => ({ width: u.tq && !I.shouldUseMediaQueriesForSizing ? "100%" : V }),
-            [I.shouldUseMediaQueriesForSizing, V],
+            () => ({ width: u.tq && !S.shouldUseMediaQueriesForSizing ? "100%" : V }),
+            [S.shouldUseMediaQueriesForSizing, V],
         );
     return (0, r.jsx)(s.animated.div, {
         style: b(
@@ -200,14 +200,14 @@ function N(e) {
             },
             z,
         ),
-        className: o()({ [g.outerAnimatedDivDynamicSizing]: I.shouldUseMediaQueriesForSizing }),
-        children: Z((e, t, n) => {
+        className: o()({ [g.outerAnimatedDivDynamicSizing]: S.shouldUseMediaQueriesForSizing }),
+        children: B((e, t, n) => {
             let { key: i } = n,
                 a = { opacity: e.value.to((e) => 1 - Math.abs(e)) };
             return (0, r.jsx)(
                 s.animated.div,
                 {
-                    ref: t === R ? k : null,
+                    ref: t === P ? M : null,
                     style: b(
                         {
                             position: "absolute",
@@ -217,7 +217,7 @@ function N(e) {
                         },
                         q,
                         K,
-                        w.enabled
+                        D.enabled
                             ? a
                             : b(
                                   {
@@ -227,7 +227,7 @@ function N(e) {
                                   y && a,
                               ),
                     ),
-                    className: o()({ [g.innerAnimatedDivDynamicSizing]: I.shouldUseMediaQueriesForSizing }),
+                    className: o()({ [g.innerAnimatedDivDynamicSizing]: S.shouldUseMediaQueriesForSizing }),
                     children: C[t].children,
                 },
                 i,

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b });
 var r = n(54381);
 n(473749);
-var l = n(481060),
-    i = n(680295),
+var i = n(481060),
+    l = n(680295),
     a = n(687158),
     o = n(899007),
     u = n(648052),
@@ -16,7 +16,7 @@ var l = n(481060),
     g = n(580792);
 function b(e) {
     var t;
-    let { user: n, previewText: b, previewEmoji: h, previewStatus: T, placeHolderText: v, transitionState: S } = e,
+    let { user: n, previewText: b, previewEmoji: h, previewStatus: S, placeHolderText: T, transitionState: v } = e,
         j = (0, a.ZP)(n.id),
         P =
             (null != b && "" !== b) || null != h
@@ -24,7 +24,7 @@ function b(e) {
                       emoji: null != (t = null == h ? void 0 : h.name) ? t : "",
                       status: b,
                   })
-                : "".concat(O.intl.string(O.t.EVV6uZ), ": ").concat(v);
+                : "".concat(O.intl.string(O.t.EVV6uZ), ": ").concat(T);
     return (0, r.jsx)("div", {
         role: "img",
         "aria-label": P,
@@ -48,7 +48,7 @@ function b(e) {
                                 user: n,
                                 displayProfile: j,
                                 themeType: p.l.POPOUT,
-                                previewStatus: T,
+                                previewStatus: S,
                                 className: g.avatar,
                             }),
                         }),
@@ -57,12 +57,12 @@ function b(e) {
                             themeType: p.l.POPOUT,
                             previewText: b,
                             previewEmoji: h,
-                            placeholderText: v,
-                            hasEntered: S === l.Dvm.ENTERED,
+                            placeholderText: T,
+                            hasEntered: v === i.Dvm.ENTERED,
                         }),
                     ],
                 }),
-                (null == j ? void 0 : j.profileEffect) != null && (0, r.jsx)(i.Z, { skuId: j.profileEffect.skuId }),
+                (null == j ? void 0 : j.profileEffect) != null && (0, r.jsx)(l.Z, { skuId: j.profileEffect.skuId }),
                 (0, r.jsx)("div", {
                     className: g.usernameContainer,
                     inert: !0,

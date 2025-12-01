@@ -1,9 +1,9 @@
 n.d(t, {
     Jr: () => g,
-    O6: () => m,
+    O6: () => h,
     _i: () => f,
     v6: () => E,
-    zR: () => h,
+    zR: () => m,
 });
 var r = n(473749),
     i = n(524437),
@@ -47,33 +47,33 @@ let f = (e) => {
         let s = l.default.getCurrentUser(),
             c = (0, o.U)("resolveExplicitContentSettingWithDefaults");
         return (0, a.c_)("resolveExplicitContentSettingWithDefaults") || c
-            ? _({
+            ? p({
                   isDm: n,
                   isFriend: r,
               })
             : (null == s ? void 0 : s.nsfwAllowed) === !1
-              ? h({
+              ? m({
                     isDm: n,
                     isFriend: r,
                 })
-              : p({
+              : _({
                     isDm: n,
                     isFriend: r,
                 });
     },
-    _ = (e) => {
+    p = (e) => {
         let { isDm: t = !1, isFriend: n = !1 } = e;
         return t && !n ? i.Q4.BLOCK : i.Q4.BLUR;
     },
-    p = (e) => {
+    _ = (e) => {
         let { isDm: t = !1, isFriend: n = !1 } = e;
         return t && n ? i.Q4.SHOW : t ? i.Q4.BLOCK : i.Q4.SHOW;
     },
-    h = (e) => {
+    m = (e) => {
         let { isDm: t = !1, isFriend: n = !1 } = e;
         return t && n ? i.Q4.BLUR : t ? i.Q4.BLOCK : i.Q4.BLUR;
     },
-    m = (e) => {
+    h = (e) => {
         let t = null != e ? e : s.j7.getSetting();
         return {
             goreContentGuilds: f({ setting: null == t ? void 0 : t.goreContentGuilds }),
@@ -89,7 +89,7 @@ let f = (e) => {
         };
     },
     g = (e) => {
-        let t = m();
+        let t = h();
         s.j7.updateSetting(d({}, t, e));
     },
     E = () => r.useMemo(() => c.BhN.EXPLICIT_MEDIA_REDACTION, []);

@@ -14,13 +14,13 @@ let d = (e) => {
             isSelected: a = !0,
             width: d = 32,
             height: f = 32,
-            shouldAnimate: _ = !0,
-            isLocked: p = !1,
+            shouldAnimate: p = !0,
+            isLocked: _ = !1,
         } = e,
-        [h, m] = i.useState(!1),
-        g = (0, c.EB)(n, 32, _ && a),
-        E = () => m(!0),
-        b = () => m(!1);
+        [m, h] = i.useState(!1),
+        g = (0, c.EB)(n, 32, p && a),
+        E = () => h(!0),
+        b = () => h(!1);
     return (0, r.jsxs)("div", {
         onFocus: E,
         onBlur: b,
@@ -29,7 +29,7 @@ let d = (e) => {
         children: [
             (0, r.jsx)(l.ZP, {
                 className: o()(u.mask, t),
-                mask: a || h ? l.QS.SQUIRCLE : l.QS.AVATAR_DEFAULT,
+                mask: a || m ? l.QS.SQUIRCLE : l.QS.AVATAR_DEFAULT,
                 width: d,
                 height: f,
                 children:
@@ -47,7 +47,7 @@ let d = (e) => {
                               className: u.guildIcon,
                           }),
             }),
-            p
+            _
                 ? (0, r.jsx)("div", {
                       className: u.categoryItemLockIconContainer,
                       children: (0, r.jsx)(s.mBM, {

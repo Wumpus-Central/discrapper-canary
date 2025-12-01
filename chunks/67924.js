@@ -6,12 +6,12 @@ n.r(t),
         ParsingResult: () => a.G5,
         ReferenceWithTimezone: () => a.X2,
         Weekday: () => o.OG,
-        casual: () => _,
+        casual: () => p,
         createCasualConfiguration: () => g,
         createConfiguration: () => E,
-        parse: () => h,
-        parseDate: () => m,
-        strict: () => p,
+        parse: () => m,
+        parseDate: () => h,
+        strict: () => _,
     });
 var r = n(717319),
     i = n(201129),
@@ -23,13 +23,13 @@ var r = n(717319),
     u = n(955029),
     d = n(991631),
     f = n(90338);
-let _ = new i.k(g()),
-    p = new i.k(E(!0));
-function h(e, t, n) {
-    return _.parse(e, t, n);
-}
+let p = new i.k(g()),
+    _ = new i.k(E(!0));
 function m(e, t, n) {
-    return _.parseDate(e, t, n);
+    return p.parse(e, t, n);
+}
+function h(e, t, n) {
+    return p.parseDate(e, t, n);
 }
 function g(e = !0) {
     let t = E(!1, e);

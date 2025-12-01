@@ -1,5 +1,5 @@
 n.d(t, {
-    M: () => m,
+    M: () => h,
     V: () => b,
 });
 var r = n(54381),
@@ -50,7 +50,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,11 +61,11 @@ function _(e, t) {
         e
     );
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -73,7 +73,7 @@ function p(e, t) {
     }
     return i;
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -82,15 +82,15 @@ function h(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let m = i.createContext({ firstFocusableItemProps: void 0 });
+let h = i.createContext({ firstFocusableItemProps: void 0 });
 function g(e) {
     var { children: t, ref: n } = e,
-        i = p(e, ["children", "ref"]);
-    return (0, r.jsx)(m.Provider, {
+        i = _(e, ["children", "ref"]);
+    return (0, r.jsx)(h.Provider, {
         value: { firstFocusableItemProps: void 0 },
         children: (0, r.jsx)(
             "div",
-            _(d({}, i), {
+            p(d({}, i), {
                 ref: n,
                 "data-dialog": "modal",
                 role: "dialog",
@@ -108,14 +108,14 @@ function g(e) {
 }
 function E(e) {
     var { children: t } = e,
-        n = p(e, ["children"]);
+        n = _(e, ["children"]);
     return (0, r.jsx)(a.Wd, {
         children: (e) =>
-            (0, r.jsx)(m.Provider, {
+            (0, r.jsx)(h.Provider, {
                 value: { firstFocusableItemProps: e },
                 children: (0, r.jsx)(
                     "div",
-                    _(d({}, n), {
+                    p(d({}, n), {
                         "data-dialog": "non-modal",
                         role: "dialog",
                         children: t,
@@ -126,7 +126,7 @@ function E(e) {
 }
 function b(e) {
     var { ref: t, returnRef: n, modal: a = !0, setDialogRef: s, trackingProps: l } = e,
-        u = p(e, ["ref", "returnRef", "modal", "setDialogRef", "trackingProps"]);
+        u = _(e, ["ref", "returnRef", "modal", "setDialogRef", "trackingProps"]);
     let f = i.useRef(null);
     i.useImperativeHandle(t, () => f.current),
         i.useEffect(
@@ -138,11 +138,11 @@ function b(e) {
             ),
             [],
         );
-    let { trackImpression: h } = (0, c.ZF)();
+    let { trackImpression: m } = (0, c.ZF)();
     i.useEffect(() => {
-        if (null != h && null != l) {
+        if (null != m && null != l) {
             var e, t;
-            h(
+            m(
                 {
                     type: l.impressionType,
                     name: null == (e = l.impression) ? void 0 : e.impressionName,
@@ -151,11 +151,11 @@ function b(e) {
                 { disableTrack: l.disableTrack },
             );
         }
-    }, [h, l]),
+    }, [m, l]),
         (0, o.T)(f, {
             returnRef: n,
             disable: !a,
         });
-    let m = a ? g : E;
-    return (0, r.jsx)(m, _(d({}, u), { ref: f }));
+    let h = a ? g : E;
+    return (0, r.jsx)(h, p(d({}, u), { ref: f }));
 }

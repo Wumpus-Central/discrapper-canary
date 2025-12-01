@@ -137,9 +137,9 @@ var d = function () {};
     });
 var f = !1;
 if (s.canUseDOM) {
-    var _ = document.createElement("div").style;
+    var p = document.createElement("div").style;
     try {
-        _.font = "";
+        p.font = "";
     } catch (e) {
         f = !0;
     }

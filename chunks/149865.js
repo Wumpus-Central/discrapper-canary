@@ -12,14 +12,14 @@ let c = l.memo(function (e) {
             var t, n;
             return null == (n = null == (t = e.usePredicate) ? void 0 : t.call(e)) || n;
         }),
-        b = n(),
-        y = null == c ? void 0 : c(),
-        p = l.useId(),
-        v = null != y && "" !== y,
-        j = null != d ? d : l.Fragment;
-    return (0, r.jsx)(j, {
+        p = n(),
+        b = null == c ? void 0 : c(),
+        y = l.useId(),
+        g = null != b && "" !== b,
+        v = null != d ? d : l.Fragment;
+    return (0, r.jsx)(v, {
         children: (0, r.jsxs)("fieldset", {
-            "aria-describedby": v ? p : void 0,
+            "aria-describedby": g ? y : void 0,
             children: [
                 (0, r.jsxs)("div", {
                     className: s.header,
@@ -29,15 +29,15 @@ let c = l.memo(function (e) {
                             variant: "text-md/semibold",
                             color: "header-primary",
                             className: s.title,
-                            children: b,
+                            children: p,
                         }),
-                        v
+                        g
                             ? (0, r.jsx)(i.Text, {
                                   variant: "text-sm/normal",
                                   color: "header-secondary",
-                                  id: p,
+                                  id: y,
                                   className: s.subtitle,
-                                  children: y,
+                                  children: b,
                               })
                             : null,
                     ],

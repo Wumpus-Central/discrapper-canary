@@ -1,12 +1,12 @@
 n.d(t, {
     J9: () => l.J,
-    Jt: () => x,
-    K0: () => P,
+    Jt: () => L,
+    K0: () => R,
     Pd: () => g,
     f$: () => s.f$,
-    lg: () => w,
+    lg: () => D,
     sX: () => s.Hx,
-    tn: () => R,
+    tn: () => P,
     yZ: () => c.H,
 }),
     n(388685),
@@ -54,7 +54,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -66,19 +66,19 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let h = new o.Yd("HTTPUtils"),
-    m = new Set([502, 504, 507, 598, 599, 522, 523, 524]);
+let m = new o.Yd("HTTPUtils"),
+    h = new Set([502, 504, 507, 598, 599, 522, 523, 524]);
 class g extends Error {
     constructor({ method: e, url: t, ok: n, status: r, body: i, text: a, headers: o }, ...s) {
         super("".concat(e.toUpperCase(), " ").concat(t.replace(/\d+/g, "xxx"), " [").concat(r, "]"), ...s),
@@ -100,7 +100,7 @@ class g extends Error {
     }
 }
 function E(e, t, n, r, o) {
-    var c, u, d, _, h;
+    var c, u, d, p, m;
     let b = i()[e](t.url);
     if ((null != t.onRequestCreated && t.onRequestCreated(b), null != t.query)) {
         let e = t.query;
@@ -127,7 +127,7 @@ function E(e, t, n, r, o) {
             }),
         null != t.context)
     ) {
-        let e = M(t.context);
+        let e = j(t.context);
         null != e && b.set("X-Context-Properties", e);
     }
     null != t.retried && 0 !== t.retried && b.set("X-Failed-Requests", "".concat(t.retried)),
@@ -141,14 +141,14 @@ function E(e, t, n, r, o) {
     let y = () => {
         (t.backoff = null != t.backoff ? t.backoff : new a.Z()),
             (t.retried = (null != t.retried ? t.retried : 0) + 1),
-            t.backoff.fail(() => L(t.url).then(() => E(e, t, n, r, o)));
+            t.backoff.fail(() => x(t.url).then(() => E(e, t, n, r, o)));
     };
-    null == D || null == (d = D.prepareRequest) || d.call(D, b),
+    null == w || null == (d = w.prepareRequest) || d.call(w, b),
         b.ok((e) => null != e.status),
         b.then(
             (i) => {
                 var a, c, u;
-                if (null != t.retries && t.retries-- > 0 && m.has(i.status)) return y();
+                if (null != t.retries && t.retries-- > 0 && h.has(i.status)) return y();
                 let d = {
                     ok: i.ok,
                     headers: i.headers,
@@ -157,16 +157,16 @@ function E(e, t, n, r, o) {
                     status: i.status,
                 };
                 O(t, d);
-                let _ = !1,
-                    h = (i, a) => {
-                        let s = p(f({}, t), {
+                let p = !1,
+                    m = (i, a) => {
+                        let s = _(f({}, t), {
                             headers: f({}, t.headers, i),
                             interceptResponse: a,
                         });
-                        (_ = !0), E(e, s, n, r, o);
+                        (p = !0), E(e, s, n, r, o);
                     },
                     b = (e) => {
-                        _ ||
+                        p ||
                             (r(e),
                             null == o ||
                                 o({
@@ -176,8 +176,8 @@ function E(e, t, n, r, o) {
                                 }));
                     };
                 if (
-                    (null == t || null == (a = t.interceptResponse) ? void 0 : a.call(t, i, h, b)) !== !0 &&
-                    (null == D || null == (c = D.interceptResponse) ? void 0 : c.call(D, i, h, b)) !== !0
+                    (null == t || null == (a = t.interceptResponse) ? void 0 : a.call(t, i, m, b)) !== !0 &&
+                    (null == w || null == (c = w.interceptResponse) ? void 0 : c.call(w, i, m, b)) !== !0
                 ) {
                     if (i.ok) n(d);
                     else {
@@ -215,25 +215,25 @@ function E(e, t, n, r, o) {
                           }));
             },
         ),
-        (null == (_ = t.signal) ? void 0 : _.aborted)
+        (null == (p = t.signal) ? void 0 : p.aborted)
             ? b.abort()
-            : null == (h = t.signal) || h.addEventListener("abort", () => b.abort(), { once: !0 });
+            : null == (m = t.signal) || m.addEventListener("abort", () => b.abort(), { once: !0 });
 }
 let b = new Map();
 function y(e) {
     let t = b.get(e);
     if (null == t)
-        return void h.verbose(
+        return void m.verbose(
             "rateLimitExpirationHandler: rate limit for",
             e,
             "expired, but record was already removed",
         );
     let n = t.queue.shift();
     if (null == n) {
-        h.verbose("rateLimitExpirationHandler: removing key for", e), b.delete(e);
+        m.verbose("rateLimitExpirationHandler: removing key for", e), b.delete(e);
         return;
     }
-    h.verbose("rateLimitExpirationHandler: moving to next record for ", e), n();
+    m.verbose("rateLimitExpirationHandler: moving to next record for ", e), n();
 }
 function O(e, t) {
     let n = b.get(e.url);
@@ -243,9 +243,9 @@ function O(e, t) {
             s = Date.now() + 1000 * o;
         if (null != n)
             if (!(n.retryAfterTimestamp < s))
-                return void h.verbose("cleanupRequestEntry: already has rate limit for ", e.url);
-            else h.verbose("cleanupRequestEntry: extending rate limit for ", e.url), clearTimeout(n.timeoutId);
-        h.verbose("cleanupRequestEntry: rate limit for ".concat(e.url, " retry after ").concat(o, " seconds"));
+                return void m.verbose("cleanupRequestEntry: already has rate limit for ", e.url);
+            else m.verbose("cleanupRequestEntry: extending rate limit for ", e.url), clearTimeout(n.timeoutId);
+        m.verbose("cleanupRequestEntry: rate limit for ".concat(e.url, " retry after ").concat(o, " seconds"));
         let l = setTimeout(() => y(e.url), 1000 * o);
         b.set(e.url, {
             queue: null != (a = null == n ? void 0 : n.queue) ? a : [],
@@ -256,7 +256,7 @@ function O(e, t) {
     } else
         null != n &&
             n.retryAfterTimestamp < Date.now() &&
-            (h.verbose("cleanupRequestEntry: rate limit for ", e.url, "expired"), y(e.url));
+            (m.verbose("cleanupRequestEntry: rate limit for ", e.url, "expired"), y(e.url));
 }
 let v = (e, t, n) => {
     let r = Math.round((t.retryAfterTimestamp - Date.now()) / 1000);
@@ -280,7 +280,7 @@ let v = (e, t, n) => {
                 headers: {},
             });
 };
-function I(e, t, n) {
+function S(e, t, n) {
     return new Promise((r, i) => {
         "string" == typeof t &&
             (t = {
@@ -290,18 +290,18 @@ function I(e, t, n) {
         let a = b.get(t.url);
         if (null != a && t.failImmediatelyWhenRateLimited) return v(i, a, n);
         null != a
-            ? (h.verbose("makeRequest: queueing request for ", t.url), a.queue.push(E.bind(null, e, t, r, i, n)))
+            ? (m.verbose("makeRequest: queueing request for ", t.url), a.queue.push(E.bind(null, e, t, r, i, n)))
             : E(e, t, r, i, n);
     });
 }
-let T = I.bind(null, "get"),
-    S = I.bind(null, "post"),
-    A = I.bind(null, "put"),
-    C = I.bind(null, "patch"),
-    N = I.bind(null, "del"),
-    R = {
-        get: T,
-        post: S,
+let I = S.bind(null, "get"),
+    T = S.bind(null, "post"),
+    A = S.bind(null, "put"),
+    C = S.bind(null, "patch"),
+    N = S.bind(null, "del"),
+    P = {
+        get: I,
+        post: T,
         put: A,
         patch: C,
         del: N,
@@ -315,21 +315,21 @@ if (n.g.isServerRendering) {
             body: null,
             text: "",
         });
-    (T = e), (S = e), (A = e), (C = e), (N = e);
+    (I = e), (T = e), (A = e), (C = e), (N = e);
 }
-function P() {
+function R() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return "https:" + window.GLOBAL_ENV.API_ENDPOINT + (e ? "/v".concat(window.GLOBAL_ENV.API_VERSION) : "");
 }
-let D = null;
-function w(e) {
-    D = e;
+let w = null;
+function D(e) {
+    w = e;
 }
-let L = () => Promise.resolve();
-function x(e) {
-    L = e;
+let x = () => Promise.resolve();
+function L(e) {
+    x = e;
 }
-function M(e) {
+function j(e) {
     try {
         return u.from(JSON.stringify(e)).toString("base64");
     } catch (e) {

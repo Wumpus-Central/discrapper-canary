@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => p,
-    i: () => _,
+    Z: () => _,
+    i: () => p,
 }),
     n(953529);
 var r = n(54381);
@@ -14,24 +14,24 @@ var i = n(442837),
     u = n(388013),
     d = n(982240),
     f = n(533854),
-    _ = (function (e) {
+    p = (function (e) {
         return (e[(e.SHOP_PAGE = 0)] = "SHOP_PAGE"), (e[(e.GIFT_MODAL = 1)] = "GIFT_MODAL"), e;
     })({});
-let p = (e) => {
-    let { onRetry: t, errorOrigin: n, errorMessage: _ } = e,
-        p = (0, s.ZP)(),
-        h = (0, i.e7)([l.default], () => {
+let _ = (e) => {
+    let { onRetry: t, errorOrigin: n, errorMessage: p } = e,
+        _ = (0, s.ZP)(),
+        m = (0, i.e7)([l.default], () => {
             let e = l.default.getCurrentUser();
             return (null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal());
         }),
-        m = 1 === n ? u.giftModalContainer : u.shopPageContainer,
+        h = 1 === n ? u.giftModalContainer : u.shopPageContainer,
         g = 1 === n ? c.intl.string(c.t["+2QBZX"]) : c.intl.string(c.t.LuhKs2);
     return (0, r.jsxs)("div", {
-        className: m,
+        className: h,
         children: [
             (0, r.jsx)("img", {
                 className: u.__invalid_loadIssueImg,
-                src: (0, a.wj)(p) ? d : f,
+                src: (0, a.wj)(_) ? d : f,
                 alt: "",
             }),
             (0, r.jsx)(o.Heading, {
@@ -44,11 +44,11 @@ let p = (e) => {
                 variant: "text-md/normal",
                 children: g,
             }),
-            h &&
-                null != _ &&
+            m &&
+                null != p &&
                 (0, r.jsx)(o.Text, {
                     variant: "text-md/normal",
-                    children: "staff-only debug: " + _,
+                    children: "staff-only debug: " + p,
                 }),
             (0, r.jsx)("div", {
                 "data-button-hoisted-classname-wrapper": !0,

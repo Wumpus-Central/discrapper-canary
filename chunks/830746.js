@@ -10,18 +10,18 @@ var i = n(399606),
     u = n(552045),
     d = n(87792),
     f = n(302289),
-    _ = n(946690),
-    p = n(369954),
-    h = n(597754),
-    m = n(388032),
+    p = n(946690),
+    _ = n(369954),
+    m = n(744038),
+    h = n(388032),
     g = n(862964);
 let E = () => {
     let e = (0, c.ZM)().length > 0,
         t = (0, s.PO)("family_center_activity_page"),
         n = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
-        E = (0, l.o)(m.intl.string(h.default["5RZ8Tq"]), m.intl.string(h.default.bmhCnL)),
-        b = (0, l.o)(m.intl.string(h.default.XKnFFq), m.intl.string(h.default["68zfxD"])),
-        y = (0, l.o)(m.intl.string(h.default["Rm/6a0"]), m.intl.string(h.default["1xPTwE"]));
+        E = (0, l.o)(h.intl.string(m.default["5RZ8Tq"]), h.intl.string(m.default.bmhCnL)),
+        b = (0, l.o)(h.intl.string(m.default.XKnFFq), h.intl.string(m.default["68zfxD"])),
+        y = (0, l.o)(h.intl.string(m.default["Rm/6a0"]), h.intl.string(m.default["1xPTwE"]));
     return void 0 === n
         ? null
         : (0, r.jsxs)("div", {
@@ -38,19 +38,19 @@ let E = () => {
                                 (0, r.jsxs)("div", {
                                     className: g.featureCards,
                                     children: [
-                                        (0, r.jsx)(_.Z, {
+                                        (0, r.jsx)(p.Z, {
                                             icon: a.eQA,
-                                            header: m.intl.string(h.default["001l3m"]),
+                                            header: h.intl.string(m.default["001l3m"]),
                                             description: E,
                                         }),
-                                        (0, r.jsx)(_.Z, {
+                                        (0, r.jsx)(p.Z, {
                                             icon: a.tEF,
-                                            header: m.intl.string(h.default.yipAeP),
+                                            header: h.intl.string(m.default.yipAeP),
                                             description: b,
                                         }),
-                                        (0, r.jsx)(_.Z, {
+                                        (0, r.jsx)(p.Z, {
                                             icon: a.IkH,
-                                            header: m.intl.string(h.default.hhOuMe),
+                                            header: h.intl.string(m.default.hhOuMe),
                                             description: y,
                                         }),
                                     ],
@@ -58,7 +58,7 @@ let E = () => {
                             ],
                         }),
                   e ? (0, r.jsx)(d.Z, {}) : (0, r.jsx)(f.Z, {}),
-                  (0, r.jsx)(p.J, {}),
+                  (0, r.jsx)(_.J, {}),
               ],
           });
 };

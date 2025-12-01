@@ -9,10 +9,10 @@ var r = n(473749),
     u = n(53529),
     d = n(436660),
     f = n(887490),
-    _ = n(515270),
-    p = n(847302),
-    h = n(42530);
-let m = (e, t, n) => ({
+    p = n(515270),
+    _ = n(847302),
+    m = n(42530);
+let h = (e, t, n) => ({
     getSlateEditor: () => e,
     submit(e) {
         e.preventDefault(), n();
@@ -25,7 +25,7 @@ let m = (e, t, n) => ({
     },
     getCurrentWord() {
         let t = e.selection;
-        if (null == t || !f.Ew.isValid(e, t) || f.M8.isExpanded(t) || (0, _.L6)(e))
+        if (null == t || !f.Ew.isValid(e, t) || f.M8.isExpanded(t) || (0, p.L6)(e))
             return {
                 word: null,
                 isAtStart: !1,
@@ -53,7 +53,7 @@ let m = (e, t, n) => ({
             }
             if (!f.LC.isText(i)) break;
             let t = i.text[o];
-            if (h.i$.test(t)) break;
+            if (m.i$.test(t)) break;
             s = t + s;
         }
         let c = s,
@@ -61,7 +61,7 @@ let m = (e, t, n) => ({
             [d] = f.bN.node(e, t.anchor.path);
         for (; f.LC.isText(d) && !(u >= d.text.length); ) {
             let e = d.text[u];
-            if (h.i$.test(e)) break;
+            if (m.i$.test(e)) break;
             (c += e), u++;
         }
         return {
@@ -100,7 +100,7 @@ let m = (e, t, n) => ({
                 let n = c.cr(e);
                 if (((a = f.q.updateElement(e, a)), null != n)) {
                     let r = f.q.markdown(n[0], t.guild_id);
-                    (0, p.Gg)(e, a, t.id, r) && (a = f.q.updateElement(e, a));
+                    (0, _.Gg)(e, a, t.id, r) && (a = f.q.updateElement(e, a));
                 }
                 c.xi(e, t.guild_id, t.id, f.q.updateElement(e, a), !1), d.Q.selectNextCommandOption(e);
             }
@@ -192,5 +192,5 @@ function E(e, t, n, r) {
     });
 }
 function b(e, t, n, i) {
-    r.useImperativeHandle(e, () => m(t, n, i), [t, n, i]);
+    r.useImperativeHandle(e, () => h(t, n, i), [t, n, i]);
 }

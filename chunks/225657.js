@@ -14,10 +14,10 @@ let c = (e) => {
             searchableSelectWrapperClassName: u,
             recipients: d,
         } = e,
-        { giftRecipient: f, setGiftRecipient: _ } = (0, o.wD)();
+        { giftRecipient: f, setGiftRecipient: p } = (0, o.wD)();
     if (null == t) return null;
-    let p = (e) => {
-        n(e, t), _(e);
+    let _ = (e) => {
+        n(e, t), p(e);
     };
     return (0, r.jsx)("div", {
         className: c,
@@ -33,7 +33,7 @@ let c = (e) => {
                           size: i.EFr.SIZE_20,
                       }),
             value: f,
-            onChange: p,
+            onChange: _,
             options: d.map((e) => ({
                 value: e,
                 label: "".concat(s.ZP.getUserTag(e)),

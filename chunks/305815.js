@@ -15,8 +15,8 @@ var r = t(54381),
     g = t(22095),
     C = t(313481),
     h = t(49436),
-    v = t(509212),
-    j = t(475595),
+    v = t(475595),
+    j = t(115179),
     _ = t(515108),
     y = t(291967),
     N = t(324805),
@@ -25,7 +25,7 @@ var r = t(54381),
 function A(e) {
     var n;
     let { quest: t, avatarDeco: i, onUseNow: a, user: l, mode: s } = e,
-        d = (0, j.fh)(t, j.eC.REWARD).url,
+        d = (0, v.fh)(t, v.eC.REWARD).url,
         u = (0, C.Qy)(t.config),
         m =
             (null == (n = l.avatarDecoration) ? void 0 : n.skuId) != null &&
@@ -73,9 +73,9 @@ function A(e) {
 }
 function P(e) {
     var n, t, o;
-    let { initialQuest: c, onClose: j, transitionState: b, preview: w, location: P, sourceQuestContent: D } = e,
+    let { initialQuest: c, onClose: v, transitionState: b, preview: w, location: P, sourceQuestContent: D } = e,
         E = null != (t = (0, C.B4)(c.id)) ? t : c,
-        T = i.useMemo(() => (0, v.xn)(E.config), [E]),
+        T = i.useMemo(() => (0, j.xn)(E.config), [E]),
         O = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
         [L, R] = (function (e) {
             let { product: n, isFetching: t } = (0, d.T)(e),
@@ -112,7 +112,7 @@ function P(e) {
             M("applying"), M((await R()) ? "applied" : "claimed");
         };
     return (0, r.jsx)(_.Z, {
-        onClose: j,
+        onClose: v,
         transitionState: b,
         quest: E,
         sourceQuestContent: D,

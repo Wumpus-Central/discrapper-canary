@@ -1,11 +1,11 @@
 n.d(t, {
     Ge: () => s,
     H6: () => g,
-    JF: () => h,
+    JF: () => m,
     LN: () => o,
     RA: () => v,
     _$: () => l,
-    aK: () => p,
+    aK: () => _,
     ek: () => E,
     f: () => a,
     km: () => O,
@@ -271,7 +271,7 @@ let a = {
         роки: "year",
     },
     f = `(?:${(0, r.q3)(c)}|[0-9]+|[0-9]+\\.[0-9]+|пів|декілька|пар(?:у)|\\s{0,3})`;
-function _(e) {
+function p(e) {
     let t = e.toLowerCase();
     return void 0 !== c[t]
         ? c[t]
@@ -285,13 +285,13 @@ function _(e) {
                 ? 1
                 : parseFloat(t);
 }
-let p = `(?:${(0, r.q3)(u)}|[0-9]{1,2}(?:го|ого|е)?)`;
-function h(e) {
+let _ = `(?:${(0, r.q3)(u)}|[0-9]{1,2}(?:го|ого|е)?)`;
+function m(e) {
     let t = e.toLowerCase();
     return void 0 !== u[t] ? u[t] : parseInt(t);
 }
-let m = "(?:\\s+(?:року|рік|р|р.))?",
-    g = `(?:[1-9][0-9]{0,3}${m}\\s*(?:н.е.|до н.е.|н. е.|до н. е.)|[1-2][0-9]{3}${m}|[5-9][0-9]${m})`;
+let h = "(?:\\s+(?:року|рік|р|р.))?",
+    g = `(?:[1-9][0-9]{0,3}${h}\\s*(?:н.е.|до н.е.|н. е.|до н. е.)|[1-2][0-9]{3}${h}|[5-9][0-9]${h})`;
 function E(e) {
     if ((/(рік|року|р|р.)/i.test(e) && (e = e.replace(/(рік|року|р|р.)/i, "")), /(до н.е.|до н. е.)/i.test(e)))
         return -parseInt((e = e.replace(/(до н.е.|до н. е.)/i, "")));
@@ -306,10 +306,10 @@ function v(e) {
     let t = {},
         n = e,
         r = y.exec(n);
-    for (; r; ) I(t, r), (n = n.substring(r[0].length).trim()), (r = y.exec(n));
+    for (; r; ) S(t, r), (n = n.substring(r[0].length).trim()), (r = y.exec(n));
     return t;
 }
-function I(e, t) {
-    let n = _(t[1]);
+function S(e, t) {
+    let n = p(t[1]);
     e[d[t[2].toLowerCase()]] = n;
 }

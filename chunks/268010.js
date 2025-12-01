@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(804061), n(704826), n(35282);
+n.d(t, { Z: () => T }), n(804061), n(704826), n(35282);
 var r = n(54381),
     i = n(473749),
     a = n(442837),
@@ -9,17 +9,17 @@ var r = n(54381),
     u = n(5192),
     d = n(591759),
     f = n(379357),
-    _ = n(561308),
-    p = n(685270),
-    h = n(31074),
-    m = n(206295),
+    p = n(561308),
+    _ = n(685270),
+    m = n(31074),
+    h = n(206295),
     g = n(335326),
     E = n(297781),
     b = n(591853),
     y = n(410441),
     O = n(981631),
     v = n(388032);
-let I = (e, t, n) => {
+let S = (e, t, n) => {
         let r = v.t.LHF6D9,
             i = u.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
             a = e.extra.media_title;
@@ -31,36 +31,36 @@ let I = (e, t, n) => {
             })
             .replaceAll("*", "");
     },
-    T = (e, t) =>
+    I = (e, t) =>
         v.intl.formatToPlainString(v.t.kCbfbN, {
             username: t.username,
             activity: e.extra.media_title,
         }),
-    S = (e) => {
-        let { channel: t, entry: n, onReaction: u, onVoiceChannelPreview: S } = e,
+    T = (e) => {
+        let { channel: t, entry: n, onReaction: u, onVoiceChannelPreview: T } = e,
             A = (0, a.e7)([l.default], () => l.default.getUser(n.author_id)),
             { largeImage: C } = (0, f.rv)({ entry: n }),
-            { primaryColor: N, secondaryColor: R } = (0, m.Z)(null == C ? void 0 : C.src),
-            P = (0, a.e7)([s.default], () => s.default.locale),
-            D = (0, h.Z)(O.ABu.CRUNCHYROLL),
-            w = (0, _.ap)(n.extra.media_assets_large_text),
-            L = i.useCallback(
+            { primaryColor: N, secondaryColor: P } = (0, h.Z)(null == C ? void 0 : C.src),
+            R = (0, a.e7)([s.default], () => s.default.locale),
+            w = (0, m.Z)(O.ABu.CRUNCHYROLL),
+            D = (0, p.ap)(n.extra.media_assets_large_text),
+            x = i.useCallback(
                 (e) => {
                     if (null != A && (null == C ? void 0 : C.src) != null)
-                        return (0, p.B)({
+                        return (0, _.B)({
                             entry: n,
                             mediaImageSrc: null == C ? void 0 : C.src,
                             avatarSrc: A.getAvatarURL(null == t ? void 0 : t.guild_id, 128),
-                            description: I(n, t, A),
-                            timestamp: (0, _.yh)(n, P),
-                            episodeDescription: w,
-                            colors: [N, R],
+                            description: S(n, t, A),
+                            timestamp: (0, p.yh)(n, R),
+                            episodeDescription: D,
+                            colors: [N, P],
                             channelId: e,
                         });
                 },
-                [t, n, w, P, null == C ? void 0 : C.src, N, R, A],
+                [t, n, D, R, null == C ? void 0 : C.src, N, P, A],
             ),
-            x = () => {
+            L = () => {
                 if (null == n.extra.url) return;
                 let e = d.Z.safeParseWithQuery(n.extra.url);
                 null != e &&
@@ -78,11 +78,11 @@ let I = (e, t, n) => {
                       (0, r.jsx)(b.wG, {
                           channel: t,
                           entry: n,
-                          userDescription: (0, _.kr)(n) ? v.t["LH+Z3y"] : v.t.YuKgml,
+                          userDescription: (0, p.kr)(n) ? v.t["LH+Z3y"] : v.t.YuKgml,
                           title: n.extra.media_title,
                           subtitle: n.extra.media_subtitle,
                           headerIcons: (0, r.jsx)(y.Z, {
-                              onClick: D,
+                              onClick: w,
                               Icon: o.omf,
                               "aria-label": v.intl.string(v.t.jdJYXw),
                           }),
@@ -90,17 +90,17 @@ let I = (e, t, n) => {
                               location: E.Gt.POPOUT,
                               children: g.t.map((e, t) => (0, r.jsx)(e, { entry: n }, t)),
                           }),
-                          onClickTitle: x,
-                          onClickThumbnail: x,
+                          onClickTitle: L,
+                          onClickThumbnail: L,
                       }),
                       (0, r.jsx)(b.St, {
                           children: (0, r.jsx)(b.WT, {
                               onReaction: u,
-                              onVoiceChannelPreview: S,
+                              onVoiceChannelPreview: T,
                               user: A,
                               channel: t,
-                              generateReactionImage: L,
-                              reactionImageAltText: T(n, A),
+                              generateReactionImage: x,
+                              reactionImageAltText: I(n, A),
                               entry: n,
                           }),
                       }),

@@ -1,6 +1,6 @@
 n.d(t, {
     C: () => v,
-    Z: () => I,
+    Z: () => S,
 });
 var r = n(54381);
 n(473749);
@@ -13,10 +13,10 @@ var i = n(120356),
     u = n(182567),
     d = n(63063),
     f = n(367074),
-    _ = n(784238),
-    p = n(474936),
-    h = n(981631),
-    m = n(388032),
+    p = n(784238),
+    _ = n(474936),
+    m = n(981631),
+    h = n(388032),
     g = n(402197),
     E = n(917062),
     b = n(579273),
@@ -30,13 +30,13 @@ var i = n(120356),
             e
         );
     })({});
-let I = function (e) {
+let S = function (e) {
     let { variant: t } = e,
         n = (0, f.Vi)(),
         i = (0, l.ZP)(),
         v = (0, s.wjy)(i) ? o.Tt.BRAND_INVERTED : o.Tt.BRAND;
     if (!n) return null;
-    let I = () =>
+    let S = () =>
             (0, r.jsxs)("div", {
                 className: g.subBanner,
                 children: [
@@ -55,27 +55,27 @@ let I = function (e) {
                                 className: g.bannerHeader,
                                 variant: "heading-md/extrabold",
                                 color: "header-primary",
-                                children: m.intl.string(m.t["+5UxML"]),
+                                children: h.intl.string(h.t["+5UxML"]),
                             }),
                             (0, r.jsx)(s.Text, {
                                 className: g.bannerText,
                                 variant: "text-sm/medium",
                                 color: "text-secondary",
-                                children: m.intl.format(m.t["lVOH/p"], {
-                                    helpCenterLink: d.Z.getArticleURL(h.BhN.SUMMER_BOGO_2025),
+                                children: h.intl.format(h.t["lVOH/p"], {
+                                    helpCenterLink: d.Z.getArticleURL(m.BhN.SUMMER_BOGO_2025),
                                 }),
                             }),
                         ],
                     }),
-                    (0, r.jsx)(_.Z, {
-                        subscriptionTier: p.Si.TIER_2,
+                    (0, r.jsx)(p.Z, {
+                        subscriptionTier: _.Si.TIER_2,
                         showIcon: !0,
                         shinyButtonClassName: g.buttonGradient,
                         hasActivePromotion: !0,
                     }),
                 ],
             }),
-        T = () =>
+        I = () =>
             (0, r.jsx)(u.O, {
                 newLocations: [c.Z.PREMIUM_SETTINGS],
                 children: (0, r.jsxs)("div", {
@@ -96,22 +96,22 @@ let I = function (e) {
                                     className: g.bannerHeader,
                                     variant: "heading-lg/extrabold",
                                     color: "header-primary",
-                                    children: m.intl.string(m.t["+5UxML"]),
+                                    children: h.intl.string(h.t["+5UxML"]),
                                 }),
                                 (0, r.jsx)(s.Text, {
                                     className: g.bannerText,
                                     variant: "text-sm/medium",
                                     color: "text-secondary",
-                                    children: m.intl.format(m.t["lVOH/p"], {
-                                        helpCenterLink: d.Z.getArticleURL(h.BhN.SUMMER_BOGO_2025),
+                                    children: h.intl.format(h.t["lVOH/p"], {
+                                        helpCenterLink: d.Z.getArticleURL(m.BhN.SUMMER_BOGO_2025),
                                     }),
                                 }),
-                                (0, r.jsx)(_.Z, {
+                                (0, r.jsx)(p.Z, {
                                     textOptions: {
-                                        textOverride: m.intl.string(m.t.J61px0),
+                                        textOverride: h.intl.string(h.t.J61px0),
                                         textClassName: g.subscribeButtonText,
                                     },
-                                    subscriptionTier: p.Si.TIER_2,
+                                    subscriptionTier: _.Si.TIER_2,
                                     showIcon: !1,
                                     className: g.subscribeButton,
                                     color: v,
@@ -129,7 +129,7 @@ let I = function (e) {
                     ],
                 }),
             }),
-        S = () =>
+        T = () =>
             (0, r.jsx)(u.O, {
                 newLocations: [c.Z.PREMIUM_MARKETING_PAGE_BANNER],
                 children: (0, r.jsxs)("div", {
@@ -144,7 +144,7 @@ let I = function (e) {
                             children: (0, r.jsx)(s.Text, {
                                 variant: "eyebrow",
                                 color: "always-white",
-                                children: m.intl.string(m.t.OS9KPu),
+                                children: h.intl.string(h.t.OS9KPu),
                             }),
                         }),
                         (0, r.jsxs)("div", {
@@ -154,22 +154,22 @@ let I = function (e) {
                                     className: g.bannerHeader,
                                     variant: "heading-xxl/extrabold",
                                     color: "header-primary",
-                                    children: m.intl.string(m.t["+5UxML"]),
+                                    children: h.intl.string(h.t["+5UxML"]),
                                 }),
                                 (0, r.jsx)(s.Text, {
                                     className: g.bannerText,
                                     variant: "text-md/medium",
                                     color: "text-secondary",
-                                    children: m.intl.format(m.t["lVOH/p"], {
-                                        helpCenterLink: d.Z.getArticleURL(h.BhN.SUMMER_BOGO_2025),
+                                    children: h.intl.format(h.t["lVOH/p"], {
+                                        helpCenterLink: d.Z.getArticleURL(m.BhN.SUMMER_BOGO_2025),
                                     }),
                                 }),
-                                (0, r.jsx)(_.Z, {
+                                (0, r.jsx)(p.Z, {
                                     textOptions: {
-                                        textOverride: m.intl.string(m.t.J61px0),
+                                        textOverride: h.intl.string(h.t.J61px0),
                                         textClassName: g.subscribeButtonText,
                                     },
-                                    subscriptionTier: p.Si.TIER_2,
+                                    subscriptionTier: _.Si.TIER_2,
                                     showIcon: !1,
                                     className: g.subscribeButton,
                                     color: v,
@@ -188,8 +188,8 @@ let I = function (e) {
                 }),
             });
     return "APPLICATION_NITRO_HOME" === t
-        ? (0, r.jsx)(S, {})
+        ? (0, r.jsx)(T, {})
         : "SETTINGS" === t
-          ? (0, r.jsx)(T, {})
-          : (0, r.jsx)(I, {});
+          ? (0, r.jsx)(I, {})
+          : (0, r.jsx)(S, {});
 };

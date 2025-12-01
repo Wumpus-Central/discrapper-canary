@@ -143,8 +143,8 @@ class i extends r {
               this.node);
     }
     updateNode() {
-        var e, t, n, r, a, o, s, l, c, u, d, f, _, p, h;
-        let m = this.nextVisibleSibling,
+        var e, t, n, r, a, o, s, l, c, u, d, f, p, _, m;
+        let h = this.nextVisibleSibling,
             g = this.getMutableNode();
         if (
             null != g &&
@@ -158,16 +158,16 @@ class i extends r {
                 null != (u = null == (n = this.previousVisibleSibling) || null == (t = n.node) ? void 0 : t.key)
                     ? u
                     : null),
-            (g.nextKey = null != (d = null == m || null == (r = m.node) ? void 0 : r.key) ? d : null),
+            (g.nextKey = null != (d = null == h || null == (r = h.node) ? void 0 : r.key) ? d : null),
             (g.hasChildNodes = !!this.firstChild),
             (g.firstChildKey =
                 null != (f = null == (o = this.firstVisibleChild) || null == (a = o.node) ? void 0 : a.key) ? f : null),
             (g.lastChildKey =
-                null != (_ = null == (l = this.lastVisibleChild) || null == (s = l.node) ? void 0 : s.key) ? _ : null),
-            (null != g.colSpan || null != g.colIndex) && m)
+                null != (p = null == (l = this.lastVisibleChild) || null == (s = l.node) ? void 0 : s.key) ? p : null),
+            (null != g.colSpan || null != g.colIndex) && h)
         ) {
-            let e = (null != (p = g.colIndex) ? p : g.index) + (null != (h = g.colSpan) ? h : 1);
-            null != m.node && e !== m.node.colIndex && (m.getMutableNode().colIndex = e);
+            let e = (null != (_ = g.colIndex) ? _ : g.index) + (null != (m = g.colSpan) ? m : 1);
+            null != h.node && e !== h.node.colIndex && (h.getMutableNode().colIndex = e);
         }
     }
     setProps(e, t, n, r, i) {

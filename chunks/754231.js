@@ -8,20 +8,20 @@ var r = n(54381),
     c = n(481060),
     u = n(503438),
     d = n(39628),
-    p = n(884338),
+    f = n(884338),
     h = n(424678),
-    f = n(594174),
+    p = n(594174),
     g = n(81063),
     m = n(768581),
     b = n(823379),
     _ = n(51144),
     y = n(506914);
-let O = p.u8.SIZE_24;
+let O = f.u8.SIZE_24;
 function v(e) {
     var t, n;
     let { activity: i, user: l, embeddedApp: o, onOpenSpotifyAlbum: a } = e,
         d = null == i ? void 0 : i.assets,
-        p = null == i ? void 0 : i.application_id;
+        f = null == i ? void 0 : i.application_id;
     if (null == i || null == d || (null == d.large_image && null == d.small_image))
         if (null == o) return null;
         else {
@@ -42,17 +42,17 @@ function v(e) {
             });
         }
     let h = null != (t = d.large_image) ? t : d.small_image,
-        f = (0, u.Z)(i),
-        b = f ? y.spotifyLargeImage : y.applicationLargeImage,
+        p = (0, u.Z)(i),
+        b = p ? y.spotifyLargeImage : y.applicationLargeImage,
         _ =
             null != h
                 ? (0, r.jsx)("img", {
                       alt: null != (n = d.large_text) ? n : "",
-                      src: (0, g.xF)(p, h, [128, 128]),
+                      src: (0, g.xF)(f, h, [128, 128]),
                       className: b,
                   })
                 : null;
-    return f && null != a
+    return p && null != a
         ? ((_ = (0, r.jsx)(c.P3F, {
               className: y.clickable,
               onClick: () => {
@@ -91,7 +91,7 @@ function j(e) {
         children: a,
     });
 }
-function C(e) {
+function x(e) {
     let { activity: t, user: n, onOpenSpotifyArtist: i } = e,
         l = null == t ? void 0 : t.details,
         a = null == t ? void 0 : t.state,
@@ -120,7 +120,7 @@ function C(e) {
               children: s,
           });
 }
-function x(e) {
+function C(e) {
     let { activity: t } = e,
         n = null == t ? void 0 : t.state;
     return null == n || "" === n || (0, u.Z)(t)
@@ -159,7 +159,7 @@ function S(e) {
     null != n
         ? (m = Array.from(n.embeddedActivity.userIds))
         : (0, u.Z)(t) && null != c && (m = c.map((e) => e.user.id));
-    let S = (0, a.Wu)([f.default], () => m.map((e) => f.default.getUser(e)).filter(b.lm)),
+    let S = (0, a.Wu)([p.default], () => m.map((e) => p.default.getUser(e)).filter(b.lm)),
         I = null != n || (0, u.Z)(t),
         P = i.useMemo(() => {
             let e = new Map();
@@ -194,14 +194,14 @@ function S(e) {
                                       embeddedApp: n,
                                       onOpenSpotifyTrack: d,
                                   }),
-                                  (0, r.jsx)(C, {
+                                  (0, r.jsx)(x, {
                                       activity: t,
                                       user: l,
                                       onOpenSpotifyArtist: h,
                                   }),
-                                  (0, r.jsx)(x, { activity: t }),
+                                  (0, r.jsx)(C, { activity: t }),
                                   m.length > 0 &&
-                                      (0, r.jsx)(p.ZP, {
+                                      (0, r.jsx)(f.ZP, {
                                           className: y.usersSummary,
                                           guildId: o.guild_id,
                                           users: S,
@@ -209,7 +209,7 @@ function S(e) {
                                           max: 7,
                                           renderUser: (e) => {
                                               var t;
-                                              if (null == e || e === p.ag) return null;
+                                              if (null == e || e === f.ag) return null;
                                               let n = P.get(e.id),
                                                   i = null != (t = null == n ? void 0 : n.nick) ? t : _.ZP.getName(e);
                                               return (0, r.jsx)(

@@ -9,16 +9,16 @@ var r = n(54381),
     u = n(359110),
     d = n(769654),
     f = n(922482),
-    _ = n(496675),
-    p = n(373826),
-    h = n(788858),
-    m = n(231338),
+    p = n(496675),
+    _ = n(373826),
+    m = n(788858),
+    h = n(231338),
     g = n(388032),
     E = n(704543);
 function b(e) {
     let { channel: t, guild: n, onAction: i, onClose: b } = e,
         y = (0, c.ZP)(t),
-        O = (0, o.e7)([_.Z], () => t.isPrivate() || _.Z.can(m.Pl.CONNECT, t)),
+        O = (0, o.e7)([p.Z], () => t.isPrivate() || p.Z.can(h.Pl.CONNECT, t)),
         v = () => {
             if (!O) return y;
             let e = (e) => {
@@ -33,12 +33,12 @@ function b(e) {
                 children: y,
             });
         },
-        I = () => {
+        S = () => {
             if (null == n) return null;
             let e = (e) => {
                 e.stopPropagation(), (0, d.X)(n.id), null == i || i({ action: "OPEN_VOICE_GUILD" }), null == b || b();
             };
-            return (0, r.jsx)(p.Z, {
+            return (0, r.jsx)(_.Z, {
                 variant: "text-xs/normal",
                 text: g.intl.formatToPlainString(g.t["hq/Qze"], { guildName: n.name }),
                 onClick: e,
@@ -51,7 +51,7 @@ function b(e) {
                 color: "text-default",
                 className: E.voiceChannelHeading,
                 children: [
-                    (0, r.jsx)(h.Z, {
+                    (0, r.jsx)(m.Z, {
                         channel: t,
                         size: "xxs",
                         color: s.TVs.colors.TEXT_DEFAULT,
@@ -60,7 +60,7 @@ function b(e) {
                     v(),
                 ],
             }),
-            I(),
+            S(),
         ],
     });
 }

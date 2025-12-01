@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v }), n(539854), n(388685);
 var r = n(54381),
     i = n(473749),
-    l = n(494497),
-    o = n(442837),
+    o = n(494497),
+    l = n(442837),
     a = n(704215),
     s = n(952265),
     c = n(907862),
@@ -14,10 +14,10 @@ var r = n(54381),
     g = n(388032);
 function v(e) {
     let { powerup: t, targetRef: n, isCardVisible: v } = e,
-        x = (0, o.e7)([d.Z], () => d.Z.hasLayers()),
+        x = (0, l.e7)([d.Z], () => d.Z.hasLayers()),
         _ = (0, s.f9)(),
         b =
-            t.skuId === l.A$
+            t.skuId === o.A$
                 ? {
                       title: g.intl.string(m.default.YWo6VL),
                       body: g.intl.string(m.default.gXVvKc),

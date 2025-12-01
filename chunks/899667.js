@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var r,
     i = n(442837),
     a = n(570140);
@@ -21,19 +21,19 @@ let s = {},
     u = !1,
     d = !1,
     f = null,
-    _ = null;
-function p(e) {
+    p = null;
+function _(e) {
     let { guildId: t, appliedBoosts: n } = e;
     s[t] = {
         subscriptions: n,
         lastFetchedAt: Date.now(),
     };
 }
-function h(e) {
+function m(e) {
     let { appliedGuildBoosts: t } = e;
     (u = !1), (c = t);
 }
-function m(e) {
+function h(e) {
     let { endsAt: t } = e;
     l = t;
 }
@@ -55,12 +55,12 @@ function y(e) {
 }
 function O(e) {
     let { error: t } = e;
-    (d = !1), (_ = t);
+    (d = !1), (p = t);
 }
 function v() {
     u = !0;
 }
-class I extends (r = i.ZP.Store) {
+class S extends (r = i.ZP.Store) {
     getAppliedGuildBoostsForGuild(e) {
         return null != s[e] ? s[e].subscriptions : null;
     }
@@ -80,7 +80,7 @@ class I extends (r = i.ZP.Store) {
         return f;
     }
     get unapplyBoostError() {
-        return _;
+        return p;
     }
     get cooldownEndsAt() {
         return l;
@@ -89,11 +89,11 @@ class I extends (r = i.ZP.Store) {
         return u;
     }
 }
-o(I, "displayName", "AppliedGuildBoostStore");
-let T = new I(a.Z, {
-    GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: p,
-    USER_APPLIED_BOOSTS_FETCH_SUCCESS: h,
-    APPLIED_BOOSTS_COOLDOWN_FETCH_SUCCESS: m,
+o(S, "displayName", "AppliedGuildBoostStore");
+let I = new S(a.Z, {
+    GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: _,
+    USER_APPLIED_BOOSTS_FETCH_SUCCESS: m,
+    APPLIED_BOOSTS_COOLDOWN_FETCH_SUCCESS: h,
     GUILD_UNAPPLY_BOOST_START: g,
     GUILD_APPLY_BOOST_START: g,
     GUILD_APPLY_BOOST_SUCCESS: E,

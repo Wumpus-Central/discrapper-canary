@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => I });
 var r = n(54381),
     i = n(473749),
     a = n(873546),
@@ -8,11 +8,11 @@ var r = n(54381),
     c = n(906732),
     u = n(927723),
     d = n(124072),
-    f = n(456077),
-    _ = n(592125),
-    p = n(271383),
-    h = n(699516),
-    m = n(594174),
+    f = n(670188),
+    p = n(592125),
+    _ = n(271383),
+    m = n(699516),
+    h = n(594174),
     g = n(5192),
     E = n(51144);
 function b(e, t, n) {
@@ -67,7 +67,7 @@ function v(e, t) {
         e
     );
 }
-function I(e) {
+function S(e) {
     let { userId: t, className: a, children: o } = e,
         l = i.useCallback(() => {
             (0, u.k)({ kind: "user" });
@@ -89,26 +89,26 @@ function I(e) {
         children: o,
     });
 }
-function T(e) {
+function I(e) {
     let {
             className: t,
             userId: u,
             channelId: b,
             parsedUserId: O,
-            content: T,
-            inlinePreview: S = !1,
+            content: I,
+            inlinePreview: T = !1,
             viewingChannelId: A,
         } = e,
         C = i.useRef(null),
         { analyticsLocations: N } = (0, c.ZP)(l.Z.USER_MENTION),
-        R = (0, o.e7)([m.default], () => m.default.getUser(u)),
-        P = (0, o.e7)([_.Z], () => _.Z.getChannel(b)),
-        D = null != P ? P.getGuildId() : null,
-        w =
-            S || null == R || null == D || null == b
+        P = (0, o.e7)([h.default], () => h.default.getUser(u)),
+        R = (0, o.e7)([p.Z], () => p.Z.getChannel(b)),
+        w = null != R ? R.getGuildId() : null,
+        D =
+            T || null == P || null == w || null == b
                 ? void 0
                 : (e) => {
-                      null != P &&
+                      null != R &&
                           (0, s.jW)(e, async () => {
                               let { default: e } = await Promise.all([
                                   n.e("79695"),
@@ -123,22 +123,22 @@ function T(e) {
                                       e,
                                       v(y({}, t), {
                                           viewingChannelId: A,
-                                          user: R,
-                                          channel: P,
-                                          guildId: D,
+                                          user: P,
+                                          channel: R,
+                                          guildId: w,
                                       }),
                                   );
                           });
                   },
-        L = E.ZP.useName(R),
-        x = (0, o.e7)([_.Z, p.ZP, h.Z], () => g.ZP.getNickname(D, b, R));
-    if (null == R)
-        return (0, r.jsx)(I, {
+        x = E.ZP.useName(P),
+        L = (0, o.e7)([p.Z, _.ZP, m.Z], () => g.ZP.getNickname(w, b, P));
+    if (null == P)
+        return (0, r.jsx)(S, {
             userId: O,
             className: t,
-            children: T,
+            children: I,
         });
-    let M = (e) =>
+    let j = (e) =>
         (0, r.jsx)(
             d.Z,
             v(
@@ -146,28 +146,28 @@ function T(e) {
                     {
                         ref: C,
                         className: t,
-                        onContextMenu: w,
+                        onContextMenu: D,
                     },
                     e,
                 ),
-                { children: "@".concat(null != x ? x : L) },
+                { children: "@".concat(null != L ? L : x) },
             ),
         );
-    return S
+    return T
         ? (0, r.jsx)(c.Gt, {
               value: N,
-              children: M(),
+              children: j(),
           })
         : (0, r.jsx)(c.Gt, {
               value: N,
               children: (0, r.jsx)(f.Z, {
                   targetElementRef: C,
-                  user: R,
-                  guildId: null != D ? D : void 0,
+                  user: P,
+                  guildId: null != w ? w : void 0,
                   channelId: b,
                   position: a.tq ? "top" : "right",
                   clickTrap: !0,
-                  children: (e) => M(e),
+                  children: (e) => j(e),
               }),
           });
 }

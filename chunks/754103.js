@@ -47,7 +47,7 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,11 +58,11 @@ function _(e, t) {
         e
     );
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -70,7 +70,7 @@ function p(e, t) {
     }
     return i;
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -79,7 +79,7 @@ function h(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-class m extends i.PureComponent {
+class h extends i.PureComponent {
     componentDidUpdate(e) {
         if (this.props.formError !== e.formError) this.setState({ changedSinceError: new Set() });
         else if (null != this.props.formError) {
@@ -110,9 +110,9 @@ class m extends i.PureComponent {
             u(this, "renderFormSection", (e) => {
                 let t = this.props,
                     { values: n, onFieldChange: i, onFieldFocus: a, onFieldBlur: l, layout: c } = t,
-                    u = p(t, ["values", "onFieldChange", "onFieldFocus", "onFieldBlur", "layout"]),
-                    { getClassNameForLayout: f, renderInput: h, title: m, name: g, id: E, placeholder: b } = e,
-                    y = _(d({}, p(e, ["getClassNameForLayout", "renderInput", "title", "name", "id", "placeholder"])), {
+                    u = _(t, ["values", "onFieldChange", "onFieldFocus", "onFieldBlur", "layout"]),
+                    { getClassNameForLayout: f, renderInput: m, title: h, name: g, id: E, placeholder: b } = e,
+                    y = p(d({}, _(e, ["getClassNameForLayout", "renderInput", "title", "name", "id", "placeholder"])), {
                         placeholder: null == b ? void 0 : b(),
                         error: this.getError(g),
                         value: n[g],
@@ -128,8 +128,8 @@ class m extends i.PureComponent {
                         className: o()(null == f ? void 0 : f(c)),
                         children: (0, r.jsx)(s.gNt, {
                             id: E,
-                            label: m(),
-                            children: h(y, u, c),
+                            label: h(),
+                            children: m(y, u, c),
                         }),
                     },
                     g,
@@ -148,4 +148,4 @@ class m extends i.PureComponent {
             });
     }
 }
-let g = m;
+let g = h;
