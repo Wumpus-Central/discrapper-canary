@@ -1,4 +1,4 @@
-n.d(t, { Z: () => X }), n(388685);
+n.d(t, { Z: () => Q }), n(388685);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -86,8 +86,8 @@ function C(e, t) {
     (I[e.parentId] = r), t(e);
 }
 function N(e) {
-    var t;
-    null == (t = e.threads) || t.forEach(P);
+    var t, n;
+    null == (t = e.threads) || t.forEach(D), null == (n = e.threadMessages) || n.forEach(P);
 }
 function R(e) {
     if (!(e.id in v)) {
@@ -103,6 +103,14 @@ function R(e) {
     return v[e.id];
 }
 function P(e) {
+    if (e.type === m.uaV.THREAD_STARTER_MESSAGE) return;
+    let t = f.Z.getChannel(e.channel_id);
+    null != t &&
+        A(t, (t) => {
+            (t.mostRecentRawMessage = e), (t.mostRecentMessage = null);
+        });
+}
+function D(e) {
     A(e, (t) => {
         var n;
         null != e.messageCount && (t.count = e.messageCount);
@@ -112,38 +120,38 @@ function P(e) {
             ((t.mostRecentRawMessage = null), (t.mostRecentMessage = null));
     });
 }
-function D(e) {
+function w(e) {
     if (null != e && !(e.id in v)) {
         let t = f.Z.getChannel(e.id);
-        if (null != t) return P(t), !0;
+        if (null != t) return D(t), !0;
     }
     return !1;
 }
-function w(e) {
+function L(e) {
     (I = {}), O.clear(), e.guilds.forEach(N);
 }
-function L(e) {
+function x(e) {
     let { threadMessages: t } = e;
     for (let e in (v = E({}, t))) {
         let n = t[e].mostRecentMessage;
         null != n && (t[e].mostRecentMessage = new u.ZP(y(E({}, n), { author: new d.Z(n.author) })));
     }
 }
-function x(e) {
+function M(e) {
     let { guild: t } = e;
     N(t);
 }
-function M(e) {
+function k(e) {
     let { guild: t } = e;
     T(t.id);
 }
-function k(e) {
-    let { channel: t } = e;
-    P(t);
-}
 function j(e) {
+    let { channel: t } = e;
+    D(t);
+}
+function U(e) {
     let { threads: t, mostRecentMessages: n } = e;
-    t.forEach(P),
+    t.forEach(D),
         null == n ||
             n.forEach((e) => {
                 let t = f.Z.getChannel(e.channel_id);
@@ -154,46 +162,46 @@ function j(e) {
                     });
             });
 }
-function U(e) {
-    let { threads: t } = e;
-    t.forEach(D);
-}
 function G(e) {
+    let { threads: t } = e;
+    t.forEach(w);
+}
+function B(e) {
     let { data: t } = e;
     t.forEach((e) => {
         let { messages: t, threads: n } = e;
         t.forEach((e) => {
             e.forEach((e) => {
-                D(e.thread);
+                w(e.thread);
             });
         }),
-            n.forEach(D);
+            n.forEach(w);
     });
-}
-function B(e) {
-    let { channel: t } = e;
-    S(t.id);
 }
 function Z(e) {
     let { channel: t } = e;
-    delete v[t.id];
+    S(t.id);
 }
 function F(e) {
+    let { channel: t } = e;
+    delete v[t.id];
+}
+function V(e) {
     let { message: t, optimistic: n, isPushNotification: r, sendMessageOptions: i } = e;
     if (n || r || null != i) return !1;
     let a = f.Z.getChannel(t.channel_id);
-    if (null == a || !c.Ec.has(a.type) || !V(a, t)) return !1;
+    if (null == a || !c.Ec.has(a.type) || !H(a, t)) return !1;
     A(a, (e) => {
         (e.count = Math.min(e.count + 1, h.M3)), (e.mostRecentRawMessage = t), (e.mostRecentMessage = null);
     });
 }
-function V(e, t) {
+function H(e, t) {
     return !(
         t.type === m.uaV.THREAD_STARTER_MESSAGE ||
         (e.isForumPost() && t.id === p.default.castChannelIdAsMessageId(e.id))
     );
 }
-function H(e) {
+function W(e) {
     var t;
     let { message: n } = e,
         r = v[n.channel_id],
@@ -218,7 +226,7 @@ function Y(e) {
             O.add(t);
     });
 }
-function W(e) {
+function K(e) {
     let { ids: t, channelId: n } = e,
         r = v[n];
     if (null == r) return !1;
@@ -236,9 +244,9 @@ function W(e) {
                 t.forEach((e) => O.add(e));
         });
 }
-function K(e) {
+function z(e) {
     let t = !1;
-    for (let n of e.messages) t = D(n.thread) || t;
+    for (let n of e.messages) t = w(n.thread) || t;
     if (e.isAfter || e.isBefore || e.hasMoreAfter) return t;
     let n = f.Z.getChannel(e.channelId);
     if (null == n || !c.Ec.has(n.type)) return t;
@@ -253,7 +261,7 @@ function K(e) {
         }
     });
 }
-function z() {
+function q() {
     for (let e in v) {
         let t = v[e];
         if (null != t && null != t.mostRecentMessage) {
@@ -263,7 +271,7 @@ function z() {
         }
     }
 }
-class q extends (r = o.ZP.Store) {
+class X extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(f.Z, _.Z);
     }
@@ -292,27 +300,27 @@ class q extends (r = o.ZP.Store) {
         return v;
     }
 }
-g(q, "displayName", "ThreadMessageStore");
-let X = new q(s.Z, {
-    CONNECTION_OPEN: w,
-    OVERLAY_INITIALIZE: L,
-    GUILD_CREATE: x,
-    GUILD_DELETE: M,
-    THREAD_CREATE: k,
-    THREAD_UPDATE: k,
-    THREAD_LIST_SYNC: j,
-    LOAD_THREADS_SUCCESS: U,
-    LOAD_ARCHIVED_THREADS_SUCCESS: U,
-    RELATIONSHIP_ADD: z,
-    RELATIONSHIP_UPDATE: z,
-    RELATIONSHIP_REMOVE: z,
-    SEARCH_MESSAGES_SUCCESS: G,
-    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: G,
-    THREAD_DELETE: Z,
-    CHANNEL_DELETE: B,
-    MESSAGE_CREATE: F,
-    MESSAGE_UPDATE: H,
+g(X, "displayName", "ThreadMessageStore");
+let Q = new X(s.Z, {
+    CONNECTION_OPEN: L,
+    OVERLAY_INITIALIZE: x,
+    GUILD_CREATE: M,
+    GUILD_DELETE: k,
+    THREAD_CREATE: j,
+    THREAD_UPDATE: j,
+    THREAD_LIST_SYNC: U,
+    LOAD_THREADS_SUCCESS: G,
+    LOAD_ARCHIVED_THREADS_SUCCESS: G,
+    RELATIONSHIP_ADD: q,
+    RELATIONSHIP_UPDATE: q,
+    RELATIONSHIP_REMOVE: q,
+    SEARCH_MESSAGES_SUCCESS: B,
+    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: B,
+    THREAD_DELETE: F,
+    CHANNEL_DELETE: Z,
+    MESSAGE_CREATE: V,
+    MESSAGE_UPDATE: W,
     MESSAGE_DELETE: Y,
-    MESSAGE_DELETE_BULK: W,
-    LOAD_MESSAGES_SUCCESS: K,
+    MESSAGE_DELETE_BULK: K,
+    LOAD_MESSAGES_SUCCESS: z,
 });
