@@ -1,21 +1,21 @@
 n.d(t, {
-    $U: () => Z,
-    FJ: () => D,
-    HG: () => k,
-    IC: () => A,
-    NV: () => x,
-    Rm: () => R,
-    _e: () => C,
-    aL: () => I,
-    eO: () => M,
-    em: () => T,
-    es: () => N,
-    jv: () => S,
-    mV: () => L,
-    rK: () => w,
-    wV: () => P,
+    $U: () => A,
+    FJ: () => R,
+    HG: () => M,
+    IC: () => x,
+    NV: () => P,
+    Rm: () => L,
+    _e: () => I,
+    aL: () => y,
+    eO: () => D,
+    em: () => S,
+    es: () => T,
+    jv: () => C,
+    mV: () => w,
+    rK: () => Z,
+    wV: () => j,
     y_: () => v,
-    ye: () => U,
+    ye: () => k,
 }),
     n(539854),
     n(472816),
@@ -40,20 +40,19 @@ var p = n(306680),
     _ = n(144725),
     b = n(797394),
     E = n(634773),
-    O = n(981631),
-    y = n(764051);
+    O = n(981631);
 function v(e, t) {
     return "hydration-".concat(e, "-").concat(t);
 }
 n(388032);
-var I =
+var y =
     (((r = {})[(r.UNKNOWN = 0)] = "UNKNOWN"),
     (r[(r.DEFAULT = 1)] = "DEFAULT"),
     (r[(r.MORE = 2)] = "MORE"),
     (r[(r.LESS = 3)] = "LESS"),
     (r[(r.MUTED = 4)] = "MUTED"),
     r);
-function C(e) {
+function I(e) {
     return (
         e.type === b.Ni.MESSAGE ||
         e.type === b.Ni.SUMMARY ||
@@ -61,10 +60,10 @@ function C(e) {
         e.type === b.Ni.GUILD_EVENT
     );
 }
-function S(e) {
+function C(e) {
     return e < -1.5 ? 4 : e < 0 ? 3 : e > 0 ? 2 : 1;
 }
-async function T(e, t, n) {
+async function S(e, t, n) {
     let r = _.Z.getHydratedItems(),
         i = e.slice(t, n);
     if (0 === i.length) return;
@@ -131,13 +130,13 @@ async function T(e, t, n) {
         generatedCandidateItems: u,
     });
 }
-async function N() {
+async function T() {
     let e = _.Z.getUnreadDisplayItems(),
         t = _.Z.getReadDisplayItems(),
         n = _.Z.getNextIndexToHydrate();
-    await T([...e, ...t], n, n + b.xy);
+    await S([...e, ...t], n, n + b.xy);
 }
-function j(e, t, n) {
+function N(e, t, n) {
     let r = [],
         i = null;
     for (let l of e) {
@@ -147,7 +146,7 @@ function j(e, t, n) {
     }
     return r;
 }
-function P(e, t) {
+function j(e, t) {
     let { reactions: n, reactionCount: r } = (function (e) {
             let t = [],
                 n = 0;
@@ -181,7 +180,7 @@ function P(e, t) {
                 reactionCount: n,
             };
         })(e.messages),
-        i = j(e.messages, !0, 3);
+        i = N(e.messages, !0, 3);
     return {
         id: e.id,
         topic: e.topic,
@@ -201,10 +200,10 @@ function P(e, t) {
         source: e.source,
     };
 }
-function x(e) {
+function P(e) {
     let t = [];
     null != e.messages && (t = e.messages);
-    let n = j(t);
+    let n = N(t);
     return {
         guild_id: e.guild_id,
         content_id: e.content_id,
@@ -220,12 +219,9 @@ function x(e) {
         messages: n,
     };
 }
-function A(e, t) {
+function x(e, t) {
     var n, r;
-    let i, l;
     return (
-        null != e.before_messages && (i = j(e.before_messages).slice(-y.h9)),
-        null != e.after_messages && (l = j(e.after_messages).slice(0, y.Ml)),
         (n = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -255,8 +251,6 @@ function A(e, t) {
             {
                 message: (0, s.e5)(e.message),
                 threadChannel: null != e.thread_channel ? o.dy.fromServer(e.thread_channel, e.guild_id) : void 0,
-                beforeMessages: i,
-                afterMessages: l,
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
@@ -273,14 +267,14 @@ function A(e, t) {
         n
     );
 }
-function Z(e, t) {
+function A(e, t) {
     let n = p.ZP.getTrackedAckMessageId(e);
     return null == n || f.default.extractTimestamp(t) > f.default.extractTimestamp(n);
 }
-function w(e) {
+function Z(e) {
     return (0, g.VZ)(e);
 }
-function L(e) {
+function w(e) {
     var t;
     return {
         id: e.id,
@@ -305,7 +299,7 @@ function L(e) {
         score_components: e.score_components,
     };
 }
-function R(e, t, n) {
+function L(e, t, n) {
     let r = E.Z.getReadTimestamp(e);
     null == r && (r = null == n ? void 0 : n[e]);
     let i = E.Z.getReadTimestamp(t);
@@ -317,7 +311,7 @@ function R(e, t, n) {
             ? 1
             : i - r;
 }
-function D(e) {
+function R(e) {
     let t = [..._.Z.getUnreadDisplayItems(), ..._.Z.getReadDisplayItems()],
         n = null;
     for (let t = e.length - 1; t >= 0; t--) {
@@ -331,7 +325,7 @@ function D(e) {
     let r = t.findIndex((e) => e.id === n);
     return r < 0 ? [] : t.slice(0, r + 1);
 }
-function M(e) {
+function D(e) {
     var t, n;
     let r, i;
     switch (e.data.kind) {
@@ -361,7 +355,7 @@ function M(e) {
         (null == s ? void 0 : s.nsfwLevel) === O.V_K.AGE_RESTRICTED
     );
 }
-function k(e) {
+function M(e) {
     switch (e.data.kind) {
         case "end":
             return "end";
@@ -394,7 +388,7 @@ function k(e) {
             return "unknown";
     }
 }
-async function U(e) {
+async function k(e) {
     let { ack: t } = await Promise.resolve().then(n.bind(n, 45114)),
         { AnalyticsObjectTypes: r } = await Promise.resolve().then(n.bind(n, 981631));
     _.Z.getDehydratedItems().forEach((n) => {

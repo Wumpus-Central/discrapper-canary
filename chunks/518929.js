@@ -1,21 +1,19 @@
 n.d(t, {
-    VZ: () => d,
-    ZY: () => f,
-    b5: () => u,
-    q3: () => p,
-}),
-    n(473749);
+    VZ: () => u,
+    ZY: () => d,
+    b5: () => c,
+    q3: () => _,
+});
 var r = n(818083),
-    i = n(427164),
-    a = n(638395),
-    o = n(171393),
-    s = n(987338);
-let l = "hide_icymi_tab",
-    c = (0, r.B)({
+    i = n(638395),
+    a = n(171393),
+    o = n(987338);
+let s = "hide_icymi_tab",
+    l = (0, r.B)({
         kind: "user",
         id: "2024-07_icymi",
         label: "In-case-you-missed-it tab",
-        commonTriggerPoint: s.$P.CONNECTION_OPEN_MOBILE,
+        commonTriggerPoint: o.$P.CONNECTION_OPEN_MOBILE,
         defaultConfig: { enabled: !1 },
         treatments: [
             {
@@ -25,17 +23,17 @@ let l = "hide_icymi_tab",
             },
         ],
     });
-function u(e) {
+function c(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = (0, o.Z)(l),
-        r = c.useExperiment(
+        n = (0, a.Z)(s),
+        r = l.useExperiment(
             { location: e },
             {
                 autoTrackExposure: t,
                 disable: n,
             },
         ),
-        i = g.useExperiment(
+        i = p.useExperiment(
             { location: e },
             {
                 autoTrackExposure: !1,
@@ -44,10 +42,10 @@ function u(e) {
         );
     return r.enabled && i.icymiDesktopEnabled;
 }
-function d(e) {
+function u(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = a.Z.get(l),
-        r = c.getCurrentConfig(
+        n = i.Z.get(s),
+        r = l.getCurrentConfig(
             { location: e },
             {
                 autoTrackExposure: t,
@@ -55,7 +53,7 @@ function d(e) {
             },
         );
     {
-        let t = g.getCurrentConfig(
+        let t = p.getCurrentConfig(
             { location: e },
             {
                 autoTrackExposure: !1,
@@ -65,7 +63,7 @@ function d(e) {
         return r.enabled && t.icymiDesktopEnabled;
     }
 }
-let f = (0, r.B)({
+let d = (0, r.B)({
         kind: "user",
         id: "2024-07_icymi_negative_items",
         label: "icymi negative content (debugging only)",
@@ -78,7 +76,7 @@ let f = (0, r.B)({
             },
         ],
     }),
-    _ = (0, r.B)({
+    f = (0, r.B)({
         kind: "user",
         id: "2025-05_icymi_new_conversation_summaries",
         label: "New conversation summary in ICYMI",
@@ -91,10 +89,10 @@ let f = (0, r.B)({
             },
         ],
     });
-function p(e) {
+function _(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = d(e, !1);
-    return _.getCurrentConfig(
+        n = u(e, !1);
+    return f.getCurrentConfig(
         { location: e },
         {
             autoTrackExposure: t,
@@ -102,53 +100,16 @@ function p(e) {
         },
     );
 }
-let h = {
-        isNewHeaderAndInteractions: !1,
-        isNewCardDesign: !1,
-        isBottomSheetInteractions: !1,
-        uxVariation: "default",
-    },
-    m = (0, i.le)({
-        name: "2025-09-destination-icymi-ux-v2",
-        kind: "user",
-        defaultConfig: h,
-        variations: {
-            1: {
-                isNewHeaderAndInteractions: !0,
-                isNewCardDesign: !1,
-                isBottomSheetInteractions: !1,
-                uxVariation: "destination_icymi_ia",
-            },
-            2: {
-                isNewHeaderAndInteractions: !0,
-                isNewCardDesign: !0,
-                isBottomSheetInteractions: !1,
-                uxVariation: "destination_icymi_ia_card",
-            },
-            3: {
-                isNewHeaderAndInteractions: !0,
-                isNewCardDesign: !1,
-                isBottomSheetInteractions: !0,
-                uxVariation: "destination_icymi_ia_bottom_sheet",
-            },
-            4: {
-                isNewHeaderAndInteractions: !0,
-                isNewCardDesign: !0,
-                isBottomSheetInteractions: !0,
-                uxVariation: "destination_icymi_ia_bottom_sheet_card",
-            },
+let p = (0, r.B)({
+    kind: "user",
+    id: "2025-10_icymi_desktop_client",
+    label: "ICYMI desktop client",
+    defaultConfig: { icymiDesktopEnabled: !1 },
+    treatments: [
+        {
+            id: 1,
+            label: "Enable ICYMI desktop client",
+            config: { icymiDesktopEnabled: !0 },
         },
-    }),
-    g = (0, r.B)({
-        kind: "user",
-        id: "2025-10_icymi_desktop_client",
-        label: "ICYMI desktop client",
-        defaultConfig: { icymiDesktopEnabled: !1 },
-        treatments: [
-            {
-                id: 1,
-                label: "Enable ICYMI desktop client",
-                config: { icymiDesktopEnabled: !0 },
-            },
-        ],
-    });
+    ],
+});
