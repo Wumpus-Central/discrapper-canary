@@ -198,6 +198,11 @@ let M = {
                         }),
                         D(n.fingerprint, (0, Z.O)(t)));
                     break;
+                case Z.jE.GAME_SHOP:
+                    null != n &&
+                        ((0, I.dL)({ pathname: w.Z5c.CHANNELS_GAME_SHOP(n.guildId, n.pageIndex, n.skuId, n.slug) }),
+                        D(n.fingerprint, (0, Z.O)(t)));
+                    break;
                 case Z.jE.QUEST_HOME:
                     if (null != n) {
                         let e = new URLSearchParams();

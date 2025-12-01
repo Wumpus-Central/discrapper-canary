@@ -26,6 +26,7 @@ var c = (function (e) {
         (e.STORE_HOME = "STORE_HOME"),
         (e.STORE_LISTING = "STORE_LISTING"),
         (e.CHANNEL = "CHANNEL"),
+        (e.GAME_SHOP = "GAME_SHOP"),
         (e.PICK_GUILD_SETTINGS = "PICK_GUILD_SETTINGS"),
         (e.QUEST_HOME = "QUEST_HOME"),
         (e.DISCOVERY_GAME_RESULTS = "DISCOVERY_GAME_RESULTS"),
