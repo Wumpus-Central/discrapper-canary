@@ -1,35 +1,36 @@
-n.d(t, { z: () => c });
+n.d(t, { z: () => u });
 var r = n(54381),
     i = n(473749),
-    l = n(481060),
-    o = n(833592),
-    a = n(388032);
-let s = (e) => {
+    l = n(28664),
+    o = n(481060),
+    a = n(833592),
+    s = n(388032);
+let c = (e) => {
         let { item: t, closePopout: n } = e;
-        return (0, r.jsx)(l.v2r, {
+        return (0, r.jsx)(o.v2r, {
             navId: "notification-actions",
             onClose: n,
             onSelect: n,
-            "aria-label": a.intl.string(a.t.ljs3Oe),
-            children: (0, r.jsx)(l.sNh, {
+            "aria-label": s.intl.string(s.t.ljs3Oe),
+            children: (0, r.jsx)(o.sNh, {
                 id: "delete",
-                label: a.intl.string(a.t.oyYWHE),
-                icon: l.XHJ,
+                label: s.intl.string(s.t.oyYWHE),
+                icon: o.XHJ,
                 action: async () => {
-                    await (0, o.g3)(t);
+                    await (0, a.g3)(t);
                 },
             }),
         });
     },
-    c = i.memo(function (e) {
+    u = i.memo(function (e) {
         let { item: t } = e,
             n = i.useRef(null);
-        return (0, r.jsx)(l.yRy, {
+        return (0, r.jsx)(o.yRy, {
             targetElementRef: n,
             renderPopout: (e) => {
                 var n, i;
                 return (0, r.jsx)(
-                    s,
+                    c,
                     ((n = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -73,21 +74,24 @@ let s = (e) => {
             },
             position: "bottom",
             align: "right",
-            animation: l.yRy.Animation.NONE,
+            animation: o.yRy.Animation.NONE,
             children: (e) => {
                 let { onClick: t } = e;
-                return (0, r.jsx)(l.M0o, {
-                    ref: n,
-                    tooltip: a.intl.string(a.t["UKOtz+"]),
-                    color: l.YX$.TERTIARY,
-                    icon: (0, r.jsx)(l.xhG, {
-                        size: "xs",
-                        color: "currentColor",
+                return (0, r.jsx)(l.u, {
+                    text: s.intl.string(s.t["UKOtz+"]),
+                    asContainer: !0,
+                    children: (0, r.jsx)(o.hU, {
+                        buttonRef: n,
+                        size: "sm",
+                        icon: o.xhG,
+                        variant: "icon-only",
+                        "aria-label": s.intl.string(s.t["UKOtz+"]),
+                        "aria-haspopup": "menu",
+                        onClick: (e) => {
+                            e.stopPropagation(), t(e);
+                        },
+                        role: "button",
                     }),
-                    onClick: (e) => {
-                        e.stopPropagation(), t(e);
-                    },
-                    "aria-haspopup": "menu",
                 });
             },
         });
