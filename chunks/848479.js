@@ -148,6 +148,67 @@ class c extends a.h {
             return null;
         }
     }
+    enablePAMemoryProfiler(e) {
+        try {
+            var t;
+            let n =
+                null === r.Z || void 0 === r.Z || null == (t = r.Z.processUtils) ? void 0 : t.enablePAMemoryProfiler;
+            if (void 0 === n) return null;
+            return n(e), !0;
+        } catch (e) {
+            return null;
+        }
+    }
+    disablePAMemoryProfiler() {
+        try {
+            var e;
+            let t =
+                null === r.Z || void 0 === r.Z || null == (e = r.Z.processUtils) ? void 0 : e.disablePAMemoryProfiler;
+            if (void 0 === t) return null;
+            return t(), !0;
+        } catch (e) {
+            return null;
+        }
+    }
+    getPerfAttributedPAMemory() {
+        try {
+            var e, t;
+            return null === r.Z ||
+                void 0 === r.Z ||
+                null == (t = r.Z.processUtils) ||
+                null == (e = t.getPerfAttributedPAMemory)
+                ? void 0
+                : e.call(t);
+        } catch (e) {
+            return null;
+        }
+    }
+    getPerfAttributedPAMemoryCallstacks(e) {
+        try {
+            var t, n;
+            return null === r.Z ||
+                void 0 === r.Z ||
+                null == (n = r.Z.processUtils) ||
+                null == (t = n.getPerfAttributedPAMemoryCallstacks)
+                ? void 0
+                : t.call(n, e);
+        } catch (e) {
+            return null;
+        }
+    }
+    getPartitionAllocatorStats() {
+        try {
+            var e, t;
+            return null === r.Z ||
+                void 0 === r.Z ||
+                null == (t = r.Z.processUtils) ||
+                null == (e = t.getPartitionAllocatorStats)
+                ? void 0
+                : e.call(t);
+        } catch (e) {
+            return null;
+        }
+    }
     constructor() {
         var e, t;
         super(),
