@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(681715),
     d = n(481060),
     f = n(570140),
-    h = n(45114),
-    p = n(367907),
+    p = n(45114),
+    h = n(367907),
     g = n(703656),
     m = n(592125),
     b = n(259580),
@@ -58,7 +58,7 @@ let S = i.memo(function (e) {
                 r = n > t ? e - (n - t) : e;
             c([e, e - r]);
         }
-        let { opacity: f, size: h } = (0, d.q_F)(
+        let { opacity: f, size: p } = (0, d.q_F)(
                 {
                     config: {
                         clamp: !0,
@@ -73,16 +73,16 @@ let S = i.memo(function (e) {
                 },
                 "animate-always",
             ),
-            p = {
+            h = {
                 opacity: f,
-                height: h.to((e) => {
+                height: p.to((e) => {
                     var t, n;
                     return u ? ((t = o), (n = s) + (t - n) * e) : "auto";
                 }),
             };
         return (0, r.jsx)(a.animated.div, {
             ref: l,
-            style: p,
+            style: h,
             children: (0, r.jsx)(I, E({}, e)),
         });
     }),
@@ -98,7 +98,7 @@ let S = i.memo(function (e) {
                     "messages" !== t.type ||
                     0 !== t.messages.length ||
                     f.Z.wait(() => {
-                        (0, h.ack)(
+                        (0, p.ack)(
                             t.channelId,
                             {
                                 section: j.jXE.INBOX,
@@ -114,7 +114,7 @@ let S = i.memo(function (e) {
         )
             return null;
         let s = (e, r) => {
-            (0, p.yw)(j.rMx.INBOX_CHANNEL_CLICKED, {
+            (0, h.yw)(j.rMx.INBOX_CHANNEL_CLICKED, {
                 channel_id: t.channelId,
                 guild_id: t.guildId,
             });
@@ -132,6 +132,7 @@ let S = i.memo(function (e) {
                     channelState: t,
                     children: (0, r.jsxs)(d.ButtonGroup, {
                         size: "sm",
+                        className: C.buttonGroup,
                         children: [
                             (0, r.jsx)(_.Z, { channel: a }),
                             (0, r.jsx)(P, E({}, e)),
@@ -169,7 +170,7 @@ function P(e) {
             icon: o ? d.W6s : d.dz2,
             onClick: function () {
                 o && null != t.guildId ? i(t.guildId) : n(t),
-                    (0, p.yw)(j.rMx.INBOX_CHANNEL_ACKED, {
+                    (0, h.yw)(j.rMx.INBOX_CHANNEL_ACKED, {
                         channel_id: t.channelId,
                         guild_id: t.guildId,
                         marked_all_channels_as_read: !1,
@@ -187,7 +188,7 @@ function N(e) {
             className: o()(C.collapseButton, { [C.collapsed]: t.collapsed }),
             onClick: function () {
                 n(t),
-                    (0, p.yw)(j.rMx.INBOX_CHANNEL_COLLAPSED, {
+                    (0, h.yw)(j.rMx.INBOX_CHANNEL_COLLAPSED, {
                         channel_id: t.channelId,
                         guild_id: t.guildId,
                         num_unread_channels_remaining: i(),
