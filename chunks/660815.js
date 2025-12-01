@@ -1,12 +1,14 @@
-n.d(t, { V: () => l });
-var a,
-    l =
-        (((a = {}).STARTING = "starting"),
-        (a.STARTUP_FAILED = "startup_failed"),
-        (a.MISSING_STOCK = "missing_stock"),
-        (a.SLEEPING = "sleeping"),
-        (a.OFFLINE = "offline"),
-        (a.ONLINE = "online"),
-        (a.DELETED = "deleted"),
-        (a.PROVIDER_ERRORED = "provider_errored"),
-        a);
+n.d(t, { V: () => r });
+var r = (function (e) {
+    return (
+        (e.STARTING = "starting"),
+        (e.STARTUP_FAILED = "startup_failed"),
+        (e.MISSING_STOCK = "missing_stock"),
+        (e.SLEEPING = "sleeping"),
+        (e.OFFLINE = "offline"),
+        (e.ONLINE = "online"),
+        (e.DELETED = "deleted"),
+        (e.PROVIDER_ERRORED = "provider_errored"),
+        e
+    );
+})({});

@@ -1,21 +1,23 @@
 n.d(t, {
-    AK: () => c,
-    EK: () => r,
-    IX: () => s,
-    SW: () => h,
-    SY: () => d,
-    Sg: () => m,
-    TG: () => o,
+    AK: () => l,
+    EK: () => a,
+    IX: () => o,
+    SW: () => p,
+    SY: () => c,
+    Sg: () => d,
+    TG: () => s,
     YX: () => u,
-    Z4: () => g,
-    nd: () => x,
-    tq: () => p,
+    Z4: () => m,
+    fj: () => h,
+    nd: () => _,
+    tq: () => f,
 });
-var a,
-    l = n(763600),
+var r = n(763600),
     i = n(48541),
-    r = 12633 == n.j ? (((a = {}).SELECT_GAME = "select-game"), (a.SERVER_SETTINGS = "server-settings"), a) : null;
-let s = {
+    a = (function (e) {
+        return (e.SELECT_GAME = "select-game"), (e.SERVER_SETTINGS = "server-settings"), e;
+    })({});
+let o = {
         steps: {
             "select-game": {
                 onBack: { type: "close" },
@@ -33,19 +35,20 @@ let s = {
             },
         },
     },
-    o = 24,
-    c = 680,
-    d = 12633 == n.j ? c - 2 * o : null,
+    s = 24,
+    l = 680,
+    c = 632,
     u = 10,
-    m = 32,
-    p = 1000,
-    h =
+    d = 32,
+    f = 1000,
+    p =
         "production" === window.GLOBAL_ENV.PROJECT_ENV
             ? "1425215263548117002"
             : "staging" === window.GLOBAL_ENV.PROJECT_ENV
               ? "1415044199572832256"
               : "1415025086791942144";
-l.Z.SHOCKBYTE, window.GLOBAL_ENV.RELEASE_CHANNEL, i.C.STAGING;
-let x = { [l.Z.SHOCKBYTE]: "https://shockbyte.com/legal/acceptable-use-policy" },
-    g = (e, t) =>
-        "https://discord.sjc1.qualtrics.com/jfe/form/SV_2h34PnQLPTCjTTM?user_id=".concat(e, "&guild_id=").concat(t);
+r.Z.SHOCKBYTE, window.GLOBAL_ENV.RELEASE_CHANNEL, i.C.STAGING;
+let _ = { [r.Z.SHOCKBYTE]: "https://shockbyte.com/legal/acceptable-use-policy" },
+    m = (e, t) =>
+        "https://discord.sjc1.qualtrics.com/jfe/form/SV_2h34PnQLPTCjTTM?user_id=".concat(e, "&guild_id=").concat(t),
+    h = "0";

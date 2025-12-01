@@ -1,5 +1,4 @@
-n.d(t, { Z: () => a });
-function a(e) {
+function r(e) {
     return {
         id: e.id,
         name: e.name,
@@ -8,3 +7,4 @@ function a(e) {
         enabled: e.enabled,
     };
 }
+n.d(t, { Z: () => r });
