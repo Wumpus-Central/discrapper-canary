@@ -1,23 +1,21 @@
-n.d(t, { V: () => f });
+n.d(t, { V: () => u });
 var r = n(473749),
     i = n(442837),
     a = n(335131),
     o = n(597688),
     s = n(1870),
-    l = n(873626),
-    c = n(212161),
-    u = n(365943),
-    d = n(25251);
-let f = (e) => {
-    let t = (0, i.e7)([d.Z], () => d.Z.getProfileEffect(e)),
+    l = n(212161),
+    c = n(25251);
+let u = (e) => {
+    let t = (0, i.e7)([c.Z], () => c.Z.getProfileEffect(e)),
         n = (0, i.e7)([o.Z, s.Z], () => {
             if (null == e) return;
             let t = o.Z.getProduct(e);
-            if ((0, c.H)(null == t ? void 0 : t.items[0])) return t.items[0];
+            if ((0, l.H)(null == t ? void 0 : t.items[0])) return t.items[0];
             let n = s.Z.getPurchase(e);
-            if ((0, c.H)(null == n ? void 0 : n.items[0])) return n.items[0];
+            if ((0, l.H)(null == n ? void 0 : n.items[0])) return n.items[0];
         }),
-        f = r.useMemo(
+        u = r.useMemo(
             () =>
                 null != n
                     ? {
@@ -27,12 +25,11 @@ let f = (e) => {
                     : t,
             [n, t],
         ),
-        p = null != e && null == f,
-        _ = (0, l.F)("useProfileEffectPreset");
+        d = null != e && null == u;
     return (
         r.useEffect(() => {
-            p && (_ ? (0, a.lW)(e) : (0, u.t)(!0));
-        }, [p, e, _]),
-        f
+            d && (0, a.lW)(e);
+        }, [d, e]),
+        u
     );
 };
