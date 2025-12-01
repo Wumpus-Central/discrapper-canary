@@ -1,49 +1,36 @@
-n.d(t, {
-    Z: () => p,
-    b: () => d,
-});
-var r,
-    i = n(54381);
+n.d(t, { Z: () => u });
+var r = n(54381);
 n(473749);
-var l = n(657707),
+var i = n(657707),
     o = n(793030),
-    a = n(692547),
-    s = n(130231),
-    c = n(388032),
-    u = n(293081),
-    d = (((r = {})[(r.AVAILABLE = 0)] = "AVAILABLE"), (r[(r.SPENT = 1)] = "SPENT"), (r[(r.TOTAL = 2)] = "TOTAL"), r);
-function p(e) {
+    l = n(692547),
+    a = n(673833),
+    s = n(535396),
+    c = n(293081);
+function u(e) {
     let { count: t, type: n } = e;
-    return (0, i.jsxs)("div", {
-        className: u.container,
+    return (0, r.jsxs)("div", {
+        className: c.container,
         children: [
-            (0, i.jsxs)("div", {
-                className: u.headerContainer,
+            (0, r.jsxs)("div", {
+                className: c.headerContainer,
                 children: [
-                    (0, i.jsx)(l.Ucv, {
+                    (0, r.jsx)(i.Ucv, {
                         size: "sm",
-                        color: 0 !== n ? a.Z.colors.HEADER_MUTED : a.Z.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                        color:
+                            n !== s.br.AVAILABLE ? l.Z.colors.HEADER_MUTED : l.Z.unsafe_rawColors.GUILD_BOOSTING_PINK,
                     }),
-                    (0, i.jsx)(o.X6q, {
-                        color: 0 !== n ? "header-muted" : "header-primary",
+                    (0, r.jsx)(o.X6q, {
+                        color: n !== s.br.AVAILABLE ? "header-muted" : "header-primary",
                         variant: "heading-lg/semibold",
                         children: t,
                     }),
                 ],
             }),
-            (0, i.jsx)(o.xvT, {
+            (0, r.jsx)(o.xvT, {
                 color: "header-muted",
                 variant: "text-sm/medium",
-                children: (() => {
-                    switch (n) {
-                        case 0:
-                            return c.intl.formatToPlainString(s.default.BdRXZA, { boostCount: t });
-                        case 1:
-                            return c.intl.formatToPlainString(s.default.xvgIVG, { boostCount: t });
-                        case 2:
-                            return c.intl.string(s.default["/F7Z2y"]);
-                    }
-                })(),
+                children: (0, a.t)(t, n),
             }),
         ],
     });

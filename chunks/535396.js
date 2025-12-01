@@ -1,19 +1,20 @@
 n.d(t, {
-    A3: () => T,
-    Cp: () => p,
-    Du: () => S,
-    Fq: () => _,
+    A3: () => I,
+    Cp: () => _,
+    Du: () => T,
+    Fq: () => p,
     H2: () => g,
     Hk: () => O,
     NL: () => A,
     NO: () => d,
-    Q1: () => m,
-    Rx: () => I,
-    T1: () => h,
+    Q1: () => h,
+    Rx: () => S,
+    T1: () => m,
     Tg: () => E,
     Us: () => u,
     ad: () => f,
     am: () => N,
+    br: () => P,
     cG: () => v,
     d5: () => y,
     os: () => C,
@@ -32,19 +33,19 @@ var r = n(494497),
     })({});
 let d = "1340102344645283891",
     f = new Set([r.h_, r.NJ, r.XW]),
-    _ = "525479941211684874",
-    p = {
+    p = "525479941211684874",
+    _ = {
         [l.Eu4.TIER_1]: r.h_,
         [l.Eu4.TIER_2]: r.NJ,
         [l.Eu4.TIER_3]: r.XW,
         [l.Eu4.NONE]: void 0,
     },
-    h = {
+    m = {
         [r.h_]: l.Eu4.TIER_1,
         [r.NJ]: l.Eu4.TIER_2,
         [r.XW]: l.Eu4.TIER_3,
     },
-    m = {
+    h = {
         [l.Eu4.TIER_1]: i.C.GUILD_POWERUP_LEVEL_1_COACHMARK,
         [l.Eu4.TIER_2]: i.C.GUILD_POWERUP_LEVEL_2_COACHMARK,
         [l.Eu4.TIER_3]: i.C.GUILD_POWERUP_LEVEL_3_COACHMARK,
@@ -119,8 +120,8 @@ let d = "1340102344645283891",
             isEnabled: (e) => (0, o.v$)(e, "GuildPowerupsConstants"),
         },
     },
-    I = { [r.A$]: l.Eu4.TIER_3 };
-var T = (function (e) {
+    S = { [r.A$]: l.Eu4.TIER_3 };
+var I = (function (e) {
         return (
             (e.INACTIVE = "inactive"),
             (e.POWERUP_ACTIVATED = "powerup_activated"),
@@ -129,7 +130,7 @@ var T = (function (e) {
             e
         );
     })({}),
-    S = (function (e) {
+    T = (function (e) {
         return (
             (e[(e.VANITY_URL = 1)] = "VANITY_URL"),
             (e[(e.GUILD_TAG_BADGE_PACKS_WAVE_ONE = 2)] = "GUILD_TAG_BADGE_PACKS_WAVE_ONE"),
@@ -144,3 +145,6 @@ let A = new Set([r.MB, r.Vk]),
         3: new Set(),
     },
     N = "powerupId";
+var P = (function (e) {
+    return (e[(e.AVAILABLE = 0)] = "AVAILABLE"), (e[(e.SPENT = 1)] = "SPENT"), (e[(e.TOTAL = 2)] = "TOTAL"), e;
+})({});
