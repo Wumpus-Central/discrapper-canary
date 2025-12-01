@@ -53,7 +53,7 @@ function I(e) {
     }
     return e;
 }
-let T = 26,
+let T = 27,
     S = 15 * h.Z.Millis.MINUTE,
     A = h.Z.Millis.SECOND,
     C = "LAST_CLIENT_HEARTBEAT_SESSION",
@@ -151,12 +151,10 @@ function V() {
     p.default.track(O.rMx.CLIENT_HEARTBEAT_SKIPPED, e);
 }
 function H() {}
-function Y() {
+function W() {
     let e = [];
     return (
-        null != j &&
-            (k && e.push("foregrounded"),
-            M !== O.hes.DISCONNECTED && M !== O.hes.RTC_DISCONNECTED && e.push("rtc_connected")),
+        null != j && (k && e.push("foregrounded"), M === O.hes.RTC_CONNECTED && e.push("rtc_connected")),
         {
             active: e.length > 0,
             ver: T,
@@ -164,11 +162,11 @@ function Y() {
         }
     );
 }
-function W() {
-    return Y().active;
+function Y() {
+    return W().active;
 }
 function K() {
-    W() ? U() : B(), J();
+    Y() ? U() : B(), J();
 }
 function z() {
     null == D &&
@@ -209,7 +207,7 @@ function Q() {
 }
 function J() {
     var e;
-    null == (e = u.Z.getSocket()) || e.handleActiveStateChange(Y());
+    null == (e = u.Z.getSocket()) || e.handleActiveStateChange(W());
 }
 async function $() {
     let e = await eo(!1);
@@ -262,7 +260,7 @@ async function eo() {
     return (() => {
         let e = Date.now();
         if (
-            (W()
+            (Y()
                 ? ((null == n || (0, b.qK)(n)) &&
                       ((n = {
                           uuid: (0, r.Z)(),
