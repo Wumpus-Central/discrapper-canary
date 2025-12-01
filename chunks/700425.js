@@ -1,6 +1,6 @@
 n.d(t, {
     i: () => a,
-    l: () => c,
+    l: () => s,
 }),
     n(388685),
     n(539854);
@@ -44,7 +44,7 @@ function a(e, t) {
                     )
                         return;
                     let n = t[0];
-                    o.Z.getField("activeCategoryKey") !== n && o.Z.setState({ activeCategoryKey: n });
+                    o.Z.getField("currentCategoryKey") !== n && o.Z.setState({ currentCategoryKey: n });
                 },
                 {
                     root: e,
@@ -68,7 +68,7 @@ function a(e, t) {
         );
     }, [t, e.key, e.layout]);
 }
-function c() {
+function s() {
     r.useEffect(() => {
         let e = document.querySelectorAll("[data-settings-panel-scroller]");
         if (0 === e.length) return;

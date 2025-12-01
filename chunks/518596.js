@@ -109,10 +109,10 @@ async function O(e) {
     ),
         (0, f.yP)("openUserSettings")
             ? (0, i.nfh)(y)
-                ? c.Z.setState({ targetKey: e })
+                ? c.Z.setState({ requestedTargetKey: e })
                 : await (0, i.ZDy)(
                       async () => {
-                          let { default: t } = await Promise.all([n.e("9452"), n.e("46984")]).then(n.bind(n, 245286));
+                          let { default: t } = await Promise.all([n.e("9452"), n.e("88569")]).then(n.bind(n, 245286));
                           return (n) => (0, r.jsx)(t, g(h({}, n), { target: e }));
                       },
                       {

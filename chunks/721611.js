@@ -1,25 +1,25 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => v });
 var r = n(54381),
     l = n(473749),
     i = n(120356),
     o = n.n(i),
     a = n(512722),
-    c = n.n(a),
-    s = n(790519),
+    s = n.n(a),
+    c = n(666917),
     u = n(91192),
     d = n(481060),
     f = n(493773),
-    b = n(996435),
-    y = n(700425),
-    p = n(910557);
-function v(e) {
+    p = n(996435),
+    b = n(700425),
+    y = n(910557);
+function g(e) {
     var t;
     let { category: n, onClick: l, active: i } = e,
-        { useTitle: a, useNavigationTitle: s, key: f } = n,
-        b = null == a ? void 0 : a(),
-        y = null != (t = null == s ? void 0 : s()) ? t : b;
+        { useTitle: a, useNavigationTitle: c, key: f } = n,
+        p = null == a ? void 0 : a(),
+        b = null != (t = null == c ? void 0 : c()) ? t : p;
     return (
-        c()(null != y, "[SettingsSubnavigationCategory] Category must have a title"),
+        s()(null != b, "[SettingsSubnavigationCategory] Category must have a title"),
         (0, r.jsx)(u.mh, {
             id: f,
             children: (e) => {
@@ -54,11 +54,11 @@ function v(e) {
                         {
                             onClick: l,
                             tag: "li",
-                            className: o()({ [p.active]: i }),
+                            className: o()({ [y.active]: i }),
                         },
                         e,
                     )),
-                    (n = n = { children: y }),
+                    (n = n = { children: b }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                         : (function (e, t) {
@@ -78,17 +78,18 @@ function v(e) {
         })
     );
 }
-function j(e) {
+function v(e) {
     let { categories: t } = e,
-        n = b.Z.useField("activeCategoryKey");
-    (0, f.ZP)(
-        () => (
-            b.Z.setState({ activeCategoryKey: t[0].key }),
-            () => {
-                b.Z.setState({ activeCategoryKey: void 0 });
-            }
-        ),
-    );
+        n = p.Z.useField("currentCategoryKey");
+    (0, f.ZP)(() => {
+        t.some((e) => e.key === n) || p.Z.setState({ currentCategoryKey: t[0].key });
+    }),
+        l.useEffect(
+            () => () => {
+                p.Z.setState({ currentCategoryKey: void 0 });
+            },
+            [],
+        );
     let i = l.useMemo(
             () =>
                 Math.max(
@@ -106,31 +107,29 @@ function j(e) {
             },
         });
     return (
-        (0, y.l)(),
+        (0, b.l)(),
         (0, r.jsxs)("div", {
-            className: p.subnav,
+            className: y.subnav,
             children: [
                 (0, r.jsx)("div", {
-                    className: p.track,
-                    children: (0, r.jsx)(s.animated.div, {
-                        className: p.thumb,
+                    className: y.track,
+                    children: (0, r.jsx)(c.animated.div, {
+                        className: y.thumb,
                         style: o,
                     }),
                 }),
                 (0, r.jsx)("ul", {
                     children: t.map((e) =>
                         (0, r.jsx)(
-                            v,
+                            g,
                             {
                                 onClick: () => {
                                     var t;
                                     return (
                                         (t = e.key),
-                                        void b.Z.setState({
-                                            activeCategoryKey: t,
-                                            targetKey: t,
+                                        void p.Z.setState({
+                                            requestedTargetKey: t,
                                             showNavigationMobile: !1,
-                                            disableSidebarCategoryAutoSelect: !0,
                                         })
                                     );
                                 },

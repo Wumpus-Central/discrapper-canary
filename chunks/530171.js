@@ -11,23 +11,23 @@ var r = n(54381),
     f = n(206403),
     p = n(481446);
 function b(e) {
-    let { title: t, collapsedSubtitle: n, isOpen: i, setIsOpen: b, children: y } = e,
-        g = l.useRef(null),
-        [v, h] = l.useState(null),
-        m = i && null != v;
+    let { title: t, collapsedSubtitle: n, isOpen: i, setIsOpen: b, children: y, animate: g = !0 } = e,
+        v = l.useRef(null),
+        [m, h] = l.useState(null),
+        x = i && null != m;
     return (
         l.useLayoutEffect(() => {
-            null != g.current && null == v && h(g.current.clientHeight);
-        }, [v]),
+            null != v.current && null == m && h(v.current.clientHeight);
+        }, [m]),
         (0, r.jsxs)(a.pJ, {
             isExpanded: i,
             onExpandedChange: b,
             children: [
                 (0, r.jsx)(f.x, {
-                    ref: g,
-                    style: null != v ? { minHeight: v } : void 0,
+                    ref: v,
+                    style: null != m ? { minHeight: m } : void 0,
                     title: t,
-                    description: m ? void 0 : n,
+                    description: x ? void 0 : n,
                     secondaryTrailingElement: (0, r.jsx)(d.tEY, {
                         children: (0, r.jsx)(s.z, {
                             slot: "trigger",
@@ -42,7 +42,7 @@ function b(e) {
                     headingColor: "text-link",
                 }),
                 (0, r.jsx)(a.V2, {
-                    className: p.panel,
+                    className: o()(p.panel, { [p.disablePanelAnimation]: !g }),
                     children: (0, r.jsx)(d.Kqy, {
                         gap: 16,
                         padding: { top: 16 },

@@ -1,147 +1,148 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(54381),
     l = n(473749),
-    i = n(493773),
-    o = n(996733),
-    a = n(636298),
-    s = n(404975),
-    c = n(924052),
-    u = n(59662),
-    d = n(996435),
-    f = n(990757);
-function p(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-function b(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function y(e) {
-    var t, n;
+    i = n(55160),
+    o = n(493773),
+    a = n(996733),
+    s = n(636298),
+    c = n(404975),
+    u = n(924052),
+    d = n(59662),
+    f = n(996435),
+    p = n(990757);
+function b(e) {
+    var t;
     let {
-            root: y,
-            directory: v,
-            target: g,
-            defaultTarget: h,
-            onClose: m,
-            sidebarHeader: x,
-            sidebarFooter: j,
-            onPanelChange: O,
-            emptyState: C,
+            root: n,
+            directory: b,
+            target: y,
+            defaultTarget: g,
+            onClose: v,
+            sidebarHeader: m,
+            sidebarFooter: h,
+            onPanelChange: x,
+            emptyState: j,
         } = e,
-        P = null != g && (null == (t = v.entry(g)) ? void 0 : t.targetPanelKey) != null ? g : h;
-    (0, i.ZP)(() => {
-        let e = v.entry(P).targetPanelKey;
+        O = null != y && (null == (t = b.entry(y)) ? void 0 : t.parentPanelKey) != null ? y : g,
+        P = f.Z.useField("currentPanelKey"),
+        [C, S] = l.useState(b),
+        _ = l.useMemo(() => C.get(null != P ? P : O), [C, P, O]),
+        { navigateWithValidation: E } = (0, u.Cu)();
+    (0, o.ZP)(() => {
+        var e, t;
+        let n = b.entry(O).parentPanelKey,
+            r = null == (e = b.entry(O)) ? void 0 : e.parentCategoryKey,
+            l = null == (t = b.entry(O)) ? void 0 : t.parentAccordionKey;
         return (
-            d.Z.setState({
-                targetKey: P,
-                currentPanelKey: e,
-                showNavigationMobile: null == g,
+            f.Z.setState({
+                currentPanelKey: n,
+                currentCategoryKey: r,
+                disableSidebarCategoryAutoSelect: !0,
+                navTransition: {
+                    targetKey: O,
+                    targetAccordionKey: l,
+                    animateScroll: !1,
+                },
+                showNavigationMobile: null == y,
             }),
-            () => d.Z.resetState()
+            () => f.Z.resetState()
         );
-    });
-    let S = d.Z.useField("currentPanelKey"),
-        _ = d.Z.useField("targetKey"),
-        [E, w] = l.useState(v),
-        N = l.useMemo(() => E.get(null != S ? S : P), [E, S, P]),
-        k = l.useCallback(() => T(void 0), []),
-        [Z, T] = l.useState({
-            target: P,
-            targetAccordionKey: null == (n = v.entry(P)) ? void 0 : n.parentAccordionKey,
-            animateScroll: !1,
-            complete: k,
-        }),
-        { navigateWithValidation: I } = (0, c.Cu)();
-    l.useEffect(() => {
-        if (null == _) return;
-        let e = v.entry(_);
-        if (null == e) return void o.Z.setState({ query: "" });
-        if (null == e.targetPanelKey) return void d.Z.setState({ targetKey: void 0 });
-        let t = {
-            target: _,
-            targetAccordion: e.parentAccordionKey,
-            complete: k,
-        };
-        if (e.targetPanelKey !== S) {
-            let n = e.targetPanelKey;
-            I(() => {
-                d.Z.setState({
-                    targetKey: void 0,
-                    currentPanelKey: n,
-                    showNavigationMobile: !1,
-                }),
-                    T(b(p({}, t), { animateScroll: !1 })),
-                    null == O || O(n);
-            });
-        } else T(b(p({}, t), { animateScroll: !0 })), d.Z.setState({ targetKey: void 0 });
-    }, [S, _, k, v, I, O]);
-    let D = l.useMemo(
+    }),
+        l.useEffect(
+            () =>
+                f.Z.subscribe(
+                    (e) => ({
+                        requestedTargetKey: e.requestedTargetKey,
+                        currentPanelKey: e.currentPanelKey,
+                    }),
+                    (e) => {
+                        let { requestedTargetKey: t, currentPanelKey: n } = e;
+                        if (null == t) return;
+                        let r = b.entry(t);
+                        if (null == r) return void a.Z.setState({ query: "" });
+                        let l = r.parentPanelKey;
+                        if (null == l) return void f.Z.setState({ requestedTargetKey: void 0 });
+                        let i = () => {
+                            f.Z.setState({
+                                requestedTargetKey: void 0,
+                                currentPanelKey: r.parentPanelKey,
+                                currentCategoryKey: r.parentCategoryKey,
+                                disableSidebarCategoryAutoSelect: !0,
+                                navTransition: {
+                                    targetKey: t,
+                                    targetAccordionKey: r.parentAccordionKey,
+                                    animateScroll: r.parentPanelKey === n,
+                                },
+                            });
+                        };
+                        r.parentPanelKey !== n
+                            ? E(() => {
+                                  i(), null == x || x(l);
+                              })
+                            : i();
+                    },
+                    { equalityFn: i.X },
+                ),
+            [b, E, x],
+        );
+    let w = l.useMemo(
             () => ({
-                navTransition: Z,
-                directory: v,
-                fallbackDirectory: E,
+                directory: b,
+                fallbackDirectory: C,
             }),
-            [Z, v, E],
+            [b, C],
         ),
-        A = () => I(m),
-        R = null != S ? v.get(S) : void 0;
-    return (0, r.jsx)(u.j.Provider, {
-        value: D,
+        N = () => E(v),
+        Z = null != P ? b.get(P) : void 0;
+    return (0, r.jsx)(d.j.Provider, {
+        value: w,
         children: (0, r.jsxs)("div", {
-            className: f.container,
+            className: p.container,
             children: [
-                (0, r.jsx)(s.P, {
-                    root: y,
-                    header: x,
-                    footer: j,
-                    onClose: A,
-                    emptyState: C,
+                (0, r.jsx)(c.P, {
+                    root: n,
+                    header: m,
+                    footer: h,
+                    onClose: N,
+                    emptyState: j,
                 }),
-                (0, r.jsx)(a.Z, {
-                    onClose: A,
-                    setting: null != R ? R : N,
+                (0, r.jsx)(s.Z, {
+                    onClose: N,
+                    setting: null != Z ? Z : _,
                 }),
             ],
         }),
     });
 }
-function v(e) {
-    return (0, r.jsx)(c.Ri, { children: (0, r.jsx)(y, p({}, e)) });
+function y(e) {
+    return (0, r.jsx)(u.Ri, {
+        children: (0, r.jsx)(
+            b,
+            (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        r = Object.keys(n);
+                    "function" == typeof Object.getOwnPropertySymbols &&
+                        (r = r.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            }),
+                        )),
+                        r.forEach(function (t) {
+                            var r;
+                            (r = n[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: r,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0,
+                                      })
+                                    : (e[t] = r);
+                        });
+                }
+                return e;
+            })({}, e),
+        ),
+    });
 }

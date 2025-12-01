@@ -12,8 +12,8 @@ var r = n(54381),
 function p(e) {
     var t, n;
     let { tag: l, onClick: i, active: a, node: c, visibleContent: d, panelKey: p, listItemProps: b, children: y } = e,
-        { icon: v, stronglyDiscouragedCustomComponent: g, trailing: h, useTitle: m } = c,
-        x = null == m ? void 0 : m();
+        { icon: g, stronglyDiscouragedCustomComponent: v, trailing: m, useTitle: h } = c,
+        x = null == h ? void 0 : h();
     return (0, r.jsxs)(l, {
         "data-settings-sidebar-item": p,
         className: f.itemContainer,
@@ -50,12 +50,12 @@ function p(e) {
                         className: o()(f.item, { [f.active]: a }),
                         onClick: i,
                         children: [
-                            null != g
-                                ? (0, r.jsx)(g, {})
+                            null != v
+                                ? (0, r.jsx)(v, {})
                                 : (0, r.jsxs)("div", {
                                       className: f.itemContent,
                                       children: [
-                                          (0, r.jsx)(v, {
+                                          (0, r.jsx)(g, {
                                               color: "currentColor",
                                               size: "refresh_sm",
                                               className: f.icon,
@@ -67,11 +67,11 @@ function p(e) {
                                           }),
                                       ],
                                   }),
-                            null != h &&
+                            null != m &&
                                 (0, r.jsx)("div", {
                                     className: f.itemContent,
                                     children: (0, r.jsx)(u.W, {
-                                        trailing: h,
+                                        trailing: m,
                                         visibleContent: d,
                                         isSelected: a,
                                     }),
@@ -105,7 +105,7 @@ function b(e) {
             null != o
                 ? () =>
                       c.Z.setState({
-                          targetKey: o.key,
+                          requestedTargetKey: o.key,
                           showNavigationMobile: !1,
                       })
                 : t.onClick,
