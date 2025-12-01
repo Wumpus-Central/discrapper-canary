@@ -18,12 +18,12 @@ function E(e) {
         O = (0, s.aM)(),
         { enabled: h, variant: b } = d.EO.useConfig({ location: p.dr.VIDEO_MODAL }),
         C = b === d.m_.OVERLAY_SHARE_ON_VIDEO,
-        [S, y] = (0, f.G6)(v.intl.string(v.t.RDE0Sc), v.intl.string(v.t["+5kSoW"]), 1700),
-        [_, x] = o.useState(!1),
+        [S, _] = (0, f.G6)(v.intl.string(v.t.RDE0Sc), v.intl.string(v.t["+5kSoW"]), 1700),
+        [y, x] = o.useState(!1),
         j = o.useRef(null),
-        D = (0, u.vB)(n.config),
-        P = o.useCallback(() => {
-            D &&
+        P = (0, u.vB)(n.config),
+        D = o.useCallback(() => {
+            P &&
                 ((0, u.f2)(n.id, {
                     content: c.jn.VIDEO_MODAL,
                     ctaContent: a.jZ.COPY_QUEST_URL,
@@ -31,44 +31,45 @@ function E(e) {
                     sourceQuestContent: E,
                 }),
                 (h || g) && (0, i.showToast)((0, i.createToast)(v.intl.string(v.t["+5kSoW"]), i.ToastType.SUCCESS)),
-                y(),
+                _(),
                 x(!0),
                 null != j.current && clearTimeout(j.current),
                 (j.current = setTimeout(() => {
                     x(!1);
                 }, 1700)));
-        }, [O, D, n.id, E, y, h, g]);
+        }, [O, P, n.id, E, _, h, g]);
     return (o.useEffect(
         () => () => {
             null != j.current && clearTimeout(j.current);
         },
         [],
     ),
-    D)
+    P)
         ? h || g
             ? (0, r.jsx)("div", {
                   style: { marginLeft: t ? "auto" : void 0 },
-                  children: _
-                      ? (0, r.jsx)(i.hU, {
-                            variant: "active",
-                            icon: i.owK,
-                            onClick: P,
-                            "aria-label": v.intl.string(v.t.RDE0Sc),
-                        })
-                      : (0, r.jsx)(l.u, {
-                            text: C || !h ? void 0 : v.intl.string(v.t.WqhZss),
-                            children: (0, r.jsx)(i.hU, {
-                                variant: C ? "overlay-secondary" : "secondary",
-                                icon: h ? i.aAc : i.TIy,
+                  children:
+                      y && !h
+                          ? (0, r.jsx)(i.hU, {
+                                variant: "active",
+                                icon: i.owK,
+                                onClick: D,
                                 "aria-label": v.intl.string(v.t.RDE0Sc),
-                                onClick: P,
+                            })
+                          : (0, r.jsx)(l.u, {
+                                text: h ? v.intl.string(v.t.WmfZHZ) : void 0,
+                                children: (0, r.jsx)(i.hU, {
+                                    variant: C ? "overlay-secondary" : "secondary",
+                                    icon: h ? i.xPt : i.TIy,
+                                    "aria-label": v.intl.string(v.t.RDE0Sc),
+                                    onClick: D,
+                                }),
                             }),
-                        }),
               })
             : (0, r.jsx)(i.Button, {
                   variant: "secondary",
                   text: S,
-                  onClick: P,
+                  onClick: D,
               })
         : null;
 }

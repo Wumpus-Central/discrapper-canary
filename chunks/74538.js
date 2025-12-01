@@ -1435,7 +1435,8 @@ function eJ(e) {
             (e = e.map((e) => {
                 if (e === n) return e;
                 let r = g.Z.get(e.planId);
-                i()(null != r, "Missing plan");
+                if ((i()(null != r, "Missing plan"), t.interval === r.interval && t.intervalCount === r.intervalCount))
+                    return e;
                 let a = g.Z.getForSkuAndInterval(r.skuId, t.interval, t.intervalCount);
                 return i()(null != a, "Missing planForInterval"), M(L({}, e), { planId: a.id });
             }));

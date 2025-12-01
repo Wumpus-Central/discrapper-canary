@@ -1,6 +1,6 @@
 n.d(t, {
-    A: () => _,
-    p: () => f,
+    A: () => p,
+    p: () => _,
 }),
     n(388685);
 var r = n(54381),
@@ -12,44 +12,45 @@ var r = n(54381),
     c = n(220082),
     u = n(164670),
     d = n(239100);
-function f(e) {
+let f = "#000000";
+function _(e) {
     let {
             cardImage: t,
             cardBackgroundImage: n,
             altText: a,
             containerClassName: s,
             backgroundImageClassName: u,
-            foregroundImageClassName: f,
-            shape: _,
+            foregroundImageClassName: _,
+            shape: p,
         } = e,
-        [p, h] = (0, c.Cf)(t.toString(), "#000000"),
-        m = i.useMemo(() => {
-            let e = o()(p).brighten(1.5).saturate(0.3).alpha(0.8).hex(),
-                t = null != h ? h : o()(p).saturate(1.2).alpha(0.9).hex();
+        [h, m] = (0, c.Cf)(t.toString(), f),
+        g = i.useMemo(() => {
+            let e = o()(h).brighten(1.5).saturate(0.3).alpha(0.8).hex(),
+                t = null != m ? m : o()(h).saturate(1.2).alpha(0.9).hex();
             return "linear-gradient(135deg, ".concat(e, ", ").concat(t, ")");
-        }, [p, h]);
+        }, [h, m]);
     return (0, r.jsxs)("div", {
-        className: l()(d.cardContainer, { [d.square]: "square" === _ }, s),
+        className: l()(d.cardContainer, { [d.square]: "square" === p }, s),
         children: [
             (0, r.jsx)("div", {
                 className: l()(d.cardBackgroundImage, u),
-                style: null != n ? { backgroundImage: "url(".concat(n.toString(), ")") } : { backgroundImage: m },
+                style: null != n ? { backgroundImage: "url(".concat(n.toString(), ")") } : { backgroundImage: g },
             }),
             (0, r.jsx)("img", {
                 src: t.toString(),
                 alt: a,
-                className: l()(d.skuImage, { [d.square]: "square" === _ }, f),
+                className: l()(d.skuImage, { [d.square]: "square" === p }, _),
             }),
         ],
     });
 }
-function _(e) {
+function p(e) {
     let { sku: t, containerClassName: n, backgroundImageClassName: i, foregroundImageClassName: a, shape: o } = e,
         s = (0, u.Do)(t),
         l = (0, u.a7)(t);
     return null == s
         ? null
-        : (0, r.jsx)(f, {
+        : (0, r.jsx)(_, {
               cardImage: s,
               cardBackgroundImage: l,
               altText: t.name,
