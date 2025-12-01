@@ -96,26 +96,26 @@ function _(e) {
         );
     i.useEffect(() => w, [w]);
     let x = i.useCallback(() => {
-            "closed" === y && (w(), O("opening-mouse"));
+            ("closed" === y || "closing" === y) && (w(), O("opening-mouse"));
         }, [w, y]),
         M = i.useCallback(() => {
             T && L(!1);
         }, [L, T]),
-        j = i.useCallback(() => {
-            if (I.current || "closed" !== y) {
+        k = i.useCallback(() => {
+            if (I.current || ("closed" !== y && "closing" !== y)) {
                 I.current = !1;
                 return;
             }
             w(), O("opening-keyboard");
         }, [w, y]),
-        k = i.useCallback(() => {
+        j = i.useCallback(() => {
             "opening-keyboard" === y && L(!1);
         }, [L, y]);
     i.useEffect(() => {
         if ("opening-mouse" === y)
             return (
                 (v.current = window.setTimeout(() => {
-                    O("open-mouse"), null == _ || _();
+                    (v.current = null), O("open-mouse"), null == _ || _();
                 }, u)),
                 w
             );
@@ -124,19 +124,20 @@ function _(e) {
             if ("opening-keyboard" === y)
                 return (
                     (v.current = window.setTimeout(() => {
-                        O("open-keyboard"), null == _ || _();
+                        (v.current = null), O("open-keyboard"), null == _ || _();
                     }, u)),
                     w
                 );
         }, [y, u, _, w]),
         i.useEffect(() => {
-            if ("closing" === y) {
-                let e = window.setTimeout(() => {
-                    O("closed");
-                }, f);
-                return () => clearTimeout(e);
-            }
-        }, [y]),
+            if ("closing" === y)
+                return (
+                    (v.current = window.setTimeout(() => {
+                        (v.current = null), O("closed");
+                    }, f)),
+                    w
+                );
+        }, [y, w]),
         i.useEffect(() => {
             if (!A) return;
             let e = (e) => {
@@ -169,8 +170,8 @@ function _(e) {
     return (0, r.jsxs)("div", {
         onMouseEnter: x,
         onMouseLeave: M,
-        onFocus: j,
-        onBlur: k,
+        onFocus: k,
+        onBlur: j,
         children: [
             t,
             (0, r.jsx)(o.R, {

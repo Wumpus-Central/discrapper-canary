@@ -85,6 +85,7 @@ let C = (e) => {
         progressCircleUrgency: w,
         actions: P,
         onShow: "tooltip" === u ? N : void 0,
+        estimatedTooltipHeight: 300,
         children: a,
     });
 };

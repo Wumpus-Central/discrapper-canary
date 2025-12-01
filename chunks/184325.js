@@ -108,12 +108,12 @@ function Z(e) {
         } = e,
         F = i.useRef(null),
         { analyticsLocations: V } = (0, u.ZP)(c.Z.BADGE),
-        { context: H, trackUserProfileAction: Y } = (0, S.KZ)(),
-        W = O.default.getCurrentUser(),
-        K = (0, I.yd)(null == W ? void 0 : W.premiumType, w.PremiumTypes.TIER_2),
-        z = (0, N.Of)(null != (t = null == W ? void 0 : W.id) ? t : null),
+        { context: H, trackUserProfileAction: W } = (0, S.KZ)(),
+        Y = O.default.getCurrentUser(),
+        K = (0, I.yd)(null == Y ? void 0 : Y.premiumType, w.PremiumTypes.TIER_2),
+        z = (0, N.Of)(null != (t = null == Y ? void 0 : Y.id) ? t : null),
         q = (0, C.Z)(z).some((e) => e.id === b.l.ORB_PROFILE_BADGE),
-        X = (0, f.c)(W, "UserProfileBadgeList");
+        X = (0, f.c)(Y, "UserProfileBadgeList");
     return (0, r.jsx)("div", {
         className: o()(M.container, a),
         "aria-label": x.intl.string(x.t.VWV0y5),
@@ -123,10 +123,10 @@ function Z(e) {
             let i = e.id === b.l.ORB_PROFILE_BADGE,
                 a = (0, T.fv)(e.id),
                 u = null != a || e.id === L.a,
-                O = (null == y ? void 0 : y.userId) === (null == W ? void 0 : W.id),
+                O = (null == y ? void 0 : y.userId) === (null == Y ? void 0 : Y.id),
                 I = (t) => {
                     if (
-                        (Y({ action: "PRESS_BADGE" }),
+                        (W({ action: "PRESS_BADGE" }),
                         (0, A.NE)(
                             j(
                                 {
@@ -184,7 +184,7 @@ function Z(e) {
                             P.rMx.QUEST_CONTENT_VIEWED,
                             G(j({}, (0, m.mH)(g.jn.QUEST_BADGE)), { is_targeted: !1 }),
                         ),
-                        Y({ action: "HOVER_BADGE" }),
+                        W({ action: "HOVER_BADGE" }),
                         (0, A.Qf)(
                             j(
                                 {
@@ -249,6 +249,7 @@ function Z(e) {
                                 type: "tiered_tenure_badge_profile_" + (O ? "self" : "other"),
                             });
                         },
+                        estimatedTooltipHeight: 220,
                         children: n,
                     },
                     "".concat(e.id, "-").concat(t),
