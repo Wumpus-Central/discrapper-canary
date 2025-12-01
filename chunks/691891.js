@@ -1,25 +1,23 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => c });
 var r = n(54381);
 n(473749);
 var i = n(120356),
     a = n.n(i),
-    o = n(755721),
-    s = n(481060),
-    l = n(243964);
-let c = (e) => {
+    o = n(481060),
+    s = n(243964);
+let l = (e) => {
     let { className: t, onDismiss: n, "aria-label": i } = e;
-    return (0, r.jsx)(o.zx, {
-        look: o.zx.Looks.BLANK,
-        size: o.zx.Sizes.NONE,
+    return (0, r.jsx)(o.P3F, {
+        role: "button",
         onClick: n,
-        className: a()(l.dismissButton, t),
+        className: a()(s.dismissButton, t),
         "aria-label": i,
-        children: (0, r.jsx)(s.Dio, {
+        children: (0, r.jsx)(o.Dio, {
             size: "xs",
             color: "currentColor",
-            colorClass: l.dismissIcon,
+            colorClass: s.dismissIcon,
         }),
     });
 };
-c.displayName = "DismissButton";
-let u = c;
+l.displayName = "DismissButton";
+let c = l;
