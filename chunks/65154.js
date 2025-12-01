@@ -41,10 +41,10 @@ n.d(t, {
     kS: () => F,
     mC: () => A,
     mN: () => S,
-    n4: () => Y,
+    n4: () => W,
     pM: () => o,
     pk: () => j,
-    rp: () => W,
+    rp: () => Y,
     ru: () => M,
     u$: () => N,
     uA: () => $,
@@ -162,8 +162,8 @@ let d = 100,
     },
     V = 0.02,
     H = 60000,
-    Y = ">=22.0.0",
-    W = 900000;
+    W = ">=22.0.0",
+    Y = 900000;
 var K = (function (e) {
         return (
             (e.AUTO_ENABLE = "AUTO_ENABLE"),
@@ -287,6 +287,8 @@ var K = (function (e) {
             (e.SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS = "software_fallback_on_consecutive_errors"),
             (e.BROWSER_HEVC = "browser_hevc"),
             (e.LOW_LATENCY_RATE_CONTROL = "low_latency_rate_control"),
+            (e.H265_HARDWARE_ONLY = "h265_hardware_only"),
+            (e.H265_HARDWARE_DECODE_AVAILABLE = "h265_hardware_decode_available"),
             e
         );
     })({}),

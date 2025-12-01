@@ -1007,6 +1007,8 @@ class L extends _.Z {
                 this.experimentFlags.has(O.V8.SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS) &&
                     (n.params["fallback-on-consecutive-errors"] = "1"),
                 this.experimentFlags.has(O.V8.SIGNAL_AV1_HARDWARE_DECODE) && (n.params["hardware-av1-decode"] = "1"),
+                "H265" === n.name &&
+                    (n.params["software-h265"] = this.experimentFlags.has(O.V8.H265_HARDWARE_ONLY) ? "0" : "1"),
                 (n.params["hardware-h264"] = this.useElectronVideo ? "1" : "0"),
                 c.push(n),
                 o.name === t &&

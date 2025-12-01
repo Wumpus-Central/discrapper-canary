@@ -1,29 +1,13 @@
 n.d(t, {
-    AQ: () => g,
-    DY: () => p,
-    yQ: () => h,
+    AQ: () => d,
+    DY: () => l,
+    yQ: () => c,
 }),
-    n(539854),
-    n(290780);
-var r,
-    i,
-    a,
-    o,
-    s,
-    l,
-    c = n(553813),
-    u = n.n(c),
-    d = n(65154);
-let f = [
-    {
-        name: "H265",
-        encode:
-            "undefined" == typeof window ||
-            (null == (i = window) || null == (r = i.DiscordNative) ? void 0 : r.process.platform) !== "darwin" ||
-            ((null == (o = window) || null == (a = o.DiscordNative) ? void 0 : a.os.arch) === "arm64" &&
-                u().satisfies(null == (l = window) || null == (s = l.DiscordNative) ? void 0 : s.os.release, d.n4)),
-        decode: !0,
-    },
+    n(539854);
+var r = n(553813),
+    i = n.n(r),
+    a = n(65154);
+let o = [
     {
         name: "H264",
         encode: !0,
@@ -40,8 +24,8 @@ let f = [
         decode: !0,
     },
 ];
-function _(e, t) {
-    let n = t.concat(f),
+function s(e, t) {
+    let n = t.concat(o),
         r = [];
     return (
         n.forEach((t) => {
@@ -56,46 +40,58 @@ function _(e, t) {
         r
     );
 }
-function p(e) {
-    let t = [];
+function l(e) {
+    var t, n, r, o, s, l;
+    let c = [];
     return (
-        e.has(d.V8.SIGNAL_AV1_DECODE)
-            ? t.unshift({
+        e.has(a.V8.SIGNAL_AV1_DECODE)
+            ? c.push({
                   name: "AV1",
                   encode: !1,
                   decode: !0,
               })
-            : e.has(d.V8.SIGNAL_AV1) &&
-              t.unshift({
+            : e.has(a.V8.SIGNAL_AV1) &&
+              c.push({
                   name: "AV1",
                   encode: !0,
                   decode: !0,
               }),
-        t
+        c.push({
+            name: "H265",
+            encode:
+                "undefined" == typeof window ||
+                (null == (n = window) || null == (t = n.DiscordNative) ? void 0 : t.process.platform) !== "darwin" ||
+                ((null == (o = window) || null == (r = o.DiscordNative) ? void 0 : r.os.arch) === "arm64" &&
+                    i().satisfies(null == (l = window) || null == (s = l.DiscordNative) ? void 0 : s.os.release, a.n4)),
+            decode:
+                !(null == e ? void 0 : e.has(a.V8.H265_HARDWARE_ONLY)) ||
+                (null == e ? void 0 : e.has(a.V8.H265_HARDWARE_DECODE_AVAILABLE)),
+        }),
+        c
     );
 }
-function h(e, t) {
+function c(e, t) {
     return "string" == typeof e
-        ? _(
+        ? s(
               JSON.parse(e).map((e) => ({
-                  codec: m(e.codec),
+                  codec: u(e.codec),
                   encode: e.encode,
                   decode: e.decode,
               })),
               t,
           )
-        : _(
+        : s(
               e.map((e) => ({
-                  codec: m(e),
+                  codec: u(e),
                   encode: !0,
                   decode: !0,
               })),
               t,
           );
 }
-function m(e) {
+function u(e) {
     return "AV1X" === e ? "AV1" : e;
 }
-function g(e) {
+function d(e) {
     return "AV1" === e ? "AV1X" : e;
 }
