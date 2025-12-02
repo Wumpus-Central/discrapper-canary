@@ -20,8 +20,8 @@ var i = n(54381),
     _ = n(488131),
     O = n(375954),
     x = n(626135),
-    j = n(585483),
-    E = n(403182),
+    E = n(585483),
+    j = n(403182),
     S = n(127654),
     P = n(752305),
     I = n(951211),
@@ -68,20 +68,20 @@ function L(e) {
             onSelect: D,
             draftType: k,
             editorTextContent: U,
-            setValue: F,
-            openClips: B,
+            setValue: V,
+            openClips: F,
         } = e,
-        { analyticsLocations: H, newestAnalyticsLocation: V } = (0, d.ZP)(),
+        { analyticsLocations: B, newestAnalyticsLocation: H } = (0, d.ZP)(),
         G = (0, y.Dt)({ channel: t }),
         z = (0, l.e7)([v.Z], () => v.Z.isInProgress());
     function W() {
         (0, _.R6)(t, void 0, "Plus Button");
     }
     function q() {
-        x.default.track(Z.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), F("/", (0, P.JM)("/"));
+        x.default.track(Z.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), V("/", (0, P.JM)("/"));
     }
     function K() {
-        B();
+        F();
     }
     function Y() {
         (0, m.Q3)(a.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: T.L.TAKE_ACTION }),
@@ -152,7 +152,7 @@ function L(e) {
                           }
                         : { type: "contextless" },
                 openInPopout: !1,
-                analyticsLocation: V,
+                analyticsLocation: H,
             }),
             (0, u.w1)({ guildId: t.guild_id });
     }
@@ -162,9 +162,9 @@ function L(e) {
             i = "",
             r = U.match(M);
         null != r && ((i = r[1]), (n = r[2]), (e = r[3]), (i += r[4])),
-            (0, S.d)([(0, E.dp)(new Blob([e], { type: "text/plain" }), "message.".concat(n), "text/plain")], t, k),
-            j.S.dispatchToLastSubscribed(Z.CkL.CLEAR_TEXT),
-            "" !== i && j.S.dispatchToLastSubscribed(Z.CkL.INSERT_TEXT, { plainText: i });
+            (0, S.d)([(0, j.dp)(new Blob([e], { type: "text/plain" }), "message.".concat(n), "text/plain")], t, k),
+            E.S.dispatchToLastSubscribed(Z.CkL.CLEAR_TEXT),
+            "" !== i && E.S.dispatchToLastSubscribed(Z.CkL.INSERT_TEXT, { plainText: i });
     }
     return (
         r.useEffect(() => {
@@ -258,7 +258,7 @@ function L(e) {
                                             channelId: t.id,
                                             type: Z.mFx.JOIN,
                                             activity: n,
-                                            location: H[H.length - 1],
+                                            location: B[B.length - 1],
                                         })
                                     );
                                 },
@@ -279,7 +279,7 @@ function L(e) {
                                             channelId: t.id,
                                             type: Z.mFx.LISTEN,
                                             activity: n,
-                                            location: H[H.length - 1],
+                                            location: B[B.length - 1],
                                         })
                                     );
                                 },
@@ -300,7 +300,7 @@ function L(e) {
                                             channelId: t.id,
                                             type: Z.mFx.WATCH,
                                             activity: n,
-                                            location: H[H.length - 1],
+                                            location: B[B.length - 1],
                                         })
                                     );
                                 },
@@ -333,7 +333,7 @@ function L(e) {
                             {
                                 id: "APP_LAUNCHER",
                                 label: r,
-                                action: () => (0, p._)(h._b.TEXT, g),
+                                action: () => (0, p._)(h._b.TEXT, g, void 0, t.id),
                             },
                             "APP_LAUNCHER",
                         );

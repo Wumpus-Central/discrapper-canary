@@ -405,7 +405,7 @@ function ex(e, t, n, r) {
 }
 function eL(e, t, n) {
     let [r, a, o] = (0, P.Iu)((e) => [e.activeView, e.activeViewType, e.activeChannelId], u.X),
-        s = (0, p.e7)([O.Z], () => O.Z.shouldShowPopup() && O.Z.activeViewType() === e);
+        s = (0, p.e7)([O.Z], () => O.Z.shouldShowPopup() && O.Z.activeViewType() === e && O.Z.activeChannelId() === n);
     i.useEffect(
         () => () => {
             (0, P._Q)(e, n);
@@ -630,7 +630,10 @@ function eG(e, t) {
         tx = ek(f),
         { currentAutocompleteType: tL, handleAutocompleteVisibilityChange: tj } = eU(G, U.id),
         { moveAppsEntrypointToOverflow: tM } = $.n.useConfig({ location: "ChannelAppLauncher" }),
-        tk = (0, T.Z)({ type: G });
+        tk = (0, T.Z)({
+            type: G,
+            channelId: U.id,
+        });
     (0, J.S)(tc, U.guild_id, U.id);
     let tU = null != W,
         tG = (e9 && !((e6 || e7) && tn)) || (tp && (null == (s = G.submit) ? void 0 : s.useDisabledStylesOnSubmit)),

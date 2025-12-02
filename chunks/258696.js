@@ -181,7 +181,7 @@ function M(e) {
             node: (0, r.jsx)(
                 m.Z,
                 {
-                    channel: G,
+                    channelId: G.id,
                     type: M,
                 },
                 "appLauncher",

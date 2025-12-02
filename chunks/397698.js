@@ -42,7 +42,7 @@ function _(e) {
     let { context: t, openInPopout: f, analyticsLocation: _ = "open-activity-shelf", initialState: m } = e;
     f && (0, a.Z)(d.KJ3.CHANNEL_CALL_POPOUT);
     let h = f ? i.u1M : i.z1l;
-    (0, l.y)(c.ti.DISMISSED), (0, l._)(c._b.VOICE, void 0, m);
+    (0, l.y)(c.ti.DISMISSED), (0, l._)(c._b.VOICE, void 0, m, "channel" === t.type ? t.channel.id : void 0);
     let g = "contextless" !== t.type && (o.ZP.hasUnread(t.channel.id) || o.ZP.getMentionCount(t.channel.id) > 0);
     return (
         s.default.track(d.rMx.VOICE_PANEL_TAB_OPENED, {

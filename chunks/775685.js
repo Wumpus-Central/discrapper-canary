@@ -69,26 +69,26 @@ function S(e, t) {
     );
 }
 let I = i.forwardRef(function (e, t) {
-    let { type: n } = e,
-        { tooltipsWithKeybinds: a } = m.n.useConfig({ location: "ChannelAppLauncherButton" }),
-        y = (0, l.e7)([p.Z], () => p.Z.shouldShowPopup() && p.Z.activeViewType() === n),
-        { Component: v, events: I, play: T } = (0, c.w)(),
-        A = i.useContext(h.ZP);
+    let { type: n, channelId: a } = e,
+        { tooltipsWithKeybinds: y } = m.n.useConfig({ location: "ChannelAppLauncherButton" }),
+        v = (0, l.e7)([p.Z], () => p.Z.shouldShowPopup() && p.Z.activeViewType() === n && p.Z.activeChannelId() === a),
+        { Component: I, events: T, play: A } = (0, c.w)(),
+        C = i.useContext(h.ZP);
     i.useEffect(() => {
         let e = () => {
-            I.onMouseEnter();
+            T.onMouseEnter();
         };
         return (
-            A.on("command-sentinel-typed", e),
+            C.on("command-sentinel-typed", e),
             () => {
-                A.off("command-sentinel-typed", e);
+                C.off("command-sentinel-typed", e);
             }
         );
-    }, [A, I]);
-    let C = i.useCallback(() => {
-            y ? f.y(_.ti.DISMISSED) : (f._(_._b.TEXT, n), d.ux()), T();
-        }, [y, n, T]),
-        N = (0, r.jsx)(v, {
+    }, [C, T]);
+    let N = i.useCallback(() => {
+            v ? f.y(_.ti.DISMISSED) : (f._(_._b.TEXT, n, void 0, a), d.ux()), A();
+        }, [v, n, a, A]),
+        P = (0, r.jsx)(I, {
             size: "refresh_sm",
             color: "currentColor",
         });
@@ -97,17 +97,17 @@ let I = i.forwardRef(function (e, t) {
         ref: t,
         children: (0, r.jsx)(u.u, {
             text: E.intl.string(E.t.dHDxOF),
-            shouldShow: a,
+            shouldShow: y,
             children: (0, r.jsx)(
                 s.P3F,
                 S(
                     O(
                         {
                             tabIndex: 0,
-                            className: o()(b.button, { [b.buttonActive]: y }),
-                            onClick: C,
+                            className: o()(b.button, { [b.buttonActive]: v }),
+                            onClick: N,
                             "aria-label": E.intl.string(E.t.erHFxI),
-                            "aria-expanded": y,
+                            "aria-expanded": v,
                             "aria-haspopup": "dialog",
                             focusProps: {
                                 offset: {
@@ -118,16 +118,19 @@ let I = i.forwardRef(function (e, t) {
                                 },
                             },
                         },
-                        I,
+                        T,
                     ),
-                    { children: N },
+                    { children: P },
                 ),
             ),
         }),
     });
 });
 function T(e) {
-    let { type: t } = e;
-    return (0, r.jsx)(I, { type: t });
+    let { type: t, channelId: n } = e;
+    return (0, r.jsx)(I, {
+        type: t,
+        channelId: n,
+    });
 }
 let A = i.memo(T);

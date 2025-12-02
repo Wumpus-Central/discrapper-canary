@@ -21,24 +21,33 @@ let l = {
     entrypoint: o._b.NONE,
     lastShownEntrypoint: o._b.NONE,
     activeViewType: null,
+    activeChannelId: null,
     closeReason: o.ti.DISMISSED,
     initialState: void 0,
 };
 function c(e) {
-    let { entrypoint: t, activeViewType: n, initialState: r } = e;
+    let { entrypoint: t, activeViewType: n, initialState: r, activeChannelId: i } = e;
     return (
         (l.show = !0),
         (l.entrypoint = t),
         (l.lastShownEntrypoint = t),
         (l.closeReason = o.ti.DISMISSED),
         (l.activeViewType = n),
+        (l.activeChannelId = i),
         (l.initialState = r),
         !0
     );
 }
 function u(e) {
     let { closeReason: t = o.ti.DISMISSED } = e;
-    return (l.show = !1), (l.entrypoint = o._b.NONE), (l.closeReason = t), (l.initialState = void 0), !0;
+    return (
+        (l.show = !1),
+        (l.entrypoint = o._b.NONE),
+        (l.closeReason = t),
+        (l.initialState = void 0),
+        (l.activeChannelId = null),
+        !0
+    );
 }
 class d extends (r = i.ZP.Store) {
     initialize() {}
@@ -56,6 +65,10 @@ class d extends (r = i.ZP.Store) {
     }
     activeViewType() {
         return l.activeViewType;
+    }
+    activeChannelId() {
+        var e;
+        return null != (e = l.activeChannelId) ? e : null;
     }
     closeReason() {
         return l.closeReason;

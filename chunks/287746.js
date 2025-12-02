@@ -931,7 +931,7 @@ class e3 extends r.PureComponent {
             }),
             eY(this, "handleOpenAppLauncher", (e) => {
                 let { applicationId: t } = e;
-                return x._(j._b.TEXT, this.props.chatInputType, { applicationId: t });
+                return x._(j._b.TEXT, this.props.chatInputType, { applicationId: t }, this.props.channel.id);
             }),
             eY(this, "handleChatInteract", () => {
                 var e;
