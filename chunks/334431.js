@@ -64,6 +64,7 @@ var r = n(376345),
             (e.BOOST_SETTINGS = "boost-settings"),
             (e.QUEST_PREVIEW_TOOL = "quest-preview-tool"),
             (e.SUBSCRIPTION_SETTINGS = "subscription-settings"),
+            (e.GAME_UPDATE = "game-update"),
             e
         );
     })({});
