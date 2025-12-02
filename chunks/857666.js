@@ -41,9 +41,9 @@ function _(e, t) {
                               j = g.intl.string(m.default["/egwJA"]),
                               C = h ? void 0 : g.intl.string(m.default.W6Vwn3),
                               w = h ? void 0 : g.intl.string(m.default.lvk1Gc),
-                              I = h ? g.intl.string(m.default["9CfkLO"]) : g.intl.string(g.t["+7XY31"]),
-                              E = h ? "secondary" : "expressive",
-                              Z = i
+                              Z = h ? g.intl.string(m.default["9CfkLO"]) : g.intl.string(g.t["+7XY31"]),
+                              I = h ? "secondary" : "expressive",
+                              E = i
                                   ? () => {
                                         h
                                             ? s.Z.open(t, f.pNK.TAG, f.jXE.GUILD_POWERUPS_OVERVIEW_CARD)
@@ -95,12 +95,12 @@ function _(e, t) {
                                                           powerups: e,
                                                           footerInfoText: w,
                                                           footerAction:
-                                                              i && null != Z && null != I
+                                                              i && null != E && null != Z
                                                                   ? {
-                                                                        variant: E,
-                                                                        text: I,
-                                                                        icon: "expressive" === E ? a.Ucv : void 0,
-                                                                        onClick: Z,
+                                                                        variant: I,
+                                                                        text: Z,
+                                                                        icon: "expressive" === I ? a.Ucv : void 0,
+                                                                        onClick: E,
                                                                     }
                                                                   : void 0,
                                                       },
@@ -124,7 +124,7 @@ function _(e, t) {
                           canUseBoosts: b,
                           allPowerups: h,
                           unlockedPowerups: j,
-                          skuIds: d.z[e],
+                          skuIds: d.zd[e],
                       })
                     : void 0,
             l = {};

@@ -8,7 +8,7 @@ var r = n(54381),
     c = n(481060),
     u = n(100527),
     d = n(838968),
-    p = n(279475),
+    p = n(707541),
     f = n(60482),
     m = n(765703),
     g = n(735276),
@@ -26,7 +26,7 @@ function w(e) {
             lowestGameServerCost: f.Z.getLowestGameCostForGuild(t),
         })),
         w = (0, m.Z)(t),
-        I = i.useMemo(() => {
+        Z = i.useMemo(() => {
             var e;
             if (0 !== Object.values(null != (e = null == n ? void 0 : n.entitlements) ? e : {}).length)
                 return w.length > 0
@@ -39,14 +39,14 @@ function w(e) {
                           statusText: _.intl.string(v.default.FFLkmx),
                       };
         }, [w, null == n ? void 0 : n.entitlements]),
-        E = (0, p.d)((null == I ? void 0 : I.type) === "active");
+        { textColor: I } = (0, p.Z)((null == Z ? void 0 : Z.type) === "active");
     return null == n
         ? null
         : (0, r.jsxs)(d.aB, {
               label: _.intl.string(x.default["B3OfL/"]),
               badge: "beta",
-              isActive: (null == I ? void 0 : I.type) === "active",
-              isWarning: (null == I ? void 0 : I.type) === "expiring",
+              isActive: (null == Z ? void 0 : Z.type) === "active",
+              isWarning: (null == Z ? void 0 : Z.type) === "expiring",
               onClick: () =>
                   (0, g.Z)({
                       guildId: t,
@@ -66,15 +66,15 @@ function w(e) {
                   }),
                   (0, r.jsx)(d.Q9, {
                       title: _.intl.string(x.default["B3OfL/"]),
-                      textColor: E,
+                      textColor: I,
                       footer: (0, r.jsx)(d.uf, {
                           cost: null != o ? o : 0,
                           costDecorator: "+",
-                          status: I,
+                          status: Z,
                       }),
                       children: (0, r.jsx)(a.xvT, {
                           className: b.description,
-                          color: E,
+                          color: I,
                           variant: "text-sm/medium",
                           children: _.intl.string(x.default.EGkJAG),
                       }),

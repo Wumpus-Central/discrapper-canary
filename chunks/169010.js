@@ -1,61 +1,83 @@
 n.d(t, {
-    S: () => a,
-    z: () => o,
+    _P: () => d,
+    zd: () => s,
 }),
     n(388685),
     n(539854);
-var r = n(494497),
-    i = n(535396);
-let o = {
-        guildTagsBadgePacks: [r.MB, r.Vk],
+var r = n(473749),
+    i = n(494497),
+    o = n(442837),
+    l = n(905128),
+    a = n(535396);
+let s = {
+        guildTagsBadgePacks: [i.MB, i.Vk],
     },
-    l = Object.entries(o).reduce((e, t) => {
+    c = Object.entries(s).reduce((e, t) => {
         let [n, r] = t;
         for (let t of r) e[t] = n;
         return e;
-    }, {});
-function a(e, t, n) {
-    let o = [];
-    n && e === i.Us.PERK && o.push({ type: "gameServer" });
-    let a = t.reduce((e, t) => {
-        if (t.type !== i.Us.PERK) return e;
-        let n = l[t.skuId];
-        return null == n || (null != e[n] || (e[n] = []), e[n].push(t)), e;
-    }, {});
-    for (let e of t) {
-        if (e.type === i.Us.LEVEL) {
-            o.push({
-                type: "singleLevel",
-                powerup: e,
-            });
-            continue;
-        }
-        let t = l[e.skuId];
-        if (null != t) {
-            let e = a[t];
-            void 0 !== e &&
-                (o.push({
-                    type: "multiPerk",
-                    group: t,
-                    powerups: e,
-                }),
-                (a[t] = void 0));
-            continue;
-        }
-        o.push({
-            type: "singlePerk",
-            powerup: e,
-        });
-    }
-    return (function (e) {
-        let t = e.findIndex((e) => "singlePerk" === e.type && e.powerup.skuId === r.IN),
-            n = e.findIndex((e) => "multiPerk" === e.type && "guildTagsBadgePacks" === e.group);
-        if (-1 !== t && -1 !== n && n !== t + 1) {
-            let t = [...e],
-                [i] = t.splice(n, 1),
-                o = t.findIndex((e) => "singlePerk" === e.type && e.powerup.skuId === r.IN);
-            return t.splice(o + 1, 0, i), t;
-        }
-        return e;
-    })(o);
+    }, {}),
+    u = [a.Us.LEVEL, a.Us.PERK];
+function d(e, t) {
+    let n = (0, o.e7)([l.Z], () => l.Z.getStateForGuild(e));
+    return r.useMemo(
+        () =>
+            u.reduce((e, r) => {
+                let o = null == n ? void 0 : n.powerupCatalog[r];
+                if (null == o) return e;
+                let l = (function (e, t, n) {
+                    let r = [];
+                    n && e === a.Us.PERK && r.push({ type: "gameServer" });
+                    let o = t.reduce((e, t) => {
+                        if (t.type !== a.Us.PERK) return e;
+                        let n = c[t.skuId];
+                        return null == n || (null != e[n] || (e[n] = []), e[n].push(t)), e;
+                    }, {});
+                    for (let e of t) {
+                        if (e.type === a.Us.LEVEL) {
+                            r.push({
+                                type: "singleLevel",
+                                powerup: e,
+                            });
+                            continue;
+                        }
+                        let t = c[e.skuId];
+                        if (null != t) {
+                            let e = o[t];
+                            void 0 !== e &&
+                                (r.push({
+                                    type: "multiPerk",
+                                    group: t,
+                                    powerups: e,
+                                }),
+                                (o[t] = void 0));
+                            continue;
+                        }
+                        r.push({
+                            type: "singlePerk",
+                            powerup: e,
+                        });
+                    }
+                    return (function (e) {
+                        let t = e.findIndex((e) => "singlePerk" === e.type && e.powerup.skuId === i.IN),
+                            n = e.findIndex((e) => "multiPerk" === e.type && "guildTagsBadgePacks" === e.group);
+                        if (-1 !== t && -1 !== n && n !== t + 1) {
+                            let t = [...e],
+                                [r] = t.splice(n, 1),
+                                o = t.findIndex((e) => "singlePerk" === e.type && e.powerup.skuId === i.IN);
+                            return t.splice(o + 1, 0, r), t;
+                        }
+                        return e;
+                    })(r);
+                })(r, o, t);
+                return (
+                    e.push({
+                        type: r,
+                        listings: l,
+                    }),
+                    e
+                );
+            }, []),
+        [null == n ? void 0 : n.powerupCatalog, t],
+    );
 }

@@ -10,7 +10,7 @@ var r = n(54381),
     d = n(795338),
     p = n(226278),
     f = n(279604),
-    m = n(279475),
+    m = n(707541),
     g = n(535396),
     v = n(237522);
 function x(e) {
@@ -19,14 +19,14 @@ function x(e) {
     (0, f.KT)(x);
     let [b, h] = i.useState(!1),
         j = (0, s.ZP)(t, n).type !== g.A3.INACTIVE,
-        C = (0, m.d)(j),
+        { textColor: C } = (0, m.Z)(j),
         w = (0, a.g1)(t, "GuildPowerupPerkCard"),
-        I = n.skuId === o.A$;
+        Z = n.skuId === o.A$;
     return (0, r.jsxs)(p.Z, {
         onHover: (e) => h(e),
         guildId: t,
         powerup: n,
-        badge: I && w ? "beta" : void 0,
+        badge: Z && w ? "beta" : void 0,
         children: [
             (0, r.jsx)(d.m, {
                 className: v.image,

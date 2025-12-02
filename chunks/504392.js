@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }),
+n.d(t, { Z: () => R }),
     n(539854),
     n(388685),
     n(361932),
@@ -32,9 +32,9 @@ var r = n(54381),
     j = n(426771),
     C = n(51859),
     w = n(184478),
-    I = n(877362),
-    E = n(460608),
-    Z = n(279604),
+    Z = n(877362),
+    I = n(460608),
+    E = n(279604),
     P = n(385902),
     T = n(332538),
     y = n(857666),
@@ -43,56 +43,40 @@ var r = n(54381),
     S = n(130231),
     A = n(388032),
     k = n(823441);
-let R = [N.Us.LEVEL, N.Us.PERK];
-function L(e) {
+function R(e) {
     let { guildId: t, powerupListingId: o } = e,
-        L = (0, m.BU)(t, "GuildPowerupsOverview");
+        R = (0, m.BU)(t, "GuildPowerupsOverview");
     i.useEffect(() => {
-        L && (0, f.ce)(t);
-    }, [t, L]),
+        R && (0, f.ce)(t);
+    }, [t, R]),
         i.useEffect(() => {
             (0, v.Sn)(t), (0, v.BN)(t);
         }, [t]),
         (0, T.Wj)(t);
-    let U = (0, a.e7)([x.Z], () => x.Z.getStateForGuild(t)),
-        D = (0, _.Z)(t),
+    let L = (0, a.e7)([x.Z], () => x.Z.getStateForGuild(t)),
+        U = (0, _.Z)(t),
         M = i.useRef(!1),
-        { shouldShow: V, modalConfig: G } = (0, P.K)(t, "GuildPowerupsOverview"),
-        B = null == o && null != G,
-        W = [];
-    V && B && W.push(s.z.VANITY_URL_POWERUP_ROLLBACK_MODAL);
-    let [z, F] = (0, u.US)(W),
-        K = i.useMemo(
-            () =>
-                R.reduce((e, t) => {
-                    let n = null == U ? void 0 : U.powerupCatalog[t];
-                    if (null == n) return e;
-                    let r = (0, b.S)(t, n, L);
-                    return (
-                        e.push({
-                            type: t,
-                            listings: r,
-                        }),
-                        e
-                    );
-                }, []),
-            [null == U ? void 0 : U.powerupCatalog, L],
-        ),
-        X = K.flatMap((e) => e.listings)
+        { shouldShow: D, modalConfig: G } = (0, P.K)(t, "GuildPowerupsOverview"),
+        V = null == o && null != G,
+        B = [];
+    D && V && B.push(s.z.VANITY_URL_POWERUP_ROLLBACK_MODAL);
+    let [W, z] = (0, u.US)(B),
+        F = (0, b._P)(t, R),
+        K = F.flatMap((e) => e.listings)
             .filter((e) => "multiPerk" === e.type)
             .map((e) => e.group),
-        H = (0, y.f)(X, t);
+        X = (0, y.f)(K, t);
     return (i.useEffect(() => {
         if (null != o && !M.current)
-            for (let e of K)
+            for (let e of F)
                 for (let n of e.listings) {
                     if (("singleLevel" === n.type || "singlePerk" === n.type) && n.powerup.skuId === o) {
-                        (0, Z.KE)(t, n.powerup), (M.current = !0);
+                        (0, E.KE)(t, n.powerup), (M.current = !0);
                         return;
                     }
                     if ("multiPerk" === n.type && (n.group === o || n.powerups.some((e) => e.skuId === o))) {
                         M.current = !0;
-                        let e = H[n.group];
+                        let e = X[n.group];
                         if (null == e) return;
                         e.openModal(n.powerups, {
                             onModalClose: () => {
@@ -105,9 +89,9 @@ function L(e) {
                         return;
                     }
                 }
-    }, [t, o, K, H]),
+    }, [t, o, F, X]),
     i.useEffect(() => {
-        null != z &&
+        null != W &&
             null != G &&
             (0, c.ZDy)(
                 async () => {
@@ -142,7 +126,7 @@ function L(e) {
                             })(
                                 {
                                     modalConfig: G,
-                                    markAsDismissed: F,
+                                    markAsDismissed: z,
                                 },
                                 t,
                             ),
@@ -150,13 +134,13 @@ function L(e) {
                 },
                 {
                     onCloseCallback: () => {
-                        F(O.L.USER_DISMISS);
+                        z(O.L.USER_DISMISS);
                     },
-                    modalKey: "dismissible_content_".concat(z),
+                    modalKey: "dismissible_content_".concat(W),
                 },
             );
-    }, [t, z, F, G]),
-    (null == U ? void 0 : U.powerupCatalog) == null)
+    }, [t, W, z, G]),
+    (null == L ? void 0 : L.powerupCatalog) == null)
         ? null
         : (0, r.jsxs)("div", {
               className: k.container,
@@ -178,7 +162,7 @@ function L(e) {
                       children: [
                           (0, r.jsx)(c.zJl, {
                               className: k.powerupsContainer,
-                              children: K.map((e) => {
+                              children: F.map((e) => {
                                   let { type: n, listings: i } = e,
                                       { title: o, description: a } = (function (e) {
                                           switch (e) {
@@ -273,8 +257,8 @@ function L(e) {
                           (0, r.jsxs)("div", {
                               className: k.sidebarContainer,
                               children: [
-                                  D ? (0, r.jsx)(w.Z, { guildId: t }) : (0, r.jsx)(I.Z, { guildId: t }),
-                                  (0, r.jsx)(E.Z, { guildId: t }),
+                                  U ? (0, r.jsx)(w.Z, { guildId: t }) : (0, r.jsx)(Z.Z, { guildId: t }),
+                                  (0, r.jsx)(I.Z, { guildId: t }),
                               ],
                           }),
                       ],

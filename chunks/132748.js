@@ -1,40 +1,79 @@
-n.d(t, { Z: () => l }), n(388685);
-var r,
-    i,
-    a = n(473749);
-function o(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0,
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function s(e, t, n) {
-    return Math.min(Math.max(Math.floor(e / t), 1), n);
-}
-let l = (0, n(112724).Z)(
-    ((i = class extends (r = a.Component) {
-        static getDerivedStateFromProps(e, t) {
-            let { width: n, desiredItemWidth: r, maxColumns: i } = e,
-                a = s(n, r, i);
-            return a !== t.columns ? { columns: a } : null;
-        }
-        render() {
-            let { width: e, height: t, children: n } = this.props,
-                { columns: r } = this.state;
-            return n(r, e, t);
-        }
-        constructor(...e) {
-            super(...e),
-                o(this, "state", { columns: s(this.props.width, this.props.desiredItemWidth, this.props.maxColumns) });
-        }
-    }),
-    o(i, "defaultProps", { desiredItemWidth: 200 }),
-    i),
-);
+n.d(t, { C: () => s });
+var r = n(267642),
+    i = n(981631),
+    a = n(474936),
+    o = n(388032);
+let s = [
+    {
+        tier: i.Eu4.TIER_1,
+        perks: [
+            {
+                perkIcon: r.Ro.EMOJI,
+                getCopy: () =>
+                    o.intl.formatToPlainString(o.t.Tlz0x1, { numEmojiSlots: a.HO[i.Eu4.TIER_1].limits.emoji }),
+            },
+            {
+                perkIcon: r.Ro.SOUNDBOARD,
+                getCopy: () =>
+                    o.intl.formatToPlainString(o.t["v+MIfo"], {
+                        numSoundboardSlots: a.HO[i.Eu4.TIER_1].limits.soundboardSounds,
+                    }),
+                isNew: !0,
+            },
+            {
+                perkIcon: r.Ro.ANIMATED,
+                getCopy: () => o.intl.string(o.t.PbAyub),
+            },
+            {
+                perkIcon: r.Ro.AUDIO,
+                getCopy: () => o.intl.string(o.t["WH+OeI"]),
+            },
+        ],
+    },
+    {
+        tier: i.Eu4.TIER_2,
+        perks: [
+            {
+                perkIcon: r.Ro.STREAM,
+                getCopy: () => o.intl.string(o.t.y4ft4D),
+            },
+            {
+                perkIcon: r.Ro.UPLOAD,
+                getCopy: () => o.intl.formatToPlainString(o.t.aFRl53, { uploadSizeLimit: o.intl.string(o.t.M6qV8j) }),
+            },
+            {
+                perkIcon: r.Ro.CUSTOM_ROLE_ICON,
+                getCopy: () => o.intl.string(o.t["6PV6Qc"]),
+            },
+            {
+                perkIcon: r.Ro.CUSTOMIZATION,
+                getCopy: () => o.intl.string(o.t["1a5rjl"]),
+            },
+        ],
+    },
+    {
+        tier: i.Eu4.TIER_3,
+        perks: [
+            {
+                perkIcon: r.Ro.VANITY,
+                getCopy: () => o.intl.string(o.t.adNGjW),
+            },
+            {
+                perkIcon: r.Ro.UPLOAD,
+                getCopy: () => o.intl.formatToPlainString(o.t.aFRl53, { uploadSizeLimit: o.intl.string(o.t.yMOW8D) }),
+            },
+            {
+                perkIcon: r.Ro.AUDIO,
+                getCopy: () => o.intl.string(o.t.Tsljqo),
+            },
+            {
+                perkIcon: r.Ro.ANIMATED,
+                getCopy: () => o.intl.string(o.t.nRKlmC),
+            },
+            {
+                perkIcon: r.Ro.STAGE_VIDEO,
+                getCopy: () => o.intl.formatToPlainString(o.t.hsZ88d, { numStageSeats: i.RcX }),
+            },
+        ],
+    },
+];

@@ -7,8 +7,8 @@ var r = n(54381),
     s = n(607070),
     c = n(973772),
     u = n(838968),
-    d = n(857666),
-    p = n(279475),
+    d = n(707541),
+    p = n(857666),
     f = n(535396),
     m = n(130231),
     g = n(388032),
@@ -18,20 +18,20 @@ function x(e) {
     let _,
         { guildId: b, group: h, powerups: j } = e,
         [C, w] = i.useState(!1),
-        I = (0, c.Gv)(b, j),
-        E = (0, o.e7)([s.Z], () => s.Z.useReducedMotion),
-        Z = (0, d.Z)(h, b);
-    if (void 0 === Z || j.length <= 0) return null;
-    let P = I.some((e) => e.type !== f.A3.INACTIVE),
-        T = (0, p.d)(P),
-        y = I.reduce(
-            (e, t) => {
-                let { sourceEntitlement: n } = t,
-                    r = null == n ? void 0 : n.ends_at;
-                return null == r ? e : null == e || r < e ? r : e;
-            },
-            void 0,
-        );
+        Z = (0, c.Gv)(b, j),
+        I = (0, o.e7)([s.Z], () => s.Z.useReducedMotion),
+        E = (0, p.Z)(h, b),
+        P = Z.some((e) => e.type !== f.A3.INACTIVE),
+        { textColor: T } = (0, d.Z)(P);
+    if (void 0 === E || j.length <= 0) return null;
+    let y = Z.reduce(
+        (e, t) => {
+            let { sourceEntitlement: n } = t,
+                r = null == n ? void 0 : n.ends_at;
+            return null == r ? e : null == e || r < e ? r : e;
+        },
+        void 0,
+    );
     null != y
         ? (_ = {
               type: "expiring",
@@ -42,11 +42,11 @@ function x(e) {
               type: "active",
               statusText: g.intl.string(m.default.FFLkmx),
           });
-    let N = I.reduce((e, t) => {
+    let N = Z.reduce((e, t) => {
             let { type: n, powerup: r } = t;
             return n === f.A3.POWERUP_ACTIVATED ? e + r.cost : e;
         }, 0),
-        O = I.reduce(
+        O = Z.reduce(
             (e, t) => {
                 var n, r;
                 let { powerup: i } = t;
@@ -56,61 +56,60 @@ function x(e) {
                       ? r
                       : 0;
             },
-            null != (x = null == (n = I[0]) || null == (t = n.powerup) ? void 0 : t.cost) ? x : 0,
+            null != (x = null == (n = Z[0]) || null == (t = n.powerup) ? void 0 : t.cost) ? x : 0,
         ),
-        S = I.reduce((e, t) => {
+        S = Z.reduce((e, t) => {
             var n;
             let { powerup: r } = t;
             return e + (null != (n = null == r ? void 0 : r.cost) ? n : 0);
         }, 0),
         A = P ? N : O,
-        k = !P && S > A ? "+" : void 0,
-        R = !E && C ? Z.image.animatedUrl : Z.image.staticUrl,
-        L = null != Z.viewCta && "" !== Z.viewCta ? Z.viewCta : g.intl.string(m.default["27GkOu"]),
-        U = null != Z.viewCtaTooltip && "" !== Z.viewCtaTooltip ? Z.viewCtaTooltip : void 0;
+        k = !I && C ? E.image.animatedUrl : E.image.staticUrl,
+        R = null != E.viewCta && "" !== E.viewCta ? E.viewCta : g.intl.string(m.default["27GkOu"]),
+        L = null != E.viewCtaTooltip && "" !== E.viewCtaTooltip ? E.viewCtaTooltip : void 0;
     return (0, r.jsxs)(u.aB, {
-        label: Z.title,
+        label: E.title,
         isActive: (null == _ ? void 0 : _.type) === "active",
         isWarning: (null == _ ? void 0 : _.type) === "expiring",
-        badge: Z.badge,
-        onClick: () => Z.openModal(j),
+        badge: E.badge,
+        onClick: () => E.openModal(j),
         onMouseOver: () => w(!0),
         onMouseLeave: () => w(!1),
         children: [
             (0, r.jsx)("img", {
                 alt: "",
-                src: R,
+                src: k,
                 className: v.image,
             }),
             (0, r.jsx)(u.Q9, {
-                title: Z.title,
+                title: E.title,
                 textColor: T,
                 footer: (0, r.jsx)(u.uf, {
                     status: _,
                     cost: A,
-                    costDecorator: k,
+                    costDecorator: !P && S > A ? "+" : void 0,
                 }),
                 children: (0, r.jsx)(a.Text, {
                     className: v.description,
                     color: T,
                     variant: "text-sm/medium",
-                    children: Z.description,
+                    children: E.description,
                 }),
             }),
             (0, r.jsx)(u.N4, {
                 children:
-                    null != U
+                    null != L
                         ? (0, r.jsx)(l.u, {
                               asContainer: !0,
-                              text: U,
+                              text: L,
                               delay: 100,
                               children: (0, r.jsx)(a.Button, {
-                                  text: L,
+                                  text: R,
                                   fullWidth: !0,
                               }),
                           })
                         : (0, r.jsx)(a.Button, {
-                              text: L,
+                              text: R,
                               fullWidth: !0,
                           }),
             }),
