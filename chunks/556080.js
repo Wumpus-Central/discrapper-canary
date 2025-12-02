@@ -1,48 +1,58 @@
-n.d(e, { Z: () => I });
-var i = n(442837),
-    l = n(846027),
-    s = n(100527),
-    r = n(509613),
-    u = n(131951),
-    a = n(313789),
-    o = n(846071),
-    c = n(375258),
-    d = n(345655),
-    E = n(388032);
-let S = (0, r.J9)(a.n.VOICE_INPUT_PROFILE_SETTING, {
-        useTitle: () => E.intl.string(E.t.LM3U3k),
+n.d(e, { Z: () => L });
+var i = n(473749),
+    l = n(442837),
+    s = n(846027),
+    r = n(100527),
+    u = n(509613),
+    a = n(28682),
+    o = n(463395),
+    c = n(131951),
+    d = n(313789),
+    E = n(846071),
+    S = n(375258),
+    I = n(383713),
+    T = n(782134),
+    g = n(833682),
+    _ = n(815194),
+    O = n(16009),
+    N = n(387076),
+    A = n(595373),
+    f = n(345655),
+    Z = n(388032);
+let C = (0, u.J9)(d.n.VOICE_INPUT_PROFILE_SETTING, {
+        useTitle: () => Z.intl.string(Z.t.LM3U3k),
         usePredicate: function () {
-            let { enabledInputProfiles: t } = (0, o.P)({ location: "SettingsRendererConfig" });
+            let { enabledInputProfiles: t } = (0, E.P)({ location: "SettingsRendererConfig" });
             return t.length > 0;
         },
-        useSearchTerms: () => [E.intl.string(E.t.nuFtHH), E.intl.string(E.t.VZPR0R), E.intl.string(E.t.cjPbpT)],
+        useSearchTerms: () => [Z.intl.string(Z.t.nuFtHH), Z.intl.string(Z.t.VZPR0R), Z.intl.string(Z.t.cjPbpT)],
         useValue: function () {
-            return (0, i.e7)([u.Z], () => {
+            return (0, l.e7)([c.Z], () => {
                 var t;
-                return null != (t = u.Z.getActiveInputProfile()) ? t : d._.CUSTOM;
+                return null != (t = c.Z.getActiveInputProfile()) ? t : f._.CUSTOM;
             });
         },
         setValue: function (t) {
-            let e = [s.Z.USER_SETTINGS_VOICE_AND_VIDEO];
-            l.Z.setActiveInputProfile(t, { analyticsLocations: e });
+            let e = [r.Z.USER_SETTINGS_VOICE_AND_VIDEO];
+            s.Z.setActiveInputProfile(t, { analyticsLocations: e });
         },
         useOptions: function () {
-            let { enabledInputProfiles: t } = (0, o.G)({ location: "InputProfileCategory" });
+            let { enabledInputProfiles: t } = (0, E.G)({ location: "InputProfileCategory" });
             return [
                 {
-                    value: d._.VOICE_ISOLATION,
-                    name: E.intl.string(E.t.cjPbpT),
-                    desc: E.intl.string(E.t.CzhvnE),
+                    value: f._.VOICE_ISOLATION,
+                    name: Z.intl.string(Z.t.cjPbpT),
+                    desc: Z.intl.string(Z.t.CzhvnE),
                 },
                 {
-                    value: d._.STUDIO,
-                    name: E.intl.string(E.t.VZPR0R),
-                    desc: E.intl.string(E.t.ZaJksS),
+                    value: f._.STUDIO,
+                    name: Z.intl.string(Z.t.VZPR0R),
+                    desc: Z.intl.string(Z.t.ZaJksS),
                 },
                 {
-                    value: d._.CUSTOM,
-                    name: E.intl.string(E.t["N/PQjv"]),
-                    desc: E.intl.string(E.t.SnBmuY),
+                    value: f._.CUSTOM,
+                    name: Z.intl.string(Z.t["N/PQjv"]),
+                    desc: Z.intl.string(Z.t.SnBmuY),
                 },
             ].filter((e) => {
                 let { value: n } = e;
@@ -50,6 +60,23 @@ let S = (0, r.J9)(a.n.VOICE_INPUT_PROFILE_SETTING, {
             });
         },
     }),
-    I = (0, r.k4)(a.n.VOICE_INPUT_PROFILE_CATEGORY, {
-        buildLayout: () => [S, c.h],
+    L = (0, u.k4)(d.n.VOICE_INPUT_PROFILE_CATEGORY, {
+        useNotice: function () {
+            let t = (0, l.e7)([o.Z, c.Z], () => {
+                let t = c.Z.getInputDeviceId();
+                return (
+                    (o.Z.hasEchoCancellation(t) || o.Z.hasNoiseSuppression(t) || o.Z.hasAutomaticGainControl(t)) &&
+                    c.Z.isInputProfileCustom()
+                );
+            });
+            return i.useMemo(() => {
+                if (t)
+                    return {
+                        type: a.y1.INLINE_NOTICE,
+                        noticeType: "info",
+                        useText: () => Z.intl.string(Z.t["/Whuzi"]),
+                    };
+            }, [t]);
+        },
+        buildLayout: () => [C, T.Z, g.Z, I.Z, A.Z, _.Z, N.Z, O.Z, S.h],
     });
