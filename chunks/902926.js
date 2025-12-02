@@ -1,1 +1,3 @@
-s.exports = JSON.parse('{"tkIymA":["Bağlantıyı kes"]}');
+a.exports = JSON.parse(
+    '{"kxF9br":["RPC üzerinden bağlanan SDK"],"8a7IrV":["Bağlantı giriş noktası URL\'si kaydedildi"],"9iLeL2":["URL, ",[1,"url"]," olarak yapılandırıldı"],"AGLx00":["Bağlı oyun akışı:"],"w0pN4R":["Hesabı bağla"],"yKwZc2":["Hesap bağlantısını yönet"],"aTULMB":["Doğrulama geri çağrısı tespit edilmedi. Eğer fonksiyonu aradıysan ve hala bunu görüyorsan, detaylar için günlükleri kontrol et"],"eg0mNa":["Geçerli bir bağlantı akışı olmadığı için bağlanılamıyor"],"OEkrCx":["Bu akış kullanılacak"],"no+FQS":["En üstten başlayarak ilk kullanılabilir bağlantı akışı kullanılacak"],"PFxxJa":["Oyunun çalışıyorsa ve Discord\'a bağlanamıyorsa, oyunun günlüklerini görüntüleyerek hata ayıklamayı dene"],"S94dzs":["KaydolOnaylaTalepBildirme çağrıldı ve doğru çalışıyor"],"vR0zs6":["Hesap Bağlantısı"],"KoK4J9":["Geliştirici Araçları: ",[1,"appName"]],"tkIymA":["Bağlantıyı kes"],"K3ObrU":["Web akışı:"]}',
+);
