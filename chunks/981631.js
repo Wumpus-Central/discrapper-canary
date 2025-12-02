@@ -3923,6 +3923,7 @@ var n_ = (function (e) {
             (e.PERMANENT_INVITE_COMMUNITY_UPSELL_CLICKED = "guild_permanent_links_community_upsell_clicked"),
             (e.INVITE_SERVER_CLICKED = "invite_server_clicked"),
             (e.INVITE_EMBED_ACTIONED = "invite_embed_actioned"),
+            (e.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT_CLOSED = "voice_invite_suggestions_entrypoint_closed"),
             (e.NATIVE_SHARE_SHEET_APP_CLICKED = "native_share_sheet_app_clicked"),
             (e.CHANNEL_LINK_PREVIEW_JOINED = "channel_link_preview_joined"),
             (e.CLIENT_HEARTBEAT = "client_heartbeat"),
