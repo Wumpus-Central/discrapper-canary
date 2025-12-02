@@ -104,7 +104,7 @@ function m(e) {
             "listProps",
             "children",
         ]);
-    let O = null != t ? t : null != d || null != b || null != E ? "md" : "sm";
+    let O = null != t ? t : null != d || (0, o.G)(b) || null != E ? "md" : "sm";
     return (0, r.jsxs)(
         i.I,
         f(u({}, y), {

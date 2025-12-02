@@ -1,4 +1,9 @@
-n.d(t, { f: () => y }), n(388685), n(415506);
+n.d(t, {
+    G: () => b,
+    f: () => O,
+}),
+    n(388685),
+    n(415506);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -64,6 +69,9 @@ function E(e, t) {
     );
 }
 function b(e) {
+    return i.Children.toArray(e).filter(Boolean).length > 0;
+}
+function y(e) {
     return "string" == typeof e
         ? (0, r.jsx)(p.x, {
               variant: "text-md/normal",
@@ -72,17 +80,17 @@ function b(e) {
           })
         : e;
 }
-function y(e) {
+function O(e) {
     let { controls: t, children: n, listProps: i } = e;
-    if (null == n && null == t && null == i) return null;
-    let a = b(n);
-    return (0, r.jsx)(O, {
+    if (!b(n) && null == t && null == i) return null;
+    let a = y(n);
+    return (0, r.jsx)(v, {
         controls: t,
         children: a,
         listProps: i,
     });
 }
-function O(e) {
+function v(e) {
     var t, n;
     let { controls: a, children: s, listProps: p } = e,
         [m, g] = i.useState(!1),
@@ -90,19 +98,32 @@ function O(e) {
         O = i.useRef(null),
         v = (0, c.Z)(O, null == p ? void 0 : p.ref),
         S = i.useRef(null),
-        I = l()(() => {
-            var e;
-            (null == O ? void 0 : O.current) != null &&
-                null != a &&
-                g((null == (e = O.current) ? void 0 : e.getDistanceFromTop()) > 12);
-        }, 200),
-        T = null != p;
+        I = i.useRef(void 0);
+    i.useEffect(
+        () => (
+            (I.current = l()(() => {
+                var e;
+                (null == O ? void 0 : O.current) != null &&
+                    null != a &&
+                    g((null == (e = O.current) ? void 0 : e.getDistanceFromTop()) > 12);
+            }, 200)),
+            () => {
+                var e;
+                null == (e = I.current) || e.cancel();
+            }
+        ),
+        [a],
+    );
+    let T = i.useCallback(() => {
+            null != I.current && I.current();
+        }, [I]),
+        A = null != p;
     return (
         i.useLayoutEffect(() => {
             var e, t;
             let n = new ResizeObserver(() => {
                     var e, t;
-                    if (T) return void y(!0);
+                    if (A) return void y(!0);
                     let n =
                         null != (t = null == O || null == (e = O.current) ? void 0 : e.getScrollerNode()) ? t : null;
                     if (null == n || (null == S ? void 0 : S.current) == null) return;
@@ -115,7 +136,7 @@ function O(e) {
                 (null == S ? void 0 : S.current) != null && n.observe(S.current),
                 () => n.disconnect()
             );
-        }, [T]),
+        }, [A]),
         (0, r.jsxs)(u.y, {
             children: [
                 (0, r.jsx)("div", { className: o()(_.bodySpacerTop, { [_.bodySpacerTopBorder]: b && null == a }) }),
@@ -134,14 +155,14 @@ function O(e) {
                               ref: v,
                               onScroll: (e) => {
                                   var t;
-                                  I(), null == (t = p.onScroll) || t.call(p, e);
+                                  T(), null == (t = p.onScroll) || t.call(p, e);
                               },
                           }),
                       )
                     : (0, r.jsx)(f.yW, {
                           ref: O,
                           className: _.body,
-                          onScroll: I,
+                          onScroll: T,
                           children: (0, r.jsx)("main", {
                               ref: S,
                               className: o()(_.bodyInner, { [_.bodyInnerShouldScroll]: b }),
