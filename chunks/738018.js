@@ -377,11 +377,11 @@ function q(e) {
     });
     T.set(e, c);
 }
-function Q(e) {
-    let { id: t } = e;
+function X(e) {
+    let { autocompleteStateId: t } = e;
     q(t);
 }
-function X() {
+function Q() {
     for (let e of T.keys()) q(e);
 }
 function J(e) {
@@ -427,7 +427,7 @@ let en = new et(s.Z, {
         CHANNEL_DELETE: z,
         STREAMER_MODE_UPDATE: $,
         CHANNEL_SELECT: ee,
-        LOGOUT: X,
-        SEARCH_HISTORY_WEB_CLEAR_ITEMS: Q,
+        LOGOUT: Q,
+        SEARCH_HISTORY_WEB_CLEAR_ITEMS: X,
     }),
     er = en;

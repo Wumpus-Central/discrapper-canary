@@ -26,6 +26,7 @@ let a = {
             r.Z.dispatch({
                 type: "SEARCH_HISTORY_WEB_CLEAR_ITEMS",
                 id: t,
+                autocompleteStateId: (0, i.Tm)(e),
             });
     },
     updateSearchEditorState: function (e, t) {
