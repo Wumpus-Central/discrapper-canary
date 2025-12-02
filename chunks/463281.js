@@ -1,64 +1,56 @@
-t.a(n, async function (r, i) {
-    try {
-        t.d(e, {
-            h4: () => c,
-            hM: () => o,
-            nD: () => d,
-        });
-        var a = t(612580);
-        n = t.hmd(n);
-        var f = r([a]);
-        a = (f.then ? (await f)() : f)[0];
-        let l = new ("undefined" == typeof TextDecoder ? (0, n.require)("util").TextDecoder : TextDecoder)("utf-8", {
-            ignoreBOM: !0,
-            fatal: !0,
-        });
-        l.decode();
-        let h = null;
-        function u() {
-            return (null === h || h.buffer !== a.memory.buffer) && (h = new Uint8Array(a.memory.buffer)), h;
-        }
-        let w = Array(32).fill(void 0);
-        w.push(void 0, null, !0, !1);
-        let s = w.length,
-            b = 0,
-            g = null;
-        function _() {
-            return (null === g || g.buffer !== a.memory.buffer) && (g = new Int32Array(a.memory.buffer)), g;
-        }
-        function o(n, e, t, r, i, f, o, c) {
-            try {
-                let g = a.__wbindgen_add_to_stack_pointer(-16);
-                var d = (function (n, e) {
-                        let t = e(+n.length);
-                        return u().set(n, t / 1), (b = n.length), t;
-                    })(n, a.__wbindgen_malloc),
-                    l = b;
-                a.crop_and_rotate_gif(g, d, l, e, t, r, i, f, null == o ? 16777215 : o, null == c ? 16777215 : c);
-                var h = _()[g / 4 + 0],
-                    w = _()[g / 4 + 1],
-                    s = u()
-                        .subarray(h / 1, h / 1 + w)
-                        .slice();
-                return a.__wbindgen_free(h, +w), s;
-            } finally {
-                a.__wbindgen_add_to_stack_pointer(16);
-            }
-        }
-        function c(n, e) {
-            var t = l.decode(u().subarray(n, n + e));
-            s === w.length && w.push(w.length + 1);
-            let r = s;
-            return (s = w[r]), (w[r] = t), r;
-        }
-        function d(n) {
-            throw (function (n) {
-                let e = w[n];
-                return n < 36 || ((w[n] = s), (s = n)), e;
-            })(n);
-        }
-        i();
-    } catch (n) {
-        i(n);
-    }
+let r;
+function _(e) {
+    r = e;
+}
+t.d(n, {
+    OB: () => l,
+    hM: () => d,
+    oT: () => _,
+    xQ: () => u,
 });
+let f = null;
+function i() {
+    return (null === f || 0 === f.byteLength) && (f = new Uint8Array(r.memory.buffer)), f;
+}
+let a = new TextDecoder("utf-8", {
+    ignoreBOM: !0,
+    fatal: !0,
+});
+a.decode();
+let o = 0,
+    c = 0;
+function d(e, n, t, _, f, a, o, d) {
+    let l = (function (e, n) {
+            let t = n(+e.length, 1) >>> 0;
+            return i().set(e, t / 1), (c = e.length), t;
+        })(e, r.__wbindgen_malloc),
+        u = c,
+        s = r.crop_and_rotate_gif(l, u, n, t, _, f, a, null == o ? 16777215 : o, null == d ? 16777215 : d);
+    if (s[3])
+        throw (function (e) {
+            let n = r.__wbindgen_externrefs.get(e);
+            return r.__externref_table_dealloc(e), n;
+        })(s[2]);
+    var b,
+        g,
+        w = ((b = s[0]), (g = s[1]), (b >>>= 0), i().subarray(b / 1, b / 1 + g)).slice();
+    return r.__wbindgen_free(s[0], +s[1], 1), w;
+}
+function l(e, n) {
+    var t, r;
+    return (
+        (t = e >>> 0),
+        (o += r = n) >= 2146435072 &&
+            ((a = new TextDecoder("utf-8", {
+                ignoreBOM: !0,
+                fatal: !0,
+            })).decode(),
+            (o = r)),
+        a.decode(i().subarray(t, t + r))
+    );
+}
+function u() {
+    let e = r.__wbindgen_externrefs,
+        n = e.grow(4);
+    e.set(0, void 0), e.set(n + 0, void 0), e.set(n + 1, null), e.set(n + 2, !0), e.set(n + 3, !1);
+}
