@@ -18,29 +18,29 @@ let d = function (e) {
             [n, t],
         );
     return (0, r.jsx)(o.Z, {
-        renderPopout: (e, i) => {
-            let { closePopout: a } = e;
+        renderPopout: (e, a) => {
+            let { closePopout: f } = e;
             return (0, r.jsxs)("div", {
                 children: [
                     d.map((e, t) => {
-                        let a = e.options.map((e) => ({
+                        let c = e.options.map((e) => ({
                                 label: (0, s.Nt)(e.filter),
                                 value: e.filter,
                             })),
-                            c = n.filter((t) => e.options.some((e) => e.filter === t.filter)).map((e) => e.filter);
+                            d = n.filter((t) => e.options.some((e) => e.filter === t.filter)).map((e) => e.filter);
                         return (0, r.jsxs)(
-                            "div",
+                            i.Fragment,
                             {
-                                className: u.filterOptionGroup,
                                 children: [
+                                    t > 0 && (0, r.jsx)("hr", { className: u.groupDivider }),
                                     (0, r.jsx)(o.g, {
-                                        id: i,
+                                        id: a,
                                         children: e.heading,
                                     }),
                                     (0, r.jsx)(l.cOn, {
-                                        "aria-labelledby": i,
-                                        options: a,
-                                        selectedValues: c,
+                                        "aria-labelledby": a,
+                                        options: c,
+                                        selectedValues: d,
                                         onChange: p(e.options),
                                     }),
                                 ],
@@ -48,12 +48,13 @@ let d = function (e) {
                             t,
                         );
                     }),
+                    (0, r.jsx)("hr", { className: u.groupDivider }),
                     (0, r.jsx)("div", {
-                        className: u.filterOptionGroup,
+                        className: u.submitWrapper,
                         children: (0, r.jsx)(l.Button, {
                             fullWidth: !0,
                             onClick: () => {
-                                t([]), a();
+                                t([]), f();
                             },
                             size: "sm",
                             text: c.intl.string(c.t.VkKicb),
