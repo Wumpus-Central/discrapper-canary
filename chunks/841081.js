@@ -1,29 +1,29 @@
-i.d(t, { default: () => f });
-var n = i(54381),
-    r = i(473749),
-    l = i(481060),
-    a = i(987209),
-    s = i(563132),
-    o = i(963249),
-    c = i(701464),
-    d = i(474936),
-    u = i(981631),
-    m = i(388032),
-    h = i(926845);
+t.d(i, { default: () => p });
+var n = t(54381),
+    r = t(473749),
+    a = t(481060),
+    l = t(987209),
+    s = t(563132),
+    o = t(963249),
+    c = t(701464),
+    d = t(474936),
+    u = t(981631),
+    m = t(388032),
+    h = t(926845);
 function _(e) {
-    let { giftRecipient: t, onClose: i, transitionState: a, analyticsLocations: _, analyticsObject: f } = e,
-        { priceOptions: p } = (0, s.JL)(),
+    let { giftRecipient: i, onClose: t, transitionState: l, analyticsLocations: _, analyticsObject: p } = e,
+        { priceOptions: f } = (0, s.JL)(),
         g = r.useCallback(
             (e) => {
                 (0, o.Z)({
                     isGift: !0,
-                    giftRecipient: t,
+                    giftRecipient: i,
                     subscriptionTier: e,
                     giftingOrigin: d.Wt.DM_CHANNEL,
                     analyticsLocations: null != _ ? _ : [],
                     analyticsObject:
-                        null != f
-                            ? f
+                        null != p
+                            ? p
                             : {
                                   page: u.ZY5.DM_CHANNEL,
                                   section: u.jXE.CHANNEL_TEXT_AREA,
@@ -31,58 +31,64 @@ function _(e) {
                                   objectType: u.AnalyticsObjectTypes.GIFT,
                               },
                 }),
-                    i();
+                    t();
             },
-            [t, _, f, i],
+            [i, _, p, t],
         );
-    return (0, n.jsxs)(l.Y0X, {
-        transitionState: a,
-        size: l.CgR.DYNAMIC,
+    return (0, n.jsxs)(a.Y0X, {
+        transitionState: l,
+        size: a.CgR.DYNAMIC,
         className: h.modalContainer,
         parentComponent: "GiftOptionSelectModal",
+        "data-migration-pending": !0,
         children: [
-            (0, n.jsx)(l.xBx, {
+            (0, n.jsx)(a.xBx, {
                 className: h.modalHeader,
-                children: (0, n.jsxs)(l.Kqy, {
+                "data-migration-pending": !0,
+                children: (0, n.jsxs)(a.Kqy, {
                     direction: "horizontal",
                     justify: "space-between",
                     children: [
-                        (0, n.jsx)(l.Heading, {
+                        (0, n.jsx)(a.Heading, {
                             variant: "heading-md/semibold",
                             children: m.intl.string(m.t["wg/30i"]),
                         }),
-                        (0, n.jsx)(l.olH, { onClick: i }),
+                        (0, n.jsx)(a.olH, {
+                            onClick: t,
+                            "data-migration-pending": !0,
+                        }),
                     ],
                 }),
             }),
-            (0, n.jsx)(l.hzk, {
+            (0, n.jsx)(a.hzk, {
                 className: h.modalBody,
+                "data-migration-pending": !0,
                 children: (0, n.jsx)(c.Z, {
                     onSelectSku: g,
-                    giftRecipient: t,
-                    priceOptions: p,
-                    onWishlistItemClick: i,
+                    giftRecipient: i,
+                    priceOptions: f,
+                    onWishlistItemClick: t,
                 }),
             }),
         ],
     });
 }
-function f(e) {
-    let { giftRecipient: t, onClose: i, transitionState: r, analyticsLocations: l, analyticsObject: o } = e;
+function p(e) {
+    let { giftRecipient: i, onClose: t, transitionState: r, analyticsLocations: a, analyticsObject: o } = e;
     return (0, n.jsx)(s.PaymentContextProvider, {
         activeSubscription: null,
         stepConfigs: [],
         skuIDs: d.nS,
         isGift: !0,
-        children: (0, n.jsx)(a.KB, {
+        children: (0, n.jsx)(l.KB, {
             isGift: !0,
-            giftRecipient: t,
+            giftRecipient: i,
             giftingOrigin: d.Wt.DM_CHANNEL,
             children: (0, n.jsx)(_, {
-                giftRecipient: t,
-                onClose: i,
+                giftRecipient: i,
+                onClose: t,
                 transitionState: r,
-                analyticsLocations: l,
+                analyticsLocations: a,
                 analyticsObject: o,
             }),
         }),
