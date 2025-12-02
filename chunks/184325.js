@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B }), n(953529);
+n.d(t, { Z: () => V }), n(953529);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -8,31 +8,33 @@ var r = n(54381),
     c = n(100527),
     u = n(906732),
     d = n(335131),
-    f = n(494424),
-    p = n(654939),
-    _ = n(927513),
-    m = n(768865),
-    h = n(617136),
-    g = n(49436),
-    E = n(703656),
-    b = n(317257),
-    y = n(976015),
-    O = n(594174),
-    v = n(626135),
-    S = n(111361),
-    I = n(291175),
-    T = n(785717),
-    A = n(221292),
-    C = n(485341),
-    N = n(687158),
-    P = n(228168),
-    R = n(981631),
-    w = n(215023),
-    D = n(474936),
-    x = n(681642),
-    L = n(388032),
-    j = n(517793);
-function M(e, t, n) {
+    f = n(963249),
+    p = n(541337),
+    _ = n(494424),
+    m = n(654939),
+    h = n(927513),
+    g = n(768865),
+    E = n(617136),
+    b = n(49436),
+    y = n(703656),
+    O = n(317257),
+    v = n(976015),
+    S = n(594174),
+    I = n(626135),
+    T = n(111361),
+    A = n(291175),
+    C = n(785717),
+    N = n(221292),
+    P = n(485341),
+    R = n(687158),
+    w = n(228168),
+    D = n(981631),
+    x = n(215023),
+    L = n(474936),
+    j = n(681642),
+    M = n(388032),
+    k = n(517793);
+function U(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +47,7 @@ function M(e, t, n) {
         e
     );
 }
-function k(e) {
+function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,12 +58,12 @@ function k(e) {
                 }),
             )),
             r.forEach(function (t) {
-                M(e, t, n[t]);
+                U(e, t, n[t]);
             });
     }
     return e;
 }
-function U(e, t) {
+function Z(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -73,202 +75,224 @@ function U(e, t) {
     }
     return n;
 }
-function G(e, t) {
+function B(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : U(Object(t)).forEach(function (n) {
+            : Z(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let Z = (e) => {
+let F = (e) => {
     let { badge: t, tieredTenureBadge: n, currentUserOwnsOrbBadge: i } = e;
-    return t.id === b.l.ORB_PROFILE_BADGE
-        ? (0, r.jsx)(y.Z, { showSubtext: !i && !t.isPreviewMode })
-        : void 0 !== n && t.id !== x.a
-          ? (0, r.jsx)(_.Z, {
+    return t.id === O.l.ORB_PROFILE_BADGE
+        ? (0, r.jsx)(v.Z, { showSubtext: !i && !t.isPreviewMode })
+        : void 0 !== n && t.id !== j.a
+          ? (0, r.jsx)(h.Z, {
                 profileBadge: t,
                 tenureBadge: n,
             })
           : t.description;
 };
-function B(e) {
+function V(e) {
     var t;
     let {
             badges: n,
             className: a,
-            badgeClassName: _,
-            displayProfile: y,
-            onClose: M,
-            shouldOpenBadgeTooltip: U,
-            shouldGlowTenureBadge: B,
+            badgeClassName: h,
+            displayProfile: v,
+            onClose: U,
+            shouldOpenBadgeTooltip: Z,
+            shouldGlowTenureBadge: V,
         } = e,
-        F = i.useRef(null),
-        { analyticsLocations: V } = (0, u.ZP)(c.Z.BADGE),
-        { context: H, trackUserProfileAction: Y } = (0, T.KZ)(),
-        W = O.default.getCurrentUser(),
-        K = (0, S.yd)(null == W ? void 0 : W.premiumType, D.PremiumTypes.TIER_2),
-        z = (0, N.Of)(null != (t = null == W ? void 0 : W.id) ? t : null),
-        q = (0, C.Z)(z).some((e) => e.id === b.l.ORB_PROFILE_BADGE),
-        Q = (0, f.c)(W, "UserProfileBadgeList");
+        H = i.useRef(null),
+        { analyticsLocations: Y } = (0, u.ZP)(c.Z.BADGE),
+        { context: W, trackUserProfileAction: K } = (0, C.KZ)(),
+        z = S.default.getCurrentUser(),
+        q = (0, T.yd)(null == z ? void 0 : z.premiumType, L.PremiumTypes.TIER_2),
+        Q = (0, R.Of)(null != (t = null == z ? void 0 : z.id) ? t : null),
+        X = (0, P.Z)(Q).some((e) => e.id === O.l.ORB_PROFILE_BADGE),
+        J = (0, _.c)(z, "UserProfileBadgeList"),
+        $ = (0, p.T)("UserProfileBadgeList");
     return (0, r.jsx)("div", {
-        className: o()(j.container, a),
-        "aria-label": L.intl.string(L.t.VWV0y5),
+        className: o()(k.container, a),
+        "aria-label": M.intl.string(M.t.VWV0y5),
         role: "group",
         children: n.map((e, t) => {
             var n;
-            let i = e.id === b.l.ORB_PROFILE_BADGE,
-                a = (0, I.fv)(e.id),
-                u = null != a || e.id === x.a,
-                O = (null == y ? void 0 : y.userId) === (null == W ? void 0 : W.id),
+            let i = e.id === O.l.ORB_PROFILE_BADGE,
+                a = (0, A.fv)(e.id),
+                u = null != a || e.id === j.a,
+                p = (null == v ? void 0 : v.userId) === (null == z ? void 0 : z.id),
                 S = (t) => {
                     if (
-                        (Y({ action: "PRESS_BADGE" }),
-                        (0, A.NE)(
-                            k(
+                        (K({ action: "PRESS_BADGE" }),
+                        (0, N.NE)(
+                            G(
                                 {
                                     badge: e.id,
-                                    analyticsLocations: V,
+                                    analyticsLocations: Y,
                                 },
-                                H,
+                                W,
                             ),
                         ),
                         i)
                     )
                         return void (0, d.mK)({
-                            tab: w.AW.ORBS,
-                            analyticsLocations: V,
+                            tab: x.AW.ORBS,
+                            analyticsLocations: Y,
                             analyticsSource: c.Z.VIRTUAL_CURRENCY_ORB_PROFILE_BADGE,
                         });
                     if (u) {
                         if (
                             (t.preventDefault(),
-                            v.default.track(R.rMx.TIERED_TENURE_BADGE_CLICKED, {
+                            I.default.track(D.rMx.TIERED_TENURE_BADGE_CLICKED, {
                                 badge: e.id,
-                                premium_type: K,
-                                viewed_user_id: null == y ? void 0 : y.userId,
+                                premium_type: q,
+                                viewed_user_id: null == v ? void 0 : v.userId,
                             }),
-                            K)
+                            q)
                         ) {
-                            O
-                                ? (0, E.uL)(R.Z5c.NITRO_HOME)
-                                : (0, m.k)({
-                                      analyticsLocations: V,
-                                      displayProfile: y,
+                            p
+                                ? (0, y.uL)(D.Z5c.NITRO_HOME)
+                                : (0, g.k)({
+                                      analyticsLocations: Y,
+                                      displayProfile: v,
                                   }),
-                                null == M || M();
+                                null == U || U();
                             return;
                         }
-                        if (O) {
-                            let n = null != e.link ? (0, l.default)(e.link, { analyticsLocations: V }) : null;
+                        if (p) {
+                            let n = null != e.link ? (0, l.default)(e.link, { analyticsLocations: Y }) : null;
                             if (null == n) return;
-                            return null == M || M(), n(t);
+                            return null == U || U(), n(t);
                         }
                         return (
-                            (0, m.k)({
-                                analyticsLocations: V,
-                                displayProfile: y,
+                            (0, g.k)({
+                                analyticsLocations: Y,
+                                displayProfile: v,
                             }),
-                            void (null == M || M())
+                            void (null == U || U())
                         );
                     }
-                    let n = null != e.link ? (0, l.default)(e.link, { analyticsLocations: V }) : null;
-                    if (null != n) return null == M || M(), n(t);
+                    let n = null != e.link ? (0, l.default)(e.link, { analyticsLocations: Y }) : null;
+                    if (null != n) return null == U || U(), n(t);
                 },
                 T = () => {
-                    e.id === C.i &&
-                        v.default.track(
-                            R.rMx.QUEST_CONTENT_VIEWED,
-                            G(k({}, (0, h.mH)(g.jn.QUEST_BADGE)), { is_targeted: !1 }),
+                    e.id === P.i &&
+                        I.default.track(
+                            D.rMx.QUEST_CONTENT_VIEWED,
+                            B(G({}, (0, E.mH)(b.jn.QUEST_BADGE)), { is_targeted: !1 }),
                         ),
-                        Y({ action: "HOVER_BADGE" }),
-                        (0, A.Qf)(
-                            k(
+                        K({ action: "HOVER_BADGE" }),
+                        (0, N.Qf)(
+                            G(
                                 {
                                     badge: e.id,
-                                    analyticsLocations: V,
+                                    analyticsLocations: Y,
                                 },
-                                H,
+                                W,
                             ),
                         );
                 },
-                N = void 0 !== a && e.id !== x.a,
-                D = O && Q && N,
-                L = (0, r.jsx)("img", {
+                C = void 0 !== a && e.id !== j.a,
+                R = p && J && C,
+                Q = (0, r.jsx)("img", {
                     alt: " ",
                     "aria-hidden": !0,
-                    src: null != (n = e.iconSrc) ? n : (0, P.Ej)(e.icon),
-                    className: o()(j.badge, _),
+                    src: null != (n = e.iconSrc) ? n : (0, w.Ej)(e.icon),
+                    className: o()(k.badge, h),
                 }),
-                z = {
+                ee = {
                     onClick: S,
                     onMouseEnter: T,
                     href: e.link,
-                    style: { filter: B && null != a ? "drop-shadow(0 0 5px ".concat(a.glowColor, ")") : void 0 },
+                    style: { filter: V && null != a ? "drop-shadow(0 0 5px ".concat(a.glowColor, ")") : void 0 },
                 };
-            if (D) {
+            if (R) {
                 let n = (0, r.jsx)(
                     s.Anchor,
-                    G(k({}, z), {
-                        ref: F,
-                        children: L,
+                    B(G({}, ee), {
+                        ref: H,
+                        children: Q,
                     }),
                 );
                 return (0, r.jsx)(
-                    f.Z,
+                    _.Z,
                     {
-                        targetElementRef: F,
+                        targetElementRef: H,
                         mode: "tooltip",
-                        tooltipDelay: P.vB,
+                        tooltipDelay: w.vB,
                         children: n,
                     },
                     "".concat(e.id, "-").concat(t),
                 );
             }
-            if (N) {
+            if (C) {
                 let n = (0, r.jsx)(
-                    s.Anchor,
-                    G(k({}, z), {
-                        ref: F,
-                        children: L,
-                    }),
-                );
+                        s.Anchor,
+                        B(G({}, ee), {
+                            ref: H,
+                            children: Q,
+                        }),
+                    ),
+                    i = () => {
+                        (0, f.Z)({
+                            initialPlanId: null,
+                            subscriptionTier: L.Si.TIER_2,
+                            analyticsLocations: Y,
+                        });
+                    },
+                    a = $ && !q,
+                    o = a
+                        ? [
+                              {
+                                  text: M.intl.string(M.t.pj0XBN),
+                                  variant: "expressive",
+                                  icon: s.SrA,
+                                  iconPosition: "start",
+                                  onClick: i,
+                              },
+                          ]
+                        : void 0,
+                    l = a ? 262 : 220;
                 return (0, r.jsx)(
-                    p.Z,
+                    m.Z,
                     {
                         badgeId: e.id,
-                        targetElementRef: F,
+                        targetElementRef: H,
                         mode: "tooltip",
-                        tooltipDelay: P.vB,
+                        tooltipDelay: w.vB,
                         body: e.description,
+                        actions: o,
                         onShow: () => {
-                            v.default.track(R.rMx.TOOLTIP_VIEWED, {
-                                type: "tiered_tenure_badge_profile_" + (O ? "self" : "other"),
+                            I.default.track(D.rMx.TOOLTIP_VIEWED, {
+                                type: "tiered_tenure_badge_profile_" + (p ? "self" : "other"),
                             });
                         },
-                        estimatedTooltipHeight: 220,
+                        estimatedTooltipHeight: l,
                         children: n,
                     },
                     "".concat(e.id, "-").concat(t),
                 );
             }
-            let X = (0, r.jsx)(s.Anchor, G(k({}, z), { children: L })),
-                J = Z({
+            let et = (0, r.jsx)(s.Anchor, B(G({}, ee), { children: Q })),
+                en = F({
                     badge: e,
-                    tieredTenureBadge: u && e.id !== x.a ? a : void 0,
-                    currentUserOwnsOrbBadge: q,
+                    tieredTenureBadge: u && e.id !== j.a ? a : void 0,
+                    currentUserOwnsOrbBadge: X,
                 });
             return (0, r.jsx)(
                 s.jSM,
                 {
-                    text: J,
+                    text: en,
                     "aria-label": e.description,
-                    forceOpen: null != U && U(e.id),
-                    delay: P.vB,
-                    children: X,
+                    forceOpen: null != Z && Z(e.id),
+                    delay: w.vB,
+                    children: et,
                 },
                 "".concat(e.id, "-").concat(t),
             );
