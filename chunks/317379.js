@@ -1,11 +1,11 @@
 n.d(e, { f: () => o });
 var i = n(524437),
-    r = n(995774),
-    l = n(509613),
-    s = n(695346),
+    l = n(995774),
+    s = n(509613),
+    r = n(695346),
     u = n(313789),
     a = n(388032);
-let o = (0, l.Em)(u.n.REACTION_NOTIFICATIONS, {
+let o = (0, s.Em)(u.n.REACTION_NOTIFICATIONS, {
     useTitle: () => a.intl.string(a.t.Wxj9Hp),
     useOptions: () => [
         {
@@ -21,6 +21,7 @@ let o = (0, l.Em)(u.n.REACTION_NOTIFICATIONS, {
             value: i.Ns.NOTIFICATIONS_DISABLED,
         },
     ],
-    useValue: s.fz.useSetting,
-    setValue: (t) => (0, r.MR)(t, s.fz.getSetting()),
+    useValue: r.fz.useSetting,
+    setValue: (t) => (0, l.MR)(t, r.fz.getSetting()),
+    fieldLayout: "horizontal-responsive",
 });

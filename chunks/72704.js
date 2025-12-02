@@ -1,29 +1,22 @@
-n.d(t, { Z: () => o }), n(388685);
+n.d(t, { Z: () => o });
 var r = n(54381),
-    l = n(481060),
-    i = n(550964);
+    i = n(481060),
+    a = n(550964);
 function o(e) {
     let { node: t } = e,
-        { useValue: n, setValue: o, useTitle: a, useSubtitle: s, useOptions: c, renderOptionLabel: u } = t,
-        d = a(),
-        f = null == s ? void 0 : s(),
+        { useValue: n, setValue: o, useTitle: s, useSubtitle: l, useOptions: c, fieldLayout: u } = t,
+        d = s(),
+        f = null == l ? void 0 : l(),
         p = n(),
-        b = c();
-    return (0, r.jsx)(i.X, {
-        children: (0, r.jsx)(l.q4e, {
+        _ = c();
+    return (0, r.jsx)(a.X, {
+        children: (0, r.jsx)(i.q4e, {
             label: d,
             description: f,
             value: p,
             onChange: (e) => o(e),
-            options: b,
-            renderOptionLabel: null != u ? u : void 0,
-            renderOptionValue:
-                null != u
-                    ? (e) => {
-                          let [t] = e;
-                          return u(t);
-                      }
-                    : void 0,
+            options: _,
+            layout: u,
         }),
     });
 }

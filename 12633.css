@@ -84457,6 +84457,8 @@ div.nagbar_d74ef8 {
 }
 
 .pane__3e84f {
+    contain: layout;
+    container-type: inline-size;
     display: flex;
     flex-direction: column;
     flex-grow: 1
