@@ -6,9 +6,11 @@ var r = n(54381),
     i = n(772848);
 n(952265);
 var a = n(481060),
-    o = n(887505),
-    s = n(981631);
-function l(e, t, n) {
+    o = n(844718),
+    s = n(762853),
+    l = n(887505),
+    c = n(981631);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +23,7 @@ function l(e, t, n) {
         e
     );
 }
-function c(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,12 +34,12 @@ function c(e) {
                 }),
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                u(e, t, n[t]);
             });
     }
     return e;
 }
-function u(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,92 +51,112 @@ function u(e, t) {
     }
     return n;
 }
-function d(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function f(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = p(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
-function p(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-    return i;
-}
 n(602091);
 let _ = "orb-checkout-payment-modal-key",
     m = () => (0, a.VXO)(_),
     h = (e) => {
-        var {
+        let {
                 skuId: t,
-                analyticsLocations: l = [],
-                analyticsSourceLocation: u,
-                onCloseCallback: p,
-                onCheckoutSuccess: m,
-                isRental: h,
+                onCheckoutSuccess: n,
+                analyticsLocations: r = [],
+                analyticsSourceLocation: i,
+                onCloseCallback: a,
+                isRental: s,
             } = e,
-            g = f(e, [
-                "skuId",
-                "analyticsLocations",
-                "analyticsSourceLocation",
-                "onCloseCallback",
-                "onCheckoutSuccess",
-                "isRental",
-            ]);
-        let E = !1,
-            b = (0, i.Z)();
+            { enabled: l } = (0, o.VL)({ location: "openOrbCheckoutPaymentModal" }),
+            c = {
+                skuId: t,
+                onCheckoutSuccess: n,
+                analyticsLocations: r,
+                analyticsSourceLocation: i,
+                onCloseCallback: a,
+                isRental: s,
+            };
+        return l ? g(c) : E(c);
+    },
+    g = (e) => {
+        let {
+            skuId: t,
+            onCheckoutSuccess: n,
+            analyticsLocations: r = [],
+            analyticsSourceLocation: i,
+            onCloseCallback: a,
+            isRental: o,
+        } = e;
+        return s.F4.openCheckoutModal({
+            skuId: t,
+            analyticsLocations: r,
+            analyticsSourceLocation: i,
+            onCheckoutSuccess: n,
+            flowSpecificOptions: { isRental: o },
+            modalOptions: {
+                onCloseCallback: a,
+                modalKey: _,
+                onCloseRequest: (e, n) => {
+                    e ||
+                        (0, l._)(c.rMx.PAYMENT_FLOW_CANCELED, {
+                            loadId: n,
+                            skuId: t,
+                            analyticsLocations: r,
+                            analyticsSourceLocation: i,
+                        });
+                },
+            },
+        });
+    },
+    E = (e) => {
+        let {
+                skuId: t,
+                onCheckoutSuccess: o,
+                analyticsLocations: s = [],
+                analyticsSourceLocation: u,
+                onCloseCallback: f,
+                isRental: m,
+            } = e,
+            h = !1,
+            g = (0, i.Z)();
         return (0, a.ZDy)(
             async () => {
-                let { default: e } = await n.e("22002").then(n.bind(n, 922987));
+                let { default: e } = await Promise.resolve().then(n.bind(n, 922987));
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        d(
-                            c(
+                        p(
+                            d(
                                 {
                                     skuId: t,
-                                    analyticsLocations: l,
+                                    analyticsLocations: s,
                                     analyticsSourceLocation: u,
                                     onCheckoutSuccess: (e) => {
-                                        E || m(e), (E = !0);
+                                        h || o(e), (h = !0);
                                     },
-                                    isRental: h,
+                                    isRental: m,
                                 },
-                                g,
                                 n,
                             ),
-                            { loadId: b },
+                            { loadId: g },
                         ),
                     );
             },
             {
-                onCloseCallback: p,
+                onCloseCallback: f,
                 onCloseRequest() {
-                    E ||
-                        (0, o._)(s.rMx.PAYMENT_FLOW_CANCELED, {
-                            loadId: b,
+                    h ||
+                        (0, l._)(c.rMx.PAYMENT_FLOW_CANCELED, {
+                            loadId: g,
                             skuId: t,
-                            analyticsLocations: l,
+                            analyticsLocations: s,
                             analyticsSourceLocation: u,
                         }),
                         (0, a.Mr3)(_);
