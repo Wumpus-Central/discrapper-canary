@@ -2,8 +2,8 @@ n.d(e, { Z: () => E });
 var i = n(442837),
     r = n(846027),
     l = n(509613),
-    u = n(131951),
-    s = n(383451),
+    s = n(131951),
+    u = n(383451),
     a = n(313789),
     o = n(595373),
     c = n(65154),
@@ -13,12 +13,12 @@ let E = (0, l.qs)(a.n.VOICE_PUSH_TO_TALK_LATCHING_SETTING, {
     useSubtitle: () => d.intl.string(d.t.iT257i),
     usePredicate: function () {
         let t = (0, o.J)(),
-            { enableLatching: e } = (0, s.H)({ location: "PushToTalkLatchingSetting" });
+            { enableLatching: e } = (0, u.H)({ location: "PushToTalkLatchingSetting" });
         return t && e;
     },
     useValue: function () {
-        return (0, i.e7)([u.Z], () => {
-            let { pttLatchingEnabled: t } = u.Z.getModeOptions();
+        return (0, i.e7)([s.Z], () => {
+            let { pttLatchingEnabled: t } = s.Z.getModeOptions();
             return null != t && t;
         });
     },

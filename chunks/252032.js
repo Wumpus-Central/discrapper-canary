@@ -29,15 +29,15 @@ function x(e) {
         respectCooldown: !1,
     });
 }
-function j(e) {
+function E(e) {
     let { channel: t, message: n } = e,
         { id: c } = t,
         { id: u } = n,
         m = t.getGuildId(),
         g = (0, a.e7)([h.Z], () => h.Z.getGuild(m), [m]),
         y = t.type === v.d4z.GUILD_ANNOUNCEMENT,
-        j = null != g && g.features.has(v.GuildFeatures.NEWS),
-        S = y && j,
+        E = null != g && g.features.has(v.GuildFeatures.NEWS),
+        S = y && E,
         {
             editingMessage: P,
             editingTextValue: I,
@@ -87,7 +87,7 @@ function j(e) {
             (e) => {
                 var t, n;
                 return (0, r.createElement)(
-                    E,
+                    j,
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -151,7 +151,7 @@ function j(e) {
           })
         : null;
 }
-function E(e) {
+function j(e) {
     let {
             textValue: t,
             richValue: n,
@@ -202,7 +202,7 @@ function E(e) {
 function S(e, t, n) {
     let { message: r, channel: l, compact: a } = e;
     return n
-        ? (0, i.jsx)(j, {
+        ? (0, i.jsx)(E, {
               channel: l,
               message: r,
           })

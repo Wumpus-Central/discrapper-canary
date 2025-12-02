@@ -26,7 +26,7 @@ function b(e) {
             if (null != C && (0, f.Z)(C)) return void (0, p.lC)(C, b);
             n();
         },
-        j = () => {
+        E = () => {
             h.Z.endEvent(y.id, y.guild_id);
         };
     return _
@@ -43,7 +43,7 @@ function b(e) {
                           children: (0, i.jsx)(a.sNh, {
                               id: "end-voice-event",
                               color: "danger",
-                              action: j,
+                              action: E,
                               label: g.intl.string(g.t.qaYzPA),
                               icon: a.k$p,
                           }),

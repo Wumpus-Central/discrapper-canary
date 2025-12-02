@@ -3,8 +3,8 @@ var i = n(54381);
 n(473749);
 var r = n(657707),
     l = n(688465),
-    u = n(612659),
-    s = n(299886),
+    s = n(612659),
+    u = n(299886),
     a = n(773275),
     o = n(509613),
     c = n(28682),
@@ -29,9 +29,9 @@ let O = (0, o.x1)(d.n.PRIVATE_BROWSING_PANE, {
         getLegacySearchKey: () => T.s6.PRIVATE_BROWSING_PERK,
         buildLayout: () => [_],
         usePredicate: () => {
-            let t = (0, u.m)(),
+            let t = (0, s.m)(),
                 { isSupportedPrivateBrowsingPerkPlatform: e, isWeb: n, perkAvailableToUser: i } = (0, a.xf)(),
-                { enabled: r } = s.H.useConfig({ location: "private_browsing_perk_settings_page" });
+                { enabled: r } = u.H.useConfig({ location: "private_browsing_perk_settings_page" });
             return r && (e || n) && (!t || i);
         },
         trailing: {

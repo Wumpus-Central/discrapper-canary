@@ -53,15 +53,15 @@ let C = [
     _ = p.Z.Millis.WEEK,
     O = { channels: {} },
     x = new Set(),
-    j = null,
-    E = 0,
+    E = null,
+    j = 0,
     S = 0;
 function P() {
-    if (null == j || !T(j)) return !1;
-    let e = Z(j);
+    if (null == E || !T(E)) return !1;
+    let e = Z(E);
     if (e.lastActionTime > Date.now() - p.Z.Millis.DAY && e.viewDuration > v) return !1;
     let t = Date.now();
-    (e.lastActionTime = t), (e.viewDuration += t - E), (E = t);
+    (e.lastActionTime = t), (e.viewDuration += t - j), (j = t);
 }
 function I() {
     return (
@@ -145,10 +145,10 @@ y(A, "displayName", "UnreadSettingNoticeStore2"), y(A, "persistKey", "UnreadSett
 let w = new A(a.Z, {
         CHANNEL_SELECT: function () {
             let e = P();
-            return (j = u.Z.getChannelId()), (E = Date.now()), e;
+            return (E = u.Z.getChannelId()), (j = Date.now()), e;
         },
         CONNECTION_OPEN: function () {
-            (j = u.Z.getChannelId()), (E = Date.now()), I();
+            (E = u.Z.getChannelId()), (j = Date.now()), I();
             let e = Date.now() - _;
             h.default.forEach(O.channels, (t, n) => {
                 let { lastActionTime: i } = t;

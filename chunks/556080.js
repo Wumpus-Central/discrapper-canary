@@ -2,14 +2,14 @@ n.d(e, { Z: () => T });
 var i = n(442837),
     r = n(846027),
     l = n(100527),
-    u = n(509613),
-    s = n(131951),
+    s = n(509613),
+    u = n(131951),
     a = n(313789),
     o = n(846071),
     c = n(375258),
     d = n(345655),
     E = n(388032);
-let S = (0, u.J9)(a.n.VOICE_INPUT_PROFILE_SETTING, {
+let S = (0, s.J9)(a.n.VOICE_INPUT_PROFILE_SETTING, {
         useTitle: () => E.intl.string(E.t.LM3U3k),
         usePredicate: function () {
             let { enabledInputProfiles: t } = (0, o.P)({ location: "SettingsRendererConfig" });
@@ -17,9 +17,9 @@ let S = (0, u.J9)(a.n.VOICE_INPUT_PROFILE_SETTING, {
         },
         useSearchTerms: () => [E.intl.string(E.t.nuFtHH), E.intl.string(E.t.VZPR0R), E.intl.string(E.t.cjPbpT)],
         useValue: function () {
-            return (0, i.e7)([s.Z], () => {
+            return (0, i.e7)([u.Z], () => {
                 var t;
-                return null != (t = s.Z.getActiveInputProfile()) ? t : d._.CUSTOM;
+                return null != (t = u.Z.getActiveInputProfile()) ? t : d._.CUSTOM;
             });
         },
         setValue: function (t) {
@@ -50,6 +50,6 @@ let S = (0, u.J9)(a.n.VOICE_INPUT_PROFILE_SETTING, {
             });
         },
     }),
-    T = (0, u.k4)(a.n.VOICE_INPUT_PROFILE_CATEGORY, {
+    T = (0, s.k4)(a.n.VOICE_INPUT_PROFILE_CATEGORY, {
         buildLayout: () => [S, c.h],
     });

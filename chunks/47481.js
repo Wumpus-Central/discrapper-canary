@@ -19,7 +19,7 @@ function d(e) {
     return (
         h.forEach((e) => {
             var r, O, x;
-            let j, E;
+            let E, j;
             if (null != g && g.length > 0) {
                 let t = a.default.extractTimestamp(e.id);
                 for (let e = 0; (r = e < (null == g ? void 0 : g.length)), r; e++) {
@@ -60,16 +60,16 @@ function d(e) {
             })(p, e, Z && m);
             (null !== T &&
                 ([I, P] =
-                    ((E = O = P),
+                    ((j = O = P),
                     null == O || O.type !== T
-                        ? ((j = {
+                        ? ((E = {
                               type: T,
                               content: [],
                               key: e.id,
                           }),
-                          y.push(j))
-                        : (E = (j = O).content[j.content.length - 1]),
-                    [j, E])),
+                          y.push(E))
+                        : (j = (E = O).content[E.content.length - 1]),
+                    [E, j])),
             f === e.id && null != v)
                 ? (null != P && P.type === u.ys_.DIVIDER
                       ? (P.unreadId = e.id)

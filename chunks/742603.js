@@ -1,4 +1,4 @@
-n.d(t, { Z: () => V }), n(388685);
+n.d(t, { Z: () => H }), n(388685);
 var i = n(54381);
 n(473749);
 var r = n(120356),
@@ -21,8 +21,8 @@ var r = n(120356),
     _ = n(910611),
     O = n(728285),
     x = n(454585),
-    j = n(801604),
-    E = n(210975),
+    E = n(801604),
+    j = n(210975),
     S = n(809244),
     P = n(618158),
     I = n(358221),
@@ -37,7 +37,7 @@ var r = n(120356),
     D = n(388032),
     k = n(39219),
     U = n(430864);
-function F(e) {
+function V(e) {
     let { focusedParticipant: t, channel: n } = e,
         r = (0, O.bp)(),
         l = (0, a.e7)([I.Z], () => I.Z.getLayout(n.id, r));
@@ -51,7 +51,7 @@ function F(e) {
         }),
     });
 }
-function B(e) {
+function F(e) {
     let { user: t, channel: n, stream: r, color: l } = e,
         a = (0, S.Z)(n, t, r);
     return null == t || null == r
@@ -73,7 +73,7 @@ function B(e) {
               ],
           });
 }
-function H(e) {
+function B(e) {
     let t,
         { focusedApplication: n, focusedParticipant: r, channel: l } = e,
         a = (0, T.Z)(l, !0),
@@ -96,7 +96,7 @@ function H(e) {
                         children: (0, u.Z)(n.name),
                     }),
                     a &&
-                        (0, i.jsx)(F, {
+                        (0, i.jsx)(V, {
                             channel: l,
                             focusedParticipant: r,
                         }),
@@ -108,14 +108,14 @@ function H(e) {
         t = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(C.ZP.Divider, { className: k.divider }),
-                (0, i.jsx)(B, {
+                (0, i.jsx)(F, {
                     user: e,
                     channel: l,
                     stream: n,
                     color: a ? "header-primary" : "none",
                 }),
                 a &&
-                    (0, i.jsx)(F, {
+                    (0, i.jsx)(V, {
                         channel: l,
                         focusedParticipant: r,
                     }),
@@ -132,7 +132,7 @@ function H(e) {
         children: t,
     });
 }
-function V(e) {
+function H(e) {
     let { channel: t, guild: r, appContext: c, inCall: u, isChatOpen: m, exitFullScreen: g } = e,
         { focusedParticipant: b } = (0, a.cj)(
             [I.Z],
@@ -150,7 +150,7 @@ function V(e) {
     let T = (0, a.e7)([p.Z], () => p.Z.getChannelStatus(t)),
         A = t.isGuildVoice() && u && null != T && T.length > 0,
         R = (0, Z.ZP)(t),
-        F = A
+        V = A
             ? (0, i.jsx)(o.u, {
                   asContainer: !0,
                   text: D.intl.string(D.t.Mgpxiw),
@@ -217,7 +217,7 @@ function V(e) {
                   }),
               })
             : null,
-        B = (0, E.m$)({ channelId: t.id });
+        F = (0, j.m$)({ channelId: t.id });
     return (0, i.jsxs)("div", {
         className: k.subtitleContainer,
         children: [
@@ -230,7 +230,7 @@ function V(e) {
                         className: l()(e, k.headerBar),
                         innerClassName: k.headerBarChildren,
                         toolbarClassName: k.toolbar,
-                        childrenBottom: F,
+                        childrenBottom: V,
                         toolbar: (0, i.jsx)(N.Z, {
                             channel: t,
                             appContext: c,
@@ -250,7 +250,7 @@ function V(e) {
                                               })
                                             : null,
                                         y,
-                                        B &&
+                                        F &&
                                             (0, i.jsx)(o.u, {
                                                 text: D.intl.string(D.t.QyZ4Td),
                                                 children: (0, i.jsx)(s.tQf, {
@@ -267,7 +267,7 @@ function V(e) {
                                 channel: t,
                                 guild: r,
                             }),
-                            (0, i.jsx)(H, {
+                            (0, i.jsx)(B, {
                                 focusedApplication: S,
                                 focusedParticipant: b,
                                 channel: t,
@@ -275,7 +275,7 @@ function V(e) {
                         ],
                     }),
             }),
-            (0, i.jsx)(j.Z, { channelId: t.id }),
+            (0, i.jsx)(E.Z, { channelId: t.id }),
         ],
     });
 }

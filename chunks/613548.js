@@ -20,8 +20,8 @@ var i = n(54381),
     _ = n(651183),
     O = n(853476),
     x = n(390322),
-    j = n(616286),
-    E = n(975146),
+    E = n(616286),
+    j = n(975146),
     S = n(597998),
     P = n(606304),
     I = n(358221),
@@ -158,7 +158,7 @@ function R(e) {
                             var n, i;
                             let { isShown: a } = t;
                             return (0, r.createElement)(
-                                E.Z,
+                                j.Z,
                                 ((n = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
@@ -215,7 +215,7 @@ function R(e) {
         L &&
             U.push(
                 (0, i.jsx)(
-                    E.Z,
+                    j.Z,
                     {
                         className: a()(w.button, { [w.lastButton]: n }),
                         onClick: () => p.Z.toggleParticipantsList(t.id, !P),
@@ -226,7 +226,7 @@ function R(e) {
         A &&
             U.push(
                 (0, i.jsx)(
-                    j.T,
+                    E.T,
                     {
                         channelId: t.id,
                         className: a()(w.button, { [w.lastButton]: P }),

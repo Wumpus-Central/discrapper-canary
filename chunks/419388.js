@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => j }), n(388685), n(642613), n(539854);
+n.d(t, { ZP: () => E }), n(388685), n(642613), n(539854);
 var i = n(473749),
     r = n(392711),
     l = n.n(r),
@@ -690,7 +690,7 @@ class x {
         }
     }
 }
-function j(e) {
+function E(e) {
     let {
             messages: t,
             channel: n,

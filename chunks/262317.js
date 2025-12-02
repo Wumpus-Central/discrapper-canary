@@ -1,7 +1,7 @@
 n.d(t, {
     XX: () => U,
-    ZP: () => B,
-    ul: () => F,
+    ZP: () => F,
+    ul: () => V,
 }),
     n(388685);
 var i = n(54381),
@@ -25,8 +25,8 @@ var i = n(54381),
     _ = n(525925),
     O = n(701362),
     x = n(655018),
-    j = n(83896),
-    E = n(821415),
+    E = n(83896),
+    j = n(821415),
     S = n(670188),
     P = n(597998),
     I = n(314897),
@@ -92,7 +92,7 @@ function U(e) {
         }),
     });
 }
-function F(e) {
+function V(e) {
     let { numAudience: t, collapsed: n } = e,
         r = n ? t : R.intl.formatToPlainString(R.t["+v2pN2"], { count: t });
     return (0, i.jsxs)("div", {
@@ -114,16 +114,16 @@ function F(e) {
         ],
     });
 }
-let B = (0, h.$)(function (e) {
+let F = (0, h.$)(function (e) {
     var t;
     let {
             collapsed: l,
             user: h,
             channel: U,
-            mute: F,
-            localMute: B,
-            localVideoDisabled: H,
-            deaf: V,
+            mute: V,
+            localMute: F,
+            localVideoDisabled: B,
+            deaf: H,
             video: G,
             embeddedApplication: z,
             serverMute: W,
@@ -157,11 +157,11 @@ let B = (0, h.$)(function (e) {
         eC = r.useRef(null),
         [ev, e_] = r.useState(!1),
         eO = r.useRef(null),
-        [ex, ej] = r.useState(!1),
-        [eE, eS] = r.useState(!1),
+        [ex, eE] = r.useState(!1),
+        [ej, eS] = r.useState(!1),
         [eP, eI] = r.useState(!1),
         [eZ, eT] = r.useState(!1),
-        eN = eE || eZ || eP,
+        eN = ej || eZ || eP,
         eA = ex || eN,
         ew = (null == eb ? void 0 : eb.session_id) != null,
         eM = () => {
@@ -169,7 +169,7 @@ let B = (0, h.$)(function (e) {
         },
         eR = (e, t) => {
             let n = new Set(["system:click_outside", "user:escape", "user:explicit"]);
-            null != t && n.has(t) && (eP && eI(!1), eE && eS(!1)), eL();
+            null != t && n.has(t) && (eP && eI(!1), ej && eS(!1)), eL();
         },
         eL = () => {
             (et || ey || ew) && (null == ea || ea(h.id));
@@ -177,13 +177,13 @@ let B = (0, h.$)(function (e) {
         eD = (e) => {
             e
                 ? (eO.current = setTimeout(() => {
-                      ej(!0);
+                      eE(!0);
                   }, 150 * !!es))
                 : clearTimeout(eO.current);
         };
     r.useEffect(() => () => clearTimeout(eO.current), []);
     let ek = (e) => {
-            e && ej(!1);
+            e && eE(!1);
         },
         eU = () => {
             if (!(et && (0, v.p9)(U, A.Z, Z.Z, T.Z, b.default)[0])) return;
@@ -197,7 +197,7 @@ let B = (0, h.$)(function (e) {
                 en ? ((0, _.Z)(e), c.Z.selectParticipant(e.channelId, (0, C.V9)(e))) : (0, p.iV)(e),
                 null == ea || ea(h.id);
         },
-        eF = (e) => {
+        eV = (e) => {
             (0, u.jW)(e, async () => {
                 let { default: e } = await Promise.all([
                     n.e("79695"),
@@ -222,7 +222,7 @@ let B = (0, h.$)(function (e) {
                     );
             });
         },
-        eB = (e) =>
+        eF = (e) =>
             ef
                 ? (0, i.jsx)(
                       x.$,
@@ -234,7 +234,7 @@ let B = (0, h.$)(function (e) {
                   )
                 : null != eg
                   ? (0, i.jsx)(
-                        j.I,
+                        E.I,
                         k(D({}, e), {
                             hangStatusActivity: eg,
                             channel: U,
@@ -242,12 +242,12 @@ let B = (0, h.$)(function (e) {
                         }),
                     )
                   : null,
-        eH = () =>
-            (0, i.jsx)(E.Z, {
+        eB = () =>
+            (0, i.jsx)(j.Z, {
                 userId: h.id,
                 channel: U,
             }),
-        eV = () =>
+        eH = () =>
             (0, f.dl)() && (0, f.zd)(U.id)
                 ? null
                 : (0, i.jsx)(O.Z, {
@@ -284,15 +284,15 @@ let B = (0, h.$)(function (e) {
                                 speaking: X,
                                 latched: J,
                                 disconnected: Q,
-                                mute: F,
-                                localMute: B,
-                                localVideoDisabled: H,
+                                mute: V,
+                                localMute: F,
+                                localVideoDisabled: B,
                                 isStreaming: et,
                                 isGuest: ei,
                                 video: G,
                                 priority: er,
                                 ringing: Y,
-                                deaf: V,
+                                deaf: H,
                                 nick: K,
                                 collapsed: l,
                                 overlap: l,
@@ -307,7 +307,7 @@ let B = (0, h.$)(function (e) {
                                 selected: ev,
                                 onClick: t ? void 0 : eM,
                                 onDoubleClick: eU,
-                                onContextMenu: eF,
+                                onContextMenu: eV,
                                 guildId: U.guild_id,
                                 isSelf: ef,
                                 application: em,
@@ -325,12 +325,12 @@ let B = (0, h.$)(function (e) {
                         let c = () => null;
                         return (
                             ey && eA
-                                ? (c = eB)
+                                ? (c = eF)
                                 : et
-                                  ? (c = eV)
+                                  ? (c = eH)
                                   : ew && h.id !== I.default.getId()
-                                    ? (c = eH)
-                                    : ey && (c = eB),
+                                    ? (c = eB)
+                                    : ey && (c = eF),
                             (0, i.jsx)(s.yRy, {
                                 targetElementRef: eC,
                                 position: "right",

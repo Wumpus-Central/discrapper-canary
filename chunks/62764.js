@@ -1,4 +1,4 @@
-n.d(t, { Z: () => V }), n(388685);
+n.d(t, { Z: () => H }), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(120356),
@@ -20,8 +20,8 @@ var i = n(54381),
     _ = n(920888),
     O = n(287151),
     x = n(501517),
-    j = n(982168),
-    E = n(216572),
+    E = n(982168),
+    j = n(216572),
     S = n(5101),
     P = n(817608),
     I = n(569471),
@@ -36,12 +36,12 @@ var i = n(54381),
     D = n(388032),
     k = n(342153),
     U = n(319720),
-    F = n(127947),
-    B = n(577650);
-function H(e) {
+    V = n(127947),
+    F = n(577650);
+function B(e) {
     let { channel: t } = e,
         l = t.isArchivedThread(),
-        a = (0, j.P0)(t),
+        a = (0, E.P0)(t),
         [o, c] = r.useState(!1),
         d = () => {
             c(!0),
@@ -75,11 +75,11 @@ function H(e) {
           })
         : null;
 }
-function V(e) {
+function H(e) {
     let { postId: t, isFirstMessage: n, isLastItem: l = !1, parentChannelId: s } = e,
-        { ref: x, width: j } = (0, h.ZP)(),
+        { ref: x, width: E } = (0, h.ZP)(),
         [S, k] = r.useState(3),
-        [V, G] = r.useState(!n),
+        [H, G] = r.useState(!n),
         [z, W] = (0, f.Z)(!1, 2000),
         q = (0, o.e7)([T.Z], () => T.Z.getChannel(t), [t]),
         { firstMessage: K } = (0, M.cl)(q),
@@ -91,7 +91,7 @@ function V(e) {
             isGuest: $,
             isPendingMember: ee,
         } = (0, y.Z)(q),
-        et = (0, E.nw)(q),
+        et = (0, j.nw)(q),
         en = (0, o.e7)([T.Z], () => T.Z.getChannel(s)),
         ei = (0, w.Bs)(en),
         er = (0, o.e7)([m.Z], () => m.Z.shouldDisplayPrompt(t) && !0 === n, [t, n]),
@@ -120,8 +120,8 @@ function V(e) {
     let [ea, eo] = r.useState(!0);
     if (
         (r.useEffect(() => {
-            null != j && (k(Math.floor((j - 280) / 58)), eo(!1));
-        }, [j]),
+            null != E && (k(Math.floor((E - 280) / 58)), eo(!1));
+        }, [E]),
         null == q || null == K)
     )
         return null;
@@ -137,7 +137,7 @@ function V(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)("div", {
-                className: a()(U.container, { [U.header]: V }),
+                className: a()(U.container, { [U.header]: H }),
                 ref: x,
                 children: [
                     et
@@ -155,7 +155,7 @@ function V(e) {
                                       !J &&
                                       null != ei &&
                                       (0, i.jsx)("div", {
-                                          className: F.reactions,
+                                          className: V.reactions,
                                           children: (0, i.jsx)(O.le, {
                                               message: K,
                                               readOnly: !1,
@@ -192,7 +192,7 @@ function V(e) {
                                           message: K,
                                           channel: q,
                                           useChatFontScaling: !1,
-                                          className: a()(B.secondary, U.addReactButton, { [U.hasNoReactions]: !es }),
+                                          className: a()(F.secondary, U.addReactButton, { [U.hasNoReactions]: !es }),
                                           isForumToolbar: !0,
                                           children: !es && D.intl.string(D.t.xpOyTO),
                                       }),
@@ -202,7 +202,7 @@ function V(e) {
                         className: U.buttons,
                         children: [
                             et
-                                ? (0, i.jsx)(H, { channel: q })
+                                ? (0, i.jsx)(B, { channel: q })
                                 : (0, i.jsx)(c.u, {
                                       text: D.intl.string(D.t.F7oeDv),
                                       children: (0, i.jsx)(u.Button, {

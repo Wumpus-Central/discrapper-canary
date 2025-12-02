@@ -117,12 +117,12 @@ function y() {
         [y, C] = l.useState(null),
         S = l.useRef(null),
         E = l.useRef(null),
-        [T, N] = l.useState(0.5),
+        [N, T] = l.useState(0.5),
         {
             krispModels: O,
             krispModelOverride: P,
-            inputMode: I,
-            echoCancellation: w,
+            inputMode: w,
+            echoCancellation: I,
             autoThreshold: k,
             vadUseKrisp: R,
             vadKrispActivationThreshold: A,
@@ -161,7 +161,7 @@ function y() {
         let n = G.createBufferSource();
         (n.buffer = e.audioBuffer),
             (E.current = G.createGain()),
-            (E.current.gain.value = T),
+            (E.current.gain.value = N),
             n.connect(E.current),
             E.current.connect(G.destination),
             (n.loop = !0),
@@ -251,7 +251,7 @@ function y() {
                                 }),
                             ],
                         }),
-                    I === g.pM.VOICE_ACTIVITY &&
+                    w === g.pM.VOICE_ACTIVITY &&
                         (0, a.jsxs)(a.Fragment, {
                             children: [
                                 (0, a.jsx)(c.rsf, {
@@ -289,7 +289,7 @@ function y() {
                         }),
                     (0, a.jsx)(c.rsf, {
                         label: "Echo Cancellation",
-                        checked: w,
+                        checked: I,
                         onChange: (e) => d.Z.setEchoCancellation(e),
                     }),
                     (0, a.jsxs)(c.Kqy, {
@@ -327,7 +327,7 @@ function y() {
                                                           audioBuffer: i,
                                                           createdAt: Date.now(),
                                                           suppression: B,
-                                                          echoCancellation: w,
+                                                          echoCancellation: I,
                                                           krispSuppressionLevel: j,
                                                       },
                                                   ]);
@@ -339,9 +339,9 @@ function y() {
                     }),
                     (0, a.jsx)(c.iRW, {
                         label: "Volume",
-                        initialValue: T,
+                        initialValue: N,
                         asValueChanges: function (e) {
-                            null != E.current && ((E.current.gain.value = e), N(e));
+                            null != E.current && ((E.current.gain.value = e), T(e));
                         },
                         minValue: 0,
                         maxValue: 1,

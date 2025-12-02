@@ -77,15 +77,15 @@ let p = r.forwardRef(function (e, t) {
             onRequestClose: y,
         } = e,
         [C, v] = r.useState(!1),
-        { isHovered: _, setIsHovered: O, onMouseEnter: x, onMouseLeave: j, cancelTimers: E } = (0, o.Z)(200, 300);
+        { isHovered: _, setIsHovered: O, onMouseEnter: x, onMouseLeave: E, cancelTimers: j } = (0, o.Z)(200, 300);
     function S(e) {
         "focus" === e.type || C || x();
     }
     function P() {
-        C || j();
+        C || E();
     }
     function I(e) {
-        E(), v(!C), C ? null == b || b() : null == g || g(), (!_ || C) && e();
+        j(), v(!C), C ? null == b || b() : null == g || g(), (!_ || C) && e();
     }
     r.useImperativeHandle(
         t,

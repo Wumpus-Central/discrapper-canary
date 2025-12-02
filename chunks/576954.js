@@ -49,14 +49,14 @@ function v(e) {
 function _(e) {
     let { channelId: t, warningId: _, senderId: O } = e,
         { isBlocked: x } = (0, a.cj)([p.Z], () => ({ isBlocked: p.Z.isBlocked(O) }), [O]),
-        j = r.useCallback(() => {
+        E = r.useCallback(() => {
             (0, h.T)(t, [_]);
         }, [t, _]),
-        E = (0, b.C2)(),
+        j = (0, b.C2)(),
         S = r.useCallback(
             (e) => () => {
                 s.Z.blockUser(O, { location: b.zr }).then(() => {
-                    j();
+                    E();
                 }),
                     (0, m.qc)({
                         channelId: t,
@@ -66,7 +66,7 @@ function _(e) {
                         cta: e,
                     });
             },
-            [j, t, _, O],
+            [E, t, _, O],
         );
     r.useEffect(() => {
         (0, m.MC)(y.rMx.SAFETY_WARNING_VIEWED, {
@@ -89,7 +89,7 @@ function _(e) {
                         warningId: _,
                         senderId: O,
                         description: C.intl.string(C.t.DJMZX6),
-                        safetyTipRows: E.map((e, t) =>
+                        safetyTipRows: j.map((e, t) =>
                             (0, i.jsx)(
                                 u.q,
                                 {
@@ -201,7 +201,7 @@ function _(e) {
         warningType: f.pj.STRANGER_DANGER,
         header: C.intl.string(C.t.iOkDpM),
         description: C.intl.string(C.t.ISUbcM),
-        onDismiss: j,
+        onDismiss: E,
         buttons: [
             {
                 text: C.intl.string(C.t["Qk/c48"]),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(442837),
@@ -20,8 +20,8 @@ var i = n(54381),
     _ = n(871499),
     O = n(127379),
     x = n(388032);
-function j(e) {
-    let { channel: t, themeable: j, whichPopoutIsOpen: E, setWhichPopoutIsOpen: S } = e,
+function E(e) {
+    let { channel: t, themeable: E, whichPopoutIsOpen: j, setWhichPopoutIsOpen: S } = e,
         { parentAnalyticsLocation: P } = (0, u.ZP)(),
         {
             Component: I,
@@ -34,8 +34,8 @@ function j(e) {
         L = w || M || R,
         D = (0, m.sR)({ isSoundboardButtonDisabled: L }),
         [k, U] = (0, h.cv)(D),
-        { analyticsLocations: F } = (0, u.ZP)(),
-        { isHovered: B, setIsHovered: H, onMouseEnter: V, onMouseLeave: G } = (0, f.Z)(200, 300);
+        { analyticsLocations: V } = (0, u.ZP)(),
+        { isHovered: F, setIsHovered: B, onMouseEnter: H, onMouseLeave: G } = (0, f.Z)(200, 300);
     function z(e) {
         null != A &&
             (0, c.jW)(e, async () => {
@@ -71,7 +71,7 @@ function j(e) {
                         })(
                             {
                                 guildId: A,
-                                sourceAnalyticsLocations: F,
+                                sourceAnalyticsLocations: V,
                             },
                             t,
                         )),
@@ -95,21 +95,21 @@ function j(e) {
     }
     function W() {
         (0, d.v)(P, d.d.SOUNDBOARD),
-            E === O.D.SOUNDBOARD
+            j === O.D.SOUNDBOARD
                 ? (null == S || S(void 0), G())
-                : (null != E ? (Z(), V()) : Z(), null == S || S(O.D.SOUNDBOARD));
+                : (null != j ? (Z(), H()) : Z(), null == S || S(O.D.SOUNDBOARD));
     }
     let q = r.useRef(null);
     return (0, i.jsx)(s.y, {
         targetElementRef: q,
-        shouldShow: (B && (E === O.D.SOUNDBOARD || null == E)) || E === O.D.SOUNDBOARD,
+        shouldShow: (F && (j === O.D.SOUNDBOARD || null == j)) || j === O.D.SOUNDBOARD,
         animation: s.y.Animation.FADE,
         animationPosition: "top",
         position: "top",
         align: "center",
         spacing: 16,
         onRequestClose: () => {
-            H(!1), null == S || S(void 0);
+            B(!1), null == S || S(void 0);
         },
         renderPopout: (e) => {
             let { closePopout: n } = e;
@@ -117,7 +117,7 @@ function j(e) {
                 ? null
                 : (0, i.jsx)(v.Z, {
                       children: (0, i.jsx)("div", {
-                          onMouseEnter: V,
+                          onMouseEnter: H,
                           onMouseLeave: G,
                           children: (0, i.jsx)(b.Z, {
                               guildId: A,
@@ -138,7 +138,7 @@ function j(e) {
             (0, i.jsx)(_.d, {
                 ref: q,
                 isTrayButton: !0,
-                themeable: j,
+                themeable: E,
                 label: w
                     ? x.intl.string(x.t["Ox4/zU"])
                     : M
@@ -151,13 +151,13 @@ function j(e) {
                 onContextMenu: z,
                 onClick: W,
                 onMouseEnter: () => {
-                    V(), T();
+                    H(), T();
                 },
                 onMouseLeave: () => {
-                    null == E && (G(), N());
+                    null == j && (G(), N());
                 },
-                isActive: B || E === O.D.SOUNDBOARD,
-                color: B || E === O.D.SOUNDBOARD ? "primaryDark" : void 0,
+                isActive: F || j === O.D.SOUNDBOARD,
+                color: F || j === O.D.SOUNDBOARD ? "primaryDark" : void 0,
             }),
     });
 }

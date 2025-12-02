@@ -1,46 +1,46 @@
-n.d(e, { Z: () => g });
-var l = n(54381);
-n(473749);
-var r = n(442837),
-    i = n(481060),
-    u = n(357156),
-    o = n(471253),
-    c = n(924301),
-    a = n(482241),
-    s = n(765305),
-    d = n(388032);
-function g(t, e, g) {
-    let { canManageGuildEvent: f } = (0, u.XJ)(null != g ? g : e),
-        b = (0, r.e7)([c.ZP], () => c.ZP.isActive(t)),
-        v = (0, r.e7)([c.ZP], () => c.ZP.getGuildScheduledEvent(t), [t]),
-        E = f(v);
-    if (null == t || !E || !b || (null == v ? void 0 : v.entity_type) === s.WX.EXTERNAL) return null;
-    let p = () => {
-        (null == g ? void 0 : g.isGuildStageVoice()) ? (0, o.NZ)(g) : null != t && a.Z.endEvent(t, e.id), (0, i.pTH)();
+e.d(t, { Z: () => Z });
+var i = e(54381);
+e(473749);
+var l = e(442837),
+    r = e(481060),
+    a = e(357156),
+    c = e(471253),
+    s = e(924301),
+    o = e(482241),
+    d = e(765305),
+    u = e(388032);
+function Z(n, t, Z) {
+    let { canManageGuildEvent: h } = (0, a.XJ)(null != Z ? Z : t),
+        g = (0, l.e7)([s.ZP], () => s.ZP.isActive(n)),
+        f = (0, l.e7)([s.ZP], () => s.ZP.getGuildScheduledEvent(n), [n]),
+        v = h(f);
+    if (null == n || !v || !g || (null == f ? void 0 : f.entity_type) === d.WX.EXTERNAL) return null;
+    let j = () => {
+        (null == Z ? void 0 : Z.isGuildStageVoice()) ? (0, c.NZ)(Z) : null != n && o.Z.endEvent(n, t.id), (0, r.pTH)();
     };
-    return (0, l.jsx)(i.sNh, {
-        id: d.intl.string(d.t.qaYzPA),
-        label: d.intl.string(d.t.qaYzPA),
+    return (0, i.jsx)(r.sNh, {
+        id: u.intl.string(u.t.qaYzPA),
+        label: u.intl.string(u.t.qaYzPA),
         action: function () {
-            (0, i.ZDy)(async () => {
-                let { Modal: t } = await Promise.resolve().then(n.bind(n, 793030));
-                return (e) => {
-                    let { onClose: n, transitionState: r } = e;
-                    return (0, l.jsx)(t, {
-                        transitionState: r,
-                        title: d.intl.string(d.t.qaYzPA),
-                        subtitle: d.intl.string(d.t.bnDQ7E),
-                        onClose: n,
+            (0, r.ZDy)(async () => {
+                let { Modal: n } = await Promise.resolve().then(e.bind(e, 793030));
+                return (t) => {
+                    let { onClose: e, transitionState: l } = t;
+                    return (0, i.jsx)(n, {
+                        transitionState: l,
+                        title: u.intl.string(u.t.qaYzPA),
+                        subtitle: u.intl.string(u.t.bnDQ7E),
+                        onClose: e,
                         actions: [
                             {
-                                onClick: n,
+                                onClick: e,
                                 variant: "secondary",
-                                text: d.intl.string(d.t["ETE/oC"]),
+                                text: u.intl.string(u.t["ETE/oC"]),
                             },
                             {
-                                onClick: p,
+                                onClick: j,
                                 variant: "critical-primary",
-                                text: d.intl.string(d.t.mjB9pd),
+                                text: u.intl.string(u.t.mjB9pd),
                             },
                         ],
                     });

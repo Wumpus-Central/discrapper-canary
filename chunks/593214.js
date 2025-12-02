@@ -1,53 +1,53 @@
 n.d(t, {
-    Mt: () => O,
-    li: () => f,
-    s4: () => E,
-    up: () => p,
-    zv: () => g,
+    Mt: () => p,
+    li: () => c,
+    s4: () => _,
+    up: () => g,
+    zv: () => v,
 }),
     n(388685),
     n(539854);
 var i = n(473749),
-    r = n(106351),
+    a = n(106351),
     l = n(442837);
 n(592125);
-var u = n(984933),
-    a = n(914010);
+var r = n(984933),
+    u = n(914010);
 n(709054);
 var o = n(853856),
-    c = n(362658),
-    d = n(434065),
-    s = n(981631);
-function f(e) {
-    let { favoritesEnabled: t, hasStaffPrivileges: n } = (0, c.z)("useCanFavoriteChannel"),
+    d = n(362658),
+    s = n(434065),
+    f = n(981631);
+function c(e) {
+    let { favoritesEnabled: t, hasStaffPrivileges: n } = (0, d.z)("useCanFavoriteChannel"),
         i = (0, l.e7)([o.Z], () => o.Z.isFavorite(e.id)),
-        r = e.isDM() || e.isThread();
-    return t && !__OVERLAY__ && !i && (!r || n);
+        a = e.isDM() || e.isThread();
+    return t && !__OVERLAY__ && !i && (!a || n);
 }
-function E(e) {
+function _(e) {
     return (0, l.e7)([o.Z], () => o.Z.getFavorite(e));
 }
-function g() {
-    return (0, l.e7)([u.ZP], () => u.ZP.getChannels(s.I_8))[r.d.GUILD_CATEGORY].map((e) => ({
+function v() {
+    return (0, l.e7)([r.ZP], () => r.ZP.getChannels(f.I_8))[a.d.GUILD_CATEGORY].map((e) => ({
         id: "null" === e.channel.id ? null : e.channel.id,
         name: e.channel.name,
     }));
 }
-function O() {
-    return (0, l.e7)([a.Z], () => a.Z.getGuildId()) === s.I_8;
-}
 function p() {
-    let { isFavoritesPerk: e } = (0, c.z)("useFavoriteAdded"),
-        t = (0, d.r)(),
+    return (0, l.e7)([u.Z], () => u.Z.getGuildId()) === f.I_8;
+}
+function g() {
+    let { isFavoritesPerk: e } = (0, d.z)("useFavoriteAdded"),
+        t = (0, s.r)(),
         n = i.useCallback(() => {
             e && t.notifyFavoriteAdded();
         }, [t, e]),
-        r = i.useCallback(() => {
+        a = i.useCallback(() => {
             e && t.clearFavoriteAdded();
         }, [t, e]);
     return {
         favoriteAdded: t.favoriteAdded,
         notifyFavoriteAdded: n,
-        clearFavoriteAdded: r,
+        clearFavoriteAdded: a,
     };
 }

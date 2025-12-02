@@ -20,8 +20,8 @@ var i = n(54381),
     _ = n(433355),
     O = n(699516),
     x = n(594174),
-    j = n(768581),
-    E = n(525541),
+    E = n(768581),
+    j = n(525541),
     S = n(981631),
     P = n(228168),
     I = n(388032),
@@ -38,7 +38,7 @@ let T = (e) => {
                                   let { guild: n } = e,
                                       r =
                                           null != n
-                                              ? j.ZP.getGuildIconURL({
+                                              ? E.ZP.getGuildIconURL({
                                                     id: n.id,
                                                     icon: n.icon,
                                                     size: 24,
@@ -271,7 +271,7 @@ let T = (e) => {
                                   showingBanner: r,
                               }),
                               !r &&
-                                  (0, i.jsx)(E.Z, {
+                                  (0, i.jsx)(j.Z, {
                                       otherUserId: t,
                                       channel: n,
                                       navigateAwayOnReportSuccess: h,

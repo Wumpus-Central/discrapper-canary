@@ -66,7 +66,7 @@ let p = (e) => {
                     column2: (0, r.jsx)(m, { includes: !0 }),
                 },
                 2: {
-                    label: (0, r.jsx)(p, { text: d.intl.string(d.t.RIRtn9) }),
+                    label: (0, r.jsx)(p, { text: d.intl.string(d.t.DmfiwT) }),
                     column1: (0, r.jsx)(m, { includes: !0 }),
                     column2: (0, r.jsx)(m, { includes: !0 }),
                 },

@@ -22,16 +22,16 @@ var a = n(54381),
     C = n(550532),
     S = n(71585),
     E = n(146282),
-    T = n(780106),
-    N = n(650613),
+    N = n(780106),
+    T = n(650613),
     O = n(789086),
     P = n(206583),
-    I = n(680027),
-    w = n(451429);
+    w = n(680027),
+    I = n(451429);
 let k = [
     {
         key: "type",
-        cellClassName: r()(I.cell, I.cellType),
+        cellClassName: r()(w.cell, w.cellType),
         render(e) {
             let { type: t } = e;
             return (0, a.jsx)(p.Text, {
@@ -42,7 +42,7 @@ let k = [
     },
     {
         key: "count",
-        cellClassName: r()(I.cell, I.cellCount),
+        cellClassName: r()(w.cell, w.cellCount),
         render(e) {
             let { entries: t } = e;
             return (0, a.jsx)("div", {
@@ -55,7 +55,7 @@ let k = [
     },
     {
         key: "only?",
-        cellClassName: I.cell,
+        cellClassName: w.cell,
         render(e) {
             let { type: t } = e;
             return (0, a.jsx)(R, { type: t });
@@ -130,9 +130,9 @@ function A() {
         U = (0, f.Z)(M).filter(y.lm),
         F = (0, u.e7)([C.Z], () => C.Z.getFakeGameToShow());
     return (0, a.jsx)("div", {
-        className: w.panel,
+        className: I.panel,
         children: (0, a.jsxs)(p.zJl, {
-            className: I.content,
+            className: w.content,
             children: [
                 (0, a.jsxs)(p.Kqy, {
                     gap: 8,
@@ -204,7 +204,7 @@ function A() {
                     ],
                 }),
                 !1,
-                (0, a.jsx)(N.Z, {}),
+                (0, a.jsx)(T.Z, {}),
                 (0, a.jsxs)(p.Kqy, {
                     gap: 8,
                     children: [
@@ -248,7 +248,7 @@ function A() {
                             children: "Force show game:",
                         }),
                         (0, a.jsx)(p.PhF, {
-                            options: T.h.map((e) => ({
+                            options: N.h.map((e) => ({
                                 label: e,
                                 value: e,
                             })),

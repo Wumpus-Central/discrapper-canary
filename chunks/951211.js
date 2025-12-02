@@ -45,14 +45,14 @@ function f(e) {
             canSummarizeThreads: O,
             showAppLauncher: x,
         } = e,
-        j = [];
+        E = [];
     t &&
-        (j.push({
+        (E.push({
             type: "UPLOAD_A_FILE",
             icon: l.xD0,
             display: p.intl.string(p.t["d3+iYs"]),
         }),
-        j.push({
+        E.push({
             type: "UPLOAD_TEXT_AS_FILE",
             icon: l.xD0,
             display: p.intl.string(p.t["G9s+EM"]),
@@ -60,7 +60,7 @@ function f(e) {
         f &&
             t &&
             v !== d.IlC.POPOUT &&
-            j.push({
+            E.push({
                 type: "CLIPS",
                 icon: l.AlX,
                 display: p.intl.string(p.t.o034cv),
@@ -68,37 +68,37 @@ function f(e) {
                 badgeColor: r.Z.colors.BG_BRAND.css,
             }),
         n &&
-            j.push({
+            E.push({
                 type: "CREATE_THREAD",
                 icon: l.YPH,
                 display: p.intl.string(p.t.rBIGBL),
             }),
         y &&
-            j.push({
+            E.push({
                 type: "POLL",
                 icon: l.QDj,
                 display: p.intl.string(p.t.Flr51u),
             });
-    let { renameAppsToAppCommandsInOverflow: E, moveAppsEntrypointToOverflow: S } = u.n.getConfig({
+    let { renameAppsToAppCommandsInOverflow: j, moveAppsEntrypointToOverflow: S } = u.n.getConfig({
         location: "getChannelAttachOptions",
     });
     return (
         S
             ? x &&
-              j.push({
+              E.push({
                   type: "APP_LAUNCHER",
                   icon: l.jje,
                   display: p.intl.string(p.t.nqswKn),
               })
             : i &&
               h &&
-              j.push({
+              E.push({
                   type: "SLASH_COMMAND",
                   icon: l.jje,
-                  display: p.intl.string(E ? p.t["5Y0Fam"] : p.t.Bbvp6G),
+                  display: p.intl.string(j ? p.t["5Y0Fam"] : p.t.Bbvp6G),
               }),
         C &&
-            j.push({
+            E.push({
                 type: "ACTIVITY",
                 icon: l.nG3,
                 display: p.intl.string(p.t["16Lfrb"]),
@@ -107,7 +107,7 @@ function f(e) {
             !(0, a.Z)(e, d.xjy.EMBEDDED) &&
                 (e.type === d.IIU.PLAYING &&
                     (0, a.Z)(e, d.xjy.JOIN) &&
-                    j.push({
+                    E.push({
                         type: "INVITE_TO_GAME",
                         icon: l.xoD,
                         display: p.intl.formatToPlainString(p.t["KHLo+F"], {
@@ -118,7 +118,7 @@ function f(e) {
                     }),
                 e.type === d.IIU.LISTENING &&
                     (0, a.Z)(e, d.xjy.SYNC) &&
-                    j.push({
+                    E.push({
                         type: "INVITE_TO_LISTEN",
                         icon: l.iOO,
                         display: p.intl.formatToPlainString(p.t.I479px, {
@@ -129,7 +129,7 @@ function f(e) {
                     }),
                 e.type === d.IIU.WATCHING &&
                     (0, a.Z)(e, d.xjy.SYNC) &&
-                    j.push({
+                    E.push({
                         type: "INVITE_TO_WATCH",
                         icon: l.tEF,
                         display: p.intl.formatToPlainString(p.t["EvCP/g"], {
@@ -140,18 +140,18 @@ function f(e) {
                     }));
         }),
         _ &&
-            j.push({
+            E.push({
                 type: "SCHEDULED_MESSAGE",
                 icon: l.T39,
                 display: p.intl.string(p.t["3+ii4F"]),
             }),
         m.isThread() &&
             O &&
-            j.push({
+            E.push({
                 type: "SUMMARIZE_THREAD",
                 icon: l.$2U,
                 display: p.intl.string(p.t.EXfguE),
             }),
-        j
+        E
     );
 }

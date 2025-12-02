@@ -49,7 +49,7 @@ let y = function (e) {
         [h, x] = l.useState(!0),
         [y, C] = l.useState(null),
         [S, E] = l.useState(!1),
-        T = l.useCallback(async () => {
+        N = l.useCallback(async () => {
             x(!0), C(null);
             try {
                 var e;
@@ -79,7 +79,7 @@ let y = function (e) {
                 x(!1);
             }
         }, [t]),
-        N = l.useCallback(
+        T = l.useCallback(
             async (e) => {
                 if (null !== n) {
                     E(!0);
@@ -89,7 +89,7 @@ let y = function (e) {
                             flow_id: n.flow_context.flow_id,
                             data: e,
                         };
-                        await (0, d.Wl)(t), T();
+                        await (0, d.Wl)(t), N();
                     } catch (e) {
                         C(b.intl.string(g.default["+QRSxc"]));
                     } finally {
@@ -97,10 +97,10 @@ let y = function (e) {
                     }
                 }
             },
-            [n, T],
+            [n, N],
         );
     (0, r.ZP)(() => {
-        T();
+        N();
     });
     let O = l.useMemo(() => (null == n ? void 0 : n.task_type) === m.UA.AGE_VERIFICATION, [n]);
     return (0, a.jsxs)("div", {
@@ -117,7 +117,7 @@ let y = function (e) {
                       entryPoint: s.cU.SAFETY_FLOWS,
                       onClose: f.dG,
                       onComplete: async () => {
-                          await N({ type: m.rY.Empty });
+                          await T({ type: m.rY.Empty });
                       },
                       dismissable: !1,
                   })
@@ -172,7 +172,7 @@ let y = function (e) {
                                                                 fullWidth: !0,
                                                                 text: b.intl.string(b.t["7NqTJn"]),
                                                                 onClick: () => {
-                                                                    T();
+                                                                    N();
                                                                 },
                                                             }),
                                                         ],
@@ -183,7 +183,7 @@ let y = function (e) {
                                             null != n &&
                                             (0, a.jsx)(_, {
                                                 task: n,
-                                                handleSubmit: N,
+                                                handleSubmit: T,
                                                 disabled: S,
                                             }),
                                     ],

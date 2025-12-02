@@ -159,15 +159,15 @@ let y = (e) => {
         let [e, t] = l.useState(-1),
             [n, s] = l.useState(-1),
             [C, S] = l.useState(!1),
-            [E, T] = l.useState(5000),
-            [N, O] = l.useState(!1),
+            [E, N] = l.useState(5000),
+            [T, O] = l.useState(!1),
             P = l.useRef(null),
-            I = (0, r.e7)([b.default], () => b.default.getCurrentUser()),
-            w = (0, h.u)(),
+            w = (0, r.e7)([b.default], () => b.default.getCurrentUser()),
+            I = (0, h.u)(),
             [k] = l.useState(() =>
                 (0, x.o8)({
                     finishSetup: async () => !0,
-                    perkAvailableToUser: w,
+                    perkAvailableToUser: I,
                 }),
             ),
             {
@@ -203,8 +203,8 @@ let y = (e) => {
         }, [K, L]);
         let q = l.useCallback(async () => m._n.INSTALLING, []);
         l.useEffect(() => {
-            W(w);
-        }, [w, W]),
+            W(I);
+        }, [I, W]),
             l.useEffect(() => {
                 H(q);
             }, [H, q]);
@@ -264,7 +264,7 @@ let y = (e) => {
                                                   style: { width: "45px" },
                                                   children: (0, a.jsx)(o.rsf, {
                                                       onChange: () => {
-                                                          V ? (0, u.C)(null, I) : (0, u.C)(j.F_, I);
+                                                          V ? (0, u.C)(null, w) : (0, u.C)(j.F_, w);
                                                       },
                                                       checked: V,
                                                   }),
@@ -406,7 +406,7 @@ let y = (e) => {
                                                       children: "Install time",
                                                   }),
                                                   (0, a.jsx)(c.PhF, {
-                                                      select: (e) => T(e),
+                                                      select: (e) => N(e),
                                                       isSelected: (e) => e === E,
                                                       serialize: (e) => "".concat(e),
                                                       options: [
@@ -467,7 +467,7 @@ let y = (e) => {
                                               O(!0);
                                           },
                                       }),
-                                      N &&
+                                      T &&
                                           (0, a.jsx)(d.default, {
                                               url: "https://www.discord.com",
                                               trustUrl: () => !1,

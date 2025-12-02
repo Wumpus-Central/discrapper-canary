@@ -22,7 +22,7 @@ function v(e) {
         x = r.useCallback(() => {
             (0, p.T)(t, [v]);
         }, [t, v]),
-        j = (e) => {
+        E = (e) => {
             o.Z.updateChannelOverrideSettings(null, t, { muted: !0 }, g.ZB.Muted),
                 c.Z.showMuteSuccessToast(_, t),
                 (0, f.qc)({
@@ -88,7 +88,7 @@ function v(e) {
                                                 description: C.intl.string(C.t.w2ve0t),
                                                 buttonText: C.intl.string(C.t.ftIK2A),
                                                 onButtonPress: () => {
-                                                    j(f.NM.USER_MODAL_MUTE), l();
+                                                    E(f.NM.USER_MODAL_MUTE), l();
                                                 },
                                             },
                                             "likely-ato-mute",
@@ -123,7 +123,7 @@ function v(e) {
                 },
                 {
                     text: C.intl.string(C.t.ftIK2A),
-                    onClick: () => j(f.NM.USER_BANNER_MUTE),
+                    onClick: () => E(f.NM.USER_BANNER_MUTE),
                 },
             ],
         })

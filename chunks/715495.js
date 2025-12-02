@@ -64,7 +64,7 @@ function _() {
         [s, d] = (0, l.useState)(!1),
         [h, f] = (0, l.useState)(null),
         _ = (0, u.ZP)((e) => e.toolsCache),
-        { setToolsCache: T, removeToolsCache: N } = (0, u.L3)(),
+        { setToolsCache: N, removeToolsCache: T } = (0, u.L3)(),
         { setImgCache: O } = (0, u.W_)(),
         P = (0, l.useCallback)(
             (e) => {
@@ -90,7 +90,7 @@ function _() {
             },
             [_],
         ),
-        I = (0, l.useCallback)((e) => {
+        w = (0, l.useCallback)((e) => {
             f((t) =>
                 null == t
                     ? null
@@ -100,11 +100,11 @@ function _() {
                       }),
             );
         }, []),
-        w = (0, l.useCallback)(
+        I = (0, l.useCallback)(
             (e) => {
-                N(e);
+                T(e);
             },
-            [N],
+            [T],
         );
     return (0, a.jsxs)(a.Fragment, {
         children: [
@@ -140,7 +140,7 @@ function _() {
                                 (0, a.jsx)(x.Z, {
                                     selected: null == h || null == (e = h.palette) ? void 0 : e.name,
                                     onSelect: (e) => {
-                                        (null == h ? void 0 : h.src) != null && T(h.src, h.src, e), I(e);
+                                        (null == h ? void 0 : h.src) != null && N(h.src, h.src, e), w(e);
                                     },
                                 }),
                         ],
@@ -166,7 +166,7 @@ function _() {
                                     let t = URL.createObjectURL(e[0]),
                                         n = e[0],
                                         a = await n.arrayBuffer();
-                                    O(t, t, (0, p.xh)(a)), T(t, t, m.jD);
+                                    O(t, t, (0, p.xh)(a)), N(t, t, m.jD);
                                 },
                             }),
                             (0, a.jsx)("div", {
@@ -178,7 +178,7 @@ function _() {
                                         {
                                             src: t,
                                             onSetStatic: P,
-                                            removeAsset: w,
+                                            removeAsset: I,
                                         },
                                         t,
                                     );
@@ -187,7 +187,7 @@ function _() {
                             (0, a.jsx)(E, {
                                 label: "gradient override",
                                 onChange: (e) =>
-                                    I({
+                                    w({
                                         name: m._j,
                                         darkBackground: e,
                                         lightBackground: e,
@@ -253,12 +253,12 @@ function y(e) {
                         variant: "text-sm/semibold",
                         children: "Memberlist",
                     }),
-                    (0, a.jsx)(T, { nameplate: t }),
+                    (0, a.jsx)(N, { nameplate: t }),
                     (0, a.jsx)(r.Text, {
                         variant: "text-sm/semibold",
                         children: "DMs",
                     }),
-                    (0, a.jsx)(N, { nameplate: t }),
+                    (0, a.jsx)(T, { nameplate: t }),
                     (0, a.jsx)(r.Text, {
                         variant: "text-sm/semibold",
                         children: "RTC",
@@ -343,7 +343,7 @@ function E(e) {
         ],
     });
 }
-function T(e) {
+function N(e) {
     let { nameplate: t } = e,
         n = (0, i.e7)([d.default], () => d.default.getCurrentUser());
     return (0, a.jsx)("div", {
@@ -385,7 +385,7 @@ function T(e) {
         }),
     });
 }
-function N(e) {
+function T(e) {
     let { nameplate: t } = e;
     return (0, a.jsx)("div", {
         className: b.preview,

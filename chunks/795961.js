@@ -2,8 +2,8 @@ n.d(e, { Z: () => _ });
 var i = n(509613),
     r = n(313789),
     l = n(444250),
-    u = n(825193),
-    s = n(650271),
+    s = n(825193),
+    u = n(650271),
     a = n(263735),
     o = n(645912),
     c = n(755322),
@@ -16,5 +16,5 @@ var i = n(509613),
     O = n(388032);
 let _ = (0, i.vB)(r.n.APP_SECTION, {
     useLabel: () => O.intl.string(O.t.f2n1TP),
-    buildLayout: () => [s.z, l.F, I.K, S.g, a.Q, c.m, o.G, E.a, g.R, d.o, T.g, u.w],
+    buildLayout: () => [u.z, l.F, I.K, S.g, a.Q, c.m, o.G, E.a, g.R, d.o, T.g, s.w],
 });

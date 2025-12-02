@@ -1,4 +1,4 @@
-n.d(t, { $: () => F }), n(388685), n(781311);
+n.d(t, { $: () => V }), n(388685), n(781311);
 var i = n(54381),
     r = n(473749),
     l = n(120356),
@@ -20,8 +20,8 @@ var i = n(54381),
     _ = n(833858),
     O = n(699263),
     x = n(54332),
-    j = n(298905),
-    E = n(671746),
+    E = n(298905),
+    j = n(671746),
     S = n(778169),
     P = n(17030),
     I = n(223135),
@@ -77,15 +77,15 @@ function U(e, t) {
         e
     );
 }
-function F(e) {
+function V(e) {
     var t, n, l, o;
-    let { channel: F, setIsHangStatusInputFocused: B, setIsEmojiPickerOpen: H, setPopoutRef: V } = e,
+    let { channel: V, setIsHangStatusInputFocused: F, setIsEmojiPickerOpen: B, setPopoutRef: H } = e,
         G = r.useRef(null),
         z = (0, u.e7)([v.Z], () => v.Z.getCustomHangStatus()),
-        W = (0, E.Z)(),
+        W = (0, j.Z)(),
         q = (0, u.e7)([v.Z], () => v.Z.getFavoritedStatuses()),
         { defaultStatusVariant: K, allowPermanentClear: Y } = (0, C.bN)({
-            guildId: F.guild_id,
+            guildId: V.guild_id,
             location: "HangStatusPicker",
         }),
         X = (0, _.V)(K),
@@ -97,7 +97,7 @@ function F(e) {
         el = X[er],
         ea = q.length > 0,
         eo = null == Q || "" === Q.trim(),
-        es = (0, j.Z)(F),
+        es = (0, E.Z)(V),
         ec =
             (Q.trim().length > 0 && Q.trim() !== (null == z || null == (t = z.status) ? void 0 : t.trim())) ||
             (null != ee && !s()(ee, null == z ? void 0 : z.emoji)),
@@ -108,7 +108,7 @@ function F(e) {
     r.useEffect(() => {
         b.default.track(
             A.rMx.HANG_STATUS_PICKER_OPENED,
-            U(k({}, (0, O.Z)(F.id)), {
+            U(k({}, (0, O.Z)(V.id)), {
                 num_favorites: q.length,
                 num_recents: W.length,
             }),
@@ -119,11 +119,11 @@ function F(e) {
         }, [Q, ee, eu]),
         r.useEffect(() => {
             var e;
-            en || (Q !== (null != (e = null == z ? void 0 : z.status) ? e : "") && "" !== Q.trim()) ? B(!0) : B(!1);
-        }, [Q, null == z ? void 0 : z.status, ee, null == z ? void 0 : z.emoji, B, en]),
+            en || (Q !== (null != (e = null == z ? void 0 : z.status) ? e : "") && "" !== Q.trim()) ? F(!0) : F(!1);
+        }, [Q, null == z ? void 0 : z.status, ee, null == z ? void 0 : z.emoji, F, en]),
         r.useEffect(() => {
-            null == V || V(null == J ? void 0 : J.current);
-        }, [J, V]);
+            null == H || H(null == J ? void 0 : J.current);
+        }, [J, H]);
     let eg = r.useCallback(
             (e) => {
                 e !== er && ((0, y.Zx)(e, !0), null != ee && et(null), "" !== Q.trim() && $(""));
@@ -192,24 +192,24 @@ function F(e) {
                 $(n.name),
                 ei(!0),
                 null == (e = G.current) || e.focus(),
-                b.default.track(A.rMx.HANG_STATUS_RANDOMIZER_CLICKED, (0, O.Z)(F.id)));
-        }, [es, ee, F.id]),
+                b.default.track(A.rMx.HANG_STATUS_RANDOMIZER_CLICKED, (0, O.Z)(V.id)));
+        }, [es, ee, V.id]),
         e_ = r.useCallback(
             (e, t) => {
                 let n = (0, x.Z)(t);
                 (!ep || e) &&
                     ((0, y.tg)(n ? t : t.status, n ? null : t.emoji),
-                    b.default.track(A.rMx.HANG_STATUS_FAVORITE_CLICKED, U(k({}, (0, O.Z)(F.id)), { favorited: !e })));
+                    b.default.track(A.rMx.HANG_STATUS_FAVORITE_CLICKED, U(k({}, (0, O.Z)(V.id)), { favorited: !e })));
             },
-            [F.id, ep],
+            [V.id, ep],
         ),
         eO = r.useCallback(() => {
-            B(!1);
-        }, [B]),
+            F(!1);
+        }, [F]),
         ex = r.useCallback(() => {
-            B(!0);
-        }, [B]),
-        ej = r.useCallback(
+            F(!0);
+        }, [F]),
+        eE = r.useCallback(
             (e, t, n) => {
                 var r;
                 let l = (0, x.Z)(e),
@@ -248,7 +248,7 @@ function F(e) {
             },
             [K, ey, eg, X, e_],
         ),
-        eE = r.useCallback(() => {
+        ej = r.useCallback(() => {
             (0, y.Sc)(!0, Y), et(null), $(""), ei(!1);
         }, [Y]),
         eS = r.useCallback((e) => {
@@ -297,7 +297,7 @@ function F(e) {
                                             setCustomStatusEmoji: et,
                                             selectedDefaultStatus: en || eh ? null : er,
                                             defaultStatusVariant: K,
-                                            setIsEmojiPickerOpen: H,
+                                            setIsEmojiPickerOpen: B,
                                         }),
                                     },
                                     trailing:
@@ -312,7 +312,7 @@ function F(e) {
                                                 : void 0
                                             : {
                                                   icon: h.XHJ,
-                                                  onClick: eE,
+                                                  onClick: ej,
                                                   "aria-label": M.intl.string(M.t.S90FuQ),
                                               },
                                 }),
@@ -340,7 +340,7 @@ function F(e) {
                 className: a()(L.groupLabel, R.group, R.scroller),
                 children: [
                     (0, i.jsx)(Z.d, {
-                        guildId: F.guild_id,
+                        guildId: V.guild_id,
                         onSetActivityStatus: eb,
                     }),
                     ea &&
@@ -357,7 +357,7 @@ function F(e) {
                                         (0, i.jsx)(h.r7p, { size: "xxs" }),
                                     ],
                                 }),
-                                q.map((e, t) => ej(e, t, "favorite")),
+                                q.map((e, t) => eE(e, t, "favorite")),
                             ],
                         }),
                     W.length > 0 &&
@@ -381,7 +381,7 @@ function F(e) {
                                 }),
                             ],
                         }),
-                    W.map((e, t) => ej(e, t, "recent")),
+                    W.map((e, t) => eE(e, t, "recent")),
                 ],
             }),
         ],

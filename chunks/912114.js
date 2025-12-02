@@ -1,6 +1,6 @@
 n.d(t, {
-    B: () => j,
-    default: () => E,
+    B: () => E,
+    default: () => j,
 }),
     n(388685);
 var i = n(54381),
@@ -65,7 +65,7 @@ function x(e, t) {
         e
     );
 }
-function j(e) {
+function E(e) {
     let {
             channel: t,
             previewIcon: n,
@@ -126,14 +126,14 @@ function j(e) {
         ],
     });
 }
-let E = function (e) {
+let j = function (e) {
     let {
             channelId: t,
             onClose: n,
             transitionState: l,
             setHasPendingChanges: a,
             closeOrShowDiscardChangesAlert: f,
-            location: E,
+            location: j,
         } = e,
         S = (0, s.e7)([g.Z], () => g.Z.getChannel(t)),
         P = null == S ? void 0 : S.name,
@@ -141,11 +141,11 @@ let E = function (e) {
         [Z, T] = r.useState(null != P ? P : ""),
         [N, A] = r.useState(void 0),
         w = void 0 !== N,
-        { analyticsLocations: M } = (0, h.ZP)(E, p.Z.GROUP_DM_EDIT_MODAL),
+        { analyticsLocations: M } = (0, h.ZP)(j, p.Z.GROUP_DM_EDIT_MODAL),
         R = {
             channel_id: t,
             channel_type: null == S ? void 0 : S.type,
-            location: E,
+            location: j,
             location_stack: M,
             old_name_set: "" !== P,
             old_icon_set: (null == S ? void 0 : S.icon) != null,
@@ -184,7 +184,7 @@ let E = function (e) {
                           i || r)
                       ) {
                           let e = {};
-                          i && (e.name = Z), r && (e.icon = N), u.Z.updateChannel(t, e, E).catch(y.g6);
+                          i && (e.name = Z), r && (e.icon = N), u.Z.updateChannel(t, e, j).catch(y.g6);
                       }
                       n();
                   },
@@ -208,7 +208,7 @@ let E = function (e) {
                       children: (0, i.jsxs)("div", {
                           className: _.modalContent,
                           children: [
-                              (0, i.jsx)(j, {
+                              (0, i.jsx)(E, {
                                   channel: S,
                                   previewIcon: N,
                                   onIconChange: (e) => A(e.imageUri),

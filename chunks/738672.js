@@ -37,7 +37,7 @@ function d(e) {
                     (O.current += 1);
             }
         }, [v, _, f]);
-    let { preventIdle: x, allowIdle: j } = (0, u.Y)("popup");
+    let { preventIdle: x, allowIdle: E } = (0, u.Y)("popup");
     return (null == t ? void 0 : t.current) == null
         ? null
         : (0, i.jsx)(o.ZP, {
@@ -53,8 +53,8 @@ function d(e) {
                           ref: _,
                           onMouseOver: x,
                           onFocus: x,
-                          onBlur: j,
-                          onMouseLeave: j,
+                          onBlur: E,
+                          onMouseLeave: E,
                           children: p({
                               hidden: y || m || n,
                               onDismiss: d,

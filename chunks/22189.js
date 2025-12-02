@@ -390,7 +390,7 @@ let ey = () => {
             specialStickerAccess: {
                 name: "specialStickerAccess",
                 title: B.intl.string(B.t.tzdIwI),
-                subtitle: B.intl.string(B.t.FXlU24),
+                subtitle: B.intl.string(B.t.hJG8ZN),
                 perkImage: (0, L.gx)(t, K, ec),
                 description: B.intl.string(B.t.e7FKCi),
             },

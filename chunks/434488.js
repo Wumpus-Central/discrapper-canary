@@ -20,8 +20,8 @@ var i = n(54381),
     _ = n(626135),
     O = n(607187),
     x = n(981631),
-    j = n(388032),
-    E = n(348130),
+    E = n(388032),
+    j = n(348130),
     S = n(359165);
 function P(e) {
     let { channel: t, guild: n, width: r, inPopout: l, handleClose: a, userParticipantCount: o } = e;
@@ -56,11 +56,11 @@ function I(e) {
     return (0, i.jsx)(m.Gt, {
         value: l,
         children: (0, i.jsxs)(O.Z, {
-            className: E.root,
+            className: j.root,
             children: [
                 (0, i.jsx)(c.u, {
                     asContainer: !0,
-                    text: j.intl.string(j.t.qJvTKQ),
+                    text: E.intl.string(E.t.qJvTKQ),
                     children: (0, i.jsx)(u.P3F, {
                         onClick: () => {
                             (0, g.Z)({
@@ -75,9 +75,9 @@ function I(e) {
                                 analyticsLocation: o,
                             });
                         },
-                        className: E.clickableTile,
+                        className: j.clickableTile,
                         children: (0, i.jsx)("div", {
-                            className: E.iconContainer,
+                            className: j.iconContainer,
                             children: (0, i.jsx)(u.gQj, {
                                 size: "custom",
                                 color: "currentColor",
@@ -92,11 +92,11 @@ function I(e) {
                     children: (e) =>
                         (0, i.jsx)(u.P3F, {
                             onClick: r,
-                            className: a()(e, E.shelfButtonCloseButton),
+                            className: a()(e, j.shelfButtonCloseButton),
                             children: (0, i.jsx)(u.k$p, {
                                 size: "md",
                                 color: "currentColor",
-                                className: E.closeButtonIcon,
+                                className: j.closeButtonIcon,
                                 secondaryColor: s.Z.colors.INTERACTIVE_NORMAL.css,
                             }),
                         }),
@@ -196,11 +196,11 @@ function Z(e) {
             theme: x.BRd.MIDNIGHT,
             children: (e) =>
                 (0, i.jsxs)(O.Z, {
-                    className: a()(E.root, E.singleUserRoot, e),
+                    className: a()(j.root, j.singleUserRoot, e),
                     children: [
                         (0, i.jsx)("img", {
                             src: S,
-                            className: E.art,
+                            className: j.art,
                             alt: "",
                         }),
                         (0, i.jsxs)(u.ButtonGroup, {
@@ -211,14 +211,14 @@ function Z(e) {
                                     variant: "secondary",
                                     icon: b,
                                     text: d.isInCallEntrypointEnabled
-                                        ? j.intl.string(j.t["EE+P0H"])
-                                        : j.intl.string(j.t["6Qgrev"]),
+                                        ? E.intl.string(E.t["EE+P0H"])
+                                        : E.intl.string(E.t["6Qgrev"]),
                                     onClick: p,
                                 }),
                                 (0, i.jsx)(u.Button, {
                                     variant: "secondary",
                                     icon: u.nG3,
-                                    text: j.intl.string(j.t.qnFavR),
+                                    text: E.intl.string(E.t.qnFavR),
                                     onClick: h,
                                 }),
                             ],
@@ -248,17 +248,17 @@ function T(e) {
     return (0, i.jsx)(m.Gt, {
         value: C,
         children: (0, i.jsxs)(O.Z, {
-            className: E.root,
+            className: j.root,
             children: [
                 s > 300
                     ? (0, i.jsx)(u.Text, {
-                          className: E.heading,
+                          className: j.heading,
                           variant: s > 550 ? "text-md/semibold" : "text-sm/semibold",
-                          children: j.intl.string(j.t["7BKMcG"]),
+                          children: E.intl.string(E.t["7BKMcG"]),
                       })
                     : null,
                 (0, i.jsx)("div", {
-                    className: a()(E.activitiesContainer, { [E.activitiesContainerSmol]: s <= 300 }),
+                    className: a()(j.activitiesContainer, { [j.activitiesContainerSmol]: s <= 300 }),
                     children: g.map((e) =>
                         (0, i.jsx)(
                             h.Y,
@@ -266,7 +266,7 @@ function T(e) {
                                 context: S,
                                 activityItem: e,
                                 aspectRatio: h.Y.AspectRatio.SIXTEEN_BY_NINE,
-                                animatedDivClass: E.activitySuggestion,
+                                animatedDivClass: j.activitySuggestion,
                                 commandOrigin: b.bB.VOICE_TILE_ACTIVITY_SUGGESTIONS,
                             },
                             e.application.id,
@@ -274,7 +274,7 @@ function T(e) {
                     ),
                 }),
                 (0, i.jsxs)(u.P3F, {
-                    className: E.checkboxContainer,
+                    className: j.checkboxContainer,
                     onClick: function () {
                         _.default.track(x.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
                             tile_type: "activity suggestion",
@@ -287,12 +287,12 @@ function T(e) {
                         (0, i.jsx)(v.Z, {}),
                         (0, i.jsx)(u.Text, {
                             variant: "text-sm/medium",
-                            children: j.intl.string(j.t["5E9SB9"]),
+                            children: E.intl.string(E.t["5E9SB9"]),
                         }),
                     ],
                 }),
                 (0, i.jsx)(u.P3F, {
-                    className: E.closeButtonContainer,
+                    className: j.closeButtonContainer,
                     onClick: function () {
                         _.default.track(x.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
                             tile_type: "activity suggestion",
@@ -304,7 +304,7 @@ function T(e) {
                     children: (0, i.jsx)(u.Dio, {
                         size: "md",
                         color: "currentColor",
-                        className: E.closeButton,
+                        className: j.closeButton,
                     }),
                 }),
             ],

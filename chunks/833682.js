@@ -2,8 +2,8 @@ n.d(e, { Z: () => A }), n(539854);
 var i = n(54381),
     r = n(473749),
     l = n(793030),
-    u = n(442837),
-    s = n(481060),
+    s = n(442837),
+    u = n(481060),
     a = n(846027),
     o = n(509613),
     c = n(131951),
@@ -16,7 +16,7 @@ var i = n(54381),
 let O = n(775322),
     _ = n(353385);
 function N() {
-    let t = (0, u.e7)([E.Z], () => (0, l.apv)(E.Z.theme));
+    let t = (0, s.e7)([E.Z], () => (0, l.apv)(E.Z.theme));
     return (0, i.jsx)("img", {
         src: t ? O : _,
         width: 48,
@@ -33,7 +33,7 @@ function f() {
             noiseSuppression: n,
             isNoiseSuppressionSupported: o,
             isNoiseCancellationSupported: E,
-        } = (0, u.cj)([c.Z], () => ({
+        } = (0, s.cj)([c.Z], () => ({
             noiseCancellation: c.Z.getNoiseCancellation(),
             noiseSuppression: c.Z.getNoiseSuppression(),
             isNoiseSuppressionSupported: c.Z.isNoiseSuppressionSupported(),
@@ -68,7 +68,7 @@ function f() {
         direction: "vertical",
         gap: 0,
         children: [
-            (0, i.jsx)(s.q4e, {
+            (0, i.jsx)(u.q4e, {
                 label: g.intl.string(g.t.t8Qhib),
                 description: f,
                 layout: "horizontal",
@@ -82,7 +82,7 @@ function f() {
 }
 let A = (0, o.ON)(S.n.VOICE_NOISE_SUPPRESSION_SETTING, {
     usePredicate: function () {
-        return (0, u.e7)([c.Z], () => c.Z.isInputProfileCustom() && c.Z.isNoiseSuppressionSupported());
+        return (0, s.e7)([c.Z], () => c.Z.isInputProfileCustom() && c.Z.isNoiseSuppressionSupported());
     },
     useSearchTerms: () => [g.intl.string(g.t.t8Qhib), g.intl.string(g.t.hmfkCi)],
     render: () => (0, i.jsx)(f, {}),

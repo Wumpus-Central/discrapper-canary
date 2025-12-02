@@ -20,7 +20,7 @@ var i = n(54381),
     _ = n(348238),
     O = n(981631),
     x = n(388032);
-function j(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -45,7 +45,7 @@ function j(e) {
     }
     return e;
 }
-function E(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -129,13 +129,13 @@ let S = r.memo(function (e) {
                         shouldFilterKeywords: L,
                     },
                     n = e.isFirstMessageInForumPost(P)
-                        ? E(j({}, t), {
+                        ? j(E({}, t), {
                               noStyleAndInteraction: !0,
                               allowHeading: !0,
                               allowList: !0,
                               allowGameMentions: D,
                           })
-                        : E(j({}, t), {
+                        : j(E({}, t), {
                               formatInline: !0,
                               allowHeading: k,
                               allowList: k,
@@ -145,7 +145,7 @@ let S = r.memo(function (e) {
             }
             return null;
         }, [M, R, P, k, L, D]),
-        { isReplyAuthorBlocked: F, isReplyAuthorIgnored: B } = (0, l.cj)(
+        { isReplyAuthorBlocked: V, isReplyAuthorIgnored: F } = (0, l.cj)(
             [m.Z],
             () => ({
                 isReplyAuthorBlocked: null != M && m.Z.isBlockedForMessage(M),
@@ -153,8 +153,8 @@ let S = r.memo(function (e) {
             }),
             [M],
         ),
-        H = (0, _.wq)(null == M ? void 0 : M.author.id, P.id),
-        V = (0, _.$3)(n, M),
+        B = (0, _.wq)(null == M ? void 0 : M.author.id, P.id),
+        H = (0, _.$3)(n, M),
         G = (0, _.Wl)(M, P, Z, N),
         z = (0, _.rY)(T, N),
         W = r.useCallback(() => {
@@ -172,15 +172,15 @@ let S = r.memo(function (e) {
         referencedMessage: S,
         content: U,
         compact: I,
-        isReplyAuthorBlocked: F,
-        isReplyAuthorIgnored: B,
+        isReplyAuthorBlocked: V,
+        isReplyAuthorIgnored: F,
         showAvatarPopout: T,
         showUsernamePopout: Z,
         renderPopout: v.Z,
         onClickAvatar: z,
         onClickUsername: G,
-        onClickReply: V,
-        onContextMenu: H,
+        onClickReply: H,
+        onContextMenu: B,
         onPopoutRequestClose: W,
         isReplySpineClickable: A,
         showReplySpine: w,

@@ -22,12 +22,12 @@ var a = n(54381),
     C = n(209698),
     S = n(687158),
     E = n(612600),
-    T = n(892001),
-    N = n(899007),
+    N = n(892001),
+    T = n(899007),
     O = n(648052),
     P = n(867176),
-    I = n(537006),
-    w = n(483424),
+    w = n(537006),
+    I = n(483424),
     k = n(681837),
     R = n(638970),
     A = n(675893),
@@ -111,12 +111,12 @@ function eo(e) {
         eC = (0, $.F)(ey),
         eS = (0, s.e7)([G.Z], () => G.Z.hidePersonalInformation),
         eE = (0, g.p)(),
-        eT = F.Sb.useSetting(),
-        eN = (0, $.I)(e_),
+        eN = F.Sb.useSetting(),
+        eT = (0, $.I)(e_),
         eO = (0, q.g)(n),
         eP = (0, v.Z)({ analyticsLocations: ex }),
-        eI = (0, V.I5)(t),
-        ew = (0, h.p)({ location: "UserProfileAccountPopout" }),
+        ew = (0, V.I5)(t),
+        eI = (0, h.p)({ location: "UserProfileAccountPopout" }),
         ek = (0, C.b)({ location: "UserProfileAccountPopout" }),
         eR = l.useRef(null),
         eA = l.useRef(null),
@@ -130,7 +130,7 @@ function eo(e) {
     }, []);
     let eU = (e) => {
             null == n || n(),
-                (0, T.openUserProfileModal)(
+                (0, N.openUserProfileModal)(
                     es(
                         {
                             customStatusPrompt: eD,
@@ -188,7 +188,7 @@ function eo(e) {
                                         displayProfile: eh,
                                         themeType: ea.l.POPOUT,
                                     }),
-                                    (0, a.jsx)(N.Z, {
+                                    (0, a.jsx)(T.Z, {
                                         user: t,
                                         displayProfile: eh,
                                         themeType: ea.l.POPOUT,
@@ -199,7 +199,7 @@ function eo(e) {
                                         user: t,
                                         themeType: ea.l.POPOUT,
                                         onCloseProfile: n,
-                                        prompt: ew ? eD : null,
+                                        prompt: eI ? eD : null,
                                     }),
                                 ],
                             }),
@@ -243,8 +243,8 @@ function eo(e) {
                                             widgets: null == eh ? void 0 : eh.widgets,
                                             onOpenUserProfileModal: eU,
                                         }),
-                                    (0, a.jsx)(I.Z, {
-                                        isPremiumUser: eI,
+                                    (0, a.jsx)(w.Z, {
+                                        isPremiumUser: ew,
                                         onInteraction: n,
                                     }),
                                     ek
@@ -254,7 +254,7 @@ function eo(e) {
                                               onOpenUserProfileModal: eU,
                                               onClose: n,
                                           })
-                                        : (0, a.jsx)(w.Z, {
+                                        : (0, a.jsx)(I.Z, {
                                               user: t,
                                               currentUser: t,
                                               onClose: n,
@@ -312,7 +312,7 @@ function eo(e) {
                                                                           className: ei.statusPickerModalMenu,
                                                                           "aria-label": el.intl.string(el.t.E13trI),
                                                                           onClose: t,
-                                                                          children: eN,
+                                                                          children: eT,
                                                                       });
                                                                   },
                                                             onClick: i.tq
@@ -426,7 +426,7 @@ function eo(e) {
                                                                                                           onClose: l,
                                                                                                           onSelect:
                                                                                                               void 0,
-                                                                                                          children: eN,
+                                                                                                          children: eT,
                                                                                                       }),
                                                                                                   }),
                                                                                               Object.getOwnPropertyDescriptors
@@ -502,7 +502,7 @@ function eo(e) {
                                                         }),
                                                         !__OVERLAY__ &&
                                                             z.wS &&
-                                                            eT &&
+                                                            eN &&
                                                             (0, a.jsx)(J.V4, {
                                                                 action: "COPY_USER_ID",
                                                                 icon: c.VuL,

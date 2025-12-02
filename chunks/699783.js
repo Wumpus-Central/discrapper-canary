@@ -1,47 +1,47 @@
-e.d(a, { default: () => b });
-var s = e(54381),
-    l = e(473749),
-    n = e(793030),
-    i = e(399606),
-    o = e(194359),
-    r = e(726521),
-    c = e(681678),
-    u = e(594174),
-    k = e(51144),
-    d = e(991981),
-    p = e(134612),
-    C = e(388032);
-function b(t) {
-    let { userId: a, channelId: e, transitionState: b, onBlock: h, onBlockAndReport: f, onClose: g, onCancel: m } = t,
-        v = (0, d.q)(e),
-        w = l.useCallback(() => {
-            o.Z.blockUser(a, { location: p.zr }).then(() => {
-                c.Z.showBlockSuccessToast(a, e);
+a.d(e, { default: () => g });
+var s = a(54381),
+    n = a(473749),
+    l = a(793030),
+    i = a(399606),
+    r = a(194359),
+    o = a(726521),
+    u = a(681678),
+    c = a(594174),
+    k = a(51144),
+    d = a(991981),
+    p = a(134612),
+    C = a(388032);
+function g(t) {
+    let { userId: e, channelId: a, transitionState: g, onBlock: b, onBlockAndReport: f, onClose: h, onCancel: v } = t,
+        Z = (0, d.q)(a),
+        m = n.useCallback(() => {
+            r.Z.blockUser(e, { location: p.zr }).then(() => {
+                u.Z.showBlockSuccessToast(e, a);
             });
-        }, [a, e]),
-        x = l.useCallback(() => {
-            w(), h(), g();
-        }, [w, h, g]),
-        z = l.useCallback(() => {
-            w(), (0, r.wk)(v), f(), g();
-        }, [v, w, f, g]),
-        P = l.useCallback(() => (null == m || m(), null == g || g(), Promise.resolve()), [m, g]),
-        S = (0, i.e7)([u.default], () => u.default.getUser(a)),
-        U = k.ZP.useName(S);
-    return (0, s.jsx)(n.Modal, {
-        transitionState: b,
-        onClose: P,
+        }, [e, a]),
+        w = n.useCallback(() => {
+            m(), b(), h();
+        }, [m, b, h]),
+        x = n.useCallback(() => {
+            m(), (0, o.wk)(Z), f(), h();
+        }, [Z, m, f, h]),
+        z = n.useCallback(() => (null == v || v(), null == h || h(), Promise.resolve()), [v, h]),
+        M = (0, i.e7)([c.default], () => c.default.getUser(e)),
+        U = k.ZP.useName(M);
+    return (0, s.jsx)(l.Modal, {
+        transitionState: g,
+        onClose: z,
         title: C.intl.formatToPlainString(C.t.x5pOn9, { name: U }),
         subtitle: C.intl.string(C.t.aedkso),
         actions: [
             {
                 text: C.intl.string(C.t["3pzujz"]),
-                onClick: z,
+                onClick: x,
                 variant: "secondary",
             },
             {
                 text: C.intl.string(C.t.MzsUsp),
-                onClick: x,
+                onClick: w,
                 variant: "primary",
             },
         ],

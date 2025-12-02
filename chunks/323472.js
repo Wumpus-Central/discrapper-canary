@@ -2,8 +2,8 @@ n.d(e, { u: () => T }), n(539854), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(512722),
-    u = n.n(l),
-    s = n(59662),
+    s = n.n(l),
+    u = n(59662),
     a = n(28682),
     o = n(388032);
 function c(t) {
@@ -41,10 +41,10 @@ function S(t) {
 function T(t, e) {
     var n, i;
     let { limit: l = 2, formatter: d = c } = null != e ? e : {};
-    u()(l > 0, "[useSettingCollapsibleSubtitle] Limit must be greater than 0");
-    let { directory: T, fallbackDirectory: I } = (0, s.t)(),
+    s()(l > 0, "[useSettingCollapsibleSubtitle] Limit must be greater than 0");
+    let { directory: T, fallbackDirectory: I } = (0, u.t)(),
         g = null != (n = T.get(t)) ? n : I.get(t);
-    u()(
+    s()(
         null != g && (g.type === a.Jq.ACCORDION || S(g)),
         "[useSettingCollapsibleSubtitle] Node is not a collapsible settings node",
     );

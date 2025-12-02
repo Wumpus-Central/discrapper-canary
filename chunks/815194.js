@@ -2,8 +2,8 @@ n.d(e, { Z: () => O });
 var i = n(54381),
     r = n(793030),
     l = n(442837),
-    u = n(846027),
-    s = n(825209),
+    s = n(846027),
+    u = n(825209),
     a = n(509613),
     o = n(131951),
     c = n(313789),
@@ -26,9 +26,9 @@ function g() {
         layout: "horizontal-responsive",
         children: (0, i.jsx)("div", {
             className: I.keybindContainer,
-            children: (0, i.jsx)(s.Z, {
+            children: (0, i.jsx)(u.Z, {
                 defaultValue: t,
-                onChange: (t) => u.Z.setMode(S.pM4.PUSH_TO_TALK, { shortcut: t }),
+                onChange: (t) => s.Z.setMode(S.pM4.PUSH_TO_TALK, { shortcut: t }),
             }),
         }),
     });

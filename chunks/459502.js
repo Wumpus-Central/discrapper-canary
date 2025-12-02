@@ -20,14 +20,14 @@ function b(e) {
         v = null != (0, p.qY)(t),
         { canManageGuildEvent: _ } = (0, s.XJ)(y),
         [O, x] = r.useState(() => new Set()),
-        j = r.useMemo(() => C.filter((e) => !O.has(e.id)), [C, O]),
-        E = (0, l.cj)([d.ZP], () => j.reduce((e, t) => ((e[t.id] = d.ZP.getUserCount(t.id, (0, h.DK)(t))), e), {}), [
-            j,
+        E = r.useMemo(() => C.filter((e) => !O.has(e.id)), [C, O]),
+        j = (0, l.cj)([d.ZP], () => E.reduce((e, t) => ((e[t.id] = d.ZP.getUserCount(t.id, (0, h.DK)(t))), e), {}), [
+            E,
         ]);
-    return j.length < 1 || v
+    return E.length < 1 || v
         ? null
         : (0, i.jsx)(i.Fragment, {
-              children: j.map((e) =>
+              children: E.map((e) =>
                   (0, i.jsx)(
                       f.Z,
                       {
@@ -107,7 +107,7 @@ function b(e) {
                                     return (t = e.id), void x((e) => new Set(e).add(t));
                                 }
                               : void 0,
-                          userCount: E[e.id],
+                          userCount: j[e.id],
                           className: g.eventPrompt,
                       },
                       e.id,

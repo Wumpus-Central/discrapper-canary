@@ -32,8 +32,8 @@ function p(e) {
         {
             tileStyle: O,
             tileWidth: x,
-            rows: j,
-            columns: E,
+            rows: E,
+            columns: j,
         } = r.useMemo(
             () =>
                 (function (e, t, n) {
@@ -85,23 +85,23 @@ function p(e) {
                 })(C, v, _),
             [C, v, _],
         ),
-        S = E + 1,
+        S = j + 1,
         P = S * x + (S - 1) * 8 <= b,
         I = Math.floor(x / c) + 8,
-        Z = Math.max(0, _ - I * j) / 2;
+        Z = Math.max(0, _ - I * E) / 2;
     return (0, i.jsx)(o.Z, {
         fade: !0,
         className: n,
         listPadding: [h + Z, 0, f + Z - 8, 8],
         renderRow: function (e) {
             var t;
-            let n = e * E;
+            let n = e * j;
             return (0, i.jsx)(
                 "div",
                 {
                     className: s.row,
                     children:
-                        null == l || null == (t = l.slice(n, n + E))
+                        null == l || null == (t = l.slice(n, n + j))
                             ? void 0
                             : t.map((e, t) => {
                                   var r;
@@ -112,8 +112,8 @@ function p(e) {
                                           style: O,
                                           className: a()(s.tile, {
                                               [s.padColumn]: P,
-                                              [s.noVerticalMargin]: l >= (j - 1) * E,
-                                              [s.noHorizontalMargin]: (l + 1) % E == 0 || l === C - 1,
+                                              [s.noVerticalMargin]: l >= (E - 1) * j,
+                                              [s.noHorizontalMargin]: (l + 1) % j == 0 || l === C - 1,
                                           }),
                                           children: (0, i.jsx)("div", {
                                               className: s.tileSizer,
@@ -127,8 +127,8 @@ function p(e) {
                 e,
             );
         },
-        rowCount: j,
-        rowCountBySection: [j],
+        rowCount: E,
+        rowCountBySection: [E],
         rowHeight: I,
         onResize: g,
     });

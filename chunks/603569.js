@@ -2,8 +2,8 @@ n.d(e, { a: () => O });
 var i = n(54381),
     r = n(657707),
     l = n(704215),
-    u = n(481060),
-    s = n(631885),
+    s = n(481060),
+    u = n(631885),
     a = n(509613),
     o = n(28682),
     c = n(313789),
@@ -29,11 +29,11 @@ let I = (0, a.x1)(c.n.FAMILY_CENTER_PANE, {
             type: o.PU.STRONGLY_DISCOURAGED_CUSTOM,
             getDismissibleContentTypes: () => [l.z.FAMILY_CENTER_NEW_BADGE],
             useDecoration: function (t) {
-                let e = (0, s.gU)();
+                let e = (0, u.gU)();
                 return t === l.z.FAMILY_CENTER_NEW_BADGE
-                    ? (0, i.jsx)(u.IGR, { text: S.intl.string(S.t.y2b7CA) })
+                    ? (0, i.jsx)(s.IGR, { text: S.intl.string(S.t.y2b7CA) })
                     : e > 0
-                      ? (0, i.jsx)(u.mAB, { count: e })
+                      ? (0, i.jsx)(s.mAB, { count: e })
                       : null;
             },
         },

@@ -71,12 +71,12 @@ function y(e) {
             maxWidth: n,
             minWidth: O,
         }),
-        j = (0, u.dQu)(c.Z.modules.chat.RESIZE_HANDLE_WIDTH),
-        E = (0, s.clamp)(C, O, n),
-        S = x ? E : E + j;
+        E = (0, u.dQu)(c.Z.modules.chat.RESIZE_HANDLE_WIDTH),
+        j = (0, s.clamp)(C, O, n),
+        S = x ? j : j + E;
     l.useEffect(() => {
-        null == i || i(E, x);
-    }, [E, i, x]);
+        null == i || i(j, x);
+    }, [j, i, x]);
     let P = null != p ? p : l.Fragment;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -103,7 +103,7 @@ function y(e) {
                         (0, r.jsx)("div", {
                             ref: g,
                             className: o()(m.container, { [m.floating]: x }),
-                            style: { width: E },
+                            style: { width: j },
                             children: a,
                         }),
                     ],

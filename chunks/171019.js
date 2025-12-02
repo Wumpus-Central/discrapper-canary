@@ -1,50 +1,50 @@
-n.d(t, { Z: () => d });
-var r = n(54381),
-    i = n(442837),
-    l = n(692547),
-    o = n(481060),
-    s = n(597688),
-    c = n(884697),
-    a = n(388032),
-    u = n(71414);
-let d = (e) => {
-    let { skuId: t, canUsePremiumCollectibles: n, isTryItOut: d, isPurchaseSection: f, isPremiumSection: p } = e,
-        m = (0, c.Yq)(t),
-        g = (0, i.e7)([s.Z], () => {
+r.d(t, { Z: () => u });
+var n = r(54381),
+    i = r(442837),
+    l = r(692547),
+    a = r(481060),
+    s = r(597688),
+    o = r(884697),
+    c = r(388032),
+    d = r(71414);
+let u = (e) => {
+    let { skuId: t, canUsePremiumCollectibles: r, isTryItOut: u, isPurchaseSection: m, isPremiumSection: p } = e,
+        h = (0, o.Yq)(t),
+        v = (0, i.e7)([s.Z], () => {
             let e = s.Z.getProduct(t);
-            return (0, c.G1)(e);
+            return (0, o.G1)(e);
         });
-    return f || (p && (n || d))
+    return m || (p && (r || u))
         ? null
-        : m
-          ? (0, r.jsx)(o.lBU, {
-                className: u.newBadge,
-                text: (0, r.jsxs)("div", {
-                    className: u.newBadgeText,
+        : h
+          ? (0, n.jsx)(a.lBU, {
+                className: d.newBadge,
+                text: (0, n.jsxs)("div", {
+                    className: d.newBadgeText,
                     children: [
-                        (0, r.jsx)(o.mBM, {
+                        (0, n.jsx)(a.mBM, {
                             size: "xxs",
                             color: "currentColor",
                         }),
-                        a.intl.string(a.t.y2b7CA),
+                        c.intl.string(c.t.y2b7CA),
                     ],
                 }),
             })
-          : (0, r.jsx)(o.G2e, {
-                icon: g
+          : (0, n.jsx)(a.G2e, {
+                icon: v
                     ? () =>
-                          (0, r.jsx)(o.SrA, {
+                          (0, n.jsx)(a.SrA, {
                               size: "custom",
                               color: "currentColor",
                               width: 14,
                               height: 14,
                           })
                     : () =>
-                          (0, r.jsx)(o.mBM, {
+                          (0, n.jsx)(a.mBM, {
                               size: "xxs",
                               color: "currentColor",
                           }),
                 color: l.Z.colors.BACKGROUND_ACCENT.css,
-                className: u.iconBadge,
+                className: d.iconBadge,
             });
 };

@@ -73,7 +73,7 @@ function j() {
                       }),
             [C, y],
         ),
-        T = l.useCallback(
+        N = l.useCallback(
             (e, n) => {
                 if (null == n || !e.type.startsWith("text/")) return (0, p.Eo)(b);
                 let [a, l] = n.split(",");
@@ -83,14 +83,14 @@ function j() {
             },
             [t],
         ),
-        N = l.useCallback(
+        T = l.useCallback(
             (e) => {
                 var t;
                 if ((null == (t = e.currentTarget) ? void 0 : t.files) == null)
                     return void (0, p.Eo)("Error uploading file. Try again!");
-                (0, p.Kr)(e.currentTarget.files, T, p.Eo);
+                (0, p.Kr)(e.currentTarget.files, N, p.Eo);
             },
-            [T],
+            [N],
         );
     return (0, a.jsxs)("div", {
         className: g.root,
@@ -152,7 +152,7 @@ function j() {
                                         }),
                                         (0, a.jsx)(u.Z, {
                                             ref: _,
-                                            onChange: N,
+                                            onChange: T,
                                             multiple: !1,
                                         }),
                                     ],

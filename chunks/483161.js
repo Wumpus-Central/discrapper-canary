@@ -2,8 +2,8 @@ n.d(e, { z: () => b });
 var i = n(54381),
     r = n(657707),
     l = n(442837),
-    u = n(481060),
-    s = n(778825),
+    s = n(481060),
+    u = n(778825),
     a = n(398140),
     o = n(564344),
     c = n(509613),
@@ -24,7 +24,7 @@ let f = (0, c.x1)(I.n.PROFILE_PANE, {
         useTitle: () => _.intl.string(_.t["vi7f+q"]),
         buildLayout: () => [f],
         notice: {
-            stores: [s.Z, S.Z],
+            stores: [u.Z, S.Z],
             element: a.Z,
         },
     }),
@@ -36,25 +36,25 @@ let f = (0, c.x1)(I.n.PROFILE_PANE, {
         stronglyDiscouragedCustomComponent: () => {
             var t;
             let e = (0, l.e7)([T.default], () => T.default.getCurrentUser()),
-                { avatarSrc: n, avatarDecorationSrc: s } = (0, E.Z)({
+                { avatarSrc: n, avatarDecorationSrc: u } = (0, E.Z)({
                     userId: null == e ? void 0 : e.id,
-                    size: u.EFr.SIZE_48,
+                    size: s.EFr.SIZE_48,
                 });
             return null == e
                 ? null
                 : (0, i.jsxs)("div", {
                       className: N.profileCustomizationTab,
                       children: [
-                          (0, i.jsx)(u.qEK, {
+                          (0, i.jsx)(s.qEK, {
                               src: n,
-                              avatarDecoration: s,
-                              size: u.EFr.SIZE_48,
+                              avatarDecoration: u,
+                              size: s.EFr.SIZE_48,
                               "aria-label": _.intl.string(_.t.lqaIxI),
                           }),
                           (0, i.jsxs)("div", {
                               className: N.textContainer,
                               children: [
-                                  (0, i.jsx)(u.Text, {
+                                  (0, i.jsx)(s.Text, {
                                       color: "header-primary",
                                       variant: "text-md/medium",
                                       lineClamp: 1,
@@ -63,7 +63,7 @@ let f = (0, c.x1)(I.n.PROFILE_PANE, {
                                   (0, i.jsxs)("div", {
                                       className: N.editProfilesRow,
                                       children: [
-                                          (0, i.jsx)(u.Text, {
+                                          (0, i.jsx)(s.Text, {
                                               variant: "text-sm/normal",
                                               color: "currentColor",
                                               lineClamp: 1,

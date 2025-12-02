@@ -20,8 +20,8 @@ var i = n(54381),
     _ = n(390322),
     O = n(857192),
     x = n(626135),
-    j = n(566620),
-    E = n(127255),
+    E = n(566620),
+    j = n(127255),
     S = n(5200),
     P = n(981631),
     I = n(388032),
@@ -62,7 +62,7 @@ function A(e) {
             let e = null == v ? void 0 : v.application_directory_collection_items[0];
             return null == e ? null : e.type === s.C.APPLICATION_BANNER ? e : null;
         }, [null == v ? void 0 : v.application_directory_collection_items]),
-        { trackItemImpressionRef: j } = (0, f.Z)({
+        { trackItemImpressionRef: E } = (0, f.Z)({
             applicationId: null != (t = null == x ? void 0 : x.application.id) ? t : "",
             applicationFlags: null == x ? void 0 : x.application.flags,
             sectionName: "app_launcher_in_voice_banner",
@@ -81,7 +81,7 @@ function A(e) {
               })),
           (0, i.jsxs)(u.P3F, {
               className: Z.clickableBanner,
-              innerRef: j,
+              innerRef: E,
               onClick: () => {
                   p(),
                       (0, m.Z)({
@@ -120,9 +120,9 @@ let w = r.forwardRef(function (e, t) {
     let C = (0, v.bp)(),
         { analyticsLocations: O, newestAnalyticsLocation: T } = (0, p.ZP)(d.Z.ACTIVITIES_MINI_SHELF),
         w = C === P.IlC.POPOUT,
-        M = ((n = l.getGuildId()), (0, E.Z)({ guildId: n }).slice(0, 5));
+        M = ((n = l.getGuildId()), (0, j.Z)({ guildId: n }).slice(0, 5));
     r.useEffect(() => {
-        let e = setTimeout(() => j.ux(), 1000);
+        let e = setTimeout(() => E.ux(), 1000);
         return () => clearTimeout(e);
     }, []);
     let R = r.useCallback(() => {

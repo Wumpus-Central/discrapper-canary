@@ -20,8 +20,8 @@ var i = n(54381),
     _ = n(579185),
     O = n(301076),
     x = n(127379),
-    j = n(981631),
-    E = n(921944),
+    E = n(981631),
+    j = n(921944),
     S = n(388032);
 function P(e) {
     let { channel: t, idle: n, whichPopoutIsOpen: P, setWhichPopoutIsOpen: I } = e,
@@ -36,16 +36,16 @@ function P(e) {
             () => null != u.ZP.getSelfEmbeddedActivityForLocation(u.ZP.getConnectedActivityLocation()),
         ),
         U = !A,
-        F = r.useCallback(
+        V = r.useCallback(
             (e) => {
                 "focus" !== e.type && R();
             },
             [R],
         ),
-        B = (0, v.bp)() === j.IlC.POPOUT,
-        { parentAnalyticsLocation: H, newestAnalyticsLocation: V } = (0, g.ZP)(),
+        F = (0, v.bp)() === E.IlC.POPOUT,
+        { parentAnalyticsLocation: B, newestAnalyticsLocation: H } = (0, g.ZP)(),
         G = r.useCallback(() => {
-            (0, y.v)(H, y.d.ACTIVITY),
+            (0, y.v)(B, y.d.ACTIVITY),
                 (0, b.Z)({
                     context:
                         null != t
@@ -54,10 +54,10 @@ function P(e) {
                                   channel: t,
                               }
                             : { type: "contextless" },
-                    openInPopout: B,
-                    analyticsLocation: V,
+                    openInPopout: F,
+                    analyticsLocation: H,
                 });
-        }, [t, B, V, H]),
+        }, [t, F, H, B]),
         z = [];
     A || z.push(a.z.ACTIVITIES_MINI_SHELF_SPARKLES),
         (0, h.Z)(t.id) && !A && z.push(a.z.ACTIVITY_GDM_ROCKET_SPARKLE),
@@ -70,7 +70,7 @@ function P(e) {
             let { visibleContent: r, markAsDismissed: l } = e,
                 c = r === a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP && !n && !w;
             return (
-                W.current && !c && l(E.L.AUTO_DISMISS),
+                W.current && !c && l(j.L.AUTO_DISMISS),
                 W.current !== c && (W.current = c),
                 (0, i.jsx)(s.yRy, {
                     targetElementRef: q,
@@ -96,7 +96,7 @@ function P(e) {
                                   onMouseEnter: R,
                                   onMouseLeave: L,
                                   isHovered: w,
-                                  onClick: () => l(E.L.UNKNOWN),
+                                  onClick: () => l(j.L.UNKNOWN),
                               })
                             : (0, i.jsx)(i.Fragment, {});
                     },
@@ -132,11 +132,11 @@ function P(e) {
                                                                 r ===
                                                                     a.z
                                                                         .VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP) &&
-                                                                l(E.L.TAKE_ACTION),
+                                                                l(j.L.TAKE_ACTION),
                                                             t === a.z.ACTIVITIES_VOICE_LAUNCHER_BADGE &&
-                                                                n(E.L.TAKE_ACTION);
+                                                                n(j.L.TAKE_ACTION);
                                                     },
-                                                    onMouseEnter: F,
+                                                    onMouseEnter: V,
                                                     onMouseLeave: L,
                                                 }),
                                             }),

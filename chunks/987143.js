@@ -3,8 +3,8 @@ var i = n(54381);
 n(473749);
 var r = n(442837),
     l = n(481060),
-    u = n(579806),
-    s = n(435064),
+    s = n(579806),
+    u = n(435064),
     a = n(39604),
     o = n(509613),
     c = n(313789),
@@ -12,9 +12,9 @@ var r = n(442837),
 let E = (0, o.ON)(c.n.CLIPS_STORAGE_LOCATION, {
     useSearchTerms: () => [d.intl.string(d.t.s4773E), d.intl.string(d.t.svjwGh)],
     render: () => {
-        let t = (0, r.e7)([s.Z], () => s.Z.getSettings().storageLocation),
+        let t = (0, r.e7)([u.Z], () => u.Z.getSettings().storageLocation),
             e = async () => {
-                let t = await u.Z.fileManager.showOpenDialog({
+                let t = await s.Z.fileManager.showOpenDialog({
                     properties: ["openDirectory", "createDirectory"],
                 });
                 t.length > 0 && a.T1(t[0]);

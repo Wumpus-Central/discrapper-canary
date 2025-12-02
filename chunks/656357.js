@@ -113,8 +113,8 @@ function Q(e) {
         e0 = (0, S.km)((e) => e.volume),
         e1 = (0, c.e7)([f.Z], () => f.Z.useReducedMotion),
         e2 = (0, o.useRef)(null),
-        e3 = (0, o.useRef)(null),
-        e4 = o.useRef(!0),
+        e4 = (0, o.useRef)(null),
+        e3 = o.useRef(!0),
         e8 = (null == (t = en.userStatus) ? void 0 : t.completedAt) != null,
         [e7, e9] = o.useState(null),
         [e6, e5] = o.useState(!1),
@@ -140,8 +140,8 @@ function Q(e) {
             [w._H.LG]: 58,
         };
     (0, m.Ng)(() => {
-        e4.current &&
-            ((e4.current = !1),
+        e3.current &&
+            ((e3.current = !1),
             eM(E.Z.getEffectiveConnectionSpeed()),
             e8 && eX.timestampSec >= eX.duration && eJ(en.id, 0, eX.duration));
     });
@@ -285,7 +285,7 @@ function Q(e) {
                 tb(b.jn.VIDEO_MODAL, h.jZ.SEEK_BACKWARD);
         },
         tB = () => {
-            if (null == e2.current || !t3) return;
+            if (null == e2.current || !t4) return;
             let e = Math.min(e2.current.currentTime + 10, to);
             tl.info("[QV] | handleSeekForwardIncrement | newTime: ".concat(e)),
                 tU(e),
@@ -347,15 +347,15 @@ function Q(e) {
                 }
         }, [e2, tl]);
     o.useEffect(() => {
-        if (null == e3.current) return;
-        let e = e3.current;
+        if (null == e4.current) return;
+        let e = e4.current;
         return (
             e.addEventListener("load", tQ),
             () => {
                 null != e && e.removeEventListener("load", tQ);
             }
         );
-    }, [e3, tQ]);
+    }, [e4, tQ]);
     let tG = o.useCallback(
             (e) => {
                 var t;
@@ -433,8 +433,8 @@ function Q(e) {
     let t0 = eO === w.rq.ENDED,
         t1 = o.useMemo(() => (0, j.fh)(en, j.eC.VIDEO_PLAYER_THUMBNAIL, void 0, !1), [en]),
         t2 = o.useMemo(() => (0, j.fh)(en, j.eC.VIDEO_PLAYER_CAPTION, void 0, !1), [en]),
-        t3 = e8 || eX.maxTimestampSec >= (null != (U = null == (l = e2.current) ? void 0 : l.currentTime) ? U : 0) + 1,
-        t4 = o.useMemo(() => null === (0, j.fh)(en, j.eC.VIDEO_PLAYER_TRANSCRIPT, void 0, !1), [en]),
+        t4 = e8 || eX.maxTimestampSec >= (null != (U = null == (l = e2.current) ? void 0 : l.currentTime) ? U : 0) + 1,
+        t3 = o.useMemo(() => null === (0, j.fh)(en, j.eC.VIDEO_PLAYER_TRANSCRIPT, void 0, !1), [en]),
         t8 = eu
             ? {}
             : {
@@ -581,7 +581,7 @@ function Q(e) {
                     children: [
                         null != t2 &&
                             (0, r.jsx)("track", {
-                                ref: e3,
+                                ref: e4,
                                 src: t2.url,
                                 label: "English",
                                 kind: "captions",
@@ -755,7 +755,7 @@ function Q(e) {
                     children: [
                         (0, r.jsx)(N.Z, {
                             percent: null != eQ ? eQ : ex,
-                            animate: !0 !== e4.current && !eD,
+                            animate: !0 !== e3.current && !eD,
                             interactionEnabled: e8 && eY,
                             backgroundColor: tV ? void 0 : "rgba(0, 0, 0, 0.0)",
                             preloadedBuffers: tV ? ew : void 0,
@@ -807,9 +807,9 @@ function Q(e) {
                                 playerState: eO,
                                 animSpring: tW,
                                 visible: tV,
-                                seekForwardEnabled: t3,
+                                seekForwardEnabled: t4,
                                 hideCaptionBtn: null == t2,
-                                hideTranscriptBtn: t4,
+                                hideTranscriptBtn: t3,
                                 size: ta,
                                 handlePlaybackBtnClick: tq,
                                 handleTranscriptBtnClick: () => {

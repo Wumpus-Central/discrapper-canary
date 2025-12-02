@@ -29,8 +29,8 @@ var i,
     _ = n(493773),
     O = n(100527),
     x = n(367907),
-    j = n(906732),
-    E = n(43267),
+    E = n(906732),
+    j = n(43267),
     S = n(933557),
     P = n(313201),
     I = n(429090),
@@ -45,10 +45,10 @@ var i,
     D = n(341165),
     k = n(544610),
     U = n(19780),
-    F = n(306680),
-    B = n(699516),
-    H = n(246946),
-    V = n(594174),
+    V = n(306680),
+    F = n(699516),
+    B = n(246946),
+    H = n(594174),
     G = n(626135),
     z = n(572004),
     W = n(585483),
@@ -134,9 +134,9 @@ let eo = (0, P.hQ)(),
         var t;
         let { channel: n, onClose: i } = e,
             l = null != (t = (0, S.ZP)(n)) ? t : "",
-            a = (0, u.e7)([F.ZP], () => {
+            a = (0, u.e7)([V.ZP], () => {
                 var e;
-                return null != (e = F.ZP.lastMessageId(n.id)) ? e : n.id;
+                return null != (e = V.ZP.lastMessageId(n.id)) ? e : n.id;
             });
         return (0, r.jsx)(p.P3F, {
             onClick: () => {
@@ -146,7 +146,7 @@ let eo = (0, P.hQ)(),
                 className: en.confirmChannelItemContainer,
                 children: [
                     (0, r.jsx)(p.qEK, {
-                        src: (0, E.x)(n),
+                        src: (0, j.x)(n),
                         size: p.EFr.SIZE_24,
                         "aria-label": l,
                     }),
@@ -267,7 +267,7 @@ class eu extends (i = l.PureComponent) {
         if (null == e || !e.isDM()) return !1;
         let t = e.getRecipientId();
         if (null == t) throw Error("no recipient in DM");
-        return !B.Z.isFriend(t);
+        return !F.Z.isFriend(t);
     }
     createInvite() {
         let { channel: e } = this.props;
@@ -281,7 +281,7 @@ class eu extends (i = l.PureComponent) {
     }
     getMaxParticipants() {
         let { channel: e } = this.props,
-            t = V.default.getCurrentUser();
+            t = H.default.getCurrentUser();
         return null != t && t.isStaff() ? $.p3w : null != e && e.userLimit > 0 ? e.userLimit : $.pAY;
     }
     getRemaining() {
@@ -327,7 +327,7 @@ class eu extends (i = l.PureComponent) {
         if (this.isNotFriends()) {
             let t = null != e ? e.getRecipientId() : null;
             if (null == t) throw Error("no recipient in DM");
-            let n = V.default.getUser(t),
+            let n = H.default.getUser(t),
                 i = null != n ? n.username : "";
             return et.intl.format(et.t["eg+R9x"], { username: i });
         }
@@ -363,7 +363,7 @@ class eu extends (i = l.PureComponent) {
         let i = [];
         return (
             n.forEach((e) => {
-                let t = V.default.getUser(e);
+                let t = H.default.getUser(e);
                 null != t &&
                     i.push({
                         id: e,
@@ -509,8 +509,8 @@ class eu extends (i = l.PureComponent) {
         if (this.isNotFriends()) {
             let e = null != t ? t.getRecipientId() : null;
             if (null == e) throw Error("no recipient in DM");
-            let n = V.default.getUser(e),
-                i = null != n && B.Z.getRelationshipType(n.id) === $.OGo.PENDING_OUTGOING;
+            let n = H.default.getUser(e),
+                i = null != n && F.Z.getRelationshipType(n.id) === $.OGo.PENDING_OUTGOING;
             return {
                 actions: [
                     {
@@ -894,9 +894,9 @@ class eu extends (i = l.PureComponent) {
 }
 function ed(e) {
     let { selectedUsers: t, channelName: n, previewIcon: i, onIconChange: l, onIconRemove: a, onChange: o } = e,
-        { analyticsLocations: s } = (0, j.ZP)(O.Z.NEW_GROUP_DM_INVITE_MODAL);
+        { analyticsLocations: s } = (0, E.ZP)(O.Z.NEW_GROUP_DM_INVITE_MODAL);
     if (!(0, I.a)(O.Z.NEW_GROUP_DM_INVITE_MODAL)) return null;
-    let c = (0, S.pT)(Array.from(t), V.default, B.Z);
+    let c = (0, S.pT)(Array.from(t), H.default, F.Z);
     return (0, r.jsxs)("div", {
         className: en.customizationContainer,
         children: [
@@ -929,14 +929,14 @@ function ed(e) {
 function ep(e) {
     var { channel: t } = e,
         n = ea(e, ["channel"]);
-    let i = (0, u.cj)([k.Z, D.Z, H.Z], () => {
+    let i = (0, u.cj)([k.Z, D.Z, B.Z], () => {
         let e;
         return (
             null != t && null != (e = D.Z.getInvite(t.id)) && e.isExpired() && (e = null),
             el(er({}, k.Z.getState()), {
                 invite: e,
-                hideDiscriminator: H.Z.hidePersonalInformation,
-                hideInstantInvites: H.Z.hideInstantInvites,
+                hideDiscriminator: B.Z.hidePersonalInformation,
+                hideInstantInvites: B.Z.hideInstantInvites,
             })
         );
     });
@@ -1019,17 +1019,17 @@ function ef(e) {
             toggleVisible: _,
             popoutOpen: O,
             setPopoutOpen: x,
-            inBornThisNamedExperiment: j,
+            inBornThisNamedExperiment: E,
         } = eh({
             initialPopoutOpen: null != i && i.isGroupDM() && 0 === i.recipients.length,
             channel: i,
             location: g,
             subscribeToGlobalHotkey: m,
         }),
-        E = (0, u.e7)([V.default], () => V.default.getUser(null == i ? void 0 : i.getRecipientId()));
-    return (null != (t = null == E ? void 0 : E.bot) && t) || (null != (n = null == E ? void 0 : E.isProvisional) && n)
+        j = (0, u.e7)([H.default], () => H.default.getUser(null == i ? void 0 : i.getRecipientId()));
+    return (null != (t = null == j ? void 0 : j.bot) && t) || (null != (n = null == j ? void 0 : j.isProvisional) && n)
         ? null
-        : j
+        : E
           ? (0, r.jsx)(J.ZP.Icon, {
                 ref: b,
                 onClick: C,

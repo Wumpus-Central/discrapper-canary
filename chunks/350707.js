@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => j,
+    ZP: () => E,
     cy: () => O,
     iu: () => _,
 }),
@@ -147,7 +147,7 @@ class x extends o.PureComponent {
             });
     }
 }
-class j extends (i = o.PureComponent) {
+class E extends (i = o.PureComponent) {
     render() {
         let e = this.props,
             {
@@ -251,4 +251,4 @@ class j extends (i = o.PureComponent) {
             });
     }
 }
-y(j, "TextAlignments", _), y(j, "defaultProps", { textAlign: "left" });
+y(E, "TextAlignments", _), y(E, "defaultProps", { textAlign: "left" });

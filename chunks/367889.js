@@ -2,8 +2,8 @@ n.d(e, { F: () => g });
 var i = n(54381),
     r = n(657707),
     l = n(793030),
-    u = n(692547),
-    s = n(160913),
+    s = n(692547),
+    u = n(160913),
     a = n(813732),
     o = n(509613),
     c = n(28682),
@@ -26,10 +26,10 @@ let T = (0, o.x1)(d.n.SUBSCRIPTIONS_PANE, {
         trailing: {
             type: c.PU.STRONGLY_DISCOURAGED_CUSTOM,
             useDecoration: () =>
-                (0, s.U)()
+                (0, u.U)()
                     ? (0, i.jsx)(l.Mgn, {
                           size: "xs",
-                          color: u.Z.unsafe_rawColors.YELLOW_300,
+                          color: s.Z.unsafe_rawColors.YELLOW_300,
                       })
                     : null,
         },

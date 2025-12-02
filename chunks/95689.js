@@ -2,8 +2,8 @@ n.d(e, { Z: () => g });
 var i = n(442837),
     r = n(433517),
     l = n(87051),
-    u = n(509613),
-    s = n(430824),
+    s = n(509613),
+    u = n(430824),
     a = n(9156),
     o = n(594174),
     c = n(626135),
@@ -12,7 +12,7 @@ var i = n(442837),
     S = n(468788),
     T = n(490897),
     I = n(388032);
-let g = (0, u.qs)(d.n.EXPERIMENTAL_UNREADS, {
+let g = (0, s.qs)(d.n.EXPERIMENTAL_UNREADS, {
     useTitle: () => I.intl.string(I.t["k6m/si"]),
     useSubtitle: () => I.intl.string(I.t.LGynPs),
     useValue: () => (0, i.e7)([a.ZP], () => a.ZP.useNewNotifications),
@@ -21,7 +21,7 @@ let g = (0, u.qs)(d.n.EXPERIMENTAL_UNREADS, {
             t ||
                 (r.K.set("turnedOffNewNotifications", !0),
                 c.default.track(E.rMx.NOTIFICATION_MIGRATION_OPTOUT, {
-                    num_guilds_with_new_setting: s.Z.getGuildsArray().filter(
+                    num_guilds_with_new_setting: u.Z.getGuildsArray().filter(
                         (t) => a.ZP.resolveGuildUnreadSetting(t) === T.i.ONLY_MENTIONS,
                     ).length,
                 }));

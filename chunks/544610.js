@@ -20,11 +20,11 @@ let v = !1,
     _ = "",
     O = 0,
     x = [],
-    j = !1,
-    E = new Set(),
+    E = !1,
+    j = new Set(),
     S = null;
 function P() {
-    (_ = ""), (O = 0), (x = []), (E = new Set()), (v = !1), (S = null);
+    (_ = ""), (O = 0), (x = []), (j = new Set()), (v = !1), (S = null);
 }
 function I(e) {
     (_ = e), (O = 0), Z();
@@ -104,8 +104,8 @@ function Z() {
 }
 function T() {
     if (!v) return !1;
-    let e = j;
-    return (j = b.Z.getFriendCount() > 0) !== e;
+    let e = E;
+    return (E = b.Z.getFriendCount() > 0) !== e;
 }
 function N(e, t) {
     if (m.Z.hasConsented(C.pjP.PERSONALIZATION)) {
@@ -162,10 +162,10 @@ class D extends (r = a.ZP.Store) {
         return x;
     }
     hasFriends() {
-        return j;
+        return E;
     }
     getSelectedUsers() {
-        return E;
+        return j;
     }
     getQuery() {
         return _;
@@ -174,9 +174,9 @@ class D extends (r = a.ZP.Store) {
         return {
             query: _,
             selectedRow: O,
-            selectedUsers: E,
+            selectedUsers: j,
             results: x,
-            hasFriends: j,
+            hasFriends: E,
         };
     }
 }
@@ -214,11 +214,11 @@ let k = new D(o.Z, {
         },
         PRIVATE_CHANNEL_RECIPIENTS_ADD_USER: function (e) {
             let { userId: t } = e;
-            E.add(t), (E = new Set(E));
+            j.add(t), (j = new Set(j));
         },
         PRIVATE_CHANNEL_RECIPIENTS_REMOVE_USER: function (e) {
             let { userId: t } = e;
-            E.delete(t), (E = new Set(E));
+            j.delete(t), (j = new Set(j));
         },
     }),
     U = k;

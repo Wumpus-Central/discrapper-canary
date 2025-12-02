@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685), n(358797);
+n.d(t, { Z: () => E }), n(388685), n(358797);
 var i = n(54381),
     r = n(473749),
     l = n(120356),
@@ -121,7 +121,7 @@ let O = r.memo(function (e) {
             ],
         });
     }),
-    j = r.memo(function (e) {
+    E = r.memo(function (e) {
         let { channelId: t } = e,
             n = (0, s.e7)([p.default], () => p.default.getId()),
             l = (0, s.e7)([h.Z], () => h.Z.isTyping(t, n), [t, n]),
@@ -129,13 +129,13 @@ let O = r.memo(function (e) {
             d = (0, s.e7)([b.ZP], () => b.ZP.isComboing(n, t), [t, n]),
             { ref: f, width: m = 0 } = (0, u.ZP)(),
             [y, v] = r.useState(!1),
-            j = (0, C.Z)(t),
-            E = a && d && l;
+            E = (0, C.Z)(t),
+            j = a && d && l;
         r.useEffect(() => {
-            E && v(!0);
-            let e = setTimeout(() => v(E), 1000);
+            j && v(!0);
+            let e = setTimeout(() => v(j), 1000);
             return () => clearTimeout(e);
-        }, [E]);
+        }, [j]);
         let S = (0, c.q_F)({
                 opacity: +!!y,
                 transform: y ? "translateY(0)" : "translateY(100%)",
@@ -144,13 +144,13 @@ let O = r.memo(function (e) {
             }),
             P = r.useMemo(
                 () =>
-                    null != j
-                        ? j
+                    null != E
+                        ? E
                         : {
                               value: 0,
                               multiplier: 1,
                           },
-                [j],
+                [E],
             ),
             I = r.useRef(P);
         r.useEffect(() => {
@@ -158,10 +158,10 @@ let O = r.memo(function (e) {
         }, [P]);
         let { multiplier: Z, value: T } = r.useMemo(
             () => ({
-                value: E ? P.value : I.current.value,
-                multiplier: E ? P.multiplier : I.current.multiplier,
+                value: j ? P.value : I.current.value,
+                multiplier: j ? P.multiplier : I.current.multiplier,
             }),
-            [E, P, I],
+            [j, P, I],
         );
         return (0, i.jsxs)(i.Fragment, {
             children: [

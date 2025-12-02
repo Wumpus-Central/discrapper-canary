@@ -22,8 +22,8 @@ let C = (e) => {
         _ = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         O = r.useRef(0),
         x = r.useRef(null),
-        j = r.useRef(null),
-        [E, S] = r.useState(!1),
+        E = r.useRef(null),
+        [j, S] = r.useState(!1),
         P = r.useMemo(() => !n && !v && !_, [v, n, _]);
     if (
         (r.useEffect(() => {
@@ -31,20 +31,20 @@ let C = (e) => {
         }, [n, v]),
         r.useEffect(() => {
             !_ &&
-                (E ||
+                (j ||
                     (!1 === n && ((O.current = 0), null != x.current && (clearTimeout(x.current), (x.current = null))),
                     (O.current = Date.now()),
                     (x.current = setTimeout(() => {
                         let e = O.current;
                         if (0 !== e && !1 !== n && !(Date.now() - e < 1000) && !v) {
-                            if (null != j.current) {
+                            if (null != E.current) {
                                 var i;
                                 let {
                                     x: e,
                                     y: n,
                                     width: r,
                                     height: l,
-                                } = null == (i = j.current) ? void 0 : i.getBoundingClientRect();
+                                } = null == (i = E.current) ? void 0 : i.getBoundingClientRect();
                                 (0, g.Z)(
                                     t,
                                     {
@@ -64,7 +64,7 @@ let C = (e) => {
                                 });
                         }
                     }, 1100))));
-        }, [v, E, n, t, _]),
+        }, [v, j, n, t, _]),
         !(0, m.p7)("Message Confetti Peak") || !(0, b.Uw)(t))
     )
         return null;
@@ -86,7 +86,7 @@ let C = (e) => {
                       forcePNG: !0,
                   });
     return (0, i.jsxs)("div", {
-        ref: j,
+        ref: E,
         className: y.emojiWrapper,
         style: { right: "".concat(256 + C, "px") },
         children: [

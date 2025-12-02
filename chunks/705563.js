@@ -23,7 +23,7 @@ function C(e) {
             joinRequest: _,
             isModmin: O,
             guildId: x,
-            maxMembers: j,
+            maxMembers: E,
         } = (0, r.cj)([h.Z, u.Z, d.Z], () => {
             let e = h.Z.getRequest(v),
                 t = u.Z.getGuild(null == e ? void 0 : e.guildId);
@@ -34,8 +34,8 @@ function C(e) {
                 maxMembers: null == t ? void 0 : t.maxMembers,
             };
         }),
-        E = (0, r.e7)([c.Z], () => (null != x ? c.Z.getMemberCount(x) : 0)),
-        S = null != j && (null != E ? E : 0) >= j,
+        j = (0, r.e7)([c.Z], () => (null != x ? c.Z.getMemberCount(x) : 0)),
+        S = null != E && (null != j ? j : 0) >= E,
         {
             approveRequest: P,
             rejectRequest: I,

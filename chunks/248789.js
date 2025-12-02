@@ -80,7 +80,7 @@ function y(e) {
             },
             [O],
         ),
-        j = r.useCallback(() => {
+        E = r.useCallback(() => {
             (0, o.ZDy)(
                 async () => {
                     let { default: e } = await Promise.all([n.e("37031"), n.e("89650"), n.e("899")]).then(
@@ -102,7 +102,7 @@ function y(e) {
             ),
                 x(p.NM.USER_BANNER_OPEN_SAFETY_TOOLS);
         }, [t, C, y, x]),
-        E = r.useCallback(() => {
+        j = r.useCallback(() => {
             v(), x(p.NM.USER_BANNER_BLOCK_CONFIRM);
         }, [v, x]),
         S = r.useCallback(() => {
@@ -115,7 +115,7 @@ function y(e) {
                     let { transitionState: r, onClose: l } = n;
                     return (0, i.jsx)(e, {
                         transitionState: r,
-                        onBlock: E,
+                        onBlock: j,
                         onBlockAndReport: S,
                         onCancel: () => {
                             null == l || l(), x(p.NM.USER_BANNER_BLOCK_CANCEL);
@@ -126,7 +126,7 @@ function y(e) {
                     });
                 };
             });
-        }, [E, S, C, t, x]);
+        }, [j, S, C, t, x]);
     return (0, i.jsx)(h.Q, {
         channelId: t,
         warningId: y,
@@ -139,7 +139,7 @@ function y(e) {
             {
                 text: m.intl.string(m.t.Qyu4UK),
                 variant: "primary",
-                onClick: j,
+                onClick: E,
             },
             ...(_
                 ? []

@@ -1,6 +1,6 @@
 n.d(t, {
-    L: () => N,
-    O: () => T,
+    L: () => T,
+    O: () => N,
 }),
     n(388685);
 var a = n(54381),
@@ -460,7 +460,7 @@ let h = l.createContext({
             })
         );
     },
-    T = () => {
+    N = () => {
         let [e, t] = l.useState("preview");
         return (0, a.jsxs)("div", {
             className: m.container,
@@ -482,7 +482,7 @@ let h = l.createContext({
             ],
         });
     },
-    N = (e) => {
+    T = (e) => {
         let { children: t } = e,
             [n, i] = l.useState(() => () => {}),
             r = l.useMemo(() => ({ setDropHandler: (e) => i(() => e) }), []);

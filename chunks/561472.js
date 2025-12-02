@@ -19,16 +19,16 @@ var i = n(54381),
     v = n(388032);
 let _ = function (e) {
     let { className: t, style: n, channel: _, draftType: O } = e,
-        [x, j] = r.useState(!0),
-        E = (0, l.e7)([d.Z], () => d.Z.hasLayers()),
+        [x, E] = r.useState(!0),
+        j = (0, l.e7)([d.Z], () => d.Z.hasLayers()),
         S = (0, l.e7)([p.Z], () => null != _ && p.Z.can(C.Plq.ATTACH_FILES, _), [_]),
         P = null != (0, l.e7)([o.Z], () => o.Z.getActiveCommand(_.id)),
         I = _.getGuildId(),
         Z = O === c.d.FirstThreadMessage,
         T = (0, a.$5)(_),
         N = r.useMemo(
-            () => !E && ((_.isPrivate() && !_.isManaged()) || (null != I && !T && S && u.Z.canChatInGuild(I))),
-            [S, T, _, I, E],
+            () => !j && ((_.isPrivate() && !_.isManaged()) || (null != I && !T && S && u.Z.canChatInGuild(I))),
+            [S, T, _, I, j],
         ),
         A = Z
             ? C.TPd.GUILD_THREADS_ONLY.has(_.type)
@@ -56,10 +56,10 @@ let _ = function (e) {
                       }),
                       m.S.dispatchToLastSubscribed(C.CkL.TEXTAREA_FOCUS));
               },
-              onDragClear: () => j(!0),
+              onDragClear: () => E(!0),
               onDragOver: (e) => {
                   if (P) return !1;
-                  Z || e.shiftKey !== x || j(!e.shiftKey);
+                  Z || e.shiftKey !== x || E(!e.shiftKey);
               },
           });
 };

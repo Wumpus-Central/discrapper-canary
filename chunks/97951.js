@@ -2,8 +2,8 @@ n.d(e, { Z: () => g });
 var i = n(54381),
     r = n(399606),
     l = n(481060),
-    u = n(509613),
-    s = n(131951),
+    s = n(509613),
+    u = n(131951),
     a = n(63063),
     o = n(313789),
     c = n(823087),
@@ -26,10 +26,10 @@ function I() {
         ],
     });
 }
-let g = (0, u.ON)(o.n.VOICE_MICROPHONE_TEST_SETTING, {
+let g = (0, s.ON)(o.n.VOICE_MICROPHONE_TEST_SETTING, {
     render: () => (0, i.jsx)(I, {}),
     usePredicate: function () {
-        return (0, r.e7)([s.Z], () => s.Z.supports(E.AN.LOOPBACK));
+        return (0, r.e7)([u.Z], () => u.Z.supports(E.AN.LOOPBACK));
     },
     useSearchTerms: () => [S.intl.string(S.t.nuFtHH)],
 });

@@ -108,9 +108,9 @@ function y(e) {
         } = e,
         O = null == r ? void 0 : r.getGuildId(),
         x = null == r ? void 0 : r.id,
-        j = (0, s.e7)([p.Z], () => (null != O ? p.Z.getGuild(O) : null), [O]),
-        E = (0, s.e7)([u.ZP], () => u.ZP.getActiveEventByChannel(x), [x]);
-    if (!(null != j && null != r && h.Z.can(f.Plq.CREATE_INSTANT_INVITE, r))) return null;
+        E = (0, s.e7)([p.Z], () => (null != O ? p.Z.getGuild(O) : null), [O]),
+        j = (0, s.e7)([u.ZP], () => u.ZP.getActiveEventByChannel(x), [x]);
+    if (!(null != E && null != r && h.Z.can(f.Plq.CREATE_INSTANT_INVITE, r))) return null;
     let S = m.intl.string(m.t.VINpSK);
     return (
         null != t ? (S = m.intl.string(m.t["6VQaqd"])) : null != n && (S = m.intl.string(m.t["OzOM/q"])),
@@ -123,17 +123,17 @@ function y(e) {
                         variant: "secondary",
                         text: S,
                         onClick: () => {
-                            o()(null != j, "guild cannot be null"),
+                            o()(null != E, "guild cannot be null"),
                                 o()(null != r, "channel cannot be null"),
                                 b({
-                                    guild: j,
+                                    guild: E,
                                     channel: r,
                                     streamUserId: null == t ? void 0 : t.ownerId,
                                     applicationId: n,
                                     appContext: y,
                                     exitFullScreen: a,
                                     analyticsLocation: C,
-                                    guildScheduledEvent: E,
+                                    guildScheduledEvent: j,
                                 });
                         },
                     }),
@@ -145,7 +145,7 @@ function y(e) {
                     className: l()(v, g.iconButton),
                     exitFullScreen: a,
                     analyticsLocation: C,
-                    guildScheduledEvent: E,
+                    guildScheduledEvent: j,
                 }),
             ],
         })

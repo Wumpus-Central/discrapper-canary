@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
-        default: () => I,
-        openDevToolsPopout: () => T,
+        default: () => w,
+        openDevToolsPopout: () => N,
     }),
     n(388685);
 var a = n(54381),
@@ -40,7 +40,7 @@ function E(e) {
         className: C.resizeHandle,
     });
 }
-function T() {
+function N() {
     (0, h.open)(
         _.KJ3.DEVTOOLS_POPOUT,
         () =>
@@ -48,7 +48,7 @@ function T() {
                 windowKey: _.KJ3.DEVTOOLS_POPOUT,
                 title: "DevTools",
                 withTitleBar: !0,
-                children: (0, a.jsx)(I, {
+                children: (0, a.jsx)(w, {
                     mobile: !1,
                     isPopout: !0,
                 }),
@@ -59,7 +59,7 @@ function T() {
         },
     );
 }
-function N(e) {
+function T(e) {
     var t;
     let { isPopout: n = !1 } = e,
         l = (0, v.F)(),
@@ -94,7 +94,7 @@ function N(e) {
                                   (0, a.jsx)(m.ZP.Icon, {
                                       icon: c.rgF,
                                       tooltip: "Pop Out",
-                                      onClick: T,
+                                      onClick: N,
                                   }),
                                   (0, a.jsx)(m.ZP.Icon, {
                                       icon: c.Dio,
@@ -144,7 +144,7 @@ function O() {
                   }),
                   (0, a.jsx)("div", {
                       className: C.sidebarContent,
-                      children: (0, a.jsx)(N, {}),
+                      children: (0, a.jsx)(T, {}),
                   }),
               ],
           });
@@ -155,7 +155,7 @@ function P() {
               className: r()(C.container, C.mobileContainerExpanded),
               children: (0, a.jsx)("div", {
                   className: C.sidebarContent,
-                  children: (0, a.jsx)(N, {}),
+                  children: (0, a.jsx)(T, {}),
               }),
           })
         : (0, a.jsx)("div", {
@@ -176,14 +176,14 @@ function P() {
               }),
           });
 }
-function I(e) {
+function w(e) {
     let { mobile: t, isPopout: n = !1 } = e;
     return t
         ? (0, a.jsx)(P, {})
         : n
           ? (0, a.jsx)("div", {
                 className: C.popoutContainer,
-                children: (0, a.jsx)(N, { isPopout: !0 }),
+                children: (0, a.jsx)(T, { isPopout: !0 }),
             })
           : (0, a.jsx)(O, {});
 }

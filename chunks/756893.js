@@ -2,8 +2,8 @@ n.d(e, { Z: () => S });
 var i = n(473749),
     r = n(442837),
     l = n(509613),
-    u = n(28682),
-    s = n(292959),
+    s = n(28682),
+    u = n(292959),
     a = n(313789),
     o = n(518596),
     c = n(103644),
@@ -12,11 +12,11 @@ var i = n(473749),
 let S = (0, l.k4)(a.n.SOUNDS_CATEGORY, {
     useTitle: () => E.intl.string(E.t.MKWyKc),
     useNotice: function () {
-        let t = (0, r.e7)([s.Z], () => s.Z.getDisableAllSounds());
+        let t = (0, r.e7)([u.Z], () => u.Z.getDisableAllSounds());
         return i.useMemo(() => {
             if (t)
                 return {
-                    type: u.y1.INLINE_NOTICE,
+                    type: s.y1.INLINE_NOTICE,
                     noticeType: "warning",
                     useText: () =>
                         E.intl.format(E.t.fRvixS, {

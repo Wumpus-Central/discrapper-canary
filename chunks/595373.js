@@ -5,8 +5,8 @@ n.d(e, {
 var i = n(473749),
     r = n(818710),
     l = n(442837),
-    u = n(100527),
-    s = n(509613),
+    s = n(100527),
+    u = n(509613),
     a = n(131951),
     o = n(313789),
     c = n(325808),
@@ -17,7 +17,7 @@ var i = n(473749),
 function I() {
     return (0, l.e7)([a.Z], () => a.Z.getMode() === S.pM.PUSH_TO_TALK);
 }
-let g = (0, s.qs)(o.n.VOICE_PUSH_TO_TALK_SETTING, {
+let g = (0, u.qs)(o.n.VOICE_PUSH_TO_TALK_SETTING, {
     useTitle: function () {
         return r.FB ? T.intl.string(T.t.tG4Np5) : T.intl.string(T.t.JMyQin);
     },
@@ -35,7 +35,7 @@ let g = (0, s.qs)(o.n.VOICE_PUSH_TO_TALK_SETTING, {
         return (0, l.e7)([a.Z], () => a.Z.getMode() === S.pM.PUSH_TO_TALK);
     },
     setValue: function (t) {
-        (0, c.XH)(t ? S.pM.PUSH_TO_TALK : S.pM.VOICE_ACTIVITY, [u.Z.USER_SETTINGS_VOICE_AND_VIDEO]);
+        (0, c.XH)(t ? S.pM.PUSH_TO_TALK : S.pM.VOICE_ACTIVITY, [s.Z.USER_SETTINGS_VOICE_AND_VIDEO]);
     },
     useSearchTerms: () => [T.intl.string(T.t["pS+K2L"]), T.intl.string(T.t.nuFtHH)],
 });

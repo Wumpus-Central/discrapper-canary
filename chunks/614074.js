@@ -2,29 +2,29 @@ n.d(e, { C: () => d });
 var i = n(54381),
     r = n(473749),
     l = n(793030),
-    u = n(5900),
-    s = n(773275),
+    s = n(5900),
+    u = n(773275),
     a = n(388032),
     o = n(163646),
     c = n(291771);
 let d = () => {
-        let { isWeb: t, installationStatus: e } = (0, s.xf)(),
+        let { isWeb: t, installationStatus: e } = (0, u.xf)(),
             n = (0, r.useMemo)(() => {
                 if (t) return a.intl.string(o.default.KN6HOb);
                 switch (e) {
-                    case u._n.ERROR:
+                    case s._n.ERROR:
                         return a.intl.string(o.default.cjqyz7);
-                    case u._n.NOT_INSTALLED:
-                    case u._n.UNKNOWN:
+                    case s._n.NOT_INSTALLED:
+                    case s._n.UNKNOWN:
                         return a.intl.string(o.default.KN6HOb);
-                    case u._n.INSTALLING:
-                    case u._n.READY_FOR_LICENSE:
+                    case s._n.INSTALLING:
+                    case s._n.READY_FOR_LICENSE:
                         return a.intl.string(o.default.lYWqUK);
-                    case u._n.EXISTING_INSTALLATION:
+                    case s._n.EXISTING_INSTALLATION:
                         return a.intl.string(o.default.FgL0HB);
-                    case u._n.ZERO_TRUST:
+                    case s._n.ZERO_TRUST:
                         return a.intl.string(o.default["7zgDRR"]);
-                    case u._n.INSTALLED:
+                    case s._n.INSTALLED:
                         return (0, i.jsx)(E, {});
                 }
             }, [t, e]);
@@ -34,8 +34,8 @@ let d = () => {
         });
     },
     E = () => {
-        switch ((0, s.xf)((t) => t.connectionStatus)) {
-            case u.Ij.INITIALIZING:
+        switch ((0, u.xf)((t) => t.connectionStatus)) {
+            case s.Ij.INITIALIZING:
                 return (0, i.jsxs)("span", {
                     className: c.connectedStatus,
                     children: [
@@ -49,11 +49,11 @@ let d = () => {
                         }),
                     ],
                 });
-            case u.Ij.CONNECTED:
+            case s.Ij.CONNECTED:
                 return a.intl.string(o.default.FBu3XJ);
-            case u.Ij.DISCONNECTED:
+            case s.Ij.DISCONNECTED:
                 return a.intl.string(o.default["9V78nW"]);
-            case u.Ij.ERROR:
+            case s.Ij.ERROR:
                 return a.intl.string(o.default.i4ZzK6);
         }
     };

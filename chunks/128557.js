@@ -25,8 +25,8 @@ var i = n(54381),
     _ = n(259580),
     O = n(585483),
     x = n(63063),
-    j = n(358085),
-    E = n(709054),
+    E = n(358085),
+    j = n(709054),
     S = n(967128),
     P = n(981631),
     I = n(231873),
@@ -117,7 +117,7 @@ function w(e) {
 function M(e) {
     let { channel: t } = e,
         l = (0, s.e7)([C.Z], () => (null != t ? C.Z.getGuild(t.getGuildId()) : null), [t]),
-        p = null != l && E.default.extractTimestamp(l.id) < Date.now() - P._8R,
+        p = null != l && j.default.extractTimestamp(l.id) < Date.now() - P._8R,
         _ = (0, s.e7)([y.default], () => (null == l ? void 0 : l.ownerId) === y.default.getId(), [l]),
         { canInvite: M, canManageGuild: R, canMessage: L } = (0, f.TE)(t, l),
         D = (0, s.e7)([v.default], () => {
@@ -127,11 +127,11 @@ function M(e) {
                 (null == (t = v.default.getCurrentUser()) ? void 0 : t.mobile) === !0
             );
         }),
-        { guildPopulated: k, guildMessaged: U, guildPersonalized: F } = (0, f.h_)(l),
+        { guildPopulated: k, guildMessaged: U, guildPersonalized: V } = (0, f.h_)(l),
         {
-            handleInvite: B,
-            handleMessage: H,
-            handlePersonalize: V,
+            handleInvite: F,
+            handleMessage: B,
+            handlePersonalize: H,
             handleDownload: G,
             handleAddApplication: z,
         } = (function (e) {
@@ -210,7 +210,7 @@ function M(e) {
                 }, [e]),
             };
         })(l),
-        W = !(D || k || U || F),
+        W = !(D || k || U || V),
         { titleAnimatedStyle: q, opacities: K } = (function (e) {
             let t = (0, d.Z)(() => new o.Z.Value(0)),
                 n = (0, d.Z)(() => new o.Z.Value(0)),
@@ -294,7 +294,7 @@ function M(e) {
                             iconUrl: u.YvY,
                             header: Z.intl.string(Z.t.q9n0Ta),
                             completed: k,
-                            onClick: B,
+                            onClick: F,
                         }),
                     },
                     "invite",
@@ -310,8 +310,8 @@ function M(e) {
                         children: (0, i.jsx)(w, {
                             iconUrl: u.$_T,
                             header: Z.intl.string(Z.t.c5kxPh),
-                            completed: F,
-                            onClick: V,
+                            completed: V,
+                            onClick: H,
                         }),
                     },
                     "customize",
@@ -328,13 +328,13 @@ function M(e) {
                             iconUrl: u.qMX,
                             header: Z.intl.string(Z.t["SoP7+l"]),
                             completed: U,
-                            onClick: H,
+                            onClick: B,
                         }),
                     },
                     "message",
                 ),
             ),
-        (0, j.isWeb)() &&
+        (0, E.isWeb)() &&
             Q.push(
                 (0, i.jsx)(
                     o.Z.div,

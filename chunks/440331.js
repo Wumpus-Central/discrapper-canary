@@ -2,8 +2,8 @@ n.d(e, { Z: () => O });
 var i = n(54381),
     r = n(473749),
     l = n(512722),
-    u = n.n(l),
-    s = n(442837),
+    s = n.n(l),
+    u = n(442837),
     a = n(481060),
     o = n(660216),
     c = n(825209),
@@ -16,8 +16,8 @@ var i = n(54381),
 let O = (0, d.ON)(S.n.CLIPS_KEYBIND, {
     useSearchTerms: () => [I.intl.string(I.t.pf54EU), I.intl.string(I.t["QyB/jK"])],
     render: () => {
-        let t = (0, s.e7)([E.ZP], () => E.ZP.getKeybindForAction(T.kg4.SAVE_CLIP, !0));
-        u()(null != t, "Save clip keybind unset");
+        let t = (0, u.e7)([E.ZP], () => E.ZP.getKeybindForAction(T.kg4.SAVE_CLIP, !0));
+        s()(null != t, "Save clip keybind unset");
         let e = r.useCallback(
             (e) => {
                 var n, i;

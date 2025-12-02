@@ -20,8 +20,8 @@ var i = n(54381),
     _ = n(13279),
     O = n(248789),
     x = n(88101),
-    j = n(576954),
-    E = n(765104),
+    E = n(576954),
+    j = n(765104),
     S = n(122707),
     P = n(779836),
     I = n(23750),
@@ -36,10 +36,10 @@ var i = n(54381),
     D = n(481369),
     k = n(186877),
     U = n(294218),
-    F = n(534469),
-    B = n(993397),
-    H = n(511010),
-    V = n(524444),
+    V = n(534469),
+    F = n(993397),
+    B = n(511010),
+    H = n(524444),
     G = n(977391),
     z = n(921235),
     W = n(97352),
@@ -122,7 +122,7 @@ function et(e) {
         em = (0, k.$)(U),
         eg = et.length > 0 && (null == (t = et.first()) ? void 0 : t.isFirstMessageInForumPost(U)),
         eb = (0, s.ts)(U),
-        ey = (0, l.e7)([E.Z], () => E.Z.shouldShowTopicsBar() && !ed),
+        ey = (0, l.e7)([j.Z], () => j.Z.shouldShowTopicsBar() && !ed),
         eC = (0, x.P)(U.id),
         ev = (0, _.z)(U.id, X.zr),
         e_ = (0, d.k)(U.id),
@@ -130,7 +130,7 @@ function et(e) {
         ex = (function (e, t) {
             if (e.isDM() && null != t)
                 if (t.type === v.pj.STRANGER_DANGER)
-                    return (0, i.jsx)(j.M, {
+                    return (0, i.jsx)(E.M, {
                         channelId: e.id,
                         warningId: t.id,
                         senderId: e.getRecipientId(),
@@ -149,8 +149,8 @@ function et(e) {
                     });
             return null;
         })(U, null != (n = null != eC ? eC : ev) ? n : e_),
-        ej = U.isForumPost() && !eg ? (0, i.jsx)(m.Z, { postId: U.id }) : null,
-        eE = (0, b.Z)(U.id),
+        eE = U.isForumPost() && !eg ? (0, i.jsx)(m.Z, { postId: U.id }) : null,
+        ej = (0, b.Z)(U.id),
         eS = (0, y.nw)(U);
     (0, W.Z)();
     let eP = null,
@@ -169,7 +169,7 @@ function et(e) {
                             isBeforeGroup: null == e.content && $(el[t + 1]),
                         })
                       : (0, i.jsx)(
-                            H.Z,
+                            B.Z,
                             {
                                 isUnread: l,
                                 isBeforeGroup: null == e.content && $(el[t + 1]),
@@ -204,7 +204,7 @@ function et(e) {
                               ? J.t["VFWjc+"]
                               : J.t.xfkfTK),
                     (0, i.jsx)(
-                        B.Z,
+                        F.Z,
                         {
                             unreadId: K.j1,
                             messages: e,
@@ -220,7 +220,7 @@ function et(e) {
             e.type === Y.ys_.MESSAGE && null == eP && (eP = e);
             let l = e.groupId === (null == eP ? void 0 : eP.groupId) ? eP.content.id : e.groupId,
                 a = eS && e.content.isFirstMessageInForumPost(U),
-                o = e.type === Y.ys_.THREAD_STARTER_MESSAGE ? F.Ru : F.ZP;
+                o = e.type === Y.ys_.THREAD_STARTER_MESSAGE ? V.Ru : V.ZP;
             return (0, i.jsx)(
                 o,
                 {
@@ -231,7 +231,7 @@ function et(e) {
                     flashKey: e.flashKey,
                     id: (0, R.p)(U.id, e.content.id),
                     isLastItem: t >= el.length - 1,
-                    renderContentOnly: eE || a,
+                    renderContentOnly: ej || a,
                 },
                 e.content.id,
             );
@@ -358,7 +358,7 @@ function et(e) {
                                   color: "currentColor",
                                   children: n,
                               });
-                    r = (0, i.jsx)(V.G5, {
+                    r = (0, i.jsx)(H.G5, {
                         scrollManager: eo,
                         content: e,
                         channel: U,
@@ -400,7 +400,7 @@ function et(e) {
                                       children: n,
                                   }),
                     });
-                    r = (0, i.jsx)(V.LE, {
+                    r = (0, i.jsx)(H.LE, {
                         content: e,
                         channelId: U.id,
                     });
@@ -408,7 +408,7 @@ function et(e) {
             }
         } else
             eO.includes(q.E.NEW_MESSAGES) &&
-                (r = (0, i.jsx)(V.LE, {
+                (r = (0, i.jsx)(H.LE, {
                     content: J.intl.format(e, {
                         count: en,
                         timestamp: l,
@@ -421,13 +421,13 @@ function et(e) {
             (0, s.Lp)(U) &&
             ey &&
             eO.includes(q.E.SUMMARIES) &&
-            (r = (0, i.jsx)(V.BO, {
+            (r = (0, i.jsx)(H.BO, {
                 channel: U,
                 scrollManager: eo,
             })),
         et.error)
     )
-        h = (0, i.jsx)(V.Rp, {
+        h = (0, i.jsx)(H.Rp, {
             loading: et.loadingMore,
             onClick: () => {
                 var e;
@@ -446,10 +446,10 @@ function et(e) {
         let { jumpReturnTargetId: e } = et;
         h =
             et.loadingMore && et.jumpedToPresent
-                ? (0, i.jsx)(V.DR, { className: ep })
+                ? (0, i.jsx)(H.DR, { className: ep })
                 : null != e
-                  ? (0, i.jsx)(V.DR, {
-                        type: V.A7.REPLY,
+                  ? (0, i.jsx)(H.DR, {
+                        type: H.A7.REPLY,
                         onClick: () => {
                             o.Z.jumpToMessage({
                                 channelId: U.id,
@@ -459,7 +459,7 @@ function et(e) {
                         },
                         className: ep,
                     })
-                  : (0, i.jsx)(V.DR, {
+                  : (0, i.jsx)(H.DR, {
                         onClick: () =>
                             (function (e) {
                                 o.Z.jumpToPresent(e.id, Y.AQB);
@@ -473,7 +473,7 @@ function et(e) {
         channelStreamMarkup: eI,
         newMessagesBar: r,
         jumpToPresentBar: h,
-        forumPostActionBar: ej,
+        forumPostActionBar: eE,
         safetyWarningBanner: ex,
     };
 }

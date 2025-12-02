@@ -2,8 +2,8 @@ n.d(e, { Z: () => E });
 var i = n(323472),
     r = n(509613),
     l = n(313789),
-    u = n(291011),
-    s = n(392231),
+    s = n(291011),
+    u = n(392231),
     a = n(271524),
     o = n(388032);
 let c = l.n.NOTIFICATIONS_ADVANCED_ACCORDION,
@@ -21,7 +21,7 @@ let c = l.n.NOTIFICATIONS_ADVANCED_ACCORDION,
                 },
             });
         },
-        buildLayout: () => [u.Z, s.Z, a.Z],
+        buildLayout: () => [s.Z, u.Z, a.Z],
     }),
     E = (0, r.k4)(l.n.NOTIFICATIONS_ADVANCED_CATEGORY, {
         useTitle: () => o.intl.string(o.t["31DySj"]),

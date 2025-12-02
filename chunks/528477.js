@@ -26,20 +26,20 @@ let E = (e) => {
         n = (0, d.m)(),
         {
             installationStatus: E,
-            perkAvailableToUser: T,
-            isSupportedPrivateBrowsingPerkPlatform: N,
+            perkAvailableToUser: N,
+            isSupportedPrivateBrowsingPerkPlatform: T,
             isWeb: O,
             connectionStatus: P,
         } = (0, b.xf)(),
-        { enabled: I } = f.H.useConfig({ location: "private_browsing_perk_settings_page" }),
-        w = (0, l.useCallback)(() => {
+        { enabled: w } = f.H.useConfig({ location: "private_browsing_perk_settings_page" }),
+        I = (0, l.useCallback)(() => {
             (0, c.Z)(v.Z5c.NITRO_HOME), t();
         }, [t]),
         k = (0, l.useCallback)(() => {
             (0, m.openUserSettings)(u.n.PRIVATE_BROWSING_PANEL, { section: v.oAB.CF_WARP });
         }, []),
         R = [x.Ij.CONNECTED].includes(P),
-        A = N && I && ![x._n.ZERO_TRUST, x._n.ERROR].includes(E) && !O && (!n || T),
+        A = T && w && ![x._n.ZERO_TRUST, x._n.ERROR].includes(E) && !O && (!n || N),
         Z = (0, l.useMemo)(() => {
             switch (P) {
                 case x.Ij.CONNECTED:
@@ -51,7 +51,7 @@ let E = (e) => {
             }
         }, [P]),
         D = (0, l.useMemo)(() => {
-            if (!T) return y.intl.string(_.default.KN6HOb);
+            if (!N) return y.intl.string(_.default.KN6HOb);
             switch (E) {
                 case x._n.INSTALLED:
                 case x._n.EXISTING_INSTALLATION:
@@ -59,9 +59,9 @@ let E = (e) => {
                 default:
                     return y.intl.string(_.default.KN6HOb);
             }
-        }, [E, T, Z]),
+        }, [E, N, Z]),
         L = (0, l.useMemo)(() => {
-            if (!T)
+            if (!N)
                 return (0, a.jsx)(i.xvT, {
                     variant: "text-xs/medium",
                     color: "text-secondary",
@@ -76,7 +76,7 @@ let E = (e) => {
                         children: R
                             ? y.intl.format(_.default.zwW10o, {
                                   onClick: () => {
-                                      (0, r.j)(v.rMx.NITRO_PRIVACY_UPSELL_PERKS_CLICKED, {}), w();
+                                      (0, r.j)(v.rMx.NITRO_PRIVACY_UPSELL_PERKS_CLICKED, {}), I();
                                   },
                               })
                             : y.intl.format(_.default.D4hu0v, {
@@ -96,7 +96,7 @@ let E = (e) => {
                         }),
                     });
             }
-        }, [E, T, R, k, w]),
+        }, [E, N, R, k, I]),
         { analyticsLocations: M } = (0, o.ZP)(s.Z.MASKED_LINK);
     return ((0, l.useEffect)(() => {
         A &&

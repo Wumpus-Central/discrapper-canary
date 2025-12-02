@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => j });
 var i = n(54381);
 n(473749);
 var r = n(442837),
@@ -21,12 +21,12 @@ var r = n(442837),
     _ = n(354459),
     O = n(981631),
     x = n(388032),
-    j = n(895634);
-function E(e) {
-    let { onClose: t, onSelect: n, channel: E, remoteMode: S, onInteraction: P } = e,
+    E = n(895634);
+function j(e) {
+    let { onClose: t, onSelect: n, channel: j, remoteMode: S, onInteraction: P } = e,
         I = (0, s.bp)(),
-        { id: Z, type: T } = E,
-        N = (0, r.e7)([u.Z], () => u.Z.getGuild(E.guild_id), [E.guild_id]),
+        { id: Z, type: T } = j,
+        N = (0, r.e7)([u.Z], () => u.Z.getGuild(j.guild_id), [j.guild_id]),
         A = (0, r.e7)([d.Z], () => d.Z.getSelectedParticipant(Z)),
         w = (null == A ? void 0 : A.type) === _.fO.STREAM ? A.stream : null,
         M = (0, r.e7)([a.Z], () =>
@@ -34,18 +34,18 @@ function E(e) {
         ),
         R = (0, f.Z)(Z),
         L = (0, C.Z)(Z),
-        D = (0, g.Z)(E, N, null == w ? void 0 : w.ownerId, null == M ? void 0 : M.id),
+        D = (0, g.Z)(j, N, null == w ? void 0 : w.ownerId, null == M ? void 0 : M.id),
         k = (0, h.Z)(Z),
         U = (0, v.Z)(),
-        F = (0, c.$A)(Z),
-        B = (0, c.j8)(Z),
-        H = (0, y.Z)(w, I),
-        V = (0, b.Z)(M, Z),
+        V = (0, c.$A)(Z),
+        F = (0, c.j8)(Z),
+        B = (0, y.Z)(w, I),
+        H = (0, b.Z)(M, Z),
         G = (0, m.Z)(),
-        z = (0, o.Z)(E),
+        z = (0, o.Z)(j),
         W = (0, p.m)(Z);
     return (0, i.jsxs)(l.v2r, {
-        className: j.menu,
+        className: E.menu,
         onClose: t,
         onSelect: n,
         onInteraction: P,
@@ -55,8 +55,8 @@ function E(e) {
             (0, i.jsx)(l.kSQ, { children: T !== O.d4z.GUILD_STAGE_VOICE ? D : null }),
             (0, i.jsxs)(l.kSQ, {
                 children: [
+                    T === O.d4z.GUILD_STAGE_VOICE ? V : null,
                     T === O.d4z.GUILD_STAGE_VOICE ? F : null,
-                    T === O.d4z.GUILD_STAGE_VOICE ? B : null,
                     S || T === O.d4z.GUILD_STAGE_VOICE ? null : k,
                     G,
                     T !== O.d4z.GUILD_STAGE_VOICE ? R : null,
@@ -65,10 +65,10 @@ function E(e) {
             }),
             (0, i.jsx)(l.kSQ, { children: z }),
             (0, i.jsxs)(l.kSQ, {
-                children: [!E.isManaged() && E.isPrivate() ? W : null, U],
+                children: [!j.isManaged() && j.isPrivate() ? W : null, U],
             }),
             (0, i.jsxs)(l.kSQ, {
-                children: [null != w ? H : null, null != M ? V : null],
+                children: [null != w ? B : null, null != M ? H : null],
             }),
         ],
     });

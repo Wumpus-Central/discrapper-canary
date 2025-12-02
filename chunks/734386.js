@@ -20,8 +20,8 @@ var i = n(54381),
     _ = n(485386),
     O = n(430824),
     x = n(496675),
-    j = n(594174),
-    E = n(700785),
+    E = n(594174),
+    j = n(700785),
     S = n(51144),
     P = n(967128),
     I = n(786721),
@@ -35,9 +35,9 @@ function w(e) {
         o = (0, m.ZP)(t, !0),
         w = t.guild_id,
         M = (0, u.e7)([_.Z], () => (null != w ? _.Z.getSortedRoles(w) : void 0)),
-        R = (0, u.e7)([j.default, O.Z], () => {
+        R = (0, u.e7)([E.default, O.Z], () => {
             var e;
-            return j.default.getUser(null == (e = O.Z.getGuild(w)) ? void 0 : e.ownerId);
+            return E.default.getUser(null == (e = O.Z.getGuild(w)) ? void 0 : e.ownerId);
         }),
         L = r.useMemo(() => (null != M ? M.filter((e) => !(0, v.fI)(e)) : []), [M]),
         D = r.useMemo(
@@ -45,7 +45,7 @@ function w(e) {
                 s()(L)
                     .filter((e) => {
                         if (null == w) return !1;
-                        let n = E.I0({
+                        let n = j.I0({
                             forceRoles: { [e.id]: e },
                             context: t,
                         });
@@ -54,29 +54,29 @@ function w(e) {
                     .value(),
             [t, w, L],
         ),
-        k = (0, u.Wu)([j.default], () => {
+        k = (0, u.Wu)([E.default], () => {
             let e = {};
             for (let n of (null != R && (e[R.id] = R), Object.values(t.permissionOverwrites))) {
                 if (n.type !== f.BN.MEMBER || null != e[n.id]) continue;
-                let t = j.default.getUser(n.id);
+                let t = E.default.getUser(n.id);
                 null != t && (e[t.id] = t);
             }
             return s()(e)
                 .filter((e) => {
                     var n;
-                    let i = E.BT({
+                    let i = j.BT({
                             permission: Z.Plq.ADMINISTRATOR,
                             user: e,
                             context: t,
                         }),
-                        r = null != (n = t.permissionOverwrites[e.id]) ? n : E.Hn,
+                        r = null != (n = t.permissionOverwrites[e.id]) ? n : j.Hn,
                         l = c.e$(r.allow, Z.Plq.VIEW_CHANNEL);
                     return i || l;
                 })
                 .value();
         }, [t, R]),
         U = x.Z.can(Z.Plq.MANAGE_CHANNELS, t) || x.Z.can(Z.Plq.MANAGE_ROLES, t),
-        F = r.useCallback(() => l(!1), []);
+        V = r.useCallback(() => l(!1), []);
     return (0, i.jsxs)(P.ZP, {
         channelId: t.id,
         children: [
@@ -217,7 +217,7 @@ function w(e) {
                               })({}, e)),
                               (r = r =
                                   {
-                                      onClose: () => (F(), e.onClose()),
+                                      onClose: () => (V(), e.onClose()),
                                       channelId: t.id,
                                   }),
                               Object.getOwnPropertyDescriptors

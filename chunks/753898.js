@@ -21,8 +21,8 @@ var i = n(54381),
 function O(e) {
     var t;
     let { channel: n, children: O, user: x } = e,
-        j = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
-        E = null != (t = (0, d.ZP)(n)) ? t : "",
+        E = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
+        j = null != (t = (0, d.ZP)(n)) ? t : "",
         {
             avatarDecorationSrc: S,
             eventHandlers: P,
@@ -46,7 +46,7 @@ function O(e) {
         onMouseLeave: A,
         children: [
             (() => {
-                let e = !j && I;
+                let e = !E && I;
                 return n.isMultiUserDM()
                     ? (0, i.jsx)(m.v, {
                           channel: n,
@@ -56,11 +56,11 @@ function O(e) {
                               channel: n,
                               size: o.EFr.SIZE_80,
                               animated: e,
-                              "aria-label": E,
+                              "aria-label": j,
                           }),
                       })
                     : (0, i.jsx)(o.qEK, {
-                          "aria-label": E,
+                          "aria-label": j,
                           size: o.EFr.SIZE_80,
                           src: (0, u.x)(n, 80, e),
                           avatarDecoration: S,
@@ -69,12 +69,12 @@ function O(e) {
             (0, i.jsx)(C.Ot, {
                 children: w
                     ? (0, i.jsx)(h.Z, {
-                          userName: E,
+                          userName: j,
                           displayNameStyles: null == x ? void 0 : x.displayNameStyles,
                           effectDisplayType: Z ? p.F.ANIMATED : p.F.STATIC,
                           loop: !0,
                       })
-                    : E,
+                    : j,
             }),
             (0, i.jsx)(C.jz, { children: O }),
             n.isMultiUserDM() &&

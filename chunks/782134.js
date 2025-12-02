@@ -2,8 +2,8 @@ n.d(e, { Z: () => g });
 var i = n(54381),
     r = n(473749),
     l = n(793030),
-    u = n(442837),
-    s = n(846027),
+    s = n(442837),
+    u = n(846027),
     a = n(509613),
     o = n(131951),
     c = n(313789),
@@ -12,18 +12,18 @@ var i = n(54381),
     S = n(388032),
     T = n(670302);
 function I() {
-    let t = (0, u.e7)([o.Z], () => o.Z.getModeOptions().autoThreshold),
+    let t = (0, s.e7)([o.Z], () => o.Z.getModeOptions().autoThreshold),
         e = r.useCallback((t) => {
             let e = o.Z.getMode(),
                 { threshold: n } = o.Z.getModeOptions();
-            s.Z.setMode(e, {
+            u.Z.setMode(e, {
                 autoThreshold: t,
                 threshold: n,
             });
         }, []),
-        n = (0, u.e7)([o.Z], () => o.Z.supports(E.AN.AUTOMATIC_VAD)),
+        n = (0, s.e7)([o.Z], () => o.Z.supports(E.AN.AUTOMATIC_VAD)),
         { volume: a, isSpeaking: c } = (0, d.Kq)(),
-        I = (0, u.e7)([o.Z], () => o.Z.isEnabled()),
+        I = (0, s.e7)([o.Z], () => o.Z.isEnabled()),
         g = r.useMemo(
             () =>
                 !I &&
@@ -31,7 +31,7 @@ function I() {
                     className: T.noInputDevicesDetectedWarning,
                     children: (0, i.jsx)(l.M14, {
                         type: "warning",
-                        children: S.intl.format(S.t["O13I+O"], { onEnableClick: () => s.Z.enable(!0) }),
+                        children: S.intl.format(S.t["O13I+O"], { onEnableClick: () => u.Z.enable(!0) }),
                     }),
                 }),
             [I],
@@ -110,7 +110,7 @@ function I() {
 let g = (0, a.ON)(c.n.VOICE_INPUT_SENSITIVITY_FIELD_SET, {
     useSearchTerms: () => [S.intl.string(S.t["sqUm+k"]), S.intl.string(S.t.I1Zuq0), S.intl.string(S.t.nuFtHH)],
     usePredicate: () =>
-        (0, u.e7)([o.Z], () => {
+        (0, s.e7)([o.Z], () => {
             let t = o.Z.getMode(),
                 e = o.Z.isInputProfileCustom();
             return t === E.pM.VOICE_ACTIVITY && e;

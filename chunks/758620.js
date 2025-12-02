@@ -2,10 +2,10 @@ n.d(e, { Z: () => o });
 var i = n(442837),
     r = n(435064),
     l = n(39604),
-    u = n(509613),
-    s = n(313789),
+    s = n(509613),
+    u = n(313789),
     a = n(388032);
-let o = (0, u.qs)(s.n.CLIPS_ENABLE_GAME_SIGNALS, {
+let o = (0, s.qs)(u.n.CLIPS_ENABLE_GAME_SIGNALS, {
     useTitle: () => a.intl.string(a.t.iV6KcI),
     useSubtitle: () => a.intl.string(a.t["dJ2tX+"]),
     useValue: () => (0, i.e7)([r.Z], () => r.Z.getSettings().clipSignals.enableGameSignals),

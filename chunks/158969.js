@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => j });
 var i = n(54381),
     r = n(473749),
     l = n(120356),
@@ -20,7 +20,7 @@ var i = n(54381),
     _ = n(177119),
     O = n(724913),
     x = n(430864);
-let j = r.memo(function (e) {
+let E = r.memo(function (e) {
         let { message: t, notice: n, compact: r = !1, onDismiss: l } = e;
         return (0, i.jsxs)(i.Fragment, {
             children: [
@@ -64,10 +64,10 @@ let j = r.memo(function (e) {
             ],
         });
     }),
-    E = r.memo(function (e) {
+    j = r.memo(function (e) {
         var t, n;
         let { className: l, compact: o, message: u, children: f, content: m, onUpdate: C } = e,
-            E = null == (t = u.editedTimestamp) ? void 0 : t.toString(),
+            j = null == (t = u.editedTimestamp) ? void 0 : t.toString(),
             S = r.useRef(!1),
             P = (0, c.e7)([h.Z], () => h.Z.getMessage(u.id), [u.id]),
             I = r.useCallback(() => {
@@ -76,7 +76,7 @@ let j = r.memo(function (e) {
         return (
             r.useLayoutEffect(() => {
                 S.current ? null != C && C() : (S.current = !0);
-            }, [C, u.content, m, E, f]),
+            }, [C, u.content, m, j, f]),
             (0, i.jsxs)("div", {
                 id: (0, g.ut)(u),
                 className: a()(l, x.markup, {
@@ -103,7 +103,7 @@ let j = r.memo(function (e) {
                                 }),
                             ],
                         }),
-                    (0, i.jsx)(j, {
+                    (0, i.jsx)(E, {
                         notice: null != (n = null == P ? void 0 : P.errorMessage) ? n : v.intl.string(v.t.zQ69pv),
                         message: u,
                         compact: o,

@@ -22,7 +22,7 @@ var a = n(54381),
     C = n(388032),
     S = n(599832),
     E = n(451429);
-let T = [
+let N = [
         {
             key: "id",
             cellClassName: S.eventColumn,
@@ -48,7 +48,7 @@ let T = [
             },
         },
     ],
-    N = [
+    T = [
         {
             id: "details",
             name: "Details",
@@ -142,7 +142,7 @@ function O() {
         ),
         [c, d] = l.useState(void 0),
         x = s.find((e) => e.key === c),
-        { TabBar: f, renderSelectedTab: v } = (0, y.ZP)({ tabs: N }, []),
+        { TabBar: f, renderSelectedTab: v } = (0, y.ZP)({ tabs: T }, []),
         O = (0, u.e7)([g.Z], () => g.Z.trackTriggers),
         P = l.useCallback((e) => {
             h.Z.dispatch({
@@ -150,7 +150,7 @@ function O() {
                 enabled: e,
             });
         }, []),
-        I = O ? "Stop Tracking" : "Start Tracking";
+        w = O ? "Stop Tracking" : "Start Tracking";
     return (0, a.jsxs)("div", {
         ref: n,
         className: r()(E.panel, S.panel),
@@ -159,12 +159,12 @@ function O() {
                 className: S.toolbar,
                 children: [
                     (0, a.jsx)(m.u, {
-                        text: I,
+                        text: w,
                         children: (0, a.jsx)(p.hU, {
                             size: "sm",
                             variant: O ? "active" : "primary",
                             icon: O ? p.fpf : p.o1U,
-                            "aria-label": I,
+                            "aria-label": w,
                             onClick: () => P(!O),
                         }),
                     }),
@@ -185,7 +185,7 @@ function O() {
                 ],
             }),
             (0, a.jsx)(_.Z, {
-                columns: T,
+                columns: N,
                 data: s,
                 selectedRowKey: c,
                 onClickRow: (e) => d(e.key),

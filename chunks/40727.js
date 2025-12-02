@@ -2,11 +2,11 @@ n.d(e, { Z: () => c });
 var i = n(442837),
     r = n(435064),
     l = n(39604),
-    u = n(509613),
-    s = n(313789),
+    s = n(509613),
+    u = n(313789),
     a = n(37113),
     o = n(388032);
-let c = (0, u.Em)(s.n.CLIPS_FRAME_RATE, {
+let c = (0, s.Em)(u.n.CLIPS_FRAME_RATE, {
     useTitle: () => o.intl.string(o.t["2wScL1"]),
     useSubtitle: () => o.intl.string(o.t["Rf9+fy"]),
     useValue: () => (0, i.e7)([r.Z], () => r.Z.getSettings().clipsQuality.frameRate),

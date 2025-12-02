@@ -20,9 +20,9 @@ var r = n(54381),
     j = n(5192),
     C = n(998502),
     w = n(981631),
-    I = n(130231),
-    E = n(388032),
-    Z = n(127181),
+    Z = n(130231),
+    I = n(388032),
+    E = n(127181),
     P = n(350618);
 let T = C.ZP.getEnableHardwareAcceleration() ? c.Xo$ : u.Z;
 function y(e) {
@@ -53,23 +53,23 @@ function y(e) {
     return null == u || null == O || null == y
         ? null
         : (0, r.jsxs)(c.$1m, {
-              className: Z.container,
+              className: E.container,
               children: [
                   (0, r.jsx)("img", {
                       alt: "",
-                      className: Z.image,
+                      className: E.image,
                       src: P,
                   }),
                   (0, r.jsxs)("div", {
-                      className: Z.textContainer,
+                      className: E.textContainer,
                       children: [
                           (0, r.jsx)(l.xvT, {
                               variant: "text-md/semibold",
-                              children: E.intl.string(S ? I.default.KSWK1U : I.default.XXXX5l),
+                              children: I.intl.string(S ? Z.default.KSWK1U : Z.default.XXXX5l),
                           }),
                           (0, r.jsx)(l.xvT, {
                               variant: "text-sm/medium",
-                              children: E.intl.format(S ? I.default["7fWTg4"] : I.default["7PXeeQ"], {
+                              children: I.intl.format(S ? Z.default["7fWTg4"] : Z.default["7PXeeQ"], {
                                   onClick: () => {
                                       (0, p.f)({
                                           guildId: i,
@@ -142,16 +142,16 @@ function y(e) {
                               colorString: C.colorString,
                               colorStrings: C.colorStrings,
                           }),
-                          className: o()(Z.content, Z.exampleMessage),
-                          message: E.intl.string(E.t["6OSasb"]),
+                          className: o()(E.content, E.exampleMessage),
+                          message: I.intl.string(I.t["6OSasb"]),
                           decorations: (0, r.jsx)(c.Ucv, {
                               color: c.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
-                              className: Z.boostIcon,
+                              className: E.boostIcon,
                           }),
                       }),
                   (0, r.jsx)(f.Z, {
                       guild: u,
-                      className: Z.content,
+                      className: E.content,
                       analyticsLocation: {
                           page: w.ZY5.GUILD_POWERUPS_OVERVIEW,
                           section: w.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR,

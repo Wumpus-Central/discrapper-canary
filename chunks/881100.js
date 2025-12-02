@@ -133,7 +133,7 @@ let k = (e, t, n) => ((0, i.wj)(e) ? t : n),
             },
             stickersPremiumPerk: {
                 title: p.intl.string(p.t.tzdIwI),
-                description: p.intl.string(p.t.FXlU24),
+                description: p.intl.string(p.t.hJG8ZN),
                 imageSource: k(i, S, L),
                 imageClassName: t.stickersImage,
             },

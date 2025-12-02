@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => E });
 var i = n(54381),
     r = n(473749),
     l = n(772848),
@@ -20,9 +20,9 @@ var i = n(54381),
     _ = n(388032),
     O = n(842350);
 let x = "vc-gifting-".concat((0, l.Z)());
-function j(e) {
+function E(e) {
     var t;
-    let { isHovered: n, closePopout: l, onMouseEnter: j, onMouseLeave: E, channel: S } = e;
+    let { isHovered: n, closePopout: l, onMouseEnter: E, onMouseLeave: j, channel: S } = e;
     r.useEffect(() => {
         n || l();
     }, [l, n]);
@@ -59,8 +59,8 @@ function j(e) {
                 modal: !1,
                 children: (0, i.jsxs)("div", {
                     className: O.container,
-                    onMouseEnter: j,
-                    onMouseLeave: E,
+                    onMouseEnter: E,
+                    onMouseLeave: j,
                     children: [
                         (0, i.jsx)(a.X6q, {
                             className: O.title,

@@ -21,8 +21,8 @@ function x(e) {
             theRestOfTheUrl: C,
             shouldTrustUrl: S,
             setShouldTrustUrl: E,
-            handleConfirm: T,
-            handleCancel: N,
+            handleConfirm: N,
+            handleCancel: T,
         } = (0, u.X)({
             url: t,
             trustUrl: n,
@@ -45,7 +45,7 @@ function x(e) {
                 {
                     text: p.intl.string(p.t["/g10LC"]),
                     onClick: () => {
-                        N(),
+                        T(),
                             d.default.track(m.rMx.MASKED_LINK_MODAL_CLICKED, {
                                 is_trust_url_selected: S,
                                 action_type: "cancel",
@@ -56,7 +56,7 @@ function x(e) {
                 {
                     text: x ? p.intl.string(p.t.COq6kk) : p.intl.string(p.t.NcJfJG),
                     onClick: () => {
-                        T(),
+                        N(),
                             d.default.track(m.rMx.MASKED_LINK_MODAL_CLICKED, {
                                 is_trust_url_selected: S,
                                 action_type: "confirm",

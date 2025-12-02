@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => w }), n(388685);
 var a = n(54381),
     l = n(913527),
     i = n.n(l),
@@ -34,12 +34,12 @@ let C = [
         o.C.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK,
     ],
     E = [o.C.ADOPT_CLAN_IDENTITY_NOTICE],
-    T = [
+    N = [
         o.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION,
         o.z.VANITY_URL_POWERUP_ROLLBACK_MODAL,
         o.z.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER,
     ];
-function N(e) {
+function T(e) {
     switch (e) {
         case o.C.GUILD_POWERUP_LEVEL_1_COACHMARK:
             return "GUILD_POWERUP_LEVEL_1_COACHMARK";
@@ -73,7 +73,7 @@ async function P(e) {
         rejectWithError: !0,
     });
 }
-function I() {
+function w() {
     let e = (0, r.e7)([j.Z], () => j.Z.getGuildId()),
         t = (0, r.e7)([v.Z], () => {
             var t;
@@ -185,7 +185,7 @@ function I() {
                             (0, a.jsx)(
                                 c.rsf,
                                 {
-                                    label: N(t),
+                                    label: T(t),
                                     checked: n.includes(t),
                                     onChange: (n) => {
                                         n
@@ -206,7 +206,7 @@ function I() {
                             (0, a.jsx)(
                                 c.rsf,
                                 {
-                                    label: N(t),
+                                    label: T(t),
                                     checked: n.includes(t),
                                     onChange: (n) => {
                                         n
@@ -227,7 +227,7 @@ function I() {
                             className: y.header,
                             children: "Reset Powerup Rollback DCs",
                         }),
-                        T.map((e) =>
+                        N.map((e) =>
                             (0, a.jsx)(
                                 u.Z,
                                 {

@@ -20,8 +20,8 @@ var i = n(392711),
     j = n(25990),
     O = n(594174),
     P = n(55935),
-    v = n(74538),
-    _ = n(388032),
+    _ = n(74538),
+    v = n(388032),
     E = n(71627);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -53,7 +53,7 @@ let I = (e) => {
             p = (0, l.e7)([O.default], () => O.default.getCurrentUser()),
             m = (0, l.e7)([s.Z], () => s.Z.getProduct(null == n ? void 0 : n.skuId)),
             g = (0, l.e7)([x.default], () => x.default.locale),
-            h = v.ZP.canUseCollectibles(p),
+            h = _.ZP.canUseCollectibles(p),
             y = (0, c.qS)(d),
             b = (0, c.G1)(u),
             j = !h && y,
@@ -87,7 +87,7 @@ let I = (e) => {
                                   variant: "text-xxs/normal",
                                   color: "text-muted",
                                   className: E.effectPurchasedAt,
-                                  children: _.intl.format(_.t.Io7ozn, { days: C.days.toString() }),
+                                  children: v.intl.format(v.t.Io7ozn, { days: C.days.toString() }),
                               }),
                           null != d &&
                               (0, r.jsxs)(o.Text, {
@@ -95,7 +95,7 @@ let I = (e) => {
                                   color: "text-muted",
                                   className: E.effectPurchasedAt,
                                   children: [
-                                      _.intl.format(_.t.gW9R4B, {
+                                      v.intl.format(v.t.gW9R4B, {
                                           date: d.purchasedAt.toLocaleDateString(g, {
                                               month: "long",
                                               year: "numeric",
@@ -105,7 +105,7 @@ let I = (e) => {
                                           (0, r.jsxs)(r.Fragment, {
                                               children: [
                                                   (0, r.jsx)("br", {}),
-                                                  _.intl.format(_.t.eZSTa5, {
+                                                  v.intl.format(v.t.eZSTa5, {
                                                       date: d.expiresAt.toLocaleDateString(g, {
                                                           minute: "numeric",
                                                           hour: "numeric",
@@ -123,7 +123,7 @@ let I = (e) => {
                                   variant: "text-xxs/normal",
                                   color: "text-muted",
                                   className: E.effectPurchasedAt,
-                                  children: _.intl.string(_.t.nKdAlO),
+                                  children: v.intl.string(v.t.nKdAlO),
                               }),
                       ],
                   }),
@@ -132,14 +132,14 @@ let I = (e) => {
     },
     S = (e, t, n, r) =>
         e
-            ? _.intl.string(_.t["1UPza/"])
+            ? v.intl.string(v.t["1UPza/"])
             : t && n
-              ? _.intl.string(_.t.hmyYK8)
+              ? v.intl.string(v.t.hmyYK8)
               : t && !n
                 ? r
-                    ? _.intl.string(_.t.melduy)
-                    : _.intl.string(_.t.JtAKwp)
-                : _.intl.string(_.t.fEGjVQ),
+                    ? v.intl.string(v.t.melduy)
+                    : v.intl.string(v.t.JtAKwp)
+                : v.intl.string(v.t.fEGjVQ),
     w = (e) => {
         var t, n;
         let {
@@ -154,7 +154,7 @@ let I = (e) => {
                 pendingGlobalName: x,
                 pendingNickname: O,
                 pendingPronouns: P,
-                pendingBio: _,
+                pendingBio: v,
                 pendingBanner: S,
                 pendingAvatar: w,
                 pendingAvatarDecoration: A,
@@ -170,17 +170,17 @@ let I = (e) => {
                     null != f ? u.Z.getAllPending() : j.Z.getAllPending(),
                 ),
             ),
-            Z = v.ZP.isPremium(i),
-            k = v.ZP.canUsePremiumProfileCustomization(i),
-            D = (0, h.ZP)(i.id),
-            U = !!(null == D ? void 0 : D.getPreviewBio(_)),
+            k = _.ZP.isPremium(i),
+            D = _.ZP.canUsePremiumProfileCustomization(i),
+            Z = (0, h.ZP)(i.id),
+            U = !!(null == Z ? void 0 : Z.getPreviewBio(v)),
             B = {
                 user: i,
                 guild: f,
                 pendingGlobalName: x,
                 pendingNickname: O,
                 pendingPronouns: P,
-                pendingBio: y.dN.useSetting() && null != _ ? d.ZP.parse(void 0, _).content : _,
+                pendingBio: y.dN.useSetting() && null != v ? d.ZP.parse(void 0, v).content : v,
                 pendingBanner: S,
                 useLargeBanner: !0,
                 pendingAvatar: (0, m.SD)({
@@ -192,7 +192,7 @@ let I = (e) => {
                 pendingAccentColor: T,
                 pendingProfileEffect: null != o ? o : null,
                 hideFakeActivity: U,
-                canUsePremiumCustomization: k,
+                canUsePremiumCustomization: D,
                 onUpsellClick: b.Z,
                 onBannerChange: g.g_,
             };
@@ -227,7 +227,7 @@ let I = (e) => {
                     pendingProfileEffectRecord: o,
                     product: c,
                     purchase: a,
-                    userIsPremium: Z,
+                    userIsPremium: k,
                 }),
             ],
         });

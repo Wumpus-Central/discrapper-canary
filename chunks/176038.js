@@ -1,7 +1,7 @@
 n.d(t, {
-    _Y: () => N,
+    _Y: () => T,
     aB: () => E,
-    th: () => T,
+    th: () => N,
     ub: () => O,
 }),
     n(388685),
@@ -67,7 +67,7 @@ async function E() {
         }
     } catch (e) {}
 }
-async function T() {
+async function N() {
     let e = c.Z.purchases,
         t = (0, d.Ad)(e),
         n = (0, d.jT)(e),
@@ -88,7 +88,7 @@ async function T() {
             await (0, i.Mn)(r).finally(i.si);
         } catch (e) {}
 }
-function N() {
+function T() {
     try {
         let e = S(v.yqN.FONT_SIZES);
         (0, s.oL)(e);
@@ -109,12 +109,12 @@ function O() {
             C = p.Z.theme,
             S = v.backgroundGradientPresetId,
             E = null == b || null == (e = b.avatarDecoration) ? void 0 : e.skuId,
-            T = null == b || null == (n = b.collectibles) || null == (t = n.nameplate) ? void 0 : t.skuId,
-            N = null != E && null != (a = _.find((e) => e.skuId === E)) ? a : null,
-            O = null != T && null != (l = y.find((e) => e.skuId === T)) ? l : null,
+            N = null == b || null == (n = b.collectibles) || null == (t = n.nameplate) ? void 0 : t.skuId,
+            T = null != E && null != (a = _.find((e) => e.skuId === E)) ? a : null,
+            O = null != N && null != (l = y.find((e) => e.skuId === N)) ? l : null,
             P = o.Z.fontSize,
-            I = o.Z.messageGroupSpacing,
-            w = h.YC.getSetting();
+            w = o.Z.messageGroupSpacing,
+            I = h.YC.getSetting();
         return () => {
             try {
                 r.ZI(
@@ -125,11 +125,11 @@ function O() {
                     },
                     x.fy.INFREQUENT_USER_ACTION,
                 ),
-                    (0, u.PO)(N),
+                    (0, u.PO)(T),
                     (0, u.Wh)(O);
                 let e = f.Z.getAllPending(),
                     t = (0, m.ED)(e);
-                (0, i.Mn)(t).finally(i.si), (0, s.oL)(P), (0, s.ZZ)(I), h.YC.updateSetting(w);
+                (0, i.Mn)(t).finally(i.si), (0, s.oL)(P), (0, s.ZZ)(w), h.YC.updateSetting(I);
             } catch (e) {}
         };
     }, []);

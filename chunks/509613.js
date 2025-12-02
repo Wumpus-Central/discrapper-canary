@@ -10,7 +10,7 @@ n.d(e, {
             if ("function" == typeof (null == e ? void 0 : e.buildLayout)) {
                 let n = e.buildLayout().map((e) => t(e)),
                     { buildLayout: i } = e,
-                    u = l(
+                    s = l(
                         r(
                             {},
                             (function (t, e) {
@@ -39,7 +39,7 @@ n.d(e, {
                         ),
                         { layout: n },
                     );
-                return n.forEach((t) => (t.parent = u)), u;
+                return n.forEach((t) => (t.parent = s)), s;
             }
             return e;
         },
@@ -50,7 +50,7 @@ n.d(e, {
     k4: () => S,
     m7: () => o,
     qs: () => N,
-    so: () => s,
+    so: () => u,
     vB: () => a,
     wf: () => c,
     x1: () => d,
@@ -101,41 +101,41 @@ function l(t, e) {
         t
     );
 }
-function u(t, e, n) {
+function s(t, e, n) {
     return l(r({}, n), {
         key: t,
         type: e,
     });
 }
-function s(t) {
-    return u("$Root", i.Jq.ROOT, t);
+function u(t) {
+    return s("$Root", i.Jq.ROOT, t);
 }
 function a(t, e) {
-    return u(t, i.Jq.SECTION, e);
+    return s(t, i.Jq.SECTION, e);
 }
 function o(t, e) {
-    return u(t, i.Jq.SIDEBAR_ITEM, e);
+    return s(t, i.Jq.SIDEBAR_ITEM, e);
 }
 function c(t, e) {
-    return u(t, i.Jq.PANEL, e);
+    return s(t, i.Jq.PANEL, e);
 }
 function d(t, e) {
-    return u(t, i.Jq.PANE, e);
+    return s(t, i.Jq.PANE, e);
 }
 function E(t, e) {
-    return u(t, i.Jq.SPLIT, e);
+    return s(t, i.Jq.SPLIT, e);
 }
 function S(t, e) {
-    return u(t, i.Jq.CATEGORY, e);
+    return s(t, i.Jq.CATEGORY, e);
 }
 function T(t, e) {
-    return u(t, i.Jq.ACCORDION, e);
+    return s(t, i.Jq.ACCORDION, e);
 }
 function I(t, e) {
-    return u(t, i.Jq.LIST, e);
+    return s(t, i.Jq.LIST, e);
 }
 function g(t, e) {
-    return u(t, i.Jq.FIELD_SET, e);
+    return s(t, i.Jq.FIELD_SET, e);
 }
 function O(t, e, n) {
     return l(r({}, n), {

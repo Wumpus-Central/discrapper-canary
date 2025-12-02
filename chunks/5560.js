@@ -1,6 +1,6 @@
 n.d(t, {
     V: () => x,
-    Z: () => j,
+    Z: () => E,
 }),
     n(388685);
 var i = n(54381),
@@ -149,7 +149,7 @@ class x extends r.PureComponent {
                     [C.highPriority]: u,
                 };
             },
-            j = this.getTutorialPopoutText();
+            E = this.getTutorialPopoutText();
         return (0, i.jsx)(
             m.ZP,
             O(
@@ -167,7 +167,7 @@ class x extends r.PureComponent {
                         onSkipAll: this.handleSkipTips,
                         onComplete: this.handleDismiss,
                     },
-                    j,
+                    E,
                 ),
                 {
                     children: (e, t) => {
@@ -225,7 +225,7 @@ class x extends r.PureComponent {
             });
     }
 }
-let j =
+let E =
     12633 == n.j
         ? function () {
               let {

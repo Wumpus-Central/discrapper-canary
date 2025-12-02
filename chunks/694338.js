@@ -55,7 +55,7 @@ let d = () => {
                     },
                     {
                         id: 1,
-                        label: c.intl.string(c.t.RIRtn9),
+                        label: c.intl.string(c.t.DmfiwT),
                         tier0ColumnData: { includes: !0 },
                         tier2ColumnData: { includes: !0 },
                     },

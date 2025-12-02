@@ -3,8 +3,8 @@ var i = n(442837);
 n(481060);
 var r = n(292556),
     l = n(734934),
-    u = n(509613),
-    s = n(292959),
+    s = n(509613),
+    u = n(292959),
     a = n(313789),
     o = n(299426),
     c = n(407458),
@@ -20,19 +20,19 @@ let E = {
         useLabel: () => d.intl.string(d.t.XBrJT6),
         sound: "call_ringing",
     },
-    T = (0, u.qs)(a.n.SELECTED_CHANNEL_NOTIFICATIONS, {
+    T = (0, s.qs)(a.n.SELECTED_CHANNEL_NOTIFICATIONS, {
         useTitle: () => d.intl.string(d.t.TzjwV9),
-        useValue: () => (0, i.e7)([s.Z], () => s.Z.getNotifyMessagesInSelectedChannel() && !s.Z.getDisableAllSounds()),
+        useValue: () => (0, i.e7)([u.Z], () => u.Z.getNotifyMessagesInSelectedChannel() && !u.Z.getDisableAllSounds()),
         setValue: (t) => r.default.setNotifyMessagesInSelectedChannel(t),
-        useDisabled: () => (0, i.e7)([s.Z], () => s.Z.getDisableAllSounds()),
+        useDisabled: () => (0, i.e7)([u.Z], () => u.Z.getDisableAllSounds()),
     }),
-    I = (0, u.qs)(a.n.DISABLE_ALL_NOTIFICATION_SOUNDS, {
+    I = (0, s.qs)(a.n.DISABLE_ALL_NOTIFICATION_SOUNDS, {
         useTitle: () => d.intl.string(d.t["2ZhCOd"]),
         useSubtitle: () => d.intl.string(d.t.EAKdPr),
-        useValue: () => (0, i.e7)([s.Z], () => s.Z.getDisableAllSounds()),
+        useValue: () => (0, i.e7)([u.Z], () => u.Z.getDisableAllSounds()),
         setValue: (t) => r.default.toggleDisableAllSounds(t),
     }),
-    g = (0, u.Uc)(a.n.NOTIFICATION_SOUNDS_FIELD_SET, {
+    g = (0, s.Uc)(a.n.NOTIFICATION_SOUNDS_FIELD_SET, {
         useTitle: () => d.intl.string(d.t.ONU22R),
         variant: "separators",
         ContextProvider: o.u,

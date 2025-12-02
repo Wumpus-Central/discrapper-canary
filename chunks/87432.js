@@ -1,12 +1,12 @@
 n.d(e, {
     Z: () =>
-        function t(e, n, u) {
-            var s, a, o, c, d, E;
+        function t(e, n, s) {
+            var u, a, o, c, d, E;
             let S = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
             if (!n.has(e.key)) return null;
             if (!(0, i.Lk)(e))
                 return (
-                    u.register(
+                    s.register(
                         e,
                         null == (c = S.panel) ? void 0 : c.key,
                         null == (d = S.category) ? void 0 : d.key,
@@ -19,13 +19,13 @@ n.d(e, {
                 e.type === i.Jq.PANEL && (T = l(r({}, S), { panel: e })),
                 e.type === i.Jq.CATEGORY && (T = l(r({}, S), { category: e })),
                 e.type === i.Jq.ACCORDION && (T = l(r({}, S), { accordion: e }));
-            let I = e.layout.map((e) => t(e, n, u, T)).filter((t) => null != t);
+            let I = e.layout.map((e) => t(e, n, s, T)).filter((t) => null != t);
             if (0 === I.length && !("render" in e || (e.type === i.Jq.SIDEBAR_ITEM && "onClick" in e))) return null;
             let g = l(r({}, e), { layout: I });
             return (
-                u.register(
+                s.register(
                     g,
-                    null == (s = T.panel) ? void 0 : s.key,
+                    null == (u = T.panel) ? void 0 : u.key,
                     null == (a = T.category) ? void 0 : a.key,
                     null == (o = T.accordion) ? void 0 : o.key,
                 ),

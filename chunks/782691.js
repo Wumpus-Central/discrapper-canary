@@ -81,10 +81,10 @@ let y = {
             { upsertConfig: n } = (0, h.n6)(),
             i = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
             [S, E] = l.useState(!0),
-            T = l.useRef({}),
-            [N, O] = l.useState(!1),
-            [P, I] = l.useState(!1),
-            [w, k] = l.useState([]),
+            N = l.useRef({}),
+            [T, O] = l.useState(!1),
+            [P, w] = l.useState(!1),
+            [I, k] = l.useState([]),
             [R, A] = l.useState(y),
             Z = l.useRef([]),
             [D, L] = l.useState(t.name),
@@ -98,10 +98,10 @@ let y = {
                     accessibilityLabel: C,
                     reducedMotionSrc: "",
                     thumbnailPreviewSrc: "",
-                    effects: w,
+                    effects: I,
                     animationType: s.y.ANIMATION_TYPE_UNSPECIFIED,
                 }),
-                [w],
+                [I],
             ),
             F = (e) => {
                 let t = e.currentTarget.files;
@@ -153,11 +153,11 @@ let y = {
                     skuId: e.skuId,
                     name: D,
                     config: {
-                        effects: w,
+                        effects: I,
                         stillFrames: R,
                     },
                 });
-        }, [w, R, D]),
+        }, [I, R, D]),
         l.useEffect(
             () => () => {
                 Z.current.forEach((e) => {
@@ -177,13 +177,13 @@ let y = {
                           children: [
                               (0, a.jsx)(u.Z, {
                                   ref: (e) => {
-                                      T.current.animated = e;
+                                      N.current.animated = e;
                                   },
                                   onChange: (e) => {
                                       let t = F(e);
                                       null != t &&
                                           (0, x.i0)(t, async (e) => {
-                                              let n = await (0, x.Xv)(e, t, w.length);
+                                              let n = await (0, x.Xv)(e, t, I.length);
                                               k((e) => [...e, n]);
                                           });
                                   },
@@ -191,21 +191,21 @@ let y = {
                               }),
                               (0, a.jsx)(u.Z, {
                                   ref: (e) => {
-                                      T.current.thumbnail = e;
+                                      N.current.thumbnail = e;
                                   },
                                   onChange: (e) => B(x.cq.THUMBNAIL, e),
                                   multiple: !1,
                               }),
                               (0, a.jsx)(u.Z, {
                                   ref: (e) => {
-                                      T.current.static = e;
+                                      N.current.static = e;
                                   },
                                   onChange: (e) => B(x.cq.STATIC, e),
                                   multiple: !1,
                               }),
                               (0, a.jsx)(u.Z, {
                                   ref: (e) => {
-                                      T.current.reducedMotion = e;
+                                      N.current.reducedMotion = e;
                                   },
                                   onChange: (e) => B(x.cq.REDUCED_MOTION, e),
                                   multiple: !1,
@@ -219,7 +219,7 @@ let y = {
                                   className: r()(g.col, g.preview),
                                   children: [
                                       (0, a.jsx)("img", {
-                                          src: N ? b : v,
+                                          src: T ? b : v,
                                           alt: "",
                                           width: 450,
                                       }),
@@ -258,10 +258,10 @@ let y = {
                                                       }),
                                                       (0, a.jsx)("input", {
                                                           type: "checkbox",
-                                                          checked: N,
+                                                          checked: T,
                                                           className: g.checkBox,
                                                           onChange: () => {
-                                                              O(!N);
+                                                              O(!T);
                                                           },
                                                       }),
                                                   ],
@@ -278,7 +278,7 @@ let y = {
                                                           checked: P,
                                                           className: g.checkBox,
                                                           onChange: () => {
-                                                              I(!P);
+                                                              w(!P);
                                                           },
                                                       }),
                                                   ],
@@ -293,7 +293,7 @@ let y = {
                                                   text: "Upload Animated Layer",
                                                   onClick: () => {
                                                       var e;
-                                                      return null == (e = T.current.animated)
+                                                      return null == (e = N.current.animated)
                                                           ? void 0
                                                           : e.activateUploadDialogue();
                                                   },
@@ -312,7 +312,7 @@ let y = {
                                                   text: "Upload thumbnail.png",
                                                   onClick: () => {
                                                       var e;
-                                                      return null == (e = T.current.thumbnail)
+                                                      return null == (e = N.current.thumbnail)
                                                           ? void 0
                                                           : e.activateUploadDialogue();
                                                   },
@@ -322,7 +322,7 @@ let y = {
                                                   text: "Upload static.png",
                                                   onClick: () => {
                                                       var e;
-                                                      return null == (e = T.current.static)
+                                                      return null == (e = N.current.static)
                                                           ? void 0
                                                           : e.activateUploadDialogue();
                                                   },
@@ -332,7 +332,7 @@ let y = {
                                                   text: "Upload reduced_motion.png",
                                                   onClick: () => {
                                                       var e;
-                                                      return null == (e = T.current.reducedMotion)
+                                                      return null == (e = N.current.reducedMotion)
                                                           ? void 0
                                                           : e.activateUploadDialogue();
                                                   },
@@ -368,7 +368,7 @@ let y = {
                                                   className: g.row,
                                                   children: [
                                                       (0, a.jsx)(d.Z, {
-                                                          fileContents: () => (0, x.yR)(t.name, w),
+                                                          fileContents: () => (0, x.yR)(t.name, I),
                                                           contentType: "text/plain",
                                                           fileName: "".concat(M, "_timing_config.txt"),
                                                           children: (0, a.jsx)(c.Button, {
@@ -383,7 +383,7 @@ let y = {
                                                                   _(j({}, t), {
                                                                       name: D,
                                                                       config: _(j({}, t.config), {
-                                                                          effects: w,
+                                                                          effects: I,
                                                                           stillFrames: R,
                                                                       }),
                                                                   }),
@@ -442,7 +442,7 @@ let y = {
                                               }),
                                           ],
                                       }),
-                                      w.some((e) => {
+                                      I.some((e) => {
                                           var t;
                                           return (null != (t = e.randomizedSources) ? t : []).length > 0;
                                       }) &&
@@ -507,7 +507,7 @@ let y = {
                                               },
                                           }),
                                       }),
-                                      w.map((e, t) =>
+                                      I.map((e, t) =>
                                           (0, a.jsxs)(
                                               "div",
                                               {
@@ -682,7 +682,7 @@ let y = {
                                                           style: { display: "none" },
                                                           children: (0, a.jsx)(u.Z, {
                                                               ref: (e) => {
-                                                                  T.current["randomized-".concat(t)] = e;
+                                                                  N.current["randomized-".concat(t)] = e;
                                                               },
                                                               onChange: (e) =>
                                                                   ((e, t) => {
@@ -719,7 +719,7 @@ let y = {
                                                                   onClick: () => {
                                                                       var e;
                                                                       return null ==
-                                                                          (e = T.current["randomized-".concat(t)])
+                                                                          (e = N.current["randomized-".concat(t)])
                                                                           ? void 0
                                                                           : e.activateUploadDialogue();
                                                                   },

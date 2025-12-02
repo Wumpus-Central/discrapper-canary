@@ -22,12 +22,12 @@ var a = n(54381),
     C = n(991186),
     S = n(371651),
     E = n(829907),
-    T = n(610394),
-    N = n(338949),
+    N = n(610394),
+    T = n(338949),
     O = n(556809),
     P = n(886118),
-    I = n(301801),
-    w = n(352527),
+    w = n(301801),
+    I = n(352527),
     k = n(355863),
     R = n(449224),
     A = n(556296),
@@ -448,7 +448,7 @@ let es = l.memo(function (e) {
     );
 });
 function eo() {
-    let e = (0, d.e7)([N.Z], () => N.Z.hasRenderDebugMode(_.GO.TrackFocusPIDs)),
+    let e = (0, d.e7)([T.Z], () => T.Z.hasRenderDebugMode(_.GO.TrackFocusPIDs)),
         t = (0, d.Wu)([S.default], () => S.default.getDevToolsFocusedPidsWithTimestamp());
     return (0, a.jsxs)("div", {
         className: J.panelGroup,
@@ -460,7 +460,7 @@ function eo() {
                         checked: e,
                         onChange: () =>
                             void x.Z.setRenderDebugMode(
-                                !N.Z.hasRenderDebugMode(_.GO.TrackFocusPIDs),
+                                !T.Z.hasRenderDebugMode(_.GO.TrackFocusPIDs),
                                 _.GO.TrackFocusPIDs,
                             ),
                         label: "Track Focus Pids",
@@ -644,7 +644,7 @@ let ec = l.memo(function (e) {
         let n = (0, d.cj)([S.default], () => S.default.getTrackedGames()),
             l = (0, B.getPID)(),
             i = (0, d.e7)([S.default], () => S.default.isOverlayOOPEnabledForPid(l), [l]),
-            [r, s] = (0, d.Wu)([w.Z], () => [w.Z.enabled, w.Z.keepOpen]),
+            [r, s] = (0, d.Wu)([I.Z], () => [I.Z.enabled, I.Z.keepOpen]),
             o = (0, d.e7)([Z.default], () => Z.default.getFocusedPID()),
             c = (0, d.e7)([Z.default], () => Z.default.isFocusedPidOutOfProcess());
         return (0, a.jsxs)("div", {
@@ -735,7 +735,7 @@ let ec = l.memo(function (e) {
     ep = l.memo(function () {
         let [e, t] = ei(K.Odu.CLICK_ZONE_DEBUG),
             [n, i] = ei(K.Odu.PERFORMANCE_DEBUG),
-            r = (0, d.e7)([N.Z], () => N.Z.getRenderDebugModes()),
+            r = (0, d.e7)([T.Z], () => T.Z.getRenderDebugModes()),
             [s, o] = l.useState({});
         return (
             l.useEffect(() => {
@@ -1232,14 +1232,14 @@ let ey = ["__webpack_require__", "fn"],
         },
         throttleMs: 100,
     };
-function eT() {
+function eN() {
     let { ref: e, height: t } = (0, g.ZP)(),
-        n = (0, d.e7)([N.Z], () => N.Z.isModuleLoggingEnabled()),
+        n = (0, d.e7)([T.Z], () => T.Z.isModuleLoggingEnabled()),
         [i, s] = l.useState(n),
         [o, c] = l.useState(!1),
         [u, p] = l.useState(null),
         [h, f] = l.useState(Object.keys(eg)),
-        [b, v] = (0, d.e7)([N.Z], () => N.Z.getOverlayLoggingBreadcrumbs(), [], U.Q),
+        [b, v] = (0, d.e7)([T.Z], () => T.Z.getOverlayLoggingBreadcrumbs(), [], U.Q),
         [j, _] = l.useState(null),
         y = null != j ? j : b,
         C = null != j ? -1 : v;
@@ -1250,7 +1250,7 @@ function eT() {
                 : p(null));
     }, [o, y, C]);
     let [S, E] = l.useState(""),
-        T = l.useMemo(
+        N = l.useMemo(
             () =>
                 0 === C
                     ? []
@@ -1264,22 +1264,22 @@ function eT() {
                       }),
             [y, h, u, o, C],
         ),
-        [O, P] = l.useState(T),
-        [w, k] = l.useState(null),
-        R = l.useMemo(() => y.find((e) => e.key === w), [y, w]),
+        [O, P] = l.useState(N),
+        [I, k] = l.useState(null),
+        R = l.useMemo(() => y.find((e) => e.key === I), [y, I]),
         A = l.useCallback((e) => {
             P(e);
         }, []),
         { renderSelectedTab: Z } = (0, W.ZP)({ tabs: eS }, []);
-    (0, I.BO)(S, T, A, eE, [y]);
+    (0, w.BO)(S, N, A, eE, [y]);
     let L = l.useCallback((e) => {
             s(e), x.Z.setModuleLogging(e);
         }, []),
         [M, F] = l.useState(!1),
         B = l.useRef(null),
         G = l.useCallback(() => {
-            (0, D.JG)(JSON.stringify(T)), F(!0);
-        }, [T]);
+            (0, D.JG)(JSON.stringify(N)), F(!0);
+        }, [N]);
     l.useEffect(() => {
         if (M)
             return (
@@ -1407,7 +1407,7 @@ function eT() {
                 children: (0, a.jsx)(V.Z, {
                     columns: ev,
                     data: O,
-                    selectedRowKey: null != w ? w : void 0,
+                    selectedRowKey: null != I ? I : void 0,
                     onClickRow: (e) => k(e.key),
                 }),
             }),
@@ -1424,8 +1424,8 @@ function eT() {
         ],
     });
 }
-let eN = l.memo(function () {
-        let e = (0, d.e7)([T.Z], () => T.Z.getPopoutInitializationStages());
+let eT = l.memo(function () {
+        let e = (0, d.e7)([N.Z], () => N.Z.getPopoutInitializationStages());
         return (0, a.jsxs)("div", {
             className: J.panelGroup,
             children: [
@@ -1446,8 +1446,8 @@ let eN = l.memo(function () {
         });
     }),
     eO = l.memo(function () {
-        let e = (0, d.e7)([N.Z], () => N.Z.isStateDebuggingEnabled()),
-            t = (0, d.e7)([N.Z], () => N.Z.getDebuggingState());
+        let e = (0, d.e7)([T.Z], () => T.Z.isStateDebuggingEnabled()),
+            t = (0, d.e7)([T.Z], () => T.Z.getDebuggingState());
         return (
             l.useEffect(
                 () => (
@@ -1489,13 +1489,13 @@ function eP() {
                 (0, a.jsx)(eu, {}),
                 (0, a.jsx)(eo, {}),
                 (0, a.jsx)(ed, {}),
-                (0, a.jsx)(eN, {}),
+                (0, a.jsx)(eT, {}),
                 (0, a.jsx)(eO, {}),
             ],
         }),
     });
 }
-let eI = (e) => {
+let ew = (e) => {
         switch (e) {
             case "Disabled":
                 return;
@@ -1505,7 +1505,7 @@ let eI = (e) => {
                 return !0;
         }
     },
-    ew = (e) => (null == e ? "Disabled" : e ? "True" : "False"),
+    eI = (e) => (null == e ? "Disabled" : e ? "True" : "False"),
     ek = l.memo(function () {
         let e = (0, C.xj)(),
             t = (0, d.e7)([A.ZP], () => A.ZP.getOverlayKeybind());
@@ -1535,7 +1535,7 @@ let eI = (e) => {
                     label: "Overlay User Status",
                     description: "Override whether the current user was a new or existing user",
                     serialize: (e) => (null != e ? e.toString() : "Disabled"),
-                    isSelected: (t) => t === ew(e.overrideIsNewOverlayUser),
+                    isSelected: (t) => t === eI(e.overrideIsNewOverlayUser),
                     options: [
                         {
                             label: "Disabled (no override)",
@@ -1551,7 +1551,7 @@ let eI = (e) => {
                         },
                     ],
                     select: (e) => {
-                        (0, C.jt)(eI(e));
+                        (0, C.jt)(ew(e));
                     },
                     popoutLayerContext: G.O$,
                 }),
@@ -1559,7 +1559,7 @@ let eI = (e) => {
                     label: "Override Previous Keybind Status",
                     description: "Override whether the user's pre-experiment keybind was the default keybind",
                     serialize: (e) => (null != e ? e.toString() : "Disabled"),
-                    isSelected: (t) => t === ew(e.overrideIsUsingDefaultOverlayKeybind),
+                    isSelected: (t) => t === eI(e.overrideIsUsingDefaultOverlayKeybind),
                     options: [
                         {
                             label: "Disabled (no override)",
@@ -1575,7 +1575,7 @@ let eI = (e) => {
                         },
                     ],
                     select: (e) => {
-                        (0, C.FM)(eI(e));
+                        (0, C.FM)(ew(e));
                     },
                     popoutLayerContext: G.O$,
                 }),
@@ -1658,7 +1658,7 @@ function eA() {
                     ],
                 }),
                 "state" === e && (0, a.jsx)(eP, {}),
-                "logging" === e && (0, a.jsx)(eT, {}),
+                "logging" === e && (0, a.jsx)(eN, {}),
                 "experiments" === e && (0, a.jsx)(eR, {}),
             ],
         })

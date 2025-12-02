@@ -1,11 +1,11 @@
 n.d(t, {
     Vm: () => _,
     ZP: () => y,
-    eF: () => j,
+    eF: () => E,
     gM: () => v,
     k5: () => O,
     qY: () => C,
-    sz: () => E,
+    sz: () => j,
     u1: () => x,
 }),
     n(388685);
@@ -160,7 +160,7 @@ function O(e) {
 function x(e) {
     return (0, r.e7)([c.ZP], () => c.ZP.getGuildScheduledEventsByIndex(c.bN.CHANNEL_EVENT_UPCOMING(e)), [e]);
 }
-function j(e) {
+function E(e) {
     return (0, r.e7)([l.Z, c.ZP], () => {
         let t = c.ZP.getGuildScheduledEventsByIndex(c.bN.GUILD_EVENT_ACTIVE(e)).find(
             (e) => null != l.Z.getChannel(e.channel_id),
@@ -168,7 +168,7 @@ function j(e) {
         return l.Z.getChannel(null == t ? void 0 : t.channel_id);
     }, [e]);
 }
-function E(e) {
+function j(e) {
     let [t, n] = i.useState(() => Date.now());
     i.useEffect(() => {
         let e = setInterval(() => {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(314940);
+n.d(t, { Z: () => _ }), n(314940);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
@@ -102,11 +102,11 @@ let j = () => 80,
         let j = (0, f.V)(n.skuId),
             P = i.useRef(null),
             {
-                accessibilityLabel: v,
-                thumbnailPreviewSrc: _,
+                accessibilityLabel: _,
+                thumbnailPreviewSrc: v,
                 title: E,
             } = null != (t = null == j ? void 0 : j.config) ? t : {},
-            C = i.useMemo(() => (0, a.JE)(_), [_]);
+            C = i.useMemo(() => (0, a.JE)(v), [v]);
         return (0, r.jsxs)(
             O,
             y(
@@ -121,7 +121,7 @@ let j = () => 80,
                     children: [
                         (0, r.jsx)("img", {
                             src: h,
-                            alt: v,
+                            alt: _,
                             className: g.presetEffectBackground,
                         }),
                         (0, r.jsx)("img", {
@@ -141,7 +141,7 @@ let j = () => 80,
             ),
         );
     },
-    v = (e) => {
+    _ = (e) => {
         let {
                 user: t,
                 guild: n,
@@ -169,8 +169,8 @@ let j = () => 80,
                     return t.length;
                 }),
                 renderItem: (e, t, d, y) => {
-                    let { section: j, items: v } = f[e];
-                    return (0, s.EQ)(v[t])
+                    let { section: j, items: _ } = f[e];
+                    return (0, s.EQ)(_[t])
                         .with(p.Tm, () =>
                             (0, r.jsxs)(
                                 O,

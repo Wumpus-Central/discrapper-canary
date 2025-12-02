@@ -63,7 +63,7 @@ let S = {
         [v.Id.DEFERRED_START]: "Deferred Start",
         [v.Id.USER_TEMPORARY_BAN]: "User Temp Ban",
     },
-    T = [
+    N = [
         {
             label: "Unpaid",
             value: b.O0b.UNPAID,
@@ -101,7 +101,7 @@ let S = {
             value: b.O0b.PAUSE_PENDING,
         },
     ];
-function N(e) {
+function T(e) {
     let { subscription: t, onClose: n, onUpdated: i, transitionState: r } = e,
         [s, d] = l.useState(o()()),
         [m, p] = l.useState(o()().format("HH:mm")),
@@ -206,8 +206,8 @@ function N(e) {
 }
 function O(e) {
     var t, n, i, s, c, v, O;
-    let { subscription: P, onUpdated: I } = e,
-        [w, k] = l.useState(!1),
+    let { subscription: P, onUpdated: w } = e,
+        [I, k] = l.useState(!1),
         [R, A] = l.useState(!1),
         [Z, D] = l.useState(!1),
         [L, M] = l.useState(!1),
@@ -229,7 +229,7 @@ function O(e) {
                 body: l,
                 rejectWithError: !1,
             }),
-                I();
+                w();
         },
         H = async () => {
             try {
@@ -242,7 +242,7 @@ function O(e) {
                 var e;
                 F((null == (e = t.body) ? void 0 : e.message) || t.message || "Failed to renew subscription");
             }
-            I();
+            w();
         },
         V = (null == (t = j.GP[P.planIdFromItems]) ? void 0 : t.premiumType) === j.PremiumTypes.TIER_0,
         W = null == (n = P.metadata) ? void 0 : n.ended_at,
@@ -432,7 +432,7 @@ function O(e) {
                             children: [
                                 (0, a.jsxs)(u.P3F, {
                                     onClick: () => {
-                                        k(!w);
+                                        k(!I);
                                     },
                                     className: y.collapsablePaneHeader,
                                     children: [
@@ -442,10 +442,10 @@ function O(e) {
                                                 children: "Metadata",
                                             }),
                                         }),
-                                        (0, a.jsx)(m.Z, { direction: w ? m.Z.Directions.UP : m.Z.Directions.DOWN }),
+                                        (0, a.jsx)(m.Z, { direction: I ? m.Z.Directions.UP : m.Z.Directions.DOWN }),
                                     ],
                                 }),
-                                w &&
+                                I &&
                                     (0, a.jsx)("ul", {
                                         className: y.collapsiblePaneList,
                                         children: Object.entries(P.metadata).map((e) => {
@@ -496,7 +496,7 @@ function O(e) {
                                             label: "Status",
                                             serialize: (e) => B(e),
                                             isSelected: (e) => e === P.status,
-                                            options: T,
+                                            options: N,
                                             select: (e) => z({ status: e }),
                                             popoutLayerContext: x.O$,
                                         }),
@@ -519,11 +519,11 @@ function O(e) {
                                                                 (0, u.ZDy)(() =>
                                                                     Promise.resolve((e) =>
                                                                         (0, a.jsx)(
-                                                                            N,
+                                                                            T,
                                                                             C(
                                                                                 {
                                                                                     subscription: P,
-                                                                                    onUpdated: I,
+                                                                                    onUpdated: w,
                                                                                 },
                                                                                 e,
                                                                             ),

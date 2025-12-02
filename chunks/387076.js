@@ -2,12 +2,12 @@ n.d(e, { Z: () => d });
 var i = n(846027),
     r = n(509613),
     l = n(131951),
-    u = n(313789),
-    s = n(325808),
+    s = n(313789),
+    u = n(325808),
     a = n(595373),
     o = n(981631),
     c = n(388032);
-let d = (0, r.UO)(u.n.VOICE_PUSH_TO_TALK_RELEASE_DELAY_SETTING, {
+let d = (0, r.UO)(s.n.VOICE_PUSH_TO_TALK_RELEASE_DELAY_SETTING, {
     useTitle: () => c.intl.string(c.t.GCNMM8),
     usePredicate: a.J,
     getInitialValue: function () {
@@ -19,6 +19,6 @@ let d = (0, r.UO)(u.n.VOICE_PUSH_TO_TALK_RELEASE_DELAY_SETTING, {
     },
     minValue: 0,
     maxValue: o.qhL,
-    onValueRender: s.cO,
+    onValueRender: u.cO,
     useSearchTerms: () => [c.intl.string(c.t["pS+K2L"]), c.intl.string(c.t.nuFtHH)],
 });

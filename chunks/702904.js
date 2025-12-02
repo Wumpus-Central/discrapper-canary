@@ -1364,8 +1364,8 @@ function v() {
         [n, c] = l.useState(null),
         [v, _] = l.useState(null),
         [C, S] = l.useState("pm_card_us"),
-        [E, T] = l.useState(!1),
-        N = Object.values((0, i.e7)([d.Z], () => d.Z.paymentSources)),
+        [E, N] = l.useState(!1),
+        T = Object.values((0, i.e7)([d.Z], () => d.Z.paymentSources)),
         O = f[e],
         P = async () => {
             let t = C;
@@ -1380,14 +1380,14 @@ function v() {
                 }),
                 await (0, o.tZ)();
         },
-        I = async () => {
+        w = async () => {
             await r.tn.del({
                 url: "/debug/payment-source",
                 rejectWithError: !1,
             }),
                 await (0, o.tZ)();
         },
-        w = async () => {
+        I = async () => {
             await r.tn.del({
                 url: "/debug/rate-limits",
                 rejectWithError: !1,
@@ -1420,7 +1420,7 @@ function v() {
                                 isSelected: (t) => t === e,
                                 options: x,
                                 select: (e) => {
-                                    t(e), S(f[e][0].value), T(1 === f[e].length);
+                                    t(e), S(f[e][0].value), N(1 === f[e].length);
                                 },
                                 popoutLayerContext: u.O$,
                                 popoutWidth: 200,
@@ -1461,18 +1461,18 @@ function v() {
                                 text: "Create Stripe Credit Card",
                                 onClick: P,
                             }),
-                            N.length > 0 &&
+                            T.length > 0 &&
                                 (0, a.jsx)(s.Button, {
                                     variant: "primary",
                                     size: "sm",
                                     text: "Delete All Payment Sources",
-                                    onClick: I,
+                                    onClick: w,
                                 }),
                             (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 text: "Reset API Rate limits and reload app",
-                                onClick: w,
+                                onClick: I,
                             }),
                         ],
                     }),
@@ -1484,7 +1484,7 @@ function v() {
                         variant: "text-md/normal",
                         children: "Existing Payment Sources",
                     }),
-                    N.map((e) => (0, a.jsx)(j, { paymentSource: e }, e.id)),
+                    T.map((e) => (0, a.jsx)(j, { paymentSource: e }, e.id)),
                 ],
             }),
         })

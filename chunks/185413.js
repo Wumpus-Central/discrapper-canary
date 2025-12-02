@@ -73,7 +73,7 @@ function x(e) {
     null == l || null == o)
         ? null
         : (0, i.jsx)(
-              j,
+              E,
               _(
                   {
                       guild: o,
@@ -83,17 +83,17 @@ function x(e) {
               ),
           );
 }
-function j(e) {
+function E(e) {
     var t,
         n,
         { guild: a, channel: d, onClose: p, newChannel: h, inSettings: y } = e,
         x = O(e, ["guild", "channel", "onClose", "newChannel", "inSettings"]);
-    let [j, E] = r.useState(""),
+    let [E, j] = r.useState(""),
         [S, P] = r.useState({}),
         [I, Z] = r.useState(!1),
         [T, N] = r.useState(null),
         A = r.useRef(null),
-        { roles: w, members: M, getRichTag: R } = (0, g.Q)(a, d, d.accessPermissions, j),
+        { roles: w, members: M, getRichTag: R } = (0, g.Q)(a, d, d.accessPermissions, E),
         L = m.Z.useSections({
             roles: w,
             members: M,
@@ -127,8 +127,8 @@ function j(e) {
     let U = (0, u.zi)(d.type) ? o.W4G : o.gjC;
     return (0, i.jsx)(m.Z.Provider, {
         listRef: A,
-        query: j,
-        setQuery: E,
+        query: E,
+        setQuery: j,
         pendingAdditions: S,
         setPendingAdditions: P,
         roles: w,

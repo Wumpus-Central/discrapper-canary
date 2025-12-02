@@ -20,7 +20,7 @@ var i = n(54381),
     _ = n(388032),
     O = n(10359),
     x = n(254477);
-function j(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -45,7 +45,7 @@ function j(e) {
     }
     return e;
 }
-function E(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -75,7 +75,7 @@ function S(e) {
         r.useEffect(() => {
             p.default.track(
                 v.rMx.VIEW_HANG_STATUS,
-                j(
+                E(
                     {
                         source: "HangStatusPopout",
                         other_user_id: l,
@@ -90,7 +90,7 @@ function S(e) {
                 (c.default.selectVoiceChannel(n.id),
                 p.default.track(
                     v.rMx.HANG_STATUS_CTA_CLICKED,
-                    E(j({ source: "HangStatusPopout" }, (0, g.Z)(n.id)), {
+                    j(E({ source: "HangStatusPopout" }, (0, g.Z)(n.id)), {
                         other_user_id: l,
                         cta_type: "join",
                     }),
@@ -106,7 +106,7 @@ function S(e) {
                 } else (0, h.Zx)(e, !0);
                 p.default.track(
                     v.rMx.HANG_STATUS_CTA_CLICKED,
-                    E(j({ source: "HangStatusPopout" }, (0, g.Z)(n.id)), {
+                    j(E({ source: "HangStatusPopout" }, (0, g.Z)(n.id)), {
                         other_user_id: l,
                         cta_type: "swipe",
                     }),
@@ -135,7 +135,7 @@ function S(e) {
                       children: (e) =>
                           (0, i.jsx)(
                               "div",
-                              E(j({}, e), {
+                              j(E({}, e), {
                                   children: (0, i.jsx)(s.Button, {
                                       size: "sm",
                                       variant: "secondary",

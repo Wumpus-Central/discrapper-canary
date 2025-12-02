@@ -52,8 +52,8 @@ function d(e) {
         C = t || n || d,
         v = p ? u.d : u.Z,
         _ = (0, o.Z)(t, n, d, h),
-        { events: O, play: x, Component: j } = (0, c.b)(C),
-        E = n || d ? l.v0G : j;
+        { events: O, play: x, Component: E } = (0, c.b)(C),
+        j = n || d ? l.v0G : E;
     return (
         r.useEffect(() => () => x(), [x, C]),
         (0, i.jsx)(
@@ -84,7 +84,7 @@ function d(e) {
                 return e;
             })(
                 {
-                    iconComponent: E,
+                    iconComponent: j,
                     isTrayButton: !0,
                     caretColor: C ? "red" : "primaryDark",
                     color: C ? "red" : void 0,

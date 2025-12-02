@@ -1,4 +1,4 @@
-n.d(t, { default: () => T }), n(388685), n(953529);
+n.d(t, { default: () => N }), n(388685), n(953529);
 var a = n(54381),
     l = n(473749),
     i = n(772848),
@@ -44,17 +44,17 @@ function E(e) {
             })
           : null;
 }
-let T = function (e) {
-    let { transitionState: t, entryPoint: n, onClose: u, onComplete: j, dismissable: T, classificationId: N } = e,
+let N = function (e) {
+    let { transitionState: t, entryPoint: n, onClose: u, onComplete: j, dismissable: N, classificationId: T } = e,
         [O, P] = l.useState(s.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
-        I = l.useRef(O),
-        [w, k] = (0, c.US)([O], void 0, !0),
+        w = l.useRef(O),
+        [I, k] = (0, c.US)([O], void 0, !0),
         R = l.useMemo(() => (0, i.Z)(), []),
         A = l.useRef(!1),
         Z = (0, m.GE)();
     l.useEffect(() => {
-        I.current = w;
-    }, [w]);
+        w.current = I;
+    }, [I]);
     let { loading: D, ageVerificationMethods: L } = (0, b.Z)({
         onClose: () => {
             null == j || j(), u();
@@ -62,13 +62,13 @@ let T = function (e) {
         onMethodClick: () => {
             P(s.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE);
         },
-        classificationId: N,
+        classificationId: T,
     });
     return (
         l.useLayoutEffect(
             () => () => {
                 if (A.current) return;
-                let e = I.current;
+                let e = w.current;
                 null != e &&
                     ((A.current = !0),
                     p.Z.maybeOpenAgeVerificationUserFeedback({
@@ -85,7 +85,7 @@ let T = function (e) {
             transitionState: t,
             onClose: u,
             gradientColor: "blue",
-            dismissable: T,
+            dismissable: N,
             graphic: {
                 type: "image",
                 src: S.Z,

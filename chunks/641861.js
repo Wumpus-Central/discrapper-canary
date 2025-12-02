@@ -34,8 +34,8 @@ function O(e) {
             );
         }),
         O = (0, o.e7)([b.Z], () => b.Z.getGuild(n.guild_id)),
-        j = null != O ? (0, g.EB)(O, 32, !0) : null,
-        E = !s || (u && !m);
+        E = null != O ? (0, g.EB)(O, 32, !0) : null,
+        j = !s || (u && !m);
     return ((0, d.Z)(
         {
             type: a.ImpressionTypes.PAGE,
@@ -45,10 +45,10 @@ function O(e) {
                 voice_guild_id: null == n ? void 0 : n.guild_id,
             },
         },
-        { disableTrack: E },
+        { disableTrack: j },
         [t.id],
     ),
-    E)
+    j)
         ? null
         : (0, i.jsxs)("div", {
               className: l()(_.themed, _.chatHeaderBar),
@@ -62,7 +62,7 @@ function O(e) {
                               width: 24,
                               height: 24,
                               children:
-                                  null == j
+                                  null == E
                                       ? (0, i.jsx)("div", {
                                             className: l()(_.guildIcon, _.guildIconWithoutImage),
                                             children: (0, i.jsx)("div", {
@@ -72,7 +72,7 @@ function O(e) {
                                         })
                                       : (0, i.jsx)("img", {
                                             alt: null == O ? void 0 : O.name,
-                                            src: j,
+                                            src: E,
                                             className: _.guildIcon,
                                         }),
                           }),

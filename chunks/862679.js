@@ -27,16 +27,16 @@ let d = function (e) {
         x = (0, a.e7)([c.ZP], () => c.ZP.getState().isMembersOpen);
     if (l.tq && x) return null;
     if (null == t) return (0, i.jsx)(i.Fragment, { children: r.Children.only(v) });
-    let j = null;
+    let E = null;
     return (
         null != g
-            ? (j = (0, i.jsx)("img", {
+            ? (E = (0, i.jsx)("img", {
                   alt: "",
                   src: g,
                   className: u.image,
               }))
             : null != b &&
-              (j = (0, i.jsx)(o.Fmz, {
+              (E = (0, i.jsx)(o.Fmz, {
                   importData: b,
                   shouldAnimate: !_,
                   className: u.animation,
@@ -47,7 +47,7 @@ let d = function (e) {
                 (0, i.jsxs)("div", {
                     className: u.content,
                     children: [
-                        j,
+                        E,
                         (0, i.jsxs)("div", {
                             className: u.text,
                             children: [

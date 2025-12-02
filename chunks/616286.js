@@ -1,4 +1,4 @@
-n.d(t, { T: () => j }), n(388685), n(539854);
+n.d(t, { T: () => E }), n(388685), n(539854);
 var i = n(54381),
     r = n(473749),
     l = n(120356),
@@ -47,7 +47,7 @@ function x(e) {
         canBadge: o,
     });
 }
-function j(e) {
+function E(e) {
     let t;
     var {
             channelId: n,
@@ -58,7 +58,7 @@ function j(e) {
             showRequestToSpeakSidebar: m,
             toggleRequestToSpeakSidebar: y,
         } = e,
-        j = (function (e, t) {
+        E = (function (e, t) {
             if (null == e) return {};
             var n,
                 i,
@@ -87,8 +87,8 @@ function j(e) {
             "showRequestToSpeakSidebar",
             "toggleRequestToSpeakSidebar",
         ]);
-    let { parentAnalyticsLocation: E } = (0, u.ZP)(),
-        { disabled: S } = j,
+    let { parentAnalyticsLocation: j } = (0, u.ZP)(),
+        { disabled: S } = E,
         P = r.useRef(null),
         I = (0, s.e7)([d.Z], () => d.Z.getChatOpen(n), [n]),
         {
@@ -116,8 +116,8 @@ function j(e) {
             );
         })(n),
         A = r.useCallback(() => {
-            (0, p.v)(E, p.d.CHAT, !I), null == h || h(), !I && m && (null == y || y()), c.Z.updateChatOpen(n, !I);
-        }, [n, I, h, m, y, E]),
+            (0, p.v)(j, p.d.CHAT, !I), null == h || h(), !I && m && (null == y || y()), c.Z.updateChatOpen(n, !I);
+        }, [n, I, h, m, y, j]),
         w = r.useCallback(
             (e) => {
                 let { className: t } = e;
@@ -197,7 +197,7 @@ function j(e) {
                     wrapperClassName: a()(l, null != o && { [o]: Z }),
                     forceTooltipOpen: R,
                 },
-                j,
+                E,
             ),
         )
     );

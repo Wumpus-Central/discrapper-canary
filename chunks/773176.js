@@ -20,8 +20,8 @@ var i = n(54381),
     _ = n(223606),
     O = n(188597),
     x = n(41776),
-    j = n(980463),
-    E = n(328908),
+    E = n(980463),
+    j = n(328908),
     S = n(992970),
     P = n(135793),
     I = n(576645),
@@ -36,10 +36,10 @@ var i = n(54381),
     D = n(695346),
     k = n(314897),
     U = n(323873),
-    F = n(271383),
-    B = n(430824),
-    H = n(607744),
-    V = n(496675),
+    V = n(271383),
+    F = n(430824),
+    B = n(607744),
+    H = n(496675),
     G = n(626135),
     z = n(572004),
     W = n(176354),
@@ -208,37 +208,37 @@ function ep(e) {
                     isFocused: s,
                 } = e,
                 { author: d } = n,
-                p = (0, u.e7)([B.Z], () => B.Z.getGuild(t.guild_id), [t.guild_id]),
+                p = (0, u.e7)([F.Z], () => F.Z.getGuild(t.guild_id), [t.guild_id]),
                 m = (0, u.e7)([k.default], () => k.default.getId()),
                 g = (0, L.$R)(t),
                 b = (0, L.Gu)(t),
                 { firstMessage: v } = (0, u.e7)([y.Z], () => y.Z.getMessage(t.id), [t.id]),
                 _ = D.nc.useSetting(),
                 O = D.Sb.useSetting(),
-                j = (0, u.e7)([H.Z], () => null == t.guild_id || H.Z.canChatInGuild(t.guild_id), [t]),
-                { canManageMessages: E, canAddNewReactions: S } = (0, u.cj)(
-                    [V.Z],
+                E = (0, u.e7)([B.Z], () => null == t.guild_id || B.Z.canChatInGuild(t.guild_id), [t]),
+                { canManageMessages: j, canAddNewReactions: S } = (0, u.cj)(
+                    [H.Z],
                     () => ({
-                        canAddNewReactions: j && V.Z.can(ei.Plq.ADD_REACTIONS, t),
-                        canManageMessages: V.Z.can(ei.Plq.MANAGE_MESSAGES, t),
+                        canAddNewReactions: E && H.Z.can(ei.Plq.ADD_REACTIONS, t),
+                        canManageMessages: H.Z.can(ei.Plq.MANAGE_MESSAGES, t),
                     }),
-                    [t, j],
+                    [t, E],
                 ),
                 P = (0, w.U)(t, n),
                 I = (0, L.NE)(t, n),
                 Z = (0, L.Ek)(n),
                 T = (0, u.e7)([x.Z], () => null != t.guild_id && x.Z.isLurking(t.guild_id), [t]),
-                N = (0, u.e7)([F.ZP], () => null != t.guild_id && F.ZP.isCurrentUserGuest(t.guild_id), [t]),
+                N = (0, u.e7)([V.ZP], () => null != t.guild_id && V.ZP.isCurrentUserGuest(t.guild_id), [t]),
                 A = d.id === m,
-                U = (E || n.canDeleteOwnMessage(m)) && g && !ei.V$x.UNDELETABLE.has(n.type);
-            n.type === ei.uaV.AUTO_MODERATION_ACTION && (U = U && E),
+                U = (j || n.canDeleteOwnMessage(m)) && g && !ei.V$x.UNDELETABLE.has(n.type);
+            n.type === ei.uaV.AUTO_MODERATION_ACTION && (U = U && j),
                 t.isModeratorReportChannel() && (U = U && n.id !== (null == v ? void 0 : v.id) && !(0, J.Z)(n));
             let G = (0, K.a4)(n),
                 W = (0, X.Z)(n, t),
                 q = !t.isSystemDM() && (0, Y.Z)(n, m) && g && !b,
                 { disableReactionCreates: $ } = (0, Q.Z)({
                     channel: t,
-                    canChat: j,
+                    canChat: E,
                     renderReactions: _,
                     canAddNewReactions: S,
                     isLurking: T,
@@ -249,13 +249,13 @@ function ep(e) {
                     t.type === ei.d4z.GUILD_ANNOUNCEMENT &&
                     null != p &&
                     p.features.has(ei.GuildFeatures.NEWS) &&
-                    (A || E) &&
+                    (A || j) &&
                     (0, f.Z)(n),
                 et = t.getGuildId(),
                 en =
                     null != et &&
                     n.type === ei.uaV.USER_JOIN &&
-                    V.Z.canWithPartialContext(ei.Plq.MANAGE_GUILD, { guildId: et }),
+                    H.Z.canWithPartialContext(ei.Plq.MANAGE_GUILD, { guildId: et }),
                 er = (0, C.a)(n),
                 { enabled: el } = M.Z.useExperiment({ location: "message_utilities" }),
                 ea = (0, u.e7)([R.Z], () => null != R.Z.getSavedMessage(t.id, n.id)),
@@ -307,7 +307,7 @@ function ep(e) {
         ev = r.useCallback(
             (e) => {
                 try {
-                    (0, j.qc)(t.id, n.id, e);
+                    (0, E.qc)(t.id, n.id, e);
                 } catch (e) {
                     (0, d.showToast)((0, d.createToast)(el.intl.string(el.t.xsfC2S), d.ToastType.FAILURE));
                 }
@@ -446,7 +446,7 @@ function ep(e) {
                                                     channelId: t.id,
                                                     message: n,
                                                     onRedeem: ev,
-                                                    onClose: E.Qy,
+                                                    onClose: j.Qy,
                                                     source: S.YD.MessageExpandingButtons,
                                                 });
                                         },

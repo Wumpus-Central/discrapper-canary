@@ -2,8 +2,8 @@ n.d(e, { M: () => x });
 var i = n(54381),
     r = n(473749),
     l = n(793030),
-    u = n(952265),
-    s = n(159691),
+    s = n(952265),
+    u = n(159691),
     a = n(511857),
     o = n(594421),
     c = n(410030),
@@ -110,12 +110,12 @@ let x = () => {
                         fullWidth: !0,
                         size: "sm",
                     }),
-                    (0, i.jsx)(s.zxk, {
+                    (0, i.jsx)(u.zxk, {
                         variant: "secondary",
                         text: R.intl.string(R.t.ZnqyZ2),
                         size: "sm",
                         onClick: () => {
-                            (0, u.Mr)(C.USER_SETTINGS_MODAL_KEY), (0, f.uL)(y.Z5c.APPLICATION_STORE);
+                            (0, s.Mr)(C.USER_SETTINGS_MODAL_KEY), (0, f.uL)(y.Z5c.APPLICATION_STORE);
                         },
                     }),
                 ],
@@ -129,7 +129,7 @@ let x = () => {
             case I._n.ZERO_TRUST:
                 break;
             case I._n.EXISTING_INSTALLATION:
-                return (0, i.jsx)(s.zxk, {
+                return (0, i.jsx)(u.zxk, {
                     variant: "primary",
                     onClick: () => {
                         (0, o.j)(y.rMx.NITRO_WARP_CTA_CLICKED, { is_enable_warp: !0 }), n(I._n.READY_FOR_LICENSE);

@@ -2,11 +2,11 @@ n.d(e, { Z: () => c });
 var i = n(442837),
     r = n(924557),
     l = n(435064),
-    u = n(39604),
-    s = n(509613),
+    s = n(39604),
+    u = n(509613),
     a = n(313789),
     o = n(388032);
-let c = (0, s.qs)(a.n.CLIPS_ENABLE_REMINDERS, {
+let c = (0, u.qs)(a.n.CLIPS_ENABLE_REMINDERS, {
     useTitle: () => o.intl.string(o.t["3zwNf6"]),
     useSubtitle: () => o.intl.string(o.t.m4Cjj9),
     useValue: () => (0, i.e7)([l.Z], () => l.Z.getSettings().remindersEnabled),
@@ -17,5 +17,5 @@ let c = (0, s.qs)(a.n.CLIPS_ENABLE_REMINDERS, {
         );
         return t;
     },
-    setValue: (t) => u.N0(t),
+    setValue: (t) => s.N0(t),
 });

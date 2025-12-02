@@ -20,8 +20,8 @@ var i = n(473749),
     _ = n(358085),
     O = n(709054),
     x = n(418476),
-    j = n(151007),
-    E = n(432376),
+    E = n(151007),
+    j = n(432376),
     S = n(996861),
     P = n(981631);
 let I = function (e, t, n) {
@@ -53,14 +53,14 @@ let I = function (e, t, n) {
                         i && !M.isSystemDM() && (0, x.Z)(w, R) && (n.preventDefault(), (0, S.Hd)(M, w));
                         break;
                     case "p":
-                        (i || A) && (0, j.Z)(w, M) && (n.preventDefault(), (0, S.rY)(M, w, n));
+                        (i || A) && (0, E.Z)(w, M) && (n.preventDefault(), (0, S.rY)(M, w, n));
                         break;
                     case "+":
                         (i || A) &&
                             (function (e) {
                                 let t = null == e.guild_id || g.Z.canChatInGuild(e.guild_id),
                                     n = d.nc.getSetting(),
-                                    { disableReactionCreates: i } = (0, E.Z)({
+                                    { disableReactionCreates: i } = (0, j.Z)({
                                         channel: e,
                                         canChat: t,
                                         renderReactions: n,

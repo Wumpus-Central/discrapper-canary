@@ -2,8 +2,8 @@ n.d(e, { KL: () => _ });
 var i = n(54381),
     r = n(657707),
     l = n(924557),
-    u = n(703288),
-    s = n(574755),
+    s = n(703288),
+    u = n(574755),
     a = n(509613),
     o = n(313789),
     c = n(526665),
@@ -13,7 +13,7 @@ var i = n(54381),
     T = n(388032);
 let I = (0, a.x1)(o.n.CLIPS_PANE, {
         buildLayout: () => [],
-        render: () => (0, i.jsx)(s.Z, {}),
+        render: () => (0, i.jsx)(u.Z, {}),
         usePredicate: () => !(0, c.BK)("LegacyClipsPane"),
     }),
     g = (0, a.x1)(o.n.CLIPS_PANE, {
@@ -26,7 +26,7 @@ let I = (0, a.x1)(o.n.CLIPS_PANE, {
     }),
     O = (0, a.wf)(o.n.CLIPS_PANEL, {
         useTitle: () => T.intl.string(T.t.z2jK6X),
-        useBadge: () => (0, i.jsx)(u.Z, {}),
+        useBadge: () => (0, i.jsx)(s.Z, {}),
         buildLayout: () => ((0, c.Ml)("ClipsPanel") ? [g] : [I]),
     }),
     _ = (0, a.m7)(o.n.CLIPS_SIDEBAR_ITEM, {

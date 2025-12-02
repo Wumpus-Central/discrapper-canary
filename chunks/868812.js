@@ -18,17 +18,17 @@ function f(e) {
         {
             Component: O,
             play: x,
-            events: { onMouseEnter: j, onMouseLeave: E },
+            events: { onMouseEnter: E, onMouseLeave: j },
         } = (0, l.$)(),
         S = r.useCallback(
             (e) => {
-                "focus" !== e.type && (v(), j());
+                "focus" !== e.type && (v(), E());
             },
-            [v, j],
+            [v, E],
         ),
         P = r.useCallback(() => {
-            null == f && (_(), E());
-        }, [_, E, f]),
+            null == f && (_(), j());
+        }, [_, j, f]),
         I = r.useCallback(() => {
             (0, s.v)(g, s.d.GIFTING),
                 f === p.D.GIFTING
