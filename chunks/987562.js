@@ -1,15 +1,13 @@
 n.d(t, {
-    CE: () => d,
-    F5: () => u,
-    L$: () => h,
-    Me: () => p,
-    TL: () => c,
-    XL: () => f,
-    YA: () => l,
-    ny: () => m,
-    os: () => g,
+    CE: () => c,
+    F5: () => l,
+    L$: () => _,
+    Me: () => d,
+    XL: () => u,
+    ny: () => p,
+    os: () => m,
     pv: () => s,
-    wO: () => _,
+    wO: () => f,
 }),
     n(388685);
 var r = n(704215),
@@ -19,45 +17,6 @@ var r = n(704215),
 let s = 6 * i.Z.Millis.DAYS_30;
 var l = (function (e) {
     return (
-        (e.TOO_MANY_NOTIFICATIONS = "too_many_notifications"),
-        (e.TEMPORARY_BREAK = "temporary_break"),
-        (e.ANNOYING = "annoying"),
-        (e.UNSAFE = "unsafe"),
-        (e.SPAM = "spam"),
-        (e.OTHER = "other"),
-        e
-    );
-})({});
-function c() {
-    return [
-        {
-            value: "too_many_notifications",
-            label: o.intl.string(o.t["bQHhT+"]),
-        },
-        {
-            value: "temporary_break",
-            label: o.intl.string(o.t.OuPkvL),
-        },
-        {
-            value: "annoying",
-            label: o.intl.string(o.t["3kmAMM"]),
-        },
-        {
-            value: "unsafe",
-            label: o.intl.string(o.t.nmW7jO),
-        },
-        {
-            value: "spam",
-            label: o.intl.string(o.t.cCPYjk),
-        },
-        {
-            value: "other",
-            label: o.intl.string(o.t["7ZIIJ9"]),
-        },
-    ];
-}
-var u = (function (e) {
-    return (
         (e.CONFUSION = "confusion"),
         (e.DOES_NOT_ACHIEVE_WANTS = "does_not_achieve_wants"),
         (e.HARD_TO_ACCESS = "hard_to_access"),
@@ -65,7 +24,7 @@ var u = (function (e) {
         e
     );
 })({});
-function d() {
+function c() {
     return [
         {
             value: "confusion",
@@ -85,7 +44,7 @@ function d() {
         },
     ];
 }
-var f = (function (e) {
+var u = (function (e) {
     return (
         (e.CONFUSION = "confusion"),
         (e.DOES_NOT_ACHIEVE_WANTS = "does_not_achieve_wants"),
@@ -94,7 +53,7 @@ var f = (function (e) {
         e
     );
 })({});
-function p() {
+function d() {
     return [
         {
             value: "confusion",
@@ -114,7 +73,7 @@ function p() {
         },
     ];
 }
-var _ = (function (e) {
+var f = (function (e) {
     return (
         (e.PID_CONCERN = "pid_concern"),
         (e.TOO_MUCH_TIME = "too_much_time"),
@@ -127,7 +86,7 @@ var _ = (function (e) {
         e
     );
 })({});
-function m(e) {
+function p(e) {
     let t = [
         {
             value: "pid_concern",
@@ -170,7 +129,7 @@ function m(e) {
               },
           ];
 }
-var h = (function (e) {
+var _ = (function (e) {
     return (e.GET_STARTED = "age_verification_get_started"), (e.KID_STARTED = "age_verification_kid_started"), e;
 })({});
-let g = [r.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE, r.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED];
+let m = [r.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE, r.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED];

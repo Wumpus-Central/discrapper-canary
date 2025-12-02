@@ -13,8 +13,8 @@ var r = t(54381),
     f = t(594174),
     x = t(960048),
     g = t(22095),
-    C = t(313481),
-    h = t(49436),
+    C = t(49436),
+    h = t(968843),
     v = t(475595),
     j = t(115179),
     _ = t(515108),
@@ -26,7 +26,7 @@ function A(e) {
     var n;
     let { quest: t, avatarDeco: i, onUseNow: a, user: l, mode: s } = e,
         d = (0, v.fh)(t, v.eC.REWARD).url,
-        u = (0, C.Qy)(t.config),
+        u = (0, h.Qy)(t.config),
         m =
             (null == (n = l.avatarDecoration) ? void 0 : n.skuId) != null &&
             l.avatarDecoration.skuId === (null == i ? void 0 : i.skuId);
@@ -74,7 +74,7 @@ function A(e) {
 function P(e) {
     var n, t, o;
     let { initialQuest: c, onClose: v, transitionState: b, preview: w, location: P, sourceQuestContent: D } = e,
-        E = null != (t = (0, C.B4)(c.id)) ? t : c,
+        E = null != (t = (0, h.B4)(c.id)) ? t : c,
         T = i.useMemo(() => (0, j.xn)(E.config), [E]),
         O = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
         [L, R] = (function (e) {
@@ -100,7 +100,7 @@ function P(e) {
         [S, M] = i.useState(k ? "loading" : "claimed");
     i.useEffect(() => {
         k &&
-            (0, g.QB)(E.id, h.y$.CROSS_PLATFORM, P)
+            (0, g.QB)(E.id, C.y$.CROSS_PLATFORM, P)
                 .then(() => M("claimed"))
                 .catch(() => M("error"));
     }, [E.id, P, k]);

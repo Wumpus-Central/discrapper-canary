@@ -50,8 +50,8 @@ var r = n(54381),
     K = n(574650),
     z = n(665302),
     q = n(434404),
-    Q = n(918658),
-    X = n(859428),
+    X = n(918658),
+    Q = n(859428),
     J = n(647085),
     $ = n(72897),
     ee = n(963249),
@@ -348,21 +348,21 @@ let eW = i.memo(function () {
     let eq = null == (e = c.metadata) ? void 0 : e.premiumType;
     switch (c.type) {
         case eT.kVF.LURKING_GUILD:
-            return (0, r.jsx)(X.Z, {});
+            return (0, r.jsx)(Q.Z, {});
         case eT.kVF.PENDING_MEMBER:
             return (0, r.jsx)(K.Z, {});
         case eT.kVF.INVITED_TO_SPEAK:
             return (0, r.jsx)(ec.Z, {});
         case eT.kVF.GUILD_RAID_NOTIFICATION:
-            let { dismissUntil: eQ } = c.metadata;
-            return (0, r.jsx)(F.Z, { onDismiss: () => eY(eQ) });
-        case eT.kVF.WIN32_DEPRECATED_MESSAGE:
             let { dismissUntil: eX } = c.metadata;
+            return (0, r.jsx)(F.Z, { onDismiss: () => eY(eX) });
+        case eT.kVF.WIN32_DEPRECATED_MESSAGE:
+            let { dismissUntil: eQ } = c.metadata;
             return (0, r.jsxs)(f.qXd, {
                 color: f.DM8.WARNING,
                 children: [
                     (0, r.jsx)(f.RyX, {
-                        onClick: () => eY(eX),
+                        onClick: () => eY(eQ),
                         noticeType: c.type,
                     }),
                     eR.intl.format(eR.t["08KQ1P"], { helpCenterLink: eS.Z.getArticleURL(eT.BhN.WIN32_DEPRECATE) }),
@@ -853,7 +853,7 @@ let eW = i.memo(function () {
                 }),
             });
         case eT.kVF.VIEWING_ROLES:
-            return (0, r.jsx)(Q.Z, {});
+            return (0, r.jsx)(X.Z, {});
         case eT.kVF.PREMIUM_UNCANCEL:
             return (0, r.jsxs)(f.qXd, {
                 color:
@@ -1191,7 +1191,7 @@ let eW = i.memo(function () {
                     (0, r.jsx)(f.NoS, {
                         onClick: () => {
                             var e;
-                            (0, el.ZZ)(), eY(null == (e = c.metadata) ? void 0 : e.dismissUntil);
+                            (0, el.Z)(), eY(null == (e = c.metadata) ? void 0 : e.dismissUntil);
                         },
                         noticeType: eT.kVF.BLOCK_USER_FEEDBACK_NAGBAR,
                         children: eR.intl.string(eR.t.e4y2VM),

@@ -8,11 +8,11 @@ var r = n(54381),
     c = n(335131),
     d = n(617136),
     u = n(915750),
-    p = n(313481),
-    m = n(49436),
-    g = n(509212),
-    f = n(979232),
-    h = n(373370),
+    p = n(49436),
+    m = n(509212),
+    g = n(979232),
+    f = n(373370),
+    h = n(968843),
     x = n(115179),
     _ = n(542347),
     b = n(659302),
@@ -74,7 +74,7 @@ function T(e) {
             let r = (null == (e = t.userStatus) ? void 0 : e.enrolledAt) == null ? d.jZ.ACCEPT_QUEST : d.jZ.WATCH_VIDEO;
             (0, j.openVideoQuestModal)({
                 quest: t,
-                questContent: m.jn.QUEST_BAR_V2,
+                questContent: p.jn.QUEST_BAR_V2,
                 sourceQuestContent: n,
                 sourceQuestContentCTA: r,
             });
@@ -86,13 +86,13 @@ function T(e) {
 let w = (e) => {
         let { quest: t, sourceQuestContent: n } = e,
             s = (0, u.aM)(),
-            a = (0, g.V_)(t);
+            a = (0, m.V_)(t);
         return (0, r.jsx)(o.zxk, {
             size: "sm",
             fullWidth: !0,
             onClick: () =>
-                (0, g.nc)(t, {
-                    content: m.jn.QUEST_BAR_V2,
+                (0, m.nc)(t, {
+                    content: p.jn.QUEST_BAR_V2,
                     ctaContent: d.jZ.OPEN_GAME_LINK,
                     impressionId: s,
                     sourceQuestContent: n,
@@ -107,10 +107,10 @@ let w = (e) => {
         return (0, r.jsx)(o.zxk, {
             fullWidth: !0,
             onClick: () =>
-                (0, g.gI)(
+                (0, m.gI)(
                     { quest: n },
                     {
-                        content: m.jn.QUEST_BAR_V2,
+                        content: p.jn.QUEST_BAR_V2,
                         ctaContent: d.jZ.CONNECT_CONSOLE,
                         impressionId: a,
                         sourceQuestContent: s,
@@ -122,9 +122,9 @@ let w = (e) => {
     },
     N = (e) => {
         let { quest: t } = e,
-            n = (0, h.CR)({ quest: t }),
-            { launchInGameActivity: s } = (0, p.zB)(t);
-        return (0, g.Rt)(t)
+            n = (0, f.CR)({ quest: t }),
+            { launchInGameActivity: s } = (0, h.zB)(t);
+        return (0, m.Rt)(t)
             ? (0, r.jsx)(o.zxk, {
                   fullWidth: !0,
                   variant: "primary",
@@ -172,12 +172,12 @@ let w = (e) => {
             n,
             {
                 quest: u,
-                useReducedMotion: p,
-                isExpanded: g,
+                useReducedMotion: m,
+                isExpanded: f,
                 className: h,
                 ctaLabel: _,
                 onClick: j,
-                questContent: v = m.jn.QUEST_BAR_V2,
+                questContent: v = p.jn.QUEST_BAR_V2,
                 sourceQuestContent: T,
             } = e,
             w = (function (e, t) {
@@ -230,7 +230,7 @@ let w = (e) => {
                 },
                 [j, u.config, null == (n = u.userStatus) ? void 0 : n.claimedAt, N],
             ),
-            { shouldUseShinyButton: A } = f.Z.useConfig({ location: (0, d._b)(T) + "- CtaButton" });
+            { shouldUseShinyButton: A } = g.Z.useConfig({ location: (0, d._b)(T) + "- CtaButton" });
         return A
             ? (0, r.jsx)(
                   i.gtL,
@@ -240,7 +240,7 @@ let w = (e) => {
                               fullWidth: !0,
                               size: a.zx.Sizes.SMALL,
                               onClick: R,
-                              pauseAnimation: p || (!g && !P),
+                              pauseAnimation: m || (!f && !P),
                               className: h,
                               buttonShineClassName: E.shine,
                               "data-migration-pending": !0,
@@ -277,13 +277,13 @@ let w = (e) => {
                 isProgressing: c,
                 activeScreen: d,
                 taskDetails: u,
-                popoutTargetElementRef: p,
+                popoutTargetElementRef: g,
                 onGameSheetOpened: f,
                 onGameSheetClosed: h,
             } = e,
             x = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
-            _ = (0, g.q8)(n),
-            b = d !== m.LI.SELECT && !l && !c,
+            _ = (0, m.q8)(n),
+            b = d !== p.LI.SELECT && !l && !c,
             j = null;
         return (
             x
@@ -299,19 +299,19 @@ let w = (e) => {
                         sourceQuestContent: s,
                         taskDetails: u,
                     }))
-                  : (0, g.Rt)(n)
+                  : (0, m.Rt)(n)
                     ? (j = (0, r.jsx)(N, { quest: n }))
-                    : d === m.LI.CONSOLE && i
+                    : d === p.LI.CONSOLE && i
                       ? (j = (0, r.jsx)(P, {
                             quest: n,
                             sourceQuestContent: s,
                         }))
-                      : b && (0, g.Pb)(n)
+                      : b && (0, m.Pb)(n)
                         ? (j = (0, r.jsx)(R, {
                               quest: n,
                               sourceQuestContent: s,
                               taskDetails: u,
-                              popoutTargetElementRef: p,
+                              popoutTargetElementRef: g,
                               onGameSheetOpened: f,
                               onGameSheetClosed: h,
                           }))

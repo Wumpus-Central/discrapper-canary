@@ -1,11 +1,10 @@
 n.d(t, { X: () => h }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(666917);
-n(442837);
-var o = n(313481);
-n(616022);
-var s = n(49436),
+    a = n(205120);
+n(442837), n(616022);
+var o = n(49436),
+    s = n(968843),
     l = n(602667),
     c = n(883333),
     u = n(150588),
@@ -36,7 +35,7 @@ function m(e, t) {
 }
 function h(e) {
     let { quest: t, location: n, initiallyExpanded: _, contentPosition: m, sourceQuestContent: h } = e,
-        g = (0, o.tP)(t),
+        g = (0, s.tP)(t),
         { containerRef: E, size: b, height: y } = (0, d.h)(),
         {
             expansionSpring: O,
@@ -59,13 +58,13 @@ function h(e) {
         questOrQuests: t,
         questContent: n,
         questContentPosition: m,
-        trackGuildAndChannelMetadata: n === s.jn.QUESTS_EMBED,
+        trackGuildAndChannelMetadata: n === o.jn.QUESTS_EMBED,
         sourceQuestContent: h,
         children: (e) =>
             (0, r.jsx)(a.animated.div, {
                 style: {
                     maxHeight:
-                        n === s.jn.QUESTS_EMBED
+                        n === o.jn.QUESTS_EMBED
                             ? void 0
                             : O.to({
                                   range: [0, 1],

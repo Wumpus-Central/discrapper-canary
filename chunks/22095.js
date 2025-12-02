@@ -1,29 +1,29 @@
 n.d(t, {
-    AH: () => Z,
-    Ag: () => Q,
-    CS: () => x,
-    EW: () => z,
-    Kh: () => ea,
-    MG: () => er,
-    OR: () => q,
-    QB: () => B,
-    T0: () => K,
-    Wf: () => Y,
-    cT: () => ee,
-    eT: () => W,
-    gU: () => en,
-    gl: () => V,
-    is: () => L,
-    it: () => j,
-    lL: () => et,
-    lx: () => J,
-    m0: () => k,
-    nE: () => H,
-    pf: () => F,
+    AH: () => G,
+    Ag: () => q,
+    CS: () => D,
+    EW: () => K,
+    Kh: () => ei,
+    MG: () => en,
+    OR: () => z,
+    QB: () => Z,
+    T0: () => W,
+    Wf: () => H,
+    cT: () => $,
+    eT: () => Y,
+    gU: () => et,
+    gl: () => F,
+    is: () => x,
+    it: () => L,
+    lL: () => ee,
+    lx: () => Q,
+    m0: () => M,
+    nE: () => V,
+    pf: () => B,
     qm: () => X,
-    w: () => $,
-    wF: () => G,
-    xw: () => M,
+    w: () => J,
+    wF: () => U,
+    xw: () => j,
 }),
     n(415506);
 var r = n(990547),
@@ -41,17 +41,16 @@ var r = n(990547),
     m = n(617136),
     h = n(823289),
     g = n(705006),
-    E = n(313481),
-    b = n(616022),
-    y = n(49436),
-    O = n(509212),
-    v = n(184299),
-    S = n(475595),
-    I = n(552943),
-    T = n(324805),
-    A = n(981631),
-    C = n(388032);
-function N(e, t, n) {
+    E = n(616022),
+    b = n(49436),
+    y = n(509212),
+    O = n(184299),
+    v = n(475595),
+    S = n(552943),
+    I = n(324805),
+    T = n(981631),
+    A = n(388032);
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -64,7 +63,7 @@ function N(e, t, n) {
         e
     );
 }
-function P(e) {
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -75,12 +74,12 @@ function P(e) {
                 }),
             )),
             r.forEach(function (t) {
-                N(e, t, n[t]);
+                C(e, t, n[t]);
             });
     }
     return e;
 }
-function R(e, t) {
+function P(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -92,24 +91,24 @@ function R(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function R(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : R(Object(t)).forEach(function (n) {
+            : P(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let D = 5;
-async function x(e) {
+let w = 5;
+async function D(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     try {
         let n = (
             await i.tn.post({
-                url: A.ANM.QUEST_ON_CONSOLE_START(e),
+                url: T.ANM.QUEST_ON_CONSOLE_START(e),
                 query: t ? { preview: t } : void 0,
                 failImmediatelyWhenRateLimited: !0,
                 rejectWithError: !1,
@@ -121,7 +120,7 @@ async function x(e) {
                 user_status: n.quest_user_status,
             });
         else if (null != n.error_hints_v2 && n.error_hints_v2.length > 0)
-            return { errorHints: n.error_hints_v2.slice(0, D) };
+            return { errorHints: n.error_hints_v2.slice(0, w) };
     } catch (r) {
         var n;
         let e = new o.Z(r);
@@ -129,18 +128,18 @@ async function x(e) {
             return {
                 errorHints: [
                     {
-                        type: y.HW.RATE_LIMITED,
-                        message: C.intl.string(C.t.Whhv4w),
+                        type: b.HW.RATE_LIMITED,
+                        message: A.intl.string(A.t.Whhv4w),
                         connected_account_id: "",
                         connected_account_type: "",
                     },
                 ],
             };
-        let t = null != (n = e.getAnyErrorMessage()) ? n : C.intl.string(C.t.xSCvBf);
+        let t = null != (n = e.getAnyErrorMessage()) ? n : A.intl.string(A.t.xSCvBf);
         return {
             errorHints: [
                 {
-                    type: y.HW.GENERIC,
+                    type: b.HW.GENERIC,
                     message: t,
                     connected_account_id: "",
                     connected_account_type: "",
@@ -150,27 +149,27 @@ async function x(e) {
     }
     return { errorHints: [] };
 }
-async function L(e) {
+async function x(e) {
     await i.tn.post({
-        url: A.ANM.QUEST_ON_CONSOLE_STOP(e),
+        url: T.ANM.QUEST_ON_CONSOLE_STOP(e),
+        rejectWithError: !1,
+    });
+}
+async function L() {
+    await i.tn.del({
+        url: T.ANM.QUESTS_RESET_RECENT_QUEST_COMPLETIONS,
         rejectWithError: !1,
     });
 }
 async function j() {
-    await i.tn.del({
-        url: A.ANM.QUESTS_RESET_RECENT_QUEST_COMPLETIONS,
-        rejectWithError: !1,
-    });
-}
-async function M() {
-    if (!b.Z.isFetchingCurrentQuests) {
+    if (!E.Z.isFetchingCurrentQuests) {
         a.Z.dispatch({ type: "QUESTS_FETCH_CURRENT_QUESTS_BEGIN" });
         try {
             let e = await i.tn.get({
-                    url: A.ANM.QUESTS_CURRENT_QUESTS,
+                    url: T.ANM.QUESTS_CURRENT_QUESTS,
                     rejectWithError: !1,
                 }),
-                t = e.body.quests.filter((e) => (0, I.Qe)(e)).map((e) => (0, I.WP)(e)),
+                t = e.body.quests.filter((e) => (0, S.Qe)(e)).map((e) => (0, S.WP)(e)),
                 n = e.body.quest_enrollment_blocked_until,
                 r = t.filter((e) => {
                     var t;
@@ -179,7 +178,7 @@ async function M() {
                         e.config.rewardsConfig.platforms.length > 0
                     );
                 }),
-                o = e.body.excluded_quests.map((e) => (0, I.Qr)(e));
+                o = e.body.excluded_quests.map((e) => (0, S.Qr)(e));
             a.Z.dispatch({
                 type: "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS",
                 quests: r,
@@ -194,12 +193,12 @@ async function M() {
         }
     }
 }
-async function k(e) {
+async function M(e) {
     let { questId: t, streamKey: n, applicationId: i, terminal: s = !1 } = e;
     try {
         var l;
         let e = await _.Z.post({
-            url: A.ANM.QUESTS_HEARTBEAT(t),
+            url: T.ANM.QUESTS_HEARTBEAT(t),
             body: {
                 stream_key: n,
                 application_id: i,
@@ -219,7 +218,7 @@ async function k(e) {
         });
         a.Z.dispatch({
             type: "QUESTS_SEND_HEARTBEAT_SUCCESS",
-            userStatus: (0, I.U3)(e.body),
+            userStatus: (0, S.U3)(e.body),
             questId: t,
             streamKey: n,
         });
@@ -232,7 +231,7 @@ async function k(e) {
         });
     }
 }
-function U(e) {
+function k(e) {
     var t, n;
     return (
         e instanceof c.CaptchaCancelError ||
@@ -244,7 +243,7 @@ function U(e) {
                 !1))
     );
 }
-var G = (function (e) {
+var U = (function (e) {
     return (
         (e.SUCCESS = "success"),
         (e.CAPTCHA_FAILED = "captcha_failed"),
@@ -253,7 +252,7 @@ var G = (function (e) {
         e
     );
 })({});
-async function Z(e, t) {
+async function G(e, t) {
     if (
         (null != t.questContentCTA &&
             (0, m._3)({
@@ -264,9 +263,9 @@ async function Z(e, t) {
                 questContentRowIndex: t.questContentRowIndex,
                 sourceQuestContent: t.sourceQuestContent,
             }),
-        e === T.V6 && (0, d.m4)(),
-        e === E.wF && (0, d._r)(),
-        b.Z.isEnrolling(e))
+        e === I.V6 && (0, d.m4)(),
+        e === I.wF && (0, d._r)(),
+        E.Z.isEnrolling(e))
     )
         return { type: "previous_in_flight_request" };
     a.Z.dispatch({
@@ -274,10 +273,10 @@ async function Z(e, t) {
         questId: e,
     });
     try {
-        let n = (0, O.jY)(t.questContent),
+        let n = (0, y.jY)(t.questContent),
             r = await i.tn.post({
-                url: A.ANM.QUESTS_ENROLL(e),
-                body: w(P({ location: t.questContent }, (0, O.qe)(e, t.questContent)), {
+                url: T.ANM.QUESTS_ENROLL(e),
+                body: R(N({ location: t.questContent }, (0, y.qe)(e, t.questContent)), {
                     metadata_raw: null != n ? n : null,
                 }),
                 rejectWithError: !0,
@@ -285,7 +284,7 @@ async function Z(e, t) {
         return (
             a.Z.dispatch({
                 type: "QUESTS_ENROLL_SUCCESS",
-                enrolledQuestUserStatus: (0, I.U3)(r.body),
+                enrolledQuestUserStatus: (0, S.U3)(r.body),
             }),
             { type: "success" }
         );
@@ -295,33 +294,33 @@ async function Z(e, t) {
                 type: "QUESTS_ENROLL_FAILURE",
                 questId: e,
             }),
-            U(t) ? { type: "captcha_failed" } : { type: "unknown_error" }
+            k(t) ? { type: "captcha_failed" } : { type: "unknown_error" }
         );
     }
 }
-async function B(e, t, n) {
-    if (!b.Z.isClaimingReward(e)) {
+async function Z(e, t, n) {
+    if (!E.Z.isClaimingReward(e)) {
         a.Z.dispatch({
             type: "QUESTS_CLAIM_REWARD_BEGIN",
             questId: e,
         });
         try {
-            let r = (0, O.jY)(n),
+            let r = (0, y.jY)(n),
                 o = await i.tn.post({
-                    url: A.ANM.QUESTS_CLAIM_REWARD(e),
-                    body: w(
-                        P(
+                    url: T.ANM.QUESTS_CLAIM_REWARD(e),
+                    body: R(
+                        N(
                             {
                                 platform: t,
                                 location: n,
                             },
-                            (0, O.qe)(e, n),
+                            (0, y.qe)(e, n),
                         ),
                         { metadata_raw: null != r ? r : null },
                     ),
                     rejectWithError: !1,
                 }),
-                s = (0, I.Xh)(o.body);
+                s = (0, S.Xh)(o.body);
             return (
                 0 === s.errors.length
                     ? a.Z.dispatch({
@@ -348,21 +347,21 @@ async function B(e, t, n) {
         }
     }
 }
-async function F(e) {
-    if (!b.Z.isFetchingRewardCode(e)) {
+async function B(e) {
+    if (!E.Z.isFetchingRewardCode(e)) {
         a.Z.dispatch({
             type: "QUESTS_FETCH_REWARD_CODE_BEGIN",
             questId: e,
         });
         try {
             let t = await i.tn.get({
-                url: A.ANM.QUESTS_REWARD_CODE(e),
+                url: T.ANM.QUESTS_REWARD_CODE(e),
                 rejectWithError: !1,
             });
             a.Z.dispatch({
                 type: "QUESTS_FETCH_REWARD_CODE_SUCCESS",
                 questId: e,
-                rewardCode: (0, I.yI)(t.body),
+                rewardCode: (0, S.yI)(t.body),
             });
         } catch (t) {
             throw (
@@ -376,9 +375,9 @@ async function F(e) {
         }
     }
 }
-async function V(e, t) {
-    let n = b.Z.isDismissingContent(e),
-        r = (0, O.GN)(t);
+async function F(e, t) {
+    let n = E.Z.isDismissingContent(e),
+        r = (0, y.GN)(t);
     if (!n && r) {
         a.Z.dispatch({
             type: "QUESTS_DISMISS_CONTENT_BEGIN",
@@ -387,13 +386,13 @@ async function V(e, t) {
         });
         try {
             let n = await i.tn.post({
-                url: A.ANM.QUESTS_DISMISS_CONTENT(e, t),
-                body: P({}, (0, O.qe)(e, t)),
+                url: T.ANM.QUESTS_DISMISS_CONTENT(e, t),
+                body: N({}, (0, y.qe)(e, t)),
                 rejectWithError: !1,
             });
             a.Z.dispatch({
                 type: "QUESTS_DISMISS_CONTENT_SUCCESS",
-                dismissedQuestUserStatus: (0, I.U3)(n.body),
+                dismissedQuestUserStatus: (0, S.U3)(n.body),
             });
         } catch (t) {
             a.Z.dispatch({
@@ -404,23 +403,42 @@ async function V(e, t) {
         }
     }
 }
-function H(e) {
+function V(e) {
     a.Z.dispatch({
         type: "QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE",
         streamKey: e,
     });
 }
-async function Y(e) {
+async function H(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
     try {
         let n = await i.tn.post({
-            url: A.ANM.QUESTS_PREVIEW_COMPLETE(e),
+            url: T.ANM.QUESTS_PREVIEW_COMPLETE(e),
             body: { percent: t },
             rejectWithError: !1,
         });
         a.Z.dispatch({
             type: "QUESTS_PREVIEW_UPDATE_SUCCESS",
-            previewQuestUserStatus: (0, I.U3)(n.body),
+            previewQuestUserStatus: (0, S.U3)(n.body),
+        });
+    } catch (t) {
+        a.Z.dispatch({
+            type: "QUESTS_PREVIEW_UPDATE_FAILURE",
+            error: new o.Z(t),
+            questId: e,
+        });
+    }
+}
+async function Y(e) {
+    try {
+        let t = await i.tn.del({
+            url: T.ANM.QUESTS_PREVIEW_STATUS(e),
+            body: {},
+            rejectWithError: !1,
+        });
+        a.Z.dispatch({
+            type: "QUESTS_PREVIEW_UPDATE_SUCCESS",
+            previewQuestUserStatus: (0, S.U3)(t.body),
         });
     } catch (t) {
         a.Z.dispatch({
@@ -432,34 +450,15 @@ async function Y(e) {
 }
 async function W(e) {
     try {
-        let t = await i.tn.del({
-            url: A.ANM.QUESTS_PREVIEW_STATUS(e),
-            body: {},
-            rejectWithError: !1,
-        });
-        a.Z.dispatch({
-            type: "QUESTS_PREVIEW_UPDATE_SUCCESS",
-            previewQuestUserStatus: (0, I.U3)(t.body),
-        });
-    } catch (t) {
-        a.Z.dispatch({
-            type: "QUESTS_PREVIEW_UPDATE_FAILURE",
-            error: new o.Z(t),
-            questId: e,
-        });
-    }
-}
-async function K(e) {
-    try {
         a.Z.dispatch({ type: "QUESTS_DOCK_RESET_SOFT_DISMISSAL" });
         let t = await i.tn.del({
-            url: A.ANM.QUESTS_PREVIEW_DISMISSIBILITY(e),
+            url: T.ANM.QUESTS_PREVIEW_DISMISSIBILITY(e),
             body: {},
             rejectWithError: !1,
         });
         a.Z.dispatch({
             type: "QUESTS_PREVIEW_UPDATE_SUCCESS",
-            previewQuestUserStatus: (0, I.U3)(t.body),
+            previewQuestUserStatus: (0, S.U3)(t.body),
         });
     } catch (t) {
         a.Z.dispatch({
@@ -469,29 +468,29 @@ async function K(e) {
         });
     }
 }
-function z(e) {
+function K(e) {
     a.Z.dispatch({
         type: "QUESTS_DELIVERY_OVERRIDE",
         questId: e,
     });
 }
-function q(e, t) {
+function z(e, t) {
     a.Z.dispatch({
         type: "QUESTS_SELECT_TASK_PLATFORM",
         questId: e,
         platform: t,
     });
 }
-async function Q() {
-    if (!b.Z.isFetchingClaimedQuests) {
+async function q() {
+    if (!E.Z.isFetchingClaimedQuests) {
         a.Z.dispatch({ type: "QUESTS_FETCH_CLAIMED_QUESTS_BEGIN" });
         try {
             let e = (
                 await i.tn.get({
-                    url: A.ANM.QUESTS_CLAIMED_QUESTS,
+                    url: T.ANM.QUESTS_CLAIMED_QUESTS,
                     rejectWithError: !1,
                 })
-            ).body.quests.map((e) => (0, I.hQ)(e));
+            ).body.quests.map((e) => (0, S.hQ)(e));
             a.Z.dispatch({
                 type: "QUESTS_FETCH_CLAIMED_QUESTS_SUCCESS",
                 quests: e,
@@ -512,15 +511,15 @@ function X(e, t, n) {
         progress: n,
     });
 }
-function J(e) {
+function Q(e) {
     a.Z.dispatch({
         type: "QUESTS_RESET_OPTIMISTIC_PROGRESS",
         questId: e,
     });
 }
-async function $(e, t) {
+async function J(e, t) {
     var n, r, c, d, p, _, m, E;
-    let b = Date.now();
+    let y = Date.now();
     g.Z.recordQuestRequestAttempt("/quests/decision", t, e),
         a.Z.dispatch({
             type: "QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN",
@@ -531,16 +530,16 @@ async function $(e, t) {
             E = await (0, s.Gy)(),
             O = (
                 await i.tn.get({
-                    url: A.ANM.QUEST_FETCH_QUEST_TO_DELIVER(e, null == o ? void 0 : o.uuid, E.uuid),
+                    url: T.ANM.QUEST_FETCH_QUEST_TO_DELIVER(e, null == o ? void 0 : o.uuid, E.uuid),
                     rejectWithError: !1,
                 })
             ).body,
             v = O.quest,
-            S = null != v ? (0, I.q6)(v) : void 0;
+            I = null != v ? (0, S.q6)(v) : void 0;
         if (
             (a.Z.dispatch({
                 type: "QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS",
-                quest: S,
+                quest: I,
                 adDecisionData: {
                     ad_id: null == (n = O.ad_identifiers) ? void 0 : n.ad_id,
                     adset_id: null == (r = O.ad_identifiers) ? void 0 : r.adset_id,
@@ -556,22 +555,22 @@ async function $(e, t) {
                 adContext: O.ad_context,
                 responseTtlSeconds: O.response_ttl_seconds,
                 placement: e,
-                fetchedAt: b,
+                fetchedAt: y,
             }),
             g.Z.recordQuestRequestApiResponse("/quests/decision", {
                 wasSuccessful: !0,
                 adRequestId: String(O.request_id),
-                currentQuestId: null != (m = null == S ? void 0 : S.id) ? m : null,
-                currentFetchedAt: b,
+                currentQuestId: null != (m = null == I ? void 0 : I.id) ? m : null,
+                currentFetchedAt: y,
             }),
-            null == S)
+            null == I)
         )
             return;
-        e === y.Ok.DESKTOP_ACCOUNT_PANEL_AREA && h.Z.startTracking(S.id),
+        e === b.Ok.DESKTOP_ACCOUNT_PANEL_AREA && h.Z.startTracking(I.id),
             f.default.track(
-                A.rMx.QUEST_DECISION_RECEIVED,
-                w(P({}, (0, u.Z)()), {
-                    quest_id: S.id,
+                T.rMx.QUEST_DECISION_RECEIVED,
+                R(N({}, (0, u.Z)()), {
+                    quest_id: I.id,
                     caller_source: t,
                     ad_request_id: String(O.request_id),
                 }),
@@ -579,8 +578,8 @@ async function $(e, t) {
     } catch (n) {
         g.Z.recordQuestRequestApiResponse("/quests/decision", { wasSuccessful: !1 }),
             f.default.track(
-                A.rMx.QUEST_DECISION_ROUNDTRIP_ERROR,
-                w(P({}, (0, u.Z)()), {
+                T.rMx.QUEST_DECISION_ROUNDTRIP_ERROR,
+                R(N({}, (0, u.Z)()), {
                     reason: null != (E = null == n ? void 0 : n.message) ? E : null,
                     api_error: new o.Z(n).getAnyErrorMessage(),
                     caller_source: t,
@@ -593,10 +592,10 @@ async function $(e, t) {
             });
     }
 }
-async function ee(e, t) {
+async function $(e, t) {
     var n;
     await _.Z.post({
-        url: A.ANM.QUESTS_VIDEO_PROGRESS(e),
+        url: T.ANM.QUESTS_VIDEO_PROGRESS(e),
         body: { timestamp: t },
         trackedActionData: {
             event: r.NetworkActionNames.QUEST_VIDEO_PROGRESS,
@@ -609,58 +608,58 @@ async function ee(e, t) {
         rejectWithError: !1,
     });
 }
-async function et(e) {
+async function ee(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = (0, S.fh)(e, S.eC.VIDEO_PLAYER_TRANSCRIPT, void 0, t);
+        n = (0, v.fh)(e, v.eC.VIDEO_PLAYER_TRANSCRIPT, void 0, t);
     if (null == n)
-        return void v.ZP.getState().setTranscriptAsset({
+        return void O.ZP.getState().setTranscriptAsset({
             questId: e.id,
-            fetchStatus: v.iF.FAILURE,
+            fetchStatus: O.iF.FAILURE,
         });
-    v.ZP.getState().setTranscriptAsset({
+    O.ZP.getState().setTranscriptAsset({
         questId: e.id,
-        fetchStatus: v.iF.FETCHING,
+        fetchStatus: O.iF.FETCHING,
     });
     try {
         let t = await i.tn.get({
             url: n.url,
             rejectWithError: !0,
         });
-        v.ZP.getState().setTranscriptAsset({
+        O.ZP.getState().setTranscriptAsset({
             questId: e.id,
-            fetchStatus: v.iF.SUCCESS,
+            fetchStatus: O.iF.SUCCESS,
             text: t.text,
             url: n.url,
         });
     } catch (t) {
-        v.ZP.getState().setTranscriptAsset({
+        O.ZP.getState().setTranscriptAsset({
             questId: e.id,
-            fetchStatus: v.iF.FAILURE,
+            fetchStatus: O.iF.FAILURE,
         });
     }
 }
-async function en(e) {
+async function et(e) {
     let t = await i.tn.get({
-        url: A.ANM.QUEST(e),
+        url: T.ANM.QUEST(e),
         rejectWithError: !1,
     });
-    return (0, I.q6)(t.body);
+    return (0, S.q6)(t.body);
 }
-async function er(e) {
-    if (!b.Z.isFetchingQuestPreview(e)) {
+async function en(e) {
+    if (!E.Z.isFetchingQuestPreview(e)) {
         a.Z.dispatch({
             type: "QUESTS_FETCH_PREVIEW_BEGIN",
             questId: e,
         });
         try {
             let t = await i.tn.get({
-                url: A.ANM.QUEST_PREVIEW(e),
+                url: T.ANM.QUEST_PREVIEW(e),
                 rejectWithError: !1,
             });
             a.Z.dispatch({
                 type: "QUESTS_FETCH_PREVIEW_SUCCESS",
                 questId: e,
-                quest: (0, I.WP)(t.body),
+                quest: (0, S.WP)(t.body),
             });
         } catch (t) {
             throw (
@@ -674,25 +673,25 @@ async function er(e) {
         }
     }
 }
-let ei = 5 * p.Z.Millis.MINUTE;
-async function ea() {
-    if (b.Z.isFetchingQuestHomeTakeover()) return;
-    let e = b.Z.getLastFetchedQuestHomeTakeover();
-    if (!(null != e && Date.now() - e <= ei)) {
+let er = 5 * p.Z.Millis.MINUTE;
+async function ei() {
+    if (E.Z.isFetchingQuestHomeTakeover()) return;
+    let e = E.Z.getLastFetchedQuestHomeTakeover();
+    if (!(null != e && Date.now() - e <= er)) {
         a.Z.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_TAKEOVER_BEGIN" });
         try {
-            let e = [y.rO.QUEST_HOME_BANNER],
+            let e = [b.rO.QUEST_HOME_BANNER],
                 t = await i.tn.get({
-                    url: A.ANM.QUEST_PLACEMENT,
+                    url: T.ANM.QUEST_PLACEMENT,
                     query: {
                         placements: e,
-                        platform: y.QN.WEB,
+                        platform: b.QN.WEB,
                     },
                     rejectWithError: !1,
                 });
             a.Z.dispatch({
                 type: "QUESTS_FETCH_QUEST_HOME_TAKEOVER_SUCCESS",
-                takeover: (0, I.t6)(t.body),
+                takeover: (0, S.t6)(t.body),
             });
         } catch (e) {
             throw (

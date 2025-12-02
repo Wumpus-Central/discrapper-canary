@@ -15,12 +15,12 @@ var r = n(54381),
     E = n(594174),
     j = n(22095),
     v = n(617136),
-    T = n(313481),
-    g = n(616022),
-    S = n(49436),
-    h = n(509212),
-    y = n(535584),
-    A = n(373370),
+    T = n(616022),
+    g = n(49436),
+    S = n(509212),
+    h = n(535584),
+    y = n(373370),
+    A = n(968843),
     O = n(475595),
     x = n(602667),
     C = n(698716),
@@ -90,8 +90,8 @@ function V(e) {
         $ = (0, o.wj)(Y) ? N.BRd.DARK : N.BRd.LIGHT,
         J = (0, a.e7)([c.Z], () => c.Z.getParticipants(e.channelId), [e.channelId]),
         ee = (0, a.e7)(
-            [g.Z],
-            () => (0, h.PM)(g.Z.quests, g.Z.questToDeliverForPlacement, S.Ok.DESKTOP_ACCOUNT_PANEL_AREA),
+            [T.Z],
+            () => (0, S.PM)(T.Z.quests, T.Z.questToDeliverForPlacement, g.Ok.DESKTOP_ACCOUNT_PANEL_AREA),
             [],
         ),
         { isCurrentUserStreamingQuestApplication: et, isQuestInQuestBar: en } = (0, a.cj)([b.Z], () => {
@@ -104,80 +104,80 @@ function V(e) {
                     J.some((t) => {
                         if (t.type !== R.fO.STREAM || t.user.id !== X.id) return !1;
                         let n = (0, p.Um)(t.stream, e);
-                        return null != n && (0, h._D)(n, k);
+                        return null != n && (0, S._D)(n, k);
                     })),
                 isQuestInQuestBar: (null == ee ? void 0 : ee.id) === (null == k ? void 0 : k.id),
             };
         }, [X, k, J, ee]),
-        er = null == (t = (0, h.vj)(k)) ? void 0 : t[0],
+        er = null == (t = (0, S.vj)(k)) ? void 0 : t[0],
         el = (0, a.e7)([d.ZP, b.Z], () => {
             let e = d.ZP.getRunningGames().map((e) => e.id);
-            if ((0, h.$H)(k) && null !== er && e.includes(er)) return !0;
+            if ((0, S.$H)(k) && null !== er && e.includes(er)) return !0;
             let t = null != X ? b.Z.findActivity(X.id, (e) => e.type !== N.IIU.CUSTOM_STATUS) : null;
-            return !!(null != t && (0, h.$J)(k) && (0, h._D)(t, k));
+            return !!(null != t && (0, S.$J)(k) && (0, S._D)(t, k));
         }, [k, X, er]),
         es = !0 === W || et || el,
-        ei = (0, a.e7)([g.Z], () => null != k && g.Z.isEnrolling(k.id), [k]),
+        ei = (0, a.e7)([T.Z], () => null != k && T.Z.isEnrolling(k.id), [k]),
         ea = (0, a.e7)(
             [c.Z],
             () => ((null == X ? void 0 : X.id) == null ? null : c.Z.getParticipant(V, X.id)) != null,
             [V, X],
         ),
-        { launchInGameActivity: eo } = (0, T.zB)(k),
-        eu = (0, T.B6)(null == k ? void 0 : k.config.expiresAt),
-        ec = (0, T.B6)(null == k ? void 0 : k.config.rewardsConfig.rewardsExpireAt),
+        { launchInGameActivity: eo } = (0, A.zB)(k),
+        eu = (0, A.B6)(null == k ? void 0 : k.config.expiresAt),
+        ec = (0, A.B6)(null == k ? void 0 : k.config.rewardsConfig.rewardsExpireAt),
         ed = l.useCallback(() => {
             (0, j.AH)(k.id, {
-                questContent: S.jn.QUEST_LIVE_STREAM,
+                questContent: g.jn.QUEST_LIVE_STREAM,
                 questContentCTA: v.jZ.ACCEPT_QUEST,
-                sourceQuestContent: S.jn.QUEST_LIVE_STREAM,
+                sourceQuestContent: g.jn.QUEST_LIVE_STREAM,
             }),
-                (0, h.Rt)(k) && eo();
+                (0, S.Rt)(k) && eo();
         }, [k, eo]),
         ep = l.useCallback(() => {
             H({
                 questId: k.id,
-                questContent: S.jn.QUEST_LIVE_STREAM,
+                questContent: g.jn.QUEST_LIVE_STREAM,
                 questContentCTA: v.jZ.TRACK_PROGRESS,
-                sourceQuestContent: S.jn.QUEST_LIVE_STREAM,
+                sourceQuestContent: g.jn.QUEST_LIVE_STREAM,
             }),
                 (0, Q.navigateToQuestHome)({
-                    fromContent: S.jn.QUEST_LIVE_STREAM,
+                    fromContent: g.jn.QUEST_LIVE_STREAM,
                     questId: k.id,
                 });
         }, [k, H]),
         ef = l.useCallback(() => {
             H({
                 questId: k.id,
-                questContent: S.jn.QUEST_LIVE_STREAM,
+                questContent: g.jn.QUEST_LIVE_STREAM,
                 questContentCTA: v.jZ.LEARN_MORE,
-                sourceQuestContent: S.jn.QUEST_LIVE_STREAM,
+                sourceQuestContent: g.jn.QUEST_LIVE_STREAM,
             }),
                 (0, Q.navigateToQuestHome)({
-                    fromContent: S.jn.QUEST_LIVE_STREAM,
+                    fromContent: g.jn.QUEST_LIVE_STREAM,
                     questId: k.id,
                 });
         }, [k, H]),
         em = (0, _.hf)({
             quest: k,
-            questContent: S.jn.QUEST_LIVE_STREAM,
-            sourceQuestContent: S.jn.QUEST_LIVE_STREAM,
+            questContent: g.jn.QUEST_LIVE_STREAM,
+            sourceQuestContent: g.jn.QUEST_LIVE_STREAM,
         }),
         eb = l.useMemo(
             () =>
-                (0, y.T)({
+                (0, h.T)({
                     quest: k,
                     location: L.dr.QUEST_CHANNEL_CALL_HEADER,
                 }),
             [k],
         ),
-        eE = (0, A.CR)({ quest: k }),
-        ej = (0, h.Rt)(k),
-        ev = (0, T.tP)(k),
+        eE = (0, y.CR)({ quest: k }),
+        ej = (0, S.Rt)(k),
+        ev = (0, A.tP)(k),
         eT = (null == (n = k.userStatus) ? void 0 : n.enrolledAt) != null,
         eg = (null == (s = k.userStatus) ? void 0 : s.completedAt) != null,
-        eS = null != k.userStatus && (0, h.zE)(k.userStatus, S.jn.QUEST_LIVE_STREAM),
-        eh = null != k.userStatus && (0, h.zE)(k.userStatus, S.jn.QUEST_BAR),
+        eS = null != k.userStatus && (0, S.zE)(k.userStatus, g.jn.QUEST_LIVE_STREAM),
+        eh = null != k.userStatus && (0, S.zE)(k.userStatus, g.jn.QUEST_BAR),
         ey = en && !eh;
     eb.info({
         isQuestCallHeaderDismissed: eS,
@@ -187,14 +187,14 @@ function V(e) {
     });
     let eA = null != B && (null == (m = k.userStatus) ? void 0 : m.claimedAt) == null;
     if ((!eA && (eS || ev || ey)) || (!eA && !ea)) return null;
-    let eO = (0, h.il)(k),
+    let eO = (0, S.il)(k),
         ex = (0, r.jsx)(I.Z, {
             className: q.rewardTile,
             autoplay: z,
             quest: k,
-            questContent: S.jn.QUEST_LIVE_STREAM,
+            questContent: g.jn.QUEST_LIVE_STREAM,
             location: L.dr.QUEST_CHANNEL_CALL_HEADER,
-            sourceQuestContent: S.jn.QUEST_LIVE_STREAM,
+            sourceQuestContent: g.jn.QUEST_LIVE_STREAM,
         });
     return (0, r.jsxs)("div", {
         className: i()(q.wrapper, { [q.wrapperAccepted]: eT }),
@@ -237,7 +237,7 @@ function V(e) {
                                                 variant: "heading-md/semibold",
                                                 color: "header-primary",
                                                 children: es
-                                                    ? (0, h.AV)({
+                                                    ? (0, S.AV)({
                                                           quest: k,
                                                           taskDetails: eO,
                                                       })
@@ -246,8 +246,8 @@ function V(e) {
                                                       }),
                                             }),
                                             (0, r.jsx)(C.i, {
-                                                questContent: S.jn.QUEST_LIVE_STREAM,
-                                                sourceQuestContent: S.jn.QUEST_LIVE_STREAM,
+                                                questContent: g.jn.QUEST_LIVE_STREAM,
+                                                sourceQuestContent: g.jn.QUEST_LIVE_STREAM,
                                                 quest: k,
                                                 preventIdle: !0,
                                                 shouldShowDisclosure:
@@ -285,10 +285,10 @@ function V(e) {
                         (0, r.jsx)(P.Z, {
                             autoplay: z,
                             quest: k,
-                            questContent: S.jn.QUEST_LIVE_STREAM,
+                            questContent: g.jn.QUEST_LIVE_STREAM,
                             taskDetails: eO,
                             location: L.dr.QUEST_CHANNEL_CALL_HEADER,
-                            sourceQuestContent: S.jn.QUEST_LIVE_STREAM,
+                            sourceQuestContent: g.jn.QUEST_LIVE_STREAM,
                         }),
                     (0, r.jsxs)("div", {
                         className: q.ctas,
@@ -348,10 +348,10 @@ function V(e) {
 }
 function k(e) {
     let t = l.useContext(m.h9),
-        n = (0, a.e7)([g.Z], () => null != g.Z.questEnrollmentBlockedUntil, []),
-        s = (0, a.e7)([g.Z], () => g.Z.quests),
-        i = (0, T.Fy)(Array.from(s.values())),
-        o = l.useMemo(() => (0, h.NI)(s, L.Lv), [s]),
+        n = (0, a.e7)([T.Z], () => null != T.Z.questEnrollmentBlockedUntil, []),
+        s = (0, a.e7)([T.Z], () => T.Z.quests),
+        i = (0, A.Fy)(Array.from(s.values())),
+        o = l.useMemo(() => (0, S.NI)(s, L.Lv), [s]),
         u = (0, a.e7)([c.Z], () => c.Z.getParticipants(e.channelId), [e.channelId]),
         d = (0, a.e7)(
             [b.Z],
@@ -363,14 +363,14 @@ function k(e) {
                               var r, l, s;
                               if (i.type === R.fO.STREAM) {
                                   let e = null != (l = (0, p.Um)(i.stream, n)) ? l : null,
-                                      s = (0, h.ZZ)(t, e);
+                                      s = (0, S.ZZ)(t, e);
                                   if (null != s && (null == (r = s.userStatus) ? void 0 : r.claimedAt) == null)
                                       return s;
                               }
                               for (let r of e)
                                   if (!(0, R.I)(r))
                                       for (let e of n.getActivities(r.user.id)) {
-                                          let n = (0, h.ZZ)(t, e);
+                                          let n = (0, S.ZZ)(t, e);
                                           if (null != n && (null == (s = n.userStatus) ? void 0 : s.claimedAt) == null)
                                               return n;
                                       }
@@ -384,8 +384,8 @@ function k(e) {
         : (0, r.jsx)(x.A, {
               questOrQuests: d,
               overrideVisibility: !t,
-              questContent: S.jn.QUEST_LIVE_STREAM,
-              sourceQuestContent: S.jn.QUEST_LIVE_STREAM,
+              questContent: g.jn.QUEST_LIVE_STREAM,
+              sourceQuestContent: g.jn.QUEST_LIVE_STREAM,
               children: () => (0, r.jsx)(V, D(M({}, e), { quest: d })),
           });
 }

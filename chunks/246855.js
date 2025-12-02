@@ -14,8 +14,8 @@ var a = t(54381),
     f = t(43747),
     x = t(960919),
     h = t(22095),
-    _ = t(313481),
-    C = t(49436),
+    _ = t(49436),
+    C = t(968843),
     g = t(115179),
     j = t(515108),
     v = t(291967),
@@ -191,7 +191,7 @@ function D(e) {
 function I(e) {
     var n, t;
     let { initialQuest: i, onClose: s, transitionState: o, sourceQuestContent: l, location: c } = e,
-        d = null != (t = (0, _.B4)(i.id)) ? t : i,
+        d = null != (t = (0, C.B4)(i.id)) ? t : i,
         u = (null == (n = d.userStatus) ? void 0 : n.claimedAt) != null,
         { balance: m, error: p } = (0, f.A)(),
         b = (0, g.LM)(d.config),
@@ -203,7 +203,7 @@ function I(e) {
     r.useEffect(() => {
         u ||
             "loading" !== x ||
-            (0, h.QB)(d.id, C.y$.CROSS_PLATFORM, c)
+            (0, h.QB)(d.id, _.y$.CROSS_PLATFORM, c)
                 .then(() => N("success"))
                 .catch(() => N("error"));
     }, [d.id, u, x, c]);

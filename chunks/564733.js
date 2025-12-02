@@ -23,11 +23,11 @@ var r = n(54381),
     O = n(572004),
     S = n(302221),
     A = n(617136),
-    _ = n(313481),
-    T = n(616022),
-    N = n(49436),
-    I = n(685138),
-    R = n(373370),
+    _ = n(616022),
+    T = n(49436),
+    N = n(685138),
+    I = n(373370),
+    R = n(968843),
     E = n(804127),
     D = n(115179),
     Z = n(455357),
@@ -41,7 +41,7 @@ function Q(e) {
     var t;
     let { quest: n, rewardCode: a, hasTieredRewardCodes: o, sourceQuestContent: l } = e,
         i = (0, d.wj)((0, C.ZP)()),
-        u = (0, I.n)({
+        u = (0, N.n)({
             location: L.dr.REWARD_CODE_MODAL,
             questConfig: n.config,
         }).enabled,
@@ -105,7 +105,7 @@ function Q(e) {
                     (0, r.jsx)(P.Z, {
                         className: s()(B.rewardTileAsset, { [B.rewardTileAssetLoading]: j || b }),
                         quest: n,
-                        questContent: N.jn.QUEST_BAR_V2,
+                        questContent: T.jn.QUEST_BAR_V2,
                         location: L.dr.REWARD_CODE_MODAL,
                         sourceQuestContent: l,
                     }),
@@ -138,11 +138,11 @@ function Q(e) {
     });
 }
 function z(e) {
-    let t = (0, i.e7)([T.Z], () => T.Z.getQuest(e.questId));
+    let t = (0, i.e7)([_.Z], () => _.Z.getQuest(e.questId));
     return (null == t && null != e.previewQuest && (t = e.previewQuest), null != t)
         ? (0, r.jsx)(k.A, {
               questOrQuests: t,
-              questContent: N.jn.REWARD_MODAL,
+              questContent: T.jn.REWARD_MODAL,
               sourceQuestContent: e.sourceQuestContent,
               children: (n) => {
                   var a, o;
@@ -207,7 +207,7 @@ function H(e) {
             questContentPosition: d,
             impressionRef: C,
             preview: S,
-            sourceQuestContent: I,
+            sourceQuestContent: N,
         } = e,
         k = (0, f.Z)(() => {
             var e;
@@ -225,10 +225,10 @@ function H(e) {
             questStoreRewardCode: J,
             isFetchingRewardCode: X,
             isClaimingReward: K,
-        } = (0, i.cj)([T.Z], () => ({
-            questStoreRewardCode: T.Z.getRewardCode(s.id),
-            isFetchingRewardCode: T.Z.isFetchingRewardCode(s.id),
-            isClaimingReward: T.Z.isClaimingReward(s.id),
+        } = (0, i.cj)([_.Z], () => ({
+            questStoreRewardCode: _.Z.getRewardCode(s.id),
+            isFetchingRewardCode: _.Z.isFetchingRewardCode(s.id),
+            isClaimingReward: _.Z.isClaimingReward(s.id),
         })),
         ee = (0, A.O5)(),
         et = (0, D.oo)({ quest: s }),
@@ -293,7 +293,7 @@ function H(e) {
                         ? q.intl.format(q.t.m0btAb, {})
                         : q.intl.format(q.t["ZUA/Ui"], { rewardName: (0, D.w8)(t.config) }),
                 });
-            let l = (0, R.C1)({
+            let l = (0, I.C1)({
                 quest: t,
                 rewardCode: o,
                 selectedPlatformType: n,
@@ -338,15 +338,15 @@ function H(e) {
             renderLeading: (e) =>
                 (function (e) {
                     switch (e) {
-                        case N.y$.CROSS_PLATFORM:
+                        case T.y$.CROSS_PLATFORM:
                             return (0, r.jsx)(p.Che, { className: B.platformSelectionOptionIcon });
-                        case N.y$.PC:
+                        case T.y$.PC:
                             return (0, r.jsx)(p.pzj, { className: B.platformSelectionOptionIcon });
-                        case N.y$.PLAYSTATION:
+                        case T.y$.PLAYSTATION:
                             return (0, r.jsx)(p.Tsp, { className: B.platformSelectionOptionIcon });
-                        case N.y$.SWITCH:
+                        case T.y$.SWITCH:
                             return (0, r.jsx)(p.aPH, { className: B.platformSelectionOptionIcon });
-                        case N.y$.XBOX:
+                        case T.y$.XBOX:
                             return (0, r.jsx)(p.Mko, { className: B.platformSelectionOptionIcon });
                     }
                 })(e.value),
@@ -368,7 +368,7 @@ function H(e) {
                               questContent: c,
                               questContentPosition: d,
                               questContentCTA: A.jZ.COPY_REWARD_CODE,
-                              sourceQuestContent: I,
+                              sourceQuestContent: N,
                           });
                   },
               }),
@@ -413,7 +413,7 @@ function H(e) {
             requiresPlatformSelection: er,
             selectedPlatformType: H,
             redemptionLink: ey,
-            sourceQuestContent: I,
+            sourceQuestContent: N,
         }),
         eb = er && K,
         ej = !eb && ((er && null == H) || ef),
@@ -426,7 +426,7 @@ function H(e) {
           : ev && (ex = q.intl.string(q.t["+zx47d"]));
     let eO = !G && null != en && !k && !ei,
         eS = null != eg && et,
-        eA = (0, _.Gd)(s.id);
+        eA = (0, R.Gd)(s.id);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(l.O_, {
@@ -460,7 +460,7 @@ function H(e) {
                                             quest: s,
                                             rewardCode: en,
                                             hasTieredRewardCodes: et,
-                                            sourceQuestContent: I,
+                                            sourceQuestContent: N,
                                         }),
                                     }),
                                 (0, r.jsxs)("div", {

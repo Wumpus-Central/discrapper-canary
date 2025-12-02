@@ -22,7 +22,7 @@ function f() {
                   d.intl.string(d.t.XkeW9N),
                   (0, r.jsx)(a.NoS, {
                       onClick: () => {
-                          (0, s.v3)(), t(u.L.TAKE_ACTION);
+                          (0, s.v)(), t(u.L.TAKE_ACTION);
                       },
                       noticeType: c.kVF.IGNORE_USER_FEEDBACK_NAGBAR,
                       children: d.intl.string(d.t.vcdNKv),

@@ -3,14 +3,14 @@ var r = n(54381),
     s = n(120356),
     o = n.n(s),
     a = n(481060),
-    i = n(313481),
-    l = n(49436),
+    i = n(49436),
+    l = n(968843),
     c = n(698716),
     d = n(388032),
     u = n(319889);
 function p(e) {
     let { quest: t, onCtxMenuOpen: n, onCtxMenuClose: s, onCtxMenuSelect: p } = e,
-        m = (0, i.B6)(t.config.expiresAt);
+        m = (0, l.B6)(t.config.expiresAt);
     return (0, r.jsxs)("div", {
         className: u.questAcceptedHeader,
         children: [
@@ -23,11 +23,11 @@ function p(e) {
                 onOpen: n,
                 onClose: s,
                 onSelect: p,
-                questContent: l.jn.QUEST_BAR_V2,
+                questContent: i.jn.QUEST_BAR_V2,
                 quest: t,
                 shouldShowDisclosure: !1,
                 showShareLink: !0,
-                sourceQuestContent: l.jn.QUEST_BAR_V2,
+                sourceQuestContent: i.jn.QUEST_BAR_V2,
                 children: (e) => {
                     var t, n;
                     return (0, r.jsx)(

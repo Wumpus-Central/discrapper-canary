@@ -17,8 +17,8 @@ var r = n(54381),
     b = n(362762),
     E = n(335131),
     O = n(252618),
-    y = n(70097),
-    v = n(266454),
+    v = n(70097),
+    y = n(266454),
     I = n(632285),
     C = n(979233),
     S = n(17845),
@@ -36,12 +36,12 @@ var r = n(54381),
     M = n(63063),
     k = n(624138),
     U = n(617136),
-    G = n(313481),
-    B = n(892046),
-    H = n(49436),
-    V = n(283833),
-    F = n(937797),
-    z = n(36243),
+    G = n(892046),
+    B = n(49436),
+    H = n(283833),
+    V = n(937797),
+    F = n(36243),
+    z = n(968843),
     Y = n(877109),
     W = n(110560),
     q = n(150560),
@@ -108,7 +108,7 @@ function e_(e) {
         n)
     ) {
         let e = (0, D.rO)();
-        return (0, r.jsx)(y.Z, {
+        return (0, r.jsx)(v.Z, {
             ref: (e) => {
                 (d.current = e), (o.current = e);
             },
@@ -158,10 +158,10 @@ function eb(e) {
 function eE(e) {
     let { renderBanner: t, children: n, header: l, withQuestsGrid: s = !0 } = e,
         { isInDiscoverQuestHomeTab: o, onScroll: c, onSelectTab: u, scrollerRef: d, selectedTab: p } = i.useContext(em),
-        f = (0, B._)({ location: er.dr.QUEST_HOME_DESKTOP }) ? J.Z : J.j,
-        { takeover: h, isLoading: g } = (0, G.Ut)(),
+        f = (0, G._)({ location: er.dr.QUEST_HOME_DESKTOP }) ? J.Z : J.j,
+        { takeover: h, isLoading: g } = (0, z.Ut)(),
         { enabled: m } = (0, Z.WX)({ location: er.dr.QUEST_HOME_DESKTOP }),
-        { enabled: _ } = F.n0.useConfig({ location: er.dr.QUEST_HOME_DESKTOP }),
+        { enabled: _ } = V.n0.useConfig({ location: er.dr.QUEST_HOME_DESKTOP }),
         b = i.useRef(null),
         E = i.useCallback(() => {
             var e;
@@ -177,7 +177,7 @@ function eE(e) {
                 children: [
                     (function () {
                         if (!o && _) {
-                            if (p !== G.e5.ALL) return null;
+                            if (p !== z.e5.ALL) return null;
                             if (g) return (0, r.jsx)(et.o, {});
                             if (null != h)
                                 return (0, r.jsx)(et.Z, {
@@ -189,13 +189,13 @@ function eE(e) {
                     })(),
                     (0, r.jsx)(T.Z, {
                         children: (0, r.jsxs)("div", {
-                            className: a()(eo.content, { [eo.contentWithExtraPadding]: _ && !m && p !== G.e5.ALL }),
+                            className: a()(eo.content, { [eo.contentWithExtraPadding]: _ && !m && p !== z.e5.ALL }),
                             children: [
                                 n,
                                 s
-                                    ? p === G.e5.CLAIMED
+                                    ? p === z.e5.CLAIMED
                                         ? (0, r.jsx)(f, { onSelectTab: u })
-                                        : p === G.e5.PREVIEW_TOOL
+                                        : p === z.e5.PREVIEW_TOOL
                                           ? (0, r.jsx)(Y.Z, {})
                                           : (0, r.jsx)(Q.Z, { ref: b })
                                     : null,
@@ -215,17 +215,17 @@ let eO = function (e) {
             var e;
             return (null == (e = (0, s.LX)(n.pathname, ei.Z5c.QUEST_HOME)) ? void 0 : e.isExact) === !0;
         }, [n.pathname]),
-        y = (0, u.e7)([b.Z], () => b.Z.getState("quests")),
+        v = (0, u.e7)([b.Z], () => b.Z.getState("quests")),
         { selectedTab: T, onSelectTab: x, tabs: L } = (0, en.z)({ withClaimedQuestsTab: !h });
     i.useLayoutEffect(() => {
-        h && T === G.e5.CLAIMED && V.Z.setState({ tab: G.e5.ALL });
+        h && T === z.e5.CLAIMED && H.Z.setState({ tab: z.e5.ALL });
     }, [h, T]);
-    let { onScroll: D, scrollPosition: B } = (0, C.M)(),
-        F = q.Z.getState().getUtmCurrentContext(),
+    let { onScroll: D, scrollPosition: G } = (0, C.M)(),
+        V = q.Z.getState().getUtmCurrentContext(),
         Y = (0, X.z)((e) => e.registerAssetLoad),
-        K = i.useRef(F);
+        K = i.useRef(V);
     i.useEffect(() => {
-        K.current = F;
+        K.current = V;
     }),
         i.useEffect(() => {
             let { current: e } = K;
@@ -268,13 +268,13 @@ let eO = function (e) {
         i.useEffect(() => {
             I.C.trigger();
         }, []);
-    let ed = (0, z.T)({ location: er.dr.QUEST_PREVIEW_TOOL_2 });
+    let ed = (0, F.T)({ location: er.dr.QUEST_PREVIEW_TOOL_2 });
     i.useEffect(() => {
-        if (null != y) return;
+        if (null != v) return;
         let e = new URLSearchParams(n.search),
-            r = e.get(G.tR.TAB);
-        if (ed && r === G.e5.PREVIEW_TOOL) {
-            let t = e.get(G.tR.QUEST_ID);
+            r = e.get(z.tR.TAB);
+        if (ed && r === z.e5.PREVIEW_TOOL) {
+            let t = e.get(z.tR.QUEST_ID);
             _.Z.openNativeAppModal("quests", ei.Etm.DEEP_LINK, {
                 type: ea.jE.QUEST_PREVIEW_TOOL,
                 params: {
@@ -285,10 +285,10 @@ let eO = function (e) {
             return;
         }
         let i = performance.getEntriesByType("navigation")[0];
-        if ("POP" === l.action && (null == i ? void 0 : i.type) === "navigate" && t && r !== G.e5.PREVIEW_TOOL) {
+        if ("POP" === l.action && (null == i ? void 0 : i.type) === "navigate" && t && r !== z.e5.PREVIEW_TOOL) {
             let t = (0, k.Ew)(n.hash) ? null : n.hash.substring(1),
-                r = e.get(G.tR.SORT),
-                i = e.get(G.tR.FILTER);
+                r = e.get(z.tR.SORT),
+                i = e.get(z.tR.FILTER);
             _.Z.openNativeAppModal("quests", ei.Etm.DEEP_LINK, {
                 type: ea.jE.QUEST_HOME,
                 params: {
@@ -298,12 +298,12 @@ let eO = function (e) {
                 },
             });
         }
-    }, [n.search, y, ed, l.action, n.hash, t]),
+    }, [n.search, v, ed, l.action, n.hash, t]),
         i.useEffect(() => {
-            t && (0, v.Q3)(d.z.QUEST_HOME_ENTRYPOINT_ONBOARDING);
+            t && (0, y.Q3)(d.z.QUEST_HOME_ENTRYPOINT_ONBOARDING);
         }, [t]);
     let ep = i.useCallback(() => {
-            (0, W.navigateToQuestHome)({ fromContent: H.jn.QUEST_HOME_MOVE_CALLOUT_DISCOVER }),
+            (0, W.navigateToQuestHome)({ fromContent: B.jn.QUEST_HOME_MOVE_CALLOUT_DISCOVER }),
                 R.default.track(
                     ei.rMx.QUEST_CONTENT_CLICKED,
                     eg(
@@ -312,7 +312,7 @@ let eO = function (e) {
                             click_id: (0, o.Z)(),
                             is_targeted: !1,
                         },
-                        (0, U.mH)(H.jn.QUEST_HOME_MOVE_CALLOUT_DISCOVER),
+                        (0, U.mH)(B.jn.QUEST_HOME_MOVE_CALLOUT_DISCOVER),
                     ),
                 );
         }, []),
@@ -401,7 +401,7 @@ let eO = function (e) {
                     : Q
                       ? (0, r.jsx)(eE, {
                             renderBanner: () =>
-                                T !== G.e5.PREVIEW_TOOL &&
+                                T !== z.e5.PREVIEW_TOOL &&
                                 (0, r.jsxs)(S.Z, {
                                     title: ee,
                                     description: et,
@@ -465,7 +465,7 @@ let eO = function (e) {
                                 variant: j._6.OVERLAY,
                                 children: [
                                     (0, r.jsx)("div", { className: eo.dragRegion }),
-                                    (0, r.jsx)(j.z6, { scrollPosition: B }),
+                                    (0, r.jsx)(j.z6, { scrollPosition: G }),
                                     (0, r.jsx)(j.aV, { icon: p.qDn }),
                                 ],
                             }),

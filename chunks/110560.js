@@ -15,7 +15,7 @@ n.r(t),
         openQuestOrbsRewardModal: () => F,
         openQuestsNitroRewardModal: () => Z,
         openQuestsRewardCodeModal: () => G,
-        openVideoQuestModal: () => Q,
+        openVideoQuestModal: () => X,
     });
 var r = n(54381);
 n(473749);
@@ -266,7 +266,7 @@ function z(e) {
 function q() {
     return Promise.all([n.e("13193"), n.e("75909"), n.e("38746")]).then(n.bind(n, 215113));
 }
-function Q(e) {
+function X(e) {
     var t;
     let {
         quest: n,
@@ -328,7 +328,7 @@ function Q(e) {
         },
     );
 }
-function X(e) {
+function Q(e) {
     var t;
     let n = null == (t = platform.os) ? void 0 : t.family,
         r = "quest";
@@ -345,7 +345,7 @@ function X(e) {
     return "discord://";
 }
 function J(e) {
-    let t = X(e),
+    let t = Q(e),
         n = (0, a.zS)(t);
     null != n &&
         _.default.track(R.rMx.DEEP_LINK_CLICKED, {
@@ -399,7 +399,7 @@ function ee(e) {
 }
 function et(e) {
     (0, s.ZDy)(async () => {
-        let { default: t } = await Promise.all([n.e("75942"), n.e("53145")]).then(n.bind(n, 627080));
+        let { default: t } = await Promise.all([n.e("1216"), n.e("53145")]).then(n.bind(n, 627080));
         return (n) =>
             (0, r.jsx)(
                 t,
@@ -420,7 +420,7 @@ async function en(e, t) {
     });
     switch (n) {
         case h.wF.SUCCESS:
-            Q({
+            X({
                 quest: e,
                 questContent: t.questContent,
                 sourceQuestContent: t.sourceQuestContent,

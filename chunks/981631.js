@@ -4860,7 +4860,6 @@ var np = (function (e) {
             (e.IAR_SETTINGS_UPSELLS_ACTION = "iar_settings_upsells_action"),
             (e.IAR_DEAUTHORIZE_APP_BUTTON_CLICKED = "iar_deauthorize_app_button_clicked"),
             (e.IAR_REMOVE_APP_BUTTON_CLICKED = "iar_remove_app_button_clicked"),
-            (e.DM_MUTE_FEEDBACK_SUBMITTED = "dm_mute_feedback_submitted"),
             (e.BLOCK_USER_FEEDBACK_SUBMITTED = "block_user_feedback_submitted"),
             (e.IGNORE_USER_FEEDBACK_SUBMITTED = "ignore_user_feedback_submitted"),
             (e.AGE_VERIFICATION_FEEDBACK_SUBMITTED = "age_verification_feedback_submitted"),

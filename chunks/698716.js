@@ -12,11 +12,11 @@ var r = n(54381),
     p = n(22095),
     _ = n(617136),
     m = n(915750),
-    h = n(313481),
-    g = n(616022),
-    E = n(49436),
-    b = n(509212),
-    y = n(36243),
+    h = n(616022),
+    g = n(49436),
+    E = n(509212),
+    b = n(36243),
+    y = n(968843),
     O = n(659302),
     v = n(110560),
     S = n(324805),
@@ -98,26 +98,26 @@ function D(e, t) {
 }
 function x(e) {
     var t;
-    let n = (0, a.e7)([g.Z], () => g.Z.questDeliveryOverride, []),
-        u = (0, b.GN)(e.questContent),
-        C = [E.jn.QUEST_BAR_V2, E.jn.QUEST_BAR].includes(e.questContent),
+    let n = (0, a.e7)([h.Z], () => h.Z.questDeliveryOverride, []),
+        u = (0, E.GN)(e.questContent),
+        C = [g.jn.QUEST_BAR_V2, g.jn.QUEST_BAR].includes(e.questContent),
         N = (0, _.O5)(),
         P = (0, m.aM)(),
-        R = (0, b.V_)(e.quest),
-        w = !0 === e.showShareLink && (0, b.vB)(e.quest.config),
+        R = (0, E.V_)(e.quest),
+        w = !0 === e.showShareLink && (0, E.vB)(e.quest.config),
         {
             handleComplete: D,
             handleProgress: x,
             handleResetDismissibilityClick: L,
             handleResetStatusClick: j,
             handleOverrideDeliveryClick: M,
-        } = (0, h.kJ)(e.quest.id),
+        } = (0, y.kJ)(e.quest.id),
         k = () => {
             x(0.9 * Math.random() + 0.03);
         },
         U = i.useCallback(() => {
             if (e.quest.id === S.V6) return void window.open(f.Z.getArticleURL(I.BhN.VIRTUAL_CURRENCY_LEARN_MORE));
-            (0, b.nc)(e.quest, {
+            (0, E.nc)(e.quest, {
                 content: e.questContent,
                 ctaContent: _.jZ.CONTEXT_MENU_OPEN_GAME_LINK,
                 impressionId: P,
@@ -171,7 +171,7 @@ function x(e) {
                 questContentCTA: _.jZ.CONTEXT_MENU_HIDE_CONTENT,
                 sourceQuestContent: e.sourceQuestContent,
             }),
-                (0, b.GN)(e.questContent) &&
+                (0, E.GN)(e.questContent) &&
                     ((0, p.gl)(e.quest.id, e.questContent), C && (0, v.maybeShowSurveyForQuest)(e.quest));
         },
         H = (e) => (0, o.showToast)((0, o.createToast)(new l.Z(e, e.status).message, o.ToastType.FAILURE)),
@@ -180,7 +180,7 @@ function x(e) {
         K = () => {
             j(), W();
         },
-        z = (0, h.m4)(e.quest),
+        z = (0, y.m4)(e.quest),
         q = i.useMemo(
             () =>
                 (0, r.jsx)(o.S89, {
@@ -191,10 +191,10 @@ function x(e) {
                 }),
             [M, e.quest.id, null == n ? void 0 : n.id],
         ),
-        Q = i.useCallback(() => {
+        X = i.useCallback(() => {
             (0, c.uL)(I.Z5c.QUEST_PREVIEW_TOOL_2(e.quest.id));
         }, [e.quest.id]),
-        X = e.shouldShowDisclosure && e.quest.id !== S.V6;
+        Q = e.shouldShowDisclosure && e.quest.id !== S.V6;
     return (0, r.jsxs)(o.v2r, {
         variant: "fixed",
         onSelect: F,
@@ -235,7 +235,7 @@ function x(e) {
                                 action: B,
                                 icon: o.qDn,
                             }),
-                        X &&
+                        Q &&
                             (0, r.jsx)(o.sNh, {
                                 id: "display-disclosure",
                                 label: A.intl.string(A.t.GcsZKJ),
@@ -278,7 +278,7 @@ function x(e) {
                                 label: A.intl.string(A.t.jQEfRT),
                                 action: D,
                             }),
-                            (0, b.$J)(e.quest) &&
+                            (0, E.$J)(e.quest) &&
                                 (0, r.jsxs)(o.sNh, {
                                     id: "console",
                                     label: "Console Heartbeat",
@@ -286,7 +286,7 @@ function x(e) {
                                         (0, r.jsx)(o.sNh, {
                                             disabled: !0,
                                             id: "status",
-                                            label: "Status: ".concat((0, b.Bz)(e.quest) ? "alive" : "dead"),
+                                            label: "Status: ".concat((0, E.Bz)(e.quest) ? "alive" : "dead"),
                                         }),
                                         (0, r.jsx)(o.sNh, {
                                             id: "start",
@@ -307,11 +307,11 @@ function x(e) {
                                     (0, d.JG)(e.quest.id);
                                 },
                             }),
-                            (0, y.T)({ location: S.dr.QUEST_PREVIEW_TOOL_2 }) &&
+                            (0, b.T)({ location: S.dr.QUEST_PREVIEW_TOOL_2 }) &&
                                 (0, r.jsx)(o.sNh, {
                                     id: "preview",
                                     label: A.intl.string(A.t.tx5Ax5),
-                                    action: Q,
+                                    action: X,
                                 }),
                         ],
                     },

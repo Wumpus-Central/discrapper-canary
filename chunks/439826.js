@@ -3,7 +3,7 @@ var r = n(54381),
     s = n(473749),
     o = n(120356),
     a = n.n(o),
-    i = n(666917),
+    i = n(205120),
     l = n(28664),
     c = n(780384),
     d = n(481060),
@@ -11,10 +11,10 @@ var r = n(54381),
     p = n(410030),
     m = n(22095),
     g = n(617136),
-    f = n(313481),
-    h = n(49436),
-    x = n(509212),
-    _ = n(111131),
+    f = n(49436),
+    h = n(509212),
+    x = n(111131),
+    _ = n(968843),
     b = n(623249),
     j = n(477005),
     v = n(698716),
@@ -32,10 +32,10 @@ function R(e) {
     let { quest: n, errorHints: o, warningHints: a, isDarkTheme: l, sourceQuestContent: c } = e,
         { ref: p, height: m = 0 } = (0, u.ZP)([o]),
         g = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
-        h = (0, f.z)(n),
-        { type: x, hints: _ } = s.useMemo(
+        f = (0, _.z)(n),
+        { type: h, hints: x } = s.useMemo(
             () =>
-                g || h
+                g || f
                     ? {
                           type: 2,
                           hints: [],
@@ -54,17 +54,17 @@ function R(e) {
                               type: 2,
                               hints: [],
                           },
-            [o, g, h, a],
+            [o, g, f, a],
         ),
-        j = 2 !== x,
+        j = 2 !== h,
         v = (0, d.q_F)({
             opacity: +!!j,
             height: j ? m : 0,
             config: T.Y,
         }),
-        C = 0 === x ? d.Mgn : d.d3s,
+        C = 0 === h ? d.Mgn : d.d3s,
         y = d.TVs.unsafe_rawColors.RED_345.css,
-        E = 0 === x ? y : l ? d.TVs.colors.TEXT_DEFAULT : d.TVs.colors.WHITE;
+        E = 0 === h ? y : l ? d.TVs.colors.TEXT_DEFAULT : d.TVs.colors.WHITE;
     return (0, r.jsx)(i.animated.div, {
         style: v,
         children: (0, r.jsxs)("div", {
@@ -81,11 +81,11 @@ function R(e) {
                         (0, r.jsx)(d.Text, {
                             variant: "text-xs/medium",
                             color: l ? "text-muted" : "always-white",
-                            children: _.at(0),
+                            children: x.at(0),
                         }),
                     ],
                 }),
-                0 === x &&
+                0 === h &&
                     (0, r.jsx)(d.Avr, {
                         text: P.intl.string(P.t["yKJi+/"]),
                         onClick: () =>
@@ -114,12 +114,12 @@ function A(e) {
             onCtxMenuSelect: q,
             sourceQuestContent: L,
         } = e,
-        Q = (0, x.PB)(b),
+        Q = (0, h.PB)(b),
         V = (0, p.ZP)(),
         M = ((0, c.wj)(V) ? w.BRd.DARK : w.BRd.LIGHT) === w.BRd.DARK,
-        Z = (0, f.tP)(b),
+        Z = (0, _.tP)(b),
         W = (null == (t = b.userStatus) ? void 0 : t.claimedAt) != null,
-        H = (0, f.B6)(b.config.expiresAt, {
+        H = (0, _.B6)(b.config.expiresAt, {
             month: "numeric",
             day: "numeric",
         }),
@@ -128,28 +128,28 @@ function A(e) {
         { onAssetLoadComplete: z } = s.useContext(E.k),
         G = s.useCallback(async () => {
             Q &&
-                ((0, x.zi)(b) || U
+                ((0, h.zi)(b) || U
                     ? (0, y.openVideoQuestModal)({
                           quest: b,
-                          questContent: h.jn.QUEST_HOME_DESKTOP,
+                          questContent: f.jn.QUEST_HOME_DESKTOP,
                           sourceQuestContent: L,
                           sourceQuestContentCTA: g.jZ.QUEST_HOME_TILE_HEADER_WATCH_VIDEO,
                       })
-                    : (0, _.R)(S.dr.QUEST_HOME_DESKTOP)
+                    : (0, x.R)(S.dr.QUEST_HOME_DESKTOP)
                       ? await (0, y.enrollAndStartVideoQuestWithErrorHandling)(b, {
-                            questContent: h.jn.QUEST_HOME_DESKTOP,
+                            questContent: f.jn.QUEST_HOME_DESKTOP,
                             questContentCTA: g.jZ.ACCEPT_QUEST,
                             sourceQuestContent: L,
                             sourceQuestContentCTA: g.jZ.QUEST_HOME_TILE_HEADER_WATCH_VIDEO,
                         })
                       : ((0, m.AH)(b.id, {
-                            questContent: h.jn.QUEST_HOME_DESKTOP,
+                            questContent: f.jn.QUEST_HOME_DESKTOP,
                             questContentCTA: g.jZ.ACCEPT_QUEST,
                             sourceQuestContent: L,
                         }),
                         (0, y.openVideoQuestModal)({
                             quest: b,
-                            questContent: h.jn.QUEST_HOME_DESKTOP,
+                            questContent: f.jn.QUEST_HOME_DESKTOP,
                             sourceQuestContent: L,
                             sourceQuestContentCTA: g.jZ.QUEST_HOME_TILE_HEADER_WATCH_VIDEO,
                         })));
@@ -203,7 +203,7 @@ function A(e) {
                                                 ? P.intl.string(P.t.YsCuyF)
                                                 : U
                                                   ? P.intl.string(P.t["74KqrR"])
-                                                  : (0, x.zi)(b)
+                                                  : (0, h.zi)(b)
                                                     ? P.intl.string(P.t.I6JG46)
                                                     : P.intl.string(P.t.umdNin),
                                             asContainer: !0,
@@ -222,7 +222,7 @@ function A(e) {
                                         onOpen: D,
                                         onClose: I,
                                         onSelect: q,
-                                        questContent: h.jn.QUEST_HOME_DESKTOP,
+                                        questContent: f.jn.QUEST_HOME_DESKTOP,
                                         quest: b,
                                         hideLearnMore: !0,
                                         shouldShowDisclosure: !0,

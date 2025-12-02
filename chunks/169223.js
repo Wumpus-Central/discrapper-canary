@@ -77,7 +77,6 @@ class S extends h.Z {
                 VIDEO_BACKGROUND_SHOW_FEEDBACK: (e) => this.handleVideoBackgroundShowFeedback(e),
                 EMBEDDED_ACTIVITY_CLOSE: (e) => this.handleActivityClose(e),
                 IN_APP_REPORTS_SHOW_FEEDBACK: (e) => this.handleInAppReportsFeedback(e),
-                USER_DM_MUTE_SHOW_FEEDBACK: (e) => this.handleUserDmMuteFeedback(e),
                 BLOCK_USER_SHOW_FEEDBACK: () => this.handleBlockUserFeedback(),
                 AGE_VERIFICATION_SHOW_FEEDBACK: (e) => this.handleAgeVerificationFeedback(e),
             }),
@@ -203,15 +202,6 @@ class S extends h.Z {
                                     reportType: i,
                                 }),
                             );
-                    });
-                });
-            }),
-            b(this, "handleUserDmMuteFeedback", (e) => {
-                let { channel: t } = e;
-                this.possiblyShowFeedbackModal(g.nw.USER_DM_MUTE, () => {
-                    (0, a.ZDy)(async () => {
-                        let { default: e } = await n.e("10620").then(n.bind(n, 408561));
-                        return (n) => (0, r.jsx)(e, v(y({}, n), { channel: t }));
                     });
                 });
             }),

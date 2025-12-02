@@ -15,10 +15,10 @@ var r = n(54381),
     m = n(594174),
     _ = n(626135),
     b = n(617136),
-    E = n(313481),
-    O = n(49436),
-    y = n(475595),
-    v = n(352084),
+    E = n(49436),
+    O = n(968843),
+    v = n(475595),
+    y = n(352084),
     I = n(125011),
     C = n(685613),
     S = n(981631),
@@ -36,7 +36,7 @@ let j = (0, i.memo)(function (e) {
         B = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
         { ref: H, height: V = 0 } = (0, p.ZP)(),
         F = (0, f.ZP)(),
-        z = (0, E.B6)(null == (t = A.userStatus) ? void 0 : t.claimedAt, {
+        z = (0, O.B6)(null == (t = A.userStatus) ? void 0 : t.claimedAt, {
             month: "numeric",
             day: "numeric",
         }),
@@ -57,9 +57,9 @@ let j = (0, i.memo)(function (e) {
     });
     let $ = (0, u.wj)(F),
         ee = (0, i.useMemo)(() => null != A.config.cosponsorMetadata, [A]),
-        et = (0, i.useMemo)(() => (0, y.fh)(A, y.eC.REWARD), [A]),
+        et = (0, i.useMemo)(() => (0, v.fh)(A, v.eC.REWARD), [A]),
         en = Z ? V + 8 : 0,
-        er = (0, b.mH)(O.jn.TROPHY_CASE_CARD),
+        er = (0, b.mH)(E.jn.TROPHY_CASE_CARD),
         { content_position: ei, row_index: el } = er,
         ea = (function (e, t) {
             if (null == e) return {};
@@ -151,7 +151,7 @@ let j = (0, i.memo)(function (e) {
                               }),
                           }),
                       q
-                          ? (0, r.jsx)(v.Z, { className: N.image })
+                          ? (0, r.jsx)(y.Z, { className: N.image })
                           : Q
                             ? (0, r.jsx)(I.Z, {
                                   className: N.image,

@@ -15,10 +15,10 @@ var r = n(54381),
     h = n(572004),
     j = n(624138),
     x = n(617136),
-    y = n(313481),
-    g = n(616022),
-    v = n(49436),
-    b = n(373370),
+    y = n(616022),
+    g = n(49436),
+    v = n(373370),
+    b = n(968843),
     _ = n(804127),
     w = n(115179),
     O = n(602667),
@@ -65,7 +65,7 @@ function R(e) {
         } = e,
         h =
             null !=
-            (t = (0, b.C1)({
+            (t = (0, v.C1)({
                 quest: n,
                 rewardCode: u,
                 selectedPlatformType: d,
@@ -190,19 +190,19 @@ function Z(e) {
             sourceQuestContent: C,
             questContentPosition: f,
         } = e,
-        h = null != (t = (0, y.B4)(n.id)) ? t : n,
+        h = null != (t = (0, b.B4)(n.id)) ? t : n,
         j = (0, w.zG)(h.config),
-        x = v.jn.REWARD_MODAL,
+        x = g.jn.REWARD_MODAL,
         {
-            questStoreRewardCode: b,
+            questStoreRewardCode: v,
             isFetchingRewardCode: N,
             isClaimingReward: A,
-        } = (0, o.cj)([g.Z], () => ({
-            questStoreRewardCode: g.Z.getRewardCode(h.id),
-            isFetchingRewardCode: g.Z.isFetchingRewardCode(h.id),
-            isClaimingReward: g.Z.isClaimingReward(h.id),
+        } = (0, o.cj)([y.Z], () => ({
+            questStoreRewardCode: y.Z.getRewardCode(h.id),
+            isFetchingRewardCode: y.Z.isFetchingRewardCode(h.id),
+            isClaimingReward: y.Z.isClaimingReward(h.id),
         })),
-        I = !0 === c ? (0, p.b)(h) : b,
+        I = !0 === c ? (0, p.b)(h) : v,
         { hasError: D, setHasError: Z } = (0, _.uL)({
             isClaimingReward: A,
             isFetchingRewardCode: N,

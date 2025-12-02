@@ -81,7 +81,6 @@ let d = [
         r.LX.VOICE_FILTER,
         r.LX.VOICE,
         r.LX.IN_APP_REPORTS,
-        r.LX.USER_DM_MUTE,
         r.LX.BLOCK_USER,
         r.LX.SEARCH_RESULTS,
         r.LX.AGE_VERIFICATION,

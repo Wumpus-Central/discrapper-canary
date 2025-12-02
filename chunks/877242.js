@@ -9,8 +9,8 @@ var r = n(54381),
     u = n(624138),
     d = n(617136),
     m = n(915750),
-    f = n(313481),
-    p = n(49436),
+    f = n(49436),
+    p = n(968843),
     v = n(215113),
     E = n(684245),
     g = n(388032),
@@ -18,7 +18,7 @@ var r = n(54381),
 function h() {
     let { quest: e, sourceQuestContent: t, isPortrait: n, onClose: l } = o.useContext(v.VideoQuestModalContext),
         h = (0, m.aM)(),
-        b = (0, f.tP)(e),
+        b = (0, p.tP)(e),
         C = o.useRef(null),
         { isHoveringOrFocusing: S } = (0, c.Z)(C),
         _ = (0, E.e)({
@@ -32,7 +32,7 @@ function h() {
     return (0, r.jsx)(a.u, {
         text: g.intl.string(g.t.EuHF34),
         children: (0, r.jsx)(s.P3F, {
-            onClick: () => _(p.jn.VIDEO_MODAL, d.jZ.OPEN_GAME_LINK),
+            onClick: () => _(f.jn.VIDEO_MODAL, d.jZ.OPEN_GAME_LINK),
             className: O.adInfoClickable,
             children: (0, r.jsxs)("div", {
                 className: i()(O.contentHeaderGameInfo, O.contentHeaderGameInfoHoverable, {

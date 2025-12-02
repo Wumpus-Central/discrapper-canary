@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(539854), n(388685);
+n.d(t, { Z: () => v }), n(539854), n(388685);
 var r = n(54381);
 n(473749);
 var i = n(287734),
@@ -8,9 +8,9 @@ var i = n(287734),
     o = n(503438),
     c = n(802856),
     u = n(420660),
-    d = n(313481),
-    p = n(49436),
-    f = n(509212),
+    d = n(49436),
+    p = n(509212),
+    f = n(968843),
     h = n(364833),
     g = n(81063),
     m = n(761282),
@@ -18,11 +18,11 @@ var i = n(287734),
     b = n(868854),
     E = n(817915),
     O = n(981631);
-function y(e) {
-    let { party: t, onChannelContextMenu: n, quest: y } = e,
-        v = (0, b.L)(),
+function v(e) {
+    let { party: t, onChannelContextMenu: n, quest: v } = e,
+        y = (0, b.L)(),
         { voiceChannels: I, currentActivities: C, partiedMembers: S, applicationStreams: T, guildContext: N } = t,
-        j = (0, d.z1)(y),
+        j = (0, f.z1)(v),
         P = [],
         x = (e) => {
             let { length: t } = P;
@@ -63,7 +63,7 @@ function y(e) {
         }
     return (
         T.length > 0 &&
-            v &&
+            y &&
             T.forEach((e) => {
                 let { stream: t, streamUser: n, activity: a } = e;
                 x(
@@ -83,7 +83,7 @@ function y(e) {
                 );
             }),
         C.forEach((e, t) => {
-            var n, i, l, d, m, b, v, T, P;
+            var n, i, l, f, m, b, y, T, P;
             let { activity: A, game: Z, playingMembers: w, activityUser: L } = e;
             if (null == A || null == A.type) return null;
             if (A.type === O.IIU.PLAYING)
@@ -129,7 +129,7 @@ function y(e) {
                               (0, r.jsx)(
                                   _.Z.XboxSection,
                                   { title: Z.name },
-                                  "xbox-".concat(null != (d = A.session_id) ? d : t),
+                                  "xbox-".concat(null != (f = A.session_id) ? f : t),
                               ),
                           )
                         : x(
@@ -175,7 +175,7 @@ function y(e) {
                                       getAssetImage: g.xF,
                                       members: w,
                                   },
-                                  "spotify-".concat(null != (v = A.session_id) ? v : t, "-").concat(L.id),
+                                  "spotify-".concat(null != (y = A.session_id) ? y : t, "-").concat(L.id),
                               ),
                           )
                         : (null != A.assets || (0, a.Z)(A)) &&
@@ -191,11 +191,11 @@ function y(e) {
                               ),
                           ));
             j &&
-                null != y &&
+                null != v &&
                 null != Z &&
-                (0, f._D)(A, y) &&
-                (null == y.userStatus || !(0, f.zE)(y.userStatus, p.jn.ACTIVITY_PANEL)) &&
-                x((0, r.jsx)(h.Z, { quest: y }, "quest-".concat(y.id, "-").concat(null != (P = A.session_id) ? P : t)));
+                (0, p._D)(A, v) &&
+                (null == v.userStatus || !(0, p.zE)(v.userStatus, d.jn.ACTIVITY_PANEL)) &&
+                x((0, r.jsx)(h.Z, { quest: v }, "quest-".concat(v.id, "-").concat(null != (P = A.session_id) ? P : t)));
         }),
         P.length > 0 ? (0, r.jsx)(_.Z.Body, { children: P }) : null
     );

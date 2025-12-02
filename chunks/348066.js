@@ -3,9 +3,9 @@ var r = n(54381),
     i = n(473749),
     a = n(670081),
     o = n(481060),
-    s = n(313481),
-    l = n(49436),
-    c = n(509212),
+    s = n(49436),
+    l = n(509212),
+    c = n(968843),
     u = n(867305),
     d = n(557843),
     f = n(10514),
@@ -17,11 +17,11 @@ function m(e) {
             quests: n,
             excludedQuests: m,
             isFetchingCurrentQuests: h,
-        } = (0, s.J2)({
+        } = (0, c.J2)({
             fetchPolicy: "cache-or-network",
             callerSource: "embed",
         }),
-        g = i.useMemo(() => (0, c._x)(t, n, m), [t, n, m]),
+        g = i.useMemo(() => (0, l._x)(t, n, m), [t, n, m]),
         E = i.useMemo(() => m.find((e) => e.id === t), [t, m]),
         b = i.useMemo(
             () => (null == g ? void 0 : g.config.features.includes(a.S.MOBILE_ONLY_QUEST_PUSH_TO_MOBILE)) === !0,
@@ -36,18 +36,18 @@ function m(e) {
                     questId: t,
                     reason: d.X.NOT_FOUND,
                 })
-          : (0, c.HJ)(g) && !b
+          : (0, l.HJ)(g) && !b
             ? (0, r.jsx)(d.W, {
                   questId: t,
                   reason: d.X.MOBILE_ONLY,
               })
-            : (0, c.vB)(g.config)
+            : (0, l.vB)(g.config)
               ? (0, r.jsx)(
                     p.X,
                     {
                         quest: g,
-                        location: l.jn.QUESTS_EMBED,
-                        sourceQuestContent: l.jn.QUESTS_EMBED,
+                        location: s.jn.QUESTS_EMBED,
+                        sourceQuestContent: s.jn.QUESTS_EMBED,
                     },
                     g.id,
                 )
