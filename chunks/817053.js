@@ -78,6 +78,7 @@ function g(e) {
                 ? e
                 : (0, r.jsx)(s.u, {
                       text: b,
+                      ariaHidden: !0,
                       children: e,
                   });
     return O(
