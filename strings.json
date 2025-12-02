@@ -11487,6 +11487,7 @@
   "FWkU6P": "Try using a different link to join this server.",
   "u9zxnX": "The invite link is invalid or has expired.",
   "mDFGFj": "Whoops...",
+  "5NHEPu": "{count, plural, =0 {With your friend !!{username}!!} =1 {With your friends !!{username}!! and !!{username2}!!} other {With !!{username}!! and  more friends} }",
   "afcl67": "Invite more friends",
   "VWqWZQ": "An adventure begins.",
   "0Lgb/K": "Let's add some friends!",
