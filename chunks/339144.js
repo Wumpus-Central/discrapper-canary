@@ -327,26 +327,30 @@ function M(e) {
     }, [t]);
     let [o, a] = (0, y.US)([s.z.GAME_SHOP_RTC_POPOVER], w.R.ACCOUNT_NAME_ZONE, !0),
         c = i.useCallback(() => {
+            (0, C.eagerNavigateToSocialLayerStorefront)({ guildId: n });
+        }, [n]),
+        d = i.useCallback(() => {
             (0, C.default)({ guildId: n }), a(w.L.USER_DISMISS);
         }, [n, a]),
-        d = i.useCallback(() => {
-            P.default.track(Z.rMx.RTC_GAME_SHOP_BUTTON_CLICKED, { application_id: t }), c();
-        }, [t, c]),
         f = i.useCallback(() => {
+            P.default.track(Z.rMx.RTC_GAME_SHOP_BUTTON_CLICKED, { application_id: t }), d();
+        }, [t, d]),
+        h = i.useCallback(() => {
             a(w.L.USER_DISMISS);
         }, [a]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(N.Z, {
                 tooltipText: T.intl.string(T.t.vyaWs7),
-                onClick: d,
+                onClick: f,
+                onMouseDown: c,
                 icon: u.EOn,
                 ref: l,
             }),
             o === s.z.GAME_SHOP_RTC_POPOVER
                 ? (0, r.jsx)(E.Z, {
-                      onActionClick: c,
-                      onRequestClose: f,
+                      onActionClick: d,
+                      onRequestClose: h,
                       targetElementRef: l,
                       position: "top",
                       align: "center",

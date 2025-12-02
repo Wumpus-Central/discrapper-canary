@@ -1,4 +1,4 @@
-n.d(t, { jM: () => L }), n(388685), n(539854), n(642613);
+n.d(t, { jM: () => W }), n(388685), n(539854), n(642613);
 var i = n(54381),
     l = n(473749),
     a = n(392711),
@@ -16,9 +16,9 @@ var i = n(54381),
     x = n(927699),
     v = n(96848),
     C = n(311821),
-    _ = n(251660),
-    j = n(321051),
-    b = n(19780),
+    b = n(251660),
+    _ = n(321051),
+    j = n(19780),
     I = n(594174),
     P = n(55563),
     w = n(937615),
@@ -33,8 +33,8 @@ var i = n(54381),
     G = n(474936),
     M = n(231338),
     A = n(388032),
-    W = n(397263);
-let L = {
+    L = n(397263);
+let W = {
     key: p.h8.GIFT_CUSTOMIZATION,
     renderStep: (e) =>
         (0, i.jsx)(
@@ -95,7 +95,7 @@ function R(e) {
             giftRecipient: S,
             emojiConfetti: T,
             soundEffect: O,
-            setEmojiConfetti: L,
+            setEmojiConfetti: W,
             setSoundEffect: R,
             giftingOrigin: H,
         } = (0, g.wD)(),
@@ -104,7 +104,7 @@ function R(e) {
         J = (function (e) {
             let t = (0, u.Z)({ location: "Slayer Storefront Gift Customization Step" }),
                 n = (function (e) {
-                    let t = (0, s.e7)([b.Z], () => (b.Z.isConnected() ? b.Z.getChannelId() : null)),
+                    let t = (0, s.e7)([j.Z], () => (j.Z.isConnected() ? j.Z.getChannelId() : null)),
                         [n, i] = l.useState([]);
                     return (
                         l.useEffect(() => {
@@ -135,30 +135,30 @@ function R(e) {
         children: [
             (0, i.jsx)(h.C3, {
                 children: (0, i.jsxs)("div", {
-                    className: W.stepBody,
+                    className: L.stepBody,
                     children: [
                         (0, i.jsxs)("div", {
-                            className: W.bodyColumnLeft,
+                            className: L.bodyColumnLeft,
                             children: [
                                 null != V &&
                                     (0, i.jsx)(k.p, {
-                                        containerClassName: W.skuCardImage,
+                                        containerClassName: L.skuCardImage,
                                         cardImage: V,
                                         cardBackgroundImage: z,
                                         altText: null != (t = null == q ? void 0 : q.name) ? t : "",
                                         shape: "square",
                                     }),
                                 (0, i.jsxs)("div", {
-                                    className: W.giftEffectsContainer,
+                                    className: L.giftEffectsContainer,
                                     children: [
-                                        (0, i.jsx)(j.Z, {
+                                        (0, i.jsx)(_.Z, {
                                             sound: O,
                                             onSelect: (e) => {
                                                 null != R && R(null == e ? void 0 : e);
                                             },
                                         }),
                                         (0, i.jsx)(v.Z, {
-                                            setEmojiConfetti: L,
+                                            setEmojiConfetti: W,
                                             emojiConfetti: null == T ? void 0 : T,
                                         }),
                                     ],
@@ -166,14 +166,14 @@ function R(e) {
                             ],
                         }),
                         (0, i.jsxs)("div", {
-                            className: W.bodyColumnRight,
+                            className: L.bodyColumnRight,
                             children: [
                                 null != S && (H === G.Wt.USER_PROFILE_WISHLIST || H === G.Wt.DM_CHANNEL_WISHLIST)
-                                    ? (0, i.jsx)(_.s, { giftRecipient: S })
+                                    ? (0, i.jsx)(b.s, { giftRecipient: S })
                                     : (0, i.jsx)(d.Z, {
                                           selectedSkuId: F,
                                           validateSelectedGift: X,
-                                          searchableSelectWrapperClassName: W.recipientPickerSelectWrapper,
+                                          searchableSelectWrapperClassName: L.recipientPickerSelectWrapper,
                                           recipients: J,
                                       }),
                                 (0, i.jsx)(x.Z, {
@@ -182,8 +182,8 @@ function R(e) {
                                     pendingText: p,
                                     currentText: p,
                                     disableThemedBackground: !0,
-                                    className: W.customGiftMessageWrapper,
-                                    innerClassName: W.customGiftMessage,
+                                    className: L.customGiftMessageWrapper,
+                                    innerClassName: L.customGiftMessage,
                                 }),
                                 (() => {
                                     var e, t, n, l;
@@ -193,22 +193,22 @@ function R(e) {
                                         null != (l = null == (t = q.price) ? void 0 : t.currency) ? l : M.pK.USD,
                                     );
                                     return (0, i.jsxs)("div", {
-                                        className: W.giftPreviewContainer,
+                                        className: L.giftPreviewContainer,
                                         children: [
                                             (0, i.jsx)(o.vwX, {
-                                                className: W.giftPreviewTitle,
+                                                className: L.giftPreviewTitle,
                                                 children: A.intl.string(A.t.PpoJzt),
                                             }),
                                             (0, i.jsxs)("div", {
-                                                className: W.giftPreviewContent,
+                                                className: L.giftPreviewContent,
                                                 children: [
                                                     (0, i.jsx)("div", {
-                                                        className: W.giftPreviewImageContainer,
+                                                        className: L.giftPreviewImageContainer,
                                                         children:
                                                             null != q &&
                                                             null != V &&
                                                             (0, i.jsx)(k.p, {
-                                                                containerClassName: W.giftPreviewCardContainer,
+                                                                containerClassName: L.giftPreviewCardContainer,
                                                                 cardImage: V,
                                                                 cardBackgroundImage: z,
                                                                 altText: q.name,
@@ -216,7 +216,7 @@ function R(e) {
                                                             }),
                                                     }),
                                                     (0, i.jsxs)("div", {
-                                                        className: W.giftPreviewTextContainer,
+                                                        className: L.giftPreviewTextContainer,
                                                         children: [
                                                             null != U && (0, i.jsx)(N.e, { application: U }),
                                                             (0, i.jsx)(o.Text, {
@@ -251,7 +251,7 @@ function R(e) {
                     "data-migration-pending": !0,
                     justify: f.Z.Justify.BETWEEN,
                     align: f.Z.Align.CENTER,
-                    className: W.footer,
+                    className: L.footer,
                     children: (0, i.jsx)(B, {
                         onStepChange: n,
                         onBackClick: a,
@@ -263,24 +263,29 @@ function R(e) {
     });
 }
 function D(e) {
-    let { handleClose: t, guild: n, sku: l } = e;
+    let { handleClose: t, guild: n, sku: a } = e,
+        r = l.useCallback(() => {
+            (0, T.eagerNavigateToSocialLayerStorefront)({ guildId: n.id });
+        }, [n.id]),
+        s = l.useCallback(() => {
+            var e;
+            t();
+            let i = null == (e = S.Z.getStorefrontState(n.id)) ? void 0 : e.activePage;
+            window.location.pathname.includes(O.Z5c.CHANNELS_GAME_SHOP(n.id, null != i ? i : 0, a.id)) ||
+                ((0, o.pTH)(),
+                (0, T.default)({
+                    guildId: n.id,
+                    pageIndex: null != i ? i : 0,
+                    skuId: a.id,
+                    slug: a.slug,
+                }));
+        }, [n.id, a.id, a.slug, t]);
     return (0, i.jsx)("div", {
-        className: W.viewItemButton,
+        className: L.viewItemButton,
         children: (0, i.jsx)(o.Avr, {
             text: n.id === (0, y.ac)() ? A.intl.string(A.t.nyIcya) : A.intl.string(A.t.ImioFL),
-            onClick: function () {
-                var e;
-                t();
-                let i = null == (e = S.Z.getStorefrontState(n.id)) ? void 0 : e.activePage;
-                window.location.pathname.includes(O.Z5c.CHANNELS_GAME_SHOP(n.id, null != i ? i : 0, l.id)) ||
-                    ((0, o.pTH)(),
-                    (0, T.default)({
-                        guildId: n.id,
-                        pageIndex: null != i ? i : 0,
-                        skuId: l.id,
-                        slug: l.slug,
-                    }));
-            },
+            onMouseDown: r,
+            onClick: s,
             textVariant: "text-sm/medium",
             lineClamp: void 0,
         }),

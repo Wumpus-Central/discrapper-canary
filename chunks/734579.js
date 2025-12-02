@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
@@ -13,34 +13,38 @@ var r = n(54381),
     p = n(703656),
     g = n(164670),
     m = n(210218),
-    b = n(445606),
-    _ = n(633667),
-    y = n(819640),
-    O = n(434479),
-    v = n(981631),
-    j = n(921944),
-    x = n(388032),
-    C = n(509612);
-let E = i.memo(function (e) {
+    b = n(705338),
+    _ = n(445606),
+    y = n(633667),
+    O = n(819640),
+    v = n(434479),
+    j = n(981631),
+    x = n(921944),
+    C = n(388032),
+    E = n(509612);
+let S = i.memo(function (e) {
     let { guild: t, selected: l } = e,
-        E = i.useRef(null),
         S = i.useRef(null),
-        I = (0, u.f9)(),
-        P = (0, a.e7)([y.Z], () => y.Z.hasLayers()),
-        [N, Z] = (0, h.ZT)([s.z.GAME_SHOP_NEW_BADGE], t.id);
+        I = i.useRef(null),
+        P = (0, u.f9)(),
+        N = (0, a.e7)([O.Z], () => O.Z.hasLayers()),
+        [Z, w] = (0, h.ZT)([s.z.GAME_SHOP_NEW_BADGE], t.id);
     i.useEffect(() => {
-        l && N === s.z.GAME_SHOP_NEW_BADGE && Z(j.L.INDIRECT_ACTION);
-    }, [Z, l, N]);
-    let w = i.useCallback(() => {
+        l && Z === s.z.GAME_SHOP_NEW_BADGE && w(x.L.INDIRECT_ACTION);
+    }, [w, l, Z]);
+    let T = i.useCallback(() => {
             var e, n;
-            Z(j.L.USER_DISMISS);
+            w(x.L.USER_DISMISS);
             let r = null != (n = null == (e = m.Z.getStorefrontState(t.id)) ? void 0 : e.activePage) ? n : 0;
-            (0, p.uL)(v.Z5c.CHANNELS_GAME_SHOP(t.id, r));
-        }, [t, Z]),
-        T = i.useCallback(() => {
-            Z(j.L.USER_DISMISS);
-        }, [Z]),
-        A = i.useCallback(
+            (0, p.uL)(j.Z5c.CHANNELS_GAME_SHOP(t.id, r));
+        }, [t, w]),
+        A = i.useCallback(() => {
+            (0, b.eagerNavigateToSocialLayerStorefront)({ guildId: t.id });
+        }, [t.id]),
+        R = i.useCallback(() => {
+            w(x.L.USER_DISMISS);
+        }, [w]),
+        D = i.useCallback(
             (e) => {
                 null != t &&
                     (0, f.jW)(e, async () => {
@@ -94,15 +98,15 @@ let E = i.memo(function (e) {
             },
             [t],
         ),
-        R = i.useCallback(() => {
+        L = i.useCallback(() => {
             var e;
-            null == (e = E.current) || e.onMouseEnter(null, 500);
-        }, [E]),
-        D = i.useCallback(
+            null == (e = S.current) || e.onMouseEnter(null, 500);
+        }, [S]),
+        M = i.useCallback(
             (e, n, i, a) =>
-                (0, r.jsx)(O.m, {
+                (0, r.jsx)(v.m, {
                     innerClassName: e,
-                    ref: S,
+                    ref: I,
                     id: "game-shop-".concat(t.id),
                     renderIcon: (e) =>
                         (0, r.jsx)(d.EOn, {
@@ -114,40 +118,41 @@ let E = i.memo(function (e) {
                         }),
                     text: (0, r.jsx)(d.Text, {
                         variant: "text-md/medium",
-                        className: o()(C.name, n),
+                        className: o()(E.name, n),
                         children:
                             (null == t ? void 0 : t.id) === (0, g.ac)()
-                                ? x.intl.string(x.t.xFQAPs)
-                                : x.intl.string(x.t.vyaWs7),
+                                ? C.intl.string(C.t.xFQAPs)
+                                : C.intl.string(C.t.vyaWs7),
                     }),
                     selected: l,
-                    onClick: w,
-                    onContextMenu: A,
+                    onMouseDown: A,
+                    onClick: T,
+                    onContextMenu: D,
                     trailing: (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)(d.IGR, {
-                                text: x.intl.string(x.t.y2b7CA),
+                                text: C.intl.string(C.t.y2b7CA),
                                 color: c.Z.colors.BG_BRAND.css,
                             }),
                             a,
                         ],
                     }),
                 }),
-            [t, l, w, A],
+            [t.id, l, A, T, D],
         );
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(_.Z, {
-                ref: E,
-                children: D,
+            (0, r.jsx)(y.Z, {
+                ref: S,
+                children: M,
             }),
-            I || P || (null == t ? void 0 : t.id) !== (0, g.ac)() || N !== s.z.GAME_SHOP_NEW_BADGE
+            P || N || (null == t ? void 0 : t.id) !== (0, g.ac)() || Z !== s.z.GAME_SHOP_NEW_BADGE
                 ? null
-                : (0, r.jsx)(b.Z, {
-                      onActionClick: w,
-                      onRender: R,
-                      onRequestClose: T,
-                      targetElementRef: S,
+                : (0, r.jsx)(_.Z, {
+                      onActionClick: T,
+                      onRender: L,
+                      onRequestClose: R,
+                      targetElementRef: I,
                   }),
         ],
     });

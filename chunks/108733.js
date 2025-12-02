@@ -11,6 +11,10 @@ function u(e) {
     var t, n;
     let { invite: u, trackClick: m, closeModal: g } = e,
         f = i.useCallback(() => {
+            (null == u ? void 0 : u.guild) != null &&
+                (0, s.eagerNavigateToSocialLayerStorefront)({ guildId: u.guild.id });
+        }, [u]),
+        p = i.useCallback(() => {
             (null == u ? void 0 : u.guild) != null && ((0, s.default)({ invite: u }), g(), m(o.as.GameShop));
         }, [g, u, m]);
     return new Set(null == u || null == (t = u.guild) ? void 0 : t.features).has(
@@ -23,7 +27,8 @@ function u(e) {
                       ? d.intl.string(d.t.WTXyEQ)
                       : d.intl.string(d.t.v8UpgE),
               icon: r.EOn,
-              onClick: f,
+              onClick: p,
+              onMouseDown: f,
               fullWidth: !0,
           })
         : null;

@@ -5,10 +5,10 @@ var r = a(54381),
     i = a.n(n),
     c = a(704215),
     l = a(159691),
-    d = a(481060),
-    o = a(605236),
-    m = a(626135),
-    u = a(164670),
+    o = a(481060),
+    d = a(605236),
+    u = a(626135),
+    m = a(164670),
     f = a(705338),
     x = a(981631),
     h = a(921944),
@@ -20,27 +20,30 @@ var r = a(54381),
 function b(e) {
     let { transitionState: t, returnRef: a, onClose: n } = e;
     s.useEffect(() => {
-        m.default.track(x.rMx.OPEN_MODAL, { type: "Social Layer Storefront Announcement Modal" }),
-            (0, o.bj)(c.z.GAME_SHOP_ANNOUNCEMENT_MODAL, { dismissAction: h.L.AUTO_DISMISS });
+        u.default.track(x.rMx.OPEN_MODAL, { type: "Social Layer Storefront Announcement Modal" }),
+            (0, d.bj)(c.z.GAME_SHOP_ANNOUNCEMENT_MODAL, { dismissAction: h.L.AUTO_DISMISS });
     }, []);
     let b = s.useCallback(() => {
-        (0, f.default)({ guildId: (0, u.ac)() }), n();
-    }, [n]);
+            (0, f.eagerNavigateToSocialLayerStorefront)({ guildId: (0, m.ac)() });
+        }, []),
+        k = s.useCallback(() => {
+            (0, f.default)({ guildId: (0, m.ac)() }), n();
+        }, [n]);
     return (0, r.jsx)(l.f6W, {
         theme: p.BR.DARK,
         children: (e) =>
-            (0, r.jsx)(d.Y0X, {
+            (0, r.jsx)(o.Y0X, {
                 transitionState: t,
                 parentComponent: "SocialLayerStorefrontAnnouncementModal",
-                size: d.CgR.DYNAMIC,
+                size: o.CgR.DYNAMIC,
                 className: i()(e, v.modal),
                 returnRef: a,
-                children: (0, r.jsxs)(d.hzk, {
+                children: (0, r.jsxs)(o.hzk, {
                     className: v.content,
                     children: [
                         (0, r.jsx)("div", {
                             className: v.closeButton,
-                            children: (0, r.jsx)(d.olH, { onClick: n }),
+                            children: (0, r.jsx)(o.olH, { onClick: n }),
                         }),
                         (0, r.jsx)("div", { className: v.artwork }),
                         (0, r.jsx)(l.X6q, {
@@ -120,7 +123,8 @@ function b(e) {
                         (0, r.jsx)(l.zxk, {
                             variant: "primary",
                             text: j.intl.string(j.t.CekBHq),
-                            onClick: b,
+                            onClick: k,
+                            onMouseDown: b,
                         }),
                     ],
                 }),

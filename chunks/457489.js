@@ -16,8 +16,8 @@ var l = t(54381),
     h = t(430824),
     x = t(55563),
     m = t(900849),
-    v = t(411935),
-    C = t(590961),
+    C = t(411935),
+    v = t(590961),
     k = t(417317),
     j = t(705338),
     b = t(436585),
@@ -26,7 +26,7 @@ var l = t(54381),
     N = t(140594);
 function E(e) {
     let { storefront: n, guildId: t, selectedPageIndex: a, selectedSku: o } = e,
-        s = (0, C.oR)(),
+        s = (0, v.oR)(),
         r = i.useRef(s);
     return (
         i.useEffect(() => {
@@ -104,21 +104,19 @@ function Z(e) {
             [y, S, P, w, O, G],
         );
     return (i.useEffect(() => {
-        null != S && (0, v.m0)(S, P, null != Z ? Z : null);
+        null != S && (0, C.m0)(S, P, null != Z ? Z : null);
     }, [S, P, Z]),
     i.useEffect(() => {
         null != S && null != A && null == h.Z.getGuild(S) && (0, m.Ub)(S, {}, { shouldNavigate: !1 });
     }, [S, A]),
-    ((null == T ? void 0 : T.state) !== "fetched" && (null == T ? void 0 : T.state) !== "error") ||
-        null == S ||
-        (null == T ? void 0 : T.storefront) == null)
+    null == S || (null == T ? void 0 : T.storefront) == null)
         ? (0, l.jsx)("div", {
               className: o()(N.spinner, N.container),
               children: (0, l.jsx)(d.$jN, {}),
           })
         : (0, l.jsx)(g.Gt, {
               value: R,
-              children: (0, l.jsx)(C.hL, {
+              children: (0, l.jsx)(v.hL, {
                   newValue: B,
                   children: (0, l.jsx)(E, {
                       storefront: T.storefront,

@@ -59,13 +59,9 @@ function d(e, t) {
 let f = {},
     p = {};
 function _(e) {
-    let { guildId: t } = e;
-    (p[t] = {
-        storefront: null,
-        state: "loading",
-        fetchedAt: null,
-    }),
-        (p = c({}, p));
+    let { guildId: t } = e,
+        n = p[t];
+    (p[t] = d(c({}, n), { state: "loading" })), (p = c({}, p));
 }
 function m(e) {
     let { guildId: t, storefront: n } = e;
@@ -89,13 +85,19 @@ function h(e) {
         (p = c({}, p));
 }
 function g(e) {
-    let { guildId: t } = e;
-    (p[t] = {
-        storefront: null,
-        state: "error",
-        fetchedAt: null,
-    }),
-        (p = c({}, p));
+    let { guildId: t, eager: n } = e;
+    if (n) {
+        let e = p[t];
+        (null == e ? void 0 : e.state) === "loading" && (null == e ? void 0 : e.storefront) != null
+            ? (p[t] = d(c({}, e), { state: "fetched" }))
+            : delete p[t];
+    } else
+        p[t] = {
+            storefront: null,
+            state: "error",
+            fetchedAt: Date.now(),
+        };
+    p = c({}, p);
 }
 function E(e) {
     let { guildId: t, pageIndex: n, skuId: r } = e;
