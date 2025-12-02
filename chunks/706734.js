@@ -1,69 +1,45 @@
-n.d(e, { Z: () => _ });
-var a = n(54381),
-    r = n(481060),
-    i = n(488889),
-    l = n(226186),
-    s = n(626135),
-    o = n(981631),
-    c = n(308569),
-    u = n(388032),
-    E = n(800010);
-function _(t) {
-    let {
-            onNext: e,
-            onClose: n,
-            reason: _,
-            onReasonChange: d,
-            freeTextResponse: A,
-            setFreeTextResponse: x,
-            transitionState: C,
-        } = t,
-        g = c.zf.map((t) => ({
+e.d(n, { Z: () => E });
+var a = e(54381),
+    r = e(481060),
+    i = e(488889),
+    l = e(626135),
+    s = e(981631),
+    o = e(308569),
+    c = e(388032),
+    u = e(800010);
+function E(t) {
+    let { onNext: n, onClose: e, reason: E, onReasonChange: A, transitionState: _ } = t,
+        d = o.zf.map((t) => ({
             value: t,
             name: (0, i.S)(t),
-        })),
-        p = (0, l.u)("change_email_collect_reasons_slide");
-    return (0, a.jsxs)(r.Ioy, {
+        }));
+    return (0, a.jsx)(r.Ioy, {
         graphic: {
             type: "image",
-            src: E,
+            src: u,
         },
-        title: u.intl.string(u.t["41NIIh"]),
-        onClose: n,
-        transitionState: C,
+        title: c.intl.string(c.t["41NIIh"]),
+        onClose: e,
+        transitionState: _,
         actions: [
             {
                 variant: "secondary",
-                text: u.intl.string(u.t["ETE/oC"]),
-                onClick: n,
+                text: c.intl.string(c.t["ETE/oC"]),
+                onClick: e,
             },
             {
                 variant: "primary",
-                text: u.intl.string(u.t["3PatSz"]),
-                disabled: null == _,
-                onClick: e,
+                text: c.intl.string(c.t["3PatSz"]),
+                disabled: null == E,
+                onClick: n,
             },
         ],
-        children: [
-            (0, a.jsx)(r.FXm, {
-                value: _,
-                options: g,
-                onChange: (t) => {
-                    s.default.track(o.rMx.USER_ACCOUNT_EMAIL_CHANGE_REASON_SELECTED, { change_email_reason_enum: t }),
-                        d(t),
-                        x(""),
-                        t === c.pw.SOMETHING_ELSE &&
-                            l.Z.trackExposure({ location: "change_email_collect_reasons_slide" });
-                },
-            }),
-            p &&
-                _ === c.pw.SOMETHING_ELSE &&
-                (0, a.jsx)(r.Kx8, {
-                    value: A,
-                    maxLength: c.mF,
-                    onChange: x,
-                    placeholder: u.intl.string(u.t.Q8Rk7N),
-                }),
-        ],
+        children: (0, a.jsx)(r.FXm, {
+            value: E,
+            options: d,
+            onChange: (t) => {
+                l.default.track(s.rMx.USER_ACCOUNT_EMAIL_CHANGE_REASON_SELECTED, { change_email_reason_enum: t }), A(t);
+            },
+        }),
     });
 }
