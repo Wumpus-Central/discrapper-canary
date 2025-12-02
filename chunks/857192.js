@@ -101,6 +101,8 @@ let h = (() => {
         preventPopoutClose: !1,
         logKeyboardMismatches: !1,
         alertStartupMetrics: !1,
+        personaForceFaeFail: !1,
+        personaForceIdVerificationFail: !1,
     },
     b = m({}, E);
 function y(e) {
@@ -177,6 +179,12 @@ class I extends (r = o.ZP.Store) {
     }
     get alertStartupMetrics() {
         return b.alertStartupMetrics;
+    }
+    get personaForceFaeFail() {
+        return b.personaForceFaeFail;
+    }
+    get personaForceIdVerificationFail() {
+        return b.personaForceIdVerificationFail;
     }
     getDebugOptionsHeaderValue() {
         return (

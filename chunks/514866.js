@@ -1,26 +1,23 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => _ });
 var a = n(54381);
 n(473749);
 var l = n(120356),
     i = n.n(l),
     r = n(668757),
     s = n(481060),
-    o = n(168107),
-    c = n(480916),
-    d = n(963886),
-    u = n(110478),
-    m = n(677106),
-    p = n(906605),
-    h = n(359119),
-    x = n(423932),
-    f = n(695346),
-    g = n(306052),
-    b = n(944486),
-    v = n(594174),
-    j = n(134612),
-    _ = n(517269),
-    y = n(197571);
-let C = () => {
+    o = n(110478),
+    c = n(677106),
+    d = n(906605),
+    u = n(359119),
+    m = n(423932),
+    p = n(695346),
+    h = n(306052),
+    x = n(944486),
+    f = n(594174),
+    g = n(134612),
+    b = n(517269),
+    v = n(197571);
+let j = () => {
     Promise.all([n.e("52030"), n.e("1286")])
         .then(n.bind(n, 24031))
         .then((e) => {
@@ -43,43 +40,43 @@ let C = () => {
             );
         });
 };
-function S() {
-    let e = v.default.getCurrentUser(),
+function _() {
+    let e = f.default.getCurrentUser(),
         t = null == e ? void 0 : e.isStaff(),
-        l = f.Rt.useSetting();
+        l = p.Rt.useSetting();
     return (0, a.jsxs)(s.Ttm, {
         children: [
             (0, a.jsx)("div", {
-                className: i()(_.buttonsContainer, y.marginBottom20),
-                children: (0, a.jsx)(g.g, { isDevTools: !0 }),
+                className: i()(b.buttonsContainer, v.marginBottom20),
+                children: (0, a.jsx)(h.g, { isDevTools: !0 }),
             }),
             (0, a.jsx)("div", {
-                className: i()(_.buttonsContainer, y.marginBottom8),
+                className: i()(b.buttonsContainer, v.marginBottom8),
                 children: (0, a.jsx)(s.Button, {
                     variant: "primary",
                     size: "sm",
                     text: "Launch MFA",
-                    onClick: C,
+                    onClick: j,
                 }),
             }),
             (0, a.jsx)("div", {
-                className: i()(_.buttonsContainer, y.marginBottom8),
+                className: i()(b.buttonsContainer, v.marginBottom8),
                 children: (0, a.jsx)(s.Button, {
                     variant: "primary",
                     size: "sm",
                     text: "Launch Vibing Wumpus",
-                    onClick: () => (0, x.Z)(),
+                    onClick: () => (0, m.Z)(),
                 }),
             }),
             (0, a.jsx)("div", {
-                className: i()(_.buttonsContainer, y.marginBottom8),
+                className: i()(b.buttonsContainer, v.marginBottom8),
                 children: (0, a.jsx)(s.Button, {
                     variant: "primary",
                     size: "sm",
                     text: "Launch Safety Tools Modal",
                     onClick: () =>
                         (() => {
-                            let e = b.Z.getChannelId(),
+                            let e = x.Z.getChannelId(),
                                 t = null != e ? e : "21154681615024128";
                             (0, s.ZDy)(
                                 async () => {
@@ -120,13 +117,13 @@ function S() {
                                                     otherUserId: "9876543210",
                                                     channelId: t,
                                                     warningId: "test-warning-id",
-                                                    warningType: h.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
+                                                    warningType: u.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
                                                 },
                                                 n,
                                             ),
                                         );
                                 },
-                                { modalKey: j.X_ },
+                                { modalKey: g.X_ },
                             );
                         })(),
                 }),
@@ -135,55 +132,34 @@ function S() {
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsx)("div", {
-                            className: i()(_.buttonsContainer, y.marginBottom8),
+                            className: i()(b.buttonsContainer, v.marginBottom8),
                             children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 text: "Launch Clicker Game",
-                                onClick: () => (0, m.Z)(),
+                                onClick: () => (0, c.Z)(),
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: i()(_.buttonsContainer, y.marginBottom8),
+                            className: i()(b.buttonsContainer, v.marginBottom8),
                             children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 text: "Launch Captcha Test Tool",
-                                onClick: () => (0, u.N)(),
+                                onClick: () => (0, o.N)(),
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: i()(_.buttonsContainer, y.marginBottom8),
-                            children: (0, a.jsx)(s.Button, {
-                                variant: "primary",
-                                size: "sm",
-                                text: "Launch Age Verification Test Tool",
-                                onClick: () => (0, d.E)(),
-                            }),
-                        }),
-                        (0, a.jsx)("div", {
-                            className: i()(_.buttonsContainer, y.marginBottom8),
-                            children: (0, a.jsx)(s.Button, {
-                                variant: "primary",
-                                size: "sm",
-                                text: "Launch Age Verification Modal",
-                                onClick: () =>
-                                    o.Z.showAgeVerificationGetStartedModal({
-                                        entryPoint: c.cU.DEV_TOOLS_QUICK_ACTIONS,
-                                    }),
-                            }),
-                        }),
-                        (0, a.jsx)("div", {
-                            className: i()(_.buttonsContainer, y.marginBottom8),
+                            className: i()(b.buttonsContainer, v.marginBottom8),
                             children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 text: "Reset Hang Status State",
-                                onClick: p.YU,
+                                onClick: d.YU,
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: i()(_.buttonsContainer, y.marginBottom8),
+                            className: i()(b.buttonsContainer, v.marginBottom8),
                             children: (0, a.jsx)(s.Button, {
                                 variant: "primary",
                                 size: "sm",
@@ -192,11 +168,11 @@ function S() {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: i()(_.buttonsContainer, y.marginBottom20),
+                            className: i()(b.buttonsContainer, v.marginBottom20),
                             children: (0, a.jsx)(s.rsf, {
                                 label: "Ignore profile speedbump disabled",
                                 checked: l,
-                                onChange: (e) => f.Rt.updateSetting(e),
+                                onChange: (e) => p.Rt.updateSetting(e),
                             }),
                         }),
                     ],
