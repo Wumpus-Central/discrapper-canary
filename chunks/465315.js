@@ -11,7 +11,7 @@ function u(e) {
     let { node: f } = e,
         { destinationKey: p } = f,
         b = null == (t = f.useSubtitle) ? void 0 : t.call(f),
-        { directory: y } = (0, i.t)(),
+        { fallbackDirectory: y } = (0, i.t)(),
         g = null == y ? void 0 : y.entry(p),
         v = (null == g ? void 0 : g.parentPanelKey) != null ? (null == y ? void 0 : y.get(g.parentPanelKey)) : void 0,
         m = null == (n = f.useTitle) ? void 0 : n.call(f),
