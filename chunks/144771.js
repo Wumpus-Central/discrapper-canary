@@ -60,37 +60,33 @@ function f(e, t) {
 function p(e) {
     let { leading: t, actions: n = [], actionsFullWidth: i = !1, leadingLayout: c = "default" } = e;
     if (null == t && n.length < 1) return null;
-    let d = n.findLastIndex((e) => "expressive" === e.variant);
-    return (
-        -1 === d && (d = n.findLastIndex((e) => "primary" === e.variant)),
-        -1 === d && (d = n.findLastIndex((e) => "secondary" === e.variant)),
-        -1 === d && n.length > 0 && (d = n.length - 1),
-        (0, r.jsxs)("footer", {
-            className: a()(l.actionBar, l.section, { [l.actionBarLayoutChatInput]: "chat-input" === c }),
-            children: [
-                null != t &&
-                    (0, r.jsx)("div", {
-                        className: l.actionBarLeading,
-                        children: t,
-                    }),
+    let d = ["primary", "critical-primary", "expressive"],
+        f = n.findLastIndex((e) => null != e.variant && d.includes(e.variant));
+    return (0, r.jsxs)("footer", {
+        className: a()(l.actionBar, l.section, { [l.actionBarLayoutChatInput]: "chat-input" === c }),
+        children: [
+            null != t &&
                 (0, r.jsx)("div", {
-                    className: a()(l.actionBarTrailing, { [l.actionBarTrailingFullWidth]: i }),
-                    children: (0, r.jsx)(s.h, {
-                        fullWidth: i,
-                        children:
-                            null == n
-                                ? void 0
-                                : n.map((e, t) => {
-                                      var n;
-                                      return (0, r.jsx)(
-                                          o.z,
-                                          u({ autoFocus: null != (n = e.autoFocus) ? n : d === t }, e),
-                                          t,
-                                      );
-                                  }),
-                    }),
+                    className: l.actionBarLeading,
+                    children: t,
                 }),
-            ],
-        })
-    );
+            (0, r.jsx)("div", {
+                className: a()(l.actionBarTrailing, { [l.actionBarTrailingFullWidth]: i }),
+                children: (0, r.jsx)(s.h, {
+                    fullWidth: i,
+                    children:
+                        null == n
+                            ? void 0
+                            : n.map((e, t) => {
+                                  var n;
+                                  return (0, r.jsx)(
+                                      o.z,
+                                      u({ autoFocus: null != (n = e.autoFocus) ? n : f === t }, e),
+                                      t,
+                                  );
+                              }),
+                }),
+            }),
+        ],
+    });
 }
