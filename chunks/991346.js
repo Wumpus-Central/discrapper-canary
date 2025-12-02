@@ -1,7 +1,7 @@
 n.d(t, {
     Gj: () => K,
     Pt: () => W,
-    VO: () => X,
+    VO: () => Q,
     ji: () => ee,
     q8: () => J,
 }),
@@ -221,8 +221,8 @@ function W() {
         K = (0, s.Q)(),
         z = (0, g.Z)({ location: U.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
         q = (0, i.e7)([I.Z], () => I.Z.hasLibraryApplication()),
-        Q = (0, i.e7)([v.default], () => v.default.hasTOTPEnabled()),
-        X = D.Sb.useSetting(),
+        X = (0, i.e7)([v.default], () => v.default.hasTOTPEnabled()),
+        Q = D.Sb.useSetting(),
         J = (0, f.Z)(),
         $ = null == (o = (0, p.Z)()) || o,
         ee = (null == (t = (0, E.s)()) ? void 0 : t.length) > 0,
@@ -261,8 +261,8 @@ function W() {
                 isEligibleForQuests: z,
                 isStricterMessageRequestsEnabled: J,
                 hasLibraryApplication: q,
-                hasTOTPEnabled: Q,
-                developerMode: X,
+                hasTOTPEnabled: X,
+                developerMode: Q,
                 isAdultUser: $,
                 hasSecureFramesVerifiedUserIds: ee,
                 hasIgnoredUsers: en,
@@ -275,7 +275,7 @@ function W() {
                 isCrossDMSearchEnabledSettingVisible: el,
                 isRedesignedNotificationsEnabled: ec,
             }),
-        [X, B, et, en, q, ee, Q, M, $, z, W, Y, V, G, H, J, k, K, F, w, S, er, ei, ea, eo, es, el, ec],
+        [Q, B, et, en, q, ee, X, M, $, z, W, Y, V, G, H, J, k, K, F, w, S, er, ei, ea, eo, es, el, ec],
     );
 }
 function K(e) {
@@ -336,7 +336,7 @@ function z(e, t, n) {
 function q(e, t, n) {
     let r = [],
         i = $(t),
-        a = Q(t, new Set(Array.from(null != n ? n : []).filter((e) => i.has(e))));
+        a = X(t, new Set(Array.from(null != n ? n : []).filter((e) => i.has(e))));
     return (
         e.forEach((e) => {
             0 !== e.settings.length &&
@@ -353,7 +353,7 @@ function q(e, t, n) {
         r
     );
 }
-function Q(e, t) {
+function X(e, t) {
     let n = new Map();
     return (
         null != t &&
@@ -369,7 +369,7 @@ function Q(e, t) {
         n
     );
 }
-function X() {
+function Q() {
     let e = W(),
         { shouldMergeGameSettings: t } = R.b.useExperiment({ location: "settings" }),
         { showRedesign: n } = w.b.useExperiment({ location: "settings" }),

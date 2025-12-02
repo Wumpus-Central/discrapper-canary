@@ -13,11 +13,11 @@ var i = n(120356),
     p = n(63063),
     _ = n(930153),
     m = n(617136),
-    h = n(313481),
-    g = n(616022),
-    E = n(509212),
-    b = n(979232),
-    y = n(373370),
+    h = n(616022),
+    g = n(509212),
+    E = n(979232),
+    b = n(373370),
+    y = n(968843),
     O = n(115179),
     v = n(659302),
     S = n(644646),
@@ -116,44 +116,44 @@ function D(e) {
 function x(e) {
     var t;
     let { quest: n, progressState: i, questContent: a, questContentPosition: o, sourceQuestContent: c } = e,
-        f = i >= h.OH.COMPLETED,
+        f = i >= y.OH.COMPLETED,
         p = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
-        _ = (0, s.e7)([g.Z], () => g.Z.isEnrolling(n.id)),
-        m = (0, E.q8)(n),
-        b = (0, E.Vl)(n),
-        y = (0, v.Ks)({
+        _ = (0, s.e7)([h.Z], () => h.Z.isEnrolling(n.id)),
+        m = (0, g.q8)(n),
+        E = (0, g.Vl)(n),
+        b = (0, v.Ks)({
             progressState: i,
             quest: n,
             questContent: a,
             questContentPosition: o,
             inGiftInventory: !1,
             isVideoQuest: m,
-            inGameQuest: b,
+            inGameQuest: E,
             sourceQuestContent: c,
         }),
         O = f && !p;
     return (0, r.jsx)(
         l.u,
         {
-            text: y.tooltipText,
+            text: b.tooltipText,
             children: O
-                ? (0, r.jsx)(L, { ctaConfig: y })
+                ? (0, r.jsx)(L, { ctaConfig: b })
                 : (0, r.jsx)(u.Button, {
                       fullWidth: !0,
                       variant: "primary",
-                      disabled: null == y.onClick,
+                      disabled: null == b.onClick,
                       loading: _,
-                      onClick: null != (t = y.onClick) ? t : void 0,
-                      text: y.text,
+                      onClick: null != (t = b.onClick) ? t : void 0,
+                      text: b.text,
                   }),
         },
-        y.tooltipText,
+        b.tooltipText,
     );
 }
 function L(e) {
     var t, n;
     let { ctaConfig: i } = e,
-        { shouldUseShinyButton: o } = b.Z.useConfig({ location: "QuestsCardFooter" }),
+        { shouldUseShinyButton: o } = E.Z.useConfig({ location: "QuestsCardFooter" }),
         s = (0, u.MgI)(),
         l = !!(null == s ? void 0 : s.fullWidth);
     return o
@@ -186,30 +186,30 @@ let j = (e) => {
             isFocused: d,
             isQuestExpired: p,
             isExpanded: _,
-            isAnimating: E,
-            contentPosition: b,
+            isAnimating: g,
+            contentPosition: E,
             sourceQuestContent: O,
         } = e,
-        v = (0, h._Q)(n),
-        T = (0, h.B6)(null == (t = n.userStatus) ? void 0 : t.completedAt, {
+        v = (0, y._Q)(n),
+        T = (0, y.B6)(null == (t = n.userStatus) ? void 0 : t.completedAt, {
             year: "numeric",
             month: "long",
             day: "numeric",
         }),
-        C = v >= h.OH.ACCEPTED,
-        L = v >= h.OH.COMPLETED,
-        j = _ || E,
-        M = (0, y.t5)(n, A.dr.QUESTS_CARD, i, O),
+        C = v >= y.OH.ACCEPTED,
+        L = v >= y.OH.COMPLETED,
+        j = _ || g,
+        M = (0, b.t5)(n, A.dr.QUESTS_CARD, i, O),
         k = (0, m.O5)(),
-        U = (0, h.Rf)(n),
-        G = (0, y.DD)({
+        U = (0, y.Rf)(n),
+        G = (0, b.DD)({
             quest: n,
             taskDetails: U,
             location: A.dr.QUESTS_CARD,
             questContent: o.j.QUESTS_EMBED,
             sourceQuestContent: O,
         }),
-        Z = (0, s.e7)([g.Z], () => null != g.Z.questEnrollmentBlockedUntil, []),
+        Z = (0, s.e7)([h.Z], () => null != h.Z.questEnrollmentBlockedUntil, []),
         B = () => {
             (0, I.navigateToQuestHome)({
                 fromContent: i,
@@ -218,7 +218,7 @@ let j = (e) => {
                 k({
                     questId: n.id,
                     questContent: i,
-                    questContentPosition: b,
+                    questContentPosition: E,
                     questContentCTA: m.jZ.LEARN_MORE,
                     sourceQuestContent: O,
                 });
@@ -257,7 +257,7 @@ let j = (e) => {
                                 location: A.dr.QUESTS_CARD,
                                 quest: n,
                                 questContent: i,
-                                questContentPosition: b,
+                                questContentPosition: E,
                                 sourceQuestContent: O,
                             }),
                         ],

@@ -96,16 +96,16 @@ let P = (e, t) =>
                 analyticsLocations: [d.Z.MEMBER_LIST_ACTIVITY_CONTENT_POPOUT],
             });
         if (null == j) return null;
-        let Q = (0, r.jsx)(I.PZ, {
+        let X = (0, r.jsx)(I.PZ, {
                 location: I.Gt.POPOUT,
                 entry: n,
             }),
-            X = (0, r.jsx)(T.wG, {
+            Q = (0, r.jsx)(T.wG, {
                 channel: t,
                 userDescription: (0, O.kr)(n) ? N.t.vPg1JT : N.t.rPqqts,
                 title: n.extra.activity_name,
                 subtitle: M,
-                badges: Q,
+                badges: X,
                 entry: n,
                 showCoverImage: !1,
                 onClickTitle: x ? void 0 : W,
@@ -148,7 +148,7 @@ let P = (e, t) =>
             en = [ee, J && !x ? $ : et].filter(g.lm);
         return (0, r.jsxs)(T.yR, {
             children: [
-                X,
+                Q,
                 (0, r.jsx)(T.St, {
                     children: (0, r.jsx)(T.WT, {
                         onReaction: E,

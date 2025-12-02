@@ -1,5 +1,5 @@
 let r, i;
-n.d(t, { Z: () => X }), n(388685);
+n.d(t, { Z: () => Q }), n(388685);
 var a = n(828700),
     o = n(433517),
     s = n(570140),
@@ -309,7 +309,7 @@ function q(e) {
     if (null == n) return !1;
     c.Z.fetchNewLocalMessages(n, A.AQB);
 }
-class Q extends d.Z {
+class X extends d.Z {
     _initialize() {
         s.Z.subscribe("CONNECTION_OPEN", M);
     }
@@ -340,4 +340,4 @@ class Q extends d.Z {
             });
     }
 }
-let X = new Q();
+let Q = new X();

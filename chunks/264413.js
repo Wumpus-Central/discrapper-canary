@@ -1,8 +1,8 @@
 n.d(e, { Z: () => N });
 var i = n(473749),
-    r = n(442837),
-    l = n(509613),
-    s = n(28682),
+    l = n(442837),
+    s = n(509613),
+    r = n(28682),
     u = n(463395),
     a = n(131951),
     o = n(313789),
@@ -10,14 +10,14 @@ var i = n(473749),
     d = n(383713),
     E = n(782134),
     S = n(833682),
-    T = n(815194),
-    I = n(16009),
+    I = n(815194),
+    T = n(16009),
     g = n(387076),
-    O = n(595373),
-    _ = n(388032);
-let N = (0, l.k4)(o.n.VOICE_INPUT_MODE_CATEGORY, {
+    _ = n(595373),
+    O = n(388032);
+let N = (0, s.k4)(o.n.VOICE_INPUT_MODE_CATEGORY, {
     useNotice: function () {
-        let t = (0, r.e7)([u.Z, a.Z], () => {
+        let t = (0, l.e7)([u.Z, a.Z], () => {
             let t = a.Z.getInputDeviceId();
             return (
                 (u.Z.hasEchoCancellation(t) || u.Z.hasNoiseSuppression(t) || u.Z.hasAutomaticGainControl(t)) &&
@@ -27,11 +27,11 @@ let N = (0, l.k4)(o.n.VOICE_INPUT_MODE_CATEGORY, {
         return i.useMemo(() => {
             if (t)
                 return {
-                    type: s.y1.INLINE_NOTICE,
+                    type: r.y1.INLINE_NOTICE,
                     noticeType: "info",
-                    useText: () => _.intl.string(_.t["/Whuzi"]),
+                    useText: () => O.intl.string(O.t["/Whuzi"]),
                 };
         }, [t]);
     },
-    buildLayout: () => [E.Z, S.Z, d.Z, O.Z, T.Z, g.Z, I.Z, c.E],
+    buildLayout: () => [E.Z, S.Z, d.Z, _.Z, I.Z, g.Z, T.Z, c.E],
 });

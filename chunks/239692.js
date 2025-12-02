@@ -207,8 +207,8 @@ function v(e, t, n, a) {
                 innerRole: K,
                 innerAriaLabel: z,
                 innerAriaMultiselectable: q,
-                innerAriaOrientation: Q,
-                innerClassName: X,
+                innerAriaOrientation: X,
+                innerClassName: Q,
                 innerTag: J = "div",
             } = a,
             $ = h(a, [
@@ -377,9 +377,9 @@ function v(e, t, n, a) {
                                         role: K,
                                         "aria-label": z,
                                         "aria-multiselectable": q,
-                                        "aria-orientation": Q,
+                                        "aria-orientation": X,
                                         style: { height: el },
-                                        className: o()(d.content, X),
+                                        className: o()(d.content, Q),
                                         ref: et,
                                         children: (0, r.jsx)(c.Jc, {
                                             containerRef: et,
@@ -395,7 +395,7 @@ function v(e, t, n, a) {
                                             }),
                                         }),
                                     }),
-                                [J, W, K, z, q, Q, el, X, ec, M, k, D, x, L, U, es],
+                                [J, W, K, z, q, X, el, Q, ec, M, k, D, x, L, U, es],
                             ),
                             i.useMemo(
                                 () =>

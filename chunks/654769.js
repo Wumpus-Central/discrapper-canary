@@ -196,13 +196,13 @@ if (k) {
         D(r, "_id", 0),
         (q = r);
 }
-let Q = {};
+let X = {};
 if (null === c.Z || void 0 === c.Z ? void 0 : c.Z.features.supports("notifications")) {
     try {
         R.ZP.on("NOTIFICATIONS_RECEIVED_RESPONSE", (e, t, n, r, i) => {
-            if ("dismiss" === t) return void delete Q[n];
+            if ("dismiss" === t) return void delete X[n];
             {
-                let e = Q[n];
+                let e = X[n];
                 if ((P.isPlatformEmbedded ? R.ZP.focus() : window.focus(), null != e)) {
                     var a, o, s;
                     (null == (a = e.options) ? void 0 : a.omitClickTracking) ||
@@ -226,7 +226,7 @@ if (null === c.Z || void 0 === c.Z ? void 0 : c.Z.features.supports("notificatio
             e || R.ZP.invoke("NOTIFICATIONS_GET_AUTHORIZATION", !0).catch(() => {});
         });
 }
-function X(e) {
+function Q(e) {
     if (null === c.Z || void 0 === c.Z ? void 0 : c.Z.features.supports("notifications"))
         try {
             R.ZP.invoke("NOTIFICATIONS_GET_AUTHORIZATION")
@@ -297,7 +297,7 @@ async function et(e, t, n, r, i) {
     }
     t.includes("\0") && (G.warn("Notification title contains null character, setting to empty string"), (t = "")),
         n.includes("\0") && (G.warn("Notification body contains null character, setting to empty string"), (n = ""));
-    let X = null != (o = null == i ? void 0 : i.tag) ? o : null,
+    let Q = null != (o = null == i ? void 0 : i.tag) ? o : null,
         $ = k && (null == b ? void 0 : b.sound) === !0 && (null == b ? void 0 : b.authorizationStatus) === "authorized",
         et = (e, t) => {
             var n;
@@ -377,7 +377,7 @@ async function et(e, t, n, r, i) {
         }
         try {
             let e = await R.ZP.invoke("NOTIFICATIONS_SEND_NOTIFICATION", a);
-            Q[e] = {
+            X[e] = {
                 options: i,
                 trackingProps: r,
                 clickTrackingProps: K,
@@ -406,7 +406,7 @@ async function et(e, t, n, r, i) {
     let en = {
         icon: e,
         body: n,
-        tag: X,
+        tag: Q,
         silent: !0,
     };
     try {
@@ -441,7 +441,7 @@ async function et(e, t, n, r, i) {
 }
 let en = {
     hasPermission: J,
-    requestPermission: X,
+    requestPermission: Q,
     showNotification: et,
     playNotificationSound: W,
 };

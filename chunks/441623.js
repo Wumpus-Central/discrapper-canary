@@ -82,7 +82,7 @@ function x(e) {
     return !D(e, e.getFullYear()) && D(e, new Date().getFullYear());
 }
 function L() {
-    if (null != w) return void X(w);
+    if (null != w) return void Q(w);
     if ((k(), !f.Z.hasConsented(m.pjP.PERSONALIZATION))) return;
     let { enabled: e } = _.w.getConfig({ location: "PremiumGiftingIntentStore updateFriendAnniversaries" });
     if (!e) return;
@@ -156,15 +156,15 @@ function z() {
 function q() {
     C.giftUnreadNotificationLastDismissedTimes = [];
 }
-function Q(e) {
+function X(e) {
     let { total: t } = e;
     if (null == t) {
         (w = null), L();
         return;
     }
-    X(t);
+    Q(t);
 }
-function X(e) {
+function Q(e) {
     k();
     let { enabled: t } = _.w.getConfig({ location: "PremiumGiftingIntentStore generateFriendAnniversaries" });
     if (!t) return;
@@ -260,5 +260,5 @@ let $ = new J(c.Z, {
     DEV_TOOLS_FRIENDS_LIST_GIFT_INTENTS_SHOWN_RESET: K,
     DEV_TOOLS_GIFT_MESSAGE_COOLDOWN_RESET: z,
     DEV_TOOLS_GIFT_UNREAD_NOTIFICATION_COOLDOWN_RESET: q,
-    DEV_TOOLS_SET_FRIEND_ANNIVERSARY_COUNT: Q,
+    DEV_TOOLS_SET_FRIEND_ANNIVERSARY_COUNT: X,
 });

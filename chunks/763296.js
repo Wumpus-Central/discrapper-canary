@@ -137,13 +137,13 @@ function q(e) {
     let { userId: t } = e;
     v.has(t) ? v.delete(t) : v.add(t);
 }
-function Q(e) {
+function X(e) {
     let { soundboardStoreState: t } = e;
     (b = new Map(p.default.entries(t.soundboardSounds))),
         (C = new Set(t.favoritedSoundIds)),
         (v = new Set(t.localSoundboardMutes));
 }
-class X extends (r = o.ZP.Store) {
+class Q extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(c.Z, u.default), K(c.Z.settings);
     }
@@ -220,8 +220,8 @@ class X extends (r = o.ZP.Store) {
         return [I, S, T].some((e) => 1 === e);
     }
 }
-E(X, "displayName", "SoundboardStore");
-let J = new X(s.Z, {
+E(Q, "displayName", "SoundboardStore");
+let J = new Q(s.Z, {
     LOGOUT: R,
     GUILD_SOUNDBOARD_FETCH: D,
     GUILD_SOUNDBOARD_SOUND_CREATE: j,
@@ -241,5 +241,5 @@ let J = new X(s.Z, {
     SOUNDBOARD_SOUNDS_RECEIVED: x,
     GUILD_DELETE: L,
     AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: q,
-    OVERLAY_INITIALIZE: Q,
+    OVERLAY_INITIALIZE: X,
 });

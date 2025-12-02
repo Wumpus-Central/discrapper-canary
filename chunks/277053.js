@@ -60,8 +60,8 @@ function b(e, t) {
 }
 let E = new Set(),
     O = h.QZA.CLOSED,
-    y = !1,
-    v = null,
+    v = !1,
+    y = null,
     I = null,
     C = null,
     S = null,
@@ -76,12 +76,12 @@ function P(e) {
 function x() {
     if (((C = p.Z.getChannel()), (S = p.Z.getCategory()), null == C)) return !1;
     let e = C.getGuildId();
-    (I = v = P(C)),
-        null == v[T] && (T = e),
+    (I = y = P(C)),
+        null == y[T] && (T = e),
         (i = null != S),
         (r = d.o4(C, S)),
         (N = null),
-        (y = !1),
+        (v = !1),
         (O = h.QZA.CLOSED),
         E.clear();
 }
@@ -90,19 +90,19 @@ class A extends (l = o.ZP.Store) {
         this.waitFor(p.Z, f.Z);
     }
     hasChanges() {
-        return y;
+        return v;
     }
     showNotice() {
         return this.hasChanges();
     }
     getPermissionOverwrite(e) {
-        return null == v ? void 0 : v[e];
+        return null == y ? void 0 : y[e];
     }
     get editedPermissionIds() {
         return Array.from(E);
     }
     get permissionOverwrites() {
-        return v;
+        return y;
     }
     get selectedOverwriteId() {
         return T;
@@ -136,21 +136,21 @@ let Z = new A(u.Z, {
     CHANNEL_SETTINGS_PERMISSIONS_INIT: x,
     CHANNEL_SETTINGS_PERMISSIONS_UPDATE_PERMISSION: function (e) {
         let { id: t, allow: n, deny: i } = e,
-            l = null == v ? void 0 : v[t];
+            l = null == y ? void 0 : y[t];
         if (null == l || null == C) return !1;
         (l = b(_({}, l), {
             allow: n,
             deny: i,
         })),
-            (v = b(_({}, v), { [t]: l })),
+            (y = b(_({}, y), { [t]: l })),
             E.add(t),
             (O = h.QZA.OPEN),
-            (y = !s().isEqual(v, I)),
+            (v = !s().isEqual(y, I)),
             (r = d.o4(C, S));
     },
     CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function (e) {
         let { id: t } = e;
-        if (null != v && null != v[t]) T = t;
+        if (null != y && null != y[t]) T = t;
         else {
             if (null == C) return !1;
             N = t;
@@ -160,7 +160,7 @@ let Z = new A(u.Z, {
         p.Z.getSection() === h.CoT.PERMISSIONS && x();
     },
     CHANNEL_SETTINGS_CLOSE: function () {
-        (O = h.QZA.CLOSED), (v = null), (I = null), (C = null), (S = null), (y = !1), E.clear(), (T = null), (N = null);
+        (O = h.QZA.CLOSED), (y = null), (I = null), (C = null), (S = null), (v = !1), E.clear(), (T = null), (N = null);
     },
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e;
@@ -177,12 +177,12 @@ let Z = new A(u.Z, {
                     let n = {};
                     return (
                         E.forEach((e) => {
-                            null != v && (n[e] = v[e]);
+                            null != y && (n[e] = y[e]);
                         }),
                         null == n[t] && null == C.permissionOverwrites[t] && (n[t] = d.we(t)),
-                        null == (v = _({}, C.permissionOverwrites, n))[T]
+                        null == (y = _({}, C.permissionOverwrites, n))[T]
                             ? (T = t)
-                            : null != N && null != v[N] && ((T = N), (N = null)),
+                            : null != N && null != y[N] && ((T = N), (N = null)),
                         (r = d.o4(C, S)),
                         !0
                     );

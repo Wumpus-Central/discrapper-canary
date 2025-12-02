@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(666917),
+    s = n(205120),
     o = n(91192),
     c = n(704215),
     u = n(952265),
@@ -17,8 +17,8 @@ var r = n(54381),
     b = n(150560),
     E = n(981631),
     O = n(921944),
-    y = n(388032),
-    v = n(718462);
+    v = n(388032),
+    y = n(718462);
 let I = Math.ceil(Math.sqrt(115200)),
     C = (I - 240) / 2,
     S = function (e) {
@@ -99,7 +99,7 @@ let I = Math.ceil(Math.sqrt(115200)),
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)("div", {
-                    className: v.wrapper,
+                    className: y.wrapper,
                     onMouseEnter: R,
                     onMouseLeave: D,
                     onFocus: R,
@@ -137,13 +137,13 @@ let I = Math.ceil(Math.sqrt(115200)),
                             return e;
                         })(
                             {
-                                className: a()({ [v.withGradientAndBadge]: j }),
+                                className: a()({ [y.withGradientAndBadge]: j }),
                                 icon: d.qDn,
                                 listItemRef: T,
                                 onClick: x,
                                 route: E.Z5c.QUEST_HOME_V2,
                                 selected: l,
-                                text: y.intl.string(y.t.JALI2K),
+                                text: v.intl.string(v.t.JALI2K),
                             },
                             S,
                         )),
@@ -154,7 +154,7 @@ let I = Math.ceil(Math.sqrt(115200)),
                                     (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             (0, r.jsx)(s.animated.div, {
-                                                className: v.shine,
+                                                className: y.shine,
                                                 style: {
                                                     transform: w.to((e) =>
                                                         "translateX(calc("
@@ -164,7 +164,7 @@ let I = Math.ceil(Math.sqrt(115200)),
                                                 },
                                             }),
                                             (0, r.jsx)(s.animated.div, {
-                                                className: v.glow,
+                                                className: y.glow,
                                                 style: {
                                                     opacity: A.to({
                                                         range: [0, 1],
@@ -173,8 +173,8 @@ let I = Math.ceil(Math.sqrt(115200)),
                                                 },
                                             }),
                                             (0, r.jsx)(d.IGR, {
-                                                className: v.badge,
-                                                text: y.intl.string(y.t.y2b7CA),
+                                                className: y.badge,
+                                                text: v.intl.string(v.t.y2b7CA),
                                                 color: d.TVs.colors.BG_BRAND.css,
                                             }),
                                         ],

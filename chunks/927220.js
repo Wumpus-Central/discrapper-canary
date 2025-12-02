@@ -17,8 +17,8 @@ var r = n(54381),
     b = n(144725),
     E = n(613928),
     O = n(390536),
-    y = n(581696),
-    v = n(981631),
+    v = n(581696),
+    y = n(981631),
     I = n(388032),
     C = n(357483),
     S = n(97009);
@@ -26,10 +26,10 @@ let T = (0, d.Z)(function (e) {
     let { width: t } = e,
         n = (0, _.b5)("ICYMIPage", !1);
     i.useEffect(() => {
-        n || (0, s.uL)(v.Z5c.ME);
+        n || (0, s.uL)(y.Z5c.ME);
     }, [n]),
         i.useLayoutEffect(() => {
-            n && u.Y(v.Z5c.ICYMI);
+            n && u.Y(y.Z5c.ICYMI);
         }, [n]),
         (0, p.ZP)(() => {
             n && (0, g.e)("icymi");
@@ -65,7 +65,7 @@ let T = (0, d.Z)(function (e) {
         A = i.useCallback(
             async (e) => {
                 e.metaKey && x
-                    ? await (0, E.ye)(v.qAy.ACK_GRAVITY_REGENERATE_FEED_AND_CLEAR_READ_STATES_BUTTON)
+                    ? await (0, E.ye)(y.qAy.ACK_GRAVITY_REGENERATE_FEED_AND_CLEAR_READ_STATES_BUTTON)
                     : await P();
             },
             [P, x],
@@ -105,7 +105,7 @@ let T = (0, d.Z)(function (e) {
                   (0, r.jsx)("div", {
                       ref: T,
                       className: a()(S.content, C.content),
-                      children: (0, r.jsx)(y.Z, { scrollContainerRef: T }),
+                      children: (0, r.jsx)(v.Z, { scrollContainerRef: T }),
                   }),
               ],
           })

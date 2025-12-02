@@ -120,8 +120,8 @@ let F = !0,
     K = j.QZA.CLOSED,
     z = {},
     q = null,
-    Q = !1,
     X = !1,
+    Q = !1,
     J = !1,
     $ = null,
     ee = null,
@@ -165,7 +165,7 @@ function eh(e) {
     let _ = S.Z.getProfile(n);
     (o = s = p),
         (l = c = _),
-        (J = X),
+        (J = Q),
         (ee = $),
         (K = j.QZA.OPEN),
         (z = {}),
@@ -184,7 +184,7 @@ function eg() {
     (W = !1),
         (K = j.QZA.CLOSED),
         (o = s = null),
-        (Q = !1),
+        (X = !1),
         (J = !1),
         (ee = null),
         (et = null),
@@ -372,7 +372,7 @@ function eB(e) {
     u === n && (u = null);
 }
 function eF(e) {
-    (Q = !0), (X = J = e.enabled), ($ = ee = e.channelId);
+    (X = !0), (Q = J = e.enabled), ($ = ee = e.channelId);
 }
 function eV(e) {
     let { guildId: t, enabled: n, channelId: r } = e;
@@ -408,7 +408,7 @@ function eq(e) {
         new Set([...s.features, j.GuildFeatures.BYPASS_SLOWMODE_PERMISSION_MIGRATION_COMPLETE]),
     );
 }
-function eQ(e) {
+function eX(e) {
     var t, n, r, i, a, o, l, c, u, d;
     let { guildId: f, metadata: p } = e;
     null != s &&
@@ -429,7 +429,7 @@ function eQ(e) {
             }),
         (z = {}));
 }
-function eX() {
+function eQ() {
     es = el = ea;
 }
 function eJ(e) {
@@ -523,7 +523,7 @@ class te extends (p = E.ZP.Store) {
         return el;
     }
     widgetHasChanges() {
-        return !1 !== Q && (J !== X || ee !== $);
+        return !1 !== X && (J !== Q || ee !== $);
     }
     hasChanges() {
         return !m().isEqual(s, o) || !m().isEqual(el, es) || !m().isEqual(c, l) || this.widgetHasChanges();
@@ -595,7 +595,7 @@ class te extends (p = E.ZP.Store) {
             bansVersion: eu,
             invites: ef,
             selectedRoleId: u,
-            fetchedEmbed: Q,
+            fetchedEmbed: X,
             embedEnabled: J,
             embedChannelId: ee,
             mfaLevel: er,
@@ -658,8 +658,8 @@ let tt = new te(
               GUILD_INTEGRATIONS_UPDATE: eK,
               INSTANT_INVITE_REVOKE_SUCCESS: eR,
               INSTANT_INVITE_CREATE_SUCCESS: ew,
-              GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER: eQ,
-              GUILD_DISCOVERY_METADATA_FETCH_FAIL: eX,
+              GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER: eX,
+              GUILD_DISCOVERY_METADATA_FETCH_FAIL: eQ,
               GUILD_DISCOVERY_CATEGORY_ADD: e0,
               GUILD_DISCOVERY_CATEGORY_DELETE: e1,
               GUILD_DISCOVERY_CATEGORY_UPDATE_FAIL: e3,

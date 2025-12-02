@@ -539,7 +539,7 @@ let H = (e) => {
         "soundboard",
         "gameMention",
     ]),
-    Q = i().omit(K, [
+    X = i().omit(K, [
         "codeBlock",
         "br",
         "mention",
@@ -550,7 +550,7 @@ let H = (e) => {
         "soundboard",
         "gameMention",
     ]),
-    X = i().omit(
+    Q = i().omit(
         (0, R.Z)([
             K,
             {
@@ -630,8 +630,8 @@ let er = 10,
         RULES: K,
         CHANNEL_TOPIC_RULES: z,
         VOICE_CHANNEL_STATUS_RULES: q,
-        EMBED_TITLE_RULES: Q,
-        INLINE_REPLY_RULES: X,
+        EMBED_TITLE_RULES: X,
+        INLINE_REPLY_RULES: Q,
         GUILD_VERIFICATION_FORM_RULES: J,
         GUILD_EVENT_RULES: ee,
         PROFILE_BIO_RULES: $,

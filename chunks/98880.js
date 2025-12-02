@@ -1,5 +1,5 @@
 n.d(t, {
-    U4: () => Q,
+    U4: () => X,
     cG: () => es,
     kA: () => el,
     qR: () => ec,
@@ -122,7 +122,7 @@ function q(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-var Q = (function (e) {
+var X = (function (e) {
     return (
         (e.ICON = "icon"),
         (e.ROW = "row"),
@@ -132,7 +132,7 @@ var Q = (function (e) {
         e
     );
 })({});
-function X(e) {
+function Q(e) {
     var t;
     let {
             application: n,
@@ -537,7 +537,7 @@ function es(e) {
 }
 function el(e) {
     let { onClickAppCard: t } = es(e);
-    return (0, r.jsx)(X, K(Y({}, e), { onClick: t }));
+    return (0, r.jsx)(Q, K(Y({}, e), { onClick: t }));
 }
 function ec(e) {
     var { context: t, application: n, location: a, sectionName: o, isOneClickCTA: l, fetchesApplication: u = !0 } = e,
@@ -566,7 +566,7 @@ function ec(e) {
     return y === E.JS.START || y === E.JS.JOIN
         ? l
             ? (0, r.jsx)(
-                  X,
+                  Q,
                   K(Y({}, d), {
                       sectionName: o,
                       application: n,
@@ -591,7 +591,7 @@ function ec(e) {
                   }),
               )
         : (0, r.jsx)(
-              X,
+              Q,
               K(Y({}, d), {
                   sectionName: o,
                   application: n,

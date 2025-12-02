@@ -1,4 +1,4 @@
-n.d(t, { Z: () => X }), n(388685);
+n.d(t, { Z: () => Q }), n(388685);
 var r,
     i = n(392711),
     a = n.n(i),
@@ -271,7 +271,7 @@ function q() {
         }
     }
 }
-class Q extends (r = o.ZP.Store) {
+class X extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(f.Z, p.Z);
     }
@@ -300,8 +300,8 @@ class Q extends (r = o.ZP.Store) {
         return v;
     }
 }
-g(Q, "displayName", "ThreadMessageStore");
-let X = new Q(s.Z, {
+g(X, "displayName", "ThreadMessageStore");
+let Q = new X(s.Z, {
     CONNECTION_OPEN: x,
     OVERLAY_INITIALIZE: L,
     GUILD_CREATE: j,

@@ -19,7 +19,7 @@ function g(e) {
         b = (0, d.Z)(t),
         E = (0, u.Z)(t),
         O = (0, s.Z)(t),
-        y = (0, o.Z)(t);
+        v = (0, o.Z)(t);
     return (
         (0, l.ZP)(() => {
             let e = t.currentActivities
@@ -48,7 +48,7 @@ function g(e) {
                 }),
                 (0, r.jsx)(i.kSQ, { children: E }),
                 (0, r.jsx)(i.kSQ, { children: O }),
-                y,
+                v,
             ],
         })
     );

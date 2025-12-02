@@ -73,8 +73,8 @@ function I(e) {
         W = null == R ? void 0 : R.id,
         { analyticsLocations: K } = (0, d.ZP)(u.Z.INVITE_EMBED),
         [z, q] = i.useState(!1),
-        Q = i.useCallback(() => q(!1), []),
-        X = i.useRef(null),
+        X = i.useCallback(() => q(!1), []),
+        Q = i.useRef(null),
         J = i.useCallback(() => {
             q(!0), (0, c.CB)(W, "show profile", K);
         }, [W, K]),
@@ -111,12 +111,12 @@ function I(e) {
                     guildId: R.id,
                     name: R.name,
                     shouldShow: z,
-                    onRequestClose: Q,
-                    targetElementRef: X,
+                    onRequestClose: X,
+                    targetElementRef: Q,
                     children: () =>
                         (0, r.jsx)(_.Z.GuildName, {
                             guild: R,
-                            ref: X,
+                            ref: Q,
                         }),
                 }),
                 (0, r.jsx)("span", {

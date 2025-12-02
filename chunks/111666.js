@@ -1,7 +1,7 @@
 n.d(t, { Z: () => T }), n(388685);
 var r = n(54381),
     i = n(473749),
-    l = n(666917),
+    l = n(205120),
     a = n(442837),
     s = n(481060),
     o = n(570140),
@@ -17,8 +17,8 @@ var r = n(54381),
     b = n(167762),
     E = n(151459),
     O = n(981631),
-    y = n(388032),
-    v = n(10058);
+    v = n(388032),
+    y = n(10058);
 function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -87,8 +87,8 @@ function S(e) {
                             if (!g.Z.isFriend(n)) return !1;
                             let E = m.default.getUser(n);
                             if (null == E) return !1;
-                            let y = !1,
-                                v = null;
+                            let v = !1,
+                                y = null;
                             if (null != i) {
                                 let t = i.type;
                                 if (
@@ -111,41 +111,41 @@ function S(e) {
                                                   .concat(null != (p = i.details) ? p : "")
                                             : "".concat(t, "-").concat(null != (h = i.name) ? h : "");
                                     (null == (c = r.current[n]) ? void 0 : c.presence) !== l &&
-                                        ((y = !0),
+                                        ((v = !0),
                                         e(n, "presence", l),
-                                        (v = {
+                                        (y = {
                                             user: E,
                                             activity: i,
                                         }));
                                 } else
                                     (null == (o = r.current[n]) ? void 0 : o.presence) != null &&
-                                        ((y = !0), e(n, "presence", null));
+                                        ((v = !0), e(n, "presence", null));
                             }
                             if (null != a) {
                                 let t = f.Z.getChannel(a);
                                 if (null != t) {
                                     let i = "voice-".concat(t.id);
                                     (null == (_ = r.current[n]) ? void 0 : _.voice) !== i &&
-                                        ((y = !0),
+                                        ((v = !0),
                                         e(n, "voice", i),
-                                        (v = {
+                                        (y = {
                                             user: E,
                                             voiceChannel: t,
                                         }));
                                 }
                             } else
                                 (null == (s = r.current[n]) ? void 0 : s.voice) != null &&
-                                    ((y = !0), e(n, "voice", null));
+                                    ((v = !0), e(n, "voice", null));
                             return (
-                                y &&
-                                    null != v &&
-                                    ((b = v),
+                                v &&
+                                    null != y &&
+                                    ((b = y),
                                     null != l.current && (window.clearTimeout(l.current), (l.current = null)),
                                     t(b),
                                     (l.current = window.setTimeout(() => {
                                         t(null), (l.current = null);
                                     }, 10000))),
-                                y
+                                v
                             );
                         },
                         a = (e) => {
@@ -205,7 +205,7 @@ function S(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
-                className: v.container,
+                className: y.container,
                 children: N((e, t) =>
                     null == t
                         ? null
@@ -222,7 +222,7 @@ function S(e) {
                                           I(
                                               {
                                                   ref: T,
-                                                  className: v.activityWrapper,
+                                                  className: y.activityWrapper,
                                                   style: e,
                                               },
                                               n,
@@ -237,12 +237,12 @@ function S(e) {
                                                       ? (0, r.jsx)(u.Z, {
                                                             channel: t.voiceChannel,
                                                             textVariant: "text-xs/medium",
-                                                            textClassName: v.statusText,
+                                                            textClassName: y.statusText,
                                                         })
                                                       : (0, r.jsx)(c.Z, {
                                                             activity: t.activity,
                                                             textVariant: "text-xs/medium",
-                                                            textClassName: v.statusText,
+                                                            textClassName: y.statusText,
                                                         }),
                                               ],
                                           },
@@ -264,8 +264,8 @@ function S(e) {
                             onClick: e,
                             icon: s.iFz,
                             iconSize: _,
-                            "aria-label": y.intl.string(y.t.TdEu5X),
-                            tooltip: i ? null : y.intl.string(y.t.TdEu5X),
+                            "aria-label": v.intl.string(v.t.TdEu5X),
+                            tooltip: i ? null : v.intl.string(v.t.TdEu5X),
                             selected: i,
                             showBadge: n,
                         }),

@@ -107,9 +107,9 @@ function j(e) {
                 }),
             [M],
         ),
-        Q = (0, l.Wu)([f.Z], () => f.Z.recommendedGiftSkuIds, []),
-        X = null != M ? [M] : Q,
-        J = null != (t = X[0]) ? t : null,
+        X = (0, l.Wu)([f.Z], () => f.Z.recommendedGiftSkuIds, []),
+        Q = null != M ? [M] : X,
+        J = null != (t = Q[0]) ? t : null,
         $ = null != M && _.Rm.has(M),
         ee = i.useCallback(() => {
             z(!0), null == a || a();
@@ -178,7 +178,7 @@ function j(e) {
                 loadId: j,
                 stepConfigs: er,
                 applicationId: A.XAJ,
-                skuIDs: X,
+                skuIDs: Q,
                 isGift: k,
                 activeSubscription: null,
                 purchaseType: P.GZ.ONE_TIME,

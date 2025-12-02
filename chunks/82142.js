@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Q }), n(388685);
+n.d(t, { Z: () => X }), n(388685);
 var r,
     i = n(913527),
     a = n.n(i),
@@ -252,4 +252,4 @@ let q = new z(l.Z, {
         LOAD_ARCHIVED_THREADS_SUCCESS: W,
         LOAD_FORUM_POSTS: K,
     }),
-    Q = q;
+    X = q;

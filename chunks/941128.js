@@ -188,7 +188,7 @@ function z() {
 function q() {
     s.K.remove(O), (0, m.isDesktop)() && _.Z.pause();
 }
-function Q(e) {
+function X(e) {
     return e.map((e) =>
         "string" == typeof e
             ? {
@@ -198,7 +198,7 @@ function Q(e) {
             : e,
     );
 }
-class X extends (r = o.ZP.Store) {
+class Q extends (r = o.ZP.Store) {
     initialize() {
         var e;
         let t =
@@ -209,7 +209,7 @@ class X extends (r = o.ZP.Store) {
                       paused: null,
                       userActions: null,
                   };
-        null != t.queue && (v = Q(t.queue)),
+        null != t.queue && (v = X(t.queue)),
             null != t.paused && (I = t.paused),
             null != t.userActions && (N = new Map(Array.from(t.userActions))),
             this.waitFor(h.Z, u.ZP),
@@ -235,8 +235,8 @@ class X extends (r = o.ZP.Store) {
         return P;
     }
 }
-b(X, "displayName", "DispatchManagerStore");
-let J = new X(l.Z, {
+b(Q, "displayName", "DispatchManagerStore");
+let J = new Q(l.Z, {
     DISPATCH_APPLICATION_INSTALL: k,
     DISPATCH_APPLICATION_UPDATE: Z,
     DISPATCH_APPLICATION_UNINSTALL: U,

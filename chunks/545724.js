@@ -62,9 +62,9 @@ let g = function (e) {
             isFocused: b,
             isActive: E,
             onOtherHover: O,
-            className: y,
+            className: v,
         } = e,
-        [v, I] = i.useState(!1),
+        [y, I] = i.useState(!1),
         [C, S] = i.useState(!1),
         T = () => {
             I(!0), !b || E || C || null == O || O();
@@ -85,7 +85,7 @@ let g = function (e) {
                     h(
                         f(
                             {
-                                className: a()(p.messageRequestItem, y, {
+                                className: a()(p.messageRequestItem, v, {
                                     [p.active]: E || C,
                                     [p.firstItem]: 0 === t,
                                 }),
@@ -119,7 +119,7 @@ let g = function (e) {
                             },
                             e,
                         ),
-                        { children: l(v || E || C) },
+                        { children: l(y || E || C) },
                     ),
                 ),
             }),

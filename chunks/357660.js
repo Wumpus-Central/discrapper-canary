@@ -1,20 +1,20 @@
 n.d(t, { T: () => p }), n(415506);
 var r = n(54381),
-    l = n(473749),
-    i = n(442837),
+    i = n(473749),
+    a = n(442837),
     o = n(215569),
-    a = n(481060),
-    s = n(924052),
+    s = n(481060),
+    l = n(924052),
     c = n(700425),
     u = n(670304),
     d = n(764516);
 function f(e) {
     let { notice: t, children: n } = e,
-        { showNotice: c, handleStoreUpdate: u } = (0, s.Cu)(),
+        { showNotice: c, handleStoreUpdate: u } = (0, l.Cu)(),
         f = null == t ? void 0 : t.stores;
-    l.useEffect(() => {
+    i.useEffect(() => {
         if (null != f) {
-            let e = new i.Fh(f, () => {
+            let e = new a.Fh(f, () => {
                 u(f);
             });
             return (
@@ -26,10 +26,10 @@ function f(e) {
             );
         }
     }, [f, u]);
-    let p = l.useMemo(() => {
+    let p = i.useMemo(() => {
         if (null == t || !c) return null;
         let { element: e } = t;
-        return (0, r.jsx)(a.oXn, {
+        return (0, r.jsx)(s.oXn, {
             className: d.notice,
             children: (0, r.jsx)(e, {}),
         });
@@ -46,23 +46,23 @@ function f(e) {
 }
 function p(e) {
     let { node: t } = e,
-        n = l.useRef(null),
-        i = l.useRef(null);
+        n = i.useRef(null),
+        a = i.useRef(null);
     if (1 !== t.layout.length) throw Error("Panels do not currently support multiple panes");
     return (
-        (0, c.i)(t, i),
+        (0, c.i)(t, a),
         (0, r.jsx)(f, {
             notice: t.notice,
             children: (0, r.jsx)(
-                a.w0Z,
+                s.w0Z,
                 {
                     "data-settings-panel-scroller": !0,
                     className: d.scroller,
-                    ref: i,
+                    ref: a,
                     children: (0, r.jsx)("div", {
                         className: d.panel,
                         ref: n,
-                        children: (0, r.jsx)(a.JcV, {
+                        children: (0, r.jsx)(s.JcV, {
                             containerRef: n,
                             children: (0, r.jsx)(u.Z, { node: t.layout[0] }),
                         }),

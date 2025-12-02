@@ -148,7 +148,7 @@ function S(e) {
             new Promise((t) => {
                 t(n(e));
             }),
-        Q = (e, t) => {
+        X = (e, t) => {
             let { inPill: n } = t,
                 i = n ? 16 : 24,
                 o = a(e, i);
@@ -159,18 +159,18 @@ function S(e) {
                   })
                 : null;
         },
-        X = 0 === P.size || T,
+        Q = 0 === P.size || T,
         J = {
             isProcessing: Y,
             isDisabled: S || Z === p.gH.DISABLED || B,
             wrapperClassName: o()(m.select, { [m.inModal]: V }),
             options: q,
-            placeholder: X ? I : void 0,
+            placeholder: Q ? I : void 0,
             onClose: () => A(!1),
             onOpen: () => A(!0),
             onBlur: () => N(!1),
             maxVisibleItems: 5,
-            renderOptionPrefix: Q,
+            renderOptionPrefix: X,
             renderOptionLabel: s,
         };
     return (0, r.jsxs)(i.Fragment, {
@@ -185,7 +185,7 @@ function S(e) {
                                   value: Array.from(P.values()),
                                   onChange: K,
                                   multi: !0,
-                                  inputClassNames: o()({ [m.hidden]: !X }),
+                                  inputClassNames: o()({ [m.hidden]: !Q }),
                                   closeOnSelect: !1,
                               },
                               J,

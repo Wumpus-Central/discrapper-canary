@@ -43,8 +43,8 @@ function g(e) {
                 }),
                 (b.current = !0);
         }, [t, O, E, l, g]);
-    let y = null != O,
-        [v, I] = i.useState(window.innerWidth);
+    let v = null != O,
+        [y, I] = i.useState(window.innerWidth);
     i.useEffect(() => {
         let e = (0, s.debounce)(() => {
             I(window.innerWidth);
@@ -56,7 +56,7 @@ function g(e) {
             }
         );
     }, []);
-    let C = v >= 1610 ? 3 : v >= 1340 ? 2 : 1;
+    let C = y >= 1610 ? 3 : y >= 1340 ? 2 : 1;
     return l && 0 === t.length
         ? (0, r.jsx)(c.$jN, { className: h.spinner })
         : 0 === t.length
@@ -88,8 +88,8 @@ function g(e) {
                                 contentPosition: t,
                                 rowIndex: n,
                                 className: a()(h.questTile, {
-                                    [h.selected]: y && e.id === O,
-                                    [h.unselected]: y && e.id !== O,
+                                    [h.selected]: v && e.id === O,
+                                    [h.unselected]: v && e.id !== O,
                                 }),
                                 sourceQuestContent: u.jn.QUEST_HOME_DESKTOP,
                             },

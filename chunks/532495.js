@@ -98,8 +98,8 @@ function G() {
             pendingBio: K,
             pendingPronouns: z,
             pendingAccentColor: q,
-            pendingThemeColors: Q,
-            pendingLegacyUsernameDisabled: X,
+            pendingThemeColors: X,
+            pendingLegacyUsernameDisabled: Q,
             pendingPrimaryGuildId: J,
             errors: $,
         } = (0, o.cj)([R.Z], () => {
@@ -150,7 +150,7 @@ function G() {
                           (0, r.jsx)(O.Z, {
                               user: F,
                               pendingAvatarSrc: ee,
-                              pendingColors: Q,
+                              pendingColors: X,
                               onThemeColorsChange: T.z5,
                               forcedDivider: !0,
                           }),
@@ -240,7 +240,7 @@ function G() {
                     h.Z,
                     {
                         legacyUsername: eo,
-                        pendingLegacyUsernameDisabled: X,
+                        pendingLegacyUsernameDisabled: Q,
                     },
                     "legacy_username",
                 ),

@@ -235,8 +235,8 @@
         K = W,
         z = f,
         q = /^rgb\(\s*(-?\d+),\s*(-?\d+)\s*,\s*(-?\d+)\s*\)$/,
-        Q = /^rgba\(\s*(-?\d+),\s*(-?\d+)\s*,\s*(-?\d+)\s*,\s*([01]|[01]?\.\d+)\)$/,
-        X = /^rgb\(\s*(-?\d+(?:\.\d+)?)%,\s*(-?\d+(?:\.\d+)?)%\s*,\s*(-?\d+(?:\.\d+)?)%\s*\)$/,
+        X = /^rgba\(\s*(-?\d+),\s*(-?\d+)\s*,\s*(-?\d+)\s*,\s*([01]|[01]?\.\d+)\)$/,
+        Q = /^rgb\(\s*(-?\d+(?:\.\d+)?)%,\s*(-?\d+(?:\.\d+)?)%\s*,\s*(-?\d+(?:\.\d+)?)%\s*\)$/,
         J = /^rgba\(\s*(-?\d+(?:\.\d+)?)%,\s*(-?\d+(?:\.\d+)?)%\s*,\s*(-?\d+(?:\.\d+)?)%\s*,\s*([01]|[01]?\.\d+)\)$/,
         $ = /^hsl\(\s*(-?\d+(?:\.\d+)?),\s*(-?\d+(?:\.\d+)?)%\s*,\s*(-?\d+(?:\.\d+)?)%\s*\)$/,
         ee = /^hsla\(\s*(-?\d+(?:\.\d+)?),\s*(-?\d+(?:\.\d+)?)%\s*,\s*(-?\d+(?:\.\d+)?)%\s*,\s*([01]|[01]?\.\d+)\)$/,
@@ -250,11 +250,11 @@
                 for (var t, n = t.slice(1, 4), r = 0; r < 3; r++) n[r] = +n[r];
                 return (n[3] = 1), n;
             }
-            if ((t = e.match(Q))) {
+            if ((t = e.match(X))) {
                 for (var i = t.slice(1, 5), a = 0; a < 4; a++) i[a] = +i[a];
                 return i;
             }
-            if ((t = e.match(X))) {
+            if ((t = e.match(Q))) {
                 for (var o = t.slice(1, 4), s = 0; s < 3; s++) o[s] = et(2.55 * o[s]);
                 return (o[3] = 1), o;
             }
@@ -276,7 +276,7 @@
             }
         };
     en.test = function (e) {
-        return q.test(e) || Q.test(e) || X.test(e) || J.test(e) || $.test(e) || ee.test(e);
+        return q.test(e) || X.test(e) || Q.test(e) || J.test(e) || $.test(e) || ee.test(e);
     };
     var er = en,
         ei = y,
@@ -511,15 +511,15 @@
             );
         },
         eq = d.unpack,
-        eQ = d.type,
-        eX = y,
+        eX = d.type,
+        eQ = y,
         eJ = E,
         e$ = f,
         e0 = eF;
     (eJ.prototype.hsi = function () {
         return e0(this._rgb);
     }),
-        (eX.hsi = function () {
+        (eQ.hsi = function () {
             for (var e = [], t = arguments.length; t--; ) e[t] = arguments[t];
             return new (Function.prototype.bind.apply(eJ, [null].concat(e, ["hsi"])))();
         }),
@@ -528,7 +528,7 @@
             p: 2,
             test: function () {
                 for (var e = [], t = arguments.length; t--; ) e[t] = arguments[t];
-                if ("array" === eQ((e = eq(e, "hsi"))) && 3 === e.length) return "hsi";
+                if ("array" === eX((e = eq(e, "hsi"))) && 3 === e.length) return "hsi";
             },
         });
     var e1 = d.unpack,
@@ -767,11 +767,11 @@
             return [r[0], r[1], r[2], e.length > 3 ? e[3] : 1];
         },
         tq = d.unpack,
-        tQ = tz,
-        tX = function () {
+        tX = tz,
+        tQ = function () {
             for (var e = [], t = arguments.length; t--; ) e[t] = arguments[t];
             var n = tq(e, "hcl").reverse();
-            return tQ.apply(void 0, n);
+            return tX.apply(void 0, n);
         },
         tJ = d.unpack,
         t$ = d.type,
@@ -794,7 +794,7 @@
             return new (Function.prototype.bind.apply(t1, [null].concat(e, ["hcl"])))();
         }),
         (t3.format.lch = tz),
-        (t3.format.hcl = tX),
+        (t3.format.hcl = tQ),
         ["lch", "hcl"].forEach(function (e) {
             return t3.autodetect.push({
                 p: 2,
@@ -1192,8 +1192,8 @@
                 r = nz(n[0], n[1], n[2]);
             return [r[0], r[1], r[2], e.length > 3 ? e[3] : 1];
         },
-        nQ = d.unpack,
-        nX = d.type,
+        nX = d.unpack,
+        nQ = d.type,
         nJ = y,
         n$ = E,
         n0 = f,
@@ -1210,7 +1210,7 @@
             p: 3,
             test: function () {
                 for (var e = [], t = arguments.length; t--; ) e[t] = arguments[t];
-                if ("array" === nX((e = nQ(e, "oklch"))) && 3 === e.length) return "oklch";
+                if ("array" === nQ((e = nX(e, "oklch"))) && 3 === e.length) return "oklch";
             },
         });
     var n3 = E,
@@ -1818,7 +1818,7 @@
             else throw RangeError("No point in running bezier with only one color.");
             return i;
         },
-        rQ = function (e) {
+        rX = function (e) {
             var t = rq(e);
             return (
                 (t.scale = function () {
@@ -1827,16 +1827,16 @@
                 t
             );
         },
-        rX = y,
+        rQ = y,
         rJ = function (e, t, n) {
             if (!rJ[n]) throw Error("unknown blend mode " + n);
             return rJ[n](e, t);
         },
         r$ = function (e) {
             return function (t, n) {
-                var r = rX(n).rgb(),
-                    i = rX(t).rgb();
-                return rX.rgb(e(r, i));
+                var r = rQ(n).rgb(),
+                    i = rQ(t).rgb();
+                return rQ.rgb(e(r, i));
             };
         },
         r0 = function (e) {
@@ -2556,7 +2556,7 @@
         iq = y;
     return (
         (iq.average = rG),
-        (iq.bezier = rQ),
+        (iq.bezier = rX),
         (iq.blend = r7),
         (iq.cubehelix = is),
         (iq.mix = iq.interpolate = rs),

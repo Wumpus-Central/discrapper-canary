@@ -200,7 +200,7 @@ function w(e) {
         H = (0, s.e7)([d.ZP], () => d.ZP.getDisambiguatedEmojiContext(_), [_]),
         Y = i.useRef(null),
         { emoji: W, size: K, isDisabled: z, columnIndex: q } = t,
-        Q = (e) => {
+        X = (e) => {
             if ((e.stopPropagation(), y.current || v.current)) return;
             let n = e.altKey;
             n && !d.ZP.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(W) && M(a),
@@ -210,7 +210,7 @@ function w(e) {
                     toggleFavorite: n,
                 });
         },
-        X = () => {
+        Q = () => {
             y.current || v.current || g(t);
         },
         J = (e) => {
@@ -243,8 +243,8 @@ function w(e) {
                         isDisabled: z,
                         showPulse: L === a,
                         allowAnimatedEmoji: j,
-                        onFocus: null != u ? u : X,
-                        onMouseMove: X,
+                        onFocus: null != u ? u : Q,
+                        onMouseMove: Q,
                         onMouseEnter: t,
                         onMouseLeave: n,
                         onClick: (e) => {
@@ -262,7 +262,7 @@ function w(e) {
                                     t = Y.current.getBoundingClientRect();
                                 (t.x = G.x + (q + 1) * K), F(P(q, f)), (0, h.U)(k, e, W.id, t);
                             }
-                            Q(e);
+                            X(e);
                         },
                         onContextMenu: J,
                         tabIndex: c,

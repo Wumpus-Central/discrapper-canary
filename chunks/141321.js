@@ -19,8 +19,8 @@ var r = n(54381),
 function O(e) {
     let { onOpen: t, onClose: n, "data-jump-section": l } = e,
         O = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
-        y = i.useRef(null),
-        v = (0, s.e7)(
+        v = i.useRef(null),
+        y = (0, s.e7)(
             [h.ZP],
             () => (null == O ? void 0 : O.id) != null && h.ZP.getMentionCount(O.id, _.W.NOTIFICATION_CENTER) > 0,
         ),
@@ -35,10 +35,10 @@ function O(e) {
             [S],
         );
     return (0, r.jsx)(m.k, {
-        targetElementRef: y,
+        targetElementRef: v,
         onOpen: t,
         onClose: n,
-        badgeState: { badgeForYou: v },
+        badgeState: { badgeForYou: y },
         popoutPosition: "bottom",
         popoutAlign: "right",
         children: (e, t, n, i) => {
@@ -46,7 +46,7 @@ function O(e) {
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(c.u, {
-                        targetElementRef: y,
+                        targetElementRef: v,
                         shouldShow: !t,
                         text: b.intl.string(b.t.GSmTKJ),
                         children: (0, r.jsx)(
@@ -79,13 +79,13 @@ function O(e) {
                             (p = p =
                                 {
                                     tag: "div",
-                                    innerRef: y,
+                                    innerRef: v,
                                     onClick: e,
                                     "data-jump-section": l,
                                     "aria-label": b.intl.string(b.t.GSmTKJ),
                                     className: a()(E.clickable, { [E.withHighlight]: C }),
                                     children:
-                                        v || i
+                                        y || i
                                             ? (0, r.jsxs)(r.Fragment, {
                                                   children: [
                                                       (0, r.jsx)(d.ZP, {
@@ -118,7 +118,7 @@ function O(e) {
                     }),
                     (0, r.jsx)(f.U, {
                         location: "inbox-button",
-                        targetElementRef: y,
+                        targetElementRef: v,
                     }),
                 ],
             });

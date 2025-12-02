@@ -667,15 +667,15 @@ function z(e, t) {
             (n =
                 c.call(i, "[[minimumSignificantDigits]]") && c.call(i, "[[maximumSignificantDigits]]")
                     ? q(t, i["[[minimumSignificantDigits]]"], i["[[maximumSignificantDigits]]"])
-                    : Q(
+                    : X(
                           t,
                           i["[[minimumIntegerDigits]]"],
                           i["[[minimumFractionDigits]]"],
                           i["[[maximumFractionDigits]]"],
                       )),
-            X[o])
+            Q[o])
         ) {
-            var d = X[i["[[numberingSystem]]"]];
+            var d = Q[i["[[numberingSystem]]"]];
             n = String(n).replace(/\d/g, function (e) {
                 return d[e];
             });
@@ -727,7 +727,7 @@ function q(e, t, n) {
     }
     return i;
 }
-function Q(e, t, n, r) {
+function X(e, t, n, r) {
     var i,
         a = Number.prototype.toFixed.call(e, r),
         o = a.split(".")[0].length,
@@ -764,7 +764,7 @@ u(o, "NumberFormat", {
         configurable: !0,
         get: K,
     });
-var X = {
+var Q = {
     arab: ["٠", "١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩"],
     arabext: ["۰", "۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹"],
     bali: ["᭐", "᭑", "᭒", "᭓", "᭔", "᭕", "᭖", "᭗", "᭘", "᭙"],

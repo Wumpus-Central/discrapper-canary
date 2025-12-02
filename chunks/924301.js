@@ -273,10 +273,10 @@ function q(e) {
             w(t, e, n.eventCount - n.recurrenceCounts[e]);
         });
 }
-function Q() {
+function X() {
     return y.clear(), !0;
 }
-function X(e) {
+function Q(e) {
     let { invite: t } = e,
         n = t.guild_scheduled_event;
     return null != n && (A(n), !0);
@@ -367,10 +367,10 @@ let er = new en(l.Z, {
     GUILD_SCHEDULED_EVENT_RSVPS_FETCH_SUCESS: Y,
     GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS: W,
     GUILD_SCHEDULED_EVENT_USER_COUNTS_FETCH_SUCCESS: q,
-    INVITE_RESOLVE_SUCCESS: X,
+    INVITE_RESOLVE_SUCCESS: Q,
     GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE: F,
     GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE: F,
     GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE: V,
     GUILD_SCHEDULED_EVENT_EXCEPTIONS_DELETE: H,
-    LOGOUT: Q,
+    LOGOUT: X,
 });

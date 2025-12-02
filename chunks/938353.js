@@ -56,8 +56,8 @@ var r,
     K = n(768494),
     z = n(124347),
     q = n(976853),
-    Q = n(346013),
-    X = n(120324),
+    X = n(346013),
+    Q = n(120324),
     J = n(977683),
     $ = n(128435),
     ee = n(98278),
@@ -110,8 +110,8 @@ var r,
     eK = n(963206),
     ez = n(817384),
     eq = n(981631),
-    eQ = n(474936),
-    eX = n(388032),
+    eX = n(474936),
+    eQ = n(388032),
     eJ = n(636428),
     e$ = n(680674);
 function e0(e, t, n) {
@@ -199,7 +199,7 @@ function e8() {
             (0, i.jsx)(p.Text, {
                 variant: "text-xs/normal",
                 color: "text-muted",
-                children: eX.intl.format(eX.t["G/H+s6"], { onClick: () => (0, ee.z)() }),
+                children: eQ.intl.format(eQ.t["G/H+s6"], { onClick: () => (0, ee.z)() }),
             }),
         ],
     });
@@ -277,7 +277,7 @@ class tn extends (r = a.Component) {
         });
     }
     renderSocialProofingFileSizeNitroUpsell(e) {
-        let t = e.attachments.some((e) => e.size > eQ.Lw);
+        let t = e.attachments.some((e) => e.size > eX.Lw);
         return (0, eC.M)("attachment") && t ? (0, i.jsx)(e8, {}) : null;
     }
     renderCodedLinks(e) {
@@ -453,7 +453,7 @@ class tn extends (r = a.Component) {
                     });
                 })
                 .filter((e) => "INVALID" !== e.type),
-            { srcToOnClickOverride: _, srcToHandlePreloadImage: m } = (0, X.G)(
+            { srcToOnClickOverride: _, srcToHandlePreloadImage: m } = (0, Q.G)(
                 p,
                 {
                     enabledContentHarmTypeFlags: s,
@@ -636,16 +636,16 @@ class tn extends (r = a.Component) {
         )
             return (0, i.jsx)("div", {
                 className: eJ.threadRoleMentionFailure,
-                children: eX.intl.string(eX.t.ma8Rs0),
+                children: eQ.intl.string(eQ.t.ma8Rs0),
             });
     }
     renderSuppressConfirmModal() {
         let { channel: e, message: t } = this.props;
         return (0, i.jsxs)(p.sYh, {
             dismissable: !0,
-            header: eX.intl.string(eX.t.VL1KOk),
-            confirmText: eX.intl.string(eX.t.YEHppG),
-            cancelText: eX.intl.string(eX.t["ETE/oC"]),
+            header: eQ.intl.string(eQ.t.VL1KOk),
+            confirmText: eQ.intl.string(eQ.t.YEHppG),
+            cancelText: eQ.intl.string(eQ.t["ETE/oC"]),
             onCancel: () => this.setState({ showSuppressModal: !1 }),
             onConfirm: () => {
                 _.Z.suppressEmbeds(e.id, t.id), this.setState({ showSuppressModal: !1 });
@@ -655,12 +655,12 @@ class tn extends (r = a.Component) {
                     variant: "text-md/normal",
                     color: "text-default",
                     className: eJ.confirmText,
-                    children: eX.intl.string(eX.t["vXZ+Fo"]),
+                    children: eQ.intl.string(eQ.t["vXZ+Fo"]),
                 }),
                 (0, i.jsx)(p.Text, {
                     variant: "text-md/normal",
                     color: "text-muted",
-                    children: eX.intl.string(eX.t["5j2by3"]),
+                    children: eQ.intl.string(eQ.t["5j2by3"]),
                 }),
             ],
         });
@@ -672,9 +672,9 @@ class tn extends (r = a.Component) {
             ? void this.setState({ showRemoveAttachmentModal: !1 })
             : (0, i.jsx)(p.sYh, {
                   dismissable: !0,
-                  header: eX.intl.string(eX.t.CbTIEo),
-                  confirmText: eX.intl.string(eX.t.kFwAsa),
-                  cancelText: eX.intl.string(eX.t["ETE/oC"]),
+                  header: eQ.intl.string(eQ.t.CbTIEo),
+                  confirmText: eQ.intl.string(eQ.t.kFwAsa),
+                  cancelText: eQ.intl.string(eQ.t["ETE/oC"]),
                   onCancel: () =>
                       this.setState({
                           showRemoveAttachmentModal: !1,
@@ -692,7 +692,7 @@ class tn extends (r = a.Component) {
                       variant: "text-md/normal",
                       color: "text-default",
                       className: eJ.confirmText,
-                      children: eX.intl.string(eX.t.faHmO3),
+                      children: eQ.intl.string(eQ.t.faHmO3),
                   }),
               });
     }
@@ -721,7 +721,7 @@ class tn extends (r = a.Component) {
             t.type !== eq.hBH.POST_PREVIEW || null == t.url
                 ? []
                 : (0, i.jsx)(
-                      Q.Z,
+                      X.Z,
                       {
                           embedUrl: t.url,
                           message: e,

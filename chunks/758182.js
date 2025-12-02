@@ -194,22 +194,22 @@ async function q(e, t, n) {
         );
     }
 }
-function Q() {
+function X() {
     return en(() => s.Z.dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" })), Promise.resolve();
 }
-let X = !1;
+let Q = !1;
 async function J(e, t) {
     var n, r;
     if (null == e) return [];
     switch (t.page) {
         case "private-channels":
         case "guild-channels":
-            X = !0;
+            Q = !0;
             break;
         case "other":
-            "@me" === t.guildId && (X = !0);
+            "@me" === t.guildId && (Q = !0);
     }
-    if (X)
+    if (Q)
         return null !=
             (n = await (0, l.dI)(() => i.Z.timeAsync("\uD83D\uDCBE", "cache: guilds", () => u.Z.getAsync(e))))
             ? n
@@ -256,7 +256,7 @@ async function et(e, t, n, r) {
                         : Promise.resolve(!0),
                 ),
                 (0, l.dI)(() =>
-                    null == e || X
+                    null == e || Q
                         ? Promise.resolve([])
                         : i.Z.timeAsync("\uD83D\uDCBE", "cache: lazy guilds", () => u.Z.getAsync(e)),
                 ),
@@ -442,7 +442,7 @@ class er extends (r = a.ZP.Store) {
             let t = S.default.getId(),
                 r = E.Z.carefullyOpenDatabase(t),
                 [i, a, o] = await v.Z.loadMiniCache.measureAsync(() => q(r, t, e));
-            i ? (n(), await et(r, t, a, o)) : (n(), await Q());
+            i ? (n(), await et(r, t, a, o)) : (n(), await X());
         } catch (e) {
             D.error("clearing cache. exception encountered while loading cache.", e, e.stack),
                 (0, P.Z)("cache:exception"),

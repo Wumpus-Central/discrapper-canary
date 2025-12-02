@@ -56,10 +56,10 @@
         q = function (e) {
             return e.toLowerCase();
         },
-        Q = function (e) {
+        X = function (e) {
             return typeof e === c ? e.replace(/[^\d\.]/g, i).split(".")[0] : void 0;
         },
-        X = function (e, t) {
+        Q = function (e, t) {
             if (typeof e === c) return (e = e.replace(/^\s\s*/, i)), typeof t === s ? e : e.substring(0, S);
         },
         J = function (e, t) {
@@ -548,8 +548,8 @@
                     /hbbtv\/\d+\.\d+\.\d+ +\([\w\+ ]*; *([\w\d][^;]*);([^;]*)/i,
                 ],
                 [
-                    [_, X],
-                    [d, X],
+                    [_, Q],
+                    [d, Q],
                     [p, y],
                 ],
                 [/\b(android tv|smart[- ]?tv|opera tv|tv; rv:)\b/i],
@@ -704,7 +704,7 @@
                         (e[f] = r),
                         (e[m] = r),
                         J.call(e, g, O.browser),
-                        (e[u] = Q(e[m])),
+                        (e[u] = X(e[m])),
                         v && a && a.brave && typeof a.brave.isBrave == o && (e[f] = "Brave"),
                         e
                     );
@@ -764,7 +764,7 @@
                     return g;
                 }),
                 (this.setUA = function (e) {
-                    return (g = typeof e === c && e.length > S ? X(e, S) : e), this;
+                    return (g = typeof e === c && e.length > S ? Q(e, S) : e), this;
                 }),
                 this.setUA(g),
                 this

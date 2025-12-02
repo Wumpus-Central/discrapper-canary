@@ -17,8 +17,8 @@ var r = n(54381),
     b = n(70097),
     E = n(605236),
     O = n(524444),
-    y = n(626135),
-    v = n(960048),
+    v = n(626135),
+    y = n(960048),
     I = n(981631),
     C = n(921944),
     S = n(388032),
@@ -176,7 +176,7 @@ function Z(e) {
                               });
                     eu(await Promise.all(t));
                 } catch (e) {
-                    v.Z.captureException(e), eu(P);
+                    y.Z.captureException(e), eu(P);
                 }
             };
             !0 !== ed.current && e(), (ed.current = !0);
@@ -197,11 +197,11 @@ function Z(e) {
             () => () => {
                 if ("video" === Z.type || "embed" === Z.type) {
                     let [e, t] = ep();
-                    y.default.track(I.rMx.CHANGE_LOG_VIDEO_PLAYED, {
+                    v.default.track(I.rMx.CHANGE_LOG_VIDEO_PLAYED, {
                         change_log_id: G,
                         seconds_played: Math.round(e / 1000),
                     }),
-                        y.default.track(I.rMx.CHANGE_LOG_VIDEO_UNMUTE, {
+                        v.default.track(I.rMx.CHANGE_LOG_VIDEO_UNMUTE, {
                             change_log_id: G,
                             seconds_unmuted: Math.round(t / 1000),
                         });
@@ -213,9 +213,9 @@ function Z(e) {
             (0, E.kk)(u.z.PREMIUM_MARKETING_MOMENT_ANNOUNCEMENT_UPSELL);
             let e = Date.now();
             return (
-                y.default.track(I.rMx.CHANGE_LOG_OPENED, { change_log_id: G }),
+                v.default.track(I.rMx.CHANGE_LOG_OPENED, { change_log_id: G }),
                 () => {
-                    y.default.track(I.rMx.CHANGE_LOG_CLOSED, {
+                    v.default.track(I.rMx.CHANGE_LOG_CLOSED, {
                         change_log_id: G,
                         seconds_open: Math.round((Date.now() - e) / 1000),
                     }),
@@ -255,7 +255,7 @@ function Z(e) {
                                       src: Z.src,
                                       poster: Z.poster,
                                       onPlay: (e) => {
-                                          y.default.track(I.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: G }),
+                                          v.default.track(I.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: G }),
                                               K(Date.now()),
                                               et(!0),
                                               er(e.currentTarget.muted);
@@ -304,7 +304,7 @@ function Z(e) {
                                         renderImageComponent: O.Yi,
                                         renderLinkComponent: O.iT,
                                         onPlay: () => {
-                                            y.default.track(I.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: G });
+                                            v.default.track(I.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: G });
                                         },
                                     })
                                   : "image" === Z.type

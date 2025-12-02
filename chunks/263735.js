@@ -1,21 +1,21 @@
 n.d(e, { Q: () => E });
 var i = n(54381),
-    r = n(657707),
-    l = n(509613),
-    s = n(313789),
+    l = n(657707),
+    s = n(509613),
+    r = n(313789),
     u = n(400287),
     a = n(726985),
     o = n(388032);
-let c = (0, l.x1)(s.n.CHAT_PANE, {
+let c = (0, s.x1)(r.n.CHAT_PANE, {
         buildLayout: () => [],
         render: () => (0, i.jsx)(u.Z, {}),
     }),
-    d = (0, l.wf)(s.n.CHAT_PANEL, {
+    d = (0, s.wf)(r.n.CHAT_PANEL, {
         useTitle: () => o.intl.string(o.t["/VQax8"]),
         buildLayout: () => [c],
     }),
-    E = (0, l.m7)(s.n.CHAT_SIDEBAR_ITEM, {
-        icon: r.kBi,
+    E = (0, s.m7)(r.n.CHAT_SIDEBAR_ITEM, {
+        icon: l.kBi,
         useTitle: () => o.intl.string(o.t["/VQax8"]),
         getLegacySearchKey: () => a.s6.CHAT,
         buildLayout: () => [d],

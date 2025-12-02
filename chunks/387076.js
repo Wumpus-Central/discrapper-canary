@@ -1,17 +1,17 @@
 n.d(e, { Z: () => d });
 var i = n(846027),
-    r = n(509613),
-    l = n(131951),
-    s = n(313789),
+    l = n(509613),
+    s = n(131951),
+    r = n(313789),
     u = n(325808),
     a = n(595373),
     o = n(981631),
     c = n(388032);
-let d = (0, r.UO)(s.n.VOICE_PUSH_TO_TALK_RELEASE_DELAY_SETTING, {
+let d = (0, l.UO)(r.n.VOICE_PUSH_TO_TALK_RELEASE_DELAY_SETTING, {
     useTitle: () => c.intl.string(c.t.GCNMM8),
     usePredicate: a.J,
     getInitialValue: function () {
-        let { delay: t } = l.Z.getModeOptions();
+        let { delay: t } = s.Z.getModeOptions();
         return t;
     },
     setValue: function (t) {

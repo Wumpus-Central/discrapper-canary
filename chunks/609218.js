@@ -83,9 +83,9 @@ function M(e) {
             var e;
             return null != (e = (0, g.fr)(z, T.Si.TIER_2)) ? e : C.intl.string(C.t.pj0XBN);
         }, [z]),
-        Q = (0, b.Z)({ location: "PremiumUpsellPickerOverlay" }),
-        X = (0, S.Z)(T.Si.TIER_2);
-    if (Q) {
+        X = (0, b.Z)({ location: "PremiumUpsellPickerOverlay" }),
+        Q = (0, S.Z)(T.Si.TIER_2);
+    if (X) {
         let e;
         e = F ? ((0, h.rO)() ? w.Z : D.Z) : (0, h.rO)() ? x.Z : L.Z;
         let t = F ? "nitro-pink" : "green";
@@ -119,9 +119,9 @@ function M(e) {
                                                 loopAt: 5,
                                             }),
                                         }),
-                                        null != X && (0, r.jsx)(s.C, { type: { text: X } }),
+                                        null != Q && (0, r.jsx)(s.C, { type: { text: Q } }),
                                         (0, r.jsx)(u.Heading, {
-                                            className: o()(N.title, { [N.withBadge]: null != X }),
+                                            className: o()(N.title, { [N.withBadge]: null != Q }),
                                             variant: "heading-xl/bold",
                                             color: "header-primary",
                                             children: a,

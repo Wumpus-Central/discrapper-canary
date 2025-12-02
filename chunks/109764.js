@@ -1,7 +1,7 @@
 n.d(t, { Z: () => f });
-var i = n(54381);
+var r = n(54381);
 n(473749);
-var r = n(399606),
+var i = n(399606),
     l = n(481060),
     u = n(228392),
     a = n(592125),
@@ -10,10 +10,10 @@ var r = n(399606),
     d = n(981631),
     s = n(388032);
 function f(e, t, n) {
-    let f = (0, r.e7)([a.Z], () => (null != e ? a.Z.getChannel(e.parent_id) : null));
+    let f = (0, i.e7)([a.Z], () => (null != e ? a.Z.getChannel(e.parent_id) : null));
     return null == e
         ? null
-        : (0, i.jsx)(l.sNh, {
+        : (0, r.jsx)(l.sNh, {
               id: "channel-copy-link",
               label: s.intl.string(s.t.WqhZss),
               action: () => {

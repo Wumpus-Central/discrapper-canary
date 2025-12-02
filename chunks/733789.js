@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(953529), n(388685);
+n.d(t, { Z: () => v }), n(953529), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(120356),
@@ -226,4 +226,4 @@ class O extends i.PureComponent {
             );
     }
 }
-let y = O;
+let v = O;

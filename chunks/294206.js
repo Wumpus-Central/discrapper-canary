@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => Q,
+    ZP: () => X,
     hU: () => W,
 }),
     n(388685);
@@ -208,7 +208,7 @@ function q(e, t) {
         };
     }, [t, e]);
 }
-let Q = i.forwardRef(function (e, t) {
+let X = i.forwardRef(function (e, t) {
     var n,
         a,
         u,
@@ -223,8 +223,8 @@ let Q = i.forwardRef(function (e, t) {
             focused: k,
             forceSecondaryActions: Z = !1,
             interactive: W = !0,
-            enableSecondaryActions: Q = !1,
-            suppressPlaySound: X,
+            enableSecondaryActions: X = !1,
+            suppressPlaySound: Q,
             onMouseEnter: J,
             onSelectItem: $,
             analyticsLocations: ee,
@@ -283,7 +283,7 @@ let Q = i.forwardRef(function (e, t) {
         eA = (0, s.JA)(eT),
         eC = null != ed || null != ef,
         eN = !(0, C.Nq)(ep, I, T) && !eo,
-        eP = Z || (Q && !eN),
+        eP = Z || (X && !eN),
         eR = null != (O = g.Wq.useStore().bottomPosition) ? O : 0,
         ew =
             (null != (S = null == (a = eb.current) ? void 0 : a.getBoundingClientRect().bottom) ? S : 0) + 50 > eR
@@ -298,7 +298,7 @@ let Q = i.forwardRef(function (e, t) {
         }, []),
         eM = eN && en;
     function ek() {
-        X || em(ee);
+        Q || em(ee);
     }
     function eU(e) {
         if (
@@ -321,7 +321,7 @@ let Q = i.forwardRef(function (e, t) {
             }),
         }),
         eZ = (e) =>
-            X || eN
+            Q || eN
                 ? eM
                     ? (0, r.jsx)(f.mBM, {
                           size: "xs",
@@ -360,7 +360,7 @@ let Q = i.forwardRef(function (e, t) {
                 : (0, r.jsxs)("div", {
                       className: L.buttonOverlay,
                       children: [
-                          (0, r.jsx)("div", { className: o()({ [L.buttonOverlayBackground]: !X }) }),
+                          (0, r.jsx)("div", { className: o()({ [L.buttonOverlayBackground]: !Q }) }),
                           (0, r.jsx)("div", {
                               className: L.buttonOverlayActions,
                               children:
@@ -453,7 +453,7 @@ let Q = i.forwardRef(function (e, t) {
                             {
                                 [L.animated]: ei,
                                 [L.playing]: null != ea ? ea : eg,
-                                [L.hoverActiveBackground]: X,
+                                [L.hoverActiveBackground]: Q,
                                 [L.soundButtonInteractive]: W,
                                 [L.buttonDisabled]: !W && !Z,
                                 [L.premiumDisabled]: eN && !Z,
@@ -465,7 +465,7 @@ let Q = i.forwardRef(function (e, t) {
                         onClick: (e) => {
                             null == eU || eU(e);
                         },
-                        onContextMenu: Q && !eN ? e_ : void 0,
+                        onContextMenu: X && !eN ? e_ : void 0,
                         children: [
                             (0, r.jsxs)("div", {
                                 className: o()(L.soundInfo, { [L.hasEmoji]: eC }),

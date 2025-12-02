@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(539854);
+n.d(t, { Z: () => v }), n(539854);
 var r = n(473749),
     i = n(846519),
     l = n(692547),
@@ -13,8 +13,8 @@ var r = n(473749),
     m = n(400321),
     _ = n(813900);
 let g = 1000 / 60;
-function b(e, t, n, b) {
-    let v = (0, a.dQu)(l.Z.unsafe_rawColors.BRAND_500).hex(),
+function v(e, t, n, v) {
+    let b = (0, a.dQu)(l.Z.unsafe_rawColors.BRAND_500).hex(),
         h = (0, a.dQu)(l.Z.unsafe_rawColors.BLACK_500).hex(),
         E = (0, a.dQu)(l.Z.unsafe_rawColors.WHITE_500).hex(),
         y = r.useRef({}),
@@ -39,10 +39,10 @@ function b(e, t, n, b) {
                         if (null == f) return;
                         let _ = f.getContext("2d");
                         if (null == _) return;
-                        let { width: g, height: b } = f.getBoundingClientRect(),
-                            v = [];
+                        let { width: g, height: v } = f.getBoundingClientRect(),
+                            b = [];
                         n.forEach((e) => {
-                            if (null == c.Z.getVoiceStateForChannel(a, e.userId)) return void v.push(e);
+                            if (null == c.Z.getVoiceStateForChannel(a, e.userId)) return void b.push(e);
                             !(function (e) {
                                 let {
                                     drawable: t,
@@ -86,28 +86,28 @@ function b(e, t, n, b) {
                                 drawable: e,
                                 context: _,
                                 canvasWidth: g,
-                                canvasHeight: b,
+                                canvasHeight: v,
                                 fallbackColor: r,
                                 outlineColorDark: o,
                                 outlineColorLight: u,
                                 linesDrawnAt: i,
-                                deadDrawables: v,
+                                deadDrawables: b,
                                 streamerId: l,
                             });
                         }),
-                            v.length > 0 && (0, s.fW)(v, l);
+                            b.length > 0 && (0, s.fW)(b, l);
                     })({
                         canvasRef: e,
                         drawables: n,
-                        fallbackColor: v,
+                        fallbackColor: b,
                         linesDrawnAt: y,
                         streamerId: t,
                         outlineColorDark: h,
                         outlineColorLight: E,
-                        channelId: b,
+                        channelId: v,
                     });
             },
-            [e, b, v, h, E],
+            [e, v, b, h, E],
         );
     r.useEffect(() => {
         let t = new ResizeObserver(() => {

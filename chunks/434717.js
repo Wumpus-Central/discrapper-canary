@@ -1,65 +1,65 @@
-t.d(n, { Z: () => v });
-var a = t(54381),
-    r = t(473749),
-    i = t(319245),
-    s = t(793030),
-    o = t(681715),
-    l = t(410030),
-    c = t(617136),
-    d = t(915750),
-    u = t(49436),
-    m = t(509212),
-    p = t(475595),
-    b = t(455357),
-    f = t(477005),
-    x = t(659302),
-    h = t(324805),
-    _ = t(231338),
-    C = t(388032),
-    g = t(985952);
-function j(e) {
-    let { quest: n, sourceQuestContent: t, onLoadComplete: j } = e,
-        v = (0, l.ZP)(),
-        y = (0, s.wjy)(v) ? _.BR.DARK : _.BR.LIGHT,
-        N = (0, m.V_)(n),
-        O = (0, d.aM)(),
-        P = (0, m.vB)(n.config),
-        T = r.useMemo(() => {
+n.d(t, { Z: () => b });
+var r = n(54381),
+    a = n(473749),
+    i = n(319245),
+    o = n(793030),
+    s = n(681715),
+    l = n(410030),
+    c = n(617136),
+    u = n(915750),
+    d = n(49436),
+    m = n(509212),
+    p = n(475595),
+    C = n(455357),
+    f = n(477005),
+    h = n(659302),
+    j = n(324805),
+    x = n(231338),
+    y = n(388032),
+    g = n(985952);
+function v(e) {
+    let { quest: t, sourceQuestContent: n, onLoadComplete: v } = e,
+        b = (0, l.ZP)(),
+        _ = (0, o.wjy)(b) ? x.BR.DARK : x.BR.LIGHT,
+        w = (0, m.V_)(t),
+        O = (0, u.aM)(),
+        N = (0, m.vB)(t.config),
+        P = a.useMemo(() => {
             var e;
-            let t = null == (e = n.config.ctaConfig) ? void 0 : e.subtitle;
-            return null != t
-                ? t
-                : (0, m.BI)(n.config) !== i.W.GAMEPLAY ||
-                    n.config.features.includes(h.S7.NON_GAMING_PLAY_QUEST) ||
-                    (0, m.Pb)(n)
-                  ? C.intl.string(C.t.y8Xf3k)
-                  : C.intl.string(C.t["wirwN+"]);
-        }, [n]),
-        { isLoading: S } = (0, b.kC)();
-    r.useEffect(() => {
-        S || j();
-    }, [S, j]);
-    let w = (0, x.yc)({
-        isShareable: P,
-        questId: n.id,
-        trackingCtx: r.useMemo(
+            let n = null == (e = t.config.ctaConfig) ? void 0 : e.subtitle;
+            return null != n
+                ? n
+                : (0, m.BI)(t.config) !== i.W.GAMEPLAY ||
+                    t.config.features.includes(j.S7.NON_GAMING_PLAY_QUEST) ||
+                    (0, m.Pb)(t)
+                  ? y.intl.string(y.t.y8Xf3k)
+                  : y.intl.string(y.t["wirwN+"]);
+        }, [t]),
+        { isLoading: E } = (0, C.kC)();
+    a.useEffect(() => {
+        E || v();
+    }, [E, v]);
+    let T = (0, h.yc)({
+        isShareable: N,
+        questId: t.id,
+        trackingCtx: a.useMemo(
             () => ({
-                content: u.jn.REWARD_MODAL,
+                content: d.jn.REWARD_MODAL,
                 ctaContent: c.jZ.REWARD_MODAL_COPY_LINK,
                 impressionId: O,
-                sourceQuestContent: t,
+                sourceQuestContent: n,
             }),
-            [O, t],
+            [O, n],
         ),
     });
-    return (0, a.jsxs)("div", {
+    return (0, r.jsxs)("div", {
         className: g.container,
         children: [
-            (0, a.jsx)(b.Fl, {
+            (0, r.jsx)(C.Fl, {
                 id: "hero-display",
                 children: (e) =>
-                    (0, a.jsx)(f.Z, {
-                        quest: n,
+                    (0, r.jsx)(f.Z, {
+                        quest: t,
                         imageSize: {
                             width: 908,
                             height: 380,
@@ -69,81 +69,81 @@ function j(e) {
                         assetRef: e,
                     }),
             }),
-            (0, a.jsx)("div", {
+            (0, r.jsx)("div", {
                 className: g.partnerLogotypeContainer,
-                children: (0, a.jsx)(b.Fl, {
+                children: (0, r.jsx)(C.Fl, {
                     id: "partner-logotype",
                     children: (e) =>
-                        (0, a.jsx)("img", {
+                        (0, r.jsx)("img", {
                             ref: e,
                             className: g.partnerLogotype,
-                            alt: C.intl.formatToPlainString(C.t.rtm15P, { name: n.config.messages.gameTitle }),
-                            src: (0, p.fh)(n, p.eC.LOGO_TYPE, y).url,
+                            alt: y.intl.formatToPlainString(y.t.rtm15P, { name: t.config.messages.gameTitle }),
+                            src: (0, p.fh)(t, p.eC.LOGO_TYPE, _).url,
                         }),
                 }),
             }),
-            (0, a.jsxs)("div", {
+            (0, r.jsxs)("div", {
                 className: g.partnerContentContainer,
                 children: [
-                    (0, a.jsxs)("div", {
+                    (0, r.jsxs)("div", {
                         className: g.partnerCopyContainer,
                         children: [
-                            (0, a.jsx)(s.X6q, {
+                            (0, r.jsx)(o.X6q, {
                                 variant: "heading-md/semibold",
                                 color: "header-primary",
                                 className: g.partnerTitle,
-                                children: C.intl.format(C.t.EAYZAr, { questName: n.config.messages.questName }),
+                                children: y.intl.format(y.t.EAYZAr, { questName: t.config.messages.questName }),
                             }),
-                            (0, a.jsx)(s.xvT, {
+                            (0, r.jsx)(o.xvT, {
                                 variant: "text-sm/medium",
                                 color: "text-secondary",
-                                children: T,
+                                children: P,
                             }),
                         ],
                     }),
-                    (0, a.jsx)(b.Fl, {
+                    (0, r.jsx)(C.Fl, {
                         id: "partner-game-tile",
                         children: (e) =>
-                            (0, a.jsx)("img", {
+                            (0, r.jsx)("img", {
                                 ref: e,
                                 className: g.partnerGameTile,
-                                alt: C.intl.formatToPlainString(C.t.rtm15P, { name: n.config.messages.gameTitle }),
-                                src: (0, p.fh)(n, p.eC.GAME_TILE, y).url,
+                                alt: y.intl.formatToPlainString(y.t.rtm15P, { name: t.config.messages.gameTitle }),
+                                src: (0, p.fh)(t, p.eC.GAME_TILE, _).url,
                             }),
                     }),
                 ],
             }),
-            (0, a.jsx)("div", {
+            (0, r.jsx)("div", {
                 className: g.bottomContainer,
-                children: (0, a.jsxs)(s.hE2, {
+                children: (0, r.jsxs)(o.hE2, {
                     size: "sm",
                     direction: "horizontal",
                     fullWidth: !0,
                     fullWidthContainer: !0,
                     children: [
-                        P &&
-                            (0, a.jsx)(o.u, {
-                                text: C.intl.string(C.t.WmfZHZ),
-                                children: (0, a.jsx)(s.hU, {
-                                    icon: s.xPt,
-                                    onClick: w,
-                                    "aria-label": C.intl.string(C.t.WmfZHZ),
+                        N &&
+                            (0, r.jsx)(s.u, {
+                                text: y.intl.string(y.t.WmfZHZ),
+                                children: (0, r.jsx)(o.hU, {
+                                    icon: o.xPt,
+                                    onClick: T,
+                                    "aria-label": y.intl.string(y.t.WmfZHZ),
                                     variant: "secondary",
                                 }),
                             }),
-                        (0, a.jsx)(s.zxk, {
+                        (0, r.jsx)(o.zxk, {
                             variant: "primary",
-                            text: N,
+                            text: w,
                             onClick: () => {
-                                (0, m.nc)(n, {
-                                    content: u.jn.REWARD_MODAL,
+                                (0, m.nc)(t, {
+                                    content: d.jn.REWARD_MODAL,
                                     ctaContent: c.jZ.OPEN_GAME_LINK,
                                     impressionId: O,
-                                    sourceQuestContent: t,
+                                    sourceQuestContent: n,
                                 });
                             },
                             fullWidth: !0,
-                            icon: s.zFc,
+                            icon: o.zFc,
                             iconPosition: "end",
                         }),
                     ],
@@ -152,35 +152,35 @@ function j(e) {
         ],
     });
 }
-function v(e) {
-    let { quest: n, location: t } = e;
-    return (0, a.jsx)(b.x8, {
-        source: t,
-        questId: n.id,
-        isPreview: n.preview,
-        children: (0, a.jsx)(
-            j,
+function b(e) {
+    let { quest: t, location: n } = e;
+    return (0, r.jsx)(C.x8, {
+        source: n,
+        questId: t.id,
+        isPreview: t.preview,
+        children: (0, r.jsx)(
+            v,
             (function (e) {
-                for (var n = 1; n < arguments.length; n++) {
-                    var t = null != arguments[n] ? arguments[n] : {},
-                        a = Object.keys(t);
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        r = Object.keys(n);
                     "function" == typeof Object.getOwnPropertySymbols &&
-                        (a = a.concat(
-                            Object.getOwnPropertySymbols(t).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                        (r = r.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             }),
                         )),
-                        a.forEach(function (n) {
-                            var a;
-                            (a = t[n]),
-                                n in e
-                                    ? Object.defineProperty(e, n, {
-                                          value: a,
+                        r.forEach(function (t) {
+                            var r;
+                            (r = n[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: r,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0,
                                       })
-                                    : (e[n] = a);
+                                    : (e[t] = r);
                         });
                 }
                 return e;

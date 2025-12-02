@@ -172,18 +172,18 @@ e.exports = (function (e) {
             for (var K = [], z = 0; z < I.length; ) {
                 var q = I[z];
                 if (q.wrapperTemplate) {
-                    var Q = [];
-                    do Q.push(I[z].block), z++;
+                    var X = [];
+                    do X.push(I[z].block), z++;
                     while (z < I.length && I[z].wrapperTemplate === q.wrapperTemplate);
-                    var X = u.cloneElement(
+                    var Q = u.cloneElement(
                         q.wrapperTemplate,
                         {
                             key: q.key + "-wrap",
                             "data-offset-key": q.offsetKey,
                         },
-                        Q,
+                        X,
                     );
-                    K.push(X);
+                    K.push(Q);
                 } else K.push(q.block), z++;
             }
             return u.createElement("div", { "data-contents": "true" }, K);

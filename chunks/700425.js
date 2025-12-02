@@ -1,44 +1,44 @@
 n.d(t, {
-    i: () => a,
-    l: () => s,
+    i: () => s,
+    l: () => l,
 }),
     n(388685),
     n(539854);
 var r = n(473749),
-    l = n(392711),
-    i = n.n(l),
+    i = n(392711),
+    a = n.n(i),
     o = n(996435);
-function a(e, t) {
+function s(e, t) {
     let n = r.useRef(null),
-        l = r.useRef(new Set());
+        i = r.useRef(new Set());
     r.useEffect(() => {
         let e = t.current;
         if (null == e) return;
         let r = Array.from(e.querySelectorAll("[data-settings-category-key]")).filter(
                 (e) => null != e.getAttribute("data-settings-category-key"),
             ),
-            i = new Map(),
-            a = [];
+            a = new Map(),
+            s = [];
         return (
             r.forEach((e) => {
                 let t = e.getAttribute("data-settings-category-key");
-                null != t && (i.set(e, t), a.push(t));
+                null != t && (a.set(e, t), s.push(t));
             }),
             (n.current = new IntersectionObserver(
                 (e) => {
                     if (
                         (e.forEach((e) => {
                             let { isIntersecting: t, target: n } = e,
-                                r = i.get(n);
-                            null != r && (t ? l.current.add(r) : l.current.delete(r));
+                                r = a.get(n);
+                            null != r && (t ? i.current.add(r) : i.current.delete(r));
                         }),
                         o.Z.getField("disableSidebarCategoryAutoSelect"))
                     )
                         return;
                     let t = [];
                     if (
-                        (a.forEach((e) => {
-                            l.current.has(e) && t.push(e);
+                        (s.forEach((e) => {
+                            i.current.has(e) && t.push(e);
                         }),
                         0 === t.length)
                     )
@@ -68,13 +68,13 @@ function a(e, t) {
         );
     }, [t, e.key, e.layout]);
 }
-function s() {
+function l() {
     r.useEffect(() => {
         let e = document.querySelectorAll("[data-settings-panel-scroller]");
         if (0 === e.length) return;
         let t = e[0];
         if (null == t) return;
-        let n = i().debounce(() => {
+        let n = a().debounce(() => {
             o.Z.setState({ disableSidebarCategoryAutoSelect: !1 });
         }, 50);
         return (

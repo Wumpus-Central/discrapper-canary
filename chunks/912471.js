@@ -186,7 +186,7 @@ function q(e) {
             h.Z.captureException(e);
         }
 }
-function Q(e) {
+function X(e) {
     return null == e
         ? null
         : e.version !== b.EI
@@ -196,7 +196,7 @@ function Q(e) {
             null)
           : e;
 }
-function X() {
+function Q() {
     o.K.remove(C),
         (L = {
             state: "loaded",
@@ -218,7 +218,7 @@ async function $() {
 }
 function ee() {
     let e = d.default.getToken();
-    k !== e && ((k = e), X()), K();
+    k !== e && ((k = e), Q()), K();
 }
 function et() {
     let e = p.Z.getState();
@@ -253,7 +253,7 @@ async function eo() {
         n = null,
         a = "loaded" === L.state ? (null == (e = L.session) ? void 0 : e.uuid) : null;
     try {
-        n = "uninitialized" === L.state ? Q(await o.K.getAfterRefresh(C)) : L.session;
+        n = "uninitialized" === L.state ? X(await o.K.getAfterRefresh(C)) : L.session;
     } catch (e) {
         h.Z.captureException(e);
     }
@@ -285,6 +285,6 @@ async function eo() {
     })();
 }
 function es() {
-    let e = "uninitialized" === L.state ? Q(o.K.get(C)) : L.session;
+    let e = "uninitialized" === L.state ? X(o.K.get(C)) : L.session;
     return null == e || (0, b.qK)(e) ? null : e;
 }

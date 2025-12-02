@@ -1,6 +1,6 @@
 n.d(t, {
     J: () => P,
-    Z: () => X,
+    Z: () => Q,
 }),
     n(388685);
 var r,
@@ -208,7 +208,7 @@ function q(e) {
     if ("nitro_unsub" !== t || !d.E.getConfig({ location: "surveystore" }).enableNitroUnsubSurvey) return !1;
     (0, u.wk)("1439042286574112799", !0);
 }
-class Q extends (r = s.ZP.PersistedStore) {
+class X extends (r = s.ZP.PersistedStore) {
     initialize(e) {
         this.waitFor(f.Z, p.Z, _.Z, m.Z, h.default), (S = null != e ? e : v), this.syncWith([m.Z], K);
     }
@@ -225,9 +225,9 @@ class Q extends (r = s.ZP.PersistedStore) {
         return S.lastSeen;
     }
 }
-E(Q, "displayName", "SurveyStore"),
-    E(Q, "persistKey", "SurveyStore"),
-    E(Q, "migrations", [
+E(X, "displayName", "SurveyStore"),
+    E(X, "persistKey", "SurveyStore"),
+    E(X, "migrations", [
         (e) => {
             let t = b({}, e);
             return (
@@ -248,7 +248,7 @@ E(Q, "displayName", "SurveyStore"),
             return O(b({}, e), { hiddenSurveys: null != (t = e.hiddenSurveys) ? t : {} });
         },
     ]);
-let X = new Q(c.Z, {
+let Q = new X(c.Z, {
     CONNECTION_OPEN: L,
     CONNECTION_RESUMED: L,
     SURVEY_FETCHED: G,

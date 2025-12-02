@@ -1,8 +1,8 @@
 n.d(e, { Z: () => g });
 var i = n(509613),
-    r = n(313789),
-    l = n(837061),
-    s = n(912400),
+    l = n(313789),
+    s = n(837061),
+    r = n(912400),
     u = n(212473),
     a = n(51435),
     o = n(217123),
@@ -10,9 +10,9 @@ var i = n(509613),
     d = n(603569),
     E = n(674574),
     S = n(74662),
-    T = n(798922),
-    I = n(388032);
-let g = (0, i.vB)(r.n.USER_SECTION, {
-    useLabel: () => I.intl.string(I.t.cduTBL),
-    buildLayout: () => [l.x, o.r, c.f, d.a, s.h, T.F, a.J, E.e_, u.KL, S.U],
+    I = n(798922),
+    T = n(388032);
+let g = (0, i.vB)(l.n.USER_SECTION, {
+    useLabel: () => T.intl.string(T.t.cduTBL),
+    buildLayout: () => [s.x, o.r, c.f, d.a, r.h, I.F, a.J, E.e_, u.KL, S.U],
 });

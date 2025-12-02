@@ -17,8 +17,8 @@ var r = n(54381),
     b = n(425369),
     E = n(715702),
     O = n(773244),
-    y = n(711237),
-    v = n(532835),
+    v = n(711237),
+    y = n(532835),
     I = n(347469),
     C = n(169382),
     S = n(290297),
@@ -71,8 +71,8 @@ var r = n(54381),
     eb = n(703656),
     eE = n(166484),
     eO = n(984802),
-    ey = n(592125),
-    ev = n(896797),
+    ev = n(592125),
+    ey = n(896797),
     eI = n(271383),
     eC = n(430824),
     eS = n(944486),
@@ -192,9 +192,9 @@ let eU = (0, u.Un)({
         var t, n;
         let { match: i } = e,
             l = (0, C.l)(),
-            a = (0, p.e7)([ey.Z, eS.Z], () => {
+            a = (0, p.e7)([ev.Z, eS.Z], () => {
                 let e = eS.Z.getChannelId();
-                return ey.Z.getChannel(e);
+                return ev.Z.getChannel(e);
             }),
             { guildId: s, channelId: c, messageId: u, threadId: d } = i.params,
             f = null != c ? c : void 0;
@@ -291,7 +291,7 @@ let eU = (0, u.Un)({
             { notificationCenterVariant: n } = (0, en.pN)({ location: "Sidebar" }),
             i = (0, p.e7)([eS.Z], () => (null != t ? t : eS.Z.getChannelId(e)));
         if (window.location.pathname.startsWith(eZ.Z5c.CHANNEL(eZ.STv)))
-            return "sidebar" !== n && (0, eb.dL)(ev.Z.defaultRoute), (0, r.jsx)(ei.Z, { includePanelSpacing: !0 });
+            return "sidebar" !== n && (0, eb.dL)(ey.Z.defaultRoute), (0, r.jsx)(ei.Z, { includePanelSpacing: !0 });
         if (window.location.pathname.startsWith(eZ.Z5c.ME_DMS)) {
             var l;
             let e = eT.Z.getPrivateChannelIds()[0],
@@ -413,9 +413,9 @@ function tl(e) {
 }
 function ta(e) {
     let { hasNotice: t, sidebarTheme: n, hideSidebar: l, hideChannelList: s, isSidebarOpen: o } = e;
-    (0, v.t)(!0);
+    (0, y.t)(!0);
     let c = "app view user trigger debugging";
-    y.R6.useExperiment({ location: c }, { autoTrackExposure: !1 }), y.R6.trackExposure({ location: c });
+    v.R6.useExperiment({ location: c }, { autoTrackExposure: !1 }), v.R6.trackExposure({ location: c });
     let u = (0, p.e7)([j.Z], () => j.Z.isFullscreenInContext()),
         g = (0, R.T)("ChannelSidebar"),
         m = (0, Z.useAppSidebarState)((e) => !e.isOpen) && g;
@@ -594,7 +594,7 @@ function ts() {
         b = (0, R.T)("AppView"),
         E = (0, Z.useAppSidebarState)((e) => !e.isOpen),
         O = (0, p.e7)([j.Z], () => j.Z.isFullscreenInContext()),
-        y = (0, p.e7)([D.Z], () => D.Z.isFrameActive());
+        v = (0, p.e7)([D.Z], () => D.Z.isFrameActive());
     return (0, r.jsx)("div", {
         className: eM.container,
         children: (0, r.jsx)(G.Z.Provider, {
@@ -800,7 +800,7 @@ function ts() {
                                                 }),
                                             ],
                                         }),
-                                        y && (0, r.jsx)(M.Z, {}),
+                                        v && (0, r.jsx)(M.Z, {}),
                                     ],
                                 }),
                             }),

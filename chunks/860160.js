@@ -51,10 +51,10 @@ function b(e) {
                 return null == e ? void 0 : e.guild_id;
             }
         }, [n]),
-        y = i.useMemo(() => {
+        v = i.useMemo(() => {
             if ("contentInventory" === n.data.kind) return n.data.content.author_id;
         }, [n]),
-        v = i.useMemo(() => {
+        y = i.useMemo(() => {
             switch (n.data.kind) {
                 case "message":
                 case "forumThread":
@@ -72,7 +72,7 @@ function b(e) {
         I = (0, a.e7)([d.Z], () => d.Z.getChannel(E), [E]),
         C = null != (t = null == I ? void 0 : I.guild_id) ? t : O,
         S = (0, a.e7)([p.Z], () => (null != C ? p.Z.getGuild(C) : null), [C]),
-        T = (0, a.e7)([f.default], () => (null != y ? f.default.getUser(y) : null), [y]);
+        T = (0, a.e7)([f.default], () => (null != v ? f.default.getUser(v) : null), [v]);
     return "unknown" === b
         ? null
         : (0, r.jsx)("div", {
@@ -123,7 +123,7 @@ function b(e) {
                                                 : null,
                                           (0, r.jsx)("div", {
                                               className: _.timestamp,
-                                              children: (0, u.a3)(v),
+                                              children: (0, u.a3)(y),
                                           }),
                                       ],
                                   }),

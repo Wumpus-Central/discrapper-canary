@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => y });
 var r = n(54381),
     i = n(473749),
     l = n(990547),
@@ -17,11 +17,11 @@ var r = n(54381),
     b = n(474936),
     E = n(981631),
     O = n(388032),
-    y = n(934422);
-function v(e) {
+    v = n(934422);
+function y(e) {
     let {
             ref: t,
-            isFocused: v,
+            isFocused: y,
             isActive: I,
             status: C,
             activities: S,
@@ -70,14 +70,14 @@ function v(e) {
         D = () => (Z === b.hX.FRIEND_ANNIVERSARY ? O.intl.string(O.t.OrwKgi) : void 0);
     return (0, r.jsx)(d.Z, {
         ref: t,
-        isFocused: v,
+        isFocused: y,
         isActive: I,
         user: A,
         onOtherHover: P,
         onClick: x,
         children: (e) =>
             (0, r.jsxs)("div", {
-                className: y.listItemContents,
+                className: v.listItemContents,
                 children: [
                     (0, r.jsx)(f.Z, {
                         user: A,
@@ -95,7 +95,7 @@ function v(e) {
                         showAccountIdentifier: !N && !A.isProvisional,
                     }),
                     (0, r.jsxs)("div", {
-                        className: y.actions,
+                        className: v.actions,
                         children: [
                             (0, r.jsx)(s.hU, {
                                 size: "sm",

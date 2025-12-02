@@ -101,9 +101,9 @@ function K(e) {
             voiceChannel: K,
             className: z,
             onClose: q,
-            appContext: Q,
+            appContext: X,
         } = e,
-        X = (0, E.Dt)(),
+        Q = (0, E.Dt)(),
         J = (0, E.Dt)(),
         { analyticsLocations: $ } = (0, p.ZP)(f.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         { themeType: ee } = (0, C.z)(),
@@ -175,7 +175,7 @@ function K(e) {
                 ? (0, r.jsx)(x.f, {
                       variant: "heading-sm/semibold",
                       text: (0, b.O8)(t.id, i),
-                      id: X,
+                      id: Q,
                   })
                 : (0, d.Z)(i) && null != K
                   ? (0, r.jsxs)("div", {
@@ -189,7 +189,7 @@ function K(e) {
                             (0, r.jsx)(x.f, {
                                 variant: "heading-sm/semibold",
                                 text: K.name,
-                                id: X,
+                                id: Q,
                             }),
                         ],
                     })
@@ -197,7 +197,7 @@ function K(e) {
                     ? (0, r.jsx)(x.f, {
                           variant: "heading-sm/semibold",
                           text: i.name,
-                          id: X,
+                          id: Q,
                       })
                     : null != i.details
                       ? (0, r.jsx)(m._, {
@@ -205,13 +205,13 @@ function K(e) {
                             children: (0, r.jsx)(x.f, {
                                 variant: "heading-sm/semibold",
                                 text: i.details,
-                                id: X,
+                                id: Q,
                             }),
                         })
                       : (0, r.jsx)(x.f, {
                             variant: "heading-sm/semibold",
                             text: i.name,
-                            id: X,
+                            id: Q,
                         }),
         ef = () => {
             if (i.type === U.IIU.HANG_STATUS) return null;
@@ -382,7 +382,7 @@ function K(e) {
             className: a()(F.card, z),
             onAction: en,
             onClose: q,
-            "aria-labelledby": ea ? "".concat(J, " ").concat(X) : X,
+            "aria-labelledby": ea ? "".concat(J, " ").concat(Q) : Q,
             children: [
                 (0, r.jsx)(
                     D.Z,
@@ -401,7 +401,7 @@ function K(e) {
                                 activity: i,
                                 entry: et,
                                 onClose: q,
-                                appContext: Q,
+                                appContext: X,
                             }),
                         },
                     ),

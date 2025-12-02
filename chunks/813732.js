@@ -83,7 +83,7 @@ function q() {
         })
     );
 }
-function Q(e, t) {
+function X(e, t) {
     return (0, r.jsxs)("section", {
         children: [
             (0, r.jsx)(l.Heading, {
@@ -106,7 +106,7 @@ function Q(e, t) {
         ],
     });
 }
-function X() {
+function Q() {
     return (0, r.jsx)("hr", { className: K.hr });
 }
 let J = function () {
@@ -170,7 +170,7 @@ let J = function () {
                                         subscriptions: t,
                                     })
                                   : (0, r.jsx)(B.MM, {}),
-                              z && Q(U, W),
+                              z && X(U, W),
                               (0, r.jsx)(T.F, {
                                   setting: Y.s6.SUBSCRIPTIONS_CREDITS,
                                   children: (0, r.jsx)(q, {}),
@@ -178,7 +178,7 @@ let J = function () {
                               M > 0 &&
                                   (0, r.jsxs)(r.Fragment, {
                                       children: [
-                                          (0, r.jsx)(X, {}),
+                                          (0, r.jsx)(Q, {}),
                                           (0, r.jsx)(O.Z, {
                                               count: M,
                                               onClickManageSubscription: () =>
@@ -192,7 +192,7 @@ let J = function () {
                               j > 0 &&
                                   (0, r.jsxs)(r.Fragment, {
                                       children: [
-                                          (0, r.jsx)(X, {}),
+                                          (0, r.jsx)(Q, {}),
                                           (0, r.jsx)(S.Z, {
                                               count: j,
                                               onClickManageSubscription: () => {
@@ -207,7 +207,7 @@ let J = function () {
                                           }),
                                       ],
                                   }),
-                              (0, r.jsx)(X, {}),
+                              (0, r.jsx)(Q, {}),
                               null != e
                                   ? (0, r.jsx)(Z.Z, {
                                         subscription: e,

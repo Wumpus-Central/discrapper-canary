@@ -96,9 +96,9 @@ function z(e) {
     var t, n;
     let { user: H, isVisible: W, shouldShow: z } = e,
         q = N.ZP.isPremium(H),
-        Q = N.ZP.canUseAnimatedAvatar(H),
+        X = N.ZP.canUseAnimatedAvatar(H),
         {
-            pendingAvatar: X,
+            pendingAvatar: Q,
             pendingThemeColors: J,
             tryItOutThemeColors: $,
             tryItOutAvatar: ee,
@@ -205,7 +205,7 @@ function z(e) {
                                       user: H,
                                       pendingAvatarSrc: (0, S.SD)({
                                           userId: H.id,
-                                          image: null != ee ? ee : X,
+                                          image: null != ee ? ee : Q,
                                       }),
                                       pendingColors: null != $ ? $ : J,
                                       onThemeColorsChange: I.rf,
@@ -219,7 +219,7 @@ function z(e) {
                                       onBannerChange: I.f4,
                                       showPremiumIcon: !1,
                                   }),
-                                  !Q &&
+                                  !X &&
                                       (0, r.jsx)(D.Z, {
                                           className: V.customizationSection,
                                           isTryItOut: !0,

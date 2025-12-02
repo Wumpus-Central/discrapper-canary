@@ -18,8 +18,8 @@ var i = n(873546),
     b = n(775412),
     E = n(695349),
     O = n(312973),
-    y = n(434878),
-    v = n(29920),
+    v = n(434878),
+    y = n(29920),
     I = n(346497),
     C = n(727310),
     S = n(318199),
@@ -112,7 +112,7 @@ class P extends c.Z {
             N(this, "mayShowAnnouncementModal", async () => {
                 if ((await (0, _.l2)(), g.s.isDisallowPopupsSet())) return;
                 let e = this.getOfferFromStore(),
-                    t = y.Z.getCurrentConfig({ location: "announcementManager" }, { autoTrackExposure: !1 }).enabled,
+                    t = v.Z.getCurrentConfig({ location: "announcementManager" }, { autoTrackExposure: !1 }).enabled,
                     n = (0, O.$)({ location: "mayShowAnnouncementModal" }),
                     r = (0, u.zu)(a.z.Q2_2025_MARKETING_MOMENT_FOLLOW_UP_MODAL),
                     l = p.default.getCurrentUser();
@@ -125,7 +125,7 @@ class P extends c.Z {
                             (0, C.Z)({ upsellType: T.cd.REVERSE_TRIAL_FOLLOWUP_UPSELL })),
                     (null == l || l.verified) && !(0, s.$sL)() && !i.tq && !n)
                 ) {
-                    for (let t of await (0, v.He)(e))
+                    for (let t of await (0, y.He)(e))
                         if (
                             await this.maybeOpenServerDriveAnnouncementModal(
                                 "",

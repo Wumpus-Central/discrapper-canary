@@ -154,7 +154,7 @@ function q(e) {
     let { userId: t } = e;
     C.delete(t);
 }
-function Q(e) {
+function X(e) {
     return i()(e)
         .map((e) => ({
             key: e.id,
@@ -167,14 +167,14 @@ function Q(e) {
         })
         .value();
 }
-function X(e) {
-    C.delete(e.userId), j.set(e.userId, Q(e.mutualFriends)), M.set(e.userId, e.mutualFriends.length);
+function Q(e) {
+    C.delete(e.userId), j.set(e.userId, X(e.mutualFriends)), M.set(e.userId, e.mutualFriends.length);
 }
 function J(e) {
     var t, n, r, i, a, l, c, u, f, p, g, E, b, O, S, R, G, Z, B, V, K;
     let { userProfile: z, fetchStartedAt: q } = e,
-        X = null != (b = null == (t = z.guild_member_profile) ? void 0 : t.guild_id) ? b : T;
-    if ((null == (n = A.get(z.user.id)) || n.delete(X), C.delete(z.user.id), null != z.mutual_guilds)) {
+        Q = null != (b = null == (t = z.guild_member_profile) ? void 0 : t.guild_id) ? b : T;
+    if ((null == (n = A.get(z.user.id)) || n.delete(Q), C.delete(z.user.id), null != z.mutual_guilds)) {
         let e = {};
         z.mutual_guilds.forEach((t) => {
             let { id: n, nick: r } = t,
@@ -199,7 +199,7 @@ function J(e) {
         let e = z.mutual_friends_count;
         M.set(z.user.id, e), 0 === e && j.set(z.user.id, U);
     }
-    null != z.mutual_friends && (j.set(z.user.id, Q(z.mutual_friends)), M.set(z.user.id, z.mutual_friends.length));
+    null != z.mutual_friends && (j.set(z.user.id, X(z.mutual_friends)), M.set(z.user.id, z.mutual_friends.length));
     let J = null != z.premium_since ? new Date(z.premium_since) : null,
         ee = null != z.premium_guild_since ? new Date(z.premium_guild_since) : null,
         et = z.application,
@@ -577,7 +577,7 @@ class eh extends f.Z {
             WIDGET_PENDING_SAVE_SUCCESS: es,
             USER_PROFILE_PIN_BADGES_ON_CLIENT: el,
             MUTUAL_FRIENDS_FETCH_START: z,
-            MUTUAL_FRIENDS_FETCH_SUCCESS: X,
+            MUTUAL_FRIENDS_FETCH_SUCCESS: Q,
             MUTUAL_FRIENDS_FETCH_FAILURE: q,
             USER_UPDATE: ec,
             GUILD_MEMBER_UPDATE: ec,

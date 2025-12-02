@@ -19,14 +19,14 @@ function a(e) {
         m = d.current[t.id],
         _ = (e) => m + e.deltaTime + 1500 >= Date.now(),
         g = (e) => m + e.deltaTime <= Date.now() && _(e),
-        b = p.find(g);
-    if (null == b) {
+        v = p.find(g);
+    if (null == v) {
         _(t.points[t.points.length - 1]) || f.push(t);
         return;
     }
-    let v = (e, t) => {
+    let b = (e, t) => {
             let r = null;
-            (n.lineWidth = t * window.devicePixelRatio), (n.strokeStyle = e), n.beginPath(), n.moveTo(b.x, b.y);
+            (n.lineWidth = t * window.devicePixelRatio), (n.strokeStyle = e), n.beginPath(), n.moveTo(v.x, v.y);
             for (let e = 1; e < p.length; e++) {
                 let t = p[e];
                 g(t) && (n.lineTo(t.x, t.y), (r = t));
@@ -34,7 +34,7 @@ function a(e) {
             return n.stroke(), r;
         },
         { fillColor: h, outlineColor: E } = (0, r.bg)(t.userId, s, u, c),
-        y = v(E, 6 + l.q2),
+        y = b(E, 6 + l.q2),
         S = null != y && g(y);
-    S && (0, i.I)(n, y.x, y.y, E, l.q2), v(h, 6), S && (0, i.T)(n, y.x, y.y, t.userId);
+    S && (0, i.I)(n, y.x, y.y, E, l.q2), b(h, 6), S && (0, i.T)(n, y.x, y.y, t.userId);
 }

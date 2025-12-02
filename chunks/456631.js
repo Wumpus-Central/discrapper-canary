@@ -24,8 +24,8 @@ let p = [],
                 userId: e,
             });
     },
-    b = [],
-    v = 10 * u.Z.Millis.SECOND,
+    v = [],
+    b = 10 * u.Z.Millis.SECOND,
     h = (0, a.debounce)(() => {
         let e = (0, d.cX)(_);
         c.uv.announce(e, "polite"), (_ = []);
@@ -81,10 +81,10 @@ let y = new E(s.Z, {
     },
     VOICE_CHANNEL_EFFECT_SENT_LOCAL: () => {
         let e = new Date();
-        if ((b = [e, ...b].slice(0, 20)).length >= 20) {
-            let t = b[b.length - 1],
+        if ((v = [e, ...v].slice(0, 20)).length >= 20) {
+            let t = v[v.length - 1],
                 n = e.getTime() - t.getTime();
-            n < v && (r = new Date(e.getTime() + v - n));
+            n < b && (r = new Date(e.getTime() + b - n));
         }
     },
     VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: (e) => {

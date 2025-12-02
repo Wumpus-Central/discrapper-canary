@@ -46,8 +46,8 @@ var r = n(54381),
     K = n(451478),
     z = n(626135),
     q = n(5192),
-    Q = n(51144),
-    X = n(484286),
+    X = n(51144),
+    Q = n(484286),
     J = n(822296),
     $ = n(916771),
     ee = n(792517),
@@ -197,7 +197,7 @@ class ef extends i.PureComponent {
         let { channel: e, participantOnScreen: t } = this.props;
         if ((null == t ? void 0 : t.type) === ea.fO.STREAM || (null == t ? void 0 : t.type) === ea.fO.USER) {
             var n;
-            let i = null != (n = q.ZP.getNickname(e.getGuildId(), e.id, t.user)) ? n : Q.ZP.getName(t.user);
+            let i = null != (n = q.ZP.getNickname(e.getGuildId(), e.id, t.user)) ? n : X.ZP.getName(t.user);
             return (0, r.jsx)(d.Text, {
                 variant: "text-md/normal",
                 color: "always-white",
@@ -221,7 +221,7 @@ class ef extends i.PureComponent {
                     ? (u = l)
                     : ((null == n ? void 0 : n.type) === ea.fO.USER ||
                           (null == n ? void 0 : n.type) === ea.fO.STREAM) &&
-                      (u = (0, r.jsx)(X.Z, {
+                      (u = (0, r.jsx)(Q.Z, {
                           paused: this.streamerPaused,
                           streamId: t,
                           component: F.Z.getVideoComponent(),

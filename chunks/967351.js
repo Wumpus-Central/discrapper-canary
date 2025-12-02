@@ -40,7 +40,7 @@ function b(e) {
 function E(e) {
     return new Promise((t, n) => {
         "string" == typeof e && (e = h.net.createConnection(e));
-        let r = new y(e, "json");
+        let r = new v(e, "json");
         e.on("data", (t) => {
             try {
                 r.read(t);
@@ -95,7 +95,7 @@ function O(e, t) {
         i.buffer.slice(i.byteOffset, i.byteOffset + i.byteLength)
     );
 }
-class y extends u.Z {
+class v extends u.Z {
     copyBuffer(e, t, n) {
         let i = r.Buffer.allocUnsafe(n - t);
         return e.copy(i, 0, t, n), i;
@@ -187,9 +187,9 @@ class y extends u.Z {
             _(e, !1);
     }
 }
-class v extends i.EventEmitter {
+class y extends i.EventEmitter {
     handleConnection(e) {
-        let t = new y(e, "json");
+        let t = new v(e, "json");
         e.on("readable", () => {
             let n = e.read();
             null != n && t.read(r.Buffer.from(n));
@@ -240,4 +240,4 @@ class v extends i.EventEmitter {
             });
     }
 }
-let I = new v();
+let I = new y();

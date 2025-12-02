@@ -15,38 +15,38 @@ var l = t(392711),
     c = t(593214),
     f = t(362658),
     g = t(981631),
-    h = t(388032);
-function v(e, n) {
+    v = t(388032);
+function h(e, n) {
     return e.type === g.d4z.GROUP_DM
         ? n
-            ? h.intl.string(h.t["0BWmSM"])
-            : h.intl.string(h.t.uuVTOK)
+            ? v.intl.string(v.t["0BWmSM"])
+            : v.intl.string(v.t.uuVTOK)
         : e.type === g.d4z.DM
           ? n
-              ? h.intl.string(h.t["2wfKGo"])
-              : h.intl.string(h.t.wPbAse)
+              ? v.intl.string(v.t["2wfKGo"])
+              : v.intl.string(v.t.wPbAse)
           : n
-            ? h.intl.string(h.t.Bou7lT)
-            : h.intl.string(h.t["4wcdE/"]);
+            ? v.intl.string(v.t.Bou7lT)
+            : v.intl.string(v.t["4wcdE/"]);
 }
 function _(e) {
     let n = (0, a.e7)([u.ZP], () => u.ZP.getChannels(g.I_8))[g.d4z.GUILD_CATEGORY],
         { isFavoritesPerk: t } = (0, f.z)("58e21a_1"),
         { notifyFavoriteAdded: l } = (0, c.up)();
     if (!(0, c.li)(e)) return null;
-    let [[s], h] = r().partition(n, (e) => "null" === e.channel.id);
+    let [[s], v] = r().partition(n, (e) => "null" === e.channel.id);
     function _(n) {
         l(), (0, d.kj)(e.id, n);
     }
-    return 0 === h.length
+    return 0 === v.length
         ? (0, i.jsx)(o.sNh, {
               id: "favorite-channel",
-              label: v(e, !1),
+              label: h(e, !1),
               action: () => _(null),
           })
         : (0, i.jsxs)(o.sNh, {
               id: "favorite-channel",
-              label: v(e, !1),
+              label: h(e, !1),
               action: () => _(null),
               children: [
                   t &&
@@ -62,7 +62,7 @@ function _(e) {
                           ),
                       }),
                   (0, i.jsx)(o.kSQ, {
-                      children: h.map((e) =>
+                      children: v.map((e) =>
                           (0, i.jsx)(
                               o.sNh,
                               {
@@ -83,7 +83,7 @@ function b(e) {
         ? null
         : (0, i.jsx)(o.sNh, {
               id: "favorite-channel",
-              label: v(e, !0),
+              label: h(e, !0),
               color: "danger",
               action: () =>
                   e.type === g.d4z.GUILD_CATEGORY

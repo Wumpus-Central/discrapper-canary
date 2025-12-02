@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => Q,
+    ZP: () => X,
     uh: () => Y,
 }),
     n(35282),
@@ -537,7 +537,7 @@ function q(e) {
         isSearchFiltersRedesignEnabled: Y,
     });
 }
-function Q(e) {
+function X(e) {
     let { className: t, guildId: n, channelId: i } = e,
         a = (0, M.H)({
             guildId: n,

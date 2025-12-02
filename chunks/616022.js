@@ -69,8 +69,8 @@ function W(e, t) {
 let K = 6 * j.Z.Millis.HOUR,
     z = new Map(),
     q = null,
-    Q = null,
-    X = !1,
+    X = null,
+    Q = !1,
     J = null,
     $ = new Map(),
     ee = 5000,
@@ -100,7 +100,7 @@ function en() {
         (E = new Set()),
         (I = new Map()),
         (T = new Map()),
-        eX(),
+        eQ(),
         (A = null),
         (N = new Map()),
         ($ = new Map()),
@@ -163,7 +163,7 @@ function ec(e) {
     null != O.get(e) && (O = new Map(O)).delete(e);
 }
 function eu() {
-    eX(), en();
+    eQ(), en();
 }
 function ed() {
     r = !0;
@@ -183,7 +183,7 @@ function ef(e) {
     for (let e of ((c = new Map()), n)) c.set(e.id, e);
     for (let e of null == N ? void 0 : N.values())
         l.has(e.id) || (l.set(e.id, e), s.set(e.id, e.config), a.set(e.id, (0, k.zi)(e)));
-    (T = a), eQ(), (A = null != i ? new Date(i) : null);
+    (T = a), eX(), (A = null != i ? new Date(i) : null);
 }
 function ep() {
     (d = 0), (r = !1);
@@ -409,10 +409,10 @@ function eq() {
             eq();
         }, t));
 }
-function eQ() {
-    eX(), eq();
-}
 function eX() {
+    eQ(), eq();
+}
+function eQ() {
     null != q && (clearTimeout(q), (q = null));
 }
 function eJ(e) {
@@ -420,13 +420,13 @@ function eJ(e) {
     A = null != t ? new Date(t) : null;
 }
 function e$() {
-    X = !0;
+    Q = !0;
 }
 function e0(e) {
-    (X = !1), (Q = Date.now()), (J = e.takeover);
+    (Q = !1), (X = Date.now()), (J = e.takeover);
 }
 function e1() {
-    X = !1;
+    Q = !1;
 }
 en();
 class e3 extends (P = x.ZP.Store) {
@@ -528,13 +528,13 @@ class e3 extends (P = x.ZP.Store) {
         return N.get(e);
     }
     isFetchingQuestHomeTakeover() {
-        return X;
+        return Q;
     }
     getQuestHomeTakeoverConfig() {
         return J;
     }
     getLastFetchedQuestHomeTakeover() {
-        return Q;
+        return X;
     }
 }
 V(e3, "displayName", "QuestStore");

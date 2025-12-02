@@ -45,8 +45,8 @@ var r = n(687249),
     K = "[object Int16Array]",
     z = "[object Int32Array]",
     q = "[object Uint8Array]",
-    Q = "[object Uint8ClampedArray]",
-    X = "[object Uint16Array]",
+    X = "[object Uint8ClampedArray]",
+    Q = "[object Uint16Array]",
     J = "[object Uint32Array]",
     $ = {};
 function ee(e, t, n, N, P, R) {
@@ -110,8 +110,8 @@ function ee(e, t, n, N, P, R) {
     $[G] =
     $[Z] =
     $[q] =
-    $[Q] =
     $[X] =
+    $[Q] =
     $[J] =
         !0),
     ($[w] = $[D] = $[B] = !1),

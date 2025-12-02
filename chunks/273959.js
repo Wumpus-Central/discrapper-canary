@@ -17,8 +17,8 @@ var r = n(54381),
     b = n(430824),
     E = n(944486),
     O = n(914010),
-    y = n(768581),
-    v = n(981631),
+    v = n(768581),
+    y = n(981631),
     I = n(408491),
     C = n(388032),
     S = n(744038),
@@ -44,7 +44,7 @@ function N(e) {
         }),
         U =
             null != M
-                ? y.ZP.getApplicationIconURL({
+                ? v.ZP.getApplicationIconURL({
                       id: M.id,
                       icon: M.icon,
                       bot: M.bot,
@@ -74,23 +74,23 @@ function N(e) {
               (t = Z.name))
             : null != x && (x.isDM() || x.isGroupDM())
               ? ((t = C.intl.string(C.t.YUU0RF)), (G = (0, r.jsx)(c.gw7, { size: R })))
-              : N.pathname.startsWith(v.Z5c.ICYMI)
+              : N.pathname.startsWith(y.Z5c.ICYMI)
                 ? ((t = C.intl.string(C.t["jnXV/V"])), (G = (0, r.jsx)(c.qOE, { size: R })))
-                : N.pathname.startsWith(v.Z5c.GLOBAL_DISCOVERY)
+                : N.pathname.startsWith(y.Z5c.GLOBAL_DISCOVERY)
                   ? ((t = C.intl.string(C.t["4nEZLk"])), (G = (0, r.jsx)(c.Jmo, { size: R })))
-                  : N.pathname.startsWith(v.Z5c.NITRO_HOME)
+                  : N.pathname.startsWith(y.Z5c.NITRO_HOME)
                     ? ((t = C.intl.string(C.t.Ipxkog)), (G = (0, r.jsx)(c.SrA, { size: R })))
-                    : N.pathname.startsWith(v.Z5c.COLLECTIBLES_SHOP)
+                    : N.pathname.startsWith(y.Z5c.COLLECTIBLES_SHOP)
                       ? ((t = C.intl.string(C.t.pWG4ze)), (G = (0, r.jsx)(c.EOn, { size: R })))
-                      : N.pathname.startsWith(v.Z5c.ME_ACTIVITY)
+                      : N.pathname.startsWith(y.Z5c.ME_ACTIVITY)
                         ? ((t = C.intl.string(C.t.IC5Ann)), (G = (0, r.jsx)(c.g8d, { size: R })))
-                        : N.pathname.startsWith(v.Z5c.ME_DMS)
+                        : N.pathname.startsWith(y.Z5c.ME_DMS)
                           ? ((t = C.intl.string(C.t.YUU0RF)), (G = (0, r.jsx)(c.gw7, { size: R })))
-                          : N.pathname.startsWith(v.Z5c.FRIENDS)
+                          : N.pathname.startsWith(y.Z5c.FRIENDS)
                             ? ((t = C.intl.string(C.t.TdEu5X)), (G = (0, r.jsx)(c.iFz, { size: R })))
-                            : N.pathname.startsWith(v.Z5c.FAMILY_CENTER)
+                            : N.pathname.startsWith(y.Z5c.FAMILY_CENTER)
                               ? ((t = C.intl.string(S.default.RZqaJn)), (G = (0, r.jsx)(c.BFJ, { size: R })))
-                              : N.pathname.startsWith(v.Z5c.QUEST_HOME_V2) &&
+                              : N.pathname.startsWith(y.Z5c.QUEST_HOME_V2) &&
                                 ((t = C.intl.string(C.t.JALI2K)), (G = (0, r.jsx)(c.qDn, { size: R })));
     let B = i.useCallback((e) => {
             (0, m.ZN)("fast-travel");

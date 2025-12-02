@@ -1,8 +1,8 @@
-n.d(e, { Z: () => s });
+n.d(e, { Z: () => r });
 var i = n(509613),
-    r = n(313789),
-    l = n(483161);
-let s = (0, i.vB)(r.n.PROFILE_SECTION, {
-    buildLayout: () => [l.z],
+    l = n(313789),
+    s = n(483161);
+let r = (0, i.vB)(l.n.PROFILE_SECTION, {
+    buildLayout: () => [s.z],
     hoisted: !0,
 });

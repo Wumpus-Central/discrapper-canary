@@ -29,7 +29,7 @@ function O(e, t, n) {
         e
     );
 }
-function y(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,7 +45,7 @@ function y(e) {
     }
     return e;
 }
-function v(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -150,7 +150,7 @@ class I extends i.PureComponent {
                                     text: n,
                                     children: (0, i.createElement)(
                                         o.qEK,
-                                        v(y({}, l), {
+                                        y(v({}, l), {
                                             key: e.id,
                                             src: e.getAvatarURL(void 0, 24),
                                             size: o.EFr.SIZE_24,
@@ -178,7 +178,7 @@ class I extends i.PureComponent {
                                 text: b.intl.string(b.t.Zf4NPe),
                                 children: (0, r.jsx)(
                                     "div",
-                                    v(y({}, n), {
+                                    y(v({}, n), {
                                         ref: this.partyMemberOverflowRef,
                                         className: a()(E.overflow, t),
                                         children: e,

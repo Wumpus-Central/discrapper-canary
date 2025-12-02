@@ -281,7 +281,7 @@ function B(e) {
                   onChange: (e) => Z(e.target.value),
               });
     }
-    function Q() {
+    function X() {
         let e,
             { played: t, exePath: n } = S;
         return (
@@ -297,7 +297,7 @@ function B(e) {
             })
         );
     }
-    function X() {
+    function Q() {
         if (!k || null != v) return null;
         let { overlay: e, overlayWarn: t } = S,
             n = e
@@ -421,11 +421,11 @@ function B(e) {
                 children: [
                     (0, r.jsxs)("div", {
                         className: o()(N.gameNameLastPlayed, R.vertical),
-                        children: [q(), Q()],
+                        children: [q(), X()],
                     }),
                     _ ? null : $(),
                     J(),
-                    X(),
+                    Q(),
                     (a && !_) || en ? null : ee(),
                 ],
             }),

@@ -113,8 +113,8 @@ function V(e) {
         { context: W, trackUserProfileAction: K } = (0, C.KZ)(),
         z = S.default.getCurrentUser(),
         q = (0, T.yd)(null == z ? void 0 : z.premiumType, L.PremiumTypes.TIER_2),
-        Q = (0, R.Of)(null != (t = null == z ? void 0 : z.id) ? t : null),
-        X = (0, P.Z)(Q).some((e) => e.id === O.l.ORB_PROFILE_BADGE),
+        X = (0, R.Of)(null != (t = null == z ? void 0 : z.id) ? t : null),
+        Q = (0, P.Z)(X).some((e) => e.id === O.l.ORB_PROFILE_BADGE),
         J = (0, _.c)(z, "UserProfileBadgeList"),
         $ = (0, p.T)("UserProfileBadgeList");
     return (0, r.jsx)("div", {
@@ -200,7 +200,7 @@ function V(e) {
                 },
                 C = void 0 !== a && e.id !== j.a,
                 R = p && J && C,
-                Q = (0, r.jsx)("img", {
+                X = (0, r.jsx)("img", {
                     alt: " ",
                     "aria-hidden": !0,
                     src: null != (n = e.iconSrc) ? n : (0, w.Ej)(e.icon),
@@ -217,7 +217,7 @@ function V(e) {
                     s.Anchor,
                     B(G({}, ee), {
                         ref: H,
-                        children: Q,
+                        children: X,
                     }),
                 );
                 return (0, r.jsx)(
@@ -236,7 +236,7 @@ function V(e) {
                         s.Anchor,
                         B(G({}, ee), {
                             ref: H,
-                            children: Q,
+                            children: X,
                         }),
                     ),
                     i = () => {
@@ -279,11 +279,11 @@ function V(e) {
                     "".concat(e.id, "-").concat(t),
                 );
             }
-            let et = (0, r.jsx)(s.Anchor, B(G({}, ee), { children: Q })),
+            let et = (0, r.jsx)(s.Anchor, B(G({}, ee), { children: X })),
                 en = F({
                     badge: e,
                     tieredTenureBadge: u && e.id !== j.a ? a : void 0,
-                    currentUserOwnsOrbBadge: X,
+                    currentUserOwnsOrbBadge: Q,
                 });
             return (0, r.jsx)(
                 s.jSM,

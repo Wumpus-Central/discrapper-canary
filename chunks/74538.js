@@ -7,7 +7,7 @@ n.d(t, {
     Gf: () => et,
     I5: () => T.I5,
     JE: () => eY,
-    JP: () => X,
+    JP: () => Q,
     L7: () => J,
     M5: () => T.M5,
     MF: () => er,
@@ -27,11 +27,11 @@ n.d(t, {
     V7: () => eu,
     W_: () => eG,
     Wz: () => tv,
-    XK: () => eQ,
+    XK: () => eX,
     YN: () => tk,
     Z8: () => eh,
     ZP: () => tU,
-    Zx: () => eX,
+    Zx: () => eQ,
     _O: () => tS,
     a5: () => eB,
     aS: () => V,
@@ -346,7 +346,7 @@ function q(e, t, n, r) {
         z((a = null !== e ? eK(e, t) : ez(t)), n, r)
     );
 }
-function Q(e) {
+function X(e) {
     let t = P.GP[e];
     if (null != t)
         return {
@@ -356,7 +356,7 @@ function Q(e) {
     let n = Error("Unsupported plan");
     throw ((0, b.q2)(n, { tags: { planId: e } }), n);
 }
-function X(e) {
+function Q(e) {
     switch (e) {
         case P.EA.MONTH:
             return w.intl.string(w.t.FPybU7);
@@ -1420,10 +1420,10 @@ function eq(e, t, n, r) {
     }
     return l.filter((e) => 0 !== e.quantity);
 }
-function eQ(e, t) {
+function eX(e, t) {
     return eq(e, t, 1, P.dJ);
 }
-function eX(e, t, n) {
+function eQ(e, t, n) {
     return eq(e, n, t, P.Z1);
 }
 function eJ(e) {
@@ -1640,7 +1640,7 @@ let tU = Object.freeze({
     isPremiumEligible: tD,
     getPrice: V,
     getDefaultPrice: F,
-    getInterval: Q,
+    getInterval: X,
     getIntervalString: J,
     getIntervalStringAsNoun: $,
     getPremiumType: ee,

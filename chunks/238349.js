@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
     U: () => B,
-    Z: () => X,
+    Z: () => Q,
 }),
     n(388685),
     n(642613);
@@ -168,7 +168,7 @@ function q(e) {
     if (null == t || t !== S) return !1;
     P = !1;
 }
-class Q extends (i = u.ZP.Store) {
+class X extends (i = u.ZP.Store) {
     initialize() {
         this.waitFor(f.Z, _.default, m.Z, h.ZP, g.Z, p.Z);
     }
@@ -203,8 +203,8 @@ class Q extends (i = u.ZP.Store) {
         return r;
     }
 }
-y(Q, "displayName", "ForumActivePostStore");
-let X = new Q(d.Z, {
+y(X, "displayName", "ForumActivePostStore");
+let Q = new X(d.Z, {
     CONNECTION_OPEN: Z,
     OVERLAY_INITIALIZE: Z,
     GUILD_CREATE: Z,

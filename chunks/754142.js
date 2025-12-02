@@ -108,8 +108,8 @@ function D(e, t) {
         K = "audioInputDeviceName" in t ? t.audioInputDeviceName : void 0,
         z = "audioOutputDeviceName" in t ? t.audioOutputDeviceName : void 0,
         q = "videoDeviceName" in t ? t.videoDeviceName : void 0,
-        Q = "userId" in t ? t.userId : void 0,
-        X = null != k ? (0, l.my)(k) : null,
+        X = "userId" in t ? t.userId : void 0,
+        Q = null != k ? (0, l.my)(k) : null,
         J = null != k ? h.Z.getRTCConnection(k) : null,
         $ = null != k ? J : p.Z.getRTCConnection(),
         ee = null != k ? (null == J || null == (n = J.analyticsContext) ? void 0 : n.streamApplication) : null,
@@ -117,18 +117,18 @@ function D(e, t) {
         { gameName: er, gameId: ei, exe: ea, distributor: eo } = (0, s.G8)(ee),
         es = L.isErrorOutbound,
         el = null != U ? U : S.Yn.DEFAULT,
-        ec = null != X ? X.ownerId : Q,
+        ec = null != Q ? Q.ownerId : X,
         eu = null != J ? (null == J ? void 0 : J.getVoiceParticipantType()) : es ? "sender" : "receiver",
         ed = null != (r = null == $ ? void 0 : $.getMediaEngineConnectionId()) ? r : null;
     (x =
-        null != k && null != X
+        null != k && null != Q
             ? es
                 ? null == $ || null == (c = $.getOutboundStats())
                     ? void 0
                     : c.find((e) => e.quality === S.y7)
                 : null == $
                   ? void 0
-                  : $.getInboundStats(X.ownerId)
+                  : $.getInboundStats(Q.ownerId)
             : es
               ? null !=
                 (D = i().maxBy(null != (m = null == $ ? void 0 : $.getOutboundStats()) ? m : [], (e) => e.num_frames))
@@ -155,7 +155,7 @@ function D(e, t) {
                 R,
                 D,
                 k,
-                Q,
+                X,
                 ee,
                 ef,
                 ep,
@@ -200,7 +200,7 @@ function D(e, t) {
                 channel_id: null != j ? j : null,
                 channel_type: null != (k = null == M ? void 0 : M.type) ? k : null,
                 rtc_connection_id: null != F ? F : null,
-                media_session_id: null != (Q = null != B ? B : p.Z.getMediaSessionId()) ? Q : null,
+                media_session_id: null != (X = null != B ? B : p.Z.getMediaSessionId()) ? X : null,
                 parent_media_session_id: null != (ee = null == J ? void 0 : J.parentMediaSessionId) ? ee : null,
                 context: null != U ? U : null,
                 voice_backend_version:
@@ -234,7 +234,7 @@ function D(e, t) {
                 target_bitrate: es && null != (eT = null == (d = I(ed)) ? void 0 : d.bitrateTarget) ? eT : null,
                 fps: null != (eA = w(es, el, ec)) ? eA : null,
                 target_fps: el === S.Yn.STREAM && es ? en : null,
-                sender_user_id: null != (eC = null == X ? void 0 : X.ownerId) ? eC : null,
+                sender_user_id: null != (eC = null == Q ? void 0 : Q.ownerId) ? eC : null,
                 stream_region: null != (eN = null == J ? void 0 : J.getRegion()) ? eN : null,
                 stream_source_type:
                     es && null != (eP = null == J || null == (m = J.analyticsContext) ? void 0 : m.streamSourceType)

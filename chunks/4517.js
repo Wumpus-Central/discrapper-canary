@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(666917),
+    s = n(205120),
     l = n(442837),
     c = n(846519),
     u = n(481060),
@@ -218,7 +218,7 @@ let M = i.forwardRef(function (e, t) {
             i.useEffect(() => {
                 null == I || I.onInteractionPopoutTargetRefChange(L);
             }, [I]);
-        let [Q, X] = (0, u.q_F)(() => ({
+        let [X, Q] = (0, u.q_F)(() => ({
             maxHeight: "".concat(U.current, "px"),
             config: {
                 clamp: !0,
@@ -232,12 +232,12 @@ let M = i.forwardRef(function (e, t) {
             W(t > e),
                 (U.current = e),
                 (G.current = t),
-                X({ maxHeight: "".concat(Math.min(V ? U.current : G.current, V ? D : x), "px") });
-        }, [K, _, p, X, V, D, x]);
+                Q({ maxHeight: "".concat(Math.min(V ? U.current : G.current, V ? D : x), "px") });
+        }, [K, _, p, Q, V, D, x]);
         let J = (e) => {
                 Y &&
                     (e
-                        ? X({
+                        ? Q({
                               maxHeight: "".concat(Math.min(G.current, x), "px"),
                               delay: z ? 0 : A.zS,
                               config: {
@@ -245,7 +245,7 @@ let M = i.forwardRef(function (e, t) {
                                   duration: z ? 0 : A.R1,
                               },
                           })
-                        : X({
+                        : Q({
                               maxHeight: "".concat(Math.min(U.current, D), "px"),
                               delay: 0,
                           }),
@@ -296,7 +296,7 @@ let M = i.forwardRef(function (e, t) {
                 children: (0, r.jsx)("span", {
                     className: N.inner,
                     children: (0, r.jsxs)(s.animated.div, {
-                        style: Q,
+                        style: X,
                         className: o()(N.content, { [N.unclamped]: !V }),
                         children: [$, en],
                     }),

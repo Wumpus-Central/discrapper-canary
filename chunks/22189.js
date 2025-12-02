@@ -49,8 +49,8 @@ var r = n(54381),
     K = n(994554),
     z = n(567396),
     q = n(925309),
-    Q = n(46245),
-    X = n(766491),
+    X = n(46245),
+    Q = n(766491),
     J = n(193943),
     $ = n(707046),
     ee = n(488459),
@@ -205,7 +205,7 @@ let ey = () => {
                       descriptionCta: eT ? B.intl.string(B.t.jVcuVY) : B.intl.string(B.t.hvVgAZ),
                       pillText: B.intl.string(B.t.EYxi0o),
                       onCtaClick: eT ? ej : ek,
-                      perkImage: X,
+                      perkImage: Q,
                   }
                 : {
                       name: "clips",
@@ -213,7 +213,7 @@ let ey = () => {
                       subtitle: B.intl.string(B.t["hxy0/R"]),
                       description: B.intl.string(B.t.X9IeN3),
                       pillText: B.intl.string(B.t.EYxi0o),
-                      perkImage: X,
+                      perkImage: Q,
                   },
             earlyAccess: eS
                 ? {
@@ -297,7 +297,7 @@ let ey = () => {
                 description: eA ? "" : B.intl.string(B.t.jsyNHm),
                 descriptionCta: B.intl.string(B.t.jVcuVY),
                 onCtaClick: eA ? void 0 : eD,
-                perkImage: Q,
+                perkImage: X,
                 hideOnNarrowScreen: !eA,
                 imageOverlayText: eA ? B.intl.string(B.t["/VzCKE"]).toLocaleUpperCase() : void 0,
             },

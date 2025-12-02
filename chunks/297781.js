@@ -3,11 +3,11 @@ n.d(t, {
     An: () => W,
     E6: () => Y,
     EE: () => G,
-    Gk: () => X,
+    Gk: () => Q,
     Gt: () => D,
     OV: () => U,
     PZ: () => $,
-    Rg: () => Q,
+    Rg: () => X,
     U9: () => z,
     XF: () => Z,
     Yl: () => q,
@@ -118,7 +118,7 @@ let w = {
     [c.s.TOP_ARTIST]: [W],
     [c.s.PLAYED_GAME]: [U, G, k, z, B, H, K, V, F],
     [c.s.TOP_GAME]: [Y],
-    [c.s.WATCHED_MEDIA]: [q, Q],
+    [c.s.WATCHED_MEDIA]: [q, X],
     [c.s.LAUNCHED_ACTIVITY]: [U, G, k, z, K, F],
 };
 var D = (function (e) {
@@ -377,7 +377,7 @@ function q(e) {
         ],
     });
 }
-function Q(e) {
+function X(e) {
     let { entry: t } = e,
         n = (0, b.ap)(t.extra.media_assets_large_text);
     return null == n
@@ -387,7 +387,7 @@ function Q(e) {
               text: n,
           });
 }
-function X(e) {
+function Q(e) {
     let t,
         { location: n, children: i, className: a } = e;
     return (
@@ -444,7 +444,7 @@ function $(e) {
         a = J(t);
     return null == a
         ? null
-        : (0, r.jsx)(X, {
+        : (0, r.jsx)(Q, {
               location: n,
               className: i,
               children: a,

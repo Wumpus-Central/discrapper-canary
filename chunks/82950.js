@@ -50,8 +50,8 @@ let _ = a().debounce(c.ZP.trackWithMetadata, 500),
             trackingSource: b,
             undismissable: E,
             onDismissed: O,
-            onClick: y,
-            cta: v,
+            onClick: v,
+            cta: y,
             ctaColor: I,
         } = e;
         i.useEffect(() => {
@@ -61,9 +61,9 @@ let _ = a().debounce(c.ZP.trackWithMetadata, 500),
             });
         }, [t.id, d]);
         let C = null;
-        "function" == typeof v
-            ? (C = v())
-            : null != v &&
+        "function" == typeof y
+            ? (C = y())
+            : null != y &&
               (C = (0, r.jsx)(s.zx, {
                   "data-migration-pending": !0,
                   className: g.btn,
@@ -75,11 +75,11 @@ let _ = a().debounce(c.ZP.trackWithMetadata, 500),
                               guild_id: t.id,
                               notice_type: d,
                           }),
-                          null == y || y();
+                          null == v || v();
                   },
                   fullWidth: !0,
                   color: I,
-                  children: v,
+                  children: y,
               }));
         let S = null != p ? "".concat(p, "px") : "16px";
         return (0, r.jsxs)("div", {

@@ -52,9 +52,9 @@ let z = () => {
         a = i.useRef(null),
         z = i.useRef(null),
         q = i.useRef(null),
-        Q = (0, s.e7)([f.Z], () => f.Z.useReducedMotion),
-        X = (0, d.ZP)(),
-        J = (0, c.wj)(X),
+        X = (0, s.e7)([f.Z], () => f.Z.useReducedMotion),
+        Q = (0, d.ZP)(),
+        J = (0, c.wj)(Q),
         [$, ee] = i.useState(!1),
         [et, en] = i.useState(!1),
         [er, ei] = i.useState(!1),
@@ -90,7 +90,7 @@ let z = () => {
         eL = (0, r.jsxs)("div", {
             className: o()(eA.container, eA.responsiveContainer, {
                 [eA.containerBackground]: eh || J,
-                [Y.fadeInFromTop]: !Q && eh,
+                [Y.fadeInFromTop]: !X && eh,
             }),
             "data-cy": "tier-0-marketing-page",
             children: [
@@ -154,7 +154,7 @@ let z = () => {
                             ref: ev.ref,
                             children: (0, r.jsx)(P.g, {
                                 shouldLoadVideo: es,
-                                isReducedMotion: Q,
+                                isReducedMotion: X,
                                 enablePremiumBrandRefreshDesign: eh,
                             }),
                         }),
@@ -163,7 +163,7 @@ let z = () => {
                             ref: eS.ref,
                             children: (0, r.jsx)(P.G_, {
                                 shouldLoadVideo: es,
-                                isReducedMotion: Q,
+                                isReducedMotion: X,
                                 enablePremiumBrandRefreshDesign: eh,
                             }),
                         }),
@@ -221,7 +221,7 @@ let z = () => {
                               ref: q,
                               isFooterVisible: et,
                               isDarkMode: J,
-                              isReducedMotion: Q,
+                              isReducedMotion: X,
                               subscriptionTier: ef,
                           }),
                 }),
@@ -239,7 +239,7 @@ let z = () => {
             ],
         });
     return (0, r.jsx)(u.f6W, {
-        theme: eh ? H.BR.DARKER : X,
+        theme: eh ? H.BR.DARKER : Q,
         children: (t) =>
             (0, r.jsx)(u.yWw, {
                 className: o()(eA.scroller, t),

@@ -11,20 +11,20 @@ function d(e) {
     let { user: t, channelId: n, streamerId: d, stream: f, focused: p, canvas: m } = e,
         _ = r.useRef(!1),
         g = (0, i.e7)([l.Z], () => l.Z.getDrawMode()),
-        b = (0, c.Z)((0, s.Z)(t.id, n, d), f),
-        v = (0, c.Z)((0, u.Z)(t.id, n, d), f),
+        v = (0, c.Z)((0, s.Z)(t.id, n, d), f),
+        b = (0, c.Z)((0, u.Z)(t.id, n, d), f),
         h = r.useCallback(
             (e, t, n) => {
                 if (null == m) return;
                 let { x: r, y: i } = (0, o.hn)(m, n);
                 switch (t.type) {
                     case a.W.LINE:
-                        return b[e](t, r, i);
-                    case a.W.EMOJI_HOSE:
                         return v[e](t, r, i);
+                    case a.W.EMOJI_HOSE:
+                        return b[e](t, r, i);
                 }
             },
-            [m, b, v],
+            [m, v, b],
         ),
         E = r.useCallback(
             (e) => {

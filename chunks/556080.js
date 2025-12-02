@@ -1,15 +1,15 @@
-n.d(e, { Z: () => T });
+n.d(e, { Z: () => I });
 var i = n(442837),
-    r = n(846027),
-    l = n(100527),
-    s = n(509613),
+    l = n(846027),
+    s = n(100527),
+    r = n(509613),
     u = n(131951),
     a = n(313789),
     o = n(846071),
     c = n(375258),
     d = n(345655),
     E = n(388032);
-let S = (0, s.J9)(a.n.VOICE_INPUT_PROFILE_SETTING, {
+let S = (0, r.J9)(a.n.VOICE_INPUT_PROFILE_SETTING, {
         useTitle: () => E.intl.string(E.t.LM3U3k),
         usePredicate: function () {
             let { enabledInputProfiles: t } = (0, o.P)({ location: "SettingsRendererConfig" });
@@ -23,8 +23,8 @@ let S = (0, s.J9)(a.n.VOICE_INPUT_PROFILE_SETTING, {
             });
         },
         setValue: function (t) {
-            let e = [l.Z.USER_SETTINGS_VOICE_AND_VIDEO];
-            r.Z.setActiveInputProfile(t, { analyticsLocations: e });
+            let e = [s.Z.USER_SETTINGS_VOICE_AND_VIDEO];
+            l.Z.setActiveInputProfile(t, { analyticsLocations: e });
         },
         useOptions: function () {
             let { enabledInputProfiles: t } = (0, o.G)({ location: "InputProfileCategory" });
@@ -50,6 +50,6 @@ let S = (0, s.J9)(a.n.VOICE_INPUT_PROFILE_SETTING, {
             });
         },
     }),
-    T = (0, s.k4)(a.n.VOICE_INPUT_PROFILE_CATEGORY, {
+    I = (0, r.k4)(a.n.VOICE_INPUT_PROFILE_CATEGORY, {
         buildLayout: () => [S, c.h],
     });

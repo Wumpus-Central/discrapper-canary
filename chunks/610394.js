@@ -144,7 +144,7 @@ function q() {
         P.error("Error clearing tracked games:", e), (0, _.PV)(d.UNSET_PID, e, { crashType: "native" });
     }
 }
-async function Q() {
+async function X() {
     if (!y.Z.isOverlayEnabled) return void q();
     await ei();
     let e = new Set(
@@ -155,7 +155,7 @@ async function Q() {
     for (let t of new Set([...R].filter((t) => !e.has(t)))) z(t);
     for (let e of R) K(e);
 }
-function X(e) {
+function Q(e) {
     let t = l.ZP.getGameOrTransformedSubgameForPID(e);
     o.Z.setAssociatedGame(null != U ? U : d.UNSET_PID, e, t);
 }
@@ -234,7 +234,7 @@ function eo() {
 }
 function es(e) {
     let { createWindowTriggeringPID: t } = e;
-    (Y = N(A({}, Y), { popoutOpened: !0 })), X(t), (U = t), (j = t), (0, d.setPID)(t);
+    (Y = N(A({}, Y), { popoutOpened: !0 })), Q(t), (U = t), (j = t), (0, d.setPID)(t);
 }
 function el(e) {
     let { createWindowTriggeringPID: t, nativeWindowHandle: n } = e;
@@ -260,7 +260,7 @@ function ed(e) {
         (U = t),
         (j = t),
         (0, d.setPID)(t),
-        X(t),
+        Q(t),
         J(),
         !0
     );
@@ -314,7 +314,7 @@ function ey(e) {
     Z[e.pid] = e.overlayState;
 }
 function eO() {
-    (D = y.Z.getNativeModule()), Q();
+    (D = y.Z.getNativeModule()), X();
 }
 function ev() {
     D = null;

@@ -84,7 +84,7 @@ function q(e, t) {
     }
     return n;
 }
-function Q(e, t) {
+function X(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -95,7 +95,7 @@ function Q(e, t) {
         e
     );
 }
-let X = (0, g.hQ)(),
+let Q = (0, g.hQ)(),
     J = (0, g.hQ)(),
     $ = (0, g.hQ)(),
     ee = o().debounce((e) => {
@@ -189,7 +189,7 @@ function er() {
         [t] = i.useState(() => {
             let e = "1337",
                 t = (0, v.e5)(
-                    Q(
+                    X(
                         z(
                             {},
                             (0, S.ZP)({
@@ -241,7 +241,7 @@ function er() {
                     className: Y.previewMessage,
                     children: (0, r.jsx)(T.Z, {
                         compact: e,
-                        author: Q(z({}, (0, I.ZH)(t)), { colorString: "#DD80F4" }),
+                        author: X(z({}, (0, I.ZH)(t)), { colorString: "#DD80F4" }),
                         message: t,
                     }),
                 }),
@@ -289,7 +289,7 @@ function eo() {
             (0, r.jsx)(c.iRW, {
                 label: V.intl.string(V.t["5PWWCY"]),
                 description: V.intl.string(V.t["0PbE/H"]),
-                "aria-labelledby": X,
+                "aria-labelledby": Q,
                 "aria-describedby": J,
                 markers: Z.yqN.SATURATION_INCREMENTS,
                 equidistant: !0,

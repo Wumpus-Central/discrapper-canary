@@ -17,8 +17,8 @@ var r = n(54381),
     b = n(846027),
     E = n(239091),
     O = n(925549),
-    y = n(730749),
-    v = n(911969),
+    v = n(730749),
+    y = n(911969),
     I = n(317381),
     C = n(596040),
     S = n(314490),
@@ -71,8 +71,8 @@ var r = n(54381),
     eb = n(430824),
     eE = n(819640),
     eO = n(131951),
-    ey = n(496675),
-    ev = n(19780),
+    ev = n(496675),
+    ey = n(19780),
     eI = n(699516),
     eC = n(594174),
     eS = n(979651),
@@ -275,8 +275,8 @@ function eQ(e) {
         O = i.useCallback(() => {
             (0, eu.Z)();
         }, []),
-        y = (0, W.bp)(),
-        v = i.useCallback(
+        v = (0, W.bp)(),
+        y = i.useCallback(
             (e) => {
                 if (eO.Z.isVideoEnabled() === e) return;
                 let n = () => {
@@ -284,9 +284,9 @@ function eQ(e) {
                     b.Z.setVideoEnabled(e),
                         e && (0, q.uL)(eL.Z5c.CHANNEL(null != (n = t.getGuildId()) ? n : eL.ME, t.id));
                 };
-                (0, L.v)(o, L.d.CAMERA, e), e ? (0, ef.Z)(n, y) : n();
+                (0, L.v)(o, L.d.CAMERA, e), e ? (0, ef.Z)(n, v) : n();
             },
-            [t, y, o],
+            [t, v, o],
         ),
         C = p || n || f,
         { Component: S, play: T, events: N } = (0, h.o)(c.enabled ? "disable" : "enable");
@@ -297,7 +297,7 @@ function eQ(e) {
             eF(
                 eV(
                     {
-                        onChange: v,
+                        onChange: y,
                         onCameraUnavailable: O,
                         hasPermission: d,
                         channelLimit: E,
@@ -406,11 +406,11 @@ function eJ(e) {
             userInActivity: null != I.ZP.getSelfEmbeddedActivityForChannel(t.id),
         })),
         g = (0, S.p)({
-            surface: v.eR.VOICE_LAUNCHER,
+            surface: y.eR.VOICE_LAUNCHER,
             skipFetchingShelf: !0,
         }),
         b = c !== T.jy.CAN_LAUNCH,
-        { Component: E, events: O, play: y } = (0, p.w)();
+        { Component: E, events: O, play: v } = (0, p.w)();
     return n
         ? (0, r.jsx)(_.aML, {
               "data-migration-pending": !0,
@@ -434,7 +434,7 @@ function eJ(e) {
                                   {
                                       onClick: () => {
                                           var n;
-                                          y(),
+                                          v(),
                                               (0, A.Z)({
                                                   context:
                                                       null != t
@@ -496,16 +496,16 @@ function eX(e) {
         b = (0, eo.Z)(n),
         E = n.getGuildId(),
         O = (0, u.cj)([I.ZP], () => null != I.ZP.getSelfEmbeddedActivityForChannel(n.id)),
-        y = (0, Q.Z)(n),
-        v = i.useCallback(() => {
+        v = (0, Q.Z)(n),
+        y = i.useCallback(() => {
             (0, ep.Z)(E, n.id, p);
         }, [E, n.id, p]),
         C = g.find((e) => e.ownerId === (null == h ? void 0 : h.id)),
         S = (0, ec.E)(n, h, g);
-    t = null == C ? (l ? v : ed.Z) : () => (0, V.Z)(C);
+    t = null == C ? (l ? y : ed.Z) : () => (0, V.Z)(C);
     let T = null != C || S.length > 0,
         N = b ? eU.intl.string(eU.t.fjBNo1) : eU.intl.string(eU.t.uQn9B8),
-        j = O || s || y,
+        j = O || s || v,
         P = null != C,
         { Component: A, events: Z, play: w } = (0, f.P)(P ? "disable" : "enable");
     i.useEffect(() => () => w(), [w, P]);
@@ -523,7 +523,7 @@ function eX(e) {
                 currentUser: h,
                 activeStreams: g,
                 onClose: t,
-                handleGoLive: l ? v : ed.Z,
+                handleGoLive: l ? y : ed.Z,
                 onInteraction: (0, R.u)("ManageStreamsMenu", d, { entrypoint: eR.A5.OTHER_BUTTON }),
             });
         },
@@ -863,11 +863,11 @@ function e0(e) {
         )
     );
 }
-let e1 = (0, y.Z)(function (e) {
+let e1 = (0, v.Z)(function (e) {
     let t = (0, G.Z)(),
         n = (0, u.e7)([U.default], () => U.default.getAwaitingRemoteSessionInfo()),
         l = (0, u.e7)([eC.default], () => eC.default.getCurrentUser()),
-        a = (0, u.cj)([ev.Z], () =>
+        a = (0, u.cj)([ey.Z], () =>
             null != t
                 ? {
                       channelId: t.channelId,
@@ -876,10 +876,10 @@ let e1 = (0, y.Z)(function (e) {
                       rtcConnectionLastPing: 0,
                   }
                 : {
-                      channelId: ev.Z.getChannelId(),
-                      rtcConnectionQuality: ev.Z.getQuality(),
-                      rtcConnectionState: ev.Z.getState(),
-                      rtcConnectionLastPing: ev.Z.getLastPing(),
+                      channelId: ey.Z.getChannelId(),
+                      rtcConnectionQuality: ey.Z.getQuality(),
+                      rtcConnectionState: ey.Z.getState(),
+                      rtcConnectionLastPing: ey.Z.getLastPing(),
                   },
         ),
         { channelId: s } = a,
@@ -905,9 +905,9 @@ let e1 = (0, y.Z)(function (e) {
         m = (0, u.e7)([eg.Z], () => eg.Z.getCurrentUserActiveStream()),
         b = (0, u.e7)([eE.Z], () => eE.Z.hasLayers()),
         E = (0, u.e7)([Y.Z], () => Y.Z.isViewingRoles(d)),
-        O = (0, u.e7)([ey.Z], () => E && !ey.Z.can(eL.Plq.VIEW_CHANNEL, c), [E, c]),
-        y = el.Fg.useSetting(),
-        [v, I, S] = (0, u.Wu)(
+        O = (0, u.e7)([ev.Z], () => E && !ev.Z.can(eL.Plq.VIEW_CHANNEL, c), [E, c]),
+        v = el.Fg.useSetting(),
+        [y, I, S] = (0, u.Wu)(
             [eT.ZP, X.Z],
             () =>
                 (null == c ? void 0 : c.isGuildStageVoice())
@@ -921,9 +921,9 @@ let e1 = (0, y.Z)(function (e) {
                 (t =
                     null !=
                     (e =
-                        null == v
+                        null == y
                             ? void 0
-                            : v.map((e) => {
+                            : y.map((e) => {
                                   let { user: t, userNick: n, voiceState: r } = e;
                                   return {
                                       user: t,
@@ -935,7 +935,7 @@ let e1 = (0, y.Z)(function (e) {
                         : S)
                 ? t
                 : [];
-        }, [v, I, S]),
+        }, [y, I, S]),
         [j, A] = i.useState(!1);
     i.useEffect(() => {
         (E || O) && A(!1);
@@ -965,7 +965,7 @@ let e1 = (0, y.Z)(function (e) {
                         selfStream: m,
                         hasLayers: b,
                         voiceStates: T,
-                        showVoiceStates: y,
+                        showVoiceStates: v,
                         shouldShowVoicePanelIntroduction: h,
                         isPrivateChannelWithEnabledActivities: L,
                         analyticsLocations: Z,

@@ -17,8 +17,8 @@ var r = n(54381),
     b = n(70399),
     E = n(228168),
     O = n(388032),
-    y = n(229870);
-let v = {
+    v = n(229870);
+let y = {
     [s.l.FAVORITE_GAMES]: {
         placeholder: () => ({
             variant: "details",
@@ -68,7 +68,7 @@ let v = {
 function I(e) {
     let t,
         { widgetType: n, onAddWidget: l, size: c = "default", loading: d = !1, trackUserProfileEditAction: O } = e,
-        { placeholder: I, getAriaLabel: C, icon: S } = v[n],
+        { placeholder: I, getAriaLabel: C, icon: S } = y[n],
         T = "small" === c,
         { config: N } = (0, g.G)(),
         j = i.useMemo(() => {
@@ -127,10 +127,10 @@ function I(e) {
     return (null != j && null != S && (t = S(j)), null == j)
         ? null
         : (0, r.jsxs)("div", {
-              className: y.addButtonContainer,
+              className: v.addButtonContainer,
               children: [
                   (0, r.jsxs)(o.P3F, {
-                      className: a()(y.addButtonContent, T && y.sizeSmall, d && y.loading),
+                      className: a()(v.addButtonContent, T && v.sizeSmall, d && v.loading),
                       onClick: P,
                       "aria-label": C(j),
                       "aria-busy": d,
@@ -141,13 +141,13 @@ function I(e) {
                               switch (e.variant) {
                                   case "details":
                                       return (0, r.jsx)(_.i, {
-                                          className: y.placeholderPadding,
+                                          className: v.placeholderPadding,
                                           applicationId: e.applicationId,
                                           size: c,
                                       });
                                   case "grid":
                                       return (0, r.jsx)(_.c, {
-                                          className: y.placeholderPadding,
+                                          className: v.placeholderPadding,
                                           applicationIds: e.applicationIds,
                                           size: c,
                                       });
@@ -161,15 +161,15 @@ function I(e) {
                               }
                           })(),
                           (0, r.jsxs)("div", {
-                              className: y.overlay,
+                              className: v.overlay,
                               children: [
                                   (0, r.jsx)(o.oFk, {
                                       size: "md",
                                       color: "currentColor",
-                                      className: y.addButton,
+                                      className: v.addButton,
                                   }),
                                   (0, r.jsxs)("div", {
-                                      className: y.title,
+                                      className: v.title,
                                       children: [
                                           (0, r.jsx)(o.Text, {
                                               variant: "text-md/medium",
@@ -182,7 +182,7 @@ function I(e) {
                                                     alt: "",
                                                     width: 16,
                                                     height: 16,
-                                                    className: y.icon,
+                                                    className: v.icon,
                                                 })
                                               : null,
                                       ],

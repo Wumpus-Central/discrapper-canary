@@ -18,8 +18,8 @@ var l = n(481060),
     b = n(914010),
     E = n(594174),
     O = n(823379),
-    y = n(358085),
-    v = n(929809),
+    v = n(358085),
+    y = n(929809),
     I = n(179645),
     C = n(701476),
     S = n(785997),
@@ -100,7 +100,7 @@ class Z extends s.Z {
             let e = _.Z.getGuild(A);
             null != e && (0, d.Dc)(e) && ((s = !0), (0, h.RM)(e.id));
         }
-        let Z = () => 0 === m.Z.totalGuilds && !y.isPlatformEmbedded,
+        let Z = () => 0 === m.Z.totalGuilds && !v.isPlatformEmbedded,
             w = o.bN();
         (e = [
             {
@@ -158,7 +158,7 @@ class Z extends s.Z {
             },
             {
                 key: "Claim Account Modal",
-                open: (e) => c.j(y.isPlatformEmbedded, e),
+                open: (e) => c.j(v.isPlatformEmbedded, e),
                 predicate: () => {
                     var e;
                     return (
@@ -192,7 +192,7 @@ class Z extends s.Z {
             },
         ]),
             (t = () => {
-                v.H(), f.Z.flowStep(j.MK.ANY, j.EW.NUF_COMPLETE, !0);
+                y.H(), f.Z.flowStep(j.MK.ANY, j.EW.NUF_COMPLETE, !0);
             }),
             [...e].reverse().forEach((e) => {
                 let n = t;

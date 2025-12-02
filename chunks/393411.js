@@ -231,8 +231,8 @@ let K = function (e) {
         z = K === w.a$.FP_SUB_PAUSED,
         { enabled: q } = (0, A.ZP)({ location: U });
     (w.pj.has(i.planId) && D.JwP.ALL_PAUSEABLE.has(i.status) && !z) || (q = !1);
-    let Q = (0, C.N)(),
-        X = null == Q || null == (t = Q.discount) ? void 0 : t.amount,
+    let X = (0, C.N)(),
+        Q = null == X || null == (t = X.discount) ? void 0 : t.amount,
         J = (0, I.t7)(),
         $ = (0, I.lr)(),
         ee = (0, T.W)(),
@@ -521,6 +521,6 @@ let K = function (e) {
         buttons: eu(),
         statusClasses: e_,
         shouldUseDiscountMarketing: J,
-        discountAmount: X,
+        discountAmount: Q,
     });
 };

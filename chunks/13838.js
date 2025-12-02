@@ -17,8 +17,8 @@ var r = n(392711),
     b = n(594174),
     E = n(979651),
     O = n(996106),
-    y = n(914946),
-    v = n(238679),
+    v = n(914946),
+    y = n(238679),
     I = n(452426),
     C = n(295424),
     S = n(222263),
@@ -32,7 +32,7 @@ function x(e) {
             socket: n,
         } = e,
         r = f.Z.getChannel(t);
-    if (null == r || !(0, y.zM)(r, n.application.id, n.authorization.scopes))
+    if (null == r || !(0, v.zM)(r, n.application.id, n.authorization.scopes))
         throw new O.Z({ errorCode: j.lTL.INVALID_CHANNEL }, "Invalid channel id: ".concat(t));
     if ((0, o.ft)(r)) throw new O.Z({ errorCode: j.lTL.INVALID_CHANNEL }, "Invalid nsfw channel id: ".concat(r.id));
 }
@@ -95,7 +95,7 @@ let w = {
                                 let { userId: t } = e;
                                 return t;
                             })
-                            .forEach((e) => r((0, y.aE)(a, l.id, e))),
+                            .forEach((e) => r((0, v.aE)(a, l.id, e))),
                     s
                 );
             };
@@ -124,7 +124,7 @@ let w = {
                             let { userId: t } = e;
                             return t;
                         })
-                        .forEach((e) => r((0, y.aE)(a, l.id, e))),
+                        .forEach((e) => r((0, v.aE)(a, l.id, e))),
                     s
                 );
             };
@@ -146,7 +146,7 @@ let w = {
                     l = f.Z.getChannel(t);
                 if (null == l) return;
                 let a = l.getGuildId(),
-                    s = Object.values(E.Z.getVoiceStatesForChannel(l.id)).map((e) => (0, y.aE)(a, l.id, e));
+                    s = Object.values(E.Z.getVoiceStatesForChannel(l.id)).map((e) => (0, v.aE)(a, l.id, e));
                 return (
                     i()
                         .differenceWith(s, n, i().isEqual)
@@ -163,7 +163,7 @@ let w = {
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
                 r = {
-                    state: (0, y.zy)(_.Z.getState()),
+                    state: (0, v.zy)(_.Z.getState()),
                     hostname: _.Z.getHostname(),
                     pings: _.Z.getPings(),
                     average_ping: _.Z.getAveragePing(),
@@ -253,7 +253,7 @@ let w = {
         scope: void 0,
         handler() {},
     },
-    [j.zMe.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: v.gQ,
+    [j.zMe.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: y.gQ,
     [j.zMe.THERMAL_STATE_UPDATE]: {
         scope: { [N.Gp.ANY]: [N.wE] },
         handler() {},

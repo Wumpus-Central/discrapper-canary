@@ -1,14 +1,14 @@
 var t = "\uD800-\uDFFF",
     n = "[\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff]",
-    i = "\uD83C[\uDFFB-\uDFFF]",
-    r = "[^" + t + "]",
-    s = "(?:\uD83C[\uDDE6-\uDDFF]){2}",
-    o = "[\uD800-\uDBFF][\uDC00-\uDFFF]",
-    l = "(?:" + n + "|" + i + ")?",
-    a = "[\\ufe0e\\ufe0f]?",
-    c = "(?:\\u200d(?:" + [r, s, o].join("|") + ")" + a + l + ")*",
+    r = "\uD83C[\uDFFB-\uDFFF]",
+    i = "[^" + t + "]",
+    l = "(?:\uD83C[\uDDE6-\uDDFF]){2}",
+    a = "[\uD800-\uDBFF][\uDC00-\uDFFF]",
+    s = "(?:" + n + "|" + r + ")?",
+    o = "[\\ufe0e\\ufe0f]?",
+    c = "(?:\\u200d(?:" + [i, l, a].join("|") + ")" + o + s + ")*",
     d = RegExp(
-        i + "(?=" + i + ")|" + ("(?:" + [r + n + "?", n, s, o, "[" + t + "]"].join("|")) + ")" + (a + l + c),
+        r + "(?=" + r + ")|" + ("(?:" + [i + n + "?", n, l, a, "[" + t + "]"].join("|")) + ")" + (o + s + c),
         "g",
     );
 e.exports = function (e) {

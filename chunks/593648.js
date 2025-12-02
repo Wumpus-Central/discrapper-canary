@@ -279,7 +279,7 @@ function q(e) {
         }),
     });
 }
-function Q() {
+function X() {
     let e = (0, s.e7)([h.Z], () => h.Z.getGuildAlertSettings()),
         [t, n] = i.useState(null),
         a = D.default.keys(e).map((t) => {
@@ -349,7 +349,7 @@ function Q() {
               }),
           });
 }
-class X extends i.PureComponent {
+class Q extends i.PureComponent {
     handleDesktopChange(e) {
         let t = e ? G.qrD.ALL : G.qrD.NEVER;
         t !== G.qrD.NEVER ? K("UserSettingsModal") : d.default.setDesktopType(t);
@@ -431,7 +431,7 @@ class X extends i.PureComponent {
                         ],
                     }),
                     this.renderTTS(),
-                    (0, r.jsx)(Q, {}),
+                    (0, r.jsx)(X, {}),
                     (0, r.jsx)(u.izJ, { gap: 24 }),
                     (0, r.jsx)(q, {
                         disabledSounds: a,
@@ -551,7 +551,7 @@ async function en(e) {
 }
 function er(e) {
     let t = (0, b.p)();
-    return (0, r.jsx)(X, W(H({}, e), { focusMode: t }));
+    return (0, r.jsx)(Q, W(H({}, e), { focusMode: t }));
 }
 function ei() {
     let e = (0, s.cj)([C.Z], () => ({

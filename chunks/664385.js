@@ -1,7 +1,7 @@
 n.d(t, { Z: () => U }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(666917),
+    a = n(205120),
     o = n(91192),
     s = n(442837),
     l = n(159691),
@@ -82,8 +82,8 @@ function k(e) {
             sourceQuestContent: b.jn.MEMBERS_LIST,
         }),
         q = (null == G || null == (t = G.userStatus) ? void 0 : t.claimedAt) != null,
-        Q = (null == G || null == (S = G.userStatus) ? void 0 : S.enrolledAt) != null,
-        X = (null == G || null == (D = G.userStatus) ? void 0 : D.completedAt) != null,
+        X = (null == G || null == (S = G.userStatus) ? void 0 : S.enrolledAt) != null,
+        Q = (null == G || null == (D = G.userStatus) ? void 0 : D.completedAt) != null,
         J = (0, s.e7)([h.Z], () => h.Z.getState().theme),
         $ = (0, c.wj)(J) ? P.BR.DARK : P.BR.LIGHT,
         ee = (0, s.e7)([_.Z], () => _.Z.useReducedMotion),
@@ -205,14 +205,14 @@ function k(e) {
         },
         em = (0, O.CR)({ quest: G }),
         eh = (() => {
-            if (X && !q)
+            if (Q && !q)
                 return {
                     headerText: R.intl.string(R.t.gHerLS),
                     ctaText: R.intl.string(R.t.cfY4PE),
                     handleClickCta: z,
                     tileAssetType: "reward",
                 };
-            if (Q && !q)
+            if (X && !q)
                 return {
                     headerText: R.intl.string(R.t.uH2sf2),
                     ctaText: R.intl.string(R.t.VN1Ajl),

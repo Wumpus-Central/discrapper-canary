@@ -80,7 +80,7 @@ function q(e) {
     }
     return e;
 }
-function Q(e, t) {
+function X(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -92,12 +92,12 @@ function Q(e, t) {
     }
     return n;
 }
-function X(e, t) {
+function Q(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : Q(Object(t)).forEach(function (n) {
+            : X(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -207,7 +207,7 @@ let et = i.memo(function (e) {
                                     let { onClick: t } = e;
                                     return (0, r.jsx)(
                                         v.Z,
-                                        X(q({ ref: T }, l), {
+                                        Q(q({ ref: T }, l), {
                                             className: W.roleIcon,
                                             onClick: t,
                                         }),
@@ -217,7 +217,7 @@ let et = i.memo(function (e) {
                             "role-icon-children",
                         )
                       : 2 === C
-                        ? (0, r.jsx)(v.Z, X(q({}, l), { className: W.roleIcon }), "role-icon-children")
+                        ? (0, r.jsx)(v.Z, Q(q({}, l), { className: W.roleIcon }), "role-icon-children")
                         : null,
             [C, l, A],
         ),
@@ -460,7 +460,7 @@ function er(e) {
                       clickTrap: I,
                       children: (e) =>
                           ee(
-                              X(q({}, W), {
+                              Q(q({}, W), {
                                   avatarSrc: z,
                                   avatarDecorationSrc: Y,
                                   compact: g,
@@ -478,7 +478,7 @@ function er(e) {
             : (0, r.jsx)(p.Gt, {
                   value: j,
                   children: ee(
-                      X(q({}, W), {
+                      Q(q({}, W), {
                           avatarSrc: z,
                           avatarDecorationSrc: Y,
                           compact: g,
@@ -662,7 +662,7 @@ let es = i.memo(function (e) {
                         }),
                     (0, r.jsx)(
                         et,
-                        X(q({}, e), {
+                        Q(q({}, e), {
                             message: t,
                             channel: y,
                             compact: a,

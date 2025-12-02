@@ -17,8 +17,8 @@ var r = n(54381),
     b = n(746728),
     E = n(140700),
     O = n(665807),
-    y = n(188493),
-    v = n(294330),
+    v = n(188493),
+    y = n(294330),
     I = n(981631),
     C = n(857847);
 let S = Object.freeze({
@@ -103,7 +103,7 @@ function P(e) {
                                     !R &&
                                         (0, r.jsxs)("div", {
                                             className: C.headingFilters,
-                                            children: [(0, r.jsx)(E.Z, { loadId: t }), (0, r.jsx)(y.Z, { loadId: t })],
+                                            children: [(0, r.jsx)(E.Z, { loadId: t }), (0, r.jsx)(v.Z, { loadId: t })],
                                         }),
                                     A && (0, r.jsx)(O.Z, { loadId: t }),
                                 ],
@@ -171,7 +171,7 @@ function P(e) {
                         "div",
                         {
                             style: n,
-                            children: (0, r.jsx)(v.ZP, {
+                            children: (0, r.jsx)(y.ZP, {
                                 guildId: e,
                                 onClick: async (e) => await J(e, t, x, N),
                                 onView: (e) => z(e),
@@ -249,7 +249,7 @@ function P(e) {
                               children: [
                                   (0, r.jsx)("div", {
                                       className: C.sidebarLanguageSelect,
-                                      children: (0, r.jsx)(y.Z, { loadId: t }),
+                                      children: (0, r.jsx)(v.Z, { loadId: t }),
                                   }),
                                   (0, r.jsx)(b.Z, { loadId: t }),
                               ],

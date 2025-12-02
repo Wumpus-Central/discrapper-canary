@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => X,
+    ZP: () => Q,
     e5: () => G,
     px: () => U,
 }),
@@ -8,7 +8,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(666917),
+    s = n(205120),
     l = n(442837),
     c = n(481060),
     u = n(239091),
@@ -263,7 +263,7 @@ let K = i.memo(function (e) {
         });
     }),
     q = i.memo(c.qEK),
-    Q = i.memo(function (e) {
+    X = i.memo(function (e) {
         let {
                 channel: t,
                 flipped: n = !1,
@@ -289,18 +289,18 @@ let K = i.memo(function (e) {
             { ref: F, width: V } = (0, _.ZP)(),
             { showConnectedAnimation: H } = W(k, P),
             Y = null == D ? void 0 : D.sessionId,
-            Q = t.id,
-            X = s.id,
+            X = t.id,
+            Q = s.id,
             [J] = (0, l.e7)(
                 [C.Z],
                 () => {
                     var e;
                     return [
-                        null != (e = C.Z.getVoiceStateForChannel(Q, X)) ? e : C.Z.getVoiceStateForSession(X, Y),
+                        null != (e = C.Z.getVoiceStateForChannel(X, Q)) ? e : C.Z.getVoiceStateForSession(Q, Y),
                         C.Z.getVoiceStateVersion(),
                     ];
                 },
-                [Q, X, Y],
+                [X, Q, Y],
                 N.Q,
             ),
             $ = P ? D : null != J ? J : D,
@@ -534,7 +534,7 @@ let K = i.memo(function (e) {
                     ],
                 });
     }),
-    X = i.memo(function (e) {
+    Q = i.memo(function (e) {
         let {
                 widgetId: t,
                 channel: a,
@@ -642,7 +642,7 @@ let K = i.memo(function (e) {
                 spacing: 24,
                 children: () => {
                     var e;
-                    return (0, r.jsx)(Q, {
+                    return (0, r.jsx)(X, {
                         ref: E,
                         guildId: null == a ? void 0 : a.guild_id,
                         user: b,

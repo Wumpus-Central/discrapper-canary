@@ -1,10 +1,10 @@
 n.d(t, {
-    $5: () => X,
+    $5: () => Q,
     I8: () => W,
     Kt: () => U,
     Lj: () => N,
     RW: () => Y,
-    Y3: () => Q,
+    Y3: () => X,
     Yt: () => R,
     _I: () => L,
     _t: () => z,
@@ -255,7 +255,7 @@ let B = () => {
         let t = p.Z.getGuild(e);
         return null != t && (0, u.Y2)(t);
     },
-    V = (e) => !!B() && null != e && Q(d.Z.getChannel(e)),
+    V = (e) => !!B() && null != e && X(d.Z.getChannel(e)),
     H = (e) => k() && V(e),
     Y = (e) => !!H(e) && ((0, g.mN)(E.L0.NSFW_VOICE_CHANNEL), !0);
 function W(e, t, n) {
@@ -283,7 +283,7 @@ let K = (e) => null != e && (e.isNSFW() || (0, u.Y2)(p.Z.getGuild(e.guild_id))),
         let n = (null == (t = _.default.getCurrentUser()) ? void 0 : t.nsfwAllowed) === !0;
         return K(e) && !n;
     };
-function Q(e) {
+function X(e) {
     var t;
     if (null == e) return !1;
     let n = f.Z.didAgree(e.guild_id),
@@ -298,7 +298,7 @@ function Q(e) {
         g = p.Z.getGuild(h);
     return null != g && (((0, u.Y2)(g) && m) || (j(g) && d));
 }
-function X(e) {
+function Q(e) {
     let t = (0, s.L5)(),
         n = (0, r.e7)([f.Z], () => f.Z.didAgree(null == e ? void 0 : e.guild_id)),
         i = (0, r.e7)([_.default], () => {

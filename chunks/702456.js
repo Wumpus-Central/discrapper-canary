@@ -17,8 +17,8 @@ var r = n(54381),
     b = n(518950),
     E = n(592125),
     O = n(480294),
-    y = n(158776),
-    v = n(699516),
+    v = n(158776),
+    y = n(699516),
     I = n(111583),
     C = n(594174),
     S = n(351402),
@@ -73,9 +73,9 @@ function Z(e, t) {
 function w(e) {
     var t, n;
     let { user: i, index: l, isCompetitive: a } = e,
-        { status: s, isMobile: u } = (0, o.cj)([y.Z], () => ({
-            status: y.Z.getStatus(i.id),
-            isMobile: y.Z.isMobileOnline(i.id),
+        { status: s, isMobile: u } = (0, o.cj)([v.Z], () => ({
+            status: v.Z.getStatus(i.id),
+            isMobile: v.Z.isMobileOnline(i.id),
         })),
         p = (0, o.e7)([I.Z, E.Z], () => {
             let e = E.Z.getDMFromUserId(i.id);
@@ -99,7 +99,7 @@ function w(e) {
                 );
         },
         O = 0 === l,
-        v = O ? c.YqE : a ? c.XcD : void 0,
+        y = O ? c.YqE : a ? c.XcD : void 0,
         C = O ? P.intl.string(P.t.aI4VOL) : a ? P.intl.string(P.t.kABl2x) : void 0;
     return (0, r.jsx)(c.P3F, {
         className: x.frequentFriendAvatarButton,
@@ -114,7 +114,7 @@ function w(e) {
             isTyping: p,
             isMobile: u && !p,
             size: c.EFr.SIZE_32,
-            CutoutIcon: v,
+            CutoutIcon: y,
             avatarTooltipAsset: O ? "\uD83D\uDD25" : a ? "\u2744️" : void 0,
             avatarTooltipText: C,
             statusTooltip: !0,
@@ -129,13 +129,13 @@ function L() {
             let e = (0, o.Wu)([_.Z], () =>
                     [..._.Z.getUserAffinities()].sort((e, t) => _.Z.compare(e.otherUserId, t.otherUserId)),
                 ),
-                t = (0, o.Wu)([C.default, v.Z], () => {
+                t = (0, o.Wu)([C.default, y.Z], () => {
                     let t = e.map((e) => e.otherUserId),
                         n = [];
                     for (let e of t)
                         if (n.length < 5) {
                             let t = C.default.getUser(e);
-                            !(0, T.lm)(t) || v.Z.isIgnored(t.id) || v.Z.isBlocked(t.id) || n.push(t);
+                            !(0, T.lm)(t) || y.Z.isIgnored(t.id) || y.Z.isBlocked(t.id) || n.push(t);
                         } else break;
                     return n;
                 }, [e]),
@@ -171,7 +171,7 @@ function L() {
         g = i.useRef(null),
         b = (0, o.e7)([S.Z], () => S.Z.ipCountryCode),
         E = (0, f.gD)(),
-        y = i.useCallback(() => {
+        v = i.useCallback(() => {
             var e;
             let t = null == (e = g.current) ? void 0 : e.getScrollerNode();
             null != t &&
@@ -182,9 +182,9 @@ function L() {
                 });
         }, []);
     i.useEffect(() => {
-        (null == t ? void 0 : t.frequentFriends.length) != null && y();
-    }, [null == t ? void 0 : t.frequentFriends.length, null == t ? void 0 : t.showCompetitiveSpot, y]);
-    let I = (0, p.y)(y, []),
+        (null == t ? void 0 : t.frequentFriends.length) != null && v();
+    }, [null == t ? void 0 : t.frequentFriends.length, null == t ? void 0 : t.showCompetitiveSpot, v]);
+    let I = (0, p.y)(v, []),
         L = i.useCallback(
             (e) => {
                 let t = e.currentTarget;

@@ -66,8 +66,8 @@ var r = n(54381),
     K = n(41259),
     z = n(28752),
     q = n(787025),
-    Q = n(397394),
-    X = n(574384),
+    X = n(397394),
+    Q = n(574384),
     J = n(981631),
     $ = n(186901),
     ee = n(388032),
@@ -354,8 +354,8 @@ function ec(e) {
             () => ((null == eR ? void 0 : eR.user) != null ? new D.Z(eR.user) : null),
             [null == eR ? void 0 : eR.user],
         ),
-        eQ = (0, T.Z)(null != (t = null == eR ? void 0 : eR.application) ? t : null),
-        eX = i.useMemo(() => (null == eZ ? void 0 : eZ.find((e) => e.id === eB)), [eZ, eB]),
+        eX = (0, T.Z)(null != (t = null == eR ? void 0 : eR.application) ? t : null),
+        eQ = i.useMemo(() => (null == eZ ? void 0 : eZ.find((e) => e.id === eB)), [eZ, eB]),
         [eJ, e$] = i.useState(null),
         e0 = i.useMemo(() => {
             var e;
@@ -427,7 +427,7 @@ function ec(e) {
                     null != eO &&
                         (eO({
                             application: null == eR ? void 0 : eR.application,
-                            guild: eX,
+                            guild: eQ,
                         }),
                         null == eS || eS());
                     return;
@@ -455,7 +455,7 @@ function ec(e) {
                         eO({
                             application: null == eR ? void 0 : eR.application,
                             location: n.location,
-                            guild: eX,
+                            guild: eQ,
                         }),
                             null == eS || eS();
                     else if (null != n.location) {
@@ -465,7 +465,7 @@ function ec(e) {
                             ? (0, R.uL)(J.Z5c.OAUTH2_AUTHORIZED, {
                                   state: {
                                       application: null == eR ? void 0 : eR.application,
-                                      guild: eX,
+                                      guild: eQ,
                                   },
                               })
                             : (window.location = n.location);
@@ -482,7 +482,7 @@ function ec(e) {
                 eE,
                 eO,
                 null == eR ? void 0 : eR.application,
-                eX,
+                eQ,
                 eS,
                 $,
                 e5,
@@ -598,7 +598,7 @@ function ec(e) {
         tc = (0, l.O)(tl);
     if (eL instanceof Error)
         return eT
-            ? { body: (0, r.jsx)(Q.Lk, { message: eL.message }) }
+            ? { body: (0, r.jsx)(X.Lk, { message: eL.message }) }
             : eA
               ? {
                     label: ee.intl.string(ee.t.j2d6Km),
@@ -691,7 +691,7 @@ function ec(e) {
                         requestedScopes: e5,
                         integrationType: eJ,
                         errors: tE,
-                        isTrustedName: eb || eQ,
+                        isTrustedName: eb || eX,
                         noDivider: !tv && !tO && !ty && e4.enabled,
                     }),
                     tv
@@ -721,7 +721,7 @@ function ec(e) {
                           })
                         : null,
                     ty
-                        ? (0, r.jsx)(X.Z, {
+                        ? (0, r.jsx)(Q.Z, {
                               error: (null != (c = tE[d.x.WEBHOOK_INCOMING]) ? c : [])[0],
                               selectedChannelId: eV,
                               selectedGuildId: eB,
@@ -732,7 +732,7 @@ function ec(e) {
             })),
                 e5.includes(d.x.BOT) && !f.fS(e6, L.Hn) && (C = "AUTHORIZE_BOT_PERMISSIONS"),
                 to.length > 1 && (A = "SELECT_INSTALL_TYPE"),
-                (tp = (tO && null == eX) || (ty && null == eV)),
+                (tp = (tO && null == eQ) || (ty && null == eV)),
                 (tf = !0);
             break;
         case "AUTHORIZE_BOT_PERMISSIONS":
@@ -746,7 +746,7 @@ function ec(e) {
                 permissions: e6,
                 deniedPermissions: eY,
                 onPermissionsChange: td,
-                guild: eX,
+                guild: eQ,
             })),
                 (A = "AUTHORIZE_SCOPES"),
                 (tf = !0);
@@ -843,7 +843,7 @@ function eu(e, t) {
     l && o === J.Z5c.OAUTH2_AUTHORIZED
         ? (0, h.h7)((e) =>
               (0, r.jsx)(
-                  Q.jO,
+                  X.jO,
                   er(
                       {
                           guild: t.guild,
@@ -871,7 +871,7 @@ function eu(e, t) {
                     (0, r.jsx)(
                         q.j,
                         ea(er({}, e), {
-                            children: (0, r.jsx)(Q.Lk, {
+                            children: (0, r.jsx)(X.Lk, {
                                 message: i,
                                 onClose: e.onClose,
                             }),

@@ -94,8 +94,8 @@ let V = "party-",
     K = !1,
     z = !1,
     q = [],
-    Q = [],
-    X = {},
+    X = [],
+    Q = {},
     J = {},
     $ = new Set(),
     ee = new Set();
@@ -109,7 +109,7 @@ function en(e) {
     return x.Z.findActivity(e, (e) => e.type !== U.IIU.CUSTOM_STATUS);
 }
 function er(e) {
-    return null == X[e] && (X = F(Z({}, X), { [e]: new A.Z({ name: e }) })), X[e];
+    return null == Q[e] && (Q = F(Z({}, Q), { [e]: new A.Z({ name: e }) })), Q[e];
 }
 function ei(e) {
     return null == J[e] && (J = F(Z({}, J), { [e]: new T.Z({ url: e }) })), J[e];
@@ -382,7 +382,7 @@ function eO() {
 function ev() {
     if (!eO()) return !1;
     $.clear(),
-        (Q = eb(
+        (X = eb(
             (q = eE(
                 e_(
                     ep(
@@ -406,7 +406,7 @@ function eI() {
     return !!eO() && (eS(), !1);
 }
 function eT() {
-    (K = !1), (q = []), (Q = []), $.clear();
+    (K = !1), (q = []), (X = []), $.clear();
 }
 function eA() {
     (K = !0), eS();
@@ -423,7 +423,7 @@ class eN extends (r = o.ZP.Store) {
         return q;
     }
     get nowPlayingCards() {
-        return Q;
+        return X;
     }
     get isMounted() {
         return K;

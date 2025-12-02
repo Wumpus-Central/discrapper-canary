@@ -91,12 +91,12 @@ let N = i.memo(function (e) {
         [V, H] = i.useState(!1),
         [Y, W] = i.useState(!1),
         [K, z] = i.useState(!1),
-        [q, Q] = i.useState(!1),
-        [X, J] = i.useState("none"),
+        [q, X] = i.useState(!1),
+        [Q, J] = i.useState("none"),
         [$, ee] = i.useState(() => ("function" == typeof a ? a() : a)),
         et = i.useRef(void 0),
         en = i.useCallback(() => {
-            W((e) => !e), Q(!0);
+            W((e) => !e), X(!0);
         }, []),
         er = i.useCallback(() => {
             J("metadata");
@@ -115,7 +115,7 @@ let N = i.memo(function (e) {
             W(!1),
                 null == et.current &&
                     (et.current = setTimeout(() => {
-                        U(!1), Q(!1), (et.current = void 0);
+                        U(!1), X(!1), (et.current = void 0);
                     }, 500));
         }, []),
         es = i.useCallback(() => {
@@ -218,7 +218,7 @@ let N = i.memo(function (e) {
                       ref: L,
                       className: v.audioElement,
                       src: n,
-                      preload: X,
+                      preload: Q,
                       playing: Y && !K,
                       onEnded: es,
                       onLoadedMetadata: ei,
@@ -232,7 +232,7 @@ let N = i.memo(function (e) {
                   ref: L,
                   className: v.audioElement,
                   controls: !1,
-                  preload: X,
+                  preload: Q,
                   onEnded: es,
                   onLoadedMetadata: ei,
                   onError: ec,

@@ -1,26 +1,26 @@
-n.d(t, { Z: () => s }), n(388685);
+n.d(t, { Z: () => c }), n(388685);
 var r = n(54381),
-    l = n(473749),
+    o = n(473749),
     i = n(264418),
-    o = n(493773),
+    l = n(493773),
     a = n(921944);
-function s(e) {
-    let { dismissibleContentType: t, targetElementRef: n, visibleContent: s, markAsDismissed: c, props: u } = e,
-        [d, f] = l.useState(!1),
-        p = l.useRef(null);
-    (0, o.ZP)(
+function c(e) {
+    let { dismissibleContentType: t, targetElementRef: n, visibleContent: c, markAsDismissed: s, props: u } = e,
+        [d, f] = o.useState(!1),
+        b = o.useRef(null);
+    (0, l.ZP)(
         () => (
-            (p.current = setTimeout(() => f(!0), 250)),
+            (b.current = setTimeout(() => f(!0), 250)),
             () => {
-                clearTimeout(p.current), c(a.L.AUTO_DISMISS);
+                clearTimeout(b.current), s(a.L.AUTO_DISMISS);
             }
         ),
     );
-    let b = l.useCallback(
+    let y = o.useCallback(
         (e) => {
-            c("user:explicit" === e ? a.L.USER_DISMISS : a.L.AUTO_DISMISS);
+            s("user:explicit" === e ? a.L.USER_DISMISS : a.L.AUTO_DISMISS);
         },
-        [c],
+        [s],
     );
     return (0, r.jsx)(
         i.Z,
@@ -51,8 +51,8 @@ function s(e) {
         })(
             {
                 targetElementRef: n,
-                shouldShow: d && s === t,
-                onRequestClose: b,
+                shouldShow: d && c === t,
+                onRequestClose: y,
             },
             u,
         ),

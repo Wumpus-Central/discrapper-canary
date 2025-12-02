@@ -23,8 +23,8 @@ var r = n(54381),
     b = n(49436),
     E = n(110560),
     O = n(324805),
-    y = n(981631),
-    v = n(231338),
+    v = n(981631),
+    y = n(231338),
     I = n(388032),
     C = n(810516);
 function S(e) {
@@ -119,7 +119,7 @@ function j(e) {
     return (
         i.useEffect(() => {
             g.default.track(
-                y.rMx.QUEST_CONTENT_VIEWED,
+                v.rMx.QUEST_CONTENT_VIEWED,
                 T(S({}, (0, m.mH)(b.jn.QUEST_HOME_TAKEOVER)), {
                     quest_id: t.campaignId,
                     is_targeted: !1,
@@ -128,7 +128,7 @@ function j(e) {
         }, [t.campaignId]),
         (0, r.jsx)("div", {
             className: a()(C.wrapper, {
-                "theme-dark": x === v.BR.LIGHT,
+                "theme-dark": x === y.BR.LIGHT,
                 [C.wrapperWithOldDiscoveryHeader]: !P,
             }),
             ref: L,
@@ -185,7 +185,7 @@ function j(e) {
                                                 onClick: () => {
                                                     (0, f.Z)(t.ctaSponsorUrl.url),
                                                         g.default.track(
-                                                            y.rMx.QUEST_CONTENT_CLICKED,
+                                                            v.rMx.QUEST_CONTENT_CLICKED,
                                                             S(
                                                                 {
                                                                     quest_id: t.campaignId,
@@ -215,7 +215,7 @@ function j(e) {
                                                                           });
                                                                       }),
                                                                       g.default.track(
-                                                                          y.rMx.QUEST_CONTENT_CLICKED,
+                                                                          v.rMx.QUEST_CONTENT_CLICKED,
                                                                           S(
                                                                               {
                                                                                   quest_id: t.campaignId,

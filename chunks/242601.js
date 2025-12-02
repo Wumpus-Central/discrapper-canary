@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
-    s = n(666917),
+    s = n(205120),
     o = n(55160),
     c = n(442837),
     u = n(704215),
@@ -17,8 +17,8 @@ var r = n(54381),
     b = n(110924),
     E = n(100527),
     O = n(906732),
-    y = n(536687),
-    v = n(211644),
+    v = n(536687),
+    y = n(211644),
     I = n(266454),
     C = n(492162),
     S = n(43740),
@@ -518,21 +518,21 @@ function eg(e) {
         m = (0, c.e7)([B.Z], () => B.Z.isUnavailable(n)),
         P = (0, c.e7)([q.default], () => q.default.getCurrentUser()),
         { enableStudyGroup: Z } = (0, A.s)(s),
-        w = (0, v.ZP)((e) => e.currentlyShown.has(u.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
+        w = (0, y.ZP)((e) => e.currentlyShown.has(u.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
         [D, M] = i.useState(!w),
         H = (0, b.Z)(n),
         { analyticsLocations: Q } = (0, O.ZP)(E.Z.GUILD_HEADER);
     i.useEffect(() => {
         n !== H && M(!w);
     }, [n, H, w]);
-    let [J, X] = (0, v.ZP)(
+    let [J, X] = (0, y.ZP)(
             (e) => [
                 er.XN.some((t) => e.currentlyShown.has(t.dismissibleContentType)),
                 e.currentlyShownGroup.has(ei.R.GUILD_HEADER_TOOLTIPS),
             ],
             o.X,
         ),
-        $ = (0, y.Z)(s),
+        $ = (0, v.Z)(s),
         ee = (0, f.s9z)(f.JQI),
         et = (0, c.e7)([F.Z], () => F.Z.hasLayers()),
         el = (0, c.e7)([k.Z], () => k.Z.shouldShow(ep)),
@@ -553,8 +553,8 @@ function eg(e) {
         eb = (0, L.Z)(n),
         eE = (0, N.Z)(n),
         eO = (0, c.e7)([W.Z], () => W.Z.getChannelId()),
-        ey = (0, c.e7)([Y.Z], () => Y.Z.desyncedVoiceStatesCount),
-        ev = (0, R.Z)(n);
+        ev = (0, c.e7)([Y.Z], () => Y.Z.desyncedVoiceStatesCount),
+        ey = (0, R.Z)(n);
     return (0, r.jsx)(eh, {
         guildId: n,
         hideSelectedChannel: l,
@@ -565,7 +565,7 @@ function eg(e) {
         selectedVoiceChannelId: h,
         voiceStates: d,
         rtcConnectedChannelId: eO,
-        rtcDesyncedVoiceStatesCount: ey,
+        rtcDesyncedVoiceStatesCount: ev,
         isUnavailable: m,
         user: P,
         hasChannelNotice: null != $ || J,
@@ -585,6 +585,6 @@ function eg(e) {
         headerAnalyticsLocations: Q,
         isTutorialHighlightDismissed: e_,
         shouldRenderBurstCoachmark: em,
-        shouldRenderGuildPowerupPerkCoachmark: !1 === ev,
+        shouldRenderGuildPowerupPerkCoachmark: !1 === ey,
     });
 }

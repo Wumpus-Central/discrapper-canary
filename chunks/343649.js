@@ -51,8 +51,8 @@ var r = n(54381),
     K = n(74538),
     z = n(212895),
     q = n(296848),
-    Q = n(518062),
-    X = n(4434),
+    X = n(518062),
+    Q = n(4434),
     J = n(333451),
     $ = n(981631),
     ee = n(474936),
@@ -176,11 +176,11 @@ function e_(e) {
         eY = Object.keys(ej).length > 0,
         [eW, eK] = i.useState(em - ew.length),
         [ez, eq] = i.useState(!1),
-        eQ = (0, u.e7)([B.Z], () => B.Z.popupCallbackCalled),
-        eX = (0, v.V)(),
+        eX = (0, u.e7)([B.Z], () => B.Z.popupCallbackCalled),
+        eQ = (0, v.V)(),
         eJ = i.useMemo(
             () =>
-                null != ey && eN && eX
+                null != ey && eN && eQ
                     ? (0, L.g)(ey, eW)
                     : [
                           {
@@ -188,7 +188,7 @@ function e_(e) {
                               quantity: eW,
                           },
                       ],
-            [ey, eN, eW, eX],
+            [ey, eN, eW, eQ],
         ),
         e$ = i.useMemo(() => (0, D.b)(), []),
         [e0, e1] = (0, g.Z)(() => [null != e$ ? e$ : (0, c.Z)(), Date.now()]),
@@ -267,7 +267,7 @@ function e_(e) {
                 setPurchaseError: s,
             } = e9.current;
             (async () => {
-                if (!0 === eQ)
+                if (!0 === eX)
                     try {
                         if (null == B.Z.redirectedPaymentId) return;
                         await (0, _.OP)(B.Z.redirectedPaymentId),
@@ -291,7 +291,7 @@ function e_(e) {
                         o(!1), (0, _.K2)();
                     }
             })();
-        }, [eQ, eb]),
+        }, [eX, eb]),
         (0, E.ZP)(() => {
             H.Z.hasFetchedSubscriptions() || (0, _.jg)(),
                 null == el ||
@@ -338,10 +338,10 @@ function e_(e) {
         tg = i.useMemo(() => JSON.stringify(tp), [tp]);
     i.useEffect(() => {
         let e;
-        eX &&
+        eQ &&
             (null != V.Z.get(ee.Xh.PREMIUM_MONTH_GUILD) && t_((e = (0, z.DE)(ee.Xh.PREMIUM_MONTH_GUILD, ek, !1))),
             null == ek && null != ey && null != ey.paymentSourceId ? tf(ey.currency) : null != e && tf(e[0]));
-    }, [ek, ey, eX, tg]);
+    }, [ek, ey, eQ, tg]);
     let tE = (0, M.vP)({
         paymentModalArgs: eL,
         initialStep: P.h8.PAYMENT_TYPE,
@@ -371,7 +371,7 @@ function e_(e) {
         },
     });
     if (eO) t = (0, r.jsx)(S.Vq, { onClose: to });
-    else if (eT && eN && eX && null != td && "" !== td)
+    else if (eT && eN && eQ && null != td && "" !== td)
         if ((null == ey ? void 0 : ey.isPausedOrPausePending) && !ey.isPausedAllowsUpdatesButNotResume)
             t = (0, r.jsx)(p.hzk, {
                 "data-migration-pending": !0,
@@ -423,7 +423,7 @@ function e_(e) {
                 case P.h8.PLAN_SELECT:
                     l()(null != el, "Missing guildId"),
                         l()(null != eP, "Missing nextPremiumSubscriptionPlan"),
-                        (e = (0, r.jsx)(X.CP, {
+                        (e = (0, r.jsx)(Q.CP, {
                             premiumSubscriptionPlan: eP,
                             numGuildBoosts: eW,
                             setNumGuildBoosts: eK,
@@ -490,7 +490,7 @@ function e_(e) {
                     break;
                 case P.h8.REVIEW:
                     l()(null != eP, "Missing nextPremiumSubscriptionPlan"),
-                        (e = (0, r.jsx)(X.Gq, {
+                        (e = (0, r.jsx)(Q.Gq, {
                             paymentSources: ej,
                             priceOptions: o,
                             currentPremiumSubscription: ey,
@@ -617,7 +617,7 @@ function e_(e) {
                     let m = null != (tb = null == c ? void 0 : c.name) ? tb : null == eD ? void 0 : eD.name,
                         g = (0, w.$)(ej, ek),
                         E = (0, q.qH)(ev.current) && null != eC && !ee.F$.has(eC.id);
-                    e = (0, r.jsx)(X.R7, {
+                    e = (0, r.jsx)(Q.R7, {
                         guild: c,
                         guildBoostQuantity: eW + ew.length,
                         onClose: to,
@@ -683,7 +683,7 @@ function e_(e) {
     return (
         eO ||
             e4 === P.h8.PREMIUM_UPSELL ||
-            (ty = (0, r.jsx)(Q.Z, {
+            (ty = (0, r.jsx)(X.Z, {
                 onClose: to,
                 currentStep: e4,
                 purchaseState: tn,

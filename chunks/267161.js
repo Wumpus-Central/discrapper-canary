@@ -21,8 +21,8 @@ var r = n(54381),
     b = n(336219),
     E = n(609174),
     O = n(257966),
-    y = n(111666),
-    v = n(413557),
+    v = n(111666),
+    y = n(413557),
     I = n(300986),
     C = n(314451),
     S = n(35583),
@@ -129,7 +129,7 @@ let V = i.memo(function () {
                         trailing: (0, r.jsxs)(r.Fragment, {
                             children: [
                                 B && (0, r.jsx)(g.Z, { className: Q }),
-                                (0, r.jsx)(y.Z, { className: Q }),
+                                (0, r.jsx)(v.Z, { className: Q }),
                                 (0, r.jsx)(m.Z, {
                                     canShowReminder: !0,
                                     className: Q,
@@ -184,7 +184,7 @@ let V = i.memo(function () {
                                                   focusSectionProps: "HELP" === K ? e : void 0,
                                                   className: Q,
                                               }),
-                                              V ? (0, r.jsx)(v.M, { className: Q }) : null,
+                                              V ? (0, r.jsx)(y.M, { className: Q }) : null,
                                           ],
                                       })
                                     : (0, r.jsx)(I.Z, {

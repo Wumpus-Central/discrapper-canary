@@ -4,7 +4,7 @@ var r = n(54381),
     l = n(120356),
     a = n.n(l),
     o = n(392711),
-    c = n(666917),
+    c = n(205120),
     s = n(846519),
     u = n(681715),
     d = n(481060),
@@ -13,8 +13,8 @@ var r = n(54381),
     m = n(569545),
     _ = n(687516),
     g = n(937995),
-    b = n(158776),
-    v = n(626135),
+    v = n(158776),
+    b = n(626135),
     h = n(823789),
     E = n(352978),
     y = n(981631),
@@ -68,24 +68,24 @@ let P = {
         x: 0,
         y: 0,
     },
-    j = (0, o.debounce)((e, t, n) => {
+    x = (0, o.debounce)((e, t, n) => {
         let r = null,
             i = null;
         if (null != n && (0, m.DB)(n)) {
             var l, a;
             let e = (0, m.my)(n),
-                t = (0, _.L2)(e, b.Z);
+                t = (0, _.L2)(e, v.Z);
             (r = null != (l = null == t ? void 0 : t.name) ? l : null),
                 (i = null != (a = null == t ? void 0 : t.id) ? a : null);
         }
-        v.default.track(y.rMx.VIDEO_STREAM_ZOOM_CHANGED, {
+        b.default.track(y.rMx.VIDEO_STREAM_ZOOM_CHANGED, {
             zoom_level: e,
             method: t,
             share_application_name: r,
             share_application_id: i,
         });
     }, 2000);
-function x(e, t, n) {
+function j(e, t, n) {
     return Math.min(Math.max(t, e), n);
 }
 let Z = i.memo(function (e) {
@@ -111,15 +111,15 @@ let Z = i.memo(function (e) {
             }
             return i;
         })(e, ["enableZoom", "minZoom", "maxZoom", "controlsBottom", "idle"]);
-    let { streamId: b, streamKey: v, onResize: y, wrapperClassName: Z, videoComponent: R, mirror: T, paused: A } = _,
+    let { streamId: v, streamKey: b, onResize: y, wrapperClassName: Z, videoComponent: R, mirror: T, paused: A } = _,
         { onActive: N, onPreventIdle: D, onAllowIdle: M } = i.useContext(g.nM),
         [k, L] = i.useState(!1),
         [F, V] = i.useState(null),
         [U, z] = i.useState(null),
         [W, H] = i.useState(0),
         [B, q] = i.useState(P),
-        [Y, K] = i.useState(null),
-        [G, Q] = i.useState(null),
+        [Y, G] = i.useState(null),
+        [K, Q] = i.useState(null),
         [X, J] = i.useState(!1),
         [$, ee] = i.useState(n),
         [et, en] = i.useState(!1),
@@ -133,8 +133,8 @@ let Z = i.memo(function (e) {
         em = i.useRef(new s.V7()),
         e_ = i.useRef(null),
         eg = i.useRef(null),
-        eb = i.useRef(null),
-        ev = (0, d.q_F)(
+        ev = i.useRef(null),
+        eb = (0, d.q_F)(
             {
                 value: o,
                 config: I(w({}, c.config.stiff), { clamp: !0 }),
@@ -165,15 +165,15 @@ let Z = i.memo(function (e) {
                     l = (r * (n - 1)) / 2,
                     a = (i * (n - 1)) / 2;
                 return {
-                    x: x(e.x, -l, l),
-                    y: x(e.y, -a, a),
+                    x: j(e.x, -l, l),
+                    y: j(e.y, -a, a),
                 };
             },
             [$],
         ),
         eO = i.useCallback(
             (e, t, r) => {
-                let i = x(e, n, l);
+                let i = j(e, n, l);
                 if (null == e_.current || null == t || i === $) return;
                 eu(!0);
                 let a = i / $;
@@ -187,29 +187,29 @@ let Z = i.memo(function (e) {
                     ),
                 ),
                     ee(i),
-                    j(i, r, v),
+                    x(i, r, b),
                     em.current.start(2000, () => {
                         eu(!1);
                     });
             },
-            [eS, l, n, v, $],
+            [eS, l, n, b, $],
         ),
         eC = i.useCallback(
             (e) => {
                 if (!eh) return;
                 e.preventDefault(), e.stopPropagation();
                 let t = ey(e);
-                L(!0), z(t), V(t), H(Date.now()), Q(t), K(B);
+                L(!0), z(t), V(t), H(Date.now()), Q(t), G(B);
             },
             [ey, eh, B],
         ),
         ew = i.useCallback(
             (e) => {
-                if (((t || eh) && N(), !k || !eh || null == G || null == Y)) return;
+                if (((t || eh) && N(), !k || !eh || null == K || null == Y)) return;
                 e.preventDefault(), e.stopPropagation();
                 let n = ey(e),
-                    r = n.x - G.x,
-                    i = n.y - G.y;
+                    r = n.x - K.x,
+                    i = n.y - K.y;
                 q(
                     eS({
                         x: Y.x + r,
@@ -218,10 +218,10 @@ let Z = i.memo(function (e) {
                 ),
                     V(n);
             },
-            [eS, G, Y, t, ey, k, eh, N],
+            [eS, K, Y, t, ey, k, eh, N],
         ),
         eI = i.useCallback((e) => {
-            e.preventDefault(), e.stopPropagation(), L(!1), Q(null), K(null);
+            e.preventDefault(), e.stopPropagation(), L(!1), Q(null), G(null);
         }, []),
         eP = i.useCallback(
             (e) => {
@@ -234,10 +234,10 @@ let Z = i.memo(function (e) {
             },
             [eh, U, W, F],
         ),
-        ej = i.useCallback(() => {
-            L(!1), Q(null), K(null);
+        ex = i.useCallback(() => {
+            L(!1), Q(null), G(null);
         }, []),
-        ex = i.useCallback(
+        ej = i.useCallback(
             (e) => {
                 t &&
                     (en(!0),
@@ -335,9 +335,9 @@ let Z = i.memo(function (e) {
             (e) => {
                 let { width: t, height: n } = e;
                 if (!eh || null == t || null == n) return;
-                let r = eb.current;
+                let r = ev.current;
                 if (null == r) {
-                    eb.current = {
+                    ev.current = {
                         width: t,
                         height: n,
                     };
@@ -357,7 +357,7 @@ let Z = i.memo(function (e) {
                             y: (0 !== a ? e.y / a : 0) * c,
                         });
                     }),
-                    (eb.current = {
+                    (ev.current = {
                         width: t,
                         height: n,
                     }),
@@ -373,8 +373,8 @@ let Z = i.memo(function (e) {
             ed.current.stop(), ef.current.stop(), ep.current.stop(), em.current.stop();
         }),
         i.useEffect(() => {
-            null != b && (0, h.N)(b, t && eh ? $ : 1);
-        }, [t, eh, b, $]);
+            null != v && (0, h.N)(v, t && eh ? $ : 1);
+        }, [t, eh, v, $]);
     let eU = i.useMemo(() => {
             let e = eS(B);
             return {
@@ -399,8 +399,8 @@ let Z = i.memo(function (e) {
                 i = 0.5 - B.x / (e * $),
                 l = 0.5 - B.y / (t * $);
             return {
-                "--custom-zoom-indicator-left": "".concat(100 * x(i - n / 2, 0, 1 - n), "%"),
-                "--custom-zoom-indicator-top": "".concat(100 * x(l - r / 2, 0, 1 - r), "%"),
+                "--custom-zoom-indicator-left": "".concat(100 * j(i - n / 2, 0, 1 - n), "%"),
+                "--custom-zoom-indicator-top": "".concat(100 * j(l - r / 2, 0, 1 - r), "%"),
                 "--custom-zoom-indicator-width": "".concat(100 * n, "%"),
                 "--custom-zoom-indicator-height": "".concat(100 * r, "%"),
                 "--custom-zoom-indicator-transition":
@@ -418,13 +418,13 @@ let Z = i.memo(function (e) {
         onMouseDown: eC,
         onMouseMove: ew,
         onMouseUp: eI,
-        onMouseLeave: ej,
-        onWheel: ex,
+        onMouseLeave: ex,
+        onWheel: ej,
         children: [
             (0, r.jsx)(d.P3F, {
                 onClick: eP,
                 children:
-                    null != b &&
+                    null != v &&
                     (0, r.jsx)("div", {
                         className: a()(C.videoContainer, C.zoomed),
                         style: eU,
@@ -438,10 +438,10 @@ let Z = i.memo(function (e) {
                     }),
             }),
             t &&
-                null != b &&
+                null != v &&
                 (0, r.jsx)(c.animated.div, {
                     className: a()(C.zoomControlsContainer, { [C.idle]: m }),
-                    style: { bottom: ev.value },
+                    style: { bottom: eb.value },
                     children: (0, r.jsxs)("div", {
                         className: C.zoomControls,
                         onMouseEnter: eA,
@@ -463,7 +463,7 @@ let Z = i.memo(function (e) {
                                         children: [
                                             (0, r.jsx)(R, {
                                                 className: a()(C.minimapVideo, { [O.mirror]: T }),
-                                                streamId: b,
+                                                streamId: v,
                                                 paused: A,
                                                 reportContainerResized: !1,
                                             }),

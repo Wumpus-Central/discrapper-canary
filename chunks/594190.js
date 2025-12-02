@@ -211,11 +211,11 @@ let F = new m.Z("RunningGameStore"),
     ],
     z = [],
     q = !0,
-    Q = {
+    X = {
         "input-service": { state: "unknown" },
         "tool-service": { state: "unknown" },
     },
-    X = new Set(),
+    Q = new Set(),
     J = [],
     $ = [],
     ee = [],
@@ -463,7 +463,7 @@ function ej() {
                 if (null == r) return t;
                 for (let i of A.Z.getLaunchOptions(n.id, n.branchId)) {
                     let a = "".concat(n.id, ":").concat(n.branchId);
-                    X.has(a) || ((e = !0), X.add(a));
+                    Q.has(a) || ((e = !0), Q.add(a));
                     let { fullExecutablePath: o } = i,
                         s = o.replace(/\\/g, "/").toLowerCase();
                     (er[s] = r.id),
@@ -587,10 +587,10 @@ function ez() {
 function eq(e) {
     (e_ = e.level), (em = e.intervalSeconds);
 }
-function eQ() {
+function eX() {
     (e_ = null), (em = null), ef.clear();
 }
-function eX(e) {
+function eQ(e) {
     let t = e.processes
         .map((e) => {
             var t;
@@ -682,7 +682,7 @@ function e2() {
 }
 function e4(e) {
     let { status: t, modules: n } = e;
-    for (let e of n) Q[e] = t;
+    for (let e of n) X[e] = t;
 }
 !__OVERLAY__ &&
     ((0, w.isDesktop)() || k.iP) &&
@@ -995,11 +995,11 @@ class e5 extends (i = c.ZP.Store) {
     }
     getSystemServiceStatus(e) {
         var t;
-        return null != (t = Q[e]) ? t : { state: "unknown" };
+        return null != (t = X[e]) ? t : { state: "unknown" };
     }
     isSystemServiceInitialized(e) {
         var t;
-        return (null == (t = Q[e]) ? void 0 : t.state) === "running";
+        return (null == (t = X[e]) ? void 0 : t.state) === "running";
     }
 }
 U(e5, "displayName", "RunningGameStore");
@@ -1019,8 +1019,8 @@ let e8 = new e5(d.Z, {
         GAME_LAUNCH_SUCCESS: e3,
         GAME_DETECTION_WATCH_CANDIDATE_GAMES_START: ez,
         GAME_DETECTION_DEBUGGING_START: eq,
-        GAME_DETECTION_DEBUGGING_STOP: eQ,
-        GAME_DETECTION_DEBUGGING_TICK: eX,
+        GAME_DETECTION_DEBUGGING_STOP: eX,
+        GAME_DETECTION_DEBUGGING_TICK: eQ,
         SYSTEM_SERVICE_INITIALIZE: e4,
     }),
     e6 = e8;

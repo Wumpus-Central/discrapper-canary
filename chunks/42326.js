@@ -15,8 +15,8 @@ var r = n(54381),
 function g(e) {
     let { errorMessage: t, className: n, avError: l } = e,
         g = i.useRef(null),
-        b = "",
-        { text: v, node: h } = (function (e) {
+        v = "",
+        { text: b, node: h } = (function (e) {
             var t;
             if (null == e)
                 return {
@@ -39,7 +39,7 @@ function g(e) {
                     : l,
             };
         })(l);
-    b = null != v ? "".concat(t, " ").concat(v) : t;
+    v = null != b ? "".concat(t, " ").concat(b) : t;
     let [E] = i.useState(new o.V7()),
         [y, S] = i.useState(!1),
         [O, C] = i.useState(!1),
@@ -58,7 +58,7 @@ function g(e) {
         P = i.useCallback(() => {
             C(!0);
         }, []),
-        j = i.useCallback(() => {
+        x = i.useCallback(() => {
             C(!1);
         }, []);
     return (0, r.jsx)(c.yRy, {
@@ -120,9 +120,9 @@ function g(e) {
                                 onMouseEnter: I,
                                 onMouseLeave: w,
                                 onFocus: P,
-                                onBlur: j,
+                                onBlur: x,
                                 className: a()(n, _.root),
-                                "aria-label": b,
+                                "aria-label": v,
                             },
                             e,
                         )),

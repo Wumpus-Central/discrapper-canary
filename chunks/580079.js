@@ -37,11 +37,11 @@ function O(e, t, n, r) {
             userId: r,
         });
 }
-function y(e) {
+function v(e) {
     let { channel: t } = e;
     delete m[t.id], delete _[t.id];
 }
-class v extends (a = c.ZP.Store) {
+class y extends (a = c.ZP.Store) {
     initialize() {
         this.waitFor(d.Z, p.Z);
     }
@@ -60,7 +60,7 @@ class v extends (a = c.ZP.Store) {
     }
 }
 (l = "ActiveChannelsStore"),
-    (i = "displayName") in (r = v)
+    (i = "displayName") in (r = y)
         ? Object.defineProperty(r, i, {
               value: l,
               enumerable: !0,
@@ -68,7 +68,7 @@ class v extends (a = c.ZP.Store) {
               writable: !0,
           })
         : (r[i] = l),
-    new v(u.Z, {
+    new y(u.Z, {
         CHANNEL_SELECT: function (e) {
             let { channelId: t, guildId: n } = e;
             if (!(0, h.ME)(t) || null == n) return !1;
@@ -102,8 +102,8 @@ class v extends (a = c.ZP.Store) {
             let { guild: t } = e;
             delete g[t.id];
         },
-        CHANNEL_DELETE: y,
-        THREAD_DELETE: y,
+        CHANNEL_DELETE: v,
+        THREAD_DELETE: v,
         ACTIVE_CHANNELS_FETCH_START: function (e) {
             let { guildId: t } = e;
             b[t] = {

@@ -16,14 +16,14 @@ var l = t(54381),
 function h(e) {
     var n, t;
     let { applicationId: h, guildId: x, page: m } = e,
-        { ref: v, width: C } = (0, o.ZP)(),
+        { ref: C, width: v } = (0, o.ZP)(),
         k = (0, d.oR)(),
         { analyticsLocations: j } = (0, s.ZP)(),
         b = i.useRef(null),
         { handleScroll: S } = (0, _.I)(b, k, j),
         [L, N] = i.useMemo(() => {
             if ((null == m ? void 0 : m.skuIds) == null || 0 === m.skuIds.length) return [[], []];
-            let e = Math.round(null != C ? C : 0);
+            let e = Math.round(null != v ? v : 0);
             return (null == m ? void 0 : m.leaderboard) == null || null == e || e < 564
                 ? [[], m.skuIds]
                 : e < 1104
@@ -31,8 +31,8 @@ function h(e) {
                       ? [[], m.skuIds]
                       : [m.skuIds.slice(0, 1), m.skuIds.slice(1)]
                   : [m.skuIds.slice(0, 2), m.skuIds.slice(2)];
-        }, [m, C]),
-        E = 1 === L.length && null != C && C >= 834;
+        }, [m, v]),
+        E = 1 === L.length && null != v && v >= 834;
     return (i.useEffect(() => {
         let { sessionId: e, guildId: n, pageIndex: t, pageTitle: l, isUserGuildMember: i, pageHasLeaderboard: a } = k;
         r.default.track(I.rMx.SLAYER_STOREFRONT_PAGE_VIEWED, {
@@ -51,7 +51,7 @@ function h(e) {
               ref: b,
               onScroll: S,
               children: (0, l.jsxs)("section", {
-                  ref: v,
+                  ref: C,
                   className: f.container,
                   children: [
                       (0, l.jsx)(g.n, {

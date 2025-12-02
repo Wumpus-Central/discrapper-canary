@@ -141,11 +141,11 @@ function q(e) {
     let { channel: t } = e;
     return w.nonPositionalChannelIdUpdate(t.id);
 }
-function Q(e) {
+function X(e) {
     let { channel: t } = e;
     return w.nonPositionalChannelUpdate(t);
 }
-function X(e) {
+function Q(e) {
     let { id: t } = e;
     return w.nonPositionalChannelIdUpdate(t);
 }
@@ -319,10 +319,10 @@ let eu = new ec(s.Z, {
     RESORT_THREADS: Y,
     SET_RECENTLY_ACTIVE_COLLAPSED: D,
     THREAD_CREATE: q,
-    THREAD_DELETE: Q,
+    THREAD_DELETE: X,
     THREAD_LIST_SYNC: Z,
-    THREAD_MEMBER_UPDATE: X,
-    THREAD_MEMBERS_UPDATE: X,
+    THREAD_MEMBER_UPDATE: Q,
+    THREAD_MEMBERS_UPDATE: Q,
     THREAD_UPDATE: q,
     TRY_ACK: Y,
     UPDATE_CHANNEL_DIMENSIONS: Y,

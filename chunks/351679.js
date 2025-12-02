@@ -17,8 +17,8 @@ var r = n(54381),
     b = n(845080),
     E = n(295790),
     O = n(145807),
-    y = n(592125),
-    v = n(709054),
+    v = n(592125),
+    y = n(709054),
     I = n(981631),
     C = n(7938),
     S = n(360514);
@@ -106,8 +106,8 @@ let N = i.memo(function (e) {
         V = (0, s.JA)(N.id),
         F = (0, p.ZP)(N),
         z = (0, o.e7)(
-            [y.Z],
-            () => N.hasFlag(I.iLy.HAS_THREAD) && y.Z.getChannel(v.default.castMessageIdAsChannelId(N.id)),
+            [v.Z],
+            () => N.hasFlag(I.iLy.HAS_THREAD) && v.Z.getChannel(y.default.castMessageIdAsChannelId(N.id)),
         ),
         Y = (0, c.p9)({
             guildId: Z.guild_id,

@@ -52,12 +52,12 @@ function I(e) {
             hideExampleButton: z = !1,
             interactive: q = !0,
         } = e,
-        Q = (0, c.ZP)(i.id, null == I ? void 0 : I.id),
-        X = (0, o.e7)([_.ZP], () => (null != I ? _.ZP.getMember(I.id, i.id) : null)),
+        X = (0, c.ZP)(i.id, null == I ? void 0 : I.id),
+        Q = (0, o.e7)([_.ZP], () => (null != I ? _.ZP.getMember(I.id, i.id) : null)),
         J = (0, m.Ys)({
             pendingValue: D,
             userValue: null == i ? void 0 : i.avatarDecoration,
-            guildValue: null == X ? void 0 : X.avatarDecoration,
+            guildValue: null == Q ? void 0 : Q.avatarDecoration,
             guildId: null == I ? void 0 : I.id,
         }),
         { avatarSrc: $, avatarDecorationSrc: ee } = (0, d.Z)({
@@ -70,19 +70,19 @@ function I(e) {
         }),
         et = (0, m.Ys)({
             pendingValue: M,
-            userValue: null == Q || null == (t = Q._userProfile) ? void 0 : t.profileEffect,
-            guildValue: null == Q || null == (n = Q._guildMemberProfile) ? void 0 : n.profileEffect,
+            userValue: null == X || null == (t = X._userProfile) ? void 0 : t.profileEffect,
+            guildValue: null == X || null == (n = X._guildMemberProfile) ? void 0 : n.profileEffect,
             guildId: null == I ? void 0 : I.id,
         }),
         { theme: en, primaryColor: er } = (0, u.Z)({
             user: i,
-            displayProfile: Q,
+            displayProfile: X,
             pendingThemeColors: j,
             isPreview: T,
         }),
         ei = (0, r.jsxs)(f.Z, {
             user: i,
-            displayProfile: Q,
+            displayProfile: X,
             themeType: O.l.POPOUT,
             pendingThemeColors: j,
             className: a()(S.container, Z),
@@ -93,7 +93,7 @@ function I(e) {
                     children: [
                         (0, r.jsx)(g.Z, {
                             user: i,
-                            displayProfile: Q,
+                            displayProfile: X,
                             guildId: null == I ? void 0 : I.id,
                             canUsePremiumCustomization: T,
                             pendingBanner: C,
@@ -105,7 +105,7 @@ function I(e) {
                         (0, r.jsx)(h.Z, {
                             user: i,
                             guild: I,
-                            displayProfile: Q,
+                            displayProfile: X,
                             canUsePremiumCustomization: T,
                             previewAvatar: $,
                             previewAvatarDecorationSrc: ee,
@@ -126,7 +126,7 @@ function I(e) {
                 }),
                 (0, r.jsx)(E.Z, {
                     user: i,
-                    displayProfile: Q,
+                    displayProfile: X,
                     guild: I,
                     pendingAvatar: w,
                     pendingNickname: x,

@@ -75,10 +75,10 @@ let _ = {
                     K = I ? -j[V] / 2 : 0,
                     z = P === r.BL ? L[V] : j[V],
                     q = P === r.BL ? -j[V] : -L[V],
-                    Q = t.elements.arrow,
-                    X =
-                        I && Q
-                            ? (0, l.Z)(Q)
+                    X = t.elements.arrow,
+                    Q =
+                        I && X
+                            ? (0, l.Z)(X)
                             : {
                                   width: 0,
                                   height: 0,
@@ -86,7 +86,7 @@ let _ = {
                     J = t.modifiersData["arrow#persistent"] ? t.modifiersData["arrow#persistent"].padding : (0, f.Z)(),
                     $ = J[B],
                     ee = J[F],
-                    et = (0, s.u)(0, L[V], X[V]),
+                    et = (0, s.u)(0, L[V], Q[V]),
                     en = R ? L[V] / 2 - K - et - $ - k.mainAxis : z - et - $ - k.mainAxis,
                     er = R ? -L[V] / 2 + K + et + ee + k.mainAxis : q + et + ee + k.mainAxis,
                     ei = t.elements.arrow && (0, c.Z)(t.elements.arrow),

@@ -49,10 +49,10 @@ var r = n(127849),
     q = function (e) {
         return [255 & e, (e >> 8) & 255];
     },
-    Q = function (e) {
+    X = function (e) {
         return [255 & e, (e >> 8) & 255, (e >> 16) & 255, (e >> 24) & 255];
     },
-    X = function (e) {
+    Q = function (e) {
         return (e[3] << 24) | (e[2] << 16) | (e[1] << 8) | e[0];
     },
     J = function (e) {
@@ -166,10 +166,10 @@ if (o) {
                 return (t[1] << 8) | t[0];
             },
             getInt32: function (e) {
-                return X(et(this, 4, e, arguments.length > 1 && arguments[1]));
+                return Q(et(this, 4, e, arguments.length > 1 && arguments[1]));
             },
             getUint32: function (e) {
-                return X(et(this, 4, e, arguments.length > 1 && arguments[1])) >>> 0;
+                return Q(et(this, 4, e, arguments.length > 1 && arguments[1])) >>> 0;
             },
             getFloat32: function (e) {
                 return K(et(this, 4, e, arguments.length > 1 && arguments[1]), 23);
@@ -190,10 +190,10 @@ if (o) {
                 en(this, 2, e, q, t, arguments.length > 2 && arguments[2]);
             },
             setInt32: function (e, t) {
-                en(this, 4, e, Q, t, arguments.length > 2 && arguments[2]);
+                en(this, 4, e, X, t, arguments.length > 2 && arguments[2]);
             },
             setUint32: function (e, t) {
-                en(this, 4, e, Q, t, arguments.length > 2 && arguments[2]);
+                en(this, 4, e, X, t, arguments.length > 2 && arguments[2]);
             },
             setFloat32: function (e, t) {
                 en(this, 4, e, J, t, arguments.length > 2 && arguments[2]);

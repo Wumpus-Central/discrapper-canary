@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => m });
 var r = n(54381);
 n(473749);
 var i = n(120356),
@@ -11,7 +11,7 @@ var i = n(120356),
     d = n(388032),
     h = n(710509),
     g = n(197571);
-function m(e) {
+function p(e) {
     let { children: t } = e;
     return (0, r.jsx)("li", {
         className: h.listItem,
@@ -22,7 +22,7 @@ function m(e) {
         }),
     });
 }
-function p(e) {
+function m(e) {
     let { setSlide: t, transitionTo: i } = e;
     return (0, r.jsxs)("div", {
         children: [
@@ -45,15 +45,15 @@ function p(e) {
                     (0, r.jsxs)("ul", {
                         className: h.listContainer,
                         children: [
-                            (0, r.jsx)(m, { children: d.intl.string(d.t.Gj1Zry) }),
+                            (0, r.jsx)(p, { children: d.intl.string(d.t.Gj1Zry) }),
                             (0, r.jsx)(o.Z, {}),
-                            (0, r.jsx)(m, { children: d.intl.string(d.t["8C6t3B"]) }),
+                            (0, r.jsx)(p, { children: d.intl.string(d.t["8C6t3B"]) }),
                             (0, r.jsx)(o.Z, {}),
-                            (0, r.jsx)(m, { children: d.intl.string(d.t.mToZMA) }),
+                            (0, r.jsx)(p, { children: d.intl.string(d.t.mToZMA) }),
                             (0, r.jsx)(o.Z, {}),
-                            (0, r.jsx)(m, { children: d.intl.string(d.t.TPEvkc) }),
+                            (0, r.jsx)(p, { children: d.intl.string(d.t.TPEvkc) }),
                             (0, r.jsx)(o.Z, {}),
-                            (0, r.jsx)(m, { children: d.intl.string(d.t.H8Y1Ln) }),
+                            (0, r.jsx)(p, { children: d.intl.string(d.t.H8Y1Ln) }),
                         ],
                     }),
                 ],

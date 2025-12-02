@@ -1,5 +1,5 @@
 let r, i;
-n.r(t), n.d(t, { default: () => X }), n(539854), n(388685);
+n.r(t), n.d(t, { default: () => Q }), n(539854), n(388685);
 var a,
     o = n(392711),
     s = n.n(o),
@@ -83,7 +83,7 @@ function w() {
 let D = s().debounce(() => {
     A &&
         (null != y ? s().isEqual(y, K(y.id)) && (A = !1) : null != O && s().isEqual(O, z(O.id)) && (A = !1),
-        A || Q.emitChange());
+        A || X.emitChange());
 }, 500);
 function x(e) {
     let { settings: t } = e;
@@ -277,7 +277,7 @@ class q extends (a = l.ZP.Store) {
     }
 }
 m(q, "displayName", "GuildSettingsIntegrationsStore");
-let Q = new q(
+let X = new q(
         c.Z,
         __OVERLAY__
             ? {}
@@ -302,4 +302,4 @@ let Q = new q(
                   INTEGRATION_SETTINGS_SAVE_FAILURE: M,
               },
     ),
-    X = Q;
+    Q = X;

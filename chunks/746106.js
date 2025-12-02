@@ -141,8 +141,8 @@ function w(e) {
         K = (0, h.CL)("RootThemeContextProvider"),
         z = (0, h.VM)("RootThemeContextProvider"),
         q = (0, g.U)("RootThemeContextProvider"),
-        Q = (0, E.A)("RootThemeContextProvider"),
-        X = (0, _.On)({ isPopoutWindow: o }),
+        X = (0, E.A)("RootThemeContextProvider"),
+        Q = (0, _.On)({ isPopoutWindow: o }),
         J = R(
             b,
             L,
@@ -153,10 +153,10 @@ function w(e) {
                     K && e.push("refresh-fast-follow-guild-bg"),
                     z && e.push("refresh-fast-follow-distinct-borders"),
                     q && e.push("mana-text-inputs"),
-                    Q && e.push("mana-toggle-inputs"),
+                    X && e.push("mana-toggle-inputs"),
                     e
                 );
-            }, [W, K, z, q, Q]),
+            }, [W, K, z, q, X]),
             N,
             p,
         );
@@ -185,7 +185,7 @@ function w(e) {
                 hardwareAccelerationEnabled: c,
                 highContrastMode: F && B,
                 isPopoutWindow: o,
-                rootClassName: s()(X, {
+                rootClassName: s()(Q, {
                     "confetti-mode": Z,
                     "refresh-fast-follow-avatars": W,
                     "refresh-fast-follow-guild-bg": K,

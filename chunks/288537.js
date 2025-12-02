@@ -45,8 +45,8 @@ var r,
     K = 2,
     z = 3,
     q = 4,
-    Q = 3;
-function X(e, t) {
+    X = 3;
+function Q(e, t) {
     return (e.msg = l[t]), t;
 }
 function J(e) {
@@ -436,7 +436,7 @@ function e_(e) {
           (t.last_flush = c),
           a._tr_init(t),
           _)
-        : X(e, h);
+        : Q(e, h);
 }
 function em(e) {
     var t = e_(e);
@@ -453,7 +453,7 @@ function eg(e, t, n, r, a, o) {
         r < 0 ? ((s = 0), (r = -r)) : r > 15 && ((s = 2), (r -= 16)),
         a < 1 || a > C || n !== A || r < 8 || r > 15 || t < 0 || t > 9 || o < 0 || o > S)
     )
-        return X(e, h);
+        return Q(e, h);
     8 === r && (r = 9);
     var l = new ep();
     return (
@@ -483,9 +483,9 @@ function eg(e, t, n, r, a, o) {
     );
 }
 function eE(e, t) {
-    if (!e || !e.state || t > p || t < 0) return e ? X(e, h) : h;
+    if (!e || !e.state || t > p || t < 0) return e ? Q(e, h) : h;
     if (((i = e.state), !e.output || (!e.input && 0 !== e.avail_in) || (i.status === Y && t !== f)))
-        return X(e, 0 === e.avail_out ? E : h);
+        return Q(e, 0 === e.avail_out ? E : h);
     if (((i.strm = e), (n = i.last_flush), (i.last_flush = t), i.status === G))
         if (2 === i.wrap)
             (e.adler = 0),
@@ -519,7 +519,7 @@ function eE(e, t) {
                       en(i, 0),
                       en(i, 0),
                       en(i, 9 === i.level ? 2 : 4 * (i.strategy >= O || i.level < 2)),
-                      en(i, Q),
+                      en(i, X),
                       (i.status = H));
         else {
             var n,
@@ -600,8 +600,8 @@ function eE(e, t) {
         0 !== i.pending)
     ) {
         if ((ee(e), 0 === e.avail_out)) return (i.last_flush = -1), _;
-    } else if (0 === e.avail_in && J(t) <= J(n) && t !== f) return X(e, E);
-    if (i.status === Y && 0 !== e.avail_in) return X(e, E);
+    } else if (0 === e.avail_in && J(t) <= J(n) && t !== f) return Q(e, E);
+    if (i.status === Y && 0 !== e.avail_in) return Q(e, E);
     if (0 !== e.avail_in || 0 !== i.lookahead || (t !== c && i.status !== Y)) {
         var y = i.strategy === O ? eu(i, t) : i.strategy === v ? ec(i, t) : r[i.level].func(i, t);
         if (((y === z || y === q) && (i.status = Y), y === W || y === z))
@@ -640,8 +640,8 @@ function eb(e) {
     var t;
     return e && e.state
         ? (t = e.state.status) !== G && t !== Z && t !== B && t !== F && t !== V && t !== H && t !== Y
-            ? X(e, h)
-            : ((e.state = null), t === H ? X(e, g) : _)
+            ? Q(e, h)
+            : ((e.state = null), t === H ? Q(e, g) : _)
         : h;
 }
 function ey(e, t) {

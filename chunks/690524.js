@@ -123,7 +123,7 @@ let j = {
                     { analyticsLocations: H } = (0, _.ZP)(p.Z.PAYMENT_FLOW_TEST_PAGE),
                     [Y, W] = i.useState(""),
                     [K, z] = i.useState(C.lds),
-                    { balance: q, isFetching: Q, error: X } = (0, S.A)(),
+                    { balance: q, isFetching: X, error: Q } = (0, S.A)(),
                     { isSubmitting: J, responseMessage: $, redeemVirtualCurrency: ee } = (0, S.f)(),
                     [et, en] = i.useState(C.lds),
                     [er, ei] = i.useState(""),
@@ -362,7 +362,7 @@ let j = {
                                                     variant: "text-sm/normal",
                                                     children: "Virtual Currency Balance:",
                                                 }),
-                                                Q
+                                                X
                                                     ? (0, r.jsx)("div", {
                                                           className: P.loader,
                                                           children: (0, r.jsx)(c.$jN, { type: c.RAz.SPINNING_CIRCLE }),
@@ -370,12 +370,12 @@ let j = {
                                                     : (0, r.jsxs)("div", {
                                                           className: P.balanceWidgetPillContainer,
                                                           children: [
-                                                              null !== X &&
+                                                              null !== Q &&
                                                                   (0, r.jsxs)(c.Text, {
                                                                       variant: "text-sm/normal",
                                                                       children: [
                                                                           "Error fetching Virtual Currency Balance: ",
-                                                                          X.message,
+                                                                          Q.message,
                                                                       ],
                                                                   }),
                                                               (0, r.jsx)(I.A4, {

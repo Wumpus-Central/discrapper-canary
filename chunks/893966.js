@@ -219,7 +219,7 @@ function q(e) {
         r = (0, _.Qu)(t, n);
     return r && y(t).updateMembersByMemberIds(n.map((e) => e.userId)), r;
 }
-function Q(e) {
+function X(e) {
     var t, n, r, i, a, o;
     let s,
         l,
@@ -276,7 +276,7 @@ function Q(e) {
     );
     return b || O || v;
 }
-class X extends (r = i.ZP.Store) {
+class Q extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(o.default, s.ZP, l.Z, c.default);
     }
@@ -332,8 +332,8 @@ class X extends (r = i.ZP.Store) {
         return y(e).lastCursorTimestamp;
     }
 }
-g(X, "displayName", "MemberSafetyStore");
-let J = new X(a.Z, {
+g(Q, "displayName", "MemberSafetyStore");
+let J = new Q(a.Z, {
     CONNECTION_OPEN: G,
     CONNECTION_OPEN_SUPPLEMENTAL: Z,
     LOCAL_MESSAGES_LOADED: F,
@@ -361,6 +361,6 @@ let J = new X(a.Z, {
     MEMBER_SAFETY_PAGINATION_TOKEN_UPDATE: K,
     MEMBER_SAFETY_SEARCH_STATE_UPDATE: z,
     FETCH_GUILD_MEMBER_SUPPLEMENTAL_SUCCESS: q,
-    MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: Q,
+    MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: X,
     MEMBER_SAFETY_GUILD_MEMBER_UPDATE_BATCH: A,
 });

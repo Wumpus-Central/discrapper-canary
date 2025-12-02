@@ -208,8 +208,8 @@ let k = i.forwardRef(function (e, t) {
             debounceTime: K,
             renderOptionLabel: z = L,
             onSearchChange: q,
-            renderOptionPrefix: Q = () => null,
-            renderOptionSuffix: X = () => null,
+            renderOptionPrefix: X = () => null,
+            renderOptionSuffix: Q = () => null,
             "aria-describedby": J,
             "aria-invalid": $,
             "aria-labelledby": ee,
@@ -407,10 +407,10 @@ let k = i.forwardRef(function (e, t) {
             null == (e = ey.current) || e.focus();
         }
     }, [U]);
-    let eQ = i.useCallback(() => {
+    let eX = i.useCallback(() => {
             eA(""), eq(null), eZ(!0);
         }, [eq, eZ]),
-        eX = i.useCallback(
+        eQ = i.useCallback(
             (e) => {
                 switch (e.key) {
                     case "Escape":
@@ -463,8 +463,8 @@ let k = i.forwardRef(function (e, t) {
                         renderOptionLabel: z,
                         updatePosition: i,
                         popoutPosition: n,
-                        renderOptionPrefix: Q,
-                        renderOptionSuffix: X,
+                        renderOptionPrefix: X,
+                        renderOptionSuffix: Q,
                     });
                 },
                 position: Z,
@@ -475,7 +475,7 @@ let k = i.forwardRef(function (e, t) {
                         { ref: l, onKeyDown: c } = eW.containerProps,
                         u = (e) => {
                             var t;
-                            null == (t = ef.onKeyDown) || t.call(ef, e), c(e), eX(e);
+                            null == (t = ef.onKeyDown) || t.call(ef, e), c(e), eQ(e);
                         };
                     return (0, r.jsx)(
                         _.gNt,
@@ -522,8 +522,8 @@ let k = i.forwardRef(function (e, t) {
                                                         query: eT,
                                                         selectedOptions: eL,
                                                         loading: eD,
-                                                        renderOptionPrefix: Q,
-                                                        renderOptionSuffix: X,
+                                                        renderOptionPrefix: X,
+                                                        renderOptionSuffix: Q,
                                                         isDisabled: w,
                                                         isEditing: eC,
                                                         isProcessing: D,
@@ -592,7 +592,7 @@ let k = i.forwardRef(function (e, t) {
                                                               ? (0, r.jsx)(_.P3F, {
                                                                     "aria-label": I.intl.string(I.t.VkKicb),
                                                                     "aria-controls": i,
-                                                                    onClick: eQ,
+                                                                    onClick: eX,
                                                                     children: (0, r.jsx)(y.Dio, {
                                                                         size: "xs",
                                                                         color: "currentColor",

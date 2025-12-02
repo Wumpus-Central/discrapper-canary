@@ -121,8 +121,8 @@ let L = (e) => {
             inNitroLockedSection: z,
             handleScrollUpOnSectionCollapse: q,
         } = e,
-        { enabled: Q } = O.Z.useExperiment({ location: "EmojiPicker" }, { autoTrackExposure: !1 }),
-        { enabled: X } = (0, d.qt)({
+        { enabled: X } = O.Z.useExperiment({ location: "EmojiPicker" }, { autoTrackExposure: !1 }),
+        { enabled: Q } = (0, d.qt)({
             location: "emoji_picker_list_row",
             autoTrackExposure: !1,
         }),
@@ -244,7 +244,7 @@ let L = (e) => {
                     });
                 }
                 case v.ld.CREATE_EMOJI: {
-                    if (X) return null;
+                    if (Q) return null;
                     let t = (t) => {
                         t.stopPropagation(),
                             k.current ||
@@ -327,7 +327,7 @@ let L = (e) => {
         });
     if (V !== I.En.TOP_GUILD_EMOJI) return eh(t);
     let eg = t.filter((e) => {
-            if (Q && e.type === v.ld.CREATE_EMOJI) return !0;
+            if (X && e.type === v.ld.CREATE_EMOJI) return !0;
             let t = e;
             return (
                 t.subCategory === I.t0.TOP_GUILD_EMOJI ||

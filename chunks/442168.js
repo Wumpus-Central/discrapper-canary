@@ -1,7 +1,7 @@
 n.d(t, { Z: () => y });
 var r = n(54381),
     i = n(473749),
-    l = n(666917),
+    l = n(205120),
     a = n(442837),
     o = n(780384),
     c = n(481060),
@@ -37,8 +37,8 @@ function g(e) {
     }
     return e;
 }
-let b = { visibility: "hidden" },
-    v = {
+let v = { visibility: "hidden" },
+    b = {
         precision: 0.0001,
         duration: 300,
     },
@@ -64,10 +64,10 @@ function y(e) {
         },
         [C],
     );
-    let j = (e) => {
-            if (n !== s.P.NO_POPOUT) return b;
+    let x = (e) => {
+            if (n !== s.P.NO_POPOUT) return v;
             let t = null == O ? void 0 : O.getBoundingClientRect();
-            if (((P.current = t), e.timestamp !== w || null == t)) return b;
+            if (((P.current = t), e.timestamp !== w || null == t)) return v;
             let { top: r, left: i } = t;
             return {
                 top: r + 36,
@@ -76,15 +76,15 @@ function y(e) {
                 width: 268,
             };
         },
-        x = (0, i.useRef)(null),
+        j = (0, i.useRef)(null),
         Z = (0, c.Yzy)(
             I,
             {
                 keys: (e) => e.timestamp,
-                ref: x,
+                ref: j,
                 from: { opacity: 0.2 },
                 enter: { opacity: 0 },
-                config: v,
+                config: b,
             },
             "animate-always",
         ),
@@ -102,13 +102,13 @@ function y(e) {
                             opacity: 1,
                         },
                         y.enabled
-                            ? j(e)
+                            ? x(e)
                             : (() => {
                                   var e;
-                                  if (n !== s.P.NO_POPOUT) return b;
+                                  if (n !== s.P.NO_POPOUT) return v;
                                   let t = null == (e = S.current) ? void 0 : e.getBoundingClientRect();
                                   return null == t
-                                      ? b
+                                      ? v
                                       : {
                                             width: t.width,
                                             height: t.height,
@@ -123,7 +123,7 @@ function y(e) {
                             opacity: 1,
                             visibility: "visible",
                         },
-                        j(e),
+                        x(e),
                     ),
                 ],
                 leave: g(
@@ -153,7 +153,7 @@ function y(e) {
             "animate-always",
         );
     return (
-        (0, l.useChain)([x, R], [0, 0.1], 3000),
+        (0, l.useChain)([j, R], [0, 0.1], 3000),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)("div", {

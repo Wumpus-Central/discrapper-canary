@@ -133,7 +133,7 @@ function q(e, t, n, r, i) {
           }
         : null;
 }
-function Q(e, t, n, r) {
+function X(e, t, n, r) {
     let i = null != e ? f.Z.getApplication(e) : null;
     if (null == i || null == e || t.has(e)) return null;
     let a = K(i, n);
@@ -162,7 +162,7 @@ function Q(e, t, n, r) {
         }
     );
 }
-function X() {
+function Q() {
     let e = new Set(p.ZP.getRunningVerifiedApplicationIds()),
         t = {},
         n = new Set(),
@@ -173,7 +173,7 @@ function X() {
         i = Object.values(E.Z.getAllLibraryApplications())
             .map((r) => q(r, n, t, e, !0))
             .filter(A.lm),
-        a = [...r.map((r) => Q(r, n, t, e)).filter(A.lm), ...i].sort((e, t) =>
+        a = [...r.map((r) => X(r, n, t, e)).filter(A.lm), ...i].sort((e, t) =>
             e.lastPlayed === t.lastPlayed ? 0 : e.lastPlayed > t.lastPlayed ? -1 : 1,
         );
     return (
@@ -191,7 +191,7 @@ function X() {
 }
 class J extends (r = u.ZP.Store) {
     initialize() {
-        this.syncWith([f.Z, g.Z, _.Z, p.ZP, v.Z, S.Z, E.Z, y.Z, b.Z, h.Z], X, 200),
+        this.syncWith([f.Z, g.Z, _.Z, p.ZP, v.Z, S.Z, E.Z, y.Z, b.Z, h.Z], Q, 200),
             this.syncWith([O.Z, m.default], () => !0);
     }
     get applicationFilterQuery() {

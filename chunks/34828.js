@@ -33,11 +33,11 @@ let g = { ignoredDevices: {} },
     b = {},
     E = {},
     O = {},
-    y = {
+    v = {
         id: null,
         justChanged: !1,
     },
-    v = {
+    y = {
         id: null,
         justChanged: !1,
     },
@@ -79,13 +79,13 @@ class T extends (r = a.ZP.DeviceSettingsStore) {
         return b;
     }
     get lastInputSystemDevice() {
-        return y;
+        return v;
     }
     get outputDevices() {
         return E;
     }
     get lastOutputSystemDevice() {
-        return v;
+        return y;
     }
 }
 h(T, "displayName", "ConnectedDeviceStore"),
@@ -134,22 +134,22 @@ let N = new T(s.Z, {
     MEDIA_ENGINE_DEVICES: function (e) {
         let { inputDevices: t, outputDevices: n } = e,
             r = {};
-        (y.justChanged = !1),
+        (v.justChanged = !1),
             t.forEach((e) => {
                 if (((r[C(e)] = e.id), e.id === f.w5)) {
                     var t;
                     let n = null != (t = e.originalId) ? t : e.originalName;
-                    n !== y.id && (y.justChanged = !0), (y.id = n);
+                    n !== v.id && (v.justChanged = !0), (v.id = n);
                 }
             });
         let i = {};
         if (
-            ((v.justChanged = !1),
+            ((y.justChanged = !1),
             n.forEach((e) => {
                 if (((i[C(e)] = e.id), e.id === f.w5)) {
                     var t;
                     let n = null != (t = e.originalId) ? t : e.originalName;
-                    n !== v.id && (v.justChanged = !0), (v.id = n);
+                    n !== y.id && (y.justChanged = !0), (y.id = n);
                 }
             }),
             !_)

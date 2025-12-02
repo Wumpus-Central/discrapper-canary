@@ -1,10 +1,10 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => l });
 var r = n(54381),
-    l = n(120356),
-    i = n.n(l),
+    i = n(120356),
+    a = n.n(i),
     o = n(793030),
-    a = n(951010);
-let s = (e) => {
+    s = n(951010);
+let l = (e) => {
     let { className: t } = e;
-    return (0, r.jsx)(o.izJ, { className: i()(a.divider, t) });
+    return (0, r.jsx)(o.izJ, { className: a()(s.divider, t) });
 };

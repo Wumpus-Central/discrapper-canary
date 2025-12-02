@@ -1,25 +1,25 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => O });
 var r = n(54381),
-    l = n(473749),
+    o = n(473749),
     i = n(120356),
-    o = n.n(i),
+    l = n.n(i),
     a = n(512722),
-    s = n.n(a),
-    c = n(666917),
+    c = n.n(a),
+    s = n(205120),
     u = n(91192),
     d = n(481060),
     f = n(493773),
-    p = n(996435),
-    b = n(700425),
-    y = n(910557);
+    b = n(996435),
+    y = n(700425),
+    p = n(910557);
 function g(e) {
     var t;
-    let { category: n, onClick: l, active: i } = e,
-        { useTitle: a, useNavigationTitle: c, key: f } = n,
-        p = null == a ? void 0 : a(),
-        b = null != (t = null == c ? void 0 : c()) ? t : p;
+    let { category: n, onClick: o, active: i } = e,
+        { useTitle: a, useNavigationTitle: s, key: f } = n,
+        b = null == a ? void 0 : a(),
+        y = null != (t = null == s ? void 0 : s()) ? t : b;
     return (
-        s()(null != b, "[SettingsSubnavigationCategory] Category must have a title"),
+        c()(null != y, "[SettingsSubnavigationCategory] Category must have a title"),
         (0, r.jsx)(u.mh, {
             id: f,
             children: (e) => {
@@ -52,13 +52,13 @@ function g(e) {
                         return e;
                     })(
                         {
-                            onClick: l,
+                            onClick: o,
                             tag: "li",
-                            className: o()({ [y.active]: i }),
+                            className: l()({ [p.active]: i }),
                         },
                         e,
                     )),
-                    (n = n = { children: b }),
+                    (n = n = { children: y }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                         : (function (e, t) {
@@ -78,19 +78,19 @@ function g(e) {
         })
     );
 }
-function v(e) {
+function O(e) {
     let { categories: t } = e,
-        n = p.Z.useField("currentCategoryKey");
+        n = b.Z.useField("currentCategoryKey");
     (0, f.ZP)(() => {
-        t.some((e) => e.key === n) || p.Z.setState({ currentCategoryKey: t[0].key });
+        t.some((e) => e.key === n) || b.Z.setState({ currentCategoryKey: t[0].key });
     }),
-        l.useEffect(
+        o.useEffect(
             () => () => {
-                p.Z.setState({ currentCategoryKey: void 0 });
+                b.Z.setState({ currentCategoryKey: void 0 });
             },
             [],
         );
-    let i = l.useMemo(
+    let i = o.useMemo(
             () =>
                 Math.max(
                     t.findIndex((e) => e.key === n),
@@ -98,7 +98,7 @@ function v(e) {
                 ),
             [t, n],
         ),
-        o = (0, d.q_F)({
+        l = (0, d.q_F)({
             y: 36 * i,
             config: {
                 mass: 0.1,
@@ -107,15 +107,15 @@ function v(e) {
             },
         });
     return (
-        (0, b.l)(),
+        (0, y.l)(),
         (0, r.jsxs)("div", {
-            className: y.subnav,
+            className: p.subnav,
             children: [
                 (0, r.jsx)("div", {
-                    className: y.track,
-                    children: (0, r.jsx)(c.animated.div, {
-                        className: y.thumb,
-                        style: o,
+                    className: p.track,
+                    children: (0, r.jsx)(s.animated.div, {
+                        className: p.thumb,
+                        style: l,
                     }),
                 }),
                 (0, r.jsx)("ul", {
@@ -127,7 +127,7 @@ function v(e) {
                                     var t;
                                     return (
                                         (t = e.key),
-                                        void p.Z.setState({
+                                        void b.Z.setState({
                                             requestedTargetKey: t,
                                             showNavigationMobile: !1,
                                         })

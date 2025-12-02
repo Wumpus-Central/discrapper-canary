@@ -1,47 +1,47 @@
-function i(t, e, n) {
+function r(e, t, n) {
     return (
-        e in t
-            ? Object.defineProperty(t, e, {
+        t in e
+            ? Object.defineProperty(e, t, {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (t[e] = n),
-        t
+            : (e[t] = n),
+        e
     );
 }
-n.d(e, { Z: () => r }), n(388685);
-class r {
-    register(t, e, n, i) {
-        this.map.set(t.key, {
-            node: t,
-            parentPanelKey: e,
+n.d(t, { Z: () => i }), n(388685);
+class i {
+    register(e, t, n, r) {
+        this.map.set(e.key, {
+            node: e,
+            parentPanelKey: t,
             parentCategoryKey: n,
-            parentAccordionKey: i,
+            parentAccordionKey: r,
         });
     }
-    entry(t) {
-        return this.map.get(t);
+    entry(e) {
+        return this.map.get(e);
     }
-    get(t) {
-        var e;
-        return null == (e = this.entry(t)) ? void 0 : e.node;
+    get(e) {
+        var t;
+        return null == (t = this.entry(e)) ? void 0 : t.node;
     }
-    typedEntry(t) {
-        if (null != t) return this.map.get(t.key);
+    typedEntry(e) {
+        if (null != e) return this.map.get(e.key);
     }
-    typedGet(t) {
-        var e;
-        return null == (e = this.typedEntry(t)) ? void 0 : e.node;
+    typedGet(e) {
+        var t;
+        return null == (t = this.typedEntry(e)) ? void 0 : t.node;
     }
-    setDefaultPanel(t) {
-        this.defaultPanel = t;
+    setDefaultPanel(e) {
+        this.defaultPanel = e;
     }
     getDefaultPanel() {
         return this.defaultPanel;
     }
     constructor() {
-        i(this, "map", new Map()), i(this, "defaultPanel", void 0);
+        r(this, "map", new Map()), r(this, "defaultPanel", void 0);
     }
 }

@@ -1,4 +1,4 @@
-t.d(n, { Z: () => v }), t(388685);
+t.d(n, { Z: () => h }), t(388685);
 var i = t(54381);
 t(473749);
 var l = t(442837),
@@ -11,8 +11,8 @@ var l = t(442837),
     c = t(324067),
     f = t(306680),
     g = t(981631),
-    h = t(388032);
-function v(e) {
+    v = t(388032);
+function h(e) {
     let n = (function (e) {
         let n = (0, o.n2)(e.guild_id, e.id),
             t = (0, l.e7)([f.ZP, c.Z, u.Z, s.Z], () => {
@@ -42,7 +42,7 @@ function v(e) {
     })(e);
     return (0, i.jsx)(r.sNh, {
         id: "mark-channel-read",
-        label: h.intl.string(h.t.e6RscS),
+        label: v.intl.string(v.t.e6RscS),
         action: function () {
             (0, a.U6)(e, {
                 section: g.jXE.CHANNEL_CONTEXT_MENU,

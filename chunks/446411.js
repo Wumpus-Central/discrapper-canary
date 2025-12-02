@@ -101,8 +101,8 @@ let W = 32,
     K = 12,
     z = 150,
     q = 144,
-    Q = 520,
-    X = 5,
+    X = 520,
+    Q = 5,
     J = 150;
 function $(e, t) {
     let n = K / t,
@@ -171,12 +171,12 @@ function et(e) {
         maxHeight: c,
     });
     (Y = Math.max(K.width, z)), (W = Math.max(K.height, q));
-    let Q = (0, A.q)(u);
+    let X = (0, A.q)(u);
     if (null != d && null != d.proxyURL)
         return (0, i.jsx)("div", {
             className: s()(Z.embedVideo, r),
             children: h({
-                poster: Q,
+                poster: X,
                 src: d.proxyURL,
                 placeholder: j,
                 placeholderVersion: M,
@@ -258,7 +258,7 @@ function et(e) {
               },
         children: [
             m({
-                src: Q,
+                src: X,
                 width: Y,
                 height: W,
                 maxWidth: Y,
@@ -947,7 +947,7 @@ class er extends (r = a.PureComponent) {
             maxHeight: s,
         });
         if (!e && (i === k.hBH.VIDEO || c >= 300)) return c + W;
-        if (i === k.hBH.RICH && void 0 !== n) return Q;
+        if (i === k.hBH.RICH && void 0 !== n) return X;
         if (i === k.hBH.GIFV) {
             var u, d, f, p;
             let { width: e } = (0, w.Tj)({
@@ -1026,7 +1026,7 @@ class er extends (r = a.PureComponent) {
         }
         let f = J / (c.Z.fontScale / 100),
             p = (null != s ? (0, D.TZ)(s) : 0) >= f,
-            _ = (null != (n = null == s ? void 0 : s.split("\n").length) ? n : 0) >= X,
+            _ = (null != (n = null == s ? void 0 : s.split("\n").length) ? n : 0) >= Q,
             m = p || _;
         return {
             maxWidth: void 0 === d || m ? "max-content" : d,

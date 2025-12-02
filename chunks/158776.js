@@ -356,7 +356,7 @@ function q(e) {
                 });
         });
 }
-function Q(e) {
+function X(e) {
     let { guild: t } = e;
     t.presences.forEach((e) => {
         let { user: n, status: r, clientStatus: i, activities: a, hiddenActivities: o, processedAtTimestamp: s } = e;
@@ -371,7 +371,7 @@ function Q(e) {
         });
     });
 }
-function X(e) {
+function Q(e) {
     let { guild: t } = e;
     Y(t.id);
 }
@@ -546,8 +546,8 @@ let ea = new ei(c.Z, {
     CONNECTION_OPEN: W,
     CONNECTION_OPEN_SUPPLEMENTAL: K,
     OVERLAY_INITIALIZE: z,
-    GUILD_CREATE: Q,
-    GUILD_DELETE: X,
+    GUILD_CREATE: X,
+    GUILD_DELETE: Q,
     GUILD_MEMBER_REMOVE: J,
     PRESENCE_UPDATES: $,
     PRESENCES_REPLACE: q,

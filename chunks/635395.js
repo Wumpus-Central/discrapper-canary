@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(473749),
     i = n(442837),
     l = n(846027),
@@ -51,14 +51,14 @@ class O extends r.PureComponent {
             });
     }
 }
-let y = () => null;
+let v = () => null;
 m.isPlatformEmbedded &&
     (_.ZP.on("SYSTEM_TRAY_TOGGLE_MUTE", () => l.Z.toggleSelfMute({ location: "System Tray" })),
     _.ZP.on("SYSTEM_TRAY_TOGGLE_DEAFEN", () => l.Z.toggleSelfDeaf()),
     _.ZP.on("SYSTEM_TRAY_OPEN_VOICE_SETTINGS", () => {
         (0, c.openUserSettings)(o.n.VOICE_AND_VIDEO_PANEL, { section: b.oAB.VOICE });
     }),
-    (y = i.ZP.connectStores([f.Z, d.Z, g.Z, u.default, h.Z, p.Z, a.Z], () => {
+    (v = i.ZP.connectStores([f.Z, d.Z, g.Z, u.default, h.Z, p.Z, a.Z], () => {
         let e = u.default.getTotalMentionCount(),
             t = u.default.hasAnyUnread(),
             n = (0, s.m$)([h.Z, a.Z]),
@@ -71,4 +71,4 @@ m.isPlatformEmbedded &&
             unread: r,
         };
     })(O)));
-let v = y;
+let y = v;

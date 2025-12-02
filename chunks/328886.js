@@ -130,15 +130,15 @@ function k(e) {
             partyStatusElement: z,
             analyticsLocations: q,
         } = e,
-        Q =
+        X =
             null != (o = null == Y || null == (t = Y.timestamps) ? void 0 : t.start)
                 ? o
                 : null == Y
                   ? void 0
                   : Y.created_at,
-        X = i.useMemo(() => {
+        Q = i.useMemo(() => {
             var e;
-            return null != Q
+            return null != X
                 ? (0, r.jsxs)("div", {
                       className: j.timestampContainer,
                       children: [
@@ -148,7 +148,7 @@ function k(e) {
                           }),
                           (0, r.jsx)(m.x3, {
                               entry: {
-                                  start: Q,
+                                  start: X,
                                   end: null == Y || null == (e = Y.timestamps) ? void 0 : e.end,
                               },
                               textColor: "currentColor",
@@ -158,7 +158,7 @@ function k(e) {
                       ],
                   })
                 : null;
-        }, [Q, null == Y || null == (n = Y.timestamps) ? void 0 : n.end]),
+        }, [X, null == Y || null == (n = Y.timestamps) ? void 0 : n.end]),
         J = (0, I.H)(s),
         $ = (0, E.N)(y.id),
         ee = i.useMemo(
@@ -183,9 +183,9 @@ function k(e) {
                     className: j.tagline,
                     color: "none",
                     lineClamp: 2,
-                    children: [J ? (0, O.$v)(s, A, P, k, !1) : X, J ? null : ee],
+                    children: [J ? (0, O.$v)(s, A, P, k, !1) : Q, J ? null : ee],
                 }),
-            [J, s, A, P, k, X, ee],
+            [J, s, A, P, k, Q, ee],
         ),
         en = i.useMemo(
             () =>

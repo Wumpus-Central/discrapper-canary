@@ -34,9 +34,9 @@ function _(e) {
         b = (0, l.e7)([f.Z], () => f.Z.isVisible(e)),
         E = u.Z.useShouldShowChannelNotice(n),
         O = (0, d.h6)(e),
-        { enableStudyGroup: y } = (0, c.s)(e),
-        v = O.length > 0,
-        I = y && !(null == e ? void 0 : e.features.has(g.GuildFeatures.HUB)),
+        { enableStudyGroup: v } = (0, c.s)(e),
+        y = O.length > 0,
+        I = v && !(null == e ? void 0 : e.features.has(g.GuildFeatures.HUB)),
         C = (0, o.Vm)(n);
     if (
         (i.useEffect(() => {
@@ -49,7 +49,7 @@ function _(e) {
     if (_ || null != C) return 2;
     if (b) return 3;
     if (E) return 4;
-    else if (v) return 5;
+    else if (y) return 5;
     else if (I) return 6;
     return null;
 }

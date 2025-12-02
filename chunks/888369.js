@@ -297,11 +297,11 @@ function q(e) {
     let { guild: t } = e;
     return Y(t.id);
 }
-function Q(e) {
+function X(e) {
     let { guild: t } = e;
     return null != C[t.id] && (delete C[t.id], N.delete(t.id), P++, !0);
 }
-function X(e) {
+function Q(e) {
     let {
         channel: { id: t, guild_id: n },
     } = e;
@@ -535,13 +535,13 @@ class ey extends m.Z {
             OVERLAY_INITIALIZE: W,
             CACHE_LOADED_LAZY: () => this.loadCache(),
             GUILD_CREATE: q,
-            GUILD_DELETE: Q,
+            GUILD_DELETE: X,
             MESSAGE_CREATE: et,
             MESSAGE_ACK: ee,
             BULK_ACK: ea,
             UPDATE_CHANNEL_DIMENSIONS: ee,
             CHANNEL_SELECT: en,
-            CHANNEL_DELETE: X,
+            CHANNEL_DELETE: Q,
             WINDOW_FOCUS: J,
             GUILD_ACK: e_,
             GUILD_ROLE_CREATE: em,

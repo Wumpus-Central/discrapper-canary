@@ -107,8 +107,8 @@ let R = 490,
                 return null != (e = E.Z.getGuild(G.guild_id)) ? e : null;
             }, [G.guild_id]),
             K = i.useRef(null),
-            [z, q, Q] = (0, O.Z)(C(T({}, e), { guild: W }), t, K),
-            X = (null == (n = Z.autocomplete) ? void 0 : n.forceChatLayer) ? g.ZP : h.ZP,
+            [z, q, X] = (0, O.Z)(C(T({}, e), { guild: W }), t, K),
+            Q = (null == (n = Z.autocomplete) ? void 0 : n.forceChatLayer) ? g.ZP : h.ZP,
             J = (0, p.DJ)(z.selectedIndex);
         (0, _.KR)(Y, z.isVisible, J);
         let $ = (0, y.Z)({
@@ -182,7 +182,7 @@ let R = 490,
             innerClassName: S.autocompleteInner,
             onMouseDown: (e) => e.preventDefault(),
             children: (0, r.jsx)(s.bG, {
-                navigator: Q,
+                navigator: X,
                 children: (0, r.jsx)(s.SJ, {
                     children: (e) => {
                         var { ref: t } = e,
@@ -218,7 +218,7 @@ let R = 490,
             }),
         });
         return null != $
-            ? (0, r.jsx)(X, {
+            ? (0, r.jsx)(Q, {
                   children: (0, r.jsx)(c.jRF, {
                       targetRef: e.targetRef,
                       overrideTargetRect: $,

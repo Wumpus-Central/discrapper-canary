@@ -27,14 +27,14 @@ let f = function (e) {
             async scrollToStart() {},
             async scrollToEnd() {},
         }),
-        y = g !== d.pJs.ONLINE && g !== d.pJs.ALL,
-        v = E || h || y,
+        v = g !== d.pJs.ONLINE && g !== d.pJs.ALL,
+        y = E || h || v,
         I = i.useMemo(
             () =>
                 t.map((e, t) =>
                     0 === e.length
                         ? null
-                        : v
+                        : y
                           ? (0, r.jsxs)(
                                 "div",
                                 {
@@ -52,7 +52,7 @@ let f = function (e) {
                                 t,
                             ),
                 ),
-            [n, f, _, t, v],
+            [n, f, _, t, y],
         );
     return (0, r.jsx)(a.bG, {
         navigator: O,

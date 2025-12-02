@@ -1,26 +1,26 @@
-o.d(t, { default: () => p });
-var n = o(54381),
-    r = o(473749),
-    c = o(481060),
-    a = o(957115),
-    i = o(332664),
-    l = o(626135),
-    _ = o(981631),
-    b = o(531578),
-    s = o(388032);
+r.d(t, { default: () => d });
+var n = r(54381),
+    o = r(473749),
+    c = r(481060),
+    a = r(957115),
+    i = r(332664),
+    l = r(626135),
+    b = r(981631),
+    _ = r(531578),
+    s = r(388032);
 function u(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var o = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(o);
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
         "function" == typeof Object.getOwnPropertySymbols &&
             (n = n.concat(
-                Object.getOwnPropertySymbols(o).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(o, e).enumerable;
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                 }),
             )),
             n.forEach(function (t) {
                 var n;
-                (n = o[t]),
+                (n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
                               value: n,
@@ -33,12 +33,12 @@ function u(e) {
     }
     return e;
 }
-let d = ["OTHER"];
-function p(e) {
-    let { analyticsData: t, transitionState: p, onClose: m } = e;
+let p = ["OTHER"];
+function d(e) {
+    let { analyticsData: t, transitionState: d, onClose: f } = e;
     return (
-        r.useEffect(() => {
-            l.default.track(_.rMx.OPEN_MODAL, { type: "Video Background Feedback" });
+        o.useEffect(() => {
+            l.default.track(b.rMx.OPEN_MODAL, { type: "Video Background Feedback" });
         }, []),
         (0, n.jsx)(i.Z, {
             modalType: "video_background",
@@ -67,48 +67,48 @@ function p(e) {
                     label: s.intl.string(s.t.emlT91),
                 },
             ],
-            freeformNeededProblems: d,
+            freeformNeededProblems: p,
             onSubmit: function (e) {
-                var r, i, d, p;
-                let { rating: m, problem: f, dontShowAgain: O, feedback: y } = e;
+                var o, i, p, d;
+                let { rating: f, problem: m, dontShowAgain: O, feedback: y } = e;
                 O &&
                     (0, a.Uv)({
-                        feedbackType: b.nw.VIDEO_BACKGROUND,
+                        feedbackType: _.nw.VIDEO_BACKGROUND,
                         location: "VideoBackgroundFeedbackModal",
                     }),
-                    null != m &&
-                        ((i = null != (r = null == f ? void 0 : f.value) ? r : null),
+                    null != f &&
+                        ((i = null != (o = null == m ? void 0 : m.value) ? o : null),
                         l.default.track(
-                            _.rMx.VIDEO_BACKGROUND_FEEDBACK,
-                            ((d = u({}, t)),
-                            (p = p =
+                            b.rMx.VIDEO_BACKGROUND_FEEDBACK,
+                            ((p = u({}, t)),
+                            (d = d =
                                 {
                                     reason: i,
-                                    rating: m,
+                                    rating: f,
                                     feedback: y,
                                 }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(d, Object.getOwnPropertyDescriptors(p))
+                                ? Object.defineProperties(p, Object.getOwnPropertyDescriptors(d))
                                 : (function (e, t) {
-                                      var o = Object.keys(e);
+                                      var r = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
                                           var n = Object.getOwnPropertySymbols(e);
-                                          o.push.apply(o, n);
+                                          r.push.apply(r, n);
                                       }
-                                      return o;
-                                  })(Object(p)).forEach(function (e) {
-                                      Object.defineProperty(d, e, Object.getOwnPropertyDescriptor(p, e));
+                                      return r;
+                                  })(Object(d)).forEach(function (e) {
+                                      Object.defineProperty(p, e, Object.getOwnPropertyDescriptor(d, e));
                                   }),
-                            d),
+                            p),
                         ),
-                        null != f &&
+                        null != m &&
                             (0, c.ZDy)(async () => {
-                                let { default: e } = await o.e("14466").then(o.bind(o, 729328));
+                                let { default: e } = await r.e("14466").then(r.bind(r, 729328));
                                 return (t) => (0, n.jsx)(e, u({ body: s.intl.string(s.t.aHB11f) }, t));
                             }));
             },
-            onClose: m,
-            transitionState: p,
+            onClose: f,
+            transitionState: d,
             otherKey: "OTHER",
         })
     );

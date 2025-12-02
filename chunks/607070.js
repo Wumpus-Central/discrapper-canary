@@ -220,11 +220,11 @@ function q(e) {
     let { contrast: t } = e;
     v = g(m({}, v), { contrast: t });
 }
-function Q(e) {
+function X(e) {
     let { contrastMode: t } = e;
     v = g(m({}, v), { contrastMode: t });
 }
-function X(e) {
+function Q(e) {
     v = g(m({}, v), { switchIconsEnabled: e.switchIconsEnabled });
 }
 class J extends (r = i.ZP.DeviceSettingsStore) {
@@ -456,6 +456,6 @@ let $ = new J(s.Z, {
     ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE: k,
     ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE: U,
     ACCESSIBILITY_SET_CONTRAST: q,
-    ACCESSIBILITY_SET_CONTRAST_MODE: Q,
-    ACCESSIBILITY_SET_SWITCH_ICONS_ENABLED: X,
+    ACCESSIBILITY_SET_CONTRAST_MODE: X,
+    ACCESSIBILITY_SET_SWITCH_ICONS_ENABLED: Q,
 });

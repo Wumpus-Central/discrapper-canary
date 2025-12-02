@@ -1,6 +1,6 @@
 n.d(t, {
-    ZB: () => b,
-    ZP: () => v,
+    ZB: () => v,
+    ZP: () => b,
     cF: () => p,
 }),
     n(388685),
@@ -23,7 +23,7 @@ function g(e) {
     let n = o.default.getId();
     return e.type === d.fO.USER && e.user.id === n && (null == (t = e.voiceState) ? void 0 : t.selfVideo);
 }
-function b(e, t) {
+function v(e, t) {
     let n =
             arguments.length > 2 && void 0 !== arguments[2]
                 ? arguments[2]
@@ -35,10 +35,10 @@ function b(e, t) {
                       cropSelfVideo: !1,
                   },
         { tileWidth: r, tileMinWidth: o, tileMargin: c, limit: u, cropSelfVideo: f, version: p } = n,
-        [b, v] = i.useState(Date.now());
+        [v, b] = i.useState(Date.now());
     i.useEffect(() => {
         let e = setTimeout(() => {
-            v(Date.now());
+            b(Date.now());
         }, _);
         return () => {
             clearTimeout(e);
@@ -79,10 +79,10 @@ function b(e, t) {
                     })(e, n),
                 ),
                 [p, m] = (0, l.partition)(i, d.Io),
-                b = p.findIndex(g),
-                v = null;
-            -1 !== b && ((v = p[b]), p.splice(b, 1));
-            let E = null == v || f ? e : e - r - c,
+                v = p.findIndex(g),
+                b = null;
+            -1 !== v && ((b = p[v]), p.splice(v, 1));
+            let E = null == b || f ? e : e - r - c,
                 y = Math.max(0, Math.min(Math.floor((E - c) / (o + c)), u, t.length)),
                 S = Math.min((E - c) / y - c, r),
                 O = Math.max(0, y - m.length),
@@ -104,21 +104,21 @@ function b(e, t) {
             }
             let P = I.filter(s.lm);
             h.current = (0, l.keyBy)((0, l.range)(P.length), (e) => P[e].id);
-            let j = [...C, ...P];
+            let x = [...C, ...P];
             return (
-                null != v && (f && j.length >= y ? (j[Math.max(0, j.length - 1)] = v) : j.push(v)),
+                null != b && (f && x.length >= y ? (x[Math.max(0, x.length - 1)] = b) : x.push(b)),
                 {
-                    visibleParticipants: j,
+                    visibleParticipants: x,
                     participantTileWidth: S,
                 }
             );
-        }, [e, t, b, p, f, u, c, o, r]);
+        }, [e, t, v, p, f, u, c, o, r]);
     return {
         visibleParticipants: E,
         participantTileWidth: y,
     };
 }
-function v(e) {
+function b(e) {
     let {
         participants: t,
         participantTileWidth: n,

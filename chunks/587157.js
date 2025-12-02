@@ -343,16 +343,16 @@ function v(e) {
                 L.current === e.target && e.preventDefault();
             },
         },
-        { typeSelectProps: Q } = (0, i.i)({
+        { typeSelectProps: X } = (0, i.i)({
             keyboardDelegate: v,
             selectionManager: n,
         });
-    R || (q = (0, _.d)(Q, q)), w || (t = null == n.focusedKey ? 0 : -1);
-    let X = (0, r.Mm)(n.collection);
+    R || (q = (0, _.d)(X, q)), w || (t = null == n.focusedKey ? 0 : -1);
+    let Q = (0, r.Mm)(n.collection);
     return {
         collectionProps: (0, _.d)(q, {
             tabIndex: t,
-            "data-collection": X,
+            "data-collection": Q,
         }),
     };
 }

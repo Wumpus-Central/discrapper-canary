@@ -95,8 +95,8 @@ var y = new WeakMap(),
         return !!t && e instanceof t.Selection;
     },
     q = (e) => K(e) && 3 === e.nodeType,
-    Q = (e) => e.clipboardData && "" !== e.clipboardData.getData("text/plain") && 1 === e.clipboardData.types.length,
-    X = (e) => {
+    X = (e) => e.clipboardData && "" !== e.clipboardData.getData("text/plain") && 1 === e.clipboardData.types.length,
+    Q = (e) => {
         var [t, n] = e;
         if (W(t) && t.childNodes.length) {
             var r = n === t.childNodes.length,
@@ -357,7 +357,7 @@ var y = new WeakMap(),
         },
         toSlatePoint(e, t, n) {
             var { exactMatch: r, suppressThrow: i } = n,
-                [a, o] = r ? t : X(t),
+                [a, o] = r ? t : Q(t),
                 s = a.parentNode,
                 l = null,
                 c = 0;
@@ -917,13 +917,13 @@ var y = new WeakMap(),
     eK = (0, c.createContext)(!1),
     ez = () => (0, c.useContext)(eK),
     eq = (0, c.createContext)(null),
-    eQ = () => {
+    eX = () => {
         var e = (0, c.useContext)(eq);
         if (!e) throw Error("The `useSlate` hook must be used inside the <Slate> component's context.");
         var { editor: t } = e;
         return t;
     },
-    eX = 3,
+    eQ = 3,
     eJ = {
         bold: "mod+b",
         compose: ["down", "left", "right", "up", "backspace", "enter"],
@@ -1858,7 +1858,7 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
                 disableDefaultStyles: O = !1,
             } = e,
             C = g(e, tI),
-            N = eQ(),
+            N = eX(),
             [x, L] = (0, c.useState)(!1),
             k = (0, c.useRef)(null),
             U = (0, c.useRef)([]),
@@ -1916,11 +1916,11 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
                 }, 100),
                 [p],
             ),
-            X = (0, c.useMemo)(() => o()(q, 0), [q]),
+            Q = (0, c.useMemo)(() => o()(q, 0), [q]),
             J = tv({
                 node: k,
                 onDOMSelectionChange: q,
-                scheduleOnDOMSelectionChange: X,
+                scheduleOnDOMSelectionChange: Q,
             });
         eC(() => {
             k.current && (e = H(k.current))
@@ -2011,7 +2011,7 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
                 (e) => {
                     if ((G(), !p && ey.hasEditableTarget(N, e.target) && !tL(e, u))) {
                         if (J) return J.handleDOMBeforeInput(e);
-                        X.flush(), q.flush();
+                        Q.flush(), q.flush();
                         var { selection: t } = N,
                             { inputType: n } = e,
                             r = e.dataTransfer || e.data || void 0,
@@ -2144,24 +2144,24 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
                 (e) => {
                     null == e
                         ? (q.cancel(),
-                          X.cancel(),
+                          Q.cancel(),
                           S.delete(N),
                           A.delete(N),
                           k.current && eb && k.current.removeEventListener("beforeinput", $))
                         : eb && e.addEventListener("beforeinput", $),
                         (k.current = e);
                 },
-                [k, $, q, X],
+                [k, $, q, Q],
             );
         eC(() => {
             var e = ey.getWindow(N);
             return (
-                e.document.addEventListener("selectionchange", X),
+                e.document.addEventListener("selectionchange", Q),
                 () => {
-                    e.document.removeEventListener("selectionchange", X);
+                    e.document.removeEventListener("selectionchange", Q);
                 }
             );
-        }, [X]);
+        }, [Q]);
         var et = s([N, []]);
         if (f && 1 === N.children.length && 1 === Array.from(d.NB.texts(N)).length && "" === d.NB.string(N) && !x) {
             var en = d.ML.start(N, []);
@@ -2309,7 +2309,7 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
                                             var t = ey.toSlateNode(N, e.target),
                                                 n = ey.findPath(N, t);
                                             if (d.ML.hasPath(N, n) && d.NB.get(N, n) === t) {
-                                                if (e.detail === eX && n.length >= 1) {
+                                                if (e.detail === eQ && n.length >= 1) {
                                                     var r = n;
                                                     if (!(d.W_.isElement(t) && d.ML.isBlock(N, t))) {
                                                         var i,
@@ -2669,7 +2669,7 @@ var tN = (e) => c.createElement(c.Fragment, null, eW(e)),
                                         !p &&
                                             ey.hasEditableTarget(N, e.target) &&
                                             !tx(e, C.onPaste) &&
-                                            (!eb || Q(e.nativeEvent) || eu) &&
+                                            (!eb || X(e.nativeEvent) || eu) &&
                                             (e.preventDefault(), ey.insertData(N, e.clipboardData));
                                     },
                                     [p, C.onPaste],

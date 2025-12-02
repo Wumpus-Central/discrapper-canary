@@ -99,9 +99,9 @@ let w = (e) => {
             null == t)
         )
             return null;
-        let Q = m.Z.theme;
+        let X = m.Z.theme;
         if (R(t)) {
-            var X;
+            var Q;
             let e =
                 null != t.id
                     ? b.ZP.getEmojiURL({
@@ -118,7 +118,7 @@ let w = (e) => {
                           children: "surrogates" in t ? t.surrogates : null,
                       })
                     : (0, r.jsx)("img", {
-                          alt: null != (X = (0, y.nY)(t)) ? X : "",
+                          alt: null != (Q = (0, y.nY)(t)) ? Q : "",
                           src: e,
                           className: N.emoji,
                       });
@@ -137,12 +137,12 @@ let w = (e) => {
             D = K.has(t.guildId)
                 ? (0, r.jsx)("img", {
                       className: N.icon,
-                      src: (0, o.wj)(Q) ? a : s,
+                      src: (0, o.wj)(X) ? a : s,
                       alt: "",
                   })
                 : (0, r.jsx)("img", {
                       className: N.icon,
-                      src: (0, o.wj)(Q) ? e : i,
+                      src: (0, o.wj)(X) ? e : i,
                       alt: "",
                   });
         }

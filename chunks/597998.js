@@ -345,10 +345,10 @@ let k = function (e) {
         q = (e) => {
             null == b || b(e, Y);
         },
-        Q = (e) => {
+        X = (e) => {
             null == y || y(e, Y);
         },
-        X = (e) => {
+        Q = (e) => {
             null == S || S(e, Y);
         },
         J = (e) => {
@@ -416,8 +416,8 @@ let k = function (e) {
         }),
         onClick: z,
         onDoubleClick: q,
-        onContextMenu: Q,
-        onMouseLeave: X,
+        onContextMenu: X,
+        onMouseLeave: Q,
         onMouseDown: J,
         onKeyDown: E,
         "aria-label": null != (t = null != V ? V : U) ? t : Y.username,

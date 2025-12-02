@@ -59,8 +59,8 @@ let k = {
             } = e,
             { largeImage: V } = (0, v.rv)({ entry: y }),
             { user: H, details: Y, appName: W, activity: K, embeddedActivity: z } = (0, L.n)(y),
-            { primaryColor: q, secondaryColor: Q } = (0, P.Z)(null == V ? void 0 : V.src),
-            X = (0, o.e7)([E.default], () => E.default.locale),
+            { primaryColor: q, secondaryColor: X } = (0, P.Z)(null == V ? void 0 : V.src),
+            Q = (0, o.e7)([E.default], () => E.default.locale),
             { streamPreviewUrl: J, stream: $ } = (0, I.Z)(y),
             { displayParticipants: ee, participant1: et, participant2: en, numOtherParticipants: er } = (0, S.Z)(y, 3),
             ei = y.extra.platform,
@@ -94,12 +94,12 @@ let k = {
                         applicationImageSrc: null == V ? void 0 : V.src,
                         avatarSrcs: ee.map((e) => e.getAvatarURL(b.guild_id, 128)),
                         description: t,
-                        timestamp: (0, T.yh)(y, X),
-                        colors: [q, Q],
+                        timestamp: (0, T.yh)(y, Q),
+                        colors: [q, X],
                         channelId: e,
                     });
                 },
-                [null == V ? void 0 : V.src, b, ee, y, X, er, et, en, q, Q, H],
+                [null == V ? void 0 : V.src, b, ee, y, Q, er, et, en, q, X, H],
             );
         if (null == H) return null;
         let ef = (0, r.jsx)(w.Gk, {

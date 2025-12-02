@@ -1,5 +1,5 @@
 n.d(t, {
-    RM: () => X,
+    RM: () => Q,
     X2: () => $,
     bL: () => et,
     iA: () => Z,
@@ -144,7 +144,7 @@ class j extends u.Mi {
             (this.rows = []),
             (this.rowHeaderColumnKeys = new Set()),
             (this.head = new H(-1)),
-            (this.body = new Q(-2)),
+            (this.body = new X(-2)),
             (this.columnsDirty = !0);
     }
 }
@@ -262,14 +262,14 @@ function B({ props: e, forwardedRef: t, selectionState: n, collection: r }) {
                 state: T,
             },
         }),
-        Q = !!(Z && !(null == u ? void 0 : u.isDisabled)),
-        X = q.style,
+        X = !!(Z && !(null == u ? void 0 : u.isDisabled)),
+        Q = q.style,
         J = null;
     S &&
         ((J = S.useTableColumnResizeState({ tableWidth: S.tableWidth }, T)),
         A ||
-            (X = {
-                ...X,
+            (Q = {
+                ...Q,
                 tableLayout: "fixed",
                 width: "fit-content",
             }));
@@ -301,11 +301,11 @@ function B({ props: e, forwardedRef: t, selectionState: n, collection: r }) {
                 $,
                 {
                     ...(0, y.d)(ee, q, j, W, null == f ? void 0 : f.collectionProps),
-                    style: X,
+                    style: Q,
                     ref: t,
                     slot: e.slot || void 0,
                     onScroll: e.onScroll,
-                    "data-allows-dragging": Q || void 0,
+                    "data-allows-dragging": X || void 0,
                     "data-drop-target": V || void 0,
                     "data-focused": K || void 0,
                     "data-focus-visible": z || void 0,
@@ -499,9 +499,9 @@ let z = (0, d.G5)(K, (e, t, n) => {
         );
     }),
     q = (0, L.createContext)(null);
-class Q extends u.$x {}
-Q.type = "tablebody";
-let X = (0, d.IW)(Q, (e, t) => {
+class X extends u.$x {}
+X.type = "tablebody";
+let Q = (0, d.IW)(X, (e, t) => {
     var n;
     let r,
         i = (0, L.useContext)(U),

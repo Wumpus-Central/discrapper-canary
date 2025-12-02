@@ -413,9 +413,9 @@ let q = (e, t) => {
             (e.relevance = 0),
             delete n.beforeMatch;
     },
-    Q = ["of", "and", "for", "in", "not", "or", "if", "then", "parent", "list", "value"],
-    X = "keyword";
-function J(e, t, n = X) {
+    X = ["of", "and", "for", "in", "not", "or", "if", "then", "parent", "list", "value"],
+    Q = "keyword";
+function J(e, t, n = Q) {
     let r = Object.create(null);
     return (
         "string" == typeof e
@@ -439,7 +439,7 @@ function $(e, t) {
     return t ? Number(t) : +!ee(e);
 }
 function ee(e) {
-    return Q.includes(e.toLowerCase());
+    return X.includes(e.toLowerCase());
 }
 let et = {},
     en = (e) => {

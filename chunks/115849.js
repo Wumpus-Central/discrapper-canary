@@ -58,8 +58,8 @@ function O(e, t) {
         e
     );
 }
-let y = n(349181),
-    v = {
+let v = n(349181),
+    y = {
         canSend: !1,
         hint: null,
         success: null,
@@ -71,11 +71,11 @@ let y = n(349181),
 function T(e, t) {
     switch (t.type) {
         case "RESET":
-            return v;
+            return y;
         case "SUCCESS":
-            return O(E({}, v), { success: t.text });
+            return O(E({}, y), { success: t.text });
         case "HINT":
-            return O(E({}, v), {
+            return O(E({}, y), {
                 canSend: !0,
                 hint: t.text,
             });
@@ -90,7 +90,7 @@ function N(e) {
     let { placeholder: t = m.intl.string(m.t["Rn/sLl"]) } = e,
         n = i.useRef(null),
         l = i.useRef(null),
-        [s, p] = i.useReducer(T, v),
+        [s, p] = i.useReducer(T, y),
         { canSend: E, hint: O, error: N, success: j } = s;
     return (
         i.useEffect(() => {
@@ -139,7 +139,7 @@ function N(e) {
                             children: m.intl.string(m.t["Rn/sLl"]),
                         }),
                         (0, r.jsx)("img", {
-                            src: y,
+                            src: v,
                             alt: "Wumpus Waving",
                         }),
                     ],

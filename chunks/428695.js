@@ -23,8 +23,8 @@ let g = (0, s.debounce)(u.ZP.trackWithMetadata, 500),
             imageMarginX: b,
             imageMarginTop: E,
             trackingSource: O,
-            undismissable: y,
-            onDismissed: v,
+            undismissable: v,
+            onDismissed: y,
             onClick: I,
             cta: C,
             ctaColor: S,
@@ -82,11 +82,11 @@ let g = (0, s.debounce)(u.ZP.trackWithMetadata, 500),
         return (0, r.jsxs)("div", {
             className: a()(h.container, N),
             children: [
-                !0 === y
+                !0 === v
                     ? null
                     : (0, r.jsx)(c.P3F, {
                           onClick: () => {
-                              u.ZP.trackWithMetadata(p.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: m }), null == v || v();
+                              u.ZP.trackWithMetadata(p.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: m }), null == y || y();
                           },
                           className: h.close,
                           "aria-label": f.intl.string(f.t.WAI6xu),

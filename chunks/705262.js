@@ -238,7 +238,7 @@ let H = Object.freeze({
                   ],
               });
     },
-    Q = (e) => {
+    X = (e) => {
         let { disabled: t } = e,
             { type: a, delay: l } = i.useContext(Y),
             { analyticsLocations: m } = (0, p.ZP)(f.Z.CLIENT_THEMES_THEME_SELECTOR),
@@ -345,7 +345,7 @@ let H = Object.freeze({
             ],
         });
     },
-    X = (e) => {
+    Q = (e) => {
         let { className: t, renderCTAButtons: n, disabled: i = !1, isCoachmark: a } = e;
         return (0, r.jsxs)("section", {
             className: t,
@@ -359,7 +359,7 @@ let H = Object.freeze({
                     wrap: !0,
                     gap: 8,
                     style: { marginTop: 16 },
-                    children: (0, r.jsx)(Q, { disabled: i }),
+                    children: (0, r.jsx)(X, { disabled: i }),
                 }),
             ],
         });
@@ -444,7 +444,7 @@ let H = Object.freeze({
                     gap: 8,
                     justify: t ? "center" : "start",
                     style: { marginTop: 16 },
-                    children: [(0, r.jsx)(J, { systemSelectorFirst: !0 }), (0, r.jsx)(Q, { disabled: !1 })],
+                    children: [(0, r.jsx)(J, { systemSelectorFirst: !0 }), (0, r.jsx)(X, { disabled: !1 })],
                 }),
             ],
         });
@@ -489,6 +489,6 @@ let H = Object.freeze({
         }),
     });
 }),
-    (ee.Gradient = X),
+    (ee.Gradient = Q),
     (ee.BasicAndGradient = $);
 let et = ee;

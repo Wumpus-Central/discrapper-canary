@@ -80,7 +80,7 @@ function q(e) {
     let t = (0, d.Z)(e);
     return null == t || (null != Z && Z !== t.type) ? null : t;
 }
-function Q() {
+function X() {
     var e, t;
     let n = null != (e = I.Z.getGuildId()) ? e : void 0,
         r = null != (t = S.Z.getChannelId()) ? t : void 0;
@@ -170,7 +170,7 @@ function Q() {
     }
     return c.length > 0 && (i = [(0, u.o6)(P.intl.string(P.t["80lOZ1"])), ...c, ...i]), i;
 }
-function X(e, t) {
+function Q(e, t) {
     switch (Z) {
         case u.h8.USER: {
             let t = y.Z.getGuild(I.Z.getGuildId());
@@ -246,7 +246,7 @@ function ee(e, t) {
     return !0;
 }
 function et(e, t) {
-    ee((e = "" === (t = t.trim()).trim() ? Q() : e), H) || ((H = e), X(e, t));
+    ee((e = "" === (t = t.trim()).trim() ? X() : e), H) || ((H = e), Q(e, t));
 }
 function en() {
     (F = null), (V = 0), (H = []), null != r && (r.destroy(), (r = null));

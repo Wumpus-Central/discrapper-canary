@@ -17,8 +17,8 @@ var r = n(54381),
     b = n(370774),
     E = n(128008),
     O = n(961040),
-    y = n(981631),
-    v = n(388032),
+    v = n(981631),
+    y = n(388032),
     I = n(445202);
 let C = {
         cozy: 0,
@@ -38,7 +38,7 @@ let C = {
 function N(e) {
     var t, n;
     let { onClick: l, selectedOverride: s = !1, popoutProps: o, ref: g, focusSectionProps: _ } = e,
-        [O, y] = i.useState(!1),
+        [O, v] = i.useState(!1),
         N = (0, b.D)(),
         j = s || N,
         P = s || j,
@@ -67,7 +67,7 @@ function N(e) {
             (0, r.jsx)(u.u, {
                 asContainer: !0,
                 shouldShow: !P,
-                text: v.intl.string(v.t.HcoRu0),
+                text: y.intl.string(y.t.HcoRu0),
                 children: (0, r.jsxs)(
                     d.P3F,
                     ((t = (function (e) {
@@ -105,10 +105,10 @@ function N(e) {
                     (n = n =
                         {
                             onMouseEnter: () => {
-                                y(!0);
+                                v(!0);
                             },
                             onMouseLeave: () => {
-                                y(!1);
+                                v(!1);
                             },
                             onClick: () => {
                                 var e;
@@ -158,7 +158,7 @@ function j() {
         t = i.useRef(null),
         { notificationCenterVariant: n } = (0, _.pN)({ location: "NotificationsInboxButton" }),
         l = (0, o.e7)([g.Z], () => g.Z.getChannelId()),
-        a = i.useMemo(() => y.Z5c.CHANNEL(y.STv, null != l ? l : void 0), [l]),
+        a = i.useMemo(() => v.Z5c.CHANNEL(v.STv, null != l ? l : void 0), [l]),
         c = (0, E.mv)();
     return n === _.jP.SIDEBAR
         ? (0, r.jsx)(N, {

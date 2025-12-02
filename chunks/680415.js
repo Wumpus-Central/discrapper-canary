@@ -10,7 +10,7 @@ async function a(e) {
         height: s,
         imageRotation: c = 0,
         resizeWidth: u = null,
-        resizeHeight: p = null,
+        resizeHeight: f = null,
     } = e;
     try {
         let e = await (0, n.Q)({
@@ -21,7 +21,7 @@ async function a(e) {
             height: s,
             imageRotation: c,
             resizeWidth: u,
-            resizeHeight: p,
+            resizeHeight: f,
         });
         self.postMessage({
             type: o.u.CROP_GIF_COMPLETE,

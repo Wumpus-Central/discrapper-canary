@@ -17,8 +17,8 @@ var r = n(54381),
     b = n(410575),
     E = n(224336),
     O = n(730749),
-    y = n(666743),
-    v = n(115130),
+    v = n(666743),
+    y = n(115130),
     I = n(812206),
     C = n(770146),
     S = n(600164),
@@ -650,8 +650,8 @@ class ef extends i.PureComponent {
     }
 }
 let eh = (0, O.Z)(
-    (0, y.Z)(
-        o.ZP.connectStores([D.Z, Z.Z, A.default, B.Z, U.Z, k.Z, G.Z, v.Z, I.Z, R.Z, w.Z, M.Z], (e) => {
+    (0, v.Z)(
+        o.ZP.connectStores([D.Z, Z.Z, A.default, B.Z, U.Z, k.Z, G.Z, y.Z, I.Z, R.Z, w.Z, M.Z], (e) => {
             let t,
                 n,
                 r,
@@ -664,7 +664,7 @@ let eh = (0, O.Z)(
                 null != (r = I.Z.getApplication(l)) && (t = r.destinationSkuId), (n = null != t ? k.Z.get(t) : null);
             }
             (null == n ? void 0 : n.flags) != null && (0, s.yE)(n.flags, ea.l4R.STICKER) && (n = null);
-            let u = null != l && (G.Z.inTestModeForApplication(l) || v.Z.inDevModeForApplication(l));
+            let u = null != l && (G.Z.inTestModeForApplication(l) || y.Z.inDevModeForApplication(l));
             return {
                 skuId: t,
                 application: null != l ? I.Z.getApplication(l) : null,

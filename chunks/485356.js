@@ -1,21 +1,21 @@
 n.d(e, { Z: () => c });
 var i = n(846027),
-    r = n(100527),
-    l = n(509613),
-    s = n(131951),
+    l = n(100527),
+    s = n(509613),
+    r = n(131951),
     u = n(313789),
     a = n(65154),
     o = n(388032);
-let c = (0, l.UO)(u.n.STREAMING_STREAM_ATTENUATION_STRENGTH, {
+let c = (0, s.UO)(u.n.STREAMING_STREAM_ATTENUATION_STRENGTH, {
     useTitle: () => o.intl.string(o.t.fhEzfj),
     usePredicate: function () {
-        return s.Z.supports(a.AN.SIDECHAIN_COMPRESSION);
+        return r.Z.supports(a.AN.SIDECHAIN_COMPRESSION);
     },
     minValue: 1,
     maxValue: 100,
-    getInitialValue: s.Z.getSidechainCompressionStrength,
+    getInitialValue: r.Z.getSidechainCompressionStrength,
     setValue: function (t) {
-        let e = [r.Z.USER_SETTINGS_VOICE_AND_VIDEO];
+        let e = [l.Z.USER_SETTINGS_VOICE_AND_VIDEO];
         i.Z.setSidechainCompressionStrength(t, { analyticsLocations: e });
     },
 });

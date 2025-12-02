@@ -50,8 +50,8 @@ var r = n(54381),
     K = n(740594),
     z = n(382791),
     q = n(823188),
-    Q = n(504865),
-    X = n(179984),
+    X = n(504865),
+    Q = n(179984),
     J = n(386733),
     $ = n(474936),
     ee = n(981631),
@@ -116,7 +116,7 @@ function ed(e) {
           })
         : m
           ? (0, r.jsx)("div", { style: { marginBottom: "18px" } })
-          : (0, r.jsx)(Q.Z, {
+          : (0, r.jsx)(X.Z, {
                 variant: void 0,
                 subscriptionTier: $.Si.TIER_2,
                 interval: d.interval,
@@ -401,7 +401,7 @@ let em = function () {
                         (0, r.jsx)(ef, {}),
                         N && (0, r.jsx)(J.Z, { isInSettings: !0 }),
                         null == p && (0, r.jsx)(e_, {}),
-                        (0, r.jsx)(X.Z, {
+                        (0, r.jsx)(Q.Z, {
                             hideCTAs: !0,
                             headingOverride: et.intl.string(et.t.dnVvQS),
                             hidePill: !M,

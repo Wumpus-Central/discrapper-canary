@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => v });
 var r = n(209739),
     i = n.n(r),
     l = n(872810),
@@ -17,14 +17,14 @@ var r = n(209739),
     b = n(299570),
     E = n(989941),
     O = n(70722);
-function y() {
+function v() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
     if (!(0, _.Z)(d.Z) || null != o.Z.getCurrentUserActiveStream()) return !1;
     let n = f.Z.getVoiceChannelId(),
         r = c.Z.getChannel(n);
     if (null == r) return !1;
-    let y = r.getGuildId();
+    let v = r.getGuildId();
     if (!(0, m.JL)(r, u.Z, p.Z, !1)) return !1;
     if (d.Z.getUseSystemScreensharePicker())
         (0, g.isMac)() && i().satisfies(null === a.Z || void 0 === a.Z ? void 0 : a.Z.os.release, O.jR)
@@ -33,7 +33,7 @@ function y() {
     else {
         let n = (0, E.Z)(s.ZP, h.Z);
         if (null == n || (n.isLauncher && !e)) return !1;
-        (0, l.WH)(y, r.id, {
+        (0, l.WH)(v, r.id, {
             pid: n.pid,
             analyticsLocations: t,
         });

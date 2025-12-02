@@ -155,13 +155,13 @@ let R = (e) => {
                 F(!1);
         },
         q = g.Z.getPremiumTypeSubscription(),
-        Q = (0, r.jsxs)("div", {
+        X = (0, r.jsxs)("div", {
             className: S.button,
             children: [j, null != I ? I : v.intl.string(v.t.gKmQ1G)],
         }),
-        X = !1;
-    return ((X = null !== q && !(Y.length > 0) && (null == q ? void 0 : q.isPausedOrPausePending) && V === O.a$.NONE) &&
-        ((Q = (0, r.jsxs)("div", {
+        Q = !1;
+    return ((Q = null !== q && !(Y.length > 0) && (null == q ? void 0 : q.isPausedOrPausePending) && V === O.a$.NONE) &&
+        ((X = (0, r.jsxs)("div", {
             className: S.button,
             children: [
                 (0, r.jsx)(d.mBM, {
@@ -169,7 +169,7 @@ let R = (e) => {
                     className: S.buttonIcon,
                 }),
                 " ",
-                Q,
+                X,
             ],
         })),
         (U.disabled = !0)),
@@ -200,14 +200,14 @@ let R = (e) => {
                                   }),
                                   U,
                               ),
-                              { children: Q },
+                              { children: X },
                           ),
                       ),
               })
         : k
           ? (0, r.jsx)(d.Button, {
                 variant: "expressive",
-                disabled: X,
+                disabled: Q,
                 loading: B,
                 text: null != I ? I : v.intl.string(v.t.gKmQ1G),
                 onClick: z,
@@ -227,7 +227,7 @@ let R = (e) => {
                         submitting: B,
                         onClick: z,
                         pauseAnimation: w,
-                        children: Q,
+                        children: X,
                     },
                 ),
             );

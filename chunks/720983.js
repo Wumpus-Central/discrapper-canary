@@ -16,8 +16,8 @@ var l = t(54381),
     h = t(63063),
     x = t(73346),
     m = t(590961),
-    v = t(705338),
-    C = t(181268),
+    C = t(705338),
+    v = t(181268),
     k = t(981631),
     j = t(228168),
     b = t(388032),
@@ -50,7 +50,7 @@ function N(e) {
         M = i.useCallback(() => {
             f.default.track(k.rMx.SLAYER_STOREFRONT_PAGE_ELEMENT_CLICKED, {
                 slayer_storefront_session_id: null == R ? void 0 : R.sessionId,
-                cta_type: C.US.LEARN_MORE,
+                cta_type: v.US.LEARN_MORE,
                 location_stack: T,
             }),
                 window.open(h.Z.getArticleURL(k.BhN.SOCIAL_LAYER_STOREFRONT));
@@ -67,7 +67,7 @@ function N(e) {
             children: [
                 (0, l.jsxs)(s.P3F, {
                     onClick: () => {
-                        (0, v.default)({
+                        (0, C.default)({
                             guildId: n,
                             pageIndex: 0,
                         });
@@ -90,7 +90,7 @@ function N(e) {
                             g.Z.Title,
                             {
                                 onClick: () => {
-                                    (0, v.default)({
+                                    (0, C.default)({
                                         guildId: n,
                                         pageIndex: t,
                                     });

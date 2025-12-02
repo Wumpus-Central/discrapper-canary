@@ -194,9 +194,9 @@ let B = () => {
             K = (0, d.ZP)(),
             z = (0, l.ap)(K),
             q = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
-            Q = (0, E.M5)(q, R.PremiumTypes.TIER_2),
-            X = (0, S.N)(),
-            J = null == X || null == (t = X.subscription_trial) ? void 0 : t.sku_id,
+            X = (0, E.M5)(q, R.PremiumTypes.TIER_2),
+            Q = (0, S.N)(),
+            J = null == Q || null == (t = Q.subscription_trial) ? void 0 : t.sku_id,
             $ = (0, y.rT)(),
             ee = (0, v.N)(),
             et = null != ee && (0, A.Wp)(ee, R.Si.TIER_2),
@@ -294,7 +294,7 @@ let B = () => {
                                     ? N.VE.PREMIUM_TIER_0_GRADIENT_FILL
                                     : N.VE.PREMIUM_TIER_0_WHITE_FILL
                                 : z
-                                  ? Q
+                                  ? X
                                       ? N.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
                                       : N.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
                                   : N.VE.PREMIUM_TIER_2_WHITE_FILL,

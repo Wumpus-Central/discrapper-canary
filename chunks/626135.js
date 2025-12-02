@@ -5,9 +5,9 @@ n.r(t),
         AnalyticsSchema: () => _,
         addExtraAnalyticsDecorator: () => F,
         clearAnalyticsEventsRecording: () => er,
-        debugLogEvent: () => X,
+        debugLogEvent: () => Q,
         default: () => eu,
-        expandEventProperties: () => Q,
+        expandEventProperties: () => X,
         expandLocation: () => H,
         getAnalyticsEventsRecording: () => en,
         getNewAnalyticsLoadId: () => ec,
@@ -426,7 +426,7 @@ let z = (0, a.trackMaker)({
 function q(e) {
     return (P = e);
 }
-function Q(e) {
+function X(e) {
     var t, n, r, i;
     let a = null != e ? e : {};
     if (null != a.location) {
@@ -456,7 +456,7 @@ function Q(e) {
         a
     );
 }
-function X(e, t) {
+function Q(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     p.default.isLoggingAnalyticsEvents && console.info("AnalyticsUtils.track(...):", e, t),
         n ? d.Hj("Analytics", e, t) : d.Hj("Analytics", e);
@@ -493,9 +493,9 @@ function ea(e, t) {
         null != n.throttlePercent && Math.random() > n.throttlePercent)
     )
         return Promise.resolve();
-    let i = Q(t);
+    let i = X(t);
     return (
-        X(r, i, n.logEventProperties),
+        Q(r, i, n.logEventProperties),
         z(e, i, {
             flush: n.flush,
             fingerprint: n.fingerprint,
@@ -511,8 +511,8 @@ function es(e) {
     return e === b.wW.GAME || e === b.wW.DEPRECATED_GAME;
 }
 function el(e, t) {
-    let n = Q(v({ location: (0, u.k$)() }, t));
-    (0, u.dT)(e, v({ type: "action" }, t)), X(e, n), eo(e, n);
+    let n = X(v({ location: (0, u.k$)() }, t));
+    (0, u.dT)(e, v({ type: "action" }, t)), Q(e, n), eo(e, n);
 }
 function ec() {
     return (0, i.Z)();
@@ -520,6 +520,6 @@ function ec() {
 let eu = I(v({}, a), {
     getCampaignParams: a.getCampaignParams,
     setSystemAccessibilityFeatures: K,
-    expandEventProperties: Q,
+    expandEventProperties: X,
     track: ea,
 });

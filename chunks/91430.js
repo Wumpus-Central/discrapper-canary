@@ -52,8 +52,8 @@ var r = n(54381),
     K = n(921944),
     z = n(388032),
     q = n(903163);
-let Q = "app";
-function X(e) {
+let X = "app";
+function Q(e) {
     let t,
         {
             subscription: n,
@@ -122,7 +122,7 @@ function X(e) {
                 (0, r.jsx)(m.Text, {
                     className: q.boostingDesktopAppBlurb,
                     variant: "text-sm/normal",
-                    children: z.intl.format(d.tq ? z.t.uxYBEa : z.t.k6haR9, { openAppHook: () => (0, b.Z)(Q) }),
+                    children: z.intl.format(d.tq ? z.t.uxYBEa : z.t.k6haR9, { openAppHook: () => (0, b.Z)(X) }),
                 }),
         ],
     });
@@ -326,7 +326,7 @@ function er(e) {
                               busy: a,
                               analyticsLocation: n,
                           }),
-                    (0, r.jsx)(X, {
+                    (0, r.jsx)(Q, {
                         subscription: t,
                         renewalInvoicePreview: h,
                         fromStandaloneBillingPage: s,
@@ -461,11 +461,11 @@ function eo(e) {
         B = D && a.status === Y.O0b.PAST_DUE && !L && !a.isPurchasedExternally,
         H = (0, j.U)(),
         W = !L && H,
-        Q = (null == a ? void 0 : a.status) === Y.O0b.PAST_DUE,
-        X = Q ? u()().diff(u()(a.currentPeriodStart), "days") : 0,
+        X = (null == a ? void 0 : a.status) === Y.O0b.PAST_DUE,
+        Q = X ? u()().diff(u()(a.currentPeriodStart), "days") : 0,
         [et] = (0, x.Ox)({
             subscriptionId: a.id,
-            preventFetch: !(W || Q),
+            preventFetch: !(W || X),
         });
     return null == A || null == P
         ? (0, r.jsx)(m.$jN, {})
@@ -486,7 +486,7 @@ function eo(e) {
                   B ? (0, r.jsx)($, {}) : null,
                   W && null != et
                       ? (0, r.jsx)(ee, {
-                            daysPastDue: X,
+                            daysPastDue: Q,
                             subscription: a,
                             openInvoiceId: et.id,
                         })

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => X }), n(388685);
+n.d(t, { Z: () => Q }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -442,8 +442,8 @@ class q extends i.Component {
             });
     }
 }
-let Q = (0, _.Z)((0, p.Z)(q)),
-    X = function (e) {
+let X = (0, _.Z)((0, p.Z)(q)),
+    Q = function (e) {
         let { code: t, author: n } = e,
             { giftCode: i, resolved: a } = (0, c.cj)([N.Z], () => ({
                 giftCode: N.Z.get(t),
@@ -460,7 +460,7 @@ let Q = (0, _.Z)((0, p.Z)(q)),
             d = (0, M.IV)(null == i ? void 0 : i.subscriptionPlanId),
             f = (0, c.e7)([C.default], () => (null != i ? C.default.getId() === i.userId : C.default.getId() === n.id));
         return (0, r.jsx)(
-            Q,
+            X,
             W(H({}, e), {
                 skuApplication: u,
                 giftCode: i,

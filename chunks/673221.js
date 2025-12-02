@@ -137,8 +137,8 @@ function R(e) {
         { id: Y, required: W, label: K, disabled: z } = H,
         {
             isOpen: q,
-            setIsOpen: Q,
-            refs: X,
+            setIsOpen: X,
+            refs: Q,
             floatingStyles: J,
             getReferenceProps: $,
             getFloatingProps: ee,
@@ -157,12 +157,12 @@ function R(e) {
         ec = z || n,
         { measuredWidth: eu, itemsForMeasurement: ed } = w(er, t),
         ef = i.useCallback(() => {
-            ec || Q(!q);
-        }, [ec, Q, q]),
+            ec || X(!q);
+        }, [ec, X, q]),
         ep = i.useCallback(() => {
             var e;
-            Q(!1), null == (e = ea.current) || e.focus();
-        }, [Q]),
+            X(!1), null == (e = ea.current) || e.focus();
+        }, [X]),
         e_ = i.useCallback(() => {
             var e;
             "multiple" === t ? G([]) : G(null), null == (e = ea.current) || e.focus();
@@ -179,7 +179,7 @@ function R(e) {
                 if (!ec)
                     switch (e.key) {
                         case "ArrowDown":
-                            e.preventDefault(), Q(!0);
+                            e.preventDefault(), X(!0);
                             break;
                         case "ArrowLeft":
                             e.preventDefault(), null == (n = V.current) || null == (t = n.firstChild) || t.focus();
@@ -195,7 +195,7 @@ function R(e) {
                             el && f && (e.preventDefault(), e.stopPropagation(), e_());
                     }
             },
-            [e_, el, f, Q, ec],
+            [e_, el, f, X, ec],
         ),
         eh = i.useMemo(() => {
             let e = Array.isArray(Z) ? Z : [Z];
@@ -239,7 +239,7 @@ function R(e) {
                         });
                 }, 10));
     }, [eh, eb, B]);
-    let eO = (0, s.Z)(eo, X.setReference),
+    let eO = (0, s.Z)(eo, Q.setReference),
         ev = i.useCallback(
             (e) => {
                 if (ec) return;
@@ -352,7 +352,7 @@ function R(e) {
                                     T(
                                         S(
                                             {
-                                                ref: X.setFloating,
+                                                ref: Q.setFloating,
                                                 className: O.selectDropdown,
                                             },
                                             ee(),

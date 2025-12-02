@@ -296,8 +296,8 @@ let M = "sprigReplayIframeLoaded",
     K = ["a", "button", "input", "option", "li", "link"],
     z = ["Escape", "Enter", "Backspace", "F5", "Tab"],
     q = !1,
-    Q = null,
     X = null,
+    Q = null,
     J = (e) => {
         var t;
         if ((null == (t = e.tagName) ? void 0 : t.toLowerCase()) === "html") return { element: "html" };
@@ -341,11 +341,11 @@ let M = "sprigReplayIframeLoaded",
                 }).elementAttributes) &&
                 r.text &&
                 (i.elementAttributes.text = Y(i.elementAttributes.text)),
-            null == Q || Q("Sprig_Click", i);
+            null == X || X("Sprig_Click", i);
     },
     et = (e) => {
         var t;
-        z.includes(e.key) && ((t = { key: e.key }), null == Q || Q("Sprig_Keystroke", t));
+        z.includes(e.key) && ((t = { key: e.key }), null == X || X("Sprig_Keystroke", t));
     },
     en = () => {
         var e;
@@ -357,7 +357,7 @@ let M = "sprigReplayIframeLoaded",
                 url: window.location.href,
                 currentPageTitle: document.title,
             }),
-            null == Q || Q("Sprig_Refresh", e));
+            null == X || X("Sprig_Refresh", e));
     },
     er = () => {
         var e;
@@ -370,7 +370,7 @@ let M = "sprigReplayIframeLoaded",
                 fromUrl: document.referrer,
                 currentPageTitle: document.title,
             }).currentPageTitle && (e.currentPageTitle = Y(e.currentPageTitle)),
-            null == Q || Q("Sprig_BackForward", e));
+            null == X || X("Sprig_BackForward", e));
     },
     ei = ((e, t) => {
         let n;
@@ -381,8 +381,8 @@ let M = "sprigReplayIframeLoaded",
         if (!(e.target instanceof HTMLElement || e.target instanceof Document)) return;
         let t = e.target;
         "scrollTop" in t || (t = t.documentElement),
-            null == X ||
-                X({
+            null == Q ||
+                Q({
                     xPath: H(t),
                     x: t.scrollLeft,
                     y: t.scrollTop,
@@ -737,7 +737,7 @@ let ev = new (class {
         let t = Date.now(),
             n = (await ev.getEventsBetween(e, t)).map((e) => JSON.parse(e.event));
         if (!eB(n)) return;
-        eQ(n);
+        eX(n);
         let r = await eq();
         r && (await eK(r, n));
     },
@@ -804,7 +804,7 @@ let ev = new (class {
         });
         return eV(), e;
     },
-    eQ = (e) => {
+    eX = (e) => {
         var t, n, r;
         let i = e.length ? e[e.length - 1].timestamp : Date.now(),
             a = eD,
@@ -827,7 +827,7 @@ let ev = new (class {
                 },
             });
     },
-    eX = (e, t) => {
+    eQ = (e, t) => {
         ek() &&
             !eL &&
             (e || eS.length) &&
@@ -836,7 +836,7 @@ let ev = new (class {
                 (async () => {
                     let e = eS.splice(0);
                     if (!eB(e)) return;
-                    l.b.info("Capturing always-on event array to upload"), eQ(e);
+                    l.b.info("Capturing always-on event array to upload"), eX(e);
                     let t = await eq();
                     t && (await eK(t, e));
                 })(),
@@ -1381,7 +1381,7 @@ let eJ = async (e, t) => {
                                     }
                                     let n = c || (!!t && e.type === f.Meta);
                                     (c = !1),
-                                        eX(n, e),
+                                        eQ(n, e),
                                         e8({
                                             uuid: (0, l.v)(),
                                             event: JSON.stringify(e),
@@ -1421,8 +1421,8 @@ let eJ = async (e, t) => {
                                     (r = e_),
                                     (i = em),
                                     q ||
-                                        ((Q = r),
-                                        (X = i),
+                                        ((X = r),
+                                        (Q = i),
                                         window.addEventListener("click", ea, W),
                                         window.addEventListener("pointerdown", es, W),
                                         window.addEventListener("mousedown", eo, W),

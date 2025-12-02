@@ -17,8 +17,8 @@ var r = n(54381),
     b = n(699516),
     E = n(51144),
     O = n(298213),
-    y = n(321488),
-    v = n(417183),
+    v = n(321488),
+    y = n(417183),
     I = n(825682),
     C = n(170245),
     S = n(981631),
@@ -74,7 +74,7 @@ function A(e) {
         }, [h, l, t]),
         m = (0, s.e7)([_.Z], () => _.Z.supports(N.AN.VIDEO)),
         b = t.isProvisional,
-        y = l ? j.intl.string(j.t.RLcE6x) : j.intl.string(j.t.cvSt1J);
+        v = l ? j.intl.string(j.t.RLcE6x) : j.intl.string(j.t.cvSt1J);
     return (0, r.jsxs)(o.v2r, {
         navId: "friend-row",
         "aria-label": j.intl.string(j.t.liqwPJ),
@@ -96,7 +96,7 @@ function A(e) {
                 }),
             (0, r.jsx)(o.sNh, {
                 id: "remove-friend",
-                label: y,
+                label: v,
                 action: g,
                 color: "danger",
             }),
@@ -138,7 +138,7 @@ class Z extends i.PureComponent {
                   isMobile: a,
                   isGameRelationship: s,
               })
-            : (0, r.jsx)(v.Z, {
+            : (0, r.jsx)(y.Z, {
                   ref: this.peopleListItemRef,
                   isFocused: t,
                   isActive: g,
@@ -167,13 +167,13 @@ class Z extends i.PureComponent {
                               (0, r.jsxs)("div", {
                                   className: P.actions,
                                   children: [
-                                      (0, r.jsx)(y.Z, {
+                                      (0, r.jsx)(v.Z, {
                                           icon: o.kBi,
                                           tooltip: j.intl.string(j.t["g33r/P"]),
                                           onClick: this.handleOpenPrivateChannel,
                                           shouldHighlight: t,
                                       }),
-                                      (0, r.jsx)(y.Z, {
+                                      (0, r.jsx)(v.Z, {
                                           icon: o.Huf,
                                           tooltip: j.intl.string(j.t["UKOtz+"]),
                                           onClick: this.handleOpenActionsMenu,

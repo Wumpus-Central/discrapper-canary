@@ -10,8 +10,8 @@ var r,
     d = n(896797),
     h = n(411198),
     g = n(129293),
-    m = n(388905),
-    p = n(981631),
+    p = n(388905),
+    m = n(981631),
     f = n(388032),
     _ = n(197571);
 function x(e, t, n) {
@@ -34,7 +34,7 @@ class E extends (r = s.PureComponent) {
             t = (0, l.parse)(this.props.location.search);
         o.tn
             .post({
-                url: p.ANM.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
+                url: m.ANM.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
                 body: {
                     token: e,
                     pixel_uuid: t.hash,
@@ -64,18 +64,18 @@ class E extends (r = s.PureComponent) {
             (0, u.e)("disable_server_highlight_notifications");
     }
     renderBusy() {
-        return (0, i.jsx)(m.ZP, { children: (0, i.jsx)(m.Hh, {}) });
+        return (0, i.jsx)(p.ZP, { children: (0, i.jsx)(p.Hh, {}) });
     }
     renderSuccess() {
         let { defaultRoute: e, transitionTo: t } = this.props,
             { guild: n } = this.state;
-        return (0, i.jsxs)(m.ZP, {
+        return (0, i.jsxs)(p.ZP, {
             children: [
-                (0, i.jsx)(m.Dx, {
+                (0, i.jsx)(p.Dx, {
                     className: _.marginBottom8,
                     children: f.intl.string(f.t.Z33eiP),
                 }),
-                (0, i.jsx)(m.DK, { children: f.intl.format(f.t.NRWtfC, { guildName: n.name }) }),
+                (0, i.jsx)(p.DK, { children: f.intl.format(f.t.NRWtfC, { guildName: n.name }) }),
                 (0, i.jsx)("div", {
                     className: _.marginTop40,
                     children: (0, i.jsx)(c.Button, {
@@ -89,7 +89,7 @@ class E extends (r = s.PureComponent) {
                     children: (0, i.jsx)(c.Avr, {
                         text: f.intl.string(f.t["cGmT/J"]),
                         onClick: () => {
-                            t(p.Z5c.USER_GUILD_NOTIFICATION_SETTINGS(n.id));
+                            t(m.Z5c.USER_GUILD_NOTIFICATION_SETTINGS(n.id));
                         },
                     }),
                 }),
@@ -98,17 +98,17 @@ class E extends (r = s.PureComponent) {
     }
     renderError() {
         let { defaultRoute: e, transitionTo: t } = this.props;
-        return (0, i.jsxs)(m.ZP, {
+        return (0, i.jsxs)(p.ZP, {
             children: [
-                (0, i.jsx)(m.Ee, {
+                (0, i.jsx)(p.Ee, {
                     src: n(105020),
                     className: _.marginBottom20,
                 }),
-                (0, i.jsx)(m.Dx, {
+                (0, i.jsx)(p.Dx, {
                     className: _.marginBottom8,
                     children: f.intl.string(f.t.ox9hIS),
                 }),
-                (0, i.jsx)(m.DK, { children: f.intl.string(f.t["/dcuR5"]) }),
+                (0, i.jsx)(p.DK, { children: f.intl.string(f.t["/dcuR5"]) }),
                 (0, i.jsx)("div", {
                     className: _.marginTop40,
                     children: (0, i.jsx)(c.Button, {

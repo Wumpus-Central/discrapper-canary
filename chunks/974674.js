@@ -10,7 +10,7 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(666917),
+    s = n(205120),
     l = n(793030),
     c = n(438784),
     u = n(696826),
@@ -775,8 +775,8 @@ function W(e) {
             avatarTooltipText: z,
             avatarTooltipTitle: q,
         } = e,
-        Q = (0, u.vj)(T, P),
-        X = i.useId(),
+        X = (0, u.vj)(T, P),
+        Q = i.useId(),
         J = i.useId(),
         [$] = i.useState(() =>
             O(
@@ -792,7 +792,7 @@ function W(e) {
         ee = i.useMemo(
             () =>
                 O(
-                    { fill: Q },
+                    { fill: X },
                     Z({
                         size: y,
                         status: T,
@@ -800,7 +800,7 @@ function W(e) {
                         isTyping: p,
                     }),
                 ),
-            [Q, y, T, f, p],
+            [X, y, T, f, p],
         ),
         et = (0, l.q_F)(
             {
@@ -860,7 +860,7 @@ function W(e) {
                 "aria-hidden": !0,
                 children: [
                     (0, r.jsxs)("mask", {
-                        id: X,
+                        id: Q,
                         width: ec,
                         height: ec,
                         children: [
@@ -888,7 +888,7 @@ function W(e) {
                         y: 0,
                         width: ec,
                         height: ec,
-                        mask: "url(#".concat(X, ")"),
+                        mask: "url(#".concat(Q, ")"),
                         children: (0, r.jsx)(F, {
                             src: v,
                             isSpeaking: h,

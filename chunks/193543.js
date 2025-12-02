@@ -1,15 +1,15 @@
 o.d(t, { VoiceFilterFeedbackModal: () => p });
-var n = o(54381);
+var i = o(54381);
 o(473749);
-var i = o(990547),
+var n = o(990547),
     a = o(957115),
     c = o(332664),
     l = o(445102),
     r = o(981631),
     _ = o(531578),
     s = o(388032);
-let d = [_.aZ.BAD, _.aZ.GOOD],
-    u = {
+let u = [_.aZ.BAD, _.aZ.GOOD],
+    d = {
         [_.aZ.BAD]: s.intl.string(s.t.zGnUBV),
         [_.aZ.GOOD]: s.intl.string(s.t.SqprKf),
     },
@@ -63,34 +63,34 @@ let d = [_.aZ.BAD, _.aZ.GOOD],
     ];
 function p(e) {
     let { onClose: t, transitionState: o, analyticsData: p } = e;
-    return (0, n.jsx)(c.Z, {
+    return (0, i.jsx)(c.Z, {
         modalType: "voice_filter",
         header: s.intl.string(s.t.zZAORN),
         impression: {
-            impressionName: i.ImpressionNames.VOICE_FILTER_FEEDBACK_MODAL,
+            impressionName: n.ImpressionNames.VOICE_FILTER_FEEDBACK_MODAL,
             impressionProperties: {
                 rtc_connection_id: p.rtc_connection_id,
                 media_session_id: p.media_session_id,
             },
         },
-        ratingOptions: d,
-        ratingTextLabels: u,
+        ratingOptions: u,
+        ratingTextLabels: d,
         problemTitle: s.intl.string(s.t.FJmoxF),
         problems: m,
         freeformNeededProblems: b,
         onSubmit: function (e) {
             var t, o;
-            let { rating: n, problem: i, dontShowAgain: c, feedback: s } = e;
+            let { rating: i, problem: n, dontShowAgain: c, feedback: s } = e;
             c &&
                 (0, a.Uv)({
                     feedbackType: _.nw.VOICE_FILTER,
                     location: "VoiceFilterFeedbackModal",
                 }),
-                null != n &&
+                null != i &&
                     (0, l.Z)(r.rMx.VOICE_FILTER_FEEDBACK, {
-                        rating: n,
-                        reasonCode: null != (t = null == i ? void 0 : i.code) ? t : null,
-                        reasonDescription: null != (o = null == i ? void 0 : i.value) ? o : null,
+                        rating: i,
+                        reasonCode: null != (t = null == n ? void 0 : n.code) ? t : null,
+                        reasonDescription: null != (o = null == n ? void 0 : n.value) ? o : null,
                         feedback: s,
                         analyticsData: p,
                     });

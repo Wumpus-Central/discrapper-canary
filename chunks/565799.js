@@ -143,12 +143,12 @@ function q(e) {
     let { channelId: t, guildId: n, userId: r } = e;
     return null != n && !!N.has(n) && U(r, [t]);
 }
-function Q(e) {
+function X(e) {
     let { streamKey: t } = e,
         { channelId: n, guildId: r, ownerId: i } = (0, d.my)(t);
     return null != r && !!N.has(r) && U(i, [n]);
 }
-function X(e) {
+function Q(e) {
     let {
         channel: { id: t },
     } = e;
@@ -210,7 +210,7 @@ let en = new et(u.Z, {
     CONNECTION_OPEN: B,
     OVERLAY_INITIALIZE: B,
     VOICE_STATE_UPDATES: V,
-    CHANNEL_DELETE: X,
+    CHANNEL_DELETE: Q,
     GUILD_MEMBERS_CHUNK_BATCH: H,
     USER_UPDATE: W,
     GUILD_MEMBER_REMOVE: W,
@@ -218,8 +218,8 @@ let en = new et(u.Z, {
     CHANNEL_UPDATES: J,
     GUILD_ROLE_UPDATE: $,
     RTC_CONNECTION_VIDEO: q,
-    STREAM_CLOSE: Q,
-    STREAM_DELETE: Q,
+    STREAM_CLOSE: X,
+    STREAM_DELETE: X,
     RELATIONSHIP_ADD: K,
     RELATIONSHIP_REMOVE: K,
     RELATIONSHIP_UPDATE: K,

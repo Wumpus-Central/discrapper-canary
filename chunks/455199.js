@@ -88,7 +88,7 @@ function U(e) {
 }
 function G(e) {
     let { guildId: t } = e;
-    (w = !0), null == t && x.guildFilter === I.NgX.THIS_SERVER && Q({ guildFilter: I.NgX.ALL_SERVERS });
+    (w = !0), null == t && x.guildFilter === I.NgX.THIS_SERVER && X({ guildFilter: I.NgX.ALL_SERVERS });
 }
 function Z(e) {
     if (e instanceof m.ZP) return e;
@@ -222,7 +222,7 @@ function q(e) {
     let { ids: t } = e;
     a().forEach(t, K);
 }
-function Q(e) {
+function X(e) {
     let t = A({}, x);
     (x = a().defaults(a().pick(e, ["guildFilter", "roleFilter", "everyoneFilter"]), x)), s.K.set(C, x);
     let n = (e, n) => t[e] !== x[e] && x[e] === n,
@@ -237,7 +237,7 @@ function Q(e) {
         k((N = i)),
         0 === N.length && (L = !1);
 }
-function X() {
+function Q() {
     if (x.guildFilter !== I.NgX.THIS_SERVER) return !1;
     L = !1;
 }
@@ -324,10 +324,10 @@ let eo = new ea(c.Z, {
     LOAD_RECENT_MENTIONS: G,
     LOAD_RECENT_MENTIONS_SUCCESS: F,
     LOAD_RECENT_MENTIONS_FAILURE: V,
-    SET_RECENT_MENTIONS_FILTER: Q,
+    SET_RECENT_MENTIONS_FILTER: X,
     CLEAR_MENTIONS: en,
     TRUNCATE_MENTIONS: er,
-    CHANNEL_SELECT: X,
+    CHANNEL_SELECT: Q,
     CONNECTION_OPEN: J,
     GUILD_DELETE: $,
     MESSAGE_CREATE: Y,

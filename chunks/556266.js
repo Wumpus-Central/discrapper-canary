@@ -16,8 +16,8 @@ var i = n(54381),
     x = n(444448),
     v = n(439293),
     C = n(152242),
-    _ = n(231338);
-function j(e) {
+    b = n(231338);
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -42,7 +42,7 @@ function j(e) {
     }
     return e;
 }
-let b = function () {
+let j = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     return (t, n, l) =>
         (0, i.jsx)(v.Z, {
@@ -68,7 +68,7 @@ function I(e) {
         onComplete: n,
         applicationId: a,
         skuId: o,
-        renderHeader: b(d),
+        renderHeader: j(d),
         initialPlanId: null,
         analyticsObject: s,
         analyticsLocations: u,
@@ -81,7 +81,7 @@ function P(e) {
             applicationId: n,
             skuId: f,
             analyticsLocations: v,
-            isGift: b = !1,
+            isGift: j = !1,
             giftRecipient: P,
             giftingOrigin: w,
         } = e,
@@ -110,21 +110,21 @@ function P(e) {
                         g.wo,
                         {
                             key: d.h8.CONFIRM,
-                            renderStep: (e) => (0, i.jsx)(x.d, j({}, e)),
+                            renderStep: (e) => (0, i.jsx)(x.d, _({}, e)),
                         },
                     ];
-                })(b),
+                })(j),
                 applicationId: n,
                 skuIDs: [f],
                 activeSubscription: null,
-                purchaseType: _.GZ.ONE_TIME,
-                isGift: b,
+                purchaseType: b.GZ.ONE_TIME,
+                isGift: j,
                 children: (0, i.jsx)(u.c1, {
                     children: (0, i.jsx)(o.KB, {
-                        isGift: b,
+                        isGift: j,
                         giftRecipient: P,
                         giftingOrigin: w,
-                        children: (0, i.jsx)(I, j({}, e)),
+                        children: (0, i.jsx)(I, _({}, e)),
                     }),
                 }),
             }),

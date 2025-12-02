@@ -1,10 +1,10 @@
 n.d(t, {
-    GB: () => N,
+    GB: () => O,
     JI: () => y,
     UM: () => T,
-    V6: () => O,
-    WT: () => j,
-    X7: () => b,
+    V6: () => N,
+    WT: () => b,
+    X7: () => j,
     jq: () => C,
     mx: () => x,
 }),
@@ -20,8 +20,8 @@ var r = n(54381),
     d = n(768581),
     h = n(51144),
     g = n(245335),
-    m = n(981631),
-    p = n(888592),
+    p = n(981631),
+    m = n(888592),
     f = n(388032),
     _ = n(215613);
 let x = 100,
@@ -34,19 +34,19 @@ let x = 100,
         return 0 === r.memberCount && 0 === r.memberCount ? null : r;
     },
     v = (e) => e.target_type === g.Iq.STREAM && null != e.target_user,
-    j = (e) => {
+    b = (e) => {
         var t;
-        return (null == (t = e.channel) ? void 0 : t.type) === m.d4z.GROUP_DM;
+        return (null == (t = e.channel) ? void 0 : t.type) === p.d4z.GROUP_DM;
     },
-    b = (e) => null == e.channel && null == e.guild && null != e.inviter,
-    I = (e) => e.state === m.r2o.ACCEPTED,
+    j = (e) => null == e.channel && null == e.guild && null != e.inviter,
+    I = (e) => e.state === p.r2o.ACCEPTED,
     y = (e) => {
         let { guild_scheduled_event: t } = e;
         return null != t;
     },
     S = (e) =>
         !y(e) &&
-        (!!b(e) ||
+        (!!j(e) ||
             (null != e.inviter &&
                 !I(e) &&
                 !((e) => {
@@ -54,7 +54,7 @@ let x = 100,
                     let n = E(e);
                     return (null != (t = null == n ? void 0 : n.memberCount) ? t : 0) > x;
                 })(e))),
-    N = (e) => {
+    O = (e) => {
         let { guild: t, user: n, application: i } = e;
         return null != i
             ? (0, r.jsx)(c.Z, {
@@ -77,11 +77,11 @@ let x = 100,
                   })
                 : null;
     };
-function O(e) {
+function N(e) {
     var t;
     let { invite: n, textClassName: i, className: s } = e,
         a = E(n);
-    return null == a || S(n) || (null == n || null == (t = n.guild) ? void 0 : t.id) === p.fQ
+    return null == a || S(n) || (null == n || null == (t = n.guild) ? void 0 : t.id) === m.fQ
         ? null
         : (0, r.jsx)(o.EJ, {
               className: l()(_.activityCount, s),
@@ -105,7 +105,7 @@ function C(e) {
             [t, n],
         ),
         l = f.intl.string(f.t["3rE1P8"]);
-    if (j(t)) {
+    if (b(t)) {
         var c, u;
         l =
             (null == (c = t.channel) ? void 0 : c.name) != null &&

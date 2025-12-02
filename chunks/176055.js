@@ -17,8 +17,8 @@ var r = n(54381),
     b = n(703656),
     E = n(769654),
     O = n(430824),
-    y = n(411198),
-    v = n(843445),
+    v = n(411198),
+    y = n(843445),
     I = n(981631),
     C = n(388032),
     S = n(295265);
@@ -68,7 +68,7 @@ class N extends i.PureComponent {
             pageSize: o,
         } = this.props;
         if (t && n) return null;
-        let d = (0, y.B3)(e),
+        let d = (0, v.B3)(e),
             p = C.intl.string(C.t.pxwdrA),
             f = this.handleJoinOrView,
             _ = c.zx.Looks.FILLED,
@@ -92,7 +92,7 @@ class N extends i.PureComponent {
                     : i && t && (p = C.intl.string(C.t.XpeFYr))
                 : ((p = C.intl.string(C.t.dKhVQN)), (f = this.handleLogin)),
             (0, r.jsxs)("div", {
-                className: a()(s, o === v.b.SMALL ? S.inviteSmall : S.inviteLarge),
+                className: a()(s, o === y.b.SMALL ? S.inviteSmall : S.inviteLarge),
                 children: [
                     (0, r.jsx)(h.Z, { children: C.intl.string(C.t.s1KcLo) }),
                     (0, r.jsxs)("div", {

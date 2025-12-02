@@ -223,10 +223,10 @@ function U(e) {
             forcePlaceholder: V,
         } = e,
         { width: H, height: Y, spoiler: W, type: K, contentType: z } = n,
-        [q, Q] = i.useState(!1),
-        X = t.getChannelId(),
-        J = E.Z.getChannel(X),
-        $ = (0, h.Z)(X),
+        [q, X] = i.useState(!1),
+        Q = t.getChannelId(),
+        J = E.Z.getChannel(Q),
+        $ = (0, h.Z)(Q),
         ee = i.useMemo(() => (null != z && -1 !== z.indexOf("/") ? z.split("/") : ["unknown", "unknown"]), [z]),
         et = !1;
     if (Z) {
@@ -364,8 +364,8 @@ function U(e) {
                 playable: D,
                 mimeType: ee,
                 renderAdjacentContent: ei,
-                onVolumeShow: () => Q(!0),
-                onVolumeHide: () => Q(!1),
+                onVolumeShow: () => X(!0),
+                onVolumeHide: () => X(!1),
                 onPlay: p,
             });
         case "PLAINTEXT_PREVIEW":

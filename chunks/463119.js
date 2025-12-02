@@ -17,8 +17,8 @@ var r = n(54381),
     b = n(243778),
     E = n(633302),
     O = n(567400),
-    y = n(153066),
-    v = n(335131),
+    v = n(153066),
+    y = n(335131),
     I = n(364111),
     C = n(729700),
     S = n(827360),
@@ -141,21 +141,21 @@ let M = (e) => {
         let _ = (0, l.JA)("shop"),
             b = g.Z.HOME_PAGE_SHOP_TAB,
             { analyticsLocations: E } = (0, m.ZP)(b),
-            [O, y] = i.useState(!1),
+            [O, v] = i.useState(!1),
             I = i.useCallback(() => {
                 void 0 !== s && s(),
                     void 0 !== o &&
-                        (0, v.mK)({
+                        (0, y.mK)({
                             tab: o,
                             analyticsLocations: E,
                             analyticsSource: b,
                         }),
-                    y(!0),
-                    (0, v.Sm)({
+                    v(!0),
+                    (0, y.Sm)({
                         analyticsSource: b,
                         analyticsLocations: E,
                     });
-            }, [b, E, s, y, o]),
+            }, [b, E, s, v, o]),
             C = x.Z5c.COLLECTIBLES_SHOP;
         return (0, r.jsxs)(r.Fragment, {
             children: [
@@ -237,7 +237,7 @@ let M = (e) => {
             b,
             E,
             O,
-            v,
+            y,
             { displayOptions: I } = e,
             C = D(e, ["displayOptions"]);
         let S = (0, a.e7)([h.Z], () => h.Z.useReducedMotion),
@@ -255,7 +255,7 @@ let M = (e) => {
               ? ((t = null == (m = I.entryPointBackgroundAssets) ? void 0 : m.srcDark),
                 (n = null == (b = I.entrypointBackgroundStyle) || null == (_ = b.resting) ? void 0 : _.dark))
               : ((t = null == (E = I.entryPointBackgroundAssets) ? void 0 : E.srcLight),
-                (n = null == (v = I.entrypointBackgroundStyle) || null == (O = v.resting) ? void 0 : O.light));
+                (n = null == (y = I.entrypointBackgroundStyle) || null == (O = y.resting) ? void 0 : O.light));
         let k = i.useCallback(
                 (e) => {
                     I.assetIds.length > 0 && N((e) => (e + 1) % I.assetIds.length), P(!0), null == e || e();
@@ -288,7 +288,7 @@ let M = (e) => {
                                 L(
                                     {
                                         className:
-                                            null != I.entryPointClassName ? (0, y.l)(w, I.entryPointClassName) : void 0,
+                                            null != I.entryPointClassName ? (0, v.l)(w, I.entryPointClassName) : void 0,
                                     },
                                     C,
                                 ),

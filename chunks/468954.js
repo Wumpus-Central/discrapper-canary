@@ -106,8 +106,8 @@ function _(e) {
             expressionsGrid: K,
             rowCount: z,
             rowCountBySection: q,
-            columnCounts: Q,
-            gutterWidth: X,
+            columnCounts: X,
+            gutterWidth: Q,
         } = (0, o.yi)({
             categories: t,
             collapsedCategories: n,
@@ -123,7 +123,7 @@ function _(e) {
             handleGridContainerKeyDown: et,
             isUsingKeyboardNavigation: en,
         } = (0, o.t$)({
-            columnCounts: Q,
+            columnCounts: X,
             expressionsListRef: B,
             expressionsGrid: K,
             onSelectItem: _,
@@ -137,7 +137,7 @@ function _(e) {
                     $(e),
                     {
                         isUsingKeyboardNavigation: en.current,
-                        gutterWidth: X,
+                        gutterWidth: Q,
                         rowIndex: e,
                         totalRowCount: z,
                         sectionIndex: t.sectionIndex,
@@ -145,7 +145,7 @@ function _(e) {
                     (t) => J(e, t),
                     (t) => f.setInspectedExpressionPosition(t, e),
                 ),
-            [K, J, $, X, en, O, f, z],
+            [K, J, $, Q, en, O, f, z],
         ),
         ei = i.useCallback((e) => (null == S ? void 0 : S(t[e], e)), [t, S]),
         ea = i.useCallback((e) => (null == I ? void 0 : I(t[e], e)), [t, I]),

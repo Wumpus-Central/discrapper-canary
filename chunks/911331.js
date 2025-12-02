@@ -95,7 +95,7 @@ var s = function (e, t) {
             K = "offsetWidth" in D ? D.offsetWidth - D.clientWidth - B - V : 0,
             z = "offsetHeight" in D ? D.offsetHeight - D.clientHeight - F - H : 0,
             q = "offsetWidth" in D ? (0 === D.offsetWidth ? 0 : j / D.offsetWidth) : 0,
-            Q = "offsetHeight" in D ? (0 === D.offsetHeight ? 0 : L / D.offsetHeight) : 0;
+            X = "offsetHeight" in D ? (0 === D.offsetHeight ? 0 : L / D.offsetHeight) : 0;
         if (_ === D)
             (Y =
                 "start" === s
@@ -132,10 +132,10 @@ var s = function (e, t) {
                           : "end" === l
                             ? P - k + V + K
                             : o(G, k, j, B, V + K, P, P + S, S));
-            var X = D.scrollLeft,
+            var Q = D.scrollLeft,
                 J = D.scrollTop;
-            (N += J - (Y = Math.max(0, Math.min(J + Y / Q, D.scrollHeight - L / Q + z)))),
-                (P += X - (W = Math.max(0, Math.min(X + W / q, D.scrollWidth - j / q + K))));
+            (N += J - (Y = Math.max(0, Math.min(J + Y / X, D.scrollHeight - L / X + z)))),
+                (P += Q - (W = Math.max(0, Math.min(Q + W / q, D.scrollWidth - j / q + K))));
         }
         R.push({
             el: D,

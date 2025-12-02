@@ -1,8 +1,8 @@
-n.d(e, { u: () => T }), n(539854), n(388685);
+n.d(e, { u: () => I }), n(539854), n(388685);
 var i = n(54381),
-    r = n(473749),
-    l = n(512722),
-    s = n.n(l),
+    l = n(473749),
+    s = n(512722),
+    r = n.n(s),
     u = n(59662),
     a = n(28682),
     o = n(388032);
@@ -11,18 +11,18 @@ function c(t) {
     return e;
 }
 function d(t) {
-    let { useTitle: e, settingKey: n, formatter: i, index: r } = t,
-        l = e();
-    return "string" == typeof l
+    let { useTitle: e, settingKey: n, formatter: i, index: l } = t,
+        s = e();
+    return "string" == typeof s
         ? i({
-              title: l,
-              index: r,
+              title: s,
+              index: l,
               key: n,
           })
-        : l;
+        : s;
 }
 function E(t) {
-    let { setting: e, formatter: n, index: r } = t;
+    let { setting: e, formatter: n, index: l } = t;
     return () =>
         (0, i.jsx)(
             d,
@@ -30,7 +30,7 @@ function E(t) {
                 useTitle: e.useTitle,
                 settingKey: e.key,
                 formatter: n,
-                index: r,
+                index: l,
             },
             e.key,
         );
@@ -38,22 +38,22 @@ function E(t) {
 function S(t) {
     return t.type === a.Jq.LIST;
 }
-function T(t, e) {
+function I(t, e) {
     var n, i;
-    let { limit: l = 2, formatter: d = c } = null != e ? e : {};
-    s()(l > 0, "[useSettingCollapsibleSubtitle] Limit must be greater than 0");
-    let { directory: T, fallbackDirectory: I } = (0, u.t)(),
-        g = null != (n = T.get(t)) ? n : I.get(t);
-    s()(
+    let { limit: s = 2, formatter: d = c } = null != e ? e : {};
+    r()(s > 0, "[useSettingCollapsibleSubtitle] Limit must be greater than 0");
+    let { directory: I, fallbackDirectory: T } = (0, u.t)(),
+        g = null != (n = I.get(t)) ? n : T.get(t);
+    r()(
         null != g && (g.type === a.Jq.ACCORDION || S(g)),
         "[useSettingCollapsibleSubtitle] Node is not a collapsible settings node",
     );
-    let O = S(g) && null != (i = g.collapseAfter) ? i : 0,
-        _ = g.layout;
-    return r.useMemo(() => {
-        let t = O,
+    let _ = S(g) && null != (i = g.collapseAfter) ? i : 0,
+        O = g.layout;
+    return l.useMemo(() => {
+        let t = _,
             e = [];
-        for (let n of _)
+        for (let n of O)
             if ("useTitle" in n && null != n.useTitle) {
                 if (t > 0) {
                     t--;
@@ -65,7 +65,7 @@ function T(t, e) {
                 });
             }
         if (0 === e.length) return "";
-        let n = Math.min(l, 3);
+        let n = Math.min(s, 3);
         if (e.length <= n)
             if (1 === e.length)
                 return o.intl.format(o.t["3H9tCW"], {
@@ -144,5 +144,5 @@ function T(t, e) {
                         index: 2,
                     }),
                 });
-    }, [l, O, _, d]);
+    }, [s, _, O, d]);
 }

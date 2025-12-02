@@ -13,8 +13,8 @@ n.d(t, {
     bT: () => H,
     dM: () => Y,
     dQ: () => K,
-    e$: () => X,
-    iM: () => Q,
+    e$: () => Q,
+    iM: () => X,
     pO: () => k,
     xr: () => j,
     z2: () => J,
@@ -262,7 +262,7 @@ function q(e) {
         )
         .otherwise(() => g.intl.string(g.t["5ayf7w"]));
 }
-function Q(e) {
+function X(e) {
     let {
         step: t,
         sku: n,
@@ -275,7 +275,7 @@ function Q(e) {
     } = e;
     switch (t) {
         case m.wZ8.ERROR:
-            return X(r, i, a, o, s);
+            return Q(r, i, a, o, s);
         case m.wZ8.SUCCESS:
             if (null != l) return q(l);
             return g.intl.formatToPlainString(g.t["3CPsbo"], { skuName: n.name });
@@ -291,7 +291,7 @@ function Q(e) {
             return g.intl.formatToPlainString(g.t.l6Ea4Z, { skuName: n.name });
     }
 }
-function X(e, t, n, r, i) {
+function Q(e, t, n, r, i) {
     let a = n || r ? void 0 : e,
         o = g.intl.format(g.t["5zyz9y"], { onGoToLibrary: i });
     return null != a ? o : null == t ? null : et(t, c.default.getCurrentUser());

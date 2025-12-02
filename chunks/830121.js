@@ -55,13 +55,13 @@ let C = 10,
     G = /^\/oauth2\/authorize/,
     Z = /^#itemSkuId=([0-9]+)$/,
     B = /dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+/i,
-    F = X(window.GLOBAL_ENV.INVITE_HOST),
-    V = X(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
-    H = X(null != (o = window.GLOBAL_ENV.WEBAPP_ENDPOINT) ? o : "//canary.".concat(A.$R1)),
-    Y = X("//canary.".concat(A.$R1)),
-    W = X("//ptb.".concat(A.$R1)),
-    K = X("discordapp.com"),
-    z = X("discord.com"),
+    F = Q(window.GLOBAL_ENV.INVITE_HOST),
+    V = Q(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
+    H = Q(null != (o = window.GLOBAL_ENV.WEBAPP_ENDPOINT) ? o : "//canary.".concat(A.$R1)),
+    Y = Q("//canary.".concat(A.$R1)),
+    W = Q("//ptb.".concat(A.$R1)),
+    K = Q("discordapp.com"),
+    z = Q("discord.com"),
     q = [
         S.Z.escape(null != (s = F.host) ? s : ""),
         S.Z.escape(null != (l = V.host) ? l : ""),
@@ -69,8 +69,8 @@ let C = 10,
         S.Z.escape(null != (u = K.host) ? u : ""),
         S.Z.escape(null != (d = z.host) ? d : ""),
     ].filter(Boolean),
-    Q = RegExp("((https?://[^ ]*)|^|[^/][^/.])(".concat(q.join("|"), ")"), "g");
-function X(e) {
+    X = RegExp("((https?://[^ ]*)|^|[^/][^/.])(".concat(q.join("|"), ")"), "g");
+function Q(e) {
     if (null == e)
         return {
             host: null,
@@ -162,7 +162,7 @@ function es(e) {
     if (null == e) return [];
     let t = new Set(),
         n = [],
-        r = J((e = e.replace(Q, (e, t, n, r) => (null == n ? "".concat(t, "http://").concat(r) : e)))).match(
+        r = J((e = e.replace(X, (e, t, n, r) => (null == n ? "".concat(t, "http://").concat(r) : e)))).match(
             I.Z.URL_REGEX,
         ),
         i = e.match(B);

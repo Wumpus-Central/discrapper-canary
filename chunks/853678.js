@@ -17,10 +17,10 @@ var r = n(95015),
     b = n(914946),
     E = n(452426),
     O = n(186901),
-    y = n(981631),
-    v = n(701488),
+    v = n(981631),
+    y = n(701488),
     I = n(674563);
-let C = new Set([v.Fu, v.JT]),
+let C = new Set([y.Fu, y.JT]),
     S = new Set(["www.nytimes.com", "apps.apple.com", "play.google.com"]),
     T = new Map([
         [
@@ -46,7 +46,7 @@ let C = new Set([v.Fu, v.JT]),
         ],
     ]),
     N = {
-        [y.Etm.OPEN_EXTERNAL_LINK]: {
+        [v.Etm.OPEN_EXTERNAL_LINK]: {
             scope: {
                 [O.Gp.ANY]: [O.wE, O.b_],
             },
@@ -63,7 +63,7 @@ let C = new Set([v.Fu, v.JT]),
                     let e = new URL(n),
                         s = e.toString();
                     if (m.isPlatformEmbedded) {
-                        let e = (0, a.R)() ? y.KJ3.ACTIVITY_POPOUT : null;
+                        let e = (0, a.R)() ? v.KJ3.ACTIVITY_POPOUT : null;
                         h.Z.focus(e, !0);
                     }
                     let p = d.Z.getApplication(null == (i = t.application) ? void 0 : i.id),
@@ -72,7 +72,7 @@ let C = new Set([v.Fu, v.JT]),
                     if (void 0 !== b && b.trustedUntilEpochMs >= Date.now() && b.trustedHosts.has(e.host))
                         return (
                             (0, l.Z)(s),
-                            f.default.track(y.rMx.RPC_OPEN_EXTERNAL_LINK_CALLED, {
+                            f.default.track(v.rMx.RPC_OPEN_EXTERNAL_LINK_CALLED, {
                                 application_id: null == (c = t.application) ? void 0 : c.id,
                                 url: s,
                                 opened: !0,
@@ -87,7 +87,7 @@ let C = new Set([v.Fu, v.JT]),
                                 onConfirm: () => {
                                     var n;
                                     (0, l.Z)(s),
-                                        f.default.track(y.rMx.RPC_OPEN_EXTERNAL_LINK_CALLED, {
+                                        f.default.track(v.rMx.RPC_OPEN_EXTERNAL_LINK_CALLED, {
                                             application_id: null == (n = t.application) ? void 0 : n.id,
                                             url: s,
                                             opened: !0,
@@ -96,7 +96,7 @@ let C = new Set([v.Fu, v.JT]),
                                 },
                                 onCancel: () => {
                                     var n;
-                                    f.default.track(y.rMx.RPC_OPEN_EXTERNAL_LINK_CALLED, {
+                                    f.default.track(v.rMx.RPC_OPEN_EXTERNAL_LINK_CALLED, {
                                         application_id: null == (n = t.application) ? void 0 : n.id,
                                         url: s,
                                         opened: !1,
@@ -113,11 +113,11 @@ let C = new Set([v.Fu, v.JT]),
                         ),
                     );
                 } catch (e) {
-                    throw new _.Z({ errorCode: y.lTL.INVALID_COMMAND }, "Invalid URL: ".concat(n));
+                    throw new _.Z({ errorCode: v.lTL.INVALID_COMMAND }, "Invalid URL: ".concat(n));
                 }
             },
         },
-        [y.Etm.NAVIGATE_TO_CONNECTIONS]: {
+        [v.Etm.NAVIGATE_TO_CONNECTIONS]: {
             validation: (e) => (0, E.Z)(e),
             scope: { [O.Gp.ANY]: [O.wE] },
             handler(e) {
@@ -126,16 +126,16 @@ let C = new Set([v.Fu, v.JT]),
                 let r = (0, b._f)(t.application);
                 if (!C.has(r))
                     throw new _.Z(
-                        { errorCode: y.lTL.UNAUTHORIZED_FOR_APPLICATION },
+                        { errorCode: v.lTL.UNAUTHORIZED_FOR_APPLICATION },
                         "Command not available for this application",
                     );
                 {
                     let { openUserSettings: e } = n(518596);
-                    e(p.n.CONNECTIONS_PANEL, { section: y.oAB.CONNECTIONS });
+                    e(p.n.CONNECTIONS_PANEL, { section: v.oAB.CONNECTIONS });
                 }
             },
         },
-        [y.Etm.SHARE_LINK]: (0, i.S)(y.Etm.SHARE_LINK, {
+        [v.Etm.SHARE_LINK]: (0, i.S)(v.Etm.SHARE_LINK, {
             scope: { [O.Gp.ANY]: [O.wE] },
             handler(e) {
                 var t;
@@ -145,9 +145,9 @@ let C = new Set([v.Fu, v.JT]),
                 } = e;
                 (0, b.bu)(n.transport);
                 let s = (0, b._f)(n.application);
-                if (null == s) throw new _.Z({ errorCode: y.lTL.INVALID_COMMAND }, "No application.");
-                if (!(0, r.yE)(null != (t = n.application.flags) ? t : 0, y.udG.EMBEDDED))
-                    throw new _.Z({ errorCode: y.lTL.INVALID_COMMAND }, "This application cannot access this API");
+                if (null == s) throw new _.Z({ errorCode: v.lTL.INVALID_COMMAND }, "No application.");
+                if (!(0, r.yE)(null != (t = n.application.flags) ? t : 0, v.udG.EMBEDDED))
+                    throw new _.Z({ errorCode: v.lTL.INVALID_COMMAND }, "This application cannot access this API");
                 return new Promise((e) => {
                     (0, c._)({
                         applicationId: s,

@@ -1,8 +1,8 @@
-n.d(e, { Z: () => O });
+n.d(e, { Z: () => _ });
 var i = n(54381),
-    r = n(473749),
-    l = n(512722),
-    s = n.n(l),
+    l = n(473749),
+    s = n(512722),
+    r = n.n(s),
     u = n(442837),
     a = n(481060),
     o = n(660216),
@@ -10,15 +10,15 @@ var i = n(54381),
     d = n(509613),
     E = n(556296),
     S = n(313789),
-    T = n(981631),
-    I = n(388032),
+    I = n(981631),
+    T = n(388032),
     g = n(360919);
-let O = (0, d.ON)(S.n.CLIPS_KEYBIND, {
-    useSearchTerms: () => [I.intl.string(I.t.pf54EU), I.intl.string(I.t["QyB/jK"])],
+let _ = (0, d.ON)(S.n.CLIPS_KEYBIND, {
+    useSearchTerms: () => [T.intl.string(T.t.pf54EU), T.intl.string(T.t["QyB/jK"])],
     render: () => {
-        let t = (0, u.e7)([E.ZP], () => E.ZP.getKeybindForAction(T.kg4.SAVE_CLIP, !0));
-        s()(null != t, "Save clip keybind unset");
-        let e = r.useCallback(
+        let t = (0, u.e7)([E.ZP], () => E.ZP.getKeybindForAction(I.kg4.SAVE_CLIP, !0));
+        r()(null != t, "Save clip keybind unset");
+        let e = l.useCallback(
             (e) => {
                 var n, i;
                 o.Z.setKeybind(
@@ -66,8 +66,8 @@ let O = (0, d.ON)(S.n.CLIPS_KEYBIND, {
             [t],
         );
         return (0, i.jsx)(a.gNt, {
-            label: I.intl.string(I.t.pf54EU),
-            description: I.intl.string(I.t["QyB/jK"]),
+            label: T.intl.string(T.t.pf54EU),
+            description: T.intl.string(T.t["QyB/jK"]),
             layout: "horizontal",
             children: (0, i.jsx)("div", {
                 className: g.keyRecorder,

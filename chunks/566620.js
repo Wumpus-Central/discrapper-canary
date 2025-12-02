@@ -65,8 +65,8 @@ var r = n(990547),
     K = n(224189),
     z = n(374065),
     q = n(917107),
-    Q = n(89425),
-    X = n(275920),
+    X = n(89425),
+    Q = n(275920),
     J = n(701488),
     $ = n(918559),
     ee = n(981631),
@@ -170,7 +170,7 @@ async function el(e) {
         let r = U.default.getCurrentUser();
         if (
             (null != r &&
-                (0, X.Z)({
+                (0, Q.Z)({
                     type: s ? ee.q5t.LAUNCH : ee.q5t.JOIN,
                     userId: null == r ? void 0 : r.id,
                     guildId: P,
@@ -457,7 +457,7 @@ async function ed(e) {
             n = J.wP.includes(p.type);
         if (e) {
             if (
-                !(await (0, Q.Z)({
+                !(await (0, X.Z)({
                     channelId: p.id,
                     bypassChangeModal: null != t,
                 }))

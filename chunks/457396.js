@@ -22,8 +22,8 @@ var r = n(54381),
     b = n(172416),
     E = n(594174),
     O = n(78839),
-    y = n(431),
-    v = n(626135),
+    v = n(431),
+    y = n(626135),
     I = n(74538),
     C = n(502087),
     S = n(367074),
@@ -107,11 +107,11 @@ let J = (e) => {
             eb = (0, M.HI)({ trialOffer: ef }),
             eE = (0, F.V)(),
             eO = (0, M.eW)(),
-            ey = (0, D._h)(),
-            ev = (0, z.Kn)(),
-            eI = y.Z.getAlmostExpiringTrialOffers([W.Si.TIER_2]),
+            ev = (0, D._h)(),
+            ey = (0, z.Kn)(),
+            eI = v.Z.getAlmostExpiringTrialOffers([W.Si.TIER_2]),
             eC = ec && eI.length > 0 && null != ef && null != ef.expires_at,
-            eS = y.Z.getAlmostExpiringDiscountOffers([W.Si.TIER_2]),
+            eS = v.Z.getAlmostExpiringDiscountOffers([W.Si.TIER_2]),
             eT = ec && eS.length > 0 && null != eh && null != eh.expires_at,
             eN = null != eg && null != es && es.status === q.O0b.CANCELED,
             { fractionalState: ej, startsAt: eP, endsAt: ex } = (0, f.Z)({ forceFetch: !0 }),
@@ -127,7 +127,7 @@ let J = (e) => {
             ek = [];
         (0, g.Kl)() &&
             ((eT || (eC && !eL)) && eM.push(o.z.NITRO_TAB_BADGE_OFFER_REMINDER),
-            ey && eM.push(o.z.RECURRING_3P_PROMOTION_POPOVER),
+            ev && eM.push(o.z.RECURRING_3P_PROMOTION_POPOVER),
             e_ && eM.push(o.z.BOGO_2025_NITRO_TAB_BADGE),
             ew && eM.push(o.z.VOICE_FILTER_EARLY_ACCESS_PREMIUM_TAB_BADGE),
             em && eM.push(o.z.Q2_2025_MARKETING_MOMENT_NITRO_TAB_BADGE_V2),
@@ -156,7 +156,7 @@ let J = (e) => {
             return null;
         let eY = () => {
             eA === o.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL && eZ(K.L.TAKE_ACTION),
-                v.default.track(q.rMx.NITRO_TAB_VISITED, {
+                y.default.track(q.rMx.NITRO_TAB_VISITED, {
                     badge_decorator: C,
                     has_premium: eu,
                 }),
@@ -200,7 +200,7 @@ let J = (e) => {
                   })),
                   (C = 4),
                   (eY = () => {
-                      v.default.track(q.rMx.NITRO_TAB_VISITED, {
+                      y.default.track(q.rMx.NITRO_TAB_VISITED, {
                           badge_decorator: C,
                           has_premium: eu,
                       }),
@@ -235,7 +235,7 @@ let J = (e) => {
                                     })),
                           (C = 3))
                         : null == ef || eL
-                          ? ev
+                          ? ey
                               ? ((n = (0, r.jsx)(H.l, {
                                     isSelected: et,
                                     onSelect: () =>
@@ -267,7 +267,7 @@ let J = (e) => {
             })),
             (C = 4),
             (eY = () => {
-                v.default.track(q.rMx.NITRO_TAB_VISITED, {
+                y.default.track(q.rMx.NITRO_TAB_VISITED, {
                     badge_decorator: C,
                     has_premium: eu,
                 }),
@@ -331,7 +331,7 @@ let J = (e) => {
                   }),
             X),
         );
-        return ev
+        return ey
             ? (0, r.jsx)(H.C, { children: eW })
             : eN && eB === o.z.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK && 8 === C
               ? (0, r.jsx)(k.Z, {

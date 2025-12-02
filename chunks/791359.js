@@ -9,16 +9,16 @@ var r = n(54381),
     u = n(481060),
     d = n(570140),
     p = n(365113),
-    f = n(313481),
-    h = n(616022),
-    g = n(509212),
+    f = n(616022),
+    h = n(509212),
+    g = n(968843),
     m = n(93127),
     _ = n(752048),
     b = n(594174),
     E = n(801077),
     O = n(626135),
-    y = n(70956),
-    v = n(225559),
+    v = n(70956),
+    y = n(225559),
     I = n(910436),
     C = n(203028),
     S = n(358924),
@@ -28,7 +28,7 @@ var r = n(54381),
     P = n(324805),
     x = n(388032),
     A = n(559909);
-let Z = 15 * y.Z.Millis.MINUTE,
+let Z = 15 * v.Z.Millis.MINUTE,
     w = (0, N.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: a } = e,
             s = i.useRef(null),
@@ -45,8 +45,8 @@ let Z = 15 * y.Z.Millis.MINUTE,
             _ = f.length,
             b = h.length,
             E = g.length,
-            y = m.length > 0,
-            v = p.o.useConfig({ location: "itemcard" }).demureActivityCards,
+            v = m.length > 0,
+            y = p.o.useConfig({ location: "itemcard" }).demureActivityCards,
             N = i.useCallback(() => {
                 let e = g
                     .filter((e) => {
@@ -61,10 +61,10 @@ let Z = 15 * y.Z.Millis.MINUTE,
                     num_users: _,
                     num_streams: b,
                     num_activities: E,
-                    in_voice_channel: y,
+                    in_voice_channel: v,
                     games_detected: e,
                 });
-            }, [_, b, E, y, g]),
+            }, [_, b, E, v, g]),
             P = i.useMemo(() => o()(N, Z), [N]);
         return null != c || null != d
             ? (0, r.jsx)(u.yRy, {
@@ -115,7 +115,7 @@ let Z = 15 * y.Z.Millis.MINUTE,
                                   "aria-haspopup": "menu",
                                   className: A.itemCard,
                                   active: l,
-                                  flat: v,
+                                  flat: y,
                                   children: (0, r.jsxs)("div", {
                                       children: [c, d],
                                   }),
@@ -153,21 +153,21 @@ function R() {
             fetching: _.Z.isFetching(),
             currentUser: b.default.getCurrentUser(),
         })),
-        s = (0, c.e7)([h.Z], () => h.Z.quests),
-        o = (0, f.Fy)(Array.from(s.values()));
-    i.useEffect(() => (d.Z.wait(() => v.L()), () => d.Z.wait(() => v.v())), [null == a ? void 0 : a.id]),
+        s = (0, c.e7)([f.Z], () => f.Z.quests),
+        o = (0, g.Fy)(Array.from(s.values()));
+    i.useEffect(() => (d.Z.wait(() => y.L()), () => d.Z.wait(() => y.v())), [null == a ? void 0 : a.id]),
         i.useEffect(() => {
             n && !l && L();
         }, [n, l]);
     let p = i.useMemo(() => {
             let t = new Map(),
                 n = new Set(),
-                r = (0, g.NI)(s, P.l$);
+                r = (0, h.NI)(s, P.l$);
             for (let i of e)
                 i.party.currentActivities.forEach((e) => {
                     let { activity: l } = e;
                     if (null == l) return;
-                    let a = (0, g.ZZ)(r, l);
+                    let a = (0, h.ZZ)(r, l);
                     null == a || n.has(a.id) || (t.set(i.party.id, a), n.add(a.id));
                 });
             return t;

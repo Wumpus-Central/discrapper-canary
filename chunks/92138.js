@@ -30,8 +30,8 @@ var g = n(981631);
     l.ZP.initialize(),
     n.e("40637").then(n.t.bind(n, 281307, 19));
 let E = window.GLOBAL_ENV.RELEASE_CHANNEL,
-    b = "474308",
-    y = "5cef417629641426366a87f82b4a64f3551cb365";
+    b = "474612",
+    y = "9b159cb2219d51cebb4e34bde2c7653b51a64bc4";
 new h.Z().log("[BUILD INFO] Release Channel: ".concat(E, ", Build Number: ").concat(b, ", Version Hash: ").concat(y)),
     i.Z.setTags({ appContext: g.e3s }),
     p.Z.initBasic(),

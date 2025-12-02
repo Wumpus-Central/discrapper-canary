@@ -84,7 +84,7 @@ function q(e, t) {
     }
     return n;
 }
-function Q(e, t) {
+function X(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -95,7 +95,7 @@ function Q(e, t) {
         e
     );
 }
-let X = 44,
+let Q = 44,
     J = 440,
     $ = 24,
     ee = 0.025;
@@ -389,17 +389,17 @@ class eo extends i.PureComponent {
                 let { current: e } = this.scrollerRef;
                 if (null == e) return;
                 let t = e.getScrollerState();
-                t.scrollTop + t.offsetHeight >= t.scrollHeight - X &&
+                t.scrollTop + t.offsetHeight >= t.scrollHeight - Q &&
                     this.props.hasMore &&
                     !this.state.loadingMore &&
                     this.loadMore();
             }),
             K(this, "getRowHeight", (e, t) => {
                 let { reactors: n } = this.props;
-                if (1 === e) return 0 === t ? X : 0;
+                if (1 === e) return 0 === t ? Q : 0;
                 if (0 === e) {
                     if (0 === t && 0 === n.length) return J;
-                    if (null != this.props.reactors[t]) return X;
+                    if (null != this.props.reactors[t]) return Q;
                 }
                 return 0;
             }),
@@ -459,8 +459,8 @@ function el(e) {
         let t = [];
         return (
             e.forEach((e) => {
-                e.burst_count > 0 && t.push(Q(z({}, e), { count: 0 })),
-                    e.count > 0 && t.push(Q(z({}, e), { burst_count: 0 }));
+                e.burst_count > 0 && t.push(X(z({}, e), { count: 0 })),
+                    e.count > 0 && t.push(X(z({}, e), { burst_count: 0 }));
             }),
             t.sort((e, t) => {
                 let n = e.burst_count > 0 ? e.burst_count : e.count;

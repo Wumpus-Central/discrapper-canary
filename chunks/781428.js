@@ -14,20 +14,20 @@ var r,
     d = n(793030),
     h = n(442837),
     g = n(481060),
-    m = n(570140),
-    p = n(893776),
+    p = n(570140),
+    m = n(893776),
     f = n(899742),
     _ = n(743142),
     x = n(254942),
     E = n(388905),
     v = n(379760),
-    j = n(600164),
-    b = n(100159),
+    b = n(600164),
+    j = n(100159),
     I = n(473855),
     y = n(124860),
     S = n(86779),
-    N = n(726745),
-    O = n(913583),
+    O = n(726745),
+    N = n(913583),
     C = n(144114),
     T = n(541692),
     A = n(952802),
@@ -36,8 +36,8 @@ var r,
     R = n(108427),
     L = n(901375),
     w = n(314897),
-    D = n(117240),
-    k = n(896797),
+    k = n(117240),
+    D = n(896797),
     M = n(626135),
     B = n(585483),
     U = n(358085),
@@ -117,7 +117,7 @@ class ee extends (r = s.PureComponent) {
                             login_source: this.loginSource,
                             authenticated: t,
                         },
-                        null != n ? (0, b.Z)(n, !1, !1) : {},
+                        null != n ? (0, j.Z)(n, !1, !1) : {},
                     ),
                     { source: (0, Z.At)() },
                 ),
@@ -129,7 +129,7 @@ class ee extends (r = s.PureComponent) {
                     loginSource: this.loginSource,
                     giftCodeSKUId: this.giftCodeSKUId,
                 }),
-            p.Z.getLocationMetadata(),
+            m.Z.getLocationMetadata(),
             (0, R.e)("login");
     }
     componentDidUpdate(e, t) {
@@ -175,7 +175,7 @@ class ee extends (r = s.PureComponent) {
         e &&
             null != t &&
             (this.setState({ redirecting: !0 }),
-            n ? p.Z.verifySSOToken("login").then(() => this.transitionSSO(t)) : this.transitionSSO(t));
+            n ? m.Z.verifySSOToken("login").then(() => this.transitionSSO(t)) : this.transitionSSO(t));
     }
     transitionSSO(e) {
         let { transitionTo: t, redirectTo: n, replaceWith: r } = this.props,
@@ -342,10 +342,10 @@ class ee extends (r = s.PureComponent) {
                             ],
                         })),
             (0, i.jsxs)(
-                j.Z,
+                b.Z,
                 {
-                    direction: j.Z.Direction.HORIZONTAL,
-                    align: j.Z.Align.CENTER,
+                    direction: b.Z.Direction.HORIZONTAL,
+                    align: b.Z.Align.CENTER,
                     children: [
                         (0, i.jsxs)("div", {
                             className: q.mainLoginContainer,
@@ -493,7 +493,7 @@ class ee extends (r = s.PureComponent) {
                 mfaFinish: this.handleTokenSubmitMFA,
                 mfaChallenge: e,
                 onEarlyClose: () => {
-                    m.Z.dispatch({ type: "LOGIN_RESET" });
+                    p.Z.dispatch({ type: "LOGIN_RESET" });
                 },
                 width: 480,
             }),
@@ -533,7 +533,7 @@ class ee extends (r = s.PureComponent) {
         let e = () => {
             this.setState((e) => X(Q({}, e), { dismissedChooseAccount: !0 }));
         };
-        return (0, i.jsx)(O.Z, { onDismiss: e });
+        return (0, i.jsx)(N.Z, { onDismiss: e });
     }
     render() {
         let { invite: e, guildTemplate: t, loginStatus: n, handoffAvailable: r } = this.props,
@@ -572,7 +572,7 @@ class ee extends (r = s.PureComponent) {
             J(this, "codeRef", void 0),
             J(this, "handleAuthToken", async (e, t) => {
                 this.setState({ errors: {} }),
-                    await p.Z.loginToken(e, !1),
+                    await m.Z.loginToken(e, !1),
                     M.default.track(H.rMx.LOGIN_SUCCESSFUL, {
                         source: H.uRl.QR_CODE,
                         login_source: this.loginSource,
@@ -585,7 +585,7 @@ class ee extends (r = s.PureComponent) {
             J(this, "loginReset", () => {
                 this.state.conditionalMediationAbortController.abort("Login state reset"),
                     this.setState({ errors: {} }),
-                    p.Z.loginReset();
+                    m.Z.loginReset();
             }),
             J(this, "setLoginRef", (e) => {
                 this.loginRef = e;
@@ -615,7 +615,7 @@ class ee extends (r = s.PureComponent) {
                     B.S.dispatch(H.CkL.WAVE_EMPHASIZE),
                     this.setState({ errors: {} });
                 try {
-                    await p.Z.login({
+                    await m.Z.login({
                         login: this.getFullLogin(),
                         password: t,
                         undelete: n,
@@ -633,7 +633,7 @@ class ee extends (r = s.PureComponent) {
                 this.setState({ errors: {} });
                 try {
                     let { token: n } = await C.Z.verifyPhone(t, e, !1);
-                    await p.Z.authorizeIPAddress(n), this.handleLogin();
+                    await m.Z.authorizeIPAddress(n), this.handleLogin();
                 } catch (e) {
                     null != e.body && null != e.body.message && this.setState({ phoneVerifyError: e.body.message });
                 }
@@ -657,7 +657,7 @@ class ee extends (r = s.PureComponent) {
                 let { mfaType: t, data: n, ticket: r } = e;
                 return (
                     B.S.dispatch(H.CkL.WAVE_EMPHASIZE),
-                    p.Z.loginMFAv2({
+                    m.Z.loginMFAv2({
                         code: n,
                         ticket: r,
                         mfaType: t,
@@ -672,7 +672,7 @@ class ee extends (r = s.PureComponent) {
                 this.setState({ errors: {} });
                 try {
                     B.S.dispatch(H.CkL.WAVE_EMPHASIZE);
-                    let e = await p.Z.forgotPassword(t);
+                    let e = await m.Z.forgotPassword(t);
                     if (!1 === e) return;
                     e === u.B.ONE_TIME_LOGIN
                         ? (0, g.h7j)((e) => {
@@ -734,7 +734,7 @@ class ee extends (r = s.PureComponent) {
             }),
             J(this, "handleReset", (e) => {
                 null != e && e.preventDefault(),
-                    p.Z.loginReset(),
+                    m.Z.loginReset(),
                     this.setState({
                         password: "",
                         loginPrefix: "",
@@ -796,16 +796,16 @@ class ee extends (r = s.PureComponent) {
 J(ee, "defaultProps", { transitionTo: (e) => n.g.location.assign(e) });
 let et = function (e) {
     (0, P.M)();
-    let t = (0, h.cj)([D.Z, k.Z, w.default, N.Z, T.Z], () => ({
+    let t = (0, h.cj)([k.Z, D.Z, w.default, O.Z, T.Z], () => ({
         authenticated: w.default.isAuthenticated(),
-        handoffAvailable: D.Z.isHandoffAvailable(),
-        user: D.Z.user,
+        handoffAvailable: k.Z.isHandoffAvailable(),
+        user: k.Z.user,
         loginStatus: w.default.getLoginStatus(),
         mfaTicket: w.default.getMFATicket(),
         mfaMethods: w.default.getMFAMethods(),
-        defaultRoute: k.Z.defaultRoute,
+        defaultRoute: D.Z.defaultRoute,
         country: T.Z.getCountryCode(),
-        hasLoggedInAccounts: N.Z.getHasLoggedInAccounts(),
+        hasLoggedInAccounts: O.Z.getHasLoggedInAccounts(),
     }));
     return (0, i.jsx)(ee, Q({}, e, t));
 };

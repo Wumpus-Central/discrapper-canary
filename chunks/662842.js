@@ -17,8 +17,8 @@ var r = n(54381),
     b = n(497656),
     E = n(554747),
     O = n(230900),
-    y = n(854698),
-    v = n(703656),
+    v = n(854698),
+    y = n(703656),
     I = n(922482),
     C = n(565799),
     S = n(501655),
@@ -82,7 +82,7 @@ function D(e) {
                         isStudyRoomNotice: m,
                     } = e,
                     b = null != n && null != i && !f,
-                    E = null != t ? (0, y.DK)(t) : null;
+                    E = null != t ? (0, v.DK)(t) : null;
                 if (m && null != i) {
                     let e = (0, p.KS)(i);
                     return {
@@ -371,7 +371,7 @@ function D(e) {
                                     if (Q)
                                         null != l &&
                                             null != l.getGuildId() &&
-                                            ((0, I.Cq)(l), (0, v.XU)(l.getGuildId(), l.id));
+                                            ((0, I.Cq)(l), (0, y.XU)(l.getGuildId(), l.id));
                                     else {
                                         if (null == d) return;
                                         (0, f.bO)({ eventId: d.id });

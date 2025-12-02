@@ -52,8 +52,8 @@ function L(e) {
             setUpdatedSubscription: K,
             contextMetadata: z,
             currencies: q,
-            paymentSourceId: Q,
-            paymentSources: X,
+            paymentSourceId: X,
+            paymentSources: Q,
             priceOptions: J,
             purchaseError: $,
             purchasePreviewError: ee,
@@ -104,7 +104,7 @@ function L(e) {
             },
             [L, K, e_, em],
         ),
-        eL = (0, T.m)(X, Q),
+        eL = (0, T.m)(Q, X),
         ej = null != en && P.o4.has(en.id) && null != eL && !(0, c.aQ)(eL) ? Error(w.intl.string(w.t["2ik8ih"])) : null,
         eM = i.useRef(null),
         [ek, eU] = i.useState(null),
@@ -134,12 +134,12 @@ function L(e) {
             [L, eH, eY, eK],
         ),
         eq = !1,
-        eQ = () => {
+        eX = () => {
             L(E.h8.ADD_PAYMENT_STEPS);
         };
     return (
         ep === R.GZ.ONE_TIME
-            ? ((eq = (null == ei && null != Q) || null != ee),
+            ? ((eq = (null == ei && null != X) || null != ee),
               (a = (0, r.jsx)(I.Z, {
                   hasLegalTermsFlash: eA,
                   legalTermsNodeRef: eM,
@@ -152,7 +152,7 @@ function L(e) {
                     (a = (0, r.jsx)(p.Z, {
                         selectedPlanId: en.id,
                         planGroup: U,
-                        paymentSources: X,
+                        paymentSources: Q,
                         onPaymentSourceChange: (e) => eo(null != e ? e.id : null),
                         priceOptions: J,
                         currencies: q,
@@ -173,12 +173,12 @@ function L(e) {
                   : (o()(null != en, "Expected plan to be selected"),
                     (a = (0, r.jsx)(_.Z, {
                         premiumSubscription: W,
-                        paymentSources: X,
+                        paymentSources: Q,
                         priceOptions: J,
                         onPaymentSourceChange: (e) => {
                             eo(null != e ? e.id : null);
                         },
-                        onPaymentSourceAdd: eQ,
+                        onPaymentSourceAdd: eX,
                         planId: en.id,
                         setHasAcceptedTerms: ef,
                         legalTermsNodeRef: eM,
@@ -229,7 +229,7 @@ function L(e) {
                         metadata: eD,
                         isTrial: eG,
                         disablePurchase: eq,
-                        onPaymentSourceAdd: eQ,
+                        onPaymentSourceAdd: eX,
                     }),
                 }),
             ],

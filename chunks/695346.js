@@ -62,11 +62,11 @@ n.d(t, {
     gw: () => eJ,
     h2: () => $,
     hg: () => e$,
-    iG: () => X,
+    iG: () => Q,
     iH: () => eG,
-    j7: () => eX,
+    j7: () => eQ,
     jU: () => er,
-    kJ: () => Q,
+    kJ: () => X,
     kU: () => ei,
     l4: () => e0,
     lk: () => eW,
@@ -79,7 +79,7 @@ n.d(t, {
     rR: () => e5,
     tU: () => ev,
     uL: () => B,
-    uh: () => eQ,
+    uh: () => eX,
     vF: () => I,
     vc: () => N,
     x4: () => eS,
@@ -345,7 +345,7 @@ let A = (0, f.Zc)(
         (e) => (null == e ? void 0 : e.value),
         (e) => o.D5.create({ value: e }),
     ),
-    Q = (0, f.Zc)(
+    X = (0, f.Zc)(
         "privacy",
         "nonSpamRetrainingOptIn",
         (e) => (null == e ? void 0 : e.value),
@@ -360,7 +360,7 @@ let A = (0, f.Zc)(
     },
     (e) => o.D5.create({ value: e }),
 );
-let X = (0, f.Zc)(
+let Q = (0, f.Zc)(
         "privacy",
         "defaultGuildsRestricted",
         (e) => null != e && e,
@@ -953,7 +953,7 @@ let eZ = (0, f.TG)({
             goreContentNonFriendDm: null != r ? r : a.Q4.UNSET_EXPLICIT_CONTENT_REDACTION,
         };
     },
-    eQ = (e) => {
+    eX = (e) => {
         let { goreContentGuilds: t, goreContentFriendDm: n, goreContentNonFriendDm: r } = e;
         return {
             goreContentGuilds: null != t ? t : void 0,
@@ -961,7 +961,7 @@ let eZ = (0, f.TG)({
             goreContentNonFriendDm: null != r ? r : void 0,
         };
     },
-    eX = (0, f.Zc)("textAndImages", "goreContentSettings", eq, eQ),
+    eQ = (0, f.Zc)("textAndImages", "goreContentSettings", eq, eX),
     eJ = (0, f.Zc)(
         "textAndImages",
         "keywordFilterSettings",

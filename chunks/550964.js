@@ -1,9 +1,9 @@
-n.d(t, { X: () => i });
+n.d(t, { X: () => a });
 var r = n(54381),
-    l = n(481060);
-function i(e) {
+    i = n(481060);
+function a(e) {
     let { children: t } = e;
-    return (0, r.jsx)(l.Kqy, {
+    return (0, r.jsx)(i.Kqy, {
         padding: {
             left: 12,
             right: 12,

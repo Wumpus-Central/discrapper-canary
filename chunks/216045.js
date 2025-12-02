@@ -1,4 +1,4 @@
-n.d(t, { Z: () => X }), n(388685);
+n.d(t, { Z: () => Q }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(512722),
@@ -120,14 +120,14 @@ function q() {
         n && (0, g.Q3)(l.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE, { forceTrack: !0 });
     }, [n]);
 }
-function Q() {
+function X() {
     let [e, t] = (0, E.US)([l.z.DISPLAY_NAME_STYLES_NEW_BADGE]),
         n = e === l.z.DISPLAY_NAME_STYLES_NEW_BADGE;
     i.useEffect(() => {
         n && t(Z.L.TAKE_ACTION);
     }, [n, t]);
 }
-function X() {
+function Q() {
     var e;
     let t = (0, s.e7)([D.default], () => {
             let e = D.default.getCurrentUser();
@@ -147,12 +147,12 @@ function X() {
         }),
         Y = (0, s.e7)([w.Z], () => w.Z.showNotice()),
         z = M.dN.useSetting() && null != l ? b.ZP.parse(void 0, l).content : l,
-        X = L.ZP.canUsePremiumProfileCustomization(t),
+        Q = L.ZP.canUsePremiumProfileCustomization(t),
         { analyticsLocations: J, newestAnalyticsLocation: $ } = (0, m.ZP)(_.Z.USER_SETTINGS_USER_PROFILE);
-    q(), Q(), i.useEffect(() => () => d.Z.wait(f.W3), []);
+    q(), X(), i.useEffect(() => () => d.Z.wait(f.W3), []);
     let [ee, et] = i.useState(!1),
         { showRedesign: en } = j.b.useExperiment({ location: "profile customization" }),
-        er = !X,
+        er = !Q,
         ei = i.useRef(null);
     return n
         ? (0, r.jsx)(p.Z, {})
@@ -167,7 +167,7 @@ function X() {
                               H(
                                   {
                                       user: t,
-                                      canUsePremiumCustomization: X,
+                                      canUsePremiumCustomization: Q,
                                       onUpsellClick: k.Z,
                                       pendingBio: z,
                                   },

@@ -46,8 +46,8 @@ var r = n(54381),
     K = n(509003),
     z = n(865066),
     q = n(894300),
-    Q = n(131704),
-    X = n(598077),
+    X = n(131704),
+    Q = n(598077),
     J = n(189786),
     $ = n(77498),
     ee = n(355863),
@@ -423,8 +423,8 @@ function eU(e) {
         W = (null == u ? void 0 : u.state) != null && eM.has(u.state) && !H,
         K = (null == u ? void 0 : u.overlayMethod) === L.gl.OutOfProcess,
         z = (null == u ? void 0 : u.overlayMethod) === L.gl.OutOfProcessLimitedInteraction,
-        Q = (null == u ? void 0 : u.overlayMethod) === L.gl.Hook,
-        X =
+        X = (null == u ? void 0 : u.overlayMethod) === L.gl.Hook,
+        Q =
             (null == u ? void 0 : u.state) === L.mM.OVERLAY_CRASHED ||
             (null == u ? void 0 : u.state) === L.mM.OVERLAY_CRASHED_DISABLED,
         J = !g && !y,
@@ -470,7 +470,7 @@ function eU(e) {
                         }),
                         null,
                     ];
-                case Y && Q:
+                case Y && X:
                     function n() {
                         var e, t;
                         switch (!0) {
@@ -507,7 +507,7 @@ function eU(e) {
                         }),
                         n(),
                     ];
-                case X:
+                case Q:
                     return [eh.intl.string(eh.t.OFC2aw), null];
                 case G:
                     return [eh.intl.string(eh.t.m7X4az), null];
@@ -520,7 +520,7 @@ function eU(e) {
                     return [eh.intl.string(eh.t.VWUn0a), null];
                 case W:
                     if (K) return [eh.intl.string(eh.t["s8+CFq"]), null];
-                    if (Q) return [eh.intl.string(eh.t.JEEdqt), null];
+                    if (X) return [eh.intl.string(eh.t.JEEdqt), null];
                     if (z) return [eh.intl.string(eh.t.pzBMwY), null];
                     return [eh.intl.string(eh.t["2Xhy9k"]), null];
                 case null == u:
@@ -547,10 +547,10 @@ function eU(e) {
                   ? ["text-feedback-warning", m.TVs.colors.TEXT_FEEDBACK_WARNING.css]
                   : Y && K
                     ? ["text-feedback-positive", m.TVs.colors.TEXT_FEEDBACK_POSITIVE.css]
-                    : Y && Q
+                    : Y && X
                       ? ["text-primary", m.TVs.colors.TEXT_PRIMARY.css]
                       : ["interactive-normal", m.TVs.colors.INTERACTIVE_NORMAL.css],
-        [W, Y, z, K, Q],
+        [W, Y, z, K, X],
     );
     return null == o
         ? null
@@ -1082,7 +1082,7 @@ function ez(e) {
             selfStream: !1,
             discoverable: r,
         }),
-        user: new X.Z({
+        user: new Q.Z({
             id: i,
             username: e,
         }),
@@ -1107,14 +1107,14 @@ function ez(e) {
     };
 }
 function eq() {
-    return (0, Q.createChannelRecord)({
+    return (0, X.createChannelRecord)({
         id: "123",
         name: "Test Channel",
         type: ef.d4z.GUILD_VOICE,
         guild_id: "456",
     });
 }
-function eQ() {
+function eX() {
     var e, t;
     let {
             avatarSizeMode: n,
@@ -1265,7 +1265,7 @@ function eQ() {
         ],
     });
 }
-function eX() {
+function eQ() {
     let [e, t] = (0, A.US)([_.z.OVERLAY_OOP_SETTINGS_NUX], void 0, !0),
         n = () => {
             t(ep.L.DISMISS);
@@ -1415,7 +1415,7 @@ function e$(e) {
                   (0, r.jsxs)(ed.Z, {
                       title: eh.intl.string(eh.t["9cb1Uz"]),
                       children: [
-                          o ? (0, r.jsx)(eX, {}) : null,
+                          o ? (0, r.jsx)(eQ, {}) : null,
                           (0, r.jsxs)("div", {
                               className: eg.overlayEnabledSettingsContainer,
                               children: [
@@ -1442,7 +1442,7 @@ function e$(e) {
                   }),
                   (0, r.jsxs)(m.gNt, {
                       label: eh.intl.string(eh.t.r1TZfh),
-                      children: [(0, r.jsx)(eQ, {}), (0, r.jsx)("div", { className: eg.settingsDivider })],
+                      children: [(0, r.jsx)(eX, {}), (0, r.jsx)("div", { className: eg.settingsDivider })],
                   }),
                   (0, r.jsx)(eW, {}),
               ],

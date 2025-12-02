@@ -128,8 +128,8 @@ function M(e) {
         K = i.useRef(null),
         z = i.useContext(E.Z),
         q = null != (t = null == P ? void 0 : P.guild_id) ? t : z,
-        { analyticsLocations: Q } = (0, _.ZP)(p.Z.USERNAME),
-        X = j ? "@" : "",
+        { analyticsLocations: X } = (0, _.ZP)(p.Z.USERNAME),
+        Q = j ? "@" : "",
         { nick: J, colorString: $, colorStrings: ee, colorRoleName: et, displayNameStyles: en } = n,
         er = (0, l.e7)([f.Z], () => f.Z.roleStyle),
         ei = "username" === er,
@@ -167,7 +167,7 @@ function M(e) {
                 return null != $ ? { color: $ } : void 0;
             }
         },
-        eE = (0, u.EJ)(X + J),
+        eE = (0, u.EJ)(Q + J),
         eb = {
             className: o()(N.username, eo, {
                 [eh]: ep,
@@ -185,7 +185,7 @@ function M(e) {
                       shouldUnderlineOnHover: null != Z,
                   })
                 : eE,
-            "data-text": X + J,
+            "data-text": Q + J,
         },
         ey = i.useMemo(
             () =>
@@ -251,7 +251,7 @@ function M(e) {
         eS = null != H ? H[0] : null,
         eI = null != H ? H[1] : null;
     return (0, r.jsxs)(_.Gt, {
-        value: Q,
+        value: X,
         children: [
             null != eS && !U && L
                 ? (0, r.jsxs)(r.Fragment, {

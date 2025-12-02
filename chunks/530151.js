@@ -17,8 +17,8 @@ var r = n(54381),
     b = n(785547),
     E = n(730749),
     O = n(112724),
-    y = n(812206),
-    v = n(600164),
+    v = n(812206),
+    y = n(600164),
     I = n(167533),
     C = n(925329),
     S = n(707409),
@@ -236,8 +236,8 @@ class Y extends i.PureComponent {
     }
     renderBody(e) {
         let { percent: t, foregroundColor: n, foregroundGradientColor: i, message: l } = e;
-        return (0, r.jsxs)(v.Z, {
-            direction: v.Z.Direction.VERTICAL,
+        return (0, r.jsxs)(y.Z, {
+            direction: y.Z.Direction.VERTICAL,
             children: [
                 (0, r.jsx)(h.Exd, {
                     percent: t,
@@ -255,8 +255,8 @@ class Y extends i.PureComponent {
     }
     renderStackedProgress(e) {
         let { percents: t, message: n } = e;
-        return (0, r.jsxs)(v.Z, {
-            direction: v.Z.Direction.VERTICAL,
+        return (0, r.jsxs)(y.Z, {
+            direction: y.Z.Direction.VERTICAL,
             children: [
                 (0, r.jsx)(h.yGy, {
                     percents: t,
@@ -450,8 +450,8 @@ let W = () =>
             key: "name",
             cellClassName: M.nameCell,
             render: (e) =>
-                (0, r.jsxs)(v.Z, {
-                    align: v.Z.Align.CENTER,
+                (0, r.jsxs)(y.Z, {
+                    align: y.Z.Align.CENTER,
                     children: [
                         (0, r.jsx)(C.Z, {
                             game: e.application,
@@ -502,8 +502,8 @@ let W = () =>
                                       : (0, r.jsx)(q, { item: e })),
                             (i = (0, r.jsx)(Q, { item: e })))
                           : (i = (0, r.jsx)(Q, { item: e })),
-                    (0, r.jsxs)(v.Z, {
-                        justify: v.Z.Justify.END,
+                    (0, r.jsxs)(y.Z, {
+                        justify: y.Z.Justify.END,
                         children: [n, i],
                     })
                 );
@@ -662,8 +662,8 @@ function $(e, t, n, r) {
     }, []);
 }
 let ee = (0, O.Z)(
-    c.ZP.connectStores([y.Z, j.Z, P.Z, T.Z, x.Z], () => ({
-        applications: [...$(P.Z.activeItems, !1, y.Z, j.Z), ...$(P.Z.finishedItems, !0, y.Z, j.Z)],
+    c.ZP.connectStores([v.Z, j.Z, P.Z, T.Z, x.Z], () => ({
+        applications: [...$(P.Z.activeItems, !1, v.Z, j.Z), ...$(P.Z.finishedItems, !0, v.Z, j.Z)],
         paused: P.Z.paused,
         isFocused: x.Z.isFocused(),
         theme: T.Z.theme,

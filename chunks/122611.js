@@ -17,8 +17,8 @@ var r = n(54381),
     b = n(374023),
     E = n(661599),
     O = n(617899),
-    y = n(8521),
-    v = n(760326),
+    v = n(8521),
+    y = n(760326),
     I = n(536687),
     C = n(652785),
     S = n(921944);
@@ -66,7 +66,7 @@ function j(e) {
                                 markAsDismissed: l,
                             });
                         case a.z.CHANNEL_NOTICE_QUICKSWITCHER:
-                            return (0, r.jsx)(v.Z, {
+                            return (0, r.jsx)(y.Z, {
                                 guild: n,
                                 markAsDismissed: l,
                             });
@@ -99,7 +99,7 @@ let P = (e) => {
         case I.R.ENABLE_PUBLIC_GUILD:
             return (0, r.jsx)(_.Z, { guild: t });
         case I.R.MAX_MEMBER_COUNT:
-            return (0, r.jsx)(y.Z, { guild: t });
+            return (0, r.jsx)(v.Z, { guild: t });
         case I.R.GUILD_LIVE_CHANNEL:
             return (0, r.jsx)(p.ZP, { guild: t });
         case I.R.GUILD_MFA_WARNING:

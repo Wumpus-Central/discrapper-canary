@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => f,
-    u: () => p,
+    u: () => m,
 });
 var r = n(54381);
 n(473749);
@@ -14,18 +14,18 @@ var i = n(120356),
     d = n(388032),
     h = n(736688),
     g = n(149715),
-    m = n(197571);
-function p(e) {
+    p = n(197571);
+function m(e) {
     let { text: t, buttonCta: i, onClick: u } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(o.Ee, { src: n(689411) }),
             (0, r.jsx)(o.Dx, {
-                className: s()(m.marginTop20, m.marginBottom8, g.flexCenter),
+                className: s()(p.marginTop20, p.marginBottom8, g.flexCenter),
                 children: d.intl.string(d.t.eL5z0i),
             }),
             (0, r.jsx)(o.DK, {
-                className: m.marginBottom40,
+                className: p.marginBottom40,
                 children: d.intl.string(d.t.poAv63),
             }),
             (0, r.jsxs)(a.Zbd, {
@@ -74,7 +74,7 @@ function f(e) {
     let { text: t, buttonCta: n, theme: i = u.BRd.DARK, onClick: s } = e;
     return (0, r.jsx)(o.ZP, {
         theme: i,
-        children: (0, r.jsx)(p, {
+        children: (0, r.jsx)(m, {
             text: t,
             buttonCta: n,
             onClick: s,

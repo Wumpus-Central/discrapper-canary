@@ -101,7 +101,7 @@ function q(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = Q(e, t);
+        i = X(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -109,7 +109,7 @@ function q(e, t) {
     }
     return i;
 }
-function Q(e, t) {
+function X(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -118,7 +118,7 @@ function Q(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function X(e, t) {
+function Q(e, t) {
     let n = V.intl.string(V.t.BYa62u),
         r = V.intl.string(V.t.CDa6Dq),
         i = (() => {
@@ -174,7 +174,7 @@ function J(e) {
             selectedPlanId: k,
             setSelectedPlanId: Y,
             planGroup: K,
-            priceOptions: Q,
+            priceOptions: X,
             planOptions: J,
             eligibleForMultiMonthPlans: $,
             referralTrialOfferId: ee,
@@ -221,7 +221,7 @@ function J(e) {
             },
             [Y, es],
         ),
-        eR = null != Q ? Q : eu;
+        eR = null != X ? X : eu;
     o()(null != eR, "Price option has to be set");
     let ew = (0, f.Z)({
             forceFetch: !1,
@@ -361,8 +361,8 @@ function J(e) {
                       }),
                   })
                 : null,
-        eQ = null != b && null != k && (0, I.R4)(b, k, K),
-        eX = ew.isFractionalPremiumActive && (null == b || eQ) && !ef && null != k && Z.dJ.has(k);
+        eX = null != b && null != k && (0, I.R4)(b, k, K),
+        eQ = ew.isFractionalPremiumActive && (null == b || eX) && !ef && null != k && Z.dJ.has(k);
     if (ef) {
         let e = () => {
                 if ((0, y.MY)(ep) === y.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null != eh)
@@ -422,17 +422,17 @@ function J(e) {
     return (0, r.jsxs)("div", {
         className: H.stepBody,
         children: [
-            eX &&
+            eQ &&
                 (0, r.jsx)(x.n, {
                     fractionalPremiumInfo: ew,
                     enablePremiumBrandRefresh: ed,
                 }),
             null != eO &&
-                !eX &&
+                !eQ &&
                 !eA &&
                 (0, r.jsx)("div", {
                     className: H.bodyText,
-                    children: X(eO, M),
+                    children: Q(eO, M),
                 }),
             eW(eS, eD, ex),
             ez(),

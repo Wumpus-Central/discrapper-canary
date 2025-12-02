@@ -1,4 +1,4 @@
-n.d(t, { default: () => f });
+n.d(e, { default: () => f });
 var i = n(54381),
     a = n(473749),
     o = n(481060),
@@ -7,23 +7,23 @@ var i = n(54381),
     r = n(626135),
     _ = n(672655),
     d = n(768015),
-    s = n(701488),
-    u = n(981631),
+    u = n(701488),
+    s = n(981631),
     b = n(531578),
     m = n(388032);
-let p = [s.K8.OTHER, s.K8.ADS, s.K8.NOT_FUN];
-function f(e) {
-    var t;
+let p = [u.K8.OTHER, u.K8.ADS, u.K8.NOT_FUN];
+function f(t) {
+    var e;
     let {
         channel: f,
         embeddedActivityLocation: v,
         activityApplication: g,
         onClose: y,
-        transitionState: h,
-        analyticsData: O,
-    } = e;
+        transitionState: O,
+        analyticsData: h,
+    } = t;
     a.useEffect(() => {
-        r.default.track(u.rMx.OPEN_MODAL, {
+        r.default.track(s.rMx.OPEN_MODAL, {
             type: "Activity Feedback Modal",
             application_id: g.id,
             application_name: g.name,
@@ -31,7 +31,7 @@ function f(e) {
             source: "Activity End",
         });
     }, [g]);
-    let j = (null == (t = g.embeddedActivityConfig) ? void 0 : t.displays_advertisements) === !0;
+    let j = (null == (e = g.embeddedActivityConfig) ? void 0 : e.displays_advertisements) === !0;
     return (0, i.jsx)(c.Z, {
         modalType: "activity",
         header: m.intl.formatToPlainString(m.t.QXYwoD, { applicationName: g.name }),
@@ -39,11 +39,11 @@ function f(e) {
         problemTitle: m.intl.string(m.t.g1q5fr),
         problems: (0, _.Z)(!0, j),
         freeformNeededProblems: p,
-        onSubmit: function (e) {
-            var t;
-            let { rating: a, problem: c, dontShowAgain: _, feedback: s } = e;
+        onSubmit: function (t) {
+            var e;
+            let { rating: a, problem: c, dontShowAgain: _, feedback: u } = t;
             _ &&
-                (r.default.track(u.rMx.ACTIVITY_REPORT_DONT_SHOW, {
+                (r.default.track(s.rMx.ACTIVITY_REPORT_DONT_SHOW, {
                     application_id: g.id,
                     rating: a,
                 }),
@@ -53,51 +53,51 @@ function f(e) {
                 })),
                 null != a &&
                     ((0, d.Z)({
-                        problem: null != (t = null == c ? void 0 : c.value) ? t : null,
+                        problem: null != (e = null == c ? void 0 : c.value) ? e : null,
                         channel: f,
                         embeddedActivityLocation: v,
-                        feedback: s,
+                        feedback: u,
                         activityApplication: g,
-                        analyticsData: O,
+                        analyticsData: h,
                         location: "Activity End",
                         rating: a,
                     }),
                     null != c &&
                         (0, o.ZDy)(async () => {
-                            let { default: e } = await n.e("14466").then(n.bind(n, 729328));
-                            return (t) =>
+                            let { default: t } = await n.e("14466").then(n.bind(n, 729328));
+                            return (e) =>
                                 (0, i.jsx)(
-                                    e,
-                                    (function (e) {
-                                        for (var t = 1; t < arguments.length; t++) {
-                                            var n = null != arguments[t] ? arguments[t] : {},
+                                    t,
+                                    (function (t) {
+                                        for (var e = 1; e < arguments.length; e++) {
+                                            var n = null != arguments[e] ? arguments[e] : {},
                                                 i = Object.keys(n);
                                             "function" == typeof Object.getOwnPropertySymbols &&
                                                 (i = i.concat(
-                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                    Object.getOwnPropertySymbols(n).filter(function (t) {
+                                                        return Object.getOwnPropertyDescriptor(n, t).enumerable;
                                                     }),
                                                 )),
-                                                i.forEach(function (t) {
+                                                i.forEach(function (e) {
                                                     var i;
-                                                    (i = n[t]),
-                                                        t in e
-                                                            ? Object.defineProperty(e, t, {
+                                                    (i = n[e]),
+                                                        e in t
+                                                            ? Object.defineProperty(t, e, {
                                                                   value: i,
                                                                   enumerable: !0,
                                                                   configurable: !0,
                                                                   writable: !0,
                                                               })
-                                                            : (e[t] = i);
+                                                            : (t[e] = i);
                                                 });
                                         }
-                                        return e;
-                                    })({ body: m.intl.string(m.t["zuHR+y"]) }, t),
+                                        return t;
+                                    })({ body: m.intl.string(m.t["zuHR+y"]) }, e),
                                 );
                         }));
         },
         onClose: y,
-        transitionState: h,
-        otherKey: s.K8.OTHER,
+        transitionState: O,
+        otherKey: u.K8.OTHER,
     });
 }

@@ -17,8 +17,8 @@ var r = n(54381),
     b = n(937111),
     E = n(381416),
     O = n(523924),
-    y = n(390500),
-    v = n(981631),
+    v = n(390500),
+    y = n(981631),
     I = n(898625),
     C = n(388032),
     S = n(555562);
@@ -70,13 +70,13 @@ let N = (e) => {
             guildPreviewDisabled: b.Z.getJoinRequestGuild(t),
         }));
     i.useEffect(() => {
-        null != j && (0, d.uL)(v.Z5c.CHANNEL(t));
+        null != j && (0, d.uL)(y.Z5c.CHANNEL(t));
     }, [j, t]),
         i.useEffect(() => {
             P || g.Z.fetchRequestToJoinGuilds();
         }, [P]);
     let A = i.useCallback(() => {
-            h(Math.max(f, I.hO.FILLING)), g.Z.removeGuildJoinRequest(t), (0, d.uL)(v.Z5c.ME);
+            h(Math.max(f, I.hO.FILLING)), g.Z.removeGuildJoinRequest(t), (0, d.uL)(y.Z5c.ME);
         }, [t, f]),
         Z = (e, t) => () => {
             (0, s.h7j)((n) => {
@@ -164,7 +164,7 @@ let N = (e) => {
                     if (null == N) return null;
                     switch (N.applicationStatus) {
                         case _.wB.SUBMITTED:
-                            return (0, r.jsx)(y.Z, {
+                            return (0, r.jsx)(v.Z, {
                                 onWithdrawApplication: () => L(!0),
                                 guild: x,
                             });

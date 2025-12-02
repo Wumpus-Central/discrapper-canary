@@ -113,7 +113,7 @@ function z(e, t) {
     return i;
 }
 let q = j.Om + U.Su.MEDIUM,
-    Q = i.memo(function (e) {
+    X = i.memo(function (e) {
         var { isActive: t, className: n, viewType: i, autoFocus: a = !1, "aria-controls": s } = e,
             l = K(e, ["isActive", "className", "viewType", "autoFocus", "aria-controls"]);
         return (0, r.jsx)(
@@ -141,7 +141,7 @@ let q = j.Om + U.Su.MEDIUM,
             ),
         );
     }),
-    X = (e) => {
+    Q = (e) => {
         let { positionContainerRef: t, drawerRef: n, orientation: r } = e,
             a = (0, d.e7)([w.ZP], () => w.ZP.expressionPickerWidth),
             [o, s] = i.useState(window.innerWidth),
@@ -221,7 +221,7 @@ function J(e) {
         ei = i.useRef(!1),
         ea = i.useRef(null),
         eo = i.useRef(null),
-        { drawerWidth: es, handleDrawerResizeHandleMouseDown: el } = X({
+        { drawerWidth: es, handleDrawerResizeHandleMouseDown: el } = Q({
             positionContainerRef: er,
             drawerRef: eo,
             orientation: "left" === $ ? g.y.HORIZONTAL_RIGHT : g.y.HORIZONTAL_LEFT,
@@ -327,7 +327,7 @@ function J(e) {
         eD = "left" === $ ? "right" : "left",
         ex = null != ee ? ee : "left" === $ ? F.positionLayerDefaultAlignLeft : F.positionLayerDefaultAlignRight,
         eL = eb
-            ? (0, r.jsx)(Q, {
+            ? (0, r.jsx)(X, {
                   id: U._3,
                   "aria-controls": U.vO,
                   "aria-selected": ec === j.X1.GIF,
@@ -337,7 +337,7 @@ function J(e) {
               })
             : null,
         ej = ey
-            ? (0, r.jsx)(Q, {
+            ? (0, r.jsx)(X, {
                   id: Z.ED,
                   "aria-controls": Z.nZ,
                   "aria-selected": ec === j.X1.STICKER,
@@ -350,7 +350,7 @@ function J(e) {
                   }),
               })
             : null,
-        eM = (0, r.jsx)(Q, {
+        eM = (0, r.jsx)(X, {
             id: U.td,
             "aria-controls": U.cZ,
             "aria-selected": ec === j.X1.EMOJI,
@@ -410,7 +410,7 @@ function J(e) {
                                                                   }),
                                                             e_ &&
                                                                 ew &&
-                                                                (0, r.jsx)(Q, {
+                                                                (0, r.jsx)(X, {
                                                                     id: U.Hr,
                                                                     "aria-controls": U.gV,
                                                                     "aria-selected": ec === j.X1.SOUNDBOARD,

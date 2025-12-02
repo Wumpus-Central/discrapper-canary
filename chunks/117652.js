@@ -110,8 +110,8 @@ function U(e) {
             { location: "CollectiblesPaymentModalGiftCustomizationStep" },
             { autoTrackExposure: !1 },
         ),
-        Q = (0, p.Z)({}),
-        X = z && M === R.Wt.DM_CHANNEL,
+        X = (0, p.Z)({}),
+        Q = z && M === R.Wt.DM_CHANNEL,
         J = q === m.u.POPULAR ? w.intl.string(w.t.Kwgrrr) : w.intl.string(w.t.r1huYR),
         $ = async (e, t) => {
             U(!0), null != E && y(), (await (0, c.B1)(e.id, t)) || y(w.intl.string(w.t["4kgVqQ"])), U(!1);
@@ -161,7 +161,7 @@ function U(e) {
                 innerClassName: D.customGiftMessage,
             }),
         er = () =>
-            X
+            Q
                 ? (0, r.jsxs)("div", {
                       className: D.bodyColumnLeft,
                       children: [
@@ -180,7 +180,7 @@ function U(e) {
                       children: (0, r.jsx)(g.q, { isShopGift: !0 }),
                   }),
         ei = () => {
-            if (X)
+            if (Q)
                 return (0, r.jsxs)("div", {
                     className: D.bodyColumnRight,
                     children: [
@@ -232,7 +232,7 @@ function U(e) {
                       children: [
                           (0, r.jsx)(f.Z, {
                               selectedSkuId: B,
-                              recipients: Q,
+                              recipients: X,
                               className: D.sendTo,
                               validateSelectedGift: $,
                           }),

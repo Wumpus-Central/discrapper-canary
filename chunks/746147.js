@@ -1,18 +1,18 @@
-o.d(t, { default: () => d });
-var n = o(54381),
-    r = o(473749),
-    c = o(481060),
-    a = o(211266),
-    i = o(332664),
-    l = o(626135),
-    _ = o(867003),
-    b = o(987562),
-    s = o(981631),
-    u = o(388032);
-function d(e) {
-    let { onClose: t, transitionState: d } = e,
-        m = (0, a.Z)(b.Me),
-        p = r.useMemo(() => m.map((e) => e.value), [m]);
+n.d(t, { default: () => m });
+var o = n(54381),
+    r = n(473749),
+    c = n(481060),
+    a = n(211266),
+    i = n(332664),
+    l = n(626135),
+    _ = n(867003),
+    b = n(987562),
+    s = n(981631),
+    u = n(388032);
+function m(e) {
+    let { onClose: t, transitionState: m } = e,
+        d = (0, a.Z)(b.Me),
+        p = r.useMemo(() => d.map((e) => e.value), [d]);
     r.useEffect(() => {
         l.default.track(s.rMx.OPEN_MODAL, { type: "Ignore User Feedback" });
     }, []);
@@ -23,31 +23,31 @@ function d(e) {
         (0, _.wT)(r, i, null != (t = null == a ? void 0 : a.value) ? t : null, l),
             l ||
                 (0, c.ZDy)(async () => {
-                    let { default: e } = await o.e("14466").then(o.bind(o, 729328));
+                    let { default: e } = await n.e("14466").then(n.bind(n, 729328));
                     return (t) =>
-                        (0, n.jsx)(
+                        (0, o.jsx)(
                             e,
                             (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
-                                    var o = null != arguments[t] ? arguments[t] : {},
-                                        n = Object.keys(o);
+                                    var n = null != arguments[t] ? arguments[t] : {},
+                                        o = Object.keys(n);
                                     "function" == typeof Object.getOwnPropertySymbols &&
-                                        (n = n.concat(
-                                            Object.getOwnPropertySymbols(o).filter(function (e) {
-                                                return Object.getOwnPropertyDescriptor(o, e).enumerable;
+                                        (o = o.concat(
+                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                             }),
                                         )),
-                                        n.forEach(function (t) {
-                                            var n;
-                                            (n = o[t]),
+                                        o.forEach(function (t) {
+                                            var o;
+                                            (o = n[t]),
                                                 t in e
                                                     ? Object.defineProperty(e, t, {
-                                                          value: n,
+                                                          value: o,
                                                           enumerable: !0,
                                                           configurable: !0,
                                                           writable: !0,
                                                       })
-                                                    : (e[t] = n);
+                                                    : (e[t] = o);
                                         });
                                 }
                                 return e;
@@ -55,16 +55,16 @@ function d(e) {
                         );
                 });
     }, []);
-    return (0, n.jsx)(i.Z, {
+    return (0, o.jsx)(i.Z, {
         modalType: "ignore_user",
         header: u.intl.string(u.t.Ib6bic),
         body: u.intl.string(u.t["uW0/nV"]),
         problemTitle: u.intl.string(u.t.avs5Vg),
-        problems: m,
+        problems: d,
         freeformNeededProblems: p,
         onSubmit: f,
         onClose: t,
-        transitionState: d,
+        transitionState: m,
         otherKey: b.XL.SOMETHING_ELSE,
         hideHelpDeskLink: !0,
         hideDontShowAgainCheckbox: !0,

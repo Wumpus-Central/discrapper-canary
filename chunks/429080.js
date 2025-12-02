@@ -20,7 +20,7 @@ let _ = function (e) {
         b = (0, s.e7)([u.default], () => u.default.getCurrentUser()),
         E = d.ZP.useName(b),
         O = (0, c.Z)(null == b ? void 0 : b.id),
-        y = i.useCallback(
+        v = i.useCallback(
             (e) => {
                 var n, i;
                 return (0, r.jsx)(
@@ -99,7 +99,7 @@ let _ = function (e) {
                     className: m.memberListContainer,
                     children: (0, r.jsx)(o.yRy, {
                         targetElementRef: _,
-                        renderPopout: y,
+                        renderPopout: v,
                         position: "bottom",
                         shouldShow: n,
                         onRequestClose: () => l(!1),

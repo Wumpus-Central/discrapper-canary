@@ -19,12 +19,12 @@ function b(e) {
     let { eventId: b } = e,
         E = (0, l.e7)([o.ZP], () => o.ZP.getGuildScheduledEvent(b), [b]),
         O = (0, l.e7)([g.Z], () => g.Z.getGuild(null == E ? void 0 : E.guild_id), [E]),
-        y = (0, l.e7)([h.Z], () => h.Z.getChannel(null == E ? void 0 : E.channel_id), [E]),
-        v = (0, u.zI)(b, null),
+        v = (0, l.e7)([h.Z], () => h.Z.getChannel(null == E ? void 0 : E.channel_id), [E]),
+        y = (0, u.zI)(b, null),
         I = null != E && (0, o.xt)(E),
         C = null != E ? (0, f.DK)(E) : null,
         S = (0, d.Z)(null == E ? void 0 : E.guild_id, null == E ? void 0 : E.id, C),
-        T = null == v ? void 0 : v.startTime.toISOString(),
+        T = null == y ? void 0 : y.startTime.toISOString(),
         { startDateTimeString: N } = i.useMemo(
             () =>
                 I
@@ -33,8 +33,8 @@ function b(e) {
             [T, I],
         ),
         j = null != E ? (0, p.cS)(E) : void 0,
-        P = null != (t = null == y ? void 0 : y.name) ? t : j,
-        x = null != y ? (0, s.KS)(y) : null;
+        P = null != (t = null == v ? void 0 : v.name) ? t : j,
+        x = null != v ? (0, s.KS)(v) : null;
     if (null == E || null == O) return null;
     let A = null != E.description && E.description.length > 0;
     return (0, r.jsxs)("div", {

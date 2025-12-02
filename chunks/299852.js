@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(35282), n(388685);
+n.d(t, { Z: () => b }), n(35282), n(388685);
 var r,
     i = n(54381),
     s = n(473749),
@@ -10,8 +10,8 @@ var r,
     d = n(388905),
     h = n(108427),
     g = n(598077),
-    m = n(896797),
-    p = n(981631),
+    p = n(896797),
+    m = n(981631),
     f = n(930441),
     _ = n(388032),
     x = n(197571);
@@ -35,7 +35,7 @@ class v extends (r = s.PureComponent) {
             t = (0, l.parse)(this.props.location.search);
         o.tn
             .post({
-                url: p.ANM.DISABLE_EMAIL_NOTIFICATIONS,
+                url: m.ANM.DISABLE_EMAIL_NOTIFICATIONS,
                 body: {
                     token: e,
                     pixel_uuid: t.hash,
@@ -92,7 +92,7 @@ class v extends (r = s.PureComponent) {
                     children: (0, i.jsx)(c.Avr, {
                         text: _.intl.string(_.t.YYTirT),
                         textVariant: "text-sm/normal",
-                        onClick: () => r(p.Z5c.SETTINGS("notifications", f.vG)),
+                        onClick: () => r(m.Z5c.SETTINGS("notifications", f.vG)),
                     }),
                 }),
             ],
@@ -167,4 +167,4 @@ class v extends (r = s.PureComponent) {
     }
 }
 E(v, "defaultProps", { transitionTo: (e) => n.g.location.assign(e) });
-let j = a.ZP.connectStores([m.Z], () => ({ defaultRoute: m.Z.defaultRoute }))(v);
+let b = a.ZP.connectStores([p.Z], () => ({ defaultRoute: p.Z.defaultRoute }))(v);

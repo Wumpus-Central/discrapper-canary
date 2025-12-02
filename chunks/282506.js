@@ -17,8 +17,8 @@ var i = n(570140),
     b = n(914010),
     E = n(979651),
     O = n(981631),
-    y = n(65154);
-function v() {
+    v = n(65154);
+function y() {
     var e;
     let t = r;
     if (null == t || !g.Z.isOpen(t)) return !1;
@@ -32,7 +32,7 @@ function I() {
         (function () {
             let e = m.Z.getChannelId(),
                 t = _.Z.getChannelId();
-            if (!h.Z.supports(y.AN.VIDEO) || u.Z.getWindowOpen(O.KJ3.CHANNEL_CALL_POPOUT)) return !0;
+            if (!h.Z.supports(v.AN.VIDEO) || u.Z.getWindowOpen(O.KJ3.CHANNEL_CALL_POPOUT)) return !0;
             let n = null != e && d.Z.getAllActiveStreams().some((t) => !o.Z.isParticipantPoppedOut(e, (0, c.V9)(t)));
             if (
                 !(
@@ -49,8 +49,8 @@ function I() {
             return !(r && f.Z.getLayers().includes(O.S9g.RTC_DEBUG)) && (!!r || e === t);
         })()
     )
-        return v();
-    if ((n || v(), null == t)) return !1;
+        return y();
+    if ((n || y(), null == t)) return !1;
     let a = p.Z.getChannel(t);
     return (
         !(null == a || g.Z.isOpen(t)) &&

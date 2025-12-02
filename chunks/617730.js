@@ -11,7 +11,7 @@ var i = n(481060),
     d = n(981631),
     h = n(388032),
     g = n(292660);
-function m(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function m(e) {
     }
     return e;
 }
-function p(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,14 +61,14 @@ function f(e) {
         x = null != t.channel ? (0, l.jD)(t.channel) : null,
         E = null != t.target_application ? new s.ZP(t.target_application) : null,
         v = f || null == t.inviter ? null : new a.Z(t.inviter),
-        j =
+        b =
             !(
                 (null != t.approximate_member_count && t.approximate_member_count > c.mx) ||
                 (null != _ && _.features.has(d.GuildFeatures.COMMUNITY))
             ) &&
             null != v &&
             (0, c.WT)(t),
-        b = ((e) => {
+        j = ((e) => {
             let { state: t } = e;
             switch (t) {
                 case d.r2o.ACCEPTING:
@@ -89,7 +89,7 @@ function f(e) {
         ? (0, r.jsx)(u.Z, {
               invite: t,
               channel: x,
-              isSubmitting: b,
+              isSubmitting: j,
               onAcceptInvite: n,
           })
         : (0, r.jsxs)("div", {
@@ -98,11 +98,11 @@ function f(e) {
                   (0, r.jsx)(c.GB, {
                       application: E,
                       guild: _,
-                      user: j || (0, c.X7)(t) ? v : null,
+                      user: b || (0, c.X7)(t) ? v : null,
                   }),
-                  (0, c.X7)(t) ? null : (0, r.jsx)(c.jq, p(m({}, I), { showBigUserIcon: j })),
-                  (0, r.jsx)(c.UM, p(m({}, I), { showBigUserIcon: j })),
-                  (0, r.jsx)(c.V6, m({}, I)),
+                  (0, c.X7)(t) ? null : (0, r.jsx)(c.jq, m(p({}, I), { showBigUserIcon: b })),
+                  (0, r.jsx)(c.UM, m(p({}, I), { showBigUserIcon: b })),
+                  (0, r.jsx)(c.V6, p({}, I)),
                   (0, r.jsx)("div", {
                       className: g.acceptButton,
                       children: (0, r.jsx)(i.Button, {
@@ -110,7 +110,7 @@ function f(e) {
                           size: "md",
                           text: h.intl.string(h.t.ohMvm1),
                           onClick: n,
-                          loading: b,
+                          loading: j,
                           fullWidth: !0,
                       }),
                   }),

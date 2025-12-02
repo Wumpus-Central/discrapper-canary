@@ -1,6 +1,6 @@
-var u = n(710985).start;
+var r = n(710985).start;
 e.exports = n(530807)("trimStart")
     ? function () {
-          return u(this);
+          return r(this);
       }
     : "".trimStart;

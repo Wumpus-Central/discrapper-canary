@@ -27,8 +27,8 @@ var r = n(54381),
     b = n(199104),
     E = n(108427),
     O = n(210887),
-    y = n(974042),
-    v = n(365113),
+    v = n(974042),
+    y = n(365113),
     I = n(849862),
     C = n(666286),
     S = n(596957),
@@ -63,7 +63,7 @@ let A = function (e) {
         }, []);
     let _ = (0, o.e7)([O.Z], () => O.Z.theme),
         A = (0, I.If)(),
-        { section: Z, rows: w } = (0, o.cj)([y.ZP], () => y.ZP.getState()),
+        { section: Z, rows: w } = (0, o.cj)([v.ZP], () => v.ZP.getState()),
         L = (0, o.e7)([g.Z], () => g.Z.getSuggestionCount()),
         R = i.useMemo(() => w.getRelationshipCounts(), [w]);
     i.useEffect(() => {
@@ -131,7 +131,7 @@ let A = function (e) {
                 className: a()(P.item, P.addFriend),
             },
         ],
-        G = v.o.useConfig({ location: "people page" }).friendsTab,
+        G = y.o.useConfig({ location: "people page" }).friendsTab,
         B = null,
         H = G
             ? null

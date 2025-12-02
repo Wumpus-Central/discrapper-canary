@@ -17,8 +17,8 @@ var r,
     b = n(819640),
     E = n(585483),
     O = n(981631),
-    y = n(388032),
-    v = n(140939),
+    v = n(388032),
+    y = n(140939),
     I = n(256076);
 function C(e, t, n) {
     return (
@@ -219,15 +219,15 @@ class k extends (r = l.PureComponent) {
                                 ? (function (e) {
                                       switch (e) {
                                           case O.S9g.USER_SETTINGS:
-                                              return y.intl.string(y.t.cduTBL);
+                                              return v.intl.string(v.t.cduTBL);
                                           case O.S9g.CHANNEL_SETTINGS:
-                                              return y.intl.string(y.t.XPDhcc);
+                                              return v.intl.string(v.t.XPDhcc);
                                           case O.S9g.COLLECTIBLES_SHOP:
-                                              return y.intl.string(y.t.pWG4ze);
+                                              return v.intl.string(v.t.pWG4ze);
                                           case O.S9g.COMPONENT_PLAYGROUND:
                                               return "Component Playground";
                                           case O.S9g.CHECKPOINT:
-                                              return y.intl.string(v.default["CdU/PF"]);
+                                              return v.intl.string(y.default["CdU/PF"]);
                                           default:
                                               return "";
                                       }

@@ -1,24 +1,24 @@
 n.d(e, { Z: () => c });
 var i = n(846027),
-    r = n(100527),
-    l = n(509613),
-    s = n(131951),
+    l = n(100527),
+    s = n(509613),
+    r = n(131951),
     u = n(36703),
     a = n(313789),
     o = n(388032);
-let c = (0, l.UO)(a.n.VOICE_OUTPUT_VOLUME_SETTING, {
+let c = (0, s.UO)(a.n.VOICE_OUTPUT_VOLUME_SETTING, {
     useTitle: () => o.intl.string(o.t.aUJ062),
     minValue: 0,
     maxValue: 200,
     getInitialValue: function () {
-        let t = s.Z.getOutputVolume();
+        let t = r.Z.getOutputVolume();
         return (0, u.P)(t);
     },
     onValueRender: function (t) {
         return "".concat(t.toFixed(0), "%");
     },
     asValueChanges: function (t) {
-        let e = [r.Z.USER_SETTINGS_VOICE_AND_VIDEO],
+        let e = [l.Z.USER_SETTINGS_VOICE_AND_VIDEO],
             n = (0, u.A)(t);
         i.Z.setOutputVolume(n, { analyticsLocations: e });
     },

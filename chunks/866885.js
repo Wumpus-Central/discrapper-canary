@@ -105,8 +105,8 @@ function V(e) {
         }),
         q = (0, A.sU)({ channelId: null == p ? void 0 : p.id }),
         {
-            activityParticipant: Q,
-            selectedParticipant: X,
+            activityParticipant: X,
+            selectedParticipant: Q,
             participantsOpen: J,
         } = (0, s.cj)([g.Z], () => ({
             activityParticipant:
@@ -124,7 +124,7 @@ function V(e) {
         })),
         $ = W || null != q,
         ee = (0, P.Z)(null == p ? void 0 : p.id),
-        et = ee && (null == X ? void 0 : X.type) !== j.fO.ACTIVITY,
+        et = ee && (null == Q ? void 0 : Q.type) !== j.fO.ACTIVITY,
         en = !ee && V === x.Ez.PIP,
         er = $ && (et || en) && null == K,
         ei = (!$ || er) && !z,
@@ -151,7 +151,7 @@ function V(e) {
     function el(e) {
         var t;
         let { onActive: n, onForceIdle: i, idle: a, isActivityInTextChannel: o, users: s } = e;
-        return ei && null != Z && ((null == Q ? void 0 : Q.type) === j.fO.ACTIVITY || o)
+        return ei && null != Z && ((null == X ? void 0 : X.type) === j.fO.ACTIVITY || o)
             ? (null == (t = Z.config) ? void 0 : t.useInteractivePIP)
                 ? (0, r.jsx)(w.of, {
                       onJumpToChannel: eo,
@@ -180,7 +180,7 @@ function V(e) {
                         users: s,
                         embeddedActivity: Z,
                     })
-                  : null == Q
+                  : null == X
                     ? null
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
@@ -199,7 +199,7 @@ function V(e) {
                                   onJumpToChannel: eo,
                                   channel: p,
                                   applicationId: Z.applicationId,
-                                  selectedParticipant: Q,
+                                  selectedParticipant: X,
                                   embeddedActivity: Z,
                               }),
                           ],
@@ -217,7 +217,7 @@ function V(e) {
                 });
             }
         }, [B, ei]),
-        null == Z || null == Y || ((0, P.Z)(null == p ? void 0 : p.id) && null == Q) || null == H)
+        null == Z || null == Y || ((0, P.Z)(null == p ? void 0 : p.id) && null == X) || null == H)
     )
         return null;
     let ec = Array.from(Z.userIds)

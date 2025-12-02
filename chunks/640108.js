@@ -390,7 +390,7 @@ class q extends o.Component {
             });
     }
 }
-let Q = (0, g.B)({
+let X = (0, g.B)({
     kind: "user",
     id: "2024-03_media_play_metrics",
     label: "Media play metrics User Experiment",
@@ -403,7 +403,7 @@ let Q = (0, g.B)({
         },
     ],
 });
-class X {
+class Q {
     moveToState(e) {
         (this.stateTime = performance.now()), (this.currentState = e);
     }
@@ -600,7 +600,7 @@ class X {
                 this.metadata.fileDurationSec = e.currentTarget.duration;
             }),
             (this.metadata = e),
-            (this.analyticsEnabled = Q.getCurrentConfig({ location: "media_player" }).enabled);
+            (this.analyticsEnabled = X.getCurrentConfig({ location: "media_player" }).enabled);
     }
 }
 class J extends (i = o.PureComponent) {
@@ -1135,7 +1135,7 @@ class J extends (i = o.PureComponent) {
                         null != (i = null == (n = a.error) ? void 0 : n.message) ? i : null),
                     this._analytics.onError(e);
             }),
-            (this._analytics = new X({
+            (this._analytics = new Q({
                 src: e.src,
                 mimeType: null == (n = e.mimeType) ? void 0 : n.join("/"),
                 fileSize: e.fileSizeBytes,

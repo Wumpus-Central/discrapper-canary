@@ -276,11 +276,11 @@ function q() {
         null != t && K(t);
     }
 }
-function Q(e) {
+function X(e) {
     let { key: t, alwaysOnTop: n } = e;
     m.isPlatformEmbedded && (h.ZP.setAlwaysOnTop(t, n), (N[t] = n), h.ZP.isAlwaysOnTop(t).then((e) => (N[t] = e)));
 }
-function X(e) {
+function Q(e) {
     let { url: t, integrity: n } = e;
     for (let e of Object.values(P)) null == e || e.closed || Z(e, t, n);
 }
@@ -338,9 +338,9 @@ class J extends (r = c.ZP.PersistedStore) {
 y(J, "displayName", "PopoutWindowStore"), y(J, "persistKey", "PopoutWindowStore");
 let $ = new J(u.Z, {
         POPOUT_WINDOW_OPEN: V,
-        POPOUT_WINDOW_ADD_STYLESHEET: X,
+        POPOUT_WINDOW_ADD_STYLESHEET: Q,
         POPOUT_WINDOW_CLOSE: z,
-        POPOUT_WINDOW_SET_ALWAYS_ON_TOP: Q,
+        POPOUT_WINDOW_SET_ALWAYS_ON_TOP: X,
         LOGOUT: q,
     }),
     ee = $;

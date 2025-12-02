@@ -195,14 +195,14 @@ function Z(e) {
         K = (0, c.e7)([b.Z], () => b.Z.isBlockedOrIgnored(null == t ? void 0 : t.id)),
         z = (null == B ? void 0 : B.state) != null,
         q = null != j,
-        Q = !q && null != l,
-        X = H.length + (q || Q ? 1 : 0),
-        J = X > 1,
+        X = !q && null != l,
+        Q = H.length + (q || X ? 1 : 0),
+        J = Q > 1,
         $ = ((null == B ? void 0 : B.state) != null || null != V) && "xs" === y,
         ee = k({
             streamActivity: Y,
             otherActivities: H,
-            voiceActivityChannel: Q ? l : null,
+            voiceActivityChannel: X ? l : null,
         });
     if (K) return null;
     let et = function () {
@@ -271,7 +271,7 @@ function Z(e) {
                 H.forEach((n, i) => {
                     e.push((0, r.jsx)(T.Z, D({ activity: n }, t), "activity-".concat(i)));
                 }),
-                Q && e.push((0, r.jsx)(A.Z, L(D({ channel: l }, t), { showChannelName: !0 }), "voice")),
+                X && e.push((0, r.jsx)(A.Z, L(D({ channel: l }, t), { showChannelName: !0 }), "voice")),
                 e
             );
         },
@@ -280,10 +280,10 @@ function Z(e) {
                 textVariant: "text-".concat(y, "/medium"),
                 className: p,
                 hasCustomStatusText: z,
-                totalActivityCount: X,
+                totalActivityCount: Q,
             }),
         ei = () =>
-            0 === X
+            0 === Q
                 ? null
                 : J && !W
                   ? x
@@ -331,7 +331,7 @@ function Z(e) {
         children: [
             ei(),
             (null != B || null != V) &&
-                X > 0 &&
+                Q > 0 &&
                 (0, r.jsx)(G, {
                     textVariant: "text-".concat(y, "/normal"),
                     className: p,

@@ -94,7 +94,7 @@ function q(e) {
         source: null != i ? i : void 0,
     });
 }
-async function Q(e) {
+async function X(e) {
     var t;
     let { applicationId: n, location: r, instanceId: i } = e,
         o = C.ZP.getEmbeddedActivityDurationMs(r.id, n),
@@ -149,7 +149,7 @@ async function Q(e) {
         }),
         delete F[n];
 }
-function X(e) {
+function Q(e) {
     var t, n;
     let {
             applicationId: r,
@@ -240,12 +240,12 @@ class $ extends c.Z {
     _initialize() {
         b.Z.addChangeListener(this.handleSelectedChannelUpdate),
             v.S.subscribe(U.CkL.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease),
-            v.S.subscribe(U.CkL.OPEN_EMBEDDED_ACTIVITY, X),
+            v.S.subscribe(U.CkL.OPEN_EMBEDDED_ACTIVITY, Q),
             o.Z.subscribe("EMBEDDED_ACTIVITY_LAUNCH_START", q),
             o.Z.subscribe("EMBEDDED_ACTIVITY_LAUNCH_SUCCESS", this.handleActivityLaunchSuccess),
             o.Z.subscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail),
             o.Z.subscribe("EMBEDDED_ACTIVITY_LAUNCH_CANCEL", this.handleActivityLaunchCancel),
-            o.Z.subscribe("EMBEDDED_ACTIVITY_CLOSE", Q),
+            o.Z.subscribe("EMBEDDED_ACTIVITY_CLOSE", X),
             o.Z.subscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen),
             o.Z.subscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect),
             o.Z.subscribe("CALL_DELETE", this.handleCallDelete),
@@ -260,12 +260,12 @@ class $ extends c.Z {
     _terminate() {
         b.Z.removeChangeListener(this.handleSelectedChannelUpdate),
             v.S.unsubscribe(U.CkL.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease),
-            v.S.unsubscribe(U.CkL.OPEN_EMBEDDED_ACTIVITY, X),
+            v.S.unsubscribe(U.CkL.OPEN_EMBEDDED_ACTIVITY, Q),
             o.Z.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_START", q),
             o.Z.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_SUCCESS", this.handleActivityLaunchSuccess),
             o.Z.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail),
             o.Z.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_CANCEL", this.handleActivityLaunchCancel),
-            o.Z.unsubscribe("EMBEDDED_ACTIVITY_CLOSE", Q),
+            o.Z.unsubscribe("EMBEDDED_ACTIVITY_CLOSE", X),
             o.Z.unsubscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen),
             o.Z.unsubscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect),
             o.Z.unsubscribe("CALL_DELETE", this.handleCallDelete),

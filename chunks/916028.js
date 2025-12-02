@@ -1,7 +1,7 @@
 n.d(t, { Z: () => a }), n(388685);
 var r = n(54381),
     s = n(481060),
-    o = n(313481);
+    o = n(968843);
 let a = function (e) {
     let { onSelect: t, quest: n } = e,
         { quests: a } = (0, o.J2)({

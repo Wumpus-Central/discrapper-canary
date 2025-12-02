@@ -45,8 +45,8 @@ var r,
     K = 24,
     z = 25,
     q = 26,
-    Q = 27,
-    X = 28,
+    X = 27,
+    Q = 28,
     J = 29,
     $ = 30,
     ee = 31,
@@ -376,7 +376,7 @@ function e_(e, t) {
                 if (t === _ || t === m) break i;
             case M:
                 if (n.last) {
-                    (eo >>>= 7 & es), (es -= 7 & es), (n.mode = Q);
+                    (eo >>>= 7 & es), (es -= 7 & es), (n.mode = X);
                     break;
                 }
                 for (; es < 3; ) {
@@ -661,7 +661,7 @@ function e_(e, t) {
                 if (0 === ea) break i;
                 (i[en++] = n.length), ea--, (n.mode = H);
                 break;
-            case Q:
+            case X:
                 if (n.wrap) {
                     for (; es < 32; ) {
                         if (0 === er) break i;
@@ -680,8 +680,8 @@ function e_(e, t) {
                     }
                     (eo = 0), (es = 0);
                 }
-                n.mode = X;
-            case X:
+                n.mode = Q;
+            case Q:
                 if (n.wrap && n.flags) {
                     for (; es < 32; ) {
                         if (0 === er) break i;
@@ -711,7 +711,7 @@ function e_(e, t) {
     (e.avail_in = er),
     (n.hold = eo),
     (n.bits = es),
-    (n.wsize || (ec !== e.avail_out && n.mode < $ && (n.mode < Q || t !== p))) &&
+    (n.wsize || (ec !== e.avail_out && n.mode < $ && (n.mode < X || t !== p))) &&
         ep(e, e.output, e.next_out, ec - e.avail_out))
         ? ((n.mode = ee), O)
         : ((el -= e.avail_in),

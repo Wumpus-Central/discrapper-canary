@@ -183,10 +183,10 @@ function q() {
         }),
     );
 }
-function Q() {
+function X() {
     z(), q();
 }
-function X() {
+function Q() {
     z();
 }
 function J(e) {
@@ -312,13 +312,13 @@ function ed() {
 function ef(e) {
     let { channel: t } = e;
     if (O.ZP.allowNoMessages(t)) return !1;
-    Q();
+    X();
 }
 function ep(e) {
     var t;
     let { userId: n } = e;
     if (n !== (null == (t = v.default.getCurrentUser()) ? void 0 : t.id)) return !1;
-    Q();
+    X();
 }
 function e_(e) {
     var t;
@@ -327,19 +327,19 @@ function e_(e) {
     if (null == a) return !1;
     if (null == r ? void 0 : r.some((e) => e.userId === a)) {
         let e = h.Z.getBasicChannel(n);
-        return !(null == e || f.Z.isMuted(n)) && (0, p.J)(e) !== P.iN.NO_MESSAGES && void Q();
+        return !(null == e || f.Z.isMuted(n)) && (0, p.J)(e) !== P.iN.NO_MESSAGES && void X();
     }
-    return null != i && !!i.includes(a) && void Q();
+    return null != i && !!i.includes(a) && void X();
 }
 function em(e) {
     let { channel: t } = e;
     if (!L.getMessages().some((e) => e.channelId === t.id)) return !1;
-    Q();
+    X();
 }
 function eh(e) {
     let { guild: t } = e;
     if (!L.getMessages().some((e) => e.guildId === t.id)) return !1;
-    Q();
+    X();
 }
 function eg(e) {
     let { navOnClick: t } = e;
@@ -398,13 +398,13 @@ let eb = new eE(s.Z, {
     MESSAGE_DELETE: en,
     RECENT_MENTION_DELETE: en,
     MESSAGE_DELETE_BULK: er,
-    CONNECTION_OPEN: Q,
-    LOGOUT: X,
-    USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: Q,
-    USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: Q,
-    GUILD_CREATE: Q,
-    USER_GUILD_SETTINGS_GUILD_UPDATE: Q,
-    USER_GUILD_SETTINGS_CHANNEL_UPDATE: Q,
+    CONNECTION_OPEN: X,
+    LOGOUT: Q,
+    USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: X,
+    USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: X,
+    GUILD_CREATE: X,
+    USER_GUILD_SETTINGS_GUILD_UPDATE: X,
+    USER_GUILD_SETTINGS_CHANNEL_UPDATE: X,
     CHANNEL_CREATE: ef,
     GUILD_DELETE: eh,
     THREAD_DELETE: em,

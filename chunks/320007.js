@@ -19,8 +19,8 @@ function b(e) {
         E = (0, f.Z)(u.Z),
         { showClipsHeaderEntrypoint: O } = d.NV.useExperiment({ location: "ClipsButton" }, { autoTrackExposure: !1 }),
         {
-            hasNewClips: y,
-            lastClipsSession: v,
+            hasNewClips: v,
+            lastClipsSession: y,
             remindersEnabled: I,
             hasAnyClipAnimations: C,
         } = (0, l.cj)([p.Z], () => ({
@@ -29,7 +29,7 @@ function b(e) {
             remindersEnabled: p.Z.getSettings().remindersEnabled,
             hasAnyClipAnimations: p.Z.hasAnyClipAnimations(),
         })),
-        S = null != v && v.newClipIds.length > 0,
+        S = null != y && y.newClipIds.length > 0,
         T = (0, h.n)((e) => e.clipsButtonRef),
         N = (0, h.n)((e) => e.setClipsButtonRef),
         j = (0, l.e7)([c.Z], () => c.Z.hasLayers()),
@@ -82,7 +82,7 @@ function b(e) {
                       !j &&
                       (0, r.jsx)(g.Z, {
                           clipIconRef: T,
-                          lastClipsSession: v,
+                          lastClipsSession: y,
                           onOpenClipsGallery: A,
                       }),
                   (0, r.jsx)("div", {
@@ -90,7 +90,7 @@ function b(e) {
                       children: (0, r.jsx)(s.JO, {
                           className: b,
                           icon: a.AlX,
-                          showBadge: y,
+                          showBadge: v,
                           tooltip: _.intl.string(_.t.MXaLEM),
                           onClick: A,
                       }),

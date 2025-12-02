@@ -148,7 +148,7 @@ function K(e) {
                 ],
             }),
             (0, r.jsx)(
-                X,
+                Q,
                 B(G({}, i), {
                     wrap: !0,
                     userRoleIds: t,
@@ -291,7 +291,7 @@ function q(e) {
             }),
     });
 }
-function Q(e) {
+function X(e) {
     let t = i.useRef(null),
         { guild: n, user: a, handleAddRole: s, roleClassName: l, addButtonClassName: c, addButtonIconClassName: d } = e,
         f = (0, u.JA)("overflow-add-roles-".concat(a.id)),
@@ -340,7 +340,7 @@ function Q(e) {
             }),
     });
 }
-function X(e) {
+function Q(e) {
     let t,
         {
             user: n,
@@ -399,7 +399,7 @@ function X(e) {
     let Z = !h && D.Z.can(j.Plq.MANAGE_ROLES, a),
         V = L.e9(a, U.id),
         K = i.useMemo(() => "roles-".concat((0, c.Z)()), []),
-        X = (0, d.ZP)({
+        Q = (0, d.ZP)({
             id: K,
             isEnabled: !0,
             scrollToStart: W,
@@ -428,9 +428,9 @@ function X(e) {
     return (
         null != T && 0 !== R
             ? (t = (0, r.jsx)(q, B(G({}, e), { numRolesHidden: R })))
-            : Z && (t = (0, r.jsx)(Q, B(G({}, e), { handleAddRole: S }))),
+            : Z && (t = (0, r.jsx)(X, B(G({}, e), { handleAddRole: S }))),
         (0, r.jsx)(u.bG, {
-            navigator: X,
+            navigator: Q,
             children: (0, r.jsx)(u.SJ, {
                 children: (e) => {
                     var { ref: n } = e,
@@ -456,13 +456,13 @@ function X(e) {
         })
     );
 }
-let J = (0, E.Z)(X);
+let J = (0, E.Z)(Q);
 function $(e) {
     return (
         (0, p.e7)([D.Z], () => {
             var t;
             return D.Z.getGuildVersion(null == (t = e.guild) ? void 0 : t.id);
         }),
-        !1 === e.wrap ? (0, r.jsx)(J, G({}, e)) : (0, r.jsx)(X, G({}, e))
+        !1 === e.wrap ? (0, r.jsx)(J, G({}, e)) : (0, r.jsx)(Q, G({}, e))
     );
 }

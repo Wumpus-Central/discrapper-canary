@@ -190,7 +190,7 @@ function q(e, t) {
             !0)
     );
 }
-function Q(e, t, n) {
+function X(e, t, n) {
     let r = f.ZP.getChannels(n)[f.sH].concat(f.ZP.getChannels(n)[f.Zb]),
         i = f.ZP.getTextChannelNameDisambiguations(n),
         a = S.Z.getCurrentConfig({ location: "guildChannelValidator" }).enabled,
@@ -215,7 +215,7 @@ function Q(e, t, n) {
         !0)
     );
 }
-function X(e, t) {
+function Q(e, t) {
     let n = Object.values(d.Z.getMutablePrivateChannels()).filter((e) => {
         if (t === (0, u.F6)(e, h.default, p.Z)) return !0;
         if (e.isDM()) {
@@ -239,8 +239,8 @@ function J(e, t) {
         ? (e.setData("channelIds", [n]), !0)
         : (n.startsWith('"') && n.endsWith('"') && (n = n.substring(1, n.length - 1).replaceAll(/\\(.)/g, (e, t) => t)),
             (0, v.b7)(t))
-          ? Q(e, n, t.guildId)
-          : t.type === C.aib.DMS && !m.Z.hidePersonalInformation && X(e, n);
+          ? X(e, n, t.guildId)
+          : t.type === C.aib.DMS && !m.Z.hidePersonalInformation && Q(e, n);
 }
 function $(e) {
     let t = {

@@ -17,8 +17,8 @@ var r = n(54381),
     b = n(944486),
     E = n(48131),
     O = n(214143),
-    y = n(610278),
-    v = n(408491),
+    v = n(610278),
+    y = n(408491),
     I = n(981631),
     C = n(918559),
     S = n(388032),
@@ -47,7 +47,7 @@ function j(e) {
         M = i.useCallback(() => {
             E.Z.updateFrameLayoutMode({
                 applicationId: t.applicationId,
-                layoutMode: v.U.PIP,
+                layoutMode: y.U.PIP,
             });
         }, [t.applicationId]),
         k = i.useCallback(() => {
@@ -71,7 +71,7 @@ function j(e) {
                     l ||
                     E.Z.updateFrameLayoutMode({
                         applicationId: t.applicationId,
-                        layoutMode: v.U.PIP,
+                        layoutMode: y.U.PIP,
                     });
             };
             return (
@@ -95,7 +95,7 @@ function j(e) {
     let V = C.MI.NO_CHAT;
     if (null == n) return null;
     let F = (null != A ? A : I.$Y6) + Z,
-        z = (0, y.ro)(t);
+        z = (0, v.ro)(t);
     return (0, r.jsx)(u.f6W, {
         theme: I.BRd.DARK,
         children: (e) =>

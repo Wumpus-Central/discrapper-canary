@@ -5,14 +5,14 @@ var r = n(54381),
     a = n(442837),
     s = n(570140),
     o = n(22095),
-    c = n(313481),
-    u = n(616022),
+    c = n(616022),
+    u = n(968843),
     d = n(606033),
     p = n(778680),
     f = n(751586),
     h = n(981631);
 function g(e) {
-    return new URLSearchParams(e).get(c.tR.QUEST_ID);
+    return new URLSearchParams(e).get(u.tR.QUEST_ID);
 }
 let m = function (e) {
     let { questId: t } = e,
@@ -28,8 +28,8 @@ let m = function (e) {
                 i.useEffect(() => {
                     if (null == n || g(a) === n) return;
                     let e = new URLSearchParams();
-                    e.set(c.tR.TAB, c.e5.PREVIEW_TOOL),
-                        e.set(c.tR.QUEST_ID, n),
+                    e.set(u.tR.TAB, u.e5.PREVIEW_TOOL),
+                        e.set(u.tR.QUEST_ID, n),
                         t.push("".concat(h.Z5c.QUEST_HOME_V2, "?").concat(e.toString()));
                 }, [n, t, a]),
                 {
@@ -38,8 +38,8 @@ let m = function (e) {
                 }
             );
         })(t),
-        _ = (0, a.e7)([u.Z], () => (null != n ? u.Z.getQuest(n) : void 0), [n]),
-        b = (0, a.e7)([u.Z], () => (null != n ? u.Z.getQuestLoadedViaPreview(n) : null), [n]);
+        _ = (0, a.e7)([c.Z], () => (null != n ? c.Z.getQuest(n) : void 0), [n]),
+        b = (0, a.e7)([c.Z], () => (null != n ? c.Z.getQuestLoadedViaPreview(n) : null), [n]);
     i.useEffect(() => {
         null != n &&
             (0, o.MG)(n).then(() => {

@@ -1,25 +1,25 @@
-n.d(t, { y: () => b }), n(361932), n(187205);
+n.d(t, { y: () => y }), n(361932), n(187205);
 var r = n(54381),
-    l = n(473749),
+    o = n(473749),
     i = n(120356),
-    o = n.n(i),
+    l = n.n(i),
     a = n(91192),
-    s = n(481060),
-    c = n(996435),
+    c = n(481060),
+    s = n(996435),
     u = n(950941),
     d = n(721611),
     f = n(873395);
-function p(e) {
+function b(e) {
     var t, n;
-    let { tag: l, onClick: i, active: a, node: c, visibleContent: d, panelKey: p, listItemProps: b, children: y } = e,
-        { icon: g, stronglyDiscouragedCustomComponent: v, trailing: m, useTitle: h } = c,
-        x = null == h ? void 0 : h();
-    return (0, r.jsxs)(l, {
-        "data-settings-sidebar-item": p,
+    let { tag: o, onClick: i, active: a, node: s, visibleContent: d, panelKey: b, listItemProps: y, children: p } = e,
+        { icon: g, stronglyDiscouragedCustomComponent: O, trailing: j, useTitle: m } = s,
+        v = null == m ? void 0 : m();
+    return (0, r.jsxs)(o, {
+        "data-settings-sidebar-item": b,
         className: f.itemContainer,
         children: [
             (0, r.jsxs)(
-                s.P3F,
+                c.P3F,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,14 +44,14 @@ function p(e) {
                             });
                     }
                     return e;
-                })({}, b)),
+                })({}, y)),
                 (n = n =
                     {
-                        className: o()(f.item, { [f.active]: a }),
+                        className: l()(f.item, { [f.active]: a }),
                         onClick: i,
                         children: [
-                            null != v
-                                ? (0, r.jsx)(v, {})
+                            null != O
+                                ? (0, r.jsx)(O, {})
                                 : (0, r.jsxs)("div", {
                                       className: f.itemContent,
                                       children: [
@@ -60,18 +60,18 @@ function p(e) {
                                               size: "refresh_sm",
                                               className: f.icon,
                                           }),
-                                          (0, r.jsx)(s.Text, {
+                                          (0, r.jsx)(c.Text, {
                                               variant: "text-md/medium",
                                               color: "currentColor",
-                                              children: x,
+                                              children: v,
                                           }),
                                       ],
                                   }),
-                            null != m &&
+                            null != j &&
                                 (0, r.jsx)("div", {
                                     className: f.itemContent,
                                     children: (0, r.jsx)(u.W, {
-                                        trailing: m,
+                                        trailing: j,
                                         visibleContent: d,
                                         isSelected: a,
                                     }),
@@ -92,54 +92,54 @@ function p(e) {
                       }),
                 t),
             ),
-            y,
+            p,
         ],
     });
 }
-function b(e) {
+function y(e) {
     let { node: t, visibleContent: n, hoisted: i = !1 } = e,
-        o = l.useMemo(() => t.layout[0], [t]),
-        s = c.Z.useField("currentPanelKey"),
-        u = null != s && s === (null == o ? void 0 : o.key),
+        l = o.useMemo(() => t.layout[0], [t]),
+        c = s.Z.useField("currentPanelKey"),
+        u = null != c && c === (null == l ? void 0 : l.key),
         f =
-            null != o
+            null != l
                 ? () =>
-                      c.Z.setState({
-                          requestedTargetKey: o.key,
+                      s.Z.setState({
+                          requestedTargetKey: l.key,
                           showNavigationMobile: !1,
                       })
                 : t.onClick,
-        b = l.useMemo(() => {
+        y = o.useMemo(() => {
             var e;
             if (!u) return null;
-            let t = (null != (e = null == o ? void 0 : o.layout.flatMap((e) => e.layout)) ? e : []).filter(
+            let t = (null != (e = null == l ? void 0 : l.layout.flatMap((e) => e.layout)) ? e : []).filter(
                 (e) => null != e.useTitle || null != e.useNavigationTitle,
             );
             return t.length > 1 ? (0, r.jsx)(d.Z, { categories: t }) : null;
-        }, [u, null == o ? void 0 : o.layout]),
-        y = i ? "li" : "div";
+        }, [u, null == l ? void 0 : l.layout]),
+        p = i ? "li" : "div";
     return i
-        ? (0, r.jsx)(p, {
-              tag: y,
-              panelKey: null == o ? void 0 : o.key,
+        ? (0, r.jsx)(b, {
+              tag: p,
+              panelKey: null == l ? void 0 : l.key,
               onClick: f,
               active: u,
               node: t,
               visibleContent: n,
-              children: b,
+              children: y,
           })
         : (0, r.jsx)(a.mh, {
               id: t.key,
               children: (e) =>
-                  (0, r.jsx)(p, {
-                      tag: y,
-                      panelKey: null == o ? void 0 : o.key,
+                  (0, r.jsx)(b, {
+                      tag: p,
+                      panelKey: null == l ? void 0 : l.key,
                       onClick: f,
                       active: u,
                       node: t,
                       visibleContent: n,
                       listItemProps: e,
-                      children: b,
+                      children: y,
                   }),
           });
 }

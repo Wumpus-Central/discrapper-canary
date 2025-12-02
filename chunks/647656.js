@@ -100,13 +100,13 @@ let b = ["1402418171662569542"],
                         }),
                         Promise.resolve(E)
                     );
-                let y = {};
+                let v = {};
                 E.name || (E.name = a.application.name);
-                let v = a.application.id;
-                E.application_id = v;
+                let y = a.application.id;
+                E.application_id = y;
                 let I = a.transport === m.He.POST_MESSAGE;
                 E.platform = I ? _.M7m.EMBEDDED : _.M7m.DESKTOP;
-                let C = c.Z.getApplication(null != v ? v : void 0),
+                let C = c.Z.getApplication(null != y ? y : void 0),
                     S = null != (r = E.instance) && r,
                     T = null == (t = E.party) ? void 0 : t.privacy;
                 delete E.instance, null == (n = E.party) || delete n.privacy;
@@ -131,8 +131,8 @@ let b = ["1402418171662569542"],
                         );
                 }
                 if (
-                    (null != Z && ((y.button_urls = Z.map((e) => e.url)), (E.buttons = Z.map((e) => e.label))),
-                    (E.metadata = y),
+                    (null != Z && ((v.button_urls = Z.map((e) => e.url)), (E.buttons = Z.map((e) => e.label))),
+                    (E.metadata = v),
                     null != A)
                 )
                     for (let e of Object.keys(A))

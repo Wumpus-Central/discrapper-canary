@@ -141,7 +141,7 @@ function q(e) {
         ],
     });
 }
-let Q = (e) => {
+let X = (e) => {
         let { closePopout: t, sticker: n, channel: a, refreshPositionKey: o } = e,
             [l, c, u] = (0, s.Wu)(
                 [C.Z],
@@ -235,7 +235,7 @@ let Q = (e) => {
             ],
         });
     },
-    X = (e) => {
+    Q = (e) => {
         let t,
             { sticker: n, channel: a, closePopout: l, refreshPositionKey: y } = e,
             [A, C] = i.useState(null),
@@ -245,8 +245,8 @@ let Q = (e) => {
             Z = (0, s.e7)([v.Z], () => v.Z.getGuild(n.guild_id)),
             B = null != Z,
             [H, W] = i.useState(!1),
-            [K, Q] = i.useState(null),
-            X = i.useMemo(
+            [K, X] = i.useState(null),
+            Q = i.useMemo(
                 () => ({
                     page: null != a.guild_id ? w.ZY5.GUILD_CHANNEL : w.ZY5.DM_CHANNEL,
                     section: w.jXE.STICKER_POPOUT,
@@ -330,7 +330,7 @@ let Q = (e) => {
                                     textOptions: { textOverride: x.intl.string(x.t["gl/XHJ"]) },
                                     onSubscribeModalClose: (t) => (t ? e() : l()),
                                     postSuccessGuild: B || null == A ? void 0 : A,
-                                    premiumModalAnalyticsLocation: X,
+                                    premiumModalAnalyticsLocation: Q,
                                 }),
                             ea &&
                                 (0, r.jsx)("div", {
@@ -414,10 +414,10 @@ let Q = (e) => {
                                                                             null != K && K !== e.id,
                                                                     }),
                                                                     onMouseEnter: () => {
-                                                                        Q(e.id);
+                                                                        X(e.id);
                                                                     },
                                                                     onMouseLeave: () => {
-                                                                        Q(null);
+                                                                        X(null);
                                                                     },
                                                                     children: (0, r.jsx)(P.Z, {
                                                                         size: F,
@@ -464,14 +464,14 @@ let $ = (e) => {
     let { renderableSticker: t, channel: n, closePopout: i, refreshPositionKey: a } = e,
         [o, s] = (0, A.XW)(t, !0);
     return null != o && (0, N.jl)(o)
-        ? (0, r.jsx)(Q, {
+        ? (0, r.jsx)(X, {
               sticker: o,
               closePopout: i,
               channel: n,
               refreshPositionKey: a,
           })
         : null != o && (0, N.J8)(o)
-          ? (0, r.jsx)(X, {
+          ? (0, r.jsx)(Q, {
                 sticker: o,
                 channel: n,
                 closePopout: i,

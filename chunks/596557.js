@@ -30,9 +30,9 @@ function g(e) {
                 p.L.DISMISS,
             );
         }, [e]),
-        y = i.useRef(!1);
+        v = i.useRef(!1);
     i.useEffect(() => {
-        if (E && !y.current) {
+        if (E && !v.current) {
             var t;
             (0, a.ZDy)(
                 async () => {
@@ -80,7 +80,7 @@ function g(e) {
                     type: l.C[l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE],
                     guild_id: null != (t = null == e ? void 0 : e.id) ? t : d.lds,
                 }),
-                (y.current = !0);
+                (v.current = !0);
         }
     }, [m, e, O, _, E]);
 }

@@ -7,14 +7,14 @@ var r = n(54381),
     i = n(473749),
     a = n(120356),
     o = n.n(a),
-    s = n(666917),
+    s = n(205120),
     l = n(481060),
     c = n(493773),
     u = n(600164),
     d = n(626135),
     f = n(617136),
-    p = n(313481),
-    _ = n(616022),
+    p = n(616022),
+    _ = n(968843),
     m = n(981631),
     h = n(388032),
     g = n(741463),
@@ -75,7 +75,7 @@ let S = 2500,
     I = 467;
 function T(e) {
     let { questId: t, survey: n, transitionState: a, onClose: o, onSubmit: f } = e,
-        _ = (0, p.B4)(t),
+        p = (0, _.B4)(t),
         [b, O] = i.useState(0),
         [T, C] = (0, l.q_F)(() => ({
             from: { width: "0%" },
@@ -84,10 +84,10 @@ function T(e) {
         P = (e) => {
             f(),
                 O(1),
-                null != _ &&
+                null != p &&
                     d.default.track(
                         m.rMx.QUEST_SURVEY_SUBMITTED,
-                        v(y({}, N(_, n)), {
+                        v(y({}, N(p, n)), {
                             choice: e.text,
                             choice_id: e.key,
                         }),
@@ -98,9 +98,9 @@ function T(e) {
         };
     return (
         (0, c.ZP)(() => {
-            null != _ && d.default.track(m.rMx.QUEST_SURVEY_DISPLAYED, N(_, n));
+            null != p && d.default.track(m.rMx.QUEST_SURVEY_DISPLAYED, N(p, n));
         }),
-        null == _ && o(),
+        null == p && o(),
         (0, r.jsx)(l.Y0X, {
             "data-migration-pending": !0,
             transitionState: a,
@@ -236,7 +236,7 @@ function C(e) {
         },
         {
             onCloseCallback: () => {
-                let n = _.Z.getQuest(e.questId);
+                let n = p.Z.getQuest(e.questId);
                 null != n && d.default.track(m.rMx.QUEST_SURVEY_DISMISSED, v(y({}, N(n, e.survey)), { submitted: t }));
             },
         },

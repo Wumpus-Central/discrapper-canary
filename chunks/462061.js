@@ -16,8 +16,8 @@ var r = n(54381),
     m = n(598006),
     _ = n(502053),
     g = n(965048),
-    b = n(266910),
-    v = n(352978),
+    v = n(266910),
+    b = n(352978),
     h = n(928518),
     E = n(518950),
     y = n(470956),
@@ -27,8 +27,8 @@ var r = n(54381),
     w = n(451478),
     I = n(5192),
     P = n(44136),
-    j = (n(351483), n(249212)),
-    x = n(853476),
+    x = (n(351483), n(249212)),
+    j = n(853476),
     Z = n(981631),
     R = n(65154),
     T = n(388032),
@@ -46,7 +46,7 @@ function M(e) {
                   children: (0, r.jsx)(s.Mgn, { color: s.TVs.colors.STATUS_WARNING_BACKGROUND }),
               }),
           })
-        : (0, r.jsx)(x.Z, { userId: n.user.id });
+        : (0, r.jsx)(j.Z, { userId: n.user.id });
 }
 function k(e) {
     let {
@@ -56,7 +56,7 @@ function k(e) {
             width: c,
             selected: s,
             popoutType: y,
-            fit: x,
+            fit: j,
             onVideoResize: M,
             blocked: k,
             ignored: L,
@@ -68,13 +68,13 @@ function k(e) {
         W = (0, o.e7)([S.default], () => S.default.getId()),
         { user: H, streamId: B, speaking: q } = t,
         Y = H.id === W,
-        K = (0, P.ZP)(t),
-        G = (0, o.e7)([w.Z], () => w.Z.isFocused()),
+        G = (0, P.ZP)(t),
+        K = (0, o.e7)([w.Z], () => w.Z.isFocused()),
         Q = (0, o.e7)([h.Z], () => h.Z.getWindowFocused(Z.KJ3.CHANNEL_CALL_POPOUT)),
         X = (0, o.e7)([C.Z], () => null != H.id && C.Z.isLocalVideoDisabled(H.id, (0, p.Z)(t.type)), [H.id, t.type]),
         J = (0, o.e7)([O.ZP], () => O.ZP.isGuestOrLurker(n.guild_id, H.id)),
         $ = I.ZP.getName(n.getGuildId(), n.id, H) + (J ? " ".concat(T.intl.string(T.t["pFO/Ph"])) : ""),
-        ee = q && (Q || G),
+        ee = q && (Q || K),
         et = c < 124 ? D : N,
         { avatarSrc: en, avatarDecorationSrc: er } = (0, E.Z)({
             userId: H.id,
@@ -96,18 +96,18 @@ function k(e) {
     }),
     i.useEffect(() => {
         let { channel: e, selectedParticipant: t, user: n } = ec.current;
-        e.isGuildStageVoice() && !K && (null == t ? void 0 : t.id) === n.id && u.Z.selectParticipant(e.id, null);
-    }, [K]),
-    l && !X && !F && K && !s && null != z && C.Z.supports(R.AN.VIDEO))
+        e.isGuildStageVoice() && !G && (null == t ? void 0 : t.id) === n.id && u.Z.selectParticipant(e.id, null);
+    }, [G]),
+    l && !X && !F && G && !s && null != z && C.Z.supports(R.AN.VIDEO))
         ? null != el && null == ea
-            ? (0, r.jsx)(j.Z, {
+            ? (0, r.jsx)(x.Z, {
                   avError: el,
                   userId: t.id,
                   width: c,
                   selected: s,
               })
             : (0, r.jsx)(
-                  v.Z,
+                  b.Z,
                   {
                       onResize: M,
                       wrapperClassName: y !== m.P.CALL_TILE ? A.videoWrapper : void 0,
@@ -115,7 +115,7 @@ function k(e) {
                       mirror: Y,
                       streamId: B,
                       videoComponent: z,
-                      fit: x,
+                      fit: j,
                       videoSpinnerContext: H.id === W ? d.m.SELF_VIDEO : d.m.REMOTE_VIDEO,
                       paused: U,
                       userId: H.id,
@@ -124,7 +124,7 @@ function k(e) {
               )
         : (0, r.jsx)("div", {
               className: a()(A.content, { [A.blockedAvatar]: k || L }),
-              children: (0, r.jsx)(b.Z, {
+              children: (0, r.jsx)(v.Z, {
                   "aria-label": $,
                   avatarDecoration: er,
                   backgroundSrc: H.getAvatarURL(n.guild_id, 80),

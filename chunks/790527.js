@@ -84,8 +84,8 @@ function D(e) {
             onSubscribeClick: K,
             onSubscribeFinish: z,
             onSecondaryClick: q,
-            secondaryCTA: Q,
-            secondaryCTAClassName: X,
+            secondaryCTA: X,
+            secondaryCTAClassName: Q,
             subscribeButtonText: J,
             showNewBadge: $ = !1,
             showBetaBadge: ee = !1,
@@ -307,15 +307,15 @@ function D(e) {
                         (0, r.jsxs)("div", {
                             className: o()(C.primaryActions, { [C.enhancedPrimaryActions]: eo }),
                             children: [
-                                null != Q
+                                null != X
                                     ? (0, r.jsx)(l.zx, {
                                           "data-migration-pending": !0,
-                                          className: o()(C.secondaryAction, X, { [C.enhancedSecondaryAction]: eo }),
+                                          className: o()(C.secondaryAction, Q, { [C.enhancedSecondaryAction]: eo }),
                                           onClick: q,
                                           size: l.zx.Sizes.SMALL,
                                           color: eo ? l.zx.Colors.CUSTOM : l.zx.Colors.PRIMARY,
                                           look: l.zx.Looks.LINK,
-                                          children: Q,
+                                          children: X,
                                       })
                                     : null,
                                 eA(),

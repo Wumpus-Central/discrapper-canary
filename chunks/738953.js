@@ -1,7 +1,7 @@
 n.d(t, { Z: () => B }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(666917),
+    a = n(205120),
     o = n(442837),
     s = n(481060),
     l = n(616780),
@@ -100,9 +100,9 @@ function B(e) {
             disableUserProfileLink: K = __OVERLAY__,
             newAnalyticsLocations: z = [],
             appContext: q,
-            disableAutoFocus: Q = !1,
+            disableAutoFocus: X = !1,
         } = e,
-        { analyticsLocations: X } = (0, u.ZP)([...z, c.Z.USER_PROFILE_POPOUT]),
+        { analyticsLocations: Q } = (0, u.ZP)([...z, c.Z.USER_PROFILE_POPOUT]),
         J = (0, E.ZB)({
             layout: "POPOUT",
             userId: n.id,
@@ -135,7 +135,7 @@ function B(e) {
                     Z(
                         U(
                             {
-                                sourceAnalyticsLocations: X,
+                                sourceAnalyticsLocations: Q,
                                 hideRestrictedProfile: !0,
                                 customStatusPrompt: eu,
                             },
@@ -158,18 +158,18 @@ function B(e) {
                                   U(
                                       {
                                           action: "PRESS_VIEW_PROFILE",
-                                          analyticsLocations: X,
+                                          analyticsLocations: Q,
                                       },
                                       J,
                                   ),
                               );
                       },
                   }),
-        ep = Q ? "div" : s.VqE,
+        ep = X ? "div" : s.VqE,
         e_ = (0, d.Dt)(),
         em = g.ZP.useName(null == $ ? void 0 : $.id, B, n);
     return (0, r.jsx)(u.Gt, {
-        value: X,
+        value: Q,
         children: (0, r.jsx)(E.Mt, {
             value: J,
             openedAt: H,
@@ -270,7 +270,7 @@ function B(e) {
                                     channelId: B,
                                     onClose: Y,
                                     appContext: q,
-                                    disableAutoFocus: Q,
+                                    disableAutoFocus: X,
                                 }),
                                 (null == en ? void 0 : en.profileEffect) != null &&
                                     (0, r.jsx)(m.Z, {

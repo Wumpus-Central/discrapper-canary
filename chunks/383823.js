@@ -1,20 +1,20 @@
 n.d(e, { Z: () => o });
 var i = n(442837),
-    r = n(223245),
-    l = n(509613),
-    s = n(246946),
+    l = n(223245),
+    s = n(509613),
+    r = n(246946),
     u = n(313789),
     a = n(388032);
-let o = (0, l.qs)(u.n.STREAMING_STREAMER_MODE, {
+let o = (0, s.qs)(u.n.STREAMING_STREAMER_MODE, {
     useTitle: () => a.intl.string(a.t.TGNg6T),
     useSubtitle: () => a.intl.string(a.t["4nXLnE"]),
     useValue: function () {
-        return (0, i.e7)([s.Z], () => {
-            let { enabled: t } = s.Z.getSettings();
+        return (0, i.e7)([r.Z], () => {
+            let { enabled: t } = r.Z.getSettings();
             return t;
         });
     },
     setValue: function (t) {
-        r.Z.update({ enabled: t });
+        l.Z.update({ enabled: t });
     },
 });

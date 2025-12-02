@@ -13,11 +13,11 @@ let h = o()().localeData().months(),
         value: e + 1,
         label: "".concat(e + 1),
     })),
-    m = Array.from(Array(12).keys()).map((e) => ({
+    p = Array.from(Array(12).keys()).map((e) => ({
         value: e + 1,
         label: h[e],
     })),
-    p = /[a-zA-Z0-9]/;
+    m = /[a-zA-Z0-9]/;
 function f(e) {
     let { options: t, selectOption: n, children: s } = e,
         [l, a] = i.useState("");
@@ -29,7 +29,7 @@ function f(e) {
     }, [l, a]);
     let o = i.useCallback(
         (e) => {
-            if (p.test(e.key)) {
+            if (m.test(e.key)) {
                 let r = "".concat(l).concat(e.key.toLowerCase()),
                     i = t.find((e) => e.label.toLowerCase().startsWith(r));
                 null != i && n(i.value), a(r);
@@ -71,19 +71,19 @@ let x = i.forwardRef(function (e, t) {
             wrapperClassName: s,
             onChange: a,
             onPopulated: h,
-            error: p,
+            error: m,
             autoFocus: x,
             required: E,
             onFocus: v,
-            onBlur: j,
-            name: b,
+            onBlur: b,
+            name: j,
         } = e,
         {
             day: I,
             setDay: y,
             month: S,
-            setMonth: N,
-            year: O,
+            setMonth: O,
+            year: N,
             setYear: C,
         } = (function (e) {
             let t = null,
@@ -104,15 +104,15 @@ let x = i.forwardRef(function (e, t) {
         })(n),
         T = i.useMemo(
             () =>
-                null != I && null != S && null != O
-                    ? o()("".concat(I, "/").concat(S, "/").concat(O), "DD/MM/YYYY")
+                null != I && null != S && null != N
+                    ? o()("".concat(I, "/").concat(S, "/").concat(N), "DD/MM/YYYY")
                     : null,
-            [I, S, O],
+            [I, S, N],
         );
     i.useEffect(() => {
         a((null == T ? void 0 : T.isValid()) ? T : null);
     }, [T, a]);
-    let A = p;
+    let A = m;
     null == T || T.isValid() || (A = u.intl.string(u.t.udnqh6));
     let Z = (function () {
             let e = new Date().getFullYear(),
@@ -138,23 +138,23 @@ let x = i.forwardRef(function (e, t) {
             onPopulated: h,
             sortedInputs: L,
         },
-        D = i.useRef(w);
+        k = i.useRef(w);
     i.useEffect(() => {
-        D.current = w;
+        k.current = w;
     }),
         i.useEffect(() => {
-            let { onPopulated: e, sortedInputs: t } = D.current;
+            let { onPopulated: e, sortedInputs: t } = k.current;
             if (P >= t.length) {
                 null == e || e();
                 return;
             }
         }, [P]);
-    let k = [];
+    let D = [];
     for (let e = 0; e < 3; e++) {
         let { type: t } = L[e];
         switch (t) {
             case "day":
-                k.push({
+                D.push({
                     key: "day",
                     input: (0, r.jsx)(f, {
                         options: g,
@@ -170,37 +170,37 @@ let x = i.forwardRef(function (e, t) {
                             },
                             maxVisibleItems: 6,
                             autoFocus: P === e,
-                            onOpen: () => (null == v ? void 0 : v("".concat(b, "_").concat(t))),
-                            onClose: () => (null == j ? void 0 : j("".concat(b, "_").concat(t))),
+                            onOpen: () => (null == v ? void 0 : v("".concat(j, "_").concat(t))),
+                            onClose: () => (null == b ? void 0 : b("".concat(j, "_").concat(t))),
                         }),
                     }),
                 });
                 break;
             case "month":
-                k.push({
+                D.push({
                     key: "month",
                     input: (0, r.jsx)(f, {
-                        options: m,
-                        selectOption: N,
+                        options: p,
+                        selectOption: O,
                         children: (0, r.jsx)(c.q4e, {
                             "aria-label": u.intl.string(u.t.UDlN8W),
                             popoutPosition: "top",
                             placeholder: u.intl.string(u.t.UDlN8W),
-                            options: m,
+                            options: p,
                             value: S,
                             onChange: (t) => {
-                                N(t), R(e + 1);
+                                O(t), R(e + 1);
                             },
                             maxVisibleItems: 6,
                             autoFocus: P === e,
-                            onOpen: () => (null == v ? void 0 : v("".concat(b, "_").concat(t))),
-                            onClose: () => (null == j ? void 0 : j("".concat(b, "_").concat(t))),
+                            onOpen: () => (null == v ? void 0 : v("".concat(j, "_").concat(t))),
+                            onClose: () => (null == b ? void 0 : b("".concat(j, "_").concat(t))),
                         }),
                     }),
                 });
                 break;
             case "year":
-                k.push({
+                D.push({
                     key: "year",
                     input: (0, r.jsx)(f, {
                         options: Z,
@@ -210,14 +210,14 @@ let x = i.forwardRef(function (e, t) {
                             popoutPosition: "top",
                             placeholder: u.intl.string(u.t.ZWr5WA),
                             options: Z,
-                            value: O,
+                            value: N,
                             onChange: (t) => {
                                 C(t), R(e + 1);
                             },
                             maxVisibleItems: 6,
                             autoFocus: P === e,
-                            onOpen: () => (null == v ? void 0 : v("".concat(b, "_").concat(t))),
-                            onClose: () => (null == j ? void 0 : j("".concat(b, "_").concat(t))),
+                            onOpen: () => (null == v ? void 0 : v("".concat(j, "_").concat(t))),
+                            onClose: () => (null == b ? void 0 : b("".concat(j, "_").concat(t))),
                         }),
                     }),
                 });
@@ -231,7 +231,7 @@ let x = i.forwardRef(function (e, t) {
             errorMessage: null != A ? A : void 0,
             children: (0, r.jsx)("div", {
                 className: d.inputs,
-                children: k.map((e, t) => {
+                children: D.map((e, t) => {
                     let { key: n, input: i } = e;
                     return (0, r.jsx)(
                         "div",

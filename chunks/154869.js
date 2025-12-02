@@ -1,8 +1,8 @@
-n.d(e, { Z: () => _ });
+n.d(e, { Z: () => O });
 var i = n(54381),
-    r = n(473749),
-    l = n(512722),
-    s = n.n(l),
+    l = n(473749),
+    s = n(512722),
+    r = n.n(s),
     u = n(442837),
     a = n(481060),
     o = n(660216),
@@ -10,18 +10,18 @@ var i = n(54381),
     d = n(924557),
     E = n(509613),
     S = n(556296),
-    T = n(313789),
-    I = n(981631),
+    I = n(313789),
+    T = n(981631),
     g = n(388032),
-    O = n(360919);
-let _ = (0, E.ON)(T.n.CLIPS_SCREENSHOT_KEYBIND, {
+    _ = n(360919);
+let O = (0, E.ON)(I.n.CLIPS_SCREENSHOT_KEYBIND, {
     useSearchTerms: () => [g.intl.string(g.t["0U/hj7"]), g.intl.string(g.t["5zxkdo"])],
     usePredicate: d.PP,
     render: () => {
-        let t = (0, u.e7)([S.ZP], () => S.ZP.getKeybindForAction(I.kg4.SAVE_CLIP, !0)),
-            e = (0, u.e7)([S.ZP], () => S.ZP.getKeybindForAction(I.kg4.SAVE_SCREENSHOT, !0));
-        s()(null != t, "Save clip keybind unset"), s()(null != e, "Save screenshot keybind unset");
-        let n = r.useCallback(
+        let t = (0, u.e7)([S.ZP], () => S.ZP.getKeybindForAction(T.kg4.SAVE_CLIP, !0)),
+            e = (0, u.e7)([S.ZP], () => S.ZP.getKeybindForAction(T.kg4.SAVE_SCREENSHOT, !0));
+        r()(null != t, "Save clip keybind unset"), r()(null != e, "Save screenshot keybind unset");
+        let n = l.useCallback(
             (t) => {
                 var n, i;
                 o.Z.setKeybind(
@@ -73,7 +73,7 @@ let _ = (0, E.ON)(T.n.CLIPS_SCREENSHOT_KEYBIND, {
             description: g.intl.string(g.t["5zxkdo"]),
             layout: "horizontal",
             children: (0, i.jsx)("div", {
-                className: O.keyRecorder,
+                className: _.keyRecorder,
                 children: (0, i.jsx)(c.Z, {
                     defaultValue: e.shortcut,
                     onChange: n,

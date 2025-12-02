@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(129293),
     h = n(388905),
     g = n(703656),
-    m = n(108427),
-    p = n(981631),
+    p = n(108427),
+    m = n(981631),
     f = n(388032),
     _ = n(197571);
 function x(e) {
@@ -23,11 +23,11 @@ function x(e) {
             : (0, r.jsx)(o.Button, {
                   text: f.intl.string(f.t.dKhVQN),
                   fullWidth: !0,
-                  onClick: () => s(p.Z5c.LOGIN, { source: "authorizeIPAdress" }),
+                  onClick: () => s(m.Z5c.LOGIN, { source: "authorizeIPAdress" }),
               });
     }
     return ((0, u.ZP)(() => {
-        (0, m.e)("authorize_ip");
+        (0, p.e)("authorize_ip");
         let e = (0, d.Z)(t);
         if (null == e) return void x("failed");
         (async () => {

@@ -27,8 +27,8 @@ let f = (e) => {
     i.useEffect(() => {
         null == b && null != _ && o.Z.fetchJoinRequestCooldown(_.id);
     }, [b, _]);
-    let y = (null != b ? b : 0) > 0,
-        v = y && null != b ? Math.ceil((1000 * b - Date.now()) / 86400000) : 0;
+    let v = (null != b ? b : 0) > 0,
+        y = v && null != b ? Math.ceil((1000 * b - Date.now()) / 86400000) : 0;
     return (0, r.jsxs)("div", {
         className: p.confirmation,
         children: [
@@ -72,14 +72,14 @@ let f = (e) => {
                     E || O
                         ? (0, r.jsx)(a.u, {
                               asContainer: !0,
-                              text: y ? d.intl.formatToPlainString(d.t.A0f0P7, { days: v }) : null,
-                              "aria-label": y ? d.intl.formatToPlainString(d.t.A0f0P7, { days: v }) : void 0,
+                              text: v ? d.intl.formatToPlainString(d.t.A0f0P7, { days: y }) : null,
+                              "aria-label": v ? d.intl.formatToPlainString(d.t.A0f0P7, { days: y }) : void 0,
                               children: (0, r.jsx)(s.Button, {
                                   onClick: f,
                                   variant: "secondary",
                                   size: "md",
                                   loading: null == b || O,
-                                  disabled: y || O,
+                                  disabled: v || O,
                                   text: n,
                                   fullWidth: !0,
                               }),

@@ -24,8 +24,8 @@ var r = n(54381),
     b = n(314897),
     E = n(271383),
     O = n(485386),
-    y = n(626135),
-    v = n(63063),
+    v = n(626135),
+    y = n(63063),
     I = n(225104),
     C = n(981631),
     S = n(388032),
@@ -82,7 +82,7 @@ let x = function (e) {
     if (
         (i.useEffect(() => {
             0 !== L.length &&
-                y.default.track(
+                v.default.track(
                     C.rMx.PASSPORT_ENTRY_VIEWED,
                     j(
                         {
@@ -106,7 +106,7 @@ let x = function (e) {
         transitionState: l,
         title: S.intl.string(S.t.ghtnss),
         onClose: x,
-        subtitle: S.intl.format(S.t["Y+TsEV"], { helpdeskArticleUrl: v.Z.getArticleURL(C.BhN.CONNECTION_DETAILS) }),
+        subtitle: S.intl.format(S.t["Y+TsEV"], { helpdeskArticleUrl: y.Z.getArticleURL(C.BhN.CONNECTION_DETAILS) }),
         actions: [],
         children: (0, r.jsx)(u.Kqy, {
             children: M.map((e) => {

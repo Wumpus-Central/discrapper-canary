@@ -551,8 +551,8 @@ let Y = (e) => {
         "sdk_dom_nodes_count",
         "sdk_page_html_characters",
     ],
-    Q,
-    X = {};
+    X,
+    Q = {};
 class J {
     constructor(e) {
         l(this, "_values", []), l(this, "_isWebMetric"), (this.name = e), (this._isWebMetric = q.includes(this.name));
@@ -568,14 +568,14 @@ class J {
         )
             return;
         let t = this.findExceededThreshold(e);
-        t && Q && Q(e, t);
+        t && X && X(e, t);
     }
     collect() {
         let e = this._values;
         return (this._values = []), e;
     }
     findExceededThreshold(e) {
-        let t = X[this.name];
+        let t = Q[this.name];
         if (t) return t.find((t) => this.valueExceedsThreshold(e, t));
     }
     valueExceedsThreshold(e, t) {
@@ -583,14 +583,14 @@ class J {
     }
 }
 let $ = (e, t) => {
-        (X = {}),
+        (Q = {}),
             (K = !1),
             null == e ||
                 e.forEach((e) => {
                     var t;
-                    e.metric in X || (X[e.metric] = []), null == (t = X[e.metric]) || t.push(e);
+                    e.metric in Q || (Q[e.metric] = []), null == (t = Q[e.metric]) || t.push(e);
                 }),
-            (Q = t);
+            (X = t);
     },
     ee = {},
     et = (e) => {

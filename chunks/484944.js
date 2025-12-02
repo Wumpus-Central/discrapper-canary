@@ -1,17 +1,17 @@
 n.d(t, { q: () => c });
 var r = n(24156),
-    l = n(473749),
-    i = n(752689),
+    i = n(473749),
+    a = n(752689),
     o = n(447770),
-    a = n(159447),
-    s = n(112683);
+    s = n(159447),
+    l = n(112683);
 function c(e, t, n) {
     let { isDisabled: c } = e,
-        u = (0, i.Me)(),
-        d = (0, i.Me)(),
-        f = (0, s.Av)(),
-        p = (0, l.useRef)(null),
-        b = (0, l.useCallback)(() => {
+        u = (0, a.Me)(),
+        d = (0, a.Me)(),
+        f = (0, l.Av)(),
+        p = (0, i.useRef)(null),
+        _ = (0, i.useCallback)(() => {
             (p.current = requestAnimationFrame(() => {
                 n.current && n.current.setAttribute("hidden", "until-found");
             })),
@@ -19,13 +19,13 @@ function c(e, t, n) {
                     t.toggle();
                 });
         }, [n, t]);
-    (0, o.z)(n, "beforematch", b);
-    let y = (0, l.useRef)(null);
+    (0, o.z)(n, "beforematch", _);
+    let m = (0, i.useRef)(null);
     return (
-        (0, a.b)(() => {
+        (0, s.b)(() => {
             if ((p.current && cancelAnimationFrame(p.current), n.current && !c && !f)) {
                 let e = n.current;
-                null == y.current || "function" != typeof e.getAnimations
+                null == m.current || "function" != typeof e.getAnimations
                     ? t.isExpanded
                         ? (e.removeAttribute("hidden"),
                           e.style.setProperty("--disclosure-panel-width", "auto"),
@@ -33,7 +33,7 @@ function c(e, t, n) {
                         : (e.setAttribute("hidden", "until-found"),
                           e.style.setProperty("--disclosure-panel-width", "0px"),
                           e.style.setProperty("--disclosure-panel-height", "0px"))
-                    : t.isExpanded !== y.current &&
+                    : t.isExpanded !== m.current &&
                       (t.isExpanded
                           ? (e.removeAttribute("hidden"),
                             e.style.setProperty("--disclosure-panel-width", e.scrollWidth + "px"),
@@ -52,10 +52,10 @@ function c(e, t, n) {
                             Promise.all(e.getAnimations().map((e) => e.finished))
                                 .then(() => e.setAttribute("hidden", "until-found"))
                                 .catch(() => {}))),
-                    (y.current = t.isExpanded);
+                    (m.current = t.isExpanded);
             }
         }, [c, n, t.isExpanded, f]),
-        (0, l.useEffect)(
+        (0, i.useEffect)(
             () => () => {
                 p.current && cancelAnimationFrame(p.current);
             },

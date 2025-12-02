@@ -122,9 +122,9 @@ function P(e) {
             skipConfirm: z,
         } = null != e ? e : {},
         q = !1,
-        Q = null != (t = (0, b.b)()) ? t : (0, o.Z)(),
-        X = m.default.getCurrentUser(),
-        J = (0, E.M5)(X, v.PremiumTypes.TIER_2),
+        X = null != (t = (0, b.b)()) ? t : (0, o.Z)(),
+        Q = m.default.getCurrentUser(),
+        J = (0, E.M5)(Q, v.PremiumTypes.TIER_2),
         $ = a()("payment-modal"),
         ee = (0, E.Wz)(G),
         et = !1;
@@ -137,7 +137,7 @@ function P(e) {
                 return (0, r.jsx)(
                     e,
                     A(I({}, a), {
-                        loadId: Q,
+                        loadId: X,
                         subscriptionTier: G,
                         skuId: ee,
                         isGift: j,
@@ -207,7 +207,7 @@ function P(e) {
             onCloseCallback: () => {
                 q ||
                     h.default.track(O.rMx.PAYMENT_FLOW_CANCELED, {
-                        load_id: Q,
+                        load_id: X,
                         payment_type: O.Zuq[O.GZQ.SUBSCRIPTION],
                         location: null != D ? D : w,
                         source: x,

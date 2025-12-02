@@ -196,22 +196,22 @@ function D(e) {
             successMessage: z,
             layout: q = "vertical",
         } = e,
-        [Q, X] = i.useState(!1),
+        [X, Q] = i.useState(!1),
         { ref: J, width: $, height: ee } = (0, _.ZP)();
     i.useLayoutEffect(() => {
-        s && X(!1);
+        s && Q(!1);
     }, [s]);
     let et = i.useCallback(
             (e) => {
-                Q === e || s || (X(e), e ? null == T || T() : null == I || I());
+                X === e || s || (Q(e), e ? null == T || T() : null == I || I());
             },
-            [s, I, T, Q],
+            [s, I, T, X],
         ),
         en = i.useCallback(
             (e) => {
-                Q && !e && et(!1);
+                X && !e && et(!1);
             },
-            [et, Q],
+            [et, X],
         ),
         er = (0, c.O)(en),
         ei = i.useCallback(
@@ -241,7 +241,7 @@ function D(e) {
             targetElementRef: J,
             spacing: 0,
             animation: d.y.Animation.NONE,
-            shouldShow: Q,
+            shouldShow: X,
             onRequestOpen: () => {
                 et(!0);
             },
@@ -304,7 +304,7 @@ function D(e) {
                                         onClick: s
                                             ? void 0
                                             : (e) => {
-                                                  i(e), et(!Q);
+                                                  i(e), et(!X);
                                               },
                                         onKeyDown: (e) => {
                                             "ArrowDown" === e.key

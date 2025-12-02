@@ -1,19 +1,19 @@
 n.d(e, { w: () => d });
 var i = n(657707),
-    r = n(509613),
-    l = n(313789),
-    s = n(64914),
+    l = n(509613),
+    s = n(313789),
+    r = n(64914),
     u = n(726985),
     a = n(388032);
-let o = (0, r.x1)(l.n.ADVANCED_PANE, {
+let o = (0, l.x1)(s.n.ADVANCED_PANE, {
         buildLayout: () => [],
-        render: s.ZP,
+        render: r.ZP,
     }),
-    c = (0, r.wf)(l.n.ADVANCED_PANEL, {
+    c = (0, l.wf)(s.n.ADVANCED_PANEL, {
         useTitle: () => a.intl.string(a.t["8/udY0"]),
         buildLayout: () => [o],
     }),
-    d = (0, r.m7)(l.n.ADVANCED_SIDEBAR_ITEM, {
+    d = (0, l.m7)(s.n.ADVANCED_SIDEBAR_ITEM, {
         icon: i.xhG,
         useTitle: () => a.intl.string(a.t["8/udY0"]),
         getLegacySearchKey: () => u.s6.SETTINGS_ADVANCED,

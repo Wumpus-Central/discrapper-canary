@@ -65,7 +65,7 @@ function M(e) {
         K = V && S,
         z = (0, D.G)(n),
         q = (0, D.z)(n),
-        Q = i.useMemo(() => {
+        X = i.useMemo(() => {
             let e = [];
             return (
                 S
@@ -110,7 +110,7 @@ function M(e) {
                 e
             );
         }, [K, W, B, F, Z, n.id, H, o, M, G, S, q, v]),
-        X = S ? (0, r.jsx)(U, { app: n }) : (0, r.jsx)(k, { app: n });
+        Q = S ? (0, r.jsx)(U, { app: n }) : (0, r.jsx)(k, { app: n });
     return (0, r.jsx)(C.W, {
         title: E,
         staticBannerSrc: N,
@@ -118,8 +118,8 @@ function M(e) {
         onClickBanner: z,
         bannerAspectRatio: j,
         iconSrc: T,
-        info: X,
-        actions: Q,
+        info: Q,
+        actions: X,
         onClickContent: z,
         trackingConfig: {
             id: n.id,

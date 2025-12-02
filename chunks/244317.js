@@ -17,10 +17,10 @@ function m(e) {
         [m, _] = i.useState(!1),
         b = i.useRef(!1),
         [E, O] = i.useState(null),
-        y = !u.isPlatformEmbedded && !a.tq && !m,
-        v = i.useMemo(() => (0, l.Z)(), []);
+        v = !u.isPlatformEmbedded && !a.tq && !m,
+        y = i.useMemo(() => (0, l.Z)(), []);
     return (i.useEffect(() => {
-        y &&
+        v &&
             !0 !== b.current &&
             (Promise.resolve()
                 .then(n.bind(n, 536285))
@@ -31,7 +31,7 @@ function m(e) {
                         params: {
                             applicationId: t,
                             url: location.href,
-                            attemptId: v,
+                            attemptId: y,
                         },
                     })
                         .then((e) => {
@@ -40,7 +40,7 @@ function m(e) {
                                 c.default.track(p.rMx.ACTIVITY_DEEP_LINK_ATTEMPTED, {
                                     application_id: t,
                                     source_url: location.href,
-                                    attempt_id: v,
+                                    attempt_id: y,
                                     rpc_success: n,
                                 });
                         })
@@ -49,15 +49,15 @@ function m(e) {
                                 c.default.track(p.rMx.ACTIVITY_DEEP_LINK_ATTEMPTED, {
                                     application_id: t,
                                     source_url: location.href,
-                                    attempt_id: v,
+                                    attempt_id: y,
                                     rpc_success: !1,
                                 });
                         })
                         .then(() => n.disconnect());
                 }),
             (b.current = !0));
-    }, [t, y, v]),
-    y && !1 !== E)
+    }, [t, v, y]),
+    v && !1 !== E)
         ? !0 === E
             ? (0, r.jsxs)("div", {
                   className: g.container,

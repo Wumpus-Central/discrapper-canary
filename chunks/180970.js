@@ -1,10 +1,10 @@
 o.d(t, { default: () => m });
 var n = o(54381),
-    c = o(473749),
-    r = o(481060),
+    r = o(473749),
+    c = o(481060),
     a = o(211266),
-    _ = o(332664),
-    i = o(626135),
+    i = o(332664),
+    _ = o(626135),
     l = o(867003),
     b = o(987562),
     s = o(981631),
@@ -13,16 +13,16 @@ let d = [b.F5.SOMETHING_ELSE];
 function m(e) {
     let { onClose: t, transitionState: m } = e,
         p = (0, a.Z)(b.CE);
-    c.useEffect(() => {
-        i.default.track(s.rMx.OPEN_MODAL, { type: "Block User Feedback" });
+    r.useEffect(() => {
+        _.default.track(s.rMx.OPEN_MODAL, { type: "Block User Feedback" });
     }, []);
-    let f = c.useCallback((e) => {
+    let f = r.useCallback((e) => {
         var t;
-        let { rating: c, problem: a, feedback: _ } = e,
-            i = null == c;
-        (0, l.tp)(c, _, null != (t = null == a ? void 0 : a.value) ? t : null, i),
-            i ||
-                (0, r.ZDy)(async () => {
+        let { rating: r, problem: a, feedback: i } = e,
+            _ = null == r;
+        (0, l.tp)(r, i, null != (t = null == a ? void 0 : a.value) ? t : null, _),
+            _ ||
+                (0, c.ZDy)(async () => {
                     let { default: e } = await o.e("14466").then(o.bind(o, 729328));
                     return (t) =>
                         (0, n.jsx)(
@@ -55,7 +55,7 @@ function m(e) {
                         );
                 });
     }, []);
-    return (0, n.jsx)(_.Z, {
+    return (0, n.jsx)(i.Z, {
         modalType: "block_user",
         header: u.intl.string(u.t["+2qQAX"]),
         body: u.intl.string(u.t["+0RsvT"]),

@@ -53,16 +53,16 @@ function B(e) {
         ),
         z = (0, o.e7)([S.Z], () => S.Z.findActivity(t.id, (e) => (0, f.Z)(e) && !(0, p.Z)(e))),
         { analyticsLocations: q } = (0, h.ZP)(m.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        Q = (0, T.Z)({
+        X = (0, T.Z)({
             display: "live",
             voiceChannelId: null == W ? void 0 : W.id,
             user: t,
             stream: i,
             analyticsLocations: q,
         }),
-        X = (0, A.Z)({
+        Q = (0, A.Z)({
             userId: t.id,
-            onAction: Q,
+            onAction: X,
         }),
         { previewUrl: J, isLoading: $ } = (0, E.Z)(
             null == i ? void 0 : i.guildId,
@@ -79,7 +79,7 @@ function B(e) {
             let e = (e) => {
                 e.stopPropagation(),
                     ee &&
-                        (Q({ action: "PRESS_IMAGE" }),
+                        (X({ action: "PRESS_IMAGE" }),
                         c.default.selectVoiceChannel(i.channelId),
                         (0, u.iV)(i),
                         null == F || F());
@@ -158,7 +158,7 @@ function B(e) {
                           (0, r.jsx)(R.Z, {
                               channel: W,
                               guild: Y,
-                              onAction: Q,
+                              onAction: X,
                               onClose: F,
                           }),
                           (0, r.jsx)(s.Z, {
@@ -169,7 +169,7 @@ function B(e) {
                               size: l.EFr.SIZE_16,
                               onClickOverflow: (e) => {
                                   null == e || e.stopPropagation(),
-                                      null == Q || Q({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
+                                      null == X || X({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
                               },
                               onUserClick: (e) => e.stopPropagation(),
                               disableUserPopout: (e) => e === t.id,
@@ -186,7 +186,7 @@ function B(e) {
                       user: t,
                       guild: Y,
                       channel: W,
-                      onAction: Q,
+                      onAction: X,
                       onClose: F,
                   }),
         ec = () =>
@@ -196,7 +196,7 @@ function B(e) {
                       className: k.actions,
                       children: (0, r.jsx)(D.Z, {
                           channel: W,
-                          onAction: Q,
+                          onAction: X,
                           onClose: F,
                       }),
                   }),
@@ -204,9 +204,9 @@ function B(e) {
     return (0, r.jsx)(h.Gt, {
         value: q,
         children: (0, r.jsxs)(N.Z, {
-            ref: X,
+            ref: Q,
             className: B,
-            onAction: Q,
+            onAction: X,
             onClose: F,
             "aria-label": eu,
             children: [

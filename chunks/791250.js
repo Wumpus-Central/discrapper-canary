@@ -22,8 +22,8 @@ var r = n(54381),
     b = n(681715),
     E = n(481060),
     O = n(493683),
-    y = n(529103),
-    v = n(515753),
+    v = n(529103),
+    y = n(515753),
     I = n(831218),
     C = n(339149),
     S = n(607070),
@@ -142,7 +142,7 @@ let eb = (e) => {
             ? (0, r.jsx)("div", {
                   className: eh.friendsButtonContainer,
                   children: (0, r.jsx)(
-                      v.Qj,
+                      y.Qj,
                       eg(
                           {
                               selected: t,
@@ -190,7 +190,7 @@ let eb = (e) => {
                           gift_intent_type: ed.hX.FRIEND_ANNIVERSARY,
                       }),
                       (e = eo.pJs.ALL),
-                      y.Z.setSection(eo.pJs.ALL),
+                      v.Z.setSection(eo.pJs.ALL),
                       m(eu.L.TAKE_ACTION))
                     : (e = el.ZP.getState().section),
                     (0, T.Z)({ tab_opened: e });
@@ -204,7 +204,7 @@ let eb = (e) => {
             },
             A = () =>
                 (0, r.jsx)(
-                    v.Qj,
+                    y.Qj,
                     em(
                         eg(
                             {
@@ -271,7 +271,7 @@ let eb = (e) => {
         return (0, r.jsx)("div", {
             className: eh.friendsButtonContainer,
             children: (0, r.jsx)(
-                v.Qj,
+                y.Qj,
                 eg(
                     {
                         selected: t,
@@ -285,12 +285,12 @@ let eb = (e) => {
             ),
         });
     },
-    ey = (e) => {
+    ev = (e) => {
         var { selected: t, hideGameUpdateProgressIndicator: n } = e,
             i = e_(e, ["selected", "hideGameUpdateProgressIndicator"]);
         let l = (0, u.JA)("library");
         return (0, r.jsx)(
-            v.Qj,
+            y.Qj,
             em(
                 eg(
                     {
@@ -310,7 +310,7 @@ let eb = (e) => {
             ),
         );
     },
-    ev = () => {
+    ey = () => {
         let e = (0, R.q)();
         return e > 0 ? (0, r.jsx)(E.mAB, { count: e }) : null;
     },
@@ -321,7 +321,7 @@ let eb = (e) => {
         if (!(0, D.a)()) return null;
         let l = null == i ? void 0 : () => O.Z.preload(eo.ME, i);
         return (0, r.jsx)(
-            v.Qj,
+            y.Qj,
             em(
                 eg(
                     {
@@ -333,7 +333,7 @@ let eb = (e) => {
                     },
                     n,
                 ),
-                { children: (0, r.jsx)(ev, {}) },
+                { children: (0, r.jsx)(ey, {}) },
             ),
         );
     },
@@ -343,7 +343,7 @@ let eb = (e) => {
             l = (0, u.JA)("family-center"),
             [a, s] = i.useState(!0);
         return (0, r.jsx)(
-            v.Qj,
+            y.Qj,
             em(
                 eg(
                     {
@@ -371,7 +371,7 @@ let eb = (e) => {
         return t
             ? (0, r.jsx)("div", {
                   className: eh.familyCenterButtonContainer,
-                  children: (0, r.jsx)(v.bU, {
+                  children: (0, r.jsx)(y.bU, {
                       onClick: () => {
                           (0, m.ZD)(async () => {
                               let { default: e } = await n.e("44153").then(n.bind(n, 760949));
@@ -455,8 +455,8 @@ let eP = i.memo(function (e) {
             hideAllDMs: b,
         } = e,
         O = i.useRef(null),
-        y = i.useRef(null),
         v = i.useRef(null),
+        y = i.useRef(null),
         C = i.useRef(null),
         S = U.o.useConfig({ location: "privatechannels" }).friendsTab,
         T = (0, w.b5)("PrivateChannels"),
@@ -495,7 +495,7 @@ let eP = i.memo(function (e) {
                         selectedChannelId: h,
                         showDMHeader: !b && !m,
                         hideAllDMs: b,
-                        listScrollerRef: v,
+                        listScrollerRef: y,
                         children: [
                             S && !m
                                 ? (0, r.jsx)(
@@ -520,7 +520,7 @@ let eP = i.memo(function (e) {
                                 : null,
                             n && t && !m
                                 ? (0, r.jsx)(
-                                      ey,
+                                      ev,
                                       {
                                           selected:
                                               null == g
@@ -574,7 +574,7 @@ let eP = i.memo(function (e) {
                                           selected:
                                               g === eo.Z5c.COLLECTIBLES_SHOP ||
                                               (null == l ? void 0 : l.startsWith(eo.Z5c.COLLECTIBLES_SHOP)),
-                                          listItemRef: y,
+                                          listItemRef: v,
                                           locationState: {
                                               analyticsSource: {
                                                   page: ej(l),
@@ -651,8 +651,8 @@ function eA() {
                 t = (0, M.Z)();
             return !0 === e && !0 === t;
         })(),
-        { pathname: y } = (0, s.TH)(),
-        v = y.startsWith(eo.Z5c.CHANNEL(eo.ME)) && y !== eo.Z5c.CHANNEL(eo.ME) && y !== eo.Z5c.ME_ACTIVITY,
+        { pathname: v } = (0, s.TH)(),
+        y = v.startsWith(eo.Z5c.CHANNEL(eo.ME)) && v !== eo.Z5c.CHANNEL(eo.ME) && v !== eo.Z5c.ME_ACTIVITY,
         I = U.o.useConfig({ location: "privatechannels" }).dmsTab;
     return (0, r.jsx)(eP, {
         theme: i,
@@ -668,7 +668,7 @@ function eA() {
         shouldShowFamilyCenterRow: O,
         selectedChannelId: c,
         path: u,
-        onlyShowDMs: v && I,
-        hideAllDMs: !v && I,
+        onlyShowDMs: y && I,
+        hideAllDMs: !y && I,
     });
 }

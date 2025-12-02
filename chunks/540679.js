@@ -11,9 +11,9 @@ var i = n(54381),
     g = n(388032);
 let m = (t) => {
     var e;
-    let { onClose: n, channelId: m, applicationId: h, transitionState: _ } = t,
-        v = (0, r.e7)([o.ZP], () => o.ZP.getChannelMuteConfig(null, m)),
-        O = l.useMemo(
+    let { onClose: n, channelId: m, applicationId: h, transitionState: v } = t,
+        O = (0, r.e7)([o.ZP], () => o.ZP.getChannelMuteConfig(null, m)),
+        _ = l.useMemo(
             () =>
                 (0, s.k)().map((t) => {
                     let { label: e, value: n } = t;
@@ -25,7 +25,7 @@ let m = (t) => {
             [],
         );
     return (0, i.jsx)(a.Modal, {
-        transitionState: _,
+        transitionState: v,
         onClose: n,
         title: g.intl.string(g.t.NkwaBs),
         actions: [
@@ -36,11 +36,11 @@ let m = (t) => {
             },
         ],
         children: (0, i.jsx)(u.FXm, {
-            options: O,
+            options: _,
             onChange: (t) => {
                 d.Z.updateAppDMOverrideSettings(null, m, h, (0, s.u9)(t), c.ZB.Muted);
             },
-            value: null != (e = null == v ? void 0 : v.selected_time_window) ? e : void 0,
+            value: null != (e = null == O ? void 0 : O.selected_time_window) ? e : void 0,
         }),
     });
 };

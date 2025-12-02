@@ -1,15 +1,15 @@
 n.d(t, {
-    Z: () => a,
-    f: () => c,
+    Z: () => c,
+    f: () => a,
 });
 var o,
     r = n(388032),
-    c =
+    a =
         (((o = {}).COULD_NOT_FIND = "I couldn't find what I was looking for"),
         (o.CONFUSING_LANGUAGE = "I found the language confusing"),
         (o.OTHER = "Other"),
         o);
-function a() {
+function c() {
     return [
         {
             label: r.intl.string(r.t.cigGCe),

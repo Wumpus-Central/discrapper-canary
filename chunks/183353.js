@@ -1,8 +1,8 @@
-n.d(e, { Z: () => O });
+n.d(e, { Z: () => _ });
 var i = n(509613),
-    r = n(313789),
-    l = n(40727),
-    s = n(836133),
+    l = n(313789),
+    s = n(40727),
+    r = n(836133),
     u = n(440331),
     a = n(196561),
     o = n(301763),
@@ -10,10 +10,10 @@ var i = n(509613),
     d = n(154869),
     E = n(987143),
     S = n(39408),
-    T = n(936890),
-    I = n(518517),
+    I = n(936890),
+    T = n(518517),
     g = n(388032);
-let O = (0, i.k4)(r.n.CLIPS_RECORDING_CATEGORY, {
+let _ = (0, i.k4)(l.n.CLIPS_RECORDING_CATEGORY, {
     useTitle: () => g.intl.string(g.t.iIwmV5),
-    buildLayout: () => [o.Z, s.Z, S.Z, T.Z, I.Z, a.Z, c.Z, l.Z, u.Z, d.Z, E.Z],
+    buildLayout: () => [o.Z, r.Z, S.Z, I.Z, T.Z, a.Z, c.Z, s.Z, u.Z, d.Z, E.Z],
 });

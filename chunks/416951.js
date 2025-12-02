@@ -11,8 +11,8 @@ var l = t(481060),
     c = t(895563),
     f = t(819403),
     g = t(777658),
-    h = t(389052),
-    v = t(24311),
+    v = t(389052),
+    h = t(24311),
     _ = t(794973),
     b = t(158508),
     p = t(558924),
@@ -30,20 +30,20 @@ let N = (0, o.Z)(
                     userId: n.id,
                     guildId: null,
                 }),
-                A = (0, v.Z)({
+                A = (0, h.Z)({
                     user: n,
                     context: o,
                 }),
                 x = (0, p.O)(t.id, u.Z.DM_CONDENSED_MENU),
                 I = (0, p.Z)(n, x),
                 P = (0, f.Z)(n),
-                T = (0, Z.Z)(n.id),
-                U = (0, g.Z)({ user: n }),
+                U = (0, Z.Z)(n.id),
+                T = (0, g.Z)({ user: n }),
                 S = (0, b.Z)({
                     user: n,
                     location: u.Z.DM_CONDENSED_MENU,
                 }),
-                R = (0, h.Z)({
+                R = (0, v.Z)({
                     user: n,
                     location: u.Z.DM_CONDENSED_MENU,
                 }),
@@ -66,10 +66,10 @@ let N = (0, o.Z)(
                             children: [
                                 (0, i.jsx)(l.kSQ, { children: y }),
                                 (0, i.jsxs)(l.kSQ, {
-                                    children: [A, !w && I, P, T],
+                                    children: [A, !w && I, P, U],
                                 }),
                                 (0, i.jsxs)(l.kSQ, {
-                                    children: [U, S, R],
+                                    children: [T, S, R],
                                 }),
                             ],
                         }),

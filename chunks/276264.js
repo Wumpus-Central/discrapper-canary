@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => X,
+    Z: () => Q,
     x: () => F,
 }),
     n(388685);
@@ -26,7 +26,7 @@ var r = n(54381),
     S = n(172751),
     I = n(736144),
     T = n(884902),
-    A = n(313481),
+    A = n(968843),
     C = n(664385),
     N = n(518950),
     P = n(624138),
@@ -266,7 +266,7 @@ let F = (0, P.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
             })
         );
     }),
-    Q = i.memo(function (e) {
+    X = i.memo(function (e) {
         let {
                 hideSubtext: t,
                 hideTooltip: n = !1,
@@ -318,7 +318,7 @@ let F = (0, P.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                   hideTooltip: n,
               });
     }),
-    X = i.memo(function (e) {
+    Q = i.memo(function (e) {
         let {
                 selected: t = !1,
                 colorString: n,
@@ -346,7 +346,7 @@ let F = (0, P.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                 hideTooltip: H = !1,
                 onMouseDown: Y,
                 onKeyDown: W,
-                onClick: X,
+                onClick: Q,
                 onContextMenu: J,
                 onClickPremiumGuildIcon: $,
                 "aria-controls": ee,
@@ -453,7 +453,7 @@ let F = (0, P.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                       [j.flatBottom]: ew,
                                   }),
                                   innerClassName: j.memberInner,
-                                  onClick: X,
+                                  onClick: Q,
                                   onKeyDown: W,
                                   onMouseDown: Y,
                                   onContextMenu: J,
@@ -507,7 +507,7 @@ let F = (0, P.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                       currentUser: y,
                                   }),
                                   nameplate: U,
-                                  subText: (0, r.jsx)(Q, {
+                                  subText: (0, r.jsx)(X, {
                                       hideSubtext: F,
                                       activities: O,
                                       status: S,

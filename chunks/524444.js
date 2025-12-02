@@ -135,10 +135,10 @@ let q = {
         delay: 300,
         position: "top",
     },
-    Q = (e) => (t) => {
+    X = (e) => (t) => {
         null == e || e(t), (0, j.jA)(t);
     },
-    X = (e) => (t) => {
+    Q = (e) => (t) => {
         null == e || e(t), (0, j.Zj)(t);
     };
 function J(e) {
@@ -170,8 +170,8 @@ function J(e) {
             "mediaLayoutType",
             "reducedSizeAltTextButton",
         ]);
-    let E = Q(t),
-        b = X(n);
+    let E = X(t),
+        b = Q(n);
     (a = null == a ? j.FC : a), (s = null == s ? j.rs : s);
     let [y, O] = i.useState(!0),
         [v, I] = i.useState(!1),
@@ -264,8 +264,8 @@ function $(e) {
 function ee(e) {
     var { onVolumeChange: t, volume: n, onMute: a, onVolumeShow: o, onVolumeHide: s, renderAdjacentContent: l } = e,
         c = K(e, ["onVolumeChange", "volume", "onMute", "onVolumeShow", "onVolumeHide", "renderAdjacentContent"]);
-    let u = Q(t),
-        d = X(a);
+    let u = X(t),
+        d = Q(a);
     n = null == n ? j.FC : n;
     let f = () => !1;
     return (0, r.jsxs)(i.Fragment, {
@@ -289,8 +289,8 @@ function ee(e) {
 function et(e) {
     var { onVolumeChange: t, volume: n, onMute: i } = e,
         a = K(e, ["onVolumeChange", "volume", "onMute"]);
-    let o = Q(t),
-        s = X(i);
+    let o = X(t),
+        s = Q(i);
     return (
         (n = null == n ? j.FC : n),
         (0, r.jsx)(
@@ -635,7 +635,7 @@ function ef(e) {
             [Y, W],
         ),
         [z, q] = i.useState(!1),
-        Q = i.useCallback(() => {
+        X = i.useCallback(() => {
             x.default.track(U.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
                 topics_dropdown_open: !z,
                 num_summaries: j.length,
@@ -649,7 +649,7 @@ function ef(e) {
             }),
                 q(!z);
         }, [z, j, q, s]),
-        X = i.useCallback(
+        Q = i.useCallback(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : G.DZ.PILL_DROPDOWN,
                     n = j[e];
@@ -740,10 +740,10 @@ function ef(e) {
                     channel: s,
                     summaries: j,
                     summariesMembers: Z,
-                    selectTopic: X,
+                    selectTopic: Q,
                     setOpen: J,
                 }),
-            [j, Z, X, J, s],
+            [j, Z, Q, J, s],
         ),
         et = i.useCallback(() => {
             let e = R.ZP.ackMessageId(s.id);
@@ -782,7 +782,7 @@ function ef(e) {
                           children: (0, r.jsx)(d.P3F, {
                               className: F.newTopicsBarTextClickable,
                               "aria-label": B.intl.string(B.t.RT3MPz),
-                              onClick: Q,
+                              onClick: X,
                               children: (0, r.jsxs)("div", {
                                   className: o()({
                                       [F.newTopicsBarTextUnselected]: !z,
@@ -857,7 +857,7 @@ function ef(e) {
                                           }),
                                           (0, r.jsx)(d.P3F, {
                                               "aria-label": B.intl.string(B.t.cpT0Cq),
-                                              onClick: Q,
+                                              onClick: X,
                                               className: F.topicsDropdownClose,
                                               children: (0, r.jsx)(d.Dio, {
                                                   size: "md",
@@ -1012,10 +1012,10 @@ function em(e) {
             },
             [N, s, Y, p],
         ),
-        Q = i.useCallback(() => {
+        X = i.useCallback(() => {
             q(j - 1, G.DZ.PILL_NEXT_ARROW);
         }, [q, j]),
-        X = i.useCallback(() => {
+        Q = i.useCallback(() => {
             q(j + 1, G.DZ.PILL_PREVIOUS_ARROW);
         }, [j, q]),
         J = i.useCallback((e) => {
@@ -1129,7 +1129,7 @@ function em(e) {
                                   children: [
                                       (0, r.jsx)(d.P3F, {
                                           "aria-label": B.intl.string(B.t["4huCnC"]),
-                                          onClick: X,
+                                          onClick: Q,
                                           className: o()(F.topicsPillCaret, F.topicsCaretLeft, {
                                               [F.topicsPillCaretDisabled]: null == Z,
                                           }),
@@ -1141,7 +1141,7 @@ function em(e) {
                                       }),
                                       (0, r.jsx)(d.P3F, {
                                           "aria-label": B.intl.string(B.t["58KOoF"]),
-                                          onClick: Q,
+                                          onClick: X,
                                           className: o()(F.topicsPillCaret, F.topicsCaretRight, {
                                               [F.topicsPillCaretDisabled]: null == k,
                                           }),

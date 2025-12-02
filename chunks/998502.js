@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => Q,
+    ZP: () => X,
     jK: () => H,
     mQ: () => Z,
     tS: () => Y,
@@ -922,4 +922,4 @@ let q = {
             z("DISCORD_APP_ASYNC_INDEX_TSX_LOADED");
         },
     },
-    Q = q;
+    X = q;

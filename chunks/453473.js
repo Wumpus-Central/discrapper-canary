@@ -296,7 +296,7 @@ function z(e) {
                   ),
                   (0, r.jsx)(b.ZP, {
                       className: M.hoverBar,
-                      children: (0, r.jsx)(Q, {
+                      children: (0, r.jsx)(X, {
                           savedMessage: t,
                           jumpToMessage: l,
                       }),
@@ -345,7 +345,7 @@ function q(e) {
               throttledNow: i,
           });
 }
-function Q(e) {
+function X(e) {
     let { savedMessage: t, jumpToMessage: i } = e;
     return (l()(null != t.message, "Saved message must be cached for For Later action buttons"),
     null != t.saveData.dueAt)

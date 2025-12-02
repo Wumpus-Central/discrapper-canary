@@ -23,8 +23,8 @@ var r = n(54381),
     b = n(768581),
     E = n(356164),
     O = n(826946),
-    y = n(981631),
-    v = n(388032),
+    v = n(981631),
+    y = n(388032),
     I = n(972725),
     C = n(129512),
     S = n(330065),
@@ -103,7 +103,7 @@ function N(e) {
             [t],
         ),
         L = (0, d.ZP)(),
-        R = t.features.has(y.GuildFeatures.HUB),
+        R = t.features.has(v.GuildFeatures.HUB),
         D = i.useMemo(() => {
             let e = b.ZP.getGuildDiscoverySplashURL({
                 id: t.id,
@@ -113,9 +113,9 @@ function N(e) {
             if (null != e) return e;
             if (R) return T;
             switch (L) {
-                case y.BRd.DARK:
+                case v.BRd.DARK:
                     return C;
-                case y.BRd.LIGHT:
+                case v.BRd.LIGHT:
                     return S;
             }
         }, [t.discoverySplash, t.id, R, L]),
@@ -150,7 +150,7 @@ function N(e) {
                     onClick: A,
                     disabled: E,
                     onContextMenu: w,
-                    "aria-label": v.intl.string(v.t["M9wQ+f"]),
+                    "aria-label": y.intl.string(y.t["M9wQ+f"]),
                     children: [
                         (0, r.jsxs)("div", {
                             className: I.header,
@@ -227,7 +227,7 @@ function N(e) {
                                                         className: I.memberDetailsText,
                                                         variant: "text-xs/normal",
                                                         color: "header-secondary",
-                                                        children: v.intl.format(v.t["LC+S+m"], {
+                                                        children: y.intl.format(y.t["LC+S+m"], {
                                                             membersOnline: t.presenceCount,
                                                         }),
                                                     }),
@@ -242,7 +242,7 @@ function N(e) {
                                                         className: I.memberDetailsText,
                                                         variant: "text-xs/normal",
                                                         color: "header-secondary",
-                                                        children: v.intl.format(v.t.zRl6XR, { count: t.memberCount }),
+                                                        children: y.intl.format(y.t.zRl6XR, { count: t.memberCount }),
                                                     }),
                                                 ],
                                             }),

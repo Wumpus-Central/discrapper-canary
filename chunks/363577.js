@@ -13,14 +13,14 @@ let u = function (e) {
         d = (0, s.e7)([o.Z], () => o.Z.validate(e), [e]),
         h = (0, s.e7)([o.Z], () => o.Z.isRateLimited()),
         g = (0, a.c)(),
-        m = r.useMemo(
+        p = r.useMemo(
             () => (0, i.debounce)((e) => l.Z.attemptPomelo(e, n ? "registration" : "modal", n, u), g),
             [g, n, u],
         );
     return (
         r.useEffect(() => {
-            t && !h && null == d && "" !== e && m(e);
-        }, [t, h, d, e, m]),
+            t && !h && null == d && "" !== e && p(e);
+        }, [t, h, d, e, p]),
         r.useMemo(() => (null != d ? (0, c.ti)(d) : void 0), [d])
     );
 };

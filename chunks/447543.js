@@ -53,8 +53,8 @@ var r = n(525654),
     K = n(70956),
     z = n(573261),
     q = n(954824),
-    Q = n(846027),
-    X = n(749210),
+    X = n(846027),
+    Q = n(749210),
     J = n(872810),
     $ = n(981631),
     ee = n(723359),
@@ -199,7 +199,7 @@ function em(e) {
                                   (0, j.Cq)(r instanceof M.Sf ? r : (0, M.createChannelRecord)(r)), (0, L.uL)(O);
                                   return;
                               }
-                              (null == i ? void 0 : i.muteOnJoinVoiceChannel) && Q.Z.setSelfMute(f.Yn.DEFAULT, !0),
+                              (null == i ? void 0 : i.muteOnJoinVoiceChannel) && X.Z.setSelfMute(f.Yn.DEFAULT, !0),
                                   n.selectVoiceChannel(E),
                                   c === er.Iq.STREAM &&
                                       null != l &&
@@ -298,7 +298,7 @@ let eE = function (e, t) {
     },
     eb = async (e) => {
         let { guild_id: t, channel_id: n } = e;
-        (0, C.xt)(e) && null != n ? eE(n) : await X.Z.transitionToGuildSync(t);
+        (0, C.xt)(e) && null != n ? eE(n) : await Q.Z.transitionToGuildSync(t);
     };
 function ey(e, t) {
     var n;

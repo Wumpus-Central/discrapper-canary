@@ -16,8 +16,8 @@ var r = n(54381),
     m = n(598006),
     _ = n(194082),
     g = n(710845),
-    b = n(965048),
-    v = n(590293),
+    v = n(965048),
+    b = n(590293),
     h = n(595816),
     E = n(863908),
     y = n(871118),
@@ -27,8 +27,8 @@ var r = n(54381),
     w = n(590076),
     I = n(507675),
     P = n(199902),
-    j = n(314897),
-    x = n(592125),
+    x = n(314897),
+    j = n(592125),
     Z = n(131951),
     R = n(451478),
     T = n(112560),
@@ -77,13 +77,13 @@ function Y(e) {
             wrapperClassName: F,
             paused: q = !1,
             idle: Y = !1,
-            controlsBottom: K,
+            controlsBottom: G,
         } = e,
-        G = Z.Z.getVideoComponent(),
-        Q = (0, o.e7)([j.default], () => j.default.getId()),
-        X = (0, v.Z)(),
+        K = Z.Z.getVideoComponent(),
+        Q = (0, o.e7)([x.default], () => x.default.getId()),
+        X = (0, b.Z)(),
         { stream: J, user: $, streamId: ee } = t,
-        et = (0, o.e7)([x.Z], () => x.Z.getChannel(J.channelId)),
+        et = (0, o.e7)([j.Z], () => j.Z.getChannel(J.channelId)),
         en = (0, o.e7)([P.Z], () => P.Z.getActiveStreamForUser($.id, J.guildId), [$.id, J.guildId]),
         { defaultWatchMultipleStreams: er } = (0, h.P)({ location: "StreamTile" }),
         ei = (0, o.e7)([P.Z], () => P.Z.getAllActiveStreams().length > 0),
@@ -98,16 +98,16 @@ function Y(e) {
             !ea &&
             ((0, d.rn)(J), u.Z.updateStageStreamSize(J.channelId, !1));
     });
-    let eu = (0, b.c)(z.Yn.STREAM, t.user.id);
+    let eu = (0, v.c)(z.Yn.STREAM, t.user.id);
     i.useEffect(() => {
         B.info(
             "Stream Tile State - activeStream: "
                 .concat(null != en, " | selected: ")
                 .concat(n, " | Video: ")
-                .concat(null != G, " | MediaEngine: ")
+                .concat(null != K, " | MediaEngine: ")
                 .concat(Z.Z.supports(z.AN.VIDEO)),
         );
-    }, [G, en, n]);
+    }, [K, en, n]);
     let { allowGoLiveZoomPan: ed } = (0, O.H)({ location: "StreamTile" });
     if (X)
         return (0, r.jsx)(k.Z, {
@@ -136,7 +136,7 @@ function Y(e) {
             participant: t,
             width: S,
         });
-    if (!(null != en && !n && null != G && Z.Z.supports(z.AN.VIDEO)))
+    if (!(null != en && !n && null != K && Z.Z.supports(z.AN.VIDEO)))
         return (0, r.jsxs)("div", {
             className: a()(H.content, H.streamPreview, { [H.small]: es }),
             children: [
@@ -200,13 +200,13 @@ function Y(e) {
                         wrapperClassName: a()(g !== m.P.CALL_TILE ? H.videoWrapper : void 0, F),
                         className: H.content,
                         streamId: ee,
-                        videoComponent: G,
+                        videoComponent: K,
                         fit: _,
                         paused: q || (null == en ? void 0 : en.state) === V.jm8.PAUSED || eo,
                         videoSpinnerContext: ea ? p.m.SELF_STREAM : p.m.REMOTE_STREAM,
                         userId: $.id,
                         streamKey: t.id,
-                        controlsBottom: K,
+                        controlsBottom: G,
                         idle: Y,
                     },
                     ee,

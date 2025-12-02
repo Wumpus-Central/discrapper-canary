@@ -566,7 +566,7 @@ var W = function (e, t) {
             s(e, p, _);
     },
     q = null,
-    Q = (function (e) {
+    X = (function (e) {
         function t() {
             for (var t, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
             return ((t = e.call.apply(e, [this].concat(r)) || this).rendered = !1), t;
@@ -634,8 +634,8 @@ var W = function (e, t) {
             t
         );
     })(r.Component);
-(Q.propTypes = { context: V.isRequired }), (Q.displayName = "HelmetDispatcher");
-var X = ["children"],
+(X.propTypes = { context: V.isRequired }), (X.displayName = "HelmetDispatcher");
+var Q = ["children"],
     J = ["children"],
     $ = (function (e) {
         function t() {
@@ -744,7 +744,7 @@ var X = ["children"],
                         if (e && e.props) {
                             var r = e.props,
                                 a = r.children,
-                                o = m(r, X),
+                                o = m(r, Q),
                                 s = Object.keys(o).reduce(function (e, t) {
                                     return (e[v[t] || t] = o[t]), e;
                                 }, {}),
@@ -789,14 +789,14 @@ var X = ["children"],
                     !a || a instanceof B || (a = new B(a.context, a.instances)),
                     a
                         ? r.createElement(
-                              Q,
+                              X,
                               f({}, i, {
                                   context: a.value,
                                   helmetData: void 0,
                               }),
                           )
                         : r.createElement(F.Consumer, null, function (e) {
-                              return r.createElement(Q, f({}, i, { context: e }));
+                              return r.createElement(X, f({}, i, { context: e }));
                           })
                 );
             }),

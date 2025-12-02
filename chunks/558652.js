@@ -5,7 +5,7 @@ var r = n(54381),
     a = n(481060),
     s = n(823379),
     o = n(624138),
-    c = n(313481),
+    c = n(968843),
     u = n(264282),
     d = n(78606),
     p = n(710914),
@@ -18,7 +18,7 @@ let _ = [],
     E = c.tR.FILTER,
     O = i.forwardRef(function (e, t) {
         let [n, O] = (0, f.P)(),
-            y = i.useMemo(() => {
+            v = i.useMemo(() => {
                 var e, t;
                 return null !==
                     ((t = n.get(b)), (e = (0, o.Ew)(t) ? null : Object.values(h.yq).find((e) => e === t) || null)) &&
@@ -26,7 +26,7 @@ let _ = [],
                     ? e
                     : h.yq.SUGGESTED;
             }, [n]),
-            v = i.useMemo(() => {
+            y = i.useMemo(() => {
                 var e;
                 return null !=
                     (e = (function (e) {
@@ -71,10 +71,10 @@ let _ = [],
                 c.e5.ALL,
                 i.useMemo(
                     () => ({
-                        sortMethod: y,
-                        filters: v,
+                        sortMethod: v,
+                        filters: y,
                     }),
-                    [y, v],
+                    [v, y],
                 ),
             ),
             P = i.useCallback(() => {
@@ -88,7 +88,7 @@ let _ = [],
             i.useEffect(() => {
                 if ("" !== Z.hash && null != x.current && null != A.current) {
                     var e, t;
-                    (y !== x.current || v !== A.current) &&
+                    (v !== x.current || y !== A.current) &&
                         w.replace(
                             ((e = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
@@ -131,16 +131,16 @@ let _ = [],
                             e),
                         );
                 }
-            }, [y, v, Z, w]),
+            }, [v, y, Z, w]),
             i.useEffect(() => {
-                x.current = y;
-            }, [y]),
-            i.useEffect(() => {
-                A.current = v;
+                x.current = v;
             }, [v]),
+            i.useEffect(() => {
+                A.current = y;
+            }, [y]),
             (0, c.SU)({
-                selectedSortMethod: y,
-                selectedFilters: v,
+                selectedSortMethod: v,
+                selectedFilters: y,
                 numQuestsVisible: S.length,
             }),
             i.useImperativeHandle(
@@ -167,11 +167,11 @@ let _ = [],
                                     (0, r.jsx)(d.Z, {
                                         onChange: I,
                                         optionClassName: m.filterSortOption,
-                                        selectedSortMethod: y,
+                                        selectedSortMethod: v,
                                     }),
                                     (0, r.jsx)(u.Z, {
                                         onChange: C,
-                                        selectedFilters: v,
+                                        selectedFilters: y,
                                     }),
                                 ],
                             }),
@@ -182,7 +182,7 @@ let _ = [],
                         excludedQuests: T,
                         isFetching: N,
                         hasFetched: j,
-                        hasFiltersApplied: v.length > 0,
+                        hasFiltersApplied: y.length > 0,
                         onClearFilters: P,
                     }),
                 ],

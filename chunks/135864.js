@@ -17,8 +17,8 @@ var r = n(54381),
     b = n(749681),
     E = n(49898),
     O = n(981631),
-    y = n(324805),
-    v = n(388032),
+    v = n(324805),
+    y = n(388032),
     I = n(933767);
 function C(e) {
     let { tab: t } = e,
@@ -37,7 +37,7 @@ function C(e) {
                 })(t),
             [t],
         ),
-        v = i.useMemo(() => (0, _.s)(t), [t]),
+        y = i.useMemo(() => (0, _.s)(t), [t]),
         C = n === t,
         S = i.useCallback(() => {
             switch (t) {
@@ -47,7 +47,7 @@ function C(e) {
                         g.default.track(O.rMx.DISCOVERY_QUEST_TAB_CLICKED, { client_ad_session_id: (0, c.Gy)().uuid }),
                         (0, b.transitionToGlobalDiscovery)({
                             tab: E.GlobalDiscoveryTab.QUESTS,
-                            location: y.dr.DISCOVERY_SIDEBAR,
+                            location: v.dr.DISCOVERY_SIDEBAR,
                             questContent: s.j.DISCOVERY_SIDEBAR,
                         })
                     );
@@ -81,7 +81,7 @@ function C(e) {
             (0, r.jsx)(o.Text, {
                 variant: "text-md/medium",
                 color: "none",
-                children: v,
+                children: y,
             }),
         ],
     });
@@ -94,7 +94,7 @@ let S = function () {
                 className: I.header,
                 children: (0, r.jsx)(o.Heading, {
                     variant: "text-lg/semibold",
-                    children: v.intl.string(v.t["1KqYnl"]),
+                    children: y.intl.string(y.t["1KqYnl"]),
                 }),
             }),
             (0, r.jsx)("nav", {

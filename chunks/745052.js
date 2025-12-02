@@ -17,8 +17,8 @@ var r = n(54381),
     b = n(325708),
     E = n(320149),
     O = n(82295),
-    y = n(252618),
-    v = n(605236),
+    v = n(252618),
+    y = n(605236),
     I = n(243778),
     C = n(984370),
     S = n(797614),
@@ -247,7 +247,7 @@ function el(e) {
 let ea = (e) => {
     let t = (0, U.Z)();
     return (i.useEffect(() => {
-        (0, v.kk)(u.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
+        (0, y.kk)(u.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
     }, []),
     null == e.targetElementRef.current || R.Z.hasLayers() || (0, p.$sL)())
         ? e.children
@@ -342,12 +342,12 @@ let eo = (0, h.Z)(function (e) {
     i.useEffect(() => {
         null != g && !b && E && _ && ((0, T.Kh)(g), N.Z.closeChannelSidebar(w.uZ));
     }, [g, E, _, b]);
-    let [v, I] = i.useState(K.pS.REQUESTS),
+    let [y, I] = i.useState(K.pS.REQUESTS),
         A = (e) => {
             I(e);
         };
     return (
-        (0, y.Tt)({ location: $.intl.string($.t.e7GWjQ) }),
+        (0, v.Tt)({ location: $.intl.string($.t.e7GWjQ) }),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)("div", {
@@ -377,7 +377,7 @@ let eo = (0, h.Z)(function (e) {
                                         (0, r.jsx)(C.Z.Divider, {}),
                                         (0, r.jsxs)(p.njP, {
                                             "aria-label": $.intl.string($.t.e7GWjQ),
-                                            selectedItem: v,
+                                            selectedItem: y,
                                             type: "top-pill",
                                             onItemSelect: A,
                                             children: [
@@ -401,7 +401,7 @@ let eo = (0, h.Z)(function (e) {
                         }),
                         (0, r.jsx)("div", {
                             className: et.content,
-                            children: (0, r.jsx)(es, { section: v }),
+                            children: (0, r.jsx)(es, { section: y }),
                         }),
                     ],
                 }),

@@ -17,8 +17,8 @@ var r = n(54381),
     b = n(170245),
     E = n(981631),
     O = n(388032),
-    y = n(507694);
-function v(e) {
+    v = n(507694);
+function y(e) {
     var t;
     let { user: n, applicationId: l, isGameRelationship: o, active: c } = e,
         u = (null == (t = f.default.getCurrentUser()) ? void 0 : t.isStaff()) && (null == n ? void 0 : n.isStaff()),
@@ -44,7 +44,7 @@ function v(e) {
         children: [
             u &&
                 (0, r.jsx)("div", {
-                    className: y.staffIndicator,
+                    className: v.staffIndicator,
                     children: (0, r.jsx)(s.IGR, {
                         color: a.Z.unsafe_rawColors.BRAND_500.css,
                         text: O.intl.string(O.t.oMx98L),
@@ -94,7 +94,7 @@ function C(e) {
         p = i.useMemo(() => (t ? O.intl.string(O.t["Uv/eTx"]) : a), [t, a]),
         f = (0, l.e7)([c.Z], () => (null != n ? c.Z.getApplication(n) : null));
     return (0, r.jsxs)("div", {
-        className: y.applicationSublabel,
+        className: v.applicationSublabel,
         children: [
             !o &&
                 (0, r.jsx)(s.Text, {
@@ -158,7 +158,7 @@ function T(e) {
         onClick: f,
         children: (e) =>
             (0, r.jsxs)("div", {
-                className: y.listItemContents,
+                className: v.listItemContents,
                 children: [
                     (0, r.jsx)(S, {
                         user: t,
@@ -168,10 +168,10 @@ function T(e) {
                         applicationId: s,
                     }),
                     (0, r.jsx)("div", {
-                        className: y.actions,
+                        className: v.actions,
                         children:
                             n === E.OGo.PENDING_INCOMING
-                                ? (0, r.jsx)(v, {
+                                ? (0, r.jsx)(y, {
                                       user: t,
                                       applicationId: s,
                                       isGameRelationship: c,

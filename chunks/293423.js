@@ -26,13 +26,13 @@ let _ = (e) => {
     });
     let { activeSubscription: E } = (0, s.Z)(null == b ? void 0 : b.id),
         O = (0, l.YB)(_.id),
-        y = null == O ? void 0 : O.description,
-        { editStateIds: v } = a.B7(null != (t = null == b ? void 0 : b.id) ? t : null, _.id);
+        v = null == O ? void 0 : O.description,
+        { editStateIds: y } = a.B7(null != (t = null == b ? void 0 : b.id) ? t : null, _.id);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)(f.Z, {
                 title: g.intl.format(g.t["rm+ojA"], { serverName: _.name }),
-                description: null != y ? y : null,
+                description: null != v ? v : null,
                 coverImageAsset: null != (n = null == O ? void 0 : O.cover_image_asset) ? n : null,
                 guild: _,
                 children: [
@@ -49,7 +49,7 @@ let _ = (e) => {
             (0, r.jsx)(i.y5t, {
                 children: (0, r.jsx)(d.Z, {
                     guildId: _.id,
-                    children: v.map((e) => {
+                    children: y.map((e) => {
                         var t;
                         return (0, r.jsx)(
                             p.Z,

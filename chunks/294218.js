@@ -140,14 +140,14 @@ function L(e) {
         K = i.type === A.uaV.REPLY ? i.messageReference : void 0,
         z = (0, l.e7)([d.Z], () => d.Z.getMessageByReference(K)),
         q = (0, s.JA)(i.id),
-        Q = (0, m.ZP)(i),
-        X = (0, l.e7)(
+        X = (0, m.ZP)(i),
+        Q = (0, l.e7)(
             [f.Z],
             () => i.hasFlag(A.iLy.HAS_THREAD) && f.Z.getChannel(p.default.castMessageIdAsChannelId(i.id)),
         ),
         J = (0, c.p9)({
             guildId: j.guild_id,
-            roleId: Q.iconRoleId,
+            roleId: X.iconRoleId,
         }),
         $ = (0, b.Z)({
             message: i,
@@ -171,7 +171,7 @@ function L(e) {
                 childrenHeader: (0, v.Z)(
                     w(P({}, e), {
                         guildId: j.guild_id,
-                        author: Q,
+                        author: X,
                         roleIcon: J,
                     }),
                 ),
@@ -180,12 +180,12 @@ function L(e) {
                 childrenSystemMessage: (0, S.Z)(w(P({}, e), { disableInteraction: F })),
                 onContextMenu: R,
                 onClick: x,
-                hasThread: G && null != X && i.hasFlag(A.iLy.HAS_THREAD),
+                hasThread: G && null != Q && i.hasFlag(A.iLy.HAS_THREAD),
                 hasReply: i.type === A.uaV.REPLY,
                 "aria-labelledby": ee,
                 "aria-describedby": et,
                 messageRef: $,
-                author: Q,
+                author: X,
             },
             q,
             B,

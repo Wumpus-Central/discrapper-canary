@@ -1587,7 +1587,7 @@ class z extends o.C {
     }
 }
 let q = new z();
-class Q extends o.C {
+class X extends o.C {
     create(e) {
         let t = {};
         return (
@@ -1633,7 +1633,7 @@ class Q extends o.C {
         ]);
     }
 }
-let X = new Q();
+let Q = new X();
 class J extends o.C {
     create(e) {
         let t = {};
@@ -1701,7 +1701,7 @@ class ee extends o.C {
                 case 104:
                     a.state = {
                         oneofKind: "tempBanned",
-                        tempBanned: X.internalBinaryRead(e, e.uint32(), n, a.state.tempBanned),
+                        tempBanned: Q.internalBinaryRead(e, e.uint32(), n, a.state.tempBanned),
                     };
                     break;
                 case 105:
@@ -1742,7 +1742,7 @@ class ee extends o.C {
             "deferredAction" === e.state.oneofKind &&
                 q.internalBinaryWrite(e.state.deferredAction, t.tag(103, r.TD.LengthDelimited).fork(), n).join(),
             "tempBanned" === e.state.oneofKind &&
-                X.internalBinaryWrite(e.state.tempBanned, t.tag(104, r.TD.LengthDelimited).fork(), n).join(),
+                Q.internalBinaryWrite(e.state.tempBanned, t.tag(104, r.TD.LengthDelimited).fork(), n).join(),
             "banned" === e.state.oneofKind &&
                 $.internalBinaryWrite(e.state.banned, t.tag(105, r.TD.LengthDelimited).fork(), n).join(),
             0 !== e.reason && t.tag(1, r.TD.Varint).int32(e.reason),
@@ -1784,7 +1784,7 @@ class ee extends o.C {
                 name: "temp_banned",
                 kind: "message",
                 oneof: "state",
-                T: () => X,
+                T: () => Q,
             },
             {
                 no: 105,

@@ -1,6 +1,6 @@
 n.d(t, {
     $R: () => l,
-    $V: () => Q,
+    $V: () => X,
     $w: () => eo,
     Ai: () => b,
     Al: () => r.Al,
@@ -56,7 +56,7 @@ n.d(t, {
     pK: () => ef,
     rx: () => u,
     tx: () => ed,
-    vS: () => X,
+    vS: () => Q,
     xr: () => c,
     yA: () => et,
     yX: () => en,
@@ -499,7 +499,7 @@ var K = (function (e) {
             e
         );
     })({}),
-    Q = (function (e) {
+    X = (function (e) {
         return (
             (e[(e.CLOSE_NORMAL = 1000)] = "CLOSE_NORMAL"),
             (e[(e.CLOSE_UNSUPPORTED = 1003)] = "CLOSE_UNSUPPORTED"),
@@ -513,7 +513,7 @@ var K = (function (e) {
             e
         );
     })({});
-let X = 250,
+let Q = 250,
     J = "token",
     $ = "tokens",
     ee = "status.discord.com",

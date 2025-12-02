@@ -1,16 +1,16 @@
 n.d(t, { default: () => m });
 var o = n(54381),
     r = n(473749),
-    c = n(481060),
-    a = n(957115),
+    a = n(481060),
+    c = n(957115),
     l = n(332664),
     i = n(626135),
     _ = n(798733),
     u = n(559187),
     b = n(981631),
-    d = n(531578),
+    f = n(531578),
     p = n(388032);
-function s(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             o = Object.keys(n);
@@ -35,7 +35,7 @@ function s(e) {
     }
     return e;
 }
-let f = [_.f.OTHER];
+let s = [_.f.OTHER];
 function m(e) {
     var { reportId: t, reportType: m } = e,
         g = (function (e, t) {
@@ -47,14 +47,14 @@ function m(e) {
                     var n,
                         o,
                         r = {},
-                        c = Object.keys(e);
-                    for (o = 0; o < c.length; o++) (n = c[o]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                        a = Object.keys(e);
+                    for (o = 0; o < a.length; o++) (n = a[o]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                     return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var c = Object.getOwnPropertySymbols(e);
-                for (o = 0; o < c.length; o++)
-                    (n = c[o]),
+                var a = Object.getOwnPropertySymbols(e);
+                for (o = 0; o < a.length; o++)
+                    (n = a[o]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
             return r;
@@ -68,20 +68,20 @@ function m(e) {
         }, [t, m]),
         (0, o.jsx)(
             l.Z,
-            s(
+            d(
                 {
                     modalType: "in_app_report",
                     header: p.intl.string(p.t.MP5lDj),
                     body: p.intl.string(p.t["7Ct0Dj"]),
                     problemTitle: p.intl.string(p.t.FJmoxF),
                     problems: (0, _.Z)(),
-                    freeformNeededProblems: f,
+                    freeformNeededProblems: s,
                     onSubmit: function (e) {
                         var r;
                         let { rating: l, problem: i, dontShowAgain: _, feedback: b } = e;
                         _ &&
-                            (0, a.Uv)({
-                                feedbackType: d.nw.IN_APP_REPORTS,
+                            (0, c.Uv)({
+                                feedbackType: f.nw.IN_APP_REPORTS,
                                 location: "InAppReportsFeedbackModal",
                             }),
                             (0, u.Z)({
@@ -94,9 +94,9 @@ function m(e) {
                             }),
                             null != l &&
                                 null != i &&
-                                (0, c.ZDy)(async () => {
+                                (0, a.ZDy)(async () => {
                                     let { default: e } = await n.e("14466").then(n.bind(n, 729328));
-                                    return (t) => (0, o.jsx)(e, s({ body: p.intl.string(p.t["d9+vQ8"]) }, t));
+                                    return (t) => (0, o.jsx)(e, d({ body: p.intl.string(p.t["d9+vQ8"]) }, t));
                                 });
                     },
                     otherKey: _.f.OTHER,

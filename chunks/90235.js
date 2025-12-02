@@ -1,18 +1,18 @@
 n.d(e, { Z: () => o });
 var i = n(442837),
-    r = n(435064),
-    l = n(39604),
-    s = n(509613),
+    l = n(435064),
+    s = n(39604),
+    r = n(509613),
     u = n(313789),
     a = n(388032);
-let o = (0, s.qs)(u.n.CLIPS_ENABLE_PHRASE_SIGNALS, {
+let o = (0, r.qs)(u.n.CLIPS_ENABLE_PHRASE_SIGNALS, {
     useTitle: () => a.intl.string(a.t.nHsilt),
     useSubtitle: () => a.intl.string(a.t["s6wq+m"]),
-    useValue: () => (0, i.e7)([r.Z], () => r.Z.getSettings().clipSignals.enablePhraseSignals),
+    useValue: () => (0, i.e7)([l.Z], () => l.Z.getSettings().clipSignals.enablePhraseSignals),
     setValue: (t) => {
         var e, n;
-        let i = r.Z.getSettings().clipSignals;
-        l.Rr(
+        let i = l.Z.getSettings().clipSignals;
+        s.Rr(
             ((e = (function (t) {
                 for (var e = 1; e < arguments.length; e++) {
                     var n = null != arguments[e] ? arguments[e] : {},

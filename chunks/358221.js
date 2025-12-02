@@ -115,11 +115,11 @@ function q(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : L;
     return t.reduce((t, n) => (e(W(n)) ? (er(n), en(n), !0) : t), !1);
 }
-function Q(e) {
+function X(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : L;
     return q((t) => t.updateParticipant(e), t);
 }
-function X(e) {
+function Q(e) {
     var t;
     let n = E.Z.getChannel(e),
         r = (null == n ? void 0 : n.isDM()) && 1 ? A.dF.AUTO : A.dF.NONE;
@@ -171,7 +171,7 @@ function en(e) {
         let e = n.toArray().find((e) => e.type === A.fO.USER && e.id !== t && !e.ringing);
         r = null != (o = null == e ? void 0 : e.id) ? o : t;
     }
-    let [s] = X(e);
+    let [s] = Q(e);
     if (s !== A.dF.AUTO && s !== A.dF.NONE) {
         let e = n.getParticipant(s);
         (null == e || (e.type === A.fO.STREAM && null == m.Z.getActiveStreamForStreamKey(e.id))) && (s = A.dF.NONE);
@@ -217,14 +217,14 @@ function el(e) {
             W(i).updateGuildRingingUsers(r, !1),
         n && null != i && !L.includes(i))
             ? e
-            : Q(r) || e;
+            : X(r) || e;
     }, !1);
 }
 function ec() {
     return q((e) => e.updateEmbeddedActivities());
 }
 function eu() {
-    b.Z.getUserIds().forEach((e) => Q(e));
+    b.Z.getUserIds().forEach((e) => X(e));
 }
 function ed(e) {
     let { userId: t } = e;
@@ -235,7 +235,7 @@ function ef() {
 }
 function ep(e) {
     let { user: t } = e;
-    return Q(t.id);
+    return X(t.id);
 }
 function e_(e) {
     let { channelId: t } = e;
@@ -270,10 +270,10 @@ function eb(e) {
     let { channelId: t, selfStreamHidden: n } = e,
         r = h.default.getId();
     if (n) {
-        let [e] = X(t);
+        let [e] = Q(t);
         (0, p.DB)(e) && e.includes(r) && ee(t, null);
     }
-    Q(r, [t]);
+    X(r, [t]);
 }
 function ey(e) {
     let { channelId: t, large: n } = e;
@@ -298,11 +298,11 @@ function eI(e) {
         r.toArray(T.sI.STREAM).forEach((e) => {
             (0, A._5)(e) && r.updateParticipant(e.user.id);
         });
-    let [, i] = X(t);
+    let [, i] = Q(t);
     if ((ee(t, [null != n ? n : A.dF.NONE, i]), (0, p.DB)(n))) {
         try {
             let { ownerId: e } = (0, p.my)(n);
-            e === h.default.getId() && Q(e, [t]);
+            e === h.default.getId() && X(e, [t]);
         } catch (e) {
             D.warn("INVALID STREAM KEY FORMAT ".concat(n), e);
         }
@@ -311,18 +311,18 @@ function eI(e) {
 }
 function eT(e) {
     let { channelId: t, participantId: n } = e,
-        [r] = X(t);
+        [r] = Q(t);
     r === n && ee(t, null);
     let i = W(t),
         a = i.getParticipant(n);
-    null != a && a.type !== A.fO.ACTIVITY && (i.updateParticipantPoppedOut(n, !0), Q(a.user.id, [t]));
+    null != a && a.type !== A.fO.ACTIVITY && (i.updateParticipantPoppedOut(n, !0), X(a.user.id, [t]));
 }
 function eA(e) {
     let { channelId: t, participantId: n } = e,
         r = W(t);
     r.updateParticipantPoppedOut(n, !1);
     let i = r.getParticipant(n);
-    null != i && i.type !== A.fO.ACTIVITY && Q(i.user.id, [t]);
+    null != i && i.type !== A.fO.ACTIVITY && X(i.user.id, [t]);
 }
 function eC(e) {
     let { channel: t } = e;
@@ -353,24 +353,24 @@ function eP(e) {
 function eR(e) {
     let { streamKey: t } = e,
         { channelId: n, ownerId: r } = (0, p.my)(t);
-    return Q(r, [n]);
+    return X(r, [n]);
 }
 function ew(e) {
     let { streamKey: t } = e,
         { channelId: n, ownerId: r } = (0, p.my)(t);
-    return Q(r, [n]);
+    return X(r, [n]);
 }
 function eD(e) {
     let { channelId: t, userId: n } = e;
-    return Q(n, [t]);
+    return X(n, [t]);
 }
 function ex(e) {
     let { channelId: t, userId: n } = e;
-    return Q(n, [t]);
+    return X(n, [t]);
 }
 function eL(e) {
     let { userId: t } = e;
-    return Q(t);
+    return X(t);
 }
 function ej(e) {
     let { channelId: t, senderUserId: n, maxResolution: r, maxFrameRate: i } = e;
@@ -464,7 +464,7 @@ class eZ extends (r = l.ZP.PersistedStore) {
         return null != (t = B[e]) && t;
     }
     getSelectedParticipantId(e) {
-        let [t, n] = X(e);
+        let [t, n] = Q(e);
         return t === A.dF.NONE ? null : t !== A.dF.AUTO ? t : n === A.dF.NONE || n === A.dF.AUTO ? null : n;
     }
     getSelectedParticipant(e) {
