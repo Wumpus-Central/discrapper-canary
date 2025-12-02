@@ -17,8 +17,8 @@ var r = n(54381),
     b = n(512384),
     E = n(670188),
     O = n(314897),
-    y = n(131951),
-    v = n(51144),
+    v = n(131951),
+    y = n(51144),
     I = n(524484),
     C = n(388032),
     S = n(720711);
@@ -98,14 +98,14 @@ function x(e) {
     let p = i.useRef(null),
         { parentAnalyticsLocation: f } = (0, g.ZP)(),
         { channel: O, user: x, nick: A, mute: Z, deaf: w, serverMute: L, serverDeaf: R } = e,
-        D = (0, s.e7)([y.Z], () => y.Z.isLocalMute(x.id)),
+        D = (0, s.e7)([v.Z], () => v.Z.isLocalMute(x.id)),
         M = (0, d.Z)({
             userId: x.id,
             checkSoundSharing: !0,
         }),
         k = null != (t = O.getGuildId()) ? t : void 0,
         U = x.getAvatarURL(O.guild_id, 24),
-        G = null != A ? A : v.ZP.getName(x),
+        G = null != A ? A : y.ZP.getName(x),
         {
             icon: B,
             colorize: H,
@@ -213,9 +213,9 @@ function x(e) {
 }
 function A(e) {
     let { voiceStates: t, channel: n, className: l } = e,
-        [o, u] = i.useState(!1),
-        d = (0, s.e7)([O.default], () => O.default.getId()),
-        { containerRef: h, maxVisibleAvatars: g } = (function (e) {
+        [u, d] = i.useState(!1),
+        h = (0, s.e7)([O.default], () => O.default.getId()),
+        { containerRef: g, maxVisibleAvatars: m } = (function (e) {
             let [t, n] = i.useState(7),
                 r = (0, f.Z)(() => {
                     let t = null == l ? void 0 : l.current;
@@ -232,7 +232,7 @@ function A(e) {
                 maxVisibleAvatars: t,
             };
         })(t.length - 1),
-        [m, _] = (function (e, t, n) {
+        [_, b] = (function (e, t, n) {
             let r = [];
             for (let i of e)
                 if (i.user.id !== t && !r.some((e) => e.user.id === i.user.id)) {
@@ -240,34 +240,35 @@ function A(e) {
                     r.push(i);
                 }
             return [r, !1];
-        })(t, d, g),
-        b = o ? c.V_R : c.qJs,
-        E = (0, r.jsx)(c.M0o, {
-            onClick: () => u(!o),
-            color: c.YX$.PRIMARY,
-            size: c.tT7.SIZE_24,
-            tooltip: o ? C.intl.string(C.t["Z/Tya5"]) : C.intl.string(C.t.XR5BAc),
-            icon: (0, r.jsx)(b, {
-                size: "xs",
-                color: "currentColor",
+        })(t, h, m),
+        E = u ? c.V_R : c.qJs,
+        v = u ? C.intl.string(C.t["Z/Tya5"]) : C.intl.string(C.t.XR5BAc),
+        y = (0, r.jsx)(o.u, {
+            text: v,
+            ariaHidden: !0,
+            children: (0, r.jsx)(c.hU, {
+                "aria-label": v,
+                onClick: () => d(!u),
+                icon: () => (0, r.jsx)(E, { size: "md" }),
+                variant: "icon-only",
+                size: "sm",
             }),
-            focusProps: j,
         }),
-        y = _ && o ? t : m;
-    return y.length <= 0
+        I = b && u ? t : _;
+    return I.length <= 0
         ? null
         : (0, r.jsx)(c.zJl, {
               className: a()(S.scroller, l),
               fade: !0,
               children: (0, r.jsxs)("div", {
-                  ref: h,
-                  className: a()(S.voiceUsers, !o && S.collapsed),
+                  ref: g,
+                  className: a()(S.voiceUsers, !u && S.collapsed),
                   role: "group",
                   "aria-label": C.intl.string(C.t["/ZgaVU"]),
                   children: [
-                      y.map((e) => {
+                      I.map((e) => {
                           let { user: t, nick: i, voiceState: l } = e;
-                          return t.id !== d
+                          return t.id !== h
                               ? (0, r.jsx)(
                                     x,
                                     {
@@ -284,7 +285,7 @@ function A(e) {
                                 )
                               : null;
                       }),
-                      _ ? E : null,
+                      b ? y : null,
                   ],
               }),
           });
