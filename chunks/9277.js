@@ -19,12 +19,12 @@ var r = n(54381),
     y = n(388032),
     O = n(564355);
 function v(e, t) {
-    let { disabled: n, type: a } = e,
-        [v, S] = i.useState(!1),
-        I = (0, l.e7)([p.Z], () => {
+    let { disabled: n, type: a, channel: v } = e,
+        [S, I] = i.useState(!1),
+        T = (0, l.e7)([p.Z], () => {
             var e, t;
             return (
-                v &&
+                S &&
                 Object.values(
                     null != (t = null == (e = p.Z.frecencyWithoutFetchingLatest.favoriteGifs) ? void 0 : e.gifs)
                         ? t
@@ -32,49 +32,49 @@ function v(e, t) {
                 ).length <= 2
             );
         }),
-        [T, A, C] = (0, f.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], s.X),
-        N = i.useRef(0),
-        P = i.useCallback(() => {
-            S(!0),
-                clearTimeout(N.current),
-                (N.current = setTimeout(() => {
-                    S(!1), (N.current = 0);
+        [A, C, N, P] = (0, f.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId, e.activeChannelId], s.X),
+        R = i.useRef(0),
+        w = i.useCallback(() => {
+            I(!0),
+                clearTimeout(R.current),
+                (R.current = setTimeout(() => {
+                    I(!1), (R.current = 0);
                 }, 2000));
         }, []);
     (0, _.yp)({
         event: E.CkL.FAVORITE_GIF,
-        handler: P,
+        handler: w,
     });
-    let R = i.useCallback(() => {
-            (0, f.RO)(b.X1.GIF, a);
-        }, [a]),
-        { Component: w, events: D, play: x } = (0, c.V)(),
-        L = (0, m.v)(d.O),
-        j = a === h.Ie.NORMAL ? L : void 0;
+    let D = i.useCallback(() => {
+            (0, f.RO)(b.X1.GIF, a, v.id);
+        }, [a, v.id]),
+        { Component: x, events: L, play: j } = (0, c.V)(),
+        M = (0, m.v)(d.O),
+        k = a === h.Ie.NORMAL ? M : void 0;
     if (n) return null;
-    let M = T === b.X1.GIF && A === a;
+    let U = A === b.X1.GIF && C === a && P === v.id;
     return (0, r.jsx)(u.u, {
-        keyboardShortcut: I ? void 0 : j,
-        text: y.intl.string(I ? y.t.mE2e8A : y.t.nffuyb),
-        shouldShow: I || null != j,
-        forceOpen: I,
+        keyboardShortcut: T ? void 0 : k,
+        text: y.intl.string(T ? y.t.mE2e8A : y.t.nffuyb),
+        shouldShow: T || null != k,
+        forceOpen: T,
         children: (0, r.jsx)("div", {
             ref: t,
             className: o()(b.CT, O.buttonContainer),
             children: (0, r.jsx)(g.Z, {
                 className: O.button,
-                onMouseEnter: D.onMouseEnter,
-                onMouseLeave: D.onMouseLeave,
+                onMouseEnter: L.onMouseEnter,
+                onMouseLeave: L.onMouseLeave,
                 onClick: () => {
-                    R(), x();
+                    D(), j();
                 },
-                isActive: M,
-                pulse: v,
+                isActive: U,
+                pulse: S,
                 "aria-label": y.intl.string(y.t.PtVpk2),
-                "aria-expanded": M,
+                "aria-expanded": U,
                 "aria-haspopup": "dialog",
-                "aria-controls": C,
-                children: (0, r.jsx)(w, {
+                "aria-controls": N,
+                children: (0, r.jsx)(x, {
                     size: "refresh_sm",
                     color: "currentColor",
                 }),

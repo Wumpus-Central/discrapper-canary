@@ -105,6 +105,7 @@ function M(e) {
                         {
                             disabled: U,
                             type: M,
+                            channel: G,
                         },
                         "gif",
                     ),
@@ -133,6 +134,7 @@ function M(e) {
                         {
                             disabled: U,
                             type: M,
+                            channel: G,
                         },
                         "sticker",
                     ),
@@ -167,6 +169,7 @@ function M(e) {
                     disabled: U,
                     type: M,
                     pickerView: e,
+                    channelId: G.id,
                 },
                 "emoji",
             ),

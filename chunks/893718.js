@@ -290,29 +290,29 @@ function eC(e, t) {
         [e, t.id, t.guild_id],
     );
 }
-function eN(e, t) {
-    let n = i.useCallback(() => {
-            t || (0, P.RO)(ep.X1.EMOJI, e);
-        }, [t, e]),
-        r = i.useCallback(() => {
-            var n;
-            !t && (null == (n = e.gifs) ? void 0 : n.allowSending) && (0, P.RO)(ep.X1.GIF, e);
-        }, [t, e]),
+function eN(e, t, n) {
+    let r = i.useCallback(() => {
+            t || (0, P.RO)(ep.X1.EMOJI, e, n);
+        }, [t, e, n]),
         a = i.useCallback(() => {
-            var n;
-            !t && (null == (n = e.stickers) ? void 0 : n.allowSending) && (0, P.RO)(ep.X1.STICKER, e);
-        }, [t, e]);
+            var r;
+            !t && (null == (r = e.gifs) ? void 0 : r.allowSending) && (0, P.RO)(ep.X1.GIF, e, n);
+        }, [t, e, n]),
+        o = i.useCallback(() => {
+            var r;
+            !t && (null == (r = e.stickers) ? void 0 : r.allowSending) && (0, P.RO)(ep.X1.STICKER, e, n);
+        }, [t, e, n]);
     (0, q.yp)({
         event: ed.CkL.TOGGLE_EMOJI_POPOUT,
-        handler: n,
+        handler: r,
     }),
         (0, q.yp)({
             event: ed.CkL.TOGGLE_GIF_PICKER,
-            handler: r,
+            handler: a,
         }),
         (0, q.yp)({
             event: ed.CkL.TOGGLE_STICKER_PICKER,
-            handler: a,
+            handler: o,
         });
 }
 function eP(e, t, n) {
@@ -403,24 +403,24 @@ function ex(e, t, n, r) {
         s,
     );
 }
-function eL(e, t) {
-    let [n, r] = (0, P.Iu)((e) => [e.activeView, e.activeViewType], u.X),
-        a = (0, p.e7)([O.Z], () => O.Z.shouldShowPopup() && O.Z.activeViewType() === e);
+function eL(e, t, n) {
+    let [r, a, o] = (0, P.Iu)((e) => [e.activeView, e.activeViewType, e.activeChannelId], u.X),
+        s = (0, p.e7)([O.Z], () => O.Z.shouldShowPopup() && O.Z.activeViewType() === e);
     i.useEffect(
         () => () => {
-            (0, P._Q)(e);
+            (0, P._Q)(e, n);
         },
-        [e],
+        [e, n],
     );
-    let o = i.useCallback(() => {
+    let l = i.useCallback(() => {
             var e;
-            null != n || a || null == (e = t.current) || e.handleOuterClick();
-        }, [n, a, t]),
-        s = null == n || null == r || r !== e;
+            null != r || s || null == (e = t.current) || e.handleOuterClick();
+        }, [r, s, t]),
+        c = null == r || null == a || a !== e || o !== n;
     return {
-        expressionPickerView: n,
-        shouldHideExpressionPicker: s,
-        handleOuterClick: o,
+        expressionPickerView: r,
+        shouldHideExpressionPicker: c,
+        handleOuterClick: l,
     };
 }
 function ej(e, t, n) {
@@ -495,16 +495,16 @@ let ek = (e) => {
             r
         );
     },
-    eU = () => {
-        let { enabled: e } = (0, x.zM)("ChannelTextAreaContainer", { autoTrackExposure: !1 }),
-            [t, n] = i.useState(null);
+    eU = (e, t) => {
+        let { enabled: n } = (0, x.zM)("ChannelTextAreaContainer", { autoTrackExposure: !1 }),
+            [r, a] = i.useState(null);
         return {
-            currentAutocompleteType: t,
+            currentAutocompleteType: r,
             handleAutocompleteVisibilityChange: i.useCallback(
-                (t, r) => {
-                    e && n(r), t && (0, P._Q)();
+                (r, i) => {
+                    n && a(i), r && (0, P._Q)(e, t);
                 },
-                [e],
+                [n, e, t],
             ),
         };
     };
@@ -591,7 +591,7 @@ function eG(e, t) {
         to = (0, L.Z)(),
         { fontSize: ts } = (0, p.cj)([g.Z], () => ({ fontSize: g.Z.fontSize })),
         tl = (0, p.e7)([Y.Z], () => Y.Z.isEnabled());
-    eN(G, e9);
+    eN(G, e9, U.id);
     let { eventEmitter: tc, handleEditorSelectionChanged: tu } = eP(e$, f, m),
         td = i.useRef(f);
     td.current = f;
@@ -625,10 +625,10 @@ function eG(e, t) {
         }, []),
         { editorHeight: tI, handleResize: tT } = eD(z),
         { handleTab: tA, handleEnter: tC, handleMoveSelection: tN } = ej(th, eX, ta),
-        { expressionPickerView: tP, shouldHideExpressionPicker: tR, handleOuterClick: tw } = eL(G, e$),
+        { expressionPickerView: tP, shouldHideExpressionPicker: tR, handleOuterClick: tw } = eL(G, e$, U.id),
         tD = eM(tc, e$),
         tx = ek(f),
-        { currentAutocompleteType: tL, handleAutocompleteVisibilityChange: tj } = eU(),
+        { currentAutocompleteType: tL, handleAutocompleteVisibilityChange: tj } = eU(G, U.id),
         { moveAppsEntrypointToOverflow: tM } = $.n.useConfig({ location: "ChannelAppLauncher" }),
         tk = (0, T.Z)({ type: G });
     (0, J.S)(tc, U.guild_id, U.id);

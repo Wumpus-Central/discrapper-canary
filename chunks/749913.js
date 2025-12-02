@@ -848,6 +848,7 @@ let ev = i.memo(function (e) {
                                 type: ec,
                                 className: el.expressionPicker,
                                 onClick: x,
+                                channel: t,
                             },
                             "expression",
                         ),
