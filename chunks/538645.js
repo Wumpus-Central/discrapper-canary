@@ -8,8 +8,8 @@ var a = n(54381),
     c = n(481060),
     d = n(668781),
     u = n(53281),
-    m = n(281598),
-    p = n(365943),
+    m = n(267097),
+    p = n(281598),
     h = n(25251),
     x = n(373071),
     f = n(782691),
@@ -57,12 +57,10 @@ function j() {
     let { profileEffects: e, upsertConfig: t, clearAll: n } = (0, x.n6)(),
         [i, j] = l.useState(),
         _ = l.useRef(null),
-        y = (0, o.Wu)([h.Z], () => h.Z.getAllProfileEffects()),
-        [C, S] = l.useState("");
-    l.useEffect(() => {
-        (0, p.t)(!0);
-    }, []);
-    let E = l.useMemo(
+        y = (0, o.Wu)([h.Z], () => h.Z.getAllProfileEffects());
+    (0, m.Z)();
+    let [C, S] = l.useState(""),
+        E = l.useMemo(
             () =>
                 "" === C
                     ? y
@@ -77,11 +75,11 @@ function j() {
         ),
         T = l.useCallback(
             (e, n) => {
-                if (null == n || !e.type.startsWith("text/")) return (0, m.Eo)(b);
+                if (null == n || !e.type.startsWith("text/")) return (0, p.Eo)(b);
                 let [a, l] = n.split(",");
-                if (!a.includes("text/plain")) return (0, m.Eo)(b);
+                if (!a.includes("text/plain")) return (0, p.Eo)(b);
                 let i = JSON.parse(atob(l));
-                (i.skuId = (0, s.Z)()), t(i), (0, m.XA)("Profile Effect (maybe??) imported!");
+                (i.skuId = (0, s.Z)()), t(i), (0, p.XA)("Profile Effect (maybe??) imported!");
             },
             [t],
         ),
@@ -89,8 +87,8 @@ function j() {
             (e) => {
                 var t;
                 if ((null == (t = e.currentTarget) ? void 0 : t.files) == null)
-                    return void (0, m.Eo)("Error uploading file. Try again!");
-                (0, m.Kr)(e.currentTarget.files, T, m.Eo);
+                    return void (0, p.Eo)("Error uploading file. Try again!");
+                (0, p.Kr)(e.currentTarget.files, T, p.Eo);
             },
             [T],
         );
@@ -119,7 +117,7 @@ function j() {
                                                     body: "Are you sure you want to clear all profile effects? This cannot be undone.",
                                                     confirmText: "Clear All",
                                                     confirmVariant: "critical-primary",
-                                                })) && (n(), (0, m.XA)("All profile effects cleared!"));
+                                                })) && (n(), (0, p.XA)("All profile effects cleared!"));
                                             },
                                         }),
                                     ],
