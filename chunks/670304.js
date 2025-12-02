@@ -1,26 +1,27 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => c });
 var r = n(54381),
-    l = n(473749),
-    i = n(36361),
+    i = n(473749),
+    a = n(36361),
     o = n(111161),
-    a = n(770877);
-let s = l.memo(function (e) {
+    s = n(770877);
+function l(e) {
     let { node: t } = e;
     return null != t.render
         ? (0, r.jsx)(t.render, {})
         : (0, r.jsx)("div", {
-              className: a.pane,
+              className: s.pane,
               children: t.layout.map((e, n) =>
                   (0, r.jsxs)(
-                      l.Fragment,
+                      i.Fragment,
                       {
                           children: [
-                              (0, r.jsx)(i.Z, { node: e }),
-                              n !== t.layout.length - 1 && (0, r.jsx)(o.Z, { className: a.divider }),
+                              (0, r.jsx)(a.Z, { node: e }),
+                              n !== t.layout.length - 1 && (0, r.jsx)(o.Z, { className: s.divider }),
                           ],
                       },
                       e.key,
                   ),
               ),
           });
-});
+}
+let c = i.memo(l);

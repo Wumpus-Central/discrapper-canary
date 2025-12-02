@@ -1,22 +1,74 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r = n(54381),
-    l = n(473749),
-    i = n(120356),
-    o = n.n(i),
-    a = n(55160),
-    s = n(996435),
+    i = n(473749),
+    a = n(120356),
+    o = n.n(a),
+    s = n(55160),
+    l = n(996435),
     c = n(36361),
     u = n(530171),
     d = n(175993),
     f = n(445642);
-let p = l.memo(function (e) {
+function p(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function _(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                p(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function m(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function h(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : m(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function g(e) {
     let { node: t } = e,
-        { useTitle: n, layout: i, useCollapsedSubtitle: p, useNotice: b } = t,
-        [y, g] = l.useState(!1),
-        [v, m] = l.useState(!0);
-    l.useEffect(
+        { useTitle: n, layout: a, useCollapsedSubtitle: p, useNotice: m } = t,
+        [g, E] = i.useState(!1),
+        [b, y] = i.useState(!0);
+    i.useEffect(
         () =>
-            s.Z.subscribe(
+            l.Z.subscribe(
                 (e) => {
                     let { navTransition: t } = e;
                     return t;
@@ -24,67 +76,23 @@ let p = l.memo(function (e) {
                 (e) => {
                     if (null == e) return;
                     let n = (null == e ? void 0 : e.targetAccordionKey) === t.key;
-                    if ((n && !y && (g(!0), m(!1)), n && y)) {
-                        var r, l;
-                        s.Z.setState({
-                            navTransition:
-                                ((r = (function (e) {
-                                    for (var t = 1; t < arguments.length; t++) {
-                                        var n = null != arguments[t] ? arguments[t] : {},
-                                            r = Object.keys(n);
-                                        "function" == typeof Object.getOwnPropertySymbols &&
-                                            (r = r.concat(
-                                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                }),
-                                            )),
-                                            r.forEach(function (t) {
-                                                var r;
-                                                (r = n[t]),
-                                                    t in e
-                                                        ? Object.defineProperty(e, t, {
-                                                              value: r,
-                                                              enumerable: !0,
-                                                              configurable: !0,
-                                                              writable: !0,
-                                                          })
-                                                        : (e[t] = r);
-                                            });
-                                    }
-                                    return e;
-                                })({}, e)),
-                                (l = l = { targetAccordionKey: void 0 }),
-                                Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
-                                    : (function (e, t) {
-                                          var n = Object.keys(e);
-                                          if (Object.getOwnPropertySymbols) {
-                                              var r = Object.getOwnPropertySymbols(e);
-                                              n.push.apply(n, r);
-                                          }
-                                          return n;
-                                      })(Object(l)).forEach(function (e) {
-                                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
-                                      }),
-                                r),
-                        }),
-                            m(!0);
-                    }
+                    n && !g && (E(!0), y(!1)),
+                        n && g && (l.Z.setState({ navTransition: h(_({}, e), { targetAccordionKey: void 0 }) }), y(!0));
                 },
                 {
-                    equalityFn: a.X,
+                    equalityFn: s.X,
                     fireImmediately: !0,
                 },
             ),
-        [y, t.key],
+        [g, t.key],
     );
-    let h = null == n ? void 0 : n(y),
-        x = null == p ? void 0 : p(),
-        j = null == b ? void 0 : b(),
-        O = l.useCallback(
+    let O = null == n ? void 0 : n(g),
+        v = null == p ? void 0 : p(),
+        S = null == m ? void 0 : m(),
+        I = i.useCallback(
             (e) => {
                 e &&
-                    s.Z.setState({
+                    l.Z.setState({
                         navTransition: {
                             targetKey: t.key,
                             targetAccordionKey: t.key,
@@ -96,15 +104,16 @@ let p = l.memo(function (e) {
             [t.key],
         );
     return (0, r.jsx)("div", {
-        className: o()({ [f.open]: y }),
+        className: o()({ [f.open]: g }),
         children: (0, r.jsxs)(u.I, {
-            title: h,
-            collapsedSubtitle: x,
-            isExpanded: y,
-            onExpandedChange: g,
-            onExpandedChangeComplete: O,
-            animate: v,
-            children: [null != j && (0, r.jsx)(d.Z, { notice: j }), i.map((e) => (0, r.jsx)(c.Z, { node: e }, e.key))],
+            title: O,
+            collapsedSubtitle: v,
+            isExpanded: g,
+            onExpandedChange: E,
+            onExpandedChangeComplete: I,
+            animate: b,
+            children: [null != S && (0, r.jsx)(d.Z, { notice: S }), a.map((e) => (0, r.jsx)(c.Z, { node: e }, e.key))],
         }),
     });
-});
+}
+let E = i.memo(g);

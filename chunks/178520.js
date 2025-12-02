@@ -1,47 +1,42 @@
-n.d(e, { Z: () => u }), n(388685);
-var i = n(658722),
-    r = n.n(i),
-    l = n(481060),
-    s = n(28682);
-function u(t, e, n) {
-    let i = new Set(),
-        u = function (t) {
+n.d(t, { Z: () => s }), n(388685);
+var r = n(658722),
+    i = n.n(r),
+    a = n(481060),
+    o = n(28682);
+function s(e, t, n) {
+    let r = new Set(),
+        i = function (e) {
             var a;
-            let o = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            let s = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                 c = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                d = (null == (a = t.usePredicate) ? void 0 : a.call(t)) === !1 || o,
-                E =
-                    (function (t, e, n, i) {
-                        var u, a, o, c, d, E;
-                        let S = null == (u = t.getLegacySearchKey) ? void 0 : u.call(t);
-                        if (null != S) return e.length < 2 || i.has(S);
-                        if (t.type === s.Jq.SECTION && t.hoisted) return !0;
-                        let T = "useTitle" in t ? (null == (a = t.useTitle) ? void 0 : a.call(t, !1)) : void 0,
-                            I =
-                                "useNavigationTitle" in t
-                                    ? null == (o = t.useNavigationTitle)
-                                        ? void 0
-                                        : o.call(t)
-                                    : void 0,
-                            g = "useSearchTerms" in t ? (null == (c = t.useSearchTerms) ? void 0 : c.call(t)) : void 0;
-                        if (n || (null == T && null == I && null == g)) return !1;
-                        if ("" === e) return !0;
-                        let O = e.toLowerCase();
-                        for (let t of null != g ? g : []) if (r()(O, t.toLowerCase())) return !0;
-                        let _ = !1;
-                        if (null != T) {
-                            let t = null == (d = (0, l.qgQ)(T)) ? void 0 : d.toLowerCase();
-                            null != t && (_ = r()(O, t));
-                        }
-                        if (null != I && !_) {
-                            let t = null == (E = (0, l.qgQ)(I)) ? void 0 : E.toLowerCase();
-                            null != t && (_ = r()(O, t));
-                        }
-                        return _;
-                    })(t, e, d, n) || c,
-                S = !1;
-            if ((0, s.Lk)(t)) for (let e of t.layout) S = u(e, d, E) || S;
-            return !d && (E || S) && i.add(t.key), E || S;
+                u = (null == (a = e.usePredicate) ? void 0 : a.call(e)) === !1 || s,
+                d = l(e, t, u, n) || c,
+                f = !1;
+            if ((0, o.Lk)(e)) for (let t of e.layout) f = i(t, u, d) || f;
+            return !u && (d || f) && r.add(e.key), d || f;
         };
-    return u(t), i;
+    return i(e), r;
+}
+function l(e, t, n, r) {
+    var s, l, c, u, d, f;
+    let p = null == (s = e.getLegacySearchKey) ? void 0 : s.call(e);
+    if (null != p) return t.length < 2 || r.has(p);
+    if (e.type === o.Jq.SECTION && e.hoisted) return !0;
+    let _ = "useTitle" in e ? (null == (l = e.useTitle) ? void 0 : l.call(e, !1)) : void 0,
+        m = "useNavigationTitle" in e ? (null == (c = e.useNavigationTitle) ? void 0 : c.call(e)) : void 0,
+        h = "useSearchTerms" in e ? (null == (u = e.useSearchTerms) ? void 0 : u.call(e)) : void 0;
+    if (n || (null == _ && null == m && null == h)) return !1;
+    if ("" === t) return !0;
+    let g = t.toLowerCase();
+    for (let e of null != h ? h : []) if (i()(g, e.toLowerCase())) return !0;
+    let E = !1;
+    if (null != _) {
+        let e = null == (d = (0, a.qgQ)(_)) ? void 0 : d.toLowerCase();
+        null != e && (E = i()(g, e));
+    }
+    if (null != m && !E) {
+        let e = null == (f = (0, a.qgQ)(m)) ? void 0 : f.toLowerCase();
+        null != e && (E = i()(g, e));
+    }
+    return E;
 }

@@ -1,87 +1,99 @@
-n.d(e, { Z: () => c }), n(388685);
-var i = n(473749),
-    r = n(991346),
-    l = n(839469),
-    s = n(509613),
-    u = n(904849),
-    a = n(87432),
-    o = n(178520);
-function c(t, e) {
-    let n = i.useMemo(() => (0, s.Ql)(t), [t]),
-        c = (0, r.Pt)(),
-        { searchResults: d } = (0, l.F)(),
-        E = new Set();
-    for (let t of d) {
-        let e = t;
-        for (; null != e; ) {
-            var S;
-            let t = null == (S = c[e]) ? void 0 : S.parent;
-            if (null == t) {
-                E.add(e);
+n.d(t, { Z: () => _ }), n(388685);
+var r = n(473749),
+    i = n(991346),
+    a = n(839469),
+    o = n(509613),
+    s = n(904849),
+    l = n(87432),
+    c = n(178520);
+function u(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function d(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        "function" == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                }),
+            )),
+            r.forEach(function (t) {
+                u(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function f(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function p(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : f(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function _(e, t) {
+    let n = r.useMemo(() => (0, o.Ql)(e), [e]),
+        u = (0, i.Pt)(),
+        { searchResults: f } = (0, a.F)(),
+        _ = new Set();
+    for (let e of f) {
+        let t = e;
+        for (; null != t; ) {
+            var h;
+            let e = null == (h = u[t]) ? void 0 : h.parent;
+            if (null == e) {
+                _.add(t);
                 break;
             }
-            e = t;
+            t = e;
         }
     }
-    let T = (0, o.Z)(n, null != e ? e : "", E),
-        [I, g] = i.useState(T),
-        O = (function (t, e) {
-            if (t.size !== e.size) return !0;
-            for (let n of t) if (!e.has(n)) return !0;
-            return !1;
-        })(I, T);
+    let g = (0, c.Z)(n, null != t ? t : "", _),
+        [E, b] = r.useState(g),
+        y = m(E, g);
     return (
-        i.useEffect(() => {
-            O && g(T);
-        }, [O, T]),
-        i.useMemo(() => {
-            var t, e, i;
-            let r = new u.Z();
+        r.useEffect(() => {
+            y && b(g);
+        }, [y, g]),
+        r.useMemo(() => {
+            var e;
+            let t = new s.Z();
             return {
-                node:
-                    null != (t = (0, a.Z)(n, I, r))
-                        ? t
-                        : ((e = (function (t) {
-                              for (var e = 1; e < arguments.length; e++) {
-                                  var n = null != arguments[e] ? arguments[e] : {},
-                                      i = Object.keys(n);
-                                  "function" == typeof Object.getOwnPropertySymbols &&
-                                      (i = i.concat(
-                                          Object.getOwnPropertySymbols(n).filter(function (t) {
-                                              return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                                          }),
-                                      )),
-                                      i.forEach(function (e) {
-                                          var i;
-                                          (i = n[e]),
-                                              e in t
-                                                  ? Object.defineProperty(t, e, {
-                                                        value: i,
-                                                        enumerable: !0,
-                                                        configurable: !0,
-                                                        writable: !0,
-                                                    })
-                                                  : (t[e] = i);
-                                      });
-                              }
-                              return t;
-                          })({}, n)),
-                          (i = i = { layout: [] }),
-                          Object.getOwnPropertyDescriptors
-                              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(i))
-                              : (function (t, e) {
-                                    var n = Object.keys(t);
-                                    if (Object.getOwnPropertySymbols) {
-                                        var i = Object.getOwnPropertySymbols(t);
-                                        n.push.apply(n, i);
-                                    }
-                                    return n;
-                                })(Object(i)).forEach(function (t) {
-                                    Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(i, t));
-                                }),
-                          e),
-                directory: r,
+                node: null != (e = (0, l.Z)(n, E, t)) ? e : p(d({}, n), { layout: [] }),
+                directory: t,
             };
-        }, [I, n])
+        }, [E, n])
     );
+}
+function m(e, t) {
+    if (e.size !== t.size) return !0;
+    for (let n of e) if (!t.has(n)) return !0;
+    return !1;
 }

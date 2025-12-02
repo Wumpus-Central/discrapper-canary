@@ -112,7 +112,7 @@ async function O(e) {
                 ? c.Z.setState({ requestedTargetKey: e })
                 : await (0, i.ZDy)(
                       async () => {
-                          let { default: t } = await Promise.all([n.e("9452"), n.e("88569")]).then(n.bind(n, 245286));
+                          let { default: t } = await Promise.all([n.e("77069"), n.e("88569")]).then(n.bind(n, 245286));
                           return (n) => (0, r.jsx)(t, g(m({}, n), { target: e }));
                       },
                       {
@@ -165,7 +165,7 @@ function I() {
             [p.oAB.TEXT, d.n.CHAT_PANEL],
             [p.oAB.NOTIFICATIONS, e ? d.n.NOTIFICATIONS_PANEL : d.n.LEGACY_NOTIFICATIONS_SETTINGS_PANEL],
             [p.oAB.KEYBINDS, d.n.KEYBINDS_PANEL],
-            [p.oAB.LOCALE, d.n.LOCALE_PANEL],
+            [p.oAB.LOCALE, d.n.LANGUAGE_AND_TIME_PANEL],
             [p.oAB.WINDOWS, d.n.WINDOWS_PANEL],
             [p.oAB.LINUX, d.n.LINUX_PANEL],
             [p.oAB.STREAMER_MODE, d.n.STREAMER_MODE_PANEL],

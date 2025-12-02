@@ -94,8 +94,8 @@ function q(e, t) {
         e
     );
 }
-let Q = "cozy",
-    X = "compact",
+let X = "cozy",
+    Q = "compact",
     J = (0, O.hQ)(),
     $ = (0, O.hQ)(),
     ee = "1337",
@@ -302,28 +302,6 @@ class ei extends i.Component {
                   }),
               });
     }
-    renderTimestampHourCycle() {
-        let { timestampHourCycle: e } = this.props;
-        return (0, r.jsx)(d.FXm, {
-            label: V.intl.string(V.t.dyamEI),
-            options: [
-                {
-                    name: V.intl.string(V.t.FMWYvb),
-                    value: c.hg.AUTO,
-                },
-                {
-                    name: V.intl.string(V.t.p8NOwi),
-                    value: c.hg.H12,
-                },
-                {
-                    name: V.intl.string(V.t["+o/sOo"]),
-                    value: c.hg.H23,
-                },
-            ],
-            onChange: (e) => x.hg.updateSetting(e),
-            value: e,
-        });
-    }
     handleSliderRender(e) {
         return "".concat(e.toFixed(0), "%");
     }
@@ -399,15 +377,15 @@ class ei extends i.Component {
                                 options: [
                                     {
                                         name: V.intl.string(V.t.Jqj4cZ),
-                                        value: Q,
+                                        value: X,
                                     },
                                     {
                                         name: V.intl.string(V.t["1JNcPS"]),
-                                        value: X,
+                                        value: Q,
                                     },
                                 ],
                                 onChange: (e) => this.handleMessageDisplayModeChange({ value: e }),
-                                value: this.props.messageDisplayCompact ? X : Q,
+                                value: this.props.messageDisplayCompact ? Q : X,
                             }),
                             this.props.messageDisplayCompact &&
                                 (0, r.jsx)(d.rsf, {
@@ -431,18 +409,14 @@ class ei extends i.Component {
                     (0, r.jsx)(d.izJ, { className: H.divider }),
                 ],
             }),
-            l = (0, r.jsx)(C.F, {
-                setting: G.s6.APPEARANCE_TIMESTAMP_HOUR_CYCLE,
-                children: this.renderTimestampHourCycle(),
-            }),
-            u = (0, r.jsx)(d.Text, {
+            l = (0, r.jsx)(d.Text, {
                 variant: "text-md/normal",
                 className: H.a11yCallout,
                 children: (0, r.jsx)(er, {}),
             });
         return (0, r.jsxs)(k.Z, {
             title: V.intl.string(V.t["iHH+ky"]),
-            children: [t, n, a, o, s, l, u],
+            children: [t, n, a, o, s, l],
         });
     }
     constructor(...e) {
@@ -457,7 +431,7 @@ class ei extends i.Component {
             }),
             W(this, "handleMessageDisplayModeChange", (e) => {
                 let { value: t } = e;
-                x.jU.updateSetting(t === X), (0, m.ZZ)();
+                x.jU.updateSetting(t === Q), (0, m.ZZ)();
             }),
             W(this, "handleUIDensityChange", (e) => {
                 let { value: t } = e;
@@ -477,18 +451,17 @@ function eo() {
         t = x.RS.useSetting(),
         n = x.NA.useSetting(),
         i = x.L1.useSetting(),
-        a = x.hg.useSetting(),
-        o = x.YC.useSetting(),
-        c = y.y.useConfig({ location: "UserSettingsAppearance" }).enabled;
+        a = x.YC.useSetting(),
+        o = y.y.useConfig({ location: "UserSettingsAppearance" }).enabled;
     (0, p.ZP)(() => {
         ea(l.z.CLIENT_THEMES_SETTINGS_BADGE),
             ea(l.z.DEKSTOP_CUSTOM_APP_ICON_BADGE),
             ea(l.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK),
             ea(l.z.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE),
-            c && (0, b.w)();
+            o && (0, b.w)();
     });
-    let u = (0, N.A6)(),
-        d = (0, s.cj)([w.Z, D.ZP, h.Z, P.default, E.Z], () => {
+    let c = (0, N.A6)(),
+        u = (0, s.cj)([w.Z, D.ZP, h.Z, P.default, E.Z], () => {
             var e, t;
             return {
                 theme: w.Z.theme,
@@ -509,11 +482,10 @@ function eo() {
                 messageDisplayCompact: e,
                 hideSimpleEmbedContent: t && n,
                 clientTheme: i,
-                timestampHourCycle: a,
-                density: o,
-                darkSidebar: u,
+                density: a,
+                darkSidebar: c,
             },
-            d,
+            u,
         ),
     );
 }

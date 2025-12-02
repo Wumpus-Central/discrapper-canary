@@ -168,7 +168,7 @@ let L = (0, m.Un)({
                 n.e("30634"),
                 n.e("95546"),
                 n.e("34740"),
-                n.e("9452"),
+                n.e("77069"),
                 n.e("60831"),
                 n.e("72472"),
                 n.e("83243"),
@@ -260,12 +260,12 @@ let L = (0, m.Un)({
         webpackId: 430075,
         name: "SuspendedUserSafetyHubPage",
     }),
-    Q = (0, m.Un)({
+    X = (0, m.Un)({
         createPromise: () => Promise.all([n.e("72868"), n.e("10125")]).then(n.bind(n, 630107)),
         webpackId: 630107,
         name: "QuestsLandingPage",
     }),
-    X = (0, m.Un)({
+    Q = (0, m.Un)({
         createPromise: () => Promise.all([n.e("72868"), n.e("41734")]).then(n.bind(n, 792459)),
         webpackId: 792459,
         name: "QuestPreviewLandingPage",
@@ -423,7 +423,7 @@ class ei extends i.Component {
                                     }),
                                     (0, r.jsx)(_.Z, {
                                         path: C.Z5c.QUESTS(":questId"),
-                                        component: Q,
+                                        component: X,
                                         impressionName: s.ImpressionNames.QUESTS_LANDING_PAGE,
                                         impressionProperties: (e) => {
                                             let { computedMatch: t } = e;
@@ -432,7 +432,7 @@ class ei extends i.Component {
                                     }),
                                     (0, r.jsx)(_.Z, {
                                         path: C.Z5c.QUEST_PREVIEW(":questId"),
-                                        component: X,
+                                        component: Q,
                                     }),
                                     (0, r.jsx)(_.Z, {
                                         path: C.Z5c.HANDOFF,

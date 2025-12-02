@@ -1,79 +1,86 @@
-n.d(e, {
-    Z: () =>
-        function t(e, n, s) {
-            var u, a, o, c, d, E;
-            let S = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-            if (!n.has(e.key)) return null;
-            if (!(0, i.Lk)(e))
-                return (
-                    s.register(
-                        e,
-                        null == (c = S.panel) ? void 0 : c.key,
-                        null == (d = S.category) ? void 0 : d.key,
-                        null == (E = S.accordion) ? void 0 : E.key,
-                    ),
-                    e
-                );
-            let T = S;
-            e.type === i.Jq.SIDEBAR_ITEM && (T = l(r({}, S), { panel: e.layout[0] })),
-                e.type === i.Jq.PANEL && (T = l(r({}, S), { panel: e })),
-                e.type === i.Jq.CATEGORY && (T = l(r({}, S), { category: e })),
-                e.type === i.Jq.ACCORDION && (T = l(r({}, S), { accordion: e }));
-            let I = e.layout.map((e) => t(e, n, s, T)).filter((t) => null != t);
-            if (0 === I.length && !("render" in e || (e.type === i.Jq.SIDEBAR_ITEM && "onClick" in e))) return null;
-            let g = l(r({}, e), { layout: I });
-            return (
-                s.register(
-                    g,
-                    null == (u = T.panel) ? void 0 : u.key,
-                    null == (a = T.category) ? void 0 : a.key,
-                    null == (o = T.accordion) ? void 0 : o.key,
-                ),
-                g
-            );
-        },
-});
-var i = n(28682);
-function r(t) {
-    for (var e = 1; e < arguments.length; e++) {
-        var n = null != arguments[e] ? arguments[e] : {},
-            i = Object.keys(n);
+n.d(t, { Z: () => l });
+var r = n(28682);
+function i(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0,
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function a(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
-                Object.getOwnPropertySymbols(n).filter(function (t) {
-                    return Object.getOwnPropertyDescriptor(n, t).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            i.forEach(function (e) {
-                var i;
-                (i = n[e]),
-                    e in t
-                        ? Object.defineProperty(t, e, {
-                              value: i,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (t[e] = i);
+            r.forEach(function (t) {
+                i(e, t, n[t]);
             });
     }
-    return t;
+    return e;
 }
-function l(t, e) {
+function o(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function s(e, t) {
     return (
-        (e = null != e ? e : {}),
+        (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(e))
-            : (function (t, e) {
-                  var n = Object.keys(t);
-                  if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(t);
-                      n.push.apply(n, i);
-                  }
-                  return n;
-              })(Object(e)).forEach(function (n) {
-                  Object.defineProperty(t, n, Object.getOwnPropertyDescriptor(e, n));
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : o(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
-        t
+        e
+    );
+}
+function l(e, t, n) {
+    var i, o, c, u, d, f;
+    let p = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    if (!t.has(e.key)) return null;
+    if (!(0, r.Lk)(e))
+        return (
+            n.register(
+                e,
+                null == (u = p.panel) ? void 0 : u.key,
+                null == (d = p.category) ? void 0 : d.key,
+                null == (f = p.accordion) ? void 0 : f.key,
+            ),
+            e
+        );
+    let _ = p;
+    e.type === r.Jq.SIDEBAR_ITEM && (_ = s(a({}, p), { panel: e.layout[0] })),
+        e.type === r.Jq.PANEL && (_ = s(a({}, p), { panel: e })),
+        e.type === r.Jq.CATEGORY && (_ = s(a({}, p), { category: e })),
+        e.type === r.Jq.ACCORDION && (_ = s(a({}, p), { accordion: e }));
+    let m = e.layout.map((e) => l(e, t, n, _)).filter((e) => null != e);
+    if (0 === m.length && !("render" in e || (e.type === r.Jq.SIDEBAR_ITEM && "onClick" in e))) return null;
+    let h = s(a({}, e), { layout: m });
+    return (
+        n.register(
+            h,
+            null == (i = _.panel) ? void 0 : i.key,
+            null == (o = _.category) ? void 0 : o.key,
+            null == (c = _.accordion) ? void 0 : c.key,
+        ),
+        h
     );
 }

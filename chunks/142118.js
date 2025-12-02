@@ -1,40 +1,42 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => u });
 var r = n(54381),
-    l = n(473749),
-    i = n(481060),
+    i = n(473749),
+    a = n(481060),
     o = n(36361),
-    a = n(598612),
-    s = n(175993);
-let c = l.memo(function (e) {
+    s = n(598612),
+    l = n(175993);
+function c(e) {
     let { node: t } = e,
         { useTitle: n, useNavigationTitle: c, layout: u, init: d, useBadge: f, useNotice: p } = t,
-        b = null == n ? void 0 : n(),
-        y = null == f ? void 0 : f(),
-        g = null == p ? void 0 : p();
+        _ = null == n ? void 0 : n(),
+        m = null == f ? void 0 : f(),
+        h = null == p ? void 0 : p(),
+        g = null != n || null != c;
     return (
-        l.useEffect(() => {
+        i.useEffect(() => {
             null == d || d();
         }, [d]),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                null != b &&
-                    (0, r.jsx)(a.Y, {
-                        title: b,
-                        badge: y,
+                null != _ &&
+                    (0, r.jsx)(s.Y, {
+                        title: _,
+                        badge: m,
                     }),
                 (0, r.jsx)("div", {
-                    "data-settings-category-key": null != n || null != c ? t.key : void 0,
+                    "data-settings-category-key": g ? t.key : void 0,
                     "aria-hidden": !0,
                     style: { height: 1 },
                 }),
-                (0, r.jsxs)(i.Kqy, {
+                (0, r.jsxs)(a.Kqy, {
                     gap: 16,
                     children: [
-                        null != g && (0, r.jsx)(s.Z, { notice: g }),
+                        null != h && (0, r.jsx)(l.Z, { notice: h }),
                         u.map((e) => (0, r.jsx)(o.Z, { node: e }, e.key)),
                     ],
                 }),
             ],
         })
     );
-});
+}
+let u = i.memo(c);

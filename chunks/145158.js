@@ -1,5 +1,4 @@
-n.d(t, { Z: () => r });
-let r = (0, n(818083).B)({
+(0, n(818083).B)({
     kind: "user",
     id: "2024-10_system_date_formatter",
     label: "Use system APIs for date formatting",

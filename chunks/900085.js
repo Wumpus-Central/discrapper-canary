@@ -325,7 +325,6 @@ class X extends l.PureComponent {
                     case g.h8.GUILD:
                         return (0, f.jW)(e, async () => {
                             let { default: e } = await Promise.all([
-                                n.e("70363"),
                                 n.e("36599"),
                                 n.e("7654"),
                                 n.e("76692"),
