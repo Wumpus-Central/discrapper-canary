@@ -1,25 +1,27 @@
 n.d(t, { P: () => h }), n(539854), n(388685);
 var r = n(54381),
-    l = n(473749),
+    o = n(473749),
     i = n(120356),
-    o = n.n(i),
+    l = n.n(i),
     a = n(91192),
-    s = n(873546),
-    c = n(481060),
-    u = n(607070),
-    d = n(724757),
-    f = n(243778),
-    p = n(984802),
-    b = n(28682),
-    y = n(996435),
-    g = n(854014),
-    v = n(388032),
-    m = n(845435);
+    c = n(873546),
+    s = n(704215),
+    u = n(481060),
+    d = n(607070),
+    f = n(724757),
+    b = n(243778),
+    y = n(984802),
+    p = n(28682),
+    g = n(996435),
+    O = n(886880),
+    j = n(854014),
+    m = n(388032),
+    v = n(845435);
 function h(e) {
-    let { root: t, header: n, footer: i, onClose: g, emptyState: h } = e,
-        j = y.Z.useField("showNavigationMobile"),
-        O = l.useRef(null),
-        C = l.useMemo(() => {
+    let { root: t, footer: n, onClose: i, emptyState: s, searchQuery: O, onSearchChange: j } = e,
+        h = g.Z.useField("showNavigationMobile"),
+        P = o.useRef(null),
+        C = o.useMemo(() => {
             let e = [];
             return (
                 t.layout.forEach((t) => {
@@ -27,11 +29,11 @@ function h(e) {
                     n.forEach((t) => {
                         if (null != t.trailing)
                             switch (t.trailing.type) {
-                                case b.PU.BADGE_NEW:
-                                case b.PU.STRONGLY_DISCOURAGED_CUSTOM:
-                                    var n, r, l;
-                                    null == (r = (l = t.trailing).getDismissibleContentTypes) ||
-                                        null == (n = r.call(l)) ||
+                                case p.PU.BADGE_NEW:
+                                case p.PU.STRONGLY_DISCOURAGED_CUSTOM:
+                                    var n, r, o;
+                                    null == (r = (o = t.trailing).getDismissibleContentTypes) ||
+                                        null == (n = r.call(o)) ||
                                         n.forEach((t) => {
                                             e.push(t);
                                         });
@@ -41,7 +43,7 @@ function h(e) {
                 e
             );
         }, [t.layout]),
-        [P, S] = l.useMemo(() => {
+        [_, w] = o.useMemo(() => {
             let e = [],
                 n = [];
             return (
@@ -51,90 +53,95 @@ function h(e) {
                 [e, n]
             );
         }, [t.layout]),
-        _ = (0, p.Ll)(),
-        E = (0, d.Z)("settings-sidebar", O),
-        w = y.Z.useField("currentPanelKey");
+        k = (0, y.Ll)(),
+        N = (0, f.Z)("settings-sidebar", P),
+        E = g.Z.useField("currentPanelKey");
     return (
-        l.useEffect(() => {
+        o.useEffect(() => {
             var e;
-            if (null == O.current || null == w) return;
-            let t = y.Z.getField("navTransition"),
+            if (null == P.current || null == E) return;
+            let t = g.Z.getField("navTransition"),
                 n = null == t || t.animateScroll,
                 r =
-                    null == (e = O.current.getScrollerNode())
+                    null == (e = P.current.getScrollerNode())
                         ? void 0
-                        : e.querySelector('[data-settings-sidebar-item="'.concat(w, '"]'));
+                        : e.querySelector('[data-settings-sidebar-item="'.concat(E, '"]'));
             null != r &&
-                O.current.scrollIntoViewNode({
+                P.current.scrollIntoViewNode({
                     node: r,
                     padding: 8,
-                    animate: !u.Z.useReducedMotion && n,
+                    animate: !d.Z.useReducedMotion && n,
                 });
-        }, [w]),
-        (0, r.jsx)(c.f6W, {
-            theme: _,
+        }, [E]),
+        (0, r.jsx)(u.f6W, {
+            theme: k,
             children: (e) =>
-                (0, r.jsx)(f.ZP, {
+                (0, r.jsx)(b.ZP, {
                     contentTypes: C,
                     children: (t) => {
-                        let { visibleContent: l } = t;
+                        let { visibleContent: o } = t;
                         return (0, r.jsxs)("div", {
-                            className: o()(m.sidebar, e, {
-                                [m.mobile]: s.tq,
-                                [m.mobileNavigationOpen]: j,
+                            className: l()(v.sidebar, e, {
+                                [v.mobile]: c.tq,
+                                [v.mobileNavigationOpen]: h,
                             }),
                             children: [
                                 (0, r.jsxs)("div", {
-                                    className: m.fixedContent,
+                                    className: v.fixedContent,
                                     children: [
-                                        s.tq &&
+                                        c.tq &&
                                             (0, r.jsx)("div", {
-                                                className: m.mobileCloseButton,
-                                                children: (0, r.jsx)(c.hU, {
-                                                    icon: c.Uz9,
-                                                    onClick: g,
+                                                className: v.mobileCloseButton,
+                                                children: (0, r.jsx)(u.hU, {
+                                                    icon: u.Uz9,
+                                                    onClick: i,
                                                     variant: "icon-only",
                                                     size: "sm",
-                                                    "aria-label": v.intl.string(v.t.cpT0Cq),
+                                                    "aria-label": m.intl.string(m.t.cpT0Cq),
                                                 }),
                                             }),
                                         (0, r.jsx)("div", {
-                                            children: P.map((e) =>
+                                            children: _.map((e) =>
                                                 (0, r.jsx)(
                                                     x,
                                                     {
                                                         section: e,
-                                                        visibleContent: l,
+                                                        visibleContent: o,
                                                         hoisted: !0,
                                                     },
                                                     e.key,
                                                 ),
                                             ),
                                         }),
-                                        null != n && (0, r.jsx)(n, {}),
-                                        null != h && 0 === S.length && (0, r.jsx)(h, {}),
+                                        null != O &&
+                                            null != j &&
+                                            (0, r.jsx)(S, {
+                                                searchQuery: O,
+                                                onSearchChange: j,
+                                            }),
+                                        null != s && 0 === w.length && (0, r.jsx)(s, {}),
                                     ],
                                 }),
                                 (0, r.jsx)(a.bG, {
-                                    navigator: E,
+                                    navigator: N,
                                     children: (0, r.jsx)(a.SJ, {
                                         children: (e) => {
                                             var t,
-                                                n,
-                                                { ref: o } = e,
+                                                i,
+                                                { ref: l } = e,
                                                 a = (function (e, t) {
                                                     if (null == e) return {};
                                                     var n,
                                                         r,
-                                                        l = (function (e, t) {
+                                                        o = (function (e, t) {
                                                             if (null == e) return {};
                                                             var n,
                                                                 r,
-                                                                l = {},
+                                                                o = {},
                                                                 i = Object.keys(e);
                                                             for (r = 0; r < i.length; r++)
-                                                                (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
-                                                            return l;
+                                                                (n = i[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
+                                                            return o;
                                                         })(e, t);
                                                     if (Object.getOwnPropertySymbols) {
                                                         var i = Object.getOwnPropertySymbols(e);
@@ -142,12 +149,12 @@ function h(e) {
                                                             (n = i[r]),
                                                                 !(t.indexOf(n) >= 0) &&
                                                                     Object.prototype.propertyIsEnumerable.call(e, n) &&
-                                                                    (l[n] = e[n]);
+                                                                    (o[n] = e[n]);
                                                     }
-                                                    return l;
+                                                    return o;
                                                 })(e, ["ref"]);
                                             return (0, r.jsxs)(
-                                                c.h21,
+                                                u.h21,
                                                 ((t = (function (e) {
                                                     for (var t = 1; t < arguments.length; t++) {
                                                         var n = null != arguments[t] ? arguments[t] : {},
@@ -177,39 +184,39 @@ function h(e) {
                                                     {
                                                         ref: (e) => {
                                                             var t;
-                                                            (O.current = e),
-                                                                (o.current =
+                                                            (P.current = e),
+                                                                (l.current =
                                                                     null !=
                                                                     (t = null == e ? void 0 : e.getScrollerNode())
                                                                         ? t
                                                                         : null);
                                                         },
-                                                        className: m.navScroller,
+                                                        className: v.navScroller,
                                                         fade: !0,
                                                     },
                                                     a,
                                                 )),
-                                                (n = n =
+                                                (i = i =
                                                     {
                                                         children: [
                                                             (0, r.jsx)("nav", {
-                                                                className: m.nav,
-                                                                children: S.map((e) =>
+                                                                className: v.nav,
+                                                                children: w.map((e) =>
                                                                     (0, r.jsx)(
                                                                         x,
                                                                         {
                                                                             section: e,
-                                                                            visibleContent: l,
+                                                                            visibleContent: o,
                                                                         },
                                                                         e.key,
                                                                     ),
                                                                 ),
                                                             }),
-                                                            null != i && (0, r.jsx)(i, {}),
+                                                            null != n && (0, r.jsx)(n, {}),
                                                         ],
                                                     }),
                                                 Object.getOwnPropertyDescriptors
-                                                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                                                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
                                                     : (function (e, t) {
                                                           var n = Object.keys(e);
                                                           if (Object.getOwnPropertySymbols) {
@@ -217,11 +224,11 @@ function h(e) {
                                                               n.push.apply(n, r);
                                                           }
                                                           return n;
-                                                      })(Object(n)).forEach(function (e) {
+                                                      })(Object(i)).forEach(function (e) {
                                                           Object.defineProperty(
                                                               t,
                                                               e,
-                                                              Object.getOwnPropertyDescriptor(n, e),
+                                                              Object.getOwnPropertyDescriptor(i, e),
                                                           );
                                                       }),
                                                 t),
@@ -238,33 +245,74 @@ function h(e) {
 }
 function x(e) {
     var t;
-    let { section: n, visibleContent: l, hoisted: i = !1 } = e,
-        o = null == (t = n.useLabel) ? void 0 : t.call(n);
+    let { section: n, visibleContent: o, hoisted: i = !1 } = e,
+        l = null == (t = n.useLabel) ? void 0 : t.call(n);
     return (0, r.jsxs)("ul", {
-        className: m.section,
-        "aria-label": o,
+        className: v.section,
+        "aria-label": l,
         children: [
-            null != o &&
+            null != l &&
                 (0, r.jsx)("div", {
-                    className: m.sectionLabel,
-                    children: (0, r.jsx)(c.Heading, {
-                        className: m.label,
+                    className: v.sectionLabel,
+                    children: (0, r.jsx)(u.Heading, {
+                        className: v.label,
                         variant: "heading-sm/medium",
                         color: "text-tertiary",
-                        children: o,
+                        children: l,
                     }),
                 }),
             n.layout.map((e) =>
                 (0, r.jsx)(
-                    g.y,
+                    j.y,
                     {
                         node: e,
-                        visibleContent: l,
+                        visibleContent: o,
                         hoisted: i,
                     },
                     e.key,
                 ),
             ),
+        ],
+    });
+}
+function S(e) {
+    let { searchQuery: t, onSearchChange: n } = e,
+        i = o.useRef(null),
+        [l, a] = (0, b.US)([s.z.USER_SETTINGS_REDESIGN_EDUCATION_POPOVER]),
+        c = o.useCallback(() => {
+            n("");
+        }, [n]),
+        d = o.useMemo(
+            () => ({
+                title: m.intl.string(m.t.Kv519a),
+                body: m.intl.string(m.t.cTGJBZ),
+                badge: "new",
+                position: "right",
+                align: "center",
+                scrollBehavior: "sticky",
+            }),
+            [],
+        );
+    return (0, r.jsxs)("div", {
+        className: v.searchBarContainer,
+        children: [
+            (0, r.jsx)(u.E1j, {
+                size: "md",
+                query: t,
+                onChange: n,
+                onClear: c,
+            }),
+            (0, r.jsx)("div", {
+                className: v.popoverAnchor,
+                ref: i,
+            }),
+            (0, r.jsx)(O.Z, {
+                dismissibleContentType: s.z.USER_SETTINGS_REDESIGN_EDUCATION_POPOVER,
+                targetElementRef: i,
+                visibleContent: l,
+                markAsDismissed: a,
+                props: d,
+            }),
         ],
     });
 }
