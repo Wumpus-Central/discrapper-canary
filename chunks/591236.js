@@ -1,58 +1,62 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => m });
 var r = n(588468),
-    i = n(496675),
-    a = n(483360),
-    o = n(877565),
-    s = n(590921),
-    l = n(761652),
-    c = n(981631),
-    u = n(185923),
-    d = n(388032);
-function f(e) {
-    return "".concat(l.a4).concat(e.name).concat(l.jp);
+    i = n(430824),
+    a = n(496675),
+    o = n(483360),
+    s = n(877565),
+    l = n(590921),
+    c = n(761652),
+    u = n(981631),
+    d = n(185923),
+    f = n(388032);
+let p = 50;
+function _(e) {
+    return "".concat(c.a4).concat(e.name).concat(c.jp);
 }
-let p = {
-    sentinel: l.a4,
-    matches(e, t, n, r, a) {
+let m = {
+    sentinel: c.a4,
+    matches(e, t, n, r, i) {
         var o, s;
         return (
             r &&
-            null != (s = null == (o = a.chatInputType.autocomplete) ? void 0 : o.addReactionShortcut) &&
+            null != (s = null == (o = i.chatInputType.autocomplete) ? void 0 : o.addReactionShortcut) &&
             s &&
-            (i.Z.can(c.Plq.ADD_REACTIONS, e) || e.isPrivate())
+            (a.Z.can(u.Plq.ADD_REACTIONS, e) || e.isPrivate())
         );
     },
     queryResults(e, t, n, r, i) {
-        let { emojis: o } = a.ZP.queryEmojiResults({
+        let { emojis: a } = o.ZP.queryEmojiResults({
             query: n,
             channel: e,
-            intention: u.Hz.REACTION,
+            intention: d.Hz.REACTION,
+            maxCount: p,
         });
-        return { results: { emojis: o.unlocked } };
+        return { results: { emojis: a.unlocked } };
     },
     renderResults(e) {
         let {
             results: { emojis: t },
             selectedIndex: n,
-            query: i,
-            onHover: a,
-            onClick: s,
+            query: a,
+            onHover: o,
+            onClick: l,
         } = e;
-        return (0, o.HI)({
-            query: i,
+        return (0, s.HI)({
+            query: a,
             selectedIndex: n,
             autocompletes: t,
-            onHover: a,
-            onClick: s,
-            titleWithQuery: d.t.o1Nmpc,
-            titleWithoutQuery: d.intl.string(d.t.sMOuuS),
+            onHover: o,
+            onClick: l,
+            titleWithQuery: f.t.o1Nmpc,
+            titleWithoutQuery: f.intl.string(f.t.sMOuuS),
             Component: r.ZP.Emoji,
             getProps: (e) => ({
                 emoji: e,
                 key: e.id || e.uniqueName || e.name,
-                sentinel: l.Iv,
+                sentinel: c.Iv,
+                guild: null != e.guildId ? i.Z.getGuild(e.guildId) : null,
             }),
-            getQuery: (e) => "".concat(l.a4).concat(e),
+            getQuery: (e) => "".concat(c.a4).concat(e),
             key: "reactions",
         });
     },
@@ -63,6 +67,6 @@ let p = {
                 options: r,
             } = e,
             i = t[n];
-        return r.sendMessage(f(i)), { type: s.z2.REACTION };
+        return r.sendMessage(_(i)), { type: l.z2.REACTION };
     },
 };
