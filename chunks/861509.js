@@ -10,5 +10,6 @@ var i = n(509613),
     d = n(388032);
 let E = (0, i.Uc)(l.n.NOTIFICATION_SELECTION_FIELD_SET, {
     useTitle: () => d.intl.string(d.t.FEVRDV),
+    variant: "separators",
     buildLayout: () => [u.I, c.Z, s.r, r.M, o.F, a.f],
 });
