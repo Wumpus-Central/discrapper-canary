@@ -43,6 +43,12 @@ class l {
     isEqual(e) {
         return e instanceof l && e.type === this.type && (0, i.ou)(this.games, e.games, this.type);
     }
+    getProfileAnalyticsOptions() {
+        return { widgetType: this.type };
+    }
+    getProfileEditAnalyticsOptions() {
+        return { widgetEdited: this.type };
+    }
     constructor({ id: e, type: t, games: n }) {
         a(this, "id", void 0),
             a(this, "type", void 0),

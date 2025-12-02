@@ -1,72 +1,93 @@
-e.d(i, { default: () => b });
-var n = e(54381),
-    a = e(473749),
-    r = e(793030),
-    l = e(442837),
-    s = e(481060),
-    c = e(594174),
-    d = e(63063),
-    o = e(931847),
-    u = e(86419),
-    p = e(778414),
-    x = e(872269),
-    h = e(228168),
-    w = e(388032),
-    g = e(107669);
-function v(t) {
-    let { widget: i, user: e } = t;
-    return (0, n.jsx)(p.Z, {
-        widget: i,
-        user: e,
+n.d(e, { default: () => h });
+var i = n(54381),
+    r = n(473749),
+    l = n(793030),
+    a = n(442837),
+    c = n(481060),
+    o = n(594174),
+    s = n(63063),
+    u = n(86419),
+    d = n(778414),
+    b = n(872269),
+    f = n(228168),
+    p = n(388032),
+    g = n(107669);
+function x(t) {
+    let { widget: e, user: n } = t;
+    return (0, i.jsx)(d.Z, {
+        widget: e,
+        user: n,
         disableInteraction: !0,
     });
 }
-function b(t) {
-    let { transitionState: i, widget: e, userId: p, onClose: b, trackUserProfileEditAction: f } = t,
-        E = a.useCallback(() => {
-            (0, u.y8)(e.type),
-                f({
-                    action: "WIDGET_REMOVED",
-                    widgetEdited: e.type,
-                    applicationId: e instanceof o.q ? e.applicationId : void 0,
-                }),
-                b(),
-                (0, x.L$)(h.qb.WIDGET_REMOVED);
-        }, [e, b, f]),
-        m = (0, l.e7)([c.default], () => c.default.getUser(p));
-    return null == m
+function h(t) {
+    let { transitionState: e, widget: n, userId: d, onClose: h, trackUserProfileEditAction: w } = t,
+        y = r.useCallback(() => {
+            (0, u.y8)(n.type),
+                w(
+                    (function (t) {
+                        for (var e = 1; e < arguments.length; e++) {
+                            var n = null != arguments[e] ? arguments[e] : {},
+                                i = Object.keys(n);
+                            "function" == typeof Object.getOwnPropertySymbols &&
+                                (i = i.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (t) {
+                                        return Object.getOwnPropertyDescriptor(n, t).enumerable;
+                                    }),
+                                )),
+                                i.forEach(function (e) {
+                                    var i;
+                                    (i = n[e]),
+                                        e in t
+                                            ? Object.defineProperty(t, e, {
+                                                  value: i,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0,
+                                              })
+                                            : (t[e] = i);
+                                });
+                        }
+                        return t;
+                    })({ action: "WIDGET_REMOVED" }, n.getProfileEditAnalyticsOptions()),
+                ),
+                h(),
+                (0, b.L$)(f.qb.WIDGET_REMOVED);
+        }, [n, h, w]),
+        v = (0, a.e7)([o.default], () => o.default.getUser(d));
+    return null == v
         ? null
-        : (0, n.jsxs)(r.Modal, {
-              transitionState: i,
-              onClose: b,
-              title: w.intl.string(w.t.Mm07Yc),
-              subtitle: w.intl.format(w.t["x+djI4"], { helpUrl: d.w }),
+        : (0, i.jsxs)(l.Modal, {
+              transitionState: e,
+              onClose: h,
+              title: p.intl.string(p.t.Mm07Yc),
+              subtitle: p.intl.format(p.t["x+djI4"], { helpUrl: s.w }),
               actions: [
                   {
                       variant: "secondary",
-                      text: w.intl.string(w.t["ETE/oC"]),
-                      onClick: b,
+                      text: p.intl.string(p.t["ETE/oC"]),
+                      onClick: h,
                   },
                   {
                       variant: "critical-primary",
-                      text: w.intl.string(w.t.Mm07Yc),
-                      onClick: E,
+                      text: p.intl.string(p.t.Mm07Yc),
+                      onClick: y,
                   },
               ],
               children: [
-                  (0, n.jsx)("div", {
+                  (0, i.jsx)("div", {
                       className: g.widgetPreview,
-                      children: (0, n.jsx)(v, {
-                          widget: e,
-                          user: m,
+                      children: (0, i.jsx)(x, {
+                          widget: n,
+                          user: v,
                       }),
                   }),
-                  (0, n.jsx)("div", {
+                  (0, i.jsx)("div", {
                       className: g.hintText,
-                      children: (0, n.jsx)(s.Text, {
+                      children: (0, i.jsx)(c.Text, {
                           color: "text-secondary",
                           variant: "text-sm/normal",
-                          children: w.intl.string(w.t.bQNGeT),
+                          children: p.intl.string(p.t.bQNGeT),
                       }),
                   }),
               ],

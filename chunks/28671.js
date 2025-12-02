@@ -26,11 +26,33 @@ function b(e) {
         v = i.useCallback(() => {
             null != y &&
                 ((0, u.qH)(y.type, y, !0),
-                h({
-                    action: "WIDGET_ADDED",
-                    widgetEdited: y.type,
-                    applicationId: y.applicationId,
-                }),
+                h(
+                    (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            "function" == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    }),
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0,
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })({ action: "WIDGET_ADDED" }, y.getProfileEditAnalyticsOptions()),
+                ),
                 (0, d.L$)(g.qb.WIDGET_ADDED));
         }, [y, h]);
     return (0, r.jsx)(f.Z, {

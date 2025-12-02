@@ -23,21 +23,21 @@ function y(e) {
     let { targetElementRef: n, onClose: y } = e,
         [C, S] = l.useState(!1),
         { trackUserProfileEditAction: E } = (0, u.KZ)(),
-        T = (0, r.e7)([b.default], () => b.default.getId()),
-        { config: N, application: O } = (0, h.G)(),
-        { fetched: P, hasAlreadyLinked: I, canStartAuthorization: w, startAuthorization: k } = (0, c.F)(O),
-        R = (0, x.ZP)(T),
+        N = (0, r.e7)([b.default], () => b.default.getId()),
+        { config: T, application: O } = (0, h.G)(),
+        { fetched: P, hasAlreadyLinked: w, canStartAuthorization: I, startAuthorization: k } = (0, c.F)(O),
+        R = (0, x.ZP)(N),
         A =
             null == R || null == (t = R.widgets)
                 ? void 0
                 : t.some((e) => e instanceof m.q && e.applicationId === (null == O ? void 0 : O.id));
-    return null != N && null != N.edit_profile_upsell_image && null != O && P
+    return null != T && null != T.edit_profile_upsell_image && null != O && P
         ? (0, a.jsx)(d.ZP, {
-              contentTypes: I
+              contentTypes: w
                   ? A
                       ? []
                       : [s.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_LINKED]
-                  : w
+                  : I
                     ? [s.z.APPLICATION_WIDGET_EDIT_PROFILE_POPOVER_UNLINKED]
                     : [],
               children: (e) => {
@@ -50,7 +50,7 @@ function y(e) {
                       gradientColor: "blue",
                       graphic: {
                           type: "image",
-                          src: N.edit_profile_upsell_image,
+                          src: T.edit_profile_upsell_image,
                       },
                       title: _.intl.format(_.t.TXDztH, { applicationName: O.name }),
                       body: r ? _.intl.string(_.t["63Kso0"]) : _.intl.string(_.t.HwXoeC),
@@ -64,24 +64,51 @@ function y(e) {
                                     onClick: () => {
                                         S(!0),
                                             (0, f.openUserProfileModal)({
-                                                userId: T,
+                                                userId: N,
                                                 section: j.oh.WIDGETS,
                                             })
                                                 .then(() => {
-                                                    l(v.L.TAKE_ACTION),
-                                                        y(),
-                                                        (0, p.qH)(
-                                                            i.l.APPLICATION,
-                                                            new m.q({
-                                                                applicationId: O.id,
-                                                                type: i.l.APPLICATION,
-                                                            }),
+                                                    l(v.L.TAKE_ACTION), y();
+                                                    let e = new m.q({
+                                                        applicationId: O.id,
+                                                        type: i.l.APPLICATION,
+                                                    });
+                                                    (0, p.qH)(e.type, e),
+                                                        E(
+                                                            (function (e) {
+                                                                for (var t = 1; t < arguments.length; t++) {
+                                                                    var n = null != arguments[t] ? arguments[t] : {},
+                                                                        a = Object.keys(n);
+                                                                    "function" == typeof Object.getOwnPropertySymbols &&
+                                                                        (a = a.concat(
+                                                                            Object.getOwnPropertySymbols(n).filter(
+                                                                                function (e) {
+                                                                                    return Object.getOwnPropertyDescriptor(
+                                                                                        n,
+                                                                                        e,
+                                                                                    ).enumerable;
+                                                                                },
+                                                                            ),
+                                                                        )),
+                                                                        a.forEach(function (t) {
+                                                                            var a;
+                                                                            (a = n[t]),
+                                                                                t in e
+                                                                                    ? Object.defineProperty(e, t, {
+                                                                                          value: a,
+                                                                                          enumerable: !0,
+                                                                                          configurable: !0,
+                                                                                          writable: !0,
+                                                                                      })
+                                                                                    : (e[t] = a);
+                                                                        });
+                                                                }
+                                                                return e;
+                                                            })(
+                                                                { action: "WIDGET_ADDED" },
+                                                                e.getProfileEditAnalyticsOptions(),
+                                                            ),
                                                         ),
-                                                        E({
-                                                            action: "WIDGET_ADDED",
-                                                            widgetEdited: i.l.APPLICATION,
-                                                            applicationId: O.id,
-                                                        }),
                                                         (0, g.L$)(j.qb.WIDGET_ADDED);
                                                 })
                                                 .finally(() => S(!1));
@@ -95,7 +122,7 @@ function y(e) {
                                             onConfirm: () => {
                                                 S(!0),
                                                     (0, f.openUserProfileModal)({
-                                                        userId: T,
+                                                        userId: N,
                                                         section: j.oh.WIDGETS,
                                                     })
                                                         .then(() => {

@@ -94,11 +94,33 @@ function I(e) {
             d ||
                 null == j ||
                 ((0, h.qH)(n, j),
-                O({
-                    action: "WIDGET_ADDED",
-                    widgetEdited: n,
-                    applicationId: j instanceof p.q ? j.applicationId : void 0,
-                }),
+                O(
+                    (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(n);
+                            "function" == typeof Object.getOwnPropertySymbols &&
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    }),
+                                )),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
+                                                  value: r,
+                                                  enumerable: !0,
+                                                  configurable: !0,
+                                                  writable: !0,
+                                              })
+                                            : (e[t] = r);
+                                });
+                        }
+                        return e;
+                    })({ action: "WIDGET_ADDED" }, j.getProfileEditAnalyticsOptions()),
+                ),
                 (0, m.L$)(E.qb.WIDGET_ADDED),
                 null == l || l());
         }, [d, n, j, O, l]);
