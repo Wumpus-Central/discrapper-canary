@@ -1231,7 +1231,6 @@ let e_ = "@me",
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "png";
             return "/avatar-decoration-presets/".concat(e, ".").concat(t);
         },
-        USER_PROFILE_EFFECTS: "/user-profile-effects",
         COLLECTIBLES_CATEGORIES: "/collectibles-categories",
         COLLECTIBLES_CATEGORIES_V2: "/collectibles-categories/v2",
         COLLECTIBLES_SEARCH: "/shop/search",
@@ -6066,7 +6065,7 @@ var nF = (function (e) {
             (e.GAME_SERVER_HOSTING = "35370817986839"),
             (e.RECURRING_PROMOTION = "35479903794199"),
             (e.PREMIUM_GROUP_ABOUT = "36320645875479"),
-            (e.SOCIAL_LAYER_STOREFRONT = "36288452105239"),
+            (e.SOCIAL_LAYER_STOREFRONT = "36394123113239"),
             (e.CHECKPOINT = "36415877391511"),
             e
         );

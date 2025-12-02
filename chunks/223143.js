@@ -63,6 +63,7 @@ function f(e, t) {
         e
     );
 }
+n(25251);
 let p = i.v.VARIANTS_GROUP;
 function _() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],

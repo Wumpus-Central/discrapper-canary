@@ -1,11 +1,10 @@
-n.d(t, { Z: () => D });
+n.d(t, { Z: () => v });
 var r,
     i = n(392711),
     a = n(442837),
     o = n(570140),
-    s = n(212161),
-    l = n(70956);
-function c(e, t, n) {
+    s = n(212161);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,15 +17,9 @@ function c(e, t, n) {
         e
     );
 }
-let u = {},
-    d = l.Z.Millis.MINUTE,
-    f = l.Z.Millis.HOUR,
-    p = !1,
-    _ = 0,
-    m = 0,
-    h = (e) => Math.min(d * 2 ** e, f),
-    g = (e, t) => !(0, i.isEqual)(u[e], t) && ((u[e] = t), !0),
-    E = (e) => {
+let c = {},
+    u = (e, t) => !(0, i.isEqual)(c[e], t) && ((c[e] = t), !0),
+    d = (e) => {
         let t = !1;
         return (
             e.items.forEach((n) => {
@@ -35,100 +28,73 @@ let u = {},
                     skuId: e.skuId,
                     config: n,
                 };
-                g(e.skuId, r) && (t = !0);
+                u(e.skuId, r) && (t = !0);
             }),
             t
         );
     },
-    b = (e) => {
+    f = (e) => {
         let t = !1;
         return (
             e.forEach((e) => {
                 e.products.forEach((e) => {
-                    E(e) && (t = !0);
+                    d(e) && (t = !0);
                 });
             }),
             t
         );
     },
-    y = (e) => {
+    p = (e) => {
         let t = !1;
         return (
             e.forEach((e) => {
-                E(e) && (t = !0);
+                d(e) && (t = !0);
             }),
             t
         );
     },
-    O = (e) => {
-        p = !0;
-    },
-    v = (e) => {
-        let { configs: t } = e;
-        t.forEach((e) => {
-            g(e.skuId, {
-                skuId: e.skuId,
-                config: e,
-            });
-        }),
-            (_ = 1 / 0),
-            (m = 0),
-            (p = !1);
-    },
-    S = (e) => {
-        (_ = Date.now() + h(m)), (m += 1), (p = !1);
-    },
-    I = (e) => {
+    _ = (e) => {
         let { product: t } = e;
-        return E(t);
+        return d(t);
     },
-    T = (e) => {
+    m = (e) => {
         let { categories: t } = e;
-        return b(t);
+        return f(t);
     },
-    A = (e) => {
+    h = (e) => {
         let { categories: t } = e;
-        return b(t.categories);
+        return f(t.categories);
     },
-    C = (e) => {
+    g = (e) => {
         let { shopHome: t } = e;
-        return b(t.categories);
+        return f(t.categories);
     },
-    N = (e) => {
+    E = (e) => {
         let { purchases: t } = e;
-        return y(t);
+        return p(t);
     },
-    P = (e) => {
+    b = (e) => {
         let { purchases: t } = e;
-        return null != t && y(t);
+        return null != t && p(t);
     },
-    R = (e) => {
-        (u = {}), (p = !1), (_ = 0), (m = 0);
+    y = (e) => {
+        c = {};
     };
-class w extends (r = a.ZP.Store) {
+class O extends (r = a.ZP.Store) {
     getAllProfileEffects() {
-        return Object.values(u);
+        return Object.values(c);
     }
     getProfileEffect(e) {
-        return null != e ? u[e] : void 0;
-    }
-    get isFetchingAll() {
-        return p;
-    }
-    canFetchAll() {
-        return Date.now() >= _;
+        return null != e ? c[e] : void 0;
     }
 }
-c(w, "displayName", "ProfileEffectStore");
-let D = new w(o.Z, {
-    PROFILE_EFFECTS_FETCH_ALL: O,
-    PROFILE_EFFECTS_FETCH_ALL_SUCCESS: v,
-    PROFILE_EFFECTS_FETCH_ALL_FAILURE: S,
-    COLLECTIBLES_PRODUCT_FETCH_SUCCESS: I,
-    COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: T,
-    COLLECTIBLES_CATEGORIES_V2_FETCH_SUCCESS: A,
-    COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: C,
-    COLLECTIBLES_PURCHASES_FETCH_SUCCESS: N,
-    COLLECTIBLES_CLAIM_SUCCESS: P,
-    LOGOUT: R,
+l(O, "displayName", "ProfileEffectStore");
+let v = new O(o.Z, {
+    COLLECTIBLES_PRODUCT_FETCH_SUCCESS: _,
+    COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: m,
+    COLLECTIBLES_CATEGORIES_V2_FETCH_SUCCESS: h,
+    COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: g,
+    COLLECTIBLES_PURCHASES_FETCH_SUCCESS: E,
+    COLLECTIBLES_CLAIM_SUCCESS: b,
+    LOGOUT: y,
 });

@@ -8,7 +8,7 @@ var r = n(54381),
     a = n(335131),
     u = n(884697),
     d = n(449217),
-    f = n(566111),
+    f = n(223143),
     p = n(269982),
     m = n(767714),
     g = n(150039),
@@ -19,8 +19,8 @@ var r = n(54381),
     j = n(934261),
     O = n(52268),
     P = n(981631),
-    v = n(474936),
-    _ = n(388032),
+    _ = n(474936),
+    v = n(388032),
     E = n(238983);
 function C(e) {
     let {
@@ -44,31 +44,31 @@ function C(e) {
                 (null != i && (d || !h)) || null === g || (f && h)
                     ? (0, r.jsx)(o.Button, {
                           variant: "primary",
-                          text: _.intl.string(_.t.Jh8fJz),
+                          text: v.intl.string(v.t.Jh8fJz),
                           onClick: l,
                           disabled: a,
                       })
                     : null == i && (d || !h)
                       ? (0, r.jsx)(o.Button, {
                             variant: "primary",
-                            text: _.intl.string(_.t.fYfGgK),
+                            text: v.intl.string(v.t.fYfGgK),
                             onClick: () => c(null == g ? void 0 : g.skuId),
                         })
                       : (0, r.jsx)(m.Z, {
-                            subscriptionTier: v.Si.TIER_2,
+                            subscriptionTier: _.Si.TIER_2,
                             showGradient: !d,
                             textOptions: {
                                 textOverride: b.ZP.isPremium(t)
-                                    ? _.intl.string(_.t.KXLX7l)
+                                    ? v.intl.string(v.t.KXLX7l)
                                     : d
-                                      ? _.intl.string(_.t.mr4K7D)
-                                      : _.intl.string(_.t.pj0XBN),
+                                      ? v.intl.string(v.t.mr4K7D)
+                                      : v.intl.string(v.t.pj0XBN),
                             },
                         }),
                 d || f || !h
                     ? (0, r.jsx)(o.Button, {
                           variant: "secondary",
-                          text: _.intl.string(_.t["ETE/oC"]),
+                          text: v.intl.string(v.t["ETE/oC"]),
                           onClick: s,
                       })
                     : (0, r.jsx)(p.Z, {
@@ -95,14 +95,14 @@ function I(e) {
             guildId: null == n ? void 0 : n.id,
             isTryItOut: x,
         }),
-        [v, I] = i.useMemo(() => {
+        [_, I] = i.useMemo(() => {
             let e = (0, u.bl)(l, c);
             return [e.purchased, e.shopPreviews];
         }, [l, c]),
         [S, w] = i.useState(() => (null != f ? f : void 0 !== P ? P : null == p ? null : null != p ? p : null)),
         [A, N] = i.useMemo(() => {
             var e;
-            let t = v.find((e) => {
+            let t = _.find((e) => {
                     let { skuId: t } = e;
                     return t === (null == S ? void 0 : S.skuId);
                 }),
@@ -120,10 +120,10 @@ function I(e) {
                     : null,
                 n,
             ];
-        }, [S, v, I]),
-        { product: T, purchase: Z } = (0, d.Z)(null == A ? void 0 : A.skuId),
-        k = i.useRef(null),
-        D = b.ZP.canUseCollectibles(t),
+        }, [S, _, I]),
+        { product: T, purchase: k } = (0, d.Z)(null == A ? void 0 : A.skuId),
+        D = i.useRef(null),
+        Z = b.ZP.canUseCollectibles(t),
         U =
             void 0 === P
                 ? (null == S ? void 0 : S.skuId) === (null == p ? void 0 : p.skuId)
@@ -154,7 +154,7 @@ function I(e) {
                 children: [
                     (0, r.jsx)(o.Heading, {
                         variant: "heading-lg/semibold",
-                        children: _.intl.string(_.t["/6nv6N"]),
+                        children: v.intl.string(v.t["/6nv6N"]),
                     }),
                     (0, r.jsx)(o.olH, {
                         "data-migration-pending": !0,
@@ -171,7 +171,7 @@ function I(e) {
                         user: t,
                         guild: n,
                         pendingProfileEffect: S,
-                        selectedProfileEffectRef: k,
+                        selectedProfileEffectRef: D,
                         isTryItOut: x,
                         onSelect: B,
                         onOpenShop: L,
@@ -181,7 +181,7 @@ function I(e) {
                         canApplySelectedChange: N,
                         pendingProfileEffectRecord: A,
                         product: T,
-                        purchase: Z,
+                        purchase: k,
                         guild: n,
                     }),
                 ],
@@ -194,8 +194,8 @@ function I(e) {
                 onClose: y,
                 onOpenShop: L,
                 product: T,
-                purchase: Z,
-                canUsePremiumCollectibles: D,
+                purchase: k,
+                canUsePremiumCollectibles: Z,
                 isTryItOut: x,
                 selectedProfileEffect: S,
                 disableApplyButton: U,
@@ -212,10 +212,10 @@ function S(e) {
             isTryItOut: d,
             onClose: p,
         } = e,
-        { isFetching: m, categories: h, purchases: b } = (0, f.Z)(),
+        { isFetching: m, categories: h, purchases: b } = (0, f.ZP)(),
         j = (0, l.e7)([x.default], () => x.default.getCurrentUser()),
         { analyticsLocations: O } = (0, c.ZP)(n, s.Z.EDIT_PROFILE_EFFECT_MODAL),
-        v = (0, g.nh)({
+        _ = (0, g.nh)({
             user: j,
             guildId: null == u ? void 0 : u.id,
         });
@@ -245,7 +245,7 @@ function S(e) {
                           categories: h,
                           purchases: b,
                           initialSelectedProfileEffect: a,
-                          currentSavedEffect: v,
+                          currentSavedEffect: _,
                           onClose: p,
                           analyticsLocations: O,
                           isTryItOut: d,
