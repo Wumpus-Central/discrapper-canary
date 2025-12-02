@@ -46,8 +46,8 @@ var r = n(278074),
     K = n(980463),
     z = n(328908),
     q = n(992970),
-    Q = n(576645),
-    X = n(317951),
+    X = n(576645),
+    Q = n(317951),
     J = n(287941),
     $ = n(643266),
     ee = n(617136),
@@ -453,12 +453,14 @@ let eV = {
                           : r === eI.evJ.HARMFUL_LINK_MESSAGE_BLOCKED
                             ? ((t = eN.intl.formatToPlainString(eN.t.zSG3Qy, { helpUrl: eI.EYA.HARMFUL_LINKS })),
                               (n = "HARMFUL_LINK_MESSAGE_BLOCKED"))
-                            : r in eV
-                              ? ((n = eV[r].messageName), (t = eV[r].messageGetter()))
-                              : ((t = eN.intl.formatToPlainString(eN.t.CTMXwL, {
-                                    helpUrl: eb.Z.getArticleURL(eI.BhN.DM_COULD_NOT_BE_DELIVERED),
-                                })),
-                                (n = "SEND_FAILED (".concat(r, ")"))),
+                            : r === eI.evJ.HARMFUL_URL_BLOCKED
+                              ? ((t = eN.intl.string(eN.t.WxX2Fd)), (n = "HARMFUL_URL_BLOCKED"))
+                              : r in eV
+                                ? ((n = eV[r].messageName), (t = eV[r].messageGetter()))
+                                : ((t = eN.intl.formatToPlainString(eN.t.CTMXwL, {
+                                      helpUrl: eb.Z.getArticleURL(eI.BhN.DM_COULD_NOT_BE_DELIVERED),
+                                  })),
+                                  (n = "SEND_FAILED (".concat(r, ")"))),
                 eH.sendBotMessage(e, t, n));
         },
         sendExplicitMediaClydeError(e, t, n) {
@@ -908,7 +910,7 @@ let eV = {
         },
         getSendMessageOptionsForConfettiPotion(e) {
             let { channelId: t, content: n, isGif: r, command: i, uploads: a, confettiPotionEmoji: o } = e;
-            return null != o && (0, Q.tv)(n, r, i, a)
+            return null != o && (0, X.tv)(n, r, i, a)
                 ? {
                       confettiPotionData: {
                           emoji: o,
@@ -1173,7 +1175,7 @@ let eV = {
                 Y.Z.isEnabled() && (eb.message.has_poggermode_enabled = !0),
                 ea && (eb.message.with_checkpoint = !0),
                 null != U && (eb.message.content_inventory_entry = U),
-                null != D && ((eb.message.confetti_potion = (0, Q.vY)(D)), D.callback()),
+                null != D && ((eb.message.confetti_potion = (0, X.vY)(D)), D.callback()),
                 null != z && z.length > 0 && (eb.message.attachments = z),
                 null != ee && ee.length > 0)
             )
@@ -1239,9 +1241,9 @@ let eV = {
                                         },
                                         poll: j,
                                     });
-                                let r = (0, Q.ZC)(o.body);
+                                let r = (0, X.ZC)(o.body);
                                 null != r &&
-                                    ((0, K.gA)(X.D1),
+                                    ((0, K.gA)(Q.D1),
                                     (0, J.I)(
                                         {
                                             name: r.name,
