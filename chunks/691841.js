@@ -16,12 +16,12 @@ function l(e) {
             }
             null == f || f(+t);
         },
-        m = (e, t) => {
-            var n;
-            if ((null == (n = u.current) || n.scrollToTop(), e && null != d.query)) {
+        m = (e, t, n) => {
+            var r;
+            if ((null == (r = u.current) || r.scrollToTop(), e && null != d.query)) {
                 let e = d.query.typeInfo.focusMode,
-                    n = e !== s.QZ.MANUAL && (e !== s.QZ.AUTO_WHEN_FILTERED || 0 !== d.query.queryText.length);
-                d.isVisible && (!0 !== t || !1 !== n)
+                    r = e !== s.QZ.MANUAL && (e !== s.QZ.AUTO_WHEN_FILTERED || 0 !== d.query.queryText.length);
+                d.isVisible && (!0 !== t || !1 !== r) && !0 !== n
                     ? (g.setFocus("0"), null == f || f(0))
                     : (g.setFocus(null), null == f || f(null));
             }
@@ -50,12 +50,13 @@ function l(e) {
             E.current = m;
         }),
         r.useEffect(() => {
-            E.current(!0, !0);
+            E.current(!0, !0, d.isInitialAfterError);
         }, [
             null == (t = d.query) ? void 0 : t.type,
             null == (n = d.query) ? void 0 : n.queryText,
             null == (l = d.query) ? void 0 : l.isLoading,
             d.isVisible,
+            d.isInitialAfterError,
         ]),
         g
     );

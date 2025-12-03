@@ -4,8 +4,9 @@ n(473749);
 var i = n(481060),
     a = n(388032),
     o = n(248813);
-let s = () =>
-    (0, r.jsxs)("div", {
+let s = (e) => {
+    let { error: t } = e;
+    return (0, r.jsxs)("div", {
         className: o.bar,
         children: [
             (0, r.jsx)(i.Text, {
@@ -13,10 +14,17 @@ let s = () =>
                 color: "text-primary",
                 children: a.intl.string(a.t["4VDCG0"]),
             }),
-            (0, r.jsx)(i.Text, {
-                variant: "text-xs/medium",
-                color: "text-tertiary",
-                children: a.intl.string(a.t["260qZS"]),
-            }),
+            t
+                ? (0, r.jsx)(i.Text, {
+                      variant: "text-xs/medium",
+                      className: o.error,
+                      children: a.intl.string(a.t.qNorwt),
+                  })
+                : (0, r.jsx)(i.Text, {
+                      variant: "text-xs/medium",
+                      color: "text-tertiary",
+                      children: a.intl.string(a.t["260qZS"]),
+                  }),
         ],
     });
+};

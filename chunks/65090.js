@@ -98,7 +98,7 @@ let E = {
                         text: e.text,
                         description: h.hideMentionDescription ? null : e.description,
                         "aria-label": e.text,
-                        badge: "@game" === e.text ? "new" : void 0,
+                        badge: "@game" === e.text || "@time" === e.text ? "new" : void 0,
                     },
                     e.text,
                 ),
@@ -155,16 +155,17 @@ let E = {
             s = t[i],
             l = n[i - t.length],
             c = r[i - t.length - n.length],
-            d = !1;
+            d = u.z2.MENTION;
         return (
             null != s
                 ? a.insertText(p(s.user, o, a.hidePersonalInformation), _(s.user))
                 : null != l
                   ? null != l.inlineAutocompleteType
-                      ? (a.insertAutocompleteInput(l.inlineAutocompleteType), (d = !0))
+                      ? (a.insertAutocompleteInput(l.inlineAutocompleteType),
+                        (d = "timestampMentionInput" === l.inlineAutocompleteType ? u.z2.TIMESTAMP : u.z2.GAME_MENTION))
                       : a.insertText(m(l))
                   : null != c && a.insertText(h(c), g(c)),
-            { type: d ? u.z2.GAME_MENTION : u.z2.MENTION }
+            { type: d }
         );
     },
 };

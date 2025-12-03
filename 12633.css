@@ -37899,6 +37899,13 @@ div.mobilePushContainer__3d3b0 {
     padding: var(--space-8) var(--space-16)
 }
 
+.error_d90114 {
+    color: var(--red-400);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
 .small__258ba {
     height: 16px;
     width: 16px
