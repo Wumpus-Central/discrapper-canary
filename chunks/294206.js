@@ -494,7 +494,16 @@ let X = i.forwardRef(function (e, t) {
             !I.available &&
                 (0, r.jsx)(d.u, {
                     text: x.intl.string(x.t.MDOXJR),
-                    children: (0, r.jsx)("div", { className: L.unavailableTooltip }),
+                    shouldShow: !eD,
+                    children: (0, r.jsx)("div", {
+                        className: L.unavailableTooltip,
+                        children:
+                            !er &&
+                            (0, r.jsxs)("div", {
+                                className: L.unavailableTooltipActions,
+                                children: [eG, eB],
+                            }),
+                    }),
                 }),
             !0 === eo &&
                 (0, r.jsx)(b.Z, {

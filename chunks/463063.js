@@ -27,4 +27,5 @@ e.exports = {
     lockIcon: "lockIcon__9be63",
     primaryIconTopLevel: "primaryIconTopLevel__9be63",
     unavailableTooltip: "unavailableTooltip__9be63",
+    unavailableTooltipActions: "unavailableTooltipActions__9be63",
 };
