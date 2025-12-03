@@ -51,7 +51,7 @@ let x = 24,
                   children: [
                       (0, r.jsx)(c.Heading, {
                           variant: "text-xs/bold",
-                          color: "header-secondary",
+                          color: "text-default",
                           className: D.sectionHeader,
                           id: h,
                           children: n,
@@ -105,7 +105,7 @@ let x = 24,
                   children: [
                       (0, r.jsx)(c.Heading, {
                           variant: "text-xs/bold",
-                          color: "header-secondary",
+                          color: "text-default",
                           className: D.sectionHeader,
                           children: w.intl.format(w.t.NAnXEo, { count: o.length }),
                       }),
@@ -151,7 +151,7 @@ let x = 24,
                           (0, r.jsxs)(c.y5t, {
                               component: (0, r.jsx)(c.Heading, {
                                   variant: "text-xs/bold",
-                                  color: "header-secondary",
+                                  color: "text-default",
                                   className: D.sectionHeader,
                                   children: w.intl.string(w.t.FJZmYx),
                               }),

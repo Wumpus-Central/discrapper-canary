@@ -27,7 +27,7 @@ let d = () => {
             (0, r.jsx)("div", {
                 className: c.bodyContainer,
                 children: (0, r.jsx)(i.Text, {
-                    color: "text-secondary",
+                    color: "text-subtle",
                     variant: "text-sm/normal",
                     children: l.intl.format(l.t.uu1WAa, { weeks: 1 }),
                 }),

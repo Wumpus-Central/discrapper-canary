@@ -577,7 +577,7 @@ let j = {
                     (0, a.jsx)(t, {
                         variant: "text-sm/normal",
                         className: "mb-4",
-                        color: "text-secondary",
+                        color: "text-subtle",
                         children: "This will temporarily disable the user's ability to communicate in this server.",
                     }),
                     (0, a.jsxs)("div", {
@@ -623,7 +623,7 @@ let j = {
                                     border: "1px solid var(--border-subtle)",
                                     borderRadius: "4px",
                                     backgroundColor: "var(--background-base-low)",
-                                    color: "var(--text-primary)",
+                                    color: "var(--text-strong)",
                                     resize: "vertical",
                                 },
                             }),
@@ -696,7 +696,7 @@ let j = {
                     (0, a.jsxs)(t, {
                         variant: "text-sm/normal",
                         className: "mb-4",
-                        color: "text-secondary",
+                        color: "text-subtle",
                         children: [
                             "This will remove the ",
                             s,
@@ -726,22 +726,22 @@ let j = {
                                 children: [
                                     (0, a.jsxs)(t, {
                                         variant: "text-sm/normal",
-                                        color: "text-secondary",
+                                        color: "text-subtle",
                                         children: ["\u2022 ", o, " emoji slots"],
                                     }),
                                     (0, a.jsxs)(t, {
                                         variant: "text-sm/normal",
-                                        color: "text-secondary",
+                                        color: "text-subtle",
                                         children: ["\u2022 ", c, " sticker slots"],
                                     }),
                                     (0, a.jsxs)(t, {
                                         variant: "text-sm/normal",
-                                        color: "text-secondary",
+                                        color: "text-subtle",
                                         children: ["\u2022 ", d, " sound slots"],
                                     }),
                                     (0, a.jsx)(t, {
                                         variant: "text-sm/normal",
-                                        color: "text-secondary",
+                                        color: "text-subtle",
                                         children: "\u2022 Custom server banner",
                                     }),
                                 ],
@@ -1006,7 +1006,7 @@ let j = {
                                     }),
                                     (0, a.jsxs)(l, {
                                         variant: "text-sm/normal",
-                                        color: "text-secondary",
+                                        color: "text-subtle",
                                         style: { marginTop: "8px" },
                                         children: ["Consent status: ", o ? "Agreed" : "Not agreed"],
                                     }),
@@ -1028,7 +1028,7 @@ let j = {
                                     }),
                                     (0, a.jsxs)(l, {
                                         variant: "text-sm/normal",
-                                        color: "text-secondary",
+                                        color: "text-subtle",
                                         style: { marginTop: "8px" },
                                         children: ["Promo consent status: ", d ? "Opted in" : "Not opted in"],
                                     }),

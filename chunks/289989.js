@@ -61,7 +61,7 @@ function b(e) {
                           (0, r.jsx)(a.xvT, {
                               className: j.body,
                               variant: "text-sm/medium",
-                              color: "text-secondary",
+                              color: "text-subtle",
                               children: v.intl.format(v.t.sbbPhW, { buttonName: v.intl.string(v.t.FiBjwU) }),
                           }),
                           (0, r.jsx)(m.Z, {}),

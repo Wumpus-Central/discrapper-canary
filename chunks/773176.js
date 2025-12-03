@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(543241),
     g = n(633302),
     b = n(856985),
-    y = n(660189),
-    C = n(868643),
+    C = n(660189),
+    y = n(868643),
     v = n(245216),
     _ = n(223606),
     O = n(188597),
@@ -38,8 +38,8 @@ var i = n(54381),
     U = n(323873),
     V = n(271383),
     F = n(430824),
-    B = n(607744),
-    H = n(496675),
+    H = n(607744),
+    B = n(496675),
     G = n(626135),
     z = n(572004),
     W = n(176354),
@@ -142,7 +142,7 @@ let ed = r.memo(function (e) {
                             }),
                             (0, i.jsx)(d.Text, {
                                 variant: "text-xs/normal",
-                                color: "header-secondary",
+                                color: "text-default",
                                 className: ea.emojiTooltipText,
                                 children: o,
                             }),
@@ -212,15 +212,15 @@ function ep(e) {
                 m = (0, u.e7)([D.default], () => D.default.getId()),
                 g = (0, L.$R)(t),
                 b = (0, L.Gu)(t),
-                { firstMessage: v } = (0, u.e7)([y.Z], () => y.Z.getMessage(t.id), [t.id]),
+                { firstMessage: v } = (0, u.e7)([C.Z], () => C.Z.getMessage(t.id), [t.id]),
                 _ = k.nc.useSetting(),
                 O = k.Sb.useSetting(),
-                E = (0, u.e7)([B.Z], () => null == t.guild_id || B.Z.canChatInGuild(t.guild_id), [t]),
+                E = (0, u.e7)([H.Z], () => null == t.guild_id || H.Z.canChatInGuild(t.guild_id), [t]),
                 { canManageMessages: j, canAddNewReactions: S } = (0, u.cj)(
-                    [H.Z],
+                    [B.Z],
                     () => ({
-                        canAddNewReactions: E && H.Z.can(ei.Plq.ADD_REACTIONS, t),
-                        canManageMessages: H.Z.can(ei.Plq.MANAGE_MESSAGES, t),
+                        canAddNewReactions: E && B.Z.can(ei.Plq.ADD_REACTIONS, t),
+                        canManageMessages: B.Z.can(ei.Plq.MANAGE_MESSAGES, t),
                     }),
                     [t, E],
                 ),
@@ -255,8 +255,8 @@ function ep(e) {
                 en =
                     null != et &&
                     n.type === ei.uaV.USER_JOIN &&
-                    H.Z.canWithPartialContext(ei.Plq.MANAGE_GUILD, { guildId: et }),
-                er = (0, C.a)(n),
+                    B.Z.canWithPartialContext(ei.Plq.MANAGE_GUILD, { guildId: et }),
+                er = (0, y.a)(n),
                 { enabled: el } = M.Z.useExperiment({ location: "message_utilities" }),
                 ea = (0, u.e7)([R.Z], () => null != R.Z.getSavedMessage(t.id, n.id)),
                 eo = (0, c.Z)(a),
@@ -303,8 +303,8 @@ function ep(e) {
         ef = (0, L.$R)(t),
         eg = n.hasFlag(ei.iLy.CROSSPOSTED),
         eb = (0, Z.Z)(t),
-        ey = (0, I.Nt)(),
-        eC = eb && ey && !n.hasPotions(),
+        eC = (0, I.Nt)(),
+        ey = eb && eC && !n.hasPotions(),
         ev = r.useCallback(
             (e) => {
                 try {
@@ -433,7 +433,7 @@ function ep(e) {
                               channel: t,
                               message: n,
                           }),
-                          eC
+                          ey
                               ? (0, i.jsx)(
                                     $.sF,
                                     {

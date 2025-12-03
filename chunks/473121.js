@@ -1,19 +1,19 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => c });
 var r = n(54381),
-    i = n(473749),
-    l = n(481060),
+    l = n(473749),
+    i = n(481060),
     a = n(454585),
     s = n(273744),
     o = n(388032),
-    c = n(204800);
-let d = (e) => {
+    d = n(204800);
+let c = (e) => {
     var t, n;
     let {
-            node: { header: d, subheader: u, button: m },
+            node: { header: c, subheader: u, button: m },
             isModeratorReport: p,
         } = e,
         g = (null == m ? void 0 : m.type) === "submit",
-        _ = i.useRef(
+        _ = l.useRef(
             a.Z.reactParserFor(
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
@@ -57,25 +57,25 @@ let d = (e) => {
             ),
         );
     return (0, r.jsxs)("div", {
-        className: c.headerContainer,
+        className: d.headerContainer,
         children: [
-            null != d && "" !== d
-                ? (0, r.jsx)(l.Heading, {
+            null != c && "" !== c
+                ? (0, r.jsx)(i.Heading, {
                       variant: "heading-xl/semibold",
                       color: "header-primary",
-                      children: d,
+                      children: c,
                   })
                 : null,
-            null != u && "" !== d
-                ? (0, r.jsx)(l.Text, {
+            null != u && "" !== c
+                ? (0, r.jsx)(i.Text, {
                       variant: "text-md/normal",
-                      color: "header-secondary",
+                      color: "text-default",
                       children: _.current(u),
                   })
                 : null,
             g &&
                 !p &&
-                (0, r.jsx)(l.Text, {
+                (0, r.jsx)(i.Text, {
                     variant: "text-sm/normal",
                     children: o.intl.format(o.t.Q0tSKT, {}),
                 }),

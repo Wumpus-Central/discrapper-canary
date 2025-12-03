@@ -6,8 +6,8 @@ var r = n(54381),
     s = n(442837),
     o = n(692547),
     c = n(28664),
-    d = n(481060),
-    u = n(142497),
+    u = n(481060),
+    d = n(142497),
     g = n(338327),
     m = n(496675),
     p = n(63063),
@@ -97,13 +97,13 @@ let N = [
                         size: "custom",
                     }),
                 }),
-                (0, r.jsx)(d.Heading, {
+                (0, r.jsx)(u.Heading, {
                     variant: "heading-md/semibold",
                     className: x.featureHeader,
                     children: l,
                 }),
-                (0, r.jsx)(d.Text, {
-                    color: "header-secondary",
+                (0, r.jsx)(u.Text, {
+                    color: "text-default",
                     variant: "text-sm/normal",
                     children: a,
                 }),
@@ -129,7 +129,7 @@ let N = [
                         height: 24,
                     }),
                 }),
-                (0, r.jsx)(d.Heading, {
+                (0, r.jsx)(u.Heading, {
                     variant: "heading-deprecated-12/semibold",
                     children: n,
                 }),
@@ -149,7 +149,7 @@ let N = [
                 null != T && l(T / 2), null != P && v(P / 2);
             }, [T, P, l, v]),
             i.useEffect(() => {
-                (0, u.Kw)(h.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL);
+                (0, d.Kw)(h.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL);
             }, []),
             (0, r.jsxs)("div", {
                 className: x.container,
@@ -196,12 +196,12 @@ let N = [
                             }),
                         ],
                     }),
-                    (0, r.jsx)(d.Heading, {
+                    (0, r.jsx)(u.Heading, {
                         variant: "heading-xl/semibold",
                         children: b.intl.string(b.t["M/gBcA"]),
                     }),
-                    (0, r.jsx)(d.Text, {
-                        color: "header-secondary",
+                    (0, r.jsx)(u.Text, {
+                        color: "text-default",
                         variant: "text-md/normal",
                         className: x.body,
                         children: b.intl.format(b.t["52EgsM"], {
@@ -214,7 +214,7 @@ let N = [
                         children: (0, r.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
                             className: x.button,
-                            children: (0, r.jsx)(d.Button, {
+                            children: (0, r.jsx)(u.Button, {
                                 variant: "primary",
                                 text: b.intl.string(b.t.LhlgY9),
                                 onClick: () => {
@@ -225,13 +225,13 @@ let N = [
                         }),
                     }),
                     (0, r.jsx)("hr", { className: x.separator }),
-                    (0, r.jsx)(d.Text, {
-                        color: "header-secondary",
+                    (0, r.jsx)(u.Text, {
+                        color: "text-default",
                         variant: "text-sm/normal",
                         children: b.intl.string(b.t.OzLWLE),
                     }),
-                    (0, r.jsx)(d.Text, {
-                        color: "header-secondary",
+                    (0, r.jsx)(u.Text, {
+                        color: "text-default",
                         className: x.body,
                         variant: "text-sm/normal",
                         children: b.intl.format(b.t.rjhrqC, {
@@ -242,7 +242,7 @@ let N = [
                         className: x.features,
                         children: [
                             {
-                                icon: d.IeX,
+                                icon: u.IeX,
                                 color: o.Z.unsafe_rawColors.GREEN_360.css,
                                 header: b.intl.string(b.t.oVQF2y),
                                 body: b.intl.format(b.t.A6G7ak, {
@@ -258,7 +258,7 @@ let N = [
                                 }),
                             },
                             {
-                                icon: d.IeX,
+                                icon: u.IeX,
                                 color: o.Z.unsafe_rawColors.PARTNER.css,
                                 header: b.intl.string(b.t["0rJl9y"]),
                                 body: b.intl.format(b.t.XsCNky, {
@@ -266,7 +266,7 @@ let N = [
                                         (0, r.jsx)(c.u, {
                                             text: b.intl.string(b.t.kPJlTh),
                                             "aria-label": b.intl.string(b.t.kPJlTh),
-                                            children: (0, r.jsx)(d.d3s, {
+                                            children: (0, r.jsx)(u.d3s, {
                                                 size: "xs",
                                                 color: "currentColor",
                                                 className: x.infoIcon,
@@ -284,7 +284,7 @@ let N = [
                                 }),
                             },
                             {
-                                icon: d.d3s,
+                                icon: u.d3s,
                                 color: o.Z.unsafe_rawColors.RED_360.css,
                                 header: b.intl.string(b.t.W2kLJC),
                                 body: b.intl.string(b.t.hyNkHz),

@@ -7,8 +7,8 @@ var i = n(780384),
     s = n(293810),
     o = n(388032),
     c = n(570734),
-    d = n(934961),
-    u = n(568294),
+    u = n(934961),
+    d = n(568294),
     g = n(867861),
     m = n(860790),
     p = n(268953),
@@ -30,7 +30,7 @@ function _() {
                 children: [
                     (0, r.jsx)(l.Text, {
                         variant: "text-sm/normal",
-                        color: "header-secondary",
+                        color: "text-default",
                         children: o.intl.string(o.t.TXPK7B),
                     }),
                     (0, r.jsx)(l.LZC, { size: 8 }),
@@ -108,7 +108,7 @@ function v() {
                     (0, r.jsx)(t, { length: 24 }),
                     (0, r.jsx)("img", {
                         className: c.roundAvatar,
-                        src: (0, i.wj)(e) ? d : u,
+                        src: (0, i.wj)(e) ? u : d,
                         alt: "",
                     }),
                     (0, r.jsx)(t, {
@@ -163,7 +163,7 @@ function O() {
         children: [
             (0, r.jsx)(l.Text, {
                 variant: "text-md/normal",
-                color: "header-secondary",
+                color: "text-default",
                 children: o.intl.string(o.t["9CdmS8"]),
             }),
             (0, r.jsx)(l.LZC, { size: 32 }),
@@ -180,7 +180,7 @@ function C() {
             (0, r.jsx)(l.Text, {
                 className: c.followerBenefitText,
                 variant: "text-md/normal",
-                color: "header-secondary",
+                color: "text-default",
                 children: o.intl.string(o.t.qsKRUQ),
             }),
             (0, r.jsx)("img", {
@@ -214,7 +214,7 @@ function y() {
                     }),
                     (0, r.jsx)(l.Text, {
                         variant: "text-md/normal",
-                        color: "header-secondary",
+                        color: "text-default",
                         children: o.intl.string(o.t.AewsXD),
                     }),
                 ],

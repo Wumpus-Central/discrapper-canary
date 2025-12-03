@@ -159,7 +159,7 @@ let Z = r.memo(function (e) {
                     className: w.memberGlobalName,
                     children: (0, l.jsx)(u.Text, {
                         variant: "text-xs/normal",
-                        color: "header-secondary",
+                        color: "text-default",
                         tag: "span",
                         children: (0, l.jsx)(u.P3F, {
                             onClick: o,
@@ -196,7 +196,7 @@ let Z = r.memo(function (e) {
                           className: w.mediumCol,
                           children: (0, l.jsx)(u.Text, {
                               variant: "text-sm/normal",
-                              color: "header-secondary",
+                              color: "text-default",
                               children: o()(x).format("lll"),
                           }),
                       }),

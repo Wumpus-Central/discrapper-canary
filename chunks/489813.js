@@ -105,7 +105,7 @@ function C(e) {
             }),
             null != l &&
                 (0, r.jsx)(a.Text, {
-                    color: "header-secondary",
+                    color: "text-default",
                     className: s.footnote,
                     variant: "text-xs/normal",
                     children: l,

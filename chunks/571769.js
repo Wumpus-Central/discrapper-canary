@@ -1,4 +1,4 @@
-n.d(t, { default: () => C });
+n.d(e, { default: () => C });
 var s = n(54381),
     i = n(473749),
     r = n(120356),
@@ -6,9 +6,9 @@ var s = n(54381),
     l = n(660815),
     o = n(793030),
     c = n(442837),
-    d = n(198168),
-    p = n(481060),
-    u = n(100527),
+    p = n(198168),
+    u = n(481060),
+    d = n(100527),
     f = n(454585),
     x = n(494620),
     m = n(905551),
@@ -18,23 +18,23 @@ var s = n(54381),
     I = n(613275),
     N = n(388032),
     j = n(71124);
-function C(e) {
-    let { guildId: t, instance: n, onClose: r, transitionState: C } = e,
+function C(t) {
+    let { guildId: e, instance: n, onClose: r, transitionState: C } = t,
         S = (0, c.e7)([_.Z], () => {
-            var e;
-            return null == (e = _.Z.getStateForGuild(t)) ? void 0 : e.instructions[n.planId];
+            var t;
+            return null == (t = _.Z.getStateForGuild(e)) ? void 0 : t.instructions[n.planId];
         });
     i.useEffect(() => {
-        null == S && (0, m.iX)(t, n.planId);
-    }, [t, n.planId, S]);
+        null == S && (0, m.iX)(e, n.planId);
+    }, [e, n.planId, S]);
     let g = (0, v.Z)(n),
         { handleCopyServerIp: T, animateCopyIcon: E } = (0, h.Z)(
-            t,
+            e,
             n.id,
-            u.Z.GAME_SERVER_INSTRUCTIONS_MODAL,
+            d.Z.GAME_SERVER_INSTRUCTIONS_MODAL,
             null != g ? g : "",
         ),
-        A = i.useMemo(() => {
+        b = i.useMemo(() => {
             switch (n.status) {
                 case l.V.STARTING:
                     return N.intl.string(I.default.ud4hxY);
@@ -54,7 +54,7 @@ function C(e) {
                 gradientColor: "purple",
                 graphic: {
                     type: "dynamic",
-                    component: d.DynamicGraphicComponent.GAME_SERVER_GAME_INSTRUCTIONS_ASSET,
+                    component: p.DynamicGraphicComponent.GAME_SERVER_GAME_INSTRUCTIONS_ASSET,
                     props: { instance: n },
                 },
                 alignCenter: !0,
@@ -62,18 +62,18 @@ function C(e) {
                 subtitle: N.intl.string(I.default["4HqfaU"]),
             }),
             null == S
-                ? (0, s.jsx)(p.$jN, {})
+                ? (0, s.jsx)(u.$jN, {})
                 : (0, s.jsxs)("div", {
                       className: j.content,
                       children: [
-                          null != A &&
+                          null != b &&
                               (0, s.jsx)(x.Z, {
                                   className: j.infoBox,
-                                  children: A,
+                                  children: b,
                               }),
                           (0, s.jsx)("div", {
                               className: j.stepsContainer,
-                              children: S.map((e, t) =>
+                              children: S.map((t, e) =>
                                   (0, s.jsxs)(
                                       "div",
                                       {
@@ -81,22 +81,22 @@ function C(e) {
                                           children: [
                                               (0, s.jsx)("div", {
                                                   className: j.stepNumber,
-                                                  children: (0, s.jsx)(p.Text, {
+                                                  children: (0, s.jsx)(u.Text, {
                                                       variant: "text-xs/semibold",
-                                                      color: "text-secondary",
+                                                      color: "text-subtle",
                                                       children: N.intl.formatToPlainString(I.default.oSU1fF, {
-                                                          step: t + 1,
+                                                          step: e + 1,
                                                       }),
                                                   }),
                                               }),
-                                              (0, s.jsx)(p.Text, {
+                                              (0, s.jsx)(u.Text, {
                                                   variant: "text-sm/normal",
-                                                  color: "text-secondary",
-                                                  children: f.Z.parse(e, !1, { allowLinks: !0 }),
+                                                  color: "text-subtle",
+                                                  children: f.Z.parse(t, !1, { allowLinks: !0 }),
                                               }),
                                           ],
                                       },
-                                      t,
+                                      e,
                                   ),
                               ),
                           }),
@@ -106,17 +106,17 @@ function C(e) {
                                   children: [
                                       (0, s.jsx)("div", {
                                           className: a()(j.serverIpInput, E && j.animate),
-                                          children: (0, s.jsx)(p.Text, {
+                                          children: (0, s.jsx)(u.Text, {
                                               variant: "text-md/medium",
                                               color: "header-primary",
                                               children: g,
                                           }),
                                       }),
-                                      (0, s.jsx)(p.Button, {
+                                      (0, s.jsx)(u.Button, {
                                           variant: E ? "active" : "primary",
                                           text: E ? N.intl.string(N.t.t5VZ88) : N.intl.string(N.t.OpuAlK),
                                           onClick: T,
-                                          icon: p.TIy,
+                                          icon: u.TIy,
                                       }),
                                   ],
                               }),

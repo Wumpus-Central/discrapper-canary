@@ -56,7 +56,7 @@ function b(e) {
             A &&
                 (0, r.jsx)(a.Text, {
                     variant: "text-md/normal",
-                    color: "text-secondary",
+                    color: "text-subtle",
                     className: _.eventDescription,
                     children: (0, c.m)(null != (n = E.description) ? n : "", !0, { guildId: O.id }),
                 }),

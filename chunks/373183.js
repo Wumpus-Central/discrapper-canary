@@ -2,8 +2,8 @@ n.d(t, { Z: () => j });
 var r = n(54381),
     l = n(473749),
     i = n(120356),
-    a = n.n(i),
-    o = n(793030),
+    o = n.n(i),
+    a = n(793030),
     s = n(442837),
     c = n(622535),
     u = n(28664),
@@ -26,8 +26,8 @@ let j = l.memo(function (e) {
     let { category: t, rewardSkuId: n } = e,
         { handleCardVisibilityChange: i } = (0, C.E)(n),
         j = l.useRef(null),
-        { isHoveringOrFocusing: k } = (0, f.Z)(j),
-        { readyToClaim: I, collectibleProductSkuIds: T, collectedSkuIds: L } = (0, b.q)(t, n),
+        { isHoveringOrFocusing: I } = (0, f.Z)(j),
+        { readyToClaim: k, collectibleProductSkuIds: T, collectedSkuIds: L } = (0, b.q)(t, n),
         P = (0, s.e7)([h.Z], () => h.Z.isClaiming === n);
     return (0, r.jsx)(c.$, {
         onChange: i,
@@ -35,7 +35,7 @@ let j = l.memo(function (e) {
         innerRef: j,
         children: (0, r.jsx)("div", {
             ref: j,
-            className: a()(x.productCardContainer, E.defaultCursor, { [x.hovered]: k }),
+            className: o()(x.productCardContainer, E.defaultCursor, { [x.hovered]: I }),
             "aria-label": v.intl.formatToPlainString(v.t.Ez6aHE, { category: t.name }),
             children: (0, r.jsxs)("div", {
                 className: x.productCardContentContainer,
@@ -64,13 +64,13 @@ let j = l.memo(function (e) {
                                         children: [
                                             (0, r.jsx)(d.Heading, {
                                                 variant: "heading-md/medium",
-                                                color: "text-primary",
+                                                color: "text-strong",
                                                 lineClamp: 1,
                                                 className: x.productName,
                                                 children: v.intl.string(v.t["0mDmg/"]),
                                             }),
                                             (0, r.jsx)(u.u, {
-                                                text: I
+                                                text: k
                                                     ? v.intl.string(v.t.cKH3tk)
                                                     : v.intl.formatToPlainString(v.t["8aMDPc"], {
                                                           totalCount: T.length,
@@ -83,7 +83,7 @@ let j = l.memo(function (e) {
                                                 position: "top",
                                                 children: (0, r.jsx)("span", {
                                                     className: E.questionIconContainer,
-                                                    children: (0, r.jsx)(o.idN, { size: "xs" }),
+                                                    children: (0, r.jsx)(a.idN, { size: "xs" }),
                                                 }),
                                             }),
                                         ],
@@ -100,17 +100,17 @@ let j = l.memo(function (e) {
                                                     maximum: T.length,
                                                 }),
                                                 (0, r.jsxs)("div", {
-                                                    className: a()(E.progressTextContainer, {
-                                                        [E.readyToClaimText]: I,
+                                                    className: o()(E.progressTextContainer, {
+                                                        [E.readyToClaimText]: k,
                                                     }),
                                                     children: [
-                                                        I
-                                                            ? (0, r.jsx)(o.kmB, {
+                                                        k
+                                                            ? (0, r.jsx)(a.kmB, {
                                                                   size: "xs",
                                                                   color: "currentColor",
                                                               })
                                                             : null,
-                                                        (0, r.jsx)(o.xvT, {
+                                                        (0, r.jsx)(a.xvT, {
                                                             variant: "text-xs/medium",
                                                             color: "currentColor",
                                                             children: v.intl.formatToPlainString(v.t["5TwASM"], {
@@ -127,15 +127,15 @@ let j = l.memo(function (e) {
                             }),
                             (0, r.jsx)("div", {
                                 className: x.footerButtonContainer,
-                                children: (0, r.jsx)(o.hE2, {
+                                children: (0, r.jsx)(a.hE2, {
                                     wrap: !1,
                                     className: x.footerButtonGroup,
                                     fullWidth: !0,
-                                    children: (0, r.jsx)(o.zxk, {
+                                    children: (0, r.jsx)(a.zxk, {
                                         variant: "primary",
                                         onClick: (e) => {
                                             e.stopPropagation(),
-                                                I &&
+                                                k &&
                                                     (0, p.wW)(t.skuId, n)
                                                         .then(() => {
                                                             let e = m.Z.getProduct(n);
@@ -156,7 +156,7 @@ let j = l.memo(function (e) {
                                                         .catch(() => {
                                                             (0, d.ZDy)(() =>
                                                                 Promise.resolve((e) =>
-                                                                    (0, r.jsx)(o.Modal, {
+                                                                    (0, r.jsx)(a.Modal, {
                                                                         transitionState: e.transitionState,
                                                                         onClose: e.onClose,
                                                                         size: "sm",
@@ -178,7 +178,7 @@ let j = l.memo(function (e) {
                                         },
                                         text: v.intl.string(v.t.VnVTNc),
                                         fullWidth: !0,
-                                        disabled: !I,
+                                        disabled: !k,
                                         loading: P,
                                     }),
                                 }),

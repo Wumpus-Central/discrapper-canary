@@ -6,8 +6,8 @@ var r = n(54381),
     s = n(525654),
     o = n.n(s),
     c = n(442837),
-    d = n(846519),
-    u = n(248514),
+    u = n(846519),
+    d = n(248514),
     g = n(28664),
     m = n(481060),
     p = n(232567),
@@ -104,7 +104,7 @@ function W(e) {
     return (0, r.jsx)(m.Heading, {
         className: M.tableHeader,
         variant: "heading-sm/semibold",
-        color: "header-secondary",
+        color: "text-default",
         children: t,
     });
 }
@@ -170,15 +170,15 @@ let V = (e) => {
                 return i;
             })(e, ["renderPopoutBody", "renderPopoutChildren", "popoutTargetRef"]);
         let [s, o] = i.useState(!1),
-            c = i.useMemo(() => new d.V7(), []),
-            u = i.useCallback(() => {
+            c = i.useMemo(() => new u.V7(), []),
+            d = i.useCallback(() => {
                 c.stop(), o(!0);
             }, [c]),
             g = i.useCallback(() => {
                 c.start(200, () => o(!1));
             }, [c]),
             p = {
-                onMouseEnter: u,
+                onMouseEnter: d,
                 onMouseLeave: g,
             };
         return (0, r.jsx)(
@@ -190,7 +190,7 @@ let V = (e) => {
                         renderPopout: (e) =>
                             (0, r.jsx)(m.VqE, {
                                 className: M.browserUnsupportedDialog,
-                                onMouseEnter: u,
+                                onMouseEnter: d,
                                 onMouseLeave: g,
                                 children: t(e),
                             }),
@@ -210,7 +210,7 @@ let V = (e) => {
             renderPopoutBody: () =>
                 (0, r.jsx)(m.Text, {
                     variant: "text-sm/normal",
-                    color: "header-secondary",
+                    color: "text-default",
                     children: G.intl.format(G.t.bGXPVt, {}),
                 }),
             renderPopoutChildren: (t, n) =>
@@ -241,9 +241,9 @@ function Y(e) {
         }),
         { canCreateExpressions: s } = (0, _.XJ)(t),
         o = i.useRef(null),
-        d = (0, h.ZP)(),
-        u = t.premiumTier,
-        g = (0, w.yw)(t, l, u);
+        u = (0, h.ZP)(),
+        d = t.premiumTier,
+        g = (0, w.yw)(t, l, d);
     i.useEffect(() => {
         (0, v.w)();
     }, []);
@@ -286,7 +286,7 @@ function Y(e) {
                     (0, r.jsx)(m.Text, {
                         className: M.helpText,
                         variant: "text-sm/normal",
-                        color: "header-secondary",
+                        color: "text-default",
                         children: G.intl.string(G.t.BohnsE),
                     }),
                     (0, r.jsx)("div", {
@@ -297,7 +297,7 @@ function Y(e) {
             }),
             f
                 ? (0, r.jsxs)(m.ubH, {
-                      theme: d,
+                      theme: u,
                       className: M.empty,
                       children: [
                           (0, r.jsx)(m.oxh, {
@@ -323,7 +323,7 @@ function Y(e) {
                               color: "header-primary",
                               children: (0, r.jsx)(z, {
                                   guildId: t.id,
-                                  currentTier: u,
+                                  currentTier: d,
                                   availableSounds: g,
                               }),
                           }),
@@ -364,7 +364,7 @@ function Y(e) {
 }
 function q(e) {
     let { sound: t, isPlaying: l, onPlaySound: s, guild: o } = e,
-        { soundId: d, name: g, user: h, userId: b, emojiId: j, emojiName: O } = t,
+        { soundId: u, name: g, user: h, userId: b, emojiId: j, emojiName: O } = t,
         { analyticsLocations: C } = (0, x.ZP)(),
         y = (0, c.e7)([S.default], () => (null != h ? h : S.default.getUser(b)), [b, h]),
         { canManageGuildExpression: I } = (0, _.XJ)(o),
@@ -376,7 +376,7 @@ function q(e) {
         if (!Z) {
             D(!0);
             try {
-                await (0, v.AA)(o.id, d);
+                await (0, v.AA)(o.id, u);
             } catch (e) {
                 D(!1);
             }
@@ -482,7 +482,7 @@ function q(e) {
                               className: M.soundRemove,
                               onClick: function (e) {
                                   e.stopPropagation(),
-                                      (0, u.Z)({
+                                      (0, d.Z)({
                                           title: G.intl.formatToPlainString(G.t["PR/VbI"], { soundName: g }),
                                           subtitle: G.intl.format(G.t["u6+CmN"], { soundName: g }),
                                           confirmText: G.intl.string(G.t.oyYWHE),

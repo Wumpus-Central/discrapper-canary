@@ -10,7 +10,7 @@ let s = function () {
         children: [
             (0, r.jsx)(i.Text, {
                 variant: "eyebrow",
-                color: "header-secondary",
+                color: "text-default",
                 children: l.intl.string(l.t.MjVwl8),
             }),
             (0, r.jsxs)("div", {

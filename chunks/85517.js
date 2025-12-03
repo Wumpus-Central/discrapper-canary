@@ -151,7 +151,7 @@ function j(e) {
                                         className: C.logo,
                                     }),
                                     (0, r.jsx)(u.Text, {
-                                        color: "text-primary",
+                                        color: "text-strong",
                                         variant: "text-sm/normal",
                                         className: C.sponsoredTag,
                                         children: I.intl.string(I.t.OJjFi5),
@@ -172,7 +172,7 @@ function j(e) {
                                                 children: t.labelTitle,
                                             }),
                                             (0, r.jsx)(u.Text, {
-                                                color: "text-primary",
+                                                color: "text-strong",
                                                 variant: "text-md/normal",
                                                 className: C.subtitle,
                                                 children: t.labelSubtitle,

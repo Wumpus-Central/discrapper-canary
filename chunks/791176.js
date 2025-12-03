@@ -121,7 +121,7 @@ let f = l.memo(function (e) {
                   children: [
                       (0, r.jsx)(u.Text, {
                           variant: "eyebrow",
-                          color: "header-secondary",
+                          color: "text-default",
                           children: N.intl.string(N.t.ZCq2nC),
                       }),
                       (0, r.jsxs)(u.P3F, {

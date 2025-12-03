@@ -1,89 +1,89 @@
-t.d(n, { default: () => y }), t(388685);
-var r = t(54381),
-    l = t(473749),
-    a = t(658722),
-    i = t.n(a),
-    o = t(793030),
-    s = t(399606),
-    u = t(159691),
-    c = t(481060),
-    d = t(734893),
-    m = t(271383),
-    g = t(430824),
-    p = t(594174),
-    h = t(903518),
-    f = t(580357),
-    b = t(388032),
-    v = t(353441);
-function x(e) {
-    for (var n = 1; n < arguments.length; n++) {
-        var t = null != arguments[n] ? arguments[n] : {},
-            r = Object.keys(t);
+n.d(t, { default: () => k }), n(388685);
+var r = n(54381),
+    l = n(473749),
+    a = n(658722),
+    i = n.n(a),
+    o = n(793030),
+    s = n(399606),
+    u = n(159691),
+    c = n(481060),
+    d = n(734893),
+    m = n(271383),
+    g = n(430824),
+    p = n(594174),
+    f = n(903518),
+    h = n(580357),
+    b = n(388032),
+    x = n(353441);
+function v(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         "function" == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
-                Object.getOwnPropertySymbols(t).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 }),
             )),
-            r.forEach(function (n) {
+            r.forEach(function (t) {
                 var r;
-                (r = t[n]),
-                    n in e
-                        ? Object.defineProperty(e, n, {
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0,
                           })
-                        : (e[n] = r);
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function j(e, n) {
+function j(e, t) {
     return (
-        (n = null != n ? n : {}),
+        (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-            : (function (e, n) {
-                  var t = Object.keys(e);
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
                       var r = Object.getOwnPropertySymbols(e);
-                      t.push.apply(t, r);
+                      n.push.apply(n, r);
                   }
-                  return t;
-              })(Object(n)).forEach(function (t) {
-                  Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function y(e) {
-    var n, t, a;
-    let { transitionState: y, onClose: k, guildId: O, welcomeMessage: I, onSave: P } = e,
-        [C, _] = l.useState(x({}, I)),
+function k(e) {
+    var t, n, a;
+    let { transitionState: k, onClose: y, guildId: O, welcomeMessage: I, onSave: P } = e,
+        [C, _] = l.useState(v({}, I)),
         w = (0, s.e7)([g.Z], () => g.Z.getGuild(O)),
         Z = l.useCallback(
             (e) => {
-                let n = {};
+                let t = {};
                 return Promise.resolve(
                     m.ZP.getMembers(O)
-                        .filter((t) => {
+                        .filter((n) => {
                             var r;
-                            let l = p.default.getUser(t.userId);
-                            if ((null != l && (n[t.userId] = l), null == w || null == l || !(0, h.Y)(w, l))) return !1;
+                            let l = p.default.getUser(n.userId);
+                            if ((null != l && (t[n.userId] = l), null == w || null == l || !(0, f.Y)(w, l))) return !1;
                             let a = ""
-                                .concat(null != (r = t.nick) ? r : "", " ")
+                                .concat(null != (r = n.nick) ? r : "", " ")
                                 .concat(null == l ? void 0 : l.username);
                             return i()(e.toLowerCase(), a.toLowerCase());
                         })
                         .map((e) => {
-                            var t, r, l;
+                            var n, r, l;
                             return {
                                 value: e.userId,
                                 label:
                                     null !=
-                                    (l = null != (r = e.nick) ? r : null == (t = n[e.userId]) ? void 0 : t.username)
+                                    (l = null != (r = e.nick) ? r : null == (n = t[e.userId]) ? void 0 : n.username)
                                         ? l
                                         : "",
                             };
@@ -95,11 +95,11 @@ function y(e) {
         S = l.useCallback(
             (e) => {
                 if (null == O || null == e) return null;
-                let n = m.ZP.getMember(O, e.value);
-                if (null == n) return null;
-                let t = p.default.getUser(n.userId);
+                let t = m.ZP.getMember(O, e.value);
                 if (null == t) return null;
-                let l = t.getAvatarURL(O, 20);
+                let n = p.default.getUser(t.userId);
+                if (null == n) return null;
+                let l = n.getAvatarURL(O, 20);
                 return (0, r.jsx)(c.Xo$, {
                     size: c.EFr.SIZE_20,
                     src: l,
@@ -110,27 +110,27 @@ function y(e) {
         ),
         G = l.useCallback(
             (e) => {
-                let { value: n } = e;
-                _((e) => j(x({}, e), { authorIds: null != n ? [n] : [] }));
+                let { value: t } = e;
+                _((e) => j(v({}, e), { authorIds: null != t ? [t] : [] }));
             },
             [_],
         ),
         L = l.useCallback(
             (e) => {
-                _((n) => j(x({}, n), { message: null != e ? e : "" }));
+                _((t) => j(v({}, t), { message: null != e ? e : "" }));
             },
             [_],
         ),
         H = l.useCallback(() => {
-            P(C), k();
-        }, [k, P, C]),
+            P(C), y();
+        }, [y, P, C]),
         N = l.useCallback(() => {
-            P(null), k();
-        }, [P, k]),
-        T = null != (n = C.authorIds[0]) ? n : "",
+            P(null), y();
+        }, [P, y]),
+        T = null != (t = C.authorIds[0]) ? t : "",
         U = (0, s.e7)([m.ZP], () => (null != O ? m.ZP.getMember(O, T) : null)),
         E = (0, s.e7)([p.default], () => (null != U ? p.default.getUser(U.userId) : null)),
-        M = null != (a = null != (t = null == U ? void 0 : U.nick) ? t : null == E ? void 0 : E.username) ? a : "",
+        M = null != (a = null != (n = null == U ? void 0 : U.nick) ? n : null == E ? void 0 : E.username) ? a : "",
         R = (function (e) {
             if (null == e.message || 0 === e.message.length) return null;
             if (null == e.authorIds || 0 === e.authorIds.length)
@@ -142,7 +142,7 @@ function y(e) {
             () => [
                 {
                     text: b.intl.string(b.t["ETE/oC"]),
-                    onClick: k,
+                    onClick: y,
                     variant: "secondary",
                 },
                 {
@@ -152,30 +152,30 @@ function y(e) {
                     disabled: 0 === C.message.length || null != R,
                 },
             ],
-            [R, H, k, C.message.length],
+            [R, H, y, C.message.length],
         );
     return (0, r.jsxs)(o.IX, {
-        transitionState: y,
-        onClose: k,
+        transitionState: k,
+        onClose: y,
         children: [
             (0, r.jsx)("div", {
-                className: v.closeButton,
-                children: (0, r.jsx)(u.PZ7, { onClick: k }),
+                className: x.closeButton,
+                children: (0, r.jsx)(u.PZ7, { onClick: y }),
             }),
             (0, r.jsxs)("div", {
-                className: v.container,
+                className: x.container,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: v.formGroup,
+                        className: x.formGroup,
                         children: [
                             (0, r.jsxs)(c.Heading, {
                                 variant: "heading-md/semibold",
                                 color: "header-primary",
-                                children: [b.intl.string(b.t.zNQfQy), (0, r.jsx)(f.Z, {})],
+                                children: [b.intl.string(b.t.zNQfQy), (0, r.jsx)(h.Z, {})],
                             }),
                             (0, r.jsx)(c.Text, {
                                 variant: "text-sm/normal",
-                                color: "header-secondary",
+                                color: "text-default",
                                 children: b.intl.string(b.t.mQHK2S),
                             }),
                             (0, r.jsx)(c.VcW, {
@@ -190,9 +190,9 @@ function y(e) {
                             }),
                         ],
                     }),
-                    (0, r.jsx)("div", { className: v.separator }),
+                    (0, r.jsx)("div", { className: x.separator }),
                     (0, r.jsxs)("div", {
-                        className: v.formGroup,
+                        className: x.formGroup,
                         children: [
                             (0, r.jsx)(c.Heading, {
                                 variant: "heading-md/semibold",
@@ -201,7 +201,7 @@ function y(e) {
                             }),
                             (0, r.jsx)(c.Text, {
                                 variant: "text-sm/normal",
-                                color: "header-secondary",
+                                color: "text-default",
                                 children: b.intl.format(b.t["6biC4R"], {}),
                             }),
                             (0, r.jsx)(c.Kx8, {

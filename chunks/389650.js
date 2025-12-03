@@ -396,7 +396,7 @@ class Y extends i.PureComponent {
                 }),
                 (0, r.jsx)(d.Text, {
                     variant: "text-sm/medium",
-                    color: "text-secondary",
+                    color: "text-subtle",
                     children: L.intl.string(L.t.NoKjWP),
                 }),
             ],

@@ -30,7 +30,7 @@ function m(e) {
                   m &&
                       (0, r.jsx)(o.xvT, {
                           variant: "text-sm/semibold",
-                          color: "header-secondary",
+                          color: "text-default",
                           children: p.intl.string(p.t["oC/fU6"]),
                       }),
                   h &&
@@ -38,19 +38,19 @@ function m(e) {
                           children: [
                               (0, r.jsx)(o.xvT, {
                                   variant: "text-sm/semibold",
-                                  color: "header-secondary",
+                                  color: "text-default",
                                   children: p.intl.string(p.t.HXz5An),
                               }),
                               (0, r.jsxs)(r.Fragment, {
                                   children: [
                                       (0, r.jsx)(o.xvT, {
                                           variant: "text-sm/semibold",
-                                          color: "header-secondary",
+                                          color: "text-default",
                                           children: "\u2022",
                                       }),
                                       (0, r.jsx)(o.xvT, {
                                           variant: "text-sm/semibold",
-                                          color: "header-secondary",
+                                          color: "text-default",
                                           children: p.intl.format(p.t.PrtAqy, {
                                               unignoreHook: (e, n) =>
                                                   (0, r.jsx)(

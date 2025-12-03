@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h }), n(388685);
 var r = n(54381),
-    a = n(473749),
-    i = n(120356),
-    l = n.n(i),
+    i = n(473749),
+    a = n(120356),
+    l = n.n(a),
     s = n(21260),
     o = n(481060),
     c = n(393903),
@@ -10,41 +10,41 @@ var r = n(54381),
     u = n(388032),
     p = n(16617);
 function m(e) {
-    let { onTabSelect: t, tabs: n, selectedTab: i } = e,
-        s = a.useMemo(
+    let { onTabSelect: t, tabs: n, selectedTab: a } = e,
+        s = i.useMemo(
             () =>
                 null !=
                 n.find((e) => {
                     let { id: t } = e;
-                    return t === i;
+                    return t === a;
                 }),
-            [i, n],
+            [a, n],
         ),
-        [c, m] = a.useState(!1),
+        [c, m] = i.useState(!1),
         h = (function (e) {
             let { selected: t, isHovered: n } = e;
-            return n ? "text-primary" : t ? "text-brand" : "text-default";
+            return n ? "text-strong" : t ? "text-brand" : "text-default";
         })({
             selected: s,
             isHovered: c,
         }),
         g = (function (e) {
             let { selected: t, isHovered: n } = e;
-            return n ? o.TVs.colors.TEXT_PRIMARY : t ? o.TVs.colors.TEXT_BRAND : o.TVs.colors.INTERACTIVE_NORMAL;
+            return n ? o.TVs.colors.TEXT_STRONG : t ? o.TVs.colors.TEXT_BRAND : o.TVs.colors.INTERACTIVE_NORMAL;
         })({
             selected: s,
             isHovered: c,
         }),
-        _ = a.useCallback(() => m(!0), []),
-        f = a.useCallback(() => m(!1), []),
-        b = a.useRef(null);
+        f = i.useCallback(() => m(!0), []),
+        _ = i.useCallback(() => m(!1), []),
+        b = i.useRef(null);
     return (0, r.jsx)(o.yRy, {
         targetElementRef: b,
         renderPopout: (e) => {
-            let { closePopout: a } = e;
+            let { closePopout: i } = e;
             return (0, r.jsx)(d.Z, {
-                selectedTab: i,
-                onClose: a,
+                selectedTab: a,
+                onClose: i,
                 tabs: n,
                 onTabSelect: t,
             });
@@ -52,8 +52,8 @@ function m(e) {
         position: "bottom",
         align: "left",
         children: (e, t) => {
-            var n, a;
-            let { isShown: i } = t;
+            var n, i;
+            let { isShown: a } = t;
             return (0, r.jsx)(
                 o.njP.Item,
                 ((n = (function (e) {
@@ -81,7 +81,7 @@ function m(e) {
                     }
                     return e;
                 })({}, e)),
-                (a = a =
+                (i = i =
                     {
                         id: "more",
                         look: "brand",
@@ -93,15 +93,15 @@ function m(e) {
                         "aria-label": u.intl.string(u.t["UKOtz+"]),
                         children: (0, r.jsxs)("div", {
                             className: p.more,
-                            onMouseEnter: _,
-                            onMouseLeave: f,
+                            onMouseEnter: f,
+                            onMouseLeave: _,
                             children: [
                                 (0, r.jsx)(o.Text, {
                                     variant: "text-sm/semibold",
                                     color: h,
                                     children: u.intl.string(u.t["UKOtz+"]),
                                 }),
-                                i
+                                a
                                     ? (0, r.jsx)(o.u04, {
                                           size: "xs",
                                           color: g,
@@ -114,7 +114,7 @@ function m(e) {
                         }),
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
+                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -122,8 +122,8 @@ function m(e) {
                               n.push.apply(n, r);
                           }
                           return n;
-                      })(Object(a)).forEach(function (e) {
-                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
+                      })(Object(i)).forEach(function (e) {
+                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
                       }),
                 n),
             );
@@ -131,28 +131,28 @@ function m(e) {
     });
 }
 function h(e) {
-    let { className: t, selectedTab: n, tabs: i, onTabSelect: d, onAvailableWidthChange: u } = e,
-        [h, g] = a.useState(0),
-        _ = a.useRef(h),
+    let { className: t, selectedTab: n, tabs: a, onTabSelect: d, onAvailableWidthChange: u } = e,
+        [h, g] = i.useState(0),
+        f = i.useRef(h),
         {
-            lastVisibleIndex: f,
+            lastVisibleIndex: _,
             onItemLayout: b,
             overflowItemsRef: x,
             itemWidthsRef: v,
         } = (0, s.zP)({
-            items: i,
+            items: a,
             itemGapPx: 20,
             maxLines: 1,
             containerWidth: h,
         }),
-        C = a.useMemo(() => i.slice(0, f + 1), [f, i]),
-        j = a.useMemo(() => i.slice(f + 1), [f, i]),
-        y = a.useRef(null),
-        I = a.useCallback(
+        C = i.useMemo(() => a.slice(0, _ + 1), [_, a]),
+        j = i.useMemo(() => a.slice(_ + 1), [_, a]),
+        y = i.useRef(null),
+        I = i.useCallback(
             (e) => {
                 let t = e.contentRect.width;
-                if (null == t || _.current === t) return;
-                g(t), (_.current = t);
+                if (null == t || f.current === t) return;
+                g(t), (f.current = t);
                 let n = v.current.reduce((e, t, n) => e + t + 20 * (0 !== n));
                 null == u || u(t - n);
             },
@@ -167,7 +167,7 @@ function h(e) {
             (0, r.jsxs)("div", {
                 className: p.measurements,
                 children: [
-                    i.map((e, t) =>
+                    a.map((e, t) =>
                         (0, r.jsx)(
                             s.AJ,
                             {

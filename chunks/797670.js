@@ -27,7 +27,7 @@ function u(e) {
                       className: c.textContainer,
                       children: (0, r.jsx)(o.Text, {
                           className: a()({ [c.smallText]: 20 === n }),
-                          color: "text-secondary",
+                          color: "text-subtle",
                           variant: "text-md/semibold",
                           children: u,
                       }),

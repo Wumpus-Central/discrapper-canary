@@ -47,7 +47,7 @@ let p = () => {
             children: [
                 (0, r.jsx)(a.Text, {
                     variant: "text-md/medium",
-                    color: "text-primary",
+                    color: "text-strong",
                     children: E,
                 }),
                 (0, r.jsxs)(a.Kqy, {
@@ -72,7 +72,7 @@ let p = () => {
                                 }),
                                 (0, r.jsx)(a.Text, {
                                     variant: "text-md/medium",
-                                    color: "text-secondary",
+                                    color: "text-subtle",
                                     children: y,
                                 }),
                                 (0, r.jsx)("div", {

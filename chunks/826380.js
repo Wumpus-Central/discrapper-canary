@@ -21,14 +21,14 @@ function a(e) {
                         children: [
                             (0, l.jsx)(i.Text, {
                                 variant: "text-md/medium",
-                                color: "text-primary",
+                                color: "text-strong",
                                 children: t,
                             }),
                             null != n &&
                                 n.length > 0 &&
                                 (0, l.jsx)(i.Text, {
                                     variant: "text-sm/medium",
-                                    color: "text-tertiary",
+                                    color: "text-muted",
                                     children: n,
                                 }),
                         ],

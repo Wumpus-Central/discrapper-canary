@@ -146,7 +146,7 @@ function b(e) {
                                 null != P &&
                                     (0, r.jsx)(o.Text, {
                                         variant: "text-sm/semibold",
-                                        color: "text-secondary",
+                                        color: "text-subtle",
                                         children: g.intl.format(g.t["OQk+jr"], { endDate: R }),
                                     }),
                             ],
@@ -160,7 +160,7 @@ function b(e) {
                                       storeListing: e,
                                       cta: (0, r.jsx)(o.Text, {
                                           variant: "text-sm/semibold",
-                                          color: "text-secondary",
+                                          color: "text-subtle",
                                           children: g.intl.format(g.t.nn88hB, { startDate: R }),
                                       }),
                                   },

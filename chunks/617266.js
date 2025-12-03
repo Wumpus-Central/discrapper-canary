@@ -19,10 +19,10 @@ var l = n(54381),
     x = n(592125),
     j = n(430824),
     S = n(496675),
-    C = n(158776),
-    _ = n(306680),
-    O = n(699516),
-    P = n(594174),
+    _ = n(158776),
+    C = n(306680),
+    P = n(699516),
+    O = n(594174),
     E = n(55935),
     w = n(823379),
     Z = n(51144),
@@ -55,7 +55,7 @@ function D(e) {
     }
     return e;
 }
-function A(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -73,7 +73,7 @@ function A(e, t) {
         e
     );
 }
-function k(e, t) {
+function A(e, t) {
     if (null == e) return {};
     var n,
         l,
@@ -163,14 +163,14 @@ function I(e) {
 }
 function F(e) {
     var { user: t, subLabel: n } = e,
-        r = k(e, ["user", "subLabel"]);
+        r = A(e, ["user", "subLabel"]);
     let i = Z.ZP.useName(t),
         a = Z.ZP.useUserTag(t, { decoration: "never" }),
-        s = (0, o.e7)([O.Z], () => O.Z.getNickname(t.id)),
-        u = (0, o.e7)([C.Z], () => C.Z.getStatus(t.id));
+        s = (0, o.e7)([P.Z], () => P.Z.getNickname(t.id)),
+        u = (0, o.e7)([_.Z], () => _.Z.getStatus(t.id));
     return (0, l.jsx)(
         I,
-        A(D({}, r), {
+        k(D({}, r), {
             icon: (0, l.jsx)(d.Z, {
                 "aria-hidden": !0,
                 size: c.EFr.SIZE_32,
@@ -184,12 +184,12 @@ function F(e) {
 }
 function R(e) {
     var { channel: t, subLabel: n } = e,
-        r = k(e, ["channel", "subLabel"]);
+        r = A(e, ["channel", "subLabel"]);
     let i = (0, p.ZP)(t),
         a = (0, g._)(t);
     return (0, l.jsx)(
         I,
-        A(D({}, r), {
+        k(D({}, r), {
             icon: (0, l.jsx)(h.Z, {
                 "aria-hidden": !0,
                 size: c.EFr.SIZE_32,
@@ -202,14 +202,14 @@ function R(e) {
 }
 function q(e) {
     var { channel: t, subLabel: n } = e,
-        r = k(e, ["channel", "subLabel"]);
+        r = A(e, ["channel", "subLabel"]);
     let i = (0, o.e7)([j.Z], () => j.Z.getGuild(null == t ? void 0 : t.guild_id)),
         a = (0, p.ZP)(t),
-        s = (0, o.e7)([x.Z, P.default, O.Z], () => {
+        s = (0, o.e7)([x.Z, O.default, P.Z], () => {
             let e = x.Z.getChannel(t.parent_id);
-            return null == e ? null : (0, p.F6)(e, P.default, O.Z, !1);
+            return null == e ? null : (0, p.F6)(e, O.default, P.Z, !1);
         }),
-        d = (0, o.e7)([_.ZP], () => _.ZP.lastMessageTimestamp(t.id, N.W.CHANNEL)),
+        d = (0, o.e7)([C.ZP], () => C.ZP.lastMessageTimestamp(t.id, N.W.CHANNEL)),
         f = null == i ? void 0 : i.name;
     if (t.isThread() || t.isForumPost()) {
         let e = t.isForumPost() ? c.Mmi : c.VL1;
@@ -217,12 +217,12 @@ function q(e) {
             className: T.threadSubLabel,
             children: [
                 (0, l.jsx)(e, {
-                    color: c.TVs.colors.TEXT_SECONDARY,
+                    color: c.TVs.colors.TEXT_SUBTLE,
                     className: T.subLabelIcon,
                 }),
                 (0, l.jsx)(c.Text, {
                     variant: "text-xs/medium",
-                    color: "text-secondary",
+                    color: "text-subtle",
                     lineClamp: 1,
                     children: s,
                 }),
@@ -232,12 +232,12 @@ function q(e) {
                               (0, l.jsx)(c.Text, {
                                   className: T.subLabelSeparator,
                                   variant: "text-xs/medium",
-                                  color: "text-secondary",
+                                  color: "text-subtle",
                                   children: "\u2022",
                               }),
                               (0, l.jsx)(c.Text, {
                                   variant: "text-xs/medium",
-                                  color: "text-secondary",
+                                  color: "text-subtle",
                                   children: (0, E.Xf)(u()(d)),
                               }),
                           ],
@@ -248,7 +248,7 @@ function q(e) {
     }
     return (0, l.jsx)(
         I,
-        A(D({}, r), {
+        k(D({}, r), {
             icon: (0, l.jsx)(m.Z, {
                 size: m.E.SMALL_32,
                 guild: i,

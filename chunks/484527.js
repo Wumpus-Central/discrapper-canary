@@ -19,14 +19,14 @@ var a = n(54381),
 function _(e) {
     let { detectedGame: t, trackClick: n, onInviteResolved: r, closeModal: _ } = e,
         [I, b] = i.useState(),
-        y = (0, o.e7)([g.Z], () => {
+        O = (0, o.e7)([g.Z], () => {
             var e, t;
             return (
                 (null == I || null == (e = I.guild) ? void 0 : e.id) != null &&
                 g.Z.isMember(null == I || null == (t = I.guild) ? void 0 : t.id)
             );
         }),
-        O = i.useMemo(() => {
+        y = i.useMemo(() => {
             var e;
             return null == (e = t.websites)
                 ? void 0
@@ -45,8 +45,8 @@ function _(e) {
                     !0 !== e.banned && (b(e.invite), null != e.invite && (null == r || r(e.invite)));
                 }
             };
-            null != O && e(O.url);
-        }, [O, r, I]),
+            null != y && e(y.url);
+        }, [y, r, I]),
         null == I || null == I.guild || !I.guild.features.includes(x.GuildFeatures.VERIFIED))
     )
         return null;
@@ -61,7 +61,7 @@ function _(e) {
             (0, a.jsx)(c.Heading, {
                 className: v.sectionHeader,
                 variant: "text-xs/semibold",
-                color: "header-secondary",
+                color: "text-default",
                 children: h.intl.string(h.t.kBDZSL),
             }),
             (0, a.jsxs)("div", {
@@ -91,7 +91,7 @@ function _(e) {
                             null != I.approximate_member_count &&
                                 (0, a.jsx)(c.Text, {
                                     variant: "text-xxs/normal",
-                                    color: "text-tertiary",
+                                    color: "text-muted",
                                     children: h.intl.format(h.t.zRl6XR, { count: I.approximate_member_count }),
                                 }),
                         ],
@@ -100,7 +100,7 @@ function _(e) {
             }),
             (0, a.jsx)(c.Button, {
                 variant: "secondary",
-                text: y ? h.intl.string(h.t.cEnaWx) : h.intl.string(h.t.XpeFYr),
+                text: O ? h.intl.string(h.t.cEnaWx) : h.intl.string(h.t.XpeFYr),
                 onClick: () => {
                     _(),
                         n(p.as.JoinOfficialServer),

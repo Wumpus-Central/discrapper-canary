@@ -78,7 +78,7 @@ function Z(e) {
                     }),
                     (0, l.jsx)(u.Text, {
                         variant: "text-sm/medium",
-                        color: "text-secondary",
+                        color: "text-subtle",
                         children: i.description,
                     }),
                 ],
@@ -209,7 +209,7 @@ function D(e) {
                 ),
             (0, l.jsx)(u.Text, {
                 variant: "text-xs/medium",
-                color: "text-primary",
+                color: "text-strong",
                 children: t.label,
             }),
         ],

@@ -99,7 +99,7 @@ function C(e) {
             !o &&
                 (0, r.jsx)(s.Text, {
                     variant: "text-sm/medium",
-                    color: "text-secondary",
+                    color: "text-subtle",
                     children: p,
                 }),
             null != f &&
@@ -116,7 +116,7 @@ function C(e) {
                         }),
                         (0, r.jsx)(s.Text, {
                             variant: "text-sm/medium",
-                            color: "text-secondary",
+                            color: "text-subtle",
                             children: f.name,
                         }),
                     ],

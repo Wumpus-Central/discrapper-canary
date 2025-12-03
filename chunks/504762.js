@@ -23,7 +23,7 @@ function o() {
                 }),
                 (0, r.jsx)(i.LZC, { size: 8 }),
                 (0, r.jsx)(i.Text, {
-                    color: "header-secondary",
+                    color: "text-default",
                     variant: "text-sm/normal",
                     children: l.intl.string(l.t.TvGJgk),
                 }),

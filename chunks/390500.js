@@ -35,7 +35,7 @@ let c = function (e) {
                         }),
                         (0, r.jsx)(l.Text, {
                             variant: "text-md/medium",
-                            color: "header-secondary",
+                            color: "text-default",
                             children: s.intl.string(s.t.FdsK4h),
                         }),
                     ],

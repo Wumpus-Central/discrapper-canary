@@ -1,4 +1,4 @@
-n.d(e, { default: () => E });
+n.d(e, { default: () => h });
 var r = n(54381),
     i = n(473749),
     o = n(990547),
@@ -8,13 +8,13 @@ var r = n(54381),
     a = n(819557),
     d = n(138201),
     u = n(626135),
-    O = n(63063),
-    f = n(5192),
+    f = n(63063),
+    O = n(5192),
     m = n(478923),
     j = n(858380),
-    g = n(981631),
-    p = n(388032),
-    x = n(230784);
+    x = n(981631),
+    g = n(388032),
+    p = n(230784);
 function b(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
@@ -58,29 +58,29 @@ function I(t, e) {
         t
     );
 }
-function h() {
+function E() {
     return (0, r.jsxs)(a.z, {
         children: [
             (0, r.jsx)(a.q, {
-                title: p.intl.string(p.t.ruhGkg),
-                description: p.intl.string(p.t["/FWKKC"]),
+                title: g.intl.string(g.t.ruhGkg),
+                description: g.intl.string(g.t["/FWKKC"]),
                 icon: c.owK,
             }),
             (0, r.jsx)(a.q, {
-                title: p.intl.string(p.t.N9v3eq),
-                description: p.intl.string(p.t.ddpuJg),
+                title: g.intl.string(g.t.N9v3eq),
+                description: g.intl.string(g.t.ddpuJg),
                 icon: c.owK,
             }),
             (0, r.jsx)(a.q, {
-                title: p.intl.string(p.t["4ycGE0"]),
-                description: p.intl.string(p.t["5yfN+o"]),
+                title: g.intl.string(g.t["4ycGE0"]),
+                description: g.intl.string(g.t["5yfN+o"]),
                 icon: c.d3s,
             }),
         ],
     });
 }
-function E(t) {
-    var { user: e, guildId: n, channelId: a, onIgnore: E, onBlock: y, location: N = "ContextMenu" } = t,
+function h(t) {
+    var { user: e, guildId: n, channelId: a, onIgnore: h, onBlock: y, location: N = "ContextMenu" } = t,
         v = (function (t, e) {
             if (null == t) return {};
             var n,
@@ -105,7 +105,7 @@ function E(t) {
     return (
         i.useLayoutEffect(
             () => () => {
-                u.default.track(g.rMx.USER_REMEDIATION_ACTION, {
+                u.default.track(x.rMx.USER_REMEDIATION_ACTION, {
                     action: j.l.DISMISS_IGNORE,
                     location: N,
                 });
@@ -117,15 +117,15 @@ function E(t) {
             I(
                 b(
                     {
-                        confirmText: p.intl.string(p.t.ytCpKs),
-                        cancelText: p.intl.string(p.t["ETE/oC"]),
+                        confirmText: g.intl.string(g.t.ytCpKs),
+                        cancelText: g.intl.string(g.t["ETE/oC"]),
                         onConfirm: () => {
-                            null == E || E(),
+                            null == h || h(),
                                 s.Z.ignoreUser(e.id, N, null != a ? a : void 0),
-                                u.default.track(g.rMx.IGNORE_USER_CONFIRMED);
+                                u.default.track(x.rMx.IGNORE_USER_CONFIRMED);
                         },
                         onCancel: () => {
-                            u.default.track(g.rMx.USER_REMEDIATION_ACTION, {
+                            u.default.track(x.rMx.USER_REMEDIATION_ACTION, {
                                 action: j.l.CANCEL_IGNORE,
                                 location: N,
                             });
@@ -137,13 +137,13 @@ function E(t) {
                 ),
                 {
                     children: (0, r.jsxs)("div", {
-                        className: x.container,
+                        className: p.container,
                         children: [
                             (0, r.jsxs)("div", {
-                                className: x.confirmationHeader,
+                                className: p.confirmationHeader,
                                 children: [
                                     (0, r.jsxs)("div", {
-                                        className: x.iconContainer,
+                                        className: p.iconContainer,
                                         children: [
                                             (0, r.jsx)(c.qEK, {
                                                 size: c.EFr.SIZE_56,
@@ -151,7 +151,7 @@ function E(t) {
                                                 "aria-hidden": !0,
                                             }),
                                             (0, r.jsx)("div", {
-                                                className: x.icon,
+                                                className: p.icon,
                                                 children: (0, r.jsx)(c.kZF, {}),
                                             }),
                                         ],
@@ -161,33 +161,33 @@ function E(t) {
                                             (0, r.jsx)(c.Heading, {
                                                 variant: "heading-xl/bold",
                                                 color: "header-primary",
-                                                children: p.intl.format(p.t["WrQD/Y"], {
-                                                    username: f.ZP.getName(n, a, e),
+                                                children: g.intl.format(g.t["WrQD/Y"], {
+                                                    username: O.ZP.getName(n, a, e),
                                                 }),
                                             }),
                                             (0, r.jsx)(c.Text, {
                                                 variant: "text-md/medium",
-                                                color: "header-secondary",
-                                                children: p.intl.string(p.t.JKL1u1),
+                                                color: "text-default",
+                                                children: g.intl.string(g.t.JKL1u1),
                                             }),
                                         ],
                                     }),
                                 ],
                             }),
-                            (0, r.jsx)(h, {}),
+                            (0, r.jsx)(E, {}),
                             (0, r.jsxs)("div", {
-                                className: x.otherOptions,
+                                className: p.otherOptions,
                                 children: [
                                     (0, r.jsx)(d.rT, {
-                                        title: p.intl.string(p.t["1v01gh"]),
+                                        title: g.intl.string(g.t["1v01gh"]),
                                         children: (0, r.jsx)(d.JZ, {
-                                            title: p.intl.string(p.t.bwxY30),
-                                            description: p.intl.string(p.t.NTnf1T),
+                                            title: g.intl.string(g.t.bwxY30),
+                                            description: g.intl.string(g.t.NTnf1T),
                                             titleVariant: "text-md/medium",
                                             descriptionVariant: "text-xs/medium",
-                                            buttonText: p.intl.string(p.t.QdfUHE),
+                                            buttonText: g.intl.string(g.t.QdfUHE),
                                             onButtonPress: () => {
-                                                u.default.track(g.rMx.USER_REMEDIATION_ACTION, {
+                                                u.default.track(x.rMx.USER_REMEDIATION_ACTION, {
                                                     action: j.l.GOTO_BLOCK,
                                                     location: N,
                                                 }),
@@ -200,7 +200,7 @@ function E(t) {
                                                                 guildId: n,
                                                                 channelId: a,
                                                                 onBlock: y,
-                                                                onIgnore: E,
+                                                                onIgnore: h,
                                                                 location: N,
                                                             }),
                                                         ),
@@ -210,9 +210,9 @@ function E(t) {
                                     }),
                                     (0, r.jsx)(c.Text, {
                                         variant: "text-sm/medium",
-                                        className: x.featureGuide,
-                                        children: p.intl.format(p.t.Hjvqr6, {
-                                            articleLink: O.Z.getArticleURL(g.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE),
+                                        className: p.featureGuide,
+                                        children: g.intl.format(g.t.Hjvqr6, {
+                                            articleLink: f.Z.getArticleURL(x.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE),
                                         }),
                                     }),
                                 ],

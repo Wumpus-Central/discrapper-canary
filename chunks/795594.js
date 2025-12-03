@@ -396,7 +396,7 @@ let ef = (e) => {
                                     !X &&
                                         (0, r.jsx)(E.Text, {
                                             variant: "text-sm/normal",
-                                            color: "text-secondary",
+                                            color: "text-subtle",
                                             className: o()(er.appDetailsContent, er.permissionsDescription),
                                             children: en.intl.format(en.t.nZOS8j, { numPermissions: e.length }),
                                         }),

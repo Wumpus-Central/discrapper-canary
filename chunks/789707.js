@@ -32,7 +32,7 @@ function l() {
             }),
             (0, r.jsx)(i.Text, {
                 className: s.text,
-                color: "header-secondary",
+                color: "text-default",
                 variant: "text-md/normal",
                 children: o.intl.string(o.t.p2dIh6),
             }),

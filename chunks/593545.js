@@ -293,7 +293,7 @@ function R(e) {
                           }),
             }),
             (0, r.jsxs)(u.Text, {
-                color: "header-secondary",
+                color: "text-default",
                 className: g.footer,
                 variant: "text-sm/normal",
                 children: [
@@ -367,7 +367,7 @@ function w(e) {
                                   }),
                     }),
                     (0, r.jsxs)(u.Text, {
-                        color: "header-secondary",
+                        color: "text-default",
                         className: g.modalFooter,
                         variant: "text-sm/normal",
                         children: [

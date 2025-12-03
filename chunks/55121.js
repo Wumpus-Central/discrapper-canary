@@ -3,15 +3,15 @@ var i = n(54381);
 n(473749);
 var a = n(793030),
     s = n(481060),
-    o = n(22928),
-    l = n(438926),
+    l = n(22928),
+    o = n(438926),
     r = n(388032),
     c = n(475495);
 function u(t) {
     let {
         sku: e,
         application: n,
-        primaryCTAButtonProps: o,
+        primaryCTAButtonProps: l,
         transitionState: u,
         onClose: x,
         hasAlreadyLinked: f,
@@ -23,7 +23,7 @@ function u(t) {
         transitionState: u,
         onClose: x,
         children: [
-            (0, i.jsx)(l.y, {
+            (0, i.jsx)(o.y, {
                 sku: e,
                 title: g,
             }),
@@ -34,7 +34,7 @@ function u(t) {
                         children: [
                             (0, i.jsx)(s.Text, {
                                 variant: "text-md/normal",
-                                color: "text-secondary",
+                                color: "text-subtle",
                                 className: c.modalBodyText,
                                 children: m,
                             }),
@@ -57,14 +57,14 @@ function u(t) {
                             className: c.expirationWarningContainer,
                             children: (0, i.jsx)(s.Text, {
                                 variant: "text-xs/normal",
-                                color: "text-secondary",
+                                color: "text-subtle",
                                 children: r.intl.formatToPlainString(r.t.TTj7ME, { numDays: 14 }),
                             }),
                         }),
                 ],
             }),
             (0, i.jsx)(a.Go$, {
-                actions: [o],
+                actions: [l],
                 actionsFullWidth: !0,
             }),
         ],
@@ -91,14 +91,14 @@ function d(t) {
                               (0, i.jsx)(s.Text, {
                                   variant: "text-md/normal",
                                   className: c.statusText,
-                                  color: "text-secondary",
+                                  color: "text-subtle",
                                   children: r.intl.string(r.t["LV+CXH"]),
                               }),
                           ],
                       }),
                       (0, i.jsx)("div", {
                           className: c.statusRight,
-                          children: (0, i.jsx)(o.h, {
+                          children: (0, i.jsx)(l.h, {
                               application: n,
                               iconSize: 20,
                           }),

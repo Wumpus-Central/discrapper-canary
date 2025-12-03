@@ -91,7 +91,7 @@ function g(e) {
                         }),
                         (0, r.jsx)(a.Text, {
                             variant: "text-sm/normal",
-                            color: "text-secondary",
+                            color: "text-subtle",
                             lineClamp: 1,
                             children: I,
                         }),
@@ -101,7 +101,7 @@ function g(e) {
                     ? (0, r.jsx)(a.Text, {
                           className: p.cmdAppName,
                           variant: "text-sm/normal",
-                          color: "text-secondary",
+                          color: "text-subtle",
                           children: v,
                       })
                     : null,

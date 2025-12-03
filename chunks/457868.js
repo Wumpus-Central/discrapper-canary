@@ -17,8 +17,8 @@ var r = n(54381),
     _ = n(906732),
     y = n(82295),
     O = n(623624),
-    j = n(518738),
-    x = n(850020),
+    x = n(518738),
+    j = n(850020),
     v = n(48950),
     C = n(965376),
     I = n(159299),
@@ -84,7 +84,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             b = (0, p.e7)([w.default], () => w.default.getUser(a)),
             _ = (0, p.e7)([w.default], () => w.default.getCurrentUser()),
             y = (null == b ? void 0 : b.id) === (null == _ ? void 0 : _.id),
-            j = (0, p.e7)([T.Z, N.Z], () => (y ? N.Z.getStatus() : T.Z.getStatus(a, t.guild_id))),
+            x = (0, p.e7)([T.Z, N.Z], () => (y ? N.Z.getStatus() : T.Z.getStatus(a, t.guild_id))),
             v = (0, p.e7)([T.Z], () => T.Z.isMobileOnline(a)),
             C = (0, p.e7)([T.Z, N.Z], () => (y ? N.Z.getActivities() : T.Z.getActivities(a, t.guild_id))),
             A = (0, p.e7)([E.Z], () => E.Z.getAnyStreamForUser(a)),
@@ -152,7 +152,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                 },
                 [t.guild_id],
             ),
-            q = (0, x.K)({
+            q = (0, j.K)({
                 user: b,
                 guildId: t.guild_id,
             }),
@@ -204,7 +204,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                             user: b,
                             currentUser: _,
                             nick: null == h ? void 0 : h.nick,
-                            status: j,
+                            status: x,
                             activities: C,
                             colorString: null == h ? void 0 : h.colorString,
                             colorStrings: null == h ? void 0 : h.colorStrings,
@@ -236,7 +236,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
     }),
     K = i.memo(function (e) {
         let { id: t, label: n, count: i, guildId: l } = e,
-            a = (0, j.p9)({
+            a = (0, x.p9)({
                 roleId: t,
                 guildId: l,
                 size: 16,
@@ -269,7 +269,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                       (0, r.jsx)("div", { className: B.divider }),
                       (0, r.jsxs)(h.Text, {
                           variant: "text-xs/bold",
-                          color: "header-secondary",
+                          color: "text-default",
                           className: B.private,
                           children: [
                               (0, r.jsx)(h.mBM, {
@@ -282,7 +282,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                       }),
                       (0, r.jsx)(h.Text, {
                           variant: "text-sm/normal",
-                          color: "header-secondary",
+                          color: "text-default",
                           className: B.instructions,
                           children: F.intl.string(F.t.Hsd8hC),
                       }),
@@ -367,8 +367,8 @@ function X(e) {
         O)
     )
         return (0, r.jsx)(J, { channel: t });
-    let j = o().omit(g.containerProps, ["ref"]),
-        x = M.iJ(n);
+    let x = o().omit(g.containerProps, ["ref"]),
+        j = M.iJ(n);
     return (0, r.jsx)(_.Gt, {
         value: s,
         children: (0, r.jsx)(c.bG, {
@@ -409,7 +409,7 @@ function X(e) {
                                                 channel: t,
                                                 sectionId: a,
                                                 userId: l[i],
-                                                guildOwnerId: x,
+                                                guildOwnerId: j,
                                             },
                                             l[i],
                                         );
@@ -422,7 +422,7 @@ function X(e) {
                                     sections: u.map((e) => e.userIds.length),
                                     fade: !0,
                                 },
-                                j,
+                                x,
                                 e,
                             ),
                             l,
@@ -463,7 +463,7 @@ function J(e) {
             (0, r.jsx)(h.Text, {
                 className: B.emptyStateSubtext,
                 variant: "text-sm/normal",
-                color: "header-secondary",
+                color: "text-default",
                 children: F.intl.string(F.t.emw8UP),
             }),
         ],

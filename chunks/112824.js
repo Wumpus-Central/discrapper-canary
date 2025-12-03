@@ -10,8 +10,8 @@ var i = n(120356),
     s = n(442837),
     o = n(28664),
     c = n(481060),
-    d = n(485386),
-    u = n(496675),
+    u = n(485386),
+    d = n(496675),
     g = n(700785),
     m = n(647086),
     p = n(135899),
@@ -47,12 +47,12 @@ function x(e) {
 }
 function j(e) {
     let { guild: t } = e,
-        i = (0, s.e7)([d.Z], () => d.Z.getEveryoneRole(t)),
+        i = (0, s.e7)([u.Z], () => u.Z.getEveryoneRole(t)),
         g = x(t),
         m = g.length > 0,
         j = p.$X.some((e) => {
             var n, r;
-            return !u.Z.can(e, t, null, {
+            return !d.Z.can(e, t, null, {
                 [i.id]:
                     ((n = b({}, i)),
                     (r = r = { permissions: a.Od(i.permissions, e) }),
@@ -83,7 +83,7 @@ function j(e) {
                         }),
                         (0, r.jsx)(c.Text, {
                             variant: "text-sm/medium",
-                            color: "header-secondary",
+                            color: "text-default",
                             children: f.intl.format(f.t.RXAtdO, { numPerms: g.length }),
                         }),
                     ],

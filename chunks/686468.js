@@ -17,23 +17,23 @@ var r = n(54381),
     _ = n(146085),
     y = n(979339),
     O = n(643632),
-    j = n(388032),
-    x = n(196979);
+    x = n(388032),
+    j = n(196979);
 function v(e) {
     let { onClick: t, className: n } = e,
         i = c.S6n;
     return (0, r.jsx)(u.Z, {
-        iconContainerClassName: a()({ [x.continueIconContainer]: !1 }),
+        iconContainerClassName: a()({ [j.continueIconContainer]: !1 }),
         icon: (0, r.jsx)(i, {
             size: "custom",
             color: "currentColor",
-            className: x.continueIcon,
+            className: j.continueIcon,
             height: 20,
             width: 20,
         }),
         color: o.Z.unsafe_rawColors.PRIMARY_700.css,
-        title: j.intl.string(j.t["jMLfp/"]),
-        description: j.intl.string(j.t["Vd/rEX"]),
+        title: x.intl.string(x.t["jMLfp/"]),
+        description: x.intl.string(x.t["Vd/rEX"]),
         onClick: t,
         className: n,
     });
@@ -42,27 +42,27 @@ function C(e) {
     let { channel: t } = e,
         { participants: n, usersInSummary: i } = (0, y.Z)(t.id);
     return (0, r.jsxs)("div", {
-        className: x.audienceSummary,
+        className: j.audienceSummary,
         children: [
             (0, r.jsx)(d.ZP, {
-                className: x.summaryItem,
+                className: j.summaryItem,
                 guildId: t.guild_id,
                 users: i,
                 size: d.u8.SIZE_16,
             }),
             (0, r.jsx)(c.Text, {
                 variant: "text-sm/normal",
-                color: "header-secondary",
+                color: "text-default",
                 children: (function (e) {
                     if (0 === e.length) return "";
-                    if (1 === e.length) return j.intl.formatToPlainString(j.t["5ULgaQ"], { first: e[0].userNick });
+                    if (1 === e.length) return x.intl.formatToPlainString(x.t["5ULgaQ"], { first: e[0].userNick });
                     if (2 === e.length)
-                        return j.intl.formatToPlainString(j.t.BHK0Op, {
+                        return x.intl.formatToPlainString(x.t.BHK0Op, {
                             first: e[0].userNick,
                             second: e[1].userNick,
                         });
                     let t = e.length - 2;
-                    return j.intl.formatToPlainString(j.t.T3MT4n, {
+                    return x.intl.formatToPlainString(x.t.T3MT4n, {
                         first: e[0].userNick,
                         second: e[1].userNick,
                         numOthers: t,
@@ -80,26 +80,26 @@ function I(e) {
         u = (0, O.Z)(t.id),
         y = i.useRef(null);
     return (0, r.jsxs)("div", {
-        className: x.container,
+        className: j.container,
         ref: y,
         children: [
             (0, r.jsx)(m.Z, { eventTargetRef: y }),
             (0, r.jsxs)("div", {
-                className: x.content,
+                className: j.content,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: x.headerContainer,
+                        className: j.headerContainer,
                         children: [
                             (0, r.jsx)(c.Heading, {
-                                className: x.__invalid_title,
+                                className: j.__invalid_title,
                                 variant: "heading-xxl/normal",
-                                children: j.intl.string(j.t.QGnDLs),
+                                children: x.intl.string(x.t.QGnDLs),
                             }),
                             (0, r.jsx)(c.Text, {
                                 tag: "div",
-                                className: x.subtitle,
+                                className: j.subtitle,
                                 variant: "heading-lg/normal",
-                                children: j.intl.string(j.t.djfK36),
+                                children: x.intl.string(x.t.djfK36),
                             }),
                         ],
                     }),
@@ -111,19 +111,19 @@ function I(e) {
                           }),
                     l
                         ? (0, r.jsx)(f.Z, {
-                              className: x.eventPrompt,
+                              className: j.eventPrompt,
                               channel: t,
                           })
                         : null,
                     d
                         ? (0, r.jsx)(p.Z, {
-                              className: x.eventPrompt,
+                              className: j.eventPrompt,
                               guildId: o,
                           })
                         : null,
                     l
                         ? (0, r.jsx)(v, {
-                              className: a()({ [x.eventPrompt]: !0 }),
+                              className: a()({ [j.eventPrompt]: !0 }),
                               onClick: n,
                           })
                         : null,

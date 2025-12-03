@@ -1,114 +1,114 @@
-i.r(e), i.d(e, { default: () => D }), i(388685);
-var n = i(54381),
-    r = i(473749),
-    l = i(120356),
-    a = i.n(l),
-    s = i(481060),
-    d = i(37234),
-    c = i(2835),
-    o = i(410853),
-    u = i(425196),
-    x = i(860277),
-    p = i(118045),
-    h = i(221558),
-    m = i(360469),
-    f = i(741549),
-    y = i(271268),
-    E = i(626698),
-    v = i(612776),
-    j = i(231338),
-    S = i(140939),
-    Z = i(388032),
-    T = i(691446);
-function D(t) {
-    let {} = t,
-        [e, i] = r.useState(v.ij.WELCOME),
-        l = v.bq[e],
-        D = r.useCallback(() => {
-            if (e >= v.ij.END_SUMMARY) return void (0, d.xf)();
-            i(e + 1);
-        }, [e]);
-    return (0, n.jsx)(s.f6W, {
-        theme: j.BR.DARKER,
-        children: (t) =>
-            (0, n.jsxs)("div", {
-                className: a()(T.container, t),
-                "aria-label": Z.intl.string(S.default["CdU/PF"]),
+n.r(t), n.d(t, { default: () => E }), n(388685);
+var i = n(54381),
+    s = n(473749),
+    r = n(120356),
+    l = n.n(r),
+    o = n(481060),
+    a = n(37234),
+    c = n(2835),
+    u = n(410853),
+    d = n(425196),
+    m = n(860277),
+    p = n(118045),
+    x = n(221558),
+    g = n(360469),
+    h = n(741549),
+    f = n(271268),
+    v = n(626698),
+    j = n(612776),
+    y = n(231338),
+    _ = n(140939),
+    Z = n(388032),
+    M = n(691446);
+function E(e) {
+    let {} = e,
+        [t, n] = s.useState(j.ij.WELCOME),
+        r = j.bq[t],
+        E = s.useCallback(() => {
+            if (t >= j.ij.END_SUMMARY) return void (0, a.xf)();
+            n(t + 1);
+        }, [t]);
+    return (0, i.jsx)(o.f6W, {
+        theme: y.BR.DARKER,
+        children: (e) =>
+            (0, i.jsxs)("div", {
+                className: l()(M.container, e),
+                "aria-label": Z.intl.string(_.default["CdU/PF"]),
                 children: [
-                    (0, n.jsxs)(s.MyZ, {
-                        activeSlide: l,
+                    (0, i.jsxs)(o.MyZ, {
+                        activeSlide: r,
                         children: [
-                            (0, n.jsx)(s.Mi4, {
-                                id: v.yD.WELCOME,
-                                children: (0, n.jsx)(E.Z, {}),
+                            (0, i.jsx)(o.Mi4, {
+                                id: j.yD.WELCOME,
+                                children: (0, i.jsx)(v.Z, {}),
                             }),
-                            (0, n.jsx)(s.Mi4, {
-                                id: v.yD.MESSAGES,
-                                children: (0, n.jsx)(m.Z, {}),
+                            (0, i.jsx)(o.Mi4, {
+                                id: j.yD.MESSAGES,
+                                children: (0, i.jsx)(g.Z, {}),
                             }),
-                            (0, n.jsx)(s.Mi4, {
-                                id: v.yD.EMOJIS,
-                                children: (0, n.jsx)(o.Z, {}),
+                            (0, i.jsx)(o.Mi4, {
+                                id: j.yD.EMOJIS,
+                                children: (0, i.jsx)(u.Z, {}),
                             }),
-                            (0, n.jsx)(s.Mi4, {
-                                id: v.yD.VOICE,
-                                children: (0, n.jsx)(y.Z, {}),
+                            (0, i.jsx)(o.Mi4, {
+                                id: j.yD.VOICE,
+                                children: (0, i.jsx)(f.Z, {}),
                             }),
-                            (0, n.jsx)(s.Mi4, {
-                                id: v.yD.GUILDS,
-                                children: (0, n.jsx)(h.Z, {}),
+                            (0, i.jsx)(o.Mi4, {
+                                id: j.yD.GUILDS,
+                                children: (0, i.jsx)(x.Z, {}),
                             }),
-                            (0, n.jsx)(s.Mi4, {
-                                id: v.yD.FRIENDS,
-                                children: (0, n.jsx)(x.Z, { step: e }),
+                            (0, i.jsx)(o.Mi4, {
+                                id: j.yD.FRIENDS,
+                                children: (0, i.jsx)(m.Z, { step: t }),
                             }),
-                            (0, n.jsx)(s.Mi4, {
-                                id: v.yD.GAMING,
-                                children: (0, n.jsx)(p.Z, {}),
+                            (0, i.jsx)(o.Mi4, {
+                                id: j.yD.GAMING,
+                                children: (0, i.jsx)(p.Z, {}),
                             }),
-                            (0, n.jsx)(s.Mi4, {
-                                id: v.yD.QUESTS,
-                                children: (0, n.jsx)(f.Z, {}),
+                            (0, i.jsx)(o.Mi4, {
+                                id: j.yD.QUESTS,
+                                children: (0, i.jsx)(h.Z, {}),
                             }),
-                            (0, n.jsx)(s.Mi4, {
-                                id: v.yD.END,
-                                children: (0, n.jsx)(u.Z, { step: e }),
+                            (0, i.jsx)(o.Mi4, {
+                                id: j.yD.END,
+                                children: (0, i.jsx)(d.Z, { step: t }),
                             }),
                         ],
                     }),
-                    (0, n.jsxs)("div", {
-                        className: a()(T.header, t),
+                    (0, i.jsxs)("div", {
+                        className: l()(M.header, e),
                         children: [
-                            (0, n.jsxs)("div", {
-                                className: T.logo,
+                            (0, i.jsxs)("div", {
+                                className: M.logo,
                                 children: [
-                                    (0, n.jsx)(s.gw7, { color: s.TVs.colors.BG_BRAND }),
-                                    (0, n.jsx)(s.Text, {
+                                    (0, i.jsx)(o.gw7, { color: o.TVs.colors.BG_BRAND }),
+                                    (0, i.jsx)(o.Text, {
                                         variant: "display-sm",
-                                        color: "text-primary",
-                                        className: T.logoText,
-                                        children: Z.intl.string(S.default["CdU/PF"]),
+                                        color: "text-strong",
+                                        className: M.logoText,
+                                        children: Z.intl.string(_.default["CdU/PF"]),
                                     }),
                                 ],
                             }),
-                            (0, n.jsx)(c.Z, {
-                                activeSlide: l,
-                                totalSlides: Object.keys(v.yD).length,
-                                className: T.stepIndicator,
+                            (0, i.jsx)(c.Z, {
+                                activeSlide: r,
+                                totalSlides: Object.keys(j.yD).length,
+                                className: M.stepIndicator,
                             }),
-                            (0, n.jsx)(s.P3F, {
-                                onClick: d.xf,
-                                className: T.closeButton,
-                                children: (0, n.jsx)(s.Uz9, {}),
+                            (0, i.jsx)(o.P3F, {
+                                onClick: a.xf,
+                                className: M.closeButton,
+                                children: (0, i.jsx)(o.Uz9, {}),
                             }),
                         ],
                     }),
-                    (0, n.jsx)(s.P3F, {
-                        onClick: D,
-                        className: T.nextButton,
-                        children: (0, n.jsx)(s.Text, {
+                    (0, i.jsx)(o.P3F, {
+                        onClick: E,
+                        className: M.nextButton,
+                        children: (0, i.jsx)(o.Text, {
                             variant: "display-sm",
-                            color: "text-primary",
+                            color: "text-strong",
                             children: Z.intl.string(Z.t.PDTjLN),
                         }),
                     }),

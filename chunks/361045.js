@@ -42,7 +42,7 @@ function c(e) {
                             }),
                             (0, a.jsx)(l.Text, {
                                 variant: "text-sm/normal",
-                                color: "header-secondary",
+                                color: "text-default",
                                 children: s.intl.string(s.t["l+lSLp"]),
                             }),
                         ],

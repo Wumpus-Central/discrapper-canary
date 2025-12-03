@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => x });
 var r = n(54381),
     i = n(473749),
     l = n(442837),
@@ -17,14 +17,14 @@ var r = n(54381),
     _ = n(388032),
     y = n(427538);
 let O = (e, t) => g.ZP.getName(e.getGuildId(), e.id, t.user),
-    j = function (e) {
+    x = function (e) {
         let { participants: t, channel: n, hasConnectPermission: g } = e,
-            j = (0, u.J)(n.guild_id),
-            x = i.useCallback(() => {
-                j
+            x = (0, u.J)(n.guild_id),
+            j = i.useCallback(() => {
+                x
                     ? (0, d.hk)(n.guild_id, () => s.default.selectVoiceChannel(n.id))
                     : s.default.selectVoiceChannel(n.id);
-            }, [n.id, n.guild_id, j]),
+            }, [n.id, n.guild_id, x]),
             v = t.filter((e) => e.type === m.Ui.VOICE),
             C = 4 === v.length ? 2 : 3,
             I = (0, l.Wu)([o.Z], () => v.map((e) => o.Z.getParticipant(n.id, e.id)).filter(f.lm), [n.id, v]);
@@ -60,7 +60,7 @@ let O = (e, t) => g.ZP.getName(e.getGuildId(), e.id, t.user),
                     className: y.participantsRow,
                     children: (0, r.jsx)(a.Text, {
                         tag: "div",
-                        color: "header-secondary",
+                        color: "text-default",
                         variant: "heading-lg/normal",
                         children:
                             0 === v.length
@@ -89,7 +89,7 @@ let O = (e, t) => g.ZP.getName(e.getGuildId(), e.id, t.user),
                             children: (0, r.jsx)(a.Button, {
                                 variant: "overlay-primary",
                                 text: g ? _.intl.string(_.t["7vb2cc"]) : _.intl.string(_.t.TVBCKZ),
-                                onClick: x,
+                                onClick: j,
                                 disabled: !g,
                             }),
                         }),

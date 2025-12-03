@@ -24,7 +24,7 @@ function w(e) {
     return (0, l.jsxs)(o.Text, {
         className: r()(N.suffixNode, t),
         variant: "text-sm/medium",
-        color: "text-primary",
+        color: "text-strong",
         children: [
             (0, l.jsx)(o.gj8, {
                 size: "md",

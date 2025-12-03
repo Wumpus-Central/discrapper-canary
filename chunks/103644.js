@@ -12,7 +12,7 @@ let c = (0, r.ON)(u.n.SOUNDS_HOLIDAY_NOTICE, {
     render: () =>
         (0, i.jsx)(l.xvT, {
             variant: "text-md/normal",
-            color: "text-secondary",
+            color: "text-subtle",
             children: o.intl.format(o.t.Eup6Wv, {
                 onClick: () => (0, a.openUserSettings)(u.n.NOTIFICATIONS_SOUNDS_CATEGORY),
             }),

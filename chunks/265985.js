@@ -90,7 +90,7 @@ let v = 440,
                     children: [
                         (0, r.jsx)(l.Text, {
                             variant: "text-xs/medium",
-                            color: "header-secondary",
+                            color: "text-default",
                             className: O.confirmationSectionLabel,
                             children: y.intl.string(y.t["6Y1FLi"]),
                         }),
@@ -129,13 +129,13 @@ let v = 440,
                 (0, r.jsx)(l.Heading, {
                     className: O.confirmationHeader,
                     variant: "heading-xl/semibold",
-                    color: "header-secondary",
+                    color: "text-default",
                     children: y.intl.format(y.t["1HIsTk"], { serverName: null == a ? void 0 : a.name }),
                 }),
                 (0, r.jsx)(l.Text, {
                     className: O.confirmationSubtitle,
                     variant: "text-md/normal",
-                    color: "header-secondary",
+                    color: "text-default",
                     children: y.intl.format(y.t.oi3gip, { tier: n.name }),
                 }),
                 p.length > 0 &&
@@ -143,7 +143,7 @@ let v = 440,
                         children: [
                             (0, r.jsx)(l.Text, {
                                 variant: "text-xs/normal",
-                                color: "header-secondary",
+                                color: "text-default",
                                 className: O.confirmationSectionLabel,
                                 children: y.intl.string(y.t.w0CQ01),
                             }),

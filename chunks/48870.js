@@ -8,7 +8,7 @@ function s() {
         className: o.container,
         children: (0, r.jsx)(i.Text, {
             variant: "text-sm/medium",
-            color: "text-secondary",
+            color: "text-subtle",
             children: a.intl.string(a.t.zksHZO),
         }),
     });

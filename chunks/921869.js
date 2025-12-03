@@ -1,104 +1,104 @@
-t.d(a, { m: () => h });
-var n = t(54381),
-    r = t(473749),
-    s = t(442837),
-    l = t(481060),
-    i = t(600164),
-    o = t(553795),
-    c = t(424071),
-    d = t(239358),
-    x = t(388032),
-    u = t(771831);
-function h(e) {
+a.d(t, { m: () => m });
+var l = a(54381),
+    n = a(473749),
+    s = a(442837),
+    r = a(481060),
+    i = a(600164),
+    o = a(553795),
+    c = a(424071),
+    d = a(239358),
+    u = a(388032),
+    x = a(771831);
+function m(e) {
     let {
-            platformType: a,
-            onContinue: t,
-            onClose: h,
-            img: m,
+            platformType: t,
+            onContinue: a,
+            onClose: m,
+            img: h,
             headerConnect: N,
             headerReconnect: C,
             body: j,
             learnMoreLink: p,
             valueProps: v,
         } = e,
-        b = (0, s.e7)([o.Z], () => {
-            let e = o.Z.getAccount(null, a);
+        f = (0, s.e7)([o.Z], () => {
+            let e = o.Z.getAccount(null, t);
             return (null == e ? void 0 : e.twoWayLink) === !1;
         });
-    return (0, n.jsxs)(c.Z, {
+    return (0, l.jsxs)(c.Z, {
         children: [
-            (0, n.jsxs)(l.xBx, {
+            (0, l.jsxs)(r.xBx, {
                 direction: i.Z.Direction.VERTICAL,
-                className: u.header,
+                className: x.header,
                 separator: !1,
                 children: [
-                    (0, n.jsxs)("div", {
-                        className: u.illustration,
-                        children: [m, " "],
+                    (0, l.jsxs)("div", {
+                        className: x.illustration,
+                        children: [h, " "],
                     }),
-                    (0, n.jsx)(l.Heading, {
-                        className: u.title,
+                    (0, l.jsx)(r.Heading, {
+                        className: x.title,
                         variant: "heading-xl/extrabold",
-                        children: b && null != C ? C : N,
+                        children: f && null != C ? C : N,
                     }),
-                    (0, n.jsx)(l.olH, {
-                        className: u.closeButton,
-                        onClick: h,
+                    (0, l.jsx)(r.olH, {
+                        className: x.closeButton,
+                        onClick: m,
                     }),
                 ],
             }),
-            (0, n.jsxs)(l.hzk, {
-                className: u.body,
+            (0, l.jsxs)(r.hzk, {
+                className: x.body,
                 children: [
-                    (0, n.jsx)(l.Text, {
+                    (0, l.jsx)(r.Text, {
                         tag: "p",
                         variant: "text-md/normal",
-                        color: "header-secondary",
+                        color: "text-default",
                         children: j,
                     }),
-                    (0, n.jsx)("div", {
-                        className: u.valueProps,
-                        children: v.map((e, a) => {
-                            let { label: t, subLabel: s, icon: l } = e;
-                            return (0, n.jsxs)(
-                                r.Fragment,
+                    (0, l.jsx)("div", {
+                        className: x.valueProps,
+                        children: v.map((e, t) => {
+                            let { label: a, subLabel: s, icon: r } = e;
+                            return (0, l.jsxs)(
+                                n.Fragment,
                                 {
                                     children: [
-                                        (0, n.jsx)(
+                                        (0, l.jsx)(
                                             d.Z,
                                             {
-                                                label: t,
+                                                label: a,
                                                 subLabel: s,
-                                                icon: l,
+                                                icon: r,
                                             },
-                                            t,
+                                            a,
                                         ),
-                                        a !== v.length - 1 && (0, n.jsx)("div", { className: u.valuePropDivider }),
+                                        t !== v.length - 1 && (0, l.jsx)("div", { className: x.valuePropDivider }),
                                     ],
                                 },
-                                t,
+                                a,
                             );
                         }),
                     }),
                     null != p
-                        ? (0, n.jsx)(l.Text, {
+                        ? (0, l.jsx)(r.Text, {
                               tag: "p",
                               variant: "text-sm/normal",
-                              color: "header-secondary",
-                              children: x.intl.format(x.t["/l3n+1"], { helpCenterLink: p }),
+                              color: "text-default",
+                              children: u.intl.format(u.t["/l3n+1"], { helpCenterLink: p }),
                           })
                         : null,
                 ],
             }),
-            (0, n.jsx)(l.mzw, {
-                className: u.footer,
-                children: (0, n.jsx)("div", {
+            (0, l.jsx)(r.mzw, {
+                className: x.footer,
+                children: (0, l.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
-                    className: u.footerButton,
-                    children: (0, n.jsx)(l.Button, {
+                    className: x.footerButton,
+                    children: (0, l.jsx)(r.Button, {
                         variant: "primary",
-                        text: x.intl.string(x.t["3PatSz"]),
-                        onClick: t,
+                        text: u.intl.string(u.t["3PatSz"]),
+                        onClick: a,
                     }),
                 }),
             }),

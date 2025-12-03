@@ -289,7 +289,7 @@ function S(e) {
                                 children: [
                                     (0, r.jsx)(s.Text, {
                                         variant: "text-md/normal",
-                                        color: "header-secondary",
+                                        color: "text-default",
                                         children: A,
                                     }),
                                     null != C
@@ -298,7 +298,7 @@ function S(e) {
                                                   (0, r.jsx)("div", { className: m.dotSeparator }),
                                                   (0, r.jsx)(s.Text, {
                                                       variant: "text-md/normal",
-                                                      color: "header-secondary",
+                                                      color: "text-default",
                                                       children: C,
                                                   }),
                                               ],

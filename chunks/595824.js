@@ -94,7 +94,7 @@ function _(e) {
                                       }),
                                   (0, r.jsx)(o.x, {
                                       variant: "text-md/normal",
-                                      color: "primary" === s ? "text-primary" : "text-secondary",
+                                      color: "primary" === s ? "text-strong" : "text-subtle",
                                       children: t,
                                   }),
                               ],
@@ -103,7 +103,7 @@ function _(e) {
                               "" !== c &&
                               (0, r.jsx)(o.x, {
                                   variant: "text-sm/normal",
-                                  color: "text-secondary",
+                                  color: "text-subtle",
                                   style: { marginTop: "4px" },
                                   children: c,
                               }),

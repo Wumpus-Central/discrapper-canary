@@ -16,17 +16,17 @@ var i = n(54381),
     h = n(447543),
     x = n(240872),
     j = n(225433),
-    O = n(129861),
-    v = n(493544),
+    v = n(129861),
+    O = n(493544),
     y = n(700582),
     _ = n(410030),
     C = n(835473),
     N = n(933557),
     S = n(346486),
-    P = n(600164),
-    w = n(925329),
-    E = n(666657),
-    I = n(664452),
+    I = n(600164),
+    E = n(925329),
+    w = n(666657),
+    P = n(664452),
     T = n(560114),
     Z = n(685929),
     k = n(592125),
@@ -94,13 +94,13 @@ function K(e) {
         expiresAt: d,
         onRevokeInvite: u,
     } = e;
-    return (0, i.jsxs)(P.Z, {
+    return (0, i.jsxs)(I.Z, {
         className: a()(B.inviteSettingsInviteRow, W.card, { [B.inviteDisabledRow]: t }),
         children: [
-            (0, i.jsxs)(P.Z, {
+            (0, i.jsxs)(I.Z, {
                 grow: 3,
                 basis: 0,
-                align: P.Z.Align.CENTER,
+                align: I.Z.Align.CENTER,
                 className: B.text,
                 children: [
                     null != n &&
@@ -112,7 +112,7 @@ function K(e) {
                     (0, i.jsxs)("div", {
                         children: [
                             null != n &&
-                                (0, i.jsx)(O.Z, {
+                                (0, i.jsx)(v.Z, {
                                     discriminatorClass: B.discriminator,
                                     user: n,
                                 }),
@@ -120,28 +120,28 @@ function K(e) {
                                 null != l &&
                                 (0, i.jsx)(f.Text, {
                                     variant: "text-xs/normal",
-                                    color: "header-secondary",
+                                    color: "text-default",
                                     children: (0, N.F6)(l, D.default, A.Z, !0),
                                 }),
                         ],
                     }),
                 ],
             }),
-            (0, i.jsx)(P.Z, {
+            (0, i.jsx)(I.Z, {
                 grow: 3,
                 shrink: 1,
                 basis: 0,
-                align: P.Z.Align.CENTER,
+                align: I.Z.Align.CENTER,
                 className: B.text,
                 children: (0, i.jsxs)("div", {
                     className: B.inviteSourceContainer,
                     children: [o, s],
                 }),
             }),
-            (0, i.jsx)(P.Z, {
+            (0, i.jsx)(I.Z, {
                 grow: 1,
                 basis: 0,
-                align: P.Z.Align.CENTER,
+                align: I.Z.Align.CENTER,
                 className: B.text,
                 children: (0, i.jsx)(f.Text, {
                     className: B.uses,
@@ -149,10 +149,10 @@ function K(e) {
                     children: c,
                 }),
             }),
-            (0, i.jsx)(P.Z, {
+            (0, i.jsx)(I.Z, {
                 grow: 2,
                 basis: 0,
-                align: P.Z.Align.CENTER,
+                align: I.Z.Align.CENTER,
                 className: a()(B.text, B.countdownColumn),
                 children: (0, i.jsx)(f.Text, {
                     className: B.countdown,
@@ -229,9 +229,9 @@ function q(e) {
         inviteSource: (0, i.jsxs)("div", {
             className: B.linkedChannelJoinSource,
             children: [
-                (0, i.jsx)(w.Z, {
+                (0, i.jsx)(E.Z, {
                     game: o,
-                    size: w.A.XXSMALL,
+                    size: E.A.XXSMALL,
                 }),
                 (0, i.jsx)(f.Text, {
                     className: B.linkedChannelJoinSourceText,
@@ -277,7 +277,7 @@ function V(e) {
     let h = (0, _.ZP)(),
         x = (0, R.MQ)(l),
         j = (0, R.O4)(l),
-        O = r.useMemo(
+        v = r.useMemo(
             () =>
                 null == t || g
                     ? []
@@ -297,7 +297,7 @@ function V(e) {
                 g
                     ? []
                     : [
-                          ...O.map((e) => ({
+                          ...v.map((e) => ({
                               type: "invite",
                               data: e,
                           })),
@@ -306,7 +306,7 @@ function V(e) {
                               data: e,
                           })),
                       ],
-            [O, y, g],
+            [v, y, g],
         ),
         N = () => {
             (0, f.ZDy)(
@@ -321,13 +321,13 @@ function V(e) {
                     ),
             );
         },
-        [S, w] = r.useState(62),
+        [S, E] = r.useState(62),
         Z = () => {
-            let e = { source: E.Zu.GUILD_SETTINGS };
+            let e = { source: w.Zu.GUILD_SETTINGS };
             (0, f.ZDy)(
                 async () => (t) =>
                     (0, i.jsx)(
-                        I.default,
+                        P.default,
                         F(G({}, t), {
                             guildId: l.id,
                             analyticsData: e,
@@ -335,7 +335,7 @@ function V(e) {
                     ),
             );
         };
-    return (0, i.jsx)(v.Xi, {
+    return (0, i.jsx)(O.Xi, {
         sections: [1, +!c, +!!c, Math.max(1, C.length)],
         renderSection: (e) => {
             let { section: t } = e;
@@ -364,10 +364,10 @@ function V(e) {
                     );
                 else
                     return (0, i.jsxs)(
-                        P.Z,
+                        I.Z,
                         {
                             children: [
-                                (0, i.jsx)(P.Z.Child, {
+                                (0, i.jsx)(I.Z.Child, {
                                     grow: 3,
                                     basis: 0,
                                     className: H.marginReset,
@@ -376,7 +376,7 @@ function V(e) {
                                         children: U.intl.string(U.t.EgHyKy),
                                     }),
                                 }),
-                                (0, i.jsx)(P.Z.Child, {
+                                (0, i.jsx)(I.Z.Child, {
                                     basis: 0,
                                     grow: 3,
                                     className: H.marginReset,
@@ -385,7 +385,7 @@ function V(e) {
                                         children: y.length > 0 ? U.intl.string(U.t.l7VISQ) : U.intl.string(U.t.LBlFEN),
                                     }),
                                 }),
-                                (0, i.jsx)(P.Z.Child, {
+                                (0, i.jsx)(I.Z.Child, {
                                     grow: 1,
                                     basis: 0,
                                     children: (0, i.jsx)(f.Text, {
@@ -393,7 +393,7 @@ function V(e) {
                                         children: U.intl.string(U.t.erWrmA),
                                     }),
                                 }),
-                                (0, i.jsx)(P.Z.Child, {
+                                (0, i.jsx)(I.Z.Child, {
                                     grow: 2,
                                     basis: 0,
                                     children: (0, i.jsx)(f.Text, {
@@ -423,7 +423,7 @@ function V(e) {
                         (0, i.jsx)(f.Text, {
                             className: H.marginBottom20,
                             variant: "text-sm/normal",
-                            color: "text-secondary",
+                            color: "text-subtle",
                             children:
                                 !0 === o
                                     ? U.intl.format(U.t["97VdNm"], { onCreateInvite: N })
@@ -464,8 +464,8 @@ function V(e) {
                 return (0, i.jsx)(
                     L.Y,
                     {
-                        hasInvites: O.length > 0,
-                        setHeight: w,
+                        hasInvites: v.length > 0,
+                        setHeight: E,
                         onShowDisableInvites: Z,
                         onShowInviteModal: N,
                         hasInviteDisabledPermission: x,

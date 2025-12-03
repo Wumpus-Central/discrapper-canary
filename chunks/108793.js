@@ -15,8 +15,8 @@ var r = n(54381),
 function p(e) {
     var t,
         n,
-        { userRef: p, usernameSuggestionLoading: h = !1, oneClickFlow: y = !1 } = e,
-        O = (function (e, t) {
+        { userRef: p, usernameSuggestionLoading: h = !1, oneClickFlow: O = !1 } = e,
+        y = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -37,9 +37,9 @@ function p(e) {
             }
             return i;
         })(e, ["userRef", "usernameSuggestionLoading", "oneClickFlow"]);
-    let { user: S, editState: b, onClose: _ } = O,
-        N = (0, s.ZP)(S.id),
-        v = (function (e, t, n) {
+    let { user: S, editState: b, onClose: _ } = y,
+        x = (0, s.ZP)(S.id),
+        N = (function (e, t, n) {
             switch (e) {
                 case m.Wq.EDIT_USERNAME:
                     return {
@@ -73,7 +73,7 @@ function p(e) {
                     };
             }
         })(b, u.ZP.getName(S), _),
-        [x, T] = (0, o.q_F)(() => ({
+        [v, T] = (0, o.q_F)(() => ({
             opacity: 0,
             y: 10,
         }));
@@ -93,30 +93,30 @@ function p(e) {
             children: [
                 (0, r.jsxs)(a.animated.div, {
                     style: {
-                        opacity: x.opacity,
-                        y: x.y,
+                        opacity: v.opacity,
+                        y: v.y,
                     },
                     children: [
                         (0, r.jsx)(o.Heading, {
                             className: E.title,
                             color: "header-primary",
                             variant: "heading-xl/extrabold",
-                            children: v.header,
+                            children: N.header,
                         }),
                         (0, r.jsxs)("div", {
                             className: E.subtitle,
                             children: [
                                 (0, r.jsx)(o.Heading, {
-                                    color: "header-secondary",
+                                    color: "text-default",
                                     variant: "heading-sm/medium",
-                                    children: v.subtitle,
+                                    children: N.subtitle,
                                 }),
-                                null != v.link &&
+                                null != N.link &&
                                     (0, r.jsx)(o.Text, {
                                         className: E.link,
-                                        color: "header-secondary",
+                                        color: "text-default",
                                         variant: "text-sm/medium",
-                                        children: v.link,
+                                        children: N.link,
                                     }),
                             ],
                         }),
@@ -148,13 +148,13 @@ function p(e) {
                                 });
                         }
                         return e;
-                    })({}, O)),
+                    })({}, y)),
                     (n = n =
                         {
-                            displayProfile: N,
+                            displayProfile: x,
                             ref: p,
                             usernameSuggestionLoading: h,
-                            oneClickFlow: y,
+                            oneClickFlow: O,
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

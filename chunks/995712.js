@@ -1,20 +1,20 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => d });
 var r = n(54381);
 n(473749);
-var i = n(481060),
-    l = n(686546),
+var l = n(481060),
+    i = n(686546),
     a = n(768581),
     s = n(388032),
     o = n(91709);
-let c = (e) => {
+let d = (e) => {
     var t;
     let { entry: n } = e,
-        { id: c, icon: d, name: u } = n,
+        { id: d, icon: c, name: u } = n,
         m =
             null !=
             (t = a.ZP.getGuildIconURL({
-                id: c,
-                icon: d,
+                id: d,
+                icon: c,
                 size: 32,
             }))
                 ? t
@@ -22,7 +22,7 @@ let c = (e) => {
     return (0, r.jsxs)("div", {
         className: o.container,
         children: [
-            (0, r.jsx)(i.Heading, {
+            (0, r.jsx)(l.Heading, {
                 className: o.header,
                 variant: "heading-sm/semibold",
                 children: s.intl.string(s.t.nTe4HC),
@@ -32,8 +32,8 @@ let c = (e) => {
                 children: (0, r.jsxs)("div", {
                     className: o.guildInfo,
                     children: [
-                        (0, r.jsx)(l.ZP, {
-                            mask: l.ZP.Masks.SQUIRCLE,
+                        (0, r.jsx)(i.ZP, {
+                            mask: i.ZP.Masks.SQUIRCLE,
                             width: 32,
                             height: 32,
                             className: o.guildIconMask,
@@ -43,8 +43,8 @@ let c = (e) => {
                                 className: o.guildIcon,
                             }),
                         }),
-                        (0, r.jsx)(i.Text, {
-                            color: "header-secondary",
+                        (0, r.jsx)(l.Text, {
+                            color: "text-default",
                             variant: "text-sm/normal",
                             children: u,
                         }),

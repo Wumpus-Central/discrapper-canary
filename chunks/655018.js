@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(243778),
     g = n(314897),
     b = n(626135),
-    y = n(906605),
-    C = n(574176),
+    C = n(906605),
+    y = n(574176),
     v = n(106301),
     _ = n(833858),
     O = n(699263),
@@ -79,12 +79,12 @@ function U(e, t) {
 }
 function V(e) {
     var t, n, l, o;
-    let { channel: V, setIsHangStatusInputFocused: F, setIsEmojiPickerOpen: B, setPopoutRef: H } = e,
+    let { channel: V, setIsHangStatusInputFocused: F, setIsEmojiPickerOpen: H, setPopoutRef: B } = e,
         G = r.useRef(null),
         z = (0, u.e7)([v.Z], () => v.Z.getCustomHangStatus()),
         W = (0, j.Z)(),
         q = (0, u.e7)([v.Z], () => v.Z.getFavoritedStatuses()),
-        { defaultStatusVariant: K, allowPermanentClear: Y } = (0, C.bN)({
+        { defaultStatusVariant: K, allowPermanentClear: Y } = (0, y.bN)({
             guildId: V.guild_id,
             location: "HangStatusPicker",
         }),
@@ -122,32 +122,32 @@ function V(e) {
             en || (Q !== (null != (e = null == z ? void 0 : z.status) ? e : "") && "" !== Q.trim()) ? F(!0) : F(!1);
         }, [Q, null == z ? void 0 : z.status, ee, null == z ? void 0 : z.emoji, F, en]),
         r.useEffect(() => {
-            null == H || H(null == J ? void 0 : J.current);
-        }, [J, H]);
+            null == B || B(null == J ? void 0 : J.current);
+        }, [J, B]);
     let eg = r.useCallback(
             (e) => {
-                e !== er && ((0, y.Zx)(e, !0), null != ee && et(null), "" !== Q.trim() && $(""));
+                e !== er && ((0, C.Zx)(e, !0), null != ee && et(null), "" !== Q.trim() && $(""));
             },
             [er, ee, Q],
         ),
         eb = r.useCallback(() => {
             et(null), $(""), ei(!1);
         }, []),
-        ey = r.useCallback(
+        eC = r.useCallback(
             (e) => {
                 let { emoji: t, status: n } = e;
                 (s()(t, null == z ? void 0 : z.emoji) && n === (null == z ? void 0 : z.status)) ||
-                    ((0, y._s)(e.status, e.emoji, !0), et(e.emoji), $(e.status));
+                    ((0, C._s)(e.status, e.emoji, !0), et(e.emoji), $(e.status));
             },
             [null == z ? void 0 : z.emoji, null == z ? void 0 : z.status],
         ),
-        eC = r.useCallback(
+        ey = r.useCallback(
             (e) => {
                 var t, n;
                 null == e || null == (t = e.preventDefault) || t.call(e),
                     null != ee && 0 === Q.trim().length && ed(!0),
                     eo ||
-                        (ey({
+                        (eC({
                             status: Q,
                             emoji:
                                 null != ee
@@ -161,7 +161,7 @@ function V(e) {
                         null == (n = G.current) || n.blur(),
                         ei(!1));
             },
-            [Q, ee, ey, eo],
+            [Q, ee, eC, eo],
         ),
         ev = r.useCallback(() => {
             var e, t;
@@ -198,7 +198,7 @@ function V(e) {
             (e, t) => {
                 let n = (0, x.Z)(t);
                 (!ep || e) &&
-                    ((0, y.tg)(n ? t : t.status, n ? null : t.emoji),
+                    ((0, C.tg)(n ? t : t.status, n ? null : t.emoji),
                     b.default.track(A.rMx.HANG_STATUS_FAVORITE_CLICKED, U(D({}, (0, O.Z)(V.id)), { favorited: !e })));
             },
             [V.id, ep],
@@ -238,7 +238,7 @@ function V(e) {
                         label: l ? (null != (r = null == a ? void 0 : a.title) ? r : "") : e.status,
                         icon: s,
                         setStatus: () => {
-                            l ? eg(e) : ey(e), ei(!1);
+                            l ? eg(e) : eC(e), ei(!1);
                         },
                         isFavorited: o,
                         onFavoriteClick: () => e_(o, e),
@@ -246,10 +246,10 @@ function V(e) {
                     "".concat(n, "-").concat(t),
                 );
             },
-            [K, ey, eg, X, e_],
+            [K, eC, eg, X, e_],
         ),
         ej = r.useCallback(() => {
-            (0, y.Sc)(!0, Y), et(null), $(""), ei(!1);
+            (0, C.Sc)(!0, Y), et(null), $(""), ei(!1);
         }, [Y]),
         eS = r.useCallback((e) => {
             ei(!0), $(e.substring(0, N.s0));
@@ -277,7 +277,7 @@ function V(e) {
                 role: "group",
                 className: a()(L.groupLabel, R.inputGroup),
                 children: (0, i.jsxs)("form", {
-                    onSubmit: eC,
+                    onSubmit: ey,
                     className: a()(L.item, R.input),
                     children: [
                         (0, i.jsxs)("div", {
@@ -297,7 +297,7 @@ function V(e) {
                                             setCustomStatusEmoji: et,
                                             selectedDefaultStatus: en || eh ? null : er,
                                             defaultStatusVariant: K,
-                                            setIsEmojiPickerOpen: B,
+                                            setIsEmojiPickerOpen: H,
                                         }),
                                     },
                                     trailing:
@@ -305,7 +305,7 @@ function V(e) {
                                             ? ec
                                                 ? {
                                                       icon: h.d4D,
-                                                      onClick: eC,
+                                                      onClick: ey,
                                                       "aria-label": M.intl.string(M.t["R3BPH+"]),
                                                       disabled: 0 === Q.length,
                                                   }
@@ -351,7 +351,7 @@ function V(e) {
                                     children: [
                                         (0, i.jsx)(h.Text, {
                                             variant: "text-sm/normal",
-                                            color: "text-tertiary",
+                                            color: "text-muted",
                                             children: M.intl.string(M.t.k8fFjp),
                                         }),
                                         (0, i.jsx)(h.r7p, { size: "xxs" }),
@@ -373,7 +373,7 @@ function V(e) {
                                     children: [
                                         (0, i.jsx)(h.Text, {
                                             variant: "text-sm/normal",
-                                            color: "text-tertiary",
+                                            color: "text-muted",
                                             children: M.intl.string(M.t["+9QSnj"]),
                                         }),
                                         (0, i.jsx)(h.T39, { size: "xxs" }),

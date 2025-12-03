@@ -46,7 +46,7 @@ let _ = new o.Z("useStripePaymentElementOptions"),
         var e, t, n, a, o;
         let s = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
             l = (0, i.dQu)(i.TVs.colors.MODAL_BACKGROUND),
-            c = (0, i.dQu)(i.TVs.colors.TEXT_PRIMARY),
+            c = (0, i.dQu)(i.TVs.colors.TEXT_STRONG),
             u = (0, i.dQu)(i.TVs.colors.INPUT_BACKGROUND),
             d = null != (e = s.theme) ? e : "flat",
             f = null != (t = s.colorText) ? t : c.hex(),

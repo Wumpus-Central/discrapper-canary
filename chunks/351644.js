@@ -16,17 +16,17 @@ var i = n(54381),
     h = n(600164),
     x = n(749681),
     j = n(258971),
-    O = n(685929),
-    v = n(163400),
+    v = n(685929),
+    O = n(163400),
     y = n(553795),
     _ = n(496675),
     C = n(626135),
     N = n(768581),
     S = n(63063),
-    P = n(709054),
-    w = n(51144),
-    E = n(466070),
-    I = n(585835),
+    I = n(709054),
+    E = n(51144),
+    w = n(466070),
+    P = n(585835),
     T = n(997787),
     Z = n(981631),
     k = n(49898),
@@ -94,9 +94,9 @@ function W(e) {
             }),
             [W, H],
         ),
-        eo = (0, O.Y)(H),
+        eo = (0, v.Y)(H),
         es = (0, g.q)(null == H || null == (t = H.linkedLobby) ? void 0 : t.application_id),
-        ec = (0, v.F)(null == W ? void 0 : W.id),
+        ec = (0, O.F)(null == W ? void 0 : W.id),
         {
             availableTwitchIntegrations: ed,
             availableYoutubeIntegrations: eu,
@@ -148,8 +148,8 @@ function W(e) {
             () => (void 0 !== ex ? [ex, ...eh.filter((e) => e.integration.id !== ex.integration.id)] : eh),
             [eh, ex],
         ),
-        eO = (0, u.s9z)(u.JQI),
-        [ev, ey] = r.useState(!1),
+        ev = (0, u.s9z)(u.JQI),
+        [eO, ey] = r.useState(!1),
         e_ = r.useRef(0),
         eC = () => {
             ey(!0),
@@ -160,7 +160,7 @@ function W(e) {
         };
     r.useEffect(() => (window.addEventListener("scroll", eC, !0), () => window.removeEventListener("scroll", eC)));
     let eN = ej.map((e) => {
-            let t = !eO && e.integration.id === (null == ex ? void 0 : ex.integration.id),
+            let t = !ev && e.integration.id === (null == ex ? void 0 : ex.integration.id),
                 { application: n, integration: r } = e,
                 l = [];
             return (
@@ -168,16 +168,16 @@ function W(e) {
                     ? l.push({
                           icon: u.T39,
                           text: A.intl.formatToPlainString(A.t.Nu9sat, {
-                              timestamp: P.default.extractTimestamp(r.id),
-                              user: w.ZP.getUserTag(r.user),
+                              timestamp: I.default.extractTimestamp(r.id),
+                              user: E.ZP.getUserTag(r.user),
                           }),
                       })
                     : l.push({
                           icon: u.T39,
-                          text: A.intl.formatToPlainString(A.t.gcdJ8J, { timestamp: P.default.extractTimestamp(r.id) }),
+                          text: A.intl.formatToPlainString(A.t.gcdJ8J, { timestamp: I.default.extractTimestamp(r.id) }),
                       }),
                 (0, i.jsx)(
-                    I.Z,
+                    P.Z,
                     {
                         name: n.name,
                         imageSrc: N.ZP.getApplicationIconURL({
@@ -198,7 +198,7 @@ function W(e) {
                         },
                         details: l,
                         guildId: null == W ? void 0 : W.id,
-                        isScrolling: ev,
+                        isScrolling: eO,
                         canShowMigrationTooltip: t,
                     },
                     "integration-".concat(r.id),
@@ -243,12 +243,12 @@ function W(e) {
                                 className: D.emptyStateImage,
                             }),
                             (0, i.jsx)(u.Heading, {
-                                color: "header-secondary",
+                                color: "text-default",
                                 variant: "heading-xl/bold",
                                 children: A.intl.string(A.t.nQQeFM),
                             }),
                             (0, i.jsx)(u.Text, {
-                                color: "header-secondary",
+                                color: "text-default",
                                 variant: "text-sm/normal",
                                 children: A.intl.format(A.t.snvKU3, {
                                     handleGoToAppDirectory: () => {
@@ -269,16 +269,16 @@ function W(e) {
             return t > 0 ? l : a;
         })(ee, ef, null == W ? void 0 : W.id)),
         (eS = null));
-    let eP = S.Z.getArticleURL(Z.BhN.INTEGRATIONS),
-        ew = null != H ? A.t.YV0vh6 : A.t.FnZEJs,
-        eE = [];
+    let eI = S.Z.getArticleURL(Z.BhN.INTEGRATIONS),
+        eE = null != H ? A.t.YV0vh6 : A.t.FnZEJs,
+        ew = [];
     if (el) {
         let e, t, r, a, o;
-        eE.push(
+        ew.push(
             ((n = K.length),
             n > 0 ? (t = (0, i.jsx)(u.LJT, { size: "xs" })) : (e = A.intl.string(A.t.lOQqJK)),
             (0, i.jsx)(
-                I.Z,
+                P.Z,
                 {
                     name: A.intl.string(A.t.xOg4SP),
                     icon: u.tYf,
@@ -294,14 +294,14 @@ function W(e) {
         ),
             (null == H ? void 0 : H.type) === Z.d4z.GUILD_VOICE ||
                 ((null == H ? void 0 : H.type) != null && Z.TPd.GUILD_THREADS_ONLY.has(H.type)) ||
-                eE.push(
+                ew.push(
                     ((l = z.length),
                     l > 0
                         ? ((o = (0, i.jsx)(u.LJT, { size: "xs" })), (a = Q))
                         : ((r = A.intl.string(A.t["ZwSt+T"])),
                           (a = () => open(S.Z.getArticleURL(Z.BhN.CHANNEL_FOLLOWING)))),
                     (0, i.jsx)(
-                        I.Z,
+                        P.Z,
                         {
                             name: A.intl.string(A.t.OrV60r),
                             icon: u.AsW,
@@ -317,10 +317,10 @@ function W(e) {
     }
     null == H &&
         ec.length > 0 &&
-        eE.push(
+        ew.push(
             ((o = ec.length),
             (0, i.jsx)(
-                I.Z,
+                P.Z,
                 {
                     name: A.intl.string(A.t.tqtDXC),
                     icon: u.DuK,
@@ -333,7 +333,7 @@ function W(e) {
             )),
         ),
         eb &&
-            eE.push(
+            ew.push(
                 (function (e, t, n) {
                     let r,
                         l,
@@ -353,7 +353,7 @@ function W(e) {
                                       location: "Integration Settings",
                                   }))),
                         (0, i.jsx)(
-                            I.Z,
+                            P.Z,
                             {
                                 name: A.intl.string(A.t.q4pBG3),
                                 icon: s.icon.whiteSVG,
@@ -371,7 +371,7 @@ function W(e) {
                 })(ed, ep, Y),
             ),
         eg &&
-            eE.push(
+            ew.push(
                 (function (e, t, n) {
                     let r,
                         l,
@@ -391,7 +391,7 @@ function W(e) {
                                       location: "Integration Settings",
                                   }))),
                         (0, i.jsx)(
-                            I.Z,
+                            P.Z,
                             {
                                 name: A.intl.string(A.t.aS6cK4),
                                 icon: s.icon.whiteSVG,
@@ -408,13 +408,13 @@ function W(e) {
                     );
                 })(eu, em, Y),
             );
-    let eI = null != H && eo && null != es;
+    let eP = null != H && eo && null != es;
     return (0, i.jsxs)("div", {
         className: a()(null != eS ? D.footerPlaceholder : null),
         children: [
             (0, i.jsx)(u.Text, {
                 variant: "text-sm/normal",
-                children: A.intl.format(ew, { helpdeskArticle: eP }),
+                children: A.intl.format(eE, { helpdeskArticle: eI }),
             }),
             (0, i.jsx)(u.izJ, { className: D.divider }),
             q || ei || null == W
@@ -424,17 +424,17 @@ function W(e) {
                   })
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          eE,
-                          eI &&
+                          ew,
+                          eP &&
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      eE.length > 0 ? (0, i.jsx)(u.izJ, { className: D.divider }) : null,
+                                      ew.length > 0 ? (0, i.jsx)(u.izJ, { className: D.divider }) : null,
                                       (0, i.jsx)(u.Heading, {
                                           variant: "heading-md/semibold",
                                           className: D.sectionHeader,
                                           children: A.intl.string(A.t.oAvIAg),
                                       }),
-                                      (0, i.jsx)(E.t, {
+                                      (0, i.jsx)(w.t, {
                                           channel: H,
                                           application: es,
                                           showApplicationImage: !0,
@@ -448,7 +448,7 @@ function W(e) {
                           ea
                               ? (0, i.jsxs)(i.Fragment, {
                                     children: [
-                                        eE.length > 0 || eI ? (0, i.jsx)(u.izJ, { className: D.divider }) : null,
+                                        ew.length > 0 || eP ? (0, i.jsx)(u.izJ, { className: D.divider }) : null,
                                         (0, i.jsx)(u.Heading, {
                                             variant: "heading-md/semibold",
                                             className: D.sectionHeader,

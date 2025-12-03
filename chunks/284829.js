@@ -84,7 +84,7 @@ let E = () => {
                 className: m.legalContainer,
                 children: (0, r.jsx)(o.Text, {
                     variant: "text-xs/medium",
-                    color: "text-secondary",
+                    color: "text-subtle",
                     children:
                         E.status === p.O0b.CANCELED
                             ? _.intl.format(_.t.mY3ysK, {

@@ -1,6 +1,6 @@
 e.d(n, {
     Z: () => u,
-    v: () => C,
+    v: () => g,
 });
 var i = e(54381);
 e(473749);
@@ -13,9 +13,9 @@ var a = e(755721),
     c = e(981631),
     m = e(388032),
     p = e(470816);
-let g = 0.5 > Math.random();
-function C(t) {
-    let { onClose: n, onBack: e, onCreationIntentChosen: C, hasFooter: u = !0 } = t,
+let C = 0.5 > Math.random();
+function g(t) {
+    let { onClose: n, onBack: e, onCreationIntentChosen: g, hasFooter: u = !0 } = t,
         _ = (0, i.jsx)(a.zx, {
             "data-migration-pending": !0,
             className: p.backButton,
@@ -29,7 +29,7 @@ function C(t) {
             skipped: null == t,
             is_community: t === o.lr.COMMUNITY,
         }),
-            C(t);
+            g(t);
     }
     return {
         content: (0, i.jsxs)(i.Fragment, {
@@ -47,7 +47,7 @@ function C(t) {
                         }),
                         (0, i.jsx)(l.Text, {
                             className: p.subtitle,
-                            color: "header-secondary",
+                            color: "text-default",
                             variant: "text-md/normal",
                             children: m.intl.string(m.t.nOzc7w),
                         }),
@@ -63,7 +63,7 @@ function C(t) {
                     "data-migration-pending": !0,
                     className: p.optionsList,
                     children: [
-                        g
+                        C
                             ? (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       (0, i.jsx)(d.Z, {
@@ -94,7 +94,7 @@ function C(t) {
                               }),
                         (0, i.jsx)(l.Text, {
                             className: p.skip,
-                            color: "header-secondary",
+                            color: "text-default",
                             variant: "text-sm/normal",
                             children: m.intl.format(m.t["SMc+Gz"], { onSkip: () => L(null) }),
                         }),
@@ -112,6 +112,6 @@ function C(t) {
     };
 }
 function u(t) {
-    let { content: n } = C(t);
+    let { content: n } = g(t);
     return n;
 }

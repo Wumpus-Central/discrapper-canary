@@ -75,7 +75,7 @@ function f(e) {
             }),
             (0, r.jsx)(o.x, {
                 variant: "text-xs/normal",
-                color: "header-secondary",
+                color: "text-default",
                 className: u.label,
                 children: c.intl.string(c.t.kQXMfN),
             }),

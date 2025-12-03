@@ -1,8 +1,8 @@
 n.d(t, { Z: () => k }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(370523),
-    l = n(442837),
+    l = n(370523),
+    a = n(442837),
     o = n(952265),
     c = n(28664),
     s = n(481060),
@@ -48,8 +48,8 @@ function D(e) {
         isSocialLayerStorefrontEnabled: t,
         isWishlistPublic: n,
         handleOpenShop: i,
-        handleOpenGameShop: a,
-        handleToggleWishlistVisibility: l,
+        handleOpenGameShop: l,
+        handleToggleWishlistVisibility: a,
         socialLayerStorefrontApplicationId: o,
     } = e;
     return (0, r.jsxs)("div", {
@@ -59,7 +59,7 @@ function D(e) {
                 ? (0, r.jsx)(P.Z, {
                       title: E.intl.string(E.t.SDUwM0),
                       handleOpenCollectiblesShop: i,
-                      handleOpenGameShop: a,
+                      handleOpenGameShop: l,
                       socialLayerStorefrontApplicationId: o,
                   })
                 : (0, r.jsx)(s.Button, {
@@ -72,7 +72,7 @@ function D(e) {
             (0, r.jsx)(I.Z, {
                 isOwner: !0,
                 isWishlistPublic: n,
-                onToggleVisibility: l,
+                onToggleVisibility: a,
             }),
         ],
     });
@@ -84,7 +84,7 @@ function k(e) {
             wishlistId: P,
             currentUser: I,
             wishlistSettings: k,
-        } = (0, l.cj)([O.Z, y.default], () => {
+        } = (0, a.cj)([O.Z, y.default], () => {
             let e = O.Z.getFirstWishlistId(n.id);
             return {
                 wishlistId: e,
@@ -99,7 +99,7 @@ function k(e) {
         G = S.t9,
         [L, M] = i.useState(!0);
     i.useEffect(() => {
-        (null == k ? void 0 : k.visibility) != null && M(k.visibility === a.f.PUBLIC);
+        (null == k ? void 0 : k.visibility) != null && M(k.visibility === l.f.PUBLIC);
     }, [null == k ? void 0 : k.visibility]);
     let { wishlist: B, error: F } = (0, h.kZ)(P, n.id),
         U = (0, p.Z)({
@@ -125,7 +125,7 @@ function k(e) {
         }),
         z = i.useCallback(() => {
             if (null == P) return;
-            let e = L ? a.f.PRIVATE : a.f.PUBLIC;
+            let e = L ? l.f.PRIVATE : l.f.PUBLIC;
             M(!L),
                 b.Z.updateWishlistVisibility(P, e),
                 A({
@@ -165,7 +165,7 @@ function k(e) {
                                 }),
                                 (0, r.jsx)(s.Text, {
                                     variant: "text-sm/normal",
-                                    color: "header-secondary",
+                                    color: "text-default",
                                     children: E.intl.string(E.t["/X1ny6"]),
                                 }),
                             ],
@@ -208,7 +208,7 @@ function k(e) {
                                 children: [
                                     (0, r.jsx)(s.Text, {
                                         variant: "text-xs/semibold",
-                                        color: "text-secondary",
+                                        color: "text-subtle",
                                         children: E.intl.format(E.t.r6Y1Lg, { count: B.items.length }),
                                     }),
                                     !L &&

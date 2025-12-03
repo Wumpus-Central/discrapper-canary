@@ -52,7 +52,7 @@ function _(e) {
                   h
                       ? (0, r.jsx)(s.Text, {
                             variant: "text-sm/normal",
-                            color: "text-secondary",
+                            color: "text-subtle",
                             children: t.description,
                         })
                       : null,

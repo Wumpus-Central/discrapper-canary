@@ -1,4 +1,4 @@
-r.d(t, { J: () => m });
+r.d(t, { J: () => b });
 var n = r(54381);
 r(473749);
 var i = r(120356),
@@ -11,9 +11,9 @@ var i = r(120356),
     d = r(606097),
     p = r(388032),
     f = r(456577);
-let m = (e) => {
+let b = (e) => {
     let { recipient: t, isSuccess: r, onClose: i } = e,
-        { avatarSrc: m, eventHandlers: b } = (0, l.Z)({
+        { avatarSrc: b, eventHandlers: m } = (0, l.Z)({
             userId: null == t ? void 0 : t.id,
             size: a.EFr.SIZE_56,
         }),
@@ -51,11 +51,11 @@ let m = (e) => {
                 })(
                     {
                         imageClassName: s()({ [f.erroredAvatar]: h }),
-                        src: m,
+                        src: b,
                         "aria-label": y,
                         size: a.EFr.SIZE_32,
                     },
-                    b,
+                    m,
                 ),
             ),
             h
@@ -64,13 +64,13 @@ let m = (e) => {
                           (0, n.jsx)(a.Text, {
                               className: f.error,
                               variant: "text-md/medium",
-                              color: "text-primary",
+                              color: "text-strong",
                               children: y,
                           }),
                           (0, n.jsx)(a.Text, {
                               variant: "text-md/medium",
                               className: f.error,
-                              color: "text-primary",
+                              color: "text-strong",
                               children: p.intl.format(d.default["Y/oMwY"], { userName: y }),
                           }),
                       ],
@@ -78,7 +78,7 @@ let m = (e) => {
                 : (0, n.jsx)(a.Text, {
                       variant: "text-md/medium",
                       className: f.displayName,
-                      color: "text-primary",
+                      color: "text-strong",
                       children: y,
                   }),
             (0, n.jsx)(a.Button, {

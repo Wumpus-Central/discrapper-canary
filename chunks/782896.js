@@ -50,7 +50,7 @@ function g(e) {
             n > 0 &&
                 (0, r.jsx)(o.Text, {
                     variant: "text-xs/medium",
-                    color: "text-secondary",
+                    color: "text-subtle",
                     children: f.intl.format(d.default.bAzBIf, { numServers: n }),
                 }),
         ],
@@ -112,7 +112,7 @@ function m(e) {
                     (0, r.jsx)(p, {
                         children: (0, r.jsxs)(o.Text, {
                             className: h.textItem,
-                            color: "text-secondary",
+                            color: "text-subtle",
                             variant: "text-xxs/semibold",
                             children: ["+", _],
                         }),

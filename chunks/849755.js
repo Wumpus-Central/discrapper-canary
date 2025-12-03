@@ -54,7 +54,7 @@ function v(e) {
                   (0, r.jsx)(g.Z, {
                       text: null != C ? C : y.intl.string(y.t.Mgpxiw),
                       variant: "text-xs/normal",
-                      color: "text-secondary",
+                      color: "text-subtle",
                       className: O.text,
                   }),
                   (0, r.jsx)(l.vdY, {
@@ -69,7 +69,7 @@ function v(e) {
           ? (0, r.jsx)(g.Z, {
                 text: C,
                 variant: "text-xs/normal",
-                color: "text-secondary",
+                color: "text-subtle",
                 className: O.text,
             })
           : null;

@@ -215,7 +215,7 @@ function eL(e) {
                                     null != a &&
                                         (0, r.jsx)(m.Text, {
                                             variant: "text-sm/normal",
-                                            color: "text-secondary",
+                                            color: "text-subtle",
                                             children: a,
                                         }),
                                     null != l &&
@@ -494,7 +494,7 @@ function eU(e) {
                             {
                                 tag: "span",
                                 variant: "text-sm/medium",
-                                color: "text-primary",
+                                color: "text-strong",
                                 children: e,
                             },
                             t,
@@ -548,7 +548,7 @@ function eU(e) {
                   : Y && K
                     ? ["text-feedback-positive", m.TVs.colors.TEXT_FEEDBACK_POSITIVE.css]
                     : Y && X
-                      ? ["text-primary", m.TVs.colors.TEXT_PRIMARY.css]
+                      ? ["text-strong", m.TVs.colors.TEXT_STRONG.css]
                       : ["interactive-normal", m.TVs.colors.INTERACTIVE_NORMAL.css],
         [W, Y, z, K, X],
     );

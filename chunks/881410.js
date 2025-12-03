@@ -6,8 +6,8 @@ n.d(t, {
     n(781311);
 var r = n(54381),
     i = n(473749),
-    a = n(423802),
-    l = n(481060),
+    l = n(423802),
+    a = n(481060),
     o = n(510231),
     c = n(785717),
     s = n(86419),
@@ -65,21 +65,21 @@ function p(e, t) {
             var n,
                 r,
                 i = {},
-                a = Object.keys(e);
-            for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                l = Object.keys(e);
+            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
             return i;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++)
-            (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var l = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < l.length; r++)
+            (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
 function m(e) {
     var { widgetType: t, widget: n, onAddGame: m, children: b } = e,
         h = p(e, ["widgetType", "widget", "onAddGame", "children"]);
-    let [y] = (0, l.ynZ)(),
+    let [y] = (0, a.ynZ)(),
         [v, O] = i.useState(""),
         j = i.useRef(""),
         x = i.useMemo(() => new Set(n.games.map((e) => e.applicationId)), [n.games]),
@@ -87,7 +87,7 @@ function m(e) {
         P = i.useCallback(
             (e) => {
                 (0, s.ES)(t, { applicationId: e }),
-                    l.uvj.announce(u.intl.string(u.t.q0U3DE)),
+                    a.uvj.announce(u.intl.string(u.t.q0U3DE)),
                     _({
                         action: "GAME_ADDED",
                         gameId: e,
@@ -99,7 +99,7 @@ function m(e) {
         ),
         { options: I, matchSorterOptions: w } = (0, o.h)(),
         S = i.useCallback(
-            (e) => ("" === e.trim() ? I : (0, a.Lu)(I, e, g(f({}, w), { threshold: a.Lu.rankings.CONTAINS }))),
+            (e) => ("" === e.trim() ? I : (0, l.Lu)(I, e, g(f({}, w), { threshold: l.Lu.rankings.CONTAINS }))),
             [I, w],
         ),
         E = i.useCallback(
@@ -122,7 +122,7 @@ function m(e) {
             [v],
         );
     return (0, r.jsx)(
-        l.yRy,
+        a.yRy,
         g(f({}, h), {
             onRequestOpen: () => {
                 _({
@@ -142,7 +142,7 @@ function m(e) {
             },
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, r.jsx)(l.DBG, {
+                return (0, r.jsx)(a.DBG, {
                     className: d.gameSearchCombobox,
                     placeholder: u.intl.string(u.t["5h0QOP"]),
                     autoFocus: !0,
@@ -158,14 +158,14 @@ function m(e) {
                     children: (e) =>
                         S(e).map((e) =>
                             (0, r.jsx)(
-                                l.lo1,
+                                a.lo1,
                                 {
                                     disabled: x.has(e.value),
                                     value: String(e.value),
-                                    children: (0, r.jsx)(l.lo1.Label, {
-                                        children: (0, r.jsx)(l.Text, {
+                                    children: (0, r.jsx)(a.lo1.Label, {
+                                        children: (0, r.jsx)(a.Text, {
                                             variant: "text-md/medium",
-                                            color: "header-secondary",
+                                            color: "text-default",
                                             children: e.label,
                                         }),
                                     }),
@@ -182,13 +182,13 @@ function m(e) {
 function b(e) {
     var { disabled: t } = e,
         n = p(e, ["disabled"]);
-    let a = i.useRef(null);
+    let l = i.useRef(null);
     return (0, r.jsx)(
         m,
         g(
             f(
                 {
-                    targetElementRef: a,
+                    targetElementRef: l,
                     position: "bottom",
                     align: "center",
                 },
@@ -197,13 +197,13 @@ function b(e) {
             {
                 children: (e) =>
                     (0, r.jsx)(
-                        l.Button,
+                        a.Button,
                         f(
                             {
-                                buttonRef: a,
+                                buttonRef: l,
                                 variant: "secondary",
                                 size: "sm",
-                                icon: l.qJs,
+                                icon: a.qJs,
                                 text: u.intl.string(u.t.SgTOtX),
                                 disabled: t,
                             },
@@ -230,7 +230,7 @@ function h(e) {
             {
                 children: (e) =>
                     (0, r.jsx)(
-                        l.P3F,
+                        a.P3F,
                         g(
                             f(
                                 {
@@ -240,7 +240,7 @@ function h(e) {
                                 },
                                 e,
                             ),
-                            { children: (0, r.jsx)(l.svS, { color: "currentColor" }) },
+                            { children: (0, r.jsx)(a.svS, { color: "currentColor" }) },
                         ),
                     ),
             },

@@ -6,8 +6,8 @@ var r = n(54381),
     s = n(85960),
     o = n(676317),
     c = n(823379),
-    d = n(84613),
-    u = n(740903),
+    u = n(84613),
+    d = n(740903),
     g = n(723136),
     m = n(598622),
     p = n(388032),
@@ -34,7 +34,7 @@ function h(e) {
                             }),
                             (0, r.jsx)(l.Text, {
                                 variant: "text-xs/medium",
-                                color: "header-secondary",
+                                color: "text-default",
                                 children: n,
                             }),
                         ],
@@ -44,7 +44,7 @@ function h(e) {
             (0, r.jsx)(l.Button, {
                 size: "sm",
                 variant: "secondary",
-                onClick: () => (0, d.K)(a),
+                onClick: () => (0, u.K)(a),
                 text: p.intl.string(p.t.bt75uw),
             }),
         ],
@@ -53,14 +53,14 @@ function h(e) {
 function b(e) {
     let { guild: t } = e;
     (0, a.RD)(t.id);
-    let d = (0, s.Z6)(t.id),
+    let u = (0, s.Z6)(t.id),
         { rulesByTriggerType: b } = (0, a.pH)(t.id),
         { numEnabledRules: x, numRules: j } = i.useMemo(() => {
             let e = 0,
                 t = 0;
             return (
                 null == b ||
-                    Object.values(d)
+                    Object.values(u)
                         .flat()
                         .forEach((n) => {
                             var r;
@@ -75,11 +75,11 @@ function b(e) {
                     numRules: t,
                 }
             );
-        }, [d, b]),
+        }, [u, b]),
         _ = (0, m.Q)(t),
-        v = _[u.u.CAPTCHA_AND_RAID_PROTECTION],
-        O = _[u.u.DM_AND_SPAM_PROTECTION],
-        C = _[u.u.PERMISSIONS],
+        v = _[d.u.CAPTCHA_AND_RAID_PROTECTION],
+        O = _[d.u.DM_AND_SPAM_PROTECTION],
+        C = _[d.u.PERMISSIONS],
         y = (0, o.pr)(t.id);
     return (0, r.jsxs)("div", {
         children: [
@@ -100,7 +100,7 @@ function b(e) {
                             enabled: v.filter((e) => e.enabled).length,
                             total: v.length,
                         }),
-                        page: u.u.CAPTCHA_AND_RAID_PROTECTION,
+                        page: d.u.CAPTCHA_AND_RAID_PROTECTION,
                     }),
                     (0, r.jsx)("div", { className: f.divider }),
                     (0, r.jsx)(h, {
@@ -110,7 +110,7 @@ function b(e) {
                             enabled: O.filter((e) => e.enabled).length,
                             total: O.length,
                         }),
-                        page: u.u.DM_AND_SPAM_PROTECTION,
+                        page: d.u.DM_AND_SPAM_PROTECTION,
                     }),
                     (0, r.jsx)("div", { className: f.divider }),
                     y &&
@@ -123,7 +123,7 @@ function b(e) {
                                         enabled: x,
                                         total: j,
                                     }),
-                                    page: u.u.AUTOMOD,
+                                    page: d.u.AUTOMOD,
                                 }),
                                 (0, r.jsx)("div", { className: f.divider }),
                             ],
@@ -135,7 +135,7 @@ function b(e) {
                             enabled: C.filter((e) => e.enabled).length,
                             total: C.length,
                         }),
-                        page: u.u.PERMISSIONS,
+                        page: d.u.PERMISSIONS,
                     }),
                 ],
             }),

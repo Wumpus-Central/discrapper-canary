@@ -128,7 +128,7 @@ class k extends l.PureComponent {
                                                     ? (0, i.jsx)(s.Text, {
                                                           tag: "span",
                                                           variant: "text-xs/semibold",
-                                                          color: "header-secondary",
+                                                          color: "text-default",
                                                           lineClamp: 1,
                                                           className: A.category,
                                                           children: (0, g.F6)(n, E.default, Z.Z),

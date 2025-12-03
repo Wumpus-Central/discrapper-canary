@@ -1,24 +1,24 @@
-e.r(a),
-    e.d(a, {
+a.r(e),
+    a.d(e, {
         BadgeImageWithProgressCircle: () => l,
         default: () => d,
     });
-var c = e(54381);
-e(473749);
-var n = e(925477),
-    o = e(793030),
-    t = e(410030),
-    s = e(457082),
-    i = e(768917);
+var c = a(54381);
+a(473749);
+var n = a(925477),
+    o = a(793030),
+    t = a(410030),
+    s = a(457082),
+    i = a(768917);
 let l = (r) => {
-        let { src: a, alt: e, progressCircleText: l, progressCirclePercent: d, progressCircleUrgency: g } = r,
+        let { src: e, alt: a, progressCircleText: l, progressCirclePercent: d, progressCircleUrgency: g } = r,
             u = (0, t.ZP)();
         return (0, c.jsxs)("div", {
             className: i.badgeImageContainer,
             children: [
                 (0, c.jsx)("img", {
-                    alt: e,
-                    src: a,
+                    alt: a,
+                    src: e,
                     className: i.badgeImage,
                 }),
                 null != l &&
@@ -35,7 +35,7 @@ let l = (r) => {
                             backgroundCircleBlurAmount: 2,
                             children: (0, c.jsx)(o.xvT, {
                                 variant: "text-sm/semibold",
-                                color: "text-secondary",
+                                color: "text-subtle",
                                 children: l,
                             }),
                         }),

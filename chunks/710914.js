@@ -7,7 +7,7 @@ var r = n(54381),
     o = n(828700),
     c = n(481060),
     u = n(49436),
-    d = n(509212),
+    d = n(862657),
     p = n(415104),
     f = n(388032),
     h = n(334525);
@@ -69,7 +69,7 @@ function g(e) {
                     }),
                     (0, r.jsx)(c.Text, {
                         variant: "text-md/normal",
-                        color: "text-secondary",
+                        color: "text-subtle",
                         children: m ? f.intl.format(f.t.LdYS1H, { onClick: _ }) : f.intl.string(f.t.LhD4yH),
                     }),
                 ],

@@ -282,7 +282,7 @@ function W(e) {
                                     }),
                                     (0, r.jsx)(u.Text, {
                                         variant: "text-sm/medium",
-                                        color: "text-tertiary",
+                                        color: "text-muted",
                                         children: [null == L ? void 0 : L.name, J].filter(v.lm).join(" \u2022 "),
                                     }),
                                 ],

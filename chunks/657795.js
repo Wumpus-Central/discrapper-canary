@@ -62,7 +62,7 @@ function T(e) {
                           }),
                           (0, r.jsx)(l.Text, {
                               className: S.subtitle,
-                              color: "header-secondary",
+                              color: "text-default",
                               variant: "text-md/normal",
                               children: v.intl.string(v.t.FnNud4),
                           }),

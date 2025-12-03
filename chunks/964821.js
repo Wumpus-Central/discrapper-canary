@@ -6,8 +6,8 @@ var r = n(54381),
     s = n(442837),
     o = n(28664),
     c = n(481060),
-    d = n(410030),
-    u = n(726542),
+    u = n(410030),
+    d = n(726542),
     g = n(812206),
     m = n(603211),
     p = n(190007),
@@ -16,7 +16,7 @@ var r = n(54381),
     b = n(784547);
 function x(e) {
     let { connection: t, index: l, onDragStart: x, onDragReset: j, onDragComplete: _, draggingId: v } = e,
-        O = (0, d.ZP)(),
+        O = (0, u.ZP)(),
         {
             drag: C,
             drop: y,
@@ -101,7 +101,7 @@ function x(e) {
                                 icon: null != (r = n.getIconURL(128)) ? r : null,
                             };
                     } else if (null != e.provider_id) {
-                        let n = u.Z.get(e.provider_id);
+                        let n = d.Z.get(e.provider_id);
                         return null != n
                             ? {
                                   name: n.name,
@@ -169,7 +169,7 @@ function x(e) {
                         children: [
                             (0, r.jsx)(c.Text, {
                                 variant: "text-md/medium",
-                                color: "text-primary",
+                                color: "text-strong",
                                 children: Z.name,
                             }),
                             (0, r.jsx)(c.Text, {

@@ -251,7 +251,7 @@ function eS(e) {
                             children: [
                                 (0, i.jsx)(m.Text, {
                                     variant: "text-xs/semibold",
-                                    color: "header-secondary",
+                                    color: "text-default",
                                     className: ei.guildProductBenefitLabel,
                                     children: er.intl.string(er.t.hxawoy),
                                 }),
@@ -264,7 +264,7 @@ function eS(e) {
                                 d && (0, i.jsx)("div", { className: ei.divider }),
                                 (0, i.jsx)(m.Text, {
                                     variant: "text-xs/semibold",
-                                    color: "header-secondary",
+                                    color: "text-default",
                                     className: ei.guildProductBenefitLabel,
                                     children: er.intl.string(er.t.gWBNet),
                                 }),

@@ -27,7 +27,7 @@ function f(e) {
             }),
             (0, l.jsx)(o.Text, {
                 variant: "text-md/normal",
-                color: "text-tertiary",
+                color: "text-muted",
                 children: d.intl.format(d.t.BaxFf8, {
                     emojiName: t.name,
                     emojiNameHook: (e, t) =>
@@ -35,7 +35,7 @@ function f(e) {
                             o.Text,
                             {
                                 variant: "text-md/semibold",
-                                color: "text-primary",
+                                color: "text-strong",
                                 tag: "strong",
                                 children: e,
                             },
@@ -47,7 +47,7 @@ function f(e) {
                             o.Text,
                             {
                                 variant: "text-md/semibold",
-                                color: "text-primary",
+                                color: "text-strong",
                                 tag: "strong",
                                 children: e,
                             },

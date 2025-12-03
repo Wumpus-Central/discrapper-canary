@@ -80,7 +80,7 @@ function N() {
                                           (0, r.jsx)(c.Text, {
                                               className: T.titleDivider,
                                               variant: "eyebrow",
-                                              color: "header-secondary",
+                                              color: "text-default",
                                               tag: "span",
                                               children: "\u2022",
                                           }),

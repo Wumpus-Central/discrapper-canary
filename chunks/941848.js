@@ -30,7 +30,7 @@ function c(t) {
     }
     return t;
 }
-function d(t, e) {
+function g(t, e) {
     return (
         (e = null != e ? e : {}),
         Object.getOwnPropertyDescriptors
@@ -48,8 +48,8 @@ function d(t, e) {
         t
     );
 }
-function g(t) {
-    let { user: e, tagId: n, title: r, messageCount: s, reactionCount: c, activeAgo: d, tags: g, attachment: m } = t,
+function d(t) {
+    let { user: e, tagId: n, title: r, messageCount: s, reactionCount: c, activeAgo: g, tags: d, attachment: m } = t,
         { name: u, avatarSrc: p } = e;
     return (0, a.jsxs)("div", {
         className: l.post,
@@ -84,7 +84,7 @@ function g(t) {
                                             color: "header-primary",
                                             variant: "text-xxs/medium",
                                             className: l.inlineTag,
-                                            children: g[n],
+                                            children: d[n],
                                         }),
                                     ],
                                 }),
@@ -100,7 +100,7 @@ function g(t) {
                         className: l.inline,
                         children: [
                             (0, a.jsxs)(i.Text, {
-                                color: "header-secondary",
+                                color: "text-default",
                                 variant: "text-xs/medium",
                                 className: l.alignCenter,
                                 children: [
@@ -120,7 +120,7 @@ function g(t) {
                                             children: "\u2022",
                                         }),
                                         (0, a.jsxs)(i.Text, {
-                                            color: "header-secondary",
+                                            color: "text-default",
                                             variant: "text-xs/medium",
                                             className: l.alignCenter,
                                             children: [
@@ -140,9 +140,9 @@ function g(t) {
                                 children: "\u2022",
                             }),
                             (0, a.jsx)(i.Text, {
-                                color: "header-secondary",
+                                color: "text-default",
                                 variant: "text-xs/medium",
-                                children: d,
+                                children: g,
                             }),
                         ],
                     }),
@@ -280,7 +280,7 @@ function p(t) {
     let { id: e } = t,
         [n, o] = r.useState(0),
         m = r.useRef(null),
-        { tags: p, posts: x, postPreview: h, ariaLabel: f } = (0, s.Z)(e);
+        { tags: p, posts: x, postPreview: f, ariaLabel: h } = (0, s.Z)(e);
     return (
         r.useEffect(() => {
             o(0);
@@ -294,7 +294,7 @@ function p(t) {
         (0, a.jsxs)("div", {
             className: l.container,
             role: "image",
-            "aria-label": f,
+            "aria-label": h,
             children: [
                 (0, a.jsxs)("div", {
                     ref: m,
@@ -318,11 +318,11 @@ function p(t) {
                         }),
                         (0, a.jsx)("div", {
                             className: l.posts,
-                            children: x.map((t, e) => (0, a.jsx)(g, d(c({}, t), { tags: p }), e)),
+                            children: x.map((t, e) => (0, a.jsx)(d, g(c({}, t), { tags: p }), e)),
                         }),
                     ],
                 }),
-                (0, a.jsx)(u, d(c({}, h), { maxHeight: n })),
+                (0, a.jsx)(u, g(c({}, f), { maxHeight: n })),
             ],
         })
     );

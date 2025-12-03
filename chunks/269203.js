@@ -68,7 +68,7 @@ function f(e) {
                                           }),
                                           (0, i.jsx)(l.Text, {
                                               variant: "text-md/medium",
-                                              color: "text-primary",
+                                              color: "text-strong",
                                               children: t,
                                           }),
                                       ],

@@ -41,7 +41,7 @@ function u() {
                                         children: [
                                             (0, r.jsx)(s.Text, {
                                                 variant: "text-sm/medium",
-                                                color: "text-tertiary",
+                                                color: "text-muted",
                                                 className: d.baseUrl,
                                                 children: "".concat(l.mf, "/"),
                                             }),
@@ -92,7 +92,7 @@ function u() {
             }),
             (0, r.jsx)(s.Text, {
                 variant: "text-xs/normal",
-                color: "text-tertiary",
+                color: "text-muted",
                 className: d.disclaimer,
                 children: c.intl.string(i.default.u5iNbz),
             }),

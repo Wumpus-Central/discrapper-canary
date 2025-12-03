@@ -140,7 +140,7 @@ function A(e) {
         a = (0, y.$)();
     return (0, r.jsx)(c.Text, {
         variant: t,
-        color: i ? "text-secondary" : "always-white",
+        color: i ? "text-subtle" : "always-white",
         className: o()(v.description, {
             [v.descriptionBottomMargin]: n,
             [v.descriptionV2]: i,

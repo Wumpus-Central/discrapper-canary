@@ -114,7 +114,7 @@ function R(e) {
                             }),
                             (0, l.jsx)(s.Heading, {
                                 variant: "heading-md/medium",
-                                color: "header-secondary",
+                                color: "text-default",
                                 className: I.headerTitle,
                                 children: null != (t = null == H ? void 0 : H.name) ? t : R.applicationName,
                             }),
@@ -208,7 +208,7 @@ function R(e) {
                             layout: "horizontal",
                             children: (0, l.jsx)(s.Text, {
                                 variant: "text-sm/normal",
-                                color: "text-secondary",
+                                color: "text-subtle",
                                 children: (0, g.Y4)(ee),
                             }),
                         }),
@@ -233,7 +233,7 @@ function R(e) {
                                         }),
                                         (0, l.jsx)(s.Text, {
                                             variant: "text-sm/normal",
-                                            color: "text-secondary",
+                                            color: "text-subtle",
                                             children: et.name,
                                         }),
                                     ],
@@ -255,7 +255,7 @@ function R(e) {
                                         }),
                                         (0, l.jsx)(s.Text, {
                                             variant: "text-sm/normal",
-                                            color: "text-secondary",
+                                            color: "text-subtle",
                                             children: en.name,
                                         }),
                                     ],
@@ -269,7 +269,7 @@ function R(e) {
                                 layout: "horizontal",
                                 children: (0, l.jsx)(s.Text, {
                                     variant: "text-sm/normal",
-                                    color: "text-secondary",
+                                    color: "text-subtle",
                                     children: [R.activity.state, R.activity.details].filter(Boolean).join(" \u203A "),
                                 }),
                             }),

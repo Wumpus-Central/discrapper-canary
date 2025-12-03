@@ -244,7 +244,7 @@ function F(e) {
                             height: 16,
                         }),
                         (0, i.jsx)(c.Text, {
-                            color: "header-secondary",
+                            color: "text-default",
                             variant: "text-xs/normal",
                             className: G.startTime,
                             children: b,

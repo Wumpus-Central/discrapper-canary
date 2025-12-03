@@ -1,8 +1,8 @@
 n.d(t, { Z: () => w }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     s = n(205120),
     o = n(442837),
     c = n(481060),
@@ -41,7 +41,7 @@ let y = {
                             gap: 4,
                             children: (0, r.jsx)(c.Text, {
                                 variant: "text-md/medium",
-                                color: "header-secondary",
+                                color: "text-default",
                                 children: b.intl.string(p.default.fP8DVx),
                             }),
                         }),
@@ -51,16 +51,16 @@ let y = {
                             children: [
                                 (0, r.jsx)(c.Text, {
                                     variant: "text-lg/semibold",
-                                    color: "header-secondary",
+                                    color: "text-default",
                                     children: b.intl.string(p.default["i7CH/I"]),
                                 }),
                                 (0, r.jsxs)("ol", {
-                                    className: l()(j.list, j.orderedList, j.topLevelList),
+                                    className: a()(j.list, j.orderedList, j.topLevelList),
                                     children: [
                                         (0, r.jsx)("li", {
                                             children: (0, r.jsx)(c.Text, {
                                                 variant: "text-md/normal",
-                                                color: "header-secondary",
+                                                color: "text-default",
                                                 children: b.intl.string(p.default["+Izoz7"]),
                                             }),
                                         }),
@@ -68,44 +68,44 @@ let y = {
                                             children: [
                                                 (0, r.jsx)(c.Text, {
                                                     variant: "text-md/normal",
-                                                    color: "header-secondary",
+                                                    color: "text-default",
                                                     children: b.intl.string(p.default["iu/RkU"]),
                                                 }),
                                                 (0, r.jsxs)("ul", {
-                                                    className: l()(j.list, j.innerList, j.unorderedList),
+                                                    className: a()(j.list, j.innerList, j.unorderedList),
                                                     children: [
                                                         (0, r.jsx)("li", {
                                                             children: (0, r.jsx)(c.Text, {
                                                                 variant: "text-md/normal",
-                                                                color: "header-secondary",
+                                                                color: "text-default",
                                                                 children: b.intl.string(p.default.QogKbP),
                                                             }),
                                                         }),
                                                         (0, r.jsx)("li", {
                                                             children: (0, r.jsx)(c.Text, {
                                                                 variant: "text-md/normal",
-                                                                color: "header-secondary",
+                                                                color: "text-default",
                                                                 children: b.intl.string(p.default.V4orHT),
                                                             }),
                                                         }),
                                                         (0, r.jsx)("li", {
                                                             children: (0, r.jsx)(c.Text, {
                                                                 variant: "text-md/normal",
-                                                                color: "header-secondary",
+                                                                color: "text-default",
                                                                 children: b.intl.string(p.default.VrrQXe),
                                                             }),
                                                         }),
                                                         (0, r.jsx)("li", {
                                                             children: (0, r.jsx)(c.Text, {
                                                                 variant: "text-md/normal",
-                                                                color: "header-secondary",
+                                                                color: "text-default",
                                                                 children: b.intl.string(p.default.pSuM5e),
                                                             }),
                                                         }),
                                                         (0, r.jsx)("li", {
                                                             children: (0, r.jsx)(c.Text, {
                                                                 variant: "text-md/normal",
-                                                                color: "header-secondary",
+                                                                color: "text-default",
                                                                 children: b.intl.string(p.default["/RLXlI"]),
                                                             }),
                                                         }),
@@ -116,14 +116,14 @@ let y = {
                                         (0, r.jsx)("li", {
                                             children: (0, r.jsx)(c.Text, {
                                                 variant: "text-md/normal",
-                                                color: "header-secondary",
+                                                color: "text-default",
                                                 children: b.intl.string(p.default.j4AmYy),
                                             }),
                                         }),
                                         (0, r.jsx)("li", {
                                             children: (0, r.jsx)(c.Text, {
                                                 variant: "text-md/normal",
-                                                color: "header-secondary",
+                                                color: "text-default",
                                                 children: b.intl.format(p.default["/g+PvX"], {
                                                     termsOfService: x.EYA.TERMS,
                                                     communityGuidelines: x.EYA.GUIDELINES,
@@ -141,16 +141,16 @@ let y = {
                             children: [
                                 (0, r.jsx)(c.Text, {
                                     variant: "text-lg/semibold",
-                                    color: "header-secondary",
+                                    color: "text-default",
                                     children: b.intl.string(p.default.qJWXsz),
                                 }),
                                 (0, r.jsxs)("ul", {
-                                    className: l()(j.list, j.unorderedList, j.topLevelList),
+                                    className: a()(j.list, j.unorderedList, j.topLevelList),
                                     children: [
                                         (0, r.jsx)("li", {
                                             children: (0, r.jsx)(c.Text, {
                                                 variant: "text-md/normal",
-                                                color: "header-secondary",
+                                                color: "text-default",
                                                 children: b.intl.format(p.default.FUBV1P, {
                                                     survey: "https://discord.sjc1.qualtrics.com/jfe/form/SV_3WvT7SqlWpCJ4HQ",
                                                 }),
@@ -159,7 +159,7 @@ let y = {
                                         (0, r.jsx)("li", {
                                             children: (0, r.jsx)(c.Text, {
                                                 variant: "text-md/normal",
-                                                color: "header-secondary",
+                                                color: "text-default",
                                                 children: b.intl.format(p.default.W4MIAG, {
                                                     feedback: "https://forms.gle/RbDhW46PMmR39XUP7",
                                                 }),
@@ -175,13 +175,13 @@ let y = {
                             children: [
                                 (0, r.jsx)(c.Text, {
                                     variant: "text-md/normal",
-                                    color: "header-secondary",
+                                    color: "text-default",
                                     children: b.intl.string(p.default.J3HKmx),
                                 }),
                                 n &&
                                     (0, r.jsx)(c.Text, {
                                         variant: "text-md/normal",
-                                        color: "header-secondary",
+                                        color: "text-default",
                                         children: b.intl.format(p.default["9x2vbP"], {
                                             optOutHook: (e) =>
                                                 (0, r.jsx)(h.Z, {
@@ -193,7 +193,7 @@ let y = {
                                     }),
                                 (0, r.jsx)(c.Text, {
                                     variant: "text-md/normal",
-                                    color: "header-secondary",
+                                    color: "text-default",
                                     children: b.intl.string(p.default.KcCY25),
                                 }),
                             ],
@@ -212,7 +212,7 @@ let y = {
 function w(e) {
     let t,
         { guild: n } = e,
-        [a, o] = (0, d.R)("report-to-mod-education-dismissed", !1),
+        [l, o] = (0, d.R)("report-to-mod-education-dismissed", !1),
         [u, m] = (0, d.R)("report-to-mod-education-expanded", !1),
         { transitions: h, setVisible: g } = (() => {
             let [e, t] = i.useState(!0);
@@ -237,16 +237,16 @@ function w(e) {
                 config: { duration: 200 },
             }));
     return (i.useEffect(() => {
-        a && g(!1);
-    }, [a, g]),
-    a)
+        l && g(!1);
+    }, [l, g]),
+    l)
         ? null
         : h((e, t) =>
               t
                   ? (0, r.jsxs)(s.animated.div, {
                         style: e,
                         onClick: () => m(!u),
-                        className: l()(_.container, j.container, v.mainCard),
+                        className: a()(_.container, j.container, v.mainCard),
                         children: [
                             (0, r.jsxs)("div", {
                                 className: j.inline,

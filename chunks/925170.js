@@ -106,7 +106,7 @@ function O(e) {
                             })
                           : (0, n.jsx)(l.Text, {
                                 variant: "text-md/medium",
-                                color: "text-secondary",
+                                color: "text-subtle",
                                 children: f.intl.string(f.t["1nkDOs"]),
                             }),
                   }),

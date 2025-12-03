@@ -152,7 +152,7 @@ let S = {
                                                               }),
                                                               (0, r.jsx)(u.Text, {
                                                                   variant: "text-md/normal",
-                                                                  color: "text-secondary",
+                                                                  color: "text-subtle",
                                                                   children:
                                                                       "This is preview content that appears in the modal footer.",
                                                               }),

@@ -1,5 +1,5 @@
 n.d(t, {
-    q: () => y,
+    q: () => C,
     s: () => b,
 });
 var i = n(54381),
@@ -73,7 +73,7 @@ function b(e) {
                 (0, i.jsx)(o.Text, {
                     className: f.chatHeaderBarText,
                     variant: "text-sm/normal",
-                    color: "header-secondary",
+                    color: "text-default",
                     children: t.isForumPost() ? h.intl.string(h.t["833FDn"]) : h.intl.string(h.t.rEeodK),
                 }),
                 l
@@ -97,7 +97,7 @@ function b(e) {
         })
     );
 }
-function y(e) {
+function C(e) {
     let { channel: t, narrow: n } = e,
         l = (0, d.Xb)(t);
     return (
@@ -113,7 +113,7 @@ function y(e) {
                 (0, i.jsx)(o.Text, {
                     className: f.chatHeaderBarText,
                     variant: "text-sm/normal",
-                    color: "header-secondary",
+                    color: "text-default",
                     children: t.isForumPost() ? h.intl.string(h.t.E7oO8u) : h.intl.string(h.t["V/JF2N"]),
                 }),
                 l

@@ -6,8 +6,8 @@ var r = n(54381),
     s = n(481060),
     o = n(749210),
     c = n(493544),
-    d = n(607070),
-    u = n(714939),
+    u = n(607070),
+    d = n(714939),
     g = n(981631),
     m = n(388032),
     p = n(203552);
@@ -196,7 +196,7 @@ function b() {
             a.current = e;
         }),
         i.useEffect(() => {
-            if (d.Z.useReducedMotion) return;
+            if (u.Z.useReducedMotion) return;
             let e = setTimeout(() => l((t + 1) % a.current.length), 6332);
             return () => clearTimeout(e);
         }, [t]),
@@ -218,9 +218,9 @@ function b() {
 }
 function x(e) {
     let { guild: t, everyoneRole: n, setEditRoleId: l } = e,
-        [a, d] = i.useState(!1),
+        [a, u] = i.useState(!1),
         g = async () => {
-            d(!0), await o.Z.createRole(t.id), d(!1);
+            u(!0), await o.Z.createRole(t.id), u(!1);
         },
         f = i.useCallback(() => {
             l(n.id);
@@ -242,7 +242,7 @@ function x(e) {
                             children: m.intl.string(m.t.ALlnbi),
                         }),
                         (0, r.jsx)(s.Text, {
-                            color: "header-secondary",
+                            color: "text-default",
                             variant: "text-md/normal",
                             className: p.introBody,
                             children: m.intl.string(m.t["1ydhVp"]),
@@ -260,7 +260,7 @@ function x(e) {
                     ],
                 }),
                 (0, r.jsx)(s.izJ, { className: p.divider }),
-                (0, r.jsx)(u.Z, {
+                (0, r.jsx)(d.Z, {
                     role: n,
                     onClick: f,
                 }),

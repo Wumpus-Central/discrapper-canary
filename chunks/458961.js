@@ -321,7 +321,7 @@ function J(e) {
                             }),
                             (0, n.jsx)(f.Text, {
                                 variant: "text-sm/normal",
-                                color: "header-secondary",
+                                color: "text-default",
                                 children: L.intl.string(L.t["Tu7f+f"]),
                             }),
                         ],
@@ -489,7 +489,7 @@ function J(e) {
                                 (0, n.jsx)("div", { className: D.verticalSeparator }),
                                 (0, n.jsx)(f.Heading, {
                                     variant: "text-xs/bold",
-                                    color: "header-secondary",
+                                    color: "text-default",
                                     className: D.previewHeading,
                                     children: L.intl.string(L.t["6I7nQT"]),
                                 }),

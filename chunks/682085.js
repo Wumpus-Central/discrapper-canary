@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O });
 var r = n(54381),
     i = n(473749),
-    a = n(296009),
-    l = n(442837),
+    l = n(296009),
+    a = n(442837),
     o = n(704215),
     c = n(481060),
     s = n(491662),
@@ -19,14 +19,14 @@ var r = n(54381),
 function O() {
     let { trackUserProfileAction: e, trackUserProfileEditAction: t } = (0, f.KZ)(),
         O = i.useRef(!1),
-        j = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
+        j = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
         { application: x, config: _ } = (0, p.G)(),
         { token: P, fetched: I } = (0, s.o)(null == _ ? void 0 : _.application_id),
         w = i.useMemo(
             () =>
                 (null == _ ? void 0 : _.application_id) != null
                     ? new g.q({
-                          type: a.l.APPLICATION,
+                          type: l.l.APPLICATION,
                           applicationId: _.application_id,
                       })
                     : null,
@@ -38,7 +38,7 @@ function O() {
                     async () => {
                         let { default: e } = await n.e("38576").then(n.bind(n, 925170));
                         return (n) => {
-                            var i, a;
+                            var i, l;
                             return (0, r.jsx)(
                                 e,
                                 ((i = (function (e) {
@@ -66,9 +66,9 @@ function O() {
                                     }
                                     return e;
                                 })({}, n)),
-                                (a = a = { trackUserProfileEditAction: t }),
+                                (l = l = { trackUserProfileEditAction: t }),
                                 Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
+                                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
                                     : (function (e, t) {
                                           var n = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
@@ -76,8 +76,8 @@ function O() {
                                               n.push.apply(n, r);
                                           }
                                           return n;
-                                      })(Object(a)).forEach(function (e) {
-                                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
+                                      })(Object(l)).forEach(function (e) {
+                                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                                       }),
                                 i),
                             );
@@ -117,7 +117,7 @@ function O() {
             }),
             (0, r.jsx)(c.Text, {
                 variant: "text-sm/normal",
-                color: "text-secondary",
+                color: "text-subtle",
                 children: y.intl.format(y.t.YnNFWa, { applicationName: x.name }),
             }),
         ],

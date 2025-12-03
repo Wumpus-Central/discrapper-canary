@@ -4,13 +4,13 @@ var n = r(54381),
     a = r(755721),
     i = r(481060),
     c = r(841183),
-    s = r(388032),
-    l = r(323964);
+    l = r(388032),
+    s = r(323964);
 function f(t) {
     var e,
         r,
-        { avatarId: f, storageHash: u, avatarDescription: p, onConfirmDelete: b, onClose: y } = t,
-        d = (function (t, e) {
+        { avatarId: f, storageHash: u, avatarDescription: b, onConfirmDelete: p, onClose: y } = t,
+        O = (function (t, e) {
             if (null == t) return {};
             var r,
                 n,
@@ -31,7 +31,7 @@ function f(t) {
             }
             return o;
         })(t, ["avatarId", "storageHash", "avatarDescription", "onConfirmDelete", "onClose"]);
-    let [O, m] = o.useState(!1),
+    let [d, m] = o.useState(!1),
         { avatarSrc: v, eventHandlers: j } = (0, c.Z)({
             avatarId: f,
             storageHash: u,
@@ -66,16 +66,16 @@ function f(t) {
             return t;
         })(
             {
-                bodyClassName: l.modalContent,
-                header: s.intl.string(s.t.rfaLTH),
-                confirmText: s.intl.string(s.t.Lh0uyy),
-                cancelText: s.intl.string(s.t["ETE/oC"]),
+                bodyClassName: s.modalContent,
+                header: l.intl.string(l.t.rfaLTH),
+                confirmText: l.intl.string(l.t.Lh0uyy),
+                cancelText: l.intl.string(l.t["ETE/oC"]),
                 confirmButtonColor: a.zx.Colors.RED,
-                loading: O,
+                loading: d,
                 onConfirm: async () => {
                     m(!0);
                     try {
-                        await b();
+                        await p();
                     } catch (t) {
                     } finally {
                         m(!1);
@@ -84,35 +84,35 @@ function f(t) {
                 },
                 onClose: y,
             },
-            d,
+            O,
         )),
         (r = r =
             {
                 children: [
                     (0, n.jsx)(i.Text, {
                         variant: "text-sm/normal",
-                        color: "text-secondary",
-                        children: s.intl.string(s.t.EKmxKc),
+                        color: "text-subtle",
+                        children: l.intl.string(l.t.EKmxKc),
                     }),
                     (0, n.jsx)("div", {
                         onMouseEnter: g,
                         onMouseLeave: x,
-                        className: l.avatarContainer,
+                        className: s.avatarContainer,
                         children: (0, n.jsx)("img", {
                             src: v,
-                            alt: p,
-                            className: l.avatar,
+                            alt: b,
+                            className: s.avatar,
                         }),
                     }),
                     (0, n.jsx)(i.Text, {
                         variant: "eyebrow",
                         color: "text-feedback-positive",
-                        children: s.intl.string(s.t["2Ld8DM"]),
+                        children: l.intl.string(l.t["2Ld8DM"]),
                     }),
                     (0, n.jsx)(i.Text, {
                         variant: "text-xs/normal",
-                        color: "text-secondary",
-                        children: s.intl.string(s.t.Oe0xqt),
+                        color: "text-subtle",
+                        children: l.intl.string(l.t.Oe0xqt),
                     }),
                 ],
             }),

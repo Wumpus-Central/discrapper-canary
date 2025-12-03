@@ -69,7 +69,7 @@ let R = (e) => {
                               c &&
                                   (0, r.jsx)(f.Text, {
                                       className: O.errorText,
-                                      color: "header-secondary",
+                                      color: "text-default",
                                       variant: "text-sm/normal",
                                       children: y.intl.string(y.t["tWYWJ+"]),
                                   }),

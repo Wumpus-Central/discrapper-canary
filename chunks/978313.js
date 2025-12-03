@@ -19,11 +19,11 @@ function h(e) {
         [v, j] = i.useState(!0),
         [_, I] = i.useState(!1),
         b = i.useRef(null),
-        { width: y, height: O } = (0, u.Z)();
+        { width: O, height: y } = (0, u.Z)();
     return (i.useEffect(() => {
         let e = b.current;
         null != e && I(e.scrollHeight - e.clientHeight > 1 || !v);
-    }, [b, y, O, v]),
+    }, [b, O, y, v]),
     null == t.summary)
         ? null
         : (0, a.jsxs)("div", {
@@ -34,12 +34,12 @@ function h(e) {
                           className: l()(p.row, p.gapSm),
                           children: [
                               (0, a.jsx)(s.SxY, {
-                                  color: c.Z.colors.HEADER_SECONDARY,
+                                  color: c.Z.colors.TEXT_DEFAULT,
                                   size: "xs",
                               }),
                               (0, a.jsx)(o.xvT, {
                                   variant: "text-xs/medium",
-                                  color: "header-secondary",
+                                  color: "text-default",
                                   children: r
                                       ? f.intl.format(f.t.aZ2iIp, { onShowOriginal: () => h(!1) })
                                       : f.intl.format(f.t["/2ylF4"], { onShowTranslated: () => h(!0) }),

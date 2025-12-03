@@ -6,8 +6,8 @@ var r = n(54381),
     s = n(399606),
     o = n(481060),
     c = n(239091),
-    d = n(749210),
-    u = n(479531),
+    u = n(749210),
+    d = n(479531),
     g = n(110924),
     m = n(410030),
     p = n(367907),
@@ -84,7 +84,7 @@ function R(e) {
         if (null != l) {
             x(null), h(!0);
             try {
-                await d.Z.unbanUser(l.id, a.id),
+                await u.Z.unbanUser(l.id, a.id),
                     g(),
                     _.default.track(
                         I.rMx.GUILD_BAN_REMOVED,
@@ -95,7 +95,7 @@ function R(e) {
                         }),
                     );
             } catch (e) {
-                x(new u.Z(e)), h(!1);
+                x(new d.Z(e)), h(!1);
             }
         }
     }
@@ -134,7 +134,7 @@ function R(e) {
                     }),
                     (0, r.jsx)(o.Text, {
                         variant: "text-xs/medium",
-                        color: "text-secondary",
+                        color: "text-subtle",
                         children: null != s.reason && "" !== s.reason ? s.reason : S.intl.string(S.t["t+2Zci"]),
                     }),
                     null != b
@@ -194,7 +194,7 @@ class D extends i.PureComponent {
                         }),
                         (0, r.jsx)(o.Text, {
                             variant: "text-sm/medium",
-                            color: "header-secondary",
+                            color: "text-default",
                             children: null != t.globalName ? t.username : null,
                         }),
                     ],
@@ -229,7 +229,7 @@ class D extends i.PureComponent {
 let A = i.forwardRef(function (e, t) {
     let { guild: n, sortedBans: l, bans: a } = e,
         c = (0, s.e7)([x.Z], () => x.Z.hidePersonalInformation, []),
-        d = i.useCallback(
+        u = i.useCallback(
             (e) => {
                 var t;
                 if (null == a && 0 === e) return 60;
@@ -239,7 +239,7 @@ let A = i.forwardRef(function (e, t) {
             },
             [a, l],
         ),
-        u = i.useCallback(
+        d = i.useCallback(
             (e) => {
                 var t;
                 if (null == a && 0 === e)
@@ -271,8 +271,8 @@ let A = i.forwardRef(function (e, t) {
         role: "listbox",
         listPadding: [8, 8, 8, 8],
         rowCount: l.length,
-        rowHeight: d,
-        renderRow: u,
+        rowHeight: u,
+        renderRow: d,
         ref: t,
     });
 });
@@ -280,7 +280,7 @@ function L(e) {
     let { guildId: t, storedSearchQuery: n } = e,
         [l, a] = i.useState(null != n ? n : ""),
         [s, c] = i.useState(!1),
-        u = i.useCallback(() => {
+        d = i.useCallback(() => {
             C.Z.setSection(I.pNK.SAFETY), (0, N.K)(E.u.DM_AND_SPAM_PROTECTION);
         }, []),
         g = i.useCallback((e) => {
@@ -299,7 +299,7 @@ function L(e) {
                     c(!0);
                     let [e, n] = (0, b.C)(l),
                         r = e[0];
-                    C.Z.setSearchQuery(l), await d.Z.searchGuildBans(t, r, n), c(!1);
+                    C.Z.setSearchQuery(l), await u.Z.searchGuildBans(t, r, n), c(!1);
                 } catch (e) {
                     c(!1);
                 }
@@ -321,7 +321,7 @@ function L(e) {
                 children: (0, r.jsx)(o.Text, {
                     variant: "text-sm/normal",
                     className: T.description,
-                    children: S.intl.format(S.t.JcZ36i, { onModerationClick: u }),
+                    children: S.intl.format(S.t.JcZ36i, { onModerationClick: d }),
                 }),
             }),
             (0, r.jsxs)("div", {
@@ -353,8 +353,8 @@ function L(e) {
 }
 function k() {
     var e, t;
-    let { guild: c, searchQuery: u } = (0, s.e7)([y.Z], () => y.Z.getProps(), [], l.isEqual),
-        p = null != u && u.trim().length > 0,
+    let { guild: c, searchQuery: d } = (0, s.e7)([y.Z], () => y.Z.getProps(), [], l.isEqual),
+        p = null != d && d.trim().length > 0,
         f = (0, g.Z)(p),
         h = p !== f,
         [x] = (0, s.e7)([y.Z], () => y.Z.getBans(), [], v.Q),
@@ -392,7 +392,7 @@ function k() {
             },
             [E],
         ),
-        R = i.useMemo(() => P(x, u, _), [x, P, u, _]),
+        R = i.useMemo(() => P(x, d, _), [x, P, d, _]),
         D = null != x,
         k = R.length % 1000 == 0 && R.length > 0 && D,
         G = 0 === R.length,
@@ -405,7 +405,7 @@ function k() {
     }, [h, M.currentPage]);
     let B = i.useCallback(
             (e) => {
-                d.Z.fetchGuildBansBatch(C, 1000, e);
+                u.Z.fetchGuildBansBatch(C, 1000, e);
             },
             [C],
         ),
@@ -438,7 +438,7 @@ function k() {
               children: [
                   (0, r.jsx)(L, {
                       guildId: C,
-                      storedSearchQuery: u,
+                      storedSearchQuery: d,
                   }),
                   (0, r.jsxs)("div", {
                       className: T.scrollerContainer,

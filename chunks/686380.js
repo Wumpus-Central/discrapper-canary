@@ -209,7 +209,7 @@ class U extends i.Component {
                     }),
                     (0, r.jsx)(c.Text, {
                         variant: "text-md/medium",
-                        color: "text-secondary",
+                        color: "text-subtle",
                         children: this.renderExpirationDate(),
                     }),
                 ],
@@ -247,7 +247,7 @@ class U extends i.Component {
             children: [
                 (0, r.jsx)(c.Text, {
                     variant: "text-md/medium",
-                    color: "text-primary",
+                    color: "text-strong",
                     children: this.getSystemMessageHeader(),
                 }),
                 (0, r.jsxs)("div", {
@@ -267,7 +267,7 @@ class U extends i.Component {
                                         }),
                                         (0, r.jsx)(c.Text, {
                                             variant: "text-md/medium",
-                                            color: "text-secondary",
+                                            color: "text-subtle",
                                             children: s,
                                         }),
                                     ],

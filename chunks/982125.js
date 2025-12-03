@@ -89,7 +89,7 @@ function _(e) {
                                         }),
                                     (0, r.jsx)(f.x, {
                                         variant: "text-md/normal",
-                                        color: "primary" === y ? "text-primary" : "text-secondary",
+                                        color: "primary" === y ? "text-strong" : "text-subtle",
                                         children: h,
                                     }),
                                 ],
@@ -97,7 +97,7 @@ function _(e) {
                             P &&
                                 (0, r.jsx)(f.x, {
                                     variant: "text-sm/normal",
-                                    color: "text-secondary",
+                                    color: "text-subtle",
                                     children: n,
                                 }),
                         ],

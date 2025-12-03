@@ -1,28 +1,28 @@
 n.d(t, { Z: () => m }), n(388685);
 var r = n(54381),
-    i = n(473749),
-    l = n(120356),
-    a = n.n(l),
+    l = n(473749),
+    i = n(120356),
+    a = n.n(i),
     s = n(481060),
     o = n(454585),
-    c = n(572004),
-    d = n(388032),
+    d = n(572004),
+    c = n(388032),
     u = n(852950);
 function m(e) {
     let {
             element: {
-                data: { title: t, body: n, sms: l, is_localized: m },
+                data: { title: t, body: n, sms: i, is_localized: m },
             },
         } = e,
-        [p, g] = i.useState(!1),
-        _ = i.useRef(o.Z.reactParserFor(o.Z.defaultRules));
+        [p, g] = l.useState(!1),
+        _ = l.useRef(o.Z.reactParserFor(o.Z.defaultRules));
     return m
         ? (0, r.jsxs)("div", {
               className: u.container,
               children: [
                   (0, r.jsx)(s.Heading, {
                       variant: "heading-sm/semibold",
-                      color: "header-secondary",
+                      color: "text-default",
                       className: u.header,
                       children: t,
                   }),
@@ -39,7 +39,7 @@ function m(e) {
                                   variant: "text-md/normal",
                                   selectable: !0,
                                   className: u.smsNumberText,
-                                  children: l,
+                                  children: i,
                               }),
                               (0, r.jsx)("div", {
                                   "data-button-hoisted-classname-wrapper": !0,
@@ -47,9 +47,9 @@ function m(e) {
                                   children: (0, r.jsx)(s.Button, {
                                       variant: "secondary",
                                       size: "sm",
-                                      text: p ? d.intl.string(d.t.t5VZ88) : d.intl.string(d.t.OpuAlK),
+                                      text: p ? c.intl.string(c.t.t5VZ88) : c.intl.string(c.t.OpuAlK),
                                       onClick: () => {
-                                          (0, c.JG)(l, () => g(!0));
+                                          (0, d.JG)(i, () => g(!0));
                                       },
                                   }),
                               }),

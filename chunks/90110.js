@@ -157,7 +157,7 @@ function N() {
                             }),
                             (0, r.jsx)(l.xvT, {
                                 variant: "text-md/medium",
-                                color: "text-secondary",
+                                color: "text-subtle",
                                 children: v.intl.string(O.default["no+FQS"]),
                             }),
                             (0, r.jsx)(P, {
@@ -267,7 +267,7 @@ function P(e) {
                     className: S.calloutBox,
                     children: (0, r.jsx)(l.xvT, {
                         variant: "text-sm/medium",
-                        color: "text-secondary",
+                        color: "text-subtle",
                         children: v.intl.string(O.default.OEkrCx),
                     }),
                 }),
@@ -281,7 +281,7 @@ function R(e) {
         children: [
             (0, r.jsx)(l.xvT, {
                 variant: "text-md/semibold",
-                color: "text-secondary",
+                color: "text-subtle",
                 children: t,
             }),
             (0, r.jsx)(D, { status: n }),
@@ -304,7 +304,7 @@ function w(e) {
                     null != i &&
                         (0, r.jsx)(l.xvT, {
                             variant: "text-sm/medium",
-                            color: "text-secondary",
+                            color: "text-subtle",
                             children: i,
                         }),
                     null != a &&

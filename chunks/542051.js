@@ -93,7 +93,7 @@ let g = (e) => {
           ? o > 0
               ? (0, i.jsx)(l.Text, {
                     variant: "text-sm/medium",
-                    color: "text-secondary",
+                    color: "text-subtle",
                     className: f.searchDMQueryText,
                     children: u
                         ? d.intl.format(d.t.iV2fth, { filterCount: o })
@@ -104,7 +104,7 @@ let g = (e) => {
                 })
               : (0, i.jsx)(l.Text, {
                     variant: "text-sm/medium",
-                    color: "text-secondary",
+                    color: "text-subtle",
                     className: f.searchDMQueryText,
                     children: u ? d.intl.string(d.t.w39VdC) : d.intl.format(d.t["9gKPvw"], { value: s }),
                 })

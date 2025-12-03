@@ -1,16 +1,16 @@
 i.d(n, { default: () => P }), i(953529), i(539854);
 var a = i(54381),
     l = i(473749),
-    o = i(793030),
-    t = i(442837),
+    t = i(793030),
+    o = i(442837),
     s = i(481060),
     r = i(596454),
     c = i(471445),
     d = i(686546),
     u = i(313201),
     m = i(339085),
-    h = i(633302),
-    _ = i(565138),
+    _ = i(633302),
+    h = i(565138),
     p = i(372769),
     j = i(703656),
     x = i(592125),
@@ -18,35 +18,35 @@ var a = i(54381),
     g = i(496675),
     C = i(259580),
     b = i(626135),
-    E = i(524329),
-    Z = i(995532),
-    f = i(845606),
+    f = i(524329),
+    E = i(995532),
+    Z = i(845606),
     I = i(981631),
     v = i(231338),
     T = i(388032),
     S = i(557401);
 let k = (e) => {
         var n;
-        let { channelData: i, onClose: l, trackOptionClick: o } = e,
-            d = (0, t.e7)([x.Z], () => x.Z.getChannel(i.channel_id)),
-            u = (0, t.e7)([g.Z], () => null != d && g.Z.can(v.Pl.VIEW_CHANNEL, d)),
-            _ = (0, t.e7)([m.ZP], () => (null != i.emoji_id ? m.ZP.getCustomEmojiById(i.emoji_id) : null), [
+        let { channelData: i, onClose: l, trackOptionClick: t } = e,
+            d = (0, o.e7)([x.Z], () => x.Z.getChannel(i.channel_id)),
+            u = (0, o.e7)([g.Z], () => null != d && g.Z.can(v.Pl.VIEW_CHANNEL, d)),
+            h = (0, o.e7)([m.ZP], () => (null != i.emoji_id ? m.ZP.getCustomEmojiById(i.emoji_id) : null), [
                 i.emoji_id,
             ]),
-            p = null != i.emoji_name ? h.ZP.getByName(h.ZP.convertSurrogateToName(i.emoji_name, !1)) : null,
+            p = null != i.emoji_name ? _.ZP.getByName(_.ZP.convertSurrogateToName(i.emoji_name, !1)) : null,
             N = null != (n = (0, c.KS)(d)) ? n : s.VL1;
         return null != d && u
             ? (0, a.jsxs)(s.P3F, {
                   className: S.optionContainer,
                   onClick: () => {
-                      o(), l(), (0, j.XU)(d.guild_id, d.id);
+                      t(), l(), (0, j.XU)(d.guild_id, d.id);
                   },
                   children: [
-                      null != _ || null != p
+                      null != h || null != p
                           ? (0, a.jsx)(r.Z, {
-                                emojiName: null != i.emoji_id ? (null == _ ? void 0 : _.name) : i.emoji_name,
-                                animated: null != _ && _.animated,
-                                emojiId: null == _ ? void 0 : _.id,
+                                emojiName: null != i.emoji_id ? (null == h ? void 0 : h.name) : i.emoji_name,
+                                animated: null != h && h.animated,
+                                emojiId: null == h ? void 0 : h.id,
                                 autoplay: !0,
                                 className: S.optionEmoji,
                             })
@@ -61,7 +61,7 @@ let k = (e) => {
                               }),
                               (0, a.jsxs)(s.Text, {
                                   variant: "text-xs/normal",
-                                  color: "header-secondary",
+                                  color: "text-default",
                                   children: [
                                       (0, a.jsx)(N, {
                                           className: S.channelTitleIcon,
@@ -84,30 +84,30 @@ let k = (e) => {
     P = (e) => {
         var n;
         let { onClose: i, transitionState: r, guildId: c, isPreview: m } = e,
-            h = (0, t.e7)([N.Z], () => N.Z.getGuild(c)),
+            _ = (0, o.e7)([N.Z], () => N.Z.getGuild(c)),
             {
                 welcomeScreen: j,
                 fetching: x,
                 hasError: g,
-            } = (0, t.cj)([Z.Z], () => ({
-                welcomeScreen: Z.Z.get(c),
-                fetching: Z.Z.isFetching(),
-                hasError: Z.Z.hasError(),
+            } = (0, o.cj)([E.Z], () => ({
+                welcomeScreen: E.Z.get(c),
+                fetching: E.Z.isFetching(),
+                hasError: E.Z.hasError(),
             })),
             C = (0, u.Dt)();
         l.useEffect(() => {
-            null == j && (0, E.RM)(c);
+            null == j && (0, f.RM)(c);
         }, [c, j]),
             l.useEffect(() => {
                 !1 === x && !0 === g && null == j && i();
             }, [x, g, i, j]),
             l.useEffect(() => {
-                j === Z.a && !1 === x && i();
+                j === E.a && !1 === x && i();
             }, [i, j, x]),
             l.useEffect(() => {
                 !0 !== m &&
                     b.default.track(I.rMx.OPEN_MODAL, {
-                        type: f._,
+                        type: Z._,
                         guild_id: c,
                     });
             }, [c, m]);
@@ -133,10 +133,10 @@ let k = (e) => {
             },
             [c, m, j],
         );
-        return null == h
+        return null == _
             ? null
             : null == j
-              ? (0, a.jsx)(o.Modal, {
+              ? (0, a.jsx)(t.Modal, {
                     transitionState: r,
                     "aria-label": T.intl.string(T.t.ZTNur7),
                     title: T.intl.string(T.t.ZTNur7),
@@ -144,7 +144,7 @@ let k = (e) => {
                     actions: [],
                     children: (0, a.jsx)(s.$jN, { type: s.$jN.Type.SPINNING_CIRCLE }),
                 })
-              : (0, a.jsx)(o.Modal, {
+              : (0, a.jsx)(t.Modal, {
                     transitionState: r,
                     "aria-labelledby": C,
                     actions: [
@@ -164,9 +164,9 @@ let k = (e) => {
                                 width: 64,
                                 height: 64,
                                 className: S.guildIcon,
-                                children: (0, a.jsx)(_.Z, {
-                                    size: _.Z.Sizes.LARGER,
-                                    guild: h,
+                                children: (0, a.jsx)(h.Z, {
+                                    size: h.Z.Sizes.LARGER,
+                                    guild: _,
                                     active: !0,
                                     animate: !0,
                                     tabIndex: -1,
@@ -177,14 +177,14 @@ let k = (e) => {
                                 className: S.header,
                                 id: C,
                                 children: T.intl.format(T.t["0aydCN"], {
-                                    guildName: h.name,
+                                    guildName: _.name,
                                     guildNameHook: (e, n) =>
                                         (0, a.jsxs)(
                                             "span",
                                             {
                                                 children: [
                                                     (0, a.jsx)(p.Z, {
-                                                        guild: h,
+                                                        guild: _,
                                                         className: S.headerGuildBadge,
                                                         flowerStarClassName: S.flowerStar,
                                                         tooltipColor: s.aML.Colors.PRIMARY,
@@ -202,7 +202,7 @@ let k = (e) => {
                             null != j.description
                                 ? (0, a.jsx)(s.Text, {
                                       variant: "text-sm/normal",
-                                      color: "header-secondary",
+                                      color: "text-default",
                                       className: S.guildDescription,
                                       children: j.description,
                                   })

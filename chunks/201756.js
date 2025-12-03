@@ -11,8 +11,8 @@ var r = n(54381),
     C = n(430824),
     m = n(496675),
     b = n(588215),
-    p = n(241559),
-    f = n(893966),
+    f = n(241559),
+    p = n(893966),
     h = n(256003),
     g = n(170323),
     j = n(434368),
@@ -73,7 +73,7 @@ let D = l.forwardRef(function (e, t) {
         l,
         { label: i, onFilter: a, isFiltered: s, isSorted: c, className: u } = e,
         C = Z(e, ["label", "onFilter", "isFiltered", "isSorted", "className"]);
-    let m = s ? "header-primary" : "header-secondary";
+    let m = s ? "header-primary" : "text-default";
     return (
         c && (m = "text-brand"),
         (0, r.jsx)("th", {
@@ -131,24 +131,24 @@ function N(e) {
         N = l.useRef(null),
         R = l.useRef(null),
         L = l.useRef(null),
-        P = (0, c.e7)([f.Z], () => f.Z.getSearchStateByGuildId(t), [t], s()),
-        I = (0, c.e7)([m.Z, C.Z], () => m.Z.can(O.Plq.MANAGE_GUILD, C.Z.getGuild(t)), [t]),
+        I = (0, c.e7)([p.Z], () => p.Z.getSearchStateByGuildId(t), [t], s()),
+        P = (0, c.e7)([m.Z, C.Z], () => m.Z.can(O.Plq.MANAGE_GUILD, C.Z.getGuild(t)), [t]),
         { selectedUserIds: V, addUsers: M, clearSelection: E } = (0, h.Z)(t),
         T =
-            P.requireUnusualDmActivity ||
-            P.requireCommunicationDisabled ||
-            P.requireUnusualAccountActivity ||
-            P.requireUsernameQuarantined,
-        k = P.selectedRoleIds.size > 0,
-        A = null != P.selectedJoinDateOption.afterDate,
-        U = P.selectedSort === b.d$.ORDER_BY_GUILD_JOINED_AT_ASC,
-        F = null != P.selectedAccountAgeOption.afterDate,
-        B = P.selectedSort === b.d$.ORDER_BY_USER_ID_ASC || P.selectedSort === b.d$.ORDER_BY_USER_ID_DESC,
-        q = null != P.selectedSourceInviteCode && "" !== P.selectedSourceInviteCode,
-        G = null != P.selectedJoinSourceType,
+            I.requireUnusualDmActivity ||
+            I.requireCommunicationDisabled ||
+            I.requireUnusualAccountActivity ||
+            I.requireUsernameQuarantined,
+        k = I.selectedRoleIds.size > 0,
+        A = null != I.selectedJoinDateOption.afterDate,
+        U = I.selectedSort === b.d$.ORDER_BY_GUILD_JOINED_AT_ASC,
+        F = null != I.selectedAccountAgeOption.afterDate,
+        B = I.selectedSort === b.d$.ORDER_BY_USER_ID_ASC || I.selectedSort === b.d$.ORDER_BY_USER_ID_DESC,
+        q = null != I.selectedSourceInviteCode && "" !== I.selectedSourceInviteCode,
+        G = null != I.selectedJoinSourceType,
         z = q || G,
-        Y = (0, p.xC)(t),
-        W = l.useMemo(() => n.filter((e) => (0, p.rX)(t, Y, e)), [Y, n, t]),
+        Y = (0, f.xC)(t),
+        W = l.useMemo(() => n.filter((e) => (0, f.rX)(t, Y, e)), [Y, n, t]),
         Q = W.length > 0,
         K = 0 === W.filter((e) => !V.has(e)).length,
         J = l.useCallback(() => {
@@ -175,7 +175,7 @@ function N(e) {
                         }),
                     }),
                 (0, r.jsx)(D, { label: H.intl.string(H.t.Es7n9c) }),
-                I
+                P
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(d.yRy, {
@@ -252,7 +252,7 @@ function N(e) {
                               }),
                           ],
                       }),
-                I
+                P
                     ? (0, r.jsx)(d.yRy, {
                           targetElementRef: N,
                           animation: d.yRy.Animation.FADE,
@@ -282,7 +282,7 @@ function N(e) {
                               );
                           },
                       })
-                    : I &&
+                    : P &&
                       (0, r.jsx)(D, {
                           label: H.intl.string(H.t["yn0w1+"]),
                           className: w.smallCol,

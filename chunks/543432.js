@@ -15,7 +15,7 @@ function o(e) {
             }),
             (0, r.jsx)(i.Text, {
                 variant: "text-sm/normal",
-                color: "header-secondary",
+                color: "text-default",
                 className: l.userCountText,
                 children: t,
             }),

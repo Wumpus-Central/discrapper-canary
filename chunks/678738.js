@@ -18,7 +18,7 @@ function f(e) {
             scrollIntoView: _ = !1,
             headingClassName: m,
             headingVariant: h = "text-xs/semibold",
-            headingColor: g = "header-secondary",
+            headingColor: g = "text-default",
         } = e,
         E = (0, u.Dt)(),
         b = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),

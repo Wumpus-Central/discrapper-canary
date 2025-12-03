@@ -88,7 +88,7 @@ function O(e) {
                                         }),
                                     }),
                                     (0, i.jsx)(c.Text, {
-                                        color: "header-secondary",
+                                        color: "text-default",
                                         variant: "text-sm/normal",
                                         children: C,
                                     }),

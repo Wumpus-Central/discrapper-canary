@@ -1,7 +1,7 @@
 n.d(t, { Z: () => m }), n(388685), n(953529);
 var r = n(54381),
-    a = n(473749),
-    i = n(622535),
+    i = n(473749),
+    a = n(622535),
     l = n(481060),
     s = n(783097),
     o = n(66637),
@@ -11,18 +11,18 @@ var r = n(54381),
     p = n(401346);
 let m = function (e) {
     var t, n, m;
-    let { application: h, onSelectApplication: g, showCategory: _ = !1 } = e,
-        f = a.useRef(null),
+    let { application: h, onSelectApplication: g, showCategory: f = !1 } = e,
+        _ = i.useRef(null),
         b = null == (t = h.categories) ? void 0 : t[0],
-        [x, v] = a.useState(!1),
-        C = a.useCallback((e) => {
+        [x, v] = i.useState(!1),
+        C = i.useCallback((e) => {
             e && v(!0);
         }, []),
         j = (0, s.lf)(h),
-        y = a.useCallback(() => {
+        y = i.useCallback(() => {
             g(h.id);
         }, [g, h.id]),
-        I = a.useMemo(
+        I = i.useMemo(
             () =>
                 x
                     ? c.ZP.getApplicationIconURL({
@@ -33,13 +33,13 @@ let m = function (e) {
                     : void 0,
             [x, h],
         ),
-        S = _ && null != b;
-    return (0, r.jsx)(i.$, {
-        innerRef: f,
+        S = f && null != b;
+    return (0, r.jsx)(a.$, {
+        innerRef: _,
         onChange: C,
         active: !x,
         children: (0, r.jsx)("div", {
-            ref: f,
+            ref: _,
             className: p.container,
             children: (0, r.jsxs)(o.Z, {
                 className: p.card,
@@ -113,14 +113,14 @@ let m = function (e) {
                                           S && j
                                               ? (0, r.jsx)(l.Text, {
                                                     variant: "text-xs/medium",
-                                                    color: "text-secondary",
+                                                    color: "text-subtle",
                                                     children: "\u2022",
                                                 })
                                               : null,
                                           j
                                               ? (0, r.jsx)(l.Text, {
                                                     variant: "text-xs/medium",
-                                                    color: "text-secondary",
+                                                    color: "text-subtle",
                                                     children: u.intl.string(u.t["/eVltv"]),
                                                 })
                                               : null,
@@ -130,7 +130,7 @@ let m = function (e) {
                             (0, r.jsx)(l.Text, {
                                 className: p.description,
                                 variant: "text-sm/medium",
-                                color: "header-secondary",
+                                color: "text-default",
                                 lineClamp: S || j ? 2 : 3,
                                 children:
                                     null != (m = null == (n = h.directory_entry) ? void 0 : n.short_description)

@@ -190,7 +190,7 @@ function N() {
             }),
             (0, r.jsx)(c.Text, {
                 variant: "text-sm/medium",
-                color: "text-secondary",
+                color: "text-subtle",
                 children: P.intl.string(Z.default["nBRtt/"]),
             }),
         ],

@@ -36,7 +36,7 @@ function p(e) {
                         children: [
                             (0, r.jsx)(s.Text, {
                                 variant: "text-md/medium",
-                                color: "header-secondary",
+                                color: "text-default",
                                 className: f.text,
                                 children: u.intl.string(u.t.xRHk7f),
                             }),

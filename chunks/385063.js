@@ -33,7 +33,7 @@ function f(e) {
                       {
                           tag: "span",
                           variant: "text-md/medium",
-                          color: "text-primary",
+                          color: "text-strong",
                           children: t.content,
                       },
                       "group-name-".concat(t.id),

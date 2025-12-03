@@ -103,7 +103,7 @@ let b = function () {
             }),
             (0, r.jsx)(s.Text, {
                 className: _.copy,
-                color: "header-secondary",
+                color: "text-default",
                 variant: "text-sm/medium",
                 children: p.intl.format(p.t.kqC5vq, {
                     boostAnyGuildHook: (e, t) => {

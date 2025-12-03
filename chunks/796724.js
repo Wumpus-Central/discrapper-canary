@@ -163,7 +163,7 @@ function w() {
                                                   (0, r.jsx)(d.Heading, {
                                                       className: I.headerText,
                                                       variant: "heading-sm/semibold",
-                                                      color: "text-secondary",
+                                                      color: "text-subtle",
                                                       children: y.intl.string(O.default.rOMEZd),
                                                   }),
                                                   (0, r.jsx)(s.u, {
@@ -195,7 +195,7 @@ function w() {
                                                   (0, r.jsx)(d.Heading, {
                                                       className: I.headerText,
                                                       variant: "heading-sm/semibold",
-                                                      color: "text-secondary",
+                                                      color: "text-subtle",
                                                       children: y.intl.string(O.default.nB5OZ4),
                                                   }),
                                                   (0, r.jsx)(s.u, {
@@ -270,7 +270,7 @@ function w() {
                                                   (0, r.jsx)(d.Heading, {
                                                       className: I.headerText,
                                                       variant: "heading-sm/semibold",
-                                                      color: "text-secondary",
+                                                      color: "text-subtle",
                                                       children: y.intl.string(O.default["K+zMYp"]),
                                                   }),
                                                   (0, r.jsx)(s.u, {

@@ -201,7 +201,7 @@ class eu extends (i = s.PureComponent) {
                       }),
                       (0, l.jsx)(S.Text, {
                           variant: "text-xs/normal",
-                          color: "header-secondary",
+                          color: "text-default",
                           children: ee.intl.string(ee.t.x1SQZb),
                       }),
                   ],

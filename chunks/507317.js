@@ -6,8 +6,8 @@ var r = n(54381),
     s = n(807582),
     o = n(26323),
     c = n(516129),
-    d = n(345861),
-    u = n(768581),
+    u = n(345861),
+    d = n(768581),
     g = n(434404),
     m = n(981631),
     p = n(30513),
@@ -98,7 +98,7 @@ let j = function (e) {
             image: t.homeHeader,
             makeURL: (e) =>
                 null != e
-                    ? u.ZP.getGuildHomeHeaderURL({
+                    ? d.ZP.getGuildHomeHeaderURL({
                           id: t.id,
                           homeHeader: e,
                       })
@@ -136,12 +136,12 @@ let j = function (e) {
                               children: [
                                   (0, r.jsx)(l.Text, {
                                       variant: "text-sm/normal",
-                                      color: "header-secondary",
+                                      color: "text-default",
                                       children: b.intl.string(b.t.Vwintv),
                                   }),
                                   (0, r.jsx)("div", {
                                       className: x.uploadButton,
-                                      children: (0, r.jsx)(d.Z, {
+                                      children: (0, r.jsx)(u.Z, {
                                           onChange: _,
                                           maxFileSizeBytes: h.B,
                                           text: b.intl.string(b.t.yG2pUi),
@@ -182,7 +182,7 @@ let j = function (e) {
                               children: [
                                   (0, r.jsx)(l.Text, {
                                       variant: "text-sm/normal",
-                                      color: "header-secondary",
+                                      color: "text-default",
                                       className: x.bannerDescription,
                                       children: b.intl.string(b.t.Vwintv),
                                   }),

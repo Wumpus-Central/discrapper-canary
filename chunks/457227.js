@@ -44,7 +44,7 @@ let u = (e) => Object.values(e).sort((e, t) => e.order - t.order),
                                             children: [
                                                 (0, r.jsx)(i.Text, {
                                                     variant: "text-sm/medium",
-                                                    color: "text-primary",
+                                                    color: "text-strong",
                                                     children: a,
                                                 }),
                                                 t && (0, r.jsx)("div", { className: c.sectionUnderline }),

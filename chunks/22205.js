@@ -113,7 +113,7 @@ function x(e) {
                   children: [
                       (0, r.jsx)(f.Text, {
                           variant: "text-md/semibold",
-                          color: "text-primary",
+                          color: "text-strong",
                           children: N.intl.string(N.t.mn4eXC),
                       }),
                       (0, r.jsxs)("div", {
@@ -121,12 +121,12 @@ function x(e) {
                           children: [
                               (0, r.jsx)(f.Text, {
                                   variant: "text-sm/normal",
-                                  color: "text-secondary",
+                                  color: "text-subtle",
                                   children: a.message,
                               }),
                               (0, r.jsx)(f.Text, {
                                   variant: "text-xxs/normal",
-                                  color: "text-secondary",
+                                  color: "text-subtle",
                                   children: (0, r.jsx)("code", {
                                       className: P.code,
                                       children: (0, r.jsx)("pre", { children: a.stack }),

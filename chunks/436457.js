@@ -1,9 +1,9 @@
 let a, o;
 n.d(t, { Z: () => N }), n(388685), n(781311), n(35282);
 var s = n(54381),
-    r = n(473749),
+    l = n(473749),
     i = n(755721),
-    l = n(481060),
+    r = n(481060),
     c = n(447543),
     u = n(881052),
     d = n(600164),
@@ -20,15 +20,15 @@ let E =
     "".concat(location.protocol, "//").concat(a).concat(o, "/"));
 function N(e) {
     let { onBack: t, onComplete: n, onConnect: a, isSlideReady: o } = e,
-        [N, x] = r.useState(""),
-        [A, T] = r.useState(!1),
-        [C, j] = r.useState(null),
-        y = r.useRef(null);
-    r.useEffect(() => {
+        [N, x] = l.useState(""),
+        [A, T] = l.useState(!1),
+        [C, j] = l.useState(null),
+        O = l.useRef(null);
+    l.useEffect(() => {
         var e;
-        o && (null == (e = y.current) || e.focus());
+        o && (null == (e = O.current) || e.focus());
     }, [o]);
-    let O = r.useCallback(
+    let v = l.useCallback(
         (e) => {
             e.preventDefault();
             let t = N.trim();
@@ -65,47 +65,47 @@ function N(e) {
     return {
         content: (0, s.jsxs)(s.Fragment, {
             children: [
-                (0, s.jsxs)(l.xBx, {
+                (0, s.jsxs)(r.xBx, {
                     className: b.header,
                     direction: d.Z.Direction.VERTICAL,
                     separator: !1,
                     children: [
-                        (0, s.jsx)(l.Heading, {
+                        (0, s.jsx)(r.Heading, {
                             variant: "heading-xl/bold",
                             color: "header-primary",
                             className: b.title,
                             children: h.intl.string(h.t.riOUtB),
                         }),
-                        (0, s.jsx)(l.Text, {
+                        (0, s.jsx)(r.Text, {
                             variant: "text-md/normal",
-                            color: "header-secondary",
+                            color: "text-default",
                             children: h.intl.string(h.t["7jub2t"]),
                         }),
                     ],
                 }),
-                (0, s.jsxs)(l.hzk, {
+                (0, s.jsxs)(r.hzk, {
                     children: [
                         (0, s.jsx)("form", {
-                            onSubmit: O,
+                            onSubmit: v,
                             className: b.inputForm,
-                            children: (0, s.jsx)(l.oil, {
+                            children: (0, s.jsx)(r.oil, {
                                 label: h.intl.string(h.t.qreV25),
                                 error: C,
                                 value: N,
                                 onChange: x,
-                                inputRef: y,
+                                inputRef: O,
                             }),
                         }),
-                        (0, s.jsx)(l.Text, {
-                            color: "header-secondary",
+                        (0, s.jsx)(r.Text, {
+                            color: "text-default",
                             variant: "text-xs/normal",
                             children: h.intl.format(h.t.lHTZl2, {
                                 examples: "".concat(E).concat("wumpus-friends", ", ").concat("hTKzmak"),
                             }),
                         }),
-                        (0, s.jsx)(l.Text, {
+                        (0, s.jsx)(r.Text, {
                             variant: "text-xs/normal",
-                            color: "header-secondary",
+                            color: "text-default",
                             className: b.connectCTA,
                             children: h.intl.format(h.t["8F/who"], {
                                 onClick: () => {
@@ -119,10 +119,10 @@ function N(e) {
         }),
         footer: (0, s.jsxs)(s.Fragment, {
             children: [
-                (0, s.jsx)(l.Button, {
+                (0, s.jsx)(r.Button, {
                     variant: "primary",
                     text: h.intl.string(h.t.VJlc0S),
-                    onClick: O,
+                    onClick: v,
                     disabled: 0 === N.length,
                     loading: A,
                 }),

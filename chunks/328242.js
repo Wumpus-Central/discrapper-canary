@@ -192,7 +192,7 @@ function T() {
             }),
             (0, r.jsx)(u.Text, {
                 variant: "text-sm/medium",
-                color: "text-secondary",
+                color: "text-subtle",
                 className: Z.emptyBody,
                 children: w.intl.string(O.default.agwSGA),
             }),

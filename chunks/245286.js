@@ -168,12 +168,12 @@ function _() {
         children: [
             (0, r.jsx)(a.Text, {
                 variant: "text-sm/semibold",
-                color: "text-primary",
+                color: "text-strong",
                 children: h.intl.string(h.t.zihbmv),
             }),
             (0, r.jsx)(a.Text, {
                 variant: "text-sm/normal",
-                color: "text-secondary",
+                color: "text-subtle",
                 children: h.intl.string(h.t.XclvsB),
             }),
         ],

@@ -20,7 +20,7 @@ function T() {
             (0, i.jsx)(c.Z, {}),
             (0, i.jsx)(s.Text, {
                 variant: "text-sm/normal",
-                color: "text-secondary",
+                color: "text-subtle",
                 children: S.intl.format(S.t["V+B3FH"], { guideURL: I }),
             }),
         ],

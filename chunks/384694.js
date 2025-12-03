@@ -28,8 +28,8 @@ let x = (e) => ({
                 labelledBy: _,
                 isEmojiAnimated: E,
                 label: O,
-                required: y,
-                errorMessage: C,
+                required: C,
+                errorMessage: y,
             } = e,
             I = (0, i.cj)([c.Z, m.ZP], () =>
                 Object.fromEntries(
@@ -119,7 +119,7 @@ let x = (e) => ({
                                           }),
                                           (0, l.jsx)(a.Text, {
                                               variant: "text-xs/normal",
-                                              color: "text-tertiary",
+                                              color: "text-muted",
                                               className: p.sublabel,
                                               lineClamp: 1,
                                               children: v.intl.format(v.t.WkK72v, { count: N[e.value] }),
@@ -142,8 +142,8 @@ let x = (e) => ({
             }, [S, t, d, n, N]),
             (0, l.jsx)(a.q4e, {
                 label: O,
-                required: y,
-                errorMessage: C,
+                required: C,
+                errorMessage: y,
                 onChange: t,
                 options: S,
                 popoutPosition: "bottom",

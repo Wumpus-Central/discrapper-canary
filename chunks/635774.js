@@ -18,13 +18,13 @@ function l(e) {
             }),
             (0, r.jsx)(i.Text, {
                 className: s.subtitleFinish,
-                color: "header-secondary",
+                color: "text-default",
                 variant: "text-md/medium",
                 children: o.intl.string(o.t.TS1L09),
             }),
             (0, r.jsx)(i.Text, {
                 className: s.promptFinish,
-                color: "header-secondary",
+                color: "text-default",
                 variant: "text-md/medium",
                 children: o.intl.format(o.t.bWE0ZD, {
                     onClick: () => {

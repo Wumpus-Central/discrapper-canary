@@ -9,8 +9,8 @@ var r = n(54381),
     s = n(481060),
     o = n(710344),
     c = n(63063),
-    d = n(999382),
-    u = n(190007),
+    u = n(999382),
+    d = n(190007),
     g = n(926958),
     m = n(964821),
     p = n(981631),
@@ -44,7 +44,7 @@ function x(e) {
 }
 function j(e) {
     let { saveOnClose: t } = e,
-        a = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
+        a = (0, l.e7)([u.Z], () => u.Z.getGuildId()),
         j = (0, l.e7)([g.Z], () => g.Z.getEditedConnections()),
         _ = (0, l.e7)([g.Z], () => g.Z.isSubmitting()),
         v = i.useRef(a);
@@ -54,7 +54,7 @@ function j(e) {
         i.useEffect(() => {
             let { current: e } = v;
             return () => {
-                t && null != e && (0, u.ss)(e);
+                t && null != e && (0, d.ss)(e);
             };
         }, [t, a]);
     let O = i.useCallback(() => {
@@ -115,7 +115,7 @@ function j(e) {
                     return i;
                 })(e, ["id"]);
             });
-            (0, u.l_)(t);
+            (0, d.l_)(t);
         }, []),
         { handleDragStart: N, handleDragReset: E, handleDragComplete: I, draggingId: S } = (0, o.Z)(C, y);
     if (null == a) return null;
@@ -134,7 +134,7 @@ function j(e) {
                         }),
                         (0, r.jsx)(s.Text, {
                             variant: "text-sm/medium",
-                            color: "text-primary",
+                            color: "text-strong",
                             children: h.intl.format(h.t.vqgyJR, {
                                 linkedRolesUrl: c.Z.getArticleURL(p.BhN.CONNECTION_DETAILS_ADMIN),
                             }),
@@ -189,16 +189,16 @@ function j(e) {
     });
 }
 function _() {
-    let e = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
+    let e = (0, l.e7)([u.Z], () => u.Z.getGuildId()),
         t = (0, l.e7)([g.Z], () => g.Z.isSubmitting()),
         n = (0, l.e7)([g.Z], () => g.Z.getErrors());
     if (null == e) return null;
     let i = n.length > 0;
     return (0, r.jsx)(a.Z, {
         onSave: () => {
-            i || (0, u.e$)(e);
+            i || (0, d.e$)(e);
         },
-        onReset: u.Pk,
+        onReset: d.Pk,
         submitting: t,
         onSaveText: h.intl.string(h.t["R3BPH+"]),
         disabled: i,

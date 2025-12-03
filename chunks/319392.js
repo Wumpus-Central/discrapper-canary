@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => x });
 var o = n(54381);
 n(473749);
 var r = n(481060),
@@ -35,12 +35,12 @@ function b() {
                     (0, o.jsx)(r.Text, {
                         tag: "p",
                         variant: "text-md/normal",
-                        color: "header-secondary",
+                        color: "text-default",
                         children: u.intl.string(u.t.M5yEcb),
                     }),
                     (0, o.jsx)(r.Text, {
                         variant: "text-sm/medium",
-                        color: "header-secondary",
+                        color: "text-default",
                         children: (0, o.jsx)(r.Anchor, {
                             href: a.Z.getArticleURL(l.BhN.XBOX_CONNECTION),
                             children: u.intl.string(u.t.hvVgAZ),
@@ -56,7 +56,7 @@ function b() {
         ],
     });
 }
-function g(e) {
+function x(e) {
     let { onClose: t } = e;
     return (0, o.jsx)(c.L, {
         img: (0, o.jsx)("img", {

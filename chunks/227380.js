@@ -6,8 +6,8 @@ var r = n(54381),
     s = n(498607),
     o = n.n(s),
     c = n(913527),
-    d = n.n(c),
-    u = n(442837),
+    u = n.n(c),
+    d = n(442837),
     g = n(692547),
     m = n(755721),
     p = n(481060),
@@ -73,40 +73,40 @@ let N = (e) => {
             failingDescription: o,
         } = e,
         c = t,
-        d = null,
-        u = null;
+        u = null,
+        d = null;
     return (
         a
-            ? ((d = (0, r.jsx)(p.Mgn, {
+            ? ((u = (0, r.jsx)(p.Mgn, {
                   size: "custom",
                   color: g.Z.unsafe_rawColors.YELLOW_300.css,
                   width: 20,
                   height: 20,
               })),
-              (u = null != s ? s : i))
+              (d = null != s ? s : i))
             : l
-              ? ((d = (0, r.jsx)(m.$q, {
+              ? ((u = (0, r.jsx)(m.$q, {
                     readOnly: !0,
                     shape: m.zV.ROUND,
                     size: 20,
                     type: m.M0.INVERTED,
                     value: !0,
                 })),
-                (u = i))
-              : ((d = (0, r.jsx)(p.k$p, {
+                (d = i))
+              : ((u = (0, r.jsx)(p.k$p, {
                     size: "custom",
                     color: g.Z.unsafe_rawColors.RED_400.css,
                     width: 20,
                     height: 20,
                 })),
                 (c = null != n ? n : t),
-                (u = null != o ? o : i)),
+                (d = null != o ? o : i)),
         (0, r.jsxs)("div", {
             className: O.checklistItem,
             children: [
                 (0, r.jsx)("div", {
                     className: O.checklistIcon,
-                    children: d,
+                    children: u,
                 }),
                 (0, r.jsxs)("div", {
                     className: O.checklistText,
@@ -118,7 +118,7 @@ let N = (e) => {
                         (0, r.jsx)(p.Text, {
                             color: "text-muted",
                             variant: "text-sm/normal",
-                            children: u,
+                            children: d,
                         }),
                     ],
                 }),
@@ -144,11 +144,11 @@ function E(e, t) {
 }
 let I = (e) => {
     let { guild: t, guildId: l, className: s, headerContent: o, failedItemsOnly: c = !1 } = e,
-        [g, I] = (0, u.Wu)([j.ZP], () => [j.ZP.getDiscoveryChecklist(l), j.ZP.isLoading()], [l]),
+        [g, I] = (0, d.Wu)([j.ZP], () => [j.ZP.getDiscoveryChecklist(l), j.ZP.isLoading()], [l]),
         { nsfwProperties: S } = null != g ? g : {},
         T = null == t ? void 0 : t.features.has(_.GuildFeatures.PARTNERED),
         P = null == S ? void 0 : S.channels_banned_keywords,
-        w = (0, u.e7)(
+        w = (0, d.e7)(
             [f.ZP],
             () => {
                 var e, n, r;
@@ -179,7 +179,7 @@ let I = (e) => {
                 (0, r.jsx)(p.Heading, {
                     className: O.loadingText,
                     variant: "heading-md/semibold",
-                    color: "header-secondary",
+                    color: "text-default",
                     children: v.intl.string(v.t.e1gm0f),
                 }),
                 (0, r.jsx)(p.$jN, { className: O.__invalid_spinner }),
@@ -214,7 +214,7 @@ let I = (e) => {
                 }),
                 failingDescription: v.intl.formatToPlainString(v.t.jYwM1Y, {
                     minimumGuildAge: Math.ceil(g.minimumGuildAge / 7),
-                    passDate: d()(b.default.extractTimestamp(l)).add(g.minimumGuildAge, "days").format("LL"),
+                    passDate: u()(b.default.extractTimestamp(l)).add(g.minimumGuildAge, "days").format("LL"),
                 }),
                 checked: null == g ? void 0 : g.age,
             },

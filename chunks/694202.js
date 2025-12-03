@@ -10,12 +10,12 @@ let s = () =>
         children: [
             (0, r.jsx)(i.Text, {
                 variant: "text-xs/bold",
-                color: "text-primary",
+                color: "text-strong",
                 children: a.intl.string(a.t.md9HmB),
             }),
             (0, r.jsx)(i.Text, {
                 variant: "text-xs/medium",
-                color: "text-tertiary",
+                color: "text-muted",
                 children: a.intl.string(a.t.fiq8O5),
             }),
         ],

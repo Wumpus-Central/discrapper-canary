@@ -184,7 +184,7 @@ let C = (e) => {
                                     }),
                                     (0, r.jsx)(d.Heading, {
                                         variant: "heading-sm/medium",
-                                        color: "header-secondary",
+                                        color: "text-default",
                                         children: M(),
                                     }),
                                 ],

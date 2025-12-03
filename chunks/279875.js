@@ -1,4 +1,4 @@
-e.d(n, { GuildSubscriptionSelectionModal: () => p }), e(388685), e(290780), e(539854);
+e.d(n, { GuildSubscriptionSelectionModal: () => x }), e(388685), e(290780), e(539854);
 var i = e(54381),
     l = e(473749),
     r = e(793030),
@@ -8,10 +8,10 @@ var i = e(54381),
     o = e(270144),
     d = e(388032),
     c = e(250117);
-function p(t) {
-    let { transitionState: n, onClose: e, sku: p, onSelect: x, currentGuildId: h } = t,
+function x(t) {
+    let { transitionState: n, onClose: e, sku: x, onSelect: p, currentGuildId: h } = t,
         [g, f] = l.useState(),
-        { guilds: j, isFetching: v } = (0, o.CR)(p.applicationId, p.id, !0),
+        { guilds: j, isFetching: v } = (0, o.CR)(x.applicationId, x.id, !0),
         I = l.useMemo(() => {
             if (!v && null != h)
                 return (
@@ -51,7 +51,7 @@ function p(t) {
                 text: d.intl.string(d.t["cY+Oob"]),
                 disabled: null == g,
                 onClick: function () {
-                    null != g && (x(g), e());
+                    null != g && (p(g), e());
                 },
             },
         ],
@@ -87,7 +87,7 @@ function p(t) {
                                 e === h &&
                                     (0, i.jsx)(s.Text, {
                                         variant: "text-xs/normal",
-                                        color: "header-secondary",
+                                        color: "text-default",
                                         children: d.intl.string(d.t.RjtuAI),
                                     }),
                             ],

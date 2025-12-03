@@ -220,7 +220,7 @@ function M(e) {
                         children: (0, r.jsx)(c.Text, {
                             className: C.marginBottom8,
                             variant: "eyebrow",
-                            color: "header-secondary",
+                            color: "text-default",
                             children: n,
                         }),
                     },
@@ -288,7 +288,7 @@ let k = () => {
                       (0, r.jsx)(c.Text, {
                           className: C.marginBottom8,
                           variant: "eyebrow",
-                          color: "header-secondary",
+                          color: "text-default",
                           children: a,
                       }),
                       (0, r.jsx)("div", {

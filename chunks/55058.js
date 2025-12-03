@@ -105,7 +105,7 @@ let b = function (e) {
                     children: [
                         (0, r.jsx)(s.Heading, {
                             variant: "heading-md/semibold",
-                            color: "text-primary",
+                            color: "text-strong",
                             children: f.intl.format(f.t["3yZP0G"], { percent: m.discount.amount }),
                         }),
                         (0, r.jsx)(s.Text, {

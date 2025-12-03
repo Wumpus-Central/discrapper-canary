@@ -83,7 +83,7 @@ let g = [f.OV, f.EE, f.Af, f.U9, f.wO, f.f, f.n8, f.v1, f.pQ],
                                             }),
                                             (0, r.jsx)(o.Text, {
                                                 variant: "text-xs/normal",
-                                                color: "text-secondary",
+                                                color: "text-subtle",
                                                 children: _.intl.string(_.t["5HiF2i"]),
                                             }),
                                         ],

@@ -6,8 +6,8 @@ var i = n(793030),
     l = n(755721),
     a = n(481060),
     s = n(678558),
-    c = n(343649),
-    u = n(430824),
+    u = n(343649),
+    c = n(430824),
     d = n(63063),
     p = n(317169),
     f = n(639660),
@@ -19,7 +19,7 @@ var i = n(793030),
     b = n(741872);
 function h(e) {
     let { guildId: t } = e,
-        n = (0, o.e7)([u.Z], () => u.Z.getGuild(t)),
+        n = (0, o.e7)([c.Z], () => c.Z.getGuild(t)),
         { available: h, spent: j, total: C } = (0, p.Z)(t);
     if (null != n)
         return (0, r.jsxs)("div", {
@@ -30,7 +30,7 @@ function h(e) {
                     children: [
                         (0, r.jsx)(i.xvT, {
                             variant: "eyebrow",
-                            color: "text-secondary",
+                            color: "text-subtle",
                             children: _.intl.string(x.default.hjvcLO),
                         }),
                         (0, r.jsx)(i.xvT, {
@@ -68,7 +68,7 @@ function h(e) {
                     },
                     color: l.Tt.CUSTOM,
                     size: l.Ph.LARGE,
-                    intent: c.P.NONE,
+                    intent: u.P.NONE,
                     icon: (0, r.jsx)(a.Ucv, {
                         className: b.boostButtonIcon,
                         size: "sm",

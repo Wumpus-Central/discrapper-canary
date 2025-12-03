@@ -1,8 +1,8 @@
 n.d(t, { Z: () => ee }), n(539854), n(388685), n(953529);
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     s = n(913527),
     o = n.n(s),
     c = n(205120),
@@ -172,7 +172,7 @@ let Y = (e) => {
     },
     ee = (e) => {
         let t,
-            { hasAnyThread: a, hasActiveThreads: s, channel: x } = e,
+            { hasAnyThread: l, hasActiveThreads: s, channel: x } = e,
             { onboardingExpanded: U } = (0, F.xH)((e) => {
                 let { onboardingExpanded: t } = e;
                 return { onboardingExpanded: t };
@@ -194,13 +194,13 @@ let Y = (e) => {
                     setVisible: t,
                 };
             })(),
-            ea = (0, g.Yzy)(U, {
+            el = (0, g.Yzy)(U, {
                 from: { maxHeight: 0 },
                 enter: { maxHeight: 500 },
                 leave: { maxHeight: 0 },
                 config: { duration: 200 },
             }),
-            el = i.useCallback((e) => {
+            ea = i.useCallback((e) => {
                 var t;
                 null == (t = e.clickHandler) || t.call(e);
             }, []),
@@ -211,11 +211,11 @@ let Y = (e) => {
                 isHidden: ed,
                 isAllDone: eu,
             } = ((e) => {
-                let { guild: t, channel: a, hasAnyThread: l, handleHide: s } = e,
+                let { guild: t, channel: l, hasAnyThread: a, handleHide: s } = e,
                     [c, d] = i.useState(!1),
-                    h = (0, A.c)(a.id),
-                    x = (0, m.e7)([I.Z], () => I.Z.hasHidden(a.id)),
-                    p = (function (e, t, a, l) {
+                    h = (0, A.c)(l.id),
+                    x = (0, m.e7)([I.Z], () => I.Z.hasHidden(l.id)),
+                    p = (function (e, t, l, a) {
                         let s = null == e ? void 0 : e.id,
                             o = (0, m.e7)([T.Z], () => (null != s ? T.Z.getSortedRoles(s) : void 0));
                         return i.useMemo(() => {
@@ -228,13 +228,13 @@ let Y = (e) => {
                                     c ||
                                     null == o ||
                                     s.addStep(
-                                        (function (e, t, i, a) {
-                                            let l = (0, b.Z)(i)
+                                        (function (e, t, i, l) {
+                                            let a = (0, b.Z)(i)
                                                     ? u.$e(H.Plq.VIEW_CHANNEL, H.Plq.SEND_MESSAGES)
                                                     : H.Plq.SEND_MESSAGES,
                                                 s =
                                                     null != e
-                                                        ? (0, R.E)(t, i, l).filter(
+                                                        ? (0, R.E)(t, i, a).filter(
                                                               (e) =>
                                                                   i.permissionOverwrites.hasOwnProperty(e.id) ||
                                                                   (0, y.fI)(e),
@@ -261,14 +261,14 @@ let Y = (e) => {
                                                                     .e("78704")
                                                                     .then(n.bind(n, 560602));
                                                                 return (
-                                                                    a(!0),
+                                                                    l(!0),
                                                                     (n) =>
                                                                         (0, r.jsx)(
                                                                             t,
                                                                             V(G({}, n), {
                                                                                 channel: i,
                                                                                 guild: e,
-                                                                                permission: l,
+                                                                                permission: a,
                                                                                 currentSelectedRoles: s,
                                                                             }),
                                                                         )
@@ -277,12 +277,12 @@ let Y = (e) => {
                                                             {
                                                                 modalKey: "SEND_MESSAGE_ROLE_PERMISSION_FIX_MODAL_KEY",
                                                                 onCloseRequest: H.VqG,
-                                                                onCloseCallback: () => a(!1),
+                                                                onCloseCallback: () => l(!1),
                                                             },
                                                         );
                                                 },
                                             };
-                                        })(e, o, t, l),
+                                        })(e, o, t, a),
                                     ),
                                 c ||
                                     s.addStep(
@@ -363,13 +363,13 @@ let Y = (e) => {
                                         clickHandler: () => {
                                             K(D.ZI.CREATE_POST), N.S.dispatch(H.CkL.FOCUS_COMPOSER_TITLE);
                                         },
-                                        isDone: a,
+                                        isDone: l,
                                     }),
                                 ),
                                 s
                             );
-                        }, [t, e, o, a, l]);
-                    })(t, a, l, d),
+                        }, [t, e, o, l, a]);
+                    })(t, l, a, d),
                     j = p.isAllDone(),
                     v =
                         h ||
@@ -377,7 +377,7 @@ let Y = (e) => {
                         !((e) => {
                             let t = P.default.extractTimestamp(e);
                             return o()().isBefore(o()(t).add(o().duration(15, "days")));
-                        })(a.id),
+                        })(l.id),
                     _ = i.useRef(0);
                 return (
                     i.useEffect(
@@ -401,7 +401,7 @@ let Y = (e) => {
             })({
                 guild: et,
                 channel: x,
-                hasAnyThread: a,
+                hasAnyThread: l,
                 handleHide: es,
             }),
             em = !ed && !ec,
@@ -412,14 +412,14 @@ let Y = (e) => {
             eu && em && es();
         }),
         ((e) => {
-            let { isAllDone: t, isVisible: n, canManageChannel: r, guildId: a, channel: l } = e,
-                s = (0, m.e7)([T.Z], () => (null != a ? T.Z.partitionVersion(a) : void 0)),
+            let { isAllDone: t, isVisible: n, canManageChannel: r, guildId: l, channel: a } = e,
+                s = (0, m.e7)([T.Z], () => (null != l ? T.Z.partitionVersion(l) : void 0)),
                 o = i.useCallback(() => {
                     N.S.dispatch(H.CkL.REMEASURE_TARGET);
                 }, []);
             i.useEffect(() => {
                 o();
-            }, [o, t, n, r, s, l.id, l.permissionOverwrites]);
+            }, [o, t, n, r, s, a.id, a.permissionOverwrites]);
         })({
             isAllDone: eu,
             isVisible: em,
@@ -431,7 +431,7 @@ let Y = (e) => {
             ec || ei(!ed);
         }, [ec, ei, ed]),
         (0, p.ZP)(() => {
-            (a && em) || ef(!0);
+            (l && em) || ef(!0);
         }),
         null == et)
             ? null
@@ -445,7 +445,7 @@ let Y = (e) => {
                     })
               : em && en
                 ? eg
-                    ? a
+                    ? l
                         ? null
                         : (0, r.jsx)(j.Z, { channel: x })
                     : (0, r.jsx)(r.Fragment, {
@@ -493,7 +493,7 @@ let Y = (e) => {
                                                         ],
                                                     }),
                                                 }),
-                                                ea((e, t) =>
+                                                el((e, t) =>
                                                     t
                                                         ? (0, r.jsx)(c.animated.div, {
                                                               style: e,
@@ -506,8 +506,8 @@ let Y = (e) => {
                                                                           {
                                                                               tag: "li",
                                                                               "aria-label": e.name,
-                                                                              onClick: () => el(e),
-                                                                              className: l()(B.stepContainer, {
+                                                                              onClick: () => ea(e),
+                                                                              className: a()(B.stepContainer, {
                                                                                   [B.completed]: e.isDone,
                                                                               }),
                                                                               children: [
@@ -533,7 +533,7 @@ let Y = (e) => {
                                                                                               disableColor: !0,
                                                                                               icon: (0, g.GSL)(S.Z),
                                                                                               style: W,
-                                                                                              className: l()(
+                                                                                              className: a()(
                                                                                                   B.stepStatus,
                                                                                                   B.completed,
                                                                                               ),
@@ -544,14 +544,14 @@ let Y = (e) => {
                                                                                           (0, r.jsx)(g.Text, {
                                                                                               variant: "text-md/medium",
                                                                                               color: e.isDone
-                                                                                                  ? "header-secondary"
+                                                                                                  ? "text-default"
                                                                                                   : "header-primary",
                                                                                               className: B.stepName,
                                                                                               children: e.name,
                                                                                           }),
                                                                                           (0, r.jsx)(g.Text, {
                                                                                               variant: "text-sm/normal",
-                                                                                              color: "header-secondary",
+                                                                                              color: "text-default",
                                                                                               className:
                                                                                                   B.stepDescription,
                                                                                               children: e.description,
@@ -580,7 +580,7 @@ let Y = (e) => {
                                   : null,
                           ),
                       })
-                : a
+                : l
                   ? null
                   : (0, r.jsx)(L.Z, {
                         channelName: x.name,

@@ -118,7 +118,7 @@ class C extends i.PureComponent {
             { isMicTesting: n, isDetectingInput: i } = this.state;
         return (0, r.jsx)(p.Text, {
             variant: "text-xs/normal",
-            color: "text-secondary",
+            color: "text-subtle",
             className: v.micTestCaption,
             children: n ? (i ? e : t) : null,
         });

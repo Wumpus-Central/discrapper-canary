@@ -1,8 +1,8 @@
 n.d(t, { Z: () => Z }), n(781311), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     o = n(624238),
     c = n(481060),
     s = n(313201),
@@ -67,8 +67,8 @@ function E(e, t) {
     );
 }
 function T(e) {
-    let { index: t, widgetType: n, game: i, children: a } = e,
-        { manageFocusOnReorder: l } = (0, h.C)();
+    let { index: t, widgetType: n, game: i, children: l } = e,
+        { manageFocusOnReorder: a } = (0, h.C)();
     return (0, r.jsx)(b.yW, {
         index: t,
         itemId: i.applicationId,
@@ -80,17 +80,17 @@ function T(e) {
         },
         "aria-label": P.intl.formatToPlainString(P.t["0dR3gw"], { positionNumber: t + 1 }),
         onReorder: (e, t) => (0, m.Eq)(n, e, t),
-        onEnd: () => l(i.applicationId),
+        onEnd: () => a(i.applicationId),
         className: w.dropTarget,
         dropBeforeClassName: w.dropIndicatorBefore,
         dropAfterClassName: w.dropIndicatorAfter,
         draggingClassName: w.isDragging,
-        children: a,
+        children: l,
     });
 }
 function C(e) {
     var { applicationId: t, userId: n, gameName: i } = e,
-        a = (function (e, t) {
+        l = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -99,32 +99,32 @@ function C(e) {
                     var n,
                         r,
                         i = {},
-                        a = Object.keys(e);
-                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < a.length; r++)
-                    (n = a[r]),
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
         })(e, ["applicationId", "userId", "gameName"]);
-    let l = (0, d.Z)({
+    let a = (0, d.Z)({
         location: "UserProfileWidgetGameDetailsCard",
         applicationId: t,
         source: u.m1.UserProfile,
         sourceUserId: n,
         trackEntryPointImpression: !0,
     });
-    return null == l
-        ? (0, r.jsx)(c.Heading, E(S({}, a), { children: i }))
+    return null == a
+        ? (0, r.jsx)(c.Heading, E(S({}, l), { children: i }))
         : (0, r.jsx)(
               c.Heading,
-              E(S({}, a), {
+              E(S({}, l), {
                   children: (0, r.jsx)(c.P3F, {
-                      onClick: l,
+                      onClick: a,
                       className: w.clickableText,
                       children: i,
                   }),
@@ -132,9 +132,9 @@ function C(e) {
           );
 }
 function D(e) {
-    let { user: t, guildId: n, channelId: i, id: a } = e;
+    let { user: t, guildId: n, channelId: i, id: l } = e;
     return (0, r.jsx)(c.nn4, {
-        id: a,
+        id: l,
         children: P.intl.format(P.t.TM0XDY, { name: g.ZP.getName(n, i, t) }),
     });
 }
@@ -142,19 +142,19 @@ function k(e) {
     let { text: t, className: n } = e;
     return (0, r.jsx)(c.Text, {
         variant: "text-sm/normal",
-        color: "text-tertiary",
+        color: "text-muted",
         className: n,
         children: t,
     });
 }
 function N(e) {
-    let { text: t, user: n, guildId: i, channelId: a } = e,
-        l = (0, s.Dt)();
+    let { text: t, user: n, guildId: i, channelId: l } = e,
+        a = (0, s.Dt)();
     return null == t || "" === t.trim()
         ? null
         : (0, r.jsxs)("div", {
               role: "group",
-              "aria-labelledby": l,
+              "aria-labelledby": a,
               children: [
                   (0, r.jsx)(c.PEf, {
                       size: "xxs",
@@ -164,15 +164,15 @@ function N(e) {
                   (0, r.jsx)(D, {
                       user: n,
                       guildId: i,
-                      channelId: a,
-                      id: l,
+                      channelId: l,
+                      id: a,
                   }),
                   (0, r.jsx)(k, { text: t }),
               ],
           });
 }
 function A(e) {
-    let { text: t, user: n, guildId: a, channelId: u, widgetType: d, applicationId: f } = e,
+    let { text: t, user: n, guildId: l, channelId: u, widgetType: d, applicationId: f } = e,
         g = (0, s.Dt)(),
         b = (0, s.Dt)(),
         { trackUserProfileEditAction: h } = (0, p.KZ)(),
@@ -252,13 +252,13 @@ function A(e) {
                       }),
                       (0, r.jsx)(D, {
                           user: n,
-                          guildId: a,
+                          guildId: l,
                           channelId: u,
                           id: b,
                       }),
                       (0, r.jsx)(k, {
                           text: null != t ? t : I,
-                          className: l()(w.editableCommentText, !S && w.placeholder),
+                          className: a()(w.editableCommentText, !S && w.placeholder),
                       }),
                       (0, r.jsx)(c.P3F, {
                           innerRef: x,
@@ -276,7 +276,7 @@ function Z(e) {
     let {
             user: t,
             guildId: n,
-            channelId: a,
+            channelId: l,
             game: o,
             widgetType: s,
             disableInteraction: u = !1,
@@ -313,7 +313,7 @@ function Z(e) {
             }),
         Y = () =>
             (0, r.jsxs)("div", {
-                className: l()(w.card, P),
+                className: a()(w.card, P),
                 children: [
                     z
                         ? (0, r.jsxs)("div", {
@@ -349,7 +349,7 @@ function Z(e) {
                                       text: k,
                                       user: t,
                                       guildId: n,
-                                      channelId: a,
+                                      channelId: l,
                                       widgetType: s,
                                       applicationId: D,
                                   })
@@ -357,7 +357,7 @@ function Z(e) {
                                       text: k,
                                       user: t,
                                       guildId: n,
-                                      channelId: a,
+                                      channelId: l,
                                   }),
                             (0, r.jsx)(O.Z, {
                                 tags: Z,
@@ -372,7 +372,7 @@ function Z(e) {
                                     className: w.socialProof,
                                     applicationId: D,
                                     guildId: n,
-                                    channelId: a,
+                                    channelId: l,
                                 }),
                         ],
                     }),

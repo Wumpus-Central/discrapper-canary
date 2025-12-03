@@ -363,7 +363,7 @@ let X = (e) => {
                         children: [
                             (0, r.jsx)(d.Text, {
                                 variant: "text-sm/normal",
-                                color: "text-secondary",
+                                color: "text-subtle",
                                 className: j.guildTitle,
                                 children: B ? x.intl.string(x.t.kx6pEG) : x.intl.string(x.t.pDE7Gb),
                             }),

@@ -1,18 +1,18 @@
-i.d(e, { Z: () => c });
-var n = i(54381),
-    r = i(793030),
-    l = i(824480),
-    a = i(198358),
-    s = i(140939),
-    d = i(388032);
+n.d(t, { Z: () => c });
+var i = n(54381),
+    s = n(793030),
+    r = n(824480),
+    l = n(198358),
+    o = n(140939),
+    a = n(388032);
 function c() {
     return (
-        (0, l.d)(),
-        (0, n.jsx)(a.Z, {
-            children: (0, n.jsx)(r.xvT, {
+        (0, r.d)(),
+        (0, i.jsx)(l.Z, {
+            children: (0, i.jsx)(s.xvT, {
                 variant: "display-lg",
-                color: "text-primary",
-                children: d.intl.string(s.default.wnuxp5),
+                color: "text-strong",
+                children: a.intl.string(o.default.wnuxp5),
             }),
         })
     );

@@ -1,20 +1,20 @@
-i.d(e, { default: () => d });
-var a = i(54381);
-i(473749);
-var r = i(793030),
-    n = i(481060),
-    s = i(313201),
-    l = i(388032),
-    o = i(758590),
-    c = i(365627);
+e.d(i, { default: () => d });
+var a = e(54381);
+e(473749);
+var n = e(793030),
+    r = e(481060),
+    s = e(313201),
+    l = e(388032),
+    o = e(758590),
+    c = e(365627);
 function d(t) {
-    let { transitionState: e, onClose: i, storeListing: d, subscription: u } = t,
+    let { transitionState: i, onClose: e, storeListing: d, subscription: u } = t,
         p = (0, s.Dt)();
-    return (0, a.jsx)(r.ExpressiveModal, {
+    return (0, a.jsx)(n.ExpressiveModal, {
         actions: [
             {
                 variant: "secondary",
-                onClick: i,
+                onClick: e,
                 text: l.intl.string(l.t["JtWl+a"]),
             },
         ],
@@ -23,13 +23,13 @@ function d(t) {
             type: "image",
             src: c,
         },
-        onClose: i,
-        transitionState: e,
+        onClose: e,
+        transitionState: i,
         title: l.intl.formatToPlainString(l.t.wLFT6z, { tier: d.summary }),
-        children: (0, a.jsx)(n.Text, {
+        children: (0, a.jsx)(r.Text, {
             className: o.subtitle,
             variant: "text-md/medium",
-            color: "header-secondary",
+            color: "text-default",
             children: l.intl.format(l.t.OsAK9h, { timestamp: null == u ? void 0 : u.currentPeriodEnd }),
         }),
     });

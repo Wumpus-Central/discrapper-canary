@@ -42,7 +42,7 @@ function w(e) {
             children: [
                 (0, r.jsx)(d.Heading, {
                     variant: "text-sm/medium",
-                    color: "text-secondary",
+                    color: "text-subtle",
                     className: N.messagesGroupHeader,
                     children: (0, a.capitalize)(P.intl.string(E.Vv[t]).toLowerCase()),
                 }),

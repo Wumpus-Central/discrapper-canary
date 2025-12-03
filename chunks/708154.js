@@ -38,12 +38,12 @@ function m() {
                         children: [
                             (0, r.jsx)(o.Text, {
                                 variant: "text-md/semibold",
-                                color: "text-primary",
+                                color: "text-strong",
                                 children: f.intl.string(d.default.XP4jzJ),
                             }),
                             (0, r.jsx)(o.Text, {
                                 variant: "text-sm/medium",
-                                color: "text-tertiary",
+                                color: "text-muted",
                                 children: f.intl.string(d.default.MJYvmG),
                             }),
                         ],

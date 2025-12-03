@@ -118,13 +118,13 @@ let _ = function (e) {
                             (0, r.jsxs)(l.Text, {
                                 className: m.text,
                                 variant: "text-sm/medium",
-                                color: "header-secondary",
+                                color: "text-default",
                                 children: [h.intl.string(h.t.O1k9XX), " "],
                             }),
                             (0, r.jsx)(l.Text, {
                                 className: m.text,
                                 variant: "text-sm/medium",
-                                color: "header-secondary",
+                                color: "text-default",
                                 children: h.intl.string(h.t.FV5dvh),
                             }),
                         ],

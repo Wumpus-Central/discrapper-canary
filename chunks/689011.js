@@ -103,7 +103,7 @@ function g(e) {
             (0, r.jsx)(i.Text, {
                 className: f.confirmationSubtitle,
                 variant: "text-md/medium",
-                color: "header-secondary",
+                color: "text-default",
                 children: d.intl.format(d.t.OsAK9h, { timestamp: null == a ? void 0 : a.currentPeriodEnd }),
             }),
             (0, r.jsx)(l.O3, {

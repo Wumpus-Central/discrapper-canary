@@ -1,6 +1,6 @@
 n.d(t, {
-    U: () => O,
-    default: () => x,
+    U: () => x,
+    default: () => O,
 }),
     n(388685);
 var l = n(54381),
@@ -15,10 +15,10 @@ var l = n(54381),
     p = n(680056),
     m = n(651587),
     f = n(870731),
-    y = n(52436),
-    b = n(965762),
-    h = n(388032),
-    v = n(862220);
+    b = n(52436),
+    y = n(965762),
+    v = n(388032),
+    h = n(862220);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -62,14 +62,14 @@ function g(e, t) {
         e
     );
 }
-let O = r.createContext({
+let x = r.createContext({
     selectedClipIds: new Set(),
     toggleClipSelection: () => {},
     clearSelection: () => {},
     isMultiSelectMode: !1,
 });
-function x(e) {
-    var { channelId: t, onClose: x, onClipClick: C } = e,
+function O(e) {
+    var { channelId: t, onClose: O, onClipClick: C } = e,
         w = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -93,10 +93,10 @@ function x(e) {
         })(e, ["channelId", "onClose", "onClipClick"]);
     let { analyticsLocations: P } = (0, u.ZP)(o.Z.CLIPS_GALLERY),
         [k, I] = r.useState(new Set()),
-        { clipsByGame: S, filteredClips: E, favoriteClips: N, allClips: M } = (0, b.n)(),
+        { clipsByGame: S, filteredClips: E, favoriteClips: N, allClips: M } = (0, y.n)(),
         { onShareClick: D } = (0, p.Z)(t),
         Z = (0, i.e7)([d.Z], () => d.Z.getExportingClipIds().length > 0),
-        L = (0, y.f)((e) => e.selectedGameId),
+        L = (0, b.f)((e) => e.selectedGameId),
         H = r.useMemo(() => {
             var e;
             return null == L || "favorites" === L
@@ -112,10 +112,10 @@ function x(e) {
         A = r.useMemo(() => {
             var e;
             return "favorites" === L
-                ? h.intl.string(h.t["9rlCk1"])
+                ? v.intl.string(v.t["9rlCk1"])
                 : null != (e = null == H ? void 0 : H.name)
                   ? e
-                  : h.intl.string(h.t.dPVrEv);
+                  : v.intl.string(v.t.dPVrEv);
         }, [L, H]),
         R = r.useCallback((e) => {
             I((t) => {
@@ -161,13 +161,13 @@ function x(e) {
         );
     return (0, l.jsx)(u.Gt, {
         value: P,
-        children: (0, l.jsx)(O.Provider, {
+        children: (0, l.jsx)(x.Provider, {
             value: B,
             children: (0, l.jsx)(
                 s.A,
-                g(j({ onClose: x }, w), {
+                g(j({ onClose: O }, w), {
                     children: (0, l.jsxs)("div", {
-                        className: v.modalContainer,
+                        className: h.modalContainer,
                         children: [
                             (0, l.jsx)(f.Z, {
                                 clipsByGame: S,
@@ -176,51 +176,51 @@ function x(e) {
                                 allClips: M,
                             }),
                             (0, l.jsxs)("div", {
-                                className: v.content,
+                                className: h.content,
                                 children: [
                                     (0, l.jsxs)("div", {
-                                        className: v.contentHeader,
+                                        className: h.contentHeader,
                                         children: [
                                             (0, l.jsx)(c.Heading, {
                                                 variant: "heading-md/medium",
-                                                color: "header-secondary",
+                                                color: "text-default",
                                                 children: A,
                                             }),
                                             (0, l.jsxs)("div", {
-                                                className: v.headerActions,
+                                                className: h.headerActions,
                                                 children: [
                                                     _ &&
                                                         (0, l.jsxs)(l.Fragment, {
                                                             children: [
                                                                 (0, l.jsx)(a.u, {
-                                                                    text: h.intl.string(h.t.RDE0Sc),
+                                                                    text: v.intl.string(v.t.RDE0Sc),
                                                                     children: (0, l.jsx)(c.hU, {
                                                                         onClick: z,
                                                                         icon: c.aAc,
                                                                         size: "sm",
                                                                         variant: "icon-only",
-                                                                        "aria-label": h.intl.string(h.t.RDE0Sc),
+                                                                        "aria-label": v.intl.string(v.t.RDE0Sc),
                                                                         loading: Z,
                                                                     }),
                                                                 }),
                                                                 (0, l.jsx)(a.u, {
-                                                                    text: h.intl.string(h.t.oyYWHE),
+                                                                    text: v.intl.string(v.t.oyYWHE),
                                                                     children: (0, l.jsx)(c.hU, {
                                                                         onClick: U,
                                                                         icon: c.XHJ,
                                                                         size: "sm",
                                                                         variant: "icon-only",
-                                                                        "aria-label": h.intl.string(h.t.oyYWHE),
+                                                                        "aria-label": v.intl.string(v.t.oyYWHE),
                                                                     }),
                                                                 }),
                                                             ],
                                                         }),
                                                     (0, l.jsx)(c.hU, {
-                                                        onClick: x,
+                                                        onClick: O,
                                                         icon: c.Uz9,
                                                         size: "sm",
                                                         variant: "icon-only",
-                                                        "aria-label": h.intl.string(h.t.cpT0Cq),
+                                                        "aria-label": v.intl.string(v.t.cpT0Cq),
                                                     }),
                                                 ],
                                             }),

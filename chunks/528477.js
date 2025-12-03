@@ -30,19 +30,19 @@ let T = (e) => {
             perkAvailableToUser: N,
             isSupportedPrivateBrowsingPerkPlatform: O,
             isWeb: P,
-            connectionStatus: w,
+            connectionStatus: I,
         } = (0, v.xf)(),
-        { enabled: I } = g.H.useConfig({ location: "private_browsing_perk_settings_page" }),
+        { enabled: w } = g.H.useConfig({ location: "private_browsing_perk_settings_page" }),
         k = (0, l.useCallback)(() => {
             (0, c.Z)(j.Z5c.NITRO_HOME), t();
         }, [t]),
         R = (0, l.useCallback)(() => {
             (0, p.openUserSettings)(m.n.PRIVATE_BROWSING_PANEL, { section: j.oAB.CF_WARP });
         }, []),
-        A = [f.Ij.CONNECTED].includes(w),
-        Z = O && I && ![f._n.ZERO_TRUST, f._n.ERROR].includes(T) && !P && (!n || N),
+        A = [f.Ij.CONNECTED].includes(I),
+        Z = O && w && ![f._n.ZERO_TRUST, f._n.ERROR].includes(T) && !P && (!n || N),
         D = (0, l.useMemo)(() => {
-            switch (w) {
+            switch (I) {
                 case f.Ij.CONNECTED:
                     return C.intl.string(y.default.FBu3XJ);
                 case f.Ij.INITIALIZING:
@@ -50,7 +50,7 @@ let T = (e) => {
                 default:
                     return C.intl.string(y.default["A70/wR"]);
             }
-        }, [w]),
+        }, [I]),
         L = (0, l.useMemo)(() => {
             if (!N) return C.intl.string(y.default.KN6HOb);
             switch (T) {
@@ -65,7 +65,7 @@ let T = (e) => {
             if (!N)
                 return (0, a.jsx)(i.xvT, {
                     variant: "text-sm/normal",
-                    color: "text-secondary",
+                    color: "text-subtle",
                     children: C.intl.format(y.default["0UfKTY"], { helpdeskArticle: x.w }),
                 });
             switch (T) {
@@ -73,7 +73,7 @@ let T = (e) => {
                 case f._n.EXISTING_INSTALLATION:
                     return (0, a.jsx)(i.xvT, {
                         variant: "text-sm/normal",
-                        color: "text-secondary",
+                        color: "text-subtle",
                         children: A
                             ? C.intl.format(y.default.zwW10o, {
                                   onClick: () => {
@@ -89,7 +89,7 @@ let T = (e) => {
                 default:
                     return (0, a.jsx)(i.xvT, {
                         variant: "text-sm/normal",
-                        color: "text-secondary",
+                        color: "text-subtle",
                         children: C.intl.format(y.default.D4hu0v, {
                             onClick: () => {
                                 (0, r.j)(j.rMx.NITRO_PRIVACY_UPSELL_SETTINGS_CLICKED, {}), R();

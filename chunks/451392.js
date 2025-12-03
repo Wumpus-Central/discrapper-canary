@@ -61,7 +61,7 @@ function E(e) {
                         showEyeDropper: !0,
                         label: (0, r.jsx)(c.Text, {
                             className: g.colorSwatchLabel,
-                            color: "header-secondary",
+                            color: "text-default",
                             variant: "text-xs/normal",
                             "aria-hidden": !0,
                             children: h.intl.string(h.t.C3KTQk),
@@ -77,7 +77,7 @@ function E(e) {
                         showEyeDropper: !0,
                         label: (0, r.jsx)(c.Text, {
                             className: g.colorSwatchLabel,
-                            color: "header-secondary",
+                            color: "text-default",
                             variant: "text-xs/normal",
                             "aria-hidden": !0,
                             children: h.intl.string(h.t["8elvy6"]),

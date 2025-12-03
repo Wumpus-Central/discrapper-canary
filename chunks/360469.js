@@ -1,40 +1,40 @@
-i.d(e, { Z: () => o });
-var n = i(54381),
-    r = i(793030),
-    l = i(442837),
-    a = i(5888),
-    s = i(198358),
-    d = i(140939),
-    c = i(388032);
-function o() {
+n.d(t, { Z: () => u });
+var i = n(54381),
+    s = n(793030),
+    r = n(442837),
+    l = n(5888),
+    o = n(198358),
+    a = n(140939),
+    c = n(388032);
+function u() {
     let {
-        messages: { numMessagesSent: t, numMessagesSentPercentile: e } = {
+        messages: { numMessagesSent: e, numMessagesSentPercentile: t } = {
             numMessagesSent: 0,
             numMessagesSentPercentile: 0,
         },
-    } = (0, l.e7)([a.Z], () => a.Z.getCheckpointData());
-    return (0, n.jsxs)(s.Z, {
+    } = (0, r.e7)([l.Z], () => l.Z.getCheckpointData());
+    return (0, i.jsxs)(o.Z, {
         children: [
-            (0, n.jsx)(r.xvT, {
+            (0, i.jsx)(s.xvT, {
                 variant: "display-sm",
-                color: "text-primary",
-                children: c.intl.format(d.default.nPTMHj, { numMessages: t }),
+                color: "text-strong",
+                children: c.intl.format(a.default.nPTMHj, { numMessages: e }),
             }),
-            null != e
-                ? (0, n.jsx)(r.xvT, {
+            null != t
+                ? (0, i.jsx)(s.xvT, {
                       variant: "display-sm",
-                      color: "text-primary",
-                      children: c.intl.format(d.default.ixvOza, {
-                          percent: 100 - e,
-                          percentHook: (t, e) =>
-                              (0, n.jsx)(
-                                  r.xvT,
+                      color: "text-strong",
+                      children: c.intl.format(a.default.ixvOza, {
+                          percent: 100 - t,
+                          percentHook: (e, t) =>
+                              (0, i.jsx)(
+                                  s.xvT,
                                   {
                                       variant: "display-sm",
-                                      color: "text-primary",
-                                      children: t,
+                                      color: "text-strong",
+                                      children: e,
                                   },
-                                  e,
+                                  t,
                               ),
                       }),
                   })

@@ -26,7 +26,7 @@ function s(e) {
                         null != a &&
                             (0, r.jsx)(i.Text, {
                                 variant: "text-sm/normal",
-                                color: "header-secondary",
+                                color: "text-default",
                                 children: a,
                             }),
                     ],

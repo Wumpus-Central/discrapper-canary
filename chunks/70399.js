@@ -73,7 +73,7 @@ function m(e) {
                   (0, r.jsx)(s.uIJ, { size: "xs" }),
                   (0, r.jsx)(s.xvT, {
                       variant: "text-sm/medium",
-                      color: "text-secondary",
+                      color: "text-subtle",
                       children: m
                           ? o
                               ? f.intl.format(f.t.wiyuG9, { applicationName: a.name })

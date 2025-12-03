@@ -1,12 +1,12 @@
-i.d(n, { default: () => o }), i(49124);
-var t = i(54381);
+i.d(t, { default: () => a }), i(49124);
+var l = i(54381);
 i(473749);
-var l = i(793030),
-    a = i(481060);
-function o(e) {
-    let { clip: n, onClose: i, transitionState: o } = e;
-    return (0, t.jsx)(l.Modal, {
-        transitionState: o,
+var n = i(793030),
+    s = i(481060);
+function a(e) {
+    let { clip: t, onClose: i, transitionState: a } = e;
+    return (0, l.jsx)(n.Modal, {
+        transitionState: a,
         onClose: i,
         title: "Clip Debug",
         size: "md",
@@ -17,47 +17,47 @@ function o(e) {
                 onClick: i,
             },
         ],
-        children: (0, t.jsxs)(a.C3N, {
+        children: (0, l.jsxs)(s.C3N, {
             label: "Decision",
             children: [
-                null != n.decision &&
-                    (0, t.jsxs)(t.Fragment, {
+                null != t.decision &&
+                    (0, l.jsxs)(l.Fragment, {
                         children: [
-                            null != n.decision.reason
-                                ? (0, t.jsx)(a.gNt, {
+                            null != t.decision.reason
+                                ? (0, l.jsx)(s.gNt, {
                                       label: "Reason",
-                                      children: (0, t.jsx)(a.Text, {
+                                      children: (0, l.jsx)(s.Text, {
                                           variant: "text-sm/normal",
-                                          color: "text-secondary",
-                                          children: n.decision.reason,
+                                          color: "text-subtle",
+                                          children: t.decision.reason,
                                       }),
                                   })
                                 : null,
-                            (0, t.jsx)(a.gNt, {
+                            (0, l.jsx)(s.gNt, {
                                 label: "Timestamp",
                                 layout: "horizontal",
-                                children: (0, t.jsx)(a.Text, {
+                                children: (0, l.jsx)(s.Text, {
                                     variant: "text-sm/normal",
-                                    color: "text-secondary",
-                                    children: new Date(n.decision.timestamp).toLocaleString(),
+                                    color: "text-subtle",
+                                    children: new Date(t.decision.timestamp).toLocaleString(),
                                 }),
                             }),
                         ],
                     }),
-                n.timeline.length > 0 &&
-                    (0, t.jsx)(a.C3N, {
+                t.timeline.length > 0 &&
+                    (0, l.jsx)(s.C3N, {
                         label: "Timeline",
-                        children: (0, t.jsx)("pre", {
-                            children: (0, t.jsx)(a.Text, {
+                        children: (0, l.jsx)("pre", {
+                            children: (0, l.jsx)(s.Text, {
                                 variant: "code",
-                                color: "text-secondary",
-                                children: JSON.stringify(n.timeline, null, 2),
+                                color: "text-subtle",
+                                children: JSON.stringify(t.timeline, null, 2),
                             }),
                         }),
                     }),
-                null == n.decision &&
-                    0 === n.timeline.length &&
-                    (0, t.jsx)(a.Text, {
+                null == t.decision &&
+                    0 === t.timeline.length &&
+                    (0, l.jsx)(s.Text, {
                         variant: "text-sm/normal",
                         color: "text-muted",
                         children: "No debug information available for this clip.",

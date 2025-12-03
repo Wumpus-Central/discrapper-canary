@@ -77,7 +77,7 @@ function u(t) {
                             }),
                             (0, i.jsx)(s.Text, {
                                 variant: "text-sm/medium",
-                                color: "text-tertiary",
+                                color: "text-muted",
                                 children: n,
                             }),
                         ],

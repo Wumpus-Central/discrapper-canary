@@ -45,7 +45,7 @@ let p = {
                                         title: null != (l = p[e.task_type]) ? l : "",
                                         listType: "numbered",
                                         index: n,
-                                        color: n === t ? "text-primary" : n < t ? "feedback-positive" : "text-muted",
+                                        color: n === t ? "text-strong" : n < t ? "feedback-positive" : "text-muted",
                                         completed: n < t,
                                     },
                                     e.task_type,
@@ -56,7 +56,7 @@ let p = {
                 }),
                 (0, a.jsx)(l.Text, {
                     variant: "text-md/normal",
-                    color: "text-secondary",
+                    color: "text-subtle",
                     children: u.intl.format(d.default["0DHxym"], {
                         handleLogOut: () => (0, o.R)("safety_flows_sidebar"),
                     }),

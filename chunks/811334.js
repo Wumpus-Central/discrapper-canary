@@ -33,7 +33,7 @@ function m(e) {
     return p()
         ? (0, r.jsx)(s.Heading, {
               variant: "heading-md/semibold",
-              color: "text-primary",
+              color: "text-strong",
               className: o()(d.header, d.premiumRebrand),
               children: t,
           })

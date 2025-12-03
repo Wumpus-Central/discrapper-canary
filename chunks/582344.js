@@ -54,7 +54,7 @@ function h() {
                                 }),
                                 (0, a.jsx)(s.Text, {
                                     variant: "text-sm/normal",
-                                    color: "text-secondary",
+                                    color: "text-subtle",
                                     children: "Daily Cap Reached: ".concat(e ? "Yes" : "No"),
                                 }),
                             ],

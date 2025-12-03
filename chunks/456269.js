@@ -259,7 +259,7 @@ function V(e) {
 function W(e) {
     let { firstMessage: t, formatInline: n = !0, noStyleAndInteraction: l = !0, hasUnreads: u = !0 } = e,
         i = f.d.useExperiment({ location: "modules/forums/ForumHooks" }).enabled,
-        a = u ? "text-normal" : "text-muted",
+        a = u ? "text-default" : "text-muted",
         { hasSpoilerEmbeds: o, content: d } = r.useMemo(
             () =>
                 (null == t ? void 0 : t.content) != null && "" !== t.content

@@ -48,7 +48,7 @@ function u(e) {
                 className: c.body,
                 children: (0, r.jsx)(i.Text, {
                     variant: "text-sm/normal",
-                    color: "text-secondary",
+                    color: "text-subtle",
                     children: l.intl.string(l.t["8mfCqY"]),
                 }),
             }),

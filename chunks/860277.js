@@ -1,96 +1,96 @@
-i.d(e, { Z: () => p });
-var n = i(54381),
-    r = i(793030),
-    l = i(442837),
-    a = i(99690),
-    s = i(5888),
-    d = i(198358),
-    c = i(612776),
-    o = i(268685),
-    u = i(140939),
-    x = i(388032);
-function p(t) {
-    let { step: e } = t,
-        { users: i = [], sidekick: p } = (0, l.e7)([s.Z], () => s.Z.getCheckpointData());
+n.d(t, { Z: () => p });
+var i = n(54381),
+    s = n(793030),
+    r = n(442837),
+    l = n(99690),
+    o = n(5888),
+    a = n(198358),
+    c = n(612776),
+    u = n(268685),
+    d = n(140939),
+    m = n(388032);
+function p(e) {
+    let { step: t } = e,
+        { users: n = [], sidekick: p } = (0, r.e7)([o.Z], () => o.Z.getCheckpointData());
     if (null != p)
-        return (0, n.jsxs)(d.Z, {
+        return (0, i.jsxs)(a.Z, {
             children: [
-                e === c.ij.FRIENDS_INTRO &&
-                    (0, n.jsxs)("div", {
+                t === c.ij.FRIENDS_INTRO &&
+                    (0, i.jsxs)("div", {
                         children: [
-                            (0, n.jsx)(r.xvT, {
+                            (0, i.jsx)(s.xvT, {
                                 variant: "display-md",
-                                color: "text-primary",
-                                children: x.intl.string(u.default["4xZpq4"]),
+                                color: "text-strong",
+                                children: m.intl.string(d.default["4xZpq4"]),
                             }),
-                            i.map((t) =>
-                                (0, n.jsxs)(
+                            n.map((e) =>
+                                (0, i.jsxs)(
                                     "div",
                                     {
                                         children: [
-                                            (0, n.jsx)(a.Z, {
-                                                user: t,
-                                                size: o.EF.SIZE_120,
+                                            (0, i.jsx)(l.Z, {
+                                                user: e,
+                                                size: u.EF.SIZE_120,
                                             }),
-                                            (0, n.jsx)(r.xvT, {
+                                            (0, i.jsx)(s.xvT, {
                                                 variant: "display-lg",
-                                                color: "text-primary",
-                                                children: t.username,
+                                                color: "text-strong",
+                                                children: e.username,
                                             }),
                                         ],
                                     },
-                                    t.id,
+                                    e.id,
                                 ),
                             ),
                         ],
                     }),
-                e === c.ij.FRIENDS_BEST &&
-                    (0, n.jsxs)("div", {
+                t === c.ij.FRIENDS_BEST &&
+                    (0, i.jsxs)("div", {
                         children: [
-                            (0, n.jsx)(r.xvT, {
+                            (0, i.jsx)(s.xvT, {
                                 variant: "display-md",
-                                color: "text-primary",
-                                children: x.intl.string(u.default.d5HUsD),
+                                color: "text-strong",
+                                children: m.intl.string(d.default.d5HUsD),
                             }),
-                            (0, n.jsx)(a.Z, {
+                            (0, i.jsx)(l.Z, {
                                 user: p.user,
-                                size: o.EF.SIZE_120,
+                                size: u.EF.SIZE_120,
                             }),
-                            (0, n.jsx)(r.xvT, {
+                            (0, i.jsx)(s.xvT, {
                                 variant: "display-md",
-                                color: "text-primary",
-                                children: x.intl.format(u.default.wz2JuF, {
+                                color: "text-strong",
+                                children: m.intl.format(d.default.wz2JuF, {
                                     user: null == p ? void 0 : p.user.username,
-                                    userHook: (t, e) =>
-                                        (0, n.jsx)(
-                                            r.xvT,
+                                    userHook: (e, t) =>
+                                        (0, i.jsx)(
+                                            s.xvT,
                                             {
                                                 variant: "display-lg",
-                                                color: "text-primary",
-                                                children: t,
+                                                color: "text-strong",
+                                                children: e,
                                             },
-                                            e,
+                                            t,
                                         ),
                                 }),
                             }),
-                            (0, n.jsx)(r.xvT, {
+                            (0, i.jsx)(s.xvT, {
                                 variant: "display-sm",
-                                color: "text-primary",
-                                children: x.intl.string(u.default.wWKySP),
+                                color: "text-strong",
+                                children: m.intl.string(d.default.wWKySP),
                             }),
-                            (0, n.jsx)(r.xvT, {
+                            (0, i.jsx)(s.xvT, {
                                 variant: "display-sm",
-                                color: "text-primary",
+                                color: "text-strong",
                                 children: p.numMessagesSent,
                             }),
-                            (0, n.jsx)(r.xvT, {
+                            (0, i.jsx)(s.xvT, {
                                 variant: "display-sm",
-                                color: "text-primary",
-                                children: x.intl.string(u.default.lXT6ns),
+                                color: "text-strong",
+                                children: m.intl.string(d.default.lXT6ns),
                             }),
-                            (0, n.jsx)(r.xvT, {
+                            (0, i.jsx)(s.xvT, {
                                 variant: "display-sm",
-                                color: "text-primary",
+                                color: "text-strong",
                                 children: p.numVoiceMinutes,
                             }),
                         ],

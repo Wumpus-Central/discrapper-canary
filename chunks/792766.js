@@ -59,7 +59,7 @@ let u = (e) => {
             null != h &&
                 "" !== h &&
                 (0, r.jsx)(i.Text, {
-                    color: "header-secondary",
+                    color: "text-default",
                     className: c.alignStart,
                     variant: "text-sm/normal",
                     children: h,

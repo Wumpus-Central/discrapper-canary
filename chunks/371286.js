@@ -58,7 +58,7 @@ function u(e) {
                 null != u &&
                     (0, a.jsx)(r.Text, {
                         variant: "text-md/normal",
-                        color: "text-secondary",
+                        color: "text-subtle",
                         children: u,
                     }),
                 (0, a.jsx)(r.Ttm, {

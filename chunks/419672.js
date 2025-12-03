@@ -42,7 +42,7 @@ let E = function (t) {
         children: [
             (0, i.jsx)(r.Text, {
                 variant: "text-md/normal",
-                color: "header-secondary",
+                color: "text-default",
                 children: x.intl.format(x.t["njJ/Cg"], { learnMoreLink: o.Z.getArticleURL(u.BhN.SAFETY_ALERTS) }),
             }),
             (0, i.jsxs)("div", {

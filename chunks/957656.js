@@ -134,7 +134,7 @@ let d = (e) => {
                 }),
                 (0, n.jsx)(o.Text, {
                     variant: "text-sm/normal",
-                    color: "header-secondary",
+                    color: "text-default",
                     children: t,
                 }),
             ],

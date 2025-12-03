@@ -1,4 +1,4 @@
-l.d(t, { default: () => b }), l(388685), l(539854), l(781311);
+l.d(t, { default: () => v }), l(388685), l(539854), l(781311);
 var n = l(54381),
     r = l(473749),
     i = l(913527),
@@ -21,7 +21,7 @@ var n = l(54381),
     f = l(981631),
     _ = l(388032),
     R = l(540432);
-function y(e) {
+function m(e) {
     let { index: t, query: l, handleQuerySelect: r, handleDateSelect: i, options: o, handleRemoveDateFilter: s } = e,
         u = a()(),
         h = a()("2015-05-15");
@@ -80,7 +80,7 @@ function y(e) {
         ],
     });
 }
-function m(e) {
+function y(e) {
     let {
             options: t,
             dates: l,
@@ -99,19 +99,19 @@ function m(e) {
                 children: [
                     (0, n.jsx)(c.Text, {
                         variant: "text-md/medium",
-                        color: "text-primary",
+                        color: "text-strong",
                         children: _.intl.string(_.t.oesnwm),
                     }),
                     (0, n.jsx)(c.Text, {
                         variant: "text-sm/normal",
-                        color: "text-secondary",
+                        color: "text-subtle",
                         children: _.intl.string(_.t.A2DY6J),
                     }),
                 ],
             }),
             l.map((e, l) =>
                 (0, n.jsx)(
-                    y,
+                    m,
                     {
                         options: t,
                         index: l,
@@ -183,7 +183,7 @@ function L(e) {
         }),
     });
 }
-function v(e) {
+function b(e) {
     let {
         label: t,
         sublabel: l,
@@ -221,7 +221,7 @@ function v(e) {
         }),
     });
 }
-function b(e) {
+function v(e) {
     let { transitionState: t, onClose: l, searchContext: i } = e,
         a = (0, h.Dt)(),
         u = (0, s.e7)([g.Z, F.Z], () => {
@@ -232,14 +232,14 @@ function b(e) {
             let e = x.default.getCurrentUser();
             return null != e ? e.username : _.intl.string(_.t.cqpybK);
         }),
-        [R, y] = r.useState(S.Z.getSearchInputText(i)),
-        b = r.useMemo(() => (0, p.kG)(null != R ? R : ""), [R]),
-        { prefilledSearchFilters: N, eligibleFilterTokens: O } = (0, E.p4)(b, i),
+        [R, m] = r.useState(S.Z.getSearchInputText(i)),
+        v = r.useMemo(() => (0, p.kG)(null != R ? R : ""), [R]),
+        { prefilledSearchFilters: N, eligibleFilterTokens: O } = (0, E.p4)(v, i),
         j = O.has(f.dCx.FILTER_FROM),
         M = O.has(f.dCx.FILTER_MENTIONS),
         A = O.has(f.dCx.FILTER_IN),
         P = O.has(f.dCx.FILTER_AUTHOR_TYPE),
-        Q = r.useMemo(() => (0, p.nI)(b), [b]),
+        Q = r.useMemo(() => (0, p.nI)(v), [v]),
         k = (0, T.g_)({ location: "SearchFiltersModal" }),
         {
             options: D,
@@ -293,13 +293,13 @@ function b(e) {
         {
             options: e_,
             query: eR,
-            setQuery: ey,
-            handleClearFilter: em,
+            setQuery: em,
+            handleClearFilter: ey,
             getApplyQueryString: eL,
-            handleFocusFilter: ev,
+            handleFocusFilter: eb,
         } = (0, E.fJ)(i, N[f.dCx.FILTER_AUTHOR_TYPE], k),
         {
-            options: eb,
+            options: ev,
             query: eN,
             setQuery: eO,
             handleClearFilter: ej,
@@ -380,8 +380,8 @@ function b(e) {
             return "".concat(_.intl.string(_.t.YfwFu1), " ").concat(e);
         }, [eA]),
         eq = r.useCallback(() => {
-            j && Y(), M && K(), A && ed(), P && em(), en(), eI(), ej();
-        }, [j, M, en, A, eI, Y, K, ed, P, em, ej]),
+            j && Y(), M && K(), A && ed(), P && ey(), en(), eI(), ej();
+        }, [j, M, en, A, eI, Y, K, ed, P, ey, ej]),
         eY =
             M &&
             (0, n.jsx)(L, {
@@ -471,7 +471,7 @@ function b(e) {
                 }),
             k ? eU : eY,
             k ? eY : eU,
-            (0, n.jsx)(m, {
+            (0, n.jsx)(y, {
                 options: eF,
                 dates: ex,
                 handleDateQueryChange: ep,
@@ -486,21 +486,21 @@ function b(e) {
                     sublabel: _.intl.string(_.t.XaOAdt),
                     textPlaceholder: _.intl.string(_.t.CAdOdf),
                     value: eR,
-                    onChange: ey,
-                    onFocus: ev,
+                    onChange: em,
+                    onFocus: eb,
                     options: e_,
                     filter: !1,
                     closeOnSelect: !1,
                     filterType: f.dCx.FILTER_AUTHOR_TYPE,
                     validateFilter: eQ,
                 }),
-            (0, n.jsx)(v, {
+            (0, n.jsx)(b, {
                 label: _.intl.string(_.t["6LYPWS"]),
                 sublabel: _.intl.string(_.t.L8jjfu),
                 textPlaceholder: _.intl.string(_.t.AQpFbX),
                 value: eN,
                 onChange: eO,
-                options: eb,
+                options: ev,
                 filterType: f.dCx.FILTER_PINNED,
                 validateFilter: eQ,
             }),

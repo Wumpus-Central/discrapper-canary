@@ -22,8 +22,8 @@ var r = n(54381),
     _ = n(430824),
     y = n(768581),
     O = n(411198),
-    j = n(683818),
-    x = n(16853),
+    x = n(683818),
+    j = n(16853),
     v = n(981631),
     C = n(388032),
     I = n(777261),
@@ -94,7 +94,7 @@ function T(e) {
     let { entry: t } = e,
         [l, s] = i.useState(!1),
         d = i.useRef(null),
-        { canEdit: u } = (0, j.Z)(t);
+        { canEdit: u } = (0, x.Z)(t);
     return (0, r.jsx)("div", {
         className: a()(I.actionButtonsContainer, { [I.forceButtonsShow]: l }),
         children: (0, r.jsxs)(h.ZP, {
@@ -118,7 +118,7 @@ function T(e) {
                           }),
                       })
                     : null,
-                (0, r.jsx)(x.Z, {
+                (0, r.jsx)(j.Z, {
                     targetElementRef: d,
                     onRequestOpen: () => s(!0),
                     onRequestClose: () => s(!1),
@@ -178,7 +178,7 @@ let N = i.memo(function (e) {
     let { entry: l } = e,
         [a, o] = i.useState(!1),
         h = null != (0, s.e7)([_.Z], () => _.Z.getGuild(l.guildId)),
-        j = async () => {
+        x = async () => {
             o(!0);
             try {
                 h ? (0, b.X)(l.guildId) : await u.Z.joinGuild(l.guildId, { source: v.vtS.DIRECTORY_ENTRY });
@@ -186,7 +186,7 @@ let N = i.memo(function (e) {
                 o(!1);
             }
         },
-        x = y.ZP.getGuildSplashURL({
+        j = y.ZP.getGuildSplashURL({
             id: l.guildId,
             splash: l.splash,
             size: 300 * (0, m.x_)(),
@@ -218,9 +218,9 @@ let N = i.memo(function (e) {
                         (0, r.jsx)("div", {
                             className: I.splash,
                             children:
-                                null != x &&
+                                null != j &&
                                 (0, r.jsx)("img", {
-                                    src: x,
+                                    src: j,
                                     alt: "",
                                     className: I.splashImage,
                                 }),
@@ -266,7 +266,7 @@ let N = i.memo(function (e) {
                         (0, r.jsx)(c.Text, {
                             className: I.description,
                             variant: "text-sm/normal",
-                            color: "header-secondary",
+                            color: "text-default",
                             children: l.description,
                         }),
                         (0, r.jsxs)("div", {
@@ -279,7 +279,7 @@ let N = i.memo(function (e) {
                                             (0, r.jsx)("div", { className: I.dotOnline }),
                                             (0, r.jsx)(c.Text, {
                                                 variant: "text-xs/normal",
-                                                color: "header-secondary",
+                                                color: "text-default",
                                                 children: C.intl.format(C.t["LC+S+m"], {
                                                     membersOnline: l.approximatePresenceCount,
                                                 }),
@@ -293,7 +293,7 @@ let N = i.memo(function (e) {
                                             (0, r.jsx)("div", { className: I.dotOffline }),
                                             (0, r.jsx)(c.Text, {
                                                 variant: "text-xs/normal",
-                                                color: "header-secondary",
+                                                color: "text-default",
                                                 children: C.intl.format(C.t.zRl6XR, {
                                                     count: l.approximateMemberCount,
                                                 }),
@@ -307,7 +307,7 @@ let N = i.memo(function (e) {
                             children: (0, r.jsx)(c.Button, {
                                 loading: a,
                                 variant: h ? "secondary" : "active",
-                                onClick: j,
+                                onClick: x,
                                 text: P,
                                 fullWidth: !0,
                             }),

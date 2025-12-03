@@ -41,7 +41,7 @@ let f = (e) => {
                         null != h
                             ? (0, r.jsx)(o.Text, {
                                   variant: "text-md/normal",
-                                  color: "header-secondary",
+                                  color: "text-default",
                                   children: h,
                               })
                             : null,

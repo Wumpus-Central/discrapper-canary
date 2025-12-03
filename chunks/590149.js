@@ -54,7 +54,7 @@ function d(e) {
                         children: [
                             (0, a.jsx)(s.Text, {
                                 variant: "eyebrow",
-                                color: "header-secondary",
+                                color: "text-default",
                                 children: n,
                             }),
                             null != i &&

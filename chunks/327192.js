@@ -148,7 +148,7 @@ let z = (e) => {
                                             : t.call(n, a.account),
                                     children: (0, r.jsx)(p.Text, {
                                         variant: "text-xs/normal",
-                                        color: "header-secondary",
+                                        color: "text-default",
                                         children: a.account.name,
                                     }),
                                 }),
@@ -235,7 +235,7 @@ function q(e) {
                             }),
                             (0, r.jsx)(p.Text, {
                                 variant: "text-xs/normal",
-                                color: "header-secondary",
+                                color: "text-default",
                                 className: V.connectionAccountLabel,
                                 children: i.name,
                             }),
@@ -304,7 +304,7 @@ function q(e) {
                         p.Text,
                         {
                             variant: "text-xs/normal",
-                            color: "text-secondary",
+                            color: "text-subtle",
                             className: V.connectedAccountVanityMetadataCreatedAt,
                             children: F.intl.format(F.t["9rfonh"], { date: a }),
                         },

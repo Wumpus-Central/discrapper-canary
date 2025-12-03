@@ -81,7 +81,7 @@ function d(e) {
                                                           : null,
                                                       (0, i.jsx)(o.Text, {
                                                           variant: "text-xs/normal",
-                                                          color: "header-secondary",
+                                                          color: "text-default",
                                                           className: d,
                                                           children: r,
                                                       }),
@@ -112,7 +112,7 @@ function d(e) {
                                 null != n
                                     ? (0, i.jsx)(o.Text, {
                                           variant: "text-sm/normal",
-                                          color: "header-secondary",
+                                          color: "text-default",
                                           children: n,
                                       })
                                     : null,

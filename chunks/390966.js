@@ -82,7 +82,7 @@ function O(e) {
         } = e,
         l = d.Que,
         c = r,
-        u = "header-secondary";
+        u = "text-default";
     switch (n) {
         case 3:
             (c = i), (u = null != o ? void 0 : "text-feedback-positive");
@@ -225,7 +225,7 @@ function I(e) {
                     }),
                     null != W &&
                         (0, r.jsx)(d.Text, {
-                            color: "header-secondary",
+                            color: "text-default",
                             variant: "text-xs/normal",
                             children: W,
                         }),

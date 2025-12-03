@@ -123,7 +123,7 @@ function k(e) {
                         (0, l.jsx)(c.Text, {
                             className: E.messageContent,
                             variant: "text-sm/normal",
-                            color: "header-secondary",
+                            color: "text-default",
                             lineClamp: 3,
                             children: m.Z.parse(f, !0, {
                                 guildId: t.guild_id,
@@ -134,7 +134,7 @@ function k(e) {
                         (0, l.jsx)(c.Text, {
                             className: i()(E.messageContent, S.markup),
                             variant: "text-sm/normal",
-                            color: "header-secondary",
+                            color: "text-default",
                             lineClamp: 3,
                             children: m.Z.parse(n.description, !0, {
                                 guildId: t.guild_id,

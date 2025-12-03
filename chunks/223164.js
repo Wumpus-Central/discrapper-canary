@@ -1,4 +1,4 @@
-e.d(n, { default: () => x });
+e.d(n, { default: () => f });
 var i = e(54381),
     s = e(473749),
     a = e(120356),
@@ -10,9 +10,9 @@ var i = e(54381),
     u = e(981631),
     p = e(388032),
     h = e(314311),
-    k = e(430864);
-function x(t) {
-    let { channel: n, isFromComposer: e, transitionState: a, onClose: x } = t;
+    x = e(430864);
+function f(t) {
+    let { channel: n, isFromComposer: e, transitionState: a, onClose: f } = t;
     return (
         s.useEffect(
             () => () => {
@@ -22,18 +22,18 @@ function x(t) {
         ),
         (0, i.jsx)(c.Modal, {
             transitionState: a,
-            onClose: x,
+            onClose: f,
             title: p.intl.string(p.t["4d4T4l"]),
             actions: [
                 {
                     text: p.intl.string(p.t["NX+WJN"]),
-                    onClick: x,
+                    onClick: f,
                 },
             ],
             children: (0, i.jsx)(l.Text, {
-                className: o()(h.content, k.markup),
+                className: o()(h.content, x.markup),
                 variant: "text-sm/normal",
-                color: "header-secondary",
+                color: "text-default",
                 children: (0, i.jsx)("div", {
                     children: r.Z.parseForumPostGuidelines(n.topic, !0, {
                         channelId: n.id,

@@ -55,13 +55,13 @@ let g = (e) => {
                     }),
                     (0, r.jsx)(s.xvT, {
                         variant: "text-md/medium",
-                        color: "text-secondary",
+                        color: "text-subtle",
                         className: h.bannerDescription,
                         children: b.body,
                     }),
                     (0, r.jsx)(s.xvT, {
                         variant: "text-md/medium",
-                        color: "text-secondary",
+                        color: "text-subtle",
                         className: h.bannerDescription,
                         children: m.intl.format(m.t.mYS7uY, { helpCenterLink: p.Z.getArticleURL(b.helpArticleId) }),
                     }),

@@ -13,8 +13,8 @@ var r = n(54381),
     l = n.n(o),
     a = n(481060),
     s = n(192371),
-    c = n(834209),
-    u = n(130231),
+    u = n(834209),
+    c = n(130231),
     d = n(388032),
     p = n(237522);
 function f(e) {
@@ -46,7 +46,7 @@ function m(e) {
             (0, r.jsx)(a.Text, {
                 color: "status-warning",
                 variant: "text-sm/bold",
-                children: d.intl.formatToMarkdownString(u.default["ol/ao/"], { dateString: (0, s.Z)(t) }),
+                children: d.intl.formatToMarkdownString(c.default["ol/ao/"], { dateString: (0, s.Z)(t) }),
             }),
         ],
     });
@@ -63,7 +63,7 @@ function g(e) {
             (0, r.jsx)(a.Text, {
                 color: "status-warning",
                 variant: "text-sm/bold",
-                children: d.intl.formatToPlainString(u.default["6e2ry1"], { dateString: (0, c.Z)(t) }),
+                children: d.intl.formatToPlainString(c.default["6e2ry1"], { dateString: (0, u.Z)(t) }),
             }),
         ],
     });
@@ -86,7 +86,7 @@ function v(e) {
                             className: p.price,
                             tag: "div",
                             variant: "heading-md/semibold",
-                            color: "text-secondary",
+                            color: "text-subtle",
                             children: d.intl.formatToPlainString(d.t.t2Wbo1, {
                                 required: t,
                                 decorator: null != n ? n : "",
@@ -135,15 +135,15 @@ let b = i.forwardRef(function (e, t) {
         label: i,
         isActive: o,
         isWarning: s,
-        badge: c,
-        canRollback: u,
+        badge: u,
+        canRollback: c,
         onClick: f,
         onMouseOver: m,
         onMouseLeave: g,
         children: v,
     } = e;
     return (0, r.jsx)("div", {
-        className: l()(p.parentContainer, { [p.rollbackInactive]: u && !o }),
+        className: l()(p.parentContainer, { [p.rollbackInactive]: c && !o }),
         ref: t,
         children: (0, r.jsxs)(a.kL8, {
             "aria-label": i,
@@ -154,18 +154,18 @@ let b = i.forwardRef(function (e, t) {
                 p.container,
                 {
                     [p.active]: o,
-                    [p.warning]: s || (u && o),
+                    [p.warning]: s || (c && o),
                 },
                 n,
             ),
             children: [
                 v,
-                "new" === c &&
+                "new" === u &&
                     (0, r.jsx)(a.IGR, {
                         className: p.new,
                         text: d.intl.string(d.t.y2b7CA),
                     }),
-                "beta" === c &&
+                "beta" === u &&
                     (0, r.jsx)(a.IGR, {
                         className: p.new,
                         text: d.intl.string(d.t.oW0eUd),

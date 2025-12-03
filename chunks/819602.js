@@ -1,5 +1,5 @@
 t.d(n, {
-    E3: () => T,
+    E3: () => A,
     ZP: () => E,
     tH: () => P,
 }),
@@ -25,12 +25,12 @@ var i = t(120356),
     b = t(671533),
     I = t(49012),
     y = t(652853),
-    _ = t(981631),
-    Z = t(856651),
+    Z = t(981631),
+    _ = t(856651),
     O = t(49898),
     N = t(388032),
-    A = t(455392);
-function T(e) {
+    T = t(455392);
+function A(e) {
     var n, t;
     let i,
         d,
@@ -40,35 +40,35 @@ function T(e) {
             theme: g,
             locale: y,
             userId: O,
-            className: T,
+            className: A,
             showMetadata: P,
             showInvisibleIcon: E,
         } = e;
     null == P && (P = !0);
     let C = null != (t = j.metadata) ? t : {},
-        S = P ? (0, f.FI)(C[Z.PC.CREATED_AT], y) : null,
+        S = P ? (0, f.FI)(C[_.PC.CREATED_AT], y) : null,
         w = (0, c.dQu)(r.Z.unsafe_rawColors.TWITTER).hex(),
         D = N.intl.string(N.t["6H6h1r"]);
     if (P)
         switch (j.type) {
-            case _.ABu.REDDIT:
+            case Z.ABu.REDDIT:
                 i = (0, x.oP)(C);
                 break;
-            case _.ABu.STEAM:
+            case Z.ABu.STEAM:
                 i = (0, x.Dq)(C);
                 break;
-            case _.ABu.BLUESKY:
-            case _.ABu.MASTODON:
-            case _.ABu.TWITTER:
-                (i = (0, x.rJ)(C)), "1" === C[Z.PC.TWITTER_VERIFIED] && ((d = w), (D = N.intl.string(N.t.Jebrww)));
+            case Z.ABu.BLUESKY:
+            case Z.ABu.MASTODON:
+            case Z.ABu.TWITTER:
+                (i = (0, x.rJ)(C)), "1" === C[_.PC.TWITTER_VERIFIED] && ((d = w), (D = N.intl.string(N.t.Jebrww)));
                 break;
-            case _.ABu.PAYPAL:
+            case Z.ABu.PAYPAL:
                 i = (0, x.li)(C);
                 break;
-            case _.ABu.EBAY:
+            case Z.ABu.EBAY:
                 i = (0, x.ul)(C);
                 break;
-            case _.ABu.TIKTOK:
+            case Z.ABu.TIKTOK:
                 i = (0, x.hf)(C);
         }
     let R = u.Z.get((0, p.rR)(j.type)),
@@ -77,7 +77,7 @@ function T(e) {
         ? (v = (0, l.jsx)(c.kZF, {
               size: "md",
               color: "currentColor",
-              className: o()(A.__invalid_connectedAccountOpenIconContainer, A.connectedAccountHideIcon),
+              className: o()(T.__invalid_connectedAccountOpenIconContainer, T.connectedAccountHideIcon),
           }))
         : null != L &&
           (v = (0, l.jsx)(c.Anchor, {
@@ -89,20 +89,20 @@ function T(e) {
               onClick: (e) => {
                   var n;
                   (n = j.type),
-                      (0, m.yw)(_.rMx.CONNECTED_ACCOUNT_VIEWED, {
+                      (0, m.yw)(Z.rMx.CONNECTED_ACCOUNT_VIEWED, {
                           platform_type: n,
                           other_user_id: O,
                       }),
                       (0, I.q)(
                           {
                               href: L,
-                              trusted: (null == R ? void 0 : R.type) !== _.ABu.DOMAIN,
+                              trusted: (null == R ? void 0 : R.type) !== Z.ABu.DOMAIN,
                           },
                           e,
                       );
               },
               children: (0, l.jsx)(b.Z, {
-                  className: A.connectedAccountOpenIcon,
+                  className: T.connectedAccountOpenIcon,
                   direction: b.Z.Directions.RIGHT,
               }),
           }));
@@ -110,7 +110,7 @@ function T(e) {
         B = (0, c.dQu)(r.Z.colors.INTERACTIVE_ACTIVE).hex(),
         U = j.verified
             ? (0, l.jsx)(h.Z, {
-                  className: A.connectedAccountVerifiedIcon,
+                  className: T.connectedAccountVerifiedIcon,
                   color: null != d ? d : M,
                   forcedIconColor: B,
                   size: 16,
@@ -119,19 +119,19 @@ function T(e) {
             : null;
     return (0, l.jsxs)("li", {
         className: o()(
-            A.connectedAccountContainer,
-            (null != i && i.length > 0) || null != S ? A.connectedAccountContainerWithMetadata : null,
-            T,
+            T.connectedAccountContainer,
+            (null != i && i.length > 0) || null != S ? T.connectedAccountContainerWithMetadata : null,
+            A,
         ),
         children: [
             (0, l.jsxs)("div", {
-                className: A.connectedAccount,
+                className: T.connectedAccount,
                 children: [
                     (0, l.jsx)(s.u, {
                         __unsupportedReactNodeAsText: null == R ? void 0 : R.name,
                         children: (0, l.jsx)("img", {
                             alt: N.intl.formatToPlainString(N.t.rtm15P, { name: null == R ? void 0 : R.name }),
-                            className: A.connectedAccountIcon,
+                            className: T.connectedAccountIcon,
                             src: (0, a.wj)(g)
                                 ? null == R
                                     ? void 0
@@ -142,13 +142,13 @@ function T(e) {
                         }),
                     }),
                     (0, l.jsxs)("div", {
-                        className: A.connectedAccountNameContainer,
+                        className: T.connectedAccountNameContainer,
                         children: [
                             (0, l.jsxs)("div", {
-                                className: A.connectedAccountName,
+                                className: T.connectedAccountName,
                                 children: [
                                     (0, l.jsxs)("div", {
-                                        className: A.connectedAccountNameTextContainer,
+                                        className: T.connectedAccountNameTextContainer,
                                         children: [
                                             (0, l.jsx)(s.u, {
                                                 overflowOnly: !0,
@@ -156,7 +156,7 @@ function T(e) {
                                                 children: (0, l.jsx)(c.Text, {
                                                     variant: "text-sm/medium",
                                                     color: "interactive-active",
-                                                    className: A.connectedAccountNameText,
+                                                    className: T.connectedAccountNameText,
                                                     children: j.name,
                                                 }),
                                             }),
@@ -169,7 +169,7 @@ function T(e) {
                             null != S
                                 ? (0, l.jsx)(c.Text, {
                                       variant: "text-xs/normal",
-                                      color: "header-secondary",
+                                      color: "text-default",
                                       children: N.intl.format(N.t["9rfonh"], { date: S }),
                                   })
                                 : null,
@@ -179,7 +179,7 @@ function T(e) {
             }),
             null != i && i.length > 0
                 ? (0, l.jsx)("div", {
-                      className: A.connectedAccountChildren,
+                      className: T.connectedAccountChildren,
                       children: i,
                   })
                 : null,
@@ -202,15 +202,15 @@ function P(e) {
         };
     return (0, l.jsxs)("li", {
         className: o()(
-            A.connectedAccountContainer,
-            null != a && a.length > 0 ? A.connectedAccountContainerWithMetadata : null,
+            T.connectedAccountContainer,
+            null != a && a.length > 0 ? T.connectedAccountContainerWithMetadata : null,
             t,
         ),
         children: [
             (0, l.jsx)("div", {
-                className: A.connectedAccount,
+                className: T.connectedAccount,
                 children: (0, l.jsxs)(c.P3F, {
-                    className: o()(A.connectedAccountNameContainer, A.connectedAccountNameContainerClickable),
+                    className: o()(T.connectedAccountNameContainer, T.connectedAccountNameContainerClickable),
                     onClick: u,
                     children: [
                         null != n.platform_name
@@ -222,13 +222,13 @@ function P(e) {
                             : null,
                         null != n.platform_username
                             ? (0, l.jsx)("div", {
-                                  className: A.connectedAccountName,
+                                  className: T.connectedAccountName,
                                   children: (0, l.jsx)("div", {
-                                      className: A.connectedAccountNameTextContainer,
+                                      className: T.connectedAccountNameTextContainer,
                                       children: (0, l.jsx)(c.Text, {
                                           variant: "text-sm/medium",
                                           color: "interactive-active",
-                                          className: A.connectedAccountNameText,
+                                          className: T.connectedAccountNameText,
                                           children: n.platform_username,
                                       }),
                                   }),
@@ -239,13 +239,13 @@ function P(e) {
             }),
             null != a && a.length > 0
                 ? (0, l.jsx)("div", {
-                      className: o()(A.connectedAccountChildren, A.connectedAccountChildrenNoIcon),
+                      className: o()(T.connectedAccountChildren, T.connectedAccountChildrenNoIcon),
                       children: a,
                   })
                 : null,
             (0, l.jsx)("div", {
                 children: (0, l.jsx)(c.P3F, {
-                    className: A.connectedAccountPoweredBy,
+                    className: T.connectedAccountPoweredBy,
                     onClick: u,
                     children: (0, l.jsx)(c.Text, {
                         variant: "text-xs/normal",
@@ -253,7 +253,7 @@ function P(e) {
                         children: N.intl.format(N.t.zIT9YA, {
                             applicationHook: () =>
                                 (0, l.jsxs)("div", {
-                                    className: A.connectedAccountPoweredByText,
+                                    className: T.connectedAccountPoweredByText,
                                     children: [
                                         null != n.application.bot
                                             ? (0, l.jsx)(d.Z, {
@@ -281,7 +281,7 @@ function E(e) {
     if (null == n || 0 === n.length) return null;
     let a = n.map((e) =>
             (0, l.jsx)(
-                T,
+                A,
                 {
                     connectedAccount: e,
                     theme: s,
@@ -298,14 +298,14 @@ function E(e) {
         e % 2 == 0 ? c.push(n) : d.push(n);
     }
     return (0, l.jsxs)("ul", {
-        className: o()(A.connectedAccounts, i),
+        className: o()(T.connectedAccounts, i),
         children: [
             (0, l.jsx)("div", {
-                className: A.connectedAccountsColumn,
+                className: T.connectedAccountsColumn,
                 children: c,
             }),
             (0, l.jsx)("div", {
-                className: A.connectedAccountsColumn,
+                className: T.connectedAccountsColumn,
                 children: d,
             }),
         ],

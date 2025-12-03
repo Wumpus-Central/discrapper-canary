@@ -17,8 +17,8 @@ var r = n(54381),
     _ = n(611004),
     y = n(770092),
     O = n(315322),
-    j = n(981631),
-    x = n(921944),
+    x = n(981631),
+    j = n(921944),
     v = n(388032),
     C = n(865239);
 function I(e) {
@@ -79,7 +79,7 @@ function E(e) {
         S = (0, y.I)(t),
         { totalFilters: E } = (0, b.p4)(S, t),
         P = i.useMemo(() => {
-            if (t.type === j.aib.DMS) {
+            if (t.type === x.aib.DMS) {
                 var e, n;
                 let t = null != (n = null == (e = (0, f.$G)(S).channel_id) ? void 0 : e.length) ? n : 0;
                 return t > 0 ? v.intl.format(v.t.A2dqWG, { filterCount: t }) : v.intl.string(v.t.tc619d);
@@ -92,13 +92,13 @@ function E(e) {
         M = D === s.z.CROSS_DM_SEARCH_SETTING_EDUCATION_POPOVER,
         k = i.useCallback(
             (e) => {
-                null != e && M && L(x.L.USER_DISMISS), N(e);
+                null != e && M && L(j.L.USER_DISMISS), N(e);
             },
             [L, M],
         ),
         U = i.useCallback(
             (e) => {
-                L("user:explicit" === e ? x.L.USER_DISMISS : x.L.AUTO_DISMISS);
+                L("user:explicit" === e ? j.L.USER_DISMISS : j.L.AUTO_DISMISS);
             },
             [L],
         ),
@@ -107,7 +107,7 @@ function E(e) {
         }, [t, k]),
         H = i.useMemo(() => (E > 0 ? v.intl.format(v.t.uaR4sI, { filterCount: E }) : v.intl.string(v.t.UdhTtk)), [E]),
         F = (0, g.UX)({ location: "SearchHeader" }),
-        B = t.type === j.aib.DMS || t.type === j.aib.CHANNEL,
+        B = t.type === x.aib.DMS || t.type === x.aib.CHANNEL,
         V = i.useMemo(
             () =>
                 I && F
@@ -186,17 +186,17 @@ function E(e) {
                               children: [
                                   (0, r.jsx)(d.njP.Item, {
                                       className: C.searchHeaderTab,
-                                      id: j.QIO.NEWEST,
+                                      id: x.QIO.NEWEST,
                                       children: v.intl.string(v.t.rLjqbS),
                                   }),
                                   (0, r.jsx)(d.njP.Item, {
                                       className: C.searchHeaderTab,
-                                      id: j.QIO.OLDEST,
+                                      id: x.QIO.OLDEST,
                                       children: v.intl.string(v.t.a1BaUr),
                                   }),
                                   (0, r.jsx)(d.njP.Item, {
                                       className: C.searchHeaderTab,
-                                      id: j.QIO.MOST_RELEVANT,
+                                      id: x.QIO.MOST_RELEVANT,
                                       children: v.intl.string(v.t.FtR97k),
                                   }),
                               ],
@@ -255,7 +255,7 @@ function T(e) {
                     color: "text-muted",
                     children: (0, r.jsx)(d.Anchor, {
                         className: C.helpdeskLink,
-                        href: h.Z.getArticleURL(j.BhN.SEARCH_INDEXING),
+                        href: h.Z.getArticleURL(x.BhN.SEARCH_INDEXING),
                         children: v.intl.string(v.t["G3EA+4"]),
                     }),
                 }),
@@ -269,7 +269,7 @@ function N() {
         children: [
             (0, r.jsx)(d.Text, {
                 variant: "text-md/medium",
-                color: "header-secondary",
+                color: "text-default",
                 children: v.intl.string(v.t.uixzLf),
             }),
             (0, r.jsx)(P, {}),
@@ -290,7 +290,7 @@ function R(e) {
                   i,
                   (0, r.jsx)(d.Text, {
                       variant: "text-xs/medium",
-                      color: "text-secondary",
+                      color: "text-subtle",
                       children: n,
                   }),
               ],
@@ -322,11 +322,11 @@ function w(e) {
                         }),
                         e)
                     ) {
-                        let e = { type: j.aib.DMS };
+                        let e = { type: x.aib.DMS };
                         _.Z.transitionStateToSearchContext(n, e, _.Z.cleanUpPrivateChannelSearchState);
                     } else {
                         let e = {
-                            type: j.aib.CHANNEL,
+                            type: x.aib.CHANNEL,
                             channelId: l,
                         };
                         _.Z.transitionStateToSearchContext(n, e);
@@ -336,7 +336,7 @@ function w(e) {
             },
             [m, s, n, l],
         ),
-        [y, x] = i.useMemo(
+        [y, j] = i.useMemo(
             () => [
                 m ? v.intl.string(v.t["8lklch"]) : v.intl.string(v.t.ji3jTF),
                 m ? v.intl.string(v.t.RMQZCa) : v.intl.string(v.t["v/PagC"]),
@@ -405,7 +405,7 @@ function w(e) {
                 shouldShow: u,
                 onRequestClose: c,
                 title: y,
-                body: x,
+                body: j,
                 caretConfig: C,
                 badge: "new",
             }),
@@ -419,15 +419,15 @@ function A(e) {
             () => [
                 {
                     label: v.intl.string(v.t.CbaapP),
-                    value: j.QIO.NEWEST,
+                    value: x.QIO.NEWEST,
                 },
                 {
                     label: v.intl.string(v.t.OukXZj),
-                    value: j.QIO.OLDEST,
+                    value: x.QIO.OLDEST,
                 },
                 {
                     label: v.intl.string(v.t.q8gB52),
-                    value: j.QIO.MOST_RELEVANT,
+                    value: x.QIO.MOST_RELEVANT,
                 },
             ],
             [],

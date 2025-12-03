@@ -67,7 +67,7 @@ let c = () =>
                                     }),
                                     (0, i.jsx)(l.Text, {
                                         variant: "text-sm/medium",
-                                        color: "header-secondary",
+                                        color: "text-default",
                                         children: o.intl.string(o.t.nwpqyc),
                                     }),
                                 ],

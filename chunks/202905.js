@@ -6,8 +6,8 @@ var r = n(54381),
     s = n(442837),
     o = n(481060),
     c = n(944163),
-    d = n(65361),
-    u = n(798476),
+    u = n(65361),
+    d = n(798476),
     g = n(434404),
     m = n(999382),
     p = n(548522),
@@ -42,7 +42,7 @@ function _(e) {
         })),
         v = null == n ? void 0 : n.id,
         O = (0, s.e7)([c.Z], () => c.Z.get(v)),
-        { fetchGuildProfile: C } = (0, d.u)(v),
+        { fetchGuildProfile: C } = (0, u.u)(v),
         y = (null == _ ? void 0 : _.visibility) == null || !l.Y.VISIBLE.has(null == _ ? void 0 : _.visibility),
         N = (null == _ ? void 0 : _.visibility) === l.k.PUBLIC_WITH_RECRUITMENT;
     i.useEffect(() => {
@@ -70,7 +70,7 @@ function _(e) {
             (0, r.jsx)(a.xvT, {
                 tag: "p",
                 variant: "text-sm/medium",
-                color: "text-secondary",
+                color: "text-subtle",
                 className: x.applicationBody,
                 children: b.intl.string(b.t.Z7TCtd),
             }),
@@ -100,7 +100,7 @@ function _(e) {
                             }),
                             (0, r.jsx)(a.xvT, {
                                 variant: "text-sm/normal",
-                                color: "text-secondary",
+                                color: "text-subtle",
                                 children: b.intl.string(b.t["3TSZYK"]),
                             }),
                             y &&
@@ -127,7 +127,7 @@ function _(e) {
                             className: x.previewWrapper,
                             children: [
                                 (0, r.jsx)("div", { className: x.gradient }),
-                                (0, r.jsx)(u.ZP, {
+                                (0, r.jsx)(d.ZP, {
                                     className: x.preview,
                                     profile: E,
                                     CTAOverride: (0, r.jsx)(a.zxk, {

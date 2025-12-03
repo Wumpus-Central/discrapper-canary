@@ -90,7 +90,7 @@ let O = (e) => {
                               children: S,
                           }),
                           (0, i.jsx)(a.Text, {
-                              color: "header-secondary",
+                              color: "text-default",
                               variant: "text-sm/normal",
                               children: I,
                           }),

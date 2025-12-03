@@ -42,7 +42,7 @@ function f(e) {
               children: [
                   (0, r.jsx)(o.xvT, {
                       variant: "text-lg/normal",
-                      color: "text-primary",
+                      color: "text-strong",
                       children: (0, r.jsx)("div", {
                           dangerouslySetInnerHTML: { __html: null != (t = n.QuestionText_Unsafe) ? t : "" },
                       }),

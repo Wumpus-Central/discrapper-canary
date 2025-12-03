@@ -171,7 +171,7 @@ function G(e) {
                                           }),
                                           (0, r.jsx)(c.Text, {
                                               variant: "text-sm/medium",
-                                              color: "header-secondary",
+                                              color: "text-default",
                                               children:
                                                   null != (l = null == x ? void 0 : x.name)
                                                       ? l
@@ -315,7 +315,7 @@ function Z(e) {
                         position: "bottom",
                         children: (0, r.jsx)(c.Text, {
                             variant: "text-xs/medium",
-                            color: "text-tertiary",
+                            color: "text-muted",
                             children: (0, r.jsx)("s", { children: i }),
                         }),
                     }),

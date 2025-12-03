@@ -75,7 +75,7 @@ function y(e) {
     return "string" == typeof e
         ? (0, r.jsx)(p.x, {
               variant: "text-md/normal",
-              color: "text-secondary",
+              color: "text-subtle",
               children: e,
           })
         : e;

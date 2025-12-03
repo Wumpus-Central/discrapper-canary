@@ -47,7 +47,7 @@ function g() {
                 children: [
                     (0, r.jsx)(o.Heading, {
                         variant: "heading-lg/semibold",
-                        color: "text-primary",
+                        color: "text-strong",
                         children: t,
                     }),
                     (0, r.jsx)(o.Text, {

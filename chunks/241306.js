@@ -31,12 +31,12 @@ function u() {
                                 children: [
                                     (0, r.jsx)(l.X6q, {
                                         variant: "heading-lg/semibold",
-                                        color: "text-primary",
+                                        color: "text-strong",
                                         children: e.name,
                                     }),
                                     (0, r.jsx)(l.xvT, {
                                         variant: "text-md/medium",
-                                        color: "text-secondary",
+                                        color: "text-subtle",
                                         children: null == u ? void 0 : u.name,
                                     }),
                                 ],
@@ -57,12 +57,12 @@ function u() {
                                                 children: [
                                                     (0, r.jsx)(l.X6q, {
                                                         variant: "heading-sm/semibold",
-                                                        color: "text-primary",
+                                                        color: "text-strong",
                                                         children: e.title,
                                                     }),
                                                     (0, r.jsx)(l.xvT, {
                                                         variant: "text-sm/medium",
-                                                        color: "text-tertiary",
+                                                        color: "text-muted",
                                                         children: e.description,
                                                     }),
                                                 ],

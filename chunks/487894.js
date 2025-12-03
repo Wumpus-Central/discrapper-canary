@@ -8,8 +8,8 @@ var l = n(481060),
     i = n(779696);
 function c(e) {
     let { channel: t, header: n, startThread: c } = e,
-        d = (0, s.NE)(t),
-        u = (0, s.Xu)(t);
+        u = (0, s.NE)(t),
+        d = (0, s.Xu)(t);
     return (0, r.jsxs)("div", {
         className: i.container,
         children: [
@@ -34,11 +34,11 @@ function c(e) {
                 children: n,
             }),
             (0, r.jsx)(l.Text, {
-                color: "header-secondary",
+                color: "text-default",
                 variant: "text-md/normal",
                 children: o.intl.string(o.t.jmq9GC),
             }),
-            d || u
+            u || d
                 ? (0, r.jsx)("div", {
                       "data-button-hoisted-classname-wrapper": !0,
                       className: i.cta,

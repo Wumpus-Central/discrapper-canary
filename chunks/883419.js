@@ -1,6 +1,6 @@
 n.d(t, { Z: () => S }), n(388685), n(997841);
-var r = n(54381),
-    i = n(473749),
+var i = n(54381),
+    r = n(473749),
     l = n(512722),
     a = n.n(l),
     o = n(442837),
@@ -55,42 +55,42 @@ function S(e) {
             setHasAcceptedTerms: K,
         } = (0, f.JL)();
     a()(null != W, "Expected plan to be selected");
-    let U = i.useRef(null),
+    let U = r.useRef(null),
         [X, $] = (0, c.Z)(!1, 500),
         ee = null == V ? void 0 : V.guild_id,
         et = (0, o.e7)([p.Z], () => p.Z.getGuild(ee), [ee]),
-        [en, er] = i.useState(null),
-        ei = (0, m.KW)(null != (t = null == z ? void 0 : z.flags) ? t : 0);
-    i.useEffect(() => {
+        [en, ei] = r.useState(null),
+        er = (0, m.KW)(null != (t = null == z ? void 0 : z.flags) ? t : 0);
+    r.useEffect(() => {
         null != H && null != U.current && U.current.scrollIntoView({ behavior: "smooth" });
     }, [H]);
-    let el = i.useCallback(
+    let el = r.useCallback(
             (e) => {
                 I(e), P(b.h8.CONFIRM);
             },
             [P, I],
         ),
-        ea = i.useRef(null);
-    if (Q === h.A.PURCHASING) return (0, r.jsx)(j.Z, {});
+        ea = r.useRef(null);
+    if (Q === h.A.PURCHASING) return (0, i.jsx)(j.Z, {});
     let eo = () => {
         P(b.h8.ADD_PAYMENT_STEPS);
     };
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsx)(g.Z, { className: C.breadcrumbs }),
-            (0, r.jsxs)(v.C3, {
+            (0, i.jsx)(g.Z, { className: C.breadcrumbs }),
+            (0, i.jsxs)(v.C3, {
                 children: [
-                    (0, r.jsx)(y.Z, {}),
-                    ei &&
-                        (0, r.jsxs)("div", {
+                    (0, i.jsx)(y.Z, {}),
+                    er &&
+                        (0, i.jsxs)("div", {
                             className: C.userSubscriptionDetailsContainer,
                             children: [
-                                (0, r.jsx)(s.Text, {
+                                (0, i.jsx)(s.Text, {
                                     variant: "eyebrow",
-                                    color: "header-secondary",
+                                    color: "text-default",
                                     children: O.intl.string(O.t.nf5LOU),
                                 }),
-                                (0, r.jsx)(s.Text, {
+                                (0, i.jsx)(s.Text, {
                                     variant: "text-xs/medium",
                                     color: "interactive-normal",
                                     children: O.intl.format(O.t.y4n0GS, {
@@ -99,19 +99,19 @@ function S(e) {
                                 }),
                             ],
                         }),
-                    !ei &&
-                        (0, r.jsx)("div", {
+                    !er &&
+                        (0, i.jsx)("div", {
                             className: C.guildPickerContainer,
-                            children: (0, r.jsx)(s.gNt, {
+                            children: (0, i.jsx)(s.gNt, {
                                 label: O.intl.string(O.t["5qyruI"]),
-                                children: (0, r.jsxs)("div", {
+                                children: (0, i.jsxs)("div", {
                                     className: C.guildNameContainer,
                                     children: [
-                                        (0, r.jsx)(s.Text, {
+                                        (0, i.jsx)(s.Text, {
                                             variant: "text-md/normal",
                                             children: O.intl.string(O.t.dBih7e),
                                         }),
-                                        (0, r.jsx)(s.Text, {
+                                        (0, i.jsx)(s.Text, {
                                             variant: "text-md/normal",
                                             lineClamp: 1,
                                             children:
@@ -124,7 +124,7 @@ function S(e) {
                             }),
                         }),
                     null == A
-                        ? (0, r.jsx)(u.Z, {
+                        ? (0, i.jsx)(u.Z, {
                               selectedPlanId: W.id,
                               planGroup: T,
                               paymentSources: L,
@@ -138,12 +138,12 @@ function S(e) {
                               hasLegalTermsFlash: X,
                               trialFooterMessageOverride: N,
                               reviewWarningMessage: E,
-                              metadata: ei ? void 0 : V,
+                              metadata: er ? void 0 : V,
                               purchaseState: Q,
                               hideSubscriptionDetails: !0,
                               handleClose: Z,
                           })
-                        : (0, r.jsx)(d.Z, {
+                        : (0, i.jsx)(d.Z, {
                               premiumSubscription: A,
                               paymentSources: L,
                               priceOptions: R,
@@ -154,7 +154,7 @@ function S(e) {
                               legalTermsNodeRef: ea,
                               hasLegalTermsFlash: X,
                               onInvoiceError: (e) => {
-                                  er(e);
+                                  ei(e);
                               },
                               planGroup: T,
                               currencies: F,
@@ -165,8 +165,8 @@ function S(e) {
                           }),
                 ],
             }),
-            (0, r.jsx)(v.O3, {
-                children: (0, r.jsx)(x.Z, {
+            (0, i.jsx)(v.O3, {
+                children: (0, i.jsx)(x.Z, {
                     premiumSubscription: null != A ? A : null,
                     setPurchaseState: q,
                     onBack: () => null != S && P(S),
@@ -180,10 +180,10 @@ function S(e) {
                     planGroup: T,
                     purchaseTokenAuthState: M,
                     openInvoiceId: k,
-                    metadata: ei ? void 0 : V,
+                    metadata: er ? void 0 : V,
                     backButtonEligible: l,
                     invoiceError: en,
-                    disablePurchase: (null == V ? void 0 : V.guild_id) == null && !ei,
+                    disablePurchase: (null == V ? void 0 : V.guild_id) == null && !er,
                     onPaymentSourceAdd: eo,
                 }),
             }),

@@ -6,8 +6,8 @@ var r = n(54381),
     s = n(481060),
     o = n(210887),
     c = n(430824),
-    d = n(999382),
-    u = n(8426),
+    u = n(999382),
+    d = n(8426),
     g = n(969632),
     m = n(998164),
     p = n(340189),
@@ -23,7 +23,7 @@ var r = n(54381),
     y = n(847950);
 function N(e) {
     let { guild: t, saveOnClose: n } = e,
-        [c, d] = i.useState("new"),
+        [c, u] = i.useState("new"),
         N = i.useMemo(
             () => [
                 {
@@ -41,7 +41,7 @@ function N(e) {
     i.useEffect(
         () => () => {
             let e = g.Z.getSettings();
-            (0, u.oo)(t.id, e);
+            (0, d.oo)(t.id, e);
         },
         [n, t.id],
     );
@@ -61,7 +61,7 @@ function N(e) {
                         className: _.descriptionSection,
                         children: (0, r.jsx)(s.Text, {
                             variant: "text-sm/medium",
-                            color: "header-secondary",
+                            color: "text-default",
                             children: j.intl.string(j.t.DvHCq5),
                         }),
                     }),
@@ -79,7 +79,7 @@ function N(e) {
                         className: _.descriptionSection,
                         children: (0, r.jsx)(s.Text, {
                             variant: "text-sm/medium",
-                            color: "header-secondary",
+                            color: "text-default",
                             children: j.intl.format(j.t["/lWYYS"], {}),
                         }),
                     }),
@@ -99,7 +99,7 @@ function N(e) {
                         children: [
                             (0, r.jsx)(s.Text, {
                                 variant: "text-sm/medium",
-                                color: "header-secondary",
+                                color: "text-default",
                                 children: j.intl.string(j.t.YnvKVE),
                             }),
                             (0, r.jsxs)("ul", {
@@ -109,7 +109,7 @@ function N(e) {
                                         children: (0, r.jsx)(s.Text, {
                                             tag: "span",
                                             variant: "text-sm/medium",
-                                            color: "header-secondary",
+                                            color: "text-default",
                                             children: j.intl.string(j.t["6jEvRU"]),
                                         }),
                                     }),
@@ -117,7 +117,7 @@ function N(e) {
                                         children: (0, r.jsx)(s.Text, {
                                             tag: "span",
                                             variant: "text-sm/medium",
-                                            color: "header-secondary",
+                                            color: "text-default",
                                             children: j.intl.string(j.t["Fq+UsH"]),
                                         }),
                                     }),
@@ -125,7 +125,7 @@ function N(e) {
                                         children: (0, r.jsx)(s.Text, {
                                             tag: "span",
                                             variant: "text-sm/medium",
-                                            color: "header-secondary",
+                                            color: "text-default",
                                             children: j.intl.string(j.t.LeEPoH),
                                         }),
                                     }),
@@ -148,7 +148,7 @@ function N(e) {
                         className: _.centeredSection,
                         children: (0, r.jsx)(s.Text, {
                             variant: "text-sm/medium",
-                            color: "header-secondary",
+                            color: "text-default",
                             children: j.intl.string(j.t.EVV6uZ),
                         }),
                     }),
@@ -160,7 +160,7 @@ function N(e) {
                     (0, r.jsx)(s.sY7, {
                         options: N,
                         value: c,
-                        onChange: (e) => d(e.value),
+                        onChange: (e) => u(e.value),
                         look: "pill",
                     }),
                 ],
@@ -170,8 +170,8 @@ function N(e) {
 }
 function E(e) {
     let { saveOnClose: t } = e,
-        n = (0, l.e7)([d.Z, c.Z], () => {
-            let e = d.Z.getGuildId();
+        n = (0, l.e7)([u.Z, c.Z], () => {
+            let e = u.Z.getGuildId();
             return c.Z.getGuild(e);
         });
     return null == n

@@ -1,13 +1,13 @@
-t.d(e, { Z: () => C });
-var o = t(54381);
-t(473749);
-var i = t(481060),
-    r = t(63063),
-    s = t(376340),
-    l = t(981631),
-    a = t(388032),
-    c = t(224942),
-    d = t(38920);
+e.d(t, { Z: () => C });
+var o = e(54381);
+e(473749);
+var i = e(481060),
+    r = e(63063),
+    s = e(376340),
+    l = e(981631),
+    a = e(388032),
+    c = e(224942),
+    d = e(38920);
 function u() {
     return (0, o.jsx)("div", {
         className: c.__invalid_getCrunchyrollApp,
@@ -15,7 +15,7 @@ function u() {
             className: c.__invalid_getCrunchyrollAppBody,
             children: (0, o.jsx)(i.Text, {
                 variant: "text-sm/medium",
-                color: "header-secondary",
+                color: "text-default",
                 children: (0, o.jsx)(i.Anchor, {
                     href: r.Z.getArticleURL(l.BhN.CRUNCHYROLL_CONNECTION),
                     children: a.intl.string(a.t.hvVgAZ),
@@ -25,7 +25,7 @@ function u() {
     });
 }
 function C(n) {
-    let { onClose: e } = n;
+    let { onClose: t } = n;
     return (0, o.jsx)(s.L, {
         img: (0, o.jsx)("img", {
             src: d,
@@ -36,6 +36,6 @@ function C(n) {
         title: a.intl.string(a.t.Fnvxvk),
         body: a.intl.string(a.t.YwXceg),
         content: (0, o.jsx)(u, {}),
-        onClose: e,
+        onClose: t,
     });
 }

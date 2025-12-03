@@ -1,37 +1,37 @@
-t.d(s, { default: () => p });
-var n = t(54381);
-t(473749);
-var e = t(793030),
-    r = t(481060),
-    o = t(546957),
-    a = t(190014),
-    d = t(301812),
-    l = t(988043),
-    c = t(919539),
-    u = t(526761),
-    R = t(388032);
-function g(i) {
-    let { guildId: s } = i;
-    return (0, n.jsxs)(o.Z, {
+s.d(t, { default: () => f });
+var n = s(54381);
+s(473749);
+var e = s(793030),
+    r = s(481060),
+    l = s(546957),
+    o = s(190014),
+    a = s(301812),
+    d = s(988043),
+    c = s(919539),
+    u = s(526761),
+    R = s(388032);
+function x(i) {
+    let { guildId: t } = i;
+    return (0, n.jsxs)(l.Z, {
         children: [
-            (0, n.jsx)(l.Z, {
+            (0, n.jsx)(d.Z, {
                 ingress: u.f4.SERVER_PRIVACY_MODAL,
-                guildId: s,
+                guildId: t,
             }),
             (0, n.jsx)(c.Z, {
                 ingress: u.f4.SERVER_PRIVACY_MODAL,
-                guildId: s,
-            }),
-            (0, n.jsx)(d.Z, {
-                ingress: u.f4.SERVER_PRIVACY_MODAL,
-                guildId: s,
+                guildId: t,
             }),
             (0, n.jsx)(a.Z, {
                 ingress: u.f4.SERVER_PRIVACY_MODAL,
-                guildId: s,
+                guildId: t,
+            }),
+            (0, n.jsx)(o.Z, {
+                ingress: u.f4.SERVER_PRIVACY_MODAL,
+                guildId: t,
             }),
             (0, n.jsx)(r.Text, {
-                color: "header-secondary",
+                color: "text-default",
                 variant: "text-sm/normal",
                 children: R.intl.format(R.t.LNsV04, {
                     policyLink: "https://discord.com/safety/360043709612-our-policies",
@@ -40,13 +40,13 @@ function g(i) {
         ],
     });
 }
-function p(i) {
-    let { guild: s, transitionState: t, onClose: r } = i,
-        o = "".concat(R.intl.string(R.t.BayiAo), "\u2014").concat(null != s ? s.name : "??");
+function f(i) {
+    let { guild: t, transitionState: s, onClose: r } = i,
+        l = "".concat(R.intl.string(R.t.BayiAo), "\u2014").concat(null != t ? t.name : "??");
     return (0, n.jsx)(e.Modal, {
-        transitionState: t,
+        transitionState: s,
         size: "sm",
-        title: o,
+        title: l,
         actions: [
             {
                 onClick: () => r(),
@@ -55,6 +55,6 @@ function p(i) {
             },
         ],
         onClose: () => Promise.resolve(r()),
-        children: (0, n.jsx)(g, { guildId: s.id }),
+        children: (0, n.jsx)(x, { guildId: t.id }),
     });
 }

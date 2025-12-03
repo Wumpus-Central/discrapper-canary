@@ -20,8 +20,8 @@ let O = "hTKzmak",
         (o = ""),
         null == r && ((r = location.host), (o = m.Z5c.INVITE(""))),
         "".concat(location.protocol, "//").concat(r).concat(o, "/")),
-    E = [O, "".concat(S).concat(O), "".concat(S).concat("wumpus-friends")],
-    b = (e) => {
+    b = [O, "".concat(S).concat(O), "".concat(S).concat("wumpus-friends")],
+    E = (e) => {
         let { onClick: t } = e;
         return (0, i.jsxs)(s.P3F, {
             className: I.rowContainer,
@@ -116,7 +116,7 @@ function g(e) {
                         children: f.intl.string(f.t.riOUtB),
                     }),
                     (0, i.jsx)(s.Text, {
-                        color: "header-secondary",
+                        color: "text-default",
                         variant: "text-sm/normal",
                         children: f.intl.string(f.t["7jub2t"]),
                     }),
@@ -146,12 +146,12 @@ function g(e) {
                     }),
                     (0, i.jsx)(s.Text, {
                         variant: "text-sm/medium",
-                        color: "text-secondary",
+                        color: "text-subtle",
                         children: f.intl.string(f.t.Bnq46H),
                     }),
                     (0, i.jsx)("div", {
                         className: I.sampleLinks,
-                        children: E.map((e) =>
+                        children: b.map((e) =>
                             (0, i.jsx)(
                                 s.P3F,
                                 {
@@ -163,7 +163,7 @@ function g(e) {
                             ),
                         ),
                     }),
-                    (0, i.jsx)(b, { onClick: n }),
+                    (0, i.jsx)(E, { onClick: n }),
                 ],
             }),
             (0, i.jsxs)(s.mzw, {

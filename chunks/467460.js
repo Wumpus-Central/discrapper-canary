@@ -18,7 +18,7 @@ let p = (e) => {
             className: u.digit,
             children: (0, r.jsx)(a.Text, {
                 variant: "text-xs/semibold",
-                color: "text-primary",
+                color: "text-strong",
                 children: t,
             }),
         });

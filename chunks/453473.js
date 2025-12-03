@@ -315,7 +315,7 @@ function z(e) {
                   }),
                   (0, r.jsx)(_.Heading, {
                       variant: "text-md/semibold",
-                      color: "header-secondary",
+                      color: "text-default",
                       children: null != t.saveData.dueAt ? j.intl.string(j.t["wuQm+j"]) : j.intl.string(j.t.o572Fe),
                   }),
                   (0, r.jsx)(b.ZP, {

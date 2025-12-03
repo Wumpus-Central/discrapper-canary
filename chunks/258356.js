@@ -1,6 +1,6 @@
 n.d(t, {
     X: () => p,
-    Z: () => m,
+    Z: () => f,
 }),
     n(953529);
 var r = n(54381);
@@ -103,7 +103,7 @@ function p(e) {
                 (0, r.jsx)("details", {
                     className: h.guildDescriptionContainer,
                     children: (0, r.jsx)(i.Text, {
-                        color: "header-secondary",
+                        color: "text-default",
                         variant: "text-sm/normal",
                         children: o,
                     }),
@@ -111,7 +111,7 @@ function p(e) {
         ],
     });
 }
-function m(e) {
+function f(e) {
     let { invite: t, channel: n, isSubmitting: i, onAcceptInvite: s } = e,
         { guild_scheduled_event: l } = t;
     return null != l

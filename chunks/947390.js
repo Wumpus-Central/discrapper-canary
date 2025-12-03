@@ -11,7 +11,7 @@ function l(e) {
         className: a()(s.pill, s.pillGradient, n),
         children: (0, r.jsx)(o.Text, {
             variant: "text-xxs/bold",
-            color: "text-primary",
+            color: "text-strong",
             className: s.pillText,
             children: t,
         }),

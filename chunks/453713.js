@@ -215,7 +215,7 @@ let O = s()((e) => {
                                 }),
                                 (0, r.jsx)(p.Text, {
                                     variant: "text-xs/medium",
-                                    color: "text-secondary",
+                                    color: "text-subtle",
                                     className: h.variantLabel,
                                     children: d ? m.intl.string(m.t.wbgaj6) : N,
                                 }),

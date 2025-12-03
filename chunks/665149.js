@@ -105,7 +105,7 @@ let y = 24,
                 forceLevel: f,
                 children: (0, r.jsx)(c.Heading, {
                     variant: "text-md/medium",
-                    color: d ? "header-secondary" : void 0,
+                    color: d ? "text-default" : void 0,
                     className: o()(t, p.title, { [p.titleClickable]: null != s }),
                     id: u,
                     children: i,

@@ -181,7 +181,7 @@ function S(e) {
                           className: w.bottomCenterContent,
                           children: (0, r.jsx)(c.Heading, {
                               variant: "heading-sm/normal",
-                              color: "header-secondary",
+                              color: "text-default",
                               children: T.intl.format(T.t.kI6UoD, { privacyLink: Z.EYA.PRIVACY }),
                           }),
                       }),

@@ -35,7 +35,7 @@ function E(e) {
             (0, r.jsxs)(l.Text, {
                 className: m.description,
                 variant: "text-md/normal",
-                color: "header-secondary",
+                color: "text-default",
                 children: [
                     (0, r.jsx)("p", { children: _.intl.string(_.t.fev8MQ) }),
                     (0, r.jsx)("p", {

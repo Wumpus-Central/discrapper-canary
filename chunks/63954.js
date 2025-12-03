@@ -15,8 +15,8 @@ var r = n(54381),
     u = n(458708),
     p = n(481060),
     m = n(49436),
-    g = n(509212),
-    f = n(115179),
+    g = n(115179),
+    f = n(254579),
     h = n(455357),
     x = n(210724),
     _ = n(130653),
@@ -192,8 +192,8 @@ function H() {
             U(D(I({}, e), { preview: !0 }));
         }, []),
         [z, G] = s.useState(N.a.UNENROLLED),
-        [K, Y] = s.useState(!1),
-        [X, J] = s.useState(!1),
+        [K, X] = s.useState(!1),
+        [Y, J] = s.useState(!1),
         [$, ee] = s.useState(null),
         et =
             ((Z = H.config),
@@ -305,7 +305,7 @@ function H() {
         F(D(I({}, H), { config: D(I({}, H.config), { colors: D(I({}, H.config.colors), { [e]: t }) }) }));
     }
     function el() {
-        (0, f.Xv)(H.config)
+        (0, g.Xv)(H.config)
             ? (0, R.openQuestCollectibleRewardModal)(H, m.jn.GIFT_INVENTORY_FOR_YOU, m.jn.INTERNAL_PREVIEW_TOOL, !0)
             : (0, R.openQuestsRewardCodeModal)({
                   quest: H,
@@ -341,7 +341,7 @@ function H() {
                                         if (null == e.userStatus) return N.a.UNENROLLED;
                                         if (null != e.userStatus.claimedAt) return N.a.CLAIMED;
                                         if (null != e.userStatus.completedAt) return N.a.COMPLETED_100;
-                                        let t = (0, g.il)(e),
+                                        let t = (0, f.il)(e),
                                             n = t.progressSeconds,
                                             r = t.targetSeconds;
                                         return n / r >= 1
@@ -722,7 +722,7 @@ function H() {
                                 children: [
                                     (null == (d = H.userStatus) ? void 0 : d.claimedAt) != null &&
                                         (0, r.jsx)(p.Text, {
-                                            color: "text-secondary",
+                                            color: "text-subtle",
                                             variant: "text-sm/normal",
                                             children: "The Quest Bar is hidden when the user has claimed the reward.",
                                         }),
@@ -770,7 +770,7 @@ function H() {
                             }),
                             (null == (u = H.userStatus) ? void 0 : u.claimedAt) != null &&
                                 (0, r.jsx)(p.Text, {
-                                    color: "text-secondary",
+                                    color: "text-subtle",
                                     variant: "text-sm/normal",
                                     children:
                                         "The Quest Channel Call Header is hidden when the user has claimed the reward.",
@@ -799,7 +799,7 @@ function H() {
                             label: "Is Participating:",
                             checked: K,
                             onChange: function (e) {
-                                Y(e);
+                                X(e);
                             },
                         }),
                     }),
@@ -810,7 +810,7 @@ function H() {
                                 variant: "heading-sm/semibold",
                                 children: "Quest Card Embed",
                             }),
-                            X
+                            Y
                                 ? (0, r.jsx)(j.W, { questId: H.id })
                                 : (0, r.jsx)(
                                       v.X,
@@ -827,7 +827,7 @@ function H() {
                         className: B.toggleSwitch,
                         children: (0, r.jsx)(p.rsf, {
                             label: "Invalid Quests Embed:",
-                            checked: X,
+                            checked: Y,
                             onChange: J,
                         }),
                     }),

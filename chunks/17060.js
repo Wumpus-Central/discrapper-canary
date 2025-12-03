@@ -438,7 +438,7 @@ function K(e) {
                                 intensity: 1.5,
                                 children: (0, l.jsx)(d.Text, {
                                     variant: "text-md/medium",
-                                    color: er ? "text-feedback-critical" : "text-primary",
+                                    color: er ? "text-feedback-critical" : "text-strong",
                                     children: D.intl.string(D.t.Trx7eJ),
                                 }),
                             }),
@@ -464,7 +464,7 @@ function K(e) {
                         children: [
                             (0, l.jsx)(d.Text, {
                                 variant: "text-md/medium",
-                                color: "text-primary",
+                                color: "text-strong",
                                 children: D.intl.string(D.t.iZufAY),
                             }),
                             (0, l.jsx)(d.Kx8, {
@@ -488,7 +488,7 @@ function K(e) {
                         children: [
                             (0, l.jsx)(d.Text, {
                                 variant: "text-md/medium",
-                                color: "text-primary",
+                                color: "text-strong",
                                 children: D.intl.string(D.t["8+SU+a"]),
                             }),
                             (0, l.jsx)(A, {

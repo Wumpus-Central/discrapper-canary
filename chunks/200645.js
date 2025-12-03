@@ -72,7 +72,7 @@ function E() {
                     }),
                     (0, r.jsx)(o.Text, {
                         variant: "text-sm/normal",
-                        color: "text-secondary",
+                        color: "text-subtle",
                         children: _.intl.format(_.t["8CAL+D"], {
                             helpCenterLink: u.Z.getArticleURL(p.BhN.SYSTEM_SERVICE),
                         }),

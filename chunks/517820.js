@@ -120,11 +120,11 @@ function B(e) {
             children: [
                 (0, r.jsx)(p.Mgn, {
                     size: "xs",
-                    color: f.Z.colors.HEADER_SECONDARY.css,
+                    color: f.Z.colors.TEXT_DEFAULT.css,
                 }),
                 (0, r.jsx)(p.Text, {
                     variant: "text-md/semibold",
-                    color: "header-secondary",
+                    color: "text-default",
                     children: x.intl.string(x.t.VdZCcC),
                 }),
             ],
@@ -144,11 +144,11 @@ function F(e) {
             children: [
                 (0, r.jsx)(p.Mgn, {
                     size: "xs",
-                    color: f.Z.colors.HEADER_SECONDARY.css,
+                    color: f.Z.colors.TEXT_DEFAULT.css,
                 }),
                 (0, r.jsx)(p.Text, {
                     variant: "text-md/semibold",
-                    color: "header-secondary",
+                    color: "text-default",
                     children: x.intl.string(x.t["2qTBw/"]),
                 }),
             ],

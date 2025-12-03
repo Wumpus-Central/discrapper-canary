@@ -13,7 +13,7 @@ function o(e) {
               },
               children: (0, r.jsx)(i.X6q, {
                   variant: "heading-md/semibold",
-                  color: "text-secondary",
+                  color: "text-subtle",
                   children: t,
               }),
           })
@@ -39,7 +39,7 @@ function o(e) {
                   null != n &&
                       (0, r.jsx)(i.xvT, {
                           variant: "text-md/normal",
-                          color: "text-secondary",
+                          color: "text-subtle",
                           children: n,
                       }),
               ],

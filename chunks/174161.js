@@ -86,7 +86,7 @@ function b(e) {
                             (0, r.jsx)("div", { className: g.dotOnline }),
                             (0, r.jsx)(s.Text, {
                                 variant: "text-sm/normal",
-                                color: "text-secondary",
+                                color: "text-subtle",
                                 children: h.intl.format(h.t["LC+S+m"], { membersOnline: t.onlineCount }),
                             }),
                         ],
@@ -97,7 +97,7 @@ function b(e) {
                             (0, r.jsx)("div", { className: g.dot }),
                             (0, r.jsx)(s.Text, {
                                 variant: "text-sm/normal",
-                                color: "text-secondary",
+                                color: "text-subtle",
                                 children: h.intl.format(h.t.zRl6XR, { count: t.memberCount }),
                             }),
                         ],
@@ -108,7 +108,7 @@ function b(e) {
                 className: g.established,
                 children: (0, r.jsx)(s.Text, {
                     variant: "text-sm/normal",
-                    color: "text-secondary",
+                    color: "text-subtle",
                     children: h.intl.format(h.t.zb2Q56, { createdAtDate: c }),
                 }),
             }),

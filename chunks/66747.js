@@ -11,8 +11,8 @@ var r = n(54381),
     C = n(28664),
     m = n(481060),
     b = n(700582),
-    p = n(745735),
-    f = n(906732),
+    f = n(745735),
+    p = n(906732),
     h = n(346486),
     g = n(715903),
     j = n(69882),
@@ -201,7 +201,7 @@ let W = l.memo(function (e) {
                           className: Y.memberGlobalName,
                           children: (0, r.jsx)(m.Text, {
                               variant: "text-xs/normal",
-                              color: "header-secondary",
+                              color: "text-default",
                               tag: "span",
                               children: I.ZP.getUserTag(i),
                           }),
@@ -221,7 +221,7 @@ function X(e) {
     l.useEffect(() => {
         a(J(t.joinedAtTimestamp));
     }, [t.joinedAtTimestamp]),
-        (0, p.Z)(() => {
+        (0, f.Z)(() => {
             a(J(t.joinedAtTimestamp));
         }, 10000);
     let s = i ? "text-brand" : "text-default";
@@ -284,9 +284,9 @@ let $ = l.memo(function (e) {
                 onOpenModerationMenu: s,
                 onOpenMemberView: d,
                 compact: b,
-                hasModViewPanelAccess: p,
+                hasModViewPanelAccess: f,
             } = e,
-            f = (0, u.e7)([S.Z, w.Z], () => S.Z.can(B.Plq.MANAGE_GUILD, w.Z.getGuild(t.guildId)), [t.guildId]),
+            p = (0, u.e7)([S.Z, w.Z], () => S.Z.can(B.Plq.MANAGE_GUILD, w.Z.getGuild(t.guildId)), [t.guildId]),
             { selectedUserIds: h, addUsers: g, removeUser: j } = (0, A.Z)(t.guildId),
             x = (0, M.xC)(t.guildId),
             v = (0, M.hB)(t.guildId, x, t.userId),
@@ -354,7 +354,7 @@ let $ = l.memo(function (e) {
                         isSortedBy: _,
                     }),
                 }),
-                f &&
+                p &&
                     (0, r.jsx)("td", {
                         className: o()(Y.smallCol, { [Y.compact]: b }),
                         children: (0, r.jsx)(k.ZP, {
@@ -380,11 +380,11 @@ let $ = l.memo(function (e) {
                         children: [
                             (0, r.jsx)(C.u, {
                                 asContainer: !0,
-                                text: p ? z.intl.string(z.t.nHfkf4) : z.intl.string(z.t.uTre2y),
+                                text: f ? z.intl.string(z.t.nHfkf4) : z.intl.string(z.t.uTre2y),
                                 children: (0, r.jsx)(m.P3F, {
                                     onClick: d,
                                     className: Y.button,
-                                    children: p
+                                    children: f
                                         ? (0, r.jsx)(N.Z, {
                                               width: et,
                                               height: et,
@@ -429,9 +429,9 @@ let $ = l.memo(function (e) {
                 isHoldingAdvancedInfoKey: C = !1,
                 compact: m = !1,
             } = e,
-            { analyticsLocations: b } = (0, f.ZP)(),
-            p = (0, u.e7)([_.ZP], () => _.ZP.getGuildSidebarState(n), [n]),
-            h = (null == p ? void 0 : p.details.userId) === t,
+            { analyticsLocations: b } = (0, p.ZP)(),
+            f = (0, u.e7)([_.ZP], () => _.ZP.getGuildSidebarState(n), [n]),
+            h = (null == f ? void 0 : f.details.userId) === t,
             g = (0, u.e7)([E.Z], () => E.Z.getEnhancedMember(n, t), [n, t]),
             j = (0, U.zq)(g),
             y = (0, u.e7)([Z.default], () => Z.default.getUser(t), [t]),

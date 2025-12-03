@@ -62,7 +62,7 @@ function f(e) {
         children: [
             (0, r.jsx)(a.Text, {
                 variant: "text-md/medium",
-                color: c ? "text-muted" : "text-primary",
+                color: c ? "text-muted" : "text-strong",
                 className: s.title,
                 children: t,
             }),

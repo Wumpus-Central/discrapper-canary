@@ -41,7 +41,7 @@ function b(e) {
             title: h.intl.string(h.t["0Bf80I"]),
             children: (0, r.jsx)(s.Text, {
                 variant: "text-md/normal",
-                color: "header-secondary",
+                color: "text-default",
                 className: g.unavailableBody,
                 children: h.intl.string(h.t.omH3bq),
             }),

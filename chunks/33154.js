@@ -65,7 +65,7 @@ let h = (e) => {
                         children: v,
                     }),
                     (0, r.jsx)(s.Text, {
-                        color: "header-secondary",
+                        color: "text-default",
                         variant: "text-sm/normal",
                         children: S,
                     }),

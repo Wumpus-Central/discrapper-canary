@@ -1,7 +1,7 @@
 n.d(t, { Z: () => b }), n(953529), n(388685);
 var r = n(54381),
-    a = n(473749),
-    i = n(907331),
+    i = n(473749),
+    a = n(907331),
     l = n(481060),
     s = n(768581),
     o = n(255333),
@@ -12,16 +12,16 @@ var r = n(54381),
     m = n(981631),
     h = n(388032),
     g = n(431085);
-function _(e) {
+function f(e) {
     let { applicationId: t, similarApplications: n, onSelectApplication: l, similarLoadId: s } = e,
         o = (function (e) {
             let { applicationId: t, similarAppIds: n } = e,
-                [r, l] = a.useState(),
-                s = (0, i.O)((e) => {
+                [r, l] = i.useState(),
+                s = (0, a.O)((e) => {
                     e && l(t);
                 });
             return (
-                a.useEffect(() => {
+                i.useEffect(() => {
                     r === t &&
                         (0, c.zZ)(m.rMx.APP_DIRECTORY_RECOMMENDATIONS_VIEWED, {
                             application_id: t,
@@ -32,14 +32,14 @@ function _(e) {
             );
         })({
             applicationId: t,
-            similarAppIds: a.useMemo(() => n.map((e) => e.id), [n]),
+            similarAppIds: i.useMemo(() => n.map((e) => e.id), [n]),
         });
     return (0, r.jsx)("div", {
         className: g.contentContainer,
         ref: o,
         children: n.map((e, n) =>
             (0, r.jsx)(
-                f,
+                _,
                 {
                     applicationId: t,
                     similarApplication: e,
@@ -52,12 +52,12 @@ function _(e) {
         ),
     });
 }
-function f(e) {
-    var t, n, i;
-    let { applicationId: o, similarApplication: u, onSelectApplication: h, position: _, similarLoadId: f } = e,
+function _(e) {
+    var t, n, a;
+    let { applicationId: o, similarApplication: u, onSelectApplication: h, position: f, similarLoadId: _ } = e,
         b = (0, p.Z)({ application: u }),
         x = null == (t = u.categories) ? void 0 : t[0],
-        v = a.useMemo(
+        v = i.useMemo(
             () =>
                 s.ZP.getApplicationIconURL({
                     id: u.id,
@@ -66,17 +66,17 @@ function f(e) {
                 }),
             [u],
         ),
-        C = a.useCallback(() => {
+        C = i.useCallback(() => {
             (0, c.zZ)(m.rMx.APP_DIRECTORY_RECOMMENDATION_CLICKED, {
                 current_page: "product",
                 application_id: o,
                 suggested_application_id: u.id,
-                position: _,
-                load_id: f,
+                position: f,
+                load_id: _,
                 shown_mutual_guilds_count: b.length,
             }),
                 h(u.id);
-        }, [h, u.id, o, b.length, f, _]);
+        }, [h, u.id, o, b.length, _, f]);
     return (0, r.jsxs)(l.P3F, {
         onClick: C,
         className: g.appContainer,
@@ -122,10 +122,10 @@ function f(e) {
             (0, r.jsx)(l.Text, {
                 className: g.appDescription,
                 variant: "text-sm/medium",
-                color: "header-secondary",
+                color: "text-default",
                 lineClamp: 2,
                 children:
-                    null != (i = null == (n = u.directory_entry) ? void 0 : n.short_description) ? i : u.description,
+                    null != (a = null == (n = u.directory_entry) ? void 0 : n.short_description) ? a : u.description,
             }),
             (0, r.jsx)(d.Z, {
                 application: u,
@@ -139,8 +139,8 @@ function f(e) {
     });
 }
 let b = function (e) {
-    let { applicationId: t, fetchState: n, similarApplications: a, onSelectApplication: i, similarLoadId: s } = e;
-    return n !== o.M.FETCHING && (null == a || 0 === a.length)
+    let { applicationId: t, fetchState: n, similarApplications: i, onSelectApplication: a, similarLoadId: s } = e;
+    return n !== o.M.FETCHING && (null == i || 0 === i.length)
         ? null
         : (0, r.jsxs)("div", {
               className: g.sectionContainer,
@@ -155,11 +155,11 @@ let b = function (e) {
                   (0, r.jsx)(u.Z, {
                       loading: n === o.M.FETCHING,
                       children:
-                          null != a
-                              ? (0, r.jsx)(_, {
+                          null != i
+                              ? (0, r.jsx)(f, {
                                     applicationId: t,
-                                    similarApplications: a,
-                                    onSelectApplication: i,
+                                    similarApplications: i,
+                                    onSelectApplication: a,
                                     similarLoadId: s,
                                 })
                               : null,

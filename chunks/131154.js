@@ -25,7 +25,7 @@ function s(e) {
                         (0, i.jsx)("div", {
                             className: c.textInGridContainer,
                             children: (0, i.jsx)(l.Text, {
-                                color: "header-secondary",
+                                color: "text-default",
                                 variant: "text-sm/normal",
                                 className: c.textInGrid,
                                 children: null == e ? void 0 : e.userNick,
@@ -54,7 +54,7 @@ function s(e) {
                             }),
                         }),
                         (0, i.jsx)(l.Text, {
-                            color: "header-secondary",
+                            color: "text-default",
                             variant: "text-sm/normal",
                             className: c.textInGrid,
                             children: o.intl.format(o.t["185ggO"], { count: _ }),

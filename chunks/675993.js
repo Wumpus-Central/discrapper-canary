@@ -144,7 +144,7 @@ function L(e) {
                                 }),
                                 (0, r.jsx)(l.Text, {
                                     variant: "text-sm/normal",
-                                    color: "text-secondary",
+                                    color: "text-subtle",
                                     children: A.intl.string(A.t["8z5B2U"]),
                                 }),
                             ],
@@ -160,7 +160,7 @@ function L(e) {
                                 }),
                                 (0, r.jsx)(l.Text, {
                                     variant: "text-sm/normal",
-                                    color: "text-secondary",
+                                    color: "text-subtle",
                                     children: A.intl.string(A.t["5khEk8"]),
                                 }),
                             ],

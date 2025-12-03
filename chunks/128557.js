@@ -19,8 +19,8 @@ var i = n(54381),
     m = n(434404),
     g = n(330010),
     b = n(978946),
-    y = n(314897),
-    C = n(430824),
+    C = n(314897),
+    y = n(430824),
     v = n(594174),
     _ = n(259580),
     O = n(585483),
@@ -116,22 +116,22 @@ function w(e) {
 }
 function M(e) {
     let { channel: t } = e,
-        l = (0, s.e7)([C.Z], () => (null != t ? C.Z.getGuild(t.getGuildId()) : null), [t]),
+        l = (0, s.e7)([y.Z], () => (null != t ? y.Z.getGuild(t.getGuildId()) : null), [t]),
         p = null != l && j.default.extractTimestamp(l.id) < Date.now() - P._8R,
-        _ = (0, s.e7)([y.default], () => (null == l ? void 0 : l.ownerId) === y.default.getId(), [l]),
+        _ = (0, s.e7)([C.default], () => (null == l ? void 0 : l.ownerId) === C.default.getId(), [l]),
         { canInvite: M, canManageGuild: R, canMessage: L } = (0, f.TE)(t, l),
-        D = (0, s.e7)([v.default], () => {
+        k = (0, s.e7)([v.default], () => {
             var e, t;
             return (
                 (null == (e = v.default.getCurrentUser()) ? void 0 : e.desktop) === !0 ||
                 (null == (t = v.default.getCurrentUser()) ? void 0 : t.mobile) === !0
             );
         }),
-        { guildPopulated: k, guildMessaged: U, guildPersonalized: V } = (0, f.h_)(l),
+        { guildPopulated: D, guildMessaged: U, guildPersonalized: V } = (0, f.h_)(l),
         {
             handleInvite: F,
-            handleMessage: B,
-            handlePersonalize: H,
+            handleMessage: H,
+            handlePersonalize: B,
             handleDownload: G,
             handleAddApplication: z,
         } = (function (e) {
@@ -210,7 +210,7 @@ function M(e) {
                 }, [e]),
             };
         })(l),
-        W = !(D || k || U || V),
+        W = !(k || D || U || V),
         { titleAnimatedStyle: q, opacities: K } = (function (e) {
             let t = (0, d.Z)(() => new o.Z.Value(0)),
                 n = (0, d.Z)(() => new o.Z.Value(0)),
@@ -293,7 +293,7 @@ function M(e) {
                         children: (0, i.jsx)(w, {
                             iconUrl: u.YvY,
                             header: Z.intl.string(Z.t.q9n0Ta),
-                            completed: k,
+                            completed: D,
                             onClick: F,
                         }),
                     },
@@ -311,7 +311,7 @@ function M(e) {
                             iconUrl: u.$_T,
                             header: Z.intl.string(Z.t.c5kxPh),
                             completed: V,
-                            onClick: H,
+                            onClick: B,
                         }),
                     },
                     "customize",
@@ -328,7 +328,7 @@ function M(e) {
                             iconUrl: u.qMX,
                             header: Z.intl.string(Z.t["SoP7+l"]),
                             completed: U,
-                            onClick: B,
+                            onClick: H,
                         }),
                     },
                     "message",
@@ -344,7 +344,7 @@ function M(e) {
                         children: (0, i.jsx)(w, {
                             iconUrl: u.yIb,
                             header: Z.intl.string(Z.t.pGVNI9),
-                            completed: D,
+                            completed: k,
                             onClick: G,
                         }),
                     },
@@ -389,7 +389,7 @@ function M(e) {
                                 children: Z.intl.format(Z.t.rkHVKf, { guildName: l.name }),
                             }),
                             (0, i.jsxs)(u.Text, {
-                                color: "header-secondary",
+                                color: "text-default",
                                 className: a()({
                                     [T.subtitle]: !0,
                                     [T.noChildren]: 0 === Q.length,

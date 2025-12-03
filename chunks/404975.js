@@ -250,7 +250,7 @@ function m(e) {
                     children: (0, r.jsx)(s.Heading, {
                         className: j.label,
                         variant: "heading-sm/medium",
-                        color: "text-tertiary",
+                        color: "text-muted",
                         children: l,
                     }),
                 }),

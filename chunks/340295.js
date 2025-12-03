@@ -15,10 +15,10 @@ var i = n(54381),
 let g = function (e) {
     let { participants: t, channel: n, hasConnectPermission: g } = e,
         b = t.filter(h.Io),
-        y = (0, c.J)(n.guild_id),
-        C = r.useCallback(() => {
-            y ? (0, s.hk)(n.guild_id, () => a.default.selectVoiceChannel(n.id)) : a.default.selectVoiceChannel(n.id);
-        }, [n.id, n.guild_id, y]),
+        C = (0, c.J)(n.guild_id),
+        y = r.useCallback(() => {
+            C ? (0, s.hk)(n.guild_id, () => a.default.selectVoiceChannel(n.id)) : a.default.selectVoiceChannel(n.id);
+        }, [n.id, n.guild_id, C]),
         v = 4 === b.length ? 2 : 3;
     return (0, i.jsxs)("div", {
         className: m.container,
@@ -51,7 +51,7 @@ let g = function (e) {
             (0, i.jsx)("div", {
                 className: m.participantsRow,
                 children: (0, i.jsx)(l.Text, {
-                    color: "header-secondary",
+                    color: "text-default",
                     variant: "text-sm/normal",
                     children:
                         0 === b.length
@@ -77,7 +77,7 @@ let g = function (e) {
                 children: (0, i.jsx)(l.Button, {
                     variant: "overlay-primary",
                     text: g ? f.intl.string(f.t["96ANUN"]) : f.intl.string(f.t.TVBCKZ),
-                    onClick: C,
+                    onClick: y,
                     disabled: !g,
                 }),
             }),

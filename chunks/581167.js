@@ -117,7 +117,7 @@ let f = {
                             children: (0, r.jsx)("div", {
                                 className: a.placeholder,
                                 children: (0, r.jsx)(i.Text, {
-                                    color: "text-secondary",
+                                    color: "text-subtle",
                                     variant: "text-md/medium",
                                     children: "Field",
                                 }),

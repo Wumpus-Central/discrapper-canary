@@ -142,7 +142,7 @@ function I(e) {
         f = (e) =>
             (0, r.jsx)(s.Text, {
                 variant: "text-xs/medium",
-                color: "header-secondary",
+                color: "text-default",
                 tag: "span",
                 children: e,
             });

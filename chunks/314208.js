@@ -6,12 +6,12 @@ var r = n(54381),
     o = n(99690),
     i = n(616780),
     c = n(471445),
-    d = n(937889),
-    u = n(739566),
+    u = n(937889),
+    d = n(739566),
     h = n(267128),
     g = n(884902),
-    m = n(271383),
-    f = n(306680),
+    f = n(271383),
+    m = n(306680),
     j = n(699516),
     v = n(594174),
     x = n(709054),
@@ -19,8 +19,8 @@ var r = n(54381),
     b = n(144140),
     Z = n(91159),
     w = n(217702),
-    y = n(388032),
-    O = n(712335);
+    O = n(388032),
+    y = n(712335);
 function S(e) {
     return e.isActiveThread() ? (0, r.jsx)(N, { channel: e }) : (0, r.jsx)(C, { channel: e });
 }
@@ -38,10 +38,10 @@ function P(e) {
     let { channel: t } = e,
         n = (0, Z.Ok)(t);
     return (0, r.jsxs)(s.Text, {
-        className: O.subtext,
+        className: y.subtext,
         variant: "text-sm/normal",
-        color: "header-secondary",
-        children: [y.intl.string(y.t.Jmh6n9), "\xA0 \u2022 \xA0", (0, Z.Ye)(n)],
+        color: "text-default",
+        children: [O.intl.string(O.t.Jmh6n9), "\xA0 \u2022 \xA0", (0, Z.Ye)(n)],
     });
 }
 function T(e) {
@@ -51,9 +51,9 @@ function T(e) {
             var e;
             return null != (e = v.default.getUser(n.author.id)) ? e : n.author;
         }),
-        { nick: m, colorString: f, colorStrings: p } = (0, u.ZP)(n),
+        { nick: f, colorString: m, colorStrings: p } = (0, d.ZP)(n),
         b = (0, g.X7)(t.guild_id, c.id, p),
-        { isBlocked: y, isIgnored: S } = (0, a.cj)(
+        { isBlocked: O, isIgnored: S } = (0, a.cj)(
             [j.Z],
             () => ({
                 isBlocked: j.Z.isBlockedForMessage(n),
@@ -62,36 +62,36 @@ function T(e) {
             [n],
         ),
         N = l.useMemo(() => {
-            let e = null != n.content && "" !== n.content ? (0, d.ZP)(n, { formatInline: !0 }).content : null,
+            let e = null != n.content && "" !== n.content ? (0, u.ZP)(n, { formatInline: !0 }).content : null,
                 {
                     contentPlaceholder: t,
                     renderedContent: l,
                     trailingIcon: a,
                     leadingIcon: s,
-                } = (0, h.f)(n, e, y, S, O.messageContent, {
-                    trailingIconClass: O.messageContentTrailingIcon,
-                    leadingIconClass: O.messageContentLeadingIcon,
+                } = (0, h.f)(n, e, O, S, y.messageContent, {
+                    trailingIconClass: y.messageContentTrailingIcon,
+                    leadingIconClass: y.messageContentLeadingIcon,
                     iconSize: w.WW,
                 });
             return (0, r.jsxs)(r.Fragment, {
                 children: [s, null != l ? l : (0, r.jsx)("span", { children: t }), a],
             });
-        }, [n, y, S]);
+        }, [n, O, S]);
     return (0, r.jsxs)(s.Text, {
-        className: O.subtext,
+        className: y.subtext,
         variant: "text-sm/normal",
-        color: "header-secondary",
+        color: "text-default",
         children: [
             (0, r.jsx)(o.Z, {
-                className: O.avatar,
+                className: y.avatar,
                 user: c,
                 size: s.EFr.SIZE_16,
             }),
             (0, r.jsx)(s.PUh, {
-                name: m,
-                colorString: f,
+                name: f,
+                colorString: m,
                 colorStrings: b,
-                className: O.authorName,
+                className: y.authorName,
             }),
             ":\xA0",
             N,
@@ -101,34 +101,34 @@ function T(e) {
     });
 }
 function C(e) {
-    var t, n, l, d;
-    let { channel: u } = e,
-        h = (0, a.e7)([f.ZP], () => f.ZP.lastMessageId(u.id)),
+    var t, n, l, u;
+    let { channel: d } = e,
+        h = (0, a.e7)([m.ZP], () => m.ZP.lastMessageId(d.id)),
         j =
             null == h
                 ? new Date(
-                      null != (n = null == (t = u.threadMetadata) ? void 0 : t.archiveTimestamp) ? n : Date.now(),
+                      null != (n = null == (t = d.threadMetadata) ? void 0 : t.archiveTimestamp) ? n : Date.now(),
                   ).getTime()
                 : x.default.extractTimestamp(h);
-    (0, i.$)({ [u.guild_id]: [u.ownerId] }, "ThreadBrowserRowSubtext");
-    let b = (0, a.e7)([v.default], () => v.default.getUser(u.ownerId)),
-        w = (0, a.e7)([m.ZP], () => m.ZP.getMember(u.guild_id, u.ownerId)),
+    (0, i.$)({ [d.guild_id]: [d.ownerId] }, "ThreadBrowserRowSubtext");
+    let b = (0, a.e7)([v.default], () => v.default.getUser(d.ownerId)),
+        w = (0, a.e7)([f.ZP], () => f.ZP.getMember(d.guild_id, d.ownerId)),
         S = (0, g.X7)(
-            u.guild_id,
+            d.guild_id,
             null == b ? void 0 : b.id,
             null != (l = null == w ? void 0 : w.colorStrings) ? l : null,
         ),
-        N = null != (d = (0, c.KS)(u)) ? d : s.or_;
+        N = null != (u = (0, c.KS)(d)) ? u : s.or_;
     return (0, r.jsx)(s.Text, {
-        className: O.subtext,
+        className: y.subtext,
         variant: "text-sm/normal",
-        color: "header-secondary",
+        color: "text-default",
         children:
             null == b
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)("div", {
-                              className: O.noAvatarIcon,
+                              className: y.noAvatarIcon,
                               children: (0, r.jsx)(N, {
                                   width: 10,
                                   height: 10,
@@ -136,23 +136,23 @@ function C(e) {
                                   color: "currentColor",
                               }),
                           }),
-                          y.intl.format(y.t["5Wk9+o"], { time: (0, Z.Ye)(j) }),
+                          O.intl.format(O.t["5Wk9+o"], { time: (0, Z.Ye)(j) }),
                       ],
                   })
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(o.Z, {
-                              className: O.avatar,
+                              className: y.avatar,
                               user: b,
                               size: s.EFr.SIZE_16,
                           }),
-                          y.intl.format(y.t["GFDmd/"], {
+                          O.intl.format(O.t["GFDmd/"], {
                               authorHook(e, t) {
                                   var n, l;
                                   return (0, r.jsx)(
                                       s.PUh,
                                       {
-                                          className: O.startedByName,
+                                          className: y.startedByName,
                                           colorString: null != (n = null == w ? void 0 : w.colorString) ? n : null,
                                           colorStrings: S,
                                           name: null != (l = null == w ? void 0 : w.nick) ? l : p.ZP.getName(b),
@@ -162,10 +162,10 @@ function C(e) {
                               },
                           }),
                           (0, r.jsx)("span", {
-                              className: O.bullet,
+                              className: y.bullet,
                               children: "\u2022",
                           }),
-                          y.intl.format(y.t["5Wk9+o"], { time: (0, Z.Ye)(j) }),
+                          O.intl.format(O.t["5Wk9+o"], { time: (0, Z.Ye)(j) }),
                       ],
                   }),
     });

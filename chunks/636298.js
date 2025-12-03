@@ -41,7 +41,7 @@ function g(e) {
                                 }),
                             (0, r.jsx)(s.Heading, {
                                 variant: "heading-md/medium",
-                                color: "header-secondary",
+                                color: "text-default",
                                 children: t,
                             }),
                             null != n && n,

@@ -1,4 +1,4 @@
-n.d(t, { default: () => N }), n(388685), n(953529);
+n.d(t, { default: () => T }), n(388685), n(953529);
 var a = n(54381),
     l = n(473749),
     i = n(772848),
@@ -44,17 +44,17 @@ function E(e) {
             })
           : null;
 }
-let N = function (e) {
-    let { transitionState: t, entryPoint: n, onClose: u, onComplete: j, dismissable: N, classificationId: T } = e,
+let T = function (e) {
+    let { transitionState: t, entryPoint: n, onClose: u, onComplete: j, dismissable: T, classificationId: N } = e,
         [O, P] = l.useState(s.z.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
-        w = l.useRef(O),
-        [I, k] = (0, c.US)([O], void 0, !0),
+        I = l.useRef(O),
+        [w, k] = (0, c.US)([O], void 0, !0),
         R = l.useMemo(() => (0, i.Z)(), []),
         A = l.useRef(!1),
         Z = (0, m.GE)();
     l.useEffect(() => {
-        w.current = I;
-    }, [I]);
+        I.current = w;
+    }, [w]);
     let { loading: D, ageVerificationMethods: L } = (0, b.Z)({
         onClose: () => {
             null == j || j(), u();
@@ -62,13 +62,13 @@ let N = function (e) {
         onMethodClick: () => {
             P(s.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE);
         },
-        classificationId: T,
+        classificationId: N,
     });
     return (
         l.useLayoutEffect(
             () => () => {
                 if (A.current) return;
-                let e = w.current;
+                let e = I.current;
                 null != e &&
                     ((A.current = !0),
                     p.Z.maybeOpenAgeVerificationUserFeedback({
@@ -85,7 +85,7 @@ let N = function (e) {
             transitionState: t,
             onClose: u,
             gradientColor: "blue",
-            dismissable: N,
+            dismissable: T,
             graphic: {
                 type: "image",
                 src: S.Z,
@@ -139,7 +139,7 @@ let N = function (e) {
                               children: [
                                   (0, a.jsx)(o.Text, {
                                       variant: "text-xs/medium",
-                                      color: "text-secondary",
+                                      color: "text-subtle",
                                       children: y.intl.string(_.default.cR6336),
                                   }),
                                   (0, a.jsx)(o.Button, {

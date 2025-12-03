@@ -1,8 +1,8 @@
 n.d(t, { q: () => S });
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     s = n(442837),
     o = n(481060),
     c = n(596454),
@@ -21,7 +21,7 @@ var r = n(54381),
     C = n(388032),
     y = n(65766);
 function T(e) {
-    let { className: t, sound: n, playSound: a, isPlaying: s, text: d } = e,
+    let { className: t, sound: n, playSound: l, isPlaying: s, text: d } = e,
         u = (null == n ? void 0 : n.emojiId) != null || (null == n ? void 0 : n.emojiName) != null,
         m = C.intl.formatToPlainString(C.t.tuMUJ2, {
             emojiName: null == n ? void 0 : n.emojiName,
@@ -32,13 +32,13 @@ function T(e) {
                 guild_id: f.Z.getGuildId(),
                 action: "airhorn",
             }),
-                null != a && a();
-        }, [a]);
+                null != l && l();
+        }, [l]);
     return (0, r.jsxs)(o.P3F, {
         "aria-label": m,
         tag: "span",
         onClick: h,
-        className: l()(y.inlineContainer, y.inlineButton, { [y.playing]: !0 === s }, t),
+        className: a()(y.inlineContainer, y.inlineButton, { [y.playing]: !0 === s }, t),
         children: [
             u &&
                 (0, r.jsx)(c.Z, {
@@ -52,21 +52,21 @@ function T(e) {
 }
 function w(e) {
     let { containerRef: t, text: n } = e,
-        a = i.useRef(null),
-        l = (0, s.e7)([g.Z], () => {
+        l = i.useRef(null),
+        a = (0, s.e7)([g.Z], () => {
             var e;
             return null == (e = g.Z.getSoundsForGuild(v.X8)) ? void 0 : e.find((e) => "airhorn" === e.name);
         }),
         { createMultipleConfettiAt: o } = i.useContext(m.h),
         c = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
-        { isPlaying: f, playSound: x } = (0, p.W)(l);
+        { isPlaying: f, playSound: x } = (0, p.W)(a);
     (0, d.ZP)(() => {
         (0, h.w)();
     });
     let b = i.useCallback(async () => {
         if (await x()) {
             var e;
-            if ((null == (e = a.current) || e.addAnimation(), !c && (null == t ? void 0 : t.current) != null)) {
+            if ((null == (e = l.current) || e.addAnimation(), !c && (null == t ? void 0 : t.current) != null)) {
                 let e = t.current.getBoundingClientRect(),
                     n = {
                         x: e.left + e.width / 2,
@@ -95,10 +95,10 @@ function w(e) {
             }
         }
     }, [x, o, c, t]);
-    return void 0 === l
+    return void 0 === a
         ? null
         : (0, r.jsx)(T, {
-              sound: l,
+              sound: a,
               playSound: b,
               isPlaying: f,
               text: n,
@@ -135,7 +135,7 @@ function S() {
                     (0, r.jsx)(o.Text, {
                         className: y.text,
                         variant: "text-md/medium",
-                        color: "text-secondary",
+                        color: "text-subtle",
                         children: C.intl.format(_.default["8N4c58"], {
                             airhornHook: (t) =>
                                 (0, r.jsx)(w, {

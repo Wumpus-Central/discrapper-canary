@@ -11,7 +11,7 @@ let s = (e) => {
         children: [
             (0, r.jsx)(i.Text, {
                 variant: "text-xs/bold",
-                color: "text-primary",
+                color: "text-strong",
                 children: a.intl.string(a.t["4VDCG0"]),
             }),
             t
@@ -22,7 +22,7 @@ let s = (e) => {
                   })
                 : (0, r.jsx)(i.Text, {
                       variant: "text-xs/medium",
-                      color: "text-tertiary",
+                      color: "text-muted",
                       children: a.intl.string(a.t["260qZS"]),
                   }),
         ],

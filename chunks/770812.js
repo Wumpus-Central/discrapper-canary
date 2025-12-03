@@ -75,7 +75,7 @@ function O(e) {
                     }),
                     (0, r.jsx)(s.LZC, { size: 4 }),
                     (0, r.jsx)(s.Text, {
-                        color: "header-secondary",
+                        color: "text-default",
                         variant: "text-md/normal",
                         className: b.description,
                         children: T,

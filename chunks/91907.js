@@ -78,7 +78,7 @@ function m(e) {
                         ref: g,
                         className: m ? o()(d, E) : d,
                         variant: "text-sm/semibold",
-                        color: "text-primary",
+                        color: "text-strong",
                         lineClamp: 1,
                         scaleFontToUserSetting: !0,
                         children: n,

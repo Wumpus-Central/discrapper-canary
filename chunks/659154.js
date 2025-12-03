@@ -25,7 +25,7 @@ let l = (e) => {
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: "text-md/normal",
-                        color: "header-secondary",
+                        color: "text-default",
                         children: i.intl.string(i.t["/GAO1P"]),
                     }),
                 ],

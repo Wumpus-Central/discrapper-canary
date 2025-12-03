@@ -104,7 +104,7 @@ function _(e) {
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: "text-xs/medium",
-                        color: "header-secondary",
+                        color: "text-default",
                         children: h && !n ? "?????" : _(),
                     }),
                 ],

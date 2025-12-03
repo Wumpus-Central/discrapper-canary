@@ -20,9 +20,9 @@ var r = n(54381),
     S = n(535584),
     h = n(373370),
     y = n(968843),
-    A = n(475595),
-    O = n(304696),
-    x = n(862657),
+    x = n(475595),
+    A = n(304696),
+    O = n(862657),
     C = n(759479),
     _ = n(254579),
     w = n(283689),
@@ -95,7 +95,7 @@ function H(e) {
         er = (0, a.e7)([c.Z], () => c.Z.getParticipants(e.channelId), [e.channelId]),
         el = (0, a.e7)(
             [T.Z],
-            () => (0, x.PM)(T.Z.quests, T.Z.questToDeliverForPlacement, g.Ok.DESKTOP_ACCOUNT_PANEL_AREA),
+            () => (0, O.PM)(T.Z.quests, T.Z.questToDeliverForPlacement, g.Ok.DESKTOP_ACCOUNT_PANEL_AREA),
             [],
         ),
         { isCurrentUserStreamingQuestApplication: es, isQuestInQuestBar: ei } = (0, a.cj)([b.Z], () => {
@@ -179,18 +179,18 @@ function H(e) {
         eS = (0, w.Rt)(z),
         eh = (0, y.tP)(z),
         ey = (null == (n = z.userStatus) ? void 0 : n.enrolledAt) != null,
-        eA = (null == (s = z.userStatus) ? void 0 : s.completedAt) != null,
-        eO = null != z.userStatus && (0, x.zE)(z.userStatus, g.jn.QUEST_LIVE_STREAM),
-        ex = null != z.userStatus && (0, x.zE)(z.userStatus, g.jn.QUEST_BAR),
-        eC = ei && !ex;
+        ex = (null == (s = z.userStatus) ? void 0 : s.completedAt) != null,
+        eA = null != z.userStatus && (0, O.zE)(z.userStatus, g.jn.QUEST_LIVE_STREAM),
+        eO = null != z.userStatus && (0, O.zE)(z.userStatus, g.jn.QUEST_BAR),
+        eC = ei && !eO;
     eT.info({
-        isQuestCallHeaderDismissed: eO,
+        isQuestCallHeaderDismissed: eA,
         isQuestExpired: eh,
         isQuestBarShowing: eC,
         isCurrentUserCallParticipant: ed,
     });
     let e_ = null != G && (null == (m = z.userStatus) ? void 0 : m.claimedAt) == null;
-    if ((!e_ && (eO || eh || eC)) || (!e_ && !ed)) return null;
+    if ((!e_ && (eA || eh || eC)) || (!e_ && !ed)) return null;
     let ew = (0, _.il)(z),
         eZ = (0, r.jsx)(N.Z, {
             className: k.rewardTile,
@@ -229,7 +229,7 @@ function H(e) {
                                 : (0, r.jsx)("img", {
                                       className: k.gameTile,
                                       alt: z.config.messages.gameTitle,
-                                      src: (0, A.fh)(z, A.eC.GAME_TILE, en).url,
+                                      src: (0, x.fh)(z, x.eC.GAME_TILE, en).url,
                                   }),
                             (0, r.jsxs)("div", {
                                 children: [
@@ -241,7 +241,7 @@ function H(e) {
                                                 variant: "heading-md/semibold",
                                                 color: "header-primary",
                                                 children: eu
-                                                    ? (0, O.AV)({
+                                                    ? (0, A.AV)({
                                                           quest: z,
                                                           taskDetails: ew,
                                                       })
@@ -273,9 +273,9 @@ function H(e) {
                                         ],
                                     }),
                                     (0, r.jsx)(u.Text, {
-                                        color: "header-secondary",
+                                        color: "text-default",
                                         variant: "text-xs/medium",
-                                        children: eA
+                                        children: ex
                                             ? V.intl.formatToPlainString(V.t.APddvF, { expirationDate: em })
                                             : V.intl.formatToPlainString(V.t["pX+fmn"], { expirationDate: ef }),
                                     }),
@@ -284,7 +284,7 @@ function H(e) {
                         ],
                     }),
                     ey &&
-                        !eA &&
+                        !ex &&
                         !eu &&
                         (0, r.jsx)(R.Z, {
                             autoplay: X,
@@ -319,14 +319,14 @@ function H(e) {
                                     ],
                                 }),
                             ey &&
-                                !eA &&
+                                !ex &&
                                 eu &&
                                 (0, r.jsx)(Q.Z, {
                                     color: u.TVs.colors.BG_BRAND,
                                     quest: z,
                                 }),
                             ey &&
-                                !eA &&
+                                !ex &&
                                 !eu &&
                                 (0, r.jsx)(u.Button, {
                                     variant: "primary",
@@ -335,7 +335,7 @@ function H(e) {
                                     text: V.intl.string(V.t.VN1Ajl),
                                     onClick: eE,
                                 }),
-                            eA &&
+                            ex &&
                                 (0, r.jsx)(u.Button, {
                                     variant: "primary",
                                     size: "sm",

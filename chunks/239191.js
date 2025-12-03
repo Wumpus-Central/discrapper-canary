@@ -15,8 +15,8 @@ var s = i(54381),
     u = i(740492),
     y = i(695346),
     j = i(874893),
-    _ = i(231338),
-    b = i(388032),
+    b = i(231338),
+    _ = i(388032),
     O = i(3498);
 function N(e) {
     let { options: t, selected: i, onSelect: n, showLabels: a, renderOptionContainer: r } = e;
@@ -42,13 +42,13 @@ function N(e) {
                                 a &&
                                     (0, s.jsx)(c.Text, {
                                         variant: "text-sm/medium",
-                                        color: "text-primary",
+                                        color: "text-strong",
                                         children: e.label,
                                     }),
                                 e.new &&
                                     (0, s.jsx)(c.IGR, {
                                         color: c.TVs.colors.BG_BRAND.css,
-                                        text: b.intl.string(b.t.y2b7CA),
+                                        text: _.intl.string(_.t.y2b7CA),
                                         className: O.new,
                                     }),
                             ],
@@ -63,24 +63,24 @@ function N(e) {
 }
 let v = [
         {
-            id: _.BR.LIGHT,
-            label: b.intl.string(b.t.K2sFfo),
+            id: b.BR.LIGHT,
+            label: _.intl.string(_.t.K2sFfo),
             className: l()("theme-light", O.themeOption),
         },
         {
-            id: _.BR.DARK,
-            label: b.intl.string(b.t.SMPT1k),
+            id: b.BR.DARK,
+            label: _.intl.string(_.t.SMPT1k),
             className: l()("theme-dark", O.themeOption),
         },
         {
-            id: _.BR.DARKER,
-            label: b.intl.string(b.t.b8Cei3),
+            id: b.BR.DARKER,
+            label: _.intl.string(_.t.b8Cei3),
             className: l()("theme-darker", O.themeOption),
             new: !0,
         },
         {
-            id: _.BR.MIDNIGHT,
-            label: b.intl.string(b.t.Do4ZJx),
+            id: b.BR.MIDNIGHT,
+            label: _.intl.string(_.t.Do4ZJx),
             className: l()("theme-midnight", O.themeOption),
             new: !0,
         },
@@ -88,26 +88,26 @@ let v = [
     k = [
         {
             id: "compact",
-            label: b.intl.string(b.t["7iegX4"]),
+            label: _.intl.string(_.t["7iegX4"]),
         },
         {
             id: "default",
-            label: b.intl.string(b.t.bBvAEH),
+            label: _.intl.string(_.t.bBvAEH),
         },
         {
             id: "cozy",
-            label: b.intl.string(b.t["4cuYHx"]),
+            label: _.intl.string(_.t["4cuYHx"]),
         },
     ];
 function C(e) {
     let { transitionState: t, onClose: i } = e,
         [a] = n.useState(() => g.Z.gradientPreset),
         o = (0, r.e7)([x.Z], () => x.Z.theme),
-        [_] = n.useState(() => u.ZP.useSystemTheme === j.KW.ON),
-        [C, K] = n.useState(() => (_ ? "system" : null != a ? "gradient" : o)),
+        [b] = n.useState(() => u.ZP.useSystemTheme === j.KW.ON),
+        [C, K] = n.useState(() => (b ? "system" : null != a ? "gradient" : o)),
         { density: f } = (0, c.TCT)(),
         w = n.useMemo(() => {
-            if (null == a && !_) return v;
+            if (null == a && !b) return v;
             let e = [...v];
             if (null != a) {
                 let { colors: t, angle: i, theme: s, getName: n } = a,
@@ -124,15 +124,15 @@ function C(e) {
                 });
             }
             return (
-                _ &&
+                b &&
                     e.push({
                         id: "system",
-                        label: b.intl.string(b.t["7rOU6j"]),
+                        label: _.intl.string(_.t["7rOU6j"]),
                         className: O.themeOption,
                     }),
                 e
             );
-        }, [a, _]),
+        }, [a, b]),
         I = (0, h.Z)("(max-height: 800px)");
     return (0, s.jsxs)(c.Y0X, {
         transitionState: t,
@@ -154,14 +154,14 @@ function C(e) {
                                 (0, s.jsx)(c.Heading, {
                                     variant: I ? "heading-lg/semibold" : "heading-xl/semibold",
                                     color: "header-primary",
-                                    children: b.intl.string(b.t["7+iCG4"]),
+                                    children: _.intl.string(_.t["7+iCG4"]),
                                 }),
                             ],
                         }),
                         (0, s.jsx)(c.Heading, {
                             variant: I ? "heading-sm/medium" : "heading-md/medium",
-                            color: "text-secondary",
-                            children: b.intl.string(b.t.fZMMqN),
+                            color: "text-subtle",
+                            children: _.intl.string(_.t.fZMMqN),
                         }),
                     ],
                 }),
@@ -176,7 +176,7 @@ function C(e) {
                             children: [
                                 (0, s.jsx)(c.Heading, {
                                     variant: "heading-md/medium",
-                                    children: b.intl.string(b.t.Ksh3ik),
+                                    children: _.intl.string(_.t.Ksh3ik),
                                 }),
                                 (0, s.jsx)(N, {
                                     showLabels: !1,
@@ -231,18 +231,18 @@ function C(e) {
                                             children: [
                                                 (0, s.jsx)(c.Heading, {
                                                     variant: "heading-md/medium",
-                                                    children: b.intl.string(b.t["C/5V0A"]),
+                                                    children: _.intl.string(_.t["C/5V0A"]),
                                                 }),
                                                 (0, s.jsx)(c.IGR, {
                                                     color: c.TVs.colors.BG_BRAND.css,
-                                                    text: b.intl.string(b.t.y2b7CA),
+                                                    text: _.intl.string(_.t.y2b7CA),
                                                 }),
                                             ],
                                         }),
                                         (0, s.jsx)(c.Text, {
                                             variant: "text-sm/medium",
-                                            color: "text-secondary",
-                                            children: b.intl.string(b.t["2w1sEO"]),
+                                            color: "text-subtle",
+                                            children: _.intl.string(_.t["2w1sEO"]),
                                         }),
                                     ],
                                 }),
@@ -272,7 +272,7 @@ function C(e) {
                 className: O.footer,
                 children: (0, s.jsx)(c.Button, {
                     variant: "primary",
-                    text: b.intl.string(b.t["1Qm822"]),
+                    text: _.intl.string(_.t["1Qm822"]),
                     onClick: i,
                 }),
             }),

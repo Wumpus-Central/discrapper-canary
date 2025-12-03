@@ -1910,24 +1910,6 @@ let { Themes: r } = n(15202).VV,
                     opacity: 1,
                 },
             },
-            HEADER_SECONDARY: {
-                [r.DARK]: {
-                    raw: "NEUTRAL_1",
-                    opacity: 1,
-                },
-                [r.LIGHT]: {
-                    raw: "NEUTRAL_76",
-                    opacity: 1,
-                },
-                [r.MIDNIGHT]: {
-                    raw: "NEUTRAL_6",
-                    opacity: 1,
-                },
-                [r.DARKER]: {
-                    raw: "NEUTRAL_1",
-                    opacity: 1,
-                },
-            },
             ICON_DEFAULT: {
                 [r.DARK]: {
                     raw: "NEUTRAL_1",
@@ -3170,7 +3152,7 @@ let { Themes: r } = n(15202).VV,
                     opacity: 1,
                 },
             },
-            TEXT_PRIMARY: {
+            TEXT_STRONG: {
                 [r.DARK]: {
                     raw: "WHITE",
                     opacity: 1,
@@ -3188,7 +3170,7 @@ let { Themes: r } = n(15202).VV,
                     opacity: 1,
                 },
             },
-            TEXT_SECONDARY: {
+            TEXT_SUBTLE: {
                 [r.DARK]: {
                     raw: "NEUTRAL_2",
                     opacity: 1,
@@ -3203,24 +3185,6 @@ let { Themes: r } = n(15202).VV,
                 },
                 [r.DARKER]: {
                     raw: "NEUTRAL_10",
-                    opacity: 1,
-                },
-            },
-            TEXT_TERTIARY: {
-                [r.DARK]: {
-                    raw: "NEUTRAL_12",
-                    opacity: 1,
-                },
-                [r.LIGHT]: {
-                    raw: "NEUTRAL_49",
-                    opacity: 1,
-                },
-                [r.MIDNIGHT]: {
-                    raw: "NEUTRAL_23",
-                    opacity: 1,
-                },
-                [r.DARKER]: {
-                    raw: "NEUTRAL_19",
                     opacity: 1,
                 },
             },

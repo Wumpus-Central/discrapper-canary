@@ -37,13 +37,13 @@ let u = () =>
             }),
             (0, r.jsx)(a.Text, {
                 className: c.description,
-                color: "header-secondary",
+                color: "text-default",
                 variant: "text-sm/normal",
                 children: l.intl.string(l.t.BUZ0sl),
             }),
             (0, r.jsx)(a.Text, {
                 className: c.description,
-                color: "header-secondary",
+                color: "text-default",
                 variant: "text-sm/normal",
                 children: l.intl.string(l.t.w5beJH),
             }),

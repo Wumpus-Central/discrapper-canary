@@ -6,8 +6,8 @@ var r = n(54381),
     s = n(28664),
     o = n(481060),
     c = n(700582),
-    d = n(330726),
-    u = n(51144),
+    u = n(330726),
+    d = n(51144),
     g = n(268350),
     m = n(419922),
     p = n(388032),
@@ -15,7 +15,7 @@ var r = n(54381),
 let h = (e) => {
     let { className: t, isDisabled: l, sticker: h, canManageSticker: b } = e,
         [x, j] = i.useState(!1),
-        [_, v] = (0, d.Z)(null, 4000),
+        [_, v] = (0, u.Z)(null, 4000),
         O = async () => {
             v(null), j(!0);
             try {
@@ -24,7 +24,7 @@ let h = (e) => {
                 v(e.body.message), j(!1);
             }
         },
-        C = u.ZP.useUserTag(h.user);
+        C = d.ZP.useUserTag(h.user);
     return (0, r.jsx)(s.u, {
         forceOpen: null != _,
         text: _,
@@ -58,7 +58,7 @@ let h = (e) => {
                                                 user: h.user,
                                             }),
                                             (0, r.jsx)(o.Text, {
-                                                color: "header-secondary",
+                                                color: "text-default",
                                                 variant: "text-xs/normal",
                                                 children: C,
                                             }),

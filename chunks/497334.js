@@ -29,7 +29,7 @@ function f(e) {
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: "eyebrow",
-                        color: "text-secondary",
+                        color: "text-subtle",
                         children: n,
                     }),
                 ],

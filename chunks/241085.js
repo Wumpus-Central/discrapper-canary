@@ -45,7 +45,7 @@ function R(e) {
                     }),
                     (0, r.jsx)(u.Text, {
                         variant: "text-md/normal",
-                        color: "text-tertiary",
+                        color: "text-muted",
                         children: N.intl.format(N.t.y68I8P, {
                             onClick: () => {
                                 var e;
@@ -86,7 +86,7 @@ function R(e) {
                         }),
                         (0, r.jsx)(u.Text, {
                             variant: "text-md/normal",
-                            color: "text-primary",
+                            color: "text-strong",
                             children: N.intl.string(N.t["8OJlsH"]),
                         }),
                     ],
@@ -104,7 +104,7 @@ function w() {
             }),
             (0, r.jsx)(u.Text, {
                 variant: "text-md/normal",
-                color: "text-primary",
+                color: "text-strong",
                 children: N.intl.string(N.t["0PhgpK"]),
             }),
             (0, r.jsx)(u.Text, {

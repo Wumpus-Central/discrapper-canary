@@ -151,7 +151,7 @@ function I(e) {
                                     }),
                                 (0, r.jsx)(c.Text, {
                                     variant: "text-sm/normal",
-                                    color: G ? "text-secondary" : "text-default",
+                                    color: G ? "text-subtle" : "text-default",
                                     children: E,
                                 }),
                             ],

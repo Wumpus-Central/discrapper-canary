@@ -7,7 +7,7 @@ function a(e) {
     let { value: n, maxLength: a } = e;
     return (0, r.jsxs)(i.Text, {
         variant: "text-xs/normal",
-        color: "text-secondary",
+        color: "text-subtle",
         tabularNumbers: !0,
         children: [null != (t = null == n ? void 0 : n.length) ? t : 0, null != a && " / ".concat(a)],
     });

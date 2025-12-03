@@ -103,7 +103,7 @@ function _(e) {
                                 className: u.benefitsList,
                                 children: [
                                     (0, r.jsx)(l.xvT, {
-                                        color: "header-secondary",
+                                        color: "text-default",
                                         variant: "eyebrow",
                                         children: s.Z.Messages.STOREFRONT_BENEFITS_TITLE,
                                     }),
@@ -113,7 +113,7 @@ function _(e) {
                                                   g.slice(0, y),
                                                   (0, r.jsx)(l.xvT, {
                                                       variant: "text-md/semibold",
-                                                      color: "text-secondary",
+                                                      color: "text-subtle",
                                                       children: s.Z.Messages.STOREFRONT_MORE_BENEFITS.format({
                                                           count: g.length - y,
                                                       }),

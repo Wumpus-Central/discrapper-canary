@@ -22,7 +22,7 @@ function d(e) {
                 (0, r.jsx)(s.Text, {
                     className: u.chooseAccountHelpText,
                     variant: "text-md/normal",
-                    color: "header-secondary",
+                    color: "text-default",
                     children: c.intl.string(c.t["0M5fN7"]),
                 }),
                 (0, r.jsx)(o.Z, {

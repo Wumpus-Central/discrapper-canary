@@ -1,4 +1,4 @@
-e.d(t, { default: () => k }), e(953529);
+e.d(n, { default: () => p }), e(953529);
 var a = e(54381),
     s = e(473749),
     i = e(286379),
@@ -13,36 +13,36 @@ var a = e(54381),
     g = e(636749),
     x = e(981631),
     v = e(388032),
-    h = e(98201);
-function k(n) {
+    k = e(98201);
+function p(t) {
     let {
-            transitionState: t,
+            transitionState: n,
             onClose: e,
-            channelId: k,
-            warningId: p,
+            channelId: p,
+            warningId: h,
             senderId: m,
             description: y,
             safetyTipRows: T,
-            actionRows: j,
-            learnMore: N,
-        } = n,
-        f = (0, o.e7)([_.ZP], () => _.ZP.getChannelSafetyWarning(k, p));
+            actionRows: f,
+            learnMore: j,
+        } = t,
+        N = (0, o.e7)([_.ZP], () => _.ZP.getChannelSafetyWarning(p, h));
     return (
         s.useEffect(() => {
             (0, b.MC)(x.rMx.SAFETY_WARNING_MODAL_VIEWED, {
-                channelId: k,
-                warningId: p,
+                channelId: p,
+                warningId: h,
                 senderId: m,
-                warningType: null == f ? void 0 : f.type,
+                warningType: null == N ? void 0 : N.type,
             }),
                 l.Z.increment({ name: i.V.SAFETY_WARNING_MODAL_VIEW });
-        }, [k, p, m, f]),
+        }, [p, h, m, N]),
         (0, a.jsx)(c.ExpressiveModal, {
             onClose: e,
-            transitionState: t,
+            transitionState: n,
             graphic: {
                 type: "image",
-                src: h.Z,
+                src: k.Z,
             },
             gradientColor: "blue",
             title: v.intl.string(v.t.lyt43P),
@@ -53,24 +53,24 @@ function k(n) {
                 children: [
                     (0, a.jsxs)(r.Kqy, {
                         gap: 8,
-                        children: [(0, a.jsx)(d.z, { children: T }), null != N ? N : null],
+                        children: [(0, a.jsx)(d.z, { children: T }), null != j ? j : null],
                     }),
                     (0, a.jsxs)(r.Kqy, {
                         gap: 4,
                         children: [
                             (0, a.jsx)(r.Text, {
                                 variant: "eyebrow",
-                                color: "header-secondary",
+                                color: "text-default",
                                 children: v.intl.string(v.t.K5FKtc),
                             }),
-                            (0, a.jsx)(u.rT, { children: j }),
+                            (0, a.jsx)(u.rT, { children: f }),
                         ],
                     }),
                     (0, a.jsx)(g.Z, {
-                        channelId: k,
-                        warningId: p,
+                        channelId: p,
+                        warningId: h,
                         senderId: m,
-                        safetyWarning: f,
+                        safetyWarning: N,
                     }),
                 ],
             }),

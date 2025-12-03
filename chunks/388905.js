@@ -48,7 +48,7 @@ let E = (e) => {
         let { className: t, children: n } = e;
         return (0, r.jsx)(o.Text, {
             variant: "text-md/normal",
-            color: "header-secondary",
+            color: "text-default",
             className: t,
             children: n,
         });
@@ -178,7 +178,7 @@ let I = (e) => {
                               tag: "span",
                               className: u,
                               variant: "text-sm/normal",
-                              color: "header-secondary",
+                              color: "text-default",
                               children: m.intl.format(m.t["LC+S+m"], { membersOnline: n }),
                           }),
                       ],
@@ -196,7 +196,7 @@ let I = (e) => {
                                   tag: "span",
                                   className: u,
                                   variant: "text-sm/normal",
-                                  color: "header-secondary",
+                                  color: "text-default",
                                   children: m.intl.format(m.t.zRl6XR, { count: i }),
                               }),
                           ],
@@ -214,7 +214,7 @@ let I = (e) => {
                       (0, r.jsx)(o.Text, {
                           tag: "span",
                           variant: "text-md/normal",
-                          color: "header-secondary",
+                          color: "text-default",
                           children: m.intl.string(m.t["/8WWvE"]),
                       }),
                       (0, r.jsx)(O, {

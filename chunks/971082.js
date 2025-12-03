@@ -2,8 +2,8 @@ n.d(t, { Z: () => u });
 var r = n(54381);
 n(473749);
 var i = n(120356),
-    a = n.n(i),
-    l = n(36563),
+    l = n.n(i),
+    a = n(36563),
     o = n(481060),
     c = n(313201),
     s = n(245583);
@@ -18,24 +18,24 @@ function u(e) {
                     var n,
                         r,
                         i = {},
-                        a = Object.keys(e);
-                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
                     return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < a.length; r++)
-                    (n = a[r]),
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++)
+                    (n = l[r]),
                         !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
         })(e, ["label", "visuallyHideLabel", "className", "size", "maxUsers"]);
     let g = (0, c.Dt)();
     return (0, r.jsxs)("div", {
-        className: a()(i, s.container),
+        className: l()(i, s.container),
         children: [
             (0, r.jsx)(
-                l.Z,
+                a.Z,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -77,7 +77,7 @@ function u(e) {
                   })
                 : (0, r.jsx)(o.Text, {
                       variant: "text-xs/normal",
-                      color: "text-secondary",
+                      color: "text-subtle",
                       id: g,
                       children: t,
                   }),

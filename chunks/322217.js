@@ -73,7 +73,7 @@ function d(e) {
                         ),
                         (0, r.jsx)(a.Text, {
                             variant: "text-xs/normal",
-                            color: "text-secondary",
+                            color: "text-subtle",
                             children: t,
                         }),
                     ],
@@ -103,19 +103,19 @@ let f = {
                 color: {
                     label: "Color",
                     type: "select",
-                    defaultValue: "text-primary",
+                    defaultValue: "text-strong",
                     options: [
                         {
                             label: "Text Primary",
-                            value: "text-primary",
+                            value: "text-strong",
                         },
                         {
                             label: "Text Secondary",
-                            value: "text-secondary",
+                            value: "text-subtle",
                         },
                         {
                             label: "Text Tertiary",
-                            value: "text-tertiary",
+                            value: "text-muted",
                         },
                         {
                             label: "Text Muted",
@@ -127,7 +127,7 @@ let f = {
                         },
                         {
                             label: "Header Secondary",
-                            value: "header-secondary",
+                            value: "text-default",
                         },
                         {
                             label: "Header Muted",

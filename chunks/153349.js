@@ -17,8 +17,8 @@ var r = n(54381),
     _ = n(670188),
     y = n(271383),
     O = n(496675),
-    j = n(158776),
-    x = n(471253),
+    x = n(158776),
+    j = n(471253),
     v = n(431328),
     C = n(145834),
     I = n(590415),
@@ -102,9 +102,9 @@ let w = i.memo(function (e) {
         });
         let S = l.getGuildId();
         o()(null != S, "Channel cannot be guildless");
-        let { isMobile: E, status: Z } = (0, c.cj)([j.Z], () => ({
-                isMobile: j.Z.isMobileOnline(a.user.id),
-                status: j.Z.getStatus(a.user.id, S),
+        let { isMobile: E, status: Z } = (0, c.cj)([x.Z], () => ({
+                isMobile: x.Z.isMobileOnline(a.user.id),
+                status: x.Z.getStatus(a.user.id, S),
             })),
             w = (0, c.e7)([y.ZP], () => y.ZP.getMember(S, a.user.id)),
             A = (0, b.X7)(
@@ -181,7 +181,7 @@ let w = i.memo(function (e) {
                                                 }),
                                                 (0, r.jsx)(u.Text, {
                                                     variant: "text-xs/normal",
-                                                    color: "header-secondary",
+                                                    color: "text-default",
                                                     children: (0, C.$)(a),
                                                 }),
                                             ],
@@ -200,7 +200,7 @@ let w = i.memo(function (e) {
                             asContainer: !0,
                             children: (0, r.jsx)(u.hU, {
                                 onClick: function () {
-                                    (0, x.DT)(l, a.user.id, !1);
+                                    (0, j.DT)(l, a.user.id, !1);
                                 },
                                 disabled: L || O,
                                 icon: u.Lrb,
@@ -214,7 +214,7 @@ let w = i.memo(function (e) {
                             children: (0, r.jsx)(u.hU, {
                                 "aria-label": P.intl.string(P.t.moABMy),
                                 onClick: function () {
-                                    (0, x.DT)(l, a.user.id, !0);
+                                    (0, j.DT)(l, a.user.id, !0);
                                 },
                                 icon: u.Dio,
                                 variant: "secondary",
@@ -248,7 +248,7 @@ let w = i.memo(function (e) {
                 (0, r.jsx)(u.Text, {
                     className: T.emptyStateBody,
                     variant: "text-sm/normal",
-                    color: "header-secondary",
+                    color: "text-default",
                     children: P.intl.string(P.t.Rpr2s0),
                 }),
             ],
@@ -313,7 +313,7 @@ function M(e) {
                               {
                                   className: T.listTitle,
                                   variant: "text-xs/bold",
-                                  color: "header-secondary",
+                                  color: "text-default",
                                   children:
                                       l.length > 0
                                           ? P.intl.formatToPlainString(P.t["5z7q5a"], { numHands: l.length })

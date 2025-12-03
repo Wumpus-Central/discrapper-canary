@@ -57,7 +57,7 @@ let u = (e) => {
                 }),
                 (0, r.jsx)(i.Text, {
                     variant: "text-md/normal",
-                    color: "header-secondary",
+                    color: "text-default",
                     className: c.emptySearchSubtitle,
                     children: e,
                 }),

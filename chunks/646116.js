@@ -186,7 +186,7 @@ function v(e) {
                             null != t && "" !== t
                                 ? (0, r.jsx)(f.x, {
                                       variant: "text-sm/normal",
-                                      color: "text-secondary",
+                                      color: "text-subtle",
                                       children: t,
                                   })
                                 : null,

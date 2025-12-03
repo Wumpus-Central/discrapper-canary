@@ -208,7 +208,7 @@ function I(e) {
                             (0, r.jsx)("div", { className: O.separator }),
                             (0, r.jsx)(l.Text, {
                                 variant: "text-sm/normal",
-                                color: "header-secondary",
+                                color: "text-default",
                                 children: y.intl.format(y.t["/o1IfA"], {
                                     onClick: () =>
                                         (0, l.ZDy)(async () => {

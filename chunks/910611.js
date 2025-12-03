@@ -1,6 +1,6 @@
 n.d(t, {
     TS: () => F,
-    ud: () => D,
+    ud: () => k,
     v0: () => U,
 }),
     n(388685);
@@ -19,8 +19,8 @@ var i = n(54381),
     m = n(243778),
     g = n(565138),
     b = n(370774),
-    y = n(703656),
-    C = n(621853),
+    C = n(703656),
+    y = n(621853),
     v = n(484459),
     _ = n(699516),
     O = n(914010),
@@ -64,7 +64,7 @@ function L(e) {
                                   }),
                                   (0, i.jsx)(u.Text, {
                                       variant: "text-sm/medium",
-                                      color: "header-secondary",
+                                      color: "text-default",
                                       children: M.intl.format(M.t["16aguo"], {
                                           helpdeskArticle: j.Z.getArticleURL(A.BhN.LINKED_LOBBIES),
                                       }),
@@ -115,7 +115,7 @@ function L(e) {
         a,
     );
 }
-function D(e) {
+function k(e) {
     let {
             channel: t,
             channelName: n,
@@ -129,7 +129,7 @@ function D(e) {
             renderFollowButton: g,
         } = e,
         b = (0, f.KS)(t, o),
-        { prefix: y, level: C } = (function (e, t) {
+        { prefix: C, level: y } = (function (e, t) {
             var n, i;
             switch (e) {
                 case A.d4z.DM:
@@ -173,9 +173,9 @@ function D(e) {
         })(t.type, o),
         v = (0, i.jsxs)(i.Fragment, {
             children: [
-                null != y
+                null != C
                     ? (0, i.jsxs)(u.nn4, {
-                          children: [y, ":"],
+                          children: [C, ":"],
                       })
                     : null,
                 " ",
@@ -185,7 +185,7 @@ function D(e) {
     switch (t.type) {
         case A.d4z.DM:
             return (0, i.jsx)(N.Z, {
-                level: C,
+                level: y,
                 channel: t,
                 handleClick: c,
                 handleContextMenu: d,
@@ -213,7 +213,7 @@ function D(e) {
                                   : M.intl.string(M.t.Pnajj0),
                           ),
                           (0, i.jsx)(T.Z.Title, {
-                              level: C,
+                              level: y,
                               onContextMenu: d,
                               onClick: c,
                               children: v,
@@ -229,7 +229,7 @@ function D(e) {
                                   : M.intl.string(M.t.Pnajj0),
                           ),
                           (0, i.jsx)(T.Z.Title, {
-                              level: C,
+                              level: y,
                               onContextMenu: d,
                               onClick: c,
                               children: v,
@@ -242,7 +242,7 @@ function D(e) {
                 children: [
                     V(b, M.intl.string(M.t.BVZqJl)),
                     (0, i.jsx)(T.Z.Title, {
-                        level: C,
+                        level: y,
                         onContextMenu: d,
                         onClick: c,
                         children: v,
@@ -254,7 +254,7 @@ function D(e) {
                 children: [
                     V(b, M.intl.string(M.t.EErMzA)),
                     (0, i.jsx)(T.Z.Title, {
-                        level: C,
+                        level: y,
                         onContextMenu: d,
                         onClick: c,
                         children: v,
@@ -271,7 +271,7 @@ function D(e) {
                     children: [
                         V(e, M.intl.string(M.t.Pnajj0)),
                         (0, i.jsx)(T.Z.Title, {
-                            level: C,
+                            level: y,
                             onContextMenu: m,
                             onClick: p,
                             className: a()(R.parentChannelName, R.cursorPointer),
@@ -287,7 +287,7 @@ function D(e) {
                     O,
                     V(E ? null : b, M.intl.string(M.t["7Xm5QI"])),
                     (0, i.jsx)(T.Z.Title, {
-                        level: C,
+                        level: y,
                         onContextMenu: d,
                         onClick: c,
                         className: a()({
@@ -312,13 +312,13 @@ function D(e) {
                           })
                         : null,
                     (0, i.jsxs)(T.Z.Title, {
-                        level: C,
+                        level: y,
                         onContextMenu: d,
                         onClick: c,
                         children: [
-                            null != y
+                            null != C
                                 ? (0, i.jsxs)(u.nn4, {
-                                      children: [y, ":"],
+                                      children: [C, ":"],
                                   })
                                 : null,
                             " ",
@@ -331,13 +331,13 @@ function D(e) {
             return null;
     }
 }
-let k = (e) => {
+let D = (e) => {
     var t, n, l;
     let { channel: a } = e,
         s = (0, o.e7)([x.default], () => x.default.getCurrentUser()),
         c = (0, o.e7)([x.default], () => x.default.getUser(a.getRecipientId())),
         u = (0, S.G)(),
-        d = (0, o.e7)([C.Z], () => (null != c ? C.Z.getUserProfile(c.id) : null)),
+        d = (0, o.e7)([y.Z], () => (null != c ? y.Z.getUserProfile(c.id) : null)),
         h = null != d && (null != (t = null == d ? void 0 : d.fetchEndedAt) ? t : 0) > 0;
     return (r.useEffect(() => {
         (null == s ? void 0 : s.isStaff()) &&
@@ -361,7 +361,7 @@ function U(e, t) {
     switch (e.type) {
         case A.d4z.DM:
             return (0, i.jsxs)(i.Fragment, {
-                children: [(0, i.jsx)(k, { channel: e }), (0, i.jsx)(P.Z, { channel: e }, e.id)],
+                children: [(0, i.jsx)(D, { channel: e }), (0, i.jsx)(P.Z, { channel: e }, e.id)],
             });
         case A.d4z.GUILD_ANNOUNCEMENT:
         case A.d4z.GUILD_TEXT:
@@ -407,7 +407,7 @@ function F(e) {
               position: "bottom",
               children: (0, i.jsxs)(u.P3F, {
                   onClick: () => {
-                      (0, y.XU)(t.id, n.id);
+                      (0, C.XU)(t.id, n.id);
                   },
                   className: R.guildBreadcrumbContainer,
                   children: [

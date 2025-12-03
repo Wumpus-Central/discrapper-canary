@@ -53,10 +53,10 @@ function S() {
                 ? t
                 : [];
         }),
-        N = (0, m.F)(S, { allowedFlows: [m.r.RPC] }),
-        T = (0, m.F)(S, { allowedFlows: [m.r.WEB] }),
+        T = (0, m.F)(S, { allowedFlows: [m.r.RPC] }),
+        N = (0, m.F)(S, { allowedFlows: [m.r.WEB] }),
         O = (0, m.F)(S),
-        { canDeauthorize: P, deauthorize: w } = (function (e) {
+        { canDeauthorize: P, deauthorize: I } = (function (e) {
             let t = (0, s.e7)([b.default], () => b.default.getNewestTokenForApplication(e)),
                 n = l.useCallback(() => {
                     null != t && d.Z.delete(t.id);
@@ -142,25 +142,25 @@ function S() {
                     }),
                     (0, a.jsx)(c.Text, {
                         variant: "text-sm/normal",
-                        color: "text-secondary",
+                        color: "text-subtle",
                         children:
                             "This will start whichever authorization flow is available. RPC authorization takes precedence over web.",
-                    }),
-                    (0, a.jsx)(c.Button, {
-                        disabled: !N.canStartAuthorization,
-                        onClick: () => N.startAuthorization(),
-                        variant: "secondary",
-                        text: "Start In-App Authorization",
                     }),
                     (0, a.jsx)(c.Button, {
                         disabled: !T.canStartAuthorization,
                         onClick: () => T.startAuthorization(),
                         variant: "secondary",
+                        text: "Start In-App Authorization",
+                    }),
+                    (0, a.jsx)(c.Button, {
+                        disabled: !N.canStartAuthorization,
+                        onClick: () => N.startAuthorization(),
+                        variant: "secondary",
                         text: "Start Web Authorization",
                     }),
                     (0, a.jsx)(c.Button, {
                         disabled: !P,
-                        onClick: w,
+                        onClick: I,
                         variant: "critical-primary",
                         text: "Deauthorize",
                     }),

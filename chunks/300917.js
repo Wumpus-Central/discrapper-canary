@@ -10,7 +10,7 @@ var r = n(54381),
     s = n(481060),
     l = n(893776),
     c = n(594174),
-    u = n(509212),
+    u = n(862657),
     d = n(388032),
     f = n(654071),
     p = n(800010);
@@ -103,7 +103,7 @@ function h(e) {
                         }),
                         (0, r.jsx)(s.Text, {
                             variant: "text-sm/normal",
-                            color: "header-secondary",
+                            color: "text-default",
                             children: d.intl.string(d.t.yb7itQ),
                         }),
                     ],

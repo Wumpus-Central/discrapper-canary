@@ -25,12 +25,12 @@ function c(e) {
                         children: [
                             (0, i.jsx)(l.Heading, {
                                 variant: "heading-md/semibold",
-                                color: "text-primary",
+                                color: "text-strong",
                                 children: t,
                             }),
                             (0, i.jsx)(l.Text, {
                                 variant: "text-sm/normal",
-                                color: "text-primary",
+                                color: "text-strong",
                                 children: n,
                             }),
                         ],

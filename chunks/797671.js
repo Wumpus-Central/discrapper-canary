@@ -14,8 +14,8 @@ var l = n(54381),
     g = n(60222),
     f = n(131704),
     b = n(324067),
-    m = n(430824),
-    x = n(934415),
+    x = n(430824),
+    m = n(934415),
     v = n(700785),
     C = n(573261),
     E = n(981631),
@@ -29,7 +29,7 @@ function I(e) {
         [M, k] = i.useState(E.d4z.GUILD_TEXT),
         [D, Z] = i.useState(""),
         [A, B] = i.useState(!1),
-        G = (0, a.e7)([m.Z], () => m.Z.getGuild(I), [I]),
+        G = (0, a.e7)([x.Z], () => x.Z.getGuild(I), [I]),
         O = (0, g.m)(I),
         H = (0, h.Ui)(G),
         U = i.useMemo(
@@ -88,7 +88,7 @@ function I(e) {
                                                 }),
                                                 (0, l.jsx)(u.Text, {
                                                     variant: "text-xs/normal",
-                                                    color: "header-secondary",
+                                                    color: "text-default",
                                                     children: r,
                                                 }),
                                             ],
@@ -204,7 +204,7 @@ function I(e) {
                         label: y.intl.string(y.t.PVbHDl),
                         value: D,
                         onChange: function (e) {
-                            (0, f.zi)(M) && (e = (0, x.Nj)(e)), Z(e);
+                            (0, f.zi)(M) && (e = (0, m.Nj)(e)), Z(e);
                         },
                         maxLength: E.HN8,
                         placeholder: y.intl.string(y.t["bw/b8E"]),

@@ -76,7 +76,7 @@ let g = () => {
                         }),
                         (0, r.jsx)(s.Text, {
                             variant: "eyebrow",
-                            color: "header-secondary",
+                            color: "text-default",
                             children: m.intl.string(m.t["13/7kX"]),
                         }),
                     ],
@@ -92,7 +92,7 @@ let g = () => {
                             children: [
                                 (0, r.jsx)(s.Text, {
                                     variant: "text-sm/medium",
-                                    color: "text-secondary",
+                                    color: "text-subtle",
                                     children: m.intl.string(_.default.RZqaJn),
                                 }),
                                 (0, r.jsx)(s.Heading, {

@@ -270,7 +270,7 @@ function T(e) {
                             children: [
                                 (0, r.jsx)(f.Heading, {
                                     variant: "heading-md/normal",
-                                    color: "text-secondary",
+                                    color: "text-subtle",
                                     className: v.header,
                                     children: O.intl.string(O.t["0KK0bP"]),
                                 }),
@@ -297,7 +297,7 @@ function T(e) {
                             !c.tq &&
                                 (0, r.jsx)(f.Heading, {
                                     variant: "heading-md/normal",
-                                    color: "text-secondary",
+                                    color: "text-subtle",
                                     className: v.header,
                                     children: O.intl.string(O.t.RdSNWa),
                                 }),

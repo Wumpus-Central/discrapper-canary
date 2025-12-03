@@ -44,7 +44,7 @@ function d(e) {
                           children: [
                               (0, r.jsx)(a.Text, {
                                   variant: "text-md/semibold",
-                                  color: "text-primary",
+                                  color: "text-strong",
                                   children: g.name,
                               }),
                               _ &&

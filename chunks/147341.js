@@ -21,7 +21,7 @@ function o() {
                 }),
                 (0, r.jsx)(i.Text, {
                     variant: "text-lg/normal",
-                    color: "text-tertiary",
+                    color: "text-muted",
                     className: s.text,
                     children: a.intl.string(l.default.dcpdhC),
                 }),

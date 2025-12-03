@@ -5,8 +5,8 @@ var r = n(54381),
     l = n(442837),
     a = n(704215),
     s = n(243778),
-    c = n(430824),
-    u = n(765703),
+    u = n(430824),
+    c = n(765703),
     d = n(618460),
     p = n(800869),
     f = n(366751),
@@ -28,15 +28,15 @@ function j() {
 }
 function C(e) {
     let { guildId: t } = e,
-        n = (0, l.e7)([c.Z], () => {
+        n = (0, l.e7)([u.Z], () => {
             var e;
             return (
-                (null == (e = c.Z.getGuild(t)) ? void 0 : e.features.has(v.GuildFeatures.PREMIUM_TIER_3_OVERRIDE)) ===
+                (null == (e = u.Z.getGuild(t)) ? void 0 : e.features.has(v.GuildFeatures.PREMIUM_TIER_3_OVERRIDE)) ===
                 !0
             );
         }),
         C = (0, d.Z)(t),
-        w = (0, u.Z)(t),
+        w = (0, c.Z)(t),
         Z = C.length > 0 || w.length > 0,
         { shouldShow: I, notificationConfig: E } = (0, g._)(t, "GuildPowerupNotificationContainer"),
         P = [];
@@ -92,7 +92,7 @@ function C(e) {
               children: [
                   (0, r.jsx)(o.xvT, {
                       variant: "eyebrow",
-                      color: "text-secondary",
+                      color: "text-subtle",
                       children: b.intl.string(_.default["3FRirU"]),
                   }),
                   n && (0, r.jsx)(j, {}),

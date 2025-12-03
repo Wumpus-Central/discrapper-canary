@@ -58,7 +58,7 @@ function _(e) {
             }),
             (0, r.jsx)(o.Text, {
                 variant: "text-sm/normal",
-                color: "header-secondary",
+                color: "text-default",
                 className: a()(d.description, { [d.disabled]: s }),
                 children: n,
             }),

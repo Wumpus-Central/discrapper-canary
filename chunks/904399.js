@@ -31,7 +31,7 @@ function l(e) {
                   }),
                   (0, r.jsx)(a.Text, {
                       variant: "text-md/medium",
-                      color: "text-secondary",
+                      color: "text-subtle",
                       children: p.body,
                   }),
               ],

@@ -139,7 +139,7 @@ let b = (e) => {
                     }),
                     (0, r.jsx)(o.Heading, {
                         variant: "heading-sm/normal",
-                        color: "header-secondary",
+                        color: "text-default",
                         children: i,
                     }),
                 ],

@@ -6,8 +6,8 @@ var r = n(54381),
     s = n(999382),
     o = n(450377),
     c = n(823379),
-    d = n(63063),
-    u = n(727072),
+    u = n(63063),
+    d = n(727072),
     g = n(85960),
     m = n(577330),
     p = n(65912),
@@ -25,8 +25,8 @@ function O(e) {
         { guild: E, subsection: I } = (0, l.cj)([s.Z], () => s.Z.getProps()),
         S = null != (n = null != (t = null == E ? void 0 : E.id) ? t : O) ? n : j.lds,
         T = null != y,
-        [P] = (0, u.RD)(S),
-        { rulesByTriggerType: w } = (0, u.pH)(S),
+        [P] = (0, d.RD)(S),
+        { rulesByTriggerType: w } = (0, d.pH)(S),
         Z = {
             [g.vh.MEMBERS]: _.intl.string(_.t.sx4E5v),
             [g.vh.CONTENT]: _.intl.string(_.t.fphZb0),
@@ -95,14 +95,14 @@ function O(e) {
                     children: [
                         (0, r.jsx)(a.Text, {
                             variant: "text-sm/normal",
-                            color: "header-secondary",
+                            color: "text-default",
                             children: _.intl.string(_.t.EwuSCR),
                         }),
                         (0, r.jsx)(a.Text, {
                             variant: "text-sm/medium",
                             className: v.helpUrl,
                             children: _.intl.format(_.t["B+sgGt"], {
-                                helpUrl: d.Z.getArticleURL(j.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE),
+                                helpUrl: u.Z.getArticleURL(j.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE),
                             }),
                         }),
                     ],

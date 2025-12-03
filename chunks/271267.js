@@ -10,8 +10,8 @@ var r = n(54381),
     s = n(756066),
     o = n(388032),
     c = n(52726),
-    d = n(270395);
-function u(e) {
+    u = n(270395);
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -49,7 +49,7 @@ function m(e) {
                         var l, o;
                         return (0, r.jsx)(
                             e,
-                            ((l = u({}, n)),
+                            ((l = d({}, n)),
                             (o = o =
                                 {
                                     eligibility: i,
@@ -84,7 +84,7 @@ function m(e) {
 }
 function p(e) {
     let { guild: t, checkboxText: n } = e,
-        { canSubmitAcceptance: s, error: c, loading: d, submitAcceptTermsRequest: u } = (0, a.Z)(t.id),
+        { canSubmitAcceptance: s, error: c, loading: u, submitAcceptTermsRequest: d } = (0, a.Z)(t.id),
         [g, m] = i.useState(!1);
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -98,8 +98,8 @@ function p(e) {
             (0, r.jsx)(l.LZC, { size: 24 }),
             (0, r.jsx)(l.Button, {
                 disabled: !g || !s,
-                onClick: u,
-                loading: d,
+                onClick: d,
+                loading: u,
                 variant: "expressive",
                 text: o.intl.string(o.t.NL5ZNS),
             }),
@@ -124,15 +124,15 @@ function f(e) {
             refreshEligibility: a,
             eligibility: o,
             eligibleForMonetization: c,
-            acceptTermsCheckboxText: d,
+            acceptTermsCheckboxText: u,
             wasRejectedInV1: g,
         } = n;
     return c
         ? g
-            ? (0, r.jsx)(s.Z, u({}, n))
+            ? (0, r.jsx)(s.Z, d({}, n))
             : (0, r.jsx)(p, {
                   guild: t,
-                  checkboxText: d,
+                  checkboxText: u,
               })
         : (0, r.jsx)(m, {
               guild: t,
@@ -149,7 +149,7 @@ function h(e) {
         children: [
             (0, r.jsx)("img", {
                 className: c.heroBanner,
-                src: d,
+                src: u,
                 alt: o.intl.string(o.t.Af4klP),
             }),
             (0, r.jsxs)("div", {
@@ -163,7 +163,7 @@ function h(e) {
                     (0, r.jsx)(l.LZC, { size: 12 }),
                     (0, r.jsx)(l.Text, {
                         variant: "text-md/normal",
-                        color: "header-secondary",
+                        color: "text-default",
                         children: o.intl.string(o.t["41wkMc"]),
                     }),
                     (0, r.jsx)(l.LZC, { size: 24 }),

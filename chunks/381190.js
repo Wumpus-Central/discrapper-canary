@@ -118,7 +118,7 @@ let p = (e) => {
                         }),
                         (0, r.jsx)(l.Text, {
                             variant: "text-sm/medium",
-                            color: "text-secondary",
+                            color: "text-subtle",
                             children: b,
                         }),
                     ],

@@ -76,7 +76,7 @@ function S(e) {
             }),
             (0, r.jsx)(s.xvT, {
                 variant: "text-xs/medium",
-                color: "text-secondary",
+                color: "text-subtle",
                 children: o,
             }),
         ],
@@ -93,7 +93,7 @@ function I(e) {
                 children: [
                     (0, r.jsx)(s.xvT, {
                         variant: "text-sm/medium",
-                        color: "text-primary",
+                        color: "text-strong",
                         lineClamp: 3,
                         children: null != (t = n.summaryLocalized) ? t : n.summary,
                     }),
@@ -102,7 +102,7 @@ function I(e) {
                         onClick: i,
                         children: (0, r.jsx)(s.xvT, {
                             variant: "text-xs/normal",
-                            color: "text-secondary",
+                            color: "text-subtle",
                             children: b.intl.string(b.t.lBeKY2),
                         }),
                     }),

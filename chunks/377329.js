@@ -1,6 +1,6 @@
 n.d(t, { Z: () => f }), n(953529), n(35282);
-var r = n(54381),
-    l = n(473749),
+var l = n(54381),
+    r = n(473749),
     i = n(442837),
     a = n(481060),
     s = n(471445),
@@ -17,7 +17,7 @@ var r = n(54381),
 function f(e) {
     var t, n;
     let { guildId: f, guildEvent: j, guildEventId: b, error: y } = e,
-        O = l.useMemo(() => (0, g.Gb)(j, f), [j, f]),
+        O = r.useMemo(() => (0, g.Gb)(j, f), [j, f]),
         { channel_id: E, name: N, image: C, description: P } = O,
         S = (0, i.e7)([c.Z], () => c.Z.getChannel(E), [E]),
         I = (0, i.e7)([u.Z], () => u.Z.getGuild(f), [f]),
@@ -29,10 +29,10 @@ function f(e) {
         ),
         w = (0, i.e7)([o.Z], () => o.Z.isLurking(f), [f]),
         k = (0, s.KS)(S, I);
-    return (0, r.jsxs)("div", {
+    return (0, l.jsxs)("div", {
         className: p.content,
         children: [
-            (0, r.jsx)(h.Z, {
+            (0, l.jsx)(h.Z, {
                 className: p.previewCard,
                 guild: I,
                 channel: S,
@@ -51,15 +51,15 @@ function f(e) {
                 guildEvent: O,
                 eventPreview: O,
             }),
-            (0, r.jsxs)("div", {
+            (0, l.jsxs)("div", {
                 className: p.textContainer,
                 children: [
-                    (0, r.jsx)(a.Heading, {
+                    (0, l.jsx)(a.Heading, {
                         variant: "heading-xl/semibold",
                         children: v.intl.string(v.t.yBsFE3),
                     }),
-                    (0, r.jsx)(a.Text, {
-                        color: "text-secondary",
+                    (0, l.jsx)(a.Text, {
+                        color: "text-subtle",
                         variant: "text-md/normal",
                         className: p.subheader,
                         children:
@@ -69,18 +69,18 @@ function f(e) {
                                       channelName: null != (t = null == S ? void 0 : S.name) ? t : "",
                                       channelHook: () => {
                                           var e;
-                                          return (0, r.jsxs)("div", {
+                                          return (0, l.jsxs)("div", {
                                               className: p.channelName,
                                               children: [
                                                   null != k
-                                                      ? (0, r.jsx)(k, {
+                                                      ? (0, l.jsx)(k, {
                                                             size: "custom",
                                                             color: "currentColor",
                                                             width: 20,
                                                             height: 20,
                                                             className: p.icon,
                                                         })
-                                                      : (0, r.jsx)(a._tJ, {
+                                                      : (0, l.jsx)(a._tJ, {
                                                             size: "custom",
                                                             color: "currentColor",
                                                             height: 18,
@@ -94,7 +94,7 @@ function f(e) {
                                   }),
                     }),
                     null != y &&
-                        (0, r.jsx)(a.Text, {
+                        (0, l.jsx)(a.Text, {
                             color: "text-feedback-critical",
                             variant: "text-xs/normal",
                             className: p.subheader,

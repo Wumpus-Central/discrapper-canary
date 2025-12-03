@@ -148,7 +148,7 @@ function ei() {
                                           (0, r.jsx)(p.Text, {
                                               className: ee.titleDivider,
                                               variant: "eyebrow",
-                                              color: "header-secondary",
+                                              color: "text-default",
                                               tag: "span",
                                               children: "\u2022",
                                           }),

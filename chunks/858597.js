@@ -1,4 +1,4 @@
-n.d(e, { Z: () => y });
+n.d(e, { Z: () => R });
 var i = n(54381),
     s = n(473749),
     r = n(120356),
@@ -43,7 +43,7 @@ function C(t) {
                     }),
                     (0, i.jsx)(c.Text, {
                         variant: "text-xs/medium",
-                        color: "header-secondary",
+                        color: "text-default",
                         children: n,
                     }),
                 ],
@@ -75,7 +75,7 @@ function L(t) {
                     null != n
                         ? (0, i.jsx)(c.Text, {
                               variant: "text-xs/medium",
-                              color: "header-secondary",
+                              color: "text-default",
                               children: n,
                           })
                         : null,
@@ -88,12 +88,12 @@ function L(t) {
         ],
     });
 }
-let y = function (t) {
+let R = function (t) {
     let { otherUserId: e, channelId: r, warningId: l, warningType: o, transitionToSlide: N } = t,
-        y = (0, S.o)(),
-        R = (0, S.Q)(),
-        v = (0, E.q)(r),
-        f = null != (0, g.M)(r),
+        R = (0, S.o)(),
+        f = (0, S.Q)(),
+        y = (0, E.q)(r),
+        v = null != (0, g.M)(r),
         F = (0, a.e7)([_.Z], () => _.Z.isIgnored(e), [e]),
         M = (0, a.e7)([_.Z], () => _.Z.isBlocked(e), [e]),
         I = s.useCallback(
@@ -104,10 +104,10 @@ let y = function (t) {
                     senderId: e,
                     warningType: o,
                     cta: t,
-                    isNudgeWarning: f,
+                    isNudgeWarning: v,
                 });
             },
-            [r, l, e, o, f],
+            [r, l, e, o, v],
         ),
         Z = s.useCallback(() => {
             (0, c.Mr3)(p.X_), I(O.NM.USER_SAFETY_TOOLS_BLOCK_CONFIRM);
@@ -166,11 +166,11 @@ let y = function (t) {
                     subTitle: b.intl.string(b.t["0tydOa"]),
                     buttonText: b.intl.string(b.t.X27yhD),
                     onPress: () => {
-                        (0, c.Mr3)(p.X_), (0, u.wk)(v), I(O.NM.USER_SAFETY_TOOLS_REPORT);
+                        (0, c.Mr3)(p.X_), (0, u.wk)(y), I(O.NM.USER_SAFETY_TOOLS_REPORT);
                     },
                 },
             ],
-            [F, M, I, U, Z, k, e, r, v],
+            [F, M, I, U, Z, k, e, r, y],
         ),
         P = s.useMemo(() => {
             let t = {
@@ -239,9 +239,9 @@ let y = function (t) {
                             });
                     }
                     return t;
-                })({ type: 0 }, y ? t : R ? n : e),
+                })({ type: 0 }, R ? t : f ? n : e),
             ];
-        }, [y, R, N, I]),
+        }, [R, f, N, I]),
         B = s.useMemo(
             () => [
                 {

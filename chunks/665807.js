@@ -40,7 +40,7 @@ let h = function (e) {
             }),
             (0, r.jsx)(a.Text, {
                 variant: "text-md/normal",
-                color: "header-secondary",
+                color: "text-default",
                 children: _,
             }),
         ],

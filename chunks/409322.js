@@ -34,7 +34,7 @@ function f(e) {
                 null != S &&
                     (0, r.jsx)(a.Heading, {
                         variant: "heading-md/semibold",
-                        color: "header-secondary",
+                        color: "text-default",
                         className: u.listTitle,
                         children: S,
                     }),

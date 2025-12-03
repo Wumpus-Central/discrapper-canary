@@ -185,7 +185,7 @@ function C(e) {
                 children: t.topic,
             }),
             (0, r.jsx)(o.Text, {
-                color: "header-secondary",
+                color: "text-default",
                 variant: "text-sm/normal",
                 className: v.subtitle,
                 children: t.summShort,

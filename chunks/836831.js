@@ -53,7 +53,7 @@ let p = s.forwardRef((e, t) => {
                             (0, r.jsx)("div", { className: a()(u.coverContent, u.progressTextOverlay) }),
                             (0, r.jsx)(l.Text, {
                                 variant: f,
-                                color: "text-primary",
+                                color: "text-strong",
                                 className: u.progressText,
                                 children: g,
                             }),

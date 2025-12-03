@@ -4761,25 +4761,6 @@ let { Themes: r } = n(15202).VV,
                     opacity: 1,
                 },
             },
-            HEADER_SECONDARY: {
-                category: "text",
-                [r.DARK]: {
-                    raw: "PRIMARY_330",
-                    opacity: 1,
-                },
-                [r.LIGHT]: {
-                    raw: "PRIMARY_500",
-                    opacity: 1,
-                },
-                [r.MIDNIGHT]: {
-                    raw: "PLUM_8",
-                    opacity: 1,
-                },
-                [r.DARKER]: {
-                    raw: "PLUM_9",
-                    opacity: 1,
-                },
-            },
             ICON_MUTED: {
                 category: "generic",
                 [r.DARK]: {
@@ -5268,19 +5249,19 @@ let { Themes: r } = n(15202).VV,
             INPUT_FOREGROUND_DEFAULT: {
                 category: "background",
                 [r.DARK]: {
-                    raw: "NEUTRAL_12",
+                    raw: "PRIMARY_230",
                     opacity: 1,
                 },
                 [r.LIGHT]: {
-                    raw: "NEUTRAL_72",
+                    raw: "PRIMARY_600",
                     opacity: 1,
                 },
                 [r.MIDNIGHT]: {
-                    raw: "NEUTRAL_10",
+                    raw: "PLUM_4",
                     opacity: 1,
                 },
                 [r.DARKER]: {
-                    raw: "NEUTRAL_4",
+                    raw: "PLUM_6",
                     opacity: 1,
                 },
             },
@@ -7531,6 +7512,25 @@ let { Themes: r } = n(15202).VV,
                     opacity: 1,
                 },
             },
+            TEXT_DEFAULT: {
+                category: "text",
+                [r.DARK]: {
+                    raw: "PRIMARY_230",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "PRIMARY_600",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "PLUM_4",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "PLUM_6",
+                    opacity: 1,
+                },
+            },
             TEXT_FEEDBACK_CRITICAL: {
                 category: "text",
                 [r.DARK]: {
@@ -7702,7 +7702,7 @@ let { Themes: r } = n(15202).VV,
                     opacity: 1,
                 },
             },
-            TEXT_NORMAL: {
+            TEXT_STRONG: {
                 category: "text",
                 [r.DARK]: {
                     raw: "PRIMARY_230",
@@ -7721,26 +7721,7 @@ let { Themes: r } = n(15202).VV,
                     opacity: 1,
                 },
             },
-            TEXT_PRIMARY: {
-                category: "text",
-                [r.DARK]: {
-                    raw: "PRIMARY_230",
-                    opacity: 1,
-                },
-                [r.LIGHT]: {
-                    raw: "PRIMARY_600",
-                    opacity: 1,
-                },
-                [r.MIDNIGHT]: {
-                    raw: "PLUM_4",
-                    opacity: 1,
-                },
-                [r.DARKER]: {
-                    raw: "PLUM_6",
-                    opacity: 1,
-                },
-            },
-            TEXT_SECONDARY: {
+            TEXT_SUBTLE: {
                 category: "text",
                 [r.DARK]: {
                     raw: "PRIMARY_330",

@@ -15,8 +15,8 @@ var r = n(54381),
     h = n(572004),
     j = n(624138),
     x = n(617136),
-    y = n(616022),
-    g = n(49436),
+    g = n(616022),
+    y = n(49436),
     v = n(373370),
     b = n(968843),
     _ = n(804127),
@@ -86,7 +86,7 @@ function R(e) {
             let r = null == u ? void 0 : u.code;
             return (0, j.Ew)(r) ? t : t.replace(T.Dp, encodeURIComponent(r));
         }, [n, null == u ? void 0 : u.code]),
-        y = (0, _.In)({
+        g = (0, _.In)({
             quest: n,
             questContent: o,
             questContentPosition: s,
@@ -103,7 +103,7 @@ function R(e) {
                     ? {
                           variant: "primary",
                           text: A.intl.string(A.t["+zx47d"]),
-                          onClick: y,
+                          onClick: g,
                       }
                     : {
                           variant: "primary",
@@ -164,7 +164,7 @@ function q(e) {
                     }),
                     (0, r.jsx)(l.Text, {
                         variant: "text-sm/medium",
-                        color: "text-secondary",
+                        color: "text-subtle",
                         children: A.intl.format(A.t["ESmp2+"], { onClaimInstructions: o }),
                     }),
                 ],
@@ -192,15 +192,15 @@ function Z(e) {
         } = e,
         h = null != (t = (0, b.B4)(n.id)) ? t : n,
         j = (0, w.zG)(h.config),
-        x = g.jn.REWARD_MODAL,
+        x = y.jn.REWARD_MODAL,
         {
             questStoreRewardCode: v,
             isFetchingRewardCode: N,
             isClaimingReward: A,
-        } = (0, o.cj)([y.Z], () => ({
-            questStoreRewardCode: y.Z.getRewardCode(h.id),
-            isFetchingRewardCode: y.Z.isFetchingRewardCode(h.id),
-            isClaimingReward: y.Z.isClaimingReward(h.id),
+        } = (0, o.cj)([g.Z], () => ({
+            questStoreRewardCode: g.Z.getRewardCode(h.id),
+            isFetchingRewardCode: g.Z.isFetchingRewardCode(h.id),
+            isClaimingReward: g.Z.isClaimingReward(h.id),
         })),
         I = !0 === c ? (0, p.b)(h) : v,
         { hasError: D, setHasError: Z } = (0, _.uL)({

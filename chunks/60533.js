@@ -7,8 +7,8 @@ var i = n(442837),
     s = n(90815),
     o = n(601964),
     c = n(594174),
-    d = n(388032),
-    u = n(254574);
+    u = n(388032),
+    d = n(254574);
 function g(e) {
     let { guild: t } = e,
         n = (0, i.e7)([c.default], () => {
@@ -17,25 +17,25 @@ function g(e) {
         });
     return (0, r.jsxs)(a.Kqy, {
         gap: 24,
-        className: u.container,
+        className: d.container,
         children: [
             (0, r.jsx)(a.Heading, {
                 variant: "heading-lg/semibold",
                 color: "header-primary",
-                children: d.intl.string(d.t.Ms33Ds),
+                children: u.intl.string(u.t.Ms33Ds),
             }),
             (0, r.jsx)(a.Text, {
                 variant: "text-md/normal",
-                color: "header-secondary",
-                children: d.intl.string(d.t.xK7oic),
+                color: "text-default",
+                children: u.intl.string(u.t.xK7oic),
             }),
             (0, r.jsx)(l.u, {
-                text: d.intl.string(d.t.VAIHXQ),
+                text: u.intl.string(u.t.VAIHXQ),
                 shouldShow: !n,
                 children: (0, r.jsx)("div", {
                     children: (0, r.jsx)(a.Button, {
                         variant: "primary",
-                        text: d.intl.string(d.t.ZXeJbS),
+                        text: u.intl.string(u.t.ZXeJbS),
                         disabled: !n,
                         onClick: () => {
                             (0, s.q)(t.id, { demonetized: !0 });

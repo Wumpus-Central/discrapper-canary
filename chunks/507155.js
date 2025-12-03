@@ -1,4 +1,4 @@
-r.d(t, { Z: () => x }), r(388685), r(953529);
+r.d(t, { Z: () => m }), r(388685), r(953529);
 var n = r(54381),
     o = r(473749),
     a = r(120356),
@@ -11,25 +11,25 @@ var n = r(54381),
     p = r(795338),
     f = r(880419),
     v = r(279604),
-    m = r(388032),
+    b = r(388032),
     j = r(397321);
-function x(e) {
+function m(e) {
     let { canUseBoosts: t, guildId: r, powerup: a } = e,
-        [x, b] = o.useState(!1),
+        [m, x] = o.useState(!1),
         g = (0, c.ZP)(r, a),
         O = (0, d.P)(a, g, !1),
-        y = (0, c.UP)(g),
-        { disabled: C } = (0, l.Z)(r, a, y),
-        { onActivate: h } = (0, v.ZP)(r, a),
-        P = !t || C,
-        k = y && !P,
+        C = (0, c.UP)(g),
+        { disabled: h } = (0, l.Z)(r, a, C),
+        { onActivate: y } = (0, v.ZP)(r, a),
+        P = !t || h,
+        k = C && !P,
         w = (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsx)("div", {
-                    className: i()(j.perkCardImage, { [j.active]: y }),
+                    className: i()(j.perkCardImage, { [j.active]: C }),
                     children: (0, n.jsx)(p.m, {
                         powerup: a,
-                        isHovering: !P && x,
+                        isHovering: !P && m,
                     }),
                 }),
                 (0, n.jsxs)("div", {
@@ -41,7 +41,7 @@ function x(e) {
                                 (0, n.jsx)("div", {
                                     children: (0, n.jsx)(s.Text, {
                                         variant: "text-sm/medium",
-                                        color: (y || x) && !P ? "text-primary" : "text-secondary",
+                                        color: (C || m) && !P ? "text-strong" : "text-subtle",
                                         children: a.description,
                                     }),
                                 }),
@@ -63,8 +63,8 @@ function x(e) {
                                                     }),
                                                     (0, n.jsx)(s.Text, {
                                                         variant: "text-sm/medium",
-                                                        color: "text-secondary",
-                                                        children: m.intl.formatToPlainString(m.t.t2Wbo1, {
+                                                        color: "text-subtle",
+                                                        children: b.intl.formatToPlainString(b.t.t2Wbo1, {
                                                             required: a.cost,
                                                             decorator: "",
                                                         }),
@@ -87,20 +87,20 @@ function x(e) {
                 }),
             ],
         });
-    return y
+    return C
         ? (0, n.jsx)("div", {
               className: i()(j.perkCard, j.activeCard, { [j.disabled]: P }),
-              onMouseEnter: () => b(!0),
-              onMouseLeave: () => b(!1),
+              onMouseEnter: () => x(!0),
+              onMouseLeave: () => x(!1),
               children: w,
           })
         : (0, n.jsx)(s.P3F, {
               className: i()(j.perkCard, { [j.disabled]: P }),
-              onMouseEnter: () => b(!0),
-              onMouseLeave: () => b(!1),
+              onMouseEnter: () => x(!0),
+              onMouseLeave: () => x(!1),
               "aria-disabled": P,
               onClick: (e) => {
-                  e.stopPropagation(), P || null == h || h(e, { shouldCloseAllModals: !1 });
+                  e.stopPropagation(), P || null == y || y(e, { shouldCloseAllModals: !1 });
               },
               children: w,
           });

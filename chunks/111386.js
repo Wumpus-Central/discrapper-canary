@@ -26,7 +26,7 @@ let f = () =>
                         }),
                         (0, r.jsx)(s.Text, {
                             variant: "text-md/normal",
-                            color: "text-secondary",
+                            color: "text-subtle",
                             children: c.intl.string(c.t.eSDHDk),
                         }),
                     ],

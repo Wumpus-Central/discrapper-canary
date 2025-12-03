@@ -139,7 +139,7 @@ function C(e) {
                             children: [
                                 (0, r.jsx)(u.Text, {
                                     variant: "text-md/medium",
-                                    color: "text-primary",
+                                    color: "text-strong",
                                     lineClamp: 3,
                                     children: k(),
                                 }),
@@ -150,7 +150,7 @@ function C(e) {
                                         (0, r.jsx)(u.Text, {
                                             className: I.subHeaderText,
                                             variant: "text-sm/normal",
-                                            color: "text-secondary",
+                                            color: "text-subtle",
                                             children: U(),
                                         }),
                                     ],

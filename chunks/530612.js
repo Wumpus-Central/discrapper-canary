@@ -73,7 +73,7 @@ function f(e) {
                     }),
                     (0, r.jsx)(s.Text, {
                         className: c.userName,
-                        color: f ? "text-muted" : "text-secondary",
+                        color: f ? "text-muted" : "text-subtle",
                         variant: "text-xs/normal",
                         children: n.username,
                     }),

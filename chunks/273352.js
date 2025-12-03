@@ -1,18 +1,18 @@
-t.d(n, { default: () => x }), t(388685);
-var l = t(54381),
-    a = t(473749),
-    o = t(120356),
-    s = t.n(o),
-    r = t(693789),
-    i = t(466377),
-    c = t(993365),
-    d = t(481060),
-    u = t(600164),
-    m = t(388032),
-    h = t(573857);
+n.d(t, { default: () => x }), n(388685);
+var l = n(54381),
+    a = n(473749),
+    o = n(120356),
+    s = n.n(o),
+    i = n(693789),
+    r = n(466377),
+    c = n(993365),
+    d = n(481060),
+    u = n(600164),
+    m = n(388032),
+    h = n(573857);
 let x = (e) => {
-    let n,
-        t,
+    let t,
+        n,
         o,
         {
             body: x,
@@ -20,8 +20,8 @@ let x = (e) => {
             className: p,
             confirmColor: y,
             confirmText: b = m.intl.string(m.t.BddRzS),
-            secondaryConfirmText: j,
-            onCancel: f,
+            secondaryConfirmText: f,
+            onCancel: j,
             onClose: C,
             onConfirm: z,
             onConfirmSecondary: N,
@@ -29,7 +29,7 @@ let x = (e) => {
             transitionState: B,
             titleClassName: k,
         } = e,
-        v = r.zx.Sizes.MEDIUM,
+        v = i.zx.Sizes.MEDIUM,
         [A, R] = a.useState(!1);
     return (
         a.useEffect(
@@ -40,19 +40,19 @@ let x = (e) => {
         ),
         null != _ &&
             "" !== _ &&
-            (n = (0, l.jsx)(r.zx, {
+            (t = (0, l.jsx)(i.zx, {
                 type: "button",
                 size: v,
-                color: r.zx.Colors.PRIMARY,
+                color: i.zx.Colors.PRIMARY,
                 onClick: () => {
-                    null == C || C(), null == f || f();
+                    null == C || C(), null == j || j();
                 },
                 className: h.secondaryButton,
                 children: _,
             })),
         null != b &&
             "" !== b &&
-            (t = (0, l.jsx)(r.zx, {
+            (n = (0, l.jsx)(i.zx, {
                 type: "submit",
                 color: y,
                 size: v,
@@ -60,17 +60,17 @@ let x = (e) => {
                 autoFocus: !0,
                 children: b,
             })),
-        null != j &&
-            "" !== j &&
+        null != f &&
+            "" !== f &&
             (o = (0, l.jsx)(d.Checkbox, {
                 checked: A,
                 onChange: (e) => R(e),
-                label: j,
+                label: f,
                 labelType: "secondary",
             })),
-        (0, l.jsx)(i.Y0, {
+        (0, l.jsx)(r.Y0, {
             transitionState: B,
-            size: i.Cg.DYNAMIC,
+            size: r.Cg.DYNAMIC,
             className: s()(p, h.container),
             "aria-label": g,
             parentComponent: "Alert",
@@ -80,7 +80,7 @@ let x = (e) => {
                 },
                 className: h.form,
                 children: [
-                    (0, l.jsx)(i.xB, {
+                    (0, l.jsx)(r.xB, {
                         children:
                             null != g
                                 ? (0, l.jsx)(d.Heading, {
@@ -94,7 +94,7 @@ let x = (e) => {
                                       children: g,
                                   }),
                     }),
-                    (0, l.jsx)(i.hz, {
+                    (0, l.jsx)(r.hz, {
                         className: h.modalContent,
                         children: (0, l.jsx)(u.Z, {
                             direction: u.Z.Direction.VERTICAL,
@@ -105,16 +105,16 @@ let x = (e) => {
                                 (0, l.jsx)(c.x, {
                                     variant: "text-md/normal",
                                     className: h.body,
-                                    color: "header-secondary",
+                                    color: "text-default",
                                     children: x,
                                 }),
                         }),
                     }),
-                    (0, l.jsxs)(i.mz, {
+                    (0, l.jsxs)(r.mz, {
                         justify: void 0,
                         wrap: u.Z.Wrap.WRAP,
                         className: h.modalFooter,
-                        children: [t, n, o],
+                        children: [n, t, o],
                     }),
                 ],
             }),

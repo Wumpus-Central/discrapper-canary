@@ -6,45 +6,45 @@ var r = n(54381),
     s = n(269464),
     o = n(295051),
     c = n(981631),
-    d = n(388032),
-    u = n(64929);
+    u = n(388032),
+    d = n(64929);
 function g(e) {
     let { guild: t, canManageGuild: n } = e;
     return (0, r.jsxs)("div", {
-        className: u.container,
+        className: d.container,
         children: [
             (0, r.jsxs)("div", {
-                className: u.column,
+                className: d.column,
                 children: [
                     (0, r.jsxs)(i.Heading, {
                         variant: "heading-md/medium",
                         color: "header-primary",
-                        className: u.title,
-                        children: [d.intl.string(d.t["0r0AzF"]), (0, r.jsx)(o.zA, { guild: t })],
+                        className: d.title,
+                        children: [u.intl.string(u.t["0r0AzF"]), (0, r.jsx)(o.zA, { guild: t })],
                     }),
                     (0, r.jsx)(i.Text, {
                         variant: "text-sm/medium",
-                        color: "text-secondary",
-                        className: u.text,
-                        children: d.intl.string(d.t.UfqmIb),
+                        color: "text-subtle",
+                        className: d.text,
+                        children: u.intl.string(u.t.UfqmIb),
                     }),
                     (0, r.jsx)(i.Text, {
                         variant: "text-sm/medium",
-                        color: "text-secondary",
-                        className: u.text,
-                        children: d.intl.format(d.t.vBcWUv, {
+                        color: "text-subtle",
+                        className: d.text,
+                        children: u.intl.format(u.t.vBcWUv, {
                             articleURL: l.Z.getArticleURL(c.BhN.GUILD_BANNER_SPLASH),
                         }),
                     }),
                     (0, r.jsx)(a.F, {
                         guild: t,
                         canManageGuild: n,
-                        buttonClassName: u.button,
+                        buttonClassName: d.button,
                     }),
                 ],
             }),
             (0, r.jsx)("div", {
-                className: u.column,
+                className: d.column,
                 children: (0, r.jsx)(s.O, {
                     guild: t,
                     canManageGuild: n,

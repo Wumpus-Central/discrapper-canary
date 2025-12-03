@@ -8,11 +8,11 @@ var s = n(54381),
     c = n(194359),
     d = n(906732),
     m = n(321488),
-    p = n(417183),
-    u = n(170245),
+    u = n(417183),
+    p = n(170245),
     b = n(892001),
-    h = n(974042),
-    g = n(981631),
+    g = n(974042),
+    h = n(981631),
     f = n(388032),
     O = n(862998);
 function _(e) {
@@ -71,11 +71,11 @@ function y(e) {
                     context: { location: "Spam requests modal" },
                 });
         },
-        h = n === g.Skl.OFFLINE ? g.Skl.UNKNOWN : n,
+        g = n === h.Skl.OFFLINE ? h.Skl.UNKNOWN : n,
         _ = o ? f.intl.string(f.t.pO68Oz) : f.intl.string(f.t["gp+Ytz"]);
     return (0, s.jsx)("div", {
         className: O.spamRequest,
-        children: (0, s.jsx)(p.Z, {
+        children: (0, s.jsx)(u.Z, {
             isFocused: !1,
             user: t,
             className: O.listItem,
@@ -89,10 +89,10 @@ function y(e) {
                 (0, s.jsxs)("div", {
                     className: O.listItemContents,
                     children: [
-                        (0, s.jsx)(u.Z, {
+                        (0, s.jsx)(p.Z, {
                             user: t,
                             hovered: e,
-                            status: h,
+                            status: g,
                             subText: _,
                             className: O.userInfo,
                         }),
@@ -122,14 +122,14 @@ function y(e) {
 }
 function x(e) {
     let { transitionState: t, onClose: n } = e,
-        { rows: d } = (0, l.cj)([h.ZP], () => h.ZP.getState()),
-        m = d.filter(g.pJs.PENDING_IGNORED),
-        p = d.filter(g.pJs.SPAM),
-        u = p.length + m.length;
+        { rows: d } = (0, l.cj)([g.ZP], () => g.ZP.getState()),
+        m = d.filter(h.pJs.PENDING_IGNORED),
+        u = d.filter(h.pJs.SPAM),
+        p = u.length + m.length;
     return (
         o.useEffect(() => {
-            0 === u && n();
-        }, [u, n]),
+            0 === p && n();
+        }, [p, n]),
         (0, s.jsxs)(a.Y0X, {
             transitionState: t,
             className: O.modal,
@@ -147,7 +147,7 @@ function x(e) {
                         }),
                         (0, s.jsx)(a.Text, {
                             variant: "text-md/medium",
-                            color: "header-secondary",
+                            color: "text-default",
                             children: f.intl.string(f.t.tRxb4H),
                         }),
                     ],
@@ -165,7 +165,7 @@ function x(e) {
                                 }),
                             ),
                         ),
-                        p.map((e) =>
+                        u.map((e) =>
                             (0, o.createElement)(
                                 y,
                                 j(_({}, e), {
@@ -176,7 +176,7 @@ function x(e) {
                         ),
                     ],
                 }),
-                u > 1 &&
+                p > 1 &&
                     (0, s.jsx)("div", {
                         className: O.modalFooter,
                         children: (0, s.jsx)(r.zx, {

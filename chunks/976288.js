@@ -6,8 +6,8 @@ var r = n(54381),
     s = n(481060),
     o = n(558324),
     c = n(456268),
-    d = n(681460),
-    u = n(345861),
+    u = n(681460),
+    d = n(345861),
     g = n(650774),
     m = n(434404),
     p = n(999382),
@@ -37,7 +37,7 @@ function I(e) {
         c = i.useCallback((e) => {
             m.Z.updateGuild({ discoverySplash: e });
         }, []),
-        d = i.useCallback(() => {
+        u = i.useCallback(() => {
             m.Z.updateGuild({ discoverySplash: null });
         }, []),
         p = i.useCallback((e) => {
@@ -63,7 +63,7 @@ function I(e) {
                             }),
                             (0, r.jsx)(s.Text, {
                                 variant: "text-sm/medium",
-                                color: "text-secondary",
+                                color: "text-subtle",
                                 children: y.intl.string(y.t["53LhI6"]),
                             }),
                         ],
@@ -78,7 +78,7 @@ function I(e) {
                             }),
                             (0, r.jsx)(s.Text, {
                                 variant: "text-sm/medium",
-                                color: "text-secondary",
+                                color: "text-subtle",
                                 children: y.intl.string(y.t.VJMq8R),
                             }),
                             (0, r.jsxs)("div", {
@@ -86,7 +86,7 @@ function I(e) {
                                 children: [
                                     (0, r.jsx)("div", {
                                         className: N.editableSection,
-                                        children: (0, r.jsx)(u.Z, {
+                                        children: (0, r.jsx)(d.Z, {
                                             onChange: c,
                                             text: y.intl.string(y.t["3UB9ad"]),
                                             size: "sm",
@@ -101,7 +101,7 @@ function I(e) {
                                                   variant: "critical-secondary",
                                                   size: "sm",
                                                   text: y.intl.string(y.t.N86XcP),
-                                                  onClick: d,
+                                                  onClick: u,
                                               }),
                                           })
                                         : null,
@@ -119,7 +119,7 @@ function I(e) {
                             }),
                             (0, r.jsx)(s.Text, {
                                 variant: "text-sm/medium",
-                                color: "text-secondary",
+                                color: "text-subtle",
                                 children: y.intl.string(y.t["6Y9q8d"]),
                             }),
                             (0, r.jsx)("div", {
@@ -159,7 +159,7 @@ function S(e) {
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: "text-sm/medium",
-                        color: "text-secondary",
+                        color: "text-subtle",
                         children: y.intl.string(y.t.MMEJFB),
                     }),
                 ],
@@ -174,7 +174,7 @@ function S(e) {
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: "text-sm/medium",
-                        color: "text-secondary",
+                        color: "text-subtle",
                         children: y.intl.string(y.t.CE5Gya),
                     }),
                     (0, r.jsx)("div", {
@@ -196,7 +196,7 @@ function S(e) {
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: "text-sm/medium",
-                        color: "text-secondary",
+                        color: "text-subtle",
                         children: y.intl.string(y.t["4jnzla"]),
                     }),
                     (0, r.jsx)("div", {
@@ -221,7 +221,7 @@ function S(e) {
 }
 function T(e) {
     let { guildId: t, guildMetadata: n, requireTag: l, error: a } = e,
-        [u, g] = i.useState(null),
+        [d, g] = i.useState(null),
         m = i.useCallback(
             (e) => {
                 let r = Array.from(e),
@@ -252,7 +252,7 @@ function T(e) {
                     }),
             [n.keywords, n.primaryCategoryId, p],
         ),
-        b = null != a ? a : u,
+        b = null != a ? a : d,
         x = i.useMemo(
             () =>
                 n.keywords.map((e) => ({
@@ -300,7 +300,7 @@ function T(e) {
                           }),
                           (0, r.jsx)("div", {
                               className: N.editableSection,
-                              children: (0, r.jsx)(d.j, { pills: h }),
+                              children: (0, r.jsx)(u.j, { pills: h }),
                           }),
                       ],
                   })
@@ -328,7 +328,7 @@ function P(e) {
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: "text-sm/medium",
-                        color: "text-secondary",
+                        color: "text-subtle",
                         children: y.intl.string(y.t["/RSSlV"]),
                     }),
                     (0, r.jsx)("div", {
@@ -370,7 +370,7 @@ function w(e) {
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: "text-sm/medium",
-                        color: "text-secondary",
+                        color: "text-subtle",
                         children: y.intl.string(y.t["SF/GRh"]),
                     }),
                 ],

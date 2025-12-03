@@ -43,7 +43,7 @@ let f = () =>
                                   }),
                                   (0, i.jsx)(a.Text, {
                                       variant: "text-sm/normal",
-                                      color: "header-secondary",
+                                      color: "text-default",
                                       children: p.intl.string(p.t.zcs5ko),
                                   }),
                               ],

@@ -39,7 +39,7 @@ function p(e) {
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: "text-sm/medium",
-                        color: "text-secondary",
+                        color: "text-subtle",
                         children: x.intl.format(x.t["v1u/zq"], { rewardName: n }),
                     }),
                 ],
@@ -70,7 +70,7 @@ function C(e) {
                 .catch(() => N("error"));
         }
     }, [h, f, j]);
-    let y = "error" === v || null == g;
+    let b = "error" === v || null == g;
     return (0, r.jsx)(d.Z, {
         onClose: c,
         transitionState: x,
@@ -78,8 +78,8 @@ function C(e) {
         sourceQuestContent: C,
         location: m.dr.INGAME_REWARD_MODAL,
         isRewardContentLoading: "loading" === v,
-        rewardContentHasError: y,
-        rewardContent: y
+        rewardContentHasError: b,
+        rewardContent: b
             ? null
             : (0, r.jsx)(u.Z, {
                   rewardName: g.messages.name,

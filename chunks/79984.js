@@ -40,7 +40,7 @@ function d() {
                         children: (0, r.jsx)(l.Text, {
                             className: u.hidden,
                             variant: "text-sm/normal",
-                            color: "text-secondary",
+                            color: "text-subtle",
                             lineClamp: 1,
                             children: "_",
                         }),

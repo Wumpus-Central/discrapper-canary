@@ -54,7 +54,7 @@ let f = (e) => {
                     null != m && "" !== m
                         ? (0, r.jsxs)(s.Text, {
                               variant: "text-md/medium",
-                              color: "header-secondary",
+                              color: "text-default",
                               children: [
                                   (0, r.jsx)("span", {
                                       className: p.rejectionReasonLabel,

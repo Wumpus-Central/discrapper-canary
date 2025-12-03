@@ -104,7 +104,7 @@ function g(e) {
                 g
                     ? (0, r.jsx)(l.x, {
                           variant: "text-sm/normal",
-                          color: "header-secondary",
+                          color: "text-default",
                           className: u.description,
                           id: h,
                           children: a,

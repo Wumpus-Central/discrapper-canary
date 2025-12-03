@@ -23,8 +23,8 @@ var n = r(54381),
 let x = 1000 / 60,
     h = 1000 / 30,
     p = 5000,
-    g = (1000 / 60) * 3,
-    b = Math.ceil(3000 / (1000 / 60));
+    b = (1000 / 60) * 3,
+    g = Math.ceil(3000 / (1000 / 60));
 function v(e, t) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : window,
         n = a.useRef(null),
@@ -55,7 +55,7 @@ function v(e, t) {
     ];
 }
 function j(e) {
-    let t = a.useRef(Array(b).fill(0)),
+    let t = a.useRef(Array(g).fill(0)),
         r = a.useRef(performance.now()),
         n = a.useRef(0),
         c = a.useRef(0),
@@ -77,8 +77,8 @@ function j(e) {
                         ((n.current -= t.current[l.current]),
                         (t.current[l.current] = a),
                         (n.current += a),
-                        c.current < b && (c.current += 1),
-                        (l.current = (l.current + 1) % b));
+                        c.current < g && (c.current += 1),
+                        (l.current = (l.current + 1) % g));
             }, []),
             (e, t) => {
                 var r;
@@ -93,7 +93,7 @@ function j(e) {
 }
 function k(e, t) {
     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        n = a.useRef(Array(b).fill(0)),
+        n = a.useRef(Array(g).fill(0)),
         c = a.useRef(performance.now()),
         l = a.useRef(0),
         u = a.useRef(0),
@@ -119,9 +119,9 @@ function k(e, t) {
                     ((u.current -= n.current[o.current]),
                     (n.current[o.current] = f),
                     (u.current += f),
-                    i.current < b && (i.current += 1),
-                    (o.current = (o.current + 1) % b),
-                    f > g)
+                    i.current < g && (i.current += 1),
+                    (o.current = (o.current + 1) % g),
+                    f > b)
                 ) {
                     let t = 0 === i.current ? x : u.current / i.current,
                         r = Math.min(2 * x, t),
@@ -165,8 +165,8 @@ function y(e) {
             averageFrameTime: d,
             timeSinceLastDrop: m,
             onResetFrameData: h,
-            droppedFramesRef: g,
-            renderedFrameCount: b,
+            droppedFramesRef: b,
+            renderedFrameCount: g,
             bufferFramecountRef: y,
             frameCheckerEffect: T,
         } = k(r, c),
@@ -197,7 +197,7 @@ function y(e) {
                     (0, n.jsx)(i.Text, {
                         tag: "span",
                         variant: "text-md/bold",
-                        color: u < 30 ? "text-feedback-critical" : u < 45 ? "text-feedback-warning" : "text-primary",
+                        color: u < 30 ? "text-feedback-critical" : u < 45 ? "text-feedback-warning" : "text-strong",
                         children: u.toFixed(2),
                     }),
                 ],
@@ -211,15 +211,15 @@ function y(e) {
                     (0, n.jsx)(i.Text, {
                         tag: "span",
                         variant: "text-md/bold",
-                        color: m < 2 ? "text-feedback-critical" : m < 5 ? "text-feedback-warning" : "text-primary",
-                        children: g.current,
+                        color: m < 2 ? "text-feedback-critical" : m < 5 ? "text-feedback-warning" : "text-strong",
+                        children: b.current,
                     }),
                     (0, n.jsxs)(i.Text, {
                         tag: "span",
                         variant: "text-sm/normal",
                         color: "text-muted",
                         className: f.secondaryInfoText,
-                        children: ["(Dropped: ", ((g.current / b.current) * 100).toFixed(4), "%)"],
+                        children: ["(Dropped: ", ((b.current / g.current) * 100).toFixed(4), "%)"],
                     }),
                     F &&
                         (0, n.jsx)(s.u, {
@@ -245,8 +245,8 @@ function y(e) {
                     (0, n.jsx)(i.Text, {
                         tag: "span",
                         variant: "text-md/semibold",
-                        color: "text-secondary",
-                        children: b.current.toFixed(0),
+                        color: "text-subtle",
+                        children: g.current.toFixed(0),
                     }),
                 ],
             }),
@@ -259,7 +259,7 @@ function y(e) {
                     (0, n.jsxs)(i.Text, {
                         tag: "span",
                         variant: "text-md/semibold",
-                        color: d > 1.1 * x ? "text-feedback-warning" : "text-secondary",
+                        color: d > 1.1 * x ? "text-feedback-warning" : "text-subtle",
                         children: [d.toFixed(2), "ms"],
                     }),
                 ],
@@ -277,7 +277,7 @@ function y(e) {
                         (0, n.jsxs)(i.Text, {
                             tag: "span",
                             variant: "text-md/semibold",
-                            color: P > 1 ? "text-feedback-critical" : "text-secondary",
+                            color: P > 1 ? "text-feedback-critical" : "text-subtle",
                             children: [P.toFixed(2), "ms"],
                         }),
                         F &&

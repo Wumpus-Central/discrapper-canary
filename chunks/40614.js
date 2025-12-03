@@ -14,7 +14,7 @@ function u(e) {
         children: (0, r.jsx)(l.Text, {
             className: c.textContent,
             variant: "text-xs/medium",
-            color: "text-secondary",
+            color: "text-subtle",
             children: s.intl.string(s.t.jfrLLb),
         }),
     });

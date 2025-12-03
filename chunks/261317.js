@@ -6,8 +6,8 @@ var r = n(54381),
     s = n(704215),
     o = n(481060),
     c = n(100527),
-    d = n(266454),
-    u = n(314852),
+    u = n(266454),
+    d = n(314852),
     g = n(65361),
     m = n(731722),
     p = n(441536),
@@ -34,12 +34,12 @@ let P = function () {
         { fetchGuildProfile: R, fetchStatus: D } = (0, g.u)(null == w ? void 0 : w.id);
     if (
         (i.useEffect(() => {
-            (0, d.Q3)(s.z.GUILD_TAG_SERVER_SETTINGS_NEW_BADGE, { dismissAction: N.L.AUTO });
+            (0, u.Q3)(s.z.GUILD_TAG_SERVER_SETTINGS_NEW_BADGE, { dismissAction: N.L.AUTO });
         }, []),
         i.useEffect(() => {
-            D === u.a.NOT_FETCHED && R();
+            D === d.a.NOT_FETCHED && R();
         }, [R, D]),
-        D !== u.a.FETCHED)
+        D !== d.a.FETCHED)
     )
         return (0, r.jsx)("div", {
             className: T.spinnerContainer,
@@ -95,7 +95,7 @@ let P = function () {
                                 children: [
                                     (0, r.jsx)(o.Text, {
                                         variant: "text-sm/medium",
-                                        color: "text-secondary",
+                                        color: "text-subtle",
                                         children: S.intl.format(I.default["655Uny"], {
                                             onClickServerProfile: () => {
                                                 h.Z.setSection(y.pNK.PROFILE);

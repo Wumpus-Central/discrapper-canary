@@ -24,7 +24,7 @@ function m(e) {
         transitionState: n,
         children: (0, r.jsx)(o.Text, {
             variant: "text-md/medium",
-            color: "text-secondary",
+            color: "text-subtle",
             children: u.intl.string(u.t.Ij97SL),
         }),
     });
@@ -41,13 +41,13 @@ function p(e) {
             location: h,
         } = e,
         j = s.jn.REWARD_MODAL,
-        [x, y] = a.useState(!0);
+        [x, g] = a.useState(!0);
     if (f)
         return (0, r.jsx)(m, {
             onClose: u,
             transitionState: i,
         });
-    let g = C || x;
+    let y = C || x;
     return (0, r.jsx)(l.A, {
         questOrQuests: t,
         questContent: j,
@@ -55,7 +55,7 @@ function p(e) {
         children: (e) =>
             (0, r.jsxs)(r.Fragment, {
                 children: [
-                    g
+                    y
                         ? (0, r.jsx)(o.$jN, {
                               className: d.spinner,
                               type: o.$jN.Type.WANDERING_CUBES,
@@ -63,10 +63,10 @@ function p(e) {
                         : null,
                     (0, r.jsx)("div", {
                         ref: e,
-                        style: { visibility: g ? "hidden" : "visible" },
+                        style: { visibility: y ? "hidden" : "visible" },
                         children: (0, r.jsxs)(o.Y0X, {
                             "data-migration-pending": !0,
-                            transitionState: g ? o.Dvm.HIDDEN : i,
+                            transitionState: y ? o.Dvm.HIDDEN : i,
                             size: o.CgR.DYNAMIC,
                             className: d.modal,
                             parentComponent: "QuestRewardV2ModalBase",
@@ -89,7 +89,7 @@ function p(e) {
                                             children: (0, r.jsx)(c.Z, {
                                                 quest: t,
                                                 sourceQuestContent: n,
-                                                onLoadComplete: () => y(!1),
+                                                onLoadComplete: () => g(!1),
                                                 location: h,
                                             }),
                                         }),

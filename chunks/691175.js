@@ -200,7 +200,7 @@ let x = [
                                                                             }),
                                                                             (0, a.jsx)(c.Text, {
                                                                                 variant: "text-xs/normal",
-                                                                                color: "text-tertiary",
+                                                                                color: "text-muted",
                                                                                 className: h.emailText,
                                                                                 children: e.email,
                                                                             }),

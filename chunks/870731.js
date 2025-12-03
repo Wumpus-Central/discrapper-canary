@@ -11,27 +11,27 @@ var l = n(54381),
     p = n(925329),
     m = n(547972),
     f = n(556296),
-    y = n(13140),
-    b = n(52436),
-    h = n(981631),
-    v = n(332325),
+    b = n(13140),
+    y = n(52436),
+    v = n(981631),
+    h = n(332325),
     j = n(388032),
     g = n(245725);
-let O = r.memo(function (e) {
+let x = r.memo(function (e) {
         let { allClips: t } = e,
-            { query: i, setQuery: a } = (0, b.f)(),
-            d = (0, s.e7)([f.ZP], () => f.ZP.getKeybindForAction(h.kg4.SAVE_CLIP)),
-            p = (0, b.f)(
+            { query: i, setQuery: a } = (0, y.f)(),
+            d = (0, s.e7)([f.ZP], () => f.ZP.getKeybindForAction(v.kg4.SAVE_CLIP)),
+            p = (0, y.f)(
                 (e) =>
                     e.selectedUserIds.size > 0 ||
                     null != e.selectedActivity ||
                     null != e.selectedGuildId ||
                     null != e.selectedYear,
             ),
-            O = r.useCallback(() => {
-                (0, m.Z)(v.Z.CLIPS, { stackingBehavior: "stack" });
+            x = r.useCallback(() => {
+                (0, m.Z)(h.Z.CLIPS, { stackingBehavior: "stack" });
             }, []),
-            x = r.useCallback(
+            O = r.useCallback(
                 (e) => {
                     (0, u.jW)(e, async () => {
                         let { default: e } = await n.e("13170").then(n.bind(n, 446302));
@@ -85,7 +85,7 @@ let O = r.memo(function (e) {
                 [t],
             ),
             C = r.useCallback(() => a(""), [a]),
-            w = null != d ? y.BB(d.shortcut, !0) : null;
+            w = null != d ? b.BB(d.shortcut, !0) : null;
         return (0, l.jsxs)("div", {
             className: g.sidebarHeader,
             children: [
@@ -113,7 +113,7 @@ let O = r.memo(function (e) {
                                 (0, l.jsx)(c.u, {
                                     text: j.intl.string(j.t.X7yRDm),
                                     children: (0, l.jsx)(o.hU, {
-                                        onClick: x,
+                                        onClick: O,
                                         icon: o.gXV,
                                         size: "sm",
                                         variant: p ? "active" : "icon-only",
@@ -123,7 +123,7 @@ let O = r.memo(function (e) {
                                 (0, l.jsx)(c.u, {
                                     text: j.intl.string(j.t["3D5yo/"]),
                                     children: (0, l.jsx)(o.hU, {
-                                        onClick: O,
+                                        onClick: x,
                                         icon: o.ewm,
                                         size: "sm",
                                         variant: "icon-only",
@@ -147,7 +147,7 @@ let O = r.memo(function (e) {
             ],
         });
     }),
-    x = r.memo(function (e) {
+    O = r.memo(function (e) {
         let { name: t, count: n, icon: r, isSelected: i, onClick: s } = e;
         return (0, l.jsxs)(o.P3F, {
             className: a()(g.gameItem, { [g.selected]: i }),
@@ -178,17 +178,17 @@ let O = r.memo(function (e) {
     });
 function C(e) {
     let { clipsByGame: t, filteredClips: n, favoriteClips: i, allClips: a } = e,
-        s = (0, b.f)((e) => e.selectedGameId),
-        c = (0, b.f)((e) => e.setSelectedGameId),
+        s = (0, y.f)((e) => e.selectedGameId),
+        c = (0, y.f)((e) => e.setSelectedGameId),
         u = r.useMemo(() => t.map((e) => e.applicationId), [t]),
         m = (0, d.Z)(u),
         f = r.useCallback(() => c(null), [c]),
-        y = r.useCallback(() => c("favorites"), [c]),
-        h = r.useMemo(() => new Map(m.map((e) => [null == e ? void 0 : e.id, e])), [m]);
+        b = r.useCallback(() => c("favorites"), [c]),
+        v = r.useMemo(() => new Map(m.map((e) => [null == e ? void 0 : e.id, e])), [m]);
     return (0, l.jsxs)("div", {
         className: g.sidebar,
         children: [
-            (0, l.jsx)(O, { allClips: a }),
+            (0, l.jsx)(x, { allClips: a }),
             (0, l.jsxs)(o.zJl, {
                 className: g.sidebarContent,
                 fade: !0,
@@ -198,19 +198,19 @@ function C(e) {
                         children: (0, l.jsxs)("div", {
                             className: g.gamesList,
                             children: [
-                                (0, l.jsx)(x, {
+                                (0, l.jsx)(O, {
                                     name: j.intl.string(j.t.dPVrEv),
                                     count: n.length,
                                     icon: (0, l.jsx)(o.AlX, {}),
                                     isSelected: null === s,
                                     onClick: f,
                                 }),
-                                (0, l.jsx)(x, {
+                                (0, l.jsx)(O, {
                                     name: j.intl.string(j.t["9rlCk1"]),
                                     count: i.length,
                                     icon: (0, l.jsx)(o.h_8, {}),
                                     isSelected: "favorites" === s,
-                                    onClick: y,
+                                    onClick: b,
                                 }),
                             ],
                         }),
@@ -221,7 +221,7 @@ function C(e) {
                             children: [
                                 (0, l.jsx)(o.Heading, {
                                     variant: "heading-sm/medium",
-                                    color: "text-tertiary",
+                                    color: "text-muted",
                                     className: g.sectionLabel,
                                     children: j.intl.string(j.t.URyqtP),
                                 }),
@@ -230,12 +230,12 @@ function C(e) {
                                     children: t.map((e) => {
                                         let { name: t, count: n, applicationId: r } = e;
                                         return (0, l.jsx)(
-                                            x,
+                                            O,
                                             {
                                                 name: t,
                                                 count: n,
                                                 icon: (0, l.jsx)(p.Z, {
-                                                    game: h.get(r),
+                                                    game: v.get(r),
                                                     size: p.A.XSMALL,
                                                 }),
                                                 isSelected: s === r,

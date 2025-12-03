@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(81939),
     g = n(851397),
     b = n(582113),
-    y = n(981631),
-    C = n(701488),
+    C = n(981631),
+    y = n(701488),
     v = n(474936),
     _ = n(388032),
     O = n(842350);
@@ -28,7 +28,7 @@ function E(e) {
     }, [l, n]);
     let P = (0, o.e7)([c.Z], () => c.Z.getApplication(b.t9)),
         I = r.useMemo(() => {
-            let e = null != P ? P.getIconURL(C.Si.SMALL) : void 0;
+            let e = null != P ? P.getIconURL(y.Si.SMALL) : void 0;
             return null != e && null != P
                 ? (0, i.jsx)("img", {
                       src: e,
@@ -47,7 +47,7 @@ function E(e) {
     return (
         r.useEffect(() => {
             0 !== N.length &&
-                h.default.track(y.rMx.COMMERCE_SHOP_VC_GIFT_BUTTON_VIEWED, {
+                h.default.track(C.rMx.COMMERCE_SHOP_VC_GIFT_BUTTON_VIEWED, {
                     guild_id: S.guild_id,
                     channel_id: S.id,
                     sku_ids: N,
@@ -65,13 +65,13 @@ function E(e) {
                         (0, i.jsx)(a.X6q, {
                             className: O.title,
                             variant: "text-lg/bold",
-                            color: "text-primary",
+                            color: "text-strong",
                             children: _.intl.string(_.t.xLP3bi),
                         }),
                         (0, i.jsx)(a.xvT, {
                             className: O.subtitle,
                             variant: "text-sm/medium",
-                            color: "text-secondary",
+                            color: "text-subtle",
                             children: _.intl.format(_.t["+SqhBF"], {
                                 applicationName:
                                     null != (t = null == P ? void 0 : P.name) ? t : _.intl.string(_.t["/1hhto"]),

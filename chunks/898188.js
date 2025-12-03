@@ -28,12 +28,12 @@ function T(e) {
     return null == n
         ? (0, r.jsx)(c.Text, {
               variant: "text-xxs/normal",
-              color: "header-secondary",
+              color: "text-default",
               children: v.intl.format(v.t.MkzlDL, { channelName: v.intl.string(v.t.J90oLW) }),
           })
         : (0, r.jsx)(c.Text, {
               variant: "text-xxs/normal",
-              color: "header-secondary",
+              color: "text-default",
               children: v.intl.format(v.t.MkzlDL, { channelName: i }),
           });
 }

@@ -156,7 +156,7 @@ function _(e) {
                             x
                                 ? (0, i.jsx)(d.Text, {
                                       variant: "text-xs/normal",
-                                      color: "header-secondary",
+                                      color: "text-default",
                                       className: O.discriminatorChangeWarning,
                                       children: v.intl.string(v.t.mConUX),
                                   })

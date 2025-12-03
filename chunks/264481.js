@@ -7,8 +7,8 @@ n.d(t, {
     n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(392711),
-    l = n(481060),
+    l = n(392711),
+    a = n(481060),
     o = n(493683),
     c = n(410030),
     s = n(726542),
@@ -74,14 +74,14 @@ function j(e) {
             (0, r.jsxs)("div", {
                 className: b.textContainer,
                 children: [
-                    (0, r.jsx)(l.Heading, {
+                    (0, r.jsx)(a.Heading, {
                         variant: "heading-md/medium",
                         color: "header-primary",
                         children: t,
                     }),
-                    (0, r.jsx)(l.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: "text-sm/normal",
-                        color: "header-secondary",
+                        color: "text-default",
                         children: n,
                     }),
                 ],
@@ -94,7 +94,7 @@ function x() {
     let e = m.intl.string(m.t.RnD2yZ),
         [t] = i.useState(() => {
             var e;
-            return (null != (e = (0, a.sample)(h)) ? e : h[0])();
+            return (null != (e = (0, l.sample)(h)) ? e : h[0])();
         });
     return (0, r.jsx)(j, {
         heading: e,
@@ -105,7 +105,7 @@ function _() {
     let e = m.intl.string(m.t.bFgqYJ),
         [t] = i.useState(() => {
             var e;
-            return (null != (e = (0, a.sample)(y)) ? e : y[0])();
+            return (null != (e = (0, l.sample)(y)) ? e : y[0])();
         });
     return (0, r.jsx)(j, {
         heading: e,
@@ -118,7 +118,7 @@ function P(e) {
         d = m.intl.formatToPlainString(m.t.sjSitP, { name: u }),
         [p] = i.useState(() => {
             var e;
-            return (null != (e = (0, a.sample)(v)) ? e : v[0])(u);
+            return (null != (e = (0, l.sample)(v)) ? e : v[0])(u);
         }),
         h = i.useCallback(() => {
             o.Z.openPrivateChannel({ recipientIds: t.id }), null == s || s();
@@ -129,7 +129,7 @@ function P(e) {
         children: (0, r.jsx)("div", {
             className: b.buttonRow,
             children: (0, r.jsx)(g.O1, {
-                icon: l.kBi,
+                icon: a.kBi,
                 text: m.intl.string(m.t["g33r/P"]),
                 onClick: h,
             }),
@@ -143,11 +143,11 @@ function I() {
         children: O.map((t, n) => {
             let i = s.Z.get(t);
             if (null == i) return null;
-            let a = (0, l.wjy)(e) ? i.icon.darkPNG : i.icon.lightPNG;
+            let l = (0, a.wjy)(e) ? i.icon.darkPNG : i.icon.lightPNG;
             return (0, r.jsx)(
                 "img",
                 {
-                    src: a,
+                    src: l,
                     alt: i.name,
                     className: b.connectionIcon,
                 },
@@ -161,7 +161,7 @@ function w(e) {
         n = i.useCallback(() => {
             null == t || t(), (0, d.openUserSettings)(u.n.CONNECTIONS_PANEL, { section: p.oAB.CONNECTIONS });
         }, [t]),
-        a = i.useCallback(() => {
+        l = i.useCallback(() => {
             null == t || t(),
                 (0, d.openUserSettings)(u.n.CONTENT_AND_SOCIAL_PANEL, {
                     section: p.oAB.CONTENT_AND_SOCIAL,
@@ -182,7 +182,7 @@ function w(e) {
                     }),
                     (0, r.jsx)(g.O1, {
                         text: m.intl.string(m.t.GTCx0p),
-                        onClick: a,
+                        onClick: l,
                     }),
                 ],
             }),

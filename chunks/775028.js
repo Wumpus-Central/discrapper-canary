@@ -97,7 +97,7 @@ function L(e) {
         children: [
             (0, r.jsx)(p.Text, {
                 className: T.categoryText,
-                color: "text-primary",
+                color: "text-strong",
                 variant: "text-lg/medium",
                 lineClamp: 1,
                 children: l.name,

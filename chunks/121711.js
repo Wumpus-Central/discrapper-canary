@@ -385,7 +385,7 @@ let eO = function (e) {
                                       children: es.intl.string(es.t.z8YP2A),
                                   }),
                                   (0, r.jsx)(p.Text, {
-                                      color: "text-secondary",
+                                      color: "text-subtle",
                                       variant: "text-md/normal",
                                       children: es.intl.string(es.t.HdKh65),
                                   }),

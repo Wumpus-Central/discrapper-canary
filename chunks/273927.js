@@ -43,7 +43,7 @@ function v(e) {
                     }),
                     (0, r.jsx)(l.Text, {
                         variant: "text-md/medium",
-                        color: "header-secondary",
+                        color: "text-default",
                         children: i
                             ? b.intl.format(b.t["r91W/h"], { numberOfBlockedUsers: n })
                             : b.intl.format(b.t.rXUeOl, { numberOfIgnoredUsers: n }),
@@ -91,7 +91,7 @@ function S(e) {
                                   }),
                                   (0, r.jsx)(l.Text, {
                                       variant: "text-sm/medium",
-                                      color: "header-secondary",
+                                      color: "text-default",
                                       children: null != m.globalName ? m.username : null,
                                   }),
                               ],

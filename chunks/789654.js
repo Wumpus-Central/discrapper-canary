@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => T,
-    q: () => N,
+    Z: () => N,
+    q: () => T,
 }),
     n(804061),
     n(704826),
@@ -95,7 +95,7 @@ function S(e) {
 function E(e) {
     return e.replaceAll(/_|-/g, ".").toLowerCase();
 }
-function N(e, t) {
+function T(e, t) {
     let n = new Blob([t], { type: "application/json" }),
         a = URL.createObjectURL(n),
         l = document.createElement("a"),
@@ -110,10 +110,10 @@ function N(e, t) {
             URL.revokeObjectURL(a);
     });
 }
-function T() {
+function N() {
     let e = (0, h.Fg)(),
         [t, n, i, s, d, u] = (0, v.zn)(),
-        { semanticColorOverrides: b, rawColorOverrides: C, tab: E, scales: T } = t,
+        { semanticColorOverrides: b, rawColorOverrides: C, tab: E, scales: N } = t,
         P = l.useMemo(() => {
             let t = Object.entries(b).map((t) => {
                     let [n, a] = t,
@@ -158,7 +158,7 @@ function T() {
                         "--".concat(i, ": hsl(var(--").concat(i, "-hsl)) !important;"),
                     ];
                 }),
-                a = T.reduce((e, t) => {
+                a = N.reduce((e, t) => {
                     let { name: n } = t,
                         a = (0, v.XM)(t),
                         l = (0, v.W6)(a, n);
@@ -177,7 +177,7 @@ function T() {
                 .concat(e, " {\n        ")
                 .concat(t.join("\n"), "\n      }\n\n      html {\n        ")
                 .concat(n.join("\n"), "\n      }\n    ");
-        }, [C, T, b, e]);
+        }, [C, N, b, e]);
     return (0, a.jsxs)("div", {
         className: j.panel,
         children: [
@@ -267,7 +267,7 @@ function T() {
                                 color: m.zx.Colors.TRANSPARENT,
                                 look: m.zx.Looks.BLANK,
                                 onClick: () => {
-                                    N("color-overrides", JSON.stringify(_({}, t), null, 2));
+                                    T("color-overrides", JSON.stringify(_({}, t), null, 2));
                                 },
                                 children: (0, a.jsx)(p._8t, {}),
                             }),
@@ -601,7 +601,7 @@ function P(e) {
                             null != n
                                 ? (0, a.jsx)(p.Text, {
                                       variant: "text-sm/medium",
-                                      color: "text-secondary",
+                                      color: "text-subtle",
                                       tabularNumbers: !0,
                                       children: n,
                                   })

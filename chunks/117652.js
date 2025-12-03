@@ -167,7 +167,7 @@ function U(e) {
                       children: [
                           (0, r.jsx)(a.Text, {
                               variant: "text-xs/bold",
-                              color: "header-secondary",
+                              color: "text-default",
                               className: D.selectGiftTitle,
                               children: J.toLocaleUpperCase(),
                           }),
@@ -309,7 +309,7 @@ function G(e) {
                                     children: w.intl.string(w.t["1+Co8G"]),
                                 }),
                                 (0, r.jsx)(a.Heading, {
-                                    color: "header-secondary",
+                                    color: "text-default",
                                     variant: "heading-sm/medium",
                                     children: w.intl.string(w.t.nYn52B),
                                 }),

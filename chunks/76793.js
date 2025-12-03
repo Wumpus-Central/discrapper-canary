@@ -58,7 +58,7 @@ function g(e) {
                         }),
                         (0, r.jsx)(o.Text, {
                             variant: "text-md/medium",
-                            color: "header-secondary",
+                            color: "text-default",
                             children: m.intl.format(m.t["/MBjYF"], { count: n }),
                         }),
                     ],
@@ -91,7 +91,7 @@ function E(e) {
                     }),
                     (0, r.jsx)(o.Text, {
                         variant: "text-sm/medium",
-                        color: "header-secondary",
+                        color: "text-default",
                         children: l,
                     }),
                 ],

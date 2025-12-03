@@ -269,7 +269,7 @@ function B(e) {
         J =
             null != W
                 ? (0, r.jsx)(a.Text, {
-                      color: "header-secondary",
+                      color: "text-default",
                       variant: "text-sm/normal",
                       className: _.subscriptionCardSubtext,
                       children: W,

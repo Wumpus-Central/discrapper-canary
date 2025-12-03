@@ -11,8 +11,8 @@ var l = n(54381),
     f = n(700582),
     h = n(212819),
     m = n(933557),
-    p = n(266076),
-    g = n(810123),
+    g = n(266076),
+    p = n(810123),
     b = n(448486),
     y = n(987509),
     E = n(592125),
@@ -20,12 +20,12 @@ var l = n(54381),
     Z = n(158776),
     v = n(306680),
     P = n(699516),
-    O = n(594174),
-    j = n(55935),
+    j = n(594174),
+    O = n(55935),
     x = n(823379),
     L = n(51144),
-    C = n(784384),
-    _ = n(490897),
+    _ = n(784384),
+    C = n(490897),
     N = n(773921);
 function M(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -70,7 +70,7 @@ function A(e, t) {
         e
     );
 }
-function I(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         l,
@@ -90,7 +90,7 @@ function I(e, t) {
     }
     return r;
 }
-function T(e) {
+function I(e) {
     let {
             destination: t,
             icon: n,
@@ -101,9 +101,9 @@ function T(e) {
             onPressDestination: f,
             "aria-setsize": h,
             "aria-posinset": m,
-            className: p,
+            className: g,
         } = e,
-        g = (0, c.JA)(t.id),
+        p = (0, c.JA)(t.id),
         b = r.useCallback(() => {
             null == f || f(t);
         }, [f, t]);
@@ -112,13 +112,13 @@ function T(e) {
         A(
             M(
                 {
-                    className: s()(N.destinationRow, p, { [N.disabled]: o }),
+                    className: s()(N.destinationRow, g, { [N.disabled]: o }),
                     onClick: o ? void 0 : b,
                     "aria-selected": a,
                     "aria-setsize": h,
                     "aria-posinset": m,
                 },
-                g,
+                p,
             ),
             {
                 children: [
@@ -163,13 +163,13 @@ function T(e) {
 }
 function D(e) {
     var { user: t, subLabel: n } = e,
-        r = I(e, ["user", "subLabel"]);
+        r = T(e, ["user", "subLabel"]);
     let i = L.ZP.useName(t),
         s = L.ZP.useUserTag(t, { decoration: "never" }),
         u = (0, o.e7)([P.Z], () => P.Z.getNickname(t.id)),
         a = (0, o.e7)([Z.Z], () => Z.Z.getStatus(t.id));
     return (0, l.jsx)(
-        T,
+        I,
         A(M({}, r), {
             icon: (0, l.jsx)(f.Z, {
                 "aria-hidden": !0,
@@ -184,13 +184,13 @@ function D(e) {
 }
 function w(e) {
     var { channel: t, subLabel: n } = e,
-        r = I(e, ["channel", "subLabel"]);
+        r = T(e, ["channel", "subLabel"]);
     let i = (0, m.ZP)(t),
         s = (0, b._)(t);
     return (0, l.jsx)(
-        T,
+        I,
         A(M({}, r), {
-            icon: (0, l.jsx)(p.Z, {
+            icon: (0, l.jsx)(g.Z, {
                 "aria-hidden": !0,
                 size: d.EFr.SIZE_32,
                 channel: t,
@@ -202,14 +202,14 @@ function w(e) {
 }
 function R(e) {
     var { channel: t, subLabel: n } = e,
-        r = I(e, ["channel", "subLabel"]);
+        r = T(e, ["channel", "subLabel"]);
     let i = (0, o.e7)([S.Z], () => S.Z.getGuild(null == t ? void 0 : t.guild_id)),
         s = (0, m.ZP)(t),
-        u = (0, o.e7)([E.Z, O.default, P.Z], () => {
+        u = (0, o.e7)([E.Z, j.default, P.Z], () => {
             let e = E.Z.getChannel(t.parent_id);
-            return null == e ? null : (0, m.F6)(e, O.default, P.Z, !1);
+            return null == e ? null : (0, m.F6)(e, j.default, P.Z, !1);
         }),
-        c = (0, o.e7)([v.ZP], () => v.ZP.lastMessageTimestamp(t.id, _.W.CHANNEL)),
+        c = (0, o.e7)([v.ZP], () => v.ZP.lastMessageTimestamp(t.id, C.W.CHANNEL)),
         f = null == i ? void 0 : i.name;
     if (t.isThread() || t.isForumPost()) {
         let e = t.isForumPost() ? d.Mmi : d.VL1;
@@ -217,12 +217,12 @@ function R(e) {
             className: N.threadSubLabel,
             children: [
                 (0, l.jsx)(e, {
-                    color: d.TVs.colors.TEXT_SECONDARY,
+                    color: d.TVs.colors.TEXT_SUBTLE,
                     className: N.subLabelIcon,
                 }),
                 (0, l.jsx)(d.Text, {
                     variant: "text-xs/medium",
-                    color: "text-secondary",
+                    color: "text-subtle",
                     lineClamp: 1,
                     children: u,
                 }),
@@ -232,13 +232,13 @@ function R(e) {
                               (0, l.jsx)(d.Text, {
                                   className: N.subLabelSeparator,
                                   variant: "text-xs/medium",
-                                  color: "text-secondary",
+                                  color: "text-subtle",
                                   children: "\u2022",
                               }),
                               (0, l.jsx)(d.Text, {
                                   variant: "text-xs/medium",
-                                  color: "text-secondary",
-                                  children: (0, j.Xf)(a()(c)),
+                                  color: "text-subtle",
+                                  children: (0, O.Xf)(a()(c)),
                               }),
                           ],
                       })
@@ -247,10 +247,10 @@ function R(e) {
         });
     }
     return (0, l.jsx)(
-        T,
+        I,
         A(M({}, r), {
-            icon: (0, l.jsx)(g.Z, {
-                size: g.E.SMALL_32,
+            icon: (0, l.jsx)(p.Z, {
+                size: p.E.SMALL_32,
                 guild: i,
                 channel: t,
             }),
@@ -280,7 +280,7 @@ function U(e) {
                 if (r > 0) return;
                 let { type: f, record: m } = t[s];
                 if (f === h.h8.HEADER) return;
-                let p =
+                let g =
                         f === h.h8.USER
                             ? {
                                   type: "user",
@@ -290,13 +290,13 @@ function U(e) {
                                   type: "channel",
                                   id: m.id,
                               },
-                    g = (0, y.hC)(p),
-                    b = (0, C.HY)(n, i, m, o),
-                    E = d.includes(g),
+                    p = (0, y.hC)(g),
+                    b = (0, _.HY)(n, i, m, o),
+                    E = d.includes(p),
                     S = {
-                        key: g,
+                        key: p,
                         message: n,
-                        destination: p,
+                        destination: g,
                         subLabel: null != b ? b.label : void 0,
                         disabled: (a && !E) || null != b,
                         selected: E,

@@ -6,21 +6,21 @@ var r = n(54381),
     s = n(787051),
     o = n(975464),
     c = n(388032),
-    d = n(370511),
-    u = n(270395);
+    u = n(370511),
+    d = n(270395);
 function g(e) {
     let { config: t } = e,
         { noticeText: n, ctaLabel: i, ctaClickable: a, onCtaClicked: s } = t;
     return (0, r.jsxs)("div", {
-        className: d.__invalid_ctaContainer,
+        className: u.__invalid_ctaContainer,
         children: [
             (0, r.jsx)("img", {
-                className: d.__invalid_heroBanner,
-                src: u,
+                className: u.__invalid_heroBanner,
+                src: d,
                 alt: c.intl.string(c.t.Af4klP),
             }),
             (0, r.jsxs)("div", {
-                className: d.__invalid_ctaContent,
+                className: u.__invalid_ctaContent,
                 children: [
                     (0, r.jsx)(l.Heading, {
                         variant: "heading-xl/semibold",
@@ -30,7 +30,7 @@ function g(e) {
                     (0, r.jsx)(l.LZC, { size: 12 }),
                     (0, r.jsx)(l.Text, {
                         variant: "text-md/normal",
-                        color: "header-secondary",
+                        color: "text-default",
                         children: c.intl.string(c.t["41wkMc"]),
                     }),
                     (0, r.jsx)(l.LZC, { size: 24 }),
@@ -51,7 +51,7 @@ function g(e) {
 }
 function m(e) {
     let { guild: t, config: n } = e,
-        { isLoading: c, error: u, creatorMonetizationOnboardingMarketing: m } = (0, s.Z)(t.id);
+        { isLoading: c, error: d, creatorMonetizationOnboardingMarketing: m } = (0, s.Z)(t.id);
     return ((0, a.Z)({
         type: i.ImpressionTypes.PANE,
         name: i.ImpressionNames.ENABLE_CREATOR_MONETIZATION_WAITLIST_LANDING,
@@ -60,12 +60,12 @@ function m(e) {
     c)
         ? (0, r.jsx)(l.$jN, {})
         : (0, r.jsxs)("div", {
-              className: d.__invalid_container,
+              className: u.__invalid_container,
               children: [
                   (0, r.jsx)(g, { config: n }),
                   (0, r.jsx)(o.C, {
                       onboardingMarketing: m,
-                      onboardingMarketingError: u,
+                      onboardingMarketingError: d,
                   }),
               ],
           });

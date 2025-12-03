@@ -165,7 +165,7 @@ function G(e) {
                         (0, r.jsx)(u.Text, {
                             className: L.promotionLegalese,
                             variant: "text-xs/normal",
-                            color: "header-secondary",
+                            color: "text-default",
                             children: _.Z.parse(C, !1, { allowLinks: !0 }),
                         }),
                 ],

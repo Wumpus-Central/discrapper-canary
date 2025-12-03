@@ -402,10 +402,10 @@ function Q(e) {
                 ? { defaultTextColor: "text-muted" }
                 : 4 === n
                   ? {
-                        defaultTextColor: "text-secondary",
-                        defaultIconColor: p.TVs.colors.TEXT_SECONDARY,
+                        defaultTextColor: "text-subtle",
+                        defaultIconColor: p.TVs.colors.TEXT_SUBTLE,
                     }
-                  : { defaultTextColor: "text-secondary" }),
+                  : { defaultTextColor: "text-subtle" }),
         (0, r.jsx)(x.Provider, {
             value: A({ location: n }, t),
             children: (0, r.jsx)("div", {

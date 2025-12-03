@@ -12,8 +12,8 @@ var i = n(120356),
     s = n.n(a),
     o = n(481060),
     c = n(668781),
-    d = n(603211),
-    u = n(307707),
+    u = n(603211),
+    d = n(307707),
     g = n(216701),
     m = n(570961),
     p = n(290511),
@@ -82,7 +82,7 @@ function j(e) {
             dragSourcePosition: w,
             drop: Z,
             setIsDraggable: R,
-        } = (0, d.Z)({
+        } = (0, u.Z)({
             type: "ONBOARDING_PROMPT_OPTION_CARD-".concat(_.id),
             index: T,
             optionId: C.id,
@@ -90,7 +90,7 @@ function j(e) {
             onDragComplete: E,
             onDragReset: I,
         }),
-        { customEmoji: D, unicodeEmoji: A } = (0, u.Z)(
+        { customEmoji: D, unicodeEmoji: A } = (0, d.Z)(
             null == (t = C.emoji) ? void 0 : t.id,
             null == (i = C.emoji) ? void 0 : i.name,
         );
@@ -161,7 +161,7 @@ function j(e) {
                                     (0, r.jsx)(o.Text, {
                                         className: h.description,
                                         variant: "text-xs/normal",
-                                        color: "header-secondary",
+                                        color: "text-default",
                                         children: C.description,
                                     }),
                             ],
@@ -180,7 +180,7 @@ function j(e) {
 }
 function _(e) {
     let { guild: t, prompt: i, promptIndex: a, singleColumn: s } = e,
-        d = () => {
+        u = () => {
             (0, o.ZDy)(async () => {
                 let { default: e } = await n.e("1862").then(n.bind(n, 801001));
                 return (n) =>
@@ -211,9 +211,9 @@ function _(e) {
                       body: f.intl.formatToPlainString(f.t.kPQKai, { thresholdCount: p.fY }),
                       confirmText: f.intl.string(f.t.BddRzS),
                       cancelText: f.intl.string(f.t["ETE/oC"]),
-                      onConfirm: d,
+                      onConfirm: u,
                   })
-                : d();
+                : u();
         },
         children: (0, r.jsxs)("div", {
             className: h.optionCardRow,

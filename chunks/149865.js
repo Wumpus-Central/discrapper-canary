@@ -34,7 +34,7 @@ function c(e) {
                         h
                             ? (0, r.jsx)(a.Text, {
                                   variant: "text-sm/normal",
-                                  color: "header-secondary",
+                                  color: "text-default",
                                   id: m,
                                   className: l.subtitle,
                                   children: _,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685), n(539854), n(953529);
+n.d(t, { Z: () => O }), n(388685), n(539854), n(953529);
 var l = n(54381),
     r = n(473749),
     i = n(990547),
@@ -11,17 +11,17 @@ var l = n(54381),
     p = n(39604),
     m = n(10217),
     f = n(410426),
-    y = n(356659),
-    b = n(388032),
-    h = n(280407);
-let v = 16 / 9,
+    b = n(356659),
+    y = n(388032),
+    v = n(280407);
+let h = 16 / 9,
     j = [0, 16, 0, 16],
     g = j[1] + j[3];
-function O(e, t) {
+function x(e, t) {
     return Math.ceil(t / e);
 }
-function x(e) {
-    let { channelId: t, filteredClips: x, totalClipCount: C, onClipClick: w } = e,
+function O(e) {
+    let { channelId: t, filteredClips: O, totalClipCount: C, onClipClick: w } = e,
         [P, k] = r.useState(!0),
         [I, S] = r.useState({
             width: 0,
@@ -34,10 +34,10 @@ function x(e) {
         {
             type: i.ImpressionTypes.MODAL,
             name: i.ImpressionNames.CLIP_GALLERY_VIEWED,
-            properties: { number_of_clips_loaded: x.length },
+            properties: { number_of_clips_loaded: O.length },
         },
         { disableTrack: P },
-        [x.length, P],
+        [O.length, P],
     ),
         r.useEffect(
             () => (
@@ -56,7 +56,7 @@ function x(e) {
             l.setHours(0, 0, 0, 0);
             let r = l.getTime();
             if (
-                (x.forEach((e) => {
+                (O.forEach((e) => {
                     let l = u.default.extractTimestamp(e.id),
                         i = new Date(l);
                     if ((i.setHours(0, 0, 0, 0), i.getTime() === r)) n.push(e);
@@ -75,8 +75,8 @@ function x(e) {
                 let t = n.some((e) => e.isTemporary);
                 e.push({
                     type: "today",
-                    title: b.intl.string(b.t["kB2R/0"]),
-                    description: t ? b.intl.string(b.t["6AXirz"]) : void 0,
+                    title: y.intl.string(y.t["kB2R/0"]),
+                    description: t ? y.intl.string(y.t["6AXirz"]) : void 0,
                     clips: n,
                 });
             }
@@ -91,7 +91,7 @@ function x(e) {
                 }),
                 e
             );
-        }, [x]),
+        }, [O]),
         { width: Z } = I,
         { tileWidth: L, columns: H } = r.useMemo(
             () =>
@@ -99,14 +99,14 @@ function x(e) {
                     let n = t - g,
                         l = Math.max(1, Math.floor((n + 16) / 336)),
                         r = Math.max(320, (n - 16 * (l - 1)) / l),
-                        i = O(l, e);
+                        i = x(l, e);
                     return {
                         tileWidth: r,
                         columns: l,
                         rows: i,
                     };
-                })(x.length, Z),
-            [x.length, Z],
+                })(O.length, Z),
+            [O.length, Z],
         );
     r.useEffect(() => {
         !(async function () {
@@ -174,16 +174,16 @@ function x(e) {
                         };
                     },
                     {
-                        modalKey: y.Ut,
+                        modalKey: b.Ut,
                         stackingBehavior: "stack",
                     },
                 );
             },
             [t],
         ),
-        A = r.useMemo(() => D.map((e) => O(H, e.clips.length)), [D, H]),
+        A = r.useMemo(() => D.map((e) => x(H, e.clips.length)), [D, H]),
         R = r.useMemo(() => A.reduce((e, t) => e + t, 0), [A]),
-        V = Math.floor(L / v),
+        V = Math.floor(L / h),
         _ = r.useCallback(
             (e, t) => {
                 let { sectionIndex: n, sectionRowIndex: r } = t,
@@ -194,7 +194,7 @@ function x(e) {
                 return (0, l.jsx)(
                     "div",
                     {
-                        className: h.clipsRow,
+                        className: v.clipsRow,
                         children: s.map((e) =>
                             (0, l.jsx)(
                                 "div",
@@ -231,18 +231,18 @@ function x(e) {
                     : (0, l.jsxs)(
                           "div",
                           {
-                              className: h.sectionHeaderContainer,
+                              className: v.sectionHeaderContainer,
                               children: [
                                   (0, l.jsx)(s.Heading, {
                                       variant: "text-md/semibold",
-                                      color: "header-secondary",
+                                      color: "text-default",
                                       children: t.title,
                                   }),
                                   null != t.description &&
                                       (0, l.jsx)(s.Text, {
                                           variant: "text-sm/normal",
-                                          color: "text-secondary",
-                                          className: h.sectionDescription,
+                                          color: "text-subtle",
+                                          className: v.sectionDescription,
                                           children: t.description,
                                       }),
                               ],
@@ -255,7 +255,7 @@ function x(e) {
     return P || 0 !== D.length
         ? P
             ? (0, l.jsx)("div", {
-                  className: h.spinnerContainer,
+                  className: v.spinnerContainer,
                   children: (0, l.jsx)(s.$jN, {}),
               })
             : (0, l.jsx)(o.Z, {

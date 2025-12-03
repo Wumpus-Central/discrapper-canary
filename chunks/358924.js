@@ -252,7 +252,7 @@ let eb = (e) => {
         } = e,
         u = B.o.useConfig({ location: "nowplaying" }).demureActivityCards,
         d = (0, i.jsx)(f.Text, {
-            color: u ? "text-muted" : "header-secondary",
+            color: u ? "text-muted" : "text-default",
             className: el.textContent,
             variant: "text-sm/normal",
             children: r,

@@ -195,7 +195,7 @@ let A = (e) => {
                         }),
                         (0, r.jsx)(d.Text, {
                             variant: "text-md/medium",
-                            color: D ? "text-primary" : "text-muted",
+                            color: D ? "text-strong" : "text-muted",
                             className: Z.description,
                             children: l,
                         }),

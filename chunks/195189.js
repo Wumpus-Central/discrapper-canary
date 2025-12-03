@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => u });
 var r = n(54381);
 n(473749);
 var i = n(28664),
@@ -7,7 +7,7 @@ var i = n(28664),
     s = n(231338),
     o = n(388032),
     c = n(824804);
-function d(e) {
+function u(e) {
     let { title: t, details: n } = e;
     return (0, r.jsxs)("div", {
         className: c.simpleItemWrapper,
@@ -23,7 +23,7 @@ function d(e) {
                     "string" == typeof n
                         ? (0, r.jsx)(l.Text, {
                               variant: "text-sm/medium",
-                              color: "header-secondary",
+                              color: "text-default",
                               children: n,
                           })
                         : n,

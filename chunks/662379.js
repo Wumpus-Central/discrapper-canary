@@ -7,8 +7,8 @@ var i = n(481060),
     s = n(964269),
     o = n(961618),
     c = n(217684),
-    d = n(174618);
-function u(e) {
+    u = n(174618);
+function d(e) {
     let { imageSrc: t, description: n } = e;
     return (0, r.jsxs)("div", {
         className: s.howItWorksCard,
@@ -35,7 +35,7 @@ function u(e) {
 function g() {
     let e = [
         {
-            imageSrc: d,
+            imageSrc: u,
             description: a.intl.string(a.t.lT0ZNS),
         },
         {
@@ -59,7 +59,7 @@ function g() {
                 className: s.howItWorksContainer,
                 children: e.map((e) =>
                     (0, r.jsx)(
-                        u,
+                        d,
                         {
                             imageSrc: e.imageSrc,
                             description: e.description,
@@ -71,7 +71,7 @@ function g() {
             (0, r.jsx)(i.LZC, { size: 24 }),
             (0, r.jsx)(i.Text, {
                 variant: "text-sm/normal",
-                color: "header-secondary",
+                color: "text-default",
                 children: a.intl.format(a.t.oxW30N, { creatorPortalUrl: l.C5 }),
             }),
         ],

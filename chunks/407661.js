@@ -63,7 +63,7 @@ function A(e) {
             },
             children: [
                 (0, r.jsx)(c.Text, {
-                    color: "header-secondary",
+                    color: "text-default",
                     className: v.text,
                     variant: "text-sm/normal",
                     children: O.intl.format(O.t.B3V0FM, { count: Math.min(I, a + 1) }),
@@ -121,7 +121,7 @@ function C(e) {
                                 },
                             },
                             children: (0, r.jsx)(c.Text, {
-                                color: "header-secondary",
+                                color: "text-default",
                                 className: o()(v.text, v.replyLabel),
                                 variant: "text-sm/normal",
                                 children: O.intl.format(O.t["8E4GxS"], {

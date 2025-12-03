@@ -1,8 +1,8 @@
 n.d(t, { Z: () => j }), n(388685), n(361932), n(187205);
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     o = n(205120),
     c = n(442837),
     s = n(481060),
@@ -20,7 +20,7 @@ var r = n(54381),
 function j(e) {
     let { className: t } = e,
         { trackUserProfileEditSaved: n } = (0, f.KZ)(),
-        [a, j] = i.useState(!1),
+        [l, j] = i.useState(!1),
         x = (0, c.Wu)([m.Z], () => {
             var e;
             return null != (e = m.Z.getSaveablePendingWidgets()) ? e : [];
@@ -100,12 +100,12 @@ function j(e) {
                   className: t,
                   style: e,
                   children: (0, r.jsxs)("section", {
-                      className: l()(O.content, { [O.emphasized]: a }),
+                      className: a()(O.content, { [O.emphasized]: l }),
                       "aria-label": v.intl.string(v.t["odDw+z"]),
                       children: [
                           (0, r.jsx)(s.Text, {
                               variant: "text-md/medium",
-                              color: "text-primary",
+                              color: "text-strong",
                               className: O.message,
                               children: v.intl.string(v.t["/lQiX/"]),
                           }),

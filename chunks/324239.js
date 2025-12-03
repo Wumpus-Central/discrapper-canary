@@ -8,17 +8,17 @@ var r = n(54381),
     c = n(390885),
     u = n(626135),
     m = n(361207),
-    d = n(981631),
-    f = n(630724),
+    f = n(981631),
+    d = n(630724),
     p = n(388032),
     _ = n(678254);
 function g(t) {
-    let { email: e, setEmail: n, claimRequired: u, onSuccess: m, onClose: d } = t,
+    let { email: e, setEmail: n, claimRequired: u, onSuccess: m, onClose: f } = t,
         [g, S] = l.useState(),
         [y, v] = l.useState(""),
         [N, b] = l.useState(""),
         [j, C] = l.useState(!1);
-    l.useEffect(() => c.Z.flowStep(f.MK.ANY, f.mx.CLAIM_ACCOUNT), []);
+    l.useEffect(() => c.Z.flowStep(d.MK.ANY, d.mx.CLAIM_ACCOUNT), []);
     let O = async (t) => {
         t.preventDefault(), C(!0), S(""), b("");
         try {
@@ -51,12 +51,12 @@ function g(t) {
                     (0, r.jsx)(o.Text, {
                         className: _.formBody,
                         variant: "text-md/normal",
-                        color: "header-secondary",
+                        color: "text-default",
                         children: u ? p.intl.string(p.t.sW28gZ) : p.intl.string(p.t["gP/vPe"]),
                     }),
                     (0, r.jsx)(o.olH, {
                         className: _.closeButton,
-                        onClick: d,
+                        onClick: f,
                     }),
                 ],
             }),
@@ -95,7 +95,7 @@ function g(t) {
                                     children: (0, r.jsx)(o.Avr, {
                                         text: p.intl.string(p.t["2jxGer"]),
                                         onClick: () => {
-                                            i.Z.logout("claim_account_modal"), d();
+                                            i.Z.logout("claim_account_modal"), f();
                                         },
                                     }),
                                 }),
@@ -110,7 +110,7 @@ function S(t) {
     let { email: e, claimRequired: n, onClose: i } = t,
         s = n ? p.t.D7trIB : p.t.JNWX7G;
     return (
-        l.useEffect(() => c.Z.flowStep(f.MK.ANY, f.mx.CLAIM_ACCOUNT_SUCCESS), []),
+        l.useEffect(() => c.Z.flowStep(d.MK.ANY, d.mx.CLAIM_ACCOUNT_SUCCESS), []),
         (0, r.jsxs)("div", {
             children: [
                 (0, r.jsxs)(o.hzk, {
@@ -152,7 +152,7 @@ function S(t) {
                               fullWidth: !0,
                               onClick: function () {
                                   window.open((0, m.t3)(), "_blank"),
-                                      u.default.track(d.rMx.DOWNLOAD_APP, {
+                                      u.default.track(f.rMx.DOWNLOAD_APP, {
                                           platform: (0, m.DW)(),
                                           ptb: !1,
                                           released: !0,

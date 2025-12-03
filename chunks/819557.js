@@ -71,7 +71,7 @@ function c(e) {
                     null != r &&
                         (0, i.jsx)(a.Text, {
                             variant: "text-xs/medium",
-                            color: "text-secondary",
+                            color: "text-subtle",
                             className: l()({ [o.completedText]: d }),
                             children: r,
                         }),

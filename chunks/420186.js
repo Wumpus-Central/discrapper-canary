@@ -9,8 +9,8 @@ var t = n(54381),
     d = n(626135),
     o = n(978986),
     m = n(981631),
-    g = n(388032),
-    x = n(181174);
+    x = n(388032),
+    g = n(181174);
 let h = () => {
     var e;
     let l = u.G6.useSetting(),
@@ -32,24 +32,24 @@ let h = () => {
             });
         }, [f, E]);
     return (0, t.jsxs)(s.Z, {
-        className: x.accordion,
+        className: g.accordion,
         icon: (0, t.jsx)(i.ewm, { size: "md" }),
-        title: g.intl.string(g.t["A5wHQ/"]),
-        subtitle: g.intl.string(g.t.UKCSEd),
+        title: x.intl.string(x.t["A5wHQ/"]),
+        subtitle: x.intl.string(x.t.UKCSEd),
         onOpen: Z,
         maxHeight: _ ? 220 : 130,
         children: [
             _ &&
                 (0, t.jsxs)("div", {
-                    className: x.serverNickname,
+                    className: g.serverNickname,
                     children: [
                         (0, t.jsx)(i.Text, {
                             variant: "eyebrow",
-                            color: "header-secondary",
-                            children: g.intl.string(g.t.me1lRk),
+                            color: "text-default",
+                            children: x.intl.string(x.t.me1lRk),
                         }),
                         (0, t.jsx)(i.oil, {
-                            placeholder: g.intl.string(g.t["09Q8yp"]),
+                            placeholder: x.intl.string(x.t["09Q8yp"]),
                             maxLength: m.l$U,
                             value: n,
                             onChange: p,
@@ -57,13 +57,13 @@ let h = () => {
                     ],
                 }),
             (0, t.jsx)(c.ZP, {
-                title: g.intl.string(g.t["/2ed37"]),
+                title: x.intl.string(x.t["/2ed37"]),
                 value: h,
                 onChange: v,
             }),
             l &&
                 (0, t.jsx)(c.ZP, {
-                    title: g.intl.string(g.t.bN4m1G),
+                    title: x.intl.string(x.t.bN4m1G),
                     value: j,
                     onChange: N,
                 }),

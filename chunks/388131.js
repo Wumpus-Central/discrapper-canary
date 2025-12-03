@@ -10,8 +10,8 @@ var i = n(54381),
     s = n(442837),
     a = n(481060),
     o = n(741361),
-    c = n(881052),
-    u = n(911969),
+    u = n(881052),
+    c = n(911969),
     d = n(974339),
     h = n(215157),
     p = n(592125),
@@ -54,19 +54,19 @@ function I(e) {
             }
             return r;
         })(e, ["channelId", "onClose"]);
-    let y = (0, s.e7)([p.Z], () => p.Z.getChannel(m)),
-        N = (0, s.e7)([g.Z], () => g.Z.getGuild(null == y ? void 0 : y.getGuildId())),
-        [S, j] = r.useState(""),
-        [x, P] = r.useState({}),
+    let N = (0, s.e7)([p.Z], () => p.Z.getChannel(m)),
+        y = (0, s.e7)([g.Z], () => g.Z.getGuild(null == N ? void 0 : N.getGuildId())),
+        [S, x] = r.useState(""),
+        [j, P] = r.useState({}),
         [T, A] = r.useState(!1),
         [_, G] = r.useState(null),
         U = r.useRef(null),
-        { roles: w, members: L, getRichTag: D } = (0, h.Q)(N, y, C.yP, S),
+        { roles: w, members: L, getRichTag: D } = (0, h.Q)(y, N, C.yP, S),
         Z = d.Z.useSections({
             roles: w,
             members: L,
         });
-    if (null == y || null == N) return null;
+    if (null == N || null == y) return null;
     let R = async () => {
         A(!0);
         try {
@@ -78,21 +78,21 @@ function I(e) {
                     })
                     .map((e) => {
                         let { row: t } = e;
-                        return t.rowType === f.aC.ROLE ? E(t.id, u.BN.ROLE) : E(t.id, u.BN.MEMBER);
+                        return t.rowType === f.aC.ROLE ? E(t.id, c.BN.ROLE) : E(t.id, c.BN.MEMBER);
                     });
                 return (0, o.hw)(e.id, n, !0);
-            })(y, x),
+            })(N, j),
                 I();
         } catch (t) {
-            let e = new c.Hx(t);
+            let e = new u.Hx(t);
             A(!1), G(e);
         }
     };
     return (0, i.jsx)(d.Z.Provider, {
         listRef: U,
         query: S,
-        setQuery: j,
-        pendingAdditions: x,
+        setQuery: x,
+        pendingAdditions: j,
         setPendingAdditions: P,
         roles: w,
         members: L,
@@ -133,19 +133,19 @@ function I(e) {
                             (0, i.jsxs)(a.Text, {
                                 className: O.channelName,
                                 variant: "text-lg/normal",
-                                color: "header-secondary",
+                                color: "text-default",
                                 children: [
                                     (0, i.jsx)(a.ewx, {
                                         className: O.channelIcon,
                                         size: "sm",
                                         color: "currentColor",
                                     }),
-                                    y.name,
+                                    N.name,
                                 ],
                             }),
-                            y.isGuildStageVoice() &&
+                            N.isGuildStageVoice() &&
                                 (0, i.jsx)(a.Text, {
-                                    color: "header-secondary",
+                                    color: "text-default",
                                     className: O.description,
                                     variant: "text-sm/normal",
                                     children: b.intl.string(b.t.f7VbhF),

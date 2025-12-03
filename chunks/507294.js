@@ -215,7 +215,7 @@ let x = function (e) {
                                     void 0 !== e.description
                                         ? (0, r.jsx)(u.Text, {
                                               variant: "text-xs/normal",
-                                              color: "header-secondary",
+                                              color: "text-default",
                                               className: T.verifiedRoleDescription,
                                               children: e.description,
                                           })

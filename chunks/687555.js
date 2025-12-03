@@ -10,8 +10,8 @@ var a = r(54381),
     c = r(442837),
     x = r(755721),
     p = r(481060),
-    h = r(232567),
-    f = r(794433),
+    f = r(232567),
+    h = r(794433),
     u = r(480466),
     m = r(210887),
     j = r(51144),
@@ -47,7 +47,7 @@ function O(e) {
             (0, a.jsx)(p.Text, {
                 className: b.description,
                 variant: "text-md/medium",
-                color: "header-secondary",
+                color: "text-default",
                 children: i,
             }),
         ],
@@ -66,7 +66,7 @@ function U() {
             (0, a.jsx)(p.Text, {
                 className: b.description,
                 variant: "text-md/medium",
-                color: "header-secondary",
+                color: "text-default",
                 children: S.intl.string(S.t.eBIGB4),
             }),
         ],
@@ -100,7 +100,7 @@ function R(e) {
                     (0, a.jsx)(p.Text, {
                         className: b.description,
                         variant: "text-md/medium",
-                        color: "header-secondary",
+                        color: "text-default",
                         children: S.intl.string(S.t.JjjeZb),
                     }),
                 ],
@@ -130,14 +130,14 @@ function B(e) {
         r = (0, c.e7)([g.Z], () => g.Z.getRecipientStatus()),
         [s, l] = i.useState([]),
         [o, C] = i.useState(new Set()),
-        [d, f] = i.useState(!1);
+        [d, h] = i.useState(!1);
     return (
         i.useEffect(() => {
             (async () => {
                 let e = [];
                 for (let [t, a] of r)
                     if (a === _.Fe.PENDING) {
-                        let r = await (0, h.PR)(t);
+                        let r = await (0, f.PR)(t);
                         e.push(r);
                     }
                 l(e);
@@ -162,7 +162,7 @@ function B(e) {
                         (0, a.jsx)(p.Text, {
                             className: b.description,
                             variant: "text-md/medium",
-                            color: "header-secondary",
+                            color: "text-default",
                             children: S.intl.string(S.t.mPmPri),
                         }),
                     ],
@@ -193,7 +193,7 @@ function B(e) {
                         className: b.submit,
                         disabled: d,
                         onClick: async () => {
-                            f(!0), await t([...o.values()]), f(!1);
+                            h(!0), await t([...o.values()]), h(!1);
                         },
                         children: S.intl.string(S.t.ItpQxk),
                     }),
@@ -221,7 +221,7 @@ function M(e) {
 let k = function (e) {
     let { onClose: t, onShare: r } = e,
         s = (0, c.e7)([g.Z], () => g.Z.getReferralsRemaining()),
-        [l, h] = i.useState(""),
+        [l, f] = i.useState(""),
         m = (0, u.Z)(l, 400),
         [_, y] = i.useState(new Map()),
         [w, N] = i.useState(!1),
@@ -254,9 +254,9 @@ let k = function (e) {
                               numOfSelectedUsers: P.length,
                               anySelected: _.size > 0,
                           }),
-                    (0, a.jsx)(f.Z, {
+                    (0, a.jsx)(h.Z, {
                         className: b.searchbar,
-                        size: f.Z.Sizes.MEDIUM,
+                        size: h.Z.Sizes.MEDIUM,
                         tags: [..._.values()].map((e) => j.ZP.getName(e)),
                         placeholder: S.intl.string(S.t.Kd5RaI),
                         query: l,
@@ -267,7 +267,7 @@ let k = function (e) {
                                 return a.delete(r.id), a;
                             });
                         },
-                        onQueryChange: h,
+                        onQueryChange: f,
                     }),
                 ],
             }),

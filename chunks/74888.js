@@ -29,7 +29,7 @@ function j(e) {
         className: x.sectionDescription,
         children: (0, i.jsx)(a.Text, {
             variant: "text-sm/normal",
-            color: "text-secondary",
+            color: "text-subtle",
             children: e.description,
         }),
     });

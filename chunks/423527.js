@@ -11,8 +11,8 @@ var r,
     h = n(846519),
     g = n(28664),
     p = n(481060),
-    m = n(893776),
-    f = n(881052),
+    f = n(893776),
+    m = n(881052),
     _ = n(899370),
     x = n(224841),
     E = n(13430),
@@ -125,7 +125,7 @@ class eu extends (r = s.PureComponent) {
             ),
             { flush: !0 },
         ),
-            null == this.props.consentRequired && m.Z.getLocationMetadata(),
+            null == this.props.consentRequired && f.Z.getLocationMetadata(),
             (0, G.e)("register");
     }
     componentWillUnmount() {
@@ -182,7 +182,7 @@ class eu extends (r = s.PureComponent) {
             h = null != o ? o.skuId : null,
             g = b.MD.getState(),
             p = (0, q.Ew)(u) ? null : t === u,
-            m = ee.a ? await (0, T.K)(t) : t,
+            f = ee.a ? await (0, T.K)(t) : t,
             _ = ee.a ? await (0, T.K)(n) : n;
         K.S.dispatch(X.CkL.WAVE_EMPHASIZE),
             this.setState({
@@ -201,7 +201,7 @@ class eu extends (r = s.PureComponent) {
                   })
                 : await (0, I.R$)({
                       email: e,
-                      username: m,
+                      username: f,
                       globalName: _,
                       consent: i,
                       password: r,
@@ -214,7 +214,7 @@ class eu extends (r = s.PureComponent) {
                   }),
                 null == c || c();
         } catch (t) {
-            if ((this.setState({ registering: !1 }), !(t instanceof f.Hx))) return;
+            if ((this.setState({ registering: !1 }), !(t instanceof m.Hx))) return;
             let e = (0, j.F)(t);
             this.setState({ apiErrors: e });
         }
@@ -238,7 +238,7 @@ class eu extends (r = s.PureComponent) {
               })
             : (0, i.jsx)(p.Text, {
                   variant: "text-sm/normal",
-                  color: "text-secondary",
+                  color: "text-subtle",
                   className: a()(es.marginTop8, ei.consentSubText),
                   children: er.intl.format(er.t["KI+BSb"], {
                       termsURL: X.EYA.TERMS,
@@ -276,7 +276,7 @@ class eu extends (r = s.PureComponent) {
                         }),
                         (0, i.jsx)(p.Text, {
                             variant: "text-sm/normal",
-                            color: "text-secondary",
+                            color: "text-subtle",
                             className: a()(es.marginTop20, ei.consentSubText),
                             children: er.intl.format(er.t["KI+BSb"], {
                                 termsURL: X.EYA.TERMS,
@@ -439,8 +439,8 @@ class eu extends (r = s.PureComponent) {
                 parsedDateOfBirth: u,
                 globalNameFocused: d,
                 emailClientError: h,
-                usernameClientError: m,
-                passwordClientError: f,
+                usernameClientError: f,
+                passwordClientError: m,
                 dateOfBirthClientError: _,
                 registering: x,
                 apiErrors: { email: v, username: b, global_name: j, password: I, date_of_birth: S } = {},
@@ -541,7 +541,7 @@ class eu extends (r = s.PureComponent) {
                                 name: "username",
                                 value: r,
                                 onChange: R,
-                                error: null != m ? m : ec(b),
+                                error: null != f ? f : ec(b),
                                 autoComplete: "off",
                                 setRef: (e) => {
                                     this.usernameRef = e;
@@ -562,7 +562,7 @@ class eu extends (r = s.PureComponent) {
                                 password: e,
                                 passwordClientError: 0 === e.length ? er.intl.string(er.t.EkokLy) : null,
                             }),
-                        error: null != f ? f : ec(I),
+                        error: null != m ? m : ec(I),
                         type: "password",
                         autoComplete: "new-password",
                         setRef: (e) => {
@@ -699,7 +699,7 @@ class eu extends (r = s.PureComponent) {
                         : null != c
                           ? ((t = X.Z5c.LOGIN), (d.redirect_to = c))
                           : ((t = X.Z5c.LOGIN), "" !== n && (d = { email: n })),
-                    m.Z.loginReset(),
+                    f.Z.loginReset(),
                     u(t, {
                         search: (0, o.stringify)(d),
                         source: "register",

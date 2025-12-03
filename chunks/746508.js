@@ -617,7 +617,7 @@ class e$ extends i.PureComponent {
                             className: eG.channel,
                             children: (0, r.jsx)(_.Text, {
                                 variant: "text-xs/medium",
-                                color: "text-secondary",
+                                color: "text-subtle",
                                 lineClamp: 1,
                                 children: o,
                             }),

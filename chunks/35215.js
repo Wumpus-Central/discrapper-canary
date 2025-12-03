@@ -119,12 +119,12 @@ let B = (e) => {
                             children: [
                                 (0, r.jsx)(c.Text, {
                                     variant: "text-sm/semibold",
-                                    color: "text-primary",
+                                    color: "text-strong",
                                     children: Z(t),
                                 }),
                                 (0, r.jsx)(c.Text, {
                                     variant: "text-sm/normal",
-                                    color: "text-tertiary",
+                                    color: "text-muted",
                                     children: C.intl.string(C.t.VgN1Bn),
                                 }),
                             ],

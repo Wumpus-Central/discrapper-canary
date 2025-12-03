@@ -17,7 +17,7 @@ function l(e) {
           : (null == l ? void 0 : l.hasValue) && !c && (f = s.set);
     let p = (0, r.jsx)(o.Text, {
         variant: c ? "text-md/normal" : "text-sm/normal",
-        color: "text-primary",
+        color: "text-strong",
         className: a()(s.option, { [s.inline]: c }, f, i),
         children: d,
     });

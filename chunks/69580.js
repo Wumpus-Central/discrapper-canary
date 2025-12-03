@@ -609,7 +609,7 @@ function ec(e) {
                     }),
                     body: (0, r.jsx)(E.Text, {
                         variant: "text-md/normal",
-                        color: "header-secondary",
+                        color: "text-default",
                         children: eL.message,
                     }),
                     actions: [

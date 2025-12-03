@@ -190,7 +190,7 @@ function T(e) {
                         null == A
                             ? (0, r.jsx)(l.Text, {
                                   variant: "text-sm/normal",
-                                  color: "text-secondary",
+                                  color: "text-subtle",
                                   children:
                                       'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.',
                               })
@@ -325,7 +325,7 @@ function A(e) {
                           null == h
                               ? (0, r.jsx)(l.Text, {
                                     variant: "text-sm/normal",
-                                    color: "text-secondary",
+                                    color: "text-subtle",
                                     children:
                                         'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.',
                                 })

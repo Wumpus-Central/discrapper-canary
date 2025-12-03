@@ -100,7 +100,7 @@ let P = [],
                         }),
                         (0, r.jsx)(p.Text, {
                             variant: "text-md/normal",
-                            color: "text-secondary",
+                            color: "text-subtle",
                             children: n,
                         }),
                     ],
@@ -321,7 +321,7 @@ function Z(e) {
                             }),
                             (0, r.jsxs)(p.Text, {
                                 variant: "text-md/normal",
-                                color: "text-secondary",
+                                color: "text-subtle",
                                 className: T.subHeader,
                                 children: [M, null == k ? void 0 : k()],
                             }),

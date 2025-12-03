@@ -205,7 +205,7 @@ let J = 32,
                     children: [
                         (0, r.jsx)(p.Text, {
                             variant: "text-xs/normal",
-                            color: "header-secondary",
+                            color: "text-default",
                             children: W.intl.format(W.t["LC+S+m"], { membersOnline: t.presenceCount }),
                         }),
                         (0, r.jsx)("div", { className: K.dotSeparator }),
@@ -221,7 +221,7 @@ let J = 32,
                               })
                             : (0, r.jsx)(p.Text, {
                                   variant: "text-xs/normal",
-                                  color: "header-secondary",
+                                  color: "text-default",
                                   children: W.intl.string(W.t.inyJqO),
                               }),
                     ],
@@ -232,7 +232,7 @@ let J = 32,
                     ? E()
                     : (0, r.jsx)(p.Text, {
                           variant: "text-xs/normal",
-                          color: "header-secondary",
+                          color: "text-default",
                           children: W.intl.string(W.t.H29mx4),
                       });
         return (0, r.jsxs)(b.Z, {
@@ -517,7 +517,7 @@ let J = 32,
                         (0, r.jsx)(p.Text, {
                             className: K.guildTitle,
                             variant: "text-sm/medium",
-                            color: "text-secondary",
+                            color: "text-subtle",
                             children: Q ? W.intl.string(W.t.ohTzZH) : W.intl.string(W.t["eLfh+a"]),
                         }),
                         (0, r.jsx)(en, {

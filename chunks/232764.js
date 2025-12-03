@@ -1,7 +1,7 @@
 n.d(t, {
     Io: () => c,
-    cZ: () => d,
-    g6: () => u,
+    cZ: () => u,
+    g6: () => d,
     j7: () => o,
 });
 var r = n(54381);
@@ -16,7 +16,7 @@ function o() {
         children: [
             (0, r.jsx)(i.Text, {
                 variant: "text-xs/semibold",
-                color: "header-secondary",
+                color: "text-default",
                 className: s.stepHeader,
                 children: a.intl.format(a.t.tCQ3H8, { number: 1 }),
             }),
@@ -28,7 +28,7 @@ function o() {
             }),
             (0, r.jsx)(i.Text, {
                 variant: "text-sm/normal",
-                color: "header-secondary",
+                color: "text-default",
                 children: a.intl.string(a.t["8ega11"]),
             }),
             (0, r.jsx)("div", {
@@ -49,7 +49,7 @@ function c() {
         children: [
             (0, r.jsx)(i.Text, {
                 variant: "text-xs/semibold",
-                color: "header-secondary",
+                color: "text-default",
                 className: s.stepHeader,
                 children: a.intl.format(a.t.tCQ3H8, { number: 2 }),
             }),
@@ -61,7 +61,7 @@ function c() {
             }),
             (0, r.jsx)(i.Text, {
                 variant: "text-sm/normal",
-                color: "header-secondary",
+                color: "text-default",
                 children: a.intl.string(a.t.y08PCJ),
             }),
             (0, r.jsx)("div", {
@@ -76,13 +76,13 @@ function c() {
         ],
     });
 }
-function d() {
+function u() {
     return (0, r.jsxs)("div", {
         className: s.container,
         children: [
             (0, r.jsx)(i.Text, {
                 variant: "text-xs/semibold",
-                color: "header-secondary",
+                color: "text-default",
                 className: s.stepHeader,
                 children: a.intl.format(a.t.tCQ3H8, { number: 3 }),
             }),
@@ -94,7 +94,7 @@ function d() {
             }),
             (0, r.jsx)(i.Text, {
                 variant: "text-sm/normal",
-                color: "header-secondary",
+                color: "text-default",
                 children: a.intl.string(a.t.TVGk1c),
             }),
             (0, r.jsx)("div", {
@@ -109,13 +109,13 @@ function d() {
         ],
     });
 }
-function u() {
+function d() {
     return (0, r.jsxs)("div", {
         className: s.container,
         children: [
             (0, r.jsx)(i.Text, {
                 variant: "text-xs/semibold",
-                color: "header-secondary",
+                color: "text-default",
                 className: s.stepHeader,
                 children: a.intl.format(a.t.tCQ3H8, { number: 4 }),
             }),
@@ -127,7 +127,7 @@ function u() {
             }),
             (0, r.jsx)(i.Text, {
                 variant: "text-sm/normal",
-                color: "header-secondary",
+                color: "text-default",
                 children: a.intl.string(a.t["eamP2+"]),
             }),
             (0, r.jsx)("div", {

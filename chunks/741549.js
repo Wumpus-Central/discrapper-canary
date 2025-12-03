@@ -1,12 +1,12 @@
-i.d(e, { Z: () => a });
-var n = i(54381),
-    r = i(793030),
-    l = i(198358);
-function a() {
-    return (0, n.jsx)(l.Z, {
-        children: (0, n.jsx)(r.xvT, {
+n.d(t, { Z: () => l });
+var i = n(54381),
+    s = n(793030),
+    r = n(198358);
+function l() {
+    return (0, i.jsx)(r.Z, {
+        children: (0, i.jsx)(s.xvT, {
             variant: "display-lg",
-            color: "text-primary",
+            color: "text-strong",
             children: "TBD",
         }),
     });

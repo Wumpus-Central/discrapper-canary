@@ -57,7 +57,7 @@ function y(e) {
                         : (0, r.jsx)(c.Heading, {
                               className: b.rowApplied,
                               variant: "heading-sm/semibold",
-                              color: "header-secondary",
+                              color: "text-default",
                               children:
                                   y && null != s
                                       ? E.intl.formatToPlainString(E.t["5CNRRA"], { date: null != t ? t : 0 })

@@ -2,8 +2,8 @@ n.d(e, { default: () => G }), n(388685);
 var i = n(54381),
     a = n(473749),
     s = n(793030),
-    o = n(442837),
-    l = n(544891),
+    l = n(442837),
+    o = n(544891),
     r = n(780384),
     c = n(481060),
     u = n(775644),
@@ -20,16 +20,16 @@ var i = n(54381),
     j = n(594174),
     T = n(626135),
     k = n(176354),
-    y = n(877481),
-    E = n(669079),
-    I = n(823379),
-    L = n(51144),
-    v = n(579201),
-    N = n(683668),
+    E = n(877481),
+    I = n(669079),
+    L = n(823379),
+    v = n(51144),
+    N = n(579201),
+    y = n(683668),
     R = n(55121),
-    A = n(438926),
-    M = n(582113),
-    b = n(981631),
+    b = n(438926),
+    A = n(582113),
+    M = n(981631),
     O = n(388032),
     P = n(308285),
     Z = n(167969),
@@ -48,18 +48,18 @@ function G(t) {
         } = t,
         [h, S] = a.useState({ state: "LINK" }),
         [j, k] = a.useState(!1),
-        y = (0, o.e7)([p.Z], () => p.Z.getApplication(n.applicationId)),
-        { analyticsLocations: E } = (0, m.ZP)(null != C ? C : [], _.Z.SOCIAL_LAYER_GIFT_CODE_CLAIM_MODAL);
+        E = (0, l.e7)([p.Z], () => p.Z.getApplication(n.applicationId)),
+        { analyticsLocations: I } = (0, m.ZP)(null != C ? C : [], _.Z.SOCIAL_LAYER_GIFT_CODE_CLAIM_MODAL);
     a.useEffect(() => {
         r.redeemed &&
             "LINK" === h.state &&
             S({
                 state: "ERROR",
-                error: new l.yZ(O.intl.string(O.t.Iw2TUW), b.evJ.INVALID_GIFT_REDEMPTION_EXHAUSTED),
+                error: new o.yZ(O.intl.string(O.t.Iw2TUW), M.evJ.INVALID_GIFT_REDEMPTION_EXHAUSTED),
             });
     }, [r, h.state]);
-    let L = a.useRef({
-        analyticsLocations: E,
+    let v = a.useRef({
+        analyticsLocations: I,
         giftCode: r,
         hasCustomMessage: null != x && "" !== x,
         customGiftMessage: x,
@@ -69,12 +69,12 @@ function G(t) {
         skuId: n.id,
     });
     (0, d.ZP)(() => {
-        let { analyticsLocations: t, skuId: e } = L.current;
-        T.default.track(b.rMx.OPEN_MODAL, {
+        let { analyticsLocations: t, skuId: e } = v.current;
+        T.default.track(M.rMx.OPEN_MODAL, {
             location_stack: t,
-            type: M.tb,
+            type: A.tb,
             sku_id: e,
-            application_id: null == y ? void 0 : y.id,
+            application_id: null == E ? void 0 : E.id,
         });
     }),
         a.useEffect(() => {
@@ -85,9 +85,9 @@ function G(t) {
                 giftCode: i,
                 emojiName: a,
                 soundId: s,
-                skuProductLine: o,
-            } = L.current;
-            T.default.track(b.rMx.GIFT_ACCEPT_STEP, {
+                skuProductLine: l,
+            } = v.current;
+            T.default.track(M.rMx.GIFT_ACCEPT_STEP, {
                 to_step: h.state,
                 location_stack: t,
                 has_custom_message: e,
@@ -96,29 +96,29 @@ function G(t) {
                 gift_code: i.code,
                 emoji_name: a,
                 sound_id: s,
-                product_line: o,
+                product_line: l,
             });
         }, [h.state]);
-    let v = a.useCallback(async () => {
+    let N = a.useCallback(async () => {
         var t, e;
         let {
             analyticsLocations: n,
             skuId: i,
             hasCustomMessage: a,
             customGiftMessage: s,
-            emojiName: o,
-            soundId: l,
-        } = L.current;
-        T.default.track(b.rMx.SLAYER_STOREFRONT_GIFT_CODE_CLAIM_CLICKED, {
+            emojiName: l,
+            soundId: o,
+        } = v.current;
+        T.default.track(M.rMx.SLAYER_STOREFRONT_GIFT_CODE_CLAIM_CLICKED, {
             location_stack: n,
             sku_id: i,
-            application_id: null == y ? void 0 : y.id,
+            application_id: null == E ? void 0 : E.id,
             gift_code: r.code,
             gift_style: null != (e = null == (t = r.giftStyle) ? void 0 : t.toString()) ? e : null,
             has_custom_message: a,
             is_custom_message_edited: a && s !== O.intl.string(O.t.ZkOo1U),
-            emoji_name: o,
-            sound_id: l,
+            emoji_name: l,
+            sound_id: o,
         });
         try {
             k(!0),
@@ -135,29 +135,29 @@ function G(t) {
         } finally {
             k(!1);
         }
-    }, [r, S, c, null == y ? void 0 : y.id]);
-    if (null == y) return null;
+    }, [r, S, c, null == E ? void 0 : E.id]);
+    if (null == E) return null;
     switch (h.state) {
         case "LINK":
             return (0, i.jsx)(U, {
                 sku: n,
-                application: y,
+                application: E,
                 transitionState: e,
                 onClose: s,
                 successStateButtonText: O.intl.string(O.t.go1e4x),
-                onSuccessButtonClick: v,
+                onSuccessButtonClick: N,
                 isSuccessButtonLoading: j,
-                analyticsLocations: E,
+                analyticsLocations: I,
             });
         case "SUCCESS":
             return (0, i.jsx)(w, {
                 transitionState: e,
-                application: y,
+                application: E,
                 sku: n,
                 giftCode: r,
                 customGiftMessage: x,
                 onClose: s,
-                analyticsLocations: E,
+                analyticsLocations: I,
                 emojiName: f,
                 soundId: g,
             });
@@ -168,13 +168,13 @@ function G(t) {
                 error: h.error,
             });
         default:
-            (0, I.vE)(h);
+            (0, L.vE)(h);
     }
 }
 let D = (t) => {
     let { transitionState: e, onClose: n, error: a } = t,
-        o = j.default.getCurrentUser(),
-        l = (0, E.QW)(a, o),
+        l = j.default.getCurrentUser(),
+        o = (0, I.QW)(a, l),
         c = (0, x.ZP)(),
         u = (0, r.wj)(c);
     return (0, i.jsxs)(s.IX, {
@@ -187,7 +187,7 @@ let D = (t) => {
                     src: u ? Z : B,
                 },
             }),
-            (0, i.jsx)(s.fef, { children: l }),
+            (0, i.jsx)(s.fef, { children: o }),
         ],
     });
 };
@@ -195,8 +195,8 @@ function U(t) {
     let {
             sku: e,
             application: n,
-            transitionState: o,
-            onClose: l,
+            transitionState: l,
+            onClose: o,
             successStateButtonText: r,
             onSuccessButtonClick: u,
             isSuccessButtonLoading: d,
@@ -215,7 +215,7 @@ function U(t) {
         a.useEffect(() => {
             if (!p) return;
             let { analyticsLocations: t, skuId: e, applicationId: n, canStartAuthorization: i } = C.current;
-            T.default.track(b.rMx.SLAYER_STOREFRONT_LINK_ACCOUNT_STEP_VIEWED, {
+            T.default.track(M.rMx.SLAYER_STOREFRONT_LINK_ACCOUNT_STEP_VIEWED, {
                 location_stack: t,
                 sku_id: e,
                 application_id: n,
@@ -226,7 +226,7 @@ function U(t) {
         }, [p, f]);
     let h = a.useCallback(() => {
         let { analyticsLocations: t, skuId: e, applicationId: n } = C.current;
-        T.default.track(b.rMx.SLAYER_STOREFRONT_ACCOUNT_LINK_CLICKED, {
+        T.default.track(M.rMx.SLAYER_STOREFRONT_ACCOUNT_LINK_CLICKED, {
             location_stack: t,
             sku_id: e,
             application_id: n,
@@ -236,8 +236,8 @@ function U(t) {
     }, [m]);
     if (!p)
         return (0, i.jsx)(s.IX, {
-            transitionState: o,
-            onClose: l,
+            transitionState: l,
+            onClose: o,
             children: (0, i.jsx)(s.fef, {
                 children: (0, i.jsx)("div", {
                     className: P.loadingContainer,
@@ -262,8 +262,8 @@ function U(t) {
     return (0, i.jsx)(R.M, {
         sku: e,
         application: n,
-        transitionState: o,
-        onClose: l,
+        transitionState: l,
+        onClose: o,
         hasAlreadyLinked: f,
         canStartAuthorization: _,
         primaryCTAButtonProps: S,
@@ -277,7 +277,7 @@ function w(t) {
     let {
             transitionState: e,
             onClose: n,
-            sku: l,
+            sku: o,
             application: r,
             giftCode: u,
             customGiftMessage: d,
@@ -285,14 +285,14 @@ function w(t) {
             emojiName: f,
             soundId: _,
         } = t,
-        m = (0, N.a)(r),
-        g = (0, v.I)(r),
+        m = (0, y.a)(r),
+        g = (0, N.I)(r),
         [p, C] = a.useState(null),
-        h = (0, o.e7)([j.default], () => j.default.getUser(u.userId)),
-        S = L.ZP.getName(h),
+        h = (0, l.e7)([j.default], () => j.default.getUser(u.userId)),
+        S = v.ZP.getName(h),
         k = a.useRef({
             analyticsLocations: x,
-            skuId: l.id,
+            skuId: o.id,
             applicationId: r.id,
             isLaunchable: m,
             isApplicationConnected: g,
@@ -308,19 +308,19 @@ function w(t) {
             onClose: n,
             children: (0, i.jsx)(s.fef, { children: (0, i.jsx)(c.$jN, {}) }),
         });
-    let E =
+    let I =
         m && !g
             ? {
                   variant: "primary",
                   text: O.intl.string(O.t["s+J8Dl"]),
                   onClick: () => {
-                      T.default.track(b.rMx.SLAYER_STOREFRONT_GAME_LAUNCH_CLICKED, {
+                      T.default.track(M.rMx.SLAYER_STOREFRONT_GAME_LAUNCH_CLICKED, {
                           location_stack: x,
-                          sku_id: l.id,
+                          sku_id: o.id,
                           application_id: r.id,
                           is_gift: !0,
                       }),
-                          y.Z.launchGame(r.id);
+                          E.Z.launchGame(r.id);
                   },
                   icon: s.rgF,
               }
@@ -328,9 +328,9 @@ function w(t) {
                   variant: "primary",
                   text: O.intl.string(O.t.cpT0Cq),
                   onClick: () => {
-                      T.default.track(b.rMx.SLAYER_STOREFRONT_CLAIM_MODAL_CLOSE_BUTTON_CLICKED, {
+                      T.default.track(M.rMx.SLAYER_STOREFRONT_CLAIM_MODAL_CLOSE_BUTTON_CLICKED, {
                           location_stack: x,
-                          sku_id: l.id,
+                          sku_id: o.id,
                           application_id: r.id,
                           is_gift: !0,
                           is_launchable: null != m && m,
@@ -350,12 +350,12 @@ function w(t) {
                 },
                 ref: (t) => C(t),
             }),
-            (0, i.jsx)(A.y, { sku: l }),
+            (0, i.jsx)(b.y, { sku: o }),
             (0, i.jsxs)(s.fef, {
                 children: [
                     (0, i.jsx)(s.xvT, {
                         variant: "text-md/normal",
-                        color: "text-secondary",
+                        color: "text-subtle",
                         className: P.giftSenderText,
                         children: O.intl.formatToPlainString(O.t["6yrIzU"], { sender: S }),
                     }),
@@ -363,7 +363,7 @@ function w(t) {
                         "" !== d &&
                         (0, i.jsx)(s.xvT, {
                             variant: "text-lg/semibold",
-                            color: "text-secondary",
+                            color: "text-subtle",
                             className: P.customGiftMessage,
                             children: d,
                         }),
@@ -372,7 +372,7 @@ function w(t) {
                         children: (0, i.jsx)(s.M14, {
                             type: "success",
                             children: O.intl.formatToPlainString(O.t.W2znvX, {
-                                skuName: l.name,
+                                skuName: o.name,
                                 applicationName: r.name,
                             }),
                         }),
@@ -386,7 +386,7 @@ function w(t) {
                 ],
             }),
             (0, i.jsx)(s.Go$, {
-                actions: [E],
+                actions: [I],
                 actionsFullWidth: !0,
             }),
         ],
@@ -411,8 +411,8 @@ let F = (t) => {
     },
     K = (t) => {
         let { confettiTarget: e, emojiName: n } = t,
-            s = (0, o.e7)([f.Z], () => f.Z.useReducedMotion),
-            l = a.useRef(e),
+            s = (0, l.e7)([f.Z], () => f.Z.useReducedMotion),
+            o = a.useRef(e),
             [r, c] = a.useState(!0),
             u = a.useCallback(() => {
                 c(!1);
@@ -420,7 +420,7 @@ let F = (t) => {
         if (s || !r) return null;
         let d = null != n ? k.ZP.getURL(n) : void 0;
         return (0, i.jsx)(C.Z, {
-            confettiTarget: l.current,
+            confettiTarget: o.current,
             emojiURL: d,
             numBursts: 5,
             particlesPerBurst: 50,

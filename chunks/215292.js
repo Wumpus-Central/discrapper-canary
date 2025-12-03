@@ -19,30 +19,30 @@ var i = e(54381),
     _ = e(308250);
 function L(t) {
     let { createdGuildId: n, hasFooter: e = !0, onClose: L, onChannelPromptCompleted: x, isSlideReady: T } = t,
-        [E, h] = a.useState(""),
-        [G, I] = a.useState(null),
-        [D, y] = a.useState(!1),
-        U = (0, m.Dt)(),
-        z = (0, l.e7)([g.Z], () => g.Z.getGuild(n), [n]),
-        f = a.useRef(null);
+        [E, G] = a.useState(""),
+        [I, h] = a.useState(null),
+        [D, U] = a.useState(!1),
+        y = (0, m.Dt)(),
+        f = (0, l.e7)([g.Z], () => g.Z.getGuild(n), [n]),
+        z = a.useRef(null);
     a.useEffect(() => {
         var t;
-        T && (null == (t = f.current) || t.focus());
+        T && (null == (t = z.current) || t.focus());
     }, [T]);
     let N = a.useCallback(
             async (t) => {
-                if ((t.preventDefault(), null == z)) return;
-                y(!0), I(null);
-                let n = C.ZP.getDefaultChannel(z.id);
+                if ((t.preventDefault(), null == f)) return;
+                U(!0), h(null);
+                let n = C.ZP.getDefaultChannel(f.id);
                 try {
                     let t = u.intl.formatToPlainString(u.t.V4lepJ, { topic: E });
-                    await d.Z.createTextChannel(z.id, E, null == n ? void 0 : n.parent_id, t), x();
+                    await d.Z.createTextChannel(f.id, E, null == n ? void 0 : n.parent_id, t), x();
                 } catch (t) {
-                    I(new o.yZ(t));
+                    h(new o.yZ(t));
                 }
-                y(!1);
+                U(!1);
             },
-            [z, E, x],
+            [f, E, x],
         ),
         v = (0, i.jsxs)(i.Fragment, {
             children: [
@@ -72,12 +72,12 @@ function L(t) {
                     direction: c.Z.Direction.VERTICAL,
                     separator: !1,
                     children: [
-                        null != z && (0, i.jsx)(p.Z, { guild: z }),
+                        null != f && (0, i.jsx)(p.Z, { guild: f }),
                         (0, i.jsx)(r.Text, {
                             className: _.guildName,
                             color: "header-primary",
                             variant: "text-sm/semibold",
-                            children: null == z ? void 0 : z.name,
+                            children: null == f ? void 0 : f.name,
                         }),
                         (0, i.jsx)(r.Heading, {
                             className: _.title,
@@ -86,7 +86,7 @@ function L(t) {
                         }),
                         (0, i.jsx)(r.Text, {
                             className: _.subtitle,
-                            color: "header-secondary",
+                            color: "text-default",
                             variant: "text-md/normal",
                             children: u.intl.string(u.t["+855Pm"]),
                         }),
@@ -106,21 +106,21 @@ function L(t) {
                             onSubmit: N,
                             children: (0, i.jsx)(r.oil, {
                                 label: u.intl.string(u.t.bY20tU),
-                                error: null == G ? void 0 : G.getFieldMessage("name"),
+                                error: null == I ? void 0 : I.getFieldMessage("name"),
                                 type: "text",
                                 value: E,
-                                id: U,
-                                onChange: h,
+                                id: y,
+                                onChange: G,
                                 placeholder: u.intl.string(u.t.xGOYA8),
-                                inputRef: f,
+                                inputRef: z,
                             }),
                         }),
-                        null != G &&
-                            0 === Object.keys(G.fields).length &&
+                        null != I &&
+                            0 === Object.keys(I.fields).length &&
                             (0, i.jsx)(r.Text, {
                                 variant: "text-xs/normal",
                                 color: "text-feedback-critical",
-                                children: G.message,
+                                children: I.message,
                             }),
                     ],
                 }),

@@ -6,7 +6,7 @@ var r = n(54381),
     s = n(563115),
     o = n(388032),
     c = n(482908);
-function d(e) {
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,7 +31,7 @@ function d(e) {
     }
     return e;
 }
-function u(e, t) {
+function d(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,7 +57,7 @@ let g = i.memo(function (e) {
             selectedRoleIds: t.exemptRoles,
             onChange: (e, n) =>
                 i(
-                    u(d({}, t), {
+                    d(u({}, t), {
                         exemptChannels: e,
                         exemptRoles: n,
                     }),
@@ -70,7 +70,7 @@ let g = i.memo(function (e) {
             (g = (0, r.jsx)(s.Z, {
                 guildId: t.guildId,
                 selectedRoleIds: t.exemptRoles,
-                onChange: (e) => i(u(d({}, t), { exemptRoles: e })),
+                onChange: (e) => i(d(u({}, t), { exemptRoles: e })),
                 placeholder: o.intl.string(o.t.aFO1I6),
                 disableEveryoneRole: !0,
             })),
@@ -78,7 +78,7 @@ let g = i.memo(function (e) {
             children: [
                 g,
                 (0, r.jsx)(l.Text, {
-                    color: "header-secondary",
+                    color: "text-default",
                     variant: "text-xs/normal",
                     className: c.exemptionHint,
                     children: o.intl.string(o.t.GKlYaS),

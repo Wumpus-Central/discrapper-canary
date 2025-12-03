@@ -10,8 +10,8 @@ var r = n(54381),
     d = n(220082),
     m = n(65361),
     f = n(798476),
-    h = n(983858),
-    x = n(314897),
+    x = n(983858),
+    h = n(314897),
     g = n(650774),
     p = n(271383),
     v = n(594174),
@@ -20,9 +20,9 @@ var r = n(54381),
     C = n(944163),
     _ = n(246364),
     O = n(983736),
-    y = n(187565),
-    I = n(451893),
-    N = n(990488),
+    I = n(187565),
+    N = n(451893),
+    y = n(990488),
     F = n(592286),
     P = n(981631),
     T = n(388032),
@@ -60,7 +60,7 @@ let w = (e) => {
                 }),
                 (0, r.jsx)(a.Text, {
                     variant: "text-sm/normal",
-                    color: "header-secondary",
+                    color: "text-default",
                     children: T.intl.string(T.t["SPlaR/"]),
                 }),
                 (0, r.jsx)("hr", { className: E.divider }),
@@ -105,7 +105,7 @@ let w = (e) => {
                 }),
                 (0, r.jsx)(a.Text, {
                     variant: "text-sm/normal",
-                    color: "header-secondary",
+                    color: "text-default",
                     children: T.intl.string(T.t["/Hw5ad"]),
                 }),
                 (0, r.jsx)("div", {
@@ -124,7 +124,7 @@ let w = (e) => {
             c = (0, i.e7)([C.Z], () => C.Z.get(n));
         if (null == c) return null;
         let u = null != (t = null != l ? l : null == c ? void 0 : c.formFields) ? t : [],
-            d = a ? N.W : N.r;
+            d = a ? y.W : y.r;
         return (0, r.jsx)(d, {
             guildId: n,
             formFields: u,
@@ -154,7 +154,7 @@ let w = (e) => {
                 }),
                 (0, r.jsx)(a.Text, {
                     variant: "text-sm/normal",
-                    color: "header-secondary",
+                    color: "text-default",
                     children: o ? T.intl.string(T.t["3smSPP"]) : T.intl.string(T.t["7D3C5p"]),
                 }),
                 (0, r.jsx)(A, {
@@ -168,11 +168,11 @@ let w = (e) => {
         });
     },
     Z = (e) => {
-        var t, n, o, N;
+        var t, n, o, y;
         let { verificationForm: R, headerId: S, guildId: A, onClose: Z, onComplete: k, isPreview: L = !1 } = e,
-            B = (0, y.N0)(A, null == R ? void 0 : R.guild, L),
+            B = (0, I.N0)(A, null == R ? void 0 : R.guild, L),
             { guildProfile: D, fetchGuildProfile: G } = (0, m.u)(A),
-            U = (0, i.e7)([p.ZP, x.default], () => p.ZP.isMember(A, x.default.getId())),
+            U = (0, i.e7)([p.ZP, h.default], () => p.ZP.isMember(A, h.default.getId())),
             [H, J] = l.useState(!1);
         l.useEffect(() => {
             U && !H && null == D && G().finally(() => J(!0));
@@ -203,9 +203,9 @@ let w = (e) => {
                     });
             }, [A]);
         let em = (0, i.e7)([v.default], () => v.default.getCurrentUser()),
-            { currentStep: ef, setCurrentStep: eh } = (0, y.k3)(em);
-        (0, y.lk)(V);
-        let ex = null == em ? void 0 : em.verified,
+            { currentStep: ef, setCurrentStep: ex } = (0, I.k3)(em);
+        (0, I.lk)(V);
+        let eh = null == em ? void 0 : em.verified,
             eg = null == em ? void 0 : em.isPhoneVerified(),
             { invalidFormFields: ep, hasInvalidTermsFormField: ev } = l.useMemo(
                 () => ({
@@ -223,12 +223,12 @@ let w = (e) => {
                     case P.sFg.LOW:
                     case P.sFg.MEDIUM:
                     case P.sFg.HIGH:
-                        return !ex && !eg;
+                        return !eh && !eg;
                     case P.sFg.NONE:
                     default:
                         return !1;
                 }
-            }, [k, ep, ed, em, null == B ? void 0 : B.verificationLevel, eg, ex]),
+            }, [k, ep, ed, em, null == B ? void 0 : B.verificationLevel, eg, eh]),
             ej = (0, i.e7)([u.Z], () => u.Z.useReducedMotion),
             eC = l.useRef(null),
             e_ = (function (e) {
@@ -248,9 +248,9 @@ let w = (e) => {
             eO = (function (e) {
                 let t = (0, a.dQu)(a.TVs.colors.BORDER_SUBTLE).hex();
                 return "linear-gradient(-45deg, ".concat(t, ", ").concat(e, ")");
-            })(null != (N = null == D ? void 0 : D.brandColorPrimary) ? N : "");
+            })(null != (y = null == D ? void 0 : D.brandColorPrimary) ? y : "");
         if (null == B) return (0, r.jsx)(a.$jN, {});
-        let ey = async () => {
+        let eI = async () => {
                 W(!0), el(null), es(null);
                 try {
                     await (0, c.S2)({
@@ -258,7 +258,7 @@ let w = (e) => {
                         password: et,
                     }),
                         W(!1),
-                        eh(y.KJ.EMAIL_CONFIRMATION);
+                        ex(I.KJ.EMAIL_CONFIRMATION);
                 } catch (n) {
                     var e, t;
                     el(null == n || null == (e = n.body) ? void 0 : e.email),
@@ -267,7 +267,7 @@ let w = (e) => {
                     W(!1);
                 }
             },
-            eI = async () => {
+            eN = async () => {
                 var e, t, n, r;
                 W(!0), X(null);
                 let l = null != em ? p.ZP.getMember(A, em.id) : null;
@@ -331,24 +331,24 @@ let w = (e) => {
                     W(!1);
                 }
             },
-            eN = null != D;
+            ey = null != D;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)("div", {
                     className: E.guildSidebar,
                     children: [
                         (0, r.jsx)("div", {
-                            style: { background: eN ? eO : e_ },
+                            style: { background: ey ? eO : e_ },
                             className: E.sidebarGradientOverlay,
                         }),
-                        eN
+                        ey
                             ? (0, r.jsx)(f.ZP, {
                                   profile: D,
                                   className: E.guildProfile,
                                   disableCTA: !0,
                                   disableGuildNameClick: !0,
                               })
-                            : (0, r.jsx)(h.Z, {
+                            : (0, r.jsx)(x.Z, {
                                   className: E.guildProfile,
                                   guild: B,
                                   presenceCount: ec,
@@ -362,18 +362,18 @@ let w = (e) => {
                         className: E.mainContentWrapper,
                         ref: eC,
                         children: [
-                            (0, r.jsx)(I.Z, {
+                            (0, r.jsx)(N.Z, {
                                 className: E.modalContent,
                                 containerRef: eC,
                                 faderSize: 180,
                                 faderEdgeThreshold: 48,
                                 children: (0, r.jsx)(a.qBt, {
                                     className: E.sequencer,
-                                    steps: [y.KJ.CLAIM_ACCOUNT, y.KJ.EMAIL_CONFIRMATION, y.KJ.VERIFICATION_FORM],
+                                    steps: [I.KJ.CLAIM_ACCOUNT, I.KJ.EMAIL_CONFIRMATION, I.KJ.VERIFICATION_FORM],
                                     step: ef,
                                     children: (() => {
                                         switch (ef) {
-                                            case y.KJ.CLAIM_ACCOUNT:
+                                            case I.KJ.CLAIM_ACCOUNT:
                                                 return (0, r.jsx)(w, {
                                                     headerId: S,
                                                     email: $,
@@ -385,12 +385,12 @@ let w = (e) => {
                                                     hasManualFormFields: K,
                                                     isMember: U,
                                                 });
-                                            case y.KJ.EMAIL_CONFIRMATION:
+                                            case I.KJ.EMAIL_CONFIRMATION:
                                                 return (0, r.jsx)(M, {
                                                     headerId: S,
                                                     email: $,
                                                 });
-                                            case y.KJ.VERIFICATION_FORM:
+                                            case I.KJ.VERIFICATION_FORM:
                                                 return (0, r.jsx)(q, {
                                                     headerId: S,
                                                     guildId: A,
@@ -408,7 +408,7 @@ let w = (e) => {
                             }),
                             (() => {
                                 switch (ef) {
-                                    case y.KJ.CLAIM_ACCOUNT:
+                                    case I.KJ.CLAIM_ACCOUNT:
                                         return (0, r.jsxs)("div", {
                                             className: E.footer,
                                             children: [
@@ -420,20 +420,20 @@ let w = (e) => {
                                                         text: T.intl.string(T.t.PDTjLN),
                                                         type: "submit",
                                                         loading: z,
-                                                        onClick: ey,
+                                                        onClick: eI,
                                                         disabled: 0 === $.length || 0 === et.length,
                                                     }),
                                                 }),
                                                 (0, r.jsx)(a.Text, {
                                                     variant: "text-xs/normal",
-                                                    color: "header-secondary",
+                                                    color: "text-default",
                                                     children: T.intl.string(T.t["9GPiR6"]),
                                                 }),
                                             ],
                                         });
-                                    case y.KJ.EMAIL_CONFIRMATION:
+                                    case I.KJ.EMAIL_CONFIRMATION:
                                         return null;
-                                    case y.KJ.VERIFICATION_FORM:
+                                    case I.KJ.VERIFICATION_FORM:
                                         return (0, r.jsxs)("div", {
                                             className: E.footer,
                                             children: [
@@ -449,7 +449,7 @@ let w = (e) => {
                                                             text: T.intl.string(T.t.geKm7t),
                                                             type: "submit",
                                                             loading: z,
-                                                            onClick: eI,
+                                                            onClick: eN,
                                                             disabled: eb,
                                                         }),
                                                     }),
@@ -466,12 +466,12 @@ let w = (e) => {
                                                         className: E.disclaimerFooter,
                                                         children: [
                                                             (0, r.jsx)(a.Text, {
-                                                                color: "header-secondary",
+                                                                color: "text-default",
                                                                 variant: "text-xs/normal",
                                                                 children: T.intl.string(T.t["+fPCTZ"]),
                                                             }),
                                                             (0, r.jsx)(a.Text, {
-                                                                color: "header-secondary",
+                                                                color: "text-default",
                                                                 variant: "text-xs/normal",
                                                                 children: T.intl.string(T.t.VjgH0c),
                                                             }),

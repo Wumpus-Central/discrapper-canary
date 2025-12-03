@@ -1,4 +1,4 @@
-n.d(t, { default: () => y }), n(388685);
+n.d(e, { default: () => y }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(793030),
@@ -6,138 +6,138 @@ var r = n(54381),
     c = n(481060),
     s = n(660216),
     l = n(825209),
-    d = n(714338),
-    u = n(556296),
-    b = n(13140),
+    u = n(714338),
+    b = n(556296),
+    d = n(13140),
     p = n(710111),
-    g = n(981631),
-    O = n(388032),
-    f = n(687213);
-function y(e) {
-    var t;
-    let { transitionState: n, onClose: y } = e,
-        h = (0, o.e7)([u.ZP], () => u.ZP.getKeybindForAction(g.kg4.SOUNDBOARD_HOLD)),
-        [m, j] = i.useState(null != (t = null == h ? void 0 : h.shortcut) ? t : []),
-        v = i.useCallback(() => {
-            if (0 === m.length) return null != h && s.Z.deleteKeybind(h.id), y();
-            if (null == h)
+    f = n(981631),
+    g = n(388032),
+    O = n(687213);
+function y(t) {
+    var e;
+    let { transitionState: n, onClose: y } = t,
+        m = (0, o.e7)([b.ZP], () => b.ZP.getKeybindForAction(f.kg4.SOUNDBOARD_HOLD)),
+        [h, j] = i.useState(null != (e = null == m ? void 0 : m.shortcut) ? e : []),
+        x = i.useCallback(() => {
+            if (0 === h.length) return null != m && s.Z.deleteKeybind(m.id), y();
+            if (null == m)
                 s.Z.addKeybind({
-                    action: g.kg4.SOUNDBOARD_HOLD,
-                    shortcut: m,
+                    action: f.kg4.SOUNDBOARD_HOLD,
+                    shortcut: h,
                     enabled: !0,
                     params: {},
                 });
             else {
-                var e, t;
+                var t, e;
                 s.Z.setKeybind(
-                    ((e = (function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var n = null != arguments[t] ? arguments[t] : {},
+                    ((t = (function (t) {
+                        for (var e = 1; e < arguments.length; e++) {
+                            var n = null != arguments[e] ? arguments[e] : {},
                                 r = Object.keys(n);
                             "function" == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
-                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                    Object.getOwnPropertySymbols(n).filter(function (t) {
+                                        return Object.getOwnPropertyDescriptor(n, t).enumerable;
                                     }),
                                 )),
-                                r.forEach(function (t) {
+                                r.forEach(function (e) {
                                     var r;
-                                    (r = n[t]),
-                                        t in e
-                                            ? Object.defineProperty(e, t, {
+                                    (r = n[e]),
+                                        e in t
+                                            ? Object.defineProperty(t, e, {
                                                   value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0,
                                               })
-                                            : (e[t] = r);
+                                            : (t[e] = r);
                                 });
                         }
-                        return e;
-                    })({}, h)),
-                    (t = t = { shortcut: m }),
+                        return t;
+                    })({}, m)),
+                    (e = e = { shortcut: h }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-                        : (function (e, t) {
-                              var n = Object.keys(e);
+                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(e))
+                        : (function (t, e) {
+                              var n = Object.keys(t);
                               if (Object.getOwnPropertySymbols) {
-                                  var r = Object.getOwnPropertySymbols(e);
+                                  var r = Object.getOwnPropertySymbols(t);
                                   n.push.apply(n, r);
                               }
                               return n;
-                          })(Object(t)).forEach(function (n) {
-                              Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                          })(Object(e)).forEach(function (n) {
+                              Object.defineProperty(t, n, Object.getOwnPropertyDescriptor(e, n));
                           }),
-                    e),
+                    t),
                 );
             }
             y();
-        }, [h, y, m]);
+        }, [m, y, h]);
     i.useEffect(
         () => (
-            d.Z.disable(),
+            u.Z.disable(),
             () => {
-                d.Z.enable();
+                u.Z.enable();
             }
         ),
         [],
     );
-    let x = i.useMemo(
+    let v = i.useMemo(
         () => [
             {
-                text: O.intl.string(O.t["ETE/oC"]),
+                text: g.intl.string(g.t["ETE/oC"]),
                 onClick: y,
                 variant: "secondary",
             },
             {
-                text: O.intl.string(O.t["R3BPH+"]),
-                onClick: v,
+                text: g.intl.string(g.t["R3BPH+"]),
+                onClick: x,
                 variant: "primary",
             },
         ],
-        [y, v],
+        [y, x],
     );
     return (0, r.jsxs)(a.Modal, {
         transitionState: n,
-        title: O.intl.string(O.t["0Osu3x"]),
-        actions: x,
+        title: g.intl.string(g.t["0Osu3x"]),
+        actions: v,
         onClose: y,
         children: [
             (0, r.jsx)(c.Wn, {
-                className: f.warning,
+                className: O.warning,
                 messageType: c.QYI.WARNING,
-                children: O.intl.string(O.t["O2v/eP"]),
+                children: g.intl.string(g.t["O2v/eP"]),
             }),
             (0, r.jsx)(c.Heading, {
-                className: f.formHeader,
+                className: O.formHeader,
                 variant: "eyebrow",
-                color: "header-secondary",
-                children: O.intl.string(O.t.UUpAD6),
+                color: "text-default",
+                children: g.intl.string(g.t.UUpAD6),
             }),
             (0, r.jsx)(c.Text, {
-                className: f.action,
+                className: O.action,
                 variant: "text-md/normal",
-                children: O.intl.string(O.t["1xFbP/"]),
+                children: g.intl.string(g.t["1xFbP/"]),
             }),
             (0, r.jsx)(c.Text, {
-                className: f.actionDescription,
+                className: O.actionDescription,
                 variant: "text-sm/normal",
-                children: O.intl.string(O.t.laNlTl),
+                children: g.intl.string(g.t.laNlTl),
             }),
             (0, r.jsx)(c.Heading, {
-                className: f.formHeader,
+                className: O.formHeader,
                 variant: "eyebrow",
-                color: "header-secondary",
-                children: O.intl.string(O.t["1La4tC"]),
+                color: "text-default",
+                children: g.intl.string(g.t["1La4tC"]),
             }),
             (0, r.jsx)(l.Z, {
-                defaultValue: m,
+                defaultValue: h,
                 onChange: j,
             }),
             (0, r.jsx)(c.Anchor, {
-                className: f.resetButton,
-                onClick: () => j((0, b.Kd)(p.D_)),
-                children: O.intl.string(O.t["s7+2rQ"]),
+                className: O.resetButton,
+                onClick: () => j((0, d.Kd)(p.D_)),
+                children: g.intl.string(g.t["s7+2rQ"]),
             }),
         ],
     });

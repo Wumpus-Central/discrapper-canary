@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r = n(54381),
     i = n(473749),
-    a = n(481060),
-    l = n(100527),
+    l = n(481060),
+    a = n(100527),
     o = n(906732),
     c = n(63063),
     s = n(732380),
@@ -13,25 +13,25 @@ let g = c.Z.getArticleURL(u.BhN.CUSTOM_PROFILES_WISHLIST);
 function p(e) {
     let { isOwner: t, isWishlistPublic: n, onToggleVisibility: c } = e,
         u = i.useRef(null),
-        { analyticsLocations: p } = (0, o.ZP)(l.Z.USER_PROFILE_WISHLIST),
+        { analyticsLocations: p } = (0, o.ZP)(a.Z.USER_PROFILE_WISHLIST),
         m = i.useMemo(
             () =>
                 t
-                    ? (0, r.jsxs)(a.kSQ, {
+                    ? (0, r.jsxs)(l.kSQ, {
                           children: [
-                              (0, r.jsx)(a.m76, {
+                              (0, r.jsx)(l.m76, {
                                   id: "wishlist-privacy-setting",
                                   label: (0, r.jsxs)(r.Fragment, {
                                       children: [
-                                          (0, r.jsx)(a.Text, {
+                                          (0, r.jsx)(l.Text, {
                                               variant: "text-sm/medium",
-                                              color: "text-primary",
+                                              color: "text-strong",
                                               children: d.intl.string(d.t.b2nFyA),
                                           }),
-                                          (0, r.jsx)(a.Text, {
+                                          (0, r.jsx)(l.Text, {
                                               className: f.menuItemDescription,
                                               variant: "text-xs/medium",
-                                              color: "text-tertiary",
+                                              color: "text-muted",
                                               children: d.intl.string(d.t.dw58pE),
                                           }),
                                       ],
@@ -39,15 +39,15 @@ function p(e) {
                                   checked: n,
                                   action: c,
                               }),
-                              (0, r.jsx)(a.Clw, {}),
-                              (0, r.jsx)(a.sNh, {
+                              (0, r.jsx)(l.Clw, {}),
+                              (0, r.jsx)(l.sNh, {
                                   id: "wishlist-privacy-setting2",
-                                  label: (0, r.jsx)(a.Text, {
+                                  label: (0, r.jsx)(l.Text, {
                                       variant: "text-sm/medium",
-                                      color: "text-primary",
+                                      color: "text-strong",
                                       children: d.intl.string(d.t.hvVgAZ),
                                   }),
-                                  icon: a.Gr1,
+                                  icon: l.Gr1,
                                   action: () => window.open(g),
                               }),
                           ],
@@ -59,11 +59,11 @@ function p(e) {
         ? null
         : (0, r.jsx)(o.Gt, {
               value: p,
-              children: (0, r.jsx)(a.yRy, {
+              children: (0, r.jsx)(l.yRy, {
                   targetElementRef: u,
                   renderPopout: (e) => {
                       let { closePopout: t } = e;
-                      return (0, r.jsx)(a.v2r, {
+                      return (0, r.jsx)(l.v2r, {
                           navId: "wishlist-overflow-menu",
                           onSelect: void 0,
                           onClose: t,
@@ -101,7 +101,7 @@ function p(e) {
                           })(
                               {
                                   buttonRef: u,
-                                  icon: a.xhG,
+                                  icon: l.xhG,
                                   tooltipText: d.intl.string(d.t["UKOtz+"]),
                                   action: "PRESS_OPTIONS",
                               },

@@ -26,8 +26,8 @@ var a = n(54381),
     N = n(338949),
     O = n(556809),
     P = n(886118),
-    w = n(301801),
-    I = n(352527),
+    I = n(301801),
+    w = n(352527),
     k = n(355863),
     R = n(449224),
     A = n(556296),
@@ -173,17 +173,17 @@ let ea = l.memo(function (e) {
             children: [
                 (0, a.jsx)(m.Text, {
                     variant: "text-md/bold",
-                    color: "text-primary",
+                    color: "text-strong",
                     children: t.gameName,
                 }),
                 (0, a.jsx)(m.Text, {
                     variant: "text-sm/bold",
-                    color: "text-secondary",
+                    color: "text-subtle",
                     children: t.pid,
                 }),
                 (0, a.jsx)(m.Text, {
                     variant: "text-sm/normal",
-                    color: "text-secondary",
+                    color: "text-subtle",
                     children: null == n ? void 0 : n.exeName,
                 }),
                 (0, a.jsxs)(m.Text, {
@@ -194,7 +194,7 @@ let ea = l.memo(function (e) {
                 null != t.applicationId &&
                     (0, a.jsx)(m.Text, {
                         variant: "text-md/bold",
-                        color: "text-primary",
+                        color: "text-strong",
                         children: (0, a.jsx)(en, { id: t.applicationId }),
                     }),
                 (0, a.jsxs)(m.Text, {
@@ -310,12 +310,12 @@ let ea = l.memo(function (e) {
             children: [
                 (0, a.jsx)(m.Text, {
                     variant: "text-md/semibold",
-                    color: "text-primary",
+                    color: "text-strong",
                     children: "".concat(t),
                 }),
                 (0, a.jsxs)(m.Text, {
                     variant: "text-sm/normal",
-                    color: "text-secondary",
+                    color: "text-subtle",
                     children: [
                         "Screen Type Resolution: ",
                         ((e) => {
@@ -329,7 +329,7 @@ let ea = l.memo(function (e) {
                 }),
                 (0, a.jsxs)(m.Text, {
                     variant: "text-sm/normal",
-                    color: "text-secondary",
+                    color: "text-subtle",
                     children: [
                         "Window Creation: ",
                         ((e) => {
@@ -348,7 +348,7 @@ let ea = l.memo(function (e) {
                 }),
                 (0, a.jsxs)(m.Text, {
                     variant: "text-sm/normal",
-                    color: "text-secondary",
+                    color: "text-subtle",
                     children: [
                         "Rendering: ",
                         ((e) => {
@@ -363,27 +363,27 @@ let ea = l.memo(function (e) {
                 }),
                 (0, a.jsxs)(m.Text, {
                     variant: "text-sm/normal",
-                    color: "text-primary",
+                    color: "text-strong",
                     children: ["Bridge Status: ", n.get(Number(t))],
                 }),
                 (0, a.jsxs)(m.Text, {
                     variant: "text-sm/normal",
-                    color: "text-primary",
+                    color: "text-strong",
                     children: ["isInputLocked: ", i],
                 }),
                 (0, a.jsxs)(m.Text, {
                     variant: "text-sm/normal",
-                    color: "text-primary",
+                    color: "text-strong",
                     children: ["isInputLockedV3: ", r],
                 }),
                 (0, a.jsxs)(m.Text, {
                     variant: "text-sm/normal",
-                    color: "text-primary",
+                    color: "text-strong",
                     children: ["isInputLockedV2: ", s],
                 }),
                 (0, a.jsxs)(m.Text, {
                     variant: "text-sm/normal",
-                    color: "text-primary",
+                    color: "text-strong",
                     children: ["isReady: ", o],
                 }),
             ],
@@ -442,7 +442,7 @@ let es = l.memo(function (e) {
         m.Text,
         $(Q({}, n), {
             variant: "text-md/semibold",
-            color: "text-primary",
+            color: "text-strong",
             children: l,
         }),
     );
@@ -540,7 +540,7 @@ let ec = l.memo(function (e) {
             }, [t]);
         return (0, a.jsxs)(m.Text, {
             variant: "text-sm/normal",
-            color: "text-secondary",
+            color: "text-subtle",
             tag: "span",
             children: ["Original Screen Type: ", null != n ? (0, E.sS)(n) : "Unknown"],
         });
@@ -647,7 +647,7 @@ let ec = l.memo(function (e) {
         let n = (0, d.cj)([S.default], () => S.default.getTrackedGames()),
             l = (0, B.getPID)(),
             i = (0, d.e7)([S.default], () => S.default.isOverlayOOPEnabledForPid(l), [l]),
-            [r, s] = (0, d.Wu)([I.Z], () => [I.Z.enabled, I.Z.keepOpen]),
+            [r, s] = (0, d.Wu)([w.Z], () => [w.Z.enabled, w.Z.keepOpen]),
             o = (0, d.e7)([Z.default], () => Z.default.getFocusedPID()),
             c = (0, d.e7)([Z.default], () => Z.default.isFocusedPidOutOfProcess());
         return (0, a.jsxs)("div", {
@@ -664,32 +664,32 @@ let ec = l.memo(function (e) {
                     children: [
                         (0, a.jsxs)(m.Text, {
                             variant: "text-sm/medium",
-                            color: "text-primary",
+                            color: "text-strong",
                             children: ["focusedPID: ", null != (e = null == o ? void 0 : o.toString()) ? e : "null"],
                         }),
                         (0, a.jsxs)(m.Text, {
                             variant: "text-sm/normal",
-                            color: "text-secondary",
+                            color: "text-subtle",
                             children: ["isFocusedPidOutOfProcess: ", c ? "Yes" : "No"],
                         }),
                         (0, a.jsxs)(m.Text, {
                             variant: "text-sm/medium",
-                            color: "text-primary",
+                            color: "text-strong",
                             children: ["processPid: ", null != (t = null == l ? void 0 : l.toString()) ? t : "unknown"],
                         }),
                         (0, a.jsxs)(m.Text, {
                             variant: "text-sm/normal",
-                            color: "text-secondary",
+                            color: "text-subtle",
                             children: ["isOOPEnabledForPid: ", i ? "Yes" : "No"],
                         }),
                         (0, a.jsxs)(m.Text, {
                             variant: "text-sm/normal",
-                            color: "text-secondary",
+                            color: "text-subtle",
                             children: ["SoundboardOverlay.enabled: ", r ? "Yes" : "No"],
                         }),
                         (0, a.jsxs)(m.Text, {
                             variant: "text-sm/normal",
-                            color: "text-secondary",
+                            color: "text-subtle",
                             children: ["SoundboardOverlay.keepOpen: ", s ? "Yes" : "No"],
                         }),
                     ],
@@ -1034,20 +1034,20 @@ let ev = [
                         color: (function (e) {
                             switch (e) {
                                 case y.l6.Info:
-                                    return "text-primary";
+                                    return "text-strong";
                                 case y.l6.Warning:
                                     return "text-feedback-warning";
                                 case y.l6.Error:
                                     return "text-feedback-critical";
                                 default:
-                                    return "text-secondary";
+                                    return "text-subtle";
                             }
                         })(l),
                         children: t,
                     }),
                     (0, a.jsxs)(m.Text, {
                         variant: "text-sm/normal",
-                        color: "text-secondary",
+                        color: "text-subtle",
                         children: ["(", n, ")"],
                     }),
                 ],
@@ -1268,13 +1268,13 @@ function eT() {
             [y, h, u, o, C],
         ),
         [O, P] = l.useState(T),
-        [I, k] = l.useState(null),
-        R = l.useMemo(() => y.find((e) => e.key === I), [y, I]),
+        [w, k] = l.useState(null),
+        R = l.useMemo(() => y.find((e) => e.key === w), [y, w]),
         A = l.useCallback((e) => {
             P(e);
         }, []),
         { renderSelectedTab: Z } = (0, W.ZP)({ tabs: eS }, []);
-    (0, w.BO)(S, T, A, eE, [y]);
+    (0, I.BO)(S, T, A, eE, [y]);
     let L = l.useCallback((e) => {
             s(e), x.Z.setModuleLogging(e);
         }, []),
@@ -1348,7 +1348,7 @@ function eT() {
                                 children: [
                                     (0, a.jsx)(m.Text, {
                                         variant: "text-sm/normal",
-                                        color: "text-secondary",
+                                        color: "text-subtle",
                                         children: M ? "Copied" : "Copy All",
                                     }),
                                     M
@@ -1410,7 +1410,7 @@ function eT() {
                 children: (0, a.jsx)(V.Z, {
                     columns: ev,
                     data: O,
-                    selectedRowKey: null != I ? I : void 0,
+                    selectedRowKey: null != w ? w : void 0,
                     onClickRow: (e) => k(e.key),
                 }),
             }),
@@ -1436,13 +1436,13 @@ let eN = l.memo(function () {
                     className: J.panelHeader,
                     children: (0, a.jsx)(m.Text, {
                         variant: "text-md/bold",
-                        color: "text-primary",
+                        color: "text-strong",
                         children: "Popout Initialization Stages",
                     }),
                 }),
                 (0, a.jsx)(m.Text, {
                     variant: "text-sm/normal",
-                    color: "text-secondary",
+                    color: "text-subtle",
                     children: (0, a.jsx)("pre", { children: JSON.stringify(e, void 0, 2) }),
                 }),
             ],
@@ -1474,7 +1474,7 @@ let eN = l.memo(function () {
                     }),
                     (0, a.jsx)(m.Text, {
                         variant: "text-sm/normal",
-                        color: "text-secondary",
+                        color: "text-subtle",
                         children: (0, a.jsx)("pre", { children: JSON.stringify(t, void 0, 2) }),
                     }),
                 ],
@@ -1498,7 +1498,7 @@ function eP() {
         }),
     });
 }
-let ew = (e) => {
+let eI = (e) => {
         switch (e) {
             case "Disabled":
                 return;
@@ -1508,7 +1508,7 @@ let ew = (e) => {
                 return !0;
         }
     },
-    eI = (e) => (null == e ? "Disabled" : e ? "True" : "False"),
+    ew = (e) => (null == e ? "Disabled" : e ? "True" : "False"),
     ek = l.memo(function () {
         let e = (0, C.xj)(),
             t = (0, d.e7)([A.ZP], () => A.ZP.getOverlayKeybind());
@@ -1525,7 +1525,7 @@ let ew = (e) => {
                 }),
                 (0, a.jsx)(m.Text, {
                     variant: "text-sm/normal",
-                    color: "text-secondary",
+                    color: "text-subtle",
                     children: (0, a.jsx)("pre", {
                         children: JSON.stringify($(Q({}, e), { overlayKeybind: (0, F.BB)(t.shortcut) }), void 0, 2),
                     }),
@@ -1538,7 +1538,7 @@ let ew = (e) => {
                     label: "Overlay User Status",
                     description: "Override whether the current user was a new or existing user",
                     serialize: (e) => (null != e ? e.toString() : "Disabled"),
-                    isSelected: (t) => t === eI(e.overrideIsNewOverlayUser),
+                    isSelected: (t) => t === ew(e.overrideIsNewOverlayUser),
                     options: [
                         {
                             label: "Disabled (no override)",
@@ -1554,7 +1554,7 @@ let ew = (e) => {
                         },
                     ],
                     select: (e) => {
-                        (0, C.jt)(ew(e));
+                        (0, C.jt)(eI(e));
                     },
                     popoutLayerContext: G.O$,
                 }),
@@ -1562,7 +1562,7 @@ let ew = (e) => {
                     label: "Override Previous Keybind Status",
                     description: "Override whether the user's pre-experiment keybind was the default keybind",
                     serialize: (e) => (null != e ? e.toString() : "Disabled"),
-                    isSelected: (t) => t === eI(e.overrideIsUsingDefaultOverlayKeybind),
+                    isSelected: (t) => t === ew(e.overrideIsUsingDefaultOverlayKeybind),
                     options: [
                         {
                             label: "Disabled (no override)",
@@ -1578,7 +1578,7 @@ let ew = (e) => {
                         },
                     ],
                     select: (e) => {
-                        (0, C.FM)(ew(e));
+                        (0, C.FM)(eI(e));
                     },
                     popoutLayerContext: G.O$,
                 }),

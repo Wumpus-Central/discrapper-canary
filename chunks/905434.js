@@ -1,12 +1,12 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => d });
 var r = n(54381);
 n(473749);
-var i = n(481060),
-    l = n(565138),
+var l = n(481060),
+    i = n(565138),
     a = n(430824),
     s = n(388032),
     o = n(633570);
-let c = (e) => {
+let d = (e) => {
     let { stageInstance: t } = e,
         n = a.Z.getGuild(t.guild_id);
     return null == n
@@ -14,7 +14,7 @@ let c = (e) => {
         : (0, r.jsxs)("div", {
               className: o.container,
               children: [
-                  (0, r.jsx)(i.Heading, {
+                  (0, r.jsx)(l.Heading, {
                       className: o.header,
                       variant: "heading-sm/semibold",
                       children: s.intl.string(s.t.InbJ8x),
@@ -25,19 +25,19 @@ let c = (e) => {
                           (0, r.jsxs)("div", {
                               className: o.guildInfo,
                               children: [
-                                  (0, r.jsx)(l.Z, {
+                                  (0, r.jsx)(i.Z, {
                                       guild: n,
-                                      size: l.Z.Sizes.MINI,
+                                      size: i.Z.Sizes.MINI,
                                       className: o.guildIcon,
                                   }),
-                                  (0, r.jsx)(i.Text, {
-                                      color: "header-secondary",
+                                  (0, r.jsx)(l.Text, {
+                                      color: "text-default",
                                       variant: "text-sm/normal",
                                       children: n.name,
                                   }),
                               ],
                           }),
-                          (0, r.jsx)(i.Text, {
+                          (0, r.jsx)(l.Text, {
                               variant: "text-md/semibold",
                               color: "header-primary",
                               children: t.topic,

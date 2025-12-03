@@ -6,8 +6,8 @@ var r = n(54381),
     s = n(999382),
     o = n(227380),
     c = n(976288),
-    d = n(386885),
-    u = n(388032),
+    u = n(386885),
+    d = n(388032),
     g = n(366869);
 function m(e) {
     let { fetchDiscoveryData: t, settingsView: n, requireTerms: m, rules: p } = e,
@@ -20,7 +20,7 @@ function m(e) {
     )
         return null;
     switch (n) {
-        case d.U.DISQUALIFIED:
+        case u.U.DISQUALIFIED:
             return (0, r.jsx)(o.Z, {
                 guild: f,
                 guildId: f.id,
@@ -30,7 +30,7 @@ function m(e) {
                             variant: "text-md/semibold",
                             color: "header-primary",
                             className: g.header,
-                            children: u.intl.format(u.t.n1LDQM, {
+                            children: d.intl.format(d.t.n1LDQM, {
                                 removedHook: (e, t) =>
                                     (0, r.jsx)(
                                         "strong",
@@ -44,26 +44,26 @@ function m(e) {
                         }),
                         (0, r.jsx)(a.Text, {
                             variant: "text-sm/medium",
-                            color: "text-secondary",
-                            children: u.intl.string(u.t.Qgaw3d),
+                            color: "text-subtle",
+                            children: d.intl.string(d.t.Qgaw3d),
                         }),
                     ],
                 }),
             });
-        case d.U.ELIGIBLE_DISABLED:
-        case d.U.ELIGIBLE_ENABLED:
+        case u.U.ELIGIBLE_DISABLED:
+        case u.U.ELIGIBLE_ENABLED:
             return (0, r.jsx)(c.d, {
                 requireTerms: m,
                 rules: p,
                 settingsView: n,
             });
-        case d.U.INELIGIBLE:
+        case u.U.INELIGIBLE:
             return (0, r.jsx)(o.Z, {
                 guild: f,
                 guildId: f.id,
                 headerContent: (0, r.jsx)(a.Heading, {
                     variant: "heading-md/semibold",
-                    children: u.intl.format(u.t["+6Hylv"], {
+                    children: d.intl.format(d.t["+6Hylv"], {
                         doesNotHook: (e, t) =>
                             (0, r.jsx)(
                                 "strong",

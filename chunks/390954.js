@@ -213,7 +213,7 @@ class I extends a.PureComponent {
                 }),
                 (0, i.jsx)(c.Text, {
                     variant: "text-sm/normal",
-                    color: "text-secondary",
+                    color: "text-subtle",
                     children: g.intl.string(g.t.h6V3uK),
                 }),
                 f,

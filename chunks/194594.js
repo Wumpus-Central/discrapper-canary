@@ -4,8 +4,8 @@ n.d(t, {
 }),
     n(539854);
 var r,
-    a = n(54381),
-    i = n(473749),
+    i = n(54381),
+    a = n(473749),
     l = n(120356),
     s = n.n(l),
     o = n(442837),
@@ -16,19 +16,19 @@ var r,
     m = n(706454),
     h = n(768581),
     g = n(624138),
-    _ = n(388032),
-    f = n(53062),
+    f = n(388032),
+    _ = n(53062),
     b =
         (((r = {})[(r.SMALL = (0, g.Mg)(d.Z.GUILD_COUNT_SMALL_ICON_SIZE))] = "SMALL"),
         (r[(r.LARGE = (0, g.Mg)(d.Z.GUILD_COUNT_LARGE_ICON_SIZE))] = "LARGE"),
         r);
 let x = {
-        [b.SMALL]: f.moreGuildsSmall,
-        [b.LARGE]: f.moreGuildsLarge,
+        [b.SMALL]: _.moreGuildsSmall,
+        [b.LARGE]: _.moreGuildsLarge,
     },
     v = {
-        [b.SMALL]: f.iconSmall,
-        [b.LARGE]: f.iconLarge,
+        [b.SMALL]: _.iconSmall,
+        [b.LARGE]: _.iconLarge,
     };
 function C(e) {
     var t, n, r;
@@ -48,7 +48,7 @@ function C(e) {
         N = null != (n = null == (t = l.directory_entry) ? void 0 : t.guild_count) ? n : 0,
         T = null != (r = null == d ? void 0 : d.length) ? r : 0,
         A = Math.max(0, N - T),
-        { shownMutualGuilds: L, hiddenMutualGuilds: R } = i.useMemo(() => {
+        { shownMutualGuilds: L, hiddenMutualGuilds: R } = a.useMemo(() => {
             let e = [],
                 t = [];
             return (
@@ -64,15 +64,15 @@ function C(e) {
             );
         }, [d, g]),
         Z = R.length,
-        w = (function (e, t, n, r, a) {
+        w = (function (e, t, n, r, i) {
             if (0 === t && 0 === e) return null;
-            if (t > 0 && 0 === n) return _.intl.formatToPlainString(_.t.pnzE1t, { mutualGuildCount: t });
-            let i = t > 0 ? _.t.YR8PSL : _.t.GQjq6c,
+            if (t > 0 && 0 === n) return f.intl.formatToPlainString(f.t.pnzE1t, { mutualGuildCount: t });
+            let a = t > 0 ? f.t.YR8PSL : f.t.GQjq6c,
                 l = new Intl.NumberFormat(r, {
-                    notation: a ? "compact" : "standard",
+                    notation: i ? "compact" : "standard",
                     compactDisplay: "short",
                 });
-            return _.intl.formatToPlainString(i, {
+            return f.intl.formatToPlainString(a, {
                 guildCount: l.format(e),
                 mutualGuildCount: t,
                 nonMutualGuildCount: l.format(n),
@@ -80,17 +80,17 @@ function C(e) {
         })(N, T, A, O, y);
     return 0 === L.length && null == w
         ? null
-        : (0, a.jsxs)(a.Fragment, {
+        : (0, i.jsxs)(i.Fragment, {
               children: [
                   P,
-                  (0, a.jsxs)("div", {
-                      className: s()(C, f.wrapper),
+                  (0, i.jsxs)("div", {
+                      className: s()(C, _.wrapper),
                       children: [
-                          (0, a.jsx)("div", {
-                              className: s()(f.icons, S),
+                          (0, i.jsx)("div", {
+                              className: s()(_.icons, S),
                               children:
                                   L.length > 0
-                                      ? (0, a.jsxs)(a.Fragment, {
+                                      ? (0, i.jsxs)(i.Fragment, {
                                             children: [
                                                 L.map((e, t) => {
                                                     let n = t === L.length - 1 && 0 === Z,
@@ -100,21 +100,21 @@ function C(e) {
                                                             size: I,
                                                             canAnimate: !1,
                                                         }),
-                                                        l = (0, a.jsx)(c.u, {
+                                                        l = (0, i.jsx)(c.u, {
                                                             text: e.name,
                                                             position: "top",
-                                                            children: (0, a.jsx)("img", {
-                                                                className: s()(f.icon, v[I]),
+                                                            children: (0, i.jsx)("img", {
+                                                                className: s()(_.icon, v[I]),
                                                                 src: r,
                                                                 alt: "",
                                                             }),
                                                         });
                                                     return n
-                                                        ? (0, a.jsx)(i.Fragment, { children: l }, e.id)
-                                                        : (0, a.jsx)(
+                                                        ? (0, i.jsx)(a.Fragment, { children: l }, e.id)
+                                                        : (0, i.jsx)(
                                                               p.ZP,
                                                               {
-                                                                  className: f.iconMask,
+                                                                  className: _.iconMask,
                                                                   height: I,
                                                                   width: I,
                                                                   mask: p.ZP.Masks.VOICE_USER_SUMMARY_ITEM,
@@ -124,31 +124,31 @@ function C(e) {
                                                           );
                                                 }),
                                                 Z > 0
-                                                    ? (0, a.jsx)(c.u, {
-                                                          text: _.intl.formatToPlainString(_.t.m6oRrA, {
+                                                    ? (0, i.jsx)(c.u, {
+                                                          text: f.intl.formatToPlainString(f.t.m6oRrA, {
                                                               appNames: E.format(R.map((e) => e.name)),
                                                           }),
                                                           position: "top",
-                                                          children: (0, a.jsxs)("div", {
-                                                              className: s()(f.moreGuilds, x[I]),
+                                                          children: (0, i.jsxs)("div", {
+                                                              className: s()(_.moreGuilds, x[I]),
                                                               children: ["+", Z],
                                                           }),
                                                       })
                                                     : null,
                                             ],
                                         })
-                                      : (0, a.jsx)(u.QTo, {
+                                      : (0, i.jsx)(u.QTo, {
                                             size: "custom",
                                             color: "currentColor",
                                             width: I,
                                             height: I,
-                                            className: f.defaultIcon,
+                                            className: _.defaultIcon,
                                         }),
                           }),
                           null != w
-                              ? (0, a.jsx)(u.Text, {
+                              ? (0, i.jsx)(u.Text, {
                                     variant: j,
-                                    color: "header-secondary",
+                                    color: "text-default",
                                     children: w,
                                 })
                               : null,

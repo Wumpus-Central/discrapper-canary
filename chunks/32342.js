@@ -1,4 +1,4 @@
-n.d(e, { default: () => f }), n(388685);
+n.d(e, { default: () => g }), n(388685);
 var i = n(54381),
     a = n(473749),
     l = n(793030),
@@ -11,11 +11,11 @@ var i = n(54381),
     m = n(981631),
     p = n(829857),
     h = n(388032),
-    g = n(170538);
-function x(t) {
+    x = n(170538);
+function f(t) {
     let { selectedTeamId: e, onSetSelectedTeamId: n, teamOptions: a } = t;
     return (0, i.jsx)("div", {
-        className: g.teamSetup,
+        className: x.teamSetup,
         children:
             0 !== a.length &&
             (0, i.jsx)(r.q4e, {
@@ -27,27 +27,27 @@ function x(t) {
             }),
     });
 }
-function f(t) {
-    let { guildId: e, requireTeamSetup: n, onClose: g, transitionState: f } = t,
+function g(t) {
+    let { guildId: e, requireTeamSetup: n, onClose: x, transitionState: g } = t,
         [C, E] = a.useState(),
         [v, S] = a.useState(!1),
         { teams: j } = (0, u.Z)(),
-        y = j.filter((t) => t.payout_account_status === p.C.ACTIVE),
-        T = a.useMemo(
+        T = j.filter((t) => t.payout_account_status === p.C.ACTIVE),
+        b = a.useMemo(
             () =>
-                y.map((t) => ({
+                T.map((t) => ({
                     label: t.name,
                     value: t.id,
                 })),
-            [y],
+            [T],
         ),
-        b = () => {
+        _ = () => {
             S((t) => !t);
         },
-        _ = () => {
-            g(), (0, d.df)(e, C);
+        k = () => {
+            x(), (0, d.df)(e, C);
         },
-        k = a.useCallback(() => {
+        y = a.useCallback(() => {
             (0, o.Z)(m.EYA.DEVELOPER_PORTAL_TEAMS);
         }, []);
     if (!n)
@@ -57,27 +57,27 @@ function f(t) {
                 {
                     variant: "primary",
                     text: h.intl.string(h.t.geKm7t),
-                    onClick: _,
+                    onClick: k,
                     disabled: !v,
                 },
             ],
-            onClose: g,
-            transitionState: f,
+            onClose: x,
+            transitionState: g,
             size: "md",
             children: (0, i.jsx)(s.$q, {
-                onChange: b,
+                onChange: _,
                 size: 20,
                 type: s.M0.INVERTED,
                 value: v,
                 children: (0, i.jsx)(r.Text, {
                     variant: "text-md/normal",
-                    color: "header-secondary",
+                    color: "text-default",
                     children: (0, c.f)(),
                 }),
             }),
         });
     {
-        let t = 0 === T.length;
+        let t = 0 === b.length;
         return (0, i.jsxs)(l.Modal, {
             title: h.intl.string(h.t.inJKQv),
             subtitle: t ? h.intl.format(h.t.Jyy4pV, {}) : h.intl.string(h.t.U1Vz24),
@@ -85,27 +85,27 @@ function f(t) {
                 {
                     variant: "primary",
                     text: t ? h.intl.string(h.t.JddVgE) : h.intl.string(h.t.geKm7t),
-                    onClick: t ? k : _,
+                    onClick: t ? y : k,
                 },
             ],
-            onClose: g,
-            transitionState: f,
+            onClose: x,
+            transitionState: g,
             size: "md",
             children: [
                 !t &&
-                    (0, i.jsx)(x, {
+                    (0, i.jsx)(f, {
                         selectedTeamId: C,
                         onSetSelectedTeamId: E,
-                        teamOptions: T,
+                        teamOptions: b,
                     }),
                 (0, i.jsx)(s.$q, {
-                    onChange: b,
+                    onChange: _,
                     size: 20,
                     type: s.M0.INVERTED,
                     value: v,
                     children: (0, i.jsx)(r.Text, {
                         variant: "text-md/normal",
-                        color: "header-secondary",
+                        color: "text-default",
                         children: (0, c.f)(),
                     }),
                 }),

@@ -78,7 +78,7 @@ let m = (e) => {
                                           }),
                                           (0, r.jsx)(i.Heading, {
                                               variant: "heading-xxl/normal",
-                                              color: "header-secondary",
+                                              color: "text-default",
                                               children: c.intl.string(c.t.JfHzXG),
                                           }),
                                       ],
@@ -112,7 +112,7 @@ let m = (e) => {
                                           }),
                                           (0, r.jsx)(i.Heading, {
                                               variant: "heading-xxl/normal",
-                                              color: "header-secondary",
+                                              color: "text-default",
                                               children: c.intl.string(c.t.BkEMJ1),
                                           }),
                                       ],
@@ -131,7 +131,7 @@ let m = (e) => {
                                               children: [
                                                   (0, r.jsx)(i.Heading, {
                                                       variant: "heading-xxl/normal",
-                                                      color: "header-secondary",
+                                                      color: "text-default",
                                                       children: c.intl.string(c.t.RyDxBX),
                                                   }),
                                                   (0, r.jsx)(i.Heading, {

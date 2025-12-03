@@ -111,7 +111,7 @@ let j = new m.Z("ImageEditor"),
             ee = r.useCallback(
                 (e) => {
                     if (null == T) return;
-                    let t = C(T, e, V);
+                    let t = y(T, e, V);
                     A(e), Z(t), $(), null == K || K();
                 },
                 [T, $, V, K],
@@ -121,7 +121,7 @@ let j = new m.Z("ImageEditor"),
                 let e = (z + 90) % 360,
                     t = T.height,
                     n = T.width,
-                    l = C(
+                    l = y(
                         {
                             width: t,
                             height: n,
@@ -143,7 +143,7 @@ let j = new m.Z("ImageEditor"),
             }, [M, $, K]),
             el = r.useCallback(() => {
                 if (null == T) return {};
-                let { height: e, width: t } = y(O(T, z), R);
+                let { height: e, width: t } = C(O(T, z), R);
                 return {
                     height: e,
                     width: t,
@@ -262,7 +262,7 @@ let j = new m.Z("ImageEditor"),
                     q(n),
                     (Q.current += 1),
                     Z(
-                        C(
+                        y(
                             {
                                 width: e,
                                 height: t,
@@ -326,7 +326,7 @@ let j = new m.Z("ImageEditor"),
                                     children: (0, l.jsx)(c.Text, {
                                         className: p.panHint,
                                         variant: "text-xs/normal",
-                                        color: "text-primary",
+                                        color: "text-strong",
                                         children: v.intl.string(v.t.oBPhdN),
                                     }),
                                 }),
@@ -445,7 +445,7 @@ let j = new m.Z("ImageEditor"),
                   height: l,
               };
     },
-    y = (e, t) => {
+    C = (e, t) => {
         let { width: n, height: l } = e,
             r = 288 * t,
             i = n / l;
@@ -457,8 +457,8 @@ let j = new m.Z("ImageEditor"),
             }
         );
     };
-function C(e, t, n) {
-    let { width: l, height: r } = y(e, t),
+function y(e, t, n) {
+    let { width: l, height: r } = C(e, t),
         i = Math.abs(288 - l) / 2,
         a = Math.abs(288 - r) / 2;
     return n && (l < 288 || r < 288)
@@ -477,7 +477,7 @@ function C(e, t, n) {
 }
 let I = (e, t, n) => {
     var l, r;
-    let { height: i, width: a } = y(t, n),
+    let { height: i, width: a } = C(t, n),
         o = (i = Math.min(i, 288)) / (a = Math.min(a, 288)),
         s = {
             height: i,

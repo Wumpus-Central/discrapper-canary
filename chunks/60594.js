@@ -326,7 +326,7 @@ function eo(e) {
                         ? (0, r.jsx)(m.Text, {
                               className: en.headerDescription,
                               variant: "text-md/normal",
-                              color: "text-secondary",
+                              color: "text-subtle",
                               children: e6,
                           })
                         : null,

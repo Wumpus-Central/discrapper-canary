@@ -18,7 +18,7 @@ let d = (e) => {
         children: [
             (0, r.jsx)(i.xvT, {
                 variant: "text-sm/normal",
-                color: "text-primary",
+                color: "text-strong",
                 children: p ? c.intl.string(c.t.E1ONHQ) : c.intl.format(c.t["43kZKL"], { days: d - n.getDate() }),
             }),
             !1 === p && (0, r.jsx)(l.gu, { percentage: t }),

@@ -1,21 +1,21 @@
-t.d(a, { h: () => C }), t(388685);
-var n = t(54381),
-    r = t(473749),
-    s = t(512722),
-    l = t.n(s),
-    i = t(481060),
-    o = t(457330),
-    c = t(600164),
-    d = t(710845),
-    x = t(69580),
-    u = t(424071),
-    h = t(388032),
-    m = t(771831);
+a.d(t, { h: () => C }), a(388685);
+var l = a(54381),
+    n = a(473749),
+    s = a(512722),
+    r = a.n(s),
+    i = a(481060),
+    o = a(457330),
+    c = a(600164),
+    d = a(710845),
+    u = a(69580),
+    x = a(424071),
+    m = a(388032),
+    h = a(771831);
 let N = new d.Z("TwoWayLinkDiscordConsentWeb");
 function C(e) {
     let {
-            platformType: a,
-            clientId: t,
+            platformType: t,
+            clientId: a,
             scopes: s,
             authToken: d,
             onContinue: C,
@@ -23,30 +23,30 @@ function C(e) {
             onClose: p,
             redirectUri: v,
         } = e,
-        [b, f] = r.useState(!1),
-        k = r.useCallback(
+        [f, b] = n.useState(!1),
+        k = n.useCallback(
             async (e) => {
-                let t,
-                    n,
-                    { location: r } = e,
-                    { callbackCode: s, callbackState: l } = d;
+                let a,
+                    l,
+                    { location: n } = e,
+                    { callbackCode: s, callbackState: r } = d;
                 try {
-                    t = await o.Z.completeTwoWayLink(a, r, s, l);
+                    a = await o.Z.completeTwoWayLink(t, n, s, r);
                 } catch (e) {
                     var i;
-                    N.error("".concat(a, " link error:"), e), (n = null == (i = e.body) ? void 0 : i.code);
+                    N.error("".concat(t, " link error:"), e), (l = null == (i = e.body) ? void 0 : i.code);
                 }
-                null != t ? C() : j(n);
+                null != a ? C() : j(l);
             },
-            [a, d, C, j],
+            [t, d, C, j],
         ),
         {
             header: g,
             body: E,
             appDetails: T,
             sendAuthorize: O,
-        } = (0, x.useOAuth2AuthorizeForm)({
-            clientId: t,
+        } = (0, u.useOAuth2AuthorizeForm)({
+            clientId: a,
             scopes: s,
             responseType: "code",
             callback: k,
@@ -55,53 +55,53 @@ function C(e) {
             redirectUri: v,
             isTwoWayLinkDiscordConsent: !0,
         }),
-        R = r.useCallback(() => {
-            l()(null != O, "sendAuthorize not available"), f(!0), O(!0);
+        R = n.useCallback(() => {
+            r()(null != O, "sendAuthorize not available"), b(!0), O(!0);
         }, [O]);
-    return (0, n.jsxs)(u.Z, {
+    return (0, l.jsxs)(x.Z, {
         children: [
-            (0, n.jsxs)(i.xBx, {
+            (0, l.jsxs)(i.xBx, {
                 direction: c.Z.Direction.VERTICAL,
-                className: m.header,
+                className: h.header,
                 separator: !1,
                 children: [
-                    (0, n.jsx)(i.Text, {
-                        className: m.stepHeader,
+                    (0, l.jsx)(i.Text, {
+                        className: h.stepHeader,
                         variant: "text-xs/bold",
-                        color: "header-secondary",
-                        children: h.intl.format(h.t.fHz6eR, {
+                        color: "text-default",
+                        children: m.intl.format(m.t.fHz6eR, {
                             number: 2,
                             total: 2,
                         }),
                     }),
                     null != p &&
-                        (0, n.jsx)(i.olH, {
-                            className: m.closeButton,
+                        (0, l.jsx)(i.olH, {
+                            className: h.closeButton,
                             onClick: p,
                         }),
                 ],
             }),
-            (0, n.jsxs)(i.hzk, {
-                className: m.consentContent,
+            (0, l.jsxs)(i.hzk, {
+                className: h.consentContent,
                 paddingFix: !1,
                 children: [
-                    (0, n.jsx)("div", {
-                        className: m.consentHeader,
+                    (0, l.jsx)("div", {
+                        className: h.consentHeader,
                         children: g,
                     }),
                     E,
                     T,
                 ],
             }),
-            (0, n.jsx)(i.mzw, {
-                className: m.footer,
-                children: (0, n.jsx)("div", {
+            (0, l.jsx)(i.mzw, {
+                className: h.footer,
+                children: (0, l.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
-                    className: m.footerButton,
-                    children: (0, n.jsx)(i.Button, {
+                    className: h.footerButton,
+                    children: (0, l.jsx)(i.Button, {
                         variant: "primary",
-                        text: h.intl.string(h.t.ZN4hkc),
-                        loading: b,
+                        text: m.intl.string(m.t.ZN4hkc),
+                        loading: f,
                         onClick: R,
                     }),
                 }),

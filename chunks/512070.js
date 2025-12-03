@@ -50,7 +50,7 @@ function x(e) {
                                 "aria-label": f.intl.string(o.name),
                                 children: (0, l.jsx)(a.xvT, {
                                     variant: "text-lg/semibold",
-                                    color: i ? "text-primary" : "text-default",
+                                    color: i ? "text-strong" : "text-default",
                                     className: r()(h.fontText, o.className),
                                     children: "Gg",
                                 }),
@@ -68,7 +68,7 @@ function x(e) {
                         (0, l.jsx)(a.d3s, { size: "lg" }),
                         (0, l.jsx)(a.xvT, {
                             variant: "text-sm/normal",
-                            color: "text-secondary",
+                            color: "text-subtle",
                             children: f.intl.string(m.default["+O1xL2"]),
                         }),
                     ],

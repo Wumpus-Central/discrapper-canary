@@ -174,7 +174,7 @@ function I(e) {
             className: g.headerTitle,
             id: y,
             variant: null != s ? s : "heading-lg/semibold",
-            color: "text-primary",
+            color: "text-strong",
             children: a,
         }),
         w = null != n ? P : R,
@@ -224,7 +224,7 @@ function A(e) {
     let n = (0, r.jsx)(m.x, {
             className: g.headerSubtitle,
             variant: "text-md/normal",
-            color: "text-secondary",
+            color: "text-subtle",
             children: "object" == typeof t && "text" in t ? t.text : t,
         }),
         i = "object" == typeof t && "leadingIcon" in t ? t.leadingIcon : void 0;
@@ -234,7 +234,7 @@ function A(e) {
             null != i &&
                 (0, r.jsx)(i, {
                     className: g.headerSubtitleIcon,
-                    color: s.Z.colors.TEXT_SECONDARY,
+                    color: s.Z.colors.TEXT_SUBTLE,
                     size: "sm",
                 }),
             n,

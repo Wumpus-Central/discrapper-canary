@@ -67,7 +67,7 @@ let v = (e) => {
                         }),
                         (0, r.jsx)(a.xvT, {
                             variant: "text-md/medium",
-                            color: "text-tertiary",
+                            color: "text-muted",
                             children: y.intl.format(b.default.X9rW0j, {
                                 openSettingsHook: (e, t) =>
                                     (0, r.jsx)(
@@ -113,7 +113,7 @@ let v = (e) => {
                         }),
                         (0, r.jsx)(a.xvT, {
                             variant: "text-md/medium",
-                            color: "text-tertiary",
+                            color: "text-muted",
                             children: y.intl.string(b.default.Sv236e),
                         }),
                     ],

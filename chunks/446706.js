@@ -9,8 +9,8 @@ var i = e(54381),
     c = e(109983),
     m = e(834891),
     p = e(388032),
-    g = e(797629);
-function C(t) {
+    C = e(797629);
+function g(t) {
     let { guildTemplate: n, onClick: e, autoFocus: l } = t,
         s = a.useCallback(() => {
             e(n);
@@ -30,65 +30,65 @@ function u(t) {
             (0, i.jsxs)(r.xBx, {
                 "data-migration-pending": !0,
                 direction: d.Z.Direction.VERTICAL,
-                className: g.header,
+                className: C.header,
                 separator: !1,
                 children: [
                     (0, i.jsx)(r.Heading, {
-                        className: g.title,
+                        className: C.title,
                         variant: "heading-xl/semibold",
                         children: e ? p.intl.string(p.t["9U0b1k"]) : p.intl.string(p.t["5HZu07"]),
                     }),
                     (0, i.jsx)(r.Text, {
-                        className: g.subtitle,
-                        color: "header-secondary",
+                        className: C.subtitle,
+                        color: "text-default",
                         variant: "text-md/normal",
                         children: p.intl.string(p.t["wti/H4"]),
                     }),
                     null != a &&
                         (0, i.jsx)(r.olH, {
                             "data-migration-pending": !0,
-                            className: g.closeButton,
+                            className: C.closeButton,
                             onClick: a,
                         }),
                 ],
             }),
             (0, i.jsxs)(r.hzk, {
                 "data-migration-pending": !0,
-                className: s()(g.templatesList, n),
+                className: s()(C.templatesList, n),
                 paddingFix: !1,
                 children: [
-                    (0, i.jsx)(C, {
+                    (0, i.jsx)(g, {
                         guildTemplate: c[m.l.CREATE],
                         onClick: l,
                         autoFocus: !0,
                     }),
                     (0, i.jsx)(r.Text, {
-                        className: g.optionHeader,
-                        color: "header-secondary",
+                        className: C.optionHeader,
+                        color: "text-default",
                         variant: "text-xs/bold",
                         children: p.intl.string(p.t.JGDkfg),
                     }),
-                    (0, i.jsx)(C, {
+                    (0, i.jsx)(g, {
                         guildTemplate: c[m.l.GAMING],
                         onClick: l,
                     }),
-                    (0, i.jsx)(C, {
+                    (0, i.jsx)(g, {
                         guildTemplate: c[m.l.FRIENDS],
                         onClick: l,
                     }),
-                    (0, i.jsx)(C, {
+                    (0, i.jsx)(g, {
                         guildTemplate: c[m.l.STUDY],
                         onClick: l,
                     }),
-                    (0, i.jsx)(C, {
+                    (0, i.jsx)(g, {
                         guildTemplate: c[m.l.SCHOOL_CLUB],
                         onClick: l,
                     }),
-                    (0, i.jsx)(C, {
+                    (0, i.jsx)(g, {
                         guildTemplate: c[m.l.LOCAL_COMMUNITY],
                         onClick: l,
                     }),
-                    (0, i.jsx)(C, {
+                    (0, i.jsx)(g, {
                         guildTemplate: c[m.l.CREATORS],
                         onClick: l,
                     }),
@@ -97,16 +97,16 @@ function u(t) {
             null != o &&
                 (0, i.jsxs)(r.mzw, {
                     "data-migration-pending": !0,
-                    className: g.footer,
+                    className: C.footer,
                     children: [
                         (0, i.jsx)(r.Heading, {
                             variant: "heading-lg/semibold",
-                            className: g.footerTitle,
+                            className: C.footerTitle,
                             children: p.intl.string(p.t["N+Mi/U"]),
                         }),
                         (0, i.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
-                            className: g.footerButton,
+                            className: C.footerButton,
                             children: (0, i.jsx)(r.Button, {
                                 variant: "secondary",
                                 fullWidth: !0,

@@ -7,8 +7,8 @@ var n,
     l = r(265489),
     d = r(793030),
     u = r(442837),
-    c = r(755721),
-    h = r(481060),
+    h = r(755721),
+    c = r(481060),
     p = r(893776),
     f = r(479495),
     g = r(213609),
@@ -148,15 +148,15 @@ class M extends (n = o.PureComponent) {
                         value: this.state.password,
                         required: !0,
                     }),
-                    (0, s.jsxs)(h.ButtonGroup, {
+                    (0, s.jsxs)(c.ButtonGroup, {
                         direction: "horizontal",
                         className: F.marginTop4,
                         children: [
-                            (0, s.jsx)(h.Avr, {
+                            (0, s.jsx)(c.Avr, {
                                 text: T.intl.string(T.t.wWIufs),
                                 onClick: this.handleForgotPassword,
                             }),
-                            (0, s.jsx)(h.Avr, {
+                            (0, s.jsx)(c.Avr, {
                                 text: T.intl.string(T.t["/kpMDt"]),
                                 onClick: () =>
                                     (function (t) {
@@ -190,7 +190,7 @@ class M extends (n = o.PureComponent) {
                 }),
                 (0, s.jsx)(d.fef, { children: this.renderDefaultForm() }),
                 (0, s.jsx)(d.Go$, {
-                    leading: (0, s.jsx)(h.Avr, {
+                    leading: (0, s.jsx)(c.Avr, {
                         variant: "secondary",
                         size: "md",
                         onClick: e,
@@ -235,9 +235,9 @@ class M extends (n = o.PureComponent) {
                     subtitle: r,
                 }),
                 (0, s.jsx)(d.Go$, {
-                    leading: (0, s.jsx)(h.Text, {
+                    leading: (0, s.jsx)(c.Text, {
                         variant: "text-md/normal",
-                        color: "text-secondary",
+                        color: "text-subtle",
                         children: T.intl.format(T.t.js2rr5, { onClick: this.handleCancelAccountDeletion }),
                     }),
                     actions: [
@@ -347,7 +347,7 @@ class M extends (n = o.PureComponent) {
                     let t = await p.Z.forgotPassword(r);
                     if (!1 === t) return;
                     t === l.B.ONE_TIME_LOGIN
-                        ? (0, h.h7j)((t) => {
+                        ? (0, c.h7j)((t) => {
                               let e = [
                                   {
                                       variant: "primary",
@@ -367,7 +367,7 @@ class M extends (n = o.PureComponent) {
                                           t,
                                       ),
                                       {
-                                          children: (0, s.jsx)(h.Text, {
+                                          children: (0, s.jsx)(c.Text, {
                                               variant: "text-md/normal",
                                               children: T.intl.string(T.t.iAcrqV),
                                           }),
@@ -375,20 +375,20 @@ class M extends (n = o.PureComponent) {
                                   ),
                               );
                           })
-                        : (0, h.h7j)((t) =>
+                        : (0, c.h7j)((t) =>
                               (0, s.jsx)(
-                                  h.ConfirmModal,
+                                  c.ConfirmModal,
                                   N(
                                       D(
                                           {
                                               header: T.intl.string(T.t.f5Pi7A),
                                               confirmText: T.intl.string(T.t.BddRzS),
-                                              confirmButtonColor: c.zx.Colors.BRAND,
+                                              confirmButtonColor: h.zx.Colors.BRAND,
                                           },
                                           t,
                                       ),
                                       {
-                                          children: (0, s.jsx)(h.Text, {
+                                          children: (0, s.jsx)(c.Text, {
                                               variant: "text-md/normal",
                                               children: T.intl.format(T.t["6u5hQ9"], { email: r }),
                                           }),
@@ -512,7 +512,7 @@ let Z = function (t) {
         type: a.ImpressionTypes.MODAL,
         name: a.ImpressionNames.USER_LOGIN,
     });
-    let c = o.useCallback(() => {
+    let h = o.useCallback(() => {
         e(), n();
     }, [e, n]);
     return (0, s.jsx)(d.IX, {
@@ -524,7 +524,7 @@ let Z = function (t) {
             N(D({}, i, l), {
                 transitionTo: x.uL,
                 replaceWith: x.dL,
-                onBackPressed: c,
+                onBackPressed: h,
                 authBoxClassName: I.card,
             }),
         ),

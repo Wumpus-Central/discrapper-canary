@@ -22,7 +22,7 @@ let o = (e) => {
                         children: l.intl.format(l.t.THgVCC, { guild: t.name }),
                     }),
                     (0, i.jsx)(r.Text, {
-                        color: "header-secondary",
+                        color: "text-default",
                         variant: "text-sm/normal",
                         children: l.intl.string(l.t["1yq3nO"]),
                     }),

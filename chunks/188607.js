@@ -1,7 +1,7 @@
 n.d(t, { Z: () => p });
 var r = n(54381),
-    a = n(473749),
-    i = n(442837),
+    i = n(473749),
+    a = n(442837),
     l = n(481060),
     s = n(678694),
     o = n(216780),
@@ -10,8 +10,8 @@ var r = n(54381),
     u = n(882008);
 let p = function (e) {
     let { selectedCategoryId: t, searchAllCategories: n } = e,
-        p = (0, i.e7)([s.Z], () => s.Z.getCategories()),
-        m = a.useMemo(() => {
+        p = (0, a.e7)([s.Z], () => s.Z.getCategories()),
+        m = i.useMemo(() => {
             var e;
             return null == (e = p.find((e) => e.id === t)) ? void 0 : e.name;
         }, [p, t]),
@@ -35,7 +35,7 @@ let p = function (e) {
             }),
             (0, r.jsx)(l.Text, {
                 variant: "text-md/normal",
-                color: "header-secondary",
+                color: "text-default",
                 children: g,
             }),
         ],

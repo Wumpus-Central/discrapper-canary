@@ -34,7 +34,7 @@ function p(e) {
             }),
             (0, i.jsx)(o.Text, {
                 variant: "text-md/normal",
-                color: "header-secondary",
+                color: "text-default",
                 children: u.intl.format(u.t["nNHd/y"], { onCancel: c.s6 }),
             }),
         ],

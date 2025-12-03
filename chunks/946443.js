@@ -226,7 +226,7 @@ function I(e) {
                         children: C.intl.string(C.t.vZPktJ),
                     }),
                     (0, r.jsx)(d.Text, {
-                        color: "header-secondary",
+                        color: "text-default",
                         variant: "text-sm/normal",
                         children: C.intl.string(C.t.vWkIII),
                     }),

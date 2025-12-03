@@ -54,7 +54,7 @@ function I(e) {
             if (!w)
                 return (0, r.jsx)(l.Text, {
                     variant: "text-xs/normal",
-                    color: "text-secondary",
+                    color: "text-subtle",
                     lineClamp: 1,
                     children: (0, r.jsx)(a.Z, { children: P }),
                 });
@@ -70,7 +70,7 @@ function I(e) {
                 className: v.clickableText,
                 children: (0, r.jsx)(l.Text, {
                     variant: "text-xs/normal",
-                    color: "text-secondary",
+                    color: "text-subtle",
                     lineClamp: 1,
                     children: (0, r.jsx)(a.Z, { children: P }),
                 }),
@@ -86,7 +86,7 @@ function I(e) {
                     D(),
                     (0, r.jsx)(l.Fbu, {
                         size: "xxs",
-                        color: l.TVs.colors.TEXT_SECONDARY,
+                        color: l.TVs.colors.TEXT_SUBTLE,
                     }),
                     (0, r.jsxs)("div", {
                         className: v.voiceChannelText,
@@ -94,7 +94,7 @@ function I(e) {
                             (0, r.jsx)(E.Z, {
                                 channel: I,
                                 size: "xxs",
-                                color: l.TVs.colors.TEXT_SECONDARY,
+                                color: l.TVs.colors.TEXT_SUBTLE,
                                 className: v.voiceIcon,
                             }),
                             x(),
@@ -106,7 +106,7 @@ function I(e) {
                         channelId: I.id,
                         maxUsers: S,
                         size: l.EFr.SIZE_16,
-                        overflowCountColor: "text-secondary",
+                        overflowCountColor: "text-subtle",
                         overflowCountClassName: v.voiceChannelOverflowCount,
                         onClickOverflow: (e) => {
                             e.stopPropagation(), null == T || T({ action: "PRESS_VOICE_CHANNEL_AVATARS" });

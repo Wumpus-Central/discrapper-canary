@@ -3,19 +3,19 @@ var n = r(54381);
 r(473749);
 var o = r(793030),
     i = r(481060),
-    c = r(388032),
-    l = r(76349),
+    l = r(388032),
+    c = r(76349),
     s = r(768982);
 let a = (t) => {
     let { text: e, icon: r, foreground: o } = t;
     return (0, n.jsxs)("div", {
-        className: l.bulletContainer,
+        className: c.bulletContainer,
         children: [
             (0, n.jsx)("div", {
-                className: l.iconContainer,
+                className: c.iconContainer,
                 children: (0, n.jsx)(r, {
                     color: null != o ? o : "currentColor",
-                    className: l.bulletIcon,
+                    className: c.bulletIcon,
                     size: "custom",
                     height: 40,
                     width: 40,
@@ -23,8 +23,8 @@ let a = (t) => {
             }),
             (0, n.jsx)(i.Text, {
                 variant: "text-md/normal",
-                color: "header-secondary",
-                className: l.bulletText,
+                color: "text-default",
+                className: c.bulletText,
                 children: e,
             }),
         ],
@@ -33,7 +33,7 @@ let a = (t) => {
 function u(t) {
     var e,
         r,
-        { transitionState: l, onClose: u } = t,
+        { transitionState: c, onClose: u } = t,
         b = (function (t, e) {
             if (null == t) return {};
             var r,
@@ -88,28 +88,28 @@ function u(t) {
                     type: "image",
                     src: s.Z,
                 },
-                title: c.intl.string(c.t.UVuXCs),
+                title: l.intl.string(l.t.UVuXCs),
                 onClose: u,
-                transitionState: l,
+                transitionState: c,
                 actions: [
                     {
-                        text: c.intl.string(c.t.obLqZ8),
+                        text: l.intl.string(l.t.obLqZ8),
                         variant: "primary",
                         onClick: u,
                     },
                 ],
                 children: [
                     (0, n.jsx)(a, {
-                        text: c.intl.string(c.t.sBDfo6),
+                        text: l.intl.string(l.t.sBDfo6),
                         icon: i.nRN,
                         foreground: "var(--status-danger)",
                     }),
                     (0, n.jsx)(a, {
-                        text: c.intl.string(c.t.x58YtH),
+                        text: l.intl.string(l.t.x58YtH),
                         icon: i.gkL,
                     }),
                     (0, n.jsx)(a, {
-                        text: c.intl.string(c.t.XtVqla),
+                        text: l.intl.string(l.t.XtVqla),
                         icon: i.V9,
                     }),
                 ],

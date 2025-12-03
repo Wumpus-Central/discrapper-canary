@@ -1,14 +1,14 @@
-i.d(e, { Z: () => l });
-var n = i(54381),
-    r = i(481060);
-function l(t) {
-    let { activeSlide: e, totalSlides: i, className: l } = t;
-    return (0, n.jsx)("div", {
-        className: l,
-        children: (0, n.jsxs)(r.Text, {
+n.d(t, { Z: () => r });
+var i = n(54381),
+    s = n(481060);
+function r(e) {
+    let { activeSlide: t, totalSlides: n, className: r } = e;
+    return (0, i.jsx)("div", {
+        className: r,
+        children: (0, i.jsxs)(s.Text, {
             variant: "display-sm",
-            color: "text-primary",
-            children: [Number.parseInt(e, 10) + 1, "/", i],
+            color: "text-strong",
+            children: [Number.parseInt(t, 10) + 1, "/", n],
         }),
     });
 }

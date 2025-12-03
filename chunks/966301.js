@@ -10,8 +10,8 @@ var r = n(54381),
     s = n(481060),
     o = n(471445),
     c = n(45966),
-    d = n(637853),
-    u = n(999382),
+    u = n(637853),
+    d = n(999382),
     g = n(889369),
     m = n(983135),
     p = n(190007),
@@ -28,9 +28,9 @@ var r = n(54381),
 function N(e) {
     let { guildId: t, prompts: n } = e,
         a = (0, l.e7)([g.Z], () => g.Z.editedDefaultChannelIds),
-        [c, u] = (0, d.dF)(t, n, [...a]),
+        [c, d] = (0, u.dF)(t, n, [...a]),
         m = c.length,
-        p = c.length + u.length,
+        p = c.length + d.length,
         f = (m / p) * 100,
         h = Math.max(Math.ceil((85 * p) / 100) - m, 0),
         [b, x] = i.useState(!1),
@@ -87,7 +87,7 @@ function N(e) {
                           }),
                           (0, r.jsx)("div", {
                               className: y.channels,
-                              children: u.map((e) => {
+                              children: d.map((e) => {
                                   var t;
                                   let n = null != (t = (0, o.KS)(e)) ? t : s.VL1;
                                   return (0, r.jsx)(
@@ -142,7 +142,7 @@ function N(e) {
 }
 function E(e) {
     let { saveOnClose: t } = e,
-        n = (0, l.e7)([u.Z], () => u.Z.getGuild());
+        n = (0, l.e7)([d.Z], () => d.Z.getGuild());
     return null == n
         ? null
         : (0, r.jsx)(I, {
@@ -154,10 +154,10 @@ function I(e) {
     let { guild: t, saveOnClose: n } = e,
         a = (0, l.e7)([c.Z], () => c.Z.isLoading()),
         o = (0, l.e7)([b.Z], () => b.Z.editedOnboardingPrompts),
-        d = (0, l.e7)([b.Z], () => b.Z.advancedMode),
-        u = i.useRef(!1);
+        u = (0, l.e7)([b.Z], () => b.Z.advancedMode),
+        d = i.useRef(!1);
     i.useEffect(() => {
-        a || u.current || ((u.current = !0), d || 0 !== o.length || (0, h.tS)(t, [(0, O.ae)()], !1));
+        a || d.current || ((d.current = !0), u || 0 !== o.length || (0, h.tS)(t, [(0, O.ae)()], !1));
     });
     let g = i.useRef(t);
     if (
@@ -187,11 +187,11 @@ function I(e) {
             (0, r.jsx)(s.Heading, {
                 className: y.header,
                 variant: "heading-lg/extrabold",
-                children: d ? C.intl.string(C.t.AGjtFv) : C.intl.string(C.t.dqCzoT),
+                children: u ? C.intl.string(C.t.AGjtFv) : C.intl.string(C.t.dqCzoT),
             }),
             (0, r.jsx)(s.Text, {
                 variant: "text-sm/normal",
-                color: "header-secondary",
+                color: "text-default",
                 children: C.intl.string(C.t["q/6MLL"]),
             }),
             (0, r.jsxs)("div", {
@@ -229,7 +229,7 @@ function I(e) {
                 children: a
                     ? (0, r.jsx)(s.$jN, {})
                     : (0, r.jsx)(_.Z, {
-                          postjoinOnly: d,
+                          postjoinOnly: u,
                           guildId: t.id,
                       }),
             }),
@@ -237,7 +237,7 @@ function I(e) {
     });
 }
 function S() {
-    let e = (0, l.e7)([u.Z], () => u.Z.getGuild()),
+    let e = (0, l.e7)([d.Z], () => d.Z.getGuild()),
         t = (0, l.e7)([b.Z], () => b.Z.submitting),
         n = (0, l.e7)([f.Z], () => f.Z.isSubmitting()),
         i = (0, l.e7)([f.Z], () => f.Z.hasChanges());

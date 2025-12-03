@@ -69,7 +69,7 @@ let o = {
                 }),
                 null != t &&
                     (0, l.jsx)(r.Text, {
-                        color: "header-secondary",
+                        color: "text-default",
                         variant: "text-md/normal",
                         className: a.subtitle,
                         children: t,

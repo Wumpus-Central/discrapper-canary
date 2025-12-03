@@ -36,7 +36,7 @@ function s(e) {
                     d &&
                         (0, r.jsx)(i.Text, {
                             variant: "text-md/normal",
-                            color: "text-primary",
+                            color: "text-strong",
                             className: a.statusText,
                             children: o.status,
                         }),

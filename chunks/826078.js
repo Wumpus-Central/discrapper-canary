@@ -199,7 +199,7 @@ function w(e) {
                                 (0, l.jsx)("div", { className: N.timeNotchTick }),
                                 (0, l.jsxs)(d.Text, {
                                     variant: "text-xxs/normal",
-                                    color: "text-tertiary",
+                                    color: "text-muted",
                                     className: N.timeNotchLabel,
                                     children: [Math.round(e.time), "s"],
                                 }),
@@ -525,7 +525,7 @@ let T = function (e) {
                                 children: (0, l.jsxs)(d.Text, {
                                     variant: "text-sm/normal",
                                     className: N.timePillText,
-                                    color: "text-tertiary",
+                                    color: "text-muted",
                                     children: [
                                         R(ea),
                                         (0, l.jsx)("span", {

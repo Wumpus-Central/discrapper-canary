@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I });
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     s = n(205120),
     o = n(442837),
     c = n(780384),
@@ -38,9 +38,9 @@ function O(e) {
     });
 }
 function P(e) {
-    let { username: t, title: n, videoSrc: i, messageCount: a, reaction: s, reactionCount: o, classname: c } = e;
+    let { username: t, title: n, videoSrc: i, messageCount: l, reaction: s, reactionCount: o, classname: c } = e;
     return (0, r.jsxs)("div", {
-        className: l()(y.videoPreview, c),
+        className: a()(y.videoPreview, c),
         children: [
             (0, r.jsx)("div", {
                 className: y.authorRow,
@@ -55,7 +55,7 @@ function P(e) {
                         }),
                         (0, r.jsx)(d.Text, {
                             variant: "text-xs/normal",
-                            color: "header-secondary",
+                            color: "text-default",
                             className: y.postCreationTimestamp,
                             children: C.intl.string(C.t.mA0IvI),
                         }),
@@ -96,7 +96,7 @@ function P(e) {
                                 (0, r.jsx)(d.Text, {
                                     variant: "text-xs/normal",
                                     color: "interactive-normal",
-                                    children: a,
+                                    children: l,
                                 }),
                             ],
                         }),
@@ -123,22 +123,22 @@ function P(e) {
 }
 let I = (e) => {
     var t, n;
-    let { channel: a } = e,
+    let { channel: l } = e,
         m = (0, u.ZP)(),
         I = (0, c.wj)(m),
-        E = (0, o.e7)([b.Z], () => b.Z.getGuild(a.guild_id)),
-        R = (0, o.e7)([h.Z], () => h.Z.hasHidden(a.id)),
+        E = (0, o.e7)([b.Z], () => b.Z.getGuild(l.guild_id)),
+        R = (0, o.e7)([h.Z], () => h.Z.hasHidden(l.id)),
         M = (0, x.C)({
-            guildId: a.guild_id,
-            channelId: a.id,
+            guildId: l.guild_id,
+            channelId: l.id,
         }),
         { transitions: Z, setVisible: k } = (0, v.H)(),
         A = i.useCallback(() => {
-            k(!1), g.Z.hideAdminOnboarding(a.id, !0);
-        }, [a, k]);
+            k(!1), g.Z.hideAdminOnboarding(l.id, !0);
+        }, [l, k]);
     i.useEffect(() => {
-        (0, f.c)(a.id) || k(!R);
-    }, [a, k, R]);
+        (0, f.c)(l.id) || k(!R);
+    }, [l, k, R]);
     let L = i.useMemo(
             () => [
                 C.intl.string(C.t["8pEGAw"]),
@@ -158,7 +158,7 @@ let I = (e) => {
             [],
         ),
         D = () => {
-            p.Z.open(a.guild_id, _.pNK.ROLE_SUBSCRIPTIONS);
+            p.Z.open(l.guild_id, _.pNK.ROLE_SUBSCRIPTIONS);
         },
         H =
             null !=
@@ -202,7 +202,7 @@ let I = (e) => {
                               className: y.contentContainer,
                               children: [
                                   (0, r.jsxs)("div", {
-                                      className: l()(y.contentRow, z && y.contentRowOne),
+                                      className: a()(y.contentRow, z && y.contentRowOne),
                                       children: [
                                           (0, r.jsx)("div", {
                                               className: y.contentMediaContainer,
@@ -296,7 +296,7 @@ let I = (e) => {
                                   }),
                                   z &&
                                       (0, r.jsxs)("div", {
-                                          className: l()(y.contentRow, y.contentRowTwo),
+                                          className: a()(y.contentRow, y.contentRowTwo),
                                           children: [
                                               (0, r.jsx)("div", {
                                                   className: y.contentMediaContainer,

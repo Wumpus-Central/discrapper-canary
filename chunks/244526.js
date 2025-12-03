@@ -157,7 +157,7 @@ class h extends (r = a.PureComponent) {
                         n && null != u
                             ? (0, i.jsx)(o.Text, {
                                   variant: "text-sm/normal",
-                                  color: "text-secondary",
+                                  color: "text-subtle",
                                   className: _.subText,
                                   children: u,
                               })

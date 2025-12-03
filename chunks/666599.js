@@ -57,7 +57,7 @@ let c = (e) => {
                                 (0, t.jsxs)(i.Text, {
                                     "aria-describedby": "health-score-details-score-explain",
                                     variant: "text-xs/normal",
-                                    color: "header-secondary",
+                                    color: "text-default",
                                     children: [
                                         l,
                                         (0, t.jsx)("sup", {
@@ -78,7 +78,7 @@ let c = (e) => {
                                 (0, t.jsx)(i.Text, {
                                     "aria-describedby": "health-score-details-requirement-explain",
                                     variant: "text-xs/normal",
-                                    color: "header-secondary",
+                                    color: "text-default",
                                     children: d.intl.string(d.t["A+mTPq"]),
                                 }),
                             ],
@@ -95,7 +95,7 @@ let c = (e) => {
             { guildChecklist: n, transitionState: m, onClose: x } = e,
             h = (0, l.Dt)(),
             { retentionHealthy: g, engagementHealthy: u, healthScore: p } = n,
-            { avg_nonnew_participators: _, avg_nonnew_communicators: j, perc_ret_w1_intentful: b } = p;
+            { avg_nonnew_participators: _, avg_nonnew_communicators: j, perc_ret_w1_intentful: f } = p;
         if (
             (!u &&
                 null != _ &&
@@ -141,9 +141,9 @@ let c = (e) => {
                         }),
                     ],
                 })),
-            !g && null != b)
+            !g && null != f)
         ) {
-            let e = Math.floor(100 * b);
+            let e = Math.floor(100 * f);
             r = (0, t.jsxs)("div", {
                 className: o.failingBlock,
                 children: [
@@ -193,7 +193,7 @@ let c = (e) => {
                         (0, t.jsx)("div", { className: o.separator }),
                         (0, t.jsxs)(i.Text, {
                             className: o.marginAfter,
-                            color: "header-secondary",
+                            color: "text-default",
                             id: "health-score-details-score-explain",
                             variant: "text-sm/normal",
                             children: [

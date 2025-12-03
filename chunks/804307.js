@@ -57,7 +57,7 @@ function f(e) {
                                 children: (0, r.jsx)(l.Text, {
                                     className: d.hidden,
                                     variant: "text-sm/normal",
-                                    color: "text-secondary",
+                                    color: "text-subtle",
                                     lineClamp: 1,
                                     children: "_",
                                 }),

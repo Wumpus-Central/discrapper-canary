@@ -125,7 +125,7 @@ let A = (e) => e.map((e) => "#".concat(e)),
                               }),
                               (0, r.jsx)(d.Text, {
                                   variant: "text-sm/medium",
-                                  color: "text-secondary",
+                                  color: "text-subtle",
                                   className: T.sharedBy,
                                   children: N(
                                       "".concat(I.intl.format(S.default.fQPSEf, { username: "__USERNAME__" })),

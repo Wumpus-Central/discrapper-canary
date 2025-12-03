@@ -307,7 +307,7 @@ let M = function (e) {
                                             }),
                                             (0, r.jsx)(u.Text, {
                                                 className: C.__invalid_headerSubheading,
-                                                color: "text-primary",
+                                                color: "text-strong",
                                                 variant: "text-sm/normal",
                                                 children: n,
                                             }),

@@ -66,7 +66,7 @@ function f() {
                               children: [
                                   (0, r.jsx)(s.Text, {
                                       variant: "text-sm/semibold",
-                                      color: "text-primary",
+                                      color: "text-strong",
                                       children: p.intl.format(p.t["r+uZYZ"], { progress: t }),
                                   }),
                                   (0, r.jsx)(s.Avr, {

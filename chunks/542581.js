@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     s = n(205120),
     o = n(55160),
     c = n(481060),
@@ -15,7 +15,7 @@ var r = n(54381),
     x = n(899861),
     p = n(430864);
 let b = i.memo(function (e) {
-    let { channel: t, onChange: a } = e,
+    let { channel: t, onChange: l } = e,
         b = (0, h.AF)(),
         { guidelinesOpen: j } = (0, h.xH)((e) => {
             let { guidelinesOpen: t } = e;
@@ -32,8 +32,8 @@ let b = i.memo(function (e) {
             [_],
         );
     i.useLayoutEffect(() => {
-        setTimeout(a, 350);
-    }, [j, a]);
+        setTimeout(l, 350);
+    }, [j, l]);
     let [T, w] = i.useState(!j),
         S = (0, c.q_F)({
             opacity: +!!j,
@@ -95,9 +95,9 @@ let b = i.memo(function (e) {
                               (0, r.jsx)(c.Text, {
                                   selectable: !0,
                                   variant: "text-sm/normal",
-                                  color: "header-secondary",
+                                  color: "text-default",
                                   style: { maxHeight: 220 },
-                                  className: l()(x.guidelines, p.markup),
+                                  className: a()(x.guidelines, p.markup),
                                   children: (0, r.jsx)("div", {
                                       ref: y,
                                       children: u.Z.parseForumPostGuidelines(t.topic, !0, {
@@ -122,7 +122,7 @@ let b = i.memo(function (e) {
                                                               .e("78712")
                                                               .then(n.bind(n, 223164));
                                                           return (n) => {
-                                                              var i, a;
+                                                              var i, l;
                                                               return (0, r.jsx)(
                                                                   e,
                                                                   ((i = (function (e) {
@@ -163,11 +163,11 @@ let b = i.memo(function (e) {
                                                                       }
                                                                       return e;
                                                                   })({}, n)),
-                                                                  (a = a = { channel: t }),
+                                                                  (l = l = { channel: t }),
                                                                   Object.getOwnPropertyDescriptors
                                                                       ? Object.defineProperties(
                                                                             i,
-                                                                            Object.getOwnPropertyDescriptors(a),
+                                                                            Object.getOwnPropertyDescriptors(l),
                                                                         )
                                                                       : (function (e, t) {
                                                                             var n = Object.keys(e);
@@ -176,11 +176,11 @@ let b = i.memo(function (e) {
                                                                                 n.push.apply(n, r);
                                                                             }
                                                                             return n;
-                                                                        })(Object(a)).forEach(function (e) {
+                                                                        })(Object(l)).forEach(function (e) {
                                                                             Object.defineProperty(
                                                                                 i,
                                                                                 e,
-                                                                                Object.getOwnPropertyDescriptor(a, e),
+                                                                                Object.getOwnPropertyDescriptor(l, e),
                                                                             );
                                                                         }),
                                                                   i),

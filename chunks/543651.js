@@ -48,20 +48,20 @@ let m = function (e) {
                     (0, r.jsx)(l.Text, {
                         className: _.clipTitle,
                         variant: "text-md/normal",
-                        color: S ? "text-secondary" : "text-default",
+                        color: S ? "text-subtle" : "text-default",
                         children: S ? p.intl.string(p.t.Cyxddp) : m,
                     }),
                     null != y &&
                         "" !== y &&
                         (0, r.jsx)(l.Text, {
                             className: _.clipSubtitle,
-                            color: "text-secondary",
+                            color: "text-subtle",
                             variant: "text-sm/medium",
                             children: y,
                         }),
                     (0, r.jsx)(l.Text, {
                         className: _.clipSubtitle,
-                        color: "text-secondary",
+                        color: "text-subtle",
                         variant: "text-sm/normal",
                         children: O,
                     }),

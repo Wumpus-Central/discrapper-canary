@@ -108,7 +108,7 @@ function P(e) {
                         (0, i.jsx)(u.Z, {
                             className: o()(A.gifPicker, { [A.loadingOverlay]: j }),
                             onSelectGIF: Z,
-                            headingColor: "text-secondary",
+                            headingColor: "text-subtle",
                             hideFavorites: !0,
                         }),
                         j && (0, i.jsx)(c.$jN, { className: A.spinner }),

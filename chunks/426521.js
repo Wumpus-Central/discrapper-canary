@@ -89,7 +89,7 @@ function M(e) {
                 (0, r.jsx)(o.Text, {
                     className: T.lifecycleText,
                     variant: "text-xs/bold",
-                    color: "header-secondary",
+                    color: "text-default",
                     children: i,
                 }),
             ],
@@ -214,7 +214,7 @@ let G = i.memo(function (e) {
                                 null != l.callout ? (0, r.jsx)(L, { item: l }) : null,
                                 (0, r.jsx)(o.Text, {
                                     variant: "text-xs/medium",
-                                    color: h ? "text-muted" : "header-secondary",
+                                    color: h ? "text-muted" : "text-default",
                                     children: (0, x.a3)(y.default.extractTimestamp(l.id)),
                                 }),
                                 m,

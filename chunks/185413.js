@@ -14,8 +14,8 @@ var i = n(54381),
     m = n(974339),
     g = n(215157),
     b = n(71080),
-    y = n(981631),
-    C = n(388032),
+    C = n(981631),
+    y = n(388032),
     v = n(257803);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -68,7 +68,7 @@ function x(e) {
     let l = (0, a.e7)([d.Z], () => d.Z.getChannel(t), [t]),
         o = (0, a.e7)([p.Z], () => p.Z.getGuild(null == l ? void 0 : l.getGuildId()));
     return (r.useEffect(() => {
-        h.default.track(y.rMx.OPEN_MODAL, { type: "Grant Channel Access" });
+        h.default.track(C.rMx.OPEN_MODAL, { type: "Grant Channel Access" });
     }, []),
     null == l || null == o)
         ? null
@@ -86,7 +86,7 @@ function x(e) {
 function E(e) {
     var t,
         n,
-        { guild: a, channel: d, onClose: p, newChannel: h, inSettings: y } = e,
+        { guild: a, channel: d, onClose: p, newChannel: h, inSettings: C } = e,
         x = O(e, ["guild", "channel", "onClose", "newChannel", "inSettings"]);
     let [E, j] = r.useState(""),
         [S, P] = r.useState({}),
@@ -116,7 +116,7 @@ function E(e) {
                     }),
                     (0, s.hw)(e.id, i, n)
                 );
-            })(d, S, y),
+            })(d, S, C),
                 p(),
                 Z(!1);
         } catch (t) {
@@ -139,14 +139,14 @@ function E(e) {
             ((t = _({}, x)),
             (n = n =
                 {
-                    title: C.intl.string(C.t.dMJ3Y6),
+                    title: y.intl.string(y.t.dMJ3Y6),
                     onClose: p,
                     input: (0, i.jsxs)("div", {
                         children: [
                             (0, i.jsxs)(o.Text, {
                                 className: v.channelName,
                                 variant: "text-lg/normal",
-                                color: "header-secondary",
+                                color: "text-default",
                                 children: [
                                     (0, i.jsx)(U, {
                                         className: v.channelIcon,
@@ -158,16 +158,16 @@ function E(e) {
                             }),
                             d.isGuildStageVoice() &&
                                 (0, i.jsx)(o.Text, {
-                                    color: "header-secondary",
+                                    color: "text-default",
                                     className: v.description,
                                     variant: "text-sm/normal",
-                                    children: C.intl.string(C.t.f7VbhF),
+                                    children: y.intl.string(y.t.f7VbhF),
                                 }),
-                            (0, i.jsx)(m.Z.SearchBox, { placeholderText: C.intl.string(C.t.iezLLn) }),
+                            (0, i.jsx)(m.Z.SearchBox, { placeholderText: y.intl.string(y.t.iezLLn) }),
                             (0, i.jsx)(o.Text, {
                                 className: v.subtext,
                                 variant: "text-xs/normal",
-                                children: C.intl.string(C.t.rwFx85),
+                                children: y.intl.string(y.t.rwFx85),
                             }),
                             null != T
                                 ? (0, i.jsx)(o.Text, {
@@ -191,19 +191,19 @@ function E(e) {
                         ? [
                               {
                                   variant: "secondary",
-                                  text: C.intl.string(C.t.u46sxe),
+                                  text: y.intl.string(y.t.u46sxe),
                                   onClick: p,
                               },
                           ]
                         : [
                               {
                                   variant: "secondary",
-                                  text: C.intl.string(C.t["ETE/oC"]),
+                                  text: y.intl.string(y.t["ETE/oC"]),
                                   onClick: p,
                               },
                               {
                                   variant: "primary",
-                                  text: C.intl.string(C.t.i4jeWR),
+                                  text: y.intl.string(y.t.i4jeWR),
                                   onClick: D,
                                   loading: I,
                               },

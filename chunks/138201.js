@@ -63,7 +63,7 @@ function f(e) {
     let { title: t } = e;
     return (0, r.jsx)(o.Text, {
         variant: "text-sm/semibold",
-        color: "header-secondary",
+        color: "text-default",
         children: t,
     });
 }
@@ -76,7 +76,7 @@ function p(e) {
             null != i &&
                 (0, r.jsx)(o.Text, {
                     variant: "text-sm/normal",
-                    color: "text-secondary",
+                    color: "text-subtle",
                     children: i,
                 }),
             (0, r.jsx)("div", {
@@ -101,7 +101,7 @@ function m(e) {
             titleColor: l = "header-primary",
             description: c,
             descriptionVariant: u = "text-xs/medium",
-            descriptionColor: d = "text-secondary",
+            descriptionColor: d = "text-subtle",
             iconClassName: f,
             color: p,
             buttonText: _,
@@ -183,7 +183,7 @@ function h(e) {
         titleColor: l = "header-primary",
         description: c,
         descriptionVariant: u = "text-md/medium",
-        descriptionColor: d = "text-secondary",
+        descriptionColor: d = "text-subtle",
         buttonDisabled: f,
         iconClassName: p,
         color: _,

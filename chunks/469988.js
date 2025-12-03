@@ -23,7 +23,7 @@ let s = (e) => {
                 children: t ? l.intl.string(l.t.hsSHh8) : l.intl.string(l.t.Wf6iij),
             }),
             (0, r.jsx)(i.Text, {
-                color: "header-secondary",
+                color: "text-default",
                 variant: "text-sm/normal",
                 className: a.__invalid_description,
                 children: t ? l.intl.string(l.t.FZ2J3Y) : l.intl.string(l.t.TvHcv6),

@@ -11,8 +11,8 @@ var r = n(54381),
     s = n(392711),
     o = n(442837),
     c = n(481060),
-    d = n(497321),
-    u = n(241559),
+    u = n(497321),
+    d = n(241559),
     g = n(313789),
     m = n(518596),
     p = n(601964),
@@ -105,7 +105,7 @@ function P(e) {
                         children: E.intl.string(E.t.DpRdYK),
                     }),
                     (0, r.jsx)(c.Text, {
-                        color: "header-secondary",
+                        color: "text-default",
                         variant: "text-sm/normal",
                         children: E.intl.format(E.t.iuRk2j, {}),
                     }),
@@ -124,7 +124,7 @@ function P(e) {
 function w(e) {
     let { guild: t, className: n, withDivider: l = !0 } = e,
         s = (0, o.e7)([f.Z], () => null != t && f.Z.can(N.Plq.MANAGE_GUILD, t), [t]),
-        d = i.useCallback(
+        u = i.useCallback(
             async (e) => {
                 let { value: n } = e;
                 try {
@@ -136,13 +136,13 @@ function w(e) {
             },
             [t.id],
         ),
-        u = i.useMemo(() => {
+        d = i.useMemo(() => {
             let e = (0, j.MF)(null == t ? void 0 : t.features.has(N.GuildFeatures.COMMUNITY)).map((e) =>
                 T(S({}, e), { tooltipPosition: "left" }),
             );
             return (0, j.LJ)(e);
         }, [t]),
-        g = i.useMemo(() => u.find((e) => e.value === (null == t ? void 0 : t.explicitContentFilter)), [t, u]);
+        g = i.useMemo(() => d.find((e) => e.value === (null == t ? void 0 : t.explicitContentFilter)), [t, d]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             l && (0, r.jsx)(c.izJ, { className: I.divider }),
@@ -158,7 +158,7 @@ function w(e) {
                                 children: E.intl.string(E.t.bPgfJz),
                             }),
                             (0, r.jsx)(c.Text, {
-                                color: "header-secondary",
+                                color: "text-default",
                                 variant: "text-sm/normal",
                                 children: E.intl.format(E.t.BI4ukC, {
                                     helpdeskArticle: x.Z.getArticleURL(N.BhN.SAFE_DIRECT_MESSAGING),
@@ -169,9 +169,9 @@ function w(e) {
                     (0, r.jsx)(C.Z, {
                         changeTitle: E.intl.string(E.t["eBd+Uv"]),
                         value: null == g ? void 0 : g.value,
-                        options: u,
+                        options: d,
                         disabled: !s,
-                        onChange: d,
+                        onChange: u,
                     }),
                 ],
             }),
@@ -192,11 +192,11 @@ function R(e) {
     let { guild: t } = e,
         n = (0, o.e7)([f.Z], () => null != t && f.Z.can(N.Plq.MANAGE_GUILD, t), [t]),
         l = t.features.has(N.GuildFeatures.COMMUNITY),
-        a = (0, u.n2)(t.id),
-        [s, d] = i.useState(t.features.has(N.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
+        a = (0, d.n2)(t.id),
+        [s, u] = i.useState(t.features.has(N.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
         g = i.useCallback(
             async (e) => {
-                d(e), await Z(t, e);
+                u(e), await Z(t, e);
             },
             [t],
         );
@@ -230,7 +230,7 @@ function D(e) {
     let { guild: t, mfaLevel: n } = e,
         l = (0, o.e7)([f.Z], () => null != t && f.Z.can(N.Plq.MANAGE_GUILD, t), [t]),
         a = (0, o.e7)([b.default], () => b.default.getCurrentUser()),
-        { isGuildOwnerWithMFA: d, showMFAUserTooltip: u } = i.useMemo(
+        { isGuildOwnerWithMFA: u, showMFAUserTooltip: d } = i.useMemo(
             () =>
                 null == a
                     ? {
@@ -245,8 +245,8 @@ function D(e) {
         ),
         h = n === N.BpS.ELEVATED,
         x = (0, s.throttle)(async (e) => {
-            d &&
-                (u ||
+            u &&
+                (d ||
                     (await _.Z.updateMFALevel({
                         guildId: t.id,
                         level: e ? N.BpS.ELEVATED : N.BpS.NONE,
@@ -264,9 +264,9 @@ function D(e) {
                               description: E.intl.string(E.t.REr5AI),
                               checked: h,
                               onChange: x,
-                              disabled: !d,
+                              disabled: !u,
                           }),
-                          u &&
+                          d &&
                               (0, r.jsx)(c.Wn, {
                                   messageType: c.QYI.INFO,
                                   textVariant: "text-xs/normal",
@@ -288,7 +288,7 @@ function A() {
     return null == e
         ? null
         : n
-          ? (0, r.jsx)(d.Z, {})
+          ? (0, r.jsx)(u.Z, {})
           : (0, r.jsxs)("div", {
                 children: [
                     (0, r.jsx)(c.Heading, {

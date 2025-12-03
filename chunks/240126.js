@@ -29,7 +29,7 @@ function s(e) {
                 children: n,
             }),
             (0, r.jsxs)(i.Text, {
-                color: "header-secondary",
+                color: "text-default",
                 variant: "text-xs/normal",
                 children: [
                     c

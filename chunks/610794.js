@@ -61,7 +61,7 @@ function O(e) {
                 s.Text,
                 {
                     variant: "text-xs/normal",
-                    color: "header-secondary",
+                    color: "text-default",
                     children: b.intl.format(b.t.Up2ni7, { helpdeskUrl: h.Z.getArticleURL(g.BhN.CONNECTION_DETAILS) }),
                 },
                 "label",
@@ -85,7 +85,7 @@ function O(e) {
                           s.Text,
                           {
                               variant: "text-xs/normal",
-                              color: "header-secondary",
+                              color: "text-default",
                               children: b.intl.format(b.t["9rfonh"], { date: S }),
                           },
                           "member-since",

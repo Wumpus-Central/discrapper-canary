@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h }), n(388685);
 var r = n(54381),
     i = n(473749),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     o = n(624238),
     c = n(28664),
     s = n(481060),
@@ -15,11 +15,11 @@ var r = n(54381),
     b = n(44258);
 function h(e) {
     var t;
-    let { tags: n, isCurrentUser: a, widgetType: c, applicationId: s, className: u, disableInteraction: h = !1 } = e,
+    let { tags: n, isCurrentUser: l, widgetType: c, applicationId: s, className: u, disableInteraction: h = !1 } = e,
         v = null != (t = null == n ? void 0 : n.filter((e) => null != (0, p.zK)(e))) ? t : [],
         O = v.length > 0,
         _ = o.qH,
-        P = a && !h && (0, f.M8)(c) && v.length < _,
+        P = l && !h && (0, f.M8)(c) && v.length < _,
         { trackUserProfileAction: I } = (0, d.KZ)(),
         w = (0, i.useRef)(new Map()),
         S = (0, i.useRef)(null),
@@ -43,7 +43,7 @@ function h(e) {
         return null;
     let A = D ? v : v.slice(0, v.length - T);
     return (0, r.jsxs)("div", {
-        className: l()(b.tagListContainer, u),
+        className: a()(b.tagListContainer, u),
         children: [
             O &&
                 (0, r.jsxs)(r.Fragment, {
@@ -56,7 +56,7 @@ function h(e) {
                                     y,
                                     {
                                         tag: e,
-                                        isCurrentUser: a,
+                                        isCurrentUser: l,
                                         applicationId: s,
                                         widgetType: c,
                                         ref: (t) => {
@@ -94,7 +94,7 @@ function h(e) {
     });
 }
 let y = (e) => {
-    let { tag: t, isCurrentUser: n, applicationId: i, widgetType: a, disableInteraction: l, ref: o } = e,
+    let { tag: t, isCurrentUser: n, applicationId: i, widgetType: l, disableInteraction: a, ref: o } = e,
         { trackUserProfileEditAction: u } = (0, d.KZ)(),
         g = (0, p.zK)(t);
     if (null == g) return null;
@@ -106,20 +106,20 @@ let y = (e) => {
             (0, r.jsx)(y, { size: "xxs" }),
             (0, r.jsx)(s.Text, {
                 variant: "text-xxs/medium",
-                color: "text-secondary",
+                color: "text-subtle",
                 children: h(),
             }),
             n &&
-                !l &&
+                !a &&
                 (0, r.jsx)(c.u, {
                     text: m.intl.string(m.t.Otv9fP),
                     ariaHidden: !0,
                     children: (0, r.jsx)(s.P3F, {
                         onClick: () => {
-                            (0, f.RZ)(a, i, t),
+                            (0, f.RZ)(l, i, t),
                                 u({
                                     action: "TAG_REMOVED",
-                                    widgetEdited: a,
+                                    widgetEdited: l,
                                     gameId: i,
                                 });
                         },
@@ -155,13 +155,13 @@ function j(e) {
             isExpanded: t,
             numberOfOverflowingTags: n,
             onExpandTags: i,
-            onCollapseTags: a,
-            disableInteraction: l,
+            onCollapseTags: l,
+            disableInteraction: a,
             buttonRef: o,
         } = e,
         u = t ? m.intl.string(m.t.z9VPrQ) : m.intl.string(m.t.mriLXL),
         d = t ? m.intl.string(m.t.z9VPrQ) : m.intl.formatToPlainString(m.t.F6iMs4, { count: n });
-    return l
+    return a
         ? (0, r.jsx)("div", {
               className: b.expandButton,
               ref: o,
@@ -172,19 +172,19 @@ function j(e) {
               ariaHidden: t,
               children: (0, r.jsx)(s.P3F, {
                   innerRef: o,
-                  onClick: t ? a : i,
+                  onClick: t ? l : i,
                   "aria-label": d,
                   className: t ? b.collapseButton : b.expandButton,
                   children: t ? (0, r.jsx)(O, {}) : (0, r.jsx)(v, { numberOfOverflowingTags: n }),
               }),
           });
 }
-let x = (e, t, n, r, a) =>
+let x = (e, t, n, r, l) =>
     (0, i.useCallback)(() => {
-        var i, l, o, c;
-        if (null == n) return void a(0);
+        var i, a, o, c;
+        if (null == n) return void l(0);
         let s = null != (o = null == (i = e.current) ? void 0 : i.getBoundingClientRect().width) ? o : 0,
-            u = null != (c = null == (l = t.current) ? void 0 : l.getBoundingClientRect().width) ? c : 0,
+            u = null != (c = null == (a = t.current) ? void 0 : a.getBoundingClientRect().width) ? c : 0,
             d = u > 0 ? 8 : 4,
             f = 0,
             g = 0,
@@ -204,5 +204,5 @@ let x = (e, t, n, r, a) =>
                 f++;
             }
         }
-        a(n.length - f);
-    }, [e, t, null == n ? void 0 : n.join(""), r, a]);
+        l(n.length - f);
+    }, [e, t, null == n ? void 0 : n.join(""), r, l]);

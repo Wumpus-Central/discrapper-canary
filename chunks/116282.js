@@ -47,7 +47,7 @@ let d = () => {
         }, [t, e, d]);
     return (0, i.jsx)(s.xvT, {
         variant: "text-sm/normal",
-        color: "text-secondary",
+        color: "text-subtle",
         children: E,
     });
 };

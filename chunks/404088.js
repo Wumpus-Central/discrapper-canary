@@ -1,16 +1,16 @@
-s.d(e, { default: () => g });
-var i = s(54381),
-    n = s(473749),
-    r = s(793030),
-    a = s(481060),
-    c = s(63063),
-    l = s(49436),
-    o = s(509212),
-    u = s(981631),
-    d = s(388032),
-    m = s(923132);
-function g(t) {
-    let { transitionState: e, onClose: s, questContent: g, quest: T } = t,
+i.d(e, { default: () => x });
+var s = i(54381),
+    n = i(473749),
+    r = i(793030),
+    a = i(481060),
+    c = i(63063),
+    l = i(49436),
+    o = i(304696),
+    u = i(981631),
+    d = i(388032),
+    m = i(923132);
+function x(t) {
+    let { transitionState: e, onClose: i, questContent: x, quest: T } = t,
         h = ((t) => {
             switch (t) {
                 case l.jn.QUEST_BAR:
@@ -27,7 +27,7 @@ function g(t) {
                 default:
                     return;
             }
-        })(g),
+        })(x),
         p = n.useMemo(() => {
             var t;
             return (0, o.Fs)({
@@ -37,26 +37,26 @@ function g(t) {
                 cosponsorName: null == (t = T.config.cosponsorMetadata) ? void 0 : t.name,
             });
         }, [T, h]);
-    return (0, i.jsxs)(r.Modal, {
+    return (0, s.jsxs)(r.Modal, {
         size: "sm",
         transitionState: e,
-        onClose: s,
+        onClose: i,
         title: d.intl.string(d.t.GcsZKJ),
         actions: [
             {
-                onClick: () => s(),
+                onClick: () => i(),
                 text: d.intl.string(d.t.cpT0Cq),
             },
         ],
         children: [
-            (0, i.jsx)(a.Text, {
+            (0, s.jsx)(a.Text, {
                 variant: "text-sm/medium",
-                color: "header-secondary",
+                color: "text-default",
                 className: m.upperBodyText,
                 children: p,
             }),
-            (0, i.jsx)(x, { targetedTraits: h }),
-            (0, i.jsx)(a.Text, {
+            (0, s.jsx)(g, { targetedTraits: h }),
+            (0, s.jsx)(a.Text, {
                 variant: "text-xs/medium",
                 color: "text-muted",
                 children: d.intl.format(d.t.tzq9Wa, {
@@ -66,26 +66,26 @@ function g(t) {
         ],
     });
 }
-function x(t) {
+function g(t) {
     let { targetedTraits: e } = t;
     if (null == e) return null;
     {
-        let { location: t, age: s, activity: n } = e;
-        return (0, i.jsxs)("ul", {
+        let { location: t, age: i, activity: n } = e;
+        return (0, s.jsxs)("ul", {
             className: m.targetList,
             children: [
                 t &&
-                    (0, i.jsx)(T, {
+                    (0, s.jsx)(T, {
                         icon: a.enf,
                         children: d.intl.string(d.t.xQSdPv),
                     }),
-                s &&
-                    (0, i.jsx)(T, {
+                i &&
+                    (0, s.jsx)(T, {
                         icon: a.tBG,
                         children: d.intl.string(d.t.mYt7hQ),
                     }),
                 n &&
-                    (0, i.jsx)(T, {
+                    (0, s.jsx)(T, {
                         icon: a.iWm,
                         children: d.intl.string(d.t.XAsWxQ),
                     }),
@@ -94,17 +94,17 @@ function x(t) {
     }
 }
 function T(t) {
-    let { icon: e, children: s } = t;
-    return (0, i.jsxs)(a.Text, {
+    let { icon: e, children: i } = t;
+    return (0, s.jsxs)(a.Text, {
         variant: "text-sm/medium",
         tag: "li",
         className: m.targetItem,
         children: [
-            (0, i.jsx)(e, {
+            (0, s.jsx)(e, {
                 size: "xs",
                 color: "currentColor",
             }),
-            s,
+            i,
         ],
     });
 }
