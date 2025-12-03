@@ -25,7 +25,7 @@ let l = async () => {
                 if ("Failed to locate warp-cli" === e.message) return o._n.NOT_INSTALLED;
                 i.Z.captureException(e, { tags: { source: "PRIVATE_BROWSING_PERK_INSTALLATION_STATUS" } });
             }
-            if (e instanceof Object && "code" in e && "MissingRegistration" === e.code) return o._n.INSTALLING;
+            if (e instanceof Object && "code" in e && "MissingRegistration" === e.code) return o._n.WAITING_FOR_TERMS;
             return o._n.ERROR;
         }
     },

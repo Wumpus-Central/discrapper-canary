@@ -72,6 +72,7 @@ let h = {
         connectionStatus: u.Ij.INITIALIZING,
         isWeb: (0, s.$L)(),
         isSupportedPrivateBrowsingPerkPlatform: (0, s.ED)() || (0, s.V5)(),
+        installTimeout: 600000,
     },
     g = (e) =>
         (0, a.M)()((t) =>

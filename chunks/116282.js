@@ -26,9 +26,13 @@ let d = () => {
             switch (e) {
                 case u._n.ERROR:
                     return o.intl.format(c.default.vjIpaK, { helpdeskArticle: r.w });
+                case u._n.INSTALLING_TIMEOUT:
+                    return o.intl.format(c.default.QWyvkt, { helpdeskArticle: r.w });
                 case u._n.INSTALLING:
-                case u._n.READY_FOR_LICENSE:
                     return o.intl.format(c.default.ZLrDvb, { helpdeskArticle: r.w });
+                case u._n.WAITING_FOR_TERMS:
+                case u._n.READY_FOR_LICENSE:
+                    return o.intl.format(c.default.rX9Z5g, { helpdeskArticle: r.w });
                 case u._n.EXISTING_INSTALLATION:
                     return o.intl.format(c.default.gOBU3K, { helpdeskArticle: r.w });
                 case u._n.ZERO_TRUST:

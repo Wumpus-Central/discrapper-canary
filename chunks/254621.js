@@ -18,30 +18,33 @@ let m = () => {
                 setConnectionStatus: n,
                 finishSetup: r,
                 getWarpInstallationStatus: a,
+                connect: o,
+                installTimeout: m,
             } = (0, _.xf)(),
-            { status: o } = (0, s.e7)([l.Z], () => l.Z.state, []),
-            [m, h] = (0, i.useState)(0),
-            { installedDiscordPrivateBrowsingPerk: g } = (0, s.e7)([p.Z], () => p.Z.getState(), []),
-            [E, b] = (0, i.useState)(!1);
+            { status: h } = (0, s.e7)([l.Z], () => l.Z.state, []),
+            [g, E] = (0, i.useState)(0),
+            { installedDiscordPrivateBrowsingPerk: b } = (0, s.e7)([p.Z], () => p.Z.getState(), []),
+            [y, O] = (0, i.useState)(!1),
+            [v, S] = (0, i.useState)(null);
         return (
             (0, i.useEffect)(() => {
-                E ||
-                    (b(!0),
+                y ||
+                    (O(!0),
                     e !== d._n.INSTALLING &&
                         (0, u.Y)().then((e) =>
                             e === d._n.NOT_INSTALLED
                                 ? void t(d._n.NOT_INSTALLED)
-                                : e === d._n.EXISTING_INSTALLATION && g
+                                : e === d._n.EXISTING_INSTALLATION && b
                                   ? void t(d._n.INSTALLING)
                                   : void t(e),
                         ));
-            }, [t, g, E, e]),
+            }, [t, b, y, e]),
             (0, i.useEffect)(() => {
-                g && e === d._n.NOT_INSTALLED && (0, f._)(!1),
-                    g && e === d._n.EXISTING_INSTALLATION && t(d._n.INSTALLED);
-            }, [g, e, t]),
+                b && e === d._n.NOT_INSTALLED && (0, f._)(!1),
+                    b && e === d._n.EXISTING_INSTALLATION && t(d._n.INSTALLED);
+            }, [b, e, t]),
             (0, i.useEffect)(() => {
-                if (e !== d._n.INSTALLED) return;
+                if (![d._n.INSTALLED, d._n.WAITING_FOR_TERMS].includes(e)) return;
                 let n = setInterval(async () => {
                     (await a()) === d._n.NOT_INSTALLED && t(d._n.NOT_INSTALLED);
                 }, 1000);
@@ -49,7 +52,7 @@ let m = () => {
             }, [e, t, a]),
             (0, i.useEffect)(() => {
                 if (![d._n.INSTALLED, d._n.EXISTING_INSTALLATION].includes(e)) return void n(d.Ij.DISCONNECTED);
-                switch (o) {
+                switch (h) {
                     case d.zb.CONNECTED:
                         n(d.Ij.CONNECTED);
                         break;
@@ -58,37 +61,57 @@ let m = () => {
                         break;
                     case d.zb.DISCONNECTED:
                         n(d.Ij.DISCONNECTED);
+                        break;
+                    case d.zb.UNABLE:
+                        O(!1);
                 }
-            }, [o, e, n]),
+            }, [h, e, n]),
             (0, i.useEffect)(() => {
-                m > 10 && (t(d._n.ERROR), h(0));
-            }, [m, t]),
+                g > 10 && (t(d._n.ERROR), E(0));
+            }, [g, t]),
             (0, i.useEffect)(() => {
                 e === d._n.READY_FOR_LICENSE &&
                     r()
                         .then((e) => {
-                            e && t(d._n.INSTALLED);
+                            e && t(d._n.INSTALLED), o();
                         })
                         .catch((e) => {
                             c.Z.captureException(e, { tags: { source: "PRIVATE_BROWSING_PERK_LICENSE_FINISH_SETUP" } }),
                                 t(d._n.ERROR);
                         });
-            }, [e, t, r]),
+            }, [e, t, r, o]),
             (0, i.useEffect)(() => {
-                if (e !== d._n.INSTALLING) return;
+                if (![d._n.INSTALLING, d._n.WAITING_FOR_TERMS].includes(e)) return void S(null);
+                if ((null == v && S(Date.now()), null != v)) {
+                    let e = v + m - Date.now();
+                    if (e <= 0) return void t(d._n.INSTALLING_TIMEOUT);
+                    let n = setTimeout(() => {
+                        t(d._n.INSTALLING_TIMEOUT);
+                    }, e);
+                    return () => clearTimeout(n);
+                }
+            }, [e, v, S, t, m]),
+            (0, i.useEffect)(() => {
+                if (![d._n.INSTALLING, d._n.WAITING_FOR_TERMS, d._n.INSTALLING_TIMEOUT].includes(e)) return;
                 let n = setInterval(async () => {
-                    let e = await a();
-                    switch (e) {
+                    let n = await a();
+                    switch (n) {
                         case d._n.ERROR:
-                            h((e) => e + 1);
+                            E((e) => e + 1);
                             return;
                         case d._n.NOT_INSTALLED:
+                            [d._n.NOT_INSTALLED, d._n.INSTALLING].includes(e) || t(d._n.NOT_INSTALLED);
                             return;
                         case d._n.EXISTING_INSTALLATION:
                             t(d._n.READY_FOR_LICENSE);
                             return;
+                        case d._n.WAITING_FOR_TERMS:
+                        case d._n.INSTALLING:
+                            if (e === d._n.INSTALLING_TIMEOUT) return;
+                            t(n);
+                            break;
                         default:
-                            t(e);
+                            t(n);
                     }
                 }, 1000);
                 return () => {

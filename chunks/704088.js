@@ -159,15 +159,15 @@ let y = (e) => {
         let [e, t] = l.useState(-1),
             [n, s] = l.useState(-1),
             [C, S] = l.useState(!1),
-            [E, N] = l.useState(5000),
-            [T, O] = l.useState(!1),
+            [E, T] = l.useState(5000),
+            [N, O] = l.useState(!1),
             P = l.useRef(null),
-            w = (0, r.e7)([b.default], () => b.default.getCurrentUser()),
-            I = (0, h.u)(),
+            I = (0, r.e7)([b.default], () => b.default.getCurrentUser()),
+            w = (0, h.u)(),
             [k] = l.useState(() =>
                 (0, x.o8)({
                     finishSetup: async () => !0,
-                    perkAvailableToUser: I,
+                    perkAvailableToUser: w,
                 }),
             ),
             {
@@ -203,8 +203,8 @@ let y = (e) => {
         }, [K, L]);
         let q = l.useCallback(async () => m._n.INSTALLING, []);
         l.useEffect(() => {
-            W(I);
-        }, [I, W]),
+            W(w);
+        }, [w, W]),
             l.useEffect(() => {
                 H(q);
             }, [H, q]);
@@ -264,7 +264,7 @@ let y = (e) => {
                                                   style: { width: "45px" },
                                                   children: (0, a.jsx)(o.rsf, {
                                                       onChange: () => {
-                                                          V ? (0, u.C)(null, w) : (0, u.C)(j.F_, w);
+                                                          V ? (0, u.C)(null, I) : (0, u.C)(j.F_, I);
                                                       },
                                                       checked: V,
                                                   }),
@@ -330,12 +330,20 @@ let y = (e) => {
                                                           value: m._n.INSTALLING,
                                                       },
                                                       {
+                                                          label: "Accept Terms",
+                                                          value: m._n.WAITING_FOR_TERMS,
+                                                      },
+                                                      {
                                                           label: "Existing Installation",
                                                           value: m._n.EXISTING_INSTALLATION,
                                                       },
                                                       {
                                                           label: "Unsupported (ZeroTrust)",
                                                           value: m._n.ZERO_TRUST,
+                                                      },
+                                                      {
+                                                          label: "Installing Timeout",
+                                                          value: m._n.INSTALLING_TIMEOUT,
                                                       },
                                                       {
                                                           label: "Error",
@@ -406,7 +414,7 @@ let y = (e) => {
                                                       children: "Install time",
                                                   }),
                                                   (0, a.jsx)(c.PhF, {
-                                                      select: (e) => N(e),
+                                                      select: (e) => T(e),
                                                       isSelected: (e) => e === E,
                                                       serialize: (e) => "".concat(e),
                                                       options: [
@@ -467,7 +475,7 @@ let y = (e) => {
                                               O(!0);
                                           },
                                       }),
-                                      T &&
+                                      N &&
                                           (0, a.jsx)(d.default, {
                                               url: "https://www.discord.com",
                                               trustUrl: () => !1,

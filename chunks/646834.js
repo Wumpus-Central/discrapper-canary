@@ -1,16 +1,15 @@
-n.d(t, { Z: () => y }), n(388685), n(415506);
+n.d(t, { Z: () => b }), n(388685), n(415506);
 var r,
     i = n(990547),
     a = n(818710),
     o = n(442837),
     s = n(570140),
-    l = n(668781),
-    c = n(299886),
-    u = n(960048),
-    d = n(573261),
-    f = n(998502),
-    p = n(981631);
-function _(e, t, n) {
+    l = n(299886),
+    c = n(960048),
+    u = n(573261),
+    d = n(998502),
+    f = n(981631);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,10 +22,10 @@ function _(e, t, n) {
         e
     );
 }
-let m = 10,
-    h = { status: "" },
-    g = [],
-    E = [
+let _ = 10,
+    m = { status: "" },
+    h = [],
+    g = [
         "discord.com",
         "discordapp.com",
         "discordapp.net",
@@ -35,23 +34,23 @@ let m = 10,
         "discord.gg",
         "discord.media",
     ];
-class b extends (r = o.ZP.Store) {
+class E extends (r = o.ZP.Store) {
     initialize() {
         this.updateState(), this.addListener();
     }
     logEvent(e) {
-        "status" in e && "string" == typeof e.status && (h = e),
-            (g = [...g.slice(g.length < m ? 0 : 1, m), e]),
+        "status" in e && "string" == typeof e.status && (m = e),
+            (h = [...h.slice(h.length < _ ? 0 : 1, _), e]),
             this.emitChange();
     }
     async updateState() {
         try {
             var e, t, n;
             this.logEvent(
-                await (null === f.ZP ||
-                void 0 === f.ZP ||
-                null == (n = f.ZP.getDiscordUtils) ||
-                null == (t = n.call(f.ZP)) ||
+                await (null === d.ZP ||
+                void 0 === d.ZP ||
+                null == (n = d.ZP.getDiscordUtils) ||
+                null == (t = n.call(d.ZP)) ||
                 null == (e = t.runWarpCommand)
                     ? void 0
                     : e.call(t, "status")),
@@ -61,10 +60,10 @@ class b extends (r = o.ZP.Store) {
     addListener() {
         try {
             var e, t, n;
-            null === f.ZP ||
-                void 0 === f.ZP ||
-                null == (n = f.ZP.getDiscordUtils) ||
-                null == (t = n.call(f.ZP)) ||
+            null === d.ZP ||
+                void 0 === d.ZP ||
+                null == (n = d.ZP.getDiscordUtils) ||
+                null == (t = n.call(d.ZP)) ||
                 null == (e = t.onWarpEvent) ||
                 e.call(t, (e) => this.logEvent(e));
         } catch (e) {}
@@ -72,35 +71,10 @@ class b extends (r = o.ZP.Store) {
     async runCommand(e) {
         for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
         try {
-            return await f.ZP.getDiscordUtils().runWarpCommand(e, ...n);
+            return await d.ZP.getDiscordUtils().runWarpCommand(e, ...n);
         } catch (e) {
             throw (this.logEvent({ commandError: e.message }), e);
         }
-    }
-    async install() {
-        if (this.clientEnabled)
-            try {
-                this.logEvent({ status: "Installing" });
-                let e = await f.ZP.getDiscordUtils().installWarp();
-                this.logEvent({
-                    status: "Installed",
-                    installLog: e,
-                }),
-                    this.connect();
-            } catch (e) {
-                this.logEvent({
-                    status: "InstallFailed",
-                    error: e.message,
-                });
-            }
-    }
-    async promptInstall() {
-        (await l.Z.confirm({
-            title: "Warp not installed",
-            body: "Do you want to install Warp?",
-        }))
-            ? this.install()
-            : this.logEvent({ status: "InstallDeclined" });
     }
     async configureLicense(e) {
         let { ignoreAPIError: t } = e,
@@ -108,10 +82,11 @@ class b extends (r = o.ZP.Store) {
         if ((null == n ? void 0 : n.code) === "MissingRegistration")
             throw Error("MissingRegistration when configuring license");
         try {
-            if (c.H.getConfig({ location: "configureLicense" }).enabled) {
+            if (l.H.getConfig({ location: "configureLicense" }).enabled) {
                 let e = (
-                    await d.Z.post({
-                        url: p.ANM.USER_WARP_LICENSE,
+                    await u.Z.post({
+                        url: f.ANM.USER_WARP_LICENSE,
+                        retries: 3,
                         oldFormErrors: !0,
                         rejectWithError: !0,
                         trackedActionData: {
@@ -124,15 +99,14 @@ class b extends (r = o.ZP.Store) {
                 else throw Error("No license key returned from API when configuring license");
             }
         } catch (e) {
-            if (t) u.Z.captureException(e, { tags: { source: "PRIVATE_BROWSING_PERK_CONFIGURE_LICENSE" } });
-            else throw e;
+            if ((c.Z.captureException(e, { tags: { source: "PRIVATE_BROWSING_PERK_CONFIGURE_LICENSE" } }), !t)) throw e;
         }
     }
     async configureExceptions() {
         try {
             let t = await this.runCommand("tunnel", "host", "list");
             if ((null == t ? void 0 : t.mode) === "exclude")
-                for (let n of E) {
+                for (let n of g) {
                     var e;
                     (null == t || null == (e = t.hosts) ? void 0 : e.indexOf(n)) === -1 &&
                         (await this.runCommand("tunnel", "host", "add", n));
@@ -145,56 +119,54 @@ class b extends (r = o.ZP.Store) {
         } catch (e) {}
     }
     get state() {
-        return h;
+        return m;
     }
     get log() {
-        return g;
+        return h;
     }
     get clientEnabled() {
-        return (0, a.nI)() && c.H.getConfig({ location: "WarpClientStore" }).enabled;
+        return (0, a.nI)() && l.H.getConfig({ location: "WarpClientStore" }).enabled;
     }
     get enabled() {
-        return "Connected" === h.status || this.connecting;
+        return "Connected" === m.status || this.connecting;
     }
     get connecting() {
         return (
-            "Configuring" === h.status ||
-            "Connecting" === h.status ||
-            "ConnectCommandSent" === h.status ||
-            "Installing" === h.status ||
-            "Installed" === h.status
+            "Configuring" === m.status ||
+            "Connecting" === m.status ||
+            "ConnectCommandSent" === m.status ||
+            "Installing" === m.status ||
+            "Installed" === m.status
         );
     }
     async connect() {
-        if (this.clientEnabled) {
-            this.logEvent({ status: "Configuring" }),
+        return (
+            this.clientEnabled &&
+                (this.logEvent({ status: "Configuring" }),
                 await this.configureLicense({ ignoreAPIError: !0 }),
                 await this.configureExceptions(),
-                await this.configureMode();
-            try {
-                this.logEvent({ status: "ConnectCommandSent" }), await this.runCommand("connect");
-            } catch (e) {
-                "Failed to locate warp-cli" === e.message && this.promptInstall();
-            }
-        }
-        return this.clientEnabled;
+                await this.configureMode(),
+                this.logEvent({ status: "ConnectCommandSent" }),
+                await this.runCommand("connect")),
+            this.clientEnabled
+        );
     }
     async disconnect() {
         if (this.clientEnabled) {
             let e = this.runCommand("disconnect");
-            return (h = { status: "DisconnectCommandSent" }), await e;
+            return (m = { status: "DisconnectCommandSent" }), await e;
         }
         return this.clientEnabled;
     }
     async finishSetup() {
         return (
-            await this.configureLicense({ ignoreAPIError: !1 }),
             await this.configureExceptions(),
             await this.configureMode(),
+            await this.configureLicense({ ignoreAPIError: !0 }),
             await this.updateState(),
             !0
         );
     }
 }
-_(b, "displayName", "WarpClientStore");
-let y = new b(s.Z, {});
+p(E, "displayName", "WarpClientStore");
+let b = new E(s.Z, {});

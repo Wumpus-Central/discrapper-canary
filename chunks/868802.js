@@ -19,13 +19,13 @@ var i = n(54381),
     A = n(703656),
     f = n(589072),
     Z = n(626135),
-    C = n(518596),
-    L = n(116282),
+    L = n(518596),
+    C = n(116282),
     b = n(614074),
-    p = n(233751),
-    P = n(868087),
-    y = n(981631),
-    R = n(474936),
+    P = n(233751),
+    p = n(868087),
+    R = n(981631),
+    y = n(474936),
     D = n(388032),
     m = n(163646),
     v = n(498374),
@@ -37,8 +37,8 @@ let j = () => {
             { analyticsLocations: e } = (0, E.ZP)(d.Z.CF_WARP_SETTINGS);
         return (
             (0, l.useEffect)(() => {
-                Z.default.track(y.rMx.PREMIUM_UPSELL_VIEWED, {
-                    type: R.cd.PRIVACY_PERK_SETTINGS,
+                Z.default.track(R.rMx.PREMIUM_UPSELL_VIEWED, {
+                    type: y.cd.PRIVACY_PERK_SETTINGS,
                     location_stack: e,
                 });
             }, [e]),
@@ -80,7 +80,7 @@ let j = () => {
                                     }),
                                     (0, i.jsxs)("div", {
                                         className: v.content,
-                                        children: [(0, i.jsx)(b.C, {}), (0, i.jsx)(L.R, {})],
+                                        children: [(0, i.jsx)(b.C, {}), (0, i.jsx)(C.R, {})],
                                     }),
                                     (0, i.jsx)("div", { className: v.contentSpacer }),
                                     (0, i.jsx)("div", {
@@ -91,7 +91,7 @@ let j = () => {
                             }),
                         ],
                     }),
-                    (0, i.jsx)(P.p, {}),
+                    (0, i.jsx)(p.p, {}),
                 ],
             })
         );
@@ -106,7 +106,7 @@ let j = () => {
                 children: [
                     (0, i.jsx)(S.Z, {
                         buttonTextOverride: D.intl.string(D.t["8x0jKT"]),
-                        subscriptionTier: R.Si.TIER_2,
+                        subscriptionTier: y.Si.TIER_2,
                         fullWidth: !0,
                         size: "sm",
                     }),
@@ -115,7 +115,7 @@ let j = () => {
                         text: D.intl.string(D.t.ZnqyZ2),
                         size: "sm",
                         onClick: () => {
-                            (0, r.Mr)(C.USER_SETTINGS_MODAL_KEY), (0, A.uL)(y.Z5c.APPLICATION_STORE);
+                            (0, r.Mr)(L.USER_SETTINGS_MODAL_KEY), (0, A.uL)(R.Z5c.APPLICATION_STORE);
                         },
                     }),
                 ],
@@ -123,7 +123,7 @@ let j = () => {
         switch (t) {
             case T._n.ERROR:
             case T._n.NOT_INSTALLED:
-                return (0, i.jsx)(p.R, {});
+                return (0, i.jsx)(P.R, {});
             case T._n.INSTALLED:
                 return (0, i.jsx)(N.n, {});
             case T._n.ZERO_TRUST:
@@ -132,12 +132,14 @@ let j = () => {
                 return (0, i.jsx)(u.zxk, {
                     variant: "primary",
                     onClick: () => {
-                        (0, o.j)(y.rMx.NITRO_WARP_CTA_CLICKED, { is_enable_warp: !0 }), n(T._n.READY_FOR_LICENSE);
+                        (0, o.j)(R.rMx.NITRO_WARP_CTA_CLICKED, { is_enable_warp: !0 }), n(T._n.READY_FOR_LICENSE);
                     },
                     text: D.intl.string(m.default.J09UWz),
                 });
             case T._n.INSTALLING:
             case T._n.READY_FOR_LICENSE:
+            case T._n.WAITING_FOR_TERMS:
+            case T._n.INSTALLING_TIMEOUT:
                 return (0, i.jsx)("div", {
                     className: v.spinner,
                     children: (0, i.jsx)(s.$jN, { type: s.RAz.SPINNING_CIRCLE }),

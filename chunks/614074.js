@@ -14,12 +14,16 @@ let d = () => {
                 switch (e) {
                     case r._n.ERROR:
                         return a.intl.string(o.default.cjqyz7);
+                    case r._n.INSTALLING_TIMEOUT:
+                        return a.intl.string(o.default.an5PuY);
                     case r._n.NOT_INSTALLED:
                     case r._n.UNKNOWN:
                         return a.intl.string(o.default.KN6HOb);
                     case r._n.INSTALLING:
-                    case r._n.READY_FOR_LICENSE:
                         return a.intl.string(o.default.lYWqUK);
+                    case r._n.WAITING_FOR_TERMS:
+                    case r._n.READY_FOR_LICENSE:
+                        return a.intl.string(o.default.NSVz3Y);
                     case r._n.EXISTING_INSTALLATION:
                         return a.intl.string(o.default.FgL0HB);
                     case r._n.ZERO_TRUST:
