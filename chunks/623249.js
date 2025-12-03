@@ -1,6 +1,6 @@
 n.d(t, {
-    default: () => O,
-    y: () => T,
+    default: () => S,
+    y: () => w,
 }),
     n(388685);
 var r = n(54381),
@@ -17,113 +17,114 @@ var r = n(54381),
     g = n(617136),
     f = n(915750),
     h = n(49436),
-    x = n(509212),
-    _ = n(968843),
-    b = n(475595),
-    j = n(602667),
-    v = n(659302),
-    C = n(981631),
-    y = n(388032),
-    E = n(301889);
-function O(e) {
+    x = n(968843),
+    _ = n(475595),
+    b = n(387745),
+    j = n(254579),
+    v = n(602667),
+    C = n(659302),
+    y = n(231338),
+    E = n(388032),
+    O = n(301889);
+function S(e) {
     var t;
-    let { quest: n, errorHints: o, transitionState: j, onClose: O, sourceQuestContent: T } = e,
-        [w, P] = (0, s.useState)(o),
-        N = (0, _.KX)(),
-        R = (0, g.O5)(),
-        A = null == (t = (0, f.WD)()) ? void 0 : t.getId(),
-        B = (0, l.e7)([p.Z], () => p.Z.useReducedMotion),
-        k = (0, v.g2)({
-            useReducedMotion: B,
-            className: E.colorTransition,
+    let { quest: n, errorHints: o, transitionState: v, onClose: S, sourceQuestContent: w } = e,
+        [P, N] = (0, s.useState)(o),
+        R = (0, x.KX)(),
+        A = (0, g.O5)(),
+        B = null == (t = (0, f.WD)()) ? void 0 : t.getId(),
+        k = (0, l.e7)([p.Z], () => p.Z.useReducedMotion),
+        I = (0, C.g2)({
+            useReducedMotion: k,
+            className: O.colorTransition,
         }),
-        I = w.filter((e) => ["xbox", "playstation"].includes(e.connected_account_type)),
-        D = (0, x.Bz)(n),
-        q = (0, l.e7)([m.Z], () => m.Z.getState().theme),
-        L = (0, d.wj)(q) ? C.BRd.DARK : C.BRd.LIGHT,
-        { startConsoleQuest: Q, startingConsoleQuest: V } = (0, _.GI)({
+        D = P.filter((e) => ["xbox", "playstation"].includes(e.connected_account_type)),
+        q = (0, j.Bz)(n),
+        L = (0, l.e7)([m.Z], () => m.Z.getState().theme),
+        Q = (0, d.wj)(L) ? y.BR.DARK : y.BR.LIGHT,
+        { startConsoleQuest: V, startingConsoleQuest: M } = (0, x.GI)({
             questId: n.id,
             beforeRequest: () => {
-                k.startAnimation(),
-                    R({
+                I.startAnimation(),
+                    A({
                         questId: n.id,
                         questContent: h.jn.CONNECTIONS_MODAL,
                         questContentCTA: g.jZ.DEFIBRILLATOR,
-                        sourceQuestContent: T,
+                        sourceQuestContent: w,
                     });
             },
             afterRequest: (e) => {
-                k.stopAnimation(), P(e);
+                I.stopAnimation(), N(e);
             },
         });
     return (0, r.jsx)(i.Modal, {
-        transitionState: j,
-        onClose: O,
-        title: y.intl.string(y.t.W5lmKt),
-        subtitle: N.message,
+        transitionState: v,
+        onClose: S,
+        title: E.intl.string(E.t.W5lmKt),
+        subtitle: R.message,
         actions: [
             {
                 variant: "secondary",
                 onClick: () =>
-                    void (O(),
-                    (0, x.V$)(
+                    void (S(),
+                    (0, b.V$)(
                         { quest: n },
                         {
                             content: h.jn.CONNECTIONS_MODAL,
                             ctaContent: g.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
-                            impressionId: A,
-                            sourceQuestContent: T,
+                            impressionId: B,
+                            sourceQuestContent: w,
                         },
                     )),
-                text: y.intl.string(y.t["qiS+xj"]),
+                text: E.intl.string(E.t["qiS+xj"]),
             },
             {
                 variant: "primary",
-                onClick: () => O(),
-                text: y.intl.string(y.t.cpT0Cq),
+                onClick: () => S(),
+                text: E.intl.string(E.t.cpT0Cq),
             },
         ],
         children: (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)("div", {
-                    className: E.contentHeader,
+                    className: O.contentHeader,
                     children: [
                         (0, r.jsx)(u.Text, {
                             variant: "eyebrow",
                             color: "header-secondary",
-                            children: y.intl.string(y.t["+/hZM/"]),
+                            children: E.intl.string(E.t["+/hZM/"]),
                         }),
                         (0, r.jsxs)(u.P3F, {
-                            className: a()(E.refreshWrapper, { [E.disabled]: V }),
-                            onClick: Q,
+                            className: a()(O.refreshWrapper, { [O.disabled]: M }),
+                            onClick: V,
                             children: [
-                                k.render(),
+                                I.render(),
                                 (0, r.jsx)(u.Text, {
                                     variant: "text-sm/medium",
                                     color: "currentColor",
-                                    className: E.colorTransition,
-                                    children: y.intl.string(y.t.wzzjk9),
+                                    className: O.colorTransition,
+                                    children: E.intl.string(E.t.wzzjk9),
                                 }),
                             ],
                         }),
                     ],
                 }),
                 (0, r.jsxs)("div", {
-                    className: E.accountsWrapper,
+                    className: O.accountsWrapper,
                     children: [
-                        (0, r.jsx)(S, {
+                        (0, r.jsx)(T, {
                             icon: (0, r.jsx)(u.pzj, { size: "sm" }),
-                            text: y.intl.string(y.t.br3uIi),
+                            text: E.intl.string(E.t.br3uIi),
                         }),
-                        (0, r.jsx)(S, {
+                        (0, r.jsx)(T, {
                             icon: (0, r.jsx)(u.iWm, { size: "sm" }),
-                            text: y.intl.string(y.t.XF4wuA),
-                            errors: D ? void 0 : I.map((e) => e.message),
-                            gameTile: D
+                            text: E.intl.string(E.t.XF4wuA),
+                            errors: q ? void 0 : D.map((e) => e.message),
+                            gameTile: q
                                 ? (0, r.jsx)(c.u, {
                                       "aria-label": n.config.messages.gameTitle,
                                       __unsupportedReactNodeAsText: (0, r.jsxs)("div", {
-                                          className: E.tooltip,
+                                          className: O.tooltip,
                                           children: [
                                               (0, r.jsx)(u.Text, {
                                                   variant: "text-sm/medium",
@@ -132,14 +133,14 @@ function O(e) {
                                               (0, r.jsx)(u.Text, {
                                                   variant: "text-xs/normal",
                                                   color: "text-muted",
-                                                  children: y.intl.string(y.t.STpNEC),
+                                                  children: E.intl.string(E.t.STpNEC),
                                               }),
                                           ],
                                       }),
                                       children: (0, r.jsx)("img", {
-                                          className: E.gameTile,
+                                          className: O.gameTile,
                                           alt: n.config.messages.gameTitle,
-                                          src: (0, b.fh)(n, b.eC.GAME_TILE, L).url,
+                                          src: (0, _.fh)(n, _.eC.GAME_TILE, Q).url,
                                       }),
                                   })
                                 : null,
@@ -150,18 +151,18 @@ function O(e) {
         }),
     });
 }
-function S(e) {
+function T(e) {
     let { icon: t, text: n, errors: s = [], gameTile: o } = e,
         i = s.length > 0,
         l = i ? u._3e : u.B_b;
     return (0, r.jsxs)("div", {
-        className: E.connectionRow,
+        className: O.connectionRow,
         children: [
             (0, r.jsxs)("div", {
-                className: a()(E.connectionRowHeader, { [E.connectionRowHeaderError]: i }),
+                className: a()(O.connectionRowHeader, { [O.connectionRowHeaderError]: i }),
                 children: [
                     (0, r.jsxs)("div", {
-                        className: E.connectionRowHeaderContent,
+                        className: O.connectionRowHeaderContent,
                         children: [
                             t,
                             (0, r.jsx)(u.Text, {
@@ -172,15 +173,15 @@ function S(e) {
                         ],
                     }),
                     (0, r.jsxs)("div", {
-                        className: E.connectionRowHeaderContent,
+                        className: O.connectionRowHeaderContent,
                         children: [
                             o,
                             (0, r.jsx)(l, {
                                 color: "currentColor",
                                 size: "sm",
                                 className: a()({
-                                    [E.success]: !i,
-                                    [E.error]: i,
+                                    [O.success]: !i,
+                                    [O.error]: i,
                                 }),
                             }),
                         ],
@@ -188,17 +189,17 @@ function S(e) {
                 ],
             }),
             (0, r.jsx)("div", {
-                className: E.errorsContainer,
+                className: O.errorsContainer,
                 children: s.map((e) =>
                     (0, r.jsxs)(
                         "div",
                         {
-                            className: E.errorRow,
+                            className: O.errorRow,
                             children: [
                                 (0, r.jsx)(u.aNP, {
                                     size: "sm",
                                     color: "currentColor",
-                                    className: E.error,
+                                    className: O.error,
                                 }),
                                 (0, r.jsx)(u.Text, {
                                     variant: "text-xs/medium",
@@ -214,11 +215,11 @@ function S(e) {
         ],
     });
 }
-function T(e) {
+function w(e) {
     (0, u.ZDy)(async () => {
         let { default: t } = await Promise.resolve().then(n.bind(n, 623249));
         return function (n) {
-            return (0, r.jsx)(j.A, {
+            return (0, r.jsx)(v.A, {
                 overrideVisibility: !0,
                 questOrQuests: e.quest,
                 questContent: h.jn.CONNECTIONS_MODAL,

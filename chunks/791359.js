@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(388685);
+n.d(t, { Z: () => D }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(392711),
@@ -10,33 +10,34 @@ var r = n(54381),
     d = n(570140),
     p = n(365113),
     f = n(616022),
-    h = n(509212),
-    g = n(968843),
-    m = n(93127),
-    _ = n(752048),
-    b = n(594174),
-    E = n(801077),
-    O = n(626135),
-    v = n(70956),
-    y = n(225559),
-    I = n(910436),
-    C = n(203028),
-    S = n(358924),
-    T = n(292140),
-    N = n(525296),
-    j = n(981631),
-    P = n(324805),
-    x = n(388032),
-    A = n(559909);
-let Z = 15 * v.Z.Millis.MINUTE,
-    w = (0, N.Z)(function (e) {
+    h = n(968843),
+    g = n(759479),
+    m = n(283689),
+    _ = n(93127),
+    b = n(752048),
+    E = n(594174),
+    O = n(801077),
+    v = n(626135),
+    y = n(70956),
+    I = n(225559),
+    C = n(910436),
+    S = n(203028),
+    T = n(358924),
+    N = n(292140),
+    j = n(525296),
+    P = n(981631),
+    x = n(324805),
+    A = n(388032),
+    Z = n(559909);
+let w = 15 * y.Z.Millis.MINUTE,
+    L = (0, j.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: a } = e,
             s = i.useRef(null),
-            c = (0, r.jsx)(C.Z, {
+            c = (0, r.jsx)(S.Z, {
                 party: t,
                 onUserContextMenu: n,
             }),
-            d = (0, r.jsx)(I.Z, {
+            d = (0, r.jsx)(C.Z, {
                 party: t,
                 onChannelContextMenu: l,
                 quest: a,
@@ -45,34 +46,34 @@ let Z = 15 * v.Z.Millis.MINUTE,
             _ = f.length,
             b = h.length,
             E = g.length,
-            v = m.length > 0,
+            O = m.length > 0,
             y = p.o.useConfig({ location: "itemcard" }).demureActivityCards,
-            N = i.useCallback(() => {
+            I = i.useCallback(() => {
                 let e = g
                     .filter((e) => {
                         var t, n;
                         return (
                             (null == (t = e.game) ? void 0 : t.name) != null &&
-                            (0, O.isGameApplicationType)(null == (n = e.game) ? void 0 : n.type)
+                            (0, v.isGameApplicationType)(null == (n = e.game) ? void 0 : n.type)
                         );
                     })
                     .map((e) => e.game.name);
-                O.default.track(j.rMx.NOW_PLAYING_CARD_HOVERED, {
+                v.default.track(P.rMx.NOW_PLAYING_CARD_HOVERED, {
                     num_users: _,
                     num_streams: b,
                     num_activities: E,
-                    in_voice_channel: v,
+                    in_voice_channel: O,
                     games_detected: e,
                 });
-            }, [_, b, E, v, g]),
-            P = i.useMemo(() => o()(N, Z), [N]);
+            }, [_, b, E, O, g]),
+            j = i.useMemo(() => o()(I, w), [I]);
         return null != c || null != d
             ? (0, r.jsx)(u.yRy, {
                   targetElementRef: s,
                   position: "left",
                   renderPopout: (e) => {
                       let { closePopout: n } = e;
-                      return (0, r.jsx)(T.Z, {
+                      return (0, r.jsx)(N.Z, {
                           party: t,
                           close: n,
                       });
@@ -82,7 +83,7 @@ let Z = 15 * v.Z.Millis.MINUTE,
                       var n, i;
                       let { isShown: l } = t;
                       return (0, r.jsx)(
-                          S.Z,
+                          T.Z,
                           ((n = (function (e) {
                               for (var t = 1; t < arguments.length; t++) {
                                   var n = null != arguments[t] ? arguments[t] : {},
@@ -111,9 +112,9 @@ let Z = 15 * v.Z.Millis.MINUTE,
                           (i = i =
                               {
                                   ref: s,
-                                  onMouseEnter: P,
+                                  onMouseEnter: j,
                                   "aria-haspopup": "menu",
-                                  className: A.itemCard,
+                                  className: Z.itemCard,
                                   active: l,
                                   flat: y,
                                   children: (0, r.jsxs)("div", {
@@ -138,48 +139,48 @@ let Z = 15 * v.Z.Millis.MINUTE,
               })
             : null;
     }),
-    L = a().throttle(() => m._(), 300000);
-function R() {
+    R = a().throttle(() => _._(), 300000);
+function D() {
     let {
             nowPlayingCards: e,
             loaded: t,
             needsRefresh: n,
             fetching: l,
             currentUser: a,
-        } = (0, c.cj)([E.Z, _.Z, b.default], () => ({
-            nowPlayingCards: E.Z.nowPlayingCards,
-            loaded: E.Z.loaded,
-            needsRefresh: _.Z.shouldFetch(),
-            fetching: _.Z.isFetching(),
-            currentUser: b.default.getCurrentUser(),
+        } = (0, c.cj)([O.Z, b.Z, E.default], () => ({
+            nowPlayingCards: O.Z.nowPlayingCards,
+            loaded: O.Z.loaded,
+            needsRefresh: b.Z.shouldFetch(),
+            fetching: b.Z.isFetching(),
+            currentUser: E.default.getCurrentUser(),
         })),
         s = (0, c.e7)([f.Z], () => f.Z.quests),
-        o = (0, g.Fy)(Array.from(s.values()));
-    i.useEffect(() => (d.Z.wait(() => y.L()), () => d.Z.wait(() => y.v())), [null == a ? void 0 : a.id]),
+        o = (0, h.Fy)(Array.from(s.values()));
+    i.useEffect(() => (d.Z.wait(() => I.L()), () => d.Z.wait(() => I.v())), [null == a ? void 0 : a.id]),
         i.useEffect(() => {
-            n && !l && L();
+            n && !l && R();
         }, [n, l]);
     let p = i.useMemo(() => {
             let t = new Map(),
                 n = new Set(),
-                r = (0, h.NI)(s, P.l$);
+                r = (0, m.NI)(s, x.l$);
             for (let i of e)
                 i.party.currentActivities.forEach((e) => {
                     let { activity: l } = e;
                     if (null == l) return;
-                    let a = (0, h.ZZ)(r, l);
+                    let a = (0, g.ZZ)(r, l);
                     null == a || n.has(a.id) || (t.set(i.party.id, a), n.add(a.id));
                 });
             return t;
         }, [e, s, o]),
-        m = null;
+        _ = null;
     return t
-        ? (m =
+        ? (_ =
               e.length > 0
                   ? e.map((e) => {
                         let { party: t } = e;
                         return (0, r.jsx)(
-                            w,
+                            L,
                             {
                                 party: t,
                                 quest: p.get(t.id),
@@ -188,23 +189,23 @@ function R() {
                         );
                     })
                   : (0, r.jsxs)("div", {
-                        className: A.emptyCard,
+                        className: Z.emptyCard,
                         children: [
                             (0, r.jsx)(u.Heading, {
                                 variant: "heading-md/semibold",
-                                className: A.emptyHeader,
-                                children: x.intl.string(x.t["ngJ/5u"]),
+                                className: Z.emptyHeader,
+                                children: A.intl.string(A.t["ngJ/5u"]),
                             }),
                             (0, r.jsx)(u.Text, {
                                 color: "none",
-                                className: A.emptyText,
+                                className: Z.emptyText,
                                 variant: "text-sm/normal",
-                                children: x.intl.string(x.t["99ZWxQ"]),
+                                children: A.intl.string(A.t["99ZWxQ"]),
                             }),
                         ],
                     }))
         : (0, r.jsx)("div", {
-              className: A.emptyCard,
+              className: Z.emptyCard,
               children: (0, r.jsx)(u.$jN, {}),
           });
 }
