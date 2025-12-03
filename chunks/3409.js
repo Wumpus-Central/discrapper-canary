@@ -547,7 +547,7 @@ function eO(e) {
             (n = null),
                 (o = (0, r.jsx)(ey, {
                     onBack: () => {
-                        ty(), b();
+                        ty(), null == b || b();
                     },
                     primaryCTA: w.Z.CTAType.CONTINUE,
                     primaryType: "submit",

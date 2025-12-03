@@ -38047,7 +38047,7 @@ div.mobilePushContainer__3d3b0 {
 
 .textContainer_d5200e {
     gap: var(--space-16);
-    max-width: 50%
+    max-width: 55%
 }
 
 .headerTextWrapper_d5200e,
@@ -38112,6 +38112,12 @@ screen and (max-width:485px) {
     font-weight: 900;
     line-height: 27px;
     text-transform: uppercase
+}
+
+.betaBadgeContainer_d5200e {
+    bottom: calc(100% + 8px);
+    inset-inline-start: 0;
+    position: absolute
 }
 
 .headerBackground_b66356 {
@@ -52373,7 +52379,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -59574,9 +59580,9 @@ screen and (max-width:485px) {
 
 .message__9a9f9 {
     color: var(--text-default);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: var(--font-weight-medium);
-    line-height: 1.25rem;
+    line-height: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap

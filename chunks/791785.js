@@ -368,22 +368,23 @@ function et(e) {
             setSelectedPlanId: b,
             defaultPlanId: y,
             startedPaymentFlowWithPaymentSourcesRef: O,
+            hasPaymentSources: v,
         } = (0, x.JL)(),
-        { isGift: v } = (0, D.wD)(),
-        S = O.current,
-        I = (0, U.Z)({
-            isGift: v,
+        { isGift: S } = (0, D.wD)(),
+        I = O.current,
+        T = (0, U.Z)({
+            isGift: S,
             skuId: E,
             referralTrialOfferId: o,
         }),
-        [T, A] = i.useState(!0),
-        C = (0, l.e7)([N.Z], () => N.Z.applicationIdsFetched.has(Y.CL));
+        [A, C] = i.useState(!0),
+        P = (0, l.e7)([N.Z], () => N.Z.applicationIdsFetched.has(Y.CL));
     return (i.useEffect(() => {
-        A(!p || !m || g);
+        C(!p || !m || g);
     }, [g, m, p]),
     (0, _.Z)(
         "Payment Modal",
-        T,
+        A,
         5,
         {
             hasFetchedSubscriptions: p,
@@ -393,12 +394,12 @@ function et(e) {
         { tags: { app_context: $ } },
     ),
     i.useEffect(() => {
-        if ((C || (0, d.yD)(Y.CL), T || f)) return;
+        if ((P || (0, d.yD)(Y.CL), A || f)) return;
         let e = (0, k.Kp)({
-            isTrial: I,
-            isGift: v,
+            isTrial: T,
+            isGift: S,
             selectedSkuId: E,
-            startedPaymentFlowWithPaymentSources: S,
+            startedPaymentFlowWithPaymentSources: I,
         });
         null != c
             ? a(L.h8.ADD_PAYMENT_STEPS, {
@@ -406,14 +407,16 @@ function et(e) {
                   trackedFromStep: c,
               })
             : null != n
-              ? a(L.h8.REVIEW)
+              ? n !== Y.Xh.PREMIUM_GROUP_MONTH || v
+                  ? a(L.h8.REVIEW)
+                  : a(L.h8.ADD_PAYMENT_STEPS)
               : e
                 ? (b((0, k.nA)(E, u, y)), a(L.h8.REVIEW))
                 : null != t
                   ? a(L.h8.PLAN_SELECT)
                   : a(L.h8.SKU_SELECT);
-    }, [c, u, f, C, n, T, a, t, E, b, I, y, v, S]),
-    T)
+    }, [c, u, f, P, n, A, a, t, E, b, T, y, S, I, v]),
+    A)
         ? (0, r.jsx)(B.Z, {})
         : f
           ? (0, r.jsx)(h.Vq, { onClose: s })
