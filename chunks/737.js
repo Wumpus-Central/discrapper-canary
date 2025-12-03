@@ -1,33 +1,31 @@
-n.d(t, { Z: () => g }), n(388685), n(539854);
+n.d(t, { Z: () => f }), n(388685), n(539854);
 var r = n(442837),
     i = n(963374),
     l = n(735020),
     a = n(627050),
-    s = n(905405),
-    o = n(937889),
-    c = n(23750),
-    d = n(699516),
-    u = n(171900),
-    p = n(607802),
-    h = n(817190);
-let f = [];
-function g(e) {
+    s = n(937889),
+    o = n(23750),
+    c = n(699516),
+    d = n(171900),
+    u = n(607802),
+    p = n(817190);
+let h = [];
+function f(e) {
     let { searchContext: t } = e,
-        n = (0, s.p)(),
-        g = a.d.useExperiment({ location: "useMessageRenderedContent" }).enabled,
-        m = (0, r.e7)(
-            [h.Z, u.Z, l.Z],
+        n = a.d.useExperiment({ location: "useMessageRenderedContent" }).enabled,
+        f = (0, r.e7)(
+            [p.Z, d.Z, l.Z],
             () => {
                 var e;
-                let r = (0, p.Tm)(t),
-                    a = h.Z.getSearchResultsQuery(r),
-                    s = u.Z.getMessages(r);
-                if (null == a || null == s || 0 === s.length) return f;
-                let d = (0, i.nC)(null != (e = (0, p.UP)(a)) ? e : ""),
-                    m = [];
+                let r = (0, u.Tm)(t),
+                    a = p.Z.getSearchResultsQuery(r),
+                    c = d.Z.getMessages(r);
+                if (null == a || null == c || 0 === c.length) return h;
+                let f = (0, i.nC)(null != (e = (0, u.UP)(a)) ? e : ""),
+                    g = [];
                 return (
-                    s.forEach((e) => {
-                        let t = new c.ZP(e);
+                    c.forEach((e) => {
+                        let t = new o.ZP(e);
                         (t = (t = (function (e, t) {
                             let [n] = t,
                                 r = n.getMessage(e.id, e.channel_id);
@@ -41,29 +39,28 @@ function g(e) {
                             );
                         })(t, [l.Z])).set(
                             "customRenderedContent",
-                            (0, o.ZP)(t, {
-                                postProcessor: d,
+                            (0, s.ZP)(t, {
+                                postProcessor: f,
                                 allowHeading: !0,
                                 allowList: !0,
-                                allowGameMentions: g,
-                                shouldFilterKeywords: n,
+                                allowGameMentions: n,
                             }),
                         )),
-                            m.push(t);
+                            g.push(t);
                     }),
-                    m
+                    g
                 );
             },
-            [g, t, n],
+            [n, t],
             r.pF,
         ),
-        { blockCount: b, ignoreCount: _ } = (0, r.cj)([d.Z], () => {
+        { blockCount: g, ignoreCount: m } = (0, r.cj)([c.Z], () => {
             let e = 0,
                 t = 0;
             return (
-                m.forEach((n) => {
-                    let r = d.Z.isBlockedForMessage(n),
-                        i = d.Z.isIgnoredForMessage(n);
+                f.forEach((n) => {
+                    let r = c.Z.isBlockedForMessage(n),
+                        i = c.Z.isIgnoredForMessage(n);
                     r ? e++ : i && t++;
                 }),
                 {
@@ -73,8 +70,8 @@ function g(e) {
             );
         });
     return {
-        renderedMessages: m,
-        blockCount: b,
-        ignoreCount: _,
+        renderedMessages: f,
+        blockCount: g,
+        ignoreCount: m,
     };
 }

@@ -47,7 +47,6 @@ var r = (function (e) {
             (e.SAFETY_DM_SPAM_FILTER = "safety_dm_spam_filter"),
             (e.SAFETY_SC_FILTERS_SEXUAL_MEDIA = "safety_sc_filters_sexual_media"),
             (e.SAFETY_SC_FILTERS_GRAPHIC_MEDIA = "safety_sc_filters_graphic_media"),
-            (e.SAFETY_LANGUAGE_FILTER = "safety_language_filter"),
             e
         );
     })({});

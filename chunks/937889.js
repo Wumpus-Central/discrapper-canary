@@ -1,8 +1,8 @@
 n.d(t, {
-    ZP: () => y,
-    k$: () => v,
-    p6: () => g,
-    rs: () => h,
+    ZP: () => b,
+    k$: () => O,
+    p6: () => h,
+    rs: () => m,
 }),
     n(388685),
     n(781311),
@@ -11,12 +11,11 @@ n.d(t, {
     n(865427);
 var r = n(830121);
 n(922699);
-var i = n(202131),
-    a = n(454585),
-    o = n(408433),
-    s = n(960048),
-    l = n(981631);
-function c(e, t, n) {
+var i = n(454585),
+    a = n(408433),
+    o = n(960048),
+    s = n(981631);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +28,7 @@ function c(e, t, n) {
         e
     );
 }
-function u(e) {
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,12 +39,12 @@ function u(e) {
                 }),
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                l(e, t, n[t]);
             });
     }
     return e;
 }
-function d(e, t) {
+function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -57,36 +56,36 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function d(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
+            : u(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let p = 30,
-    _ = new Set([l.hBH.IMAGE, l.hBH.GIFV]),
-    m = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
-function h(e, t) {
+let f = 30,
+    p = new Set([s.hBH.IMAGE, s.hBH.GIFV]),
+    _ = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
+function m(e, t) {
     var n;
-    let r = g({
+    let r = h({
             channelId: e.channel_id,
             messageId: e.id,
             renderOptions: t,
         }),
         i = null != e.webhookId;
-    return f(u({}, r), {
+    return d(c({}, r), {
         allowLinks: i || r.allowLinks,
         allowEmojiLinks: i,
         mentionChannels: e.mentionChannels,
         soundboardSounds: null != (n = e.soundboardSounds) ? n : [],
     });
 }
-function g(e) {
+function h(e) {
     let { channelId: t, messageId: n, renderOptions: r } = e;
     return {
         channelId: t,
@@ -113,46 +112,36 @@ function g(e) {
         textColor: r.textColor,
     };
 }
-function E(e, t, n) {
-    var r;
+function g(e, t, n) {
     let {
-            toAST: a = !1,
-            hideSimpleEmbedContent: o = !0,
-            formatInline: s = !1,
-            postProcessor: l,
-            shouldFilterKeywords: c,
-            contentMessage: u,
+            toAST: r = !1,
+            hideSimpleEmbedContent: i = !0,
+            formatInline: a = !1,
+            postProcessor: o,
+            contentMessage: s,
         } = n,
-        d = !1,
-        f = (null != u ? u : t).content,
-        p = e(
-            c
-                ? (0, i.N)(f, {
-                      escapeReplacement: !0,
-                      messageId: t.id,
-                      channelId: t.channel_id,
-                      authorId: null == (r = t.author) ? void 0 : r.id,
-                  })
-                : f,
+        l = !1,
+        c = e(
+            (null != s ? s : t).content,
             !0,
-            h(t, n),
+            m(t, n),
             (e, n) => (
                 Array.isArray(e) || (e = [e]),
-                o && (e = N(e, (null != u ? u : t).embeds)),
-                s || (e = S(e, n)),
-                (e = b(e)),
-                t.embeds.length > 0 && (d = T(e, n)),
-                s && (e = P(e)),
-                null != l && (e = l(e, n)),
+                i && (e = C(e, (null != s ? s : t).embeds)),
+                a || (e = v(e, n)),
+                (e = E(e)),
+                t.embeds.length > 0 && (l = I(e, n)),
+                a && (e = N(e)),
+                null != o && (e = o(e, n)),
                 e
             ),
         );
     return {
-        hasSpoilerEmbeds: d,
-        content: p,
+        hasSpoilerEmbeds: l,
+        content: c,
     };
 }
-function b(e) {
+function E(e) {
     let t = e.some((e) => "link" !== e.type);
     return e.filter((e) => {
         let n = "link" === e.type,
@@ -160,11 +149,11 @@ function b(e) {
         return !(n && i && !t);
     });
 }
-function y(e) {
+function b(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    return E(t.formatInline ? a.Z.parseInlineReply : a.Z.parse, e, t);
+    return g(t.formatInline ? i.Z.parseInlineReply : i.Z.parse, e, t);
 }
-function O(e, t, n, r) {
+function y(e, t, n, r) {
     return e(
         t,
         !0,
@@ -189,15 +178,15 @@ function O(e, t, n, r) {
         (e) => (Array.isArray(e) || (e = [e]), e),
     );
 }
-function v(e, t, n) {
-    return O(a.Z.parseAutoModerationSystemMessage, e, t, n);
+function O(e, t, n) {
+    return y(i.Z.parseAutoModerationSystemMessage, e, t, n);
 }
-function S(e, t) {
+function v(e, t) {
     return t
-        ? I(e)
-        : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = I(e[0].content)), e);
+        ? S(e)
+        : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = S(e[0].content)), e);
 }
-function I(e) {
+function S(e) {
     if (
         e.some(
             (e) =>
@@ -211,49 +200,49 @@ function I(e) {
     let t = 0;
     return (
         e.forEach((e) => {
-            if ((("emoji" === e.type || "customEmoji" === e.type || "soundboard" === e.type) && (t += 1), t > p))
+            if ((("emoji" === e.type || "customEmoji" === e.type || "soundboard" === e.type) && (t += 1), t > f))
                 return !1;
         }),
-        t > p ||
+        t > f ||
             e.forEach((e) => {
                 e.jumboable = !0;
             }),
         e
     );
 }
-function T(e, t) {
-    return t ? C(e) : "paragraph" === e[0].type && e[0].content instanceof Array && C(e[0].content);
+function I(e, t) {
+    return t ? A(e) : "paragraph" === e[0].type && e[0].content instanceof Array && A(e[0].content);
 }
-function A(e, t) {
-    if (e instanceof Array) return e.some((e) => A(e, t));
+function T(e, t) {
+    if (e instanceof Array) return e.some((e) => T(e, t));
     let n = t(e);
     return null != n
         ? n
         : e.content instanceof Array
-          ? A(e.content, t)
-          : e.items instanceof Array && e.items.some((e) => A(e, t));
+          ? T(e.content, t)
+          : e.items instanceof Array && e.items.some((e) => T(e, t));
 }
-function C(e) {
-    return A(e, (e) =>
-        "spoiler" === e.type ? A(e, (e) => "link" === e.type || "attachmentLink" === e.type || null) : null,
+function A(e) {
+    return T(e, (e) =>
+        "spoiler" === e.type ? T(e, (e) => "link" === e.type || "attachmentLink" === e.type || null) : null,
     );
 }
-function N(e, t) {
+function C(e, t) {
     if (1 !== e.length || 1 !== t.length) return e;
     let n = e[0],
         r = t[0];
-    return ("link" === n.type || "attachmentLink" === n.type) && _.has(r.type) && (0, o.dY)(r) ? [] : e;
+    return ("link" === n.type || "attachmentLink" === n.type) && p.has(r.type) && (0, a.dY)(r) ? [] : e;
 }
-function P(e) {
+function N(e) {
     return (
         e.forEach((e) => {
-            m.has(e.type) &&
+            _.has(e.type) &&
                 null != e.content &&
                 (Array.isArray(e.content)
-                    ? P(e.content)
+                    ? N(e.content)
                     : "string" == typeof e.content
                       ? (e.content = e.content.replace(/\n/g, " "))
-                      : s.Z.captureMessage(
+                      : o.Z.captureMessage(
                             "AST node type:"
                                 .concat(e.type, " with content typeof ")
                                 .concat(typeof e.content, ". Keys ")

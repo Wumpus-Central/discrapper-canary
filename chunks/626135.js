@@ -313,10 +313,6 @@ let V = {
         throttlePeriod: M,
         throttleKeys: () => [],
     },
-    [g.rMx.KEYWORD_FILTER_MATCH]: {
-        throttlePeriod: j,
-        throttleKeys: (e) => [e.message_id],
-    },
     [g.rMx.MEDIA_INPUT_VOLUME_CHANGED]: {
         throttlePeriod: L,
         throttleKeys: (e) => [e.location_stack],

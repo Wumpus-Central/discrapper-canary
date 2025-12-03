@@ -1,5 +1,5 @@
 n.d(t, {
-    A2: () => e2,
+    A2: () => e3,
     AY: () => ea,
     CM: () => ec,
     CW: () => ek,
@@ -10,7 +10,7 @@ n.d(t, {
     Fg: () => et,
     G6: () => eh,
     H1: () => M,
-    HV: () => e4,
+    HV: () => e2,
     I0: () => G,
     JG: () => eH,
     JN: () => eo,
@@ -28,7 +28,7 @@ n.d(t, {
     R$: () => y,
     RS: () => eI,
     R_: () => eF,
-    Rt: () => e1,
+    Rt: () => e0,
     SE: () => eM,
     Sb: () => eR,
     Sh: () => ez,
@@ -39,7 +39,7 @@ n.d(t, {
     Xc: () => V,
     Xk: () => k,
     Xr: () => em,
-    YC: () => e3,
+    YC: () => e1,
     Yk: () => ex,
     _O: () => L,
     _j: () => eV,
@@ -59,16 +59,15 @@ n.d(t, {
     fv: () => w,
     fz: () => T,
     gR: () => J,
-    gw: () => eJ,
     h2: () => $,
-    hg: () => e$,
+    hg: () => eJ,
     iG: () => Q,
     iH: () => eG,
     j7: () => eQ,
     jU: () => er,
     kJ: () => X,
     kU: () => ei,
-    l4: () => e0,
+    l4: () => e$,
     lk: () => eW,
     mX: () => q,
     nc: () => eA,
@@ -76,7 +75,7 @@ n.d(t, {
     no: () => eZ,
     qF: () => U,
     rN: () => eC,
-    rR: () => e5,
+    rR: () => e4,
     tU: () => ev,
     uL: () => B,
     uh: () => eX,
@@ -961,27 +960,7 @@ let eZ = (0, f.TG)({
             goreContentNonFriendDm: null != r ? r : void 0,
         };
     },
-    eQ = (0, f.Zc)("textAndImages", "goreContentSettings", eq, eX),
-    eJ = (0, f.Zc)(
-        "textAndImages",
-        "keywordFilterSettings",
-        (e) => {
-            let { profanity: t, sexualContent: n, slurs: r } = null != e ? e : {};
-            return {
-                profanity: null == t ? void 0 : t.value,
-                sexualContent: null == n ? void 0 : n.value,
-                slurs: null == r ? void 0 : r.value,
-            };
-        },
-        (e) => {
-            let { profanity: t, sexualContent: n, slurs: r } = e;
-            return {
-                profanity: o.D5.create({ value: t }),
-                sexualContent: o.D5.create({ value: n }),
-                slurs: o.D5.create({ value: r }),
-            };
-        },
-    );
+    eQ = (0, f.Zc)("textAndImages", "goreContentSettings", eq, eX);
 (0, f.Zc)(
     "appearance",
     "searchResultExactCountEnabled",
@@ -1000,7 +979,7 @@ let eZ = (0, f.TG)({
         },
         (e) => o.D5.create({ value: e }),
     );
-let e$ = (0, f.Zc)(
+let eJ = (0, f.Zc)(
     "appearance",
     "timestampHourCycle",
     (e) => (null != e ? e : a.hg.AUTO),
@@ -1018,25 +997,25 @@ let e$ = (0, f.Zc)(
         (e) => (null != e ? e : a.n9.SWIPE_RIGHT_TO_LEFT_UNSET),
         (e) => e,
     );
-let e0 = (0, f.Zc)(
+let e$ = (0, f.Zc)(
         "userContent",
         "lastReceivedChangelogId",
         (e) => (null != e ? e : "0"),
         (e) => e,
     ),
-    e1 = (0, f.Zc)(
+    e0 = (0, f.Zc)(
         "safetySettings",
         "ignoreProfileSpeedbumpDisabled",
         (e) => null != e && e,
         (e) => e,
     ),
-    e3 = (0, f.Zc)(
+    e1 = (0, f.Zc)(
         "appearance",
         "uiDensity",
         (e) => (e === a.Pi.UNSET_UI_DENSITY ? a.Pi.DEFAULT : null != e ? e : a.Pi.DEFAULT),
         (e) => e,
     ),
-    e2 = (0, f.Zc)(
+    e3 = (0, f.Zc)(
         "inAppFeedbackSettings",
         "inAppFeedbackStates",
         (e) =>
@@ -1049,7 +1028,7 @@ let e0 = (0, f.Zc)(
             ),
         { delay: m.fy.AUTOMATED },
     ),
-    e4 = (0, f.Zc)(
+    e2 = (0, f.Zc)(
         "textAndImages",
         "showMentionSuggestions",
         (e) => {
@@ -1058,7 +1037,7 @@ let e0 = (0, f.Zc)(
         },
         (e) => o.D5.create({ value: e }),
     ),
-    e5 = (0, f.Zc)(
+    e4 = (0, f.Zc)(
         "textAndImages",
         "isCrossDmSearchEnabled",
         (e) => (null == e ? void 0 : e.value),

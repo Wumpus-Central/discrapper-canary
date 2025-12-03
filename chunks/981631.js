@@ -5192,7 +5192,6 @@ var np = (function (e) {
             (e.USER_SERVER_PRIVACY_SETTINGS_ACTION = "user_server_privacy_settings_action"),
             (e.RUNNING_GAME_OVERRIDE_ADDED = "running_game_override_added"),
             (e.GUILD_NSFW_GATE_VIEWED = "guild_nsfw_gate_viewed"),
-            (e.KEYWORD_FILTER_MATCH = "keyword_filter_match"),
             (e.FORWARD_MESSAGE_STARTED = "forward_message_started"),
             (e.FORWARD_MESSAGE_CANCELLED = "forward_message_cancelled"),
             (e.FORWARD_MESSAGE_SENT = "forward_message_sent"),

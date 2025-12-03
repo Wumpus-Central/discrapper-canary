@@ -1,113 +1,110 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => y });
 var r = n(54381),
     i = n(473749),
     l = n(120356),
     a = n.n(l),
     s = n(442837),
     o = n(481060),
-    c = n(905405),
-    u = n(255269),
-    d = n(937889),
-    p = n(267128),
-    f = n(411405),
-    h = n(695346),
-    g = n(496675),
-    m = n(699516),
-    _ = n(868807),
-    b = n(981631),
-    E = n(217702),
-    O = n(388032),
-    v = n(161414),
-    y = n(430864);
-let I = i.memo(function (e) {
+    c = n(255269),
+    u = n(937889),
+    d = n(267128),
+    p = n(411405),
+    f = n(695346),
+    h = n(496675),
+    g = n(699516),
+    m = n(868807),
+    _ = n(981631),
+    b = n(217702),
+    E = n(388032),
+    O = n(161414),
+    v = n(430864);
+let y = i.memo(function (e) {
     let { channel: t } = e,
-        { loaded: n, error: l, message: I } = (0, _.a)(t),
-        C = (0, c.p)(),
-        { isBlocked: S, isIgnored: T } = (0, s.cj)(
-            [m.Z],
+        { loaded: n, error: l, message: y } = (0, m.a)(t),
+        { isBlocked: I, isIgnored: C } = (0, s.cj)(
+            [g.Z],
             () => ({
-                isBlocked: null != I && m.Z.isBlockedForMessage(I),
-                isIgnored: null != I && m.Z.isIgnoredForMessage(I),
+                isBlocked: null != y && g.Z.isBlockedForMessage(y),
+                isIgnored: null != y && g.Z.isIgnoredForMessage(y),
             }),
-            [I],
+            [y],
         ),
-        N = (0, s.e7)([g.Z], () => g.Z.can(b.Plq.MANAGE_MESSAGES, t)),
-        j = h.cC.useSetting(),
-        { content: P } = i.useMemo(
+        S = (0, s.e7)([h.Z], () => h.Z.can(_.Plq.MANAGE_MESSAGES, t)),
+        T = f.cC.useSetting(),
+        { content: N } = i.useMemo(
             () =>
-                (null == I ? void 0 : I.content) != null && "" !== I.content
-                    ? (0, d.ZP)(I, {
+                (null == y ? void 0 : y.content) != null && "" !== y.content
+                    ? (0, u.ZP)(y, {
                           formatInline: !0,
                           noStyleAndInteraction: !0,
-                          shouldFilterKeywords: C,
                       })
                     : { content: null },
-            [I, C],
+            [y],
         ),
-        x = null;
+        j = null;
     if (l)
-        x = (0, r.jsx)(o.Text, {
-            className: v.messageReplacement,
+        j = (0, r.jsx)(o.Text, {
+            className: O.messageReplacement,
             variant: "text-sm/normal",
             color: "text-muted",
-            children: O.intl.string(O.t.BZHld2),
+            children: E.intl.string(E.t.BZHld2),
         });
     else if (n)
-        if (null != I && S)
-            x = (0, r.jsx)(o.Text, {
-                className: v.messageReplacement,
+        if (null != y && I)
+            j = (0, r.jsx)(o.Text, {
+                className: O.messageReplacement,
                 variant: "text-sm/normal",
                 color: "text-muted",
-                children: O.intl.string(O.t["WPe+xL"]),
+                children: E.intl.string(E.t["WPe+xL"]),
             });
-        else if (null != I && T)
-            x = (0, r.jsx)(o.Text, {
-                className: v.messageReplacement,
+        else if (null != y && C)
+            j = (0, r.jsx)(o.Text, {
+                className: O.messageReplacement,
                 variant: "text-sm/normal",
                 color: "text-muted",
-                children: O.intl.string(O.t.uxrh1O),
+                children: E.intl.string(E.t.uxrh1O),
             });
-        else if (null != I) {
-            let { contentPlaceholder: e, renderedContent: t } = (0, p.f)(
+        else if (null != y) {
+            let { contentPlaceholder: e, renderedContent: t } = (0, d.f)(
+                y,
+                N,
                 I,
-                P,
-                S,
-                T,
-                a()(v.messageContent, y.inlineFormat),
+                C,
+                a()(O.messageContent, v.inlineFormat),
                 {
-                    leadingIconClass: v.messageContentIcon,
-                    trailingIconClass: v.messageContentIcon,
-                    iconSize: E.WW,
+                    leadingIconClass: O.messageContentIcon,
+                    trailingIconClass: O.messageContentIcon,
+                    iconSize: b.WW,
                 },
             );
-            x =
+            j =
                 null != t
                     ? (0, r.jsx)(o.Text, {
                           variant: "text-sm/normal",
                           color: "text-muted",
-                          className: v.messageContent,
+                          className: O.messageContent,
                           children: t,
                       })
                     : (0, r.jsx)(o.Text, {
                           tag: "span",
                           variant: "text-sm/normal",
                           color: "text-muted",
-                          className: v.messageReplacement,
+                          className: O.messageReplacement,
                           children: e,
                       });
         } else
-            x = (0, r.jsx)(o.Text, {
-                className: v.messageReplacement,
+            j = (0, r.jsx)(o.Text, {
+                className: O.messageReplacement,
                 variant: "text-sm/normal",
                 color: "text-muted",
-                children: O.intl.string(O.t["0KfDxM"]),
+                children: E.intl.string(E.t["0KfDxM"]),
             });
-    else x = null;
-    return (0, r.jsx)(f.aQ.Provider, {
-        value: (0, u.Z)(j, N),
+    else j = null;
+    return (0, r.jsx)(p.aQ.Provider, {
+        value: (0, c.Z)(T, S),
         children: (0, r.jsx)(o.Rny, {
-            className: v.messageFocusBlock,
-            children: x,
+            className: O.messageFocusBlock,
+            children: j,
         }),
     });
 });
