@@ -9,6 +9,4 @@ e.exports = {
     sectionLabel: "sectionLabel__409aa",
     label: "label__409aa",
     fixedContent: "fixedContent__409aa",
-    searchBarContainer: "searchBarContainer__409aa",
-    popoverAnchor: "popoverAnchor__409aa",
 };

@@ -13,14 +13,14 @@ function b(e) {
     var t,
         n,
         {
-            partialRoot: b,
-            target: y,
-            defaultTarget: p,
-            onPanelChange: g,
-            sidebarFooter: O,
-            emptyState: j,
-            searchQuery: m,
-            onSearchChange: v,
+            root: b,
+            directory: y,
+            target: p,
+            defaultTarget: g,
+            onPanelChange: O,
+            sidebarHeader: j,
+            sidebarFooter: v,
+            emptyState: m,
         } = e,
         h = (function (e, t) {
             if (null == e) return {};
@@ -43,14 +43,14 @@ function b(e) {
             }
             return o;
         })(e, [
-            "partialRoot",
+            "root",
+            "directory",
             "target",
             "defaultTarget",
             "onPanelChange",
+            "sidebarHeader",
             "sidebarFooter",
             "emptyState",
-            "searchQuery",
-            "onSearchChange",
         ]);
     let [x, S] = o.useState(!1),
         [P, C] = o.useState(1.4),
@@ -109,14 +109,14 @@ function b(e) {
                     {
                         children: (0, r.jsx)(d.Z, {
                             onClose: h.onClose,
-                            partialRoot: b,
-                            target: y,
-                            defaultTarget: p,
-                            onPanelChange: g,
-                            emptyState: j,
-                            sidebarFooter: O,
-                            searchQuery: m,
-                            onSearchChange: v,
+                            root: b,
+                            directory: y,
+                            target: p,
+                            defaultTarget: g,
+                            onPanelChange: O,
+                            sidebarHeader: j,
+                            emptyState: m,
+                            sidebarFooter: v,
                         }),
                     }),
                 Object.getOwnPropertyDescriptors

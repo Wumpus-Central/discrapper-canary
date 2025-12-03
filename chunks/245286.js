@@ -1,31 +1,35 @@
-n.d(t, { default: () => v });
+n.d(t, { default: () => P }), n(388685);
 var r = n(54381),
     o = n(473749),
     i = n(442837),
-    l = n(481060),
-    a = n(493773),
-    c = n(82084),
-    s = n(663389),
-    u = n(594174),
-    d = n(88658),
-    f = n(996733),
-    b = n(313789),
-    y = n(914578),
-    p = n(920952),
-    g = n(518596),
-    O = n(388032),
-    j = n(942408);
-function m(e) {
+    l = n(704215),
+    a = n(481060),
+    c = n(493773),
+    s = n(243778),
+    u = n(886880),
+    d = n(82084),
+    f = n(131051),
+    b = n(663389),
+    y = n(594174),
+    p = n(88658),
+    g = n(996733),
+    O = n(313789),
+    j = n(914578),
+    v = n(920952),
+    m = n(518596),
+    h = n(388032),
+    x = n(942408);
+function S(e) {
     let { destinationPanel: t, originPanel: n } = e;
-    (0, d.QB)({
+    (0, p.QB)({
         destinationPane: t,
         originPane: n,
-        subsection: s.Z.getSubsection(),
-        source: s.Z.getAnalyticsLocation(),
-        locationStack: s.Z.getAnalyticsLocations(),
+        subsection: b.Z.getSubsection(),
+        source: b.Z.getAnalyticsLocation(),
+        locationStack: b.Z.getAnalyticsLocations(),
     });
 }
-function v(e) {
+function P(e) {
     var { target: t } = e,
         n = (function (e, t) {
             if (null == e) return {};
@@ -48,23 +52,22 @@ function v(e) {
             }
             return o;
         })(e, ["target"]);
-    let l = f.Z.useField("query"),
-        d = o.useRef(null);
-    (0, a.ZP)(() => {
-        let e = s.Z.getSection();
+    let l = g.Z.useField("query"),
+        { node: a, directory: s } = (0, f.ZP)(v.Z, l),
+        u = null != t && null != s.entry(t) ? t : void 0,
+        p = o.useRef(null);
+    return ((0, c.ZP)(() => {
+        let e = b.Z.getSection();
         null != e &&
-            (m({
+            (S({
                 destinationPanel: e,
                 originPanel: null,
             }),
-            (d.current = e));
-    });
-    let O = o.useCallback((e) => {
-        f.Z.setState({ query: e });
-    }, []);
-    return (0, i.e7)([u.default], () => null != u.default.getCurrentUser())
+            (p.current = e));
+    }),
+    (0, i.e7)([y.default], () => null != y.default.getCurrentUser()))
         ? (0, r.jsx)(
-              c.Z,
+              d.Z,
               (function (e) {
                   for (var t = 1; t < arguments.length; t++) {
                       var n = null != arguments[t] ? arguments[t] : {},
@@ -91,41 +94,87 @@ function v(e) {
                   return e;
               })(
                   {
-                      partialRoot: p.Z,
-                      emptyState: h,
-                      sidebarFooter: y.Z,
+                      root: a,
+                      directory: s,
+                      sidebarHeader: C,
+                      emptyState: _,
+                      sidebarFooter: j.Z,
                       onPanelChange: (e) => {
-                          let t = (0, g.getUserSettingsSectionsByWebUserSettings)().get(e);
+                          let t = (0, m.getUserSettingsSectionsByWebUserSettings)().get(e);
                           null != t &&
-                              (m({
+                              (S({
                                   destinationPanel: t,
-                                  originPanel: d.current,
+                                  originPanel: p.current,
                               }),
-                              (d.current = t));
+                              (p.current = t));
                       },
-                      target: t,
-                      defaultTarget: b.n.ACCOUNT_PANEL,
-                      searchQuery: l,
-                      onSearchChange: O,
+                      target: u,
+                      defaultTarget: O.n.ACCOUNT_PANEL,
                   },
                   n,
               ),
           )
         : null;
 }
-function h() {
+function C() {
+    let e = g.Z.useField("query"),
+        t = o.useRef(null),
+        [n, i] = (0, s.US)([l.z.USER_SETTINGS_REDESIGN_EDUCATION_POPOVER]),
+        c = o.useMemo(
+            () => ({
+                title: h.intl.string(h.t.Kv519a),
+                body: h.intl.string(h.t.cTGJBZ),
+                badge: "new",
+                position: "right",
+                align: "center",
+                scrollBehavior: "sticky",
+            }),
+            [],
+        ),
+        d = o.useCallback((e) => {
+            g.Z.setState({ query: e });
+        }, []),
+        f = o.useCallback(() => {
+            g.Z.setState({ query: "" });
+        }, []);
+    return (0, r.jsx)("div", {
+        children: (0, r.jsxs)("div", {
+            className: x.searchBarContainer,
+            children: [
+                (0, r.jsx)(a.E1j, {
+                    size: "md",
+                    query: e,
+                    onChange: d,
+                    onClear: f,
+                }),
+                (0, r.jsx)("div", {
+                    className: x.popoverAnchor,
+                    ref: t,
+                }),
+                (0, r.jsx)(u.Z, {
+                    dismissibleContentType: l.z.USER_SETTINGS_REDESIGN_EDUCATION_POPOVER,
+                    targetElementRef: t,
+                    visibleContent: n,
+                    markAsDismissed: i,
+                    props: c,
+                }),
+            ],
+        }),
+    });
+}
+function _() {
     return (0, r.jsxs)("div", {
-        className: j.emptySearchResultsContainer,
+        className: x.emptySearchResultsContainer,
         children: [
-            (0, r.jsx)(l.Text, {
+            (0, r.jsx)(a.Text, {
                 variant: "text-sm/semibold",
                 color: "text-primary",
-                children: O.intl.string(O.t.zihbmv),
+                children: h.intl.string(h.t.zihbmv),
             }),
-            (0, r.jsx)(l.Text, {
+            (0, r.jsx)(a.Text, {
                 variant: "text-sm/normal",
                 color: "text-secondary",
-                children: O.intl.string(O.t.XclvsB),
+                children: h.intl.string(h.t.XclvsB),
             }),
         ],
     });
