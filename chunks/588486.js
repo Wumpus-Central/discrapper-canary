@@ -101,6 +101,7 @@ class E extends o.C {
             isTemplate: !1,
             fieldNumbersToCopy: [],
             engineFeatureFlags: [],
+            isAutomatedChange: !1,
         };
         return (
             globalThis.Object.defineProperty(t, a.C, {
@@ -211,6 +212,9 @@ class E extends o.C {
                 case 31:
                     a.expectedEndDate = c.E.internalBinaryRead(e, e.uint32(), n, a.expectedEndDate);
                     break;
+                case 32:
+                    a.isAutomatedChange = e.bool();
+                    break;
                 default:
                     let o = n.readUnknownField;
                     if ("throw" === o)
@@ -267,7 +271,8 @@ class E extends o.C {
             t.tag(29, r.TD.LengthDelimited).string(e.engineFeatureFlags[n]);
         e.debugConfig && I.internalBinaryWrite(e.debugConfig, t.tag(30, r.TD.LengthDelimited).fork(), n).join(),
             e.expectedEndDate &&
-                c.E.internalBinaryWrite(e.expectedEndDate, t.tag(31, r.TD.LengthDelimited).fork(), n).join();
+                c.E.internalBinaryWrite(e.expectedEndDate, t.tag(31, r.TD.LengthDelimited).fork(), n).join(),
+            !1 !== e.isAutomatedChange && t.tag(32, r.TD.Varint).bool(e.isAutomatedChange);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -457,6 +462,12 @@ class E extends o.C {
                 name: "expected_end_date",
                 kind: "message",
                 T: () => c.E,
+            },
+            {
+                no: 32,
+                name: "is_automated_change",
+                kind: "scalar",
+                T: 8,
             },
         ]);
     }
