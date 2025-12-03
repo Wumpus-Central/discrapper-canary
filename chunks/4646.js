@@ -1,4 +1,11 @@
-function r(e, t, n) {
+let r;
+n.d(t, {
+    ZP: () => c,
+    k2: () => s,
+}),
+    n(388685);
+var i = n(710845);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -11,21 +18,28 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, {
-    ZP: () => s,
-    k2: () => a,
-}),
-    n(388685);
-let i = new (n(710845).Z)("AssetMap");
-async function a(e) {
-    let t = new o(),
+try {
+    r = n(
+        Object(
+            (function () {
+                var e = Error("Cannot find module '@shopify/react-native-skia'");
+                throw ((e.code = "MODULE_NOT_FOUND"), e);
+            })(),
+        ),
+    ).Skia;
+} catch (e) {
+    r = null;
+}
+let o = new i.Z("AssetMap");
+async function s(e) {
+    let t = new l(),
         n = Object.entries(e).map((e) => {
             let [n, r] = e;
-            return t.loadRemoteImage(n, r).catch((e) => i.warn("Failed to load canvas asset", e, n, r));
+            return t.loadRemoteImage(n, r).catch((e) => o.warn("Failed to load canvas asset", e, n, r));
         });
     return await Promise.all(n), t;
 }
-class o {
+class l {
     loadFonts() {
         return Promise.resolve();
     }
@@ -40,7 +54,7 @@ class o {
         return null != this.assets[e];
     }
     constructor() {
-        r(this, "assets", {}), r(this, "fontManager", void 0);
+        a(this, "assets", {}), a(this, "fontManager", void 0);
     }
 }
-let s = o;
+let c = l;

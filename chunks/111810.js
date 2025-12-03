@@ -40,6 +40,6 @@ let a = (0, r.B)({
             },
         ],
     }),
-    o = (e) => a.useExperiment({ location: e }, { autoTrackExposure: !1 }).canSeeConfetti,
+    o = (e) => !1,
     s = (e) => a.useExperiment({ location: e }, { autoTrackExposure: !0 }).canSeeConfetti,
     l = (e) => a.useExperiment({ location: e }, { autoTrackExposure: !1 }).canPurchase;
