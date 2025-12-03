@@ -1,9 +1,9 @@
-n.d(t, { Z: () => A }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var r = n(54381),
     l = n(473749),
     i = n(120356),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(28664),
     c = n(481060),
     u = n(782568),
@@ -15,135 +15,131 @@ var r = n(54381),
     h = n(74538),
     C = n(381585),
     _ = n(597688),
-    b = n(128922),
-    v = n(38900),
-    x = n(709999),
-    E = n(653126),
-    O = n(786040),
-    S = n(401975),
-    y = n(328626),
-    j = n(849275),
-    k = n(619899),
-    I = n(811847),
-    T = n(215023),
-    L = n(981631),
-    P = n(388032),
-    B = n(219588),
-    N = n(310582);
-let A = (e) => {
+    b = n(653126),
+    v = n(786040),
+    x = n(401975),
+    E = n(328626),
+    O = n(849275),
+    S = n(619899),
+    y = n(811847),
+    j = n(215023),
+    I = n(981631),
+    k = n(388032),
+    T = n(219588),
+    L = n(310582);
+let P = (e) => {
     var t;
     let {
             isLoading: n,
             title: i,
-            sortedSkuIds: A,
-            numVisibleItems: R,
-            prioritizeUserDiscounts: Z,
-            tab: w,
-            buttonContainerClassName: D,
-            orbsSupportedOnly: H,
+            sortedSkuIds: P,
+            numVisibleItems: B,
+            prioritizeUserDiscounts: N,
+            tab: A,
+            buttonContainerClassName: R,
+            orbsSupportedOnly: Z,
         } = e,
-        M = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
-        F = h.ZP.canUseCollectibles(M),
-        W = (0, I.B)("FeedBlock"),
+        w = (0, a.e7)([f.default], () => f.default.getCurrentUser()),
+        H = h.ZP.canUseCollectibles(w),
+        D = (0, y.B)("FeedBlock"),
         {
-            sortType: V,
-            setSortType: U,
-            sortedItems: z,
-            sortOptions: G,
-            shuffleProducts: K,
-            showRecommendationOption: Y,
-        } = (0, j.Z)({
-            sortedSkuIds: A,
-            isPremiumUser: F,
-            prioritizeUserDiscounts: Z,
-            orbsSupportedOnly: H,
+            sortType: M,
+            setSortType: F,
+            sortedItems: W,
+            sortOptions: V,
+            shuffleProducts: U,
+            showRecommendationOption: z,
+        } = (0, O.Z)({
+            sortedSkuIds: P,
+            isPremiumUser: H,
+            prioritizeUserDiscounts: N,
+            orbsSupportedOnly: Z,
         }),
-        q = (0, k.St)(z),
-        J = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
-        Q = (0, o.e7)([g.Z], () => g.Z.isFocused()),
-        X = !J && Q,
-        { animationPhase: $, startAnimation: ee } = (0, y.y)(),
-        et = (0, C.sp)(),
-        en = null != (t = null == et ? void 0 : et.sessionId) ? t : "",
-        er = l.useRef(null),
-        el = l.useCallback(
+        G = (0, S.St)(W),
+        K = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
+        Y = (0, a.e7)([g.Z], () => g.Z.isFocused()),
+        q = !K && Y,
+        { animationPhase: J, startAnimation: Q } = (0, E.y)(),
+        X = (0, C.sp)(),
+        $ = null != (t = null == X ? void 0 : X.sessionId) ? t : "",
+        ee = l.useRef(null),
+        et = l.useCallback(
             (e) => {
-                ee({
+                Q({
                     isShuffling: !1,
-                    onOutroComplete: () => U(e),
+                    onOutroComplete: () => F(e),
                 }),
-                    p.default.track(L.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
-                        page_session_id: en,
+                    p.default.track(I.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
+                        page_session_id: $,
                         sort_type: e,
                     });
             },
-            [ee, U, en],
-        ),
-        ei = b.Z.useConfig({ location: "FeedBlock" }).showCardsV2;
-    return null == M
+            [Q, F, $],
+        );
+    return null == w
         ? null
         : (0, r.jsxs)("div", {
-              className: a()(N.popularPicksSection, N.centeredSection),
+              className: o()(L.popularPicksSection, L.centeredSection),
               children: [
                   (0, r.jsxs)("div", {
-                      className: N.blockHeader,
+                      className: L.blockHeader,
                       children: [
                           (0, r.jsxs)("div", {
-                              className: N.headerLeft,
+                              className: L.headerLeft,
                               children: [
                                   (0, r.jsx)(c.Heading, {
                                       variant: "heading-lg/semibold",
                                       children: i,
                                   }),
-                                  Y &&
+                                  z &&
                                       (0, r.jsx)(s.u, {
-                                          text: P.intl.string(P.t["3taPdj"]),
+                                          text: k.intl.string(k.t["3taPdj"]),
                                           position: "top",
-                                          "aria-label": P.intl.string(P.t["3taPdj"]),
+                                          "aria-label": k.intl.string(k.t["3taPdj"]),
                                           children: (0, r.jsx)(c.P3F, {
                                               onClick: () =>
-                                                  (0, u.Z)(m.Z.getArticleURL(L.BhN.DATA_USED_FOR_RECOMMENDED)),
-                                              className: N.informationIcon,
+                                                  (0, u.Z)(m.Z.getArticleURL(I.BhN.DATA_USED_FOR_RECOMMENDED)),
+                                              className: L.informationIcon,
                                               children: (0, r.jsx)(c.d3s, { size: "sm" }),
                                           }),
                                       }),
                               ],
                           }),
                           (0, r.jsxs)("div", {
-                              className: a()(N.headerRight, { [B.customCursors]: W }),
+                              className: o()(L.headerRight, { [T.customCursors]: D }),
                               children: [
                                   (0, r.jsx)(c.Text, {
                                       variant: "text-md/medium",
-                                      children: P.intl.string(P.t.uaX705),
+                                      children: k.intl.string(k.t.uaX705),
                                   }),
                                   (0, r.jsx)("div", {
-                                      className: D,
+                                      className: R,
                                       children: (0, r.jsx)(c.PhF, {
-                                          options: G,
-                                          select: el,
-                                          className: N.sortSelect,
-                                          popoutClassName: a()({ [B.customCursors]: W }),
-                                          isSelected: (e) => e === V,
+                                          options: V,
+                                          select: et,
+                                          className: L.sortSelect,
+                                          popoutClassName: o()({ [T.customCursors]: D }),
+                                          isSelected: (e) => e === M,
                                           serialize: (e) => e,
                                       }),
                                   }),
                                   (0, r.jsx)("div", {
-                                      className: D,
+                                      className: R,
                                       children: (0, r.jsx)(c.Button, {
                                           variant: "secondary",
-                                          text: P.intl.string(P.t.X3tnc4),
-                                          buttonRef: er,
+                                          text: k.intl.string(k.t.X3tnc4),
+                                          buttonRef: ee,
                                           onClick: () => {
-                                              ee({
+                                              Q({
                                                   isShuffling: !0,
-                                                  onOutroComplete: K,
-                                                  returnRef: er,
+                                                  onOutroComplete: U,
+                                                  returnRef: ee,
                                               }),
-                                                  p.default.track(L.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, {
-                                                      page_session_id: en,
+                                                  p.default.track(I.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, {
+                                                      page_session_id: $,
                                                   });
                                           },
-                                          disabled: $ !== y.g.MOUNTED && $ !== y.g.FINISHED,
+                                          disabled: J !== E.g.MOUNTED && J !== E.g.FINISHED,
                                       }),
                                   }),
                               ],
@@ -151,42 +147,31 @@ let A = (e) => {
                       ],
                   }),
                   (0, r.jsx)("div", {
-                      className: N.feed,
+                      className: L.feed,
                       children: n
                           ? (0, r.jsx)(r.Fragment, {
-                                children: [...Array(12)].map((e, t) =>
-                                    ei ? (0, r.jsx)(S.Z, {}, t + 1) : (0, r.jsx)(v.K, {}, t + 1),
-                                ),
+                                children: [...Array(12)].map((e, t) => (0, r.jsx)(x.Z, {}, t + 1)),
                             })
-                          : q.slice(0, R).map((e, t) => {
+                          : G.slice(0, B).map((e, t) => {
                                 let n,
                                     l = _.Z.getCategoryForProduct(e.skuId);
                                 if (null == e || null == l) return null;
-                                if (X)
-                                    if ($ === y.g.SHUFFLE_OUT)
-                                        return ei
-                                            ? (0, r.jsx)(
-                                                  "div",
-                                                  {
-                                                      className: N.shuffleOutro,
-                                                      children: (0, r.jsx)(S.Z, { skipPulseAnimation: !0 }),
-                                                  },
-                                                  "".concat(e.skuId, "-").concat(t),
-                                              )
-                                            : (0, r.jsx)(
-                                                  "div",
-                                                  {
-                                                      className: N.shuffleOutro,
-                                                      children: (0, r.jsx)("div", { className: N.placeholderCard }),
-                                                  },
-                                                  "".concat(e.skuId, "-").concat(t),
-                                              );
+                                if (q)
+                                    if (J === E.g.SHUFFLE_OUT)
+                                        return (0, r.jsx)(
+                                            "div",
+                                            {
+                                                className: L.shuffleOutro,
+                                                children: (0, r.jsx)(x.Z, { skipPulseAnimation: !0 }),
+                                            },
+                                            "".concat(e.skuId, "-").concat(t),
+                                        );
                                     else
-                                        $ === y.g.SORT_OUT
-                                            ? (n = N.sortChangedOutro)
-                                            : $ === y.g.SHUFFLE_IN
-                                              ? (n = N.shuffleIntro)
-                                              : $ === y.g.SORT_IN && (n = N.sortChangedIntro);
+                                        J === E.g.SORT_OUT
+                                            ? (n = L.sortChangedOutro)
+                                            : J === E.g.SHUFFLE_IN
+                                              ? (n = L.shuffleIntro)
+                                              : J === E.g.SORT_IN && (n = L.sortChangedIntro);
                                 return (0, r.jsx)(
                                     C.k0,
                                     {
@@ -195,25 +180,16 @@ let A = (e) => {
                                             pageSection: "popular picks",
                                             categoryPosition: 2,
                                         },
-                                        children:
-                                            ei && (null == e ? void 0 : e.skuId) != null
-                                                ? (0, r.jsx)("div", {
-                                                      className: n,
-                                                      children: (0, r.jsx)(E.Z, {
-                                                          skuId: null == e ? void 0 : e.skuId,
-                                                          prioritizedCurrency: w === T.AW.ORBS ? O.tA.ORBS : void 0,
-                                                          onClickAnalytics: (0, O.wO)(e, w, et),
-                                                      }),
-                                                  })
-                                                : (0, r.jsx)(x.Z, {
-                                                      product: e,
-                                                      category: l,
-                                                      user: M,
-                                                      tab: w,
-                                                      className: n,
-                                                  }),
+                                        children: (0, r.jsx)("div", {
+                                            className: n,
+                                            children: (0, r.jsx)(b.Z, {
+                                                skuId: e.skuId,
+                                                prioritizedCurrency: A === j.AW.ORBS ? v.tA.ORBS : void 0,
+                                                onClickAnalytics: (0, v.wO)(e, A, X),
+                                            }),
+                                        }),
                                     },
-                                    null == e ? void 0 : e.skuId,
+                                    e.skuId,
                                 );
                             }),
                   }),

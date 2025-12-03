@@ -1,111 +1,77 @@
-n.d(t, { Z: () => L }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var r = n(54381),
     l = n(473749),
     i = n(120356),
-    a = n.n(i),
-    o = n(907331),
+    o = n.n(i),
+    a = n(907331),
     s = n(399606),
     c = n(481060),
     u = n(594174),
     d = n(381585),
-    f = n(128922),
-    g = n(870289),
-    p = n(370039),
-    m = n(937510),
-    h = n(303952),
-    C = n(253355),
-    _ = n(38900),
-    b = n(709999),
-    v = n(653126),
-    x = n(786040),
-    E = n(258939),
-    O = n(81136),
-    S = n(619899),
-    y = n(215023),
-    j = n(887353);
-function k(e) {
-    let { products: t, header: n, category: l } = e,
-        i = (0, s.e7)([u.default], () => u.default.getCurrentUser()),
-        a = (0, S.St)(t),
-        o = f.Z.useConfig({ location: "Products" }).showCardsV2,
-        g = (0, d.sp)();
-    return null == i || 0 === t.length
+    f = n(870289),
+    g = n(370039),
+    p = n(937510),
+    m = n(303952),
+    h = n(253355),
+    C = n(38900),
+    _ = n(653126),
+    b = n(786040),
+    v = n(258939),
+    x = n(81136),
+    E = n(619899),
+    O = n(215023),
+    S = n(887353);
+function y(e) {
+    let { category: t } = e,
+        n = (0, s.e7)([u.default], () => u.default.getCurrentUser()),
+        l = (0, p.l)(t.products),
+        i = (0, g.a)()(l),
+        o = (0, E.St)(i),
+        a = (0, d.sp)();
+    return null == n || 0 === o.length
         ? null
-        : (0, r.jsxs)("div", {
-              children: [
-                  null != n
-                      ? (0, r.jsx)(c.Text, {
-                            className: j.itemTypeTitle,
-                            color: "header-secondary",
-                            variant: "text-sm/bold",
-                            children: n,
-                        })
-                      : (0, r.jsx)(c.LZC, { size: 24 }),
-                  (0, r.jsx)("div", {
-                      className: j.cardsContainer,
-                      children: a.map((e, t) =>
-                          (0, r.jsx)(
-                              d.k0,
+        : (0, r.jsx)("div", {
+              className: S.cardsContainer,
+              children: o.map((e, t) =>
+                  (0, r.jsx)(
+                      d.k0,
+                      {
+                          newValue: { tilePosition: t },
+                          children: (0, r.jsx)(
+                              _.Z,
                               {
-                                  newValue: { tilePosition: t },
-                                  children: o
-                                      ? (0, r.jsx)(
-                                            v.Z,
-                                            {
-                                                skuId: e.skuId,
-                                                skipLimitedTimeCheck: !0,
-                                                onClickAnalytics: (0, x.wO)(e, y.AW.CATALOG, g),
-                                            },
-                                            e.skuId,
-                                        )
-                                      : (0, r.jsx)(
-                                            b.Z,
-                                            {
-                                                category: l,
-                                                product: e,
-                                                user: i,
-                                                tab: y.AW.CATALOG,
-                                                skipLimitedTimeCheck: !0,
-                                            },
-                                            e.skuId,
-                                        ),
+                                  skuId: e.skuId,
+                                  skipLimitedTimeCheck: !0,
+                                  onClickAnalytics: (0, b.wO)(e, O.AW.CATALOG, a),
                               },
                               e.skuId,
                           ),
-                      ),
-                  }),
-              ],
+                      },
+                      e.skuId,
+                  ),
+              ),
           });
 }
-function I(e) {
-    let { category: t } = e,
-        n = (0, m.l)(t.products),
-        l = (0, p.a)()(n);
-    return (0, r.jsx)(k, {
-        products: l,
-        category: t,
-    });
-}
-function T(e) {
+function j(e) {
     let { category: t } = e,
         [n, i] = l.useState(!1),
-        a = (0, o.O)((e) => {
+        o = (0, a.O)((e) => {
             i(e);
         }, 0.15);
     return (0, r.jsxs)("div", {
-        className: j.categoryWrapper,
-        ref: a,
-        children: [(0, r.jsx)(C.Z, { category: t }), (0, r.jsx)(I, { category: t })],
+        className: S.categoryWrapper,
+        ref: o,
+        children: [(0, r.jsx)(h.Z, { category: t }), (0, r.jsx)(y, { category: t })],
     });
 }
-function L(e) {
+function I(e) {
     var t;
-    let { sortedCategories: n, setCategoryRef: i, currentPage: o, handlePageChange: s, initialCategoryId: u } = e,
-        f = (0, d.sp)(),
-        p = (0, E.R)(),
-        m = null != (t = null == f ? void 0 : f.sessionId) ? t : "",
-        { noCache: C, includeUnpublished: b } = (0, O.Z)(),
-        v = l.useMemo(
+    let { sortedCategories: n, setCategoryRef: i, currentPage: a, handlePageChange: s, initialCategoryId: u } = e,
+        g = (0, d.sp)(),
+        p = (0, v.R)(),
+        h = null != (t = null == g ? void 0 : g.sessionId) ? t : "",
+        { noCache: _, includeUnpublished: b } = (0, x.Z)(),
+        E = l.useMemo(
             () =>
                 n
                     .filter((e) => null == e.unpublishedAt || e.unpublishedAt > new Date())
@@ -115,67 +81,67 @@ function L(e) {
                     }),
             [n],
         ),
-        x = l.useRef(void 0);
+        y = l.useRef(void 0);
     l.useEffect(() => {
-        if (null == u || 0 === v.length) {
-            x.current = void 0;
+        if (null == u || 0 === E.length) {
+            y.current = void 0;
             return;
         }
-        if (u === x.current) return;
-        let e = v.findIndex((e) => e.skuId === u);
+        if (u === y.current) return;
+        let e = E.findIndex((e) => e.skuId === u);
         if (-1 === e) return;
-        let t = Math.floor(e / y.kN) + 1;
-        t !== o && s(t), (x.current = u);
-    }, [u, v, s, o]);
-    let S = l.useMemo(() => {
-        let e = (o - 1) * y.kN;
-        return v.slice(e, e + y.kN);
-    }, [v, o]);
+        let t = Math.floor(e / O.kN) + 1;
+        t !== a && s(t), (y.current = u);
+    }, [u, E, s, a]);
+    let I = l.useMemo(() => {
+        let e = (a - 1) * O.kN;
+        return E.slice(e, e + O.kN);
+    }, [E, a]);
     l.useEffect(() => {
-        (0, h.n)({
-            sessionId: m,
-            checkpoint: h.a.SHOP_MOUNTED,
-            tab: y.AW.CATALOG,
+        (0, m.n)({
+            sessionId: h,
+            checkpoint: m.a.SHOP_MOUNTED,
+            tab: O.AW.CATALOG,
             unpublishedCategoriesShown: b,
-            cacheDisabled: C,
+            cacheDisabled: _,
         });
     }, []),
         l.useEffect(() => {
             p ||
-                0 === S.length ||
-                (0, h.n)({
-                    sessionId: m,
-                    checkpoint: h.a.SHOP_RENDERED,
-                    tab: y.AW.CATALOG,
+                0 === I.length ||
+                (0, m.n)({
+                    sessionId: h,
+                    checkpoint: m.a.SHOP_RENDERED,
+                    tab: O.AW.CATALOG,
                     unpublishedCategoriesShown: b,
-                    cacheDisabled: C,
+                    cacheDisabled: _,
                 });
-        }, [m, b, C, p, S.length]);
-    let k = (0, g.FF)("CollectiblesBrowse");
+        }, [h, b, _, p, I.length]);
+    let k = (0, f.FF)("CollectiblesBrowse");
     return p
-        ? (0, r.jsx)(_.Z, {})
+        ? (0, r.jsx)(C.Z, {})
         : (0, r.jsxs)("div", {
-              className: a()(j.categories, { [j.categoriesNoFilter]: !k }),
+              className: o()(S.categories, { [S.categoriesNoFilter]: !k }),
               children: [
-                  S.map((e, t) =>
+                  I.map((e, t) =>
                       (0, r.jsx)(
                           "div",
                           {
                               ref: (t) => i(e.skuId, t),
                               children: (0, r.jsx)(d.k0, {
                                   newValue: { categoryPosition: t },
-                                  children: (0, r.jsx)(T, { category: e }),
+                                  children: (0, r.jsx)(j, { category: e }),
                               }),
                           },
                           e.skuId,
                       ),
                   ),
                   (0, r.jsx)("div", {
-                      className: j.paginationContainer,
+                      className: S.paginationContainer,
                       children: (0, r.jsx)(c.DsT, {
-                          currentPage: o,
-                          totalCount: v.length,
-                          pageSize: y.kN,
+                          currentPage: a,
+                          totalCount: E.length,
+                          pageSize: O.kN,
                           onPageChange: s,
                           disablePaginationGap: !0,
                       }),

@@ -1,146 +1,130 @@
-n.d(t, { Z: () => I }), n(388685), n(35282);
+n.d(t, { Z: () => y }), n(388685), n(35282);
 var r = n(54381),
     l = n(473749),
     i = n(120356),
-    a = n.n(i),
-    o = n(399606),
+    o = n.n(i),
+    a = n(399606),
     s = n(481060),
     c = n(594174),
     u = n(626135),
     d = n(381585),
     f = n(597688),
-    g = n(128922),
-    p = n(370039),
-    m = n(501431),
-    h = n(149705),
-    C = n(303952),
-    _ = n(38900),
-    b = n(709999),
-    v = n(653126),
-    x = n(786040),
-    E = n(401975),
-    O = n(81136),
-    S = n(440617),
-    y = n(981631),
-    j = n(891131);
-let k = { flattenProductVariants: !0 };
-function I(e) {
+    g = n(370039),
+    p = n(501431),
+    m = n(149705),
+    h = n(303952),
+    C = n(653126),
+    _ = n(786040),
+    b = n(401975),
+    v = n(81136),
+    x = n(440617),
+    E = n(981631),
+    O = n(891131);
+let S = { flattenProductVariants: !0 };
+function y(e) {
     var t;
-    let { isFetchingCategories: n, scrollerRef: i, tab: I } = e,
-        T = (0, d.sp)(),
-        L = null != (t = null == T ? void 0 : T.sessionId) ? t : "",
-        { noCache: P, includeUnpublished: B } = (0, O.Z)(),
-        N = (0, o.e7)([c.default], () => c.default.getCurrentUser()),
-        { skus: A, currentPage: R, totalCount: Z, isFetchingResults: w } = (0, h.a)(),
-        D = (0, o.Wu)([f.Z], () => f.Z.getProductsBySkus(A)),
-        H = l.useCallback(() => {
+    let { isFetchingCategories: n, scrollerRef: i, tab: y } = e,
+        j = (0, d.sp)(),
+        I = null != (t = null == j ? void 0 : j.sessionId) ? t : "",
+        { noCache: k, includeUnpublished: T } = (0, v.Z)(),
+        L = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
+        { skus: P, currentPage: B, totalCount: N, isFetchingResults: A } = (0, m.a)(),
+        R = (0, a.Wu)([f.Z], () => f.Z.getProductsBySkus(P)),
+        Z = l.useCallback(() => {
             var e;
             null == i || null == (e = i.current) || e.scrollToTop({ animate: !0 });
         }, [i]),
-        M = null == A ? void 0 : A.join("");
+        w = null == P ? void 0 : P.join("");
     l.useEffect(() => {
-        H();
-    }, [M, H]);
-    let F = (0, p.a)(),
-        W = l.useMemo(() => F(D), [F, D]);
+        Z();
+    }, [w, Z]);
+    let H = (0, g.a)(),
+        D = l.useMemo(() => H(R), [H, R]);
     l.useEffect(() => {
         n ||
-            (0, C.n)({
-                sessionId: L,
-                checkpoint: C.a.SHOP_RENDERED,
-                tab: I,
-                unpublishedCategoriesShown: B,
-                cacheDisabled: P,
+            (0, h.n)({
+                sessionId: I,
+                checkpoint: h.a.SHOP_RENDERED,
+                tab: y,
+                unpublishedCategoriesShown: T,
+                cacheDisabled: k,
             });
-    }, [L, B, P, n, I]);
-    let V = l.useRef(null),
-        { setQueryPageSize: U, setQueryPageOffset: z, queryPageSize: G } = (0, m.S)(),
-        [K, Y] = l.useState(!1),
-        q = n || w || null == N;
+    }, [I, T, k, n, y]);
+    let M = l.useRef(null),
+        { setQueryPageSize: F, setQueryPageOffset: W, queryPageSize: V } = (0, p.S)(),
+        [U, z] = l.useState(!1),
+        G = n || A || null == L;
     l.useEffect(() => {
-        if (q) return void Y(!1);
-        W.length > 0 && Y(!0);
-    }, [q, W.length]);
-    let J = G > 0 && !q && 0 === W.length;
+        if (G) return void z(!1);
+        D.length > 0 && z(!0);
+    }, [G, D.length]);
+    let K = V > 0 && !G && 0 === D.length;
     l.useEffect(() => {
         let e = new ResizeObserver(() => {
-            null != V.current && U(Math.floor(5 * getComputedStyle(V.current).gridTemplateColumns.split(/\s+/).length));
+            null != M.current && F(Math.floor(5 * getComputedStyle(M.current).gridTemplateColumns.split(/\s+/).length));
         });
-        if (null != V.current) return e.observe(V.current), () => e.disconnect();
-    }, [U]);
-    let Q = l.useCallback(
-            (e) => {
-                u.default.track(y.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                    collectibles_shop_session_id: null == T ? void 0 : T.sessionId,
-                    page_section: null == T ? void 0 : T.pageSection,
-                    page_category: null == T ? void 0 : T.pageCategory,
-                    page_index: e,
-                    page_size: G,
-                    cta_name: "filter results page ".concat(e),
-                    page_type: "catalog",
-                }),
-                    z((e - 1) * G);
-            },
-            [T, G, z],
-        ),
-        X = g.Z.useConfig({ location: "CollectiblesFilterableShop" }).showCardsV2;
-    return (0, r.jsxs)(x.zp.Provider, {
-        value: k,
+        if (null != M.current) return e.observe(M.current), () => e.disconnect();
+    }, [F]);
+    let Y = l.useCallback(
+        (e) => {
+            u.default.track(E.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                collectibles_shop_session_id: null == j ? void 0 : j.sessionId,
+                page_section: null == j ? void 0 : j.pageSection,
+                page_category: null == j ? void 0 : j.pageCategory,
+                page_index: e,
+                page_size: V,
+                cta_name: "filter results page ".concat(e),
+                page_type: "catalog",
+            }),
+                W((e - 1) * V);
+        },
+        [j, V, W],
+    );
+    return (0, r.jsxs)(_.zp.Provider, {
+        value: S,
         children: [
             (0, r.jsxs)("div", {
-                className: a()({ [j.productsEmpty]: J }),
+                className: o()({ [O.productsEmpty]: K }),
                 children: [
-                    J && (0, r.jsx)(S.Z, {}),
+                    K && (0, r.jsx)(x.Z, {}),
                     (0, r.jsxs)("div", {
-                        className: a()(j.products, { [j.loadIn]: K }),
-                        ref: V,
+                        className: o()(O.products, { [O.loadIn]: U }),
+                        ref: M,
                         children: [
-                            q && [...Array(G)].map((e, t) => (X ? (0, r.jsx)(E.Z, {}, t) : (0, r.jsx)(_.K, {}, t))),
-                            !q &&
-                                W.map((e, t) => {
-                                    let n = f.Z.getCategory(e.categorySkuId);
-                                    return null == n
+                            G && [...Array(V)].map((e, t) => (0, r.jsx)(b.Z, {}, t)),
+                            !G &&
+                                D.map((e, t) =>
+                                    null == f.Z.getCategory(e.categorySkuId)
                                         ? null
                                         : (0, r.jsx)(
                                               d.k0,
                                               {
                                                   newValue: { tilePosition: t },
-                                                  children: X
-                                                      ? (0, r.jsx)(
-                                                            v.Z,
-                                                            {
-                                                                skuId: e.skuId,
-                                                                onClickAnalytics: (0, x.wO)(e, I, T),
-                                                            },
-                                                            e.skuId,
-                                                        )
-                                                      : (0, r.jsx)(
-                                                            b.Z,
-                                                            {
-                                                                product: e,
-                                                                user: N,
-                                                                category: n,
-                                                                tab: I,
-                                                            },
-                                                            e.skuId,
-                                                        ),
+                                                  children: (0, r.jsx)(
+                                                      C.Z,
+                                                      {
+                                                          skuId: e.skuId,
+                                                          onClickAnalytics: (0, _.wO)(e, y, j),
+                                                      },
+                                                      e.skuId,
+                                                  ),
                                               },
                                               e.skuId,
-                                          );
-                                }),
+                                          ),
+                                ),
                         ],
                     }),
                 ],
             }),
-            Z > G &&
+            N > V &&
                 (0, r.jsx)("div", {
-                    className: j.paginationContainer,
+                    className: O.paginationContainer,
                     children: (0, r.jsx)("div", {
                         children: (0, r.jsx)(s.DsT, {
-                            currentPage: R,
-                            totalCount: Z,
-                            pageSize: G,
-                            onPageChange: Q,
+                            currentPage: B,
+                            totalCount: N,
+                            pageSize: V,
+                            onPageChange: Y,
                             disablePaginationGap: !0,
                         }),
                     }),
