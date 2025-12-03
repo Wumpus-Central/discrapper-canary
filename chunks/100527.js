@@ -437,6 +437,7 @@ var r = (function (e) {
         (e.CONFETTI_POTION_MODAL = "confetti potion modal"),
         (e.GO_LIVE_MODAL_V2 = "go live modal v2"),
         (e.GO_LIVE_MODAL_SETTINGS_SELECTION = "go live modal settings selection"),
+        (e.CHECKPOINT = "checkpoint"),
         (e.APP_DMS_QUICK_LAUNCHER = "app_dms_quick_launcher"),
         (e.APP_DMS_QUICK_LAUNCHER_FRECENCY = "app_dms_quick_launcher_frecency"),
         (e.APP_DMS_QUICK_LAUNCHER_RECOMMENDATIONS = "app_dms_quick_launcher_recommendations"),
