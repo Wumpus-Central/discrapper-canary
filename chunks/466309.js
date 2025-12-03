@@ -27,7 +27,7 @@ let f = function (e) {
                 variant: "heading-xxl/extrabold",
                 color: h,
                 tag: "span",
-                children: (0, r.jsx)("span", { children: _ }),
+                children: _,
             }),
             (0, r.jsxs)(o.Text, {
                 variant: "text-xs/medium",
