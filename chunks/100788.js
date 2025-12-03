@@ -1,6 +1,7 @@
-n.d(t, { s: () => h });
-var r = n(54381),
-    i = n(512722),
+n.d(t, { z: () => g }), n(415506);
+var r = n(54381);
+n(473749);
+var i = n(512722),
     a = n.n(i),
     o = n(481060),
     s = n(409813),
@@ -39,40 +40,66 @@ function m(e) {
     }
     return e;
 }
-let h = (e) => {
-    let { paymentModalStepProps: t } = e,
-        { unifiedCheckoutStepProps: n } = (0, f.Li)(),
-        i = n[s.h8.REVIEW];
-    a()(null != i, "Unified review step props are not set");
-    let {
-        reviewBodyContent: _,
-        reviewBodyLegalContent: h,
-        errorMessage: g,
-        warningMessage: E,
-        primaryCTAButtonProps: b,
-        SideEffectComponent: y,
-    } = i;
-    return (0, r.jsxs)(r.Fragment, {
-        children: [
-            null != y ? (0, r.jsx)(y, m({}, t)) : null,
-            (0, r.jsx)(l.Z, {}),
-            (0, r.jsxs)(c.C3, {
-                children: [
-                    (0, r.jsxs)(o.Kqy, {
-                        direction: "vertical",
-                        gap: 8,
-                        children: [
-                            null != g ? (0, r.jsx)(d.vw, { message: g }) : null,
-                            null != E ? (0, r.jsx)(u.Z, { message: E }) : null,
-                        ],
-                    }),
-                    (0, r.jsxs)("div", {
-                        className: p.stepBody,
-                        children: [_, h],
-                    }),
-                ],
-            }),
-            (0, r.jsx)(c.O3, { children: (0, r.jsx)(d.Ds, { primaryCTAButtonProps: b }) }),
-        ],
-    });
-};
+let h = (e) => (0, r.jsx)(E, m({}, e)),
+    g = (e) => {
+        let { paymentModalStepProps: t } = e,
+            n = (0, f.Li)(),
+            { unifiedCheckoutStepMappings: i, renderModalProps: o } = n,
+            l = i[s.h8.REVIEW];
+        if ((a()(null != l, "Unified review step config is not set"), "StepController" in l)) {
+            if (!n.enableStepControllers) throw Error("Step controllers are not enabled in Unified Checkout Context");
+            let e = l.StepController,
+                { checkoutContext: i } = n;
+            return (0, r.jsx)(e, {
+                renderStep: h,
+                checkoutContext: i,
+                paymentModalStepProps: t,
+                renderModalProps: o,
+            });
+        }
+        let c = l.directProps;
+        return (0, r.jsx)(E, {
+            paymentModalStepProps: t,
+            unifiedStepProps: c,
+        });
+    },
+    E = (e) => {
+        let { paymentModalStepProps: t, unifiedStepProps: n } = e,
+            {
+                isStepLoading: i,
+                reviewBodyContent: a,
+                reviewBodyLegalContent: s,
+                errorMessage: f,
+                warningMessage: _,
+                primaryCTAButtonProps: h,
+                SideEffectComponent: g,
+            } = n;
+        return i
+            ? (0, r.jsx)("div", {
+                  className: p.stepBody,
+                  children: (0, r.jsx)(o.$jN, { type: o.$jN.Type.WANDERING_CUBES }),
+              })
+            : (0, r.jsxs)(r.Fragment, {
+                  children: [
+                      null != g ? (0, r.jsx)(g, m({}, t)) : null,
+                      (0, r.jsx)(l.Z, {}),
+                      (0, r.jsxs)(c.C3, {
+                          children: [
+                              (0, r.jsxs)(o.Kqy, {
+                                  direction: "vertical",
+                                  gap: 8,
+                                  children: [
+                                      null != f ? (0, r.jsx)(d.vw, { message: f }) : null,
+                                      null != _ ? (0, r.jsx)(u.Z, { message: _ }) : null,
+                                  ],
+                              }),
+                              (0, r.jsxs)("div", {
+                                  className: p.stepBody,
+                                  children: [a, s],
+                              }),
+                          ],
+                      }),
+                      (0, r.jsx)(c.O3, { children: (0, r.jsx)(d.Ds, { primaryCTAButtonProps: h }) }),
+                  ],
+              });
+    };

@@ -1,20 +1,17 @@
 n.d(t, {
-    P: () => p,
-    X: () => _,
+    Pv: () => _,
+    XF: () => E,
 });
 var r = n(54381),
-    i = n(762853),
-    a = n(409813),
-    o = n(126982),
-    s = n(336079),
-    l = n(922987),
-    c = n(748714),
-    u = n(388032);
-let d = (e) => {
-        let { handleClose: t } = e;
-        return (0, l.PR)({ handleClose: t }), null;
-    },
-    f = (e) => {
+    i = n(473749),
+    a = n(467368),
+    o = n(409813),
+    s = n(126982),
+    l = n(336079),
+    c = n(922987),
+    u = n(748714),
+    d = n(388032);
+let f = (e) => {
         let {
                 skuId: t,
                 analyticsSourceLocation: n,
@@ -22,110 +19,156 @@ let d = (e) => {
                 orbProductContext: a,
                 isRedeeming: o,
                 orbRedemptionError: s,
-                onRedeemVirtualCurrency: f,
-                isRental: p,
+                onRedeemVirtualCurrency: l,
+                isRental: f,
             } = e,
             {
-                isStepLoading: _,
-                orbPriceAmount: m,
-                orbBalanceToDisplay: h,
-                onClickCheckout: g,
-                showCollectiblesDiscountWarning: E,
-                errorMessage: b,
-            } = (0, l.sF)({
+                isStepLoading: p,
+                orbPriceAmount: _,
+                orbBalanceToDisplay: m,
+                onClickCheckout: h,
+                showCollectiblesDiscountWarning: g,
+                errorMessage: E,
+            } = (0, c.sF)({
                 skuId: t,
                 analyticsSourceLocation: n,
                 analyticsLocations: i,
                 orbProductContext: a,
                 orbRedemptionError: s,
-                onRedeemVirtualCurrency: f,
+                onRedeemVirtualCurrency: l,
             }),
             {
-                disabled: y,
-                tooltipText: O,
-                text: v,
-            } = (0, c.Do)({
-                orbBalance: h,
-                orbPriceAmount: m,
-                isRental: p,
+                disabled: b,
+                tooltipText: y,
+                text: O,
+            } = (0, u.Do)({
+                orbBalance: m,
+                orbPriceAmount: _,
+                isRental: f,
             });
         return {
-            isStepLoading: _,
+            isStepLoading: p,
             skuId: t,
-            reviewBodyContent: (0, r.jsx)(c.A3, {
+            reviewBodyContent: (0, r.jsx)(u.A3, {
                 skuId: t,
-                orbPriceAmount: m,
-                orbBalance: h,
+                orbPriceAmount: _,
+                orbBalance: m,
                 renderWithoutContainer: !0,
             }),
             reviewBodyLegalContent: null,
-            SideEffectComponent: d,
             primaryCTAButtonProps: {
-                onClick: g,
+                onClick: h,
                 loading: o,
-                text: v,
-                disabled: y,
-                tooltipText: O,
+                text: O,
+                disabled: b,
+                tooltipText: y,
             },
-            warningMessage: E ? u.intl.format(u.t.fsOXXO, {}) : null,
-            errorMessage: b,
+            warningMessage: g ? d.intl.format(d.t.fsOXXO, {}) : null,
+            errorMessage: E,
         };
     },
     p = (e) => {
+        var t;
+        let {
+                renderStep: n,
+                paymentModalStepProps: r,
+                checkoutContext: {
+                    skuId: i,
+                    analyticsLocations: a,
+                    analyticsSourceLocation: o,
+                    flowSpecificOptions: s,
+                },
+            } = e,
+            l = null != (t = s.isRental) && t,
+            { handleClose: u } = r;
+        (0, c.PR)({ handleClose: u });
+        let { orbProductContext: d, isRedeeming: p, orbRedemptionError: _, onRedeemVirtualCurrency: m } = g(),
+            h = f({
+                skuId: i,
+                analyticsLocations: a,
+                analyticsSourceLocation: o,
+                orbProductContext: d,
+                isRedeeming: p,
+                orbRedemptionError: _,
+                onRedeemVirtualCurrency: m,
+                isRental: l,
+            });
+        return n({
+            unifiedStepProps: h,
+            paymentModalStepProps: r,
+        });
+    },
+    _ = (e) => {
         let { onClose: t, step: n } = e;
-        return (0, r.jsx)(o.Z, {
+        return (0, r.jsx)(s.Z, {
             isOrbCheckout: !0,
             step: n,
             onClose: () => t(!1),
         });
     },
-    _ = (e) => {
+    m = (0, a.Dz)(),
+    h = (0, i.createContext)({
+        isRedeeming: !1,
+        orbRedemptionError: null,
+        orbProductContext: null,
+        onRedeemVirtualCurrency: () => {},
+    }),
+    g = () => (0, i.useContext)(h),
+    E = (e) => {
         var t;
         let {
                 skuId: n,
-                loadId: o,
-                onCheckoutSuccess: c,
-                analyticsLocations: u,
-                analyticsSourceLocation: d,
-                renderModalProps: p,
-                flowSpecificOptions: _,
-                children: m,
+                loadId: i,
+                onCheckoutSuccess: a,
+                analyticsLocations: s,
+                analyticsSourceLocation: u,
+                renderModalProps: d,
+                flowSpecificOptions: f,
+                children: _,
             } = e,
-            h = null != (t = _.isRental) && t,
+            g = null != (t = f.isRental) && t,
             {
-                orbProductContext: g,
-                isRedeeming: E,
-                orbRedemptionError: b,
-                onRedeemVirtualCurrency: y,
-            } = (0, s.Gw)({
+                orbProductContext: E,
+                isRedeeming: b,
+                orbRedemptionError: y,
+                onRedeemVirtualCurrency: O,
+            } = (0, l.Gw)({
                 skuId: n,
-                loadId: o,
-                onCheckoutSuccess: c,
-                analyticsLocations: u,
-                isRental: h,
+                loadId: i,
+                onCheckoutSuccess: a,
+                analyticsLocations: s,
+                isRental: g,
             }),
-            O = (0, l.HR)({
-                onClose: p.onClose,
+            v = (0, c.HR)({
+                onClose: d.onClose,
                 skuId: n,
-                analyticsLocations: u,
-                analyticsSourceLocation: d,
-                orbProductContext: g,
-            }),
-            v = f({
-                skuId: n,
-                analyticsLocations: u,
-                analyticsSourceLocation: d,
-                orbProductContext: g,
-                isRedeeming: E,
-                orbRedemptionError: b,
-                onRedeemVirtualCurrency: y,
-                isRental: h,
+                analyticsLocations: s,
+                analyticsSourceLocation: u,
+                orbProductContext: E,
             });
-        return (0, r.jsx)(i.QX.Provider, {
+        return (0, r.jsx)(m.Provider, {
             value: {
-                unifiedCheckoutStepProps: { [a.h8.REVIEW]: v },
-                paymentModalProps: O,
+                enableStepControllers: !0,
+                unifiedCheckoutStepMappings: { [o.h8.REVIEW]: { StepController: p } },
+                checkoutContext: {
+                    loadId: i,
+                    skuId: n,
+                    onCheckoutSuccess: a,
+                    analyticsLocations: s,
+                    analyticsSourceLocation: u,
+                    flowSpecificOptions: f,
+                },
+                paymentModalProps: v,
+                renderModalProps: d,
             },
-            children: m,
+            children: (0, r.jsx)(h.Provider, {
+                value: {
+                    orbProductContext: E,
+                    isRedeeming: b,
+                    orbRedemptionError: y,
+                    onRedeemVirtualCurrency: O,
+                },
+                children: _,
+            }),
         });
     };

@@ -5,9 +5,16 @@ var a = t(54381),
     r = t(791785),
     c = t(467368);
 let l = (e) => {
-        let { skuId: n, applicationId: t, transitionState: i, analyticsLocations: o, renderHeader: l } = e,
-            { paymentModalProps: s } = (0, c.Li)(),
-            d = null != s && null != s.onClose ? s.onClose : () => {};
+        let {
+                skuId: n,
+                applicationId: t,
+                transitionState: i,
+                analyticsLocations: o,
+                renderHeader: l,
+                paymentModalVersion: s = "v2",
+            } = e,
+            { paymentModalProps: d } = (0, c.Li)(),
+            u = null != d && null != d.onClose ? d.onClose : () => {};
         return (0, a.jsx)(
             r.PaymentModal,
             (function (e) {
@@ -38,14 +45,15 @@ let l = (e) => {
                 {
                     applicationId: t,
                     transitionState: i,
-                    onClose: d,
+                    onClose: u,
                     hideShadow: !0,
                     skuId: n,
                     renderHeader: l,
                     initialPlanId: null,
                     analyticsLocations: o,
+                    paymentModalVersion: s,
                 },
-                s,
+                d,
             ),
         );
     },

@@ -16,8 +16,8 @@ let o = {
     orb_checkout: {
         implemented: !0,
         flowType: "orb_checkout",
-        UnifiedCheckoutContextProvider: r.X,
-        UnifiedCheckoutCustomHeader: r.P,
+        UnifiedCheckoutContextProvider: r.XF,
+        UnifiedCheckoutCustomHeader: r.Pv,
         purchaseType: i.GZQ.ONE_TIME,
     },
     premium_checkout: {
