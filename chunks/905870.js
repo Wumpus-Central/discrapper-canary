@@ -193,9 +193,9 @@ class B extends a.Z {
     }
     trackPartitionAllocPerformanceStats() {
         var e, t, n;
-        let r = _.Z.getPartitionAllocatorStats();
+        let r = _.Z.getMemoryHeapStats();
         if (null == r) return;
-        let i = null != (e = r.total_alloc_kb) ? e : 0;
+        let i = null != (e = r.usedHeapSize) ? e : 0;
         if (!this._paHeapHooksInstalled && i > P) {
             let e = _.Z.enablePAMemoryProfiler({
                 allocationThresholdKB: D,

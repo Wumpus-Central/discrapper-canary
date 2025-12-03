@@ -39,10 +39,10 @@ let v = (e) => {
                 (null == y || l
                     ? !E && !x && (0, f.Yq)(t.skuId)
                         ? (L = p.Zh.NEW)
-                        : null != v && 1 === v
-                          ? (L = p.Zh.ONE_DAY_RENTAL)
-                          : null != v && 3 === v
-                            ? (L = p.Zh.THREE_DAY_RENTAL)
+                        : null != v && 3 === v
+                          ? (L = p.Zh.THREE_DAY_RENTAL)
+                          : null != v && 7 === v
+                            ? (L = p.Zh.SEVEN_DAY_RENTAL)
                             : null != v
                               ? (L = p.Zh.RENTAL)
                               : T
@@ -71,11 +71,11 @@ let v = (e) => {
             case p.Zh.ORBS_EXCLUSIVE:
                 P = _.intl.string(_.t["0TmQRG"]);
                 break;
-            case p.Zh.ONE_DAY_RENTAL:
-                P = _.intl.string(_.t["9dHf8O"]);
-                break;
             case p.Zh.THREE_DAY_RENTAL:
                 P = _.intl.string(_.t["52UXCo"]);
+                break;
+            case p.Zh.SEVEN_DAY_RENTAL:
+                P = _.intl.string(_.t.FRR2s2);
                 break;
             case p.Zh.RENTAL:
                 P = _.intl.string(_.t.VgsFa1);

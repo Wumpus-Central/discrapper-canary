@@ -36,8 +36,8 @@ var b = (function (e) {
             (e.ORBS_EXCLUSIVE = "orbs_exclusive"),
             (e.LIMITED_TIME = "limited_time"),
             (e.NITRO_EXCLUSIVE = "nitro_exclusive"),
-            (e.ONE_DAY_RENTAL = "one_day_rental"),
             (e.THREE_DAY_RENTAL = "three_day_rental"),
+            (e.SEVEN_DAY_RENTAL = "seven_day_rental"),
             (e.RENTAL = "rental"),
             e
         );

@@ -1,9 +1,9 @@
 n.d(e, {
     $0: () => M,
-    Xw: () => v,
+    Xw: () => C,
     cf: () => L,
     f1: () => N,
-    ys: () => C,
+    ys: () => v,
 }),
     n(314940),
     n(539854),
@@ -34,7 +34,7 @@ var i = n(473749),
     T = n(956994),
     _ = n(388032);
 let k = (t) => (null != t ? _.intl.format(_.t["4kp0AB"], { itemName: t }) : null),
-    v = (t) => {
+    C = (t) => {
         let {
             product: e,
             overrideTitle: n,
@@ -46,10 +46,10 @@ let k = (t) => (null != t ? _.intl.format(_.t["4kp0AB"], { itemName: t }) : null
         } = t;
         if (null != n) return n;
         if (null != s)
-            return 1 === s
-                ? _.intl.string(_.t.vAV62L)
-                : 3 === s
-                  ? _.intl.string(_.t["5Gltxj"])
+            return 3 === s
+                ? _.intl.string(_.t["5Gltxj"])
+                : 7 === s
+                  ? _.intl.string(_.t.UpxLQN)
                   : _.intl.string(_.t.sYO0Wl);
         if (R.Vt.ORB_PROFILE_BADGE === e.skuId) return _.intl.string(T.default.nvaTQq);
         if (R.Vt.FRACTIONAL_PREMIUM === e.skuId)
@@ -58,7 +58,7 @@ let k = (t) => (null != t ? _.intl.format(_.t["4kp0AB"], { itemName: t }) : null
         if (i && !r) return _.intl.string(_.t.IMffmm);
         else return _.intl.formatToPlainString(_.t.YNaxMp, { itemName: l });
     },
-    C = (t) => {
+    v = (t) => {
         let {
             product: e,
             overrideDescription: n,

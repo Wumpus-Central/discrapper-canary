@@ -15,10 +15,10 @@ function d(e) {
             ((t = d.type),
             (n = p),
             null != (i = f)
-                ? 1 === i
-                    ? c.intl.string(c.t["9dHf8O"])
-                    : 3 === i
-                      ? c.intl.string(c.t["52UXCo"])
+                ? 3 === i
+                    ? c.intl.string(c.t["52UXCo"])
+                    : 7 === i
+                      ? c.intl.string(c.t.FRR2s2)
                       : c.intl.string(c.t.VgsFa1)
                 : n
                   ? c.intl.string(c.t["0TmQRG"])
