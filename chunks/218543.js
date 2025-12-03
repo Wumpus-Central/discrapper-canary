@@ -213,6 +213,7 @@ class m {
             a(this, "renderMessagesWithCache", new p("\uD83C\uDFA8", "React Render Cached Messages", !0)),
             a(this, "firstRowGenerator", new f("\uD83C\uDFA8", "RowGenerator.generate()")),
             a(this, "displayMessagesWithCache", new p("\uD83D\uDDA5️", "Display Cached Messages", !1, !0)),
+            a(this, "firstRenderAfterReadyPayload", new p("\uD83C\uDFA8", "First Render after Ready Payload", !0)),
             a(this, "renderLatestMessages", new p("\uD83C\uDFA8", "React Render Latest Messages")),
             a(this, "displayLatestMessages", new p("\uD83D\uDDA5️", "Display Latest Messages")),
             a(this, "initialGuild", new f("\uD83C\uDF10", "Initial Guild")),
@@ -379,6 +380,17 @@ class h extends m {
                     this.extraProperties.time_first_native_message_render_end = d(n, t.timestamp);
             }
     }
+    serializeAppStartupMetrics() {
+        return {
+            ready_packing_algorithm: this.readyProperties.packing_algorithm,
+            ready_unpack_duration_ms: this.readyProperties.unpack_duration_ms,
+        };
+    }
+    serializeWebPerfStartupMetrics(e) {
+        return l(o({}, this.serializeAppStartupMetrics()), {
+            time_first_render_after_ready_end: this.firstRenderAfterReadyPayload.serialize(e),
+        });
+    }
     serializeTTITracker(e) {
         var t, i, a, s, c, u;
         let d = this.getStartTime(e),
@@ -388,8 +400,9 @@ class h extends m {
                     var t;
                     return null != (t = e.delta) ? t : 0;
                 })
-                .sum();
-        return l(o({}, this.extraProperties), {
+                .sum(),
+            p = this.serializeAppStartupMetrics();
+        return l(o({}, this.extraProperties, p), {
             time_load_index_start: this.loadIndex.serializeStart(d),
             time_load_index_end: this.loadIndex.serializeEnd(d),
             time_begin_fast_connect_start: this.beginFastConnect.serializeStart(d),
@@ -462,8 +475,6 @@ class h extends m {
             identify_compressed_byte_size: this.readyProperties.identify_compressed_byte_size,
             identify_uncompressed_byte_size: this.readyProperties.identify_uncompressed_byte_size,
             ready_compression_algorithm: this.readyProperties.compression_algorithm,
-            ready_packing_algorithm: this.readyProperties.packing_algorithm,
-            ready_unpack_duration_ms: this.readyProperties.unpack_duration_ms,
             is_reconnect: this.readyProperties.is_reconnect,
             is_fast_connect: this.readyProperties.is_fast_connect,
             did_force_clear_guild_hashes: this.readyProperties.did_force_clear_guild_hashes,

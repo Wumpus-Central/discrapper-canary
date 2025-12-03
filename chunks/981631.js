@@ -3875,6 +3875,7 @@ var np = (function (e) {
             (e.APP_NATIVE_CRASH = "app_native_crash"),
             (e.APP_UI_VIEWED = "app_ui_viewed"),
             (e.APP_UI_VIEWED2 = "app_ui_viewed2"),
+            (e.APP_WEB_PERF_STARTUP_METRICS = "app_web_perf_startup_metrics"),
             (e.APP_NETWORK_USAGE = "app_network_usage"),
             (e.BACKGROUND_SYNC_COMPLETED = "background_sync_completed"),
             (e.APP_LAUNCH_COMPLETED = "app_launch_completed"),

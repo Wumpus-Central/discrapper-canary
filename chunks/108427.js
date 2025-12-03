@@ -1,10 +1,16 @@
-n.d(t, { e: () => m }), n(388685), n(35282);
+n.d(t, {
+    e: () => h,
+    t: () => g,
+}),
+    n(388685),
+    n(35282);
 var r = n(772848),
     i = n(579806),
     a = n(626135),
     o = n(998502),
-    s = n(981631);
-function l(e, t, n) {
+    s = n(218543),
+    l = n(981631);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,7 +23,7 @@ function l(e, t, n) {
         e
     );
 }
-function c(e) {
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -28,12 +34,12 @@ function c(e) {
                 }),
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                c(e, t, n[t]);
             });
     }
     return e;
 }
-function u(e, t) {
+function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -45,34 +51,44 @@ function u(e, t) {
     }
     return n;
 }
-function d(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
+            : d(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function f() {
+function p() {
     return window.GLOBAL_ENV.HTML_TIMESTAMP;
 }
-class p {
+class _ {
     trackEvent(e) {
         let t = Date.now();
         requestIdleCallback(() => {
             a.default.track(
-                s.rMx.APP_UI_VIEWED,
-                d(c({}, h(), g()), {
+                l.rMx.APP_UI_VIEWED,
+                f(u({}, E(), b()), {
                     load_id: this.loadId,
                     screen_name: e,
-                    duration_ms_since_app_opened: t - f(),
+                    duration_ms_since_app_opened: t - p(),
                     app_hardware_acceleration_enabled: o.ZP.getEnableHardwareAcceleration(),
                 }),
             );
         });
+    }
+    trackTTI() {
+        window.__TTI_COMPLETED ||
+            ((window.__TTI_COMPLETED = !0),
+            requestIdleCallback(() => {
+                let e = p();
+                s.Z.firstRenderAfterReadyPayload.record();
+                let t = s.Z.serializeWebPerfStartupMetrics(e);
+                a.default.track(l.rMx.APP_WEB_PERF_STARTUP_METRICS, u({ load_id: this.loadId }, t));
+            }));
     }
     trackAppUIViewed(e) {
         if (!this.appUIViewed) {
@@ -84,14 +100,17 @@ class p {
         }
     }
     constructor() {
-        l(this, "loadId", (0, r.Z)()), l(this, "appUIViewed", !1);
+        c(this, "loadId", (0, r.Z)()), c(this, "appUIViewed", !1);
     }
 }
-let _ = new p();
-function m(e) {
-    _.trackAppUIViewed(e);
+let m = new _();
+function h(e) {
+    m.trackAppUIViewed(e);
 }
-function h() {
+function g() {
+    m.trackTTI();
+}
+function E() {
     var e, t, n;
     let r = "--campaign-id=";
     for (let a of null !=
@@ -104,7 +123,7 @@ function h() {
         if (a.startsWith(r)) return { referrer: a.substr(r.length) };
     return {};
 }
-function g() {
+function b() {
     let e = !1,
         t = {
             total_compressed_byte_size: 0,
