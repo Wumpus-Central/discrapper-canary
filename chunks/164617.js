@@ -14,7 +14,9 @@ n.r(t),
         PerfTestRive: () => _.t,
         PulseGradientRive: () => m.z,
         UnlockRive: () => h.a,
-        WandAndSparklesRive: () => g.x,
+        VibingWumpusBackgroundRive: () => E.b,
+        VibingWumpusRive: () => g.g,
+        WandAndSparklesRive: () => b.x,
     });
 var r = n(47985),
     i = n(318345),
@@ -30,4 +32,6 @@ var r = n(47985),
     _ = n(734428),
     m = n(984696),
     h = n(682376),
-    g = n(963969);
+    g = n(602328),
+    E = n(237542),
+    b = n(963969);
