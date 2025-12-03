@@ -1,12 +1,12 @@
 n.d(t, {
-    Gq: () => Y,
-    IY: () => J,
-    Ub: () => Q,
-    nT: () => K,
-    ql: () => V,
-    rS: () => X,
-    uZ: () => W,
-    wp: () => q,
+    IY: () => $,
+    Ub: () => J,
+    fm: () => V,
+    nT: () => z,
+    ql: () => H,
+    rS: () => Q,
+    uZ: () => K,
+    wp: () => X,
 });
 var r = n(54381);
 n(473749);
@@ -85,6 +85,26 @@ function F(e) {
     });
 }
 function V(e) {
+    let { isApplicationHome: t } = e;
+    return (0, r.jsx)(r.Fragment, {
+        children: x.dO.map((e, n) => {
+            let { Icon: i, getText: a } = e;
+            return (0, r.jsx)(
+                F,
+                {
+                    Icon: i,
+                    text: a(),
+                    className: U.itemApplicationHome,
+                    textVariant: "text-sm/normal",
+                    enablePremiumBrandRefresh: !0,
+                    isApplicationHome: t,
+                },
+                n,
+            );
+        }),
+    });
+}
+function H(e) {
     let { isApplicationHome: t, enablePremiumBrandRefresh: n } = e,
         i = t && !n ? x.X : x.FV;
     return (0, r.jsx)(r.Fragment, {
@@ -105,7 +125,7 @@ function V(e) {
         }),
     });
 }
-function H(e) {
+function Y(e) {
     var t;
     let { ctaButton: n, showYearlyPrice: i, className: s, isGift: l = !1, priceOptions: c } = e,
         u = (0, o.e7)([m.Z], () => m.Z.getPremiumTypeSubscription()),
@@ -143,14 +163,14 @@ function H(e) {
                             }),
                         ],
                     }),
-                    (0, r.jsx)("div", { children: (0, r.jsx)(V, { isApplicationHome: !0 }) }),
+                    (0, r.jsx)("div", { children: (0, r.jsx)(H, { isApplicationHome: !0 }) }),
                 ],
             }),
             n,
         ],
     });
 }
-function Y(e) {
+function W(e) {
     var t;
     let { showWumpus: n, ctaButton: i, showYearlyPrice: s, className: c, isGift: u = !1, priceOptions: d } = e,
         f = (0, o.e7)([m.Z], () => m.Z.getPremiumTypeSubscription()),
@@ -209,7 +229,7 @@ function Y(e) {
                             }),
                         ],
                     }),
-                    (0, r.jsx)("div", { children: (0, r.jsx)(V, {}) }),
+                    (0, r.jsx)("div", { children: (0, r.jsx)(H, {}) }),
                 ],
             }),
             u || E !== L.Si.TIER_0 ? null : (0, r.jsx)(R.t, { tier: L.PremiumTypes.TIER_0 }),
@@ -217,7 +237,7 @@ function Y(e) {
         ],
     });
 }
-var W = (function (e) {
+var K = (function (e) {
     return (
         (e[(e.DEFAULT = 0)] = "DEFAULT"),
         (e[(e.BOOSTING = 1)] = "BOOSTING"),
@@ -226,7 +246,7 @@ var W = (function (e) {
         e
     );
 })({});
-function K(e) {
+function z(e) {
     let {
             featureSet: t = 0,
             isModal: n = !1,
@@ -279,7 +299,7 @@ function K(e) {
         ],
     });
 }
-function z(e) {
+function q(e) {
     var t, n, i, o;
     let {
             ctaButton: s,
@@ -360,7 +380,7 @@ function z(e) {
                         ],
                     }),
                     (0, r.jsx)("div", {
-                        children: (0, r.jsx)(K, {
+                        children: (0, r.jsx)(z, {
                             featureSet: u,
                             isModal: p,
                             isGift: f,
@@ -374,7 +394,7 @@ function z(e) {
         ],
     });
 }
-function q(e) {
+function X(e) {
     var t, n, i, u;
     let {
             showWumpus: d,
@@ -396,7 +416,7 @@ function q(e) {
         H = (0, I.N)(),
         Y = (0, O.t7)(),
         W = null != Z || null != F ? L.C.PREMIUM_TRIAL : null != H || Y ? L.C.PREMIUM_DISCOUNT : null,
-        z = (0, y.Vi)(),
+        K = (0, y.Vi)(),
         q = !b && V,
         X = null == (n = (0, v.Z)()) ? void 0 : n.planSelection,
         Q = null == X || null == (i = X.getBackgroundImageUrl) ? void 0 : i.call(X),
@@ -460,7 +480,7 @@ function q(e) {
                             (0, r.jsx)(h.Z, { className: a()(U.title, U.tier2Title) }),
                             !b &&
                                 Z !== L.Si.TIER_2 &&
-                                z &&
+                                K &&
                                 (0, r.jsx)("div", {
                                     children: (0, r.jsx)(l.Text, {
                                         variant: "text-xs/bold",
@@ -481,7 +501,7 @@ function q(e) {
                         ],
                     }),
                     (0, r.jsx)("div", {
-                        children: (0, r.jsx)(K, {
+                        children: (0, r.jsx)(z, {
                             featureSet: g,
                             isModal: A,
                             isGift: b,
@@ -495,13 +515,13 @@ function q(e) {
         ],
     });
 }
-let X = (e) => (t) => {
+let Q = (e) => (t) => {
     null != e && ("function" == typeof e ? e(t) : e.hasOwnProperty("current") && (e.current = t));
 };
-function Q(e) {
+function J(e) {
     let { innerRef: t, hasActiveTier2PremiumPromotion: n, className: i } = e,
         { analyticsLocations: o } = (0, d.ZP)(u.Z.PREMIUM_MARKETING_TIER_CARD),
-        s = X(t),
+        s = Q(t),
         c = (0, r.jsx)(A.Z, {
             color: void 0,
             showIcon: !1,
@@ -533,8 +553,8 @@ function Q(e) {
                 ref: s,
                 className: a()(U.premiumCards, i),
                 children: [
-                    (0, r.jsx)(H, { ctaButton: c }),
-                    (0, r.jsx)(z, {
+                    (0, r.jsx)(Y, { ctaButton: c }),
+                    (0, r.jsx)(q, {
                         ctaButton: f,
                         featureSet: 3,
                     }),
@@ -543,21 +563,21 @@ function Q(e) {
         ],
     });
 }
-function J(e) {
+function $(e) {
     let { innerRef: t, className: n, tier0CTAButton: i, tier2CTAButton: o } = e,
         { analyticsLocations: s } = (0, d.ZP)(u.Z.PREMIUM_MARKETING_TIER_CARD),
-        l = X(t);
+        l = Q(t);
     return (0, r.jsx)(d.Gt, {
         value: s,
         children: (0, r.jsxs)("div", {
             ref: l,
             className: a()(U.premiumCards, n),
             children: [
-                (0, r.jsx)(Y, {
+                (0, r.jsx)(W, {
                     showWumpus: !0,
                     ctaButton: i,
                 }),
-                (0, r.jsx)(q, {
+                (0, r.jsx)(X, {
                     showWumpus: !0,
                     ctaButton: o,
                 }),

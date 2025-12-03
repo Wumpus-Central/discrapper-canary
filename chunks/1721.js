@@ -5,6 +5,7 @@ var r = {
     applicationHomeCard: "applicationHomeCard__6df1a",
     card: "card__6df1a",
     withGiftBanner: "withGiftBanner__6df1a",
+    borderGradient: "borderGradient__6df1a",
     tier0: "tier0__6df1a",
     pillMargin: "pillMargin__6df1a",
     wordmark: "wordmark__6df1a",
@@ -25,5 +26,8 @@ var r = {
     premiumCardsHeader: "premiumCardsHeader__6df1a",
     tier0CardOrder: "tier0CardOrder__6df1a",
     tier2CardOrder: "tier2CardOrder__6df1a",
+    cardTitle: "cardTitle__6df1a",
+    betaPill: "betaPill__6df1a",
+    cardHeader: "cardHeader__6df1a",
 };
 n.r((e.exports = r));

@@ -125,10 +125,10 @@ function L(e) {
         ez = (0, u.id)(en, ev, eT),
         eq = i.useCallback(
             () =>
-                eO
-                    ? void L(E.h8.ADD_PAYMENT_STEPS)
-                    : eY
-                      ? void L(E.h8.SKU_SELECT)
+                eY
+                    ? void L(E.h8.SKU_SELECT)
+                    : eO
+                      ? void L(E.h8.ADD_PAYMENT_STEPS)
                       : ez
                         ? void L(E.h8.SELECT_FREE_SKU)
                         : eW

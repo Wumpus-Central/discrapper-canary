@@ -21,13 +21,11 @@ let c = function (e) {
                         isGift: !0,
                         priceOptions: t,
                         showPromotionalGiftBanner: m,
-                        enablePremiumBrandRefresh: !0,
                     }),
                     (0, n.jsx)(a.j8, {
                         onClick: () => i(s.Si.TIER_0),
                         isGift: !0,
                         priceOptions: t,
-                        enablePremiumBrandRefresh: !0,
                         removeTopMargin: !0,
                     }),
                 ],
