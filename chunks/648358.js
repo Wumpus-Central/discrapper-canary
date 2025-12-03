@@ -1,18 +1,16 @@
 n.d(t, {
-    J: () => l,
-    M: () => c,
+    J: () => s,
+    M: () => l,
 });
 var r = n(473749),
     i = n(433517),
-    a = n(765504),
-    o = n(865066);
-let s = "systemServiceAutoInstall";
-function l() {
-    i.K.set(s, !0);
+    a = n(865066);
+let o = "systemServiceAutoInstall";
+function s() {
+    i.K.set(o, !0);
 }
-function c() {
-    let { installStartup: e } = a.Z.useConfig({ location: "useSystemServiceAutoInstall" });
+function l() {
     r.useEffect(() => {
-        e && null == i.K.get(s) && (l(), (0, o.sU)("first-start", !1));
-    }, [e]);
+        null == i.K.get(o) && (s(), (0, a.sU)("first-start", !1));
+    }, []);
 }
