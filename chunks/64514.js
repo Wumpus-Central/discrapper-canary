@@ -1,14 +1,15 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(846519),
     i = n(570140),
     l = n(317770),
-    a = n(626135),
-    s = n(70956),
-    o = n(960048),
-    c = n(930446),
-    u = n(127438),
-    d = n(981631);
-function p(e, t, n) {
+    a = n(314897),
+    s = n(626135),
+    o = n(70956),
+    c = n(960048),
+    u = n(930446),
+    d = n(127438),
+    p = n(981631);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,9 +22,11 @@ function p(e, t, n) {
         e
     );
 }
-class f extends l.Z {
+let h = a.default.getToken();
+class g extends l.Z {
     _initialize() {
-        (this.focusedOrForegrounded = (0, u.H)()),
+        (this.focusedOrForegrounded = (0, d.H)()),
+            a.default.addChangeListener(this.handleAuthenticationChange),
             i.Z.subscribe("WINDOW_FOCUS", this.handleWindowFocus),
             i.Z.subscribe("APP_STATE_UPDATE", this.handleAppStateUpdate),
             i.Z.subscribe("QUESTS_ENROLL_SUCCESS", this.handleEnrollmentSuccess),
@@ -33,6 +36,7 @@ class f extends l.Z {
     }
     _terminate() {
         this.stopAnalyticHeartbeat(),
+            a.default.removeChangeListener(this.handleAuthenticationChange),
             i.Z.unsubscribe("WINDOW_FOCUS", this.handleWindowFocus),
             i.Z.unsubscribe("APP_STATE_UPDATE", this.handleAppStateUpdate),
             i.Z.unsubscribe("QUESTS_ENROLL_SUCCESS", this.handleEnrollmentSuccess),
@@ -43,27 +47,27 @@ class f extends l.Z {
         var t;
         super(...e),
             (t = this),
-            p(this, "focusedOrForegrounded", (0, u.H)()),
-            p(this, "heartbeatInterval", new r.Xp()),
-            p(this, "schedulerStarted", !1),
-            p(this, "lastHeartbeatTimestamp", 0),
-            p(this, "maybeStartHeartbeat", () => {
+            f(this, "focusedOrForegrounded", (0, d.H)()),
+            f(this, "heartbeatInterval", new r.Xp()),
+            f(this, "schedulerStarted", !1),
+            f(this, "lastHeartbeatTimestamp", 0),
+            f(this, "maybeStartHeartbeat", () => {
                 this.heartbeatInterval.isStarted() ||
-                    (this.trackHeartbeat(), this.heartbeatInterval.start(5 * s.Z.Millis.MINUTE, this.trackHeartbeat));
+                    (this.trackHeartbeat(), this.heartbeatInterval.start(5 * o.Z.Millis.MINUTE, this.trackHeartbeat));
             }),
-            p(this, "startAnalyticHeartbeat", () => {
+            f(this, "startAnalyticHeartbeat", () => {
                 this.schedulerStarted ||
                     ((this.schedulerStarted = !0),
-                    o.Z.addBreadcrumb({
+                    c.Z.addBreadcrumb({
                         category: "ad",
                         message: "Starting ad session heartbeat",
                     }),
                     this.maybeStartHeartbeat());
             }),
-            p(this, "trackHeartbeat", function () {
+            f(this, "trackHeartbeat", function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                 if (!t.schedulerStarted && !e) {
-                    o.Z.addBreadcrumb({
+                    c.Z.addBreadcrumb({
                         category: "ad",
                         message: "Ad heartbeat called but scheduler not started",
                     }),
@@ -72,54 +76,58 @@ class f extends l.Z {
                 }
                 let n = performance.now(),
                     r = n - t.lastHeartbeatTimestamp,
-                    i = 5 * s.Z.Millis.MINUTE;
+                    i = 5 * o.Z.Millis.MINUTE;
                 if (!e && t.lastHeartbeatTimestamp > 0 && r < i) return;
-                let l = (0, c.Gy)();
-                a.default.track(d.rMx.CLIENT_AD_HEARTBEAT, {
+                let l = (0, u.Gy)();
+                s.default.track(p.rMx.CLIENT_AD_HEARTBEAT, {
                     client_ad_session_id: l.uuid,
                     client_heartbeat_initialization_timestamp: l.createdAtTimestamp,
-                    client_heartbeat_version: 2,
+                    client_heartbeat_version: 3,
                 }),
                     (t.lastHeartbeatTimestamp = n);
             }),
-            p(this, "stopAnalyticHeartbeat", function () {
+            f(this, "stopAnalyticHeartbeat", function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "DEFAULT";
                 t.schedulerStarted &&
                     ((t.schedulerStarted = !1),
                     (t.lastHeartbeatTimestamp = 0),
-                    o.Z.addBreadcrumb({
+                    c.Z.addBreadcrumb({
                         category: "ad",
                         message: "Stopping ad session heartbeat: ".concat(e),
                     }),
                     t.heartbeatInterval.stop());
             }),
-            p(this, "scheduleHeartbeatTracking", function () {
+            f(this, "scheduleHeartbeatTracking", function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "DEFAULT";
-                if (t.focusedOrForegrounded)
+                if (t.focusedOrForegrounded && null != h)
                     try {
                         t.startAnalyticHeartbeat();
                     } catch (e) {
-                        o.Z.captureException(e);
+                        c.Z.captureException(e);
                     }
                 else t.stopAnalyticHeartbeat(e);
             }),
-            p(this, "handleLogin", () => {
+            f(this, "handleLogin", () => {
                 this.scheduleHeartbeatTracking(), this.trackHeartbeat(!0);
             }),
-            p(this, "handleLogout", () => {
-                this.stopAnalyticHeartbeat("USER_LOGOUT"), (0, c.GG)();
+            f(this, "handleLogout", () => {
+                this.stopAnalyticHeartbeat("USER_LOGOUT"), (0, u.GG)();
             }),
-            p(this, "handleEnrollmentSuccess", () => {
-                (0, c.Gy)(!0);
+            f(this, "handleEnrollmentSuccess", () => {
+                (0, u.Gy)(!0);
             }),
-            p(this, "handleWindowFocus", (e) => {
+            f(this, "handleWindowFocus", (e) => {
                 let { focused: t } = e;
                 (this.focusedOrForegrounded = t), this.scheduleHeartbeatTracking("WINDOW_FOCUS");
             }),
-            p(this, "handleAppStateUpdate", (e) => {
+            f(this, "handleAppStateUpdate", (e) => {
                 let { state: t } = e;
-                (this.focusedOrForegrounded = t === d.$7l.ACTIVE), this.scheduleHeartbeatTracking("APP_STATE_UPDATE");
+                (this.focusedOrForegrounded = t === p.$7l.ACTIVE), this.scheduleHeartbeatTracking("APP_STATE_UPDATE");
+            }),
+            f(this, "handleAuthenticationChange", () => {
+                let e = a.default.getToken();
+                h !== e && ((h = e), (0, u.GG)(), this.stopAnalyticHeartbeat()), this.scheduleHeartbeatTracking();
             });
     }
 }
-let h = new f();
+let m = new g();
