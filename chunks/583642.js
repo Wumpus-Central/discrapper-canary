@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685), n(704826), n(35282);
+n.d(t, { Z: () => N }), n(388685), n(704826), n(35282);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,32 +9,31 @@ var r = n(54381),
     u = n(481060),
     d = n(592125),
     f = n(944486),
-    p = n(585483),
-    _ = n(738018),
-    m = n(607802),
-    h = n(637879),
-    g = n(794137),
-    E = n(611004),
-    b = n(448842),
-    y = n(817190),
-    O = n(315322),
-    v = n(723642),
-    S = n(981631),
-    I = n(356702);
-let T = l()("2015-05-15").local();
-function A(e) {
+    p = n(738018),
+    _ = n(607802),
+    m = n(637879),
+    h = n(794137),
+    g = n(611004),
+    E = n(448842),
+    b = n(817190),
+    y = n(315322),
+    O = n(723642),
+    v = n(981631),
+    S = n(356702);
+let I = l()("2015-05-15").local();
+function T(e) {
     let { items: t, navId: n, selectedIndex: i } = e,
         a = 0;
     return (0, r.jsx)(r.Fragment, {
         children: t.map((e) => {
             switch (e.type) {
-                case g.i.ROW:
+                case h.i.ROW:
                     let { icon: t, label: o, onSelect: s } = e.data,
                         l = a;
                     return (
                         (a += 1),
                         (0, r.jsx)(
-                            h._B,
+                            m._B,
                             {
                                 icon: t,
                                 label: o,
@@ -46,13 +45,13 @@ function A(e) {
                             "".concat(e.type, "-").concat(l),
                         )
                     );
-                case g.i.GROUP:
+                case h.i.GROUP:
                     let { rows: c, title: u } = e.data,
                         d = a;
                     return (
                         (a += c.length),
                         (0, r.jsx)(
-                            h.dI,
+                            m.dI,
                             {
                                 navId: n,
                                 item: e,
@@ -68,7 +67,7 @@ function A(e) {
         }),
     });
 }
-let C = i.forwardRef(function (e, t) {
+let A = i.forwardRef(function (e, t) {
         let { searchContext: n, navId: a, resultsState: o, onSelectedIndexChanged: s, selectedChannel: l } = e,
             [c, d] = i.useState(-1),
             f = (e) => {
@@ -89,23 +88,24 @@ let C = i.forwardRef(function (e, t) {
             _ = i.useCallback(
                 (e) => {
                     let { query: t, performSearch: n, replace: r } = e;
-                    E.Z.setSearchQuery({
+                    g.Z.setSearchQuery({
                         query: t,
                         performSearch: n,
                         replace: r,
                         resultsState: o,
+                        searchQuerySource: O.w7.SEARCH_POPOUT,
                     }),
                         p(-1);
                 },
                 [o, p],
             ),
-            { items: m, itemsData: h } = (0, b.Z)({
+            { items: m, itemsData: h } = (0, E.Z)({
                 resultsState: o,
                 searchContext: n,
                 selectedChannel: l,
                 setSearchQuery: _,
             }),
-            g = (e) => {
+            b = (e) => {
                 let { newSelectedIndex: t, searchAutocompleteSelectAction: n } = e,
                     r = t;
                 return (
@@ -123,19 +123,19 @@ let C = i.forwardRef(function (e, t) {
                 let t = e;
                 t > h.length - 1 ? (t = 0) : t < 0 && (t = h.length - 1), p(t);
             },
-            O = (e) => {
+            I = (e) => {
                 y(c + e);
             },
-            v = i.useRef({
+            A = i.useRef({
                 itemsData: [],
                 selectedIndex: -1,
                 modeType: o.mode.type,
             });
         return (
             i.useEffect(() => {
-                let { itemsData: e, selectedIndex: t, modeType: n } = v.current,
+                let { itemsData: e, selectedIndex: t, modeType: n } = A.current,
                     r = o.mode.type;
-                if (r !== n) r === S.Sap.FILTER ? p(0) : p(-1);
+                if (r !== n) r === v.Sap.FILTER ? p(0) : p(-1);
                 else if (t >= 0 && (t === c || e.length !== h.length)) {
                     let n = e[t],
                         r = null == n ? void 0 : n.data.resultText;
@@ -144,7 +144,7 @@ let C = i.forwardRef(function (e, t) {
                         -1 !== e ? p(e) : t >= h.length && p(Math.max(0, h.length - 1));
                     } else t >= h.length && p(Math.max(0, h.length - 1));
                 }
-                v.current = {
+                A.current = {
                     itemsData: h,
                     selectedIndex: c,
                     modeType: r,
@@ -153,12 +153,12 @@ let C = i.forwardRef(function (e, t) {
             i.useImperativeHandle(t, () => ({
                 selectedIndex: c,
                 focusNextOption: () => {
-                    O(1);
+                    I(1);
                 },
                 focusPreviousOption: () => {
-                    O(-1);
+                    I(-1);
                 },
-                selectOption: g,
+                selectOption: b,
             })),
             (0, r.jsx)(u.u2D, {
                 onMouseDown: f,
@@ -166,8 +166,8 @@ let C = i.forwardRef(function (e, t) {
                 id: a,
                 tabIndex: -1,
                 "aria-activedescendant": "".concat(a, "-").concat(c),
-                className: m.length > 0 ? I.container : void 0,
-                children: (0, r.jsx)(A, {
+                className: m.length > 0 ? S.container : void 0,
+                children: (0, r.jsx)(T, {
                     items: m,
                     navId: a,
                     selectedIndex: c,
@@ -175,39 +175,33 @@ let C = i.forwardRef(function (e, t) {
             })
         );
     }),
-    N = i.forwardRef(function (e, t) {
+    C = i.forwardRef(function (e, t) {
         let { navId: n, resultsState: a, searchContext: s } = e,
             c = -1,
             d = (e) => {
                 e.stopPropagation(), e.preventDefault();
             },
             f = (e) => {
-                let t = (0, m.Tm)(s);
-                (0, O.bh)({
+                let t = (0, _.Tm)(s);
+                (0, y.bh)({
                     searchContext: s,
-                    searchQuery: y.Z.getSearchResultsQuery(t),
-                    searchQueryString: E.Z.getSearchInputText(s),
+                    searchQuery: b.Z.getSearchResultsQuery(t),
+                    searchQueryString: g.Z.getSearchInputText(s),
                     searchTokenType: a.mode.filter,
-                    searchAutocompleteGroup: S.rtL.DATES,
+                    searchAutocompleteGroup: v.rtL.DATES,
                     searchAutocompleteMode: a.mode,
                     isSearchFilterPrefix: !1,
                     isSearchFilterAnswer: !0,
                     isSearchFilterComplete: !1,
-                    searchAutocompleteSelectAction: v.ZW.CLICK,
-                });
-                let { mode: n, cursorScope: r } = a,
-                    i = 0;
-                null != n.token
-                    ? (i = n.token.start)
-                    : (null == r ? void 0 : r.currentToken) != null && (i = r.currentToken.end);
-                let o = null != n.token ? n.token.end : i;
-                p.S.dispatch(S.CkL.SET_SEARCH_QUERY, {
-                    query: e.format(S.b2L) + " ",
-                    anchor: i,
-                    focus: o,
-                    performSearch: !0,
-                    replace: !1,
-                });
+                    searchAutocompleteSelectAction: O.ZW.CLICK,
+                }),
+                    g.Z.setSearchQuery({
+                        query: e.format(v.b2L) + " ",
+                        performSearch: !0,
+                        replace: !1,
+                        resultsState: a,
+                        searchQuerySource: O.w7.SEARCH_POPOUT,
+                    });
             };
         return (
             i.useImperativeHandle(t, () => ({
@@ -222,30 +216,30 @@ let C = i.forwardRef(function (e, t) {
                 id: n,
                 tabIndex: -1,
                 "aria-activedescendant": "".concat(n, "-").concat(c),
-                className: o()(I.container, I.datePickerContainer),
+                className: o()(S.container, S.datePickerContainer),
                 children: (0, r.jsx)(u.hGg, {
                     onSelect: f,
                     maxDate: l()().local(),
-                    minDate: T,
-                    calendarClassName: I.calendar,
+                    minDate: I,
+                    calendarClassName: S.calendar,
                 }),
             })
         );
     }),
-    P = i.forwardRef(function (e, t) {
+    N = i.forwardRef(function (e, t) {
         let { searchContext: n, navId: i, onSelectedIndexChanged: a } = e,
-            [o, s] = (0, c.Wu)([_.Z, f.Z, d.Z], () => {
-                let e = _.Z.getState(n),
+            [o, s] = (0, c.Wu)([p.Z, f.Z, d.Z], () => {
+                let e = p.Z.getState(n),
                     t = f.Z.getChannelId();
                 return [e, d.Z.getChannel(t)];
             });
-        return (0, m.Fz)(o.mode.filter)
-            ? (0, r.jsx)(N, {
+        return (0, _.Fz)(o.mode.filter)
+            ? (0, r.jsx)(C, {
                   navId: i,
                   resultsState: o,
                   searchContext: n,
               })
-            : (0, r.jsx)(C, {
+            : (0, r.jsx)(A, {
                   ref: t,
                   searchContext: n,
                   navId: i,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(704826), n(35282), n(781311);
+n.d(t, { Z: () => k }), n(704826), n(35282), n(781311);
 var r = n(54381),
     i = n(923010),
     a = n(952265),
@@ -153,7 +153,10 @@ function x(e, t) {
             offset: 0,
         });
 }
-function L(e, t, n) {
+function L(e) {
+    c.S.dispatch(S.CkL.SET_SEARCH_QUERY, e);
+}
+function j(e, t, n) {
     let r = (0, p.Tm)(e),
         i = b.Z.getEditorState(r);
     if (null == i) return;
@@ -169,6 +172,7 @@ function L(e, t, n) {
             searchContext: t,
             query: d,
             queryString: o,
+            searchQuerySource: O.w7.SEARCH_XDM_SETTINGS,
         }),
         R({
             searchContext: t,
@@ -178,7 +182,7 @@ function L(e, t, n) {
     let _ = (0, p.Tm)(t);
     s.Z.setSelectedSearchContext(_), E.Z.clearSearchEditorState(e), f.Z.clearSearchMessages(r), null == n || n();
 }
-function j() {
+function M() {
     b.Z.getSearchStateIds().forEach((e) => {
         let t = l.Z.getChannel(e);
         null != t &&
@@ -189,7 +193,7 @@ function j() {
             });
     });
 }
-let M = {
+let k = {
     cleanUpSearchState: N,
     fetchMessages: R,
     setSearchInputText: D,
@@ -207,30 +211,33 @@ let M = {
             E.Z.updateSearchEditorState(e, t);
     },
     setSearchQuery: function (e) {
-        let { query: t, performSearch: n, replace: r, resultsState: i } = e,
-            { mode: a, cursorScope: o } = i,
-            s = 0;
-        null != a.token
-            ? (s = a.token.start)
-            : (null == o ? void 0 : o.currentToken) != null && (s = o.currentToken.end);
-        let l = null != a.token ? a.token.end : s;
-        c.S.dispatch(S.CkL.SET_SEARCH_QUERY, {
+        let { query: t, performSearch: n, replace: r, resultsState: i, searchQuerySource: a } = e,
+            { mode: o, cursorScope: s } = i,
+            l = 0;
+        null != o.token
+            ? (l = o.token.start)
+            : (null == s ? void 0 : s.currentToken) != null && (l = s.currentToken.end);
+        let c = null != o.token ? o.token.end : l;
+        L({
             query: t,
-            anchor: s,
-            focus: l,
+            anchor: l,
+            focus: c,
             performSearch: n,
             replace: r,
+            searchQuerySource: a,
         });
     },
-    transitionStateToSearchContext: L,
-    cleanUpPrivateChannelSearchState: j,
+    dispatchSetSearchQuery: L,
+    transitionStateToSearchContext: j,
+    cleanUpPrivateChannelSearchState: M,
     openSearchFiltersModal: function (e) {
-        (0, a.ZD)(
-            async () => {
-                let { default: t } = await Promise.all([n.e("30474"), n.e("37979")]).then(n.bind(n, 238088));
-                return (n) => (0, r.jsx)(t, C(T({}, n), { searchContext: e }));
-            },
-            { modalKey: v.L },
-        );
+        (0, y.aR)({ searchContext: e }),
+            (0, a.ZD)(
+                async () => {
+                    let { default: t } = await Promise.all([n.e("30474"), n.e("37979")]).then(n.bind(n, 238088));
+                    return (n) => (0, r.jsx)(t, C(T({}, n), { searchContext: e }));
+                },
+                { modalKey: v.L },
+            );
     },
 };

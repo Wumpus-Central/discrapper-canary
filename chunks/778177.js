@@ -430,8 +430,12 @@ class ei extends i.PureComponent {
             renderCustomResults: this.renderAutocompletes,
             renderInitialState: this.renderAutocompletes,
             onHighlightQuery: () => this.focusOption(-1),
-            onSelectQuery: this.performSearch,
-            onSelectSearchEverywhere: () => this.performSearch({ searchEverywhere: !0 }),
+            onSelectQuery: () => this.performSearch({ searchQuerySource: k.w7.SEARCH_POPOUT }),
+            onSelectSearchEverywhere: () =>
+                this.performSearch({
+                    searchEverywhere: !0,
+                    searchQuerySource: k.w7.SEARCH_POPOUT,
+                }),
             renderNoResults: () => null,
             searchFavorites: a.type === U.aib.FAVORITES && (0, R.X$)(),
             showSearchInSelectedChannel: this.shouldShowSearchInSelectedChannel(),
@@ -565,19 +569,13 @@ class ei extends i.PureComponent {
                 return this.setSearchQuery(s.resultText, d), !0;
             }),
             B(this, "setSearchQuery", function (e) {
-                let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                    { mode: r, cursorScope: i } = t.props.resultsState,
-                    a = 0;
-                null != r.token
-                    ? (a = r.token.start)
-                    : (null == i ? void 0 : i.currentToken) != null && (a = i.currentToken.end);
-                let o = null != r.token ? r.token.end : a;
-                A.S.dispatch(U.CkL.SET_SEARCH_QUERY, {
+                let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                x.Z.setSearchQuery({
                     query: e,
-                    anchor: a,
-                    focus: o,
                     performSearch: n,
                     replace: !1,
+                    resultsState: t.props.resultsState,
+                    searchQuerySource: k.w7.SEARCH_POPOUT,
                 }),
                     t.setSelectedIndex(-1);
             }),
@@ -638,7 +636,7 @@ class ei extends i.PureComponent {
                 this.setSearchQuery(this.state.dateHint, !0);
             }),
             B(this, "performSearch", (e) => {
-                A.S.dispatch(U.CkL.PERFORM_SEARCH, null != e ? e : {});
+                A.S.dispatch(U.CkL.PERFORM_SEARCH, e);
             }),
             B(this, "renderAutocompletes", () => {
                 let { selectedIndex: e } = this.state,

@@ -4376,6 +4376,7 @@ var np = (function (e) {
             (e.SEARCH_HISTORY_CLICKED = "search_history_clicked"),
             (e.SEARCH_BAR_VIEWED = "search_bar_viewed"),
             (e.SEARCH_CROSS_DM_SETTING_UPDATE = "search_cross_dm_setting_update"),
+            (e.SEARCH_FILTERS_MODAL_OPENED = "search_filters_modal_opened"),
             (e.MESSAGES_SEARCH_STARTED = "messages_search_started"),
             (e.SEARCH_V2_OPENED = "search_v2_opened"),
             (e.SEARCH_V2_CLOSED = "search_v2_closed"),
