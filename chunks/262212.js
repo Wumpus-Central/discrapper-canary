@@ -1,24 +1,23 @@
 n.d(t, {
-    ZP: () => j,
-    ms: () => y,
+    ZP: () => v,
+    ms: () => _,
 });
 var r = n(54381);
 n(473749);
 var i = n(120356),
     l = n.n(i),
     o = n(159691),
-    a = n(10765),
+    a = n(686866),
     s = n(639777),
-    c = n(973772),
-    u = n(880419),
-    d = n(827397),
-    f = n(279604),
-    h = n(535396),
-    p = n(130231),
-    g = n(388032),
-    m = n(292609);
-function b() {
-    return (b =
+    c = n(880419),
+    u = n(827397),
+    d = n(279604),
+    f = n(535396),
+    h = n(130231),
+    p = n(388032),
+    g = n(292609);
+function m() {
+    return (m =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -28,7 +27,7 @@ function b() {
             return e;
         }).apply(this, arguments);
 }
-function _(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,71 +52,69 @@ function _(e) {
     }
     return e;
 }
-function y(e) {
+function _(e) {
     let { className: t, guildId: n, powerup: i, onClick: a } = e,
-        s = (0, d.Z)(n, i),
-        { onShowMore: c } = (0, f.ZP)(n, i),
-        u = h.uc.has(i.skuId);
+        s = (0, u.Z)(n, i),
+        { onShowMore: c } = (0, d.ZP)(n, i),
+        m = f.uc.has(i.skuId);
     return (0, r.jsx)("div", {
-        className: l()(m.primaryButton, t),
+        className: l()(g.primaryButton, t),
         children: (0, r.jsx)(o.zxk, {
             variant: "primary",
             fullWidth: !0,
-            text: u ? g.intl.string(p.default.g5Ds69) : g.intl.string(g.t["0Q61kF"]),
+            text: m ? p.intl.string(h.default.g5Ds69) : p.intl.string(p.t["0Q61kF"]),
             onClick: (e) => {
-                null == a || a(e), u ? null == s || s(e) : null == c || c();
+                null == a || a(e), m ? null == s || s(e) : null == c || c();
             },
         }),
     });
 }
-function O(e) {
+function y(e) {
     let { className: t, guildId: n, powerup: i } = e,
-        { onShowMore: a } = (0, f.ZP)(n, i);
+        { onShowMore: a } = (0, d.ZP)(n, i);
     return (0, r.jsx)("div", {
-        className: l()(m.container, t),
+        className: l()(g.container, t),
         children: (0, r.jsx)("div", {
-            className: m.primaryButton,
+            className: g.primaryButton,
             children: (0, r.jsx)(o.zxk, {
                 variant: "primary",
                 fullWidth: !0,
-                text: i.type === h.Us.LEVEL ? g.intl.string(g.t["0Q61kF"]) : g.intl.string(g.t.Xa11Ep),
+                text: i.type === f.Us.LEVEL ? p.intl.string(p.t["0Q61kF"]) : p.intl.string(p.t.Xa11Ep),
                 onClick: a,
             }),
         }),
     });
 }
-function v(e) {
+function O(e) {
     let { className: t, guildId: n, powerup: i, onError: o } = e,
-        s = (0, c.ZP)(n, i).type !== h.A3.INACTIVE,
-        d = (0, a.Z)(n, i, "GuildPowerupCardFooterAdmin"),
-        f = s || !d,
-        p = !s;
+        { showToggleButton: s, isPowerupActive: u } = (0, a.Z)(n, i),
+        d = !u;
     return (0, r.jsxs)("div", {
-        className: l()(m.container, t),
+        className: l()(g.container, t),
         children: [
-            f &&
-                (0, r.jsx)(u.Z, {
+            s &&
+                (0, r.jsx)(c.Z, {
                     guildId: n,
                     powerup: i,
                     onError: o,
-                    grow: p,
-                    compact: !p,
+                    grow: d,
+                    compact: !d,
                 }),
-            s &&
-                (0, r.jsx)(y, {
+            u &&
+                (0, r.jsx)(_, {
                     guildId: n,
                     powerup: i,
                 }),
         ],
     });
 }
-function j(e) {
-    var t = b(
+function v(e) {
+    var t = m(
         {},
         (function (e) {
             if (null == e) throw TypeError("Cannot destructure " + e);
             return e;
         })(e),
     );
-    return (0, s.Z)(t.guildId) ? (0, r.jsx)(v, _({}, t)) : (0, r.jsx)(O, _({}, t));
+    return (0, s.Z)(t.guildId) ? (0, r.jsx)(O, b({}, t)) : (0, r.jsx)(y, b({}, t));
 }
