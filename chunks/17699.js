@@ -140,7 +140,7 @@ function R(e) {
                     null != b
                         ? (0, r.jsx)(o.Text, {
                               className: T.error,
-                              color: "text-danger",
+                              color: "text-feedback-critical",
                               variant: "text-sm/normal",
                               children: b.getAnyErrorMessage(),
                           })

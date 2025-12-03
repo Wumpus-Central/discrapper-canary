@@ -52,7 +52,7 @@ class i {
                 null != this.foreignObject &&
                 ((this.container.className = "drag-previewer"),
                 (this.container.style.cssText =
-                    "z-index: 1000; filter: drop-shadow(0 0 0 var(--background-floating)) drop-shadow(var(--elevation-high))"),
+                    "z-index: 1000; filter: drop-shadow(0 0 0 var(--background-surface-high)) drop-shadow(var(--elevation-high))"),
                 this.svg.appendChild(this.foreignObject),
                 this.container.appendChild(this.svg),
                 null == e || e.body.appendChild(this.container));

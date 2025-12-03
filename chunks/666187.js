@@ -101,7 +101,7 @@ class S extends (r = a.Component) {
             : (0, i.jsx)(d.x, {
                   id: E,
                   variant: "text-xs/normal",
-                  color: "text-danger",
+                  color: "text-feedback-critical",
                   className: _.errorMessage,
                   children: e,
               });

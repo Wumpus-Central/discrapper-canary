@@ -235,14 +235,14 @@ let I = (e) => {
                         (null == g ? void 0 : g.engagementHealthy)
                             ? null
                             : (0, r.jsx)(p.Text, {
-                                  color: "text-danger",
+                                  color: "text-feedback-critical",
                                   variant: "text-sm/normal",
                                   children: v.intl.string(v.t.X8Lt77),
                               }),
                         (null == g ? void 0 : g.retentionHealthy)
                             ? null
                             : (0, r.jsx)(p.Text, {
-                                  color: "text-danger",
+                                  color: "text-feedback-critical",
                                   variant: "text-sm/normal",
                                   children: v.intl.string(v.t.esdy89),
                               }),

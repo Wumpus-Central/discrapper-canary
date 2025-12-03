@@ -98,8 +98,8 @@ function E(e) {
             roles: w,
             members: M,
         }),
-        D = h && 0 === Object.keys(S).length;
-    async function k() {
+        k = h && 0 === Object.keys(S).length;
+    async function D() {
         if (null == d || 0 === Object.keys(S).length) return void p();
         Z(!0);
         try {
@@ -173,7 +173,7 @@ function E(e) {
                                 ? (0, i.jsx)(o.Text, {
                                       className: v.subtext,
                                       variant: "text-xs/normal",
-                                      color: "text-danger",
+                                      color: "text-feedback-critical",
                                       children: T.getAnyErrorMessage(),
                                   })
                                 : null,
@@ -187,7 +187,7 @@ function E(e) {
                         renderRow: m.Z.renderRow,
                         sections: L,
                     },
-                    actions: D
+                    actions: k
                         ? [
                               {
                                   variant: "secondary",
@@ -204,7 +204,7 @@ function E(e) {
                               {
                                   variant: "primary",
                                   text: C.intl.string(C.t.i4jeWR),
-                                  onClick: k,
+                                  onClick: D,
                                   loading: I,
                               },
                           ],

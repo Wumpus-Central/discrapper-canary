@@ -353,7 +353,7 @@ function w() {
                   null != M &&
                       (0, r.jsx)(d.Text, {
                           variant: "text-xs/medium",
-                          color: "text-danger",
+                          color: "text-feedback-critical",
                           children: M,
                       }),
                   (0, r.jsxs)(h.o2, {

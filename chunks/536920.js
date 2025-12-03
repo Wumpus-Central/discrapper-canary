@@ -11,13 +11,13 @@ var a = n(54381),
     m = n(77498),
     _ = n(626135),
     v = n(837268),
-    g = n(371651),
-    h = n(981631),
+    h = n(371651),
+    g = n(981631),
     p = n(388032),
     x = n(361902);
 function y(t) {
-    let { onClose: e, transitionState: n, clientSettingType: y, gameId: C } = t,
-        [f, k] = i.useState("unreported"),
+    let { onClose: e, transitionState: n, clientSettingType: y, gameId: f } = t,
+        [k, C] = i.useState("unreported"),
         [b, w] = i.useState(""),
         [S, j] = i.useState(!1),
         [Z, M] = i.useState(!1),
@@ -25,14 +25,14 @@ function y(t) {
         [F, R] = i.useState(!1),
         D = (0, r.e7)([m.Z, c.ZP], () => {
             var t;
-            let e = null != C ? C : null == (t = c.ZP.getCurrentGameForAnalytics()) ? void 0 : t.id;
+            let e = null != f ? f : null == (t = c.ZP.getCurrentGameForAnalytics()) ? void 0 : t.id;
             return null == e ? null : m.Z.getDetectableGame(e);
         }),
-        E = (0, r.e7)([g.default], () => {
+        E = (0, r.e7)([h.default], () => {
             var t;
             let e =
                 null !=
-                (t = null === g.default || void 0 === g.default ? void 0 : g.default.getMostRecentOverlayRenderMethod())
+                (t = null === h.default || void 0 === h.default ? void 0 : h.default.getMostRecentOverlayRenderMethod())
                     ? t
                     : void 0;
             return null != e ? v.gl[e] : void 0;
@@ -55,13 +55,13 @@ function y(t) {
         }, []),
         O = i.useCallback(async () => {
             var t, n, a;
-            if ("unreported" === f && 0 === b.length) {
+            if ("unreported" === k && 0 === b.length) {
                 P(!0), await (0, o._v)(100), P(!1), R(!0);
                 return;
             }
             j(!0),
-                await _.default.track(h.rMx.OVERLAY_DISABLED_SURVEY, {
-                    reason: f,
+                await _.default.track(g.rMx.OVERLAY_DISABLED_SURVEY, {
+                    reason: k,
                     comment: b,
                     client_setting_type: y,
                     application_id: null == D ? void 0 : D.id,
@@ -83,9 +83,9 @@ function y(t) {
                 M(!0),
                 await (0, o._v)(1500),
                 e();
-        }, [f, b, y, null == D ? void 0 : D.id, null == D ? void 0 : D.name, E, e]);
+        }, [k, b, y, null == D ? void 0 : D.id, null == D ? void 0 : D.name, E, e]);
     (0, d.ZP)(() => {
-        _.default.track(h.rMx.OPEN_MODAL, { type: "overlay_disabled_questionnaire_modal" });
+        _.default.track(g.rMx.OPEN_MODAL, { type: "overlay_disabled_questionnaire_modal" });
     });
     let U = i.useMemo(
         () => [
@@ -121,15 +121,15 @@ function y(t) {
                         className: x.radioHeader,
                         children: (0, a.jsx)(s.Text, {
                             variant: "text-sm/semibold",
-                            color: F ? "text-danger" : "text-muted",
+                            color: F ? "text-feedback-critical" : "text-muted",
                             children: p.intl.string(p.t.yhUvdd),
                         }),
                     }),
                     (0, a.jsx)(s.FXm, {
-                        value: f,
+                        value: k,
                         options: L,
                         onChange: (t) => {
-                            k(t), R(!1), P(!1);
+                            C(t), R(!1), P(!1);
                         },
                     }),
                 ],

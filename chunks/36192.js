@@ -140,7 +140,7 @@ function N() {
                                 (0, r.jsx)(d.Text, {
                                     className: C.toolsTitle,
                                     variant: "text-sm/normal",
-                                    color: "text-danger",
+                                    color: "text-feedback-critical",
                                     children: "These tools are only shown to staff users.",
                                 }),
                                 (0, r.jsx)(u.u, {

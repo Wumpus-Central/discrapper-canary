@@ -15,8 +15,8 @@ var r,
     h = n(623602),
     g = n(598077),
     p = n(314897),
-    m = n(246946),
-    f = n(594174),
+    f = n(246946),
+    m = n(594174),
     _ = n(626135),
     x = n(51144),
     E = n(480387),
@@ -36,9 +36,9 @@ function O(e) {
             currentUser: s,
             hidePrivateData: l,
             isAuthenticated: b,
-        } = (0, o.cj)([f.default, m.Z, p.default], () => ({
-            currentUser: f.default.getCurrentUser(),
-            hidePrivateData: m.Z.hidePersonalInformation,
+        } = (0, o.cj)([m.default, f.Z, p.default], () => ({
+            currentUser: m.default.getCurrentUser(),
+            hidePrivateData: f.Z.hidePersonalInformation,
             isAuthenticated: p.default.isAuthenticated(),
         })),
         S = new g.Z(n),
@@ -59,7 +59,7 @@ function O(e) {
               (T = (0, i.jsx)(c.Text, {
                   variant: "text-sm/semibold",
                   className: y.hintText,
-                  color: "text-danger",
+                  color: "text-feedback-critical",
                   children: I.intl.string(I.t.tYX2ps),
               })),
         (0, i.jsx)("div", {

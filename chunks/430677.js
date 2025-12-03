@@ -187,7 +187,7 @@ let _ = function (e) {
             null != k &&
                 (0, r.jsx)(c.Text, {
                     variant: "text-xs/medium",
-                    color: "text-danger",
+                    color: "text-feedback-critical",
                     children: k,
                 }),
         ],

@@ -72,7 +72,7 @@ t.a(e, async function (e, r) {
                         (0, l.jsx)("span", { children: n }),
                         (0, l.jsxs)(o.Text, {
                             variant: "text-md/normal",
-                            color: "text-danger",
+                            color: "text-feedback-critical",
                             className: w.errorMessage,
                             children: [
                                 (0, l.jsx)(s.Z, {

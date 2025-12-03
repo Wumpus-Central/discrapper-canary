@@ -13,8 +13,8 @@ var i = e(54381),
     c = e(600164),
     m = e(313201),
     p = e(565138),
-    g = e(984933),
-    C = e(430824),
+    C = e(984933),
+    g = e(430824),
     u = e(388032),
     _ = e(308250);
 function L(t) {
@@ -23,7 +23,7 @@ function L(t) {
         [G, I] = a.useState(null),
         [D, y] = a.useState(!1),
         U = (0, m.Dt)(),
-        z = (0, l.e7)([C.Z], () => C.Z.getGuild(n), [n]),
+        z = (0, l.e7)([g.Z], () => g.Z.getGuild(n), [n]),
         f = a.useRef(null);
     a.useEffect(() => {
         var t;
@@ -33,7 +33,7 @@ function L(t) {
             async (t) => {
                 if ((t.preventDefault(), null == z)) return;
                 y(!0), I(null);
-                let n = g.ZP.getDefaultChannel(z.id);
+                let n = C.ZP.getDefaultChannel(z.id);
                 try {
                     let t = u.intl.formatToPlainString(u.t.V4lepJ, { topic: E });
                     await d.Z.createTextChannel(z.id, E, null == n ? void 0 : n.parent_id, t), x();
@@ -119,7 +119,7 @@ function L(t) {
                             0 === Object.keys(G.fields).length &&
                             (0, i.jsx)(r.Text, {
                                 variant: "text-xs/normal",
-                                color: "text-danger",
+                                color: "text-feedback-critical",
                                 children: G.message,
                             }),
                     ],

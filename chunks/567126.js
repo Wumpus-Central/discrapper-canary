@@ -181,7 +181,7 @@ function W(e) {
             ? (0, r.jsxs)(f.Text, {
                   className: G.errorMessage,
                   variant: "text-md/normal",
-                  color: "text-danger",
+                  color: "text-feedback-critical",
                   children: [B.intl.string(B.t["kW5h/W"]), (0, r.jsx)("br", {}), B.intl.string(B.t["5Jvu1R"])],
               })
             : (0, r.jsx)(h.Z, {
@@ -489,7 +489,7 @@ function X(e) {
             ? (0, r.jsx)(f.Text, {
                   className: G.errorMessage,
                   variant: "text-md/normal",
-                  color: "text-danger",
+                  color: "text-feedback-critical",
                   children: null != o && o.length > 0 ? o : B.intl.string(B.t.CKsXk3),
               })
             : (0, r.jsx)(A.Z, {

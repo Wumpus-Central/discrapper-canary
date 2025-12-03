@@ -28,7 +28,7 @@ class l extends i.PureComponent {
         return null != this.state.error
             ? (0, r.jsx)("div", {
                   children: (0, r.jsx)(a.Text, {
-                      color: "text-danger",
+                      color: "text-feedback-critical",
                       variant: "text-md/normal",
                       className: o.labelSpacing,
                       children: "Error rendering component. Check console for more information on the error.",

@@ -171,7 +171,7 @@ function j(e) {
                 null != S &&
                     (0, r.jsx)(o.Text, {
                         variant: "text-xs/medium",
-                        color: "text-danger",
+                        color: "text-feedback-critical",
                         children: S,
                     }),
             ],

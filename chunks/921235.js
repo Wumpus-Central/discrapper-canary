@@ -55,7 +55,7 @@ function x(e) {
             null != l && "" !== l
                 ? (0, i.jsx)(s.Text, {
                       className: _.error,
-                      color: "text-danger",
+                      color: "text-feedback-critical",
                       variant: "text-sm/normal",
                       children: l,
                   })

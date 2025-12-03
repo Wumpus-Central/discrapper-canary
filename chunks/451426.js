@@ -133,7 +133,7 @@ function N(n) {
                         (0, t.jsx)(l.Text, {
                             className: u.errorText,
                             variant: "text-lg/normal",
-                            color: "text-danger",
+                            color: "text-feedback-critical",
                             children: Z,
                         }),
                     (0, t.jsx)("div", {

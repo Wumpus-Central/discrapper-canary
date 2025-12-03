@@ -425,7 +425,7 @@ function D(e) {
                         o.expire_behavior === c.l.KICK &&
                         (0, i.jsx)(g.Text, {
                             className: T.kickPermissionWarning,
-                            color: "text-danger",
+                            color: "text-feedback-critical",
                             variant: "text-sm/normal",
                             children: I.intl.string(I.t.mThMlB),
                         }),

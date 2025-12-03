@@ -5,24 +5,24 @@ var e = n(54381),
     a = n(544891),
     s = n(159691),
     u = n(481060),
-    d = n(493773),
-    c = n(910693),
+    c = n(493773),
+    d = n(910693),
     o = n(314897),
     x = n(271383),
     v = n(430824),
     N = n(496675),
-    g = n(594174),
-    k = n(626135),
+    k = n(594174),
+    g = n(626135),
     m = n(51144),
     E = n(981631),
     h = n(388032),
     C = n(277081);
 function p(l) {
-    let { disabled: t = !1, user: n, setNickname: i, nickname: a, error: s, hasNick: d } = l,
-        c = r.useRef(null),
+    let { disabled: t = !1, user: n, setNickname: i, nickname: a, error: s, hasNick: c } = l,
+        d = r.useRef(null),
         x = r.useCallback(() => {
             var l;
-            i(""), null == (l = c.current) || l.focus();
+            i(""), null == (l = d.current) || l.focus();
         }, [i]);
     return (0, e.jsxs)(e.Fragment, {
         children: [
@@ -39,7 +39,7 @@ function p(l) {
             (0, e.jsx)(u.oil, {
                 label: t ? h.intl.string(h.t.EyA4q5) : h.intl.string(h.t["621LJD"]),
                 disabled: t,
-                inputRef: c,
+                inputRef: d,
                 maxLength: E.l$U,
                 value: a,
                 placeholder: m.ZP.getName(n),
@@ -49,12 +49,12 @@ function p(l) {
             null != s
                 ? (0, e.jsx)(u.Text, {
                       variant: "text-xs/normal",
-                      color: "text-danger",
+                      color: "text-feedback-critical",
                       className: C.nickError,
                       children: s,
                   })
                 : null,
-            d && !t
+            c && !t
                 ? (0, e.jsx)("div", {
                       className: C.reset,
                       children: (0, e.jsx)(u.Avr, {
@@ -71,33 +71,33 @@ let A = function (l) {
     var t;
     let { transitionState: n, user: u, guildId: o, onClose: m, analyticsSource: C, analyticsLocations: A } = l,
         f = (0, i.e7)([x.ZP], () => (null != o ? x.ZP.getMember(o, u.id) : null)),
-        _ = (0, i.e7)([N.Z, g.default, v.Z], () => {
+        b = (0, i.e7)([N.Z, k.default, v.Z], () => {
             var l;
             let t = v.Z.getGuild(o);
             return (
                 null != t &&
-                ((null == (l = g.default.getCurrentUser()) ? void 0 : l.id) === u.id
+                ((null == (l = k.default.getCurrentUser()) ? void 0 : l.id) === u.id
                     ? N.Z.can(E.Plq.CHANGE_NICKNAME, t) || N.Z.can(E.Plq.MANAGE_NICKNAMES, t)
                     : N.Z.canManageUser(E.Plq.MANAGE_NICKNAMES, u.id, t))
             );
         }),
-        [b, M] = r.useState(!1),
+        [_, M] = r.useState(!1),
         [Z, j] = r.useState(null != (t = null == f ? void 0 : f.nick) ? t : ""),
         [y, I] = r.useState({});
-    (0, d.ZP)(() => {
-        k.default.track(E.rMx.OPEN_MODAL, {
+    (0, c.ZP)(() => {
+        g.default.track(E.rMx.OPEN_MODAL, {
             type: "Change Server Identity",
             location: E.ZY5.GUILD_CHANNEL,
             source: C,
         });
     });
-    let P = (0, c.sE)(o, {
+    let P = (0, d.sE)(o, {
             location: null == A ? void 0 : A[0],
             targetUserId: u.id,
         }),
         S = r.useCallback(
             async (l) => {
-                var t, n, e, r, i, s, d, x, v;
+                var t, n, e, r, i, s, c, x, v;
                 l.preventDefault();
                 let N = null;
                 if (
@@ -112,7 +112,7 @@ let A = function (l) {
                             body: N,
                             rejectWithError: !1,
                         }),
-                        P(c.jQ.CHANGE_NICKNAME),
+                        P(d.jQ.CHANGE_NICKNAME),
                         m();
                 } catch (a) {
                     let l;
@@ -125,9 +125,9 @@ let A = function (l) {
                                   : r.message) || h.intl.string(h.t.xex86n))
                         : (null == t ? void 0 : t.username) != null &&
                           (l =
-                              (null == (v = t.username) || null == (x = v._errors) || null == (d = x[0])
+                              (null == (v = t.username) || null == (x = v._errors) || null == (c = x[0])
                                   ? void 0
-                                  : d.message) || h.intl.string(h.t.xex86n)),
+                                  : c.message) || h.intl.string(h.t.xex86n)),
                         I({ nick: l });
                 }
             },
@@ -149,11 +149,11 @@ let A = function (l) {
                     text: h.intl.string(h.t["R3BPH+"]),
                     variant: "primary",
                     type: "submit",
-                    disabled: b,
+                    disabled: _,
                 },
             ],
             children: (0, e.jsx)(p, {
-                disabled: !_,
+                disabled: !b,
                 user: u,
                 error: y.nick,
                 nickname: Z,

@@ -33,8 +33,8 @@ var i = n(54381),
     M = n(388032),
     R = n(787267),
     L = n(334405),
-    D = n(977007);
-function k(e) {
+    k = n(977007);
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -108,7 +108,7 @@ function V(e) {
     r.useEffect(() => {
         b.default.track(
             A.rMx.HANG_STATUS_PICKER_OPENED,
-            U(k({}, (0, O.Z)(V.id)), {
+            U(D({}, (0, O.Z)(V.id)), {
                 num_favorites: q.length,
                 num_recents: W.length,
             }),
@@ -199,7 +199,7 @@ function V(e) {
                 let n = (0, x.Z)(t);
                 (!ep || e) &&
                     ((0, y.tg)(n ? t : t.status, n ? null : t.emoji),
-                    b.default.track(A.rMx.HANG_STATUS_FAVORITE_CLICKED, U(k({}, (0, O.Z)(V.id)), { favorited: !e })));
+                    b.default.track(A.rMx.HANG_STATUS_FAVORITE_CLICKED, U(D({}, (0, O.Z)(V.id)), { favorited: !e })));
             },
             [V.id, ep],
         ),
@@ -268,7 +268,7 @@ function V(e) {
                 shouldShow: ef === d.z.HANG_STATUS_POPOVER_NUX,
                 graphic: {
                     type: "image",
-                    src: D.Z,
+                    src: k.Z,
                 },
                 targetElementRef: J,
                 onRequestClose: () => em(w.L.DISMISS),
@@ -328,7 +328,7 @@ function V(e) {
                             (0, i.jsx)(h.Text, {
                                 variant: "text-xs/normal",
                                 className: R.inputHint,
-                                color: "text-danger",
+                                color: "text-feedback-critical",
                                 children: M.intl.string(M.t["s/oq0f"]),
                             }),
                     ],

@@ -174,7 +174,7 @@ function Z() {
     )
         return null != t
             ? (0, i.jsx)(p.Text, {
-                  color: "text-danger",
+                  color: "text-feedback-critical",
                   variant: "text-sm/normal",
                   children: t.message,
               })
@@ -192,7 +192,7 @@ function Z() {
             o
                 ? (0, i.jsx)(p.Text, {
                       className: N.marginTop8,
-                      color: "text-danger",
+                      color: "text-feedback-critical",
                       variant: "text-sm/normal",
                       children: t.getAnyErrorMessage(),
                   })

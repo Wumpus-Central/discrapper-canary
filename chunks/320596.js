@@ -31,7 +31,7 @@ let h = (e) => {
                 (e) => {
                     var n, l;
                     return (0, r.jsx)(
-                        j,
+                        f,
                         ((n = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
@@ -188,7 +188,7 @@ let h = (e) => {
                                 children: [
                                     (0, r.jsx)(a.Text, {
                                         variant: "text-xs/normal",
-                                        color: h ? "text-danger" : "text-default",
+                                        color: h ? "text-feedback-critical" : "text-default",
                                         children: h ? m.intl.string(m.t["4bDptI"]) : m.intl.string(m.t.tFY5Zb),
                                     }),
                                     (0, r.jsxs)(a.Text, {
@@ -204,7 +204,7 @@ let h = (e) => {
             })
         );
     },
-    j = (e) => {
+    f = (e) => {
         let { channelId: t } = e,
             n = (0, g.z)(t),
             l = (0, g.bA)(t);

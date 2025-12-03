@@ -230,7 +230,7 @@ function O(e) {
                                                     }),
                                                     (0, l.jsx)(a.Text, {
                                                         variant: "text-sm/normal",
-                                                        color: "text-danger",
+                                                        color: "text-feedback-critical",
                                                         children: e,
                                                     }),
                                                 ],

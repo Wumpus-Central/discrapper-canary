@@ -1,4 +1,4 @@
-r.d(t, { default: () => h }), r(388685), r(781311);
+r.d(t, { default: () => R }), r(388685), r(781311);
 var a = r(54381),
     n = r(473749),
     i = r(793030),
@@ -10,44 +10,44 @@ var a = r(54381),
     d = r(892880),
     b = r(51144),
     m = r(480608),
-    g = r(434404),
+    f = r(434404),
     w = r(103576),
     x = r(130341),
     _ = r(494831),
-    f = r(71080),
-    p = r(388032),
-    R = r(98678);
-function h(e) {
-    let { transitionState: t, onClose: r, roleId: h, guildId: k } = e,
-        y = (0, l.e7)([w.Z], () => w.Z.getRole(h), [h]),
+    g = r(71080),
+    k = r(388032),
+    p = r(98678);
+function R(e) {
+    let { transitionState: t, onClose: r, roleId: R, guildId: h } = e,
+        y = (0, l.e7)([w.Z], () => w.Z.getRole(R), [R]),
         [T, C] = n.useState(""),
         [M, v] = n.useState({}),
         [E, Z] = n.useState(!1),
         [S, H] = n.useState(null),
         B = n.useRef(null);
     n.useEffect(() => {
-        d.Z.requestMembers(k, T.trim().toLowerCase(), x._4);
-    }, [k, T]);
-    let L = n.useCallback((e) => !e.roles.includes(h), [h]),
-        O = (0, x.lJ)(k, L),
+        d.Z.requestMembers(h, T.trim().toLowerCase(), x._4);
+    }, [h, T]);
+    let L = n.useCallback((e) => !e.roles.includes(R), [R]),
+        O = (0, x.lJ)(h, L),
         j = n.useMemo(() => O.filter((e) => (0, x.eg)(T, e)), [T, O]),
         P = n.useCallback(async () => {
             let e = Object.values(M).map((e) => e.row.id);
             Z(!0);
             try {
-                await g.Z.bulkAddMemberRoles(k, h, e), (0, m.H)(k, h, !1), r();
+                await f.Z.bulkAddMemberRoles(h, R, e), (0, m.H)(h, R, !1), r();
             } catch (t) {
                 let e = new c.Hx(t);
                 Z(!1), H(e);
             }
-        }, [k, h, M, r]),
+        }, [h, R, M, r]),
         q = n.useMemo(
             () =>
                 j.map((e) => {
                     var t;
                     let r = b.ZP.getUserTag(e.user);
                     return {
-                        rowType: f.aC.MEMBER,
+                        rowType: g.aC.MEMBER,
                         name: null != (t = e.name) ? t : r,
                         nickname: e.name,
                         username: r,
@@ -64,7 +64,7 @@ function h(e) {
         A = u.Z.useSections({ members: q }),
         N = n.useCallback(
             (e) =>
-                e.rowType === f.aC.MEMBER || e.rowType === f.aC.OWNER
+                e.rowType === g.aC.MEMBER || e.rowType === g.aC.OWNER
                     ? {
                           type: s.F.MEMBER,
                           label: e.name,
@@ -86,22 +86,22 @@ function h(e) {
         children: (0, a.jsx)(i.Modal, {
             onClose: r,
             transitionState: t,
-            title: p.intl.string(p.t.ZYOK46),
+            title: k.intl.string(k.t.ZYOK46),
             subtitle:
                 null != y
-                    ? p.intl.format(p.t["qP+nuZ"], {
+                    ? k.intl.format(k.t["qP+nuZ"], {
                           numMembers: _.ey,
                           roleName: y.name,
                       })
-                    : p.intl.format(p.t["3OxP4q"], { numMembers: _.ey }),
+                    : k.intl.format(k.t["3OxP4q"], { numMembers: _.ey }),
             input: (0, a.jsxs)("div", {
                 children: [
-                    (0, a.jsx)(u.Z.SearchBox, { placeholderText: p.intl.string(p.t.vMiCaQ) }),
+                    (0, a.jsx)(u.Z.SearchBox, { placeholderText: k.intl.string(k.t.vMiCaQ) }),
                     null != S
                         ? (0, a.jsx)(o.Text, {
-                              className: R.errorText,
+                              className: p.errorText,
                               variant: "text-xs/normal",
-                              color: "text-danger",
+                              color: "text-feedback-critical",
                               children: S.getAnyErrorMessage(),
                           })
                         : null,
@@ -117,12 +117,12 @@ function h(e) {
             },
             actions: [
                 {
-                    text: p.intl.string(p.t["ETE/oC"]),
+                    text: k.intl.string(k.t["ETE/oC"]),
                     variant: "secondary",
                     onClick: r,
                 },
                 {
-                    text: p.intl.string(p.t.OYkgVk),
+                    text: k.intl.string(k.t.OYkgVk),
                     variant: "primary",
                     onClick: P,
                     loading: E,

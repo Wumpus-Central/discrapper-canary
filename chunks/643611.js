@@ -48,11 +48,11 @@ function S(t) {
         I = (0, a.e7)([c.Z], () => c.Z.getChannel(_), [_]),
         L = (0, A.c)(n.type, n, e);
     if (null == L) return null;
-    let { headerText: T } = L;
+    let { headerText: f } = L;
     return (0, l.jsx)(i.Modal, {
         onClose: o,
         transitionState: S,
-        title: T,
+        title: f,
         subtitle: E.intl.string(E.t["z/ZF2i"]),
         actions: [
             {
@@ -83,7 +83,7 @@ function S(t) {
                 }),
                 null != h
                     ? (0, l.jsx)(u.Text, {
-                          color: "text-danger",
+                          color: "text-feedback-critical",
                           variant: "text-sm/normal",
                           children: h,
                       })

@@ -65,7 +65,7 @@ class u extends (r = a.PureComponent) {
                                     null != c && "" !== c
                                         ? (0, i.jsxs)(o.Text, {
                                               variant: "text-xs/normal",
-                                              color: "text-danger",
+                                              color: "text-feedback-critical",
                                               className: l.error,
                                               children: [" ", c, " "],
                                           })

@@ -56,7 +56,7 @@ function p(e) {
             "message" in h &&
                 (0, i.jsx)(l.Text, {
                     className: u.errorText,
-                    color: "text-danger",
+                    color: "text-feedback-critical",
                     variant: "text-sm/normal",
                     children: h.message,
                 }),

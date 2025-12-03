@@ -161,19 +161,19 @@ function h() {
                 null == e &&
                     (0, a.jsx)(r.Text, {
                         variant: "text-sm/normal",
-                        color: "text-danger",
+                        color: "text-feedback-critical",
                         children: "Error: need to select a survey",
                     }),
                 !(n >= 0) &&
                     (0, a.jsx)(r.Text, {
                         variant: "text-sm/normal",
-                        color: "text-danger",
+                        color: "text-feedback-critical",
                         children: "Error: cooldown needs to be a number greater than 0",
                     }),
                 !(g >= 0 && g <= 100) &&
                     (0, a.jsx)(r.Text, {
                         variant: "text-sm/normal",
-                        color: "text-danger",
+                        color: "text-feedback-critical",
                         children: "Error: chance needs to be a number between 0 and 100",
                     }),
                 (0, a.jsx)(r.Text, {

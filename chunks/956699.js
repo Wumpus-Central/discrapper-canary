@@ -297,7 +297,7 @@ class ei extends i.Component {
             o =
                 en(null != i ? i : {}) && "stable" !== window.GLOBAL_ENV.RELEASE_CHANNEL
                     ? (0, r.jsx)(_.Text, {
-                          color: "text-danger",
+                          color: "text-feedback-critical",
                           variant: "text-md/normal",
                           children:
                               "Mobile build overrides must be generated using the desktop/web stable client for now!",

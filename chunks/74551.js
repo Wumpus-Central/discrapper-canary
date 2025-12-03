@@ -11,7 +11,7 @@ function s(e) {
             type: a.hQ.SHORT,
         });
     if (null == t.saveData.dueAt) return null;
-    let c = l ? "text-danger" : "text-default";
+    let c = l ? "text-feedback-critical" : "text-default";
     return (0, r.jsxs)("div", {
         className: o.container,
         children: [
@@ -19,7 +19,10 @@ function s(e) {
                 className: o.icon,
                 children: (0, r.jsx)(i.T39, {
                     size: "xxs",
-                    color: "text-danger" === c ? i.TVs.colors.TEXT_DANGER : i.TVs.colors.INTERACTIVE_ACTIVE,
+                    color:
+                        "text-feedback-critical" === c
+                            ? i.TVs.colors.TEXT_FEEDBACK_CRITICAL
+                            : i.TVs.colors.INTERACTIVE_ACTIVE,
                 }),
             }),
             (0, r.jsx)(i.Heading, {

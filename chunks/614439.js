@@ -293,7 +293,7 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                     }),
                                                                     (null == W ? void 0 : W.category) != null
                                                                         ? (0, r.jsx)(c.Text, {
-                                                                              color: "text-danger",
+                                                                              color: "text-feedback-critical",
                                                                               className: S.error,
                                                                               variant: "text-sm/normal",
                                                                               children: W.category,
@@ -542,7 +542,7 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                             }),
                                                             (null == W ? void 0 : W.social_links) != null
                                                                 ? (0, r.jsx)(c.Text, {
-                                                                      color: "text-danger",
+                                                                      color: "text-feedback-critical",
                                                                       variant: "text-sm/normal",
                                                                       children: W.social_links,
                                                                   })
@@ -580,7 +580,7 @@ let T = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                         }),
                                                     (null == W ? void 0 : W.is_published) != null
                                                         ? (0, r.jsx)(c.Text, {
-                                                              color: "text-danger",
+                                                              color: "text-feedback-critical",
                                                               variant: "text-sm/normal",
                                                               children: W.is_published,
                                                           })

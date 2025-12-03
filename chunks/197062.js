@@ -13,7 +13,7 @@ let o = (e, t) => {
         return (0, r.jsxs)(
             i.Text,
             {
-                color: "text-danger",
+                color: "text-feedback-critical",
                 style: n,
                 variant: "text-sm/normal",
                 children: [

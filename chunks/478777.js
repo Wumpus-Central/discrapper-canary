@@ -219,7 +219,7 @@ function _() {
                                       }),
                                       (0, r.jsx)(s.Text, {
                                           variant: "text-sm/normal",
-                                          color: "text-danger",
+                                          color: "text-feedback-critical",
                                           children: e,
                                       }),
                                   ],

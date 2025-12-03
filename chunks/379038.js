@@ -1,6 +1,6 @@
-n.d(t, { default: () => p }), n(388685);
-var r = n(54381),
-    l = n(473749),
+n.d(t, { default: () => b }), n(388685);
+var l = n(54381),
+    r = n(473749),
     i = n(793030),
     a = n(481060),
     u = n(981888),
@@ -9,24 +9,24 @@ var r = n(54381),
     c = n(854698),
     o = n(440371),
     g = n(388032);
-function p(e) {
-    let { guildEvent: t, recurrenceId: n, transitionState: p, onClose: b } = e,
+function b(e) {
+    let { guildEvent: t, recurrenceId: n, transitionState: b, onClose: p } = e,
         x = (0, d.Z)(n, t.id),
         h = (0, c.iA)(n, t),
         f = (0, c.x6)(h, x),
-        [j, v] = l.useState(f),
+        [j, v] = r.useState(f),
         [m, { loading: D, error: O }] = (0, u.Z)(() => {
             let e = (0, s.Z)(t, n, j, x);
-            return null == O && b(), e;
+            return null == O && p(), e;
         });
-    return (0, r.jsxs)(i.Modal, {
-        transitionState: p,
+    return (0, l.jsxs)(i.Modal, {
+        transitionState: b,
         title: g.intl.string(g.t.wmVmXN),
         actions: [
             {
                 variant: "secondary",
                 text: g.intl.string(g.t["ETE/oC"]),
-                onClick: b,
+                onClick: p,
             },
             {
                 variant: "primary",
@@ -36,9 +36,9 @@ function p(e) {
                 disabled: (0, c.Y4)(j, f),
             },
         ],
-        onClose: b,
+        onClose: p,
         children: [
-            (0, r.jsx)(o.Z, {
+            (0, l.jsx)(o.Z, {
                 onScheduleChange: (e) => {
                     let { startDate: t, endDate: n } = e;
                     null != t && null != n && n.isBefore(t) && (n = t.clone().add(1, "hour")),
@@ -54,8 +54,8 @@ function p(e) {
                 recurrenceRule: t.recurrence_rule,
             }),
             null != O
-                ? (0, r.jsx)(a.Text, {
-                      color: "text-danger",
+                ? (0, l.jsx)(a.Text, {
+                      color: "text-feedback-critical",
                       variant: "text-xs/normal",
                       children: O.getAnyErrorMessage(),
                   })

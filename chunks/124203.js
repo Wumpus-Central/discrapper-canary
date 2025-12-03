@@ -170,7 +170,7 @@ function E() {
             null != O &&
                 (0, r.jsx)(s.Text, {
                     variant: "text-md/normal",
-                    color: "text-danger",
+                    color: "text-feedback-critical",
                     children: O,
                 }),
             (0, r.jsx)("div", {

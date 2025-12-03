@@ -1,6 +1,6 @@
 n.d(t, {
-    L: () => T,
-    O: () => N,
+    L: () => N,
+    O: () => T,
 }),
     n(388685);
 var a = n(54381),
@@ -289,7 +289,7 @@ let h = l.createContext({
                               children: [
                                   (0, a.jsx)(i.Text, {
                                       variant: "text-md/normal",
-                                      color: d ? "text-danger" : "text-default",
+                                      color: d ? "text-feedback-critical" : "text-default",
                                       children: "".concat(o.length, " errors"),
                                   }),
                                   (0, a.jsx)(i.Text, {
@@ -328,7 +328,7 @@ let h = l.createContext({
                                                 children: [
                                                     (0, a.jsx)(i.Text, {
                                                         variant: "text-md/bold",
-                                                        color: "text-danger",
+                                                        color: "text-feedback-critical",
                                                         children: n,
                                                     }),
                                                     l.length > 0 &&
@@ -340,7 +340,7 @@ let h = l.createContext({
                                                                     {
                                                                         children: (0, a.jsx)(i.Text, {
                                                                             variant: "text-sm/normal",
-                                                                            color: "text-danger",
+                                                                            color: "text-feedback-critical",
                                                                             children: e,
                                                                         }),
                                                                     },
@@ -460,7 +460,7 @@ let h = l.createContext({
             })
         );
     },
-    N = () => {
+    T = () => {
         let [e, t] = l.useState("preview");
         return (0, a.jsxs)("div", {
             className: m.container,
@@ -482,7 +482,7 @@ let h = l.createContext({
             ],
         });
     },
-    T = (e) => {
+    N = (e) => {
         let { children: t } = e,
             [n, i] = l.useState(() => () => {}),
             r = l.useMemo(() => ({ setDropHandler: (e) => i(() => e) }), []);

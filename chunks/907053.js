@@ -37,8 +37,8 @@ function m(t) {
         [j, p] = s.useState(""),
         [v, N] = s.useState(null),
         [_, g] = s.useState(!1),
-        [C, b] = s.useState("DOMAIN"),
-        f = () => {
+        [b, f] = s.useState("DOMAIN"),
+        C = () => {
             g(!0),
                 N(null),
                 a.tn
@@ -52,8 +52,8 @@ function m(t) {
                     })
                     .catch((t) => {
                         var n, e, i, s, a, l, r;
-                        (null == (n = t.body) ? void 0 : n.proof) && "DOMAIN" === C
-                            ? (p(t.body.proof), b("PROOF_DNS"))
+                        (null == (n = t.body) ? void 0 : n.proof) && "DOMAIN" === b
+                            ? (p(t.body.proof), f("PROOF_DNS"))
                             : N(
                                   (null == (l = t.body) ||
                                   null == (a = l.errors) ||
@@ -91,14 +91,14 @@ function m(t) {
                 ],
             }),
             (0, i.jsxs)(l.MyZ, {
-                activeSlide: C,
+                activeSlide: b,
                 width: 440,
                 children: [
                     (0, i.jsx)(l.Mi4, {
                         id: "DOMAIN",
                         children: (0, i.jsxs)("form", {
                             onSubmit: (t) => {
-                                t.preventDefault(), f();
+                                t.preventDefault(), C();
                             },
                             children: [
                                 (0, i.jsxs)(l.hzk, {
@@ -197,7 +197,7 @@ function m(t) {
                                     null != v &&
                                         (0, i.jsx)(l.Text, {
                                             variant: "text-sm/normal",
-                                            color: "text-danger",
+                                            color: "text-feedback-critical",
                                             className: u.text,
                                             children: v,
                                         }),
@@ -211,7 +211,7 @@ function m(t) {
                                         variant: "secondary",
                                         text: x.intl.string(x.t["13/7kX"]),
                                         onClick: () => {
-                                            b("DOMAIN"), N(null);
+                                            f("DOMAIN"), N(null);
                                         },
                                     }),
                                     (0, i.jsxs)("div", {
@@ -224,7 +224,7 @@ function m(t) {
                                                     variant: "secondary",
                                                     text: x.intl.string(x.t.CkfdNx),
                                                     onClick: () => {
-                                                        b("PROOF_HTTP"), N(null);
+                                                        f("PROOF_HTTP"), N(null);
                                                     },
                                                 }),
                                             }),
@@ -232,7 +232,7 @@ function m(t) {
                                                 variant: "primary",
                                                 text: x.intl.string(x.t["13ofGu"]),
                                                 loading: _,
-                                                onClick: f,
+                                                onClick: C,
                                             }),
                                         ],
                                     }),
@@ -267,7 +267,7 @@ function m(t) {
                                     null != v &&
                                         (0, i.jsx)(l.Text, {
                                             variant: "text-sm/normal",
-                                            color: "text-danger",
+                                            color: "text-feedback-critical",
                                             className: u.text,
                                             children: v,
                                         }),
@@ -281,7 +281,7 @@ function m(t) {
                                         variant: "secondary",
                                         text: x.intl.string(x.t["13/7kX"]),
                                         onClick: () => {
-                                            b("DOMAIN"), N(null);
+                                            f("DOMAIN"), N(null);
                                         },
                                     }),
                                     (0, i.jsxs)("div", {
@@ -294,7 +294,7 @@ function m(t) {
                                                     variant: "secondary",
                                                     text: x.intl.string(x.t.RhJMVQ),
                                                     onClick: () => {
-                                                        b("PROOF_DNS"), N(null);
+                                                        f("PROOF_DNS"), N(null);
                                                     },
                                                 }),
                                             }),
@@ -302,7 +302,7 @@ function m(t) {
                                                 variant: "primary",
                                                 text: x.intl.string(x.t["13ofGu"]),
                                                 loading: _,
-                                                onClick: f,
+                                                onClick: C,
                                             }),
                                         ],
                                     }),

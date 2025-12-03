@@ -27,7 +27,7 @@ function d(e) {
             null != t && "" !== t
                 ? (0, r.jsx)(a.x, {
                       variant: "text-xs/normal",
-                      color: "text-danger",
+                      color: "text-feedback-critical",
                       children: t,
                   })
                 : null,

@@ -38,7 +38,7 @@ function _(e) {
                     null != n
                         ? (0, r.jsx)(l.x, {
                               variant: "text-xs/normal",
-                              color: "text-danger",
+                              color: "text-feedback-critical",
                               children: n,
                           })
                         : null,

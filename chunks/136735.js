@@ -25,8 +25,8 @@ var n = l(54381),
     C = l(491202),
     N = l(434227),
     O = l(600126);
-let P = new Set(["application/json", "image/png", "image/apng", "image/gif", "image/jpeg", "image/jpg"]),
-    k = [
+let k = new Set(["application/json", "image/png", "image/apng", "image/gif", "image/jpeg", "image/jpg"]),
+    P = [
         {
             name: "Sticker file",
             extensions: ["json", "png", "apng", "gif", "jpeg", "jpg"],
@@ -109,7 +109,7 @@ function R(e) {
             var t;
             if (null == e) return;
             let l = null == (t = e.type) ? void 0 : t.split(";")[0];
-            if (!P.has(l))
+            if (!k.has(l))
                 return void ei({
                     message: w.intl.string(w.t.B2hGAG),
                     isBlocking: !0,
@@ -274,7 +274,7 @@ function R(e) {
                                               required: !0,
                                               children: (0, n.jsx)(m.Z, {
                                                   buttonText: w.intl.string(w.t.xEnDUa),
-                                                  filters: k,
+                                                  filters: P,
                                                   filename: null != (z = null == X ? void 0 : X.filename) ? z : "",
                                                   placeholder: w.intl.string(w.t.rUYLJ4),
                                                   onFileSelect: ec,
@@ -311,7 +311,7 @@ function R(e) {
                                 (0, n.jsx)(u.Text, {
                                     className: C.formItem,
                                     variant: "text-sm/normal",
-                                    color: "text-danger",
+                                    color: "text-feedback-critical",
                                     children: en.message,
                                 }),
                         ],

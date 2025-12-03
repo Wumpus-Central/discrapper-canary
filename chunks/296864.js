@@ -19,9 +19,9 @@ function j(e) {
     var n;
     let { transitionState: t, event: j, onSuccess: f, onClose: N } = e,
         { guild_id: y, privacy_level: k } = j,
-        E = (0, r.e7)([d.Z], () => d.Z.getChannel(j.channel_id), [j]),
-        b = (0, r.e7)([h.Z], () => h.Z.getGuild(y), [y]),
-        { canManageGuildEvent: w } = (0, o.XJ)(null != E ? E : b),
+        b = (0, r.e7)([d.Z], () => d.Z.getChannel(j.channel_id), [j]),
+        E = (0, r.e7)([h.Z], () => h.Z.getGuild(y), [y]),
+        { canManageGuildEvent: w } = (0, o.XJ)(null != b ? b : E),
         I = w(j),
         O = (0, r.e7)([c.Z], () => c.Z.isLurking(y), [y]),
         S = j.entity_type === x.WX.STAGE_INSTANCE,
@@ -80,8 +80,8 @@ function j(e) {
         ],
         children: [
             (0, i.jsx)(g.Z, {
-                guild: b,
-                channel: E,
+                guild: E,
+                channel: b,
                 name: j.name,
                 description: null != (n = j.description) ? n : void 0,
                 imageSource: (0, m.Z)(j),
@@ -104,7 +104,7 @@ function j(e) {
                 }),
             null != P && null != P.getAnyErrorMessage()
                 ? (0, i.jsx)(s.Text, {
-                      color: "text-danger",
+                      color: "text-feedback-critical",
                       variant: "text-sm/normal",
                       className: C.errorMessage,
                       children: P.getAnyErrorMessage(),

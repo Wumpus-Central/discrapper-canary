@@ -19,7 +19,7 @@ let d = () =>
             size: "custom",
             width: 13,
             height: 13,
-            color: s.Z.colors.TEXT_DANGER.css,
+            color: s.Z.colors.TEXT_FEEDBACK_CRITICAL.css,
         }),
     g = () =>
         (0, r.jsx)(l.k$p, {

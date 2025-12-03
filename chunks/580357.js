@@ -11,7 +11,7 @@ function s() {
                 className: t.marker,
                 tag: "span",
                 variant: "text-md/semibold",
-                color: "text-danger",
+                color: "text-feedback-critical",
                 children: "*",
             }),
             (0, a.jsx)(i.nn4, { children: r.intl.string(r.t.EkokLy) }),

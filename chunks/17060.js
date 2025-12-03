@@ -17,8 +17,8 @@ var l = n(54381),
     _ = n(77498),
     h = n(19780),
     x = n(808506),
-    N = n(626135),
-    b = n(499533),
+    b = n(626135),
+    N = n(499533),
     S = n(709054),
     P = n(145597),
     E = n(837268),
@@ -316,7 +316,7 @@ function K(e) {
                     return !0;
                 }),
                 j = O.Z.getRecentActions(10),
-                D = b.Z.getRecentExperimentBuckets(
+                D = N.Z.getRecentExperimentBuckets(
                     v.Z.getAllExperimentAssignments(),
                     new Date(Date.now() - 7776000000),
                 ),
@@ -362,7 +362,7 @@ function K(e) {
                     recent_experiment_buckets: JSON.stringify(D),
                     location: _,
                 };
-            await N.default.track(T.rMx.OVERLAY_BUG_REPORT, M),
+            await b.default.track(T.rMx.OVERLAY_BUG_REPORT, M),
                 await (0, s._v)(1000),
                 et(!1),
                 null == i || i(),
@@ -404,7 +404,7 @@ function K(e) {
         };
     return (
         (0, g.ZP)(() => {
-            N.default.track(T.rMx.OPEN_MODAL, {
+            b.default.track(T.rMx.OPEN_MODAL, {
                 type: "overlay_bug_reporter_modal",
                 location: _,
             });
@@ -438,7 +438,7 @@ function K(e) {
                                 intensity: 1.5,
                                 children: (0, l.jsx)(d.Text, {
                                     variant: "text-md/medium",
-                                    color: er ? "text-danger" : "text-primary",
+                                    color: er ? "text-feedback-critical" : "text-primary",
                                     children: D.intl.string(D.t.Trx7eJ),
                                 }),
                             }),
@@ -454,7 +454,7 @@ function K(e) {
                             er &&
                                 (0, l.jsx)(d.Text, {
                                     variant: "text-xs/semibold",
-                                    color: "text-danger",
+                                    color: "text-feedback-critical",
                                     children: D.intl.string(D.t["5cqa9J"]),
                                 }),
                         ],

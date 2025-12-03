@@ -184,7 +184,7 @@ let b = function (e) {
                   null != N &&
                       (0, r.jsx)(o.Text, {
                           variant: "text-xs/medium",
-                          color: "text-danger",
+                          color: "text-feedback-critical",
                           children: N,
                       }),
               ],

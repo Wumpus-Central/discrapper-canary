@@ -20,7 +20,7 @@ function h(e) {
               children: (0, r.jsx)(s.Text, {
                   className: p.errorSpan,
                   variant: "text-xs/medium",
-                  color: "text-danger",
+                  color: "text-feedback-critical",
                   children: null != i ? i : m.intl.format(m.t.jKYAPu, { helpArticle: f }),
               }),
           })

@@ -51,7 +51,7 @@ function f(e) {
             null != _ && "" !== _
                 ? (0, r.jsx)(o.x, {
                       variant: "text-xs/normal",
-                      color: "text-danger",
+                      color: "text-feedback-critical",
                       children: _,
                   })
                 : null,

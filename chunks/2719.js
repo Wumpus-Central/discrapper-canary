@@ -620,7 +620,7 @@ function eo() {
                         ? (0, r.jsx)(f.Text, {
                               className: W.avatarError,
                               variant: "text-xs/normal",
-                              color: "text-danger",
+                              color: "text-feedback-critical",
                               children: s,
                           })
                         : null,

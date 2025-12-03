@@ -14,8 +14,8 @@ var i = n(54381),
     u = n(892880),
     m = n(458879),
     x = n(981631),
-    g = n(388032),
-    C = n(960780);
+    C = n(388032),
+    g = n(960780);
 function p(e) {
     var t;
     let {
@@ -24,8 +24,8 @@ function p(e) {
             onBack: f,
             onHubGuildInfoSet: j,
             onGuildCreated: h,
-            isSlideReady: _,
-            hasFooter: b = !0,
+            isSlideReady: b,
+            hasFooter: _ = !0,
             isCommunity: L = !1,
         } = e,
         [v, I] = l.useState(u.Z.getGuildNameSuggestion()),
@@ -38,8 +38,8 @@ function p(e) {
         U = l.useRef(null);
     l.useEffect(() => {
         var e;
-        _ && (null == (e = U.current) || e.focus());
-    }, [_]);
+        b && (null == (e = U.current) || e.focus());
+    }, [b]);
     let D = l.useCallback(
             async (e) => {
                 if ((e.preventDefault(), null != n)) {
@@ -62,7 +62,7 @@ function p(e) {
             children: [
                 (0, i.jsx)(r.Button, {
                     variant: "primary",
-                    text: null != j ? g.intl.string(g.t.PDTjLN) : g.intl.string(g.t.CumH4u),
+                    text: null != j ? C.intl.string(C.t.PDTjLN) : C.intl.string(C.t.CumH4u),
                     onClick: D,
                     disabled: 0 === v.length,
                     loading: Z,
@@ -70,7 +70,7 @@ function p(e) {
                 (0, i.jsx)(r.Avr, {
                     size: "sm",
                     variant: "secondary",
-                    text: g.intl.string(g.t["13/7kX"]),
+                    text: C.intl.string(C.t["13/7kX"]),
                     onClick: f,
                 }),
             ],
@@ -81,34 +81,34 @@ function p(e) {
                 (0, i.jsxs)(r.xBx, {
                     "data-migration-pending": !0,
                     direction: o.Z.Direction.VERTICAL,
-                    className: C.header,
+                    className: g.header,
                     separator: !1,
                     children: [
                         (0, i.jsx)(r.Heading, {
-                            className: C.title,
+                            className: g.title,
                             variant: "heading-xl/semibold",
-                            children: g.intl.string(g.t["2H6Nij"]),
+                            children: C.intl.string(C.t["2H6Nij"]),
                         }),
                         (0, i.jsx)(r.Text, {
-                            className: C.subtitle,
+                            className: g.subtitle,
                             color: "header-secondary",
                             variant: "text-md/normal",
-                            children: g.intl.string(g.t.AAfVqR),
+                            children: C.intl.string(C.t.AAfVqR),
                         }),
                         null != p &&
                             (0, i.jsx)(r.olH, {
                                 "data-migration-pending": !0,
-                                className: C.closeButton,
+                                className: g.closeButton,
                                 onClick: p,
                             }),
                     ],
                 }),
                 (0, i.jsxs)(r.hzk, {
                     "data-migration-pending": !0,
-                    className: C.createGuild,
+                    className: g.createGuild,
                     children: [
                         (0, i.jsx)("div", {
-                            className: C.uploadIcon,
+                            className: g.uploadIcon,
                             children: (0, i.jsx)(a.Z, {
                                 icon: y,
                                 onChange: O,
@@ -120,7 +120,7 @@ function p(e) {
                                 gap: 16,
                                 children: [
                                     (0, i.jsx)(r.oil, {
-                                        label: g.intl.string(g.t.dBih7e),
+                                        label: C.intl.string(C.t.dBih7e),
                                         required: !0,
                                         error: null == N ? void 0 : N.getFirstFieldErrorMessage("name"),
                                         value: v,
@@ -132,14 +132,14 @@ function p(e) {
                                     E &&
                                         (0, i.jsx)(r.rsf, {
                                             label: "Staff Only",
-                                            description: g.intl.string(g.t.edQ5va),
+                                            description: C.intl.string(C.t.edQ5va),
                                             checked: M,
                                             onChange: (e) => H(e),
                                         }),
                                     (0, i.jsx)(r.Text, {
                                         variant: "text-xs/normal",
                                         color: "text-muted",
-                                        children: g.intl.format(g.t["2bprXx"], { guidelinesURL: x.EYA.GUIDELINES }),
+                                        children: C.intl.format(C.t["2bprXx"], { guidelinesURL: x.EYA.GUIDELINES }),
                                     }),
                                 ],
                             }),
@@ -148,15 +148,15 @@ function p(e) {
                             ? null
                             : (0, i.jsx)(r.Text, {
                                   variant: "text-xs/normal",
-                                  color: "text-danger",
+                                  color: "text-feedback-critical",
                                   children: N.message,
                               }),
                     ],
                 }),
-                b &&
+                _ &&
                     (0, i.jsx)(r.mzw, {
                         "data-migration-pending": !0,
-                        className: C.footer,
+                        className: g.footer,
                         children: w,
                     }),
             ],

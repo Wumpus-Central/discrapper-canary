@@ -11,8 +11,8 @@ var r = n(54381),
     h = n(937154),
     g = n(448986),
     p = n(388905),
-    m = n(198993),
-    f = n(710845),
+    f = n(198993),
+    m = n(710845),
     _ = n(314897),
     x = n(585483),
     E = n(358085),
@@ -25,7 +25,7 @@ var r = n(54381),
     O = n(819286),
     N = n(197571);
 let C = n(515695),
-    T = new f.Z("LoginQRSocket");
+    T = new m.Z("LoginQRSocket");
 function A(e) {
     let { text: t = "" } = e,
         [n, s] = i.useState(!1);
@@ -43,7 +43,7 @@ function A(e) {
                 "" !== t && n
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(m.ZP, {
+                              (0, r.jsx)(f.ZP, {
                                   className: O.qrCode,
                                   size: 160,
                                   text: t,
@@ -74,7 +74,7 @@ let Z = (e) => {
     let { className: t, children: n } = e;
     return (0, r.jsx)(c.Text, {
         variant: "text-md/normal",
-        color: "text-danger",
+        color: "text-feedback-critical",
         className: t,
         children: n,
     });
@@ -161,7 +161,7 @@ function R(e) {
             state: u,
             rsaKeyPair: d,
             cancel: p,
-            handleFailure: m,
+            handleFailure: f,
         } = (function (e) {
             let [t, n] = i.useState(0),
                 [r, s] = i.useState(!1),
@@ -169,7 +169,7 @@ function R(e) {
                 [c, u] = i.useState(null),
                 d = (0, h.Z)(),
                 p = i.useMemo(() => new l.Z(1500, 30000), []),
-                m = (0, g.Z)(() => {
+                f = (0, g.Z)(() => {
                     o({ step: 0 }),
                         d
                             ? n((e) => e + 1)
@@ -178,11 +178,11 @@ function R(e) {
                               ),
                               s(!0));
                 }),
-                f = i.useCallback(() => {
+                m = i.useCallback(() => {
                     T.error("Could not complete QR code login, trying to restart with a new QR code."),
                         o({ step: 0 }),
-                        p.pending || p.fail(m);
-                }, [m, p]);
+                        p.pending || p.fail(f);
+                }, [f, p]);
             return (
                 i.useEffect(() => {
                     d &&
@@ -209,7 +209,7 @@ function R(e) {
                     let g = () => {
                         d
                             ? ((d = !1), r.send(JSON.stringify({ op: "heartbeat" })))
-                            : (i("heartbeat timeout, reconnecting."), r.close(), f());
+                            : (i("heartbeat timeout, reconnecting."), r.close(), m());
                     };
                     return (
                         (r.onmessage = async (t) => {
@@ -242,7 +242,7 @@ function R(e) {
                                 }
                                 case "pending_login": {
                                     let e = s.ticket;
-                                    null == e && f(),
+                                    null == e && m(),
                                         o({
                                             step: 4,
                                             ticket: e,
@@ -276,7 +276,7 @@ function R(e) {
                                     return;
                                 }
                                 case "cancel":
-                                    i("remote auth handshake cancelled."), m();
+                                    i("remote auth handshake cancelled."), f();
                                     return;
                                 case "hello": {
                                     i("got hello, auth timeout=".concat(s.timeout_ms, "ms"));
@@ -306,10 +306,10 @@ function R(e) {
                                 u(s);
                         }),
                         (r.onclose = (e) => {
-                            i("disconnected, code: ".concat(e.code, " ").concat(e.reason)), f();
+                            i("disconnected, code: ".concat(e.code, " ").concat(e.reason)), m();
                         }),
                         (r.onerror = (e) => {
-                            i("disconnected, error: ".concat(JSON.stringify(e))), f();
+                            i("disconnected, error: ".concat(JSON.stringify(e))), m();
                         }),
                         () => {
                             i("cleaning up"),
@@ -323,16 +323,16 @@ function R(e) {
                                 null != a && clearInterval(a);
                         }
                     );
-                }, [m, e, t, p, f]),
+                }, [f, e, t, p, m]),
                 {
                     state: a,
                     rsaKeyPair: c,
-                    cancel: m,
-                    handleFailure: f,
+                    cancel: f,
+                    handleFailure: m,
                 }
             );
         })(t),
-        f = (function (e) {
+        m = (function (e) {
             switch (e) {
                 case 0:
                 case 1:
@@ -362,21 +362,21 @@ function R(e) {
                                     r = await (0, v.Pk)(d);
                                 t(n, r);
                             } catch (e) {
-                                m();
+                                f();
                             }
-                        else m();
+                        else f();
                     })
                     .catch(() => {
-                        m();
+                        f();
                     });
-        }, [u, t, d, m]),
+        }, [u, t, d, f]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)("div", { className: O.verticalSeparator }),
                 (0, r.jsx)(c.qBt, {
                     fillParent: !0,
                     className: O.qrLogin,
-                    step: f,
+                    step: m,
                     steps: [0, 1],
                     children: (0, r.jsx)("div", {
                         className: O.qrLoginInner,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(953529), n(35282);
+n.d(t, { Z: () => f }), n(953529), n(35282);
 var r = n(54381),
     l = n(473749),
     i = n(442837),
@@ -14,21 +14,21 @@ var r = n(54381),
     h = n(460838),
     v = n(388032),
     p = n(492718);
-function j(e) {
+function f(e) {
     var t, n;
-    let { guildId: j, guildEvent: f, guildEventId: b, error: y } = e,
-        O = l.useMemo(() => (0, g.Gb)(f, j), [f, j]),
+    let { guildId: f, guildEvent: j, guildEventId: b, error: y } = e,
+        O = l.useMemo(() => (0, g.Gb)(j, f), [j, f]),
         { channel_id: E, name: N, image: C, description: P } = O,
         S = (0, i.e7)([c.Z], () => c.Z.getChannel(E), [E]),
-        I = (0, i.e7)([u.Z], () => u.Z.getGuild(j), [j]),
+        I = (0, i.e7)([u.Z], () => u.Z.getGuild(f), [f]),
         Z = (0, m.cS)(O),
         T = (0, i.e7)(
             [d.default],
-            () => (null != f.creatorId ? d.default.getUser(f.creatorId) : d.default.getCurrentUser()),
-            [f.creatorId],
+            () => (null != j.creatorId ? d.default.getUser(j.creatorId) : d.default.getCurrentUser()),
+            [j.creatorId],
         ),
-        w = (0, i.e7)([o.Z], () => o.Z.isLurking(j), [j]),
-        D = (0, s.KS)(S, I);
+        w = (0, i.e7)([o.Z], () => o.Z.isLurking(f), [f]),
+        k = (0, s.KS)(S, I);
     return (0, r.jsxs)("div", {
         className: p.content,
         children: [
@@ -41,7 +41,7 @@ function j(e) {
                 name: N,
                 description: P,
                 imageSource:
-                    ((n = (0, g.Gb)(f, j, b)),
+                    ((n = (0, g.Gb)(j, f, b)),
                     null == C && null == n.image ? null : null != C && /^data:/.test(C) ? C : (0, x.Z)(n)),
                 isActive: !1,
                 isUserLurking: w,
@@ -72,8 +72,8 @@ function j(e) {
                                           return (0, r.jsxs)("div", {
                                               className: p.channelName,
                                               children: [
-                                                  null != D
-                                                      ? (0, r.jsx)(D, {
+                                                  null != k
+                                                      ? (0, r.jsx)(k, {
                                                             size: "custom",
                                                             color: "currentColor",
                                                             width: 20,
@@ -95,7 +95,7 @@ function j(e) {
                     }),
                     null != y &&
                         (0, r.jsx)(a.Text, {
-                            color: "text-danger",
+                            color: "text-feedback-critical",
                             variant: "text-xs/normal",
                             className: p.subheader,
                             children: y.getAnyErrorMessage(),

@@ -22,7 +22,7 @@ function p(e) {
                 s.Text,
                 {
                     variant: "text-xs/normal",
-                    color: "text-danger",
+                    color: "text-feedback-critical",
                     className: d.errorMessage,
                     children: f(e),
                 },

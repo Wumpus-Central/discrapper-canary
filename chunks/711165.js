@@ -267,7 +267,7 @@ let R = i.memo(function (e) {
                       children: [
                           (0, r.jsx)(f.Text, {
                               variant: "text-xs/semibold",
-                              color: c ? "text-danger" : "text-feedback-positive",
+                              color: c ? "text-feedback-critical" : "text-feedback-positive",
                               className: N.messageState,
                               children: d,
                           }),

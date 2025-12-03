@@ -29,8 +29,8 @@ var r = n(54381),
     N = n(777288),
     R = n(5192),
     L = n(709054),
-    P = n(51144),
-    I = n(815790),
+    I = n(51144),
+    P = n(815790),
     V = n(588215),
     M = n(241559),
     E = n(893966),
@@ -82,7 +82,7 @@ let W = l.memo(function (e) {
                             size: "custom",
                             width: 20,
                             height: 20,
-                            color: d.Z.colors.TEXT_DANGER.css,
+                            color: d.Z.colors.TEXT_FEEDBACK_CRITICAL.css,
                         }),
                     }),
                 (0, O.He)(t.userId) &&
@@ -91,7 +91,7 @@ let W = l.memo(function (e) {
                         children: (0, r.jsx)(D.Z, {
                             width: 20,
                             height: 20,
-                            color: d.Z.colors.TEXT_DANGER.css,
+                            color: d.Z.colors.TEXT_FEEDBACK_CRITICAL.css,
                         }),
                     }),
                 (0, g.EY)(t) &&
@@ -203,7 +203,7 @@ let W = l.memo(function (e) {
                               variant: "text-xs/normal",
                               color: "header-secondary",
                               tag: "span",
-                              children: P.ZP.getUserTag(i),
+                              children: I.ZP.getUserTag(i),
                           }),
                       }),
                   ],
@@ -211,8 +211,8 @@ let W = l.memo(function (e) {
     });
 function J(e) {
     return {
-        short: null == e ? null : (0, I.fv)(e, I.jq.JOINED_AT),
-        long: new Date(null != e ? e : 0).toLocaleDateString(z.intl.currentLocale, I.UG),
+        short: null == e ? null : (0, P.fv)(e, P.jq.JOINED_AT),
+        long: new Date(null != e ? e : 0).toLocaleDateString(z.intl.currentLocale, P.UG),
     };
 }
 function X(e) {
@@ -254,8 +254,8 @@ let $ = l.memo(function (e) {
             { accountCreationDateShort: o, accountCreationDateLong: a } = l.useMemo(() => {
                 let e = L.default.extractTimestamp(t.userId);
                 return {
-                    accountCreationDateShort: (0, I.fv)(e, I.jq.ACCOUNT_AGE),
-                    accountCreationDateLong: new Date(e).toLocaleDateString(z.intl.currentLocale, I.I),
+                    accountCreationDateShort: (0, P.fv)(e, P.jq.ACCOUNT_AGE),
+                    accountCreationDateLong: new Date(e).toLocaleDateString(z.intl.currentLocale, P.I),
                 };
             }, [t.userId]),
             s = i ? "text-brand" : "text-default";

@@ -34,7 +34,7 @@ function u(e) {
                 ? (0, r.jsx)(s.Text, {
                       className: a()(d.paddingTop, d.errorText),
                       variant: "text-xs/medium",
-                      color: "text-danger",
+                      color: "text-feedback-critical",
                       children: b,
                   })
                 : (0, r.jsx)(s.Text, {

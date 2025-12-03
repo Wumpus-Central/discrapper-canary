@@ -29,7 +29,7 @@ function h(e) {
 function g(e) {
     return {
         text: null != e ? e : _.intl.string(_.t.VCsUJu),
-        color: "text-danger",
+        color: "text-feedback-critical",
         icon: (0, r.jsx)(c.Mgn, {
             size: "xs",
             color: "currentColor",

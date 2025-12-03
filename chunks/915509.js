@@ -42,7 +42,7 @@ function s(e) {
                 ? (0, r.jsx)(a.Text, {
                       className: c.errorText,
                       variant: "text-xs/normal",
-                      color: "text-danger",
+                      color: "text-feedback-critical",
                       children: t,
                   })
                 : null,

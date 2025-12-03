@@ -70,7 +70,7 @@ function j() {
             (null == (e = m.default.editedIntegration) ? void 0 : e.expire_behavior) !== i.l.KICK ||
             ((x = !0),
             (j = (0, r.jsx)(s.Text, {
-                color: "text-danger",
+                color: "text-feedback-critical",
                 variant: "text-md/normal",
                 children: b.intl.string(b.t["mrO/ZQ"]),
             }))),

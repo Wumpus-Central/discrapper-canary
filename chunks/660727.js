@@ -1,8 +1,8 @@
 a.d(e, { default: () => C }), a(388685);
 var t = a(54381),
     o = a(473749),
-    l = a(481060),
-    i = a(211266),
+    i = a(481060),
+    l = a(211266),
     d = a(313201),
     r = a(907040),
     s = a(906411),
@@ -10,10 +10,10 @@ var t = a(54381),
     u = a(984933),
     p = a(768581),
     m = a(956664),
-    g = a(185923),
+    f = a(185923),
     x = a(388032),
     I = a(759415),
-    f = a(84717);
+    g = a(84717);
 function h() {
     return [
         {
@@ -39,22 +39,22 @@ let C = function (n) {
         b = u.ZP.getDefaultChannel(e),
         [N, y] = o.useState("tab-id-role-icon-file-upload"),
         [_, k] = o.useState(!1),
-        z = (0, i.Z)(h);
+        z = (0, l.Z)(h);
     return (
         o.useEffect(() => {
             k(!1);
         }, [N]),
-        (0, t.jsx)(l.Y0X, {
+        (0, t.jsx)(i.Y0X, {
             transitionState: C,
             "aria-labelledby": v,
-            size: l.CgR.MEDIUM,
+            size: i.CgR.MEDIUM,
             className: I.modalRoot,
             parentComponent: "CustomRoleIconUploadModal",
             "data-migration-pending": !0,
             children: (0, t.jsxs)("div", {
                 className: I.contentWrapper,
                 children: [
-                    (0, t.jsxs)(l.njP, {
+                    (0, t.jsxs)(i.njP, {
                         selectedItem: N,
                         onItemSelect: y,
                         type: "top",
@@ -62,18 +62,18 @@ let C = function (n) {
                         "aria-label": "Expression Picker",
                         className: I.nav,
                         children: [
-                            (0, t.jsx)(l.njP.Item, {
+                            (0, t.jsx)(i.njP.Item, {
                                 id: "tab-id-role-icon-file-upload",
                                 children: x.intl.string(x.t.royWSB),
                             }),
-                            (0, t.jsx)(l.njP.Item, {
+                            (0, t.jsx)(i.njP.Item, {
                                 id: "tab-id-role-icon-emoji",
                                 children: x.intl.string(x.t["/Ny2wZ"]),
                             }),
                         ],
                     }),
                     "tab-id-role-icon-file-upload" === N
-                        ? (0, t.jsx)(l.hzk, {
+                        ? (0, t.jsx)(i.hzk, {
                               "data-migration-pending": !0,
                               children: (0, t.jsxs)("div", {
                                   className: I.uploadContainer,
@@ -82,12 +82,12 @@ let C = function (n) {
                                           className: I.uploadIconOuterContainer,
                                           children: [
                                               (0, t.jsx)("img", {
-                                                  src: f,
+                                                  src: g,
                                                   alt: "sparkles",
                                               }),
                                               (0, t.jsx)("div", {
                                                   className: I.uploadIconInnerContainer,
-                                                  children: (0, t.jsx)(l.FmF, {
+                                                  children: (0, t.jsx)(i.FmF, {
                                                       size: "md",
                                                       color: "currentColor",
                                                       className: I.uploadIcon,
@@ -113,9 +113,9 @@ let C = function (n) {
                                           variant: "primary",
                                       }),
                                       _
-                                          ? (0, t.jsx)(l.Text, {
+                                          ? (0, t.jsx)(i.Text, {
                                                 className: I.uploadError,
-                                                color: "text-danger",
+                                                color: "text-feedback-critical",
                                                 variant: "text-sm/normal",
                                                 children: x.intl.string(x.t.HFyKsa),
                                             })
@@ -142,7 +142,7 @@ let C = function (n) {
                                   }
                                   m();
                               },
-                              pickerIntention: g.Hz.COMMUNITY_CONTENT,
+                              pickerIntention: f.Hz.COMMUNITY_CONTENT,
                               channel: b,
                           })
                         : null,

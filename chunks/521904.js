@@ -549,6 +549,16 @@ let { Themes: r } = n(15202).VV,
                     raw: "OPACITY_4",
                     opacity: 0.0392156862745098,
                 },
+                gradient: {
+                    light: {
+                        color: "BLACK_500",
+                        opacity: 0.05,
+                    },
+                    dark: {
+                        color: "WHITE_500",
+                        opacity: 0.05,
+                    },
+                },
             },
             BACKGROUND_MOD_NORMAL: {
                 category: "background",
@@ -587,6 +597,16 @@ let { Themes: r } = n(15202).VV,
                     raw: "OPACITY_20",
                     opacity: 0.2,
                 },
+                gradient: {
+                    light: {
+                        color: "BLACK_500",
+                        opacity: 0.1,
+                    },
+                    dark: {
+                        color: "WHITE_500",
+                        opacity: 0.1,
+                    },
+                },
             },
             BACKGROUND_MOD_SUBTLE: {
                 category: "background",
@@ -605,6 +625,16 @@ let { Themes: r } = n(15202).VV,
                 [r.DARKER]: {
                     raw: "OPACITY_8",
                     opacity: 0.0784313725490196,
+                },
+                gradient: {
+                    light: {
+                        color: "BLACK_500",
+                        opacity: 0.075,
+                    },
+                    dark: {
+                        color: "WHITE_500",
+                        opacity: 0.075,
+                    },
                 },
             },
             BACKGROUND_MODIFIER_ACTIVE: {
@@ -8615,44 +8645,6 @@ let { Themes: r } = n(15202).VV,
                     opacity: 1,
                 },
             },
-            DIVIDER_STRONG: {
-                category: "border",
-                [r.DARK]: {
-                    raw: "WHITE",
-                    opacity: 0.16,
-                },
-                [r.LIGHT]: {
-                    raw: "BLACK",
-                    opacity: 0.16,
-                },
-                [r.MIDNIGHT]: {
-                    raw: "PLUM_11",
-                    opacity: 0.24,
-                },
-                [r.DARKER]: {
-                    raw: "PLUM_11",
-                    opacity: 0.22,
-                },
-            },
-            DIVIDER_SUBTLE: {
-                category: "border",
-                [r.DARK]: {
-                    raw: "WHITE",
-                    opacity: 0.08,
-                },
-                [r.LIGHT]: {
-                    raw: "BLACK",
-                    opacity: 0.08,
-                },
-                [r.MIDNIGHT]: {
-                    raw: "PLUM_11",
-                    opacity: 0.12,
-                },
-                [r.DARKER]: {
-                    raw: "PLUM_11",
-                    opacity: 0.12,
-                },
-            },
             EMBED_BACKGROUND: {
                 category: "generic",
                 [r.DARK]: {
@@ -10064,19 +10056,19 @@ let { Themes: r } = n(15202).VV,
             INPUT_FOREGROUND_CRITICAL: {
                 category: "background",
                 [r.DARK]: {
-                    raw: "RED_345",
+                    raw: "RED_NEW_22",
                     opacity: 1,
                 },
                 [r.LIGHT]: {
-                    raw: "RED_500",
+                    raw: "RED_NEW_54",
                     opacity: 1,
                 },
                 [r.MIDNIGHT]: {
-                    raw: "RED_345",
+                    raw: "RED_NEW_37",
                     opacity: 1,
                 },
                 [r.DARKER]: {
-                    raw: "RED_345",
+                    raw: "RED_NEW_32",
                     opacity: 1,
                 },
             },
@@ -12564,25 +12556,6 @@ let { Themes: r } = n(15202).VV,
                     opacity: 1,
                 },
             },
-            STATUS_DANGER_BACKGROUND: {
-                category: "generic",
-                [r.DARK]: {
-                    raw: "RED_430",
-                    opacity: 1,
-                },
-                [r.LIGHT]: {
-                    raw: "RED_430",
-                    opacity: 1,
-                },
-                [r.MIDNIGHT]: {
-                    raw: "RED_430",
-                    opacity: 1,
-                },
-                [r.DARKER]: {
-                    raw: "RED_430",
-                    opacity: 1,
-                },
-            },
             STATUS_DANGER_TEXT: {
                 category: "text",
                 [r.DARK]: {
@@ -13340,25 +13313,6 @@ let { Themes: r } = n(15202).VV,
                 },
                 [r.DARKER]: {
                     raw: "BLUE_NEW_22",
-                    opacity: 1,
-                },
-            },
-            TEXT_DANGER: {
-                category: "text",
-                [r.DARK]: {
-                    raw: "RED_345",
-                    opacity: 1,
-                },
-                [r.LIGHT]: {
-                    raw: "RED_500",
-                    opacity: 1,
-                },
-                [r.MIDNIGHT]: {
-                    raw: "RED_345",
-                    opacity: 1,
-                },
-                [r.DARKER]: {
-                    raw: "RED_345",
                     opacity: 1,
                 },
             },

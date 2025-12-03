@@ -150,7 +150,7 @@ let I = (e) => {
                             },
                         }),
                         (0, n.jsx)(u.Text, {
-                            color: "text-danger",
+                            color: "text-feedback-critical",
                             variant: "text-xs/normal",
                             children: null == p ? void 0 : p.getAnyErrorMessage(),
                         }),

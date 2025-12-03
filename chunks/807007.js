@@ -137,7 +137,7 @@ class O extends r.PureComponent {
                 }),
                 (0, l.jsx)(o.Text, {
                     variant: "text-sm/normal",
-                    color: c || null != a ? "text-danger" : "text-muted",
+                    color: c || null != a ? "text-feedback-critical" : "text-muted",
                     className: M.bottomMargin,
                     children: null != a ? a : d,
                 }),
@@ -165,7 +165,7 @@ class O extends r.PureComponent {
                 e
                     ? (0, l.jsx)(o.Text, {
                           className: i()(M.formMargin, M.topMargin),
-                          color: "text-danger",
+                          color: "text-feedback-critical",
                           variant: "text-sm/normal",
                           children: v.intl.string(v.t["DrNm/5"]),
                       })

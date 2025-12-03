@@ -13,9 +13,9 @@ var r = t(120356),
     p = t(894017),
     f = t(854698),
     h = t(390966),
-    g = t(765305),
-    m = t(388032),
-    v = t(709380);
+    m = t(765305),
+    v = t(388032),
+    g = t(709380);
 function b(e) {
     let { recurrenceId: n, originalScheduledStartTime: r, guildEventId: b, onClick: x, isActive: C } = e,
         j = (0, l.e7)([_.ZP], () => _.ZP.getGuildScheduledEvent(b)),
@@ -29,7 +29,7 @@ function b(e) {
                 ? new Date(null == k ? void 0 : k.scheduled_start_time)
                 : r,
         Z = (0, f.DK)(j),
-        E = N ? g.p1.CANCELED : g.p1.SCHEDULED;
+        E = N ? m.p1.CANCELED : m.p1.SCHEDULED;
     Z === n && (E = j.status);
     let P =
             (null == j ? void 0 : j.scheduled_start_time) != null
@@ -81,10 +81,10 @@ function b(e) {
                     });
         };
     return (0, i.jsxs)(c.kL8, {
-        className: a()(v.container, {
-            [v.canceled]: N,
-            [v.clickable]: null != x,
-            [v.active]: C,
+        className: a()(g.container, {
+            [g.canceled]: N,
+            [g.clickable]: null != x,
+            [g.active]: C,
         }),
         onClick: (e) => {
             e.stopPropagation(), N || null == x || x(n);
@@ -98,28 +98,28 @@ function b(e) {
                 eventType: j.entity_type,
                 guildEventId: j.id,
                 recurrenceId: n,
-                className: v.timeStatus,
+                className: g.timeStatus,
             }),
             N &&
                 (0, i.jsx)(c.Text, {
                     variant: "text-sm/semibold",
-                    color: "text-danger",
-                    className: v.canceledStatus,
-                    children: m.intl.string(m.t.fyBVRm),
+                    color: "text-feedback-critical",
+                    className: g.canceledStatus,
+                    children: v.intl.string(v.t.fyBVRm),
                 }),
             (0, i.jsx)(o.u, {
-                text: m.intl.string(m.t["UKOtz+"]),
+                text: v.intl.string(v.t["UKOtz+"]),
                 position: "top",
-                "aria-label": m.intl.string(m.t.bt75uw),
+                "aria-label": v.intl.string(v.t.bt75uw),
                 children: (0, i.jsx)(c.P3F, {
                     onClick: S,
-                    className: v.iconButton,
+                    className: g.iconButton,
                     children: (0, i.jsx)(c.xhG, {
                         size: "custom",
                         color: "currentColor",
                         width: 20,
                         height: 20,
-                        className: v.icon,
+                        className: g.icon,
                     }),
                 }),
             }),

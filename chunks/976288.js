@@ -26,7 +26,7 @@ function E() {
     return (0, r.jsx)(s.Text, {
         tag: "span",
         variant: "text-xs/bold",
-        color: "text-danger",
+        color: "text-feedback-critical",
         className: N.required,
         children: "*",
     });
@@ -208,7 +208,7 @@ function S(e) {
                     }),
                     null != l
                         ? (0, r.jsx)(s.Text, {
-                              color: "text-danger",
+                              color: "text-feedback-critical",
                               variant: "text-sm/normal",
                               className: N.error,
                               children: l,
@@ -281,7 +281,7 @@ function T(e) {
                     }),
                     null != b
                         ? (0, r.jsx)(s.Text, {
-                              color: "text-danger",
+                              color: "text-feedback-critical",
                               variant: "text-sm/normal",
                               className: N.error,
                               children: b,

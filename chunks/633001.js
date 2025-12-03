@@ -22,8 +22,8 @@ var a = n(54381),
     C = n(991186),
     S = n(371651),
     E = n(829907),
-    N = n(610394),
-    T = n(338949),
+    T = n(610394),
+    N = n(338949),
     O = n(556809),
     P = n(886118),
     w = n(301801),
@@ -448,7 +448,7 @@ let es = l.memo(function (e) {
     );
 });
 function eo() {
-    let e = (0, d.e7)([T.Z], () => T.Z.hasRenderDebugMode(_.GO.TrackFocusPIDs)),
+    let e = (0, d.e7)([N.Z], () => N.Z.hasRenderDebugMode(_.GO.TrackFocusPIDs)),
         t = (0, d.Wu)([S.default], () => S.default.getDevToolsFocusedPidsWithTimestamp());
     return (0, a.jsxs)("div", {
         className: J.panelGroup,
@@ -460,7 +460,7 @@ function eo() {
                         checked: e,
                         onChange: () =>
                             void x.Z.setRenderDebugMode(
-                                !T.Z.hasRenderDebugMode(_.GO.TrackFocusPIDs),
+                                !N.Z.hasRenderDebugMode(_.GO.TrackFocusPIDs),
                                 _.GO.TrackFocusPIDs,
                             ),
                         label: "Track Focus Pids",
@@ -500,7 +500,10 @@ function eo() {
                                             $(Q({}, e), {
                                                 children: (0, a.jsxs)(m.Text, {
                                                     variant: "text-sm/medium",
-                                                    color: i === _.d5.TRACK_FOCUS ? "text-default" : "text-danger",
+                                                    color:
+                                                        i === _.d5.TRACK_FOCUS
+                                                            ? "text-default"
+                                                            : "text-feedback-critical",
                                                     children: [
                                                         (0, a.jsx)(es, {
                                                             pid: n,
@@ -735,7 +738,7 @@ let ec = l.memo(function (e) {
     ep = l.memo(function () {
         let [e, t] = ei(K.Odu.CLICK_ZONE_DEBUG),
             [n, i] = ei(K.Odu.PERFORMANCE_DEBUG),
-            r = (0, d.e7)([T.Z], () => T.Z.getRenderDebugModes()),
+            r = (0, d.e7)([N.Z], () => N.Z.getRenderDebugModes()),
             [s, o] = l.useState({});
         return (
             l.useEffect(() => {
@@ -799,7 +802,7 @@ let ec = l.memo(function (e) {
                                         children: [
                                             (0, a.jsx)(m.Text, {
                                                 variant: "text-md/bold",
-                                                color: "text-danger",
+                                                color: "text-feedback-critical",
                                                 children: "Untracked Running Games",
                                             }),
                                             t.map((e) =>
@@ -809,7 +812,7 @@ let ec = l.memo(function (e) {
                                                             m.Text,
                                                             {
                                                                 variant: "text-sm/normal",
-                                                                color: "text-danger",
+                                                                color: "text-feedback-critical",
                                                                 children: ""
                                                                     .concat(e.pid, " - ")
                                                                     .concat(e.name, " (")
@@ -922,7 +925,7 @@ function ef(e) {
                         children: [
                             (0, a.jsx)(m.Text, {
                                 variant: "text-md/bold",
-                                color: "text-danger",
+                                color: "text-feedback-critical",
                                 children: "Breadcrumb Import",
                             }),
                             (0, a.jsx)(m.olH, { onClick: s }),
@@ -983,7 +986,7 @@ let eg = {
 };
 function eb(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : y.l6.Info;
-    if (t === y.l6.Error) return "var(--text-danger)";
+    if (t === y.l6.Error) return "var(--text-feedback-critical)";
     switch (e) {
         case y.C7.NativeLegacy:
             return "var(--yellow-500)";
@@ -1035,7 +1038,7 @@ let ev = [
                                 case y.l6.Warning:
                                     return "text-feedback-warning";
                                 case y.l6.Error:
-                                    return "text-danger";
+                                    return "text-feedback-critical";
                                 default:
                                     return "text-secondary";
                             }
@@ -1232,14 +1235,14 @@ let ey = ["__webpack_require__", "fn"],
         },
         throttleMs: 100,
     };
-function eN() {
+function eT() {
     let { ref: e, height: t } = (0, g.ZP)(),
-        n = (0, d.e7)([T.Z], () => T.Z.isModuleLoggingEnabled()),
+        n = (0, d.e7)([N.Z], () => N.Z.isModuleLoggingEnabled()),
         [i, s] = l.useState(n),
         [o, c] = l.useState(!1),
         [u, p] = l.useState(null),
         [h, f] = l.useState(Object.keys(eg)),
-        [b, v] = (0, d.e7)([T.Z], () => T.Z.getOverlayLoggingBreadcrumbs(), [], U.Q),
+        [b, v] = (0, d.e7)([N.Z], () => N.Z.getOverlayLoggingBreadcrumbs(), [], U.Q),
         [j, _] = l.useState(null),
         y = null != j ? j : b,
         C = null != j ? -1 : v;
@@ -1250,7 +1253,7 @@ function eN() {
                 : p(null));
     }, [o, y, C]);
     let [S, E] = l.useState(""),
-        N = l.useMemo(
+        T = l.useMemo(
             () =>
                 0 === C
                     ? []
@@ -1264,22 +1267,22 @@ function eN() {
                       }),
             [y, h, u, o, C],
         ),
-        [O, P] = l.useState(N),
+        [O, P] = l.useState(T),
         [I, k] = l.useState(null),
         R = l.useMemo(() => y.find((e) => e.key === I), [y, I]),
         A = l.useCallback((e) => {
             P(e);
         }, []),
         { renderSelectedTab: Z } = (0, W.ZP)({ tabs: eS }, []);
-    (0, w.BO)(S, N, A, eE, [y]);
+    (0, w.BO)(S, T, A, eE, [y]);
     let L = l.useCallback((e) => {
             s(e), x.Z.setModuleLogging(e);
         }, []),
         [M, F] = l.useState(!1),
         B = l.useRef(null),
         G = l.useCallback(() => {
-            (0, D.JG)(JSON.stringify(N)), F(!0);
-        }, [N]);
+            (0, D.JG)(JSON.stringify(T)), F(!0);
+        }, [T]);
     l.useEffect(() => {
         if (M)
             return (
@@ -1424,8 +1427,8 @@ function eN() {
         ],
     });
 }
-let eT = l.memo(function () {
-        let e = (0, d.e7)([N.Z], () => N.Z.getPopoutInitializationStages());
+let eN = l.memo(function () {
+        let e = (0, d.e7)([T.Z], () => T.Z.getPopoutInitializationStages());
         return (0, a.jsxs)("div", {
             className: J.panelGroup,
             children: [
@@ -1446,8 +1449,8 @@ let eT = l.memo(function () {
         });
     }),
     eO = l.memo(function () {
-        let e = (0, d.e7)([T.Z], () => T.Z.isStateDebuggingEnabled()),
-            t = (0, d.e7)([T.Z], () => T.Z.getDebuggingState());
+        let e = (0, d.e7)([N.Z], () => N.Z.isStateDebuggingEnabled()),
+            t = (0, d.e7)([N.Z], () => N.Z.getDebuggingState());
         return (
             l.useEffect(
                 () => (
@@ -1489,7 +1492,7 @@ function eP() {
                 (0, a.jsx)(eu, {}),
                 (0, a.jsx)(eo, {}),
                 (0, a.jsx)(ed, {}),
-                (0, a.jsx)(eT, {}),
+                (0, a.jsx)(eN, {}),
                 (0, a.jsx)(eO, {}),
             ],
         }),
@@ -1658,7 +1661,7 @@ function eA() {
                     ],
                 }),
                 "state" === e && (0, a.jsx)(eP, {}),
-                "logging" === e && (0, a.jsx)(eN, {}),
+                "logging" === e && (0, a.jsx)(eT, {}),
                 "experiments" === e && (0, a.jsx)(eR, {}),
             ],
         })

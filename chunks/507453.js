@@ -21,7 +21,7 @@ let o = {
             : (0, l.jsx)(r.Text, {
                   className: a.error,
                   variant: "text-sm/normal",
-                  color: "text-danger",
+                  color: "text-feedback-critical",
                   children: t,
               });
     },

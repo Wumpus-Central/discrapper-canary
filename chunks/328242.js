@@ -136,7 +136,7 @@ function E(e) {
                     (0, r.jsxs)(u.Text, {
                         className: Z.errorText,
                         variant: "text-md/normal",
-                        color: "text-danger",
+                        color: "text-feedback-critical",
                         children: [w.intl.string(w.t["kW5h/W"]), (0, r.jsx)("br", {}), w.intl.string(w.t["5Jvu1R"])],
                     }),
                     e &&

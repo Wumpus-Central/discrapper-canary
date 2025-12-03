@@ -664,7 +664,7 @@ let j = {
                                     width: "100%",
                                     minHeight: "80px",
                                     padding: "8px",
-                                    border: "1px solid var(--background-modifier-accent)",
+                                    border: "1px solid var(--border-subtle)",
                                     borderRadius: "4px",
                                     backgroundColor: "var(--background-base-low)",
                                     color: "var(--text-primary)",
@@ -753,7 +753,7 @@ let j = {
                             backgroundColor: "var(--background-base-lower)",
                             padding: "16px",
                             borderRadius: "8px",
-                            border: "1px solid var(--background-modifier-accent)",
+                            border: "1px solid var(--border-subtle)",
                         },
                         children: [
                             (0, a.jsx)(l, {
@@ -803,7 +803,7 @@ let j = {
                         children: [
                             (0, a.jsxs)(t, {
                                 variant: "eyebrow",
-                                color: "text-danger",
+                                color: "text-feedback-critical",
                                 className: "mb-2",
                                 children: [
                                     (0, a.jsx)("span", {
@@ -817,7 +817,7 @@ let j = {
                             }),
                             (0, a.jsx)(t, {
                                 variant: "text-sm/medium",
-                                color: "text-danger",
+                                color: "text-feedback-critical",
                                 children:
                                     "Deactivating this powerup will immediately remove all Level 3 features from your server. Members will lose access to custom emojis, stickers, and other premium features. This action cannot be undone.",
                             }),

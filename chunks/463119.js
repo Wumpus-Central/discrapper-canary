@@ -97,7 +97,7 @@ let M = (e) => {
         let { color: t } = e;
         return (0, r.jsx)(u.IGR, {
             className: w.newBadge,
-            color: null != t ? t : o.Z.colors.STATUS_DANGER_BACKGROUND.css,
+            color: null != t ? t : o.Z.colors.CONTROL_BACKGROUND_CRITICAL_PRIMARY_DEFAULT.css,
             text: Z.intl.string(Z.t.y2b7CA),
         });
     },

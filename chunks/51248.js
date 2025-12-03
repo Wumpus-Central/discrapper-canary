@@ -43,7 +43,7 @@ function g(e) {
         null != h &&
             (y = (0, r.jsx)(a.Text, {
                 variant: "text-md/normal",
-                color: "text-danger",
+                color: "text-feedback-critical",
                 className: u.message,
                 children: h,
             })),

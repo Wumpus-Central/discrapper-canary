@@ -2306,6 +2306,24 @@ let { Themes: r } = n(15202).VV,
                     opacity: 1,
                 },
             },
+            INPUT_FOREGROUND_CRITICAL: {
+                [r.DARK]: {
+                    raw: "RED_NEW_6",
+                    opacity: 1,
+                },
+                [r.LIGHT]: {
+                    raw: "RED_NEW_63",
+                    opacity: 1,
+                },
+                [r.MIDNIGHT]: {
+                    raw: "RED_NEW_22",
+                    opacity: 1,
+                },
+                [r.DARKER]: {
+                    raw: "RED_NEW_16",
+                    opacity: 1,
+                },
+            },
             INPUT_FOREGROUND_DEFAULT: {
                 [r.DARK]: {
                     raw: "NEUTRAL_1",

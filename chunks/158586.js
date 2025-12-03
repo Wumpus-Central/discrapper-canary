@@ -11,16 +11,16 @@ var i = n(54381),
     m = n(172107);
 let j = (e) => {
     var t, n, j, p, b, h, x;
-    let { channel: v, onClose: f, transitionState: y } = e,
-        [g, O] = o.useState(null != (j = v.defaultReactionEmoji) ? j : null),
+    let { channel: f, onClose: v, transitionState: y } = e,
+        [g, O] = o.useState(null != (j = f.defaultReactionEmoji) ? j : null),
         [N, w] = o.useState(!1),
         [E, P] = o.useState(!1),
         k = o.useRef(null),
         _ =
-            (null != (p = null == (t = v.defaultReactionEmoji) ? void 0 : t.emojiId) ? p : null) !==
+            (null != (p = null == (t = f.defaultReactionEmoji) ? void 0 : t.emojiId) ? p : null) !==
             (null != (b = null == g ? void 0 : g.emojiId) ? b : null),
         C =
-            (null != (h = null == (n = v.defaultReactionEmoji) ? void 0 : n.emojiName) ? h : null) !==
+            (null != (h = null == (n = f.defaultReactionEmoji) ? void 0 : n.emojiName) ? h : null) !==
             (null != (x = null == g ? void 0 : g.emojiName) ? x : null),
         R = _ || C,
         B = (e) => {
@@ -36,7 +36,7 @@ let j = (e) => {
             if (R) {
                 w(!0), P(!1);
                 try {
-                    await (0, a.wk)(v.id, { defaultReactionEmoji: g }), f();
+                    await (0, a.wk)(f.id, { defaultReactionEmoji: g }), v();
                 } catch (e) {
                     P(!0);
                 } finally {
@@ -48,12 +48,12 @@ let j = (e) => {
         title: u.intl.string(u.t.XlDE3k),
         subtitle: u.intl.string(u.t.lVqhdd),
         transitionState: y,
-        onClose: f,
+        onClose: v,
         actions: [
             {
                 variant: "secondary",
                 text: u.intl.string(u.t["ETE/oC"]),
-                onClick: f,
+                onClick: v,
             },
             {
                 variant: "primary",
@@ -75,14 +75,14 @@ let j = (e) => {
                         renderPopout: (e) => {
                             let { closePopout: t } = e;
                             return (0, i.jsx)(c.Z, {
-                                guildId: null == v ? void 0 : v.guild_id,
+                                guildId: null == f ? void 0 : f.guild_id,
                                 closePopout: t,
                                 onSelectEmoji: (e) => {
                                     let { emoji: n, willClose: i } = e;
                                     B(n), i && t();
                                 },
                                 pickerIntention: d.Hz.COMMUNITY_CONTENT,
-                                channel: v,
+                                channel: f,
                             });
                         },
                         position: "right",
@@ -154,7 +154,7 @@ let j = (e) => {
             E
                 ? (0, i.jsx)(r.Text, {
                       variant: "text-sm/normal",
-                      color: "text-danger",
+                      color: "text-feedback-critical",
                       children: u.intl.string(u.t.F75nNl),
                   })
                 : null,

@@ -152,10 +152,10 @@ function g(e) {
                               children: [
                                   (0, r.jsx)(o.Mgn, {
                                       size: "xs",
-                                      color: o.TVs.colors.TEXT_DANGER.css,
+                                      color: o.TVs.colors.TEXT_FEEDBACK_CRITICAL.css,
                                   }),
                                   (0, r.jsx)(o.Text, {
-                                      color: "text-danger",
+                                      color: "text-feedback-critical",
                                       variant: "text-sm/medium",
                                       children: null != t && "" !== t ? t : i,
                                   }),

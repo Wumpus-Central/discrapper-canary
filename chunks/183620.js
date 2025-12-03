@@ -112,7 +112,7 @@ class f extends (r = a.PureComponent) {
                                     }),
                                     this.errorPresent()
                                         ? (0, i.jsx)(l.Text, {
-                                              color: "text-danger",
+                                              color: "text-feedback-critical",
                                               variant: "text-xs/normal",
                                               className: u.error,
                                               children: null != o ? o : E,

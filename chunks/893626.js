@@ -2,8 +2,8 @@ t.d(n, { default: () => y }), t(388685);
 var r = t(54381),
     l = t(473749),
     a = t(658722),
-    o = t.n(a),
-    i = t(793030),
+    i = t.n(a),
+    o = t(793030),
     s = t(399606),
     u = t(159691),
     c = t(481060),
@@ -75,7 +75,7 @@ function y(e) {
                             let a = ""
                                 .concat(null != (r = t.nick) ? r : "", " ")
                                 .concat(null == l ? void 0 : l.username);
-                            return o()(e.toLowerCase(), a.toLowerCase());
+                            return i()(e.toLowerCase(), a.toLowerCase());
                         })
                         .map((e) => {
                             var t, r, l;
@@ -154,7 +154,7 @@ function y(e) {
             ],
             [R, H, k, C.message.length],
         );
-    return (0, r.jsxs)(i.IX, {
+    return (0, r.jsxs)(o.IX, {
         transitionState: y,
         onClose: k,
         children: [
@@ -213,7 +213,7 @@ function y(e) {
                             null != R
                                 ? (0, r.jsx)(c.Text, {
                                       variant: "text-xs/normal",
-                                      color: "text-danger",
+                                      color: "text-feedback-critical",
                                       children: R,
                                   })
                                 : null,
@@ -221,7 +221,7 @@ function y(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(i.Go$, {
+            (0, r.jsx)(o.Go$, {
                 actions: X,
                 leading: (0, r.jsx)(c.Avr, {
                     text: b.intl.string(b.t.N86XcP),
