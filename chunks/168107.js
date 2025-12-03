@@ -154,18 +154,31 @@ let v = {
                     onCloseCallback: t,
                 },
             );
-        (0, a.ZDy)(
-            async () => {
-                let { default: e } = await n.e("80144").then(n.bind(n, 634997));
-                return (t) => (0, r.jsx)(e, E(h({}, t), { entryPoint: i }));
-            },
-            {
-                modalKey: p.ux,
-                backdropStyle: O(i),
-                Layer: o.ZP,
-                onCloseCallback: t,
-            },
-        );
+        (0, u.v)(i)
+            ? (0, a.ZDy)(
+                  async () => {
+                      let { default: e } = await n.e("50614").then(n.bind(n, 17597));
+                      return (t) => (0, r.jsx)(e, E(h({}, t), { entryPoint: i }));
+                  },
+                  {
+                      modalKey: p.ux,
+                      backdropStyle: O(i),
+                      Layer: o.ZP,
+                      onCloseCallback: t,
+                  },
+              )
+            : (0, a.ZDy)(
+                  async () => {
+                      let { default: e } = await n.e("80144").then(n.bind(n, 634997));
+                      return (t) => (0, r.jsx)(e, E(h({}, t), { entryPoint: i }));
+                  },
+                  {
+                      modalKey: p.ux,
+                      backdropStyle: O(i),
+                      Layer: o.ZP,
+                      onCloseCallback: t,
+                  },
+              );
     },
     openUrl: (e) => {
         window.open(e, "_blank");
