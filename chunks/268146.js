@@ -12,6 +12,7 @@ var r = (function (e) {
             (e[(e.IsReceivingStream = 4)] = "IsReceivingStream"),
             (e[(e.VideoMediaSessionId = 5)] = "VideoMediaSessionId"),
             (e[(e.StreamMediaSessionId = 6)] = "StreamMediaSessionId"),
+            (e[(e.IntentionalCrashReason = 7)] = "IntentionalCrashReason"),
             e
         );
     })({}),
