@@ -1,18 +1,19 @@
-n.d(t, { r: () => y });
+n.d(t, { r: () => O });
 var r = n(622822),
     i = n(100527),
-    a = n(703656),
-    o = n(6025),
-    s = n(897473),
-    l = n(592125),
-    c = n(984933),
-    u = n(944486),
-    d = n(545408),
-    f = n(189357),
-    p = n(50493),
-    _ = n(981631),
-    m = n(176505);
-function h(e, t, n) {
+    a = n(982168),
+    o = n(703656),
+    s = n(6025),
+    l = n(897473),
+    c = n(592125),
+    u = n(984933),
+    d = n(944486),
+    f = n(545408),
+    p = n(189357),
+    _ = n(50493),
+    m = n(981631),
+    h = n(176505);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +26,7 @@ function h(e, t, n) {
         e
     );
 }
-function g(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,12 +37,12 @@ function g(e) {
                 }),
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                g(e, t, n[t]);
             });
     }
     return e;
 }
-function E(e, t) {
+function b(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,45 +54,51 @@ function E(e, t) {
     }
     return n;
 }
-function b(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : E(Object(t)).forEach(function (n) {
+            : b(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function y(e, t, n) {
-    var h, E, y;
-    let O = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : { modViewPanel: p.k.INFO };
-    if (!(0, f.Y)(e)) return Promise.resolve();
-    let v = null != (h = O.modViewPanel) ? h : p.k.INFO,
-        S = null != (E = O.sourceLocation) ? E : i.Z.MEMBER_SAFETY_PAGE,
-        I = u.Z.getCurrentlySelectedChannelId(),
-        T = null != I ? l.Z.getChannel(I) : null;
-    if (n !== m.oC.MEMBER_SAFETY && (null == T || T.getGuildId() !== e)) {
-        let t = c.ZP.getDefaultChannel(e);
-        null == t || (0, r.Y3)(t) || (0, a.uL)(_.Z5c.CHANNEL(e, t.id));
+function O(e, t, n) {
+    var g, b, O;
+    let v,
+        S = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : { modViewPanel: _.k.INFO };
+    if (!(0, p.Y)(e)) return Promise.resolve();
+    let I = null != (g = S.modViewPanel) ? g : _.k.INFO,
+        T = null != (b = S.sourceLocation) ? b : i.Z.MEMBER_SAFETY_PAGE,
+        A = d.Z.getCurrentlySelectedChannelId(),
+        C = null != A ? c.Z.getChannel(A) : null;
+    if (n !== h.oC.MEMBER_SAFETY && (null == C || C.getGuildId() !== e)) {
+        let t = u.ZP.getDefaultChannel(e);
+        null == t || (0, r.Y3)(t) || (0, o.uL)(m.Z5c.CHANNEL(e, t.id));
     }
+    let N = n;
     return (
-        (0, d.q)(e, t, v, S),
-        o.Z.openGuildSidebar({
+        (0, a.H0)(N, t) && (v = N),
+        (0, f.q)(e, t, I, T),
+        s.Z.openGuildSidebar({
             guildId: e,
             baseChannelId: n,
-            sidebarType: s.jL.GUILD_MEMBER_MOD_VIEW,
-            details: b(
-                g(
+            sidebarType: l.jL.GUILD_MEMBER_MOD_VIEW,
+            details: y(
+                E(
                     {
-                        type: s.Ff.GUILD_MEMBER_MOD_VIEW,
+                        type: l.Ff.GUILD_MEMBER_MOD_VIEW,
                         userId: t,
                         guildId: e,
                     },
-                    O,
+                    S,
                 ),
-                { modViewPanel: null != (y = O.modViewPanel) ? y : p.k.INFO },
+                {
+                    modViewPanel: null != (O = S.modViewPanel) ? O : _.k.INFO,
+                    moderatorReportId: v,
+                },
             ),
         })
     );

@@ -22,34 +22,34 @@ var r = n(54381),
     R = n(327250),
     S = n(345226);
 function p(e) {
-    let { userId: t, guildId: n, onClose: i, className: p, infoPanelClassName: C, style: D } = e,
-        U = (0, O.m)(n),
-        L = (0, a.e7)([h.default], () => h.default.getUser(t), [t]),
-        M = (0, a.e7)([N.ZP], () => N.ZP.getMember(n, t), [n, t]),
-        [x, b] = l.useState(null == L || null == M),
-        v = (0, c.Z)(M),
-        P = l.useRef(null),
-        { analyticsLocations: j } = (0, A.ZP)(_.Z.GUILD_MEMBER_MOD_VIEW),
-        y = (0, I.ZP)(t, n),
-        G = (0, E.ZP)();
+    let { userId: t, guildId: n, onClose: i, className: p, infoPanelClassName: C, style: D, moderatorReportId: U } = e,
+        L = (0, O.m)(n),
+        M = (0, a.e7)([h.default], () => h.default.getUser(t), [t]),
+        x = (0, a.e7)([N.ZP], () => N.ZP.getMember(n, t), [n, t]),
+        [b, v] = l.useState(null == M || null == x),
+        P = (0, c.Z)(x),
+        j = l.useRef(null),
+        { analyticsLocations: y } = (0, A.ZP)(_.Z.GUILD_MEMBER_MOD_VIEW),
+        G = (0, I.ZP)(t, n),
+        k = (0, E.ZP)();
     return (l.useEffect(() => {
-        U || i();
-    }, [U, i]),
+        L || i();
+    }, [L, i]),
     l.useEffect(() => {
-        null == v || null != M || x || i();
-    }, [x, M, i, v]),
+        null == P || null != x || b || i();
+    }, [b, x, i, P]),
     l.useEffect(() => {
-        null != L && null != M && b(!1);
-    }, [L, M]),
+        null != M && null != x && v(!1);
+    }, [M, x]),
     l.useEffect(() => {
-        let e = null == M;
+        let e = null == x;
         return (
-            !x && e && (P.current = window.setTimeout(i, 500)),
+            !b && e && (j.current = window.setTimeout(i, 500)),
             () => {
-                null != P.current && window.clearTimeout(P.current);
+                null != j.current && window.clearTimeout(j.current);
             }
         );
-    }, [x, M, i]),
+    }, [b, x, i]),
     (0, d.$)({ [n]: [t] }, "GuildMemberModViewSidebar"),
     l.useEffect(() => {
         !(async function () {
@@ -61,29 +61,29 @@ function p(e) {
                     dispatchWait: !0,
                 }),
             ];
-            await Promise.all(e), b(!1);
+            await Promise.all(e), v(!1);
         })();
     }, [n, t]),
-    U)
-        ? x || null == L || null == M
+    L)
+        ? b || null == M || null == x
             ? (0, r.jsx)("div", {
                   className: s()(S.sidebarContainer, S.loadingContainer, p),
                   style: D,
                   children: (0, r.jsx)(o.$jN, {
                       animated: !0,
-                      type: x ? o.$jN.Type.SPINNING_CIRCLE : o.$jN.Type.CHASING_DOTS,
+                      type: b ? o.$jN.Type.SPINNING_CIRCLE : o.$jN.Type.CHASING_DOTS,
                   }),
               })
             : (0, r.jsx)(A.Gt, {
-                  value: j,
+                  value: y,
                   children: (0, r.jsx)("div", {
                       className: s()(S.sidebarContainer, p),
                       style: D,
                       children: (0, r.jsx)(g.Z, {
-                          user: L,
-                          displayProfile: y,
+                          user: M,
+                          displayProfile: G,
                           themeType: null,
-                          themeOverride: G,
+                          themeOverride: k,
                           forceShowPremium: !0,
                           className: S.profileThemedContainer,
                           children: (0, r.jsxs)("div", {
@@ -93,6 +93,7 @@ function p(e) {
                                       userId: t,
                                       guildId: n,
                                       onClose: i,
+                                      moderatorReportId: U,
                                   }),
                                   (0, r.jsx)(f.Z, {
                                       userId: t,

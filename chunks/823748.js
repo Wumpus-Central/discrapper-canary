@@ -455,13 +455,14 @@ class tl extends i.PureComponent {
         if (null != l && null == e)
             if (l.type !== ej.jL.GUILD_MEMBER_MOD_VIEW) return null;
             else {
-                let { guildId: e, userId: t } = l.details;
+                let { guildId: e, userId: t, moderatorReportId: n } = l.details;
                 return (0, r.jsx)("div", {
                     style: { width: e4.$Y6 },
                     className: te.guildSidebar,
                     children: (0, r.jsx)(W.Z, {
                         guildId: e,
                         userId: t,
+                        moderatorReportId: n,
                         onClose: () => eO.Z.closeGuildSidebar(e),
                     }),
                 });
