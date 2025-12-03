@@ -1241,9 +1241,9 @@ function z(e) {
                   }));
     return (0, r.jsx)(_.tEY, {
         offset: 3,
-        children: (0, r.jsxs)(m.Button, {
+        children: (0, r.jsxs)(m.zx, {
             "data-migration-pending": !0,
-            look: m.Button.Looks.BLANK,
+            look: m.zx.Looks.BLANK,
             tabIndex: n ? 0 : -1,
             "data-option-pill-value": t.value,
             className: T.optionPillBtn,

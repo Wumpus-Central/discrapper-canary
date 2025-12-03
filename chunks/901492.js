@@ -1,16 +1,12 @@
-n.d(t, { default: () => c });
+n.d(t, { default: () => a });
 var r = n(54381);
 n(473749);
-var i = n(755721),
-    l = n(481060),
-    o = n(933557),
-    a = n(388032),
-    s = n(791603);
-function c(e) {
-    var t,
-        n,
-        { channel: c, category: u } = e,
-        d = (function (e, t) {
+var i = n(793030),
+    l = n(933557),
+    o = n(388032);
+function a(e) {
+    var { channel: t, category: n } = e,
+        a = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -31,11 +27,11 @@ function c(e) {
             }
             return i;
         })(e, ["channel", "category"]);
-    let f = (0, o.ZP)(c, !0),
-        h = (0, o.ZP)(u);
+    let s = (0, l.ZP)(t, !0),
+        c = (0, l.ZP)(n);
     return (0, r.jsx)(
-        l.ConfirmModal,
-        ((t = (function (e) {
+        i.ConfirmModal,
+        (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
                     r = Object.keys(n);
@@ -61,37 +57,14 @@ function c(e) {
             return e;
         })(
             {
-                header: a.intl.string(a.t.YWMtRe),
-                confirmText: a.intl.string(a.t.eW8Gy4),
-                cancelText: a.intl.string(a.t.s4uM3b),
-                confirmButtonColor: i.zx.Colors.BRAND,
-            },
-            d,
-        )),
-        (n = n =
-            {
-                children: (0, r.jsx)(l.Text, {
-                    variant: "text-md/normal",
-                    className: s.message,
-                    selectable: !1,
-                    children: a.intl.format(a.t["iKW+jY"], {
-                        channelName: f,
-                        categoryName: h,
-                    }),
+                title: o.intl.string(o.t.YWMtRe),
+                subtitle: o.intl.format(o.t["iKW+jY"], {
+                    channelName: s,
+                    categoryName: c,
                 }),
-            }),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(n)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-              }),
-        t),
+                confirmText: o.intl.string(o.t.eW8Gy4),
+            },
+            a,
+        ),
     );
 }

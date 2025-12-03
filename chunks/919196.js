@@ -1,26 +1,27 @@
-n.d(t, { Z: () => S }), n(388685), n(539854), n(953529);
+n.d(t, { Z: () => I }), n(388685), n(539854), n(953529);
 var i = n(54381),
     r = n(473749),
     l = n(243814),
-    a = n(442837),
-    o = n(481060),
-    s = n(668781),
-    c = n(600164),
-    d = n(434404),
-    u = n(590157),
-    p = n(280885),
-    m = n(496675),
-    b = n(768581),
-    g = n(709054),
-    f = n(51144),
-    h = n(486199),
-    x = n(366598),
-    j = n(125657),
+    a = n(793030),
+    o = n(442837),
+    s = n(481060),
+    c = n(668781),
+    d = n(600164),
+    u = n(434404),
+    p = n(590157),
+    m = n(280885),
+    b = n(496675),
+    g = n(768581),
+    f = n(709054),
+    h = n(51144),
+    x = n(486199),
+    j = n(366598),
+    v = n(125657),
     O = n(725875),
-    v = n(981631),
-    y = n(388032),
-    _ = n(85541);
-function C(e) {
+    y = n(981631),
+    _ = n(388032),
+    C = n(85541);
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -45,11 +46,11 @@ function C(e) {
     }
     return e;
 }
-function N(e) {
+function S(e) {
     var t,
         n,
-        { application: r, guild: l, integration: a } = e,
-        c = (function (e, t) {
+        { application: r, guild: l, integration: o } = e,
+        s = (function (e, t) {
             if (null == e) return {};
             var n,
                 i,
@@ -71,25 +72,21 @@ function N(e) {
             return r;
         })(e, ["application", "guild", "integration"]);
     return (0, i.jsx)(
-        o.ConfirmModal,
-        ((t = C({}, c)),
+        a.ConfirmModal,
+        ((t = N({}, s)),
         (n = n =
             {
-                header: y.intl.formatToPlainString(y.t["rL9d/1"], { applicationName: r.name }),
-                confirmText: y.intl.string(y.t.ebGf4m),
-                cancelText: y.intl.string(y.t["ETE/oC"]),
+                title: _.intl.formatToPlainString(_.t["rL9d/1"], { applicationName: r.name }),
+                subtitle: _.intl.format(_.t.FGE8ya, { applicationName: r.name }),
+                confirmText: _.intl.string(_.t.ebGf4m),
                 onConfirm: () => {
-                    d.Z.disableIntegration(l.id, a.id).catch(() => {
-                        s.Z.show({
-                            title: y.intl.string(y.t.wYqMmI),
-                            body: y.intl.string(y.t.A4Mnst),
+                    u.Z.disableIntegration(l.id, o.id).catch(() => {
+                        c.Z.show({
+                            title: _.intl.string(_.t.wYqMmI),
+                            body: _.intl.string(_.t.A4Mnst),
                         });
                     });
                 },
-                children: (0, i.jsx)(o.Text, {
-                    variant: "text-md/normal",
-                    children: y.intl.format(y.t.FGE8ya, { applicationName: r.name }),
-                }),
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -106,159 +103,159 @@ function N(e) {
         t),
     );
 }
-function S(e) {
+function I(e) {
     let {
             guild: t,
             applicationIntegration: n,
-            selectableWebhookChannels: s,
-            editedWebhook: d,
-            errors: S,
-            canNavigate: P,
+            selectableWebhookChannels: a,
+            editedWebhook: c,
+            errors: u,
+            canNavigate: I,
         } = e,
-        { application: w, integration: E, webhooks: I } = n,
-        [T, Z] = (0, a.Wu)(
-            [m.Z],
-            () => [m.Z.can(v.Plq.MANAGE_ROLES, t), null == w.bot || m.Z.canManageUser(v.Plq.MANAGE_GUILD, w.bot.id, t)],
-            [w.bot, t],
+        { application: E, integration: w, webhooks: P } = n,
+        [T, Z] = (0, o.Wu)(
+            [b.Z],
+            () => [b.Z.can(y.Plq.MANAGE_ROLES, t), null == E.bot || b.Z.canManageUser(y.Plq.MANAGE_GUILD, E.bot.id, t)],
+            [E.bot, t],
         ),
-        k = (0, a.e7)([m.Z], () => m.Z.can(v.Plq.MANAGE_WEBHOOKS, t), [t]),
+        k = (0, o.e7)([b.Z], () => b.Z.can(y.Plq.MANAGE_WEBHOOKS, t), [t]),
         A = r.useCallback(() => {
-            P() &&
-                (0, o.h7j)((e) =>
+            I() &&
+                (0, s.h7j)((e) =>
                     (0, i.jsx)(
-                        N,
-                        C(
+                        S,
+                        N(
                             {
                                 guild: t,
-                                application: w,
-                                integration: E,
+                                application: E,
+                                integration: w,
                             },
                             e,
                         ),
                     ),
                 );
-        }, [w, P, t, E]),
+        }, [E, I, t, w]),
         D = r.useMemo(() => {
             let e = [
                 {
-                    icon: o.T39,
-                    text: y.intl.formatToPlainString(y.t.gcdJ8J, { timestamp: g.default.extractTimestamp(E.id) }),
+                    icon: s.T39,
+                    text: _.intl.formatToPlainString(_.t.gcdJ8J, { timestamp: f.default.extractTimestamp(w.id) }),
                 },
             ];
             return (
-                null != E.user &&
+                null != w.user &&
                     e.push({
-                        icon: o.tBG,
-                        text: y.intl.formatToPlainString(y.t.qE7oqs, { user: f.ZP.getUserTag(E.user) }),
+                        icon: s.tBG,
+                        text: _.intl.formatToPlainString(_.t.qE7oqs, { user: h.ZP.getUserTag(w.user) }),
                     }),
                 e
             );
-        }, [E.id, E.user]),
+        }, [w.id, w.user]),
         R = r.useMemo(() => {
             var e;
-            return null != w.bot && (null == (e = E.scopes) ? void 0 : e.includes(l.x.BOT))
-                ? (0, i.jsx)(j.Z, {
+            return null != E.bot && (null == (e = w.scopes) ? void 0 : e.includes(l.x.BOT))
+                ? (0, i.jsx)(v.Z, {
                       guild: t,
                       applicationIntegration: n,
                   })
-                : (0, i.jsx)(o.Zbd, {
-                      className: _.emptyCard,
+                : (0, i.jsx)(s.Zbd, {
+                      className: C.emptyCard,
                       editable: !0,
-                      children: (0, i.jsx)(o.Text, {
+                      children: (0, i.jsx)(s.Text, {
                           color: "text-muted",
                           variant: "text-sm/normal",
-                          children: y.intl.string(y.t.pfLnza),
+                          children: _.intl.string(_.t.pfLnza),
                       }),
                   });
-        }, [w.bot, n, t, E.scopes]);
+        }, [E.bot, n, t, w.scopes]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(h.Z, {
-                name: w.name,
-                imageSrc: b.ZP.getApplicationIconURL({
-                    id: w.id,
-                    icon: w.icon,
+            (0, i.jsx)(x.Z, {
+                name: E.name,
+                imageSrc: g.ZP.getApplicationIconURL({
+                    id: E.id,
+                    icon: E.icon,
                     size: 32,
                 }),
                 details: D,
                 isHeader: !0,
             }),
-            (null == w ? void 0 : w.description) != null
-                ? (0, i.jsx)(p.Z, {
-                      userBio: w.description,
-                      className: _.headerDescription,
+            (null == E ? void 0 : E.description) != null
+                ? (0, i.jsx)(m.Z, {
+                      userBio: E.description,
+                      className: C.headerDescription,
                   })
                 : null,
             T
-                ? (0, i.jsx)(u.Z, {
-                      application: w,
-                      canNavigate: P,
+                ? (0, i.jsx)(p.Z, {
+                      application: E,
+                      canNavigate: I,
                       guildId: t.id,
                   })
                 : null,
-            (0, i.jsx)(o.izJ, { className: _.headerDivider }),
-            null != w.bot
+            (0, i.jsx)(s.izJ, { className: C.headerDivider }),
+            null != E.bot
                 ? (0, i.jsxs)("div", {
-                      className: _.section,
+                      className: C.section,
                       children: [
-                          (0, i.jsx)(x.Z, {
-                              icon: (0, i.jsx)(o.wGt, {
+                          (0, i.jsx)(j.Z, {
+                              icon: (0, i.jsx)(s.wGt, {
                                   size: "xs",
                                   color: "currentColor",
                               }),
-                              title: y.intl.string(y.t.AOdOYr),
+                              title: _.intl.string(_.t.AOdOYr),
                           }),
                           R,
                       ],
                   })
                 : null,
             (0, i.jsxs)("div", {
-                className: _.section,
+                className: C.section,
                 children: [
-                    (0, i.jsx)(x.Z, {
-                        icon: (0, i.jsx)(o.tYf, {
+                    (0, i.jsx)(j.Z, {
+                        icon: (0, i.jsx)(s.tYf, {
                             size: "md",
                             color: "currentColor",
                         }),
-                        title: y.intl.string(y.t["t9ZX/I"]),
+                        title: _.intl.string(_.t["t9ZX/I"]),
                     }),
-                    I.length > 0
+                    P.length > 0
                         ? (0, i.jsx)(O.Z, {
-                              webhooks: I,
-                              editedWebhook: d,
-                              selectableWebhookChannels: s,
-                              errors: S,
-                              canNavigate: P,
+                              webhooks: P,
+                              editedWebhook: c,
+                              selectableWebhookChannels: a,
+                              errors: u,
+                              canNavigate: I,
                           })
-                        : (0, i.jsx)(o.Zbd, {
-                              className: _.emptyCard,
+                        : (0, i.jsx)(s.Zbd, {
+                              className: C.emptyCard,
                               editable: !0,
-                              children: (0, i.jsx)(o.Text, {
+                              children: (0, i.jsx)(s.Text, {
                                   color: "text-muted",
                                   variant: "text-sm/normal",
-                                  children: k ? y.intl.string(y.t.ahPd2Y) : y.intl.string(y.t.axqYMl),
+                                  children: k ? _.intl.string(_.t.ahPd2Y) : _.intl.string(_.t.axqYMl),
                               }),
                           }),
                 ],
             }),
-            (0, i.jsx)(o.izJ, { className: _.headerDivider }),
-            (0, i.jsxs)(c.Z, {
-                className: _.section,
-                justify: c.Z.Justify.BETWEEN,
-                align: c.Z.Align.CENTER,
+            (0, i.jsx)(s.izJ, { className: C.headerDivider }),
+            (0, i.jsxs)(d.Z, {
+                className: C.section,
+                justify: d.Z.Justify.BETWEEN,
+                align: d.Z.Align.CENTER,
                 children: [
-                    (0, i.jsx)(o.Text, {
+                    (0, i.jsx)(s.Text, {
                         color: "header-secondary",
                         variant: "text-sm/normal",
-                        children: Z ? y.intl.string(y.t.hdneL4) : y.intl.string(y.t.xRCMqx),
+                        children: Z ? _.intl.string(_.t.hdneL4) : _.intl.string(_.t.xRCMqx),
                     }),
-                    (0, i.jsx)(c.Z.Child, {
+                    (0, i.jsx)(d.Z.Child, {
                         grow: 0,
                         shrink: 0,
-                        children: (0, i.jsx)(o.Button, {
+                        children: (0, i.jsx)(s.Button, {
                             variant: "critical-primary",
                             size: "sm",
-                            text: y.intl.string(y.t.ebGf4m),
+                            text: _.intl.string(_.t.ebGf4m),
                             disabled: !Z,
                             onClick: A,
                         }),

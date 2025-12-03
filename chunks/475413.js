@@ -95,7 +95,7 @@ var E = (function (e) {
 let b = (e) => {
         var {
                 action: t,
-                color: n = s.Button.Colors.PRIMARY,
+                color: n = s.zx.Colors.PRIMARY,
                 themeColor: i = "primary",
                 className: a,
                 innerClassName: l,
@@ -108,7 +108,7 @@ let b = (e) => {
                 null != t && E({ action: t }), null == d || d(e);
             };
         return (0, r.jsx)(
-            s.Button,
+            s.zx,
             _(
                 f(
                     {
@@ -116,8 +116,8 @@ let b = (e) => {
                         className: o()(u.button, a),
                         innerClassName: o()(u.buttonInner, l),
                         color: o()(n, g[i]),
-                        look: s.Button.Looks.FILLED,
-                        size: s.Button.Sizes.SMALL,
+                        look: s.zx.Looks.FILLED,
+                        size: s.zx.Sizes.SMALL,
                         onClick: b,
                     },
                     h,
@@ -170,8 +170,8 @@ let b = (e) => {
                             buttonRef: t,
                             className: o()(u.icon, E),
                             innerClassName: o()(u.icon, y),
-                            look: s.Button.Looks.FILLED,
-                            size: s.Button.Sizes.NONE,
+                            look: s.zx.Looks.FILLED,
+                            size: s.zx.Sizes.NONE,
                             grow: !1,
                             "aria-label": "string" == typeof i && null == g ? i : g,
                         },

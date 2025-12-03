@@ -1,87 +1,66 @@
-r.d(t, { default: () => c });
-var n = r(54381);
-r(473749);
-var o = r(481060),
-    i = r(388032);
-function c(e) {
-    var t,
-        r,
-        { onConfirmUninstall: c, game: a } = e,
-        l = (function (e, t) {
-            if (null == e) return {};
-            var r,
-                n,
-                o = (function (e, t) {
-                    if (null == e) return {};
-                    var r,
-                        n,
+n.d(e, { default: () => a });
+var r = n(54381);
+n(473749);
+var o = n(793030),
+    i = n(388032);
+function a(t) {
+    var { onConfirmUninstall: e, game: n } = t,
+        a = (function (t, e) {
+            if (null == t) return {};
+            var n,
+                r,
+                o = (function (t, e) {
+                    if (null == t) return {};
+                    var n,
+                        r,
                         o = {},
-                        i = Object.keys(e);
-                    for (n = 0; n < i.length; n++) (r = i[n]), t.indexOf(r) >= 0 || (o[r] = e[r]);
+                        i = Object.keys(t);
+                    for (r = 0; r < i.length; r++) (n = i[r]), e.indexOf(n) >= 0 || (o[n] = t[n]);
                     return o;
-                })(e, t);
+                })(t, e);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < i.length; n++)
-                    (r = i[n]),
-                        !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
+                var i = Object.getOwnPropertySymbols(t);
+                for (r = 0; r < i.length; r++)
+                    (n = i[r]),
+                        !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (o[n] = t[n]);
             }
             return o;
-        })(e, ["onConfirmUninstall", "game"]);
-    return (0, n.jsx)(
+        })(t, ["onConfirmUninstall", "game"]);
+    return (0, r.jsx)(
         o.ConfirmModal,
-        ((t = (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var r = null != arguments[t] ? arguments[t] : {},
-                    n = Object.keys(r);
+        (function (t) {
+            for (var e = 1; e < arguments.length; e++) {
+                var n = null != arguments[e] ? arguments[e] : {},
+                    r = Object.keys(n);
                 "function" == typeof Object.getOwnPropertySymbols &&
-                    (n = n.concat(
-                        Object.getOwnPropertySymbols(r).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                    (r = r.concat(
+                        Object.getOwnPropertySymbols(n).filter(function (t) {
+                            return Object.getOwnPropertyDescriptor(n, t).enumerable;
                         }),
                     )),
-                    n.forEach(function (t) {
-                        var n;
-                        (n = r[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
-                                      value: n,
+                    r.forEach(function (e) {
+                        var r;
+                        (r = n[e]),
+                            e in t
+                                ? Object.defineProperty(t, e, {
+                                      value: r,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0,
                                   })
-                                : (e[t] = n);
+                                : (t[e] = r);
                     });
             }
-            return e;
+            return t;
         })(
             {
-                header: i.intl.formatToPlainString(i.t["f/BAbC"], { gameName: a.name }),
+                title: i.intl.formatToPlainString(i.t["f/BAbC"], { gameName: n.name }),
+                subtitle: i.intl.format(i.t["FP+NKV"], { gameName: n.name }),
                 confirmText: i.intl.string(i.t.RVy6Vl),
                 cancelText: i.intl.string(i.t["96dwMR"]),
-                onConfirm: c,
+                onConfirm: e,
             },
-            l,
-        )),
-        (r = r =
-            {
-                children: (0, n.jsx)(o.Text, {
-                    variant: "text-md/normal",
-                    children: i.intl.format(i.t["FP+NKV"], { gameName: a.name }),
-                }),
-            }),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : (function (e, t) {
-                  var r = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
-                      r.push.apply(r, n);
-                  }
-                  return r;
-              })(Object(r)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
-              }),
-        t),
+            a,
+        ),
     );
 }

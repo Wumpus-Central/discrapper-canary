@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(442837),
@@ -37,89 +37,59 @@ function p(e) {
     }
     return e;
 }
-function _(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function m(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function h(e) {
-    let { user: t, location: f = "ContextMenu", onFriendRequestSent: _, onFriendRemove: h, appContext: g } = e,
-        { id: E, username: b, bot: y } = t,
-        O = (0, a.e7)([u.default], () => {
+function _(e) {
+    let { user: t, location: f = "ContextMenu", onFriendRequestSent: _, onFriendRemove: m, appContext: h } = e,
+        { id: g, username: E, bot: b } = t,
+        y = (0, a.e7)([u.default], () => {
             var e;
-            return (null == (e = u.default.getCurrentUser()) ? void 0 : e.id) === E;
-        }, [E]),
-        v = (0, l.n)({ userId: E }),
-        [S, I] = (0, a.Wu)([c.Z], () => [c.Z.isFriend(E), c.Z.isBlocked(E)], [E]),
-        [T, A] = i.useState(!1);
-    if (y || O) return null;
-    function C() {
+            return (null == (e = u.default.getCurrentUser()) ? void 0 : e.id) === g;
+        }, [g]),
+        O = (0, l.n)({ userId: g }),
+        [v, S] = (0, a.Wu)([c.Z], () => [c.Z.isFriend(g), c.Z.isBlocked(g)], [g]),
+        [I, T] = i.useState(!1);
+    if (b || y) return null;
+    function A() {
         (0, o.ZDy)(
             async () => {
-                let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 878678));
+                let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 793030));
                 return (t) =>
                     (0, r.jsx)(
                         e,
-                        m(
-                            p(
-                                {
-                                    header: d.intl.formatToPlainString(d.t.fPLvZd, { name: b }),
-                                    confirmText: d.intl.string(d.t.cvSt1J),
-                                    cancelText: d.intl.string(d.t["ETE/oC"]),
-                                    onConfirm: () => {
-                                        s.Z.removeFriend(E, { location: f }), A(!1), null == h || h();
-                                    },
-                                },
-                                t,
-                            ),
+                        p(
                             {
-                                children: (0, r.jsx)(o.Text, {
-                                    variant: "text-md/normal",
-                                    children: d.intl.format(d.t.l5FFq6, { name: b }),
-                                }),
+                                title: d.intl.formatToPlainString(d.t.fPLvZd, { name: E }),
+                                subtitle: d.intl.format(d.t.l5FFq6, { name: E }),
+                                confirmText: d.intl.string(d.t.cvSt1J),
+                                cancelText: d.intl.string(d.t["ETE/oC"]),
+                                onConfirm: () => {
+                                    s.Z.removeFriend(g, { location: f }), T(!1), null == m || m();
+                                },
                             },
+                            t,
                         ),
                     );
             },
-            { contextKey: null != g ? (0, o.VnL)(g) : void 0 },
+            { contextKey: null != h ? (0, o.VnL)(h) : void 0 },
         );
     }
-    return S
+    return v
         ? (0, r.jsx)(o.sNh, {
               id: "remove-friend",
               label: d.intl.string(d.t.cvSt1J),
-              action: C,
+              action: A,
           })
         : (0, r.jsx)(o.sNh, {
               id: "add-friend",
-              label: T ? d.intl.string(d.t.xMH6vD) : v,
+              label: I ? d.intl.string(d.t.xMH6vD) : O,
               action: () => {
-                  T ||
+                  I ||
                       (s.Z.addRelationship({
-                          userId: E,
+                          userId: g,
                           context: { location: f },
                       }),
-                      A(!0),
+                      T(!0),
                       null == _ || _());
               },
-              disabled: I || (T && !S),
+              disabled: S || (I && !v),
           });
 }

@@ -23,8 +23,8 @@ var r = n(54381),
     N = n(916001),
     _ = n(298243),
     S = n(388032),
-    O = n(800372);
-function z(e) {
+    z = n(800372);
+function O(e) {
     let { guildProductListing: t, guildId: n, skuPricePreview: a } = e,
         i = (0, y.C)(t),
         l = (0, p.T4)(a.amount, a.currency),
@@ -32,16 +32,16 @@ function z(e) {
     return (
         c()(null != s, "guild cannot be null"),
         (0, r.jsxs)("div", {
-            className: O.purchaseSummaryContainer,
+            className: z.purchaseSummaryContainer,
             children: [
                 (0, r.jsx)(x.Z, {
                     alt: "",
-                    className: O.purchaseSummaryImage,
+                    className: z.purchaseSummaryImage,
                     listing: t,
                     imageSize: 100,
                 }),
                 (0, r.jsxs)("div", {
-                    className: O.purchaseSummarInfo,
+                    className: z.purchaseSummarInfo,
                     children: [
                         (0, r.jsx)(f.Text, {
                             variant: "text-md/medium",
@@ -68,7 +68,7 @@ function z(e) {
                     ],
                 }),
                 (0, r.jsxs)("div", {
-                    className: O.purchaseSummaryPrice,
+                    className: z.purchaseSummaryPrice,
                     children: [
                         (0, r.jsx)(f.Text, {
                             variant: "text-md/medium",
@@ -101,10 +101,10 @@ function P(e) {
         : (0, r.jsx)(Z.Z, {
               label: S.intl.string(S.t.HOkHPB),
               children: (0, r.jsxs)("div", {
-                  className: l()(O.attachmentsContainer, { [O.attachmentsContainerMultiple]: s }),
+                  className: l()(z.attachmentsContainer, { [z.attachmentsContainerMultiple]: s }),
                   children: [
                       (0, r.jsx)("div", {
-                          className: O.attachmentGrid,
+                          className: z.attachmentGrid,
                           children: i.map((e) => (0, r.jsx)(C.Z, { attachment: e }, e.id)),
                       }),
                       (0, r.jsx)("div", {
@@ -174,7 +174,7 @@ function T(e) {
                         body: S.intl.string(S.t.VQ0lXY),
                         confirmText: S.intl.string(S.t["NX+WJN"]),
                         header: S.intl.string(S.t.OCwKlu),
-                        confirmButtonColor: d.Button.Colors.BRAND,
+                        confirmButtonColor: d.zx.Colors.BRAND,
                     });
             }
         })();
@@ -216,16 +216,16 @@ function T(e) {
                           children: S.intl.string(S.t["9S3QHF"]),
                       }),
                       (0, r.jsx)(f.LZC, { size: 24 }),
-                      (0, r.jsx)(z, {
+                      (0, r.jsx)(O, {
                           guildProductListing: x,
                           guildId: s,
                           skuPricePreview: m,
                       }),
                       (0, r.jsx)(f.LZC, { size: 32 }),
-                      (0, r.jsx)("div", { className: O.divider }),
+                      (0, r.jsx)("div", { className: z.divider }),
                       (0, r.jsx)(f.LZC, { size: 32 }),
                       (0, r.jsxs)("ul", {
-                          className: O.benefitsContainer,
+                          className: z.benefitsContainer,
                           children: [
                               (0, r.jsx)(P, {
                                   guildProductListing: x,

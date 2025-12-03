@@ -84,12 +84,12 @@ function p(e) {
     function y(e) {
         let { key: t, disabled: n, navigateToPage: i } = e;
         return (0, r.jsxs)(
-            s.Button,
+            s.zx,
             {
                 className: d.endButton,
                 innerClassName: d.endButtonInner,
-                look: s.Button.Looks.BLANK,
-                color: s.Button.Colors.TRANSPARENT,
+                look: s.zx.Looks.BLANK,
+                color: s.zx.Colors.TRANSPARENT,
                 onClick: i,
                 disabled: n,
                 rel: "prev",
@@ -109,12 +109,12 @@ function p(e) {
     function O(e) {
         let { key: t, disabled: n, navigateToPage: i } = e;
         return (0, r.jsxs)(
-            s.Button,
+            s.zx,
             {
                 className: d.endButton,
                 innerClassName: d.endButtonInner,
-                look: s.Button.Looks.BLANK,
-                color: s.Button.Colors.TRANSPARENT,
+                look: s.zx.Looks.BLANK,
+                color: s.zx.Colors.TRANSPARENT,
                 onClick: i,
                 disabled: n,
                 rel: "next",

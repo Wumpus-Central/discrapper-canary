@@ -13,7 +13,7 @@ n.d(t, {
     nY: () => r.nY,
     wb: () => s.fp,
     zV: () => s.jw,
-    zx: () => r.Button,
+    zx: () => r.zx,
 });
 var r = n(693789),
     i = n(181958),

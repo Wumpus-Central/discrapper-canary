@@ -1,89 +1,66 @@
-r.d(e, { default: () => l });
-var n = r(54381);
-r(473749);
-var o = r(755721),
-    c = r(481060),
-    i = r(388032);
-function l(t) {
-    var e,
-        r,
-        { onConfirm: l } = t,
-        u = (function (t, e) {
+e.d(r, { default: () => c });
+var n = e(54381);
+e(473749);
+var i = e(793030),
+    o = e(388032);
+function c(t) {
+    var { onConfirm: r } = t,
+        e = (function (t, r) {
             if (null == t) return {};
-            var r,
+            var e,
                 n,
-                o = (function (t, e) {
+                i = (function (t, r) {
                     if (null == t) return {};
-                    var r,
+                    var e,
                         n,
-                        o = {},
-                        c = Object.keys(t);
-                    for (n = 0; n < c.length; n++) (r = c[n]), e.indexOf(r) >= 0 || (o[r] = t[r]);
-                    return o;
-                })(t, e);
+                        i = {},
+                        o = Object.keys(t);
+                    for (n = 0; n < o.length; n++) (e = o[n]), r.indexOf(e) >= 0 || (i[e] = t[e]);
+                    return i;
+                })(t, r);
             if (Object.getOwnPropertySymbols) {
-                var c = Object.getOwnPropertySymbols(t);
-                for (n = 0; n < c.length; n++)
-                    (r = c[n]),
-                        !(e.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(t, r) && (o[r] = t[r]);
+                var o = Object.getOwnPropertySymbols(t);
+                for (n = 0; n < o.length; n++)
+                    (e = o[n]),
+                        !(r.indexOf(e) >= 0) && Object.prototype.propertyIsEnumerable.call(t, e) && (i[e] = t[e]);
             }
-            return o;
+            return i;
         })(t, ["onConfirm"]);
     return (0, n.jsx)(
-        c.ConfirmModal,
-        ((e = (function (t) {
-            for (var e = 1; e < arguments.length; e++) {
-                var r = null != arguments[e] ? arguments[e] : {},
-                    n = Object.keys(r);
+        i.ConfirmModal,
+        (function (t) {
+            for (var r = 1; r < arguments.length; r++) {
+                var e = null != arguments[r] ? arguments[r] : {},
+                    n = Object.keys(e);
                 "function" == typeof Object.getOwnPropertySymbols &&
                     (n = n.concat(
-                        Object.getOwnPropertySymbols(r).filter(function (t) {
-                            return Object.getOwnPropertyDescriptor(r, t).enumerable;
+                        Object.getOwnPropertySymbols(e).filter(function (t) {
+                            return Object.getOwnPropertyDescriptor(e, t).enumerable;
                         }),
                     )),
-                    n.forEach(function (e) {
+                    n.forEach(function (r) {
                         var n;
-                        (n = r[e]),
-                            e in t
-                                ? Object.defineProperty(t, e, {
+                        (n = e[r]),
+                            r in t
+                                ? Object.defineProperty(t, r, {
                                       value: n,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0,
                                   })
-                                : (t[e] = n);
+                                : (t[r] = n);
                     });
             }
             return t;
         })(
             {
-                header: i.intl.string(i.t["5yTUuc"]),
-                confirmText: i.intl.string(i.t.TyCVIq),
-                cancelText: i.intl.string(i.t["ETE/oC"]),
-                confirmButtonColor: o.zx.Colors.BRAND,
-                onConfirm: l,
+                title: o.intl.string(o.t["5yTUuc"]),
+                subtitle: o.intl.string(o.t.dRhrXh),
+                variant: "primary",
+                confirmText: o.intl.string(o.t.TyCVIq),
+                onConfirm: r,
             },
-            u,
-        )),
-        (r = r =
-            {
-                children: (0, n.jsx)(c.Text, {
-                    variant: "text-md/normal",
-                    children: i.intl.string(i.t.dRhrXh),
-                }),
-            }),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-            : (function (t, e) {
-                  var r = Object.keys(t);
-                  if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(t);
-                      r.push.apply(r, n);
-                  }
-                  return r;
-              })(Object(r)).forEach(function (t) {
-                  Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t));
-              }),
-        e),
+            e,
+        ),
     );
 }

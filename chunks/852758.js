@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => N }), n(388685);
 var a = n(54381),
     l = n(473749),
     i = n(990547),
@@ -46,43 +46,25 @@ function E(e) {
     }
     return e;
 }
-function N(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var a = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, a);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function T() {
+function N() {
     let { action: e, theme: t } = (0, r.cj)([b.Z, g.Z], () => ({
             action: b.Z.getAction(),
             theme: g.Z.theme,
         })),
-        T = v.Z.getVerificationTypes(e),
-        [O, P] = l.useState(0),
-        w = (0, m.Z)(T);
+        N = v.Z.getVerificationTypes(e),
+        [T, O] = l.useState(0),
+        P = (0, m.Z)(N);
     (0, h.Z)(
         {
             type: i.ImpressionTypes.MODAL,
             name: i.ImpressionNames.USER_ACTION_REQUIRED,
             properties: {
-                verification_type: T[0],
-                verification_types: T,
+                verification_type: N[0],
+                verification_types: N,
             },
         },
         {},
-        [T.toString()],
+        [N.toString()],
     );
     let I = () => {
         (0, u.FD)(),
@@ -108,20 +90,37 @@ function T() {
             [],
         ),
         l.useEffect(() => {
-            (null == w ? void 0 : w[0]) === y.PUi.PHONE &&
-                (null == T ? void 0 : T[0]) === y.PUi.EMAIL &&
+            (null == P ? void 0 : P[0]) === y.PUi.PHONE &&
+                (null == N ? void 0 : N[0]) === y.PUi.EMAIL &&
                 (0, o.ZDy)(
                     async () => {
                         let { default: e } = await n.e("84112").then(n.bind(n, 273352));
-                        return (t) =>
-                            (0, a.jsx)(
+                        return (t) => {
+                            var n, l;
+                            return (0, a.jsx)(
                                 e,
-                                N(E({}, t), {
-                                    title: S.intl.string(S.t.KLnLIP),
-                                    body: S.intl.string(S.t.XGbCq3),
-                                    confirmText: S.intl.string(S.t["3oK4qw"]),
-                                }),
+                                ((n = E({}, t)),
+                                (l = l =
+                                    {
+                                        title: S.intl.string(S.t.KLnLIP),
+                                        body: S.intl.string(S.t.XGbCq3),
+                                        confirmText: S.intl.string(S.t["3oK4qw"]),
+                                    }),
+                                Object.getOwnPropertyDescriptors
+                                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
+                                    : (function (e, t) {
+                                          var n = Object.keys(e);
+                                          if (Object.getOwnPropertySymbols) {
+                                              var a = Object.getOwnPropertySymbols(e);
+                                              n.push.apply(n, a);
+                                          }
+                                          return n;
+                                      })(Object(l)).forEach(function (e) {
+                                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
+                                      }),
+                                n),
                             );
+                        };
                     },
                     {
                         modalKey: _.HR,
@@ -129,10 +128,10 @@ function T() {
                         onCloseCallback: I,
                     },
                 );
-        }, [T, w]),
+        }, [N, P]),
         (0, a.jsx)(j.Z, {
-            types: T,
-            captchaKey: O,
+            types: N,
+            captchaKey: T,
             onCaptchaVerify: (e) => {
                 s.tn
                     .post({
@@ -142,7 +141,7 @@ function T() {
                         rejectWithError: !0,
                     })
                     .then(d.xf, () => {
-                        P((e) => e + 1);
+                        O((e) => e + 1);
                     });
             },
             theme: t,
@@ -173,26 +172,19 @@ function T() {
             onLogout: () => {
                 (0, o.ZDy)(
                     async () => {
-                        let { ConfirmModal: e, Text: t } = await Promise.resolve().then(n.bind(n, 481060));
-                        return (n) =>
+                        let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 201265));
+                        return (t) =>
                             (0, a.jsx)(
                                 e,
-                                N(
-                                    E(
-                                        {
-                                            header: S.intl.string(S.t["2jxGer"]),
-                                            confirmText: S.intl.string(S.t["2jxGer"]),
-                                            cancelText: S.intl.string(S.t["ETE/oC"]),
-                                            onConfirm: () => c.Z.logout("verification"),
-                                        },
-                                        n,
-                                    ),
+                                E(
                                     {
-                                        children: (0, a.jsx)(t, {
-                                            variant: "text-md/normal",
-                                            children: S.intl.string(S.t.SUnWBB),
-                                        }),
+                                        title: S.intl.string(S.t["2jxGer"]),
+                                        subtitle: S.intl.string(S.t.SUnWBB),
+                                        confirmText: S.intl.string(S.t["2jxGer"]),
+                                        cancelText: S.intl.string(S.t["ETE/oC"]),
+                                        onConfirm: () => c.Z.logout("verification"),
                                     },
+                                    t,
                                 ),
                             );
                     },

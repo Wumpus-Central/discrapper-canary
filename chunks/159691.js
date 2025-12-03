@@ -351,7 +351,7 @@ n.d(t, {
     sV5: () => r.sV5,
     sVe: () => r.sVe,
     sXD: () => r.sXD,
-    sm4: () => r.sm4,
+    sm4: () => r.ConfirmModal,
     snC: () => r.snC,
     sq: () => r.sq,
     svS: () => r.svS,

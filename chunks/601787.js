@@ -1,13 +1,13 @@
 r.d(t, { default: () => i });
 var n = r(54381);
 r(473749);
-var o = r(481060),
+var o = r(793030),
     c = r(388032);
 function i(e) {
     var t,
         r,
         { ruleName: i, keyword: l } = e,
-        a = (function (e, t) {
+        u = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -28,7 +28,7 @@ function i(e) {
             }
             return o;
         })(e, ["ruleName", "keyword"]);
-    let u = null != i ? i : c.intl.string(c.t.ffR2cM);
+    let b = null != i ? i : c.intl.string(c.t.ffR2cM);
     return (0, n.jsx)(
         o.ConfirmModal,
         ((t = (function (e) {
@@ -55,19 +55,15 @@ function i(e) {
                     });
             }
             return e;
-        })({}, a)),
+        })({}, u)),
         (r = r =
             {
-                header: c.intl.string(c.t["zib/xJ"]),
-                cancelText: c.intl.string(c.t["ETE/oC"]),
-                confirmText: c.intl.string(c.t["cY+Oob"]),
-                children: (0, n.jsx)(o.Text, {
-                    variant: "text-md/normal",
-                    children: c.intl.format(c.t.AxSYKB, {
-                        ruleName: u,
-                        keyword: l,
-                    }),
+                title: c.intl.string(c.t["zib/xJ"]),
+                subtitle: c.intl.format(c.t.AxSYKB, {
+                    ruleName: b,
+                    keyword: l,
                 }),
+                confirmText: c.intl.string(c.t["cY+Oob"]),
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))

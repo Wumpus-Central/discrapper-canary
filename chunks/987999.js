@@ -1,118 +1,67 @@
-n.d(e, { default: () => O });
-var r = n(54381);
+n.d(i, { default: () => E });
+var l = n(54381);
 n(473749);
-var i = n(442837),
-    o = n(481060),
-    l = n(239091),
-    c = n(299206),
-    a = n(693546),
-    s = n(246364),
-    u = n(937111),
+var e = n(442837),
+    s = n(248514),
+    a = n(481060),
+    r = n(239091),
+    o = n(299206),
+    d = n(693546),
+    u = n(246364),
+    c = n(937111),
     p = n(703656),
-    d = n(914010),
-    b = n(981631),
-    f = n(388032);
-function O(t) {
-    let { guild: e, onSelect: n } = t,
-        O = e.id,
-        g = (0, c.Z)({
-            id: e.id,
-            label: f.intl.string(f.t["94lLD7"]),
+    g = n(914010),
+    h = n(981631),
+    Z = n(388032);
+function E(t) {
+    let { guild: i, onSelect: n } = t,
+        E = i.id,
+        C = (0, o.Z)({
+            id: i.id,
+            label: Z.intl.string(Z.t["94lLD7"]),
         }),
-        j = (0, i.e7)([u.Z], () => u.Z.getRequest(O)),
-        y = () => {
-            a.Z.removeGuildJoinRequest(O), d.Z.getGuildId() === O && (0, p.uL)(b.Z5c.ME);
+        f = (0, e.e7)([c.Z], () => c.Z.getRequest(E)),
+        m = () => {
+            d.Z.removeGuildJoinRequest(E), g.Z.getGuildId() === E && (0, p.uL)(h.Z5c.ME);
         };
-    return (0, r.jsxs)(o.v2r, {
+    return (0, l.jsxs)(a.v2r, {
         navId: "join-request-guild-context",
-        onClose: l.Zy,
-        "aria-label": f.intl.string(f.t.HpQykc),
+        onClose: r.Zy,
+        "aria-label": Z.intl.string(Z.t.HpQykc),
         onSelect: n,
         children: [
-            (null == j ? void 0 : j.applicationStatus) === s.wB.REJECTED &&
-                (0, r.jsx)(o.sNh, {
+            (null == f ? void 0 : f.applicationStatus) === u.wB.REJECTED &&
+                (0, l.jsx)(a.sNh, {
                     id: "reapply",
-                    label: f.intl.string(f.t.rpFCLs),
+                    label: Z.intl.string(Z.t.rpFCLs),
                     action: () => {
-                        a.Z.resetGuildJoinRequest(O).then(() => {
-                            (0, p.uL)(b.Z5c.GUILD_MEMBER_VERIFICATION(O));
+                        d.Z.resetGuildJoinRequest(E).then(() => {
+                            (0, p.uL)(h.Z5c.GUILD_MEMBER_VERIFICATION(E));
                         });
                     },
                     color: "default",
                 }),
-            (0, r.jsx)(o.sNh, {
+            (0, l.jsx)(a.sNh, {
                 id: "withdraw",
                 label:
-                    (null == j ? void 0 : j.applicationStatus) === s.wB.STARTED
-                        ? f.intl.string(f.t.OQFlFD)
-                        : f.intl.string(f.t.mqtdmQ),
+                    (null == f ? void 0 : f.applicationStatus) === u.wB.STARTED
+                        ? Z.intl.string(Z.t.OQFlFD)
+                        : Z.intl.string(Z.t.mqtdmQ),
                 action: () => {
-                    (0, o.h7j)((t) => {
-                        var n, i;
-                        return (0, r.jsx)(
-                            o.ConfirmModal,
-                            ((n = (function (t) {
-                                for (var e = 1; e < arguments.length; e++) {
-                                    var n = null != arguments[e] ? arguments[e] : {},
-                                        r = Object.keys(n);
-                                    "function" == typeof Object.getOwnPropertySymbols &&
-                                        (r = r.concat(
-                                            Object.getOwnPropertySymbols(n).filter(function (t) {
-                                                return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                                            }),
-                                        )),
-                                        r.forEach(function (e) {
-                                            var r;
-                                            (r = n[e]),
-                                                e in t
-                                                    ? Object.defineProperty(t, e, {
-                                                          value: r,
-                                                          enumerable: !0,
-                                                          configurable: !0,
-                                                          writable: !0,
-                                                      })
-                                                    : (t[e] = r);
-                                        });
-                                }
-                                return t;
-                            })(
-                                {
-                                    header: f.intl.string(f.t.y0CVes),
-                                    confirmText: f.intl.string(f.t.p89ACt),
-                                    cancelText: f.intl.string(f.t.oEAioF),
-                                    onConfirm: y,
-                                },
-                                t,
-                            )),
-                            (i = i =
-                                {
-                                    children: (0, r.jsx)(o.Text, {
-                                        variant: "text-md/normal",
-                                        children:
-                                            (null == j ? void 0 : j.applicationStatus) === s.wB.STARTED
-                                                ? f.intl.string(f.t.fJwWVt)
-                                                : f.intl.format(f.t["9ZezpN"], { name: e.name }),
-                                    }),
-                                }),
-                            Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
-                                : (function (t, e) {
-                                      var n = Object.keys(t);
-                                      if (Object.getOwnPropertySymbols) {
-                                          var r = Object.getOwnPropertySymbols(t);
-                                          n.push.apply(n, r);
-                                      }
-                                      return n;
-                                  })(Object(i)).forEach(function (t) {
-                                      Object.defineProperty(n, t, Object.getOwnPropertyDescriptor(i, t));
-                                  }),
-                            n),
-                        );
+                    (0, s.Z)({
+                        title: Z.intl.string(Z.t.y0CVes),
+                        subtitle:
+                            (null == f ? void 0 : f.applicationStatus) === u.wB.STARTED
+                                ? Z.intl.string(Z.t.fJwWVt)
+                                : Z.intl.format(Z.t["9ZezpN"], { name: i.name }),
+                        confirmText: Z.intl.string(Z.t.p89ACt),
+                        cancelText: Z.intl.string(Z.t.oEAioF),
+                        onConfirm: m,
                     });
                 },
                 color: "danger",
             }),
-            (0, r.jsx)(o.kSQ, { children: g }),
+            (0, l.jsx)(a.kSQ, { children: C }),
         ],
     });
 }

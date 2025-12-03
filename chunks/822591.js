@@ -1,6 +1,6 @@
 n.d(t, {
-    X: () => R,
-    Z: () => L,
+    X: () => Z,
+    Z: () => A,
 }),
     n(953529),
     n(388685),
@@ -12,93 +12,51 @@ var r = n(54381),
     s = n(544891),
     o = n(433517),
     c = n(796027),
-    d = n(28664),
-    u = n(755721),
-    g = n(481060),
-    m = n(493773),
-    p = n(933557),
-    f = n(769654),
-    h = n(984933),
-    b = n(650774),
-    x = n(430824),
-    j = n(496675),
-    _ = n(699516),
-    v = n(594174),
-    O = n(434404),
-    C = n(999382),
-    y = n(906512),
-    N = n(929834),
-    E = n(981631),
-    I = n(388032),
-    S = n(560818),
-    T = n(922905);
-function P(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = r);
-            });
-    }
-    return e;
-}
-function w(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let Z = "dismissedCommunityFeaturesUpsell",
-    R = () => {
+    d = n(248514),
+    u = n(28664),
+    g = n(755721),
+    m = n(481060),
+    p = n(493773),
+    f = n(933557),
+    h = n(769654),
+    b = n(984933),
+    x = n(650774),
+    j = n(430824),
+    _ = n(496675),
+    v = n(699516),
+    O = n(594174),
+    C = n(434404),
+    y = n(999382),
+    N = n(906512),
+    E = n(929834),
+    I = n(981631),
+    S = n(388032),
+    T = n(560818),
+    P = n(922905);
+let w = "dismissedCommunityFeaturesUpsell",
+    Z = () => {
         let e,
             {
                 guild: t,
                 submitting: n,
                 errors: i,
-            } = (0, a.cj)([C.Z], () => ({
-                submitting: C.Z.isSubmitting(),
-                guild: C.Z.getGuild(),
-                errors: C.Z.getErrors(),
+            } = (0, a.cj)([y.Z], () => ({
+                submitting: y.Z.isSubmitting(),
+                guild: y.Z.getGuild(),
+                errors: y.Z.getErrors(),
             })),
             l = Object.keys(i),
             s = l.length > 0 ? l[0] : null;
         return (
-            (e = "rules_channel_id" === s ? I.intl.string(I.t["7IrBYt"]) : null != s ? i[s] : void 0),
+            (e = "rules_channel_id" === s ? S.intl.string(S.t["7IrBYt"]) : null != s ? i[s] : void 0),
             (0, r.jsx)(c.Z, {
                 submitting: n,
                 onReset: () => {
-                    null != t && O.Z.init(t.id);
+                    null != t && C.Z.init(t.id);
                 },
                 onSave: () => {
                     null != t &&
-                        O.Z.saveGuild(t.id, {
+                        C.Z.saveGuild(t.id, {
                             rulesChannelId: t.rulesChannelId,
                             preferredLocale: t.preferredLocale,
                             safetyAlertsChannelId: t.safetyAlertsChannelId,
@@ -111,105 +69,105 @@ let Z = "dismissedCommunityFeaturesUpsell",
             })
         );
     },
-    D = (e) => {
+    R = (e) => {
         let { discoveryEnabled: t, onboardingEnabled: n, guild: l } = e,
-            [c, d] = i.useState(!0 === o.K.get(Z)),
-            p = (0, a.e7)([b.Z], () => {
+            [c, d] = i.useState(!0 === o.K.get(w)),
+            u = (0, a.e7)([x.Z], () => {
                 var e;
-                return null != (e = b.Z.getMemberCount(l.id)) ? e : 0;
+                return null != (e = x.Z.getMemberCount(l.id)) ? e : 0;
             }),
-            [h, j] = i.useState(!1);
-        (0, m.ZP)(() => {
+            [f, b] = i.useState(!1);
+        (0, p.ZP)(() => {
             s.tn
                 .get({
-                    url: E.ANM.GUILD_ADMIN_SERVER_ELIGIBILITY(l.id),
+                    url: I.ANM.GUILD_ADMIN_SERVER_ELIGIBILITY(l.id),
                     rejectWithError: !0,
                 })
                 .then((e) => {
-                    j(e.body.eligible_for_admin_server);
+                    b(e.body.eligible_for_admin_server);
                 })
-                .catch(() => j(!1));
+                .catch(() => b(!1));
         });
-        let _ = (0, a.e7)([x.Z], () => x.Z.getGuild("942897714956472401")),
-            v = l.features.has(E.GuildFeatures.COMMUNITY) && p >= 1000 && h && null == _;
+        let _ = (0, a.e7)([j.Z], () => j.Z.getGuild("942897714956472401")),
+            v = l.features.has(I.GuildFeatures.COMMUNITY) && u >= 1000 && f && null == _;
         if (t && n && !v) return null;
-        let C = async () => {
+        let O = async () => {
             try {
                 let e = await s.tn.post({
-                    url: E.ANM.JOIN_ADMIN_SERVER(l.id),
+                    url: I.ANM.JOIN_ADMIN_SERVER(l.id),
                     oldFormErrors: !0,
                     rejectWithError: !0,
                 });
-                O.Z.close(), (0, f.X)(e.body.id);
+                C.Z.close(), (0, h.X)(e.body.id);
             } catch (e) {}
         };
         return c && !v
             ? null
             : (0, r.jsxs)("div", {
-                  className: S.upsellContainer,
+                  className: T.upsellContainer,
                   children: [
                       (0, r.jsxs)("div", {
-                          className: S.upsellContent,
+                          className: T.upsellContent,
                           children: [
                               (0, r.jsx)("img", {
-                                  src: T,
+                                  src: P,
                                   alt: "",
                                   width: 60,
-                                  className: S.upsellImage,
+                                  className: T.upsellImage,
                               }),
                               (0, r.jsxs)("div", {
                                   children: [
-                                      (0, r.jsx)(g.Heading, {
+                                      (0, r.jsx)(m.Heading, {
                                           variant: "heading-md/semibold",
-                                          className: S.upsellHeader,
-                                          children: I.intl.string(I.t["pR/Bge"]),
+                                          className: T.upsellHeader,
+                                          children: S.intl.string(S.t["pR/Bge"]),
                                       }),
-                                      (0, r.jsx)(g.Text, {
+                                      (0, r.jsx)(m.Text, {
                                           variant: "text-sm/normal",
-                                          children: I.intl.string(I.t["V+Yo1l"]),
+                                          children: S.intl.string(S.t["V+Yo1l"]),
                                       }),
                                   ],
                               }),
                           ],
                       }),
-                      (0, r.jsx)(u.zx, {
-                          "aria-label": I.intl.string(I.t.cpT0Cq),
-                          look: u.zx.Looks.BLANK,
-                          size: u.zx.Sizes.NONE,
-                          className: S.upsellClose,
+                      (0, r.jsx)(g.zx, {
+                          "aria-label": S.intl.string(S.t.cpT0Cq),
+                          look: g.zx.Looks.BLANK,
+                          size: g.zx.Sizes.NONE,
+                          className: T.upsellClose,
                           onClick: () => {
-                              o.K.set(Z, !0), d(!0);
+                              o.K.set(w, !0), d(!0);
                           },
-                          children: (0, r.jsx)(g.Dio, {
+                          children: (0, r.jsx)(m.Dio, {
                               size: "md",
                               color: "currentColor",
                           }),
                       }),
                       (0, r.jsxs)("div", {
-                          className: S.upsellFooter,
+                          className: T.upsellFooter,
                           children: [
                               v &&
                                   (0, r.jsx)("div", {
                                       "data-button-hoisted-classname-wrapper": !0,
-                                      className: S.upsellButton,
-                                      children: (0, r.jsx)(g.Button, {
+                                      className: T.upsellButton,
+                                      children: (0, r.jsx)(m.Button, {
                                           variant: "primary",
                                           size: "sm",
-                                          text: I.intl.string(I.t.iF1Asi),
-                                          onClick: C,
+                                          text: S.intl.string(S.t.iF1Asi),
+                                          onClick: O,
                                       }),
                                   }),
                               n
                                   ? null
                                   : (0, r.jsx)("div", {
                                         "data-button-hoisted-classname-wrapper": !0,
-                                        className: S.upsellButton,
-                                        children: (0, r.jsx)(g.Button, {
+                                        className: T.upsellButton,
+                                        children: (0, r.jsx)(m.Button, {
                                             variant: "primary",
                                             size: "sm",
-                                            text: I.intl.string(I.t["S/Dfid"]),
+                                            text: S.intl.string(S.t["S/Dfid"]),
                                             onClick: () => {
-                                                O.Z.setSection(E.pNK.ONBOARDING);
+                                                C.Z.setSection(I.pNK.ONBOARDING);
                                             },
                                         }),
                                     }),
@@ -217,25 +175,25 @@ let Z = "dismissedCommunityFeaturesUpsell",
                                   ? null
                                   : (0, r.jsx)("div", {
                                         "data-button-hoisted-classname-wrapper": !0,
-                                        className: S.upsellButton,
-                                        children: (0, r.jsx)(g.Button, {
+                                        className: T.upsellButton,
+                                        children: (0, r.jsx)(m.Button, {
                                             variant: "secondary",
                                             size: "sm",
-                                            text: I.intl.string(I.t["0kmJdw"]),
+                                            text: S.intl.string(S.t["0kmJdw"]),
                                             onClick: () => {
-                                                O.Z.setSection(E.pNK.ACCESS, E.KsC.ACCESS_DISCOVERABLE);
+                                                C.Z.setSection(I.pNK.ACCESS, I.KsC.ACCESS_DISCOVERABLE);
                                             },
                                         }),
                                     }),
                               (0, r.jsx)("div", {
                                   "data-button-hoisted-classname-wrapper": !0,
-                                  className: S.upsellButton,
-                                  children: (0, r.jsx)(g.Button, {
+                                  className: T.upsellButton,
+                                  children: (0, r.jsx)(m.Button, {
                                       variant: "secondary",
                                       size: "sm",
-                                      text: I.intl.string(I.t.BQIYTb),
+                                      text: S.intl.string(S.t.BQIYTb),
                                       onClick: () => {
-                                          O.Z.setSection(E.pNK.ANALYTICS);
+                                          C.Z.setSection(I.pNK.ANALYTICS);
                                       },
                                   }),
                               }),
@@ -244,179 +202,155 @@ let Z = "dismissedCommunityFeaturesUpsell",
                   ],
               });
     },
-    A = () => {
-        let e = (0, a.e7)([C.Z], () => C.Z.getGuild()),
-            { canManageGuild: t, isGuildAdmin: n } = (0, a.cj)([j.Z], () => ({
-                canManageGuild: j.Z.can(E.Plq.MANAGE_GUILD, e),
-                isGuildAdmin: j.Z.can(E.Plq.ADMINISTRATOR, e),
+    D = () => {
+        let e = (0, a.e7)([y.Z], () => y.Z.getGuild()),
+            { canManageGuild: t, isGuildAdmin: n } = (0, a.cj)([_.Z], () => ({
+                canManageGuild: _.Z.can(I.Plq.MANAGE_GUILD, e),
+                isGuildAdmin: _.Z.can(I.Plq.ADMINISTRATOR, e),
             })),
-            s = (0, a.e7)([h.ZP], () => (null != e ? h.ZP.getChannels(e.id) : null)),
-            c = i.useMemo(N.jb, []),
-            u = !0 !== o.K.get(Z);
+            s = (0, a.e7)([b.ZP], () => (null != e ? b.ZP.getChannels(e.id) : null)),
+            c = i.useMemo(E.jb, []),
+            g = !0 !== o.K.get(w);
         if (null == e) return null;
-        let m = [];
+        let p = [];
         null != s &&
-            s[h.sH].forEach((e) => {
+            s[b.sH].forEach((e) => {
                 let { channel: t } = e;
-                t.type === E.d4z.GUILD_TEXT &&
-                    m.push({
+                t.type === I.d4z.GUILD_TEXT &&
+                    p.push({
                         value: t.id,
-                        label: (0, p.F6)(t, v.default, _.Z, !0),
+                        label: (0, f.F6)(t, O.default, v.Z, !0),
                     });
             });
-        let f = () => {
+        let h = () => {
                 if (null == e) return;
                 let t = new Set(e.features);
-                t.delete(E.GuildFeatures.COMMUNITY),
-                    t.delete(E.GuildFeatures.DISCOVERABLE),
-                    t.delete(E.GuildFeatures.PREVIEW_ENABLED),
-                    O.Z.updateGuild({
+                t.delete(I.GuildFeatures.COMMUNITY),
+                    t.delete(I.GuildFeatures.DISCOVERABLE),
+                    t.delete(I.GuildFeatures.PREVIEW_ENABLED),
+                    C.Z.updateGuild({
                         features: t,
                         rulesChannelId: null,
                         publicUpdatesChannelId: null,
                     });
             },
-            b = (e) => {
-                O.Z.updateGuild({ description: e });
+            x = (e) => {
+                C.Z.updateGuild({ description: e });
             };
-        return (0, r.jsxs)(g.Kqy, {
+        return (0, r.jsxs)(m.Kqy, {
             gap: 24,
             children: [
-                (0, r.jsx)(g.Heading, {
+                (0, r.jsx)(m.Heading, {
                     variant: "heading-lg/semibold",
-                    children: I.intl.string(I.t.nRtNqn),
+                    children: S.intl.string(S.t.nRtNqn),
                 }),
-                u
-                    ? (0, r.jsx)(D, {
-                          discoveryEnabled: e.features.has(E.GuildFeatures.DISCOVERABLE),
-                          onboardingEnabled: e.features.has(E.GuildFeatures.GUILD_ONBOARDING),
+                g
+                    ? (0, r.jsx)(R, {
+                          discoveryEnabled: e.features.has(I.GuildFeatures.DISCOVERABLE),
+                          onboardingEnabled: e.features.has(I.GuildFeatures.GUILD_ONBOARDING),
                           guild: e,
                       })
                     : null,
-                (0, r.jsx)(g.VcW, {
+                (0, r.jsx)(m.VcW, {
                     layout: "horizontal-responsive",
-                    label: I.intl.string(I.t["otcXP/"]),
-                    description: I.intl.string(I.t.BtwmYB),
+                    label: S.intl.string(S.t["otcXP/"]),
+                    description: S.intl.string(S.t.BtwmYB),
                     value: e.rulesChannelId,
-                    options: m,
+                    options: p,
                     onChange: (e) => {
-                        O.Z.updateGuild({ rulesChannelId: e });
+                        C.Z.updateGuild({ rulesChannelId: e });
                     },
                     isDisabled: !t,
                 }),
-                (0, r.jsx)(g.izJ, {}),
-                (0, r.jsx)(g.VcW, {
+                (0, r.jsx)(m.izJ, {}),
+                (0, r.jsx)(m.VcW, {
                     layout: "horizontal-responsive",
-                    label: I.intl.string(I.t.vAyDGU),
-                    description: I.intl.string(I.t.ZFeonu),
+                    label: S.intl.string(S.t.vAyDGU),
+                    description: S.intl.string(S.t.ZFeonu),
                     value: e.publicUpdatesChannelId,
-                    options: m,
+                    options: p,
                     onChange: (e) => {
-                        O.Z.updateGuild({ publicUpdatesChannelId: e });
+                        C.Z.updateGuild({ publicUpdatesChannelId: e });
                     },
                     isDisabled: !n,
                 }),
-                (0, r.jsx)(g.izJ, {}),
-                (0, r.jsx)(g.VcW, {
+                (0, r.jsx)(m.izJ, {}),
+                (0, r.jsx)(m.VcW, {
                     layout: "horizontal-responsive",
-                    label: I.intl.string(I.t.sMkYE8),
-                    description: I.intl.string(I.t.htioQo),
+                    label: S.intl.string(S.t.sMkYE8),
+                    description: S.intl.string(S.t.htioQo),
                     value: e.safetyAlertsChannelId,
-                    options: m,
+                    options: p,
                     onChange: (e) => {
-                        O.Z.updateGuild({ safetyAlertsChannelId: e });
+                        C.Z.updateGuild({ safetyAlertsChannelId: e });
                     },
                     isDisabled: !t,
                 }),
-                (0, r.jsx)(g.izJ, {}),
-                (0, r.jsx)(g.VcW, {
+                (0, r.jsx)(m.izJ, {}),
+                (0, r.jsx)(m.VcW, {
                     layout: "horizontal-responsive",
-                    label: I.intl.string(I.t.pO60fy),
-                    description: I.intl.string(I.t.aIR73T),
+                    label: S.intl.string(S.t.pO60fy),
+                    description: S.intl.string(S.t.aIR73T),
                     value: e.preferredLocale,
                     options: c,
                     onChange: (e) => {
-                        O.Z.updateGuild({ preferredLocale: e });
+                        C.Z.updateGuild({ preferredLocale: e });
                     },
                     isDisabled: !t,
                 }),
-                (0, r.jsx)(g.izJ, {}),
+                (0, r.jsx)(m.izJ, {}),
                 (() => {
                     var n;
                     if (null != e)
-                        return (0, r.jsx)(g.Kx8, {
-                            label: I.intl.string(I.t["RSfm+i"]),
-                            description: I.intl.string(I.t["/B6PRw"]),
+                        return (0, r.jsx)(m.Kx8, {
+                            label: S.intl.string(S.t["RSfm+i"]),
+                            description: S.intl.string(S.t["/B6PRw"]),
                             value: null != (n = e.description) ? n : "",
-                            placeholder: I.intl.string(I.t.Nvfowl),
-                            onChange: b,
+                            placeholder: S.intl.string(S.t.Nvfowl),
+                            onChange: x,
                             maxLength: l.Us,
                             disabled: !t,
                         });
                 })(),
-                (0, r.jsx)(g.izJ, {}),
-                (0, r.jsx)(g.gNt, {
-                    label: I.intl.string(I.t.c1BmbC),
-                    description: I.intl.string(I.t.aQzVF8),
+                (0, r.jsx)(m.izJ, {}),
+                (0, r.jsx)(m.gNt, {
+                    label: S.intl.string(S.t.c1BmbC),
+                    description: S.intl.string(S.t.aQzVF8),
                     layout: "horizontal",
-                    children: (0, r.jsx)(d.u, {
-                        text: n ? null : I.intl.string(I.t["pjG+T3"]),
-                        "aria-label": n ? void 0 : I.intl.string(I.t["pjG+T3"]),
-                        children: (0, r.jsx)(g.Button, {
+                    children: (0, r.jsx)(u.u, {
+                        text: n ? null : S.intl.string(S.t["pjG+T3"]),
+                        "aria-label": n ? void 0 : S.intl.string(S.t["pjG+T3"]),
+                        children: (0, r.jsx)(m.Button, {
                             variant: "critical-primary",
                             size: "sm",
-                            text: I.intl.string(I.t.c1BmbC),
+                            text: S.intl.string(S.t.c1BmbC),
                             onClick: () => {
-                                e.features.has(E.GuildFeatures.DISCOVERABLE) &&
-                                e.features.has(E.GuildFeatures.PARTNERED)
-                                    ? (0, g.h7j)((e) =>
-                                          (0, r.jsx)(
-                                              g.ConfirmModal,
-                                              w(P({}, e), {
-                                                  header: I.intl.string(I.t.iBnVHc),
-                                                  confirmText: I.intl.string(I.t["cY+Oob"]),
-                                                  cancelText: I.intl.string(I.t.oEAioF),
-                                                  onConfirm: f,
-                                                  children: (0, r.jsx)(g.Text, {
-                                                      variant: "text-sm/normal",
-                                                      children: I.intl.string(I.t["P+Sh8V"]),
-                                                  }),
-                                              }),
-                                          ),
-                                      )
-                                    : e.features.has(E.GuildFeatures.DISCOVERABLE)
-                                      ? (0, g.h7j)((e) =>
-                                            (0, r.jsx)(
-                                                g.ConfirmModal,
-                                                w(P({}, e), {
-                                                    header: I.intl.string(I.t.iBnVHc),
-                                                    confirmText: I.intl.string(I.t["cY+Oob"]),
-                                                    cancelText: I.intl.string(I.t.oEAioF),
-                                                    onConfirm: f,
-                                                    children: (0, r.jsx)(g.Text, {
-                                                        variant: "text-sm/normal",
-                                                        children: I.intl.string(I.t["eMx/uZ"]),
-                                                    }),
-                                                }),
-                                            ),
-                                        )
-                                      : e.features.has(E.GuildFeatures.PARTNERED)
-                                        ? (0, g.h7j)((e) =>
-                                              (0, r.jsx)(
-                                                  g.ConfirmModal,
-                                                  w(P({}, e), {
-                                                      header: I.intl.string(I.t.iBnVHc),
-                                                      confirmText: I.intl.string(I.t["cY+Oob"]),
-                                                      cancelText: I.intl.string(I.t.oEAioF),
-                                                      onConfirm: f,
-                                                      children: (0, r.jsx)(g.Text, {
-                                                          variant: "text-sm/normal",
-                                                          children: I.intl.string(I.t.l1wLeX),
-                                                      }),
-                                                  }),
-                                              ),
-                                          )
-                                        : f();
+                                e.features.has(I.GuildFeatures.DISCOVERABLE) &&
+                                e.features.has(I.GuildFeatures.PARTNERED)
+                                    ? (0, d.Z)({
+                                          title: S.intl.string(S.t.iBnVHc),
+                                          subtitle: S.intl.string(S.t["P+Sh8V"]),
+                                          confirmText: S.intl.string(S.t["cY+Oob"]),
+                                          cancelText: S.intl.string(S.t.oEAioF),
+                                          onConfirm: h,
+                                      })
+                                    : e.features.has(I.GuildFeatures.DISCOVERABLE)
+                                      ? (0, d.Z)({
+                                            title: S.intl.string(S.t.iBnVHc),
+                                            subtitle: S.intl.string(S.t["eMx/uZ"]),
+                                            confirmText: S.intl.string(S.t["cY+Oob"]),
+                                            cancelText: S.intl.string(S.t.oEAioF),
+                                            onConfirm: h,
+                                        })
+                                      : e.features.has(I.GuildFeatures.PARTNERED)
+                                        ? (0, d.Z)({
+                                              title: S.intl.string(S.t.iBnVHc),
+                                              subtitle: S.intl.string(S.t.l1wLeX),
+                                              confirmText: S.intl.string(S.t["cY+Oob"]),
+                                              cancelText: S.intl.string(S.t.oEAioF),
+                                              onConfirm: h,
+                                          })
+                                        : h();
                             },
                             disabled: !n,
                         }),
@@ -425,11 +359,11 @@ let Z = "dismissedCommunityFeaturesUpsell",
             ],
         });
     },
-    L = () => {
-        let e = (0, a.e7)([C.Z], () => C.Z.getGuild());
+    A = () => {
+        let e = (0, a.e7)([y.Z], () => y.Z.getGuild());
         return null == e
             ? null
-            : e.features.has(E.GuildFeatures.COMMUNITY)
-              ? (0, r.jsx)(A, {})
-              : (0, r.jsx)(y.Z, { guild: e });
+            : e.features.has(I.GuildFeatures.COMMUNITY)
+              ? (0, r.jsx)(D, {})
+              : (0, r.jsx)(N.Z, { guild: e });
     };

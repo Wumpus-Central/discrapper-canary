@@ -1,75 +1,54 @@
-r.d(t, { default: () => s });
+r.d(e, { default: () => u });
 var n = r(54381);
 r(473749);
-var o = r(755721),
-    c = r(481060),
-    i = r(63063),
-    l = r(937615),
-    a = r(981631),
-    p = r(388032);
-let s = (e) => {
-    var t, r;
-    let { modalProps: s, onConfirm: u, onCancel: b, newInvoice: f } = e,
-        O = {
-            newCurrencyAndPrice: (0, l.T4)(f.total, f.currency),
-            helpCenterLink: i.Z.getArticleURL(a.BhN.LOCALIZED_PRICING),
+var i = r(793030),
+    c = r(63063),
+    o = r(937615),
+    l = r(981631),
+    a = r(388032);
+let u = (t) => {
+    let { modalProps: e, onConfirm: r, onCancel: u, newInvoice: f } = t,
+        p = {
+            newCurrencyAndPrice: (0, o.T4)(f.total, f.currency),
+            helpCenterLink: c.Z.getArticleURL(l.BhN.LOCALIZED_PRICING),
         };
     return (0, n.jsx)(
-        c.ConfirmModal,
-        ((t = (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var r = null != arguments[t] ? arguments[t] : {},
+        i.ConfirmModal,
+        (function (t) {
+            for (var e = 1; e < arguments.length; e++) {
+                var r = null != arguments[e] ? arguments[e] : {},
                     n = Object.keys(r);
                 "function" == typeof Object.getOwnPropertySymbols &&
                     (n = n.concat(
-                        Object.getOwnPropertySymbols(r).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                        Object.getOwnPropertySymbols(r).filter(function (t) {
+                            return Object.getOwnPropertyDescriptor(r, t).enumerable;
                         }),
                     )),
-                    n.forEach(function (t) {
+                    n.forEach(function (e) {
                         var n;
-                        (n = r[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
+                        (n = r[e]),
+                            e in t
+                                ? Object.defineProperty(t, e, {
                                       value: n,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0,
                                   })
-                                : (e[t] = n);
+                                : (t[e] = n);
                     });
             }
-            return e;
+            return t;
         })(
             {
-                header: p.intl.string(p.t.eZFTbu),
-                confirmText: p.intl.string(p.t.p89ACt),
-                cancelText: p.intl.string(p.t.gm1Vej),
-                onConfirm: u,
-                onCancel: b,
-                confirmButtonColor: o.zx.Colors.BRAND,
+                title: a.intl.string(a.t.eZFTbu),
+                subtitle: a.intl.format(a.t.oZBduD, p),
+                variant: "primary",
+                confirmText: a.intl.string(a.t.p89ACt),
+                cancelText: a.intl.string(a.t.gm1Vej),
+                onConfirm: r,
+                onCancel: u,
             },
-            s,
-        )),
-        (r = r =
-            {
-                children: (0, n.jsx)(c.Text, {
-                    variant: "text-md/normal",
-                    children: p.intl.format(p.t.oZBduD, O),
-                }),
-            }),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : (function (e, t) {
-                  var r = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
-                      r.push.apply(r, n);
-                  }
-                  return r;
-              })(Object(r)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
-              }),
-        t),
+            e,
+        ),
     );
 };

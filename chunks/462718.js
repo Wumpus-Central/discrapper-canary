@@ -1,77 +1,22 @@
-n.d(e, { Z: () => d });
-var i = n(54381),
-    l = n(657707),
-    s = n(481060),
-    r = n(893776),
-    u = n(509613),
-    a = n(313789),
-    o = n(342386),
-    c = n(388032);
-let d = (0, u.m7)(a.n.LOGOUT_SIDEBAR_ITEM, {
-    useTitle: () => c.intl.string(c.t["2jxGer"]),
-    icon: l.PBZ,
+n.d(e, { Z: () => c });
+var i = n(657707),
+    l = n(248514),
+    s = n(893776),
+    r = n(509613),
+    u = n(313789),
+    a = n(342386),
+    o = n(388032);
+let c = (0, r.m7)(u.n.LOGOUT_SIDEBAR_ITEM, {
+    useTitle: () => o.intl.string(o.t["2jxGer"]),
+    icon: i.PBZ,
     onClick: () => {
-        (0, s.h7j)((t) => {
-            var e, n;
-            return (0, i.jsx)(
-                s.ConfirmModal,
-                ((e = (function (t) {
-                    for (var e = 1; e < arguments.length; e++) {
-                        var n = null != arguments[e] ? arguments[e] : {},
-                            i = Object.keys(n);
-                        "function" == typeof Object.getOwnPropertySymbols &&
-                            (i = i.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (t) {
-                                    return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                                }),
-                            )),
-                            i.forEach(function (e) {
-                                var i;
-                                (i = n[e]),
-                                    e in t
-                                        ? Object.defineProperty(t, e, {
-                                              value: i,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0,
-                                          })
-                                        : (t[e] = i);
-                            });
-                    }
-                    return t;
-                })(
-                    {
-                        header: c.intl.string(c.t["2jxGer"]),
-                        confirmText: c.intl.string(c.t["2jxGer"]),
-                        cancelText: c.intl.string(c.t["ETE/oC"]),
-                        onCancel: t.onClose,
-                        onConfirm: () => {
-                            (0, o.default)(), r.Z.logout("settings");
-                        },
-                    },
-                    t,
-                )),
-                (n = n =
-                    {
-                        children: (0, i.jsx)(s.Text, {
-                            variant: "text-md/normal",
-                            children: c.intl.string(c.t.SUnWBB),
-                        }),
-                    }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-                    : (function (t, e) {
-                          var n = Object.keys(t);
-                          if (Object.getOwnPropertySymbols) {
-                              var i = Object.getOwnPropertySymbols(t);
-                              n.push.apply(n, i);
-                          }
-                          return n;
-                      })(Object(n)).forEach(function (t) {
-                          Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
-                      }),
-                e),
-            );
+        (0, l.Z)({
+            title: o.intl.string(o.t["2jxGer"]),
+            subtitle: o.intl.string(o.t.SUnWBB),
+            confirmText: o.intl.string(o.t["2jxGer"]),
+            onConfirm: () => {
+                (0, a.default)(), s.Z.logout("settings");
+            },
         });
     },
     buildLayout: () => [],

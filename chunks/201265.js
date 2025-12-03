@@ -1,9 +1,9 @@
-n.d(t, { s: () => u });
-var r = n(54381);
-n(473749);
-var i = n(402453),
-    a = n(775086);
-function o(e, t, n) {
+n.d(t, { ConfirmModal: () => d }), n(388685);
+var r = n(54381),
+    i = n(473749),
+    a = n(402453),
+    o = n(775086);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,7 +16,7 @@ function o(e, t, n) {
         e
     );
 }
-function s(e) {
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -27,16 +27,16 @@ function s(e) {
                 }),
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                s(e, t, n[t]);
             });
     }
     return e;
 }
-function l(e, t) {
+function c(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = c(e, t);
+        i = u(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -44,7 +44,7 @@ function l(e, t) {
     }
     return i;
 }
-function c(e, t) {
+function u(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -53,38 +53,55 @@ function c(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function u(e) {
-    var { confirmText: t, cancelText: n, onConfirm: o, onCancel: c, variant: u = "primary" } = e,
-        d = l(e, ["confirmText", "cancelText", "onConfirm", "onCancel", "variant"]);
-    let { i18n: f } = (0, i.ZF)(),
-        p = f.CANCEL;
-    return (0, r.jsx)(
-        a.Modal,
-        s(
-            {
-                actions: [
-                    {
-                        text: null != n ? n : p,
-                        variant: "secondary",
-                        onClick: () => {
-                            null == c || c(), d.onClose();
-                        },
-                    },
-                    {
-                        text: t,
-                        variant: "critical" === u ? "critical-primary" : "primary",
-                        onClick: async () => {
-                            try {
-                                await (null == o ? void 0 : o()), d.onClose();
-                            } catch (e) {
-                                throw e;
-                            }
-                        },
-                    },
-                ],
-                role: "alertdialog",
+function d(e) {
+    var { confirmText: t, cancelText: n, onConfirm: s, onCancel: u, onCloseCallback: d, variant: f = "critical" } = e,
+        p = c(e, ["confirmText", "cancelText", "onConfirm", "onCancel", "onCloseCallback", "variant"]);
+    let { i18n: _ } = (0, a.ZF)(),
+        m = _.CANCEL,
+        [h, g] = i.useState(!1),
+        E = i.useRef(d);
+    return (
+        i.useLayoutEffect(() => {
+            E.current = d;
+        }),
+        i.useLayoutEffect(
+            () => () => {
+                var e;
+                null == (e = E.current) || e.call(E);
             },
-            d,
+            [],
         ),
+        (0, r.jsx)(
+            o.Modal,
+            l(
+                {
+                    actions: [
+                        {
+                            text: null != n ? n : m,
+                            variant: "secondary",
+                            onClick: () => {
+                                null == u || u(), p.onClose();
+                            },
+                        },
+                        {
+                            text: t,
+                            variant: "primary" === f ? "primary" : "critical-primary",
+                            onClick: async () => {
+                                g(!0);
+                                try {
+                                    await (null == s ? void 0 : s()), p.onClose();
+                                } catch (e) {
+                                    throw (g(!1), e);
+                                }
+                            },
+                            disabled: h,
+                            loading: h,
+                        },
+                    ],
+                    role: "alertdialog",
+                },
+                p,
+            ),
+        )
     );
 }

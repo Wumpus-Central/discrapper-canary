@@ -1,232 +1,184 @@
-n.d(t, { Z: () => w }), n(35282), n(388685), n(539854);
+n.d(t, { Z: () => I }), n(35282), n(388685), n(539854);
 var i = n(54381),
     r = n(473749),
     l = n(120356),
     a = n.n(l),
     o = n(544891),
     s = n(846519),
-    c = n(481060),
-    d = n(668781),
-    u = n(139387),
-    p = n(308063),
-    m = n(600164),
-    b = n(208567),
-    g = n(598077),
-    f = n(259580),
-    h = n(768581),
-    x = n(572004),
-    j = n(709054),
+    c = n(248514),
+    d = n(481060),
+    u = n(668781),
+    p = n(139387),
+    m = n(308063),
+    b = n(600164),
+    g = n(208567),
+    f = n(598077),
+    h = n(259580),
+    x = n(768581),
+    j = n(572004),
+    v = n(709054),
     O = n(51144),
-    v = n(486199),
-    y = n(981631),
-    _ = n(388032),
-    C = n(632256);
-function N(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
-        "function" == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                }),
-            )),
-            i.forEach(function (t) {
-                var i;
-                (i = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: i,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0,
-                          })
-                        : (e[t] = i);
-            });
-    }
-    return e;
-}
+    y = n(486199),
+    _ = n(981631),
+    C = n(388032),
+    N = n(632256);
 function S(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, i);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function P(e, t) {
     return null != t && /^data:/.test(t)
         ? t
-        : (0, h.ov)({
+        : (0, x.ov)({
               id: e.id,
               avatar: t,
-              discriminator: y.fo$,
+              discriminator: _.fo$,
           });
 }
-function w(e) {
+function I(e) {
     let {
             id: t,
             webhook: n,
             editedWebhook: l,
-            channelOptions: h,
-            isExpanded: w,
+            channelOptions: x,
+            isExpanded: I,
             isNew: E,
-            errors: I,
-            onToggleExpand: T,
+            errors: w,
+            onToggleExpand: P,
         } = e,
-        [Z, k] = r.useState(!1),
-        [A] = r.useState(new s.V7());
-    r.useEffect(() => () => A.stop(), [A]);
-    let D = r.useMemo(() => P(n, n.avatar), [n]),
-        R = r.useCallback(() => {
-            let e = "".concat((0, o.K0)(!1)).concat(y.ANM.WEBHOOK_INTEGRATION(n.id, n.token));
-            (0, x.JG)(e);
+        [T, Z] = r.useState(!1),
+        [k] = r.useState(new s.V7());
+    r.useEffect(() => () => k.stop(), [k]);
+    let A = r.useMemo(() => S(n, n.avatar), [n]),
+        D = r.useCallback(() => {
+            let e = "".concat((0, o.K0)(!1)).concat(_.ANM.WEBHOOK_INTEGRATION(n.id, n.token));
+            (0, j.JG)(e);
         }, [n]),
-        L = r.useCallback(() => {
-            (0, c.h7j)((e) =>
-                (0, i.jsx)(
-                    c.ConfirmModal,
-                    S(N({}, e), {
-                        header: _.intl.formatToPlainString(_.t.QVFjHh, { name: n.name }),
-                        confirmText: _.intl.string(_.t["W+K1Fs"]),
-                        cancelText: _.intl.string(_.t.xNhj0O),
-                        onConfirm: () => {
-                            p.Z.delete(n.guild_id, n.id).catch((e) => {
-                                let { status: t } = e;
-                                429 === t
-                                    ? d.Z.show({
-                                          title: _.intl.string(_.t.N5riYn),
-                                          body: _.intl.string(_.t.eAxcCc),
-                                      })
-                                    : d.Z.show({
-                                          title: _.intl.string(_.t.N5riYn),
-                                          body: _.intl.string(_.t["/4TwKf"]),
-                                      });
-                            });
-                        },
-                        children: (0, i.jsx)(c.Text, {
-                            variant: "text-md/normal",
-                            children: _.intl.format(_.t["rIWe+5"], { name: n.name }),
-                        }),
-                    }),
-                ),
-            );
+        R = r.useCallback(() => {
+            (0, c.Z)({
+                title: C.intl.formatToPlainString(C.t.QVFjHh, { name: n.name }),
+                subtitle: C.intl.format(C.t["rIWe+5"], { name: n.name }),
+                confirmText: C.intl.string(C.t["W+K1Fs"]),
+                cancelText: C.intl.string(C.t.xNhj0O),
+                onConfirm: () => {
+                    m.Z.delete(n.guild_id, n.id).catch((e) => {
+                        let { status: t } = e;
+                        429 === t
+                            ? u.Z.show({
+                                  title: C.intl.string(C.t.N5riYn),
+                                  body: C.intl.string(C.t.eAxcCc),
+                              })
+                            : u.Z.show({
+                                  title: C.intl.string(C.t.N5riYn),
+                                  body: C.intl.string(C.t["/4TwKf"]),
+                              });
+                    });
+                },
+            });
         }, [n.guild_id, n.id, n.name]),
-        M = [];
+        L = [];
     null != n.user
-        ? M.push({
-              icon: c.T39,
-              text: _.intl.formatToPlainString(_.t["7EcUbr"], {
+        ? L.push({
+              icon: d.T39,
+              text: C.intl.formatToPlainString(C.t["7EcUbr"], {
                   user: ((e) => {
                       if (null == e) return null;
-                      let t = new g.Z(e);
+                      let t = new f.Z(e);
                       return O.ZP.getUserTag(t);
                   })(n.user),
-                  timestamp: j.default.extractTimestamp(n.id),
+                  timestamp: v.default.extractTimestamp(n.id),
               }),
           })
-        : M.push({
-              icon: c.T39,
-              text: _.intl.formatToPlainString(_.t["7mv59O"], { timestamp: j.default.extractTimestamp(n.id) }),
+        : L.push({
+              icon: d.T39,
+              text: C.intl.formatToPlainString(C.t["7mv59O"], { timestamp: v.default.extractTimestamp(n.id) }),
           });
-    let U = null;
+    let M = null;
     return (
-        w &&
+        I &&
             null != l &&
-            (U = (0, i.jsxs)("div", {
-                className: C.body,
+            (M = (0, i.jsxs)("div", {
+                className: N.body,
                 children: [
-                    (0, i.jsx)(c.izJ, { className: C.topDivider }),
-                    (0, i.jsxs)(m.Z, {
+                    (0, i.jsx)(d.izJ, { className: N.topDivider }),
+                    (0, i.jsxs)(b.Z, {
                         children: [
-                            (0, i.jsx)(m.Z.Child, {
+                            (0, i.jsx)(b.Z.Child, {
                                 shrink: 1,
                                 grow: 0,
-                                children: (0, i.jsxs)(m.Z, {
-                                    className: C.avatarWrapper,
-                                    direction: m.Z.Direction.VERTICAL,
+                                children: (0, i.jsxs)(b.Z, {
+                                    className: N.avatarWrapper,
+                                    direction: b.Z.Direction.VERTICAL,
                                     children: [
-                                        (0, i.jsx)(b.Z, {
+                                        (0, i.jsx)(g.Z, {
                                             image: l.avatar,
                                             onChange: (e) => {
-                                                u.Z.updateWebhook({ avatar: e });
+                                                p.Z.updateWebhook({ avatar: e });
                                             },
-                                            makeURL: (e) => P(n, e),
-                                            imageClassName: C.avatarUploaderInner,
+                                            makeURL: (e) => S(n, e),
+                                            imageClassName: N.avatarUploaderInner,
                                             showIcon: !0,
                                         }),
-                                        null != I.avatar && "" !== I.avatar
-                                            ? (0, i.jsx)(c.Text, {
+                                        null != w.avatar && "" !== w.avatar
+                                            ? (0, i.jsx)(d.Text, {
                                                   color: "text-feedback-critical",
                                                   variant: "text-sm/normal",
-                                                  children: I.avatar,
+                                                  children: w.avatar,
                                               })
                                             : null,
                                     ],
                                 }),
                             }),
-                            (0, i.jsxs)(m.Z, {
-                                direction: m.Z.Direction.VERTICAL,
+                            (0, i.jsxs)(b.Z, {
+                                direction: b.Z.Direction.VERTICAL,
                                 children: [
-                                    (0, i.jsxs)(m.Z, {
+                                    (0, i.jsxs)(b.Z, {
                                         children: [
-                                            (0, i.jsx)(m.Z.Child, {
+                                            (0, i.jsx)(b.Z.Child, {
                                                 wrap: !0,
                                                 basis: "50%",
-                                                children: (0, i.jsx)(c.oil, {
-                                                    label: _.intl.string(_.t.ukdxuo),
+                                                children: (0, i.jsx)(d.oil, {
+                                                    label: C.intl.string(C.t.ukdxuo),
                                                     value: l.name,
                                                     onChange: (e) => {
-                                                        u.Z.updateWebhook({ name: e });
+                                                        p.Z.updateWebhook({ name: e });
                                                     },
                                                     maxLength: 80,
-                                                    error: I.name,
+                                                    error: w.name,
                                                 }),
                                             }),
-                                            (0, i.jsx)(m.Z.Child, {
+                                            (0, i.jsx)(b.Z.Child, {
                                                 basis: "50%",
                                                 children: (0, i.jsx)("div", {
-                                                    children: (0, i.jsx)(c.VcW, {
-                                                        label: _.intl.string(_.t.GK18KJ),
+                                                    children: (0, i.jsx)(d.VcW, {
+                                                        label: C.intl.string(C.t.GK18KJ),
                                                         value: l.channel_id,
-                                                        options: h,
+                                                        options: x,
                                                         onChange: (e) => {
-                                                            u.Z.updateWebhook({ channelId: e });
+                                                            p.Z.updateWebhook({ channelId: e });
                                                         },
-                                                        placeholder: _.intl.string(_.t.r2ptsz),
+                                                        placeholder: C.intl.string(C.t.r2ptsz),
                                                     }),
                                                 }),
                                             }),
                                         ],
                                     }),
-                                    (0, i.jsx)(c.izJ, { className: C.bottomDivider }),
-                                    (0, i.jsxs)(m.Z, {
+                                    (0, i.jsx)(d.izJ, { className: N.bottomDivider }),
+                                    (0, i.jsxs)(b.Z, {
                                         children: [
-                                            (0, i.jsx)(c.aML, {
+                                            (0, i.jsx)(d.aML, {
                                                 "data-migration-pending": !0,
-                                                text: _.intl.string(_.t.wwdb3g),
-                                                forceOpen: Z,
-                                                color: c.r6K.GREEN,
+                                                text: C.intl.string(C.t.wwdb3g),
+                                                forceOpen: T,
+                                                color: d.r6K.GREEN,
                                                 disableTooltipPointerEvents: !0,
                                                 children: (e) => {
-                                                    var {
-                                                            onClick: t,
-                                                            onMouseEnter: r,
-                                                            onMouseLeave: l,
-                                                            onBlur: a,
-                                                            onFocus: o,
+                                                    var t,
+                                                        r,
+                                                        {
+                                                            onClick: l,
+                                                            onMouseEnter: a,
+                                                            onMouseLeave: o,
+                                                            onBlur: s,
+                                                            onFocus: c,
                                                         } = e,
-                                                        s = (function (e, t) {
+                                                        u = (function (e, t) {
                                                             if (null == e) return {};
                                                             var n,
                                                                 i,
@@ -261,39 +213,87 @@ function w(e) {
                                                         ]);
                                                     return (0, i.jsx)("div", {
                                                         "data-button-hoisted-classname-wrapper": !0,
-                                                        className: C.copyButton,
+                                                        className: N.copyButton,
                                                         children: (0, i.jsx)(
-                                                            c.Button,
-                                                            S(
-                                                                N(
-                                                                    {
-                                                                        variant: "secondary",
-                                                                        size: "sm",
-                                                                        text: _.intl.string(_.t.Ae9rUW),
-                                                                    },
-                                                                    s,
-                                                                ),
+                                                            d.Button,
+                                                            ((t = (function (e) {
+                                                                for (var t = 1; t < arguments.length; t++) {
+                                                                    var n = null != arguments[t] ? arguments[t] : {},
+                                                                        i = Object.keys(n);
+                                                                    "function" == typeof Object.getOwnPropertySymbols &&
+                                                                        (i = i.concat(
+                                                                            Object.getOwnPropertySymbols(n).filter(
+                                                                                function (e) {
+                                                                                    return Object.getOwnPropertyDescriptor(
+                                                                                        n,
+                                                                                        e,
+                                                                                    ).enumerable;
+                                                                                },
+                                                                            ),
+                                                                        )),
+                                                                        i.forEach(function (t) {
+                                                                            var i;
+                                                                            (i = n[t]),
+                                                                                t in e
+                                                                                    ? Object.defineProperty(e, t, {
+                                                                                          value: i,
+                                                                                          enumerable: !0,
+                                                                                          configurable: !0,
+                                                                                          writable: !0,
+                                                                                      })
+                                                                                    : (e[t] = i);
+                                                                        });
+                                                                }
+                                                                return e;
+                                                            })(
+                                                                {
+                                                                    variant: "secondary",
+                                                                    size: "sm",
+                                                                    text: C.intl.string(C.t.Ae9rUW),
+                                                                },
+                                                                u,
+                                                            )),
+                                                            (r = r =
                                                                 {
                                                                     "aria-label": "",
                                                                     onClick: () => {
-                                                                        null == t || t(),
-                                                                            k(!0),
-                                                                            c.uvj.announce(_.intl.string(_.t.wwdb3g)),
-                                                                            A.start(1000, () => k(!1)),
-                                                                            R();
+                                                                        null == l || l(),
+                                                                            Z(!0),
+                                                                            d.uvj.announce(C.intl.string(C.t.wwdb3g)),
+                                                                            k.start(1000, () => Z(!1)),
+                                                                            D();
                                                                     },
                                                                     disabled: null == n.token || "" === n.token,
-                                                                },
-                                                            ),
+                                                                }),
+                                                            Object.getOwnPropertyDescriptors
+                                                                ? Object.defineProperties(
+                                                                      t,
+                                                                      Object.getOwnPropertyDescriptors(r),
+                                                                  )
+                                                                : (function (e, t) {
+                                                                      var n = Object.keys(e);
+                                                                      if (Object.getOwnPropertySymbols) {
+                                                                          var i = Object.getOwnPropertySymbols(e);
+                                                                          n.push.apply(n, i);
+                                                                      }
+                                                                      return n;
+                                                                  })(Object(r)).forEach(function (e) {
+                                                                      Object.defineProperty(
+                                                                          t,
+                                                                          e,
+                                                                          Object.getOwnPropertyDescriptor(r, e),
+                                                                      );
+                                                                  }),
+                                                            t),
                                                         ),
                                                     });
                                                 },
                                             }),
-                                            (0, i.jsx)(c.Button, {
+                                            (0, i.jsx)(d.Button, {
                                                 variant: "critical-secondary",
                                                 size: "sm",
-                                                text: _.intl.string(_.t.jVrUnC),
-                                                onClick: L,
+                                                text: C.intl.string(C.t.jVrUnC),
+                                                onClick: R,
                                             }),
                                         ],
                                     }),
@@ -303,34 +303,34 @@ function w(e) {
                     }),
                 ],
             })),
-        (0, i.jsx)(c.Zbd, {
+        (0, i.jsx)(d.Zbd, {
             editable: !0,
             id: t,
-            className: a()(C.card, E ? C.pulse : null),
-            children: (0, i.jsxs)(m.Z, {
-                direction: m.Z.Direction.VERTICAL,
+            className: a()(N.card, E ? N.pulse : null),
+            children: (0, i.jsxs)(b.Z, {
+                direction: b.Z.Direction.VERTICAL,
                 children: [
-                    (0, i.jsx)(c.P3F, {
-                        className: C.header,
-                        "aria-expanded": w,
-                        onClick: T,
-                        children: (0, i.jsxs)(m.Z, {
-                            align: m.Z.Align.CENTER,
+                    (0, i.jsx)(d.P3F, {
+                        className: N.header,
+                        "aria-expanded": I,
+                        onClick: P,
+                        children: (0, i.jsxs)(b.Z, {
+                            align: b.Z.Align.CENTER,
                             children: [
-                                (0, i.jsx)(v.Z, {
+                                (0, i.jsx)(y.Z, {
                                     name: n.name,
-                                    imageSrc: D,
-                                    details: M,
+                                    imageSrc: A,
+                                    details: L,
                                 }),
-                                (0, i.jsx)(f.Z, {
-                                    className: C.expandIcon,
-                                    expanded: w,
+                                (0, i.jsx)(h.Z, {
+                                    className: N.expandIcon,
+                                    expanded: I,
                                     "aria-hidden": !0,
                                 }),
                             ],
                         }),
                     }),
-                    U,
+                    M,
                 ],
             }),
         })
