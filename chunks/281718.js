@@ -1,13 +1,5 @@
-e.exports = {
-    modal: "modal_f0dcaf",
-    header: "header_f0dcaf",
-    headerIconContainer: "headerIconContainer_f0dcaf",
-    acronym: "acronym_f0dcaf",
+t.exports = {
     ping: "ping_f0dcaf",
-    redPing: "redPing_f0dcaf ping_f0dcaf",
-    greenPing: "greenPing_f0dcaf ping_f0dcaf",
-    headerText: "headerText_f0dcaf",
-    updatedForm: "updatedForm_f0dcaf",
     checklistRow: "checklistRow_f0dcaf",
     checklistIcon: "checklistIcon_f0dcaf",
     icon: "icon_f0dcaf",
@@ -22,5 +14,4 @@ e.exports = {
     bullet: "bullet_f0dcaf",
     bulletWarning: "bulletWarning_f0dcaf bullet_f0dcaf",
     bulletPositive: "bulletPositive_f0dcaf bullet_f0dcaf",
-    footer: "footer_f0dcaf",
 };
