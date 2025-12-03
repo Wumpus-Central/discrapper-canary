@@ -80,7 +80,8 @@ let u = [
         let [e, t] = i.useState(15),
             [n, d] = i.useState(8),
             [f, p] = i.useState("xl"),
-            _ = i.useMemo(
+            [_, m] = i.useState(!0),
+            h = i.useMemo(
                 () =>
                     [...Array(e)].map((e, t) =>
                         (0, r.jsx)(
@@ -100,35 +101,39 @@ let u = [
                 (0, r.jsx)(s.Z, {
                     gap: n,
                     edgeFade: f,
-                    children: _,
+                    hideActionsWhenDisabled: _,
+                    children: h,
                 }),
                 (0, r.jsx)(l.dv, {}),
-                (0, r.jsx)(l.BZ, {
-                    children: (0, r.jsx)(o.oil, {
-                        type: "number",
-                        min: 0,
-                        value: e.toString(),
-                        onChange: (e) => {
-                            t((0, a.clamp)(+e, 0, 100));
-                        },
-                        label: "Children Count",
-                    }),
-                }),
-                (0, r.jsx)(l.BZ, {
-                    children: (0, r.jsx)(o.q4e, {
-                        value: n,
-                        options: u,
-                        onChange: (e) => d(e),
-                        label: "Children Gap",
-                    }),
-                }),
-                (0, r.jsx)(l.BZ, {
-                    children: (0, r.jsx)(o.q4e, {
-                        value: f,
-                        options: u,
-                        onChange: (e) => p(e),
-                        label: "Edge Fade Space",
-                    }),
+                (0, r.jsxs)(l.BZ, {
+                    children: [
+                        (0, r.jsx)(o.Checkbox, {
+                            checked: _,
+                            onChange: () => m(!_),
+                            label: "Hide Actions When Disabled",
+                        }),
+                        (0, r.jsx)(o.oil, {
+                            type: "number",
+                            min: 0,
+                            value: e.toString(),
+                            onChange: (e) => {
+                                t((0, a.clamp)(+e, 0, 100));
+                            },
+                            label: "Children Count",
+                        }),
+                        (0, r.jsx)(o.q4e, {
+                            value: n,
+                            options: u,
+                            onChange: (e) => d(e),
+                            label: "Children Gap",
+                        }),
+                        (0, r.jsx)(o.q4e, {
+                            value: f,
+                            options: u,
+                            onChange: (e) => p(e),
+                            label: "Edge Fade Space",
+                        }),
+                    ],
                 }),
             ],
         });
