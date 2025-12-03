@@ -1,8 +1,8 @@
 n.d(t, {
-    HY: () => v,
+    HY: () => P,
     nm: () => Z,
-    pU: () => P,
-    y: () => O,
+    pU: () => O,
+    y: () => j,
 }),
     n(388685),
     n(361932),
@@ -11,16 +11,16 @@ var l = n(473749),
     r = n(106351),
     i = n(442837),
     s = n(911969),
-    u = n(622822),
-    a = n(933557),
+    a = n(622822),
+    u = n(933557),
     c = n(987509),
     o = n(926491),
     d = n(378233),
     f = n(131704),
     h = n(592125),
     m = n(496675),
-    p = n(699516),
-    g = n(594174),
+    g = n(699516),
+    p = n(594174),
     b = n(408433),
     y = n(823379),
     E = n(981631),
@@ -39,14 +39,20 @@ function Z(e) {
         [n],
     );
 }
-function v(e, t, n, l) {
+function v(e) {
+    return e.components.length > 0 && e.components[0].type === s.re.CHECKPOINT_CARD;
+}
+function P(e, t, n, l) {
     let r = n instanceof f.Sf;
     if (null != l) {
         let e = l(n);
         if (null != e) return e;
     }
-    if (null != e && null != t) {
-        if ((0, u.Y3)(t) && !(r && (0, u.Y3)(n))) return { label: S.intl.string(S.t.KgPx1D) };
+    if (null == e) return;
+    let i = v(e),
+        s = e.messageSnapshots.length > 0 && v(e.messageSnapshots[0].message);
+    if (null != t || i) {
+        if ((0, a.Y3)(t) && !(r && (0, a.Y3)(n))) return { label: S.intl.string(S.t.KgPx1D) };
         if (r && (0, f.Km)(n.type)) {
             if (
                 (e.attachments.length > 0 || e.messageSnapshots.some((e) => e.message.attachments.length > 0)) &&
@@ -57,7 +63,7 @@ function v(e, t, n, l) {
                 ((e.embeds.length > 0 || e.messageSnapshots.some((e) => e.message.embeds.length > 0)) &&
                     !(0, b.eC)(n, m.Z) &&
                     !(0, b.En)(e)) ||
-                (e.components.length > 0 && e.components[0].type === s.re.CHECKPOINT_CARD && !(0, b.eC)(n, m.Z))
+                ((i || s) && !(0, b.eC)(n, m.Z))
             )
                 return { label: S.intl.string(S.t.Wr4RIX) };
             let t = [
@@ -87,13 +93,13 @@ function v(e, t, n, l) {
         }
     }
 }
-function P(e, t) {
+function O(e, t) {
     return (
         !!(null != e.rateLimitPerUser && e.rateLimitPerUser > 0) &&
         !(t.can(E.Plq.MANAGE_CHANNELS, e) || t.can(E.Plq.MANAGE_MESSAGES, e))
     );
 }
-function O(e) {
+function j(e) {
     let t = (0, i.Wu)(
         [h.Z, m.Z],
         () =>
@@ -103,8 +109,8 @@ function O(e) {
                     return "channel" === t ? h.Z.getChannel(n) : null;
                 })
                 .filter(y.lm)
-                .filter((e) => P(e, m.Z)),
+                .filter((e) => O(e, m.Z)),
         [e],
     );
-    return (0, i.Wu)([g.default, p.Z], () => t.map((e) => (0, a.F6)(e, g.default, p.Z, !0)), [t]);
+    return (0, i.Wu)([p.default, g.Z], () => t.map((e) => (0, u.F6)(e, p.default, g.Z, !0)), [t]);
 }

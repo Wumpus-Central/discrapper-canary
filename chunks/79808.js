@@ -24,8 +24,8 @@ function y(e) {
             onSearchChange: h,
         } = e,
         x = f.Z.useField("currentPanelKey"),
-        { directory: S } = (0, d.Z)(n, ""),
-        { node: P, directory: C } = (0, d.Z)(n, v),
+        { directory: S } = (0, d.ZP)(n, ""),
+        { node: P, directory: C } = (0, d.ZP)(n, v),
         _ = null != y && (null == (t = C.entry(y)) ? void 0 : t.parentPanelKey) != null ? y : p,
         w = o.useMemo(() => S.get(null != x ? x : _), [S, x, _]),
         { navigateWithValidation: k } = (0, s.Cu)();

@@ -1,12 +1,18 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, {
+    ZA: () => g,
+    ZP: () => E,
+    go: () => h,
+}),
+    n(388685);
 var r = n(473749),
-    i = n(991346),
-    a = n(839469),
-    o = n(509613),
-    s = n(904849),
-    l = n(87432),
-    c = n(178520);
-function u(e, t, n) {
+    i = n(972959),
+    a = n(991346),
+    o = n(839469),
+    s = n(509613),
+    l = n(904849),
+    c = n(87432),
+    u = n(178520);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +25,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,12 +36,12 @@ function d(e) {
                 }),
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function f(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,52 +53,63 @@ function f(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function _(e, t) {
-    let n = r.useMemo(() => (0, o.Ql)(e), [e]),
-        u = (0, i.Pt)(),
-        { searchResults: f } = (0, a.F)(),
-        _ = new Set();
-    for (let e of f) {
+let m = (0, i.H)(() => ({ enabled: !1 }));
+function h(e) {
+    m.setState({ enabled: e });
+}
+function g() {
+    return m.useField("enabled");
+}
+function E(e, t) {
+    let n = r.useMemo(() => (0, s.Ql)(e), [e]),
+        i = g(),
+        d = (0, a.Pt)(),
+        { searchResults: p } = (0, o.F)(),
+        m = new Set();
+    for (let e of p) {
         let t = e;
         for (; null != t; ) {
             var h;
-            let e = null == (h = u[t]) ? void 0 : h.parent;
+            let e = null == (h = d[t]) ? void 0 : h.parent;
             if (null == e) {
-                _.add(t);
+                m.add(t);
                 break;
             }
             t = e;
         }
     }
-    let g = (0, c.Z)(n, null != t ? t : "", _),
-        [E, b] = r.useState(g),
-        y = m(E, g);
+    let E = (0, u.Z)(n, null != t ? t : "", {
+            legacyMatches: m,
+            bypassPredicates: i,
+        }),
+        [y, O] = r.useState(E),
+        v = b(y, E);
     return (
         r.useEffect(() => {
-            y && b(g);
-        }, [y, g]),
+            v && O(E);
+        }, [v, E]),
         r.useMemo(() => {
             var e;
-            let t = new s.Z();
+            let t = new l.Z();
             return {
-                node: null != (e = (0, l.Z)(n, E, t)) ? e : p(d({}, n), { layout: [] }),
+                node: null != (e = (0, c.Z)(n, y, t)) ? e : _(f({}, n), { layout: [] }),
                 directory: t,
             };
-        }, [E, n])
+        }, [y, n])
     );
 }
-function m(e, t) {
+function b(e, t) {
     if (e.size !== t.size) return !0;
     for (let n of e) if (!t.has(n)) return !0;
     return !1;

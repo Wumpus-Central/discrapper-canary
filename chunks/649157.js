@@ -7,7 +7,7 @@ var i = n(36361),
     s = n(452784),
     l = n(388032);
 function c() {
-    let { node: e } = (0, a.Z)(s.$Y, "");
+    let { node: e } = (0, a.ZP)(s.$Y, "");
     return (0, r.jsx)(o.Z, {
         title: l.intl.string(l.t.KyFVyi),
         children: (0, r.jsx)(i.Z, { node: e }, e.key),

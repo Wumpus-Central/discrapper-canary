@@ -79,10 +79,17 @@ let h = l.createContext(null);
 function x() {
     let [e, t] = l.useState(!1),
         { legacySettingDirectory: n } = (0, d.q)(),
-        { node: s } = (0, r.Z)(o.Z, "");
+        { node: s } = (0, r.ZP)(o.Z, ""),
+        c = (0, r.ZA)();
     return (0, a.jsxs)(i.C3N, {
         label: "Settings Tree",
         children: [
+            (0, a.jsx)(i.rsf, {
+                label: "Bypass Predicates",
+                description: "Forces all migrated settings to be visible.",
+                checked: c,
+                onChange: r.go,
+            }),
             (0, a.jsx)(i.rsf, {
                 checked: e,
                 onChange: (e) => t(e),
