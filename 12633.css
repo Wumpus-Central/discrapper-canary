@@ -84379,6 +84379,8 @@ div.nagbar_d74ef8 {
 }
 
 .panel__64c86 {
+    contain: layout;
+    container-type: inline-size;
     height: var(--disclosure-panel-height);
     overflow: clip
 }
@@ -84388,15 +84390,15 @@ div.nagbar_d74ef8 {
 }
 
 .full-motion .icon__64c86 {
-    transition: transform .3s ease
+    transition: transform .2s ease-out
 }
 
 .icon__64c86 {
-    transform: rotate(0deg)
+    transform: rotateX(0deg)
 }
 
 .iconClosed__64c86 {
-    transform: rotate(180deg)
+    transform: rotateX(180deg)
 }
 
 .notice_c15d44 {
