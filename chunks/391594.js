@@ -114,11 +114,10 @@ let k = (t) => (null != t ? _.intl.format(_.t["4kp0AB"], { itemName: t }) : null
                 isApplying: s,
                 openProfileSettings: A,
                 itemConsumed: g,
-                isRental: I = !1,
             } = t,
-            m = [];
+            I = [];
         if (R.Vt.ORB_PROFILE_BADGE === e.skuId)
-            m.push(
+            I.push(
                 {
                     text: _.intl.string(T.default.yfwZuy),
                     variant: "primary",
@@ -142,7 +141,7 @@ let k = (t) => (null != t ? _.intl.format(_.t["4kp0AB"], { itemName: t }) : null
             );
         else if (R.Vt.FRACTIONAL_PREMIUM === e.skuId)
             g
-                ? m.push(
+                ? I.push(
                       {
                           text: _.intl.string(_.t.cpT0Cq),
                           variant: "secondary",
@@ -156,7 +155,7 @@ let k = (t) => (null != t ? _.intl.format(_.t["4kp0AB"], { itemName: t }) : null
                           },
                       },
                   )
-                : m.push(
+                : I.push(
                       {
                           text: _.intl.string(_.t.cpT0Cq),
                           variant: "secondary",
@@ -172,7 +171,7 @@ let k = (t) => (null != t ? _.intl.format(_.t["4kp0AB"], { itemName: t }) : null
                   );
         else {
             let [t] = e.items;
-            m.push({
+            I.push({
                 text: _.intl.string(_.t["2p2aYz"]),
                 variant: r ? "secondary" : "primary",
                 onClick: () => {
@@ -205,14 +204,13 @@ let k = (t) => (null != t ? _.intl.format(_.t["4kp0AB"], { itemName: t }) : null
         }
         return (
             r &&
-                !I &&
-                m.push({
+                I.push({
                     text: _.intl.string(_.t.MAS7uK),
                     variant: "primary",
                     onClick: l,
                     loading: s,
                 }),
-            m
+            I
         );
     },
     N = (t, e) => {
