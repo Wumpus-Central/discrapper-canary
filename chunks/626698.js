@@ -1,4 +1,4 @@
-n.d(t, { Z: () => G }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -9,124 +9,98 @@ var r = n(54381),
     u = n(481060),
     d = n(782568),
     f = n(607070),
-    p = n(100527),
-    _ = n(1585),
-    m = n(594174),
-    h = n(580130),
-    g = n(63063),
-    E = n(515970),
-    b = n(324060),
-    y = n(5888),
-    O = n(639949),
-    v = n(909397),
-    S = n(198358),
-    I = n(391876),
-    T = n(549542),
-    A = n(935212),
-    C = n(612776),
-    N = n(981631),
-    P = n(140939),
-    R = n(388032),
-    w = n(296953),
-    D = n(550770),
-    x = n(807808);
-let L = 2.8,
-    j = 2,
-    M = 1000,
-    k = 500,
-    U = 1000 + A.t;
-function G(e) {
+    p = n(63063),
+    _ = n(324060),
+    m = n(5888),
+    h = n(639949),
+    g = n(829468),
+    E = n(909397),
+    b = n(198358),
+    y = n(391876),
+    O = n(549542),
+    v = n(935212),
+    S = n(612776),
+    I = n(981631),
+    T = n(140939),
+    A = n(388032),
+    C = n(296953),
+    N = n(550770),
+    P = n(807808);
+let R = 2.8,
+    w = 2,
+    D = 1000,
+    x = 500,
+    L = 1000 + v.t;
+function j(e) {
     let { onNextStep: t } = e,
-        n = (0, c.e7)([y.Z], () => y.Z.getFetchState() === y.p.ERROR || null == y.Z.getCheckpointData().messages),
-        [a, G] = i.useState(!0),
-        Z = i.useRef(null),
-        B = i.useContext(b.Q),
-        F = (0, u.dQu)(B.primaryColor).hex(),
-        V = (0, c.e7)([f.Z], () => f.Z.useReducedMotion),
-        H = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
-        { avatarDecoration: Y } = (0, c.e7)([y.Z], () => y.Z.getCheckpointData()),
-        W = (0, c.Wu)([h.Z], () => {
-            if ((null == Y ? void 0 : Y.skuId) == null) return [];
-            let e = h.Z.getForSku(null == Y ? void 0 : Y.skuId);
-            return null != e ? [...e] : [];
-        })[0],
-        K = null != W,
-        z = i.useRef(!1);
-    i.useEffect(() => {
-        null != W &&
-            null != H &&
-            z.current &&
-            n &&
-            (0, _.ps)({
-                analyticsLocations: [p.Z.CHECKPOINT],
-                initialSelectedDecoration: Y,
-            });
-    }, [W, H, Y, n]);
-    let q = i.useCallback((e) => {
-            e.currentTarget.currentTime >= L && G(!1);
+        n = (0, c.e7)([m.Z], () => m.Z.getFetchState() === m.p.ERROR || null == m.Z.getCheckpointData().messages),
+        [a, j] = i.useState(!0),
+        M = i.useRef(null),
+        k = i.useContext(_.Q),
+        U = (0, u.dQu)(k.primaryColor).hex(),
+        G = (0, c.e7)([f.Z], () => f.Z.useReducedMotion),
+        Z = i.useCallback((e) => {
+            e.currentTarget.currentTime >= R && j(!1);
         }, []),
-        Q = (0, u.q_F)({
+        B = (0, u.q_F)({
             from: { opacity: 0 },
             to: { opacity: 1 },
             pause: a,
-            delay: U,
+            delay: L,
         }),
-        X = (0, u.q_F)({
+        F = (0, u.q_F)({
             from: { opacity: 0 },
             to: { opacity: 1 },
             pause: a,
         });
     i.useEffect(() => {
-        null != Z.current && (Z.current.playbackRate = j);
+        null != M.current && (M.current.playbackRate = w);
     }, []),
         i.useEffect(() => {
-            if (V) {
-                null != Z.current && (Z.current.currentTime = 0.2);
+            if (G) {
+                null != M.current && (M.current.currentTime = 0.2);
                 let e = setTimeout(() => {
-                    G(!1);
-                }, M);
+                    j(!1);
+                }, D);
                 return () => clearTimeout(e);
             }
-        }, [V]);
-    let J = () => {
-            (0, d.Z)(g.Z.getArticleURL(N.BhN.CHECKPOINT));
-        },
-        $ = () => {
-            K || ((z.current = !0), (0, E._Z)());
-        };
+        }, [G]);
+    let V = () => {
+        (0, d.Z)(p.Z.getArticleURL(I.BhN.CHECKPOINT));
+    };
     return n
-        ? (0, r.jsxs)(S.Z, {
-              className: w.unavailableContainer,
+        ? (0, r.jsxs)(b.Z, {
+              className: C.unavailableContainer,
               children: [
                   (0, r.jsx)(l.Z, {
-                      autoPlay: !V,
+                      autoPlay: !G,
                       muted: !0,
                       playsInline: !0,
                       loop: !0,
-                      className: w.unavailableLogo,
+                      className: C.unavailableLogo,
                       children: (0, r.jsx)("source", {
-                          src: x.Z,
+                          src: P.Z,
                           type: "video/webm",
                       }),
                   }),
-                  (0, r.jsx)(I.Z, {
+                  (0, r.jsx)(y.Z, {
                       variant: "display-lg",
-                      className: w.display,
-                      children: R.intl.string(P.default.kimsIr),
+                      className: C.display,
+                      children: A.intl.string(T.default.kimsIr),
                   }),
-                  (0, r.jsx)(I.Z, {
+                  (0, r.jsx)(y.Z, {
                       variant: "heading-xl/medium",
-                      className: w.subtitle,
-                      children: R.intl.format(P.default.GNHD4i, {
+                      className: C.subtitle,
+                      children: A.intl.format(T.default.GNHD4i, {
                           learnMoreHook: (e, t) =>
                               (0, r.jsx)(
                                   u.P3F,
                                   {
-                                      onClick: J,
-                                      className: w.learnMore,
-                                      children: (0, r.jsx)(I.Z, {
+                                      onClick: V,
+                                      className: C.learnMore,
+                                      children: (0, r.jsx)(y.Z, {
                                           variant: "heading-xl/medium",
-                                          className: w.link,
+                                          className: C.link,
                                           children: e,
                                       }),
                                   },
@@ -134,40 +108,34 @@ function G(e) {
                               ),
                       }),
                   }),
-                  (0, r.jsx)(I.Z, {
+                  (0, r.jsx)(y.Z, {
                       variant: "text-lg/medium",
-                      children: R.intl.string(P.default["xLI+Hj"]),
+                      children: A.intl.string(T.default["xLI+Hj"]),
                   }),
-                  (0, r.jsx)(O.Z, {
-                      disabled: K,
-                      onClick: $,
-                      className: w.claimButton,
-                      children: (0, r.jsx)(I.Z, {
-                          variant: "eyebrow",
-                          className: w.buttonCTA,
-                          children: K ? R.intl.string(R.t.lIsIFo) : R.intl.string(P.default.mDxM7m),
-                      }),
+                  (0, r.jsx)(g.Z, {
+                      className: C.claimButton,
+                      textSize: 20,
                   }),
               ],
           })
-        : (0, r.jsxs)(S.Z, {
-              className: w.content,
+        : (0, r.jsxs)(b.Z, {
+              className: C.content,
               noPadding: !0,
               children: [
                   !a &&
-                      (0, r.jsx)(I.Z, {
+                      (0, r.jsx)(y.Z, {
                           variant: "text-lg/medium",
-                          className: w.disclaimer,
-                          children: R.intl.format(P.default["1jPMeG"], {
+                          className: C.disclaimer,
+                          children: A.intl.format(T.default["1jPMeG"], {
                               learnMoreHook: (e, t) =>
                                   (0, r.jsx)(
                                       u.P3F,
                                       {
-                                          onClick: J,
-                                          className: w.learnMore,
-                                          children: (0, r.jsx)(I.Z, {
+                                          onClick: V,
+                                          className: C.learnMore,
+                                          children: (0, r.jsx)(y.Z, {
                                               variant: "text-lg/medium",
-                                              className: w.link,
+                                              className: C.link,
                                               children: e,
                                           }),
                                       },
@@ -176,36 +144,36 @@ function G(e) {
                           }),
                       }),
                   !a &&
-                      (0, r.jsx)(I.Z, {
+                      (0, r.jsx)(y.Z, {
                           variant: "text-md/medium",
-                          className: w.attribution,
-                          children: R.intl.format(P.default.g476ZL, { name: "Exyl" }),
+                          className: C.attribution,
+                          children: A.intl.format(T.default.g476ZL, { name: "Exyl" }),
                       }),
                   a
                       ? null
                       : (0, r.jsx)(s.animated.div, {
-                            style: X,
+                            style: F,
                             children: (0, r.jsx)(l.Z, {
-                                autoPlay: !V,
+                                autoPlay: !G,
                                 muted: !0,
                                 playsInline: !0,
                                 loop: !0,
-                                className: w.logoVideo,
+                                className: C.logoVideo,
                                 children: (0, r.jsx)("source", {
-                                    src: x.Z,
+                                    src: P.Z,
                                     type: "video/webm",
                                 }),
                             }),
                         }),
                   (0, r.jsx)(l.Z, {
-                      ref: Z,
-                      autoPlay: !V,
+                      ref: M,
+                      autoPlay: !G,
                       muted: !0,
                       playsInline: !0,
-                      className: o()(w.introVideo, { [w.introVideoHidden]: !a }),
-                      onTimeUpdate: a ? q : void 0,
+                      className: o()(C.introVideo, { [C.introVideoHidden]: !a }),
+                      onTimeUpdate: a ? Z : void 0,
                       children: (0, r.jsx)("source", {
-                          src: D.Z,
+                          src: N.Z,
                           type: "video/webm",
                       }),
                   }),
@@ -213,19 +181,19 @@ function G(e) {
                       ? null
                       : (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(A.Z, {
+                                (0, r.jsx)(v.Z, {
                                     variant: "display-lg",
-                                    className: w.title,
-                                    textClassName: w.text,
-                                    text: R.intl.string(P.default["CdU/PF"]),
-                                    delay: k,
+                                    className: C.title,
+                                    textClassName: C.text,
+                                    text: A.intl.string(T.default["CdU/PF"]),
+                                    delay: x,
                                 }),
-                                (0, r.jsx)(A.Z, {
+                                (0, r.jsx)(v.Z, {
                                     variant: "text-lg/medium",
-                                    className: w.subtitleAnimated,
-                                    textClassName: w.text,
-                                    text: R.intl.string(P.default["M/LvW0"]),
-                                    delay: k + A.t,
+                                    className: C.subtitleAnimated,
+                                    textClassName: C.text,
+                                    text: A.intl.string(T.default["M/LvW0"]),
+                                    delay: x + v.t,
                                 }),
                             ],
                         }),
@@ -234,33 +202,33 @@ function G(e) {
                       : (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsxs)(s.animated.div, {
-                                    style: Q,
+                                    style: B,
                                     children: [
-                                        (0, r.jsx)(v.Z, {
-                                            className: w.knickKnacks,
-                                            slide: C.yD.WELCOME,
+                                        (0, r.jsx)(E.Z, {
+                                            className: C.knickKnacks,
+                                            slide: S.yD.WELCOME,
                                         }),
-                                        (0, r.jsxs)(O.Z, {
-                                            contentClassName: w.startButtonContent,
+                                        (0, r.jsxs)(h.Z, {
+                                            contentClassName: C.startButtonContent,
                                             onClick: t,
-                                            "aria-label": R.intl.string(R.t.I0v0Qv),
+                                            "aria-label": A.intl.string(A.t.I0v0Qv),
                                             muteSound: !0,
                                             children: [
                                                 (0, r.jsx)(u.o1U, {
-                                                    colorClass: w.iconColor,
-                                                    color: F,
+                                                    colorClass: C.iconColor,
+                                                    color: U,
                                                     size: "md",
                                                 }),
-                                                R.intl.string(R.t.I0v0Qv),
+                                                A.intl.string(A.t.I0v0Qv),
                                             ],
                                         }),
                                     ],
                                 }),
                                 (0, r.jsx)(s.animated.div, {
-                                    style: X,
-                                    children: (0, r.jsx)(T.Z, {
-                                        className: w.ratingIcon,
-                                        style: { color: F },
+                                    style: F,
+                                    children: (0, r.jsx)(O.Z, {
+                                        className: C.ratingIcon,
+                                        style: { color: U },
                                     }),
                                 }),
                             ],

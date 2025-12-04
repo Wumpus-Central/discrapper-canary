@@ -16,7 +16,6 @@ e.exports = {
     learnMore: "learnMore_cfb73c",
     link: "link_cfb73c",
     claimButton: "claimButton_cfb73c",
-    buttonCTA: "buttonCTA_cfb73c",
     unavailableLogo: "unavailableLogo_cfb73c",
     disclaimer: "disclaimer_cfb73c",
     attribution: "attribution_cfb73c",
