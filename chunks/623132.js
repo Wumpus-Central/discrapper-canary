@@ -276,122 +276,120 @@ function Z(e) {
     let {
             user: t,
             guildId: n,
-            channelId: l,
-            game: o,
-            widgetType: s,
-            disableInteraction: u = !1,
-            index: d,
-            onRemoveGame: g,
-            coverRef: p,
-            className: P,
+            channelId: i,
+            game: l,
+            widgetType: o,
+            disableInteraction: s = !1,
+            index: u,
+            onRemoveGame: d,
+            coverRef: g,
+            className: p,
         } = e,
-        { applicationId: D, comment: k, tags: Z } = o,
-        { coverImageUrl: R, gameName: G, isLoading: L } = (0, _.Z)(D),
-        M = {
+        { applicationId: P, comment: D, tags: k } = l,
+        { coverImageUrl: Z, gameName: R, isLoading: G } = (0, _.Z)(P),
+        L = {
             variant: "heading-sm/medium",
             color: "text-default",
         },
-        B = f.default.getCurrentUser(),
-        F = (null == B ? void 0 : B.id) === t.id,
-        U = 1 === (0, m.Gv)(s),
-        W = !u && F,
-        H = W && (0, m.vI)(s),
-        z = W && !U,
-        { registerDragHandleRef: K } = (0, h.C)(),
-        V = i.useRef(null);
-    if (L) return (0, r.jsx)(v.i, {});
-    let q = () =>
+        M = f.default.getCurrentUser(),
+        B = (null == M ? void 0 : M.id) === t.id,
+        F = 1 === (0, m.Gv)(o),
+        U = !s && B,
+        W = U && (0, m.vI)(o),
+        H = U && !F,
+        { registerDragHandleRef: z } = (0, h.C)();
+    if (G) return (0, r.jsx)(v.i, {});
+    let K = () =>
             (0, r.jsx)(y.Z, {
-                coverRef: p,
-                className: null == R || u ? void 0 : I.hoverActiveEffect,
-                imageSrc: R,
-                gameName: G,
-                applicationId: D,
+                coverRef: g,
+                className: null == Z || s ? void 0 : I.hoverActiveEffect,
+                imageSrc: Z,
+                gameName: R,
+                applicationId: P,
                 userId: t.id,
-                disableInteraction: u,
+                disableInteraction: s,
                 hideTooltip: !0,
             }),
-        Y = () =>
+        V = () =>
             (0, r.jsxs)("div", {
-                className: a()(w.card, P),
+                className: a()(w.card, p),
                 children: [
-                    z
+                    H
                         ? (0, r.jsxs)("div", {
-                              ref: V,
                               className: w.dragHandleContainer,
                               children: [
-                                  q(),
+                                  K(),
                                   (0, r.jsx)(b.e_, {
-                                      buttonRef: K(o.applicationId),
+                                      buttonRef: z(l.applicationId),
                                       className: w.dragHandle,
                                   }),
                               ],
                           })
-                        : q(),
+                        : K(),
                     (0, r.jsxs)("div", {
                         className: w.details,
                         children: [
-                            u
-                                ? (0, r.jsx)(c.Heading, E(S({}, M), { children: G }))
+                            s
+                                ? (0, r.jsx)(c.Heading, E(S({}, L), { children: R }))
                                 : (0, r.jsx)(
                                       C,
                                       S(
                                           {
-                                              applicationId: D,
+                                              applicationId: P,
                                               userId: t.id,
-                                              gameName: G,
+                                              gameName: R,
                                           },
-                                          M,
+                                          L,
                                       ),
                                   ),
-                            H
+                            W
                                 ? (0, r.jsx)(A, {
-                                      text: k,
+                                      text: D,
                                       user: t,
                                       guildId: n,
-                                      channelId: l,
-                                      widgetType: s,
-                                      applicationId: D,
+                                      channelId: i,
+                                      widgetType: o,
+                                      applicationId: P,
                                   })
                                 : (0, r.jsx)(N, {
-                                      text: k,
+                                      text: D,
                                       user: t,
                                       guildId: n,
-                                      channelId: l,
+                                      channelId: i,
                                   }),
                             (0, r.jsx)(O.Z, {
-                                tags: Z,
-                                isCurrentUser: F,
-                                widgetType: s,
-                                applicationId: D,
-                                disableInteraction: u,
+                                tags: k,
+                                isCurrentUser: B,
+                                widgetType: o,
+                                applicationId: P,
+                                disableInteraction: s,
                                 className: w.tags,
                             }),
-                            !u &&
-                                (0, r.jsx)(x.Z, {
+                            !s &&
+                                (0, r.jsx)(x.F, {
                                     className: w.socialProof,
-                                    applicationId: D,
+                                    applicationId: P,
                                     guildId: n,
-                                    channelId: l,
+                                    channelId: i,
                                 }),
                         ],
                     }),
-                    !u &&
-                        F &&
+                    !s &&
+                        B &&
                         (0, r.jsx)(j.Z, {
-                            game: o,
-                            widgetType: s,
+                            game: l,
+                            widgetType: o,
                             className: w.removeGameButton,
-                            onRemove: () => (null == g ? void 0 : g(o.applicationId)),
+                            onRemove: () => (null == d ? void 0 : d(l.applicationId)),
                         }),
                 ],
             });
-    return z
+    return H
         ? (0, r.jsx)(T, {
-              index: null != d ? d : 0,
-              widgetType: s,
-              game: o,
-              children: Y(),
+              index: null != u ? u : 0,
+              widgetType: o,
+              game: l,
+              children: V(),
           })
-        : Y();
+        : V();
 }
