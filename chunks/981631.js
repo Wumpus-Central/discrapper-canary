@@ -5337,6 +5337,7 @@ var np = (function (e) {
             (e.NITRO_PRIVACY_UPSELL_SETTINGS_CLICKED = "nitro_privacy_upsell_settings_clicked"),
             (e.NITRO_WARP_CTA_CLICKED = "nitro_warp_cta_clicked"),
             (e.NITRO_WARP_TOGGLED = "nitro_warp_toggled"),
+            (e.PREMIUM_FEATURE_ERROR = "premium_feature_error"),
             (e.EMOJI_STUDIO_ENDED = "emoji_studio_ended"),
             (e.PASSWORD_RESET_ACTION = "password_reset_action"),
             (e.GUILD_CHANNEL_RESYNC_REQUESTED = "guild_channel_resync_requested"),

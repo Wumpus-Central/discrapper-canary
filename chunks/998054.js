@@ -1,51 +1,61 @@
 n.d(t, {
-    Y: () => l,
-    f: () => u,
+    Y: () => d,
+    f: () => p,
 }),
-    n(415506);
+    n(415506),
+    n(49124);
 var r = n(818710),
-    i = n(960048),
-    a = n(998502),
-    o = n(5900),
-    s = n(60995);
-let l = async () => {
-        if (!(0, r.nI)()) return o._n.UNKNOWN;
+    i = n(626135),
+    a = n(960048),
+    o = n(998502),
+    s = n(323183),
+    l = n(5900),
+    c = n(60995),
+    u = n(981631);
+let d = async () => {
+        if (!(0, r.nI)()) return l._n.UNKNOWN;
         try {
-            switch ((await c()).account.type.toLowerCase()) {
+            switch ((await f()).account.type.toLowerCase()) {
                 case "unlimited":
                 case "discord":
-                    return o._n.INSTALLED;
+                    return l._n.INSTALLED;
                 case "team":
-                    return o._n.ZERO_TRUST;
+                    return l._n.ZERO_TRUST;
                 default:
-                    return o._n.EXISTING_INSTALLATION;
+                    return l._n.EXISTING_INSTALLATION;
             }
         } catch (e) {
-            if (e instanceof Error) {
-                if ("Failed to locate warp-cli" === e.message) return o._n.NOT_INSTALLED;
-                i.Z.captureException(e, { tags: { source: "PRIVATE_BROWSING_PERK_INSTALLATION_STATUS" } });
-            }
-            if (e instanceof Object && "code" in e && "MissingRegistration" === e.code) return o._n.WAITING_FOR_TERMS;
-            return o._n.ERROR;
+            if (e instanceof Error && "Failed to locate warp-cli" === e.message) return l._n.NOT_INSTALLED;
+            if (e instanceof Object && "code" in e && "MissingRegistration" === e.code) return l._n.WAITING_FOR_TERMS;
+            return (
+                i.default.track(u.rMx.PREMIUM_FEATURE_ERROR, {
+                    error_message: e instanceof Error ? e.message : JSON.stringify(e),
+                    error_source: s.D.PRIVATE_BROWSING_PERK_INSTALLATION_STATUS,
+                }),
+                a.Z.captureException(e instanceof Error ? e : Error(JSON.stringify(e)), {
+                    tags: { source: s.D.PRIVATE_BROWSING_PERK_INSTALLATION_STATUS },
+                }),
+                l._n.ERROR
+            );
         }
     },
-    c = () =>
+    f = () =>
         new Promise(async (e, t) => {
             try {
                 var n, r, i;
-                let o = await (null === a.ZP ||
-                void 0 === a.ZP ||
-                null == (i = a.ZP.getDiscordUtils) ||
-                null == (r = i.call(a.ZP)) ||
+                let a = await (null === o.ZP ||
+                void 0 === o.ZP ||
+                null == (i = o.ZP.getDiscordUtils) ||
+                null == (r = i.call(o.ZP)) ||
                 null == (n = r.runWarpCommand)
                     ? void 0
                     : n.call(r, "registration", "show"));
-                if (null != o.error) return void t(o);
-                e(o);
+                if (null != a.error) return void t(a);
+                e(a);
             } catch (e) {
                 t(e);
             }
         }),
-    u = async () => {
-        await (0, s._)(!0), await a.ZP.getDiscordUtils().installWarp();
+    p = async () => {
+        await (0, c._)(!0), await o.ZP.getDiscordUtils().installWarp();
     };
