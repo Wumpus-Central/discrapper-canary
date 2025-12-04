@@ -58,50 +58,60 @@ function d(e) {
         p = c(e, ["confirmText", "cancelText", "onConfirm", "onCancel", "onCloseCallback", "variant"]);
     let { i18n: _ } = (0, a.ZF)(),
         m = _.CANCEL,
-        [h, g] = i.useState(!1),
-        E = i.useRef(d);
-    return (
-        i.useLayoutEffect(() => {
-            E.current = d;
-        }),
+        h = _.INLINE_NOTICE_GENERIC_ERROR,
+        [g, E] = i.useState(!1),
+        b = i.useRef(d);
+    i.useLayoutEffect(() => {
+        b.current = d;
+    }),
         i.useLayoutEffect(
             () => () => {
                 var e;
-                null == (e = E.current) || e.call(E);
+                null == (e = b.current) || e.call(b);
             },
             [],
+        );
+    let [y, O] = i.useState(void 0),
+        v = (e) => {
+            O(e);
+        };
+    return (0, r.jsx)(
+        o.Modal,
+        l(
+            {
+                actions: [
+                    {
+                        text: null != n ? n : m,
+                        variant: "secondary",
+                        onClick: () => {
+                            null == u || u(), p.onClose();
+                        },
+                    },
+                    {
+                        text: t,
+                        variant: "primary" === f ? "primary" : "critical-primary",
+                        onClick: async () => {
+                            O(void 0), E(!0);
+                            try {
+                                await (null == s ? void 0 : s(v)), p.onClose();
+                            } catch (e) {
+                                throw (E(!1), O((e) => (null != e ? e : h)), e);
+                            }
+                        },
+                        disabled: g,
+                        loading: g,
+                    },
+                ],
+                role: "alertdialog",
+                notice:
+                    null != y
+                        ? {
+                              message: y,
+                              type: "critical",
+                          }
+                        : void 0,
+            },
+            p,
         ),
-        (0, r.jsx)(
-            o.Modal,
-            l(
-                {
-                    actions: [
-                        {
-                            text: null != n ? n : m,
-                            variant: "secondary",
-                            onClick: () => {
-                                null == u || u(), p.onClose();
-                            },
-                        },
-                        {
-                            text: t,
-                            variant: "primary" === f ? "primary" : "critical-primary",
-                            onClick: async () => {
-                                g(!0);
-                                try {
-                                    await (null == s ? void 0 : s()), p.onClose();
-                                } catch (e) {
-                                    throw (g(!1), e);
-                                }
-                            },
-                            disabled: h,
-                            loading: h,
-                        },
-                    ],
-                    role: "alertdialog",
-                },
-                p,
-            ),
-        )
     );
 }

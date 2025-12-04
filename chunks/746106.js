@@ -69,6 +69,7 @@ function R(e, t, n, r, o) {
                     DATE_INPUT_OPEN_CALENDAR_LABEL: P.intl.string(N.default.I8kUqR),
                     CALENDAR_PREVIOUS_MONTH_LABEL: P.intl.string(N.default.raS6yf),
                     CALENDAR_NEXT_MONTH_LABEL: P.intl.string(N.default["/cp93l"]),
+                    INLINE_NOTICE_GENERIC_ERROR: P.intl.string(P.t["rTU7/z"]),
                 },
                 locale: o,
                 theme: e,
@@ -141,8 +142,8 @@ function w(e) {
         K = (0, h.CL)("RootThemeContextProvider"),
         z = (0, h.VM)("RootThemeContextProvider"),
         q = (0, g.U)("RootThemeContextProvider"),
-        X = (0, E.A)("RootThemeContextProvider"),
-        Q = (0, _.On)({ isPopoutWindow: o }),
+        Q = (0, E.A)("RootThemeContextProvider"),
+        X = (0, _.On)({ isPopoutWindow: o }),
         J = R(
             b,
             L,
@@ -153,10 +154,10 @@ function w(e) {
                     K && e.push("refresh-fast-follow-guild-bg"),
                     z && e.push("refresh-fast-follow-distinct-borders"),
                     q && e.push("mana-text-inputs"),
-                    X && e.push("mana-toggle-inputs"),
+                    Q && e.push("mana-toggle-inputs"),
                     e
                 );
-            }, [W, K, z, q, X]),
+            }, [W, K, z, q, Q]),
             N,
             p,
         );
@@ -185,7 +186,7 @@ function w(e) {
                 hardwareAccelerationEnabled: c,
                 highContrastMode: F && B,
                 isPopoutWindow: o,
-                rootClassName: s()(Q, {
+                rootClassName: s()(X, {
                     "confetti-mode": Z,
                     "refresh-fast-follow-avatars": W,
                     "refresh-fast-follow-guild-bg": K,

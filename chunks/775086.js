@@ -1,12 +1,13 @@
-n.d(t, { Modal: () => m });
+n.d(t, { Modal: () => h });
 var r = n(54381);
 n(473749);
 var i = n(987153),
     a = n(144771),
     o = n(166935),
     s = n(383074),
-    l = n(575118);
-function c(e, t, n) {
+    l = n(575118),
+    c = n(880521);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +20,7 @@ function c(e, t, n) {
         e
     );
 }
-function u(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,12 +31,12 @@ function u(e) {
                 }),
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                u(e, t, n[t]);
             });
     }
     return e;
 }
-function d(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,22 +48,22 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function p(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -70,7 +71,7 @@ function p(e, t) {
     }
     return i;
 }
-function _(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -79,20 +80,21 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function m(e) {
+function h(e) {
     var {
             size: t,
             title: n,
-            subtitle: c,
-            input: d,
-            preview: _,
-            actions: m,
-            actionBarInput: h,
-            actionBarInputLayout: g = "default",
-            listProps: E,
-            children: b,
+            subtitle: u,
+            input: f,
+            preview: m,
+            actions: h,
+            actionBarInput: g,
+            actionBarInputLayout: E = "default",
+            listProps: b,
+            notice: y,
+            children: O,
         } = e,
-        y = p(e, [
+        v = _(e, [
             "size",
             "title",
             "subtitle",
@@ -102,31 +104,37 @@ function m(e) {
             "actionBarInput",
             "actionBarInputLayout",
             "listProps",
+            "notice",
             "children",
         ]);
-    let O = null != t ? t : null != d || (0, o.G)(b) || null != E ? "md" : "sm";
+    let S = null != t ? t : null != f || (0, o.G)(O) || null != b ? "md" : "sm";
     return (0, r.jsxs)(
         i.I,
-        f(u({}, y), {
-            size: O,
+        p(d({}, v), {
+            size: S,
             children: [
                 (0, r.jsx)(l.x, {
                     title: n,
-                    subtitle: c,
+                    subtitle: u,
+                }),
+                (0, r.jsx)(c.Y, {
+                    message: null == y ? void 0 : y.message,
+                    type: null == y ? void 0 : y.type,
                 }),
                 (0, r.jsx)(o.f, {
-                    controls: d,
-                    listProps: E,
-                    children: b,
+                    controls: f,
+                    listProps: b,
+                    children: O,
                 }),
-                (0, r.jsx)(s.m, { children: _ }),
+                (0, r.jsx)(s.m, { children: m }),
                 (0, r.jsx)(a.G, {
-                    leading: h,
-                    leadingLayout: g,
-                    actions: m,
-                    actionsFullWidth: null == h,
+                    leading: g,
+                    leadingLayout: E,
+                    actions: h,
+                    actionsFullWidth: null == g,
                 }),
             ],
         }),
     );
 }
+n(161953);

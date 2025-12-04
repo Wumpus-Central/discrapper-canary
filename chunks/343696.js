@@ -1,5 +1,7 @@
 e.exports = {
     container: "container__35859",
+    hidden: "hidden__35859",
+    innerContainer: "innerContainer__35859",
     icon: "icon__35859",
     iconDiv: "iconDiv__35859",
     text: "text__35859",

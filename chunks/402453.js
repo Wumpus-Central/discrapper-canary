@@ -47,6 +47,7 @@ let o = {
             DATE_INPUT_OPEN_CALENDAR_LABEL: "Open calendar",
             CALENDAR_PREVIOUS_MONTH_LABEL: "Previous month",
             CALENDAR_NEXT_MONTH_LABEL: "Next month",
+            INLINE_NOTICE_GENERIC_ERROR: "Something went wrong. Please try again later.",
         },
         theme: "light",
         locale: "en-US",

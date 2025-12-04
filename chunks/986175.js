@@ -1,4 +1,4 @@
-n.d(t, { I: () => S }), n(415506);
+n.d(t, { I: () => S }), n(35282), n(539854), n(415506);
 var r = n(54381),
     i = n(473749),
     a = n(164617),
@@ -7,11 +7,10 @@ var r = n(54381),
     l = n(333200),
     c = n(352065),
     u = n(481060),
-    d = n(668781),
-    f = n(248514),
-    p = n(177475),
-    _ = n(691739);
-function m(e, t, n) {
+    d = n(248514),
+    f = n(177475),
+    p = n(691739);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,8 +23,8 @@ function m(e, t, n) {
         e
     );
 }
-function h() {
-    return (h =
+function m() {
+    return (m =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -35,11 +34,11 @@ function h() {
             return e;
         }).apply(this, arguments);
 }
-function g(e) {
+function h(e) {
     if (null == e) throw TypeError("Cannot destructure " + e);
     return e;
 }
-function E(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -50,12 +49,12 @@ function E(e) {
                 }),
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function b(e, t) {
+function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -67,22 +66,22 @@ function b(e, t) {
     }
     return n;
 }
-function y(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : E(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function O(e, t) {
+function y(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = v(e, t);
+        i = O(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -90,7 +89,7 @@ function O(e, t) {
     }
     return i;
 }
-function v(e, t) {
+function O(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -98,6 +97,18 @@ function v(e, t) {
         a = Object.keys(e);
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
+}
+function v(e) {
+    let t,
+        n = [],
+        i = 0,
+        a = /\*\*(.+?)\*\*/g,
+        o = 0;
+    for (; null !== (t = a.exec(e)); )
+        t.index > i && n.push(e.substring(i, t.index)),
+            n.push((0, r.jsx)("strong", { children: t[1] }, o++)),
+            (i = a.lastIndex);
+    return i < e.length && n.push(e.substring(i)), n.length > 0 ? n : e;
 }
 let S = {
     title: "Modal",
@@ -109,7 +120,7 @@ let S = {
             component: function (e) {
                 var t,
                     { showPreview: n, showInput: i, subtitleIcon: a } = e,
-                    s = O(e, ["showPreview", "showInput", "subtitleIcon"]);
+                    s = y(e, ["showPreview", "showInput", "subtitleIcon"]);
                 let c = a
                     ? {
                           text: null != (t = s.subtitle) ? t : "Default subtitle",
@@ -132,7 +143,7 @@ let S = {
                                     (e) =>
                                         (0, r.jsx)(
                                             o.Modal,
-                                            y(E({}, e, s), {
+                                            b(g({}, e, s), {
                                                 title: s.title,
                                                 subtitle: c,
                                                 input: i
@@ -290,11 +301,12 @@ let S = {
             },
         },
         {
-            name: "ConfirmModal",
+            name: "ConfirmModal [Alpha]",
             id: "confirm-modal",
             component: function (e) {
-                var { cancelText: t, confirmDelay: n, confirmError: i } = e,
-                    a = O(e, ["cancelText", "confirmDelay", "confirmError"]);
+                var { cancelText: t, confirmDelay: n, confirmError: a, subtitle: o, formatSubtitle: s } = e,
+                    l = y(e, ["cancelText", "confirmDelay", "confirmError", "subtitle", "formatSubtitle"]);
+                let c = i.useMemo(() => (s ? v(o) : o), [o, s]);
                 return (0, r.jsxs)(u.Kqy, {
                     gap: 16,
                     align: "center",
@@ -307,20 +319,20 @@ let S = {
                             variant: "primary",
                             text: "Open Confirm Modal",
                             onClick: () =>
-                                (0, f.Z)(
-                                    y(E({}, a), {
+                                (0, d.Z)(
+                                    b(g({}, l), {
+                                        subtitle: c,
                                         cancelText: "" === t ? void 0 : t,
-                                        onConfirm: async () => {
+                                        onConfirm: async (e) => {
                                             try {
-                                                if ((await new Promise((e) => setTimeout(e, 1000 * n)), i))
+                                                if ((await new Promise((e) => setTimeout(e, 1000 * n)), a))
                                                     throw Error("Confirm error");
-                                            } catch (e) {
+                                            } catch (t) {
                                                 throw (
-                                                    (d.Z.show({
-                                                        title: "Confirm Error",
-                                                        body: "There was an error confirming the action",
-                                                    }),
-                                                    e)
+                                                    (e(
+                                                        "Something went wrong reticulating splines. Please try again later.",
+                                                    ),
+                                                    t)
                                                 );
                                             }
                                         },
@@ -334,17 +346,22 @@ let S = {
                 title: {
                     label: "Title",
                     type: "text",
-                    defaultValue: "Confirm Action",
+                    defaultValue: "Reticulate splines",
                 },
                 subtitle: {
                     label: "Subtitle",
                     type: "text",
-                    defaultValue: "Are you sure you want to do the thing?",
+                    defaultValue: "Are you sure you want to permanently reticulate **Spliney McSplineface**?",
+                },
+                formatSubtitle: {
+                    label: "Format Subtitle (**bold**)",
+                    type: "boolean",
+                    defaultValue: !0,
                 },
                 confirmText: {
                     label: "Confirm Text",
                     type: "text",
-                    defaultValue: "I sure do",
+                    defaultValue: "Reticulate",
                 },
                 cancelText: {
                     label: "Cancel Text",
@@ -354,7 +371,7 @@ let S = {
                 variant: {
                     label: "Variant",
                     type: "select",
-                    defaultValue: "primary",
+                    defaultValue: "critical",
                     options: [
                         {
                             label: "Primary",
@@ -385,8 +402,8 @@ let S = {
             component: function (e) {
                 var t,
                     { graphic: l, subtitleIcon: c } = e,
-                    d = O(e, ["graphic", "subtitleIcon"]);
-                let f = c
+                    d = y(e, ["graphic", "subtitleIcon"]);
+                let _ = c
                         ? {
                               text: null != (t = d.subtitle) ? t : "Default subtitle",
                               leadingIcon: o.VL1,
@@ -397,7 +414,7 @@ let S = {
                             0 === l
                                 ? {
                                       type: "image",
-                                      src: p,
+                                      src: f,
                                   }
                                 : 1 === l
                                   ? {
@@ -413,8 +430,8 @@ let S = {
                                     : 3 === l
                                       ? {
                                             type: "video",
-                                            src: _.Z,
-                                            fallbackImageSrc: p,
+                                            src: p.Z,
+                                            fallbackImageSrc: f,
                                             loop: !0,
                                             loopAt: 2.5,
                                         }
@@ -444,9 +461,9 @@ let S = {
                                     (e) =>
                                         (0, r.jsx)(
                                             o.ExpressiveModal,
-                                            y(E({}, e, d), {
+                                            b(g({}, e, d), {
                                                 title: d.title,
-                                                subtitle: f,
+                                                subtitle: _,
                                                 graphic: m,
                                                 actions: [
                                                     {
@@ -573,7 +590,7 @@ let S = {
             id: "dynamic-graphic-modal",
             component: function (e) {
                 var { dynamicText: t } = e,
-                    i = O(e, ["dynamicText"]);
+                    i = y(e, ["dynamicText"]);
                 let a = {
                     type: "dynamic",
                     component: s.DynamicGraphicComponent.DEMO,
@@ -599,7 +616,7 @@ let S = {
                                         return (t) =>
                                             (0, r.jsx)(
                                                 e,
-                                                y(E({}, t, i), {
+                                                b(g({}, t, i), {
                                                     title: i.title,
                                                     subtitle: i.subtitle,
                                                     graphic: a,
@@ -701,7 +718,7 @@ let S = {
             name: "LayerModal",
             id: "layer-modal",
             component: function (e) {
-                var t = h({}, g(e));
+                var t = m({}, h(e));
                 return (0, r.jsxs)(u.Kqy, {
                     gap: 16,
                     align: "center",
@@ -717,7 +734,7 @@ let S = {
                                 (0, u.h7j)((e) =>
                                     (0, r.jsx)(
                                         c.A,
-                                        y(E({}, e, t), {
+                                        b(g({}, e, t), {
                                             children: (0, r.jsx)(u.Kqy, {
                                                 gap: 16,
                                                 children: (0, r.jsx)(u.Text, {

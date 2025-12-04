@@ -10,6 +10,7 @@ var r = {
     "size-xxl": "size-xxl__8a031",
     fullScreenOnMobile: "fullScreenOnMobile__8a031",
     section: "section__8a031",
+    sectionHidden: "sectionHidden__8a031 section__8a031",
     header: "header__8a031",
     headerCentered: "headerCentered__8a031",
     headerLayout: "headerLayout__8a031",
