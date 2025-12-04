@@ -682,6 +682,12 @@ let i = {
         ],
         inlineRequire: () => n(877519).Z,
     },
+    QuestCompletionSurveyManager: {
+        actions: ["LOGOUT"],
+        inlineRequire: () => n(979219).Z,
+        hasStoreChangeListeners: !0,
+        loadAfterConnectionOpen: !0,
+    },
     VoiceChannelGameActivityManager: {
         actions: ["RUNNING_GAMES_CHANGE", "VOICE_CHANNEL_SELECT"],
         inlineRequire: () => n(981668).Z,

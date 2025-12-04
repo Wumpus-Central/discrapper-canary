@@ -1,4 +1,10 @@
-n.d(t, { ZP: () => f }), n(388685), n(35282), n(49124);
+n.d(t, {
+    Ox: () => f,
+    ZP: () => p,
+}),
+    n(388685),
+    n(35282),
+    n(49124);
 var r = n(544891),
     i = n(570140),
     a = n(960048),
@@ -39,7 +45,22 @@ function d(e, t, n) {
         i
     );
 }
-let f = {
+async function f(e) {
+    if (o.E.getConfig({ location: "action creator" }).enableNitroUnsubSurvey)
+        try {
+            var t;
+            let n = await r.tn.post({
+                url: u.ANM.EMBEDDED_SURVEY_ACTION,
+                body: { action_type: e },
+                rejectWithError: !0,
+            });
+            i.Z.dispatch({
+                type: "SURVEY_FETCHED",
+                survey: null == n || null == (t = n.body) ? void 0 : t.survey,
+            });
+        } catch (e) {}
+}
+let p = {
     fetchSurveyDetails: async function (e) {
         try {
             let t = (
@@ -78,19 +99,5 @@ let f = {
             return a.Z.captureException(e), { responseId: "null" };
         }
     },
-    fireSurveyAction: async function (e) {
-        if (o.E.getConfig({ location: "action creator" }).enableNitroUnsubSurvey)
-            try {
-                var t;
-                let n = await r.tn.post({
-                    url: u.ANM.EMBEDDED_SURVEY_ACTION,
-                    body: { action_type: e },
-                    rejectWithError: !0,
-                });
-                i.Z.dispatch({
-                    type: "SURVEY_FETCHED",
-                    survey: null == n || null == (t = n.body) ? void 0 : t.survey,
-                });
-            } catch (e) {}
-    },
+    fireSurveyAction: f,
 };
