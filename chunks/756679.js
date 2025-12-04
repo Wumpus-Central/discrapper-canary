@@ -1,7 +1,12 @@
-n.d(t, { Jv: () => o });
+n.d(t, {
+    Jv: () => a,
+    xY: () => s,
+}),
+    n(388685);
 var r = n(818083),
-    i = n(141537);
-let l = (0, r.B)({
+    i = n(141537),
+    l = n(981631);
+let o = (0, r.B)({
         kind: "user",
         id: "2025-11_invite_friend_members",
         label: "Show Friends in Server on Invite Modal",
@@ -28,4 +33,11 @@ let l = (0, r.B)({
             },
         ],
     }),
-    o = (e) => (0, i.Z6)(l, e);
+    a = (e) => (0, i.Z6)(o, e);
+function s(e) {
+    if (null == e) return !1;
+    let t = e.features;
+    return Array.isArray(t)
+        ? !t.includes(l.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL)
+        : !(t instanceof Set) || !t.has(l.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL);
+}

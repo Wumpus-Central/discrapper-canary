@@ -146,6 +146,7 @@ let w = new Z(o.Z, {
             null != t.guild &&
                 d.default.isAuthenticated() &&
                 m.Z.getFriendCount() > 0 &&
+                (0, O.xY)(t.guild) &&
                 (0, O.Jv)({
                     location: "accept_invite_modal",
                     autoTrackExposure: !0,
