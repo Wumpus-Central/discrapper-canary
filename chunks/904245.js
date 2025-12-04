@@ -46,12 +46,12 @@ var r = n(278074),
     K = n(980463),
     z = n(328908),
     q = n(992970),
-    X = n(576645),
-    Q = n(317951),
+    Q = n(576645),
+    X = n(317951),
     J = n(287941),
     $ = n(643266),
     ee = n(617136),
-    et = n(509212);
+    et = n(862657);
 n(807092);
 var en = n(869765),
     er = n(926491),
@@ -910,7 +910,7 @@ let eV = {
         },
         getSendMessageOptionsForConfettiPotion(e) {
             let { channelId: t, content: n, isGif: r, command: i, uploads: a, confettiPotionEmoji: o } = e;
-            return null != o && (0, X.tv)(n, r, i, a)
+            return null != o && (0, Q.tv)(n, r, i, a)
                 ? {
                       confettiPotionData: {
                           emoji: o,
@@ -1080,12 +1080,13 @@ let eV = {
                     onAttachmentUploadError: et,
                     announcementSendOptions: en,
                     withCheckpoint: ea,
+                    messageIdFromNotificationExperiment: eo,
                 } = n,
-                eo = null != (i = n.flags) ? i : 0,
-                [es, ec] = (0, ei.Z)(E);
-            es && ((E = ec), (eo = (0, a.pj)(eo, eI.iLy.SUPPRESS_NOTIFICATIONS)));
-            let eu = !1,
-                ed = (null == (r = n.messageReference) ? void 0 : r.type) === eI.Uvt.FORWARD;
+                es = null != (i = n.flags) ? i : 0,
+                [ec, eu] = (0, ei.Z)(E);
+            ec && ((E = eu), (es = (0, a.pj)(es, eI.iLy.SUPPRESS_NOTIFICATIONS)));
+            let ed = !1,
+                ef = (null == (r = n.messageReference) ? void 0 : r.type) === eI.Uvt.FORWARD;
             if (
                 "" === E &&
                 null == I &&
@@ -1093,33 +1094,33 @@ let eV = {
                 null == j &&
                 null == k &&
                 null == U &&
-                !ed &&
+                !ef &&
                 (null == z || 0 === z.length) &&
                 !ea &&
                 (null == t.components || 0 === t.components.length)
             )
                 if (null == ee || !(ee.length > 0)) return Promise.resolve();
-                else eu = !0;
-            let ef = null != x ? eI.uaV.REPLY : eI.uaV.DEFAULT,
-                ep = null != (o = n.nonce) ? o : (0, F.r)(),
-                e_ = ep,
-                eE = (0, B.ZP)({
+                else ed = !0;
+            let ep = null != x ? eI.uaV.REPLY : eI.uaV.DEFAULT,
+                e_ = null != (o = n.nonce) ? o : (0, F.r)(),
+                eE = e_,
+                eb = (0, B.ZP)({
                     channelId: e,
                     content: E,
                     tts: S,
-                    type: ef,
+                    type: ep,
                     messageReference: x,
                     allowedMentions: L,
-                    flags: 0 !== eo ? eo : void 0,
-                    nonce: ep,
+                    flags: 0 !== es ? es : void 0,
+                    nonce: e_,
                     poll: (0, W.x9)(j),
                     sharedCustomTheme: k,
                 });
             if (
                 (!1 !== n.eagerDispatch &&
-                    ((0, H.EL)(e, eE.id),
-                    null != N && (eE.sticker_items = N.map((e) => er.Z.getStickerById(e)).filter((e) => null != e)),
-                    eH.receiveMessage(e, eE, !0, n)),
+                    ((0, H.EL)(e, eb.id),
+                    null != N && (eb.sticker_items = N.map((e) => er.Z.getStickerById(e)).filter((e) => null != e)),
+                    eH.receiveMessage(e, eb, !0, n)),
                 !eM && null != b && b.length > 0)
             ) {
                 eM = !0;
@@ -1127,25 +1128,25 @@ let eV = {
                     { errorMessage: n, errorMessageName: r } = eH.validateMessage(b, t, e);
                 eH.sendBotMessage(e, n, r);
             }
-            let eb = {
+            let ey = {
                 type: null != en ? d.$V.SEND_ANNOUNCEMENT : d.$V.SEND,
                 message: {
                     channelId: e,
                     content: E,
-                    nonce: ep,
+                    nonce: e_,
                     tts: S,
                     message_reference: x,
                     allowed_mentions: L,
-                    flags: eo,
+                    flags: es,
                     analyticsLocation: A,
                 },
             };
             if (
-                (null != t.components && (eb.message.components = t.components),
+                (null != t.components && (ey.message.components = t.components),
                 null != en &&
-                    ((eb.message.create_thread = en.createThread),
-                    (eb.message.title = en.threadName),
-                    (eb.message.publish = null != (s = en.publish) && s)),
+                    ((ey.message.create_thread = en.createThread),
+                    (ey.message.title = en.threadName),
+                    (ey.message.publish = null != (s = en.publish) && s)),
                 null != I)
             ) {
                 let e,
@@ -1164,33 +1165,34 @@ let eV = {
                         },
                         { activity: n } = I;
                     null != n.party && null != n.party.id && (t.party_id = n.party.id),
-                        (eb.message.application_id = n.application_id),
-                        (eb.message.activity = t);
+                        (ey.message.application_id = n.application_id),
+                        (ey.message.activity = t);
                 }
             }
             if (
-                (null != j && (eb.message.poll = j),
-                null != k && (eb.message.shared_client_theme = k),
-                null != N && (eb.message.sticker_ids = N),
-                Y.Z.isEnabled() && (eb.message.has_poggermode_enabled = !0),
-                ea && (eb.message.with_checkpoint = !0),
-                null != U && (eb.message.content_inventory_entry = U),
-                null != D && ((eb.message.confetti_potion = (0, X.vY)(D)), D.callback()),
-                null != z && z.length > 0 && (eb.message.attachments = z),
+                (null != j && (ey.message.poll = j),
+                null != k && (ey.message.shared_client_theme = k),
+                null != N && (ey.message.sticker_ids = N),
+                Y.Z.isEnabled() && (ey.message.has_poggermode_enabled = !0),
+                ea && (ey.message.with_checkpoint = !0),
+                null != U && (ey.message.content_inventory_entry = U),
+                null != D && ((ey.message.confetti_potion = (0, Q.vY)(D)), D.callback()),
+                null != z && z.length > 0 && (ey.message.attachments = z),
+                null != eo && (ey.message.message_id_from_notification_experiment = eo),
                 null != ee && ee.length > 0)
             )
                 try {
                     let t = await (0, M.c)({
                         channelId: e,
-                        nonce: ep,
+                        nonce: e_,
                         items: ee,
-                        message: eE,
+                        message: eb,
                         shouldUploadFailureSendNotification: !n.doNotNotifyOnError && void 0,
                     });
                     if (null == t) return;
                     let r = t.attachments;
-                    if (((h = t.uploader), eu && (null == r || 0 === r.length))) return;
-                    if (null != r && ((eb.message.attachments = r.map((e, t) => (0, ev.B)(e, t))), (0, y.NS)())) {
+                    if (((h = t.uploader), ed && (null == r || 0 === r.length))) return;
+                    if (null != r && ((ey.message.attachments = r.map((e, t) => (0, ev.B)(e, t))), (0, y.NS)())) {
                         for (let e of r)
                             if (
                                 (null == (p = e.item) ||
@@ -1209,7 +1211,7 @@ let eV = {
                                     },
                                     n = "__CLIP_METADATA__",
                                     r = "".concat(n).concat(JSON.stringify(t));
-                                eb.message.content = "".concat(eb.message.content).concat(r);
+                                ey.message.content = "".concat(ey.message.content).concat(r);
                                 break;
                             }
                     }
@@ -1229,7 +1231,7 @@ let eV = {
                     o = Math.floor(10000 * Math.random());
                 ej.info("Queueing message to be sent LogId:".concat(o)),
                     d.ZP.enqueue(
-                        eb,
+                        ey,
                         (o) => {
                             let s = Date.now() - i;
                             if (o.ok) {
@@ -1241,9 +1243,9 @@ let eV = {
                                         },
                                         poll: j,
                                     });
-                                let r = (0, X.ZC)(o.body);
+                                let r = (0, Q.ZC)(o.body);
                                 null != r &&
-                                    ((0, K.gA)(Q.D1),
+                                    ((0, K.gA)(X.D1),
                                     (0, J.I)(
                                         {
                                             name: r.name,
@@ -1265,7 +1267,7 @@ let eV = {
                                         joinRequestUserId: n,
                                     });
                                 }
-                                G.Z.recordMessageSendApiResponse(ep),
+                                G.Z.recordMessageSendApiResponse(e_),
                                     l.Z.dispatch({
                                         type: "SLOWMODE_RESET_COOLDOWN",
                                         slowmodeType: em.S.SendMessage,
@@ -1328,7 +1330,7 @@ let eV = {
                                         P.U8.has(o.body.code)
                                             ? l.Z.dispatch({
                                                   type: "MESSAGE_SEND_FAILED_AUTOMOD",
-                                                  messageData: eb,
+                                                  messageData: ey,
                                                   errorResponseBody: {
                                                       code: o.body.code,
                                                       message: o.body.message,
@@ -1338,15 +1340,15 @@ let eV = {
                                               ? l.Z.dispatch({ type: "POGGERMODE_TEMPORARILY_DISABLED" })
                                               : o.body.code === eI.evJ.EXPLICIT_CONTENT
                                                 ? (t = eC.xi.EXPLICIT_CONTENT)
-                                                : null != j || ed || null != U || eH.sendClydeError(e, o.body.code);
+                                                : null != j || ef || null != U || eH.sendClydeError(e, o.body.code);
                                 i
-                                    ? eH.deleteMessage(e, e_, !0)
+                                    ? eH.deleteMessage(e, eE, !0)
                                     : (null != h &&
                                           l.Z.dispatch({
                                               type: "UPLOAD_FAIL",
                                               channelId: e,
                                               file: h._file,
-                                              messageId: e_,
+                                              messageId: eE,
                                               reason: t,
                                               noSendFailed: !0,
                                           }),
@@ -1359,7 +1361,7 @@ let eV = {
                                           ),
                                       l.Z.dispatch({
                                           type: "MESSAGE_SEND_FAILED",
-                                          messageId: e_,
+                                          messageId: eE,
                                           channelId: e,
                                           shouldNotify: !n.doNotNotifyOnError,
                                           reason: t,
