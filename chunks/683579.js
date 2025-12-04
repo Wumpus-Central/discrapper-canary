@@ -1,88 +1,87 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var r = n(54381);
 n(473749);
-var i = n(755721),
-    l = n(481060),
-    a = n(556012),
-    s = n(862085),
-    o = n(769998),
-    c = n(671066),
-    d = n(273504),
-    u = n(464992);
-function g(e) {
-    let { action: t, triggerType: n, toggled: s, onToggleAction: o } = e,
-        c = (0, a.c)(t.type, t, n);
-    if (null == c) return null;
-    let { headerText: d, descriptionText: g, icon: m } = c;
+var i = n(481060),
+    l = n(556012),
+    a = n(862085),
+    s = n(769998),
+    o = n(671066),
+    c = n(273504),
+    d = n(464992);
+function u(e) {
+    let { action: t, triggerType: n, toggled: a, onToggleAction: s } = e,
+        o = (0, l.c)(t.type, t, n);
+    if (null == o) return null;
+    let { headerText: c, descriptionText: u, icon: g } = o;
     return (0, r.jsxs)("div", {
-        className: u.actionContainer,
+        className: d.actionContainer,
         children: [
             (0, r.jsx)("div", {
-                className: u.actionIconContainer,
-                children: (0, r.jsx)(m, {
+                className: d.actionIconContainer,
+                children: (0, r.jsx)(g, {
                     size: "md",
                     color: "currentColor",
-                    className: u.actionIcon,
+                    className: d.actionIcon,
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: u.actionTextContainer,
+                className: d.actionTextContainer,
                 children: [
-                    (0, r.jsx)(l.Heading, {
+                    (0, r.jsx)(i.Heading, {
                         variant: "heading-sm/semibold",
-                        children: d,
+                        children: c,
                     }),
-                    (0, r.jsx)(l.Text, {
+                    (0, r.jsx)(i.Text, {
                         color: "interactive-normal",
                         variant: "text-xs/medium",
-                        children: g,
+                        children: u,
                     }),
                 ],
             }),
             (0, r.jsx)("div", {
-                children: (0, r.jsx)(i.$q, {
-                    disabled: !c.isEditable,
-                    type: i.M0.INVERTED,
-                    value: s,
-                    onChange: () => o(!1),
-                    className: u.__invalid_actionCheckbox,
+                children: (0, r.jsx)(i.P3F, {
+                    onClick: o.isEditable ? () => s(!1) : void 0,
+                    children: (0, r.jsx)(i.FZ5, {
+                        checked: a,
+                        disabled: !o.isEditable,
+                    }),
                 }),
             }),
         ],
     });
 }
-function m(e) {
-    let { action: t, guildId: n, triggerType: i, toggled: l, onToggleAction: a } = e;
+function g(e) {
+    let { action: t, guildId: n, triggerType: i, toggled: l, onToggleAction: d } = e;
     switch (t.type) {
-        case d.jj.FLAG_TO_CHANNEL:
-            return (0, r.jsx)(c.Z, {
-                action: t,
-                triggerType: i,
-                toggled: l,
-                onToggleAction: a,
-            });
-        case d.jj.USER_COMMUNICATION_DISABLED:
+        case c.jj.FLAG_TO_CHANNEL:
             return (0, r.jsx)(o.Z, {
                 action: t,
-                guildId: n,
                 triggerType: i,
                 toggled: l,
-                onToggleAction: a,
+                onToggleAction: d,
             });
-        case d.jj.BLOCK_MESSAGE:
+        case c.jj.USER_COMMUNICATION_DISABLED:
             return (0, r.jsx)(s.Z, {
                 action: t,
+                guildId: n,
                 triggerType: i,
                 toggled: l,
-                onToggleAction: a,
+                onToggleAction: d,
+            });
+        case c.jj.BLOCK_MESSAGE:
+            return (0, r.jsx)(a.Z, {
+                action: t,
+                triggerType: i,
+                toggled: l,
+                onToggleAction: d,
             });
         default:
-            return (0, r.jsx)(g, {
+            return (0, r.jsx)(u, {
                 action: t,
                 guildId: n,
                 toggled: l,
                 triggerType: i,
-                onToggleAction: a,
+                onToggleAction: d,
             });
     }
 }

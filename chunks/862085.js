@@ -1,52 +1,51 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => o });
 var r = n(54381);
 n(473749);
-var i = n(755721),
-    l = n(481060),
-    a = n(556012),
-    s = n(388032),
-    o = n(464992);
-function c(e) {
-    let { action: t, triggerType: n, toggled: c, onToggleAction: d } = e,
-        u = (e) => () => d(e),
-        g = (0, a.c)(t.type, t, n);
-    if (null == g) return null;
-    let { headerText: m, descriptionText: p, icon: f } = g;
+var i = n(481060),
+    l = n(556012),
+    a = n(388032),
+    s = n(464992);
+function o(e) {
+    let { action: t, triggerType: n, toggled: o, onToggleAction: c } = e,
+        d = (e) => () => c(e),
+        u = (0, l.c)(t.type, t, n);
+    if (null == u) return null;
+    let { headerText: g, descriptionText: m, icon: p } = u;
     return (0, r.jsxs)("div", {
-        className: o.actionContainer,
+        className: s.actionContainer,
         children: [
             (0, r.jsx)("div", {
-                className: o.actionIconContainer,
-                children: (0, r.jsx)(f, {
+                className: s.actionIconContainer,
+                children: (0, r.jsx)(p, {
                     size: "custom",
                     color: "currentColor",
-                    className: o.actionIcon,
+                    className: s.actionIcon,
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: o.actionTextContainer,
+                className: s.actionTextContainer,
                 children: [
-                    (0, r.jsx)(l.Heading, {
+                    (0, r.jsx)(i.Heading, {
                         variant: "heading-sm/semibold",
-                        children: m,
+                        children: g,
                     }),
-                    (0, r.jsx)(l.Text, {
+                    (0, r.jsx)(i.Text, {
                         color: "interactive-normal",
                         variant: "text-xs/medium",
-                        children: p,
+                        children: m,
                     }),
-                    c
-                        ? (0, r.jsxs)(l.Text, {
+                    o
+                        ? (0, r.jsxs)(i.Text, {
                               color: "text-muted",
                               variant: "text-xs/medium",
                               children: [
-                                  s.intl.string(s.t.Oa9oWJ),
-                                  (0, r.jsx)(l.P3F, {
-                                      onClick: u(!0),
-                                      className: o.editChannel,
+                                  a.intl.string(a.t.Oa9oWJ),
+                                  (0, r.jsx)(i.P3F, {
+                                      onClick: d(!0),
+                                      className: s.editChannel,
                                       tag: "span",
                                       role: "link",
-                                      children: s.intl.string(s.t.QupmYY),
+                                      children: a.intl.string(a.t.QupmYY),
                                   }),
                               ],
                           })
@@ -54,10 +53,12 @@ function c(e) {
                 ],
             }),
             (0, r.jsx)("div", {
-                children: (0, r.jsx)(i.$q, {
-                    value: c,
-                    onChange: u(!1),
-                    className: o.__invalid_actionCheckbox,
+                children: (0, r.jsx)(i.P3F, {
+                    onClick: u.isEditable ? d(!1) : void 0,
+                    children: (0, r.jsx)(i.FZ5, {
+                        checked: o,
+                        disabled: !u.isEditable,
+                    }),
                 }),
             }),
         ],

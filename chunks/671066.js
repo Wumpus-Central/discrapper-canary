@@ -1,73 +1,74 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => m });
 var r = n(54381);
 n(473749);
 var i = n(442837),
-    l = n(755721),
-    a = n(481060),
-    s = n(933557),
-    o = n(592125),
-    c = n(699516),
-    d = n(594174),
-    u = n(556012),
-    g = n(388032),
-    m = n(464992);
-function p(e) {
+    l = n(481060),
+    a = n(933557),
+    s = n(592125),
+    o = n(699516),
+    c = n(594174),
+    d = n(556012),
+    u = n(388032),
+    g = n(464992);
+function m(e) {
     var t;
-    let { action: n, triggerType: p, toggled: f, onToggleAction: h } = e,
-        b = (e) => () => h(e),
-        x = (0, u.c)(n.type, n, p),
-        j = null == (t = n.metadata) ? void 0 : t.channelId,
-        _ = (0, i.e7)([d.default, c.Z, o.Z], () => {
-            let e = o.Z.getChannel(j);
-            return null == e ? null : (0, s.F6)(e, d.default, c.Z);
-        }, [j]);
-    if (null == x) return null;
-    let { headerText: v, descriptionText: O, icon: C } = x;
+    let { action: n, triggerType: m, toggled: p, onToggleAction: f } = e,
+        h = (e) => () => f(e),
+        b = (0, d.c)(n.type, n, m),
+        x = null == (t = n.metadata) ? void 0 : t.channelId,
+        j = (0, i.e7)([c.default, o.Z, s.Z], () => {
+            let e = s.Z.getChannel(x);
+            return null == e ? null : (0, a.F6)(e, c.default, o.Z);
+        }, [x]);
+    if (null == b) return null;
+    let { headerText: _, descriptionText: v, icon: O } = b;
     return (0, r.jsxs)("div", {
-        className: m.actionContainer,
+        className: g.actionContainer,
         children: [
             (0, r.jsx)("div", {
-                className: m.actionIconContainer,
-                children: (0, r.jsx)(C, {
+                className: g.actionIconContainer,
+                children: (0, r.jsx)(O, {
                     size: "md",
                     color: "currentColor",
-                    className: m.actionIcon,
+                    className: g.actionIcon,
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: m.actionTextContainer,
+                className: g.actionTextContainer,
                 children: [
-                    (0, r.jsx)(a.Heading, {
+                    (0, r.jsx)(l.Heading, {
                         variant: "heading-sm/semibold",
-                        children: v,
+                        children: _,
                     }),
-                    (0, r.jsx)(a.Text, {
+                    (0, r.jsx)(l.Text, {
                         color: "interactive-normal",
                         variant: "text-xs/medium",
-                        children: O,
+                        children: v,
                     }),
-                    f &&
-                        (0, r.jsxs)(a.Text, {
+                    p &&
+                        (0, r.jsxs)(l.Text, {
                             color: "text-muted",
                             variant: "text-xs/medium",
                             children: [
-                                null != _ && g.intl.format(g.t["8Sr/ar"], { channelName: _ }),
-                                (0, r.jsx)(a.P3F, {
-                                    onClick: b(!0),
-                                    className: m.editChannel,
+                                null != j && u.intl.format(u.t["8Sr/ar"], { channelName: j }),
+                                (0, r.jsx)(l.P3F, {
+                                    onClick: h(!0),
+                                    className: g.editChannel,
                                     tag: "span",
                                     role: "link",
-                                    children: g.intl.string(g.t["3gUsJb"]),
+                                    children: u.intl.string(u.t["3gUsJb"]),
                                 }),
                             ],
                         }),
                 ],
             }),
             (0, r.jsx)("div", {
-                children: (0, r.jsx)(l.$q, {
-                    value: !!f,
-                    onChange: b(!1),
-                    className: m.__invalid_actionCheckbox,
+                children: (0, r.jsx)(l.P3F, {
+                    onClick: b.isEditable ? h(!1) : void 0,
+                    children: (0, r.jsx)(l.FZ5, {
+                        checked: p,
+                        disabled: !b.isEditable,
+                    }),
                 }),
             }),
         ],
