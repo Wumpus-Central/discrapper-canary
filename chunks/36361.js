@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(415506);
+n.d(t, { Z: () => S }), n(415506);
 var r = n(54381);
 n(473749);
 var i = n(28682),
@@ -17,8 +17,9 @@ var i = n(28682),
     g = n(409322),
     E = n(670304),
     b = n(357660),
-    y = n(166292);
-function O(e) {
+    y = n(706873),
+    O = n(166292);
+function v(e) {
     let { node: t } = e;
     switch (t.type) {
         case i.Jq.ROOT:
@@ -33,12 +34,14 @@ function O(e) {
             return (0, r.jsx)(g.Z, { node: t });
         case i.Jq.FIELD_SET:
             return (0, r.jsx)(h.Z, { node: t });
+        case i.Jq.RELATED:
+            return (0, r.jsx)(y.Z, { node: t });
         case i.Jq.CATEGORY:
             return (0, r.jsx)(m.Z, { node: t });
         case i.Jq.ACCORDION:
             return (0, r.jsx)(_.Z, { node: t });
         case i.Jq.SPLIT:
-            return (0, r.jsx)(y.Z, { node: t });
+            return (0, r.jsx)(O.Z, { node: t });
         case i.Jq.TOGGLE:
             return (0, r.jsx)(p.I, { node: t });
         case i.Jq.BUTTON:
@@ -57,12 +60,12 @@ function O(e) {
             return (0, r.jsx)(c.W, { node: t });
     }
 }
-function v(e) {
+function S(e) {
     let { node: t } = e;
     return t.type === i.Jq.PANEL || t.type === i.Jq.PANE
-        ? (0, r.jsx)(O, { node: t })
+        ? (0, r.jsx)(v, { node: t })
         : (0, r.jsx)(a.Z, {
               node: t,
-              children: (0, r.jsx)(O, { node: t }),
+              children: (0, r.jsx)(v, { node: t }),
           });
 }

@@ -11,9 +11,9 @@ function u(e) {
     let { node: f } = e,
         { destinationKey: p } = f,
         _ = null == (t = f.useSubtitle) ? void 0 : t.call(f),
-        { fallbackDirectory: m } = (0, a.t)(),
-        h = null == m ? void 0 : m.entry(p),
-        g = (null == h ? void 0 : h.parentPanelKey) != null ? (null == m ? void 0 : m.get(h.parentPanelKey)) : void 0,
+        { accessibleDirectory: m } = (0, a.t)(),
+        h = m.entry(p),
+        g = (null == h ? void 0 : h.parentPanelKey) != null ? m.get(h.parentPanelKey) : void 0,
         E = null == (n = f.useTitle) ? void 0 : n.call(f),
         b = null == g || null == (u = g.useTitle) ? void 0 : u.call(g);
     if (null == g) return null;
@@ -25,7 +25,7 @@ function u(e) {
             null != y &&
             (0, r.jsx)("div", {
                 className: c.navigatorIcon,
-                children: (0, r.jsx)(y, {}),
+                children: (0, r.jsx)(y, { color: "currentColor" }),
             }),
         primaryTrailingElement: (0, r.jsx)(i.LJT, {}),
         onClick: () => s.Z.setState({ requestedTargetKey: p }),

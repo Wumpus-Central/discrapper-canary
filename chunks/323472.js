@@ -42,7 +42,7 @@ function I(t, e) {
     var n, i;
     let { limit: s = 2, formatter: d = c } = null != e ? e : {};
     r()(s > 0, "[useSettingCollapsibleSubtitle] Limit must be greater than 0");
-    let { directory: I, fallbackDirectory: T } = (0, u.t)(),
+    let { visibleDirectory: I, accessibleDirectory: T } = (0, u.t)(),
         g = null != (n = I.get(t)) ? n : T.get(t);
     r()(
         null != g && (g.type === a.Jq.ACCORDION || S(g)),

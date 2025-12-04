@@ -83,12 +83,12 @@ function y(e) {
                     },
                     { equalityFn: i.X },
                 ),
-            [y, w, m],
+            [w, m, y],
         );
     let k = o.useMemo(
             () => ({
-                directory: y,
-                fallbackDirectory: P,
+                visibleDirectory: y,
+                accessibleDirectory: P,
             }),
             [y, P],
         ),
