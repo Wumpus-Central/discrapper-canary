@@ -3919,6 +3919,7 @@ var np = (function (e) {
             (e.INVITE_APP_INVOKED = "invite_app_invoked"),
             (e.INVITE_APP_OPENED = "invite_app_opened"),
             (e.INVITE_LEARN_MORE = "invite_learn_more"),
+            (e.INVITE_FRIEND_MEMBERS_VIEWED = "invite_friend_members_viewed"),
             (e.INVITE_LOGIN = "invite_login"),
             (e.INVITE_LOGIN_SUCCESSFUL = "invite_login_successful"),
             (e.INSTANT_INVITE_SHARED = "instant_invite_shared"),

@@ -277,6 +277,7 @@ var r = (function (e) {
             (e.HUB_EMAIL_VERIFY = "network_action_hub_email_verify"),
             (e.HUB_EMAIL_VERIFY_SEND = "network_action_hub_email_verify_send"),
             (e.HUB_WAITLIST_SIGNUP = "network_action_hub_waitlist_signup"),
+            (e.INVITE_FRIEND_MEMBERS_FETCH = "network_action_invite_friend_members_fetch"),
             (e.INVITE_RESOLVE = "network_action_invite_resolve"),
             (e.INVITE_REVOKE = "network_action_invite_revoke"),
             (e.LOGIN_REQUEST_SMS_TOKEN = "network_action_login_request_sms_token"),

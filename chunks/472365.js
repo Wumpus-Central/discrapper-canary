@@ -1,4 +1,4 @@
-t.d(n, { default: () => W }), t(415506);
+t.d(n, { default: () => w }), t(415506);
 var i = t(54381),
     r = t(473749),
     l = t(120356),
@@ -15,13 +15,13 @@ var i = t(54381),
     I = t(906732),
     v = t(436774),
     x = t(313201),
-    b = t(978986),
-    E = t(451603),
+    E = t(978986),
+    b = t(451603),
     N = t(885714),
-    h = t(973616),
-    g = t(598077),
-    C = t(701190),
-    S = t(594174),
+    g = t(973616),
+    h = t(598077),
+    S = t(701190),
+    C = t(594174),
     L = t(855981),
     j = t(55543),
     T = t(626135),
@@ -30,8 +30,8 @@ var i = t(54381),
     k = t(998502),
     P = t(756679),
     R = t(379164),
-    z = t(590965),
-    M = t(981631),
+    M = t(590965),
+    z = t(981631),
     y = t(474936),
     Z = t(388032),
     U = t(12205),
@@ -103,19 +103,19 @@ function B() {
     let { analyticsLocations: e, sourceAnalyticsLocations: n } = (0, I.ZP)(f.Z.PREMIUM_UPSELL_TOOLTIP);
     return (
         r.useEffect(() => {
-            T.default.track(M.rMx.PREMIUM_UPSELL_VIEWED, {
+            T.default.track(z.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: y.cd.GUILD_CAP_INLINE_INVITE_MODAL,
-                location: { page: M.ZY5.NATIVE_INVITE_MODAL },
+                location: { page: z.ZY5.NATIVE_INVITE_MODAL },
                 location_stack: n,
             });
         }, [n]),
         (0, i.jsxs)(_.P3F, {
             onClick: () =>
                 (0, N.Z)({
-                    analyticsSource: { page: M.Sbl.EXTERNAL_INVITE_LINK_MODAL },
+                    analyticsSource: { page: z.Sbl.EXTERNAL_INVITE_LINK_MODAL },
                     analyticsLocation: {
-                        page: M.Sbl.EXTERNAL_INVITE_LINK_MODAL,
-                        section: M.jXE.GUILD_CAP_UPSELL_MODAL,
+                        page: z.Sbl.EXTERNAL_INVITE_LINK_MODAL,
+                        section: z.jXE.GUILD_CAP_UPSELL_MODAL,
                     },
                     analyticsLocations: e,
                 }),
@@ -138,7 +138,7 @@ function B() {
         })
     );
 }
-function w(e) {
+function V(e) {
     let { className: n } = e;
     return (0, i.jsxs)("div", {
         "aria-hidden": "true",
@@ -156,7 +156,7 @@ function w(e) {
         ],
     });
 }
-function V(e) {
+function W(e) {
     let { transitionState: n } = e,
         t = (0, x.Dt)(),
         { analyticsLocations: r } = (0, I.ZP)(f.Z.INVITE_MODAL);
@@ -170,7 +170,7 @@ function V(e) {
             children: (0, i.jsxs)("div", {
                 className: U.errorContent,
                 children: [
-                    (0, i.jsx)(w, { className: U.errorImage }),
+                    (0, i.jsx)(V, { className: U.errorImage }),
                     (0, i.jsx)(_.Heading, {
                         id: t,
                         variant: "heading-xl/semibold",
@@ -192,91 +192,108 @@ function V(e) {
         }),
     });
 }
-function W(e) {
-    var n, t, l, a;
-    let d,
-        v,
-        N,
-        { transitionState: L } = e;
-    (0, c.e7)([S.default], () => {
+function w(e) {
+    var n, t, l, a, d, v;
+    let N,
+        L,
+        j,
+        { transitionState: y } = e;
+    (0, c.e7)([C.default], () => {
         var e;
-        return null == (e = S.default.getCurrentUser()) ? void 0 : e.premiumType;
+        return null == (e = C.default.getCurrentUser()) ? void 0 : e.premiumType;
     });
-    let j = (0, c.e7)([S.default], () => S.default.getCurrentUser()),
-        { invite: y, error: D, submitting: w } = (0, c.cj)([z.Z], () => z.Z.getProps()),
-        W = (0, c.e7)([C.Z], () => {
+    let D = (0, c.e7)([C.default], () => C.default.getCurrentUser()),
+        { invite: V, error: w, submitting: F } = (0, c.cj)([M.Z], () => M.Z.getProps()),
+        H = (0, c.e7)([S.Z], () => {
             var e;
-            return C.Z.getFriendMemberIds(null != (e = null == y ? void 0 : y.code) ? e : "");
+            return S.Z.getFriendMemberIds(null != (e = null == V ? void 0 : V.code) ? e : "");
         });
     r.useEffect(() => {
-        if (null != y && null != y.guild) {
+        if (null != V && null != V.guild) {
             var e;
-            (0, b.pB)(null != (e = y.approximate_member_count) ? e : 0, y.code, y.guild.id);
+            (0, E.pB)(null != (e = V.approximate_member_count) ? e : 0, V.code, V.guild.id);
         }
     }, [
-        y,
-        null == y ? void 0 : y.approximate_member_count,
-        null == y ? void 0 : y.code,
-        null == y || null == (n = y.guild) ? void 0 : n.id,
+        V,
+        null == V ? void 0 : V.approximate_member_count,
+        null == V ? void 0 : V.code,
+        null == V || null == (n = V.guild) ? void 0 : n.id,
     ]);
-    let F = (0, b.yr)(),
-        { showInviter: H } = (0, P.v9)({
+    let X = (0, E.yr)(),
+        { showInviter: Y } = (0, P.v9)({
             location: "accept_invite_modal",
             autoTrackExposure: !0,
         });
     r.useEffect(() => {
         !__OVERLAY__ && O.isPlatformEmbedded && ((0, O.isWindows)() ? k.ZP.minimize() : k.ZP.restore(), k.ZP.focus());
     }, []);
-    let X = (0, x.Dt)(),
-        { analyticsLocations: Y } = (0, I.ZP)(f.Z.INVITE_MODAL);
-    if (null == y || null == j) return null;
-    if (y.state === M.r2o.EXPIRED || y.state === M.r2o.BANNED || y.state === M.r2o.ERROR)
-        return (0, i.jsx)(V, { transitionState: L });
-    if (null == y.channel) return null;
-    function K() {
-        null != y && R.Z.acceptInvite(y);
+    let K = (0, x.Dt)(),
+        { analyticsLocations: Q } = (0, I.ZP)(f.Z.INVITE_MODAL),
+        q = null != (l = null == H ? void 0 : H.length) ? l : 0,
+        J = q > 0;
+    if (
+        (r.useEffect(() => {
+            if (J && (null == V ? void 0 : V.code) != null) {
+                var e;
+                T.default.track(z.rMx.INVITE_FRIEND_MEMBERS_VIEWED, {
+                    invite_code: null == V ? void 0 : V.code,
+                    guild_id: null == (e = V.guild) ? void 0 : e.id,
+                    friend_count: q,
+                });
+            }
+        }, [J, q, null == V ? void 0 : V.code, null == V || null == (t = V.guild) ? void 0 : t.id]),
+        null == V || null == D)
+    )
+        return null;
+    if (V.state === z.r2o.EXPIRED || V.state === z.r2o.BANNED || V.state === z.r2o.ERROR)
+        return (0, i.jsx)(W, { transitionState: y });
+    if (null == V.channel) return null;
+    function $() {
+        null != V && R.Z.acceptInvite(V);
     }
-    function Q() {
+    function ee() {
         var e;
-        T.default.track(M.rMx.INVITE_ACCEPT_DISMISSED, {
-            invite_code: null == y ? void 0 : y.code,
-            guild_id: null == y || null == (e = y.guild) ? void 0 : e.id,
+        T.default.track(z.rMx.INVITE_ACCEPT_DISMISSED, {
+            invite_code: null == V ? void 0 : V.code,
+            guild_id: null == V || null == (e = V.guild) ? void 0 : e.id,
         }),
             R.Z.close();
     }
-    let { guild: q, channel: J, inviter: $, target_application: ee } = y,
-        en = null == y.guild && null == y.channel && null != y.inviter,
-        et = H && (null != (t = null == W ? void 0 : W.length) ? t : 0) > 0 && null != $,
-        ei = null != q || et;
-    if (null != ee) (d = null == q ? void 0 : q.name), (v = h.ZP.createFromServer(ee).getCoverImageURL(1024));
-    else if (null != q)
-        (d = q.name),
-            (v = A.ZP.getGuildSplashURL({
-                id: q.id,
-                splash: q.splash,
+    let { guild: en, channel: et, inviter: ei, target_application: er } = V,
+        el = null == V.guild && null == V.channel && null != V.inviter,
+        ea = Y && (null != (a = null == H ? void 0 : H.length) ? a : 0) > 0 && null != ei,
+        eo = null != en || ea;
+    if (null != er) (N = null == en ? void 0 : en.name), (L = g.ZP.createFromServer(er).getCoverImageURL(1024));
+    else if (null != en)
+        (N = en.name),
+            (L = A.ZP.getGuildSplashURL({
+                id: en.id,
+                splash: en.splash,
             }));
-    else if (((null == (d = J.name) || "" === d) && null != $ && (d = $.username), null == d))
+    else if (((null == (N = et.name) || "" === N) && null != ei && (N = ei.username), null == N))
         throw Error("no name for group DM invite");
-    let er = (0, E.yU)();
+    let es = (0, b.yU)();
     return (
-        (N = en
+        (j = el
             ? Z.intl.string(Z.t["e/6Ogt"])
-            : Z.intl.format(Z.t["9sWQNT"], { usernameHook: () => (0, i.jsx)("span", { children: F }) })),
+            : Z.intl.format(Z.t["9sWQNT"], { usernameHook: () => (0, i.jsx)("span", { children: X }) })),
         (0, i.jsx)(I.Gt, {
-            value: Y,
+            value: Q,
             children: (0, i.jsx)(s.IX, {
-                size: null != v ? "xl" : "sm",
-                "aria-labelledby": X,
+                size: null != L ? "xl" : "sm",
+                "aria-labelledby": K,
                 "aria-label":
-                    null != (a = null != (l = null == q ? void 0 : q.name) ? l : null == J ? void 0 : J.name) ? a : "",
-                transitionState: L,
-                onClose: () => (Q(), Promise.resolve()),
+                    null != (v = null != (d = null == en ? void 0 : en.name) ? d : null == et ? void 0 : et.name)
+                        ? v
+                        : "",
+                transitionState: y,
+                onClose: () => (ee(), Promise.resolve()),
                 trackingProps: {
                     impression: {
                         impressionName: o.ImpressionNames.INVITE_ACCEPT,
                         impressionProperties: {
-                            guild_id: null == q ? void 0 : q.id,
-                            invite_code: y.code,
+                            guild_id: null == en ? void 0 : en.id,
+                            invite_code: V.code,
                         },
                     },
                 },
@@ -286,12 +303,12 @@ function W(e) {
                         (0, i.jsxs)("div", {
                             className: U.contentWrapper,
                             children: [
-                                et &&
+                                ea &&
                                     (0, i.jsxs)("div", {
                                         className: U.inviterContainer,
                                         children: [
                                             (0, i.jsx)(m.Z, {
-                                                user: new g.Z($),
+                                                user: new h.Z(ei),
                                                 size: _.EFr.SIZE_20,
                                             }),
                                             (0, i.jsx)(_.Text, {
@@ -306,7 +323,7 @@ function W(e) {
                                                                 variant: "text-md/semibold",
                                                                 color: "text-default",
                                                                 tag: "span",
-                                                                children: $.username,
+                                                                children: ei.username,
                                                             },
                                                             n,
                                                         ),
@@ -318,30 +335,30 @@ function W(e) {
                                     className: U.inviteContent,
                                     children: [
                                         (0, i.jsx)("div", {
-                                            id: X,
+                                            id: K,
                                             children: (0, i.jsx)(p.Z, {
-                                                invite: y,
-                                                disableUser: ei,
-                                                error: D,
-                                                friendMemberIds: W,
-                                                showInvitedByHeader: !et,
+                                                invite: V,
+                                                disableUser: eo,
+                                                error: w,
+                                                friendMemberIds: H,
+                                                showInvitedByHeader: !ea,
                                             }),
                                         }),
                                         (0, i.jsxs)("div", {
                                             className: U.ctas,
                                             children: [
-                                                er ? (0, i.jsx)(B, {}) : null,
-                                                null == ee
+                                                es ? (0, i.jsx)(B, {}) : null,
+                                                null == er
                                                     ? (0, i.jsx)(u.u, {
-                                                          text: er ? Z.intl.string(Z.t.iLyuDO) : void 0,
+                                                          text: es ? Z.intl.string(Z.t.iLyuDO) : void 0,
                                                           position: "bottom",
                                                           children: (0, i.jsx)(G, {
                                                               size: G.Sizes.LARGE,
-                                                              onClick: K,
-                                                              submitting: w,
-                                                              disabled: er,
+                                                              onClick: $,
+                                                              submitting: F,
+                                                              disabled: es,
                                                               color: G.Colors.BRAND,
-                                                              children: er
+                                                              children: es
                                                                   ? Z.intl.string(Z.t.ZNCziL)
                                                                   : (0, i.jsxs)("div", {
                                                                         className: U.acceptAs,
@@ -349,12 +366,12 @@ function W(e) {
                                                                             (0, i.jsx)(m.Z, {
                                                                                 "aria-hidden": !0,
                                                                                 size: _.EFr.SIZE_16,
-                                                                                user: j,
+                                                                                user: D,
                                                                                 className: U.acceptAsAvatar,
                                                                             }),
                                                                             (0, i.jsx)("span", {
                                                                                 className: U.acceptAsName,
-                                                                                children: N,
+                                                                                children: j,
                                                                             }),
                                                                         ],
                                                                     }),
@@ -365,15 +382,15 @@ function W(e) {
                                                           children: [
                                                               (0, i.jsx)(G, {
                                                                   size: G.Sizes.LARGE,
-                                                                  onClick: K,
-                                                                  submitting: w,
+                                                                  onClick: $,
+                                                                  submitting: F,
                                                                   children: Z.intl.string(Z.t.RscU7I),
                                                               }),
                                                               (0, i.jsx)(G, {
                                                                   color: G.Colors.PRIMARY,
                                                                   size: G.Sizes.LARGE,
-                                                                  onClick: K,
-                                                                  submitting: w,
+                                                                  onClick: $,
+                                                                  submitting: F,
                                                                   children: Z.intl.string(Z.t.eylRaY),
                                                               }),
                                                           ],
@@ -383,7 +400,7 @@ function W(e) {
                                                     children: (0, i.jsx)(G, {
                                                         look: G.Looks.LINK,
                                                         className: U.noThanksButton,
-                                                        onClick: Q,
+                                                        onClick: ee,
                                                         color: G.Colors.TRANSPARENT,
                                                         children: Z.intl.string(Z.t.ndsK4Z),
                                                     }),
@@ -394,10 +411,10 @@ function W(e) {
                                 }),
                             ],
                         }),
-                        null != v &&
+                        null != L &&
                             (0, i.jsx)("div", {
                                 className: U.inviteSplash,
-                                style: { backgroundImage: "url(".concat(v, ")") },
+                                style: { backgroundImage: "url(".concat(L, ")") },
                             }),
                     ],
                 }),
