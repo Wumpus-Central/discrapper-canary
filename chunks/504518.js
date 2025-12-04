@@ -1,21 +1,22 @@
-var n = r(81825),
-    i = r(598077);
-function s(e, t, r) {
+n.d(t, { Z: () => o });
+var r = n(81825),
+    i = n(598077);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: r,
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0,
               })
-            : (e[t] = r),
+            : (e[t] = n),
         e
     );
 }
-class a extends n.Z {
+class o extends r.Z {
     static createFromServer(e) {
-        return new a(e);
+        return new o(e);
     }
     isPrimary() {
         return 1 === this.member_type;
@@ -28,9 +29,9 @@ class a extends n.Z {
     }
     constructor(e) {
         super(),
-            s(this, "user", void 0),
-            s(this, "member_type", void 0),
-            s(this, "accepted_at", void 0),
+            a(this, "user", void 0),
+            a(this, "member_type", void 0),
+            a(this, "accepted_at", void 0),
             (this.user = new i.Z(e.user)),
             (this.member_type = e.member_type),
             (this.accepted_at = e.accepted_at);
