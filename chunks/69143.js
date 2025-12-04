@@ -13,11 +13,7 @@ let r = (0, n(427164).le)({
         },
         1: {
             affineGiftingEnabled: !0,
-            affinityThreshold: 0.3,
-        },
-        2: {
-            affineGiftingEnabled: !0,
-            affinityThreshold: 0.5,
+            affinityThreshold: 0.1,
         },
     },
 });
