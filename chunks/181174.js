@@ -1,1 +1,1 @@
-e.exports = { serverNickname: "serverNickname__7bf69" };
+e.exports = { separator: "separator__7bf69" };

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d }), n(388685);
 var a = n(54381),
     l = n(473749),
-    i = n(120356),
-    r = n.n(i),
+    r = n(120356),
+    i = n.n(r),
     s = n(481060),
     o = n(259580),
     c = n(422665);
@@ -10,7 +10,7 @@ function d(e) {
     let {
             icon: t,
             title: n,
-            subtitle: i,
+            subtitle: r,
             children: d,
             className: u,
             isExpanded: m,
@@ -38,7 +38,7 @@ function d(e) {
             }
         }, [f, C, j]);
     return (0, a.jsxs)("div", {
-        className: r()(c.accordionContainer, u, { [c.opened]: C }),
+        className: i()(c.accordionContainer, u, { [c.opened]: C }),
         children: [
             (0, a.jsxs)(s.P3F, {
                 className: c.header,
@@ -53,32 +53,32 @@ function d(e) {
                         className: c.title,
                         children: [
                             (0, a.jsx)(s.Text, {
-                                variant: "eyebrow",
+                                variant: "text-sm/medium",
                                 color: "text-default",
                                 children: n,
                             }),
-                            null != i &&
-                                "" !== i &&
+                            null != r &&
+                                "" !== r &&
                                 (0, a.jsx)(s.Text, {
-                                    variant: "text-sm/medium",
-                                    color: "interactive-normal",
-                                    children: i,
+                                    variant: "text-xs/normal",
+                                    color: "text-subtle",
+                                    children: r,
                                 }),
                         ],
                     }),
                     (0, a.jsx)("div", {
-                        className: r()(c.caret, { [c.opened]: C }),
+                        className: i()(c.caret, { [c.opened]: C }),
                         children: (0, a.jsx)(o.Z, {
                             width: 18,
                             height: 18,
-                            direction: o.Z.Directions.DOWN,
+                            direction: o.Z.Directions.RIGHT,
                         }),
                     }),
                 ],
             }),
             (0, a.jsx)("div", {
                 ref: v,
-                className: r()(c.content, { [c.opened]: C }),
+                className: i()(c.content, { [c.opened]: C }),
                 style: E,
                 children: d,
             }),
