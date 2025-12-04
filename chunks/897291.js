@@ -127,7 +127,8 @@ function S(e) {
                 });
     };
     return (0, r.jsx)(o.u, {
-        text: g.intl.string(g.t.sWtWDX),
+        ariaHidden: N,
+        text: g.intl.string(N ? g.t.TW4JV0 : g.t.sWtWDX),
         children: (0, r.jsx)(
             m.Z,
             v(
@@ -135,7 +136,7 @@ function S(e) {
                     {
                         className: E.button,
                         isActive: !1,
-                        "aria-label": g.intl.string(g.t.Z1RnTk),
+                        "aria-label": g.intl.string(N ? g.t.TW4JV0 : g.t.Z1RnTk),
                         "aria-haspopup": "dialog",
                         onClick: () => {
                             P(), T();
