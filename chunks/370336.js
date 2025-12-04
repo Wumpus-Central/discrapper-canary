@@ -1,12 +1,7 @@
-n.d(t, {
-    Sh: () => l,
-    xp: () => s,
-});
+n.d(t, { Sh: () => o });
 var r = n(467510),
-    i = n(176984),
-    a = n(573736),
-    o = n(622916);
-function s(e, t, n) {
+    i = n(573736);
+function a(e, t, n) {
     try {
         Object.defineProperty(e, t, {
             value: n,
@@ -14,36 +9,36 @@ function s(e, t, n) {
             configurable: !0,
         });
     } catch (n) {
-        i.X && o.kg.log(`Failed to add non-enumerable property "${t}" to object`, e);
+        DEBUG_BUILD && logger.log(`Failed to add non-enumerable property "${t}" to object`, e);
     }
 }
-function l(e) {
-    if ((0, a.VZ)(e))
+function o(e) {
+    if ((0, i.VZ)(e))
         return {
             message: e.message,
             name: e.name,
             stack: e.stack,
-            ...u(e),
+            ...l(e),
         };
-    if (!(0, a.cO)(e)) return e;
+    if (!(0, i.cO)(e)) return e;
     {
         let t = {
             type: e.type,
-            target: c(e.target),
-            currentTarget: c(e.currentTarget),
-            ...u(e),
+            target: s(e.target),
+            currentTarget: s(e.currentTarget),
+            ...l(e),
         };
-        return "undefined" != typeof CustomEvent && (0, a.V9)(e, CustomEvent) && (t.detail = e.detail), t;
+        return "undefined" != typeof CustomEvent && (0, i.V9)(e, CustomEvent) && (t.detail = e.detail), t;
     }
 }
-function c(e) {
+function s(e) {
     try {
-        return (0, a.kK)(e) ? (0, r.Rt)(e) : Object.prototype.toString.call(e);
+        return (0, i.kK)(e) ? (0, r.Rt)(e) : Object.prototype.toString.call(e);
     } catch (e) {
         return "<unknown>";
     }
 }
-function u(e) {
+function l(e) {
     if ("object" != typeof e || null === e) return {};
     {
         let t = {};
@@ -51,7 +46,7 @@ function u(e) {
         return t;
     }
 }
-function d(e) {
+function c(e) {
     if (!isPlainObject(e)) return !1;
     try {
         let t = Object.getPrototypeOf(e).constructor.name;
