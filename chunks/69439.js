@@ -91,8 +91,8 @@ function w(e) {
             day: "numeric",
         }),
         {
-            isClaiming: Z,
-            isEnrolling: W,
+            isClaiming: W,
+            isEnrolling: Z,
             isQuestEnrollmentBlocked: H,
         } = (0, o.cj)([m.Z], () => ({
             isClaiming: m.Z.isClaimingReward(N.id) || m.Z.isFetchingRewardCode(N.id),
@@ -147,27 +147,26 @@ function w(e) {
                 q.stopAnimation(), A(e);
             },
         }),
-        ep = s.useMemo(() => N.config.features.includes(C.S7.MOBILE_ONLY_QUEST_PUSH_TO_MOBILE), [N.config.features]),
-        em = (null == (P = N.userStatus) ? void 0 : P.claimedAt) != null,
-        { launchInGameActivity: eg } = (0, h.zB)(N),
-        ef = (0, f.CR)({
+        ep = (null == (P = N.userStatus) ? void 0 : P.claimedAt) != null,
+        { launchInGameActivity: em } = (0, h.zB)(N),
+        eg = (0, f.CR)({
             quest: N,
             shortText: !0,
         }),
-        eh = null;
+        ef = null;
     return (G && F
-        ? (eh = (0, r.jsx)("div", {
+        ? (ef = (0, r.jsx)("div", {
               className: E.button,
               children: (0, r.jsx)(i.zxk, {
                   variant: "primary",
-                  loading: Z,
+                  loading: W,
                   onClick: null != ec ? ec : void 0,
                   text: el,
                   fullWidth: !0,
               }),
           }))
         : z
-          ? (eh = Y
+          ? (ef = Y
                 ? (0, r.jsxs)(i.hE2, {
                       direction: "horizontal",
                       fullWidth: !0,
@@ -201,9 +200,9 @@ function w(e) {
                             (0, r.jsx)(i.zxk, {
                                 variant: "secondary",
                                 icon: N.config.features.includes(C.S7.CLOUD_GAMING_ACTIVITY) ? c.v3n : c.iWm,
-                                text: ef,
+                                text: eg,
                                 onClick: () => {
-                                    eg();
+                                    em();
                                 },
                             }),
                             (0, r.jsx)(i.zxk, {
@@ -224,39 +223,29 @@ function w(e) {
                     }))
           : K
             ? K && F
-                ? (eh = (0, r.jsx)("div", {
+                ? (ef = (0, r.jsx)("div", {
                       className: E.button,
                       children: (0, r.jsx)(i.zxk, {
                           variant: "primary",
-                          loading: Z,
+                          loading: W,
                           onClick: null != ec ? ec : void 0,
                           text: el,
                           fullWidth: !0,
                       }),
                   }))
                 : J
-                  ? (eh = ep
-                        ? (0, r.jsx)("div", {
-                              className: E.button,
-                              children: (0, r.jsx)(i.zxk, {
-                                  variant: "primary",
-                                  loading: W,
-                                  onClick: null != ec ? ec : void 0,
-                                  text: el,
-                                  fullWidth: !0,
-                              }),
-                          })
-                        : (0, r.jsx)("div", {
-                              className: E.button,
-                              children: (0, r.jsx)(i.zxk, {
-                                  variant: "secondary",
-                                  disabled: !0,
-                                  text: y.intl.string(y.t.BkZhUI),
-                                  fullWidth: !0,
-                              }),
-                          }))
-                  : K && U && !em
-                    ? (eh = eo
+                  ? (ef = (0, r.jsx)("div", {
+                        className: E.button,
+                        children: (0, r.jsx)(i.zxk, {
+                            variant: "primary",
+                            loading: Z,
+                            onClick: null != ec ? ec : void 0,
+                            text: el,
+                            fullWidth: !0,
+                        }),
+                    }))
+                  : K && U && !ep
+                    ? (ef = eo
                           ? (0, r.jsx)(a.B6, {
                                 className: E.platformSelectorPrimary,
                                 isSelected: () => !1,
@@ -331,7 +320,7 @@ function w(e) {
                                   }))
                     : K &&
                       !U &&
-                      (eh = H
+                      (ef = H
                           ? (0, r.jsxs)(i.hE2, {
                                 direction: "horizontal",
                                 fullWidth: !0,
@@ -351,7 +340,7 @@ function w(e) {
                           : (0, r.jsx)("div", {
                                 className: E.button,
                                 children: (0, r.jsx)(i.zxk, {
-                                    loading: W,
+                                    loading: Z,
                                     variant: "primary",
                                     onClick: null != ec ? ec : void 0,
                                     text: el,
@@ -359,7 +348,7 @@ function w(e) {
                                     fullWidth: !0,
                                 }),
                             }))
-            : (eh = (0, r.jsx)("div", {
+            : (ef = (0, r.jsx)("div", {
                   className: E.button,
                   children: (0, r.jsx)(i.zxk, {
                       variant: "secondary",
@@ -368,14 +357,14 @@ function w(e) {
                       fullWidth: !0,
                   }),
               })),
-    null == eh)
+    null == ef)
         ? null
         : (0, r.jsxs)("div", {
               className: E.container,
               children: [
                   (0, r.jsx)("div", {
                       className: E.ctaItem,
-                      children: eh,
+                      children: ef,
                   }),
                   ea &&
                       (0, r.jsx)("div", {

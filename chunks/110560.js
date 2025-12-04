@@ -14,7 +14,7 @@ n.r(t),
         openQuestMinorEnrollmentBlockModal: () => H,
         openQuestOrbsRewardModal: () => F,
         openQuestsRewardCodeModal: () => Z,
-        openVideoQuestModal: () => X,
+        openVideoQuestModal: () => Q,
     });
 var r = n(54381);
 n(473749);
@@ -250,7 +250,7 @@ function z(e) {
 function q() {
     return Promise.all([n.e("13193"), n.e("75909"), n.e("90499")]).then(n.bind(n, 215113));
 }
-function X(e) {
+function Q(e) {
     var t;
     let {
         quest: n,
@@ -260,7 +260,7 @@ function X(e) {
         autoplay: c = !0,
         skipEnrollmentCheck: u = !1,
     } = e;
-    if ((0, T.HJ)(n) && n.config.features.includes(R.S7.MOBILE_ONLY_QUEST_PUSH_TO_MOBILE)) return void et(n);
+    if ((0, T.HJ)(n)) return void et(n);
     let d = (0, i.Z)();
     if (
         (0, v.D)(R.dr.VIDEO_MODAL) &&
@@ -312,7 +312,7 @@ function X(e) {
         },
     );
 }
-function Q(e) {
+function X(e) {
     var t;
     let n = null == (t = platform.os) ? void 0 : t.family,
         r = "quest";
@@ -329,7 +329,7 @@ function Q(e) {
     return "discord://";
 }
 function J(e) {
-    let t = Q(e),
+    let t = X(e),
         n = (0, a.zS)(t);
     null != n &&
         p.default.track(w.rMx.DEEP_LINK_CLICKED, {
@@ -404,7 +404,7 @@ async function en(e, t) {
     });
     switch (n) {
         case m.wF.SUCCESS:
-            X({
+            Q({
                 quest: e,
                 questContent: t.questContent,
                 sourceQuestContent: t.sourceQuestContent,
