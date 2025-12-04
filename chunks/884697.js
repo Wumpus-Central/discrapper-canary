@@ -5,7 +5,7 @@ n.d(t, {
     Cs: () => D,
     G1: () => O,
     IC: () => q,
-    OT: () => Q,
+    OT: () => X,
     QG: () => M,
     Qf: () => el,
     Vw: () => S,
@@ -27,6 +27,7 @@ n.d(t, {
     rN: () => R,
     uV: () => j,
     v5: () => et,
+    wO: () => ec,
     x0: () => er,
     x6: () => $,
     yn: () => F,
@@ -241,11 +242,11 @@ let O = (e) => (null == e ? void 0 : e.premiumType) != null,
     K = (e) => e.applicationId === m.XAJ,
     z = 3.8,
     q = (e) => z * e,
-    X = 86400000,
-    Q = (e) => {
+    Q = 86400000,
+    X = (e) => {
         let t = new Date(),
             n = Date.UTC(t.getFullYear(), t.getMonth(), t.getDate());
-        return Math.floor((Date.UTC(e.getFullYear(), e.getMonth(), e.getDate()) - n) / X);
+        return Math.floor((Date.UTC(e.getFullYear(), e.getMonth(), e.getDate()) - n) / Q);
     },
     J = (e) => {
         let t = _.yf[e];
@@ -359,4 +360,5 @@ let O = (e) => (null == e ? void 0 : e.premiumType) != null,
             let s = null != (a = null == (r = e.eligibleOffers) ? void 0 : r.some((e) => n.includes(e))) && a;
             return (null != (o = null == (i = t.eligibleOffers) ? void 0 : i.some((e) => n.includes(e))) && o) - s;
         });
-    };
+    },
+    ec = (e) => e.filter((e) => !e.isCategoryReward);

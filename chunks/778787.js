@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => y,
-    q: () => O,
+    Z: () => O,
+    q: () => v,
 }),
     n(314940),
     n(539854);
@@ -12,8 +12,9 @@ var r = n(278074),
     l = n(803358),
     c = n(135483),
     u = n(212161),
-    d = n(981631);
-function f(e, t, n) {
+    d = n(215023),
+    f = n(981631);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +27,7 @@ function f(e, t, n) {
         e
     );
 }
-function p(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,12 +38,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function _(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,22 +55,22 @@ function _(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e, t) {
+function g(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = g(e, t);
+        i = E(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++)
@@ -77,7 +78,7 @@ function h(e, t) {
     }
     return i;
 }
-function g(e, t) {
+function E(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -86,32 +87,36 @@ function g(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let E = (e) =>
+let b = (e) =>
         (0, r.EQ)(e)
             .with({ type: i.Z.AVATAR_DECORATION }, (e) => a.Z.fromServer(e))
             .with({ type: i.Z.PROFILE_EFFECT }, (e) => u.Z.fromServer(e))
             .with({ type: i.Z.NAMEPLATE }, (e) => c.Z.fromServer(e))
             .otherwise(() => null),
-    b = (e) =>
+    y = (e) =>
         null != e
             ? e.reduce((e, t) => {
-                  let n = E(t);
+                  let n = b(t);
                   return null != n && e.push(n), e;
               }, [])
             : [];
-class y extends l.Z {
+class O extends l.Z {
     static fromServer(e) {
         var { type: t, premium_type: n, category_sku_id: r, prices: i, bundled_products: a, variants: l } = e,
-            c = h(e, ["type", "premium_type", "category_sku_id", "prices", "bundled_products", "variants"]);
-        return new y(
-            m(p({}, super.fromServer(c)), {
+            c = g(e, ["type", "premium_type", "category_sku_id", "prices", "bundled_products", "variants"]);
+        return new O(
+            h(_({}, super.fromServer(c)), {
                 type: t,
-                premiumType: n === d.WND ? null : n,
+                premiumType: n === f.WND ? null : n,
                 categorySkuId: r,
+                isCategoryReward: d.y8.some((e) => {
+                    let { rewardSkuId: t } = e;
+                    return t === c.sku_id;
+                }),
                 prices: (0, s.l)(i),
-                items: b(c.items),
+                items: y(c.items),
                 bundledProducts: null == a ? void 0 : a.map(o.Z.fromServer),
-                variants: null == l ? void 0 : l.map(O.fromServer),
+                variants: null == l ? void 0 : l.map(v.fromServer),
                 googleSkuIds: c.google_sku_ids,
                 eligibleOffers: c.eligible_offers,
             }),
@@ -119,21 +124,23 @@ class y extends l.Z {
     }
     constructor(e) {
         super(e),
-            f(this, "prices", void 0),
-            f(this, "type", void 0),
-            f(this, "premiumType", void 0),
-            f(this, "items", void 0),
-            f(this, "categorySkuId", void 0),
-            f(this, "bundledProducts", void 0),
-            f(this, "variants", void 0),
-            f(this, "variantGroupStoreListingId", void 0),
-            f(this, "googleSkuIds", void 0),
-            f(this, "eligibleOffers", void 0),
+            p(this, "prices", void 0),
+            p(this, "type", void 0),
+            p(this, "premiumType", void 0),
+            p(this, "items", void 0),
+            p(this, "categorySkuId", void 0),
+            p(this, "isCategoryReward", void 0),
+            p(this, "bundledProducts", void 0),
+            p(this, "variants", void 0),
+            p(this, "variantGroupStoreListingId", void 0),
+            p(this, "googleSkuIds", void 0),
+            p(this, "eligibleOffers", void 0),
             (this.summary = e.summary),
             (this.type = e.type),
             (this.premiumType = e.premiumType),
             (this.items = e.items),
             (this.categorySkuId = e.categorySkuId),
+            (this.isCategoryReward = e.isCategoryReward),
             (this.prices = e.prices),
             (this.bundledProducts = e.bundledProducts),
             (this.googleSkuIds = e.googleSkuIds),
@@ -141,12 +148,12 @@ class y extends l.Z {
             (this.eligibleOffers = e.eligibleOffers);
     }
 }
-class O extends y {
+class v extends O {
     static fromServer(e) {
         var { base_variant_name: t, base_variant_sku_id: n, variant_label: r, variant_value: i } = e,
-            a = h(e, ["base_variant_name", "base_variant_sku_id", "variant_label", "variant_value"]);
-        return new O(
-            m(p({}, super.fromServer(a)), {
+            a = g(e, ["base_variant_name", "base_variant_sku_id", "variant_label", "variant_value"]);
+        return new v(
+            h(_({}, super.fromServer(a)), {
                 baseVariantName: t,
                 baseVariantSkuId: n,
                 variantLabel: r,
@@ -156,10 +163,10 @@ class O extends y {
     }
     constructor(e) {
         super(e),
-            f(this, "baseVariantName", void 0),
-            f(this, "baseVariantSkuId", void 0),
-            f(this, "variantLabel", void 0),
-            f(this, "variantValue", void 0),
+            p(this, "baseVariantName", void 0),
+            p(this, "baseVariantSkuId", void 0),
+            p(this, "variantLabel", void 0),
+            p(this, "variantValue", void 0),
             (this.baseVariantName = e.baseVariantName),
             (this.baseVariantSkuId = e.baseVariantSkuId),
             (this.variantLabel = e.variantLabel),

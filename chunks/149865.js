@@ -7,11 +7,7 @@ var r = n(54381),
     l = n(700875);
 function c(e) {
     let { node: t } = e,
-        { useTitle: n, useSubtitle: c, variant: u = "default", ContextProvider: d } = t,
-        f = t.layout.filter((e) => {
-            var t, n;
-            return null == (n = null == (t = e.usePredicate) ? void 0 : t.call(e)) || n;
-        }),
+        { useTitle: n, useSubtitle: c, variant: u = "default", ContextProvider: d, layout: f } = t,
         p = n(),
         _ = null == c ? void 0 : c(),
         m = i.useId(),

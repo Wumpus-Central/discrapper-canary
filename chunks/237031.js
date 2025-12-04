@@ -1,14 +1,13 @@
 n.d(t, {
-    T: () => p,
-    v: () => _,
+    T: () => f,
+    v: () => p,
 });
 var r = n(54381);
 n(473749);
 var i = n(481060),
     a = n(1870),
-    o = n(724994),
-    s = n(215023);
-function l(e, t, n) {
+    o = n(724994);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +20,7 @@ function l(e, t, n) {
         e
     );
 }
-function c(e) {
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,12 +31,12 @@ function c(e) {
                 }),
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                s(e, t, n[t]);
             });
     }
     return e;
 }
-function u(e, t) {
+function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,35 +48,30 @@ function u(e, t) {
     }
     return n;
 }
-function d(e, t) {
+function u(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
+            : c(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let f = "collectibles shop product details modal",
-    p = (e) => {
+let d = "collectibles shop product details modal",
+    f = (e) => {
         let {
             product: t,
-            category: l,
-            shouldCheckoutWithOrbs: u,
-            analyticsSource: p,
-            analyticsLocations: _,
-            returnRef: m,
-            tab: h,
-            rentalDuration: g,
+            category: s,
+            shouldCheckoutWithOrbs: c,
+            analyticsSource: f,
+            analyticsLocations: p,
+            returnRef: _,
+            tab: m,
+            rentalDuration: h,
         } = e;
-        if (
-            s.y8.some((e) => {
-                let { rewardSkuId: n } = e;
-                return n === t.skuId;
-            })
-        ) {
+        if (t.isCategoryReward) {
             let { isPurchased: e } = (0, o.U)(a.Z, t);
             if (!e) return;
         }
@@ -87,21 +81,21 @@ let f = "collectibles shop product details modal",
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        d(c({}, n), {
+                        u(l({}, n), {
                             product: t,
-                            category: l,
-                            shouldCheckoutWithOrbs: u,
-                            analyticsSource: p,
-                            analyticsLocations: _,
-                            returnRef: m,
-                            tab: h,
-                            rentalDuration: g,
+                            category: s,
+                            shouldCheckoutWithOrbs: c,
+                            analyticsSource: f,
+                            analyticsLocations: p,
+                            returnRef: _,
+                            tab: m,
+                            rentalDuration: h,
                         }),
                     );
             },
-            { modalKey: f },
+            { modalKey: d },
         );
     },
-    _ = () => {
-        (0, i.Mr3)(f);
+    p = () => {
+        (0, i.Mr3)(d);
     };

@@ -1,5 +1,5 @@
 n.d(t, {
-    $0: () => p,
+    $0: () => d,
     ZP: () => g,
 }),
     n(388685),
@@ -11,11 +11,10 @@ var l,
     a = n(1870),
     o = n(884697),
     c = n(235897),
-    u = n(215023),
-    d = n(388032),
-    p = (((l = {}).PURCHASE = "purchase"), (l.PREMIUM_PURCHASE = "premium_purchase"), (l.PREVIEW = "preview"), l);
-let m = { skuId: "None" },
-    h = { skuId: "Shop" },
+    u = n(388032),
+    d = (((l = {}).PURCHASE = "purchase"), (l.PREMIUM_PURCHASE = "premium_purchase"), (l.PREVIEW = "preview"), l);
+let p = { skuId: "None" },
+    m = { skuId: "Shop" },
     g = () => {
         let e = (0, i.e7)([a.Z], () => a.Z.purchases),
             [t, n] = (0, i.Wu)([s.Z], () => [s.Z.categories, s.Z.products]);
@@ -23,49 +22,45 @@ let m = { skuId: "None" },
             c.Z.useConfig({ location: "use nameplate sections" }),
             (0, r.useMemo)(() => {
                 let l = (0, o.Y)(e, t).reduce(
-                        (t, l) => {
-                            let r = e.get(l.skuId),
-                                i = (0, o.G1)(null != r ? r : n.get(l.skuId));
-                            return (
-                                i
-                                    ? t.premium_purchase.push(l)
-                                    : null != r
-                                      ? t.purchase.push(l)
-                                      : i || t.preview.push(l),
-                                t
-                            );
-                        },
-                        {
-                            purchase: [],
-                            premium_purchase: [],
-                            preview: [],
-                        },
-                    ),
-                    r = l.preview.filter(
-                        (e) =>
-                            !u.y8.some((t) => {
-                                let { rewardSkuId: n } = t;
-                                return n === e.skuId;
-                            }),
-                    );
+                    (t, l) => {
+                        var r;
+                        let i = e.get(l.skuId),
+                            s = n.get(l.skuId),
+                            a = (0, o.G1)(null != i ? i : s),
+                            c = null != (r = null == s ? void 0 : s.isCategoryReward) && r;
+                        return (
+                            a
+                                ? t.premium_purchase.push(l)
+                                : null != i
+                                  ? t.purchase.push(l)
+                                  : a || c || t.preview.push(l),
+                            t
+                        );
+                    },
+                    {
+                        purchase: [],
+                        premium_purchase: [],
+                        preview: [],
+                    },
+                );
                 return [
                     {
                         section: "purchase",
-                        items: [m, h, ...l.purchase],
+                        items: [p, m, ...l.purchase],
                         height: 12,
-                        header: d.intl.string(d.t.WfGV52),
+                        header: u.intl.string(u.t.WfGV52),
                     },
                     {
                         section: "premium_purchase",
                         items: l.premium_purchase,
                         height: 12,
-                        header: d.intl.string(d.t.TiLCgw),
+                        header: u.intl.string(u.t.TiLCgw),
                     },
                     {
                         section: "preview",
-                        items: r,
+                        items: l.preview,
                         height: 12,
-                        header: d.intl.string(d.t["1vbbee"]),
+                        header: u.intl.string(u.t["1vbbee"]),
                     },
                 ].filter((e) => {
                     let { items: t } = e;
