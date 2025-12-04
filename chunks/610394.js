@@ -144,7 +144,7 @@ function q() {
         P.error("Error clearing tracked games:", e), (0, _.PV)(d.UNSET_PID, e, { crashType: "native" });
     }
 }
-async function X() {
+async function Q() {
     if (!y.Z.isOverlayEnabled) return void q();
     await ei();
     let e = new Set(
@@ -155,7 +155,7 @@ async function X() {
     for (let t of new Set([...R].filter((t) => !e.has(t)))) z(t);
     for (let e of R) K(e);
 }
-function Q(e) {
+function X(e) {
     let t = l.ZP.getGameOrTransformedSubgameForPID(e);
     o.Z.setAssociatedGame(null != U ? U : d.UNSET_PID, e, t);
 }
@@ -234,7 +234,7 @@ function eo() {
 }
 function es(e) {
     let { createWindowTriggeringPID: t } = e;
-    (Y = N(A({}, Y), { popoutOpened: !0 })), Q(t), (U = t), (j = t), (0, d.setPID)(t);
+    (Y = N(A({}, Y), { popoutOpened: !0 })), X(t), (U = t), (j = t), (0, d.setPID)(t);
 }
 function el(e) {
     let { createWindowTriggeringPID: t, nativeWindowHandle: n } = e;
@@ -260,7 +260,7 @@ function ed(e) {
         (U = t),
         (j = t),
         (0, d.setPID)(t),
-        Q(t),
+        X(t),
         J(),
         !0
     );
@@ -301,11 +301,14 @@ function eg(e) {
     Y = A({}, Y, t);
 }
 function eE(e) {
-    let { pid: t, windowHandle: n } = e;
-    if (((M = t), J(), null != n && null != t && V(t, (0, O.rd)(n)), null != n && null != D)) {
-        var r;
-        null == (r = D.setRenderingWindowHandle) || r.call(D, (0, O.rd)(n), t);
-    }
+    var t, n;
+    let { pid: r, windowHandle: i } = e;
+    (M = r),
+        J(),
+        null != i && null != r && V(r, (0, O.rd)(i)),
+        null != D &&
+            (null != i || (null == (t = D.version) ? void 0 : t.call(D)) > 0) &&
+            (null == (n = D.setRenderingWindowHandle) || n.call(D, (0, O.rd)(null != i ? i : "0"), r));
 }
 function eb(e) {
     P.verbose("Updating OverlayMethod", e), ea(e);
@@ -314,7 +317,7 @@ function ey(e) {
     Z[e.pid] = e.overlayState;
 }
 function eO() {
-    (D = y.Z.getNativeModule()), X();
+    (D = y.Z.getNativeModule()), Q();
 }
 function ev() {
     D = null;
