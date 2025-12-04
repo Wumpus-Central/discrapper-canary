@@ -168,16 +168,16 @@ function er(e) {
                 var t;
                 let [n] =
                         null !=
-                        (t = Object.entries(V.bq).find((t) => {
+                        (t = Object.entries(a).find((t) => {
                             let [n, r] = t;
-                            return r === e;
+                            return V.bq[r] === e;
                         }))
                             ? t
                             : [],
                     r = Number.parseInt(null != n ? n : "0");
                 eu(), E(r);
             },
-            [eu],
+            [eu, a],
         ),
         e_ = i.useCallback(() => {
             J && ((0, y.R5)(), t());
