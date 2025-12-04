@@ -16225,6 +16225,7 @@ screen and (max-width:485px) {
 }
 
 .volumeButton__2d263 {
+    cursor: pointer;
     line-height: 0
 }
 
