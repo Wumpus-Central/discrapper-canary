@@ -1,18 +1,18 @@
 n.d(t, {
     DK: () => b,
     Dx: () => E,
-    EJ: () => N,
+    EJ: () => P,
     Ee: () => y,
     Hh: () => C,
     II: () => I,
     MC: () => S,
     Vj: () => v,
-    ZP: () => w,
+    ZP: () => D,
     gO: () => T,
     i_: () => A,
-    jQ: () => P,
+    jQ: () => R,
     qE: () => O,
-    v6: () => R,
+    v6: () => w,
 }),
     n(953529),
     n(472816),
@@ -163,40 +163,42 @@ let I = (e) => {
             children: (0, r.jsx)(l.Z, { className: h.spinnerVideo }),
         });
     },
-    N = (e) => {
+    N = (e) =>
+        (0, r.jsx)(o.Text, {
+            tag: "span",
+            className: null == e ? void 0 : e.className,
+            variant: "text-sm/normal",
+            color: "text-default",
+            children: null == e ? void 0 : e.children,
+        }),
+    P = (e) => {
         let t,
-            { online: n, total: i, className: s, flat: l, textClassName: u } = e;
+            { online: n, total: i, className: o, flat: s, textClassName: l, renderText: u = N } = e;
         return null == i
             ? null
             : (null != n &&
                   n > 0 &&
                   (t = (0, r.jsxs)("div", {
-                      className: a()(h.pill, h.pillOnline, l && h.pillFlat),
+                      className: a()(h.pill, h.pillOnline, s && h.pillFlat),
                       children: [
                           (0, r.jsx)("i", { className: h.pillIconOnline }),
-                          (0, r.jsx)(o.Text, {
-                              tag: "span",
-                              className: u,
-                              variant: "text-sm/normal",
-                              color: "text-default",
+                          u({
+                              className: l,
                               children: m.intl.format(m.t["LC+S+m"], { membersOnline: n }),
                           }),
                       ],
                   })),
               (0, r.jsxs)(c.Z, {
                   justify: c.Z.Justify.CENTER,
-                  className: s,
+                  className: o,
                   children: [
                       t,
                       (0, r.jsxs)("div", {
-                          className: a()(h.pill, l && h.pillFlat),
+                          className: a()(h.pill, s && h.pillFlat),
                           children: [
                               (0, r.jsx)("i", { className: h.pillIconTotal }),
-                              (0, r.jsx)(o.Text, {
-                                  tag: "span",
-                                  className: u,
-                                  variant: "text-sm/normal",
-                                  color: "text-default",
+                              u({
+                                  className: l,
                                   children: m.intl.format(m.t.zRl6XR, { count: i }),
                               }),
                           ],
@@ -204,7 +206,7 @@ let I = (e) => {
                   ],
               }));
     },
-    P = (e) => {
+    R = (e) => {
         let { user: t } = e;
         return null == t
             ? null
@@ -233,7 +235,7 @@ let I = (e) => {
                   ],
               });
     },
-    R = (e) => {
+    w = (e) => {
         let { className: t } = e;
         return (0, r.jsxs)(T, {
             className: t,
@@ -253,7 +255,7 @@ let I = (e) => {
             ],
         });
     },
-    w = (e) => {
+    D = (e) => {
         let {
             className: t,
             contentClassName: n,

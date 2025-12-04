@@ -1,7 +1,7 @@
 n.d(l, { R: () => h });
 var t = n(54381),
-    a = n(473749),
-    i = n(481060),
+    i = n(473749),
+    a = n(481060),
     r = n(590965),
     s = n(590149),
     u = n(695346),
@@ -25,15 +25,14 @@ let h = () => {
             inviteCode: E,
         } = (0, o.XW)(),
         _ = null == (e = r.Z.getProps().invite) ? void 0 : e.is_nickname_changeable,
-        Z = a.useCallback(() => {
+        Z = i.useCallback(() => {
             d.default.track(m.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, {
                 guild_id: f,
                 invite_code: E,
             });
         }, [f, E]);
     return (0, t.jsxs)(s.Z, {
-        className: g.accordion,
-        icon: (0, t.jsx)(i.ewm, { size: "md" }),
+        icon: (0, t.jsx)(a.ewm, { size: "md" }),
         title: x.intl.string(x.t["A5wHQ/"]),
         subtitle: x.intl.string(x.t.UKCSEd),
         onOpen: Z,
@@ -43,12 +42,12 @@ let h = () => {
                 (0, t.jsxs)("div", {
                     className: g.serverNickname,
                     children: [
-                        (0, t.jsx)(i.Text, {
+                        (0, t.jsx)(a.Text, {
                             variant: "eyebrow",
                             color: "text-default",
                             children: x.intl.string(x.t.me1lRk),
                         }),
-                        (0, t.jsx)(i.oil, {
+                        (0, t.jsx)(a.oil, {
                             placeholder: x.intl.string(x.t["09Q8yp"]),
                             maxLength: m.l$U,
                             value: n,

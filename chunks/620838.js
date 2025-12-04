@@ -5,7 +5,6 @@ e.exports = {
     appIconSize: "appIconSize_fa285e",
     avatar: "avatar_fa285e",
     guildIcon: "guildIcon_fa285e",
-    compactAvatar: "compactAvatar_fa285e",
     inviteResolvingGuildName: "inviteResolvingGuildName_fa285e",
     title: "title_fa285e",
     activityCount: "activityCount_fa285e",

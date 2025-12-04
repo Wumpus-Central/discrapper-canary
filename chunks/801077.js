@@ -94,22 +94,29 @@ let V = "party-",
     K = !1,
     z = !1,
     q = [],
-    X = [],
-    Q = {},
+    Q = [],
+    X = {},
     J = {},
     $ = new Set(),
     ee = new Set();
 function et() {
     let e = L.Z.getFriendIDs();
     return new Set(
-        P.Z.hasConsented(U.pjP.PERSONALIZATION) ? [...O.Z.getUserAffinities().map((e) => e.otherUserId), ...e] : e,
+        P.Z.hasConsented(U.pjP.PERSONALIZATION)
+            ? [
+                  ...O.Z.getUserAffinities()
+                      .filter((e) => e.communicationRank <= 15)
+                      .map((e) => e.otherUserId),
+                  ...e,
+              ]
+            : e,
     );
 }
 function en(e) {
     return x.Z.findActivity(e, (e) => e.type !== U.IIU.CUSTOM_STATUS);
 }
 function er(e) {
-    return null == Q[e] && (Q = F(Z({}, Q), { [e]: new A.Z({ name: e }) })), Q[e];
+    return null == X[e] && (X = F(Z({}, X), { [e]: new A.Z({ name: e }) })), X[e];
 }
 function ei(e) {
     return null == J[e] && (J = F(Z({}, J), { [e]: new T.Z({ url: e }) })), J[e];
@@ -382,7 +389,7 @@ function eO() {
 function ev() {
     if (!eO()) return !1;
     $.clear(),
-        (X = eb(
+        (Q = eb(
             (q = eE(
                 e_(
                     ep(
@@ -406,7 +413,7 @@ function eI() {
     return !!eO() && (eS(), !1);
 }
 function eT() {
-    (K = !1), (q = []), (X = []), $.clear();
+    (K = !1), (q = []), (Q = []), $.clear();
 }
 function eA() {
     (K = !0), eS();
@@ -423,7 +430,7 @@ class eN extends (r = o.ZP.Store) {
         return q;
     }
     get nowPlayingCards() {
-        return X;
+        return Q;
     }
     get isMounted() {
         return K;

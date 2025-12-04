@@ -1,6 +1,8 @@
 e.exports = {
-    container: "container__9b0f4",
+    modalContainer: "modalContainer__9b0f4",
     contentWrapper: "contentWrapper__9b0f4",
+    inviterContainer: "inviterContainer__9b0f4",
+    noThanksContainer: "noThanksContainer__9b0f4",
     noThanksButton: "noThanksButton__9b0f4",
     inviteContent: "inviteContent__9b0f4",
     inviteSplash: "inviteSplash__9b0f4",

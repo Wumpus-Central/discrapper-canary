@@ -1,15 +1,15 @@
 n.d(l, { Z: () => d });
 var t = n(54381);
 n(473749);
-var a = n(399606),
-    i = n(481060),
+var i = n(399606),
+    a = n(481060),
     r = n(700582),
     s = n(594174),
     u = n(388032),
     c = n(105156);
 function d(e) {
     let { friendMemberIds: l } = e,
-        n = (0, a.Wu)([s.default], () =>
+        n = (0, i.Wu)([s.default], () =>
             l
                 .slice(0, 3)
                 .map((e) => s.default.getUser(e))
@@ -36,16 +36,16 @@ function d(e) {
                             style: { zIndex: n.length - l },
                             children: (0, t.jsx)(r.Z, {
                                 user: e,
-                                size: i.EFr.SIZE_16,
+                                size: a.EFr.SIZE_16,
                             }),
                         },
                         e.id,
                     ),
                 ),
             }),
-            (0, t.jsx)(i.Text, {
-                variant: "text-sm/normal",
-                color: "text-default",
+            (0, t.jsx)(a.Text, {
+                variant: "text-sm/medium",
+                color: "text-subtle",
                 children: m,
             }),
         ],
