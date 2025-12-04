@@ -17,7 +17,7 @@ n.d(t, {
     X: () => u,
     Xr: () => p,
     aV: () => eF,
-    az: () => X,
+    az: () => Q,
     bE: () => eh,
     c$: () => ti,
     dp: () => tn,
@@ -292,7 +292,7 @@ class w extends o.C {
                     a.guilds = M.internalBinaryRead(e, e.uint32(), n, a.guilds);
                     break;
                 case 4:
-                    a.userContent = X.internalBinaryRead(e, e.uint32(), n, a.userContent);
+                    a.userContent = Q.internalBinaryRead(e, e.uint32(), n, a.userContent);
                     break;
                 case 5:
                     a.voiceAndVideo = en.internalBinaryRead(e, e.uint32(), n, a.voiceAndVideo);
@@ -373,7 +373,7 @@ class w extends o.C {
         e.versions && c.L.internalBinaryWrite(e.versions, t.tag(1, r.TD.LengthDelimited).fork(), n).join(),
             e.inbox && L.internalBinaryWrite(e.inbox, t.tag(2, r.TD.LengthDelimited).fork(), n).join(),
             e.guilds && M.internalBinaryWrite(e.guilds, t.tag(3, r.TD.LengthDelimited).fork(), n).join(),
-            e.userContent && X.internalBinaryWrite(e.userContent, t.tag(4, r.TD.LengthDelimited).fork(), n).join(),
+            e.userContent && Q.internalBinaryWrite(e.userContent, t.tag(4, r.TD.LengthDelimited).fork(), n).join(),
             e.voiceAndVideo && en.internalBinaryWrite(e.voiceAndVideo, t.tag(5, r.TD.LengthDelimited).fork(), n).join(),
             e.textAndImages && ef.internalBinaryWrite(e.textAndImages, t.tag(6, r.TD.LengthDelimited).fork(), n).join(),
             e.notifications && e_.internalBinaryWrite(e.notifications, t.tag(7, r.TD.LengthDelimited).fork(), n).join(),
@@ -426,7 +426,7 @@ class w extends o.C {
                 no: 4,
                 name: "user_content",
                 kind: "message",
-                T: () => X,
+                T: () => Q,
             },
             {
                 no: 5,
@@ -1497,8 +1497,8 @@ class q extends o.C {
         ]);
     }
 }
-let X = new q();
-class Q extends o.C {
+let Q = new q();
+class X extends o.C {
     create(e) {
         let t = {
             id: "0",
@@ -1560,7 +1560,7 @@ class Q extends o.C {
         ]);
     }
 }
-let J = new Q();
+let J = new X();
 class $ extends o.C {
     create(e) {
         let t = { useBlur: !1 };
@@ -1667,7 +1667,7 @@ class et extends o.C {
                     );
                     break;
                 case 9:
-                    a.soundboardSettings = eX.internalBinaryRead(e, e.uint32(), n, a.soundboardSettings);
+                    a.soundboardSettings = eQ.internalBinaryRead(e, e.uint32(), n, a.soundboardSettings);
                     break;
                 case 10:
                     a.disableStreamPreviews = s.D5.internalBinaryRead(e, e.uint32(), n, a.disableStreamPreviews);
@@ -1712,7 +1712,7 @@ class et extends o.C {
                     n,
                 ).join(),
             e.soundboardSettings &&
-                eX.internalBinaryWrite(e.soundboardSettings, t.tag(9, r.TD.LengthDelimited).fork(), n).join(),
+                eQ.internalBinaryWrite(e.soundboardSettings, t.tag(9, r.TD.LengthDelimited).fork(), n).join(),
             e.disableStreamPreviews &&
                 s.D5.internalBinaryWrite(e.disableStreamPreviews, t.tag(10, r.TD.LengthDelimited).fork(), n).join(),
             e.soundmojiVolume &&
@@ -1771,7 +1771,7 @@ class et extends o.C {
                 no: 9,
                 name: "soundboard_settings",
                 kind: "message",
-                T: () => eX,
+                T: () => eQ,
             },
             {
                 no: 10,
@@ -2635,6 +2635,14 @@ class ep extends o.C {
                         a.enableFriendAnniversaryNotifications,
                     );
                     break;
+                case 15:
+                    a.enableGameUpdateNotifications = s.D5.internalBinaryRead(
+                        e,
+                        e.uint32(),
+                        n,
+                        a.enableGameUpdateNotifications,
+                    );
+                    break;
                 default:
                     let o = n.readUnknownField;
                     if ("throw" === o)
@@ -2693,6 +2701,12 @@ class ep extends o.C {
                 s.D5.internalBinaryWrite(
                     e.enableFriendAnniversaryNotifications,
                     t.tag(14, r.TD.LengthDelimited).fork(),
+                    n,
+                ).join(),
+            e.enableGameUpdateNotifications &&
+                s.D5.internalBinaryWrite(
+                    e.enableGameUpdateNotifications,
+                    t.tag(15, r.TD.LengthDelimited).fork(),
                     n,
                 ).join();
         let i = n.writeUnknownFields;
@@ -2781,6 +2795,12 @@ class ep extends o.C {
             {
                 no: 14,
                 name: "enable_friend_anniversary_notifications",
+                kind: "message",
+                T: () => s.D5,
+            },
+            {
+                no: 15,
+                name: "enable_game_update_notifications",
                 kind: "message",
                 T: () => s.D5,
             },
@@ -4676,8 +4696,8 @@ class eq extends o.C {
         ]);
     }
 }
-let eX = new eq();
-class eQ extends o.C {
+let eQ = new eq();
+class eX extends o.C {
     create(e) {
         let t = {
             soundId: "0",
@@ -4739,7 +4759,7 @@ class eQ extends o.C {
         ]);
     }
 }
-let eJ = new eQ();
+let eJ = new eX();
 class e$ extends o.C {
     create(e) {
         let t = {

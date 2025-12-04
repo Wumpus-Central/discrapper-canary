@@ -23181,6 +23181,13 @@
   "SK5rmi": "Top Shop Picks",
   "wyMp1j": "Find !!{username}!! the perfect gift from our most popular Shop styles",
   "cuSp8Q": "{count, plural, one {year} other { years} }",
+  "OacAil": "Available",
+  "/MxjmI": "More !!{gameName}!! game updates?",
+  "3TO4/r": "Game Update",
+  "diGDe0": "Receive notifications when a game you have played is updated.",
+  "/iXnwU": "Page failed to load",
+  "4Wc+CC": "{count}d ago",
+  "a0fXhG": "In {count}d",
   "RPb8Zk": "Your feedback helps us improve Discord safety features.",
   "cDP3b4": "Feedback submitted",
   "KZw6kn": "What isn't working well?",
@@ -23354,10 +23361,5 @@
   "vRDE5O": "Audio and video were desynced",
   "yfwZuy": "View My Badge",
   "UnPGii": "The badge has been added to your profile.",
-  "nvaTQq": "You Collected the Orbs Profile Badge!",
-  "OacAil": "Available",
-  "/MxjmI": "More !!{gameName}!! game updates?",
-  "/iXnwU": "Page failed to load",
-  "4Wc+CC": "{count}d ago",
-  "a0fXhG": "In {count}d"
+  "nvaTQq": "You Collected the Orbs Profile Badge!"
 }
