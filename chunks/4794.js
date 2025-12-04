@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(120356),
@@ -8,8 +8,9 @@ var r = n(54381),
     c = n(36361),
     u = n(530171),
     d = n(175993),
-    f = n(445642);
-function p(e, t, n) {
+    f = n(774642),
+    p = n(445642);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +23,7 @@ function p(e, t, n) {
         e
     );
 }
-function _(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,12 +34,12 @@ function _(e) {
                 }),
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,22 +51,22 @@ function m(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function g(e) {
+function E(e) {
     let { node: t } = e,
-        { useTitle: n, layout: a, useCollapsedSubtitle: p, useNotice: m } = t,
-        [g, E] = i.useState(!1),
-        [b, y] = i.useState(!0);
+        { useTitle: n, layout: a, useCollapsedSubtitle: _, useNotice: h } = t,
+        [E, b] = i.useState(!1),
+        [y, O] = i.useState(!0);
     i.useEffect(
         () =>
             l.Z.subscribe(
@@ -76,20 +77,20 @@ function g(e) {
                 (e) => {
                     if (null == e) return;
                     let n = (null == e ? void 0 : e.targetAccordionKey) === t.key;
-                    n && !g && (E(!0), y(!1)),
-                        n && g && (l.Z.setState({ navTransition: h(_({}, e), { targetAccordionKey: void 0 }) }), y(!0));
+                    n && !E && (b(!0), O(!1)),
+                        n && E && (l.Z.setState({ navTransition: g(m({}, e), { targetAccordionKey: void 0 }) }), O(!0));
                 },
                 {
                     equalityFn: s.X,
                     fireImmediately: !0,
                 },
             ),
-        [g, t.key],
+        [E, t.key],
     );
-    let O = null == n ? void 0 : n(g),
-        v = null == p ? void 0 : p(),
-        S = null == m ? void 0 : m(),
-        I = i.useCallback(
+    let v = null == n ? void 0 : n(E),
+        S = null == _ ? void 0 : _(),
+        I = null == h ? void 0 : h(),
+        T = i.useCallback(
             (e) => {
                 e &&
                     l.Z.setState({
@@ -104,16 +105,20 @@ function g(e) {
             [t.key],
         );
     return (0, r.jsx)("div", {
-        className: o()({ [f.open]: g }),
+        style: {
+            "--custom-base-setting-wrapper-horizontal-padding": "".concat(f.q, "px"),
+            "--custom-base-setting-wrapper-vertical-padding": "".concat(f.G, "px"),
+        },
+        className: o()({ [p.open]: E }),
         children: (0, r.jsxs)(u.I, {
-            title: O,
-            collapsedSubtitle: v,
-            isExpanded: g,
-            onExpandedChange: E,
-            onExpandedChangeComplete: I,
-            animate: b,
-            children: [null != S && (0, r.jsx)(d.Z, { notice: S }), a.map((e) => (0, r.jsx)(c.Z, { node: e }, e.key))],
+            title: v,
+            collapsedSubtitle: S,
+            isExpanded: E,
+            onExpandedChange: b,
+            onExpandedChangeComplete: T,
+            animate: y,
+            children: [null != I && (0, r.jsx)(d.Z, { notice: I }), a.map((e) => (0, r.jsx)(c.Z, { node: e }, e.key))],
         }),
     });
 }
-let E = i.memo(g);
+let b = i.memo(E);
