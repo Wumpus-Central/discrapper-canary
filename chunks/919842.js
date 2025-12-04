@@ -1,33 +1,58 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(54381),
-    i = n(120356),
-    l = n.n(i),
-    a = n(793030),
-    s = n(704215),
-    o = n(243778),
-    c = n(665149),
-    u = n(840767),
-    d = n(45173),
-    p = n(921944),
-    f = n(140939),
-    h = n(388032),
-    g = n(547971);
-function m(e) {
+    i = n(473749),
+    l = n(120356),
+    a = n.n(l),
+    s = n(793030),
+    o = n(442837),
+    c = n(704215),
+    u = n(907862),
+    d = n(243778),
+    p = n(665149),
+    f = n(515970),
+    h = n(5888),
+    g = n(840767),
+    m = n(45173),
+    _ = n(921944),
+    b = n(140939),
+    E = n(388032),
+    O = n(547971);
+function v(e) {
     let { className: t } = e,
-        [n, i] = (0, o.US)([s.z.CHECKPOINT_2025_DESKTOP_UPSELL]),
-        m = n === s.z.CHECKPOINT_2025_DESKTOP_UPSELL;
+        [n, l] = (0, d.US)([c.z.CHECKPOINT_2025_DESKTOP_UPSELL]),
+        v = (0, o.e7)([h.Z], () => h.Z.hasOpenedCheckpointThisSession && !h.Z.hasSeenRewatchPopover),
+        y = i.useRef(null),
+        I = n === c.z.CHECKPOINT_2025_DESKTOP_UPSELL,
+        C = () => {
+            (0, f.OL)();
+        };
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(c.JO, {
+            (0, r.jsx)(p.JO, {
+                ref: y,
                 className: t,
                 onClick: () => {
-                    (0, u.Z)("header_bar"), m && i(p.L.INDIRECT_ACTION);
+                    (0, g.Z)("header_bar"), I && l(_.L.INDIRECT_ACTION);
                 },
-                icon: a.d5i,
-                tooltip: h.intl.string(f.default["CdU/PF"]),
-                foreground: l()(g.iconForeground, m ? g.highlighted : null),
+                icon: s.d5i,
+                tooltip: E.intl.string(b.default["CdU/PF"]),
+                foreground: a()(O.iconForeground, I ? O.highlighted : null),
             }),
-            m && (0, r.jsx)(d.Z, { markAsDismissed: i }),
+            !I &&
+                v &&
+                (0, r.jsx)(u.J2, {
+                    targetElementRef: y,
+                    title: E.intl.string(b.default.goiR2u),
+                    body: E.intl.string(b.default.UYjWa5),
+                    onRequestClose: C,
+                    actions: [
+                        {
+                            text: E.intl.string(E.t["NX+WJN"]),
+                            onClick: C,
+                        },
+                    ],
+                }),
+            I && (0, r.jsx)(m.Z, { markAsDismissed: l }),
         ],
     });
 }
