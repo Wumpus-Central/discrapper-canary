@@ -196,111 +196,114 @@ async function w() {
         return;
     }
     try {
+        var t, n, r, i, s, l, c, u;
         let { body: e } = await a.tn.get({
                 url: "/checkpoint",
                 rejectWithError: !0,
             }),
             {
-                card_id: t,
-                power_level: n,
-                power_level_percentile: r,
-                messages: i,
-                emojis: s,
-                voice: l,
-                guilds: c,
-                users: u,
-                sidekick: d,
-                applications: f,
-                quests: p,
-                avatar_decoration: m,
+                card_id: d,
+                power_level: f,
+                power_level_percentile: p,
+                messages: m,
+                emojis: g,
+                voice: b,
+                guilds: y,
+                users: O,
+                sidekick: I,
+                applications: T,
+                quests: A,
+                avatar_decoration: N,
             } = e;
         o.Z.dispatch({
             type: "CHECKPOINT_FETCH_SUCCESS",
             data: {
-                cardId: t,
-                powerLevel: n,
-                powerLevelPercentile: r,
+                cardId: d,
+                powerLevel: f,
+                powerLevelPercentile: p,
                 messages:
-                    null != i
+                    null != m
                         ? {
-                              numMessagesSent: i.num_messages_sent,
-                              numMessagesSentPercentile: i.num_messages_sent_percentile,
+                              numMessagesSent: m.num_messages_sent,
+                              numMessagesSentPercentile: m.num_messages_sent_percentile,
                               topMonth: {
-                                  month: i.top_month.month,
-                                  numMessagesSent: i.top_month.num_messages_sent,
+                                  month: null != (s = null == (t = m.top_month) ? void 0 : t.month) ? s : 1,
+                                  numMessagesSent:
+                                      null != (l = null == (n = m.top_month) ? void 0 : n.num_messages_sent) ? l : 0,
                               },
                           }
                         : void 0,
                 emojis:
-                    null != s
+                    null != g
                         ? {
-                              emojis: s.emojis.map((e) =>
+                              emojis: g.emojis.map((e) =>
                                   P(C({}, e), { id: S.default.isProbablyAValidSnowflake(e.id) ? e.id : void 0 }),
                               ),
-                              numEmojisSent: s.num_emojis_sent,
+                              numEmojisSent: g.num_emojis_sent,
                           }
                         : void 0,
                 voice:
-                    null != l
+                    null != b
                         ? {
-                              totalVoiceMinutes: l.total_voice_minutes,
-                              totalVoiceMinutesPercentile: l.total_voice_minutes_percentile,
+                              totalVoiceMinutes: b.total_voice_minutes,
+                              totalVoiceMinutesPercentile: b.total_voice_minutes_percentile,
                               topMonth: {
-                                  month: l.top_month.month,
-                                  numMinutesInVoice: l.top_month.num_minutes_in_voice,
+                                  month: null != (c = null == (r = b.top_month) ? void 0 : r.month) ? c : 1,
+                                  numMinutesInVoice:
+                                      null != (u = null == (i = b.top_month) ? void 0 : i.num_minutes_in_voice) ? u : 0,
                               },
                           }
                         : void 0,
                 guilds:
-                    null != c
+                    null != y
                         ? {
-                              guilds: c.guilds.map((e) => ({
+                              guilds: y.guilds.map((e) => ({
                                   numMessagesSent: e.num_messages_sent,
                                   numVoiceMinutes: e.num_voice_minutes,
                                   guild: (0, v.wD)(e.guild, E.Z.getGuild(e.guild.id)),
                               })),
-                              numGuildsJoined: c.num_guilds_joined,
+                              numGuildsJoined: y.num_guilds_joined,
                           }
                         : void 0,
                 users:
-                    null != u
-                        ? u.map((e) => {
+                    null != O
+                        ? O.map((e) => {
                               let { user: t } = e;
                               return new _.Z(t);
                           })
                         : void 0,
                 applications:
-                    null != f
+                    null != T
                         ? {
-                              applications: f.applications.map((e) => ({
+                              applications: T.applications.map((e) => ({
                                   game: P(C({}, (0, h.m)(e.game)), { coverImageHash: e.game.cover_image_hash }),
                                   numDaysPlayed: e.num_sessions,
                               })),
-                              totalGamesPlayed: f.total_games_played,
+                              totalGamesPlayed: T.total_games_played,
                           }
                         : void 0,
                 quests:
-                    null != p
+                    null != A
                         ? {
-                              numCompleted: p.num_completed,
-                              numOrbs: p.num_orbs,
+                              numCompleted: A.num_completed,
+                              numOrbs: A.num_orbs,
                           }
                         : void 0,
                 sidekick:
-                    null != d
+                    null != I
                         ? {
-                              numMessagesSent: d.num_messages_sent,
-                              numVoiceMinutes: d.num_voice_minutes,
-                              user: new _.Z(d.user),
+                              numMessagesSent: I.num_messages_sent,
+                              numVoiceMinutes: I.num_voice_minutes,
+                              user: new _.Z(I.user),
                           }
                         : void 0,
                 avatarDecoration:
-                    null != m
+                    null != N
                         ? {
-                              type: m.type,
-                              asset: m.asset,
-                              label: m.label,
-                              skuId: m.sku_id,
+                              type: N.type,
+                              asset: N.asset,
+                              label: N.label,
+                              skuId: N.sku_id,
                           }
                         : void 0,
             },
