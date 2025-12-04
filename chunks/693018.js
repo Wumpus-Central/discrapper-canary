@@ -29,8 +29,8 @@ let _ = 256,
     g = 40,
     E = 45,
     b = 45,
-    y = 25,
-    O = 4,
+    y = 100,
+    O = 2,
     v = 1,
     S = [0, 0, 2],
     I = [0, 1, 0],
@@ -200,11 +200,11 @@ function j(e) {
                 if (((j.current += -Z.current * r), (x.current += -G.current * r), !B.current)) {
                     if (Math.abs(G.current) > k) {
                         let e = G.current > 0 ? 1 : -1;
-                        G.current -= O * e;
+                        G.current -= O * e * window.devicePixelRatio;
                     }
                     if (Math.abs(Z.current) > U) {
                         let e = Z.current > 0 ? 1 : -1;
-                        Z.current -= O * e;
+                        Z.current -= O * e * window.devicePixelRatio;
                     }
                 }
                 (R.current = n), (P.current = requestAnimationFrame(e));
@@ -216,9 +216,9 @@ function j(e) {
         }, []),
         W = i.useCallback((e) => {
             if (B.current) {
-                let t = e.clientX - F.current;
-                (G.current = -(e.clientY - V.current) * y),
-                    (Z.current = -t * y),
+                let t = (e.clientX - F.current) / window.devicePixelRatio;
+                (G.current = -((e.clientY - V.current) / window.devicePixelRatio) * (y / window.devicePixelRatio)),
+                    (Z.current = -t * (y / window.devicePixelRatio)),
                     (F.current = e.clientX),
                     (V.current = e.clientY);
             }

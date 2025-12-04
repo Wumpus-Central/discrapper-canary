@@ -1,36 +1,39 @@
-n.d(t, { Z: () => o }), n(388685);
+n.d(t, { Z: () => c }), n(388685);
 var r = n(473749),
-    i = n(302221);
-let a = 500;
-function o(e) {
+    i = n(392711),
+    a = n.n(i),
+    o = n(302221);
+let s = 500,
+    l = 100;
+function c(e) {
     let [t, n] = (0, r.useState)(e),
-        [o, s] = (0, r.useState)(e),
-        [l, c] = (0, r.useState)(e),
-        u = (0, r.useRef)(l),
-        d = (0, r.useRef)(null);
+        [i, c] = (0, r.useState)(e),
+        [u, d] = (0, r.useState)(e),
+        f = (0, r.useRef)(u),
+        p = (0, r.useRef)(null);
     return (
         (0, r.useEffect)(() => {
-            s(e), n(u.current);
+            c(e), n(f.current);
         }, [e]),
         (0, r.useEffect)(() => {
-            if ((null != d.current && cancelAnimationFrame(d.current), t === o)) {
-                d.current = null;
+            if ((null != p.current && cancelAnimationFrame(p.current), t === i)) {
+                p.current = null;
                 return;
             }
             let e = Date.now(),
-                n = () => {
-                    let r = Math.min((Date.now() - e) / a, 1),
-                        s = (0, i.BM)(t, o, r);
-                    c(s), (u.current = s), r < 1 && (d.current = requestAnimationFrame(n));
-                };
+                n = a().throttle(() => {
+                    let r = Math.min((Date.now() - e) / s, 1),
+                        a = (0, o.BM)(t, i, r);
+                    d(a), (f.current = a), r < 1 && (p.current = requestAnimationFrame(n));
+                }, l);
             return (
-                (d.current = requestAnimationFrame(n)),
+                (p.current = requestAnimationFrame(n)),
                 () => {
                     var e;
-                    return cancelAnimationFrame(null != (e = d.current) ? e : 0);
+                    cancelAnimationFrame(null != (e = p.current) ? e : 0), n.cancel();
                 }
             );
-        }, [t, o]),
-        l
+        }, [t, i]),
+        u
     );
 }
