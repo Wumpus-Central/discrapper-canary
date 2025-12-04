@@ -85753,9 +85753,9 @@ div.nagbar_d74ef8 {
     background-color: var(--background-mod-faint);
     border-radius: var(--radius-sm);
     display: flex;
-    height: 40px;
+    height: 48px;
     justify-content: center;
-    width: 40px
+    width: 48px
 }
 
 .triggerButton__64c86 {
@@ -85903,6 +85903,11 @@ div.nagbar_d74ef8 {
     padding: var(--space-16);
     position: absolute;
     z-index: 2
+}
+
+.title__28f6b {
+    margin-inline: var(--space-12);
+    margin-bottom: var(--space-4)
 }
 
 .split__678d3 {

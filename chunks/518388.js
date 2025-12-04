@@ -19,4 +19,6 @@ e.exports = {
     bottomRow: "bottomRow_b5b7aa",
     hints: "hints_b5b7aa",
     hintsContainer: "hintsContainer_b5b7aa",
+    promotedByRow: "promotedByRow_b5b7aa",
+    verifiedIcon: "verifiedIcon_b5b7aa",
 };
