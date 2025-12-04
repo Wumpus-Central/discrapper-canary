@@ -115,40 +115,42 @@ let f = l.memo(function (e) {
         }, [i, E, o, R, f]);
     return null == i
         ? null
-        : (0, r.jsx)(u.xJW, {
-              title: (0, r.jsxs)("div", {
-                  className: h.headerContainer,
-                  children: [
-                      (0, r.jsx)(u.Text, {
-                          variant: "eyebrow",
-                          color: "text-default",
-                          children: N.intl.string(N.t.ZCq2nC),
-                      }),
-                      (0, r.jsxs)(u.P3F, {
-                          className: h.viewAllPermissions,
-                          onClick: () => n(m.k.PERMISSIONS),
-                          children: [
-                              (0, r.jsx)(u.Text, {
-                                  variant: "eyebrow",
-                                  color: "interactive-normal",
-                                  children: N.intl.format(N.t["0x6aTm"], { count: d }),
-                              }),
-                              (0, r.jsx)(u.Fbu, {
-                                  size: "custom",
-                                  width: 16,
-                                  height: 16,
-                              }),
-                          ],
-                      }),
-                  ],
-              }),
-              children: (0, r.jsx)(T.WM, {
-                  children: (0, r.jsx)(T._2, {
-                      description: (0, r.jsx)("div", {
-                          className: h.permissionsContainer,
-                          children: S,
+        : (0, r.jsxs)(r.Fragment, {
+              children: [
+                  (0, r.jsxs)("div", {
+                      className: h.headerContainer,
+                      children: [
+                          (0, r.jsx)(u.Text, {
+                              variant: "eyebrow",
+                              color: "text-default",
+                              children: N.intl.string(N.t.ZCq2nC),
+                          }),
+                          (0, r.jsxs)(u.P3F, {
+                              className: h.viewAllPermissions,
+                              onClick: () => n(m.k.PERMISSIONS),
+                              children: [
+                                  (0, r.jsx)(u.Text, {
+                                      variant: "eyebrow",
+                                      color: "interactive-normal",
+                                      children: N.intl.format(N.t["0x6aTm"], { count: d }),
+                                  }),
+                                  (0, r.jsx)(u.Fbu, {
+                                      size: "custom",
+                                      width: 16,
+                                      height: 16,
+                                  }),
+                              ],
+                          }),
+                      ],
+                  }),
+                  (0, r.jsx)(T.WM, {
+                      children: (0, r.jsx)(T._2, {
+                          description: (0, r.jsx)("div", {
+                              className: h.permissionsContainer,
+                              children: S,
+                          }),
                       }),
                   }),
-              }),
+              ],
           });
 });
