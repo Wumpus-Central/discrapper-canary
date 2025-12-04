@@ -1,5 +1,6 @@
 n.d(t, { Z: () => en }),
     n(539854),
+    n(953529),
     n(388685),
     n(781311),
     n(190126),
@@ -23,8 +24,8 @@ var i = n(54381),
     m = n(166459),
     g = n(911969),
     b = n(476326),
-    y = n(607070),
-    C = n(100527),
+    C = n(607070),
+    y = n(100527),
     v = n(906732),
     _ = n(998698),
     O = n(326133),
@@ -47,8 +48,8 @@ var i = n(54381),
     U = n(746877),
     V = n(541716),
     F = n(667829),
-    B = n(258696),
-    H = n(893718),
+    H = n(258696),
+    B = n(893718),
     G = n(273031),
     z = n(303628),
     W = n(981631),
@@ -101,22 +102,22 @@ function ee(e, t) {
         e
     );
 }
-function et(e, t) {
-    let n = e.startsWith("attachment://"),
-        i = e;
-    if (n) {
-        let n = e.slice(13);
-        i = t ? "attachment://SPOILER_".concat(n) : e;
+function et(e, t, n) {
+    let i = e.startsWith("attachment://"),
+        r = e;
+    if (i) {
+        let t = e.slice(13);
+        r = n ? "attachment://SPOILER_".concat(t) : e;
     }
     return {
         media: {
-            url: i,
-            proxyUrl: i,
+            url: r,
+            proxyUrl: r,
             loadingState: g.f.UNKNOWN,
             flags: 0,
         },
-        description: e,
-        spoiler: t,
+        description: null != t ? t : void 0,
+        spoiler: n,
     };
 }
 let en = r.memo(
@@ -146,8 +147,8 @@ let en = r.memo(
                 placeholder: em,
                 "aria-describedby": eg,
                 "aria-labelledby": eb,
-                setEditorRef: ey,
-                autoCompletePosition: eC,
+                setEditorRef: eC,
+                autoCompletePosition: ey,
                 disableThemedBackground: ev = !1,
                 emojiPickerCloseOnModalOuterClick: e_,
                 parentModalKey: eO,
@@ -158,13 +159,13 @@ let en = r.memo(
             eS = null == (o = null == ex ? void 0 : ex.publish) || o,
             eP = null == (u = null == ex ? void 0 : ex.createThread) || u;
         s()(null != k, "chat input type must be set");
-        let { analyticsLocations: eI } = (0, v.ZP)(C.Z.CHANNEL_TEXT_AREA),
-            eZ = (0, H.qz)(t),
+        let { analyticsLocations: eI } = (0, v.ZP)(y.Z.CHANNEL_TEXT_AREA),
+            eZ = (0, B.qz)(t),
             eT = r.useRef(null),
             eN = r.useRef(null),
             eA = r.useRef(null),
             ew = r.useRef(null);
-        null == ey || ey(eN.current);
+        null == eC || eC(eN.current);
         let { activeCommand: eM } = (0, d.cj)([_.Z], () => {
                 var e, t;
                 return {
@@ -180,18 +181,18 @@ let en = r.memo(
                 disabled: eD,
                 canAttachFiles: ek,
                 canEveryoneSendMessages: eU,
-            } = (0, H.TE)(L, k, eM, I),
+            } = (0, B.TE)(L, k, eM, I),
             eV = !A.dN.useSetting() && !(0, D.isAndroidWeb)() && null != window.ResizeObserver,
             eF = !eV || !(null == (n = k.commands) ? void 0 : n.enabled) || !G || p !== q.GI,
-            eB = (0, T.Z)(),
-            { fontSize: eH } = (0, d.cj)([y.Z], () => ({
-                fontSize: y.Z.fontSize,
-                isSubmitButtonEnabled: y.Z.isSubmitButtonEnabled,
+            eH = (0, T.Z)(),
+            { fontSize: eB } = (0, d.cj)([C.Z], () => ({
+                fontSize: C.Z.fontSize,
+                isSubmitButtonEnabled: C.Z.isSubmitButtonEnabled,
             })),
             eG = (0, d.e7)([M.Z], () => M.Z.isEnabled()),
             ez = (0, N.NE)(L);
-        (0, H.hJ)(k, eD, L.id);
-        let { eventEmitter: eW, handleEditorSelectionChanged: eq } = (0, H.x2)(eN, p, h),
+        (0, B.hJ)(k, eD, L.id);
+        let { eventEmitter: eW, handleEditorSelectionChanged: eq } = (0, B.x2)(eN, p, h),
             eK = r.useCallback(
                 (e) => {
                     let t = (e) => {
@@ -224,7 +225,7 @@ let en = r.memo(
                         ).then(t);
                     n.push({
                         type: g.re.MEDIA_GALLERY,
-                        items: [et("attachment://".concat(ej.name), !1)],
+                        items: [et("attachment://".concat(ej.name), null, !1)],
                         id: "".concat(K.Vm),
                     }),
                         e.value.length > 0 &&
@@ -236,7 +237,7 @@ let en = r.memo(
                     let r = R.Z.getUploads(L.id, w.d.ChannelMessage),
                         l = r.filter((e) => (e.isImage || e.isVideo) && e.filename !== (null == ej ? void 0 : ej.name)),
                         a = r.filter((e) => !e.isImage && !e.isVideo && e.filename !== (null == ej ? void 0 : ej.name)),
-                        o = l.map((e) => et("attachment://".concat(e.filename), !1));
+                        o = l.map((e) => et("attachment://".concat(e.filename), e.description, e.spoiler));
                     return (
                         o.length > 0 &&
                             n.push({
@@ -247,8 +248,9 @@ let en = r.memo(
                         a.forEach((e, t) => {
                             n.push({
                                 type: g.re.FILE,
-                                file: et("attachment://".concat(e.filename), !1).media,
+                                file: et("attachment://".concat(e.filename), e.description, e.spoiler).media,
                                 id: "".concat(K.kn + t),
+                                spoiler: e.spoiler,
                                 name: null,
                                 size: null,
                             });
@@ -267,13 +269,13 @@ let en = r.memo(
                 },
                 [eu, eE, ej, L.id, eP, eS, ez],
             ),
-            { submit: eY, handleSubmit: eX } = (0, H.bL)(eK, k, eN, ew, L.id),
-            { autocompleteRef: eJ, handleMaybeShowAutocomplete: eQ, handleHideAutocomplete: e$ } = (0, H.jx)(),
+            { submit: eY, handleSubmit: eX } = (0, B.bL)(eK, k, eN, ew, L.id),
+            { autocompleteRef: eJ, handleMaybeShowAutocomplete: eQ, handleHideAutocomplete: e$ } = (0, B.jx)(),
             e0 = r.useCallback(() => {
                 var e;
                 return null == ew || null == (e = ew.current) ? void 0 : e.hide();
             }, []),
-            { editorHeight: e1, handleResize: e2 } = (0, H.oR)(en),
+            { editorHeight: e1, handleResize: e2 } = (0, B.oR)(en),
             {
                 handleTab: e3,
                 handleEnter: e4,
@@ -310,12 +312,12 @@ let en = r.memo(
                     ),
                 };
             })(eJ, eT, eF),
-            { expressionPickerView: e8, shouldHideExpressionPicker: e5, handleOuterClick: e6 } = (0, H.iV)(k, eN, L.id),
-            e9 = (0, H.aT)(p),
-            { currentAutocompleteType: te, handleAutocompleteVisibilityChange: tt } = (0, H.vB)(k, L.id),
-            tn = (0, H.ae)(eN),
-            ti = (0, H.Sg)(eY, k, eN),
-            tr = (0, H.O1)({
+            { expressionPickerView: e8, shouldHideExpressionPicker: e5, handleOuterClick: e6 } = (0, B.iV)(k, eN, L.id),
+            e9 = (0, B.aT)(p),
+            { currentAutocompleteType: te, handleAutocompleteVisibilityChange: tt } = (0, B.vB)(k, L.id),
+            tn = (0, B.ae)(eN),
+            ti = (0, B.Sg)(eY, k, eN),
+            tr = (0, B.O1)({
                 editorRef: eN,
                 disabled: eD,
                 textValue: p,
@@ -434,7 +436,7 @@ let en = r.memo(
                                                             type: V.Ie.CREATE_ANNOUNCEMENT_POST,
                                                             canPasteFiles: ek,
                                                             uploadPromptCharacterCount: W.en1,
-                                                            maxCharacterCount: null != ef ? ef : eB,
+                                                            maxCharacterCount: null != ef ? ef : eH,
                                                             allowNewLines: !0,
                                                             "aria-describedby": eg,
                                                             onChange: Y,
@@ -450,7 +452,7 @@ let en = r.memo(
                                                             onMaybeShowAutocomplete: eQ,
                                                             onHideAutocomplete: e$,
                                                             promptToUpload: ed,
-                                                            fontSize: eH,
+                                                            fontSize: eB,
                                                             spellcheckEnabled: eG,
                                                             canOnlyUseTextCommands: !1,
                                                             isEditorIdle: e9,
@@ -482,7 +484,7 @@ let en = r.memo(
                                         className: J.footerPart,
                                         children: [
                                             (0, i.jsx)(el, { channel: L }),
-                                            (0, i.jsx)(B.Z, {
+                                            (0, i.jsx)(H.Z, {
                                                 type: V.Ie.CREATE_ANNOUNCEMENT_POST,
                                                 disabled: eD,
                                                 channel: L,
@@ -581,7 +583,7 @@ let en = r.memo(
                                 onVisibilityChange: tt,
                                 editorHeight: e1,
                                 setValue: (e, t) => (null == Y ? void 0 : Y(null, e, t)),
-                                position: eC,
+                                position: ey,
                             }),
                         ],
                     }),

@@ -3442,6 +3442,7 @@ var tZ = (function (e) {
             (e.POLL_ALERT = "Poll Alert"),
             (e.ICYMI = "ICYMI"),
             (e.GUILD_EVENT_EMBED = "Guild Event Embed"),
+            (e.GAME_COMMUNITY_UPSELL = "Game Community Upsell"),
             e
         );
     })({}),
@@ -5379,6 +5380,9 @@ var np = (function (e) {
             (e.SESSION_START_PAGE_VIEWED = "session_start_page_viewed"),
             (e.LOW_PERFORMANCE_MODE_OPT_OUT = "low_performance_mode_opt_out"),
             (e.IMPRESSION_GIFT_OPTION_WISHLIST_BANNER_VIEWED = "impression_gift_option_wishlist_banner_viewed"),
+            (e.GAME_COMMUNITY_UPSELL_VIEWED = "game_community_upsell_viewed"),
+            (e.GAME_COMMUNITY_UPSELL_DISMISSED = "game_community_upsell_dismissed"),
+            (e.GAME_COMMUNITY_UPSELL_ACCEPTED = "game_community_upsell_accepted"),
             e
         );
     })({}),
