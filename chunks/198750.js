@@ -7,8 +7,12 @@ e.exports = {
     sidebarHeaderDefault: "sidebarHeaderDefault__0ab2c sidebarHeader__0ab2c",
     username: "username__0ab2c",
     userRowAvatar: "userRowAvatar__0ab2c",
-    userRowSubText: "userRowSubText__0ab2c",
     userRowText: "userRowText__0ab2c",
+    userRowSubText: "userRowSubText__0ab2c",
     userRowSubAvatar: "userRowSubAvatar__0ab2c",
     permissionsForm: "permissionsForm__0ab2c",
+    createOverwritePopout: "createOverwritePopout__0ab2c",
+    roleRow: "roleRow__0ab2c",
+    roleName: "roleName__0ab2c",
+    searchBar: "searchBar__0ab2c",
 };

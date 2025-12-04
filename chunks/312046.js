@@ -1,12 +1,11 @@
 n.d(t, {
-    Q: () => s,
-    s: () => l,
+    Q: () => o,
+    s: () => s,
 });
 var r = n(666977),
     i = n(418793),
-    a = n(460597),
-    o = n(608591);
-let s = (e) => ({
+    a = n(460597);
+let o = (e) => ({
     id: e.id,
     configVersion: 2,
     startsAt: e.starts_at,
@@ -39,12 +38,11 @@ let s = (e) => ({
     },
     taskConfigV2: (0, a._)(e.task_config_v2),
     rewardsConfig: (0, i.v)(e.rewards_config),
-    videoMetadata: (0, o.FG)(e.video_metadata),
-    cosponsorMetadata: l(e.cosponsor_metadata),
+    cosponsorMetadata: s(e.cosponsor_metadata),
     sharePolicy: e.share_policy,
     ctaConfig: (0, r.D)(e.cta_config),
 });
-function l(e) {
+function s(e) {
     if (null != e)
         return {
             name: e.name,

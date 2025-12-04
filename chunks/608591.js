@@ -1,21 +1,4 @@
 function r(e) {
-    if (null != e)
-        return {
-            messages: { videoTitle: e.messages.video_title },
-            assets: {
-                videoPlayerVideo: e.assets.video_player_video,
-                videoPlayerVideoHls: e.assets.video_player_video_hls,
-                videoPlayerThumbnail: e.assets.video_player_thumbnail,
-                videoPlayerVideoLowRes: e.assets.video_player_video_low_res,
-                videoPlayerCaption: e.assets.video_player_caption,
-                videoPlayerTranscript: e.assets.video_player_transcript,
-                questBarPreviewVideo: e.assets.quest_bar_preview_video,
-                questBarPreviewThumbnail: e.assets.quest_bar_preview_thumbnail,
-                questHomeVideo: e.assets.quest_home_video,
-            },
-        };
-}
-function i(e) {
     return {
         url: e.url,
         width: e.width,
@@ -25,32 +8,31 @@ function i(e) {
         transcript: e.transcript,
     };
 }
-function a(e) {
-    let t = { video: i(e.video) };
+function i(e) {
+    let t = { video: r(e.video) };
     return (
-        null != e.video_low_res && (t.videoLowRes = i(e.video_low_res)),
-        null != e.video_hls && (t.videoHls = i(e.video_hls)),
+        null != e.video_low_res && (t.videoLowRes = r(e.video_low_res)),
+        null != e.video_hls && (t.videoHls = r(e.video_hls)),
         t
     );
 }
-function o(e) {
+function a(e) {
     return { videoTitle: e.video_title };
 }
-function s(e) {
-    let t = { video: i(e.video) };
+function o(e) {
+    let t = { video: r(e.video) };
     return (
-        null != e.video_low_res && (t.videoLowRes = i(e.video_low_res)),
-        null != e.video_hls && (t.videoHls = i(e.video_hls)),
+        null != e.video_low_res && (t.videoLowRes = r(e.video_low_res)),
+        null != e.video_hls && (t.videoHls = r(e.video_hls)),
         t
     );
 }
-function l(e) {
+function s(e) {
     return { videoTitle: e.video_title };
 }
 n.d(t, {
-    FG: () => r,
-    I9: () => o,
-    _c: () => a,
-    c1: () => s,
-    jZ: () => l,
+    I9: () => a,
+    _c: () => i,
+    c1: () => o,
+    jZ: () => s,
 });
