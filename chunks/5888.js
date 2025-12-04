@@ -1,13 +1,12 @@
 n.d(t, {
-    Z: () => _,
-    p: () => u,
+    Z: () => S,
+    p: () => c,
 });
 var r,
-    i,
-    l = n(442837),
+    i = n(442837),
     a = n(570140),
-    s = n(612776);
-function o(e, t, n) {
+    o = n(612776);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +19,7 @@ function o(e, t, n) {
         e
     );
 }
-function c(e) {
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,73 +30,83 @@ function c(e) {
                 }),
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                s(e, t, n[t]);
             });
     }
     return e;
 }
-var u =
-    (((r = {})[(r.INIT = 0)] = "INIT"),
-    (r[(r.FETCHING = 1)] = "FETCHING"),
-    (r[(r.SUCCESS = 2)] = "SUCCESS"),
-    (r[(r.ERROR = 3)] = "ERROR"),
-    r);
-let d = {},
-    p = 0,
+var c = (function (e) {
+    return (
+        (e[(e.INIT = 0)] = "INIT"),
+        (e[(e.FETCHING = 1)] = "FETCHING"),
+        (e[(e.SUCCESS = 2)] = "SUCCESS"),
+        (e[(e.ERROR = 3)] = "ERROR"),
+        e
+    );
+})({});
+let u = {},
+    d = 0,
     f = {
         volume: 1,
         isMuted: !1,
-        highestSlideSeen: s.yD.WELCOME,
+        highestSlideSeen: o.yD.WELCOME,
     },
-    h = c({}, f);
-function g() {
-    (d = {}), (p = 0);
+    p = l({}, f);
+function _() {
+    (u = {}), (d = 0);
 }
-class m extends (i = l.ZP.PersistedStore) {
+function m() {
+    _(), (p = l({}, f));
+}
+function h() {
+    d = 1;
+}
+function g(e) {
+    (u = e.data), (d = 2);
+}
+function E() {
+    d = 3;
+}
+function b(e) {
+    p.volume = e.volume;
+}
+function y() {
+    p.isMuted = !p.isMuted;
+}
+function O(e) {
+    p.highestSlideSeen = e.slide;
+}
+class v extends (r = i.ZP.PersistedStore) {
     getState() {
-        return h;
-    }
-    initialize(e) {
-        g(), null != e && (h = c({}, h, e));
-    }
-    getCheckpointData() {
-        return d;
-    }
-    getFetchState() {
         return p;
     }
+    initialize(e) {
+        _(), null != e && (p = l({}, p, e));
+    }
+    getCheckpointData() {
+        return u;
+    }
+    getFetchState() {
+        return d;
+    }
     get volume() {
-        return h.volume;
+        return p.volume;
     }
     get isMuted() {
-        return h.isMuted;
+        return p.isMuted;
     }
     get highestSlideSeen() {
-        return h.highestSlideSeen;
+        return p.highestSlideSeen;
     }
 }
-o(m, "displayName", "CheckpointStore"), o(m, "persistKey", "CheckpointStore");
-let _ = new m(a.Z, {
-    CONNECTION_OPEN: g,
-    CHECKPOINT_FETCH_START: function () {
-        p = 1;
-    },
-    CHECKPOINT_FETCH_SUCCESS: function (e) {
-        (d = e.data), (p = 2);
-    },
-    CHECKPOINT_FETCH_FAILED: function () {
-        p = 3;
-    },
-    CHECKPOINT_SET_VOLUME: function (e) {
-        h.volume = e.volume;
-    },
-    CHECKPOINT_TOGGLE_MUTE: function () {
-        h.isMuted = !h.isMuted;
-    },
-    CHECKPOINT_SET_HIGHEST_SLIDE_SEEN: function (e) {
-        h.highestSlideSeen = e.slide;
-    },
-    LOGOUT: function () {
-        g(), (h = c({}, f));
-    },
+s(v, "displayName", "CheckpointStore"), s(v, "persistKey", "CheckpointStore");
+let S = new v(a.Z, {
+    CONNECTION_OPEN: _,
+    CHECKPOINT_FETCH_START: h,
+    CHECKPOINT_FETCH_SUCCESS: g,
+    CHECKPOINT_FETCH_FAILED: E,
+    CHECKPOINT_SET_VOLUME: b,
+    CHECKPOINT_TOGGLE_MUTE: y,
+    CHECKPOINT_SET_HIGHEST_SLIDE_SEEN: O,
+    LOGOUT: m,
 });

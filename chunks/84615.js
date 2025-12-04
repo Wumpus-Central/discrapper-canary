@@ -145,7 +145,7 @@ function C() {
                 l.Z,
                 {
                     nodeRef: a,
-                    classNames: t,
+                    classNames: i.options.disableAnimation ? void 0 : t,
                     timeout: v,
                     onEntered: () => {
                         (0, u.j)(() => {
@@ -169,23 +169,27 @@ function C() {
 }
 function N(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.freeze({}),
-        { layerKey: n, Layer: r } = t,
-        i = null != n ? n : o()();
+        { layerKey: n, Layer: r, disableAnimation: i = !1, showAppUnderLayer: a = !1 } = t,
+        s = null != n ? n : o()();
     return (
         (0, u.j)(() => {
             S.setState((t) => ({
                 fullScreenLayers: [
                     ...t.fullScreenLayers,
                     {
-                        key: i,
+                        key: s,
                         transitionState: 1,
                         LayerComponent: null != r ? r : m.ZP,
                         render: e,
+                        options: {
+                            disableAnimation: i,
+                            showAppUnderLayer: a,
+                        },
                     },
                 ],
             }));
         }),
-        i
+        s
     );
 }
 function P(e) {

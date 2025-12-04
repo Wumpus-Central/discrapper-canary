@@ -1,9 +1,15 @@
-t.exports = {
+e.exports = {
     container: "container__233d8",
     header: "header__233d8",
     logo: "logo__233d8",
     logoText: "logoText__233d8",
     stepIndicator: "stepIndicator__233d8",
+    actions: "actions__233d8",
     closeButton: "closeButton__233d8",
     nextButton: "nextButton__233d8",
+    nextButtonContent: "nextButtonContent__233d8",
+    backButton: "backButton__233d8",
+    iconColor: "iconColor__233d8",
+    shareButton: "shareButton__233d8",
+    buttonCTA: "buttonCTA__233d8",
 };

@@ -7,7 +7,7 @@ n.d(t, {
     $Y6: () => th,
     $pe: () => to,
     A2N: () => rm,
-    ABu: () => tX,
+    ABu: () => tQ,
     ADE: () => np,
     AEg: () => nO,
     ANM: () => eI,
@@ -35,7 +35,7 @@ n.d(t, {
     DZw: () => eN,
     E07: () => tv,
     EKQ: () => m.EK,
-    EOG: () => nX,
+    EOG: () => nQ,
     ETv: () => m.ET,
     EYA: () => tO,
     EkH: () => b,
@@ -82,14 +82,14 @@ n.d(t, {
     LPv: () => tz,
     LYt: () => t_,
     Lg6: () => rh,
-    M7m: () => tQ,
+    M7m: () => tX,
     MAM: () => m.MA,
     ME: () => ep,
     MUe: () => h.MU,
     McO: () => rZ,
     NYc: () => m.NY,
     NYg: () => nU,
-    N_j: () => nQ,
+    N_j: () => nX,
     NgX: () => O,
     O0b: () => nl,
     O0n: () => ei,
@@ -100,13 +100,13 @@ n.d(t, {
     OL7: () => m.OL,
     OMz: () => m.OM,
     OSm: () => eW,
-    OYC: () => X,
+    OYC: () => Q,
     OcF: () => e8,
-    Odu: () => Q,
+    Odu: () => X,
     PEY: () => e0,
     PNu: () => ex,
     POd: () => rs,
-    PRK: () => eQ,
+    PRK: () => eX,
     PUi: () => nx,
     Pbq: () => t4,
     Plq: () => m.Pl,
@@ -253,7 +253,7 @@ n.d(t, {
     ldS: () => m.ld,
     lds: () => eg,
     lxg: () => el,
-    mBz: () => eX,
+    mBz: () => eQ,
     mFx: () => ed,
     n8r: () => nH,
     nkL: () => nZ,
@@ -927,10 +927,10 @@ var Y = (function (e) {
     q = (function (e) {
         return (e.ALWAYS = "ALWAYS"), (e.NEVER = "NEVER"), (e.ONLY_WHILE_SPEAKING = "ONLY_WHILE_SPEAKING"), e;
     })({}),
-    X = (function (e) {
+    Q = (function (e) {
         return (e.ALWAYS = "ALWAYS"), (e.ONLY_WHILE_SPEAKING = "ONLY_WHILE_SPEAKING"), e;
     })({}),
-    Q = (function (e) {
+    X = (function (e) {
         return (
             (e.GUILDS = "GUILDS"),
             (e.VOICE = "VOICE"),
@@ -2200,8 +2200,8 @@ let eN = 100,
         eK,
     ],
     eq = 10,
-    eX = 10485760,
-    eQ = 524288000,
+    eQ = 10485760,
+    eX = 524288000,
     eJ = (e) => "||".concat(e, "||"),
     e$ = /^\|\|([\s\S]+?)\|\|/,
     e0 = /^<id:(home|browse|customize|guide|linked-roles)(?::(\d+))?>/,
@@ -3649,7 +3649,7 @@ var tZ = (function (e) {
         );
     })({});
 let tq = 50;
-var tX = (function (e) {
+var tQ = (function (e) {
         return (
             (e.TWITCH = "twitch"),
             (e.YOUTUBE = "youtube"),
@@ -3686,7 +3686,7 @@ var tX = (function (e) {
             e
         );
     })({}),
-    tQ = (function (e) {
+    tX = (function (e) {
         return (
             (e.DESKTOP = "desktop"),
             (e.XBOX = "xbox"),
@@ -5502,7 +5502,6 @@ var nO = (function (e) {
             (e.RTC_DEBUG = "RTC_DEBUG"),
             (e.COLLECTIBLES_SHOP = "COLLECTIBLES_SHOP"),
             (e.COMPONENT_PLAYGROUND = "COMPONENT_PLAYGROUND"),
-            (e.CHECKPOINT = "CHECKPOINT"),
             e
         );
     })({});
@@ -6120,7 +6119,7 @@ var nW = (function (e) {
             e
         );
     })({});
-let nX = Object.freeze({
+let nQ = Object.freeze({
         discord: "Discord",
         steam: "Steam",
         uplay: "Uplay",
@@ -6132,7 +6131,7 @@ let nX = Object.freeze({
         nvidia_gdn_app: "NVIDIA Cloud Gaming Application",
         roblox: "Roblox",
     }),
-    nQ = 6016,
+    nX = 6016,
     nJ = 3384;
 var n$ = (function (e) {
         return (e.USAGE_STATISTICS = "usage_statistics"), (e.PERSONALIZATION = "personalization"), e;

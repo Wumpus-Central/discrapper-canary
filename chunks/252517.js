@@ -20,7 +20,7 @@ async function r() {
         Promise.resolve().then(n.bind(n, 992172)),
         Promise.resolve().then(n.bind(n, 613275)),
         Promise.resolve().then(n.bind(n, 404789)),
-        n.e("22451").then(n.bind(n, 140939)),
+        Promise.resolve().then(n.bind(n, 140939)),
         n.e("50672").then(n.bind(n, 649897)),
         Promise.resolve().then(n.bind(n, 282354)),
         n.e("29852").then(n.bind(n, 587947)),

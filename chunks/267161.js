@@ -128,8 +128,8 @@ let V = i.memo(function () {
                         }),
                         trailing: (0, r.jsxs)(r.Fragment, {
                             children: [
-                                B && (0, r.jsx)(g.Z, { className: Q }),
                                 (0, r.jsx)(v.Z, { className: Q }),
+                                B && (0, r.jsx)(g.Z, { className: Q }),
                                 (0, r.jsx)(m.Z, {
                                     canShowReminder: !0,
                                     className: Q,
