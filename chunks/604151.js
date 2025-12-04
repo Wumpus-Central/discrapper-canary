@@ -55,12 +55,12 @@ let O = function (e, t) {
         if (null != S && !I) {
             let e = (0, E.rY)(S, g.Z, p.Z);
             if (e && S.isGuildStageVoice() && (0, c.xJ)(S.id))
-                return void (0, i.ZD)(async () => {
+                return void (0, i.openModalLazy)(async () => {
                     let { default: e } = await n.e("46398").then(n.bind(n, 523794));
                     return (t) => e(y({ channel: S }, t));
                 });
             if (e)
-                return void (0, i.ZD)(async () => {
+                return void (0, i.openModalLazy)(async () => {
                     let { default: e } = await n.e("86465").then(n.bind(n, 997308));
                     return (t) => e(t);
                 });

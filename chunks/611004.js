@@ -232,7 +232,7 @@ let k = {
     cleanUpPrivateChannelSearchState: M,
     openSearchFiltersModal: function (e) {
         (0, y.aR)({ searchContext: e }),
-            (0, a.ZD)(
+            (0, a.openModalLazy)(
                 async () => {
                     let { default: t } = await Promise.all([n.e("30474"), n.e("37979")]).then(n.bind(n, 238088));
                     return (n) => (0, r.jsx)(t, C(T({}, n), { searchContext: e }));

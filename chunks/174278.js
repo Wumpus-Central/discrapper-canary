@@ -39,7 +39,7 @@ function p(e) {
     return e;
 }
 let _ = () => {
-        (0, i.ZD)(
+        (0, i.openModalLazy)(
             async () => {
                 let { CustomThemesShareModalWrapper: e } = await Promise.all([n.e("36653"), n.e("26196")]).then(
                     n.bind(n, 433359),

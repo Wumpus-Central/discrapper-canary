@@ -19,7 +19,7 @@ function u(e) {
         u = (0, l.v)();
     (0, o.Ng)(
         () => (
-            (0, s.h7)(
+            (0, s.openModal)(
                 t,
                 {
                     modalKey: c,
@@ -29,7 +29,7 @@ function u(e) {
                 u,
             ),
             () => {
-                (0, s.Mr)(c, u);
+                (0, s.closeModal)(c, u);
             }
         ),
     );
@@ -46,7 +46,7 @@ function u(e) {
         }),
         r.useLayoutEffect(() => {
             let { contextKey: e, modalKey: r, onCloseCallback: i } = p.current;
-            d.current || (0, s.o)(r, t, n, i, e), (d.current = !1);
+            d.current || (0, s.updateModal)(r, t, n, i, e), (d.current = !1);
         }, [t, n]),
         null
     );

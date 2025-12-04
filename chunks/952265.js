@@ -1,22 +1,24 @@
-n.d(t, {
-    $s: () => C,
-    Ay: () => w,
-    DE: () => D,
-    Fv: () => I,
-    Gw: () => E,
-    JQ: () => A,
-    Jw: () => P,
-    Mr: () => S,
-    VX: () => L,
-    Vn: () => b,
-    ZD: () => O,
-    f9: () => N,
-    h7: () => v,
-    nf: () => x,
-    o: () => T,
-    pT: () => R,
-    s9: () => y,
-}),
+n.r(t),
+    n.d(t, {
+        closeAllModals: () => R,
+        closeAllModalsInContext: () => w,
+        closeModal: () => S,
+        closeModalInAllContexts: () => I,
+        doesTopModalAllowNavigation: () => j,
+        getInteractingModalContext: () => E,
+        hasAnyModalOpen: () => C,
+        hasAnyModalOpenSelector: () => A,
+        hasModalOpen: () => x,
+        hasModalOpenSelector: () => D,
+        modalContextFromAppContext: () => b,
+        openModal: () => v,
+        openModalLazy: () => O,
+        updateModal: () => T,
+        useHasAnyModalOpen: () => N,
+        useHasModalOpen: () => L,
+        useIsModalAtTop: () => P,
+        useModalsStore: () => y,
+    }),
     n(415506),
     n(784620),
     n(973216),
@@ -151,8 +153,9 @@ function v(e) {
             backdropStyle: f,
             stackingBehavior: _,
             stackNextByDefault: m,
+            allowsNavigation: h,
         } = t,
-        h = null != r ? r : i()();
+        g = null != r ? r : i()();
     return (
         (0, o.j)(() => {
             y.setState((t) => {
@@ -161,7 +164,7 @@ function v(e) {
                     void 0 !== r &&
                     r.some((e) => {
                         let { key: t } = e;
-                        return t === h;
+                        return t === g;
                     })
                 )
                     return t;
@@ -174,22 +177,23 @@ function v(e) {
                     [n]: [
                         ...r,
                         {
-                            key: h,
+                            key: g,
                             dismissable: a,
                             Layer: l,
                             render: e,
-                            onCloseRequest: null != c ? c : () => S(h, n),
+                            onCloseRequest: null != c ? c : () => S(g, n),
                             onCloseCallback: u,
                             instant: s,
                             backdropStyle: f,
                             stackingBehavior: i,
                             stackNextByDefault: m,
+                            allowsNavigation: h,
                         },
                     ],
                 });
             });
         }),
-        h
+        g
     );
 }
 function S(e) {
@@ -319,4 +323,15 @@ function x(e, t) {
 }
 function L(e, t) {
     return D(y(), e, t);
+}
+function j() {
+    let e = y.getState(),
+        t = E();
+    if (t !== l.z1 && null != e[t] && e[t].length > 0) return !1;
+    let n = e[l.z1];
+    if (null != n && n.length > 0) {
+        var r, i;
+        return null != (i = null == (r = n.at(-1)) ? void 0 : r.allowsNavigation) && i;
+    }
+    return !0;
 }

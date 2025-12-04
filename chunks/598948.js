@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var r = n(54381),
     l = n(473749),
     i = n(120356),
@@ -53,20 +53,20 @@ let w = {
                     onResetForNewMembers: b,
                 } = e,
                 f = (0, c.e7)([C.Z], () => C.Z.useReducedMotion),
-                H = (0, u.f9)(),
+                H = (0, u.useHasAnyModalOpen)(),
                 L = (0, p.n)(),
-                [P, I] = l.useState(!1),
+                [I, P] = l.useState(!1),
                 [V, M] = l.useState(!1),
-                E = !H && P && V;
+                E = !H && I && V;
             l.useEffect(() => {
-                L || (I(!1), M(!1));
+                L || (P(!1), M(!1));
             }, [L]),
                 l.useLayoutEffect(() => {
                     let e = (e) => {
-                            N(e) && I(!0), R(e) && M(!0);
+                            N(e) && P(!0), R(e) && M(!0);
                         },
                         t = (e) => {
-                            N(e) && I(!1), R(e) && M(!1);
+                            N(e) && P(!1), R(e) && M(!1);
                         };
                     return (
                         window.addEventListener("keydown", e),
@@ -143,7 +143,7 @@ let w = {
             return n && r && l && i;
         },
     ),
-    P = function (e) {
+    I = function (e) {
         var t, n;
         let { guild: i, className: o, searchState: a, compact: s, onSelectRow: u, onResetForNewMembers: d } = e,
             C = (0, c.cj)([h.Z], () => h.Z.getPaginationStateByGuildId(i.id), [i.id]),

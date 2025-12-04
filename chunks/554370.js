@@ -2,8 +2,8 @@ n.d(t, { Z: () => er }), n(539854), n(388685);
 var i = n(54381),
     r = n(473749),
     l = n(120356),
-    a = n.n(l),
-    o = n(442837),
+    o = n.n(l),
+    a = n(442837),
     s = n(952265),
     u = n(481060),
     c = n(239091),
@@ -13,12 +13,12 @@ var i = n(54381),
     f = n(906732),
     m = n(70097),
     g = n(74299),
-    y = n(199902),
-    O = n(592125),
+    O = n(199902),
+    y = n(592125),
     E = n(430824),
     v = n(131951),
-    S = n(944486),
-    b = n(556296),
+    b = n(944486),
+    S = n(556296),
     x = n(237997),
     j = n(451478),
     I = n(585483),
@@ -116,7 +116,7 @@ let $ = r.memo(function (e) {
         let { keybind: t, onClick: n, locked: r } = e,
             l = (0, T.T_)(p.Z.OVERLAY);
         return (0, i.jsx)(u.P3F, {
-            className: a()(Q.overlayBackground, {
+            className: o()(Q.overlayBackground, {
                 [Q.overlayActive]: !r,
                 [Q.overlayLocked]: r,
             }),
@@ -169,23 +169,23 @@ function en(e) {
             : "keydown" === e.type.toLowerCase() && I.S.dispatch(B.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !1 }));
 }
 function ei() {
-    return (0, o.e7)([z.Z], () => z.Z.hasRenderDebugMode(w.GO.WindowContainer))
+    return (0, a.e7)([z.Z], () => z.Z.hasRenderDebugMode(w.GO.WindowContainer))
         ? (0, i.jsx)("div", { className: Q.windowContainerDebug })
         : null;
 }
 function er(e) {
     let { isEmbeddedActivity: t } = e,
         n = (0, F.Z)(),
-        l = (0, o.e7)([M.Z], () => M.Z.getTargetPID()),
+        l = (0, a.e7)([M.Z], () => M.Z.getTargetPID()),
         {
             locked: c,
             focused: m,
             incompatibleApp: C,
             hasZeroSizeDimension: w,
             keybind: P,
-        } = (0, o.cj)([M.Z, x.default, j.Z, b.ZP, V.Z], () => {
+        } = (0, a.cj)([M.Z, x.default, j.Z, S.ZP, V.Z], () => {
             let e = j.Z.windowSize((0, N.ZY)(n)),
-                t = b.ZP.getOverlayKeybind();
+                t = S.ZP.getOverlayKeybind();
             return {
                 locked: V.Z.isInputLocked(l),
                 focused: M.Z.isFocused(l),
@@ -232,13 +232,13 @@ function er(e) {
     return (
         (0, h.ZP)(() => {
             let e = (0, W.pL)(),
-                t = S.Z.getVoiceChannelId(),
-                n = O.Z.getChannel(t),
+                t = b.Z.getVoiceChannelId(),
+                n = y.Z.getChannel(t),
                 i = null != n ? E.Z.getGuild(n.guild_id) : null,
-                r = null != y.Z.getCurrentUserActiveStream(),
+                r = null != O.Z.getCurrentUserActiveStream(),
                 l = null != t,
-                a = (0, g.Z)(v.Z) && !r && null != e,
-                o = l && null != i && null != t,
+                o = (0, g.Z)(v.Z) && !r && null != e,
+                a = l && null != i && null != t,
                 s = M.Z.getTargetPID();
             if (k.default.hasChangedRenderMode(s)) return;
             let u = L.Z.isNotificationDisabled(H.n0.WelcomeNudge),
@@ -248,14 +248,14 @@ function er(e) {
             !u &&
                 (p.push({ type: H.nc.WELCOME }),
                 !c &&
-                    (a && o
+                    (o && a
                         ? p.push({
                               type: H.nc.GO_LIVE_VOICE,
                               game: e,
                               voiceChannelId: t,
                               voiceGuild: i,
                           })
-                        : a &&
+                        : o &&
                           p.push({
                               type: H.nc.GO_LIVE_NON_VOICE,
                               game: e,
@@ -276,7 +276,7 @@ function er(e) {
         r.useEffect(() => {
             if ((I.S.dispatch(B.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !0 }), c))
                 return (
-                    (0, s.Ay)(u.u1M),
+                    (0, s.closeAllModalsInContext)(u.u1M),
                     n.addEventListener("contextmenu", J, !1),
                     () => {
                         n.removeEventListener("contextmenu", J, !1);
@@ -300,7 +300,7 @@ function er(e) {
                                   onClick: et,
                               }),
                               (0, i.jsx)(D.Z, {
-                                  className: a()({
+                                  className: o()({
                                       [Q.layoutLocked]: c,
                                       [Q.layoutUnlocked]: !c,
                                   }),

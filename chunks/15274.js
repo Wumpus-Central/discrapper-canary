@@ -63,7 +63,7 @@ function d(e, t) {
 }
 function f(e) {
     let { eventId: t, recurrenceId: a } = e;
-    (0, i.ZD)(async () => {
+    (0, i.openModalLazy)(async () => {
         let { default: e } = await Promise.all([n.e("4096"), n.e("25046")]).then(n.bind(n, 697849));
         return (n) =>
             (0, r.jsx)(
@@ -87,7 +87,7 @@ async function p(e, t) {
         });
 }
 function _(e, t) {
-    (0, i.ZD)(
+    (0, i.openModalLazy)(
         async () => {
             let { default: t } = await n.e("21395").then(n.bind(n, 312757));
             return (n) => (0, r.jsx)(t, d(c({}, n), { channel: e }));

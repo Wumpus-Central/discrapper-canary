@@ -373,7 +373,7 @@ let eb = (e) => {
                   className: eh.familyCenterButtonContainer,
                   children: (0, r.jsx)(y.bU, {
                       onClick: () => {
-                          (0, m.ZD)(async () => {
+                          (0, m.openModalLazy)(async () => {
                               let { default: e } = await n.e("44153").then(n.bind(n, 760949));
                               return (t) => (0, r.jsx)(e, eg({}, t));
                           });

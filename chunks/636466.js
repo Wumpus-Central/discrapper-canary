@@ -21,8 +21,8 @@ var r = n(54381),
     _ = n(848118),
     y = n(582113),
     O = n(921944),
-    j = n(474936),
-    x = n(388032),
+    x = n(474936),
+    j = n(388032),
     v = n(758650),
     C = n(976218),
     I = n(30399);
@@ -38,14 +38,14 @@ function S(e) {
         onRequestClose: n,
         actions: [
             {
-                text: x.intl.string(x.t.uB4Gax),
+                text: j.intl.string(j.t.uB4Gax),
                 variant: "primary",
                 onClick: i,
             },
         ],
         targetElementRef: t,
-        title: x.intl.string(x.t.qh9t5c),
-        body: x.intl.string(x.t.iM6fxV),
+        title: j.intl.string(j.t.qh9t5c),
+        body: j.intl.string(j.t.iM6fxV),
         graphic: {
             type: "image",
             src: I.Z,
@@ -78,19 +78,19 @@ function E(e) {
             return i;
         })(e, ["showPopover", "onViewWishlist", "onCardClick"]);
     let p = i.useRef(null),
-        b = (0, s.f9)(),
+        b = (0, s.useHasAnyModalOpen)(),
         _ = (0, l.e7)([g.Z], () => g.Z.hasLayers()),
         y = (0, m.NN)({ location: "wishlist-card" }),
-        [j, x] = (0, h.US)(y ? [a.z.GAME_SHOP_WISHLIST_POPOVER] : [], O.R.SIDEBAR, !0),
+        [x, j] = (0, h.US)(y ? [a.z.GAME_SHOP_WISHLIST_POPOVER] : [], O.R.SIDEBAR, !0),
         v = i.useCallback(() => {
-            x(O.L.USER_DISMISS), d();
-        }, [d, x]),
+            j(O.L.USER_DISMISS), d();
+        }, [d, j]),
         C = i.useCallback(() => {
-            x(O.L.USER_DISMISS);
-        }, [x]),
+            j(O.L.USER_DISMISS);
+        }, [j]),
         I = i.useCallback(() => {
-            x(O.L.USER_DISMISS), c();
-        }, [c, x]);
+            j(O.L.USER_DISMISS), c();
+        }, [c, j]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(
@@ -140,7 +140,7 @@ function E(e) {
                 t),
             ),
             o &&
-                j === a.z.GAME_SHOP_WISHLIST_POPOVER &&
+                x === a.z.GAME_SHOP_WISHLIST_POPOVER &&
                 !b &&
                 !_ &&
                 (0, r.jsx)(S, {
@@ -163,10 +163,10 @@ function Z(e, t) {
         } = t,
         u = null != i && i > 0,
         h = c && !u,
-        f = u ? x.intl.string(x.t.TxBQzD) : x.intl.string(x.t.pLPjsb),
+        f = u ? j.intl.string(j.t.TxBQzD) : j.intl.string(j.t.pLPjsb),
         g = {
-            title: h ? x.intl.string(x.t["4yiU7x"]) : f,
-            body: h ? x.intl.string(x.t.ilhtIa) : void 0,
+            title: h ? j.intl.string(j.t["4yiU7x"]) : f,
+            body: h ? j.intl.string(j.t.ilhtIa) : void 0,
             renderIcon: h ? p.Q : void 0,
             shouldShow: !0,
         };
@@ -181,7 +181,7 @@ function Z(e, t) {
                     {
                         isGift: !0,
                         giftRecipient: s,
-                        giftingOrigin: j.Wt.USER_PROFILE_WISHLIST,
+                        giftingOrigin: x.Wt.USER_PROFILE_WISHLIST,
                     },
                     { analyticsLocations: [d.Z.SLAYER_STOREFRONT_BREADCRUMB_WISHLIST_ITEM_CARD_GIFT_BUTTON] },
                 );
@@ -221,13 +221,13 @@ function P(e) {
                             {
                                 isGift: !0,
                                 giftRecipient: i,
-                                giftingOrigin: j.Wt.USER_PROFILE_WISHLIST,
+                                giftingOrigin: x.Wt.USER_PROFILE_WISHLIST,
                             },
                             { analyticsLocations: [d.Z.SLAYER_STOREFRONT_BREADCRUMB_WISHLIST_ITEM_CARD_GIFT_BUTTON] },
                         );
                     },
                     className: C.singleItemName,
-                    "aria-label": x.intl.string(x.t.pLPjsb),
+                    "aria-label": j.intl.string(j.t.pLPjsb),
                     children: [
                         (0, r.jsx)(c.Text, {
                             variant: "text-sm/semibold",
@@ -238,7 +238,7 @@ function P(e) {
                         (0, r.jsx)(c.Text, {
                             variant: "text-xs/medium",
                             color: "text-default",
-                            children: x.intl.format(x.t["CqpEC+"], { applicationName: null == l ? void 0 : l.name }),
+                            children: j.intl.format(j.t["CqpEC+"], { applicationName: null == l ? void 0 : l.name }),
                         }),
                     ],
                 }),

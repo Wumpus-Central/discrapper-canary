@@ -392,7 +392,7 @@ function F(e) {
                 case R.cd.STREAM_QUALITY_UPSELL:
                     j = D.intl.format(D.t.WspKp9, {
                         onClick: () => {
-                            (0, b.uL)(w.Z5c.APPLICATION_STORE), null == s || s(), (0, f.pT)();
+                            (0, b.uL)(w.Z5c.APPLICATION_STORE), null == s || s(), (0, f.closeAllModals)();
                         },
                     });
                     break;

@@ -113,7 +113,7 @@ function z(e, t) {
     return i;
 }
 let q = j.Om + U.Su.MEDIUM,
-    X = i.memo(function (e) {
+    Q = i.memo(function (e) {
         var { isActive: t, className: n, viewType: i, autoFocus: a = !1, "aria-controls": s } = e,
             l = K(e, ["isActive", "className", "viewType", "autoFocus", "aria-controls"]);
         return (0, r.jsx)(
@@ -141,7 +141,7 @@ let q = j.Om + U.Su.MEDIUM,
             ),
         );
     }),
-    Q = (e) => {
+    X = (e) => {
         let { positionContainerRef: t, drawerRef: n, orientation: r } = e,
             a = (0, d.e7)([w.ZP], () => w.ZP.expressionPickerWidth),
             [o, s] = i.useState(window.innerWidth),
@@ -221,7 +221,7 @@ function J(e) {
         ei = i.useRef(!1),
         ea = i.useRef(null),
         eo = i.useRef(null),
-        { drawerWidth: es, handleDrawerResizeHandleMouseDown: el } = Q({
+        { drawerWidth: es, handleDrawerResizeHandleMouseDown: el } = X({
             positionContainerRef: er,
             drawerRef: eo,
             orientation: "left" === $ ? g.y.HORIZONTAL_RIGHT : g.y.HORIZONTAL_LEFT,
@@ -233,7 +233,7 @@ function J(e) {
         e_ = (0, A.V2)({ location: "expression_picker" }),
         em = (0, d.e7)([D.Z], () => D.Z.isOpen()),
         eh = null != en,
-        eg = (0, p.Jw)(null != en ? en : ""),
+        eg = (0, p.useIsModalAtTop)(null != en ? en : ""),
         { reorderExpressionPickerTabs: eE } = b.n.useConfig({ location: "expression_picker" }),
         eb = (null == (t = z.gifs) ? void 0 : t.allowSending) && !c.tq && null != V,
         ey = (null == (n = z.stickers) ? void 0 : n.allowSending) && null != Y,
@@ -246,7 +246,7 @@ function J(e) {
         eS = i.useCallback(
             (e) => {
                 var t;
-                if ((!eh && (0, p.$s)()) || (eh && !(eg && et)) || em || e.defaultPrevented) return;
+                if ((!eh && (0, p.hasAnyModalOpen)()) || (eh && !(eg && et)) || em || e.defaultPrevented) return;
                 let { target: n } = e;
                 if ((0, u.kK)(n) && null != n.closest("." + j.CT)) return;
                 for (; (0, u.kK)(n); ) {
@@ -301,7 +301,7 @@ function J(e) {
             (0, L.ql)("");
         }, []),
         i.useEffect(() => {
-            ((!eh && (0, p.$s)()) || (eh && !eg)) && (0, L._Q)();
+            ((!eh && (0, p.hasAnyModalOpen)()) || (eh && !eg)) && (0, L._Q)();
         }, [eg, eh]),
         i.useEffect(() => {
             if (null != eo.current && !ei.current) {
@@ -327,7 +327,7 @@ function J(e) {
         eD = "left" === $ ? "right" : "left",
         ex = null != ee ? ee : "left" === $ ? F.positionLayerDefaultAlignLeft : F.positionLayerDefaultAlignRight,
         eL = eb
-            ? (0, r.jsx)(X, {
+            ? (0, r.jsx)(Q, {
                   id: U._3,
                   "aria-controls": U.vO,
                   "aria-selected": ec === j.X1.GIF,
@@ -337,7 +337,7 @@ function J(e) {
               })
             : null,
         ej = ey
-            ? (0, r.jsx)(X, {
+            ? (0, r.jsx)(Q, {
                   id: Z.ED,
                   "aria-controls": Z.nZ,
                   "aria-selected": ec === j.X1.STICKER,
@@ -350,7 +350,7 @@ function J(e) {
                   }),
               })
             : null,
-        eM = (0, r.jsx)(X, {
+        eM = (0, r.jsx)(Q, {
             id: U.td,
             "aria-controls": U.cZ,
             "aria-selected": ec === j.X1.EMOJI,
@@ -410,7 +410,7 @@ function J(e) {
                                                                   }),
                                                             e_ &&
                                                                 ew &&
-                                                                (0, r.jsx)(X, {
+                                                                (0, r.jsx)(Q, {
                                                                     id: U.Hr,
                                                                     "aria-controls": U.gV,
                                                                     "aria-selected": ec === j.X1.SOUNDBOARD,

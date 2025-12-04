@@ -25,6 +25,7 @@ let d = new s.Z("BackForwardNavStore"),
         c.Z5c.CHANNEL_THREAD_VIEW(l.Hw.guildId(), l.Hw.channelId({ optional: !0 }), ":threadId", ":messageId?"),
         c.Z5c.CHANNEL(l.Hw.guildId(), l.Hw.channelId({ optional: !0 }), ":messageId?"),
         c.Z5c.VOICE_CHAT_CHANNEL_PARTIAL(l.Hw.guildId(), l.Hw.channelId({ optional: !0 }), ":messageId?"),
+        c.Z5c.CHANNELS_GAME_SHOP(l.Hw.guildId(), ":pageIndex", ":skuId?", ":slug?"),
         c.Z5c.NOTIFICATIONS,
         c.Z5c.FRIENDS,
         c.Z5c.ME,
@@ -49,20 +50,28 @@ function h(e, t) {
     return e;
 }
 function g(e) {
-    let { path: t } = e,
-        n = (0, i.LX)(t, p);
-    if (null == n) return !1;
-    if (n.params.guildId === c.STv && void 0 === n.params.messageId)
+    let { path: t, isReplace: n } = e,
+        r = (0, i.LX)(t, p);
+    if (null == r) return !1;
+    if (r.params.guildId === c.STv && void 0 === r.params.messageId)
         return d.verbose("Ignoring weird notification sidebar route lacking messageId"), !1;
+    if (n && _.length > 0)
+        return (
+            (_[m] = {
+                path: t,
+                params: r.params,
+            }),
+            !0
+        );
     if (_.length > 0) {
         if (t === _[m].path) return !1;
         let e = _.findIndex((e) => e.path === t);
         -1 !== e && (m >= e && (m -= 1), _.splice(e, 1));
     }
-    for (n.params.guildId !== c.STv && (m > 0 && h(_, m), (m = 0)); _.length > f; ) _.pop();
+    for (r.params.guildId !== c.STv && (m > 0 && h(_, m), (m = 0)); _.length > f; ) _.pop();
     _.unshift({
         path: t,
-        params: n.params,
+        params: r.params,
     });
 }
 function E(e) {

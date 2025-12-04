@@ -95,7 +95,9 @@ let b = "game_console_alert_modal",
                                       ],
                                   }),
                               );
-                      (0, o.nf)(y) ? (0, o.o)(y, (e) => s(e)) : (0, o.ZD)(async () => (e) => s(e), { modalKey: y });
+                      (0, o.hasModalOpen)(y)
+                          ? (0, o.updateModal)(y, (e) => s(e))
+                          : (0, o.openModalLazy)(async () => (e) => s(e), { modalKey: y });
                   });
         },
         showSelfDismissableAlert(e) {
@@ -103,7 +105,7 @@ let b = "game_console_alert_modal",
                 c = (0, r.jsx)(d.t, {
                     body: n,
                     errorCodeMessage: a,
-                    dismissCallback: () => (0, o.Mr)(b),
+                    dismissCallback: () => (0, o.closeModal)(b),
                 });
             function m() {
                 null != l &&
@@ -128,6 +130,8 @@ let b = "game_console_alert_modal",
                         children: c,
                     }),
                 );
-            (0, o.nf)(b) ? (0, o.o)(b, (e) => g(e)) : (0, o.ZD)(async () => (e) => g(e), { modalKey: b });
+            (0, o.hasModalOpen)(b)
+                ? (0, o.updateModal)(b, (e) => g(e))
+                : (0, o.openModalLazy)(async () => (e) => g(e), { modalKey: b });
         },
     };

@@ -60,7 +60,7 @@ function A(e) {
 }
 let C = { results: { entries: [] } };
 function N() {
-    (0, a.ZD)(async () => {
+    (0, a.openModalLazy)(async () => {
         let { default: e } = await n.e("87549").then(n.bind(n, 913962));
         return (t) => (0, r.jsx)(e, A({}, t));
     });

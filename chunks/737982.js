@@ -18,7 +18,7 @@ var r = n(54381),
     y = n(990963);
 let O = i.memo(function (e) {
     let { guildId: t, selected: n } = e,
-        O = (0, a.f9)(),
+        O = (0, a.useHasAnyModalOpen)(),
         v = (0, l.e7)([f.Z], () => f.Z.hasLayers()),
         [j, x] = (0, c.ZT)([o.z.GAME_SERVER_HOSTING_NEW_BADGE], t),
         C = j === o.z.GAME_SERVER_HOSTING_NEW_BADGE,

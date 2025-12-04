@@ -79,5 +79,5 @@ function y(e) {
     return "VIDEO-QUEST-".concat(e);
 }
 function O(e) {
-    return !!(0, u.q8)(e) && (0, n(952265).nf)(y(e.id));
+    return !!(0, u.q8)(e) && (0, n(952265).hasModalOpen)(y(e.id));
 }

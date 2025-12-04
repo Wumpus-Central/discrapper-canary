@@ -3,7 +3,7 @@ var n = A(54381);
 A(473749);
 var r = A(952265);
 function a(e) {
-    (0, r.ZD)(async () => {
+    (0, r.openModalLazy)(async () => {
         let { default: t } = await A.e("73322").then(A.bind(A, 776045));
         return (A) =>
             (0, n.jsx)(

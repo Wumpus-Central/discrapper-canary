@@ -32,7 +32,7 @@ function o(e) {
     return e;
 }
 function s() {
-    (0, i.ZD)(async () => {
+    (0, i.openModalLazy)(async () => {
         let { default: e } = await n.e("98137").then(n.bind(n, 397013));
         return (t) => (0, r.jsx)(e, o({}, t));
     });

@@ -67,7 +67,7 @@ function y(e) {
     });
     function m() {
         (0, a.Z)(),
-            (0, o.pT)(),
+            (0, o.closeAllModals)(),
             u.default.track(b.rMx.PREMIUM_PROMOTION_OPENED, {
                 location_section: b.jXE.STREAM_UPSELL_MODAL,
                 location_object: b.qAy.NAVIGATION_LINK,

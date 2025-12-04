@@ -142,7 +142,7 @@ function A(e, t) {
                               p("go-live-modal");
                               let t = v.Z.getTargetPID();
                               c.Z.setInputLocked(!1, t),
-                                  (0, s.ZD)(
+                                  (0, s.openModalLazy)(
                                       async () => {
                                           let { default: e } = await Promise.all([
                                               n.e("38697"),

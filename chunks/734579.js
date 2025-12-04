@@ -26,7 +26,7 @@ let S = i.memo(function (e) {
     let { guild: t, selected: l } = e,
         S = i.useRef(null),
         I = i.useRef(null),
-        P = (0, u.f9)(),
+        P = (0, u.useHasAnyModalOpen)(),
         N = (0, a.e7)([O.Z], () => O.Z.hasLayers()),
         [Z, w] = (0, h.ZT)([s.z.GAME_SHOP_NEW_BADGE], t.id);
     i.useEffect(() => {

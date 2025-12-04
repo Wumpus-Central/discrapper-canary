@@ -57,8 +57,8 @@ let P = new g.Z("AuthenticationStore"),
     K = !1,
     z = !1,
     q = null,
-    X = null,
-    Q = !1,
+    Q = null,
+    X = !1,
     J = !1,
     $ = [];
 function ee(e) {
@@ -145,7 +145,7 @@ function ec() {
 }
 function eu(e) {
     let { token: t } = e;
-    (B = A.u34.NONE), ei(t), er(), (H = ""), (Y = !1), (W = null), (i = null), e_(), (Q = !1);
+    (B = A.u34.NONE), ei(t), er(), (H = ""), (Y = !1), (W = null), (i = null), e_(), (X = !1);
 }
 function ed(e) {
     let { error: t } = e;
@@ -157,14 +157,14 @@ function ed(e) {
         (B = null != (0, _.p)(t).date_of_birth ? A.u34.LOGIN_AGE_GATE : A.u34.NONE);
 }
 function ef() {
-    Q = !0;
+    X = !0;
 }
 function ep(e) {
     let { error: t } = e;
     (H = ""),
         (Y = !1),
         (W = null),
-        (Q = !1),
+        (X = !1),
         (i = null),
         (B = null != (0, _.F)(t).date_of_birth ? A.u34.LOGIN_AGE_GATE : A.u34.NONE);
 }
@@ -255,7 +255,7 @@ function eT(e) {
 function eA(e) {
     let { code: t } = e;
     ee("handleConnectionClosed called with code ".concat(t, "."));
-    let r = n(952265).nf;
+    let r = n(952265).hasModalOpen;
     if (4004 === t) {
         if (F || r(C.$$) || r(C.dG)) return void eP();
         O.default.track(A.rMx.APP_USER_DEAUTHENTICATED, { user_id: u.K.get(D) }),
@@ -309,7 +309,7 @@ function eR(e) {
         (H = ""),
         (W = null),
         (Y = !1),
-        (Q = !1),
+        (X = !1),
         (J = !1),
         e_();
 }
@@ -325,10 +325,10 @@ function ex(e) {
 }
 function eL(e) {
     let { suspendedUserToken: t } = e;
-    (Q = !1), (X = t), setImmediate(() => (0, E.uL)(A.Z5c.ACCOUNT_STANDING));
+    (X = !1), (Q = t), setImmediate(() => (0, E.uL)(A.Z5c.ACCOUNT_STANDING));
 }
 function ej() {
-    (X = null), (B = A.u34.NONE), eR(), setImmediate(() => (0, E.uL)(A.Z5c.DEFAULT_LOGGED_OUT));
+    (Q = null), (B = A.u34.NONE), eR(), setImmediate(() => (0, E.uL)(A.Z5c.DEFAULT_LOGGED_OUT));
 }
 class eM extends (a = l.ZP.Store) {
     initialize() {
@@ -384,10 +384,10 @@ class eM extends (a = l.ZP.Store) {
         return !F;
     }
     getSuspendedUserToken() {
-        return X;
+        return Q;
     }
     getIsPasswordlessActive() {
-        return Q;
+        return X;
     }
     attemptedPasswordLogin() {
         return J;

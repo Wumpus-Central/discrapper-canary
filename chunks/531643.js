@@ -84,5 +84,5 @@ function h(e) {
 }
 let g = "UPLOAD_ERROR_MODAL_KEY";
 function E(e) {
-    (0, i.h7)((t) => (0, r.jsx)(h, m({}, t, e)), { modalKey: g });
+    (0, i.openModal)((t) => (0, r.jsx)(h, m({}, t, e)), { modalKey: g });
 }

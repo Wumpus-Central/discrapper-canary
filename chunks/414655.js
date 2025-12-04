@@ -135,7 +135,7 @@ function k(e) {
                 });
         }, [P, L, A, B]),
         K = i.useCallback(() => {
-            (0, o.pT)(),
+            (0, o.closeAllModals)(),
                 (0, f.mK)({
                     analyticsLocations: N,
                     analyticsSource: u.Z.USER_PROFILE_WISHLIST,
@@ -145,7 +145,7 @@ function k(e) {
             (0, m.eagerNavigateToSocialLayerStorefront)({ guildId: (0, g.ac)() });
         }, []),
         q = i.useCallback(() => {
-            (0, o.pT)(), (0, m.default)({ guildId: (0, g.ac)() });
+            (0, o.closeAllModals)(), (0, m.default)({ guildId: (0, g.ac)() });
         }, []);
     return null != F
         ? null

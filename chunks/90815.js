@@ -4,7 +4,7 @@ n(473749);
 var i = n(952265);
 function l(e) {
     let { demonetized: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    (0, i.ZD)(
+    (0, i.openModalLazy)(
         async () => {
             let { default: i } = await n.e("90220").then(n.bind(n, 418225));
             return (n) =>

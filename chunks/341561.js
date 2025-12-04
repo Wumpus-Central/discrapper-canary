@@ -134,7 +134,7 @@ let D = {
                 onClick: f,
             } = e,
             _ = () => {
-                (0, i.ZD)(async () => {
+                (0, i.openModalLazy)(async () => {
                     let { default: e } = await n.e("63227").then(n.bind(n, 428263));
                     return (t) => (0, r.jsx)(e, S({}, t));
                 });

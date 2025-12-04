@@ -115,7 +115,7 @@ let j = () => {
                         text: D.intl.string(D.t.ZnqyZ2),
                         size: "sm",
                         onClick: () => {
-                            (0, r.Mr)(L.USER_SETTINGS_MODAL_KEY), (0, A.uL)(R.Z5c.APPLICATION_STORE);
+                            (0, r.closeModal)(L.USER_SETTINGS_MODAL_KEY), (0, A.uL)(R.Z5c.APPLICATION_STORE);
                         },
                     }),
                 ],

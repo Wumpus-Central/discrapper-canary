@@ -2,13 +2,13 @@ n.d(t, { default: () => W }), n(539854), n(388685), n(781311);
 var a = n(54381),
     r = n(473749),
     i = n(120356),
-    o = n.n(i),
-    l = n(952265),
+    l = n.n(i),
+    o = n(952265),
     c = n(481060),
     s = n(904245),
     u = n(686546),
-    p = n(930864),
-    d = n(124347),
+    d = n(930864),
+    p = n(124347),
     h = n(957730),
     _ = n(359110),
     f = n(987509),
@@ -33,12 +33,12 @@ function k(e) {
     let { clips: n } = e,
         r = n[0],
         i = r.thumbnail,
-        l = null;
+        o = null;
     return (
         "" !== i &&
-            ((l = (0, a.jsx)("div", {
-                className: o()(R.attachmentPreview, R.attachmentPreviewVideo),
-                children: (0, a.jsx)(d.ZP, {
+            ((o = (0, a.jsx)("div", {
+                className: l()(R.attachmentPreview, R.attachmentPreviewVideo),
+                children: (0, a.jsx)(p.ZP, {
                     className: R.thumbnail,
                     src: i,
                     width: 56,
@@ -46,14 +46,14 @@ function k(e) {
                 }),
             })),
             n.length > 1 &&
-                (l = (0, a.jsxs)("div", {
+                (o = (0, a.jsxs)("div", {
                     className: R.attachmentPreviewOverflow,
                     children: [
                         (0, a.jsx)(u.ZP, {
                             mask: u.ZP.Masks.FORWARD_ATTACHMENT_PILE_OVERFLOW,
                             width: 56,
                             height: 56,
-                            children: l,
+                            children: o,
                         }),
                         (0, a.jsxs)(c.Text, {
                             className: R.overflowCount,
@@ -89,7 +89,7 @@ function k(e) {
                         ],
                     }),
                 }),
-                l,
+                o,
             ],
         })
     );
@@ -97,8 +97,8 @@ function k(e) {
 function W(e) {
     var t,
         n,
-        { clips: i, analyticsLocations: o, onClose: u } = e,
-        d = (function (e, t) {
+        { clips: i, analyticsLocations: l, onClose: u } = e,
+        p = (function (e, t) {
             if (null == e) return {};
             var n,
                 a,
@@ -121,15 +121,15 @@ function W(e) {
         })(e, ["clips", "analyticsLocations", "onClose"]);
     let R = r.useCallback(
             async (e, t, n) => {
-                let { withMessage: a, transitionToDestination: r, closeAfterSend: p } = t;
+                let { withMessage: a, transitionToDestination: r, closeAfterSend: d } = t;
                 n(!0);
                 try {
                     let t = [],
                         b = [];
                     for (let e of i) {
-                        var d;
+                        var p;
                         let n = await (0, x.rO)(e),
-                            a = null != (d = e.name) ? d : (0, I.yl)(O.default.extractTimestamp(e.id)),
+                            a = null != (p = e.name) ? p : (0, I.yl)(O.default.extractTimestamp(e.id)),
                             r = (0, j.Z)(a);
                         if (e.type === P.NJ.CLIP || e.type === P.NJ.VOICE_CLIP) {
                             let a = "".concat("" !== r ? r : "clip", ".mp4");
@@ -144,7 +144,7 @@ function W(e) {
                         (0, c.showToast)((0, c.createToast)(L.intl.string(L.t.iufib1), c.ToastType.FAILURE)), n(!1);
                         return;
                     }
-                    for (let e of (p && u(), R)) {
+                    for (let e of (d && u(), R)) {
                         let n = m.Z.getChannel(e);
                         if (null != n) {
                             for (let e of ((0, v.d)(t, n, w.d.ChannelMessage, {
@@ -154,7 +154,7 @@ function W(e) {
                             }),
                             i))
                                 y.default.track(C.rMx.CLIP_SHARED, {
-                                    location_stack: o,
+                                    location_stack: l,
                                     guild_id: n.guild_id,
                                     channel_id: n.id,
                                     channel_type: n.type,
@@ -166,20 +166,20 @@ function W(e) {
                                 (await s.Z.sendMessage(n.id, h.ZP.parse(n, a), !1, { location: S.dy.FORWARDING }));
                         }
                     }
-                    r && 1 === R.length && ((0, _.Kh)(R[0], { openTextInVoiceIfVoiceChannel: !0 }), l.pT());
+                    r && 1 === R.length && ((0, _.Kh)(R[0], { openTextInVoiceIfVoiceChannel: !0 }), o.closeAllModals());
                 } catch (e) {
                     (0, c.showToast)((0, c.createToast)(L.intl.string(L.t.iufib1), c.ToastType.FAILURE));
                 } finally {
                     n(!1);
                 }
             },
-            [i, o, u],
+            [i, l, u],
         ),
         W = r.useCallback((e) => {
             if (e instanceof b.Sf && !(0, T.W)(e.id)) return { label: L.intl.string(L.t.iufib1) };
         }, []);
     return (0, a.jsx)(
-        p.ForwardModal,
+        d.ForwardModal,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -204,7 +204,7 @@ function W(e) {
                     });
             }
             return e;
-        })({}, d)),
+        })({}, p)),
         (n = n =
             {
                 onClose: u,

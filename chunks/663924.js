@@ -104,11 +104,11 @@ function P(e) {
         p = i.useRef(null),
         { renderWindow: y, windowDispatch: O } = i.useContext(u.ZP),
         v = null != c,
-        S = (0, o.Jw)(null != c ? c : ""),
+        S = (0, o.useIsModalAtTop)(null != c ? c : ""),
         I = i.useCallback(
             (e) => {
                 var t;
-                if ((!v && (0, o.$s)()) || (v && !(S && n)) || d.Z.isOpen() || e.defaultPrevented) return;
+                if ((!v && (0, o.hasAnyModalOpen)()) || (v && !(S && n)) || d.Z.isOpen() || e.defaultPrevented) return;
                 let { target: r } = e;
                 if ((0, a.kK)(r) && null != r.closest("." + g.Jh)) return;
                 for (; (0, a.kK)(r); ) {
@@ -140,7 +140,7 @@ function P(e) {
     ),
         (0, s.Tbt)(p),
         i.useEffect(() => {
-            ((!v && (0, o.$s)()) || (v && !S)) && N();
+            ((!v && (0, o.hasAnyModalOpen)()) || (v && !S)) && N();
         }, [S, v]);
     let T = (0, h.Z)();
     return (0, r.jsx)(m.Z, {

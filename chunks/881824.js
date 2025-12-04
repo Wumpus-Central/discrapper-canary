@@ -71,7 +71,7 @@ function m(e, t) {
     );
 }
 function h(e, t) {
-    (0, i.ZD)(
+    (0, i.openModalLazy)(
         async () => {
             let { default: t } = await n.e("24753").then(n.bind(n, 581355));
             return (n) => (0, r.jsx)(t, m(p({}, n), { channel: e }));
@@ -80,7 +80,7 @@ function h(e, t) {
     );
 }
 function g(e, t) {
-    (0, i.ZD)(
+    (0, i.openModalLazy)(
         async () => {
             let { default: t } = await n.e("2634").then(n.bind(n, 548841));
             return (n) => (0, r.jsx)(t, m(p({}, n), { channel: e }));
@@ -93,7 +93,7 @@ function b(e) {
     (0, a.Kh)(e.id);
 }
 function y(e, t) {
-    (0, i.ZD)(async () => {
+    (0, i.openModalLazy)(async () => {
         let { default: i } = await n.e("1906").then(n.bind(n, 854510));
         return (n) =>
             (0, r.jsx)(
@@ -106,7 +106,7 @@ function y(e, t) {
     });
 }
 function O(e, t) {
-    (0, i.ZD)(
+    (0, i.openModalLazy)(
         async () => {
             let { default: t } = await n.e("85885").then(n.bind(n, 124779));
             return (n) => (0, r.jsx)(t, m(p({}, n), { channel: e }));
@@ -125,7 +125,7 @@ function S(e, t) {
 }
 function I(e, t) {
     return (
-        (0, i.ZD)(async () => {
+        (0, i.openModalLazy)(async () => {
             let { default: i } = await n.e("65045").then(n.bind(n, 143782));
             return (n) =>
                 (0, r.jsx)(

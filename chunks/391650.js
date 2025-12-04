@@ -37,7 +37,7 @@ function l(e) {
     return e;
 }
 function c(e) {
-    (0, i.ZD)(
+    (0, i.openModalLazy)(
         async () => {
             let { default: e } = await n.e("76323").then(n.bind(n, 298237));
             return (t) => (0, r.jsx)(e, l({}, t));
@@ -52,7 +52,7 @@ function c(e) {
 function u() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = arguments.length > 1 ? arguments[1] : void 0;
-    (0, i.ZD)(
+    (0, i.openModalLazy)(
         async () => {
             let { default: t } = await n.e("60827").then(n.bind(n, 324239));
             return (n) => (0, r.jsx)(t, l({ claimRequired: e }, n));

@@ -311,7 +311,7 @@ class C extends (r = a.Component) {
                 let r = e.target,
                     i = this.domElementRef.current;
                 if (null != i) {
-                    if ((0, f.ty$)(i, r) || g.Z.isOpen() || (t && (0, _.$s)())) return;
+                    if ((0, f.ty$)(i, r) || g.Z.isOpen() || (t && (0, _.hasAnyModalOpen)())) return;
                     this.isValidClickStart = !0;
                 }
             }),

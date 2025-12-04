@@ -56,7 +56,7 @@ function l(e, t) {
 }
 let c = {
     show(e) {
-        (0, i.ZD)(async () => {
+        (0, i.openModalLazy)(async () => {
             let { default: t } = await n.e("27751").then(n.bind(n, 783576));
             return (n) => (0, r.jsx)(t, l(o({}, n), { href: e }));
         });

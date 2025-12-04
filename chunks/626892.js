@@ -3,7 +3,7 @@ var n = r(54381);
 r(473749);
 var c = r(952265);
 function o(e) {
-    (0, c.ZD)(async () => {
+    (0, c.openModalLazy)(async () => {
         let { default: t } = await r.e("2045").then(r.bind(r, 754233));
         return (r) => {
             var c, o;

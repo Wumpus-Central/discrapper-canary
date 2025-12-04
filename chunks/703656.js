@@ -67,7 +67,11 @@ let m = !1,
         "REPLACE" !== t && ((m = !0), h());
     });
 function g() {
-    return !l.S.hasSubscribers(u.CkL.MODAL_CLOSE) && (n(574254).Z.close(), !0);
+    if (l.S.hasSubscribers(u.CkL.MODAL_CLOSE)) {
+        let { doesTopModalAllowNavigation: e } = n(952265);
+        if (!e()) return !1;
+    }
+    return n(574254).Z.close(), !0;
 }
 function E(e, t) {
     return (

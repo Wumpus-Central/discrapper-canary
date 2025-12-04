@@ -137,7 +137,7 @@ class T extends i.PureComponent {
     }
 }
 function A() {
-    return (0, h.Vn)((0, _.bp)());
+    return (0, h.modalContextFromAppContext)((0, _.bp)());
 }
 function C(e) {
     let t = [],
@@ -154,7 +154,7 @@ function C(e) {
 let N = [];
 function P() {
     let e = A(),
-        t = (0, h.s9)((t) => (void 0 !== t[e] ? t[e] : N)),
+        t = (0, h.useModalsStore)((t) => (void 0 !== t[e] ? t[e] : N)),
         n = i.useMemo(() => C(t), [t]),
         a = i.useRef(void 0);
     i.useLayoutEffect(() => {
@@ -180,7 +180,7 @@ function P() {
         }, []),
         p = i.useCallback(
             (t) => {
-                (0, h.Mr)(t, e);
+                (0, h.closeModal)(t, e);
             },
             [e],
         ),

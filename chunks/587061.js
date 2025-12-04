@@ -13,7 +13,11 @@ var r = n(473749),
     _ = n(295907);
 function m(e) {
     let t = e.ctrlKey || e.altKey || e.metaKey;
-    e.key !== _.mR.Tab || t || __OVERLAY__ || (0, o.$s)() || d.Z.maybeShowKeyboardNavigationExplainerModal();
+    e.key !== _.mR.Tab ||
+        t ||
+        __OVERLAY__ ||
+        (0, o.hasAnyModalOpen)() ||
+        d.Z.maybeShowKeyboardNavigationExplainerModal();
 }
 function h(e) {
     let t = p.C$("shift"),

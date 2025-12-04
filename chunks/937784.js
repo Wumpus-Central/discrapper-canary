@@ -110,7 +110,7 @@ async function S(e, t) {
                 filesMetadata: n,
                 origin: "unknown:clip_share",
             }),
-                i.pT();
+                i.closeAllModals();
         } catch (e) {
             throw (g.jF.error(e), e);
         }
