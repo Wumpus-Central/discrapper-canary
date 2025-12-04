@@ -2,7 +2,7 @@ s.d(e, { Z: () => g }), s(539854), s(388685);
 var l = s(54381),
     n = s(473749),
     a = s(442837),
-    i = s(481060),
+    i = s(199849),
     r = s(325432),
     h = s(391690),
     o = s(424218),
@@ -108,7 +108,7 @@ class m extends n.PureComponent {
         return (0, l.jsxs)("div", {
             className: e,
             children: [
-                (0, l.jsx)(i.q4e, {
+                (0, l.jsx)(i.y6, {
                     label: u.intl.string(u.t.WTJuNr),
                     autoFocus: s,
                     options: this.getOptions(),

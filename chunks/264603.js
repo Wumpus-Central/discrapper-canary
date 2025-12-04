@@ -1,25 +1,26 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var a = n(54381),
     l = n(473749),
-    i = n(120356),
-    r = n.n(i),
+    r = n(120356),
+    i = n.n(r),
     s = n(442837),
     o = n(524437),
-    c = n(481060),
-    d = n(384275),
-    u = n(407089),
-    m = n(524995),
-    p = n(812206),
-    h = n(835473),
-    x = n(594190),
-    f = n(989941),
-    g = n(695346),
-    b = n(881998),
-    v = n(449224),
-    j = n(246992),
-    _ = n(451429),
-    y = n(441900);
-let C = [
+    c = n(199849),
+    d = n(481060),
+    u = n(384275),
+    m = n(407089),
+    p = n(524995),
+    h = n(812206),
+    x = n(835473),
+    f = n(594190),
+    g = n(989941),
+    b = n(695346),
+    v = n(881998),
+    j = n(449224),
+    _ = n(246992),
+    y = n(451429),
+    C = n(441900);
+let S = [
     {
         label: "Unset",
         value: o.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET,
@@ -37,88 +38,88 @@ let C = [
         value: o.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE,
     },
 ];
-function S() {
+function E() {
     let e = l.useRef(null),
-        t = g.JG.useSetting(),
-        [n, i] = l.useState(""),
-        o = (0, s.e7)([x.ZP, v.Z], () => (0, f.Z)(x.ZP, v.Z)),
-        S = (0, h.q)(n),
-        E = (0, s.Wu)([p.Z], () => {
+        t = b.JG.useSetting(),
+        [n, r] = l.useState(""),
+        o = (0, s.e7)([f.ZP, j.Z], () => (0, g.Z)(f.ZP, j.Z)),
+        E = (0, x.q)(n),
+        N = (0, s.Wu)([h.Z], () => {
             var e, t;
             return null !=
                 (t =
-                    null == S || null == (e = S.linkedGames)
+                    null == E || null == (e = E.linkedGames)
                         ? void 0
-                        : e.map((e) => p.Z.getApplication(e.id)).filter((e) => null != e))
+                        : e.map((e) => h.Z.getApplication(e.id)).filter((e) => null != e))
                 ? t
                 : [];
         }),
-        T = (0, m.F)(S, { allowedFlows: [m.r.RPC] }),
-        N = (0, m.F)(S, { allowedFlows: [m.r.WEB] }),
-        O = (0, m.F)(S),
-        { canDeauthorize: P, deauthorize: I } = (function (e) {
-            let t = (0, s.e7)([b.default], () => b.default.getNewestTokenForApplication(e)),
+        O = (0, p.F)(E, { allowedFlows: [p.r.RPC] }),
+        T = (0, p.F)(E, { allowedFlows: [p.r.WEB] }),
+        P = (0, p.F)(E),
+        { canDeauthorize: I, deauthorize: w } = (function (e) {
+            let t = (0, s.e7)([v.default], () => v.default.getNewestTokenForApplication(e)),
                 n = l.useCallback(() => {
-                    null != t && d.Z.delete(t.id);
+                    null != t && u.Z.delete(t.id);
                 }, [t]);
             return {
                 canDeauthorize: null != t,
                 deauthorize: n,
             };
-        })(null == S ? void 0 : S.id);
+        })(null == E ? void 0 : E.id);
     return (0, a.jsxs)("div", {
         ref: e,
-        className: r()(_.panel, y.panel),
+        className: i()(y.panel, C.panel),
         children: [
             (0, a.jsxs)("div", {
-                className: y.container,
+                className: C.container,
                 children: [
-                    (0, a.jsx)(c.Heading, {
+                    (0, a.jsx)(d.Heading, {
                         variant: "heading-lg/normal",
                         children: "Settings",
                     }),
-                    (0, a.jsx)(c.PhF, {
+                    (0, a.jsx)(c.B6, {
                         label: "Receive DMs In Game",
-                        options: C,
+                        options: S,
                         isSelected: (e) => e === t,
-                        select: g.JG.updateSetting,
-                        popoutLayerContext: j.O$,
+                        select: b.JG.updateSetting,
+                        popoutLayerContext: _.O$,
                         serialize: (e) => e.toString(),
                     }),
                 ],
             }),
             (0, a.jsxs)("div", {
-                className: y.container,
+                className: C.container,
                 children: [
-                    (0, a.jsx)(c.Heading, {
+                    (0, a.jsx)(d.Heading, {
                         variant: "heading-lg/normal",
                         children: "Application",
                     }),
-                    (0, a.jsx)(c.oil, {
+                    (0, a.jsx)(d.oil, {
                         label: "Application ID",
                         value: n,
-                        onChange: i,
+                        onChange: r,
                     }),
                     null != o && null != o.id
-                        ? (0, a.jsx)(c.Button, {
-                              onClick: () => i(o.id),
+                        ? (0, a.jsx)(d.Button, {
+                              onClick: () => r(o.id),
                               variant: "primary",
                               text: "Use detected game: ".concat(o.name, " (").concat(o.id, ")"),
                           })
                         : null,
-                    (0, a.jsxs)(c.Text, {
+                    (0, a.jsxs)(d.Text, {
                         variant: "text-md/normal",
-                        children: ["Application Name: ", null != S ? S.name : "N/A"],
+                        children: ["Application Name: ", null != E ? E.name : "N/A"],
                     }),
-                    (0, a.jsxs)(c.Text, {
+                    (0, a.jsxs)(d.Text, {
                         variant: "text-md/normal",
                         children: [
                             "Linked Games:",
                             " ",
-                            E.length > 0
-                                ? E.map((e) => {
+                            N.length > 0
+                                ? N.map((e) => {
                                       var t;
-                                      return (null == (t = (0, u.r)(S)) ? void 0 : t.id) === e.id
+                                      return (null == (t = (0, m.r)(E)) ? void 0 : t.id) === e.id
                                           ? "".concat(e.name, "*")
                                           : e.name;
                                   }).join(", ")
@@ -128,39 +129,39 @@ function S() {
                 ],
             }),
             (0, a.jsxs)("div", {
-                className: y.container,
+                className: C.container,
                 children: [
-                    (0, a.jsx)(c.Heading, {
+                    (0, a.jsx)(d.Heading, {
                         variant: "heading-lg/normal",
                         children: "Authorization",
                     }),
-                    (0, a.jsx)(c.Button, {
-                        disabled: !O.canStartAuthorization,
-                        onClick: () => O.startAuthorization(),
+                    (0, a.jsx)(d.Button, {
+                        disabled: !P.canStartAuthorization,
+                        onClick: () => P.startAuthorization(),
                         variant: "primary",
                         text: "Start Authorization",
                     }),
-                    (0, a.jsx)(c.Text, {
+                    (0, a.jsx)(d.Text, {
                         variant: "text-sm/normal",
                         color: "text-subtle",
                         children:
                             "This will start whichever authorization flow is available. RPC authorization takes precedence over web.",
                     }),
-                    (0, a.jsx)(c.Button, {
-                        disabled: !T.canStartAuthorization,
-                        onClick: () => T.startAuthorization(),
+                    (0, a.jsx)(d.Button, {
+                        disabled: !O.canStartAuthorization,
+                        onClick: () => O.startAuthorization(),
                         variant: "secondary",
                         text: "Start In-App Authorization",
                     }),
-                    (0, a.jsx)(c.Button, {
-                        disabled: !N.canStartAuthorization,
-                        onClick: () => N.startAuthorization(),
+                    (0, a.jsx)(d.Button, {
+                        disabled: !T.canStartAuthorization,
+                        onClick: () => T.startAuthorization(),
                         variant: "secondary",
                         text: "Start Web Authorization",
                     }),
-                    (0, a.jsx)(c.Button, {
-                        disabled: !P,
-                        onClick: I,
+                    (0, a.jsx)(d.Button, {
+                        disabled: !I,
+                        onClick: w,
                         variant: "critical-primary",
                         text: "Deauthorize",
                     }),

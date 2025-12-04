@@ -1,7 +1,7 @@
 n.d(t, { M: () => m });
 var r = n(54381),
     i = n(473749),
-    l = n(481060),
+    l = n(199849),
     a = n(434404),
     s = n(388032);
 let o = "".concat(60),
@@ -39,7 +39,7 @@ function m(e) {
         h = i.useCallback((e) => {
             a.Z.updateGuild({ afkTimeout: parseInt(e, 10) });
         }, []);
-    return (0, r.jsx)(l.q4e, {
+    return (0, r.jsx)(l.y6, {
         label: p,
         value: null == n ? null : "".concat(n),
         options: f,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }),
+n.d(t, { Z: () => u }),
     n(410992),
     n(227481),
     n(730884),
@@ -22,10 +22,11 @@ n.d(t, { Z: () => d }),
     n(35282);
 var a = n(54381),
     l = n(473749),
-    i = n(108514),
-    r = n(793030),
-    s = n(481060);
-let o = {
+    r = n(108514),
+    i = n(793030),
+    s = n(668339),
+    o = n(481060);
+let c = {
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/Lottie_Navigation_Messages_Opt.lottie":
         () => n.e("49190").then(n.t.bind(n, 871413, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/Lottie_Navigation_Notifications_Opt.lottie":
@@ -308,7 +309,7 @@ let o = {
     "discord_common/js/shared/animations/app/xbox/xbox_connecting.lottiejson": () =>
         n.e("4882").then(n.t.bind(n, 107192, 19)),
 };
-function c(e) {
+function d(e) {
     let { default: t } = e;
     return fetch(t)
         .then((e) => e.arrayBuffer())
@@ -316,7 +317,7 @@ function c(e) {
             (e) =>
                 new Promise((t, n) => {
                     let a = new Uint8Array(e);
-                    i.Ri(a, (e, a) => {
+                    r.Ri(a, (e, a) => {
                         null != e && n(e);
                         let l = Object.keys(a).reduce((e, t) => {
                                 var n, l;
@@ -346,7 +347,7 @@ function c(e) {
                                         }
                                         return e;
                                     })({}, e)),
-                                    (l = l = { [t]: JSON.parse(i.T8(a[t])) }),
+                                    (l = l = { [t]: JSON.parse(r.T8(a[t])) }),
                                     Object.getOwnPropertyDescriptors
                                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                                         : (function (e, t) {
@@ -362,52 +363,52 @@ function c(e) {
                                     n
                                 );
                             }, {}),
-                            r = l["manifest.json"];
-                        t(l["animations/".concat(r.animations[0].id, ".json")]);
+                            i = l["manifest.json"];
+                        t(l["animations/".concat(i.animations[0].id, ".json")]);
                     });
                 }),
         );
 }
-function d() {
+function u() {
     let [e, t] = l.useState(void 0),
-        [n, i] = l.useState(400),
-        [d, u] = l.useState(400);
+        [n, r] = l.useState(400),
+        [u, m] = l.useState(400);
     return (0, a.jsx)("div", {
         style: { margin: 24 },
-        children: (0, a.jsxs)(r.Kqy, {
+        children: (0, a.jsxs)(i.Kqy, {
             gap: 24,
             children: [
-                (0, a.jsx)(s.VcW, {
-                    options: Object.keys(o).map((e) => ({
+                (0, a.jsx)(s.d, {
+                    options: Object.keys(c).map((e) => ({
                         label: e,
                         value: e,
                     })),
                     value: e,
                     onChange: t,
                 }),
-                (0, a.jsxs)(r.Kqy, {
+                (0, a.jsxs)(i.Kqy, {
                     gap: 8,
                     direction: "horizontal",
                     children: [
-                        (0, a.jsx)(s.oil, {
+                        (0, a.jsx)(o.oil, {
                             value: n.toString(),
-                            onChange: (e) => i(Number(e)),
+                            onChange: (e) => r(Number(e)),
                             label: "Width",
                         }),
-                        (0, a.jsx)(s.oil, {
-                            value: d.toString(),
-                            onChange: (e) => u(Number(e)),
+                        (0, a.jsx)(o.oil, {
+                            value: u.toString(),
+                            onChange: (e) => m(Number(e)),
                             label: "Height",
                         }),
                     ],
                 }),
-                (0, a.jsx)(s.Button, {
+                (0, a.jsx)(o.Button, {
                     size: "sm",
                     disabled: null == e,
                     onClick: async () => {
                         if (null == e) return;
-                        let t = o[e],
-                            n = new Blob([JSON.stringify(e.endsWith(".lottie") ? await t().then(c) : await t())], {
+                        let t = c[e],
+                            n = new Blob([JSON.stringify(e.endsWith(".lottie") ? await t().then(d) : await t())], {
                                 type: "application/json",
                             }),
                             a = URL.createObjectURL(n),
@@ -425,14 +426,14 @@ function d() {
                     (0, a.jsx)("div", {
                         style: {
                             width: n,
-                            height: d,
+                            height: u,
                         },
                         children: (0, a.jsx)(
-                            s.Fmz,
+                            o.Fmz,
                             {
                                 importData: () => {
-                                    let t = o[e];
-                                    return e.endsWith(".lottie") ? t().then(c) : t();
+                                    let t = c[e];
+                                    return e.endsWith(".lottie") ? t().then(d) : t();
                                 },
                             },
                             e,

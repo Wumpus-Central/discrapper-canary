@@ -1,12 +1,13 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var a = n(54381),
     l = n(473749),
-    i = n(442837),
-    r = n(481060),
-    s = n(435064),
-    o = n(894694),
-    c = n(39604);
-function d(e) {
+    r = n(442837),
+    i = n(199849),
+    s = n(481060),
+    o = n(435064),
+    c = n(894694),
+    d = n(39604);
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(n);
@@ -31,7 +32,7 @@ function d(e) {
     }
     return e;
 }
-function u(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -49,9 +50,9 @@ function u(e, t) {
         e
     );
 }
-function m() {
-    let { mlPipelinesEnabled: e } = (0, i.cj)([s.Z], () => ({
-            mlPipelinesEnabled: s.Z.getSettings().mlPipelinesEnabled,
+function p() {
+    let { mlPipelinesEnabled: e } = (0, r.cj)([o.Z], () => ({
+            mlPipelinesEnabled: o.Z.getSettings().mlPipelinesEnabled,
         })),
         [t, n] = l.useState(
             () => (
@@ -70,11 +71,11 @@ function m() {
                 }
             ),
         ),
-        [m, p] = l.useState(o.x0.KILL),
-        [h, x] = l.useState(1),
-        [f, g] = l.useState(""),
-        [b, v] = l.useState(""),
-        j = l.useCallback(
+        [p, h] = l.useState(c.x0.KILL),
+        [x, f] = l.useState(1),
+        [g, b] = l.useState(""),
+        [v, j] = l.useState(""),
+        _ = l.useCallback(
             (e) => {
                 let a = !t[e];
                 void 0 === window.__CLIPS_DEBUG__ &&
@@ -85,105 +86,105 @@ function m() {
                         whisper: !1,
                     }),
                     (window.__CLIPS_DEBUG__[e] = a),
-                    n((t) => u(d({}, t), { [e]: a }));
+                    n((t) => m(u({}, t), { [e]: a }));
             },
             [t],
         );
-    return (0, a.jsx)(r.Ttm, {
-        children: (0, a.jsxs)(r.l09, {
+    return (0, a.jsx)(s.Ttm, {
+        children: (0, a.jsxs)(s.l09, {
             children: [
-                (0, a.jsx)(r.C3N, {
+                (0, a.jsx)(s.C3N, {
                     label: "Send Test Signals",
-                    children: (0, a.jsxs)(r.NIo, {
+                    children: (0, a.jsxs)(s.NIo, {
                         children: [
-                            (0, a.jsx)(r.Button, {
+                            (0, a.jsx)(s.Button, {
                                 text: "Manual",
-                                onClick: () => c.XK({ type: o.Bs.MANUAL }),
+                                onClick: () => d.XK({ type: c.Bs.MANUAL }),
                             }),
-                            (0, a.jsx)(r.Button, {
+                            (0, a.jsx)(s.Button, {
                                 text: "Distributed",
                                 onClick: () =>
-                                    c.XK({
-                                        type: o.Bs.DISTRIBUTED,
+                                    d.XK({
+                                        type: c.Bs.DISTRIBUTED,
                                         remoteTriggerUserId: "123",
                                         remoteTriggerClipId: "456",
                                     }),
                             }),
-                            (0, a.jsx)(r.Button, {
+                            (0, a.jsx)(s.Button, {
                                 text: "Phrase: Clip",
                                 onClick: () =>
-                                    c.XK({
-                                        type: o.Bs.PHRASE,
+                                    d.XK({
+                                        type: c.Bs.PHRASE,
                                         text: "clip",
                                     }),
                             }),
-                            (0, a.jsx)(r.Button, {
+                            (0, a.jsx)(s.Button, {
                                 text: "Yelling",
                                 onClick: () =>
-                                    c.XK({
-                                        type: o.Bs.YELLING,
+                                    d.XK({
+                                        type: c.Bs.YELLING,
                                         userId: "123",
                                     }),
                             }),
                         ],
                     }),
                 }),
-                (0, a.jsxs)(r.C3N, {
+                (0, a.jsxs)(s.C3N, {
                     label: "Game Event Creator",
                     children: [
-                        (0, a.jsxs)(r.NIo, {
+                        (0, a.jsxs)(s.NIo, {
                             children: [
-                                (0, a.jsx)(r.q4e, {
+                                (0, a.jsx)(i.y6, {
                                     label: "Event Type",
-                                    value: m,
-                                    onChange: (e) => p(e),
+                                    value: p,
+                                    onChange: (e) => h(e),
                                     options: [
                                         {
                                             label: "Kill",
-                                            value: o.x0.KILL,
+                                            value: c.x0.KILL,
                                         },
                                         {
                                             label: "Multikill",
-                                            value: o.x0.MULTIKILL,
+                                            value: c.x0.MULTIKILL,
                                         },
                                         {
                                             label: "Death",
-                                            value: o.x0.DEATH,
+                                            value: c.x0.DEATH,
                                         },
                                         {
                                             label: "Assist",
-                                            value: o.x0.ASSIST,
+                                            value: c.x0.ASSIST,
                                         },
                                         {
                                             label: "Item",
-                                            value: o.x0.ITEM,
+                                            value: c.x0.ITEM,
                                         },
                                         {
                                             label: "Victory",
-                                            value: o.x0.VICTORY,
+                                            value: c.x0.VICTORY,
                                         },
                                         {
                                             label: "Defeat",
-                                            value: o.x0.DEFEAT,
+                                            value: c.x0.DEFEAT,
                                         },
                                         {
                                             label: "Level Up",
-                                            value: o.x0.LEVEL_UP,
+                                            value: c.x0.LEVEL_UP,
                                         },
                                         {
                                             label: "Treasure",
-                                            value: o.x0.TREASURE,
+                                            value: c.x0.TREASURE,
                                         },
                                         {
                                             label: "Objective Kill",
-                                            value: o.x0.OBJECTIVE_KILL,
+                                            value: c.x0.OBJECTIVE_KILL,
                                         },
                                     ],
                                 }),
-                                (0, a.jsx)(r.q4e, {
+                                (0, a.jsx)(i.y6, {
                                     label: "Importance",
-                                    value: h,
-                                    onChange: x,
+                                    value: x,
+                                    onChange: f,
                                     options: [
                                         {
                                             label: "Low",
@@ -201,84 +202,84 @@ function m() {
                                 }),
                             ],
                         }),
-                        (0, a.jsx)(r.oil, {
+                        (0, a.jsx)(s.oil, {
                             label: "Title (optional)",
-                            value: f,
-                            onChange: g,
+                            value: g,
+                            onChange: b,
                             placeholder: "e.g., First Blood",
                         }),
-                        (0, a.jsx)(r.oil, {
+                        (0, a.jsx)(s.oil, {
                             label: "Description (optional)",
-                            value: b,
-                            onChange: v,
+                            value: v,
+                            onChange: j,
                             placeholder: "e.g., Killed enemy ADC in bot lane",
                         }),
-                        (0, a.jsx)(r.Button, {
+                        (0, a.jsx)(s.Button, {
                             text: "Create Game Event",
                             onClick: () => {
-                                c.XK({
-                                    type: o.Bs.GAME_EVENT,
-                                    eventType: m,
-                                    importance: h,
-                                    title: f,
-                                    description: b,
+                                d.XK({
+                                    type: c.Bs.GAME_EVENT,
+                                    eventType: p,
+                                    importance: x,
+                                    title: g,
+                                    description: v,
                                 });
                             },
                         }),
                     ],
                 }),
-                (0, a.jsx)(r.izJ, {}),
-                (0, a.jsxs)(r.C3N, {
+                (0, a.jsx)(s.izJ, {}),
+                (0, a.jsxs)(s.C3N, {
                     label: "ML Pipelines Enabled",
                     children: [
-                        (0, a.jsx)(r.rsf, {
+                        (0, a.jsx)(s.rsf, {
                             label: "Emotion Classifier",
                             checked: e.emotionClassifier,
-                            onChange: (t) => c.So(u(d({}, e), { emotionClassifier: t })),
+                            onChange: (t) => d.So(m(u({}, e), { emotionClassifier: t })),
                         }),
-                        (0, a.jsx)(r.rsf, {
+                        (0, a.jsx)(s.rsf, {
                             label: "Wake Word Detector",
                             checked: e.wakeWordDetector,
-                            onChange: (t) => c.So(u(d({}, e), { wakeWordDetector: t })),
+                            onChange: (t) => d.So(m(u({}, e), { wakeWordDetector: t })),
                         }),
-                        (0, a.jsx)(r.rsf, {
+                        (0, a.jsx)(s.rsf, {
                             label: "Yell Detector",
                             checked: e.yellDetector,
-                            onChange: (t) => c.So(u(d({}, e), { yellDetector: t })),
+                            onChange: (t) => d.So(m(u({}, e), { yellDetector: t })),
                         }),
-                        (0, a.jsx)(r.rsf, {
+                        (0, a.jsx)(s.rsf, {
                             label: "Whisper Transcription",
                             checked: e.whisperTranscription,
-                            onChange: (t) => c.So(u(d({}, e), { whisperTranscription: t })),
+                            onChange: (t) => d.So(m(u({}, e), { whisperTranscription: t })),
                         }),
                     ],
                 }),
-                (0, a.jsxs)(r.C3N, {
+                (0, a.jsxs)(s.C3N, {
                     label: "ML Debug Logging (window.__CLIPS_DEBUG__)",
                     children: [
-                        (0, a.jsx)(r.rsf, {
+                        (0, a.jsx)(s.rsf, {
                             label: "Wake Word Debug",
                             description: "Log wake word detection events to console",
                             checked: t.wakeWord,
-                            onChange: () => j("wakeWord"),
+                            onChange: () => _("wakeWord"),
                         }),
-                        (0, a.jsx)(r.rsf, {
+                        (0, a.jsx)(s.rsf, {
                             label: "Emotion Debug",
                             description: "Log emotion classification events to console",
                             checked: t.emotion,
-                            onChange: () => j("emotion"),
+                            onChange: () => _("emotion"),
                         }),
-                        (0, a.jsx)(r.rsf, {
+                        (0, a.jsx)(s.rsf, {
                             label: "Yell Debug",
                             description: "Show yell classification events to console",
                             checked: t.yell,
-                            onChange: () => j("yell"),
+                            onChange: () => _("yell"),
                         }),
-                        (0, a.jsx)(r.rsf, {
+                        (0, a.jsx)(s.rsf, {
                             label: "Whisper Debug",
                             description: "Log whisper transcription events to console",
                             checked: t.whisper,
-                            onChange: () => j("whisper"),
+                            onChange: () => _("whisper"),
                         }),
                     ],
                 }),

@@ -5,7 +5,7 @@ n.d(t, {
     n(539854);
 var r = n(54381),
     i = n(442837),
-    a = n(481060),
+    a = n(199849),
     o = n(846027),
     s = n(921801),
     l = n(131951),
@@ -54,7 +54,7 @@ function m() {
     }));
     return (0, r.jsx)(s.F, {
         setting: u.s6.VOICE_AND_VIDEO_ADVANCED_SUBSYSTEM,
-        children: (0, r.jsx)(a.q4e, {
+        children: (0, r.jsx)(a.y6, {
             label: f.intl.string(f.t.wVBHr0),
             className: p.marginBottom20,
             value: e,

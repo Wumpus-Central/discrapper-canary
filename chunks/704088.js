@@ -1,34 +1,35 @@
-n.d(t, { U: () => C }), n(388685), n(49124), n(415506);
+n.d(t, { U: () => S }), n(388685), n(49124), n(415506);
 var a = n(54381),
     l = n(473749),
-    i = n(663042),
-    r = n(442837),
+    r = n(663042),
+    i = n(442837),
     s = n(544891),
-    o = n(159691),
-    c = n(481060),
-    d = n(720553),
-    u = n(535664),
-    m = n(5900),
-    p = n(299886),
-    h = n(848984),
-    x = n(773275),
-    f = n(261538),
-    g = n(868802),
-    b = n(594174),
-    v = n(246992),
-    j = n(474936);
-let _ = l.forwardRef((e, t) => {
-    let [n, i] = l.useState(null),
-        [r, c] = l.useState(null),
+    o = n(199849),
+    c = n(159691),
+    d = n(481060),
+    u = n(720553),
+    m = n(535664),
+    p = n(5900),
+    h = n(299886),
+    x = n(848984),
+    f = n(773275),
+    g = n(261538),
+    b = n(868802),
+    v = n(594174),
+    j = n(246992),
+    _ = n(474936);
+let y = l.forwardRef((e, t) => {
+    let [n, r] = l.useState(null),
+        [i, o] = l.useState(null),
         [d, u] = l.useState(!1),
         m = l.useCallback(async () => {
-            u(!0), c(null), i(null);
+            u(!0), o(null), r(null);
             try {
                 let e = await s.tn.get({
                     url: "/users/@me/debug/warp/license",
                     rejectWithError: !0,
                 });
-                i(e.body);
+                r(e.body);
             } catch (l) {
                 var e, t;
                 let n =
@@ -36,7 +37,7 @@ let _ = l.forwardRef((e, t) => {
                         (null == l ? void 0 : l.message) ||
                         "Unknown error occurred",
                     a = (null == l ? void 0 : l.status) || (null == l || null == (t = l.body) ? void 0 : t.code);
-                c("Error ".concat(a ? "(".concat(a, ")") : "", ": ").concat(n));
+                o("Error ".concat(a ? "(".concat(a, ")") : "", ": ").concat(n));
             } finally {
                 u(!1);
             }
@@ -50,12 +51,12 @@ let _ = l.forwardRef((e, t) => {
                 gap: "12px",
             },
             children: [
-                (0, a.jsx)(o.zxk, {
+                (0, a.jsx)(c.zxk, {
                     text: d ? "Loading..." : "Fetch WARP License Info",
                     onClick: m,
                     disabled: d,
                 }),
-                null != r &&
+                null != i &&
                     (0, a.jsx)("div", {
                         style: {
                             padding: "12px",
@@ -65,7 +66,7 @@ let _ = l.forwardRef((e, t) => {
                             fontFamily: "monospace",
                             fontSize: "12px",
                         },
-                        children: r,
+                        children: i,
                     }),
                 null != n &&
                     (0, a.jsx)("pre", {
@@ -90,28 +91,28 @@ let _ = l.forwardRef((e, t) => {
         })
     );
 });
-_.displayName = "DebugWarpLicenseInfo";
-let y = (e) => {
+y.displayName = "DebugWarpLicenseInfo";
+let C = (e) => {
         let { onSuccess: t } = e,
-            [n, i] = l.useState(!1),
-            [r, c] = l.useState(0),
+            [n, r] = l.useState(!1),
+            [i, o] = l.useState(0),
             [d, u] = l.useState(null);
         l.useEffect(() => {
-            if (r > 0) {
+            if (i > 0) {
                 let e = setTimeout(() => {
-                    c(r - 1), 1 === r && t();
+                    o(i - 1), 1 === i && t();
                 }, 1000);
                 return () => clearTimeout(e);
             }
-        }, [r, t]);
+        }, [i, t]);
         let m = async () => {
-            i(!0), u(null);
+            r(!0), u(null);
             try {
                 await s.tn.post({
                     url: "/users/@me/debug/warp/license/extension-task",
                     rejectWithError: !0,
                 }),
-                    c(5);
+                    o(5);
             } catch (l) {
                 var e, t;
                 let n =
@@ -121,7 +122,7 @@ let y = (e) => {
                     a = (null == l ? void 0 : l.status) || (null == l || null == (t = l.body) ? void 0 : t.code);
                 u("Error ".concat(a ? "(".concat(a, ")") : "", ": ").concat(n));
             } finally {
-                i(!1);
+                r(!1);
             }
         };
         return (0, a.jsxs)("div", {
@@ -131,14 +132,14 @@ let y = (e) => {
                 gap: "12px",
             },
             children: [
-                (0, a.jsx)(o.zxk, {
+                (0, a.jsx)(c.zxk, {
                     text: n
                         ? "Triggering Task..."
-                        : r > 0
-                          ? "Refreshing in ".concat(r, "s...")
+                        : i > 0
+                          ? "Refreshing in ".concat(i, "s...")
                           : "Trigger License Extension Task",
                     onClick: m,
-                    disabled: n || r > 0,
+                    disabled: n || i > 0,
                 }),
                 null != d &&
                     (0, a.jsx)("div", {
@@ -155,267 +156,267 @@ let y = (e) => {
             ],
         });
     },
-    C = () => {
+    S = () => {
         let [e, t] = l.useState(-1),
             [n, s] = l.useState(-1),
-            [C, S] = l.useState(!1),
-            [E, T] = l.useState(5000),
-            [N, O] = l.useState(!1),
-            P = l.useRef(null),
-            I = (0, r.e7)([b.default], () => b.default.getCurrentUser()),
-            w = (0, h.u)(),
-            [k] = l.useState(() =>
-                (0, x.o8)({
+            [S, E] = l.useState(!1),
+            [N, O] = l.useState(5000),
+            [T, P] = l.useState(!1),
+            I = l.useRef(null),
+            w = (0, i.e7)([v.default], () => v.default.getCurrentUser()),
+            k = (0, x.u)(),
+            [R] = l.useState(() =>
+                (0, f.o8)({
                     finishSetup: async () => !0,
-                    perkAvailableToUser: w,
+                    perkAvailableToUser: k,
                 }),
             ),
             {
-                installationStatus: R,
-                setInstallationStatus: A,
-                connectionStatus: Z,
-                setConnectionStatus: D,
-                setConnect: L,
-                setDisconnect: M,
-                setInstall: U,
+                installationStatus: A,
+                setInstallationStatus: Z,
+                connectionStatus: D,
+                setConnectionStatus: L,
+                setConnect: M,
+                setDisconnect: U,
+                setInstall: B,
                 setIsWeb: F,
-                setIsSupportedPrivateBrowsingPerkPlatform: B,
-                isWeb: G,
-                isSupportedPrivateBrowsingPerkPlatform: z,
+                setIsSupportedPrivateBrowsingPerkPlatform: G,
+                isWeb: z,
+                isSupportedPrivateBrowsingPerkPlatform: V,
                 setGetWarpInstallationStatus: H,
-                perkAvailableToUser: V,
-                setPerkAvailableToUser: W,
-            } = (0, i.o)(k),
-            K = l.useCallback(
+                perkAvailableToUser: W,
+                setPerkAvailableToUser: K,
+            } = (0, r.o)(R),
+            q = l.useCallback(
                 async () => (
-                    D(m.Ij.INITIALIZING),
+                    L(p.Ij.INITIALIZING),
                     t(
                         setTimeout(() => {
-                            D(m.Ij.CONNECTED);
+                            L(p.Ij.CONNECTED);
                         }, 1000),
                     ),
                     !0
                 ),
-                [D, t],
+                [L, t],
             );
         l.useEffect(() => {
-            L(K);
-        }, [K, L]);
-        let q = l.useCallback(async () => m._n.INSTALLING, []);
+            M(q);
+        }, [q, M]);
+        let Y = l.useCallback(async () => p._n.INSTALLING, []);
         l.useEffect(() => {
-            W(w);
-        }, [w, W]),
+            K(k);
+        }, [k, K]),
             l.useEffect(() => {
-                H(q);
-            }, [H, q]);
-        let Y = l.useCallback(async () => (clearTimeout(e), D(m.Ij.DISCONNECTED), !0), [e, D]),
-            J = l.useCallback(
+                H(Y);
+            }, [H, Y]);
+        let J = l.useCallback(async () => (clearTimeout(e), L(p.Ij.DISCONNECTED), !0), [e, L]),
+            X = l.useCallback(
                 () =>
                     new Promise((e, t) => {
-                        A(m._n.INSTALLING),
+                        Z(p._n.INSTALLING),
                             s(
                                 setTimeout(() => {
-                                    if (C) return void t(Error("Installation failed"));
+                                    if (S) return void t(Error("Installation failed"));
                                     e();
-                                }, E),
+                                }, N),
                             );
                     }),
-                [C, E, A, s],
+                [S, N, Z, s],
             );
         l.useEffect(() => {
-            G && R !== m._n.UNKNOWN && A(m._n.UNKNOWN);
-        }, [G, A, R]),
-            l.useEffect(() => {
-                M(Y);
-            }, [Y, M]),
+            z && A !== p._n.UNKNOWN && Z(p._n.UNKNOWN);
+        }, [z, Z, A]),
             l.useEffect(() => {
                 U(J);
             }, [J, U]),
             l.useEffect(() => {
-                R !== m._n.INSTALLING && clearTimeout(n);
-            }, [n, R]),
+                B(X);
+            }, [X, B]),
             l.useEffect(() => {
-                if (R !== m._n.INSTALLED && Z !== m.Ij.INITIALIZING) return void D(m.Ij.INITIALIZING);
-            }, [R, Z, D]);
-        let { enabled: X } = p.H.useConfig({ location: "private_browsing_perk_settings_page" });
-        return X
+                A !== p._n.INSTALLING && clearTimeout(n);
+            }, [n, A]),
+            l.useEffect(() => {
+                if (A !== p._n.INSTALLED && D !== p.Ij.INITIALIZING) return void L(p.Ij.INITIALIZING);
+            }, [A, D, L]);
+        let { enabled: Q } = h.H.useConfig({ location: "private_browsing_perk_settings_page" });
+        return Q
             ? (0, a.jsxs)("div", {
                   children: [
-                      (0, a.jsx)(o.X6q, {
+                      (0, a.jsx)(c.X6q, {
                           variant: "heading-xl/semibold",
                           style: { marginTop: "16px" },
                           children: "Private Browsing Perk Components",
                       }),
-                      (0, a.jsxs)(f.$0, {
+                      (0, a.jsxs)(g.$0, {
                           children: [
-                              (0, a.jsx)(o.X6q, {
+                              (0, a.jsx)(c.X6q, {
                                   variant: "heading-lg/semibold",
                                   children: "Configure Private Browsing Perk State",
                               }),
-                              (0, a.jsxs)(f.pg, {
+                              (0, a.jsxs)(g.pg, {
                                   children: [
-                                      (0, a.jsxs)(f.BZ, {
+                                      (0, a.jsxs)(g.BZ, {
                                           children: [
-                                              (0, a.jsx)(o.xvT, {
+                                              (0, a.jsx)(c.xvT, {
                                                   variant: "text-md/semibold",
                                                   children: "Is Nitro",
                                               }),
                                               (0, a.jsx)("div", {
                                                   style: { width: "45px" },
-                                                  children: (0, a.jsx)(o.rsf, {
+                                                  children: (0, a.jsx)(c.rsf, {
                                                       onChange: () => {
-                                                          V ? (0, u.C)(null, I) : (0, u.C)(j.F_, I);
+                                                          W ? (0, m.C)(null, w) : (0, m.C)(_.F_, w);
                                                       },
-                                                      checked: V,
+                                                      checked: W,
                                                   }),
                                               }),
                                           ],
                                       }),
-                                      (0, a.jsxs)(f.BZ, {
+                                      (0, a.jsxs)(g.BZ, {
                                           children: [
-                                              (0, a.jsx)(o.xvT, {
+                                              (0, a.jsx)(c.xvT, {
                                                   variant: "text-md/semibold",
                                                   children: "Is Web",
                                               }),
                                               (0, a.jsx)("div", {
                                                   style: { width: "45px" },
-                                                  children: (0, a.jsx)(o.rsf, {
-                                                      onChange: () => F(!G),
-                                                      checked: G,
-                                                  }),
-                                              }),
-                                          ],
-                                      }),
-                                      (0, a.jsxs)(f.BZ, {
-                                          children: [
-                                              (0, a.jsx)(o.xvT, {
-                                                  variant: "text-md/semibold",
-                                                  children: "Is Supported Platform",
-                                              }),
-                                              (0, a.jsx)("div", {
-                                                  style: { width: "45px" },
-                                                  children: (0, a.jsx)(o.rsf, {
-                                                      onChange: () => B(!z),
+                                                  children: (0, a.jsx)(c.rsf, {
+                                                      onChange: () => F(!z),
                                                       checked: z,
                                                   }),
                                               }),
                                           ],
                                       }),
-                                      (0, a.jsxs)(f.BZ, {
+                                      (0, a.jsxs)(g.BZ, {
                                           children: [
-                                              (0, a.jsx)(o.xvT, {
+                                              (0, a.jsx)(c.xvT, {
                                                   variant: "text-md/semibold",
-                                                  children: "Installation Status",
+                                                  children: "Is Supported Platform",
                                               }),
-                                              (0, a.jsx)(c.PhF, {
-                                                  select: (e) => A(e),
-                                                  isSelected: (e) => e === R,
-                                                  serialize: (e) => "".concat(e),
-                                                  disabled: G,
-                                                  options: [
-                                                      {
-                                                          label: "Unknown",
-                                                          value: m._n.UNKNOWN,
-                                                      },
-                                                      {
-                                                          label: "Not Installed",
-                                                          value: m._n.NOT_INSTALLED,
-                                                      },
-                                                      {
-                                                          label: "Installed",
-                                                          value: m._n.INSTALLED,
-                                                      },
-                                                      {
-                                                          label: "Installing",
-                                                          value: m._n.INSTALLING,
-                                                      },
-                                                      {
-                                                          label: "Accept Terms",
-                                                          value: m._n.WAITING_FOR_TERMS,
-                                                      },
-                                                      {
-                                                          label: "Existing Installation",
-                                                          value: m._n.EXISTING_INSTALLATION,
-                                                      },
-                                                      {
-                                                          label: "Unsupported (ZeroTrust)",
-                                                          value: m._n.ZERO_TRUST,
-                                                      },
-                                                      {
-                                                          label: "Installing Timeout",
-                                                          value: m._n.INSTALLING_TIMEOUT,
-                                                      },
-                                                      {
-                                                          label: "Error",
-                                                          value: m._n.ERROR,
-                                                      },
-                                                  ],
-                                                  popoutLayerContext: v.O$,
+                                              (0, a.jsx)("div", {
+                                                  style: { width: "45px" },
+                                                  children: (0, a.jsx)(c.rsf, {
+                                                      onChange: () => G(!V),
+                                                      checked: V,
+                                                  }),
                                               }),
                                           ],
                                       }),
-                                      R === m._n.INSTALLED &&
-                                          (0, a.jsxs)(f.BZ, {
+                                      (0, a.jsxs)(g.BZ, {
+                                          children: [
+                                              (0, a.jsx)(c.xvT, {
+                                                  variant: "text-md/semibold",
+                                                  children: "Installation Status",
+                                              }),
+                                              (0, a.jsx)(o.B6, {
+                                                  select: (e) => Z(e),
+                                                  isSelected: (e) => e === A,
+                                                  serialize: (e) => "".concat(e),
+                                                  disabled: z,
+                                                  options: [
+                                                      {
+                                                          label: "Unknown",
+                                                          value: p._n.UNKNOWN,
+                                                      },
+                                                      {
+                                                          label: "Not Installed",
+                                                          value: p._n.NOT_INSTALLED,
+                                                      },
+                                                      {
+                                                          label: "Installed",
+                                                          value: p._n.INSTALLED,
+                                                      },
+                                                      {
+                                                          label: "Installing",
+                                                          value: p._n.INSTALLING,
+                                                      },
+                                                      {
+                                                          label: "Accept Terms",
+                                                          value: p._n.WAITING_FOR_TERMS,
+                                                      },
+                                                      {
+                                                          label: "Existing Installation",
+                                                          value: p._n.EXISTING_INSTALLATION,
+                                                      },
+                                                      {
+                                                          label: "Unsupported (ZeroTrust)",
+                                                          value: p._n.ZERO_TRUST,
+                                                      },
+                                                      {
+                                                          label: "Installing Timeout",
+                                                          value: p._n.INSTALLING_TIMEOUT,
+                                                      },
+                                                      {
+                                                          label: "Error",
+                                                          value: p._n.ERROR,
+                                                      },
+                                                  ],
+                                                  popoutLayerContext: j.O$,
+                                              }),
+                                          ],
+                                      }),
+                                      A === p._n.INSTALLED &&
+                                          (0, a.jsxs)(g.BZ, {
                                               children: [
-                                                  (0, a.jsx)(o.xvT, {
+                                                  (0, a.jsx)(c.xvT, {
                                                       variant: "text-md/semibold",
                                                       children: "Connection Status",
                                                   }),
-                                                  (0, a.jsx)(c.PhF, {
-                                                      select: (e) => D(e),
-                                                      isSelected: (e) => e === Z,
+                                                  (0, a.jsx)(o.B6, {
+                                                      select: (e) => L(e),
+                                                      isSelected: (e) => e === D,
                                                       serialize: (e) => "".concat(e),
                                                       options: [
                                                           {
                                                               label: "Initializing",
-                                                              value: m.Ij.INITIALIZING,
+                                                              value: p.Ij.INITIALIZING,
                                                           },
                                                           {
                                                               label: "Connected",
-                                                              value: m.Ij.CONNECTED,
+                                                              value: p.Ij.CONNECTED,
                                                           },
                                                           {
                                                               label: "Disconnected",
-                                                              value: m.Ij.DISCONNECTED,
+                                                              value: p.Ij.DISCONNECTED,
                                                           },
                                                           {
                                                               label: "Error",
-                                                              value: m.Ij.ERROR,
+                                                              value: p.Ij.ERROR,
                                                           },
                                                       ],
-                                                      popoutLayerContext: v.O$,
+                                                      popoutLayerContext: j.O$,
                                                   }),
                                               ],
                                           }),
                                   ],
                               }),
-                              R === m._n.NOT_INSTALLED &&
-                                  (0, a.jsxs)(f.pg, {
+                              A === p._n.NOT_INSTALLED &&
+                                  (0, a.jsxs)(g.pg, {
                                       children: [
-                                          (0, a.jsxs)(f.BZ, {
+                                          (0, a.jsxs)(g.BZ, {
                                               children: [
-                                                  (0, a.jsx)(o.xvT, {
+                                                  (0, a.jsx)(c.xvT, {
                                                       variant: "text-md/semibold",
                                                       children: "Install with error",
                                                   }),
                                                   (0, a.jsx)("div", {
                                                       style: { width: "45px" },
-                                                      children: (0, a.jsx)(o.rsf, {
-                                                          onChange: () => S(!C),
-                                                          checked: C,
+                                                      children: (0, a.jsx)(c.rsf, {
+                                                          onChange: () => E(!S),
+                                                          checked: S,
                                                       }),
                                                   }),
                                               ],
                                           }),
-                                          (0, a.jsxs)(f.BZ, {
+                                          (0, a.jsxs)(g.BZ, {
                                               children: [
-                                                  (0, a.jsx)(o.xvT, {
+                                                  (0, a.jsx)(c.xvT, {
                                                       variant: "text-md/semibold",
                                                       children: "Install time",
                                                   }),
-                                                  (0, a.jsx)(c.PhF, {
-                                                      select: (e) => T(e),
-                                                      isSelected: (e) => e === E,
+                                                  (0, a.jsx)(o.B6, {
+                                                      select: (e) => O(e),
+                                                      isSelected: (e) => e === N,
                                                       serialize: (e) => "".concat(e),
                                                       options: [
                                                           {
@@ -443,7 +444,7 @@ let y = (e) => {
                                                               value: 600000,
                                                           },
                                                       ],
-                                                      popoutLayerContext: v.O$,
+                                                      popoutLayerContext: j.O$,
                                                   }),
                                               ],
                                           }),
@@ -451,65 +452,65 @@ let y = (e) => {
                                   }),
                           ],
                       }),
-                      (0, a.jsxs)(x.xz.Provider, {
-                          value: k,
+                      (0, a.jsxs)(f.xz.Provider, {
+                          value: R,
                           children: [
-                              (0, a.jsxs)(f.$0, {
+                              (0, a.jsxs)(g.$0, {
                                   children: [
-                                      (0, a.jsx)(o.X6q, {
+                                      (0, a.jsx)(c.X6q, {
                                           variant: "heading-lg/medium",
                                           children: "Private Browsing Perk Settings Component",
                                       }),
-                                      (0, a.jsx)(g.M, {}),
+                                      (0, a.jsx)(b.M, {}),
                                   ],
                               }),
-                              (0, a.jsxs)(f.$0, {
+                              (0, a.jsxs)(g.$0, {
                                   children: [
-                                      (0, a.jsx)(o.X6q, {
+                                      (0, a.jsx)(c.X6q, {
                                           variant: "heading-lg/medium",
                                           children: "Private Browsing Perk Exit Modal Upsell",
                                       }),
-                                      (0, a.jsx)(o.zxk, {
+                                      (0, a.jsx)(c.zxk, {
                                           text: "Show exit modal",
                                           onClick: () => {
-                                              O(!0);
+                                              P(!0);
                                           },
                                       }),
-                                      N &&
-                                          (0, a.jsx)(d.default, {
+                                      T &&
+                                          (0, a.jsx)(u.default, {
                                               url: "https://www.discord.com",
                                               trustUrl: () => !1,
-                                              onCancel: () => O(!1),
+                                              onCancel: () => P(!1),
                                               isProtocol: !1,
                                               onConfirm: () => {},
                                               onClose: async () => {
-                                                  O(!1);
+                                                  P(!1);
                                               },
-                                              transitionState: c.Dvm.ENTERED,
+                                              transitionState: d.Dvm.ENTERED,
                                           }),
                                   ],
                               }),
-                              (0, a.jsxs)(f.$0, {
+                              (0, a.jsxs)(g.$0, {
                                   children: [
-                                      (0, a.jsx)(o.X6q, {
+                                      (0, a.jsx)(c.X6q, {
                                           variant: "heading-lg/medium",
                                           children: "Private Browsing Perk License Extension Task",
                                       }),
-                                      (0, a.jsx)(y, {
+                                      (0, a.jsx)(C, {
                                           onSuccess: () => {
                                               var e;
-                                              null == (e = P.current) || e.refresh();
+                                              null == (e = I.current) || e.refresh();
                                           },
                                       }),
                                   ],
                               }),
-                              (0, a.jsxs)(f.$0, {
+                              (0, a.jsxs)(g.$0, {
                                   children: [
-                                      (0, a.jsx)(o.X6q, {
+                                      (0, a.jsx)(c.X6q, {
                                           variant: "heading-lg/medium",
                                           children: "Private Browsing Perk WARP License Info",
                                       }),
-                                      (0, a.jsx)(_, { ref: P }),
+                                      (0, a.jsx)(y, { ref: I }),
                                   ],
                               }),
                           ],
@@ -517,7 +518,7 @@ let y = (e) => {
                   ],
               })
             : (0, a.jsx)("div", {
-                  children: (0, a.jsx)(o.X6q, {
+                  children: (0, a.jsx)(c.X6q, {
                       variant: "heading-xl/semibold",
                       style: { marginTop: "16px" },
                       children: "Private Browsing Perk Experiment Not Enabled",

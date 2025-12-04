@@ -1,104 +1,105 @@
-e.d(n, { GuildSubscriptionSelectionModal: () => x }), e(388685), e(290780), e(539854);
+e.d(n, { GuildSubscriptionSelectionModal: () => p }), e(388685), e(290780), e(539854);
 var i = e(54381),
     l = e(473749),
     r = e(793030),
-    s = e(481060),
-    a = e(565138),
-    u = e(430824),
-    o = e(270144),
-    d = e(388032),
-    c = e(250117);
-function x(t) {
-    let { transitionState: n, onClose: e, sku: x, onSelect: p, currentGuildId: h } = t,
-        [g, f] = l.useState(),
-        { guilds: j, isFetching: v } = (0, o.CR)(x.applicationId, x.id, !0),
-        I = l.useMemo(() => {
-            if (!v && null != h)
+    s = e(668339),
+    a = e(481060),
+    u = e(565138),
+    o = e(430824),
+    d = e(270144),
+    c = e(388032),
+    x = e(250117);
+function p(t) {
+    let { transitionState: n, onClose: e, sku: p, onSelect: h, currentGuildId: g } = t,
+        [f, j] = l.useState(),
+        { guilds: v, isFetching: I } = (0, d.CR)(p.applicationId, p.id, !0),
+        b = l.useMemo(() => {
+            if (!I && null != g)
                 return (
-                    j.findIndex((t) => {
+                    v.findIndex((t) => {
                         let { id: n } = t;
-                        return n === h;
+                        return n === g;
                     }) >= 0
                 );
-        }, [h, j, v]);
+        }, [g, v, I]);
     l.useLayoutEffect(() => {
-        I && f(h);
-    }, [h, I]);
-    let b = l.useMemo(() => {
+        b && j(g);
+    }, [g, b]);
+    let m = l.useMemo(() => {
         let t = [];
-        for (let n of j) {
+        for (let n of v) {
             let e = {
                 value: n.id,
                 label: n.name,
             };
-            I && n.id === h ? t.unshift(e) : t.push(e);
+            b && n.id === g ? t.unshift(e) : t.push(e);
         }
         return t;
-    }, [h, j, I]);
+    }, [g, v, b]);
     return (0, i.jsx)(r.Modal, {
-        title: d.intl.string(d.t["xgtI/K"]),
-        subtitle: d.intl.string(d.t.rAXXxN),
+        title: c.intl.string(c.t["xgtI/K"]),
+        subtitle: c.intl.string(c.t.rAXXxN),
         transitionState: n,
         onClose: e,
         actions: [
             {
                 variant: "secondary",
-                text: d.intl.string(d.t.cpT0Cq),
+                text: c.intl.string(c.t.cpT0Cq),
                 onClick: e,
             },
             {
                 variant: "primary",
-                text: d.intl.string(d.t["cY+Oob"]),
-                disabled: null == g,
+                text: c.intl.string(c.t["cY+Oob"]),
+                disabled: null == f,
                 onClick: function () {
-                    null != g && (p(g), e());
+                    null != f && (h(f), e());
                 },
             },
         ],
-        children: v
-            ? (0, i.jsx)(s.$jN, {
-                  type: s.$jN.Type.PULSING_ELLIPSIS,
-                  className: c.spinner,
+        children: I
+            ? (0, i.jsx)(a.$jN, {
+                  type: a.$jN.Type.PULSING_ELLIPSIS,
+                  className: x.spinner,
               })
-            : b.length > 0
-              ? (0, i.jsx)(s.VcW, {
-                    "aria-label": d.intl.string(d.t["5qyruI"]),
-                    options: b,
-                    value: g,
-                    onChange: f,
+            : m.length > 0
+              ? (0, i.jsx)(s.d, {
+                    "aria-label": c.intl.string(c.t["5qyruI"]),
+                    options: m,
+                    value: f,
+                    onChange: j,
                     renderOptionPrefix: (t) => {
                         let n = null == t ? void 0 : t.value,
-                            e = null != n ? u.Z.getGuild(n) : null;
+                            e = null != n ? o.Z.getGuild(n) : null;
                         return null == e
                             ? null
-                            : (0, i.jsx)(a.Z, {
+                            : (0, i.jsx)(u.Z, {
                                   guild: e,
-                                  size: a.Z.Sizes.MINI,
+                                  size: u.Z.Sizes.MINI,
                               });
                     },
                     renderOptionLabel: (t) => {
                         let { label: n, value: e } = t;
                         return (0, i.jsxs)("div", {
                             children: [
-                                (0, i.jsx)(s.Text, {
+                                (0, i.jsx)(a.Text, {
                                     variant: "text-md/normal",
                                     children: n,
                                 }),
-                                e === h &&
-                                    (0, i.jsx)(s.Text, {
+                                e === g &&
+                                    (0, i.jsx)(a.Text, {
                                         variant: "text-xs/normal",
                                         color: "text-default",
-                                        children: d.intl.string(d.t.RjtuAI),
+                                        children: c.intl.string(c.t.RjtuAI),
                                     }),
                             ],
                         });
                     },
                 })
-              : (0, i.jsx)(s.Wn, {
-                    messageType: s.QYI.WARNING,
-                    children: (0, i.jsx)(s.Text, {
+              : (0, i.jsx)(a.Wn, {
+                    messageType: a.QYI.WARNING,
+                    children: (0, i.jsx)(a.Text, {
                         variant: "text-sm/normal",
-                        children: d.intl.string(d.t.M2TbbK),
+                        children: c.intl.string(c.t.M2TbbK),
                     }),
                 }),
     });

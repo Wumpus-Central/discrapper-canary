@@ -1,29 +1,30 @@
-n.d(t, { S: () => m }), n(388685);
+n.d(t, { S: () => h }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(442837),
-    o = n(481060),
-    s = n(153867),
-    l = n(706454),
-    c = n(313789),
-    u = n(518596),
-    d = n(981631),
-    f = n(388032),
-    p = n(151126),
-    _ = n(444675);
-function m() {
-    let e = (0, a.e7)([l.default], () => l.default.locale),
-        [t, m] = i.useState(e),
-        h = i.useMemo(
+    o = n(668339),
+    s = n(481060),
+    l = n(153867),
+    c = n(706454),
+    u = n(313789),
+    d = n(518596),
+    f = n(981631),
+    p = n(388032),
+    _ = n(151126),
+    m = n(444675);
+function h() {
+    let e = (0, a.e7)([c.default], () => c.default.locale),
+        [t, h] = i.useState(e),
+        g = i.useMemo(
             () =>
-                (0, f.getAvailableLocales)().map((e) => ({
+                (0, p.getAvailableLocales)().map((e) => ({
                     value: e.value,
                     label: e.name,
-                    localizedName: f.intl.string(e.localizedName),
+                    localizedName: p.intl.string(e.localizedName),
                 })),
             [],
         ),
-        g = i.useCallback((e) => {
+        E = i.useCallback((e) => {
             let t,
                 i = null == e ? void 0 : e.value;
             if (null == i) return null;
@@ -33,33 +34,33 @@ function m() {
                 t = n(1474);
             }
             return (0, r.jsx)("div", {
-                className: p.flag,
+                className: _.flag,
                 "aria-hidden": !0,
                 children: (0, r.jsx)("img", {
                     alt: "",
                     src: t,
-                    className: p.flagImage,
+                    className: _.flagImage,
                 }),
             });
         }, []),
-        E = i.useCallback((e) => {
-            m(e),
-                _.nextTick(() => {
-                    s.ZP.updateLocale(e),
-                        (0, o.Mr3)(u.USER_SETTINGS_MODAL_KEY) &&
-                            (0, u.openUserSettings)(c.n.LANGUAGE_AND_TIME_PANEL, { section: d.oAB.LOCALE });
+        b = i.useCallback((e) => {
+            h(e),
+                m.nextTick(() => {
+                    l.ZP.updateLocale(e),
+                        (0, s.Mr3)(d.USER_SETTINGS_MODAL_KEY) &&
+                            (0, d.openUserSettings)(u.n.LANGUAGE_AND_TIME_PANEL, { section: f.oAB.LOCALE });
                 });
         }, []);
-    return (0, r.jsx)(o.VcW, {
-        label: f.intl.string(f.t["mx+sp7"]),
-        description: f.intl.string(f.t.rTPlcq),
+    return (0, r.jsx)(o.d, {
+        label: p.intl.string(p.t["mx+sp7"]),
+        description: p.intl.string(p.t.rTPlcq),
         value: t,
-        options: h,
-        onChange: E,
-        renderOptionPrefix: g,
+        options: g,
+        onChange: b,
+        renderOptionPrefix: E,
         renderOptionSuffix: (e) =>
             (0, r.jsx)("span", {
-                className: p.localizedName,
+                className: _.localizedName,
                 children: null == e ? void 0 : e.localizedName,
             }),
     });

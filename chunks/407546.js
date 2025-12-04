@@ -1,28 +1,29 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => f });
 var r = n(54381);
 n(473749);
 var i = n(149765),
     a = n(993365),
-    o = n(481060),
-    s = n(981631),
-    l = n(388032),
-    c = n(990199);
-let u = 5;
-function d(e) {
-    let { error: t, selectedGuildId: n, onGuildChange: d, guilds: f, disabled: p = !1 } = e,
-        _ = f
-            .filter((e) => i.e$(e.permissions, s.Plq.MANAGE_GUILD))
+    o = n(668339),
+    s = n(481060),
+    l = n(981631),
+    c = n(388032),
+    u = n(990199);
+let d = 5;
+function f(e) {
+    let { error: t, selectedGuildId: n, onGuildChange: f, guilds: p, disabled: _ = !1 } = e,
+        m = p
+            .filter((e) => i.e$(e.permissions, l.Plq.MANAGE_GUILD))
             .map((e) => ({
                 value: e.id,
                 label: e.name,
             }));
     return (0, r.jsxs)("div", {
-        className: c.selectorGroup,
+        className: u.selectorGroup,
         children: [
-            (0, r.jsx)(o.Heading, {
+            (0, r.jsx)(s.Heading, {
                 variant: "heading-deprecated-12/semibold",
-                className: c.sectionLabel,
-                children: l.intl.string(l.t["1DXFFd"]),
+                className: u.sectionLabel,
+                children: c.intl.string(c.t["1DXFFd"]),
             }),
             null != t && "" !== t
                 ? (0, r.jsx)(a.x, {
@@ -31,20 +32,20 @@ function d(e) {
                       children: t,
                   })
                 : null,
-            (0, r.jsx)(o.VcW, {
-                wrapperClassName: c.select,
-                maxVisibleItems: u,
-                placeholder: l.intl.string(l.t.oM4E1A),
-                options: _,
-                onChange: d,
-                isDisabled: p,
+            (0, r.jsx)(o.d, {
+                wrapperClassName: u.select,
+                maxVisibleItems: d,
+                placeholder: c.intl.string(c.t.oM4E1A),
+                options: m,
+                onChange: f,
+                isDisabled: _,
                 value: n,
             }),
             (0, r.jsx)(a.x, {
                 variant: "text-xs/medium",
                 color: "text-default",
-                className: c.label,
-                children: l.intl.format(l.t.t9Jm9o, {}),
+                className: u.label,
+                children: c.intl.format(c.t.t9Jm9o, {}),
             }),
         ],
     });

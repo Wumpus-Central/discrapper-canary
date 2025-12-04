@@ -1,12 +1,13 @@
-n.d(t, { Z: () => d }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var r = n(54381),
     i = n(473749),
     a = n(392711),
-    o = n(481060),
-    s = n(624968),
-    l = n(261538),
-    c = n(152928);
-let u = [
+    o = n(199849),
+    s = n(481060),
+    l = n(624968),
+    c = n(261538),
+    u = n(152928);
+let d = [
         {
             label: "xxs",
             value: "xxs",
@@ -76,18 +77,18 @@ let u = [
             value: 40,
         },
     ],
-    d = () => {
+    f = () => {
         let [e, t] = i.useState(15),
-            [n, d] = i.useState(8),
-            [f, p] = i.useState("xl"),
-            [_, m] = i.useState(!0),
-            h = i.useMemo(
+            [n, f] = i.useState(8),
+            [p, _] = i.useState("xl"),
+            [m, h] = i.useState(!0),
+            g = i.useMemo(
                 () =>
                     [...Array(e)].map((e, t) =>
                         (0, r.jsx)(
-                            o.P3F,
+                            s.P3F,
                             {
-                                className: c.child,
+                                className: u.child,
                                 onClick: () => console.log(t),
                                 children: t,
                             },
@@ -98,21 +99,21 @@ let u = [
             );
         return (0, r.jsxs)("div", {
             children: [
-                (0, r.jsx)(s.Z, {
+                (0, r.jsx)(l.Z, {
                     gap: n,
-                    edgeFade: f,
-                    hideActionsWhenDisabled: _,
-                    children: h,
+                    edgeFade: p,
+                    hideActionsWhenDisabled: m,
+                    children: g,
                 }),
-                (0, r.jsx)(l.dv, {}),
-                (0, r.jsxs)(l.BZ, {
+                (0, r.jsx)(c.dv, {}),
+                (0, r.jsxs)(c.BZ, {
                     children: [
-                        (0, r.jsx)(o.Checkbox, {
-                            checked: _,
-                            onChange: () => m(!_),
+                        (0, r.jsx)(s.Checkbox, {
+                            checked: m,
+                            onChange: () => h(!m),
                             label: "Hide Actions When Disabled",
                         }),
-                        (0, r.jsx)(o.oil, {
+                        (0, r.jsx)(s.oil, {
                             type: "number",
                             min: 0,
                             value: e.toString(),
@@ -121,19 +122,23 @@ let u = [
                             },
                             label: "Children Count",
                         }),
-                        (0, r.jsx)(o.q4e, {
-                            value: n,
-                            options: u,
-                            onChange: (e) => d(e),
-                            label: "Children Gap",
-                        }),
-                        (0, r.jsx)(o.q4e, {
-                            value: f,
-                            options: u,
-                            onChange: (e) => p(e),
-                            label: "Edge Fade Space",
-                        }),
                     ],
+                }),
+                (0, r.jsx)(c.BZ, {
+                    children: (0, r.jsx)(o.y6, {
+                        value: n,
+                        options: d,
+                        onChange: (e) => f(e),
+                        label: "Children Gap",
+                    }),
+                }),
+                (0, r.jsx)(c.BZ, {
+                    children: (0, r.jsx)(o.y6, {
+                        value: p,
+                        options: d,
+                        onChange: (e) => _(e),
+                        label: "Edge Fade Space",
+                    }),
                 }),
             ],
         });

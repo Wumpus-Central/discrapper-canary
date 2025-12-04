@@ -1,6 +1,6 @@
 n.d(t, {
-    VE: () => C,
-    lV: () => R,
+    VE: () => Z,
+    lV: () => S,
 }),
     n(539854),
     n(642613),
@@ -11,34 +11,35 @@ var r = n(54381),
     l = n.n(i),
     o = n(468194),
     s = n(442837),
-    c = n(481060),
-    d = n(304680),
-    u = n(763520),
-    m = n(600164),
-    p = n(352978),
-    h = n(271383),
-    f = n(131951),
-    y = n(19780),
-    g = n(226961),
-    v = n(594174),
-    E = n(51144),
-    b = n(513547),
-    D = n(65154),
-    P = n(966117),
-    j = n(197571);
-let x = {
-    [D.Z.NO_OVERRIDE]: "None",
-    [D.Z.LOW]: "Low Quality Stream",
-    [D.Z.HIGH]: "High Quality Stream",
+    c = n(199849),
+    d = n(481060),
+    u = n(304680),
+    m = n(763520),
+    p = n(600164),
+    h = n(352978),
+    f = n(271383),
+    y = n(131951),
+    g = n(19780),
+    v = n(226961),
+    E = n(594174),
+    b = n(51144),
+    D = n(513547),
+    P = n(65154),
+    j = n(966117),
+    x = n(197571);
+let C = {
+    [P.Z.NO_OVERRIDE]: "None",
+    [P.Z.LOW]: "Low Quality Stream",
+    [P.Z.HIGH]: "High Quality Stream",
 };
-function C(e) {
+function Z(e) {
     let t = [],
         n = 0;
     for (
         e.length % 2 != 0 &&
         e.push(
             (0, r.jsx)(
-                m.Z,
+                p.Z,
                 {
                     basis: "50%",
                     grow: 0,
@@ -50,7 +51,7 @@ function C(e) {
     )
         t.push(
             (0, r.jsx)(
-                m.Z,
+                p.Z,
                 {
                     basis: "50%",
                     grow: 0,
@@ -61,31 +62,31 @@ function C(e) {
         );
     return t;
 }
-let Z = {
+let R = {
     ssrc: 1,
     codec: 2,
 };
-function R(e) {
+function S(e) {
     let {
             streams: t,
             context: n,
             mediaEngineConnectionId: i,
-            userId: R,
-            videoStreams: S,
-            title: F,
-            showUserInfo: N = !1,
-            showSimulcastOverride: I = !1,
+            userId: S,
+            videoStreams: F,
+            title: N,
+            showUserInfo: I = !1,
+            showSimulcastOverride: k = !1,
         } = e,
-        [k, w] = a.useState("0"),
-        B = (0, s.e7)([y.Z], () => (N ? y.Z.getGuildId() : null)),
-        A = (0, s.e7)([v.default], () => (N && null != R ? v.default.getUser(R) : null)),
-        T = (0, s.e7)([h.ZP], () => (N && null != B && null != R ? h.ZP.getNick(B, R) : null));
-    if (null == t || (N && null == R) || 0 === t.length) return (0, r.jsx)(c.$jN, { type: c.$jN.Type.SPINNING_CIRCLE });
-    let L = F;
-    N && null != A && (L = "".concat(F, " \u2014 ").concat(null != T ? T : E.ZP.getName(A)));
-    let O = t.map((e, t) =>
+        [w, B] = a.useState("0"),
+        A = (0, s.e7)([g.Z], () => (I ? g.Z.getGuildId() : null)),
+        T = (0, s.e7)([E.default], () => (I && null != S ? E.default.getUser(S) : null)),
+        L = (0, s.e7)([f.ZP], () => (I && null != A && null != S ? f.ZP.getNick(A, S) : null));
+    if (null == t || (I && null == S) || 0 === t.length) return (0, r.jsx)(d.$jN, { type: d.$jN.Type.SPINNING_CIRCLE });
+    let O = N;
+    I && null != T && (O = "".concat(N, " \u2014 ").concat(null != L ? L : b.ZP.getName(T)));
+    let M = t.map((e, t) =>
             (0, r.jsx)(
-                c.njP.Item,
+                d.njP.Item,
                 {
                     id: t.toString(),
                     children: (function (e) {
@@ -104,21 +105,21 @@ function R(e) {
                 t.toString(),
             ),
         ),
-        M = Math.min(parseInt(k, 10), t.length - 1),
-        V = t[M],
-        G = (function (e, t, n, a, i) {
+        V = Math.min(parseInt(w, 10), t.length - 1),
+        G = t[V],
+        H = (function (e, t, n, a, i) {
             let o = [];
             for (let t of Object.keys(e).sort((e, t) => {
-                let n = Z[e],
-                    r = Z[t];
+                let n = R[e],
+                    r = R[t];
                 return n !== r
                     ? void 0 === n
                         ? 1
                         : void 0 === r
                           ? -1
                           : n - r
-                    : g.Pz[e] !== g.Pz[t]
-                      ? g.Pz[e]
+                    : v.Pz[e] !== v.Pz[t]
+                      ? v.Pz[e]
                           ? 1
                           : -1
                       : e > t
@@ -126,11 +127,11 @@ function R(e) {
                         : -1;
             })) {
                 let n = e[t];
-                b.al[t] ||
+                D.al[t] ||
                     void 0 === n ||
                     o.push(
                         (0, r.jsx)(
-                            b.ck,
+                            D.ck,
                             {
                                 section: a,
                                 label: t,
@@ -143,7 +144,7 @@ function R(e) {
             return (0, r.jsxs)(
                 "div",
                 {
-                    className: j.marginBottom40,
+                    className: x.marginBottom40,
                     children: [
                         "video" === e.type &&
                             null != n &&
@@ -153,63 +154,63 @@ function R(e) {
                                 let i = a.get(t, n, e.ssrc);
                                 return null != i
                                     ? (0, r.jsx)("div", {
-                                          className: l()(P.videoWrapper, j.marginBottom40),
-                                          children: (0, r.jsx)(p.Z, {
+                                          className: l()(j.videoWrapper, x.marginBottom40),
+                                          children: (0, r.jsx)(h.Z, {
                                               streamId: i,
-                                              videoComponent: f.Z.getMediaEngine().Video,
+                                              videoComponent: y.Z.getMediaEngine().Video,
                                               paused: !1,
-                                              videoSpinnerContext: u.m.REPLAY_VIDEO_STREAM,
+                                              videoSpinnerContext: m.m.REPLAY_VIDEO_STREAM,
                                               userId: n,
                                           }),
                                       })
                                     : null;
                             })(e, n, a, i),
-                        C(o),
+                        Z(o),
                     ],
                 },
                 "".concat(e.type, " + ").concat(e.ssrc),
             );
-        })(V, 0, i, R, S),
-        H =
-            I &&
-            "video" === V.type &&
+        })(G, 0, i, S, F),
+        _ =
+            k &&
+            "video" === G.type &&
             null != i &&
-            null != R &&
             null != S &&
-            (0, r.jsx)(m.Z, {
-                className: j.marginBottom20,
-                children: (0, r.jsx)(m.Z.Child, {
+            null != F &&
+            (0, r.jsx)(p.Z, {
+                className: x.marginBottom20,
+                children: (0, r.jsx)(p.Z.Child, {
                     basis: "100%",
-                    children: (0, r.jsx)(c.q4e, {
+                    children: (0, r.jsx)(c.y6, {
                         label: "Simulcast Override",
-                        value: g.ZP.getSimulcastDebugOverride(R, n),
+                        value: v.ZP.getSimulcastDebugOverride(S, n),
                         onChange: (e) => {
-                            d.MS(R, n, e);
+                            u.MS(S, n, e);
                         },
-                        options: Object.values(D.Z).map((e) => ({
+                        options: Object.values(P.Z).map((e) => ({
                             value: e,
-                            label: x[e],
+                            label: C[e],
                         })),
                     }),
                 }),
             });
-    return (0, r.jsxs)(c.Kqy, {
+    return (0, r.jsxs)(d.Kqy, {
         gap: 16,
         children: [
-            (0, r.jsx)(c.Heading, {
+            (0, r.jsx)(d.Heading, {
                 variant: "heading-md/medium",
-                children: L,
-            }),
-            (0, r.jsx)(c.njP, {
-                type: "top",
-                look: "brand",
-                selectedItem: k,
-                onItemSelect: w,
-                className: P.tabBar,
                 children: O,
             }),
-            G,
+            (0, r.jsx)(d.njP, {
+                type: "top",
+                look: "brand",
+                selectedItem: w,
+                onItemSelect: B,
+                className: j.tabBar,
+                children: M,
+            }),
             H,
+            _,
         ],
     });
 }

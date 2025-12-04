@@ -1,6 +1,6 @@
 n.d(t, { Z: () => a }), n(388685);
 var r = n(54381),
-    s = n(481060),
+    s = n(199849),
     o = n(968843);
 let a = function (e) {
     let { onSelect: t, quest: n } = e,
@@ -18,7 +18,7 @@ let a = function (e) {
                 value: e,
             })),
         ];
-    return (0, r.jsx)(s.PhF, {
+    return (0, r.jsx)(s.B6, {
         label: "Prefill with Quest",
         options: i,
         isSelected: (e) => (null == e ? void 0 : e.id) === (null == n ? void 0 : n.id),

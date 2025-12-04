@@ -4,7 +4,7 @@ n.d(t, {
 });
 var r = n(54381);
 n(473749);
-var i = n(481060),
+var i = n(199849),
     a = n(991862);
 function o(e) {
     let { currencies: t, className: n, children: i } = e;
@@ -26,7 +26,7 @@ let s = function (e) {
         d = (e) => {
             null != e && o(e);
         };
-    return (0, r.jsx)(i.q4e, {
+    return (0, r.jsx)(i.y6, {
         label: t,
         value: s,
         options: u,

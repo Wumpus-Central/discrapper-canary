@@ -4,7 +4,7 @@ n(473749);
 var i = n(512722),
     a = n.n(i),
     o = n(442837),
-    s = n(481060),
+    s = n(199849),
     l = n(716364),
     c = n(474873),
     u = n(197344),
@@ -24,7 +24,7 @@ function p() {
             label: f.intl.string(t.soundpackLabel),
         },
     ];
-    return (0, r.jsx)(s.q4e, {
+    return (0, r.jsx)(s.y6, {
         label: f.intl.string(f.t.fgSHf8),
         onChange: l.c,
         value: e,

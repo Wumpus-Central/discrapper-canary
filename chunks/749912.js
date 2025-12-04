@@ -1,10 +1,11 @@
-n.d(t, { Z: () => u }), n(467055), n(388685);
+n.d(t, { Z: () => p }), n(467055), n(388685);
 var r = n(54381),
     s = n(754700),
-    o = n(481060),
-    a = n(70956),
-    i = n(196817);
-function l(e) {
+    o = n(199849),
+    a = n(481060),
+    i = n(70956),
+    l = n(196817);
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,7 +30,7 @@ function l(e) {
     }
     return e;
 }
-function c(e, t) {
+function d(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -47,7 +48,7 @@ function c(e, t) {
         e
     );
 }
-let d = [
+let u = [
         {
             value: 1,
             label: "Stream Desktop",
@@ -73,16 +74,16 @@ let d = [
             label: "Play Activity",
         },
     ],
-    u = function (e) {
-        let { onSelect: t, taskDuration: n = 10, taskConfigV2: u } = e;
-        return (0, r.jsxs)(o.Kqy, {
+    p = function (e) {
+        let { onSelect: t, taskDuration: n = 10, taskConfigV2: p } = e;
+        return (0, r.jsxs)(a.Kqy, {
             gap: 20,
             children: [
-                (0, r.jsx)(o.PhF, {
+                (0, r.jsx)(o.B6, {
                     label: "Task Type(s)",
-                    className: i.taskPresetSelect,
+                    className: l.taskPresetSelect,
                     placeholder: "Select Task Preset",
-                    options: d,
+                    options: u,
                     renderOptionValue: (e) => e.map((e) => (0, r.jsx)("div", { children: e.label }, e.value)),
                     renderOptionLabel: (e) => (0, r.jsx)("div", { children: e.label }),
                     isSelected: (e) =>
@@ -94,10 +95,10 @@ let d = [
                                 o = s.X.WATCH_VIDEO in e,
                                 a = s.X.PLAY_ACTIVITY in e;
                             return t && n ? 4 : t ? 3 : n ? 0 : r ? 1 : o ? 2 : a ? 5 : void 0;
-                        })(u.tasks),
+                        })(p.tasks),
                     select: (e) => {
                         t(
-                            c(l({}, u), {
+                            d(c({}, p), {
                                 tasks: (function (e, t) {
                                     let n = {};
                                     switch (e) {
@@ -162,20 +163,20 @@ let d = [
                     },
                     serialize: String,
                 }),
-                (0, r.jsx)(o.oil, {
+                (0, r.jsx)(a.oil, {
                     label: "Task Duration",
-                    value: String(n / a.Z.Seconds.MINUTE),
+                    value: String(n / i.Z.Seconds.MINUTE),
                     onChange: function (e) {
                         let n = Number(e);
                         if (isNaN(n)) return;
-                        n *= a.Z.Seconds.MINUTE;
+                        n *= i.Z.Seconds.MINUTE;
                         let r = Object.fromEntries(
-                            Object.entries(u.tasks).map((e) => {
+                            Object.entries(p.tasks).map((e) => {
                                 let [t, r] = e;
-                                return [t, c(l({}, r), { target: n })];
+                                return [t, d(c({}, r), { target: n })];
                             }),
                         );
-                        t(c(l({}, u), { tasks: r }));
+                        t(d(c({}, p), { tasks: r }));
                     },
                 }),
             ],

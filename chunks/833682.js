@@ -3,7 +3,7 @@ var i = n(54381),
     l = n(473749),
     s = n(793030),
     r = n(442837),
-    u = n(481060),
+    u = n(199849),
     a = n(846027),
     o = n(509613),
     c = n(131951),
@@ -68,7 +68,7 @@ function A() {
         direction: "vertical",
         gap: 0,
         children: [
-            (0, i.jsx)(u.q4e, {
+            (0, i.jsx)(u.y6, {
                 label: g.intl.string(g.t.t8Qhib),
                 description: A,
                 layout: "horizontal",

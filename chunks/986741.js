@@ -1,44 +1,45 @@
-i.d(t, { default: () => p }), i(539854), i(388685);
+i.d(t, { default: () => f }), i(539854), i(388685);
 var a = i(54381),
     n = i(473749),
     o = i(793030),
-    r = i(481060),
-    s = i(168107),
-    l = i(480916),
-    c = i(277021),
-    u = i(469775);
-let d = Object.values(u.Rp)
+    r = i(199849),
+    s = i(481060),
+    l = i(168107),
+    c = i(480916),
+    u = i(277021),
+    d = i(469775);
+let p = Object.values(d.Rp)
     .filter((e) => "number" != typeof e)
     .map((e) => ({
-        value: u.Rp[e],
-        label: u.Rp[u.Rp[e]],
+        value: d.Rp[e],
+        label: d.Rp[d.Rp[e]],
     }));
-d.push({
+p.push({
     value: void 0,
     label: "undefined",
 });
-let p = function (e) {
+let f = function (e) {
     let { onClose: t, transitionState: i } = e,
-        [u, p] = n.useState(""),
-        [f, h] = n.useState(!1),
-        [S, b] = n.useState(void 0),
-        v = n.useCallback(() => {
+        [d, f] = n.useState(""),
+        [S, b] = n.useState(!1),
+        [h, v] = n.useState(void 0),
+        w = n.useCallback(() => {
             console.log("Scan complete");
         }, []),
-        w = async () => {
-            h(!0), p("");
+        _ = async () => {
+            b(!0), f("");
             try {
-                let e = await (0, c.Q)(S);
-                s.Z.showAgeVerification({
+                let e = await (0, u.Q)(h);
+                l.Z.showAgeVerification({
                     webviewUrl: e.verification_webview_url,
-                    onComplete: v,
+                    onComplete: w,
                     onClose: t,
-                    entryPoint: l.cU.DEV_TOOLS_QUICK_ACTIONS,
+                    entryPoint: c.cU.DEV_TOOLS_QUICK_ACTIONS,
                 });
             } catch (e) {
-                p(e.message);
+                f(e.message);
             } finally {
-                h(!1);
+                b(!1);
             }
         };
     return (0, a.jsxs)(o.Modal, {
@@ -48,18 +49,18 @@ let p = function (e) {
         actions: [
             {
                 text: "Trigger Age Verification Test",
-                onClick: w,
-                loading: f,
+                onClick: _,
+                loading: S,
             },
         ],
         children: [
-            (0, a.jsx)(r.PhF, {
-                select: b,
-                isSelected: (e) => e === S,
+            (0, a.jsx)(r.B6, {
+                select: v,
+                isSelected: (e) => e === h,
                 serialize: String,
-                options: d,
+                options: p,
             }),
-            (0, a.jsx)("div", { children: "" !== u && (0, a.jsx)(r.pdY, { error: u }) }),
+            (0, a.jsx)("div", { children: "" !== d && (0, a.jsx)(s.pdY, { error: d }) }),
         ],
     });
 };

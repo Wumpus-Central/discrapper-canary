@@ -3,7 +3,7 @@ var r = n(54381),
     i = n(473749),
     a = n(793030),
     o = n(993365),
-    s = n(481060),
+    s = n(668339),
     l = n(489863),
     c = n(388032),
     u = n(990199);
@@ -55,7 +55,7 @@ function f(e) {
                       children: _,
                   })
                 : null,
-            (0, r.jsx)(s.VcW, {
+            (0, r.jsx)(s.d, {
                 wrapperClassName: u.select,
                 maxVisibleItems: d,
                 onChange: p,

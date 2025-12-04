@@ -403,7 +403,7 @@ let J = r.memo(function (e) {
                                     icon: c.Dkj,
                                     action: () =>
                                         (0, c.ZDy)(async () => {
-                                            let { default: e } = await Promise.all([n.e("15076"), n.e("38203")]).then(
+                                            let { default: e } = await Promise.all([n.e("15076"), n.e("8551")]).then(
                                                 n.bind(n, 907941),
                                             );
                                             return (n) => (0, i.jsx)(e, Y(Q({}, n), { guildId: t.id }));
