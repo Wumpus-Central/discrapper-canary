@@ -122,22 +122,24 @@ function P(e) {
             skipConfirm: z,
         } = null != e ? e : {},
         q = !1,
-        X = null != (t = (0, b.b)()) ? t : (0, o.Z)(),
-        Q = m.default.getCurrentUser(),
-        J = (0, E.M5)(Q, v.PremiumTypes.TIER_2),
+        Q = null != (t = (0, b.b)()) ? t : (0, o.Z)(),
+        X = m.default.getCurrentUser(),
+        J = (0, E.M5)(X, v.PremiumTypes.TIER_2),
         $ = a()("payment-modal"),
         ee = (0, E.Wz)(G),
         et = !1;
     return (0, s.ZDy)(
         async () => {
-            let { default: e } = await Promise.all([n.e("84992"), n.e("16"), n.e("54400")]).then(n.bind(n, 7305));
+            let { default: e } = await Promise.all([n.e("84992"), n.e("16"), n.e("23242"), n.e("81520")]).then(
+                n.bind(n, 7305),
+            );
             return (t) => {
                 var { onClose: n } = t,
                     a = C(t, ["onClose"]);
                 return (0, r.jsx)(
                     e,
                     A(I({}, a), {
-                        loadId: X,
+                        loadId: Q,
                         subscriptionTier: G,
                         skuId: ee,
                         isGift: j,
@@ -207,7 +209,7 @@ function P(e) {
             onCloseCallback: () => {
                 q ||
                     h.default.track(O.rMx.PAYMENT_FLOW_CANCELED, {
-                        load_id: X,
+                        load_id: Q,
                         payment_type: O.Zuq[O.GZQ.SUBSCRIPTION],
                         location: null != D ? D : w,
                         source: x,
