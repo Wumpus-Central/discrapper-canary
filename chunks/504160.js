@@ -1,27 +1,34 @@
 n.d(t, {
     L_: () => l,
+    Xy: () => o,
     _6: () => a,
-    ji: () => i,
+    ji: () => r,
 });
-var r = n(570140);
-function i(e) {
+var i = n(570140);
+function r(e) {
     let { eventId: t, stageId: n } = e;
     (null != t || null != n) &&
-        r.Z.dispatch({
+        i.Z.dispatch({
             type: "LIVE_CHANNEL_NOTICE_HIDE",
             eventId: t,
             stageId: n,
         });
 }
 function l(e) {
-    r.Z.dispatch({
+    i.Z.dispatch({
         type: "UPCOMING_GUILD_EVENT_NOTICE_HIDE",
         eventId: e,
     });
 }
 function a(e) {
-    r.Z.dispatch({
+    i.Z.dispatch({
         type: "UPCOMING_GUILD_EVENT_NOTICE_SEEN",
         guildEventId: e,
+    });
+}
+function o(e) {
+    i.Z.dispatch({
+        type: "EVENT_BANNER_DISMISS",
+        eventId: e,
     });
 }
