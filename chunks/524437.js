@@ -2643,6 +2643,14 @@ class ep extends o.C {
                         a.enableGameUpdateNotifications,
                     );
                     break;
+                case 16:
+                    a.enableProfileUpdatesNotifications = s.D5.internalBinaryRead(
+                        e,
+                        e.uint32(),
+                        n,
+                        a.enableProfileUpdatesNotifications,
+                    );
+                    break;
                 default:
                     let o = n.readUnknownField;
                     if ("throw" === o)
@@ -2707,6 +2715,12 @@ class ep extends o.C {
                 s.D5.internalBinaryWrite(
                     e.enableGameUpdateNotifications,
                     t.tag(15, r.TD.LengthDelimited).fork(),
+                    n,
+                ).join(),
+            e.enableProfileUpdatesNotifications &&
+                s.D5.internalBinaryWrite(
+                    e.enableProfileUpdatesNotifications,
+                    t.tag(16, r.TD.LengthDelimited).fork(),
                     n,
                 ).join();
         let i = n.writeUnknownFields;
@@ -2801,6 +2815,12 @@ class ep extends o.C {
             {
                 no: 15,
                 name: "enable_game_update_notifications",
+                kind: "message",
+                T: () => s.D5,
+            },
+            {
+                no: 16,
+                name: "enable_profile_updates_notifications",
                 kind: "message",
                 T: () => s.D5,
             },
