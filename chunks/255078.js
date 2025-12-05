@@ -126,6 +126,9 @@ class b extends a.Z {
     get isPremium() {
         return this.type === d.NYc.PREMIUM;
     }
+    get isACOM() {
+        return this.paymentGateway === d.gg$.APPLE_ADVANCED_COMMERCE;
+    }
     get planIdForCurrencies() {
         let e;
         return (

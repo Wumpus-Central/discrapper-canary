@@ -1,6 +1,6 @@
 n.d(t, {
     $R: () => l,
-    $V: () => X,
+    $V: () => Q,
     $w: () => eo,
     Ai: () => b,
     Al: () => r.Al,
@@ -56,7 +56,7 @@ n.d(t, {
     pK: () => ef,
     rx: () => u,
     tx: () => ed,
-    vS: () => Q,
+    vS: () => X,
     xr: () => c,
     yA: () => et,
     yX: () => en,
@@ -124,6 +124,7 @@ var h = (function (e) {
             (e[(e.GOOGLE = 4)] = "GOOGLE"),
             (e[(e.ADYEN = 5)] = "ADYEN"),
             (e[(e.APPLE_PARTNER = 6)] = "APPLE_PARTNER"),
+            (e[(e.APPLE_ADVANCED_COMMERCE = 9)] = "APPLE_ADVANCED_COMMERCE"),
             e
         );
     })({}),
@@ -137,6 +138,7 @@ let E = Object.freeze({
         4: "Google",
         5: "Adyen",
         6: "Apple Partner",
+        9: "Apple ACOM",
     }),
     b = Object.freeze({
         BRAINTREE: {
@@ -499,7 +501,7 @@ var K = (function (e) {
             e
         );
     })({}),
-    X = (function (e) {
+    Q = (function (e) {
         return (
             (e[(e.CLOSE_NORMAL = 1000)] = "CLOSE_NORMAL"),
             (e[(e.CLOSE_UNSUPPORTED = 1003)] = "CLOSE_UNSUPPORTED"),
@@ -513,7 +515,7 @@ var K = (function (e) {
             e
         );
     })({});
-let Q = 250,
+let X = 250,
     J = "token",
     $ = "tokens",
     ee = "status.discord.com",
