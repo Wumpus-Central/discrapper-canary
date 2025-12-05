@@ -47,6 +47,7 @@ e.exports = {
     skeleton: "skeleton__08415",
     skeletonBody: "skeletonBody__08415",
     bannerBlockContainer: "bannerBlockContainer__08415",
+    bannerBlockContainerClickable: "bannerBlockContainerClickable__08415",
     wideBannerBackgroundImg: "wideBannerBackgroundImg__08415",
     extraRounded: "extraRounded__08415",
     wideBannerArt: "wideBannerArt__08415",
