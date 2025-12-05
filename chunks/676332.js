@@ -1,4 +1,4 @@
-n.d(e, { Z: () => c });
+n.d(e, { z: () => c });
 var i = n(54381),
     l = n(670863),
     s = n(509613),
@@ -14,6 +14,6 @@ function o() {
     });
 }
 let c = (0, s.ON)(r.n.VOICE_MICROPHONE_INPUT_SELECT, {
-    render: () => (0, i.jsx)(o, {}),
     useSearchTerms: () => [a.intl.string(a.t.hHMYbb), a.intl.string(a.t.nuFtHH)],
+    render: () => (0, i.jsx)(o, {}),
 });

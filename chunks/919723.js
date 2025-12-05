@@ -1,4 +1,4 @@
-n.d(e, { Z: () => S });
+n.d(e, { D: () => S });
 var i = n(473749),
     l = n(442837),
     s = n(846027),
@@ -14,6 +14,9 @@ let S = (0, r.Em)(a.n.VOICE_AUDIO_SUBSYSTEM_SETTING, {
     useValue: function () {
         return (0, l.e7)([u.Z], () => u.Z.getAudioSubsystem());
     },
+    setValue: function (t) {
+        (0, c.Z)(E.intl.string(E.t.uY7AcQ), E.intl.string(E.t.gBqik6), () => s.Z.setAudioSubsystem(t));
+    },
     useOptions: function () {
         let {
             legacyAudioSubsystemSupported: t,
@@ -25,9 +28,6 @@ let S = (0, r.Em)(a.n.VOICE_AUDIO_SUBSYSTEM_SETTING, {
             automaticAudioSubsystemSupported: u.Z.supports(d.AN.AUTOMATIC_AUDIO_SUBSYSTEM),
         }));
         return i.useMemo(() => (0, o.z)(t, e, n), [n, e, t]);
-    },
-    setValue: function (t) {
-        (0, c.Z)(E.intl.string(E.t.uY7AcQ), E.intl.string(E.t.gBqik6), () => s.Z.setAudioSubsystem(t));
     },
     usePredicate: function () {
         return (0, l.e7)([u.Z], () => u.Z.shouldOfferManualSubsystemSelection());

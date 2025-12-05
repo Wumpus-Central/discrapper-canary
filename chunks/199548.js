@@ -7,16 +7,16 @@ var i = n(54381),
     a = n(726985),
     o = n(388032);
 let c = (0, s.x1)(r.n.ACTIVITY_PRIVACY_PANE, {
-        buildLayout: () => [],
         render: () => (0, i.jsx)(u.Z, {}),
+        buildLayout: () => [],
     }),
     d = (0, s.wf)(r.n.ACTIVITY_PRIVACY_PANEL, {
         useTitle: () => o.intl.string(o.t.Cq98yL),
         buildLayout: () => [c],
     }),
     E = (0, s.m7)(r.n.ACTIVITY_PRIVACY_SIDEBAR_ITEM, {
-        icon: l.KED,
         useTitle: () => o.intl.string(o.t.Cq98yL),
         getLegacySearchKey: () => a.s6.ACTIVITY_PRIVACY,
+        icon: l.KED,
         buildLayout: () => [d],
     });

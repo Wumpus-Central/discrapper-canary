@@ -12,17 +12,17 @@ var i = n(54381),
     S = n(726985),
     I = n(388032);
 let T = (0, a.x1)(o.n.CLIPS_PANE, {
-        buildLayout: () => [],
-        render: () => (0, i.jsx)(u.Z, {}),
         usePredicate: () => !(0, c.BK)("LegacyClipsPane"),
+        render: () => (0, i.jsx)(u.Z, {}),
+        buildLayout: () => [],
     }),
     g = (0, a.x1)(o.n.CLIPS_PANE, {
-        buildLayout: () => [E.Z, d.Z],
         usePredicate: () => {
             let t = (0, c.BK)("ClipsPanel"),
                 e = (0, s.w9)();
             return t && e;
         },
+        buildLayout: () => [E.x, d.K],
     }),
     _ = (0, a.wf)(o.n.CLIPS_PANEL, {
         useTitle: () => I.intl.string(I.t.z2jK6X),
@@ -30,8 +30,8 @@ let T = (0, a.x1)(o.n.CLIPS_PANE, {
         buildLayout: () => ((0, c.Ml)("ClipsPanel") ? [g] : [T]),
     }),
     O = (0, a.m7)(o.n.CLIPS_SIDEBAR_ITEM, {
-        icon: l.AlX,
         useTitle: () => I.intl.string(I.t.z2jK6X),
         getLegacySearchKey: () => ((0, c.Ml)("ClipsPanel") ? void 0 : S.s6.CLIPS),
+        icon: l.AlX,
         buildLayout: () => [_],
     });

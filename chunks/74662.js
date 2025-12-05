@@ -15,8 +15,8 @@ var l = n(657707),
     T = n(388032),
     g = n(163646);
 let _ = (0, o.x1)(d.n.PRIVATE_BROWSING_PANE, {
-        buildLayout: () => [],
         render: () => (0, i.jsx)(S.R, {}),
+        buildLayout: () => [],
     }),
     O = (0, o.wf)(d.n.PRIVATE_BROWSING_PANEL, {
         useTitle: () => T.intl.string(g.default.bU5ANm),
@@ -24,19 +24,19 @@ let _ = (0, o.x1)(d.n.PRIVATE_BROWSING_PANE, {
         buildLayout: () => [_],
     }),
     N = (0, o.m7)(d.n.PRIVATE_BROWSING_SIDEBAR_ITEM, {
-        icon: l.enf,
         useTitle: () => T.intl.string(g.default.bU5ANm),
         getLegacySearchKey: () => I.s6.PRIVATE_BROWSING_PERK,
-        buildLayout: () => [O],
+        icon: l.enf,
+        trailing: {
+            type: c.PU.BADGE_NEW,
+            getDismissibleContentTypes: E._x,
+            badgeComponent: E.ec,
+        },
         usePredicate: () => {
             let t = (0, r.m)(),
                 { isSupportedPrivateBrowsingPerkPlatform: e, isWeb: n, perkAvailableToUser: i } = (0, a.xf)(),
                 { enabled: l } = u.H.useConfig({ location: "private_browsing_perk_settings_page" });
             return l && (e || n) && (!t || i);
         },
-        trailing: {
-            type: c.PU.BADGE_NEW,
-            getDismissibleContentTypes: E._x,
-            badgeComponent: E.ec,
-        },
+        buildLayout: () => [O],
     });

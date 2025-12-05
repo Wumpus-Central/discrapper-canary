@@ -7,17 +7,17 @@ var i = n(657707),
     a = n(726985),
     o = n(388032);
 let c = (0, l.x1)(s.n.OVERLAY_PANE, {
-        buildLayout: () => [],
         render: r.Z,
+        buildLayout: () => [],
     }),
     d = (0, l.wf)(s.n.OVERLAY_PANEL, {
         useTitle: () => o.intl.string(o.t["9cb1Uz"]),
         buildLayout: () => [c],
     }),
     E = (0, l.m7)(s.n.OVERLAY_SIDEBAR_ITEM, {
-        icon: i.epB,
         useTitle: () => o.intl.string(o.t["9cb1Uz"]),
         getLegacySearchKey: () => a.s6.OVERLAY,
+        icon: i.epB,
         usePredicate: u.bC,
         buildLayout: () => [d],
     });

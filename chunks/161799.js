@@ -1,4 +1,4 @@
-n.d(e, { Z: () => c }), n(539854);
+n.d(e, { z: () => c }), n(539854);
 var i = n(435064),
     l = n(39604),
     s = n(509613),
@@ -13,9 +13,9 @@ let o = (() => {
     c = (0, s.UO)(r.n.CLIPS_AUTO_CLIP_STORAGE_LIMIT, {
         useTitle: () => a.intl.string(a.t.yfsrDI),
         useSubtitle: () => a.intl.string(a.t.vlDHdC),
-        getInitialValue: () => i.Z.getSettings().maxAutoClips,
         minValue: u.qb,
         maxValue: u.b0,
+        getInitialValue: () => i.Z.getSettings().maxAutoClips,
         onValueRender: (t) => "".concat(Math.floor(t)),
         asValueChanges: (t) => l.W6(Math.floor(t)),
         markers: o,

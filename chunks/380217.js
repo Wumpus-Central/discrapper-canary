@@ -7,16 +7,16 @@ var i = n(54381),
     a = n(726985),
     o = n(388032);
 let c = (0, s.x1)(r.n.BILLING_PANE, {
-        buildLayout: () => [],
         render: () => (0, i.jsx)(u.Z, {}),
+        buildLayout: () => [],
     }),
     d = (0, s.wf)(r.n.BILLING_PANEL, {
         useTitle: () => o.intl.string(o.t.oeUm2s),
         buildLayout: () => [c],
     }),
     E = (0, s.m7)(r.n.BILLING_SIDEBAR_ITEM, {
-        icon: l.ciH,
         useTitle: () => o.intl.string(o.t.oeUm2s),
         getLegacySearchKey: () => a.s6.BILLING,
+        icon: l.ciH,
         buildLayout: () => [d],
     });

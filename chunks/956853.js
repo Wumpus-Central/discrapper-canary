@@ -1,4 +1,4 @@
-n.d(e, { Z: () => c });
+n.d(e, { G: () => c });
 var i = n(442837),
     l = n(846027),
     s = n(509613),
@@ -12,10 +12,10 @@ let c = (0, s.qs)(a.n.VOICE_SILENCE_WARNING_SETTING, {
     useValue: function () {
         return (0, i.e7)([r.Z], () => r.Z.getEnableSilenceWarning());
     },
-    usePredicate: function () {
-        return u.isPlatformEmbedded;
-    },
     setValue: function (t) {
         l.Z.setSilenceWarning(t);
+    },
+    usePredicate: function () {
+        return u.isPlatformEmbedded;
     },
 });

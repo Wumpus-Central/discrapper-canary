@@ -1,4 +1,4 @@
-n.d(e, { Z: () => c });
+n.d(e, { G: () => c });
 var i = n(442837),
     l = n(435064),
     s = n(39604),
@@ -10,6 +10,7 @@ let c = (0, r.Em)(u.n.CLIPS_LENGTH, {
     useTitle: () => o.intl.string(o.t.OgfUio),
     useSubtitle: () => o.intl.string(o.t.H7j4tY),
     useValue: () => (0, i.e7)([l.Z], () => l.Z.getSettings().clipsLength),
+    setValue: (t) => s.eU(t),
     useOptions: () => [
         {
             value: a.OT.SECONDS_30,
@@ -24,5 +25,4 @@ let c = (0, r.Em)(u.n.CLIPS_LENGTH, {
             label: o.intl.formatToPlainString(o.t.ICo9Nk, { count: 2 }),
         },
     ],
-    setValue: (t) => s.eU(t),
 });

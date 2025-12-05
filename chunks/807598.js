@@ -14,6 +14,6 @@ function o() {
     });
 }
 let c = (0, s.ON)(r.n.VOICE_SPEAKER_OUTPUT_SELECT, {
-    render: () => (0, i.jsx)(o, {}),
     useSearchTerms: () => [a.intl.string(a.t.dl18zb), a.intl.string(a.t["3182VD"]), a.intl.string(a.t["DGq/PR"])],
+    render: () => (0, i.jsx)(o, {}),
 });

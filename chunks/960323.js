@@ -15,22 +15,22 @@ var i = n(657707),
     g = n(726985),
     _ = n(388032);
 let O = (0, l.x1)(r.n.VOICE_AND_VIDEO_PANE, {
-        buildLayout: () => [],
-        render: a.Z,
         usePredicate: () => !(0, u.BK)("LegacyVoiceAndVideoPane"),
+        render: a.Z,
+        buildLayout: () => [],
     }),
     N = (0, l.x1)(r.n.VOICE_AND_VIDEO_PANE, {
-        buildLayout: () => [T.Z, d.Z, o.Z, I.Z, S.Z, E.Z, c.Z],
         usePredicate: () => (0, u.BK)("VoiceAndVideoPane"),
+        buildLayout: () => [T.Z, d.W, o.V, I.d, S.g, E.d, c.g],
     }),
     A = (0, l.wf)(r.n.VOICE_AND_VIDEO_PANEL, {
         useTitle: () => _.intl.string(_.t.B1fFpf),
         buildLayout: () => ((0, u.Ml)("VoiceAndVideoPanel") ? [N] : [O]),
     }),
     f = (0, l.m7)(r.n.VOICE_AND_VIDEO_SIDEBAR_ITEM, {
-        icon: i.S6n,
         useTitle: () => _.intl.string(_.t.B1fFpf),
-        usePredicate: () => s.Z.isSupported(),
         getLegacySearchKey: () => ((0, u.Ml)("VoiceAndVideoPanel") ? void 0 : g.s6.VOICE_AND_VIDEO),
+        icon: i.S6n,
+        usePredicate: () => s.Z.isSupported(),
         buildLayout: () => [A],
     });

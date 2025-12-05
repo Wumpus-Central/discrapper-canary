@@ -8,17 +8,17 @@ var i = n(54381),
     o = n(726985),
     c = n(388032);
 let d = (0, s.x1)(r.n.REGISTERED_GAMES_PANE, {
-        buildLayout: () => [],
         render: () => (0, i.jsx)(u.Z, {}),
+        buildLayout: () => [],
     }),
     E = (0, s.wf)(r.n.REGISTERED_GAMES_PANEL, {
         useTitle: () => c.intl.string(c.t.AVDyEj),
         buildLayout: () => [d],
     }),
     S = (0, s.m7)(r.n.REGISTERED_GAMES_SIDEBAR_ITEM, {
-        icon: l.iWm,
         useTitle: () => c.intl.string(c.t.AVDyEj),
         getLegacySearchKey: () => o.s6.REGISTERED_GAMES,
+        icon: l.iWm,
         usePredicate: a.Jw,
         buildLayout: () => [E],
     });

@@ -1,4 +1,4 @@
-n.d(e, { Z: () => f }), n(539854);
+n.d(e, { L: () => f }), n(539854);
 var i = n(54381),
     l = n(473749),
     s = n(793030),
@@ -81,9 +81,9 @@ function A() {
     });
 }
 let f = (0, o.ON)(S.n.VOICE_NOISE_SUPPRESSION_SETTING, {
+    useSearchTerms: () => [g.intl.string(g.t.t8Qhib), g.intl.string(g.t.hmfkCi)],
     usePredicate: function () {
         return (0, r.e7)([c.Z], () => c.Z.isInputProfileCustom() && c.Z.isNoiseSuppressionSupported());
     },
-    useSearchTerms: () => [g.intl.string(g.t.t8Qhib), g.intl.string(g.t.hmfkCi)],
     render: () => (0, i.jsx)(A, {}),
 });

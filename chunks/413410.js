@@ -1,6 +1,6 @@
 n.d(e, {
     B: () => S,
-    Z: () => I,
+    I: () => I,
 });
 var i = n(442837),
     l = n(304680),
@@ -25,9 +25,9 @@ function S() {
 let I = (0, s.qs)(c.n.VOICE_AND_VIDEO_RECORD_CONNECTION_REPLAY, {
     useTitle: () => E.intl.string(E.t.U4FgFK),
     useSubtitle: () => E.intl.string(E.t.Lm72RU),
-    usePredicate: S,
     useValue: function () {
         return (0, i.e7)([u.ZP], () => u.ZP.shouldRecordNextConnection());
     },
     setValue: l.TC,
+    usePredicate: S,
 });

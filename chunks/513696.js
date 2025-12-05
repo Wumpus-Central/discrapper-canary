@@ -10,22 +10,22 @@ var i = n(54381),
     d = n(781652);
 let E = (0, u.x1)(a.n.POGGERMODE_PANE, {
         useTitle: () => c.intl.string(c.t.AtCukI),
-        buildLayout: () => [],
         render: r.Z,
+        buildLayout: () => [],
     }),
     S = (0, u.wf)(a.n.POGGERMODE_PANEL, {
         useTitle: () => c.intl.string(c.t.AtCukI),
         buildLayout: () => [E],
     }),
     I = (0, u.m7)(a.n.POGGERMODE_SIDEBAR_ITEM, {
+        useTitle: () => c.intl.string(c.t.AtCukI),
+        getLegacySearchKey: () => o.s6.POGGERMODE,
         icon: () =>
             (0, i.jsx)("img", {
                 alt: "",
                 src: n(348621),
                 className: d.poggermodeIcon,
             }),
-        useTitle: () => c.intl.string(c.t.AtCukI),
-        getLegacySearchKey: () => o.s6.POGGERMODE,
         usePredicate: () => (0, l.e7)([s.Z], () => s.Z.settingsVisible),
         buildLayout: () => [S],
     });

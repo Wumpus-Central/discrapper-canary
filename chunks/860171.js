@@ -9,21 +9,21 @@ var i = n(54381),
     c = n(726985),
     d = n(388032);
 let E = (0, s.x1)(r.n.STREAMER_MODE_PANE, {
-        buildLayout: () => [o.Z],
         usePredicate: () => (0, u.BK)("StreamerModePane"),
+        buildLayout: () => [o.R],
     }),
     S = (0, s.x1)(r.n.STREAMER_MODE_PANE, {
-        buildLayout: () => [],
-        render: () => (0, i.jsx)(a.Z, {}),
         usePredicate: () => !(0, u.BK)("StreamerModePane"),
+        render: () => (0, i.jsx)(a.Z, {}),
+        buildLayout: () => [],
     }),
     I = (0, s.wf)(r.n.STREAMER_MODE_PANEL, {
         useTitle: () => d.intl.string(d.t.S5GfOW),
         buildLayout: () => ((0, u.Ml)("StreamerModePanel") ? [E] : [S]),
     }),
     T = (0, s.m7)(r.n.STREAMER_MODE_SIDEBAR_ITEM, {
-        icon: l.m3e,
         useTitle: () => d.intl.string(d.t.S5GfOW),
         getLegacySearchKey: () => ((0, u.Ml)("StreamerModePanel") ? void 0 : c.s6.STREAMER_MODE),
+        icon: l.m3e,
         buildLayout: () => [I],
     });

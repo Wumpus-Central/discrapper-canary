@@ -1,4 +1,4 @@
-n.d(e, { Z: () => d });
+n.d(e, { A: () => d });
 var i = n(442837),
     l = n(846027),
     s = n(509613),
@@ -9,12 +9,6 @@ var i = n(442837),
     c = n(388032);
 let d = (0, s.qs)(a.n.VOICE_ECHO_CANCELLATION_SETTING, {
     useTitle: () => c.intl.string(c.t.iWTwu6),
-    useDisabled: function () {
-        return (0, i.e7)([u.Z, r.Z], () => {
-            let t = u.Z.getInputDeviceId();
-            return r.Z.hasEchoCancellation(t);
-        });
-    },
     useValue: function () {
         return (0, i.e7)([u.Z], () => u.Z.getEchoCancellation());
     },
@@ -22,6 +16,12 @@ let d = (0, s.qs)(a.n.VOICE_ECHO_CANCELLATION_SETTING, {
         l.Z.setEchoCancellation(t, {
             page: o.ZY5.USER_SETTINGS,
             section: o.jXE.SETTINGS_VOICE_AND_VIDEO,
+        });
+    },
+    useDisabled: function () {
+        return (0, i.e7)([u.Z, r.Z], () => {
+            let t = u.Z.getInputDeviceId();
+            return r.Z.hasEchoCancellation(t);
         });
     },
     usePredicate: function () {

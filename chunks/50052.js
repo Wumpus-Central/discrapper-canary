@@ -1,4 +1,4 @@
-n.d(e, { Z: () => T });
+n.d(e, { Q: () => T });
 var i = n(442837),
     l = n(223245),
     s = n(579806),
@@ -45,6 +45,12 @@ let c = (0, r.qs)(a.n.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
     I = (0, r.qs)(a.n.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE, {
         useTitle: () => o.intl.string(o.t["iA81+a"]),
         useSubtitle: () => o.intl.string(o.t.P4vj0h),
+        useValue: () =>
+            (0, i.e7)([u.Z], () => {
+                let { enableContentProtection: t } = u.Z.getSettings();
+                return t;
+            }),
+        setValue: (t) => l.Z.update({ enableContentProtection: t }),
         usePredicate: () => {
             var t, e, n;
             return (
@@ -58,12 +64,6 @@ let c = (0, r.qs)(a.n.STREAMER_MODE_HIDE_PERSONAL_INFORMATION, {
                             : t.call(e)) && n
             );
         },
-        useValue: () =>
-            (0, i.e7)([u.Z], () => {
-                let { enableContentProtection: t } = u.Z.getSettings();
-                return t;
-            }),
-        setValue: (t) => l.Z.update({ enableContentProtection: t }),
     }),
     T = (0, r.Uc)(a.n.STREAMER_MODE_OPTIONS_LIST, {
         useTitle: () => o.intl.string(o.t.UtW8R6),

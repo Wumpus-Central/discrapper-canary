@@ -1,4 +1,4 @@
-n.d(e, { z: () => Z });
+n.d(e, { z: () => C });
 var i = n(54381),
     l = n(657707),
     s = n(442837),
@@ -17,22 +17,21 @@ var i = n(54381),
     O = n(388032),
     N = n(88651);
 let A = (0, c.x1)(T.n.PROFILE_PANE, {
-        buildLayout: () => [],
         render: o.Z,
+        buildLayout: () => [],
     }),
     f = (0, c.wf)(T.n.PROFILE_PANEL, {
         useTitle: () => O.intl.string(O.t["vi7f+q"]),
-        buildLayout: () => [A],
         notice: {
             stores: [u.Z, S.Z],
             element: a.Z,
         },
+        buildLayout: () => [A],
     }),
-    Z = (0, c.m7)(T.n.PROFILE_SIDEBAR_ITEM, {
-        icon: l.tBG,
+    C = (0, c.m7)(T.n.PROFILE_SIDEBAR_ITEM, {
         useTitle: () => O.intl.string(O.t["vi7f+q"]),
         getLegacySearchKey: () => _.s6.PROFILE_CUSTOMIZATION,
-        buildLayout: () => [f],
+        icon: l.tBG,
         stronglyDiscouragedCustomComponent: () => {
             var t;
             let e = (0, s.e7)([I.default], () => I.default.getCurrentUser()),
@@ -85,4 +84,5 @@ let A = (0, c.x1)(T.n.PROFILE_PANE, {
             getDismissibleContentTypes: g.OF,
             badgeComponent: g.W8,
         },
+        buildLayout: () => [f],
     });

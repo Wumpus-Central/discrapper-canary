@@ -7,17 +7,17 @@ var i = n(657707),
     a = n(726985),
     o = n(388032);
 let c = (0, l.x1)(r.n.WINDOWS_PANE, {
-        buildLayout: () => [],
         render: u.Z,
+        buildLayout: () => [],
     }),
     d = (0, l.wf)(r.n.WINDOWS_PANEL, {
         useTitle: () => o.intl.string(o.t.ZkDZov),
         buildLayout: () => [c],
     }),
     E = (0, l.m7)(r.n.WINDOWS_SIDEBAR_ITEM, {
-        icon: i.pzj,
         useTitle: () => o.intl.string(o.t.ZkDZov),
         getLegacySearchKey: () => a.s6.WINDOW_SETTINGS,
+        icon: i.pzj,
         usePredicate: () => s.isPlatformEmbedded && (0, s.isWindows)(),
         buildLayout: () => [d],
     });

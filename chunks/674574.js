@@ -10,15 +10,15 @@ var i = n(657707),
     d = n(348911),
     E = n(388032);
 let S = (0, l.x1)(s.n.NOTIFICATIONS_PANE, {
-        buildLayout: () => [c.Z, d.Z, a.Z, o.Z, u.Z],
+        buildLayout: () => [c.o, d.p, a.s, o.r, u.G],
     }),
     I = (0, l.wf)(s.n.NOTIFICATIONS_PANEL, {
         useTitle: () => E.intl.string(E.t.HcoRu0),
         buildLayout: () => [S],
     }),
     T = (0, l.m7)(s.n.NOTIFICATIONS_SIDEBAR_ITEM, {
-        icon: i.Dkj,
         useTitle: () => E.intl.string(E.t.HcoRu0),
+        icon: i.Dkj,
         usePredicate: () => (0, r.gj)("NotificationsPanel"),
         buildLayout: () => [I],
     });

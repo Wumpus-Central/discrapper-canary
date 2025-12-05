@@ -1,4 +1,4 @@
-n.d(e, { Z: () => c });
+n.d(e, { Q: () => c });
 var i = n(846027),
     l = n(100527),
     s = n(509613),
@@ -8,6 +8,7 @@ var i = n(846027),
     o = n(388032);
 let c = (0, s.UO)(a.n.VOICE_OUTPUT_VOLUME_SETTING, {
     useTitle: () => o.intl.string(o.t.aUJ062),
+    useSearchTerms: () => [o.intl.string(o.t.eATD2B), o.intl.string(o.t["3182VD"]), o.intl.string(o.t["DGq/PR"])],
     minValue: 0,
     maxValue: 200,
     getInitialValue: function () {
@@ -22,5 +23,4 @@ let c = (0, s.UO)(a.n.VOICE_OUTPUT_VOLUME_SETTING, {
             n = (0, u.A)(t);
         i.Z.setOutputVolume(n, { analyticsLocations: e });
     },
-    useSearchTerms: () => [o.intl.string(o.t.eATD2B), o.intl.string(o.t["3182VD"]), o.intl.string(o.t["DGq/PR"])],
 });

@@ -1,4 +1,4 @@
-n.d(e, { Z: () => d });
+n.d(e, { b: () => d });
 var i = n(442837),
     l = n(846027),
     s = n(100527),
@@ -10,14 +10,14 @@ var i = n(442837),
 let d = (0, r.qs)(a.n.STREAMING_STREAM_ATTENUATION, {
     useTitle: () => c.intl.string(c.t["/jwMtn"]),
     useSubtitle: () => c.intl.string(c.t.zlA23F),
-    usePredicate: function () {
-        return u.Z.supports(o.AN.SIDECHAIN_COMPRESSION);
-    },
     useValue: function () {
         return (0, i.e7)([u.Z], () => u.Z.getSidechainCompression());
     },
     setValue: function (t) {
         let e = [s.Z.USER_SETTINGS_VOICE_AND_VIDEO];
         l.Z.setSidechainCompression(t, { analyticsLocations: e });
+    },
+    usePredicate: function () {
+        return u.Z.supports(o.AN.SIDECHAIN_COMPRESSION);
     },
 });

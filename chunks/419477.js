@@ -8,20 +8,20 @@ var i = n(657707),
     o = n(726985),
     c = n(388032);
 let d = (0, s.x1)(u.n.GIFT_PANE, {
-        buildLayout: () => [],
         render: a.Z,
+        buildLayout: () => [],
     }),
     E = (0, s.wf)(u.n.GIFT_PANEL, {
         useTitle: () => c.intl.string(c.t["jcSP+g"]),
         buildLayout: () => [d],
     }),
     S = (0, s.m7)(u.n.GIFT_SIDEBAR_ITEM, {
-        icon: i.OgN,
         useTitle: () => c.intl.string(c.t["jcSP+g"]),
         getLegacySearchKey: () => o.s6.GIFT_INVENTORY,
-        buildLayout: () => [E],
+        icon: i.OgN,
         trailing: {
             type: r.PU.BADGE_COUNT,
             useCount: () => (0, l.YO)().length,
         },
+        buildLayout: () => [E],
     });

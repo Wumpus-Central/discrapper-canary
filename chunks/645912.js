@@ -7,16 +7,16 @@ var i = n(54381),
     a = n(726985),
     o = n(388032);
 let c = (0, s.x1)(r.n.KEYBINDS_PANE, {
-        buildLayout: () => [],
         render: () => (0, i.jsx)(u.Z, {}),
+        buildLayout: () => [],
     }),
     d = (0, s.wf)(r.n.KEYBINDS_PANEL, {
         useTitle: () => o.intl.string(o.t.T9DA2K),
         buildLayout: () => [c],
     }),
     E = (0, s.m7)(r.n.KEYBINDS_SIDEBAR_ITEM, {
-        icon: l.YiA,
         useTitle: () => o.intl.string(o.t.T9DA2K),
         getLegacySearchKey: () => a.s6.KEYBINDS,
+        icon: l.YiA,
         buildLayout: () => [d],
     });

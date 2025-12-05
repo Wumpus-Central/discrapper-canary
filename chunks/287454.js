@@ -1,4 +1,4 @@
-n.d(e, { Z: () => c });
+n.d(e, { G: () => c });
 var i = n(442837),
     l = n(435064),
     s = n(39604),
@@ -10,6 +10,13 @@ let c = (0, r.Em)(u.n.CLIPS_RESOLUTION, {
     useTitle: () => o.intl.string(o.t.aFudZJ),
     useSubtitle: () => o.intl.string(o.t.nIrkW5),
     useValue: () => (0, i.e7)([l.Z], () => l.Z.getSettings().clipsQuality.resolution),
+    setValue: (t) => {
+        let { clipsQuality: e } = l.Z.getSettings();
+        s.yi({
+            resolution: t,
+            frameRate: e.frameRate,
+        });
+    },
     useOptions: () => [
         {
             value: a.ApplicationStreamResolutions.RESOLUTION_480,
@@ -40,11 +47,4 @@ let c = (0, r.Em)(u.n.CLIPS_RESOLUTION, {
             label: o.intl.string(o.t.XjXqzh),
         },
     ],
-    setValue: (t) => {
-        let { clipsQuality: e } = l.Z.getSettings();
-        s.yi({
-            resolution: t,
-            frameRate: e.frameRate,
-        });
-    },
 });

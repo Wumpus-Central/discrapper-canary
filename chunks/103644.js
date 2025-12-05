@@ -7,8 +7,8 @@ var i = n(54381),
     a = n(518596),
     o = n(388032);
 let c = (0, r.ON)(u.n.SOUNDS_HOLIDAY_NOTICE, {
-    usePredicate: () => null != s.Z.useHolidaySoundpack(),
     useSearchTerms: () => [o.intl.string(o.t.fgSHf8)],
+    usePredicate: () => null != s.Z.useHolidaySoundpack(),
     render: () =>
         (0, i.jsx)(l.xvT, {
             variant: "text-md/normal",

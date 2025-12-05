@@ -13,18 +13,17 @@ var i = n(54381),
     I = n(744038);
 let T = (0, a.x1)(c.n.FAMILY_CENTER_PANE, {
         useTitle: () => S.intl.string(I.default.RZqaJn),
-        buildLayout: () => [],
         render: () => (0, i.jsx)(d.Z, {}),
+        buildLayout: () => [],
     }),
     g = (0, a.wf)(c.n.FAMILY_CENTER_PANEL, {
         useTitle: () => S.intl.string(I.default.RZqaJn),
         buildLayout: () => [T],
     }),
     _ = (0, a.m7)(c.n.FAMILY_CENTER_SIDEBAR_ITEM, {
-        icon: l.BFJ,
         useTitle: () => S.intl.string(I.default.RZqaJn),
         getLegacySearchKey: () => E.s6.PRIVACY_FAMILY_CENTER,
-        buildLayout: () => [g],
+        icon: l.BFJ,
         trailing: {
             type: o.PU.STRONGLY_DISCOURAGED_CUSTOM,
             getDismissibleContentTypes: () => [s.z.FAMILY_CENTER_NEW_BADGE],
@@ -37,4 +36,5 @@ let T = (0, a.x1)(c.n.FAMILY_CENTER_PANE, {
                       : null;
             },
         },
+        buildLayout: () => [g],
     });

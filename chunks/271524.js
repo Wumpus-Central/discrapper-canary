@@ -1,4 +1,4 @@
-n.d(e, { Z: () => d });
+n.d(e, { l: () => d });
 var i = n(442837),
     l = n(292556),
     s = n(419363),
@@ -12,7 +12,6 @@ let d = (0, r.J9)(a.n.TEXT_TO_SPEECH_NOTIFICATIONS, {
     useSubtitle: () => c.intl.string(c.t.HDLtJl),
     useValue: () => (0, i.e7)([u.Z], () => u.Z.getTTSType()),
     setValue: (t) => l.default.setTTSType(t),
-    usePredicate: () => s.Zh,
     useOptions: () => [
         {
             name: c.intl.string(c.t.B1AGeJ),
@@ -27,4 +26,5 @@ let d = (0, r.J9)(a.n.TEXT_TO_SPEECH_NOTIFICATIONS, {
             value: o.PrB.NEVER,
         },
     ],
+    usePredicate: () => s.Zh,
 });

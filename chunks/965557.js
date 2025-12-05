@@ -5,16 +5,16 @@ var i = n(657707),
     r = n(313789),
     u = n(287490);
 let a = (0, l.x1)(r.n.EXPERIMENTS_PANE, {
-        buildLayout: () => [],
         render: u.Z,
+        buildLayout: () => [],
     }),
     o = (0, l.wf)(r.n.EXPERIMENTS_PANEL, {
         useTitle: () => "Experiments",
         buildLayout: () => [a],
     }),
     c = (0, l.m7)(r.n.EXPERIMENTS_SIDEBAR_ITEM, {
-        icon: i.uOV,
         useTitle: () => "Experiments",
+        icon: i.uOV,
         usePredicate: () => s.Z.isDeveloper,
         buildLayout: () => [o],
     });

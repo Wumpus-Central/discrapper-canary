@@ -1,4 +1,4 @@
-n.d(e, { Z: () => S });
+n.d(e, { b: () => S });
 var i = n(442837),
     l = n(846027),
     s = n(509613),
@@ -8,11 +8,11 @@ var i = n(442837),
     o = n(388032);
 let c = (0, s.UO)(u.n.VOICE_GLOBAL_ATTENUATION_SLIDER, {
         useTitle: () => o.intl.string(o.t.AlybXj),
+        setValue: (t) =>
+            l.Z.setAttenuation(t, r.Z.getAttenuateWhileSpeakingSelf(), r.Z.getAttenuateWhileSpeakingOthers()),
         minValue: 0,
         maxValue: 100,
         getInitialValue: () => r.Z.getAttenuation(),
-        setValue: (t) =>
-            l.Z.setAttenuation(t, r.Z.getAttenuateWhileSpeakingSelf(), r.Z.getAttenuateWhileSpeakingOthers()),
     }),
     d = (0, s.qs)(u.n.VOICE_GLOBAL_ATTENUATION_FOR_SELF_SETTING, {
         useTitle: () => o.intl.string(o.t["9dHxRY"]),

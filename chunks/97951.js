@@ -1,4 +1,4 @@
-n.d(e, { Z: () => g });
+n.d(e, { F: () => g });
 var i = n(54381),
     l = n(399606),
     s = n(481060),
@@ -27,9 +27,9 @@ function T() {
     });
 }
 let g = (0, r.ON)(o.n.VOICE_MICROPHONE_TEST_SETTING, {
-    render: () => (0, i.jsx)(T, {}),
+    useSearchTerms: () => [S.intl.string(S.t.nuFtHH)],
     usePredicate: function () {
         return (0, l.e7)([u.Z], () => u.Z.supports(E.AN.LOOPBACK));
     },
-    useSearchTerms: () => [S.intl.string(S.t.nuFtHH)],
+    render: () => (0, i.jsx)(T, {}),
 });

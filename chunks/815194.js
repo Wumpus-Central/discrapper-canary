@@ -1,4 +1,4 @@
-n.d(e, { Z: () => _ });
+n.d(e, { h: () => _ });
 var i = n(54381),
     l = n(793030),
     s = n(442837),
@@ -34,7 +34,7 @@ function g() {
     });
 }
 let _ = (0, a.ON)(c.n.VOICE_PUSH_TO_TALK_KEYBIND_SETTING, {
+    useSearchTerms: () => [I.intl.string(I.t["pS+K2L"]), I.intl.string(I.t.nuFtHH)],
     usePredicate: E.J,
     render: () => (0, i.jsx)(g, {}),
-    useSearchTerms: () => [I.intl.string(I.t["pS+K2L"]), I.intl.string(I.t.nuFtHH)],
 });
