@@ -322,4 +322,55 @@ let c = (e) => {
                 session_impression_index: e.sessionImpressionIndex,
             });
         },
+        trackFeedItemActioned(e) {
+            var t;
+            i.default.track(s.rMx.FEED_ITEM_ACTIONED, {
+                load_id: l.Z.getLoadId(),
+                icymi_session_id: e.icymiSessionId,
+                ux_variation: e.uxVariation,
+                version: l.Z.getVersion(),
+                session_action_index: e.sessionActionIndex,
+                item_id: e.itemId,
+                item_type: e.itemType,
+                impression_id: null != (t = e.impressionId) ? t : null,
+                action_gesture_type: e.actionParameters.actionGestureType,
+                action_target_element: e.actionParameters.actionTargetElement,
+                action_intent_type: e.actionParameters.actionIntentType,
+                action_destination_type: e.actionParameters.actionDestinationType,
+            });
+        },
+        trackFeedFilterActioned(e) {
+            var t, n, r, a, o, c, u, d, p;
+            i.default.track(s.rMx.FEED_FILTER_ACTIONED, {
+                load_id: l.Z.getLoadId(),
+                icymi_session_id: e.icymiSessionId,
+                ux_variation: e.uxVariation,
+                version: l.Z.getVersion(),
+                session_action_index: e.sessionActionIndex,
+                filter_setting_context: e.filterParameters.filterSettingContext,
+                filter_target_type: e.filterParameters.filterTargetType,
+                target_guild_id: null != (t = e.filterParameters.targetGuildId) ? t : null,
+                target_channel_id: null != (n = e.filterParameters.targetChannelId) ? n : null,
+                previous_tune_setting: null != (r = e.filterParameters.previousTuneSetting) ? r : null,
+                new_tune_setting: null != (a = e.filterParameters.newTuneSetting) ? a : null,
+                previous_out_setting: null != (o = e.filterParameters.previousOutSetting) ? o : null,
+                new_out_setting: null != (c = e.filterParameters.newOutSetting) ? c : null,
+                item_id: null != (u = e.itemId) ? u : null,
+                item_type: null != (d = e.itemType) ? d : null,
+                impression_id: null != (p = e.impressionId) ? p : null,
+            });
+        },
+        trackFeedPageActioned(e) {
+            i.default.track(s.rMx.FEED_PAGE_ACTIONED, {
+                load_id: l.Z.getLoadId(),
+                icymi_session_id: e.icymiSessionId,
+                ux_variation: e.uxVariation,
+                version: l.Z.getVersion(),
+                session_action_index: e.sessionActionIndex,
+                action_gesture_type: e.actionParameters.actionGestureType,
+                action_target_element: e.actionParameters.actionTargetElement,
+                action_intent_type: e.actionParameters.actionIntentType,
+                action_destination_type: e.actionParameters.actionDestinationType,
+            });
+        },
     };
