@@ -1,6 +1,7 @@
 n.d(t, {
-    E: () => l,
-    G: () => i,
+    EK: () => l,
+    GX: () => i,
+    qe: () => u,
 }),
     n(388685);
 var r = n(473749),
@@ -31,5 +32,31 @@ function l(e, t) {
         backgroundBottom: t ? l[s] : ["#535356", "#8B8C95"][s],
         foreground: i,
         glow: t && r ? i : "#C4C1D66E",
+    };
+}
+let c = () => {
+    let e = document.body.style.getPropertyValue("--custom-guild-sidebar-width").slice(0, -2);
+    return parseInt("" !== e ? e : "375");
+};
+function u() {
+    return {
+        label: !(function () {
+            let [e, t] = r.useState(() => 270 > c());
+            return (
+                r.useEffect(() => {
+                    let e = new MutationObserver(() => {
+                        t(270 > c());
+                    });
+                    return (
+                        e.observe(document.body, {
+                            attributes: !0,
+                            attributeFilter: ["style"],
+                        }),
+                        () => e.disconnect()
+                    );
+                }, [270]),
+                e
+            );
+        })(),
     };
 }

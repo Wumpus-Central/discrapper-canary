@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => j });
 var r = n(54381),
     s = n(473749),
     o = n(120356),
@@ -6,66 +6,59 @@ var r = n(54381),
     i = n(205120),
     l = n(481060),
     c = n(617136),
-    d = n(915750),
-    u = n(49436),
-    p = n(509212),
-    m = n(685138),
-    g = n(698716),
+    u = n(915750),
+    d = n(49436),
+    p = n(387745),
+    m = n(698716),
     f = n(685613),
-    h = n(110560),
+    g = n(110560),
     x = n(73826),
-    _ = n(324805),
-    b = n(388032),
-    j = n(765486);
-let v = (0, i.animated)(f.ZP),
-    C = (e) => {
+    h = n(388032),
+    _ = n(765486);
+let b = (0, i.animated)(f.ZP),
+    j = (e) => {
         let {
                 quest: t,
                 expansionSpring: n,
                 onCtxMenuSelect: o,
                 onCtxMenuOpen: f,
-                onCtxMenuClose: C,
-                useReducedMotion: y,
-                isExpanded: E,
-                isExpansionAnimationComplete: O,
+                onCtxMenuClose: j,
+                useReducedMotion: v,
+                isExpanded: C,
+                isExpansionAnimationComplete: y,
             } = e,
-            S = (0, d.aM)(),
-            { status: T } = (0, m.n)({
-                location: _.dr.QUESTS_BAR,
-                questConfig: t.config,
-            }),
-            w = null == T ? void 0 : T.progressBlur,
-            P = s.useCallback(() => {
-                (0, h.openDisclosureModal)(t, {
-                    content: u.jn.QUEST_BAR_V2,
+            E = (0, u.aM)(),
+            O = s.useCallback(() => {
+                (0, g.openDisclosureModal)(t, {
+                    content: d.jn.QUEST_BAR_V2,
                     ctaContent: c.jZ.OPEN_DISCLOSURE,
-                    sourceQuestContent: u.jn.QUEST_BAR_V2,
+                    sourceQuestContent: d.jn.QUEST_BAR_V2,
                 });
             }, [t]),
-            N = s.useCallback(() => {
+            S = s.useCallback(() => {
                 (0, p.nc)(t, {
-                    content: u.jn.QUEST_BAR_V2,
+                    content: d.jn.QUEST_BAR_V2,
                     ctaContent: c.jZ.OPEN_GAME_LINK,
-                    impressionId: S,
-                    sourceQuestContent: u.jn.QUEST_BAR_V2,
+                    impressionId: E,
+                    sourceQuestContent: d.jn.QUEST_BAR_V2,
                 });
-            }, [S, t]),
-            R = E && O,
-            A = (0, r.jsx)(l.P3F, {
-                onClick: N,
-                className: a()(j.clickable, { [j.logo]: R }),
-                children: (0, r.jsx)(v, {
+            }, [E, t]),
+            T = C && y,
+            w = (0, r.jsx)(l.P3F, {
+                onClick: S,
+                className: a()(_.clickable, { [_.logo]: T }),
+                children: (0, r.jsx)(b, {
                     quest: t,
                     withGameTile: !1,
-                    logotypeClassName: j.partnerBranding,
+                    logotypeClassName: _.partnerBranding,
                     logotypeStyle: {
-                        height: w ? 32 : 24,
-                        maxWidth: w ? 130 : 92,
+                        height: 24,
+                        maxWidth: 92,
                         transform: (0, i.to)(
                             [
                                 n.to({
                                     range: [0, 1],
-                                    output: [1, w ? 0.72 : 1],
+                                    output: [1, 1],
                                 }),
                             ],
                             (e) => "scale(".concat(e, ")"),
@@ -74,21 +67,21 @@ let v = (0, i.animated)(f.ZP),
                 }),
             });
         return (0, r.jsxs)(i.animated.div, {
-            className: a()(j.wrapper, j.rewardHighlightWrapper, { [j.interactable]: R }),
+            className: a()(_.wrapper, _.rewardHighlightWrapper, { [_.interactable]: T }),
             style: {
                 transform: (0, i.to)(
                     [
                         n.to({
                             range: [0, 1],
-                            output: [w ? 5 : 6, 0],
+                            output: [6, 0],
                         }),
                     ],
-                    (e) => "translateY(".concat(e, "px"),
+                    (e) => "translateY(".concat(e, "px)"),
                 ),
             },
             children: [
                 (0, r.jsx)(i.animated.div, {
-                    className: j.opaqueExpandedBackground,
+                    className: _.opaqueExpandedBackground,
                     style: {
                         opacity: n.to({
                             range: [0, 1],
@@ -99,12 +92,12 @@ let v = (0, i.animated)(f.ZP),
                 (0, r.jsx)(x.Z, {
                     quest: t,
                     expansionSpring: n,
-                    isFullyExpanded: R,
-                    partnerBranding: A,
-                    useReducedMotion: y,
+                    isFullyExpanded: T,
+                    partnerBranding: w,
+                    useReducedMotion: v,
                 }),
                 (0, r.jsxs)(i.animated.div, {
-                    className: j.promotedBadgeWrapper,
+                    className: _.promotedBadgeWrapper,
                     style: {
                         opacity: n.to({
                             range: [0, 1],
@@ -113,29 +106,29 @@ let v = (0, i.animated)(f.ZP),
                     },
                     children: [
                         (0, r.jsxs)(l.P3F, {
-                            className: j.promotedBadge,
-                            onClick: P,
+                            className: _.promotedBadge,
+                            onClick: O,
                             children: [
                                 (0, r.jsx)(l.Text, {
                                     color: "always-white",
                                     variant: "text-xs/normal",
-                                    children: b.intl.string(b.t.o6FLcF),
+                                    children: h.intl.string(h.t.o6FLcF),
                                 }),
                                 (0, r.jsx)(l.idN, {
                                     color: l.TVs.colors.WHITE,
-                                    className: j.promotedBadgeIcon,
+                                    className: _.promotedBadgeIcon,
                                 }),
                             ],
                         }),
-                        (0, r.jsx)(g.i, {
+                        (0, r.jsx)(m.i, {
                             onOpen: f,
-                            onClose: C,
+                            onClose: j,
                             onSelect: o,
-                            questContent: u.jn.QUEST_BAR_V2,
+                            questContent: d.jn.QUEST_BAR_V2,
                             quest: t,
                             shouldShowDisclosure: !0,
                             showShareLink: !0,
-                            sourceQuestContent: u.jn.QUEST_BAR_V2,
+                            sourceQuestContent: d.jn.QUEST_BAR_V2,
                             children: (e) => {
                                 var t, n;
                                 return (0, r.jsx)(
@@ -167,12 +160,12 @@ let v = (0, i.animated)(f.ZP),
                                     })({}, e)),
                                     (n = n =
                                         {
-                                            className: j.submenuWrapper,
-                                            "aria-label": b.intl.string(b.t.DEoVWZ),
+                                            className: _.submenuWrapper,
+                                            "aria-label": h.intl.string(h.t.DEoVWZ),
                                             children: (0, r.jsx)(l.xhG, {
                                                 size: "md",
                                                 color: "currentColor",
-                                                className: a()(j.submenuIcon, j.white),
+                                                className: a()(_.submenuIcon, _.white),
                                             }),
                                         }),
                                     Object.getOwnPropertyDescriptors

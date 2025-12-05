@@ -10,5 +10,6 @@ e.exports = {
     zoomControlsContainer: "zoomControlsContainer__1505a",
     idle: "idle__1505a",
     zoomControls: "zoomControls__1505a",
+    zoomControlsWithChildren: "zoomControlsWithChildren__1505a",
     zoomControlsRow: "zoomControlsRow__1505a",
 };

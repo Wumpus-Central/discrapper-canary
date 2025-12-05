@@ -68,7 +68,7 @@ let P = {
         x: 0,
         y: 0,
     },
-    x = (0, o.debounce)((e, t, n) => {
+    j = (0, o.debounce)((e, t, n) => {
         let r = null,
             i = null;
         if (null != n && (0, m.DB)(n)) {
@@ -85,7 +85,7 @@ let P = {
             share_application_id: i,
         });
     }, 2000);
-function j(e, t, n) {
+function x(e, t, n) {
     return Math.min(Math.max(t, e), n);
 }
 let Z = i.memo(function (e) {
@@ -165,15 +165,15 @@ let Z = i.memo(function (e) {
                     l = (r * (n - 1)) / 2,
                     a = (i * (n - 1)) / 2;
                 return {
-                    x: j(e.x, -l, l),
-                    y: j(e.y, -a, a),
+                    x: x(e.x, -l, l),
+                    y: x(e.y, -a, a),
                 };
             },
             [$],
         ),
         eO = i.useCallback(
             (e, t, r) => {
-                let i = j(e, n, l);
+                let i = x(e, n, l);
                 if (null == e_.current || null == t || i === $) return;
                 eu(!0);
                 let a = i / $;
@@ -187,7 +187,7 @@ let Z = i.memo(function (e) {
                     ),
                 ),
                     ee(i),
-                    x(i, r, b),
+                    j(i, r, b),
                     em.current.start(2000, () => {
                         eu(!1);
                     });
@@ -234,10 +234,10 @@ let Z = i.memo(function (e) {
             },
             [eh, U, W, F],
         ),
-        ex = i.useCallback(() => {
+        ej = i.useCallback(() => {
             L(!1), Q(null), G(null);
         }, []),
-        ej = i.useCallback(
+        ex = i.useCallback(
             (e) => {
                 t &&
                     (en(!0),
@@ -399,8 +399,8 @@ let Z = i.memo(function (e) {
                 i = 0.5 - B.x / (e * $),
                 l = 0.5 - B.y / (t * $);
             return {
-                "--custom-zoom-indicator-left": "".concat(100 * j(i - n / 2, 0, 1 - n), "%"),
-                "--custom-zoom-indicator-top": "".concat(100 * j(l - r / 2, 0, 1 - r), "%"),
+                "--custom-zoom-indicator-left": "".concat(100 * x(i - n / 2, 0, 1 - n), "%"),
+                "--custom-zoom-indicator-top": "".concat(100 * x(l - r / 2, 0, 1 - r), "%"),
                 "--custom-zoom-indicator-width": "".concat(100 * n, "%"),
                 "--custom-zoom-indicator-height": "".concat(100 * r, "%"),
                 "--custom-zoom-indicator-transition":
@@ -418,8 +418,8 @@ let Z = i.memo(function (e) {
         onMouseDown: eC,
         onMouseMove: ew,
         onMouseUp: eI,
-        onMouseLeave: ex,
-        onWheel: ej,
+        onMouseLeave: ej,
+        onWheel: ex,
         children: [
             (0, r.jsx)(d.P3F, {
                 onClick: eP,
@@ -443,7 +443,7 @@ let Z = i.memo(function (e) {
                     className: a()(C.zoomControlsContainer, { [C.idle]: m }),
                     style: { bottom: eb.value },
                     children: (0, r.jsxs)("div", {
-                        className: C.zoomControls,
+                        className: a()(C.zoomControls, { [C.zoomControlsWithChildren]: es || eh }),
                         onMouseEnter: eA,
                         onMouseLeave: eN,
                         onClick: eD,
@@ -487,7 +487,7 @@ let Z = i.memo(function (e) {
                                                         icon: d.BlJ,
                                                         onClick: eR,
                                                         disabled: $ <= n,
-                                                        variant: "secondary",
+                                                        variant: "overlay-secondary",
                                                         size: "sm",
                                                         "aria-label": S.intl.string(S.t.M6Cmwy),
                                                     }),
@@ -510,7 +510,7 @@ let Z = i.memo(function (e) {
                                             icon: d.OyE,
                                             onClick: eZ,
                                             disabled: $ >= l,
-                                            variant: "secondary",
+                                            variant: "overlay-secondary",
                                             size: "sm",
                                             "aria-label": S.intl.string(S.t["9hMafy"]),
                                         }),

@@ -1,52 +1,46 @@
-n.d(t, { Z: () => d });
-var r = n(54381);
+n.d(t, { Z: () => c });
+var l = n(54381);
 n(473749);
-var l = n(120356),
-    s = n.n(l),
+var r = n(120356),
+    s = n.n(r),
     i = n(481060),
-    a = n(685138),
     o = n(373370),
-    u = n(644646),
-    c = n(673655);
-let d = function (e) {
+    a = n(644646),
+    u = n(673655);
+let c = function (e) {
     let {
             className: t,
             autoplay: n,
-            quest: l,
-            questContent: d,
-            taskDetails: p,
-            location: f,
+            quest: r,
+            questContent: c,
+            taskDetails: d,
+            location: E,
             sourceQuestContent: m,
         } = e,
-        b = (0, o.DD)({
-            quest: l,
-            taskDetails: p,
-            location: f,
-            questContent: d,
+        p = (0, o.DD)({
+            quest: r,
+            taskDetails: d,
+            location: E,
+            questContent: c,
             sourceQuestContent: m,
-        }),
-        E = (0, a.n)({
-            location: f,
-            questConfig: l.config,
-        }).enabled;
-    return (0, r.jsxs)("div", {
-        className: s()(c.wrapper, t),
-        style: E ? void 0 : { color: l.config.colors.primary },
+        });
+    return (0, l.jsxs)("div", {
+        className: s()(u.wrapper, t),
         children: [
-            (0, r.jsx)(u.Z, {
+            (0, l.jsx)(a.Z, {
                 autoplay: n,
-                className: c.rewardTile,
-                quest: l,
-                questContent: d,
-                location: f,
+                className: u.rewardTile,
+                quest: r,
+                questContent: c,
+                location: E,
                 sourceQuestContent: m,
             }),
-            (0, r.jsx)("div", {
-                className: c.copy,
-                children: (0, r.jsx)(i.Text, {
+            (0, l.jsx)("div", {
+                className: u.copy,
+                children: (0, l.jsx)(i.Text, {
                     variant: "text-sm/normal",
                     color: "text-default",
-                    children: b,
+                    children: p,
                 }),
             }),
         ],
