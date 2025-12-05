@@ -95,6 +95,7 @@ let p = {
                 onExited: t,
             });
     },
+    popAboveKey: (e) => (0, s.om)(e),
     popAll() {
         (0, s.lE)(),
             a.Z.dispatch({ type: "MODAL_POP_ALL" }),
