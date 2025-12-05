@@ -61100,9 +61100,9 @@ screen and (max-width:485px) {
 }
 
 .cardTitle__6df1a {
-    font-size: 32px;
+    font-size: 2rem;
     font-style: italic;
-    line-height: 27px;
+    line-height: 1.6875rem;
     text-transform: uppercase
 }
 
@@ -67192,7 +67192,8 @@ html .progress__61462 {
 }
 
 .stats__74acd {
-    flex-direction: column
+    flex-direction: column;
+    overflow: hidden
 }
 
 .stat__74acd,
@@ -67209,12 +67210,16 @@ html .progress__61462 {
     background-color: #000;
     border: 1px solid #000;
     border-radius: 0;
+    flex-shrink: 0;
     height: 14px;
     width: 14px
 }
 
 .statText__74acd {
-    color: #000
+    color: #000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
 }
 
 .cta__74acd {
