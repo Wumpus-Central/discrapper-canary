@@ -15,4 +15,7 @@ e.exports = {
     channelInfo: "channelInfo_c69b6d",
     iconLive: "iconLive_c69b6d",
     selectedChannel: "selectedChannel_c69b6d",
+    voiceChannelHighlightContainer: "voiceChannelHighlightContainer_c69b6d",
+    voiceChannelHighlightBorder: "voiceChannelHighlightBorder_c69b6d",
+    voiceChannelHighlightGlow: "voiceChannelHighlightGlow_c69b6d",
 };
