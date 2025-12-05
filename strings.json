@@ -15522,6 +15522,7 @@
   "Di2HZ7": "Boosts",
   "awpB0C": "Your **Nitro** subscription is prepaid through **{prepaidEndDate, date, medium}**. You can extend your plan by editing your payment method.",
   "Q18lRK": "Your subscriptions will automatically renew on **{renewalDate, date, medium}** and you'll be charged **!!{price}!!**.",
+  "gknRR3": "Your subscriptions will automatically renew on **{renewalDate, date, medium}**. [Click here](Click here) to manage the subscription.",
   "ZlWXgR": "Your subscriptions will automatically renew on **{renewalDate, date, medium}**. Please [ Subscription settings](visit your ) for more details.",
   "Vl3cED": "Your **!!{planName}!!** subscription will automatically renew on **{renewalDate, date, short}** and you'll be charged **!!{price}!!**.",
   "MGvrvM": "Subscribe - Starting at !!{price}!! / Month",
