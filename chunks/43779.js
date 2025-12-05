@@ -9,11 +9,11 @@ var r = n(54381),
     d = n(393238),
     u = n(607070),
     p = n(960919),
-    m = n(509212),
-    g = n(373370),
-    f = n(968843),
+    m = n(373370),
+    g = n(968843),
+    f = n(862657),
     h = n(115179),
-    x = n(472144),
+    x = n(836831),
     _ = n(644646),
     b = n(251360),
     j = n(19148),
@@ -39,10 +39,10 @@ function T(e) {
         Q = (0, h.w8)(N.config),
         V = (0, h.B3)(N.config),
         M = (null == (t = N.userStatus) ? void 0 : t.enrolledAt) != null,
-        { ref: Z, scrollHeight: W } = (0, d.kE)(),
-        H = 104 !== W,
+        { ref: W, scrollHeight: Z } = (0, d.kE)(),
+        H = 104 !== Z,
         { onAssetLoadComplete: U } = s.useContext(b.k),
-        { expansionSpring: F } = (0, c.q_F)({
+        { expansionSpring: z } = (0, c.q_F)({
             expansionSpring: +!!A,
             config:
                 ((T = (function (e) {
@@ -85,12 +85,12 @@ function T(e) {
                       }),
                 T),
         }),
-        z = (null == (n = N.userStatus) ? void 0 : n.completedAt) != null,
+        F = (null == (n = N.userStatus) ? void 0 : n.completedAt) != null,
         G = (null == (o = N.userStatus) ? void 0 : o.claimedAt) != null,
         K = (0, h.xN)(N.config),
-        Y = (0, h.LM)(N.config),
-        { completedRatio: X, completedRatioDisplay: J } = (0, f.I)(N),
-        $ = (0, g.Bd)(N, q, L),
+        X = (0, h.LM)(N.config),
+        { completedRatio: Y, completedRatioDisplay: J } = (0, g.I)(N),
+        $ = (0, m.Bd)(N, q, L),
         ee = s.useMemo(
             () =>
                 G && K
@@ -106,7 +106,7 @@ function T(e) {
                                               className: O.orbsBalanceIcon,
                                               customSize: 14,
                                           }),
-                                          Y,
+                                          X,
                                       ],
                                   },
                                   N.id,
@@ -130,7 +130,7 @@ function T(e) {
                                                   className: O.orbsBalanceIcon,
                                                   customSize: 14,
                                               }),
-                                              Y,
+                                              X,
                                           ],
                                       },
                                       N.id,
@@ -147,7 +147,7 @@ function T(e) {
                                       N.id,
                                   ),
                           }),
-            [Q, G, V, N.id, Y, K],
+            [Q, G, V, N.id, X, K],
         ),
         et = s.useMemo(() => {
             if (null != $)
@@ -165,7 +165,7 @@ function T(e) {
         children: [
             (0, r.jsxs)(i.animated.div, {
                 style: {
-                    maxHeight: F.to([0, 1], [104, (null != W ? W : 0) + 12]),
+                    maxHeight: z.to([0, 1], [104, (null != Z ? Z : 0) + 12]),
                 },
                 className: O.rewardDescriptionContainer,
                 children: [
@@ -176,12 +176,12 @@ function T(e) {
                         children: (0, r.jsxs)("div", {
                             className: O.assetWrapper,
                             children: [
-                                !G && z && (0, r.jsx)("div", { className: O.completionAnimation }),
-                                M && !G
+                                !G && F && (0, r.jsx)("div", { className: O.completionAnimation }),
+                                M
                                     ? (0, r.jsxs)("div", {
                                           className: O.progressWrapper,
                                           children: [
-                                              z &&
+                                              F &&
                                                   (0, r.jsx)(c.Fmz, {
                                                       importData: S,
                                                       className: O.confetti,
@@ -192,8 +192,8 @@ function T(e) {
                                               (0, r.jsx)(x.Z, {
                                                   quest: N,
                                                   size: 76,
-                                                  percentComplete: X,
-                                                  percentCompleteText: A && !(0, m.zi)(N) ? J : void 0,
+                                                  percentComplete: Y,
+                                                  percentCompleteText: A && !(0, f.zi)(N) ? J : void 0,
                                                   children: (0, r.jsx)("div", {
                                                       className: O.circularRewardTileWrapper,
                                                       children: (0, r.jsx)(_.Z, {
@@ -224,7 +224,7 @@ function T(e) {
                         }),
                     }),
                     (0, r.jsxs)("div", {
-                        ref: Z,
+                        ref: W,
                         className: a()(O.textContainer, { [O.justifyCenter]: !H }),
                         children: [
                             (0, r.jsx)(c.Heading, {
@@ -245,7 +245,7 @@ function T(e) {
                     H &&
                         (0, r.jsx)(i.animated.div, {
                             style: {
-                                opacity: F.to([0, 1], [1, 0]),
+                                opacity: z.to([0, 1], [1, 0]),
                             },
                             className: O.textOverflowBlur,
                         }),
