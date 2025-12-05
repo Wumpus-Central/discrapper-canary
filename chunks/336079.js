@@ -21,10 +21,10 @@ let f = (0, i.createContext)({
         orbRedemptionError: null,
         orbProductContext: null,
         onRedeemVirtualCurrency: () => {},
-        isRental: !1,
+        rentalDuration: void 0,
     }),
     p = (e) => {
-        let { skuId: t, loadId: n, analyticsLocations: r, onCheckoutSuccess: a, isRental: f = !1 } = e,
+        let { skuId: t, loadId: n, analyticsLocations: r, onCheckoutSuccess: a, rentalDuration: f } = e,
             p = (0, o.e7)([c.default], () => u.ZP.canUseCollectibles(c.default.getCurrentUser())),
             { product: _ } = (0, s.T)(t),
             m = (0, i.useMemo)(() => {
@@ -32,7 +32,7 @@ let f = (0, i.createContext)({
                 let e = (0, l.T4)({
                         product: _,
                         isPremiumUser: p,
-                        isRental: f,
+                        isRental: null != f,
                     }),
                     t = null !== e ? e.amount : null;
                 return {
@@ -54,7 +54,7 @@ let f = (0, i.createContext)({
                             }),
                                 e();
                         },
-                        f,
+                        null != f,
                     );
                 },
                 [t, n, h, a, f],
@@ -68,7 +68,7 @@ let f = (0, i.createContext)({
             onRedeemVirtualCurrency: b,
             isRedeeming: g,
             orbRedemptionError: E,
-            isRental: f,
+            rentalDuration: f,
         };
     },
     _ = (e) => {
@@ -78,7 +78,7 @@ let f = (0, i.createContext)({
                 analyticsSourceLocation: i,
                 analyticsLocations: a,
                 onCheckoutSuccess: o,
-                isRental: s = !1,
+                rentalDuration: s,
                 children: l,
             } = e,
             {
@@ -91,7 +91,7 @@ let f = (0, i.createContext)({
                 loadId: n,
                 analyticsLocations: a,
                 onCheckoutSuccess: o,
-                isRental: s,
+                rentalDuration: s,
             });
         return (0, r.jsx)(f.Provider, {
             value: {
@@ -103,7 +103,7 @@ let f = (0, i.createContext)({
                 onRedeemVirtualCurrency: u,
                 isRedeeming: d,
                 orbRedemptionError: _,
-                isRental: s,
+                rentalDuration: s,
             },
             children: l,
         });

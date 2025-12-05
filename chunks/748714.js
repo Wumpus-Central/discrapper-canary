@@ -36,8 +36,18 @@ let y = (e) => {
         });
     },
     O = (e) => {
-        let { orbBalance: t, orbPriceAmount: n, isRental: r } = e,
-            a = r ? E.intl.string(E.t["2n5l8j"]) : E.intl.string(E.t.wmcDyu),
+        let { orbBalance: t, orbPriceAmount: n, rentalDuration: r } = e,
+            a = (0, i.useMemo)(
+                () =>
+                    3 === r
+                        ? E.intl.string(E.t.lpAQT0)
+                        : 7 === r
+                          ? E.intl.string(E.t["8Nn0ZK"])
+                          : null != r
+                            ? E.intl.string(E.t["2n5l8j"])
+                            : E.intl.string(E.t.wmcDyu),
+                [r],
+            ),
             { disabled: o, tooltipText: s } = (0, i.useMemo)(
                 () =>
                     null == n
@@ -107,8 +117,8 @@ let y = (e) => {
     },
     I = () => (0, r.jsx)(d.Z, { message: E.intl.format(E.t.fsOXXO, {}) }),
     T = (e) => {
-        let { skuId: t, orbPriceAmount: n, orbBalance: i, renderWithoutContainer: l } = e,
-            c = (0, r.jsxs)(r.Fragment, {
+        let { skuId: t, orbPriceAmount: n, orbBalance: i, renderWithoutContainer: l, rentalDuration: c } = e,
+            u = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(a.gNt, {
                         label: E.intl.string(E.t.sail9P),
@@ -122,6 +132,7 @@ let y = (e) => {
                         forceShow: !0,
                         onChange: g.dG4,
                         finePrint: (0, r.jsx)(o.Z, {
+                            rentalDuration: c,
                             isOrbCheckout: !0,
                             skuId: t,
                             purchaseType: g.GZQ.ONE_TIME,
@@ -130,14 +141,14 @@ let y = (e) => {
                 ],
             });
         return l
-            ? c
+            ? u
             : (0, r.jsx)("div", {
                   className: b.stepBody,
-                  children: c,
+                  children: u,
               });
     },
     A = (e) => {
-        let { orbPriceAmount: t, orbBalance: n, isSubmitting: i, onClickCheckout: o, isRental: s } = e,
+        let { orbPriceAmount: t, orbBalance: n, isSubmitting: i, onClickCheckout: o, rentalDuration: s } = e,
             {
                 disabled: d,
                 tooltipText: f,
@@ -145,7 +156,7 @@ let y = (e) => {
             } = O({
                 orbBalance: n,
                 orbPriceAmount: t,
-                isRental: s,
+                rentalDuration: s,
             });
         return (0, r.jsxs)(a.mzw, {
             align: c.Z.Align.CENTER,
