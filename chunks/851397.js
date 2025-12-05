@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(54381),
     i = n(473749),
     l = n(442837),
@@ -11,24 +11,25 @@ var r = n(54381),
     f = n(89196),
     h = n(602733),
     p = n(937615),
-    g = n(436585),
-    m = n(594914),
-    b = n(848118),
-    _ = n(474936),
-    y = n(231338),
-    O = n(388032),
-    v = n(63602);
-function j(e) {
+    g = n(705338),
+    m = n(436585),
+    b = n(594914),
+    _ = n(848118),
+    y = n(474936),
+    O = n(231338),
+    v = n(388032),
+    j = n(63602);
+function x(e) {
     var t,
         n,
         {
-            profileOwner: j,
-            hideButtonIcon: x = !1,
-            showPrice: C = !1,
-            showIcons: E = !1,
-            source: S = h.lr.WISHLIST,
+            profileOwner: x,
+            hideButtonIcon: C = !1,
+            showPrice: E = !1,
+            showIcons: S = !1,
+            source: I = h.lr.WISHLIST,
         } = e,
-        I = (function (e, t) {
+        P = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -49,106 +50,111 @@ function j(e) {
             }
             return i;
         })(e, ["profileOwner", "hideButtonIcon", "showPrice", "showIcons", "source"]);
-    let { item: P, isOwner: N, giftingOrigin: Z = _.Wt.USER_PROFILE_WISHLIST } = I,
-        w = P.sku,
-        T = w.applicationId,
-        A = (0, c.q)(T),
-        R = i.useRef(null),
-        { analyticsLocations: D } = (0, s.ZP)(a.Z.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD),
-        L = (0, l.e7)([f.Z], () => null != j && f.Z.hasSentGift(P.skuId, j.id), [P.skuId, j]),
-        M = L || !0 === P.isOwned,
-        k = P.skuName,
+    let { item: N, isOwner: Z, giftingOrigin: w = y.Wt.USER_PROFILE_WISHLIST } = P,
+        T = N.sku,
+        A = T.applicationId,
+        R = (0, c.q)(A),
+        D = i.useRef(null),
+        { analyticsLocations: L } = (0, s.ZP)(a.Z.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD),
+        M = (0, l.e7)([f.Z], () => null != x && f.Z.hasSentGift(N.skuId, x.id), [N.skuId, x]),
+        k = M || !0 === N.isOwned,
+        G = N.skuName,
         {
-            buttonCTALabel: G,
-            buttonIcon: U,
-            handleCardClick: B,
+            buttonCTALabel: U,
+            buttonIcon: B,
+            handleCardClick: F,
         } = i.useMemo(() => {
             var e, t, n, r, i, l, s, c;
-            return N || M
+            return Z || k
                 ? {
-                      buttonCTALabel: C
+                      buttonCTALabel: E
                           ? (0, p.T4)(
-                                null != (i = null == (n = w.price) ? void 0 : n.amount) ? i : 0,
-                                null != (l = null == (r = w.price) ? void 0 : r.currency) ? l : y.pK.USD,
+                                null != (i = null == (n = T.price) ? void 0 : n.amount) ? i : 0,
+                                null != (l = null == (r = T.price) ? void 0 : r.currency) ? l : O.pK.USD,
                             )
-                          : O.intl.string(O.t.FdGl5A),
+                          : v.intl.string(v.t.FdGl5A),
                       buttonIcon: void 0,
                       handleCardClick: () => {
-                          (null == A ? void 0 : A.guildId) != null &&
-                              ((0, u.closeUserProfileModal)(),
-                              (0, g.g)({
-                                  skuId: w.id,
-                                  applicationId: A.id,
-                                  guildId: A.guildId,
-                                  isStorefront: !1,
-                                  analyticsLocations: D,
-                              }));
+                          (null == R ? void 0 : R.guildId) != null &&
+                              (Z
+                                  ? ((0, u.closeUserProfileModal)(),
+                                    (0, g.default)({
+                                        guildId: R.guildId,
+                                        skuId: T.id,
+                                        slug: T.slug,
+                                    }))
+                                  : (0, m.g)({
+                                        skuId: T.id,
+                                        applicationId: R.id,
+                                        guildId: R.guildId,
+                                        isStorefront: !1,
+                                        analyticsLocations: L,
+                                    }));
                       },
                   }
                 : {
-                      buttonCTALabel: C
+                      buttonCTALabel: E
                           ? (0, p.T4)(
-                                null != (s = null == (e = w.price) ? void 0 : e.amount) ? s : 0,
-                                null != (c = null == (t = w.price) ? void 0 : t.currency) ? c : y.pK.USD,
+                                null != (s = null == (e = T.price) ? void 0 : e.amount) ? s : 0,
+                                null != (c = null == (t = T.price) ? void 0 : t.currency) ? c : O.pK.USD,
                             )
-                          : O.intl.string(O.t.ilhtIa),
-                      buttonIcon: x ? void 0 : o.OgN,
+                          : v.intl.string(v.t.ilhtIa),
+                      buttonIcon: C ? void 0 : o.OgN,
                       handleCardClick: () => {
-                          L ||
-                              ((0, u.closeUserProfileModal)(),
-                              (0, m.P)(
-                                  w,
+                          M ||
+                              (0, b.P)(
+                                  T,
                                   {
                                       isGift: !0,
-                                      giftRecipient: j,
-                                      giftingOrigin: Z,
+                                      giftRecipient: x,
+                                      giftingOrigin: w,
                                   },
                                   {
-                                      analyticsLocations: [...D, a.Z.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD_GIFT_BUTTON],
+                                      analyticsLocations: [...L, a.Z.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD_GIFT_BUTTON],
                                   },
-                              ));
+                              );
                       },
                   };
-        }, [N, M, C, w, x, A, L, j, Z, D]),
-        F = i.useCallback(
+        }, [Z, k, E, T, C, R, M, x, w, L]),
+        V = i.useCallback(
             () =>
-                E
-                    ? S === h.lr.WISHLIST
+                S
+                    ? I === h.lr.WISHLIST
                         ? (0, r.jsx)("div", {
-                              className: v.itemIcon,
+                              className: j.itemIcon,
                               children: (0, r.jsx)(o.h_8, {
                                   size: "custom",
                                   width: 20,
                                   height: 20,
                                   color: "currentColor",
-                                  colorClass: v.itemIconHeart,
+                                  colorClass: j.itemIconHeart,
                               }),
                           })
-                        : S === h.lr.POPULAR
+                        : I === h.lr.POPULAR
                           ? (0, r.jsx)("div", {
-                                className: v.itemIcon,
+                                className: j.itemIcon,
                                 children: (0, r.jsx)(o.YqE, {
                                     size: "custom",
                                     width: 20,
                                     height: 20,
                                     color: "currentColor",
-                                    colorClass: v.itemIconShop,
+                                    colorClass: j.itemIconShop,
                                 }),
                             })
                           : null
                     : null,
-            [E, S],
+            [S, I],
         ),
-        V = i.useCallback(
+        H = i.useCallback(
             () =>
-                (0, r.jsx)(b.A, {
+                (0, r.jsx)(_.A, {
                     shape: "custom",
-                    containerClassName: v.card,
-                    backgroundImageClassName: v.cardBackgroundImage,
-                    foregroundImageClassName: v.cardImage,
-                    sku: w,
+                    containerClassName: j.card,
+                    backgroundImageClassName: j.cardBackgroundImage,
+                    foregroundImageClassName: j.cardImage,
+                    sku: T,
                 }),
-            [w],
+            [T],
         );
     return (0, r.jsx)(
         d.Z,
@@ -176,18 +182,18 @@ function j(e) {
                     });
             }
             return e;
-        })({}, I)),
+        })({}, P)),
         (n = n =
             {
-                source: S,
-                cardRef: R,
-                accessibleLabel: k,
-                onCardClick: B,
-                buttonCTALabel: G,
-                buttonIcon: U,
-                isOwned: M,
-                renderItemPreview: V,
-                renderSourceIcon: F,
+                source: I,
+                cardRef: D,
+                accessibleLabel: G,
+                onCardClick: F,
+                buttonCTALabel: U,
+                buttonIcon: B,
+                isOwned: k,
+                renderItemPreview: H,
+                renderSourceIcon: V,
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

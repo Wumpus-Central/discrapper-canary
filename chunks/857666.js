@@ -1,67 +1,66 @@
 n.d(t, {
-    Z: () => b,
-    f: () => _,
+    Z: () => _,
+    f: () => x,
 }),
     n(388685);
 var r = n(54381),
     i = n(473749),
-    o = n(494497),
-    l = n(442837),
+    l = n(494497),
+    o = n(442837),
     a = n(481060),
     s = n(434404),
-    c = n(905128),
-    u = n(639777),
-    d = n(169010),
-    p = n(279604),
-    f = n(981631),
-    m = n(130231),
-    g = n(388032),
-    v = n(46310),
-    x = n(175435);
-function _(e, t) {
-    var _;
-    let b = null != (_ = (0, u.Z)(t)) && _,
-        h = (0, l.e7)([c.Z], () => {
+    u = n(905128),
+    c = n(639777),
+    d = n(279604),
+    p = n(981631),
+    f = n(810878),
+    m = n(388032),
+    g = n(46310),
+    v = n(175435);
+function x(e, t) {
+    var x;
+    let _ = null != (x = (0, c.Z)(t)) && x,
+        b = (0, o.e7)([u.Z], () => {
             var e;
-            return null == (e = c.Z.getStateForGuild(t)) ? void 0 : e.allPowerups;
+            return null == (e = u.Z.getStateForGuild(t)) ? void 0 : e.allPowerups;
         }),
-        j = (0, l.e7)([c.Z], () => {
+        h = (0, o.e7)([u.Z], () => {
             var e;
-            return null == (e = c.Z.getStateForGuild(t)) ? void 0 : e.unlockedPowerups;
+            return null == (e = u.Z.getStateForGuild(t)) ? void 0 : e.unlockedPowerups;
         });
     return i.useMemo(() => {
         let i = (e) =>
                 "guildTagsBadgePacks" === e
                     ? (function (e) {
-                          let { guildId: t, canUseBoosts: i, allPowerups: l, unlockedPowerups: c, skuIds: u } = e,
-                              d = g.intl.string(m.default.KC9HRW),
-                              _ = g.intl.string(m.default.GJiSmP),
-                              b = null == l ? void 0 : l[o.IN],
-                              h = (null == c ? void 0 : c[o.IN]) != null,
-                              j = g.intl.string(m.default["/egwJA"]),
-                              C = h ? void 0 : g.intl.string(m.default.W6Vwn3),
-                              w = h ? void 0 : g.intl.string(m.default.lvk1Gc),
-                              Z = h ? g.intl.string(m.default["9CfkLO"]) : g.intl.string(g.t["+7XY31"]),
-                              I = h ? "secondary" : "expressive",
-                              E = i
+                          let { guildId: t, canUseBoosts: i, allPowerups: o, unlockedPowerups: u } = e,
+                              c = m.intl.string(f.default.KC9HRW),
+                              x = m.intl.string(f.default.GJiSmP),
+                              _ = null == o ? void 0 : o[l.IN],
+                              b = (null == u ? void 0 : u[l.IN]) != null,
+                              h = m.intl.string(f.default["/egwJA"]),
+                              j = b ? void 0 : m.intl.string(f.default.W6Vwn3),
+                              C = b ? void 0 : m.intl.string(f.default.lvk1Gc),
+                              Z = b ? m.intl.string(f.default["9CfkLO"]) : m.intl.string(m.t["+7XY31"]),
+                              w = b ? "secondary" : "expressive",
+                              I = i
                                   ? () => {
-                                        h
-                                            ? s.Z.open(t, f.pNK.TAG, f.jXE.GUILD_POWERUPS_OVERVIEW_CARD)
-                                            : null != b && (0, p.KE)(t, b),
+                                        b
+                                            ? s.Z.open(t, p.pNK.TAG, p.jXE.GUILD_POWERUPS_OVERVIEW_CARD)
+                                            : null != _ && (0, d.KE)(t, _),
                                             (0, a.pTH)();
                                     }
                                   : void 0;
                           return {
-                              title: d,
-                              description: _,
+                              title: c,
+                              description: x,
                               openModal: function (e) {
-                                  let o = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                                  let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
                                   (0, a.ZDy)(
                                       async () => {
-                                          let { default: o } = await n.e("64767").then(n.bind(n, 754887));
+                                          let { default: l } = await n.e("64767").then(n.bind(n, 754887));
                                           return (n) =>
                                               (0, r.jsx)(
-                                                  o,
+                                                  l,
                                                   (function (e) {
                                                       for (var t = 1; t < arguments.length; t++) {
                                                           var n = null != arguments[t] ? arguments[t] : {},
@@ -90,17 +89,17 @@ function _(e, t) {
                                                   })(
                                                       {
                                                           guildId: t,
-                                                          title: d,
-                                                          description: g.intl.string(m.default.BBRFRd),
+                                                          title: c,
+                                                          description: m.intl.string(f.default.BBRFRd),
                                                           powerups: e,
-                                                          footerInfoText: w,
+                                                          footerInfoText: C,
                                                           footerAction:
-                                                              i && null != E && null != Z
+                                                              i && null != I && null != Z
                                                                   ? {
-                                                                        variant: I,
+                                                                        variant: w,
                                                                         text: Z,
-                                                                        icon: "expressive" === I ? a.Ucv : void 0,
-                                                                        onClick: E,
+                                                                        icon: "expressive" === w ? a.Ucv : void 0,
+                                                                        onClick: I,
                                                                     }
                                                                   : void 0,
                                                       },
@@ -108,33 +107,31 @@ function _(e, t) {
                                                   ),
                                               );
                                       },
-                                      { onCloseCallback: null == o ? void 0 : o.onModalClose },
+                                      { onCloseCallback: null == l ? void 0 : l.onModalClose },
                                   );
                               },
-                              viewCta: j,
-                              viewCtaTooltip: C,
+                              viewCta: h,
+                              viewCtaTooltip: j,
                               image: {
-                                  staticUrl: x.Z,
-                                  animatedUrl: v.Z,
+                                  staticUrl: v.Z,
+                                  animatedUrl: g.Z,
                               },
-                              skuIds: u,
                           };
                       })({
                           guildId: t,
-                          canUseBoosts: b,
-                          allPowerups: h,
-                          unlockedPowerups: j,
-                          skuIds: d.zd[e],
+                          canUseBoosts: _,
+                          allPowerups: b,
+                          unlockedPowerups: h,
                       })
                     : void 0,
-            l = {};
+            o = {};
         for (let t of e) {
             let e = i(t);
-            null != e && (l[t] = e);
+            null != e && (o[t] = e);
         }
-        return l;
-    }, [e, t, b, h, j]);
+        return o;
+    }, [e, t, _, b, h]);
 }
-function b(e, t) {
-    return _([e], t)[e];
+function _(e, t) {
+    return x([e], t)[e];
 }
