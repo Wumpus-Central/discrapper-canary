@@ -133,7 +133,7 @@ function I(e) {
                 var { onClose: t, returnRef: n } = e,
                     i = b(e, ["onClose", "returnRef"]);
                 return (0, r.jsx)(
-                    p.Z,
+                    p.ZP,
                     E(h({}, i), {
                         loadId: w,
                         skuId: f,
