@@ -86,6 +86,7 @@ class y extends r.Z {
                 QUESTS_FETCH_CURRENT_QUESTS_BEGIN: this.handleQuestsFetchCurrentQuestsBegin,
                 POST_CONNECTION_OPEN: this.handlePostConnectionOpen,
                 RUNNING_GAMES_CHANGE: this.handleRunningGamesChange,
+                RUNNING_NON_GAMES_CHANGE: this.handleRunningGamesChange,
                 USER_SETTINGS_PROTO_UPDATE: this.handleUserSettingsProtoUpdate,
                 LOGOUT: this.handleLogout,
             });

@@ -100,30 +100,32 @@ class L extends a.Z {
     getActivelyProgressingPlayOnDesktopQuests() {
         let e = new Map(),
             t = s.ZP.getRunningGames(),
-            n = E.Z.quests;
-        P.log("~ getActivelyProgressingPlayOnDesktopQuestIds -> Running games: ", t);
-        let r = {};
+            n = s.ZP.getRunningNonGames(),
+            r = E.Z.quests;
+        P.log("~ getActivelyProgressingPlayOnDesktopQuestIds -> Running games: ", t, "Running non-games: ", n);
+        let i = {};
         for (let e of t) {
             if (e.isLauncher) continue;
             if (null != e.id) {
-                r[e.id] = e;
+                i[e.id] = e;
                 continue;
             }
             let t = s.ZP.getOverrideForGame(e);
             if (null == e.distributor && null != t) continue;
             let n = f.Z.getGameByName(e.name);
             if ((null == n ? void 0 : n.id) != null) {
-                r[n.id] = e;
+                i[n.id] = e;
                 continue;
             }
         }
-        for (let t of Object.keys(r)) {
-            let i = r[t];
-            for (let r of n.values()) {
-                let n = (0, v.vj)(r);
-                if (!R(r) || null == n) continue;
-                let a = n.find((e) => e === t);
-                null != a ? e.set(r.id, { applicationId: a }) : D(n, i) && e.set(r.id, { applicationId: c.eB });
+        for (let e of n) null != e.id && (i[e.id] = e);
+        for (let t of Object.keys(i)) {
+            let n = i[t];
+            for (let i of r.values()) {
+                let r = (0, v.vj)(i);
+                if (!R(i) || null == r) continue;
+                let a = r.find((e) => e === t);
+                null != a ? e.set(i.id, { applicationId: a }) : D(r, n) && e.set(i.id, { applicationId: c.eB });
             }
         }
         return (
@@ -291,6 +293,7 @@ class L extends a.Z {
                         "QUESTS_PREVIEW_UPDATE_SUCCESS",
                     ),
                 RUNNING_GAMES_CHANGE: () => this.syncHeartbeats([r.X.PLAY_ON_DESKTOP], "RUNNING_GAMES_CHANGE"),
+                RUNNING_NON_GAMES_CHANGE: () => this.syncHeartbeats([r.X.PLAY_ON_DESKTOP], "RUNNING_NON_GAMES_CHANGE"),
                 STREAM_START: () => this.syncHeartbeats([r.X.STREAM_ON_DESKTOP], "STREAM_START"),
                 STREAM_CREATE: () => this.syncHeartbeats([r.X.STREAM_ON_DESKTOP], "STREAM_CREATE"),
                 STREAM_CLOSE: () => this.syncHeartbeats([r.X.STREAM_ON_DESKTOP], "STREAM_CLOSE"),

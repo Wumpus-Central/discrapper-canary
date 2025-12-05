@@ -1,4 +1,4 @@
-n.d(t, { Z: () => G }), n(388685), n(35282), n(415506);
+n.d(t, { Z: () => Z }), n(388685), n(35282), n(415506);
 var r = n(664751),
     i = n(990547),
     a = n(243814),
@@ -13,30 +13,31 @@ var r = n(664751),
     _ = n(48131),
     m = n(813370),
     h = n(346951),
-    g = n(594190),
-    E = n(706454),
-    b = n(757266),
-    y = n(77498),
-    O = n(283595),
-    v = n(417363),
-    S = n(626135),
-    I = n(877481),
-    T = n(358085),
-    A = n(573261),
-    C = n(278323),
-    N = n(58642),
-    P = n(254854),
-    R = n(981631),
-    w = n(701488),
-    D = n(388032);
-let x = 3,
-    L = new p.Z("GamesActionCreators");
-function j(e) {
+    g = n(569675),
+    E = n(594190),
+    b = n(706454),
+    y = n(757266),
+    O = n(77498),
+    v = n(283595),
+    S = n(417363),
+    I = n(626135),
+    T = n(877481),
+    A = n(358085),
+    C = n(573261),
+    N = n(278323),
+    P = n(58642),
+    R = n(254854),
+    w = n(981631),
+    D = n(701488),
+    x = n(388032);
+let L = 3,
+    j = new p.Z("GamesActionCreators");
+function M(e) {
     let {
         applicationId: t,
         secret: n,
         channelId: r,
-        intent: i = w.Ws.PLAY,
+        intent: i = D.Ws.PLAY,
         embedded: a = !1,
         source: o,
         locationObject: s,
@@ -46,24 +47,24 @@ function j(e) {
     if (u) {
         let e = d.Z.getApplication(t);
         if ((null == e ? void 0 : e.deepLinkUri) != null) {
-            let r = "".concat(e.deepLinkUri).concat(R.UWR.GAME_INVITE_FRAGMENT).concat(n);
+            let r = "".concat(e.deepLinkUri).concat(w.UWR.GAME_INVITE_FRAGMENT).concat(n);
             try {
                 if (r.startsWith("http")) {
                     let e = window.open(r, "_blank");
                     (null == e || e.closed || void 0 === e.closed) &&
-                        (L.warn("Deep link popup was blocked by browser, trying location.href", { applicationId: t }),
+                        (j.warn("Deep link popup was blocked by browser, trying location.href", { applicationId: t }),
                         (window.location.href = r));
                 } else window.location.href = r;
                 return Promise.resolve();
             } catch (e) {
-                L.warn("Failed to open deep link, falling back to desktop launch", {
+                j.warn("Failed to open deep link, falling back to desktop launch", {
                     applicationId: t,
                     error: e.message,
                 });
             }
         }
     }
-    U({
+    G({
         applicationId: t,
         channelId: r,
         embedded: a,
@@ -74,7 +75,7 @@ function j(e) {
         .then((e) =>
             0 === e
                 ? null
-                : I.Z.waitConnected(t).then(() => Promise.race([I.Z.waitSubscribed(t, R.zMe.ACTIVITY_JOIN)])),
+                : T.Z.waitConnected(t).then(() => Promise.race([T.Z.waitSubscribed(t, w.zMe.ACTIVITY_JOIN)])),
         )
         .then(() => {
             c.Z.dispatch({
@@ -92,7 +93,7 @@ function j(e) {
             }),
         );
 }
-function M(e, t) {
+function k(e, t) {
     return null == e || "" === e
         ? null
         : {
@@ -100,10 +101,10 @@ function M(e, t) {
               sku: t,
           };
 }
-function k(e) {
+function U(e) {
     return s.tn
         .post({
-            url: R.ANM.OAUTH2_AUTHORIZE,
+            url: w.ANM.OAUTH2_AUTHORIZE,
             query: {
                 client_id: e,
                 response_type: "token",
@@ -135,7 +136,7 @@ function k(e) {
             },
         );
 }
-async function U(e) {
+async function G(e) {
     let {
         applicationId: t,
         branchId: n,
@@ -159,22 +160,22 @@ async function U(e) {
               ? 0
               : Promise.resolve();
     }
-    if (b.Z.isConnected(t)) return Promise.resolve();
+    if (y.Z.isConnected(t)) return Promise.resolve();
     let l = null;
     if (null == n) {
-        let e = O.Z.getActiveLibraryApplication(t);
+        let e = v.Z.getActiveLibraryApplication(t);
         n = null != e ? e.branchId : t;
     }
-    if (v.Z.isLaunchable(t, n)) {
-        let e = v.Z.getState(t, n),
-            r = O.Z.getActiveLaunchOptionId(t, n);
+    if (S.Z.isLaunchable(t, n)) {
+        let e = S.Z.getState(t, n),
+            r = v.Z.getActiveLaunchOptionId(t, n);
         if (null == e) throw Error("Missing dispatch game when launching");
-        let i = O.Z.getLibraryApplication(t, n);
+        let i = v.Z.getLibraryApplication(t, n);
         if (null == i) throw Error("Missing library application when launching");
-        l = k(t).then((t) => I.Z.launchDispatchApplication(e, t, E.default.locale, i.getBranchName(), r));
+        l = U(t).then((t) => T.Z.launchDispatchApplication(e, t, b.default.locale, i.getBranchName(), r));
     } else {
         let e = d.Z.getApplication(t);
-        l = null != e ? I.Z.launch(e) : I.Z.launchGame(t);
+        l = null != e ? T.Z.launch(e) : T.Z.launchGame(t);
     }
     let f = Error("game not found");
     return null != l
@@ -196,7 +197,7 @@ async function U(e) {
                   });
               })
               .catch((e) => {
-                  P.Z.show(R.kVF.LAUNCH_GAME_FAILURE, D.intl.string(D.t.YZEBdj)),
+                  R.Z.show(w.kVF.LAUNCH_GAME_FAILURE, x.intl.string(x.t.YZEBdj)),
                       c.Z.dispatch({
                           type: "GAME_LAUNCH_FAIL",
                           applicationId: t,
@@ -210,25 +211,25 @@ async function U(e) {
           }),
           Promise.reject(f));
 }
-let G = {
+let Z = {
     addGame(e, t) {
         c.Z.dispatch({
             type: "RUNNING_GAME_ADD_OVERRIDE",
             pid: e,
         }),
-            S.default.track(R.rMx.RUNNING_GAME_OVERRIDE_ADDED, { game_name: t });
+            I.default.track(w.rMx.RUNNING_GAME_OVERRIDE_ADDED, { game_name: t });
     },
     toggleOverlay(e, t, n) {
-        let r = (0, g.ow)(e),
-            i = y.Z.getGameByName(r.name);
+        let r = (0, E.ow)(e),
+            i = O.Z.getGameByName(r.name);
         if (null != i) {
-            let e = O.Z.getActiveLibraryApplication(i.id);
+            let e = v.Z.getActiveLibraryApplication(i.id);
             if (null != e) {
                 let r = e.getFlags(),
-                    i = o.yE(r, R.eHb.OVERLAY_DISABLED);
-                t && i !== t && (r = o.x9(r, R.eHb.OVERLAY_DISABLED));
-                let a = o.yE(r, R.eHb.OVERLAY_V3_DISABLED);
-                null != n && n !== a && (r = o.x9(r, R.eHb.OVERLAY_V3_DISABLED)), N.h(e.id, e.branchId, r);
+                    i = o.yE(r, w.eHb.OVERLAY_DISABLED);
+                t && i !== t && (r = o.x9(r, w.eHb.OVERLAY_DISABLED));
+                let a = o.yE(r, w.eHb.OVERLAY_V3_DISABLED);
+                null != n && n !== a && (r = o.x9(r, w.eHb.OVERLAY_V3_DISABLED)), P.h(e.id, e.branchId, r);
                 return;
             }
         }
@@ -258,7 +259,7 @@ let G = {
                 new Promise((n, r) => {
                     if (null == t) return void r(Error("Game utils module not loaded"));
                     t.identifyGame(e, (t, i) =>
-                        (L.log("Identified game: ", {
+                        (j.log("Identified game: ", {
                             status: t,
                             name: i.name,
                             iconHash: i.iconHash,
@@ -285,12 +286,12 @@ let G = {
         (0, h.R)(e, { forceFetch: t });
     },
     getDetectableGames() {
-        if (!y.Z.canFetchDetectableGames()) return;
-        let e = y.Z.detectableGamesEtag;
+        if (!O.Z.canFetchDetectableGames()) return;
+        let e = O.Z.detectableGamesEtag;
         c.Z.wait(() => {
             c.Z.dispatch({ type: "GAMES_DATABASE_FETCH" }),
-                A.Z.get({
-                    url: R.ANM.GAMES_DETECTABLE,
+                C.Z.get({
+                    url: w.ANM.GAMES_DETECTABLE,
                     headers: { "If-None-Match": e },
                     retries: 1,
                     oldFormErrors: !0,
@@ -323,17 +324,54 @@ let G = {
                             ? c.Z.dispatch({
                                   type: "GAMES_DATABASE_UPDATE",
                                   games: [],
-                                  etag: y.Z.detectableGamesEtag,
+                                  etag: O.Z.detectableGamesEtag,
                               })
                             : c.Z.dispatch({ type: "GAMES_DATABASE_FETCH_FAIL" });
                     },
                 );
         });
     },
+    getDetectableNonGames() {
+        if (!g.Z.canFetch()) return;
+        let e = g.Z.etag;
+        c.Z.wait(() => {
+            c.Z.dispatch({ type: "NON_GAMES_DATABASE_FETCH" }),
+                s.tn
+                    .get({
+                        url: w.ANM.NON_GAMES_DETECTABLE,
+                        headers: { "If-None-Match": e },
+                        retries: 1,
+                        rejectWithError: !1,
+                    })
+                    .then(
+                        (e) => {
+                            let {
+                                body: t,
+                                headers: { etag: n },
+                            } = e;
+                            c.Z.dispatch({
+                                type: "NON_GAMES_DATABASE_UPDATE",
+                                nonGames: t,
+                                etag: n,
+                            });
+                        },
+                        (e) => {
+                            let { status: t } = e;
+                            304 === t
+                                ? c.Z.dispatch({
+                                      type: "NON_GAMES_DATABASE_UPDATE",
+                                      nonGames: [],
+                                      etag: g.Z.etag,
+                                  })
+                                : c.Z.dispatch({ type: "NON_GAMES_DATABASE_FETCH_FAIL" });
+                        },
+                    );
+        });
+    },
     reportUnverifiedGame(e) {
         let { name: t, iconHash: n, publisher: r, distributor: i, sku: a, executableName: o } = e,
             l = (0, f.F)(o);
-        L.log("Reporting unverified game: ", {
+        j.log("Reporting unverified game: ", {
             name: t,
             executableName: o,
             iconHash: n,
@@ -345,15 +383,15 @@ let G = {
             null != l &&
                 s.tn
                     .post({
-                        url: R.ANM.UNVERIFIED_APPLICATIONS,
+                        url: w.ANM.UNVERIFIED_APPLICATIONS,
                         body: {
                             name: t,
-                            os: (0, T.getPlatformName)(),
+                            os: (0, A.getPlatformName)(),
                             icon: n,
-                            distributor_application: M(i, a),
+                            distributor_application: k(i, a),
                             executable: l,
                             publisher: r,
-                            report_version: x,
+                            report_version: L,
                         },
                         retries: 1,
                         oldFormErrors: !0,
@@ -373,7 +411,7 @@ let G = {
     },
     uploadIcon(e, t, n) {
         s.tn.post({
-            url: R.ANM.UNVERIFIED_APPLICATIONS_ICONS,
+            url: w.ANM.UNVERIFIED_APPLICATIONS_ICONS,
             body: {
                 application_name: e,
                 application_hash: t,
@@ -390,7 +428,7 @@ let G = {
             game: e,
         });
     },
-    launch: U,
+    launch: G,
     async join(e) {
         let {
             userId: t,
@@ -398,7 +436,7 @@ let G = {
             applicationId: r,
             channelId: i,
             messageId: a,
-            intent: o = w.Ws.PLAY,
+            intent: o = D.Ws.PLAY,
             embedded: s = !1,
             source: l,
             locationObject: u,
@@ -423,11 +461,11 @@ let G = {
             remotePartyId: f,
         });
         try {
-            let e = (0, T.platformPrefersDeepLink)(),
-                c = await C.Z.getJoinSecret(t, n, r, i, a);
+            let e = (0, A.platformPrefersDeepLink)(),
+                c = await N.Z.getJoinSecret(t, n, r, i, a);
             return (
                 null == f &&
-                    j({
+                    M({
                         applicationId: r,
                         secret: c,
                         channelId: i,
@@ -450,5 +488,5 @@ let G = {
             );
         }
     },
-    joinWithSecret: j,
+    joinWithSecret: M,
 };

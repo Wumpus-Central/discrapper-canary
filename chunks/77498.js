@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
-    Z: () => j,
-    m: () => C,
+    Z: () => M,
+    m: () => N,
 }),
     n(388685),
     n(35282);
@@ -39,8 +39,9 @@ let E = "GameStoreReportedGames",
     S = {},
     I = null != (i = s.K.get(E)) ? i : {},
     T = "",
-    A = null;
-function C(e) {
+    A = null,
+    C = !1;
+function N(e) {
     var t, n, r, i, a, o, s, l, c, u;
     return {
         id: e.id,
@@ -58,7 +59,7 @@ function C(e) {
         cover_image_hash: null != (u = e.cover_image_hash) ? u : void 0,
     };
 }
-function N(e) {
+function P(e) {
     var t, n, r;
     return {
         id: e.id,
@@ -76,32 +77,32 @@ function N(e) {
         cover_image_hash: null != (r = e.cover_image_hash) ? r : void 0,
     };
 }
-function P(e) {
-    let t = e instanceof d.ZP ? N(e) : e;
+function R(e) {
+    let t = e instanceof d.ZP ? P(e) : e;
     for (let n of (O.set(e.id, t), (v[e.name.toLowerCase()] = t), e.aliases)) v[n.toLowerCase()] = t;
     if ((0, m.isDesktop)()) for (let n of e.executables) S[n.name] = t;
 }
-function R(e) {
+function w(e) {
     let { detectableApplications: t } = e;
-    for (let e of (O.clear(), (v = {}), (S = {}), t)) P(e);
-}
-function w() {
-    r = !0;
+    for (let e of (O.clear(), (v = {}), (S = {}), t)) R(e);
 }
 function D() {
-    r = !1;
+    r = !0;
 }
-function x(e) {
+function x() {
+    (r = !1), (C = !0);
+}
+function L(e) {
     let { games: t, etag: n } = e;
-    for (let e of (null != n && T !== n && (O.clear(), (v = {}), (S = {}), (T = n)), t)) P(C(e));
-    (r = void 0), (A = Date.now());
+    for (let e of (null != n && T !== n && (O.clear(), (v = {}), (S = {}), (T = n)), t)) R(N(e));
+    (r = void 0), (A = Date.now()), (C = !0);
 }
-class L extends (a = o.ZP.PersistedStore) {
+class j extends (a = o.ZP.PersistedStore) {
     initialize(e) {
         var t;
         null != e &&
             (null != e.detectableGamesEtag && (T = e.detectableGamesEtag),
-            null == (t = e.detectableGames) || t.forEach((e) => P(e)));
+            null == (t = e.detectableGames) || t.forEach((e) => R(e)));
     }
     getState() {
         return (0, m.isDesktop)()
@@ -153,6 +154,9 @@ class L extends (a = o.ZP.PersistedStore) {
     get lastFetched() {
         return A;
     }
+    get hasAttemptedFetch() {
+        return C;
+    }
     get detectableGamesTtl() {
         return y;
     }
@@ -185,9 +189,9 @@ class L extends (a = o.ZP.PersistedStore) {
         (I[e] = !0), s.K.set(E, I);
     }
 }
-g(L, "displayName", "GameStore"),
-    g(L, "persistKey", "GameStore"),
-    g(L, "migrations", [
+g(j, "displayName", "GameStore"),
+    g(j, "persistKey", "GameStore"),
+    g(j, "migrations", [
         (e) => {
             var t, n;
             return null == e
@@ -198,7 +202,7 @@ g(L, "displayName", "GameStore"),
                 : {
                       detectableGamesEtag: e.detectableGamesEtag,
                       detectableGames:
-                          null != (n = null == (t = e.detectableGames) ? void 0 : t.map((e) => N(new d.ZP(e))))
+                          null != (n = null == (t = e.detectableGames) ? void 0 : t.map((e) => P(new d.ZP(e))))
                               ? n
                               : [],
                   };
@@ -215,9 +219,9 @@ g(L, "displayName", "GameStore"),
             detectableGames: [],
         }),
     ]);
-let j = new L(l.Z, {
-    OVERLAY_INITIALIZE: R,
-    GAMES_DATABASE_FETCH: w,
-    GAMES_DATABASE_FETCH_FAIL: D,
-    GAMES_DATABASE_UPDATE: x,
+let M = new j(l.Z, {
+    OVERLAY_INITIALIZE: w,
+    GAMES_DATABASE_FETCH: D,
+    GAMES_DATABASE_FETCH_FAIL: x,
+    GAMES_DATABASE_UPDATE: L,
 });

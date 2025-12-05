@@ -1,12 +1,13 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(224706),
     i = n(978085),
     a = n(147913),
     o = n(77498),
     s = n(283595),
     l = n(70956),
-    c = n(358085);
-function u(e, t, n) {
+    c = n(358085),
+    u = n(569675);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,22 +20,30 @@ function u(e, t, n) {
         e
     );
 }
-class d extends a.Z {
+class f extends a.Z {
     handlePostConnectionOpen() {
         (0, c.isDesktop)() && !s.Z.fetched && (0, i.b8)(),
             r.Z.getDetectableGames(),
             (this.intervalId = setInterval(
                 r.Z.getDetectableGames,
                 o.Z.detectableGamesTtl + Math.random() * l.Z.Millis.HOUR,
+            )),
+            r.Z.getDetectableNonGames(),
+            (this.nonGameIntervalId = setInterval(
+                r.Z.getDetectableNonGames,
+                u.Z.ttl + Math.random() * l.Z.Millis.HOUR,
             ));
     }
     _terminate() {
-        null != this.intervalId && (clearInterval(this.intervalId), (this.intervalId = void 0));
+        null != this.intervalId && (clearInterval(this.intervalId), (this.intervalId = void 0)),
+            null != this.nonGameIntervalId &&
+                (clearInterval(this.nonGameIntervalId), (this.nonGameIntervalId = void 0));
     }
     constructor(...e) {
         super(...e),
-            u(this, "intervalId", void 0),
-            u(this, "actions", { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() });
+            d(this, "intervalId", void 0),
+            d(this, "nonGameIntervalId", void 0),
+            d(this, "actions", { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() });
     }
 }
-let f = new d();
+let p = new f();
