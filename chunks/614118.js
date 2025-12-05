@@ -79,11 +79,11 @@ function I(e) {
           : (0, r.jsxs)("div", {
                 className: S.container,
                 children: [
-                    (0, r.jsx)(y.C, {
+                    (0, r.jsx)(y.ZP, {
                         className: S.card,
                         applicationId: L.applicationId,
                         skuId: w,
-                        variant: y.Z.EMBEDDED,
+                        variant: y.Zp.EMBEDDED,
                         onClick: Z,
                         analyticsLocations: M,
                     }),

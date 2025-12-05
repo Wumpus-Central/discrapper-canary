@@ -6,14 +6,14 @@ var i = t(120356),
     o = t(840724),
     s = t(180165);
 function r(e) {
-    let { applicationId: n, skuIds: t, variant: i = o.Z.SMALL, guildId: r, analyticsLocations: d } = e;
+    let { applicationId: n, skuIds: t, variant: i = o.Zp.SMALL, guildId: r, analyticsLocations: d } = e;
     return null == t || 0 === t.length
         ? null
         : (0, l.jsx)("div", {
-              className: a()(s.container, s.cardGrid, { [s.mediumCardGrid]: i === o.Z.MEDIUM }),
+              className: a()(s.container, s.cardGrid, { [s.mediumCardGrid]: i === o.Zp.MEDIUM }),
               children: t.map((e, t) =>
                   (0, l.jsx)(
-                      o.C,
+                      o.ZP,
                       {
                           positionInSection: t,
                           applicationId: n,

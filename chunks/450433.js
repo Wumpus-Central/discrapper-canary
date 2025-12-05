@@ -20,4 +20,8 @@ e.exports = {
     iconAsset: "iconAsset_abfd90",
     badge: "badge_abfd90",
     wishlistButtonContainer: "wishlistButtonContainer_abfd90",
+    pulse: "pulse_abfd90",
+    placeholderCard: "placeholderCard_abfd90",
+    placeholderDescription: "placeholderDescription_abfd90",
+    placeholderTitle: "placeholderTitle_abfd90",
 };
