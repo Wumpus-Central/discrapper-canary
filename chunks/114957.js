@@ -24,8 +24,11 @@ class f extends a.Z {
     handlePostConnectionOpen() {
         (0, c.isDesktop)() && !s.Z.fetched && (0, i.b8)(),
             r.Z.getDetectableGames(),
+            r.Z.getDetectableBlocklist(),
             (this.intervalId = setInterval(
-                r.Z.getDetectableGames,
+                () => {
+                    r.Z.getDetectableGames(), r.Z.getDetectableBlocklist();
+                },
                 o.Z.detectableGamesTtl + Math.random() * l.Z.Millis.HOUR,
             )),
             r.Z.getDetectableNonGames(),

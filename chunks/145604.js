@@ -258,7 +258,7 @@ class et extends i.PureComponent {
                         voiceChannelGuildId: d,
                     });
                 }, 10000),
-                null != I.name && null != S && R.Z.shouldReport(I.name))
+                null != I.name && null != S && R.Z.shouldReport(I))
             ) {
                 let e = I.name;
                 c.Z.identifyGame(S, e)
