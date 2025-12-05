@@ -1,17 +1,15 @@
-n.d(t, { z: () => g }), n(415506);
+n.d(t, { z: () => h });
 var r = n(54381);
 n(473749);
-var i = n(512722),
-    a = n.n(i),
-    o = n(481060),
-    s = n(409813),
-    l = n(51499),
-    c = n(614277),
-    u = n(658114),
-    d = n(81088),
-    f = n(467368),
-    p = n(671930);
-function _(e, t, n) {
+var i = n(481060),
+    a = n(409813),
+    o = n(51499),
+    s = n(614277),
+    l = n(658114),
+    c = n(514749),
+    u = n(81088),
+    d = n(671930);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +22,7 @@ function _(e, t, n) {
         e
     );
 }
-function m(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,71 +33,59 @@ function m(e) {
                 }),
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
 }
-let h = (e) => (0, r.jsx)(E, m({}, e)),
-    g = (e) => {
-        let { paymentModalStepProps: t } = e,
-            n = (0, f.Li)(),
-            { unifiedCheckoutStepMappings: i, renderModalProps: o } = n,
-            l = i[s.h8.REVIEW];
-        if ((a()(null != l, "Unified review step config is not set"), "StepController" in l)) {
-            if (!n.enableStepControllers) throw Error("Step controllers are not enabled in Unified Checkout Context");
-            let e = l.StepController,
-                { checkoutContext: i } = n;
-            return (0, r.jsx)(e, {
-                renderStep: h,
-                checkoutContext: i,
-                paymentModalStepProps: t,
-                renderModalProps: o,
-            });
-        }
-        let c = l.directProps;
-        return (0, r.jsx)(E, {
-            paymentModalStepProps: t,
-            unifiedStepProps: c,
-        });
-    },
-    E = (e) => {
+let _ = (e) => (0, r.jsx)(m, p({}, e)),
+    m = (e) => {
         let { paymentModalStepProps: t, unifiedStepProps: n } = e,
             {
-                isStepLoading: i,
-                reviewBodyContent: a,
-                reviewBodyLegalContent: s,
-                errorMessage: f,
-                warningMessage: _,
+                isStepLoading: a,
+                reviewBodyContent: c,
+                reviewBodyLegalContent: f,
+                errorMessage: _,
+                warningMessage: m,
                 primaryCTAButtonProps: h,
                 SideEffectComponent: g,
             } = n;
-        return i
+        return a
             ? (0, r.jsx)("div", {
-                  className: p.stepBody,
-                  children: (0, r.jsx)(o.$jN, { type: o.$jN.Type.WANDERING_CUBES }),
+                  className: d.stepBody,
+                  children: (0, r.jsx)(i.$jN, { type: i.$jN.Type.WANDERING_CUBES }),
               })
             : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      null != g ? (0, r.jsx)(g, m({}, t)) : null,
-                      (0, r.jsx)(l.Z, {}),
-                      (0, r.jsxs)(c.C3, {
+                      null != g ? (0, r.jsx)(g, p({}, t)) : null,
+                      (0, r.jsx)(o.Z, {}),
+                      (0, r.jsxs)(s.C3, {
                           children: [
-                              (0, r.jsxs)(o.Kqy, {
+                              (0, r.jsxs)(i.Kqy, {
                                   direction: "vertical",
                                   gap: 8,
                                   children: [
-                                      null != f ? (0, r.jsx)(d.vw, { message: f }) : null,
-                                      null != _ ? (0, r.jsx)(u.Z, { message: _ }) : null,
+                                      null != _ ? (0, r.jsx)(u.vw, { message: _ }) : null,
+                                      null != m ? (0, r.jsx)(l.Z, { message: m }) : null,
                                   ],
                               }),
                               (0, r.jsxs)("div", {
-                                  className: p.stepBody,
-                                  children: [a, s],
+                                  className: d.stepBody,
+                                  children: [c, f],
                               }),
                           ],
                       }),
-                      (0, r.jsx)(c.O3, { children: (0, r.jsx)(d.Ds, { primaryCTAButtonProps: h }) }),
+                      (0, r.jsx)(s.O3, {
+                          children: (0, r.jsx)(u.Ds, {
+                              primaryCTAButtonProps: h,
+                              showLockIcon: !0,
+                          }),
+                      }),
                   ],
               });
-    };
+    },
+    h = (0, c.q)({
+        step: a.h8.REVIEW,
+        renderStep: _,
+        DirectStepComponent: m,
+    });

@@ -1,14 +1,16 @@
-n.d(t, { J: () => g }), n(415506);
+n.d(t, { J: () => y }), n(388685), n(415506);
 var r = n(54381),
     i = n(772848),
     a = n(481060),
     o = n(409813),
     s = n(152521),
-    l = n(108135),
-    c = n(333133),
-    u = n(100788),
-    d = n(388032);
-function f(e, t, n) {
+    l = n(733579),
+    c = n(108135),
+    u = n(147332),
+    d = n(333133),
+    f = n(100788),
+    p = n(388032);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +23,7 @@ function f(e, t, n) {
         e
     );
 }
-function p(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,12 +34,12 @@ function p(e) {
                 }),
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function _(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,19 +51,24 @@ function _(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let h = (e, t) => null != t && t.implemented && t.flowType === e;
-class g {
+let E = (e, t) => null != t && t.implemented && t.flowType === e,
+    b = {
+        [l.GE.ORB_CHECKOUT]: { allowGifting: !1 },
+        [l.GE.COLLECTIBLES_CHECKOUT]: { allowGifting: !0 },
+        [l.GE.PREMIUM_CHECKOUT]: { allowGifting: !0 },
+    };
+class y {
     generateRenderHeader() {
         let { UnifiedCheckoutCustomHeader: e } = this.checkoutFlowConfiguration;
         if (null != e)
@@ -72,76 +79,90 @@ class g {
                     step: i,
                 });
     }
-    generateCheckoutStepConfigs() {
-        return [
-            {
+    generateCheckoutStepConfigs(e) {
+        let { hasGiftCustomization: t } = e,
+            n = {
                 key: null,
                 renderStep: (e) =>
-                    (0, r.jsx)(c.I, {
+                    (0, r.jsx)(d.I, {
                         paymentModalStepProps: e,
                         defaultStep: o.h8.REVIEW,
                     }),
             },
-            {
+            i = {
                 key: o.h8.REVIEW,
-                renderStep: (e) => (0, r.jsx)(u.s, { paymentModalStepProps: e }),
-                options: { useBreadcrumbLabel: () => d.intl.string(d.t.QBnNHq) },
+                renderStep: (e) => (0, r.jsx)(f.z, { paymentModalStepProps: e }),
+                options: { useBreadcrumbLabel: () => p.intl.string(p.t.QBnNHq) },
             },
+            { allowGifting: a } = b[this.checkoutFlow];
+        return [
+            n,
+            ...(t && a
+                ? [
+                      {
+                          key: o.h8.GIFT_CUSTOMIZATION,
+                          renderStep: (e) => (0, r.jsx)(u.P, { paymentModalStepProps: e }),
+                          options: {},
+                      },
+                  ]
+                : []),
+            i,
         ];
     }
     getApplicationId(e) {
-        if (this.checkoutFlow === l.G.ORB_CHECKOUT) return (0, s.Nb)(e);
+        if (this.checkoutFlow === l.GE.ORB_CHECKOUT) return (0, s.Nb)(e);
     }
     openCheckoutModal(e) {
         let {
-                skuId: t,
-                loadId: o,
-                applicationId: s,
-                analyticsSourceLocation: l,
-                analyticsLocations: c,
-                flowSpecificOptions: u,
-                onCheckoutSuccess: d,
-                modalOptions: f,
+                openModalOptions: t,
+                flowSpecificOptions: o,
+                giftContextProps: s,
+                onCheckoutSuccess: l,
+                skuId: c,
+                loadId: u,
+                applicationId: d,
+                analyticsSourceLocation: f,
+                analyticsLocations: p,
             } = e,
-            { purchaseType: _, UnifiedCheckoutContextProvider: h } = this.checkoutFlowConfiguration,
-            g = null != o ? o : (0, i.Z)(),
-            { modalKey: E } = f,
-            b = !1,
-            y = this.generateRenderHeader(),
-            O = null != s ? s : this.getApplicationId(t);
+            _ = null != u ? u : (0, i.Z)(),
+            { modalKey: h } = t,
+            E = !1,
+            b = this.generateRenderHeader(),
+            y = null != d ? d : this.getApplicationId(c);
         return (0, a.ZDy)(
             async () => {
                 let { WrappedUnifiedPaymentModal: e } = await n.e("9172").then(n.bind(n, 325906));
-                return (n) =>
+                return (t) =>
                     (0, r.jsx)(e, {
-                        purchaseType: _,
-                        UnifiedCheckoutContextProvider: h,
-                        stepConfigs: this.generateCheckoutStepConfigs(),
-                        renderHeader: y,
-                        skuId: t,
-                        loadId: g,
-                        applicationId: O,
-                        analyticsLocations: c,
-                        renderModalProps: n,
-                        analyticsSourceLocation: l,
+                        checkoutFlow: this.checkoutFlow,
+                        checkoutFlowConfiguration: this.checkoutFlowConfiguration,
+                        stepConfigs: this.generateCheckoutStepConfigs({ hasGiftCustomization: null != s }),
+                        renderHeader: b,
+                        skuId: c,
+                        loadId: _,
+                        applicationId: y,
+                        analyticsLocations: p,
+                        analyticsSourceLocation: f,
+                        renderModalProps: t,
+                        giftContextProps: s,
                         onCheckoutSuccess: (e) => {
-                            b || d(e), (b = !0);
+                            E || l(e), (E = !0);
                         },
-                        flowSpecificOptions: u,
+                        flowSpecificOptions: o,
                     });
             },
-            m(p({}, f), {
+            g(m({}, t), {
                 onCloseRequest() {
-                    null != f.onCloseRequest && f.onCloseRequest(b, g), (0, a.Mr3)(E);
+                    null != t.onCloseRequest && t.onCloseRequest(E, _), (0, a.Mr3)(h);
                 },
-                modalKey: E,
+                modalKey: h,
             }),
         );
     }
     constructor({ checkoutFlow: e }) {
-        f(this, "checkoutFlow", void 0), f(this, "checkoutFlowConfiguration", void 0), (this.checkoutFlow = e);
-        let t = l.d[e];
-        if (!h(e, t)) throw Error("Checkout flow ".concat(e, " is not implemented"));
+        _(this, "checkoutFlow", void 0), _(this, "checkoutFlowConfiguration", void 0), (this.checkoutFlow = e);
+        let t = c.d[e];
+        if (!E(e, t)) throw Error("Checkout flow ".concat(e, " is not implemented"));
         this.checkoutFlowConfiguration = t;
     }
 }
