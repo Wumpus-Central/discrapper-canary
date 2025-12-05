@@ -1,94 +1,125 @@
 n.d(t, {
-    c: () => g,
-    g: () => m,
+    c: () => b,
+    g: () => _,
 });
 var r = n(54381),
     i = n(979554),
     l = n(311570),
     a = n(481060),
     s = n(525302),
-    o = n(333867),
-    c = n(221300),
-    d = n(766717),
-    u = n(474936),
-    p = n(388032),
-    h = n(976218);
-function f(e, t, n) {
-    (0, o.Z)({
+    o = n(684263),
+    c = n(333867),
+    d = n(221300),
+    u = n(766717),
+    p = n(474936),
+    h = n(388032),
+    f = n(239990),
+    g = n(976218);
+function m(e, t, n) {
+    (0, c.Z)({
         skuId: e.skuId,
         isGift: !0,
-        giftingOrigin: u.Wt.USER_PROFILE_WISHLIST,
+        giftingOrigin: p.Wt.USER_PROFILE_WISHLIST,
         analyticsLocations: n,
         giftRecipient: t,
         variantsReturnStyle: l.v.VARIANTS_GROUP,
     });
 }
-function g(e, t) {
+function b(e, t) {
     let {
             moreCount: n,
             profileOwner: l,
             analyticsLocations: a,
-            onViewWishlist: o,
-            isSingleCard: u = !1,
-            wishlistId: h,
-            showTypeTooltip: g = !1,
+            onViewWishlist: c,
+            isSingleCard: p = !1,
+            wishlistId: g,
+            showTypeTooltip: b = !1,
         } = t,
-        m = null != n && n > 0,
-        b = g && !m,
-        _ = m ? p.intl.string(p.t.TxBQzD) : p.intl.string(p.t.pLPjsb),
-        y = {
-            title: b ? p.intl.string(p.t.HFhcqh) : _,
-            body: b ? p.intl.string(p.t.ilhtIa) : void 0,
-            renderIcon: b ? s.Q : void 0,
+        _ = null != e.bundleItems && e.bundleItems.length > 0,
+        y = null != n && n > 0,
+        O = b && !y,
+        x = y ? h.intl.string(h.t.TxBQzD) : h.intl.string(h.t.pLPjsb),
+        j = {
+            title: O ? h.intl.string(h.t.HFhcqh) : x,
+            body: O ? h.intl.string(h.t.ilhtIa) : void 0,
+            renderIcon: O ? s.Q : void 0,
             shouldShow: !0,
         },
-        O = e.collectiblesItem.type === i.Z.PROFILE_EFFECT;
+        v = !_ && e.collectiblesItem.type === i.Z.PROFILE_EFFECT;
     return (0, r.jsx)(
-        d.Z,
+        u.Z,
         {
             onCardClick: () => {
-                if (m) return void o();
-                f(e, l, a);
+                if (y) return void c();
+                m(e, l, a);
             },
-            tooltipConfig: y,
-            shouldScalePreview: !O,
-            renderPreview: () =>
-                (0, r.jsx)(c.Z, {
+            tooltipConfig: j,
+            shouldScalePreview: _ || !v,
+            renderPreview: () => {
+                if (_) {
+                    let t = { items: e.bundleItems };
+                    return (0, r.jsx)("div", {
+                        className: f.bundlePreview,
+                        children: (0, r.jsx)(o.U, {
+                            product: t,
+                            isPurchased: !1,
+                            isHighlighted: !1,
+                            user: l,
+                        }),
+                    });
+                }
+                return (0, r.jsx)(d.Z, {
                     item: e,
                     profileOwner: l,
                     isHighlighted: !1,
-                }),
+                });
+            },
             moreCount: n,
-            isSingleCard: u,
+            isSingleCard: p,
             wishlistItem: e,
-            wishlistId: h,
+            wishlistId: g,
         },
         e.skuId,
     );
 }
-function m(e, t) {
+function _(e, t) {
     let { profileOwner: n, analyticsLocations: l, wishlistId: s, onViewWishlist: o } = t,
-        c = g(e, {
+        c = null != e.bundleItems && e.bundleItems.length > 0,
+        d = b(e, {
             profileOwner: n,
             analyticsLocations: l,
             onViewWishlist: o,
             isSingleCard: !0,
             wishlistId: s,
             index: 0,
-        });
+        }),
+        u = c
+            ? h.intl.string(h.t.Zr5tjn)
+            : (function (e) {
+                  switch (e.collectiblesItem.type) {
+                      case i.Z.AVATAR_DECORATION:
+                          return h.intl.string(h.t["7v0T9P"]);
+                      case i.Z.PROFILE_EFFECT:
+                          return h.intl.string(h.t.wR5wOo);
+                      case i.Z.NAMEPLATE:
+                          return h.intl.string(h.t.x5CoXR);
+                      default:
+                          return "";
+                  }
+              })(e);
     return (0, r.jsxs)("div", {
-        className: h.singleItemContainer,
+        className: g.singleItemContainer,
         children: [
-            c,
+            d,
             (0, r.jsxs)("div", {
-                className: h.singleItemInfo,
+                className: g.singleItemInfo,
                 children: [
                     (0, r.jsx)(a.P3F, {
                         onClick: () => {
-                            f(e, n, l);
+                            m(e, n, l);
                         },
-                        className: h.singleItemName,
-                        "aria-label": p.intl.string(p.t.pLPjsb),
+                        className: g.singleItemName,
+                        "aria-label": h.intl.string(h.t.pLPjsb),
                         children: (0, r.jsx)(a.Text, {
                             variant: "text-sm/semibold",
                             color: "text-default",
@@ -99,18 +130,7 @@ function m(e, t) {
                     (0, r.jsx)(a.Text, {
                         variant: "text-xs/medium",
                         color: "text-default",
-                        children: (function (e) {
-                            switch (e.collectiblesItem.type) {
-                                case i.Z.AVATAR_DECORATION:
-                                    return p.intl.string(p.t["7v0T9P"]);
-                                case i.Z.PROFILE_EFFECT:
-                                    return p.intl.string(p.t.wR5wOo);
-                                case i.Z.NAMEPLATE:
-                                    return p.intl.string(p.t.x5CoXR);
-                                default:
-                                    return "";
-                            }
-                        })(e),
+                        children: u,
                     }),
                 ],
             }),

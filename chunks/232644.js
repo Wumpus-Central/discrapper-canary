@@ -9,6 +9,7 @@ e.exports = {
     cardStateIcon: "cardStateIcon__39b32",
     checkmark: "checkmark__39b32",
     profileEffectPreview: "profileEffectPreview__39b32",
+    bundlePreview: "bundlePreview__39b32",
     avatarDecorationPreview: "avatarDecorationPreview__39b32",
     nameplatePreview: "nameplatePreview__39b32",
     nameplateTopLeft: "nameplateTopLeft__39b32",

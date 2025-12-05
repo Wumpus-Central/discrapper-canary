@@ -1,7 +1,7 @@
 r.d(t, {
     BO: () => Z,
-    ZP: () => A,
-    w_: () => T,
+    ZP: () => R,
+    w_: () => A,
 }),
     r(388685);
 var n = r(54381),
@@ -10,84 +10,85 @@ var n = r(54381),
     o = r.n(l),
     s = r(828700),
     c = r(979554),
-    a = r(311570),
-    u = r(442837),
+    u = r(311570),
+    a = r(442837),
     d = r(481060),
     f = r(100527),
     m = r(906732),
     O = r(597688),
     h = r(237031),
-    p = r(956472),
-    I = r(104505),
-    g = r(333867),
-    S = r(703656),
-    b = r(89196),
-    P = r(602733),
+    p = r(684263),
+    I = r(956472),
+    g = r(104505),
+    S = r(333867),
+    b = r(703656),
+    P = r(89196),
+    v = r(602733),
     y = r(823379),
-    v = r(892001),
-    L = r(221300),
-    w = r(688192),
-    j = r(981631),
-    E = r(474936),
-    C = r(388032),
-    k = r(232644),
+    j = r(892001),
+    w = r(221300),
+    L = r(688192),
+    E = r(981631),
+    C = r(474936),
+    k = r(388032),
+    x = r(232644),
     M = r(660097);
-let x = (e) => {
+let T = (e) => {
     let { size: t = d.EFr.SIZE_80 } = e;
     return (0, n.jsx)(d.qEK, {
-        className: k.placeholderAvatar,
+        className: x.placeholderAvatar,
         src: M,
         size: t,
-        "aria-label": C.intl.string(C.t.lqaIxI),
+        "aria-label": k.intl.string(k.t.lqaIxI),
     });
 };
-function T(e) {
-    let { cardSize: t = w.U.MEDIUM } = e,
+function A(e) {
+    let { cardSize: t = L.U.MEDIUM } = e,
         r = i.useRef(null),
         l = i.useRef(null);
     return (0, n.jsx)("div", {
         ref: r,
-        className: k.container,
+        className: x.container,
         children: (0, n.jsx)("div", {
             ref: l,
-            className: o()(k.card, k.placeholderCard, {
-                [k.smallCard]: t === w.U.SMALL,
-                [k.largeCard]: t === w.U.LARGE,
+            className: o()(x.card, x.placeholderCard, {
+                [x.smallCard]: t === L.U.SMALL,
+                [x.largeCard]: t === L.U.LARGE,
             }),
             children: (0, n.jsx)("div", {
-                className: k.cardPreview,
+                className: x.cardPreview,
                 children: (0, n.jsx)("div", {
-                    className: k.avatarDecorationPreview,
-                    children: (0, n.jsx)(x, { size: d.EFr.SIZE_80 }),
+                    className: x.avatarDecorationPreview,
+                    children: (0, n.jsx)(T, { size: d.EFr.SIZE_80 }),
                 }),
             }),
         }),
     });
 }
 function Z(e) {
-    let { item: t, cardSize: r = w.U.SMALL, remainingCount: l, onClick: s, renderItemPreview: c } = e,
-        a = i.useRef(null),
+    let { item: t, cardSize: r = L.U.SMALL, remainingCount: l, onClick: s, renderItemPreview: c } = e,
         u = i.useRef(null),
-        { isHoveringOrFocusing: f } = (0, I.Z)(u),
+        a = i.useRef(null),
+        { isHoveringOrFocusing: f } = (0, g.Z)(a),
         m = !0 === t.isOwned;
     return (0, n.jsx)("div", {
-        ref: a,
-        className: k.container,
+        ref: u,
+        className: x.container,
         children: (0, n.jsx)(d.P3F, {
             tag: "div",
-            innerRef: u,
+            innerRef: a,
             onClick: s,
-            className: o()(k.card, k.seeMoreCard, { [k.smallCard]: r === w.U.SMALL }),
+            className: o()(x.card, x.seeMoreCard, { [x.smallCard]: r === L.U.SMALL }),
             children: (0, n.jsxs)("div", {
-                className: o()(k.cardPreview, k.seeMoreCardPreview),
+                className: o()(x.cardPreview, x.seeMoreCardPreview),
                 children: [
                     c(!m && f),
                     (0, n.jsx)("div", {
-                        className: k.seeMoreOverlay,
+                        className: x.seeMoreOverlay,
                         children: (0, n.jsx)(d.Text, {
                             variant: "text-md/medium",
                             color: "always-white",
-                            children: C.intl.format(C.t.F6iMs4, { count: l }),
+                            children: k.intl.format(k.t.F6iMs4, { count: l }),
                         }),
                     }),
                 ],
@@ -95,18 +96,18 @@ function Z(e) {
         }),
     });
 }
-function A(e) {
+function R(e) {
     var t,
         r,
         {
             profileOwner: l,
             showIcons: o = !1,
-            source: M = P.lr.WISHLIST,
-            giftingOrigin: x = E.Wt.USER_PROFILE_WISHLIST,
-            onWishlistItemClick: T,
-            cardSize: Z = w.U.MEDIUM,
+            source: M = v.lr.WISHLIST,
+            giftingOrigin: T = C.Wt.USER_PROFILE_WISHLIST,
+            onWishlistItemClick: A,
+            cardSize: Z = L.U.MEDIUM,
         } = e,
-        A = (function (e, t) {
+        R = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -127,42 +128,44 @@ function A(e) {
             }
             return i;
         })(e, ["profileOwner", "showIcons", "source", "giftingOrigin", "onWishlistItemClick", "cardSize"]);
-    let { item: R, isOwner: _ } = A,
-        { analyticsLocations: N } = (0, m.ZP)(),
-        U = (0, s.TH)(),
-        F = i.useRef(null),
-        { isHoveringOrFocusing: H } = (0, I.Z)(F),
-        [W] = (0, u.Wu)([b.Z], () => [b.Z.hasSentGift(R.skuId, l.id)], [R.skuId, l.id]),
-        D = W || !0 === R.isOwned,
-        G = R.collectiblesItem.type,
-        z = (() => {
-            switch (G) {
+    let { item: _, isOwner: N } = R,
+        { analyticsLocations: U } = (0, m.ZP)(),
+        F = (0, s.TH)(),
+        H = i.useRef(null),
+        { isHoveringOrFocusing: W } = (0, g.Z)(H),
+        [D] = (0, a.Wu)([P.Z], () => [P.Z.hasSentGift(_.skuId, l.id)], [_.skuId, l.id]),
+        G = D || !0 === _.isOwned,
+        z = null != _.bundleItems && _.bundleItems.length > 0,
+        B = (() => {
+            if (z) return k.intl.formatToPlainString(k.t["/l2CAE"], { itemName: _.skuName });
+            let e = _.collectiblesItem.type;
+            switch (e) {
                 case c.Z.AVATAR_DECORATION:
-                    return C.intl.formatToPlainString(C.t.IQQYef, { itemName: R.skuName });
+                    return k.intl.formatToPlainString(k.t.IQQYef, { itemName: _.skuName });
                 case c.Z.PROFILE_EFFECT:
-                    return C.intl.formatToPlainString(C.t["x/MGWy"], { itemName: R.skuName });
+                    return k.intl.formatToPlainString(k.t["x/MGWy"], { itemName: _.skuName });
                 case c.Z.NAMEPLATE:
-                    return C.intl.formatToPlainString(C.t.eVNt6E, { itemName: R.skuName });
+                    return k.intl.formatToPlainString(k.t.eVNt6E, { itemName: _.skuName });
                 default:
-                    (0, y.vE)(G);
+                    (0, y.vE)(e);
             }
         })(),
-        B = _ || D ? C.intl.string(C.t.FdGl5A) : C.intl.string(C.t.ilhtIa),
-        q = _ || D ? void 0 : d.OgN,
-        Q = i.useCallback(() => {
-            let e = U.pathname.startsWith(j.Z5c.COLLECTIBLES_SHOP);
-            if (_ || D) {
-                let t = !_ && D;
+        q = N || G ? k.intl.string(k.t.FdGl5A) : k.intl.string(k.t.ilhtIa),
+        Q = N || G ? void 0 : d.OgN,
+        Y = i.useCallback(() => {
+            let e = F.pathname.startsWith(E.Z5c.COLLECTIBLES_SHOP);
+            if (N || G) {
+                let t = !N && G;
                 if (e) {
-                    let e = O.Z.getProduct(R.skuId),
-                        r = O.Z.getCategoryForProduct(R.skuId);
+                    let e = O.Z.getProduct(_.skuId),
+                        r = O.Z.getCategoryForProduct(_.skuId);
                     if (null != e && null != r) {
-                        t || (0, v.closeUserProfileModal)(),
+                        t || (0, j.closeUserProfileModal)(),
                             (0, h.T)({
                                 product: e,
                                 category: r,
-                                shouldCheckoutWithOrbs: (0, p.oQ)({ product: e }),
-                                analyticsLocations: N,
+                                shouldCheckoutWithOrbs: (0, I.oQ)({ product: e }),
+                                analyticsLocations: U,
                                 analyticsSource: f.Z.USER_PROFILE_WISHLIST,
                                 returnRef: void 0,
                                 tab: void 0,
@@ -170,60 +173,70 @@ function A(e) {
                         return;
                     }
                 }
-                t || (0, v.closeUserProfileModal)(),
-                    (0, S.uL)("".concat(j.Z5c.COLLECTIBLES_SHOP, "#itemSkuId=").concat(R.skuId));
+                t || (0, j.closeUserProfileModal)(),
+                    (0, b.uL)("".concat(E.Z5c.COLLECTIBLES_SHOP, "#itemSkuId=").concat(_.skuId));
             } else
-                null == T || T(),
-                    (0, g.Z)({
-                        skuId: R.skuId,
+                null == A || A(),
+                    (0, S.Z)({
+                        skuId: _.skuId,
                         isGift: !0,
-                        giftingOrigin: x,
-                        analyticsLocations: N,
+                        giftingOrigin: T,
+                        analyticsLocations: U,
                         giftRecipient: l,
-                        variantsReturnStyle: a.v.VARIANTS_GROUP,
+                        variantsReturnStyle: u.v.VARIANTS_GROUP,
                     });
-        }, [U.pathname, R.skuId, N, _, D, l, x, T]),
-        Y = i.useCallback(
+        }, [F.pathname, _.skuId, U, N, G, l, T, A]),
+        V = i.useCallback(
             () =>
-                o
-                    ? M === P.lr.WISHLIST
+                z || !o
+                    ? null
+                    : M === v.lr.WISHLIST
+                      ? (0, n.jsx)("div", {
+                            className: x.itemIcon,
+                            children: (0, n.jsx)(d.h_8, {
+                                size: "custom",
+                                width: 20,
+                                height: 20,
+                                color: "currentColor",
+                                colorClass: x.itemIconHeart,
+                            }),
+                        })
+                      : M === v.lr.POPULAR
                         ? (0, n.jsx)("div", {
-                              className: k.itemIcon,
-                              children: (0, n.jsx)(d.h_8, {
+                              className: x.itemIcon,
+                              children: (0, n.jsx)(d.YqE, {
                                   size: "custom",
                                   width: 20,
                                   height: 20,
                                   color: "currentColor",
-                                  colorClass: k.itemIconHeart,
+                                  colorClass: x.itemIconShop,
                               }),
                           })
-                        : M === P.lr.POPULAR
-                          ? (0, n.jsx)("div", {
-                                className: k.itemIcon,
-                                children: (0, n.jsx)(d.YqE, {
-                                    size: "custom",
-                                    width: 20,
-                                    height: 20,
-                                    color: "currentColor",
-                                    colorClass: k.itemIconShop,
-                                }),
-                            })
-                          : null
-                    : null,
-            [o, M],
+                        : null,
+            [z, o, M],
         ),
-        V = i.useCallback(
-            () =>
-                (0, n.jsx)(L.Z, {
-                    item: R,
-                    profileOwner: l,
-                    isHighlighted: H,
-                    cardSize: Z,
-                }),
-            [R, l, H, Z],
-        );
+        J = i.useCallback(() => {
+            if (z) {
+                let e = { items: _.bundleItems };
+                return (0, n.jsx)("div", {
+                    className: x.bundlePreview,
+                    children: (0, n.jsx)(p.U, {
+                        product: e,
+                        isPurchased: G,
+                        isHighlighted: W,
+                        user: l,
+                    }),
+                });
+            }
+            return (0, n.jsx)(w.Z, {
+                item: _,
+                profileOwner: l,
+                isHighlighted: W,
+                cardSize: Z,
+            });
+        }, [z, _, l, G, W, Z]);
     return (0, n.jsx)(
-        w.Z,
+        L.Z,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var r = null != arguments[t] ? arguments[t] : {},
@@ -248,18 +261,18 @@ function A(e) {
                     });
             }
             return e;
-        })({}, A)),
+        })({}, R)),
         (r = r =
             {
-                cardRef: F,
-                accessibleLabel: z,
-                onCardClick: Q,
-                buttonCTALabel: B,
-                buttonIcon: q,
-                isOwned: D,
-                renderItemPreview: V,
-                renderSourceIcon: Y,
-                giftingOrigin: x,
+                cardRef: H,
+                accessibleLabel: B,
+                onCardClick: Y,
+                buttonCTALabel: q,
+                buttonIcon: Q,
+                isOwned: G,
+                renderItemPreview: J,
+                renderSourceIcon: V,
+                giftingOrigin: T,
                 source: M,
                 cardSize: Z,
             }),

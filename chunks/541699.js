@@ -2,6 +2,8 @@ n.d(t, {
     Q: () => d,
     Z: () => f,
 }),
+    n(539854),
+    n(388685),
     n(415506);
 var r = n(979554),
     i = n(922347),
@@ -40,9 +42,24 @@ class f extends s.Z {
         return new f(e);
     }
     constructor(e) {
-        super(e), c(this, "collectiblesItem", void 0), (this.skuProductLine = l.POd.COLLECTIBLES);
-        let t = u(e.collectibles_item);
-        if (null == t) throw Error("Collectibles item not found");
-        this.collectiblesItem = t;
+        if (
+            (super(e),
+            c(this, "collectiblesItem", void 0),
+            c(this, "bundleItems", void 0),
+            (this.skuProductLine = l.POd.COLLECTIBLES),
+            null != e.bundle_items)
+        ) {
+            let t = [];
+            for (let n of e.bundle_items) {
+                let e = u(n);
+                null != e && t.push(e);
+            }
+            if (0 === t.length) throw Error("Bundle has no valid items");
+            this.bundleItems = t;
+        } else if (null != e.collectibles_item) {
+            let t = u(e.collectibles_item);
+            if (null == t) throw Error("Collectibles item not found");
+            this.collectiblesItem = t;
+        } else throw Error("Collectibles wishlist item missing both collectibles_item and bundle_items");
     }
 }
